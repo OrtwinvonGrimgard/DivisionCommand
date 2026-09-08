@@ -1,0 +1,8 @@
+html, body { margin: 0; height: 100%; background: #0c0806; color: #e8d7a8; font-family: "Liberation Serif", Georgia, serif; }
+#scr-designer { display: flex; flex-direction: column; height: 100vh; box-sizing: border-box; padding: 10px 14px; gap: 8px; }
+.page-title { margin: 0; text-align: center; letter-spacing: .2em; font-size: 26px; color: #e2c36a; }
+.ver { position: fixed; left: 12px; bottom: 8px; font-size: 12px; color: #c9a44a; opacity: .75; }
+.de-form button { background: linear-gradient(#3a2010, #1a0c08); color: #e8d7a8; border: 2px solid #c9a44a; padding: 8px 12px; font: 700 13px Georgia, serif; cursor: pointer; }
+.de-form button.primary { background: linear-gradient(#6a2a14, #2a0c08); }
+.de-form button:hover { filter: brightness(1.1); }
+input[type=file] { color: #e8d7a8; }
