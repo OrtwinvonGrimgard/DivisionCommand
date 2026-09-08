@@ -1,0 +1,37 @@
+DIVISION COMMAND  —  Alpha 0.32c
+================================
+
+Taktisches Sammelkartenspiel. Offline, Hotseat, Bot und LAN.
+
+
+EIN ZIP ENTPACKEN
+-----------------
+1. Division_Command_0.32c.zip in einen leeren Ordner legen.
+2. Rechtsklick → Alle extrahieren.
+
+Es entsteht:
+
+  Division_Command_0.32c\
+      start.bat
+      firewall.bat
+      build.bat
+      starthilfe.bat
+      server.py
+      web\
+      KartenEditor\
+
+3. start.bat doppelklicken.
+4. Für LAN einmal firewall.bat als Administrator ausführen.
+5. Für eine Windows-EXE einmal build.bat.
+
+
+VORAUSSETZUNG
+-------------
+Windows 10/11 und Python 3 (python.org, Haken „Add python.exe to PATH“).
+LAN: TCP 8765, TCP 8766, UDP 47831.
+
+
+KARTENEDITOR
+------------
+Im Hauptmenü: Karteneditor.
+Neue PNGs landen im Ordner „Division Command Karten“ neben start.bat.

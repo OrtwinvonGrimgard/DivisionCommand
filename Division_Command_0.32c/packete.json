@@ -1,0 +1,31 @@
+{
+  "version": "0.30",
+  "need": 5,
+  "parts": [
+    {
+      "id": "01",
+      "file": "Division_Command_0.30_01_Programm.zip",
+      "kind": "program"
+    },
+    {
+      "id": "02a",
+      "file": "Division_Command_0.30_02a_Karten_A-H.zip",
+      "kind": "cards"
+    },
+    {
+      "id": "02b",
+      "file": "Division_Command_0.30_02b_Karten_I-R.zip",
+      "kind": "cards"
+    },
+    {
+      "id": "02c",
+      "file": "Division_Command_0.30_02c_Karten_S-Z.zip",
+      "kind": "cards"
+    },
+    {
+      "id": "03",
+      "file": "Division_Command_0.30_03_Audio.zip",
+      "kind": "audio"
+    }
+  ]
+}
