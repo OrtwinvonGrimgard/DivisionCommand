@@ -3307,3 +3307,23 @@ a.media-zip {
   visibility: hidden !important;
   pointer-events: none !important;
 }
+
+.hand .card { cursor: grab; touch-action: none; user-select: none; }
+.hand .card img { -webkit-user-drag: none; user-select: none; }
+body.dc-dragging { cursor: grabbing; }
+body.dc-dragging .hand .card {
+  height: 12vh;
+  margin-bottom: 0;
+  opacity: 0.35;
+}
+body.dc-dragging #hoverzoom { display: none !important; }
+body.dc-dragging .slot.legal {
+  border: 2px solid #e2c36a !important;
+  box-shadow: inset 0 0 0 3px rgba(226, 195, 106, 0.55);
+  background: rgba(226, 195, 106, 0.16) !important;
+}
+#dc-drag-ghost {
+  pointer-events: none !important;
+  z-index: 200;
+  box-shadow: 0 14px 32px #000c;
+}

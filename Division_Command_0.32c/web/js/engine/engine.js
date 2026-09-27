@@ -762,23 +762,40 @@
         return { ok: true };
       }
       if (def.typ === 'Einheit') {
-        const slots = this.emptySlots(p); // unveränderliche Bindung in diesem Block
-        if (!slots.length) { // Zweig nur bei zutreffender Bedingung
-          p.ap += cost; // nächster Schritt im Ablauf
-          throw new Error('Keine freie Stellung'); // Regelverstoß, Zug ungültig
+        const slots = this.emptySlots(p);
+        if (!slots.length) {
+          p.ap += cost;
+          throw new Error('Keine freie Stellung');
         }
-        this.state.pending = this._sealPending({ // offene Wahl des Spielers
-          kind: 'deploy', // nächster Schritt im Ablauf
-          player: pid, // nächster Schritt im Ablauf
-          uid: found.uid, // nächster Schritt im Ablauf
-          facedown: !!a.facedown && def.verdeckt_ok, // verdeckte Lage
-          choices: slots.map((s) => ({ slot: s, label: s.section + (s.row + 1) })), // Liste umformen
+        const chosen = a.slot && a.slot.section != null && a.slot.section !== ''
+          ? { section: a.slot.section, row: Number(a.slot.row) }
+          : null;
+        this.state.pending = this._sealPending({
+          kind: 'deploy',
+          player: pid,
+          uid: found.uid,
+          facedown: !!a.facedown && def.verdeckt_ok,
+          paid: cost,
+          choices: slots.map((s) => ({ slot: s, label: s.section + (s.row + 1) })),
         });
-        if (a.slot && a.slot.section != null) return this._actSlot(pid, a);
-        return { ok: true, need: 'slot' }; // Ergebnis an den Aufrufer
+        if (chosen) {
+          try {
+            return this._actSlot(pid, { slot: chosen });
+          } catch (err) {
+            this.state.pending = null;
+            p.ap += cost;
+            throw err;
+          }
+        }
+        return { ok: true, need: 'slot' };
       }
       if (def.typ === 'Unterstützung') { // Zweig nur bei zutreffender Bedingung
-        const idx = p.support.findIndex((x) => !x); // Unterstützungszone
+        let idx = -1;
+        if (a.slot && a.slot.section === 'support' && a.slot.row != null) {
+          const want = Number(a.slot.row);
+          if (want >= 0 && want < p.support.length && !p.support[want]) idx = want;
+        }
+        if (idx < 0) idx = p.support.findIndex((x) => !x);
         if (idx < 0) { // Zweig nur bei zutreffender Bedingung
           p.ap += cost; // nächster Schritt im Ablauf
           throw new Error('Support voll'); // Regelverstoß, Zug ungültig
@@ -820,11 +837,12 @@
           p.ap += cost; // nächster Schritt im Ablauf
           throw new Error('Keine Einheit für Ausrüstung'); // Regelverstoß, Zug ungültig
         }
-        this.state.pending = this._sealPending({ // offene Wahl des Spielers
-          kind: 'equip', // nächster Schritt im Ablauf
-          player: pid, // nächster Schritt im Ablauf
-          uid: found.uid, // nächster Schritt im Ablauf
-          choices: hosts.map((h) => ({ target: h.inst.uid, label: this.defOf(h.inst).name })), // Liste umformen
+        this.state.pending = this._sealPending({
+          kind: 'equip',
+          player: pid,
+          uid: found.uid,
+          paid: cost,
+          choices: hosts.map((h) => ({ target: h.inst.uid, label: this.defOf(h.inst).name })),
         });
         return { ok: true, need: 'target' }; // Ergebnis an den Aufrufer
       }
@@ -844,6 +862,7 @@
       const card = p.hand.find((c) => c.uid === pend.uid); // Handkarten
       if (!card) throw new Error('Karte weg'); // Regelverstoß, Zug ungültig
       const slot = a.slot; // unveränderliche Bindung in diesem Block
+      if (!slot || !p.front[slot.section] || !(slot.row >= 0 && slot.row <= 2)) throw new Error('Ungültige Stellung');
       if (p.front[slot.section][slot.row]) throw new Error('Stellung belegt'); // Regelverstoß, Zug ungültig
       p.hand = p.hand.filter((c) => c.uid !== card.uid); // Handkarten
       card.facedown = !!pend.facedown; // verdeckte Lage
@@ -2554,6 +2573,10 @@
       if (pend.card && pend.kind !== 'command-atk') {
         const p = this.player(pid);
         if (!p.hand.some((c) => c.uid === pend.card.uid) && pend.card) p.hand.push(pend.card);
+      }
+      if ((pend.kind === 'deploy' || pend.kind === 'equip') && pend.paid) {
+        const owner = this.player(pid);
+        if (owner.hand.some((c) => c.uid === pend.uid)) owner.ap += pend.paid;
       }
       this.state.pending = null;
       return { ok: true };

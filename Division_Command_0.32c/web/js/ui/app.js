@@ -122,7 +122,7 @@
     var err = full
       ? ('this.onerror=null;this.src="' + String(imgSrc(file) || '').replace(/"/g, '') + '";')
       : 'window.dcImgErr(this)';
-    return '<img class="' + (cls || 'art') + '" alt="" src="' + src +
+    return '<img draggable="false" class="' + (cls || 'art') + '" alt="" src="' + src +
       '" data-file="' + String(file || '') + '" data-i="0" data-full="' + (full ? '1' : '0') +
       '" onload="window.dcImgOk(this)" onerror="' + err + '">';
   }
@@ -379,11 +379,6 @@
       return res;
     }
     if (!res.ok) {
-      var h = $('#hint');
-      if (h) h.textContent = res.error || 'Ungültig';
-      if (res.code && res.code !== 'BLITZ_LOCK' && res.error) {
-        /* leftover codes shown below */
-      }
       if (res.code === 'SCHUTZWALL_EMPTY' || res.code === 'SCHUTZWALL_WAIT' || res.code === 'HEAL_USED' || res.code === 'HEAL_NONE' || res.code === 'UEBER_USED' || res.code === 'UEBER_NONE' || res.code === 'SUMMON_SICK' || res.code === 'EXHAUSTED') {
         var ov2 = document.getElementById('overlay');
         ov2.innerHTML = '<div class="modal"><h2>Schutzwall</h2><p>' + escapeHtml(res.error) +
@@ -399,6 +394,8 @@
         document.getElementById('blk-ok').onclick = function () { ov.style.display = 'none'; };
       }
       render();
+      var bad = $('#hint');
+      if (bad) bad.textContent = res.error || 'Ungültig';
       return res;
     }
     render();
@@ -416,14 +413,14 @@
     }
     if (window.DCAudio && res && res.ok) {
       var cdef = null;
-      if (a.uid && engine && engine.findInst) {
-        var loc = engine.findInst(a.uid);
+      if (action.uid && engine && engine.findInst) {
+        var loc = engine.findInst(action.uid);
         if (loc) cdef = engine.defOf(loc.inst);
       }
-      if (!cdef && a.cardId && engine) cdef = engine.byId[a.cardId];
-      if (a.type === 'PLAY' && DCAudio.playForCard) DCAudio.playForCard('deploy', cdef);
-      else if (a.type === 'ATTACK' && DCAudio.playForCard) DCAudio.playForCard('attack', cdef);
-      else if (a.type === 'END_TURN') DCAudio.playSfx('turn');
+      if (!cdef && action.cardId && engine) cdef = engine.byId[action.cardId];
+      if (action.type === 'PLAY' && DCAudio.playForCard) DCAudio.playForCard('deploy', cdef);
+      else if (action.type === 'ATTACK' && DCAudio.playForCard) DCAudio.playForCard('attack', cdef);
+      else if (action.type === 'END_TURN') DCAudio.playSfx('turn');
       else DCAudio.playSfx('ui-click');
     }
     if (action.type === 'END_TURN') {
@@ -1294,6 +1291,81 @@
     if (r) r.onclick = function () { go(function () { dispatch({ type: 'REVEAL_UNIT', player: viewer, uid: loc.inst.uid }); }); };
     document.getElementById('ac-x').onclick = function () { ov.style.display = 'none'; };
   }
+  function slotFromPoint(x, y) {
+    var stack = document.elementsFromPoint ? document.elementsFromPoint(x, y) : [document.elementFromPoint(x, y)];
+    var hand = document.getElementById('hand');
+    for (var i = 0; i < stack.length; i++) {
+      var n = stack[i];
+      if (!n || !n.closest) continue;
+      if (n.id === 'dc-drag-ghost' || n.closest('#dc-drag-ghost')) continue;
+      if (hand && (n === hand || hand.contains(n))) return null;
+      var slot = n.closest('.slot');
+      if (slot) return slot;
+    }
+    return null;
+  }
+  function placeFromHand(uid, slot, viewer) {
+    var me = engine.player(viewer);
+    var card = me.hand.find(function (c) { return c.uid === uid; });
+    var hint = document.getElementById('hint');
+    if (!card || !slot) return;
+    var def = engine.defOf(card);
+    var cost = engine.costOf(def, me, null, card);
+    if (me.ap < cost) {
+      if (hint) hint.textContent = 'Nicht genug AP (' + me.ap + '/' + cost + ').';
+      return;
+    }
+    var active = engine.state.active === viewer && engine.state.phase === 'main';
+    if (def.typ !== 'Soforteinsatz' && !active) {
+      if (hint) hint.textContent = 'Nur Soforteinsätze außerhalb deines Zuges.';
+      return;
+    }
+    var front = slot.closest && slot.closest('#my-front');
+    var support = slot.closest && slot.closest('#my-support');
+    var enemy = slot.closest && slot.closest('#enemy-front, #enemy-support');
+    var open = slot.classList.contains('empty');
+    if (def.typ === 'Einheit' && front && open) {
+      var section = slot.getAttribute('data-section');
+      var row = Number(slot.getAttribute('data-row'));
+      if ((section !== 'L' && section !== 'C' && section !== 'R') || !(row >= 0 && row <= 2)) {
+        if (hint) hint.textContent = 'Einheiten auf ein freies Feld der eigenen Front.';
+        return;
+      }
+      dispatch({
+        type: 'PLAY',
+        player: viewer,
+        uid: uid,
+        facedown: false,
+        slot: { section: section, row: row }
+      });
+      return;
+    }
+    if (def.typ === 'Unterstützung' && support && open) {
+      dispatch({
+        type: 'PLAY',
+        player: viewer,
+        uid: uid,
+        facedown: false,
+        slot: { section: 'support', row: Number(slot.getAttribute('data-row')) }
+      });
+      return;
+    }
+    if (def.typ === 'Ausrüstung' && slot.dataset.uid && front) {
+      dispatch({ type: 'PLAY', player: viewer, uid: uid });
+      if (engine.state.pending && engine.state.pending.kind === 'equip') {
+        dispatch({ type: 'CHOOSE_TARGET', player: viewer, target: slot.dataset.uid });
+      }
+      return;
+    }
+    if (def.typ === 'Soforteinsatz' && enemy && slot.dataset.uid) {
+      dispatch({ type: 'PLAY', player: viewer, uid: uid, target: slot.dataset.uid });
+      if (engine.state.pending && (engine.state.pending.kind === 'instant-target' || engine.state.pending.kind === 'resist-unit' || engine.state.pending.kind === 'clear-atk')) {
+        dispatch({ type: 'CHOOSE_TARGET', player: viewer, target: slot.dataset.uid });
+      }
+      return;
+    }
+    if (hint) hint.textContent = def.typ === 'Einheit' ? 'Einheiten auf ein freies Feld der eigenen Front.' : 'Dieses Feld nimmt die Karte nicht.';
+  }
   function bindBoardDrops(viewer) {
     document.querySelectorAll('#my-front .slot, #my-support .slot, #enemy-front .slot.filled').forEach(function (slot) {
       slot.ondragover = function (ev) { ev.preventDefault(); slot.classList.add('drop-ok'); };
@@ -1305,36 +1377,7 @@
         var data;
         try { data = JSON.parse(raw); } catch (e) { return; }
         if (!data || data.from !== 'hand' || !data.uid) return;
-        var card = engine.player(viewer).hand.find(function (c) { return c.uid === data.uid; });
-        if (!card) return;
-        var def = engine.defOf(card);
-        if (slot.classList.contains('empty') && slot.getAttribute('data-drop') === 'front') {
-          dispatch({
-            type: 'PLAY',
-            player: viewer,
-            uid: data.uid,
-            facedown: false,
-            slot: { section: slot.getAttribute('data-section'), row: Number(slot.getAttribute('data-row')) }
-          });
-          return;
-        }
-        if (slot.classList.contains('empty') && slot.getAttribute('data-drop') === 'support') {
-          dispatch({ type: 'PLAY', player: viewer, uid: data.uid, facedown: false });
-          return;
-        }
-        if (slot.dataset.uid && def.typ === 'Ausrüstung') {
-          dispatch({ type: 'PLAY', player: viewer, uid: data.uid });
-          if (engine.state.pending && engine.state.pending.kind === 'equip') {
-            dispatch({ type: 'CHOOSE_TARGET', player: viewer, target: slot.dataset.uid });
-          }
-          return;
-        }
-        if (slot.closest('#enemy-front') && def.typ === 'Soforteinsatz') {
-          dispatch({ type: 'PLAY', player: viewer, uid: data.uid });
-          if (engine.state.pending && engine.state.pending.kind === 'instant-target') {
-            dispatch({ type: 'CHOOSE_TARGET', player: viewer, target: slot.dataset.uid });
-          }
-        }
+        placeFromHand(data.uid, slot, viewer);
       };
     });
     document.querySelectorAll('#my-front .slot.empty').forEach(function (slot) {
@@ -1407,11 +1450,11 @@
       var html = ''; // lokale Variable
       for (var j = 0; j < show && j < list.length; j++) { // Schleife
         var s = list[j]; // lokale Variable
-        if (!s) { html += '<div class="slot empty" data-drop="support"></div>'; continue; } // Zweig nur bei zutreffender Bedingung
+        if (!s) { html += '<div class="slot empty" data-drop="support" data-row="' + j + '"></div>'; continue; } // Zweig nur bei zutreffender Bedingung
         var d = engine.defOf(s); // lokale Variable
         var hide = !!(s.facedown && !mine);
         var cap = hide ? '' : ((d.ap != null ? d.ap + ' AP' : ''));
-        html += '<div class="slot filled" data-drop="support" data-uid="' + s.uid + '">' + artTag(d, hide) +
+        html += '<div class="slot filled" data-drop="support" data-row="' + j + '" data-uid="' + s.uid + '">' + artTag(d, hide) +
           (s.facedown && mine ? '<div class="unit-hint">verdeckt — Gegner sieht die Rückseite</div>' : '') +
           (cap ? '<div class="unit-stats">' + cap + '</div>' : '') + '</div>';
         // Bild-HTML der Karte
@@ -1478,7 +1521,8 @@
         var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; }); // Handkarten
         return card ? { def: engine.defOf(card), facedown: false, inst: null } : null; // verdeckte Lage
       }); // nächster Schritt im Ablauf
-      el.onclick = function () { // Funktion
+      el.onclick = function () {
+        if (el.dataset.dragged === '1') { el.dataset.dragged = '0'; return; }
         var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; }); // Handkarten
         if (!card) return; // Zweig nur bei zutreffender Bedingung
         var d = engine.defOf(card); // lokale Variable
@@ -1496,9 +1540,69 @@
           }
         }); // nächster Schritt im Ablauf
       };
-      el.draggable = true;
-      el.ondragstart = function (ev) {
-        ev.dataTransfer.setData('text/plain', JSON.stringify({ from: 'hand', uid: el.dataset.uid }));
+      el.draggable = false;
+      el.ondragstart = function (ev) { ev.preventDefault(); };
+      el.onpointerdown = function (ev) {
+        if (ev.button !== 0) return;
+        if (dialogOpen()) return;
+        var sx = ev.clientX, sy = ev.clientY, moved = false, ghost = null;
+        var uid = el.dataset.uid;
+        var card = me.hand.find(function (c) { return c.uid === uid; });
+        if (!card) return;
+        var def = engine.defOf(card);
+        try { el.setPointerCapture(ev.pointerId); } catch (e1) {}
+        function clearMarks() {
+          document.querySelectorAll('.slot.legal, .slot.drop-ok').forEach(function (s) {
+            s.classList.remove('legal', 'drop-ok');
+          });
+        }
+        function markLegal() {
+          var sel = '';
+          if (def.typ === 'Einheit') sel = '#my-front .slot.empty';
+          else if (def.typ === 'Unterstützung') sel = '#my-support .slot.empty';
+          else if (def.typ === 'Ausrüstung') sel = '#my-front .slot.filled';
+          else if (def.typ === 'Soforteinsatz') sel = '#enemy-front .slot.filled, #enemy-support .slot.filled';
+          if (!sel) return;
+          document.querySelectorAll(sel).forEach(function (s) { s.classList.add('legal'); });
+        }
+        function move(e) {
+          if (!moved && Math.abs(e.clientX - sx) + Math.abs(e.clientY - sy) < 8) return;
+          if (!moved) {
+            moved = true;
+            el.dataset.dragged = '1';
+            document.body.classList.add('dc-dragging');
+            markLegal();
+            ghost = el.cloneNode(true);
+            ghost.id = 'dc-drag-ghost';
+            ghost.style.position = 'fixed';
+            ghost.style.pointerEvents = 'none';
+            ghost.style.zIndex = '200';
+            ghost.style.width = Math.max(el.offsetWidth, 72) + 'px';
+            ghost.style.margin = '0';
+            ghost.style.opacity = '0.92';
+            document.body.appendChild(ghost);
+          }
+          ghost.style.left = (e.clientX - ghost.offsetWidth / 2) + 'px';
+          ghost.style.top = (e.clientY - 28) + 'px';
+          document.querySelectorAll('.slot.drop-ok').forEach(function (s) { s.classList.remove('drop-ok'); });
+          var hot = slotFromPoint(e.clientX, e.clientY);
+          if (hot && hot.classList.contains('legal')) hot.classList.add('drop-ok');
+        }
+        function up(e) {
+          document.removeEventListener('pointermove', move);
+          document.removeEventListener('pointerup', up);
+          document.removeEventListener('pointercancel', up);
+          try { el.releasePointerCapture(e.pointerId); } catch (e2) {}
+          if (ghost) ghost.remove();
+          var slot = moved ? slotFromPoint(e.clientX, e.clientY) : null;
+          clearMarks();
+          document.body.classList.remove('dc-dragging');
+          if (!moved) return;
+          placeFromHand(uid, slot, viewer);
+        }
+        document.addEventListener('pointermove', move);
+        document.addEventListener('pointerup', up);
+        document.addEventListener('pointercancel', up);
       };
     });
     bindBoardDrops(viewer);
@@ -1676,7 +1780,7 @@
     bindStatTips(document.getElementById('app'));
     $('#hint').textContent = st.pending // offene Wahl des Spielers
       ? 'Ziel oder Stellung wählen.' // nächster Schritt im Ablauf
-      : 'Karte antippen: große Ansicht. Aktionen stehen unten in dem Fenster.'; // nächster Schritt im Ablauf
+      : 'Karte auf ein Feld ziehen. Antippen öffnet die große Ansicht.'; // nächster Schritt im Ablauf
     $('#log').innerHTML = engine.log.slice(-40).reverse().map(function (l) { // HTML in den Knoten schreiben
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
     }).join(''); // nächster Schritt im Ablauf
