@@ -16,7 +16,9 @@ Hotseat, Bot und LAN-Lobby liegen im Hauptmenü.
 |---|---|
 | `web/` | Spiel (HTML, Engine, Karten, Audio) |
 | `web/assets/cards/` | Kartenbilder |
-| `web/assets/audio/` | Menü- und Tischmusik |
+| `web/assets/audio/menue/` | Menümusik |
+| `web/assets/audio/kampf/` | Kampfmusik |
+| `web/assets/audio/index.json` | Welche Stücke auf welchem Schirm laufen |
 | `server.py` | Lokaler Host für Vorschau und LAN |
 
-Originale WAV-Dateien liegen nicht im Repo (zu groß). Im Spiel laufen die MP3s.
+Die WAV-Dateien liegen nach Verwendung getrennt in `web/assets/audio/menue/` und `web/assets/audio/kampf/`. Der Dateiname von Inside Out ist korrigiert.

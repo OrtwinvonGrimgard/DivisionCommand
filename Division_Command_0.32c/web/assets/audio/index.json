@@ -1,0 +1,50 @@
+{
+  "playback": "Beim Öffnen zuerst das Stück aus first, danach die übrigen Stücke dieser Liste in zufälliger Reihenfolge. Ist die Reihe durch, neu mischen und von vorn wiederholen.",
+  "screens": {
+    "start": {
+      "first": "division-command",
+      "tracks": ["division-command"]
+    },
+    "charakter": {
+      "first": "parade-drill",
+      "tracks": ["parade-drill", "division-command", "regimental-cadence", "last-charge"]
+    },
+    "hauptmenue": {
+      "first": "division-command",
+      "tracks": ["division-command", "parade-drill", "regimental-cadence", "last-charge"]
+    },
+    "kampf": {
+      "first": null,
+      "tracks": [
+        "airforce",
+        "artillery",
+        "business-as-usual",
+        "chemicals",
+        "contested-grounds",
+        "decisions",
+        "enemy-lines",
+        "inside-out",
+        "over-the-hill",
+        "requiem-of-the-fallen",
+        "winter-march"
+      ]
+    }
+  },
+  "tracks": [
+    {"id": "division-command", "file": "menue/Division Command (Remastered).wav", "title": "Division Command", "use": "menue"},
+    {"id": "parade-drill", "file": "menue/Parade Drill (Remastered).wav", "title": "Parade Drill", "use": "menue"},
+    {"id": "regimental-cadence", "file": "menue/Regimental Cadence (Remastered).wav", "title": "Regimental Cadence", "use": "menue"},
+    {"id": "last-charge", "file": "menue/The Last Charge (Remastered).wav", "title": "The Last Charge", "use": "menue"},
+    {"id": "airforce", "file": "kampf/Airforce (Remastered).wav", "title": "Airforce", "use": "kampf"},
+    {"id": "artillery", "file": "kampf/Artillery (Remastered).wav", "title": "Artillery", "use": "kampf"},
+    {"id": "business-as-usual", "file": "kampf/Business As Usual (Remastered).wav", "title": "Business As Usual", "use": "kampf"},
+    {"id": "chemicals", "file": "kampf/Chemicals (Remastered).wav", "title": "Chemicals", "use": "kampf"},
+    {"id": "contested-grounds", "file": "kampf/Contested Grounds (Remastered).wav", "title": "Contested Grounds", "use": "kampf"},
+    {"id": "decisions", "file": "kampf/Decisions (Remastered).wav", "title": "Decisions", "use": "kampf"},
+    {"id": "enemy-lines", "file": "kampf/Enemy Lines (Remastered).wav", "title": "Enemy Lines", "use": "kampf"},
+    {"id": "inside-out", "file": "kampf/Inside Out (Remastered).wav", "title": "Inside Out", "use": "kampf"},
+    {"id": "over-the-hill", "file": "kampf/Over the Hill (Remastered).wav", "title": "Over the Hill", "use": "kampf"},
+    {"id": "requiem-of-the-fallen", "file": "kampf/Requiem of the Fallen (Remastered).wav", "title": "Requiem of the Fallen", "use": "kampf"},
+    {"id": "winter-march", "file": "kampf/Winter March (Remastered).wav", "title": "Winter March", "use": "kampf"}
+  ]
+}
