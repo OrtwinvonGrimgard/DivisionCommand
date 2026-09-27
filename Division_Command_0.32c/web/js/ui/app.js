@@ -43,6 +43,9 @@
     list.push(enc('assets/cards/' + stem + '.png'));
     list.push(enc('assets/cards/' + stem + '.jpg'));
     list.push(enc('assets/cards/' + key));
+    list.push(enc('assets/cards/thumbs/' + stem + '.png'));
+    list.push(enc('assets/cards/thumbs/' + stem + '.jpg'));
+    list.push(enc('assets/cards/thumbs/' + key));
     list.push(enc('./assets/cards/' + stem + '.png'));
     list.push(enc('./assets/cards/' + stem + '.jpg'));
     return list;
@@ -72,7 +75,9 @@
       el.src = list[i];
     } else {
       el.dataset.dead = '1';
-      var fb = imgSrc(backFile(null));
+      var rawFb = el.getAttribute('data-file') || '';
+      var dok = /doktrin/i.test(rawFb) || (el.closest && el.closest('.doctrine-card, .doc-window'));
+      var fb = imgSrc(backFile(dok ? { typ: 'Doktrin' } : null));
       if (fb && el.src.indexOf('rueckseite') < 0) el.src = fb;
     }
   };
@@ -1445,7 +1450,7 @@
     function doctrineRow(list) {
       return (list || []).map(function (d) {
         var def = engine.defOf(d);
-        return '<div class="doctrine-card" data-id="' + def.id + '">' + artTag(def, false) + '<div class="dn">' + escapeHtml(def.name) + '</div></div>';
+        return '<div class="doctrine-card" data-id="' + def.id + '">' + artTag(def, true) + '<div class="dn">' + escapeHtml(def.name) + '</div></div>';
       }).join('');
     }
     var ed = document.getElementById('enemy-doctrine');
