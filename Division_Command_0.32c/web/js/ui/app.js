@@ -178,6 +178,7 @@
       if (window.dcUnmountMatch) window.dcUnmountMatch();
       tableBound = false;
       engine = null;
+      if (window.dcSetTable) window.dcSetTable(false);
       var tr = document.getElementById('title-root');
       if (tr) tr.style.display = 'flex';
       if (window.dcShowTitle) window.dcShowTitle();
@@ -208,6 +209,7 @@
     });
     bind('btn-menu', function () { // Funktion
       if (window.DCNet && DCNet.notifyLeave) DCNet.notifyLeave('hat das Spiel verlassen'); // Zweig nur bei zutreffender Bedingung
+      if (window.dcSetTable) window.dcSetTable(false);
       var tr = document.getElementById('title-root'); // lokale Variable
       if (tr) tr.style.display = 'flex'; // Zweig nur bei zutreffender Bedingung
       var ov = document.getElementById('overlay'); // lokale Variable
@@ -336,6 +338,7 @@
       render();
       if (window.dcKickoff) window.dcKickoff();
       else {
+        if (window.dcSetTable) window.dcSetTable(true);
         var tr = document.getElementById('title-root');
         if (tr) tr.style.display = 'none';
       }
@@ -1711,7 +1714,7 @@
     }
     if (st && st.seed) window.dcMusicSeed = st.seed;
     var tr = document.getElementById('title-root');
-    var first = tr && tr.style.display !== 'none';
+    var first = tr && !tr.classList.contains('dc-off');
     var ov = document.getElementById('overlay'); // lokale Variable
     if (ov && ov.querySelector('.recap-modal') === null && ov.querySelector('.inspect-modal') === null) { // Element in der Seite suchen
       /* keep recap; hide leftover lobby overlay */
@@ -1720,7 +1723,7 @@
     render();
     presentNewEvents();
     if (first && window.dcKickoff) window.dcKickoff();
-    else if (tr) tr.style.display = 'none';
+    else if (tr) { if (window.dcSetTable) window.dcSetTable(true); tr.style.display = 'none'; }
   };
   window.dcPresentNewEvents = presentNewEvents;
   window.dcSetNames = function (a, b) { // globale Schnittstelle der Seite

@@ -9,7 +9,7 @@
   <title>Division Command 0.32c Alpha</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#12140f">
-  <link rel="stylesheet" href="css/app.css?v=032still">
+  <link rel="stylesheet" href="css/app.css?v=tisch1">
   <link rel="stylesheet" href="css/align.css?v=032fix1" id="dc-align-css">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
@@ -393,7 +393,7 @@
   <script src="js/ai/bot.js?v=030c"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/library.js?v=030n"></script>
-  <script src="js/ui/app.js?v=backs1"></script>
+  <script src="js/ui/app.js?v=tisch1"></script>
   <script src="js/net.js?v=030c"></script>
   <script>
     if ('serviceWorker' in navigator) {
@@ -553,8 +553,14 @@
         window.dcMatchAlive = false;
         if (window.dcTableMusic) window.dcTableMusic(false);
       };
+      window.dcSetTable = function (on) {
+        var tr = document.getElementById('title-root');
+        if (!tr) return;
+        tr.classList.toggle('dc-off', !!on);
+      };
       window.dcShowTitle = function () {
         if (window.dcUnmountMatch) window.dcUnmountMatch();
+        if (window.dcSetTable) window.dcSetTable(false);
         var tr = document.getElementById('title-root');
         if (tr) tr.style.display = 'flex';
         show('scr-title');
@@ -594,6 +600,8 @@
         var target = volEl ? Number(volEl.value) / 100 : 0.55;
         var musicOn = document.getElementById('opt-music') && document.getElementById('opt-music').checked;
         window.dcTimerHold = true;
+        if (window.dcSetTable) window.dcSetTable(true);
+        if (title) title.style.display = 'none';
         if (table) table.style.opacity = '0';
         if (msg) {
           msg.textContent = 'Viel Glück';
@@ -668,7 +676,7 @@
         var on = musicEl.checked;
         bgm.volume = Number(volEl.value) / 100;
         var battle = document.getElementById('bgm-battle');
-        var tableOn = document.getElementById('title-root') && document.getElementById('title-root').style.display === 'none';
+        var tableOn = document.getElementById('title-root') && document.getElementById('title-root').classList.contains('dc-off');
         var setupOn = document.getElementById('scr-setup') && document.getElementById('scr-setup').classList.contains('on');
         var bootOn = document.getElementById('scr-boot') && document.getElementById('scr-boot').classList.contains('on');
         if (window.DCAudio) {

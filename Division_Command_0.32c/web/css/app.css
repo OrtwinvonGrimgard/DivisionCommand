@@ -3301,3 +3301,9 @@ a.media-zip {
 #title-root .title-fg,
 #title-root .title-battle,
 #title-root .title-tent { display: none !important; }
+
+#title-root.dc-off {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
