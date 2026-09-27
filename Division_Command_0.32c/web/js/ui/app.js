@@ -1291,18 +1291,21 @@
     if (r) r.onclick = function () { go(function () { dispatch({ type: 'REVEAL_UNIT', player: viewer, uid: loc.inst.uid }); }); };
     document.getElementById('ac-x').onclick = function () { ov.style.display = 'none'; };
   }
-  function slotFromPoint(x, y) {
-    var stack = document.elementsFromPoint ? document.elementsFromPoint(x, y) : [document.elementFromPoint(x, y)];
-    var hand = document.getElementById('hand');
-    for (var i = 0; i < stack.length; i++) {
-      var n = stack[i];
-      if (!n || !n.closest) continue;
-      if (n.id === 'dc-drag-ghost' || n.closest('#dc-drag-ghost')) continue;
-      if (hand && (n === hand || hand.contains(n))) return null;
-      var slot = n.closest('.slot');
-      if (slot) return slot;
+  function slotUnder(x, y) {
+    var nodes = document.querySelectorAll('.slot.legal');
+    var best = null;
+    var bestD = Infinity;
+    for (var i = 0; i < nodes.length; i++) {
+      var s = nodes[i];
+      var r = s.getBoundingClientRect();
+      if (r.width < 2 || r.height < 2) continue;
+      if (x < r.left || x > r.right || y < r.top || y > r.bottom) continue;
+      var cx = (r.left + r.right) / 2;
+      var cy = (r.top + r.bottom) / 2;
+      var d = (x - cx) * (x - cx) + (y - cy) * (y - cy);
+      if (d < bestD) { bestD = d; best = s; }
     }
-    return null;
+    return best;
   }
   function placeFromHand(uid, slot, viewer) {
     var me = engine.player(viewer);
@@ -1523,6 +1526,9 @@
       }); // nächster Schritt im Ablauf
       el.onclick = function () {
         if (el.dataset.dragged === '1') { el.dataset.dragged = '0'; return; }
+        if (el.dataset.opened === '1') return;
+        el.dataset.opened = '1';
+        window.setTimeout(function () { el.dataset.opened = '0'; }, 200);
         var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; }); // Handkarten
         if (!card) return; // Zweig nur bei zutreffender Bedingung
         var d = engine.defOf(card); // lokale Variable
@@ -1541,12 +1547,15 @@
         }); // nächster Schritt im Ablauf
       };
       el.draggable = false;
+      el.querySelectorAll('img').forEach(function (img) { img.draggable = false; img.ondragstart = function (e) { e.preventDefault(); }; });
       el.ondragstart = function (ev) { ev.preventDefault(); };
       el.onpointerdown = function (ev) {
         if (ev.button !== 0) return;
         if (dialogOpen()) return;
-        var sx = ev.clientX, sy = ev.clientY, moved = false, ghost = null;
+        ev.preventDefault();
+        var sx = ev.clientX, sy = ev.clientY, moved = false, ghost = null, hot = null;
         var uid = el.dataset.uid;
+        var who = viewer;
         var card = me.hand.find(function (c) { return c.uid === uid; });
         if (!card) return;
         var def = engine.defOf(card);
@@ -1565,8 +1574,16 @@
           if (!sel) return;
           document.querySelectorAll(sel).forEach(function (s) { s.classList.add('legal'); });
         }
+        function paintHot(x, y) {
+          var next = slotUnder(x, y);
+          if (next === hot) return next;
+          if (hot) hot.classList.remove('drop-ok');
+          hot = next;
+          if (hot) hot.classList.add('drop-ok');
+          return hot;
+        }
         function move(e) {
-          if (!moved && Math.abs(e.clientX - sx) + Math.abs(e.clientY - sy) < 8) return;
+          if (!moved && Math.abs(e.clientX - sx) + Math.abs(e.clientY - sy) < 6) return;
           if (!moved) {
             moved = true;
             el.dataset.dragged = '1';
@@ -1584,9 +1601,7 @@
           }
           ghost.style.left = (e.clientX - ghost.offsetWidth / 2) + 'px';
           ghost.style.top = (e.clientY - 28) + 'px';
-          document.querySelectorAll('.slot.drop-ok').forEach(function (s) { s.classList.remove('drop-ok'); });
-          var hot = slotFromPoint(e.clientX, e.clientY);
-          if (hot && hot.classList.contains('legal')) hot.classList.add('drop-ok');
+          paintHot(e.clientX, e.clientY);
         }
         function up(e) {
           document.removeEventListener('pointermove', move);
@@ -1594,11 +1609,14 @@
           document.removeEventListener('pointercancel', up);
           try { el.releasePointerCapture(e.pointerId); } catch (e2) {}
           if (ghost) ghost.remove();
-          var slot = moved ? slotFromPoint(e.clientX, e.clientY) : null;
+          var slot = moved ? (hot && document.body.contains(hot) ? hot : slotUnder(e.clientX, e.clientY)) : null;
           clearMarks();
           document.body.classList.remove('dc-dragging');
-          if (!moved) return;
-          placeFromHand(uid, slot, viewer);
+          if (!moved) {
+            if (el.onclick) el.onclick();
+            return;
+          }
+          placeFromHand(uid, slot, who);
         }
         document.addEventListener('pointermove', move);
         document.addEventListener('pointerup', up);

@@ -3311,10 +3311,15 @@ a.media-zip {
 .hand .card { cursor: grab; touch-action: none; user-select: none; }
 .hand .card img { -webkit-user-drag: none; user-select: none; }
 body.dc-dragging { cursor: grabbing; }
+body.dc-dragging .hand,
 body.dc-dragging .hand .card {
-  height: 12vh;
-  margin-bottom: 0;
-  opacity: 0.35;
+  pointer-events: none !important;
+}
+body.dc-dragging .hand .card {
+  height: 8vh !important;
+  transform: none !important;
+  margin-bottom: 0 !important;
+  opacity: 0.28;
 }
 body.dc-dragging #hoverzoom { display: none !important; }
 body.dc-dragging .slot.legal {
