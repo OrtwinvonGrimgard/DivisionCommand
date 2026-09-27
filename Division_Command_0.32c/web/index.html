@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Division Command 0.32c Alpha</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#12140f">
+  <link rel="stylesheet" href="css/app.css?v=032still">
+  <link rel="stylesheet" href="css/align.css?v=032fix1" id="dc-align-css">
+  <style>
+    /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
+    .title-brand .ver-big { display: none !important; }
+    #dc-version {
+      position: fixed !important;
+      left: 16px !important;
+      bottom: 12px !important;
+      z-index: 200 !important;
+    }
+    body:has(#title-root.boot-intro:not(.btn-in)) #dc-version { opacity: 0 !important; }
+    #title-root.boot-intro > .title-brand { opacity: 0 !important; }
+    #title-root.boot-intro #scr-boot .menu { opacity: 0 !important; }
+  </style>
+</head>
+<body>
+
+  <div id="match-host"></div>
+  <template id="match-tpl">
+  <div id="app">
+    <header class="topbar">
+      <h1>DIVISION COMMAND <span class="ver">0.32c α</span></h1>
+      <div class="meta" id="turnmeta">Lobby</div>
+      <div class="nowplay" id="nowplay"></div>
+      <div class="sp">
+        <span class="badge you" id="ap0">A</span>
+        <span class="badge" id="ap1">B</span>
+      </div>
+    </header>
+    <div class="table">
+      <div class="table-main">
+        <div class="top-bar">
+          <div class="nameplate top" id="plate-enemy">GEGNER</div>
+          <div class="piles foe" id="enemy-piles">
+            <div class="pile" id="pile-enemy-deck"><img alt="" src="assets/cards/thumbs/rueckseite-schwarz.png"><span>Deck</span><b id="n-enemy-deck">0</b></div>
+            <div class="pile" id="pile-enemy-grave"><img alt="" src="assets/cards/thumbs/rueckseite-schwarz.png"><span>Friedhof</span><b id="n-enemy-grave">0</b></div>
+          </div>
+          <div class="doc-window foe" id="enemy-doctrine"></div>
+        </div>
+        <div class="row-label" id="enemy-support-label">Support</div>
+        <div class="support-row" id="enemy-support"></div>
+        <div class="row-label" id="enemy-front-label">Front</div>
+        <div id="enemy-front"></div>
+        <div class="nml-band">
+          <div class="row-label" id="enemy-nml-label">Niemandsland</div>
+          <div class="nml-row" id="enemy-nml"></div>
+          <div class="midline"></div>
+          <div class="nml-row mine" id="my-nml"></div>
+          <div class="row-label" id="my-nml-label">Niemandsland</div>
+        </div>
+        <div class="row-label" id="my-front-label">Front</div>
+        <div id="my-front"></div>
+        <div class="row-label" id="my-support-label">Support</div>
+        <div class="support-row" id="my-support"></div>
+        <div class="bottom-bar">
+          <div class="doc-window mine" id="my-doctrine"></div>
+          <div class="hand-dock">
+            <div class="hand" id="hand"></div>
+          </div>
+          <div class="piles mine" id="my-piles">
+            <div class="pile" id="pile-my-deck"><img alt="" src="assets/cards/thumbs/rueckseite-schwarz.png"><span>Deck</span><b id="n-my-deck">0</b></div>
+            <div class="pile" id="pile-my-grave"><img alt="" src="assets/cards/thumbs/rueckseite-schwarz.png"><span>Friedhof</span><b id="n-my-grave">0</b></div>
+          </div>
+          <div class="nameplate bot" id="plate-me">SPIELER</div>
+        </div>
+      </div>
+      <aside class="table-side">
+        <div class="panel bomb-wrap">
+          <h2>Zugtimer</h2>
+          <div class="bomb-box" id="bomb-box">
+            <div class="bomb-label" id="bomb-label">—</div>
+            <div class="bomb-clock" id="bomb-clock">05:00</div>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Befehle</h2>
+          <div class="actions">
+            <button type="button" class="primary" id="btn-end">Zugende</button>
+            <button type="button" id="btn-peace">Frieden anbieten</button>
+            <button type="button" id="btn-accept">Frieden annehmen</button>
+            <button type="button" id="btn-opts">Optionen</button>
+            <button type="button" id="btn-menu">Hauptmenü</button>
+            <button type="button" class="danger" id="btn-concede">Aufgeben</button>
+            <button type="button" id="btn-log">Protokoll</button>
+          </div>
+          <div class="hint" id="hint"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div id="log-win" class="float-win">
+    <div class="float-bar" id="log-drag">Protokoll</div>
+    <div class="log" id="log"></div>
+  </div>
+  <div id="fx-layer"></div>
+  <div id="overlay" class="overlay" style="display:none"></div>
+  <div id="inspect" class="overlay" style="display:none"></div>
+  <div id="ingame-opts" class="overlay" style="display:none">
+    <div class="modal">
+      <h2>Optionen</h2>
+      <label>Musik <input id="opt-music-ingame" type="checkbox" checked> an</label>
+      <label>Lautstärke <input id="opt-vol-ingame" type="range" min="0" max="100" value="55"></label>
+      <h3>Bot</h3>
+      <label>Aggressivität <span id="ig-v-agg">45</span>
+        <input id="ig-bot-agg" type="range" min="1" max="100" value="45">
+      </label>
+      <label>Ausspielen statt Angriff <span id="ig-v-play">75</span>%
+        <input id="ig-bot-play" type="range" min="0" max="100" value="75">
+      </label>
+      <label>Soforteinsatz <span id="ig-v-instant">30</span>%
+        <input id="ig-bot-instant" type="range" min="0" max="100" value="30">
+      </label>
+      <label>Denkpause <span id="ig-v-delay">350</span> ms
+        <input id="ig-bot-delay" type="range" min="80" max="1200" step="10" value="350">
+      </label>
+      <label><input type="checkbox" id="ig-bot-unit" checked> Einheiten legen</label>
+      <label><input type="checkbox" id="ig-bot-sup" checked> Support legen</label>
+      <label><input type="checkbox" id="ig-bot-eq" checked> Ausrüstung</label>
+      <label><input type="checkbox" id="ig-bot-inst" checked> Soforteinsätze</label>
+      <label><input type="checkbox" id="ig-bot-atk" checked> Angreifen</label>
+      <label><input type="checkbox" id="ig-bot-hold" checked> AP zurückhalten</label>
+      <button type="button" class="primary" id="ig-bot-apply">Bot übernehmen</button>
+      <button type="button" id="opt-ingame-close">Schließen</button>
+    </div>
+  </div>
+  </template>
+
+  <audio id="bgm" autoplay preload="auto" src="assets/audio/menue/Division%20Command%20(Remastered).wav"></audio>
+  <audio id="bgm-battle" preload="auto"></audio>
+  <div id="kick-veil"><p id="kick-msg">Viel Glück</p></div>
+  <div id="dc-version">Alpha 0.32c</div>
+
+  <div id="title-root" class="boot-intro">
+      <div class="title-world" id="title-world" aria-hidden="true">
+        <div class="title-stage">
+          <video id="title-loop" class="title-loop" src="assets/title-back.mp4?v=fx6" autoplay muted loop playsinline preload="auto" disablepictureinpicture></video>
+          <canvas id="title-sky" class="title-sky"></canvas>
+          <img class="title-battle" src="assets/title-battle.webp?v=032plate" alt="">
+          <img class="title-tent" src="assets/title-tent.webp" alt="">
+        </div>
+      </div>
+      <div class="title-brand">
+        <img class="title-logo" src="assets/title-logo.png?v=6" alt="Division Command" width="1381" height="507">
+        <p class="sub ver-big" hidden>Alpha 0.32c</p>
+      </div>
+    <div class="title-panel" id="menu-panel">
+      <div id="scr-boot" class="screen on splash">
+        <div class="menu">
+          <button type="button" class="primary" id="go-start">Spiel starten</button>
+        </div>
+      </div>
+
+      <div id="scr-setup" class="screen splash">
+        <p class="tiny">Spielername</p>
+        <input id="setup-name" maxlength="24" placeholder="" autocomplete="nickname">
+        <div class="menu">
+          <button type="button" class="primary" id="setup-ok">Weiter</button>
+        </div>
+      </div>
+
+      <div id="scr-title" class="screen splash">
+        <p class="who-line" id="who-line"></p>
+        <div class="menu">
+          <button type="button" class="primary" id="go-single">Einzelspieler</button>
+          <button type="button" id="go-lan">LAN / Hamachi</button>
+          <button type="button" id="go-library">Bibliothek</button>
+          <button type="button" id="go-user">Benutzer</button>
+          <button type="button" id="go-options">Optionen</button>
+          <button type="button" id="go-quit">Beenden</button>
+        </div>
+      </div>
+    </div>
+    <div id="work-root">
+      <div id="scr-user" class="screen">
+        <h1 class="page-title">BENUTZER</h1>
+        <p class="tiny">Aktiver Spieler gilt für LAN und Einzelspieler.</p>
+        <label>Aktiver Benutzer
+          <select id="user-active"></select>
+        </label>
+        <label>Name ändern <input id="user-rename" maxlength="24"></label>
+        <div class="menu">
+          <button type="button" class="primary" id="user-save">Namen speichern</button>
+        </div>
+        <label>Neuen Benutzer anlegen <input id="user-new" maxlength="24" placeholder="Zweiter Spieler"></label>
+        <div class="menu">
+          <button type="button" id="user-add">Anlegen</button>
+          <button type="button" class="back" id="back-user">Zurück</button>
+        </div>
+      </div>
+
+      <div id="scr-library" class="screen">
+        <h1 class="page-title">BIBLIOTHEK</h1>
+        <p class="tiny" id="lib-build">Stand 0.32c</p>
+        <p class="tiny">Klick = eine Kopie ins Deck. Doppelklick = große Ansicht. Im Deck: Klick legt zurück.</p>
+        <div class="lib-wrap">
+          <div class="lib-main">
+            <div class="lib-tools">
+              <div class="lib-tabs" id="lib-tabs">
+                <button type="button" class="lib-tab on" data-tab="all">ALLE</button>
+                <button type="button" class="lib-tab" data-tab="Infanterie">INFANTERIE</button>
+                <button type="button" class="lib-tab" data-tab="Schützenpanzer">SCHÜTZENPANZER</button>
+                <button type="button" class="lib-tab" data-tab="Panzer">PANZER</button>
+                <button type="button" class="lib-tab" data-tab="Aufklärung">AUFKLÄRUNG</button>
+                <button type="button" class="lib-tab" data-tab="Artillerie">ARTILLERIE</button>
+                <button type="button" class="lib-tab" data-tab="Elite">ELITE</button>
+                <button type="button" class="lib-tab" data-tab="Unterstützung">UNTERSTÜTZUNG</button>
+                <button type="button" class="lib-tab" data-tab="Soforteinsatz">SOFORTEINSATZ</button>
+                <button type="button" class="lib-tab" data-tab="Ausrüstung">AUSRÜSTUNG</button>
+                <button type="button" class="lib-tab" data-tab="Doktrinen">DOKTRINEN</button>
+              </div>
+              <input id="lib-search" class="lib-search" type="search" placeholder="Suchen…" maxlength="40" autocomplete="off">
+            </div>
+            <div id="lib-list" class="lib-list"></div>
+          </div>
+          <aside class="lib-side">
+            <h3 class="deck-head">DECK</h3>
+            <p class="deck-sub" id="deck-meta">Karten</p>
+            <p class="deck-types" id="deck-types"></p>
+            <div id="deck-docs" class="deck-docs"></div>
+            <div id="deck-picked" class="deck-picked"></div>
+            <div class="deck-save-box">
+              <input id="deck-name-in" maxlength="32" placeholder="Deckname">
+              <button type="button" class="primary" id="deck-save">Deck speichern</button>
+            </div>
+          </aside>
+        </div>
+        <div class="lib-foot">
+          <button type="button" class="back" id="back-lib">Zurück</button>
+        </div>
+      </div>
+
+      <div id="scr-single" class="screen">
+        <h1 class="page-title">EINZELSPIELER</h1>
+        <label>Dein Name <input id="player-name" maxlength="24" value="Spieler"></label>
+        <label>Deck
+          <select id="deck-pick-single"></select>
+        </label>
+        <label>Gegner
+          <select id="mode">
+            <option value="bot">Test (Analyse)</option>
+            <option value="bot-schloter">Schloter (Prozente)</option>
+            <option value="hotseat">Hotseat (zwei Spieler, ein Gerät)</option>
+          </select>
+        </label>
+        <label>Name des Gegners <input id="opponent-name" maxlength="24" value="Test"></label>
+        <label id="bot-deck-row">Deck des Bots
+          <select id="deck-pick-bot"></select>
+        </label>
+        <label id="hotseat-row" style="display:none">Hotseat-Gegner (Benutzer)
+          <select id="hotseat-user"></select>
+        </label>
+
+        <div class="menu">
+          <button type="button" class="primary" id="btn-bot-cfg">Bot einstellen</button>
+        </div>
+        <div id="bot-modal" class="modal-layer" style="display:none">
+        <div class="modal bot-dlg">
+          <h2 id="bot-dlg-title">Bot</h2>
+          <div id="bot-box">
+          <label><input type="checkbox" id="bot-stock" checked> Werkseinstellung</label>
+          <p class="tiny">An: Standard des gewählten Bots. Aus: eigene Mischung (wird gespeichert).</p>
+          <div id="bot-sliders" style="display:none" class="bot-sliders">
+            <label>Aggressivität <span id="v-agg">45</span>
+              <input id="bot-agg" type="range" min="1" max="100" value="45">
+            </label>
+            <label>Ausspielen statt Angriff <span id="v-play">75</span>%
+              <input id="bot-play" type="range" min="0" max="100" value="75">
+            </label>
+            <label>Soforteinsatz <span id="v-instant">30</span>%
+              <input id="bot-instant" type="range" min="0" max="100" value="30">
+            </label>
+            <label>Denkpause <span id="v-delay">350</span> ms
+              <input id="bot-delay" type="range" min="80" max="1200" step="10" value="350">
+            </label>
+            <label><input type="checkbox" id="bot-unit" checked> Einheiten legen</label>
+            <label><input type="checkbox" id="bot-sup" checked> Support legen</label>
+            <label><input type="checkbox" id="bot-eq" checked> Ausrüstung</label>
+            <label><input type="checkbox" id="bot-inst" checked> Soforteinsätze</label>
+            <label><input type="checkbox" id="bot-atk" checked> Angreifen</label>
+            <label><input type="checkbox" id="bot-hold" checked> AP zurückhalten</label>
+            <div class="menu">
+              <button type="button" class="primary" id="bot-apply">Speichern</button>
+              <button type="button" id="bot-reset">Zurücksetzen</button>
+              <button type="button" id="bot-cancel">Abbrechen</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="menu">
+          <button type="button" class="primary" id="btn-single-ready">Bereit</button>
+          <button type="button" class="primary" id="btn-start" disabled>Gefecht beginnen</button>
+          <button type="button" class="back" id="back-single">Zurück</button>
+        </div>
+        <p id="boot-error"></p>
+      </div>
+
+      <div id="scr-lan" class="screen">
+        <h1 class="page-title">LAN</h1>
+        <div id="lan-pick">
+          <label>Dein Name <input id="lan-name" maxlength="24" value="Spieler"></label>
+          <label>Deck <select id="deck-pick-lan"></select></label>
+          <div class="menu">
+            <button type="button" class="primary" id="btn-lan-host">Sitzung hosten</button>
+            <button type="button" id="btn-lan-seek">Sitzung suchen</button>
+            <button type="button" class="back" id="back-lan">Zurück</button>
+          </div>
+          <div id="join-row" style="display:none">
+            <label>Host-Adresse <input id="join-ip" placeholder="192.168.x.x oder 25.x.x.x"></label>
+            <button type="button" id="btn-scan">Im Netz suchen</button>
+            <div id="peer-list" class="tiny"></div>
+            <button type="button" class="primary" id="btn-lan-connect">Verbinden</button>
+          </div>
+          <select id="lan-role" style="display:none"><option value="host">host</option><option value="join">join</option></select>
+        </div>
+        <div id="lan-room" style="display:none">
+          <div id="host-info" class="tiny"></div>
+          <div class="lobby-seats">
+            <div>Host: <span id="seat-host" class="seat-empty">—</span> <em id="ready-host"></em></div>
+            <div>Gast: <span id="seat-guest" class="seat-empty">wartet …</span> <em id="ready-guest"></em></div>
+          </div>
+          <div class="menu">
+            <button type="button" id="btn-lan-ready">Bereit</button>
+            <button type="button" class="primary" id="btn-lan-start" disabled>Gefecht beginnen</button>
+            <button type="button" id="btn-lan-leave">Lobby verlassen</button>
+          </div>
+        </div>
+        <p id="lan-error" class="tiny"></p>
+      </div>
+
+      <div id="scr-options" class="screen">
+        <h1 class="page-title">OPTIONEN</h1>
+        <div class="opt-tabs">
+          <button type="button" class="opt-tab on" data-pane="opt-audio">Audio</button>
+          <button type="button" class="opt-tab" data-pane="opt-game">Gameplay</button>
+          <button type="button" class="opt-tab" data-pane="opt-gfx">Grafik</button>
+          <button type="button" class="opt-tab" data-pane="opt-sys">System</button>
+        </div>
+        <div id="opt-audio" class="opt-pane">
+          <label>Musik <input id="opt-music" type="checkbox" checked> an</label>
+          <label>Lautstärke <input id="opt-vol" type="range" min="0" max="100" value="55"></label>
+        </div>
+        <div id="opt-game" class="opt-pane" style="display:none">
+          <label>Kartenflug <span id="v-fly">0.8 s</span>
+            <input id="opt-fly" type="range" min="0" max="2000" step="50" value="800"></label>
+          <label>Dialog-Pause nach Text <span id="v-dialog">2.0 s</span>
+            <input id="opt-dialog" type="range" min="400" max="5000" step="100" value="2000"></label>
+          <p class="tiny">Schreibgeschwindigkeit passt sich der Pause an. 0 beim Flug = sofort am Ziel.</p>
+          <label>Zugtimer <span id="v-timer">5:00</span>
+            <input id="opt-timer" type="range" min="30" max="300" step="30" value="300"></label>
+        </div>
+        <div id="opt-gfx" class="opt-pane" style="display:none">
+          <label>Bewegung reduzieren <input id="opt-motion" type="checkbox"> kürzere Dialoge und Flüge</label>
+        </div>
+        <div id="opt-sys" class="opt-pane" style="display:none">
+          <label>Leistung anzeigen <input id="opt-perf" type="checkbox"> FPS / Speicher</label>
+        </div>
+
+        <div class="menu">
+          <button type="button" class="back" id="back-opt">Zurück</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/ui/title-fx.js?v=032fx"></script>
+  <script>window.DC_FOLDER_PNG = true;</script>
+  <script src="js/version.js?v=030c"></script>
+  <script src="js/data/sets/alpha/doktrinen.js?v=030c"></script>
+  <script src="js/data/sets/alpha/tokens.js?v=030c"></script>
+  <script src="js/data/sets/alpha/einheiten.js?v=030c"></script>
+  <script src="js/data/sets/alpha/unterstuetzung.js?v=030c"></script>
+  <script src="js/data/sets/alpha/soforteinsaetze.js?v=030c"></script>
+  <script src="js/data/sets/alpha/ausruestung.js?v=030c"></script>
+  <script src="js/data/catalog.js?v=backs1"></script>
+  <script src="js/data/audio-data.js?v=030c"></script>
+  <script src="js/engine/engine.js?v=030c"></script>
+  <script src="js/ai/bot.js?v=030c"></script>
+  <script src="js/ui/perf.js?v=030c"></script>
+  <script src="js/ui/library.js?v=030n"></script>
+  <script src="js/ui/app.js?v=backs1"></script>
+  <script src="js/net.js?v=030c"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(function () {});
+    }
+    (function () {
+      document.title = window.DC_BUILD_LABEL || 'Division Command 0.32c Alpha';
+      var dcVer = document.getElementById('dc-version');
+      if (dcVer) dcVer.textContent = 'Alpha ' + (window.DC_VERSION || '0.32c');
+      var bgm = document.getElementById('bgm');
+
+      function dcBarToCommand() {
+        var stack = document.querySelector('#title-root .title-stack');
+        if (!stack) return;
+        var lines = stack.querySelectorAll('.tline');
+        var bars = stack.querySelectorAll('.title-bar');
+        if (lines.length < 2 || !bars.length) return;
+        var cmd = lines[1].querySelector('.tfill') || lines[1];
+        var range = document.createRange();
+        if (cmd.firstChild) range.selectNodeContents(cmd);
+        else range.selectNode(cmd);
+        var w = Math.round(range.getBoundingClientRect().width);
+        if (w > 8) {
+          for (var i = 0; i < bars.length; i++) bars[i].style.width = w + 'px';
+        }
+      }
+      function dcBarWhenReady() {
+        var run = function () { requestAnimationFrame(dcBarToCommand); };
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(run);
+        else run();
+        window.addEventListener('resize', function () {
+          clearTimeout(window.__dcBarT);
+          window.__dcBarT = setTimeout(function () { dcBarToCommand(); placeWho(); }, 80);
+        });
+      }
+      dcBarWhenReady();
+
+      function saveSettings() {
+        var o = {
+          music: document.getElementById('opt-music').checked ? '1' : '0',
+          vol: document.getElementById('opt-vol').value,
+          motion: document.getElementById('opt-motion') && document.getElementById('opt-motion').checked ? '1' : '0',
+          timerSec: document.getElementById('opt-timer') ? document.getElementById('opt-timer').value : '300',
+          botStock: document.getElementById('bot-stock') && document.getElementById('bot-stock').checked ? '1' : '0',
+          botCustom: collectBotCfg()
+        };
+        localStorage.setItem('dc_settings', JSON.stringify(o));
+        localStorage.setItem('dc_music', o.music);
+        localStorage.setItem('dc_vol', o.vol);
+        window.DC_REDUCE_MOTION = o.motion === '1';
+        if (document.getElementById('opt-timer') && o.timerSec) document.getElementById('opt-timer').value = o.timerSec;
+      }
+      function collectBotCfg(prefix) {
+        prefix = prefix || '';
+        function el(id) { return document.getElementById(prefix + id); }
+        function num(id, d) { var n = el(id); return n ? Number(n.value) : d; }
+        function on(id) { var n = el(id); return n && n.checked ? 1 : 0; }
+        return {
+          playChance: num('bot-play', 75),
+          instantChance: num('bot-instant', 30),
+          delayMs: num('bot-delay', 350),
+          aggression: num('bot-agg', 45),
+          allowUnit: on('bot-unit'),
+          allowSupport: on('bot-sup'),
+          allowEquip: on('bot-eq'),
+          allowInstant: on('bot-inst'),
+          allowAttack: on('bot-atk'),
+          holdAp: on('bot-hold')
+        };
+      }
+      function applyBotRuntime(fromIg) {
+        if (!window.DCBot) return;
+        var stock = document.getElementById('bot-stock');
+        if (stock && stock.checked && !fromIg) DCBot.useDefaults();
+        else DCBot.applyCfg(collectBotCfg(fromIg ? 'ig-' : ''));
+      }
+      function paintBotSliders(cfg, prefix) {
+        prefix = prefix || '';
+        function set(id, val, label, extra) {
+          var n = document.getElementById(prefix + id);
+          if (n) n.value = val;
+          var lab = document.getElementById((prefix ? prefix.replace('bot-', 'v-').replace('ig-', 'ig-v-') : '') + (label || ''));
+        }
+        var map = [
+          ['bot-play', cfg.playChance, prefix ? 'ig-v-play' : 'v-play'],
+          ['bot-instant', cfg.instantChance, prefix ? 'ig-v-instant' : 'v-instant'],
+          ['bot-delay', cfg.delayMs, prefix ? 'ig-v-delay' : 'v-delay'],
+          ['bot-agg', cfg.aggression == null ? 45 : cfg.aggression, prefix ? 'ig-v-agg' : 'v-agg']
+        ];
+        map.forEach(function (row) {
+          var n = document.getElementById(prefix + row[0]);
+          if (n) n.value = row[1];
+          var lab = document.getElementById(row[2]);
+          if (lab) lab.textContent = row[1];
+        });
+        [['bot-unit', 'allowUnit'], ['bot-sup', 'allowSupport'], ['bot-eq', 'allowEquip'], ['bot-inst', 'allowInstant'], ['bot-atk', 'allowAttack'], ['bot-hold', 'holdAp']].forEach(function (row) {
+          var n = document.getElementById(prefix + row[0]);
+          if (n) n.checked = cfg[row[1]] == null ? true : Number(cfg[row[1]]) !== 0;
+        });
+      }
+      function loadSettings() {
+        var raw = localStorage.getItem('dc_settings');
+        var o = {};
+        try { o = raw ? JSON.parse(raw) : {}; } catch (e) { o = {}; }
+        if (o.music == null) o.music = localStorage.getItem('dc_music') || '1';
+        if (o.vol == null) o.vol = localStorage.getItem('dc_vol') || '55';
+        document.getElementById('opt-music').checked = o.music !== '0';
+        document.getElementById('opt-vol').value = o.vol || '55';
+        if (document.getElementById('opt-motion')) document.getElementById('opt-motion').checked = o.motion === '1';
+        window.DC_REDUCE_MOTION = o.motion === '1';
+        var custom = o.botCustom || (window.DCBot && DCBot.defaults) || { playChance: 75, instantChance: 30, delayMs: 350 };
+        if (document.getElementById('bot-play')) paintBotSliders(custom, '');
+        if (document.getElementById('ig-bot-play')) paintBotSliders(custom, 'ig-');
+        if (document.getElementById('bot-stock')) {
+          document.getElementById('bot-stock').checked = o.botStock !== '0';
+          document.getElementById('bot-sliders').style.display = document.getElementById('bot-stock').checked ? 'none' : 'block';
+        }
+        applyBotRuntime();
+        applyAudio();
+      }
+
+      function loadOpts() {
+        var on = localStorage.getItem('dc_music');
+        var vol = localStorage.getItem('dc_vol');
+        document.getElementById('opt-music').checked = on !== '0';
+        document.getElementById('opt-vol').value = vol || '55';
+        applyAudio();
+      }
+
+
+      window.DC_TRACKS = [
+        { src: 'assets/audio/kampf/Contested%20Grounds%20(Remastered).wav', title: 'Contested Grounds' },
+        { src: 'assets/audio/kampf/Winter%20March%20(Remastered).wav', title: 'Winter March' },
+        { src: 'assets/audio/kampf/Artillery%20(Remastered).wav', title: 'Artillery' },
+        { src: 'assets/audio/kampf/Business%20As%20Usual%20(Remastered).wav', title: 'Business As Usual' },
+        { src: 'assets/audio/kampf/Requiem%20of%20the%20Fallen%20(Remastered).wav', title: 'Requiem of the Fallen' }
+      ];
+      window.dcTableMusic = function (on) {
+        if (!window.DCAudio) return;
+        if (on) DCAudio.playTable();
+        else DCAudio.stopTable();
+      };
+
+      window.dcMatchAlive = false;
+      window.dcMountMatch = function () {
+        var host = document.getElementById('match-host');
+        var tpl = document.getElementById('match-tpl');
+        if (!host || !tpl) return false;
+        if (host.childNodes.length) return true;
+        host.appendChild(tpl.content.cloneNode(true));
+        window.dcMatchAlive = true;
+        return true;
+      };
+      window.dcUnmountMatch = function () {
+        var host = document.getElementById('match-host');
+        if (host) host.innerHTML = '';
+        window.dcMatchAlive = false;
+        if (window.dcTableMusic) window.dcTableMusic(false);
+      };
+      window.dcShowTitle = function () {
+        if (window.dcUnmountMatch) window.dcUnmountMatch();
+        var tr = document.getElementById('title-root');
+        if (tr) tr.style.display = 'flex';
+        show('scr-title');
+        if (window.dcTableMusic) window.dcTableMusic(false);
+        applyAudio();
+      };
+      window.dcDefeat = function () {
+        var veil = document.getElementById('kick-veil');
+        var msg = document.getElementById('kick-msg');
+        if (!veil) { window.dcShowTitle(); return; }
+        if (msg) {
+          msg.textContent = 'Niederlage';
+          msg.style.display = 'block';
+          msg.style.opacity = '1';
+        }
+        veil.style.display = 'flex';
+        veil.style.opacity = '0';
+        requestAnimationFrame(function () { veil.style.opacity = '1'; });
+        setTimeout(function () {
+          window.dcShowTitle();
+          setTimeout(function () {
+            veil.style.opacity = '0';
+            setTimeout(function () {
+              veil.style.display = 'none';
+              if (msg) msg.style.display = 'none';
+            }, 1100);
+          }, 1000);
+        }, 1200);
+      };
+      window.dcKickoff = function (done) {
+        var veil = document.getElementById('kick-veil');
+        var msg = document.getElementById('kick-msg');
+        var title = document.getElementById('title-root');
+        var table = document.querySelector('.table');
+        var bgm = document.getElementById('bgm');
+        var volEl = document.getElementById('opt-vol');
+        var target = volEl ? Number(volEl.value) / 100 : 0.55;
+        var musicOn = document.getElementById('opt-music') && document.getElementById('opt-music').checked;
+        window.dcTimerHold = true;
+        if (table) table.style.opacity = '0';
+        if (msg) {
+          msg.textContent = 'Viel Glück';
+          msg.style.display = 'none';
+          msg.style.opacity = '0';
+        }
+        veil.style.display = 'flex';
+        veil.style.opacity = '0';
+        requestAnimationFrame(function () { veil.style.opacity = '1'; });
+        var start = bgm ? bgm.volume : target;
+        var t0 = Date.now();
+        function fadeTitle() {
+          var u = Math.min(1, (Date.now() - t0) / 1400);
+          if (bgm) bgm.volume = Math.max(0, start * (1 - u));
+          if (u < 1) requestAnimationFrame(fadeTitle);
+          else {
+            if (bgm) { bgm.pause(); bgm.currentTime = 0; }
+            if (title) title.style.display = 'none';
+            if (msg) {
+              msg.style.display = 'block';
+              requestAnimationFrame(function () { msg.style.opacity = '1'; });
+            }
+            setTimeout(function () {
+              if (msg) msg.style.opacity = '0';
+              setTimeout(function () {
+                if (msg) msg.style.display = 'none';
+                setTimeout(function () {
+                  veil.style.opacity = '0';
+                  if (table) {
+                    table.style.transition = 'opacity 2.2s ease';
+                    table.style.opacity = '1';
+                  }
+                  if (musicOn && window.dcTableMusic) window.dcTableMusic(true);
+                  setTimeout(function () {
+                    veil.style.display = 'none';
+                    var ov = document.getElementById('overlay');
+                    if (ov) {
+                      ov.innerHTML = '<div class="modal"><h2>Der Krieg hat begonnen</h2><p id="krieg-count">3</p></div>';
+                      ov.style.display = 'flex';
+                    }
+                    var n = 3;
+                    var tick = setInterval(function () {
+                      n -= 1;
+                      var el = document.getElementById('krieg-count');
+                      if (n >= 1) {
+                        if (el) el.textContent = String(n);
+                      } else {
+                        clearInterval(tick);
+                        if (ov) {
+                          ov.style.display = 'none';
+                          ov.innerHTML = '';
+                        }
+                        window.dcTimerHold = false;
+                        if (window.dcArmTimer) window.dcArmTimer();
+                        if (done) done();
+                      }
+                    }, 1000);
+                  }, 1600);
+                }, 900);
+              }, 750);
+            }, 1600);
+          }
+        }
+        fadeTitle();
+      };
+
+      function applyAudio() {
+        if (!bgm) return;
+        var musicEl = document.getElementById('opt-music');
+        var volEl = document.getElementById('opt-vol');
+        if (!musicEl || !volEl) return;
+        var on = musicEl.checked;
+        bgm.volume = Number(volEl.value) / 100;
+        var battle = document.getElementById('bgm-battle');
+        var tableOn = document.getElementById('title-root') && document.getElementById('title-root').style.display === 'none';
+        var setupOn = document.getElementById('scr-setup') && document.getElementById('scr-setup').classList.contains('on');
+        var bootOn = document.getElementById('scr-boot') && document.getElementById('scr-boot').classList.contains('on');
+        if (window.DCAudio) {
+          if (!on) { DCAudio.stopTable(); bgm.pause(); }
+          else if (tableOn) DCAudio.playTable();
+          else if (bootOn) DCAudio.playOnly('title');
+          else if (setupOn) DCAudio.playSetup();
+          else DCAudio.playTitle();
+        } else if (on) {
+          if (tableOn && battle) battle.play().catch(function () {});
+          else bgm.play().catch(function () {});
+        } else {
+          bgm.pause();
+          if (battle) battle.pause();
+        }
+        localStorage.setItem('dc_music', on ? '1' : '0');
+        localStorage.setItem('dc_vol', document.getElementById('opt-vol').value);
+      }
+      function show(id) {
+        document.querySelectorAll('#title-root .screen').forEach(function (s) { s.classList.remove('on'); });
+        document.getElementById(id).classList.add('on');
+        var workIds = { 'scr-user':1, 'scr-library':1, 'scr-single':1, 'scr-lan':1, 'scr-options':1 };
+        var work = document.getElementById('work-root');
+        var menu = document.getElementById('menu-panel');
+        if (work) work.classList.toggle('open', !!workIds[id]);
+        if (menu) menu.style.display = workIds[id] ? 'none' : '';
+        var loop = document.getElementById('title-loop');
+        if (loop) {
+          if (id === 'scr-setup') loop.pause();
+          else loop.play().catch(function () {});
+        }
+        var brand = document.querySelector('#title-root > .title-brand');
+        if (brand) brand.style.display = workIds[id] ? 'none' : '';
+        applyAudio();
+        if (id !== 'scr-boot') {
+          var trIntro = document.getElementById('title-root');
+          if (trIntro) trIntro.classList.remove('boot-intro', 'logo-in', 'btn-in');
+        }
+        if (id === 'scr-title') { paintWho(); if (window.DCLib) DCLib.fillSelects(); }
+        if (id === 'scr-user') paintUsers();
+        if (id === 'scr-library') paintLibrary();
+        if (id === 'scr-single') { paintUsers(); if (window.DCLib) DCLib.fillSelects(); }
+      }
+      function loadUsers() {
+        try { return JSON.parse(localStorage.getItem('dc_users') || '[]'); } catch (e) { return []; }
+      }
+      function saveUsers(list, activeId) {
+        localStorage.setItem('dc_users', JSON.stringify(list));
+        if (activeId) localStorage.setItem('dc_user_active', activeId);
+      }
+      function activeUser() {
+        var list = loadUsers();
+        var id = localStorage.getItem('dc_user_active');
+        return list.filter(function (u) { return u.id === id; })[0] || list[0] || null;
+      }
+      function paintWho() {
+        var u = activeUser();
+        var el = document.getElementById('who-line');
+        if (el) el.innerHTML = u
+          ? ('<span class="who-lbl">Angemeldet</span><span class="who-name">' + u.name + '</span>')
+          : '';
+        var n = u ? u.name : 'Spieler';
+        var a = document.getElementById('player-name');
+        var b = document.getElementById('lan-name');
+        if (a) a.value = n;
+        if (b) b.value = n;
+      }
+      function placeWho() {}
+      function paintUsers() {
+        var list = loadUsers();
+        var act = localStorage.getItem('dc_user_active');
+        function fill(selId, skipActive) {
+          var sel = document.getElementById(selId);
+          if (!sel) return;
+          sel.innerHTML = '';
+          list.forEach(function (u) {
+            if (skipActive && u.id === act) return;
+            var o = document.createElement('option');
+            o.value = u.id;
+            o.textContent = u.name;
+            if (u.id === act) o.selected = true;
+            sel.appendChild(o);
+          });
+        }
+        fill('user-active', false);
+        fill('hotseat-user', true);
+        var u = activeUser();
+        var rn = document.getElementById('user-rename');
+        if (rn && u) rn.value = u.name;
+        paintWho();
+      }
+      function paintLibrary() {
+        if (window.DCLib) { DCLib.render(); DCLib.fillSelects(); }
+      }
+
+      function keepBgm() {
+        if (!bgm) return;
+        var m = document.getElementById('opt-music');
+        if (m && m.checked && bgm.paused) {
+          bgm.play().catch(function () {});
+        }
+      }
+      setInterval(keepBgm, 2000);
+      loadSettings();
+      function tryPlay() { applyAudio(); }
+      tryPlay();
+      if (bgm) {
+        bgm.addEventListener('canplay', tryPlay);
+        bgm.addEventListener('loadeddata', tryPlay);
+      }
+      document.addEventListener('DOMContentLoaded', tryPlay);
+      window.addEventListener('focus', tryPlay);
+      document.getElementById('title-root').addEventListener('pointerdown', tryPlay);
+      document.getElementById('title-root').addEventListener('click', tryPlay);
+      document.getElementById('go-start').onclick = function () {
+        var tr = document.getElementById('title-root');
+        if (tr) tr.classList.remove('boot-intro', 'logo-in', 'btn-in');
+        if (!loadUsers().length) show('scr-setup');
+        else show('scr-title');
+      };
+      (function bootIntro() {
+        var tr = document.getElementById('title-root');
+        if (!tr || !tr.classList.contains('boot-intro')) return;
+        setTimeout(function () { tr.classList.add('logo-in'); }, 1400);
+        setTimeout(function () { tr.classList.add('btn-in'); }, 5000);
+      })();
+      /* Kein JS-Download: Vorschau blockiert Blob-Klicks. Echte Links + Rechtsklick. */
+      document.getElementById('setup-ok').onclick = function () {
+        var name = (document.getElementById('setup-name').value || '').trim().slice(0, 24);
+        if (!name) { document.getElementById('setup-name').focus(); return; }
+        var id = 'u' + Date.now();
+        saveUsers([{ id: id, name: name }], id);
+        paintWho();
+        show('scr-title');
+      };
+      document.getElementById('go-single').onclick = function () { show('scr-single'); };
+      document.getElementById('go-lan').onclick = function () { paintWho(); show('scr-lan'); };
+      document.getElementById('go-library').onclick = function () { show('scr-library'); };
+      document.getElementById('go-user').onclick = function () { show('scr-user'); };
+      document.getElementById('go-options').onclick = function () { show('scr-options'); };
+      document.getElementById('back-user').onclick = function () { show('scr-title'); };
+      document.getElementById('back-lib').onclick = function () { show('scr-title'); };
+      document.getElementById('deck-save').onclick = function () {
+        var nameIn = document.getElementById('deck-name-in');
+        var name = (nameIn && nameIn.value || '').trim();
+        if (!name) { if (nameIn) nameIn.focus(); return; }
+        if (window.DCLib && DCLib.saveNamed(name)) {
+          window.alert('Deck gespeichert unter diesem Benutzer.');
+        }
+      };
+      document.getElementById('user-save').onclick = function () {
+        var list = loadUsers();
+        var id = document.getElementById('user-active').value;
+        var name = (document.getElementById('user-rename').value || '').trim().slice(0, 24);
+        if (!name) return;
+        list.forEach(function (u) { if (u.id === id) u.name = name; });
+        saveUsers(list, id);
+        paintUsers();
+      };
+      document.getElementById('user-add').onclick = function () {
+        var name = (document.getElementById('user-new').value || '').trim().slice(0, 24);
+        if (!name) return;
+        var list = loadUsers();
+        var id = 'u' + Date.now();
+        list.push({ id: id, name: name });
+        saveUsers(list, localStorage.getItem('dc_user_active') || id);
+        document.getElementById('user-new').value = '';
+        paintUsers();
+      };
+      document.getElementById('user-active').onchange = function () {
+        saveUsers(loadUsers(), this.value);
+        paintUsers();
+      };
+      document.getElementById('mode').onchange = function () {
+        document.getElementById('hotseat-row').style.display = this.value === 'hotseat' ? 'block' : 'none';
+        document.getElementById('btn-bot-cfg').style.display = this.value === 'hotseat' ? 'none' : 'inline-block';
+        var bd = document.getElementById('bot-deck-row');
+        if (bd) bd.style.display = this.value === 'hotseat' ? 'none' : 'block';
+      };
+      window.addEventListener('pagehide', function () {
+        try { navigator.sendBeacon('/api/quit', '{}'); } catch (e) {}
+      });
+      document.getElementById('go-quit').onclick = function () {
+        fetch('/api/quit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' }).catch(function () {});
+        window.close();
+        setTimeout(function () {
+          document.getElementById('title-root').innerHTML = '<div class="title-panel"><h1>BEENDET</h1><p class="sub">Fenster schließen</p></div>';
+        }, 300);
+      };
+      document.getElementById('back-single').onclick = function () { show('scr-title'); };
+      function resetLobby() {
+        if (window.DCNet && DCNet.disconnect) DCNet.disconnect();
+        lobbyState = null;
+        document.getElementById('seat-host').textContent = '—';
+        document.getElementById('seat-host').className = 'seat-empty';
+        document.getElementById('seat-guest').textContent = 'wartet …';
+        document.getElementById('seat-guest').className = 'seat-empty';
+        var start = document.getElementById('btn-lan-start');
+        if (start) { start.disabled = true; start.classList.add('dim'); }
+        document.getElementById('lan-pick').style.display = 'block';
+        document.getElementById('lan-room').style.display = 'none';
+        document.getElementById('join-row').style.display = 'none';
+        document.getElementById('host-info').textContent = '';
+        document.getElementById('lan-error').textContent = 'Lobby geleert.';
+      }
+      document.getElementById('btn-lan-leave').onclick = resetLobby;
+      document.getElementById('back-lan').onclick = function () { resetLobby(); show('scr-title'); };
+      document.getElementById('back-opt').onclick = function () { show('scr-title'); };
+      var perfEl = document.getElementById('opt-perf');
+      if (perfEl) {
+        perfEl.checked = localStorage.getItem('dc_perf') === '1';
+        function applyPerf() {
+          localStorage.setItem('dc_perf', perfEl.checked ? '1' : '0');
+          if (window.DCPerf) DCPerf.set(perfEl.checked);
+        }
+        perfEl.onchange = applyPerf;
+        applyPerf();
+      }
+      function sec(ms) { return (Number(ms) / 1000).toFixed(1).replace(".", ",") + " s"; }
+      window.DCTune = window.DCTune || { flyMs: 800, dialogMs: 2000 };
+      var flyEl = document.getElementById("opt-fly");
+      var diaEl = document.getElementById("opt-dialog");
+      if (flyEl) {
+        flyEl.value = localStorage.getItem("dc_fly") || "800";
+        document.getElementById("v-fly").textContent = sec(flyEl.value);
+        flyEl.oninput = function () {
+          document.getElementById("v-fly").textContent = sec(flyEl.value);
+          window.DCTune.flyMs = Number(flyEl.value);
+          localStorage.setItem("dc_fly", flyEl.value);
+        };
+        window.DCTune.flyMs = Number(flyEl.value);
+      }
+      if (diaEl) {
+        diaEl.value = localStorage.getItem("dc_dialog") || "2000";
+        document.getElementById("v-dialog").textContent = sec(diaEl.value);
+        diaEl.oninput = function () {
+          document.getElementById("v-dialog").textContent = sec(diaEl.value);
+          window.DCTune.dialogMs = Number(diaEl.value);
+          localStorage.setItem("dc_dialog", diaEl.value);
+        };
+        window.DCTune.dialogMs = Number(diaEl.value);
+      }
+      document.querySelectorAll(".opt-tab").forEach(function (tab) {
+        tab.onclick = function () {
+          document.querySelectorAll(".opt-tab").forEach(function (x) { x.classList.remove("on"); });
+          document.querySelectorAll(".opt-pane").forEach(function (x) { x.style.display = "none"; });
+          tab.classList.add("on");
+          var pane = document.getElementById(tab.getAttribute("data-pane"));
+          if (pane) pane.style.display = "block";
+        };
+      });
+
+      document.getElementById('opt-music').onchange = function () { applyAudio(); saveSettings(); };
+      document.getElementById('opt-vol').oninput = function () { applyAudio(); saveSettings(); };
+
+      if (document.getElementById('bot-stock')) {
+        document.getElementById('bot-stock').onchange = function () {
+          var on = this.checked;
+          document.getElementById('bot-sliders').style.display = on ? 'none' : 'block';
+          if (on) {
+            if (window.DCBot) paintBotSliders(JSON.parse(localStorage.getItem('dc_settings') || '{}').botCustom || DCBot.defaults);
+            applyBotRuntime();
+          } else {
+            var raw = localStorage.getItem('dc_settings');
+            var o = {};
+            try { o = raw ? JSON.parse(raw) : {}; } catch (e) {}
+            paintBotSliders(o.botCustom || DCBot.defaults);
+            applyBotRuntime();
+          }
+          saveSettings();
+        };
+        ['bot-play','bot-instant','bot-delay','bot-agg'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.oninput = function () {
+            if (document.getElementById('v-play')) document.getElementById('v-play').textContent = document.getElementById('bot-play').value;
+            if (document.getElementById('v-instant')) document.getElementById('v-instant').textContent = document.getElementById('bot-instant').value;
+            if (document.getElementById('v-delay')) document.getElementById('v-delay').textContent = document.getElementById('bot-delay').value;
+            if (document.getElementById('v-agg')) document.getElementById('v-agg').textContent = document.getElementById('bot-agg').value;
+          };
+        });
+        function closeBotDlg() {
+          document.getElementById('bot-modal').style.display = 'none';
+        }
+        document.getElementById('btn-bot-cfg').onclick = function () {
+          var mode = document.getElementById('mode').value;
+          document.getElementById('bot-dlg-title').textContent = mode === 'bot-schloter' ? 'Schloter' : 'Test';
+          document.getElementById('bot-modal').style.display = 'flex';
+        };
+        document.getElementById('bot-apply').onclick = function () {
+          saveSettings();
+          applyBotRuntime();
+          document.getElementById('boot-error').textContent = 'Bot gespeichert.';
+          closeBotDlg();
+        };
+        document.getElementById('bot-cancel').onclick = closeBotDlg;
+        document.getElementById('bot-reset').onclick = function () {
+          var stock = document.getElementById('bot-stock');
+          if (stock) stock.checked = true;
+          document.getElementById('bot-sliders').style.display = 'none';
+          if (window.DCBot && DCBot.defaults && typeof paintBotSliders === 'function') paintBotSliders(DCBot.defaults, '');
+          else if (window.DCBot && DCBot.applyCfg) DCBot.applyCfg({ model: (document.getElementById('mode').value === 'bot-schloter' ? 'schloter' : 'test'), stock: true });
+          saveSettings();
+          applyBotRuntime();
+        };
+        ['ig-bot-play','ig-bot-instant','ig-bot-delay','ig-bot-agg'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.oninput = function () {
+            if (document.getElementById('ig-v-play')) document.getElementById('ig-v-play').textContent = document.getElementById('ig-bot-play').value;
+            if (document.getElementById('ig-v-instant')) document.getElementById('ig-v-instant').textContent = document.getElementById('ig-bot-instant').value;
+            if (document.getElementById('ig-v-delay')) document.getElementById('ig-v-delay').textContent = document.getElementById('ig-bot-delay').value;
+            if (document.getElementById('ig-v-agg')) document.getElementById('ig-v-agg').textContent = document.getElementById('ig-bot-agg').value;
+          };
+        });
+        var igApply = document.getElementById('ig-bot-apply');
+        if (igApply) igApply.onclick = function () {
+          applyBotRuntime(true);
+          paintBotSliders(collectBotCfg('ig-'), '');
+          saveSettings();
+        };
+        document.querySelectorAll('.help').forEach(function (b) {
+          b.onclick = function () {
+            var k = b.getAttribute('data-help');
+            var txt = {
+              play: 'Wie oft Schloter eine Karte ausspielt, obwohl er auch angreifen könnte. 100 % = immer erst legen. 0 % = sofort schlagen, sobald ein Ziel da ist.',
+              instant: 'Wie oft er einen Soforteinsatz riskiert, wenn Ausspielen und Angriff nicht gewählt wurden.',
+              delay: 'Pause zwischen seinen Schritten. Höher = besser lesbar, langsamer.'
+            }[k] || '';
+            var ov = document.getElementById('overlay');
+            ov.innerHTML = '<div class="modal"><h2>Schloter</h2><p>' + txt + '</p><button type="button" id="help-ok">Schließen</button></div>';
+            ov.style.display = 'flex';
+            document.getElementById('help-ok').onclick = function () { ov.style.display = 'none'; };
+          };
+        });
+      }
+      function paintTimerLabel() {
+        var el = document.getElementById('opt-timer');
+        var lab = document.getElementById('v-timer');
+        if (!el || !lab) return;
+        var s = Number(el.value) || 300;
+        lab.textContent = Math.floor(s / 60) + ':' + (s % 60 < 10 ? '0' : '') + (s % 60);
+      }
+      if (document.getElementById('opt-timer')) {
+        document.getElementById('opt-timer').oninput = function () { paintTimerLabel(); saveSettings(); };
+        paintTimerLabel();
+      }
+      if (document.getElementById('opt-motion')) {
+        document.getElementById('opt-motion').onchange = saveSettings;
+      }
+      var modeEl = document.getElementById('mode');
+      if (modeEl) modeEl.onchange = function () {
+        var box = document.getElementById('bot-box');
+        if (box) box.style.display = modeEl.value === 'bot' ? 'block' : 'none';
+      };
+
+      var igm = document.getElementById('opt-music-ingame');
+      var igv = document.getElementById('opt-vol-ingame');
+      if (igm) {
+        igm.checked = document.getElementById('opt-music').checked;
+        igm.onchange = function () {
+          document.getElementById('opt-music').checked = igm.checked;
+          applyAudio();
+        };
+      }
+      if (igv) {
+        igv.value = document.getElementById('opt-vol').value;
+        igv.oninput = function () {
+          document.getElementById('opt-vol').value = igv.value;
+          applyAudio();
+        };
+      }
+      var igc = document.getElementById('opt-ingame-close');
+      if (igc) igc.onclick = function () { document.getElementById('ingame-opts').style.display = 'none'; };
+
+      document.getElementById('btn-start').onclick = function () {
+        document.getElementById('boot-error').textContent = '';
+        paintWho();
+        if (document.getElementById('mode').value === 'hotseat') {
+          var hs = document.getElementById('hotseat-user');
+          var list = loadUsers();
+          var opp = list.filter(function (u) { return u.id === hs.value; })[0];
+          if (opp) document.getElementById('opponent-name').value = opp.name;
+        }
+        if (window.dcStart) window.dcStart();
+      };
+
+      var lanRole = document.getElementById('lan-role');
+      document.getElementById('btn-lan-host').onclick = function () {
+        lanRole.value = 'host';
+        document.getElementById('join-row').style.display = 'none';
+        document.getElementById('btn-lan-connect').click();
+      };
+      document.getElementById('btn-lan-seek').onclick = function () {
+        lanRole.value = 'join';
+        document.getElementById('join-row').style.display = 'block';
+      };
+      var guestReadyOn = false;
+      document.getElementById('btn-lan-ready').onclick = function () {
+        guestReadyOn = !guestReadyOn;
+        this.textContent = guestReadyOn ? 'Nicht bereit' : 'Bereit';
+        if (window.DCNet && DCNet.sendReady) DCNet.sendReady(guestReadyOn);
+      };
+      document.getElementById('btn-single-ready').onclick = function () {
+        this.dataset.on = this.dataset.on === '1' ? '0' : '1';
+        this.textContent = this.dataset.on === '1' ? 'Nicht bereit' : 'Bereit';
+        var st = document.getElementById('btn-start');
+        st.disabled = this.dataset.on !== '1';
+        st.classList.toggle('dim', st.disabled);
+      };
+      function lanName() {
+        var u = activeUser();
+        var typed = document.getElementById('lan-name');
+        return ((typed && typed.value) || (u && u.name) || 'Spieler').slice(0, 24);
+      }
+      function setSeats(lobby) {
+        document.getElementById('seat-host').textContent = lobby.host || '—';
+        document.getElementById('seat-host').className = lobby.host ? '' : 'seat-empty';
+        document.getElementById('seat-guest').textContent = lobby.guest || 'wartet …';
+        document.getElementById('seat-guest').className = lobby.guest ? '' : 'seat-empty';
+        var start = document.getElementById('btn-lan-start');
+        var conn = document.getElementById('btn-lan-connect');
+        var seated = !!(lobby && lobby.you);
+        conn.style.display = seated ? 'none' : 'block';
+        document.getElementById('lan-pick').style.display = 'none';
+        document.getElementById('lan-room').style.display = 'block';
+        var rh = document.getElementById('ready-host');
+        var rg = document.getElementById('ready-guest');
+        if (rh) rh.textContent = lobby.hostReady ? 'bereit' : '';
+        if (rg) rg.textContent = lobby.guestReady ? 'bereit' : '';
+        start.disabled = !(lobby.you === 'host' && lobby.guest && lobby.guestReady);
+        start.classList.toggle('dim', start.disabled);
+        start.dataset.guest = lobby.guest || '';
+        var readyBtn = document.getElementById('btn-lan-ready');
+        readyBtn.style.display = lobby.you === 'guest' ? 'inline-block' : 'none';
+        start.style.display = lobby.you === 'host' ? 'inline-block' : 'none';
+        var msg = document.getElementById('lan-error');
+        if (lobby.you === 'host' && lobby.guest && lobby.guestReady) msg.textContent = 'Gast bereit. Gefecht beginnen.';
+        else if (lobby.you === 'host' && lobby.guest) msg.textContent = 'Gast sitzt. Warte auf Bereit.';
+        else if (lobby.you === 'guest') msg.textContent = 'Bereit klicken, dann wartet der Host auf dich.';
+        else if (lobby.you === 'host') msg.textContent = 'Du hostest. Warte auf den Gast.';
+        else msg.textContent = 'In der Lobby.';
+      }
+      document.getElementById('btn-scan').onclick = function () {
+        fetch('/api/peers').then(function (r) { return r.json(); }).then(function (d) {
+          var box = document.getElementById('peer-list');
+          if (!d.peers || !d.peers.length) {
+            box.textContent = 'Niemand gefunden. IP eintragen.';
+            return;
+          }
+          box.innerHTML = d.peers.map(function (p) {
+            return '<div><button type="button" class="peer" data-ip="' + p.ip + '" data-port="' + (p.port || 8765) + '">' + p.name + ' — ' + p.ip + '</button></div>';
+          }).join('');
+          box.querySelectorAll('.peer').forEach(function (b) {
+            b.onclick = function () {
+              document.getElementById('join-ip').value = b.getAttribute('data-ip');
+              document.getElementById('lan-role').value = 'join';
+              document.getElementById('lan-error').textContent = 'Trete ' + b.textContent + ' bei …';
+              document.getElementById('btn-lan-connect').click();
+            };
+          });
+        }).catch(function () {
+          document.getElementById('peer-list').textContent = 'Suche nur über server.py.';
+        });
+      };
+      var lobbyState = null;
+      document.getElementById('btn-lan-connect').onclick = function () {
+        document.getElementById('lan-error').textContent = '';
+        var role = lanRole.value;
+        if (role === 'host') {
+          fetch('/api/name', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: lanName() }) }).catch(function () {});
+          fetch('/api/status').then(function (r) { return r.json(); }).then(function (st) {
+            document.getElementById('host-info').innerHTML = 'Andere öffnen:<br>' +
+              (st.ips || []).map(function (ip) { return 'http://' + ip + ':' + st.http; }).join('<br>');
+          }).catch(function () {
+            document.getElementById('host-info').textContent = 'Server nicht erreicht — start.bat / server.py.';
+          });
+          var url = (location.protocol === 'file:') ? 'ws://127.0.0.1:8766' : ('ws://' + location.hostname + ':' + ((location.port ? Number(location.port) : 8765) + 1));
+          DCNet.connect(url, lanName(), 'host', function (lobby) {
+            lobbyState = lobby;
+            setSeats(lobby);
+          });
+          return;
+        }
+        var ip = (document.getElementById('join-ip').value || location.hostname).trim();
+        var host = ip.replace(/^https?:\/\//, '').split('/')[0].split(':')[0];
+        var httpPort = 8765;
+        var wsUrl = 'ws://' + host + ':' + (httpPort + 1);
+        document.getElementById('lan-error').textContent = 'Prüfe Host http://' + host + ':' + httpPort + ' …';
+        fetch('http://' + host + ':' + httpPort + '/api/status').then(function () {
+          DCNet.connect(wsUrl, lanName(), 'guest', function (lobby) {
+            lobbyState = lobby;
+            setSeats(lobby);
+          });
+        }).catch(function () {
+          document.getElementById('lan-error').textContent =
+            'Host unter http://' + host + ':' + httpPort + ' nicht erreichbar. Firewall TCP 8765/8766: firewall.bat als Admin auf BEIDEN Rechnern.';
+          DCNet.connect(wsUrl, lanName(), 'guest', function (lobby) {
+            lobbyState = lobby;
+            setSeats(lobby);
+          });
+        });
+      };
+      document.getElementById('btn-lan-start').onclick = function () {
+        var guest = (lobbyState && lobbyState.guest) || this.dataset.guest;
+        if (!guest) return;
+        document.getElementById('player-name').value = lanName();
+        document.getElementById('opponent-name').value = guest;
+        if (window.dcSetMode) window.dcSetMode('lan');
+        DCNet.startHostMatch(lanName(), guest);
+      };
+    })();
+  </script>
+</body>
+</html>

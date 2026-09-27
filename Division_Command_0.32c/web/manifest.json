@@ -1,0 +1,9 @@
+{
+  "name": "Division Command",
+  "short_name": "DivCmd",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#12140f",
+  "theme_color": "#12140f",
+  "lang": "de"
+}
