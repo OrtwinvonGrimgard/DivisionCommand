@@ -1291,27 +1291,18 @@
     if (r) r.onclick = function () { go(function () { dispatch({ type: 'REVEAL_UNIT', player: viewer, uid: loc.inst.uid }); }); };
     document.getElementById('ac-x').onclick = function () { ov.style.display = 'none'; };
   }
-  function slotUnder(x, y) {
-    var nodes = document.querySelectorAll('.slot.legal');
-    var best = null;
-    var bestD = Infinity;
-    for (var i = 0; i < nodes.length; i++) {
-      var s = nodes[i];
-      var r = s.getBoundingClientRect();
-      if (r.width < 2 || r.height < 2) continue;
-      if (x < r.left || x > r.right || y < r.top || y > r.bottom) continue;
-      var cx = (r.left + r.right) / 2;
-      var cy = (r.top + r.bottom) / 2;
-      var d = (x - cx) * (x - cx) + (y - cy) * (y - cy);
-      if (d < bestD) { bestD = d; best = s; }
-    }
-    return best;
-  }
-  function placeFromHand(uid, slot, viewer) {
+  var placing = false;
+  function placeFromHand(uid, slot, viewer, facedown) {
+    if (placing) return;
+    placing = true;
+    window.setTimeout(function () { placing = false; }, 0);
     var me = engine.player(viewer);
     var card = me.hand.find(function (c) { return c.uid === uid; });
     var hint = document.getElementById('hint');
-    if (!card || !slot) return;
+    if (!card || !slot) {
+      if (hint && !slot) hint.textContent = 'Nicht auf einem Feld losgelassen.';
+      return;
+    }
     var def = engine.defOf(card);
     var cost = engine.costOf(def, me, null, card);
     if (me.ap < cost) {
@@ -1338,7 +1329,7 @@
         type: 'PLAY',
         player: viewer,
         uid: uid,
-        facedown: false,
+        facedown: !!facedown,
         slot: { section: section, row: row }
       });
       return;
@@ -1348,7 +1339,7 @@
         type: 'PLAY',
         player: viewer,
         uid: uid,
-        facedown: false,
+        facedown: !!facedown,
         slot: { section: 'support', row: Number(slot.getAttribute('data-row')) }
       });
       return;
@@ -1369,24 +1360,55 @@
     }
     if (hint) hint.textContent = def.typ === 'Einheit' ? 'Einheiten auf ein freies Feld der eigenen Front.' : 'Dieses Feld nimmt die Karte nicht.';
   }
+  function legalSelector(def) {
+    if (!def) return '';
+    if (def.typ === 'Einheit') return '#my-front .slot.empty';
+    if (def.typ === 'Unterstützung') return '#my-support .slot.empty';
+    if (def.typ === 'Ausrüstung') return '#my-front .slot.filled';
+    if (def.typ === 'Soforteinsatz') return '#enemy-front .slot.filled, #enemy-support .slot.filled';
+    return '';
+  }
+  function clearDropMarks() {
+    document.querySelectorAll('.slot.legal, .slot.drop-ok').forEach(function (s) {
+      s.classList.remove('legal', 'drop-ok');
+    });
+  }
+  function markLegalSlots(def) {
+    var sel = legalSelector(def);
+    if (!sel) return;
+    document.querySelectorAll(sel).forEach(function (s) { s.classList.add('legal'); });
+  }
   function bindBoardDrops(viewer) {
-    document.querySelectorAll('#my-front .slot, #my-support .slot, #enemy-front .slot.filled').forEach(function (slot) {
-      slot.ondragover = function (ev) { ev.preventDefault(); slot.classList.add('drop-ok'); };
+    document.querySelectorAll('#my-front .slot, #my-support .slot, #enemy-front .slot.filled, #enemy-support .slot.filled').forEach(function (slot) {
+      slot.ondragover = function (ev) {
+        ev.preventDefault();
+        if (ev.dataTransfer) ev.dataTransfer.dropEffect = 'move';
+        slot.classList.add('drop-ok');
+      };
       slot.ondragleave = function () { slot.classList.remove('drop-ok'); };
       slot.ondrop = function (ev) {
         ev.preventDefault();
         slot.classList.remove('drop-ok');
-        var raw = ev.dataTransfer.getData('text/plain');
+        var raw = ev.dataTransfer ? ev.dataTransfer.getData('text/plain') : '';
         var data;
         try { data = JSON.parse(raw); } catch (e) { return; }
         if (!data || data.from !== 'hand' || !data.uid) return;
-        placeFromHand(data.uid, slot, viewer);
+        clearDropMarks();
+        document.body.classList.remove('dc-dragging');
+        placeFromHand(data.uid, slot, viewer, !!data.facedown);
       };
     });
-    document.querySelectorAll('#my-front .slot.empty').forEach(function (slot) {
+    document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forEach(function (slot) {
       slot.onclick = function () {
+        if (armedPlay) {
+          var a = armedPlay;
+          armedPlay = null;
+          clearDropMarks();
+          placeFromHand(a.uid, slot, a.who, a.facedown);
+          return;
+        }
         var pend = engine.state.pending;
-        if (pend && pend.kind === 'deploy' && pend.player === viewer) {
+        if (pend && pend.kind === 'deploy' && pend.player === viewer && slot.closest('#my-front')) {
           dispatch({ type: 'CHOOSE_SLOT', player: viewer, slot: { section: slot.getAttribute('data-section'), row: Number(slot.getAttribute('data-row')) } });
         }
       };
@@ -1399,7 +1421,7 @@
     });
     document.querySelectorAll('#enemy-front .slot.filled').forEach(function (slot) {
       var prev = slot.ondrop;
-      slot.ondragover = function (ev) { ev.preventDefault(); slot.classList.add('drop-ok'); };
+      slot.ondragover = function (ev) { ev.preventDefault(); if (ev.dataTransfer) ev.dataTransfer.dropEffect = 'move'; slot.classList.add('drop-ok'); };
       slot.ondrop = function (ev) {
         ev.preventDefault();
         slot.classList.remove('drop-ok');
@@ -1412,8 +1434,69 @@
           }
           return;
         }
+        if (data.from === 'hand' && data.uid) {
+          clearDropMarks();
+          document.body.classList.remove('dc-dragging');
+          placeFromHand(data.uid, slot, viewer, !!data.facedown);
+          return;
+        }
         if (prev) prev(ev);
       };
+    });
+  }
+  var armedPlay = null;
+  function armHandCard(uid, who, facedown) {
+    var mep = engine.player(who);
+    var card = mep.hand.find(function (c) { return c.uid === uid; });
+    if (!card) return;
+    var def = engine.defOf(card);
+    armedPlay = { uid: uid, who: who, facedown: !!facedown };
+    clearDropMarks();
+    markLegalSlots(def);
+    var hint = document.getElementById('hint');
+    if (hint) hint.textContent = 'Karte auf ein leuchtendes Feld ziehen oder das Feld antippen.';
+    document.querySelectorAll('.slot.legal').forEach(function (slot) {
+      slot.onclick = function (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        var a = armedPlay;
+        armedPlay = null;
+        clearDropMarks();
+        if (a) placeFromHand(a.uid, slot, a.who, a.facedown);
+      };
+    });
+  }
+  if (!window.dcHandDrop) {
+    window.dcHandDrop = true;
+    document.addEventListener('dragover', function (ev) {
+      if (document.body.classList.contains('dc-dragging')) ev.preventDefault();
+    });
+    document.addEventListener('drop', function (ev) {
+      if (!document.body.classList.contains('dc-dragging')) return;
+      var raw = '';
+      try { raw = ev.dataTransfer.getData('text/plain') || ''; } catch (e) { return; }
+      var data;
+      try { data = JSON.parse(raw); } catch (e2) { return; }
+      if (!data || data.from !== 'hand' || !data.uid) return;
+      ev.preventDefault();
+      var slot = ev.target && ev.target.closest ? ev.target.closest('.slot') : null;
+      if (!slot || !slot.classList.contains('legal')) {
+        var stack = document.elementsFromPoint ? document.elementsFromPoint(ev.clientX, ev.clientY) : [];
+        slot = null;
+        for (var i = 0; i < stack.length; i++) {
+          var n = stack[i];
+          if (!n || !n.closest || n.closest('#hand') || n.closest('.hand-dock')) continue;
+          var s = n.closest('.slot');
+          if (s && s.classList.contains('legal')) { slot = s; break; }
+        }
+      }
+      document.body.classList.remove('dc-dragging');
+      if (slot) placeFromHand(data.uid, slot, data.viewer, !!data.facedown);
+      else {
+        var hint = document.getElementById('hint');
+        if (hint) hint.textContent = 'Nicht auf einem leuchtenden Feld losgelassen.';
+      }
+      clearDropMarks();
     });
   }
 
@@ -1539,88 +1622,30 @@
         openInspect({ // Karte vergrößern
           def: d, zone: 'hand', uid: card.uid, buttons: btns, // Handkarten
           onAction: function (id) { // Funktion
-            if (id === 'play') dispatch({ type: 'PLAY', player: viewer, uid: card.uid, facedown: false }); // eine Aktion durch die Regeln jagen
-            if (id === 'play-down' || id === 'play-down-sup') dispatch({ type: 'PLAY', player: viewer, uid: card.uid, facedown: true });
-
-            // eine Aktion durch die Regeln jagen
+            if (id === 'play') armHandCard(card.uid, viewer, false);
+            if (id === 'play-down' || id === 'play-down-sup') armHandCard(card.uid, viewer, true);
           }
         }); // nächster Schritt im Ablauf
       };
-      el.draggable = false;
-      el.querySelectorAll('img').forEach(function (img) { img.draggable = false; img.ondragstart = function (e) { e.preventDefault(); }; });
-      el.ondragstart = function (ev) { ev.preventDefault(); };
-      el.onpointerdown = function (ev) {
-        if (ev.button !== 0) return;
-        if (dialogOpen()) return;
-        ev.preventDefault();
-        var sx = ev.clientX, sy = ev.clientY, moved = false, ghost = null, hot = null;
-        var uid = el.dataset.uid;
-        var who = viewer;
-        var card = me.hand.find(function (c) { return c.uid === uid; });
-        if (!card) return;
+      el.draggable = true;
+      el.querySelectorAll('img').forEach(function (img) { img.draggable = false; });
+      el.ondragstart = function (ev) {
+        if (dialogOpen()) { ev.preventDefault(); return; }
+        var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; });
+        if (!card) { ev.preventDefault(); return; }
         var def = engine.defOf(card);
-        try { el.setPointerCapture(ev.pointerId); } catch (e1) {}
-        function clearMarks() {
-          document.querySelectorAll('.slot.legal, .slot.drop-ok').forEach(function (s) {
-            s.classList.remove('legal', 'drop-ok');
-          });
-        }
-        function markLegal() {
-          var sel = '';
-          if (def.typ === 'Einheit') sel = '#my-front .slot.empty';
-          else if (def.typ === 'Unterstützung') sel = '#my-support .slot.empty';
-          else if (def.typ === 'Ausrüstung') sel = '#my-front .slot.filled';
-          else if (def.typ === 'Soforteinsatz') sel = '#enemy-front .slot.filled, #enemy-support .slot.filled';
-          if (!sel) return;
-          document.querySelectorAll(sel).forEach(function (s) { s.classList.add('legal'); });
-        }
-        function paintHot(x, y) {
-          var next = slotUnder(x, y);
-          if (next === hot) return next;
-          if (hot) hot.classList.remove('drop-ok');
-          hot = next;
-          if (hot) hot.classList.add('drop-ok');
-          return hot;
-        }
-        function move(e) {
-          if (!moved && Math.abs(e.clientX - sx) + Math.abs(e.clientY - sy) < 6) return;
-          if (!moved) {
-            moved = true;
-            el.dataset.dragged = '1';
-            document.body.classList.add('dc-dragging');
-            markLegal();
-            ghost = el.cloneNode(true);
-            ghost.id = 'dc-drag-ghost';
-            ghost.style.position = 'fixed';
-            ghost.style.pointerEvents = 'none';
-            ghost.style.zIndex = '200';
-            ghost.style.width = Math.max(el.offsetWidth, 72) + 'px';
-            ghost.style.margin = '0';
-            ghost.style.opacity = '0.92';
-            document.body.appendChild(ghost);
-          }
-          ghost.style.left = (e.clientX - ghost.offsetWidth / 2) + 'px';
-          ghost.style.top = (e.clientY - 28) + 'px';
-          paintHot(e.clientX, e.clientY);
-        }
-        function up(e) {
-          document.removeEventListener('pointermove', move);
-          document.removeEventListener('pointerup', up);
-          document.removeEventListener('pointercancel', up);
-          try { el.releasePointerCapture(e.pointerId); } catch (e2) {}
-          if (ghost) ghost.remove();
-          var slot = moved ? (hot && document.body.contains(hot) ? hot : slotUnder(e.clientX, e.clientY)) : null;
-          clearMarks();
+        el.dataset.dragged = '1';
+        ev.dataTransfer.setData('text/plain', JSON.stringify({ from: 'hand', uid: el.dataset.uid, facedown: false, viewer: viewer }));
+        ev.dataTransfer.effectAllowed = 'move';
+        document.body.classList.add('dc-dragging');
+        clearDropMarks();
+        markLegalSlots(def);
+      };
+      el.ondragend = function () {
+        window.setTimeout(function () {
           document.body.classList.remove('dc-dragging');
-          if (!moved) {
-            if (el.onclick) el.onclick();
-            return;
-          }
-          placeFromHand(uid, slot, who);
-        }
-        document.addEventListener('pointermove', move);
-        document.addEventListener('pointerup', up);
-        document.addEventListener('pointercancel', up);
+          clearDropMarks();
+        }, 0);
       };
     });
     bindBoardDrops(viewer);

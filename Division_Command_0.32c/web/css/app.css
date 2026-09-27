@@ -3311,6 +3311,7 @@ a.media-zip {
 .hand .card { cursor: grab; touch-action: none; user-select: none; }
 .hand .card img { -webkit-user-drag: none; user-select: none; }
 body.dc-dragging { cursor: grabbing; }
+body.dc-dragging .hand-dock,
 body.dc-dragging .hand,
 body.dc-dragging .hand .card {
   pointer-events: none !important;
