@@ -1454,7 +1454,7 @@
     clearDropMarks();
     markLegalSlots(def);
     var hint = document.getElementById('hint');
-    if (hint) hint.textContent = 'Karte auf ein leuchtendes Feld ziehen oder das Feld antippen.';
+    if (hint) hint.textContent = 'Ausgewählt. Leuchtendes Feld antippen. Nochmal auf die Karte: abbrechen.';
     document.querySelectorAll('.slot.legal').forEach(function (slot) {
       slot.onclick = function (ev) {
         ev.preventDefault();
@@ -1607,46 +1607,34 @@
         var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; }); // Handkarten
         return card ? { def: engine.defOf(card), facedown: false, inst: null } : null; // verdeckte Lage
       }); // nächster Schritt im Ablauf
-      el.onclick = function () {
-        if (el.dataset.dragged === '1') { el.dataset.dragged = '0'; return; }
-        if (el.dataset.opened === '1') return;
-        el.dataset.opened = '1';
-        window.setTimeout(function () { el.dataset.opened = '0'; }, 200);
-        var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; }); // Handkarten
-        if (!card) return; // Zweig nur bei zutreffender Bedingung
-        var d = engine.defOf(card); // lokale Variable
-        var btns = [{ id: 'play', label: 'Ausspielen', primary: true }]; // lokale Variable
-        if (d.verdeckt_ok) btns.push({ id: 'play-down', label: 'Verdeckt ausspielen' });
-        if (d.typ === 'Unterstützung' && ((d.tags || []).indexOf('stellung') >= 0 || (d.tags || []).indexOf('artillerie') >= 0)) btns.push({ id: 'play-down-sup', label: 'Verdeckt in den Support' });
-        btns.push({ id: 'close', label: 'Zurück' }); // nächster Schritt im Ablauf
-        openInspect({ // Karte vergrößern
-          def: d, zone: 'hand', uid: card.uid, buttons: btns, // Handkarten
-          onAction: function (id) { // Funktion
-            if (id === 'play') armHandCard(card.uid, viewer, false);
-            if (id === 'play-down' || id === 'play-down-sup') armHandCard(card.uid, viewer, true);
-          }
-        }); // nächster Schritt im Ablauf
-      };
-      el.draggable = true;
-      el.querySelectorAll('img').forEach(function (img) { img.draggable = false; });
-      el.ondragstart = function (ev) {
-        if (dialogOpen()) { ev.preventDefault(); return; }
+      el.onclick = function (ev) {
+        ev.stopPropagation();
         var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; });
-        if (!card) { ev.preventDefault(); return; }
-        var def = engine.defOf(card);
-        el.dataset.dragged = '1';
-        ev.dataTransfer.setData('text/plain', JSON.stringify({ from: 'hand', uid: el.dataset.uid, facedown: false, viewer: viewer }));
-        ev.dataTransfer.effectAllowed = 'move';
-        document.body.classList.add('dc-dragging');
-        clearDropMarks();
-        markLegalSlots(def);
-      };
-      el.ondragend = function () {
-        window.setTimeout(function () {
-          document.body.classList.remove('dc-dragging');
+        if (!card) return;
+        if (armedPlay && armedPlay.uid === card.uid && !armedPlay.facedown) {
+          armedPlay = null;
           clearDropMarks();
-        }, 0);
+          document.querySelectorAll('#hand .card.picked').forEach(function (c) { c.classList.remove('picked'); });
+          var hint = document.getElementById('hint');
+          if (hint) hint.textContent = 'Auswahl aufgehoben.';
+          return;
+        }
+        document.querySelectorAll('#hand .card.picked').forEach(function (c) { c.classList.remove('picked'); });
+        el.classList.add('picked');
+        armHandCard(card.uid, viewer, false);
       };
+      el.oncontextmenu = function (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; });
+        if (!card) return;
+        document.querySelectorAll('#hand .card.picked').forEach(function (c) { c.classList.remove('picked'); });
+        el.classList.add('picked');
+        armHandCard(card.uid, viewer, true);
+      };
+      el.draggable = false;
+      el.querySelectorAll('img').forEach(function (img) { img.draggable = false; });
+      el.ondragstart = function (ev) { ev.preventDefault(); };
     });
     bindBoardDrops(viewer);
     function tryPickPending(uid) { // Funktion
