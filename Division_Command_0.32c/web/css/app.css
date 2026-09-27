@@ -3309,8 +3309,10 @@ a.media-zip {
 }
 
 body.dc-armed .hand .card {
-  height: 11vh !important;
+  height: 22vh !important;
+  margin-bottom: 0 !important;
   transform: none !important;
+  opacity: 1 !important;
 }
 body.dc-armed .hand .card.picked {
   outline: 3px solid #e2c36a;

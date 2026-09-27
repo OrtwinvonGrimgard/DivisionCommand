@@ -17,11 +17,11 @@
     function $(s) { return document.querySelector(s); } // Element in der Seite suchen
   /* Fehler ins Lobby- oder Hinweis-Feld schreiben. */
     function showErr(msg) { // Funktion
-    var el = $('#boot-error'); // lokale Variable
-    if (el) el.textContent = msg; // sichtbaren Text setzen
-    var h = $('#hint'); // lokale Variable
-    if (h && !el) h.textContent = msg; // sichtbaren Text setzen
-    console.error(msg); // nächster Schritt im Ablauf
+    var h = document.getElementById('hint');
+    if (h) h.textContent = msg;
+    var el = document.getElementById('boot-error');
+    if (el && !h) el.textContent = msg;
+    console.error(msg);
   }
   /* Text für innerHTML unschädlich machen. */
     function escapeHtml(s) { // HTML-Sonderzeichen escapen
@@ -170,7 +170,7 @@
       if (el) el.addEventListener('click', fn);
     }
     bindLogWin();
-    bind('btn-end', function () { dispatch({ type: 'END_TURN', player: activePlayer() }); });
+    bind('btn-end', endTurn);
     bind('btn-peace', function () { dispatch({ type: 'PROPOSE_PEACE', player: activePlayer() }); });
     bind('btn-accept', function () { dispatch({ type: 'ACCEPT_PEACE', player: activePlayer() }); });
     bind('btn-concede', function () {
@@ -204,7 +204,7 @@
     bind('btn-start', startGame); // nächster Schritt im Ablauf
     bind('go', startGame); // nächster Schritt im Ablauf
     bindTableControls();
-    bind('btn-end', function () { dispatch({ type: 'END_TURN', player: activePlayer() }); }); // eine Aktion durch die Regeln jagen
+    bind('btn-end', endTurn); // eine Aktion durch die Regeln jagen
     bind('btn-peace', function () { dispatch({ type: 'PROPOSE_PEACE', player: activePlayer() }); }); // eine Aktion durch die Regeln jagen
     bind('btn-accept', function () { dispatch({ type: 'ACCEPT_PEACE', player: activePlayer() }); }); // eine Aktion durch die Regeln jagen
     bind('btn-concede', function () {
@@ -360,6 +360,18 @@
     }
     if (mode === 'hotseat') return engine.state.active;
     return you;
+  }
+  function endTurn() {
+    if (!engine || !engine.state) return;
+    armedPlay = null;
+    document.body.classList.remove('dc-armed', 'dc-dragging');
+    if (typeof clearDropMarks === 'function') clearDropMarks();
+    var pend = engine.state.pending;
+    var who = activePlayer();
+    if (pend && pend.player === who && (pend.kind === 'deploy' || pend.kind === 'equip')) {
+      dispatch({ type: 'CANCEL_PENDING', player: pend.player });
+    }
+    dispatch({ type: 'END_TURN', player: activePlayer() });
   }
 
   /* Zug an die Engine, danach zeichnen, Bot anstoßen. */
