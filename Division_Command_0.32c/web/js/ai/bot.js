@@ -171,6 +171,21 @@
     return { score: bestS, target: best && best.uid };
   }
 
+  function playable(a) {
+    if (!a || a.type !== 'PLAY') return false;
+    if (a.typ === 'Einheit' && !Number(cfg.allowUnit)) return false;
+    if (a.typ === 'Unterstützung' && !Number(cfg.allowSupport)) return false;
+    if (a.typ === 'Ausrüstung' && !Number(cfg.allowEquip)) return false;
+    if (a.typ === 'Soforteinsatz' && !Number(cfg.allowInstant)) return false;
+    return true;
+  }
+
+  function emit(pid, row) {
+    if (!row) return { type: 'END_TURN', player: pid };
+    if (row.act.type === 'ATTACK') return { type: 'ATTACK', player: pid, uid: row.act.uid, target: row.target };
+    return Object.assign({ player: pid }, row.act);
+  }
+
   function stepTest(engine, pid) {
     var acts = engine.listActions(pid);
     if (!acts.length) return { type: 'END_TURN', player: pid };
@@ -188,35 +203,30 @@
 
     var scored = [];
     acts.forEach(function (a) {
-      if (a.type === 'CONCEDE' || a.type === 'PROPOSE_PEACE') return;
-      if (a.type === 'END_TURN') {
-        var p = engine.player(pid);
-        var bank = 6 + p.ap * 2.5;
-        if (emptyFront(engine, pid) === 0 && p.ap <= 1) bank += 8;
-        scored.push({ act: a, score: bank });
-        return;
-      }
+      if (a.type === 'CONCEDE' || a.type === 'PROPOSE_PEACE' || a.type === 'ACCEPT_PEACE') return;
+      if (a.type === 'END_TURN') return;
       if (a.type === 'PLAY') {
+        if (!playable(a)) return;
         scored.push({ act: a, score: scorePlay(engine, pid, a) });
         return;
       }
       if (a.type === 'ATTACK') {
+        if (!Number(cfg.allowAttack)) return;
         var ev = scoreAttack(engine, pid, a);
         scored.push({ act: a, score: ev.score, target: ev.target });
         return;
       }
-      if (a.type === 'REVEAL_UNIT') {
-        scored.push({ act: a, score: 3 });
-      }
+      if (a.type === 'REVEAL_UNIT') scored.push({ act: a, score: 3 });
     });
-    if (!scored.length) return { type: 'END_TURN', player: pid };
-    scored.sort(function (x, y) { return y.score - x.score; });
-    var win = scored[0];
-    if (win.score < 5) return { type: 'END_TURN', player: pid };
-    if (win.act.type === 'ATTACK') {
-      return { type: 'ATTACK', player: pid, uid: win.act.uid, target: win.target };
+    var plays = scored.filter(function (x) { return playable(x.act); });
+    if (plays.length) {
+      plays.sort(function (x, y) { return y.score - x.score; });
+      return emit(pid, plays[0]);
     }
-    return Object.assign({ player: pid }, win.act);
+    var rest = scored.filter(function (x) { return x.act.type === 'ATTACK' || x.act.type === 'REVEAL_UNIT'; });
+    if (!rest.length) return { type: 'END_TURN', player: pid };
+    rest.sort(function (x, y) { return y.score - x.score; });
+    return emit(pid, rest[0]);
   }
 
   function stepSchloter(engine, pid) {
@@ -224,26 +234,16 @@
     if (!acts.length) return { type: 'END_TURN', player: pid };
     var pendingChoices = acts.filter(function (a) { return a.type === 'RESOLVE_PENDING'; });
     if (pendingChoices.length) return Object.assign({ player: pid }, pick(pendingChoices));
-    var instants = acts.filter(function (a) { return a.type === 'PLAY' && a.typ === 'Soforteinsatz' && Number(cfg.allowInstant); });
-    var plays = acts.filter(function (a) {
-      if (a.type !== 'PLAY' || a.typ === 'Soforteinsatz') return false;
-      if (a.typ === 'Einheit' && !Number(cfg.allowUnit)) return false;
-      if (a.typ === 'Unterstützung' && !Number(cfg.allowSupport)) return false;
-      if (a.typ === 'Ausrüstung' && !Number(cfg.allowEquip)) return false;
-      return true;
-    });
-    var attacks = acts.filter(function (a) { return a.type === 'ATTACK'; });
-    var playChance = n('playChance', 0, 100, 75);
-    var instantChance = n('instantChance', 0, 100, 30);
-    var agg = n('aggression', 1, 100, 45);
-    playChance = Math.max(0, playChance - Math.round((agg - 50) * 0.35));
-    if (plays.length && Math.random() * 100 < playChance) return Object.assign({ player: pid }, pick(plays));
-    if (attacks.length && Number(cfg.allowAttack)) {
+    var plays = acts.filter(playable);
+    var attacks = acts.filter(function (a) { return a.type === 'ATTACK' && Number(cfg.allowAttack); });
+    if (plays.length) return Object.assign({ player: pid }, pick(plays));
+    if (attacks.length) {
       var at = pick(attacks);
       var target = at.targets && at.targets.length ? pick(at.targets).uid : null;
       return { type: 'ATTACK', player: pid, uid: at.uid, target: target };
     }
-    if (instants.length && Math.random() * 100 < instantChance) return Object.assign({ player: pid }, pick(instants));
+    var reveal = acts.find(function (a) { return a.type === 'REVEAL_UNIT'; });
+    if (reveal) return Object.assign({ player: pid }, reveal);
     var end = acts.find(function (a) { return a.type === 'END_TURN'; });
     return end ? { type: 'END_TURN', player: pid } : Object.assign({ player: pid }, pick(acts));
   }
