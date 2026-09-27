@@ -3308,10 +3308,13 @@ a.media-zip {
   pointer-events: none !important;
 }
 
-.hand .card { cursor: pointer; }
-.hand .card.picked {
+body.dc-armed .hand .card {
+  height: 11vh !important;
+  transform: none !important;
+}
+body.dc-armed .hand .card.picked {
   outline: 3px solid #e2c36a;
-  transform: translateY(-12px);
+  transform: translateY(-8px) !important;
   z-index: 4;
 }
 .slot.legal {

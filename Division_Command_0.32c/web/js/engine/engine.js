@@ -776,6 +776,7 @@
           uid: found.uid,
           facedown: !!a.facedown && def.verdeckt_ok,
           paid: cost,
+          cost: cost,
           choices: slots.map((s) => ({ slot: s, label: s.section + (s.row + 1) })),
         });
         if (chosen) {
@@ -783,9 +784,14 @@
             return this._actSlot(pid, { slot: chosen });
           } catch (err) {
             this.state.pending = null;
-            p.ap += cost;
+            if (p.hand.some((c) => c.uid === found.uid)) p.ap += cost;
             throw err;
           }
+        }
+        p.ap += cost;
+        if (this.state.pending) {
+          this.state.pending.paid = 0;
+          this.state.pending.cost = cost;
         }
         return { ok: true, need: 'slot' };
       }
@@ -864,6 +870,11 @@
       const slot = a.slot; // unveränderliche Bindung in diesem Block
       if (!slot || !p.front[slot.section] || !(slot.row >= 0 && slot.row <= 2)) throw new Error('Ungültige Stellung');
       if (p.front[slot.section][slot.row]) throw new Error('Stellung belegt'); // Regelverstoß, Zug ungültig
+      if (!pend.paid) {
+        const due = pend.cost != null ? pend.cost : this.costOf(this.defOf(card), p, null, card);
+        this._spend(p, due);
+        pend.paid = due;
+      }
       p.hand = p.hand.filter((c) => c.uid !== card.uid); // Handkarten
       card.facedown = !!pend.facedown; // verdeckte Lage
       card.summonedTurn = this.state.turn; // Feld der Engine-Instanz

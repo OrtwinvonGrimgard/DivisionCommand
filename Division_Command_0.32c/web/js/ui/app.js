@@ -430,7 +430,9 @@
       return res;
     }
     presentNewEvents();
-    if (res.need === 'slot' || res.need === 'target' || res.need === 'coin' || res.need === 'sam' || res.need === 'geist' || res.need === 'react' || res.need === 'peek' || res.need === 'comm' || res.need === 'spy' || res.need === 'brumm') {
+    if (res.need === 'slot') {
+      showDeploySlots();
+    } else if (res.need === 'target' || res.need === 'coin' || res.need === 'sam' || res.need === 'geist' || res.need === 'react' || res.need === 'peek' || res.need === 'comm' || res.need === 'spy' || res.need === 'brumm') {
       if (!eventPlaying) showPending();
     }
     maybeBot();
@@ -1321,6 +1323,14 @@
     if (def.typ === 'Einheit' && front && open) {
       var section = slot.getAttribute('data-section');
       var row = Number(slot.getAttribute('data-row'));
+      if (!section) {
+        var all = Array.prototype.slice.call(document.querySelectorAll('#my-front .front-line .slot'));
+        var ix = all.indexOf(slot);
+        if (ix >= 0) {
+          section = ['L', 'C', 'R'][Math.floor(ix / 3)];
+          row = ix % 3;
+        }
+      }
       if ((section !== 'L' && section !== 'C' && section !== 'R') || !(row >= 0 && row <= 2)) {
         if (hint) hint.textContent = 'Einheiten auf ein freies Feld der eigenen Front.';
         return;
@@ -1372,6 +1382,43 @@
     document.querySelectorAll('.slot.legal, .slot.drop-ok').forEach(function (s) {
       s.classList.remove('legal', 'drop-ok');
     });
+  }
+  function showDeploySlots() {
+    clearDropMarks();
+    document.body.classList.add('dc-armed');
+    document.querySelectorAll('#my-front .slot.empty').forEach(function (s) { s.classList.add('legal'); });
+    var hint = document.getElementById('hint');
+    if (hint) hint.textContent = 'Feld antippen. Die Karte verlässt die Hand erst dann.';
+  }
+  if (!window.dcSlotClick) {
+    window.dcSlotClick = true;
+    document.addEventListener('click', function (ev) {
+      if (!engine || !engine.state) return;
+      var t = ev.target;
+      if (!t || !t.closest) return;
+      var slot = t.closest('.slot');
+      if (!slot) return;
+      var pend = engine.state.pending;
+      if (pend && pend.kind === 'deploy' && slot.classList.contains('empty') && slot.closest('#my-front')) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        dispatch({
+          type: 'CHOOSE_SLOT',
+          player: pend.player,
+          slot: { section: slot.getAttribute('data-section'), row: Number(slot.getAttribute('data-row')) }
+        });
+        return;
+      }
+      if (!armedPlay || !slot.classList.contains('legal')) return;
+      ev.preventDefault();
+      ev.stopPropagation();
+      var a = armedPlay;
+      armedPlay = null;
+      document.body.classList.remove('dc-armed');
+      clearDropMarks();
+      document.querySelectorAll('#hand .card.picked').forEach(function (c) { c.classList.remove('picked'); });
+      placeFromHand(a.uid, slot, a.who, a.facedown);
+    }, true);
   }
   function markLegalSlots(def) {
     var sel = legalSelector(def);
@@ -1451,6 +1498,7 @@
     if (!card) return;
     var def = engine.defOf(card);
     armedPlay = { uid: uid, who: who, facedown: !!facedown };
+    document.body.classList.add('dc-armed');
     clearDropMarks();
     markLegalSlots(def);
     var hint = document.getElementById('hint');
@@ -1510,6 +1558,7 @@
   /* Gesamten Tisch aus dem Engine-Stand neu aufbauen. */
     function render() { // Tisch neu zeichnen
     if (!engine || !engine.state || !engine.state.players) return;
+    if (!armedPlay && (!engine.state.pending || engine.state.pending.kind !== 'deploy')) document.body.classList.remove('dc-armed');
     var st = engine.state; // lokale Variable
     var p0 = st.players[0], p1 = st.players[1]; // lokale Variable
     var viewer = mode === 'hotseat' ? st.active : you; // lokale Variable
@@ -1613,6 +1662,7 @@
         if (!card) return;
         if (armedPlay && armedPlay.uid === card.uid && !armedPlay.facedown) {
           armedPlay = null;
+          document.body.classList.remove('dc-armed');
           clearDropMarks();
           document.querySelectorAll('#hand .card.picked').forEach(function (c) { c.classList.remove('picked'); });
           var hint = document.getElementById('hint');
