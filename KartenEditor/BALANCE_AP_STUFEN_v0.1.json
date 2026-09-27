@@ -1,0 +1,814 @@
+{
+  "version": "0.1",
+  "purpose": "Mechanische AP-Bepreisung und Stufeneinstufung; bestehende Kartenwerte bleiben unberührt.",
+  "assumptions": {
+    "base_ap_per_turn": 5,
+    "carry_over_unspent_ap": true,
+    "test_ap_cap": 10,
+    "normal_cost_range": [
+      0,
+      7
+    ],
+    "exceptional_costs": "8+ AP nur für außergewöhnliche globale Effekte",
+    "tier_is_separate_from_ap": true
+  },
+  "tiers": {
+    "Bronze": "lokal/einfach/situativ",
+    "Silber": "taktisch/mehrere Einheiten/kleine Zone/dauerhafte Ressource",
+    "Gold": "operativ/großflächig/starker Ressourcen- oder Spielzustandseffekt"
+  },
+  "cards": [
+    {
+      "id": "dc_eh_sich",
+      "name": "Sicherungstrupp",
+      "type": "Einheit",
+      "old_ap": 1,
+      "new_ap": 1,
+      "tier": "Bronze",
+      "reason": "Grundkörper; keine Fähigkeit."
+    },
+    {
+      "id": "dc_eh_frei",
+      "name": "Freischärler",
+      "type": "Einheit",
+      "old_ap": 1,
+      "new_ap": 1,
+      "tier": "Bronze",
+      "reason": "Sehr günstiger Körper; kleiner Erstschlagbonus."
+    },
+    {
+      "id": "dc_eh_spaeher",
+      "name": "Spähertrupp",
+      "type": "Einheit",
+      "old_ap": 1,
+      "new_ap": 1,
+      "tier": "Bronze",
+      "reason": "Grundkörper mit einfacher Aufklärung."
+    },
+    {
+      "id": "dc_eh_jaeger",
+      "name": "Jägerstellung",
+      "type": "Einheit",
+      "old_ap": 2,
+      "new_ap": 2,
+      "tier": "Bronze",
+      "reason": "Lokale defensive Falle."
+    },
+    {
+      "id": "dc_eh_dschungel",
+      "name": "Dschungelkrieger",
+      "type": "Einheit",
+      "old_ap": 3,
+      "new_ap": 3,
+      "tier": "Silber",
+      "reason": "2/5 plus erneute Verschleierung nach Angriff."
+    },
+    {
+      "id": "dc_eh_spz",
+      "name": "Schützenpanzer",
+      "type": "Einheit",
+      "old_ap": 2,
+      "new_ap": 3,
+      "tier": "Silber",
+      "reason": "3/3 plus Aura für benachbarte Infanterie."
+    },
+    {
+      "id": "dc_eh_spahwagen",
+      "name": "Spähwagen",
+      "type": "Einheit",
+      "old_ap": 2,
+      "new_ap": 2,
+      "tier": "Silber",
+      "reason": "Sehr effizient; deckt mehrere verdeckte Einheiten auf."
+    },
+    {
+      "id": "dc_eh_pak",
+      "name": "Panzerabwehrtrupp",
+      "type": "Einheit",
+      "old_ap": 2,
+      "new_ap": 2,
+      "tier": "Silber",
+      "reason": "Extremer situativer Panzerabwehrbonus."
+    },
+    {
+      "id": "dc_eh_donner",
+      "name": "Mittlerer Panzer Donnerkeil",
+      "type": "Einheit",
+      "old_ap": 3,
+      "new_ap": 3,
+      "tier": "Silber",
+      "reason": "Solider 4/4-Körper plus Zielbonus."
+    },
+    {
+      "id": "dc_eh_mg",
+      "name": "MG-Stellung",
+      "type": "Einheit",
+      "old_ap": 3,
+      "new_ap": 3,
+      "tier": "Silber",
+      "reason": "4 Angriff plus Niederhalten."
+    },
+    {
+      "id": "dc_eh_eingreif",
+      "name": "Mobile Eingreiftruppe",
+      "type": "Einheit",
+      "old_ap": 3,
+      "new_ap": 3,
+      "tier": "Silber",
+      "reason": "Mobilität als zusätzliche taktische Option."
+    },
+    {
+      "id": "dc_eh_aufklaerer",
+      "name": "Aufklärer",
+      "type": "Einheit",
+      "old_ap": 3,
+      "new_ap": 4,
+      "tier": "Silber",
+      "reason": "4/3 plus Schaden und Mehrfachaufklärung."
+    },
+    {
+      "id": "dc_eh_glubscher",
+      "name": "Spähpanzer Glubscher",
+      "type": "Einheit",
+      "old_ap": 4,
+      "new_ap": 4,
+      "tier": "Silber",
+      "reason": "4/5 plus Handinformation und Aufklärung."
+    },
+    {
+      "id": "dc_eh_sniper",
+      "name": "Scharfschütze",
+      "type": "Einheit",
+      "old_ap": 3,
+      "new_ap": 4,
+      "tier": "Silber",
+      "reason": "Starker Anti-Infanterie-Effekt plus erneute Verschleierung."
+    },
+    {
+      "id": "dc_eh_helden",
+      "name": "Helden der zweiten Kompanie",
+      "type": "Einheit",
+      "old_ap": 4,
+      "new_ap": 4,
+      "tier": "Silber",
+      "reason": "Kostenlose Nachbesetzung nach Verlust."
+    },
+    {
+      "id": "dc_eh_himmel",
+      "name": "Infanteriebataillon Himmelhund",
+      "type": "Einheit",
+      "old_ap": 3,
+      "new_ap": 4,
+      "tier": "Silber",
+      "reason": "Schulterschluss verändert die Kampfstruktur."
+    },
+    {
+      "id": "dc_eh_moerser",
+      "name": "Mörser-Team",
+      "type": "Einheit",
+      "old_ap": 3,
+      "new_ap": 4,
+      "tier": "Gold",
+      "reason": "Geringe Werte, aber Angriff auf die gesamte Front."
+    },
+    {
+      "id": "dc_eh_haubitze",
+      "name": "Haubitzenzug",
+      "type": "Einheit",
+      "old_ap": 4,
+      "new_ap": 5,
+      "tier": "Gold",
+      "reason": "6/4 plus Angriff auf die gesamte gegnerische Front."
+    },
+    {
+      "id": "dc_eh_viper",
+      "name": "Raketenwerfer Viper",
+      "type": "Einheit",
+      "old_ap": 3,
+      "new_ap": 5,
+      "tier": "Gold",
+      "reason": "5/3 plus gesamte Front und Support als Ziele."
+    },
+    {
+      "id": "dc_eh_hammer",
+      "name": "Panzertrupp Hammer",
+      "type": "Einheit",
+      "old_ap": 4,
+      "new_ap": 5,
+      "tier": "Gold",
+      "reason": "7/6 plus ignoriert 2 Verteidigung gegen Gepanzerte."
+    },
+    {
+      "id": "dc_eh_kommando",
+      "name": "Kommandogruppe",
+      "type": "Einheit",
+      "old_ap": 5,
+      "new_ap": 5,
+      "tier": "Gold",
+      "reason": "Flankenschutz und Mitkämpfen greifen in mehrere Gefechte ein."
+    },
+    {
+      "id": "dc_eh_faustkeil",
+      "name": "Panzerzug Faustkeil",
+      "type": "Einheit",
+      "old_ap": 5,
+      "new_ap": 6,
+      "tier": "Gold",
+      "reason": "8/6; sehr hoher Kampfkörper plus Flankenabhängigkeit."
+    },
+    {
+      "id": "dc_eh_koloss",
+      "name": "Schwerer Panzer Koloss",
+      "type": "Einheit",
+      "old_ap": 5,
+      "new_ap": 6,
+      "tier": "Gold",
+      "reason": "7/9 plus Schadensreduktion; außergewöhnlich hoher Einzelwert."
+    },
+    {
+      "id": "dc_su_flak",
+      "name": "Flugabwehr",
+      "type": "Unterstützung",
+      "old_ap": 2,
+      "new_ap": 2,
+      "tier": "Silber",
+      "reason": "Enger, klarer Schutz gegen Luftangriffe."
+    },
+    {
+      "id": "dc_su_nebel",
+      "name": "Kriegsnebel",
+      "type": "Unterstützung",
+      "old_ap": 2,
+      "new_ap": 2,
+      "tier": "Silber",
+      "reason": "Temporärer Token und Erstschlagvorteil."
+    },
+    {
+      "id": "dc_su_feldlager",
+      "name": "Feldlager",
+      "type": "Unterstützung",
+      "old_ap": 2,
+      "new_ap": 2,
+      "tier": "Silber",
+      "reason": "Dauerhafter Kartenvorteil."
+    },
+    {
+      "id": "dc_su_radar",
+      "name": "Radarstation",
+      "type": "Unterstützung",
+      "old_ap": 2,
+      "new_ap": 3,
+      "tier": "Silber",
+      "reason": "Schützt die eigene gesamte Unterstützungszone gegen Luftschaden."
+    },
+    {
+      "id": "dc_su_verwund",
+      "name": "Verwundetennest",
+      "type": "Unterstützung",
+      "old_ap": 1,
+      "new_ap": 2,
+      "tier": "Silber",
+      "reason": "Frontweite Schadensreduktion plus Rückholung/Heilung."
+    },
+    {
+      "id": "dc_su_lazarett",
+      "name": "Lazarett",
+      "type": "Unterstützung",
+      "old_ap": 3,
+      "new_ap": 3,
+      "tier": "Silber",
+      "reason": "Reparatur-/Rückholmechanik mit eigenem Risiko."
+    },
+    {
+      "id": "dc_su_drohne",
+      "name": "Dronenkommando",
+      "type": "Unterstützung",
+      "old_ap": 2,
+      "new_ap": 3,
+      "tier": "Silber",
+      "reason": "Wiederholbarer 6-Schaden-Effekt."
+    },
+    {
+      "id": "dc_su_lager",
+      "name": "Lagerhaus",
+      "type": "Unterstützung",
+      "old_ap": 3,
+      "new_ap": 3,
+      "tier": "Silber",
+      "reason": "Ausrüstungsrabatt plus Decksuche."
+    },
+    {
+      "id": "dc_su_schlaefer",
+      "name": "Schläferzelle",
+      "type": "Unterstützung",
+      "old_ap": 3,
+      "new_ap": 3,
+      "tier": "Silber",
+      "reason": "Verzögerte gezielte Ausschaltung."
+    },
+    {
+      "id": "dc_su_spion",
+      "name": "Spionagenetzwerk",
+      "type": "Unterstützung",
+      "old_ap": 4,
+      "new_ap": 4,
+      "tier": "Silber",
+      "reason": "Permanente Information plus Taktik-Rabatt."
+    },
+    {
+      "id": "dc_su_staat",
+      "name": "Staatspropaganda",
+      "type": "Unterstützung",
+      "old_ap": 2,
+      "new_ap": 4,
+      "tier": "Silber",
+      "reason": "Skalierender Kartenvorteil über zerstörte Gegner."
+    },
+    {
+      "id": "dc_su_brumm",
+      "name": "Störwagen Brummbär",
+      "type": "Unterstützung",
+      "old_ap": 2,
+      "new_ap": 3,
+      "tier": "Silber",
+      "reason": "Globaler Angriffsmalus plus mehrere Drohneninteraktionen."
+    },
+    {
+      "id": "dc_su_pakt",
+      "name": "Uralter Pakt",
+      "type": "Unterstützung",
+      "old_ap": 3,
+      "new_ap": 4,
+      "tier": "Silber",
+      "reason": "+2/+2 plus potenzieller Kartenvorteil."
+    },
+    {
+      "id": "dc_su_auge",
+      "name": "Totale Überwachung",
+      "type": "Unterstützung",
+      "old_ap": 3,
+      "new_ap": 4,
+      "tier": "Gold",
+      "reason": "Unterbindet die gesamte gegnerische Verschleierungsmechanik."
+    },
+    {
+      "id": "dc_su_festung",
+      "name": "Festungsanlage",
+      "type": "Unterstützung",
+      "old_ap": 3,
+      "new_ap": 4,
+      "tier": "Gold",
+      "reason": "+2 Verteidigung auf die gesamte eigene Front."
+    },
+    {
+      "id": "dc_su_artillerie",
+      "name": "Artilleriestellung",
+      "type": "Unterstützung",
+      "old_ap": 4,
+      "new_ap": 5,
+      "tier": "Gold",
+      "reason": "+1 Angriff für die Front plus wiederholbarer Direktschaden."
+    },
+    {
+      "id": "dc_su_satellit",
+      "name": "Aufklärungssatellit",
+      "type": "Unterstützung",
+      "old_ap": 3,
+      "new_ap": 4,
+      "tier": "Gold",
+      "reason": "+2 Verteidigung für die Front plus Aufklärung."
+    },
+    {
+      "id": "dc_su_prop",
+      "name": "Propaganda",
+      "type": "Unterstützung",
+      "old_ap": 3,
+      "new_ap": 4,
+      "tier": "Gold",
+      "reason": "Verändert dauerhaft die Kostenstruktur aller eigenen Fronteinheiten."
+    },
+    {
+      "id": "dc_su_komm",
+      "name": "Kommunikationszentrum",
+      "type": "Unterstützung",
+      "old_ap": 4,
+      "new_ap": 6,
+      "tier": "Gold",
+      "reason": "Ermöglicht erneuten Angriff der gesamten Front plus Deckmanipulation."
+    },
+    {
+      "id": "dc_su_general",
+      "name": "Erfahrener General",
+      "type": "Unterstützung",
+      "old_ap": 4,
+      "new_ap": 6,
+      "tier": "Gold",
+      "reason": "+2 Verteidigung der Front plus Elite-Synergie und Finte."
+    },
+    {
+      "id": "dc_su_ausland",
+      "name": "Auslandsvertretung",
+      "type": "Unterstützung",
+      "old_ap": 5,
+      "new_ap": 5,
+      "tier": "Gold",
+      "reason": "Permanenter +1-AP-Zufluss plus besonderer Schutz."
+    },
+    {
+      "id": "dc_su_niemand",
+      "name": "Bis niemand mehr lebt",
+      "type": "Unterstützung",
+      "old_ap": 5,
+      "new_ap": 7,
+      "tier": "Gold",
+      "reason": "Wiederholbare Zerstörung gegnerischer Front- oder Supportkarten."
+    },
+    {
+      "id": "dc_so_bod_luft",
+      "name": "Boden-Luft-Rakete",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 0,
+      "tier": "Bronze",
+      "reason": "Sehr enge Reaktion; nur gegen Luftangriff."
+    },
+    {
+      "id": "dc_so_deckung",
+      "name": "Deckung suchen",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 0,
+      "tier": "Bronze",
+      "reason": "Kleine lokale Reaktion; Bonus endet beim Angriff."
+    },
+    {
+      "id": "dc_so_pause",
+      "name": "Pause",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 0,
+      "tier": "Bronze",
+      "reason": "Sehr enger taktischer Eingriff."
+    },
+    {
+      "id": "dc_so_raeum",
+      "name": "Räumkommando",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 0,
+      "tier": "Bronze",
+      "reason": "Reiner Konter gegen einen bestimmten Token."
+    },
+    {
+      "id": "dc_so_formation",
+      "name": "Standhafte Formation",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 0,
+      "tier": "Bronze",
+      "reason": "Kleiner Einzelzielbonus."
+    },
+    {
+      "id": "dc_so_waffen",
+      "name": "Waffenlieferung",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 0,
+      "tier": "Bronze",
+      "reason": "Situativer Abbau eines Angriffsmalus."
+    },
+    {
+      "id": "dc_so_geist",
+      "name": "Geist in den Trümmern",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 1,
+      "tier": "Bronze",
+      "reason": "Bedingter Handkartenangriff."
+    },
+    {
+      "id": "dc_so_lage",
+      "name": "Lagebesprechung",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 1,
+      "tier": "Bronze",
+      "reason": "Zwei Einheiten mit kleinem temporärem Bonus."
+    },
+    {
+      "id": "dc_so_martyrium",
+      "name": "Martyrium",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 1,
+      "tier": "Bronze",
+      "reason": "1-for-4-Schaden mit eigenem Opfer."
+    },
+    {
+      "id": "dc_so_instand",
+      "name": "Instandsetzung",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 1,
+      "tier": "Silber",
+      "reason": "Rückholung plus kostenloses Wiederausspielen und Zustandsreset."
+    },
+    {
+      "id": "dc_so_munition",
+      "name": "Munitionstreffer",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 1,
+      "tier": "Silber",
+      "reason": "Starker, aber bedingter Konter gegen gepanzerte Angreifer."
+    },
+    {
+      "id": "dc_so_verpflegung",
+      "name": "Verpflegung",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 1,
+      "tier": "Silber",
+      "reason": "Verteidigung auf bis zu drei Infanteristen."
+    },
+    {
+      "id": "dc_so_minenfeld",
+      "name": "Minenfeld",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 1,
+      "tier": "Silber",
+      "reason": "Persistenter Token mit zwei Auslösungen."
+    },
+    {
+      "id": "dc_so_widerstand",
+      "name": "Widerstand",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 1,
+      "tier": "Silber",
+      "reason": "Erzwingt ein alternatives Gefecht einer gegnerischen Einheit."
+    },
+    {
+      "id": "dc_so_vorsprung",
+      "name": "Geistiger Vorsprung",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 0,
+      "tier": "Silber",
+      "reason": "Kostenlose Reaktion, aber nur bei unmittelbar angekündigtem Angriff."
+    },
+    {
+      "id": "dc_so_kavallerie",
+      "name": "Eingriff der Kavallerie",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 2,
+      "tier": "Silber",
+      "reason": "Globaler Bonus für gepanzerte Fahrzeuge."
+    },
+    {
+      "id": "dc_so_luftschlag",
+      "name": "Luftschlag",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 2,
+      "tier": "Silber",
+      "reason": "5 Schaden auf Einheit oder Support."
+    },
+    {
+      "id": "dc_so_napalm",
+      "name": "Napalm",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 2,
+      "tier": "Silber",
+      "reason": "Direktschaden plus anhaltender Schaden."
+    },
+    {
+      "id": "dc_so_engel",
+      "name": "Silberner Engel",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 2,
+      "tier": "Silber",
+      "reason": "Starker Schutz, aber zufallsabhängig."
+    },
+    {
+      "id": "dc_so_ehren",
+      "name": "Militärische Ehren",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 3,
+      "tier": "Silber",
+      "reason": "Bis zu drei bereits erfolgreiche Einheiten mit +2/+2."
+    },
+    {
+      "id": "dc_so_mobilisierung",
+      "name": "Mobilisierung",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 3,
+      "tier": "Gold",
+      "reason": "Decksuche plus kostenlose Infanterie; großer Tempoeffekt."
+    },
+    {
+      "id": "dc_so_eifer",
+      "name": "Religiöser Eifer",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 4,
+      "tier": "Gold",
+      "reason": "+3 Angriff für die gesamte eigene Infanterie trotz Selbstschaden."
+    },
+    {
+      "id": "dc_so_letzter",
+      "name": "Der Letzte der steht",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 3,
+      "tier": "Gold",
+      "reason": "Greift die Struktur der gesamten eigenen Front an; hoher Skalierungseffekt."
+    },
+    {
+      "id": "dc_so_durchschuss",
+      "name": "Glatter Durchschuss",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 5,
+      "tier": "Gold",
+      "reason": "Verdoppelt Kampfschaden einer gepanzerten Einheit."
+    },
+    {
+      "id": "dc_so_stand",
+      "name": "Standgericht",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 4,
+      "tier": "Gold",
+      "reason": "Opfer einer Einheit gegen massiven Flächenbonus für die übrige Front."
+    },
+    {
+      "id": "dc_so_selbst",
+      "name": "Selbstopfer",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 4,
+      "tier": "Gold",
+      "reason": "Ein eigener Verlust ermöglicht zwei gegnerische Zerstörungen."
+    },
+    {
+      "id": "dc_so_volk",
+      "name": "Wille des Volkes",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 4,
+      "tier": "Gold",
+      "reason": "Frontweiter Infanteriebonus plus skalierender Kartenvorteil."
+    },
+    {
+      "id": "dc_so_mobil",
+      "name": "Generalmobilmachung",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 4,
+      "tier": "Gold",
+      "reason": "+3 Karten plus +2 AP für den Zug."
+    },
+    {
+      "id": "dc_so_blinder_gehorsam",
+      "name": "Blinder Gehorsam",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 6,
+      "tier": "Gold",
+      "reason": "Gesamte eigene Front greift kostenlos an und erhält +2 Angriff."
+    },
+    {
+      "id": "dc_so_strahlung",
+      "name": "Strahlung",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 5,
+      "tier": "Gold",
+      "reason": "Bis zu drei benachbarte Gegner werden massiv ausgeschaltet oder verdrängt."
+    },
+    {
+      "id": "dc_so_dammbruch",
+      "name": "Dammbruch",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 6,
+      "tier": "Gold",
+      "reason": "Entfernt die gesamte gegnerische Supportzone."
+    },
+    {
+      "id": "dc_so_gassen",
+      "name": "Einsame Gassen",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 7,
+      "tier": "Gold",
+      "reason": "Kann alle freien Frontstellungen kostenlos aus dem Deck besetzen."
+    },
+    {
+      "id": "dc_so_massen",
+      "name": "Psychologie der Massen",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 6,
+      "tier": "Gold",
+      "reason": "Ignoriert für beliebig viele Fronteinheiten die AP-Kosten."
+    },
+    {
+      "id": "dc_so_armageddon",
+      "name": "Armageddon",
+      "type": "Soforteinsatz",
+      "old_ap": 0,
+      "new_ap": 8,
+      "tier": "Gold",
+      "reason": "Kompletter globaler Reset von Spielfeld und Händen."
+    },
+    {
+      "id": "dc_eq_spat",
+      "name": "Klappspaten",
+      "type": "Ausrüstung",
+      "old_ap": 2,
+      "new_ap": 2,
+      "tier": "Bronze",
+      "reason": "Lokaler defensiver Aufbau."
+    },
+    {
+      "id": "dc_eq_rauch",
+      "name": "Rauchgranate",
+      "type": "Ausrüstung",
+      "old_ap": 2,
+      "new_ap": 2,
+      "tier": "Bronze",
+      "reason": "Situativer Schutz im einzelnen Kampf."
+    },
+    {
+      "id": "dc_eq_tasche",
+      "name": "Sanitätstasche",
+      "type": "Ausrüstung",
+      "old_ap": 2,
+      "new_ap": 2,
+      "tier": "Silber",
+      "reason": "Dauerhafte Regeneration des Trägers."
+    },
+    {
+      "id": "dc_eq_fanat",
+      "name": "Fanatischer Kommandant",
+      "type": "Ausrüstung",
+      "old_ap": 4,
+      "new_ap": 4,
+      "tier": "Silber",
+      "reason": "Dauerhaft +2/+2 für eine Infanterieeinheit."
+    },
+    {
+      "id": "dc_eq_med",
+      "name": "Medizinische Versorgung",
+      "type": "Ausrüstung",
+      "old_ap": 4,
+      "new_ap": 4,
+      "tier": "Silber",
+      "reason": "Starke dauerhafte Regeneration plus Flankenunterstützung."
+    },
+    {
+      "id": "dc_dok_blitzkrieg",
+      "name": "Blitzkrieg",
+      "type": "Doktrin",
+      "old_ap": 0,
+      "new_ap": 0,
+      "tier": "Gold",
+      "reason": "Globale strategische Regeländerung für Panzer/mechanisierte Infanterie und Support-Reaktionsfenster."
+    },
+    {
+      "id": "dc_dok_bollwerk",
+      "name": "Bollwerk",
+      "type": "Doktrin",
+      "old_ap": 0,
+      "new_ap": 0,
+      "tier": "Gold",
+      "reason": "Verändert Befestigungswerte und erzeugt dauerhafte Front-/Rückgewinnungsmechaniken."
+    },
+    {
+      "id": "dc_dok_sicherer_nachschub",
+      "name": "Sicherer Nachschub",
+      "type": "Doktrin",
+      "old_ap": 0,
+      "new_ap": 0,
+      "tier": "Gold",
+      "reason": "Verändert Unterstützungskosten und ermöglicht zusätzliche Aktivierungen."
+    },
+    {
+      "id": "dc_dok_tiefenverteidigung",
+      "name": "Tiefenverteidigung",
+      "type": "Doktrin",
+      "old_ap": 0,
+      "new_ap": 0,
+      "tier": "Gold",
+      "reason": "Globale Verteidigungs-, AP- und Supportangriffsregeln."
+    }
+  ]
+}
