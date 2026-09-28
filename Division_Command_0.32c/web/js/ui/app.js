@@ -1354,6 +1354,8 @@
         facedown: !!facedown,
         slot: { section: section, row: row }
       });
+      var laid = engine.player(viewer).front[section] && engine.player(viewer).front[section][row] && engine.player(viewer).front[section][row].uid === uid;
+      if (hint) hint.textContent = laid ? (def.name + ' liegt auf ' + section + (row + 1) + '.') : 'Nicht gelegt. Es wurden keine Punkte abgezogen.';
       return;
     }
     if (def.typ === 'Unterstützung' && support && open) {
@@ -1405,6 +1407,7 @@
   if (!window.dcSlotClick) {
     window.dcSlotClick = true;
     document.addEventListener('click', function (ev) {
+      if (suppressHandClick) return;
       if (!engine || !engine.state) return;
       var t = ev.target;
       if (!t || !t.closest) return;

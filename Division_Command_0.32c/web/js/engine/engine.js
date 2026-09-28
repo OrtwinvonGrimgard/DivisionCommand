@@ -748,8 +748,10 @@
       const cost = this.costOf(def, p, null, found);
       const isActive = this.state.active === pid && this.state.phase === 'main'; // unveränderliche Bindung in diesem Block
       if (def.typ !== 'Soforteinsatz' && !isActive) throw new Error('Nur Soforteinsätze als Reaktion'); // Regelverstoß, Zug ungültig
-      this._spend(p, cost);
-      if (p.flags && p.flags.tacticDiscount && def.typ !== 'Soforteinsatz') p.flags.tacticDiscount = false;
+      if (def.typ !== 'Einheit') {
+        this._spend(p, cost);
+        if (p.flags && p.flags.tacticDiscount && def.typ !== 'Soforteinsatz') p.flags.tacticDiscount = false;
+      }
 
       if (a.facedown && this._istStellung(def) && def.typ === 'Unterstützung') {
         const idx = p.support.findIndex((x) => !x);
@@ -763,37 +765,39 @@
       }
       if (def.typ === 'Einheit') {
         const slots = this.emptySlots(p);
-        if (!slots.length) {
-          p.ap += cost;
-          throw new Error('Keine freie Stellung');
-        }
-        const chosen = a.slot && a.slot.section != null && a.slot.section !== ''
+        if (!slots.length) throw new Error('Keine freie Stellung');
+        const chosen = a.slot && a.slot.section != null && String(a.slot.section) !== ''
           ? { section: a.slot.section, row: Number(a.slot.row) }
           : null;
+        if (p.ap < cost) throw new Error('Nicht genug AP (' + p.ap + '/' + cost + ')');
+        const apBefore = p.ap;
         this.state.pending = this._sealPending({
           kind: 'deploy',
           player: pid,
           uid: found.uid,
           facedown: !!a.facedown && def.verdeckt_ok,
-          paid: cost,
+          paid: 0,
           cost: cost,
           choices: slots.map((s) => ({ slot: s, label: s.section + (s.row + 1) })),
         });
-        if (chosen) {
-          try {
-            return this._actSlot(pid, { slot: chosen });
-          } catch (err) {
-            this.state.pending = null;
-            if (p.hand.some((c) => c.uid === found.uid)) p.ap += cost;
-            throw err;
+        if (!chosen) return { ok: true, need: 'slot' };
+        try {
+          const placed = this._actSlot(pid, { slot: chosen });
+          const there = p.front[chosen.section] && p.front[chosen.section][chosen.row] && p.front[chosen.section][chosen.row].uid === found.uid;
+          if (!there) throw new Error('Karte nicht gelegt');
+          if (p.flags && p.flags.tacticDiscount) p.flags.tacticDiscount = false;
+          return placed;
+        } catch (err) {
+          const onSlot = p.front[chosen.section] && p.front[chosen.section][chosen.row] && p.front[chosen.section][chosen.row].uid === found.uid;
+          if (onSlot) return { ok: true };
+          this.state.pending = null;
+          if (p.front[chosen.section] && p.front[chosen.section][chosen.row] && p.front[chosen.section][chosen.row].uid === found.uid) {
+            p.front[chosen.section][chosen.row] = null;
           }
+          if (!p.hand.some((c) => c.uid === found.uid)) p.hand.push(found);
+          p.ap = apBefore;
+          throw err;
         }
-        p.ap += cost;
-        if (this.state.pending) {
-          this.state.pending.paid = 0;
-          this.state.pending.cost = cost;
-        }
-        return { ok: true, need: 'slot' };
       }
       if (def.typ === 'Unterstützung') { // Zweig nur bei zutreffender Bedingung
         let idx = -1;
@@ -870,15 +874,16 @@
       const slot = a.slot; // unveränderliche Bindung in diesem Block
       if (!slot || !p.front[slot.section] || !(slot.row >= 0 && slot.row <= 2)) throw new Error('Ungültige Stellung');
       if (p.front[slot.section][slot.row]) throw new Error('Stellung belegt'); // Regelverstoß, Zug ungültig
-      if (!pend.paid) {
-        const due = pend.cost != null ? pend.cost : this.costOf(this.defOf(card), p, null, card);
-        this._spend(p, due);
-        pend.paid = due;
-      }
+      const due = pend.paid ? 0 : (pend.cost != null ? pend.cost : this.costOf(this.defOf(card), p, null, card));
+      if (!pend.paid && p.ap < due) throw new Error('Nicht genug AP (' + p.ap + '/' + due + ')');
       p.hand = p.hand.filter((c) => c.uid !== card.uid); // Handkarten
       card.facedown = !!pend.facedown; // verdeckte Lage
       card.summonedTurn = this.state.turn; // Feld der Engine-Instanz
       p.front[slot.section][slot.row] = card; // nächster Schritt im Ablauf
+      if (!pend.paid) {
+        this._spend(p, due);
+        pend.paid = due;
+      }
       const def = this.defOf(card); // unveränderliche Bindung in diesem Block
       this._evt('deploy', def, p.name + ' stellt ' + (card.facedown ? 'eine verdeckte Einheit' : def.name) + ' auf ' + slot.section + (slot.row + 1) + '.');
       // Ereignis für die Rundenübersicht
