@@ -1331,7 +1331,7 @@
     var front = slot.closest && slot.closest('#my-front');
     var support = slot.closest && slot.closest('#my-support');
     var enemy = slot.closest && slot.closest('#enemy-front, #enemy-support');
-    var open = slot.classList.contains('empty');
+    var open = !slot.getAttribute('data-uid');
     if (def.typ === 'Einheit' && front && open) {
       var nodes = document.querySelectorAll('#my-front .front-line .slot');
       var ix = Array.prototype.indexOf.call(nodes, slot);
@@ -1391,6 +1391,9 @@
     }
     if (hint) hint.textContent = def.typ === 'Einheit' ? 'Einheiten auf ein freies Feld der eigenen Front.' : 'Dieses Feld nimmt die Karte nicht.';
   }
+  window.dcAcceptDrop = function (slot, uid) {
+    placeFromHand(uid, slot, window.dcViewer, false);
+  };
   function legalSelector(def) {
     if (!def) return '';
     if (def.typ === 'Einheit') return '#my-front .slot.empty';
@@ -1414,7 +1417,7 @@
   if (!window.dcSlotClick) {
     window.dcSlotClick = true;
     document.addEventListener('click', function (ev) {
-      if (suppressHandClick) return;
+      if (suppressHandClick || window.dcSuppressClick) return;
       if (!engine || !engine.state) return;
       var t = ev.target;
       if (!t || !t.closest) return;
@@ -1711,6 +1714,7 @@
     var st = engine.state; // lokale Variable
     var p0 = st.players[0], p1 = st.players[1]; // lokale Variable
     var viewer = mode === 'hotseat' ? st.active : you; // lokale Variable
+    window.dcViewer = viewer;
     var me = st.players[viewer]; // lokale Variable
     var foe = st.players[viewer === 0 ? 1 : 0]; // lokale Variable
     $('#turnmeta').textContent = 'Zug ' + st.turn + ' · am Zug: ' + st.players[st.active].name + (st.winner != null ? ' · ENDE: ' + st.endReason : '');
@@ -1806,7 +1810,7 @@
         return card ? { def: engine.defOf(card), facedown: false, inst: null } : null; // verdeckte Lage
       }); // nächster Schritt im Ablauf
       el.onclick = function (ev) {
-        if (suppressHandClick) {
+        if (suppressHandClick || window.dcSuppressClick) {
           ev.preventDefault();
           ev.stopPropagation();
           return;
@@ -1839,11 +1843,6 @@
       el.draggable = false;
       el.querySelectorAll('img').forEach(function (img) { img.draggable = false; });
       el.ondragstart = function (ev) { ev.preventDefault(); };
-      el.onpointerdown = function (ev) {
-        var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; });
-        if (!card) return;
-        startHandDrag(ev, el, card, viewer);
-      };
     });
     bindBoardDrops(viewer);
     function tryPickPending(uid) { // Funktion
