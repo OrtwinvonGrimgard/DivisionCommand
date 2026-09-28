@@ -960,13 +960,17 @@
     var st = engine.currentAtkDef(inst); // lokale Variable
     var hide = !!(inst.facedown && !mine);
     var expl = (!hide && engine.explainStats) ? engine.explainStats(inst) : null;
-    var costAp = engine.costOf ? engine.costOf(d, null) : (d.ap || 0);
+    var locu = engine.findInst(inst.uid);
+    var costAp = (d && d.ap != null) ? d.ap : 0;
+    try {
+      var owner = locu && locu.player;
+      if (engine.costOf) costAp = engine.costOf(d, owner || null, null, inst);
+    } catch (errCost) { costAp = (d && d.ap) || 0; }
     var stats = hide ? '' : ((expl ? slotStatHtml(expl) : ('ATK ' + st.atk + ' / DEF ' + st.def)) + ' · ' + costAp + ' AP');
     var tokens = '';
     var picked = engine.state.pending && (engine.state.pending.selected || []).indexOf(inst.uid) >= 0; // offene Wahl des Spielers
     var deadact = inst.flags && inst.flags.exhausted || inst.attackUsed;
     var tokHtml = '';
-    var locu = engine.findInst(inst.uid);
     if (locu && locu.zone === 'front') {
       var tok = engine.nmlAt(locu.player, locu.section, locu.row);
       if (tok) {

@@ -353,8 +353,7 @@
       if (kind === 'instant' || def.typ === 'Soforteinsatz') return this.rules.instant_ap_test || 0;
       let cost = Number(def.ap || 0);
       if (def.typ === 'Ausrüstung') cost = Number(def.ap || 0) + Number(this.rules.equip_ap_test || 0);
-      // AURA_COST_MOD from own support / doctrines
-      this._auras(player).forEach((a) => { // jedes Element
+      if (player) this._auras(player).forEach((a) => { // jedes Element
         if (a.code === 'AURA_COST_MOD') { // Zweig nur bei zutreffender Bedingung
           const filter = String(a.param.filter || '').toLowerCase(); // unveränderliche Bindung in diesem Block
           const ok = // unveränderliche Bindung in diesem Block
@@ -382,6 +381,7 @@
 
     _auras(player) { // nächster Schritt im Ablauf
       const list = []; // unveränderliche Bindung in diesem Block
+      if (!player) return list;
       const add = (inst) => { // unveränderliche Bindung in diesem Block
         if (!inst) return; // Zweig nur bei zutreffender Bedingung
         const def = this.defOf(inst); // unveränderliche Bindung in diesem Block
@@ -426,6 +426,8 @@
           dv += Number(a.param.def || 0);
         }
       }); // nächster Schritt im Ablauf
+      inst.attachments = inst.attachments || [];
+      inst.flags = inst.flags || {};
       inst.attachments.forEach((eq) => { // jedes Element
         const ed = this.defOf(eq); // unveränderliche Bindung in diesem Block
         (ed.effects || []).forEach((e) => { // jedes Element

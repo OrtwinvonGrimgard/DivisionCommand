@@ -3381,3 +3381,7 @@ body.dc-dragging .slot.legal {
   z-index: 200;
   box-shadow: 0 14px 32px #000c;
 }
+#my-front, #enemy-front {
+  position: relative;
+  z-index: 7;
+}
