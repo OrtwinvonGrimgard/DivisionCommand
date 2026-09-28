@@ -1324,6 +1324,12 @@
     document.getElementById('ac-x').onclick = function () { ov.style.display = 'none'; };
   }
   var placing = false;
+  function say(msg) {
+    var hint = document.getElementById('hint');
+    if (hint) hint.textContent = msg;
+    var lab = document.getElementById('my-front-label');
+    if (lab) lab.textContent = msg;
+  }
   function placeFromHand(uid, slot, viewer, facedown) {
     if (placing) return;
     placing = true;
@@ -1332,13 +1338,13 @@
     var card = me.hand.find(function (c) { return c.uid === uid; });
     var hint = document.getElementById('hint');
     if (!card || !slot) {
-      if (hint && !slot) hint.textContent = 'Nicht auf einem Feld losgelassen.';
+      if (!slot) say('Nicht auf einem Feld losgelassen.');
       return;
     }
     var def = engine.defOf(card);
     var cost = engine.costOf(def, me, null, card);
     if (me.ap < cost) {
-      if (hint) hint.textContent = 'Nicht genug AP (' + me.ap + '/' + cost + ').';
+      say('Nicht genug AP (' + me.ap + '/' + cost + '). ' + def.name + ' bleibt auf der Hand.');
       return;
     }
     var active = engine.state.active === viewer && engine.state.phase === 'main';
@@ -1382,6 +1388,7 @@
         });
       }
       if (hint) hint.textContent = laid ? (def.name + ' liegt auf ' + section + (row + 1) + '.') : 'Nicht gelegt. Es wurden keine Punkte abgezogen.';
+      say(laid ? (def.name + ' liegt auf ' + section + (row + 1) + '.') : 'Nicht gelegt. Es wurden keine Punkte abgezogen.');
       return;
     }
     if (def.typ === 'Unterstützung' && support && open) {
@@ -1446,6 +1453,16 @@
     if (def.typ === 'Unterstützung') return 'support';
     if (def.typ === 'Ausrüstung') return 'equip';
     return '';
+  };
+  window.dcDragNote = function (uid) {
+    if (!engine || window.dcViewer == null || !uid) return '';
+    var me = engine.player(window.dcViewer);
+    if (!me) return '';
+    var card = me.hand.find(function (c) { return c.uid === uid; });
+    if (!card) return '';
+    var def = engine.defOf(card);
+    var cost = engine.costOf(def, me, null, card);
+    return def.name + ' kostet ' + cost + ' AP, vorhanden ' + me.ap + (me.ap < cost ? ' — nicht genug' : '');
   };
   function legalSelector(def) {
     if (!def) return '';

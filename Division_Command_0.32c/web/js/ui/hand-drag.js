@@ -106,6 +106,10 @@
       drag.moved = true;
       document.body.classList.add('dc-dragging');
       ghost(true, ev.clientX, ev.clientY, drag.src);
+      if (window.dcDragNote) {
+        var lab = document.getElementById('my-front-label');
+        if (lab) lab.textContent = window.dcDragNote(drag.uid);
+      }
     }
     if (ev.cancelable) ev.preventDefault();
     ghost(true, ev.clientX, ev.clientY);
