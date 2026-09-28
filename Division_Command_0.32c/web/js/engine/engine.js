@@ -354,7 +354,7 @@
       let cost = Number(def.ap || 0);
       if (def.typ === 'Ausrüstung') cost = Number(def.ap || 0) + Number(this.rules.equip_ap_test || 0);
       if (player) this._auras(player).forEach((a) => { // jedes Element
-        if (a.code === 'AURA_COST_MOD') { // Zweig nur bei zutreffender Bedingung
+        if (a.code === 'AURA_COST_MOD' && a.param) { // Zweig nur bei zutreffender Bedingung
           const filter = String(a.param.filter || '').toLowerCase(); // unveränderliche Bindung in diesem Block
           const ok = // unveränderliche Bindung in diesem Block
             !filter || // nächster Schritt im Ablauf
@@ -385,6 +385,7 @@
       const add = (inst) => { // unveränderliche Bindung in diesem Block
         if (!inst) return; // Zweig nur bei zutreffender Bedingung
         const def = this.defOf(inst); // unveränderliche Bindung in diesem Block
+        if (!def) return;
         (def.effects || []).forEach((e) => { // jedes Element
           if (e.code === 'AURA_STAT' || e.code === 'AURA_COST_MOD') list.push({ code: e.code, param: e.param, source: inst });
           // Zweig nur bei zutreffender Bedingung
@@ -400,19 +401,20 @@
     _hasDoctrine(p, code) {
       return (p.doctrines || []).some((d) => {
         const def = this.defOf(d);
+        if (!def) return false;
         return (def.effects || []).some((x) => x.code === code);
       });
     }
 
     currentAtkDef(inst) { // nächster Schritt im Ablauf
-      const def = this.defOf(inst); // unveränderliche Bindung in diesem Block
+      const def = this.defOf(inst) || { atk: 0, def: 0, effects: [], tags: [], klasse: '' };
       let atk = inst.atk == null ? (Number(def.atk) || 0) : inst.atk;
       let dv = inst.def == null ? (Number(def.def) || 0) : inst.def;
       if (inst.flags && inst.flags.buffAtk) atk += inst.flags.buffAtk;
       const locOwn = this.findInst(inst.uid);
       const owner = (locOwn && locOwn.player) || (inst.owner != null ? this.player(inst.owner) : null);
       if (owner) this._auras(owner).forEach((a) => {
-        if (a.code !== 'AURA_STAT') return; // Zweig nur bei zutreffender Bedingung
+        if (a.code !== 'AURA_STAT' || !a.param) return; // Zweig nur bei zutreffender Bedingung
         const f = String(a.param.filter || ''); // unveränderliche Bindung in diesem Block
         const okFront = f.includes('front') || f.includes('all') || f === '';
         const needInf = f.includes('infanterie');

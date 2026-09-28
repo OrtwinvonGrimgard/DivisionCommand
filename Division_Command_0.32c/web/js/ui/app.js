@@ -410,7 +410,11 @@
       if (bad) bad.textContent = res.error || 'Ungültig';
       return res;
     }
-    render();
+    try { render(); }
+    catch (err) {
+      var hint = document.getElementById('hint');
+      if (hint) hint.textContent = 'Anzeige: ' + (err && err.message ? err.message : err);
+    }
     if (!engine.state.pending) closePendingUi();
     if (res.coinWinner || res.code === 'COIN_WINNER') {
       var ovw = document.getElementById('overlay');
@@ -953,9 +957,19 @@
     }); // nächster Schritt im Ablauf
   }
 
-  /* Eine Front- oder Support-Kachel als HTML. */
-    function unitHtml(inst, mine, section, row) { // Funktion
-    if (!inst) return '<div class="slot empty" data-drop="front" data-section="' + (section||'') + '" data-row="' + (row||0) + '"></div>'; // Wert zurückgeben
+  function unitHtml(inst, mine, section, row) {
+    if (!inst) return '<div class="slot empty" data-drop="front" data-section="' + (section || '') + '" data-row="' + (row || 0) + '"></div>';
+    try {
+      return unitHtmlBody(inst, mine, section, row);
+    } catch (err) {
+      var d = {};
+      try { d = engine.defOf(inst) || {}; } catch (e2) {}
+      return '<div class="slot filled ' + (mine ? 'mine' : 'enemy') + '" data-uid="' + inst.uid + '" data-drop="front" data-section="' + (section || '') + '" data-row="' + (row || 0) + '">' +
+        artTag(d, !!(inst.facedown && !mine)) +
+        '<div class="unit-stats">' + escapeHtml(d.name || 'Einheit') + '</div></div>';
+    }
+  }
+  function unitHtmlBody(inst, mine, section, row) {
     var d = engine.defOf(inst); // lokale Variable
     var st = engine.currentAtkDef(inst); // lokale Variable
     var hide = !!(inst.facedown && !mine);
@@ -1356,6 +1370,7 @@
         facedown: !!facedown,
         slot: { section: section, row: row }
       });
+      stickPlayedUnit(viewer, uid);
       var laid = engine.player(viewer).front[section] && engine.player(viewer).front[section][row] && engine.player(viewer).front[section][row].uid === uid;
       if (!laid) {
         ['L', 'C', 'R'].forEach(function (sec) {
@@ -1394,6 +1409,27 @@
       return;
     }
     if (hint) hint.textContent = def.typ === 'Einheit' ? 'Einheiten auf ein freies Feld der eigenen Front.' : 'Dieses Feld nimmt die Karte nicht.';
+  }
+  function stickPlayedUnit(viewer, uid) {
+    var pl = engine.player(viewer);
+    if (!pl) return;
+    var where = null;
+    ['L', 'C', 'R'].forEach(function (sec) {
+      (pl.front[sec] || []).forEach(function (cell, n) {
+        if (cell && cell.uid === uid) where = { section: sec, row: n, card: cell };
+      });
+    });
+    if (!pl.hand.some(function (c) { return c.uid === uid; })) {
+      document.querySelectorAll('#hand .card').forEach(function (el) {
+        if (el.getAttribute('data-uid') === uid) el.remove();
+      });
+    }
+    if (!where) return;
+    var nodes = document.querySelectorAll('#my-front .front-line .slot');
+    var ix = ['L', 'C', 'R'].indexOf(where.section) * 3 + where.row;
+    if (nodes[ix]) nodes[ix].outerHTML = unitHtml(where.card, true, where.section, where.row);
+    var host = document.getElementById('my-front');
+    if (host) host._dcHtml = '';
   }
   window.dcAcceptDrop = function (slot, uid) {
     placeFromHand(uid, slot, window.dcViewer, false);
@@ -1719,8 +1755,8 @@
 
   function applyHtml(el, html) {
     if (!el) return false;
-    if (el.getAttribute('data-html') === html) return false;
-    el.setAttribute('data-html', html);
+    if (el._dcHtml === html) return false;
+    el._dcHtml = html;
     el.innerHTML = html;
     return true;
   }
