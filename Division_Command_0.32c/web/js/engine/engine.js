@@ -766,7 +766,7 @@
       if (def.typ === 'Einheit') {
         const slots = this.emptySlots(p);
         if (!slots.length) throw new Error('Keine freie Stellung');
-        const chosen = a.slot && a.slot.section != null && String(a.slot.section) !== ''
+        const picked = a.slot && a.slot.section != null && String(a.slot.section) !== ''
           ? { section: a.slot.section, row: Number(a.slot.row) }
           : null;
         if (p.ap < cost) throw new Error('Nicht genug AP (' + p.ap + '/' + cost + ')');
@@ -780,7 +780,14 @@
           cost: cost,
           choices: slots.map((s) => ({ slot: s, label: s.section + (s.row + 1) })),
         });
-        if (!chosen) return { ok: true, need: 'slot' };
+        if (!picked) return { ok: true, need: 'slot' };
+        let chosen = picked;
+        const exact = p.front[chosen.section] && chosen.row >= 0 && chosen.row <= 2 && !p.front[chosen.section][chosen.row];
+        if (!exact) {
+          const free = this.emptySlots(p)[0];
+          if (!free) throw new Error('Keine freie Stellung');
+          chosen = free;
+        }
         try {
           const placed = this._actSlot(pid, { slot: chosen });
           const there = p.front[chosen.section] && p.front[chosen.section][chosen.row] && p.front[chosen.section][chosen.row].uid === found.uid;
