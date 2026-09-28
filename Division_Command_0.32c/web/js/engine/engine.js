@@ -304,6 +304,7 @@
     _canAct(inst, pid) {
       if (!inst) return false;
       const def = this.defOf(inst);
+      if (!def) return false;
       if (def.typ === 'Doktrin') return true;
       if (inst.flags && inst.flags.exhausted) return false;
       if (inst.flags && inst.flags.paused) return false;
@@ -591,9 +592,11 @@
         });
       }
       const filtered = tight.filter((t) => {
-        if (t.inst.flags && t.inst.flags.noCombatUntil === this.state.turn) return false;
-        if (t.inst.facedown && (this.defOf(t.inst).effects || []).some((x) => x.code === 'GUERRILLA_HIDE')) return false;
+        if (!t.inst) return false;
         const td = this.defOf(t.inst);
+        if (!td) return false;
+        if (t.inst.flags && t.inst.flags.noCombatUntil === this.state.turn) return false;
+        if (t.inst.facedown && (td.effects || []).some((x) => x.code === 'GUERRILLA_HIDE')) return false;
         if ((td.name || '').includes('Himmelhund')) { // Zweig nur bei zutreffender Bedingung
           // needs two shouldered attackers — v1: only legal if attacker has a neighbor
           const neighbors = this._neighbors(this.player(att.owner), attackerLoc.section, attackerLoc.row);
@@ -634,39 +637,48 @@
       const canReact = st.active !== playerId && p.ap > 0 && st.phase !== 'gameover'; // unveränderliche Bindung in diesem Block
 
       if (st.pending && st.pending.player === playerId) { // offene Wahl des Spielers
-        return st.pending.choices.map((c) => Object.assign({ type: 'RESOLVE_PENDING' }, c)); // offene Wahl des Spielers
+        const choices = st.pending.choices || [];
+        if (!choices.length) return [{ type: 'RESOLVE_PENDING', confirm: true, kind: st.pending.kind }];
+        return choices.map((c) => Object.assign({ type: 'RESOLVE_PENDING' }, c)); // offene Wahl des Spielers
       }
 
       if (isActive || canReact) { // Zweig nur bei zutreffender Bedingung
         p.hand.forEach((c) => { // Handkarten
-          const d = this.defOf(c); // unveränderliche Bindung in diesem Block
-          const cost = this.costOf(d, p); // unveränderliche Bindung in diesem Block
-          if (d.typ === 'Soforteinsatz' && p.ap >= cost) { // Zweig nur bei zutreffender Bedingung
-            acts.push({ type: 'PLAY', uid: c.uid, cardId: d.id, name: d.name, typ: d.typ, cost }); // nächster Schritt im Ablauf
-          } else if (isActive && p.ap >= cost) { // Zweig nur bei zutreffender Bedingung
-            acts.push({ type: 'PLAY', uid: c.uid, cardId: d.id, name: d.name, typ: d.typ, cost }); // nächster Schritt im Ablauf
-          }
+          try {
+            const d = this.defOf(c); // unveränderliche Bindung in diesem Block
+            if (!d) return;
+            const cost = this.costOf(d, p); // unveränderliche Bindung in diesem Block
+            if (d.typ === 'Soforteinsatz' && p.ap >= cost) { // Zweig nur bei zutreffender Bedingung
+              acts.push({ type: 'PLAY', uid: c.uid, cardId: d.id, name: d.name, typ: d.typ, cost }); // nächster Schritt im Ablauf
+            } else if (isActive && p.ap >= cost) { // Zweig nur bei zutreffender Bedingung
+              acts.push({ type: 'PLAY', uid: c.uid, cardId: d.id, name: d.name, typ: d.typ, cost }); // nächster Schritt im Ablauf
+            }
+          } catch (err) { /* eine kaputte Karte darf die Zugliste nicht leeren */ }
         }); // nächster Schritt im Ablauf
       }
 
       if (isActive) { // Zweig nur bei zutreffender Bedingung
         this.frontList(p).forEach((loc) => { // jedes Element
-          if (loc.inst.facedown) { // verdeckte Lage
-            acts.push({ type: 'REVEAL_UNIT', uid: loc.inst.uid, name: this.defOf(loc.inst).name }); // Feld der Engine-Instanz
-          }
-          if (!loc.inst.facedown && this._canAct(loc.inst, playerId) && !loc.inst.flags.noAttack) {
-            const targets = this.legalAttackTargets(loc); // unveränderliche Bindung in diesem Block
-            if (targets.length && p.ap >= this.rules.attack_ap) { // Zweig nur bei zutreffender Bedingung
-              acts.push({ // nächster Schritt im Ablauf
-                type: 'ATTACK', // nächster Schritt im Ablauf
-                uid: loc.inst.uid, // nächster Schritt im Ablauf
-                name: this.defOf(loc.inst).name, // Feld der Engine-Instanz
-                cost: this.rules.attack_ap, // Feld der Engine-Instanz
-                targets: targets.map((t) => ({ uid: t.inst.uid, name: t.inst.facedown ? 'Verdeckte Einheit' : this.defOf(t.inst).name })),
-                // verdeckte Lage
-              }); // nächster Schritt im Ablauf
+          try {
+            if (!loc.inst) return;
+            if (loc.inst.facedown) { // verdeckte Lage
+              const rd = this.defOf(loc.inst);
+              acts.push({ type: 'REVEAL_UNIT', uid: loc.inst.uid, name: rd ? rd.name : 'Verdeckt' });
             }
-          }
+            if (!loc.inst.facedown && this._canAct(loc.inst, playerId) && !(loc.inst.flags && loc.inst.flags.noAttack)) {
+              const targets = this.legalAttackTargets(loc);
+              if (targets.length && p.ap >= this.rules.attack_ap) {
+                const ad = this.defOf(loc.inst);
+                acts.push({
+                  type: 'ATTACK',
+                  uid: loc.inst.uid,
+                  name: ad ? ad.name : 'Einheit',
+                  cost: this.rules.attack_ap,
+                  targets: targets.map((t) => ({ uid: t.inst.uid, name: t.inst.facedown ? 'Verdeckte Einheit' : ((this.defOf(t.inst) || {}).name || 'Ziel') })),
+                });
+              }
+            }
+          } catch (err) { /* ein Angriff darf die restliche Zugliste nicht streichen */ }
         }); // nächster Schritt im Ablauf
         acts.push({ type: 'END_TURN' }); // nächster Schritt im Ablauf
         acts.push({ type: 'PROPOSE_PEACE' }); // nächster Schritt im Ablauf

@@ -482,6 +482,38 @@
   }
 
   /* Einen Bot-Zug ausführen und bei Bedarf den nächsten. */
+    var botFail = {};
+    var botMark = '';
+    var botSteps = 0;
+    function botActKey(act) {
+      if (window.DCBot && DCBot.actKey) return DCBot.actKey(act);
+      return (act && act.type) + '|' + (act && (act.uid || act.target || ''));
+    }
+    function botSay(msg) {
+      var hint = document.getElementById('hint');
+      if (hint) hint.textContent = msg;
+    }
+    function botFollow(pend) {
+      if (!pend) return null;
+      if (pend.kind === 'coin' || pend.kind === 'angel-coin' || pend.kind === 'resist-coin') return { type: 'COIN_FLIP', player: 1 };
+      if (pend.kind === 'sam') return { type: 'SAM_PASS', player: 1 };
+      if (pend.kind === 'geist-window') return { type: 'GEIST_PASS', player: 1 };
+      if (pend.kind === 'react-window') return { type: 'REACT_PASS', player: 1 };
+      if (pend.kind === 'hand-show' || pend.kind === 'peek') return { type: 'PEEK_DONE', player: 1 };
+      var ch = (pend.choices || [])[0];
+      if (ch && ch.slot) return { type: 'CHOOSE_SLOT', player: 1, slot: ch.slot };
+      if (ch && ch.target) return { type: 'CHOOSE_TARGET', player: 1, target: ch.target };
+      return { type: 'CANCEL_PENDING', player: 1 };
+    }
+    function botForceEnd() {
+      try { engine.dispatch({ type: 'CANCEL_PENDING', player: 1 }); } catch (e) {}
+      if (engine.state.pending && engine.state.pending.player === 1) engine.state.pending = null;
+      var res = null;
+      try { res = engine.dispatch({ type: 'END_TURN', player: 1 }); } catch (e2) { res = { ok: false }; }
+      render();
+      if (!res || res.ok !== false) botSay('Gegner beendet den Zug.');
+      return res;
+    }
     function botTick() {
     if (!engine || engine.state.winner != null) return;
     if (mode !== 'bot') return;
@@ -489,30 +521,62 @@
       window.setTimeout(botTick, 400);
       return;
     }
-    var pid = engine.state.pending ? engine.state.pending.player : engine.state.active;
+    var pend0 = engine.state.pending;
+    if (pend0 && pend0.player !== 1) {
+      render();
+      try { if (!eventPlaying) showPending(); } catch (e) {}
+      return;
+    }
+    var mark = engine.state.turn + ':' + engine.state.active;
+    if (botMark !== mark) { botMark = mark; botFail = {}; botSteps = 0; }
+    botSteps += 1;
+    if (botSteps > 18) { botForceEnd(); return; }
+    var pid = pend0 ? pend0.player : engine.state.active;
     if (pid !== 1) return;
+    var act = { type: 'END_TURN', player: 1 };
+    try { act = (DCBot.step(engine, 1, botFail) || act); } catch (err) { act = { type: 'END_TURN', player: 1 }; }
+    act.player = 1;
+    if (botFail[botActKey(act)]) act = { type: 'END_TURN', player: 1 };
+    var res = null;
     try {
-      var act = DCBot.step(engine, 1) || { type: 'END_TURN', player: 1 };
-      act.player = 1;
+      if (act.type === 'RESOLVE_PENDING' && act.confirm) act = botFollow(engine.state.pending) || { type: 'CANCEL_PENDING', player: 1 };
       if (act.type === 'RESOLVE_PENDING') {
-        if (act.slot) engine.dispatch({ type: 'CHOOSE_SLOT', player: 1, slot: act.slot });
-        else if (act.target) engine.dispatch({ type: 'CHOOSE_TARGET', player: 1, target: act.target });
-        else engine.dispatch({ type: 'CANCEL_PENDING', player: 1 });
+        if (act.slot) res = engine.dispatch({ type: 'CHOOSE_SLOT', player: 1, slot: act.slot });
+        else if (act.target) res = engine.dispatch({ type: 'CHOOSE_TARGET', player: 1, target: act.target });
+        else res = engine.dispatch(botFollow(engine.state.pending) || { type: 'CANCEL_PENDING', player: 1 });
       } else {
-        engine.dispatch(act);
-        var pend = engine.state.pending;
-        if (pend && pend.player === 1 && pend.choices && pend.choices[0]) {
-          var ch = pend.choices[0];
-          if (ch.slot) engine.dispatch({ type: 'CHOOSE_SLOT', player: 1, slot: ch.slot });
-          else if (ch.target) engine.dispatch({ type: 'CHOOSE_TARGET', player: 1, target: ch.target });
-        }
+        res = engine.dispatch(act);
       }
     } catch (err) {
-      if (window.console) console.warn('Bot', err);
-      try { engine.dispatch({ type: 'END_TURN', player: 1 }); } catch (e2) {}
+      res = { ok: false, error: String(err && err.message || err) };
+    }
+    if (res && res.ok === false) {
+      botFail[botActKey(act)] = 1;
+      botSay(res.error || 'Gegner setzt aus.');
+    }
+    var pend = engine.state.pending;
+    if (pend && pend.player === 1 && res && res.ok !== false) {
+      var follow = botFollow(pend);
+      if (follow) {
+        var res2 = null;
+        try { res2 = engine.dispatch(follow); } catch (e) { res2 = { ok: false }; }
+        if (res2 && res2.ok === false) {
+          try { engine.dispatch({ type: 'CANCEL_PENDING', player: 1 }); } catch (e2) {}
+          if (engine.state.pending && engine.state.pending.player === 1) engine.state.pending = null;
+        }
+      }
+    }
+    pend = engine.state.pending;
+    if (pend && pend.player !== 1) {
+      render();
+      try { if (!eventPlaying) showPending(); } catch (e) {}
+      return;
     }
     render();
     presentNewEvents();
+    if (act.type === 'END_TURN' && engine.state.active !== 1 && !(engine.state.pending && engine.state.pending.player === 1)) {
+      botSay('Gegner beendet den Zug.');
+    }
     if (engine.state.active === 1 || (engine.state.pending && engine.state.pending.player === 1)) {
       window.setTimeout(botTick, (window.DCBot && DCBot.cfg && DCBot.cfg.delayMs) || 350);
     }

@@ -186,11 +186,19 @@
     return Object.assign({ player: pid }, row.act);
   }
 
-  function stepTest(engine, pid) {
+  function actKey(a) {
+    if (!a) return '';
+    var slot = a.slot ? (a.slot.section + ':' + a.slot.row) : '';
+    return [a.type || '', a.uid || '', a.cardId || '', a.target || '', slot].join('|');
+  }
+
+  function stepTest(engine, pid, skip) {
     var acts = engine.listActions(pid);
     if (!acts.length) return { type: 'END_TURN', player: pid };
 
-    var pending = acts.filter(function (a) { return a.type === 'RESOLVE_PENDING'; });
+    var pending = acts.filter(function (a) {
+      return a.type === 'RESOLVE_PENDING' && !(skip && skip[actKey(a)]);
+    });
     if (pending.length) {
       var bestP = pending[0];
       var bestPs = -1e9;
@@ -203,6 +211,7 @@
 
     var scored = [];
     acts.forEach(function (a) {
+      if (skip && skip[actKey(a)]) return;
       if (a.type === 'CONCEDE' || a.type === 'PROPOSE_PEACE' || a.type === 'ACCEPT_PEACE') return;
       if (a.type === 'END_TURN') return;
       if (a.type === 'PLAY') {
@@ -229,13 +238,15 @@
     return emit(pid, rest[0]);
   }
 
-  function stepSchloter(engine, pid) {
+  function stepSchloter(engine, pid, skip) {
     var acts = engine.listActions(pid);
     if (!acts.length) return { type: 'END_TURN', player: pid };
-    var pendingChoices = acts.filter(function (a) { return a.type === 'RESOLVE_PENDING'; });
+    var pendingChoices = acts.filter(function (a) {
+      return a.type === 'RESOLVE_PENDING' && !(skip && skip[actKey(a)]);
+    });
     if (pendingChoices.length) return Object.assign({ player: pid }, pick(pendingChoices));
-    var plays = acts.filter(playable);
-    var attacks = acts.filter(function (a) { return a.type === 'ATTACK' && Number(cfg.allowAttack); });
+    var plays = acts.filter(function (a) { return playable(a) && !(skip && skip[actKey(a)]); });
+    var attacks = acts.filter(function (a) { return a.type === 'ATTACK' && Number(cfg.allowAttack) && !(skip && skip[actKey(a)]); });
     if (plays.length) return Object.assign({ player: pid }, pick(plays));
     if (attacks.length) {
       var at = pick(attacks);
@@ -248,9 +259,9 @@
     return end ? { type: 'END_TURN', player: pid } : Object.assign({ player: pid }, pick(acts));
   }
 
-  function step(engine, pid) {
-    if ((cfg.model || 'test') === 'schloter') return stepSchloter(engine, pid);
-    return stepTest(engine, pid);
+  function step(engine, pid, skip) {
+    if ((cfg.model || 'test') === 'schloter') return stepSchloter(engine, pid, skip);
+    return stepTest(engine, pid, skip);
   }
 
   function applyCfg(next) {
@@ -272,6 +283,7 @@
     defaults: DEFAULTS,
     cfg: cfg,
     step: step,
+    actKey: actKey,
     applyCfg: applyCfg,
     useDefaults: useDefaults
   };
