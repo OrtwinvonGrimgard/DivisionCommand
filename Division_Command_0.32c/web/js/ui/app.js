@@ -1504,6 +1504,88 @@
     });
   }
   var armedPlay = null;
+  var suppressHandClick = false;
+  function showDragGhost(el, x, y) {
+    var ghost = document.getElementById('dc-ghost');
+    if (!ghost) {
+      ghost = document.createElement('div');
+      ghost.id = 'dc-ghost';
+      document.body.appendChild(ghost);
+    }
+    var img = el.querySelector('img');
+    ghost.innerHTML = img ? '<img alt="" src="' + img.src + '">' : '';
+    ghost.style.display = 'block';
+    ghost.style.left = (x + 12) + 'px';
+    ghost.style.top = (y + 12) + 'px';
+  }
+  function moveDragGhost(x, y) {
+    var ghost = document.getElementById('dc-ghost');
+    if (!ghost) return;
+    ghost.style.left = (x + 12) + 'px';
+    ghost.style.top = (y + 12) + 'px';
+  }
+  function hideDragGhost() {
+    var ghost = document.getElementById('dc-ghost');
+    if (ghost) ghost.style.display = 'none';
+  }
+  function slotFromPoint(x, y) {
+    var stack = document.elementsFromPoint ? document.elementsFromPoint(x, y) : [];
+    var i, n, s;
+    for (i = 0; i < stack.length; i++) {
+      n = stack[i];
+      if (!n || !n.closest) continue;
+      if (n.id === 'dc-ghost' || n.closest('#dc-ghost') || n.closest('#hand') || n.closest('.hand-dock')) continue;
+      s = n.closest('.slot');
+      if (s && s.classList.contains('legal')) return s;
+    }
+    var slots = document.querySelectorAll('.slot.legal');
+    for (i = 0; i < slots.length; i++) {
+      var r = slots[i].getBoundingClientRect();
+      if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) return slots[i];
+    }
+    return null;
+  }
+  function startHandDrag(ev, el, card, who) {
+    if (ev.button != null && ev.button !== 0) return;
+    var startX = ev.clientX;
+    var startY = ev.clientY;
+    var moved = false;
+    function move(e) {
+      if (!moved && Math.abs(e.clientX - startX) + Math.abs(e.clientY - startY) < 8) return;
+      if (!moved) {
+        moved = true;
+        armedPlay = null;
+        document.body.classList.add('dc-dragging');
+        clearDropMarks();
+        markLegalSlots(engine.defOf(card));
+        showDragGhost(el, e.clientX, e.clientY);
+      }
+      moveDragGhost(e.clientX, e.clientY);
+    }
+    function up(e) {
+      window.removeEventListener('pointermove', move, true);
+      window.removeEventListener('pointerup', up, true);
+      window.removeEventListener('pointercancel', up, true);
+      hideDragGhost();
+      if (!moved) {
+        document.body.classList.remove('dc-dragging');
+        return;
+      }
+      suppressHandClick = true;
+      window.setTimeout(function () { suppressHandClick = false; }, 0);
+      var slot = slotFromPoint(e.clientX, e.clientY);
+      document.body.classList.remove('dc-dragging');
+      clearDropMarks();
+      if (slot) placeFromHand(card.uid, slot, who, false);
+      else {
+        var hint = document.getElementById('hint');
+        if (hint) hint.textContent = 'Nicht auf einem leuchtenden Feld losgelassen.';
+      }
+    }
+    window.addEventListener('pointermove', move, true);
+    window.addEventListener('pointerup', up, true);
+    window.addEventListener('pointercancel', up, true);
+  }
   function armHandCard(uid, who, facedown) {
     var mep = engine.player(who);
     var card = mep.hand.find(function (c) { return c.uid === uid; });
@@ -1669,6 +1751,11 @@
         return card ? { def: engine.defOf(card), facedown: false, inst: null } : null; // verdeckte Lage
       }); // nächster Schritt im Ablauf
       el.onclick = function (ev) {
+        if (suppressHandClick) {
+          ev.preventDefault();
+          ev.stopPropagation();
+          return;
+        }
         ev.stopPropagation();
         var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; });
         if (!card) return;
@@ -1697,6 +1784,11 @@
       el.draggable = false;
       el.querySelectorAll('img').forEach(function (img) { img.draggable = false; });
       el.ondragstart = function (ev) { ev.preventDefault(); };
+      el.onpointerdown = function (ev) {
+        var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; });
+        if (!card) return;
+        startHandDrag(ev, el, card, viewer);
+      };
     });
     bindBoardDrops(viewer);
     function tryPickPending(uid) { // Funktion
