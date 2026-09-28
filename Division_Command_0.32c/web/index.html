@@ -132,8 +132,8 @@
       <label><input type="checkbox" id="ig-bot-inst" checked> Soforteinsätze</label>
       <label><input type="checkbox" id="ig-bot-atk" checked> Angreifen</label>
       <label><input type="checkbox" id="ig-bot-hold" checked> AP zurückhalten</label>
-      <button type="button" class="primary" id="ig-bot-apply">Bot übernehmen</button>
-      <button type="button" id="opt-ingame-close">Schließen</button>
+      <button type="button" class="primary" id="ig-bot-apply">Übernehmen</button>
+      <button type="button" id="opt-ingame-close">Zurück</button>
     </div>
   </div>
   </template>
@@ -545,6 +545,7 @@
         if (host.childNodes.length) return true;
         host.appendChild(tpl.content.cloneNode(true));
         window.dcMatchAlive = true;
+        if (window.dcBindIngameOpts) window.dcBindIngameOpts();
         return true;
       };
       window.dcUnmountMatch = function () {
@@ -982,22 +983,72 @@
           saveSettings();
           applyBotRuntime();
         };
-        ['ig-bot-play','ig-bot-instant','ig-bot-delay','ig-bot-agg'].forEach(function (id) {
+      function closeIngameOpts() {
+        var box = document.getElementById('ingame-opts');
+        if (box) box.style.display = 'none';
+      }
+      window.dcBindIngameOpts = function () {
+        var box = document.getElementById('ingame-opts');
+        if (!box || box.getAttribute('data-bound') === '1') return;
+        box.setAttribute('data-bound', '1');
+        box.addEventListener('click', function (ev) {
+          if (ev.target === box) closeIngameOpts();
+        });
+        ['ig-bot-play', 'ig-bot-instant', 'ig-bot-delay', 'ig-bot-agg'].forEach(function (id) {
           var el = document.getElementById(id);
           if (!el) return;
           el.oninput = function () {
-            if (document.getElementById('ig-v-play')) document.getElementById('ig-v-play').textContent = document.getElementById('ig-bot-play').value;
-            if (document.getElementById('ig-v-instant')) document.getElementById('ig-v-instant').textContent = document.getElementById('ig-bot-instant').value;
-            if (document.getElementById('ig-v-delay')) document.getElementById('ig-v-delay').textContent = document.getElementById('ig-bot-delay').value;
-            if (document.getElementById('ig-v-agg')) document.getElementById('ig-v-agg').textContent = document.getElementById('ig-bot-agg').value;
+            var play = document.getElementById('ig-bot-play');
+            var inst = document.getElementById('ig-bot-instant');
+            var delay = document.getElementById('ig-bot-delay');
+            var agg = document.getElementById('ig-bot-agg');
+            if (document.getElementById('ig-v-play') && play) document.getElementById('ig-v-play').textContent = play.value;
+            if (document.getElementById('ig-v-instant') && inst) document.getElementById('ig-v-instant').textContent = inst.value;
+            if (document.getElementById('ig-v-delay') && delay) document.getElementById('ig-v-delay').textContent = delay.value;
+            if (document.getElementById('ig-v-agg') && agg) document.getElementById('ig-v-agg').textContent = agg.value;
           };
         });
         var igApply = document.getElementById('ig-bot-apply');
-        if (igApply) igApply.onclick = function () {
+        if (igApply) igApply.addEventListener('click', function (ev) {
+          ev.preventDefault();
+          ev.stopPropagation();
           applyBotRuntime(true);
           paintBotSliders(collectBotCfg('ig-'), '');
           saveSettings();
-        };
+          closeIngameOpts();
+        });
+        var igm = document.getElementById('opt-music-ingame');
+        var igv = document.getElementById('opt-vol-ingame');
+        var music = document.getElementById('opt-music');
+        var vol = document.getElementById('opt-vol');
+        if (igm && music) {
+          igm.checked = music.checked;
+          igm.onchange = function () {
+            music.checked = igm.checked;
+            applyAudio();
+            saveSettings();
+          };
+        }
+        if (igv && vol) {
+          igv.value = vol.value;
+          igv.oninput = function () {
+            vol.value = igv.value;
+            applyAudio();
+            saveSettings();
+          };
+        }
+        var igc = document.getElementById('opt-ingame-close');
+        if (igc) igc.addEventListener('click', function (ev) {
+          ev.preventDefault();
+          ev.stopPropagation();
+          closeIngameOpts();
+        });
+      };
+      document.addEventListener('keydown', function (ev) {
+        if (ev.key !== 'Escape') return;
+        var box = document.getElementById('ingame-opts');
+        if (box && box.style.display === 'flex') closeIngameOpts();
+      });
         document.querySelectorAll('.help').forEach(function (b) {
           b.onclick = function () {
             var k = b.getAttribute('data-help');
@@ -1032,25 +1083,6 @@
         var box = document.getElementById('bot-box');
         if (box) box.style.display = modeEl.value === 'bot' ? 'block' : 'none';
       };
-
-      var igm = document.getElementById('opt-music-ingame');
-      var igv = document.getElementById('opt-vol-ingame');
-      if (igm) {
-        igm.checked = document.getElementById('opt-music').checked;
-        igm.onchange = function () {
-          document.getElementById('opt-music').checked = igm.checked;
-          applyAudio();
-        };
-      }
-      if (igv) {
-        igv.value = document.getElementById('opt-vol').value;
-        igv.oninput = function () {
-          document.getElementById('opt-vol').value = igv.value;
-          applyAudio();
-        };
-      }
-      var igc = document.getElementById('opt-ingame-close');
-      if (igc) igc.onclick = function () { document.getElementById('ingame-opts').style.display = 'none'; };
 
       document.getElementById('btn-start').onclick = function () {
         document.getElementById('boot-error').textContent = '';
