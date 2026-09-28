@@ -67,6 +67,15 @@
   function isArtillery(card) { // Funktion
     return hasTag(card, 'artillerie') || (card.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT'); // Wert zurückgeben
   }
+  function isAir(card) {
+    if (!card) return false;
+    const bag = []
+      .concat(card.klasse_tags || [])
+      .concat(card.tags || [])
+      .concat((card.klasse || '').split(','))
+      .map((x) => String(x).trim().toLowerCase());
+    return bag.some((x) => x === 'luft' || x === 'luftschlag' || x === 'flugzeug');
+  }
 
   function emptyFront() { // Funktion
     const f = {}; // unveränderliche Bindung in diesem Block

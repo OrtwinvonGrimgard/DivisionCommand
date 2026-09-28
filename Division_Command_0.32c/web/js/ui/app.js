@@ -391,7 +391,9 @@
       return res;
     }
     if (!res.ok) {
+      var explained = false;
       if (res.code === 'SCHUTZWALL_EMPTY' || res.code === 'SCHUTZWALL_WAIT' || res.code === 'HEAL_USED' || res.code === 'HEAL_NONE' || res.code === 'UEBER_USED' || res.code === 'UEBER_NONE' || res.code === 'SUMMON_SICK' || res.code === 'EXHAUSTED') {
+        explained = true;
         var ov2 = document.getElementById('overlay');
         ov2.innerHTML = '<div class="modal"><h2>Schutzwall</h2><p>' + escapeHtml(res.error) +
           '</p><button type="button" id="blk-ok">Verstanden</button></div>';
@@ -399,11 +401,16 @@
         document.getElementById('blk-ok').onclick = function () { ov2.style.display = 'none'; };
       }
       if (res.code === 'BLITZ_LOCK') {
+        explained = true;
         var ov = document.getElementById('overlay');
         ov.innerHTML = '<div class="modal"><h2>Blitzkrieg</h2><p>' + escapeHtml(res.error) +
           '</p><button type="button" id="blk-ok">Verstanden</button></div>';
         ov.style.display = 'flex';
         document.getElementById('blk-ok').onclick = function () { ov.style.display = 'none'; };
+      }
+      if (!explained && !engine.state.pending) {
+        var stuck = document.getElementById('overlay');
+        if (stuck) stuck.style.display = 'none';
       }
       render();
       var bad = $('#hint');
