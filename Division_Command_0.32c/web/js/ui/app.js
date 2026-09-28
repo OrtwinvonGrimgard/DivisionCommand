@@ -1558,28 +1558,38 @@
   function zoneSlotAt(rootSel, x, y) {
     var host = document.querySelector(rootSel);
     if (!host) return null;
-    var box = host.getBoundingClientRect();
-    if (x < box.left - 12 || x > box.right + 12 || y < box.top - 48 || y > box.bottom + 36) return null;
-    var slots = host.querySelectorAll('.slot.empty');
+    var slots = host.querySelectorAll('.slot');
     var best = null;
     var bestD = 1e9;
     var i;
     for (i = 0; i < slots.length; i++) {
+      if (slots[i].getAttribute('data-uid')) continue;
       var r = slots[i].getBoundingClientRect();
       if (r.width < 2 || r.height < 2) continue;
-      if (x >= r.left && x <= r.right && y >= r.top - 40 && y <= r.bottom + 28) return slots[i];
-      var d = Math.abs(x - (r.left + r.right) / 2) + Math.abs(y - (r.top + r.bottom) / 2) * 0.45;
+      var cx = (r.left + r.right) / 2;
+      var cy = (r.top + r.bottom) / 2;
+      if (x >= r.left - 16 && x <= r.right + 16 && y >= r.top - 36 && y <= r.bottom + 36) return slots[i];
+      var d = Math.abs(x - cx) + Math.abs(y - cy);
       if (d < bestD) { bestD = d; best = slots[i]; }
     }
-    return best;
+    var line = host.querySelector('.front-line') || host;
+    var box = line.getBoundingClientRect();
+    if (best && x >= box.left - 8 && x <= box.right + 8 && y >= box.top - 28 && y <= box.bottom + 28 && bestD < 160) return best;
+    return null;
   }
   function startHandDrag(ev, el, card, who) {
     if (ev.button != null && ev.button !== 0) return;
     var startX = ev.clientX;
     var startY = ev.clientY;
     var moved = false;
+    var hover = null;
+    var lastX = startX;
+    var lastY = startY;
+    try { el.setPointerCapture(ev.pointerId); } catch (err) {}
     function move(e) {
-      if (!moved && Math.abs(e.clientX - startX) + Math.abs(e.clientY - startY) < 8) return;
+      lastX = e.clientX;
+      lastY = e.clientY;
+      if (!moved && Math.abs(e.clientX - startX) + Math.abs(e.clientY - startY) < 6) return;
       if (!moved) {
         moved = true;
         armedPlay = null;
@@ -1588,11 +1598,13 @@
         markLegalSlots(engine.defOf(card));
         showDragGhost(el, e.clientX, e.clientY);
       }
+      if (e.cancelable) e.preventDefault();
       moveDragGhost(e.clientX, e.clientY);
       var over = slotFromPoint(e.clientX, e.clientY);
       var defNow = engine.defOf(card);
-      if (!over && defNow && defNow.typ === 'Einheit') over = zoneSlotAt('#my-front', e.clientX, e.clientY);
+      if ((!over || !(over.closest && over.closest('#my-front'))) && defNow && defNow.typ === 'Einheit') over = zoneSlotAt('#my-front', e.clientX, e.clientY);
       if (!over && defNow && defNow.typ === 'Unterstützung') over = zoneSlotAt('#my-support', e.clientX, e.clientY);
+      hover = over || hover;
       document.querySelectorAll('.slot.drop-ok').forEach(function (s) { s.classList.remove('drop-ok'); });
       if (over) over.classList.add('drop-ok');
     }
@@ -1600,23 +1612,29 @@
       window.removeEventListener('pointermove', move, true);
       window.removeEventListener('pointerup', up, true);
       window.removeEventListener('pointercancel', up, true);
+      try { el.releasePointerCapture(e.pointerId); } catch (err2) {}
       hideDragGhost();
       if (!moved) {
         document.body.classList.remove('dc-dragging');
         return;
       }
       suppressHandClick = true;
-      window.setTimeout(function () { suppressHandClick = false; }, 0);
-      var slot = slotFromPoint(e.clientX, e.clientY);
+      window.setTimeout(function () { suppressHandClick = false; }, 400);
+      var x = e.clientX || lastX;
+      var y = e.clientY || lastY;
       var def = engine.defOf(card);
-      if (!slot && def && def.typ === 'Einheit') slot = zoneSlotAt('#my-front', e.clientX, e.clientY);
-      if (!slot && def && def.typ === 'Unterstützung') slot = zoneSlotAt('#my-support', e.clientX, e.clientY);
+      var slot = null;
+      if (def && def.typ === 'Einheit') slot = zoneSlotAt('#my-front', x, y);
+      if (!slot) slot = slotFromPoint(x, y);
+      if (!slot && def && def.typ === 'Unterstützung') slot = zoneSlotAt('#my-support', x, y);
+      if (!slot && hover && def && def.typ === 'Einheit' && hover.closest && hover.closest('#my-front')) slot = hover;
+      if (!slot && hover && def && def.typ === 'Unterstützung' && hover.closest && hover.closest('#my-support')) slot = hover;
       document.body.classList.remove('dc-dragging');
       clearDropMarks();
       if (slot) placeFromHand(card.uid, slot, who, false);
       else {
         var hint = document.getElementById('hint');
-        if (hint) hint.textContent = 'Nicht auf einem leuchtenden Feld losgelassen.';
+        if (hint) hint.textContent = 'Nicht auf der eigenen Front oder im Support losgelassen.';
       }
     }
     window.addEventListener('pointermove', move, true);

@@ -3327,6 +3327,7 @@ body.dc-armed .hand .card.picked {
 }
 .hand .card img { -webkit-user-drag: none; user-select: none; }
 body.dc-dragging { cursor: grabbing; }
+body.dc-dragging .bottom-bar,
 body.dc-dragging .hand-dock,
 body.dc-dragging .hand,
 body.dc-dragging .hand .card {
@@ -3334,14 +3335,22 @@ body.dc-dragging .hand .card {
 }
 body.dc-dragging .hand .card {
   opacity: 0.35;
+  transform: translateY(55%) !important;
   pointer-events: none !important;
 }
-body.dc-dragging #my-front,
+body.dc-dragging #my-front {
+  position: relative;
+  z-index: 30;
+  outline: 2px solid #e2c36a;
+}
 body.dc-dragging #my-support,
 body.dc-dragging #enemy-front,
 body.dc-dragging #enemy-support {
   position: relative;
   z-index: 8;
+}
+body.dc-dragging #my-front {
+  z-index: 30;
 }
 body.dc-dragging .hand-dock { z-index: 1; }
 #dc-ghost {
