@@ -1,4 +1,4 @@
-/* Karte aus der Hand auf einen Slot ziehen. Getrennt vom Klick-Menü. */
+/* Karte aus der Hand auf einen Slot ziehen. Nur dieses Modul. */
 (function () {
   var drag = null;
 
@@ -19,36 +19,41 @@
     el.style.top = (y + 14) + 'px';
   }
 
-  function slotsOf(sel) {
-    return Array.prototype.slice.call(document.querySelectorAll(sel));
-  }
-
-  function hit(list, x, y) {
-    var i, r, best = null, bestD = 1e9;
-    for (i = 0; i < list.length; i++) {
-      r = list[i].getBoundingClientRect();
-      if (r.width < 4 || r.height < 4) continue;
-      if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) return list[i];
-      var d = Math.abs(x - (r.left + r.right) / 2) + Math.abs(y - (r.top + r.bottom) / 2);
-      if (d < bestD) { bestD = d; best = list[i]; }
+  function columnSlot(rootSel, x, y) {
+    var root = document.querySelector(rootSel);
+    if (!root) return null;
+    var box = root.getBoundingClientRect();
+    if (box.width < 20 || box.height < 8) return null;
+    if (x < box.left - 12 || x > box.right + 12 || y < box.top - 70 || y > box.bottom + 50) return null;
+    var slots = root.querySelectorAll('.slot');
+    if (!slots.length) return null;
+    var i = Math.floor(((x - box.left) / box.width) * slots.length);
+    if (i < 0) i = 0;
+    if (i >= slots.length) i = slots.length - 1;
+    if (!slots[i].getAttribute('data-uid')) return slots[i];
+    var k;
+    for (k = 1; k < slots.length; k++) {
+      if (i - k >= 0 && !slots[i - k].getAttribute('data-uid')) return slots[i - k];
+      if (i + k < slots.length && !slots[i + k].getAttribute('data-uid')) return slots[i + k];
     }
-    if (!best) return null;
-    r = best.getBoundingClientRect();
-    if (Math.abs(x - (r.left + r.right) / 2) <= r.width * 0.65 && Math.abs(y - (r.top + r.bottom) / 2) <= r.height * 0.85) return best;
     return null;
   }
 
-  function under(x, y) {
-    var front = hit(slotsOf('#my-front .front-line .slot'), x, y);
-    var support = hit(slotsOf('#my-support .slot'), x, y);
-    if (front && support) {
-      var a = front.getBoundingClientRect();
-      var b = support.getBoundingClientRect();
-      var da = Math.abs(y - (a.top + a.bottom) / 2);
-      var db = Math.abs(y - (b.top + b.bottom) / 2);
-      return da <= db ? front : support;
+  function aim(x, y, uid) {
+    var zone = window.dcCardZone ? window.dcCardZone(uid) : '';
+    if (zone === 'front') return columnSlot('#my-front .front-line', x, y);
+    if (zone === 'support') return columnSlot('#my-support', x, y);
+    if (zone === 'equip') {
+      var filled = document.querySelectorAll('#my-front .front-line .slot[data-uid]');
+      var i, r, best = null, bestD = 1e9;
+      for (i = 0; i < filled.length; i++) {
+        r = filled[i].getBoundingClientRect();
+        var d = Math.abs(x - (r.left + r.right) / 2) + Math.abs(y - (r.top + r.bottom) / 2);
+        if (d < bestD) { bestD = d; best = filled[i]; }
+      }
+      return best;
     }
-    return front || support;
+    return columnSlot('#my-front .front-line', x, y) || columnSlot('#my-support', x, y);
   }
 
   function mark(slot) {
@@ -56,8 +61,26 @@
     if (slot) slot.classList.add('drop-ok');
   }
 
+  function end(x, y) {
+    if (!drag) return;
+    var d = drag;
+    drag = null;
+    ghost(false);
+    mark(null);
+    document.body.classList.remove('dc-dragging');
+    if (!d.moved) return;
+    window.dcSuppressClick = true;
+    window.setTimeout(function () { window.dcSuppressClick = false; }, 500);
+    var slot = aim(x, y, d.uid);
+    if (slot && window.dcAcceptDrop) window.dcAcceptDrop(slot, d.uid);
+    else {
+      var hint = document.getElementById('hint');
+      if (hint) hint.textContent = 'Nicht auf der eigenen Front losgelassen.';
+    }
+  }
+
   document.addEventListener('pointerdown', function (ev) {
-    if (ev.button != null && ev.button !== 0) return;
+    if (drag || (ev.button != null && ev.button !== 0)) return;
     var card = ev.target && ev.target.closest ? ev.target.closest('#hand .card') : null;
     if (!card || !card.getAttribute('data-uid')) return;
     ev.preventDefault();
@@ -67,13 +90,17 @@
       pointerId: ev.pointerId,
       x: ev.clientX,
       y: ev.clientY,
+      lx: ev.clientX,
+      ly: ev.clientY,
       moved: false,
       src: img ? img.src : ''
     };
   }, true);
 
   document.addEventListener('pointermove', function (ev) {
-    if (!drag || ev.pointerId !== drag.pointerId) return;
+    if (!drag || (ev.pointerId != null && drag.pointerId != null && ev.pointerId !== drag.pointerId)) return;
+    drag.lx = ev.clientX;
+    drag.ly = ev.clientY;
     if (!drag.moved && Math.abs(ev.clientX - drag.x) + Math.abs(ev.clientY - drag.y) < 6) return;
     if (!drag.moved) {
       drag.moved = true;
@@ -82,26 +109,21 @@
     }
     if (ev.cancelable) ev.preventDefault();
     ghost(true, ev.clientX, ev.clientY);
-    mark(under(ev.clientX, ev.clientY));
+    mark(aim(ev.clientX, ev.clientY, drag.uid));
   }, true);
 
   document.addEventListener('pointerup', function (ev) {
-    if (!drag || ev.pointerId !== drag.pointerId) return;
-    var d = drag;
-    drag = null;
-    ghost(false);
-    mark(null);
-    document.body.classList.remove('dc-dragging');
-    if (!d.moved) return;
+    if (!drag) return;
+    if (ev.pointerId != null && drag.pointerId != null && ev.pointerId !== drag.pointerId) return;
     ev.preventDefault();
     ev.stopPropagation();
-    window.dcSuppressClick = true;
-    window.setTimeout(function () { window.dcSuppressClick = false; }, 400);
-    var slot = under(ev.clientX, ev.clientY);
-    if (slot && window.dcAcceptDrop) window.dcAcceptDrop(slot, d.uid);
-    else {
-      var hint = document.getElementById('hint');
-      if (hint) hint.textContent = 'Nicht auf einem Slot losgelassen.';
-    }
+    var x = ev.clientX || drag.lx;
+    var y = ev.clientY || drag.ly;
+    end(x, y);
+  }, true);
+
+  document.addEventListener('mouseup', function (ev) {
+    if (!drag || !drag.moved) return;
+    end(ev.clientX || drag.lx, ev.clientY || drag.ly);
   }, true);
 })();

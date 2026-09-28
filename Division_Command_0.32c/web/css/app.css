@@ -190,6 +190,9 @@ button:disabled { opacity: .4; cursor: not-allowed; }
   display: grid;
   grid-template-columns: repeat(9, minmax(0, 1fr));
   gap: 4px;
+  min-height: 96px;
+  position: relative;
+  z-index: 4;
 }
 .front-line .slot {
   min-height: 88px;

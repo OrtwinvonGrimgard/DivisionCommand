@@ -1394,6 +1394,19 @@
   window.dcAcceptDrop = function (slot, uid) {
     placeFromHand(uid, slot, window.dcViewer, false);
   };
+  window.dcCardZone = function (uid) {
+    if (!engine || window.dcViewer == null || !uid) return '';
+    var me = engine.player(window.dcViewer);
+    if (!me) return '';
+    var card = me.hand.find(function (c) { return c.uid === uid; });
+    if (!card) return '';
+    var def = engine.defOf(card);
+    if (!def) return '';
+    if (def.typ === 'Einheit') return 'front';
+    if (def.typ === 'Unterstützung') return 'support';
+    if (def.typ === 'Ausrüstung') return 'equip';
+    return '';
+  };
   function legalSelector(def) {
     if (!def) return '';
     if (def.typ === 'Einheit') return '#my-front .slot.empty';
