@@ -40,12 +40,12 @@
       if (window.DC_IMAGES[stem + '.png']) list.push(window.DC_IMAGES[stem + '.png']); // Zweig nur bei zutreffender Bedingung
     }
     function enc(p) { return p.split('/').map(function (x, i, a) { return i === a.length - 1 ? encodeURIComponent(x) : x; }).join('/'); }
+    list.push(enc('assets/cards/thumbs/' + stem + '.jpg'));
+    list.push(enc('assets/cards/thumbs/' + key));
     list.push(enc('assets/cards/' + stem + '.png'));
     list.push(enc('assets/cards/' + stem + '.jpg'));
     list.push(enc('assets/cards/' + key));
     list.push(enc('assets/cards/thumbs/' + stem + '.png'));
-    list.push(enc('assets/cards/thumbs/' + stem + '.jpg'));
-    list.push(enc('assets/cards/thumbs/' + key));
     list.push(enc('./assets/cards/' + stem + '.png'));
     list.push(enc('./assets/cards/' + stem + '.jpg'));
     return list;
@@ -998,6 +998,7 @@
       tokHtml +
       artTag(d, hide) +
       (inst.facedown && mine ? '<div class="unit-hint">verdeckt</div>' : '') +
+      '<div class="unit-name">' + escapeHtml((d && d.name) || 'Einheit') + '</div>' +
       '<div class="unit-stats">' + stats + '</div></div>'; // HTML-Sonderzeichen escapen
   }
 
