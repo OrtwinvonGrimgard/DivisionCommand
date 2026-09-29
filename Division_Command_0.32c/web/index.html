@@ -9,7 +9,7 @@
   <title>Division Command 0.32d Alpha</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#12140f">
-  <link rel="stylesheet" href="css/app.css?v=hilfe3">
+  <link rel="stylesheet" href="css/app.css?v=char1">
   <link rel="stylesheet" href="css/align.css?v=piles4" id="dc-align-css">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
@@ -164,10 +164,25 @@
       </div>
 
       <div id="scr-setup" class="screen splash">
-        <p class="tiny">Spielername</p>
-        <input id="setup-name" maxlength="24" placeholder="" autocomplete="nickname">
+        <p class="tiny">Offiziersakte</p>
+        <div class="char-editor">
+          <div class="char-preview">
+            <img id="setup-preview" alt="Ausgewähltes Porträt" src="assets/portraits/lt-01.jpg">
+            <p class="char-rank">Leutnant · Absolvent</p>
+          </div>
+          <div class="char-fields">
+            <label>Name
+              <input id="setup-name" maxlength="24" placeholder="Nachname, Vorname" autocomplete="nickname">
+            </label>
+            <label>Rufname <span class="opt">(optional)</span>
+              <input id="setup-callsign" maxlength="16" placeholder="z. B. Falke">
+            </label>
+          </div>
+        </div>
+        <p class="tiny char-pick-lbl">Jahrgangsfoto wählen</p>
+        <div id="setup-portraits" class="portrait-grid" role="listbox" aria-label="Porträts"></div>
         <div class="menu">
-          <button type="button" class="primary" id="setup-ok">Weiter</button>
+          <button type="button" class="primary" id="setup-ok">Akte anlegen</button>
         </div>
       </div>
 
@@ -191,9 +206,20 @@
         <label>Aktiver Benutzer
           <select id="user-active"></select>
         </label>
-        <label>Name ändern <input id="user-rename" maxlength="24"></label>
+        <div class="char-editor user-char">
+          <div class="char-preview">
+            <img id="user-preview" alt="Porträt" src="assets/portraits/lt-01.jpg">
+            <p class="char-rank">Leutnant · Absolvent</p>
+          </div>
+          <div class="char-fields">
+            <label>Name ändern <input id="user-rename" maxlength="24"></label>
+            <label>Rufname <input id="user-callsign" maxlength="16"></label>
+          </div>
+        </div>
+        <p class="tiny char-pick-lbl">Jahrgangsfoto</p>
+        <div id="user-portraits" class="portrait-grid" role="listbox" aria-label="Porträts"></div>
         <div class="menu">
-          <button type="button" class="primary" id="user-save">Namen speichern</button>
+          <button type="button" class="primary" id="user-save">Akte speichern</button>
         </div>
         <label>Neuen Benutzer anlegen <input id="user-new" maxlength="24" placeholder="Zweiter Spieler"></label>
         <div class="menu">
@@ -571,7 +597,7 @@
   <script src="js/ai/bot.js?v=032d5"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/library.js?v=030n"></script>
-  <script src="js/ui/app.js?v=piles1"></script>
+  <script src="js/ui/app.js?v=char1"></script>
   <script src="js/ui/hand-drag.js?v=032d2"></script>
   <script src="js/net.js?v=030c"></script>
   <script>
@@ -900,6 +926,33 @@
         if (id === 'scr-library') paintLibrary();
         if (id === 'scr-single') { paintUsers(); if (window.DCLib) DCLib.fillSelects(); }
       }
+      var DC_PORTRAITS = [];
+      for (var pi = 1; pi <= 24; pi++) DC_PORTRAITS.push('lt-' + (pi<10?'0':'')+pi);
+      function portraitSrc(id) {
+        var key = DC_PORTRAITS.indexOf(id) >= 0 ? id : 'lt-01';
+        return 'assets/portraits/' + key + '.jpg';
+      }
+      function selectedPortrait(gridId) {
+        var on = document.querySelector('#' + gridId + ' button.on');
+        return (on && on.getAttribute('data-id')) || 'lt-01';
+      }
+      function paintPortraitGrid(gridId, previewId, selected) {
+        var grid = document.getElementById(gridId);
+        if (!grid) return;
+        var cur = DC_PORTRAITS.indexOf(selected) >= 0 ? selected : 'lt-01';
+        grid.innerHTML = DC_PORTRAITS.map(function (id) {
+          return '<button type="button" class="portrait-pick' + (id === cur ? ' on' : '') + '" data-id="' + id + '" aria-label="Porträt ' + id + '">' +
+            '<img src="' + portraitSrc(id) + '" alt=""></button>';
+        }).join('');
+        var prev = document.getElementById(previewId);
+        if (prev) prev.src = portraitSrc(cur);
+        grid.onclick = function (ev) {
+          var btn = ev.target.closest('button.portrait-pick');
+          if (!btn) return;
+          grid.querySelectorAll('button').forEach(function (b) { b.classList.toggle('on', b === btn); });
+          if (prev) prev.src = portraitSrc(btn.getAttribute('data-id'));
+        };
+      }
       function loadUsers() {
         try { return JSON.parse(localStorage.getItem('dc_users') || '[]'); } catch (e) { return []; }
       }
@@ -916,7 +969,9 @@
         var u = activeUser();
         var el = document.getElementById('who-line');
         if (el) el.innerHTML = u
-          ? ('<span class="who-lbl">Angemeldet</span><span class="who-name">' + u.name + '</span>')
+          ? ('<img class="who-face" src="' + portraitSrc(u.portrait) + '" alt="">' +
+             '<span class="who-lbl">Leutnant</span><span class="who-name">' + u.name + '</span>' +
+             (u.callsign ? '<span class="who-call">»' + u.callsign + '«</span>' : ''))
           : '';
         var n = u ? u.name : 'Spieler';
         var a = document.getElementById('player-name');
@@ -946,6 +1001,9 @@
         var u = activeUser();
         var rn = document.getElementById('user-rename');
         if (rn && u) rn.value = u.name;
+        var cs = document.getElementById('user-callsign');
+        if (cs) cs.value = (u && u.callsign) || '';
+        paintPortraitGrid('user-portraits', 'user-preview', u && u.portrait);
         paintWho();
       }
       function paintLibrary() {
@@ -974,8 +1032,10 @@
       document.getElementById('go-start').onclick = function () {
         var tr = document.getElementById('title-root');
         if (tr) tr.classList.remove('boot-intro', 'logo-in', 'btn-in');
-        if (!loadUsers().length) show('scr-setup');
-        else show('scr-title');
+        if (!loadUsers().length) {
+          paintPortraitGrid('setup-portraits', 'setup-preview', 'lt-01');
+          show('scr-setup');
+        } else show('scr-title');
       };
       (function bootIntro() {
         var tr = document.getElementById('title-root');
@@ -987,8 +1047,9 @@
       document.getElementById('setup-ok').onclick = function () {
         var name = (document.getElementById('setup-name').value || '').trim().slice(0, 24);
         if (!name) { document.getElementById('setup-name').focus(); return; }
+        var callsign = (document.getElementById('setup-callsign').value || '').trim().slice(0, 16);
         var id = 'u' + Date.now();
-        saveUsers([{ id: id, name: name }], id);
+        saveUsers([{ id: id, name: name, portrait: selectedPortrait('setup-portraits'), callsign: callsign }], id);
         paintWho();
         show('scr-title');
       };
@@ -1040,7 +1101,11 @@
         var id = document.getElementById('user-active').value;
         var name = (document.getElementById('user-rename').value || '').trim().slice(0, 24);
         if (!name) return;
-        list.forEach(function (u) { if (u.id === id) u.name = name; });
+        var callsign = (document.getElementById('user-callsign').value || '').trim().slice(0, 16);
+        var portrait = selectedPortrait('user-portraits');
+        list.forEach(function (u) {
+          if (u.id === id) { u.name = name; u.callsign = callsign; u.portrait = portrait; }
+        });
         saveUsers(list, id);
         paintUsers();
       };
@@ -1049,7 +1114,7 @@
         if (!name) return;
         var list = loadUsers();
         var id = 'u' + Date.now();
-        list.push({ id: id, name: name });
+        list.push({ id: id, name: name, portrait: 'lt-01', callsign: '' });
         saveUsers(list, localStorage.getItem('dc_user_active') || id);
         document.getElementById('user-new').value = '';
         paintUsers();

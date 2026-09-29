@@ -128,6 +128,18 @@
   }
 
   var CATALOG = window.DC_CATALOG; // lokale Variable
+  function dcPortraitSrc(id) {
+    var n = parseInt(String(id || '').replace(/^lt-/, ''), 10);
+    if (!(n >= 1 && n <= 24)) n = 1;
+    return 'assets/portraits/lt-' + (n<10?'0':'')+n + '.jpg';
+  }
+  function dcActiveUser() {
+    try {
+      var list = JSON.parse(localStorage.getItem('dc_users') || '[]');
+      var id = localStorage.getItem('dc_user_active');
+      return list.filter(function (u) { return u.id === id; })[0] || list[0] || null;
+    } catch (e) { return null; }
+  }
   var engine = null; // lokale Variable
   var you = 0; // lokale Variable
   var mode = 'hotseat'; // lokale Variable
@@ -331,7 +343,18 @@
         deck1: deck1,
         doctrine0: doctrine0,
         doctrine1: doctrine1
-      }); // nächster Schritt im Ablauf
+      });
+      var au = dcActiveUser();
+      if (engine.state && engine.state.players && engine.state.players[0]) {
+        engine.state.players[0].portrait = (au && au.portrait) || 'lt-01';
+        engine.state.players[0].callsign = (au && au.callsign) || '';
+      }
+      if (engine.state && engine.state.players && engine.state.players[1]) {
+        var foeFace = 1 + Math.floor((seed % 23) + 1);
+        if (foeFace === 1) foeFace = 12;
+        engine.state.players[1].portrait = 'lt-' + (foeFace<10?'0':'')+foeFace;
+      }
+ // nächster Schritt im Ablauf
       you = 0;
       seenEvents = 0;
       eventQueue = [];
@@ -1949,8 +1972,13 @@
     if (md) md.innerHTML = doctrineRow(me.doctrines);
     var pe = document.getElementById('plate-enemy');
     var pm = document.getElementById('plate-me');
-    if (pe) pe.textContent = foe.name;
-    if (pm) pm.textContent = me.name;
+    function plateHtml(p) {
+      var face = p && p.portrait ? '<img class="plate-face" src="' + dcPortraitSrc(p.portrait) + '" alt="">' : '';
+      var call = p && p.callsign ? '<span class="plate-call">»' + escapeHtml(p.callsign) + '«</span>' : '';
+      return face + '<span class="plate-name">' + escapeHtml(p.name) + '</span>' + call;
+    }
+    if (pe) pe.innerHTML = plateHtml(foe);
+    if (pm) pm.innerHTML = plateHtml(me);
     dirty = applyHtml($('#hand'), me.hand.map(function (c) { // Handkarten
       var d = engine.defOf(c); // lokale Variable
       var cost = engine.costOf(d, me); // lokale Variable
