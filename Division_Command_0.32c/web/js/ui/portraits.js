@@ -1,1 +1,218 @@
-placeholder
+/**
+ * Zusammensetzbare Offiziersporträts.
+ * Gesicht (G) + Uniform-Archetyp (U) + Hut (H).
+ * Jeder Dienstgrad hat eigene Rangabzeichen, Alter und Bildausschnitt.
+ */
+(function (w) {
+  'use strict';
+
+  var FACES = [
+    { id: 'f01', label: 'G01', hint: 'dunkle Locken, Schnurrbart' },
+    { id: 'f02', label: 'G02', hint: 'schwarzes Haar, Knoten' },
+    { id: 'f03', label: 'G03', hint: 'kurz, dunkel' },
+    { id: 'f04', label: 'G04', hint: 'rotes Haar' },
+    { id: 'f05', label: 'G05', hint: 'hell, kurz' },
+    { id: 'f06', label: 'G06', hint: 'Braids' },
+    { id: 'f07', label: 'G07', hint: 'Profil, dunkles Haar' },
+    { id: 'f08', label: 'G08', hint: 'Locken, seitlich' },
+    { id: 'f09', label: 'G09', hint: 'blond, kantig' },
+    { id: 'f10', label: 'G10', hint: 'oliv, Vollbart' },
+    { id: 'f11', label: 'G11', hint: 'grau-blond, Brille' },
+    { id: 'f12', label: 'G12', hint: 'kurze Wellen, Sommersprossen' },
+    { id: 'f13', label: 'G13', hint: 'glatte Stirn, dunkle Augen' },
+    { id: 'f14', label: 'G14', hint: 'sidecut, Narbe' },
+    { id: 'f15', label: 'G15', hint: 'hellbraun, rundes Gesicht' },
+    { id: 'f16', label: 'G16', hint: 'silbernes Haaransatz, streng' }
+  ];
+
+  var UNIFORMS = [
+    { id: 'dienst', label: 'U01 Dienst', hint: 'Marineblau — Sterne auf Schulterklappe' },
+    { id: 'feld', label: 'U02 Feld', hint: 'Feldgrau, Stehkragen' },
+    { id: 'gala', label: 'U03 Gala', hint: 'Weiß-Gold, Stickerei' },
+    { id: 'historisch', label: 'U04 Historisch', hint: 'Husarenrot, Litzen' },
+    { id: 'khaki', label: 'U05 Khaki', hint: 'Khaki-Dienst, Tropenkragen' },
+    { id: 'oliv', label: 'U06 Oliv', hint: 'Olivgrün, moderne Dienstjacke' },
+    { id: 'stahl', label: 'U07 Stahl', hint: 'Stahlblau-grau' },
+    { id: 'jaeger', label: 'U08 Jäger', hint: 'Dunkelgrün, Hornknöpfe' },
+    { id: 'nacht', label: 'U09 Nacht', hint: 'Schwarz, schmale Klappe' },
+    { id: 'luft', label: 'U10 Luft', hint: 'Hellblau, silberne Tressen' },
+    { id: 'burgund', label: 'U11 Burgund', hint: 'Weinrot, Goldlitzen' },
+    { id: 'sand', label: 'U12 Sand', hint: 'Sandfarben, Kolonialschnitt' }
+  ];
+
+  var UNI_IDS = {};
+  var i;
+  for (i = 0; i < UNIFORMS.length; i++) UNI_IDS[UNIFORMS[i].id] = true;
+
+  var HATS = [
+    { id: 'none', label: 'H01 Ohne' },
+    { id: 'schirm', label: 'H02 Schirm' }
+  ];
+
+  var RANKS = [
+    { id: 'Lt', label: 'Lt', title: 'Leutnant', age: 'lt', years: '22', mark: '1 silberner Stern' },
+    { id: 'OLt', label: 'OLt', title: 'Oberleutnant', age: 'olt', years: '25', mark: '2 silberne Sterne' },
+    { id: 'Hptm', label: 'Hptm', title: 'Hauptmann', age: 'hptm', years: '32', mark: '3 silberne Sterne' },
+    { id: 'Maj', label: 'Maj', title: 'Major', age: 'maj', years: '40', mark: '1 goldener Stern + Eichenlaub' },
+    { id: 'Obstlt', label: 'Obstlt', title: 'Oberstleutnant', age: 'obstlt', years: '48', mark: '2 goldene Sterne + Eichenlaub' },
+    { id: 'Obst', label: 'Obst', title: 'Oberst', age: 'obst', years: '55', mark: '3 goldene Sterne + Eichenlaub' },
+    { id: 'Gen', label: 'Gen', title: 'General', age: 'gen', years: '63', mark: 'großer Stern + goldene Tresse' }
+  ];
+
+  var AGE_ORDER = ['gen', 'obst', 'obstlt', 'maj', 'hptm', 'olt', 'lt', 's', 'm', 'y'];
+  var AGE_LABEL = {
+    lt: 'jung',
+    olt: 'jung',
+    hptm: 'erfahren',
+    maj: 'gereift',
+    obstlt: 'altgedient',
+    obst: 'senior',
+    gen: 'general',
+    y: 'jung',
+    m: 'mittel',
+    s: 'älter'
+  };
+  var VER = '6';
+
+  function rankMeta(rank) {
+    var id = String(rank || 'Lt');
+    var j;
+    for (j = 0; j < RANKS.length; j++) if (RANKS[j].id === id) return RANKS[j];
+    var low = id.toLowerCase();
+    if (/gen|general/.test(low)) return RANKS[6];
+    if (/obst(?!lt)|oberst(?!leut)/.test(low)) return RANKS[5];
+    if (/obstlt|oberstleut/.test(low)) return RANKS[4];
+    if (/maj/.test(low)) return RANKS[3];
+    if (/hptm|haupt/.test(low)) return RANKS[2];
+    if (/olt|oberleut/.test(low)) return RANKS[1];
+    return RANKS[0];
+  }
+
+  function ageOf(rank) {
+    return rankMeta(rank).age;
+  }
+
+  function agesFrom(age) {
+    var start = AGE_ORDER.indexOf(String(age || 'lt'));
+    if (start < 0) start = AGE_ORDER.indexOf('lt');
+    return AGE_ORDER.slice(start);
+  }
+
+  function parseKit(id) {
+    var s = String(id || '');
+    var m = s.match(/^(f\d{2})(?:-([a-z]+))?(?:-([a-z]+))?/);
+    if (!m) return null;
+    var uni = m[2] || 'dienst';
+    var hat = m[3] || 'none';
+    if (uni === 'base') { uni = 'dienst'; hat = 'none'; }
+    if (hat === 'y' || hat === 'm' || hat === 's' || hat === 'lt' || hat === 'olt' ||
+        hat === 'hptm' || hat === 'maj' || hat === 'obstlt' || hat === 'obst' || hat === 'gen') {
+      hat = 'none';
+    }
+    if (!UNI_IDS[uni]) uni = 'dienst';
+    if (hat !== 'none' && hat !== 'schirm') hat = 'none';
+    return { face: m[1], uniform: uni, hat: hat };
+  }
+
+  function kitId(kit) {
+    kit = kit || {};
+    return (kit.face || 'f01') + '-' + (kit.uniform || 'dienst') + '-' + (kit.hat || 'none');
+  }
+
+  function fileUrl(name) {
+    return 'assets/portraits/kit/' + name + '.jpg?v=' + VER;
+  }
+
+  function legacyUrl(id) {
+    var n = parseInt(String(id || '').replace(/^lt-/, ''), 10);
+    if (!(n >= 1 && n <= 24)) n = 1;
+    var key = 'lt-' + (n < 10 ? '0' : '') + n;
+    return 'assets/portraits/' + key + '.jpg?v=3';
+  }
+
+  function candidates(id, rank) {
+    var kit = parseKit(id);
+    if (!kit) return [legacyUrl(id)];
+    var ages = agesFrom(ageOf(rank));
+    var face = kit.face;
+    var uni = kit.uniform;
+    var hat = kit.hat;
+    var list = [];
+    function add(name) {
+      var u = fileUrl(name);
+      if (list.indexOf(u) < 0) list.push(u);
+    }
+    var a, j;
+    for (j = 0; j < ages.length; j++) {
+      a = ages[j];
+      add(face + '-' + uni + '-' + hat + '-' + a);
+    }
+    if (hat !== 'none') {
+      for (j = 0; j < ages.length; j++) add(face + '-' + uni + '-none-' + ages[j]);
+    }
+    add(face + '-' + uni + '-y');
+    if (uni !== 'dienst') {
+      for (j = 0; j < ages.length; j++) {
+        add(face + '-dienst-' + hat + '-' + ages[j]);
+        add(face + '-dienst-none-' + ages[j]);
+      }
+      add(face + '-dienst-none-y');
+      add(face + '-dienst-y');
+    }
+    add(face + '-base');
+    list.push(legacyUrl('lt-01'));
+    return list;
+  }
+
+  function src(id, rank) {
+    return candidates(id, rank)[0];
+  }
+
+  function bindImg(img, id, rank) {
+    if (!img) return;
+    var list = candidates(id, rank);
+    img.setAttribute('data-cands', list.join('|'));
+    img.setAttribute('data-ci', '0');
+    img.onerror = function () {
+      var c = (this.getAttribute('data-cands') || '').split('|');
+      var k = Number(this.getAttribute('data-ci') || 0) + 1;
+      if (k < c.length) {
+        this.setAttribute('data-ci', String(k));
+        this.src = c[k];
+      }
+    };
+    img.src = list[0];
+  }
+
+  function faceThumb(face) {
+    return candidates(face + '-dienst-none', 'Lt')[0];
+  }
+
+  function uniformThumb(face, uniform) {
+    return candidates(face + '-' + uniform + '-none', 'Lt')[0];
+  }
+
+  function hatThumb(face, uniform, hat) {
+    return candidates(face + '-' + uniform + '-' + hat, 'Lt')[0];
+  }
+
+  w.DCPortrait = {
+    FACES: FACES,
+    UNIFORMS: UNIFORMS,
+    HATS: HATS,
+    RANKS: RANKS,
+    AGE_LABEL: AGE_LABEL,
+    VER: VER,
+    parseKit: parseKit,
+    kitId: kitId,
+    ageOf: ageOf,
+    rankMeta: rankMeta,
+    candidates: candidates,
+    src: src,
+    bindImg: bindImg,
+    faceThumb: faceThumb,
+    uniformThumb: uniformThumb,
+    hatThumb: hatThumb,
+    legacyUrl: legacyUrl
+  };
+})(window);
