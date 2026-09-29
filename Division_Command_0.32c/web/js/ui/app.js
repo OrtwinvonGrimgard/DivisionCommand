@@ -1258,7 +1258,7 @@
   }
   function pileRect(id) {
     var el = document.getElementById(id);
-    return el ? el.getBoundingClientRect() : { left: 40, top: 40, width: 52, height: 72 };
+    return el ? el.getBoundingClientRect() : { left: 40, top: 40, width: 112, height: 156 };
   }
   function flyCard(from, to, src, flip, done) {
     var layer = document.getElementById('fx-layer');
@@ -1294,11 +1294,28 @@
     set('n-my-grave', me.grave.length);
     set('n-enemy-deck', foe.deck.length);
     set('n-enemy-grave', foe.grave.length);
-    var mg = document.querySelector('#pile-my-grave img');
-    if (mg && me.grave.length) {
-      var d = engine.defOf(me.grave[me.grave.length - 1]);
-      mg.src = imgSrc(d.image || backFile(d));
+    function showTop(id, cards) {
+      var img = document.querySelector('#' + id + ' img');
+      if (!img) return;
+      var file, src;
+      if (cards && cards.length) {
+        var d = engine.defOf(cards[cards.length - 1]);
+        file = (d && d.image) || backFile(null);
+        src = imgSrcFull(file) || imgSrc(file);
+      } else {
+        file = backFile(null);
+        src = imgSrc(file);
+      }
+      if (img.getAttribute('data-file') === file && img.getAttribute('src')) return;
+      img.setAttribute('data-file', file);
+      img.setAttribute('data-i', '0');
+      img.setAttribute('data-full', cards && cards.length ? '1' : '0');
+      delete img.dataset.dead;
+      img.onerror = function () { window.dcImgErr(img); };
+      img.src = src;
     }
+    showTop('pile-my-grave', me.grave);
+    showTop('pile-enemy-grave', foe.grave);
   }
 
   function isLiveEvent(ev) {
@@ -1923,7 +1940,7 @@
     function doctrineRow(list) {
       return (list || []).map(function (d) {
         var def = engine.defOf(d);
-        return '<div class="doctrine-card" data-id="' + def.id + '">' + artTag(def, true) + '<div class="dn">' + escapeHtml(def.name) + '</div></div>';
+        return '<div class="doctrine-card" data-id="' + def.id + '">' + artTag(def, false, 'art', true) + '<div class="dn">' + escapeHtml(def.name) + '</div></div>';
       }).join('');
     }
     var ed = document.getElementById('enemy-doctrine');

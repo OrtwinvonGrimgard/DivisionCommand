@@ -813,8 +813,13 @@ button:disabled { opacity: .4; cursor: not-allowed; }
   min-height: 72px;
 }
 .doc-window.foe { justify-content: flex-end; }
-.doc-window .doctrine-card { width: 64px; }
-.doc-window .doctrine-card img.art { height: 70px; object-position: top center; }
+.doc-window .doctrine-card { width: 128px; }
+.doc-window .doctrine-card img.art {
+  height: 178px;
+  object-fit: contain;
+  object-position: center center;
+  background: #120a08;
+}
 .bottom-bar {
   display: grid;
   grid-template-columns: 150px 1fr auto;
@@ -854,9 +859,17 @@ button:disabled { opacity: .4; cursor: not-allowed; }
 }
 .hand .card .body { display: none; }
 
-.piles { display: flex; gap: 6px; }
-.pile { width: 52px; text-align: center; color: #d8cfc0; font-size: 10px; }
-.pile img { width: 52px; height: 72px; object-fit: cover; object-position: top; display: block; border: 1px solid #6a5040; }
+.piles { display: flex; gap: 8px; align-items: flex-end; }
+.pile { width: 112px; text-align: center; color: #d8cfc0; font-size: 12px; }
+.pile img {
+  width: 112px;
+  height: 156px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  border: 1px solid #6a5040;
+  background: #120a08;
+}
 .pile b { display: block; font-size: 12px; color: #e2c36a; }
 #fx-layer { position: fixed; inset: 0; pointer-events: none; z-index: 70; }
 #fx-layer .fly {
@@ -874,7 +887,7 @@ button:disabled { opacity: .4; cursor: not-allowed; }
   100% { transform: rotateY(0); }
 }
 .top-bar { grid-template-columns: 1fr auto auto; }
-.bottom-bar { grid-template-columns: 150px 1fr auto auto; }
+.bottom-bar { grid-template-columns: auto 1fr auto auto; }
 
 .opt-tabs { display: flex; gap: 6px; justify-content: center; margin: 8px 0 12px; }
 .opt-tab { padding: 6px 12px; }
@@ -3181,10 +3194,10 @@ a.media-zip {
     gap: 4px;
     min-height: 0;
   }
-  .doc-window .doctrine-card { width: 42px; }
-  .doc-window .doctrine-card img.art { height: 46px; }
-  .pile { width: 36px; font-size: 8px; }
-  .pile img { width: 36px; height: auto; }
+  .doc-window .doctrine-card { width: 78px; }
+  .doc-window .doctrine-card img.art { height: 108px; }
+  .pile { width: 70px; font-size: 10px; }
+  .pile img { width: 70px; height: 98px; }
   .table-side {
     border-left: 0;
     border-top: 1px solid var(--gold);
