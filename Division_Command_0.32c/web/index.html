@@ -6,10 +6,10 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Division Command 0.32d Alpha</title>
+  <title>Division Command 0.32f Alpha</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#12140f">
-  <link rel="stylesheet" href="css/app.css?v=char1">
+  <link rel="stylesheet" href="css/app.css?v=kit1">
   <link rel="stylesheet" href="css/align.css?v=piles4" id="dc-align-css">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
@@ -31,7 +31,7 @@
   <template id="match-tpl">
   <div id="app">
     <header class="topbar">
-      <h1>DIVISION COMMAND <span class="ver">0.32d α</span></h1>
+      <h1>DIVISION COMMAND <span class="ver">0.32f α</span></h1>
       <div class="meta" id="turnmeta">Lobby</div>
       <div class="nowplay" id="nowplay"></div>
       <div class="sp">
@@ -141,7 +141,7 @@
   <audio id="bgm" autoplay preload="auto" src="assets/audio/menue/Division%20Command%20(Remastered).wav"></audio>
   <audio id="bgm-battle" preload="auto"></audio>
   <div id="kick-veil"><p id="kick-msg">Viel Glück</p></div>
-  <div id="dc-version">Alpha 0.32d</div>
+  <div id="dc-version">Alpha 0.32f</div>
 
   <div id="title-root" class="boot-intro">
       <div class="title-world" id="title-world" aria-hidden="true">
@@ -154,7 +154,7 @@
       </div>
       <div class="title-brand">
         <img class="title-logo" src="assets/title-logo.png?v=6" alt="Division Command" width="1381" height="507">
-        <p class="sub ver-big" hidden>Alpha 0.32d</p>
+        <p class="sub ver-big" hidden>Alpha 0.32f</p>
       </div>
     <div class="title-panel" id="menu-panel">
       <div id="scr-boot" class="screen on splash">
@@ -165,10 +165,11 @@
 
       <div id="scr-setup" class="screen splash">
         <p class="tiny">Offiziersakte</p>
-        <div class="char-editor">
+        <div class="char-editor kit-editor">
           <div class="char-preview">
-            <img id="setup-preview" alt="Ausgewähltes Porträt" src="assets/portraits/lt-01.jpg?v=2">
-            <p class="char-rank">Leutnant · Absolvent</p>
+            <img id="setup-preview" alt="Porträt" src="assets/portraits/kit/f01-dienst-none-y.jpg?v=4">
+            <p class="char-rank" id="setup-rank-lbl">Leutnant · jung</p>
+            <div class="rank-preview" id="setup-ages" role="group" aria-label="Rangvorschau"></div>
           </div>
           <div class="char-fields">
             <label>Name
@@ -179,8 +180,12 @@
             </label>
           </div>
         </div>
-        <p class="tiny char-pick-lbl">Jahrgangsfoto wählen</p>
-        <div id="setup-portraits" class="portrait-grid" role="listbox" aria-label="Porträts"></div>
+        <p class="tiny char-pick-lbl">1 · Gesicht</p>
+        <div id="setup-faces" class="kit-grid faces" role="listbox" aria-label="Gesicht"></div>
+        <p class="tiny char-pick-lbl">2 · Uniform</p>
+        <div id="setup-uniforms" class="kit-grid uniforms" role="listbox" aria-label="Uniform"></div>
+        <p class="tiny char-pick-lbl">3 · Kopfbedeckung</p>
+        <div id="setup-hats" class="kit-grid hats" role="listbox" aria-label="Kopfbedeckung"></div>
         <div class="menu">
           <button type="button" class="primary" id="setup-ok">Akte anlegen</button>
         </div>
@@ -206,18 +211,23 @@
         <label>Aktiver Benutzer
           <select id="user-active"></select>
         </label>
-        <div class="char-editor user-char">
+        <div class="char-editor user-char kit-editor">
           <div class="char-preview">
-            <img id="user-preview" alt="Porträt" src="assets/portraits/lt-01.jpg?v=2">
-            <p class="char-rank">Leutnant · Absolvent</p>
+            <img id="user-preview" alt="Porträt" src="assets/portraits/kit/f01-dienst-none-y.jpg?v=4">
+            <p class="char-rank" id="user-rank-lbl">Leutnant · jung</p>
+            <div class="rank-preview" id="user-ages" role="group" aria-label="Rangvorschau"></div>
           </div>
           <div class="char-fields">
             <label>Name ändern <input id="user-rename" maxlength="24"></label>
             <label>Rufname <input id="user-callsign" maxlength="16"></label>
           </div>
         </div>
-        <p class="tiny char-pick-lbl">Jahrgangsfoto</p>
-        <div id="user-portraits" class="portrait-grid" role="listbox" aria-label="Porträts"></div>
+        <p class="tiny char-pick-lbl">1 · Gesicht</p>
+        <div id="user-faces" class="kit-grid faces" role="listbox" aria-label="Gesicht"></div>
+        <p class="tiny char-pick-lbl">2 · Uniform</p>
+        <div id="user-uniforms" class="kit-grid uniforms" role="listbox" aria-label="Uniform"></div>
+        <p class="tiny char-pick-lbl">3 · Kopfbedeckung</p>
+        <div id="user-hats" class="kit-grid hats" role="listbox" aria-label="Kopfbedeckung"></div>
         <div class="menu">
           <button type="button" class="primary" id="user-save">Akte speichern</button>
         </div>
@@ -230,7 +240,7 @@
 
       <div id="scr-library" class="screen">
         <h1 class="page-title">BIBLIOTHEK</h1>
-        <p class="tiny" id="lib-build">Stand 0.32d</p>
+        <p class="tiny" id="lib-build">Stand 0.32f</p>
         <p class="tiny">Klick = eine Kopie ins Deck. Doppelklick = große Ansicht. Im Deck: Klick legt zurück.</p>
         <div class="lib-wrap">
           <div class="lib-main">
@@ -548,7 +558,7 @@
               <p>Der Tisch zeichnet jede gültige Aktion neu. Infanterie wird auf die Stellung gesetzt, der Text nennt die Handlung, der Gegner kann einen Einsatz dagegen halten. Bilder und Musik sind vorerst das Grundmodell und werden Karte für Karte und Stück für Stück ersetzt. Die Vollversion ist dieses Arenaspiel mit Feldzug, nicht ein zweites Spiel daneben.</p>
 
               <h2 id="stand">Detaillierter aktueller Stand</h2>
-              <p>Alpha 0.32d. Spielbar ist der Tisch. Eine Karte lässt sich aus der Hand auf die eigene Front oder in den Support ziehen. AP gehen nur bei einem gültigen Zug weg. Artillerie wählt ein Ziel, der Kampf läuft weiter. Der Bot legt, wenn er kann, und gibt den Zug ab. Menü, Bibliothek, Deck, Hotseat, LAN, Optionen und die schwarze bzw. rote Kartenrückseite sind drin. Die Hilfe erklärt Regeln, Markt und diesen Plan.</p>
+              <p>Alpha 0.32f. Spielbar ist der Tisch. Eine Karte lässt sich aus der Hand auf die eigene Front oder in den Support ziehen. AP gehen nur bei einem gültigen Zug weg. Artillerie wählt ein Ziel, der Kampf läuft weiter. Der Bot legt, wenn er kann, und gibt den Zug ab. Menü, Bibliothek, Deck, Hotseat, LAN, Optionen und die schwarze bzw. rote Kartenrückseite sind drin. Die Hilfe erklärt Regeln, Markt und diesen Plan.</p>
               <p>Im Editor lassen sich Schablonen mit Bild, rundem Schatten und eigenen Tags bauen. Ein erster Versuch hat zwanzig Karten auf die neue Schablone gesetzt. Das Set im Spiel benutzt noch die bisherigen Bilder. Die Regeln in RULES v0.5 sind das Grundkonzept, noch nicht jede Zeile im Ablauf.</p>
               <ul>
                 <li>Drin: Ziehen auf die Stellung, AP-Abzug, Zielwahl der Artillerie, Bot-Zug mit Abgabe, Hotseat, LAN, Bibliothek, Deck, Optionen, zwei Rückseiten, Menümusik und Kampfmusik.</li>
@@ -584,7 +594,7 @@
 
   <script src="js/ui/title-fx.js?v=032fx"></script>
   <script>window.DC_FOLDER_PNG = true;</script>
-  <script src="js/version.js?v=032d"></script>
+  <script src="js/version.js?v=032f"></script>
   <script src="js/data/sets/alpha/doktrinen.js?v=030c"></script>
   <script src="js/data/sets/alpha/tokens.js?v=030c"></script>
   <script src="js/data/sets/alpha/einheiten.js?v=030c"></script>
@@ -597,7 +607,8 @@
   <script src="js/ai/bot.js?v=032d5"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/library.js?v=030n"></script>
-  <script src="js/ui/app.js?v=char1"></script>
+  <script src="js/ui/portraits.js?v=kit1"></script>
+  <script src="js/ui/app.js?v=kit1"></script>
   <script src="js/ui/hand-drag.js?v=032d2"></script>
   <script src="js/net.js?v=030c"></script>
   <script>
@@ -605,7 +616,7 @@
       navigator.serviceWorker.register('sw.js').catch(function () {});
     }
     (function () {
-      document.title = window.DC_BUILD_LABEL || 'Division Command 0.32d Alpha';
+      document.title = window.DC_BUILD_LABEL || 'Division Command 0.32f Alpha';
       var dcVer = document.getElementById('dc-version');
       if (dcVer) dcVer.textContent = 'Alpha ' + (window.DC_VERSION || '0.32d');
       var bgm = document.getElementById('bgm');
@@ -926,32 +937,89 @@
         if (id === 'scr-library') paintLibrary();
         if (id === 'scr-single') { paintUsers(); if (window.DCLib) DCLib.fillSelects(); }
       }
-      var DC_PORTRAITS = [];
-      for (var pi = 1; pi <= 24; pi++) DC_PORTRAITS.push('lt-' + (pi<10?'0':'')+pi);
-      function portraitSrc(id) {
-        var key = DC_PORTRAITS.indexOf(id) >= 0 ? id : 'lt-01';
-        return 'assets/portraits/' + key + '.jpg?v=2';
+      var kitDraft = {
+        setup: { face: 'f01', uniform: 'dienst', hat: 'none', rank: 'Lt' },
+        user: { face: 'f01', uniform: 'dienst', hat: 'none', rank: 'Lt' }
+      };
+      function portraitSrc(id, rank) {
+        if (window.DCPortrait) return DCPortrait.src(id, rank);
+        return 'assets/portraits/lt-01.jpg?v=3';
       }
-      function selectedPortrait(gridId) {
-        var on = document.querySelector('#' + gridId + ' button.on');
-        return (on && on.getAttribute('data-id')) || 'lt-01';
-      }
-      function paintPortraitGrid(gridId, previewId, selected) {
-        var grid = document.getElementById(gridId);
-        if (!grid) return;
-        var cur = DC_PORTRAITS.indexOf(selected) >= 0 ? selected : 'lt-01';
-        grid.innerHTML = DC_PORTRAITS.map(function (id) {
-          return '<button type="button" class="portrait-pick' + (id === cur ? ' on' : '') + '" data-id="' + id + '" aria-label="Porträt ' + id + '">' +
-            '<img src="' + portraitSrc(id) + '" alt=""></button>';
-        }).join('');
-        var prev = document.getElementById(previewId);
-        if (prev) prev.src = portraitSrc(cur);
-        grid.onclick = function (ev) {
-          var btn = ev.target.closest('button.portrait-pick');
-          if (!btn) return;
-          grid.querySelectorAll('button').forEach(function (b) { b.classList.toggle('on', b === btn); });
-          if (prev) prev.src = portraitSrc(btn.getAttribute('data-id'));
+      function kitFromUser(u) {
+        if (!u) return { face: 'f01', uniform: 'dienst', hat: 'none', rank: 'Lt' };
+        var parsed = window.DCPortrait && DCPortrait.parseKit(u.portrait);
+        return {
+          face: u.face || (parsed && parsed.face) || 'f01',
+          uniform: u.uniform || (parsed && parsed.uniform) || 'dienst',
+          hat: u.hat || (parsed && parsed.hat) || 'none',
+          rank: u.rank || 'Lt'
         };
+      }
+      function paintKit(which) {
+        var P = window.DCPortrait;
+        if (!P) return;
+        var st = kitDraft[which];
+        var id = P.kitId(st);
+        var meta = P.rankMeta(st.rank);
+        var prev = document.getElementById(which + '-preview');
+        P.bindImg(prev, id, st.rank);
+        var lbl = document.getElementById(which + '-rank-lbl');
+        if (lbl) lbl.textContent = meta.title + ' · ' + (P.AGE_LABEL[meta.age] || '');
+        function fill(gridId, items, cur, make) {
+          var grid = document.getElementById(gridId);
+          if (!grid) return;
+          grid.innerHTML = items.map(function (it) {
+            return make(it, it.id === cur);
+          }).join('');
+        }
+        fill(which + '-faces', P.FACES, st.face, function (it, on) {
+          return '<button type="button" class="portrait-pick' + (on ? ' on' : '') + '" data-face="' + it.id + '">' +
+            '<img src="' + P.faceThumb(it.id) + '" alt="' + it.label + '"></button>';
+        });
+        fill(which + '-uniforms', P.UNIFORMS, st.uniform, function (it, on) {
+          return '<button type="button" class="kit-tile' + (on ? ' on' : '') + '" data-uniform="' + it.id + '">' +
+            '<img src="' + P.uniformThumb(st.face, it.id) + '" alt="">' +
+            '<span>' + it.label + '</span></button>';
+        });
+        fill(which + '-hats', P.HATS, st.hat, function (it, on) {
+          return '<button type="button" class="kit-tile' + (on ? ' on' : '') + '" data-hat="' + it.id + '">' +
+            '<img src="' + P.hatThumb(st.face, st.uniform, it.id) + '" alt="">' +
+            '<span>' + it.label + '</span></button>';
+        });
+        var ages = document.getElementById(which + '-ages');
+        if (ages) {
+          ages.innerHTML = P.RANKS.map(function (r) {
+            return '<button type="button" class="' + (r.id === st.rank ? 'on' : '') + '" data-rank="' + r.id + '" title="' + r.title + '">' + r.label + '</button>';
+          }).join('');
+        }
+      }
+      function bindKit(which) {
+        function onGrid(id, attr, key) {
+          var grid = document.getElementById(id);
+          if (!grid) return;
+          grid.onclick = function (ev) {
+            var btn = ev.target.closest('button[' + attr + ']');
+            if (!btn) return;
+            kitDraft[which][key] = btn.getAttribute(attr);
+            paintKit(which);
+          };
+        }
+        onGrid(which + '-faces', 'data-face', 'face');
+        onGrid(which + '-uniforms', 'data-uniform', 'uniform');
+        onGrid(which + '-hats', 'data-hat', 'hat');
+        var ages = document.getElementById(which + '-ages');
+        if (ages) ages.onclick = function (ev) {
+          var btn = ev.target.closest('button[data-rank]');
+          if (!btn) return;
+          kitDraft[which].rank = btn.getAttribute('data-rank');
+          paintKit(which);
+        };
+      }
+      bindKit('setup');
+      bindKit('user');
+      function selectedPortrait(which) {
+        if (window.DCPortrait) return DCPortrait.kitId(kitDraft[which]);
+        return 'lt-01';
       }
       function loadUsers() {
         try { return JSON.parse(localStorage.getItem('dc_users') || '[]'); } catch (e) { return []; }
@@ -969,8 +1037,8 @@
         var u = activeUser();
         var el = document.getElementById('who-line');
         if (el) el.innerHTML = u
-          ? ('<img class="who-face" src="' + portraitSrc(u.portrait) + '" alt="">' +
-             '<span class="who-lbl">Leutnant</span><span class="who-name">' + u.name + '</span>' +
+          ? ('<img class="who-face" src="' + portraitSrc(u.portrait || (u.face && (u.face + '-' + (u.uniform||'dienst') + '-' + (u.hat||'none'))), u.rank) + '" alt="">' +
+             '<span class="who-lbl">' + ((window.DCPortrait && DCPortrait.rankMeta(u.rank).title) || 'Leutnant') + '</span><span class="who-name">' + u.name + '</span>' +
              (u.callsign ? '<span class="who-call">»' + u.callsign + '«</span>' : ''))
           : '';
         var n = u ? u.name : 'Spieler';
@@ -1003,7 +1071,8 @@
         if (rn && u) rn.value = u.name;
         var cs = document.getElementById('user-callsign');
         if (cs) cs.value = (u && u.callsign) || '';
-        paintPortraitGrid('user-portraits', 'user-preview', u && u.portrait);
+        kitDraft.user = kitFromUser(u);
+        paintKit('user');
         paintWho();
       }
       function paintLibrary() {
@@ -1033,7 +1102,8 @@
         var tr = document.getElementById('title-root');
         if (tr) tr.classList.remove('boot-intro', 'logo-in', 'btn-in');
         if (!loadUsers().length) {
-          paintPortraitGrid('setup-portraits', 'setup-preview', 'lt-01');
+          kitDraft.setup = { face: 'f01', uniform: 'dienst', hat: 'none', rank: 'Lt' };
+          paintKit('setup');
           show('scr-setup');
         } else show('scr-title');
       };
@@ -1049,7 +1119,8 @@
         if (!name) { document.getElementById('setup-name').focus(); return; }
         var callsign = (document.getElementById('setup-callsign').value || '').trim().slice(0, 16);
         var id = 'u' + Date.now();
-        saveUsers([{ id: id, name: name, portrait: selectedPortrait('setup-portraits'), callsign: callsign }], id);
+        saveUsers([{ id: id, name: name, portrait: selectedPortrait('setup'), callsign: callsign,
+          face: kitDraft.setup.face, uniform: kitDraft.setup.uniform, hat: kitDraft.setup.hat, rank: kitDraft.setup.rank }], id);
         paintWho();
         show('scr-title');
       };
@@ -1102,9 +1173,17 @@
         var name = (document.getElementById('user-rename').value || '').trim().slice(0, 24);
         if (!name) return;
         var callsign = (document.getElementById('user-callsign').value || '').trim().slice(0, 16);
-        var portrait = selectedPortrait('user-portraits');
+        var portrait = selectedPortrait('user');
         list.forEach(function (u) {
-          if (u.id === id) { u.name = name; u.callsign = callsign; u.portrait = portrait; }
+          if (u.id === id) {
+            u.name = name;
+            u.callsign = callsign;
+            u.portrait = portrait;
+            u.face = kitDraft.user.face;
+            u.uniform = kitDraft.user.uniform;
+            u.hat = kitDraft.user.hat;
+            u.rank = kitDraft.user.rank;
+          }
         });
         saveUsers(list, id);
         paintUsers();

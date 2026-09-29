@@ -128,7 +128,8 @@
   }
 
   var CATALOG = window.DC_CATALOG; // lokale Variable
-  function dcPortraitSrc(id) {
+  function dcPortraitSrc(id, rank) {
+    if (window.DCPortrait) return DCPortrait.src(id, rank);
     var n = parseInt(String(id || '').replace(/^lt-/, ''), 10);
     if (!(n >= 1 && n <= 24)) n = 1;
     return 'assets/portraits/lt-' + (n<10?'0':'')+n + '.jpg?v=3';
@@ -346,7 +347,8 @@
       });
       var au = dcActiveUser();
       if (engine.state && engine.state.players && engine.state.players[0]) {
-        engine.state.players[0].portrait = (au && au.portrait) || 'lt-01';
+        engine.state.players[0].portrait = (au && au.portrait) || 'f01-dienst-none';
+        engine.state.players[0].rank = (au && au.rank) || 'Lt';
         engine.state.players[0].callsign = (au && au.callsign) || '';
       }
       if (engine.state && engine.state.players && engine.state.players[1]) {
@@ -1973,7 +1975,7 @@
     var pe = document.getElementById('plate-enemy');
     var pm = document.getElementById('plate-me');
     function plateHtml(p) {
-      var face = p && p.portrait ? '<img class="plate-face" src="' + dcPortraitSrc(p.portrait) + '" alt="">' : '';
+      var face = p && p.portrait ? '<img class="plate-face" src="' + dcPortraitSrc(p.portrait, p.rank) + '" alt="">' : '';
       var call = p && p.callsign ? '<span class="plate-call">»' + escapeHtml(p.callsign) + '«</span>' : '';
       return face + '<span class="plate-name">' + escapeHtml(p.name) + '</span>' + call;
     }

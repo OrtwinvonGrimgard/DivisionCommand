@@ -3733,3 +3733,84 @@ body.dc-dragging .slot.legal {
   .char-editor { flex-direction: column; text-align: center; }
   .char-fields { width: 100%; }
 }
+
+
+/* Zusammensetzbarer Charaktereditor: Gesicht, Uniform, Kopfbedeckung */
+#scr-setup.on {
+  width: min(760px, 96vw);
+}
+.kit-editor .char-preview img {
+  width: 148px;
+  height: 198px;
+}
+.kit-grid {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 10px;
+  padding: 4px;
+  background: #0a0a08cc;
+  border: 1px solid #6a5430;
+}
+.kit-grid.faces {
+  grid-template-columns: repeat(6, 1fr);
+}
+.kit-grid.uniforms,
+.kit-grid.hats {
+  grid-template-columns: repeat(4, 1fr);
+}
+.kit-grid.hats {
+  grid-template-columns: repeat(2, 1fr);
+}
+.kit-tile {
+  padding: 0;
+  border: 2px solid transparent;
+  background: #111;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 0;
+}
+.kit-tile img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.kit-tile span {
+  display: block;
+  padding: 4px 2px;
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #d7d1b8;
+  line-height: 1.2;
+}
+.kit-tile.on,
+.kit-grid .portrait-pick.on {
+  border-color: #e2c36a;
+  box-shadow: 0 0 0 1px #e2c36a inset;
+}
+.rank-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 8px;
+}
+.rank-preview button {
+  padding: 3px 6px;
+  font-size: 10px;
+  letter-spacing: .04em;
+  min-width: 0;
+}
+.rank-preview button.on {
+  color: #e2c36a;
+  border-color: #e2c36a;
+}
+#scr-user .kit-grid { max-height: none; }
+@media (max-width: 720px) {
+  .kit-grid.faces { grid-template-columns: repeat(3, 1fr); }
+  .kit-grid.uniforms { grid-template-columns: repeat(2, 1fr); }
+  .kit-editor .char-preview img { width: 120px; height: 160px; }
+}
