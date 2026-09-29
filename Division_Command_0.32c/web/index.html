@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Division Command 0.32f Alpha</title>
+  <title>Division Command 0.32g Alpha</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#12140f">
   <link rel="stylesheet" href="css/app.css?v=kit1">
@@ -31,7 +31,7 @@
   <template id="match-tpl">
   <div id="app">
     <header class="topbar">
-      <h1>DIVISION COMMAND <span class="ver">0.32f α</span></h1>
+      <h1>DIVISION COMMAND <span class="ver">0.32g α</span></h1>
       <div class="meta" id="turnmeta">Lobby</div>
       <div class="nowplay" id="nowplay"></div>
       <div class="sp">
@@ -141,7 +141,7 @@
   <audio id="bgm" autoplay preload="auto" src="assets/audio/menue/Division%20Command%20(Remastered).wav"></audio>
   <audio id="bgm-battle" preload="auto"></audio>
   <div id="kick-veil"><p id="kick-msg">Viel Glück</p></div>
-  <div id="dc-version">Alpha 0.32f</div>
+  <div id="dc-version">Alpha 0.32g</div>
 
   <div id="title-root" class="boot-intro">
       <div class="title-world" id="title-world" aria-hidden="true">
@@ -154,7 +154,7 @@
       </div>
       <div class="title-brand">
         <img class="title-logo" src="assets/title-logo.png?v=6" alt="Division Command" width="1381" height="507">
-        <p class="sub ver-big" hidden>Alpha 0.32f</p>
+        <p class="sub ver-big" hidden>Alpha 0.32g</p>
       </div>
     <div class="title-panel" id="menu-panel">
       <div id="scr-boot" class="screen on splash">
@@ -240,7 +240,7 @@
 
       <div id="scr-library" class="screen">
         <h1 class="page-title">BIBLIOTHEK</h1>
-        <p class="tiny" id="lib-build">Stand 0.32f</p>
+        <p class="tiny" id="lib-build">Stand 0.32g</p>
         <p class="tiny">Klick = eine Kopie ins Deck. Doppelklick = große Ansicht. Im Deck: Klick legt zurück.</p>
         <div class="lib-wrap">
           <div class="lib-main">
@@ -558,7 +558,7 @@
               <p>Der Tisch zeichnet jede gültige Aktion neu. Infanterie wird auf die Stellung gesetzt, der Text nennt die Handlung, der Gegner kann einen Einsatz dagegen halten. Bilder und Musik sind vorerst das Grundmodell und werden Karte für Karte und Stück für Stück ersetzt. Die Vollversion ist dieses Arenaspiel mit Feldzug, nicht ein zweites Spiel daneben.</p>
 
               <h2 id="stand">Detaillierter aktueller Stand</h2>
-              <p>Alpha 0.32f. Spielbar ist der Tisch. Eine Karte lässt sich aus der Hand auf die eigene Front oder in den Support ziehen. AP gehen nur bei einem gültigen Zug weg. Artillerie wählt ein Ziel, der Kampf läuft weiter. Der Bot legt, wenn er kann, und gibt den Zug ab. Menü, Bibliothek, Deck, Hotseat, LAN, Optionen und die schwarze bzw. rote Kartenrückseite sind drin. Die Hilfe erklärt Regeln, Markt und diesen Plan.</p>
+              <p>Alpha 0.32g. Spielbar ist der Tisch. Eine Karte lässt sich aus der Hand auf die eigene Front oder in den Support ziehen. AP gehen nur bei einem gültigen Zug weg. Artillerie wählt ein Ziel, der Kampf läuft weiter. Der Bot legt, wenn er kann, und gibt den Zug ab. Menü, Bibliothek, Deck, Hotseat, LAN, Optionen und die schwarze bzw. rote Kartenrückseite sind drin. Die Hilfe erklärt Regeln, Markt und diesen Plan.</p>
               <p>Im Editor lassen sich Schablonen mit Bild, rundem Schatten und eigenen Tags bauen. Ein erster Versuch hat zwanzig Karten auf die neue Schablone gesetzt. Das Set im Spiel benutzt noch die bisherigen Bilder. Die Regeln in RULES v0.5 sind das Grundkonzept, noch nicht jede Zeile im Ablauf.</p>
               <ul>
                 <li>Drin: Ziehen auf die Stellung, AP-Abzug, Zielwahl der Artillerie, Bot-Zug mit Abgabe, Hotseat, LAN, Bibliothek, Deck, Optionen, zwei Rückseiten, Menümusik und Kampfmusik.</li>
@@ -607,7 +607,7 @@
   <script src="js/ai/bot.js?v=032d5"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/library.js?v=030n"></script>
-  <script src="js/ui/portraits.js?v=kit1"></script>
+  <script src="js/ui/portraits.js?v=kit2"></script>
   <script src="js/ui/app.js?v=kit1"></script>
   <script src="js/ui/hand-drag.js?v=032d2"></script>
   <script src="js/net.js?v=030c"></script>
@@ -616,7 +616,7 @@
       navigator.serviceWorker.register('sw.js').catch(function () {});
     }
     (function () {
-      document.title = window.DC_BUILD_LABEL || 'Division Command 0.32f Alpha';
+      document.title = window.DC_BUILD_LABEL || 'Division Command 0.32g Alpha';
       var dcVer = document.getElementById('dc-version');
       if (dcVer) dcVer.textContent = 'Alpha ' + (window.DC_VERSION || '0.32d');
       var bgm = document.getElementById('bgm');

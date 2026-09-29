@@ -1,6 +1,7 @@
 /**
  * Zusammensetzbare Offiziersporträts.
- * Gesicht + Uniform + Kopfbedeckung, Alter aus dem Rang.
+ * Gesicht + Uniform-Archetyp + Hut.
+ * Jeder Dienstgrad hat eigene Alters- und Prunkstufe.
  */
 (function (w) {
   'use strict';
@@ -15,10 +16,10 @@
   ];
 
   var UNIFORMS = [
-    { id: 'feld', label: 'Feld', hint: 'Feldgrau, Stehkragen' },
-    { id: 'dienst', label: 'Dienst', hint: 'Dunkle Dienstjacke' },
-    { id: 'gala', label: 'Gala', hint: 'Weiß-Gold' },
-    { id: 'historisch', label: 'Historisch', hint: 'Husarenrot' }
+    { id: 'feld', label: 'Feld', hint: 'Feldgrau, Stehkragen — wird mit dem Rang zum Mantel' },
+    { id: 'dienst', label: 'Dienst', hint: 'Dunkle Dienstjacke — Sterne, Spange, Achselschnur' },
+    { id: 'gala', label: 'Gala', hint: 'Weiß-Gold — Stickerei, Sterne, Schärpe' },
+    { id: 'historisch', label: 'Historisch', hint: 'Husarenrot — Litzen, Pelisse, Orden' }
   ];
 
   var HATS = [
@@ -27,17 +28,29 @@
   ];
 
   var RANKS = [
-    { id: 'Lt', label: 'Lt', title: 'Leutnant', age: 'y' },
-    { id: 'OLt', label: 'OLt', title: 'Oberleutnant', age: 'y' },
-    { id: 'Hptm', label: 'Hptm', title: 'Hauptmann', age: 'm' },
-    { id: 'Maj', label: 'Maj', title: 'Major', age: 'm' },
-    { id: 'Obstlt', label: 'Obstlt', title: 'Oberstleutnant', age: 'm' },
-    { id: 'Obst', label: 'Obst', title: 'Oberst', age: 's' },
-    { id: 'Gen', label: 'Gen', title: 'General', age: 's' }
+    { id: 'Lt', label: 'Lt', title: 'Leutnant', age: 'lt', years: '22' },
+    { id: 'OLt', label: 'OLt', title: 'Oberleutnant', age: 'olt', years: '25' },
+    { id: 'Hptm', label: 'Hptm', title: 'Hauptmann', age: 'hptm', years: '32' },
+    { id: 'Maj', label: 'Maj', title: 'Major', age: 'maj', years: '40' },
+    { id: 'Obstlt', label: 'Obstlt', title: 'Oberstleutnant', age: 'obstlt', years: '48' },
+    { id: 'Obst', label: 'Obst', title: 'Oberst', age: 'obst', years: '55' },
+    { id: 'Gen', label: 'Gen', title: 'General', age: 'gen', years: '63' }
   ];
 
-  var AGE_LABEL = { y: 'jung', m: 'mittel', s: 'älter' };
-  var VER = '4';
+  var AGE_ORDER = ['gen', 'obst', 'obstlt', 'maj', 'hptm', 'olt', 'lt', 's', 'm', 'y'];
+  var AGE_LABEL = {
+    lt: 'jung',
+    olt: 'jung',
+    hptm: 'erfahren',
+    maj: 'gereift',
+    obstlt: 'altgedient',
+    obst: 'senior',
+    gen: 'general',
+    y: 'jung',
+    m: 'mittel',
+    s: 'älter'
+  };
+  var VER = '5';
 
   function rankMeta(rank) {
     var id = String(rank || 'Lt');
@@ -57,6 +70,12 @@
     return rankMeta(rank).age;
   }
 
+  function agesFrom(age) {
+    var start = AGE_ORDER.indexOf(String(age || 'lt'));
+    if (start < 0) start = AGE_ORDER.indexOf('lt');
+    return AGE_ORDER.slice(start);
+  }
+
   function parseKit(id) {
     var s = String(id || '');
     var m = s.match(/^(f0[1-6])(?:-([a-z]+))?(?:-([a-z]+))?/);
@@ -64,7 +83,10 @@
     var uni = m[2] || 'dienst';
     var hat = m[3] || 'none';
     if (uni === 'base') { uni = 'dienst'; hat = 'none'; }
-    if (hat === 'y' || hat === 'm' || hat === 's') hat = 'none';
+    if (hat === 'y' || hat === 'm' || hat === 's' || hat === 'lt' || hat === 'olt' ||
+        hat === 'hptm' || hat === 'maj' || hat === 'obstlt' || hat === 'obst' || hat === 'gen') {
+      hat = 'none';
+    }
     if (uni !== 'feld' && uni !== 'dienst' && uni !== 'gala' && uni !== 'historisch') uni = 'dienst';
     if (hat !== 'none' && hat !== 'schirm') hat = 'none';
     return { face: m[1], uniform: uni, hat: hat };
@@ -89,7 +111,7 @@
   function candidates(id, rank) {
     var kit = parseKit(id);
     if (!kit) return [legacyUrl(id)];
-    var age = ageOf(rank);
+    var ages = agesFrom(ageOf(rank));
     var face = kit.face;
     var uni = kit.uniform;
     var hat = kit.hat;
@@ -98,16 +120,20 @@
       var u = fileUrl(name);
       if (list.indexOf(u) < 0) list.push(u);
     }
-    add(face + '-' + uni + '-' + hat + '-' + age);
-    if (age !== 'y') add(face + '-' + uni + '-' + hat + '-y');
+    var a, i;
+    for (i = 0; i < ages.length; i++) {
+      a = ages[i];
+      add(face + '-' + uni + '-' + hat + '-' + a);
+    }
     if (hat !== 'none') {
-      add(face + '-' + uni + '-none-' + age);
-      add(face + '-' + uni + '-none-y');
+      for (i = 0; i < ages.length; i++) add(face + '-' + uni + '-none-' + ages[i]);
     }
     add(face + '-' + uni + '-y');
     if (uni !== 'dienst') {
-      add(face + '-dienst-' + hat + '-' + age);
-      add(face + '-dienst-' + hat + '-y');
+      for (i = 0; i < ages.length; i++) {
+        add(face + '-dienst-' + hat + '-' + ages[i]);
+        add(face + '-dienst-none-' + ages[i]);
+      }
       add(face + '-dienst-none-y');
       add(face + '-dienst-y');
     }
