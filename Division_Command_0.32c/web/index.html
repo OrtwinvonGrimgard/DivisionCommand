@@ -9,7 +9,7 @@
   <title>Division Command 0.32d Alpha</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#12140f">
-  <link rel="stylesheet" href="css/app.css?v=hilfe1">
+  <link rel="stylesheet" href="css/app.css?v=hilfe3">
   <link rel="stylesheet" href="css/align.css?v=piles4" id="dc-align-css">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
@@ -378,82 +378,175 @@
 
       <div id="scr-hilfe" class="screen">
         <h1 class="page-title">HILFE</h1>
-        <div class="dossier">
-          <p class="tiny">Planungsstand 0.32d. Verkaufszahlen sind Spannweiten, keine Zusage. Eine deutsche Steam-Kopie kommt nach 30&nbsp;% Plattformanteil und 19&nbsp;% MwSt. mit etwa 58&nbsp;% des Ladenpreises an.</p>
+        <div class="hilfe-body">
+          <nav class="hilfe-nav" aria-label="Hilfe">
+            <button type="button" data-hilfe="regeln" class="on">Spielregeln</button>
+            <div class="hilfe-sub on" data-for="regeln">
+              <button type="button" data-jump="vorstellung">Vorstellung</button>
+              <button type="button" data-jump="regeln">Spielregeln</button>
+              <button type="button" data-jump="beispiel">Beispielzüge</button>
+              <button type="button" data-jump="glossar">Glossar</button>
+            </div>
+            <button type="button" data-hilfe="markt">Marktanalyse</button>
+            <div class="hilfe-sub" data-for="markt">
+              <button type="button" data-jump="markt-bild">Marktanalyse</button>
+              <button type="button" data-jump="absatz">Absatz</button>
+              <button type="button" data-jump="werbung">Werbung</button>
+              <button type="button" data-jump="preis">Preis und Spielerzahl</button>
+            </div>
+            <button type="button" data-hilfe="plan">Roadmap</button>
+            <div class="hilfe-sub" data-for="plan">
+              <button type="button" data-jump="umfang">Geplanter Umfang</button>
+              <button type="button" data-jump="stand">Aktueller Stand</button>
+              <button type="button" data-jump="fahrplan">Fahrplan</button>
+            </div>
+          </nav>
+          <div class="hilfe-pages">
+            <article class="hilfe-page dossier on" id="hilfe-regeln">
+              <h2 id="vorstellung">Grundlegende Vorstellung</h2>
+              <p>Division Command ist ein taktisches Kartenspiel um eine moderne Division. Zwei Spieler führen Einheiten, Unterstützung, Einsätze, Ausrüstung und zwei Doktrinen. Die Grundregeln bleiben kurz. Die Tiefe kommt aus den Karten, nicht aus einer langen Phasenliste.</p>
+              <p>Das Feld ist eine Front aus neun Stellungen: linke Flanke, Zentrum und rechte Flanke, jede mit drei Reihen. Dahinter liegt der Support. Dazwischen das Niemandsland für Minen, Sperren und andere Marker. Einheiten werden in eine Stellung gelegt und bleiben dort, bis eine Karte sie verlegt oder zerstört. Ein normaler Angriff trifft die Stellung gegenüber und die beiden seitlich daneben. Artillerie mit Steilfeuer reicht weiter.</p>
+              <p>Ein Zug ist frei: legen, angreifen, aufdecken, reagieren, solange die Aktionspunkte reichen, dann abgeben. Zu Beginn des eigenen Zuges kommen 5 AP dazu. Was übrig bleibt, liegt weiter. 5 ist der Startwert, kein Limit. Ein Speicherdeckel, etwa 10, ist noch nicht fest.</p>
+              <p>Das Spiel soll vom Blauhelm bis zum Abgrund der Kriegsführung reichen: Logistik, Aufklärung und Versorgung auf der einen Seite, Propaganda, Opfer und Flächenwirkung auf der anderen. Klassen sind Infanterie, Rad und Kette. Artillerie und Panzer sind Klassen, keine Tags. Tags vergibt du selbst und hängst die Effekte später daran.</p>
 
-          <h2>Stand</h2>
-          <p>Alpha 0.32d. Spielbar ist der Tisch: Karte aus der Hand auf die eigene Front oder in den Support ziehen, AP werden nur bei gültigem Zug abgezogen, Artillerie wählt ein Ziel und der Kampf läuft weiter, der Bot legt und gibt den Zug ab. Menü, Bibliothek, Deck, Hotseat, LAN, Optionen und die schwarze bzw. rote Kartenrückseite sind drin. Die Regeln in <em>RULES v0.5</em> sind das Grundkonzept, noch nicht jede Zeile im Ablauf.</p>
+              <h2 id="regeln">Spielregeln</h2>
+              <p>Eine Partie gewinnt, wer zuerst 10 Siegpunkte hat, oder durch eine Karte, die das ausdrücklich sagt. Weißer Frieden ist vorgesehen. Der Ablagestapel kann neu gemischt werden, wenn das Deck leer ist. Das Startdeck hat 40 Karten, die Starthand 5, die Hand darf auf 7 wachsen. Zwei Doktrinen liegen offen und gelten die Partie über.</p>
+              <p>Einheiten kommen auf eine eigene Frontstellung und handeln erst im nächsten eigenen Zug. Unterstützung kommt in den Support und bleibt dort, bis sie zerstört, entfernt oder ausgeschaltet wird. Einsätze wirken sofort und gehen danach auf den Ablagestapel. Ausrüstung hängt an einer Einheit, wenn ihr Text das sagt. Doktrinen werden nicht gespielt, sie liegen von Anfang an offen.</p>
+              <p>Ein Angriff kostet im Test 1 AP, ein Einsatz und das Anlegen von Ausrüstung im Test 0. Der Kartentext kann das ändern. Schaden senkt die Stabilität. Bei 0 ist die Einheit weg. Die Stellung bleibt leer. Niemand rückt automatisch nach. Der Verteidiger schlägt zurück, wenn sein Text das nicht verbietet.</p>
+              <p>Steilfeuer erhöht die Reichweite, nicht den Schaden. Stufe 1 reicht über 3 gegnerische Stellungen, Stufe 2 über 5, Stufe 3 über 9. Mörser ist Stufe 1, Haubitze Stufe 2, Raketenwerfer Stufe 3. Das Ziel wird angeklickt, der Kampf läuft danach von selbst.</p>
+              <p>Verdeckt heißt: die Karte liegt mit der Rückseite nach oben und kann nicht normal angegriffen werden, bis sie aufgeklärt ist. Guerilla und Stellung gehen nach dem Kampf verdeckt, weil sie die Stellung wechseln. Artillerie und Scharfschütze tun dasselbe, sind aber keine Guerilla. Nur der Tag, den du setzt, löst das aus.</p>
+              <p>Bronze, Silber und Gold sind die Bedeutung, nicht der Ladenpreis und nicht automatisch die Seltenheit. Bronze macht eine konkrete Sache an einem Ziel. Silber beeinflusst ein Gefecht. Gold verändert die operative Lage. Elite ist eine zweite Achse, keine vierte Stufe: eine besondere Art, Krieg zu führen. AP sind davon getrennt. Eine Goldkarte kann durch eine harte Bedingung billig sein.</p>
+              <table>
+                <thead><tr><th>AP</th><th>Wofür</th></tr></thead>
+                <tbody>
+                  <tr><td>0</td><td>enge Reaktion oder stark bedingter Effekt</td></tr>
+                  <tr><td>1–2</td><td>einfache bis solide Aktion</td></tr>
+                  <tr><td>3–4</td><td>starke Standardkarte</td></tr>
+                  <tr><td>5–7</td><td>Schlüsselkarte</td></tr>
+                  <tr><td>8+</td><td>seltenes Großereignis</td></tr>
+                </tbody>
+              </table>
+              <p>Moral, von 0 bis 5, und das Brechen einer Einheit stehen im Regeltext, noch nicht im Ablauf. Aufklärung deckt Verdecktes auf. Reaktionen benutzen dieselbe AP-Ökonomie wie normale Aktionen und können einen Einsatz abwenden, wenn der Text das sagt.</p>
 
-          <h2>Ziel</h2>
-          <p>Ein erweiterbares Arenaspiel. Karten, die später als Set kommen, bleiben im Spiel erspielbar, nicht nur im Shop. Der Test umfasst 160–200 Karten. Die 1.0 umfasst 500–1000 Karten, danach Sets zu 200 oder 500. Zehn Doktrinen, Deckbau, ein Bot in drei Stufen, Hotseat, LAN. Die Kampagne hat zwei Einstiege als Leutnant mit Infanterie. Unterwegs kommen Mörser und weitere Typen dazu, bis die Division hinter einem steht. Der Tisch zeichnet jede gültige Aktion neu, nicht erst am Zugende. Bilder und Musik sind vorerst das Grundmodell und werden Karte für Karte ersetzt.</p>
+              <h2 id="beispiel">Beispielzüge</h2>
+              <div class="ex-row">
+                <figure><img src="assets/cards/Dschungelkrieger.jpg" alt="Dschungelkrieger"><figcaption>Dschungelkrieger</figcaption></figure>
+                <figure><img src="assets/cards/Haubitzenzug.jpg" alt="Haubitzenzug"><figcaption>Haubitzenzug</figcaption></figure>
+                <figure><img src="assets/cards/Aufklaerer.jpg" alt="Aufklärer"><figcaption>Aufklärer</figcaption></figure>
+                <figure><img src="assets/cards/Armageddon.jpg" alt="Armageddon"><figcaption>Armageddon</figcaption></figure>
+              </div>
+              <ol>
+                <li>Zug 1, 5 AP. Der Dschungelkrieger kostet 3 und geht auf die linke Flanke, vordere Stellung. Es bleiben 2 AP. Er handelt erst im nächsten eigenen Zug. Der Gegner sieht die offene Karte und kann in seinem Zug darauf antworten.</li>
+                <li>Zug 2 beginnt mit 7 AP, den 2 vom letzten Zug und 5 neuen. Der Haubitzenzug kostet 4 und geht auf eine eigene Stellung. Es bleiben 3 AP. Auch er greift erst im Zug danach an. Steilfeuer 2 reicht später über fünf gegnerische Stellungen, nicht nur über die gegenüberliegende.</li>
+                <li>Zug 3. Der Dschungelkrieger greift für 1 AP die Stellung gegenüber oder eine seitlich daneben an. Der Haubitzenzug greift für 1 AP ein Ziel, das Steilfeuer erreicht. Ein Klick auf das Ziel schließt den Kampf. Beide schlagen, der Verteidiger schlägt zurück, wenn sein Text das nicht verbietet. Danach geht der Dschungelkrieger verdeckt, weil er die Stellung wechselt.</li>
+                <li>Der Aufklärer kostet 3. Er deckt eine verdeckte feindliche Stellung auf, zum Beispiel den gerade verschwundenen Dschungelkrieger des Gegners. Danach ist der Zug zu Ende, oder es bleibt Rest-AP für den nächsten Zug liegen.</li>
+                <li>Armageddon ist Gold und ein Großereignis: Feld und beide Hände weg, beide ziehen fünf, die Münze bestimmt, wer neu beginnt. Dafür sind 8 AP der Arbeitspreis, ein Exemplar im Deck. In der Datei steht noch 0 AP. Der Ablauf räumt bisher Front und Support, die Hände noch nicht.</li>
+              </ol>
 
-          <h2>Regeln, kurz</h2>
-          <p>Neun Stellungen, drei Flanken mit je drei Reihen. Dahinter der Support, dazwischen Niemandsland für Minen und Sperren. Ein Zug hat keine feste Phasenliste: legen, angreifen, aufdecken, solange die AP reichen, dann abgeben. Einheiten bleiben stehen, außer eine Karte verlegt sie. Ein normaler Angriff trifft die Stellung gegenüber und die beiden seitlich daneben. Artillerie mit Steilfeuer reicht weiter: Stufe 1 über drei gegnerische Stellungen, Stufe 2 über fünf, Stufe 3 über neun. Schaden senkt die Stabilität. Bei 0 ist die Einheit weg. Klassen sind Infanterie, Rad und Kette. Artillerie und Panzer sind Klassen, keine Tags. Tags setzt du selbst. Guerilla, Stellung, Artillerie und Scharfschütze gehen nach dem Kampf verdeckt, weil sie die Stellung wechseln. Die letzten beiden sind deshalb keine Guerilla.</p>
-          <p>Bronze, Silber und Gold sind die Bedeutung, nicht der Ladenpreis und nicht automatisch die Seltenheit. Elite ist eine zweite Achse, keine vierte Stufe. AP sind davon getrennt. Eine Goldkarte kann durch eine harte Bedingung billig sein.</p>
-          <table>
-            <thead><tr><th>AP</th><th>Wofür</th></tr></thead>
-            <tbody>
-              <tr><td>0</td><td>enge Reaktion</td></tr>
-              <tr><td>1–2</td><td>einfache bis solide Aktion</td></tr>
-              <tr><td>3–4</td><td>starke Standardkarte</td></tr>
-              <tr><td>5–7</td><td>Schlüsselkarte</td></tr>
-              <tr><td>8+</td><td>seltenes Großereignis</td></tr>
-            </tbody>
-          </table>
-          <p>Zu Zugbeginn +5 AP. Nicht verbrauchte AP bleiben liegen. 5 ist nur der Startwert, kein Limit. Ein Speicherdeckel, etwa 10, ist noch nicht fest.</p>
+              <h2 id="glossar">Glossar</h2>
+              <table>
+                <thead><tr><th>Begriff</th><th>Bedeutung</th></tr></thead>
+                <tbody>
+                  <tr><td>AP</td><td>Aktionspunkte. Bezahlen Legen, Angriff und Reaktion. +5 zu Beginn des eigenen Zuges, Rest bleibt liegen.</td></tr>
+                  <tr><td>Stellung</td><td>Ein Platz an der Front. Neun Stück, drei je Flanke.</td></tr>
+                  <tr><td>Flanke</td><td>Links, Zentrum oder rechts. Ein normaler Angriff trifft gegenüber und die Nachbarstellungen.</td></tr>
+                  <tr><td>Support</td><td>Die Zone hinter der Front. Dort liegen Unterstützungskarten, ohne feste Unterplätze.</td></tr>
+                  <tr><td>Niemandsland</td><td>Zwischen Front und Support. Minen, Draht, Sperren. Kein normaler Bewegungsraum.</td></tr>
+                  <tr><td>Einheit</td><td>Steht auf einer Stellung. Infanterie, Rad oder Kette.</td></tr>
+                  <tr><td>Unterstützung</td><td>Logistik, Aufklärung, Befestigung, Luftabwehr, Propaganda und Ähnliches. Liegt im Support.</td></tr>
+                  <tr><td>Einsatz</td><td>Sofortwirkung, danach Ablagestapel. Kann eine Reaktion sein.</td></tr>
+                  <tr><td>Ausrüstung</td><td>Hängt an einer Einheit, wenn der Text das sagt.</td></tr>
+                  <tr><td>Doktrin</td><td>Liegt offen neben dem Deck und gilt die ganze Partie. Rote Rückseite.</td></tr>
+                  <tr><td>Klasse</td><td>Infanterie, Rad, Kette. Artillerie und Panzer sind Klassen, keine Tags.</td></tr>
+                  <tr><td>Tag</td><td>Eigenschaft, die du auf der Karte setzt. Effekte hängen später am Tag, nicht am Namen.</td></tr>
+                  <tr><td>Stabilität</td><td>Die Verteidigung der Einheit. Schaden senkt sie. Bei 0 ist die Einheit weg.</td></tr>
+                  <tr><td>Steilfeuer</td><td>Reichweite 1, 2 oder 3: drei, fünf oder neun gegnerische Stellungen.</td></tr>
+                  <tr><td>Verdeckt</td><td>Rückseite nach oben. Nicht normal angreifbar, bis Aufklärung sie öffnet.</td></tr>
+                  <tr><td>Guerilla</td><td>Geht nach dem Kampf verdeckt. Artillerie und Scharfschütze tun das auch, sind aber keine Guerilla.</td></tr>
+                  <tr><td>Bronze, Silber, Gold</td><td>Bedeutung der Karte: eine Sache, ein Gefecht, die Lage. Nicht der Ladenpreis.</td></tr>
+                  <tr><td>Elite</td><td>Zweite Achse. Eine besondere Art zu kämpfen, keine Stufe über Gold.</td></tr>
+                  <tr><td>Moral</td><td>Geplant von 0 bis 5. Brechen ist noch nicht die Regel im Ablauf.</td></tr>
+                  <tr><td>Ablagestapel</td><td>Zerstörte und verbrauchte Karten. Kann das Deck neu füllen.</td></tr>
+                </tbody>
+              </table>
+            </article>
 
-          <h2>Beispielzug</h2>
-          <div class="ex-row">
-            <figure><img src="assets/cards/Dschungelkrieger.jpg" alt="Dschungelkrieger"><figcaption>Dschungelkrieger</figcaption></figure>
-            <figure><img src="assets/cards/Haubitzenzug.jpg" alt="Haubitzenzug"><figcaption>Haubitzenzug</figcaption></figure>
-            <figure><img src="assets/cards/Aufklaerer.jpg" alt="Aufklärer"><figcaption>Aufklärer</figcaption></figure>
-            <figure><img src="assets/cards/Armageddon.jpg" alt="Armageddon"><figcaption>Armageddon</figcaption></figure>
+            <article class="hilfe-page dossier" id="hilfe-markt">
+              <p class="tiny">Planungsstand 0.32d. Verkaufszahlen sind Spannweiten, keine Zusage. Eine deutsche Steam-Kopie kommt nach 30&nbsp;% Plattformanteil und 19&nbsp;% MwSt. mit etwa 58&nbsp;% des Ladenpreises an.</p>
+              <h2 id="markt-bild">Marktanalyse</h2>
+              <p>Nur Steam, ohne bezahltes Werbebudget. Division Command sitzt zwischen Kartenspiel und Taktikspiel: Deckbau, ein sichtbares Feld, kurze Partien, ein Ton, der vom Versorgen bis zum Abgrund reicht. Die nächste Vergleichsgruppe sind digitale Kartenspiele mit einem festen Tisch, nicht große Strategiespiele mit einer Kampagnenkarte über zwanzig Stunden.</p>
+              <p>Ohne eigene Reichweite bleibt so ein Spiel oft bei wenigen tausend Kopien. Eine Wunschlisten-Seite vor dem Release, eine Partie, die ein Fremder in zehn Minuten versteht, und ein Bild, das man ohne Erklärung zeigen kann, entscheiden mehr als der Kartenstapel allein. Die alte Zahl von etwa 170&nbsp;000&nbsp;€ bei 9,99&nbsp;€ war der Fall „getroffen“: rund 30&nbsp;000 Verkäufe im ersten Jahr, nicht der Normalfall.</p>
+              <p>Kosten, solange Bilder und Ton das Grundmodell bleiben: Steam-Direkt 100&nbsp;$, deine Zeit, kein Zeichnerbudget. Sobald Leitkarten neu entstehen, zählt deren Stückzahl, nicht der Code. Keys an große Kanäle kosten den Deckungsbeitrag dieser Kopien.</p>
+
+              <h2 id="absatz">Absatzmöglichkeiten</h2>
+              <p>Drei Lagen, erstes Jahr, nur Steam, ohne Werbeetat. Ein Treffer bei einem großen Kanal ist der Sprung in die rechte Spalte, kein Grundwert.</p>
+              <table>
+                <thead><tr><th>Preis</th><th>Was der Preis tragen muss</th><th>Still, 1&nbsp;500</th><th>Nische, 8&nbsp;000</th><th>Getroffen, 30&nbsp;000</th></tr></thead>
+                <tbody>
+                  <tr><td>4,99&nbsp;€</td><td>Kurzer, fertiger Kern. Nicht diese 1.0.</td><td>4&nbsp;300&nbsp;€</td><td>23&nbsp;000&nbsp;€</td><td>87&nbsp;000&nbsp;€</td></tr>
+                  <tr><td>9,99&nbsp;€</td><td>160–200 Karten, ein Bot, Hotseat, Deckbau, stabiler Tisch.</td><td>8&nbsp;700&nbsp;€</td><td>46&nbsp;000&nbsp;€</td><td>174&nbsp;000&nbsp;€</td></tr>
+                  <tr><td>14,99&nbsp;€</td><td>etwa 500 Karten, 10 Doktrinen, 3 Botstufen, LAN, 2 Szenarien.</td><td>13&nbsp;000&nbsp;€</td><td>70&nbsp;000&nbsp;€</td><td>261&nbsp;000&nbsp;€</td></tr>
+                  <tr><td>19,99&nbsp;€</td><td>800–1000 Karten, Feldzug bis zum General, Effekte pro Aktion.</td><td>17&nbsp;000&nbsp;€</td><td>93&nbsp;000&nbsp;€</td><td>348&nbsp;000&nbsp;€</td></tr>
+                  <tr><td>24,99&nbsp;€</td><td>Dasselbe, plus ersetzte Leitbilder und ein lesbarer Kampfbericht.</td><td>22&nbsp;000&nbsp;€</td><td>116&nbsp;000&nbsp;€</td><td>435&nbsp;000&nbsp;€</td></tr>
+                </tbody>
+              </table>
+              <p>Ein kleinerer Preis bringt nur dann mehr ein, wenn die Stückzahl stärker steigt als der Preis fällt. Von 14,99 auf 9,99 brauchst du ungefähr die Hälfte mehr Kopien, nur um gleich zu bleiben. Early Access zu 9,99&nbsp;€ mit dem Umfang der 14,99-Zeile kann das, weil mehr Leute einsteigen. Dieselbe 1.0 später für 4,99&nbsp;€ verschenkt die Spanne, ohne die Reichweite eines Gratistitels zu haben.</p>
+              <p>Weitere Wege, ohne ein zweites Geschäft aufzumachen: Wunschlisten vor dem Release, ein kostenloser Prolog mit den ersten Infanteriekarten, Sets, die im Spiel erspielbar bleiben. Ein Shop darf später dazukommen. Er darf den Einstieg nicht zerlegen.</p>
+
+              <h2 id="werbung">Werbung und Empfehlungen</h2>
+              <ul>
+                <li>Steam-Seite mit dem brennenden Tisch, dem Logo und einer Partie, die in den ersten zehn Minuten eine Entscheidung zeigt. Ohne das bringt ein Key nichts.</li>
+                <li>Wunschlisten vor dem Kaufstart. Das ist die billigste Reichweite, die Steam selbst ausspielt.</li>
+                <li>Keys an Kanäle, die Kartenspiele oder trockenen Militärton aushalten. Hand of Blood und Asmongold sind der Sprung, nicht der Plan. Ein mittlerer Kanal, der eine ganze Partie zeigt, ist der verlässlichere Weg.</li>
+                <li>Ein kurzer Kampf als Rätsel: eine Lage, eine Karte, ein klares Bild. Das lässt sich schneiden, ohne dass der Zuschauer die Regeln kennt.</li>
+                <li>Ein Kampfbericht zum Weitergeben, ein Satz wie „Spieler 1 verlegt den Panzerzug in die linke Flanke“.</li>
+                <li>Kein bezahltes Werbenetz, bevor der Tisch und die Tags stehen. Geld auf eine Alpha, die ein Fremder nicht zu Ende bringt, verbrennt die Spanne.</li>
+              </ul>
+
+              <h2 id="preis">Preisrechtfertigung, höherer Preis, mehr Spieler</h2>
+              <p>Ohne fertigen Tisch und ohne deine Tags rechtfertigt keiner der Preise das Spiel. Mit dem Zielumfang ist 14,99&nbsp;€ der ehrliche Einstieg und 19,99&nbsp;€ der Preis, wenn Feldzug und Tisch sich fertig anfühlen. 24,99&nbsp;€ braucht ersetzte Leitbilder und einen Kampfbericht, den man jemandem zeigen kann, der das Spiel nicht besitzt.</p>
+              <p>Was einen höheren Preis trägt, in dieser Reihenfolge:</p>
+              <ul>
+                <li>Der Feldzug vom Leutnant bis zur Division. Zwei Einstiege, Infanterie zuerst, dann Mörser und weitere Typen, bis die Division hinter einem steht. Das ist der Grund zu bleiben.</li>
+                <li>500 bis 1000 Karten in der 1.0, zehn Doktrinen, drei Botstufen, die verschieden spielen, Hotseat und LAN.</li>
+                <li>Der Tisch zeichnet jede gültige Aktion: Trommel beim Ausspielen, Schaufel beim Eingraben, Einschlag auf der Stellung. Nicht nur ein neuer Stand am Zugende.</li>
+                <li>Asynchron mit einem Freund, nicht nur LAN im selben Netz. Das erhöht die Spielerzahl stärker als ein weiteres Menü.</li>
+                <li>Sets zu 200 oder 500, im Spiel erspielbar. Mehr Karten halten Leute, ein Shop allein nicht.</li>
+              </ul>
+              <p>Was die Spielerzahl hebt, ohne den Preis zu senken: ein Prolog, den man verschenkt, eine Partie unter zwanzig Minuten, ein Bot, der immer legt, wenn er kann, und ein Bild der Front, das in einem Standbild lesbar ist. Die vierzig Karten der beiden Szenarien zuerst mit festen Bildern. Der Rest darf warten.</p>
+            </article>
+
+            <article class="hilfe-page dossier" id="hilfe-plan">
+              <h2 id="umfang">Geplanter Umfang</h2>
+              <p>Der Test umfasst 160 bis 200 Karten. Die 1.0 umfasst 500 bis 1000 Karten. Danach kommen Sets zu 200 oder 500, erspielbar, nicht nur im Shop. Zehn Doktrinen, Deckbau, ein Bot in drei Stufen, Hotseat, LAN. Die Kampagne hat zwei Einstiege als Leutnant mit Infanterie. Unterwegs kommen Mörser und weitere Typen dazu, bis die Division hinter einem steht.</p>
+              <p>Der Tisch zeichnet jede gültige Aktion neu. Infanterie wird auf die Stellung gesetzt, der Text nennt die Handlung, der Gegner kann einen Einsatz dagegen halten. Bilder und Musik sind vorerst das Grundmodell und werden Karte für Karte und Stück für Stück ersetzt. Die Vollversion ist dieses Arenaspiel mit Feldzug, nicht ein zweites Spiel daneben.</p>
+
+              <h2 id="stand">Detaillierter aktueller Stand</h2>
+              <p>Alpha 0.32d. Spielbar ist der Tisch. Eine Karte lässt sich aus der Hand auf die eigene Front oder in den Support ziehen. AP gehen nur bei einem gültigen Zug weg. Artillerie wählt ein Ziel, der Kampf läuft weiter. Der Bot legt, wenn er kann, und gibt den Zug ab. Menü, Bibliothek, Deck, Hotseat, LAN, Optionen und die schwarze bzw. rote Kartenrückseite sind drin. Die Hilfe erklärt Regeln, Markt und diesen Plan.</p>
+              <p>Im Editor lassen sich Schablonen mit Bild, rundem Schatten und eigenen Tags bauen. Ein erster Versuch hat zwanzig Karten auf die neue Schablone gesetzt. Das Set im Spiel benutzt noch die bisherigen Bilder. Die Regeln in RULES v0.5 sind das Grundkonzept, noch nicht jede Zeile im Ablauf.</p>
+              <ul>
+                <li>Drin: Ziehen auf die Stellung, AP-Abzug, Zielwahl der Artillerie, Bot-Zug mit Abgabe, Hotseat, LAN, Bibliothek, Deck, Optionen, zwei Rückseiten, Menümusik und Kampfmusik.</li>
+                <li>Offen: deine Tags auf allen Karten, danach erst die Effekte daran.</li>
+                <li>Offen: Steilfeuer als Reichweite 3, 5 und 9 im Ablauf. Verdeckt nach dem Kampf nur bei den Tags, die du dafür setzt.</li>
+                <li>Offen: Moral 0–5 und das Brechen. AP der Karten auf die neue Achse. Armageddon steht noch auf 0 statt 8.</li>
+                <li>Offen: die dritte Botstufe, die anders spielt als die beiden vorhandenen. Die Kampagne mit zwei Einstiegen.</li>
+                <li>Offen: Trommel, Schaufel, Einschlag auf der Stellung. Leitbilder gegen das Grundmodell tauschen.</li>
+                <li>Offen: Steam-Seite, Wunschlisten, eine Partie, die ein Fremder ohne Erklärung zu Ende bringt.</li>
+              </ul>
+
+              <h2 id="fahrplan">Fahrplan bis zur Vollversion</h2>
+              <ol>
+                <li>Regeln festziehen. Tags auf den vorhandenen Karten, Steilfeuer, Verdeckt, AP-Preise. Moral erst, wenn die Tags tragen.</li>
+                <li>Die vorhandenen Karten auf die neuen Schablonen, mit eigenen Bildern. Zuerst die Karten, die der Tisch schon spielt.</li>
+                <li>Testumfang, 160 bis 200 Karten. Ein Bot, der immer legt. Hotseat und ein stabiler Tisch. Das ist die 9,99-Zeile, wenn sie sich fertig anfühlt.</li>
+                <li>Kampagne, zwei Leutnants, Infanterie, dann der erste Mörser. Daran hängt, ob Leute bleiben.</li>
+                <li>Drei Botstufen, LAN, zehn Doktrinen, etwa 500 Karten, zwei Szenarien. Das ist der ehrliche Stand für 14,99&nbsp;€.</li>
+                <li>Feldzug bis zum General, 800 bis 1000 Karten, der Tisch antwortet auf jede Aktion. Das trägt 19,99&nbsp;€.</li>
+                <li>Leitbilder und die Stücke, die bleiben sollen, ersetzen das Grundmodell. Ein Kampfbericht zum Weitergeben. Danach Sets, erspielbar. Das ist die Vollversion, nicht ein weiteres Menü.</li>
+              </ol>
+              <p>Vor Schritt 3 keine Steam-Seite, die einen Preis verspricht. Vor Schritt 5 kein Key an einen großen Kanal.</p>
+            </article>
           </div>
-          <ol>
-            <li>Zug 1, 5 AP. Der Dschungelkrieger kostet 3 und geht auf die linke Flanke, vordere Stellung. Es bleiben 2 AP. Er handelt erst im nächsten eigenen Zug.</li>
-            <li>Zug 2 beginnt mit 7 AP, den 2 vom letzten Zug und 5 neuen. Der Haubitzenzug kostet 4 und geht auf eine eigene Stellung. Es bleiben 3 AP. Auch er greift erst im Zug danach an.</li>
-            <li>Zug 3. Der Dschungelkrieger greift für 1 AP die Stellung gegenüber oder eine seitlich daneben an. Der Haubitzenzug greift für 1 AP ein Ziel, das Steilfeuer erreicht, auch weiter weg. Ein Klick auf das Ziel schließt den Kampf. Beide schlagen, der Verteidiger schlägt zurück, wenn sein Text das nicht verbietet.</li>
-            <li>Der Aufklärer kostet 3. Er deckt eine verdeckte feindliche Stellung auf. Danach ist der Zug zu Ende, oder es bleibt Rest-AP für den nächsten Zug liegen.</li>
-            <li>Armageddon ist Gold und ein Großereignis: Feld und beide Hände weg, beide ziehen fünf, die Münze bestimmt, wer neu beginnt. Dafür sind 8 AP der Arbeitspreis, ein Exemplar im Deck. In der Datei steht noch 0 AP. Der Ablauf räumt bisher Front und Support, die Hände noch nicht.</li>
-          </ol>
-
-          <h2>Markt</h2>
-          <p>Nur Steam, ohne Werbebudget. Die alte Zahl von etwa 170&nbsp;000&nbsp;€ bei 9,99&nbsp;€ war der Fall „getroffen“: rund 30&nbsp;000 Verkäufe im ersten Jahr, nicht der Normalfall. Ohne Reichweite bleibt ein solches Spiel oft bei wenigen tausend Kopien. Ein Treffer bei einem großen Kanal, etwa Hand of Blood oder Asmongold, ist der Sprung in die rechte Spalte, kein Grundwert.</p>
-          <table>
-            <thead><tr><th>Preis</th><th>Was der Preis tragen muss</th><th>Still, 1&nbsp;500</th><th>Nische, 8&nbsp;000</th><th>Getroffen, 30&nbsp;000</th></tr></thead>
-            <tbody>
-              <tr><td>4,99&nbsp;€</td><td>Kurzer, fertiger Kern. Nicht diese 1.0.</td><td>4&nbsp;300&nbsp;€</td><td>23&nbsp;000&nbsp;€</td><td>87&nbsp;000&nbsp;€</td></tr>
-              <tr><td>9,99&nbsp;€</td><td>160–200 Karten, ein Bot, Hotseat, Deckbau, stabiler Tisch.</td><td>8&nbsp;700&nbsp;€</td><td>46&nbsp;000&nbsp;€</td><td>174&nbsp;000&nbsp;€</td></tr>
-              <tr><td>14,99&nbsp;€</td><td>etwa 500 Karten, 10 Doktrinen, 3 Botstufen, LAN, 2 Szenarien.</td><td>13&nbsp;000&nbsp;€</td><td>70&nbsp;000&nbsp;€</td><td>261&nbsp;000&nbsp;€</td></tr>
-              <tr><td>19,99&nbsp;€</td><td>800–1000 Karten, Feldzug bis zum General, Effekte pro Aktion.</td><td>17&nbsp;000&nbsp;€</td><td>93&nbsp;000&nbsp;€</td><td>348&nbsp;000&nbsp;€</td></tr>
-              <tr><td>24,99&nbsp;€</td><td>Dasselbe, plus ersetzte Leitbilder und ein lesbarer Kampfbericht.</td><td>22&nbsp;000&nbsp;€</td><td>116&nbsp;000&nbsp;€</td><td>435&nbsp;000&nbsp;€</td></tr>
-            </tbody>
-          </table>
-          <p>Ein kleinerer Preis bringt nur dann mehr ein, wenn die Stückzahl deutlich stärker steigt als der Preis fällt. Von 14,99 auf 9,99 musst du ungefähr die Hälfte mehr Kopien verkaufen, nur um gleich zu bleiben. Ein Early Access zu 9,99&nbsp;€ mit dem Umfang der 14,99-Zeile kann das, weil mehr Leute einsteigen. Dieselbe 1.0 später für 4,99&nbsp;€ verschenkt die Spanne, ohne die Reichweite eines Gratistitels zu haben.</p>
-          <p>Kosten, grob, solange Bilder und Ton das Grundmodell bleiben: Steam-Direkt 100&nbsp;$, deine Zeit, kein Zeichnerbudget. Sobald Leitkarten neu entstehen, zählt vor allem deren Stückzahl, nicht der Code. Keys an große Kanäle kosten dich den Deckungsbeitrag dieser Kopien und bringen nur etwas, wenn das Spiel in den ersten zehn Minuten eine Entscheidung zeigt.</p>
-
-          <h2>Was noch fehlt</h2>
-          <ul>
-            <li>Deine Tags auf allen Karten, danach erst die Effekte daran hängen.</li>
-            <li>Steilfeuer als Reichweite 3, 5 und 9. Verdeckt nach dem Kampf nur bei den Tags, die du dafür setzt.</li>
-            <li>Moral 0–5 und das Brechen, wie im Regeltext. Im Ablauf ist das noch nicht die Regel.</li>
-            <li>AP der Karten auf die neue Achse. Armageddon ist noch 0 statt 8.</li>
-            <li>Dritte Botstufe, die anders spielt als Test und Schloter. Kampagne, zwei Einstiege.</li>
-            <li>Tisch reagiert auf die Aktion: Trommel, Schaufel, Einschlag. Nicht nur ein neuer Stand am Zugende.</li>
-            <li>Leitbilder und die Stücke, die du behalten willst, gegen das Grundmodell tauschen.</li>
-            <li>Steam-Seite, Wunschlisten, eine Partie, die ein Fremder ohne Erklärung zu Ende bringt.</li>
-          </ul>
-
-          <h2>Mehr Spieler, oder ein höherer Preis</h2>
-          <ul>
-            <li>Der Feldzug vom Zug bis zur Division ist der Grund zu bleiben. Den würde ich vor jedem Shop bauen.</li>
-            <li>Ein Kampf als kurzes Rätsel, eine Entscheidung, ein klares Bild. Das ist das, was ein Kanal zeigen kann.</li>
-            <li>Ein Kampfbericht zum Weitergeben, ohne dass der Zuschauer die Regeln kennt.</li>
-            <li>Asynchron mit einem Freund, nicht nur LAN im selben Netz.</li>
-            <li>Sets erspielbar. Ein Shop darf später dazukommen, er darf den Einstieg nicht zerlegen.</li>
-            <li>Die vierzig Karten der beiden Szenarien zuerst mit festen Bildern. Der Rest darf warten.</li>
-          </ul>
-          <p>Ohne den fertigen Tisch und ohne deine Tags rechtfertigt keiner der Preise oben das Spiel. Mit dem Zielumfang ist 14,99&nbsp;€ der ehrliche Einstieg und 19,99&nbsp;€ der Preis, wenn der Feldzug und der Tisch sich fertig anfühlen.</p>
         </div>
         <div class="menu">
           <button type="button" class="back" id="back-hilfe">Zurück</button>
@@ -903,6 +996,32 @@
       document.getElementById('go-lan').onclick = function () { paintWho(); show('scr-lan'); };
       document.getElementById('go-library').onclick = function () { show('scr-library'); };
       document.getElementById('go-hilfe').onclick = function () { show('scr-hilfe'); };
+      (function () {
+        var root = document.getElementById('scr-hilfe');
+        if (!root) return;
+        function openPage(id) {
+          root.querySelectorAll('.hilfe-page').forEach(function (p) {
+            p.classList.toggle('on', p.id === 'hilfe-' + id);
+          });
+          root.querySelectorAll('.hilfe-nav > button').forEach(function (b) {
+            b.classList.toggle('on', b.getAttribute('data-hilfe') === id);
+          });
+          root.querySelectorAll('.hilfe-sub').forEach(function (s) {
+            s.classList.toggle('on', s.getAttribute('data-for') === id);
+          });
+          var page = document.getElementById('hilfe-' + id);
+          if (page) page.scrollTop = 0;
+        }
+        root.querySelector('.hilfe-nav').addEventListener('click', function (ev) {
+          var main = ev.target.closest('button[data-hilfe]');
+          if (main) { openPage(main.getAttribute('data-hilfe')); return; }
+          var jump = ev.target.closest('button[data-jump]');
+          if (!jump) return;
+          var page = root.querySelector('.hilfe-page.on');
+          var target = page && page.querySelector('#' + jump.getAttribute('data-jump'));
+          if (target) target.scrollIntoView({ block: 'start' });
+        });
+      })();
       document.getElementById('go-user').onclick = function () { show('scr-user'); };
       document.getElementById('go-options').onclick = function () { show('scr-options'); };
       document.getElementById('back-user').onclick = function () { show('scr-title'); };

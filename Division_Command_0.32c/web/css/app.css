@@ -3529,3 +3529,72 @@ body.dc-dragging .slot.legal {
   font-size: 18px;
   min-height: 48px;
 }
+#work-root #scr-hilfe.screen.on .hilfe-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+#work-root #scr-hilfe.screen.on .hilfe-nav {
+  flex: 0 0 280px;
+  overflow: auto;
+  border-right: 3px solid #e2c36a;
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(12, 6, 4, 0.45);
+}
+#work-root #scr-hilfe.screen.on .hilfe-nav > button {
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  min-height: 46px;
+  padding: 8px 12px;
+}
+#work-root #scr-hilfe.screen.on .hilfe-nav > button.on {
+  background: #6a2018;
+  color: #f3e2a8;
+}
+#work-root #scr-hilfe.screen.on .hilfe-sub {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 0 8px 8px;
+}
+#work-root #scr-hilfe.screen.on .hilfe-sub.on { display: flex; }
+#work-root #scr-hilfe.screen.on .hilfe-sub button {
+  text-align: left;
+  font-size: 15px;
+  min-height: 36px;
+  padding: 6px 10px;
+  background: transparent;
+  box-shadow: none;
+}
+#work-root #scr-hilfe.screen.on .hilfe-pages {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+#work-root #scr-hilfe.screen.on .hilfe-page.dossier {
+  display: none;
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  flex: none;
+  width: auto;
+  padding: 8px 4vw 28px 28px;
+}
+#work-root #scr-hilfe.screen.on .menu {
+  position: relative;
+  z-index: 3;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 12px 0 14px;
+  background: #120806;
+}
+#work-root #scr-hilfe.screen.on .hilfe-page.dossier.on { display: block; }
+#work-root #scr-hilfe.screen.on .hilfe-page h2 { scroll-margin-top: 8px; }
