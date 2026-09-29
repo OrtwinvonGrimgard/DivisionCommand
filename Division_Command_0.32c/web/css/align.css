@@ -467,3 +467,41 @@ body:has(#title-root.boot-intro:not(.btn-in)) #dc-version {
   background: radial-gradient(ellipse 62% 70% at 50% 46%, transparent 18%, rgba(0,0,0,.55) 100%);
 }
 
+
+/* Tisch: Doktrin, Deck und Friedhof deutlich größer als die alten 52px-Stapel. */
+#app .top-bar,
+#app .bottom-bar {
+  overflow: visible !important;
+  align-items: end !important;
+}
+#app .top-bar { grid-template-columns: minmax(0, 1fr) auto auto !important; }
+#app .bottom-bar { grid-template-columns: auto minmax(0, 1fr) auto auto !important; }
+#app .doc-window {
+  max-width: none !important;
+  overflow: visible !important;
+  min-height: 0 !important;
+  align-items: flex-end !important;
+}
+#app .doc-window .doctrine-card {
+  width: 18vh !important;
+  flex: 0 0 18vh !important;
+}
+#app .doc-window .doctrine-card img.art {
+  width: 18vh !important;
+  height: 25vh !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+#app .piles { flex: 0 0 auto !important; }
+#app .pile {
+  width: 16vh !important;
+  max-width: none !important;
+}
+#app .pile img {
+  width: 16vh !important;
+  height: 22vh !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
