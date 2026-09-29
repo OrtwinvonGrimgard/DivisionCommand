@@ -468,40 +468,111 @@ body:has(#title-root.boot-intro:not(.btn-in)) #dc-version {
 }
 
 
-/* Tisch: Doktrin, Deck und Friedhof deutlich größer als die alten 52px-Stapel. */
+/* Tisch: Gegner kompakt, eigene Hand und Stapel groß, alles im Bild. */
+#app .table { min-height: 0 !important; overflow: hidden !important; }
+#app .table-main {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0 !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  gap: 2px !important;
+  padding: 4px 8px 2px !important;
+}
+#app .row-label {
+  flex: 0 0 auto !important;
+  font-size: 10px !important;
+  line-height: 1.1 !important;
+  margin: 0 !important;
+}
 #app .top-bar,
 #app .bottom-bar {
+  flex: 0 0 auto !important;
   overflow: visible !important;
   align-items: end !important;
+  gap: 6px !important;
+  min-height: 0 !important;
 }
 #app .top-bar { grid-template-columns: minmax(0, 1fr) auto auto !important; }
-#app .bottom-bar { grid-template-columns: auto minmax(0, 1fr) auto auto !important; }
+#app .bottom-bar {
+  grid-template-columns: auto minmax(0, 1fr) auto auto !important;
+  margin-top: auto !important;
+}
+#app .nml-band {
+  flex: 1 1 10vh !important;
+  min-height: 8vh !important;
+}
+#app .front-line .slot,
+#app .support-row .slot {
+  height: 8.5vh !important;
+  min-height: 0 !important;
+}
+#app #my-front .slot,
+#app #my-support .slot { height: 10.5vh !important; }
+#app .nameplate { padding: 2px 6px !important; font-size: 13px !important; }
+
 #app .doc-window {
   max-width: none !important;
   overflow: visible !important;
   min-height: 0 !important;
   align-items: flex-end !important;
+  padding: 2px !important;
 }
-#app .doc-window .doctrine-card {
-  width: 18vh !important;
-  flex: 0 0 18vh !important;
+#app .doc-window .dn { display: none !important; }
+#app .pile { position: relative !important; max-width: none !important; }
+#app .pile span,
+#app .pile b {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: rgba(0, 0, 0, 0.62) !important;
+  line-height: 1.2 !important;
 }
-#app .doc-window .doctrine-card img.art {
-  width: 18vh !important;
-  height: 25vh !important;
-  max-height: none !important;
+#app .pile span { top: 0 !important; }
+#app .pile b { bottom: 0 !important; top: auto !important; }
+
+/* Gegner: größer als die alten Briefmarken, aber klein genug dass der eigene Tisch bleibt. */
+#app .top-bar .pile { width: 8.2vh !important; }
+#app .top-bar .pile img {
+  width: 8.2vh !important;
+  height: 11.4vh !important;
   object-fit: contain !important;
-  object-position: center center !important;
 }
-#app .piles { flex: 0 0 auto !important; }
-#app .pile {
-  width: 16vh !important;
-  max-width: none !important;
-}
-#app .pile img {
-  width: 16vh !important;
-  height: 22vh !important;
+#app .top-bar .doctrine-card,
+#app .top-bar .doctrine-card img.art {
+  width: 8.6vh !important;
+  height: 12vh !important;
   max-height: none !important;
+  flex: 0 0 auto !important;
   object-fit: contain !important;
-  object-position: center center !important;
 }
+
+/* Eigene Seite: Hand, Doktrin, Deck, Friedhof deutlich größer. */
+#app .bottom-bar .pile { width: 13vh !important; }
+#app .bottom-bar .pile img {
+  width: 13vh !important;
+  height: 18vh !important;
+  object-fit: contain !important;
+}
+#app .bottom-bar .doctrine-card,
+#app .bottom-bar .doctrine-card img.art {
+  width: 14vh !important;
+  height: 19.5vh !important;
+  max-height: none !important;
+  flex: 0 0 auto !important;
+  object-fit: contain !important;
+}
+#app .hand-dock,
+#app .hand {
+  height: 16vh !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+#app .hand { align-items: flex-end !important; }
+#app .hand .card {
+  height: 24vh !important;
+  margin-bottom: 0 !important;
+  transform: translateY(-8vh);
+}
+#app .hand .card:hover { transform: translateY(-10vh); }
+#app .hand .card img.art { height: 100% !important; object-fit: cover !important; object-position: top center !important; }
