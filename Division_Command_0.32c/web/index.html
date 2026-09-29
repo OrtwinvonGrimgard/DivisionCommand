@@ -167,7 +167,7 @@
         <p class="tiny">Offiziersakte</p>
         <div class="char-editor">
           <div class="char-preview">
-            <img id="setup-preview" alt="Ausgewähltes Porträt" src="assets/portraits/lt-01.jpg">
+            <img id="setup-preview" alt="Ausgewähltes Porträt" src="assets/portraits/lt-01.jpg?v=2">
             <p class="char-rank">Leutnant · Absolvent</p>
           </div>
           <div class="char-fields">
@@ -208,7 +208,7 @@
         </label>
         <div class="char-editor user-char">
           <div class="char-preview">
-            <img id="user-preview" alt="Porträt" src="assets/portraits/lt-01.jpg">
+            <img id="user-preview" alt="Porträt" src="assets/portraits/lt-01.jpg?v=2">
             <p class="char-rank">Leutnant · Absolvent</p>
           </div>
           <div class="char-fields">
@@ -930,7 +930,7 @@
       for (var pi = 1; pi <= 24; pi++) DC_PORTRAITS.push('lt-' + (pi<10?'0':'')+pi);
       function portraitSrc(id) {
         var key = DC_PORTRAITS.indexOf(id) >= 0 ? id : 'lt-01';
-        return 'assets/portraits/' + key + '.jpg';
+        return 'assets/portraits/' + key + '.jpg?v=2';
       }
       function selectedPortrait(gridId) {
         var on = document.querySelector('#' + gridId + ' button.on');

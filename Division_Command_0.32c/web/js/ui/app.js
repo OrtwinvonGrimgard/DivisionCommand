@@ -131,7 +131,7 @@
   function dcPortraitSrc(id) {
     var n = parseInt(String(id || '').replace(/^lt-/, ''), 10);
     if (!(n >= 1 && n <= 24)) n = 1;
-    return 'assets/portraits/lt-' + (n<10?'0':'')+n + '.jpg';
+    return 'assets/portraits/lt-' + (n<10?'0':'')+n + '.jpg?v=2';
   }
   function dcActiveUser() {
     try {
