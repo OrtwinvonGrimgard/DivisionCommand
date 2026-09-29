@@ -26,18 +26,18 @@
   ];
 
   var UNIFORMS = [
-    { id: 'dienst', label: 'U01 Dienst', hint: 'Marineblau — Sterne auf Schulterklappe' },
-    { id: 'feld', label: 'U02 Feld', hint: 'Feldgrau, Stehkragen' },
-    { id: 'gala', label: 'U03 Gala', hint: 'Weiß-Gold, Stickerei' },
+    { id: 'dienst', label: 'U01 Dienst', hint: 'Marineblau, Stehkragen-Tunika' },
+    { id: 'feld', label: 'U02 Feld', hint: 'Feldgrau, Stehkragen-Tunika' },
+    { id: 'gala', label: 'U03 Gala', hint: 'Weiß-Gold, Paradekragen' },
     { id: 'historisch', label: 'U04 Historisch', hint: 'Husarenrot, Litzen' },
-    { id: 'khaki', label: 'U05 Khaki', hint: 'Khaki-Dienst, Tropenkragen' },
-    { id: 'oliv', label: 'U06 Oliv', hint: 'Olivgrün, moderne Dienstjacke' },
-    { id: 'stahl', label: 'U07 Stahl', hint: 'Stahlblau-grau' },
-    { id: 'jaeger', label: 'U08 Jäger', hint: 'Dunkelgrün, Hornknöpfe' },
-    { id: 'nacht', label: 'U09 Nacht', hint: 'Schwarz, schmale Klappe' },
-    { id: 'luft', label: 'U10 Luft', hint: 'Hellblau, silberne Tressen' },
-    { id: 'burgund', label: 'U11 Burgund', hint: 'Weinrot, Goldlitzen' },
-    { id: 'sand', label: 'U12 Sand', hint: 'Sandfarben, Kolonialschnitt' }
+    { id: 'khaki', label: 'U05 Khaki', hint: 'Khaki, Feldtunika' },
+    { id: 'oliv', label: 'U06 Oliv', hint: 'Oliv, Stehkragen-Tunika' },
+    { id: 'stahl', label: 'U07 Stahl', hint: 'Stahlblau, Stehkragen-Tunika' },
+    { id: 'jaeger', label: 'U08 Jäger', hint: 'Dunkelgrün, Stehkragen-Tunika' },
+    { id: 'nacht', label: 'U09 Nacht', hint: 'Schwarz, Stehkragen-Tunika' },
+    { id: 'luft', label: 'U10 Luft', hint: 'Hellblau, Stehkragen-Tunika' },
+    { id: 'burgund', label: 'U11 Burgund', hint: 'Weinrot, Stehkragen-Tunika' },
+    { id: 'sand', label: 'U12 Sand', hint: 'Sandfarben, Stehkragen-Tunika' }
   ];
 
   var UNI_IDS = {};
@@ -72,7 +72,7 @@
     m: 'mittel',
     s: 'älter'
   };
-  var VER = '6';
+  var VER = '7';
 
   function rankMeta(rank) {
     var id = String(rank || 'Lt');
