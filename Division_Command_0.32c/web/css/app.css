@@ -3419,57 +3419,113 @@ body.dc-dragging .slot.legal {
   z-index: 7;
 }
 
-/* Hilfe: volle Breite, der Text scrollt, die Knöpfe bleiben unten. */
-#scr-hilfe.on {
-  width: min(1080px, calc(100vw - 24px)) !important;
-  height: calc(100vh - 24px) !important;
-  max-height: calc(100vh - 24px) !important;
+/* Hilfe: ganzer Bildschirm, Schrift größer, Text scrollt, Zurück bleibt unten. */
+#work-root #scr-hilfe.screen.on {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
   align-items: stretch !important;
+  justify-content: flex-start !important;
   text-align: left !important;
   overflow: hidden !important;
-  padding: 0 12px 12px !important;
+  z-index: 80 !important;
+  background: #120806 url("../assets/title-back.jpg?v=vignette") center / cover no-repeat !important;
 }
-#scr-hilfe.on .page-title {
-  margin: 0 0 12px !important;
+#work-root #scr-hilfe.screen.on .page-title {
+  margin: 0 !important;
   width: 100% !important;
+  font-size: clamp(36px, 4vw, 52px) !important;
+  flex: 0 0 auto !important;
 }
-#scr-hilfe .dossier {
+#work-root #scr-hilfe.screen.on .dossier {
   flex: 1 1 auto;
   min-height: 0;
   overflow: auto;
+  width: 100% !important;
+  max-width: none !important;
   text-align: left;
-  padding: 4px 10px 16px;
+  padding: 18px 4vw 28px;
+  font-size: 18px;
 }
-#scr-hilfe .dossier p,
-#scr-hilfe .dossier h2,
-#scr-hilfe .dossier ul,
-#scr-hilfe .dossier ol,
-#scr-hilfe .dossier table,
-#scr-hilfe .dossier .ex-row {
+#work-root #scr-hilfe.screen.on .dossier p,
+#work-root #scr-hilfe.screen.on .dossier h2,
+#work-root #scr-hilfe.screen.on .dossier ul,
+#work-root #scr-hilfe.screen.on .dossier ol,
+#work-root #scr-hilfe.screen.on .dossier li,
+#work-root #scr-hilfe.screen.on .dossier table,
+#work-root #scr-hilfe.screen.on .dossier .ex-row,
+#work-root #scr-hilfe.screen.on .dossier .tiny {
   width: 100% !important;
   max-width: none !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
   text-align: left;
 }
-#scr-hilfe h2 {
+#work-root #scr-hilfe.screen.on h2 {
   font-family: Cinzel, serif;
   color: #e2c36a;
-  font-size: 18px;
+  font-size: 26px;
   letter-spacing: 0.08em;
-  margin: 22px 0 8px;
+  margin: 28px 0 10px;
 }
-#scr-hilfe p,
-#scr-hilfe li { color: #f3ead8; line-height: 1.45; }
-#scr-hilfe table { border-collapse: collapse; margin: 10px 0 14px; font-size: 14px; }
-#scr-hilfe th,
-#scr-hilfe td { border-bottom: 1px solid rgba(226, 195, 106, 0.35); padding: 6px 8px; vertical-align: top; }
-#scr-hilfe th { color: #e2c36a; font-weight: 600; }
-#scr-hilfe .ex-row { display: flex; gap: 14px; flex-wrap: wrap; margin: 8px 0 12px; }
-#scr-hilfe figure { margin: 0; width: 132px; }
-#scr-hilfe figure img {
-  width: 132px; height: 186px; object-fit: cover; object-position: top center;
-  border: 1px solid #e2c36a; display: block; background: #1a1008;
+#work-root #scr-hilfe.screen.on p,
+#work-root #scr-hilfe.screen.on li {
+  color: #f3ead8;
+  font-size: 18px;
+  line-height: 1.5;
 }
-#scr-hilfe figcaption { font-size: 12px; text-align: center; margin-top: 4px; color: #e2c36a; }
-#scr-hilfe .menu { flex: 0 0 auto; }
+#work-root #scr-hilfe.screen.on .tiny {
+  font-size: 16px !important;
+}
+#work-root #scr-hilfe.screen.on table {
+  border-collapse: collapse;
+  margin: 12px 0 16px;
+  font-size: 17px;
+}
+#work-root #scr-hilfe.screen.on th,
+#work-root #scr-hilfe.screen.on td {
+  border-bottom: 1px solid rgba(226, 195, 106, 0.35);
+  padding: 8px 10px;
+  vertical-align: top;
+}
+#work-root #scr-hilfe.screen.on th { color: #e2c36a; font-weight: 600; }
+#work-root #scr-hilfe.screen.on .ex-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 10px 0 14px;
+}
+#work-root #scr-hilfe.screen.on figure { margin: 0; width: 148px; }
+#work-root #scr-hilfe.screen.on figure img {
+  width: 148px;
+  height: 208px;
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid #e2c36a;
+  display: block;
+  background: #1a1008;
+}
+#work-root #scr-hilfe.screen.on figcaption {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 4px;
+  color: #e2c36a;
+}
+#work-root #scr-hilfe.screen.on .menu {
+  flex: 0 0 auto;
+  width: min(360px, 92vw) !important;
+  margin: 8px auto 16px !important;
+}
+#work-root #scr-hilfe.screen.on .menu button {
+  font-size: 18px;
+  min-height: 48px;
+}
