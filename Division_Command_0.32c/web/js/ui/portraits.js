@@ -240,7 +240,7 @@
     'f13-luft-none': 'lt',
     'f13-burgund-none': 'lt',
     'f13-sand-none': 'lt',
-    'f14-feld-none': 'lt',
+    'f14-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f14-gala-none': 'lt',
     'f14-historisch-none': 'lt',
     'f14-khaki-none': 'lt',
