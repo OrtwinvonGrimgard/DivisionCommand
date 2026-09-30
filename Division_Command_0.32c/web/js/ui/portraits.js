@@ -118,7 +118,7 @@
     'f06-historisch-none': 'lt',
     'f07-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f09-dienst-none': 'lt',
+    'f09-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f10-dienst-none': 'lt',
     'f11-dienst-none': 'lt',
     'f12-dienst-none': 'lt',
