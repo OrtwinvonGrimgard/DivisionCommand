@@ -163,7 +163,15 @@
     'f06-burgund-none': 'lt',
     'f06-sand-none': 'lt',
     'f07-feld-none': 'lt',
-    'f07-gala-none': 'lt'
+    'f07-gala-none': 'lt',
+    'f07-historisch-none': 'lt',
+    'f07-khaki-none': 'lt',
+    'f07-oliv-none': 'lt',
+    'f07-stahl-none': 'lt',
+    'f07-jaeger-none': 'lt',
+    'f07-nacht-none': 'lt',
+    'f07-luft-none': 'lt',
+    'f07-burgund-none': 'lt'
   };
 
   function rankMeta(rank) {
