@@ -221,7 +221,13 @@
     'f12-gala-none': 'lt',
     'f12-historisch-none': 'lt',
     'f12-khaki-none': 'lt',
-    'f12-oliv-none': 'lt'
+    'f12-oliv-none': 'lt',
+    'f12-stahl-none': 'lt',
+    'f12-jaeger-none': 'lt',
+    'f12-nacht-none': 'lt',
+    'f12-luft-none': 'lt',
+    'f12-burgund-none': 'lt',
+    'f12-sand-none': 'lt'
   };
 
   function rankMeta(rank) {
