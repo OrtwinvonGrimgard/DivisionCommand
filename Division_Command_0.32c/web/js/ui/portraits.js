@@ -72,7 +72,7 @@
     m: 'mittel',
     s: 'älter'
   };
-  var VER = '8';
+  var VER = '9';
 
   function rankMeta(rank) {
     var id = String(rank || 'Lt');
@@ -130,73 +130,42 @@
     return 'assets/portraits/' + key + '.jpg?v=3';
   }
 
-  function candidates(id, rank, thumb) {
+  function exactName(kit, rank) {
+    kit = kit || {};
+    return (kit.face || 'f01') + '-' + (kit.uniform || 'dienst') + '-' + (kit.hat || 'none') + '-' + rankMeta(rank).age;
+  }
+
+  function candidates(id, rank) {
     var kit = parseKit(id);
     if (!kit) return [legacyUrl(id)];
-    var face = kit.face;
-    var uni = kit.uniform;
-    var hat = kit.hat;
-    var list = [];
-    function add(name) {
-      var u = fileUrl(name);
-      if (list.indexOf(u) < 0) list.push(u);
-    }
-    if (thumb) {
-      add(face + '-' + uni + '-' + hat + '-y');
-      add(face + '-' + uni + '-' + hat + '-lt');
-      add(face + '-' + uni + '-none-y');
-      add(face + '-' + uni + '-y');
-      add(face + '-dienst-none-y');
-      add(face + '-dienst-y');
-      add(face + '-base');
-      list.push(legacyUrl('lt-01'));
-      return list;
-    }
-    var age = ageOf(rank);
-    add(face + '-' + uni + '-' + hat + '-' + age);
-    if (hat !== 'none') add(face + '-' + uni + '-none-' + age);
-    add(face + '-' + uni + '-' + hat + '-y');
-    if (hat !== 'none') add(face + '-' + uni + '-none-y');
-    add(face + '-' + uni + '-y');
-    add(face + '-dienst-none-y');
-    add(face + '-dienst-y');
-    add(face + '-base');
-    list.push(legacyUrl('lt-01'));
-    return list;
+    return [fileUrl(exactName(kit, rank))];
   }
 
-  function src(id, rank, thumb) {
-    return candidates(id, rank, thumb)[0];
+  function src(id, rank) {
+    return candidates(id, rank)[0];
   }
 
-  function bindImg(img, id, rank, thumb) {
+  function bindImg(img, id, rank) {
     if (!img) return;
-    var list = candidates(id, rank, !!thumb);
+    var url = candidates(id, rank)[0];
     img.setAttribute('loading', 'lazy');
     img.setAttribute('decoding', 'async');
-    img.setAttribute('data-cands', list.join('|'));
-    img.setAttribute('data-ci', '0');
-    img.onerror = function () {
-      var c = (this.getAttribute('data-cands') || '').split('|');
-      var k = Number(this.getAttribute('data-ci') || 0) + 1;
-      if (k < c.length) {
-        this.setAttribute('data-ci', String(k));
-        this.src = c[k];
-      }
-    };
-    img.src = list[0];
+    img.removeAttribute('data-cands');
+    img.removeAttribute('data-ci');
+    img.onerror = null;
+    img.src = url;
   }
 
   function faceThumb(face) {
-    return candidates(face + '-dienst-none', 'Lt', true)[0];
+    return candidates(face + '-dienst-none', 'Lt')[0];
   }
 
   function uniformThumb(face, uniform) {
-    return candidates(face + '-' + uniform + '-none', 'Lt', true)[0];
+    return candidates(face + '-' + uniform + '-none', 'Lt')[0];
   }
 
   function hatThumb(face, uniform, hat) {
-    return candidates(face + '-' + uniform + '-' + hat, 'Lt', true)[0];
+    return candidates(face + '-' + uniform + '-' + hat, 'Lt')[0];
   }
 
   w.DCPortrait = {
@@ -210,6 +179,7 @@
     kitId: kitId,
     ageOf: ageOf,
     rankMeta: rankMeta,
+    exactName: exactName,
     candidates: candidates,
     src: src,
     bindImg: bindImg,
