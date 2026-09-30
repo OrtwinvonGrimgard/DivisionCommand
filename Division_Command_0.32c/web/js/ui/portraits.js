@@ -275,7 +275,14 @@
     'f16-sand-none': 'lt',
     'f01-dienst-schirm': 'lt',
     'f01-dienst-mutze': 'lt',
-    'f02-dienst-mutze': 'lt'
+    'f02-dienst-mutze': 'lt',
+    'f03-dienst-schirm': 'lt',
+    'f03-dienst-mutze': 'lt',
+    'f04-dienst-mutze': 'lt',
+    'f05-dienst-mutze': 'lt',
+    'f06-dienst-mutze': 'lt',
+    'f07-dienst-schirm': 'lt',
+    'f07-dienst-mutze': 'lt'
   };
 
   function rankMeta(rank) {
