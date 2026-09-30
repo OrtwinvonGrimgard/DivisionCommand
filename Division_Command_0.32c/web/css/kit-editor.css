@@ -1,0 +1,66 @@
+/* Offiziersakte: Vollbild, scrollbar, groessere Kacheln */
+#title-root:has(#scr-setup.on) {
+  align-items: stretch !important;
+  justify-content: stretch !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+#title-root:has(#scr-setup.on) .title-brand {
+  display: none !important;
+}
+#title-root:has(#scr-setup.on) .title-panel,
+#title-root:has(#scr-setup.on) #menu-panel {
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  margin: 0 !important;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#scr-setup.screen.on,
+#scr-setup.on {
+  display: flex !important;
+  flex-direction: column;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  max-height: 100dvh !important;
+  margin: 0 !important;
+  padding: 16px 22px 28px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+  background: #100606f4;
+  border: 0;
+  box-shadow: none;
+}
+#scr-setup.on .kit-editor {
+  align-items: flex-start;
+}
+#scr-setup.on .kit-editor .char-preview img {
+  width: 180px;
+  height: 240px;
+}
+.kit-grid.faces {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+.kit-grid.uniforms {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.kit-grid.hats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.kit-grid {
+  overflow: visible;
+}
+#work-root #scr-user.screen.on {
+  overflow-y: auto !important;
+  max-height: 100dvh;
+  padding-bottom: 32px;
+}
+@media (max-width: 900px) {
+  .kit-grid.faces { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .kit-grid.uniforms { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
