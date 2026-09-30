@@ -156,7 +156,14 @@
     'f03-sand-none': 'lt',
     'f06-khaki-none': 'lt',
     'f06-oliv-none': 'lt',
-    'f06-stahl-none': 'lt'
+    'f06-stahl-none': 'lt',
+    'f06-jaeger-none': 'lt',
+    'f06-nacht-none': 'lt',
+    'f06-luft-none': 'lt',
+    'f06-burgund-none': 'lt',
+    'f06-sand-none': 'lt',
+    'f07-feld-none': 'lt',
+    'f07-gala-none': 'lt'
   };
 
   function rankMeta(rank) {
