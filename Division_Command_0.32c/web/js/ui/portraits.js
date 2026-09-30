@@ -87,7 +87,7 @@
     'f02-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f02-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f02-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f02-oliv-none': 'lt',
+    'f02-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f02-stahl-none': 'lt',
     'f02-jaeger-none': 'lt',
     'f02-nacht-none': 'lt',
