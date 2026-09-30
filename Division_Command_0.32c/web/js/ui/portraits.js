@@ -273,7 +273,7 @@
     'f16-luft-none': 'lt',
     'f16-burgund-none': 'lt',
     'f16-sand-none': 'lt',
-    'f01-dienst-schirm': 'lt',
+    'f01-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f01-dienst-mutze': 'lt',
     'f02-dienst-mutze': 'lt',
     'f03-dienst-schirm': 'lt',
