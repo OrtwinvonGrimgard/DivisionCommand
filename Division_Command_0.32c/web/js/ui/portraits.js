@@ -144,7 +144,11 @@
     'f05-khaki-none': 'lt',
     'f05-oliv-none': 'lt',
     'f05-stahl-none': 'lt',
-    'f05-jaeger-none': 'lt'
+    'f05-jaeger-none': 'lt',
+    'f05-nacht-none': 'lt',
+    'f05-luft-none': 'lt',
+    'f05-burgund-none': 'lt',
+    'f05-sand-none': 'lt'
   };
 
   function rankMeta(rank) {
