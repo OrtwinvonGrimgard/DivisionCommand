@@ -209,7 +209,7 @@
     'f10-sand-none': 'lt',
     'f11-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f11-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f11-historisch-none': 'lt',
+    'f11-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f11-khaki-none': 'lt',
     'f11-oliv-none': 'lt',
     'f11-stahl-none': 'lt',
