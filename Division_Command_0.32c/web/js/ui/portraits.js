@@ -243,7 +243,13 @@
     'f14-gala-none': 'lt',
     'f14-historisch-none': 'lt',
     'f14-khaki-none': 'lt',
-    'f14-oliv-none': 'lt'
+    'f14-oliv-none': 'lt',
+    'f14-stahl-none': 'lt',
+    'f14-jaeger-none': 'lt',
+    'f14-nacht-none': 'lt',
+    'f14-luft-none': 'lt',
+    'f14-burgund-none': 'lt',
+    'f14-sand-none': 'lt'
   };
 
   function rankMeta(rank) {
