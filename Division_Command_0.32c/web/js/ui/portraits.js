@@ -123,7 +123,7 @@
     'f11-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f12-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f14-dienst-none': 'lt',
+    'f14-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-dienst-none': 'lt',
     'f16-dienst-none': 'lt',
     'f01-khaki-none': 'lt',
