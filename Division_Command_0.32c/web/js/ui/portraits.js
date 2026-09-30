@@ -112,7 +112,7 @@
     'f05-gala-none': 'lt',
     'f05-historisch-none': 'lt',
     'f06-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f06-dienst-schirm': 'lt',
+    'f06-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f06-feld-none': 'lt',
     'f06-gala-none': 'lt',
     'f06-historisch-none': 'lt',
