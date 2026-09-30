@@ -116,7 +116,7 @@
     'f06-feld-none': 'lt',
     'f06-gala-none': 'lt',
     'f06-historisch-none': 'lt',
-    'f07-dienst-none': 'lt',
+    'f07-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-dienst-none': 'lt',
     'f09-dienst-none': 'lt',
     'f10-dienst-none': 'lt',
