@@ -265,7 +265,13 @@
     'f16-gala-none': 'lt',
     'f16-historisch-none': 'lt',
     'f16-khaki-none': 'lt',
-    'f16-oliv-none': 'lt'
+    'f16-oliv-none': 'lt',
+    'f16-stahl-none': 'lt',
+    'f16-jaeger-none': 'lt',
+    'f16-nacht-none': 'lt',
+    'f16-luft-none': 'lt',
+    'f16-burgund-none': 'lt',
+    'f16-sand-none': 'lt'
   };
 
   function rankMeta(rank) {
