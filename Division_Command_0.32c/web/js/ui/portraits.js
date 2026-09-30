@@ -46,7 +46,8 @@
 
   var HATS = [
     { id: 'none', label: 'H01 Ohne' },
-    { id: 'schirm', label: 'H02 Schirm' }
+    { id: 'schirm', label: 'H02 Schirm' },
+    { id: 'mutze', label: 'H03 Mütze' }
   ];
 
   var RANKS = [
@@ -72,7 +73,7 @@
     m: 'mittel',
     s: 'älter'
   };
-  var VER = '11';
+  var VER = '12';
 
   /* Nur Dateien, die wirklich im Repo liegen. Kein Request auf Fehlendes. */
   var HAVE = {
@@ -310,7 +311,7 @@
       hat = 'none';
     }
     if (!UNI_IDS[uni]) uni = 'dienst';
-    if (hat !== 'none' && hat !== 'schirm') hat = 'none';
+    if (hat !== 'none' && hat !== 'schirm' && hat !== 'mutze') hat = 'none';
     return { face: m[1], uniform: uni, hat: hat };
   }
 
