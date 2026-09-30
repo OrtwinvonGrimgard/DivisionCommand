@@ -244,7 +244,7 @@
     'f14-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f14-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f14-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f14-oliv-none': 'lt',
+    'f14-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f14-stahl-none': 'lt',
     'f14-jaeger-none': 'lt',
     'f14-nacht-none': 'lt',
