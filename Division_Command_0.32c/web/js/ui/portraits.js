@@ -167,7 +167,7 @@
     'f07-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f07-oliv-none': 'lt',
+    'f07-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-stahl-none': 'lt',
     'f07-jaeger-none': 'lt',
     'f07-nacht-none': 'lt',
