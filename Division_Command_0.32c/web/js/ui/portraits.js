@@ -280,7 +280,7 @@
     'f03-dienst-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-dienst-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f05-dienst-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f06-dienst-mutze': 'lt',
+    'f06-dienst-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-dienst-schirm': 'lt',
     'f07-dienst-mutze': 'lt',
     'f08-dienst-schirm': 'lt',
