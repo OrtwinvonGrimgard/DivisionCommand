@@ -100,7 +100,7 @@
     'f03-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f03-stahl-none': 'lt',
+    'f03-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
