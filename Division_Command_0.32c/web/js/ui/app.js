@@ -35,6 +35,10 @@
     var list = []; // lokale Variable
     var key = String(filename); // lokale Variable
     var stem = key.replace(/\.png$/i, '').replace(/\.jpg$/i, ''); // lokale Variable
+    if (/^f\d{2}-/.test(stem)) { // Kit-Porträt: nicht in assets/cards suchen
+      if (window.DCPortrait) { var u = DCPortrait.src(stem, 'Lt') || DCPortrait.src(stem.replace(/-(lt|olt|hptm|maj|obstlt|obst|gen|y|m|s)$/,''), 'Lt'); return u ? [u] : []; }
+      return [];
+    }
     if (window.DC_IMAGES) { // Zweig nur bei zutreffender Bedingung
       if (window.DC_IMAGES[key]) list.push(window.DC_IMAGES[key]); // Zweig nur bei zutreffender Bedingung
       if (window.DC_IMAGES[stem + '.png']) list.push(window.DC_IMAGES[stem + '.png']); // Zweig nur bei zutreffender Bedingung

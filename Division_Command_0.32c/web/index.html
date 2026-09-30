@@ -608,7 +608,7 @@
   <script src="js/ai/bot.js?v=032d5"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/library.js?v=030n"></script>
-  <script src="js/ui/portraits.js?v=kit4"></script>
+  <script src="js/ui/portraits.js?v=kit5"></script>
   <script src="js/ui/app.js?v=kit1"></script>
   <script src="js/ui/hand-drag.js?v=032d2"></script>
   <script src="js/net.js?v=030c"></script>
@@ -960,6 +960,10 @@
         var P = window.DCPortrait;
         if (!P) return;
         var st = kitDraft[which];
+        var uniList = P.uniformsFor(st.face);
+        if (!uniList.some(function (u) { return u.id === st.uniform; })) st.uniform = 'dienst';
+        var hatList = P.hatsFor(st.face, st.uniform);
+        if (!hatList.some(function (h) { return h.id === st.hat; })) st.hat = 'none';
         var id = P.kitId(st);
         var meta = P.rankMeta(st.rank);
         var prev = document.getElementById(which + '-preview');
@@ -978,12 +982,12 @@
             '<img loading="lazy" decoding="async" alt="' + it.label + '">' +
             '<span>' + it.label + '</span></button>';
         });
-        fill(which + '-uniforms', P.UNIFORMS, st.uniform, function (it, on) {
+        fill(which + '-uniforms', uniList, st.uniform, function (it, on) {
           return '<button type="button" class="kit-tile' + (on ? ' on' : '') + '" data-uniform="' + it.id + '" title="' + (it.hint || it.label) + '">' +
             '<img loading="lazy" decoding="async" alt="">' +
             '<span>' + it.label + '</span></button>';
         });
-        fill(which + '-hats', P.HATS, st.hat, function (it, on) {
+        fill(which + '-hats', hatList, st.hat, function (it, on) {
           return '<button type="button" class="kit-tile' + (on ? ' on' : '') + '" data-hat="' + it.id + '">' +
             '<img loading="lazy" decoding="async" alt="">' +
             '<span>' + it.label + '</span></button>';
@@ -991,9 +995,9 @@
         var faceImgs = document.querySelectorAll('#' + which + '-faces img');
         P.FACES.forEach(function (it, i) { if (faceImgs[i]) P.bindImg(faceImgs[i], it.id + '-dienst-none', 'Lt', true); });
         var uniImgs = document.querySelectorAll('#' + which + '-uniforms img');
-        P.UNIFORMS.forEach(function (it, i) { if (uniImgs[i]) P.bindImg(uniImgs[i], st.face + '-' + it.id + '-none', 'Lt', true); });
+        uniList.forEach(function (it, i) { if (uniImgs[i]) P.bindImg(uniImgs[i], st.face + '-' + it.id + '-none', 'Lt', true); });
         var hatImgs = document.querySelectorAll('#' + which + '-hats img');
-        P.HATS.forEach(function (it, i) { if (hatImgs[i]) P.bindImg(hatImgs[i], st.face + '-' + st.uniform + '-' + it.id, 'Lt', true); });
+        hatList.forEach(function (it, i) { if (hatImgs[i]) P.bindImg(hatImgs[i], st.face + '-' + st.uniform + '-' + it.id, 'Lt', true); });
         var ages = document.getElementById(which + '-ages');
         if (ages) {
           ages.innerHTML = P.RANKS.map(function (r) {

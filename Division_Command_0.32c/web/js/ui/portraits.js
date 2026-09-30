@@ -72,7 +72,60 @@
     m: 'mittel',
     s: 'älter'
   };
-  var VER = '9';
+  var VER = '10';
+
+  /* Nur Dateien, die wirklich im Repo liegen. Kein Request auf Fehlendes. */
+  var HAVE = {
+    'f01-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f01-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f01-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f01-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f02-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f02-dienst-schirm': 'lt',
+    'f02-feld-none': 'lt',
+    'f02-gala-none': 'lt',
+    'f02-historisch-none': 'lt',
+    'f02-khaki-none': 'lt',
+    'f02-oliv-none': 'lt',
+    'f02-stahl-none': 'lt',
+    'f02-jaeger-none': 'lt',
+    'f02-nacht-none': 'lt',
+    'f02-luft-none': 'lt',
+    'f02-burgund-none': 'lt',
+    'f02-sand-none': 'lt',
+    'f03-dienst-none': 'lt',
+    'f03-feld-none': 'lt',
+    'f03-gala-none': 'lt',
+    'f03-historisch-none': 'lt',
+    'f03-khaki-none': 'lt',
+    'f03-oliv-none': 'lt',
+    'f03-stahl-none': 'lt',
+    'f04-dienst-none': 'lt',
+    'f04-dienst-schirm': 'lt',
+    'f04-feld-none': 'lt',
+    'f04-gala-none': 'lt',
+    'f04-historisch-none': 'lt',
+    'f05-dienst-none': 'lt',
+    'f05-dienst-schirm': 'lt',
+    'f05-feld-none': 'lt',
+    'f05-gala-none': 'lt',
+    'f05-historisch-none': 'lt',
+    'f06-dienst-none': 'lt',
+    'f06-dienst-schirm': 'lt',
+    'f06-feld-none': 'lt',
+    'f06-gala-none': 'lt',
+    'f06-historisch-none': 'lt',
+    'f07-dienst-none': 'lt',
+    'f08-dienst-none': 'lt',
+    'f09-dienst-none': 'lt',
+    'f10-dienst-none': 'lt',
+    'f11-dienst-none': 'lt',
+    'f12-dienst-none': 'lt',
+    'f13-dienst-none': 'lt',
+    'f14-dienst-none': 'lt',
+    'f15-dienst-none': 'lt',
+    'f16-dienst-none': 'lt'
+  };
 
   function rankMeta(rank) {
     var id = String(rank || 'Lt');
@@ -132,28 +185,52 @@
 
   function exactName(kit, rank) {
     kit = kit || {};
-    return (kit.face || 'f01') + '-' + (kit.uniform || 'dienst') + '-' + (kit.hat || 'none') + '-' + rankMeta(rank).age;
+    return (kit.face || 'f01') + '-' + (kit.uniform || 'dienst') + '-' + (kit.hat || 'none') + '-' + ageOf(rank);
+  }
+
+  function has(id, rank) {
+    var kit = parseKit(id);
+    if (!kit) return false;
+    var ages = HAVE[kitId(kit)];
+    if (!ages) return false;
+    return (',' + ages + ',').indexOf(',' + ageOf(rank) + ',') >= 0;
+  }
+
+  function uniformsFor(face) {
+    return UNIFORMS.filter(function (u) {
+      return has((face || 'f01') + '-' + u.id + '-none', 'Lt');
+    });
+  }
+
+  function hatsFor(face, uniform) {
+    return HATS.filter(function (h) {
+      return has((face || 'f01') + '-' + (uniform || 'dienst') + '-' + h.id, 'Lt');
+    });
   }
 
   function candidates(id, rank) {
+    if (!has(id, rank)) return [];
     var kit = parseKit(id);
-    if (!kit) return [legacyUrl(id)];
+    if (!kit) return [];
     return [fileUrl(exactName(kit, rank))];
   }
 
   function src(id, rank) {
-    return candidates(id, rank)[0];
+    return candidates(id, rank)[0] || '';
   }
 
   function bindImg(img, id, rank) {
     if (!img) return;
-    var url = candidates(id, rank)[0];
-    img.setAttribute('loading', 'lazy');
+    img.setAttribute('loading', img.getAttribute('loading') || 'lazy');
     img.setAttribute('decoding', 'async');
     img.removeAttribute('data-cands');
-    img.removeAttribute('data-ci');
-    img.onerror = null;
-    img.src = url;
+    img.onerror = function () { this.removeAttribute('src'); };
+    var url = src(id, rank);
+    if (url) img.src = url;
+    else {
+      img.removeAttribute('src');
+      img.alt = '';
+    }
   }
 
   function faceThumb(face) {
@@ -179,8 +256,12 @@
     kitId: kitId,
     ageOf: ageOf,
     rankMeta: rankMeta,
-    exactName: exactName,
     candidates: candidates,
+    exactName: exactName,
+    has: has,
+    HAVE: HAVE,
+    uniformsFor: uniformsFor,
+    hatsFor: hatsFor,
     src: src,
     bindImg: bindImg,
     faceThumb: faceThumb,
