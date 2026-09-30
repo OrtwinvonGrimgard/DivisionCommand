@@ -294,7 +294,7 @@
     'f12-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f12-dienst-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f13-dienst-mutze': 'lt',
+    'f13-dienst-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f14-dienst-schirm': 'lt',
     'f14-dienst-mutze': 'lt',
     'f15-dienst-schirm': 'lt',
