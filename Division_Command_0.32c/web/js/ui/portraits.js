@@ -290,7 +290,15 @@
     'f10-dienst-schirm': 'lt',
     'f10-dienst-mutze': 'lt',
     'f11-dienst-schirm': 'lt',
-    'f11-dienst-mutze': 'lt'
+    'f11-dienst-mutze': 'lt',
+    'f12-dienst-schirm': 'lt',
+    'f12-dienst-mutze': 'lt',
+    'f13-dienst-schirm': 'lt',
+    'f13-dienst-mutze': 'lt',
+    'f14-dienst-schirm': 'lt',
+    'f14-dienst-mutze': 'lt',
+    'f15-dienst-schirm': 'lt',
+    'f15-dienst-mutze': 'lt'
   };
 
   function rankMeta(rank) {
