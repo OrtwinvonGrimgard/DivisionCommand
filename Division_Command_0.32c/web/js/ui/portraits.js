@@ -94,7 +94,7 @@
     'f02-luft-none': 'lt',
     'f02-burgund-none': 'lt',
     'f02-sand-none': 'lt',
-    'f03-dienst-none': 'lt',
+    'f03-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-feld-none': 'lt',
     'f03-gala-none': 'lt',
     'f03-historisch-none': 'lt',
@@ -298,7 +298,9 @@
     'f14-dienst-schirm': 'lt',
     'f14-dienst-mutze': 'lt',
     'f15-dienst-schirm': 'lt',
-    'f15-dienst-mutze': 'lt'
+    'f15-dienst-mutze': 'lt',
+    'f16-dienst-schirm': 'lt',
+    'f16-dienst-mutze': 'lt'
   };
 
   function rankMeta(rank) {
