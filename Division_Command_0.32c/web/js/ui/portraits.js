@@ -72,7 +72,7 @@
     m: 'mittel',
     s: 'älter'
   };
-  var VER = '10';
+  var VER = '11';
 
   /* Nur Dateien, die wirklich im Repo liegen. Kein Request auf Fehlendes. */
   var HAVE = {
@@ -124,7 +124,27 @@
     'f13-dienst-none': 'lt',
     'f14-dienst-none': 'lt',
     'f15-dienst-none': 'lt',
-    'f16-dienst-none': 'lt'
+    'f16-dienst-none': 'lt',
+    'f01-khaki-none': 'lt',
+    'f01-oliv-none': 'lt',
+    'f01-stahl-none': 'lt',
+    'f01-jaeger-none': 'lt',
+    'f01-nacht-none': 'lt',
+    'f01-luft-none': 'lt',
+    'f01-burgund-none': 'lt',
+    'f01-sand-none': 'lt',
+    'f04-khaki-none': 'lt',
+    'f04-oliv-none': 'lt',
+    'f04-stahl-none': 'lt',
+    'f04-jaeger-none': 'lt',
+    'f04-nacht-none': 'lt',
+    'f04-luft-none': 'lt',
+    'f04-burgund-none': 'lt',
+    'f04-sand-none': 'lt',
+    'f05-khaki-none': 'lt',
+    'f05-oliv-none': 'lt',
+    'f05-stahl-none': 'lt',
+    'f05-jaeger-none': 'lt'
   };
 
   function rankMeta(rank) {
