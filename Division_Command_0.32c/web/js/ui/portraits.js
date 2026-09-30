@@ -169,7 +169,7 @@
     'f07-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f07-jaeger-none': 'lt',
+    'f07-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-nacht-none': 'lt',
     'f07-luft-none': 'lt',
     'f07-burgund-none': 'lt',
