@@ -208,7 +208,7 @@
     'f10-burgund-none': 'lt',
     'f10-sand-none': 'lt',
     'f11-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f11-gala-none': 'lt',
+    'f11-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f11-historisch-none': 'lt',
     'f11-khaki-none': 'lt',
     'f11-oliv-none': 'lt',
