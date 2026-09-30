@@ -293,7 +293,7 @@
     'f11-dienst-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f12-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f12-dienst-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f13-dienst-schirm': 'lt',
+    'f13-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-dienst-mutze': 'lt',
     'f14-dienst-schirm': 'lt',
     'f14-dienst-mutze': 'lt',
