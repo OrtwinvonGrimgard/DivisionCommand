@@ -299,7 +299,7 @@
     'f14-dienst-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-dienst-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f16-dienst-schirm': 'lt',
+    'f16-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-dienst-mutze': 'lt'
   };
 
