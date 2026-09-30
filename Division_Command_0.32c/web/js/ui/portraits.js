@@ -252,7 +252,7 @@
     'f14-burgund-none': 'lt',
     'f14-sand-none': 'lt',
     'f15-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f15-gala-none': 'lt',
+    'f15-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-historisch-none': 'lt',
     'f15-khaki-none': 'lt',
     'f15-oliv-none': 'lt',
