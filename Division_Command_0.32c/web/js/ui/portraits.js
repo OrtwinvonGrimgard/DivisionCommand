@@ -102,7 +102,7 @@
     'f03-oliv-none': 'lt',
     'f03-stahl-none': 'lt',
     'f04-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f04-dienst-schirm': 'lt',
+    'f04-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-feld-none': 'lt',
     'f04-gala-none': 'lt',
     'f04-historisch-none': 'lt',
