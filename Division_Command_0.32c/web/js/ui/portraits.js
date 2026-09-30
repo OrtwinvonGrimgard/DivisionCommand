@@ -136,7 +136,7 @@
     'f01-sand-none': 'lt',
     'f04-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f04-stahl-none': 'lt',
+    'f04-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-jaeger-none': 'lt',
     'f04-nacht-none': 'lt',
     'f04-luft-none': 'lt',
