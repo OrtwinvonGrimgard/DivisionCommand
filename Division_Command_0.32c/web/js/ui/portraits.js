@@ -145,7 +145,7 @@
     'f05-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f05-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f05-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f05-jaeger-none': 'lt',
+    'f05-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f05-nacht-none': 'lt',
     'f05-luft-none': 'lt',
     'f05-burgund-none': 'lt',
