@@ -185,7 +185,7 @@
     'f08-luft-none': 'lt',
     'f08-burgund-none': 'lt',
     'f08-sand-none': 'lt',
-    'f09-feld-none': 'lt',
+    'f09-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f09-gala-none': 'lt',
     'f09-historisch-none': 'lt',
     'f09-khaki-none': 'lt',
