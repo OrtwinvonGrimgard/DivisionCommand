@@ -274,7 +274,8 @@
     'f16-burgund-none': 'lt',
     'f16-sand-none': 'lt',
     'f01-dienst-schirm': 'lt',
-    'f01-dienst-mutze': 'lt'
+    'f01-dienst-mutze': 'lt',
+    'f02-dienst-mutze': 'lt'
   };
 
   function rankMeta(rank) {
