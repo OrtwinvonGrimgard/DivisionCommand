@@ -148,7 +148,15 @@
     'f05-nacht-none': 'lt',
     'f05-luft-none': 'lt',
     'f05-burgund-none': 'lt',
-    'f05-sand-none': 'lt'
+    'f05-sand-none': 'lt',
+    'f03-jaeger-none': 'lt',
+    'f03-nacht-none': 'lt',
+    'f03-luft-none': 'lt',
+    'f03-burgund-none': 'lt',
+    'f03-sand-none': 'lt',
+    'f06-khaki-none': 'lt',
+    'f06-oliv-none': 'lt',
+    'f06-stahl-none': 'lt'
   };
 
   function rankMeta(rank) {
