@@ -105,7 +105,7 @@
     'f04-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f04-historisch-none': 'lt',
+    'f04-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f05-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f05-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f05-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
