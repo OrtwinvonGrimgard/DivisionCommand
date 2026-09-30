@@ -199,7 +199,13 @@
     'f10-gala-none': 'lt',
     'f10-historisch-none': 'lt',
     'f10-khaki-none': 'lt',
-    'f10-oliv-none': 'lt'
+    'f10-oliv-none': 'lt',
+    'f10-stahl-none': 'lt',
+    'f10-jaeger-none': 'lt',
+    'f10-nacht-none': 'lt',
+    'f10-luft-none': 'lt',
+    'f10-burgund-none': 'lt',
+    'f10-sand-none': 'lt'
   };
 
   function rankMeta(rank) {
