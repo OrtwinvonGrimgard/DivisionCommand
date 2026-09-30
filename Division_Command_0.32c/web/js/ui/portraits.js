@@ -210,7 +210,7 @@
     'f11-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f11-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f11-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f11-khaki-none': 'lt',
+    'f11-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f11-oliv-none': 'lt',
     'f11-stahl-none': 'lt',
     'f11-jaeger-none': 'lt',
