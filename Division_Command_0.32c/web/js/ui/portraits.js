@@ -128,7 +128,7 @@
     'f16-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f01-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f01-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f01-stahl-none': 'lt',
+    'f01-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f01-jaeger-none': 'lt',
     'f01-nacht-none': 'lt',
     'f01-luft-none': 'lt',
