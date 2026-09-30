@@ -267,7 +267,7 @@
     'f16-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f16-stahl-none': 'lt',
+    'f16-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-jaeger-none': 'lt',
     'f16-nacht-none': 'lt',
     'f16-luft-none': 'lt',
