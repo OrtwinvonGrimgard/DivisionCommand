@@ -242,7 +242,7 @@
     'f13-sand-none': 'lt',
     'f14-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f14-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f14-historisch-none': 'lt',
+    'f14-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f14-khaki-none': 'lt',
     'f14-oliv-none': 'lt',
     'f14-stahl-none': 'lt',
