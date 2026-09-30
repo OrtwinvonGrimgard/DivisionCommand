@@ -233,7 +233,7 @@
     'f13-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f13-oliv-none': 'lt',
+    'f13-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-stahl-none': 'lt',
     'f13-jaeger-none': 'lt',
     'f13-nacht-none': 'lt',
