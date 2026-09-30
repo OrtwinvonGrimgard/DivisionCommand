@@ -231,7 +231,7 @@
     'f12-sand-none': 'lt',
     'f13-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f13-historisch-none': 'lt',
+    'f13-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-khaki-none': 'lt',
     'f13-oliv-none': 'lt',
     'f13-stahl-none': 'lt',
