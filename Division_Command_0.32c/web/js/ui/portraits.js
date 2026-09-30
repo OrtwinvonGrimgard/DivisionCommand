@@ -221,7 +221,7 @@
     'f12-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f12-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f12-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f12-khaki-none': 'lt',
+    'f12-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f12-oliv-none': 'lt',
     'f12-stahl-none': 'lt',
     'f12-jaeger-none': 'lt',
