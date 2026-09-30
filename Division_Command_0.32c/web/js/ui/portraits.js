@@ -191,7 +191,7 @@
     'f09-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f09-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f09-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f09-jaeger-none': 'lt',
+    'f09-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f09-nacht-none': 'lt',
     'f09-luft-none': 'lt',
     'f09-burgund-none': 'lt',
