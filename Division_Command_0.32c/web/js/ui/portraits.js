@@ -254,7 +254,7 @@
     'f15-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f15-khaki-none': 'lt',
+    'f15-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-oliv-none': 'lt',
     'f15-stahl-none': 'lt',
     'f15-jaeger-none': 'lt',
