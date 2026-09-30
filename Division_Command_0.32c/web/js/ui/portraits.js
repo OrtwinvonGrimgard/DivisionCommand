@@ -272,7 +272,9 @@
     'f16-nacht-none': 'lt',
     'f16-luft-none': 'lt',
     'f16-burgund-none': 'lt',
-    'f16-sand-none': 'lt'
+    'f16-sand-none': 'lt',
+    'f01-dienst-schirm': 'lt',
+    'f01-dienst-mutze': 'lt'
   };
 
   function rankMeta(rank) {
