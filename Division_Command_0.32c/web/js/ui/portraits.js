@@ -177,7 +177,7 @@
     'f08-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f08-khaki-none': 'lt',
+    'f08-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-oliv-none': 'lt',
     'f08-stahl-none': 'lt',
     'f08-jaeger-none': 'lt',
