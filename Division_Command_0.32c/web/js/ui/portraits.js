@@ -183,7 +183,15 @@
     'f08-nacht-none': 'lt',
     'f08-luft-none': 'lt',
     'f08-burgund-none': 'lt',
-    'f08-sand-none': 'lt'
+    'f08-sand-none': 'lt',
+    'f09-feld-none': 'lt',
+    'f09-gala-none': 'lt',
+    'f09-historisch-none': 'lt',
+    'f09-khaki-none': 'lt',
+    'f09-oliv-none': 'lt',
+    'f09-stahl-none': 'lt',
+    'f09-jaeger-none': 'lt',
+    'f09-nacht-none': 'lt'
   };
 
   function rankMeta(rank) {
