@@ -189,7 +189,7 @@
     'f09-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f09-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f09-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f09-oliv-none': 'lt',
+    'f09-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f09-stahl-none': 'lt',
     'f09-jaeger-none': 'lt',
     'f09-nacht-none': 'lt',
