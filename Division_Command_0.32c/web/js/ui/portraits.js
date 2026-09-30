@@ -178,7 +178,12 @@
     'f08-historisch-none': 'lt',
     'f08-khaki-none': 'lt',
     'f08-oliv-none': 'lt',
-    'f08-stahl-none': 'lt'
+    'f08-stahl-none': 'lt',
+    'f08-jaeger-none': 'lt',
+    'f08-nacht-none': 'lt',
+    'f08-luft-none': 'lt',
+    'f08-burgund-none': 'lt',
+    'f08-sand-none': 'lt'
   };
 
   function rankMeta(rank) {
