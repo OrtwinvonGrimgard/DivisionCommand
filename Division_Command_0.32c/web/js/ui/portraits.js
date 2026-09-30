@@ -165,7 +165,7 @@
     'f06-sand-none': 'lt',
     'f07-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f07-historisch-none': 'lt',
+    'f07-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-khaki-none': 'lt',
     'f07-oliv-none': 'lt',
     'f07-stahl-none': 'lt',
