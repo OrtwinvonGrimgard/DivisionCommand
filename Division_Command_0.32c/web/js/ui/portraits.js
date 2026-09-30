@@ -197,7 +197,7 @@
     'f09-burgund-none': 'lt',
     'f09-sand-none': 'lt',
     'f10-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f10-gala-none': 'lt',
+    'f10-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f10-historisch-none': 'lt',
     'f10-khaki-none': 'lt',
     'f10-oliv-none': 'lt',
