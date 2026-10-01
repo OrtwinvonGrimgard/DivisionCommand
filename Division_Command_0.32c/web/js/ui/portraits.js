@@ -260,7 +260,7 @@
     'f15-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f15-burgund-none': 'lt',
+    'f15-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-sand-none': 'lt',
     'f16-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
