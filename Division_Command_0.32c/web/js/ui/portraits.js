@@ -195,7 +195,7 @@
     'f09-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f09-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f09-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f09-sand-none': 'lt',
+    'f09-sand-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f10-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f10-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f10-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
