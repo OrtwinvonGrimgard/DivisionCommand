@@ -110,6 +110,7 @@
     'f04-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f04-feld-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-feld-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
