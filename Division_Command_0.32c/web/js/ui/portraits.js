@@ -79,6 +79,7 @@
   var HAVE = {
     'f01-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f01-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f01-feld-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f01-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f01-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f02-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
