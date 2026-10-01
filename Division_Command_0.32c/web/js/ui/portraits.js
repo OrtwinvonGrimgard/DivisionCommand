@@ -86,6 +86,7 @@
     'f02-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f02-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f02-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f02-feld-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f02-feld-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f02-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f02-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
