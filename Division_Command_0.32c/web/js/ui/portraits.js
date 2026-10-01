@@ -293,6 +293,7 @@
     'f15-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-sand-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f16-feld-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-feld-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
