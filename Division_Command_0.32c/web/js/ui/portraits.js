@@ -117,6 +117,7 @@
     'f05-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f05-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f05-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f05-feld-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f05-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f05-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f06-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
