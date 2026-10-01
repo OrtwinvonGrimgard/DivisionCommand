@@ -183,7 +183,7 @@
     'f08-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f08-burgund-none': 'lt',
+    'f08-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-sand-none': 'lt',
     'f09-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f09-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
