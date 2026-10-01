@@ -936,6 +936,89 @@ Die Tiefe des Spiels soll primär aus Entscheidungen und Karteninteraktionen ent
 
 ---
 
+
+# 34. Offizier, Nationen, Ränge
+
+Stand dieser Planung: 2026-10-01. Das ist Umfang, keine Kampfregel. Die Doktrin bestimmt weiter, wie gekämpft wird.
+
+## 34.1 Gesichter
+
+28 Gesichter. Sieben Nationen, vier Gesichter je Nation:
+
+- eine aufrechte Frau
+- eine düstere Frau
+- ein aufrechter Mann
+- ein düsterer Mann
+
+Haarfarbe und Augenfarbe sind Teil des Gesichts, keine eigene Wahl. Jedes Gesicht darf jede Nation tragen. Die Kampagne wertet die Nation, nicht das Gesicht.
+
+Bart und Schnauzer gibt es nur bei den 14 Männern. Acht Bartstufen und sechs Schnauzerstufen, getrennt, in drei Altersfarben. Bei den Frauen altert nur das Gesicht mit dem Rang.
+
+## 34.2 Nationen
+
+| Nation | Kampagnenton | Gegner in der Geschichte |
+|---|---|---|
+| Vael | hell, gemeinsam | viele kleine Verbündete, Schutz |
+| Rothain | alte Ordnung | Aufmarsch, Rang, Strafe bei Regelbruch |
+| Steinmark | nüchtern | zäh, wenig Effekt, hält die Stellung |
+| Vesper | Eid und Fluch | Opfer, Flüche, Narben, die schlecht heilen |
+| Karsk | Fläche und Sturm | Flächenschaden, rücksichtslose Stöße |
+| Sahr | Gelände | Überfall, Nachschub abschneiden |
+| Ossar | Schrecken | Angst, Reliquien, Knochen auf Schwarz |
+
+Die Nation ist keine zweite Doktrin und keine Sperre im Deckbau.
+
+## 34.3 Ränge
+
+Dreizehn Ränge, in allen Nationen dieselben Namen. Zeichen, Farbe und Ort unterscheiden sich.
+
+| Gruppe | Ränge | Zeichen |
+|---|---|---|
+| Kadett | Fähnrich | ein Kadettenzeichen |
+| Kompanie | Leutnant, Oberleutnant, Hauptmann | 1, 2, 3 |
+| Stab | Major, Oberstleutnant, Oberst | 1, 2, 3, neue Farbe |
+| Generale | Brigadegeneral, Generalmajor, Generalleutnant, General | 1 bis 4, neue Farbe |
+| Marschälle | Feldmarschall, Generalfeldmarschall | Marschallzeichen, dann dasselbe mit einem Zusatz |
+
+Das Kadettenzeichen fällt beim Leutnant weg. Der Fähnrich trägt es schon, der Kragen ist nicht leer.
+
+| Nation | Ort | Kadett | Kompanie | Stab | Generale | Feldmarschall | Generalfeldmarschall |
+|---|---|---|---|---|---|---|---|
+| Vael | Kragen | gebrochener Ring, weiße Schnur | Silberringe | blaustahlene Ringe | weißgoldene Ringe | Doppelring | Doppelring mit Punkt |
+| Rothain | Kragen | leerer Silberrahmen, weiße Kordel | Silbersterne | Goldsterne | Gold auf Rot | Eichenlaub | Eichenlaub, zweiter Kranz |
+| Steinmark | Ärmel | grauer Halbstreifen, offen | grüne Streifen | schwarze Streifen | Silberlitze | eine breite Litze | dieselbe, eine schmale darüber |
+| Vesper | Kragen | ungesiegelter Faden, graues Wachs | schwarzes Wachs | rotes Wachs | Goldwachs | Doppelsiegel | Doppelsiegel mit goldener Schnur |
+| Karsk | Wange | dunkle, tote Linse | rote Striche | rote Balken | Weiß auf Rot | weißer Ring | ein zweiter Ring |
+| Sahr | Mantelschnur | offener Knoten | Sandknoten | Kupferknoten | Türkis | schwarzer Knoten | derselbe Knoten, zweite Perle |
+| Ossar | Kragen | gerissener Knochenspan | kurze Knochenstriche | Knochen auf Rußrot | lange Rippen | Knochenring | Knochenring mit Quersteg |
+
+Rang und Orden teilen sich nie dieselbe Stelle. Die Brust bleibt für Orden frei.
+
+## 34.4 Orden
+
+Ein Orden wird nicht abgelegt. Dieselbe Tat kann reicher werden: Auflage, Fassung, tieferer Schnitt. Eine neue Tat kommt dazu. Wer als Fähnrich einen Orden erhält, trägt ihn als Generalfeldmarschall noch. Ab vielen Stücken rutschen die späteren in eine Schnalle. Das erste bleibt einzeln lesbar.
+
+## 34.5 Narben
+
+Narben sind keine Auswahl. Eine Niederlage gibt eine Wunde, eine schwere Niederlage zwei. Siege und Zeit bauen ab.
+
+| Stufe | Aussehen |
+|---|---|
+| 0 | glatt |
+| 1 | frische Wunde |
+| 2 | Narbe |
+| 3 | Augenklappe oder eingerissenes Ohr |
+| 4 | entstellt |
+
+Stufe 1 heilt ganz. Ab Stufe 2 bleibt ein feiner Strich. Maske und bionisches Auge bei Ossar, Atemmaske ab Hauptmann bei Karsk, gehören zur Uniform, nicht zur Wunde.
+
+## 34.6 Bilder
+
+Etwa 950 Bilder: 14 Männer mit Rang, Bart und Schnauzer, 14 Frauen nur mit dem alternden Gesicht, plus fünf Wundmasken für alle. Nicht jede Kombination wird gemalt. Gesicht, Uniform und Haar liegen übereinander.
+
+---
+
+
 ## Versionsstatus
 
 **v0.5 „Grundkonzept“**
