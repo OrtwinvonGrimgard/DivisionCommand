@@ -151,7 +151,7 @@
     'f05-burgund-none': 'lt',
     'f05-sand-none': 'lt',
     'f03-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f03-nacht-none': 'lt',
+    'f03-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-luft-none': 'lt',
     'f03-burgund-none': 'lt',
     'f03-sand-none': 'lt',
