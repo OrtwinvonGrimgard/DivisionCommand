@@ -71,7 +71,7 @@
   };
   var RANK_AGES = 'fhr,lt,olt,hptm,maj,obstlt,obst,bg,genmj,genlt,gen,fm,gfm';
 
-  var VER = '14';
+  var VER = '15';
 
   var FACE_FILE = {
     f01: 'Vael/male/01.png',
@@ -97,9 +97,16 @@
     f10: 'Karsk/male/02-right.png'
   };
 
-  function rightUrl(face) {
+  function rankPath(file, age) {
+    if (age === 'lt') return String(file).replace('male/', 'male/leutnant/');
+    return file;
+  }
+
+  function rightUrl(face, rank) {
     var file = RIGHT_FILE[String(face || '')];
-    return file ? ('assets/portraits/' + file + '?v=' + VER) : '';
+    if (!file) return '';
+    file = rankPath(file, ageOf(rank || 'Fhr'));
+    return 'assets/portraits/' + file + '?v=' + VER;
   }
 
   var HAVE = {
@@ -182,9 +189,12 @@
   }
 
   function fileUrl(name) {
-    var m = String(name || '').match(/^(f\d{2})/);
+    var text = String(name || '');
+    var m = text.match(/^(f\d{2})/);
     var file = m && FACE_FILE[m[1]];
     if (!file) return '';
+    var age = text.match(/-(fhr|lt|olt|hptm|maj|obstlt|obst|bg|genmj|genlt|gen|fm|gfm)$/);
+    if (age) file = rankPath(file, age[1]);
     return 'assets/portraits/' + file + '?v=' + VER;
   }
 

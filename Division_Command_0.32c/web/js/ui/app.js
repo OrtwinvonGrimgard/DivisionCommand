@@ -1980,7 +1980,7 @@
     var pm = document.getElementById('plate-me');
     function plateHtml(p) {
       var faceId = (p && p.face) || String(p && p.portrait || '').slice(0, 3);
-      var special = p && p.facing === 'right' && window.DCPortrait && DCPortrait.rightUrl(faceId);
+      var special = p && p.facing === 'right' && window.DCPortrait && DCPortrait.rightUrl(faceId, p.rank);
       var src = special || (p && p.portrait ? dcPortraitSrc(p.portrait, p.rank) : '');
       var face = src ? '<img class="plate-face' + (p.facing === 'right' && !special ? ' face-right' : '') + '" src="' + src + '" alt="">' : '';
       var call = p && p.callsign ? '<span class="plate-call">»' + escapeHtml(p.callsign) + '«</span>' : '';
