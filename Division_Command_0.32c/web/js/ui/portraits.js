@@ -213,7 +213,7 @@
     'f11-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f11-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f11-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f11-jaeger-none': 'lt',
+    'f11-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f11-nacht-none': 'lt',
     'f11-luft-none': 'lt',
     'f11-burgund-none': 'lt',
