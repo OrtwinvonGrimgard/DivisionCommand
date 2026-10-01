@@ -236,7 +236,7 @@
     'f13-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f13-nacht-none': 'lt',
+    'f13-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-luft-none': 'lt',
     'f13-burgund-none': 'lt',
     'f13-sand-none': 'lt',
