@@ -238,7 +238,7 @@
     'f13-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f13-burgund-none': 'lt',
+    'f13-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f13-sand-none': 'lt',
     'f14-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f14-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
