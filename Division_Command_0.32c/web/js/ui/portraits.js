@@ -176,6 +176,7 @@
     'f06-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f06-sand-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f07-feld-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
