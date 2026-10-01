@@ -216,7 +216,7 @@
     'f11-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f11-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f11-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f11-burgund-none': 'lt',
+    'f11-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f11-sand-none': 'lt',
     'f12-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f12-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
