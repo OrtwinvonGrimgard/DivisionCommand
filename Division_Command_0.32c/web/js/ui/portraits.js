@@ -269,7 +269,7 @@
     'f16-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f16-nacht-none': 'lt',
+    'f16-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-luft-none': 'lt',
     'f16-burgund-none': 'lt',
     'f16-sand-none': 'lt',
