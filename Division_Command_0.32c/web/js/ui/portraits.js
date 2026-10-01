@@ -189,6 +189,7 @@
     'f07-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-sand-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f08-feld-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-feld-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
