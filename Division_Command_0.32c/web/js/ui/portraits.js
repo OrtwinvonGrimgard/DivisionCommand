@@ -181,7 +181,7 @@
     'f08-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f08-nacht-none': 'lt',
+    'f08-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f08-luft-none': 'lt',
     'f08-burgund-none': 'lt',
     'f08-sand-none': 'lt',
