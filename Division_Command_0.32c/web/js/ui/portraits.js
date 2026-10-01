@@ -272,7 +272,7 @@
     'f16-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f16-sand-none': 'lt',
+    'f16-sand-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f01-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f01-dienst-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f02-dienst-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
