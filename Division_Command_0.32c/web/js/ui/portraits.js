@@ -93,7 +93,7 @@
     'f02-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f02-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f02-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f02-sand-none': 'lt',
+    'f02-sand-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
