@@ -943,7 +943,7 @@ Stand dieser Planung: 2026-10-01. Das ist Umfang, keine Kampfregel. Die Doktrin 
 
 ## 34.1 Gesichter
 
-28 Gesichter. Sieben Nationen, vier Gesichter je Nation:
+32 Gesichter. Acht Nationen, vier Gesichter je Nation:
 
 - eine aufrechte Frau
 - eine düstere Frau
@@ -952,7 +952,7 @@ Stand dieser Planung: 2026-10-01. Das ist Umfang, keine Kampfregel. Die Doktrin 
 
 Haarfarbe und Augenfarbe sind Teil des Gesichts, keine eigene Wahl. Jedes Gesicht darf jede Nation tragen. Die Kampagne wertet die Nation, nicht das Gesicht.
 
-Bart und Schnauzer gibt es nur bei den 14 Männern. Acht Bartstufen und sechs Schnauzerstufen, getrennt, in drei Altersfarben. Bei den Frauen altert nur das Gesicht mit dem Rang.
+Bart und Schnauzer gibt es nur bei den 16 Männern. Acht Bartstufen und sechs Schnauzerstufen, getrennt, in drei Altersfarben. Bei den Frauen altert nur das Gesicht mit dem Rang.
 
 ## 34.2 Nationen
 
@@ -965,6 +965,7 @@ Bart und Schnauzer gibt es nur bei den 14 Männern. Acht Bartstufen und sechs Sc
 | Karsk | Fläche und Sturm | Flächenschaden, rücksichtslose Stöße |
 | Sahr | Gelände | Überfall, Nachschub abschneiden |
 | Ossar | Schrecken | Angst, Reliquien, Knochen auf Schwarz |
+| Jetzt | Gegenwart | Drohnen, Schlamm, knappe Munition |
 
 Die Nation ist keine zweite Doktrin und keine Sperre im Deckbau.
 
@@ -991,8 +992,9 @@ Das Kadettenzeichen fällt beim Leutnant weg. Der Fähnrich trägt es schon, der
 | Karsk | Wange | dunkle, tote Linse | rote Striche | rote Balken | Weiß auf Rot | weißer Ring | ein zweiter Ring |
 | Sahr | Mantelschnur | offener Knoten | Sandknoten | Kupferknoten | Türkis | schwarzer Knoten | derselbe Knoten, zweite Perle |
 | Ossar | Kragen | gerissener Knochenspan | kurze Knochenstriche | Knochen auf Rußrot | lange Rippen | Knochenring | Knochenring mit Quersteg |
+| Jetzt | Ärmel | olivgrüner Halbstreifen, offen | sandfarbene Striche | schwarze Striche | graue Litze | eine breite gedeckte Litze | dieselbe, eine schmale darüber |
 
-Rang und Orden teilen sich nie dieselbe Stelle. Die Brust bleibt für Orden frei.
+Rang und Orden teilen sich nie dieselbe Stelle. Die Brust bleibt für Orden frei. Das Grundbild ist die Kampfausstattung und endet am Bauch, nicht am Rocksaum. Bei Jetzt liegt der Rang am Ärmel, der Orden als schmales Band über der Weste.
 
 ## 34.4 Orden
 
@@ -1014,7 +1016,7 @@ Stufe 1 heilt ganz. Ab Stufe 2 bleibt ein feiner Strich. Maske und bionisches Au
 
 ## 34.6 Bilder
 
-Etwa 950 Bilder: 14 Männer mit Rang, Bart und Schnauzer, 14 Frauen nur mit dem alternden Gesicht, plus fünf Wundmasken für alle. Nicht jede Kombination wird gemalt. Gesicht, Uniform und Haar liegen übereinander.
+Etwa 1.100 Bilder: 16 Männer mit Rang, Bart und Schnauzer, 16 Frauen nur mit dem alternden Gesicht, plus fünf Wundmasken für alle. Nicht jede Kombination wird gemalt. Gesicht, Uniform und Haar liegen übereinander.
 
 ---
 
