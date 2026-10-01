@@ -159,7 +159,7 @@
     'f06-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f06-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f06-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f06-nacht-none': 'lt',
+    'f06-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f06-luft-none': 'lt',
     'f06-burgund-none': 'lt',
     'f06-sand-none': 'lt',
