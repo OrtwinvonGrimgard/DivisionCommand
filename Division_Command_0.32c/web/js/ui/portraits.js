@@ -130,7 +130,7 @@
     'f01-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f01-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f01-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f01-nacht-none': 'lt',
+    'f01-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f01-luft-none': 'lt',
     'f01-burgund-none': 'lt',
     'f01-sand-none': 'lt',
