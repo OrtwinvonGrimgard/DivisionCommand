@@ -155,8 +155,8 @@
   }
 
   function agesFrom(age) {
-    var start = AGE_ORDER.indexOf(String(age || RANK_AGES));
-    if (start < 0) start = AGE_ORDER.indexOf(RANK_AGES);
+    var start = AGE_ORDER.indexOf(String(age || 'fhr'));
+    if (start < 0) start = AGE_ORDER.indexOf('fhr');
     return AGE_ORDER.slice(start);
   }
 
@@ -167,7 +167,7 @@
     var uni = m[2] || 'kampf';
     var hat = m[3] || 'none';
     if (uni === 'base' || uni === 'dienst') { uni = 'kampf'; hat = 'none'; }
-    if (hat === 'y' || hat === 'm' || hat === 's' || hat === RANK_AGES || hat === 'olt' ||
+    if (hat === 'y' || hat === 'm' || hat === 's' || hat === 'fhr' || hat === 'lt' || hat === 'olt' ||
         hat === 'hptm' || hat === 'maj' || hat === 'obstlt' || hat === 'obst' || hat === 'gen') {
       hat = 'none';
     }
