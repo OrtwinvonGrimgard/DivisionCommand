@@ -100,6 +100,7 @@
     'f02-sand-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-dienst-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
+    'f03-feld-mutze': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-feld-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
