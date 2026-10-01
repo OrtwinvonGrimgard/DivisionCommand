@@ -270,7 +270,7 @@
     'f16-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f16-luft-none': 'lt',
+    'f16-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-burgund-none': 'lt',
     'f16-sand-none': 'lt',
     'f01-dienst-schirm': 'lt,olt,hptm,maj,obstlt,obst,gen',
