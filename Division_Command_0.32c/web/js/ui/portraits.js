@@ -140,7 +140,7 @@
     'f04-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f04-burgund-none': 'lt',
+    'f04-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f04-sand-none': 'lt',
     'f05-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f05-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
