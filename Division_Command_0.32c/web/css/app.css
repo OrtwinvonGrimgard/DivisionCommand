@@ -3714,6 +3714,8 @@ body.dc-dragging .slot.legal {
   justify-content: center;
   gap: 8px;
 }
+.face-right { transform: scaleX(-1); }
+.face-dir { display: flex; align-items: center; gap: 8px; margin: 8px 0 4px; font-size: 13px; letter-spacing: .04em; }
 .plate-face {
   width: 28px;
   height: 36px;

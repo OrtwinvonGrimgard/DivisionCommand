@@ -187,6 +187,7 @@
         <div id="setup-uniforms" class="kit-grid uniforms" role="listbox" aria-label="Uniform"></div>
         <p class="tiny char-pick-lbl">3 · Kopfbedeckung</p>
         <div id="setup-hats" class="kit-grid hats" role="listbox" aria-label="Kopfbedeckung"></div>
+        <label class="face-dir"><input type="checkbox" id="setup-facing"> Blick nach rechts</label>
         <div class="menu">
           <button type="button" class="primary" id="setup-ok">Akte anlegen</button>
         </div>
@@ -229,6 +230,7 @@
         <div id="user-uniforms" class="kit-grid uniforms" role="listbox" aria-label="Uniform"></div>
         <p class="tiny char-pick-lbl">3 · Kopfbedeckung</p>
         <div id="user-hats" class="kit-grid hats" role="listbox" aria-label="Kopfbedeckung"></div>
+        <label class="face-dir"><input type="checkbox" id="user-facing"> Blick nach rechts</label>
         <div class="menu">
           <button type="button" class="primary" id="user-save">Akte speichern</button>
         </div>
@@ -612,8 +614,8 @@
   <script src="js/ai/bot.js?v=032d5"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/library.js?v=030n"></script>
-  <script src="js/ui/portraits.js?v=kit7"></script>
-  <script src="js/ui/app.js?v=kit1"></script>
+  <script src="js/ui/portraits.js?v=kit8"></script>
+  <script src="js/ui/app.js?v=kit2"></script>
   <script src="js/ui/hand-drag.js?v=032d2"></script>
   <script src="js/net.js?v=030c"></script>
   <script>
@@ -943,35 +945,50 @@
         if (id === 'scr-single') { paintUsers(); if (window.DCLib) DCLib.fillSelects(); }
       }
       var kitDraft = {
-        setup: { face: 'f01', uniform: 'dienst', hat: 'none', rank: 'Lt' },
-        user: { face: 'f01', uniform: 'dienst', hat: 'none', rank: 'Lt' }
+        setup: { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Lt', facing: 'left' },
+        user: { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Lt', facing: 'left' }
       };
       function portraitSrc(id, rank) {
         if (window.DCPortrait) return DCPortrait.src(id, rank);
         return 'assets/portraits/Vael/male/01.png?v=13';
       }
       function kitFromUser(u) {
-        if (!u) return { face: 'f01', uniform: 'dienst', hat: 'none', rank: 'Lt' };
+        if (!u) return { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Lt', facing: 'left' };
         var parsed = window.DCPortrait && DCPortrait.parseKit(u.portrait);
         return {
           face: u.face || (parsed && parsed.face) || 'f01',
-          uniform: u.uniform || (parsed && parsed.uniform) || 'dienst',
+          uniform: u.uniform || (parsed && parsed.uniform) || 'kampf',
           hat: u.hat || (parsed && parsed.hat) || 'none',
-          rank: u.rank || 'Lt'
+          rank: u.rank || 'Lt',
+          facing: u.facing === 'right' ? 'right' : 'left'
         };
+      }
+
+      function applyFaceDir(img, face, right) {
+        if (!img) return;
+        var special = right && window.DCPortrait && DCPortrait.rightUrl(face);
+        if (special) {
+          img.src = special;
+          img.classList.remove('face-right');
+        } else {
+          img.classList.toggle('face-right', !!right);
+        }
       }
       function paintKit(which) {
         var P = window.DCPortrait;
         if (!P) return;
         var st = kitDraft[which];
         var uniList = P.uniformsFor(st.face);
-        if (!uniList.some(function (u) { return u.id === st.uniform; })) st.uniform = 'dienst';
+        if (!uniList.some(function (u) { return u.id === st.uniform; })) st.uniform = (uniList[0] && uniList[0].id) || 'kampf';
         var hatList = P.hatsFor(st.face, st.uniform);
         if (!hatList.some(function (h) { return h.id === st.hat; })) st.hat = 'none';
         var id = P.kitId(st);
         var meta = P.rankMeta(st.rank);
         var prev = document.getElementById(which + '-preview');
         P.bindImg(prev, id, st.rank);
+        applyFaceDir(prev, st.face, st.facing === 'right');
+        var faceBox = document.getElementById(which + '-facing');
+        if (faceBox) faceBox.checked = st.facing === 'right';
         var lbl = document.getElementById(which + '-rank-lbl');
         if (lbl) lbl.textContent = meta.title + ' · ' + (P.AGE_LABEL[meta.age] || '');
         function fill(gridId, items, cur, make) {
@@ -997,11 +1014,24 @@
             '<span>' + it.label + '</span></button>';
         });
         var faceImgs = document.querySelectorAll('#' + which + '-faces img');
-        P.FACES.forEach(function (it, i) { if (faceImgs[i]) P.bindImg(faceImgs[i], it.id + '-dienst-none', 'Lt', true); });
+        var lookRight = st.facing === 'right';
+        P.FACES.forEach(function (it, i) {
+          if (!faceImgs[i]) return;
+          P.bindImg(faceImgs[i], it.id + '-kampf-none', 'Lt', true);
+          applyFaceDir(faceImgs[i], it.id, lookRight);
+        });
         var uniImgs = document.querySelectorAll('#' + which + '-uniforms img');
-        uniList.forEach(function (it, i) { if (uniImgs[i]) P.bindImg(uniImgs[i], st.face + '-' + it.id + '-none', 'Lt', true); });
+        uniList.forEach(function (it, i) {
+          if (!uniImgs[i]) return;
+          P.bindImg(uniImgs[i], st.face + '-' + it.id + '-none', 'Lt', true);
+          applyFaceDir(uniImgs[i], st.face, lookRight);
+        });
         var hatImgs = document.querySelectorAll('#' + which + '-hats img');
-        hatList.forEach(function (it, i) { if (hatImgs[i]) P.bindImg(hatImgs[i], st.face + '-' + st.uniform + '-' + it.id, 'Lt', true); });
+        hatList.forEach(function (it, i) {
+          if (!hatImgs[i]) return;
+          P.bindImg(hatImgs[i], st.face + '-' + st.uniform + '-' + it.id, 'Lt', true);
+          applyFaceDir(hatImgs[i], st.face, lookRight);
+        });
         var ages = document.getElementById(which + '-ages');
         if (ages) {
           ages.innerHTML = P.RANKS.map(function (r) {
@@ -1030,6 +1060,11 @@
           kitDraft[which].rank = btn.getAttribute('data-rank');
           paintKit(which);
         };
+        var faceBox = document.getElementById(which + '-facing');
+        if (faceBox) faceBox.onchange = function () {
+          kitDraft[which].facing = faceBox.checked ? 'right' : 'left';
+          paintKit(which);
+        };
       }
       bindKit('setup');
       bindKit('user');
@@ -1053,7 +1088,7 @@
         var u = activeUser();
         var el = document.getElementById('who-line');
         if (el) el.innerHTML = u
-          ? ('<img class="who-face" src="' + portraitSrc(u.portrait || (u.face && (u.face + '-' + (u.uniform||'dienst') + '-' + (u.hat||'none'))), u.rank) + '" alt="">' +
+          ? ('<img class="who-face' + (u.facing === 'right' && !(window.DCPortrait && DCPortrait.rightUrl(u.face)) ? ' face-right' : '') + '" src="' + ((u.facing === 'right' && window.DCPortrait && DCPortrait.rightUrl(u.face)) || portraitSrc(u.portrait || (u.face && (u.face + '-' + (u.uniform||'kampf') + '-' + (u.hat||'none'))), u.rank)) + '" alt="">' +
              '<span class="who-lbl">' + ((window.DCPortrait && DCPortrait.rankMeta(u.rank).title) || 'Leutnant') + '</span><span class="who-name">' + u.name + '</span>' +
              (u.callsign ? '<span class="who-call">»' + u.callsign + '«</span>' : ''))
           : '';
@@ -1118,7 +1153,7 @@
         var tr = document.getElementById('title-root');
         if (tr) tr.classList.remove('boot-intro', 'logo-in', 'btn-in');
         if (!loadUsers().length) {
-          kitDraft.setup = { face: 'f01', uniform: 'dienst', hat: 'none', rank: 'Lt' };
+          kitDraft.setup = { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Lt', facing: 'left' };
           paintKit('setup');
           show('scr-setup');
         } else show('scr-title');
@@ -1136,7 +1171,8 @@
         var callsign = (document.getElementById('setup-callsign').value || '').trim().slice(0, 16);
         var id = 'u' + Date.now();
         saveUsers([{ id: id, name: name, portrait: selectedPortrait('setup'), callsign: callsign,
-          face: kitDraft.setup.face, uniform: kitDraft.setup.uniform, hat: kitDraft.setup.hat, rank: kitDraft.setup.rank }], id);
+          face: kitDraft.setup.face, uniform: kitDraft.setup.uniform, hat: kitDraft.setup.hat, rank: kitDraft.setup.rank,
+          facing: kitDraft.setup.facing || 'left' }], id);
         paintWho();
         show('scr-title');
       };
@@ -1199,6 +1235,7 @@
             u.uniform = kitDraft.user.uniform;
             u.hat = kitDraft.user.hat;
             u.rank = kitDraft.user.rank;
+            u.facing = kitDraft.user.facing || 'left';
           }
         });
         saveUsers(list, id);

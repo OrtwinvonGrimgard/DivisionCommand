@@ -349,9 +349,11 @@
       });
       var au = dcActiveUser();
       if (engine.state && engine.state.players && engine.state.players[0]) {
-        engine.state.players[0].portrait = (au && au.portrait) || 'f01-dienst-none';
+        engine.state.players[0].portrait = (au && au.portrait) || 'f01-kampf-none';
         engine.state.players[0].rank = (au && au.rank) || 'Lt';
         engine.state.players[0].callsign = (au && au.callsign) || '';
+        engine.state.players[0].facing = (au && au.facing) || 'left';
+        engine.state.players[0].face = (au && au.face) || '';
       }
       if (engine.state && engine.state.players && engine.state.players[1]) {
         var foeFace = 1 + Math.floor((seed % 23) + 1);
@@ -1977,7 +1979,10 @@
     var pe = document.getElementById('plate-enemy');
     var pm = document.getElementById('plate-me');
     function plateHtml(p) {
-      var face = p && p.portrait ? '<img class="plate-face" src="' + dcPortraitSrc(p.portrait, p.rank) + '" alt="">' : '';
+      var faceId = (p && p.face) || String(p && p.portrait || '').slice(0, 3);
+      var special = p && p.facing === 'right' && window.DCPortrait && DCPortrait.rightUrl(faceId);
+      var src = special || (p && p.portrait ? dcPortraitSrc(p.portrait, p.rank) : '');
+      var face = src ? '<img class="plate-face' + (p.facing === 'right' && !special ? ' face-right' : '') + '" src="' + src + '" alt="">' : '';
       var call = p && p.callsign ? '<span class="plate-call">»' + escapeHtml(p.callsign) + '«</span>' : '';
       return face + '<span class="plate-name">' + escapeHtml(p.name) + '</span>' + call;
     }

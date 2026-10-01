@@ -57,7 +57,7 @@
     obst: 'senior',
     gen: 'general'
   };
-  var VER = '13';
+  var VER = '14';
 
   var FACE_FILE = {
     f01: 'Vael/male/01.png',
@@ -77,6 +77,16 @@
     f15: 'Jetzt/male/01.png',
     f16: 'Jetzt/male/02.png'
   };
+
+  var RIGHT_FILE = {
+    f09: 'Karsk/male/01-right.png',
+    f10: 'Karsk/male/02-right.png'
+  };
+
+  function rightUrl(face) {
+    var file = RIGHT_FILE[String(face || '')];
+    return file ? ('assets/portraits/' + file + '?v=' + VER) : '';
+  }
 
   var HAVE = {
     'f01-kampf-none': 'lt',
@@ -237,6 +247,7 @@
     faceThumb: faceThumb,
     uniformThumb: uniformThumb,
     hatThumb: hatThumb,
+    rightUrl: rightUrl,
     legacyUrl: legacyUrl
   };
 })(window);
