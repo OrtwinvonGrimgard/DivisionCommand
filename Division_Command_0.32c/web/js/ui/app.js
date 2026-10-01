@@ -134,9 +134,7 @@
   var CATALOG = window.DC_CATALOG; // lokale Variable
   function dcPortraitSrc(id, rank) {
     if (window.DCPortrait) return DCPortrait.src(id, rank);
-    var n = parseInt(String(id || '').replace(/^lt-/, ''), 10);
-    if (!(n >= 1 && n <= 24)) n = 1;
-    return 'assets/portraits/lt-' + (n<10?'0':'')+n + '.jpg?v=3';
+    return 'assets/portraits/Vael/male/01.png?v=13';
   }
   function dcActiveUser() {
     try {
