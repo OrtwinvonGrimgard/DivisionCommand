@@ -38,25 +38,39 @@
   ];
 
   var RANKS = [
-    { id: 'Lt', label: 'Lt', title: 'Leutnant', age: 'lt', years: '22', mark: 'Fähnrichbild' },
-    { id: 'OLt', label: 'OLt', title: 'Oberleutnant', age: 'olt', years: '25', mark: 'Fähnrichbild' },
-    { id: 'Hptm', label: 'Hptm', title: 'Hauptmann', age: 'hptm', years: '32', mark: 'Fähnrichbild' },
-    { id: 'Maj', label: 'Maj', title: 'Major', age: 'maj', years: '40', mark: 'Fähnrichbild' },
-    { id: 'Obstlt', label: 'Obstlt', title: 'Oberstleutnant', age: 'obstlt', years: '48', mark: 'Fähnrichbild' },
-    { id: 'Obst', label: 'Obst', title: 'Oberst', age: 'obst', years: '55', mark: 'Fähnrichbild' },
-    { id: 'Gen', label: 'Gen', title: 'General', age: 'gen', years: '63', mark: 'Fähnrichbild' }
+    { id: 'Fhr', label: 'Fhr', title: 'Fähnrich', age: 'fhr', years: '19', mark: 'Kadettenzeichen' },
+    { id: 'Lt', label: 'Lt', title: 'Leutnant', age: RANK_AGES, years: '22', mark: 'Kompanie 1' },
+    { id: 'OLt', label: 'OLt', title: 'Oberleutnant', age: 'olt', years: '25', mark: 'Kompanie 2' },
+    { id: 'Hptm', label: 'Hptm', title: 'Hauptmann', age: 'hptm', years: '32', mark: 'Kompanie 3' },
+    { id: 'Maj', label: 'Maj', title: 'Major', age: 'maj', years: '40', mark: 'Stab 1' },
+    { id: 'Obstlt', label: 'Obstlt', title: 'Oberstleutnant', age: 'obstlt', years: '48', mark: 'Stab 2' },
+    { id: 'Obst', label: 'Obst', title: 'Oberst', age: 'obst', years: '55', mark: 'Stab 3' },
+    { id: 'Bg', label: 'Bg', title: 'Brigadegeneral', age: 'bg', years: '58', mark: 'General 1' },
+    { id: 'Genmj', label: 'GenMj', title: 'Generalmajor', age: 'genmj', years: '60', mark: 'General 2' },
+    { id: 'Genlt', label: 'GenLt', title: 'Generalleutnant', age: 'genlt', years: '62', mark: 'General 3' },
+    { id: 'Gen', label: 'Gen', title: 'General', age: 'gen', years: '64', mark: 'General 4' },
+    { id: 'Fm', label: 'FM', title: 'Feldmarschall', age: 'fm', years: '66', mark: 'Marschallzeichen' },
+    { id: 'Gfm', label: 'GFM', title: 'Generalfeldmarschall', age: 'gfm', years: '68', mark: 'Marschallzeichen und Zusatz' }
   ];
 
-  var AGE_ORDER = ['gen', 'obst', 'obstlt', 'maj', 'hptm', 'olt', 'lt'];
+  var AGE_ORDER = ['gfm', 'fm', 'gen', 'genlt', 'genmj', 'bg', 'obst', 'obstlt', 'maj', 'hptm', 'olt', RANK_AGES, 'fhr'];
   var AGE_LABEL = {
-    lt: 'jung',
-    olt: 'jung',
-    hptm: 'erfahren',
-    maj: 'gereift',
-    obstlt: 'altgedient',
-    obst: 'senior',
-    gen: 'general'
+    fhr: 'Kadett',
+    lt: 'Kompanie',
+    olt: 'Kompanie',
+    hptm: 'Kompanie',
+    maj: 'Stab',
+    obstlt: 'Stab',
+    obst: 'Stab',
+    bg: 'General',
+    genmj: 'General',
+    genlt: 'General',
+    gen: 'General',
+    fm: 'Marschall',
+    gfm: 'Marschall'
   };
+  var RANK_AGES = 'fhr,lt,olt,hptm,maj,obstlt,obst,bg,genmj,genlt,gen,fm,gfm';
+
   var VER = '14';
 
   var FACE_FILE = {
@@ -89,22 +103,22 @@
   }
 
   var HAVE = {
-    'f01-kampf-none': 'lt',
-    'f02-kampf-none': 'lt',
-    'f03-kampf-none': 'lt',
-    'f04-kampf-none': 'lt',
-    'f05-kampf-none': 'lt',
-    'f06-kampf-none': 'lt',
-    'f07-kampf-none': 'lt',
-    'f08-kampf-none': 'lt',
-    'f09-kampf-none': 'lt',
-    'f10-kampf-none': 'lt',
-    'f11-kampf-none': 'lt',
-    'f12-kampf-none': 'lt',
-    'f13-kampf-none': 'lt',
-    'f14-kampf-none': 'lt',
-    'f15-kampf-none': 'lt',
-    'f16-kampf-none': 'lt'
+    'f01-kampf-none': RANK_AGES,
+    'f02-kampf-none': RANK_AGES,
+    'f03-kampf-none': RANK_AGES,
+    'f04-kampf-none': RANK_AGES,
+    'f05-kampf-none': RANK_AGES,
+    'f06-kampf-none': RANK_AGES,
+    'f07-kampf-none': RANK_AGES,
+    'f08-kampf-none': RANK_AGES,
+    'f09-kampf-none': RANK_AGES,
+    'f10-kampf-none': RANK_AGES,
+    'f11-kampf-none': RANK_AGES,
+    'f12-kampf-none': RANK_AGES,
+    'f13-kampf-none': RANK_AGES,
+    'f14-kampf-none': RANK_AGES,
+    'f15-kampf-none': RANK_AGES,
+    'f16-kampf-none': RANK_AGES
   };
 
   function rankMeta(rank) {
@@ -112,12 +126,27 @@
     var j;
     for (j = 0; j < RANKS.length; j++) if (RANKS[j].id === id) return RANKS[j];
     var low = id.toLowerCase();
-    if (/gen|general/.test(low)) return RANKS[6];
-    if (/obst(?!lt)|oberst(?!leut)/.test(low)) return RANKS[5];
-    if (/obstlt|oberstleut/.test(low)) return RANKS[4];
-    if (/maj/.test(low)) return RANKS[3];
-    if (/hptm|haupt/.test(low)) return RANKS[2];
-    if (/olt|oberleut/.test(low)) return RANKS[1];
+    var alias = [
+      [/generalfeld|gfm/, 'Gfm'],
+      [/feldmarschall|^fm$/, 'Fm'],
+      [/brigade|^bg$/, 'Bg'],
+      [/generalmajor|genmj/, 'Genmj'],
+      [/generalleut|genlt/, 'Genlt'],
+      [/^gen$|general$/, 'Gen'],
+      [/obstlt|oberstleut/, 'Obstlt'],
+      [/obst|oberst/, 'Obst'],
+      [/maj/, 'Maj'],
+      [/hptm|haupt/, 'Hptm'],
+      [/olt|oberleut/, 'OLt'],
+      [/^lt$|leutnant/, 'Lt'],
+      [/fhr|faehn|fähn/, 'Fhr']
+    ];
+    var a;
+    for (a = 0; a < alias.length; a++) {
+      if (alias[a][0].test(low)) {
+        for (j = 0; j < RANKS.length; j++) if (RANKS[j].id === alias[a][1]) return RANKS[j];
+      }
+    }
     return RANKS[0];
   }
 
@@ -126,8 +155,8 @@
   }
 
   function agesFrom(age) {
-    var start = AGE_ORDER.indexOf(String(age || 'lt'));
-    if (start < 0) start = AGE_ORDER.indexOf('lt');
+    var start = AGE_ORDER.indexOf(String(age || RANK_AGES));
+    if (start < 0) start = AGE_ORDER.indexOf(RANK_AGES);
     return AGE_ORDER.slice(start);
   }
 
@@ -138,7 +167,7 @@
     var uni = m[2] || 'kampf';
     var hat = m[3] || 'none';
     if (uni === 'base' || uni === 'dienst') { uni = 'kampf'; hat = 'none'; }
-    if (hat === 'y' || hat === 'm' || hat === 's' || hat === 'lt' || hat === 'olt' ||
+    if (hat === 'y' || hat === 'm' || hat === 's' || hat === RANK_AGES || hat === 'olt' ||
         hat === 'hptm' || hat === 'maj' || hat === 'obstlt' || hat === 'obst' || hat === 'gen') {
       hat = 'none';
     }

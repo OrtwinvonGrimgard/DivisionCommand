@@ -169,7 +169,7 @@
         <div class="char-editor kit-editor">
           <div class="char-preview">
             <img id="setup-preview" alt="Porträt" src="assets/portraits/Vael/male/01.png?v=13">
-            <p class="char-rank" id="setup-rank-lbl">Leutnant · jung</p>
+            <p class="char-rank" id="setup-rank-lbl">Fähnrich · Kadettenzeichen</p>
             <div class="rank-preview" id="setup-ages" role="group" aria-label="Rangvorschau"></div>
           </div>
           <div class="char-fields">
@@ -216,7 +216,7 @@
         <div class="char-editor user-char kit-editor">
           <div class="char-preview">
             <img id="user-preview" alt="Porträt" src="assets/portraits/Vael/male/01.png?v=13">
-            <p class="char-rank" id="user-rank-lbl">Leutnant · jung</p>
+            <p class="char-rank" id="user-rank-lbl">Fähnrich · Kadettenzeichen</p>
             <div class="rank-preview" id="user-ages" role="group" aria-label="Rangvorschau"></div>
           </div>
           <div class="char-fields">
@@ -614,7 +614,7 @@
   <script src="js/ai/bot.js?v=032d5"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/library.js?v=030n"></script>
-  <script src="js/ui/portraits.js?v=kit8"></script>
+  <script src="js/ui/portraits.js?v=kit9"></script>
   <script src="js/ui/app.js?v=kit2"></script>
   <script src="js/ui/hand-drag.js?v=032d2"></script>
   <script src="js/net.js?v=030c"></script>
@@ -945,15 +945,15 @@
         if (id === 'scr-single') { paintUsers(); if (window.DCLib) DCLib.fillSelects(); }
       }
       var kitDraft = {
-        setup: { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Lt', facing: 'left' },
-        user: { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Lt', facing: 'left' }
+        setup: { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Fhr', facing: 'left' },
+        user: { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Fhr', facing: 'left' }
       };
       function portraitSrc(id, rank) {
         if (window.DCPortrait) return DCPortrait.src(id, rank);
         return 'assets/portraits/Vael/male/01.png?v=13';
       }
       function kitFromUser(u) {
-        if (!u) return { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Lt', facing: 'left' };
+        if (!u) return { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Fhr', facing: 'left' };
         var parsed = window.DCPortrait && DCPortrait.parseKit(u.portrait);
         return {
           face: u.face || (parsed && parsed.face) || 'f01',
@@ -990,7 +990,7 @@
         var faceBox = document.getElementById(which + '-facing');
         if (faceBox) faceBox.checked = st.facing === 'right';
         var lbl = document.getElementById(which + '-rank-lbl');
-        if (lbl) lbl.textContent = meta.title + ' · ' + (P.AGE_LABEL[meta.age] || '');
+        if (lbl) lbl.textContent = meta.title + (meta.mark ? ' · ' + meta.mark : '');
         function fill(gridId, items, cur, make) {
           var grid = document.getElementById(gridId);
           if (!grid) return;
@@ -1153,7 +1153,7 @@
         var tr = document.getElementById('title-root');
         if (tr) tr.classList.remove('boot-intro', 'logo-in', 'btn-in');
         if (!loadUsers().length) {
-          kitDraft.setup = { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Lt', facing: 'left' };
+          kitDraft.setup = { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Fhr', facing: 'left' };
           paintKit('setup');
           show('scr-setup');
         } else show('scr-title');
