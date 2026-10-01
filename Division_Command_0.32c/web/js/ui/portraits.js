@@ -261,7 +261,7 @@
     'f15-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f15-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f15-sand-none': 'lt',
+    'f15-sand-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f16-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
