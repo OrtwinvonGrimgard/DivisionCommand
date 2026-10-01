@@ -204,7 +204,7 @@
     'f10-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f10-jaeger-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f10-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f10-luft-none': 'lt',
+    'f10-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f10-burgund-none': 'lt',
     'f10-sand-none': 'lt',
     'f11-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
