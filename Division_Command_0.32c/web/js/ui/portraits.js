@@ -39,7 +39,7 @@
 
   var RANKS = [
     { id: 'Fhr', label: 'Fhr', title: 'Fähnrich', age: 'fhr', years: '19', mark: 'Kadettenzeichen' },
-    { id: 'Lt', label: 'Lt', title: 'Leutnant', age: RANK_AGES, years: '22', mark: 'Kompanie 1' },
+    { id: 'Lt', label: 'Lt', title: 'Leutnant', age: 'lt', years: '22', mark: 'Kompanie 1' },
     { id: 'OLt', label: 'OLt', title: 'Oberleutnant', age: 'olt', years: '25', mark: 'Kompanie 2' },
     { id: 'Hptm', label: 'Hptm', title: 'Hauptmann', age: 'hptm', years: '32', mark: 'Kompanie 3' },
     { id: 'Maj', label: 'Maj', title: 'Major', age: 'maj', years: '40', mark: 'Stab 1' },
@@ -53,7 +53,7 @@
     { id: 'Gfm', label: 'GFM', title: 'Generalfeldmarschall', age: 'gfm', years: '68', mark: 'Marschallzeichen und Zusatz' }
   ];
 
-  var AGE_ORDER = ['gfm', 'fm', 'gen', 'genlt', 'genmj', 'bg', 'obst', 'obstlt', 'maj', 'hptm', 'olt', RANK_AGES, 'fhr'];
+  var AGE_ORDER = ['gfm', 'fm', 'gen', 'genlt', 'genmj', 'bg', 'obst', 'obstlt', 'maj', 'hptm', 'olt', 'lt', 'fhr'];
   var AGE_LABEL = {
     fhr: 'Kadett',
     lt: 'Kompanie',
