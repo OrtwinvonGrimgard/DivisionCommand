@@ -162,7 +162,7 @@
     'f06-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f06-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f06-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f06-sand-none': 'lt',
+    'f06-sand-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-feld-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-gala-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f07-historisch-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
