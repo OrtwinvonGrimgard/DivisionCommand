@@ -154,7 +154,7 @@
     'f03-nacht-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-luft-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f03-burgund-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
-    'f03-sand-none': 'lt',
+    'f03-sand-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f06-khaki-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f06-oliv-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
     'f06-stahl-none': 'lt,olt,hptm,maj,obstlt,obst,gen',
