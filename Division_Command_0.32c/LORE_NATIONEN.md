@@ -1,8 +1,8 @@
-# Division Command – Die acht Nationen
+# Division Command – Die sechzehn Nationen
 
 > **Status:** Lore-Grundlage  
 > **Version:** 0.2  
-> **Zweck:** Hintergrundgeschichte, politische Systeme, technologische Entwicklung und geopolitischer Rahmen der acht Nationen von *Division Command*.
+> **Zweck:** Hintergrundgeschichte, politische Systeme, technologische Entwicklung und geopolitischer Rahmen der sechzehn Nationen von *Division Command*.
 
 ## Grundidee
 
@@ -10,7 +10,7 @@ Die Welt von *Division Command* ist keine Welt klar getrennter Helden- und Schur
 
 Der Krieg begann nicht durch einen einzelnen Schurken oder einen einzigen Tag. Jahrzehnte aus Grenzstreitigkeiten, wirtschaftlichem Druck, Bündnissen, Stellvertreterkonflikten und gegenseitigem Misstrauen führten dazu, dass die militärische Planung schließlich schneller wuchs als die Fähigkeit der Politik, sie zu kontrollieren.
 
-Die acht Nationen stehen nicht einfach für acht feste Spielstile. Sie repräsentieren unterschiedliche gesellschaftliche und technische Antworten auf dieselbe Frage:
+Die sechzehn Nationen stehen nicht einfach für acht feste Spielstile. Sie repräsentieren unterschiedliche gesellschaftliche und technische Antworten auf dieselbe Frage:
 
 **Wie viel Freiheit, Sicherheit und Menschlichkeit darf eine Gesellschaft opfern, wenn sie glaubt, nur dadurch überleben zu können?**
 
@@ -334,7 +334,7 @@ Je stärker Vael den Krieg industrialisiert, desto schwerer wird die Frage:
 
 ### Das Land hinter dem Schleier
 
-Vesper ist der rätselhafteste der acht Staaten.
+Vesper ist der rätselhafteste der sechzehn Staaten.
 
 Seine politische Geschichte ist von wechselnden Regierungen, geheimen Abkommen und langen Phasen der Isolation geprägt.
 
@@ -371,7 +371,7 @@ Selbst viele Bürger Vespers wissen nicht mehr, welche Bedrohungen real sind und
 
 ---
 
-# Die acht Nationen – Identität statt Spielschablone
+# Die sechzehn Nationen – Identität statt Spielschablone
 
 Die Nationen besitzen bewusst unterschiedliche gesellschaftliche und technologische Identitäten:
 
@@ -499,7 +499,7 @@ Damit bleiben normale Karten frei gestaltbar, während Elitekarten die extremste
 
 # Gemeinsame Vorgeschichte
 
-Die acht Staaten waren nicht immer Feinde.
+Die sechzehn Staaten waren nicht immer Feinde.
 
 Über Jahrzehnte bestanden Handelsabkommen, Verteidigungsbündnisse, gemeinsame Forschungsprojekte und politische Verträge. Mehrfach wurden große Kriege verhindert.
 
@@ -522,7 +522,7 @@ Die Ursachen des Krieges liegen Jahrzehnte hinter ihnen.**
 
 # Erweiterung auf sechzehn Nationen
 
-Mit der langfristigen Weltplanung wird *Division Command* von acht auf **sechzehn Nationen** erweitert. Die zusätzlichen Nationen sollen nicht einfach weitere militärische Archetypen darstellen. Sie erweitern vor allem das politische, gesellschaftliche und kulturelle Spektrum der Welt.
+Mit der langfristigen Weltplanung wird *Division Command* als Welt mit **sechzehn Nationen** erweitert. Die zusätzlichen Nationen sollen nicht einfach weitere militärische Archetypen darstellen. Sie erweitern vor allem das politische, gesellschaftliche und kulturelle Spektrum der Welt.
 
 Die Welt soll unterschiedliche Antworten auf Fragen zeigen wie:
 
@@ -1720,3 +1720,183 @@ Dadurch kann keine Nation ihre Geschichte vollständig aus sich selbst erklären
 Der Krieg zerstört deshalb nicht nur Frontlinien.
 
 Er zerreißt Beziehungen, die über Jahrhunderte entstanden sind.
+
+
+---
+
+# Vertiefung der sechzehn Nationen
+
+Die sechzehn Nationen werden für die weitere Weltentwicklung nicht nur über Regierung, Militär und Technologie definiert. Jede Nation erhält ein eigenes **gesellschaftliches Betriebssystem**: eine bestimmte Vorstellung davon, was ein gutes Leben ausmacht, wem Menschen vertrauen, was als ehrenhaft gilt, wovor Familien Angst haben und welche Widersprüche im Alltag sichtbar werden.
+
+Für jede Nation sollen künftig mindestens diese Ebenen ausgearbeitet werden:
+
+1. **Selbstbild** – Wie beschreibt die Nation sich selbst?
+2. **Fremdbild** – Wie sehen andere Nationen sie?
+3. **Staatsverständnis** – Warum akzeptieren Menschen die bestehende Ordnung?
+4. **Familie und Generationen** – Wie werden Werte weitergegeben?
+5. **Arbeit und Wohlstand** – Wovon leben die Menschen?
+6. **Religion und Weltanschauung** – Welche Sinnsysteme existieren?
+7. **Bildung und Jugend** – Was lernen Kinder über ihre Welt?
+8. **Medien und Wahrheit** – Wem glauben die Menschen?
+9. **Militär im Alltag** – Wie sichtbar ist die Armee?
+10. **Architektur und Landschaft** – Wie sieht das Land aus?
+11. **Sprache und Umgangsformen** – Wie klingt die Gesellschaft?
+12. **Krisenerfahrung** – Welche historische Erfahrung prägt sie?
+13. **Innere Gegenbewegungen** – Wer widerspricht der offiziellen Ordnung?
+14. **Beziehung zu den anderen fünfzehn Nationen** – Handel, Feindschaft, Migration, Vorurteile und gemeinsame Geschichte.
+
+Diese Ebenen sind bewusst voneinander getrennt. Eine Nation darf beispielsweise wirtschaftlich liberal und politisch autoritär sein; religiös konservativ und technologisch hochmodern; oder demokratisch organisiert sein und trotzdem starken sozialen Konformitätsdruck besitzen.
+
+## Nationale Leitfragen
+
+### Averon
+**Leitfrage:** Wie viel Freiheit bleibt, wenn eine Gesellschaft ständig auf die nächste Krise vorbereitet sein muss?
+
+**Alltagswiderspruch:** Menschen genießen große persönliche Freiheit, erleben aber gleichzeitig einen permanenten Druck, informiert, leistungsfähig und gesellschaftlich relevant zu bleiben.
+
+**Besonderer Ausbau:** Averon sollte starke Unterschiede zwischen digitalisierten Großstädten und kleineren Gemeinden erhalten. Dadurch entsteht innerhalb derselben Republik ein Konflikt zwischen Geschwindigkeit und Bodenständigkeit.
+
+### Karsk
+**Leitfrage:** Was geschieht mit einer Gesellschaft, wenn menschlicher Wert messbar gemacht wird?
+
+**Alltagswiderspruch:** Der Staat kann hervorragende medizinische und technische Versorgung bereitstellen und gleichzeitig entscheiden, wer diese Versorgung verdient.
+
+**Besonderer Ausbau:** Karsk sollte nicht ausschließlich aus fanatischen Funktionären bestehen. Es braucht Bürger, die das System unterstützen, weil es ihnen tatsächlich Sicherheit, Heilung oder Aufstieg ermöglicht.
+
+### Ossaria
+**Leitfrage:** Kann Erinnerung Frieden bewahren, ohne selbst neue Feindschaft zu erzeugen?
+
+**Alltagswiderspruch:** Eine Kultur des Gedenkens schützt vor dem Vergessen, kann aber auch eine Generation an die Kriege ihrer Vorfahren binden.
+
+**Besonderer Ausbau:** Ossaria sollte regionale Unterschiede zwischen alten Städten, technologischen Zentren und ländlichen Gebieten besitzen.
+
+### Rothain
+**Leitfrage:** Wie lebt eine Gesellschaft mit einem Erbe, auf das sie gleichzeitig stolz und beschämt ist?
+
+**Alltagswiderspruch:** Dieselbe Uniform, dasselbe Denkmal oder dasselbe Familienwappen kann für einen Menschen Heimat und für einen anderen Unterdrückung bedeuten.
+
+**Besonderer Ausbau:** Rothain sollte besonders starke Generationenkonflikte erhalten. Ältere Menschen erinnern sich anders an das ehemalige Reich als jüngere, die nur noch die Republik kennen.
+
+### Sahr
+**Leitfrage:** Was hält eine Gesellschaft zusammen, wenn Handel wichtiger ist als gemeinsame Herkunft?
+
+**Alltagswiderspruch:** Die Städte leben vom offenen Austausch, fürchten aber gleichzeitig Abhängigkeit von fremden Waren, Häfen und Märkten.
+
+**Besonderer Ausbau:** Die Handelsstädte sollten untereinander konkurrieren. Sahr ist deshalb nicht einfach ein geeinter Wirtschaftsblock, sondern ein permanenter Ausgleich zwischen Eigeninteressen.
+
+### Steinmark
+**Leitfrage:** Wann schützt Ordnung die Freiheit – und wann ersetzt sie sie?
+
+**Alltagswiderspruch:** Bürger verlassen sich auf funktionierende Institutionen und beginnen gerade deshalb zu spüren, wie mächtig diese Institutionen geworden sind.
+
+**Besonderer Ausbau:** Die Bundesländer Steinmarks sollten unterschiedliche Verwaltungskulturen besitzen. Dadurch wird Föderalismus im Alltag sichtbar.
+
+### Vael
+**Leitfrage:** Wie viel menschliches Leben darf wirtschaftlicher Fortschritt kosten?
+
+**Alltagswiderspruch:** Die Industrie schafft Wohlstand, Infrastruktur und soziale Aufstiegsmöglichkeiten, erzeugt aber gleichzeitig Abhängigkeit von Unternehmen und gefährliche Arbeitsbedingungen.
+
+**Besonderer Ausbau:** Vael braucht sowohl stolze Arbeiterstädte als auch Regionen, in denen Menschen unter der Macht großer Konzerne leiden.
+
+### Vesper
+**Leitfrage:** Kann eine Gesellschaft funktionieren, wenn niemand sicher weiß, was wahr ist?
+
+**Alltagswiderspruch:** Geheimhaltung kann reale Gefahren verhindern, zerstört aber langfristig Vertrauen zwischen Bürgern.
+
+**Besonderer Ausbau:** Vesper sollte mehrere Schichten besitzen: überzeugte Staatsanhänger, vorsichtige Mitläufer, private Opposition und Menschen, die schlicht versuchen, unauffällig zu leben.
+
+### Eldran
+**Leitfrage:** Kann Tradition eine demokratische Ordnung stärken, ohne sie zu beherrschen?
+
+**Alltagswiderspruch:** Die Krone ist politisch begrenzt, aber kulturell mächtig.
+
+**Besonderer Ausbau:** Eldran sollte einen klaren Gegensatz zwischen höfisch geprägten Zentren, modernen Städten und eigenständigen Regionen erhalten.
+
+### Namar
+**Leitfrage:** Wie viel gemeinsame Macht braucht Freiheit zwischen voneinander entfernten Regionen?
+
+**Alltagswiderspruch:** Die Menschen verteidigen ihre regionale Selbstbestimmung, benötigen aber im Krieg gemeinsame Infrastruktur und zentrale Koordination.
+
+**Besonderer Ausbau:** Jede Küstenregion sollte eine eigene Identität besitzen. Namar wird dadurch zu einem Staat, dessen Einheit ständig ausgehandelt wird.
+
+### Orthea
+**Leitfrage:** Was geschieht, wenn eine Gesellschaft lernt, fast alles zu messen?
+
+**Alltagswiderspruch:** Gute Daten verbessern Entscheidungen, können aber jene Erfahrungen unsichtbar machen, die sich nicht einfach quantifizieren lassen.
+
+**Besonderer Ausbau:** Orthea sollte neben Spitzenforschung auch eine große Schicht gewöhnlicher Bürger besitzen, die mit der akademischen Elite wenig gemeinsam hat.
+
+### Dargan
+**Leitfrage:** Wie viel Staat braucht ein Mensch, wenn der Staat weit entfernt ist?
+
+**Alltagswiderspruch:** Darganische Bürger verlangen Schutz und Infrastruktur, wollen aber nicht von einer fernen Verwaltung abhängig werden.
+
+**Besonderer Ausbau:** Dargan sollte starke lokale Gemeinschaften und unterschiedliche Grenzkulturen besitzen.
+
+### Lyr
+**Leitfrage:** Wie bleibt eine Gemeinschaft frei, ohne sich voneinander zu isolieren?
+
+**Alltagswiderspruch:** Lokale Souveränität schützt Identität, erschwert aber gemeinsame Entscheidungen.
+
+**Besonderer Ausbau:** Die Täler und Republiken sollten nicht dieselbe Kultur besitzen. Lyr ist ein Bund aus verwandten, aber eigenständigen Gesellschaften.
+
+### Caldris
+**Leitfrage:** Was ist ein freier Mensch, wenn für fast jedes Lebensproblem bereits gesorgt wird?
+
+**Alltagswiderspruch:** Materielle Sicherheit ist real und wertvoll, während Überwachung und Konformitätsdruck ebenfalls real sind.
+
+**Besonderer Ausbau:** Caldris braucht Bürger, die das System aus Überzeugung verteidigen, weil sie dessen soziale Leistungen erlebt haben.
+
+### Merovan
+**Leitfrage:** Wie kann eine Gesellschaft mit imperialer Vergangenheit leben, ohne sie zu verherrlichen oder zu verdrängen?
+
+**Alltagswiderspruch:** Internationaler Handel und kulturelle Vielfalt beruhen teilweise auf historischen Strukturen, die zugleich Quelle von Ausbeutung waren.
+
+**Besonderer Ausbau:** Merovan sollte unterschiedliche Erinnerungskulturen innerhalb derselben Gesellschaft zeigen.
+
+### Theryn
+**Leitfrage:** Wann endet eine Revolution?
+
+**Alltagswiderspruch:** Die Revolution kann reale soziale Verbesserungen gebracht haben und gleichzeitig neue Machtstrukturen erzeugt haben.
+
+**Besonderer Ausbau:** Theryn sollte nicht nur aus überzeugten Revolutionären bestehen. Veteranen, junge Reformisten, alte Parteifunktionäre, Genossenschaftler und unpolitische Familien müssen nebeneinander existieren.
+
+---
+
+# Gemeinsames Raster für die weitere Ausarbeitung
+
+Für jede Nation werden wir künftig konkrete Details entwickeln, statt nur allgemeine Beschreibungen zu sammeln:
+
+| Ebene | Fragen |
+|---|---|
+| Hauptstadt | Wie sieht sie aus? Wer lebt dort? |
+| Regionen | Welche Landschaften und regionalen Unterschiede gibt es? |
+| Städte | Was unterscheidet typische Städte voneinander? |
+| Dörfer | Wie lebt die Landbevölkerung? |
+| Familie | Wie groß sind Haushalte? Welche Rollen gibt es? |
+| Jugend | Was wollen Jugendliche werden? |
+| Arbeit | Welche Berufe sind typisch und angesehen? |
+| Armut | Wie sieht soziale Not aus? |
+| Wohlstand | Wie zeigt sich Reichtum? |
+| Religion | Welche Glaubensformen und Rituale existieren? |
+| Bildung | Was lernen Kinder und Jugendliche? |
+| Medien | Welche Informationen erreichen die Bevölkerung? |
+| Sprache | Welche Begriffe und Redewendungen sind typisch? |
+| Essen | Welche Gerichte gehören zum Alltag? |
+| Kleidung | Was tragen Zivilisten und Soldaten? |
+| Architektur | Wie sehen Wohnhäuser, öffentliche Gebäude und Fabriken aus? |
+| Freizeit | Was machen Menschen nach der Arbeit? |
+| Feste | Welche Feiertage verbinden die Gesellschaft? |
+| Trauer | Wie wird mit Tod und Verlust umgegangen? |
+| Militär | Wie erlebt ein Zivilist die Streitkräfte? |
+| Krieg | Wie verändert Mobilisierung den Alltag? |
+| Opposition | Welche Gruppen wollen Veränderung? |
+| Nachbarn | Welche Nationen werden geliebt, gefürchtet oder verachtet? |
+| Migration | Wer zieht wohin und warum? |
+| Familiengeschichte | Welche alten Ereignisse werden bis heute erzählt? |
+
+Der entscheidende Grundsatz bleibt:
+
+> **Wir entwickeln keine sechzehn Klischees. Wir entwickeln sechzehn Gesellschaften.**
+
+Eine Nation darf widersprüchlich sein. Gerade diese Widersprüche machen sie glaubwürdig.
