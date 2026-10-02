@@ -71,7 +71,7 @@
   };
   var RANK_AGES = 'fhr,lt,olt,hptm,maj,obstlt,obst,bg,genmj,genlt,gen,fm,gfm';
 
-  var VER = '24';
+  var VER = '25';
 
   var FACE_FILE = {
     f01: 'Vael/male/01.png',
@@ -100,6 +100,7 @@
   function rankPath(file, age) {
     if (age === 'lt') return String(file).replace('male/', 'male/leutnant/');
     if (age === 'olt') return String(file).replace('male/', 'male/oberleutnant/');
+    if (age === 'hptm') return String(file).replace('male/', 'male/hauptmann/');
     return file;
   }
 
