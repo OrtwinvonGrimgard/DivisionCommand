@@ -451,31 +451,171 @@ Familiengeschichten sind häufig von Migration, Berufswechsel und urbaner Mobili
 
 ### Der technokratische Sklavenstaat
 
-Karsk entstand aus einer langen Reihe umkämpfter Grenzregionen. Aus dieser Geschichte entwickelte sich zunächst eine radikale Sicherheitskultur. Im Laufe der Jahrzehnte wurde daraus ein zentralistischer technokratischer Staat.
+Karsk ist kein Staat, der seine Unterdrückung versteckt. Er hat sie **systematisiert**.
 
-In Karsk besitzt der Staat weitgehende Kontrolle über das Leben seiner Bürger. Menschen werden nach ihrer gesellschaftlichen und militärischen Verwendbarkeit bewertet.
+Das Land entstand aus Grenzkriegen, Versorgungskrisen und dem politischen Versprechen, dass Chaos nie wieder über das Leben der Bevölkerung bestimmen dürfe. Aus diesem Versprechen entstand zunächst ein Sicherheitsstaat. Später wurde daraus ein technokratisches System, in dem der menschliche Körper, die Arbeitskraft und selbst das persönliche Leben als verwaltbare Ressourcen betrachtet werden.
 
-Der zentrale Grundsatz lautet:
+Der Staat behauptet nicht, dass alle Menschen gleich wertvoll seien.
+
+Er behauptet, dass ihr Wert **messbar** sei.
 
 > **Der Mensch ist unvollkommen. Der Staat kann ihn verbessern.**
+
+Dieser Satz steht in Karsk nicht nur auf Plakaten. Er ist in Schulbüchern, medizinischen Formularen, Arbeitsverträgen und militärischen Vorschriften verankert.
+
+Die Grausamkeit Karsks besteht deshalb weniger in offenem Chaos als in der **Normalität der Kontrolle**.
+
+Ein Bürger kann morgens zur Arbeit gehen, seine Kinder zur Schule bringen, medizinisch versorgt werden und abends mit seiner Familie essen – und trotzdem wissen, dass der Staat jede dieser Lebenssphären bewertet.
+
+### Das System der Bewertung
+
+Jeder Bürger besitzt eine staatliche Leistungs- und Vertrauensbewertung.
+
+Sie umfasst unter anderem:
+
+- körperliche Belastbarkeit
+- berufliche Qualifikation
+- medizinische Eignung
+- psychologische Stabilität
+- bisherige Arbeitsleistung
+- militärische Verwendbarkeit
+- familiäre Zuverlässigkeit
+- politische Loyalität
+- gesellschaftlichen Nutzen
+
+Diese Bewertung entscheidet nicht offiziell darüber, ob ein Mensch „wertvoll“ ist.
+
+Praktisch entscheidet sie jedoch darüber, **welches Leben ihm offensteht**.
+
+Hohe Bewertung bedeutet bessere Wohnungen, bevorzugte medizinische Behandlung, Zugang zu Ausbildung, bessere Arbeitsplätze und größere Bewegungsfreiheit.
+
+Niedrige Bewertung bedeutet Wartelisten, schlechtere Wohnlagen, eingeschränkte Berufswahl und verstärkte Kontrolle.
+
+Niemand muss ständig bedroht werden.
+
+Es genügt, wenn jeder weiß, dass ein falscher Eintrag im System seine Zukunft verändern kann.
 
 ### Die technische Symbiose
 
 Karsk besitzt eine der extremsten Formen militärischer Technologie der Welt.
 
-Maschinelle Komponenten werden direkt mit dem menschlichen Körper verbunden. Nerven, Knochen, Organe und technische Systeme bilden eine erzwungene Symbiose.
+Maschinelle Komponenten werden direkt mit dem menschlichen Körper verbunden. Nerven, Knochen, Organe und technische Systeme bilden eine **erzwungene Symbiose**.
 
-Diese Verbindung ist jedoch nicht harmlos.
+Karsk bezeichnet diese Eingriffe als *Verbesserung*.
 
-Das menschliche Gewebe stößt die Systeme teilweise ab. Organe versagen, Nerven degenerieren und Körperteile müssen ersetzt werden.
+Die Betroffenen sprechen untereinander teilweise von *Umbau*.
 
-Ein Karsker Soldat kann dadurch stärker, schneller, widerstandsfähiger und intelligenter werden.
+Das menschliche Gewebe stößt Systeme ab. Implantate entzünden sich. Nerven degenerieren. Knochen müssen ersetzt werden. Medikamente verhindern Abstoßungsreaktionen, verursachen aber neue Schäden.
 
-Der Preis ist der eigene Körper.
+Bei besonders schwer augmentierten Soldaten besteht der Körper aus einem Netz aus:
+
+- künstlichen Gelenken
+- verstärkten Knochen
+- Nervenverstärkern
+- künstlichen Organen
+- Filtersystemen
+- optischen Sensoren
+- implantierten Kommunikationssystemen
+
+Der Staat dokumentiert diese Schäden nicht primär als Verletzungen.
+
+Er dokumentiert sie als **Wartungsbedarf**.
 
 > **Je länger ein Soldat dient, desto weniger Mensch bleibt von ihm übrig.**
 
-Der Staat betrachtet diesen Verlust nicht als Versagen, sondern als notwendigen Preis.
+Der Preis wird nicht als moralische Frage behandelt. Er erscheint in Tabellen.
+
+### Das Krankenhaus
+
+Karsker Krankenhäuser gehören zu den technisch fortschrittlichsten Einrichtungen der Welt.
+
+Sie können Menschen retten, die anderswo als verloren gelten würden.
+
+Doch jeder Eingriff besitzt eine Prioritätsstufe.
+
+Ein hochbewerteter Ingenieur erhält möglicherweise innerhalb weniger Stunden ein künstliches Organ.
+
+Ein einfacher Arbeiter wartet.
+
+Ein politisch auffälliger Bürger wartet länger.
+
+Ein Mensch, dessen Bewertung als dauerhaft zu niedrig gilt, kann erfahren, dass eine Behandlung „medizinisch nicht priorisiert“ wird.
+
+Niemand sagt:
+
+> „Du bist es nicht wert.“
+
+Das System sagt:
+
+> **„Die verfügbaren Ressourcen werden effizienter eingesetzt.“**
+
+Damit wird Grausamkeit zur Verwaltungssprache.
+
+### Kinder in Karsk
+
+Kinder werden nicht erst mit Eintritt ins Berufsleben bewertet.
+
+Die Bewertung beginnt früh.
+
+Neugeborene werden medizinisch erfasst. Kinder werden auf körperliche Belastbarkeit, Lernfähigkeit und besondere Begabungen untersucht.
+
+Eltern erhalten Entwicklungsberichte.
+
+Ein besonders begabtes Kind kann eine ganze Familie sozial aufsteigen lassen.
+
+Ein behindertes oder chronisch krankes Kind kann dagegen eine Familie in Angst versetzen.
+
+Nicht weil die Eltern es weniger lieben.
+
+Sondern weil sie wissen, dass der Staat bereits begonnen hat, **über seine Zukunft zu entscheiden**.
+
+Viele Eltern versuchen deshalb, Krankheiten und Schwächen ihrer Kinder möglichst lange aus offiziellen Systemen herauszuhalten.
+
+Das ist gefährlich.
+
+Denn das Verbergen einer medizinischen Information kann selbst als gesellschaftliche Unzuverlässigkeit bewertet werden.
+
+### Familie als letzter Schutzraum
+
+Die Familie ist in Karsk gleichzeitig Schutzraum und Gefahrenzone.
+
+Eltern lieben ihre Kinder. Geschwister helfen einander. Großeltern bewahren Geschichten, die niemals in offiziellen Archiven erscheinen.
+
+Doch jeder weiß:
+
+**Ein Familienmitglied kann das Schicksal der gesamten Familie beeinflussen.**
+
+Ein hochrangiger Staatsingenieur kann seinen Verwandten Wohnungen und Ausbildung ermöglichen.
+
+Ein wegen Sabotage verurteilter Bürger kann dagegen dazu führen, dass Angehörige plötzlich zusätzliche Überprüfungen erhalten.
+
+Offiziell gibt es keine Sippenhaft.
+
+Inoffiziell weiß jeder, dass politische Zuverlässigkeit selten ausschließlich individuell betrachtet wird.
+
+### Die Karsker Stille
+
+Karsk ist kein Land voller ständiger Schreie.
+
+Es ist ein Land voller **leiser Sätze**.
+
+Menschen senken ihre Stimme, wenn sie über die Regierung sprechen.
+
+Kollegen wissen, wann ein Gespräch beendet werden sollte.
+
+Ärzte formulieren Befunde so, dass sie keine politische Interpretation zulassen.
+
+Lehrer vermeiden bestimmte Fragen.
+
+Eltern sagen ihren Kindern:
+
+> „Das besprechen wir zu Hause.“
+
+Und selbst dort werden Türen geschlossen.
+
+Die Angst besteht nicht darin, dass jederzeit jemand vor der Tür stehen muss.
+
+Die Angst besteht darin, dass vielleicht **niemand kommen muss**, weil das System bereits alles weiß.
 
 ### Militärische Fähigkeiten
 
@@ -494,11 +634,47 @@ Dazu gehören beispielsweise:
 
 Gas, Nebel, Rauch und andere Umweltbedingungen können dadurch ihre Wirkung verlieren oder zumindest reduziert werden.
 
+Karsk behandelt den Soldaten nicht primär als Individuum, sondern als **militärisches System mit menschlichem Ursprung**.
+
+### Veteranen
+
+Veteranen werden öffentlich geehrt.
+
+Ihre Gesichter erscheinen auf Plakaten.
+
+Ihre Leistungen werden in staatlichen Berichten gefeiert.
+
+Doch ein schwer beschädigter Veteran kann nach dem Ende seiner aktiven Dienstzeit seinen gesellschaftlichen Wert verlieren.
+
+Dann beginnt die zweite Tragödie.
+
+Der Mann, dessen Körper einst als Beweis staatlicher Überlegenheit präsentiert wurde, muss plötzlich beweisen, dass er noch nützlich ist.
+
+Manche erhalten Verwaltungsstellen.
+
+Manche werden medizinische Versuchspersonen.
+
+Manche verschwinden aus der Öffentlichkeit.
+
 ### Der innere Konflikt
 
 Karsk behauptet, seine Bürger durch Stärke zu schützen.
 
-Doch die Bevölkerung muss sich fragen, ob sie noch geschützt wird – oder bereits selbst zum Rohstoff des Staates geworden ist.
+Und für manche Bürger stimmt das sogar.
+
+Kranke Menschen werden geheilt. Straßen sind sicher. Versorgungssysteme funktionieren. Arbeitslosigkeit ist gering. Technische Medizin rettet Leben.
+
+Genau deshalb ist das System gefährlich.
+
+Es funktioniert.
+
+Die Frage lautet nicht:
+
+**„Warum unterstützen die Menschen Karsk?“**
+
+Die Frage lautet:
+
+**„Wie weit würden Menschen gehen, um die Sicherheit, die Karsk ihnen tatsächlich gibt, nicht wieder zu verlieren?“**
 
 ---
 
@@ -506,124 +682,241 @@ Doch die Bevölkerung muss sich fragen, ob sie noch geschützt wird – oder ber
 
 **Leitfrage:** Was geschieht mit einer Gesellschaft, wenn menschlicher Wert messbar gemacht wird?
 
-**Alltagswiderspruch:** Der Staat kann hervorragende medizinische und technische Versorgung bereitstellen und gleichzeitig entscheiden, wer diese Versorgung verdient.
+**Alltagswiderspruch:** Karsk kann außergewöhnliche Sicherheit, medizinische Versorgung und technische Möglichkeiten bieten und gleichzeitig jeden Menschen in eine staatliche Nutzenrechnung einordnen.
 
-**Besonderer Ausbau:** Karsk sollte nicht ausschließlich aus fanatischen Funktionären bestehen. Es braucht Bürger, die das System unterstützen, weil es ihnen tatsächlich Sicherheit, Heilung oder Aufstieg ermöglicht.
+**Besonderer Ausbau:** Karsk soll nicht aus fanatischen Funktionären bestehen. Es soll Menschen geben, die das System aufrichtig unterstützen, weil es ihre Krankheit geheilt, ihre Familie geschützt oder ihnen sozialen Aufstieg ermöglicht hat. Gerade diese Menschen machen den Konflikt glaubwürdiger.
 
 ## Hauptstadt
 
-Varkesh ist eine monumentale Verwaltungs- und Industriestadt. Die Stadtplanung folgt weniger historischen Straßenmustern als funktionalen Sektoren.
+Varkesh ist eine monumentale Verwaltungs- und Industriestadt.
 
-Wohnraum, Arbeitsstätten, medizinische Zentren, Produktionsanlagen und militärische Einrichtungen sind räumlich klar gegliedert. Große Verkehrsachsen verbinden die einzelnen Sektoren.
+Die Stadtplanung folgt keinem klassischen Stadtbild. Sie folgt **Funktionen**.
 
-Das Zentrum wird von staatlichen Verwaltungsbauten und medizinisch-technologischen Komplexen geprägt. Viele Gebäude sind zugleich Arbeits-, Wohn- und Versorgungseinrichtungen.
+Wohnraum, Arbeitsstätten, medizinische Zentren, Produktionsanlagen, Schulen und militärische Einrichtungen sind räumlich und organisatorisch miteinander verbunden.
 
-Karsker Architektur vermittelt nicht primär Schönheit, sondern Funktion, Kontrolle und Dauerhaftigkeit.
+Große Verkehrsachsen führen durch kontrollierte Sektoren. Zugänge werden registriert. Öffentliche Plätze sind weit und übersichtlich, nicht um Menschen zusammenzubringen, sondern um Bewegungen kontrollierbar zu halten.
 
-**Stadtbild:** massive Beton- und Metallstrukturen, unterirdische Anlagen, kontrollierte Verkehrswege.  
+Unter der Stadt liegen medizinische und industrielle Anlagen, deren Existenz offiziell kaum erwähnt wird.
+
+Das Zentrum wird von Verwaltungsbauten und medizinisch-technologischen Komplexen beherrscht.
+
+Viele Gebäude sind zugleich Wohn-, Arbeits- und Versorgungseinrichtungen.
+
+**Stadtbild:** massive Beton- und Metallstrukturen, unterirdische Anlagen, kontrollierte Verkehrswege, künstlich beleuchtete Innenräume.  
 **Wichtige Viertel:** Verwaltungssektor, Medizinsektor, Produktionsgürtel, Wohnsektoren, Militärbezirk.  
-**Sozialer Gegensatz:** privilegierte technische und staatliche Funktionsträger gegenüber Menschen mit geringer staatlicher Bewertung.
+**Sozialer Gegensatz:** privilegierte technische und staatliche Funktionsträger gegenüber Menschen mit niedriger staatlicher Bewertung.
 
 ## Regionen
 
 ### Zentralbezirk
-Dicht kontrollierte Kernregion mit Regierungs-, Medizin- und Forschungseinrichtungen. Hier leben viele privilegierte Staats- und Technologiefunktionäre.
+
+Dicht kontrollierte Kernregion mit Regierung, Forschung, Medizin und den wichtigsten Verwaltungsstellen.
+
+Hier leben die Menschen, die vom System am stärksten profitieren.
+
+Die Gebäude sind sauberer, die medizinische Versorgung schneller und die Sicherheitskräfte weniger sichtbar.
 
 ### Produktionsgürtel
-Schwer industrialisierte Region mit großen Fabriken und technischen Ausbildungszentren. Arbeiter erhalten Versorgung und Status vor allem über ihre berufliche Leistungsfähigkeit.
+
+Schwer industrialisierte Region mit Fabriken, Raffinerien, technischen Ausbildungszentren und großen Arbeitersiedlungen.
+
+Die Arbeiter erhalten Wohnungen, medizinische Versorgung und soziale Leistungen.
+
+Dafür ist ihr gesamtes Leben an das Produktionssystem gekoppelt.
+
+**Werksausweis, Wohnberechtigung und medizinische Akte sind praktisch Teile derselben Identität.**
 
 ### Grenzsektoren
-Militärisch geprägte Randgebiete mit hoher Sicherheitspräsenz. Die Bevölkerung ist an Kontrollen und Mobilisierung gewöhnt.
+
+Militärisch geprägte Randgebiete mit hoher Sicherheitspräsenz.
+
+Kontrollen gehören zum Alltag. Kinder kennen Soldaten besser als Polizisten.
+
+Viele Familien leben dort seit Generationen und betrachten den permanenten Ausnahmezustand als normal.
 
 ### Versorgungsprovinzen
-Landwirtschaftliche und ressourcenreiche Regionen, deren Produktion zentral verwaltet wird. Der Staat ist besonders tief in den Alltag eingebunden.
+
+Landwirtschaftliche und ressourcenreiche Regionen, deren Produktion zentral verwaltet wird.
+
+Versorgung ist zuverlässig.
+
+Freiheit weniger.
+
+Die Bewohner wissen genau, wie viel sie produzieren müssen und welche Folgen ein Ausfall haben kann.
 
 **Regionaler Grundkonflikt:** Je weiter man vom Zentrum entfernt lebt, desto stärker wird die Frage, ob der Staat tatsächlich schützt oder nur kontrolliert.
 
 ## Städte
 
 ### Varkesh – Hauptstadt
-Zentrum von Staat, Medizin und technischer Kontrolle. Große Funktionssektoren bestimmen das Stadtleben.
+
+Zentrum von Staat, Medizin und technischer Kontrolle.
 
 ### Karsin
-Medizin- und Implantationszentrum. Ärzte, Techniker und staatliche Bewertungsstellen besitzen außergewöhnlichen Einfluss.
+
+Medizin- und Implantationszentrum.
+
+Hier befindet sich die **Varkescher Medizinakademie**, aber auch der größte Komplex für staatlich genehmigte Körperaugmentation.
+
+Für viele Karsker ist Karsin gleichzeitig Hoffnung und Schrecken.
 
 ### Dravik
-Schwere Industriestadt im Produktionsgürtel. Arbeiterstatus und technische Qualifikation bestimmen den gesellschaftlichen Rang stark.
+
+Schwere Industriestadt.
+
+Arbeiterstatus und technische Qualifikation bestimmen den gesellschaftlichen Rang.
+
+Die Stadt besitzt einige der größten Fabrikhallen Karsks.
 
 ### Sektorstadt 7
-Eine vollständig geplante Stadt, deren Alltag nach Arbeits-, Wohn- und Versorgungszyklen organisiert ist. Individualität ist weniger sichtbar als Funktion.
+
+Eine vollständig geplante Stadt.
+
+Der Alltag ist nach Arbeits-, Wohn-, Transport- und Versorgungszyklen organisiert.
+
+Es gibt kaum ungenutzten Raum.
+
+Es gibt kaum spontane Orte.
+
+Und es gibt kaum einen Grund, warum ein Bürger seinen vorgesehenen Sektor verlassen sollte.
 
 ### Grenzwerk
-Militärisch geprägte Stadt nahe der Außengrenze. Kasernen, Werkstätten und Sicherheitsanlagen dominieren.
+
+Militärisch geprägte Stadt nahe der Außengrenze.
+
+Kasernen, Werkstätten, Lazarette und Sicherheitsanlagen dominieren das Stadtbild.
 
 ## Dörfer und ländlicher Alltag
 
 ### Werksiedlung Nord
-Geplante Arbeitersiedlung neben einem Produktionskomplex. Wohnungen, Schule, Klinik und Arbeitsplatz sind eng miteinander verbunden.
+
+Geplante Arbeitersiedlung neben einem Produktionskomplex.
+
+Wohnung, Schule, Klinik und Arbeitsplatz liegen wenige Minuten voneinander entfernt.
 
 ### Dornenfeld
-Landwirtschaftliche Gemeinde mit staatlich vorgegebenen Produktionszielen. Versorgung ist zuverlässig, persönliche Selbstbestimmung begrenzter.
+
+Landwirtschaftliche Gemeinde mit staatlich vorgegebenen Produktionszielen.
+
+Versorgung ist zuverlässig.
+
+Persönliche Selbstbestimmung begrenzter.
 
 ### Grauhof
-Dorf nahe einer medizinischen Anlage. Viele Familien arbeiten direkt oder indirekt für den Gesundheitssektor.
+
+Dorf nahe einer medizinischen Anlage.
+
+Viele Familien arbeiten direkt oder indirekt für den Gesundheitssektor.
+
+Inoffiziell erzählen sich die Bewohner, dass nachts Transporte in die unterirdischen Anlagen fahren.
 
 ### Grenzposten
-Kleine Siedlung an einer kontrollierten Verkehrsroute. Militär und Staat sind im Alltag ständig präsent.
+
+Kleine Siedlung an einer kontrollierten Verkehrsroute.
+
+Militär und Staat sind im Alltag ständig präsent.
 
 ## Familie und Generationen
 
-Die Familie steht unter einem starken Einfluss des Staates. Kinder werden früh medizinisch untersucht und ihre Fähigkeiten systematisch erfasst. Eltern wissen, dass die Entwicklung eines Kindes später seine gesellschaftliche Einstufung beeinflussen kann.
+Die Familie steht unter starkem Einfluss des Staates.
 
-In privilegierten Familien wird die staatliche Ordnung häufig als Schutz verstanden: gute medizinische Versorgung, Ausbildung und sichere Arbeitsplätze sind reale Vorteile. Andere Familien erleben dieselben Systeme als Eingriff in ihre Privatsphäre.
+Kinder werden früh medizinisch untersucht und ihre Fähigkeiten systematisch erfasst.
 
-Eltern versuchen häufig, Schwächen ihrer Kinder nicht öffentlich sichtbar werden zu lassen. Gleichzeitig kann eine Familie großen Stolz empfinden, wenn ein Kind als besonders leistungsfähig gilt.
+Eltern wissen, dass die Entwicklung eines Kindes später seine gesellschaftliche Einstufung beeinflussen kann.
 
-Der zentrale familiäre Konflikt lautet: **Ist ein Kind zuerst ein geliebtes Familienmitglied oder zuerst ein zukünftiger Träger gesellschaftlicher Leistung?**
+In privilegierten Familien wird die staatliche Ordnung häufig als Schutz verstanden.
+
+In anderen Familien wird dieselbe Ordnung als Eindringen in das Innerste des Menschen erlebt.
+
+Eltern versuchen häufig, Schwächen ihrer Kinder nicht öffentlich sichtbar werden zu lassen.
+
+Gleichzeitig kann eine Familie großen Stolz empfinden, wenn ein Kind als besonders leistungsfähig gilt.
+
+Der zentrale familiäre Konflikt lautet:
+
+> **Ist ein Kind zuerst ein geliebtes Familienmitglied – oder zuerst ein zukünftiger Träger gesellschaftlicher Leistung?**
 
 ## Alltag und Lebensgefühl
 
 ### Wohnen und Arbeit
 
-Karsker Bürger erhalten vieles über staatlich organisierte Systeme. Wohnraum, medizinische Versorgung und Arbeitsplätze werden stark nach Bedarf und staatlicher Bewertung verteilt.
+Karsker Bürger erhalten vieles über staatlich organisierte Systeme.
 
-Ein Mensch mit hoher technischer oder militärischer Qualifikation kann privilegiert leben. Menschen mit Behinderungen oder chronischen Krankheiten erleben dagegen besonders deutlich, wie brutal eine Gesellschaft sein kann, die den Menschen nach Nutzen bewertet.
+Wohnraum, medizinische Versorgung und Arbeitsplätze werden stark nach Bedarf und staatlicher Bewertung verteilt.
 
-Arbeitsplätze besitzen eine offizielle Leistungsbewertung. Jeder Bürger kennt seine Kennziffern.
+Ein Mensch mit hoher technischer oder militärischer Qualifikation kann privilegiert leben.
 
-### Familie
+Menschen mit Behinderungen oder chronischen Krankheiten erleben dagegen besonders deutlich, wie brutal eine Gesellschaft sein kann, die den Menschen nach Nutzen bewertet.
 
-Familien lieben ihre Kinder, aber selbst die Familie steht unter dem Schatten staatlicher Bewertung. Ein Kind mit außergewöhnlicher Begabung kann als Hoffnung der Familie gelten. Ein Kind, das nicht den Erwartungen entspricht, kann zum Anlass für staatliche Intervention werden.
+Arbeitsplätze besitzen eine offizielle Leistungsbewertung.
 
-Viele Eltern versuchen deshalb, ihren Kindern beizubringen, niemals öffentlich Schwäche zu zeigen.
+Jeder Bürger kennt seine Kennziffern.
 
 ### Medizin
 
-Karsk verfügt über hervorragende technische Medizin, aber Zugang und Zweck sind ungleich verteilt. Wer als wertvoll gilt, erhält die modernsten Behandlungen.
+Karsk verfügt über hervorragende technische Medizin.
 
-Die entscheidende gesellschaftliche Frage lautet nicht, ob der Staat heilen kann.
+Aber Medizin ist niemals vollständig kostenlos im moralischen Sinn.
 
-Sie lautet:
+Jede Behandlung besitzt eine Prioritätsstufe.
 
-> **Für wen hält der Staat Heilung für lohnenswert?**
+Die entscheidende gesellschaftliche Frage lautet nicht:
+
+> **Kann der Staat mich retten?**
+
+Sondern:
+
+> **Hält der Staat es für sinnvoll, mich zu retten?**
 
 ### Religion und Privatleben
 
-Private Religion existiert, wird aber überwacht. Persönliche Rituale können toleriert werden, solange sie keine politische Alternative zur Staatsideologie bilden.
+Private Religion existiert, wird aber überwacht.
 
-### Soldaten
+Persönliche Rituale können toleriert werden, solange sie keine politische Alternative zur Staatsideologie bilden.
 
-Soldaten genießen materielles Prestige, zahlen aber einen körperlichen Preis. Veteranen mit Implantatschäden können gleichzeitig geehrt und als defekte Systeme behandelt werden.
+Viele Gläubige verstecken religiöse Gegenstände.
+
+Nicht weil Religion vollständig verboten wäre.
+
+Sondern weil niemand genau weiß, welche Bedeutung ein Symbol in seiner Akte erhalten könnte.
+
+### Medien und Sprache
+
+Karsker Medien sprechen selten von Leid.
+
+Sie sprechen von:
+
+- Ressourcen
+- Effizienz
+- Stabilität
+- Optimierung
+- Belastbarkeit
+- Wiederherstellung
+- nationaler Leistungsfähigkeit
+
+Ein verstümmelter Soldat ist ein **„komplexer Rekonstruktionsfall“**.
+
+Ein verhungernder Bezirk ist ein **„Versorgungsdefizit“**.
+
+Ein politischer Gefangener ist ein **„Sicherheitsfall“**.
+
+Die Sprache macht das Grauen verwaltbar.
+
+### Soldaten im Alltag
+
+Soldaten genießen materielles Prestige, zahlen aber einen körperlichen Preis.
+
+Veteranen mit Implantatschäden können gleichzeitig geehrt und als defekte Systeme behandelt werden.
 
 Eine Familie kann stolz auf einen ausgezeichneten Soldaten sein und dennoch jeden Abend fürchten, dass er eines Tages mit einem Körper zurückkehrt, den sie kaum noch erkennt.
 
 ### Lebensgefühl
 
-**Hoffnung:** Der Staat verspricht, Chaos und menschliche Schwäche überwinden zu können.
+**Hoffnung:** Krankheit, Unsicherheit und körperliche Schwäche könnten technisch überwunden werden.
 
-**Angst:** Unbrauchbar zu werden.
+**Angst:** Nicht nur zu sterben, sondern als **unbrauchbar** eingestuft zu werden.
 
-**Tabu:** Öffentlich zu sagen, dass ein Mensch auch ohne Leistung einen eigenen Wert besitzt.
+**Tabu:** Öffentlich zu sagen, dass ein Mensch auch ohne Leistung einen eigenen, unverrechenbaren Wert besitzt.
 
 ---
 
@@ -631,120 +924,192 @@ Eine Familie kann stolz auf einen ausgezeichneten Soldaten sein und dennoch jede
 
 ### Punkt 6 – Jugend
 
-Jugend wird früh medizinisch und beruflich bewertet. Leistungsstarke Jugendliche erhalten Chancen und Privilegien; andere erleben früh den Druck gesellschaftlicher Nützlichkeit.
+Jugend wird früh medizinisch und beruflich bewertet.
+
+Leistungsstarke Jugendliche erhalten Chancen und Privilegien.
+
+Andere lernen schon in der Schule, dass ihre Zukunft von Kennzahlen abhängt.
 
 ### Punkt 7 – Arbeit
 
-Arbeit ist gesellschaftliche Bewertung. Produktivität, technische Qualifikation und staatlicher Bedarf bestimmen Aufstieg.
+Arbeit ist gesellschaftliche Bewertung.
+
+Produktivität, technische Qualifikation und staatlicher Bedarf bestimmen Aufstieg und Lebensstandard.
 
 ### Punkt 8 – Armut
 
-Materielle Grundversorgung kann gesichert sein, doch Menschen mit geringer staatlicher Bewertung erhalten weniger Chancen und medizinische Priorität.
+Materielle Grundversorgung kann gesichert sein.
+
+Die eigentliche Armut besteht häufig in **fehlender gesellschaftlicher Verwendbarkeit**.
+
+Wer wenig leisten kann, besitzt weniger Auswahl, weniger Einfluss und schlechtere medizinische Priorität.
 
 ### Punkt 9 – Wohlstand
 
 Wohlstand ist eng an staatliche Nützlichkeit und Position gebunden.
 
+Privilegierte Familien besitzen größere Wohnungen, bessere medizinische Zugänge und hochwertige technische Hilfsmittel.
+
 ### Punkt 10 – Religion
 
-Staatliche Rationalität dominiert. Private Glaubensgemeinschaften existieren, bleiben aber politisch vorsichtig.
+Staatliche Rationalität dominiert.
+
+Private Glaubensgemeinschaften existieren, bleiben aber politisch vorsichtig.
 
 ### Punkt 11 – Bildung
 
 Bildung dient der gezielten Ausbildung gesellschaftlich benötigter Fähigkeiten.
 
+Kinder werden früh in Bildungswege eingeordnet.
+
 ### Punkt 12 – Medien
 
-Medien sind staatlich gelenkt und vermitteln Ordnung, Fortschritt und gesellschaftliche Leistung.
+Medien sind staatlich gelenkt.
+
+Sie vermitteln Ordnung, Fortschritt, Sicherheit und gesellschaftliche Leistung.
+
+Kritische Berichte existieren nur innerhalb eng gesetzter Grenzen.
 
 ### Punkt 13 – Sprache
 
-Verwaltungssprache ist präzise und technisch; persönliche Sprache bleibt emotionaler.
+Verwaltungssprache ist präzise und technisch.
+
+Je technischer ein Begriff klingt, desto leichter lässt sich ein moralisches Problem als Verwaltungsproblem behandeln.
 
 ### Punkt 14 – Essen
 
-Funktionale, nährstofforientierte Küche; privilegierte Schichten pflegen aufwendigere Esskultur.
+Funktionale, nährstofforientierte Küche.
+
+Privilegierte Schichten pflegen aufwendigere Esskultur.
+
+In armen Sektoren ist Essen zuverlässig, aber eintönig.
 
 ### Punkt 15 – Kleidung
 
-Praktische, normierte Kleidung; Status zeigt sich eher durch Materialqualität und technische Ausstattung.
+Praktische, normierte Kleidung.
+
+Status zeigt sich durch Materialqualität, Rangabzeichen und technische Ausstattung.
 
 ### Punkt 16 – Architektur
 
-Monumentale Verwaltungsbauten, geplante Wohnkomplexe und funktionale Industriearchitektur.
+Monumentale Verwaltungsbauten, geplante Wohnkomplexe, unterirdische Anlagen und funktionale Industriearchitektur.
+
+Fenster sind häufig klein.
+
+Öffentliche Räume sind groß.
+
+Private Räume sind kontrollierbar.
 
 ### Punkt 17 – Freizeit
 
-Sport, technische Clubs und staatlich organisierte Freizeit; privilegierte Kreise besitzen exklusive Angebote.
+Sport, technische Clubs und staatlich organisierte Freizeit.
+
+Privilegierte Kreise besitzen exklusive Angebote.
 
 ### Punkt 18 – Feste
 
-Staatliche Fortschritts- und Leistungstage sowie regionale Arbeitsfeste.
+Staatliche Fortschritts- und Leistungstage.
+
+Besonders gefeiert werden medizinische Durchbrüche, industrielle Rekorde und militärische Erfolge.
 
 ### Punkt 19 – Trauer
 
-Staatliche Anerkennung verstorbener Leistungsträger ist sichtbar; Familien trauern persönlicher.
+Staatliche Anerkennung verstorbener Leistungsträger ist sichtbar.
+
+Die private Trauer ist dagegen häufig still.
+
+Bei Menschen mit niedriger Bewertung kann selbst der Tod bürokratisch wirken.
 
 ### Punkt 20 – Militär
 
-Militär ist sichtbares Instrument des Staates und technisch eng mit medizinischer Kontrolle verbunden.
+Das Militär ist sichtbares Instrument des Staates und technisch eng mit medizinischer Kontrolle verbunden.
+
+Soldaten gelten als besonders wertvolle, aber zugleich besonders verfügbare Bürger.
 
 ### Punkt 21 – Krieg
 
-Krieg wird als technische und gesellschaftliche Belastungsprobe verstanden, bei der Opfer nach staatlichem Nutzen bewertet werden.
+Krieg wird als technische und gesellschaftliche Belastungsprobe verstanden.
+
+Menschen werden nach militärischer Verwendbarkeit verteilt.
+
+Verluste erscheinen in Berichten als Kennzahlen.
+
+Familien sehen dagegen Gesichter.
 
 ### Punkt 22 – Opposition
 
-Offene Opposition ist riskant; Kritik existiert innerhalb von Institutionen, Familien und informellen Netzwerken.
+Offene Opposition ist riskant.
+
+Kritik existiert innerhalb von Institutionen, Familien und informellen Netzwerken.
+
+Die gefährlichste Form der Opposition ist nicht der offene Aufstand, sondern die Weigerung, das Bewertungssystem als selbstverständlich anzuerkennen.
 
 ### Punkt 23 – Nachbarn
 
-Nachbarschaften sind gut versorgt, aber staatliche Präsenz ist spürbar.
+Nachbarschaft ist von gegenseitiger Vorsicht geprägt.
+
+Menschen helfen einander, sprechen aber selten offen über politische Themen.
 
 ### Punkt 24 – Migration
 
-Migration ist streng staatlich gesteuert und nach Nutzenkriterien organisiert.
+Migration wird nach staatlichem Bedarf gesteuert.
+
+Qualifizierte Menschen werden bevorzugt aufgenommen.
+
+Menschen mit geringer wirtschaftlicher oder medizinischer Verwendbarkeit haben deutlich schlechtere Chancen.
 
 ### Punkt 25 – Familiengeschichte
 
-Familien bewahren Geschichten über staatliche Förderung, Anpassung, Ausgrenzung und medizinische Eingriffe oft nur privat.
+Familiengeschichten bestehen aus Aufstieg, Anpassung, medizinischen Eingriffen, Dienst und Verlust.
+
+Viele Familien besitzen einen Angehörigen, der durch das System gerettet wurde – und einen anderen, den es zerstört hat.
 
 ## Konkrete Lore-Anker
 
-### Bedeutende Familien
-- **Familie Koren:** Technokratische Ärztefamilie mit hohem staatlichem Status.
-- **Familie Drev:** Arbeiterfamilie aus Dravik, deren Angehörige in mehreren Generationen für dieselbe Produktionsregion arbeiteten.
+### Familien
 
-### Bekannte Personen
-- **Dr. Elena Koren:** Leiterin eines staatlichen Implantationsinstituts; überzeugt, dass Technologie menschliches Leid reduzieren kann.
-- **Marek Drev:** Arbeitervertreter, der Verbesserungen fordert, ohne das System grundsätzlich abzulehnen.
+- **Familie Koren:** Technokratische Medizinfamilie. Mehrere Generationen arbeiten im staatlichen Gesundheitssystem. Sie glauben aufrichtig daran, dass Technologie menschliches Leiden reduzieren kann.
+- **Familie Drev:** Arbeiterfamilie aus Dravik. Mehrere Generationen arbeiten in den Produktionswerken. Die Familie profitiert vom System und fürchtet es gleichzeitig.
+
+### Personen
+
+- **Dr. Elena Koren:** Leiterin eines staatlichen Implantatinstituts. Sie ist überzeugt, dass technische Medizin Leid überwinden kann. Ihre persönliche Tragödie beginnt, als ihr eigener Sohn als medizinisch „nicht ausreichend rentabel“ eingestuft wird.
+- **Marek Drev:** Arbeitervertreter. Er fordert bessere Bedingungen, ohne das gesamte System abzulehnen. Sein Bruder kehrte aus dem Militärdienst mit schweren Implantatschäden zurück.
 
 ### Institutionen
-- **Zentralamt für Menschliche Leistungsfähigkeit:** Bewertet medizinische und berufliche Eignung.
-- **Varkescher Medizinakademie:** Eliteinstitution für Implantat- und Regenerationsmedizin.
+
+- **Zentralamt für Menschliche Leistungsfähigkeit:** Staatliche Behörde zur Erfassung und Bewertung der Bevölkerung.
+- **Varkescher Medizinakademie:** führendes Zentrum für Karsker Körpertechnologie.
+- **Direktion für Rekonstruktive Systeme:** staatliche Einrichtung für die Reparatur und Weiterentwicklung schwer augmentierter Soldaten.
 
 ### Wirtschaft
-- **Karsk Biomech:** Hersteller medizinischer und militärischer Körpertechnik.
-- **Zentralwerke Dravik:** Schwerindustrie und militärische Produktion.
 
-### Medien und Kultur
-- **Staatsnetz Karsk:** Offizielle Nachrichten und Bildungsprogramme.
-- **Die Stimme der Leistung:** Zeitschrift über erfolgreiche Bürger und technische Fortschritte.
+- **Karsk Biomech:** staatlich kontrollierter Technologiekonzern für Implantate und Prothesen.
+- **Zentralwerke Dravik:** riesiger Produktionskomplex, der Fahrzeuge, technische Komponenten und militärische Systeme herstellt.
+
+### Medien
+
+- **Staatsnetz Karsk:** offizielles Informationsnetz.
+- **Die Stimme der Leistung:** populäres Medium, das Erfolgsgeschichten von Soldaten, Arbeitern und Wissenschaftlern verbreitet.
 
 ### Militär
-- **Karsker Sicherheitskorps:** Stark technisierte reguläre Streitkräfte.
-- **Grenzsektor Nord:** Militärische Verbände und Überwachungseinheiten entlang der Außengrenze.
+
+- **Karsker Sicherheitskorps:** zentrale Sicherheits- und Ordnungstruppe.
+- **Grenzsektor Nord:** stark mechanisierte Grenzformation.
+- **Rekonstruktionsbrigade:** Verband schwer augmentierter Soldaten, deren Mitglieder gleichzeitig Elitekämpfer und medizinische Versuchsträger des Staates sind.
 
 ### Stadtviertel Varkesh
-- **Zentralforum:** Ministerien und staatliche Institutionen.
-- **Medizinring:** Kliniken, Labore und medizinische Wohnkomplexe.
-- **Produktionsgürtel:** Industrie und Arbeiterwohnungen.
+
+- **Zentralforum:** Verwaltung, Staatspartei und zentrale Behörden.
+- **Medizinring:** Kliniken, Forschungseinrichtungen und Implantationszentren.
+- **Produktionsgürtel:** Fabriken, Arbeiterwohnungen und technische Ausbildungsstätten.
 
 ### Historische Ereignisse
-- **Die Effizienzreform:** Einführung der heutigen staatlichen Bewertungsordnung.
-- **Die Implantatkrise:** Reihe schwerer medizinischer Fehlschläge, die zur Verschärfung staatlicher Kontrollen führte.
 
----
+- **Die Effizienzreform:** Einführung der zentralen Bürgerbewertung.
+- **Die Implantatkrise:** Ein medizinischer Skandal, bei dem zahlreiche schwer augmentierte Soldaten langfristige Schäden erlitten. Der Staat erklärte die Krise offiziell zur notwendigen Übergangsphase.
+- **Die Nacht der Listen:** Ein nie vollständig aufgeklärtes Ereignis, bei dem tausende Bürger über Nacht ihre bisherigen Bewertungen verloren und dadurch Wohnungen, Arbeitsplätze oder medizinische Ansprüche einbüßten.
+- **Der stille Streik:** Arbeiter legten ihre Maschinen nicht nieder. Sie erfüllten nur exakt die vorgeschriebenen Mindestleistungen. Der Staat konnte den Streik nicht als Sabotage beweisen und musste schließlich Zugeständnisse machen.
 
 # 3. Ossaria – Das freie technologische Land
 
