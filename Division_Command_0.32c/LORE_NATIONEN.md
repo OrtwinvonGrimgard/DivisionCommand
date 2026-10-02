@@ -1900,3 +1900,241 @@ Der entscheidende Grundsatz bleibt:
 > **Wir entwickeln keine sechzehn Klischees. Wir entwickeln sechzehn Gesellschaften.**
 
 Eine Nation darf widersprüchlich sein. Gerade diese Widersprüche machen sie glaubwürdig.
+
+
+# Konkrete Ausarbeitung – Punkt 1: Hauptstädte
+
+Dieser Abschnitt beginnt die systematische Ausarbeitung des gemeinsamen Rasters. Wir bearbeiten die Punkte nacheinander und wenden jeden Punkt auf alle sechzehn Nationen an. Dadurch bleiben die Gesellschaften vergleichbar, ohne sie gleichförmig zu machen.
+
+## 1. Hauptstadt
+
+Die Hauptstadt ist nicht nur ein politischer Ort. Sie soll zeigen, wie eine Nation sich selbst im gebauten Raum darstellt: Wo sitzt die Macht? Welche Bevölkerungsgruppen leben dort? Wie sichtbar sind Geschichte, Militär, Religion, Wirtschaft und soziale Unterschiede?
+
+### 1. Averon – **Novaris**
+
+Novaris ist eine junge, dicht bebaute Metropole mit gläsernen Verwaltungsgebäuden, großen Wohnkomplexen und weitläufigen Verkehrsknoten. Die Stadt wurde nach mehreren politischen Reformen des jungen Staates in kurzer Zeit stark erweitert.
+
+Das Regierungsviertel ist bewusst offen gestaltet. Ministerien, Parlament, Gerichte und öffentliche Plätze liegen nicht hinter monumentalen Mauern, sondern in einem dicht vernetzten Stadtzentrum. Das soll den Anspruch vermitteln, dass staatliche Macht öffentlich kontrollierbar bleibt.
+
+Novaris besitzt gleichzeitig eine stark ausgeprägte digitale Infrastruktur. Öffentliche Verkehrsmittel, Verwaltung, medizinische Versorgung und große Teile des Handels sind digital miteinander verbunden.
+
+Die Stadt wirkt modern, effizient und schnell – aber auch rastlos. Viele Menschen leben in kleinen Wohnungen, wechseln häufig den Arbeitsplatz und verbringen einen erheblichen Teil ihres Lebens in digitalen Räumen.
+
+**Stadtbild:** Glas, Stahl, Beton, begrünte Dächer, Verkehrsknoten, große öffentliche Plätze.  
+**Wichtige Viertel:** Regierungsviertel, Technologiering, Altstadt, Hafenbezirk, Wohnsektoren.  
+**Sozialer Gegensatz:** hochbezahlte Technologie- und Verwaltungselite gegenüber jungen Beschäftigten mit unsicheren Arbeitsverhältnissen.
+
+### 2. Karsk – **Varkesh**
+
+Varkesh ist eine monumentale Verwaltungs- und Industriestadt. Die Stadtplanung folgt weniger historischen Straßenmustern als funktionalen Sektoren.
+
+Wohnraum, Arbeitsstätten, medizinische Zentren, Produktionsanlagen und militärische Einrichtungen sind räumlich klar gegliedert. Große Verkehrsachsen verbinden die einzelnen Sektoren.
+
+Das Zentrum wird von staatlichen Verwaltungsbauten und medizinisch-technologischen Komplexen geprägt. Viele Gebäude sind zugleich Arbeits-, Wohn- und Versorgungseinrichtungen.
+
+Karsker Architektur vermittelt nicht primär Schönheit, sondern Funktion, Kontrolle und Dauerhaftigkeit.
+
+**Stadtbild:** massive Beton- und Metallstrukturen, unterirdische Anlagen, kontrollierte Verkehrswege.  
+**Wichtige Viertel:** Verwaltungssektor, Medizinsektor, Produktionsgürtel, Wohnsektoren, Militärbezirk.  
+**Sozialer Gegensatz:** privilegierte technische und staatliche Funktionsträger gegenüber Menschen mit geringer staatlicher Bewertung.
+
+### 3. Ossaria – **Ossar**
+
+Ossar ist eine der ältesten Städte der Welt und zugleich eines der bedeutendsten technologischen Zentren Ossarias.
+
+Die Stadt besteht aus mehreren historischen Schichten. Alte Steinviertel stehen neben modernen Forschungszentren und geschützten Verkehrssystemen.
+
+Zahlreiche Plätze und Gebäude tragen Namen von Menschen, die in vergangenen Kriegen starben. Gedenkstätten sind kein abgegrenzter Bereich, sondern Teil des täglichen Stadtbildes.
+
+Die moderne Architektur versucht bewusst, neue Technik mit historischen Strukturen zu verbinden.
+
+**Stadtbild:** alte Steinarchitektur, moderne Schutzsysteme, Forschungszentren, Gedenkplätze.  
+**Wichtige Viertel:** Altstadt, Forschungsbezirk, Bürgerforum, Industriehafen, Gedenksiedlungen.  
+**Sozialer Gegensatz:** traditionsbewusste alte Stadtviertel gegenüber hochmodernen Technologiebezirken.
+
+### 4. Rothain – **Rothenburg**
+
+Rothenburg war einst das politische Zentrum des ehemaligen Reiches. Heute ist es Hauptstadt der Republik, doch die Spuren der alten Ordnung sind überall sichtbar.
+
+Der ehemalige Kaiserpalast dient inzwischen als staatliches Museum und parlamentarisches Archiv. Alte Kasernen wurden teilweise in Universitäten, Behörden und Wohnviertel umgewandelt.
+
+Historische Regimenter besitzen noch immer eigene Häuser und Versammlungsorte. Auf manchen Plätzen stehen Denkmäler, deren Bedeutung zwischen Generationen stark umstritten ist.
+
+**Stadtbild:** monumentale Plätze, alte Paläste, Kasernen, Bürgerhäuser und moderne Regierungsgebäude.  
+**Wichtige Viertel:** Parlamentsviertel, ehemaliger Hofbezirk, Veteranenviertel, Arbeiterbezirke, neue Geschäftsstadt.  
+**Sozialer Gegensatz:** alte Familien und Veteranenverbände gegenüber jüngeren republikanischen und sozialen Bewegungen.
+
+### 5. Sahr – **Sarun**
+
+Sarun ist keine klassische Zentralhauptstadt. Sie ist die größte und politisch wichtigste unter mehreren mächtigen Handelsstädten.
+
+Die Stadt liegt an einem großen Wasserweg und wird von Hafenanlagen, Märkten, Lagerhäusern und Handelsplätzen geprägt.
+
+Politische Macht ist sichtbar mit wirtschaftlicher Macht verbunden. Handelsfamilien besitzen prachtvolle Stadthäuser, während Hafenarbeiter in dicht besiedelten Vierteln leben.
+
+Sarun ist mehrsprachig und kulturell heterogen. Fremde Waren und fremde Menschen gehören zum normalen Stadtbild.
+
+**Stadtbild:** Kanäle, Hafenanlagen, Märkte, Lagerhäuser, Brücken und dicht bebaute Wohnviertel.  
+**Wichtige Viertel:** Großer Hafen, Händlerstadt, Werftbezirk, Marktviertel, Arbeiterviertel.  
+**Sozialer Gegensatz:** alte Handelsfamilien gegenüber Hafenarbeitern und kleinen Händlern.
+
+### 6. Steinmark – **Steinburg**
+
+Steinburg ist eine nüchterne föderale Hauptstadt. Die Stadt wurde bewusst als Verwaltungszentrum entwickelt und besitzt weniger monumentale Selbstdarstellung als viele andere Hauptstädte.
+
+Bundesbehörden, Gerichte und Archive prägen das Zentrum. Die einzelnen Bundesländer unterhalten eigene Vertretungen und Kulturhäuser.
+
+Die Stadt ist bekannt für ihre Verwaltungsgebäude, öffentlichen Bibliotheken und großen Verbands- und Vereinszentren.
+
+**Stadtbild:** funktionale Verwaltungsarchitektur, breite Straßen, öffentliche Parks, Archive und Gerichte.  
+**Wichtige Viertel:** Bundesviertel, Gerichtsbezirk, Länderhäuser, Bürgerstadt, Handwerksviertel.  
+**Sozialer Gegensatz:** Bundesverwaltung und politische Institutionen gegenüber einer großen bürgerlichen Dienstleistungs- und Handwerkerschicht.
+
+### 7. Vael – **Vaalen**
+
+Vaalen ist eine industrielle Megastadt. Fabriken, Energieanlagen, Bahnlinien und Wohnsiedlungen bilden einen zusammenhängenden urbanen Raum.
+
+Die größten Unternehmen besitzen eigene Forschungszentren, Kliniken und Ausbildungsstätten. Manche Stadtviertel wurden ursprünglich von einzelnen Industrieunternehmen errichtet.
+
+Die Stadt ist stolz auf ihre technische Leistungsfähigkeit. Fabriken sind keine versteckten Randanlagen, sondern prägen das Stadtbild.
+
+**Stadtbild:** Hochöfen, Produktionshallen, Kraftwerke, Bahntrassen, Arbeitersiedlungen und Konzernzentren.  
+**Wichtige Viertel:** Industriegürtel, Konzernstadt, alte Arbeitersiedlungen, Forschungsbezirk, Zentralbahnhof.  
+**Sozialer Gegensatz:** Konzernleitungen und technische Elite gegenüber Industriearbeitern und prekären Beschäftigten.
+
+### 8. Vesper – **Velis**
+
+Velis ist eine schwer durchschaubare Hauptstadt. Offizielle Regierungsgebäude bilden nur einen Teil des eigentlichen Machtzentrums.
+
+Die Stadt besitzt große öffentliche Plätze und moderne Verwaltungsbauten, aber auch zahlreiche abgeschirmte Anlagen, deren Funktion der Bevölkerung unbekannt ist.
+
+Menschen achten darauf, was sie in der Öffentlichkeit sagen. Manche Gebäude besitzen mehrere Eingänge und unterschiedliche Sicherheitsbereiche.
+
+Velis ist deshalb weniger durch offene Monumentalität als durch kontrollierte Zugänglichkeit geprägt.
+
+**Stadtbild:** dunkle Verwaltungsbauten, breite Plätze, Sicherheitsanlagen, Wohnblöcke und abgeschirmte Innenhöfe.  
+**Wichtige Viertel:** Regierungsbezirk, Informationszentrum, Altstadt, Sicherheitssektor, Arbeiterbezirke.  
+**Sozialer Gegensatz:** staatliche Funktionsträger gegenüber Bürgern, die bewusst außerhalb staatlicher Institutionen bleiben.
+
+### 9. Eldran – **Aurelien**
+
+Aurelien ist eine historische Hauptstadt mit königlichem Palast, Parlament und alten Adelshäusern.
+
+Die Monarchie ist politisch begrenzt, aber ihre Präsenz ist im Stadtbild weiterhin deutlich. Zeremonielle Gebäude stehen neben modernen Ministerien und Universitäten.
+
+Ein Teil der Bevölkerung empfindet die historische Architektur als gemeinsames kulturelles Erbe, ein anderer als Erinnerung an gesellschaftliche Privilegien.
+
+**Stadtbild:** Palastanlagen, alte Bürgerhäuser, moderne Ministerien, Parks und repräsentative Plätze.  
+**Wichtige Viertel:** Königlicher Bezirk, Parlament, Altstadt, Universitätsviertel, moderne Neustadt.  
+**Sozialer Gegensatz:** alte Eliten und Hofkultur gegenüber modernen urbanen Mittelschichten.
+
+### 10. Namar – **Maris**
+
+Maris liegt an einer geschützten Küste und ist zugleich Hauptstadt, Hafen und Verkehrsknoten.
+
+Die Stadt ist stark vom Meer abhängig. Fähren, Werften, Fischmärkte und Küstenwachen gehören zum alltäglichen Bild.
+
+Die föderale Struktur Namars zeigt sich darin, dass fast jede Region eigene Verwaltungs- und Kulturhäuser besitzt.
+
+**Stadtbild:** Hafen, Werften, Küstenstraßen, Fähren, Markthallen und moderne Wohnviertel.  
+**Wichtige Viertel:** Zentralhafen, Werftstadt, Föderationsviertel, Fischmarkt, Neustadt.  
+**Sozialer Gegensatz:** maritime Arbeiter und traditionelle Familien gegenüber modernen Handels- und Verwaltungsschichten.
+
+### 11. Orthea – **Asteron**
+
+Asteron ist eine wissenschaftlich geprägte Hauptstadt. Universitäten, Forschungseinrichtungen, Kliniken und technische Institute bestimmen große Teile der Stadt.
+
+Viele öffentliche Gebäude sind gleichzeitig Forschungs- und Bildungszentren. Wissenschaftliche Einrichtungen besitzen einen ähnlichen gesellschaftlichen Stellenwert wie Regierungsgebäude.
+
+Die Stadt ist hochgebildet, aber nicht ausschließlich von Akademikern bewohnt. Eine große Zahl von Dienstleistungs-, Handwerks- und Verwaltungsberufen hält die wissenschaftliche Infrastruktur am Laufen.
+
+**Stadtbild:** Forschungszentren, Universitäten, Kliniken, Bibliotheken, moderne Wohnquartiere.  
+**Wichtige Viertel:** Universitätsstadt, Forschungsring, Klinikbezirk, Bürgerstadt, Industriepark.  
+**Sozialer Gegensatz:** wissenschaftliche Elite gegenüber Menschen, die vom akademischen System wenig profitieren.
+
+### 12. Dargan – **Dargesh**
+
+Dargesh ist eine vergleichsweise kleine Hauptstadt und wirkt eher wie eine große Grenzstadt als wie eine imperiale Metropole.
+
+Die Stadt ist Verkehrsknoten, Verwaltungszentrum und Reparaturstandort für weite Teile des Landes.
+
+Gebäude sind robust und leicht instandsetzbar. Öffentliche Werkstätten und Lagerflächen sind auffällig wichtig.
+
+**Stadtbild:** niedrige Gebäude, Werkstätten, robuste Wohnhäuser, Straßenknoten und befestigte Verwaltungsanlagen.  
+**Wichtige Viertel:** Zentralmarkt, Werkstattbezirk, Grenzverwaltung, Kasernenviertel, Wohnsiedlungen.  
+**Sozialer Gegensatz:** regionale Verwaltung gegenüber selbstständigen Handwerkern, Händlern und Grenzgemeinden.
+
+### 13. Lyr – **Valen**
+
+Valen ist die politische Hauptstadt des Bundes, aber nicht dessen unangefochtenes Zentrum.
+
+Die Stadt liegt in einem großen Gebirgstal und beherbergt den Bundeskongress sowie gemeinsame Gerichte und Verteidigungsinstitutionen.
+
+Jede der großen Teilrepubliken besitzt eigene Häuser und Vertretungen. Politische Entscheidungen sind deshalb ständig von regionalen Interessen geprägt.
+
+**Stadtbild:** Berghänge, Steinbauten, Brücken, Tunnel, Terrassen und regionale Verwaltungsgebäude.  
+**Wichtige Viertel:** Bundeskongress, Talstadt, Handwerksviertel, Tunnelbezirk, regionale Häuser.  
+**Sozialer Gegensatz:** Bundeseinrichtungen gegenüber lokalen Gemeinschaften, die ihre Eigenständigkeit bewahren wollen.
+
+### 14. Caldris – **Seren**
+
+Seren ist eine planmäßig entwickelte Hauptstadt, in der staatliche Versorgungseinrichtungen Teil des normalen Stadtbildes sind.
+
+Wohnkomplexe, Schulen, Kliniken, Kindertagesstätten und Arbeitsvermittlungen liegen in unmittelbarer Nähe zueinander.
+
+Die Stadt ist sauber, funktional und materiell gut versorgt. Gleichzeitig ist die staatliche Präsenz nahezu überall sichtbar.
+
+Biometrische Zugangssysteme, öffentliche Kameras und digitale Bürgerdienste gehören zum Alltag.
+
+**Stadtbild:** gepflegte Wohnkomplexe, breite Wege, Kliniken, Schulen, Verwaltungszentren und überwachte öffentliche Räume.  
+**Wichtige Viertel:** Regierungszentrum, Wohnsektoren, Gesundheitsbezirk, Bildungsbezirk, Produktionsstadt.  
+**Sozialer Gegensatz:** weniger räumlich als institutionell – Unterschiede zeigen sich vor allem in Zugang, Status und staatlicher Bewertung.
+
+### 15. Merovan – **Merovia**
+
+Merovia ist eine alte Hafenmetropole, die während der imperialen Epoche zum Zentrum eines weltweiten Handelsnetzes wurde.
+
+Die Stadt ist von unterschiedlichen historischen Schichten geprägt: alte Verwaltungsgebäude, ehemalige koloniale Handelshäuser, moderne Banken und riesige Hafenanlagen.
+
+Menschen mit sehr unterschiedlichen Familiengeschichten leben dicht nebeneinander. Manche Familien stammen aus dem alten Kernland, andere aus Regionen, die einst unter merovanischer Herrschaft standen.
+
+**Stadtbild:** große Hafenanlagen, alte Handelshäuser, Banken, Bahnhöfe, moderne Hochhäuser und dicht bewohnte Migrantenviertel.  
+**Wichtige Viertel:** Alter Hafen, Handelsviertel, Regierungsstadt, ehemalige Kolonialhäuser, neue Wohnbezirke.  
+**Sozialer Gegensatz:** alte Vermögen und internationale Wirtschaftseliten gegenüber Arbeiter- und Migrantenvierteln.
+
+### 16. Theryn – **Novagrad**
+
+Novagrad entstand aus dem revolutionären Umbau einer alten Industriestadt.
+
+Zentrale Plätze sind nach revolutionären Ereignissen benannt. Öffentliche Gebäude gehören häufig staatlichen Betrieben, Genossenschaften oder Massenorganisationen.
+
+Die Stadt besitzt große Arbeitersiedlungen, Fabriken und Versammlungsgebäude. Gleichzeitig existieren private Wohnungen und informelle Nachbarschaftsnetzwerke, die dem offiziellen Bild der Gesellschaft nicht vollständig entsprechen.
+
+**Stadtbild:** große öffentliche Plätze, Fabriken, Arbeiterwohnviertel, Genossenschaftshäuser und politische Wandbilder.  
+**Wichtige Viertel:** Revolutionsplatz, Zentralrat, Fabrikstadt, Genossenschaftsviertel, alte Arbeiterstadt.  
+**Sozialer Gegensatz:** alte revolutionäre Funktionäre gegenüber jungen Reformern, Arbeitern und unpolitischen Familien.
+
+## Vergleich der Hauptstädte
+
+Die sechzehn Hauptstädte sollen bewusst unterschiedliche Antworten auf dieselbe Frage darstellen:
+
+**Wie sieht Macht aus, wenn sie Teil des täglichen Lebens ist?**
+
+- **Averon:** Macht soll offen und zugänglich wirken.
+- **Karsk:** Macht soll effizient und allgegenwärtig sein.
+- **Ossaria:** Macht steht neben Erinnerung und Geschichte.
+- **Rothain:** Macht lebt mit dem Erbe vergangener Macht.
+- **Sahr:** Macht ist zwischen Handel und Städten verteilt.
+- **Steinmark:** Macht erscheint als Institution und Verwaltung.
+- **Vael:** Macht zeigt sich in Industrie und Produktionskapazität.
+- **Vesper:** Macht bleibt teilweise unsichtbar.
+- **Eldran:** Macht wird durch Tradition legitimiert und begrenzt.
+- **Namar:** Macht wird zwischen Regionen und Meer verteilt.
+- **Orthea:** Macht besitzt die Form von Wissen und Expertise.
+- **Dargan:** Macht muss sich durch praktische Hilfe legitimieren.
+- **Lyr:** Macht wird zwischen lokalen Gemeinschaften ausgehandelt.
+- **Caldris:** Macht erscheint als Versorgung und Kontrolle zugleich.
+- **Merovan:** Macht ist eng mit Handel, Geschichte und globalen Beziehungen verbunden.
+- **Theryn:** Macht beruft sich auf die Revolution, muss aber mit ihrer eigenen Institutionalisierung leben.
+
+Die Namen und Details dieses Abschnitts gelten als **Arbeitsstand der Lore**. Sie können bei späteren historischen, sprachlichen oder kartographischen Ausarbeitungen präzisiert werden.
