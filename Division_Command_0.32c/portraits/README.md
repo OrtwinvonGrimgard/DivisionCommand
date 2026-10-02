@@ -22,4 +22,4 @@ python portraits/compose.py
 
 Fehlt `layers/body.png`, wird nichts geschrieben. Eine Kopfebene mit Farbe unter `chin_y` wird verworfen.
 
-`frame.json` steht auf `"locked": false`. Die Zahl 830 ist nur an der alten Steinmark-Probe gemessen. Sie wird erst verbindlich, wenn der Körper freigegeben und `locked` auf `true` gesetzt ist.
+`frame.json` ist gesperrt. `chin_y` ist 800, gemessen an `layers/body.png`. Der Kopf darüber ist aus der Körperebene gelöscht.

@@ -1,9 +1,26 @@
 {
   "name": "master",
-  "canvas": { "width": 1152, "height": 1728 },
-  "chin_y": 830,
-  "locked": false,
-  "chin_note": "Gemessen an der ungeeigneten Steinmark-Probe. Haar beginnt bei y=313, der Kragen etwa bei y=830. Die Linie gilt erst, wenn locked true ist und layers/body.png freigegeben wurde.",
-  "forbid_below_chin": ["face", "hair", "beard", "cap"],
-  "order": ["body", "face", "hair", "beard", "cap", "insignia", "medals", "details"]
+  "canvas": {
+    "width": 1152,
+    "height": 1728
+  },
+  "chin_y": 800,
+  "locked": true,
+  "chin_note": "Unterkante des Kinns an layers/body.png. Kragen und Spiegel bleiben am Körper. Darüber ist die Ebene durchsichtig.",
+  "forbid_below_chin": [
+    "face",
+    "hair",
+    "beard",
+    "cap"
+  ],
+  "order": [
+    "body",
+    "face",
+    "hair",
+    "beard",
+    "cap",
+    "insignia",
+    "medals",
+    "details"
+  ]
 }
