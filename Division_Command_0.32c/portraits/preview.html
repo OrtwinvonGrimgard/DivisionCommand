@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Porträtrahmen</title>
+  <style>
+    body { margin: 0; background: #14110e; color: #f3ead8; font: 16px/1.4 sans-serif; }
+    main { display: flex; gap: 24px; align-items: flex-start; padding: 24px; }
+    canvas { background: #2a2420; width: min(420px, 90vw); height: auto; }
+    p { max-width: 36rem; }
+    .bad { color: #e7b2a4; }
+  </style>
+</head>
+<body>
+  <main>
+    <canvas id="view" width="1152" height="1728"></canvas>
+    <div>
+      <h1>Porträtrahmen</h1>
+      <p id="status">Rahmen wird gelesen.</p>
+      <p>Die Linie ist das Kinn. Alles darunter gehört dem Körper. Rote Punkte sind Kopfebenen, die dort nicht malen dürfen.</p>
+    </div>
+  </main>
+  <script>
+    const canvas = document.getElementById("view");
+    const ctx = canvas.getContext("2d");
+    const status = document.getElementById("status");
+
+    async function load(src) {
+      try {
+        const response = await fetch(src);
+        if (!response.ok) return null;
+        const blob = await response.blob();
+        return await createImageBitmap(blob);
+      } catch {
+        return null;
+      }
+    }
+
+    function spills(bitmap, chinY) {
+      const probe = document.createElement("canvas");
+      probe.width = bitmap.width;
+      probe.height = bitmap.height;
+      const probeCtx = probe.getContext("2d");
+      probeCtx.drawImage(bitmap, 0, 0);
+      const rows = probeCtx.getImageData(0, chinY, bitmap.width, bitmap.height - chinY).data;
+      for (let i = 3; i < rows.length; i += 4) {
+        if (rows[i] > 0) return true;
+      }
+      return false;
+    }
+
+    async function run() {
+      const frame = await (await fetch("frame.json")).json();
+      canvas.width = frame.canvas.width;
+      canvas.height = frame.canvas.height;
+      const forbidden = new Set(frame.forbid_below_chin);
+      const found = [];
+      const rejected = [];
+      for (const name of frame.order) {
+        const bitmap = await load("layers/" + name + ".png");
+        if (!bitmap) continue;
+        found.push(name);
+        if (forbidden.has(name) && spills(bitmap, frame.chin_y)) {
+          rejected.push(name);
+          continue;
+        }
+        ctx.drawImage(bitmap, 0, 0);
+      }
+      ctx.strokeStyle = "#c45b4a";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(0, frame.chin_y);
+      ctx.lineTo(canvas.width, frame.chin_y);
+      ctx.stroke();
+      const lock = frame.locked ? "gesperrt" : "offen, Linie nur gemessen";
+      status.textContent = found.length
+        ? "Ebenen: " + found.join(", ") + ". Rahmen " + lock + "."
+        : "Noch keine Ebenen. Rahmen " + lock + ".";
+      if (rejected.length) {
+        status.className = "bad";
+        status.textContent += " Verworfen: " + rejected.join(", ") + ".";
+      }
+    }
+
+    run();
+  </script>
+</body>
+</html>

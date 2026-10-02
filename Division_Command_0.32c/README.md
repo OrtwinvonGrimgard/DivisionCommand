@@ -20,5 +20,6 @@ Hotseat, Bot und LAN-Lobby liegen im Hauptmenü.
 | `web/assets/audio/kampf/` | Kampfmusik |
 | `web/assets/audio/index.json` | Welche Stücke auf welchem Schirm laufen |
 | `server.py` | Lokaler Host für Vorschau und LAN |
+| `portraits/` | Werkzeug für Porträtebenen, nicht das Spiel |
 
 Die WAV-Dateien liegen nach Verwendung getrennt in `web/assets/audio/menue/` und `web/assets/audio/kampf/`. Der Dateiname von Inside Out ist korrigiert.
