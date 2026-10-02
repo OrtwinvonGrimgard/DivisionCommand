@@ -989,7 +989,7 @@ Das Kadettenzeichen fällt beim Leutnant weg. Der Fähnrich trägt es schon, der
 | Rothain | Kragen | leerer Silberrahmen, weiße Kordel | Silbersterne | Goldsterne | Gold auf Rot | Eichenlaub | Eichenlaub, zweiter Kranz |
 | Steinmark | Ärmel | grauer Halbstreifen, offen | grüne Streifen | schwarze Streifen | Silberlitze | eine breite Litze | dieselbe, eine schmale darüber |
 | Vesper | Kragen | ungesiegelter Faden, graues Wachs | schwarzes Wachs | rotes Wachs | Goldwachs | Doppelsiegel | Doppelsiegel mit goldener Schnur |
-| Karsk | Wange | dunkle, tote Linse | rote Striche | rote Balken | Weiß auf Rot | weißer Ring | ein zweiter Ring |
+| Karsk | Kragen | dunkle Linse, leere Spiegel | ein roter Balken je Spiegel | rote Balken, mehr | Weiß auf Rot | weißer Ring | ein zweiter Ring |
 | Sahr | Mantelschnur | offener Knoten | Sandknoten | Kupferknoten | Türkis | schwarzer Knoten | derselbe Knoten, zweite Perle |
 | Ossar | Kragen | gerissener Knochenspan | kurze Knochenstriche | Knochen auf Rußrot | lange Rippen | Knochenring | Knochenring mit Quersteg |
 | Jetzt | Ärmel | olivgrüner Halbstreifen, offen | sandfarbene Striche | schwarze Striche | graue Litze | eine breite gedeckte Litze | dieselbe, eine schmale darüber |
