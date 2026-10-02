@@ -71,7 +71,7 @@
   };
   var RANK_AGES = 'fhr,lt,olt,hptm,maj,obstlt,obst,bg,genmj,genlt,gen,fm,gfm';
 
-  var VER = '22';
+  var VER = '23';
 
   var FACE_FILE = {
     f01: 'Vael/male/01.png',
