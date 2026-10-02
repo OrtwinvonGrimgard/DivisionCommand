@@ -2419,3 +2419,290 @@ Deshalb gilt für die weitere Lore:
 > **Eine Nation ist kein Ort. Eine Nation ist ein Netz aus Orten, Erinnerungen und Lebensweisen.**
 
 Die Regionen bilden außerdem einen wichtigen Übergang zur nächsten Ausarbeitungsstufe. Aus ihnen können später konkrete Städte, Dörfer, Dialekte, Berufe, Handelswege, Einheiten, Veteranenkulturen und Familiengeschichten entstehen.
+
+
+# Konkrete Ausarbeitung – Punkt 3: Städte
+
+Die Städte werden nicht nur als Ortsnamen geführt. Jede wichtige Stadt besitzt eine gesellschaftliche Funktion, eine eigene Bevölkerungsstruktur und einen charakteristischen Alltag. Die folgenden Städte sind der erste verbindliche Arbeitsstand; kleinere Orte können später aus diesen urbanen Zentren und den Regionen entwickelt werden.
+
+## 1. Averon
+
+### Novaris – Hauptstadt
+Politisches und digitales Zentrum. Großstadt mit Ministerien, Universitäten, Technologieunternehmen und dichtem Wohnraum.
+
+### Lydon
+Technologiestadt mit großen Entwicklungszentren, Start-ups und einer jungen Bevölkerung. Hohe Mieten und starke Konkurrenz um qualifizierte Arbeitsplätze prägen den Alltag.
+
+### Westhaven
+Internationale Hafenstadt. Handel, Migration und Logistik bestimmen das Stadtbild. Alte Hafenviertel stehen modernen Büro- und Wohnkomplexen gegenüber.
+
+### Arven
+Mittelgroße Stadt im Übergang zwischen urbanem Zentrum und ländlichem Süden. Viele Familien leben hier bewusster lokal, während junge Menschen häufig nach Novaris oder Lydon ziehen.
+
+### Nordfall
+Kühlere Industriestadt mit Energieanlagen und technischen Betrieben. Weniger glamourös als die Hauptstadt, aber für die nationale Infrastruktur unverzichtbar.
+
+## 2. Karsk
+
+### Varkesh – Hauptstadt
+Zentrum von Staat, Medizin und technischer Kontrolle. Große Funktionssektoren bestimmen das Stadtleben.
+
+### Karsin
+Medizin- und Implantationszentrum. Ärzte, Techniker und staatliche Bewertungsstellen besitzen außergewöhnlichen Einfluss.
+
+### Dravik
+Schwere Industriestadt im Produktionsgürtel. Arbeiterstatus und technische Qualifikation bestimmen den gesellschaftlichen Rang stark.
+
+### Sektorstadt 7
+Eine vollständig geplante Stadt, deren Alltag nach Arbeits-, Wohn- und Versorgungszyklen organisiert ist. Individualität ist weniger sichtbar als Funktion.
+
+### Grenzwerk
+Militärisch geprägte Stadt nahe der Außengrenze. Kasernen, Werkstätten und Sicherheitsanlagen dominieren.
+
+## 3. Ossaria
+
+### Ossar – Hauptstadt
+Historische Metropole und technologisches Zentrum. Alte Stadtmauern, Forschungszentren und Gedenkstätten liegen unmittelbar nebeneinander.
+
+### Valeris
+Universitäts- und Kulturstadt mit zahlreichen Archiven und Museen. Hier wird besonders intensiv über die Geschichte vergangener Kriege diskutiert.
+
+### Eron
+Hochtechnologischer Produktionsstandort. Schutzsysteme, Sensorik und militärische Elektronik werden entwickelt und gefertigt.
+
+### Marenfeld
+Agrarisch geprägte Mittelstadt. Familienbetriebe, Handwerk und regionale Traditionen besitzen größere Bedeutung als in Ossar.
+
+### Kareth
+Grenzstadt mit großer Militärpräsenz. Viele Familien haben direkte Erfahrungen mit früheren Kriegen.
+
+## 4. Rothain
+
+### Rothenburg – Hauptstadt
+Politisches Zentrum der Republik und ehemaliger Sitz der imperialen Macht. Paläste, Kasernen und republikanische Institutionen prägen die Stadt.
+
+### Eisenfurt
+Industriestadt mit großer Arbeiterschaft. Politisch stark republikanisch und sozial geprägt.
+
+### Kronfeld
+Stadt alter Familien, Veteranenverbände und historischer Regimenter. Tradition ist Teil des täglichen Lebens.
+
+### Westheim
+Moderne Universitäts- und Verwaltungsstadt. Besonders viele junge Menschen identifizieren sich mit der Republik statt mit dem ehemaligen Reich.
+
+### Grenzwacht
+Ehemalige Festungsstadt. Die Bevölkerung besitzt eine starke lokale Militärkultur, aber auch ein ausgeprägtes Bewusstsein für die Kosten vergangener Kriege.
+
+## 5. Sahr
+
+### Sarun – Hauptstadt
+Größtes Handelszentrum des Bundes. Hafen, Banken, Märkte und politische Institutionen liegen dicht beieinander.
+
+### Taris
+Reiche Handelsstadt mit alten Kaufmannsfamilien. Prestige und wirtschaftlicher Einfluss gehen eng miteinander einher.
+
+### Velisport
+Großer Arbeitshafen mit Werften und Lagerhäusern. Die Arbeiterbewegung besitzt hier erheblichen Einfluss.
+
+### Ravan
+Flussstadt im landwirtschaftlich geprägten Hinterland. Bedeutendes Zentrum für Getreide, Vieh und Binnenhandel.
+
+### Südtor
+Schnell wachsende Grenz- und Handelsstadt. Viele Migranten und kleinere Händler leben hier.
+
+## 6. Steinmark
+
+### Steinburg – Hauptstadt
+Bundes-, Gerichts- und Verwaltungszentrum. Die Stadt ist weniger von einer einzelnen Industrie als von Institutionen geprägt.
+
+### Falkenheim
+Industrielle Stadt mit starkem Maschinenbau und ausgeprägter Berufsausbildung.
+
+### Talheim
+Mittelstadt im Süden mit Vereinen, Handwerksbetrieben und regionaler Verwaltung.
+
+### Eisenau
+Historische Militär- und Festungsstadt. Veteranenvereine und Bundeswehrtraditionen sind gesellschaftlich sichtbar, ohne die Politik vollständig zu bestimmen.
+
+### Linden
+Universitätsstadt mit wachsender junger Bevölkerung. Hier wird besonders intensiv über Reform der Verwaltung diskutiert.
+
+## 7. Vael
+
+### Vaalen – Hauptstadt
+Industrielles Machtzentrum mit Konzernzentralen, Forschung und gewaltigen Produktionsanlagen.
+
+### Stahlbruck
+Arbeiterstadt im Eisenland. Schichtarbeit, Gewerkschaften und Familien mit mehreren Generationen Industrieerfahrung prägen den Alltag.
+
+### Energa
+Stadt des Energiegürtels. Kraftwerke, Leitungsnetze und technische Ausbildungszentren dominieren die Umgebung.
+
+### Kronwerk
+Konzernstadt, die weitgehend um ein einzelnes Industriekonglomerat entstand. Das Unternehmen besitzt Wohnraum, Kliniken und Ausbildungsstätten.
+
+### Grünau
+Weniger industrialisierte Stadt im Grünen Vael. Hier ist die Kritik an der Macht der Industrie besonders deutlich.
+
+## 8. Vesper
+
+### Velis – Hauptstadt
+Politisches und geheimdienstliches Zentrum. Viele Bereiche der Stadt sind für normale Bürger nur eingeschränkt zugänglich.
+
+### Darsin
+Handelsstadt mit vergleichsweise großer privater Wirtschaft. Wohlhabender als viele andere Städte, aber stark überwacht.
+
+### Nebelstadt
+Kleinere Stadt in einer abgelegenen Region. Gerüchte über geheime Anlagen gehören zum lokalen Alltag.
+
+### Kovar
+Grenzstadt mit hoher Militärpräsenz. Die Bevölkerung ist an Kontrollen und kurzfristige Sicherheitsmaßnahmen gewöhnt.
+
+### Selin
+Alte Kulturstadt mit Universitäten, Theatern und privaten Netzwerken. Politische Gespräche finden häufig in kleinen, vertrauten Kreisen statt.
+
+## 9. Eldran
+
+### Aurelien – Hauptstadt
+Königliche und parlamentarische Hauptstadt. Palast, Parlament und alte Bürgerstadt liegen eng beieinander.
+
+### Norwick
+Moderne Industriestadt mit starker republikanischer Kultur und wenig höfischer Tradition.
+
+### Rosenfeld
+Agrarische Stadt im Süden mit traditionellen Festen und regionalen Familienverbänden.
+
+### Hohenmark
+Historische Adels- und Universitätsstadt. Alte Familien besitzen kulturellen Einfluss, aber keine automatische politische Macht.
+
+### Freistadt
+Stadt mit historisch weitreichenden Selbstverwaltungsrechten. Die Einwohner reagieren empfindlich auf Eingriffe der Zentralregierung.
+
+## 10. Namar
+
+### Maris – Hauptstadt
+Großer Hafen- und Verwaltungsstandort. Fähren, Werften und maritime Behörden bestimmen den Alltag.
+
+### Inselstadt
+Zentrum eines bedeutenden Inselbundes. Lokale Identität ist stärker als das nationale Zugehörigkeitsgefühl.
+
+### Westhaven
+Traditionelle Fischereistadt mit kleinen Werften und eng verbundenen Familien.
+
+### Port Sol
+Moderne internationale Handelsstadt mit starker Migration und großen Logistikunternehmen.
+
+### Teral
+Küstenstadt mit bedeutender Marine- und Küstenverteidigungsinfrastruktur.
+
+## 11. Orthea
+
+### Asteron – Hauptstadt
+Zentrum von Regierung, Universitäten und Forschung. Wissenschaft prägt die Stadtarchitektur ebenso wie das Berufsleben.
+
+### Helion
+Großes medizinisches Zentrum mit Kliniken, Biotechnologie und Ausbildungsstätten.
+
+### Quantis
+Technologiestadt mit Forschung an autonomen Systemen, Sensorik und Analyseverfahren.
+
+### Feldmark
+Mittelstadt außerhalb des Wissenschaftsgürtels. Landwirtschaft, Handwerk und normale Dienstleistungen prägen den Alltag.
+
+### Noris
+Industriestadt, die hochautomatisierte Produktion mit einer großen Schicht technischer Facharbeiter verbindet.
+
+## 12. Dargan
+
+### Dargesh – Hauptstadt
+Kleine, robuste Verwaltungs- und Handelsstadt. Sie wirkt eher wie ein regionales Zentrum als wie eine klassische Hauptstadt.
+
+### Hochwacht
+Gebirgsstadt mit Bergbau, Werkstätten und militärischer Infrastruktur.
+
+### Flussheim
+Wichtigster Handelsplatz am Flusskorridor. Lagerhäuser und Reparaturbetriebe bestimmen die Wirtschaft.
+
+### Grenzruh
+Weitläufige Grenzstadt mit militärischem Außenposten und großer Landwirtschaftsfläche.
+
+### Freimark
+Abgelegene Stadt mit starkem Selbstverwaltungsbewusstsein. Behörden besitzen weniger Einfluss als lokale Familien, Werkstätten und Handelsgemeinschaften.
+
+## 13. Lyr
+
+### Valen – Hauptstadt
+Sitz des Bundeskongresses. Die Stadt ist politisch bedeutend, aber bewusst nicht dominant.
+
+### Nordtal
+Handels- und Handwerkszentrum eines dicht besiedelten Tales.
+
+### Hochgrat
+Gebirgsstadt mit Bergbau, Weidewirtschaft und starkem lokalem Selbstbewusstsein.
+
+### Passwacht
+Festungs- und Verkehrsstadt an einem strategischen Gebirgspass.
+
+### Sonnental
+Fruchtbare Stadtregion mit Landwirtschaft und alten religiösen Traditionen.
+
+## 14. Caldris
+
+### Seren – Hauptstadt
+Planmäßig entwickelte Verwaltungs- und Versorgungsmetropole. Bürger erleben den Staat hier nahezu überall.
+
+### Gesundheim
+Medizinzentrum mit großen Kliniken und staatlichen Forschungsprogrammen.
+
+### Werksstadt
+Industriestadt, in der Arbeitsplätze, Wohnraum und soziale Versorgung eng verbunden sind.
+
+### Grünfeld
+Agrarstadt mit hoher staatlicher Versorgung und stark organisierten Gemeinschaftseinrichtungen.
+
+### Kontrollstadt
+Strategischer Sicherheitsstandort mit besonders dichter Überwachungsinfrastruktur. Die Bevölkerung erhält viele Leistungen, erlebt aber auch die stärkste staatliche Kontrolle.
+
+## 15. Merovan
+
+### Merovia – Hauptstadt
+Alte Hafenmetropole und Zentrum des ehemaligen Imperiums. Handel, Banken und Regierungsinstitutionen konzentrieren sich hier.
+
+### Port Meris
+Internationaler Großhafen mit einer extrem vielfältigen Bevölkerung.
+
+### Albion
+Alte Universitäts- und Verwaltungsstadt. Historische Debatten über das Imperium sind Teil des öffentlichen Lebens.
+
+### Südmark
+Binnenstadt mit Landwirtschaft, regionalem Handel und weniger internationaler Prägung.
+
+### Neuport
+Stadt, die durch Migration und internationale Unternehmen stark gewachsen ist. Junge Bevölkerung und neue Familiengeschichten prägen das Stadtbild.
+
+## 16. Theryn
+
+### Novagrad – Hauptstadt
+Revolutionäres Zentrum mit Zentralrat, großen öffentlichen Plätzen und staatlichen Institutionen.
+
+### Rotwerk
+Große Industriestadt mit staatlichen Betrieben und starker Veteranenkultur.
+
+### Genossenschaft
+Mittelstadt, deren Wirtschaft überwiegend von landwirtschaftlichen und handwerklichen Genossenschaften getragen wird.
+
+### Freiheim
+Junge Universitätsstadt mit Reformbewegungen und einer Bevölkerung, die die Revolution vor allem aus Geschichtsbüchern kennt.
+
+### Staryn
+Alte Industriestadt, in der viele Familien direkte Erinnerungen an die Revolution und die ersten Jahrzehnte der Republik besitzen.
+
+# Städte als soziale Räume
+
+Die Städte erfüllen damit unterschiedliche Funktionen. Einige sind politische Zentren, andere Industrie- oder Handelsstädte, wieder andere leben von Wissenschaft, Militär, Landwirtschaft oder regionaler Selbstverwaltung.
+
+Entscheidend ist, dass die Hauptstadt niemals das gesamte Land repräsentiert. Ein Bürger aus einer Hafenstadt soll seine Nation anders erleben als ein Fabrikarbeiter, ein Bergbauer oder ein Bewohner eines abgelegenen Tales.
+
+Für die spätere Lore können aus diesen Städten konkrete Stadtviertel, bekannte Gebäude, lokale Dialekte, Vereine, Universitäten, Fabriken, Märkte und Familiengeschichten entwickelt werden.
+
+> **Eine Stadt ist die kleinste Ebene, auf der die großen Ideen einer Nation im Alltag sichtbar werden.**
