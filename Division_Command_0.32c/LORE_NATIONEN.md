@@ -1049,3 +1049,674 @@ Damit wäre Frieden nicht einfach die Abwesenheit von Angriffen.
 Ein Spieler könnte den Gegner schrittweise in eine Lage bringen, in der weitere militärische Eskalation politisch, materiell oder gesellschaftlich immer schwieriger wird.
 
 Das passt zum übergeordneten Thema von *Division Command*: Der Krieg soll nicht nur als taktisches Puzzle erscheinen, sondern als System, in dem militärische Entscheidungen politische Folgen erzeugen.
+
+
+---
+
+# Vertiefung: Die Lebensrealität der sechzehn Nationen
+
+Dieser Abschnitt ergänzt die politische und militärische Beschreibung um das Leben der Menschen, die in diesen Staaten leben. Die Nationen sollen nicht nur durch Regierungen, Armeen und Technologie unterscheidbar sein. Entscheidend ist, wie sich ein gewöhnlicher Dienstag für eine Familie anfühlt, welche Hoffnungen Eltern für ihre Kinder haben, welche Arbeit Menschen verrichten und welche Dinge sie im Alltag für selbstverständlich halten.
+
+Die folgenden Beschreibungen sind bewusst keine starren sozialen Klischees. Innerhalb jeder Nation existieren Wohlstandsunterschiede, politische Gegner, religiöse Minderheiten, regionale Identitäten und Menschen, die sich mit der offiziellen Staatsidee überhaupt nicht identifizieren.
+
+## 1. Averon – Alltag der vernetzten Republik
+
+### Wohnen und Arbeit
+
+Die Mehrheit der Bevölkerung lebt in dicht besiedelten Städten. Wohnungen sind klein bis mittelgroß und stark digitalisiert. Öffentlicher Verkehr, Lieferdienste und Behörden funktionieren überwiegend über vernetzte Systeme.
+
+Für die urbane Mittelschicht ist ein schneller Internetzugang ebenso selbstverständlich wie Strom und fließendes Wasser. Gleichzeitig gibt es Menschen, die von der Geschwindigkeit der Gesellschaft abgehängt werden: ältere Bürger, schlecht bezahlte Dienstleister und Bewohner ärmerer Randbezirke.
+
+Arbeit ist häufig projektorientiert. Berufliche Identität entsteht weniger über einen lebenslangen Betrieb als über Qualifikationen, Netzwerke und wechselnde Arbeitgeber.
+
+### Familie und Bildung
+
+Kinder lernen früh, mit digitalen Informationssystemen umzugehen. Schulen fördern Selbstständigkeit und Kommunikation, stehen aber unter erheblichem Leistungsdruck.
+
+Eltern versuchen, ihren Kindern möglichst viele Möglichkeiten zu eröffnen. Dahinter steht eine verbreitete Angst: Wer nicht mithält, verliert Anschluss.
+
+Familien sind häufig klein und geografisch mobil. Großeltern leben nicht selten in einer anderen Stadt.
+
+### Medien und Gesellschaft
+
+Averoner Bürger sind ständig informiert und gleichzeitig ständig mit widersprüchlichen Informationen konfrontiert. Nachrichten, soziale Netzwerke und staatliche Warnsysteme konkurrieren um Aufmerksamkeit.
+
+Politische Empörung kann innerhalb weniger Stunden entstehen und wieder verschwinden.
+
+### Soldaten im Alltag
+
+Soldaten gelten grundsätzlich als professionelle Staatsbedienstete. Sie sind keine gesellschaftliche Kaste. Viele Bürger unterstützen die Armee, solange sie glauben, dass sie der Verteidigung dient.
+
+Der Beginn eines Krieges verändert diese Haltung schnell: Plötzlich wird aus einer abstrakten Sicherheitsfrage der Sohn aus der Nachbarwohnung, die Schwester aus dem Büro oder der Freund aus dem Sportverein.
+
+### Lebensgefühl
+
+**Hoffnung:** Die Zukunft soll besser sein als die Vergangenheit.
+
+**Angst:** Nicht vor Armut allein, sondern davor, irrelevant und abgehängt zu werden.
+
+**Tabu:** Die Vorstellung, dass persönliche Freiheit vielleicht nicht ausreicht, um eine Gesellschaft zusammenzuhalten.
+
+---
+
+## 2. Karsk – Alltag unter technokratischer Kontrolle
+
+### Wohnen und Arbeit
+
+Karsker Bürger erhalten vieles über staatlich organisierte Systeme. Wohnraum, medizinische Versorgung und Arbeitsplätze werden stark nach Bedarf und staatlicher Bewertung verteilt.
+
+Ein Mensch mit hoher technischer oder militärischer Qualifikation kann privilegiert leben. Menschen mit Behinderungen oder chronischen Krankheiten erleben dagegen besonders deutlich, wie brutal eine Gesellschaft sein kann, die den Menschen nach Nutzen bewertet.
+
+Arbeitsplätze besitzen eine offizielle Leistungsbewertung. Jeder Bürger kennt seine Kennziffern.
+
+### Familie
+
+Familien lieben ihre Kinder, aber selbst die Familie steht unter dem Schatten staatlicher Bewertung. Ein Kind mit außergewöhnlicher Begabung kann als Hoffnung der Familie gelten. Ein Kind, das nicht den Erwartungen entspricht, kann zum Anlass für staatliche Intervention werden.
+
+Viele Eltern versuchen deshalb, ihren Kindern beizubringen, niemals öffentlich Schwäche zu zeigen.
+
+### Medizin
+
+Karsk verfügt über hervorragende technische Medizin, aber Zugang und Zweck sind ungleich verteilt. Wer als wertvoll gilt, erhält die modernsten Behandlungen.
+
+Die entscheidende gesellschaftliche Frage lautet nicht, ob der Staat heilen kann.
+
+Sie lautet:
+
+> **Für wen hält der Staat Heilung für lohnenswert?**
+
+### Religion und Privatleben
+
+Private Religion existiert, wird aber überwacht. Persönliche Rituale können toleriert werden, solange sie keine politische Alternative zur Staatsideologie bilden.
+
+### Soldaten
+
+Soldaten genießen materielles Prestige, zahlen aber einen körperlichen Preis. Veteranen mit Implantatschäden können gleichzeitig geehrt und als defekte Systeme behandelt werden.
+
+Eine Familie kann stolz auf einen ausgezeichneten Soldaten sein und dennoch jeden Abend fürchten, dass er eines Tages mit einem Körper zurückkehrt, den sie kaum noch erkennt.
+
+### Lebensgefühl
+
+**Hoffnung:** Der Staat verspricht, Chaos und menschliche Schwäche überwinden zu können.
+
+**Angst:** Unbrauchbar zu werden.
+
+**Tabu:** Öffentlich zu sagen, dass ein Mensch auch ohne Leistung einen eigenen Wert besitzt.
+
+---
+
+## 3. Ossaria – Alltag mit der Erinnerung an die Toten
+
+### Wohnen und Arbeit
+
+Ossarische Städte verbinden historische Viertel mit moderner Infrastruktur. Alte Plätze, Friedhöfe und Denkmäler gehören selbstverständlich zum Stadtbild.
+
+Die Gesellschaft ist technisch fortschrittlich, aber nicht technikgläubig. Menschen diskutieren häufig darüber, wo technische Unterstützung endet und menschliche Verantwortung beginnt.
+
+### Familie und Bildung
+
+Kinder lernen Geschichte früh. Krieg wird nicht als Heldengeschichte vermittelt, sondern anhand von Namen, Verlustlisten und persönlichen Berichten.
+
+In vielen Familien gibt es Gegenstände von Vorfahren, die in früheren Kriegen gefallen sind.
+
+Das erzeugt Stolz, aber auch eine schwere Verantwortung.
+
+### Religion und Rituale
+
+Totengedenken besitzt hohe gesellschaftliche Bedeutung. Jahrestage gefallener Familienmitglieder werden oft gemeinsam begangen.
+
+Hochzeiten und Geburten werden dagegen bewusst als Feiern des Lebens gestaltet. Gerade die Nähe zum Tod verstärkt die Wertschätzung des Alltäglichen.
+
+### Soldaten
+
+Soldaten genießen Respekt, aber kein unkritisches Prestige. Ein Soldat soll sich bewusst sein, dass hinter jedem militärischen Erfolg menschliche Verluste stehen.
+
+Die Knochenmasken sind deshalb gesellschaftlich nicht bloß martialische Symbole. Für viele Familien bedeuten sie: Der Träger vergisst die Toten nicht.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass die nächste Generation frei leben kann.
+
+**Angst:** Dass die Erinnerung an die Opfer irgendwann wieder zur Rechtfertigung neuer Opfer wird.
+
+**Tabu:** Gefallene Menschen nur als Zahlen zu behandeln.
+
+---
+
+## 4. Rothain – Alltag zwischen Republik und verlorener Größe
+
+### Gesellschaft
+
+Rothain besitzt starke regionale Unterschiede. In ehemaligen Residenzstädten finden sich alte Familien, Veteranenvereine und historische Institutionen. Industriestädte und ländliche Gebiete besitzen dagegen eine wesentlich pragmatischere Kultur.
+
+Viele Familien bewahren militärische Erinnerungsstücke auf. Nicht jede Familie ist stolz darauf. Manche sehen darin ein Erbe, von dem sich die Gesellschaft endlich lösen sollte.
+
+### Arbeit und soziale Schichten
+
+Alte Vermögen, neue Unternehmen und öffentliche Verwaltungen stehen nebeneinander. Der soziale Aufstieg ist möglich, aber Beziehungen zu alten Eliten können weiterhin Türen öffnen.
+
+Das erzeugt einen stillen Konflikt zwischen Leistungsgesellschaft und Herkunft.
+
+### Familie
+
+Großfamilien sind kulturell stärker verankert als in Averon. Familiennamen und Herkunft besitzen gesellschaftliches Gewicht.
+
+Bei manchen Familien beginnt eine militärische Laufbahn über Generationen. Andere vermeiden den Militärdienst bewusst, weil sie mit der imperialen Vergangenheit nichts mehr zu tun haben wollen.
+
+### Kultur
+
+Historische Feste, Regimentsmusik und alte Architektur sind Teil des öffentlichen Lebens. Gleichzeitig gibt es eine starke Gegenkultur, die genau diese Traditionen kritisiert.
+
+### Lebensgefühl
+
+**Hoffnung:** Eine große Vergangenheit in eine friedliche Zukunft zu verwandeln.
+
+**Angst:** Dass die alte Ordnung unter einem neuen Namen zurückkehrt.
+
+**Tabu:** Die offene Behauptung, die vergangenen imperialen Kriege seien ausschließlich ruhmreich gewesen.
+
+---
+
+## 5. Sahr – Alltag in den Handelsstädten
+
+### Stadtleben
+
+Sahr ist laut, dicht und wirtschaftlich aktiv. Märkte, Häfen, Werkstätten und Lagerhäuser bestimmen das Stadtbild.
+
+Menschen sind an Fremde gewöhnt. Mehrere Sprachen können innerhalb eines einzigen Viertels gesprochen werden.
+
+### Arbeit
+
+Handel und Logistik sind die wichtigsten sozialen Aufstiegsmöglichkeiten. Eine Familie kann mit einem kleinen Lagerhaus beginnen und innerhalb einer Generation ein bedeutendes Unternehmen aufbauen.
+
+Gleichzeitig leben viele Hafenarbeiter unter unsicheren Bedingungen.
+
+### Familie
+
+Familiennetzwerke besitzen wirtschaftliche Bedeutung. Verwandte helfen bei Transport, Handel und Kredit.
+
+Ehen können deshalb sowohl persönliche als auch wirtschaftliche Bindungen sein.
+
+### Religion
+
+Sahr ist religiös vielfältig. Hafenstädte haben über Jahrhunderte unterschiedliche Glaubensrichtungen aufgenommen. Religiöse Toleranz ist weniger ein philosophisches Ideal als eine praktische Notwendigkeit des Handels.
+
+### Militär
+
+Soldaten gelten als Beschützer von Handelswegen. Versorgung und Infrastruktur werden gesellschaftlich fast ebenso hoch bewertet wie Kampfkraft.
+
+### Lebensgefühl
+
+**Hoffnung:** Aufstieg durch Handel und Eigeninitiative.
+
+**Angst:** Unterbrochene Versorgung, Blockaden und wirtschaftlicher Zusammenbruch.
+
+**Tabu:** Den wirtschaftlichen Nutzen einer Krise offen über das menschliche Leid zu stellen.
+
+---
+
+## 6. Steinmark – Alltag in der Verwaltungsrepublik
+
+### Staat und Bürger
+
+Steinmark ist ein Land von Formularen, Behörden, Vereinen und klaren Zuständigkeiten. Bürger wissen meistens, welche Behörde für welches Problem verantwortlich ist.
+
+Das schafft Sicherheit, kann aber auch Frustration erzeugen.
+
+### Arbeit
+
+Berufe im öffentlichen Dienst besitzen hohes Ansehen. Handwerk, Ingenieurwesen und Logistik werden ebenfalls geschätzt.
+
+Karrieren sind häufig langfristig geplant. Stabilität gilt als Tugend.
+
+### Familie und Bildung
+
+Schulen vermitteln Disziplin, Rechtskenntnis und gemeinschaftliche Verantwortung. Kinder lernen früh, dass Regeln nicht nur Einschränkungen, sondern auch Schutzmechanismen sein können.
+
+### Freizeit
+
+Vereine spielen eine große Rolle. Sport, Feuerwehr, Musikvereine und lokale Organisationen verbinden Bürger über Generationen hinweg.
+
+### Militär
+
+Soldaten gelten weniger als Helden denn als Teil einer funktionierenden Institution. Der ideale Soldat ist zuverlässig, ausgebildet und berechenbar.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass Institutionen auch in Krisen funktionieren.
+
+**Angst:** Dass das System zu langsam wird, während die Welt sich verändert.
+
+**Tabu:** Den Staat grundsätzlich als persönlichen Feind zu betrachten.
+
+---
+
+## 7. Vael – Alltag im Schatten der Fabriken
+
+### Städte
+
+Vaelische Industriestädte sind von Fabriken, Bahnlinien, Energieanlagen und Bergwerken geprägt. Arbeit beginnt und endet häufig nach Schichtplänen.
+
+Die Geräusche der Industrie gehören zum Alltag.
+
+### Gesellschaft
+
+Techniker, Ingenieure und Facharbeiter genießen hohen Respekt. Gleichzeitig besteht eine deutliche Trennung zwischen Industriearbeitern, Büroangestellten und Unternehmensführungen.
+
+Große Konzerne können das Leben ganzer Regionen bestimmen.
+
+### Familie
+
+Familien organisieren ihr Leben um Schichtarbeit. Kinder wachsen mit der Vorstellung auf, dass bestimmte Berufe praktisch Teil der Familiengeschichte sind.
+
+Arbeitsunfälle und Berufskrankheiten gehören zu den gefürchteten Risiken.
+
+### Kultur
+
+Industriefeste, Arbeitersport und technische Wettbewerbe sind populär. Erfolg wird gerne in sichtbaren Ergebnissen gemessen.
+
+### Militär
+
+Ein Soldat wird oft als jemand gesehen, der eine andere Form derselben industriellen Aufgabe erfüllt: Material, Logistik und menschliche Arbeitskraft müssen zusammen funktionieren.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass harte Arbeit einen sichtbaren Fortschritt schafft.
+
+**Angst:** Ersetzt zu werden oder selbst nur noch eine Produktionszahl zu sein.
+
+**Tabu:** Offenen Zweifel am Wert der Leistungsgesellschaft zu äußern.
+
+---
+
+## 8. Vesper – Alltag unter Unsicherheit
+
+### Öffentlichkeit
+
+Vesper ist ein Land, in dem Menschen gelernt haben, zwischen öffentlicher und privater Sprache zu unterscheiden.
+
+Was man zu Hause sagt, muss nicht dem entsprechen, was man bei der Arbeit sagt.
+
+### Arbeit
+
+Staatliche Institutionen, Sicherheitsdienste und staatsnahe Unternehmen sind wichtige Arbeitgeber. Eine unauffällige Karriere kann sicherer sein als eine besonders ambitionierte.
+
+### Familie
+
+Vertrauen innerhalb der Familie ist besonders wichtig. Eltern bringen ihren Kindern bei, Informationen nicht leichtfertig weiterzugeben.
+
+Manche Familien besitzen private Geschichten, die niemals außerhalb des Hauses erzählt werden.
+
+### Medien
+
+Nachrichten werden konsumiert, aber nicht vollständig geglaubt. Bürger vergleichen staatliche Informationen mit Gerüchten, privaten Kontakten und ausländischen Quellen.
+
+### Religion und Rituale
+
+Private religiöse und kulturelle Traditionen können als Rückzugsraum dienen. Gleichzeitig fürchten manche Bürger, dass selbst private Gemeinschaften politisch interpretiert werden.
+
+### Militär
+
+Soldaten und Geheimdienstangehörige besitzen Ansehen und Misstrauen zugleich. Niemand weiß genau, wie groß die tatsächliche Macht der Sicherheitsapparate ist.
+
+### Lebensgefühl
+
+**Hoffnung:** Einen privaten Raum zu besitzen, in den der Staat nicht eindringt.
+
+**Angst:** Nicht zu wissen, wem man vertrauen kann.
+
+**Tabu:** Offene Aussagen über die eigene Überwachung.
+
+---
+
+## 9. Eldran – Alltag zwischen Krone und Moderne
+
+### Gesellschaft
+
+Eldran besitzt eine ausgeprägte zeremonielle Kultur. Feiertage der Krone, regionale Feste und parlamentarische Rituale gehören zum öffentlichen Leben.
+
+Die Gesellschaft ist dennoch modern und wirtschaftlich vielfältig.
+
+### Soziale Schichten
+
+Alte Adelsfamilien besitzen weiterhin kulturelles Kapital, aber nicht automatisch politische Macht. Eine neue urbane Mittelschicht betrachtet Titel oft als Folklore.
+
+In ländlichen Gebieten kann die Krone dagegen noch emotional stark verankert sein.
+
+### Familie
+
+Familiengeschichten werden häufig über Generationen erzählt. Abstammung besitzt kulturelle Bedeutung, aber soziale Mobilität ist real.
+
+### Militär
+
+Die Streitkräfte haben starke zeremonielle Traditionen. Gleichzeitig ist die zivile Kontrolle über das Militär ein zentraler Bestandteil der modernen Staatsordnung.
+
+### Lebensgefühl
+
+**Hoffnung:** Stabilität ohne Rückkehr zur alten Standesgesellschaft.
+
+**Angst:** Eine Verfassungskrise, die Krone und Republik gegeneinander stellt.
+
+**Tabu:** Die Vorstellung, dass Tradition allein politische Legitimität erzeugt.
+
+---
+
+## 10. Namar – Alltag an Küste und Hafen
+
+### Leben am Wasser
+
+Wasser bestimmt die namaranische Gesellschaft. Fischerei, Handel, Schiffbau, Hafenarbeit und Küstenschutz sind alltägliche Themen.
+
+Kinder lernen früh schwimmen und mit wechselnden Wetterbedingungen umzugehen.
+
+### Föderale Identität
+
+Ein Bürger identifiziert sich häufig gleichzeitig mit seinem Bundesstaat, seiner Stadt und Namar als Ganzem.
+
+Die zentrale Regierung ist weit entfernt vom Alltag vieler Gemeinden.
+
+### Familie und Arbeit
+
+Berufe werden häufig innerhalb von Familien weitergegeben. Gleichzeitig ziehen junge Menschen wegen Studium und Arbeit zwischen den Küstenregionen um.
+
+### Militär
+
+Militärdienst besitzt besonders dort Ansehen, wo Küstenverteidigung unmittelbar erlebt wird. In friedlichen Regionen ist die Armee weniger präsent.
+
+### Lebensgefühl
+
+**Hoffnung:** Selbstbestimmung der eigenen Region.
+
+**Angst:** Dass eine äußere Bedrohung eine starke Zentralregierung erzwingt.
+
+**Tabu:** Den Föderalismus grundsätzlich als Schwäche zu bezeichnen.
+
+---
+
+## 11. Orthea – Alltag in der Wissensgesellschaft
+
+### Bildung
+
+Bildung besitzt außergewöhnlich hohen gesellschaftlichen Wert. Kinder werden ermutigt, Fragen zu stellen und Hypothesen zu prüfen.
+
+Universitäten und Forschungszentren sind wichtige kulturelle Orte.
+
+### Arbeit
+
+Wissenschaft, Medizin, Ingenieurwesen und Analyseberufe genießen hohes Ansehen. Gleichzeitig entsteht eine soziale Kluft zwischen hochqualifizierten Spezialisten und Menschen, deren Arbeit weniger akademisch geprägt ist.
+
+### Gesellschaft
+
+Entscheidungen werden häufig mit Daten begründet. Das kann Vertrauen schaffen, aber auch das Gefühl erzeugen, dass menschliche Erfahrungen gegenüber messbaren Größen zu wenig zählen.
+
+### Familie
+
+Eltern investieren stark in Bildung. Leistungsdruck beginnt früh.
+
+### Militär
+
+Soldaten arbeiten eng mit Forschern und technischen Spezialisten zusammen. Viele Systeme werden zunächst in zivilen Forschungsprogrammen entwickelt.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass Wissen menschliches Leid verringern kann.
+
+**Angst:** Dass Optimierung den Menschen auf messbare Eigenschaften reduziert.
+
+**Tabu:** Wissenschaft grundsätzlich mit Wahrheit und Politik grundsätzlich mit Irrationalität gleichzusetzen.
+
+---
+
+## 12. Dargan – Alltag in der Grenzgesellschaft
+
+### Siedlungen
+
+Darganische Orte sind häufig weit voneinander entfernt. Selbstversorgung und Reparaturfähigkeit sind wichtiger als Komfort.
+
+Werkstätten besitzen gesellschaftlich fast den gleichen Stellenwert wie Schulen.
+
+### Familie
+
+Familien helfen einander praktisch. Nachbarschaft ist nicht nur soziale Nähe, sondern Überlebensgemeinschaft.
+
+### Staat
+
+Viele Bürger sehen den Staat positiv, solange er Hilfe bringt, aber skeptisch, wenn er aus großer Entfernung Regeln erlässt.
+
+### Bildung
+
+Kinder lernen neben normalen Fächern praktische Fähigkeiten: Reparieren, Erste Hilfe, Orientierung und Umgang mit schwieriger Umwelt.
+
+### Militär
+
+Soldaten sind häufig aus der lokalen Bevölkerung rekrutiert und kennen die Region persönlich.
+
+### Lebensgefühl
+
+**Hoffnung:** Unabhängig bleiben zu können.
+
+**Angst:** Dass eine Krise die lokale Selbstversorgung überfordert.
+
+**Tabu:** Menschen aus abgelegenen Regionen als weniger zivilisiert zu betrachten.
+
+---
+
+## 13. Lyr – Alltag zwischen Tal und Bund
+
+### Lokale Identität
+
+In Lyr ist die wichtigste politische Einheit oft nicht der Gesamtstaat, sondern das eigene Tal oder die eigene Republik.
+
+Menschen können sich stark mit lokalen Traditionen identifizieren und dennoch den Bund verteidigen.
+
+### Arbeit
+
+Bergbau, Handwerk, Energiegewinnung, Landwirtschaft und Tunnelbau sind bedeutend. Große Städte existieren, dominieren aber nicht das gesamte Land.
+
+### Familie
+
+Mehrgenerationenhaushalte sind häufiger als in Averon. Ältere Menschen besitzen praktisches Wissen über lokale Umwelt und Geschichte.
+
+### Religion
+
+Lokale Bräuche sind stark. Religiöse Traditionen können von Tal zu Tal variieren.
+
+### Militär
+
+Verteidigung ist eng mit der Heimat verbunden. Ein Soldat schützt nicht nur einen Staat, sondern konkret das Tal, in dem seine Familie lebt.
+
+### Lebensgefühl
+
+**Hoffnung:** Die eigene Gemeinschaft bewahren zu können.
+
+**Angst:** Dass gemeinsame Verteidigung in Zentralisierung umschlägt.
+
+**Tabu:** Lokale Identität als rückständig abzuwerten.
+
+---
+
+## 14. Caldris – Alltag im fürsorglichen Überwachungsstaat
+
+### Wohnen und Versorgung
+
+Caldrische Bürger erleben den Staat im Alltag unmittelbar. Gesundheitsversorgung, Wohnraum, Arbeitsvermittlung und soziale Absicherung sind weitgehend organisiert.
+
+Für viele Menschen ist das Leben materiell stabil.
+
+### Überwachung
+
+Gleichzeitig existieren umfangreiche Kontrollsysteme. Bürger wissen, dass staatliche Stellen große Mengen persönlicher Informationen besitzen.
+
+Viele Menschen passen ihr Verhalten deshalb an, obwohl sie persönlich nie verfolgt wurden.
+
+### Familie
+
+Familien profitieren von sozialer Unterstützung. Kinderbetreuung und medizinische Versorgung sind gut ausgebaut.
+
+Die Frage der Privatsphäre beginnt jedoch früh: Eltern müssen entscheiden, wie offen sie mit ihren Kindern über politische Themen sprechen.
+
+### Militär
+
+Militär und zivile Sicherheitsorgane überschneiden sich stark. Soldaten werden als Teil des gesellschaftlichen Schutzsystems betrachtet.
+
+### Lebensgefühl
+
+**Hoffnung:** Niemand soll durch Armut oder Krankheit fallen gelassen werden.
+
+**Angst:** Dass Sicherheit irgendwann wichtiger wird als persönliche Freiheit.
+
+**Tabu:** Die sozialen Leistungen des Staates pauschal als wertlos zu bezeichnen.
+
+---
+
+## 15. Merovan – Alltag nach dem Imperium
+
+### Gesellschaft
+
+Merovan ist kulturell vielfältig. Hafenstädte und ehemalige Kolonialzentren beherbergen Menschen mit sehr unterschiedlichen Familiengeschichten.
+
+Manche Familien profitieren noch von altem Vermögen. Andere erinnern sich an die imperiale Herrschaft aus der Perspektive ihrer Opfer.
+
+### Bildung
+
+Geschichte ist politisch umkämpft. Schulbücher versuchen, das Imperium zu erklären, ohne es zu verherrlichen oder zu verschweigen.
+
+### Wirtschaft
+
+Handel ist weiterhin zentral. Große Unternehmen besitzen internationale Verbindungen.
+
+### Familie
+
+Familiengeschichten können über mehrere Kontinente reichen. Migration ist normal.
+
+### Militär
+
+Expeditionstruppen werden gesellschaftlich ambivalent gesehen. Einerseits gelten sie als Schutz der Handelswege, andererseits erinnern Auslandseinsätze an die imperiale Vergangenheit.
+
+### Lebensgefühl
+
+**Hoffnung:** Internationale Verflechtung ohne neue Herrschaft.
+
+**Angst:** Dass alte Machtstrukturen unter wirtschaftlichen Namen zurückkehren.
+
+**Tabu:** Die imperiale Vergangenheit ausschließlich als Ruhmesgeschichte zu erzählen.
+
+---
+
+## 16. Theryn – Alltag nach der Revolution
+
+### Gesellschaft
+
+Theryn ist von revolutionären Erinnerungen geprägt. Fast jede Familie besitzt Geschichten über den Umbruch: gefallene Verwandte, Enteignungen, Gefängnisse, neue Chancen oder alte Traumata.
+
+### Arbeit
+
+Arbeit wird als gesellschaftlicher Beitrag verstanden. Staatliche Betriebe, Genossenschaften und Massenorganisationen prägen das Wirtschaftsleben.
+
+### Bildung
+
+Kinder lernen die Geschichte der Revolution früh. Gleichzeitig existieren unterschiedliche Interpretationen darüber, was die Revolution eigentlich erreichen sollte.
+
+### Familie
+
+Familien können politisch gespalten sein. Eine Generation erinnert sich an Unterdrückung durch die alte Ordnung, die nächste an Repression durch die revolutionäre Regierung.
+
+### Militär
+
+Militärdienst wird als Verteidigung der Revolution und des Gemeinwesens verstanden. Veteranen besitzen gesellschaftliches Gewicht.
+
+### Lebensgefühl
+
+**Hoffnung:** Eine Gesellschaft ohne privilegierte Klassen.
+
+**Angst:** Dass die Revolution eine neue privilegierte Klasse geschaffen hat.
+
+**Tabu:** Die eigene revolutionäre Identität vollständig zu verleugnen.
+
+---
+
+# Der Alltag als gemeinsamer Maßstab
+
+Die sechzehn Nationen unterscheiden sich damit nicht nur durch Verfassungen und Waffen.
+
+Ein und dieselbe Situation kann für einen Menschen völlig unterschiedlich aussehen:
+
+### Ein Kind wird krank.
+
+- In **Karsk** wird zuerst gefragt, welchen staatlichen Wert die Behandlung besitzt.
+- In **Caldris** ist Behandlung wahrscheinlich umfassend abgesichert, aber registriert.
+- In **Averon** kann die Familie zwischen vielen Angeboten wählen, muss sich aber im System zurechtfinden.
+- In **Dargan** kann die Entfernung zur medizinischen Versorgung das größte Problem sein.
+- In **Orthea** vertraut man auf modernste Diagnostik.
+- In **Sahr** können Familie und Handelsnetzwerk helfen, Versorgung schnell zu organisieren.
+
+### Ein Familienmitglied wird eingezogen.
+
+Für alle sechzehn Gesellschaften ist das derselbe biologische Vorgang.
+
+Aber die Bedeutung ist verschieden.
+
+In einer Gesellschaft bedeutet es Pflicht. In einer anderen Aufstieg. In einer dritten Schande. In einer vierten wirtschaftliche Not. In einer fünften eine Möglichkeit, die Familie zu schützen.
+
+Damit entsteht die menschliche Ebene von *Division Command*:
+
+> **Der Krieg beginnt auf der Karte. Seine Folgen beginnen am Küchentisch.**
+
+---
+
+# Gesellschaftliche Spannungsachsen
+
+Für zukünftige Lore, Kampagnen und Karten sollten die Nationen nicht als geschlossene Blöcke behandelt werden. Innerhalb jeder Nation existieren mindestens folgende Konfliktlinien:
+
+- Stadt gegen Land
+- Arm gegen Reich
+- Jung gegen Alt
+- Zivilbevölkerung gegen Sicherheitsapparat
+- politische Regierung gegen Militär
+- traditionelle gegen moderne Lebensweisen
+- Zentrum gegen Regionen
+- religiöse gegen säkulare Gruppen
+- Arbeiterschaft gegen wirtschaftliche Eliten
+- Veteranen gegen Kriegsgegner
+- technische Optimierung gegen menschliche Autonomie
+- nationale Interessen gegen internationale Kooperation
+
+Diese Konflikte können sich im Verlauf des Spiels verändern. Eine Nation kann während eines langen Krieges politisch instabil werden, ohne dass ihre Regierung sofort zusammenbricht.
+
+---
+
+# Der einzelne Mensch
+
+Die Lore von *Division Command* soll immer wieder auf eine einfache Perspektive zurückkehren:
+
+Ein Bürger ist nicht zuerst Soldat, Arbeiter, Technokrat, Revolutionär oder Aristokrat.
+
+Er ist zunächst ein Mensch.
+
+Er hat eine Familie. Er hat Gewohnheiten. Er besitzt Erinnerungen. Er kann Angst haben. Er kann jemanden lieben. Er kann sich irren. Er kann glauben, dass seine Regierung ihn schützt, und später feststellen, dass sie ihn benutzt hat.
+
+Deshalb soll die Welt keine Nation besitzen, deren Bevölkerung ausschließlich aus Karikaturen ihrer Regierung besteht.
+
+**Die Regierung kann Krieg wollen, während ein Bürger Frieden will.**
+
+**Ein Soldat kann seine Aufgabe erfüllen und den Krieg trotzdem verabscheuen.**
+
+**Ein Gegner kann Menschlichkeit zeigen, ohne dadurch seine Regierung zu rechtfertigen.**
+
+**Ein Staat kann reale Sicherheit schaffen und gleichzeitig Freiheit zerstören.**
+
+Das ist die Grundlage für eine Welt, in der Krieg nicht glorifiziert werden muss, damit militärische Konflikte glaubwürdig dargestellt werden können.
+
+# Historischer Grundsatz
+
+Die sechzehn Nationen sind nicht sechzehn isolierte Geschichten.
+
+Ihre Gesellschaften haben sich gegenseitig beeinflusst. Menschen wanderten aus. Händler brachten Ideen über Grenzen. Wissenschaftler wechselten Staaten. Flüchtlinge gründeten neue Viertel. Soldaten heirateten Menschen aus anderen Ländern. Unternehmen bauten Fabriken außerhalb ihrer Heimat. Religionen und Sprachen verbreiteten sich.
+
+Dadurch kann keine Nation ihre Geschichte vollständig aus sich selbst erklären.
+
+**Jede Nation trägt Spuren ihrer Nachbarn in sich.**
+
+Der Krieg zerstört deshalb nicht nur Frontlinien.
+
+Er zerreißt Beziehungen, die über Jahrhunderte entstanden sind.
