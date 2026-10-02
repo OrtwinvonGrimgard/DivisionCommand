@@ -12,32 +12,32 @@ Die Darstellung ist ein realistisches Ölgemälde mit sichtbarer Pinselstruktur 
 
 Lore und Mechanik bleiben getrennt. Eine Nation erklärt, warum eine Uniform so aussieht. Sie schreibt nicht vor, welches Deck gespielt wird. Im Editor darf Gesicht A auf Schnitt B in Farbe C liegen. In der Kampagne tragen Gegner eine stimmige Nation.
 
-Die acht benannten Staaten stehen in `LORE_NATIONEN.md`. Die anderen acht sind Porträt-Nationen mit eigener Uniformsprache und noch ohne Lore-Kapitel.
+Die sechzehn Staaten stehen in `LORE_NATIONEN.md`. Die Uniformsprache folgt dieser Lore. Sie ist keine eigene Mechanik.
 
 ## Die 16 Nationen
 
-| ID | Name | Stand | Uniformsprache |
+| ID | Name | Uniformsprache | Zweitmütze |
 |---|---|---|---|
-| N01 | Averon | Lore. Ordner bisher `Jetzt` | modernes Oliv, Plattenträger, sandfarbene Streifen |
-| N02 | Karsk | Lore | Anthrazit, rote Balken, Implantat, keine zweite Hautfarbe außer am Graft |
-| N03 | Ossaria | Lore. Ordner bisher `Ossar` | Schwarz, Knochenplatten, Erinnerungsmaske, eine Linse |
-| N04 | Rothain | Lore | dunkelroter historischer Rock, Silbersterne, Pelz, Patronentasche |
-| N05 | Sahr | Lore | Sand, gewickelter Gürtel, offener Knoten, Perlen |
-| N06 | Steinmark | Lore | Feldgrau, schwarzes Koppelzeug, Litzen |
-| N07 | Vael | Lore | helle Dienstjacke, dunkler Kragen, Silberringe |
-| N08 | Vesper | Lore | stumpfes Oliv, schwarze Siegel |
-| N09 | — | ohne Lore | dunkles Imperium, Schwarz und Knochenweiß, Atemmaske, bionisches Auge. Nicht Ossaria und nicht Karsk |
-| N10 | — | ohne Lore | heller Eidbund, wenig Gold, Ringe oder schmale Borten, ausdrücklich kein Knochen |
-| N11 | — | ohne Lore | Maskenarmee ohne Grafts, Helm und Atemmaske, industrielle Warnfarbe nur als schmales Abzeichen |
-| N12 | — | ohne Lore | Gebirge, kurze Jacke, Umhang in derselben Palette, kein Pelzkragen wie Rothain |
-| N13 | — | ohne Lore | Küste, dunkelblau nur hier, keine Sterne wie Rothain |
-| N14 | — | ohne Lore | weiter Raum, langer Mantel, eine einzige helle Paspel |
-| N15 | — | ohne Lore | Söldnerbund, eine eigene Grundfarbe, zusammengesetztes Koppel, kein Sammelsurium |
-| N16 | — | ohne Lore | Nacht und Stadt, Schwarz ohne Knochen und ohne Siegel |
+| N01 | Averon | modernes Oliv, Plattenträger, sandfarbene Streifen | Feldmütze |
+| N02 | Karsk | Anthrazit, rote Balken, Implantat, keine zweite Hautfarbe außer am Graft | Barett |
+| N03 | Ossaria | Schwarz, Knochenplatten, Erinnerungsmaske, eine Linse | Feldmütze |
+| N04 | Rothain | dunkelroter historischer Rock, Silbersterne, Pelz, Patronentasche | Feldmütze |
+| N05 | Sahr | Sand, gewickelter Gürtel, offener Knoten, Perlen | Feldmütze |
+| N06 | Steinmark | Feldgrau, schwarzes Koppelzeug, Litzen | Feldmütze |
+| N07 | Vael | helle Dienstjacke, dunkler Kragen, Silberringe | Barett |
+| N08 | Vesper | stumpfes Oliv, schwarze Siegel | Barett |
+| N09 | Eldran | steingrün, kleiner Kronenspiegel, Befestigungskragen, kein Rothain-Rot | Feldmütze |
+| N10 | Namar | Dunkelblau nur hier, Marinekrause, keine Sterne | Barett |
+| N11 | Orthea | helles Grau, eine dünne technische Linie, kein Gold, kein Knochen | Barett |
+| N12 | Dargan | staubbraun, kurze Jacke, sichtbare Reparaturstelle als festes Detail | Feldmütze |
+| N13 | Lyr | Schiefergrau, kurze Jacke, Umhang in derselben Palette, kein Pelz | Feldmütze |
+| N14 | Caldris | blasses Institutionsgrün, kleines Medizin- und Kontrollzeichen, kein Vespersiegel | Barett |
+| N15 | Merovan | sandfarbener Expeditionsrock, eine helle Paspel, keine Sahr-Perlen | Barett |
+| N16 | Theryn | schlichtes Rotbraun, Massenjacke, ein glatter Balken, kein Rothain-Karmesin | Feldmütze |
 
 Zwei Nationen dürfen sich nicht nur durch die Farbe unterscheiden. Schnitt, Abzeichenort und ein wiederkehrendes Detail müssen anders sein.
 
-N09 bis N16 bekommen einen Staatsnamen erst in der Lore. Bis dahin gelten die IDs.
+Die Schirmmütze gibt es bei allen. Die Zweitmütze ist je Nation fest, entweder Barett oder Feldmütze.
 
 ## Personen
 
@@ -262,4 +262,4 @@ Eine Ebene kommt nur in den Pool, wenn gilt:
 2. Die acht benannten Nationen als Fähnrich, vier Gesichter, ohne Bart.
 3. Erst danach die zweite Mützenart, die fünf Kleidergruppen und die Abzeichen.
 4. Bart und Haar als Ebenen, nicht als neue Porträts.
-5. N09 bis N16 erst, wenn die ersten acht den Rahmen halten.
+5. Eldran bis Theryn erst, wenn Averon bis Vesper den Rahmen halten.

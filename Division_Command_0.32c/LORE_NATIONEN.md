@@ -385,6 +385,14 @@ Die Nationen besitzen bewusst unterschiedliche gesellschaftliche und technologis
 | **Steinmark** | föderaler Verwaltungsstaat | Standardisierung, Ausbildung, Logistik, Institutionen |
 | **Vael** | industrieller Machtstaat | Produktion, Maschinen, schwere Ausrüstung |
 | **Vesper** | zentralistischer Sicherheitsstaat | Geheimdienste, Täuschung, Information |
+| **Eldran** | konstitutionelle Monarchie | Landesverteidigung, Befestigung, Artillerie, Krone und Parlament |
+| **Namar** | maritime Föderation | Küste, Häfen, amphibische Verbände, regionale Autonomie |
+| **Orthea** | wissenschaftliche Republik | Sensorik, Robotik, Analyse, keine automatische Expertenherrschaft |
+| **Dargan** | Grenzrepublik | robuste Technik, weite Räume, lokale Selbsthilfe |
+| **Lyr** | Bund der Bergrepubliken | Pässe, Tunnel, lokale Souveränität |
+| **Caldris** | autoritärer Wohlfahrtsstaat | Versorgung, Medizin, Überwachung |
+| **Merovan** | postimperiale Handelsrepublik | Expeditionen, Häfen, alte imperiale Netze |
+| **Theryn** | revolutionäre Republik | Massenmobilisierung, robuste Produktion, Räte gegen Zentrale |
 
 Diese Elemente sind **Leitplanken der Weltgestaltung, keine festen Fraktionsmechaniken**.
 
