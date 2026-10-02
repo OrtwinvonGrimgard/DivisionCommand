@@ -3816,3 +3816,136 @@ body.dc-dragging .slot.legal {
   .kit-grid.uniforms { grid-template-columns: repeat(2, 1fr); }
   .kit-editor .char-preview img { width: 120px; height: 160px; }
 }
+
+/* Vollbild für die Menüs, gewähltes Porträt rechts */
+#work-root.open {
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  padding: 20px 28px 16px !important;
+}
+#work-root .screen.on,
+#work-root .screen.on:not(#scr-library),
+#scr-library.on {
+  width: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  height: 100% !important;
+  margin: 0 !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+}
+#work-root #scr-single.screen.on > label,
+#work-root #scr-lan.screen.on label,
+#work-root #scr-options.screen.on label,
+#work-root #scr-single.screen.on .menu,
+#work-root #scr-lan.screen.on .menu,
+#work-root #scr-options.screen.on .menu {
+  width: min(640px, 100%);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+#title-root:has(#scr-setup.on) {
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  justify-content: stretch !important;
+}
+#title-root:has(#scr-setup.on) > .title-brand { display: none !important; }
+#title-root:has(#scr-setup.on) #menu-panel {
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  flex: 1 1 auto !important;
+  margin: 0 !important;
+}
+
+#scr-setup.on,
+#work-root #scr-user.screen.on {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 38vw) !important;
+  align-content: start !important;
+  justify-items: stretch !important;
+  text-align: left !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  max-height: 100vh !important;
+  overflow: auto !important;
+  box-sizing: border-box !important;
+  column-gap: 36px;
+  row-gap: 8px;
+  padding: 28px 40px 24px !important;
+}
+#scr-setup.on .char-editor,
+#scr-user.on .char-editor { display: contents !important; }
+#scr-setup.on > *,
+#scr-user.on > *,
+#scr-setup.on .char-fields,
+#scr-user.on .char-fields { grid-column: 1; }
+#scr-setup.on .char-preview,
+#scr-user.on .char-preview {
+  grid-column: 2 !important;
+  grid-row: 1 / span 24 !important;
+  align-self: start;
+  justify-self: center;
+  position: sticky;
+  top: 12px;
+  width: min(100%, 520px);
+  flex: none;
+}
+#scr-setup.on .char-preview img,
+#scr-user.on .char-preview img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 74vh !important;
+  object-fit: contain !important;
+  object-position: top center !important;
+}
+#scr-setup.on .menu,
+#scr-user.on .menu { width: min(420px, 100%) !important; margin: 8px 0 0 !important; }
+
+#title-root:has(#scr-title.on) #who-line {
+  position: fixed;
+  right: 5vw;
+  top: 50%;
+  transform: translateY(-46%);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  pointer-events: none;
+}
+#title-root:has(#scr-title.on) .who-face {
+  width: min(30vw, 440px);
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid #e2c36a;
+  box-shadow: 0 18px 48px #000c;
+  background: #0d0d0a;
+}
+#title-root:has(#scr-title.on) .who-lbl,
+#title-root:has(#scr-title.on) .who-name,
+#title-root:has(#scr-title.on) .who-call {
+  font-size: 18px;
+  color: #f3ead8;
+  text-shadow: 0 2px 8px #000;
+}
+
+@media (max-width: 860px) {
+  #scr-setup.on,
+  #work-root #scr-user.screen.on { grid-template-columns: 1fr !important; }
+  #scr-setup.on .char-preview,
+  #scr-user.on .char-preview {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    position: static;
+    width: min(70vw, 320px);
+  }
+  #title-root:has(#scr-title.on) #who-line { display: none; }
+}
