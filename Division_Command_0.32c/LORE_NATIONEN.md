@@ -2706,3 +2706,250 @@ Entscheidend ist, dass die Hauptstadt niemals das gesamte Land repräsentiert. E
 Für die spätere Lore können aus diesen Städten konkrete Stadtviertel, bekannte Gebäude, lokale Dialekte, Vereine, Universitäten, Fabriken, Märkte und Familiengeschichten entwickelt werden.
 
 > **Eine Stadt ist die kleinste Ebene, auf der die großen Ideen einer Nation im Alltag sichtbar werden.**
+
+
+# Konkrete Ausarbeitung – Punkt 4: Dörfer und ländlicher Alltag
+
+Dörfer bilden die soziale Grundlage der Nationen außerhalb ihrer großen Städte. Sie sind keine verkleinerten Städte, sondern eigene Lebensräume mit engeren Familiennetzwerken, lokaler Erinnerung, Landwirtschaft, Handwerk und unmittelbarerem Kontakt zu Landschaft und Infrastruktur.
+
+## 1. Averon
+
+### Feldhain
+Landwirtschaftliches Dorf mit modernen Maschinen und digitaler Verwaltung. Junge Bewohner pendeln häufig in die Städte.
+
+### Nordruh
+Waldnahes Dorf im Norden. Forstwirtschaft, Energieversorgung und kleine Handwerksbetriebe bestimmen den Alltag.
+
+### Küstenfeld
+Küstendorf zwischen Fischerei und moderner Logistik. Alte Familien und neu zugezogene Arbeitskräfte leben nebeneinander.
+
+### Sonnenau
+Dorf im Süden mit starken Sport- und Vereinsgemeinschaften. Lokale Verbundenheit ist wichtiger als politische Netzwerke.
+
+## 2. Karsk
+
+### Werksiedlung Nord
+Geplante Arbeitersiedlung neben einem Produktionskomplex. Wohnungen, Schule, Klinik und Arbeitsplatz sind eng miteinander verbunden.
+
+### Dornenfeld
+Landwirtschaftliche Gemeinde mit staatlich vorgegebenen Produktionszielen. Versorgung ist zuverlässig, persönliche Selbstbestimmung begrenzter.
+
+### Grauhof
+Dorf nahe einer medizinischen Anlage. Viele Familien arbeiten direkt oder indirekt für den Gesundheitssektor.
+
+### Grenzposten
+Kleine Siedlung an einer kontrollierten Verkehrsroute. Militär und Staat sind im Alltag ständig präsent.
+
+## 3. Ossaria
+
+### Altenfeld
+Historisches Dorf mit Familienhäusern, Kirche und altem Friedhof. Namen und Geschichten gefallener Vorfahren sind Teil des Ortsgedächtnisses.
+
+### Eichenau
+Landwirtschaftliches Dorf mit modernen Betrieben und traditionellen Festen.
+
+### Steinbrunn
+Handwerkerdorf, das für Metall- und Schutztechnik bekannt ist.
+
+### Grenzhof
+Kleine Gemeinde nahe alter Befestigungen. Viele Familien bewahren Erinnerungen an frühere Grenzkriege.
+
+## 4. Rothain
+
+### Kronweiler
+Dorf mit ehemaligen Gutshöfen und Familien, die ihre Abstammung über Generationen dokumentieren.
+
+### Eisenried
+Arbeiterdorf nahe einer Fabrik. Die Bevölkerung steht alten aristokratischen Traditionen eher kritisch gegenüber.
+
+### Westtal
+Modernisiertes Dorf mit vielen Pendlern und jungen Familien.
+
+### Veteranenhof
+Siedlung, in der mehrere Generationen von Soldatenfamilien leben. Militärische Erinnerung ist Alltag, aber nicht unumstritten.
+
+## 5. Sahr
+
+### Flussau
+Dorf am Wasser mit Landwirtschaft, Fährbetrieb und kleinem Markt.
+
+### Kornhafen
+Umschlagdorf zwischen Agrarregion und Flusshandel. Lagerhäuser und Fuhrunternehmen sind zentral.
+
+### Küstenruh
+Fischerdorf mit starkem Familienzusammenhalt und eigener lokaler Tradition.
+
+### Südgarten
+Mischdorf aus Landwirtschaft, kleinen Händlern und neu eingewanderten Familien.
+
+## 6. Steinmark
+
+### Eichenheim
+Typisches südliches Dorf mit Vereinen, Feuerwehr und regionalem Handwerk.
+
+### Nordfeld
+Industrienahes Dorf mit vielen Facharbeitern und Pendlern.
+
+### Bundesau
+Dorf, in dem Verwaltung und öffentlicher Dienst überdurchschnittlich viele Familien beschäftigen.
+
+### Grenzmark
+Alte Grenzsiedlung mit starker Erinnerung an frühere Kriege und wechselnde Herrschaften.
+
+## 7. Vael
+
+### Stahlhof
+Arbeitersiedlung neben einem großen Stahlwerk. Schichtpläne strukturieren Familienleben und Freizeit.
+
+### Kraftau
+Dorf im Energiegürtel. Viele Bewohner arbeiten in Kraftwerken oder Leitungsbetrieben.
+
+### Konzernfeld
+Unternehmenssiedlung mit Firmenklinik, Schule und Wohnanlagen. Das Unternehmen ist zugleich Arbeitgeber und gesellschaftlicher Mittelpunkt.
+
+### Grünweiler
+Landwirtschaftlich geprägtes Dorf mit stärkerer Kritik an der industriellen Entwicklung.
+
+## 8. Vesper
+
+### Nebelhof
+Abgelegenes Dorf mit wenig öffentlicher Infrastruktur. Die Bewohner verlassen sich stark auf Familien und Nachbarschaften.
+
+### Wachtau
+Siedlung nahe einer militärischen Zone. Kontrollen gehören zum Alltag.
+
+### Stilldorf
+Altes Dorf mit ausgeprägten privaten Netzwerken. Menschen wissen viel voneinander, sprechen aber wenig offen über Politik.
+
+### Freihain
+Landgemeinde mit etwas stärkerer wirtschaftlicher Selbstständigkeit und größerem Abstand zu staatlichen Institutionen.
+
+## 9. Eldran
+
+### Kronau
+Traditionelles Dorf mit alten Festen und sichtbaren Verbindungen zu regionalen Adelsfamilien.
+
+### Talheim
+Landwirtschaftliche Gemeinde mit modernen Betrieben und starken Gemeinderäten.
+
+### Nordhain
+Arbeiterdorf mit moderner, eher republikanischer Bevölkerung.
+
+### Freital
+Gemeinde mit historisch besonderen Selbstverwaltungsrechten und starkem Lokalbewusstsein.
+
+## 10. Namar
+
+### Seedorf
+Fischerdorf mit kleinen Bootswerften und Familien, deren Berufe seit Generationen mit dem Meer verbunden sind.
+
+### Inselruh
+Abgelegene Inselgemeinde. Wetter, Fährverbindungen und lokale Selbstversorgung bestimmen den Alltag.
+
+### Hafenfeld
+Dorf nahe eines großen Hafens. Viele Bewohner arbeiten in Logistik und Schifffahrt.
+
+### Salzwiese
+Küstendorf mit Landwirtschaft, Fischerei und traditioneller regionaler Küche.
+
+## 11. Orthea
+
+### Forschungsfeld
+Kleine Gemeinde nahe wissenschaftlicher Anlagen. Viele Familien arbeiten in technischen oder medizinischen Berufen.
+
+### Altendorf
+Traditionelles Dorf außerhalb des Wissenschaftsgürtels. Die Bewohner stehen der akademischen Elite teilweise distanziert gegenüber.
+
+### Feldtal
+Landwirtschaftliches Dorf mit modernen Analyse- und Bewässerungssystemen.
+
+### Werkheim
+Technisches Dorf, dessen Bewohner überwiegend in automatisierten Produktionsanlagen arbeiten.
+
+## 12. Dargan
+
+### Hochdorf
+Bergdorf mit Viehzucht, Reparaturwerkstätten und schwierigen Verkehrswegen.
+
+### Steinscharte
+Kleine Siedlung an einem Gebirgspass. Gemeinschaftliche Hilfe ist für das Überleben entscheidend.
+
+### Flussgrund
+Landwirtschaftliches Dorf am wichtigsten Transportkorridor.
+
+### Fernmark
+Sehr abgelegene Gemeinde mit eigener Wasserversorgung, Werkstätten und starkem Misstrauen gegenüber zentralen Behörden.
+
+## 13. Lyr
+
+### Talwies
+Gemeinde mit intensiver Landwirtschaft und ausgeprägter lokaler Verwaltung.
+
+### Hochweid
+Bergdorf, dessen Familien Viehzucht und Bergbau miteinander verbinden.
+
+### Passdorf
+Siedlung an einem strategischen Gebirgspass. Viele Bewohner haben militärische oder technische Berufe.
+
+### Sonnenhang
+Dorf mit alten religiösen Bräuchen und starken Großfamilien.
+
+## 14. Caldris
+
+### Versorgungsdorf
+Planmäßig errichtete Gemeinde mit staatlicher Klinik, Schule und zentraler Lebensmittelversorgung.
+
+### Werksiedlung
+Wohnort für Beschäftigte eines staatlichen Produktionsbetriebs. Arbeit und soziale Leistungen sind eng gekoppelt.
+
+### Kinderfeld
+Gemeinde mit umfangreicher staatlicher Kinderbetreuung und Familienförderung.
+
+### Randhain
+Ländliche Gemeinde, in der staatliche Leistungen geschätzt werden, gleichzeitig aber viele Bewohner den Umfang der Kontrolle kritisch sehen.
+
+## 15. Merovan
+
+### Altmark
+Altes Dorf im Binnenland mit Landwirtschaft und Familien, deren Geschichte weit vor die Handelsrepublik zurückreicht.
+
+### Hafenhain
+Küstendorf mit Fischerei, Handel und zahlreichen Familien unterschiedlicher Herkunft.
+
+### Überseehof
+Gemeinde, deren Familiengeschichten mit ehemaligen Überseegebieten verbunden sind. Die Vergangenheit wird unterschiedlich bewertet.
+
+### Neuacker
+Jüngere Siedlung mit vielen eingewanderten Familien und neuen landwirtschaftlichen Betrieben.
+
+## 16. Theryn
+
+### Rotfeld
+Landwirtschaftliche Genossenschaftsgemeinde mit starkem revolutionärem Selbstverständnis.
+
+### Werkhain
+Dorf nahe eines staatlichen Industriebetriebs. Viele Familien sind seit Generationen mit dem Betrieb verbunden.
+
+### Morgenau
+Junge Gemeinde, in der Reformideen und traditionelle revolutionäre Organisationen aufeinandertreffen.
+
+### Genossenfeld
+Große Agrargemeinschaft mit gemeinsamem Maschinenpark und kollektiv organisierten Arbeitsabläufen.
+
+# Der ländliche Alltag als Gegenpol zur Stadt
+
+Dörfer machen sichtbar, dass staatliche Ordnung nicht überall gleich erlebt wird. In Städten begegnen Menschen dem Staat häufig über Institutionen, Unternehmen und öffentliche Einrichtungen. Auf dem Land begegnen sie ihm stärker über Infrastruktur, Landwirtschaft, Schulen, medizinische Versorgung, Steuern, Wehrdienst und lokale Verwaltung.
+
+Deshalb entstehen innerhalb jeder Nation eigene Unterschiede:
+
+- **Familie** ist auf dem Land häufig wichtiger als formale Institutionen.
+- **Nachbarschaft** kann bei Krisen wichtiger sein als staatliche Hilfe.
+- **Religion und Brauchtum** überleben häufig länger als in Großstädten.
+- **Dialekte** und regionale Ausdrucksweisen bleiben stärker erhalten.
+- **Mobilität** ist ungleich verteilt; junge Menschen ziehen häufig in Städte.
+- **Militär und Krieg** werden unmittelbar über Einberufung, Infrastruktur, Veteranen und Gefallene erlebt.
+- **Staatliche Leistungen** können auf dem Land lebenswichtig oder zugleich als Einmischung empfunden werden.
+
+Damit entsteht eine weitere wichtige Ebene der Welt: Nicht nur Nationen unterscheiden sich voneinander. Auch innerhalb derselben Nation kann ein Mensch aus der Hauptstadt eine völlig andere Vorstellung von seinem Land haben als jemand aus einem abgelegenen Dorf.
+
+> **Je kleiner der Ort, desto größer kann die Erinnerung werden.**
