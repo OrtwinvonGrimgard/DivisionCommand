@@ -3133,3 +3133,402 @@ Für die weitere Lore werden daher vier Ebenen unterschieden:
 Je nach Nation verschiebt sich das Gewicht zwischen diesen Ebenen. Genau daraus entstehen unterschiedliche Vorstellungen von Verantwortung, Freiheit, Loyalität und einem guten Leben.
 
 > **Der Staat kann eine Gesellschaft ordnen. Aber nur Menschen können einander Familie sein.**
+
+
+# Konkrete Ausarbeitung – Punkte 6–25
+
+Die folgenden Abschnitte vervollständigen die gesellschaftliche Entwicklung aller sechzehn Nationen. Die Angaben sind als verbindlicher Lore-Arbeitsstand gedacht; spätere Detailkapitel können einzelne Familien, Personen, Institutionen und Ereignisse weiter ausarbeiten.
+
+## Punkt 6 – Jugend
+
+- **Averon:** Jugendliche wachsen digital, selbstständig und leistungsorientiert auf. Schule, soziale Medien und frühe berufliche Projekte prägen Identität; staatliche Institutionen werden eher als Dienstleister verstanden.
+- **Karsk:** Jugend wird früh medizinisch und beruflich bewertet. Leistungsstarke Jugendliche erhalten Chancen und Privilegien; andere erleben früh den Druck gesellschaftlicher Nützlichkeit.
+- **Ossaria:** Geschichte und persönliche Verantwortung gehören zur Erziehung. Jugendliche besuchen Gedenkorte und lernen, militärische Vergangenheit kritisch zu betrachten.
+- **Rothain:** Jugend erlebt den Gegensatz zwischen imperialer Familienerinnerung und republikanischer Gegenwart. Veteranenfamilien vermitteln Tradition, Schulen diskutieren deren Grenzen.
+- **Sahr:** Jugendliche lernen früh Handel, praktische Fähigkeiten und regionale Netzwerke kennen. In Hafenstädten ist kulturelle Vielfalt selbstverständlich.
+- **Steinmark:** Disziplin, Vereinsleben, Gemeinsinn und staatsbürgerliche Bildung prägen die Jugend. Öffentliche Einrichtungen sind alltägliche Bezugspunkte.
+- **Vael:** Technische Ausbildung und Betriebspraktika beginnen früh. Jugendliche stehen zwischen industriellem Berufsstolz und dem Wunsch nach einem Leben außerhalb der Werke.
+- **Vesper:** Jugendliche lernen früh zwischen öffentlicher und privater Sprache zu unterscheiden. Vertrauen entsteht vor allem in kleinen Freundeskreisen.
+- **Eldran:** Jugendliche begegnen sowohl monarchischer Tradition als auch moderner republikanischer Kultur. Region und Familie beeinflussen die politische Sozialisation stark.
+- **Namar:** Meer, Wetter, Sport und lokale Gemeinschaft prägen die Jugend. Auf Inseln ist Selbstständigkeit besonders wichtig.
+- **Orthea:** Bildungserfolg besitzt hohen sozialen Wert. Jugendliche stehen unter akademischem Druck, während ländliche Jugendliche andere Lebenswege vertreten.
+- **Dargan:** Jugendliche lernen praktische Fähigkeiten und Selbsthilfe. Lange Wege machen Nachbarschaft und Familie besonders wichtig.
+- **Lyr:** Jugend ist stark tal- und familienbezogen. Der Konflikt zwischen lokaler Bindung und Wegzug in andere Regionen ist zentral.
+- **Caldris:** Staatliche Schulen, Jugendzentren und Betreuung sind umfassend. Jugendliche erfahren Sicherheit und Überwachung gleichzeitig.
+- **Merovan:** Mehrsprachigkeit und internationale Familiengeschichten prägen viele Jugendliche. Koloniale Vergangenheit wird innerhalb der Familien unterschiedlich erzählt.
+- **Theryn:** Jugendliche lernen revolutionäre Geschichte und erleben zugleich wachsende Reformdiskussionen. Generationenkonflikte sind besonders politisch geprägt.
+
+## Punkt 7 – Arbeit
+
+- **Averon:** Projektarbeit, Dienstleistungen, Technologie und flexible Beschäftigung dominieren; Karrierewechsel sind normal.
+- **Karsk:** Arbeit ist gesellschaftliche Bewertung. Produktivität, technische Qualifikation und staatlicher Bedarf bestimmen Aufstieg.
+- **Ossaria:** Mischung aus Industrie, Wissenschaft, Handwerk und Verwaltung; Berufsstolz ist mit Verantwortung verbunden.
+- **Rothain:** Verwaltung, Industrie, Dienstleistungen und traditionelle Berufe koexistieren; alte Netzwerke erleichtern manchen den Zugang zu Berufen.
+- **Sahr:** Handel, Logistik, Schifffahrt, Landwirtschaft und Handwerk bilden das Rückgrat.
+- **Steinmark:** Verwaltung, Industrie, Handwerk und öffentlicher Dienst gelten als gleichwertige Säulen geordneter Gesellschaft.
+- **Vael:** Industrie und Rohstoffe dominieren; Konzernzugehörigkeit kann Identität und soziale Sicherheit bestimmen.
+- **Vesper:** Staat, Sicherheitssektor, Handel und verborgene informelle Arbeit prägen den Arbeitsmarkt.
+- **Eldran:** Öffentlicher Dienst, moderne Wirtschaft, Landwirtschaft und traditionelle Berufe bestehen nebeneinander.
+- **Namar:** Seefahrt, Fischerei, Schiffbau, Hafenlogistik und Küstenschutz sind zentrale Arbeitgeber.
+- **Orthea:** Forschung, Medizin, Ingenieurwesen und automatisierte Industrie genießen hohes Prestige.
+- **Dargan:** Handwerk, Landwirtschaft, Bergbau, Reparatur und regionale Dienstleistungen sind entscheidend.
+- **Lyr:** Bergbau, Landwirtschaft, Handwerk, Handel und lokale Verwaltung bestimmen die Arbeit.
+- **Caldris:** Staat und staatsnahe Unternehmen sind zentrale Arbeitgeber; Beschäftigung wird stark vermittelt und überwacht.
+- **Merovan:** Handel, Banken, Logistik, Dienstleistungen und internationale Unternehmen prägen den Arbeitsmarkt.
+- **Theryn:** Staatsbetriebe, Genossenschaften, Landwirtschaft und technische Berufe dominieren.
+
+## Punkt 8 – Armut
+
+- **Averon:** Armut zeigt sich vor allem als Wohnungs-, Bildungs- und Zugangsunterschied. Sozialstaatliche Hilfe existiert, ist aber komplex.
+- **Karsk:** Materielle Grundversorgung kann gesichert sein, doch Menschen mit geringer staatlicher Bewertung erhalten weniger Chancen und medizinische Priorität.
+- **Ossaria:** Armut wird über kommunale und staatliche Hilfe abgefedert; historische Städte haben deutliche soziale Unterschiede.
+- **Rothain:** Alte Vermögen und neue Armut können direkt nebeneinander existieren. Herkunft beeinflusst Chancen weiterhin indirekt.
+- **Sahr:** Hafenarbeit und Handel schaffen Aufstieg, aber prekäre Arbeitsverhältnisse und Versorgungskrisen treffen arme Familien stark.
+- **Steinmark:** Verwaltung und soziale Sicherung begrenzen extreme Armut, regionale Unterschiede bleiben.
+- **Vael:** Arbeitslosigkeit kann ganze Industrieregionen treffen. Abhängigkeit von Konzernen verschärft soziale Unsicherheit.
+- **Vesper:** Armut ist schwer sichtbar, weil staatliche Kontrolle und informelle Netzwerke Statistiken verzerren können.
+- **Eldran:** Sozialhilfe existiert, doch alte Besitzstrukturen wirken fort.
+- **Namar:** Inseln und abgelegene Küstenregionen sind bei Versorgungskrisen besonders verwundbar.
+- **Orthea:** Zugang zu guter Bildung entscheidet stark über soziale Mobilität.
+- **Dargan:** Armut bedeutet häufig fehlende Infrastruktur statt völliger Besitzlosigkeit.
+- **Lyr:** Gemeinschaftliche Hilfe verhindert extreme Not in vielen Tälern, kann aber persönliche Abhängigkeiten schaffen.
+- **Caldris:** Materielle Armut ist relativ gering, da der Staat umfassend versorgt; Abhängigkeit vom System ist die Kehrseite.
+- **Merovan:** Wohlhabende Handelszentren stehen armen Binnen- und ehemaligen Überseegebieten gegenüber.
+- **Theryn:** Grundversorgung ist politisches Ziel, doch regionale Produktionsunterschiede und staatliche Verteilung erzeugen Engpässe.
+
+## Punkt 9 – Wohlstand
+
+- **Averon:** Wohlstand zeigt sich in Wohnlage, digitalem Zugang, Bildung und Mobilität.
+- **Karsk:** Wohlstand ist eng an staatliche Nützlichkeit und Position gebunden.
+- **Ossaria:** Wohlhabende Familien investieren häufig in Bildung, Kultur und langfristige Vermögenssicherung.
+- **Rothain:** Alte Familien besitzen kulturelles Kapital; neue Unternehmer schaffen neue Eliten.
+- **Sahr:** Handel, Schifffahrt und Familienunternehmen erzeugen große Vermögen.
+- **Steinmark:** Wohlstand ist stärker institutionell und beruflich als aristokratisch geprägt.
+- **Vael:** Industrieeigentum und Konzernbeteiligungen konzentrieren großen Reichtum.
+- **Vesper:** Wohlstand ist schwer sichtbar; privilegierte Staats- und Sicherheitskreise leben deutlich besser.
+- **Eldran:** Alte Familien und moderne Unternehmer bilden unterschiedliche Eliten.
+- **Namar:** Hafen- und Reedereibesitz bringt erheblichen Wohlstand.
+- **Orthea:** Spitzenforscher, Mediziner und Techniker genießen hohes Einkommen und Prestige.
+- **Dargan:** Wohlstand bedeutet häufig Land, Werkstatt, Vieh und Unabhängigkeit statt Luxus.
+- **Lyr:** Besitz von Land, Minen und Handelsrechten prägt regionale Hierarchien.
+- **Caldris:** Wohlstand wird weniger über Luxus als über Zugang zu Wohnraum, Versorgung und staatlichen Leistungen erlebt.
+- **Merovan:** Finanz- und Handelsvermögen bilden eine einflussreiche Oberschicht.
+- **Theryn:** Private Vermögen sind begrenzt; privilegierter Zugang zu Wohnraum, Waren und Positionen erzeugt dennoch Unterschiede.
+
+## Punkt 10 – Religion
+
+- **Averon:** Religiöse Freiheit ist weitgehend selbstverständlich; organisierte Religion ist eher eine persönliche als staatliche Angelegenheit.
+- **Karsk:** Staatliche Rationalität dominiert. Private Glaubensgemeinschaften existieren, bleiben aber politisch vorsichtig.
+- **Ossaria:** Religion, Erinnerung und Friedenskultur verbinden sich; verschiedene Konfessionen sind gesellschaftlich anerkannt.
+- **Rothain:** Alte Kirchen- und Militärtraditionen bestehen neben säkularer republikanischer Kultur.
+- **Sahr:** Handelswege haben eine religiös vielfältige Gesellschaft geschaffen.
+- **Steinmark:** Religion ist frei, aber stark von bürgerlichen Vereinen und lokalen Traditionen geprägt.
+- **Vael:** Arbeiterkultur und säkulare Weltbilder sind stark; religiöse Gemeinschaften bestehen dennoch lokal.
+- **Vesper:** Private Religion kann ein Rückzugsraum vor staatlicher Öffentlichkeit sein.
+- **Eldran:** Historische Staatskirchen und moderne Religionsfreiheit koexistieren.
+- **Namar:** Küstenreligionen, Familienrituale und unterschiedliche regionale Glaubensformen prägen die Gesellschaft.
+- **Orthea:** Wissenschaft dominiert öffentliche Institutionen, religiöser Glaube bleibt Privatsache.
+- **Dargan:** Religion ist oft mit Natur, Familie und lokaler Gemeinschaft verbunden.
+- **Lyr:** Berggemeinden besitzen unterschiedliche religiöse Traditionen.
+- **Caldris:** Staatlich geförderte soziale Rituale konkurrieren mit privaten Religionen.
+- **Merovan:** Religiöser Pluralismus ist Folge jahrhundertelangen Handels und Migration.
+- **Theryn:** Staatliche Säkularität dominiert, traditionelle Religion lebt in Familien und Gemeinden fort.
+
+## Punkt 11 – Bildung
+
+- **Averon:** Digitale, flexible Bildung mit hoher Hochschulquote und starkem Wettbewerbsdruck.
+- **Karsk:** Bildung dient der gezielten Ausbildung gesellschaftlich benötigter Fähigkeiten.
+- **Ossaria:** Geschichte, Wissenschaft und politische Bildung besitzen hohen Stellenwert.
+- **Rothain:** Schulen verbinden republikanische Staatsbürgerkunde mit kritischer Geschichtsaufarbeitung.
+- **Sahr:** Praktische Handels-, Technik- und Sprachkenntnisse sind besonders wertvoll.
+- **Steinmark:** Staatlich standardisierte Ausbildung und Berufsschulen genießen hohes Vertrauen.
+- **Vael:** Technische und industrielle Ausbildung dominiert.
+- **Vesper:** Bildung vermittelt neben Wissen auch Diskretion und staatliche Loyalität.
+- **Eldran:** Klassische Bildung, moderne Hochschulen und regionale Schulen koexistieren.
+- **Namar:** Maritime und technische Fähigkeiten sind neben allgemeiner Bildung wichtig.
+- **Orthea:** Wissenschaftliche Bildung ist gesellschaftliches Prestigezentrum.
+- **Dargan:** Schulen sind praktisch orientiert und müssen große Entfernungen überbrücken.
+- **Lyr:** Regionale Schulen bewahren lokale Geschichte und Selbstverwaltung.
+- **Caldris:** Bildung ist flächendeckend staatlich organisiert und eng mit Sozialplanung verbunden.
+- **Merovan:** Universitäten sind international ausgerichtet; historische Perspektiven sind umkämpft.
+- **Theryn:** Revolutionäre Geschichte und technische Bildung sind zentrale Bestandteile des Lehrplans.
+
+## Punkt 12 – Medien
+
+- **Averon:** Freie digitale Medien, Plattformen und unabhängiger Journalismus; hohe Informationsgeschwindigkeit erzeugt Fragmentierung.
+- **Karsk:** Medien sind staatlich gelenkt und vermitteln Ordnung, Fortschritt und gesellschaftliche Leistung.
+- **Ossaria:** Pluralistische Medien mit starker investigativer und historischer Kultur.
+- **Rothain:** Freie Medien diskutieren intensiv über Monarchie, Republik und Vergangenheit.
+- **Sahr:** Handelsmedien, lokale Blätter und internationale Nachrichten konkurrieren.
+- **Steinmark:** Sachorientierter öffentlicher Rundfunk und regionale Medien dominieren.
+- **Vael:** Konzernmedien besitzen neben staatlichen und unabhängigen Angeboten erheblichen Einfluss.
+- **Vesper:** Medien sind kontrolliert; Gerüchte, private Netzwerke und verschlüsselte Kommunikation bilden Gegenöffentlichkeiten.
+- **Eldran:** Freie Medien mit traditionell höfischen und modernen republikanischen Blättern.
+- **Namar:** Regionale Medien sind stark und unterscheiden sich zwischen Küste und Inseln.
+- **Orthea:** Datenjournalismus und wissenschaftliche Medien genießen Prestige, aber nicht jeder vertraut ihnen.
+- **Dargan:** Regionale Medien und lokale Radios sind wichtiger als nationale Plattformen.
+- **Lyr:** Lokale Medien spiegeln die politische Eigenständigkeit der Täler.
+- **Caldris:** Staatliche Medien dominieren, liefern aber reale Informationen und Dienstleistungen.
+- **Merovan:** Internationale Pressefreiheit trifft auf mächtige Wirtschaftsinteressen.
+- **Theryn:** Staatsmedien prägen das öffentliche Bild; unabhängige und reformorientierte Stimmen wachsen.
+
+## Punkt 13 – Sprache
+
+- **Averon:** Standardsprache dominiert, urbane Jugend entwickelt schnell neue digitale Umgangsformen.
+- **Karsk:** Verwaltungssprache ist präzise und technisch; persönliche Sprache bleibt emotionaler.
+- **Ossaria:** Alte regionale Ausdrücke und Familiennamen besitzen hohen Erinnerungswert.
+- **Rothain:** Alte höfische Begriffe stehen neben moderner republikanischer Alltagssprache.
+- **Sahr:** Handelsstädte sind mehrsprachig; Lehnwörter und Händlerjargon sind verbreitet.
+- **Steinmark:** Verwaltungssprache ist standardisiert, regionale Dialekte bleiben erhalten.
+- **Vael:** Technische Begriffe und Werksjargon prägen viele Regionen.
+- **Vesper:** Menschen verwenden häufig unterschiedliche öffentliche und private Ausdrucksweisen.
+- **Eldran:** Hofsprache und regionale Dialekte bestehen neben moderner Standardsprache.
+- **Namar:** Küsten- und Inseldialekte sind starke Identitätsmarker.
+- **Orthea:** Fachsprache besitzt hohes Prestige, kann aber soziale Distanz erzeugen.
+- **Dargan:** Regionale Dialekte sind stark und gelten als Zeichen lokaler Zugehörigkeit.
+- **Lyr:** Jedes Tal besitzt eigene sprachliche Eigenheiten.
+- **Caldris:** Verwaltungssprache prägt Schule und Behörden; private Umgangssprache bleibt vielfältig.
+- **Merovan:** Mehrsprachigkeit ist besonders in Hafenregionen normal.
+- **Theryn:** Revolutionäre Begriffe prägen Politik und öffentliche Sprache; jüngere Generationen entwickeln neue Ausdrucksweisen.
+
+## Punkt 14 – Essen
+
+- **Averon:** Schnelle urbane Küche, internationale Einflüsse und regionale Bio-Lebensmittel.
+- **Karsk:** Funktionale, nährstofforientierte Küche; privilegierte Schichten pflegen aufwendigere Esskultur.
+- **Ossaria:** Regionale Hausmannskost, Brot, Suppen, Gemüse und Familienrezepte besitzen hohen Stellenwert.
+- **Rothain:** Deftige regionale Küche und historische Festgerichte.
+- **Sahr:** Fisch, Getreide, Gewürze und internationale Handelsprodukte prägen die Küche.
+- **Steinmark:** Regionale Hausmannskost und Vereinsfeste sind wichtig.
+- **Vael:** Kalorienreiche Arbeiterküche, Kantinen und regionale Spezialitäten.
+- **Vesper:** Einfache häusliche Küche; seltene Zutaten werden eher privat gehandelt.
+- **Eldran:** Hofgerichte und regionale bäuerliche Küche stehen nebeneinander.
+- **Namar:** Fisch, Meeresfrüchte, Salz, Getreide und Inselprodukte dominieren.
+- **Orthea:** Moderne, gesundheitsorientierte Küche neben traditionellen Gerichten.
+- **Dargan:** Haltbare Lebensmittel, Fleisch, Milchprodukte und regionale Landwirtschaft.
+- **Lyr:** Bergkäse, Getreide, Fleisch, Kräuter und saisonale Produkte.
+- **Caldris:** Einheitliche Grundversorgung mit regionalen Ergänzungen; Gemeinschaftsküchen sind verbreitet.
+- **Merovan:** Stark internationale Küche durch Handel und Migration.
+- **Theryn:** Einfache, gemeinschaftlich organisierte Küche; Genossenschaften sichern Grundnahrungsmittel.
+
+## Punkt 15 – Kleidung
+
+- **Averon:** Funktionale urbane Kleidung, technische Stoffe und starke Individualisierung.
+- **Karsk:** Praktische, normierte Kleidung; Status zeigt sich eher durch Materialqualität und technische Ausstattung.
+- **Ossaria:** Moderne Kleidung mit regionalen und historischen Symbolen.
+- **Rothain:** Moderne Kleidung neben bewusster Pflege historischer Stile.
+- **Sahr:** Leichte Kleidung, Hafen- und Arbeitskleidung, regionale Stoffe.
+- **Steinmark:** Schlichte, ordentliche Alltagskleidung; Vereine besitzen eigene Farben und Abzeichen.
+- **Vael:** Robuste Arbeitskleidung und technische Schutzkleidung sind kulturell sichtbar.
+- **Vesper:** Unauffällige Kleidung wird bevorzugt; auffällige politische Symbole gelten als riskant.
+- **Eldran:** Klassische Schnitte und regionale Festkleidung bleiben sichtbar.
+- **Namar:** Wetterfeste maritime Kleidung und regionale Festtrachten.
+- **Orthea:** Funktionale, hochwertige Kleidung mit technischer Ästhetik.
+- **Dargan:** Robuste Kleidung für Gelände und Wetter.
+- **Lyr:** Regionale Woll- und Bergkleidung besitzt starke Identitätsfunktion.
+- **Caldris:** Staatlich geförderte Grundkleidung ist schlicht; private Kleidung markiert Individualität.
+- **Merovan:** Internationale Mode trifft regionale Tradition.
+- **Theryn:** Praktische Arbeitskleidung dominiert; revolutionäre Symbole erscheinen bei staatlichen Anlässen.
+
+## Punkt 16 – Architektur
+
+- **Averon:** Glas, Stahl, digitale Infrastruktur, hohe Wohnhäuser und flexible Büroquartiere.
+- **Karsk:** Monumentale Verwaltungsbauten, geplante Wohnkomplexe und funktionale Industriearchitektur.
+- **Ossaria:** Historische Stadtkerne werden mit moderner Technologie verbunden.
+- **Rothain:** Kaiserliche Gebäude stehen neben republikanischen Institutionen und Arbeitervierteln.
+- **Sahr:** Hafenarchitektur, Lagerhäuser, Brücken, Märkte und dichte Handelsviertel.
+- **Steinmark:** Verwaltungsbauten, Bürgerhäuser und funktionale öffentliche Infrastruktur.
+- **Vael:** Fabriken, Energieanlagen und Arbeiterquartiere prägen ganze Regionen.
+- **Vesper:** Kontrollpunkte, abgeschirmte Regierungsviertel und unscheinbare Wohngebäude.
+- **Eldran:** Paläste, Parlamente, Bürgerhäuser und moderne Vorstädte.
+- **Namar:** Hafenanlagen, Werften, Inselhäuser und Küstenbefestigungen.
+- **Orthea:** Forschungszentren, Kliniken und Universitätsviertel mit moderner Infrastruktur.
+- **Dargan:** Kleine robuste Gebäude, Werkstätten, Berghäuser und lokale Baustoffe.
+- **Lyr:** Steinarchitektur, Terrassen, Tunnel und befestigte Bergsiedlungen.
+- **Caldris:** Geplante Wohnviertel, Kliniken, Schulen und zentrale Versorgungseinrichtungen.
+- **Merovan:** Alte Handelsarchitektur, Kolonialbauten, moderne Häfen und vielfältige Wohnviertel.
+- **Theryn:** Monumentale Revolutionsplätze, öffentliche Gebäude, Fabriksiedlungen und Genossenschaftsbauten.
+
+## Punkt 17 – Freizeit
+
+- **Averon:** Gaming, Sport, Reisen, digitale Gemeinschaften und urbane Kultur.
+- **Karsk:** Sport, technische Clubs und staatlich organisierte Freizeit; privilegierte Kreise besitzen exklusive Angebote.
+- **Ossaria:** Museen, Musik, Wandern, Familienfeste und historische Vereine.
+- **Rothain:** Fußball, Regimentstraditionen, Musik, Kneipen und historische Vereine.
+- **Sahr:** Märkte, Hafenfeste, Wassersport und Handelstreffen.
+- **Steinmark:** Vereinsleben, Wandern, Sport und lokale Veranstaltungen.
+- **Vael:** Werksvereine, Motorsport, Mannschaftssport und technische Hobbys.
+- **Vesper:** Kleine private Treffen, Literatur, Musik und diskrete Freundeskreise.
+- **Eldran:** Reitsport, Musik, Theater, regionale Feste und moderne Stadtkultur.
+- **Namar:** Segeln, Fischerei, Schwimmen, Hafenfeste und Inselsport.
+- **Orthea:** Wissenschaftsclubs, Sport, Museen, Debatten und digitale Kultur.
+- **Dargan:** Jagd, Handwerk, Bergsport, Dorffeste und gemeinschaftliche Reparaturtage.
+- **Lyr:** Bergsport, Musik, Dorffeste und religiöse Veranstaltungen.
+- **Caldris:** Staatliche Sport- und Kulturzentren bieten breite, günstige Freizeitangebote.
+- **Merovan:** Theater, Musik, internationale Gastronomie, Sport und Hafenleben.
+- **Theryn:** Mannschaftssport, Kulturhäuser, Arbeiterclubs und politische Jugendorganisationen.
+
+## Punkt 18 – Feste
+
+- **Averon:** Zukunfts- und Stadtfeste, nationale Gründungstage und große digitale Veranstaltungen.
+- **Karsk:** Staatliche Fortschritts- und Leistungstage sowie regionale Arbeitsfeste.
+- **Ossaria:** Gedenktage, Erntefeste und lokale historische Feiertage.
+- **Rothain:** Republikanische Feiertage und kontrovers erinnerte ehemalige Reichstage.
+- **Sahr:** Hafenfeste, Handelsfeste und religiös vielfältige Stadtfeste.
+- **Steinmark:** Bundesfeiern, Vereinsfeste und regionale Erntefeste.
+- **Vael:** Werksjubiläen, Arbeitertage und regionale Industriefeste.
+- **Vesper:** Offizielle Feiertage sind staatlich geprägt; private Feste bleiben bewusst kleiner.
+- **Eldran:** Königliche Zeremonien, nationale Feiertage und regionale Feste.
+- **Namar:** Saisoneröffnungen der Häfen, Seefahrtsfeste und Inseltraditionen.
+- **Orthea:** Wissenschaftswochen, Universitätsfeste und nationale Bildungstage.
+- **Dargan:** Erntefeste, Dorffeste und lokale Gedenktage.
+- **Lyr:** Talfeiern, Bergfeste und religiöse Feiertage.
+- **Caldris:** Staatliche Gemeinschaftstage, Familienfeste und Versorgungsjubiläen.
+- **Merovan:** Hafenfeste und internationale Kulturfeste.
+- **Theryn:** Revolutionstag, Arbeiterfeste und Genossenschaftsfeiern.
+
+## Punkt 19 – Trauer
+
+- **Averon:** Trauer ist privat und oft individuell; digitale Gedenkräume ergänzen traditionelle Rituale.
+- **Karsk:** Staatliche Anerkennung verstorbener Leistungsträger ist sichtbar; Familien trauern persönlicher.
+- **Ossaria:** Öffentliche Erinnerung und Namen der Toten besitzen hohe Bedeutung.
+- **Rothain:** Familien bewahren Briefe, Uniformen und Erinnerungsstücke; die Bewertung militärischer Toter ist umstritten.
+- **Sahr:** Familien und Handelsgemeinschaften unterstützen Hinterbliebene praktisch und finanziell.
+- **Steinmark:** Kommunale und staatliche Trauerfeiern verbinden persönliche Trauer mit öffentlicher Ordnung.
+- **Vael:** Bei Arbeitsunfällen entstehen starke Gemeinschaftsrituale; Werke errichten häufig Gedenkorte.
+- **Vesper:** Öffentliche Trauer kann politisch sensibel sein; private Rituale sind wichtiger.
+- **Eldran:** Königliche und militärische Trauerzeremonien stehen neben privaten Ritualen.
+- **Namar:** Seebestattungen und maritime Gedenkrituale sind verbreitet.
+- **Orthea:** Medizinische und wissenschaftliche Perspektiven auf Tod stehen neben persönlichen Ritualen.
+- **Dargan:** Nachbarschaft trägt Familien in der Trauer praktisch.
+- **Lyr:** Ahnen- und Familiengedenken ist stark lokal geprägt.
+- **Caldris:** Staatliche Betreuung hilft Hinterbliebenen umfassend, registriert ihre Situation aber auch.
+- **Merovan:** Trauerkulturen unterscheiden sich je nach Herkunft und Religion.
+- **Theryn:** Revolutionäre Märtyrer werden öffentlich geehrt, während Familien ihre private Erinnerung bewahren.
+
+## Punkt 20 – Militär
+
+- **Averon:** Professionelles, technologisch vernetztes Militär; gesellschaftlich respektiert, aber nicht allgegenwärtig.
+- **Karsk:** Militär ist sichtbares Instrument des Staates und technisch eng mit medizinischer Kontrolle verbunden.
+- **Ossaria:** Militär ist stark, aber zivile Kontrolle und Erinnerung an Opfer begrenzen Heldenverehrung.
+- **Rothain:** Militär besitzt starke historische Traditionen und wird zugleich kritisch beobachtet.
+- **Sahr:** Militär schützt Handelswege, Häfen und Versorgung.
+- **Steinmark:** Militär gilt als institutioneller Dienst mit standardisierten Verfahren.
+- **Vael:** Militär wird durch gewaltige industrielle Produktionskapazität getragen.
+- **Vesper:** Militär, Geheimdienste und innere Sicherheit sind eng miteinander verbunden.
+- **Eldran:** Territorialverteidigung, Ingenieurwesen und vorbereitete Stellungen sind zentral; zivile Kontrolle bleibt stark.
+- **Namar:** Marine, Küstenverteidigung und mobile Logistik dominieren.
+- **Orthea:** Aufklärung, Präzision, Sensorik und autonome Systeme sind besonders wichtig.
+- **Dargan:** Kleine, robuste Verbände sind auf schwierige Infrastruktur und Gelände vorbereitet.
+- **Lyr:** Lokale Verteidigungskräfte besitzen starke regionale Bindungen.
+- **Caldris:** Militär und innere Sicherheit sind eng verbunden.
+- **Merovan:** Expeditionäre, logistische und maritime Fähigkeiten spiegeln die Handelsgeschichte.
+- **Theryn:** Große Reserve- und Mobilisierungsstrukturen verbinden Militär und Gesellschaft.
+
+## Punkt 21 – Krieg
+
+- **Averon:** Krieg gilt öffentlich als vermeidbares Versagen, zugleich wird permanente technologische Einsatzbereitschaft als notwendig betrachtet.
+- **Karsk:** Krieg wird als technische und gesellschaftliche Belastungsprobe verstanden, bei der Opfer nach staatlichem Nutzen bewertet werden.
+- **Ossaria:** Krieg wird vor allem über seine Opfer und langfristigen Folgen erinnert.
+- **Rothain:** Krieg ist Teil der nationalen Familiengeschichte und deshalb Gegenstand heftiger Erinnerungskämpfe.
+- **Sahr:** Versorgung, Blockaden und Handelswege sind zentrale Kriegserfahrungen.
+- **Steinmark:** Krieg wird als Zusammenbruch geordneter Beziehungen betrachtet; Planung und Verteidigung sollen ihn begrenzen.
+- **Vael:** Krieg wird auch als industrielle Belastungsprobe erlebt, bei der Produktion und Ressourcen entscheidend sind.
+- **Vesper:** Unsicherheit, Spionage und Informationskrieg prägen die öffentliche Wahrnehmung.
+- **Eldran:** Krieg wird als Gefahr für Verfassung, Territorium und historische Ordnung betrachtet.
+- **Namar:** Seewege, Häfen und Versorgung bestimmen die Kriegserfahrung.
+- **Orthea:** Krieg wird stark als Problem von Information, Technik und menschlichen Fehlentscheidungen analysiert.
+- **Dargan:** Krieg bedeutet vor allem unterbrochene Versorgung, zerstörte Infrastruktur und lokale Selbstverteidigung.
+- **Lyr:** Krieg bedroht unmittelbar Täler, Pässe und lokale Autonomie.
+- **Caldris:** Krieg wird als Rechtfertigung für Schutz, Versorgung und Überwachung verstanden; Kritiker fürchten dauerhafte Ausnahmezustände.
+- **Merovan:** Krieg ist eng mit der imperialen Vergangenheit verbunden und wird hinsichtlich Handel und Macht kritisch diskutiert.
+- **Theryn:** Krieg wird in revolutionärer Sprache als Kampf um gesellschaftliche Ordnung interpretiert, während Familien seine menschlichen Kosten erinnern.
+
+## Punkt 22 – Opposition
+
+- **Averon:** Opposition ist legal und vielfältig; Konflikte entstehen eher über Medien, Wirtschaft und digitale Mobilisierung.
+- **Karsk:** Offene Opposition ist riskant; Kritik existiert innerhalb von Institutionen, Familien und informellen Netzwerken.
+- **Ossaria:** Opposition ist Teil des normalen demokratischen Lebens.
+- **Rothain:** Parteien streiten besonders über Vergangenheit, Militär und soziale Ordnung.
+- **Sahr:** Stadtinteressen, Handelsgruppen und regionale Parteien bilden starke Gegenmacht.
+- **Steinmark:** Opposition arbeitet institutionell und argumentiert häufig über Verwaltungsreformen.
+- **Vael:** Gewerkschaften, Umweltbewegungen und regionale Gruppen stellen Konzernmacht infrage.
+- **Vesper:** Opposition ist verdeckt und fragmentiert.
+- **Eldran:** Republikaner, Monarchisten und Verfassungstreue konkurrieren friedlich um Einfluss.
+- **Namar:** Regionen und Inseln bilden häufig oppositionelle Bündnisse gegen Zentralisierung.
+- **Orthea:** Konflikte drehen sich oft um Daten, Wissenschaft, Ethik und politische Legitimation.
+- **Dargan:** Opposition entsteht häufig aus regionalem Misstrauen gegenüber der Zentralregierung.
+- **Lyr:** Opposition ist meist Ausdruck lokaler Souveränität.
+- **Caldris:** Offene Opposition ist begrenzt; viele Bürger unterscheiden zwischen Zustimmung zu Leistungen und Kritik an Kontrolle.
+- **Merovan:** Parteien streiten über Handel, Migration, Imperialgeschichte und wirtschaftliche Macht.
+- **Theryn:** Reformisten, alte Revolutionäre und lokale Räte konkurrieren über die Zukunft des Systems.
+
+## Punkt 23 – Nachbarn
+
+Die Nachbarschaft ist in allen Nationen ein unmittelbarer sozialer Raum. Sie ist zugleich Hilfe, Kontrollinstanz und Quelle lokaler Identität.
+
+- **Averon:** Nachbarn kennen sich weniger persönlich, sind aber über digitale Netzwerke verbunden.
+- **Karsk:** Nachbarschaften sind gut versorgt, aber staatliche Präsenz ist spürbar.
+- **Ossaria:** Nachbarschaften pflegen Gedenkrituale und gegenseitige Hilfe.
+- **Rothain:** Alte Viertel besitzen starke Familien- und Vereinsnetzwerke.
+- **Sahr:** Nachbarschaften in Hafenstädten sind kulturell besonders vielfältig.
+- **Steinmark:** Vereine, Feuerwehr und lokale Einrichtungen verbinden Nachbarn.
+- **Vael:** Werksviertel können fast dörfliche Gemeinschaften bilden.
+- **Vesper:** Vertrauen wird vorsichtig vergeben.
+- **Eldran:** Historische Viertel besitzen starke lokale Identitäten.
+- **Namar:** Nachbarschaftshilfe ist auf Inseln und an der Küste praktisch notwendig.
+- **Orthea:** Akademische Viertel und normale Wohngebiete können sozial weit auseinanderliegen.
+- **Dargan:** Nachbarn sind häufig unmittelbare Krisenhelfer.
+- **Lyr:** Nachbarschaften überschneiden sich mit Familien- und Talnetzwerken.
+- **Caldris:** Gemeinschaftseinrichtungen fördern Nachbarschaft, staatliche Verwaltung erfasst sie zugleich.
+- **Merovan:** Migration macht Nachbarschaften kulturell vielfältig.
+- **Theryn:** Arbeits- und Genossenschaftsgemeinschaften prägen das nachbarschaftliche Leben.
+
+## Punkt 24 – Migration
+
+- **Averon:** Hohe innere und internationale Mobilität; Migration gilt überwiegend als Teil moderner Gesellschaft.
+- **Karsk:** Migration ist streng staatlich gesteuert und nach Nutzenkriterien organisiert.
+- **Ossaria:** Migration ist möglich und wird gesellschaftlich vor allem über Integration und gemeinsame Institutionen diskutiert.
+- **Rothain:** Migration steht häufig im Spannungsfeld zwischen wirtschaftlichem Bedarf und historischer Identität.
+- **Sahr:** Handel macht Migration alltäglich und wirtschaftlich notwendig.
+- **Steinmark:** Migration wird über klare Verwaltungsverfahren organisiert.
+- **Vael:** Industrie zieht Arbeitskräfte an; wirtschaftliche Migration prägt ganze Städte.
+- **Vesper:** Migration ist stark kontrolliert und politisch sensibel.
+- **Eldran:** Migration wird regional unterschiedlich bewertet.
+- **Namar:** Hafenstädte sind traditionell Einwanderungsorte.
+- **Orthea:** Hochqualifizierte Migration ist besonders erwünscht; soziale Integration bleibt eine Herausforderung.
+- **Dargan:** Abwanderung junger Menschen ist oft wichtiger als Zuwanderung.
+- **Lyr:** Binnenmigration zwischen Tälern kann politisch sensibel sein.
+- **Caldris:** Zuwanderung wird stark administrativ gesteuert und in das Versorgungssystem integriert.
+- **Merovan:** Migration ist zentral für Wirtschaft und Gesellschaft; historische Migrationsbewegungen sind Teil nationaler Identität.
+- **Theryn:** Arbeits- und politische Migration wird staatlich organisiert; Reformbewegungen fordern größere persönliche Mobilität.
+
+## Punkt 25 – Familiengeschichte
+
+Familiengeschichte wird zum verbindenden Gedächtnis der sechzehn Nationen. Sie entscheidet nicht darüber, was eine Familie politisch glauben muss, beeinflusst aber, welche Ereignisse sie als persönlich erlebt.
+
+- **Averon:** Familiengeschichten sind häufig von Migration, Berufswechsel und urbaner Mobilität geprägt.
+- **Karsk:** Familien bewahren Geschichten über staatliche Förderung, Anpassung, Ausgrenzung und medizinische Eingriffe oft nur privat.
+- **Ossaria:** Namen, Briefe und Erinnerungen an Kriegstote werden bewusst archiviert.
+- **Rothain:** Familien bewahren sowohl imperiale als auch republikanische Erinnerungen; dieselbe Vergangenheit kann gegensätzlich erzählt werden.
+- **Sahr:** Familiengeschichte ist häufig zugleich Handelsgeschichte.
+- **Steinmark:** Familien erzählen von Beamten, Handwerkern, Soldaten und Vereinsleben; lokale Geschichte ist eng eingebunden.
+- **Vael:** Familien erinnern sich über Werke, Bergwerke, Arbeitskämpfe und technische Leistungen.
+- **Vesper:** Familiengeschichte kann aus unausgesprochenen Geheimnissen bestehen.
+- **Eldran:** Herkunft, Adel, Bürgertum und republikanische Familiengeschichten stehen nebeneinander.
+- **Namar:** Familiengeschichten sind mit Inseln, Schiffen, Häfen und Seereisen verbunden.
+- **Orthea:** Wissenschaftliche und akademische Familiengeschichten können hohen Status erzeugen.
+- **Dargan:** Geschichten werden überwiegend mündlich über Generationen weitergegeben.
+- **Lyr:** Familiengeschichte ist eng mit Tal, Berg, Hof und lokaler Selbstverwaltung verbunden.
+- **Caldris:** Familien erinnern sich sowohl an staatliche Fürsorge als auch an Eingriffe in das Privatleben.
+- **Merovan:** Familien können dieselbe imperiale Vergangenheit als Aufstieg, Ausbeutung, Migration oder Verlust erinnern.
+- **Theryn:** Revolution, Bürgerkrieg, Aufbau und Reform sind in vielen Familien persönliche Geschichte.
+
+# Abschluss: Das gesellschaftliche Gefüge
+
+Mit den Punkten 1–25 besitzt jede Nation nun dieselben Betrachtungsebenen: Raum, Städte, Dörfer, Familie, Jugend, Arbeit, soziale Schichten, Religion, Bildung, Medien, Sprache, Alltag, Freizeit, Trauer, Militär, Krieg, Opposition, Nachbarschaft, Migration und Erinnerung.
+
+Diese Struktur ist absichtlich symmetrisch. Sie ermöglicht später einen Vergleich der Nationen, ohne sie zu vereinfachen. Eine Nation kann technologisch fortgeschritten und gleichzeitig sozial unfrei sein; eine andere kann materiell ärmer und gleichzeitig lokal stärker solidarisch sein. Keine dieser Eigenschaften macht eine Gesellschaft als Ganzes automatisch gut oder schlecht.
+
+Für die weitere Lore gilt daher:
+
+> **Die Nation erklärt den Rahmen. Die Region erklärt den Ort. Die Familie erklärt die Herkunft. Der Mensch entscheidet, was er daraus macht.**
