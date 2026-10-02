@@ -3532,3 +3532,599 @@ Diese Struktur ist absichtlich symmetrisch. Sie ermöglicht später einen Vergle
 Für die weitere Lore gilt daher:
 
 > **Die Nation erklärt den Rahmen. Die Region erklärt den Ort. Die Familie erklärt die Herkunft. Der Mensch entscheidet, was er daraus macht.**
+
+
+# Tiefenausarbeitung – Institutionen, Personen und Orte
+
+Die 25 gesellschaftlichen Grundpunkte bilden den Rahmen. In diesem Abschnitt werden sie in konkrete, wiederverwendbare Lore-Elemente übersetzt: Familien, Personen, Schulen, Unternehmen, Medien, religiöse Einrichtungen, Parteien, Militärverbände, Stadtviertel und historische Ereignisse. Die Elemente sind bewusst so angelegt, dass sie später für Karten, Missionen, Geschichten und Illustrationen verwendet werden können.
+
+## Averon – konkrete Gesellschaft
+
+### Bedeutende Familien
+- **Familie Varen:** Alte bürgerliche Familie aus Novaris; mehrere Generationen im öffentlichen Dienst. Die jüngere Generation arbeitet in Technologieunternehmen.
+- **Familie Senn:** Arbeiter- und Hafenfamilie aus Westhaven. Mehrere Mitglieder sind in Logistik und Gewerkschaften tätig.
+
+### Bekannte Personen
+- **Mira Varen:** Verfassungsjuristin und öffentliche Kritikerin digitaler Überwachung.
+- **Jon Senn:** Logistikingenieur, der für autonome Versorgungssysteme arbeitet.
+
+### Institutionen
+- **Universität Novaris:** Führende Hochschule für Informatik, Politik und Kommunikationssysteme.
+- **Institut für Öffentliche Netze:** Entwickelt zivile und militärische Kommunikationsinfrastruktur.
+- **Freies Nachrichtenforum:** Zusammenschluss unabhängiger digitaler Journalisten.
+
+### Wirtschaft
+- **Aeronet Systems:** Großes Technologieunternehmen für Sensorik und Kommunikation.
+- **Westhaven Logistics:** Hafen- und Versorgungskonzern mit internationalem Geschäft.
+
+### Medien und Kultur
+- **Der Morgenkanal:** Schnelles digitales Nachrichtenmedium mit großer Reichweite.
+- **Forum 7:** Politische Debattenplattform.
+
+### Militär
+- **1. Mobile Brigade Novaris:** Hochmobile professionelle Formation mit Schwerpunkt Aufklärung und schneller Reaktion.
+- **Netzaufklärungskommando:** Militärische Einheit für Sensorik, Kommunikation und elektronische Gefechtsführung.
+
+### Stadtviertel Novaris
+- **Regierungsring:** Ministerien und öffentliche Institutionen.
+- **Neonviertel:** Start-ups, Bars, kleine Wohnungen und junge Berufstätige.
+- **Altmarkt:** Historisches Zentrum mit Familienbetrieben.
+
+### Historische Ereignisse
+- **Gründung der Jungen Republik:** Übergang von einer älteren Staatsordnung zu Averons heutiger Republik.
+- **Netzkrise:** Großer Ausfall kritischer digitaler Systeme, der das Vertrauen in vollständige Automatisierung erschütterte.
+
+## Karsk – konkrete Gesellschaft
+
+### Bedeutende Familien
+- **Familie Koren:** Technokratische Ärztefamilie mit hohem staatlichem Status.
+- **Familie Drev:** Arbeiterfamilie aus Dravik, deren Angehörige in mehreren Generationen für dieselbe Produktionsregion arbeiteten.
+
+### Bekannte Personen
+- **Dr. Elena Koren:** Leiterin eines staatlichen Implantationsinstituts; überzeugt, dass Technologie menschliches Leid reduzieren kann.
+- **Marek Drev:** Arbeitervertreter, der Verbesserungen fordert, ohne das System grundsätzlich abzulehnen.
+
+### Institutionen
+- **Zentralamt für Menschliche Leistungsfähigkeit:** Bewertet medizinische und berufliche Eignung.
+- **Varkescher Medizinakademie:** Eliteinstitution für Implantat- und Regenerationsmedizin.
+
+### Wirtschaft
+- **Karsk Biomech:** Hersteller medizinischer und militärischer Körpertechnik.
+- **Zentralwerke Dravik:** Schwerindustrie und militärische Produktion.
+
+### Medien und Kultur
+- **Staatsnetz Karsk:** Offizielle Nachrichten und Bildungsprogramme.
+- **Die Stimme der Leistung:** Zeitschrift über erfolgreiche Bürger und technische Fortschritte.
+
+### Militär
+- **Karsker Sicherheitskorps:** Stark technisierte reguläre Streitkräfte.
+- **Grenzsektor Nord:** Militärische Verbände und Überwachungseinheiten entlang der Außengrenze.
+
+### Stadtviertel Varkesh
+- **Zentralforum:** Ministerien und staatliche Institutionen.
+- **Medizinring:** Kliniken, Labore und medizinische Wohnkomplexe.
+- **Produktionsgürtel:** Industrie und Arbeiterwohnungen.
+
+### Historische Ereignisse
+- **Die Effizienzreform:** Einführung der heutigen staatlichen Bewertungsordnung.
+- **Die Implantatkrise:** Reihe schwerer medizinischer Fehlschläge, die zur Verschärfung staatlicher Kontrollen führte.
+
+## Ossaria – konkrete Gesellschaft
+
+### Familien
+- **Familie Ossan:** Historikerfamilie aus Valeris.
+- **Familie Mareth:** Handwerkerfamilie aus Marenfeld.
+
+### Personen
+- **Professor Elias Ossan:** Historiker und Verteidiger öffentlicher Erinnerungskultur.
+- **Lena Mareth:** Schutztechnikerin und Veteranenangehörige.
+
+### Institutionen
+- **Archiv der Gefallenen:** Nationales Archiv persönlicher Kriegszeugnisse.
+- **Freie Akademie Ossar:** Forschungs- und Bildungseinrichtung.
+
+### Wirtschaft
+- **Ossarische Schutzwerke:** Hersteller von Schutzsystemen und Sensorik.
+- **Marenfelder Maschinenbau:** Mittelständischer technischer Betrieb.
+
+### Medien
+- **Die Freie Stimme:** Große unabhängige Zeitung.
+- **Archivfunk:** Historischer Rundfunkkanal.
+
+### Militär
+- **Ossarische Schutzbrigade:** Professionelle Verteidigungsformation.
+- **Grenzkorps Kareth:** Territorialverbände an der Grenze.
+
+### Stadtviertel Ossar
+- **Alte Mauer:** Historisches Zentrum.
+- **Gedenkbezirk:** Museen, Friedhöfe und Archive.
+- **Technologiering:** Forschung und Produktion.
+
+### Historische Ereignisse
+- **Der Große Grenzkrieg:** Konflikt, der Ossarias moderne Erinnerungskultur prägte.
+- **Die Namenlisten:** Bürgerbewegung zur vollständigen Dokumentation der Kriegstoten.
+
+## Rothain – konkrete Gesellschaft
+
+### Familien
+- **Haus Rothen:** Alte Familie mit imperialer Vergangenheit.
+- **Familie Eisen:** Arbeiterfamilie aus Eisenfurt.
+
+### Personen
+- **Albrecht Rothen:** Historiker und Vertreter traditioneller Eliten.
+- **Mara Eisen:** Gewerkschaftsorganisatorin und republikanische Aktivistin.
+
+### Institutionen
+- **Nationalarchiv Rothenburg:** Bewahrt kaiserliche und republikanische Dokumente.
+- **Bund der Veteranenfamilien:** Gesellschaftlicher Verband ehemaliger Soldatenfamilien.
+
+### Wirtschaft
+- **Eisenfurter Werke:** Großbetrieb für Maschinenbau.
+- **Rothen & Söhne:** Alte Handels- und Finanzfamilie.
+
+### Medien
+- **Republik heute:** Republikanisches Nachrichtenblatt.
+- **Die Krone:** Historisch-konservatives Magazin.
+
+### Militär
+- **1. Republikanisches Korps:** Traditionell geprägte reguläre Formation unter ziviler Kontrolle.
+- **Grenzwachtbrigade:** Verteidigungsverband ehemaliger Festungsregionen.
+
+### Stadtviertel Rothenburg
+- **Kronenviertel:** Alte Paläste und ehemalige Hofgebäude.
+- **Republikforum:** Parlament und moderne Verwaltung.
+- **Eisenring:** Arbeiter- und Industrieviertel.
+
+### Historische Ereignisse
+- **Fall der Krone:** Ende des alten Imperiums.
+- **Republikanischer Neuaufbau:** Aufbau der heutigen Staatsordnung.
+
+## Sahr – konkrete Gesellschaft
+
+### Familien
+- **Familie Sarin:** Alte Handelsfamilie aus Sarun.
+- **Familie Vel:** Hafenarbeiter- und Fischerfamilie.
+
+### Personen
+- **Nadia Sarin:** Handelsunternehmerin und Mitglied des Stadtrates.
+- **Tomas Vel:** Hafenmeister und Gewerkschaftsvertreter.
+
+### Institutionen
+- **Bund der Handelsstädte:** Politischer und wirtschaftlicher Zusammenschluss.
+- **Saruner Handelskammer:** Einflussreiche Wirtschaftsorganisation.
+
+### Wirtschaft
+- **Sarin Handelsgruppe:** Familienunternehmen für Fernhandel.
+- **Velisport Werften:** Große Schiffbauindustrie.
+
+### Medien
+- **Der Handelskurier:** Wirtschafts- und Politikzeitung.
+- **Hafenstimme:** Lokales Blatt der Arbeiter.
+
+### Militär
+- **Bundeshandelsflotte:** Schutz von Häfen und Handelswegen.
+- **Flusssicherungsregiment:** Sicherung von Transportwegen.
+
+### Stadtviertel Sarun
+- **Kaufmannsring:** Banken und Handelshäuser.
+- **Alter Hafen:** Lagerhäuser und Märkte.
+- **Flussviertel:** Arbeiter und kleine Händler.
+
+### Historische Ereignisse
+- **Gründung des Handelsbundes:** Zusammenschluss der wichtigsten Städte.
+- **Große Blockade:** Versorgungskrise, die die Bedeutung der Handelswege endgültig bewies.
+
+## Steinmark – konkrete Gesellschaft
+
+### Familien
+- **Familie Stein:** Verwaltungsbeamte über mehrere Generationen.
+- **Familie Falk:** Maschinenbauerfamilie aus dem Norden.
+
+### Personen
+- **Clara Stein:** Bundesrichterin.
+- **Johann Falk:** Gewerkschaftlich engagierter Ingenieur.
+
+### Institutionen
+- **Bundesverwaltungsakademie:** Ausbildungseinrichtung für Beamte.
+- **Bundesrechnungshof:** Symbol institutioneller Kontrolle.
+
+### Wirtschaft
+- **Nordwerke:** Maschinenbau und Logistik.
+- **Südmark Genossenschaft:** Zusammenschluss regionaler Betriebe.
+
+### Medien
+- **Bundesblatt:** Sachorientierte nationale Zeitung.
+- **Der Verein:** Wochenzeitung über regionale Gemeinschaften.
+
+### Militär
+- **Bundesheer Steinmark:** Stark standardisierte Streitkräfte.
+- **Ostverteidigungskommando:** Territorialverband an der historischen Grenze.
+
+### Stadtviertel Steinburg
+- **Bundesforum:** Regierung und Gerichte.
+- **Bürgerstadt:** Wohn- und Geschäftsviertel.
+- **Alte Festung:** Militärmuseum und Gedenkstätte.
+
+### Historische Ereignisse
+- **Der Bundesvertrag:** Gründung der heutigen Föderation.
+- **Die Verwaltungsreform:** Vereinheitlichung von Recht und Verwaltung.
+
+## Vael – konkrete Gesellschaft
+
+### Familien
+- **Familie Vaal:** Alte Industriellenfamilie.
+- **Familie Stahl:** Mehrgenerationenfamilie aus Stahlbruck.
+
+### Personen
+- **Rudolf Vaal:** Konzernvorsitzender und einflussreicher Industrieller.
+- **Anja Stahl:** Arbeitervertreterin und lokale Politikerin.
+
+### Institutionen
+- **Industrieverband Vael:** Dachverband der Großunternehmen.
+- **Technische Hochschule Vaalen:** Führende Ausbildungsstätte für Maschinenbau.
+
+### Wirtschaft
+- **Vaalen Industrial:** Großkonzern für Maschinen und Militärproduktion.
+- **Stahlbruck Werke:** Stahl- und Fahrzeugproduktion.
+
+### Medien
+- **Wirtschaftsrundschau:** Wirtschaftlich einflussreiches Medium.
+- **Werksstimme:** Zeitung der Industriearbeiter.
+
+### Militär
+- **Schwere Heeresgruppe Vael:** Große mechanisierte Verbände.
+- **Artilleriekorps Vaalen:** Schwerpunkt auf schwerer Feuerunterstützung.
+
+### Stadtviertel Vaalen
+- **Konzernring:** Unternehmenszentralen.
+- **Arbeiterviertel:** Dichte Wohnquartiere.
+- **Eisenhafen:** Schwerindustrie und Logistik.
+
+### Historische Ereignisse
+- **Industrialisierung Vaels:** Entstehung der modernen Wirtschaftsmacht.
+- **Großer Arbeiterstreik:** Wendepunkt im Verhältnis zwischen Staat, Konzernen und Arbeiterschaft.
+
+## Vesper – konkrete Gesellschaft
+
+### Familien
+- **Familie Velan:** Beamtenfamilie mit Zugang zu staatlichen Institutionen.
+- **Familie Sora:** Händlerfamilie mit starkem privaten Netzwerk.
+
+### Personen
+- **Ilan Velan:** Nachrichtendienstbeamter, der zwischen Pflicht und persönlicher Moral steht.
+- **Mira Sora:** Buchhändlerin und diskrete Vermittlerin unabhängiger Informationen.
+
+### Institutionen
+- **Direktorat für Staatssicherheit:** Zentrale Sicherheitsbehörde.
+- **Archivamt Velis:** Kontrolliert wichtige historische Dokumente.
+
+### Wirtschaft
+- **Vespera Handelswerke:** Staatlich kontrollierter Handelskonzern.
+- **Freier Markt Darsin:** Halbprivate Wirtschaftszone.
+
+### Medien
+- **Vesperisches Staatsnetz:** Offizielle Informationsquelle.
+- **Nachtbrief:** Illegales Informationsnetzwerk.
+
+### Militär
+- **Schleierkorps:** Aufklärung und verdeckte Operationen.
+- **Grenzaufklärung Vesper:** Spezialisierte Überwachungskräfte.
+
+### Stadtviertel Velis
+- **Ministerring:** Staatliche Machtzentren.
+- **Altstadt:** Geschäfte und private Netzwerke.
+- **Sicherheitsbezirk:** Kontrollierte Regierungszone.
+
+### Historische Ereignisse
+- **Die Verschwiegene Krise:** Politische Krise, deren vollständige Geschichte bis heute unklar ist.
+- **Der Schleierpakt:** Abkommen, das die heutige Sicherheitsordnung begründete.
+
+## Eldran – konkrete Gesellschaft
+
+### Familien
+- **Haus Aurel:** Alte königliche Verwandtschaft.
+- **Familie Nor:** Bürgerliche Unternehmerfamilie.
+
+### Personen
+- **König Adrian IV.:** Verfassungstreuer Monarch mit begrenzter politischer Macht.
+- **Elena Nor:** Republikanische Abgeordnete und Verfassungsjuristin.
+
+### Institutionen
+- **Kronrat:** Beratendes königliches Organ.
+- **Verfassungsgericht Aurelien:** Wächter der institutionellen Ordnung.
+
+### Wirtschaft
+- **Nor Industrien:** Moderne Maschinen- und Logistikunternehmen.
+- **Südmark Landwirtschaftsbund:** Zusammenschluss landwirtschaftlicher Betriebe.
+
+### Medien
+- **Kronenzeitung:** Konservatives Medium.
+- **Die Republik:** Liberales Nachrichtenblatt.
+
+### Militär
+- **Königliche Territorialkräfte:** Formal königliche, praktisch parlamentarisch kontrollierte Streitkräfte.
+- **Hohenmark-Pionierkorps:** Ingenieur- und Befestigungsspezialisten.
+
+### Stadtviertel Aurelien
+- **Kronenviertel:** Palast und zeremonielle Gebäude.
+- **Parlamentsstadt:** Ministerien und Parlament.
+- **Bürgerhafen:** Moderne Wirtschaft.
+
+### Historische Ereignisse
+- **Die Verfassungskrise:** Machtkampf, der die Grenzen der Monarchie festlegte.
+- **Der Verfassungspakt:** endgültige Anerkennung der parlamentarischen Ordnung.
+
+## Namar – konkrete Gesellschaft
+
+### Familien
+- **Familie Maren:** Alte Seefahrerfamilie.
+- **Familie Sol:** Werftfamilie aus Port Sol.
+
+### Personen
+- **Lio Maren:** Kapitän und Regionalpolitiker.
+- **Sara Sol:** Schiffbauingenieurin.
+
+### Institutionen
+- **Bundesrat der Inseln:** Vertretung der autonomen Regionen.
+- **Maritime Akademie Maris:** Ausbildung für Seefahrt und Küstenverteidigung.
+
+### Wirtschaft
+- **Maris Reederei:** Große Handelsreederei.
+- **Sol Werften:** Moderner Schiffbau.
+
+### Medien
+- **Küstenkurier:** Nationale maritime Zeitung.
+- **Inselstimme:** Regionales Medium des Inselbundes.
+
+### Militär
+- **Küstenverteidigungsflotte:** Schutz von Häfen und Inseln.
+- **Maritime Aufklärung:** Sensor- und Überwachungskräfte.
+
+### Stadtviertel Maris
+- **Großer Hafen:** Handel und Schifffahrt.
+- **Werftviertel:** Arbeiter und Ingenieure.
+- **Inselmarkt:** Regionale Händler.
+
+### Historische Ereignisse
+- **Bund der Küsten:** Föderationsgründung.
+- **Die große Sturmkatastrophe:** Naturkatastrophe, die nationale Küstenhilfeinstitutionen hervorbrachte.
+
+## Orthea – konkrete Gesellschaft
+
+### Familien
+- **Familie Aster:** Wissenschaftlerfamilie.
+- **Familie Feld:** Landwirtschaftliche Familie aus dem Süden.
+
+### Personen
+- **Dr. Mara Aster:** Robotikforscherin.
+- **Jonas Feld:** Landwirt und Kritiker akademischer Eliten.
+
+### Institutionen
+- **Akademie Asteron:** Größter Forschungsverbund.
+- **Institut für Gesellschaftsdaten:** Analysiert öffentliche Politik.
+
+### Wirtschaft
+- **Orthea Systems:** Robotik und Sensorik.
+- **Helion Medical:** Medizintechnik.
+
+### Medien
+- **Wissenschaft Heute:** Fach- und Nachrichtenmedium.
+- **Der Bürger:** Kritisches Massenmedium.
+
+### Militär
+- **Präzisionskorps Orthea:** Aufklärung und präzise Einsatzsysteme.
+- **Autonome Aufklärungseinheit Asteron:** Entwicklung und Einsatz unbemannter Systeme.
+
+### Stadtviertel Asteron
+- **Universitätsring:** Hochschulen und Forschung.
+- **Medizinbezirk:** Kliniken.
+- **Altstadt:** normale Wohn- und Geschäftsviertel.
+
+### Historische Ereignisse
+- **Die Große Wissenschaftsreform:** Ausbau unabhängiger Forschung.
+- **Der Algorithmusstreit:** öffentliche Krise über Grenzen automatisierter Entscheidungen.
+
+## Dargan – konkrete Gesellschaft
+
+### Familien
+- **Familie Darg:** Bergarbeiter und Handwerker.
+- **Familie Fern:** Alte Grenzfamilie.
+
+### Personen
+- **Rian Darg:** Reparaturmeister und Gemeinderat.
+- **Mila Fern:** Lehrerin und regionale Organisatorin.
+
+### Institutionen
+- **Rat der Grenzregionen:** Starke regionale Interessenvertretung.
+- **Technische Schule Hochwacht:** Ausbildung für Bergbau und Reparatur.
+
+### Wirtschaft
+- **Dargan Bergwerke:** Regionaler Rohstoffproduzent.
+- **Fern Transport:** Kleines Logistiknetz.
+
+### Medien
+- **Grenzblatt:** Regionalzeitung.
+- **Flussfunk:** Radiosender entlang des Transportkorridors.
+
+### Militär
+- **Grenzbrigade Dargan:** Mobile Verteidigungskräfte.
+- **Hochlandpioniere:** Gebirgs- und Ingenieurverbände.
+
+### Stadtviertel Dargesh
+- **Flussmarkt:** Handel.
+- **Werkviertel:** Reparatur und Handwerk.
+- **Ratsberg:** Verwaltung.
+
+### Historische Ereignisse
+- **Der Grenzaufstand:** Ursprung der starken regionalen Selbstverwaltung.
+- **Winterblockade:** Versorgungskrise, die Dargans Reparatur- und Selbsthilfeethos prägte.
+
+## Lyr – konkrete Gesellschaft
+
+### Familien
+- **Familie Val:** Alte politische Familie.
+- **Familie Hoch:** Bergbau- und Handwerkerfamilie.
+
+### Personen
+- **Nera Val:** Delegierte des Bundeskongresses.
+- **Tarin Hoch:** Bergingenieur und Gemeinderat.
+
+### Institutionen
+- **Bundeskongress Valen:** Gemeinsames politisches Organ.
+- **Rat der Täler:** Koordinierung regionaler Interessen.
+
+### Wirtschaft
+- **Hochgrat Bergbau:** Lokaler Rohstoffbetrieb.
+- **Nordtal Handelshaus:** Regionaler Handelsverbund.
+
+### Medien
+- **Talstimmen:** Zusammenschluss lokaler Zeitungen.
+- **Bergfunk:** Radio- und Informationsnetz.
+
+### Militär
+- **Talverteidigungskräfte:** Regionale Verbände.
+- **Passwachtkorps:** Schutz strategischer Gebirgspässe.
+
+### Stadtviertel Valen
+- **Bundesplatz:** Gemeinsame Institutionen.
+- **Handwerkerviertel:** Werkstätten und Märkte.
+- **Hochstadt:** Alte Familien und Verwaltung.
+
+### Historische Ereignisse
+- **Der Bund der Täler:** Gründung der Konföderation.
+- **Die Passkrise:** Konflikt um gemeinsame Verteidigung und regionale Souveränität.
+
+## Caldris – konkrete Gesellschaft
+
+### Familien
+- **Familie Seren:** Staatsbeamtenfamilie.
+- **Familie Grün:** Arbeiterfamilie aus einer Versorgungssiedlung.
+
+### Personen
+- **Dr. Elias Seren:** Leiter einer staatlichen Klinik.
+- **Mara Grün:** Beschäftigte in einer staatlichen Fabrik und Unterstützerin des Sozialstaates.
+
+### Institutionen
+- **Ministerium für Bürgerwohl:** Koordiniert Versorgung und Sozialleistungen.
+- **Zentrale Gesundheitsverwaltung:** Medizinische Versorgung und Registrierung.
+
+### Wirtschaft
+- **Caldrische Staatswerke:** Große Produktionsbetriebe.
+- **Versorgungsbund:** Landwirtschaft und Verteilung.
+
+### Medien
+- **Bürgerkanal Caldris:** Staatliches Massenmedium.
+- **Forum der Gemeinschaft:** kontrollierte öffentliche Debattenplattform.
+
+### Militär
+- **Schutzkorps Caldris:** Militär und innere Sicherheit eng verbunden.
+- **Versorgungsbrigade Seren:** Logistik und Schutz kritischer Infrastruktur.
+
+### Stadtviertel Seren
+- **Versorgungsring:** Kliniken, Schulen und Behörden.
+- **Wohnstadt:** Planmäßige Familienquartiere.
+- **Sicherheitsforum:** Regierungs- und Kontrollbehörden.
+
+### Historische Ereignisse
+- **Der Sozialvertrag:** Einführung des heutigen umfassenden Versorgungssystems.
+- **Die Sicherheitsreform:** Ausweitung biometrischer und elektronischer Kontrolle.
+
+## Merovan – konkrete Gesellschaft
+
+### Familien
+- **Familie Merov:** Alte Handels- und Bankiersfamilie.
+- **Familie Asha:** Familie mit Wurzeln in einer ehemaligen Überseeprovinz.
+
+### Personen
+- **Luc Merov:** Unternehmer und Abgeordneter.
+- **Samira Asha:** Historikerin und Vertreterin postimperialer Erinnerungskultur.
+
+### Institutionen
+- **Handelsparlament Merovia:** Zentrale politische Institution.
+- **Institut für Imperiale Geschichte:** Forschung und öffentliche Debatte.
+
+### Wirtschaft
+- **Merov International:** Handels- und Finanzkonzern.
+- **Neuport Logistics:** Internationaler Hafenbetreiber.
+
+### Medien
+- **Merovia Journal:** Große nationale Zeitung.
+- **Stimmen der Übersee:** Plattform für postimperiale Perspektiven.
+
+### Militär
+- **Expeditionskorps Merovia:** Mobile Streitkräfte für Auslandseinsätze und Krisen.
+- **Hafeningenieurkorps:** Logistik und Infrastruktur.
+
+### Stadtviertel Merovia
+- **Alte Krone:** historische Regierungs- und Finanzgebäude.
+- **Hafenring:** internationale Wirtschaft.
+- **Neuviertel:** migrantisch geprägte Wohngebiete.
+
+### Historische Ereignisse
+- **Ende des Imperiums:** Übergang zur heutigen Handelsrepublik.
+- **Die Rückkehrflotte:** große Rückführung von Soldaten und Zivilisten aus ehemaligen Überseegebieten.
+
+## Theryn – konkrete Gesellschaft
+
+### Familien
+- **Familie Novak:** Revolutionsveteranenfamilie.
+- **Familie Miren:** Junge Reformfamilie aus Freiheim.
+
+### Personen
+- **Viktor Novak:** alter Revolutionsveteran und Funktionär.
+- **Elena Miren:** junge Reformpolitikerin.
+
+### Institutionen
+- **Zentralrat Theryn:** wichtigste staatliche Institution.
+- **Rat der Genossenschaften:** Vertretung landwirtschaftlicher und industrieller Kollektive.
+
+### Wirtschaft
+- **Novagrad Maschinenwerke:** großer Staatsbetrieb.
+- **Agrarbund Theryn:** landwirtschaftliches Genossenschaftssystem.
+
+### Medien
+- **Die Revolution:** offizielles Massenmedium.
+- **Neue Stimme:** reformorientiertes, halb unabhängiges Blatt.
+
+### Militär
+- **Volksverteidigung Theryn:** große Reserve- und Mobilisierungsstruktur.
+- **Mechanisierte Brigade Novagrad:** industriell gut versorgter Verband.
+
+### Stadtviertel Novagrad
+- **Revolutionsplatz:** zentrale politische Gebäude.
+- **Arbeiterviertel:** staatliche Betriebe und Wohnkomplexe.
+- **Neustadt:** junge Familien und Studenten.
+
+### Historische Ereignisse
+- **Die Revolution:** Sturz der alten Ordnung.
+- **Die Jahre des Aufbaus:** Industrialisierung und Aufbau der heutigen Staatsstruktur.
+- **Die Reformkrise:** aktueller Konflikt zwischen Zentralmacht, Räten und Reformern.
+
+# Wiederkehrende Personen und Orte als Lore-Anker
+
+Einige Elemente sollen bewusst als wiederkehrende Anker dienen. Sie können in späteren Geschichten, Kartentexten und Illustrationen erneut auftauchen.
+
+- **Novaris / Averon:** Mira Varen und das Institut für Öffentliche Netze.
+- **Varkesh / Karsk:** Dr. Elena Koren und die Varkescher Medizinakademie.
+- **Ossar / Ossaria:** Professor Elias Ossan und das Archiv der Gefallenen.
+- **Rothenburg / Rothain:** Mara Eisen und der Bund der Veteranenfamilien.
+- **Sarun / Sahr:** Nadia Sarin und die Handelskammer.
+- **Steinburg / Steinmark:** Clara Stein und die Bundesverwaltungsakademie.
+- **Vaalen / Vael:** Anja Stahl und die Stahlbruck Werke.
+- **Velis / Vesper:** Mira Sora und der Nachtbrief.
+- **Aurelien / Eldran:** Elena Nor und das Verfassungsgericht.
+- **Maris / Namar:** Lio Maren und die Maritime Akademie.
+- **Asteron / Orthea:** Dr. Mara Aster und der Algorithmusstreit.
+- **Dargesh / Dargan:** Rian Darg und die Hochlandpioniere.
+- **Valen / Lyr:** Nera Val und der Rat der Täler.
+- **Seren / Caldris:** Dr. Elias Seren und das Ministerium für Bürgerwohl.
+- **Merovia / Merovan:** Samira Asha und das Institut für Imperiale Geschichte.
+- **Novagrad / Theryn:** Elena Miren und der Reformkonflikt.
+
+Diese Personen sind nicht als endgültige Hauptfiguren festgelegt. Sie dienen zunächst als soziale Anker und können später verändert oder vertieft werden.
+
+# Grundregel für die weitere Lore
+
+Neue Details sollen nicht isoliert erfunden werden. Ein neues Unternehmen braucht einen Ort, eine soziale Funktion und eine historische Erklärung. Eine neue Familie braucht einen Beruf, eine Region und eine Erinnerung. Ein Militärverband braucht eine gesellschaftliche Herkunft. Ein Stadtviertel braucht eine wirtschaftliche und historische Ursache.
+
+So entsteht ein Netz aus Ursache und Wirkung statt einer bloßen Sammlung von Namen. Diese Vorgehensweise entspricht dem Grundprinzip glaubwürdigen Worldbuildings: Geographie, Institutionen, Wirtschaft, Kultur und persönliche Erfahrung sollen sich gegenseitig erklären und Konflikte erzeugen. citeturn0search1turn0search3
