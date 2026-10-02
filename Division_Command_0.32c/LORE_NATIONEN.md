@@ -2953,3 +2953,183 @@ Deshalb entstehen innerhalb jeder Nation eigene Unterschiede:
 Damit entsteht eine weitere wichtige Ebene der Welt: Nicht nur Nationen unterscheiden sich voneinander. Auch innerhalb derselben Nation kann ein Mensch aus der Hauptstadt eine völlig andere Vorstellung von seinem Land haben als jemand aus einem abgelegenen Dorf.
 
 > **Je kleiner der Ort, desto größer kann die Erinnerung werden.**
+
+
+# Konkrete Ausarbeitung – Punkt 5: Familie
+
+Familie ist eine der wichtigsten sozialen Ebenen jeder Nation. Sie bestimmt nicht nur Herkunft und Verwandtschaft, sondern auch Fürsorge, soziale Sicherheit, Erziehung, Berufswahl, Erinnerung und den Umgang mit Krisen. Die folgenden Beschreibungen definieren keine einheitlichen Familienmodelle; sie beschreiben die gesellschaftlichen Erwartungen und Spannungen, innerhalb derer unterschiedliche Familien leben.
+
+## 1. Averon
+
+Die averonische Familie ist überwiegend klein und urban. Zwei Eltern mit einem oder zwei Kindern sind häufig, aber Alleinerziehende, Patchworkfamilien und bewusst kinderlose Haushalte werden gesellschaftlich weitgehend akzeptiert. Großeltern leben oft getrennt und bleiben digital verbunden.
+
+Familienentscheidungen werden stark individuell getroffen. Kinder sollen früh Selbstständigkeit entwickeln. Eltern versuchen, Bildung und persönliche Freiheit zu ermöglichen, stehen aber unter erheblichem Zeit- und Leistungsdruck.
+
+Ein typischer Konflikt entsteht zwischen beruflicher Mobilität und familiärer Nähe. Wer für eine bessere Stelle die Stadt wechselt, kann wirtschaftlich aufsteigen und gleichzeitig den Kontakt zur erweiterten Familie verlieren.
+
+## 2. Karsk
+
+Die Familie steht unter einem starken Einfluss des Staates. Kinder werden früh medizinisch untersucht und ihre Fähigkeiten systematisch erfasst. Eltern wissen, dass die Entwicklung eines Kindes später seine gesellschaftliche Einstufung beeinflussen kann.
+
+In privilegierten Familien wird die staatliche Ordnung häufig als Schutz verstanden: gute medizinische Versorgung, Ausbildung und sichere Arbeitsplätze sind reale Vorteile. Andere Familien erleben dieselben Systeme als Eingriff in ihre Privatsphäre.
+
+Eltern versuchen häufig, Schwächen ihrer Kinder nicht öffentlich sichtbar werden zu lassen. Gleichzeitig kann eine Familie großen Stolz empfinden, wenn ein Kind als besonders leistungsfähig gilt.
+
+Der zentrale familiäre Konflikt lautet: **Ist ein Kind zuerst ein geliebtes Familienmitglied oder zuerst ein zukünftiger Träger gesellschaftlicher Leistung?**
+
+## 3. Ossaria
+
+Familiengeschichte besitzt in Ossaria großes Gewicht. Namen von Großeltern und Urgroßeltern, Kriegserfahrungen, Berufe und Herkunft werden häufig bewusst weitergegeben.
+
+Mehrgenerationenfamilien sind verbreiteter als in den stark urbanisierten Nationen, auch wenn junge Menschen für Studium und Arbeit in größere Städte ziehen. Familien halten über Besuche, Briefe, digitale Archive und gemeinsame Gedenktage Kontakt.
+
+Kinder lernen früh, dass ihre Familie Teil einer längeren Geschichte ist. Gleichzeitig wird ihnen vermittelt, dass geerbte Schuld oder geerbter Ruhm keine automatische moralische Stellung erzeugen.
+
+Der wichtigste familiäre Wert ist **Erinnerung ohne blinden Gehorsam gegenüber der Vergangenheit**.
+
+## 4. Rothain
+
+Rothain besitzt eine starke Tradition familiärer Herkunft. In alten Familien werden Stammbäume, Orden, Uniformen, Briefe und Fotografien aufbewahrt. In Arbeiterfamilien existieren ähnliche Erinnerungskulturen, allerdings häufig bezogen auf Fabriken, Gewerkschaften und politische Kämpfe.
+
+Militärische Familien können mehrere Generationen von Soldaten hervorbringen. Andere Familien reagieren bewusst mit Ablehnung auf diese Tradition.
+
+Heirat kann gesellschaftliche Netzwerke verbinden, ist aber längst nicht mehr ausschließlich eine Angelegenheit von Herkunft und Stand. Junge Menschen hinterfragen zunehmend die Erwartungen ihrer Eltern.
+
+Der zentrale Generationenkonflikt lautet: **Was soll man von der Vergangenheit bewahren, und was muss man bewusst beenden?**
+
+## 5. Sahr
+
+Familien sind stark in Handels- und Verwandtschaftsnetzwerke eingebunden. Ein Familienname kann auf einem Markt, in einer Werft oder bei einer Handelsgesellschaft wirtschaftliches Gewicht besitzen.
+
+Großfamilien sind besonders in kleineren Städten und Dörfern wichtig. Verwandte können gemeinsam Unternehmen führen, Waren transportieren oder sich in Krisen finanziell unterstützen.
+
+Ehe kann weiterhin wirtschaftliche Bedeutung besitzen, ohne ausschließlich geschäftlich bestimmt zu sein. Unterschiedliche religiöse und kulturelle Hintergründe sind in Handelsstädten normal.
+
+Kinder lernen früh, dass Beziehungen Vertrauen schaffen und Vertrauen wirtschaftlichen Wert besitzt. Die Schattenseite ist der soziale Druck, den Erwartungen der eigenen Familie gerecht zu werden.
+
+## 6. Steinmark
+
+Die Familie ist eine stabile, aber vergleichsweise private Institution. Ehe, Kinder und gegenseitige Unterstützung gelten als wichtige Bestandteile eines geordneten Lebens.
+
+Großeltern übernehmen häufig Aufgaben bei der Kinderbetreuung. Vereine und lokale Gemeinschaften bilden eine zweite soziale Ebene neben der Familie.
+
+Staatliche Einrichtungen helfen Familien durch Schulen, medizinische Versorgung und Verwaltungsleistungen. Gleichzeitig besteht die Erwartung, dass Familien ihre Angelegenheiten grundsätzlich selbst organisieren.
+
+Konflikte entstehen vor allem zwischen traditionellen Familienbildern und jüngeren Generationen, die stärker individuell leben möchten.
+
+## 7. Vael
+
+In vielen Regionen ist die Familie eng mit dem Arbeitsplatz verbunden. Wenn mehrere Generationen im selben Werk, Bergbaugebiet oder Energiebetrieb gearbeitet haben, wird der Beruf Teil der Familienidentität.
+
+Firmenwohnungen und betriebliche Versorgung können Familien Sicherheit geben. Gleichzeitig kann ein Arbeitsplatzverlust eine ganze Familie treffen.
+
+Eltern sind stolz auf technische Fähigkeiten und berufliche Zuverlässigkeit. Manche Familien hoffen, dass ihre Kinder denselben Weg gehen; andere wollen verhindern, dass sie zu einem weiteren Glied der Produktionskette werden.
+
+Die Familie wird dadurch zu einem Ort des Stolzes und zugleich zu einem Ort, an dem sich die Abhängigkeit von Industrieunternehmen besonders deutlich zeigt.
+
+## 8. Vesper
+
+Vertrauen ist innerhalb der Familie besonders wichtig. Weil politische Überwachung und staatliche Informationskontrolle zum Alltag gehören, gilt die Familie häufig als einer der wenigen Räume, in denen Menschen offen sprechen können.
+
+Gleichzeitig kann auch innerhalb einer Familie Vorsicht entstehen. Eltern überlegen, welche politischen Aussagen sie vor ihren Kindern machen, und ältere Menschen warnen Jüngere davor, private Gespräche weiterzugeben.
+
+Großfamilien und langjährige Freundschaften können deshalb ähnliche Funktionen wie politische oder religiöse Gemeinschaften übernehmen.
+
+Das wichtigste Familiengut ist nicht Besitz, sondern **gegenseitiges Vertrauen**.
+
+## 9. Eldran
+
+Familien reichen von alten aristokratischen Häusern bis zu modernen städtischen Haushalten. Die Monarchie prägt manche Familien stark, andere stehen ihr gleichgültig oder kritisch gegenüber.
+
+In traditionellen Familien werden Titel, Familienhäuser und regionale Bräuche gepflegt. Bürgerliche Familien betonen häufiger Ausbildung, Beruf und persönliche Leistung.
+
+Die Familie bleibt ein wichtiger Ort politischer Sozialisation: Kinder können mit monarchistischen, republikanischen oder pragmatisch-konstitutionellen Vorstellungen aufwachsen.
+
+Hochzeiten sind häufig große soziale Ereignisse, müssen aber nicht mehr den alten Standesgrenzen folgen.
+
+## 10. Namar
+
+Die maritime Lebensweise prägt viele Familien. In Küsten- und Inselregionen wechseln sich Generationen von Fischern, Seeleuten, Hafenarbeitern und Schiffbauern ab.
+
+Abwesenheit gehört zum Familienleben: Ein Elternteil kann wochen- oder monatelang auf See sein. Dadurch entstehen starke lokale Netzwerke, in denen Großeltern, Geschwister und Nachbarn Verantwortung übernehmen.
+
+Auf Inseln ist die Familie oft besonders eng mit dem Heimatort verbunden. Wegzug wird nicht nur als persönlicher Schritt, sondern manchmal als Verlust für die Gemeinschaft verstanden.
+
+Kinder lernen früh Wetter, Meer und praktische Sicherheit. Familiengeschichten sind häufig mit bestimmten Schiffen, Häfen oder Inseln verbunden.
+
+## 11. Orthea
+
+Bildung besitzt innerhalb der Familie einen außergewöhnlich hohen Stellenwert. Eltern investieren viel Zeit und Geld in die Ausbildung ihrer Kinder, sofern sie es sich leisten können.
+
+In akademischen Familien können Kinder früh an Wissenschaft herangeführt werden. Das schafft Chancen, erzeugt aber auch Leistungsdruck.
+
+Familien außerhalb der Wissenschaftselite erleben diesen Druck teilweise als soziale Distanz. Ein Kind aus einem ländlichen Haushalt kann sich gegenüber akademischen Familien gleichzeitig bewundert und fremd fühlen.
+
+Die zentrale familiäre Frage lautet: **Muss ein gutes Leben immer das Ergebnis messbarer Leistung sein?**
+
+## 12. Dargan
+
+Familien sind stark auf gegenseitige praktische Hilfe angewiesen. In abgelegenen Regionen können Verwandte, Nachbarn und Freunde bei Krankheit, Reparaturen oder Transport wichtiger sein als staatliche Institutionen.
+
+Mehrgenerationenhaushalte sind verbreitet, besonders dort, wo Wege weit und medizinische Einrichtungen selten sind.
+
+Kinder lernen praktische Fähigkeiten früh: Reparieren, Landwirtschaft, Umgang mit Fahrzeugen und Orientierung in schwierigem Gelände.
+
+Familiengeschichte wird weniger über formelle Archive als über Erzählungen weitergegeben. Großeltern sind wichtige Träger lokalen Wissens.
+
+## 13. Lyr
+
+Familie und Talgemeinschaft überschneiden sich stark. Viele Menschen kennen ihre Verwandtschaft über mehrere Generationen, und lokale Familien können innerhalb eines Tales erheblichen Einfluss besitzen.
+
+Ehen verbinden nicht nur zwei Menschen, sondern manchmal auch unterschiedliche Dörfer oder politische Gemeinden. Trotzdem besitzen persönliche Entscheidungen einen hohen Stellenwert.
+
+Großfamilien und gemeinschaftliche Kinderbetreuung sind verbreitet. Ältere Menschen gelten als wichtige Träger von Ortsgeschichte, Bergwissen und Tradition.
+
+Der Konflikt zwischen Familienloyalität und persönlicher Freiheit ist besonders sichtbar, wenn junge Menschen das Tal verlassen wollen.
+
+## 14. Caldris
+
+Familien werden umfassend durch den Sozialstaat unterstützt. Kinderbetreuung, medizinische Versorgung, Wohnraum und berufliche Vermittlung können den Alltag erheblich erleichtern.
+
+Viele Familien empfinden diese Unterstützung als echte Verbesserung ihres Lebens. Der Staat wird nicht ausschließlich als Unterdrücker erlebt, sondern als Institution, die konkrete Probleme löst.
+
+Gleichzeitig werden Familienleben und Lebensentscheidungen umfassend registriert. Manche Eltern empfinden die staatliche Fürsorge deshalb als Schutz, andere als dauernde Beobachtung.
+
+Kinder wachsen mit dem Bewusstsein auf, dass der Staat für sie sorgen kann und zugleich viel über sie weiß.
+
+## 15. Merovan
+
+Familiengeschichten sind häufig international. Ein Haushalt kann mehrere Sprachen, Religionen oder Herkunftsregionen miteinander verbinden.
+
+Alte Familien bewahren Erinnerungen an das ehemalige Imperium, während jüngere Generationen diese Geschichte häufig kritischer betrachten. Familien mit Wurzeln in ehemaligen Überseegebieten können dieselbe Geschichte aus einer völlig anderen Perspektive erzählen.
+
+Migration macht Großfamilien oft geografisch weit verstreut. Digitale Kommunikation und Reisen halten die Verbindung aufrecht.
+
+Die Familie ist deshalb häufig ein Ort, an dem unterschiedliche historische Erinnerungen unmittelbar aufeinandertreffen.
+
+## 16. Theryn
+
+Familiengeschichten sind stark durch die Revolution geprägt. Manche Familien verehren revolutionäre Vorfahren, andere erinnern sich an Gewalt, Hunger oder politische Repression.
+
+Veteranenfamilien besitzen teilweise besonderes Ansehen. Gleichzeitig entstehen Konflikte, wenn junge Menschen die revolutionäre Vergangenheit anders bewerten als ihre Eltern oder Großeltern.
+
+In vielen Haushalten gehören politische Diskussionen zum Familienleben. Die offizielle Geschichte wird zu Hause bestätigt, kritisiert oder durch persönliche Erinnerungen ergänzt.
+
+Genossenschaften und staatliche Einrichtungen übernehmen teilweise Aufgaben, die anderswo von Familien getragen werden. Trotzdem bleiben Verwandtschaft und persönliche Loyalität wichtige Schutzräume.
+
+Die zentrale Frage lautet: **Wie lebt eine Familie mit einer Revolution, die zugleich ihre Geschichte und ihre Gegenwart geschaffen hat?**
+
+# Gemeinsame Familienstruktur der Welt
+
+Trotz aller Unterschiede bleibt Familie in allen sechzehn Nationen ein Ort von Fürsorge, Konflikt und Erinnerung. Keine Gesellschaft besitzt ein vollständig einheitliches Familienmodell.
+
+Für die weitere Lore werden daher vier Ebenen unterschieden:
+
+1. **Kernfamilie** – Eltern, Kinder und unmittelbare Fürsorge.
+2. **Erweiterte Familie** – Großeltern, Geschwister, Onkel, Tanten und andere Verwandte.
+3. **Soziales Umfeld** – Nachbarschaft, Freundschaften, Vereine, religiöse Gemeinschaften oder Arbeitskollegen.
+4. **Staatliche und gesellschaftliche Institutionen** – Schule, Medizin, Unternehmen, Militär und Verwaltung.
+
+Je nach Nation verschiebt sich das Gewicht zwischen diesen Ebenen. Genau daraus entstehen unterschiedliche Vorstellungen von Verantwortung, Freiheit, Loyalität und einem guten Leben.
+
+> **Der Staat kann eine Gesellschaft ordnen. Aber nur Menschen können einander Familie sein.**
