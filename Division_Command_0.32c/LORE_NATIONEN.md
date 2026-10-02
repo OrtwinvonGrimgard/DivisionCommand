@@ -2138,3 +2138,284 @@ Die sechzehn Hauptstädte sollen bewusst unterschiedliche Antworten auf dieselbe
 - **Theryn:** Macht beruft sich auf die Revolution, muss aber mit ihrer eigenen Institutionalisierung leben.
 
 Die Namen und Details dieses Abschnitts gelten als **Arbeitsstand der Lore**. Sie können bei späteren historischen, sprachlichen oder kartographischen Ausarbeitungen präzisiert werden.
+
+
+# Konkrete Ausarbeitung – Punkt 2: Regionen und regionale Unterschiede
+
+Die Hauptstadt beschreibt das politische Zentrum. Die Regionen zeigen, wie unterschiedlich eine Nation innerhalb ihrer eigenen Grenzen sein kann. Keine der sechzehn Nationen besteht aus einer einheitlichen Bevölkerung. Landschaft, Wirtschaft, Geschichte und Entfernung zur Hauptstadt erzeugen eigene regionale Identitäten.
+
+Für jede Nation werden zunächst vier charakteristische Großregionen festgelegt. Diese Regionen sind der verbindliche Arbeitsstand für die weitere Lore und können später in kleinere Provinzen, Bundesländer, Täler oder Verwaltungsbezirke aufgeteilt werden.
+
+## 1. Averon
+
+### Nordmark
+Kühlere, dünn besiedelte Region mit kleineren Städten, Forstwirtschaft und modernen Energieanlagen. Die Menschen gelten als weniger hektisch als die Bevölkerung der Hauptstadt.
+
+**Konflikt:** Die Bewohner empfinden die politische Aufmerksamkeit für die Großstädte als übermäßig.
+
+### Zentralkorridor
+Dicht besiedelte urbane Achse zwischen den wichtigsten Wirtschafts- und Verwaltungszentren. Hier befinden sich Technologieunternehmen, Universitäten und die größte Zahl hochqualifizierter Arbeitsplätze.
+
+**Lebensgefühl:** schnell, teuer, leistungsorientiert.
+
+### Westküste
+Große Hafenstädte, internationale Unternehmen und eine vielfältige Bevölkerung. Der Kontakt mit anderen Nationen ist alltäglich.
+
+**Konflikt:** Alte Hafenviertel und neue Technologiebezirke entwickeln sich sehr unterschiedlich.
+
+### Südland
+Landwirtschaftlich geprägte Region mit kleineren Städten und Gemeinden. Digitale Infrastruktur ist vorhanden, aber traditionelle Vereine und lokale Bindungen sind stärker.
+
+**Konflikt:** Viele Bewohner fühlen sich von der urbanen Kultur Averons nicht vollständig repräsentiert.
+
+## 2. Karsk
+
+### Zentralbezirk
+Dicht kontrollierte Kernregion mit Regierungs-, Medizin- und Forschungseinrichtungen. Hier leben viele privilegierte Staats- und Technologiefunktionäre.
+
+### Produktionsgürtel
+Schwer industrialisierte Region mit großen Fabriken und technischen Ausbildungszentren. Arbeiter erhalten Versorgung und Status vor allem über ihre berufliche Leistungsfähigkeit.
+
+### Grenzsektoren
+Militärisch geprägte Randgebiete mit hoher Sicherheitspräsenz. Die Bevölkerung ist an Kontrollen und Mobilisierung gewöhnt.
+
+### Versorgungsprovinzen
+Landwirtschaftliche und ressourcenreiche Regionen, deren Produktion zentral verwaltet wird. Der Staat ist besonders tief in den Alltag eingebunden.
+
+**Regionaler Grundkonflikt:** Je weiter man vom Zentrum entfernt lebt, desto stärker wird die Frage, ob der Staat tatsächlich schützt oder nur kontrolliert.
+
+## 3. Ossaria
+
+### Alte Kernstädte
+Historische Städte mit jahrhundertealten Bauwerken, Universitäten und Gedenkstätten. Familiengeschichte besitzt hier besonderes Gewicht.
+
+### Technologiebogen
+Moderne Forschungs- und Produktionsregion mit hochentwickelter Schutz- und Sensortechnik.
+
+### Westliche Ebenen
+Fruchtbare Agrarregion mit kleineren Städten und Dörfern. Traditionelle Lebensformen sind stärker ausgeprägt.
+
+### Grenzland
+Militärisch wichtige Region mit Festungen, Ausbildungsplätzen und zahlreichen Erinnerungsorten an frühere Kriege.
+
+**Regionaler Grundkonflikt:** Wie viel moderne Veränderung darf eine Gesellschaft zulassen, ohne ihre historische Identität zu verlieren?
+
+## 4. Rothain
+
+### Alte Krondistrikte
+Regionen, in denen ehemalige Adelshäuser, historische Güter und Veteranentraditionen besonders präsent sind.
+
+### Industrieller Osten
+Dicht besiedelte Städte mit Fabriken und einer starken Arbeiterschaft. Hier ist die alte imperiale Ordnung deutlich weniger beliebt.
+
+### Republikanischer Westen
+Region moderner Verwaltung, Universitäten und neuer Unternehmen. Die Bevölkerung identifiziert sich stärker mit der heutigen Republik.
+
+### Grenzprovinzen
+Gebiete, die während des ehemaligen Reiches mehrfach umkämpft wurden. Dort ist die Erinnerung an Krieg weniger abstrakt.
+
+**Regionaler Grundkonflikt:** Für einen Menschen im alten Kernland kann das Reich ein Familienerbe sein; für einen Menschen aus einer ehemaligen Randprovinz kann es vor allem eine Erinnerung an Fremdherrschaft sein.
+
+## 5. Sahr
+
+### Saruner Becken
+Dicht besiedeltes Handelszentrum rund um die Hauptstadt. Banken, Märkte und politische Institutionen konzentrieren sich hier.
+
+### Flussländer
+Fruchtbare Regionen mit Landwirtschaft, Flusshäfen und kleineren Handelsstädten.
+
+### Küstenbund
+Mehrere konkurrierende Hafenstädte. Jede besitzt eigene Traditionen und mächtige Handelsfamilien.
+
+### Hinterland
+Weniger wohlhabende Region mit Rohstoffen, Landwirtschaft und Transportkorridoren. Viele Menschen arbeiten für Unternehmen aus den großen Städten.
+
+**Regionaler Grundkonflikt:** Die Handelsstädte profitieren vom offenen System, während das Hinterland häufig stärker von Preis- und Nachfrageänderungen abhängig ist.
+
+## 6. Steinmark
+
+### Bundeszentrum
+Verwaltungs- und Bildungsregion rund um die Hauptstadt. Bundesbehörden, Gerichte und große Archive prägen das Leben.
+
+### Nordbund
+Industriell und wirtschaftlich starke Bundesländer mit großer Bedeutung für Maschinenbau und Logistik.
+
+### Südmark
+Mittelgebirgs- und Agrarregion mit kleineren Städten und ausgeprägter Vereinskultur.
+
+### Ostprovinzen
+Historisch stärker militarisierte Regionen an alten Konfliktgrenzen. Öffentliche Erinnerung an vergangene Kriege ist hier besonders präsent.
+
+**Regionaler Grundkonflikt:** Die Bundesländer akzeptieren den gemeinsamen Staat, wollen aber ihre eigenen Verwaltungs- und Kulturtraditionen behalten.
+
+## 7. Vael
+
+### Eisenland
+Dicht besiedelte Industrieregion mit Bergwerken, Stahlwerken und Maschinenbau.
+
+### Energiegürtel
+Region großer Kraftwerke, Energieanlagen und technischer Infrastruktur. Viele Gemeinden hängen wirtschaftlich von wenigen Unternehmen ab.
+
+### Konzernstädte
+Planmäßig entwickelte Städte, die historisch um einzelne Industrieunternehmen entstanden. Unternehmen prägen dort Schulen, Kliniken und Wohnraum.
+
+### Grünes Vael
+Weniger industrialisierte Region mit Landwirtschaft, Wäldern und kleineren Städten. Hier ist die Kritik an der industriellen Dominanz stärker.
+
+**Regionaler Grundkonflikt:** Für die einen bedeutet Industrie Wohlstand und Stolz; für andere bedeutet sie Abhängigkeit, Umweltbelastung und Verlust lokaler Selbstbestimmung.
+
+## 8. Vesper
+
+### Hauptstadtbezirk
+Dicht kontrollierte Region mit Ministerien, Sicherheitsorganen und staatlichen Medien.
+
+### Nebelprovinzen
+Ländliche Gebiete, in denen Informationen über die tatsächlichen Aktivitäten des Staates besonders schwer zu überprüfen sind.
+
+### Grenzkorridor
+Militärisch und geheimdienstlich bedeutende Region. Die Bevölkerung lebt mit häufigen Kontrollen und wechselnden Sicherheitsmaßnahmen.
+
+### Freie Städte
+Wirtschaftlich wichtige Städte mit etwas größerem privaten Handlungsspielraum. Auch hier bleibt die staatliche Beobachtung spürbar.
+
+**Regionaler Grundkonflikt:** Je nach Region unterscheiden sich die Menschen darin, ob sie die staatliche Geheimhaltung als Schutz oder als Bedrohung verstehen.
+
+## 9. Eldran
+
+### Kronland
+Historisches Kerngebiet rund um die Hauptstadt. Königliche Institutionen und alte Familien sind kulturell besonders präsent.
+
+### Nordprovinzen
+Industriell und wirtschaftlich moderne Regionen mit einer stärkeren republikanischen und säkularen Bevölkerung.
+
+### Südmark
+Landwirtschaftlich geprägte Regionen mit traditionellen Festen und starker lokaler Identität.
+
+### Freie Randgebiete
+Regionen mit weitreichenden historischen Selbstverwaltungsrechten.
+
+**Regionaler Grundkonflikt:** Die Frage nach der Rolle der Krone wird je nach Region sehr unterschiedlich beantwortet.
+
+## 10. Namar
+
+### Zentralküste
+Dicht besiedelte Küstenregion mit den größten Häfen und Werften.
+
+### Inselbund
+Mehrere Inselgruppen mit eigenen Dialekten, Bräuchen und lokalen Verwaltungen. Die Bewohner fühlen sich häufig zuerst ihrer Insel verbunden.
+
+### Westküste
+Fischerei, kleinere Häfen und traditionelle maritime Gemeinden.
+
+### Südliche Handelsküste
+Moderne Hafenstädte, internationale Unternehmen und starke Migration.
+
+**Regionaler Grundkonflikt:** Inseln und Randregionen fürchten, dass die Hauptstadt ihre Interessen zugunsten der großen Häfen vernachlässigt.
+
+## 11. Orthea
+
+### Wissenschaftsgürtel
+Universitäten, Forschungseinrichtungen und Kliniken bilden ein zusammenhängendes Netzwerk.
+
+### Industrielle Ebene
+Produktionsregion mit hochautomatisierten Fabriken und technischen Fachkräften.
+
+### Alte Provinzen
+Kleinere Städte und Dörfer mit weniger direktem Kontakt zur wissenschaftlichen Elite.
+
+### Südliche Agrarregion
+Landwirtschaftlich geprägtes Gebiet, in dem traditionelle Berufe und lokale Gemeinschaften stärker sind.
+
+**Regionaler Grundkonflikt:** Die wissenschaftlich geprägten Zentren sehen Daten und Expertise als Grundlage des Fortschritts; periphere Regionen wollen, dass ihre Erfahrung nicht als unwissenschaftlich abgetan wird.
+
+## 12. Dargan
+
+### Hochland
+Gebirgige Region mit kleinen Siedlungen, Bergbau und schwierigen Verkehrswegen.
+
+### Grenzebene
+Weite, dünn besiedelte Landschaft mit Landwirtschaft und militärischen Außenposten.
+
+### Flusskorridor
+Wichtigste Verkehrs- und Handelsachse Dargans. Hier konzentrieren sich größere Städte.
+
+### Randmarken
+Sehr abgelegene Gemeinschaften mit hoher Selbstversorgung und starkem Misstrauen gegenüber zentralen Behörden.
+
+**Regionaler Grundkonflikt:** Die Menschen wollen staatliche Infrastruktur, aber nicht die Abhängigkeit von einer Verwaltung, die hunderte Kilometer entfernt sitzt.
+
+## 13. Lyr
+
+### Nordtal
+Dicht besiedeltes Tal mit Handel, Handwerk und politischen Institutionen.
+
+### Hochrepubliken
+Höher gelegene Regionen mit Bergbau, Weidewirtschaft und starker lokaler Selbstverwaltung.
+
+### Westpässe
+Strategisch wichtige Gebirgspässe mit Festungen, Tunnelanlagen und Militärstraßen.
+
+### Südliche Täler
+Fruchtbarere Regionen mit Landwirtschaft und alten religiösen Traditionen.
+
+**Regionaler Grundkonflikt:** Jede Region hält ihre eigene politische Ordnung für sinnvoller als eine vollständig zentralisierte Bundesstruktur.
+
+## 14. Caldris
+
+### Versorgungsgürtel
+Dicht besiedelte Regionen mit modernen Wohnkomplexen, Kliniken und Bildungseinrichtungen.
+
+### Industriestädte
+Große Produktionszentren, in denen der Staat Arbeitsplätze, Wohnen und soziale Versorgung eng miteinander verbindet.
+
+### Agrarprovinzen
+Ländliche Regionen mit staatlich organisierten Landwirtschaftsbetrieben und stabilen Versorgungsstrukturen.
+
+### Sicherheitsbezirk
+Strategisch wichtige Region mit besonders hoher Dichte an Sicherheits- und Überwachungseinrichtungen.
+
+**Regionaler Grundkonflikt:** In wohlversorgten Regionen wird das System eher als Schutz erlebt; in stark überwachten Gebieten stärker als Eingriff in das Privatleben.
+
+## 15. Merovan
+
+### Alte Kernprovinzen
+Historisches Zentrum der heutigen Republik mit alten Familien, Universitäten und staatlichen Institutionen.
+
+### Hafenregionen
+Internationale Handelszentren mit hoher Migration und starkem wirtschaftlichem Einfluss.
+
+### Ehemalige Überseeprovinzen
+Regionen, deren Bevölkerung besonders unterschiedliche Erinnerungen an das frühere Imperium besitzt.
+
+### Binnenland
+Weniger international geprägte Regionen mit Landwirtschaft und traditionelleren Lebensweisen.
+
+**Regionaler Grundkonflikt:** Die Hafenregionen betrachten internationale Verflechtung als Normalität; Teile des Binnenlandes sehen darin die Fortsetzung alter Abhängigkeiten.
+
+## 16. Theryn
+
+### Revolutionskern
+Regionen, in denen die revolutionäre Bewegung ihren Ursprung hatte. Denkmäler, Veteranenorganisationen und politische Traditionen sind besonders stark.
+
+### Industrieprovinzen
+Große staatliche Betriebe und Genossenschaften bestimmen Wirtschaft und Alltag.
+
+### Agrarbund
+Ländliche Regionen mit Genossenschaften und starken lokalen Gemeinschaften.
+
+### Reformgürtel
+Jüngere Städte mit Hochschulen und einer Generation, die die Revolution weniger als Ereignis und mehr als historische Grundlage betrachtet.
+
+**Regionaler Grundkonflikt:** Ältere Regionen verteidigen häufig die ursprünglichen revolutionären Institutionen, während jüngere Regionen stärker über Reformen und persönliche Freiheit diskutieren.
+
+# Gemeinsamer Grundsatz der regionalen Weltgestaltung
+
+Regionale Unterschiede sollen nicht lediglich unterschiedliche Landschaften liefern. Sie erzeugen unterschiedliche Menschen innerhalb derselben Nation.
+
+Ein Bürger aus einer Hauptstadt kann seine Nation anders erleben als ein Bauer aus dem Hinterland. Ein Hafenarbeiter hat andere Interessen als eine Familie in einem Gebirgstal. Ein Industriestädter erlebt den Staat anders als ein Bewohner einer abgelegenen Grenzregion.
+
+Deshalb gilt für die weitere Lore:
+
+> **Eine Nation ist kein Ort. Eine Nation ist ein Netz aus Orten, Erinnerungen und Lebensweisen.**
+
+Die Regionen bilden außerdem einen wichtigen Übergang zur nächsten Ausarbeitungsstufe. Aus ihnen können später konkrete Städte, Dörfer, Dialekte, Berufe, Handelswege, Einheiten, Veteranenkulturen und Familiengeschichten entstehen.
