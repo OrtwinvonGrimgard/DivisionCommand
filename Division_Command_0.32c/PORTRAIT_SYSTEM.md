@@ -1,297 +1,265 @@
 # Division Command — Portrait System
 
+Stand: 2026-10-02
+
 ## Ziel
 
-Das Portraitsystem ist modular und datengetrieben. Die 64 Basisportraits (16 Nationen × 4 Ausgangspersonen) sind nicht die eigentliche Datenstruktur, sondern Referenzen auf wiederverwendbare Parameter.
+Das Porträtsystem ist modular und datengetrieben. Es gibt **16 Nationen**. Jede Nation hat **vier Ausgangspersonen**: zwei Männer und zwei Frauen, also zwei Gesichter je Geschlecht. Das sind **64 Personen**.
 
-Die Darstellung erfolgt als leuchtendes, realistisches Ölgemälde mit sichtbarer Pinselstruktur, kräftigen Farben und militärischem Charakter.
+Diese 64 Bilder sind die Referenzpopulation, nicht die Dateistruktur. Gesicht, Haar, Bart, Mütze, Uniform, Rang und Details sind Ebenen. Sie werden übereinandergelegt. Sie werden nicht als fertige Kombinationen gemalt.
 
-## Einheitlicher Portrait-Rahmen
+Die Darstellung ist ein realistisches Ölgemälde mit sichtbarer Pinselstruktur und militärischem Charakter. Der Hintergrund ist **transparent**. Es bleibt kein Studio, kein Grau und kein Weiß unter dem Rock.
 
-**Der Bildausschnitt ist eine harte technische Vorgabe und darf zwischen Personen, Altersstufen, Dienstgraden oder Varianten nicht wechseln.**
+Lore und Mechanik bleiben getrennt. Eine Nation erklärt, warum eine Uniform so aussieht. Sie schreibt nicht vor, welches Deck gespielt wird. Im Editor darf Gesicht A auf Schnitt B in Farbe C liegen. In der Kampagne tragen Gegner eine stimmige Nation.
 
-### Master Frame
+Die acht benannten Staaten stehen in `LORE_NATIONEN.md`. Die anderen acht sind Porträt-Nationen mit eigener Uniformsprache und noch ohne Lore-Kapitel.
 
-Alle Portraits werden in demselben definierten Ausschnitt erzeugt und gerendert:
+## Die 16 Nationen
 
-- **Hochformat**
-- **Kopf vollständig sichtbar**
-- **beide Schultern vollständig sichtbar**
-- **gesamter sichtbarer Oberkörper/Torso**
-- **beide Arme im definierten Bildbereich sichtbar**
-- **Bildabschluss ungefähr auf Höhe des oberen Bauch-/Unterbrustbereichs**
-- **keine Beine**
-- **keine wechselnde Kameradistanz**
-- **keine unterschiedliche Perspektive oder Brennweite zwischen Varianten**
-- **Kopfposition, Augenhöhe und vertikale Position des Körpers bleiben konstant**
-- **Schulterbreite und relativer Körpermaßstab bleiben konstant**
-- **Uniformkragen, Schulterpartien und relevante Rangmerkmale müssen innerhalb des Rahmens vollständig erkennbar sein**
+| ID | Name | Stand | Uniformsprache |
+|---|---|---|---|
+| N01 | Averon | Lore. Ordner bisher `Jetzt` | modernes Oliv, Plattenträger, sandfarbene Streifen |
+| N02 | Karsk | Lore | Anthrazit, rote Balken, Implantat, keine zweite Hautfarbe außer am Graft |
+| N03 | Ossaria | Lore. Ordner bisher `Ossar` | Schwarz, Knochenplatten, Erinnerungsmaske, eine Linse |
+| N04 | Rothain | Lore | dunkelroter historischer Rock, Silbersterne, Pelz, Patronentasche |
+| N05 | Sahr | Lore | Sand, gewickelter Gürtel, offener Knoten, Perlen |
+| N06 | Steinmark | Lore | Feldgrau, schwarzes Koppelzeug, Litzen |
+| N07 | Vael | Lore | helle Dienstjacke, dunkler Kragen, Silberringe |
+| N08 | Vesper | Lore | stumpfes Oliv, schwarze Siegel |
+| N09 | — | ohne Lore | dunkles Imperium, Schwarz und Knochenweiß, Atemmaske, bionisches Auge. Nicht Ossaria und nicht Karsk |
+| N10 | — | ohne Lore | heller Eidbund, wenig Gold, Ringe oder schmale Borten, ausdrücklich kein Knochen |
+| N11 | — | ohne Lore | Maskenarmee ohne Grafts, Helm und Atemmaske, industrielle Warnfarbe nur als schmales Abzeichen |
+| N12 | — | ohne Lore | Gebirge, kurze Jacke, Umhang in derselben Palette, kein Pelzkragen wie Rothain |
+| N13 | — | ohne Lore | Küste, dunkelblau nur hier, keine Sterne wie Rothain |
+| N14 | — | ohne Lore | weiter Raum, langer Mantel, eine einzige helle Paspel |
+| N15 | — | ohne Lore | Söldnerbund, eine eigene Grundfarbe, zusammengesetztes Koppel, kein Sammelsurium |
+| N16 | — | ohne Lore | Nacht und Stadt, Schwarz ohne Knochen und ohne Siegel |
 
-Der untere Bildrand definiert den festen Portrait-Crop. Varianten dürfen nicht durch Zoom, wechselnde Körperhaltung oder abweichende Kameraposition aus diesem Rahmen herausfallen.
+Zwei Nationen dürfen sich nicht nur durch die Farbe unterscheiden. Schnitt, Abzeichenort und ein wiederkehrendes Detail müssen anders sein.
 
-### Technischer Referenzrahmen
+N09 bis N16 bekommen einen Staatsnamen erst in der Lore. Bis dahin gelten die IDs.
 
-```text
-┌─────────────────────────┐
-│                         │
-│          KOPF           │
-│                         │
-│     SCHULTERN           │
-│                         │
-│        TORSO            │
-│                         │
-│      ARM     ARM        │
-│                         │
-├─────────────────────────┤
-│      FESTER CROP        │
-└─────────────────────────┘
-```
+## Personen
 
-Der Master Frame wird als Bestandteil des Render-Profils gespeichert. Er ist nicht lediglich eine Empfehlung für den Bildgenerator.
+Jede Nation hat genau vier Basisfiguren:
 
-### Asset-Erzeugung
+- Mann 01
+- Mann 02
+- Frau 01
+- Frau 02
 
-Für die 64 Ausgangspersonen gilt:
+Die zwei Gesichter eines Geschlechts sind verschiedene Menschen, nicht dieselbe Person mit anderer Frisur. Sie bleiben über alle Ränge erkennbar.
 
-1. Zuerst wird eine **Master-Referenz** innerhalb des festen Rahmens erzeugt.
-2. Aus dieser Referenz werden Gesichts-, Haar-, Bart-, Alters- und Uniformvarianten abgeleitet.
-3. Spätere Varianten werden gegen denselben Frame geprüft.
-4. Eine Variante gilt als ungültig, wenn sich Kameradistanz, Crop, Körpermaßstab oder Position wesentlich verändert.
-5. Der gleiche Rahmen wird auch für spätere NPCs und Erweiterungen verwendet, sofern sie als Portraitkarten dargestellt werden.
+Der Spieler wählt am Fähnrich:
 
-Dadurch können unterschiedliche Personen und Zustände später technisch übereinandergelegt bzw. als modulare Ebenen kombiniert werden.
+- das Gesicht
+- den Schnitt, also die Nation der Uniform
+- die Farbe aus der Palette dieses Schnitts
 
-## Ebenen
+Rang, Alter, Orden und das nachwachsende Barthaar kommen danach von selbst. Die Mütze ist eine eigene Anzeige, kein Rang.
 
-1. **Phänotyp-Profil** — anatomische und sichtbare Grundmerkmale.
-2. **Person** — konkrete individuelle Ausprägung eines Phänotyps.
-3. **Alter/Dienstgrad** — Fähnrich bis Generalfeldmarschall.
-4. **Haare** — unabhängig austauschbare Frisur.
-5. **Bart** — drei unabhängig steuerbare Regionen.
-6. **Uniform** — nationale Grunduniform und dienstgradabhängige Variante.
-7. **Portrait Frame** — fester Ausschnitt und feste Kamera.
-8. **Rendering** — einheitlicher Ölmalerei-Stil.
+## Dienstgrade
 
-## Phänotyp-Profil
+Die Leiter hat vierzehn Stufen. Keine wird übersprungen. Brigadegeneral und Generalfeldmarschall gehören dazu.
 
-Phänotypen werden als parametrische Profile gespeichert, nicht als starre ethnische Schablonen und nicht als reale biometrische Identifikationsdaten.
+| Stufe | Rang | Kleidergruppe |
+|---:|---|---|
+| 1 | Fähnrich | Kadett |
+| 2 | Leutnant | Kompanie |
+| 3 | Oberleutnant | Kompanie |
+| 4 | Hauptmann | Kompanie |
+| 5 | Major | Stab |
+| 6 | Oberstleutnant | Stab |
+| 7 | Oberst | Stab |
+| 8 | Brigadegeneral | Generalität |
+| 9 | Generalmajor | Generalität |
+| 10 | Generalleutnant | Generalität |
+| 11 | General | Generalität |
+| 12 | Generaloberst | Generalität |
+| 13 | Feldmarschall | Marschälle |
+| 14 | Generalfeldmarschall | Marschälle |
 
-### Gesichtsparameter
+Es werden nicht vierzehn komplette Personen gemalt. Es gibt **fünf Kleidergruppen**. Innerhalb einer Gruppe wechseln Abzeichen und Orden. Der Schnitt bleibt.
 
-- Gesichtsbreite
-- Gesichtslänge
-- Stirnhöhe
-- Kieferbreite
-- Kieferwinkel
-- Kinnform
-- Wangenknochen
-- Augenform
-- Augengröße
-- Augenabstand
-- Augenfarbe
-- Nasenlänge
-- Nasenbreite
-- Nasenrücken
-- Nasenspitze
-- Mundbreite
-- Lippenform
-- Ohrenform
-- Haaransatz
+- **Kadett.** Die Fähnrichsuniform ist die Grundsprache der Nation. Sie trägt schon ein kleines Rangzeichen und zusätzlich ein Kadettenzeichen.
+- **Kompanie.** Dieselbe Jacke, klarere Abzeichen, die ersten Orden.
+- **Stab.** Mehr Arbeit an Kragen, Schulter oder Ärmel. Neue Orden kommen dazu.
+- **Generalität.** Deutlich imposanter. Mantel, Hut oder ein anderes Accessoire sind erlaubt. Stil und Palette bleiben. Der Mantel darf einen anderen Ton derselben Familie haben. Er darf nicht bei jedem Rang die Grundfarbe wechseln.
+- **Marschälle.** Noch reicher, aber auf dem Vorherigen aufgebaut. Nichts wird ersetzt, was der Offizier schon trägt.
 
-### Pigmentierung und Haare
+Das Gesicht altert mit der Kleidergruppe, nicht bei jedem einzelnen Rang: fünf Altersstufen auf die 64 Personen.
 
-- Hautgrundton
-- Hautunterton
-- natürliche Pigmentvariation
-- Haarfarbe
-- Haarstruktur
-- natürliche Haardichte
-- natürliche Bartdichte
-- natürliche Bartfarbe
+## Abzeichen und Orden
 
-Parameter sind generative Werte und keine medizinischen oder biometrischen Identifikatoren.
+Jede Nation hat einen eigenen Ort und eine eigene Form. Schulter, Kragen, Ärmel oder Brust sind erlaubt. Ein einzelnes Abzeichen bleibt klein. Ein Stern nimmt nicht die Schulter ein.
 
-## Nationale Population Profiles
+Der Fähnrich hat bereits etwas. Das Kadettenzeichen verschwindet erst, wenn die Gruppe Kompanie erreicht.
 
-Eine Nation wird nicht auf einen einzigen Phänotyp reduziert. Jede Nation erhält eine Bibliothek zulässiger Phänotyp-Profile und Gewichtungen.
+Orden werden nie ausgetauscht. Wer als Fähnrich einen Orden bekommt, trägt ihn als Generalfeldmarschall noch. Spätere Stufen erweitern ihn oder hängen einen neuen daneben. Auf der Brust bleibt Platz, der nicht vom Rangmuster gefressen wird.
 
-Beispiel: `ROTHAIN → PHENOTYPE_017, PHENOTYPE_024, PHENOTYPE_031, PHENOTYPE_044 ...`
+## Farbe
 
-Dadurch bleiben nationale Herkunft und visuelle Identität erkennbar, während innerhalb einer Nation deutliche individuelle Vielfalt entsteht.
+Der Spieler wählt eine Palette zum Schnitt, nicht eine freie Farbe pro Rang. Dieselbe Palette färbt Jacke, Mütze und späteren Mantel. Der Mantel darf abweichen, aber nur innerhalb dieser Palette.
 
-## Vier Ausgangspersonen je Nation
+Haarfarbe ist davon getrennt. Sie darf bei den meisten Nationen aus dem Katalog kommen. Festgelegt:
 
-Jede Nation erhält vier eigenständige Basisfiguren: **zwei Männer und zwei Frauen**. Sie sind nicht dieselbe Person in vier Altersstufen.
+- **Vael:** nur Schwarz.
+- **Sahr:** nur Schwarz.
+- **Karsk:** Weiß als Folge der Grafts, chemisches Schwarz als gefärbte Alternative. Kein weiches Braun.
 
-Jede dieser vier Personen erhält eine eigene Entwicklung über die vorgesehenen Alters-/Dienstgradstufen:
-
-- Fähnrich
-- mittlere Offiziersstufe
-- General
-- Generalfeldmarschall
-
-Die jeweilige Fähnrichuniform dient als nationale Designgrundlage. Die höheren Dienstgrade bauen darauf auf, erhalten aber jeweils eigene Uniformvarianten und Rangmerkmale.
-
-## Individuelle Gesichtsvariation
-
-Aus einem Phänotyp-Profil können mehrere Personen erzeugt werden. Eine Person erhält einen eigenen Variationsseed bzw. eine gespeicherte Variation.
-
-Beispiel: `PHENOTYPE_017 + VARIATION_12 → PERSON_00482`
-
-Dadurch können neue Gesichter erzeugt werden, ohne die vorhandenen Charaktere zu kopieren.
-
-## Alterung
-
-Das Alterungsmodell verändert unter anderem:
-
-- Hauttextur
-- Falten
-- Augenpartie
-- Haarfarbe
-- Haaransatz
-- Bartfarbe
-- Gesichtsfülle
-
-Die Altersstufe verändert nicht die nationale Grundidentität.
+Andere Nationen wählen aus dem Katalog: Schwarz, Dunkelbraun, Braun, Kupfer, Blond, Aschblond, Grau, Weiß. Die Farbe wird auf die Frisur gelegt. Sie ist kein neues Gesicht.
 
 ## Haare
 
-Haare werden als separate Ebene behandelt.
+Haare sind eine eigene Ebene über dem rasierten Kopf.
 
-Mögliche Parameter:
+Gemeinsamer Katalog, mindestens diese Schnitte:
 
-- Haaransatz
-- Haarfarbe
-- Haardichte
-- Länge
-- Struktur
-- Frisur
-- Seiten-/Nackenlänge
-- optionale Bedeckung
+- kurz und dicht
+- fast kahl
+- Seitenscheitel
+- Locken
+- oben länger
+- zurückgebunden
+- kurzer femininer Schnitt
+- strenger Knoten
 
-Die neutrale Kopf-/Hautbasis ermöglicht das Auflegen unterschiedlicher Frisuren, ohne dass für jede Frisur ein neues Basisgesicht erforderlich ist.
+Nicht jede Person bekommt jede Frisur neu gemalt. Die Frisuren hängen an wenigen Kopfgruppen. Unter einer Mütze ist die Frisur verdeckt. Sichtbar bleiben nur Nacken und Schläfe, wenn der Schnitt das hergibt.
 
-## Bartsystem
+## Bart
 
-Der Bart besteht aus drei vollständig unabhängigen Regionen:
+Sieben Stufen, `0` bis `6`. Stufe 0 ist rasiert. Drei Regionen sind vollständig getrennt:
 
-### Schnurrbart
+- Schnurrbart
+- Wangen
+- Kinn und Kiefer
 
-7 Wachstums-/Längenstufen: `0–6`
+Getrennt gespeichert werden:
 
-### Wangen
+- Wachstum, das mit Alter und Zeit steigt
+- sichtbare Länge nach der Rasur
 
-7 Wachstums-/Längenstufen: `0–6`
+Rasur setzt nur die sichtbare Länge herunter. Das Wachstum bleibt. Die drei Regionen wachsen und werden gestutzt unabhängig voneinander.
 
-### Kinn/Kiefer
+Bärte werden dichter und grauer mit dem Alter. Die weiblichen Basisgesichter haben die Bartdichte 0, solange für sie kein Bart gewünscht ist. Die Stufen existieren trotzdem im System.
 
-7 Wachstums-/Längenstufen: `0–6`
+Bartformen hängen an Kiefergruppen, nicht an jedem einzelnen Gesicht. Passt eine Gruppe nicht, wird nur dieses Gesicht nachgemalt.
 
-Stufe 0 bedeutet vollständig rasiert.
+## Kopfbedeckung
 
-Die drei Regionen dürfen unabhängig voneinander verändert werden. Dadurch sind beispielsweise möglich:
+Jedes Porträt gibt es **ohne Mütze** und **mit Mütze**. Die Mütze ist eine Ebene. Der Körper wird dafür nicht ein zweites Mal gemalt.
 
-- nur Schnurrbart
-- nur Kinnbart
-- Schnurrbart + Kinnbart
-- Vollbart
-- rasierte Wangen bei langem Kinnbart
-- dichter Wangenbart bei kurzem Schnurrbart
-- unterschiedliche Längen in allen drei Regionen
+Zwei Familien:
 
-### Wachstum und Rasur
+1. **Schirmmütze.** Für jede Nation.
+2. **Barett oder Feldmütze.** Jede Nation legt genau eine der beiden fest. Nicht beide.
 
-Intern können zwei Zustände getrennt gespeichert werden:
+Der Spieler zeigt also einen von drei Zuständen: barhaupt, Schirmmütze, oder die nationale Zweitmütze.
 
-- **Wachstumspotential/-zustand**
-- **sichtbare getrimmte Länge**
+Ab der Generalität darf ein Hut dazukommen. Er gehört zur Kleidergruppe, bleibt in derselben Palette und ersetzt nicht die beiden dienstlichen Mützen.
 
-Beispiel: `Schnurrbart: Wachstum 6 → sichtbar 3`; `Wangen: Wachstum 6 → sichtbar 0`; `Kinn: Wachstum 6 → sichtbar 5`
+Der obere Bildrand wird an der Schirmmütze gemessen. Barhaupt bleibt im selben Rahmen. Das Haar wird oben nicht abgeschnitten, und die Mütze ragt nicht aus dem Bild.
 
-Dadurch kann eine Person jederzeit rasiert oder getrimmt werden, ohne ihr zugrunde liegendes Bartwachstum zu verlieren.
+## Details
 
-## Uniformsystem
+Details sind eigene, kleine Ebenen. Sie sind keine neue Person.
 
-Die Uniform ist modular:
+Wählbar im Editor sind sie nicht. Narben, eine Augenklappe oder ein verletztes Ohr kommen aus der Kampagne und können mit der Zeit oder nach Siegen zurückgehen. Sie dürfen das Gesicht nicht durch ein anderes ersetzen.
 
-- nationale Grunduniform
-- Stoff und Schnitt
-- Kragen
-- nationale Insignien
-- Rangabzeichen
-- Dienstgrad
-- individuelle Ausrüstung
+Uniformdetails, die zum Rang gehören, liegen auf der Orden- und Abzeichenebene.
 
-Die Fähnrichuniform definiert die visuelle Grundsprache der Nation. Die drei höheren Dienstgrade sind eigenständige Varianten auf dieser Grundlage.
+## Rahmen
 
-## Rendering / Ölgemälde
+Der Ausschnitt ist hart. Er gilt für jede Nation, jedes Geschlecht, jedes Alter, jeden Rang und beide Mützenzustände.
 
-Alle Portraits verwenden eine gemeinsame künstlerische Basis:
+- Hochformat
+- dieselbe Kamera, dieselbe Blickrichtung, derselbe Maßstab
+- Kopf vollständig, inklusive Luft für die Schirmmütze
+- beide Schultern vollständig
+- beide Arme im Bild
+- Jacke, Rock oder Mantel bis an den unteren Bildrand gemalt
+- keine Hose
+- kein Weiß und kein grauer Rest unter dem Saum
+- transparenter Grund
+- Kragen, Schulter und das jeweilige Rangzeichen lesbar
+- ernste Haltung, keine Pose als Variationsmittel
 
-- realistisches klassisches Ölgemälde
-- leuchtende, satte Farben
-- sichtbare Pinselstruktur
-- hochwertige Gesichtsanatomie
-- dramatisches, gerichtetes Licht
-- warme und differenzierte Hauttöne
-- tiefe, aber detailreiche Schatten
-- realistische Materialien
-- detaillierte Augen
-- historisch anmutende offizielle Militärportraits
-- ruhiger Hintergrund
-- Gesicht und Uniform als Hauptmotiv
-- **identischer Portrait-Crop und identische Kamerakomposition**
+Pose, Zoom und Kamerawinkel dürfen nicht benutzt werden, um zwei Gesichter verschieden aussehen zu lassen. Dafür sind Gesicht, Haar und Uniform da.
 
-Der Painting Style ist unabhängig von Nation und Person und wird als eigenes Style-Profil gespeichert.
+## Ebenen
+
+Von unten nach oben:
+
+1. Transparenter Rahmen
+2. Körper und Uniform der Kleidergruppe, ohne Kopfbedeckung und ohne Rangblech
+3. Gesicht der Altersstufe, rasiert, ohne Frisur
+4. Haar, nur barhaupt
+5. Bart, drei Regionen
+6. Mütze, ersetzt das Haar bis auf Nacken und Schläfe
+7. Rangabzeichen
+8. Orden
+9. Kampagnendetails
+10. Ölstruktur als gemeinsamer Stil, nicht als eigenes Motiv
 
 ## Datenmodell
 
-Konzeptionell:
+`NATION → SCHNITT → PALETTE → PERSON → APPEARANCE → RAHMEN`
 
-`NATION → POPULATION_PROFILE → PHENOTYPE → PERSON → APPEARANCE_STATE → PORTRAIT_FRAME → RENDER`
-
-Ein Appearance State kann enthalten:
+Ein Appearance-Zustand speichert mindestens:
 
 - `person_id`
-- `age_stage`
+- `uniform_nation`
+- `palette_id`
+- `rank` von 1 bis 14
+- `garment_group`
+- `age_stage` von 1 bis 5
 - `hair_style`
 - `hair_color`
-- `mustache_stage`
-- `cheek_stage`
-- `chin_stage`
-- `trim_state`
-- `uniform_variant`
-- `portrait_frame`
-- `camera_profile`
-- `render_style`
-- `variation_seed`
+- `mustache_growth`, `cheek_growth`, `chin_growth`
+- `mustache_trim`, `cheek_trim`, `chin_trim`
+- `headgear`: `none`, `peaked`, `soft`
+- `soft_cap`: `beret` oder `field`, je Nation fest
+- `campaign_details`
 
-## Qualitätskontrolle
+## Was nicht gemalt wird
 
-Vor der Aufnahme eines Portraits in den finalen Asset-Pool werden mindestens folgende Punkte geprüft:
+Die volle Kombination ist verboten. 64 Personen, 14 Ränge, 21 Bartzustände, mehrere Frisuren, mehrere Farben und drei Kopfzustände wären mehrere Millionen Bilder.
 
-1. Kopf vollständig im Rahmen.
-2. Beide Schultern sichtbar.
-3. Torso innerhalb des definierten Ausschnitts.
-4. Beide Arme innerhalb des vorgesehenen Bildbereichs.
-5. Unterer Bildabschluss entspricht dem Master Frame.
-6. Gleiche Kameradistanz und Perspektive.
-7. Gleiche vertikale Körperposition.
-8. Keine unerwünschten Zoom-/Crop-Abweichungen.
-9. Rang- und Uniformmerkmale bleiben lesbar.
-10. Das Gesicht bleibt über Alters-/Bart-/Haarvarianten als dieselbe Person erkennbar.
+Gemalt wird nur die Ebene, die sich wirklich ändert.
 
-## Erweiterbarkeit
+| Ebene | Richtwert | Rechnung |
+|---|---:|---|
+| Gesichter | 320 | 64 Personen × 5 Altersstufen |
+| Körper | 160 | 16 Nationen × 2 Geschlechter × 5 Kleidergruppen |
+| Abzeichen | 224 | 16 Nationen × 14 Ränge |
+| Frisuren | etwa 32 | wenige Kopfgruppen × Katalog, Farbe als Umfärbung |
+| Bärte | etwa 168 | Kiefergruppen × 21 Formen × jung/grau |
+| Mützen | etwa 96 | je Nation und Geschlecht eine Schirmmütze, eine Zweitmütze, ab General ein Hut |
+| Details | ein kleiner Satz | Narbenstufen, Klappe, Ohr, für alle Nationen |
 
-Das System soll später auch für folgende Inhalte verwendet werden:
+Zusammen knapp **1 000** gemalte Ebenen, plus Umfärbungen.
 
-- neue Offiziere
-- NPCs
-- Kampagnencharaktere
-- zufällige Generäle
-- zivile Charaktere
-- historische Rückblenden
-- neue Nationen
-- Erweiterungen/DLC
+Die vorhandenen 72 PNGs der acht Männer bis zum Hauptmann sind eine Probe. Sie sind nicht der Master Frame und werden nicht als Ebenen weiterverwendet.
 
-Die ursprünglichen 64 Portraits dienen damit als definierte Referenzpopulation, nicht als Begrenzung des Systems.
+## Qualität
+
+Eine Ebene kommt nur in den Pool, wenn gilt:
+
+1. Kopf, Schultern und Arme sitzen im Rahmen.
+2. Der Saum erreicht den unteren Rand, ohne Hose und ohne weißen Rest.
+3. Der Grund ist transparent.
+4. Kamera und Maßstab sind die der Master-Referenz.
+5. Dieselbe Person bleibt in allen fünf Altern erkennbar.
+6. Die zwei Gesichter eines Geschlechts sind nicht austauschbar.
+7. Rang und Orden sind lesbar und lassen der Brust Platz.
+8. Die Mütze sitzt im oberen Rand und verdeckt nicht das Abzeichen.
+9. Bartregionen lassen sich einzeln ausblenden.
+10. Eine höhere Kleidergruppe enthält alles, was die niedrigere schon gezeigt hat.
+
+## Reihenfolge
+
+1. Master Frame an einer Person festnageln, barhaupt und mit Schirmmütze.
+2. Die acht benannten Nationen als Fähnrich, vier Gesichter, ohne Bart.
+3. Erst danach die zweite Mützenart, die fünf Kleidergruppen und die Abzeichen.
+4. Bart und Haar als Ebenen, nicht als neue Porträts.
+5. N09 bis N16 erst, wenn die ersten acht den Rahmen halten.
