@@ -516,3 +516,536 @@ Als schließlich der erste große Krieg begann, war kaum noch eine Regierung in 
 
 **Die Soldaten kämpfen an der Front.  
 Die Ursachen des Krieges liegen Jahrzehnte hinter ihnen.**
+
+
+---
+
+# Erweiterung auf sechzehn Nationen
+
+Mit der langfristigen Weltplanung wird *Division Command* von acht auf **sechzehn Nationen** erweitert. Die zusätzlichen Nationen sollen nicht einfach weitere militärische Archetypen darstellen. Sie erweitern vor allem das politische, gesellschaftliche und kulturelle Spektrum der Welt.
+
+Die Welt soll unterschiedliche Antworten auf Fragen zeigen wie:
+
+- Wer darf politische Macht ausüben?
+- Wie wird Herrschaft legitimiert?
+- Welche Rolle spielen Religion und Tradition?
+- Wie weit darf ein Staat in das Leben seiner Bürger eingreifen?
+- Wem gehört wirtschaftliche Macht?
+- Wie verhalten sich Militär und zivile Regierung?
+- Was geschieht nach Revolution, Kolonialherrschaft oder Bürgerkrieg?
+- Kann ein Staat zugleich demokratisch und stark sicherheitsorientiert sein?
+- Wie funktioniert eine Gesellschaft, die sich bewusst von Nationalstaaten unterscheidet?
+- Kann Frieden selbst zum strategischen Machtinstrument werden?
+
+Die Nationen orientieren sich dabei an **politischen Strukturtypen**, ohne reale Staaten eins zu eins abzubilden. Politikwissenschaftlich werden unter anderem demokratische, autoritäre, militärische, monarchische, theokratische, Einparteien- und hybride Herrschaftsformen unterschieden. citeturn0search0turn0search12
+
+Wichtig ist deshalb: Eine Nation kann widersprüchlich sein. Eine Republik kann Freiheitsrechte besitzen und gleichzeitig harte Sicherheitsgesetze haben. Eine religiöse Gesellschaft kann wissenschaftlich hochentwickelt sein. Ein autoritärer Staat kann funktionierende Institutionen besitzen. Eine Demokratie kann wirtschaftlich von wenigen Konzernen dominiert werden.
+
+**Division Command soll keine politische Welt mit eindeutigen moralischen Farben sein.**
+
+---
+
+# 9. Eldran
+
+### Die konstitutionelle Monarchie
+
+Eldran ist eine alte Monarchie, die mehrere politische Krisen nur überlebt hat, weil sie ihre eigene Macht schrittweise begrenzte.
+
+Der Monarch besitzt weiterhin erhebliche symbolische Bedeutung, regiert aber nicht allein. Parlament, Gerichte, regionale Körperschaften und Krone bilden ein kompliziertes Machtgleichgewicht.
+
+Die eldranische Gesellschaft ist politisch gespalten:
+
+- Traditionalisten sehen in der Krone Kontinuität.
+- Republikaner betrachten sie als überholtes Privileg.
+- Moderate Kräfte sehen sie als institutionelles Bindeglied.
+
+### Politisches System
+
+Eldran ist eine konstitutionelle Monarchie mit parlamentarischen Institutionen.
+
+Die Monarchie ist weder reine Diktatur noch bloße Dekoration. In nationalen Krisen kann die Krone bestimmte verfassungsmäßige Funktionen übernehmen, während die tägliche Politik von gewählten Institutionen bestimmt wird.
+
+### Militär
+
+Eldran ist besonders stark in:
+
+- Befestigungen
+- Minensystemen
+- Pionierwesen
+- Territorialverteidigung
+- Artillerie
+- vorbereiteten Verteidigungsstellungen
+
+Die Streitkräfte besitzen eine starke Tradition der Landesverteidigung.
+
+### Innerer Konflikt
+
+Die zentrale Frage lautet:
+
+> **Ist Tradition ein Fundament der Freiheit – oder ein Hindernis für sie?**
+
+---
+
+# 10. Namar
+
+### Die maritime Föderation
+
+Namar besteht aus Küstenregionen, Inseln und Hafenstädten. Seine politische Identität entstand nicht aus einem gemeinsamen Volk, sondern aus der Notwendigkeit, Handel, Wasserwege und Küstenschutz gemeinsam zu organisieren.
+
+### Politisches System
+
+Namar ist eine föderale parlamentarische Republik.
+
+Die einzelnen Regionen besitzen weitreichende Kompetenzen. Eine starke Zentralregierung wird historisch misstrauisch betrachtet.
+
+Politische Macht verteilt sich auf:
+
+- Bundesinstitutionen
+- Küstenregionen
+- Hafenverwaltungen
+- Handelsverbände
+- gewählte Kommunen
+
+### Technologie
+
+Namar konzentriert sich auf:
+
+- amphibische Fahrzeuge
+- maritime Sensorik
+- Küstenschutz
+- Transport
+- autonome Boote
+- Wasseraufbereitung
+- mobile Hafeninfrastruktur
+
+### Militär
+
+Namars Armee muss ständig zwischen Land-, Küsten- und Seestreitkräften koordinieren.
+
+### Innerer Konflikt
+
+Die föderale Freiheit macht Namar flexibel.
+
+Sie macht Entscheidungen aber auch langsam.
+
+> **Wie viel Einheit braucht eine Gesellschaft, die ihre Freiheit gerade aus ihrer Vielfalt ableitet?**
+
+---
+
+# 11. Orthea
+
+### Die wissenschaftliche Republik
+
+Orthea entstand nach einer Zeit, in der politische Entscheidungen zunehmend durch wissenschaftliche Gremien ersetzt wurden.
+
+Die daraus entstandene Republik versucht heute, Wissenschaft und demokratische Legitimation miteinander zu verbinden.
+
+### Politisches System
+
+Orthea besitzt demokratische Institutionen, unabhängige Forschungseinrichtungen und einen außergewöhnlich starken öffentlichen Wissenschaftssektor.
+
+Wissenschaftler haben erheblichen gesellschaftlichen Einfluss, besitzen aber keine automatische politische Herrschaft.
+
+### Technologie
+
+Orthea entwickelt:
+
+- Präzisionssensoren
+- autonome Systeme
+- medizinische Technik
+- Robotik
+- Zielerfassung
+- Analyse- und Entscheidungssysteme
+- hochentwickelte Kommunikationssysteme
+
+### Militär
+
+Ortheas Streitkräfte setzen auf Qualität der Informationen statt auf Masse.
+
+Der Staat versucht, menschliche Fehlentscheidungen durch technische Assistenz zu reduzieren.
+
+### Innerer Konflikt
+
+> **Kann eine Entscheidung wissenschaftlich korrekt und politisch trotzdem falsch sein?**
+
+Orthea muss ständig zwischen technischer Optimierung und menschlicher Verantwortung vermitteln.
+
+---
+
+# 12. Dargan
+
+### Die Grenzrepublik
+
+Dargan liegt an der Peripherie der bekannten Wirtschafts- und Machtzentren. Große Entfernungen, extreme Landschaften und unzuverlässige Infrastruktur prägten seine Gesellschaft.
+
+Dargan wurde nicht durch Reichtum stark, sondern durch Überlebensfähigkeit.
+
+### Politisches System
+
+Dargan ist eine republikanische Mischordnung mit starken regionalen Verwaltungen.
+
+In abgelegenen Gebieten besitzt die Zentralregierung nur begrenzte Kontrolle. Lokale Gemeinden, Siedlungen und regionale Sicherheitsverbände übernehmen viele Aufgaben selbst.
+
+### Technologie
+
+Dargan bevorzugt:
+
+- robuste Fahrzeuge
+- reparierbare Systeme
+- Geländetechnik
+- einfache Sensorik
+- mobile Werkstätten
+- modulare Ausrüstung
+- Systeme mit geringer Abhängigkeit von Infrastruktur
+
+### Militär
+
+Darganische Einheiten sind auf schwieriges Gelände und lange unabhängige Einsätze vorbereitet.
+
+### Innerer Konflikt
+
+Die Bewohner verteidigen ihre Unabhängigkeit.
+
+Gleichzeitig führt die geringe staatliche Kontrolle zu großen Unterschieden bei Wohlstand, Sicherheit und politischer Teilhabe.
+
+> **Wie viel Staat braucht Freiheit, wenn der Staat weit entfernt ist?**
+
+---
+
+# 13. Lyr
+
+### Die Bergrepubliken
+
+Lyr ist kein klassischer Nationalstaat. Mehrere Bergrepubliken und autonome Täler bilden einen dauerhaften politischen Bund.
+
+Die Bevölkerung besitzt eine starke lokale Identität.
+
+### Politisches System
+
+Lyr ist eine konföderale Ordnung.
+
+Regionen behalten einen großen Teil ihrer Souveränität. Entscheidungen, die alle betreffen, müssen zwischen den Mitgliedern ausgehandelt werden.
+
+### Technologie
+
+Die besonderen Bedingungen Lyres führten zu Fortschritten bei:
+
+- Tunnelbau
+- Pionierwesen
+- Bergbau
+- unterirdischer Sensorik
+- Seil- und Transportsystemen
+- befestigten Stellungen
+- Gebirgsmobilität
+
+### Militär
+
+Lyres Streitkräfte kennen das eigene Gelände außergewöhnlich gut.
+
+Stellungen, Tunnel und natürliche Engpässe sind Teil der militärischen Infrastruktur.
+
+### Innerer Konflikt
+
+Die einzelnen Republiken fürchten, dass gemeinsame Sicherheit langfristig zu einem Zentralstaat führt.
+
+> **Wie viel gemeinsame Macht kann eine Konföderation besitzen, ohne aufzuhören, eine Konföderation zu sein?**
+
+---
+
+# 14. Caldris
+
+### Der fürsorgliche Sicherheitsstaat
+
+Caldris ist eine der widersprüchlichsten Gesellschaften der Welt.
+
+Der Staat garantiert umfangreiche soziale Versorgung, medizinische Betreuung, Wohnraum und Schutz vor wirtschaftlicher Not.
+
+Gleichzeitig überwacht er seine Bevölkerung umfassend.
+
+### Politisches System
+
+Caldris ist ein autoritärer Wohlfahrtsstaat.
+
+Die Regierung rechtfertigt ihre Macht weniger durch nationale Größe als durch Sicherheit und soziale Stabilität.
+
+### Technologie
+
+Caldris entwickelt:
+
+- medizinische Systeme
+- elektronische Kriegsführung
+- Kommunikationskontrolle
+- Überwachung
+- biometrische Systeme
+- Schutztechnik
+- zivile Notfallinfrastruktur
+
+### Militär
+
+Caldris versucht, Schäden zu begrenzen und die eigene Gesellschaft vor Chaos zu schützen.
+
+Militärische und zivile Sicherheitsstrukturen sind eng miteinander verbunden.
+
+### Innerer Konflikt
+
+Die Bevölkerung erhält reale soziale Leistungen.
+
+Der Preis ist ein erheblicher Verlust an Privatsphäre.
+
+> **Wie viel Freiheit darf ein Staat im Namen der Sicherheit nehmen, wenn er dafür tatsächlich Sicherheit liefert?**
+
+---
+
+# 15. Merovan
+
+### Das postimperiale Handelsreich
+
+Merovan war einst Zentrum eines großen Überseeimperiums.
+
+Nach dessen Zerfall blieb ein weitverzweigtes Netz aus Handelswegen, ehemaligen Kolonien, Häfen und wirtschaftlichen Beziehungen zurück.
+
+### Politisches System
+
+Merovan ist heute eine parlamentarische Republik mit starken Handels- und Wirtschaftsinteressen.
+
+Die alte imperiale Elite verlor ihre formale politische Macht, besitzt aber weiterhin Vermögen, Kontakte und kulturellen Einfluss.
+
+### Militär
+
+Merovan benötigt Streitkräfte, die weit von der Heimat entfernt operieren können.
+
+Schwerpunkte sind:
+
+- Expeditionstruppen
+- modulare Ausrüstung
+- Transport
+- Logistik
+- Ingenieurwesen
+- internationale Stützpunkte
+
+### Gesellschaft
+
+Merovan ist kulturell vielfältig. Gleichzeitig existieren heftige Debatten darüber, wie viel Verantwortung ein ehemaliges Imperium gegenüber den Gesellschaften trägt, die durch seine frühere Herrschaft geprägt wurden.
+
+### Innerer Konflikt
+
+> **Kann ein Staat seine imperiale Vergangenheit überwinden, ohne sie zu verdrängen?**
+
+---
+
+# 16. Theryn
+
+### Die revolutionäre Republik
+
+Theryn entstand aus einer Revolution gegen eine alte politische und wirtschaftliche Ordnung.
+
+Die Revolution versprach Gleichheit, Selbstbestimmung und das Ende einer privilegierten Elite.
+
+Nach dem Sieg stellte sich jedoch die schwierigere Frage:
+
+**Wie verhindert eine Revolution, selbst zu einer neuen Herrschaftselite zu werden?**
+
+### Politisches System
+
+Theryn ist offiziell eine sozialistische Republik mit starken Massenorganisationen.
+
+Die politische Macht wird über Räte, Parteien und revolutionäre Institutionen organisiert.
+
+Innerhalb des Staates existiert jedoch ein permanenter Konflikt zwischen demokratischen Rätestrukturen und zentralisierenden Kräften.
+
+### Technologie und Militär
+
+Theryn setzt auf:
+
+- einfache robuste Systeme
+- modulare Konstruktionen
+- Massenproduktion
+- improvisierte Reparaturen
+- große Reserveverbände
+- zivile Mobilisierung
+
+### Innerer Konflikt
+
+Die Revolution hat echte gesellschaftliche Veränderungen ermöglicht.
+
+Sie hat aber auch politische Gewalt legitimiert.
+
+> **Wann endet die Revolution – und wer entscheidet darüber?**
+
+---
+
+# 17. Religiöse Staaten und nichtstaatliche Akteure
+
+Die politische Welt von *Division Command* soll nicht auf säkulare Nationalstaaten beschränkt bleiben.
+
+Religion kann eine eigenständige Quelle politischer Legitimation sein. Eine Theokratie bezeichnet dabei eine Herrschaftsordnung, in der religiöse Autorität beziehungsweise religiös begründetes Recht eine zentrale oder oberste politische Legitimation besitzt. citeturn0search10turn0search7
+
+Gleichzeitig sollten **terroristische oder militante Organisationen nicht automatisch als Nationen behandelt werden**.
+
+Das eröffnet eine zusätzliche Ebene der Welt:
+
+- Staaten
+- Bündnisse
+- separatistische Bewegungen
+- Milizen
+- religiöse Bewegungen
+- Terrororganisationen
+- Söldnerorganisationen
+- Widerstandsbewegungen
+- internationale Hilfsorganisationen
+- private Sicherheitsunternehmen
+
+Diese Akteure können in der Lore, in Kampagnen oder später als Kartenmechanik auftreten, ohne eine der sechzehn Nationen ersetzen zu müssen.
+
+---
+
+# 18. Optionale religiöse Nation: noch nicht endgültig vergeben
+
+Für die vollständige politische Abdeckung ist langfristig eine **explizit religiös legitimierte Nation** sinnvoll.
+
+Sie sollte nicht einfach ein Klischee einer realen Religion kopieren.
+
+Stattdessen könnte sie beispielsweise auf einer erfundenen monotheistischen oder polytheistischen Staatsreligion beruhen.
+
+### Mögliche Struktur
+
+- religiöses Oberhaupt mit politischer Funktion
+- religiös begründetes Recht
+- zivile Verwaltung unter religiöser Aufsicht
+- religiöse Gerichte
+- starke Wohlfahrts- und Gemeinschaftsstrukturen
+- religiös motivierte Friedensbewegungen innerhalb des Staates
+- gleichzeitig radikale und reformorientierte Fraktionen
+
+Wichtig wäre dabei eine **innere politische Vielfalt**.
+
+Eine religiöse Nation muss nicht automatisch aggressiv sein.
+
+Sie könnte ebenso:
+
+- Vermittlung
+- humanitäre Hilfe
+- Schutz von Zivilisten
+- Waffenstillstände
+- religiöse Diplomatie
+- soziale Versorgung
+
+zu ihren politischen Schwerpunkten machen.
+
+Damit kann die Welt auch einen aktiven **Friedenspfad** glaubwürdig darstellen.
+
+---
+
+# 19. Terrororganisationen und andere nichtstaatliche Akteure
+
+Terrorismus sollte in *Division Command* als **politische und militärische Organisationsform eines nichtstaatlichen Akteurs** behandelt werden, nicht als eigene Nation.
+
+Das ist wichtig, weil eine Terrororganisation normalerweise nicht dieselbe staatliche Struktur besitzt wie eine Republik, Monarchie oder Theokratie.
+
+Mögliche fiktive Organisationen könnten später beispielsweise sein:
+
+### Die Aschefront
+
+Eine radikale Untergrundorganisation, die den bestehenden Staat durch Anschläge, Sabotage und Einschüchterung destabilisieren will.
+
+### Das Morgenbanner
+
+Eine revolutionäre Bewegung, die behauptet, im Namen unterdrückter Regionen zu kämpfen.
+
+### Die Bruderschaft des letzten Wortes
+
+Eine religiös-extremistische Organisation, die behauptet, ausschließlich ihre eigene Auslegung einer heiligen Lehre sei legitim.
+
+### Die Freien Kompanien
+
+Ein Netzwerk aus Söldnern, Schmugglern und ehemaligen Soldaten ohne einheitliche Ideologie.
+
+Diese Organisationen können später eigene Karten, Kampagnen oder Ereignisse erhalten.
+
+**Dabei sollte das Spiel Terrorismus nicht als coolen oder erstrebenswerten Lebensstil darstellen.** Seine Funktion kann vielmehr zeigen, wie politische Gewalt, Radikalisierung, zivile Opfer und staatliche Gegenmaßnahmen miteinander eskalieren.
+
+---
+
+# Politisches Spektrum der sechzehn Nationen
+
+Die sechzehn Nationen decken damit bewusst unterschiedliche politische Modelle ab:
+
+| Nation | Politische Grundstruktur | Gesellschaftlicher Schwerpunkt |
+|---|---|---|
+| **Averon** | liberale Republik | Freiheit, Vernetzung, Modernisierung |
+| **Karsk** | technokratischer Autoritarismus | Kontrolle, Optimierung, Körpertechnologie |
+| **Ossaria** | freie Republik | Erinnerung, Schutz, individuelle Freiheit |
+| **Rothain** | Republik mit imperialem Erbe | Tradition, Veteranen, militärische Identität |
+| **Sahr** | Handels- und Städtebund | Handel, Infrastruktur, wirtschaftliche Interessen |
+| **Steinmark** | föderale Republik | Institutionen, Verwaltung, Rechtsstaat |
+| **Vael** | industrieller Machtstaat | Industrie, Konzerne, Produktion |
+| **Vesper** | Sicherheitsstaat | Geheimhaltung, Nachrichtendienste, Kontrolle |
+| **Eldran** | konstitutionelle Monarchie | Tradition, Parlament, Krone |
+| **Namar** | maritime Föderation | regionale Autonomie, Handel, Küstenschutz |
+| **Orthea** | wissenschaftliche Republik | Forschung, Rationalität, Technologie |
+| **Dargan** | dezentrale Grenzrepublik | Selbstverwaltung, Robustheit, Überleben |
+| **Lyr** | Konföderation | lokale Souveränität, gemeinsame Verteidigung |
+| **Caldris** | autoritärer Wohlfahrtsstaat | soziale Sicherheit, Überwachung |
+| **Merovan** | postimperiale Handelsrepublik | Handel, globale Verflechtung, Kolonialerbe |
+| **Theryn** | revolutionäre sozialistische Republik | Gleichheit, Massenorganisation, Revolution |
+
+Diese Tabelle ist **keine moralische Rangordnung**. Sie ist eine Weltbau-Matrix.
+
+---
+
+# Politische Vielfalt als Designprinzip
+
+Die sechzehn Nationen sollen nicht in ein simples Links-Rechts-Schema fallen.
+
+Politische Konflikte können gleichzeitig auf mehreren Achsen stattfinden:
+
+1. **Freiheit ↔ Kontrolle**
+2. **Zentralismus ↔ Föderalismus**
+3. **Tradition ↔ Modernisierung**
+4. **Religion ↔ Säkularismus**
+5. **Staat ↔ Privatwirtschaft**
+6. **Eliteherrschaft ↔ Massenbeteiligung**
+7. **Nationalstaat ↔ internationale Kooperation**
+8. **Militärische Sicherheit ↔ zivile Kontrolle**
+9. **Technokratie ↔ politische Selbstbestimmung**
+10. **Konfrontation ↔ Diplomatie**
+
+Dadurch können zwei Staaten, die beide als „demokratisch“ gelten, trotzdem völlig unterschiedliche Gesellschaften darstellen.
+
+Ebenso können zwei autoritäre Staaten völlig unterschiedliche Gründe für ihre Herrschaft besitzen.
+
+Das ist für *Division Command* zentral:
+
+> **Die politische Ordnung erklärt die Entscheidungen einer Gesellschaft. Sie entscheidet nicht automatisch darüber, ob diese Gesellschaft gut oder böse ist.**
+
+---
+
+# Frieden als politischer Machtfaktor
+
+Die politische Vielfalt eröffnet außerdem einen eigenständigen strategischen Raum für **Diplomatie und Deeskalation**.
+
+Eine Nation oder ein politischer Akteur kann versuchen, einen Krieg nicht durch Vernichtung des Gegners, sondern durch dessen politische Handlungsunfähigkeit zur Fortsetzung des Krieges zu beenden.
+
+Mögliche politische Instrumente:
+
+- Waffenstillstände
+- Evakuierungen
+- internationale Beobachter
+- humanitäre Korridore
+- Verhandlungen
+- Vermittlung
+- Schutz neutraler Zonen
+- Unterdrückung von Vergeltungsreaktionen
+- Schadensabsorption
+- politische Zugeständnisse
+- internationale Sanktionen
+- öffentliche Legitimität
+- Kriegserschöpfung
+
+Damit wäre Frieden nicht einfach die Abwesenheit von Angriffen.
+
+**Frieden wäre eine aktive Strategie.**
+
+Ein Spieler könnte den Gegner schrittweise in eine Lage bringen, in der weitere militärische Eskalation politisch, materiell oder gesellschaftlich immer schwieriger wird.
+
+Das passt zum übergeordneten Thema von *Division Command*: Der Krieg soll nicht nur als taktisches Puzzle erscheinen, sondern als System, in dem militärische Entscheidungen politische Folgen erzeugen.
