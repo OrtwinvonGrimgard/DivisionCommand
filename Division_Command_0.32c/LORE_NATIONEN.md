@@ -1,28 +1,164 @@
-# Division Command – Die sechzehn Nationen
+# Division Command – Die Welt und ihre sechzehn Nationen
 
 > **Status:** Lore-Grundlage  
-> **Version:** 0.2  
-> **Zweck:** Hintergrundgeschichte, politische Systeme, technologische Entwicklung und geopolitischer Rahmen der sechzehn Nationen von *Division Command*.
-
-## Grundidee
-
-Die Welt von *Division Command* ist keine Welt klar getrennter Helden- und Schurkenstaaten. Jede Nation besitzt eigene Erinnerungen, Ängste, Interessen und Rechtfertigungen. Keine Regierung erzählt ihren Bürgern dieselbe Geschichte, die ihre Soldaten im Feld erleben.
-
-Der Krieg begann nicht durch einen einzelnen Schurken oder einen einzigen Tag. Jahrzehnte aus Grenzstreitigkeiten, wirtschaftlichem Druck, Bündnissen, Stellvertreterkonflikten und gegenseitigem Misstrauen führten dazu, dass die militärische Planung schließlich schneller wuchs als die Fähigkeit der Politik, sie zu kontrollieren.
-
-Die sechzehn Nationen stehen nicht einfach für acht feste Spielstile. Sie repräsentieren unterschiedliche gesellschaftliche und technische Antworten auf dieselbe Frage:
-
-**Wie viel Freiheit, Sicherheit und Menschlichkeit darf eine Gesellschaft opfern, wenn sie glaubt, nur dadurch überleben zu können?**
-
-Ein wichtiger Grundsatz für das Design von *Division Command* lautet dabei:
-
-> **Die nationale Lore ist keine starre mechanische Schablone.**
-
-Eine Kartenidee muss nicht automatisch einer bestimmten Nation zugeordnet werden. Viele militärische Technologien, Einheiten und Einsatzmethoden können in mehreren Nationen existieren und lediglich unterschiedlich dargestellt oder eingesetzt werden.
+> **Version:** 0.3 – neu geordnet  
+> **Zweck:** Weltgeschichte, Geografie, Gesellschaft, Politik, Technologie, Militär und konkrete Lore-Anker der sechzehn Nationen von *Division Command*.
 
 ---
 
-# 1. Averon
+# I. Die Welt von Division Command
+
+## Grundidee
+
+*Division Command* spielt in einer vollständig fiktiven Welt aus sechzehn souveränen Nationen. Diese Welt ist keine einfache Aufteilung in Helden- und Schurkenstaaten. Jede Gesellschaft besitzt eigene Erinnerungen, Ängste, Interessen, wirtschaftliche Abhängigkeiten, politische Rechtfertigungen und innere Widersprüche.
+
+Der gegenwärtige Konflikt ist das Ergebnis einer langen Entwicklung. Grenzstreitigkeiten, wirtschaftlicher Druck, Bündnisse, Stellvertreterkonflikte, technologische Aufrüstung und gegenseitiges Misstrauen haben dazu geführt, dass militärische Planung schneller gewachsen ist als die Fähigkeit der Politik, ihre Folgen zu kontrollieren.
+
+> **Der Krieg beginnt auf der Karte. Seine Folgen beginnen am Küchentisch.**
+
+Die sechzehn Nationen beantworten dieselbe grundlegende Frage auf unterschiedliche Weise:
+
+> **Wie viel Freiheit, Sicherheit und Menschlichkeit darf eine Gesellschaft opfern, wenn sie glaubt, nur dadurch überleben zu können?**
+
+## Keine Nation ist ein Klischee
+
+Eine Nation ist niemals nur ihre Regierung.
+
+Innerhalb jedes Staates existieren:
+- unterschiedliche Regionen und Städte
+- soziale Schichten
+- Familien mit unterschiedlichen Erinnerungen
+- politische Opposition
+- religiöse und säkulare Gruppen
+- verschiedene Generationen
+- wirtschaftliche Interessen
+- Menschen, die ihre Regierung unterstützen
+- Menschen, die sie ablehnen
+- Menschen, die sich schlicht aus Politik heraushalten
+
+Ein Soldat kann seine Aufgabe erfüllen und den Krieg trotzdem verabscheuen. Eine Regierung kann Krieg wollen, während Bürger Frieden wünschen. Ein Staat kann reale Sicherheit schaffen und gleichzeitig Freiheit einschränken.
+
+## Geografie und Weltkarte
+
+Die Welt von *Division Command* besitzt eine eigenständige, nicht an reale Staaten gebundene Geografie. Die bisher festgelegten Regionen, Küsten, Gebirge, Flussräume, Inselgebiete und Grenzkorridore bilden den verbindlichen Arbeitsstand für die spätere Weltkarte.
+
+Die Karte soll vor allem folgende geographische Logiken sichtbar machen:
+- Gebirge und strategische Pässe, besonders in **Lyr** und **Dargan**
+- große Fluss- und Handelsräume in **Sahr**
+- ausgeprägte Küsten- und Inselräume in **Namar**
+- internationale Hafenachsen in **Sahr** und **Merovan**
+- industrielle Räume in **Vael**, **Karsk** und **Theryn**
+- dichte urbane und technologische Zentren in **Averon** und **Orthea**
+- strategische Grenz- und Sicherheitskorridore in **Vesper** und **Eldran**
+
+Die endgültige Weltkarte wird diese Zusammenhänge später präzisieren. Die Lore soll dabei immer Ursache und Wirkung verbinden: Grenzen, Städte, Handelswege, Migration und Kriege müssen geographisch nachvollziehbar sein.
+
+## Die gemeinsame Vorgeschichte
+
+Die sechzehn Staaten waren nicht immer Feinde.
+
+Über Jahrzehnte bestanden Handelsabkommen, Verteidigungsbündnisse, gemeinsame Forschungsprojekte und politische Verträge. Mehrfach wurden große Kriege verhindert.
+
+Doch jede verhinderte Katastrophe hinterließ neue Sicherheitsmaßnahmen. Jede neue Sicherheitsmaßnahme wurde vom Nachbarn als Vorbereitung auf einen Angriff verstanden.
+
+Aus Misstrauen wurde Aufrüstung.  
+Aus Aufrüstung wurde Abschreckung.  
+Aus Abschreckung wurden Bündnisse.  
+Aus Bündnissen wurden Verpflichtungen.
+
+Als schließlich der erste große Krieg begann, war kaum eine Regierung noch in der Lage, ihn allein zu beenden.
+
+Die heutigen Grenzen und Feindschaften sollen deshalb nicht als plötzlich entstandene Fronten verstanden werden. Sie sind das Ergebnis einer langen Kette aus historischen Entscheidungen.
+
+## Die sechzehn Nationen im Überblick
+
+| Nation | Staats- und Gesellschaftsmodell | Prägende Themen | Hauptstadt |
+|---|---|---|---|
+| **Averon** | junge liberale Republik | Freiheit, Vernetzung, Modernisierung | Novaris |
+| **Karsk** | technokratischer Sicherheitsstaat | Kontrolle, Optimierung, Körpertechnologie | Varkesh |
+| **Ossaria** | freie technologische Republik | Erinnerung, Schutz, zivile Institutionen | Ossar |
+| **Rothain** | Republik mit imperialem Erbe | Tradition, Veteranen, Vergangenheit | Rothenburg |
+| **Sahr** | Handels- und Städtebund | Handel, Infrastruktur, Versorgung | Sarun |
+| **Steinmark** | föderale Republik | Recht, Verwaltung, Ordnung | Steinburg |
+| **Vael** | industrielles Machtzentrum | Produktion, Konzerne, Maschinen | Vaalen |
+| **Vesper** | zentralisierter Sicherheitsstaat | Geheimhaltung, Nachrichtendienste, Täuschung | Velis |
+| **Eldran** | konstitutionelle Monarchie | Krone, Parlament, Tradition | Aurelien |
+| **Namar** | maritime Föderation | Inseln, Häfen, regionale Autonomie | Maris |
+| **Orthea** | wissenschaftliche Republik | Forschung, Daten, Präzision | Asteron |
+| **Dargan** | dezentrale Grenzrepublik | Robustheit, Selbsthilfe, schwieriges Gelände | Dargesh |
+| **Lyr** | Konföderation der Bergrepubliken | lokale Souveränität, Pässe, Tunnel | Valen |
+| **Caldris** | autoritärer Wohlfahrtsstaat | Versorgung, Medizin, Überwachung | Seren |
+| **Merovan** | postimperiale Handelsrepublik | Handel, Migration, Imperium | Merovia |
+| **Theryn** | revolutionäre sozialistische Republik | Gleichheit, Massenorganisation, Reform | Novagrad |
+
+## Politische Vielfalt
+
+Die sechzehn Nationen sollen nicht auf ein simples Links-Rechts-Schema reduziert werden. Relevante Spannungsachsen sind:
+1. Freiheit ↔ Kontrolle
+2. Zentralismus ↔ Föderalismus
+3. Tradition ↔ Modernisierung
+4. Religion ↔ Säkularismus
+5. Staat ↔ Privatwirtschaft
+6. Eliteherrschaft ↔ Massenbeteiligung
+7. Nationalstaat ↔ internationale Kooperation
+8. militärische Sicherheit ↔ zivile Kontrolle
+9. Technokratie ↔ politische Selbstbestimmung
+10. Konfrontation ↔ Diplomatie
+
+Diese Achsen können sich überschneiden. Eine Republik kann starke Sicherheitsgesetze besitzen. Ein autoritärer Staat kann funktionierende Institutionen haben. Eine wissenschaftlich geprägte Gesellschaft kann demokratisch organisiert sein.
+
+## Frieden und nichtstaatliche Akteure
+
+Krieg ist nicht die einzige politische Handlungsebene.
+
+Neben Staaten existieren:
+- Bündnisse
+- separatistische Bewegungen
+- Milizen
+- religiöse Bewegungen
+- Widerstandsgruppen
+- Söldnerorganisationen
+- internationale Hilfsorganisationen
+- private Sicherheitsunternehmen
+
+Diese Akteure können in Kampagnen und späteren Karten auftreten, ohne selbst zu den sechzehn Nationen zu werden.
+
+Diplomatie und Deeskalation sind ebenfalls strategische Handlungen. Waffenstillstände, Evakuierungen, humanitäre Korridore, Vermittlung, internationale Beobachter, Sanktionen und politische Zugeständnisse können Teil der Welt sein.
+
+> **Frieden ist in dieser Welt nicht bloß die Abwesenheit von Angriffen. Frieden ist eine aktive politische Entscheidung.**
+
+## Nationale Identität und Spielmechanik
+
+Die nationale Lore ist keine starre mechanische Schablone.
+
+Eine militärische Funktion kann in mehreren Nationen existieren und nur unterschiedlich dargestellt werden. Gefechtsaufklärung kann beispielsweise bei Averon über ein vernetztes System, bei Ossaria über eine Kampfrüstung, bei Karsk über Körperimplantate, bei Vesper über menschliche Nachrichtendienste und bei Sahr über mobile Aufklärung erfolgen.
+
+Für das Kartendesign gilt:
+1. Zuerst kommt die spielerische Funktion.
+2. Stärke und Kosten werden unabhängig von der Lore geprüft.
+3. Erst danach wird entschieden, welche Nation oder Nationen die Karte verwenden können.
+4. Exklusivität wird nur eingesetzt, wenn sie für Identität oder Balancing sinnvoll ist.
+5. Keine Nation wird auf einen einzigen Archetyp reduziert.
+
+### Eliteeinheiten
+
+Eliteeinheiten sollen nicht lediglich größere Werte besitzen. Ihre besondere Funktion besteht darin, **neue Regeln oder neue Interaktionen in das Spiel einzuführen**.
+
+Nationale Besonderheiten können sich deshalb besonders stark in Elitekarten zeigen, während der normale Kartenpool offen bleibt.
+
+## Grundsatz der Weltentwicklung
+
+Neue Details werden nicht isoliert erfunden.
+
+Ein neues Unternehmen braucht einen Ort, eine soziale Funktion und eine historische Erklärung. Eine neue Familie braucht einen Beruf, eine Region und eine Erinnerung. Ein Militärverband braucht eine gesellschaftliche Herkunft.
+
+> **Wir entwickeln keine sechzehn Klischees. Wir entwickeln sechzehn Gesellschaften.**
+
+---
+
+# II. Die sechzehn Nationen
+
+# 1. Averon – Die junge Republik
 
 ### Die junge Republik
 
@@ -68,7 +204,250 @@ Averon behauptet, Krieg verhindern zu wollen. Seine militärische Planung basier
 
 ---
 
-# 2. Karsk
+## Nationale Leitfrage
+
+**Leitfrage:** Wie viel Freiheit bleibt, wenn eine Gesellschaft ständig auf die nächste Krise vorbereitet sein muss?
+
+**Alltagswiderspruch:** Menschen genießen große persönliche Freiheit, erleben aber gleichzeitig einen permanenten Druck, informiert, leistungsfähig und gesellschaftlich relevant zu bleiben.
+
+**Besonderer Ausbau:** Averon sollte starke Unterschiede zwischen digitalisierten Großstädten und kleineren Gemeinden erhalten. Dadurch entsteht innerhalb derselben Republik ein Konflikt zwischen Geschwindigkeit und Bodenständigkeit.
+
+## Hauptstadt
+
+Novaris ist eine junge, dicht bebaute Metropole mit gläsernen Verwaltungsgebäuden, großen Wohnkomplexen und weitläufigen Verkehrsknoten. Die Stadt wurde nach mehreren politischen Reformen des jungen Staates in kurzer Zeit stark erweitert.
+
+Das Regierungsviertel ist bewusst offen gestaltet. Ministerien, Parlament, Gerichte und öffentliche Plätze liegen nicht hinter monumentalen Mauern, sondern in einem dicht vernetzten Stadtzentrum. Das soll den Anspruch vermitteln, dass staatliche Macht öffentlich kontrollierbar bleibt.
+
+Novaris besitzt gleichzeitig eine stark ausgeprägte digitale Infrastruktur. Öffentliche Verkehrsmittel, Verwaltung, medizinische Versorgung und große Teile des Handels sind digital miteinander verbunden.
+
+Die Stadt wirkt modern, effizient und schnell – aber auch rastlos. Viele Menschen leben in kleinen Wohnungen, wechseln häufig den Arbeitsplatz und verbringen einen erheblichen Teil ihres Lebens in digitalen Räumen.
+
+**Stadtbild:** Glas, Stahl, Beton, begrünte Dächer, Verkehrsknoten, große öffentliche Plätze.  
+**Wichtige Viertel:** Regierungsviertel, Technologiering, Altstadt, Hafenbezirk, Wohnsektoren.  
+**Sozialer Gegensatz:** hochbezahlte Technologie- und Verwaltungselite gegenüber jungen Beschäftigten mit unsicheren Arbeitsverhältnissen.
+
+## Regionen
+
+### Nordmark
+Kühlere, dünn besiedelte Region mit kleineren Städten, Forstwirtschaft und modernen Energieanlagen. Die Menschen gelten als weniger hektisch als die Bevölkerung der Hauptstadt.
+
+**Konflikt:** Die Bewohner empfinden die politische Aufmerksamkeit für die Großstädte als übermäßig.
+
+### Zentralkorridor
+Dicht besiedelte urbane Achse zwischen den wichtigsten Wirtschafts- und Verwaltungszentren. Hier befinden sich Technologieunternehmen, Universitäten und die größte Zahl hochqualifizierter Arbeitsplätze.
+
+**Lebensgefühl:** schnell, teuer, leistungsorientiert.
+
+### Westküste
+Große Hafenstädte, internationale Unternehmen und eine vielfältige Bevölkerung. Der Kontakt mit anderen Nationen ist alltäglich.
+
+**Konflikt:** Alte Hafenviertel und neue Technologiebezirke entwickeln sich sehr unterschiedlich.
+
+### Südland
+Landwirtschaftlich geprägte Region mit kleineren Städten und Gemeinden. Digitale Infrastruktur ist vorhanden, aber traditionelle Vereine und lokale Bindungen sind stärker.
+
+**Konflikt:** Viele Bewohner fühlen sich von der urbanen Kultur Averons nicht vollständig repräsentiert.
+
+## Städte
+
+### Novaris – Hauptstadt
+Politisches und digitales Zentrum. Großstadt mit Ministerien, Universitäten, Technologieunternehmen und dichtem Wohnraum.
+
+### Lydon
+Technologiestadt mit großen Entwicklungszentren, Start-ups und einer jungen Bevölkerung. Hohe Mieten und starke Konkurrenz um qualifizierte Arbeitsplätze prägen den Alltag.
+
+### Westhaven
+Internationale Hafenstadt. Handel, Migration und Logistik bestimmen das Stadtbild. Alte Hafenviertel stehen modernen Büro- und Wohnkomplexen gegenüber.
+
+### Arven
+Mittelgroße Stadt im Übergang zwischen urbanem Zentrum und ländlichem Süden. Viele Familien leben hier bewusster lokal, während junge Menschen häufig nach Novaris oder Lydon ziehen.
+
+### Nordfall
+Kühlere Industriestadt mit Energieanlagen und technischen Betrieben. Weniger glamourös als die Hauptstadt, aber für die nationale Infrastruktur unverzichtbar.
+
+## Dörfer und ländlicher Alltag
+
+### Feldhain
+Landwirtschaftliches Dorf mit modernen Maschinen und digitaler Verwaltung. Junge Bewohner pendeln häufig in die Städte.
+
+### Nordruh
+Waldnahes Dorf im Norden. Forstwirtschaft, Energieversorgung und kleine Handwerksbetriebe bestimmen den Alltag.
+
+### Küstenfeld
+Küstendorf zwischen Fischerei und moderner Logistik. Alte Familien und neu zugezogene Arbeitskräfte leben nebeneinander.
+
+### Sonnenau
+Dorf im Süden mit starken Sport- und Vereinsgemeinschaften. Lokale Verbundenheit ist wichtiger als politische Netzwerke.
+
+## Familie und Generationen
+
+Die averonische Familie ist überwiegend klein und urban. Zwei Eltern mit einem oder zwei Kindern sind häufig, aber Alleinerziehende, Patchworkfamilien und bewusst kinderlose Haushalte werden gesellschaftlich weitgehend akzeptiert. Großeltern leben oft getrennt und bleiben digital verbunden.
+
+Familienentscheidungen werden stark individuell getroffen. Kinder sollen früh Selbstständigkeit entwickeln. Eltern versuchen, Bildung und persönliche Freiheit zu ermöglichen, stehen aber unter erheblichem Zeit- und Leistungsdruck.
+
+Ein typischer Konflikt entsteht zwischen beruflicher Mobilität und familiärer Nähe. Wer für eine bessere Stelle die Stadt wechselt, kann wirtschaftlich aufsteigen und gleichzeitig den Kontakt zur erweiterten Familie verlieren.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+Die Mehrheit der Bevölkerung lebt in dicht besiedelten Städten. Wohnungen sind klein bis mittelgroß und stark digitalisiert. Öffentlicher Verkehr, Lieferdienste und Behörden funktionieren überwiegend über vernetzte Systeme.
+
+Für die urbane Mittelschicht ist ein schneller Internetzugang ebenso selbstverständlich wie Strom und fließendes Wasser. Gleichzeitig gibt es Menschen, die von der Geschwindigkeit der Gesellschaft abgehängt werden: ältere Bürger, schlecht bezahlte Dienstleister und Bewohner ärmerer Randbezirke.
+
+Arbeit ist häufig projektorientiert. Berufliche Identität entsteht weniger über einen lebenslangen Betrieb als über Qualifikationen, Netzwerke und wechselnde Arbeitgeber.
+
+### Familie und Bildung
+
+Kinder lernen früh, mit digitalen Informationssystemen umzugehen. Schulen fördern Selbstständigkeit und Kommunikation, stehen aber unter erheblichem Leistungsdruck.
+
+Eltern versuchen, ihren Kindern möglichst viele Möglichkeiten zu eröffnen. Dahinter steht eine verbreitete Angst: Wer nicht mithält, verliert Anschluss.
+
+Familien sind häufig klein und geografisch mobil. Großeltern leben nicht selten in einer anderen Stadt.
+
+### Medien und Gesellschaft
+
+Averoner Bürger sind ständig informiert und gleichzeitig ständig mit widersprüchlichen Informationen konfrontiert. Nachrichten, soziale Netzwerke und staatliche Warnsysteme konkurrieren um Aufmerksamkeit.
+
+Politische Empörung kann innerhalb weniger Stunden entstehen und wieder verschwinden.
+
+### Soldaten im Alltag
+
+Soldaten gelten grundsätzlich als professionelle Staatsbedienstete. Sie sind keine gesellschaftliche Kaste. Viele Bürger unterstützen die Armee, solange sie glauben, dass sie der Verteidigung dient.
+
+Der Beginn eines Krieges verändert diese Haltung schnell: Plötzlich wird aus einer abstrakten Sicherheitsfrage der Sohn aus der Nachbarwohnung, die Schwester aus dem Büro oder der Freund aus dem Sportverein.
+
+### Lebensgefühl
+
+**Hoffnung:** Die Zukunft soll besser sein als die Vergangenheit.
+
+**Angst:** Nicht vor Armut allein, sondern davor, irrelevant und abgehängt zu werden.
+
+**Tabu:** Die Vorstellung, dass persönliche Freiheit vielleicht nicht ausreicht, um eine Gesellschaft zusammenzuhalten.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche wachsen digital, selbstständig und leistungsorientiert auf. Schule, soziale Medien und frühe berufliche Projekte prägen Identität; staatliche Institutionen werden eher als Dienstleister verstanden.
+
+### Punkt 7 – Arbeit
+
+Projektarbeit, Dienstleistungen, Technologie und flexible Beschäftigung dominieren; Karrierewechsel sind normal.
+
+### Punkt 8 – Armut
+
+Armut zeigt sich vor allem als Wohnungs-, Bildungs- und Zugangsunterschied. Sozialstaatliche Hilfe existiert, ist aber komplex.
+
+### Punkt 9 – Wohlstand
+
+Wohlstand zeigt sich in Wohnlage, digitalem Zugang, Bildung und Mobilität.
+
+### Punkt 10 – Religion
+
+Religiöse Freiheit ist weitgehend selbstverständlich; organisierte Religion ist eher eine persönliche als staatliche Angelegenheit.
+
+### Punkt 11 – Bildung
+
+Digitale, flexible Bildung mit hoher Hochschulquote und starkem Wettbewerbsdruck.
+
+### Punkt 12 – Medien
+
+Freie digitale Medien, Plattformen und unabhängiger Journalismus; hohe Informationsgeschwindigkeit erzeugt Fragmentierung.
+
+### Punkt 13 – Sprache
+
+Standardsprache dominiert, urbane Jugend entwickelt schnell neue digitale Umgangsformen.
+
+### Punkt 14 – Essen
+
+Schnelle urbane Küche, internationale Einflüsse und regionale Bio-Lebensmittel.
+
+### Punkt 15 – Kleidung
+
+Funktionale urbane Kleidung, technische Stoffe und starke Individualisierung.
+
+### Punkt 16 – Architektur
+
+Glas, Stahl, digitale Infrastruktur, hohe Wohnhäuser und flexible Büroquartiere.
+
+### Punkt 17 – Freizeit
+
+Gaming, Sport, Reisen, digitale Gemeinschaften und urbane Kultur.
+
+### Punkt 18 – Feste
+
+Zukunfts- und Stadtfeste, nationale Gründungstage und große digitale Veranstaltungen.
+
+### Punkt 19 – Trauer
+
+Trauer ist privat und oft individuell; digitale Gedenkräume ergänzen traditionelle Rituale.
+
+### Punkt 20 – Militär
+
+Professionelles, technologisch vernetztes Militär; gesellschaftlich respektiert, aber nicht allgegenwärtig.
+
+### Punkt 21 – Krieg
+
+Krieg gilt öffentlich als vermeidbares Versagen, zugleich wird permanente technologische Einsatzbereitschaft als notwendig betrachtet.
+
+### Punkt 22 – Opposition
+
+Opposition ist legal und vielfältig; Konflikte entstehen eher über Medien, Wirtschaft und digitale Mobilisierung.
+
+### Punkt 23 – Nachbarn
+
+Nachbarn kennen sich weniger persönlich, sind aber über digitale Netzwerke verbunden.
+
+### Punkt 24 – Migration
+
+Hohe innere und internationale Mobilität; Migration gilt überwiegend als Teil moderner Gesellschaft.
+
+### Punkt 25 – Familiengeschichte
+
+Familiengeschichten sind häufig von Migration, Berufswechsel und urbaner Mobilität geprägt.
+
+## Konkrete Lore-Anker
+
+### Bedeutende Familien
+- **Familie Varen:** Alte bürgerliche Familie aus Novaris; mehrere Generationen im öffentlichen Dienst. Die jüngere Generation arbeitet in Technologieunternehmen.
+- **Familie Senn:** Arbeiter- und Hafenfamilie aus Westhaven. Mehrere Mitglieder sind in Logistik und Gewerkschaften tätig.
+
+### Bekannte Personen
+- **Mira Varen:** Verfassungsjuristin und öffentliche Kritikerin digitaler Überwachung.
+- **Jon Senn:** Logistikingenieur, der für autonome Versorgungssysteme arbeitet.
+
+### Institutionen
+- **Universität Novaris:** Führende Hochschule für Informatik, Politik und Kommunikationssysteme.
+- **Institut für Öffentliche Netze:** Entwickelt zivile und militärische Kommunikationsinfrastruktur.
+- **Freies Nachrichtenforum:** Zusammenschluss unabhängiger digitaler Journalisten.
+
+### Wirtschaft
+- **Aeronet Systems:** Großes Technologieunternehmen für Sensorik und Kommunikation.
+- **Westhaven Logistics:** Hafen- und Versorgungskonzern mit internationalem Geschäft.
+
+### Medien und Kultur
+- **Der Morgenkanal:** Schnelles digitales Nachrichtenmedium mit großer Reichweite.
+- **Forum 7:** Politische Debattenplattform.
+
+### Militär
+- **1. Mobile Brigade Novaris:** Hochmobile professionelle Formation mit Schwerpunkt Aufklärung und schneller Reaktion.
+- **Netzaufklärungskommando:** Militärische Einheit für Sensorik, Kommunikation und elektronische Gefechtsführung.
+
+### Stadtviertel Novaris
+- **Regierungsring:** Ministerien und öffentliche Institutionen.
+- **Neonviertel:** Start-ups, Bars, kleine Wohnungen und junge Berufstätige.
+- **Altmarkt:** Historisches Zentrum mit Familienbetrieben.
+
+### Historische Ereignisse
+- **Gründung der Jungen Republik:** Übergang von einer älteren Staatsordnung zu Averons heutiger Republik.
+- **Netzkrise:** Großer Ausfall kritischer digitaler Systeme, der das Vertrauen in vollständige Automatisierung erschütterte.
+
+---
+
+# 2. Karsk – Der technokratische Sklavenstaat
 
 ### Der technokratische Sklavenstaat
 
@@ -123,7 +502,251 @@ Doch die Bevölkerung muss sich fragen, ob sie noch geschützt wird – oder ber
 
 ---
 
-# 3. Ossaria
+## Nationale Leitfrage
+
+**Leitfrage:** Was geschieht mit einer Gesellschaft, wenn menschlicher Wert messbar gemacht wird?
+
+**Alltagswiderspruch:** Der Staat kann hervorragende medizinische und technische Versorgung bereitstellen und gleichzeitig entscheiden, wer diese Versorgung verdient.
+
+**Besonderer Ausbau:** Karsk sollte nicht ausschließlich aus fanatischen Funktionären bestehen. Es braucht Bürger, die das System unterstützen, weil es ihnen tatsächlich Sicherheit, Heilung oder Aufstieg ermöglicht.
+
+## Hauptstadt
+
+Varkesh ist eine monumentale Verwaltungs- und Industriestadt. Die Stadtplanung folgt weniger historischen Straßenmustern als funktionalen Sektoren.
+
+Wohnraum, Arbeitsstätten, medizinische Zentren, Produktionsanlagen und militärische Einrichtungen sind räumlich klar gegliedert. Große Verkehrsachsen verbinden die einzelnen Sektoren.
+
+Das Zentrum wird von staatlichen Verwaltungsbauten und medizinisch-technologischen Komplexen geprägt. Viele Gebäude sind zugleich Arbeits-, Wohn- und Versorgungseinrichtungen.
+
+Karsker Architektur vermittelt nicht primär Schönheit, sondern Funktion, Kontrolle und Dauerhaftigkeit.
+
+**Stadtbild:** massive Beton- und Metallstrukturen, unterirdische Anlagen, kontrollierte Verkehrswege.  
+**Wichtige Viertel:** Verwaltungssektor, Medizinsektor, Produktionsgürtel, Wohnsektoren, Militärbezirk.  
+**Sozialer Gegensatz:** privilegierte technische und staatliche Funktionsträger gegenüber Menschen mit geringer staatlicher Bewertung.
+
+## Regionen
+
+### Zentralbezirk
+Dicht kontrollierte Kernregion mit Regierungs-, Medizin- und Forschungseinrichtungen. Hier leben viele privilegierte Staats- und Technologiefunktionäre.
+
+### Produktionsgürtel
+Schwer industrialisierte Region mit großen Fabriken und technischen Ausbildungszentren. Arbeiter erhalten Versorgung und Status vor allem über ihre berufliche Leistungsfähigkeit.
+
+### Grenzsektoren
+Militärisch geprägte Randgebiete mit hoher Sicherheitspräsenz. Die Bevölkerung ist an Kontrollen und Mobilisierung gewöhnt.
+
+### Versorgungsprovinzen
+Landwirtschaftliche und ressourcenreiche Regionen, deren Produktion zentral verwaltet wird. Der Staat ist besonders tief in den Alltag eingebunden.
+
+**Regionaler Grundkonflikt:** Je weiter man vom Zentrum entfernt lebt, desto stärker wird die Frage, ob der Staat tatsächlich schützt oder nur kontrolliert.
+
+## Städte
+
+### Varkesh – Hauptstadt
+Zentrum von Staat, Medizin und technischer Kontrolle. Große Funktionssektoren bestimmen das Stadtleben.
+
+### Karsin
+Medizin- und Implantationszentrum. Ärzte, Techniker und staatliche Bewertungsstellen besitzen außergewöhnlichen Einfluss.
+
+### Dravik
+Schwere Industriestadt im Produktionsgürtel. Arbeiterstatus und technische Qualifikation bestimmen den gesellschaftlichen Rang stark.
+
+### Sektorstadt 7
+Eine vollständig geplante Stadt, deren Alltag nach Arbeits-, Wohn- und Versorgungszyklen organisiert ist. Individualität ist weniger sichtbar als Funktion.
+
+### Grenzwerk
+Militärisch geprägte Stadt nahe der Außengrenze. Kasernen, Werkstätten und Sicherheitsanlagen dominieren.
+
+## Dörfer und ländlicher Alltag
+
+### Werksiedlung Nord
+Geplante Arbeitersiedlung neben einem Produktionskomplex. Wohnungen, Schule, Klinik und Arbeitsplatz sind eng miteinander verbunden.
+
+### Dornenfeld
+Landwirtschaftliche Gemeinde mit staatlich vorgegebenen Produktionszielen. Versorgung ist zuverlässig, persönliche Selbstbestimmung begrenzter.
+
+### Grauhof
+Dorf nahe einer medizinischen Anlage. Viele Familien arbeiten direkt oder indirekt für den Gesundheitssektor.
+
+### Grenzposten
+Kleine Siedlung an einer kontrollierten Verkehrsroute. Militär und Staat sind im Alltag ständig präsent.
+
+## Familie und Generationen
+
+Die Familie steht unter einem starken Einfluss des Staates. Kinder werden früh medizinisch untersucht und ihre Fähigkeiten systematisch erfasst. Eltern wissen, dass die Entwicklung eines Kindes später seine gesellschaftliche Einstufung beeinflussen kann.
+
+In privilegierten Familien wird die staatliche Ordnung häufig als Schutz verstanden: gute medizinische Versorgung, Ausbildung und sichere Arbeitsplätze sind reale Vorteile. Andere Familien erleben dieselben Systeme als Eingriff in ihre Privatsphäre.
+
+Eltern versuchen häufig, Schwächen ihrer Kinder nicht öffentlich sichtbar werden zu lassen. Gleichzeitig kann eine Familie großen Stolz empfinden, wenn ein Kind als besonders leistungsfähig gilt.
+
+Der zentrale familiäre Konflikt lautet: **Ist ein Kind zuerst ein geliebtes Familienmitglied oder zuerst ein zukünftiger Träger gesellschaftlicher Leistung?**
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+Karsker Bürger erhalten vieles über staatlich organisierte Systeme. Wohnraum, medizinische Versorgung und Arbeitsplätze werden stark nach Bedarf und staatlicher Bewertung verteilt.
+
+Ein Mensch mit hoher technischer oder militärischer Qualifikation kann privilegiert leben. Menschen mit Behinderungen oder chronischen Krankheiten erleben dagegen besonders deutlich, wie brutal eine Gesellschaft sein kann, die den Menschen nach Nutzen bewertet.
+
+Arbeitsplätze besitzen eine offizielle Leistungsbewertung. Jeder Bürger kennt seine Kennziffern.
+
+### Familie
+
+Familien lieben ihre Kinder, aber selbst die Familie steht unter dem Schatten staatlicher Bewertung. Ein Kind mit außergewöhnlicher Begabung kann als Hoffnung der Familie gelten. Ein Kind, das nicht den Erwartungen entspricht, kann zum Anlass für staatliche Intervention werden.
+
+Viele Eltern versuchen deshalb, ihren Kindern beizubringen, niemals öffentlich Schwäche zu zeigen.
+
+### Medizin
+
+Karsk verfügt über hervorragende technische Medizin, aber Zugang und Zweck sind ungleich verteilt. Wer als wertvoll gilt, erhält die modernsten Behandlungen.
+
+Die entscheidende gesellschaftliche Frage lautet nicht, ob der Staat heilen kann.
+
+Sie lautet:
+
+> **Für wen hält der Staat Heilung für lohnenswert?**
+
+### Religion und Privatleben
+
+Private Religion existiert, wird aber überwacht. Persönliche Rituale können toleriert werden, solange sie keine politische Alternative zur Staatsideologie bilden.
+
+### Soldaten
+
+Soldaten genießen materielles Prestige, zahlen aber einen körperlichen Preis. Veteranen mit Implantatschäden können gleichzeitig geehrt und als defekte Systeme behandelt werden.
+
+Eine Familie kann stolz auf einen ausgezeichneten Soldaten sein und dennoch jeden Abend fürchten, dass er eines Tages mit einem Körper zurückkehrt, den sie kaum noch erkennt.
+
+### Lebensgefühl
+
+**Hoffnung:** Der Staat verspricht, Chaos und menschliche Schwäche überwinden zu können.
+
+**Angst:** Unbrauchbar zu werden.
+
+**Tabu:** Öffentlich zu sagen, dass ein Mensch auch ohne Leistung einen eigenen Wert besitzt.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugend wird früh medizinisch und beruflich bewertet. Leistungsstarke Jugendliche erhalten Chancen und Privilegien; andere erleben früh den Druck gesellschaftlicher Nützlichkeit.
+
+### Punkt 7 – Arbeit
+
+Arbeit ist gesellschaftliche Bewertung. Produktivität, technische Qualifikation und staatlicher Bedarf bestimmen Aufstieg.
+
+### Punkt 8 – Armut
+
+Materielle Grundversorgung kann gesichert sein, doch Menschen mit geringer staatlicher Bewertung erhalten weniger Chancen und medizinische Priorität.
+
+### Punkt 9 – Wohlstand
+
+Wohlstand ist eng an staatliche Nützlichkeit und Position gebunden.
+
+### Punkt 10 – Religion
+
+Staatliche Rationalität dominiert. Private Glaubensgemeinschaften existieren, bleiben aber politisch vorsichtig.
+
+### Punkt 11 – Bildung
+
+Bildung dient der gezielten Ausbildung gesellschaftlich benötigter Fähigkeiten.
+
+### Punkt 12 – Medien
+
+Medien sind staatlich gelenkt und vermitteln Ordnung, Fortschritt und gesellschaftliche Leistung.
+
+### Punkt 13 – Sprache
+
+Verwaltungssprache ist präzise und technisch; persönliche Sprache bleibt emotionaler.
+
+### Punkt 14 – Essen
+
+Funktionale, nährstofforientierte Küche; privilegierte Schichten pflegen aufwendigere Esskultur.
+
+### Punkt 15 – Kleidung
+
+Praktische, normierte Kleidung; Status zeigt sich eher durch Materialqualität und technische Ausstattung.
+
+### Punkt 16 – Architektur
+
+Monumentale Verwaltungsbauten, geplante Wohnkomplexe und funktionale Industriearchitektur.
+
+### Punkt 17 – Freizeit
+
+Sport, technische Clubs und staatlich organisierte Freizeit; privilegierte Kreise besitzen exklusive Angebote.
+
+### Punkt 18 – Feste
+
+Staatliche Fortschritts- und Leistungstage sowie regionale Arbeitsfeste.
+
+### Punkt 19 – Trauer
+
+Staatliche Anerkennung verstorbener Leistungsträger ist sichtbar; Familien trauern persönlicher.
+
+### Punkt 20 – Militär
+
+Militär ist sichtbares Instrument des Staates und technisch eng mit medizinischer Kontrolle verbunden.
+
+### Punkt 21 – Krieg
+
+Krieg wird als technische und gesellschaftliche Belastungsprobe verstanden, bei der Opfer nach staatlichem Nutzen bewertet werden.
+
+### Punkt 22 – Opposition
+
+Offene Opposition ist riskant; Kritik existiert innerhalb von Institutionen, Familien und informellen Netzwerken.
+
+### Punkt 23 – Nachbarn
+
+Nachbarschaften sind gut versorgt, aber staatliche Präsenz ist spürbar.
+
+### Punkt 24 – Migration
+
+Migration ist streng staatlich gesteuert und nach Nutzenkriterien organisiert.
+
+### Punkt 25 – Familiengeschichte
+
+Familien bewahren Geschichten über staatliche Förderung, Anpassung, Ausgrenzung und medizinische Eingriffe oft nur privat.
+
+## Konkrete Lore-Anker
+
+### Bedeutende Familien
+- **Familie Koren:** Technokratische Ärztefamilie mit hohem staatlichem Status.
+- **Familie Drev:** Arbeiterfamilie aus Dravik, deren Angehörige in mehreren Generationen für dieselbe Produktionsregion arbeiteten.
+
+### Bekannte Personen
+- **Dr. Elena Koren:** Leiterin eines staatlichen Implantationsinstituts; überzeugt, dass Technologie menschliches Leid reduzieren kann.
+- **Marek Drev:** Arbeitervertreter, der Verbesserungen fordert, ohne das System grundsätzlich abzulehnen.
+
+### Institutionen
+- **Zentralamt für Menschliche Leistungsfähigkeit:** Bewertet medizinische und berufliche Eignung.
+- **Varkescher Medizinakademie:** Eliteinstitution für Implantat- und Regenerationsmedizin.
+
+### Wirtschaft
+- **Karsk Biomech:** Hersteller medizinischer und militärischer Körpertechnik.
+- **Zentralwerke Dravik:** Schwerindustrie und militärische Produktion.
+
+### Medien und Kultur
+- **Staatsnetz Karsk:** Offizielle Nachrichten und Bildungsprogramme.
+- **Die Stimme der Leistung:** Zeitschrift über erfolgreiche Bürger und technische Fortschritte.
+
+### Militär
+- **Karsker Sicherheitskorps:** Stark technisierte reguläre Streitkräfte.
+- **Grenzsektor Nord:** Militärische Verbände und Überwachungseinheiten entlang der Außengrenze.
+
+### Stadtviertel Varkesh
+- **Zentralforum:** Ministerien und staatliche Institutionen.
+- **Medizinring:** Kliniken, Labore und medizinische Wohnkomplexe.
+- **Produktionsgürtel:** Industrie und Arbeiterwohnungen.
+
+### Historische Ereignisse
+- **Die Effizienzreform:** Einführung der heutigen staatlichen Bewertungsordnung.
+- **Die Implantatkrise:** Reihe schwerer medizinischer Fehlschläge, die zur Verschärfung staatlicher Kontrollen führte.
+
+---
+
+# 3. Ossaria – Das freie technologische Land
 
 ### Das freie technologische Land
 
@@ -181,7 +804,243 @@ Die zentrale Gefahr besteht darin, dass aus der Erinnerung an die Opfer irgendwa
 
 ---
 
-# 4. Rothain
+## Nationale Leitfrage
+
+**Leitfrage:** Kann Erinnerung Frieden bewahren, ohne selbst neue Feindschaft zu erzeugen?
+
+**Alltagswiderspruch:** Eine Kultur des Gedenkens schützt vor dem Vergessen, kann aber auch eine Generation an die Kriege ihrer Vorfahren binden.
+
+**Besonderer Ausbau:** Ossaria sollte regionale Unterschiede zwischen alten Städten, technologischen Zentren und ländlichen Gebieten besitzen.
+
+## Hauptstadt
+
+Ossar ist eine der ältesten Städte der Welt und zugleich eines der bedeutendsten technologischen Zentren Ossarias.
+
+Die Stadt besteht aus mehreren historischen Schichten. Alte Steinviertel stehen neben modernen Forschungszentren und geschützten Verkehrssystemen.
+
+Zahlreiche Plätze und Gebäude tragen Namen von Menschen, die in vergangenen Kriegen starben. Gedenkstätten sind kein abgegrenzter Bereich, sondern Teil des täglichen Stadtbildes.
+
+Die moderne Architektur versucht bewusst, neue Technik mit historischen Strukturen zu verbinden.
+
+**Stadtbild:** alte Steinarchitektur, moderne Schutzsysteme, Forschungszentren, Gedenkplätze.  
+**Wichtige Viertel:** Altstadt, Forschungsbezirk, Bürgerforum, Industriehafen, Gedenksiedlungen.  
+**Sozialer Gegensatz:** traditionsbewusste alte Stadtviertel gegenüber hochmodernen Technologiebezirken.
+
+## Regionen
+
+### Alte Kernstädte
+Historische Städte mit jahrhundertealten Bauwerken, Universitäten und Gedenkstätten. Familiengeschichte besitzt hier besonderes Gewicht.
+
+### Technologiebogen
+Moderne Forschungs- und Produktionsregion mit hochentwickelter Schutz- und Sensortechnik.
+
+### Westliche Ebenen
+Fruchtbare Agrarregion mit kleineren Städten und Dörfern. Traditionelle Lebensformen sind stärker ausgeprägt.
+
+### Grenzland
+Militärisch wichtige Region mit Festungen, Ausbildungsplätzen und zahlreichen Erinnerungsorten an frühere Kriege.
+
+**Regionaler Grundkonflikt:** Wie viel moderne Veränderung darf eine Gesellschaft zulassen, ohne ihre historische Identität zu verlieren?
+
+## Städte
+
+### Ossar – Hauptstadt
+Historische Metropole und technologisches Zentrum. Alte Stadtmauern, Forschungszentren und Gedenkstätten liegen unmittelbar nebeneinander.
+
+### Valeris
+Universitäts- und Kulturstadt mit zahlreichen Archiven und Museen. Hier wird besonders intensiv über die Geschichte vergangener Kriege diskutiert.
+
+### Eron
+Hochtechnologischer Produktionsstandort. Schutzsysteme, Sensorik und militärische Elektronik werden entwickelt und gefertigt.
+
+### Marenfeld
+Agrarisch geprägte Mittelstadt. Familienbetriebe, Handwerk und regionale Traditionen besitzen größere Bedeutung als in Ossar.
+
+### Kareth
+Grenzstadt mit großer Militärpräsenz. Viele Familien haben direkte Erfahrungen mit früheren Kriegen.
+
+## Dörfer und ländlicher Alltag
+
+### Altenfeld
+Historisches Dorf mit Familienhäusern, Kirche und altem Friedhof. Namen und Geschichten gefallener Vorfahren sind Teil des Ortsgedächtnisses.
+
+### Eichenau
+Landwirtschaftliches Dorf mit modernen Betrieben und traditionellen Festen.
+
+### Steinbrunn
+Handwerkerdorf, das für Metall- und Schutztechnik bekannt ist.
+
+### Grenzhof
+Kleine Gemeinde nahe alter Befestigungen. Viele Familien bewahren Erinnerungen an frühere Grenzkriege.
+
+## Familie und Generationen
+
+Familiengeschichte besitzt in Ossaria großes Gewicht. Namen von Großeltern und Urgroßeltern, Kriegserfahrungen, Berufe und Herkunft werden häufig bewusst weitergegeben.
+
+Mehrgenerationenfamilien sind verbreiteter als in den stark urbanisierten Nationen, auch wenn junge Menschen für Studium und Arbeit in größere Städte ziehen. Familien halten über Besuche, Briefe, digitale Archive und gemeinsame Gedenktage Kontakt.
+
+Kinder lernen früh, dass ihre Familie Teil einer längeren Geschichte ist. Gleichzeitig wird ihnen vermittelt, dass geerbte Schuld oder geerbter Ruhm keine automatische moralische Stellung erzeugen.
+
+Der wichtigste familiäre Wert ist **Erinnerung ohne blinden Gehorsam gegenüber der Vergangenheit**.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+Ossarische Städte verbinden historische Viertel mit moderner Infrastruktur. Alte Plätze, Friedhöfe und Denkmäler gehören selbstverständlich zum Stadtbild.
+
+Die Gesellschaft ist technisch fortschrittlich, aber nicht technikgläubig. Menschen diskutieren häufig darüber, wo technische Unterstützung endet und menschliche Verantwortung beginnt.
+
+### Familie und Bildung
+
+Kinder lernen Geschichte früh. Krieg wird nicht als Heldengeschichte vermittelt, sondern anhand von Namen, Verlustlisten und persönlichen Berichten.
+
+In vielen Familien gibt es Gegenstände von Vorfahren, die in früheren Kriegen gefallen sind.
+
+Das erzeugt Stolz, aber auch eine schwere Verantwortung.
+
+### Religion und Rituale
+
+Totengedenken besitzt hohe gesellschaftliche Bedeutung. Jahrestage gefallener Familienmitglieder werden oft gemeinsam begangen.
+
+Hochzeiten und Geburten werden dagegen bewusst als Feiern des Lebens gestaltet. Gerade die Nähe zum Tod verstärkt die Wertschätzung des Alltäglichen.
+
+### Soldaten
+
+Soldaten genießen Respekt, aber kein unkritisches Prestige. Ein Soldat soll sich bewusst sein, dass hinter jedem militärischen Erfolg menschliche Verluste stehen.
+
+Die Knochenmasken sind deshalb gesellschaftlich nicht bloß martialische Symbole. Für viele Familien bedeuten sie: Der Träger vergisst die Toten nicht.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass die nächste Generation frei leben kann.
+
+**Angst:** Dass die Erinnerung an die Opfer irgendwann wieder zur Rechtfertigung neuer Opfer wird.
+
+**Tabu:** Gefallene Menschen nur als Zahlen zu behandeln.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Geschichte und persönliche Verantwortung gehören zur Erziehung. Jugendliche besuchen Gedenkorte und lernen, militärische Vergangenheit kritisch zu betrachten.
+
+### Punkt 7 – Arbeit
+
+Mischung aus Industrie, Wissenschaft, Handwerk und Verwaltung; Berufsstolz ist mit Verantwortung verbunden.
+
+### Punkt 8 – Armut
+
+Armut wird über kommunale und staatliche Hilfe abgefedert; historische Städte haben deutliche soziale Unterschiede.
+
+### Punkt 9 – Wohlstand
+
+Wohlhabende Familien investieren häufig in Bildung, Kultur und langfristige Vermögenssicherung.
+
+### Punkt 10 – Religion
+
+Religion, Erinnerung und Friedenskultur verbinden sich; verschiedene Konfessionen sind gesellschaftlich anerkannt.
+
+### Punkt 11 – Bildung
+
+Geschichte, Wissenschaft und politische Bildung besitzen hohen Stellenwert.
+
+### Punkt 12 – Medien
+
+Pluralistische Medien mit starker investigativer und historischer Kultur.
+
+### Punkt 13 – Sprache
+
+Alte regionale Ausdrücke und Familiennamen besitzen hohen Erinnerungswert.
+
+### Punkt 14 – Essen
+
+Regionale Hausmannskost, Brot, Suppen, Gemüse und Familienrezepte besitzen hohen Stellenwert.
+
+### Punkt 15 – Kleidung
+
+Moderne Kleidung mit regionalen und historischen Symbolen.
+
+### Punkt 16 – Architektur
+
+Historische Stadtkerne werden mit moderner Technologie verbunden.
+
+### Punkt 17 – Freizeit
+
+Museen, Musik, Wandern, Familienfeste und historische Vereine.
+
+### Punkt 18 – Feste
+
+Gedenktage, Erntefeste und lokale historische Feiertage.
+
+### Punkt 19 – Trauer
+
+Öffentliche Erinnerung und Namen der Toten besitzen hohe Bedeutung.
+
+### Punkt 20 – Militär
+
+Militär ist stark, aber zivile Kontrolle und Erinnerung an Opfer begrenzen Heldenverehrung.
+
+### Punkt 21 – Krieg
+
+Krieg wird vor allem über seine Opfer und langfristigen Folgen erinnert.
+
+### Punkt 22 – Opposition
+
+Opposition ist Teil des normalen demokratischen Lebens.
+
+### Punkt 23 – Nachbarn
+
+Nachbarschaften pflegen Gedenkrituale und gegenseitige Hilfe.
+
+### Punkt 24 – Migration
+
+Migration ist möglich und wird gesellschaftlich vor allem über Integration und gemeinsame Institutionen diskutiert.
+
+### Punkt 25 – Familiengeschichte
+
+Namen, Briefe und Erinnerungen an Kriegstote werden bewusst archiviert.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Familie Ossan:** Historikerfamilie aus Valeris.
+- **Familie Mareth:** Handwerkerfamilie aus Marenfeld.
+
+### Personen
+- **Professor Elias Ossan:** Historiker und Verteidiger öffentlicher Erinnerungskultur.
+- **Lena Mareth:** Schutztechnikerin und Veteranenangehörige.
+
+### Institutionen
+- **Archiv der Gefallenen:** Nationales Archiv persönlicher Kriegszeugnisse.
+- **Freie Akademie Ossar:** Forschungs- und Bildungseinrichtung.
+
+### Wirtschaft
+- **Ossarische Schutzwerke:** Hersteller von Schutzsystemen und Sensorik.
+- **Marenfelder Maschinenbau:** Mittelständischer technischer Betrieb.
+
+### Medien
+- **Die Freie Stimme:** Große unabhängige Zeitung.
+- **Archivfunk:** Historischer Rundfunkkanal.
+
+### Militär
+- **Ossarische Schutzbrigade:** Professionelle Verteidigungsformation.
+- **Grenzkorps Kareth:** Territorialverbände an der Grenze.
+
+### Stadtviertel Ossar
+- **Alte Mauer:** Historisches Zentrum.
+- **Gedenkbezirk:** Museen, Friedhöfe und Archive.
+- **Technologiering:** Forschung und Produktion.
+
+### Historische Ereignisse
+- **Der Große Grenzkrieg:** Konflikt, der Ossarias moderne Erinnerungskultur prägte.
+- **Die Namenlisten:** Bürgerbewegung zur vollständigen Dokumentation der Kriegstoten.
+
+---
+
+# 4. Rothain – Das Land der zerbrochenen Krone
 
 ### Das Land der zerbrochenen Krone
 
@@ -211,7 +1070,237 @@ Rothain versucht, moderne Staatlichkeit und das Erbe seiner alten Ordnung mitein
 
 ---
 
-# 5. Sahr
+## Nationale Leitfrage
+
+**Leitfrage:** Wie lebt eine Gesellschaft mit einem Erbe, auf das sie gleichzeitig stolz und beschämt ist?
+
+**Alltagswiderspruch:** Dieselbe Uniform, dasselbe Denkmal oder dasselbe Familienwappen kann für einen Menschen Heimat und für einen anderen Unterdrückung bedeuten.
+
+**Besonderer Ausbau:** Rothain sollte besonders starke Generationenkonflikte erhalten. Ältere Menschen erinnern sich anders an das ehemalige Reich als jüngere, die nur noch die Republik kennen.
+
+## Hauptstadt
+
+Rothenburg war einst das politische Zentrum des ehemaligen Reiches. Heute ist es Hauptstadt der Republik, doch die Spuren der alten Ordnung sind überall sichtbar.
+
+Der ehemalige Kaiserpalast dient inzwischen als staatliches Museum und parlamentarisches Archiv. Alte Kasernen wurden teilweise in Universitäten, Behörden und Wohnviertel umgewandelt.
+
+Historische Regimenter besitzen noch immer eigene Häuser und Versammlungsorte. Auf manchen Plätzen stehen Denkmäler, deren Bedeutung zwischen Generationen stark umstritten ist.
+
+**Stadtbild:** monumentale Plätze, alte Paläste, Kasernen, Bürgerhäuser und moderne Regierungsgebäude.  
+**Wichtige Viertel:** Parlamentsviertel, ehemaliger Hofbezirk, Veteranenviertel, Arbeiterbezirke, neue Geschäftsstadt.  
+**Sozialer Gegensatz:** alte Familien und Veteranenverbände gegenüber jüngeren republikanischen und sozialen Bewegungen.
+
+## Regionen
+
+### Alte Krondistrikte
+Regionen, in denen ehemalige Adelshäuser, historische Güter und Veteranentraditionen besonders präsent sind.
+
+### Industrieller Osten
+Dicht besiedelte Städte mit Fabriken und einer starken Arbeiterschaft. Hier ist die alte imperiale Ordnung deutlich weniger beliebt.
+
+### Republikanischer Westen
+Region moderner Verwaltung, Universitäten und neuer Unternehmen. Die Bevölkerung identifiziert sich stärker mit der heutigen Republik.
+
+### Grenzprovinzen
+Gebiete, die während des ehemaligen Reiches mehrfach umkämpft wurden. Dort ist die Erinnerung an Krieg weniger abstrakt.
+
+**Regionaler Grundkonflikt:** Für einen Menschen im alten Kernland kann das Reich ein Familienerbe sein; für einen Menschen aus einer ehemaligen Randprovinz kann es vor allem eine Erinnerung an Fremdherrschaft sein.
+
+## Städte
+
+### Rothenburg – Hauptstadt
+Politisches Zentrum der Republik und ehemaliger Sitz der imperialen Macht. Paläste, Kasernen und republikanische Institutionen prägen die Stadt.
+
+### Eisenfurt
+Industriestadt mit großer Arbeiterschaft. Politisch stark republikanisch und sozial geprägt.
+
+### Kronfeld
+Stadt alter Familien, Veteranenverbände und historischer Regimenter. Tradition ist Teil des täglichen Lebens.
+
+### Westheim
+Moderne Universitäts- und Verwaltungsstadt. Besonders viele junge Menschen identifizieren sich mit der Republik statt mit dem ehemaligen Reich.
+
+### Grenzwacht
+Ehemalige Festungsstadt. Die Bevölkerung besitzt eine starke lokale Militärkultur, aber auch ein ausgeprägtes Bewusstsein für die Kosten vergangener Kriege.
+
+## Dörfer und ländlicher Alltag
+
+### Kronweiler
+Dorf mit ehemaligen Gutshöfen und Familien, die ihre Abstammung über Generationen dokumentieren.
+
+### Eisenried
+Arbeiterdorf nahe einer Fabrik. Die Bevölkerung steht alten aristokratischen Traditionen eher kritisch gegenüber.
+
+### Westtal
+Modernisiertes Dorf mit vielen Pendlern und jungen Familien.
+
+### Veteranenhof
+Siedlung, in der mehrere Generationen von Soldatenfamilien leben. Militärische Erinnerung ist Alltag, aber nicht unumstritten.
+
+## Familie und Generationen
+
+Rothain besitzt eine starke Tradition familiärer Herkunft. In alten Familien werden Stammbäume, Orden, Uniformen, Briefe und Fotografien aufbewahrt. In Arbeiterfamilien existieren ähnliche Erinnerungskulturen, allerdings häufig bezogen auf Fabriken, Gewerkschaften und politische Kämpfe.
+
+Militärische Familien können mehrere Generationen von Soldaten hervorbringen. Andere Familien reagieren bewusst mit Ablehnung auf diese Tradition.
+
+Heirat kann gesellschaftliche Netzwerke verbinden, ist aber längst nicht mehr ausschließlich eine Angelegenheit von Herkunft und Stand. Junge Menschen hinterfragen zunehmend die Erwartungen ihrer Eltern.
+
+Der zentrale Generationenkonflikt lautet: **Was soll man von der Vergangenheit bewahren, und was muss man bewusst beenden?**
+
+## Alltag und Lebensgefühl
+
+### Gesellschaft
+
+Rothain besitzt starke regionale Unterschiede. In ehemaligen Residenzstädten finden sich alte Familien, Veteranenvereine und historische Institutionen. Industriestädte und ländliche Gebiete besitzen dagegen eine wesentlich pragmatischere Kultur.
+
+Viele Familien bewahren militärische Erinnerungsstücke auf. Nicht jede Familie ist stolz darauf. Manche sehen darin ein Erbe, von dem sich die Gesellschaft endlich lösen sollte.
+
+### Arbeit und soziale Schichten
+
+Alte Vermögen, neue Unternehmen und öffentliche Verwaltungen stehen nebeneinander. Der soziale Aufstieg ist möglich, aber Beziehungen zu alten Eliten können weiterhin Türen öffnen.
+
+Das erzeugt einen stillen Konflikt zwischen Leistungsgesellschaft und Herkunft.
+
+### Familie
+
+Großfamilien sind kulturell stärker verankert als in Averon. Familiennamen und Herkunft besitzen gesellschaftliches Gewicht.
+
+Bei manchen Familien beginnt eine militärische Laufbahn über Generationen. Andere vermeiden den Militärdienst bewusst, weil sie mit der imperialen Vergangenheit nichts mehr zu tun haben wollen.
+
+### Kultur
+
+Historische Feste, Regimentsmusik und alte Architektur sind Teil des öffentlichen Lebens. Gleichzeitig gibt es eine starke Gegenkultur, die genau diese Traditionen kritisiert.
+
+### Lebensgefühl
+
+**Hoffnung:** Eine große Vergangenheit in eine friedliche Zukunft zu verwandeln.
+
+**Angst:** Dass die alte Ordnung unter einem neuen Namen zurückkehrt.
+
+**Tabu:** Die offene Behauptung, die vergangenen imperialen Kriege seien ausschließlich ruhmreich gewesen.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugend erlebt den Gegensatz zwischen imperialer Familienerinnerung und republikanischer Gegenwart. Veteranenfamilien vermitteln Tradition, Schulen diskutieren deren Grenzen.
+
+### Punkt 7 – Arbeit
+
+Verwaltung, Industrie, Dienstleistungen und traditionelle Berufe koexistieren; alte Netzwerke erleichtern manchen den Zugang zu Berufen.
+
+### Punkt 8 – Armut
+
+Alte Vermögen und neue Armut können direkt nebeneinander existieren. Herkunft beeinflusst Chancen weiterhin indirekt.
+
+### Punkt 9 – Wohlstand
+
+Alte Familien besitzen kulturelles Kapital; neue Unternehmer schaffen neue Eliten.
+
+### Punkt 10 – Religion
+
+Alte Kirchen- und Militärtraditionen bestehen neben säkularer republikanischer Kultur.
+
+### Punkt 11 – Bildung
+
+Schulen verbinden republikanische Staatsbürgerkunde mit kritischer Geschichtsaufarbeitung.
+
+### Punkt 12 – Medien
+
+Freie Medien diskutieren intensiv über Monarchie, Republik und Vergangenheit.
+
+### Punkt 13 – Sprache
+
+Alte höfische Begriffe stehen neben moderner republikanischer Alltagssprache.
+
+### Punkt 14 – Essen
+
+Deftige regionale Küche und historische Festgerichte.
+
+### Punkt 15 – Kleidung
+
+Moderne Kleidung neben bewusster Pflege historischer Stile.
+
+### Punkt 16 – Architektur
+
+Kaiserliche Gebäude stehen neben republikanischen Institutionen und Arbeitervierteln.
+
+### Punkt 17 – Freizeit
+
+Fußball, Regimentstraditionen, Musik, Kneipen und historische Vereine.
+
+### Punkt 18 – Feste
+
+Republikanische Feiertage und kontrovers erinnerte ehemalige Reichstage.
+
+### Punkt 19 – Trauer
+
+Familien bewahren Briefe, Uniformen und Erinnerungsstücke; die Bewertung militärischer Toter ist umstritten.
+
+### Punkt 20 – Militär
+
+Militär besitzt starke historische Traditionen und wird zugleich kritisch beobachtet.
+
+### Punkt 21 – Krieg
+
+Krieg ist Teil der nationalen Familiengeschichte und deshalb Gegenstand heftiger Erinnerungskämpfe.
+
+### Punkt 22 – Opposition
+
+Parteien streiten besonders über Vergangenheit, Militär und soziale Ordnung.
+
+### Punkt 23 – Nachbarn
+
+Alte Viertel besitzen starke Familien- und Vereinsnetzwerke.
+
+### Punkt 24 – Migration
+
+Migration steht häufig im Spannungsfeld zwischen wirtschaftlichem Bedarf und historischer Identität.
+
+### Punkt 25 – Familiengeschichte
+
+Familien bewahren sowohl imperiale als auch republikanische Erinnerungen; dieselbe Vergangenheit kann gegensätzlich erzählt werden.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Haus Rothen:** Alte Familie mit imperialer Vergangenheit.
+- **Familie Eisen:** Arbeiterfamilie aus Eisenfurt.
+
+### Personen
+- **Albrecht Rothen:** Historiker und Vertreter traditioneller Eliten.
+- **Mara Eisen:** Gewerkschaftsorganisatorin und republikanische Aktivistin.
+
+### Institutionen
+- **Nationalarchiv Rothenburg:** Bewahrt kaiserliche und republikanische Dokumente.
+- **Bund der Veteranenfamilien:** Gesellschaftlicher Verband ehemaliger Soldatenfamilien.
+
+### Wirtschaft
+- **Eisenfurter Werke:** Großbetrieb für Maschinenbau.
+- **Rothen & Söhne:** Alte Handels- und Finanzfamilie.
+
+### Medien
+- **Republik heute:** Republikanisches Nachrichtenblatt.
+- **Die Krone:** Historisch-konservatives Magazin.
+
+### Militär
+- **1. Republikanisches Korps:** Traditionell geprägte reguläre Formation unter ziviler Kontrolle.
+- **Grenzwachtbrigade:** Verteidigungsverband ehemaliger Festungsregionen.
+
+### Stadtviertel Rothenburg
+- **Kronenviertel:** Alte Paläste und ehemalige Hofgebäude.
+- **Republikforum:** Parlament und moderne Verwaltung.
+- **Eisenring:** Arbeiter- und Industrieviertel.
+
+### Historische Ereignisse
+- **Fall der Krone:** Ende des alten Imperiums.
+- **Republikanischer Neuaufbau:** Aufbau der heutigen Staatsordnung.
+
+---
+
+# 5. Sahr – Der Bund der Handelsstädte
 
 ### Der Bund der Handelsstädte
 
@@ -248,7 +1337,243 @@ Die Streitkräfte Sahrs sind auf Beweglichkeit, Aufklärung und Kontrolle große
 
 ---
 
-# 6. Steinmark
+## Nationale Leitfrage
+
+**Leitfrage:** Was hält eine Gesellschaft zusammen, wenn Handel wichtiger ist als gemeinsame Herkunft?
+
+**Alltagswiderspruch:** Die Städte leben vom offenen Austausch, fürchten aber gleichzeitig Abhängigkeit von fremden Waren, Häfen und Märkten.
+
+**Besonderer Ausbau:** Die Handelsstädte sollten untereinander konkurrieren. Sahr ist deshalb nicht einfach ein geeinter Wirtschaftsblock, sondern ein permanenter Ausgleich zwischen Eigeninteressen.
+
+## Hauptstadt
+
+Sarun ist keine klassische Zentralhauptstadt. Sie ist die größte und politisch wichtigste unter mehreren mächtigen Handelsstädten.
+
+Die Stadt liegt an einem großen Wasserweg und wird von Hafenanlagen, Märkten, Lagerhäusern und Handelsplätzen geprägt.
+
+Politische Macht ist sichtbar mit wirtschaftlicher Macht verbunden. Handelsfamilien besitzen prachtvolle Stadthäuser, während Hafenarbeiter in dicht besiedelten Vierteln leben.
+
+Sarun ist mehrsprachig und kulturell heterogen. Fremde Waren und fremde Menschen gehören zum normalen Stadtbild.
+
+**Stadtbild:** Kanäle, Hafenanlagen, Märkte, Lagerhäuser, Brücken und dicht bebaute Wohnviertel.  
+**Wichtige Viertel:** Großer Hafen, Händlerstadt, Werftbezirk, Marktviertel, Arbeiterviertel.  
+**Sozialer Gegensatz:** alte Handelsfamilien gegenüber Hafenarbeitern und kleinen Händlern.
+
+## Regionen
+
+### Saruner Becken
+Dicht besiedeltes Handelszentrum rund um die Hauptstadt. Banken, Märkte und politische Institutionen konzentrieren sich hier.
+
+### Flussländer
+Fruchtbare Regionen mit Landwirtschaft, Flusshäfen und kleineren Handelsstädten.
+
+### Küstenbund
+Mehrere konkurrierende Hafenstädte. Jede besitzt eigene Traditionen und mächtige Handelsfamilien.
+
+### Hinterland
+Weniger wohlhabende Region mit Rohstoffen, Landwirtschaft und Transportkorridoren. Viele Menschen arbeiten für Unternehmen aus den großen Städten.
+
+**Regionaler Grundkonflikt:** Die Handelsstädte profitieren vom offenen System, während das Hinterland häufig stärker von Preis- und Nachfrageänderungen abhängig ist.
+
+## Städte
+
+### Sarun – Hauptstadt
+Größtes Handelszentrum des Bundes. Hafen, Banken, Märkte und politische Institutionen liegen dicht beieinander.
+
+### Taris
+Reiche Handelsstadt mit alten Kaufmannsfamilien. Prestige und wirtschaftlicher Einfluss gehen eng miteinander einher.
+
+### Velisport
+Großer Arbeitshafen mit Werften und Lagerhäusern. Die Arbeiterbewegung besitzt hier erheblichen Einfluss.
+
+### Ravan
+Flussstadt im landwirtschaftlich geprägten Hinterland. Bedeutendes Zentrum für Getreide, Vieh und Binnenhandel.
+
+### Südtor
+Schnell wachsende Grenz- und Handelsstadt. Viele Migranten und kleinere Händler leben hier.
+
+## Dörfer und ländlicher Alltag
+
+### Flussau
+Dorf am Wasser mit Landwirtschaft, Fährbetrieb und kleinem Markt.
+
+### Kornhafen
+Umschlagdorf zwischen Agrarregion und Flusshandel. Lagerhäuser und Fuhrunternehmen sind zentral.
+
+### Küstenruh
+Fischerdorf mit starkem Familienzusammenhalt und eigener lokaler Tradition.
+
+### Südgarten
+Mischdorf aus Landwirtschaft, kleinen Händlern und neu eingewanderten Familien.
+
+## Familie und Generationen
+
+Familien sind stark in Handels- und Verwandtschaftsnetzwerke eingebunden. Ein Familienname kann auf einem Markt, in einer Werft oder bei einer Handelsgesellschaft wirtschaftliches Gewicht besitzen.
+
+Großfamilien sind besonders in kleineren Städten und Dörfern wichtig. Verwandte können gemeinsam Unternehmen führen, Waren transportieren oder sich in Krisen finanziell unterstützen.
+
+Ehe kann weiterhin wirtschaftliche Bedeutung besitzen, ohne ausschließlich geschäftlich bestimmt zu sein. Unterschiedliche religiöse und kulturelle Hintergründe sind in Handelsstädten normal.
+
+Kinder lernen früh, dass Beziehungen Vertrauen schaffen und Vertrauen wirtschaftlichen Wert besitzt. Die Schattenseite ist der soziale Druck, den Erwartungen der eigenen Familie gerecht zu werden.
+
+## Alltag und Lebensgefühl
+
+### Stadtleben
+
+Sahr ist laut, dicht und wirtschaftlich aktiv. Märkte, Häfen, Werkstätten und Lagerhäuser bestimmen das Stadtbild.
+
+Menschen sind an Fremde gewöhnt. Mehrere Sprachen können innerhalb eines einzigen Viertels gesprochen werden.
+
+### Arbeit
+
+Handel und Logistik sind die wichtigsten sozialen Aufstiegsmöglichkeiten. Eine Familie kann mit einem kleinen Lagerhaus beginnen und innerhalb einer Generation ein bedeutendes Unternehmen aufbauen.
+
+Gleichzeitig leben viele Hafenarbeiter unter unsicheren Bedingungen.
+
+### Familie
+
+Familiennetzwerke besitzen wirtschaftliche Bedeutung. Verwandte helfen bei Transport, Handel und Kredit.
+
+Ehen können deshalb sowohl persönliche als auch wirtschaftliche Bindungen sein.
+
+### Religion
+
+Sahr ist religiös vielfältig. Hafenstädte haben über Jahrhunderte unterschiedliche Glaubensrichtungen aufgenommen. Religiöse Toleranz ist weniger ein philosophisches Ideal als eine praktische Notwendigkeit des Handels.
+
+### Militär
+
+Soldaten gelten als Beschützer von Handelswegen. Versorgung und Infrastruktur werden gesellschaftlich fast ebenso hoch bewertet wie Kampfkraft.
+
+### Lebensgefühl
+
+**Hoffnung:** Aufstieg durch Handel und Eigeninitiative.
+
+**Angst:** Unterbrochene Versorgung, Blockaden und wirtschaftlicher Zusammenbruch.
+
+**Tabu:** Den wirtschaftlichen Nutzen einer Krise offen über das menschliche Leid zu stellen.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche lernen früh Handel, praktische Fähigkeiten und regionale Netzwerke kennen. In Hafenstädten ist kulturelle Vielfalt selbstverständlich.
+
+### Punkt 7 – Arbeit
+
+Handel, Logistik, Schifffahrt, Landwirtschaft und Handwerk bilden das Rückgrat.
+
+### Punkt 8 – Armut
+
+Hafenarbeit und Handel schaffen Aufstieg, aber prekäre Arbeitsverhältnisse und Versorgungskrisen treffen arme Familien stark.
+
+### Punkt 9 – Wohlstand
+
+Handel, Schifffahrt und Familienunternehmen erzeugen große Vermögen.
+
+### Punkt 10 – Religion
+
+Handelswege haben eine religiös vielfältige Gesellschaft geschaffen.
+
+### Punkt 11 – Bildung
+
+Praktische Handels-, Technik- und Sprachkenntnisse sind besonders wertvoll.
+
+### Punkt 12 – Medien
+
+Handelsmedien, lokale Blätter und internationale Nachrichten konkurrieren.
+
+### Punkt 13 – Sprache
+
+Handelsstädte sind mehrsprachig; Lehnwörter und Händlerjargon sind verbreitet.
+
+### Punkt 14 – Essen
+
+Fisch, Getreide, Gewürze und internationale Handelsprodukte prägen die Küche.
+
+### Punkt 15 – Kleidung
+
+Leichte Kleidung, Hafen- und Arbeitskleidung, regionale Stoffe.
+
+### Punkt 16 – Architektur
+
+Hafenarchitektur, Lagerhäuser, Brücken, Märkte und dichte Handelsviertel.
+
+### Punkt 17 – Freizeit
+
+Märkte, Hafenfeste, Wassersport und Handelstreffen.
+
+### Punkt 18 – Feste
+
+Hafenfeste, Handelsfeste und religiös vielfältige Stadtfeste.
+
+### Punkt 19 – Trauer
+
+Familien und Handelsgemeinschaften unterstützen Hinterbliebene praktisch und finanziell.
+
+### Punkt 20 – Militär
+
+Militär schützt Handelswege, Häfen und Versorgung.
+
+### Punkt 21 – Krieg
+
+Versorgung, Blockaden und Handelswege sind zentrale Kriegserfahrungen.
+
+### Punkt 22 – Opposition
+
+Stadtinteressen, Handelsgruppen und regionale Parteien bilden starke Gegenmacht.
+
+### Punkt 23 – Nachbarn
+
+Nachbarschaften in Hafenstädten sind kulturell besonders vielfältig.
+
+### Punkt 24 – Migration
+
+Handel macht Migration alltäglich und wirtschaftlich notwendig.
+
+### Punkt 25 – Familiengeschichte
+
+Familiengeschichte ist häufig zugleich Handelsgeschichte.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Familie Sarin:** Alte Handelsfamilie aus Sarun.
+- **Familie Vel:** Hafenarbeiter- und Fischerfamilie.
+
+### Personen
+- **Nadia Sarin:** Handelsunternehmerin und Mitglied des Stadtrates.
+- **Tomas Vel:** Hafenmeister und Gewerkschaftsvertreter.
+
+### Institutionen
+- **Bund der Handelsstädte:** Politischer und wirtschaftlicher Zusammenschluss.
+- **Saruner Handelskammer:** Einflussreiche Wirtschaftsorganisation.
+
+### Wirtschaft
+- **Sarin Handelsgruppe:** Familienunternehmen für Fernhandel.
+- **Velisport Werften:** Große Schiffbauindustrie.
+
+### Medien
+- **Der Handelskurier:** Wirtschafts- und Politikzeitung.
+- **Hafenstimme:** Lokales Blatt der Arbeiter.
+
+### Militär
+- **Bundeshandelsflotte:** Schutz von Häfen und Handelswegen.
+- **Flusssicherungsregiment:** Sicherung von Transportwegen.
+
+### Stadtviertel Sarun
+- **Kaufmannsring:** Banken und Handelshäuser.
+- **Alter Hafen:** Lagerhäuser und Märkte.
+- **Flussviertel:** Arbeiter und kleine Händler.
+
+### Historische Ereignisse
+- **Gründung des Handelsbundes:** Zusammenschluss der wichtigsten Städte.
+- **Große Blockade:** Versorgungskrise, die die Bedeutung der Handelswege endgültig bewies.
+
+---
+
+# 6. Steinmark – Das Land der Ordnung
 
 ### Das Land der Ordnung
 
@@ -284,7 +1609,239 @@ Jüngere Offiziere fordern deshalb mehr Eigenständigkeit. Die ältere Führung 
 
 ---
 
-# 7. Vael
+## Nationale Leitfrage
+
+**Leitfrage:** Wann schützt Ordnung die Freiheit – und wann ersetzt sie sie?
+
+**Alltagswiderspruch:** Bürger verlassen sich auf funktionierende Institutionen und beginnen gerade deshalb zu spüren, wie mächtig diese Institutionen geworden sind.
+
+**Besonderer Ausbau:** Die Bundesländer Steinmarks sollten unterschiedliche Verwaltungskulturen besitzen. Dadurch wird Föderalismus im Alltag sichtbar.
+
+## Hauptstadt
+
+Steinburg ist eine nüchterne föderale Hauptstadt. Die Stadt wurde bewusst als Verwaltungszentrum entwickelt und besitzt weniger monumentale Selbstdarstellung als viele andere Hauptstädte.
+
+Bundesbehörden, Gerichte und Archive prägen das Zentrum. Die einzelnen Bundesländer unterhalten eigene Vertretungen und Kulturhäuser.
+
+Die Stadt ist bekannt für ihre Verwaltungsgebäude, öffentlichen Bibliotheken und großen Verbands- und Vereinszentren.
+
+**Stadtbild:** funktionale Verwaltungsarchitektur, breite Straßen, öffentliche Parks, Archive und Gerichte.  
+**Wichtige Viertel:** Bundesviertel, Gerichtsbezirk, Länderhäuser, Bürgerstadt, Handwerksviertel.  
+**Sozialer Gegensatz:** Bundesverwaltung und politische Institutionen gegenüber einer großen bürgerlichen Dienstleistungs- und Handwerkerschicht.
+
+## Regionen
+
+### Bundeszentrum
+Verwaltungs- und Bildungsregion rund um die Hauptstadt. Bundesbehörden, Gerichte und große Archive prägen das Leben.
+
+### Nordbund
+Industriell und wirtschaftlich starke Bundesländer mit großer Bedeutung für Maschinenbau und Logistik.
+
+### Südmark
+Mittelgebirgs- und Agrarregion mit kleineren Städten und ausgeprägter Vereinskultur.
+
+### Ostprovinzen
+Historisch stärker militarisierte Regionen an alten Konfliktgrenzen. Öffentliche Erinnerung an vergangene Kriege ist hier besonders präsent.
+
+**Regionaler Grundkonflikt:** Die Bundesländer akzeptieren den gemeinsamen Staat, wollen aber ihre eigenen Verwaltungs- und Kulturtraditionen behalten.
+
+## Städte
+
+### Steinburg – Hauptstadt
+Bundes-, Gerichts- und Verwaltungszentrum. Die Stadt ist weniger von einer einzelnen Industrie als von Institutionen geprägt.
+
+### Falkenheim
+Industrielle Stadt mit starkem Maschinenbau und ausgeprägter Berufsausbildung.
+
+### Talheim
+Mittelstadt im Süden mit Vereinen, Handwerksbetrieben und regionaler Verwaltung.
+
+### Eisenau
+Historische Militär- und Festungsstadt. Veteranenvereine und Bundeswehrtraditionen sind gesellschaftlich sichtbar, ohne die Politik vollständig zu bestimmen.
+
+### Linden
+Universitätsstadt mit wachsender junger Bevölkerung. Hier wird besonders intensiv über Reform der Verwaltung diskutiert.
+
+## Dörfer und ländlicher Alltag
+
+### Eichenheim
+Typisches südliches Dorf mit Vereinen, Feuerwehr und regionalem Handwerk.
+
+### Nordfeld
+Industrienahes Dorf mit vielen Facharbeitern und Pendlern.
+
+### Bundesau
+Dorf, in dem Verwaltung und öffentlicher Dienst überdurchschnittlich viele Familien beschäftigen.
+
+### Grenzmark
+Alte Grenzsiedlung mit starker Erinnerung an frühere Kriege und wechselnde Herrschaften.
+
+## Familie und Generationen
+
+Die Familie ist eine stabile, aber vergleichsweise private Institution. Ehe, Kinder und gegenseitige Unterstützung gelten als wichtige Bestandteile eines geordneten Lebens.
+
+Großeltern übernehmen häufig Aufgaben bei der Kinderbetreuung. Vereine und lokale Gemeinschaften bilden eine zweite soziale Ebene neben der Familie.
+
+Staatliche Einrichtungen helfen Familien durch Schulen, medizinische Versorgung und Verwaltungsleistungen. Gleichzeitig besteht die Erwartung, dass Familien ihre Angelegenheiten grundsätzlich selbst organisieren.
+
+Konflikte entstehen vor allem zwischen traditionellen Familienbildern und jüngeren Generationen, die stärker individuell leben möchten.
+
+## Alltag und Lebensgefühl
+
+### Staat und Bürger
+
+Steinmark ist ein Land von Formularen, Behörden, Vereinen und klaren Zuständigkeiten. Bürger wissen meistens, welche Behörde für welches Problem verantwortlich ist.
+
+Das schafft Sicherheit, kann aber auch Frustration erzeugen.
+
+### Arbeit
+
+Berufe im öffentlichen Dienst besitzen hohes Ansehen. Handwerk, Ingenieurwesen und Logistik werden ebenfalls geschätzt.
+
+Karrieren sind häufig langfristig geplant. Stabilität gilt als Tugend.
+
+### Familie und Bildung
+
+Schulen vermitteln Disziplin, Rechtskenntnis und gemeinschaftliche Verantwortung. Kinder lernen früh, dass Regeln nicht nur Einschränkungen, sondern auch Schutzmechanismen sein können.
+
+### Freizeit
+
+Vereine spielen eine große Rolle. Sport, Feuerwehr, Musikvereine und lokale Organisationen verbinden Bürger über Generationen hinweg.
+
+### Militär
+
+Soldaten gelten weniger als Helden denn als Teil einer funktionierenden Institution. Der ideale Soldat ist zuverlässig, ausgebildet und berechenbar.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass Institutionen auch in Krisen funktionieren.
+
+**Angst:** Dass das System zu langsam wird, während die Welt sich verändert.
+
+**Tabu:** Den Staat grundsätzlich als persönlichen Feind zu betrachten.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Disziplin, Vereinsleben, Gemeinsinn und staatsbürgerliche Bildung prägen die Jugend. Öffentliche Einrichtungen sind alltägliche Bezugspunkte.
+
+### Punkt 7 – Arbeit
+
+Verwaltung, Industrie, Handwerk und öffentlicher Dienst gelten als gleichwertige Säulen geordneter Gesellschaft.
+
+### Punkt 8 – Armut
+
+Verwaltung und soziale Sicherung begrenzen extreme Armut, regionale Unterschiede bleiben.
+
+### Punkt 9 – Wohlstand
+
+Wohlstand ist stärker institutionell und beruflich als aristokratisch geprägt.
+
+### Punkt 10 – Religion
+
+Religion ist frei, aber stark von bürgerlichen Vereinen und lokalen Traditionen geprägt.
+
+### Punkt 11 – Bildung
+
+Staatlich standardisierte Ausbildung und Berufsschulen genießen hohes Vertrauen.
+
+### Punkt 12 – Medien
+
+Sachorientierter öffentlicher Rundfunk und regionale Medien dominieren.
+
+### Punkt 13 – Sprache
+
+Verwaltungssprache ist standardisiert, regionale Dialekte bleiben erhalten.
+
+### Punkt 14 – Essen
+
+Regionale Hausmannskost und Vereinsfeste sind wichtig.
+
+### Punkt 15 – Kleidung
+
+Schlichte, ordentliche Alltagskleidung; Vereine besitzen eigene Farben und Abzeichen.
+
+### Punkt 16 – Architektur
+
+Verwaltungsbauten, Bürgerhäuser und funktionale öffentliche Infrastruktur.
+
+### Punkt 17 – Freizeit
+
+Vereinsleben, Wandern, Sport und lokale Veranstaltungen.
+
+### Punkt 18 – Feste
+
+Bundesfeiern, Vereinsfeste und regionale Erntefeste.
+
+### Punkt 19 – Trauer
+
+Kommunale und staatliche Trauerfeiern verbinden persönliche Trauer mit öffentlicher Ordnung.
+
+### Punkt 20 – Militär
+
+Militär gilt als institutioneller Dienst mit standardisierten Verfahren.
+
+### Punkt 21 – Krieg
+
+Krieg wird als Zusammenbruch geordneter Beziehungen betrachtet; Planung und Verteidigung sollen ihn begrenzen.
+
+### Punkt 22 – Opposition
+
+Opposition arbeitet institutionell und argumentiert häufig über Verwaltungsreformen.
+
+### Punkt 23 – Nachbarn
+
+Vereine, Feuerwehr und lokale Einrichtungen verbinden Nachbarn.
+
+### Punkt 24 – Migration
+
+Migration wird über klare Verwaltungsverfahren organisiert.
+
+### Punkt 25 – Familiengeschichte
+
+Familien erzählen von Beamten, Handwerkern, Soldaten und Vereinsleben; lokale Geschichte ist eng eingebunden.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Familie Stein:** Verwaltungsbeamte über mehrere Generationen.
+- **Familie Falk:** Maschinenbauerfamilie aus dem Norden.
+
+### Personen
+- **Clara Stein:** Bundesrichterin.
+- **Johann Falk:** Gewerkschaftlich engagierter Ingenieur.
+
+### Institutionen
+- **Bundesverwaltungsakademie:** Ausbildungseinrichtung für Beamte.
+- **Bundesrechnungshof:** Symbol institutioneller Kontrolle.
+
+### Wirtschaft
+- **Nordwerke:** Maschinenbau und Logistik.
+- **Südmark Genossenschaft:** Zusammenschluss regionaler Betriebe.
+
+### Medien
+- **Bundesblatt:** Sachorientierte nationale Zeitung.
+- **Der Verein:** Wochenzeitung über regionale Gemeinschaften.
+
+### Militär
+- **Bundesheer Steinmark:** Stark standardisierte Streitkräfte.
+- **Ostverteidigungskommando:** Territorialverband an der historischen Grenze.
+
+### Stadtviertel Steinburg
+- **Bundesforum:** Regierung und Gerichte.
+- **Bürgerstadt:** Wohn- und Geschäftsviertel.
+- **Alte Festung:** Militärmuseum und Gedenkstätte.
+
+### Historische Ereignisse
+- **Der Bundesvertrag:** Gründung der heutigen Föderation.
+- **Die Verwaltungsreform:** Vereinheitlichung von Recht und Verwaltung.
+
+---
+
+# 7. Vael – Das industrielle Machtzentrum
 
 ### Das industrielle Machtzentrum
 
@@ -330,7 +1887,241 @@ Je stärker Vael den Krieg industrialisiert, desto schwerer wird die Frage:
 
 ---
 
-# 8. Vesper
+## Nationale Leitfrage
+
+**Leitfrage:** Wie viel menschliches Leben darf wirtschaftlicher Fortschritt kosten?
+
+**Alltagswiderspruch:** Die Industrie schafft Wohlstand, Infrastruktur und soziale Aufstiegsmöglichkeiten, erzeugt aber gleichzeitig Abhängigkeit von Unternehmen und gefährliche Arbeitsbedingungen.
+
+**Besonderer Ausbau:** Vael braucht sowohl stolze Arbeiterstädte als auch Regionen, in denen Menschen unter der Macht großer Konzerne leiden.
+
+## Hauptstadt
+
+Vaalen ist eine industrielle Megastadt. Fabriken, Energieanlagen, Bahnlinien und Wohnsiedlungen bilden einen zusammenhängenden urbanen Raum.
+
+Die größten Unternehmen besitzen eigene Forschungszentren, Kliniken und Ausbildungsstätten. Manche Stadtviertel wurden ursprünglich von einzelnen Industrieunternehmen errichtet.
+
+Die Stadt ist stolz auf ihre technische Leistungsfähigkeit. Fabriken sind keine versteckten Randanlagen, sondern prägen das Stadtbild.
+
+**Stadtbild:** Hochöfen, Produktionshallen, Kraftwerke, Bahntrassen, Arbeitersiedlungen und Konzernzentren.  
+**Wichtige Viertel:** Industriegürtel, Konzernstadt, alte Arbeitersiedlungen, Forschungsbezirk, Zentralbahnhof.  
+**Sozialer Gegensatz:** Konzernleitungen und technische Elite gegenüber Industriearbeitern und prekären Beschäftigten.
+
+## Regionen
+
+### Eisenland
+Dicht besiedelte Industrieregion mit Bergwerken, Stahlwerken und Maschinenbau.
+
+### Energiegürtel
+Region großer Kraftwerke, Energieanlagen und technischer Infrastruktur. Viele Gemeinden hängen wirtschaftlich von wenigen Unternehmen ab.
+
+### Konzernstädte
+Planmäßig entwickelte Städte, die historisch um einzelne Industrieunternehmen entstanden. Unternehmen prägen dort Schulen, Kliniken und Wohnraum.
+
+### Grünes Vael
+Weniger industrialisierte Region mit Landwirtschaft, Wäldern und kleineren Städten. Hier ist die Kritik an der industriellen Dominanz stärker.
+
+**Regionaler Grundkonflikt:** Für die einen bedeutet Industrie Wohlstand und Stolz; für andere bedeutet sie Abhängigkeit, Umweltbelastung und Verlust lokaler Selbstbestimmung.
+
+## Städte
+
+### Vaalen – Hauptstadt
+Industrielles Machtzentrum mit Konzernzentralen, Forschung und gewaltigen Produktionsanlagen.
+
+### Stahlbruck
+Arbeiterstadt im Eisenland. Schichtarbeit, Gewerkschaften und Familien mit mehreren Generationen Industrieerfahrung prägen den Alltag.
+
+### Energa
+Stadt des Energiegürtels. Kraftwerke, Leitungsnetze und technische Ausbildungszentren dominieren die Umgebung.
+
+### Kronwerk
+Konzernstadt, die weitgehend um ein einzelnes Industriekonglomerat entstand. Das Unternehmen besitzt Wohnraum, Kliniken und Ausbildungsstätten.
+
+### Grünau
+Weniger industrialisierte Stadt im Grünen Vael. Hier ist die Kritik an der Macht der Industrie besonders deutlich.
+
+## Dörfer und ländlicher Alltag
+
+### Stahlhof
+Arbeitersiedlung neben einem großen Stahlwerk. Schichtpläne strukturieren Familienleben und Freizeit.
+
+### Kraftau
+Dorf im Energiegürtel. Viele Bewohner arbeiten in Kraftwerken oder Leitungsbetrieben.
+
+### Konzernfeld
+Unternehmenssiedlung mit Firmenklinik, Schule und Wohnanlagen. Das Unternehmen ist zugleich Arbeitgeber und gesellschaftlicher Mittelpunkt.
+
+### Grünweiler
+Landwirtschaftlich geprägtes Dorf mit stärkerer Kritik an der industriellen Entwicklung.
+
+## Familie und Generationen
+
+In vielen Regionen ist die Familie eng mit dem Arbeitsplatz verbunden. Wenn mehrere Generationen im selben Werk, Bergbaugebiet oder Energiebetrieb gearbeitet haben, wird der Beruf Teil der Familienidentität.
+
+Firmenwohnungen und betriebliche Versorgung können Familien Sicherheit geben. Gleichzeitig kann ein Arbeitsplatzverlust eine ganze Familie treffen.
+
+Eltern sind stolz auf technische Fähigkeiten und berufliche Zuverlässigkeit. Manche Familien hoffen, dass ihre Kinder denselben Weg gehen; andere wollen verhindern, dass sie zu einem weiteren Glied der Produktionskette werden.
+
+Die Familie wird dadurch zu einem Ort des Stolzes und zugleich zu einem Ort, an dem sich die Abhängigkeit von Industrieunternehmen besonders deutlich zeigt.
+
+## Alltag und Lebensgefühl
+
+### Städte
+
+Vaelische Industriestädte sind von Fabriken, Bahnlinien, Energieanlagen und Bergwerken geprägt. Arbeit beginnt und endet häufig nach Schichtplänen.
+
+Die Geräusche der Industrie gehören zum Alltag.
+
+### Gesellschaft
+
+Techniker, Ingenieure und Facharbeiter genießen hohen Respekt. Gleichzeitig besteht eine deutliche Trennung zwischen Industriearbeitern, Büroangestellten und Unternehmensführungen.
+
+Große Konzerne können das Leben ganzer Regionen bestimmen.
+
+### Familie
+
+Familien organisieren ihr Leben um Schichtarbeit. Kinder wachsen mit der Vorstellung auf, dass bestimmte Berufe praktisch Teil der Familiengeschichte sind.
+
+Arbeitsunfälle und Berufskrankheiten gehören zu den gefürchteten Risiken.
+
+### Kultur
+
+Industriefeste, Arbeitersport und technische Wettbewerbe sind populär. Erfolg wird gerne in sichtbaren Ergebnissen gemessen.
+
+### Militär
+
+Ein Soldat wird oft als jemand gesehen, der eine andere Form derselben industriellen Aufgabe erfüllt: Material, Logistik und menschliche Arbeitskraft müssen zusammen funktionieren.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass harte Arbeit einen sichtbaren Fortschritt schafft.
+
+**Angst:** Ersetzt zu werden oder selbst nur noch eine Produktionszahl zu sein.
+
+**Tabu:** Offenen Zweifel am Wert der Leistungsgesellschaft zu äußern.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Technische Ausbildung und Betriebspraktika beginnen früh. Jugendliche stehen zwischen industriellem Berufsstolz und dem Wunsch nach einem Leben außerhalb der Werke.
+
+### Punkt 7 – Arbeit
+
+Industrie und Rohstoffe dominieren; Konzernzugehörigkeit kann Identität und soziale Sicherheit bestimmen.
+
+### Punkt 8 – Armut
+
+Arbeitslosigkeit kann ganze Industrieregionen treffen. Abhängigkeit von Konzernen verschärft soziale Unsicherheit.
+
+### Punkt 9 – Wohlstand
+
+Industrieeigentum und Konzernbeteiligungen konzentrieren großen Reichtum.
+
+### Punkt 10 – Religion
+
+Arbeiterkultur und säkulare Weltbilder sind stark; religiöse Gemeinschaften bestehen dennoch lokal.
+
+### Punkt 11 – Bildung
+
+Technische und industrielle Ausbildung dominiert.
+
+### Punkt 12 – Medien
+
+Konzernmedien besitzen neben staatlichen und unabhängigen Angeboten erheblichen Einfluss.
+
+### Punkt 13 – Sprache
+
+Technische Begriffe und Werksjargon prägen viele Regionen.
+
+### Punkt 14 – Essen
+
+Kalorienreiche Arbeiterküche, Kantinen und regionale Spezialitäten.
+
+### Punkt 15 – Kleidung
+
+Robuste Arbeitskleidung und technische Schutzkleidung sind kulturell sichtbar.
+
+### Punkt 16 – Architektur
+
+Fabriken, Energieanlagen und Arbeiterquartiere prägen ganze Regionen.
+
+### Punkt 17 – Freizeit
+
+Werksvereine, Motorsport, Mannschaftssport und technische Hobbys.
+
+### Punkt 18 – Feste
+
+Werksjubiläen, Arbeitertage und regionale Industriefeste.
+
+### Punkt 19 – Trauer
+
+Bei Arbeitsunfällen entstehen starke Gemeinschaftsrituale; Werke errichten häufig Gedenkorte.
+
+### Punkt 20 – Militär
+
+Militär wird durch gewaltige industrielle Produktionskapazität getragen.
+
+### Punkt 21 – Krieg
+
+Krieg wird auch als industrielle Belastungsprobe erlebt, bei der Produktion und Ressourcen entscheidend sind.
+
+### Punkt 22 – Opposition
+
+Gewerkschaften, Umweltbewegungen und regionale Gruppen stellen Konzernmacht infrage.
+
+### Punkt 23 – Nachbarn
+
+Werksviertel können fast dörfliche Gemeinschaften bilden.
+
+### Punkt 24 – Migration
+
+Industrie zieht Arbeitskräfte an; wirtschaftliche Migration prägt ganze Städte.
+
+### Punkt 25 – Familiengeschichte
+
+Familien erinnern sich über Werke, Bergwerke, Arbeitskämpfe und technische Leistungen.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Familie Vaal:** Alte Industriellenfamilie.
+- **Familie Stahl:** Mehrgenerationenfamilie aus Stahlbruck.
+
+### Personen
+- **Rudolf Vaal:** Konzernvorsitzender und einflussreicher Industrieller.
+- **Anja Stahl:** Arbeitervertreterin und lokale Politikerin.
+
+### Institutionen
+- **Industrieverband Vael:** Dachverband der Großunternehmen.
+- **Technische Hochschule Vaalen:** Führende Ausbildungsstätte für Maschinenbau.
+
+### Wirtschaft
+- **Vaalen Industrial:** Großkonzern für Maschinen und Militärproduktion.
+- **Stahlbruck Werke:** Stahl- und Fahrzeugproduktion.
+
+### Medien
+- **Wirtschaftsrundschau:** Wirtschaftlich einflussreiches Medium.
+- **Werksstimme:** Zeitung der Industriearbeiter.
+
+### Militär
+- **Schwere Heeresgruppe Vael:** Große mechanisierte Verbände.
+- **Artilleriekorps Vaalen:** Schwerpunkt auf schwerer Feuerunterstützung.
+
+### Stadtviertel Vaalen
+- **Konzernring:** Unternehmenszentralen.
+- **Arbeiterviertel:** Dichte Wohnquartiere.
+- **Eisenhafen:** Schwerindustrie und Logistik.
+
+### Historische Ereignisse
+- **Industrialisierung Vaels:** Entstehung der modernen Wirtschaftsmacht.
+- **Großer Arbeiterstreik:** Wendepunkt im Verhältnis zwischen Staat, Konzernen und Arbeiterschaft.
+
+---
+
+# 8. Vesper – Das Land hinter dem Schleier
 
 ### Das Land hinter dem Schleier
 
@@ -371,189 +2162,245 @@ Selbst viele Bürger Vespers wissen nicht mehr, welche Bedrohungen real sind und
 
 ---
 
-# Die sechzehn Nationen – Identität statt Spielschablone
+## Nationale Leitfrage
 
-Die Nationen besitzen bewusst unterschiedliche gesellschaftliche und technologische Identitäten:
+**Leitfrage:** Kann eine Gesellschaft funktionieren, wenn niemand sicher weiß, was wahr ist?
 
-| Nation | Identität | Typische Elemente |
-|---|---|---|
-| **Averon** | moderne liberale Republik | Vernetzung, Sensorik, Kommunikation, schnelle Reaktion |
-| **Karsk** | technokratischer Sklavenstaat | Implantate, Filter, Optiken, technische Symbiose |
-| **Ossaria** | freie technologische Republik | Schutzrüstung, Sensorik, Knochenmasken, Erinnerung |
-| **Rothain** | Republik mit imperialem Erbe | Regimenter, Veteranen, Masse, Tradition |
-| **Sahr** | Handels- und Städtebund | Mobilität, Infrastruktur, Versorgung, Handelswege |
-| **Steinmark** | föderaler Verwaltungsstaat | Standardisierung, Ausbildung, Logistik, Institutionen |
-| **Vael** | industrieller Machtstaat | Produktion, Maschinen, schwere Ausrüstung |
-| **Vesper** | zentralistischer Sicherheitsstaat | Geheimdienste, Täuschung, Information |
-| **Eldran** | konstitutionelle Monarchie | Landesverteidigung, Befestigung, Artillerie, Krone und Parlament |
-| **Namar** | maritime Föderation | Küste, Häfen, amphibische Verbände, regionale Autonomie |
-| **Orthea** | wissenschaftliche Republik | Sensorik, Robotik, Analyse, keine automatische Expertenherrschaft |
-| **Dargan** | Grenzrepublik | robuste Technik, weite Räume, lokale Selbsthilfe |
-| **Lyr** | Bund der Bergrepubliken | Pässe, Tunnel, lokale Souveränität |
-| **Caldris** | autoritärer Wohlfahrtsstaat | Versorgung, Medizin, Überwachung |
-| **Merovan** | postimperiale Handelsrepublik | Expeditionen, Häfen, alte imperiale Netze |
-| **Theryn** | revolutionäre Republik | Massenmobilisierung, robuste Produktion, Räte gegen Zentrale |
+**Alltagswiderspruch:** Geheimhaltung kann reale Gefahren verhindern, zerstört aber langfristig Vertrauen zwischen Bürgern.
 
-Diese Elemente sind **Leitplanken der Weltgestaltung, keine festen Fraktionsmechaniken**.
+**Besonderer Ausbau:** Vesper sollte mehrere Schichten besitzen: überzeugte Staatsanhänger, vorsichtige Mitläufer, private Opposition und Menschen, die schlicht versuchen, unauffällig zu leben.
 
-Eine Karte muss nicht automatisch einer Nation zugeordnet werden, nur weil ihre Idee zu einem bestimmten nationalen Motiv passt.
+## Hauptstadt
 
----
+Velis ist eine schwer durchschaubare Hauptstadt. Offizielle Regierungsgebäude bilden nur einen Teil des eigentlichen Machtzentrums.
 
-# Nationale Identität und Kartendesign
+Die Stadt besitzt große öffentliche Plätze und moderne Verwaltungsbauten, aber auch zahlreiche abgeschirmte Anlagen, deren Funktion der Bevölkerung unbekannt ist.
 
-Die Kartengestaltung von *Division Command* folgt deshalb einer Trennung zwischen **Mechanik** und **Lore**.
+Menschen achten darauf, was sie in der Öffentlichkeit sagen. Manche Gebäude besitzen mehrere Eingänge und unterschiedliche Sicherheitsbereiche.
 
-## Gemeinsame Karten
+Velis ist deshalb weniger durch offene Monumentalität als durch kontrollierte Zugänglichkeit geprägt.
 
-Viele militärische Systeme existieren in mehreren oder allen Nationen.
+**Stadtbild:** dunkle Verwaltungsbauten, breite Plätze, Sicherheitsanlagen, Wohnblöcke und abgeschirmte Innenhöfe.  
+**Wichtige Viertel:** Regierungsbezirk, Informationszentrum, Altstadt, Sicherheitssektor, Arbeiterbezirke.  
+**Sozialer Gegensatz:** staatliche Funktionsträger gegenüber Bürgern, die bewusst außerhalb staatlicher Institutionen bleiben.
 
-Beispiele:
+## Regionen
 
-- Infanterie
-- Fahrzeuge
-- Artillerie
-- Aufklärung
-- Pioniere
-- Sanität
-- Rauch und Nebel
-- Befestigungen
-- Transport
-- Kommunikationssysteme
-- Luftunterstützung
-- Versorgung
+### Hauptstadtbezirk
+Dicht kontrollierte Region mit Ministerien, Sicherheitsorganen und staatlichen Medien.
 
-Die Karte erhält ihre nationale Identität hauptsächlich durch Darstellung, Namen, Hintergrund und Ausrüstung.
+### Nebelprovinzen
+Ländliche Gebiete, in denen Informationen über die tatsächlichen Aktivitäten des Staates besonders schwer zu überprüfen sind.
 
-## Nationale Karten
+### Grenzkorridor
+Militärisch und geheimdienstlich bedeutende Region. Die Bevölkerung lebt mit häufigen Kontrollen und wechselnden Sicherheitsmaßnahmen.
 
-Einige Karten können exklusiv für eine Nation sein, wenn ihr Konzept unmittelbar aus deren besonderer Gesellschaft oder Technologie entsteht.
+### Freie Städte
+Wirtschaftlich wichtige Städte mit etwas größerem privaten Handlungsspielraum. Auch hier bleibt die staatliche Beobachtung spürbar.
 
-Beispiele:
+**Regionaler Grundkonflikt:** Je nach Region unterscheiden sich die Menschen darin, ob sie die staatliche Geheimhaltung als Schutz oder als Bedrohung verstehen.
 
-- Karsker biologische-technische Symbiose
-- ossarische Erinnerungs- und Schutzsysteme
-- spezielle vespische Geheimoperationen
+## Städte
 
-Nationale Exklusivität ist jedoch **kein Selbstzweck**.
+### Velis – Hauptstadt
+Politisches und geheimdienstliches Zentrum. Viele Bereiche der Stadt sind für normale Bürger nur eingeschränkt zugänglich.
 
-Die Frage lautet nicht:
+### Darsin
+Handelsstadt mit vergleichsweise großer privater Wirtschaft. Wohlhabender als viele andere Städte, aber stark überwacht.
 
-> „Welche Nation braucht diese Karte?“
+### Nebelstadt
+Kleinere Stadt in einer abgelegenen Region. Gerüchte über geheime Anlagen gehören zum lokalen Alltag.
 
-sondern:
+### Kovar
+Grenzstadt mit hoher Militärpräsenz. Die Bevölkerung ist an Kontrollen und kurzfristige Sicherheitsmaßnahmen gewöhnt.
 
-> **„Muss diese Karte wirklich exklusiv sein, oder kann sie sinnvoll in mehreren Nationen existieren?“**
+### Selin
+Alte Kulturstadt mit Universitäten, Theatern und privaten Netzwerken. Politische Gespräche finden häufig in kleinen, vertrauten Kreisen statt.
 
-## Mehrfach interpretierbare Karten
+## Dörfer und ländlicher Alltag
 
-Eine einzelne militärische Funktion kann bei verschiedenen Nationen völlig unterschiedlich aussehen.
+### Nebelhof
+Abgelegenes Dorf mit wenig öffentlicher Infrastruktur. Die Bewohner verlassen sich stark auf Familien und Nachbarschaften.
 
-Beispiel: **Gefechtsaufklärung**
+### Wachtau
+Siedlung nahe einer militärischen Zone. Kontrollen gehören zum Alltag.
 
-- Karsk: technische Sensorik im künstlich verstärkten Körper
-- Ossaria: Sensorik innerhalb der Kampfrüstung
-- Averon: vernetztes Aufklärungssystem
-- Vesper: menschlicher Nachrichtendienst
-- Sahr: mobile Aufklärungseinheit
+### Stilldorf
+Altes Dorf mit ausgeprägten privaten Netzwerken. Menschen wissen viel voneinander, sprechen aber wenig offen über Politik.
 
-Die Grundfunktion der Karte kann dabei identisch bleiben.
+### Freihain
+Landgemeinde mit etwas stärkerer wirtschaftlicher Selbstständigkeit und größerem Abstand zu staatlichen Institutionen.
 
----
+## Familie und Generationen
 
-# Designgrundsatz für Division Command
+Vertrauen ist innerhalb der Familie besonders wichtig. Weil politische Überwachung und staatliche Informationskontrolle zum Alltag gehören, gilt die Familie häufig als einer der wenigen Räume, in denen Menschen offen sprechen können.
 
-Bei der Entwicklung neuer Karten gilt:
+Gleichzeitig kann auch innerhalb einer Familie Vorsicht entstehen. Eltern überlegen, welche politischen Aussagen sie vor ihren Kindern machen, und ältere Menschen warnen Jüngere davor, private Gespräche weiterzugeben.
 
-1. **Zuerst kommt die spielerische Funktion.**
-2. Die Karte muss mit den bestehenden Grundregeln funktionieren.
-3. Stärke und Kosten werden unabhängig von der Lore geprüft.
-4. Erst danach wird entschieden, welche Nation oder Nationen die Karte verwenden können.
-5. Exklusivität wird nur verwendet, wenn sie für die Identität oder das Balancing sinnvoll ist.
-6. Eine Nation darf mehrere unterschiedliche militärische Spielweisen besitzen.
-7. Eine Nation wird nicht automatisch mit einem einzigen Archetyp gleichgesetzt.
+Großfamilien und langjährige Freundschaften können deshalb ähnliche Funktionen wie politische oder religiöse Gemeinschaften übernehmen.
 
-Dadurch bleibt der Kartenpool offen.
+Das wichtigste Familiengut ist nicht Besitz, sondern **gegenseitiges Vertrauen**.
 
-**Karsk muss nicht ausschließlich aggressiv sein.**  
-**Ossaria muss nicht ausschließlich defensiv sein.**  
-**Vesper muss nicht ausschließlich Fallen spielen.**
+## Alltag und Lebensgefühl
 
-Die Lore erklärt, **warum** eine Nation bestimmte Dinge tut.
+### Öffentlichkeit
 
-Sie schreibt nicht vor, **welche einzige Art** diese Nation zu spielen hat.
+Vesper ist ein Land, in dem Menschen gelernt haben, zwischen öffentlicher und privater Sprache zu unterscheiden.
 
----
+Was man zu Hause sagt, muss nicht dem entsprechen, was man bei der Arbeit sagt.
 
-# Eliteeinheiten
+### Arbeit
 
-Diese Trennung ist besonders wichtig für die Elitekarten.
+Staatliche Institutionen, Sicherheitsdienste und staatsnahe Unternehmen sind wichtige Arbeitgeber. Eine unauffällige Karriere kann sicherer sein als eine besonders ambitionierte.
 
-Eliteeinheiten sollen nicht lediglich größere Werte besitzen.
+### Familie
 
-Ihre besondere Funktion besteht darin, **neue Regeln oder neue Interaktionen in das Spiel einzuführen**.
+Vertrauen innerhalb der Familie ist besonders wichtig. Eltern bringen ihren Kindern bei, Informationen nicht leichtfertig weiterzugeben.
 
-Nationale Besonderheiten können sich daher besonders stark in Elitekarten zeigen, ohne den gesamten normalen Kartenpool einer Nation einzuschränken.
+Manche Familien besitzen private Geschichten, die niemals außerhalb des Hauses erzählt werden.
 
-Eine Karsker Eliteeinheit könnte beispielsweise die technische Symbiose als neue Regel darstellen.
+### Medien
 
-Eine ossarische Eliteeinheit könnte das Vermächtnis gefallener Einheiten als neue Regel darstellen.
+Nachrichten werden konsumiert, aber nicht vollständig geglaubt. Bürger vergleichen staatliche Informationen mit Gerüchten, privaten Kontakten und ausländischen Quellen.
 
-Eine vespische Eliteeinheit könnte verdeckte Informationsmechaniken erweitern.
+### Religion und Rituale
 
-Damit bleiben normale Karten frei gestaltbar, während Elitekarten die extremsten Ausprägungen der jeweiligen Nation verkörpern können.
+Private religiöse und kulturelle Traditionen können als Rückzugsraum dienen. Gleichzeitig fürchten manche Bürger, dass selbst private Gemeinschaften politisch interpretiert werden.
+
+### Militär
+
+Soldaten und Geheimdienstangehörige besitzen Ansehen und Misstrauen zugleich. Niemand weiß genau, wie groß die tatsächliche Macht der Sicherheitsapparate ist.
+
+### Lebensgefühl
+
+**Hoffnung:** Einen privaten Raum zu besitzen, in den der Staat nicht eindringt.
+
+**Angst:** Nicht zu wissen, wem man vertrauen kann.
+
+**Tabu:** Offene Aussagen über die eigene Überwachung.
 
 ---
 
-# Gemeinsame Vorgeschichte
+## Gesellschaftliche Ebenen 6–25
 
-Die sechzehn Staaten waren nicht immer Feinde.
+### Punkt 6 – Jugend
 
-Über Jahrzehnte bestanden Handelsabkommen, Verteidigungsbündnisse, gemeinsame Forschungsprojekte und politische Verträge. Mehrfach wurden große Kriege verhindert.
+Jugendliche lernen früh zwischen öffentlicher und privater Sprache zu unterscheiden. Vertrauen entsteht vor allem in kleinen Freundeskreisen.
 
-Doch jede vermiedene Katastrophe hinterließ neue Sicherheitsmaßnahmen.
+### Punkt 7 – Arbeit
 
-Jede neue Sicherheitsmaßnahme wurde vom Nachbarn als Vorbereitung auf einen Angriff verstanden.
+Staat, Sicherheitssektor, Handel und verborgene informelle Arbeit prägen den Arbeitsmarkt.
 
-Aus Misstrauen wurde Aufrüstung.  
-Aus Aufrüstung wurde Abschreckung.  
-Aus Abschreckung wurden Bündnisse.  
-Aus Bündnissen wurden Verpflichtungen.
+### Punkt 8 – Armut
 
-Als schließlich der erste große Krieg begann, war kaum noch eine Regierung in der Lage, ihn allein zu beenden.
+Armut ist schwer sichtbar, weil staatliche Kontrolle und informelle Netzwerke Statistiken verzerren können.
 
-**Die Soldaten kämpfen an der Front.  
-Die Ursachen des Krieges liegen Jahrzehnte hinter ihnen.**
+### Punkt 9 – Wohlstand
 
+Wohlstand ist schwer sichtbar; privilegierte Staats- und Sicherheitskreise leben deutlich besser.
+
+### Punkt 10 – Religion
+
+Private Religion kann ein Rückzugsraum vor staatlicher Öffentlichkeit sein.
+
+### Punkt 11 – Bildung
+
+Bildung vermittelt neben Wissen auch Diskretion und staatliche Loyalität.
+
+### Punkt 12 – Medien
+
+Medien sind kontrolliert; Gerüchte, private Netzwerke und verschlüsselte Kommunikation bilden Gegenöffentlichkeiten.
+
+### Punkt 13 – Sprache
+
+Menschen verwenden häufig unterschiedliche öffentliche und private Ausdrucksweisen.
+
+### Punkt 14 – Essen
+
+Einfache häusliche Küche; seltene Zutaten werden eher privat gehandelt.
+
+### Punkt 15 – Kleidung
+
+Unauffällige Kleidung wird bevorzugt; auffällige politische Symbole gelten als riskant.
+
+### Punkt 16 – Architektur
+
+Kontrollpunkte, abgeschirmte Regierungsviertel und unscheinbare Wohngebäude.
+
+### Punkt 17 – Freizeit
+
+Kleine private Treffen, Literatur, Musik und diskrete Freundeskreise.
+
+### Punkt 18 – Feste
+
+Offizielle Feiertage sind staatlich geprägt; private Feste bleiben bewusst kleiner.
+
+### Punkt 19 – Trauer
+
+Öffentliche Trauer kann politisch sensibel sein; private Rituale sind wichtiger.
+
+### Punkt 20 – Militär
+
+Militär, Geheimdienste und innere Sicherheit sind eng miteinander verbunden.
+
+### Punkt 21 – Krieg
+
+Unsicherheit, Spionage und Informationskrieg prägen die öffentliche Wahrnehmung.
+
+### Punkt 22 – Opposition
+
+Opposition ist verdeckt und fragmentiert.
+
+### Punkt 23 – Nachbarn
+
+Vertrauen wird vorsichtig vergeben.
+
+### Punkt 24 – Migration
+
+Migration ist stark kontrolliert und politisch sensibel.
+
+### Punkt 25 – Familiengeschichte
+
+Familiengeschichte kann aus unausgesprochenen Geheimnissen bestehen.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Familie Velan:** Beamtenfamilie mit Zugang zu staatlichen Institutionen.
+- **Familie Sora:** Händlerfamilie mit starkem privaten Netzwerk.
+
+### Personen
+- **Ilan Velan:** Nachrichtendienstbeamter, der zwischen Pflicht und persönlicher Moral steht.
+- **Mira Sora:** Buchhändlerin und diskrete Vermittlerin unabhängiger Informationen.
+
+### Institutionen
+- **Direktorat für Staatssicherheit:** Zentrale Sicherheitsbehörde.
+- **Archivamt Velis:** Kontrolliert wichtige historische Dokumente.
+
+### Wirtschaft
+- **Vespera Handelswerke:** Staatlich kontrollierter Handelskonzern.
+- **Freier Markt Darsin:** Halbprivate Wirtschaftszone.
+
+### Medien
+- **Vesperisches Staatsnetz:** Offizielle Informationsquelle.
+- **Nachtbrief:** Illegales Informationsnetzwerk.
+
+### Militär
+- **Schleierkorps:** Aufklärung und verdeckte Operationen.
+- **Grenzaufklärung Vesper:** Spezialisierte Überwachungskräfte.
+
+### Stadtviertel Velis
+- **Ministerring:** Staatliche Machtzentren.
+- **Altstadt:** Geschäfte und private Netzwerke.
+- **Sicherheitsbezirk:** Kontrollierte Regierungszone.
+
+### Historische Ereignisse
+- **Die Verschwiegene Krise:** Politische Krise, deren vollständige Geschichte bis heute unklar ist.
+- **Der Schleierpakt:** Abkommen, das die heutige Sicherheitsordnung begründete.
 
 ---
 
-# Erweiterung auf sechzehn Nationen
-
-Mit der langfristigen Weltplanung wird *Division Command* als Welt mit **sechzehn Nationen** erweitert. Die zusätzlichen Nationen sollen nicht einfach weitere militärische Archetypen darstellen. Sie erweitern vor allem das politische, gesellschaftliche und kulturelle Spektrum der Welt.
-
-Die Welt soll unterschiedliche Antworten auf Fragen zeigen wie:
-
-- Wer darf politische Macht ausüben?
-- Wie wird Herrschaft legitimiert?
-- Welche Rolle spielen Religion und Tradition?
-- Wie weit darf ein Staat in das Leben seiner Bürger eingreifen?
-- Wem gehört wirtschaftliche Macht?
-- Wie verhalten sich Militär und zivile Regierung?
-- Was geschieht nach Revolution, Kolonialherrschaft oder Bürgerkrieg?
-- Kann ein Staat zugleich demokratisch und stark sicherheitsorientiert sein?
-- Wie funktioniert eine Gesellschaft, die sich bewusst von Nationalstaaten unterscheidet?
-- Kann Frieden selbst zum strategischen Machtinstrument werden?
-
-Die Nationen orientieren sich dabei an **politischen Strukturtypen**, ohne reale Staaten eins zu eins abzubilden. Politikwissenschaftlich werden unter anderem demokratische, autoritäre, militärische, monarchische, theokratische, Einparteien- und hybride Herrschaftsformen unterschieden. citeturn0search0turn0search12
-
-Wichtig ist deshalb: Eine Nation kann widersprüchlich sein. Eine Republik kann Freiheitsrechte besitzen und gleichzeitig harte Sicherheitsgesetze haben. Eine religiöse Gesellschaft kann wissenschaftlich hochentwickelt sein. Ein autoritärer Staat kann funktionierende Institutionen besitzen. Eine Demokratie kann wirtschaftlich von wenigen Konzernen dominiert werden.
-
-**Division Command soll keine politische Welt mit eindeutigen moralischen Farben sein.**
-
----
-
-# 9. Eldran
+# 9. Eldran – Die konstitutionelle Monarchie
 
 ### Die konstitutionelle Monarchie
 
@@ -594,7 +2441,235 @@ Die zentrale Frage lautet:
 
 ---
 
-# 10. Namar
+## Nationale Leitfrage
+
+**Leitfrage:** Kann Tradition eine demokratische Ordnung stärken, ohne sie zu beherrschen?
+
+**Alltagswiderspruch:** Die Krone ist politisch begrenzt, aber kulturell mächtig.
+
+**Besonderer Ausbau:** Eldran sollte einen klaren Gegensatz zwischen höfisch geprägten Zentren, modernen Städten und eigenständigen Regionen erhalten.
+
+## Hauptstadt
+
+Aurelien ist eine historische Hauptstadt mit königlichem Palast, Parlament und alten Adelshäusern.
+
+Die Monarchie ist politisch begrenzt, aber ihre Präsenz ist im Stadtbild weiterhin deutlich. Zeremonielle Gebäude stehen neben modernen Ministerien und Universitäten.
+
+Ein Teil der Bevölkerung empfindet die historische Architektur als gemeinsames kulturelles Erbe, ein anderer als Erinnerung an gesellschaftliche Privilegien.
+
+**Stadtbild:** Palastanlagen, alte Bürgerhäuser, moderne Ministerien, Parks und repräsentative Plätze.  
+**Wichtige Viertel:** Königlicher Bezirk, Parlament, Altstadt, Universitätsviertel, moderne Neustadt.  
+**Sozialer Gegensatz:** alte Eliten und Hofkultur gegenüber modernen urbanen Mittelschichten.
+
+## Regionen
+
+### Kronland
+Historisches Kerngebiet rund um die Hauptstadt. Königliche Institutionen und alte Familien sind kulturell besonders präsent.
+
+### Nordprovinzen
+Industriell und wirtschaftlich moderne Regionen mit einer stärkeren republikanischen und säkularen Bevölkerung.
+
+### Südmark
+Landwirtschaftlich geprägte Regionen mit traditionellen Festen und starker lokaler Identität.
+
+### Freie Randgebiete
+Regionen mit weitreichenden historischen Selbstverwaltungsrechten.
+
+**Regionaler Grundkonflikt:** Die Frage nach der Rolle der Krone wird je nach Region sehr unterschiedlich beantwortet.
+
+## Städte
+
+### Aurelien – Hauptstadt
+Königliche und parlamentarische Hauptstadt. Palast, Parlament und alte Bürgerstadt liegen eng beieinander.
+
+### Norwick
+Moderne Industriestadt mit starker republikanischer Kultur und wenig höfischer Tradition.
+
+### Rosenfeld
+Agrarische Stadt im Süden mit traditionellen Festen und regionalen Familienverbänden.
+
+### Hohenmark
+Historische Adels- und Universitätsstadt. Alte Familien besitzen kulturellen Einfluss, aber keine automatische politische Macht.
+
+### Freistadt
+Stadt mit historisch weitreichenden Selbstverwaltungsrechten. Die Einwohner reagieren empfindlich auf Eingriffe der Zentralregierung.
+
+## Dörfer und ländlicher Alltag
+
+### Kronau
+Traditionelles Dorf mit alten Festen und sichtbaren Verbindungen zu regionalen Adelsfamilien.
+
+### Talheim
+Landwirtschaftliche Gemeinde mit modernen Betrieben und starken Gemeinderäten.
+
+### Nordhain
+Arbeiterdorf mit moderner, eher republikanischer Bevölkerung.
+
+### Freital
+Gemeinde mit historisch besonderen Selbstverwaltungsrechten und starkem Lokalbewusstsein.
+
+## Familie und Generationen
+
+Familien reichen von alten aristokratischen Häusern bis zu modernen städtischen Haushalten. Die Monarchie prägt manche Familien stark, andere stehen ihr gleichgültig oder kritisch gegenüber.
+
+In traditionellen Familien werden Titel, Familienhäuser und regionale Bräuche gepflegt. Bürgerliche Familien betonen häufiger Ausbildung, Beruf und persönliche Leistung.
+
+Die Familie bleibt ein wichtiger Ort politischer Sozialisation: Kinder können mit monarchistischen, republikanischen oder pragmatisch-konstitutionellen Vorstellungen aufwachsen.
+
+Hochzeiten sind häufig große soziale Ereignisse, müssen aber nicht mehr den alten Standesgrenzen folgen.
+
+## Alltag und Lebensgefühl
+
+### Gesellschaft
+
+Eldran besitzt eine ausgeprägte zeremonielle Kultur. Feiertage der Krone, regionale Feste und parlamentarische Rituale gehören zum öffentlichen Leben.
+
+Die Gesellschaft ist dennoch modern und wirtschaftlich vielfältig.
+
+### Soziale Schichten
+
+Alte Adelsfamilien besitzen weiterhin kulturelles Kapital, aber nicht automatisch politische Macht. Eine neue urbane Mittelschicht betrachtet Titel oft als Folklore.
+
+In ländlichen Gebieten kann die Krone dagegen noch emotional stark verankert sein.
+
+### Familie
+
+Familiengeschichten werden häufig über Generationen erzählt. Abstammung besitzt kulturelle Bedeutung, aber soziale Mobilität ist real.
+
+### Militär
+
+Die Streitkräfte haben starke zeremonielle Traditionen. Gleichzeitig ist die zivile Kontrolle über das Militär ein zentraler Bestandteil der modernen Staatsordnung.
+
+### Lebensgefühl
+
+**Hoffnung:** Stabilität ohne Rückkehr zur alten Standesgesellschaft.
+
+**Angst:** Eine Verfassungskrise, die Krone und Republik gegeneinander stellt.
+
+**Tabu:** Die Vorstellung, dass Tradition allein politische Legitimität erzeugt.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche begegnen sowohl monarchischer Tradition als auch moderner republikanischer Kultur. Region und Familie beeinflussen die politische Sozialisation stark.
+
+### Punkt 7 – Arbeit
+
+Öffentlicher Dienst, moderne Wirtschaft, Landwirtschaft und traditionelle Berufe bestehen nebeneinander.
+
+### Punkt 8 – Armut
+
+Sozialhilfe existiert, doch alte Besitzstrukturen wirken fort.
+
+### Punkt 9 – Wohlstand
+
+Alte Familien und moderne Unternehmer bilden unterschiedliche Eliten.
+
+### Punkt 10 – Religion
+
+Historische Staatskirchen und moderne Religionsfreiheit koexistieren.
+
+### Punkt 11 – Bildung
+
+Klassische Bildung, moderne Hochschulen und regionale Schulen koexistieren.
+
+### Punkt 12 – Medien
+
+Freie Medien mit traditionell höfischen und modernen republikanischen Blättern.
+
+### Punkt 13 – Sprache
+
+Hofsprache und regionale Dialekte bestehen neben moderner Standardsprache.
+
+### Punkt 14 – Essen
+
+Hofgerichte und regionale bäuerliche Küche stehen nebeneinander.
+
+### Punkt 15 – Kleidung
+
+Klassische Schnitte und regionale Festkleidung bleiben sichtbar.
+
+### Punkt 16 – Architektur
+
+Paläste, Parlamente, Bürgerhäuser und moderne Vorstädte.
+
+### Punkt 17 – Freizeit
+
+Reitsport, Musik, Theater, regionale Feste und moderne Stadtkultur.
+
+### Punkt 18 – Feste
+
+Königliche Zeremonien, nationale Feiertage und regionale Feste.
+
+### Punkt 19 – Trauer
+
+Königliche und militärische Trauerzeremonien stehen neben privaten Ritualen.
+
+### Punkt 20 – Militär
+
+Territorialverteidigung, Ingenieurwesen und vorbereitete Stellungen sind zentral; zivile Kontrolle bleibt stark.
+
+### Punkt 21 – Krieg
+
+Krieg wird als Gefahr für Verfassung, Territorium und historische Ordnung betrachtet.
+
+### Punkt 22 – Opposition
+
+Republikaner, Monarchisten und Verfassungstreue konkurrieren friedlich um Einfluss.
+
+### Punkt 23 – Nachbarn
+
+Historische Viertel besitzen starke lokale Identitäten.
+
+### Punkt 24 – Migration
+
+Migration wird regional unterschiedlich bewertet.
+
+### Punkt 25 – Familiengeschichte
+
+Herkunft, Adel, Bürgertum und republikanische Familiengeschichten stehen nebeneinander.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Haus Aurel:** Alte königliche Verwandtschaft.
+- **Familie Nor:** Bürgerliche Unternehmerfamilie.
+
+### Personen
+- **König Adrian IV.:** Verfassungstreuer Monarch mit begrenzter politischer Macht.
+- **Elena Nor:** Republikanische Abgeordnete und Verfassungsjuristin.
+
+### Institutionen
+- **Kronrat:** Beratendes königliches Organ.
+- **Verfassungsgericht Aurelien:** Wächter der institutionellen Ordnung.
+
+### Wirtschaft
+- **Nor Industrien:** Moderne Maschinen- und Logistikunternehmen.
+- **Südmark Landwirtschaftsbund:** Zusammenschluss landwirtschaftlicher Betriebe.
+
+### Medien
+- **Kronenzeitung:** Konservatives Medium.
+- **Die Republik:** Liberales Nachrichtenblatt.
+
+### Militär
+- **Königliche Territorialkräfte:** Formal königliche, praktisch parlamentarisch kontrollierte Streitkräfte.
+- **Hohenmark-Pionierkorps:** Ingenieur- und Befestigungsspezialisten.
+
+### Stadtviertel Aurelien
+- **Kronenviertel:** Palast und zeremonielle Gebäude.
+- **Parlamentsstadt:** Ministerien und Parlament.
+- **Bürgerhafen:** Moderne Wirtschaft.
+
+### Historische Ereignisse
+- **Die Verfassungskrise:** Machtkampf, der die Grenzen der Monarchie festlegte.
+- **Der Verfassungspakt:** endgültige Anerkennung der parlamentarischen Ordnung.
+
+---
+
+# 10. Namar – Die maritime Föderation
 
 ### Die maritime Föderation
 
@@ -640,7 +2715,235 @@ Sie macht Entscheidungen aber auch langsam.
 
 ---
 
-# 11. Orthea
+## Nationale Leitfrage
+
+**Leitfrage:** Wie viel gemeinsame Macht braucht Freiheit zwischen voneinander entfernten Regionen?
+
+**Alltagswiderspruch:** Die Menschen verteidigen ihre regionale Selbstbestimmung, benötigen aber im Krieg gemeinsame Infrastruktur und zentrale Koordination.
+
+**Besonderer Ausbau:** Jede Küstenregion sollte eine eigene Identität besitzen. Namar wird dadurch zu einem Staat, dessen Einheit ständig ausgehandelt wird.
+
+## Hauptstadt
+
+Maris liegt an einer geschützten Küste und ist zugleich Hauptstadt, Hafen und Verkehrsknoten.
+
+Die Stadt ist stark vom Meer abhängig. Fähren, Werften, Fischmärkte und Küstenwachen gehören zum alltäglichen Bild.
+
+Die föderale Struktur Namars zeigt sich darin, dass fast jede Region eigene Verwaltungs- und Kulturhäuser besitzt.
+
+**Stadtbild:** Hafen, Werften, Küstenstraßen, Fähren, Markthallen und moderne Wohnviertel.  
+**Wichtige Viertel:** Zentralhafen, Werftstadt, Föderationsviertel, Fischmarkt, Neustadt.  
+**Sozialer Gegensatz:** maritime Arbeiter und traditionelle Familien gegenüber modernen Handels- und Verwaltungsschichten.
+
+## Regionen
+
+### Zentralküste
+Dicht besiedelte Küstenregion mit den größten Häfen und Werften.
+
+### Inselbund
+Mehrere Inselgruppen mit eigenen Dialekten, Bräuchen und lokalen Verwaltungen. Die Bewohner fühlen sich häufig zuerst ihrer Insel verbunden.
+
+### Westküste
+Fischerei, kleinere Häfen und traditionelle maritime Gemeinden.
+
+### Südliche Handelsküste
+Moderne Hafenstädte, internationale Unternehmen und starke Migration.
+
+**Regionaler Grundkonflikt:** Inseln und Randregionen fürchten, dass die Hauptstadt ihre Interessen zugunsten der großen Häfen vernachlässigt.
+
+## Städte
+
+### Maris – Hauptstadt
+Großer Hafen- und Verwaltungsstandort. Fähren, Werften und maritime Behörden bestimmen den Alltag.
+
+### Inselstadt
+Zentrum eines bedeutenden Inselbundes. Lokale Identität ist stärker als das nationale Zugehörigkeitsgefühl.
+
+### Westhaven
+Traditionelle Fischereistadt mit kleinen Werften und eng verbundenen Familien.
+
+### Port Sol
+Moderne internationale Handelsstadt mit starker Migration und großen Logistikunternehmen.
+
+### Teral
+Küstenstadt mit bedeutender Marine- und Küstenverteidigungsinfrastruktur.
+
+## Dörfer und ländlicher Alltag
+
+### Seedorf
+Fischerdorf mit kleinen Bootswerften und Familien, deren Berufe seit Generationen mit dem Meer verbunden sind.
+
+### Inselruh
+Abgelegene Inselgemeinde. Wetter, Fährverbindungen und lokale Selbstversorgung bestimmen den Alltag.
+
+### Hafenfeld
+Dorf nahe eines großen Hafens. Viele Bewohner arbeiten in Logistik und Schifffahrt.
+
+### Salzwiese
+Küstendorf mit Landwirtschaft, Fischerei und traditioneller regionaler Küche.
+
+## Familie und Generationen
+
+Die maritime Lebensweise prägt viele Familien. In Küsten- und Inselregionen wechseln sich Generationen von Fischern, Seeleuten, Hafenarbeitern und Schiffbauern ab.
+
+Abwesenheit gehört zum Familienleben: Ein Elternteil kann wochen- oder monatelang auf See sein. Dadurch entstehen starke lokale Netzwerke, in denen Großeltern, Geschwister und Nachbarn Verantwortung übernehmen.
+
+Auf Inseln ist die Familie oft besonders eng mit dem Heimatort verbunden. Wegzug wird nicht nur als persönlicher Schritt, sondern manchmal als Verlust für die Gemeinschaft verstanden.
+
+Kinder lernen früh Wetter, Meer und praktische Sicherheit. Familiengeschichten sind häufig mit bestimmten Schiffen, Häfen oder Inseln verbunden.
+
+## Alltag und Lebensgefühl
+
+### Leben am Wasser
+
+Wasser bestimmt die namaranische Gesellschaft. Fischerei, Handel, Schiffbau, Hafenarbeit und Küstenschutz sind alltägliche Themen.
+
+Kinder lernen früh schwimmen und mit wechselnden Wetterbedingungen umzugehen.
+
+### Föderale Identität
+
+Ein Bürger identifiziert sich häufig gleichzeitig mit seinem Bundesstaat, seiner Stadt und Namar als Ganzem.
+
+Die zentrale Regierung ist weit entfernt vom Alltag vieler Gemeinden.
+
+### Familie und Arbeit
+
+Berufe werden häufig innerhalb von Familien weitergegeben. Gleichzeitig ziehen junge Menschen wegen Studium und Arbeit zwischen den Küstenregionen um.
+
+### Militär
+
+Militärdienst besitzt besonders dort Ansehen, wo Küstenverteidigung unmittelbar erlebt wird. In friedlichen Regionen ist die Armee weniger präsent.
+
+### Lebensgefühl
+
+**Hoffnung:** Selbstbestimmung der eigenen Region.
+
+**Angst:** Dass eine äußere Bedrohung eine starke Zentralregierung erzwingt.
+
+**Tabu:** Den Föderalismus grundsätzlich als Schwäche zu bezeichnen.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Meer, Wetter, Sport und lokale Gemeinschaft prägen die Jugend. Auf Inseln ist Selbstständigkeit besonders wichtig.
+
+### Punkt 7 – Arbeit
+
+Seefahrt, Fischerei, Schiffbau, Hafenlogistik und Küstenschutz sind zentrale Arbeitgeber.
+
+### Punkt 8 – Armut
+
+Inseln und abgelegene Küstenregionen sind bei Versorgungskrisen besonders verwundbar.
+
+### Punkt 9 – Wohlstand
+
+Hafen- und Reedereibesitz bringt erheblichen Wohlstand.
+
+### Punkt 10 – Religion
+
+Küstenreligionen, Familienrituale und unterschiedliche regionale Glaubensformen prägen die Gesellschaft.
+
+### Punkt 11 – Bildung
+
+Maritime und technische Fähigkeiten sind neben allgemeiner Bildung wichtig.
+
+### Punkt 12 – Medien
+
+Regionale Medien sind stark und unterscheiden sich zwischen Küste und Inseln.
+
+### Punkt 13 – Sprache
+
+Küsten- und Inseldialekte sind starke Identitätsmarker.
+
+### Punkt 14 – Essen
+
+Fisch, Meeresfrüchte, Salz, Getreide und Inselprodukte dominieren.
+
+### Punkt 15 – Kleidung
+
+Wetterfeste maritime Kleidung und regionale Festtrachten.
+
+### Punkt 16 – Architektur
+
+Hafenanlagen, Werften, Inselhäuser und Küstenbefestigungen.
+
+### Punkt 17 – Freizeit
+
+Segeln, Fischerei, Schwimmen, Hafenfeste und Inselsport.
+
+### Punkt 18 – Feste
+
+Saisoneröffnungen der Häfen, Seefahrtsfeste und Inseltraditionen.
+
+### Punkt 19 – Trauer
+
+Seebestattungen und maritime Gedenkrituale sind verbreitet.
+
+### Punkt 20 – Militär
+
+Marine, Küstenverteidigung und mobile Logistik dominieren.
+
+### Punkt 21 – Krieg
+
+Seewege, Häfen und Versorgung bestimmen die Kriegserfahrung.
+
+### Punkt 22 – Opposition
+
+Regionen und Inseln bilden häufig oppositionelle Bündnisse gegen Zentralisierung.
+
+### Punkt 23 – Nachbarn
+
+Nachbarschaftshilfe ist auf Inseln und an der Küste praktisch notwendig.
+
+### Punkt 24 – Migration
+
+Hafenstädte sind traditionell Einwanderungsorte.
+
+### Punkt 25 – Familiengeschichte
+
+Familiengeschichten sind mit Inseln, Schiffen, Häfen und Seereisen verbunden.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Familie Maren:** Alte Seefahrerfamilie.
+- **Familie Sol:** Werftfamilie aus Port Sol.
+
+### Personen
+- **Lio Maren:** Kapitän und Regionalpolitiker.
+- **Sara Sol:** Schiffbauingenieurin.
+
+### Institutionen
+- **Bundesrat der Inseln:** Vertretung der autonomen Regionen.
+- **Maritime Akademie Maris:** Ausbildung für Seefahrt und Küstenverteidigung.
+
+### Wirtschaft
+- **Maris Reederei:** Große Handelsreederei.
+- **Sol Werften:** Moderner Schiffbau.
+
+### Medien
+- **Küstenkurier:** Nationale maritime Zeitung.
+- **Inselstimme:** Regionales Medium des Inselbundes.
+
+### Militär
+- **Küstenverteidigungsflotte:** Schutz von Häfen und Inseln.
+- **Maritime Aufklärung:** Sensor- und Überwachungskräfte.
+
+### Stadtviertel Maris
+- **Großer Hafen:** Handel und Schifffahrt.
+- **Werftviertel:** Arbeiter und Ingenieure.
+- **Inselmarkt:** Regionale Händler.
+
+### Historische Ereignisse
+- **Bund der Küsten:** Föderationsgründung.
+- **Die große Sturmkatastrophe:** Naturkatastrophe, die nationale Küstenhilfeinstitutionen hervorbrachte.
+
+---
+
+# 11. Orthea – Die wissenschaftliche Republik
 
 ### Die wissenschaftliche Republik
 
@@ -680,7 +2983,237 @@ Orthea muss ständig zwischen technischer Optimierung und menschlicher Verantwor
 
 ---
 
-# 12. Dargan
+## Nationale Leitfrage
+
+**Leitfrage:** Was geschieht, wenn eine Gesellschaft lernt, fast alles zu messen?
+
+**Alltagswiderspruch:** Gute Daten verbessern Entscheidungen, können aber jene Erfahrungen unsichtbar machen, die sich nicht einfach quantifizieren lassen.
+
+**Besonderer Ausbau:** Orthea sollte neben Spitzenforschung auch eine große Schicht gewöhnlicher Bürger besitzen, die mit der akademischen Elite wenig gemeinsam hat.
+
+## Hauptstadt
+
+Asteron ist eine wissenschaftlich geprägte Hauptstadt. Universitäten, Forschungseinrichtungen, Kliniken und technische Institute bestimmen große Teile der Stadt.
+
+Viele öffentliche Gebäude sind gleichzeitig Forschungs- und Bildungszentren. Wissenschaftliche Einrichtungen besitzen einen ähnlichen gesellschaftlichen Stellenwert wie Regierungsgebäude.
+
+Die Stadt ist hochgebildet, aber nicht ausschließlich von Akademikern bewohnt. Eine große Zahl von Dienstleistungs-, Handwerks- und Verwaltungsberufen hält die wissenschaftliche Infrastruktur am Laufen.
+
+**Stadtbild:** Forschungszentren, Universitäten, Kliniken, Bibliotheken, moderne Wohnquartiere.  
+**Wichtige Viertel:** Universitätsstadt, Forschungsring, Klinikbezirk, Bürgerstadt, Industriepark.  
+**Sozialer Gegensatz:** wissenschaftliche Elite gegenüber Menschen, die vom akademischen System wenig profitieren.
+
+## Regionen
+
+### Wissenschaftsgürtel
+Universitäten, Forschungseinrichtungen und Kliniken bilden ein zusammenhängendes Netzwerk.
+
+### Industrielle Ebene
+Produktionsregion mit hochautomatisierten Fabriken und technischen Fachkräften.
+
+### Alte Provinzen
+Kleinere Städte und Dörfer mit weniger direktem Kontakt zur wissenschaftlichen Elite.
+
+### Südliche Agrarregion
+Landwirtschaftlich geprägtes Gebiet, in dem traditionelle Berufe und lokale Gemeinschaften stärker sind.
+
+**Regionaler Grundkonflikt:** Die wissenschaftlich geprägten Zentren sehen Daten und Expertise als Grundlage des Fortschritts; periphere Regionen wollen, dass ihre Erfahrung nicht als unwissenschaftlich abgetan wird.
+
+## Städte
+
+### Asteron – Hauptstadt
+Zentrum von Regierung, Universitäten und Forschung. Wissenschaft prägt die Stadtarchitektur ebenso wie das Berufsleben.
+
+### Helion
+Großes medizinisches Zentrum mit Kliniken, Biotechnologie und Ausbildungsstätten.
+
+### Quantis
+Technologiestadt mit Forschung an autonomen Systemen, Sensorik und Analyseverfahren.
+
+### Feldmark
+Mittelstadt außerhalb des Wissenschaftsgürtels. Landwirtschaft, Handwerk und normale Dienstleistungen prägen den Alltag.
+
+### Noris
+Industriestadt, die hochautomatisierte Produktion mit einer großen Schicht technischer Facharbeiter verbindet.
+
+## Dörfer und ländlicher Alltag
+
+### Forschungsfeld
+Kleine Gemeinde nahe wissenschaftlicher Anlagen. Viele Familien arbeiten in technischen oder medizinischen Berufen.
+
+### Altendorf
+Traditionelles Dorf außerhalb des Wissenschaftsgürtels. Die Bewohner stehen der akademischen Elite teilweise distanziert gegenüber.
+
+### Feldtal
+Landwirtschaftliches Dorf mit modernen Analyse- und Bewässerungssystemen.
+
+### Werkheim
+Technisches Dorf, dessen Bewohner überwiegend in automatisierten Produktionsanlagen arbeiten.
+
+## Familie und Generationen
+
+Bildung besitzt innerhalb der Familie einen außergewöhnlich hohen Stellenwert. Eltern investieren viel Zeit und Geld in die Ausbildung ihrer Kinder, sofern sie es sich leisten können.
+
+In akademischen Familien können Kinder früh an Wissenschaft herangeführt werden. Das schafft Chancen, erzeugt aber auch Leistungsdruck.
+
+Familien außerhalb der Wissenschaftselite erleben diesen Druck teilweise als soziale Distanz. Ein Kind aus einem ländlichen Haushalt kann sich gegenüber akademischen Familien gleichzeitig bewundert und fremd fühlen.
+
+Die zentrale familiäre Frage lautet: **Muss ein gutes Leben immer das Ergebnis messbarer Leistung sein?**
+
+## Alltag und Lebensgefühl
+
+### Bildung
+
+Bildung besitzt außergewöhnlich hohen gesellschaftlichen Wert. Kinder werden ermutigt, Fragen zu stellen und Hypothesen zu prüfen.
+
+Universitäten und Forschungszentren sind wichtige kulturelle Orte.
+
+### Arbeit
+
+Wissenschaft, Medizin, Ingenieurwesen und Analyseberufe genießen hohes Ansehen. Gleichzeitig entsteht eine soziale Kluft zwischen hochqualifizierten Spezialisten und Menschen, deren Arbeit weniger akademisch geprägt ist.
+
+### Gesellschaft
+
+Entscheidungen werden häufig mit Daten begründet. Das kann Vertrauen schaffen, aber auch das Gefühl erzeugen, dass menschliche Erfahrungen gegenüber messbaren Größen zu wenig zählen.
+
+### Familie
+
+Eltern investieren stark in Bildung. Leistungsdruck beginnt früh.
+
+### Militär
+
+Soldaten arbeiten eng mit Forschern und technischen Spezialisten zusammen. Viele Systeme werden zunächst in zivilen Forschungsprogrammen entwickelt.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass Wissen menschliches Leid verringern kann.
+
+**Angst:** Dass Optimierung den Menschen auf messbare Eigenschaften reduziert.
+
+**Tabu:** Wissenschaft grundsätzlich mit Wahrheit und Politik grundsätzlich mit Irrationalität gleichzusetzen.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Bildungserfolg besitzt hohen sozialen Wert. Jugendliche stehen unter akademischem Druck, während ländliche Jugendliche andere Lebenswege vertreten.
+
+### Punkt 7 – Arbeit
+
+Forschung, Medizin, Ingenieurwesen und automatisierte Industrie genießen hohes Prestige.
+
+### Punkt 8 – Armut
+
+Zugang zu guter Bildung entscheidet stark über soziale Mobilität.
+
+### Punkt 9 – Wohlstand
+
+Spitzenforscher, Mediziner und Techniker genießen hohes Einkommen und Prestige.
+
+### Punkt 10 – Religion
+
+Wissenschaft dominiert öffentliche Institutionen, religiöser Glaube bleibt Privatsache.
+
+### Punkt 11 – Bildung
+
+Wissenschaftliche Bildung ist gesellschaftliches Prestigezentrum.
+
+### Punkt 12 – Medien
+
+Datenjournalismus und wissenschaftliche Medien genießen Prestige, aber nicht jeder vertraut ihnen.
+
+### Punkt 13 – Sprache
+
+Fachsprache besitzt hohes Prestige, kann aber soziale Distanz erzeugen.
+
+### Punkt 14 – Essen
+
+Moderne, gesundheitsorientierte Küche neben traditionellen Gerichten.
+
+### Punkt 15 – Kleidung
+
+Funktionale, hochwertige Kleidung mit technischer Ästhetik.
+
+### Punkt 16 – Architektur
+
+Forschungszentren, Kliniken und Universitätsviertel mit moderner Infrastruktur.
+
+### Punkt 17 – Freizeit
+
+Wissenschaftsclubs, Sport, Museen, Debatten und digitale Kultur.
+
+### Punkt 18 – Feste
+
+Wissenschaftswochen, Universitätsfeste und nationale Bildungstage.
+
+### Punkt 19 – Trauer
+
+Medizinische und wissenschaftliche Perspektiven auf Tod stehen neben persönlichen Ritualen.
+
+### Punkt 20 – Militär
+
+Aufklärung, Präzision, Sensorik und autonome Systeme sind besonders wichtig.
+
+### Punkt 21 – Krieg
+
+Krieg wird stark als Problem von Information, Technik und menschlichen Fehlentscheidungen analysiert.
+
+### Punkt 22 – Opposition
+
+Konflikte drehen sich oft um Daten, Wissenschaft, Ethik und politische Legitimation.
+
+### Punkt 23 – Nachbarn
+
+Akademische Viertel und normale Wohngebiete können sozial weit auseinanderliegen.
+
+### Punkt 24 – Migration
+
+Hochqualifizierte Migration ist besonders erwünscht; soziale Integration bleibt eine Herausforderung.
+
+### Punkt 25 – Familiengeschichte
+
+Wissenschaftliche und akademische Familiengeschichten können hohen Status erzeugen.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Familie Aster:** Wissenschaftlerfamilie.
+- **Familie Feld:** Landwirtschaftliche Familie aus dem Süden.
+
+### Personen
+- **Dr. Mara Aster:** Robotikforscherin.
+- **Jonas Feld:** Landwirt und Kritiker akademischer Eliten.
+
+### Institutionen
+- **Akademie Asteron:** Größter Forschungsverbund.
+- **Institut für Gesellschaftsdaten:** Analysiert öffentliche Politik.
+
+### Wirtschaft
+- **Orthea Systems:** Robotik und Sensorik.
+- **Helion Medical:** Medizintechnik.
+
+### Medien
+- **Wissenschaft Heute:** Fach- und Nachrichtenmedium.
+- **Der Bürger:** Kritisches Massenmedium.
+
+### Militär
+- **Präzisionskorps Orthea:** Aufklärung und präzise Einsatzsysteme.
+- **Autonome Aufklärungseinheit Asteron:** Entwicklung und Einsatz unbemannter Systeme.
+
+### Stadtviertel Asteron
+- **Universitätsring:** Hochschulen und Forschung.
+- **Medizinbezirk:** Kliniken.
+- **Altstadt:** normale Wohn- und Geschäftsviertel.
+
+### Historische Ereignisse
+- **Die Große Wissenschaftsreform:** Ausbau unabhängiger Forschung.
+- **Der Algorithmusstreit:** öffentliche Krise über Grenzen automatisierter Entscheidungen.
+
+---
+
+# 12. Dargan – Die Grenzrepublik
 
 ### Die Grenzrepublik
 
@@ -720,7 +3253,237 @@ Gleichzeitig führt die geringe staatliche Kontrolle zu großen Unterschieden be
 
 ---
 
-# 13. Lyr
+## Nationale Leitfrage
+
+**Leitfrage:** Wie viel Staat braucht ein Mensch, wenn der Staat weit entfernt ist?
+
+**Alltagswiderspruch:** Darganische Bürger verlangen Schutz und Infrastruktur, wollen aber nicht von einer fernen Verwaltung abhängig werden.
+
+**Besonderer Ausbau:** Dargan sollte starke lokale Gemeinschaften und unterschiedliche Grenzkulturen besitzen.
+
+## Hauptstadt
+
+Dargesh ist eine vergleichsweise kleine Hauptstadt und wirkt eher wie eine große Grenzstadt als wie eine imperiale Metropole.
+
+Die Stadt ist Verkehrsknoten, Verwaltungszentrum und Reparaturstandort für weite Teile des Landes.
+
+Gebäude sind robust und leicht instandsetzbar. Öffentliche Werkstätten und Lagerflächen sind auffällig wichtig.
+
+**Stadtbild:** niedrige Gebäude, Werkstätten, robuste Wohnhäuser, Straßenknoten und befestigte Verwaltungsanlagen.  
+**Wichtige Viertel:** Zentralmarkt, Werkstattbezirk, Grenzverwaltung, Kasernenviertel, Wohnsiedlungen.  
+**Sozialer Gegensatz:** regionale Verwaltung gegenüber selbstständigen Handwerkern, Händlern und Grenzgemeinden.
+
+## Regionen
+
+### Hochland
+Gebirgige Region mit kleinen Siedlungen, Bergbau und schwierigen Verkehrswegen.
+
+### Grenzebene
+Weite, dünn besiedelte Landschaft mit Landwirtschaft und militärischen Außenposten.
+
+### Flusskorridor
+Wichtigste Verkehrs- und Handelsachse Dargans. Hier konzentrieren sich größere Städte.
+
+### Randmarken
+Sehr abgelegene Gemeinschaften mit hoher Selbstversorgung und starkem Misstrauen gegenüber zentralen Behörden.
+
+**Regionaler Grundkonflikt:** Die Menschen wollen staatliche Infrastruktur, aber nicht die Abhängigkeit von einer Verwaltung, die hunderte Kilometer entfernt sitzt.
+
+## Städte
+
+### Dargesh – Hauptstadt
+Kleine, robuste Verwaltungs- und Handelsstadt. Sie wirkt eher wie ein regionales Zentrum als wie eine klassische Hauptstadt.
+
+### Hochwacht
+Gebirgsstadt mit Bergbau, Werkstätten und militärischer Infrastruktur.
+
+### Flussheim
+Wichtigster Handelsplatz am Flusskorridor. Lagerhäuser und Reparaturbetriebe bestimmen die Wirtschaft.
+
+### Grenzruh
+Weitläufige Grenzstadt mit militärischem Außenposten und großer Landwirtschaftsfläche.
+
+### Freimark
+Abgelegene Stadt mit starkem Selbstverwaltungsbewusstsein. Behörden besitzen weniger Einfluss als lokale Familien, Werkstätten und Handelsgemeinschaften.
+
+## Dörfer und ländlicher Alltag
+
+### Hochdorf
+Bergdorf mit Viehzucht, Reparaturwerkstätten und schwierigen Verkehrswegen.
+
+### Steinscharte
+Kleine Siedlung an einem Gebirgspass. Gemeinschaftliche Hilfe ist für das Überleben entscheidend.
+
+### Flussgrund
+Landwirtschaftliches Dorf am wichtigsten Transportkorridor.
+
+### Fernmark
+Sehr abgelegene Gemeinde mit eigener Wasserversorgung, Werkstätten und starkem Misstrauen gegenüber zentralen Behörden.
+
+## Familie und Generationen
+
+Familien sind stark auf gegenseitige praktische Hilfe angewiesen. In abgelegenen Regionen können Verwandte, Nachbarn und Freunde bei Krankheit, Reparaturen oder Transport wichtiger sein als staatliche Institutionen.
+
+Mehrgenerationenhaushalte sind verbreitet, besonders dort, wo Wege weit und medizinische Einrichtungen selten sind.
+
+Kinder lernen praktische Fähigkeiten früh: Reparieren, Landwirtschaft, Umgang mit Fahrzeugen und Orientierung in schwierigem Gelände.
+
+Familiengeschichte wird weniger über formelle Archive als über Erzählungen weitergegeben. Großeltern sind wichtige Träger lokalen Wissens.
+
+## Alltag und Lebensgefühl
+
+### Siedlungen
+
+Darganische Orte sind häufig weit voneinander entfernt. Selbstversorgung und Reparaturfähigkeit sind wichtiger als Komfort.
+
+Werkstätten besitzen gesellschaftlich fast den gleichen Stellenwert wie Schulen.
+
+### Familie
+
+Familien helfen einander praktisch. Nachbarschaft ist nicht nur soziale Nähe, sondern Überlebensgemeinschaft.
+
+### Staat
+
+Viele Bürger sehen den Staat positiv, solange er Hilfe bringt, aber skeptisch, wenn er aus großer Entfernung Regeln erlässt.
+
+### Bildung
+
+Kinder lernen neben normalen Fächern praktische Fähigkeiten: Reparieren, Erste Hilfe, Orientierung und Umgang mit schwieriger Umwelt.
+
+### Militär
+
+Soldaten sind häufig aus der lokalen Bevölkerung rekrutiert und kennen die Region persönlich.
+
+### Lebensgefühl
+
+**Hoffnung:** Unabhängig bleiben zu können.
+
+**Angst:** Dass eine Krise die lokale Selbstversorgung überfordert.
+
+**Tabu:** Menschen aus abgelegenen Regionen als weniger zivilisiert zu betrachten.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche lernen praktische Fähigkeiten und Selbsthilfe. Lange Wege machen Nachbarschaft und Familie besonders wichtig.
+
+### Punkt 7 – Arbeit
+
+Handwerk, Landwirtschaft, Bergbau, Reparatur und regionale Dienstleistungen sind entscheidend.
+
+### Punkt 8 – Armut
+
+Armut bedeutet häufig fehlende Infrastruktur statt völliger Besitzlosigkeit.
+
+### Punkt 9 – Wohlstand
+
+Wohlstand bedeutet häufig Land, Werkstatt, Vieh und Unabhängigkeit statt Luxus.
+
+### Punkt 10 – Religion
+
+Religion ist oft mit Natur, Familie und lokaler Gemeinschaft verbunden.
+
+### Punkt 11 – Bildung
+
+Schulen sind praktisch orientiert und müssen große Entfernungen überbrücken.
+
+### Punkt 12 – Medien
+
+Regionale Medien und lokale Radios sind wichtiger als nationale Plattformen.
+
+### Punkt 13 – Sprache
+
+Regionale Dialekte sind stark und gelten als Zeichen lokaler Zugehörigkeit.
+
+### Punkt 14 – Essen
+
+Haltbare Lebensmittel, Fleisch, Milchprodukte und regionale Landwirtschaft.
+
+### Punkt 15 – Kleidung
+
+Robuste Kleidung für Gelände und Wetter.
+
+### Punkt 16 – Architektur
+
+Kleine robuste Gebäude, Werkstätten, Berghäuser und lokale Baustoffe.
+
+### Punkt 17 – Freizeit
+
+Jagd, Handwerk, Bergsport, Dorffeste und gemeinschaftliche Reparaturtage.
+
+### Punkt 18 – Feste
+
+Erntefeste, Dorffeste und lokale Gedenktage.
+
+### Punkt 19 – Trauer
+
+Nachbarschaft trägt Familien in der Trauer praktisch.
+
+### Punkt 20 – Militär
+
+Kleine, robuste Verbände sind auf schwierige Infrastruktur und Gelände vorbereitet.
+
+### Punkt 21 – Krieg
+
+Krieg bedeutet vor allem unterbrochene Versorgung, zerstörte Infrastruktur und lokale Selbstverteidigung.
+
+### Punkt 22 – Opposition
+
+Opposition entsteht häufig aus regionalem Misstrauen gegenüber der Zentralregierung.
+
+### Punkt 23 – Nachbarn
+
+Nachbarn sind häufig unmittelbare Krisenhelfer.
+
+### Punkt 24 – Migration
+
+Abwanderung junger Menschen ist oft wichtiger als Zuwanderung.
+
+### Punkt 25 – Familiengeschichte
+
+Geschichten werden überwiegend mündlich über Generationen weitergegeben.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Familie Darg:** Bergarbeiter und Handwerker.
+- **Familie Fern:** Alte Grenzfamilie.
+
+### Personen
+- **Rian Darg:** Reparaturmeister und Gemeinderat.
+- **Mila Fern:** Lehrerin und regionale Organisatorin.
+
+### Institutionen
+- **Rat der Grenzregionen:** Starke regionale Interessenvertretung.
+- **Technische Schule Hochwacht:** Ausbildung für Bergbau und Reparatur.
+
+### Wirtschaft
+- **Dargan Bergwerke:** Regionaler Rohstoffproduzent.
+- **Fern Transport:** Kleines Logistiknetz.
+
+### Medien
+- **Grenzblatt:** Regionalzeitung.
+- **Flussfunk:** Radiosender entlang des Transportkorridors.
+
+### Militär
+- **Grenzbrigade Dargan:** Mobile Verteidigungskräfte.
+- **Hochlandpioniere:** Gebirgs- und Ingenieurverbände.
+
+### Stadtviertel Dargesh
+- **Flussmarkt:** Handel.
+- **Werkviertel:** Reparatur und Handwerk.
+- **Ratsberg:** Verwaltung.
+
+### Historische Ereignisse
+- **Der Grenzaufstand:** Ursprung der starken regionalen Selbstverwaltung.
+- **Winterblockade:** Versorgungskrise, die Dargans Reparatur- und Selbsthilfeethos prägte.
+
+---
+
+# 13. Lyr – Die Bergrepubliken
 
 ### Die Bergrepubliken
 
@@ -760,7 +3523,237 @@ Die einzelnen Republiken fürchten, dass gemeinsame Sicherheit langfristig zu ei
 
 ---
 
-# 14. Caldris
+## Nationale Leitfrage
+
+**Leitfrage:** Wie bleibt eine Gemeinschaft frei, ohne sich voneinander zu isolieren?
+
+**Alltagswiderspruch:** Lokale Souveränität schützt Identität, erschwert aber gemeinsame Entscheidungen.
+
+**Besonderer Ausbau:** Die Täler und Republiken sollten nicht dieselbe Kultur besitzen. Lyr ist ein Bund aus verwandten, aber eigenständigen Gesellschaften.
+
+## Hauptstadt
+
+Valen ist die politische Hauptstadt des Bundes, aber nicht dessen unangefochtenes Zentrum.
+
+Die Stadt liegt in einem großen Gebirgstal und beherbergt den Bundeskongress sowie gemeinsame Gerichte und Verteidigungsinstitutionen.
+
+Jede der großen Teilrepubliken besitzt eigene Häuser und Vertretungen. Politische Entscheidungen sind deshalb ständig von regionalen Interessen geprägt.
+
+**Stadtbild:** Berghänge, Steinbauten, Brücken, Tunnel, Terrassen und regionale Verwaltungsgebäude.  
+**Wichtige Viertel:** Bundeskongress, Talstadt, Handwerksviertel, Tunnelbezirk, regionale Häuser.  
+**Sozialer Gegensatz:** Bundeseinrichtungen gegenüber lokalen Gemeinschaften, die ihre Eigenständigkeit bewahren wollen.
+
+## Regionen
+
+### Nordtal
+Dicht besiedeltes Tal mit Handel, Handwerk und politischen Institutionen.
+
+### Hochrepubliken
+Höher gelegene Regionen mit Bergbau, Weidewirtschaft und starker lokaler Selbstverwaltung.
+
+### Westpässe
+Strategisch wichtige Gebirgspässe mit Festungen, Tunnelanlagen und Militärstraßen.
+
+### Südliche Täler
+Fruchtbarere Regionen mit Landwirtschaft und alten religiösen Traditionen.
+
+**Regionaler Grundkonflikt:** Jede Region hält ihre eigene politische Ordnung für sinnvoller als eine vollständig zentralisierte Bundesstruktur.
+
+## Städte
+
+### Valen – Hauptstadt
+Sitz des Bundeskongresses. Die Stadt ist politisch bedeutend, aber bewusst nicht dominant.
+
+### Nordtal
+Handels- und Handwerkszentrum eines dicht besiedelten Tales.
+
+### Hochgrat
+Gebirgsstadt mit Bergbau, Weidewirtschaft und starkem lokalem Selbstbewusstsein.
+
+### Passwacht
+Festungs- und Verkehrsstadt an einem strategischen Gebirgspass.
+
+### Sonnental
+Fruchtbare Stadtregion mit Landwirtschaft und alten religiösen Traditionen.
+
+## Dörfer und ländlicher Alltag
+
+### Talwies
+Gemeinde mit intensiver Landwirtschaft und ausgeprägter lokaler Verwaltung.
+
+### Hochweid
+Bergdorf, dessen Familien Viehzucht und Bergbau miteinander verbinden.
+
+### Passdorf
+Siedlung an einem strategischen Gebirgspass. Viele Bewohner haben militärische oder technische Berufe.
+
+### Sonnenhang
+Dorf mit alten religiösen Bräuchen und starken Großfamilien.
+
+## Familie und Generationen
+
+Familie und Talgemeinschaft überschneiden sich stark. Viele Menschen kennen ihre Verwandtschaft über mehrere Generationen, und lokale Familien können innerhalb eines Tales erheblichen Einfluss besitzen.
+
+Ehen verbinden nicht nur zwei Menschen, sondern manchmal auch unterschiedliche Dörfer oder politische Gemeinden. Trotzdem besitzen persönliche Entscheidungen einen hohen Stellenwert.
+
+Großfamilien und gemeinschaftliche Kinderbetreuung sind verbreitet. Ältere Menschen gelten als wichtige Träger von Ortsgeschichte, Bergwissen und Tradition.
+
+Der Konflikt zwischen Familienloyalität und persönlicher Freiheit ist besonders sichtbar, wenn junge Menschen das Tal verlassen wollen.
+
+## Alltag und Lebensgefühl
+
+### Lokale Identität
+
+In Lyr ist die wichtigste politische Einheit oft nicht der Gesamtstaat, sondern das eigene Tal oder die eigene Republik.
+
+Menschen können sich stark mit lokalen Traditionen identifizieren und dennoch den Bund verteidigen.
+
+### Arbeit
+
+Bergbau, Handwerk, Energiegewinnung, Landwirtschaft und Tunnelbau sind bedeutend. Große Städte existieren, dominieren aber nicht das gesamte Land.
+
+### Familie
+
+Mehrgenerationenhaushalte sind häufiger als in Averon. Ältere Menschen besitzen praktisches Wissen über lokale Umwelt und Geschichte.
+
+### Religion
+
+Lokale Bräuche sind stark. Religiöse Traditionen können von Tal zu Tal variieren.
+
+### Militär
+
+Verteidigung ist eng mit der Heimat verbunden. Ein Soldat schützt nicht nur einen Staat, sondern konkret das Tal, in dem seine Familie lebt.
+
+### Lebensgefühl
+
+**Hoffnung:** Die eigene Gemeinschaft bewahren zu können.
+
+**Angst:** Dass gemeinsame Verteidigung in Zentralisierung umschlägt.
+
+**Tabu:** Lokale Identität als rückständig abzuwerten.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugend ist stark tal- und familienbezogen. Der Konflikt zwischen lokaler Bindung und Wegzug in andere Regionen ist zentral.
+
+### Punkt 7 – Arbeit
+
+Bergbau, Landwirtschaft, Handwerk, Handel und lokale Verwaltung bestimmen die Arbeit.
+
+### Punkt 8 – Armut
+
+Gemeinschaftliche Hilfe verhindert extreme Not in vielen Tälern, kann aber persönliche Abhängigkeiten schaffen.
+
+### Punkt 9 – Wohlstand
+
+Besitz von Land, Minen und Handelsrechten prägt regionale Hierarchien.
+
+### Punkt 10 – Religion
+
+Berggemeinden besitzen unterschiedliche religiöse Traditionen.
+
+### Punkt 11 – Bildung
+
+Regionale Schulen bewahren lokale Geschichte und Selbstverwaltung.
+
+### Punkt 12 – Medien
+
+Lokale Medien spiegeln die politische Eigenständigkeit der Täler.
+
+### Punkt 13 – Sprache
+
+Jedes Tal besitzt eigene sprachliche Eigenheiten.
+
+### Punkt 14 – Essen
+
+Bergkäse, Getreide, Fleisch, Kräuter und saisonale Produkte.
+
+### Punkt 15 – Kleidung
+
+Regionale Woll- und Bergkleidung besitzt starke Identitätsfunktion.
+
+### Punkt 16 – Architektur
+
+Steinarchitektur, Terrassen, Tunnel und befestigte Bergsiedlungen.
+
+### Punkt 17 – Freizeit
+
+Bergsport, Musik, Dorffeste und religiöse Veranstaltungen.
+
+### Punkt 18 – Feste
+
+Talfeiern, Bergfeste und religiöse Feiertage.
+
+### Punkt 19 – Trauer
+
+Ahnen- und Familiengedenken ist stark lokal geprägt.
+
+### Punkt 20 – Militär
+
+Lokale Verteidigungskräfte besitzen starke regionale Bindungen.
+
+### Punkt 21 – Krieg
+
+Krieg bedroht unmittelbar Täler, Pässe und lokale Autonomie.
+
+### Punkt 22 – Opposition
+
+Opposition ist meist Ausdruck lokaler Souveränität.
+
+### Punkt 23 – Nachbarn
+
+Nachbarschaften überschneiden sich mit Familien- und Talnetzwerken.
+
+### Punkt 24 – Migration
+
+Binnenmigration zwischen Tälern kann politisch sensibel sein.
+
+### Punkt 25 – Familiengeschichte
+
+Familiengeschichte ist eng mit Tal, Berg, Hof und lokaler Selbstverwaltung verbunden.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Familie Val:** Alte politische Familie.
+- **Familie Hoch:** Bergbau- und Handwerkerfamilie.
+
+### Personen
+- **Nera Val:** Delegierte des Bundeskongresses.
+- **Tarin Hoch:** Bergingenieur und Gemeinderat.
+
+### Institutionen
+- **Bundeskongress Valen:** Gemeinsames politisches Organ.
+- **Rat der Täler:** Koordinierung regionaler Interessen.
+
+### Wirtschaft
+- **Hochgrat Bergbau:** Lokaler Rohstoffbetrieb.
+- **Nordtal Handelshaus:** Regionaler Handelsverbund.
+
+### Medien
+- **Talstimmen:** Zusammenschluss lokaler Zeitungen.
+- **Bergfunk:** Radio- und Informationsnetz.
+
+### Militär
+- **Talverteidigungskräfte:** Regionale Verbände.
+- **Passwachtkorps:** Schutz strategischer Gebirgspässe.
+
+### Stadtviertel Valen
+- **Bundesplatz:** Gemeinsame Institutionen.
+- **Handwerkerviertel:** Werkstätten und Märkte.
+- **Hochstadt:** Alte Familien und Verwaltung.
+
+### Historische Ereignisse
+- **Der Bund der Täler:** Gründung der Konföderation.
+- **Die Passkrise:** Konflikt um gemeinsame Verteidigung und regionale Souveränität.
+
+---
+
+# 14. Caldris – Der fürsorgliche Sicherheitsstaat
 
 ### Der fürsorgliche Sicherheitsstaat
 
@@ -804,7 +3797,239 @@ Der Preis ist ein erheblicher Verlust an Privatsphäre.
 
 ---
 
-# 15. Merovan
+## Nationale Leitfrage
+
+**Leitfrage:** Was ist ein freier Mensch, wenn für fast jedes Lebensproblem bereits gesorgt wird?
+
+**Alltagswiderspruch:** Materielle Sicherheit ist real und wertvoll, während Überwachung und Konformitätsdruck ebenfalls real sind.
+
+**Besonderer Ausbau:** Caldris braucht Bürger, die das System aus Überzeugung verteidigen, weil sie dessen soziale Leistungen erlebt haben.
+
+## Hauptstadt
+
+Seren ist eine planmäßig entwickelte Hauptstadt, in der staatliche Versorgungseinrichtungen Teil des normalen Stadtbildes sind.
+
+Wohnkomplexe, Schulen, Kliniken, Kindertagesstätten und Arbeitsvermittlungen liegen in unmittelbarer Nähe zueinander.
+
+Die Stadt ist sauber, funktional und materiell gut versorgt. Gleichzeitig ist die staatliche Präsenz nahezu überall sichtbar.
+
+Biometrische Zugangssysteme, öffentliche Kameras und digitale Bürgerdienste gehören zum Alltag.
+
+**Stadtbild:** gepflegte Wohnkomplexe, breite Wege, Kliniken, Schulen, Verwaltungszentren und überwachte öffentliche Räume.  
+**Wichtige Viertel:** Regierungszentrum, Wohnsektoren, Gesundheitsbezirk, Bildungsbezirk, Produktionsstadt.  
+**Sozialer Gegensatz:** weniger räumlich als institutionell – Unterschiede zeigen sich vor allem in Zugang, Status und staatlicher Bewertung.
+
+## Regionen
+
+### Versorgungsgürtel
+Dicht besiedelte Regionen mit modernen Wohnkomplexen, Kliniken und Bildungseinrichtungen.
+
+### Industriestädte
+Große Produktionszentren, in denen der Staat Arbeitsplätze, Wohnen und soziale Versorgung eng miteinander verbindet.
+
+### Agrarprovinzen
+Ländliche Regionen mit staatlich organisierten Landwirtschaftsbetrieben und stabilen Versorgungsstrukturen.
+
+### Sicherheitsbezirk
+Strategisch wichtige Region mit besonders hoher Dichte an Sicherheits- und Überwachungseinrichtungen.
+
+**Regionaler Grundkonflikt:** In wohlversorgten Regionen wird das System eher als Schutz erlebt; in stark überwachten Gebieten stärker als Eingriff in das Privatleben.
+
+## Städte
+
+### Seren – Hauptstadt
+Planmäßig entwickelte Verwaltungs- und Versorgungsmetropole. Bürger erleben den Staat hier nahezu überall.
+
+### Gesundheim
+Medizinzentrum mit großen Kliniken und staatlichen Forschungsprogrammen.
+
+### Werksstadt
+Industriestadt, in der Arbeitsplätze, Wohnraum und soziale Versorgung eng verbunden sind.
+
+### Grünfeld
+Agrarstadt mit hoher staatlicher Versorgung und stark organisierten Gemeinschaftseinrichtungen.
+
+### Kontrollstadt
+Strategischer Sicherheitsstandort mit besonders dichter Überwachungsinfrastruktur. Die Bevölkerung erhält viele Leistungen, erlebt aber auch die stärkste staatliche Kontrolle.
+
+## Dörfer und ländlicher Alltag
+
+### Versorgungsdorf
+Planmäßig errichtete Gemeinde mit staatlicher Klinik, Schule und zentraler Lebensmittelversorgung.
+
+### Werksiedlung
+Wohnort für Beschäftigte eines staatlichen Produktionsbetriebs. Arbeit und soziale Leistungen sind eng gekoppelt.
+
+### Kinderfeld
+Gemeinde mit umfangreicher staatlicher Kinderbetreuung und Familienförderung.
+
+### Randhain
+Ländliche Gemeinde, in der staatliche Leistungen geschätzt werden, gleichzeitig aber viele Bewohner den Umfang der Kontrolle kritisch sehen.
+
+## Familie und Generationen
+
+Familien werden umfassend durch den Sozialstaat unterstützt. Kinderbetreuung, medizinische Versorgung, Wohnraum und berufliche Vermittlung können den Alltag erheblich erleichtern.
+
+Viele Familien empfinden diese Unterstützung als echte Verbesserung ihres Lebens. Der Staat wird nicht ausschließlich als Unterdrücker erlebt, sondern als Institution, die konkrete Probleme löst.
+
+Gleichzeitig werden Familienleben und Lebensentscheidungen umfassend registriert. Manche Eltern empfinden die staatliche Fürsorge deshalb als Schutz, andere als dauernde Beobachtung.
+
+Kinder wachsen mit dem Bewusstsein auf, dass der Staat für sie sorgen kann und zugleich viel über sie weiß.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Versorgung
+
+Caldrische Bürger erleben den Staat im Alltag unmittelbar. Gesundheitsversorgung, Wohnraum, Arbeitsvermittlung und soziale Absicherung sind weitgehend organisiert.
+
+Für viele Menschen ist das Leben materiell stabil.
+
+### Überwachung
+
+Gleichzeitig existieren umfangreiche Kontrollsysteme. Bürger wissen, dass staatliche Stellen große Mengen persönlicher Informationen besitzen.
+
+Viele Menschen passen ihr Verhalten deshalb an, obwohl sie persönlich nie verfolgt wurden.
+
+### Familie
+
+Familien profitieren von sozialer Unterstützung. Kinderbetreuung und medizinische Versorgung sind gut ausgebaut.
+
+Die Frage der Privatsphäre beginnt jedoch früh: Eltern müssen entscheiden, wie offen sie mit ihren Kindern über politische Themen sprechen.
+
+### Militär
+
+Militär und zivile Sicherheitsorgane überschneiden sich stark. Soldaten werden als Teil des gesellschaftlichen Schutzsystems betrachtet.
+
+### Lebensgefühl
+
+**Hoffnung:** Niemand soll durch Armut oder Krankheit fallen gelassen werden.
+
+**Angst:** Dass Sicherheit irgendwann wichtiger wird als persönliche Freiheit.
+
+**Tabu:** Die sozialen Leistungen des Staates pauschal als wertlos zu bezeichnen.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Staatliche Schulen, Jugendzentren und Betreuung sind umfassend. Jugendliche erfahren Sicherheit und Überwachung gleichzeitig.
+
+### Punkt 7 – Arbeit
+
+Staat und staatsnahe Unternehmen sind zentrale Arbeitgeber; Beschäftigung wird stark vermittelt und überwacht.
+
+### Punkt 8 – Armut
+
+Materielle Armut ist relativ gering, da der Staat umfassend versorgt; Abhängigkeit vom System ist die Kehrseite.
+
+### Punkt 9 – Wohlstand
+
+Wohlstand wird weniger über Luxus als über Zugang zu Wohnraum, Versorgung und staatlichen Leistungen erlebt.
+
+### Punkt 10 – Religion
+
+Staatlich geförderte soziale Rituale konkurrieren mit privaten Religionen.
+
+### Punkt 11 – Bildung
+
+Bildung ist flächendeckend staatlich organisiert und eng mit Sozialplanung verbunden.
+
+### Punkt 12 – Medien
+
+Staatliche Medien dominieren, liefern aber reale Informationen und Dienstleistungen.
+
+### Punkt 13 – Sprache
+
+Verwaltungssprache prägt Schule und Behörden; private Umgangssprache bleibt vielfältig.
+
+### Punkt 14 – Essen
+
+Einheitliche Grundversorgung mit regionalen Ergänzungen; Gemeinschaftsküchen sind verbreitet.
+
+### Punkt 15 – Kleidung
+
+Staatlich geförderte Grundkleidung ist schlicht; private Kleidung markiert Individualität.
+
+### Punkt 16 – Architektur
+
+Geplante Wohnviertel, Kliniken, Schulen und zentrale Versorgungseinrichtungen.
+
+### Punkt 17 – Freizeit
+
+Staatliche Sport- und Kulturzentren bieten breite, günstige Freizeitangebote.
+
+### Punkt 18 – Feste
+
+Staatliche Gemeinschaftstage, Familienfeste und Versorgungsjubiläen.
+
+### Punkt 19 – Trauer
+
+Staatliche Betreuung hilft Hinterbliebenen umfassend, registriert ihre Situation aber auch.
+
+### Punkt 20 – Militär
+
+Militär und innere Sicherheit sind eng verbunden.
+
+### Punkt 21 – Krieg
+
+Krieg wird als Rechtfertigung für Schutz, Versorgung und Überwachung verstanden; Kritiker fürchten dauerhafte Ausnahmezustände.
+
+### Punkt 22 – Opposition
+
+Offene Opposition ist begrenzt; viele Bürger unterscheiden zwischen Zustimmung zu Leistungen und Kritik an Kontrolle.
+
+### Punkt 23 – Nachbarn
+
+Gemeinschaftseinrichtungen fördern Nachbarschaft, staatliche Verwaltung erfasst sie zugleich.
+
+### Punkt 24 – Migration
+
+Zuwanderung wird stark administrativ gesteuert und in das Versorgungssystem integriert.
+
+### Punkt 25 – Familiengeschichte
+
+Familien erinnern sich sowohl an staatliche Fürsorge als auch an Eingriffe in das Privatleben.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Familie Seren:** Staatsbeamtenfamilie.
+- **Familie Grün:** Arbeiterfamilie aus einer Versorgungssiedlung.
+
+### Personen
+- **Dr. Elias Seren:** Leiter einer staatlichen Klinik.
+- **Mara Grün:** Beschäftigte in einer staatlichen Fabrik und Unterstützerin des Sozialstaates.
+
+### Institutionen
+- **Ministerium für Bürgerwohl:** Koordiniert Versorgung und Sozialleistungen.
+- **Zentrale Gesundheitsverwaltung:** Medizinische Versorgung und Registrierung.
+
+### Wirtschaft
+- **Caldrische Staatswerke:** Große Produktionsbetriebe.
+- **Versorgungsbund:** Landwirtschaft und Verteilung.
+
+### Medien
+- **Bürgerkanal Caldris:** Staatliches Massenmedium.
+- **Forum der Gemeinschaft:** kontrollierte öffentliche Debattenplattform.
+
+### Militär
+- **Schutzkorps Caldris:** Militär und innere Sicherheit eng verbunden.
+- **Versorgungsbrigade Seren:** Logistik und Schutz kritischer Infrastruktur.
+
+### Stadtviertel Seren
+- **Versorgungsring:** Kliniken, Schulen und Behörden.
+- **Wohnstadt:** Planmäßige Familienquartiere.
+- **Sicherheitsforum:** Regierungs- und Kontrollbehörden.
+
+### Historische Ereignisse
+- **Der Sozialvertrag:** Einführung des heutigen umfassenden Versorgungssystems.
+- **Die Sicherheitsreform:** Ausweitung biometrischer und elektronischer Kontrolle.
+
+---
+
+# 15. Merovan – Das postimperiale Handelsreich
 
 ### Das postimperiale Handelsreich
 
@@ -841,7 +4066,237 @@ Merovan ist kulturell vielfältig. Gleichzeitig existieren heftige Debatten dar�
 
 ---
 
-# 16. Theryn
+## Nationale Leitfrage
+
+**Leitfrage:** Wie kann eine Gesellschaft mit imperialer Vergangenheit leben, ohne sie zu verherrlichen oder zu verdrängen?
+
+**Alltagswiderspruch:** Internationaler Handel und kulturelle Vielfalt beruhen teilweise auf historischen Strukturen, die zugleich Quelle von Ausbeutung waren.
+
+**Besonderer Ausbau:** Merovan sollte unterschiedliche Erinnerungskulturen innerhalb derselben Gesellschaft zeigen.
+
+## Hauptstadt
+
+Merovia ist eine alte Hafenmetropole, die während der imperialen Epoche zum Zentrum eines weltweiten Handelsnetzes wurde.
+
+Die Stadt ist von unterschiedlichen historischen Schichten geprägt: alte Verwaltungsgebäude, ehemalige koloniale Handelshäuser, moderne Banken und riesige Hafenanlagen.
+
+Menschen mit sehr unterschiedlichen Familiengeschichten leben dicht nebeneinander. Manche Familien stammen aus dem alten Kernland, andere aus Regionen, die einst unter merovanischer Herrschaft standen.
+
+**Stadtbild:** große Hafenanlagen, alte Handelshäuser, Banken, Bahnhöfe, moderne Hochhäuser und dicht bewohnte Migrantenviertel.  
+**Wichtige Viertel:** Alter Hafen, Handelsviertel, Regierungsstadt, ehemalige Kolonialhäuser, neue Wohnbezirke.  
+**Sozialer Gegensatz:** alte Vermögen und internationale Wirtschaftseliten gegenüber Arbeiter- und Migrantenvierteln.
+
+## Regionen
+
+### Alte Kernprovinzen
+Historisches Zentrum der heutigen Republik mit alten Familien, Universitäten und staatlichen Institutionen.
+
+### Hafenregionen
+Internationale Handelszentren mit hoher Migration und starkem wirtschaftlichem Einfluss.
+
+### Ehemalige Überseeprovinzen
+Regionen, deren Bevölkerung besonders unterschiedliche Erinnerungen an das frühere Imperium besitzt.
+
+### Binnenland
+Weniger international geprägte Regionen mit Landwirtschaft und traditionelleren Lebensweisen.
+
+**Regionaler Grundkonflikt:** Die Hafenregionen betrachten internationale Verflechtung als Normalität; Teile des Binnenlandes sehen darin die Fortsetzung alter Abhängigkeiten.
+
+## Städte
+
+### Merovia – Hauptstadt
+Alte Hafenmetropole und Zentrum des ehemaligen Imperiums. Handel, Banken und Regierungsinstitutionen konzentrieren sich hier.
+
+### Port Meris
+Internationaler Großhafen mit einer extrem vielfältigen Bevölkerung.
+
+### Albion
+Alte Universitäts- und Verwaltungsstadt. Historische Debatten über das Imperium sind Teil des öffentlichen Lebens.
+
+### Südmark
+Binnenstadt mit Landwirtschaft, regionalem Handel und weniger internationaler Prägung.
+
+### Neuport
+Stadt, die durch Migration und internationale Unternehmen stark gewachsen ist. Junge Bevölkerung und neue Familiengeschichten prägen das Stadtbild.
+
+## Dörfer und ländlicher Alltag
+
+### Altmark
+Altes Dorf im Binnenland mit Landwirtschaft und Familien, deren Geschichte weit vor die Handelsrepublik zurückreicht.
+
+### Hafenhain
+Küstendorf mit Fischerei, Handel und zahlreichen Familien unterschiedlicher Herkunft.
+
+### Überseehof
+Gemeinde, deren Familiengeschichten mit ehemaligen Überseegebieten verbunden sind. Die Vergangenheit wird unterschiedlich bewertet.
+
+### Neuacker
+Jüngere Siedlung mit vielen eingewanderten Familien und neuen landwirtschaftlichen Betrieben.
+
+## Familie und Generationen
+
+Familiengeschichten sind häufig international. Ein Haushalt kann mehrere Sprachen, Religionen oder Herkunftsregionen miteinander verbinden.
+
+Alte Familien bewahren Erinnerungen an das ehemalige Imperium, während jüngere Generationen diese Geschichte häufig kritischer betrachten. Familien mit Wurzeln in ehemaligen Überseegebieten können dieselbe Geschichte aus einer völlig anderen Perspektive erzählen.
+
+Migration macht Großfamilien oft geografisch weit verstreut. Digitale Kommunikation und Reisen halten die Verbindung aufrecht.
+
+Die Familie ist deshalb häufig ein Ort, an dem unterschiedliche historische Erinnerungen unmittelbar aufeinandertreffen.
+
+## Alltag und Lebensgefühl
+
+### Gesellschaft
+
+Merovan ist kulturell vielfältig. Hafenstädte und ehemalige Kolonialzentren beherbergen Menschen mit sehr unterschiedlichen Familiengeschichten.
+
+Manche Familien profitieren noch von altem Vermögen. Andere erinnern sich an die imperiale Herrschaft aus der Perspektive ihrer Opfer.
+
+### Bildung
+
+Geschichte ist politisch umkämpft. Schulbücher versuchen, das Imperium zu erklären, ohne es zu verherrlichen oder zu verschweigen.
+
+### Wirtschaft
+
+Handel ist weiterhin zentral. Große Unternehmen besitzen internationale Verbindungen.
+
+### Familie
+
+Familiengeschichten können über mehrere Kontinente reichen. Migration ist normal.
+
+### Militär
+
+Expeditionstruppen werden gesellschaftlich ambivalent gesehen. Einerseits gelten sie als Schutz der Handelswege, andererseits erinnern Auslandseinsätze an die imperiale Vergangenheit.
+
+### Lebensgefühl
+
+**Hoffnung:** Internationale Verflechtung ohne neue Herrschaft.
+
+**Angst:** Dass alte Machtstrukturen unter wirtschaftlichen Namen zurückkehren.
+
+**Tabu:** Die imperiale Vergangenheit ausschließlich als Ruhmesgeschichte zu erzählen.
+
+---
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Mehrsprachigkeit und internationale Familiengeschichten prägen viele Jugendliche. Koloniale Vergangenheit wird innerhalb der Familien unterschiedlich erzählt.
+
+### Punkt 7 – Arbeit
+
+Handel, Banken, Logistik, Dienstleistungen und internationale Unternehmen prägen den Arbeitsmarkt.
+
+### Punkt 8 – Armut
+
+Wohlhabende Handelszentren stehen armen Binnen- und ehemaligen Überseegebieten gegenüber.
+
+### Punkt 9 – Wohlstand
+
+Finanz- und Handelsvermögen bilden eine einflussreiche Oberschicht.
+
+### Punkt 10 – Religion
+
+Religiöser Pluralismus ist Folge jahrhundertelangen Handels und Migration.
+
+### Punkt 11 – Bildung
+
+Universitäten sind international ausgerichtet; historische Perspektiven sind umkämpft.
+
+### Punkt 12 – Medien
+
+Internationale Pressefreiheit trifft auf mächtige Wirtschaftsinteressen.
+
+### Punkt 13 – Sprache
+
+Mehrsprachigkeit ist besonders in Hafenregionen normal.
+
+### Punkt 14 – Essen
+
+Stark internationale Küche durch Handel und Migration.
+
+### Punkt 15 – Kleidung
+
+Internationale Mode trifft regionale Tradition.
+
+### Punkt 16 – Architektur
+
+Alte Handelsarchitektur, Kolonialbauten, moderne Häfen und vielfältige Wohnviertel.
+
+### Punkt 17 – Freizeit
+
+Theater, Musik, internationale Gastronomie, Sport und Hafenleben.
+
+### Punkt 18 – Feste
+
+Hafenfeste und internationale Kulturfeste.
+
+### Punkt 19 – Trauer
+
+Trauerkulturen unterscheiden sich je nach Herkunft und Religion.
+
+### Punkt 20 – Militär
+
+Expeditionäre, logistische und maritime Fähigkeiten spiegeln die Handelsgeschichte.
+
+### Punkt 21 – Krieg
+
+Krieg ist eng mit der imperialen Vergangenheit verbunden und wird hinsichtlich Handel und Macht kritisch diskutiert.
+
+### Punkt 22 – Opposition
+
+Parteien streiten über Handel, Migration, Imperialgeschichte und wirtschaftliche Macht.
+
+### Punkt 23 – Nachbarn
+
+Migration macht Nachbarschaften kulturell vielfältig.
+
+### Punkt 24 – Migration
+
+Migration ist zentral für Wirtschaft und Gesellschaft; historische Migrationsbewegungen sind Teil nationaler Identität.
+
+### Punkt 25 – Familiengeschichte
+
+Familien können dieselbe imperiale Vergangenheit als Aufstieg, Ausbeutung, Migration oder Verlust erinnern.
+
+## Konkrete Lore-Anker
+
+### Familien
+- **Familie Merov:** Alte Handels- und Bankiersfamilie.
+- **Familie Asha:** Familie mit Wurzeln in einer ehemaligen Überseeprovinz.
+
+### Personen
+- **Luc Merov:** Unternehmer und Abgeordneter.
+- **Samira Asha:** Historikerin und Vertreterin postimperialer Erinnerungskultur.
+
+### Institutionen
+- **Handelsparlament Merovia:** Zentrale politische Institution.
+- **Institut für Imperiale Geschichte:** Forschung und öffentliche Debatte.
+
+### Wirtschaft
+- **Merov International:** Handels- und Finanzkonzern.
+- **Neuport Logistics:** Internationaler Hafenbetreiber.
+
+### Medien
+- **Merovia Journal:** Große nationale Zeitung.
+- **Stimmen der Übersee:** Plattform für postimperiale Perspektiven.
+
+### Militär
+- **Expeditionskorps Merovia:** Mobile Streitkräfte für Auslandseinsätze und Krisen.
+- **Hafeningenieurkorps:** Logistik und Infrastruktur.
+
+### Stadtviertel Merovia
+- **Alte Krone:** historische Regierungs- und Finanzgebäude.
+- **Hafenring:** internationale Wirtschaft.
+- **Neuviertel:** migrantisch geprägte Wohngebiete.
+
+### Historische Ereignisse
+- **Ende des Imperiums:** Übergang zur heutigen Handelsrepublik.
+- **Die Rückkehrflotte:** große Rückführung von Soldaten und Zivilisten aus ehemaligen Überseegebieten.
+
+---
+
+# 16. Theryn – Die revolutionäre Republik
 
 ### Die revolutionäre Republik
 
@@ -882,736 +4337,88 @@ Sie hat aber auch politische Gewalt legitimiert.
 
 ---
 
-# 17. Religiöse Staaten und nichtstaatliche Akteure
+## Nationale Leitfrage
 
-Die politische Welt von *Division Command* soll nicht auf säkulare Nationalstaaten beschränkt bleiben.
+**Leitfrage:** Wann endet eine Revolution?
 
-Religion kann eine eigenständige Quelle politischer Legitimation sein. Eine Theokratie bezeichnet dabei eine Herrschaftsordnung, in der religiöse Autorität beziehungsweise religiös begründetes Recht eine zentrale oder oberste politische Legitimation besitzt. citeturn0search10turn0search7
+**Alltagswiderspruch:** Die Revolution kann reale soziale Verbesserungen gebracht haben und gleichzeitig neue Machtstrukturen erzeugt haben.
 
-Gleichzeitig sollten **terroristische oder militante Organisationen nicht automatisch als Nationen behandelt werden**.
-
-Das eröffnet eine zusätzliche Ebene der Welt:
-
-- Staaten
-- Bündnisse
-- separatistische Bewegungen
-- Milizen
-- religiöse Bewegungen
-- Terrororganisationen
-- Söldnerorganisationen
-- Widerstandsbewegungen
-- internationale Hilfsorganisationen
-- private Sicherheitsunternehmen
-
-Diese Akteure können in der Lore, in Kampagnen oder später als Kartenmechanik auftreten, ohne eine der sechzehn Nationen ersetzen zu müssen.
+**Besonderer Ausbau:** Theryn sollte nicht nur aus überzeugten Revolutionären bestehen. Veteranen, junge Reformisten, alte Parteifunktionäre, Genossenschaftler und unpolitische Familien müssen nebeneinander existieren.
 
 ---
 
-# 18. Optionale religiöse Nation: noch nicht endgültig vergeben
+## Hauptstadt
 
-Für die vollständige politische Abdeckung ist langfristig eine **explizit religiös legitimierte Nation** sinnvoll.
+Novagrad entstand aus dem revolutionären Umbau einer alten Industriestadt.
 
-Sie sollte nicht einfach ein Klischee einer realen Religion kopieren.
+Zentrale Plätze sind nach revolutionären Ereignissen benannt. Öffentliche Gebäude gehören häufig staatlichen Betrieben, Genossenschaften oder Massenorganisationen.
 
-Stattdessen könnte sie beispielsweise auf einer erfundenen monotheistischen oder polytheistischen Staatsreligion beruhen.
+Die Stadt besitzt große Arbeitersiedlungen, Fabriken und Versammlungsgebäude. Gleichzeitig existieren private Wohnungen und informelle Nachbarschaftsnetzwerke, die dem offiziellen Bild der Gesellschaft nicht vollständig entsprechen.
 
-### Mögliche Struktur
+**Stadtbild:** große öffentliche Plätze, Fabriken, Arbeiterwohnviertel, Genossenschaftshäuser und politische Wandbilder.  
+**Wichtige Viertel:** Revolutionsplatz, Zentralrat, Fabrikstadt, Genossenschaftsviertel, alte Arbeiterstadt.  
+**Sozialer Gegensatz:** alte revolutionäre Funktionäre gegenüber jungen Reformern, Arbeitern und unpolitischen Familien.
 
-- religiöses Oberhaupt mit politischer Funktion
-- religiös begründetes Recht
-- zivile Verwaltung unter religiöser Aufsicht
-- religiöse Gerichte
-- starke Wohlfahrts- und Gemeinschaftsstrukturen
-- religiös motivierte Friedensbewegungen innerhalb des Staates
-- gleichzeitig radikale und reformorientierte Fraktionen
+## Regionen
 
-Wichtig wäre dabei eine **innere politische Vielfalt**.
+### Revolutionskern
+Regionen, in denen die revolutionäre Bewegung ihren Ursprung hatte. Denkmäler, Veteranenorganisationen und politische Traditionen sind besonders stark.
 
-Eine religiöse Nation muss nicht automatisch aggressiv sein.
+### Industrieprovinzen
+Große staatliche Betriebe und Genossenschaften bestimmen Wirtschaft und Alltag.
 
-Sie könnte ebenso:
+### Agrarbund
+Ländliche Regionen mit Genossenschaften und starken lokalen Gemeinschaften.
 
-- Vermittlung
-- humanitäre Hilfe
-- Schutz von Zivilisten
-- Waffenstillstände
-- religiöse Diplomatie
-- soziale Versorgung
+### Reformgürtel
+Jüngere Städte mit Hochschulen und einer Generation, die die Revolution weniger als Ereignis und mehr als historische Grundlage betrachtet.
 
-zu ihren politischen Schwerpunkten machen.
+**Regionaler Grundkonflikt:** Ältere Regionen verteidigen häufig die ursprünglichen revolutionären Institutionen, während jüngere Regionen stärker über Reformen und persönliche Freiheit diskutieren.
 
-Damit kann die Welt auch einen aktiven **Friedenspfad** glaubwürdig darstellen.
+## Städte
 
----
+### Novagrad – Hauptstadt
+Revolutionäres Zentrum mit Zentralrat, großen öffentlichen Plätzen und staatlichen Institutionen.
 
-# 19. Terrororganisationen und andere nichtstaatliche Akteure
+### Rotwerk
+Große Industriestadt mit staatlichen Betrieben und starker Veteranenkultur.
 
-Terrorismus sollte in *Division Command* als **politische und militärische Organisationsform eines nichtstaatlichen Akteurs** behandelt werden, nicht als eigene Nation.
+### Genossenschaft
+Mittelstadt, deren Wirtschaft überwiegend von landwirtschaftlichen und handwerklichen Genossenschaften getragen wird.
 
-Das ist wichtig, weil eine Terrororganisation normalerweise nicht dieselbe staatliche Struktur besitzt wie eine Republik, Monarchie oder Theokratie.
+### Freiheim
+Junge Universitätsstadt mit Reformbewegungen und einer Bevölkerung, die die Revolution vor allem aus Geschichtsbüchern kennt.
 
-Mögliche fiktive Organisationen könnten später beispielsweise sein:
+### Staryn
+Alte Industriestadt, in der viele Familien direkte Erinnerungen an die Revolution und die ersten Jahrzehnte der Republik besitzen.
 
-### Die Aschefront
+## Dörfer und ländlicher Alltag
 
-Eine radikale Untergrundorganisation, die den bestehenden Staat durch Anschläge, Sabotage und Einschüchterung destabilisieren will.
+### Rotfeld
+Landwirtschaftliche Genossenschaftsgemeinde mit starkem revolutionärem Selbstverständnis.
 
-### Das Morgenbanner
+### Werkhain
+Dorf nahe eines staatlichen Industriebetriebs. Viele Familien sind seit Generationen mit dem Betrieb verbunden.
 
-Eine revolutionäre Bewegung, die behauptet, im Namen unterdrückter Regionen zu kämpfen.
+### Morgenau
+Junge Gemeinde, in der Reformideen und traditionelle revolutionäre Organisationen aufeinandertreffen.
 
-### Die Bruderschaft des letzten Wortes
+### Genossenfeld
+Große Agrargemeinschaft mit gemeinsamem Maschinenpark und kollektiv organisierten Arbeitsabläufen.
 
-Eine religiös-extremistische Organisation, die behauptet, ausschließlich ihre eigene Auslegung einer heiligen Lehre sei legitim.
+## Familie und Generationen
 
-### Die Freien Kompanien
+Familiengeschichten sind stark durch die Revolution geprägt. Manche Familien verehren revolutionäre Vorfahren, andere erinnern sich an Gewalt, Hunger oder politische Repression.
 
-Ein Netzwerk aus Söldnern, Schmugglern und ehemaligen Soldaten ohne einheitliche Ideologie.
+Veteranenfamilien besitzen teilweise besonderes Ansehen. Gleichzeitig entstehen Konflikte, wenn junge Menschen die revolutionäre Vergangenheit anders bewerten als ihre Eltern oder Großeltern.
 
-Diese Organisationen können später eigene Karten, Kampagnen oder Ereignisse erhalten.
+In vielen Haushalten gehören politische Diskussionen zum Familienleben. Die offizielle Geschichte wird zu Hause bestätigt, kritisiert oder durch persönliche Erinnerungen ergänzt.
 
-**Dabei sollte das Spiel Terrorismus nicht als coolen oder erstrebenswerten Lebensstil darstellen.** Seine Funktion kann vielmehr zeigen, wie politische Gewalt, Radikalisierung, zivile Opfer und staatliche Gegenmaßnahmen miteinander eskalieren.
+Genossenschaften und staatliche Einrichtungen übernehmen teilweise Aufgaben, die anderswo von Familien getragen werden. Trotzdem bleiben Verwandtschaft und persönliche Loyalität wichtige Schutzräume.
 
----
+Die zentrale Frage lautet: **Wie lebt eine Familie mit einer Revolution, die zugleich ihre Geschichte und ihre Gegenwart geschaffen hat?**
 
-# Politisches Spektrum der sechzehn Nationen
-
-Die sechzehn Nationen decken damit bewusst unterschiedliche politische Modelle ab:
-
-| Nation | Politische Grundstruktur | Gesellschaftlicher Schwerpunkt |
-|---|---|---|
-| **Averon** | liberale Republik | Freiheit, Vernetzung, Modernisierung |
-| **Karsk** | technokratischer Autoritarismus | Kontrolle, Optimierung, Körpertechnologie |
-| **Ossaria** | freie Republik | Erinnerung, Schutz, individuelle Freiheit |
-| **Rothain** | Republik mit imperialem Erbe | Tradition, Veteranen, militärische Identität |
-| **Sahr** | Handels- und Städtebund | Handel, Infrastruktur, wirtschaftliche Interessen |
-| **Steinmark** | föderale Republik | Institutionen, Verwaltung, Rechtsstaat |
-| **Vael** | industrieller Machtstaat | Industrie, Konzerne, Produktion |
-| **Vesper** | Sicherheitsstaat | Geheimhaltung, Nachrichtendienste, Kontrolle |
-| **Eldran** | konstitutionelle Monarchie | Tradition, Parlament, Krone |
-| **Namar** | maritime Föderation | regionale Autonomie, Handel, Küstenschutz |
-| **Orthea** | wissenschaftliche Republik | Forschung, Rationalität, Technologie |
-| **Dargan** | dezentrale Grenzrepublik | Selbstverwaltung, Robustheit, Überleben |
-| **Lyr** | Konföderation | lokale Souveränität, gemeinsame Verteidigung |
-| **Caldris** | autoritärer Wohlfahrtsstaat | soziale Sicherheit, Überwachung |
-| **Merovan** | postimperiale Handelsrepublik | Handel, globale Verflechtung, Kolonialerbe |
-| **Theryn** | revolutionäre sozialistische Republik | Gleichheit, Massenorganisation, Revolution |
-
-Diese Tabelle ist **keine moralische Rangordnung**. Sie ist eine Weltbau-Matrix.
-
----
-
-# Politische Vielfalt als Designprinzip
-
-Die sechzehn Nationen sollen nicht in ein simples Links-Rechts-Schema fallen.
-
-Politische Konflikte können gleichzeitig auf mehreren Achsen stattfinden:
-
-1. **Freiheit ↔ Kontrolle**
-2. **Zentralismus ↔ Föderalismus**
-3. **Tradition ↔ Modernisierung**
-4. **Religion ↔ Säkularismus**
-5. **Staat ↔ Privatwirtschaft**
-6. **Eliteherrschaft ↔ Massenbeteiligung**
-7. **Nationalstaat ↔ internationale Kooperation**
-8. **Militärische Sicherheit ↔ zivile Kontrolle**
-9. **Technokratie ↔ politische Selbstbestimmung**
-10. **Konfrontation ↔ Diplomatie**
-
-Dadurch können zwei Staaten, die beide als „demokratisch“ gelten, trotzdem völlig unterschiedliche Gesellschaften darstellen.
-
-Ebenso können zwei autoritäre Staaten völlig unterschiedliche Gründe für ihre Herrschaft besitzen.
-
-Das ist für *Division Command* zentral:
-
-> **Die politische Ordnung erklärt die Entscheidungen einer Gesellschaft. Sie entscheidet nicht automatisch darüber, ob diese Gesellschaft gut oder böse ist.**
-
----
-
-# Frieden als politischer Machtfaktor
-
-Die politische Vielfalt eröffnet außerdem einen eigenständigen strategischen Raum für **Diplomatie und Deeskalation**.
-
-Eine Nation oder ein politischer Akteur kann versuchen, einen Krieg nicht durch Vernichtung des Gegners, sondern durch dessen politische Handlungsunfähigkeit zur Fortsetzung des Krieges zu beenden.
-
-Mögliche politische Instrumente:
-
-- Waffenstillstände
-- Evakuierungen
-- internationale Beobachter
-- humanitäre Korridore
-- Verhandlungen
-- Vermittlung
-- Schutz neutraler Zonen
-- Unterdrückung von Vergeltungsreaktionen
-- Schadensabsorption
-- politische Zugeständnisse
-- internationale Sanktionen
-- öffentliche Legitimität
-- Kriegserschöpfung
-
-Damit wäre Frieden nicht einfach die Abwesenheit von Angriffen.
-
-**Frieden wäre eine aktive Strategie.**
-
-Ein Spieler könnte den Gegner schrittweise in eine Lage bringen, in der weitere militärische Eskalation politisch, materiell oder gesellschaftlich immer schwieriger wird.
-
-Das passt zum übergeordneten Thema von *Division Command*: Der Krieg soll nicht nur als taktisches Puzzle erscheinen, sondern als System, in dem militärische Entscheidungen politische Folgen erzeugen.
-
-
----
-
-# Vertiefung: Die Lebensrealität der sechzehn Nationen
-
-Dieser Abschnitt ergänzt die politische und militärische Beschreibung um das Leben der Menschen, die in diesen Staaten leben. Die Nationen sollen nicht nur durch Regierungen, Armeen und Technologie unterscheidbar sein. Entscheidend ist, wie sich ein gewöhnlicher Dienstag für eine Familie anfühlt, welche Hoffnungen Eltern für ihre Kinder haben, welche Arbeit Menschen verrichten und welche Dinge sie im Alltag für selbstverständlich halten.
-
-Die folgenden Beschreibungen sind bewusst keine starren sozialen Klischees. Innerhalb jeder Nation existieren Wohlstandsunterschiede, politische Gegner, religiöse Minderheiten, regionale Identitäten und Menschen, die sich mit der offiziellen Staatsidee überhaupt nicht identifizieren.
-
-## 1. Averon – Alltag der vernetzten Republik
-
-### Wohnen und Arbeit
-
-Die Mehrheit der Bevölkerung lebt in dicht besiedelten Städten. Wohnungen sind klein bis mittelgroß und stark digitalisiert. Öffentlicher Verkehr, Lieferdienste und Behörden funktionieren überwiegend über vernetzte Systeme.
-
-Für die urbane Mittelschicht ist ein schneller Internetzugang ebenso selbstverständlich wie Strom und fließendes Wasser. Gleichzeitig gibt es Menschen, die von der Geschwindigkeit der Gesellschaft abgehängt werden: ältere Bürger, schlecht bezahlte Dienstleister und Bewohner ärmerer Randbezirke.
-
-Arbeit ist häufig projektorientiert. Berufliche Identität entsteht weniger über einen lebenslangen Betrieb als über Qualifikationen, Netzwerke und wechselnde Arbeitgeber.
-
-### Familie und Bildung
-
-Kinder lernen früh, mit digitalen Informationssystemen umzugehen. Schulen fördern Selbstständigkeit und Kommunikation, stehen aber unter erheblichem Leistungsdruck.
-
-Eltern versuchen, ihren Kindern möglichst viele Möglichkeiten zu eröffnen. Dahinter steht eine verbreitete Angst: Wer nicht mithält, verliert Anschluss.
-
-Familien sind häufig klein und geografisch mobil. Großeltern leben nicht selten in einer anderen Stadt.
-
-### Medien und Gesellschaft
-
-Averoner Bürger sind ständig informiert und gleichzeitig ständig mit widersprüchlichen Informationen konfrontiert. Nachrichten, soziale Netzwerke und staatliche Warnsysteme konkurrieren um Aufmerksamkeit.
-
-Politische Empörung kann innerhalb weniger Stunden entstehen und wieder verschwinden.
-
-### Soldaten im Alltag
-
-Soldaten gelten grundsätzlich als professionelle Staatsbedienstete. Sie sind keine gesellschaftliche Kaste. Viele Bürger unterstützen die Armee, solange sie glauben, dass sie der Verteidigung dient.
-
-Der Beginn eines Krieges verändert diese Haltung schnell: Plötzlich wird aus einer abstrakten Sicherheitsfrage der Sohn aus der Nachbarwohnung, die Schwester aus dem Büro oder der Freund aus dem Sportverein.
-
-### Lebensgefühl
-
-**Hoffnung:** Die Zukunft soll besser sein als die Vergangenheit.
-
-**Angst:** Nicht vor Armut allein, sondern davor, irrelevant und abgehängt zu werden.
-
-**Tabu:** Die Vorstellung, dass persönliche Freiheit vielleicht nicht ausreicht, um eine Gesellschaft zusammenzuhalten.
-
----
-
-## 2. Karsk – Alltag unter technokratischer Kontrolle
-
-### Wohnen und Arbeit
-
-Karsker Bürger erhalten vieles über staatlich organisierte Systeme. Wohnraum, medizinische Versorgung und Arbeitsplätze werden stark nach Bedarf und staatlicher Bewertung verteilt.
-
-Ein Mensch mit hoher technischer oder militärischer Qualifikation kann privilegiert leben. Menschen mit Behinderungen oder chronischen Krankheiten erleben dagegen besonders deutlich, wie brutal eine Gesellschaft sein kann, die den Menschen nach Nutzen bewertet.
-
-Arbeitsplätze besitzen eine offizielle Leistungsbewertung. Jeder Bürger kennt seine Kennziffern.
-
-### Familie
-
-Familien lieben ihre Kinder, aber selbst die Familie steht unter dem Schatten staatlicher Bewertung. Ein Kind mit außergewöhnlicher Begabung kann als Hoffnung der Familie gelten. Ein Kind, das nicht den Erwartungen entspricht, kann zum Anlass für staatliche Intervention werden.
-
-Viele Eltern versuchen deshalb, ihren Kindern beizubringen, niemals öffentlich Schwäche zu zeigen.
-
-### Medizin
-
-Karsk verfügt über hervorragende technische Medizin, aber Zugang und Zweck sind ungleich verteilt. Wer als wertvoll gilt, erhält die modernsten Behandlungen.
-
-Die entscheidende gesellschaftliche Frage lautet nicht, ob der Staat heilen kann.
-
-Sie lautet:
-
-> **Für wen hält der Staat Heilung für lohnenswert?**
-
-### Religion und Privatleben
-
-Private Religion existiert, wird aber überwacht. Persönliche Rituale können toleriert werden, solange sie keine politische Alternative zur Staatsideologie bilden.
-
-### Soldaten
-
-Soldaten genießen materielles Prestige, zahlen aber einen körperlichen Preis. Veteranen mit Implantatschäden können gleichzeitig geehrt und als defekte Systeme behandelt werden.
-
-Eine Familie kann stolz auf einen ausgezeichneten Soldaten sein und dennoch jeden Abend fürchten, dass er eines Tages mit einem Körper zurückkehrt, den sie kaum noch erkennt.
-
-### Lebensgefühl
-
-**Hoffnung:** Der Staat verspricht, Chaos und menschliche Schwäche überwinden zu können.
-
-**Angst:** Unbrauchbar zu werden.
-
-**Tabu:** Öffentlich zu sagen, dass ein Mensch auch ohne Leistung einen eigenen Wert besitzt.
-
----
-
-## 3. Ossaria – Alltag mit der Erinnerung an die Toten
-
-### Wohnen und Arbeit
-
-Ossarische Städte verbinden historische Viertel mit moderner Infrastruktur. Alte Plätze, Friedhöfe und Denkmäler gehören selbstverständlich zum Stadtbild.
-
-Die Gesellschaft ist technisch fortschrittlich, aber nicht technikgläubig. Menschen diskutieren häufig darüber, wo technische Unterstützung endet und menschliche Verantwortung beginnt.
-
-### Familie und Bildung
-
-Kinder lernen Geschichte früh. Krieg wird nicht als Heldengeschichte vermittelt, sondern anhand von Namen, Verlustlisten und persönlichen Berichten.
-
-In vielen Familien gibt es Gegenstände von Vorfahren, die in früheren Kriegen gefallen sind.
-
-Das erzeugt Stolz, aber auch eine schwere Verantwortung.
-
-### Religion und Rituale
-
-Totengedenken besitzt hohe gesellschaftliche Bedeutung. Jahrestage gefallener Familienmitglieder werden oft gemeinsam begangen.
-
-Hochzeiten und Geburten werden dagegen bewusst als Feiern des Lebens gestaltet. Gerade die Nähe zum Tod verstärkt die Wertschätzung des Alltäglichen.
-
-### Soldaten
-
-Soldaten genießen Respekt, aber kein unkritisches Prestige. Ein Soldat soll sich bewusst sein, dass hinter jedem militärischen Erfolg menschliche Verluste stehen.
-
-Die Knochenmasken sind deshalb gesellschaftlich nicht bloß martialische Symbole. Für viele Familien bedeuten sie: Der Träger vergisst die Toten nicht.
-
-### Lebensgefühl
-
-**Hoffnung:** Dass die nächste Generation frei leben kann.
-
-**Angst:** Dass die Erinnerung an die Opfer irgendwann wieder zur Rechtfertigung neuer Opfer wird.
-
-**Tabu:** Gefallene Menschen nur als Zahlen zu behandeln.
-
----
-
-## 4. Rothain – Alltag zwischen Republik und verlorener Größe
-
-### Gesellschaft
-
-Rothain besitzt starke regionale Unterschiede. In ehemaligen Residenzstädten finden sich alte Familien, Veteranenvereine und historische Institutionen. Industriestädte und ländliche Gebiete besitzen dagegen eine wesentlich pragmatischere Kultur.
-
-Viele Familien bewahren militärische Erinnerungsstücke auf. Nicht jede Familie ist stolz darauf. Manche sehen darin ein Erbe, von dem sich die Gesellschaft endlich lösen sollte.
-
-### Arbeit und soziale Schichten
-
-Alte Vermögen, neue Unternehmen und öffentliche Verwaltungen stehen nebeneinander. Der soziale Aufstieg ist möglich, aber Beziehungen zu alten Eliten können weiterhin Türen öffnen.
-
-Das erzeugt einen stillen Konflikt zwischen Leistungsgesellschaft und Herkunft.
-
-### Familie
-
-Großfamilien sind kulturell stärker verankert als in Averon. Familiennamen und Herkunft besitzen gesellschaftliches Gewicht.
-
-Bei manchen Familien beginnt eine militärische Laufbahn über Generationen. Andere vermeiden den Militärdienst bewusst, weil sie mit der imperialen Vergangenheit nichts mehr zu tun haben wollen.
-
-### Kultur
-
-Historische Feste, Regimentsmusik und alte Architektur sind Teil des öffentlichen Lebens. Gleichzeitig gibt es eine starke Gegenkultur, die genau diese Traditionen kritisiert.
-
-### Lebensgefühl
-
-**Hoffnung:** Eine große Vergangenheit in eine friedliche Zukunft zu verwandeln.
-
-**Angst:** Dass die alte Ordnung unter einem neuen Namen zurückkehrt.
-
-**Tabu:** Die offene Behauptung, die vergangenen imperialen Kriege seien ausschließlich ruhmreich gewesen.
-
----
-
-## 5. Sahr – Alltag in den Handelsstädten
-
-### Stadtleben
-
-Sahr ist laut, dicht und wirtschaftlich aktiv. Märkte, Häfen, Werkstätten und Lagerhäuser bestimmen das Stadtbild.
-
-Menschen sind an Fremde gewöhnt. Mehrere Sprachen können innerhalb eines einzigen Viertels gesprochen werden.
-
-### Arbeit
-
-Handel und Logistik sind die wichtigsten sozialen Aufstiegsmöglichkeiten. Eine Familie kann mit einem kleinen Lagerhaus beginnen und innerhalb einer Generation ein bedeutendes Unternehmen aufbauen.
-
-Gleichzeitig leben viele Hafenarbeiter unter unsicheren Bedingungen.
-
-### Familie
-
-Familiennetzwerke besitzen wirtschaftliche Bedeutung. Verwandte helfen bei Transport, Handel und Kredit.
-
-Ehen können deshalb sowohl persönliche als auch wirtschaftliche Bindungen sein.
-
-### Religion
-
-Sahr ist religiös vielfältig. Hafenstädte haben über Jahrhunderte unterschiedliche Glaubensrichtungen aufgenommen. Religiöse Toleranz ist weniger ein philosophisches Ideal als eine praktische Notwendigkeit des Handels.
-
-### Militär
-
-Soldaten gelten als Beschützer von Handelswegen. Versorgung und Infrastruktur werden gesellschaftlich fast ebenso hoch bewertet wie Kampfkraft.
-
-### Lebensgefühl
-
-**Hoffnung:** Aufstieg durch Handel und Eigeninitiative.
-
-**Angst:** Unterbrochene Versorgung, Blockaden und wirtschaftlicher Zusammenbruch.
-
-**Tabu:** Den wirtschaftlichen Nutzen einer Krise offen über das menschliche Leid zu stellen.
-
----
-
-## 6. Steinmark – Alltag in der Verwaltungsrepublik
-
-### Staat und Bürger
-
-Steinmark ist ein Land von Formularen, Behörden, Vereinen und klaren Zuständigkeiten. Bürger wissen meistens, welche Behörde für welches Problem verantwortlich ist.
-
-Das schafft Sicherheit, kann aber auch Frustration erzeugen.
-
-### Arbeit
-
-Berufe im öffentlichen Dienst besitzen hohes Ansehen. Handwerk, Ingenieurwesen und Logistik werden ebenfalls geschätzt.
-
-Karrieren sind häufig langfristig geplant. Stabilität gilt als Tugend.
-
-### Familie und Bildung
-
-Schulen vermitteln Disziplin, Rechtskenntnis und gemeinschaftliche Verantwortung. Kinder lernen früh, dass Regeln nicht nur Einschränkungen, sondern auch Schutzmechanismen sein können.
-
-### Freizeit
-
-Vereine spielen eine große Rolle. Sport, Feuerwehr, Musikvereine und lokale Organisationen verbinden Bürger über Generationen hinweg.
-
-### Militär
-
-Soldaten gelten weniger als Helden denn als Teil einer funktionierenden Institution. Der ideale Soldat ist zuverlässig, ausgebildet und berechenbar.
-
-### Lebensgefühl
-
-**Hoffnung:** Dass Institutionen auch in Krisen funktionieren.
-
-**Angst:** Dass das System zu langsam wird, während die Welt sich verändert.
-
-**Tabu:** Den Staat grundsätzlich als persönlichen Feind zu betrachten.
-
----
-
-## 7. Vael – Alltag im Schatten der Fabriken
-
-### Städte
-
-Vaelische Industriestädte sind von Fabriken, Bahnlinien, Energieanlagen und Bergwerken geprägt. Arbeit beginnt und endet häufig nach Schichtplänen.
-
-Die Geräusche der Industrie gehören zum Alltag.
-
-### Gesellschaft
-
-Techniker, Ingenieure und Facharbeiter genießen hohen Respekt. Gleichzeitig besteht eine deutliche Trennung zwischen Industriearbeitern, Büroangestellten und Unternehmensführungen.
-
-Große Konzerne können das Leben ganzer Regionen bestimmen.
-
-### Familie
-
-Familien organisieren ihr Leben um Schichtarbeit. Kinder wachsen mit der Vorstellung auf, dass bestimmte Berufe praktisch Teil der Familiengeschichte sind.
-
-Arbeitsunfälle und Berufskrankheiten gehören zu den gefürchteten Risiken.
-
-### Kultur
-
-Industriefeste, Arbeitersport und technische Wettbewerbe sind populär. Erfolg wird gerne in sichtbaren Ergebnissen gemessen.
-
-### Militär
-
-Ein Soldat wird oft als jemand gesehen, der eine andere Form derselben industriellen Aufgabe erfüllt: Material, Logistik und menschliche Arbeitskraft müssen zusammen funktionieren.
-
-### Lebensgefühl
-
-**Hoffnung:** Dass harte Arbeit einen sichtbaren Fortschritt schafft.
-
-**Angst:** Ersetzt zu werden oder selbst nur noch eine Produktionszahl zu sein.
-
-**Tabu:** Offenen Zweifel am Wert der Leistungsgesellschaft zu äußern.
-
----
-
-## 8. Vesper – Alltag unter Unsicherheit
-
-### Öffentlichkeit
-
-Vesper ist ein Land, in dem Menschen gelernt haben, zwischen öffentlicher und privater Sprache zu unterscheiden.
-
-Was man zu Hause sagt, muss nicht dem entsprechen, was man bei der Arbeit sagt.
-
-### Arbeit
-
-Staatliche Institutionen, Sicherheitsdienste und staatsnahe Unternehmen sind wichtige Arbeitgeber. Eine unauffällige Karriere kann sicherer sein als eine besonders ambitionierte.
-
-### Familie
-
-Vertrauen innerhalb der Familie ist besonders wichtig. Eltern bringen ihren Kindern bei, Informationen nicht leichtfertig weiterzugeben.
-
-Manche Familien besitzen private Geschichten, die niemals außerhalb des Hauses erzählt werden.
-
-### Medien
-
-Nachrichten werden konsumiert, aber nicht vollständig geglaubt. Bürger vergleichen staatliche Informationen mit Gerüchten, privaten Kontakten und ausländischen Quellen.
-
-### Religion und Rituale
-
-Private religiöse und kulturelle Traditionen können als Rückzugsraum dienen. Gleichzeitig fürchten manche Bürger, dass selbst private Gemeinschaften politisch interpretiert werden.
-
-### Militär
-
-Soldaten und Geheimdienstangehörige besitzen Ansehen und Misstrauen zugleich. Niemand weiß genau, wie groß die tatsächliche Macht der Sicherheitsapparate ist.
-
-### Lebensgefühl
-
-**Hoffnung:** Einen privaten Raum zu besitzen, in den der Staat nicht eindringt.
-
-**Angst:** Nicht zu wissen, wem man vertrauen kann.
-
-**Tabu:** Offene Aussagen über die eigene Überwachung.
-
----
-
-## 9. Eldran – Alltag zwischen Krone und Moderne
-
-### Gesellschaft
-
-Eldran besitzt eine ausgeprägte zeremonielle Kultur. Feiertage der Krone, regionale Feste und parlamentarische Rituale gehören zum öffentlichen Leben.
-
-Die Gesellschaft ist dennoch modern und wirtschaftlich vielfältig.
-
-### Soziale Schichten
-
-Alte Adelsfamilien besitzen weiterhin kulturelles Kapital, aber nicht automatisch politische Macht. Eine neue urbane Mittelschicht betrachtet Titel oft als Folklore.
-
-In ländlichen Gebieten kann die Krone dagegen noch emotional stark verankert sein.
-
-### Familie
-
-Familiengeschichten werden häufig über Generationen erzählt. Abstammung besitzt kulturelle Bedeutung, aber soziale Mobilität ist real.
-
-### Militär
-
-Die Streitkräfte haben starke zeremonielle Traditionen. Gleichzeitig ist die zivile Kontrolle über das Militär ein zentraler Bestandteil der modernen Staatsordnung.
-
-### Lebensgefühl
-
-**Hoffnung:** Stabilität ohne Rückkehr zur alten Standesgesellschaft.
-
-**Angst:** Eine Verfassungskrise, die Krone und Republik gegeneinander stellt.
-
-**Tabu:** Die Vorstellung, dass Tradition allein politische Legitimität erzeugt.
-
----
-
-## 10. Namar – Alltag an Küste und Hafen
-
-### Leben am Wasser
-
-Wasser bestimmt die namaranische Gesellschaft. Fischerei, Handel, Schiffbau, Hafenarbeit und Küstenschutz sind alltägliche Themen.
-
-Kinder lernen früh schwimmen und mit wechselnden Wetterbedingungen umzugehen.
-
-### Föderale Identität
-
-Ein Bürger identifiziert sich häufig gleichzeitig mit seinem Bundesstaat, seiner Stadt und Namar als Ganzem.
-
-Die zentrale Regierung ist weit entfernt vom Alltag vieler Gemeinden.
-
-### Familie und Arbeit
-
-Berufe werden häufig innerhalb von Familien weitergegeben. Gleichzeitig ziehen junge Menschen wegen Studium und Arbeit zwischen den Küstenregionen um.
-
-### Militär
-
-Militärdienst besitzt besonders dort Ansehen, wo Küstenverteidigung unmittelbar erlebt wird. In friedlichen Regionen ist die Armee weniger präsent.
-
-### Lebensgefühl
-
-**Hoffnung:** Selbstbestimmung der eigenen Region.
-
-**Angst:** Dass eine äußere Bedrohung eine starke Zentralregierung erzwingt.
-
-**Tabu:** Den Föderalismus grundsätzlich als Schwäche zu bezeichnen.
-
----
-
-## 11. Orthea – Alltag in der Wissensgesellschaft
-
-### Bildung
-
-Bildung besitzt außergewöhnlich hohen gesellschaftlichen Wert. Kinder werden ermutigt, Fragen zu stellen und Hypothesen zu prüfen.
-
-Universitäten und Forschungszentren sind wichtige kulturelle Orte.
-
-### Arbeit
-
-Wissenschaft, Medizin, Ingenieurwesen und Analyseberufe genießen hohes Ansehen. Gleichzeitig entsteht eine soziale Kluft zwischen hochqualifizierten Spezialisten und Menschen, deren Arbeit weniger akademisch geprägt ist.
-
-### Gesellschaft
-
-Entscheidungen werden häufig mit Daten begründet. Das kann Vertrauen schaffen, aber auch das Gefühl erzeugen, dass menschliche Erfahrungen gegenüber messbaren Größen zu wenig zählen.
-
-### Familie
-
-Eltern investieren stark in Bildung. Leistungsdruck beginnt früh.
-
-### Militär
-
-Soldaten arbeiten eng mit Forschern und technischen Spezialisten zusammen. Viele Systeme werden zunächst in zivilen Forschungsprogrammen entwickelt.
-
-### Lebensgefühl
-
-**Hoffnung:** Dass Wissen menschliches Leid verringern kann.
-
-**Angst:** Dass Optimierung den Menschen auf messbare Eigenschaften reduziert.
-
-**Tabu:** Wissenschaft grundsätzlich mit Wahrheit und Politik grundsätzlich mit Irrationalität gleichzusetzen.
-
----
-
-## 12. Dargan – Alltag in der Grenzgesellschaft
-
-### Siedlungen
-
-Darganische Orte sind häufig weit voneinander entfernt. Selbstversorgung und Reparaturfähigkeit sind wichtiger als Komfort.
-
-Werkstätten besitzen gesellschaftlich fast den gleichen Stellenwert wie Schulen.
-
-### Familie
-
-Familien helfen einander praktisch. Nachbarschaft ist nicht nur soziale Nähe, sondern Überlebensgemeinschaft.
-
-### Staat
-
-Viele Bürger sehen den Staat positiv, solange er Hilfe bringt, aber skeptisch, wenn er aus großer Entfernung Regeln erlässt.
-
-### Bildung
-
-Kinder lernen neben normalen Fächern praktische Fähigkeiten: Reparieren, Erste Hilfe, Orientierung und Umgang mit schwieriger Umwelt.
-
-### Militär
-
-Soldaten sind häufig aus der lokalen Bevölkerung rekrutiert und kennen die Region persönlich.
-
-### Lebensgefühl
-
-**Hoffnung:** Unabhängig bleiben zu können.
-
-**Angst:** Dass eine Krise die lokale Selbstversorgung überfordert.
-
-**Tabu:** Menschen aus abgelegenen Regionen als weniger zivilisiert zu betrachten.
-
----
-
-## 13. Lyr – Alltag zwischen Tal und Bund
-
-### Lokale Identität
-
-In Lyr ist die wichtigste politische Einheit oft nicht der Gesamtstaat, sondern das eigene Tal oder die eigene Republik.
-
-Menschen können sich stark mit lokalen Traditionen identifizieren und dennoch den Bund verteidigen.
-
-### Arbeit
-
-Bergbau, Handwerk, Energiegewinnung, Landwirtschaft und Tunnelbau sind bedeutend. Große Städte existieren, dominieren aber nicht das gesamte Land.
-
-### Familie
-
-Mehrgenerationenhaushalte sind häufiger als in Averon. Ältere Menschen besitzen praktisches Wissen über lokale Umwelt und Geschichte.
-
-### Religion
-
-Lokale Bräuche sind stark. Religiöse Traditionen können von Tal zu Tal variieren.
-
-### Militär
-
-Verteidigung ist eng mit der Heimat verbunden. Ein Soldat schützt nicht nur einen Staat, sondern konkret das Tal, in dem seine Familie lebt.
-
-### Lebensgefühl
-
-**Hoffnung:** Die eigene Gemeinschaft bewahren zu können.
-
-**Angst:** Dass gemeinsame Verteidigung in Zentralisierung umschlägt.
-
-**Tabu:** Lokale Identität als rückständig abzuwerten.
-
----
-
-## 14. Caldris – Alltag im fürsorglichen Überwachungsstaat
-
-### Wohnen und Versorgung
-
-Caldrische Bürger erleben den Staat im Alltag unmittelbar. Gesundheitsversorgung, Wohnraum, Arbeitsvermittlung und soziale Absicherung sind weitgehend organisiert.
-
-Für viele Menschen ist das Leben materiell stabil.
-
-### Überwachung
-
-Gleichzeitig existieren umfangreiche Kontrollsysteme. Bürger wissen, dass staatliche Stellen große Mengen persönlicher Informationen besitzen.
-
-Viele Menschen passen ihr Verhalten deshalb an, obwohl sie persönlich nie verfolgt wurden.
-
-### Familie
-
-Familien profitieren von sozialer Unterstützung. Kinderbetreuung und medizinische Versorgung sind gut ausgebaut.
-
-Die Frage der Privatsphäre beginnt jedoch früh: Eltern müssen entscheiden, wie offen sie mit ihren Kindern über politische Themen sprechen.
-
-### Militär
-
-Militär und zivile Sicherheitsorgane überschneiden sich stark. Soldaten werden als Teil des gesellschaftlichen Schutzsystems betrachtet.
-
-### Lebensgefühl
-
-**Hoffnung:** Niemand soll durch Armut oder Krankheit fallen gelassen werden.
-
-**Angst:** Dass Sicherheit irgendwann wichtiger wird als persönliche Freiheit.
-
-**Tabu:** Die sozialen Leistungen des Staates pauschal als wertlos zu bezeichnen.
-
----
-
-## 15. Merovan – Alltag nach dem Imperium
-
-### Gesellschaft
-
-Merovan ist kulturell vielfältig. Hafenstädte und ehemalige Kolonialzentren beherbergen Menschen mit sehr unterschiedlichen Familiengeschichten.
-
-Manche Familien profitieren noch von altem Vermögen. Andere erinnern sich an die imperiale Herrschaft aus der Perspektive ihrer Opfer.
-
-### Bildung
-
-Geschichte ist politisch umkämpft. Schulbücher versuchen, das Imperium zu erklären, ohne es zu verherrlichen oder zu verschweigen.
-
-### Wirtschaft
-
-Handel ist weiterhin zentral. Große Unternehmen besitzen internationale Verbindungen.
-
-### Familie
-
-Familiengeschichten können über mehrere Kontinente reichen. Migration ist normal.
-
-### Militär
-
-Expeditionstruppen werden gesellschaftlich ambivalent gesehen. Einerseits gelten sie als Schutz der Handelswege, andererseits erinnern Auslandseinsätze an die imperiale Vergangenheit.
-
-### Lebensgefühl
-
-**Hoffnung:** Internationale Verflechtung ohne neue Herrschaft.
-
-**Angst:** Dass alte Machtstrukturen unter wirtschaftlichen Namen zurückkehren.
-
-**Tabu:** Die imperiale Vergangenheit ausschließlich als Ruhmesgeschichte zu erzählen.
-
----
-
-## 16. Theryn – Alltag nach der Revolution
+## Alltag und Lebensgefühl
 
 ### Gesellschaft
 
@@ -1643,2436 +4450,89 @@ Militärdienst wird als Verteidigung der Revolution und des Gemeinwesens verstan
 
 ---
 
-# Der Alltag als gemeinsamer Maßstab
+## Gesellschaftliche Ebenen 6–25
 
-Die sechzehn Nationen unterscheiden sich damit nicht nur durch Verfassungen und Waffen.
+### Punkt 6 – Jugend
 
-Ein und dieselbe Situation kann für einen Menschen völlig unterschiedlich aussehen:
+Jugendliche lernen revolutionäre Geschichte und erleben zugleich wachsende Reformdiskussionen. Generationenkonflikte sind besonders politisch geprägt.
 
-### Ein Kind wird krank.
+### Punkt 7 – Arbeit
 
-- In **Karsk** wird zuerst gefragt, welchen staatlichen Wert die Behandlung besitzt.
-- In **Caldris** ist Behandlung wahrscheinlich umfassend abgesichert, aber registriert.
-- In **Averon** kann die Familie zwischen vielen Angeboten wählen, muss sich aber im System zurechtfinden.
-- In **Dargan** kann die Entfernung zur medizinischen Versorgung das größte Problem sein.
-- In **Orthea** vertraut man auf modernste Diagnostik.
-- In **Sahr** können Familie und Handelsnetzwerk helfen, Versorgung schnell zu organisieren.
+Staatsbetriebe, Genossenschaften, Landwirtschaft und technische Berufe dominieren.
 
-### Ein Familienmitglied wird eingezogen.
+### Punkt 8 – Armut
 
-Für alle sechzehn Gesellschaften ist das derselbe biologische Vorgang.
+Grundversorgung ist politisches Ziel, doch regionale Produktionsunterschiede und staatliche Verteilung erzeugen Engpässe.
 
-Aber die Bedeutung ist verschieden.
+### Punkt 9 – Wohlstand
 
-In einer Gesellschaft bedeutet es Pflicht. In einer anderen Aufstieg. In einer dritten Schande. In einer vierten wirtschaftliche Not. In einer fünften eine Möglichkeit, die Familie zu schützen.
+Private Vermögen sind begrenzt; privilegierter Zugang zu Wohnraum, Waren und Positionen erzeugt dennoch Unterschiede.
 
-Damit entsteht die menschliche Ebene von *Division Command*:
+### Punkt 10 – Religion
 
-> **Der Krieg beginnt auf der Karte. Seine Folgen beginnen am Küchentisch.**
+Staatliche Säkularität dominiert, traditionelle Religion lebt in Familien und Gemeinden fort.
 
----
+### Punkt 11 – Bildung
 
-# Gesellschaftliche Spannungsachsen
+Revolutionäre Geschichte und technische Bildung sind zentrale Bestandteile des Lehrplans.
 
-Für zukünftige Lore, Kampagnen und Karten sollten die Nationen nicht als geschlossene Blöcke behandelt werden. Innerhalb jeder Nation existieren mindestens folgende Konfliktlinien:
+### Punkt 12 – Medien
 
-- Stadt gegen Land
-- Arm gegen Reich
-- Jung gegen Alt
-- Zivilbevölkerung gegen Sicherheitsapparat
-- politische Regierung gegen Militär
-- traditionelle gegen moderne Lebensweisen
-- Zentrum gegen Regionen
-- religiöse gegen säkulare Gruppen
-- Arbeiterschaft gegen wirtschaftliche Eliten
-- Veteranen gegen Kriegsgegner
-- technische Optimierung gegen menschliche Autonomie
-- nationale Interessen gegen internationale Kooperation
+Staatsmedien prägen das öffentliche Bild; unabhängige und reformorientierte Stimmen wachsen.
 
-Diese Konflikte können sich im Verlauf des Spiels verändern. Eine Nation kann während eines langen Krieges politisch instabil werden, ohne dass ihre Regierung sofort zusammenbricht.
+### Punkt 13 – Sprache
 
----
+Revolutionäre Begriffe prägen Politik und öffentliche Sprache; jüngere Generationen entwickeln neue Ausdrucksweisen.
 
-# Der einzelne Mensch
+### Punkt 14 – Essen
 
-Die Lore von *Division Command* soll immer wieder auf eine einfache Perspektive zurückkehren:
+Einfache, gemeinschaftlich organisierte Küche; Genossenschaften sichern Grundnahrungsmittel.
 
-Ein Bürger ist nicht zuerst Soldat, Arbeiter, Technokrat, Revolutionär oder Aristokrat.
+### Punkt 15 – Kleidung
 
-Er ist zunächst ein Mensch.
+Praktische Arbeitskleidung dominiert; revolutionäre Symbole erscheinen bei staatlichen Anlässen.
 
-Er hat eine Familie. Er hat Gewohnheiten. Er besitzt Erinnerungen. Er kann Angst haben. Er kann jemanden lieben. Er kann sich irren. Er kann glauben, dass seine Regierung ihn schützt, und später feststellen, dass sie ihn benutzt hat.
+### Punkt 16 – Architektur
 
-Deshalb soll die Welt keine Nation besitzen, deren Bevölkerung ausschließlich aus Karikaturen ihrer Regierung besteht.
+Monumentale Revolutionsplätze, öffentliche Gebäude, Fabriksiedlungen und Genossenschaftsbauten.
 
-**Die Regierung kann Krieg wollen, während ein Bürger Frieden will.**
+### Punkt 17 – Freizeit
 
-**Ein Soldat kann seine Aufgabe erfüllen und den Krieg trotzdem verabscheuen.**
+Mannschaftssport, Kulturhäuser, Arbeiterclubs und politische Jugendorganisationen.
 
-**Ein Gegner kann Menschlichkeit zeigen, ohne dadurch seine Regierung zu rechtfertigen.**
+### Punkt 18 – Feste
 
-**Ein Staat kann reale Sicherheit schaffen und gleichzeitig Freiheit zerstören.**
+Revolutionstag, Arbeiterfeste und Genossenschaftsfeiern.
 
-Das ist die Grundlage für eine Welt, in der Krieg nicht glorifiziert werden muss, damit militärische Konflikte glaubwürdig dargestellt werden können.
+### Punkt 19 – Trauer
 
-# Historischer Grundsatz
+Revolutionäre Märtyrer werden öffentlich geehrt, während Familien ihre private Erinnerung bewahren.
 
-Die sechzehn Nationen sind nicht sechzehn isolierte Geschichten.
+### Punkt 20 – Militär
 
-Ihre Gesellschaften haben sich gegenseitig beeinflusst. Menschen wanderten aus. Händler brachten Ideen über Grenzen. Wissenschaftler wechselten Staaten. Flüchtlinge gründeten neue Viertel. Soldaten heirateten Menschen aus anderen Ländern. Unternehmen bauten Fabriken außerhalb ihrer Heimat. Religionen und Sprachen verbreiteten sich.
+Große Reserve- und Mobilisierungsstrukturen verbinden Militär und Gesellschaft.
 
-Dadurch kann keine Nation ihre Geschichte vollständig aus sich selbst erklären.
+### Punkt 21 – Krieg
 
-**Jede Nation trägt Spuren ihrer Nachbarn in sich.**
+Krieg wird in revolutionärer Sprache als Kampf um gesellschaftliche Ordnung interpretiert, während Familien seine menschlichen Kosten erinnern.
 
-Der Krieg zerstört deshalb nicht nur Frontlinien.
+### Punkt 22 – Opposition
 
-Er zerreißt Beziehungen, die über Jahrhunderte entstanden sind.
+Reformisten, alte Revolutionäre und lokale Räte konkurrieren über die Zukunft des Systems.
 
+### Punkt 23 – Nachbarn
 
----
+Arbeits- und Genossenschaftsgemeinschaften prägen das nachbarschaftliche Leben.
 
-# Vertiefung der sechzehn Nationen
+### Punkt 24 – Migration
 
-Die sechzehn Nationen werden für die weitere Weltentwicklung nicht nur über Regierung, Militär und Technologie definiert. Jede Nation erhält ein eigenes **gesellschaftliches Betriebssystem**: eine bestimmte Vorstellung davon, was ein gutes Leben ausmacht, wem Menschen vertrauen, was als ehrenhaft gilt, wovor Familien Angst haben und welche Widersprüche im Alltag sichtbar werden.
+Arbeits- und politische Migration wird staatlich organisiert; Reformbewegungen fordern größere persönliche Mobilität.
 
-Für jede Nation sollen künftig mindestens diese Ebenen ausgearbeitet werden:
+### Punkt 25 – Familiengeschichte
 
-1. **Selbstbild** – Wie beschreibt die Nation sich selbst?
-2. **Fremdbild** – Wie sehen andere Nationen sie?
-3. **Staatsverständnis** – Warum akzeptieren Menschen die bestehende Ordnung?
-4. **Familie und Generationen** – Wie werden Werte weitergegeben?
-5. **Arbeit und Wohlstand** – Wovon leben die Menschen?
-6. **Religion und Weltanschauung** – Welche Sinnsysteme existieren?
-7. **Bildung und Jugend** – Was lernen Kinder über ihre Welt?
-8. **Medien und Wahrheit** – Wem glauben die Menschen?
-9. **Militär im Alltag** – Wie sichtbar ist die Armee?
-10. **Architektur und Landschaft** – Wie sieht das Land aus?
-11. **Sprache und Umgangsformen** – Wie klingt die Gesellschaft?
-12. **Krisenerfahrung** – Welche historische Erfahrung prägt sie?
-13. **Innere Gegenbewegungen** – Wer widerspricht der offiziellen Ordnung?
-14. **Beziehung zu den anderen fünfzehn Nationen** – Handel, Feindschaft, Migration, Vorurteile und gemeinsame Geschichte.
+Revolution, Bürgerkrieg, Aufbau und Reform sind in vielen Familien persönliche Geschichte.
 
-Diese Ebenen sind bewusst voneinander getrennt. Eine Nation darf beispielsweise wirtschaftlich liberal und politisch autoritär sein; religiös konservativ und technologisch hochmodern; oder demokratisch organisiert sein und trotzdem starken sozialen Konformitätsdruck besitzen.
-
-## Nationale Leitfragen
-
-### Averon
-**Leitfrage:** Wie viel Freiheit bleibt, wenn eine Gesellschaft ständig auf die nächste Krise vorbereitet sein muss?
-
-**Alltagswiderspruch:** Menschen genießen große persönliche Freiheit, erleben aber gleichzeitig einen permanenten Druck, informiert, leistungsfähig und gesellschaftlich relevant zu bleiben.
-
-**Besonderer Ausbau:** Averon sollte starke Unterschiede zwischen digitalisierten Großstädten und kleineren Gemeinden erhalten. Dadurch entsteht innerhalb derselben Republik ein Konflikt zwischen Geschwindigkeit und Bodenständigkeit.
-
-### Karsk
-**Leitfrage:** Was geschieht mit einer Gesellschaft, wenn menschlicher Wert messbar gemacht wird?
-
-**Alltagswiderspruch:** Der Staat kann hervorragende medizinische und technische Versorgung bereitstellen und gleichzeitig entscheiden, wer diese Versorgung verdient.
-
-**Besonderer Ausbau:** Karsk sollte nicht ausschließlich aus fanatischen Funktionären bestehen. Es braucht Bürger, die das System unterstützen, weil es ihnen tatsächlich Sicherheit, Heilung oder Aufstieg ermöglicht.
-
-### Ossaria
-**Leitfrage:** Kann Erinnerung Frieden bewahren, ohne selbst neue Feindschaft zu erzeugen?
-
-**Alltagswiderspruch:** Eine Kultur des Gedenkens schützt vor dem Vergessen, kann aber auch eine Generation an die Kriege ihrer Vorfahren binden.
-
-**Besonderer Ausbau:** Ossaria sollte regionale Unterschiede zwischen alten Städten, technologischen Zentren und ländlichen Gebieten besitzen.
-
-### Rothain
-**Leitfrage:** Wie lebt eine Gesellschaft mit einem Erbe, auf das sie gleichzeitig stolz und beschämt ist?
-
-**Alltagswiderspruch:** Dieselbe Uniform, dasselbe Denkmal oder dasselbe Familienwappen kann für einen Menschen Heimat und für einen anderen Unterdrückung bedeuten.
-
-**Besonderer Ausbau:** Rothain sollte besonders starke Generationenkonflikte erhalten. Ältere Menschen erinnern sich anders an das ehemalige Reich als jüngere, die nur noch die Republik kennen.
-
-### Sahr
-**Leitfrage:** Was hält eine Gesellschaft zusammen, wenn Handel wichtiger ist als gemeinsame Herkunft?
-
-**Alltagswiderspruch:** Die Städte leben vom offenen Austausch, fürchten aber gleichzeitig Abhängigkeit von fremden Waren, Häfen und Märkten.
-
-**Besonderer Ausbau:** Die Handelsstädte sollten untereinander konkurrieren. Sahr ist deshalb nicht einfach ein geeinter Wirtschaftsblock, sondern ein permanenter Ausgleich zwischen Eigeninteressen.
-
-### Steinmark
-**Leitfrage:** Wann schützt Ordnung die Freiheit – und wann ersetzt sie sie?
-
-**Alltagswiderspruch:** Bürger verlassen sich auf funktionierende Institutionen und beginnen gerade deshalb zu spüren, wie mächtig diese Institutionen geworden sind.
-
-**Besonderer Ausbau:** Die Bundesländer Steinmarks sollten unterschiedliche Verwaltungskulturen besitzen. Dadurch wird Föderalismus im Alltag sichtbar.
-
-### Vael
-**Leitfrage:** Wie viel menschliches Leben darf wirtschaftlicher Fortschritt kosten?
-
-**Alltagswiderspruch:** Die Industrie schafft Wohlstand, Infrastruktur und soziale Aufstiegsmöglichkeiten, erzeugt aber gleichzeitig Abhängigkeit von Unternehmen und gefährliche Arbeitsbedingungen.
-
-**Besonderer Ausbau:** Vael braucht sowohl stolze Arbeiterstädte als auch Regionen, in denen Menschen unter der Macht großer Konzerne leiden.
-
-### Vesper
-**Leitfrage:** Kann eine Gesellschaft funktionieren, wenn niemand sicher weiß, was wahr ist?
-
-**Alltagswiderspruch:** Geheimhaltung kann reale Gefahren verhindern, zerstört aber langfristig Vertrauen zwischen Bürgern.
-
-**Besonderer Ausbau:** Vesper sollte mehrere Schichten besitzen: überzeugte Staatsanhänger, vorsichtige Mitläufer, private Opposition und Menschen, die schlicht versuchen, unauffällig zu leben.
-
-### Eldran
-**Leitfrage:** Kann Tradition eine demokratische Ordnung stärken, ohne sie zu beherrschen?
-
-**Alltagswiderspruch:** Die Krone ist politisch begrenzt, aber kulturell mächtig.
-
-**Besonderer Ausbau:** Eldran sollte einen klaren Gegensatz zwischen höfisch geprägten Zentren, modernen Städten und eigenständigen Regionen erhalten.
-
-### Namar
-**Leitfrage:** Wie viel gemeinsame Macht braucht Freiheit zwischen voneinander entfernten Regionen?
-
-**Alltagswiderspruch:** Die Menschen verteidigen ihre regionale Selbstbestimmung, benötigen aber im Krieg gemeinsame Infrastruktur und zentrale Koordination.
-
-**Besonderer Ausbau:** Jede Küstenregion sollte eine eigene Identität besitzen. Namar wird dadurch zu einem Staat, dessen Einheit ständig ausgehandelt wird.
-
-### Orthea
-**Leitfrage:** Was geschieht, wenn eine Gesellschaft lernt, fast alles zu messen?
-
-**Alltagswiderspruch:** Gute Daten verbessern Entscheidungen, können aber jene Erfahrungen unsichtbar machen, die sich nicht einfach quantifizieren lassen.
-
-**Besonderer Ausbau:** Orthea sollte neben Spitzenforschung auch eine große Schicht gewöhnlicher Bürger besitzen, die mit der akademischen Elite wenig gemeinsam hat.
-
-### Dargan
-**Leitfrage:** Wie viel Staat braucht ein Mensch, wenn der Staat weit entfernt ist?
-
-**Alltagswiderspruch:** Darganische Bürger verlangen Schutz und Infrastruktur, wollen aber nicht von einer fernen Verwaltung abhängig werden.
-
-**Besonderer Ausbau:** Dargan sollte starke lokale Gemeinschaften und unterschiedliche Grenzkulturen besitzen.
-
-### Lyr
-**Leitfrage:** Wie bleibt eine Gemeinschaft frei, ohne sich voneinander zu isolieren?
-
-**Alltagswiderspruch:** Lokale Souveränität schützt Identität, erschwert aber gemeinsame Entscheidungen.
-
-**Besonderer Ausbau:** Die Täler und Republiken sollten nicht dieselbe Kultur besitzen. Lyr ist ein Bund aus verwandten, aber eigenständigen Gesellschaften.
-
-### Caldris
-**Leitfrage:** Was ist ein freier Mensch, wenn für fast jedes Lebensproblem bereits gesorgt wird?
-
-**Alltagswiderspruch:** Materielle Sicherheit ist real und wertvoll, während Überwachung und Konformitätsdruck ebenfalls real sind.
-
-**Besonderer Ausbau:** Caldris braucht Bürger, die das System aus Überzeugung verteidigen, weil sie dessen soziale Leistungen erlebt haben.
-
-### Merovan
-**Leitfrage:** Wie kann eine Gesellschaft mit imperialer Vergangenheit leben, ohne sie zu verherrlichen oder zu verdrängen?
-
-**Alltagswiderspruch:** Internationaler Handel und kulturelle Vielfalt beruhen teilweise auf historischen Strukturen, die zugleich Quelle von Ausbeutung waren.
-
-**Besonderer Ausbau:** Merovan sollte unterschiedliche Erinnerungskulturen innerhalb derselben Gesellschaft zeigen.
-
-### Theryn
-**Leitfrage:** Wann endet eine Revolution?
-
-**Alltagswiderspruch:** Die Revolution kann reale soziale Verbesserungen gebracht haben und gleichzeitig neue Machtstrukturen erzeugt haben.
-
-**Besonderer Ausbau:** Theryn sollte nicht nur aus überzeugten Revolutionären bestehen. Veteranen, junge Reformisten, alte Parteifunktionäre, Genossenschaftler und unpolitische Familien müssen nebeneinander existieren.
-
----
-
-# Gemeinsames Raster für die weitere Ausarbeitung
-
-Für jede Nation werden wir künftig konkrete Details entwickeln, statt nur allgemeine Beschreibungen zu sammeln:
-
-| Ebene | Fragen |
-|---|---|
-| Hauptstadt | Wie sieht sie aus? Wer lebt dort? |
-| Regionen | Welche Landschaften und regionalen Unterschiede gibt es? |
-| Städte | Was unterscheidet typische Städte voneinander? |
-| Dörfer | Wie lebt die Landbevölkerung? |
-| Familie | Wie groß sind Haushalte? Welche Rollen gibt es? |
-| Jugend | Was wollen Jugendliche werden? |
-| Arbeit | Welche Berufe sind typisch und angesehen? |
-| Armut | Wie sieht soziale Not aus? |
-| Wohlstand | Wie zeigt sich Reichtum? |
-| Religion | Welche Glaubensformen und Rituale existieren? |
-| Bildung | Was lernen Kinder und Jugendliche? |
-| Medien | Welche Informationen erreichen die Bevölkerung? |
-| Sprache | Welche Begriffe und Redewendungen sind typisch? |
-| Essen | Welche Gerichte gehören zum Alltag? |
-| Kleidung | Was tragen Zivilisten und Soldaten? |
-| Architektur | Wie sehen Wohnhäuser, öffentliche Gebäude und Fabriken aus? |
-| Freizeit | Was machen Menschen nach der Arbeit? |
-| Feste | Welche Feiertage verbinden die Gesellschaft? |
-| Trauer | Wie wird mit Tod und Verlust umgegangen? |
-| Militär | Wie erlebt ein Zivilist die Streitkräfte? |
-| Krieg | Wie verändert Mobilisierung den Alltag? |
-| Opposition | Welche Gruppen wollen Veränderung? |
-| Nachbarn | Welche Nationen werden geliebt, gefürchtet oder verachtet? |
-| Migration | Wer zieht wohin und warum? |
-| Familiengeschichte | Welche alten Ereignisse werden bis heute erzählt? |
-
-Der entscheidende Grundsatz bleibt:
-
-> **Wir entwickeln keine sechzehn Klischees. Wir entwickeln sechzehn Gesellschaften.**
-
-Eine Nation darf widersprüchlich sein. Gerade diese Widersprüche machen sie glaubwürdig.
-
-
-# Konkrete Ausarbeitung – Punkt 1: Hauptstädte
-
-Dieser Abschnitt beginnt die systematische Ausarbeitung des gemeinsamen Rasters. Wir bearbeiten die Punkte nacheinander und wenden jeden Punkt auf alle sechzehn Nationen an. Dadurch bleiben die Gesellschaften vergleichbar, ohne sie gleichförmig zu machen.
-
-## 1. Hauptstadt
-
-Die Hauptstadt ist nicht nur ein politischer Ort. Sie soll zeigen, wie eine Nation sich selbst im gebauten Raum darstellt: Wo sitzt die Macht? Welche Bevölkerungsgruppen leben dort? Wie sichtbar sind Geschichte, Militär, Religion, Wirtschaft und soziale Unterschiede?
-
-### 1. Averon – **Novaris**
-
-Novaris ist eine junge, dicht bebaute Metropole mit gläsernen Verwaltungsgebäuden, großen Wohnkomplexen und weitläufigen Verkehrsknoten. Die Stadt wurde nach mehreren politischen Reformen des jungen Staates in kurzer Zeit stark erweitert.
-
-Das Regierungsviertel ist bewusst offen gestaltet. Ministerien, Parlament, Gerichte und öffentliche Plätze liegen nicht hinter monumentalen Mauern, sondern in einem dicht vernetzten Stadtzentrum. Das soll den Anspruch vermitteln, dass staatliche Macht öffentlich kontrollierbar bleibt.
-
-Novaris besitzt gleichzeitig eine stark ausgeprägte digitale Infrastruktur. Öffentliche Verkehrsmittel, Verwaltung, medizinische Versorgung und große Teile des Handels sind digital miteinander verbunden.
-
-Die Stadt wirkt modern, effizient und schnell – aber auch rastlos. Viele Menschen leben in kleinen Wohnungen, wechseln häufig den Arbeitsplatz und verbringen einen erheblichen Teil ihres Lebens in digitalen Räumen.
-
-**Stadtbild:** Glas, Stahl, Beton, begrünte Dächer, Verkehrsknoten, große öffentliche Plätze.  
-**Wichtige Viertel:** Regierungsviertel, Technologiering, Altstadt, Hafenbezirk, Wohnsektoren.  
-**Sozialer Gegensatz:** hochbezahlte Technologie- und Verwaltungselite gegenüber jungen Beschäftigten mit unsicheren Arbeitsverhältnissen.
-
-### 2. Karsk – **Varkesh**
-
-Varkesh ist eine monumentale Verwaltungs- und Industriestadt. Die Stadtplanung folgt weniger historischen Straßenmustern als funktionalen Sektoren.
-
-Wohnraum, Arbeitsstätten, medizinische Zentren, Produktionsanlagen und militärische Einrichtungen sind räumlich klar gegliedert. Große Verkehrsachsen verbinden die einzelnen Sektoren.
-
-Das Zentrum wird von staatlichen Verwaltungsbauten und medizinisch-technologischen Komplexen geprägt. Viele Gebäude sind zugleich Arbeits-, Wohn- und Versorgungseinrichtungen.
-
-Karsker Architektur vermittelt nicht primär Schönheit, sondern Funktion, Kontrolle und Dauerhaftigkeit.
-
-**Stadtbild:** massive Beton- und Metallstrukturen, unterirdische Anlagen, kontrollierte Verkehrswege.  
-**Wichtige Viertel:** Verwaltungssektor, Medizinsektor, Produktionsgürtel, Wohnsektoren, Militärbezirk.  
-**Sozialer Gegensatz:** privilegierte technische und staatliche Funktionsträger gegenüber Menschen mit geringer staatlicher Bewertung.
-
-### 3. Ossaria – **Ossar**
-
-Ossar ist eine der ältesten Städte der Welt und zugleich eines der bedeutendsten technologischen Zentren Ossarias.
-
-Die Stadt besteht aus mehreren historischen Schichten. Alte Steinviertel stehen neben modernen Forschungszentren und geschützten Verkehrssystemen.
-
-Zahlreiche Plätze und Gebäude tragen Namen von Menschen, die in vergangenen Kriegen starben. Gedenkstätten sind kein abgegrenzter Bereich, sondern Teil des täglichen Stadtbildes.
-
-Die moderne Architektur versucht bewusst, neue Technik mit historischen Strukturen zu verbinden.
-
-**Stadtbild:** alte Steinarchitektur, moderne Schutzsysteme, Forschungszentren, Gedenkplätze.  
-**Wichtige Viertel:** Altstadt, Forschungsbezirk, Bürgerforum, Industriehafen, Gedenksiedlungen.  
-**Sozialer Gegensatz:** traditionsbewusste alte Stadtviertel gegenüber hochmodernen Technologiebezirken.
-
-### 4. Rothain – **Rothenburg**
-
-Rothenburg war einst das politische Zentrum des ehemaligen Reiches. Heute ist es Hauptstadt der Republik, doch die Spuren der alten Ordnung sind überall sichtbar.
-
-Der ehemalige Kaiserpalast dient inzwischen als staatliches Museum und parlamentarisches Archiv. Alte Kasernen wurden teilweise in Universitäten, Behörden und Wohnviertel umgewandelt.
-
-Historische Regimenter besitzen noch immer eigene Häuser und Versammlungsorte. Auf manchen Plätzen stehen Denkmäler, deren Bedeutung zwischen Generationen stark umstritten ist.
-
-**Stadtbild:** monumentale Plätze, alte Paläste, Kasernen, Bürgerhäuser und moderne Regierungsgebäude.  
-**Wichtige Viertel:** Parlamentsviertel, ehemaliger Hofbezirk, Veteranenviertel, Arbeiterbezirke, neue Geschäftsstadt.  
-**Sozialer Gegensatz:** alte Familien und Veteranenverbände gegenüber jüngeren republikanischen und sozialen Bewegungen.
-
-### 5. Sahr – **Sarun**
-
-Sarun ist keine klassische Zentralhauptstadt. Sie ist die größte und politisch wichtigste unter mehreren mächtigen Handelsstädten.
-
-Die Stadt liegt an einem großen Wasserweg und wird von Hafenanlagen, Märkten, Lagerhäusern und Handelsplätzen geprägt.
-
-Politische Macht ist sichtbar mit wirtschaftlicher Macht verbunden. Handelsfamilien besitzen prachtvolle Stadthäuser, während Hafenarbeiter in dicht besiedelten Vierteln leben.
-
-Sarun ist mehrsprachig und kulturell heterogen. Fremde Waren und fremde Menschen gehören zum normalen Stadtbild.
-
-**Stadtbild:** Kanäle, Hafenanlagen, Märkte, Lagerhäuser, Brücken und dicht bebaute Wohnviertel.  
-**Wichtige Viertel:** Großer Hafen, Händlerstadt, Werftbezirk, Marktviertel, Arbeiterviertel.  
-**Sozialer Gegensatz:** alte Handelsfamilien gegenüber Hafenarbeitern und kleinen Händlern.
-
-### 6. Steinmark – **Steinburg**
-
-Steinburg ist eine nüchterne föderale Hauptstadt. Die Stadt wurde bewusst als Verwaltungszentrum entwickelt und besitzt weniger monumentale Selbstdarstellung als viele andere Hauptstädte.
-
-Bundesbehörden, Gerichte und Archive prägen das Zentrum. Die einzelnen Bundesländer unterhalten eigene Vertretungen und Kulturhäuser.
-
-Die Stadt ist bekannt für ihre Verwaltungsgebäude, öffentlichen Bibliotheken und großen Verbands- und Vereinszentren.
-
-**Stadtbild:** funktionale Verwaltungsarchitektur, breite Straßen, öffentliche Parks, Archive und Gerichte.  
-**Wichtige Viertel:** Bundesviertel, Gerichtsbezirk, Länderhäuser, Bürgerstadt, Handwerksviertel.  
-**Sozialer Gegensatz:** Bundesverwaltung und politische Institutionen gegenüber einer großen bürgerlichen Dienstleistungs- und Handwerkerschicht.
-
-### 7. Vael – **Vaalen**
-
-Vaalen ist eine industrielle Megastadt. Fabriken, Energieanlagen, Bahnlinien und Wohnsiedlungen bilden einen zusammenhängenden urbanen Raum.
-
-Die größten Unternehmen besitzen eigene Forschungszentren, Kliniken und Ausbildungsstätten. Manche Stadtviertel wurden ursprünglich von einzelnen Industrieunternehmen errichtet.
-
-Die Stadt ist stolz auf ihre technische Leistungsfähigkeit. Fabriken sind keine versteckten Randanlagen, sondern prägen das Stadtbild.
-
-**Stadtbild:** Hochöfen, Produktionshallen, Kraftwerke, Bahntrassen, Arbeitersiedlungen und Konzernzentren.  
-**Wichtige Viertel:** Industriegürtel, Konzernstadt, alte Arbeitersiedlungen, Forschungsbezirk, Zentralbahnhof.  
-**Sozialer Gegensatz:** Konzernleitungen und technische Elite gegenüber Industriearbeitern und prekären Beschäftigten.
-
-### 8. Vesper – **Velis**
-
-Velis ist eine schwer durchschaubare Hauptstadt. Offizielle Regierungsgebäude bilden nur einen Teil des eigentlichen Machtzentrums.
-
-Die Stadt besitzt große öffentliche Plätze und moderne Verwaltungsbauten, aber auch zahlreiche abgeschirmte Anlagen, deren Funktion der Bevölkerung unbekannt ist.
-
-Menschen achten darauf, was sie in der Öffentlichkeit sagen. Manche Gebäude besitzen mehrere Eingänge und unterschiedliche Sicherheitsbereiche.
-
-Velis ist deshalb weniger durch offene Monumentalität als durch kontrollierte Zugänglichkeit geprägt.
-
-**Stadtbild:** dunkle Verwaltungsbauten, breite Plätze, Sicherheitsanlagen, Wohnblöcke und abgeschirmte Innenhöfe.  
-**Wichtige Viertel:** Regierungsbezirk, Informationszentrum, Altstadt, Sicherheitssektor, Arbeiterbezirke.  
-**Sozialer Gegensatz:** staatliche Funktionsträger gegenüber Bürgern, die bewusst außerhalb staatlicher Institutionen bleiben.
-
-### 9. Eldran – **Aurelien**
-
-Aurelien ist eine historische Hauptstadt mit königlichem Palast, Parlament und alten Adelshäusern.
-
-Die Monarchie ist politisch begrenzt, aber ihre Präsenz ist im Stadtbild weiterhin deutlich. Zeremonielle Gebäude stehen neben modernen Ministerien und Universitäten.
-
-Ein Teil der Bevölkerung empfindet die historische Architektur als gemeinsames kulturelles Erbe, ein anderer als Erinnerung an gesellschaftliche Privilegien.
-
-**Stadtbild:** Palastanlagen, alte Bürgerhäuser, moderne Ministerien, Parks und repräsentative Plätze.  
-**Wichtige Viertel:** Königlicher Bezirk, Parlament, Altstadt, Universitätsviertel, moderne Neustadt.  
-**Sozialer Gegensatz:** alte Eliten und Hofkultur gegenüber modernen urbanen Mittelschichten.
-
-### 10. Namar – **Maris**
-
-Maris liegt an einer geschützten Küste und ist zugleich Hauptstadt, Hafen und Verkehrsknoten.
-
-Die Stadt ist stark vom Meer abhängig. Fähren, Werften, Fischmärkte und Küstenwachen gehören zum alltäglichen Bild.
-
-Die föderale Struktur Namars zeigt sich darin, dass fast jede Region eigene Verwaltungs- und Kulturhäuser besitzt.
-
-**Stadtbild:** Hafen, Werften, Küstenstraßen, Fähren, Markthallen und moderne Wohnviertel.  
-**Wichtige Viertel:** Zentralhafen, Werftstadt, Föderationsviertel, Fischmarkt, Neustadt.  
-**Sozialer Gegensatz:** maritime Arbeiter und traditionelle Familien gegenüber modernen Handels- und Verwaltungsschichten.
-
-### 11. Orthea – **Asteron**
-
-Asteron ist eine wissenschaftlich geprägte Hauptstadt. Universitäten, Forschungseinrichtungen, Kliniken und technische Institute bestimmen große Teile der Stadt.
-
-Viele öffentliche Gebäude sind gleichzeitig Forschungs- und Bildungszentren. Wissenschaftliche Einrichtungen besitzen einen ähnlichen gesellschaftlichen Stellenwert wie Regierungsgebäude.
-
-Die Stadt ist hochgebildet, aber nicht ausschließlich von Akademikern bewohnt. Eine große Zahl von Dienstleistungs-, Handwerks- und Verwaltungsberufen hält die wissenschaftliche Infrastruktur am Laufen.
-
-**Stadtbild:** Forschungszentren, Universitäten, Kliniken, Bibliotheken, moderne Wohnquartiere.  
-**Wichtige Viertel:** Universitätsstadt, Forschungsring, Klinikbezirk, Bürgerstadt, Industriepark.  
-**Sozialer Gegensatz:** wissenschaftliche Elite gegenüber Menschen, die vom akademischen System wenig profitieren.
-
-### 12. Dargan – **Dargesh**
-
-Dargesh ist eine vergleichsweise kleine Hauptstadt und wirkt eher wie eine große Grenzstadt als wie eine imperiale Metropole.
-
-Die Stadt ist Verkehrsknoten, Verwaltungszentrum und Reparaturstandort für weite Teile des Landes.
-
-Gebäude sind robust und leicht instandsetzbar. Öffentliche Werkstätten und Lagerflächen sind auffällig wichtig.
-
-**Stadtbild:** niedrige Gebäude, Werkstätten, robuste Wohnhäuser, Straßenknoten und befestigte Verwaltungsanlagen.  
-**Wichtige Viertel:** Zentralmarkt, Werkstattbezirk, Grenzverwaltung, Kasernenviertel, Wohnsiedlungen.  
-**Sozialer Gegensatz:** regionale Verwaltung gegenüber selbstständigen Handwerkern, Händlern und Grenzgemeinden.
-
-### 13. Lyr – **Valen**
-
-Valen ist die politische Hauptstadt des Bundes, aber nicht dessen unangefochtenes Zentrum.
-
-Die Stadt liegt in einem großen Gebirgstal und beherbergt den Bundeskongress sowie gemeinsame Gerichte und Verteidigungsinstitutionen.
-
-Jede der großen Teilrepubliken besitzt eigene Häuser und Vertretungen. Politische Entscheidungen sind deshalb ständig von regionalen Interessen geprägt.
-
-**Stadtbild:** Berghänge, Steinbauten, Brücken, Tunnel, Terrassen und regionale Verwaltungsgebäude.  
-**Wichtige Viertel:** Bundeskongress, Talstadt, Handwerksviertel, Tunnelbezirk, regionale Häuser.  
-**Sozialer Gegensatz:** Bundeseinrichtungen gegenüber lokalen Gemeinschaften, die ihre Eigenständigkeit bewahren wollen.
-
-### 14. Caldris – **Seren**
-
-Seren ist eine planmäßig entwickelte Hauptstadt, in der staatliche Versorgungseinrichtungen Teil des normalen Stadtbildes sind.
-
-Wohnkomplexe, Schulen, Kliniken, Kindertagesstätten und Arbeitsvermittlungen liegen in unmittelbarer Nähe zueinander.
-
-Die Stadt ist sauber, funktional und materiell gut versorgt. Gleichzeitig ist die staatliche Präsenz nahezu überall sichtbar.
-
-Biometrische Zugangssysteme, öffentliche Kameras und digitale Bürgerdienste gehören zum Alltag.
-
-**Stadtbild:** gepflegte Wohnkomplexe, breite Wege, Kliniken, Schulen, Verwaltungszentren und überwachte öffentliche Räume.  
-**Wichtige Viertel:** Regierungszentrum, Wohnsektoren, Gesundheitsbezirk, Bildungsbezirk, Produktionsstadt.  
-**Sozialer Gegensatz:** weniger räumlich als institutionell – Unterschiede zeigen sich vor allem in Zugang, Status und staatlicher Bewertung.
-
-### 15. Merovan – **Merovia**
-
-Merovia ist eine alte Hafenmetropole, die während der imperialen Epoche zum Zentrum eines weltweiten Handelsnetzes wurde.
-
-Die Stadt ist von unterschiedlichen historischen Schichten geprägt: alte Verwaltungsgebäude, ehemalige koloniale Handelshäuser, moderne Banken und riesige Hafenanlagen.
-
-Menschen mit sehr unterschiedlichen Familiengeschichten leben dicht nebeneinander. Manche Familien stammen aus dem alten Kernland, andere aus Regionen, die einst unter merovanischer Herrschaft standen.
-
-**Stadtbild:** große Hafenanlagen, alte Handelshäuser, Banken, Bahnhöfe, moderne Hochhäuser und dicht bewohnte Migrantenviertel.  
-**Wichtige Viertel:** Alter Hafen, Handelsviertel, Regierungsstadt, ehemalige Kolonialhäuser, neue Wohnbezirke.  
-**Sozialer Gegensatz:** alte Vermögen und internationale Wirtschaftseliten gegenüber Arbeiter- und Migrantenvierteln.
-
-### 16. Theryn – **Novagrad**
-
-Novagrad entstand aus dem revolutionären Umbau einer alten Industriestadt.
-
-Zentrale Plätze sind nach revolutionären Ereignissen benannt. Öffentliche Gebäude gehören häufig staatlichen Betrieben, Genossenschaften oder Massenorganisationen.
-
-Die Stadt besitzt große Arbeitersiedlungen, Fabriken und Versammlungsgebäude. Gleichzeitig existieren private Wohnungen und informelle Nachbarschaftsnetzwerke, die dem offiziellen Bild der Gesellschaft nicht vollständig entsprechen.
-
-**Stadtbild:** große öffentliche Plätze, Fabriken, Arbeiterwohnviertel, Genossenschaftshäuser und politische Wandbilder.  
-**Wichtige Viertel:** Revolutionsplatz, Zentralrat, Fabrikstadt, Genossenschaftsviertel, alte Arbeiterstadt.  
-**Sozialer Gegensatz:** alte revolutionäre Funktionäre gegenüber jungen Reformern, Arbeitern und unpolitischen Familien.
-
-## Vergleich der Hauptstädte
-
-Die sechzehn Hauptstädte sollen bewusst unterschiedliche Antworten auf dieselbe Frage darstellen:
-
-**Wie sieht Macht aus, wenn sie Teil des täglichen Lebens ist?**
-
-- **Averon:** Macht soll offen und zugänglich wirken.
-- **Karsk:** Macht soll effizient und allgegenwärtig sein.
-- **Ossaria:** Macht steht neben Erinnerung und Geschichte.
-- **Rothain:** Macht lebt mit dem Erbe vergangener Macht.
-- **Sahr:** Macht ist zwischen Handel und Städten verteilt.
-- **Steinmark:** Macht erscheint als Institution und Verwaltung.
-- **Vael:** Macht zeigt sich in Industrie und Produktionskapazität.
-- **Vesper:** Macht bleibt teilweise unsichtbar.
-- **Eldran:** Macht wird durch Tradition legitimiert und begrenzt.
-- **Namar:** Macht wird zwischen Regionen und Meer verteilt.
-- **Orthea:** Macht besitzt die Form von Wissen und Expertise.
-- **Dargan:** Macht muss sich durch praktische Hilfe legitimieren.
-- **Lyr:** Macht wird zwischen lokalen Gemeinschaften ausgehandelt.
-- **Caldris:** Macht erscheint als Versorgung und Kontrolle zugleich.
-- **Merovan:** Macht ist eng mit Handel, Geschichte und globalen Beziehungen verbunden.
-- **Theryn:** Macht beruft sich auf die Revolution, muss aber mit ihrer eigenen Institutionalisierung leben.
-
-Die Namen und Details dieses Abschnitts gelten als **Arbeitsstand der Lore**. Sie können bei späteren historischen, sprachlichen oder kartographischen Ausarbeitungen präzisiert werden.
-
-
-# Konkrete Ausarbeitung – Punkt 2: Regionen und regionale Unterschiede
-
-Die Hauptstadt beschreibt das politische Zentrum. Die Regionen zeigen, wie unterschiedlich eine Nation innerhalb ihrer eigenen Grenzen sein kann. Keine der sechzehn Nationen besteht aus einer einheitlichen Bevölkerung. Landschaft, Wirtschaft, Geschichte und Entfernung zur Hauptstadt erzeugen eigene regionale Identitäten.
-
-Für jede Nation werden zunächst vier charakteristische Großregionen festgelegt. Diese Regionen sind der verbindliche Arbeitsstand für die weitere Lore und können später in kleinere Provinzen, Bundesländer, Täler oder Verwaltungsbezirke aufgeteilt werden.
-
-## 1. Averon
-
-### Nordmark
-Kühlere, dünn besiedelte Region mit kleineren Städten, Forstwirtschaft und modernen Energieanlagen. Die Menschen gelten als weniger hektisch als die Bevölkerung der Hauptstadt.
-
-**Konflikt:** Die Bewohner empfinden die politische Aufmerksamkeit für die Großstädte als übermäßig.
-
-### Zentralkorridor
-Dicht besiedelte urbane Achse zwischen den wichtigsten Wirtschafts- und Verwaltungszentren. Hier befinden sich Technologieunternehmen, Universitäten und die größte Zahl hochqualifizierter Arbeitsplätze.
-
-**Lebensgefühl:** schnell, teuer, leistungsorientiert.
-
-### Westküste
-Große Hafenstädte, internationale Unternehmen und eine vielfältige Bevölkerung. Der Kontakt mit anderen Nationen ist alltäglich.
-
-**Konflikt:** Alte Hafenviertel und neue Technologiebezirke entwickeln sich sehr unterschiedlich.
-
-### Südland
-Landwirtschaftlich geprägte Region mit kleineren Städten und Gemeinden. Digitale Infrastruktur ist vorhanden, aber traditionelle Vereine und lokale Bindungen sind stärker.
-
-**Konflikt:** Viele Bewohner fühlen sich von der urbanen Kultur Averons nicht vollständig repräsentiert.
-
-## 2. Karsk
-
-### Zentralbezirk
-Dicht kontrollierte Kernregion mit Regierungs-, Medizin- und Forschungseinrichtungen. Hier leben viele privilegierte Staats- und Technologiefunktionäre.
-
-### Produktionsgürtel
-Schwer industrialisierte Region mit großen Fabriken und technischen Ausbildungszentren. Arbeiter erhalten Versorgung und Status vor allem über ihre berufliche Leistungsfähigkeit.
-
-### Grenzsektoren
-Militärisch geprägte Randgebiete mit hoher Sicherheitspräsenz. Die Bevölkerung ist an Kontrollen und Mobilisierung gewöhnt.
-
-### Versorgungsprovinzen
-Landwirtschaftliche und ressourcenreiche Regionen, deren Produktion zentral verwaltet wird. Der Staat ist besonders tief in den Alltag eingebunden.
-
-**Regionaler Grundkonflikt:** Je weiter man vom Zentrum entfernt lebt, desto stärker wird die Frage, ob der Staat tatsächlich schützt oder nur kontrolliert.
-
-## 3. Ossaria
-
-### Alte Kernstädte
-Historische Städte mit jahrhundertealten Bauwerken, Universitäten und Gedenkstätten. Familiengeschichte besitzt hier besonderes Gewicht.
-
-### Technologiebogen
-Moderne Forschungs- und Produktionsregion mit hochentwickelter Schutz- und Sensortechnik.
-
-### Westliche Ebenen
-Fruchtbare Agrarregion mit kleineren Städten und Dörfern. Traditionelle Lebensformen sind stärker ausgeprägt.
-
-### Grenzland
-Militärisch wichtige Region mit Festungen, Ausbildungsplätzen und zahlreichen Erinnerungsorten an frühere Kriege.
-
-**Regionaler Grundkonflikt:** Wie viel moderne Veränderung darf eine Gesellschaft zulassen, ohne ihre historische Identität zu verlieren?
-
-## 4. Rothain
-
-### Alte Krondistrikte
-Regionen, in denen ehemalige Adelshäuser, historische Güter und Veteranentraditionen besonders präsent sind.
-
-### Industrieller Osten
-Dicht besiedelte Städte mit Fabriken und einer starken Arbeiterschaft. Hier ist die alte imperiale Ordnung deutlich weniger beliebt.
-
-### Republikanischer Westen
-Region moderner Verwaltung, Universitäten und neuer Unternehmen. Die Bevölkerung identifiziert sich stärker mit der heutigen Republik.
-
-### Grenzprovinzen
-Gebiete, die während des ehemaligen Reiches mehrfach umkämpft wurden. Dort ist die Erinnerung an Krieg weniger abstrakt.
-
-**Regionaler Grundkonflikt:** Für einen Menschen im alten Kernland kann das Reich ein Familienerbe sein; für einen Menschen aus einer ehemaligen Randprovinz kann es vor allem eine Erinnerung an Fremdherrschaft sein.
-
-## 5. Sahr
-
-### Saruner Becken
-Dicht besiedeltes Handelszentrum rund um die Hauptstadt. Banken, Märkte und politische Institutionen konzentrieren sich hier.
-
-### Flussländer
-Fruchtbare Regionen mit Landwirtschaft, Flusshäfen und kleineren Handelsstädten.
-
-### Küstenbund
-Mehrere konkurrierende Hafenstädte. Jede besitzt eigene Traditionen und mächtige Handelsfamilien.
-
-### Hinterland
-Weniger wohlhabende Region mit Rohstoffen, Landwirtschaft und Transportkorridoren. Viele Menschen arbeiten für Unternehmen aus den großen Städten.
-
-**Regionaler Grundkonflikt:** Die Handelsstädte profitieren vom offenen System, während das Hinterland häufig stärker von Preis- und Nachfrageänderungen abhängig ist.
-
-## 6. Steinmark
-
-### Bundeszentrum
-Verwaltungs- und Bildungsregion rund um die Hauptstadt. Bundesbehörden, Gerichte und große Archive prägen das Leben.
-
-### Nordbund
-Industriell und wirtschaftlich starke Bundesländer mit großer Bedeutung für Maschinenbau und Logistik.
-
-### Südmark
-Mittelgebirgs- und Agrarregion mit kleineren Städten und ausgeprägter Vereinskultur.
-
-### Ostprovinzen
-Historisch stärker militarisierte Regionen an alten Konfliktgrenzen. Öffentliche Erinnerung an vergangene Kriege ist hier besonders präsent.
-
-**Regionaler Grundkonflikt:** Die Bundesländer akzeptieren den gemeinsamen Staat, wollen aber ihre eigenen Verwaltungs- und Kulturtraditionen behalten.
-
-## 7. Vael
-
-### Eisenland
-Dicht besiedelte Industrieregion mit Bergwerken, Stahlwerken und Maschinenbau.
-
-### Energiegürtel
-Region großer Kraftwerke, Energieanlagen und technischer Infrastruktur. Viele Gemeinden hängen wirtschaftlich von wenigen Unternehmen ab.
-
-### Konzernstädte
-Planmäßig entwickelte Städte, die historisch um einzelne Industrieunternehmen entstanden. Unternehmen prägen dort Schulen, Kliniken und Wohnraum.
-
-### Grünes Vael
-Weniger industrialisierte Region mit Landwirtschaft, Wäldern und kleineren Städten. Hier ist die Kritik an der industriellen Dominanz stärker.
-
-**Regionaler Grundkonflikt:** Für die einen bedeutet Industrie Wohlstand und Stolz; für andere bedeutet sie Abhängigkeit, Umweltbelastung und Verlust lokaler Selbstbestimmung.
-
-## 8. Vesper
-
-### Hauptstadtbezirk
-Dicht kontrollierte Region mit Ministerien, Sicherheitsorganen und staatlichen Medien.
-
-### Nebelprovinzen
-Ländliche Gebiete, in denen Informationen über die tatsächlichen Aktivitäten des Staates besonders schwer zu überprüfen sind.
-
-### Grenzkorridor
-Militärisch und geheimdienstlich bedeutende Region. Die Bevölkerung lebt mit häufigen Kontrollen und wechselnden Sicherheitsmaßnahmen.
-
-### Freie Städte
-Wirtschaftlich wichtige Städte mit etwas größerem privaten Handlungsspielraum. Auch hier bleibt die staatliche Beobachtung spürbar.
-
-**Regionaler Grundkonflikt:** Je nach Region unterscheiden sich die Menschen darin, ob sie die staatliche Geheimhaltung als Schutz oder als Bedrohung verstehen.
-
-## 9. Eldran
-
-### Kronland
-Historisches Kerngebiet rund um die Hauptstadt. Königliche Institutionen und alte Familien sind kulturell besonders präsent.
-
-### Nordprovinzen
-Industriell und wirtschaftlich moderne Regionen mit einer stärkeren republikanischen und säkularen Bevölkerung.
-
-### Südmark
-Landwirtschaftlich geprägte Regionen mit traditionellen Festen und starker lokaler Identität.
-
-### Freie Randgebiete
-Regionen mit weitreichenden historischen Selbstverwaltungsrechten.
-
-**Regionaler Grundkonflikt:** Die Frage nach der Rolle der Krone wird je nach Region sehr unterschiedlich beantwortet.
-
-## 10. Namar
-
-### Zentralküste
-Dicht besiedelte Küstenregion mit den größten Häfen und Werften.
-
-### Inselbund
-Mehrere Inselgruppen mit eigenen Dialekten, Bräuchen und lokalen Verwaltungen. Die Bewohner fühlen sich häufig zuerst ihrer Insel verbunden.
-
-### Westküste
-Fischerei, kleinere Häfen und traditionelle maritime Gemeinden.
-
-### Südliche Handelsküste
-Moderne Hafenstädte, internationale Unternehmen und starke Migration.
-
-**Regionaler Grundkonflikt:** Inseln und Randregionen fürchten, dass die Hauptstadt ihre Interessen zugunsten der großen Häfen vernachlässigt.
-
-## 11. Orthea
-
-### Wissenschaftsgürtel
-Universitäten, Forschungseinrichtungen und Kliniken bilden ein zusammenhängendes Netzwerk.
-
-### Industrielle Ebene
-Produktionsregion mit hochautomatisierten Fabriken und technischen Fachkräften.
-
-### Alte Provinzen
-Kleinere Städte und Dörfer mit weniger direktem Kontakt zur wissenschaftlichen Elite.
-
-### Südliche Agrarregion
-Landwirtschaftlich geprägtes Gebiet, in dem traditionelle Berufe und lokale Gemeinschaften stärker sind.
-
-**Regionaler Grundkonflikt:** Die wissenschaftlich geprägten Zentren sehen Daten und Expertise als Grundlage des Fortschritts; periphere Regionen wollen, dass ihre Erfahrung nicht als unwissenschaftlich abgetan wird.
-
-## 12. Dargan
-
-### Hochland
-Gebirgige Region mit kleinen Siedlungen, Bergbau und schwierigen Verkehrswegen.
-
-### Grenzebene
-Weite, dünn besiedelte Landschaft mit Landwirtschaft und militärischen Außenposten.
-
-### Flusskorridor
-Wichtigste Verkehrs- und Handelsachse Dargans. Hier konzentrieren sich größere Städte.
-
-### Randmarken
-Sehr abgelegene Gemeinschaften mit hoher Selbstversorgung und starkem Misstrauen gegenüber zentralen Behörden.
-
-**Regionaler Grundkonflikt:** Die Menschen wollen staatliche Infrastruktur, aber nicht die Abhängigkeit von einer Verwaltung, die hunderte Kilometer entfernt sitzt.
-
-## 13. Lyr
-
-### Nordtal
-Dicht besiedeltes Tal mit Handel, Handwerk und politischen Institutionen.
-
-### Hochrepubliken
-Höher gelegene Regionen mit Bergbau, Weidewirtschaft und starker lokaler Selbstverwaltung.
-
-### Westpässe
-Strategisch wichtige Gebirgspässe mit Festungen, Tunnelanlagen und Militärstraßen.
-
-### Südliche Täler
-Fruchtbarere Regionen mit Landwirtschaft und alten religiösen Traditionen.
-
-**Regionaler Grundkonflikt:** Jede Region hält ihre eigene politische Ordnung für sinnvoller als eine vollständig zentralisierte Bundesstruktur.
-
-## 14. Caldris
-
-### Versorgungsgürtel
-Dicht besiedelte Regionen mit modernen Wohnkomplexen, Kliniken und Bildungseinrichtungen.
-
-### Industriestädte
-Große Produktionszentren, in denen der Staat Arbeitsplätze, Wohnen und soziale Versorgung eng miteinander verbindet.
-
-### Agrarprovinzen
-Ländliche Regionen mit staatlich organisierten Landwirtschaftsbetrieben und stabilen Versorgungsstrukturen.
-
-### Sicherheitsbezirk
-Strategisch wichtige Region mit besonders hoher Dichte an Sicherheits- und Überwachungseinrichtungen.
-
-**Regionaler Grundkonflikt:** In wohlversorgten Regionen wird das System eher als Schutz erlebt; in stark überwachten Gebieten stärker als Eingriff in das Privatleben.
-
-## 15. Merovan
-
-### Alte Kernprovinzen
-Historisches Zentrum der heutigen Republik mit alten Familien, Universitäten und staatlichen Institutionen.
-
-### Hafenregionen
-Internationale Handelszentren mit hoher Migration und starkem wirtschaftlichem Einfluss.
-
-### Ehemalige Überseeprovinzen
-Regionen, deren Bevölkerung besonders unterschiedliche Erinnerungen an das frühere Imperium besitzt.
-
-### Binnenland
-Weniger international geprägte Regionen mit Landwirtschaft und traditionelleren Lebensweisen.
-
-**Regionaler Grundkonflikt:** Die Hafenregionen betrachten internationale Verflechtung als Normalität; Teile des Binnenlandes sehen darin die Fortsetzung alter Abhängigkeiten.
-
-## 16. Theryn
-
-### Revolutionskern
-Regionen, in denen die revolutionäre Bewegung ihren Ursprung hatte. Denkmäler, Veteranenorganisationen und politische Traditionen sind besonders stark.
-
-### Industrieprovinzen
-Große staatliche Betriebe und Genossenschaften bestimmen Wirtschaft und Alltag.
-
-### Agrarbund
-Ländliche Regionen mit Genossenschaften und starken lokalen Gemeinschaften.
-
-### Reformgürtel
-Jüngere Städte mit Hochschulen und einer Generation, die die Revolution weniger als Ereignis und mehr als historische Grundlage betrachtet.
-
-**Regionaler Grundkonflikt:** Ältere Regionen verteidigen häufig die ursprünglichen revolutionären Institutionen, während jüngere Regionen stärker über Reformen und persönliche Freiheit diskutieren.
-
-# Gemeinsamer Grundsatz der regionalen Weltgestaltung
-
-Regionale Unterschiede sollen nicht lediglich unterschiedliche Landschaften liefern. Sie erzeugen unterschiedliche Menschen innerhalb derselben Nation.
-
-Ein Bürger aus einer Hauptstadt kann seine Nation anders erleben als ein Bauer aus dem Hinterland. Ein Hafenarbeiter hat andere Interessen als eine Familie in einem Gebirgstal. Ein Industriestädter erlebt den Staat anders als ein Bewohner einer abgelegenen Grenzregion.
-
-Deshalb gilt für die weitere Lore:
-
-> **Eine Nation ist kein Ort. Eine Nation ist ein Netz aus Orten, Erinnerungen und Lebensweisen.**
-
-Die Regionen bilden außerdem einen wichtigen Übergang zur nächsten Ausarbeitungsstufe. Aus ihnen können später konkrete Städte, Dörfer, Dialekte, Berufe, Handelswege, Einheiten, Veteranenkulturen und Familiengeschichten entstehen.
-
-
-# Konkrete Ausarbeitung – Punkt 3: Städte
-
-Die Städte werden nicht nur als Ortsnamen geführt. Jede wichtige Stadt besitzt eine gesellschaftliche Funktion, eine eigene Bevölkerungsstruktur und einen charakteristischen Alltag. Die folgenden Städte sind der erste verbindliche Arbeitsstand; kleinere Orte können später aus diesen urbanen Zentren und den Regionen entwickelt werden.
-
-## 1. Averon
-
-### Novaris – Hauptstadt
-Politisches und digitales Zentrum. Großstadt mit Ministerien, Universitäten, Technologieunternehmen und dichtem Wohnraum.
-
-### Lydon
-Technologiestadt mit großen Entwicklungszentren, Start-ups und einer jungen Bevölkerung. Hohe Mieten und starke Konkurrenz um qualifizierte Arbeitsplätze prägen den Alltag.
-
-### Westhaven
-Internationale Hafenstadt. Handel, Migration und Logistik bestimmen das Stadtbild. Alte Hafenviertel stehen modernen Büro- und Wohnkomplexen gegenüber.
-
-### Arven
-Mittelgroße Stadt im Übergang zwischen urbanem Zentrum und ländlichem Süden. Viele Familien leben hier bewusster lokal, während junge Menschen häufig nach Novaris oder Lydon ziehen.
-
-### Nordfall
-Kühlere Industriestadt mit Energieanlagen und technischen Betrieben. Weniger glamourös als die Hauptstadt, aber für die nationale Infrastruktur unverzichtbar.
-
-## 2. Karsk
-
-### Varkesh – Hauptstadt
-Zentrum von Staat, Medizin und technischer Kontrolle. Große Funktionssektoren bestimmen das Stadtleben.
-
-### Karsin
-Medizin- und Implantationszentrum. Ärzte, Techniker und staatliche Bewertungsstellen besitzen außergewöhnlichen Einfluss.
-
-### Dravik
-Schwere Industriestadt im Produktionsgürtel. Arbeiterstatus und technische Qualifikation bestimmen den gesellschaftlichen Rang stark.
-
-### Sektorstadt 7
-Eine vollständig geplante Stadt, deren Alltag nach Arbeits-, Wohn- und Versorgungszyklen organisiert ist. Individualität ist weniger sichtbar als Funktion.
-
-### Grenzwerk
-Militärisch geprägte Stadt nahe der Außengrenze. Kasernen, Werkstätten und Sicherheitsanlagen dominieren.
-
-## 3. Ossaria
-
-### Ossar – Hauptstadt
-Historische Metropole und technologisches Zentrum. Alte Stadtmauern, Forschungszentren und Gedenkstätten liegen unmittelbar nebeneinander.
-
-### Valeris
-Universitäts- und Kulturstadt mit zahlreichen Archiven und Museen. Hier wird besonders intensiv über die Geschichte vergangener Kriege diskutiert.
-
-### Eron
-Hochtechnologischer Produktionsstandort. Schutzsysteme, Sensorik und militärische Elektronik werden entwickelt und gefertigt.
-
-### Marenfeld
-Agrarisch geprägte Mittelstadt. Familienbetriebe, Handwerk und regionale Traditionen besitzen größere Bedeutung als in Ossar.
-
-### Kareth
-Grenzstadt mit großer Militärpräsenz. Viele Familien haben direkte Erfahrungen mit früheren Kriegen.
-
-## 4. Rothain
-
-### Rothenburg – Hauptstadt
-Politisches Zentrum der Republik und ehemaliger Sitz der imperialen Macht. Paläste, Kasernen und republikanische Institutionen prägen die Stadt.
-
-### Eisenfurt
-Industriestadt mit großer Arbeiterschaft. Politisch stark republikanisch und sozial geprägt.
-
-### Kronfeld
-Stadt alter Familien, Veteranenverbände und historischer Regimenter. Tradition ist Teil des täglichen Lebens.
-
-### Westheim
-Moderne Universitäts- und Verwaltungsstadt. Besonders viele junge Menschen identifizieren sich mit der Republik statt mit dem ehemaligen Reich.
-
-### Grenzwacht
-Ehemalige Festungsstadt. Die Bevölkerung besitzt eine starke lokale Militärkultur, aber auch ein ausgeprägtes Bewusstsein für die Kosten vergangener Kriege.
-
-## 5. Sahr
-
-### Sarun – Hauptstadt
-Größtes Handelszentrum des Bundes. Hafen, Banken, Märkte und politische Institutionen liegen dicht beieinander.
-
-### Taris
-Reiche Handelsstadt mit alten Kaufmannsfamilien. Prestige und wirtschaftlicher Einfluss gehen eng miteinander einher.
-
-### Velisport
-Großer Arbeitshafen mit Werften und Lagerhäusern. Die Arbeiterbewegung besitzt hier erheblichen Einfluss.
-
-### Ravan
-Flussstadt im landwirtschaftlich geprägten Hinterland. Bedeutendes Zentrum für Getreide, Vieh und Binnenhandel.
-
-### Südtor
-Schnell wachsende Grenz- und Handelsstadt. Viele Migranten und kleinere Händler leben hier.
-
-## 6. Steinmark
-
-### Steinburg – Hauptstadt
-Bundes-, Gerichts- und Verwaltungszentrum. Die Stadt ist weniger von einer einzelnen Industrie als von Institutionen geprägt.
-
-### Falkenheim
-Industrielle Stadt mit starkem Maschinenbau und ausgeprägter Berufsausbildung.
-
-### Talheim
-Mittelstadt im Süden mit Vereinen, Handwerksbetrieben und regionaler Verwaltung.
-
-### Eisenau
-Historische Militär- und Festungsstadt. Veteranenvereine und Bundeswehrtraditionen sind gesellschaftlich sichtbar, ohne die Politik vollständig zu bestimmen.
-
-### Linden
-Universitätsstadt mit wachsender junger Bevölkerung. Hier wird besonders intensiv über Reform der Verwaltung diskutiert.
-
-## 7. Vael
-
-### Vaalen – Hauptstadt
-Industrielles Machtzentrum mit Konzernzentralen, Forschung und gewaltigen Produktionsanlagen.
-
-### Stahlbruck
-Arbeiterstadt im Eisenland. Schichtarbeit, Gewerkschaften und Familien mit mehreren Generationen Industrieerfahrung prägen den Alltag.
-
-### Energa
-Stadt des Energiegürtels. Kraftwerke, Leitungsnetze und technische Ausbildungszentren dominieren die Umgebung.
-
-### Kronwerk
-Konzernstadt, die weitgehend um ein einzelnes Industriekonglomerat entstand. Das Unternehmen besitzt Wohnraum, Kliniken und Ausbildungsstätten.
-
-### Grünau
-Weniger industrialisierte Stadt im Grünen Vael. Hier ist die Kritik an der Macht der Industrie besonders deutlich.
-
-## 8. Vesper
-
-### Velis – Hauptstadt
-Politisches und geheimdienstliches Zentrum. Viele Bereiche der Stadt sind für normale Bürger nur eingeschränkt zugänglich.
-
-### Darsin
-Handelsstadt mit vergleichsweise großer privater Wirtschaft. Wohlhabender als viele andere Städte, aber stark überwacht.
-
-### Nebelstadt
-Kleinere Stadt in einer abgelegenen Region. Gerüchte über geheime Anlagen gehören zum lokalen Alltag.
-
-### Kovar
-Grenzstadt mit hoher Militärpräsenz. Die Bevölkerung ist an Kontrollen und kurzfristige Sicherheitsmaßnahmen gewöhnt.
-
-### Selin
-Alte Kulturstadt mit Universitäten, Theatern und privaten Netzwerken. Politische Gespräche finden häufig in kleinen, vertrauten Kreisen statt.
-
-## 9. Eldran
-
-### Aurelien – Hauptstadt
-Königliche und parlamentarische Hauptstadt. Palast, Parlament und alte Bürgerstadt liegen eng beieinander.
-
-### Norwick
-Moderne Industriestadt mit starker republikanischer Kultur und wenig höfischer Tradition.
-
-### Rosenfeld
-Agrarische Stadt im Süden mit traditionellen Festen und regionalen Familienverbänden.
-
-### Hohenmark
-Historische Adels- und Universitätsstadt. Alte Familien besitzen kulturellen Einfluss, aber keine automatische politische Macht.
-
-### Freistadt
-Stadt mit historisch weitreichenden Selbstverwaltungsrechten. Die Einwohner reagieren empfindlich auf Eingriffe der Zentralregierung.
-
-## 10. Namar
-
-### Maris – Hauptstadt
-Großer Hafen- und Verwaltungsstandort. Fähren, Werften und maritime Behörden bestimmen den Alltag.
-
-### Inselstadt
-Zentrum eines bedeutenden Inselbundes. Lokale Identität ist stärker als das nationale Zugehörigkeitsgefühl.
-
-### Westhaven
-Traditionelle Fischereistadt mit kleinen Werften und eng verbundenen Familien.
-
-### Port Sol
-Moderne internationale Handelsstadt mit starker Migration und großen Logistikunternehmen.
-
-### Teral
-Küstenstadt mit bedeutender Marine- und Küstenverteidigungsinfrastruktur.
-
-## 11. Orthea
-
-### Asteron – Hauptstadt
-Zentrum von Regierung, Universitäten und Forschung. Wissenschaft prägt die Stadtarchitektur ebenso wie das Berufsleben.
-
-### Helion
-Großes medizinisches Zentrum mit Kliniken, Biotechnologie und Ausbildungsstätten.
-
-### Quantis
-Technologiestadt mit Forschung an autonomen Systemen, Sensorik und Analyseverfahren.
-
-### Feldmark
-Mittelstadt außerhalb des Wissenschaftsgürtels. Landwirtschaft, Handwerk und normale Dienstleistungen prägen den Alltag.
-
-### Noris
-Industriestadt, die hochautomatisierte Produktion mit einer großen Schicht technischer Facharbeiter verbindet.
-
-## 12. Dargan
-
-### Dargesh – Hauptstadt
-Kleine, robuste Verwaltungs- und Handelsstadt. Sie wirkt eher wie ein regionales Zentrum als wie eine klassische Hauptstadt.
-
-### Hochwacht
-Gebirgsstadt mit Bergbau, Werkstätten und militärischer Infrastruktur.
-
-### Flussheim
-Wichtigster Handelsplatz am Flusskorridor. Lagerhäuser und Reparaturbetriebe bestimmen die Wirtschaft.
-
-### Grenzruh
-Weitläufige Grenzstadt mit militärischem Außenposten und großer Landwirtschaftsfläche.
-
-### Freimark
-Abgelegene Stadt mit starkem Selbstverwaltungsbewusstsein. Behörden besitzen weniger Einfluss als lokale Familien, Werkstätten und Handelsgemeinschaften.
-
-## 13. Lyr
-
-### Valen – Hauptstadt
-Sitz des Bundeskongresses. Die Stadt ist politisch bedeutend, aber bewusst nicht dominant.
-
-### Nordtal
-Handels- und Handwerkszentrum eines dicht besiedelten Tales.
-
-### Hochgrat
-Gebirgsstadt mit Bergbau, Weidewirtschaft und starkem lokalem Selbstbewusstsein.
-
-### Passwacht
-Festungs- und Verkehrsstadt an einem strategischen Gebirgspass.
-
-### Sonnental
-Fruchtbare Stadtregion mit Landwirtschaft und alten religiösen Traditionen.
-
-## 14. Caldris
-
-### Seren – Hauptstadt
-Planmäßig entwickelte Verwaltungs- und Versorgungsmetropole. Bürger erleben den Staat hier nahezu überall.
-
-### Gesundheim
-Medizinzentrum mit großen Kliniken und staatlichen Forschungsprogrammen.
-
-### Werksstadt
-Industriestadt, in der Arbeitsplätze, Wohnraum und soziale Versorgung eng verbunden sind.
-
-### Grünfeld
-Agrarstadt mit hoher staatlicher Versorgung und stark organisierten Gemeinschaftseinrichtungen.
-
-### Kontrollstadt
-Strategischer Sicherheitsstandort mit besonders dichter Überwachungsinfrastruktur. Die Bevölkerung erhält viele Leistungen, erlebt aber auch die stärkste staatliche Kontrolle.
-
-## 15. Merovan
-
-### Merovia – Hauptstadt
-Alte Hafenmetropole und Zentrum des ehemaligen Imperiums. Handel, Banken und Regierungsinstitutionen konzentrieren sich hier.
-
-### Port Meris
-Internationaler Großhafen mit einer extrem vielfältigen Bevölkerung.
-
-### Albion
-Alte Universitäts- und Verwaltungsstadt. Historische Debatten über das Imperium sind Teil des öffentlichen Lebens.
-
-### Südmark
-Binnenstadt mit Landwirtschaft, regionalem Handel und weniger internationaler Prägung.
-
-### Neuport
-Stadt, die durch Migration und internationale Unternehmen stark gewachsen ist. Junge Bevölkerung und neue Familiengeschichten prägen das Stadtbild.
-
-## 16. Theryn
-
-### Novagrad – Hauptstadt
-Revolutionäres Zentrum mit Zentralrat, großen öffentlichen Plätzen und staatlichen Institutionen.
-
-### Rotwerk
-Große Industriestadt mit staatlichen Betrieben und starker Veteranenkultur.
-
-### Genossenschaft
-Mittelstadt, deren Wirtschaft überwiegend von landwirtschaftlichen und handwerklichen Genossenschaften getragen wird.
-
-### Freiheim
-Junge Universitätsstadt mit Reformbewegungen und einer Bevölkerung, die die Revolution vor allem aus Geschichtsbüchern kennt.
-
-### Staryn
-Alte Industriestadt, in der viele Familien direkte Erinnerungen an die Revolution und die ersten Jahrzehnte der Republik besitzen.
-
-# Städte als soziale Räume
-
-Die Städte erfüllen damit unterschiedliche Funktionen. Einige sind politische Zentren, andere Industrie- oder Handelsstädte, wieder andere leben von Wissenschaft, Militär, Landwirtschaft oder regionaler Selbstverwaltung.
-
-Entscheidend ist, dass die Hauptstadt niemals das gesamte Land repräsentiert. Ein Bürger aus einer Hafenstadt soll seine Nation anders erleben als ein Fabrikarbeiter, ein Bergbauer oder ein Bewohner eines abgelegenen Tales.
-
-Für die spätere Lore können aus diesen Städten konkrete Stadtviertel, bekannte Gebäude, lokale Dialekte, Vereine, Universitäten, Fabriken, Märkte und Familiengeschichten entwickelt werden.
-
-> **Eine Stadt ist die kleinste Ebene, auf der die großen Ideen einer Nation im Alltag sichtbar werden.**
-
-
-# Konkrete Ausarbeitung – Punkt 4: Dörfer und ländlicher Alltag
-
-Dörfer bilden die soziale Grundlage der Nationen außerhalb ihrer großen Städte. Sie sind keine verkleinerten Städte, sondern eigene Lebensräume mit engeren Familiennetzwerken, lokaler Erinnerung, Landwirtschaft, Handwerk und unmittelbarerem Kontakt zu Landschaft und Infrastruktur.
-
-## 1. Averon
-
-### Feldhain
-Landwirtschaftliches Dorf mit modernen Maschinen und digitaler Verwaltung. Junge Bewohner pendeln häufig in die Städte.
-
-### Nordruh
-Waldnahes Dorf im Norden. Forstwirtschaft, Energieversorgung und kleine Handwerksbetriebe bestimmen den Alltag.
-
-### Küstenfeld
-Küstendorf zwischen Fischerei und moderner Logistik. Alte Familien und neu zugezogene Arbeitskräfte leben nebeneinander.
-
-### Sonnenau
-Dorf im Süden mit starken Sport- und Vereinsgemeinschaften. Lokale Verbundenheit ist wichtiger als politische Netzwerke.
-
-## 2. Karsk
-
-### Werksiedlung Nord
-Geplante Arbeitersiedlung neben einem Produktionskomplex. Wohnungen, Schule, Klinik und Arbeitsplatz sind eng miteinander verbunden.
-
-### Dornenfeld
-Landwirtschaftliche Gemeinde mit staatlich vorgegebenen Produktionszielen. Versorgung ist zuverlässig, persönliche Selbstbestimmung begrenzter.
-
-### Grauhof
-Dorf nahe einer medizinischen Anlage. Viele Familien arbeiten direkt oder indirekt für den Gesundheitssektor.
-
-### Grenzposten
-Kleine Siedlung an einer kontrollierten Verkehrsroute. Militär und Staat sind im Alltag ständig präsent.
-
-## 3. Ossaria
-
-### Altenfeld
-Historisches Dorf mit Familienhäusern, Kirche und altem Friedhof. Namen und Geschichten gefallener Vorfahren sind Teil des Ortsgedächtnisses.
-
-### Eichenau
-Landwirtschaftliches Dorf mit modernen Betrieben und traditionellen Festen.
-
-### Steinbrunn
-Handwerkerdorf, das für Metall- und Schutztechnik bekannt ist.
-
-### Grenzhof
-Kleine Gemeinde nahe alter Befestigungen. Viele Familien bewahren Erinnerungen an frühere Grenzkriege.
-
-## 4. Rothain
-
-### Kronweiler
-Dorf mit ehemaligen Gutshöfen und Familien, die ihre Abstammung über Generationen dokumentieren.
-
-### Eisenried
-Arbeiterdorf nahe einer Fabrik. Die Bevölkerung steht alten aristokratischen Traditionen eher kritisch gegenüber.
-
-### Westtal
-Modernisiertes Dorf mit vielen Pendlern und jungen Familien.
-
-### Veteranenhof
-Siedlung, in der mehrere Generationen von Soldatenfamilien leben. Militärische Erinnerung ist Alltag, aber nicht unumstritten.
-
-## 5. Sahr
-
-### Flussau
-Dorf am Wasser mit Landwirtschaft, Fährbetrieb und kleinem Markt.
-
-### Kornhafen
-Umschlagdorf zwischen Agrarregion und Flusshandel. Lagerhäuser und Fuhrunternehmen sind zentral.
-
-### Küstenruh
-Fischerdorf mit starkem Familienzusammenhalt und eigener lokaler Tradition.
-
-### Südgarten
-Mischdorf aus Landwirtschaft, kleinen Händlern und neu eingewanderten Familien.
-
-## 6. Steinmark
-
-### Eichenheim
-Typisches südliches Dorf mit Vereinen, Feuerwehr und regionalem Handwerk.
-
-### Nordfeld
-Industrienahes Dorf mit vielen Facharbeitern und Pendlern.
-
-### Bundesau
-Dorf, in dem Verwaltung und öffentlicher Dienst überdurchschnittlich viele Familien beschäftigen.
-
-### Grenzmark
-Alte Grenzsiedlung mit starker Erinnerung an frühere Kriege und wechselnde Herrschaften.
-
-## 7. Vael
-
-### Stahlhof
-Arbeitersiedlung neben einem großen Stahlwerk. Schichtpläne strukturieren Familienleben und Freizeit.
-
-### Kraftau
-Dorf im Energiegürtel. Viele Bewohner arbeiten in Kraftwerken oder Leitungsbetrieben.
-
-### Konzernfeld
-Unternehmenssiedlung mit Firmenklinik, Schule und Wohnanlagen. Das Unternehmen ist zugleich Arbeitgeber und gesellschaftlicher Mittelpunkt.
-
-### Grünweiler
-Landwirtschaftlich geprägtes Dorf mit stärkerer Kritik an der industriellen Entwicklung.
-
-## 8. Vesper
-
-### Nebelhof
-Abgelegenes Dorf mit wenig öffentlicher Infrastruktur. Die Bewohner verlassen sich stark auf Familien und Nachbarschaften.
-
-### Wachtau
-Siedlung nahe einer militärischen Zone. Kontrollen gehören zum Alltag.
-
-### Stilldorf
-Altes Dorf mit ausgeprägten privaten Netzwerken. Menschen wissen viel voneinander, sprechen aber wenig offen über Politik.
-
-### Freihain
-Landgemeinde mit etwas stärkerer wirtschaftlicher Selbstständigkeit und größerem Abstand zu staatlichen Institutionen.
-
-## 9. Eldran
-
-### Kronau
-Traditionelles Dorf mit alten Festen und sichtbaren Verbindungen zu regionalen Adelsfamilien.
-
-### Talheim
-Landwirtschaftliche Gemeinde mit modernen Betrieben und starken Gemeinderäten.
-
-### Nordhain
-Arbeiterdorf mit moderner, eher republikanischer Bevölkerung.
-
-### Freital
-Gemeinde mit historisch besonderen Selbstverwaltungsrechten und starkem Lokalbewusstsein.
-
-## 10. Namar
-
-### Seedorf
-Fischerdorf mit kleinen Bootswerften und Familien, deren Berufe seit Generationen mit dem Meer verbunden sind.
-
-### Inselruh
-Abgelegene Inselgemeinde. Wetter, Fährverbindungen und lokale Selbstversorgung bestimmen den Alltag.
-
-### Hafenfeld
-Dorf nahe eines großen Hafens. Viele Bewohner arbeiten in Logistik und Schifffahrt.
-
-### Salzwiese
-Küstendorf mit Landwirtschaft, Fischerei und traditioneller regionaler Küche.
-
-## 11. Orthea
-
-### Forschungsfeld
-Kleine Gemeinde nahe wissenschaftlicher Anlagen. Viele Familien arbeiten in technischen oder medizinischen Berufen.
-
-### Altendorf
-Traditionelles Dorf außerhalb des Wissenschaftsgürtels. Die Bewohner stehen der akademischen Elite teilweise distanziert gegenüber.
-
-### Feldtal
-Landwirtschaftliches Dorf mit modernen Analyse- und Bewässerungssystemen.
-
-### Werkheim
-Technisches Dorf, dessen Bewohner überwiegend in automatisierten Produktionsanlagen arbeiten.
-
-## 12. Dargan
-
-### Hochdorf
-Bergdorf mit Viehzucht, Reparaturwerkstätten und schwierigen Verkehrswegen.
-
-### Steinscharte
-Kleine Siedlung an einem Gebirgspass. Gemeinschaftliche Hilfe ist für das Überleben entscheidend.
-
-### Flussgrund
-Landwirtschaftliches Dorf am wichtigsten Transportkorridor.
-
-### Fernmark
-Sehr abgelegene Gemeinde mit eigener Wasserversorgung, Werkstätten und starkem Misstrauen gegenüber zentralen Behörden.
-
-## 13. Lyr
-
-### Talwies
-Gemeinde mit intensiver Landwirtschaft und ausgeprägter lokaler Verwaltung.
-
-### Hochweid
-Bergdorf, dessen Familien Viehzucht und Bergbau miteinander verbinden.
-
-### Passdorf
-Siedlung an einem strategischen Gebirgspass. Viele Bewohner haben militärische oder technische Berufe.
-
-### Sonnenhang
-Dorf mit alten religiösen Bräuchen und starken Großfamilien.
-
-## 14. Caldris
-
-### Versorgungsdorf
-Planmäßig errichtete Gemeinde mit staatlicher Klinik, Schule und zentraler Lebensmittelversorgung.
-
-### Werksiedlung
-Wohnort für Beschäftigte eines staatlichen Produktionsbetriebs. Arbeit und soziale Leistungen sind eng gekoppelt.
-
-### Kinderfeld
-Gemeinde mit umfangreicher staatlicher Kinderbetreuung und Familienförderung.
-
-### Randhain
-Ländliche Gemeinde, in der staatliche Leistungen geschätzt werden, gleichzeitig aber viele Bewohner den Umfang der Kontrolle kritisch sehen.
-
-## 15. Merovan
-
-### Altmark
-Altes Dorf im Binnenland mit Landwirtschaft und Familien, deren Geschichte weit vor die Handelsrepublik zurückreicht.
-
-### Hafenhain
-Küstendorf mit Fischerei, Handel und zahlreichen Familien unterschiedlicher Herkunft.
-
-### Überseehof
-Gemeinde, deren Familiengeschichten mit ehemaligen Überseegebieten verbunden sind. Die Vergangenheit wird unterschiedlich bewertet.
-
-### Neuacker
-Jüngere Siedlung mit vielen eingewanderten Familien und neuen landwirtschaftlichen Betrieben.
-
-## 16. Theryn
-
-### Rotfeld
-Landwirtschaftliche Genossenschaftsgemeinde mit starkem revolutionärem Selbstverständnis.
-
-### Werkhain
-Dorf nahe eines staatlichen Industriebetriebs. Viele Familien sind seit Generationen mit dem Betrieb verbunden.
-
-### Morgenau
-Junge Gemeinde, in der Reformideen und traditionelle revolutionäre Organisationen aufeinandertreffen.
-
-### Genossenfeld
-Große Agrargemeinschaft mit gemeinsamem Maschinenpark und kollektiv organisierten Arbeitsabläufen.
-
-# Der ländliche Alltag als Gegenpol zur Stadt
-
-Dörfer machen sichtbar, dass staatliche Ordnung nicht überall gleich erlebt wird. In Städten begegnen Menschen dem Staat häufig über Institutionen, Unternehmen und öffentliche Einrichtungen. Auf dem Land begegnen sie ihm stärker über Infrastruktur, Landwirtschaft, Schulen, medizinische Versorgung, Steuern, Wehrdienst und lokale Verwaltung.
-
-Deshalb entstehen innerhalb jeder Nation eigene Unterschiede:
-
-- **Familie** ist auf dem Land häufig wichtiger als formale Institutionen.
-- **Nachbarschaft** kann bei Krisen wichtiger sein als staatliche Hilfe.
-- **Religion und Brauchtum** überleben häufig länger als in Großstädten.
-- **Dialekte** und regionale Ausdrucksweisen bleiben stärker erhalten.
-- **Mobilität** ist ungleich verteilt; junge Menschen ziehen häufig in Städte.
-- **Militär und Krieg** werden unmittelbar über Einberufung, Infrastruktur, Veteranen und Gefallene erlebt.
-- **Staatliche Leistungen** können auf dem Land lebenswichtig oder zugleich als Einmischung empfunden werden.
-
-Damit entsteht eine weitere wichtige Ebene der Welt: Nicht nur Nationen unterscheiden sich voneinander. Auch innerhalb derselben Nation kann ein Mensch aus der Hauptstadt eine völlig andere Vorstellung von seinem Land haben als jemand aus einem abgelegenen Dorf.
-
-> **Je kleiner der Ort, desto größer kann die Erinnerung werden.**
-
-
-# Konkrete Ausarbeitung – Punkt 5: Familie
-
-Familie ist eine der wichtigsten sozialen Ebenen jeder Nation. Sie bestimmt nicht nur Herkunft und Verwandtschaft, sondern auch Fürsorge, soziale Sicherheit, Erziehung, Berufswahl, Erinnerung und den Umgang mit Krisen. Die folgenden Beschreibungen definieren keine einheitlichen Familienmodelle; sie beschreiben die gesellschaftlichen Erwartungen und Spannungen, innerhalb derer unterschiedliche Familien leben.
-
-## 1. Averon
-
-Die averonische Familie ist überwiegend klein und urban. Zwei Eltern mit einem oder zwei Kindern sind häufig, aber Alleinerziehende, Patchworkfamilien und bewusst kinderlose Haushalte werden gesellschaftlich weitgehend akzeptiert. Großeltern leben oft getrennt und bleiben digital verbunden.
-
-Familienentscheidungen werden stark individuell getroffen. Kinder sollen früh Selbstständigkeit entwickeln. Eltern versuchen, Bildung und persönliche Freiheit zu ermöglichen, stehen aber unter erheblichem Zeit- und Leistungsdruck.
-
-Ein typischer Konflikt entsteht zwischen beruflicher Mobilität und familiärer Nähe. Wer für eine bessere Stelle die Stadt wechselt, kann wirtschaftlich aufsteigen und gleichzeitig den Kontakt zur erweiterten Familie verlieren.
-
-## 2. Karsk
-
-Die Familie steht unter einem starken Einfluss des Staates. Kinder werden früh medizinisch untersucht und ihre Fähigkeiten systematisch erfasst. Eltern wissen, dass die Entwicklung eines Kindes später seine gesellschaftliche Einstufung beeinflussen kann.
-
-In privilegierten Familien wird die staatliche Ordnung häufig als Schutz verstanden: gute medizinische Versorgung, Ausbildung und sichere Arbeitsplätze sind reale Vorteile. Andere Familien erleben dieselben Systeme als Eingriff in ihre Privatsphäre.
-
-Eltern versuchen häufig, Schwächen ihrer Kinder nicht öffentlich sichtbar werden zu lassen. Gleichzeitig kann eine Familie großen Stolz empfinden, wenn ein Kind als besonders leistungsfähig gilt.
-
-Der zentrale familiäre Konflikt lautet: **Ist ein Kind zuerst ein geliebtes Familienmitglied oder zuerst ein zukünftiger Träger gesellschaftlicher Leistung?**
-
-## 3. Ossaria
-
-Familiengeschichte besitzt in Ossaria großes Gewicht. Namen von Großeltern und Urgroßeltern, Kriegserfahrungen, Berufe und Herkunft werden häufig bewusst weitergegeben.
-
-Mehrgenerationenfamilien sind verbreiteter als in den stark urbanisierten Nationen, auch wenn junge Menschen für Studium und Arbeit in größere Städte ziehen. Familien halten über Besuche, Briefe, digitale Archive und gemeinsame Gedenktage Kontakt.
-
-Kinder lernen früh, dass ihre Familie Teil einer längeren Geschichte ist. Gleichzeitig wird ihnen vermittelt, dass geerbte Schuld oder geerbter Ruhm keine automatische moralische Stellung erzeugen.
-
-Der wichtigste familiäre Wert ist **Erinnerung ohne blinden Gehorsam gegenüber der Vergangenheit**.
-
-## 4. Rothain
-
-Rothain besitzt eine starke Tradition familiärer Herkunft. In alten Familien werden Stammbäume, Orden, Uniformen, Briefe und Fotografien aufbewahrt. In Arbeiterfamilien existieren ähnliche Erinnerungskulturen, allerdings häufig bezogen auf Fabriken, Gewerkschaften und politische Kämpfe.
-
-Militärische Familien können mehrere Generationen von Soldaten hervorbringen. Andere Familien reagieren bewusst mit Ablehnung auf diese Tradition.
-
-Heirat kann gesellschaftliche Netzwerke verbinden, ist aber längst nicht mehr ausschließlich eine Angelegenheit von Herkunft und Stand. Junge Menschen hinterfragen zunehmend die Erwartungen ihrer Eltern.
-
-Der zentrale Generationenkonflikt lautet: **Was soll man von der Vergangenheit bewahren, und was muss man bewusst beenden?**
-
-## 5. Sahr
-
-Familien sind stark in Handels- und Verwandtschaftsnetzwerke eingebunden. Ein Familienname kann auf einem Markt, in einer Werft oder bei einer Handelsgesellschaft wirtschaftliches Gewicht besitzen.
-
-Großfamilien sind besonders in kleineren Städten und Dörfern wichtig. Verwandte können gemeinsam Unternehmen führen, Waren transportieren oder sich in Krisen finanziell unterstützen.
-
-Ehe kann weiterhin wirtschaftliche Bedeutung besitzen, ohne ausschließlich geschäftlich bestimmt zu sein. Unterschiedliche religiöse und kulturelle Hintergründe sind in Handelsstädten normal.
-
-Kinder lernen früh, dass Beziehungen Vertrauen schaffen und Vertrauen wirtschaftlichen Wert besitzt. Die Schattenseite ist der soziale Druck, den Erwartungen der eigenen Familie gerecht zu werden.
-
-## 6. Steinmark
-
-Die Familie ist eine stabile, aber vergleichsweise private Institution. Ehe, Kinder und gegenseitige Unterstützung gelten als wichtige Bestandteile eines geordneten Lebens.
-
-Großeltern übernehmen häufig Aufgaben bei der Kinderbetreuung. Vereine und lokale Gemeinschaften bilden eine zweite soziale Ebene neben der Familie.
-
-Staatliche Einrichtungen helfen Familien durch Schulen, medizinische Versorgung und Verwaltungsleistungen. Gleichzeitig besteht die Erwartung, dass Familien ihre Angelegenheiten grundsätzlich selbst organisieren.
-
-Konflikte entstehen vor allem zwischen traditionellen Familienbildern und jüngeren Generationen, die stärker individuell leben möchten.
-
-## 7. Vael
-
-In vielen Regionen ist die Familie eng mit dem Arbeitsplatz verbunden. Wenn mehrere Generationen im selben Werk, Bergbaugebiet oder Energiebetrieb gearbeitet haben, wird der Beruf Teil der Familienidentität.
-
-Firmenwohnungen und betriebliche Versorgung können Familien Sicherheit geben. Gleichzeitig kann ein Arbeitsplatzverlust eine ganze Familie treffen.
-
-Eltern sind stolz auf technische Fähigkeiten und berufliche Zuverlässigkeit. Manche Familien hoffen, dass ihre Kinder denselben Weg gehen; andere wollen verhindern, dass sie zu einem weiteren Glied der Produktionskette werden.
-
-Die Familie wird dadurch zu einem Ort des Stolzes und zugleich zu einem Ort, an dem sich die Abhängigkeit von Industrieunternehmen besonders deutlich zeigt.
-
-## 8. Vesper
-
-Vertrauen ist innerhalb der Familie besonders wichtig. Weil politische Überwachung und staatliche Informationskontrolle zum Alltag gehören, gilt die Familie häufig als einer der wenigen Räume, in denen Menschen offen sprechen können.
-
-Gleichzeitig kann auch innerhalb einer Familie Vorsicht entstehen. Eltern überlegen, welche politischen Aussagen sie vor ihren Kindern machen, und ältere Menschen warnen Jüngere davor, private Gespräche weiterzugeben.
-
-Großfamilien und langjährige Freundschaften können deshalb ähnliche Funktionen wie politische oder religiöse Gemeinschaften übernehmen.
-
-Das wichtigste Familiengut ist nicht Besitz, sondern **gegenseitiges Vertrauen**.
-
-## 9. Eldran
-
-Familien reichen von alten aristokratischen Häusern bis zu modernen städtischen Haushalten. Die Monarchie prägt manche Familien stark, andere stehen ihr gleichgültig oder kritisch gegenüber.
-
-In traditionellen Familien werden Titel, Familienhäuser und regionale Bräuche gepflegt. Bürgerliche Familien betonen häufiger Ausbildung, Beruf und persönliche Leistung.
-
-Die Familie bleibt ein wichtiger Ort politischer Sozialisation: Kinder können mit monarchistischen, republikanischen oder pragmatisch-konstitutionellen Vorstellungen aufwachsen.
-
-Hochzeiten sind häufig große soziale Ereignisse, müssen aber nicht mehr den alten Standesgrenzen folgen.
-
-## 10. Namar
-
-Die maritime Lebensweise prägt viele Familien. In Küsten- und Inselregionen wechseln sich Generationen von Fischern, Seeleuten, Hafenarbeitern und Schiffbauern ab.
-
-Abwesenheit gehört zum Familienleben: Ein Elternteil kann wochen- oder monatelang auf See sein. Dadurch entstehen starke lokale Netzwerke, in denen Großeltern, Geschwister und Nachbarn Verantwortung übernehmen.
-
-Auf Inseln ist die Familie oft besonders eng mit dem Heimatort verbunden. Wegzug wird nicht nur als persönlicher Schritt, sondern manchmal als Verlust für die Gemeinschaft verstanden.
-
-Kinder lernen früh Wetter, Meer und praktische Sicherheit. Familiengeschichten sind häufig mit bestimmten Schiffen, Häfen oder Inseln verbunden.
-
-## 11. Orthea
-
-Bildung besitzt innerhalb der Familie einen außergewöhnlich hohen Stellenwert. Eltern investieren viel Zeit und Geld in die Ausbildung ihrer Kinder, sofern sie es sich leisten können.
-
-In akademischen Familien können Kinder früh an Wissenschaft herangeführt werden. Das schafft Chancen, erzeugt aber auch Leistungsdruck.
-
-Familien außerhalb der Wissenschaftselite erleben diesen Druck teilweise als soziale Distanz. Ein Kind aus einem ländlichen Haushalt kann sich gegenüber akademischen Familien gleichzeitig bewundert und fremd fühlen.
-
-Die zentrale familiäre Frage lautet: **Muss ein gutes Leben immer das Ergebnis messbarer Leistung sein?**
-
-## 12. Dargan
-
-Familien sind stark auf gegenseitige praktische Hilfe angewiesen. In abgelegenen Regionen können Verwandte, Nachbarn und Freunde bei Krankheit, Reparaturen oder Transport wichtiger sein als staatliche Institutionen.
-
-Mehrgenerationenhaushalte sind verbreitet, besonders dort, wo Wege weit und medizinische Einrichtungen selten sind.
-
-Kinder lernen praktische Fähigkeiten früh: Reparieren, Landwirtschaft, Umgang mit Fahrzeugen und Orientierung in schwierigem Gelände.
-
-Familiengeschichte wird weniger über formelle Archive als über Erzählungen weitergegeben. Großeltern sind wichtige Träger lokalen Wissens.
-
-## 13. Lyr
-
-Familie und Talgemeinschaft überschneiden sich stark. Viele Menschen kennen ihre Verwandtschaft über mehrere Generationen, und lokale Familien können innerhalb eines Tales erheblichen Einfluss besitzen.
-
-Ehen verbinden nicht nur zwei Menschen, sondern manchmal auch unterschiedliche Dörfer oder politische Gemeinden. Trotzdem besitzen persönliche Entscheidungen einen hohen Stellenwert.
-
-Großfamilien und gemeinschaftliche Kinderbetreuung sind verbreitet. Ältere Menschen gelten als wichtige Träger von Ortsgeschichte, Bergwissen und Tradition.
-
-Der Konflikt zwischen Familienloyalität und persönlicher Freiheit ist besonders sichtbar, wenn junge Menschen das Tal verlassen wollen.
-
-## 14. Caldris
-
-Familien werden umfassend durch den Sozialstaat unterstützt. Kinderbetreuung, medizinische Versorgung, Wohnraum und berufliche Vermittlung können den Alltag erheblich erleichtern.
-
-Viele Familien empfinden diese Unterstützung als echte Verbesserung ihres Lebens. Der Staat wird nicht ausschließlich als Unterdrücker erlebt, sondern als Institution, die konkrete Probleme löst.
-
-Gleichzeitig werden Familienleben und Lebensentscheidungen umfassend registriert. Manche Eltern empfinden die staatliche Fürsorge deshalb als Schutz, andere als dauernde Beobachtung.
-
-Kinder wachsen mit dem Bewusstsein auf, dass der Staat für sie sorgen kann und zugleich viel über sie weiß.
-
-## 15. Merovan
-
-Familiengeschichten sind häufig international. Ein Haushalt kann mehrere Sprachen, Religionen oder Herkunftsregionen miteinander verbinden.
-
-Alte Familien bewahren Erinnerungen an das ehemalige Imperium, während jüngere Generationen diese Geschichte häufig kritischer betrachten. Familien mit Wurzeln in ehemaligen Überseegebieten können dieselbe Geschichte aus einer völlig anderen Perspektive erzählen.
-
-Migration macht Großfamilien oft geografisch weit verstreut. Digitale Kommunikation und Reisen halten die Verbindung aufrecht.
-
-Die Familie ist deshalb häufig ein Ort, an dem unterschiedliche historische Erinnerungen unmittelbar aufeinandertreffen.
-
-## 16. Theryn
-
-Familiengeschichten sind stark durch die Revolution geprägt. Manche Familien verehren revolutionäre Vorfahren, andere erinnern sich an Gewalt, Hunger oder politische Repression.
-
-Veteranenfamilien besitzen teilweise besonderes Ansehen. Gleichzeitig entstehen Konflikte, wenn junge Menschen die revolutionäre Vergangenheit anders bewerten als ihre Eltern oder Großeltern.
-
-In vielen Haushalten gehören politische Diskussionen zum Familienleben. Die offizielle Geschichte wird zu Hause bestätigt, kritisiert oder durch persönliche Erinnerungen ergänzt.
-
-Genossenschaften und staatliche Einrichtungen übernehmen teilweise Aufgaben, die anderswo von Familien getragen werden. Trotzdem bleiben Verwandtschaft und persönliche Loyalität wichtige Schutzräume.
-
-Die zentrale Frage lautet: **Wie lebt eine Familie mit einer Revolution, die zugleich ihre Geschichte und ihre Gegenwart geschaffen hat?**
-
-# Gemeinsame Familienstruktur der Welt
-
-Trotz aller Unterschiede bleibt Familie in allen sechzehn Nationen ein Ort von Fürsorge, Konflikt und Erinnerung. Keine Gesellschaft besitzt ein vollständig einheitliches Familienmodell.
-
-Für die weitere Lore werden daher vier Ebenen unterschieden:
-
-1. **Kernfamilie** – Eltern, Kinder und unmittelbare Fürsorge.
-2. **Erweiterte Familie** – Großeltern, Geschwister, Onkel, Tanten und andere Verwandte.
-3. **Soziales Umfeld** – Nachbarschaft, Freundschaften, Vereine, religiöse Gemeinschaften oder Arbeitskollegen.
-4. **Staatliche und gesellschaftliche Institutionen** – Schule, Medizin, Unternehmen, Militär und Verwaltung.
-
-Je nach Nation verschiebt sich das Gewicht zwischen diesen Ebenen. Genau daraus entstehen unterschiedliche Vorstellungen von Verantwortung, Freiheit, Loyalität und einem guten Leben.
-
-> **Der Staat kann eine Gesellschaft ordnen. Aber nur Menschen können einander Familie sein.**
-
-
-# Konkrete Ausarbeitung – Punkte 6–25
-
-Die folgenden Abschnitte vervollständigen die gesellschaftliche Entwicklung aller sechzehn Nationen. Die Angaben sind als verbindlicher Lore-Arbeitsstand gedacht; spätere Detailkapitel können einzelne Familien, Personen, Institutionen und Ereignisse weiter ausarbeiten.
-
-## Punkt 6 – Jugend
-
-- **Averon:** Jugendliche wachsen digital, selbstständig und leistungsorientiert auf. Schule, soziale Medien und frühe berufliche Projekte prägen Identität; staatliche Institutionen werden eher als Dienstleister verstanden.
-- **Karsk:** Jugend wird früh medizinisch und beruflich bewertet. Leistungsstarke Jugendliche erhalten Chancen und Privilegien; andere erleben früh den Druck gesellschaftlicher Nützlichkeit.
-- **Ossaria:** Geschichte und persönliche Verantwortung gehören zur Erziehung. Jugendliche besuchen Gedenkorte und lernen, militärische Vergangenheit kritisch zu betrachten.
-- **Rothain:** Jugend erlebt den Gegensatz zwischen imperialer Familienerinnerung und republikanischer Gegenwart. Veteranenfamilien vermitteln Tradition, Schulen diskutieren deren Grenzen.
-- **Sahr:** Jugendliche lernen früh Handel, praktische Fähigkeiten und regionale Netzwerke kennen. In Hafenstädten ist kulturelle Vielfalt selbstverständlich.
-- **Steinmark:** Disziplin, Vereinsleben, Gemeinsinn und staatsbürgerliche Bildung prägen die Jugend. Öffentliche Einrichtungen sind alltägliche Bezugspunkte.
-- **Vael:** Technische Ausbildung und Betriebspraktika beginnen früh. Jugendliche stehen zwischen industriellem Berufsstolz und dem Wunsch nach einem Leben außerhalb der Werke.
-- **Vesper:** Jugendliche lernen früh zwischen öffentlicher und privater Sprache zu unterscheiden. Vertrauen entsteht vor allem in kleinen Freundeskreisen.
-- **Eldran:** Jugendliche begegnen sowohl monarchischer Tradition als auch moderner republikanischer Kultur. Region und Familie beeinflussen die politische Sozialisation stark.
-- **Namar:** Meer, Wetter, Sport und lokale Gemeinschaft prägen die Jugend. Auf Inseln ist Selbstständigkeit besonders wichtig.
-- **Orthea:** Bildungserfolg besitzt hohen sozialen Wert. Jugendliche stehen unter akademischem Druck, während ländliche Jugendliche andere Lebenswege vertreten.
-- **Dargan:** Jugendliche lernen praktische Fähigkeiten und Selbsthilfe. Lange Wege machen Nachbarschaft und Familie besonders wichtig.
-- **Lyr:** Jugend ist stark tal- und familienbezogen. Der Konflikt zwischen lokaler Bindung und Wegzug in andere Regionen ist zentral.
-- **Caldris:** Staatliche Schulen, Jugendzentren und Betreuung sind umfassend. Jugendliche erfahren Sicherheit und Überwachung gleichzeitig.
-- **Merovan:** Mehrsprachigkeit und internationale Familiengeschichten prägen viele Jugendliche. Koloniale Vergangenheit wird innerhalb der Familien unterschiedlich erzählt.
-- **Theryn:** Jugendliche lernen revolutionäre Geschichte und erleben zugleich wachsende Reformdiskussionen. Generationenkonflikte sind besonders politisch geprägt.
-
-## Punkt 7 – Arbeit
-
-- **Averon:** Projektarbeit, Dienstleistungen, Technologie und flexible Beschäftigung dominieren; Karrierewechsel sind normal.
-- **Karsk:** Arbeit ist gesellschaftliche Bewertung. Produktivität, technische Qualifikation und staatlicher Bedarf bestimmen Aufstieg.
-- **Ossaria:** Mischung aus Industrie, Wissenschaft, Handwerk und Verwaltung; Berufsstolz ist mit Verantwortung verbunden.
-- **Rothain:** Verwaltung, Industrie, Dienstleistungen und traditionelle Berufe koexistieren; alte Netzwerke erleichtern manchen den Zugang zu Berufen.
-- **Sahr:** Handel, Logistik, Schifffahrt, Landwirtschaft und Handwerk bilden das Rückgrat.
-- **Steinmark:** Verwaltung, Industrie, Handwerk und öffentlicher Dienst gelten als gleichwertige Säulen geordneter Gesellschaft.
-- **Vael:** Industrie und Rohstoffe dominieren; Konzernzugehörigkeit kann Identität und soziale Sicherheit bestimmen.
-- **Vesper:** Staat, Sicherheitssektor, Handel und verborgene informelle Arbeit prägen den Arbeitsmarkt.
-- **Eldran:** Öffentlicher Dienst, moderne Wirtschaft, Landwirtschaft und traditionelle Berufe bestehen nebeneinander.
-- **Namar:** Seefahrt, Fischerei, Schiffbau, Hafenlogistik und Küstenschutz sind zentrale Arbeitgeber.
-- **Orthea:** Forschung, Medizin, Ingenieurwesen und automatisierte Industrie genießen hohes Prestige.
-- **Dargan:** Handwerk, Landwirtschaft, Bergbau, Reparatur und regionale Dienstleistungen sind entscheidend.
-- **Lyr:** Bergbau, Landwirtschaft, Handwerk, Handel und lokale Verwaltung bestimmen die Arbeit.
-- **Caldris:** Staat und staatsnahe Unternehmen sind zentrale Arbeitgeber; Beschäftigung wird stark vermittelt und überwacht.
-- **Merovan:** Handel, Banken, Logistik, Dienstleistungen und internationale Unternehmen prägen den Arbeitsmarkt.
-- **Theryn:** Staatsbetriebe, Genossenschaften, Landwirtschaft und technische Berufe dominieren.
-
-## Punkt 8 – Armut
-
-- **Averon:** Armut zeigt sich vor allem als Wohnungs-, Bildungs- und Zugangsunterschied. Sozialstaatliche Hilfe existiert, ist aber komplex.
-- **Karsk:** Materielle Grundversorgung kann gesichert sein, doch Menschen mit geringer staatlicher Bewertung erhalten weniger Chancen und medizinische Priorität.
-- **Ossaria:** Armut wird über kommunale und staatliche Hilfe abgefedert; historische Städte haben deutliche soziale Unterschiede.
-- **Rothain:** Alte Vermögen und neue Armut können direkt nebeneinander existieren. Herkunft beeinflusst Chancen weiterhin indirekt.
-- **Sahr:** Hafenarbeit und Handel schaffen Aufstieg, aber prekäre Arbeitsverhältnisse und Versorgungskrisen treffen arme Familien stark.
-- **Steinmark:** Verwaltung und soziale Sicherung begrenzen extreme Armut, regionale Unterschiede bleiben.
-- **Vael:** Arbeitslosigkeit kann ganze Industrieregionen treffen. Abhängigkeit von Konzernen verschärft soziale Unsicherheit.
-- **Vesper:** Armut ist schwer sichtbar, weil staatliche Kontrolle und informelle Netzwerke Statistiken verzerren können.
-- **Eldran:** Sozialhilfe existiert, doch alte Besitzstrukturen wirken fort.
-- **Namar:** Inseln und abgelegene Küstenregionen sind bei Versorgungskrisen besonders verwundbar.
-- **Orthea:** Zugang zu guter Bildung entscheidet stark über soziale Mobilität.
-- **Dargan:** Armut bedeutet häufig fehlende Infrastruktur statt völliger Besitzlosigkeit.
-- **Lyr:** Gemeinschaftliche Hilfe verhindert extreme Not in vielen Tälern, kann aber persönliche Abhängigkeiten schaffen.
-- **Caldris:** Materielle Armut ist relativ gering, da der Staat umfassend versorgt; Abhängigkeit vom System ist die Kehrseite.
-- **Merovan:** Wohlhabende Handelszentren stehen armen Binnen- und ehemaligen Überseegebieten gegenüber.
-- **Theryn:** Grundversorgung ist politisches Ziel, doch regionale Produktionsunterschiede und staatliche Verteilung erzeugen Engpässe.
-
-## Punkt 9 – Wohlstand
-
-- **Averon:** Wohlstand zeigt sich in Wohnlage, digitalem Zugang, Bildung und Mobilität.
-- **Karsk:** Wohlstand ist eng an staatliche Nützlichkeit und Position gebunden.
-- **Ossaria:** Wohlhabende Familien investieren häufig in Bildung, Kultur und langfristige Vermögenssicherung.
-- **Rothain:** Alte Familien besitzen kulturelles Kapital; neue Unternehmer schaffen neue Eliten.
-- **Sahr:** Handel, Schifffahrt und Familienunternehmen erzeugen große Vermögen.
-- **Steinmark:** Wohlstand ist stärker institutionell und beruflich als aristokratisch geprägt.
-- **Vael:** Industrieeigentum und Konzernbeteiligungen konzentrieren großen Reichtum.
-- **Vesper:** Wohlstand ist schwer sichtbar; privilegierte Staats- und Sicherheitskreise leben deutlich besser.
-- **Eldran:** Alte Familien und moderne Unternehmer bilden unterschiedliche Eliten.
-- **Namar:** Hafen- und Reedereibesitz bringt erheblichen Wohlstand.
-- **Orthea:** Spitzenforscher, Mediziner und Techniker genießen hohes Einkommen und Prestige.
-- **Dargan:** Wohlstand bedeutet häufig Land, Werkstatt, Vieh und Unabhängigkeit statt Luxus.
-- **Lyr:** Besitz von Land, Minen und Handelsrechten prägt regionale Hierarchien.
-- **Caldris:** Wohlstand wird weniger über Luxus als über Zugang zu Wohnraum, Versorgung und staatlichen Leistungen erlebt.
-- **Merovan:** Finanz- und Handelsvermögen bilden eine einflussreiche Oberschicht.
-- **Theryn:** Private Vermögen sind begrenzt; privilegierter Zugang zu Wohnraum, Waren und Positionen erzeugt dennoch Unterschiede.
-
-## Punkt 10 – Religion
-
-- **Averon:** Religiöse Freiheit ist weitgehend selbstverständlich; organisierte Religion ist eher eine persönliche als staatliche Angelegenheit.
-- **Karsk:** Staatliche Rationalität dominiert. Private Glaubensgemeinschaften existieren, bleiben aber politisch vorsichtig.
-- **Ossaria:** Religion, Erinnerung und Friedenskultur verbinden sich; verschiedene Konfessionen sind gesellschaftlich anerkannt.
-- **Rothain:** Alte Kirchen- und Militärtraditionen bestehen neben säkularer republikanischer Kultur.
-- **Sahr:** Handelswege haben eine religiös vielfältige Gesellschaft geschaffen.
-- **Steinmark:** Religion ist frei, aber stark von bürgerlichen Vereinen und lokalen Traditionen geprägt.
-- **Vael:** Arbeiterkultur und säkulare Weltbilder sind stark; religiöse Gemeinschaften bestehen dennoch lokal.
-- **Vesper:** Private Religion kann ein Rückzugsraum vor staatlicher Öffentlichkeit sein.
-- **Eldran:** Historische Staatskirchen und moderne Religionsfreiheit koexistieren.
-- **Namar:** Küstenreligionen, Familienrituale und unterschiedliche regionale Glaubensformen prägen die Gesellschaft.
-- **Orthea:** Wissenschaft dominiert öffentliche Institutionen, religiöser Glaube bleibt Privatsache.
-- **Dargan:** Religion ist oft mit Natur, Familie und lokaler Gemeinschaft verbunden.
-- **Lyr:** Berggemeinden besitzen unterschiedliche religiöse Traditionen.
-- **Caldris:** Staatlich geförderte soziale Rituale konkurrieren mit privaten Religionen.
-- **Merovan:** Religiöser Pluralismus ist Folge jahrhundertelangen Handels und Migration.
-- **Theryn:** Staatliche Säkularität dominiert, traditionelle Religion lebt in Familien und Gemeinden fort.
-
-## Punkt 11 – Bildung
-
-- **Averon:** Digitale, flexible Bildung mit hoher Hochschulquote und starkem Wettbewerbsdruck.
-- **Karsk:** Bildung dient der gezielten Ausbildung gesellschaftlich benötigter Fähigkeiten.
-- **Ossaria:** Geschichte, Wissenschaft und politische Bildung besitzen hohen Stellenwert.
-- **Rothain:** Schulen verbinden republikanische Staatsbürgerkunde mit kritischer Geschichtsaufarbeitung.
-- **Sahr:** Praktische Handels-, Technik- und Sprachkenntnisse sind besonders wertvoll.
-- **Steinmark:** Staatlich standardisierte Ausbildung und Berufsschulen genießen hohes Vertrauen.
-- **Vael:** Technische und industrielle Ausbildung dominiert.
-- **Vesper:** Bildung vermittelt neben Wissen auch Diskretion und staatliche Loyalität.
-- **Eldran:** Klassische Bildung, moderne Hochschulen und regionale Schulen koexistieren.
-- **Namar:** Maritime und technische Fähigkeiten sind neben allgemeiner Bildung wichtig.
-- **Orthea:** Wissenschaftliche Bildung ist gesellschaftliches Prestigezentrum.
-- **Dargan:** Schulen sind praktisch orientiert und müssen große Entfernungen überbrücken.
-- **Lyr:** Regionale Schulen bewahren lokale Geschichte und Selbstverwaltung.
-- **Caldris:** Bildung ist flächendeckend staatlich organisiert und eng mit Sozialplanung verbunden.
-- **Merovan:** Universitäten sind international ausgerichtet; historische Perspektiven sind umkämpft.
-- **Theryn:** Revolutionäre Geschichte und technische Bildung sind zentrale Bestandteile des Lehrplans.
-
-## Punkt 12 – Medien
-
-- **Averon:** Freie digitale Medien, Plattformen und unabhängiger Journalismus; hohe Informationsgeschwindigkeit erzeugt Fragmentierung.
-- **Karsk:** Medien sind staatlich gelenkt und vermitteln Ordnung, Fortschritt und gesellschaftliche Leistung.
-- **Ossaria:** Pluralistische Medien mit starker investigativer und historischer Kultur.
-- **Rothain:** Freie Medien diskutieren intensiv über Monarchie, Republik und Vergangenheit.
-- **Sahr:** Handelsmedien, lokale Blätter und internationale Nachrichten konkurrieren.
-- **Steinmark:** Sachorientierter öffentlicher Rundfunk und regionale Medien dominieren.
-- **Vael:** Konzernmedien besitzen neben staatlichen und unabhängigen Angeboten erheblichen Einfluss.
-- **Vesper:** Medien sind kontrolliert; Gerüchte, private Netzwerke und verschlüsselte Kommunikation bilden Gegenöffentlichkeiten.
-- **Eldran:** Freie Medien mit traditionell höfischen und modernen republikanischen Blättern.
-- **Namar:** Regionale Medien sind stark und unterscheiden sich zwischen Küste und Inseln.
-- **Orthea:** Datenjournalismus und wissenschaftliche Medien genießen Prestige, aber nicht jeder vertraut ihnen.
-- **Dargan:** Regionale Medien und lokale Radios sind wichtiger als nationale Plattformen.
-- **Lyr:** Lokale Medien spiegeln die politische Eigenständigkeit der Täler.
-- **Caldris:** Staatliche Medien dominieren, liefern aber reale Informationen und Dienstleistungen.
-- **Merovan:** Internationale Pressefreiheit trifft auf mächtige Wirtschaftsinteressen.
-- **Theryn:** Staatsmedien prägen das öffentliche Bild; unabhängige und reformorientierte Stimmen wachsen.
-
-## Punkt 13 – Sprache
-
-- **Averon:** Standardsprache dominiert, urbane Jugend entwickelt schnell neue digitale Umgangsformen.
-- **Karsk:** Verwaltungssprache ist präzise und technisch; persönliche Sprache bleibt emotionaler.
-- **Ossaria:** Alte regionale Ausdrücke und Familiennamen besitzen hohen Erinnerungswert.
-- **Rothain:** Alte höfische Begriffe stehen neben moderner republikanischer Alltagssprache.
-- **Sahr:** Handelsstädte sind mehrsprachig; Lehnwörter und Händlerjargon sind verbreitet.
-- **Steinmark:** Verwaltungssprache ist standardisiert, regionale Dialekte bleiben erhalten.
-- **Vael:** Technische Begriffe und Werksjargon prägen viele Regionen.
-- **Vesper:** Menschen verwenden häufig unterschiedliche öffentliche und private Ausdrucksweisen.
-- **Eldran:** Hofsprache und regionale Dialekte bestehen neben moderner Standardsprache.
-- **Namar:** Küsten- und Inseldialekte sind starke Identitätsmarker.
-- **Orthea:** Fachsprache besitzt hohes Prestige, kann aber soziale Distanz erzeugen.
-- **Dargan:** Regionale Dialekte sind stark und gelten als Zeichen lokaler Zugehörigkeit.
-- **Lyr:** Jedes Tal besitzt eigene sprachliche Eigenheiten.
-- **Caldris:** Verwaltungssprache prägt Schule und Behörden; private Umgangssprache bleibt vielfältig.
-- **Merovan:** Mehrsprachigkeit ist besonders in Hafenregionen normal.
-- **Theryn:** Revolutionäre Begriffe prägen Politik und öffentliche Sprache; jüngere Generationen entwickeln neue Ausdrucksweisen.
-
-## Punkt 14 – Essen
-
-- **Averon:** Schnelle urbane Küche, internationale Einflüsse und regionale Bio-Lebensmittel.
-- **Karsk:** Funktionale, nährstofforientierte Küche; privilegierte Schichten pflegen aufwendigere Esskultur.
-- **Ossaria:** Regionale Hausmannskost, Brot, Suppen, Gemüse und Familienrezepte besitzen hohen Stellenwert.
-- **Rothain:** Deftige regionale Küche und historische Festgerichte.
-- **Sahr:** Fisch, Getreide, Gewürze und internationale Handelsprodukte prägen die Küche.
-- **Steinmark:** Regionale Hausmannskost und Vereinsfeste sind wichtig.
-- **Vael:** Kalorienreiche Arbeiterküche, Kantinen und regionale Spezialitäten.
-- **Vesper:** Einfache häusliche Küche; seltene Zutaten werden eher privat gehandelt.
-- **Eldran:** Hofgerichte und regionale bäuerliche Küche stehen nebeneinander.
-- **Namar:** Fisch, Meeresfrüchte, Salz, Getreide und Inselprodukte dominieren.
-- **Orthea:** Moderne, gesundheitsorientierte Küche neben traditionellen Gerichten.
-- **Dargan:** Haltbare Lebensmittel, Fleisch, Milchprodukte und regionale Landwirtschaft.
-- **Lyr:** Bergkäse, Getreide, Fleisch, Kräuter und saisonale Produkte.
-- **Caldris:** Einheitliche Grundversorgung mit regionalen Ergänzungen; Gemeinschaftsküchen sind verbreitet.
-- **Merovan:** Stark internationale Küche durch Handel und Migration.
-- **Theryn:** Einfache, gemeinschaftlich organisierte Küche; Genossenschaften sichern Grundnahrungsmittel.
-
-## Punkt 15 – Kleidung
-
-- **Averon:** Funktionale urbane Kleidung, technische Stoffe und starke Individualisierung.
-- **Karsk:** Praktische, normierte Kleidung; Status zeigt sich eher durch Materialqualität und technische Ausstattung.
-- **Ossaria:** Moderne Kleidung mit regionalen und historischen Symbolen.
-- **Rothain:** Moderne Kleidung neben bewusster Pflege historischer Stile.
-- **Sahr:** Leichte Kleidung, Hafen- und Arbeitskleidung, regionale Stoffe.
-- **Steinmark:** Schlichte, ordentliche Alltagskleidung; Vereine besitzen eigene Farben und Abzeichen.
-- **Vael:** Robuste Arbeitskleidung und technische Schutzkleidung sind kulturell sichtbar.
-- **Vesper:** Unauffällige Kleidung wird bevorzugt; auffällige politische Symbole gelten als riskant.
-- **Eldran:** Klassische Schnitte und regionale Festkleidung bleiben sichtbar.
-- **Namar:** Wetterfeste maritime Kleidung und regionale Festtrachten.
-- **Orthea:** Funktionale, hochwertige Kleidung mit technischer Ästhetik.
-- **Dargan:** Robuste Kleidung für Gelände und Wetter.
-- **Lyr:** Regionale Woll- und Bergkleidung besitzt starke Identitätsfunktion.
-- **Caldris:** Staatlich geförderte Grundkleidung ist schlicht; private Kleidung markiert Individualität.
-- **Merovan:** Internationale Mode trifft regionale Tradition.
-- **Theryn:** Praktische Arbeitskleidung dominiert; revolutionäre Symbole erscheinen bei staatlichen Anlässen.
-
-## Punkt 16 – Architektur
-
-- **Averon:** Glas, Stahl, digitale Infrastruktur, hohe Wohnhäuser und flexible Büroquartiere.
-- **Karsk:** Monumentale Verwaltungsbauten, geplante Wohnkomplexe und funktionale Industriearchitektur.
-- **Ossaria:** Historische Stadtkerne werden mit moderner Technologie verbunden.
-- **Rothain:** Kaiserliche Gebäude stehen neben republikanischen Institutionen und Arbeitervierteln.
-- **Sahr:** Hafenarchitektur, Lagerhäuser, Brücken, Märkte und dichte Handelsviertel.
-- **Steinmark:** Verwaltungsbauten, Bürgerhäuser und funktionale öffentliche Infrastruktur.
-- **Vael:** Fabriken, Energieanlagen und Arbeiterquartiere prägen ganze Regionen.
-- **Vesper:** Kontrollpunkte, abgeschirmte Regierungsviertel und unscheinbare Wohngebäude.
-- **Eldran:** Paläste, Parlamente, Bürgerhäuser und moderne Vorstädte.
-- **Namar:** Hafenanlagen, Werften, Inselhäuser und Küstenbefestigungen.
-- **Orthea:** Forschungszentren, Kliniken und Universitätsviertel mit moderner Infrastruktur.
-- **Dargan:** Kleine robuste Gebäude, Werkstätten, Berghäuser und lokale Baustoffe.
-- **Lyr:** Steinarchitektur, Terrassen, Tunnel und befestigte Bergsiedlungen.
-- **Caldris:** Geplante Wohnviertel, Kliniken, Schulen und zentrale Versorgungseinrichtungen.
-- **Merovan:** Alte Handelsarchitektur, Kolonialbauten, moderne Häfen und vielfältige Wohnviertel.
-- **Theryn:** Monumentale Revolutionsplätze, öffentliche Gebäude, Fabriksiedlungen und Genossenschaftsbauten.
-
-## Punkt 17 – Freizeit
-
-- **Averon:** Gaming, Sport, Reisen, digitale Gemeinschaften und urbane Kultur.
-- **Karsk:** Sport, technische Clubs und staatlich organisierte Freizeit; privilegierte Kreise besitzen exklusive Angebote.
-- **Ossaria:** Museen, Musik, Wandern, Familienfeste und historische Vereine.
-- **Rothain:** Fußball, Regimentstraditionen, Musik, Kneipen und historische Vereine.
-- **Sahr:** Märkte, Hafenfeste, Wassersport und Handelstreffen.
-- **Steinmark:** Vereinsleben, Wandern, Sport und lokale Veranstaltungen.
-- **Vael:** Werksvereine, Motorsport, Mannschaftssport und technische Hobbys.
-- **Vesper:** Kleine private Treffen, Literatur, Musik und diskrete Freundeskreise.
-- **Eldran:** Reitsport, Musik, Theater, regionale Feste und moderne Stadtkultur.
-- **Namar:** Segeln, Fischerei, Schwimmen, Hafenfeste und Inselsport.
-- **Orthea:** Wissenschaftsclubs, Sport, Museen, Debatten und digitale Kultur.
-- **Dargan:** Jagd, Handwerk, Bergsport, Dorffeste und gemeinschaftliche Reparaturtage.
-- **Lyr:** Bergsport, Musik, Dorffeste und religiöse Veranstaltungen.
-- **Caldris:** Staatliche Sport- und Kulturzentren bieten breite, günstige Freizeitangebote.
-- **Merovan:** Theater, Musik, internationale Gastronomie, Sport und Hafenleben.
-- **Theryn:** Mannschaftssport, Kulturhäuser, Arbeiterclubs und politische Jugendorganisationen.
-
-## Punkt 18 – Feste
-
-- **Averon:** Zukunfts- und Stadtfeste, nationale Gründungstage und große digitale Veranstaltungen.
-- **Karsk:** Staatliche Fortschritts- und Leistungstage sowie regionale Arbeitsfeste.
-- **Ossaria:** Gedenktage, Erntefeste und lokale historische Feiertage.
-- **Rothain:** Republikanische Feiertage und kontrovers erinnerte ehemalige Reichstage.
-- **Sahr:** Hafenfeste, Handelsfeste und religiös vielfältige Stadtfeste.
-- **Steinmark:** Bundesfeiern, Vereinsfeste und regionale Erntefeste.
-- **Vael:** Werksjubiläen, Arbeitertage und regionale Industriefeste.
-- **Vesper:** Offizielle Feiertage sind staatlich geprägt; private Feste bleiben bewusst kleiner.
-- **Eldran:** Königliche Zeremonien, nationale Feiertage und regionale Feste.
-- **Namar:** Saisoneröffnungen der Häfen, Seefahrtsfeste und Inseltraditionen.
-- **Orthea:** Wissenschaftswochen, Universitätsfeste und nationale Bildungstage.
-- **Dargan:** Erntefeste, Dorffeste und lokale Gedenktage.
-- **Lyr:** Talfeiern, Bergfeste und religiöse Feiertage.
-- **Caldris:** Staatliche Gemeinschaftstage, Familienfeste und Versorgungsjubiläen.
-- **Merovan:** Hafenfeste und internationale Kulturfeste.
-- **Theryn:** Revolutionstag, Arbeiterfeste und Genossenschaftsfeiern.
-
-## Punkt 19 – Trauer
-
-- **Averon:** Trauer ist privat und oft individuell; digitale Gedenkräume ergänzen traditionelle Rituale.
-- **Karsk:** Staatliche Anerkennung verstorbener Leistungsträger ist sichtbar; Familien trauern persönlicher.
-- **Ossaria:** Öffentliche Erinnerung und Namen der Toten besitzen hohe Bedeutung.
-- **Rothain:** Familien bewahren Briefe, Uniformen und Erinnerungsstücke; die Bewertung militärischer Toter ist umstritten.
-- **Sahr:** Familien und Handelsgemeinschaften unterstützen Hinterbliebene praktisch und finanziell.
-- **Steinmark:** Kommunale und staatliche Trauerfeiern verbinden persönliche Trauer mit öffentlicher Ordnung.
-- **Vael:** Bei Arbeitsunfällen entstehen starke Gemeinschaftsrituale; Werke errichten häufig Gedenkorte.
-- **Vesper:** Öffentliche Trauer kann politisch sensibel sein; private Rituale sind wichtiger.
-- **Eldran:** Königliche und militärische Trauerzeremonien stehen neben privaten Ritualen.
-- **Namar:** Seebestattungen und maritime Gedenkrituale sind verbreitet.
-- **Orthea:** Medizinische und wissenschaftliche Perspektiven auf Tod stehen neben persönlichen Ritualen.
-- **Dargan:** Nachbarschaft trägt Familien in der Trauer praktisch.
-- **Lyr:** Ahnen- und Familiengedenken ist stark lokal geprägt.
-- **Caldris:** Staatliche Betreuung hilft Hinterbliebenen umfassend, registriert ihre Situation aber auch.
-- **Merovan:** Trauerkulturen unterscheiden sich je nach Herkunft und Religion.
-- **Theryn:** Revolutionäre Märtyrer werden öffentlich geehrt, während Familien ihre private Erinnerung bewahren.
-
-## Punkt 20 – Militär
-
-- **Averon:** Professionelles, technologisch vernetztes Militär; gesellschaftlich respektiert, aber nicht allgegenwärtig.
-- **Karsk:** Militär ist sichtbares Instrument des Staates und technisch eng mit medizinischer Kontrolle verbunden.
-- **Ossaria:** Militär ist stark, aber zivile Kontrolle und Erinnerung an Opfer begrenzen Heldenverehrung.
-- **Rothain:** Militär besitzt starke historische Traditionen und wird zugleich kritisch beobachtet.
-- **Sahr:** Militär schützt Handelswege, Häfen und Versorgung.
-- **Steinmark:** Militär gilt als institutioneller Dienst mit standardisierten Verfahren.
-- **Vael:** Militär wird durch gewaltige industrielle Produktionskapazität getragen.
-- **Vesper:** Militär, Geheimdienste und innere Sicherheit sind eng miteinander verbunden.
-- **Eldran:** Territorialverteidigung, Ingenieurwesen und vorbereitete Stellungen sind zentral; zivile Kontrolle bleibt stark.
-- **Namar:** Marine, Küstenverteidigung und mobile Logistik dominieren.
-- **Orthea:** Aufklärung, Präzision, Sensorik und autonome Systeme sind besonders wichtig.
-- **Dargan:** Kleine, robuste Verbände sind auf schwierige Infrastruktur und Gelände vorbereitet.
-- **Lyr:** Lokale Verteidigungskräfte besitzen starke regionale Bindungen.
-- **Caldris:** Militär und innere Sicherheit sind eng verbunden.
-- **Merovan:** Expeditionäre, logistische und maritime Fähigkeiten spiegeln die Handelsgeschichte.
-- **Theryn:** Große Reserve- und Mobilisierungsstrukturen verbinden Militär und Gesellschaft.
-
-## Punkt 21 – Krieg
-
-- **Averon:** Krieg gilt öffentlich als vermeidbares Versagen, zugleich wird permanente technologische Einsatzbereitschaft als notwendig betrachtet.
-- **Karsk:** Krieg wird als technische und gesellschaftliche Belastungsprobe verstanden, bei der Opfer nach staatlichem Nutzen bewertet werden.
-- **Ossaria:** Krieg wird vor allem über seine Opfer und langfristigen Folgen erinnert.
-- **Rothain:** Krieg ist Teil der nationalen Familiengeschichte und deshalb Gegenstand heftiger Erinnerungskämpfe.
-- **Sahr:** Versorgung, Blockaden und Handelswege sind zentrale Kriegserfahrungen.
-- **Steinmark:** Krieg wird als Zusammenbruch geordneter Beziehungen betrachtet; Planung und Verteidigung sollen ihn begrenzen.
-- **Vael:** Krieg wird auch als industrielle Belastungsprobe erlebt, bei der Produktion und Ressourcen entscheidend sind.
-- **Vesper:** Unsicherheit, Spionage und Informationskrieg prägen die öffentliche Wahrnehmung.
-- **Eldran:** Krieg wird als Gefahr für Verfassung, Territorium und historische Ordnung betrachtet.
-- **Namar:** Seewege, Häfen und Versorgung bestimmen die Kriegserfahrung.
-- **Orthea:** Krieg wird stark als Problem von Information, Technik und menschlichen Fehlentscheidungen analysiert.
-- **Dargan:** Krieg bedeutet vor allem unterbrochene Versorgung, zerstörte Infrastruktur und lokale Selbstverteidigung.
-- **Lyr:** Krieg bedroht unmittelbar Täler, Pässe und lokale Autonomie.
-- **Caldris:** Krieg wird als Rechtfertigung für Schutz, Versorgung und Überwachung verstanden; Kritiker fürchten dauerhafte Ausnahmezustände.
-- **Merovan:** Krieg ist eng mit der imperialen Vergangenheit verbunden und wird hinsichtlich Handel und Macht kritisch diskutiert.
-- **Theryn:** Krieg wird in revolutionärer Sprache als Kampf um gesellschaftliche Ordnung interpretiert, während Familien seine menschlichen Kosten erinnern.
-
-## Punkt 22 – Opposition
-
-- **Averon:** Opposition ist legal und vielfältig; Konflikte entstehen eher über Medien, Wirtschaft und digitale Mobilisierung.
-- **Karsk:** Offene Opposition ist riskant; Kritik existiert innerhalb von Institutionen, Familien und informellen Netzwerken.
-- **Ossaria:** Opposition ist Teil des normalen demokratischen Lebens.
-- **Rothain:** Parteien streiten besonders über Vergangenheit, Militär und soziale Ordnung.
-- **Sahr:** Stadtinteressen, Handelsgruppen und regionale Parteien bilden starke Gegenmacht.
-- **Steinmark:** Opposition arbeitet institutionell und argumentiert häufig über Verwaltungsreformen.
-- **Vael:** Gewerkschaften, Umweltbewegungen und regionale Gruppen stellen Konzernmacht infrage.
-- **Vesper:** Opposition ist verdeckt und fragmentiert.
-- **Eldran:** Republikaner, Monarchisten und Verfassungstreue konkurrieren friedlich um Einfluss.
-- **Namar:** Regionen und Inseln bilden häufig oppositionelle Bündnisse gegen Zentralisierung.
-- **Orthea:** Konflikte drehen sich oft um Daten, Wissenschaft, Ethik und politische Legitimation.
-- **Dargan:** Opposition entsteht häufig aus regionalem Misstrauen gegenüber der Zentralregierung.
-- **Lyr:** Opposition ist meist Ausdruck lokaler Souveränität.
-- **Caldris:** Offene Opposition ist begrenzt; viele Bürger unterscheiden zwischen Zustimmung zu Leistungen und Kritik an Kontrolle.
-- **Merovan:** Parteien streiten über Handel, Migration, Imperialgeschichte und wirtschaftliche Macht.
-- **Theryn:** Reformisten, alte Revolutionäre und lokale Räte konkurrieren über die Zukunft des Systems.
-
-## Punkt 23 – Nachbarn
-
-Die Nachbarschaft ist in allen Nationen ein unmittelbarer sozialer Raum. Sie ist zugleich Hilfe, Kontrollinstanz und Quelle lokaler Identität.
-
-- **Averon:** Nachbarn kennen sich weniger persönlich, sind aber über digitale Netzwerke verbunden.
-- **Karsk:** Nachbarschaften sind gut versorgt, aber staatliche Präsenz ist spürbar.
-- **Ossaria:** Nachbarschaften pflegen Gedenkrituale und gegenseitige Hilfe.
-- **Rothain:** Alte Viertel besitzen starke Familien- und Vereinsnetzwerke.
-- **Sahr:** Nachbarschaften in Hafenstädten sind kulturell besonders vielfältig.
-- **Steinmark:** Vereine, Feuerwehr und lokale Einrichtungen verbinden Nachbarn.
-- **Vael:** Werksviertel können fast dörfliche Gemeinschaften bilden.
-- **Vesper:** Vertrauen wird vorsichtig vergeben.
-- **Eldran:** Historische Viertel besitzen starke lokale Identitäten.
-- **Namar:** Nachbarschaftshilfe ist auf Inseln und an der Küste praktisch notwendig.
-- **Orthea:** Akademische Viertel und normale Wohngebiete können sozial weit auseinanderliegen.
-- **Dargan:** Nachbarn sind häufig unmittelbare Krisenhelfer.
-- **Lyr:** Nachbarschaften überschneiden sich mit Familien- und Talnetzwerken.
-- **Caldris:** Gemeinschaftseinrichtungen fördern Nachbarschaft, staatliche Verwaltung erfasst sie zugleich.
-- **Merovan:** Migration macht Nachbarschaften kulturell vielfältig.
-- **Theryn:** Arbeits- und Genossenschaftsgemeinschaften prägen das nachbarschaftliche Leben.
-
-## Punkt 24 – Migration
-
-- **Averon:** Hohe innere und internationale Mobilität; Migration gilt überwiegend als Teil moderner Gesellschaft.
-- **Karsk:** Migration ist streng staatlich gesteuert und nach Nutzenkriterien organisiert.
-- **Ossaria:** Migration ist möglich und wird gesellschaftlich vor allem über Integration und gemeinsame Institutionen diskutiert.
-- **Rothain:** Migration steht häufig im Spannungsfeld zwischen wirtschaftlichem Bedarf und historischer Identität.
-- **Sahr:** Handel macht Migration alltäglich und wirtschaftlich notwendig.
-- **Steinmark:** Migration wird über klare Verwaltungsverfahren organisiert.
-- **Vael:** Industrie zieht Arbeitskräfte an; wirtschaftliche Migration prägt ganze Städte.
-- **Vesper:** Migration ist stark kontrolliert und politisch sensibel.
-- **Eldran:** Migration wird regional unterschiedlich bewertet.
-- **Namar:** Hafenstädte sind traditionell Einwanderungsorte.
-- **Orthea:** Hochqualifizierte Migration ist besonders erwünscht; soziale Integration bleibt eine Herausforderung.
-- **Dargan:** Abwanderung junger Menschen ist oft wichtiger als Zuwanderung.
-- **Lyr:** Binnenmigration zwischen Tälern kann politisch sensibel sein.
-- **Caldris:** Zuwanderung wird stark administrativ gesteuert und in das Versorgungssystem integriert.
-- **Merovan:** Migration ist zentral für Wirtschaft und Gesellschaft; historische Migrationsbewegungen sind Teil nationaler Identität.
-- **Theryn:** Arbeits- und politische Migration wird staatlich organisiert; Reformbewegungen fordern größere persönliche Mobilität.
-
-## Punkt 25 – Familiengeschichte
-
-Familiengeschichte wird zum verbindenden Gedächtnis der sechzehn Nationen. Sie entscheidet nicht darüber, was eine Familie politisch glauben muss, beeinflusst aber, welche Ereignisse sie als persönlich erlebt.
-
-- **Averon:** Familiengeschichten sind häufig von Migration, Berufswechsel und urbaner Mobilität geprägt.
-- **Karsk:** Familien bewahren Geschichten über staatliche Förderung, Anpassung, Ausgrenzung und medizinische Eingriffe oft nur privat.
-- **Ossaria:** Namen, Briefe und Erinnerungen an Kriegstote werden bewusst archiviert.
-- **Rothain:** Familien bewahren sowohl imperiale als auch republikanische Erinnerungen; dieselbe Vergangenheit kann gegensätzlich erzählt werden.
-- **Sahr:** Familiengeschichte ist häufig zugleich Handelsgeschichte.
-- **Steinmark:** Familien erzählen von Beamten, Handwerkern, Soldaten und Vereinsleben; lokale Geschichte ist eng eingebunden.
-- **Vael:** Familien erinnern sich über Werke, Bergwerke, Arbeitskämpfe und technische Leistungen.
-- **Vesper:** Familiengeschichte kann aus unausgesprochenen Geheimnissen bestehen.
-- **Eldran:** Herkunft, Adel, Bürgertum und republikanische Familiengeschichten stehen nebeneinander.
-- **Namar:** Familiengeschichten sind mit Inseln, Schiffen, Häfen und Seereisen verbunden.
-- **Orthea:** Wissenschaftliche und akademische Familiengeschichten können hohen Status erzeugen.
-- **Dargan:** Geschichten werden überwiegend mündlich über Generationen weitergegeben.
-- **Lyr:** Familiengeschichte ist eng mit Tal, Berg, Hof und lokaler Selbstverwaltung verbunden.
-- **Caldris:** Familien erinnern sich sowohl an staatliche Fürsorge als auch an Eingriffe in das Privatleben.
-- **Merovan:** Familien können dieselbe imperiale Vergangenheit als Aufstieg, Ausbeutung, Migration oder Verlust erinnern.
-- **Theryn:** Revolution, Bürgerkrieg, Aufbau und Reform sind in vielen Familien persönliche Geschichte.
-
-# Abschluss: Das gesellschaftliche Gefüge
-
-Mit den Punkten 1–25 besitzt jede Nation nun dieselben Betrachtungsebenen: Raum, Städte, Dörfer, Familie, Jugend, Arbeit, soziale Schichten, Religion, Bildung, Medien, Sprache, Alltag, Freizeit, Trauer, Militär, Krieg, Opposition, Nachbarschaft, Migration und Erinnerung.
-
-Diese Struktur ist absichtlich symmetrisch. Sie ermöglicht später einen Vergleich der Nationen, ohne sie zu vereinfachen. Eine Nation kann technologisch fortgeschritten und gleichzeitig sozial unfrei sein; eine andere kann materiell ärmer und gleichzeitig lokal stärker solidarisch sein. Keine dieser Eigenschaften macht eine Gesellschaft als Ganzes automatisch gut oder schlecht.
-
-Für die weitere Lore gilt daher:
-
-> **Die Nation erklärt den Rahmen. Die Region erklärt den Ort. Die Familie erklärt die Herkunft. Der Mensch entscheidet, was er daraus macht.**
-
-
-# Tiefenausarbeitung – Institutionen, Personen und Orte
-
-Die 25 gesellschaftlichen Grundpunkte bilden den Rahmen. In diesem Abschnitt werden sie in konkrete, wiederverwendbare Lore-Elemente übersetzt: Familien, Personen, Schulen, Unternehmen, Medien, religiöse Einrichtungen, Parteien, Militärverbände, Stadtviertel und historische Ereignisse. Die Elemente sind bewusst so angelegt, dass sie später für Karten, Missionen, Geschichten und Illustrationen verwendet werden können.
-
-## Averon – konkrete Gesellschaft
-
-### Bedeutende Familien
-- **Familie Varen:** Alte bürgerliche Familie aus Novaris; mehrere Generationen im öffentlichen Dienst. Die jüngere Generation arbeitet in Technologieunternehmen.
-- **Familie Senn:** Arbeiter- und Hafenfamilie aus Westhaven. Mehrere Mitglieder sind in Logistik und Gewerkschaften tätig.
-
-### Bekannte Personen
-- **Mira Varen:** Verfassungsjuristin und öffentliche Kritikerin digitaler Überwachung.
-- **Jon Senn:** Logistikingenieur, der für autonome Versorgungssysteme arbeitet.
-
-### Institutionen
-- **Universität Novaris:** Führende Hochschule für Informatik, Politik und Kommunikationssysteme.
-- **Institut für Öffentliche Netze:** Entwickelt zivile und militärische Kommunikationsinfrastruktur.
-- **Freies Nachrichtenforum:** Zusammenschluss unabhängiger digitaler Journalisten.
-
-### Wirtschaft
-- **Aeronet Systems:** Großes Technologieunternehmen für Sensorik und Kommunikation.
-- **Westhaven Logistics:** Hafen- und Versorgungskonzern mit internationalem Geschäft.
-
-### Medien und Kultur
-- **Der Morgenkanal:** Schnelles digitales Nachrichtenmedium mit großer Reichweite.
-- **Forum 7:** Politische Debattenplattform.
-
-### Militär
-- **1. Mobile Brigade Novaris:** Hochmobile professionelle Formation mit Schwerpunkt Aufklärung und schneller Reaktion.
-- **Netzaufklärungskommando:** Militärische Einheit für Sensorik, Kommunikation und elektronische Gefechtsführung.
-
-### Stadtviertel Novaris
-- **Regierungsring:** Ministerien und öffentliche Institutionen.
-- **Neonviertel:** Start-ups, Bars, kleine Wohnungen und junge Berufstätige.
-- **Altmarkt:** Historisches Zentrum mit Familienbetrieben.
-
-### Historische Ereignisse
-- **Gründung der Jungen Republik:** Übergang von einer älteren Staatsordnung zu Averons heutiger Republik.
-- **Netzkrise:** Großer Ausfall kritischer digitaler Systeme, der das Vertrauen in vollständige Automatisierung erschütterte.
-
-## Karsk – konkrete Gesellschaft
-
-### Bedeutende Familien
-- **Familie Koren:** Technokratische Ärztefamilie mit hohem staatlichem Status.
-- **Familie Drev:** Arbeiterfamilie aus Dravik, deren Angehörige in mehreren Generationen für dieselbe Produktionsregion arbeiteten.
-
-### Bekannte Personen
-- **Dr. Elena Koren:** Leiterin eines staatlichen Implantationsinstituts; überzeugt, dass Technologie menschliches Leid reduzieren kann.
-- **Marek Drev:** Arbeitervertreter, der Verbesserungen fordert, ohne das System grundsätzlich abzulehnen.
-
-### Institutionen
-- **Zentralamt für Menschliche Leistungsfähigkeit:** Bewertet medizinische und berufliche Eignung.
-- **Varkescher Medizinakademie:** Eliteinstitution für Implantat- und Regenerationsmedizin.
-
-### Wirtschaft
-- **Karsk Biomech:** Hersteller medizinischer und militärischer Körpertechnik.
-- **Zentralwerke Dravik:** Schwerindustrie und militärische Produktion.
-
-### Medien und Kultur
-- **Staatsnetz Karsk:** Offizielle Nachrichten und Bildungsprogramme.
-- **Die Stimme der Leistung:** Zeitschrift über erfolgreiche Bürger und technische Fortschritte.
-
-### Militär
-- **Karsker Sicherheitskorps:** Stark technisierte reguläre Streitkräfte.
-- **Grenzsektor Nord:** Militärische Verbände und Überwachungseinheiten entlang der Außengrenze.
-
-### Stadtviertel Varkesh
-- **Zentralforum:** Ministerien und staatliche Institutionen.
-- **Medizinring:** Kliniken, Labore und medizinische Wohnkomplexe.
-- **Produktionsgürtel:** Industrie und Arbeiterwohnungen.
-
-### Historische Ereignisse
-- **Die Effizienzreform:** Einführung der heutigen staatlichen Bewertungsordnung.
-- **Die Implantatkrise:** Reihe schwerer medizinischer Fehlschläge, die zur Verschärfung staatlicher Kontrollen führte.
-
-## Ossaria – konkrete Gesellschaft
-
-### Familien
-- **Familie Ossan:** Historikerfamilie aus Valeris.
-- **Familie Mareth:** Handwerkerfamilie aus Marenfeld.
-
-### Personen
-- **Professor Elias Ossan:** Historiker und Verteidiger öffentlicher Erinnerungskultur.
-- **Lena Mareth:** Schutztechnikerin und Veteranenangehörige.
-
-### Institutionen
-- **Archiv der Gefallenen:** Nationales Archiv persönlicher Kriegszeugnisse.
-- **Freie Akademie Ossar:** Forschungs- und Bildungseinrichtung.
-
-### Wirtschaft
-- **Ossarische Schutzwerke:** Hersteller von Schutzsystemen und Sensorik.
-- **Marenfelder Maschinenbau:** Mittelständischer technischer Betrieb.
-
-### Medien
-- **Die Freie Stimme:** Große unabhängige Zeitung.
-- **Archivfunk:** Historischer Rundfunkkanal.
-
-### Militär
-- **Ossarische Schutzbrigade:** Professionelle Verteidigungsformation.
-- **Grenzkorps Kareth:** Territorialverbände an der Grenze.
-
-### Stadtviertel Ossar
-- **Alte Mauer:** Historisches Zentrum.
-- **Gedenkbezirk:** Museen, Friedhöfe und Archive.
-- **Technologiering:** Forschung und Produktion.
-
-### Historische Ereignisse
-- **Der Große Grenzkrieg:** Konflikt, der Ossarias moderne Erinnerungskultur prägte.
-- **Die Namenlisten:** Bürgerbewegung zur vollständigen Dokumentation der Kriegstoten.
-
-## Rothain – konkrete Gesellschaft
-
-### Familien
-- **Haus Rothen:** Alte Familie mit imperialer Vergangenheit.
-- **Familie Eisen:** Arbeiterfamilie aus Eisenfurt.
-
-### Personen
-- **Albrecht Rothen:** Historiker und Vertreter traditioneller Eliten.
-- **Mara Eisen:** Gewerkschaftsorganisatorin und republikanische Aktivistin.
-
-### Institutionen
-- **Nationalarchiv Rothenburg:** Bewahrt kaiserliche und republikanische Dokumente.
-- **Bund der Veteranenfamilien:** Gesellschaftlicher Verband ehemaliger Soldatenfamilien.
-
-### Wirtschaft
-- **Eisenfurter Werke:** Großbetrieb für Maschinenbau.
-- **Rothen & Söhne:** Alte Handels- und Finanzfamilie.
-
-### Medien
-- **Republik heute:** Republikanisches Nachrichtenblatt.
-- **Die Krone:** Historisch-konservatives Magazin.
-
-### Militär
-- **1. Republikanisches Korps:** Traditionell geprägte reguläre Formation unter ziviler Kontrolle.
-- **Grenzwachtbrigade:** Verteidigungsverband ehemaliger Festungsregionen.
-
-### Stadtviertel Rothenburg
-- **Kronenviertel:** Alte Paläste und ehemalige Hofgebäude.
-- **Republikforum:** Parlament und moderne Verwaltung.
-- **Eisenring:** Arbeiter- und Industrieviertel.
-
-### Historische Ereignisse
-- **Fall der Krone:** Ende des alten Imperiums.
-- **Republikanischer Neuaufbau:** Aufbau der heutigen Staatsordnung.
-
-## Sahr – konkrete Gesellschaft
-
-### Familien
-- **Familie Sarin:** Alte Handelsfamilie aus Sarun.
-- **Familie Vel:** Hafenarbeiter- und Fischerfamilie.
-
-### Personen
-- **Nadia Sarin:** Handelsunternehmerin und Mitglied des Stadtrates.
-- **Tomas Vel:** Hafenmeister und Gewerkschaftsvertreter.
-
-### Institutionen
-- **Bund der Handelsstädte:** Politischer und wirtschaftlicher Zusammenschluss.
-- **Saruner Handelskammer:** Einflussreiche Wirtschaftsorganisation.
-
-### Wirtschaft
-- **Sarin Handelsgruppe:** Familienunternehmen für Fernhandel.
-- **Velisport Werften:** Große Schiffbauindustrie.
-
-### Medien
-- **Der Handelskurier:** Wirtschafts- und Politikzeitung.
-- **Hafenstimme:** Lokales Blatt der Arbeiter.
-
-### Militär
-- **Bundeshandelsflotte:** Schutz von Häfen und Handelswegen.
-- **Flusssicherungsregiment:** Sicherung von Transportwegen.
-
-### Stadtviertel Sarun
-- **Kaufmannsring:** Banken und Handelshäuser.
-- **Alter Hafen:** Lagerhäuser und Märkte.
-- **Flussviertel:** Arbeiter und kleine Händler.
-
-### Historische Ereignisse
-- **Gründung des Handelsbundes:** Zusammenschluss der wichtigsten Städte.
-- **Große Blockade:** Versorgungskrise, die die Bedeutung der Handelswege endgültig bewies.
-
-## Steinmark – konkrete Gesellschaft
-
-### Familien
-- **Familie Stein:** Verwaltungsbeamte über mehrere Generationen.
-- **Familie Falk:** Maschinenbauerfamilie aus dem Norden.
-
-### Personen
-- **Clara Stein:** Bundesrichterin.
-- **Johann Falk:** Gewerkschaftlich engagierter Ingenieur.
-
-### Institutionen
-- **Bundesverwaltungsakademie:** Ausbildungseinrichtung für Beamte.
-- **Bundesrechnungshof:** Symbol institutioneller Kontrolle.
-
-### Wirtschaft
-- **Nordwerke:** Maschinenbau und Logistik.
-- **Südmark Genossenschaft:** Zusammenschluss regionaler Betriebe.
-
-### Medien
-- **Bundesblatt:** Sachorientierte nationale Zeitung.
-- **Der Verein:** Wochenzeitung über regionale Gemeinschaften.
-
-### Militär
-- **Bundesheer Steinmark:** Stark standardisierte Streitkräfte.
-- **Ostverteidigungskommando:** Territorialverband an der historischen Grenze.
-
-### Stadtviertel Steinburg
-- **Bundesforum:** Regierung und Gerichte.
-- **Bürgerstadt:** Wohn- und Geschäftsviertel.
-- **Alte Festung:** Militärmuseum und Gedenkstätte.
-
-### Historische Ereignisse
-- **Der Bundesvertrag:** Gründung der heutigen Föderation.
-- **Die Verwaltungsreform:** Vereinheitlichung von Recht und Verwaltung.
-
-## Vael – konkrete Gesellschaft
-
-### Familien
-- **Familie Vaal:** Alte Industriellenfamilie.
-- **Familie Stahl:** Mehrgenerationenfamilie aus Stahlbruck.
-
-### Personen
-- **Rudolf Vaal:** Konzernvorsitzender und einflussreicher Industrieller.
-- **Anja Stahl:** Arbeitervertreterin und lokale Politikerin.
-
-### Institutionen
-- **Industrieverband Vael:** Dachverband der Großunternehmen.
-- **Technische Hochschule Vaalen:** Führende Ausbildungsstätte für Maschinenbau.
-
-### Wirtschaft
-- **Vaalen Industrial:** Großkonzern für Maschinen und Militärproduktion.
-- **Stahlbruck Werke:** Stahl- und Fahrzeugproduktion.
-
-### Medien
-- **Wirtschaftsrundschau:** Wirtschaftlich einflussreiches Medium.
-- **Werksstimme:** Zeitung der Industriearbeiter.
-
-### Militär
-- **Schwere Heeresgruppe Vael:** Große mechanisierte Verbände.
-- **Artilleriekorps Vaalen:** Schwerpunkt auf schwerer Feuerunterstützung.
-
-### Stadtviertel Vaalen
-- **Konzernring:** Unternehmenszentralen.
-- **Arbeiterviertel:** Dichte Wohnquartiere.
-- **Eisenhafen:** Schwerindustrie und Logistik.
-
-### Historische Ereignisse
-- **Industrialisierung Vaels:** Entstehung der modernen Wirtschaftsmacht.
-- **Großer Arbeiterstreik:** Wendepunkt im Verhältnis zwischen Staat, Konzernen und Arbeiterschaft.
-
-## Vesper – konkrete Gesellschaft
-
-### Familien
-- **Familie Velan:** Beamtenfamilie mit Zugang zu staatlichen Institutionen.
-- **Familie Sora:** Händlerfamilie mit starkem privaten Netzwerk.
-
-### Personen
-- **Ilan Velan:** Nachrichtendienstbeamter, der zwischen Pflicht und persönlicher Moral steht.
-- **Mira Sora:** Buchhändlerin und diskrete Vermittlerin unabhängiger Informationen.
-
-### Institutionen
-- **Direktorat für Staatssicherheit:** Zentrale Sicherheitsbehörde.
-- **Archivamt Velis:** Kontrolliert wichtige historische Dokumente.
-
-### Wirtschaft
-- **Vespera Handelswerke:** Staatlich kontrollierter Handelskonzern.
-- **Freier Markt Darsin:** Halbprivate Wirtschaftszone.
-
-### Medien
-- **Vesperisches Staatsnetz:** Offizielle Informationsquelle.
-- **Nachtbrief:** Illegales Informationsnetzwerk.
-
-### Militär
-- **Schleierkorps:** Aufklärung und verdeckte Operationen.
-- **Grenzaufklärung Vesper:** Spezialisierte Überwachungskräfte.
-
-### Stadtviertel Velis
-- **Ministerring:** Staatliche Machtzentren.
-- **Altstadt:** Geschäfte und private Netzwerke.
-- **Sicherheitsbezirk:** Kontrollierte Regierungszone.
-
-### Historische Ereignisse
-- **Die Verschwiegene Krise:** Politische Krise, deren vollständige Geschichte bis heute unklar ist.
-- **Der Schleierpakt:** Abkommen, das die heutige Sicherheitsordnung begründete.
-
-## Eldran – konkrete Gesellschaft
-
-### Familien
-- **Haus Aurel:** Alte königliche Verwandtschaft.
-- **Familie Nor:** Bürgerliche Unternehmerfamilie.
-
-### Personen
-- **König Adrian IV.:** Verfassungstreuer Monarch mit begrenzter politischer Macht.
-- **Elena Nor:** Republikanische Abgeordnete und Verfassungsjuristin.
-
-### Institutionen
-- **Kronrat:** Beratendes königliches Organ.
-- **Verfassungsgericht Aurelien:** Wächter der institutionellen Ordnung.
-
-### Wirtschaft
-- **Nor Industrien:** Moderne Maschinen- und Logistikunternehmen.
-- **Südmark Landwirtschaftsbund:** Zusammenschluss landwirtschaftlicher Betriebe.
-
-### Medien
-- **Kronenzeitung:** Konservatives Medium.
-- **Die Republik:** Liberales Nachrichtenblatt.
-
-### Militär
-- **Königliche Territorialkräfte:** Formal königliche, praktisch parlamentarisch kontrollierte Streitkräfte.
-- **Hohenmark-Pionierkorps:** Ingenieur- und Befestigungsspezialisten.
-
-### Stadtviertel Aurelien
-- **Kronenviertel:** Palast und zeremonielle Gebäude.
-- **Parlamentsstadt:** Ministerien und Parlament.
-- **Bürgerhafen:** Moderne Wirtschaft.
-
-### Historische Ereignisse
-- **Die Verfassungskrise:** Machtkampf, der die Grenzen der Monarchie festlegte.
-- **Der Verfassungspakt:** endgültige Anerkennung der parlamentarischen Ordnung.
-
-## Namar – konkrete Gesellschaft
-
-### Familien
-- **Familie Maren:** Alte Seefahrerfamilie.
-- **Familie Sol:** Werftfamilie aus Port Sol.
-
-### Personen
-- **Lio Maren:** Kapitän und Regionalpolitiker.
-- **Sara Sol:** Schiffbauingenieurin.
-
-### Institutionen
-- **Bundesrat der Inseln:** Vertretung der autonomen Regionen.
-- **Maritime Akademie Maris:** Ausbildung für Seefahrt und Küstenverteidigung.
-
-### Wirtschaft
-- **Maris Reederei:** Große Handelsreederei.
-- **Sol Werften:** Moderner Schiffbau.
-
-### Medien
-- **Küstenkurier:** Nationale maritime Zeitung.
-- **Inselstimme:** Regionales Medium des Inselbundes.
-
-### Militär
-- **Küstenverteidigungsflotte:** Schutz von Häfen und Inseln.
-- **Maritime Aufklärung:** Sensor- und Überwachungskräfte.
-
-### Stadtviertel Maris
-- **Großer Hafen:** Handel und Schifffahrt.
-- **Werftviertel:** Arbeiter und Ingenieure.
-- **Inselmarkt:** Regionale Händler.
-
-### Historische Ereignisse
-- **Bund der Küsten:** Föderationsgründung.
-- **Die große Sturmkatastrophe:** Naturkatastrophe, die nationale Küstenhilfeinstitutionen hervorbrachte.
-
-## Orthea – konkrete Gesellschaft
-
-### Familien
-- **Familie Aster:** Wissenschaftlerfamilie.
-- **Familie Feld:** Landwirtschaftliche Familie aus dem Süden.
-
-### Personen
-- **Dr. Mara Aster:** Robotikforscherin.
-- **Jonas Feld:** Landwirt und Kritiker akademischer Eliten.
-
-### Institutionen
-- **Akademie Asteron:** Größter Forschungsverbund.
-- **Institut für Gesellschaftsdaten:** Analysiert öffentliche Politik.
-
-### Wirtschaft
-- **Orthea Systems:** Robotik und Sensorik.
-- **Helion Medical:** Medizintechnik.
-
-### Medien
-- **Wissenschaft Heute:** Fach- und Nachrichtenmedium.
-- **Der Bürger:** Kritisches Massenmedium.
-
-### Militär
-- **Präzisionskorps Orthea:** Aufklärung und präzise Einsatzsysteme.
-- **Autonome Aufklärungseinheit Asteron:** Entwicklung und Einsatz unbemannter Systeme.
-
-### Stadtviertel Asteron
-- **Universitätsring:** Hochschulen und Forschung.
-- **Medizinbezirk:** Kliniken.
-- **Altstadt:** normale Wohn- und Geschäftsviertel.
-
-### Historische Ereignisse
-- **Die Große Wissenschaftsreform:** Ausbau unabhängiger Forschung.
-- **Der Algorithmusstreit:** öffentliche Krise über Grenzen automatisierter Entscheidungen.
-
-## Dargan – konkrete Gesellschaft
-
-### Familien
-- **Familie Darg:** Bergarbeiter und Handwerker.
-- **Familie Fern:** Alte Grenzfamilie.
-
-### Personen
-- **Rian Darg:** Reparaturmeister und Gemeinderat.
-- **Mila Fern:** Lehrerin und regionale Organisatorin.
-
-### Institutionen
-- **Rat der Grenzregionen:** Starke regionale Interessenvertretung.
-- **Technische Schule Hochwacht:** Ausbildung für Bergbau und Reparatur.
-
-### Wirtschaft
-- **Dargan Bergwerke:** Regionaler Rohstoffproduzent.
-- **Fern Transport:** Kleines Logistiknetz.
-
-### Medien
-- **Grenzblatt:** Regionalzeitung.
-- **Flussfunk:** Radiosender entlang des Transportkorridors.
-
-### Militär
-- **Grenzbrigade Dargan:** Mobile Verteidigungskräfte.
-- **Hochlandpioniere:** Gebirgs- und Ingenieurverbände.
-
-### Stadtviertel Dargesh
-- **Flussmarkt:** Handel.
-- **Werkviertel:** Reparatur und Handwerk.
-- **Ratsberg:** Verwaltung.
-
-### Historische Ereignisse
-- **Der Grenzaufstand:** Ursprung der starken regionalen Selbstverwaltung.
-- **Winterblockade:** Versorgungskrise, die Dargans Reparatur- und Selbsthilfeethos prägte.
-
-## Lyr – konkrete Gesellschaft
-
-### Familien
-- **Familie Val:** Alte politische Familie.
-- **Familie Hoch:** Bergbau- und Handwerkerfamilie.
-
-### Personen
-- **Nera Val:** Delegierte des Bundeskongresses.
-- **Tarin Hoch:** Bergingenieur und Gemeinderat.
-
-### Institutionen
-- **Bundeskongress Valen:** Gemeinsames politisches Organ.
-- **Rat der Täler:** Koordinierung regionaler Interessen.
-
-### Wirtschaft
-- **Hochgrat Bergbau:** Lokaler Rohstoffbetrieb.
-- **Nordtal Handelshaus:** Regionaler Handelsverbund.
-
-### Medien
-- **Talstimmen:** Zusammenschluss lokaler Zeitungen.
-- **Bergfunk:** Radio- und Informationsnetz.
-
-### Militär
-- **Talverteidigungskräfte:** Regionale Verbände.
-- **Passwachtkorps:** Schutz strategischer Gebirgspässe.
-
-### Stadtviertel Valen
-- **Bundesplatz:** Gemeinsame Institutionen.
-- **Handwerkerviertel:** Werkstätten und Märkte.
-- **Hochstadt:** Alte Familien und Verwaltung.
-
-### Historische Ereignisse
-- **Der Bund der Täler:** Gründung der Konföderation.
-- **Die Passkrise:** Konflikt um gemeinsame Verteidigung und regionale Souveränität.
-
-## Caldris – konkrete Gesellschaft
-
-### Familien
-- **Familie Seren:** Staatsbeamtenfamilie.
-- **Familie Grün:** Arbeiterfamilie aus einer Versorgungssiedlung.
-
-### Personen
-- **Dr. Elias Seren:** Leiter einer staatlichen Klinik.
-- **Mara Grün:** Beschäftigte in einer staatlichen Fabrik und Unterstützerin des Sozialstaates.
-
-### Institutionen
-- **Ministerium für Bürgerwohl:** Koordiniert Versorgung und Sozialleistungen.
-- **Zentrale Gesundheitsverwaltung:** Medizinische Versorgung und Registrierung.
-
-### Wirtschaft
-- **Caldrische Staatswerke:** Große Produktionsbetriebe.
-- **Versorgungsbund:** Landwirtschaft und Verteilung.
-
-### Medien
-- **Bürgerkanal Caldris:** Staatliches Massenmedium.
-- **Forum der Gemeinschaft:** kontrollierte öffentliche Debattenplattform.
-
-### Militär
-- **Schutzkorps Caldris:** Militär und innere Sicherheit eng verbunden.
-- **Versorgungsbrigade Seren:** Logistik und Schutz kritischer Infrastruktur.
-
-### Stadtviertel Seren
-- **Versorgungsring:** Kliniken, Schulen und Behörden.
-- **Wohnstadt:** Planmäßige Familienquartiere.
-- **Sicherheitsforum:** Regierungs- und Kontrollbehörden.
-
-### Historische Ereignisse
-- **Der Sozialvertrag:** Einführung des heutigen umfassenden Versorgungssystems.
-- **Die Sicherheitsreform:** Ausweitung biometrischer und elektronischer Kontrolle.
-
-## Merovan – konkrete Gesellschaft
-
-### Familien
-- **Familie Merov:** Alte Handels- und Bankiersfamilie.
-- **Familie Asha:** Familie mit Wurzeln in einer ehemaligen Überseeprovinz.
-
-### Personen
-- **Luc Merov:** Unternehmer und Abgeordneter.
-- **Samira Asha:** Historikerin und Vertreterin postimperialer Erinnerungskultur.
-
-### Institutionen
-- **Handelsparlament Merovia:** Zentrale politische Institution.
-- **Institut für Imperiale Geschichte:** Forschung und öffentliche Debatte.
-
-### Wirtschaft
-- **Merov International:** Handels- und Finanzkonzern.
-- **Neuport Logistics:** Internationaler Hafenbetreiber.
-
-### Medien
-- **Merovia Journal:** Große nationale Zeitung.
-- **Stimmen der Übersee:** Plattform für postimperiale Perspektiven.
-
-### Militär
-- **Expeditionskorps Merovia:** Mobile Streitkräfte für Auslandseinsätze und Krisen.
-- **Hafeningenieurkorps:** Logistik und Infrastruktur.
-
-### Stadtviertel Merovia
-- **Alte Krone:** historische Regierungs- und Finanzgebäude.
-- **Hafenring:** internationale Wirtschaft.
-- **Neuviertel:** migrantisch geprägte Wohngebiete.
-
-### Historische Ereignisse
-- **Ende des Imperiums:** Übergang zur heutigen Handelsrepublik.
-- **Die Rückkehrflotte:** große Rückführung von Soldaten und Zivilisten aus ehemaligen Überseegebieten.
-
-## Theryn – konkrete Gesellschaft
+## Konkrete Lore-Anker
 
 ### Familien
 - **Familie Novak:** Revolutionsveteranenfamilie.
@@ -4108,31 +4568,96 @@ Die 25 gesellschaftlichen Grundpunkte bilden den Rahmen. In diesem Abschnitt wer
 - **Die Jahre des Aufbaus:** Industrialisierung und Aufbau der heutigen Staatsstruktur.
 - **Die Reformkrise:** aktueller Konflikt zwischen Zentralmacht, Räten und Reformern.
 
-# Wiederkehrende Personen und Orte als Lore-Anker
+---
 
-Einige Elemente sollen bewusst als wiederkehrende Anker dienen. Sie können in späteren Geschichten, Kartentexten und Illustrationen erneut auftauchen.
+# III. Gemeinsame Maßstäbe für die weitere Lore
 
-- **Novaris / Averon:** Mira Varen und das Institut für Öffentliche Netze.
-- **Varkesh / Karsk:** Dr. Elena Koren und die Varkescher Medizinakademie.
-- **Ossar / Ossaria:** Professor Elias Ossan und das Archiv der Gefallenen.
-- **Rothenburg / Rothain:** Mara Eisen und der Bund der Veteranenfamilien.
-- **Sarun / Sahr:** Nadia Sarin und die Handelskammer.
-- **Steinburg / Steinmark:** Clara Stein und die Bundesverwaltungsakademie.
-- **Vaalen / Vael:** Anja Stahl und die Stahlbruck Werke.
-- **Velis / Vesper:** Mira Sora und der Nachtbrief.
-- **Aurelien / Eldran:** Elena Nor und das Verfassungsgericht.
-- **Maris / Namar:** Lio Maren und die Maritime Akademie.
-- **Asteron / Orthea:** Dr. Mara Aster und der Algorithmusstreit.
-- **Dargesh / Dargan:** Rian Darg und die Hochlandpioniere.
-- **Valen / Lyr:** Nera Val und der Rat der Täler.
-- **Seren / Caldris:** Dr. Elias Seren und das Ministerium für Bürgerwohl.
-- **Merovia / Merovan:** Samira Asha und das Institut für Imperiale Geschichte.
-- **Novagrad / Theryn:** Elena Miren und der Reformkonflikt.
+## Der Alltag als gemeinsamer Maßstab
 
-Diese Personen sind nicht als endgültige Hauptfiguren festgelegt. Sie dienen zunächst als soziale Anker und können später verändert oder vertieft werden.
+Ein und dieselbe Situation kann für Menschen der sechzehn Nationen völlig unterschiedlich aussehen.
 
-# Grundregel für die weitere Lore
+Ein krankes Kind kann in Karsk nach staatlichem Nutzen bewertet werden, in Caldris umfassend versorgt und registriert werden, in Averon zwischen vielen Angeboten wählen oder in Dargan vor allem an der Entfernung zur nächsten Klinik scheitern.
 
-Neue Details sollen nicht isoliert erfunden werden. Ein neues Unternehmen braucht einen Ort, eine soziale Funktion und eine historische Erklärung. Eine neue Familie braucht einen Beruf, eine Region und eine Erinnerung. Ein Militärverband braucht eine gesellschaftliche Herkunft. Ein Stadtviertel braucht eine wirtschaftliche und historische Ursache.
+Ein eingezogenes Familienmitglied kann Pflicht, Aufstieg, wirtschaftliche Not, Schande oder eine Möglichkeit zum Schutz der Familie bedeuten.
 
-So entsteht ein Netz aus Ursache und Wirkung statt einer bloßen Sammlung von Namen. Diese Vorgehensweise entspricht dem Grundprinzip glaubwürdigen Worldbuildings: Geographie, Institutionen, Wirtschaft, Kultur und persönliche Erfahrung sollen sich gegenseitig erklären und Konflikte erzeugen. citeturn0search1turn0search3
+Die biologische Realität bleibt dieselbe. Die gesellschaftliche Bedeutung ist verschieden.
+
+> **Der Krieg beginnt auf der Karte. Seine Folgen beginnen am Küchentisch.**
+
+## Gesellschaftliche Spannungsachsen
+
+Innerhalb jeder Nation können mindestens diese Konflikte auftreten:
+- Stadt gegen Land
+- Arm gegen Reich
+- Jung gegen Alt
+- Zivilbevölkerung gegen Sicherheitsapparat
+- politische Regierung gegen Militär
+- traditionelle gegen moderne Lebensweisen
+- Zentrum gegen Regionen
+- religiöse gegen säkulare Gruppen
+- Arbeiterschaft gegen wirtschaftliche Eliten
+- Veteranen gegen Kriegsgegner
+- technische Optimierung gegen menschliche Autonomie
+- nationale Interessen gegen internationale Kooperation
+
+Eine Nation kann während eines langen Krieges politisch instabil werden, ohne dass ihre Regierung sofort zusammenbricht.
+
+## Der einzelne Mensch
+
+Ein Bürger ist nicht zuerst Soldat, Arbeiter, Technokrat, Revolutionär oder Aristokrat.
+
+Er ist zunächst ein Mensch.
+
+Er hat eine Familie, Gewohnheiten, Erinnerungen und Hoffnungen. Er kann Angst haben, jemanden lieben, sich irren, seine Regierung unterstützen oder sie später ablehnen.
+
+Deshalb besteht keine Bevölkerung ausschließlich aus Karikaturen ihrer Regierung.
+
+## Historischer Grundsatz
+
+Die sechzehn Nationen sind keine sechzehn isolierten Geschichten.
+
+Menschen wanderten aus. Händler brachten Ideen über Grenzen. Wissenschaftler wechselten Staaten. Flüchtlinge gründeten neue Viertel. Soldaten heirateten Menschen aus anderen Ländern. Unternehmen bauten Fabriken außerhalb ihrer Heimat. Religionen und Sprachen verbreiteten sich.
+
+Dadurch trägt jede Nation Spuren ihrer Nachbarn in sich.
+
+Der Krieg zerstört deshalb nicht nur Frontlinien. Er zerreißt Beziehungen, die über Generationen entstanden sind.
+
+## Gemeinsames Raster für zukünftige Ergänzungen
+
+| Ebene | Leitfrage |
+|---|---|
+| Hauptstadt | Wie sieht das politische Zentrum aus? |
+| Regionen | Welche Landschaften und regionalen Unterschiede existieren? |
+| Städte | Welche gesellschaftlichen Funktionen besitzen die Städte? |
+| Dörfer | Wie lebt die Landbevölkerung? |
+| Familie | Welche Familienformen und Generationenbeziehungen gibt es? |
+| Jugend | Welche Hoffnungen und Ängste prägen junge Menschen? |
+| Arbeit | Wovon leben die Menschen? |
+| Armut | Wie sieht soziale Not konkret aus? |
+| Wohlstand | Wie zeigt sich Reichtum und Status? |
+| Religion | Welche Glaubensformen und Rituale existieren? |
+| Bildung | Was lernen Kinder und Jugendliche? |
+| Medien | Wem glauben die Menschen? |
+| Sprache | Welche Begriffe und Umgangsformen sind typisch? |
+| Essen | Welche Gerichte gehören zum Alltag? |
+| Kleidung | Was tragen Zivilisten und Soldaten? |
+| Architektur | Wie sieht die gebaute Umwelt aus? |
+| Freizeit | Was tun Menschen außerhalb von Arbeit und Schule? |
+| Feste | Welche Ereignisse verbinden die Gesellschaft? |
+| Trauer | Wie wird mit Tod und Verlust umgegangen? |
+| Militär | Wie erlebt ein Zivilist die Streitkräfte? |
+| Krieg | Wie verändert Mobilisierung den Alltag? |
+| Opposition | Wer fordert Veränderung? |
+| Nachbarn | Wie funktionieren lokale Gemeinschaften? |
+| Migration | Wer zieht wohin und warum? |
+| Familiengeschichte | Welche alten Ereignisse werden bis heute erzählt? |
+
+## Abschluss
+
+Die Nation erklärt den Rahmen.  
+Die Region erklärt den Ort.  
+Die Familie erklärt die Herkunft.  
+Die Geschichte erklärt die Erinnerung.  
+Der einzelne Mensch entscheidet, was er daraus macht.
+
+Das ist die Grundlage für eine Welt, in der Krieg glaubwürdig dargestellt werden kann, ohne ihn zu glorifizieren.
