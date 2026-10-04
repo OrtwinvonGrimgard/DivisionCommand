@@ -120,17 +120,29 @@ Vespers Stärke ist Unsicherheit beim Gegner. Seine Schwäche ist das eigene Mis
 
 **Kern:** Vesper möchte, dass der Gegner niemals sicher weiß, was er eigentlich gesehen hat.
 
-## Eldran – Krieg als Bewährungsprobe der Verfassung
+## Eldran – Krieg als Bewährungsprobe staatlicher Kontinuität
 
-Eldran verbindet monarchische Tradition mit parlamentarischer Ordnung. Militärdienst ist deshalb Schutz der Heimat und Dienst an einer Verfassung zugleich.
+Eldran ist eine starke konstitutionelle Monarchie. Die Verfassung begrenzt die Krone und gibt den Bürgern grundlegende Freiheiten, macht den Monarchen aber nicht zu einer rein zeremoniellen Figur. Die Krone besitzt tatsächliche politische und militärische Autorität. Das Parlament ist ein eigenständiger Teil des Staates, versteht seine Aufgabe jedoch überwiegend darin, die Krone und die staatliche Ordnung zu tragen, nicht sie grundsätzlich zu kontrollieren.
 
-Krieg prüft nicht nur die Grenzen des Landes, sondern die Kontinuität des Staates. Institutionen sollen auch unter Druck funktionieren.
+Für große Teile der Gesellschaft ist diese Ordnung kein Widerspruch zur Freiheit. Freiheit wird nicht primär als möglichst schwacher Staat verstanden, sondern als Freiheit innerhalb einer stabilen politischen Ordnung. Regierungen können wechseln; die Krone bleibt. Gerade diese Kontinuität begründet ihre gesellschaftliche Verehrung.
 
-Der Soldat verkörpert Dienst, Tradition und Disziplin. Die Streitkräfte besitzen klare Hierarchien, bleiben aber politisch und rechtlich kontrolliert.
+Der zentrale politische Gedanke lautet:
 
-Gefallene werden öffentlich geehrt. Monarchische und republikanische Formen des Gedenkens bestehen nebeneinander.
+**„Das Parlament verwaltet den Staat. Die Krone führt ihn.“**
 
-Pioniere, territoriale Verteidigung und der Schutz von Infrastruktur besitzen hohen Stellenwert. Eldrans Stärke ist Vorbereitung; seine Schwäche ist die langsamere Anpassung an völlig unerwartete Formen des Konflikts.
+Der Staat darf in einer Krise nicht auseinanderbrechen. Deshalb betrachtet Eldran Krieg als Prüfung der staatlichen Kontinuität. Verteidigt werden nicht nur Grenzen und Städte, sondern Verfassung, Institutionen, Bevölkerung, Monarchie und die historische Ordnung des Landes.
+
+Der gute Soldat ist diszipliniert, professionell, loyal und traditionsbewusst, aber nicht fanatisch. Sein Dienst gilt der Krone, weil die Krone nach eldranischem Verständnis dem Land dient:
+
+**„Ich diene der Krone, weil die Krone dem Land dient.“**
+
+Militärische Führung bedeutet deshalb nicht nur taktische Leistungsfähigkeit. Sie muss auch sicherstellen, dass Verwaltung, Versorgung, territoriale Verteidigung und politische Führung unter Belastung funktionsfähig bleiben. Pioniere, territoriale Kräfte und der Schutz staatlicher Infrastruktur besitzen entsprechend hohen Stellenwert.
+
+Gefallene werden öffentlich und unter den Symbolen der Krone erinnert. Der Monarch kann Soldaten und Verwundete persönlich besuchen und verkörpert damit die Vorstellung, dass die politische Spitze nicht außerhalb der gesellschaftlichen Opfer steht. Die Krone ist dabei stärker als die einzelne Person des Monarchen: Ein schlechter Herrscher kann kritisiert werden, ohne dass dadurch die Monarchie als Institution automatisch ihre Legitimität verliert.
+
+Eldrans Stärke ist institutionelle Kontinuität. Selbst schwere Verluste sollen nicht zum Zusammenbruch der staatlichen Ordnung führen.
+
+Die Schwäche liegt in derselben Eigenschaft: Eine Gesellschaft, die Stabilität und Tradition hoch bewertet, kann notwendige Veränderungen zu lange als Gefahr für die Ordnung betrachten. Reformistische Kräfte wollen deshalb die Monarchie meist nicht abschaffen, sondern ihre Institutionen an neue gesellschaftliche Bedingungen anpassen. Eine republikanische Opposition kann existieren, bleibt aber politisch und gesellschaftlich randständig.
 
 **Kern:** Eldran verteidigt nicht nur Territorium, sondern die Kontinuität seines Staates.
 
