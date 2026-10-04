@@ -10,9 +10,13 @@ Der gute Soldat ist Bürger in Uniform. Eigeninitiative und Urteilsfähigkeit z�
 
 Gefallene werden vor allem als individuelle Menschen wahrgenommen. Große Verluste erzeugen politischen Druck, weil hinter jedem Soldaten ein ziviles Leben steht. Die Bevölkerung wird über Reservisten, Ingenieure, Logistiker und digitale Infrastruktur eingebunden, ohne dauerhaft militarisiert zu werden.
 
-Technik soll den Menschen besser informieren und schneller machen. Vernetzung, Sensorik und Kommunikation sind wichtiger als eine grundlegende Veränderung des Körpers. Averons Stärke ist Geschwindigkeit; seine Schwäche ist die Abhängigkeit von funktionierender Kommunikation und gesellschaftlichem Vertrauen.
+Technik soll den Menschen besser informieren und schneller machen. Vernetzung, Sensorik und Kommunikation sind wichtiger als eine grundlegende Veränderung des Körpers. Averons besondere Stärke liegt in Tempo, Reaktion und dem Ausnutzen kurzfristiger Informationsvorteile.
 
-**Kern:** Averon will einen Krieg möglichst kurz halten, bevor er eine Generation prägt.
+Diese Kriegsphilosophie ist **keine eingebaute zeitliche Verfallsmechanik**. Averon wird im Spiel nicht automatisch schwächer, nur weil eine Partie länger dauert. Karten und Fähigkeiten können Tempo, Reaktion und Informationsvorteile belohnen, bleiben aber grundsätzlich auch in langen Partien relevant.
+
+Der gesellschaftliche Grund für Averons Wunsch nach kurzen Kriegen liegt außerhalb dieser Spielmechanik: Ein langer Krieg erhöht politische, wirtschaftliche und menschliche Belastungen und kann die freie Gesellschaft selbst verändern. Die Nation versucht deshalb, Kriege schnell zu entscheiden, ohne dass die Spieldauer Averon dafür mit einem dauerhaften Nachteil bestraft.
+
+**Kern:** Averon will einen Krieg möglichst kurz halten, bevor er eine Generation prägt – aber Averon wird nicht automatisch schwächer, wenn der Krieg länger dauert.
 
 ## Karsk – Der Mensch als militärisches System
 
