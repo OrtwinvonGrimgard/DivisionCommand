@@ -256,25 +256,25 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Kern:** Dargan führt Krieg, indem es Namen aufruft. Wer geht, wird frei. Im Frieden darf der Staat nicht vergeben.
 
-## Lyr – Krieg als Verteidigung lokaler Freiheit
+## Lyr – Krieg als Eid ohne Sitz
 
-**Kriegsbild:** Lyr ist kein gewöhnlicher Nationalstaat. Bergrepubliken und Täler bilden einen Bund und behalten einen großen Teil ihrer Souveränität. Für einen Lyrer ist Freiheit zuerst etwas Konkretes: das eigene Tal und das Recht, dort zu entscheiden. Ein verlorenes Tal ist nicht nur verlorenes Gelände.
+**Kriegsbild:** Lyr ist ein Bund aus Tälern und Bergorten, kein Staat mit einer Hauptstadt. Jedes Tal behält sein Recht. Der Eid sagt, dass ein Angriff auf eines ein Angriff auf die anderen ist. Es gibt keinen Sitz. Wer ein Tal nimmt, nimmt nicht den Bund.
 
-**Soldatenbild:** Der gute Soldat kennt Gelände und Gemeinde. Bergfertigkeit und Ortskenntnis sind militärische Eigenschaften, keine Folklore.
+**Soldatenbild:** Der Soldat kennt sein Tal, den Pass und die Gemeinde. Er kämpft dort, wo er lebt. Ein anderes Tal kann zu spät kommen. Es darf den Eid nicht verkaufen.
 
-**Führung:** Lokale Kommandeure haben großen Spielraum. Gemeinsame Räte koordinieren, was alle betrifft. Beschlüsse müssen ausgehandelt werden. Die Täler fürchten, dass gemeinsame Sicherheit irgendwann ein Zentralstaat wird.
+**Führung:** Getagt wird jedes Mal woanders. Die Abschrift liegt in jedem Tal. Leser aus zwei oder drei anderen Tälern, nie nur aus denen, mit denen man streitet, lesen sie laut vor, setzen Namen und Datum und nehmen eine Abschrift mit. Wer die Leser nicht einlässt, wird stumm, nicht frei. Eine Fälschung oder der Verkauf eines Nachbarn ist ein Bruch. Ihn sprechen die Täler aus, die zuletzt mitgelesen haben.
 
-**Tod:** Gefallene werden als Mitglieder einer bestimmten Gemeinde erinnert, nicht nur als nationale Zahl. Die Trauer bleibt lokal, auch wenn der Bund den Krieg führt.
+**Tod:** Gefallene gehören ihrem Tal. Die Trauer bleibt dort. Der Bund hat keine Hauptstadt, in der sie zu einer Zahl würden.
 
-**Bevölkerung:** Tunnel, Werkstätten, Hütten und lokale Vorräte sind Teil der Verteidigung. Die Menschen leben in dem Gelände, das sie halten sollen.
+**Bevölkerung:** Die Täler handeln, heiraten und teilen die Pässe. Dieselbe Nähe erzeugt Streit um Weide, Wasser, Zoll und den Besitz eines Weges. Gewalt unter Nachbarn kommt vor. Das Auslöschen eines Tals nicht. Ein totes Tal kann niemand mehr rufen.
 
-**Technik:** Tunnelbau, Pioniere, unterirdische Sensorik und leichte Systeme für Engpässe. Der Umhang bleibt in derselben schiefergrauen Palette wie die Jacke. Er ist Wetter und Tarnung im Gebirge, nicht der Pelz Rothains.
+**Technik:** Tunnel, Stellungen in Engen, leichte Systeme, die ein Tal selbst tragen kann, Sensorik an den Zugängen. Der Umhang bleibt in derselben schiefergrauen Palette wie die Jacke. Er ist Wetter und Tarnung, nicht der Pelz Rothains.
 
-**Logistik:** Dezentrale Vorräte und die Kontrolle der Pässe wiegen mehr als ein zentrales Depot, das ein einziges Tal nie erreichen würde.
+**Logistik:** Vorräte liegen im Tal, nicht in einem gemeinsamen Lager, das man anzünden könnte. Ein Pass wiegt mehr als ein zentrales Depot.
 
-**Anpassung:** Lokal kann Lyr sehr schnell reagieren. Mehrere autonome Täler auf ein Ziel zu verpflichten ist die schwere Aufgabe. Was ein Tal für richtig hält, kann für das nächste falsch sein.
+**Anpassung:** Ein einzelnes Tal handelt schnell. Mehrere Täler auf eine Tat zu bringen ist langsam, weil niemand sein Recht abgibt und niemand einen Ort hat, an dem der Beschluss schon fertig läge. Die Furcht bleibt, dass aus dem Eid ein Staat wird, der die Täler nur noch verwaltet. Eine Doktrin der vielen kleinen Heimaten wäre hier nur das Beispiel. Sie gehört Lyr nicht.
 
-**Kern:** Lyr verteidigt viele kleine Heimaten, die gemeinsam unabhängig bleiben wollen, ohne aufzuhören, ein Bund zu sein.
+**Kern:** Lyr hält einen Eid, ohne einen Ort zu haben, an dem man diesen Eid auslöschen kann.
 
 ## Caldris – Krieg als Versorgungskrise
 
@@ -352,7 +352,7 @@ Die sechzehn Nationen unterscheiden sich nicht zuerst durch ihre Waffen. Sie unt
 - Namar: ungeordneter Hafenbund, die Lieferung kommt trotzdem an
 - Orthea: Wissenschaft und Erkenntnis als Staatslehre
 - Dargan: Schuldenrepublik, der Krieg tilgt den Namen des Soldaten
-- Lyr: lokale Freiheit im Bund
+- Lyr: Eid der Täler, kein Sitz
 - Caldris: Versorgung bei vollständiger Erfassung
 - Merovan: Verbindungen ohne neue Herrschaft
 - Theryn: Mobilisierung und ihr Preis

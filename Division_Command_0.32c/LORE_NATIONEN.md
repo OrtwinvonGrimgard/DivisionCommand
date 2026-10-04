@@ -87,7 +87,7 @@ Die heutigen Grenzen und Feindschaften sollen deshalb nicht als plötzlich entst
 | **Namar** | maritime Föderation | Inseln, Häfen, regionale Autonomie | Maris |
 | **Orthea** | wissenschaftliche Republik | Forschung, Daten, Präzision | Asteron |
 | **Dargan** | Schuldenrepublik | Name, Schuld, Einlösung | Kalden |
-| **Lyr** | Konföderation der Bergrepubliken | lokale Souveränität, Pässe, Tunnel | Valen |
+| **Lyr** | Eidgenossenschaft der Täler | Eid, eigenes Recht, kein Sitz | kein Sitz |
 | **Caldris** | autoritärer Wohlfahrtsstaat | Versorgung, Medizin, Überwachung | Seren |
 | **Merovan** | postimperiale Handelsrepublik | Handel, Migration, Imperium | Merovia |
 | **Theryn** | revolutionäre sozialistische Republik | Gleichheit, Massenorganisation, Reform | Novagrad |
@@ -3715,273 +3715,102 @@ Der Dienstrock ist nussbraun und gerade geschnitten. Die Manschetten sind papier
 
 ---
 
-# 13. Lyr – Die Bergrepubliken
+# 13. Lyr – Der Eid der Täler
 
-### Die Bergrepubliken
+### Der Eid der Täler
 
-Lyr ist kein klassischer Nationalstaat. Mehrere Bergrepubliken und autonome Täler bilden einen dauerhaften politischen Bund.
+Lyr ist kein Staat mit einer Stadt, die für die Täler mitregiert. Es ist ein Bund aus Tälern und Bergorten, die sich gegen einen äußeren Herrn zusammengeschworen haben. Jedes Tal behält sein Recht. Der Bund ist der Eid, dass ein Angriff auf eines ein Angriff auf die anderen ist.
 
-Die Bevölkerung besitzt eine starke lokale Identität.
+Es gibt keinen Sitz. Auch keine Stadt, die nur zum Tagen da wäre. Wer ein Tal nimmt, nimmt dieses Tal. Er nimmt nicht den Bund.
 
 ### Politisches System
 
-Lyr ist eine konföderale Ordnung.
+Getagt wird dort, wo es diesmal verabredet ist, und das nächste Mal woanders. Die Abschriften des Eids liegen in jedem Tal.
 
-Regionen behalten einen großen Teil ihrer Souveränität. Entscheidungen, die alle betreffen, müssen zwischen den Mitgliedern ausgehandelt werden.
+Einmal im Jahr, oder wenn ein Tal gerufen wird, kommen Leute aus zwei oder drei anderen Tälern. Nie nur die, mit denen man gerade im Streit liegt. Sie lesen die Abschrift laut vor den Leuten dieses Tals, setzen Namen und Datum darunter und nehmen eine gleichlautende Abschrift mit nach Hause. Der Beweis liegt dort, wo gelesen wurde, und in den Tälern, die mitgehört haben.
+
+Wer die Leser nicht einlässt, tritt nicht aus. Er macht sich stumm. Die anderen führen ihn als Tal, das den Eid nicht mehr zeigen will. Wer eine Abschrift fälscht oder einen Nachbarn an einen Fremden verkauft, bricht den Eid. Das sprechen die Täler aus, die zuletzt mitgelesen haben.
 
 ### Technologie
 
-Die besonderen Bedingungen Lyres führten zu Fortschritten bei:
+Die Täler bauen, was das Gebirge von ihnen verlangt:
 
-- Tunnelbau
-- Pionierwesen
-- Bergbau
-- unterirdischer Sensorik
-- Seil- und Transportsystemen
-- befestigten Stellungen
-- Gebirgsmobilität
+- Tunnel und Pässe
+- Stellungen in Engen
+- leichte Systeme, die ein Tal tragen und warten kann
+- unterirdische Sensorik an den Zugängen
+- Vorräte im eigenen Tal, nicht in einem gemeinsamen Lager
 
 ### Militär
 
-Lyres Streitkräfte kennen das eigene Gelände außergewöhnlich gut.
-
-Stellungen, Tunnel und natürliche Engpässe sind Teil der militärischen Infrastruktur.
+Der Krieg liegt in den Pässen und Tälern. Es gibt keine Bundesarmee, die irgendwohin geschickt wird. Wer Lyr angreift, trifft zuerst ein Tal und danach die, die der Eid noch erreichen kann. Ein Tal kann zu spät kommen. Es darf den Eid nicht verkaufen.
 
 ### Innerer Konflikt
 
-Die einzelnen Republiken fürchten, dass gemeinsame Sicherheit langfristig zu einem Zentralstaat führt.
+Die Täler handeln, heiraten, teilen Pässe und bezeugen sich den Eid. Dieselbe Nähe erzeugt Streit um Weide, Wasser, Zoll und den Besitz eines Passes. Ein Tal kann ein anderes sperren oder eine Hütte niederbrennen. Es darf den Nachbarn nicht auslöschen.
 
-> **Wie viel gemeinsame Macht kann eine Konföderation besitzen, ohne aufzuhören, eine Konföderation zu sein?**
+Es gibt kein Gericht über den Tälern. Schlichten können nur die, die beide noch brauchen, wenn jemand von außen kommt. Deshalb bleibt mancher Streit offen.
+
+> **Wann wird aus dem Eid ein Staat, der die Täler nur noch verwaltet?**
 
 ---
 
 ## Nationale Leitfrage
 
-**Leitfrage:** Wie bleibt eine Gemeinschaft frei, ohne sich voneinander zu isolieren?
+**Leitfrage:** Wie bleiben viele Täler ein Bund, ohne einen Ort zu haben, an dem der Bund steht?
 
-**Alltagswiderspruch:** Lokale Souveränität schützt Identität, erschwert aber gemeinsame Entscheidungen.
+**Alltagswiderspruch:** Die Menschen wollen Hilfe aus den anderen Tälern und wollen zugleich, dass niemand ihr Recht an sich nimmt.
 
-**Besonderer Ausbau:** Die Täler und Republiken sollten nicht dieselbe Kultur besitzen. Lyr ist ein Bund aus verwandten, aber eigenständigen Gesellschaften.
+**Besonderer Ausbau:** Die Täler sind verwandt und nicht gleich. Jedes behält eigene Gewohnheit, eigenen Streit und eine eigene Abschrift.
 
-## Hauptstadt
+## Orte
 
-Valen ist die politische Hauptstadt des Bundes, aber nicht dessen unangefochtenes Zentrum.
+Lyr hat keine Hauptstadt.
 
-Die Stadt liegt in einem großen Gebirgstal und beherbergt den Bundeskongress sowie gemeinsame Gerichte und Verteidigungsinstitutionen.
+### Die Täler
 
-Jede der großen Teilrepubliken besitzt eigene Häuser und Vertretungen. Politische Entscheidungen sind deshalb ständig von regionalen Interessen geprägt.
+Jedes größere Tal ist eine politische Einheit mit eigenem Recht, eigenen Vorräten und einer Abschrift des Eids. Keines ist der Sitz der anderen.
 
-**Stadtbild:** Berghänge, Steinbauten, Brücken, Tunnel, Terrassen und regionale Verwaltungsgebäude.  
-**Wichtige Viertel:** Bundeskongress, Talstadt, Handwerksviertel, Tunnelbezirk, regionale Häuser.  
-**Sozialer Gegensatz:** Bundeseinrichtungen gegenüber lokalen Gemeinschaften, die ihre Eigenständigkeit bewahren wollen.
+### Die Pässe
 
-## Regionen
+Wege zwischen den Tälern. Um sie wird gestritten. Sie werden nicht einer Stadt unterstellt, weil eine solche Stadt zum Ziel würde.
 
-### Nordtal
-Dicht besiedeltes Tal mit Handel, Handwerk und politischen Institutionen.
+### Die Hütten und Werke
 
-### Hochrepubliken
-Höher gelegene Regionen mit Bergbau, Weidewirtschaft und starker lokaler Selbstverwaltung.
-
-### Westpässe
-Strategisch wichtige Gebirgspässe mit Festungen, Tunnelanlagen und Militärstraßen.
-
-### Südliche Täler
-Fruchtbarere Regionen mit Landwirtschaft und alten religiösen Traditionen.
-
-**Regionaler Grundkonflikt:** Jede Region hält ihre eigene politische Ordnung für sinnvoller als eine vollständig zentralisierte Bundesstruktur.
-
-## Städte
-
-### Valen – Hauptstadt
-Sitz des Bundeskongresses. Die Stadt ist politisch bedeutend, aber bewusst nicht dominant.
-
-### Nordtal
-Handels- und Handwerkszentrum eines dicht besiedelten Tales.
-
-### Hochgrat
-Gebirgsstadt mit Bergbau, Weidewirtschaft und starkem lokalem Selbstbewusstsein.
-
-### Passwacht
-Festungs- und Verkehrsstadt an einem strategischen Gebirgspass.
-
-### Sonnental
-Fruchtbare Stadtregion mit Landwirtschaft und alten religiösen Traditionen.
-
-## Dörfer und ländlicher Alltag
-
-### Talwies
-Gemeinde mit intensiver Landwirtschaft und ausgeprägter lokaler Verwaltung.
-
-### Hochweid
-Bergdorf, dessen Familien Viehzucht und Bergbau miteinander verbinden.
-
-### Passdorf
-Siedlung an einem strategischen Gebirgspass. Viele Bewohner haben militärische oder technische Berufe.
-
-### Sonnenhang
-Dorf mit alten religiösen Bräuchen und starken Großfamilien.
-
-## Familie und Generationen
-
-Familie und Talgemeinschaft überschneiden sich stark. Viele Menschen kennen ihre Verwandtschaft über mehrere Generationen, und lokale Familien können innerhalb eines Tales erheblichen Einfluss besitzen.
-
-Ehen verbinden nicht nur zwei Menschen, sondern manchmal auch unterschiedliche Dörfer oder politische Gemeinden. Trotzdem besitzen persönliche Entscheidungen einen hohen Stellenwert.
-
-Großfamilien und gemeinschaftliche Kinderbetreuung sind verbreitet. Ältere Menschen gelten als wichtige Träger von Ortsgeschichte, Bergwissen und Tradition.
-
-Der Konflikt zwischen Familienloyalität und persönlicher Freiheit ist besonders sichtbar, wenn junge Menschen das Tal verlassen wollen.
+Werkstätten und Vorratshäuser gehören dem Tal, in dem sie stehen. Ein verbranntes Haus löscht die Abschrift nicht, die ein anderes Tal mitgenommen hat.
 
 ## Alltag und Lebensgefühl
 
-### Lokale Identität
+### Eid
 
-In Lyr ist die wichtigste politische Einheit oft nicht der Gesamtstaat, sondern das eigene Tal oder die eigene Republik.
+Der Eid wird laut vorgelesen, nicht in einer fernen Kanzlei hinterlegt. Leute erinnern sich, wer mitgelesen hat.
 
-Menschen können sich stark mit lokalen Traditionen identifizieren und dennoch den Bund verteidigen.
+### Gewalt
 
-### Arbeit
+Streit unter Nachbarn ist gewöhnlich. Das Auslöschen eines Tals ist der Bruch.
 
-Bergbau, Handwerk, Energiegewinnung, Landwirtschaft und Tunnelbau sind bedeutend. Große Städte existieren, dominieren aber nicht das gesamte Land.
+### Leben
 
-### Familie
-
-Mehrgenerationenhaushalte sind häufiger als in Averon. Ältere Menschen besitzen praktisches Wissen über lokale Umwelt und Geschichte.
-
-### Religion
-
-Lokale Bräuche sind stark. Religiöse Traditionen können von Tal zu Tal variieren.
-
-### Militär
-
-Verteidigung ist eng mit der Heimat verbunden. Ein Soldat schützt nicht nur einen Staat, sondern konkret das Tal, in dem seine Familie lebt.
+Geheiratet wird auch über die Talgrenze. Gehandelt wird über die Pässe. Beides macht den Bund lebendig und den Streit persönlich.
 
 ### Lebensgefühl
 
-**Hoffnung:** Die eigene Gemeinschaft bewahren zu können.
-
-**Angst:** Dass gemeinsame Verteidigung in Zentralisierung umschlägt.
-
-**Tabu:** Lokale Identität als rückständig abzuwerten.
-
----
-
-## Gesellschaftliche Ebenen 6–25
-
-### Punkt 6 – Jugend
-
-Jugend ist stark tal- und familienbezogen. Der Konflikt zwischen lokaler Bindung und Wegzug in andere Regionen ist zentral.
-
-### Punkt 7 – Arbeit
-
-Bergbau, Landwirtschaft, Handwerk, Handel und lokale Verwaltung bestimmen die Arbeit.
-
-### Punkt 8 – Armut
-
-Gemeinschaftliche Hilfe verhindert extreme Not in vielen Tälern, kann aber persönliche Abhängigkeiten schaffen.
-
-### Punkt 9 – Wohlstand
-
-Besitz von Land, Minen und Handelsrechten prägt regionale Hierarchien.
-
-### Punkt 10 – Religion
-
-Berggemeinden besitzen unterschiedliche religiöse Traditionen.
-
-### Punkt 11 – Bildung
-
-Regionale Schulen bewahren lokale Geschichte und Selbstverwaltung.
-
-### Punkt 12 – Medien
-
-Lokale Medien spiegeln die politische Eigenständigkeit der Täler.
-
-### Punkt 13 – Sprache
-
-Jedes Tal besitzt eigene sprachliche Eigenheiten.
-
-### Punkt 14 – Essen
-
-Bergkäse, Getreide, Fleisch, Kräuter und saisonale Produkte.
-
-### Punkt 15 – Kleidung
-
-Regionale Woll- und Bergkleidung besitzt starke Identitätsfunktion.
-
-### Punkt 16 – Architektur
-
-Steinarchitektur, Terrassen, Tunnel und befestigte Bergsiedlungen.
-
-### Punkt 17 – Freizeit
-
-Bergsport, Musik, Dorffeste und religiöse Veranstaltungen.
-
-### Punkt 18 – Feste
-
-Talfeiern, Bergfeste und religiöse Feiertage.
-
-### Punkt 19 – Trauer
-
-Ahnen- und Familiengedenken ist stark lokal geprägt.
-
-### Punkt 20 – Militär
-
-Lokale Verteidigungskräfte besitzen starke regionale Bindungen.
-
-### Punkt 21 – Krieg
-
-Krieg bedroht unmittelbar Täler, Pässe und lokale Autonomie.
-
-### Punkt 22 – Opposition
-
-Opposition ist meist Ausdruck lokaler Souveränität.
-
-### Punkt 23 – Nachbarn
-
-Nachbarschaften überschneiden sich mit Familien- und Talnetzwerken.
-
-### Punkt 24 – Migration
-
-Binnenmigration zwischen Tälern kann politisch sensibel sein.
-
-### Punkt 25 – Familiengeschichte
-
-Familiengeschichte ist eng mit Tal, Berg, Hof und lokaler Selbstverwaltung verbunden.
+**Hoffnung:** Dass die anderen kommen, wenn das eigene Tal getroffen wird.  
+**Angst:** Dass aus der gemeinsamen Hilfe eine Herrschaft wird.  
+**Tabu:** Ein Tal an einen Fremden zu verkaufen oder seine Abschrift zu fälschen.
 
 ## Konkrete Lore-Anker
 
-### Familien
-- **Familie Val:** Alte politische Familie.
-- **Familie Hoch:** Bergbau- und Handwerkerfamilie.
-
-### Personen
-- **Nera Val:** Delegierte des Bundeskongresses.
-- **Tarin Hoch:** Bergingenieur und Gemeinderat.
-
 ### Institutionen
-- **Bundeskongress Valen:** Gemeinsames politisches Organ.
-- **Rat der Täler:** Koordinierung regionaler Interessen.
-
-### Wirtschaft
-- **Hochgrat Bergbau:** Lokaler Rohstoffbetrieb.
-- **Nordtal Handelshaus:** Regionaler Handelsverbund.
-
-### Medien
-- **Talstimmen:** Zusammenschluss lokaler Zeitungen.
-- **Bergfunk:** Radio- und Informationsnetz.
+- **Die Abschrift:** In jedem Tal eine, bezeugt durch Namen und Datum der Leser.
+- **Das Mitlesen:** Zwei oder drei fremde Täler, nie nur die Streitgegner.
 
 ### Militär
-- **Talverteidigungskräfte:** Regionale Verbände.
-- **Passwachtkorps:** Schutz strategischer Gebirgspässe.
+- **Der Ruf:** Ein angegriffenes Tal ruft die, die den Eid noch zeigen.
+- **Das zu späte Tal:** Darf zögern. Darf den Eid nicht verkaufen.
 
-### Stadtviertel Valen
-- **Bundesplatz:** Gemeinsame Institutionen.
-- **Handwerkerviertel:** Werkstätten und Märkte.
-- **Hochstadt:** Alte Familien und Verwaltung.
-
-### Historische Ereignisse
-- **Der Bund der Täler:** Gründung der Konföderation.
-- **Die Passkrise:** Konflikt um gemeinsame Verteidigung und regionale Souveränität.
+### Historischer Anker
+- **Der erste Eid:** Zusammenschluss der Täler gegen einen äußeren Herrn. Seitdem gibt es bewusst keinen Ort, an dem man den Bund auslöschen könnte.
 
 ---
 
