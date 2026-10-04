@@ -89,7 +89,7 @@ Die heutigen Grenzen und Feindschaften sollen deshalb nicht als plötzlich entst
 | **Dargan** | Schuldenrepublik | Name, Schuld, Einlösung | Kalden |
 | **Lyr** | Eidgenossenschaft der Täler | Eid, eigenes Recht, kein Sitz | kein Sitz |
 | **Caldris** | autoritärer Wohlfahrtsstaat | Versorgung, Medizin, Überwachung | Seren |
-| **Merovan** | postimperiale Handelsrepublik | Handel, Migration, Imperium | Merovia |
+| **Merovan** | Handelsrepublik | Häfen, Handel, ein Land über Distanz | Merovia |
 | **Theryn** | revolutionäre sozialistische Republik | Gleichheit, Massenorganisation, Reform | Novagrad |
 
 ## Politische Vielfalt
@@ -4088,270 +4088,89 @@ Familien erinnern sich sowohl an staatliche Fürsorge als auch an Eingriffe in d
 
 ---
 
-# 15. Merovan – Das postimperiale Handelsreich
+# 15. Merovan – Die Handelsrepublik
 
-### Das postimperiale Handelsreich
+### Die Handelsrepublik
 
-Merovan war einst Zentrum eines großen Überseeimperiums.
+Merovan ist ein Land. Seine Teile liegen weit auseinander, und es hält sie über Häfen und Handel zusammen. Das Gesetz macht sie gleich. Die Verbindung macht sie erreichbar. Beides ist nötig, und es ist nicht dasselbe.
 
-Nach dessen Zerfall blieb ein weitverzweigtes Netz aus Handelswegen, ehemaligen Kolonien, Häfen und wirtschaftlichen Beziehungen zurück.
+Die fernen Orte gehören zum Land. Sie sind kein anderes Recht.
 
 ### Politisches System
 
-Merovan ist heute eine parlamentarische Republik mit starken Handels- und Wirtschaftsinteressen.
+Merovan ist eine parlamentarische Handelsrepublik. Im Kern sitzen das Parlament, die Banken und die Häuser, denen die Schiffe gehören. Die Häuser haben das Amt verloren und die Ladung behalten.
 
-Die alte imperiale Elite verlor ihre formale politische Macht, besitzt aber weiterhin Vermögen, Kontakte und kulturellen Einfluss.
+Der Staat erteilt die Lizenz und behandelt den Hafen als Teil des Landes. Ohne die Lizenz ist das Schiff Privatgeschäft. Ohne das Schiff zerfällt das Land in der Praxis, obwohl es auf dem Papier eines bleibt. Deshalb zahlt der Staat, wenn die Häuser fahren sollen. Die Häuser fahren, weil die Lizenz ihnen den Weg sichert.
 
 ### Militär
 
-Merovan benötigt Streitkräfte, die weit von der Heimat entfernt operieren können.
-
-Schwerpunkte sind:
-
-- Expeditionstruppen
-- modulare Ausrüstung
-- Transport
-- Logistik
-- Ingenieurwesen
-- internationale Stützpunkte
+Die Garnison ist Bodentruppe am eigenen Weg. Sie hält Kai und Straße, damit der ferne Ort erreichbar bleibt. Schiff und Flugzeug sind Unterstützung. Sie halten den Weg offen, setzen Leute ab und holen Verwundete. Sie halten keine Stellung. Fällt die Unterstützung, steht die Garnison noch, nur ohne das, was den Ort mit dem Land verbindet.
 
 ### Gesellschaft
 
-Merovan ist kulturell vielfältig. Gleichzeitig existieren heftige Debatten darüber, wie viel Verantwortung ein ehemaliges Imperium gegenüber den Gesellschaften trägt, die durch seine frühere Herrschaft geprägt wurden.
+Die fernen Orte liefern, was sie haben, und leben von der nächsten Ladung. Beamte, Medizin, Ersatz und Wahlen benutzen denselben Weg wie die Ware. Kommt der Weg, ist der Ort ein normaler Teil des Landes, später und teurer. Kommt er nicht, wird er nicht unabhängig. Er wird ärmer, und der Kern bleibt verantwortlich, weil es eigene Leute sind.
 
 ### Innerer Konflikt
 
-> **Kann ein Staat seine imperiale Vergangenheit überwinden, ohne sie zu verdrängen?**
+> **Wie bleibt ein Land eines, wenn die Gleichheit im Gesetz steht und die Erreichbarkeit auf einem Schiff?**
 
 ---
 
 ## Nationale Leitfrage
 
-**Leitfrage:** Wie kann eine Gesellschaft mit imperialer Vergangenheit leben, ohne sie zu verherrlichen oder zu verdrängen?
+**Leitfrage:** Was hält ein Land zusammen, wenn der Weg zwischen seinen Teilen ausfallen kann?
 
-**Alltagswiderspruch:** Internationaler Handel und kulturelle Vielfalt beruhen teilweise auf historischen Strukturen, die zugleich Quelle von Ausbeutung waren.
+**Alltagswiderspruch:** Dieselbe Staatsbürgerschaft, und ein Fahrplan, der sie nicht überall einlöst.
 
-**Besonderer Ausbau:** Merovan sollte unterschiedliche Erinnerungskulturen innerhalb derselben Gesellschaft zeigen.
+**Besonderer Ausbau:** Kern und Ferne bleiben ein Staat. Der Unterschied ist die Verspätung und der Preis, nicht ein zweites Recht.
 
 ## Hauptstadt
 
-Merovia ist eine alte Hafenmetropole, die während der imperialen Epoche zum Zentrum eines weltweiten Handelsnetzes wurde.
+Merovia ist die Hafenstadt des Kerns. Parlament, Banken und die Häuser, denen die Schiffe gehören, sitzen hier. Von hier wird die Lizenz erteilt. Hier wird gezahlt, wenn ein Weg gehalten werden muss.
 
-Die Stadt ist von unterschiedlichen historischen Schichten geprägt: alte Verwaltungsgebäude, ehemalige koloniale Handelshäuser, moderne Banken und riesige Hafenanlagen.
-
-Menschen mit sehr unterschiedlichen Familiengeschichten leben dicht nebeneinander. Manche Familien stammen aus dem alten Kernland, andere aus Regionen, die einst unter merovanischer Herrschaft standen.
-
-**Stadtbild:** große Hafenanlagen, alte Handelshäuser, Banken, Bahnhöfe, moderne Hochhäuser und dicht bewohnte Migrantenviertel.  
-**Wichtige Viertel:** Alter Hafen, Handelsviertel, Regierungsstadt, ehemalige Kolonialhäuser, neue Wohnbezirke.  
-**Sozialer Gegensatz:** alte Vermögen und internationale Wirtschaftseliten gegenüber Arbeiter- und Migrantenvierteln.
+**Stadtbild:** Hafen, Handelshäuser, Banken, Parlament.  
+**Wichtige Viertel:** Hafenring, Alte Krone, Neuviertel.  
+**Sozialer Gegensatz:** die Häuser, die den Weg besitzen, gegenüber den Familien, die auf ihn warten.
 
 ## Regionen
 
-### Alte Kernprovinzen
-Historisches Zentrum der heutigen Republik mit alten Familien, Universitäten und staatlichen Institutionen.
+### Der Kern
+Merovia und das Land dahinter. Hier werden Preise gemacht und Lizenzen vergeben.
 
-### Hafenregionen
-Internationale Handelszentren mit hoher Migration und starkem wirtschaftlichem Einfluss.
+### Die fernen Häfen
+Orte wie Neuport und Port Meris. Sie gehören zum Land und leben von der nächsten Ladung.
 
-### Ehemalige Überseeprovinzen
-Regionen, deren Bevölkerung besonders unterschiedliche Erinnerungen an das frühere Imperium besitzt.
+### Das Land hinter dem Hafen
+Südmark und vergleichbare Orte. Sie spüren eine Unterbrechung später und härter, weil zwischen ihnen und dem Kai noch ein Weg liegt.
 
-### Binnenland
-Weniger international geprägte Regionen mit Landwirtschaft und traditionelleren Lebensweisen.
-
-**Regionaler Grundkonflikt:** Die Hafenregionen betrachten internationale Verflechtung als Normalität; Teile des Binnenlandes sehen darin die Fortsetzung alter Abhängigkeiten.
-
-## Städte
-
-### Merovia – Hauptstadt
-Alte Hafenmetropole und Zentrum des ehemaligen Imperiums. Handel, Banken und Regierungsinstitutionen konzentrieren sich hier.
-
-### Port Meris
-Internationaler Großhafen mit einer extrem vielfältigen Bevölkerung.
-
-### Albion
-Alte Universitäts- und Verwaltungsstadt. Historische Debatten über das Imperium sind Teil des öffentlichen Lebens.
-
-### Südmark
-Binnenstadt mit Landwirtschaft, regionalem Handel und weniger internationaler Prägung.
-
-### Neuport
-Stadt, die durch Migration und internationale Unternehmen stark gewachsen ist. Junge Bevölkerung und neue Familiengeschichten prägen das Stadtbild.
-
-## Dörfer und ländlicher Alltag
-
-### Altmark
-Altes Dorf im Binnenland mit Landwirtschaft und Familien, deren Geschichte weit vor die Handelsrepublik zurückreicht.
-
-### Hafenhain
-Küstendorf mit Fischerei, Handel und zahlreichen Familien unterschiedlicher Herkunft.
-
-### Überseehof
-Gemeinde, deren Familiengeschichten mit ehemaligen Überseegebieten verbunden sind. Die Vergangenheit wird unterschiedlich bewertet.
-
-### Neuacker
-Jüngere Siedlung mit vielen eingewanderten Familien und neuen landwirtschaftlichen Betrieben.
-
-## Familie und Generationen
-
-Familiengeschichten sind häufig international. Ein Haushalt kann mehrere Sprachen, Religionen oder Herkunftsregionen miteinander verbinden.
-
-Alte Familien bewahren Erinnerungen an das ehemalige Imperium, während jüngere Generationen diese Geschichte häufig kritischer betrachten. Familien mit Wurzeln in ehemaligen Überseegebieten können dieselbe Geschichte aus einer völlig anderen Perspektive erzählen.
-
-Migration macht Großfamilien oft geografisch weit verstreut. Digitale Kommunikation und Reisen halten die Verbindung aufrecht.
-
-Die Familie ist deshalb häufig ein Ort, an dem unterschiedliche historische Erinnerungen unmittelbar aufeinandertreffen.
+**Regionaler Grundkonflikt:** Der Kern nennt die Ferne einen normalen Teil des Landes. Die Ferne erlebt denselben Staat als etwas, das mit dem Schiff kommt.
 
 ## Alltag und Lebensgefühl
 
-### Gesellschaft
+### Weg
+Ware, Medizin, Beamte und Wahlen fahren denselben Weg. Bleibt er aus, wird in der Ferne nicht später gewählt. Es wird nicht gewählt.
 
-Merovan ist kulturell vielfältig. Hafenstädte und ehemalige Kolonialzentren beherbergen Menschen mit sehr unterschiedlichen Familiengeschichten.
-
-Manche Familien profitieren noch von altem Vermögen. Andere erinnern sich an die imperiale Herrschaft aus der Perspektive ihrer Opfer.
-
-### Bildung
-
-Geschichte ist politisch umkämpft. Schulbücher versuchen, das Imperium zu erklären, ohne es zu verherrlichen oder zu verschweigen.
-
-### Wirtschaft
-
-Handel ist weiterhin zentral. Große Unternehmen besitzen internationale Verbindungen.
-
-### Familie
-
-Familiengeschichten können über mehrere Kontinente reichen. Migration ist normal.
-
-### Militär
-
-Expeditionstruppen werden gesellschaftlich ambivalent gesehen. Einerseits gelten sie als Schutz der Handelswege, andererseits erinnern Auslandseinsätze an die imperiale Vergangenheit.
+### Garnison
+Soldaten im eigenen Land, weit von zu Hause. Die Stadt erlebt sie als die, die den Kai halten, und als die, die wieder gehen. Sie sind keine Besatzung in fremdem Gebiet.
 
 ### Lebensgefühl
 
-**Hoffnung:** Internationale Verflechtung ohne neue Herrschaft.
-
-**Angst:** Dass alte Machtstrukturen unter wirtschaftlichen Namen zurückkehren.
-
-**Tabu:** Die imperiale Vergangenheit ausschließlich als Ruhmesgeschichte zu erzählen.
-
----
-
-## Gesellschaftliche Ebenen 6–25
-
-### Punkt 6 – Jugend
-
-Mehrsprachigkeit und internationale Familiengeschichten prägen viele Jugendliche. Koloniale Vergangenheit wird innerhalb der Familien unterschiedlich erzählt.
-
-### Punkt 7 – Arbeit
-
-Handel, Banken, Logistik, Dienstleistungen und internationale Unternehmen prägen den Arbeitsmarkt.
-
-### Punkt 8 – Armut
-
-Wohlhabende Handelszentren stehen armen Binnen- und ehemaligen Überseegebieten gegenüber.
-
-### Punkt 9 – Wohlstand
-
-Finanz- und Handelsvermögen bilden eine einflussreiche Oberschicht.
-
-### Punkt 10 – Religion
-
-Religiöser Pluralismus ist Folge jahrhundertelangen Handels und Migration.
-
-### Punkt 11 – Bildung
-
-Universitäten sind international ausgerichtet; historische Perspektiven sind umkämpft.
-
-### Punkt 12 – Medien
-
-Internationale Pressefreiheit trifft auf mächtige Wirtschaftsinteressen.
-
-### Punkt 13 – Sprache
-
-Mehrsprachigkeit ist besonders in Hafenregionen normal.
-
-### Punkt 14 – Essen
-
-Stark internationale Küche durch Handel und Migration.
-
-### Punkt 15 – Kleidung
-
-Internationale Mode trifft regionale Tradition.
-
-### Punkt 16 – Architektur
-
-Alte Handelsarchitektur, Kolonialbauten, moderne Häfen und vielfältige Wohnviertel.
-
-### Punkt 17 – Freizeit
-
-Theater, Musik, internationale Gastronomie, Sport und Hafenleben.
-
-### Punkt 18 – Feste
-
-Hafenfeste und internationale Kulturfeste.
-
-### Punkt 19 – Trauer
-
-Trauerkulturen unterscheiden sich je nach Herkunft und Religion.
-
-### Punkt 20 – Militär
-
-Expeditionäre, logistische und maritime Fähigkeiten spiegeln die Handelsgeschichte.
-
-### Punkt 21 – Krieg
-
-Krieg ist eng mit der imperialen Vergangenheit verbunden und wird hinsichtlich Handel und Macht kritisch diskutiert.
-
-### Punkt 22 – Opposition
-
-Parteien streiten über Handel, Migration, Imperialgeschichte und wirtschaftliche Macht.
-
-### Punkt 23 – Nachbarn
-
-Migration macht Nachbarschaften kulturell vielfältig.
-
-### Punkt 24 – Migration
-
-Migration ist zentral für Wirtschaft und Gesellschaft; historische Migrationsbewegungen sind Teil nationaler Identität.
-
-### Punkt 25 – Familiengeschichte
-
-Familien können dieselbe imperiale Vergangenheit als Aufstieg, Ausbeutung, Migration oder Verlust erinnern.
+**Hoffnung:** Dass der Weg kommt und der ferne Ort dadurch ein gewöhnlicher Teil des Landes ist.  
+**Angst:** Dass eigene Leute unerreichbar werden und der Kern zu spät zahlt.  
+**Tabu:** Einen fernen Ort als etwas zu behandeln, das man verlassen oder ausnehmen darf.
 
 ## Konkrete Lore-Anker
 
-### Familien
-- **Familie Merov:** Alte Handels- und Bankiersfamilie.
-- **Familie Asha:** Familie mit Wurzeln in einer ehemaligen Überseeprovinz.
-
-### Personen
-- **Luc Merov:** Unternehmer und Abgeordneter.
-- **Samira Asha:** Historikerin und Vertreterin postimperialer Erinnerungskultur.
-
 ### Institutionen
-- **Handelsparlament Merovia:** Zentrale politische Institution.
-- **Institut für Imperiale Geschichte:** Forschung und öffentliche Debatte.
-
-### Wirtschaft
-- **Merov International:** Handels- und Finanzkonzern.
-- **Neuport Logistics:** Internationaler Hafenbetreiber.
-
-### Medien
-- **Merovia Journal:** Große nationale Zeitung.
-- **Stimmen der Übersee:** Plattform für postimperiale Perspektiven.
+- **Handelsparlament Merovia:** Erteilt die Lizenz und bleibt verantwortlich, wenn der Weg reißt.
+- **Haus Merov:** Besitzt die regelmäßigen Schiffe. Hat das Amt nicht mehr.
 
 ### Militär
-- **Expeditionskorps Merovia:** Mobile Streitkräfte für Auslandseinsätze und Krisen.
-- **Hafeningenieurkorps:** Logistik und Infrastruktur.
+- **Die Garnison:** Bodentruppe an Kai und Straße. Hält die Stellung.
+- **Die Lizenz:** Unterstützung. Schiff oder Flugzeug auf dem Weg. Hält keine Stellung.
 
-### Stadtviertel Merovia
-- **Alte Krone:** historische Regierungs- und Finanzgebäude.
-- **Hafenring:** internationale Wirtschaft.
-- **Neuviertel:** migrantisch geprägte Wohngebiete.
-
-### Historische Ereignisse
-- **Ende des Imperiums:** Übergang zur heutigen Handelsrepublik.
-- **Die Rückkehrflotte:** große Rückführung von Soldaten und Zivilisten aus ehemaligen Überseegebieten.
+### Historischer Anker
+- **Die eine Lizenz:** Der Moment, in dem der Staat die Schiffe der Häuser zur Verbindung des eigenen Landes gemacht hat. Seitdem ist ein ausgefallener Weg keine private Verspätung, sondern ein Loch im Land.
 
 ---
 

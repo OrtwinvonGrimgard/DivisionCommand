@@ -296,25 +296,25 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Kern:** Caldris führt Krieg, indem es das Schutzschild intakt hält, und registriert jeden, der darunter steht.
 
-## Merovan – Krieg als Schutz von Verbindungen
+## Merovan – Krieg als Weg im eigenen Land
 
-**Kriegsbild:** Merovan war das Zentrum eines Überseeimperiums. Geblieben sind Häfen, Handelswege und ehemalige Provinzen. Der heutige Staat ist eine parlamentarische Handelsrepublik. Krieg bedroht diese Verbindungen. Die alte Elite hat die formale Macht verloren und besitzt weiterhin Vermögen, Kontakte und Deutungshoheit.
+**Kriegsbild:** Merovan ist ein Land, dessen Teile weit auseinanderliegen. Es hält sie über Häfen und Handel zusammen. Das Gesetz macht sie gleich. Die Verbindung macht sie erreichbar. Krieg bedroht diese Funktion. Die fernen Orte sind das eigene Land, kein Gebiet, das gehoben oder ausgenommen wird.
 
-**Soldatenbild:** Der gute Soldat muss weit von zu Hause funktionieren und sich auf andere Gesellschaften einstellen können. Auslandseinsatz gehört zur Tradition und bleibt politisch umstritten.
+**Soldatenbild:** Die Garnison ist Bodentruppe am eigenen Kai und an der eigenen Straße. Sie hält die Stellung, damit der ferne Ort erreichbar bleibt. Sie ist weit von zu Hause und trotzdem im eigenen Land.
 
-**Führung:** Expeditionäre Stäbe planen über große Entfernungen. Wirtschaftsinteresse und politische Verantwortung liegen ständig übereinander. Das Handelsparlament kann einen Einsatz tragen und ihn gleichzeitig als Geschäft lesen.
+**Führung:** Das Parlament erteilt die Lizenz und bleibt verantwortlich, wenn der Weg reißt. Die Häuser besitzen die Schiffe und haben das Amt verloren. Ohne die Lizenz ist das Schiff Privatgeschäft. Ohne das Schiff zerfällt das Land in der Praxis. Der Staat zahlt, damit gefahren wird. Die Häuser fahren, weil die Lizenz den Weg sichert.
 
-**Tod:** Veteranen werden anerkannt. Die Frage, für welche Verbindung sie gestorben sind, bleibt offen, weil die imperiale Vergangenheit nicht erledigt ist. Familien aus ehemaligen Überseegebieten erinnern anders als die alten Handelshäuser.
+**Tod:** Wer auf diesem Weg stirbt, stirbt für einen Teil des eigenen Landes. Die Familien im Kern und in der Ferne trauern um dieselben Leute. Die einen sehen eine Verspätung. Die anderen einen leeren Platz.
 
-**Bevölkerung:** Hafenstädte, Reedereien und die Nachkommen der Rückkehrflotten machen jeden Auslandskrieg zu einer innenpolitischen Frage. Migration ist nicht der Rand der Gesellschaft. Sie ist ein Ergebnis der eigenen Geschichte.
+**Bevölkerung:** Die fernen Orte liefern, was sie haben, und leben von der nächsten Ladung. Beamte, Medizin, Ersatz und Wahlen benutzen denselben Weg wie die Ware. Kommt er, ist der Ort ein normaler Teil des Landes, später und teurer. Kommt er nicht, wird der Ort nicht unabhängig. Er wird ärmer.
 
-**Technik:** Transport, maritime Systeme, modulare Ausrüstung und Ingenieure für Stützpunkte weit von Merovia. Der sandfarbene Expeditionsrock mit einer einzigen hellen Paspel ist Reisekleidung, keine Kolonialuniform und nicht der Perlenschmuck Sahrs.
+**Technik:** Der sandfarbene Expeditionsrock mit einer einzigen hellen Paspel ist die Kleidung der Garnison auf diesem Weg. Dieselbe Jacke, im Kern sauber und in der Ferne staubig. Es ist nicht der Perlenschmuck Sahrs. Schiff und Flugzeug sind Unterstützung. Sie halten den Weg offen. Sie halten keine Stellung.
 
-**Logistik:** Merovans Stärke ist, Kräfte über große Entfernungen zu versorgen und zu verlegen. Dieselbe Fähigkeit war einmal das Werkzeug der Herrschaft.
+**Logistik:** Die Stärke Merovans ist, eigene Bodentruppen über den lizenzierten Weg zu versorgen. Fällt die Unterstützung, steht die Garnison noch. Sie steht dann ohne das, was den Ort mit dem Land verbindet.
 
-**Anpassung:** Kräfte lassen sich schnell verlagern. Die schwere Aufgabe ist die Grenze zwischen Schutz einer Verbindung und neuer Herrschaft. Merovan muss international stark sein, ohne die Vergangenheit nur umzubenennen.
+**Anpassung:** Merovan kann Kräfte dorthin legen, wo der eigene Weg bedroht ist. Es kann sie nicht durch ein Schiff ersetzen. Wer den Weg schneidet, schneidet eigene Bürger vom Rest ab. Eine Doktrin der fernen Garnison wäre hier nur das Beispiel. Sie gehört Merovan nicht.
 
-**Kern:** Merovan muss Macht über große Entfernungen ausüben, ohne sein Imperium zu wiederholen.
+**Kern:** Merovan führt Krieg, um den Weg im eigenen Land offen zu halten. Gleich ist das Land im Gesetz. Erreichbar ist es nur, solange der Weg fährt.
 
 ## Theryn – Krieg als Mobilisierung der Gesellschaft
 
@@ -354,7 +354,7 @@ Die sechzehn Nationen unterscheiden sich nicht zuerst durch ihre Waffen. Sie unt
 - Dargan: Schuldenrepublik, der Krieg tilgt den Namen des Soldaten
 - Lyr: Eid der Täler, kein Sitz
 - Caldris: das Schutzschild ist die Kriegsführung
-- Merovan: Verbindungen ohne neue Herrschaft
+- Merovan: ein Land, zusammengehalten durch Häfen und Handel
 - Theryn: Mobilisierung und ihr Preis
 
 Diese Sätze sind das mentale Betriebssystem der Gesellschaften. Sie sind keine Spielstile.
