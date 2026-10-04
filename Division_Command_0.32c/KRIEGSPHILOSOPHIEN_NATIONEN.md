@@ -1,344 +1,358 @@
 # Gesellschaftliche Kriegsphilosophien der sechzehn Nationen
 
-Dieses Dokument vertieft die Frage, wie die Gesellschaften von Division Command Krieg verstehen. Es geht nicht um Waffenlisten, sondern um gesellschaftliche Annahmen: Was ist Stärke? Was ist ein guter Soldat? Welche Verluste gelten als akzeptabel? Wem wird vertraut? Wie wird mit Unsicherheit, Versorgung, Technik und Niederlagen umgegangen?
+Dieses Dokument ist die Arbeitsfassung. Es steht neben `LORE_NATIONEN.md` und ersetzt dort keinen Staat, sondern vertieft eine Frage: Wie versteht diese Gesellschaft den Krieg?
+
+Jede Nation beantwortet dieselben Punkte. Die Antworten sind keine Deck-Archetypen. Einzelne Verbände, Familien und Generationen dürfen abweichen.
+
+- **Kriegsbild:** Was ist Krieg für diese Gesellschaft?
+- **Soldatenbild:** Was ist ein guter Soldat?
+- **Führung:** Wem wird vertraut, und wer darf befehlen?
+- **Tod:** Welche Verluste gelten als tragbar, und wie wird erinnert?
+- **Bevölkerung:** Wie weit reicht der Krieg ins zivile Leben?
+- **Technik:** Wozu ist Technik da, und was darf sie am Menschen tun?
+- **Logistik:** Was muss fließen, damit gekämpft werden kann?
+- **Anpassung:** Wie wird aus einer Niederlage gelernt?
+- **Kern:** Der eine Satz, an dem die anderen gemessen werden.
 
 ## Averon – Krieg als Problem von Information und Zeit
 
-Averon betrachtet Krieg als Ausnahmezustand. Eine freie Gesellschaft soll ihn nicht zum Normalzustand machen. Daraus entsteht eine Kultur der Frühwarnung, schnellen Reaktion und politischen Kontrolle.
+**Kriegsbild:** Averon betrachtet Krieg als Ausnahmezustand. Eine freie Gesellschaft soll ihn nicht zum Alltag machen. Deshalb entsteht eine Kultur der Frühwarnung, der schnellen Reaktion und der politischen Kontrolle. Ein langer Krieg gilt als Gefahr für die Gesellschaft selbst, nicht als Beweis ihrer Stärke.
 
-Der gute Soldat ist Bürger in Uniform. Eigeninitiative und Urteilsfähigkeit zählen stärker als blindes Befolgen. Führung wird möglichst dezentralisiert: Wer vor Ort mehr weiß als das Hauptquartier, soll handeln können.
+**Soldatenbild:** Der gute Soldat ist Bürger in Uniform. Eigeninitiative und Urteilsfähigkeit zählen mehr als blinder Gehorsam. Wer vor Ort mehr weiß als das Hauptquartier, soll handeln können.
 
-Gefallene werden vor allem als individuelle Menschen wahrgenommen. Große Verluste erzeugen politischen Druck, weil hinter jedem Soldaten ein ziviles Leben steht. Die Bevölkerung wird über Reservisten, Ingenieure, Logistiker und digitale Infrastruktur eingebunden, ohne dauerhaft militarisiert zu werden.
+**Führung:** Führung wird so weit nach unten gelegt, wie die Verbindung hält. Ein Befehl, der auf veralteten Daten beruht, gilt nicht als Tugend, nur weil er von oben kommt. Politische Kontrolle bleibt: Das Militär entscheidet den Einsatz nicht allein.
 
-Technik soll den Menschen besser informieren und schneller machen. Vernetzung, Sensorik und Kommunikation sind wichtiger als eine grundlegende Veränderung des Körpers. Averons besondere Stärke liegt in Tempo, Reaktion und dem Ausnutzen kurzfristiger Informationsvorteile.
+**Tod:** Gefallene werden als einzelne Menschen gesehen. Hinter jedem Namen steht ein ziviles Leben. Hohe Verluste erzeugen politischen Druck, weil die Gesellschaft sie nicht als anonyme Masse verbuchen will.
 
-Diese Kriegsphilosophie ist **keine eingebaute zeitliche Verfallsmechanik**. Averon wird im Spiel nicht automatisch schwächer, nur weil eine Partie länger dauert. Karten und Fähigkeiten können Tempo, Reaktion und Informationsvorteile belohnen, bleiben aber grundsätzlich auch in langen Partien relevant.
+**Bevölkerung:** Reservisten, Ingenieure, Logistiker und die digitale Infrastruktur werden eingebunden. Der Alltag selbst soll nicht dauerhaft militarisiert werden.
 
-Der gesellschaftliche Grund für Averons Wunsch nach kurzen Kriegen liegt außerhalb dieser Spielmechanik: Ein langer Krieg erhöht politische, wirtschaftliche und menschliche Belastungen und kann die freie Gesellschaft selbst verändern. Die Nation versucht deshalb, Kriege schnell zu entscheiden, ohne dass die Spieldauer Averon dafür mit einem dauerhaften Nachteil bestraft.
+**Technik:** Technik soll den Menschen besser informieren und schneller machen. Vernetzung, Sensorik und Kommunikation stehen über einer Veränderung des Körpers. Der Soldat bleibt ein Mensch. Seine Stärke ist, dass er früher weiß und enger mit anderen verbunden ist.
 
-**Kern:** Averon will einen Krieg möglichst kurz halten, bevor er eine Generation prägt – aber Averon wird nicht automatisch schwächer, wenn der Krieg länger dauert.
+**Logistik:** Versorgung soll so schnell und so sichtbar sein wie die Lage selbst. Fällt das Netz aus, fällt auch der Vorsprung.
+
+**Anpassung:** Averon lernt schnell, solange Informationen fließen. Dieselbe Abhängigkeit ist die Schwäche: Ohne Verbindung wird aus Eigeninitiative Zersplitterung.
+
+**Kern:** Averon will einen Krieg kurz halten, bevor er eine Generation prägt. Averon wird im Spiel nicht schwächer, nur weil eine Partie länger dauert. Der Wunsch nach Kürze ist gesellschaftlich, kein eingebauter Zeitmalus.
 
 ## Karsk – Der Mensch als militärisches System
 
-Karsk betrachtet Krieg als Optimierungsproblem. Leistung, Ausfall, Versorgung und Führung sollen messbar werden. Die Gesellschaft glaubt, menschliche Schwächen technisch überwinden zu können.
+**Kriegsbild:** Karsk betrachtet Krieg als Optimierung. Leistung, Ausfall, Versorgung und Führung sollen messbar werden. Die Gesellschaft glaubt, menschliche Schwächen technisch überwinden zu können. Das ist keine stolze Verbesserung. Es ist ein Staat, der Menschen als Rohstoff behandelt.
 
-Der ideale Soldat ist belastbar, berechenbar und technisch integrierbar. Implantate, künstliche Gelenke, verstärkte Knochen, Nervenschnittstellen und künstliche Organe sind Ausdruck dieser Philosophie. Der Soldat wird zum militärischen System mit menschlichem Ursprung.
+**Soldatenbild:** Der ideale Soldat ist belastbar, berechenbar und technisch anschließbar. Implantate, künstliche Gelenke, verstärkte Knochen, Nervenschnittstellen und ersetzte Organe sind der Ausdruck davon. Das Gewebe stößt die Systeme ab. Nerven degenerieren. Der Dienst frisst den Körper. Je länger jemand dient, desto weniger Mensch bleibt.
 
-Auch Führung folgt dieser Logik. Ein Verband wird nicht nur nach Personalstärke beurteilt, sondern nach erwarteter Einsatzleistung. Dadurch entsteht die gefährliche Illusion objektiver Entscheidungen: Die Zahlen wirken neutral, obwohl der Staat selbst entscheidet, welche Eigenschaften einen Menschen wertvoll machen.
+**Führung:** Ein Verband wird nicht nur nach Köpfen beurteilt, sondern nach erwarteter Einsatzleistung. Die Zahlen wirken neutral. Der Staat entscheidet aber selbst, welche Eigenschaft einen Menschen wertvoll macht.
 
-Tod wird zugleich betrauert und untersucht. Warum ist das System ausgefallen? War die Behandlung zu spät? War die Ausrüstung ungeeignet? War der Soldat nicht ausreichend vorbereitet? Verwundete erhalten hervorragende Medizin, aber Versorgung kann nach gesellschaftlichem oder militärischem Nutzen priorisiert werden.
+**Tod:** Ein Gefallener wird betrauert und seziert. Warum ist das System ausgefallen? War die Behandlung zu spät, die Ausrüstung falsch, der Soldat nicht weit genug vorbereitet? Verwundete bekommen hervorragende Medizin. Der Zugang kann nach Nutzen priorisiert werden.
 
-Die Bevölkerung wird ebenfalls Teil des Systems. Arbeitsleistung, medizinische Eignung, Ausbildung, politische Zuverlässigkeit und familiäre Verbindungen können bewertet werden. Im Krieg wird diese Logik verschärft.
+**Bevölkerung:** Arbeitsleistung, medizinische Eignung, Ausbildung, politische Zuverlässigkeit und familiäre Verbindungen können bewertet werden. Im Krieg wird diese Logik schärfer. Die Frage der Bürger lautet, ob sie noch geschützt werden oder schon verbraucht.
 
-Karsks Stärke ist seine Fähigkeit, Fehler systematisch auszuwerten. Seine Schwäche sind Eigenschaften, die sich nicht zuverlässig messen lassen: Gewissen, Liebe, Trotz, Angst, Solidarität und bewusste Selbstaufopferung.
+**Technik:** Karsk verbindet Medizin und Waffe im selben Körper. Filter, künstliche Augen und verstärkte Nerven lassen Soldaten dort arbeiten, wo andere nicht atmen oder nicht sehen können. Die Technik heilt nicht um der Person willen. Sie hält das System im Einsatz.
 
-**Kern:** Karsk bereitet nicht nur Menschen auf den Krieg vor. Karsk versucht, den Menschen selbst für den Krieg zu optimieren.
+**Logistik:** Ersatzteile, Medikamente, Implantatwartung und Spezialpersonal sind eine Infrastruktur. Fällt sie aus, fallen die verbesserten Körper mit ihr aus.
 
-## Ossaria – Krieg als Annahme des Todes
+**Anpassung:** Karsk wertet Fehler systematisch aus und schreibt Verfahren neu. Was sich nicht messen lässt, fällt aus der Rechnung: Gewissen, Liebe, Trotz, Angst und eine Aufopferung, die niemand angeordnet hat.
 
-Ossaria betrachtet den Tod nicht als Ausnahme des Krieges, sondern als eine unabdingbare Realität des menschlichen Lebens. Krieg wird deshalb weder romantisiert noch verdrängt. Töten und Sterben gehören zur Realität des Konflikts, und wer einen Krieg führt, muss bereit sein, diese Tatsache anzunehmen.
+**Kern:** Karsk bereitet Menschen nicht nur auf den Krieg vor. Karsk versucht, den Menschen für den Krieg umzubauen, und nimmt den Verlust der Person als Preis.
 
-Die Gesellschaft entwickelt daraus eine ausgeprägte Kriegerkultur. Sie erinnert in ihrer Haltung an alte Kriegergesellschaften, ohne diese historisch nachzuahmen: Ehre, Standhaftigkeit, persönliche Verantwortung und die Bereitschaft, für andere einzustehen, besitzen hohen Wert. Ein Krieger soll seinen möglichen Tod akzeptiert haben, bevor er in die Schlacht zieht. Er sucht den Tod jedoch nicht. Sinnloses Sterben gilt ebenso wenig als Tugend wie Feigheit.
+## Ossaria – Krieg als angenommener Tod
 
-Der zentrale Gedanke lautet:
+**Kriegsbild:** Ossaria behandelt den Tod nicht als Panne des Krieges, sondern als Teil des Lebens. Die Existenz der Lebenden steht auf dem Opfer derer, die vor ihnen gefallen sind. Krieg wird deshalb weder romantisiert noch verdrängt. Wer ihn führt, muss töten und sterben als Tatsache annehmen. Den Tod zu suchen gilt nicht als Tugend. Ihn zu verschwenden auch nicht.
 
-**„Fürchte den Tod nicht. Verschwende ihn nicht.“**
+**Soldatenbild:** Der gute Soldat ist diszipliniert, standhaft und für seine Kameraden verantwortlich. Er soll seinen möglichen Tod akzeptiert haben, bevor er zieht. Heldentum ist nicht, möglichst sichtbar zu sterben. Wer sich ohne Not opfert und damit die anderen gefährdet, hat die Pflicht verfehlt.
 
-Die ossarische Rüstung macht diese Philosophie sichtbar. Knochen-, Schädel- und andere Toteninsignien erinnern an die Ahnen und an die Gefallenen, deren Erbe die Lebenden weitertragen. Gleichzeitig soll das Erscheinungsbild den Gegner einschüchtern. Ossaria verbirgt den Tod nicht, sondern trägt ihn offen am eigenen Körper.
+**Führung:** Ossaria ist eine starke, zentral geführte Republik mit einer ausgeprägten Staats- und Ahnenkultur. An der Spitze steht der Hüter der Republik. Er ist kein König und kein Zeremonienamt. Seine Legitimität kommt aus Zustimmung, persönlicher Bewährung und der Pflicht gegenüber Lebenden und Toten. Neben dem Parlament steht der Rat der Ahnen: Veteranen, Historiker, Offiziere, Ärzte, Juristen, Wissenschaftler und Angehörige Gefallener. Er ist keine magische Instanz. Bei existenziellen Entscheidungen fragt er, wie spätere Generationen darauf zurückblicken. Das Parlament bleibt für Haushalt, Wirtschaft, Forschung und das gewöhnliche Recht zuständig. Nach einem Krieg wird streng gefragt, warum ein Befehl gegeben wurde und ob das Opfer nötig war. Wer Menschen leichtfertig opfert, verliert Legitimität.
 
-Damit besitzt die Rüstung drei Bedeutungen: Sie ehrt die Toten, erinnert den eigenen Soldaten an seine Sterblichkeit und vermittelt dem Gegner, dass seine Drohung mit dem Tod nicht ausreicht, um Ossaria zum Rückzug zu zwingen.
+**Tod:** Gefallene werden namentlich erinnert und in die Familiengeschichte aufgenommen. Ahnenverehrung heißt nicht, die Toten zu vergöttern. Die Lebenden verstehen sich als Glied einer Kette. Die Rüstung kann die Geschichte der Vorfahren tragen. Die Gefahr dieser Haltung ist, dass zu hohe Opfer irgendwann normal wirken.
 
-Der gute Soldat ist diszipliniert, furchtlos ohne lebensmüde zu sein, traditionsbewusst und bereit, Verantwortung für seine Kameraden zu übernehmen. Heldentum besteht nicht darin, möglichst spektakulär zu sterben. Ein Soldat, der sich unnötig opfert und dadurch seine Kameraden gefährdet, hat seine Pflicht möglicherweise gerade nicht erfüllt.
+**Bevölkerung:** Familien tragen die Namen mit. Erinnerung ist öffentlich, nicht nur ein Archiv des Staates. Zivilschutz und Medizin gehören dazu, weil das Opfer der Ahnen die Lebenden erhalten soll, nicht die nächste Verlustliste füllen.
 
-Die politische Führung spiegelt diese Haltung wider. Ossaria ist eine starke, zentral geführte Republik mit einer ausgeprägten Staats- und Ahnenkultur. An der Spitze steht der **Hüter der Republik**. Er ist weder König noch bloßer Zeremonienpräsident, sondern besitzt reale politische und militärische Verantwortung.
+**Technik:** Die Uniform zeigt den Knochenkult. Schädel, Knochen und Totenzeichen erinnern an die Ahnen und sollen den Gegner wissen lassen, dass die Drohung mit dem Tod nicht reicht. Das Aussehen ist Erinnerung und Einschüchterung. Die Technik darunter ist Schutz. Rüstung, Sensorik, Atemsysteme und Medizin werden getragen. Sie ersetzen den Körper nicht. Wer Menschen in den Kampf schickt, muss sie so gut ausrüsten, wie er kann. Darin unterscheidet sich Ossaria von Karsk: Ossaria leugnet die Sterblichkeit nicht und baut den Menschen nicht um. Es schützt den, der noch leben soll.
 
-Seine Legitimität beruht auf politischer Zustimmung, persönlicher Bewährung und der Verpflichtung gegenüber Lebenden und Toten. Der politische Grundsatz lautet sinngemäß:
+**Logistik:** Schutz, Bergung und Versorgung der Lebenden haben Vorrang vor dem Prunk der Erinnerung. Eine schöne Maske, hinter der die Medizin fehlt, wäre für Ossaria ein leeres Zeichen.
 
-**„Wer andere in den Tod schickt, muss selbst die Verantwortung dafür tragen.“**
+**Anpassung:** Verluste werden untersucht, nicht nur betrauert. Aus einem unnötigen Tod soll eine bessere Ausrüstung oder ein besserer Befehl werden. Die Schwäche bleibt: Eine Gesellschaft, die den Tod angenommen hat, kann ihn zu leicht als ausreichend begründet behandeln.
 
-Neben dem Parlament besteht ein **Rat der Ahnen**. Er ist keine religiös-magische Institution, sondern ein hoch angesehener Kreis aus Veteranen, Historikern, Offizieren, Ärzten, Juristen, Wissenschaftlern und Angehörigen gefallener Soldaten. Er besitzt vor allem moralisches und gesellschaftliches Gewicht. Bei Entscheidungen von existenzieller Bedeutung stellt er die Frage, wie spätere Generationen auf die Entscheidung zurückblicken werden.
-
-Das Parlament bleibt für Haushalt, Wirtschaft, Forschung, Infrastruktur und allgemeine Gesetzgebung zuständig. In existenziellen Krisen kann die politische Führung jedoch schnell handeln. Nach einem Konflikt werden Entscheidungen und Verluste besonders streng untersucht: Warum wurde dieser Befehl gegeben? Welche Informationen lagen vor? War das Opfer notwendig?
-
-Ein ossarischer Politiker kann sich deshalb nicht einfach hinter dem Satz verstecken, dass Krieg eben Menschenleben koste. Von ihm wird erwartet, den Preis zu benennen und zu begründen.
-
-Die Gesellschaft akzeptiert starke politische Führung, aber nicht automatisch jeden starken Führer. Ein Herrscher oder Regierungschef, der Menschen leichtfertig opfert oder ihre Opfer ohne Not verursacht, verliert damit einen wesentlichen Teil seiner Legitimität.
-
-Technologie und Rüstung sind hochentwickelt. Ossaria setzt sie nicht ein, um die Sterblichkeit des Menschen zu leugnen, sondern um seine Kampffähigkeit und Überlebenschancen zu erhöhen. Medizin, Schutzsysteme, Aufklärung und moderne Ausrüstung stehen deshalb nicht im Widerspruch zur Kriegerkultur. Im Gegenteil: Wer das Leben seiner Soldaten in den Kampf schickt, hat die Pflicht, sie so gut wie möglich auszurüsten.
-
-Gefallene werden namentlich erinnert und in die Familiengeschichte aufgenommen. Ahnenverehrung bedeutet dabei nicht, dass die Toten vergöttert werden. Sie bedeutet, dass die Lebenden sich als Teil einer langen Kette verstehen. Die Rüstung eines Soldaten kann symbolisch die Geschichte seiner Vorfahren tragen.
-
-Ossarias Stärke liegt in seiner Bereitschaft, Tod und Gewalt nicht zu verdrängen. Dadurch können Soldaten unter extremem Druck standhaft bleiben. Seine mögliche Schwäche liegt darin, dass eine Gesellschaft, die Tod als unabdingbare Realität akzeptiert, Gefahr läuft, zu hohe Opfer zu normalisieren.
-
-**Kern:** Ossaria akzeptiert, dass Krieg Menschenleben kostet. Es weigert sich nur, deren Tod bedeutungslos werden zu lassen.
-
-**Der gesellschaftliche Grundsatz lautet:**
-
-**„Wir tragen die Toten nicht hinter uns. Wir tragen sie auf unserer Rüstung.“**
+**Kern:** Ossaria trägt die Toten nicht hinter sich. Es trägt sie auf der Rüstung. Die Zeichen erinnern an das Opfer, dem die Lebenden ihr Dasein verdanken. Die Technik soll diese Lebenden schützen.
 
 ## Rothain – Die Armee eines gefallenen Zentrums
 
-Rothain war einst Zentrum eines Reiches. Straßen, Verkehrsachsen, Verwaltungsstrukturen und militärische Traditionen erinnern daran. Die heutige Republik muss mit diesem Erbe leben, ohne es einfach wiederherzustellen.
+**Kriegsbild:** Rothain war das Zentrum eines Reiches. Straßen, Verwaltungen und Regimenter erinnern daran. Die alte Kultur versteht Krieg als Werkzeug staatlicher Größe. Die Republik versteht ihn stärker als Verteidigung. Beides steht nebeneinander, und keine Seite hat die andere verdrängt.
 
-Die alte militärische Kultur sieht Krieg als Instrument staatlicher Macht und strategischer Größe. Die republikanische Gegenwart sieht ihn stärker als Verteidigung. Beide Vorstellungen existieren nebeneinander.
+**Soldatenbild:** Der gute Soldat ist professionell, standhaft und traditionsbewusst, ohne die Vergangenheit für einen Befehl zu halten. Regimenter haben Namen, die älter sind als die Republik. Das verpflichtet und verführt.
 
-Der gute Soldat ist professionell, standhaft und traditionsbewusst, aber nicht blind gegenüber der Vergangenheit. Veteranen besitzen gesellschaftliches Gewicht. Gleichzeitig misstraut ein Teil der Bevölkerung jeder Rückkehr zu imperialer Politik.
+**Führung:** Große Stäbe und persönliche Verantwortung der Offiziere treffen auf parlamentarische Kontrolle. Veteranenverbände haben politisches Gewicht. Ein Teil der Bevölkerung misstraut jeder Geste, die nach der alten Krone aussieht.
 
-Rothains besondere Stärke liegt in Organisation und Logistik. Die zentrale geografische Lage macht Straßen, Flüsse, Bahnlinien, Depots und Umschlagplätze zu strategischen Lebensadern. Seine historische Macht erklärt sich deshalb nicht nur aus militärischer Stärke, sondern aus der Fähigkeit, Bewegung und Verwaltung zu bündeln.
+**Tod:** Gefallene gehören zur nationalen Erinnerung. Ältere Rituale bleiben in den Regimentern. Die Republik versucht, sie von imperialem Anspruch zu trennen. Ob das gelingt, ist der Streit jeder Generation.
 
-Seine Schwäche ist institutionelle Trägheit: Eine Gesellschaft, die ihre Vergangenheit gut bewahrt, kann auch überholte Vorstellungen bewahren.
+**Bevölkerung:** Militärische Familien sind verbreitet. Große Einsätze brauchen trotzdem eine politische Begründung, weil zu viele noch wissen, wohin Größe geführt hat.
 
-**Kern:** Rothain besitzt die Fähigkeiten eines alten Machtzentrums und das Misstrauen einer Republik gegenüber dessen Vergangenheit.
+**Technik:** Rothain verbindet moderne Geräte mit alten Strukturen. Zuverlässigkeit und Stückzahl zählen mehr als ein einzelner Durchbruch. Die historische Uniformsprache, bis zum dunklen Rock und den Silbersternen, ist Erinnerung, nicht die Taktik selbst.
+
+**Logistik:** Die Lage in der Mitte macht Straßen, Flüsse, Bahnen, Depots und Umschlagplätze zu Lebensadern. Rothains alte Macht kam nicht nur aus Schlachten, sondern aus der Fähigkeit, Bewegung und Verwaltung zu bündeln.
+
+**Anpassung:** Institutionelle Erfahrung ist groß. Dieselbe Pflege der Vergangenheit bewahrt auch überholte Vorstellungen. Jüngere Offiziere und ältere Regimenter streiten, was Warnung ist und was Vermächtnis.
+
+**Kern:** Rothain hat die Mittel eines alten Machtzentrums und das Misstrauen einer Republik gegenüber genau dieser Vergangenheit.
 
 ## Sahr – Krieg als Kampf um Bewegung
 
-Sahr denkt in Häfen, Flüssen, Handelswegen, Lagerhäusern und Versorgung. Ein verlorener Hafen kann wichtiger sein als ein verlorenes Stück Land.
+**Kriegsbild:** Sahr denkt in Häfen, Flüssen, Wegen und Lagern. Krieg ist zuerst die Unterbrechung von Bewegung. Ein verlorener Hafen kann schwerer wiegen als ein verlorenes Stück Boden.
 
-Krieg ist für Sahr zunächst die Unterbrechung von Bewegung. Der gute Soldat ist praktisch, zuverlässig und logistisch versiert. Kapitäne, Ingenieure und Versorgungsfachleute genießen hohen Status.
+**Soldatenbild:** Der gute Soldat ist praktisch, zuverlässig und logistisch brauchbar. Kapitäne, Ingenieure und Versorger haben hohen Status. Ein Verband, der nicht versorgt ist, gilt als bereits geschlagen.
 
-Die Bevölkerung ist unmittelbar eingebunden. Werften, Transportunternehmen und Lagerhäuser können strategische Bedeutung erhalten. Ein Krieg trifft deshalb Familien und Handelsgemeinschaften direkt.
+**Führung:** Städte, Handelsfamilien und regionale Verwaltungen teilen die Macht. Ein gemeinsamer Standard muss viele Interessen verbinden. Das macht Beschlüsse langsam und Routen erfinderisch.
 
-Sahr bevorzugt Technik, die Bewegung ermöglicht: Navigation, Kommunikation, Transport und Reparatur. Versorgung ist kein Hintergrundthema, sondern Teil der eigentlichen Kriegsführung.
+**Tod:** Ein Verlust trifft oft zugleich Familie, Betrieb und Handelsgemeinschaft. Die Trauer ist lokal und wirtschaftlich zugleich.
 
-Die Stärke ist Flexibilität. Fällt eine Route aus, wird eine andere gesucht. Die Schwäche liegt im starken Einfluss wirtschaftlicher Interessen auf politische Entscheidungen.
+**Bevölkerung:** Werften, Lager und Transportfirmen werden im Konflikt zu strategischer Infrastruktur. Der Krieg kommt deshalb früh in die Häuser, auch wenn keine Front durch die Stadt läuft.
 
-**Kern:** Für Sahr beginnt eine Niederlage dort, wo Menschen und Versorgung nicht mehr fließen können.
+**Technik:** Navigation, Kommunikation, Transport und Reparatur stehen vorn. Sahr braucht keine zweite Haut am Körper. Es braucht Wege, die offen bleiben.
 
-## Albensee – Krieg als rechtlich gebundene Bürgerpflicht
+**Logistik:** Versorgung ist nicht der Hintergrund der Schlacht. Sie ist die Schlacht. Wer die Versorgung kontrolliert, kontrolliert das Land.
 
-Albensee versteht Gewalt als Aufgabe, die dem Recht untergeordnet bleiben muss. Der Staat besitzt militärische Macht, aber diese Macht gehört nicht einer eigenen Kriegerkaste.
+**Anpassung:** Fällt eine Route aus, wird eine andere gesucht. Die Schwäche ist der Einfluss der Handelshäuser: Eine militärisch richtige Sperre kann politisch unmöglich sein, weil sie die eigenen Familien trifft.
 
-Der Soldat ist Bürger in Uniform. Dienst ist eine zeitweise übernommene Verantwortung gegenüber dem Gemeinwesen.
+**Kern:** Für Sahr beginnt die Niederlage dort, wo Menschen und Versorgung nicht mehr fließen.
 
-Führung setzt auf klare Zuständigkeiten, professionelle Stäbe und starke Unteroffiziere. Ein guter Befehl muss nicht nur funktionieren, sondern nachvollziehbar und rechtlich verantwortbar sein.
+## Steinmark – Krieg als rechtlich gebundene Bürgerpflicht
 
-Gefallene werden als Bürger erinnert. Veteranenversorgung gilt als gesellschaftliche Verpflichtung.
+**Kriegsbild:** Steinmark unterstellt Gewalt dem Recht. Der Staat hat militärische Macht. Diese Macht gehört keiner Kriegerkaste. Verteidigung muss politisch legitimiert und rechtlich begrenzt bleiben. Gute Absichten gelten nicht als Ersatz für ein Verfahren.
 
-Die Verteidigung kann Reservisten, Kommunen, Feuerwehren, technische Vereine und zivile Infrastruktur einbeziehen. Gleichzeitig lehnt Albensee eine dauerhafte Militarisierung des Alltags ab.
+**Soldatenbild:** Der Soldat ist Bürger in Uniform. Der Dienst ist eine zeitweise übernommene Pflicht gegenüber dem Gemeinwesen. Ein guter Befehl muss funktionieren und sich später verantworten lassen.
 
-Grimgard liegt direkt am Albensee. Der See wird von der Alb gespeist und verbindet wirtschaftliche und gesellschaftliche Räume. Verkehrswege rund um den See können im Frieden Handelswege und im Konflikt Versorgungslinien sein.
+**Führung:** Klare Zuständigkeiten, professionelle Stäbe und starke Unteroffiziere tragen die Armee. Die Bundesländer haben eigene Verwaltungskulturen. Das Heer bleibt standardisiert, damit aus dieser Vielfalt kein Zustand eigener Herren wird. Jüngere Offiziere wollen mehr Eigenständigkeit. Die ältere Führung fürchtet, dass zu viel Eigeninitiative die Armee wieder zur politischen Macht macht.
 
-Albensees Stärke ist institutionelle Zuverlässigkeit. Seine Schwäche ist die mögliche Langsamkeit einer Gesellschaft, die Legitimität ernst nimmt.
+**Tod:** Gefallene werden als Bürger erinnert, nicht als Stoff einer Heldensage. Veteranenversorgung gilt als Pflicht, weil der Dienst dem Gemeinwesen geleistet wurde und nicht umgekehrt.
 
-**Kern:** Albensee verteidigt nicht den Krieg, sondern die Rechtsordnung, die seine Bürger für schützenswert halten.
+**Bevölkerung:** Reservisten, Kommunen, Feuerwehren, technische Vereine und zivile Infrastruktur können zur Verteidigung gehören. Den Alltag dauerhaft zu militarisieren lehnt Steinmark ab. Die Menschen wissen meist, welche Behörde zuständig ist. Das ist der Stolz und die Bremse.
+
+**Technik:** Robust, standardisiert und wartbar gilt mehr als Komplexität um ihrer selbst willen. Steinmark versucht nicht, den einzelnen Soldaten übermenschlich zu machen. Ein Verband aus gewöhnlichen Menschen soll wie ein System funktionieren.
+
+**Logistik:** Ausbildung, Vorrat und klare Wege sind die eigentliche Stärke. Grimgard liegt am Albensee. Der See wird von der Alb gespeist. Im Frieden sind das Handelswege. Im Krieg sind dieselben Wege Versorgungslinien. Der Albensee ist ein Ort in Steinmark, kein eigener Staat.
+
+**Anpassung:** Viele kleine Institutionen sollen auch unter Druck weiterarbeiten. Die Schwäche ist die Langsamkeit einer Gesellschaft, die Legitimität ernst nimmt. Wenn die Lage sich schneller ändert als die Zuständigkeit, kommt der Befehl zu spät und trotzdem formal richtig an.
+
+**Kern:** Steinmark verteidigt nicht den Krieg. Es verteidigt die Rechtsordnung, die seine Bürger für schützenswert halten.
 
 ## Vael – Krieg als industrielle Belastungsprobe
 
-Vael sieht Krieg durch die Augen von Fabriken, Bergwerken, Energieanlagen und Arbeitersiedlungen. Militärische Stärke beginnt für Vael hinter der Front.
+**Kriegsbild:** Vael sieht den Krieg durch Fabriken, Bergwerke, Energieanlagen und Arbeitersiedlungen. Die Frage lautet, wer länger produzieren, reparieren und ersetzen kann. Die Front ist die sichtbare Seite einer industriellen Belastungsprobe.
 
-Der entscheidende Maßstab lautet: Wer kann länger produzieren, reparieren und ersetzen?
+**Soldatenbild:** Der Soldat zählt. Der Techniker, der ein zerstörtes System wiederherstellt, kann strategisch genauso viel wiegen. Menschen werden nicht zur Waffe umgebaut. Es werden mehr Maschinen gebaut.
 
-Der gute Soldat ist wichtig, aber der Techniker, der ein beschädigtes System wiederherstellt, kann strategisch ebenso wertvoll sein. Dadurch entsteht ein enges Verhältnis zwischen Industrie und Militär.
+**Führung:** Industriekonzerne und staatliche Planung stehen eng beim Militär. Produktionskapazität verändert, was operativ möglich ist. Ein Plan ohne Werk ist für Vael kein Plan.
 
-Die Bevölkerung wird über Betriebe und Arbeitsorganisation mobilisiert. Ein Streik, ein Energiemangel oder der Ausfall eines wichtigen Werkes kann unmittelbare sicherheitspolitische Folgen haben.
+**Tod:** Ein Gefallener ist eine persönliche Tragödie und der Verlust einer Fachkraft. Beides wird gesagt. Das zweite darf das erste nicht ersetzen, tut es in den Zahlen der Werke aber oft.
 
-Vael bevorzugt robuste und in großen Stückzahlen herstellbare Systeme. Seine Stärke ist industrielle Masse; seine Schwäche ist die Abhängigkeit von Rohstoffen, Energie und Verkehrswegen.
+**Bevölkerung:** Betriebe, Schichten und Energieversorgung entscheiden mit, ob der Krieg führbar bleibt. Ein Streik, ein Blackout oder der Ausfall eines Werks ist sofort eine Frage der Sicherheit.
+
+**Technik:** Schwere Fahrzeuge, Artillerie, Munition und Ersatz in großer Zahl. Was zerstört wird, wird nachgebaut. Die helle Dienstjacke und die nüchterne Industrieform sind der Ausdruck dieser Haltung: Funktion vor Prunk.
+
+**Logistik:** Masse braucht Rohstoffe, Energie und offene Verkehrswege. Vaels Stärke und Vaels Abhängigkeit sind dasselbe.
+
+**Anpassung:** Fehler werden häufig durch Umbau und höhere Produktion beantwortet. Die offene Frage ist, ob die Industrie schneller lernt als sie verbraucht, und wann ein Mensch aufhört, Soldat zu sein, und eine Zahl im Produktionsplan wird.
 
 **Kern:** Vael führt Krieg mit der Fabrik im Rücken.
 
 ## Vesper – Krieg als Kampf um Wissen
 
-Vesper ist ein oligarchischer Überwachungs- und Sicherheitsstaat. Die Macht liegt nicht bei einem einzelnen Diktator oder einer einzigen Partei, sondern in einem Geflecht aus alten Familien, Sicherheitsapparaten, Verwaltung, Militär und wirtschaftlichen Netzwerken. Diese Gruppen arbeiten zusammen, konkurrieren aber zugleich um Einfluss und Informationen.
+**Kriegsbild:** Vesper ist ein oligarchischer Sicherheitsstaat. Die Macht liegt nicht bei einem Diktator, sondern in einem Geflecht aus alten Familien, Sicherheitsapparat, Verwaltung, Militär und Wirtschaft. Diese Gruppen arbeiten zusammen und konkurrieren um Informationen. Wer weiß, was geschehen ist oder was andere zu wissen glauben, hat Handlungsspielraum. Wer es nicht weiß, reagiert nur.
 
-Der zentrale gesellschaftliche Gedanke lautet:
+**Soldatenbild:** Der gute Soldat ist geduldig, diskret und analytisch. Er muss handeln können, wenn die Wahrheit unvollständig oder gefälscht ist. Seine Haltung lautet: Ich bleibe handlungsfähig, obwohl ich nicht weiß, was wahr ist.
 
-**„Wer Informationen kontrolliert, kontrolliert Handlungsmöglichkeiten.“**
+**Führung:** Informationen werden ungleich verteilt. Nicht jeder Offizier kennt den ganzen Plan. Fällt eine Stelle aus oder wird sie kompromittiert, soll der Rest weiterarbeiten. Dieselbe Methode kann die eigene Armee lähmen: Zwei Verbände folgen korrekten Befehlen und trotzdem verschiedenen Annahmen.
 
-Für Vesper ist Wissen deshalb keine neutrale Ressource. Wer weiß, was geschehen ist, was wahrscheinlich geschehen wird oder was andere über eine Situation wissen, besitzt Handlungsspielraum. Wer diese Informationen nicht besitzt, reagiert.
+**Tod:** Gefallene werden oft nur teilweise oder verspätet gemeldet. Familien wissen lange nicht, ob jemand gefallen, vermisst oder aus den Listen genommen wurde. Die Trauer gilt dem Tod und der Unsicherheit, ob die Wahrheit überhaupt bekannt ist.
 
-Diese Haltung prägt den Alltag. Menschen lernen früh, zwischen öffentlicher und privater Wahrheit zu unterscheiden. Es gibt Dinge, die man offen sagen kann, Dinge, die man nur im vertrauten Kreis ausspricht, und Informationen, deren Besitz selbst gefährlich werden kann. Dadurch entsteht eine Gesellschaft, in der Zurückhaltung nicht automatisch Feigheit bedeutet. Sie gilt häufig als Form von Selbstschutz.
+**Bevölkerung:** Kinder lernen, Quellen zu vergleichen und Interessen hinter Sätzen zu sehen. Zurückhaltung gilt oft als Selbstschutz, nicht als Feigheit. Offizielle Medien, gebundene Netze und Gerüchte stehen nebeneinander. Der Nachtbrief sammelt und vergleicht außerhalb der offiziellen Wege. Er ist nicht automatisch wahr. Er bestreitet das Monopol auf die Meldung. Viele Bürger akzeptieren Geheimhaltung, weil sie Leben retten kann. Dieselbe Begründung kann Fehler und Machtmissbrauch verdecken.
 
-Auch die Bildung folgt dieser Logik. Kinder und Jugendliche lernen, Quellen miteinander zu vergleichen, Interessen hinter Aussagen zu erkennen und zwischen bestätigten Informationen, Vermutungen und Gerüchten zu unterscheiden. Vesper bringt dadurch hervorragende Analysten, Diplomaten und Nachrichtendienstler hervor. Gleichzeitig wird echtes Vertrauen schwierig: Wer gelernt hat, dass jede Information einen Urheber und jedes Schweigen einen Grund besitzt, betrachtet auch enge Beziehungen mit einem gewissen Misstrauen.
+**Technik:** Aufklärung, Verschlüsselung, Überwachung und Kommunikation sollen nicht nur zeigen, wo der Gegner ist. Sie sollen beeinflussen, was er über die eigene Lage glaubt. Eine falsche Information zur richtigen Zeit gilt als Waffe. Vesper hat nicht die Körpertechnik Karsks und nicht die Schutzrüstung Ossarias.
 
-Die Medienlandschaft besteht aus offiziellen staatlichen Medien, wirtschaftlich oder politisch gebundenen Informationsnetzen, privaten Kontakten und informellen Gerüchten. Die Bevölkerung erwartet nicht, dass eine einzige Quelle die vollständige Wahrheit liefert. Vielmehr versucht man, aus widersprüchlichen Informationen ein möglichst belastbares Bild zu gewinnen.
+**Logistik:** Bewegungen und Depots sollen schwer vorhersehbar sein. Versorgung ist selbst eine Information, die man dem Gegner nicht schenken will.
 
-Der **Nachtbrief** ist ein Ausdruck dieser Kultur. Er kann als unabhängiges beziehungsweise halbundergroundes Informationsnetzwerk verstanden werden, das Informationen außerhalb der offiziellen Strukturen sammelt, vergleicht und verbreitet. Seine Bedeutung liegt nicht darin, dass jede veröffentlichte Information automatisch wahr ist, sondern darin, dass er die offiziellen Informationswege herausfordert und alternative Quellen miteinander verbindet.
+**Anpassung:** Methoden wechseln schnell, und der Gegner soll nicht sicher wissen, was sich geändert hat. Die Ursache dieser Kultur sind ältere Infiltrationen, Verrat und Krisen. Geheimhaltung begann als Schutz und wurde zum Prinzip. Daraus folgt das Paradox: Eine Nation, die die Täuschung fürchtet, hat eine Kultur der Täuschung gebaut.
 
-Die Ursache dieser Kultur liegt in Vespers Geschichte. Frühere Infiltrationen, innere Konflikte, ausländische Nachrichtendienste, Verrat und politische Krisen haben die Überzeugung verstärkt, dass vollständige Offenheit eine Gefahr darstellen kann. Geheimhaltung wurde zunächst als Schutzmaßnahme geschaffen und schließlich zu einem gesellschaftlichen Prinzip.
-
-Damit entsteht das zentrale Paradox Vespers:
-
-**Eine Nation, die aus der Angst vor Täuschung eine ganze Kultur der Täuschung geschaffen hat.**
-
-Der gute Soldat ist geduldig, diskret und analytisch. Er muss mit unvollständigen Informationen funktionieren können. Entscheidend ist nicht, dass er immer weiß, was wahr ist. Entscheidend ist, dass er auch dann handlungsfähig bleibt, wenn die Wahrheit unvollständig oder absichtlich verfälscht ist.
-
-Seine innere Haltung lässt sich so zusammenfassen:
-
-**„Ich bleibe handlungsfähig, obwohl ich nicht weiß, was wahr ist.“**
-
-Vesperische Führung verteilt Informationen bewusst ungleichmäßig. Nicht jeder Soldat und nicht jeder Offizier muss den vollständigen Plan kennen. Dadurch können einzelne Teile des Systems auch dann weiterarbeiten, wenn Informationen verloren gehen oder in falsche Hände geraten.
-
-Diese Methode besitzt jedoch eine gefährliche Kehrseite. Zu viel Geheimhaltung kann die eigene Armee genauso behindern wie den Gegner. Ein Kommandeur kann eine wichtige Information besitzen, ohne zu wissen, ob ein anderer Verband sie ebenfalls kennt. Zwei Einheiten können deshalb nach unterschiedlichen Annahmen handeln, obwohl beide korrekt nach ihren jeweiligen Befehlen arbeiten.
-
-Täuschung ist in Vesper kein außergewöhnliches Mittel, sondern normale strategische Praxis.
-
-**„Eine falsche Information zur richtigen Zeit ist eine Waffe.“**
-
-Aufklärung, Verschlüsselung, Überwachung und Kommunikation sind deshalb von zentraler Bedeutung. Technologie soll nicht nur feststellen, wo sich der Gegner befindet. Sie soll beeinflussen, was der Gegner über die eigene Lage glaubt.
-
-Auch die Verlustkultur ist von dieser Informationsphilosophie geprägt. Gefallene können nur teilweise oder verspätet veröffentlicht werden. Familien können lange Zeit nicht sicher wissen, ob ein Angehöriger gefallen, vermisst oder absichtlich aus den offiziellen Meldungen entfernt wurde. Das erzeugt eine besondere Form der Trauer: Nicht nur der Tod ist schmerzhaft, sondern auch die Unsicherheit darüber, ob überhaupt die Wahrheit bekannt ist.
-
-Der Staat rechtfertigt diese Geheimhaltung mit Sicherheit. Die Bevölkerung akzeptiert sie teilweise, weil sie weiß, dass Informationen tatsächlich Leben retten können. Gleichzeitig entsteht Widerstand gegen eine Ordnung, in der dieselbe Begründung verwendet werden kann, um Fehler, Machtmissbrauch oder politische Manipulation zu verbergen.
-
-Das macht Vesper nicht zu einer Gesellschaft, in der jeder Mensch ständig Angst hat. Viele Bürger profitieren von Stabilität, Sicherheit und funktionierenden Institutionen. Das Problem ist vielmehr, dass niemand vollständig wissen kann, wo die Grenze zwischen notwendiger Geheimhaltung und politischer Kontrolle verläuft.
-
-Besonders tragisch ist, dass selbst die herrschenden Gruppen diesem System nicht vollständig entkommen. Ein Geheimdienstoffizier weiß nicht zwingend, was seine Vorgesetzten über ihn wissen. Ein Minister kennt möglicherweise nicht alle Informationen anderer Fraktionen. Sicherheitsorgane überwachen einander. Alte Familien konkurrieren um Daten und Einfluss.
-
-Vesper hat deshalb nicht nur einen Überwachungsstaat geschaffen. Es hat eine Gesellschaft geschaffen, in der **gegenseitiges Nichtwissen selbst zu einer Form von Macht** geworden ist.
-
-Die Stärke Vespers liegt darin, den Gegner in Unsicherheit zu versetzen. Die Schwäche liegt darin, dass dieselbe Unsicherheit die eigene Gesellschaft durchdringt.
-
-**Kern:** Vesper versucht nicht zuerst, den Gegner zu vernichten. Vesper versucht, ihm die Gewissheit zu nehmen, zu wissen, was wahr ist.
-
-**Die Vesperische Kriegsphilosophie lässt sich deshalb in einem Satz zusammenfassen:**
-
-**„Ein Krieg wird nicht gewonnen, wenn der Gegner vernichtet ist. Er wird gewonnen, wenn der Gegner nicht mehr weiß, was wahr ist.“**
-
-Das gesellschaftliche Gegenstück dazu lautet:
-
-**„Vertraue niemandem vollständig. Nicht einmal uns.“**
+**Kern:** Vesper will den Gegner zuerst im Wissen und erst danach auf dem Feld besiegen.
 
 ## Eldran – Krieg als Bewährungsprobe staatlicher Kontinuität
 
-Eldran ist eine starke konstitutionelle Monarchie. Die Verfassung begrenzt die Krone und gibt den Bürgern grundlegende Freiheiten, macht den Monarchen aber nicht zu einer rein zeremoniellen Figur. Die Krone besitzt tatsächliche politische und militärische Autorität. Das Parlament ist ein eigenständiger Teil des Staates, versteht seine Aufgabe jedoch überwiegend darin, die Krone und die staatliche Ordnung zu tragen, nicht sie grundsätzlich zu kontrollieren.
+**Kriegsbild:** Eldran ist eine starke konstitutionelle Monarchie. Die Verfassung begrenzt die Krone und lässt sie nicht zur Dekoration werden. Krieg prüft, ob der Staat unter Belastung zusammenbleibt: Grenzen, Verfassung, Institutionen und die historische Ordnung.
 
-Für große Teile der Gesellschaft ist diese Ordnung kein Widerspruch zur Freiheit. Freiheit wird nicht primär als möglichst schwacher Staat verstanden, sondern als Freiheit innerhalb einer stabilen politischen Ordnung. Regierungen können wechseln; die Krone bleibt. Gerade diese Kontinuität begründet ihre gesellschaftliche Verehrung.
+**Soldatenbild:** Der gute Soldat ist diszipliniert, professionell und loyal, nicht fanatisch. Er dient der Krone, weil die Krone nach eldranischem Verständnis dem Land dient. Ein schlechter Herrscher kann kritisiert werden, ohne dass die Monarchie als Institution damit erledigt ist.
 
-Der zentrale politische Gedanke lautet:
+**Führung:** Der politische Satz lautet: Das Parlament verwaltet den Staat. Die Krone führt ihn. Das Parlament versteht sich überwiegend als Träger der Ordnung, nicht als ihr grundsätzlicher Gegner. Eine republikanische Opposition bleibt randständig. Reformer wollen die Monarchie meist anpassen, nicht abschaffen.
 
-**„Das Parlament verwaltet den Staat. Die Krone führt ihn.“**
+**Tod:** Gefallene werden öffentlich und unter den Zeichen der Krone erinnert. Der Monarch kann Verwundete besuchen und damit zeigen, dass die Spitze nicht außerhalb der Opfer steht. Die Ehrung gilt der Institution mehr als der einzelnen Person auf dem Thron.
 
-Der Staat darf in einer Krise nicht auseinanderbrechen. Deshalb betrachtet Eldran Krieg als Prüfung der staatlichen Kontinuität. Verteidigt werden nicht nur Grenzen und Städte, sondern Verfassung, Institutionen, Bevölkerung, Monarchie und die historische Ordnung des Landes.
+**Bevölkerung:** Gemeinden, territoriale Kräfte und ziviler Schutz gehören zur Landesverteidigung. Freiheit wird nicht als möglichst schwacher Staat verstanden, sondern als Freiheit innerhalb einer Ordnung, die bleibt, wenn Regierungen wechseln.
 
-Der gute Soldat ist diszipliniert, professionell, loyal und traditionsbewusst, aber nicht fanatisch. Sein Dienst gilt der Krone, weil die Krone nach eldranischem Verständnis dem Land dient:
+**Technik:** Pioniere, Befestigung, Minen und zuverlässige Systeme haben Vorrang vor dem spektakulären Einzelstück. Die Uniform bleibt steingrün und nüchtern. Ein kleiner Kronenspiegel zeigt die Institution, nicht einen Personenkult.
 
-**„Ich diene der Krone, weil die Krone dem Land dient.“**
+**Logistik:** Brücken, Straßen, Stellungen und Versorgungsknoten sind Teil der Verteidigung, nicht nur Wege zu ihr.
 
-Militärische Führung bedeutet deshalb nicht nur taktische Leistungsfähigkeit. Sie muss auch sicherstellen, dass Verwaltung, Versorgung, territoriale Verteidigung und politische Führung unter Belastung funktionsfähig bleiben. Pioniere, territoriale Kräfte und der Schutz staatlicher Infrastruktur besitzen entsprechend hohen Stellenwert.
+**Anpassung:** Vorbereitete Verteidigung ist Eldrans Stärke. Dieselbe Liebe zur Kontinuität lässt neue Kriegsformen lange als Bedrohung der Ordnung erscheinen, bevor sie als Tatsache behandelt werden.
 
-Gefallene werden öffentlich und unter den Symbolen der Krone erinnert. Der Monarch kann Soldaten und Verwundete persönlich besuchen und verkörpert damit die Vorstellung, dass die politische Spitze nicht außerhalb der gesellschaftlichen Opfer steht. Die Krone ist dabei stärker als die einzelne Person des Monarchen: Ein schlechter Herrscher kann kritisiert werden, ohne dass dadurch die Monarchie als Institution automatisch ihre Legitimität verliert.
-
-Eldrans Stärke ist institutionelle Kontinuität. Selbst schwere Verluste sollen nicht zum Zusammenbruch der staatlichen Ordnung führen.
-
-Die Schwäche liegt in derselben Eigenschaft: Eine Gesellschaft, die Stabilität und Tradition hoch bewertet, kann notwendige Veränderungen zu lange als Gefahr für die Ordnung betrachten. Reformistische Kräfte wollen deshalb die Monarchie meist nicht abschaffen, sondern ihre Institutionen an neue gesellschaftliche Bedingungen anpassen. Eine republikanische Opposition kann existieren, bleibt aber politisch und gesellschaftlich randständig.
-
-**Kern:** Eldran verteidigt nicht nur Territorium, sondern die Kontinuität seines Staates.
+**Kern:** Eldran verteidigt nicht nur Territorium. Es verteidigt die Kontinuität seines Staates.
 
 ## Namar – Krieg als Kampf gegen Isolation
 
-Namar ist durch Küsten, Inseln und regionale Selbstverwaltung geprägt. Entfernung ist hier selbst ein strategisches Problem.
+**Kriegsbild:** Namar besteht aus Küsten, Inseln und Hafenstädten. Der Staat entstand aus der Notwendigkeit, Wasserwege gemeinsam zu schützen, nicht aus einem einzigen Volk. Krieg bedeutet vor allem, dass eine Region abgeschnitten wird.
 
-Krieg bedeutet deshalb vor allem die Gefahr, dass einzelne Regionen abgeschnitten werden. Der gute Soldat kennt Meer, Küste und lokale Gegebenheiten.
+**Soldatenbild:** Der gute Soldat kennt Meer, Küste und seine Gemeinde. Seeleute, Küstenverteidiger und Ingenieure haben besonderes Ansehen. Ortskenntnis ist ein strategischer Vorteil, den eine zentrale Karte nicht ersetzt.
 
-Regionale Verbände besitzen viel Eigenständigkeit. Die Zentralregierung koordiniert, ohne jedes Detail kontrollieren zu können.
+**Führung:** Die Regionen misstrauen einer starken Zentrale. Verbände haben viel Eigenständigkeit. Die Bundesinstitutionen koordinieren, ohne jedes Detail zu beherrschen. Freiheit aus Vielfalt macht Namar beweglich und Beschlüsse langsam.
 
-Verluste sind in kleinen Inselgemeinschaften unmittelbar. Häfen, zivile Schiffe und Werkstätten können Teil der Verteidigungsstruktur werden.
+**Tod:** In kleinen Inselgemeinschaften ist ein Verlust sofort persönlich. Es gibt keine anonyme Masse, in der ein Name untergeht.
 
-Die wichtigste Ressource ist Verbindung: Transport, Kommunikation und Versorgung müssen trotz Entfernung funktionieren.
+**Bevölkerung:** Zivile Schiffe, Häfen und lokale Werkstätten gehören zur Verteidigung. Ein Krieg auf See ist deshalb nie nur eine Angelegenheit der Flotte.
 
-**Kern:** Namar verliert nicht zuerst Territorium, sondern Verbindung.
+**Technik:** Maritime Sensorik, amphibische Fahrzeuge, Küstenschutz und mobile Hafenanlagen. Dunkelblau gehört in dieser Welt nur Namar. Die Form ist maritim, nicht die Sternenuniform Rothains.
+
+**Logistik:** Es reicht nicht, Material zu besitzen. Es muss über Wasser am richtigen Ort bleiben. Verbindung ist die Ressource.
+
+**Anpassung:** Namar improvisiert mit lokaler Kenntnis. Zentralplanung allein reicht nicht. Die Schwäche ist die langsame Einigung, wenn mehrere Küsten dasselbe Schiff und denselben Schutz brauchen.
+
+**Kern:** Namar verliert nicht zuerst Land. Es verliert Verbindung.
 
 ## Orthea – Krieg als Informations- und Präzisionsproblem
 
-Orthea glaubt an Forschung und Daten. Seine Gesellschaft möchte Unsicherheit möglichst messbar machen.
+**Kriegsbild:** Orthea will Unsicherheit messbar machen. Der Staat entstand, wo politische Entscheidungen zunehmend an wissenschaftliche Gremien wanderten, und versucht heute, Forschung und demokratische Legitimation zusammenzuhalten. Wissenschaftler haben Gewicht. Sie haben kein automatisches Recht zu regieren.
 
-Der gute Soldat ist Fachkraft, Beobachter und Problemlöser. Führung nutzt Modelle, Sensoren und Wahrscheinlichkeiten.
+**Soldatenbild:** Der gute Soldat ist Fachkraft, Beobachter und Problemlöser. Qualität der Information gilt mehr als Masse.
 
-Das erzeugt einen besonderen gesellschaftlichen Konflikt: Eine Statistik kann einen militärischen Zusammenhang zeigen, aber sie kann nicht vollständig ausdrücken, was ein einzelnes Leben bedeutet.
+**Führung:** Modelle, Sensoren und Wahrscheinlichkeiten unterstützen den Entschluss. Eine Statistik kann einen militärischen Zusammenhang zeigen. Sie kann nicht sagen, was ein einzelnes Leben bedeutet. Diese Lücke ist der gesellschaftliche Streit, nicht ein Rechenfehler.
 
-Universitäten und Forschungseinrichtungen werden zu strategischen Ressourcen. Präzision, Aufklärung, autonome Sensorik und medizinische Forschung besitzen hohen Stellenwert.
+**Tod:** Verluste werden ausgewertet. Gerade daraus kommt die Kritik: Hinter jeder Zahl steht ein Mensch, und die Auswertung darf die Trauer nicht als erledigt verbuchen.
 
-Ortheas Stärke ist schnelle wissenschaftliche Anpassung. Seine Schwäche ist die Gefahr, falschen Daten mit zu großem Vertrauen zu folgen.
+**Bevölkerung:** Universitäten und technische Fachkräfte können direkt zur Verteidigung gehören. Das macht Forschungseinrichtungen zu Zielen und zu politischen Akteuren.
 
-**Kern:** Orthea versucht, den Nebel des Konflikts zu berechnen und entdeckt dabei immer wieder die Grenzen menschlicher Modelle.
+**Technik:** Präzisionssensoren, autonome Systeme, medizinische Technik und Entscheidungshilfen. Die helle, nüchterne Uniform ohne Gold und ohne Knochen sagt: hier wird gemessen, nicht erinnert und nicht geopfert. Orthea unterscheidet sich von Averon, weil es nicht vor allem Tempo sucht, und von Vesper, weil es die Wahrheit berechnen will statt sie zu verteilen.
+
+**Logistik:** Versorgung wird nach Prognosen gesteuert. Stimmt die Prognose, ist Orthea sparsam. Stimmt sie nicht, fehlt das Material genau dort, wo das Modell Sicherheit versprochen hat.
+
+**Anpassung:** Orthea lernt schnell, wenn die Daten stimmen. Falschen Daten mit zu großem Vertrauen zu folgen ist die eigentliche Niederlage. Eine Entscheidung kann wissenschaftlich korrekt und politisch trotzdem falsch sein.
+
+**Kern:** Orthea versucht, den Nebel zu berechnen, und stößt dabei an die Grenze dessen, was ein Modell von Menschen wissen kann.
 
 ## Dargan – Krieg als Überlebens- und Reparaturproblem
 
-Dargan hat gelernt, mit Entfernung, schwierigem Gelände und begrenzten Ressourcen zu leben.
+**Kriegsbild:** Dargan liegt an der Peripherie der Machtzentren. Entfernung, schwieriges Gelände und dünne Infrastruktur haben die Gesellschaft geprägt. Es wurde nicht durch Reichtum stark, sondern dadurch, dass Pläne scheitern dürfen.
 
-Die Gesellschaft erwartet nicht, dass Pläne perfekt funktionieren. Sie erwartet, dass Menschen nach ihrem Scheitern weitermachen.
+**Soldatenbild:** Der gute Soldat ist belastbar, selbstständig und praktisch. Orientierung und die Fähigkeit, etwas zu reparieren, zählen wie die Fähigkeit zu kämpfen.
 
-Der gute Soldat ist belastbar, selbstständig und praktisch. Reparaturfähigkeit und Orientierung zählen genauso wie reine Kampffähigkeit.
+**Führung:** Die Zentrale hat in abgelegenen Gebieten wenig Griff. Kommandeure setzen Ziele. Wege und Mittel bestimmen die Leute vor Ort. Gemeinden und regionale Verbände übernehmen, was der Staat nicht erreicht.
 
-Lokale Kommandeure erhalten Handlungsspielraum. Werkstätten, Bauernhöfe und kleine Vorräte können Teil der Verteidigungsstruktur werden.
+**Tod:** In dünn besiedelten Gegenden trifft ein Verlust eine ganze Gemeinde. Es gibt wenig Abstand zwischen der Meldung und dem leeren Platz am Tisch.
 
-Dargan bevorzugt robuste Systeme, die unter schwierigen Bedingungen reparierbar bleiben. Viele kleine Vorräte machen das Land widerstandsfähig.
+**Bevölkerung:** Werkstätten, Höfe und kleine Vorräte gehören zur Verteidigung. Der Krieg benutzt, was der Alltag schon hat.
 
-**Kern:** Dargan plant bereits für den Moment, in dem der ursprüngliche Plan nicht mehr funktioniert.
+**Technik:** Robuste, reparierbare, modulare Systeme mit wenig Abhängigkeit von einer fernen Infrastruktur. Die staubbraune kurze Jacke und die sichtbare Reparaturstelle sind Absicht, kein Mangel an Sorgfalt.
+
+**Logistik:** Viele kleine Depots statt eines großen. Fällt ein Lager aus, fällt nicht das Land aus.
+
+**Anpassung:** Improvisation ist Teil der Ausbildung, nicht der Notbehelf nach dem Zusammenbruch. Die Schwäche ist der ungleiche Schutz: Wo der Staat weit weg ist, sind Freiheit, Sicherheit und Teilhabe ungleich verteilt.
+
+**Kern:** Dargan plant bereits für den Moment, in dem der ursprüngliche Plan nicht mehr gilt.
 
 ## Lyr – Krieg als Verteidigung lokaler Freiheit
 
-Lyr besteht aus vielen autonomen Berggemeinschaften. Deshalb ist Freiheit für einen Lyrer zuerst etwas Konkretes: das eigene Tal, die eigene Gemeinde und die Möglichkeit, dort selbst zu entscheiden.
+**Kriegsbild:** Lyr ist kein gewöhnlicher Nationalstaat. Bergrepubliken und Täler bilden einen Bund und behalten einen großen Teil ihrer Souveränität. Für einen Lyrer ist Freiheit zuerst etwas Konkretes: das eigene Tal und das Recht, dort zu entscheiden. Ein verlorenes Tal ist nicht nur verlorenes Gelände.
 
-Der gute Soldat kennt Gelände und Gemeinschaft. Lokale Kommandeure besitzen große Freiheit, während gemeinsame Räte koordinieren.
+**Soldatenbild:** Der gute Soldat kennt Gelände und Gemeinde. Bergfertigkeit und Ortskenntnis sind militärische Eigenschaften, keine Folklore.
 
-Tunnel, Pässe, Werkstätten und lokale Vorräte sind Teil der Verteidigung. Technik wird nach ihrer Eignung für schwieriges Gelände bewertet.
+**Führung:** Lokale Kommandeure haben großen Spielraum. Gemeinsame Räte koordinieren, was alle betrifft. Beschlüsse müssen ausgehandelt werden. Die Täler fürchten, dass gemeinsame Sicherheit irgendwann ein Zentralstaat wird.
 
-Lyrs Stärke ist lokale Selbstständigkeit. Seine Schwäche ist Koordination: Was ein Tal für richtig hält, kann für das nächste falsch sein.
+**Tod:** Gefallene werden als Mitglieder einer bestimmten Gemeinde erinnert, nicht nur als nationale Zahl. Die Trauer bleibt lokal, auch wenn der Bund den Krieg führt.
 
-**Kern:** Lyr verteidigt viele kleine Heimaten, die gemeinsam unabhängig bleiben wollen.
+**Bevölkerung:** Tunnel, Werkstätten, Hütten und lokale Vorräte sind Teil der Verteidigung. Die Menschen leben in dem Gelände, das sie halten sollen.
+
+**Technik:** Tunnelbau, Pioniere, unterirdische Sensorik und leichte Systeme für Engpässe. Der Umhang bleibt in derselben schiefergrauen Palette wie die Jacke. Er ist Wetter und Tarnung im Gebirge, nicht der Pelz Rothains.
+
+**Logistik:** Dezentrale Vorräte und die Kontrolle der Pässe wiegen mehr als ein zentrales Depot, das ein einziges Tal nie erreichen würde.
+
+**Anpassung:** Lokal kann Lyr sehr schnell reagieren. Mehrere autonome Täler auf ein Ziel zu verpflichten ist die schwere Aufgabe. Was ein Tal für richtig hält, kann für das nächste falsch sein.
+
+**Kern:** Lyr verteidigt viele kleine Heimaten, die gemeinsam unabhängig bleiben wollen, ohne aufzuhören, ein Bund zu sein.
 
 ## Caldris – Krieg als Versorgungskrise
 
-Caldris verbindet autoritäre Kontrolle mit realen sozialen Leistungen. Der Staat verspricht Schutz und Versorgung und erwartet dafür Loyalität.
+**Kriegsbild:** Caldris verspricht Schutz, Medizin, Wohnraum und Sicherheit vor Not. Dafür erwartet der Staat Loyalität und Zugriff. Krieg ist eine Krise der ganzen Gesellschaft: Front, Krankenhäuser, Lebensmittel, Wohnraum und innere Ordnung müssen gleichzeitig halten.
 
-Krieg wird als umfassende Krise verstanden: Front, Krankenhäuser, Lebensmittel, Wohnraum und innere Ordnung müssen gleichzeitig funktionieren.
+**Soldatenbild:** Der Soldat gehört zur staatlichen Schutzgemeinschaft. Versorgung begleitet den Dienst. Wer versorgt wird, wird auch erfasst.
 
-Der Soldat ist Teil dieser staatlichen Schutzgemeinschaft. Verwundete und Familien werden umfassend versorgt, aber gleichzeitig vollständig erfasst.
+**Führung:** Militär und innere Sicherheit sind eng verbunden und stark zentralisiert. Die Regierung begründet ihre Macht weniger mit Größe als mit Stabilität. Wer außerhalb der Akten liegt, liegt für die Führung oft außerhalb der Lage.
 
-Biometrie, medizinische Verwaltung, Überwachung und zentrale Versorgung gehören zusammen.
+**Tod:** Familien und Verwundete werden umfassend versorgt und vollständig registriert. Die Fürsorge ist real. Die Akte ist der Preis.
 
-Caldris kann Ressourcen schnell umverteilen. Seine Schwäche ist die Abhängigkeit von zentralen Behörden: Lokale Probleme können lange unsichtbar bleiben, wenn sie nicht in das Verwaltungssystem passen.
+**Bevölkerung:** Mobilisierung und Versorgung gehen zusammen. Wer Leistungen erhält, rückt tiefer in die staatlichen Strukturen. Das ist für viele ein Tausch, den sie kennen und trotzdem hassen.
 
-**Kern:** Caldris versucht, den Staat selbst zum Schutzschild seiner Bevölkerung zu machen.
+**Technik:** Biometrie, medizinische Systeme, Kommunikationskontrolle und zivile Notfallinfrastruktur gehören zusammen. Das blasse Institutionsgrün und das kleine Medizin- und Kontrollzeichen zeigen beides auf derselben Brust: Hilfe und Erfassung. Es ist kein Siegel Vespers und kein Knochen Ossarias.
+
+**Logistik:** Caldris kann Ressourcen schnell zentral umverteilen und große Teile der Bevölkerung stabilisieren. Dieselbe Zentrale ist blind für das, was nicht ins Formular passt.
+
+**Anpassung:** Erkennbare Krisen werden schnell beantwortet. Lokale Probleme bleiben lange unsichtbar, wenn niemand sie nach oben meldet oder melden darf. Die offene Frage lautet, wie viel Freiheit ein Staat nehmen darf, wenn er die versprochene Sicherheit tatsächlich liefert.
+
+**Kern:** Caldris versucht, den Staat selbst zum Schutzschild zu machen, und registriert jeden, der darunter steht.
 
 ## Merovan – Krieg als Schutz von Verbindungen
 
-Merovan besitzt die Erfahrung eines ehemaligen Überseeimperiums und die politische Gegenwart einer Handelsrepublik. Genau daraus entsteht sein zentraler Widerspruch.
+**Kriegsbild:** Merovan war das Zentrum eines Überseeimperiums. Geblieben sind Häfen, Handelswege und ehemalige Provinzen. Der heutige Staat ist eine parlamentarische Handelsrepublik. Krieg bedroht diese Verbindungen. Die alte Elite hat die formale Macht verloren und besitzt weiterhin Vermögen, Kontakte und Deutungshoheit.
 
-Krieg bedroht Handelsräume und internationale Verbindungen. Merovan besitzt deshalb eine professionelle, mobile und expeditionär geprägte Militärkultur.
+**Soldatenbild:** Der gute Soldat muss weit von zu Hause funktionieren und sich auf andere Gesellschaften einstellen können. Auslandseinsatz gehört zur Tradition und bleibt politisch umstritten.
 
-Der gute Soldat muss weit von zu Hause funktionieren und sich auf andere Kulturen einstellen können.
+**Führung:** Expeditionäre Stäbe planen über große Entfernungen. Wirtschaftsinteresse und politische Verantwortung liegen ständig übereinander. Das Handelsparlament kann einen Einsatz tragen und ihn gleichzeitig als Geschäft lesen.
 
-Häfen und Handelsunternehmen sind strategische Infrastruktur. Migration und alte Überseeverbindungen machen Auslandskriege zugleich zu innenpolitischen Fragen.
+**Tod:** Veteranen werden anerkannt. Die Frage, für welche Verbindung sie gestorben sind, bleibt offen, weil die imperiale Vergangenheit nicht erledigt ist. Familien aus ehemaligen Überseegebieten erinnern anders als die alten Handelshäuser.
 
-Merovans Stärke ist Fernversorgung und Beweglichkeit. Seine moralische Herausforderung lautet: Wann ist Schutz einer Verbindung legitim, und wann wird daraus wieder Herrschaft?
+**Bevölkerung:** Hafenstädte, Reedereien und die Nachkommen der Rückkehrflotten machen jeden Auslandskrieg zu einer innenpolitischen Frage. Migration ist nicht der Rand der Gesellschaft. Sie ist ein Ergebnis der eigenen Geschichte.
 
-**Kern:** Merovan muss internationale Stärke ausüben, ohne seine imperiale Vergangenheit zu wiederholen.
+**Technik:** Transport, maritime Systeme, modulare Ausrüstung und Ingenieure für Stützpunkte weit von Merovia. Der sandfarbene Expeditionsrock mit einer einzigen hellen Paspel ist Reisekleidung, keine Kolonialuniform und nicht der Perlenschmuck Sahrs.
+
+**Logistik:** Merovans Stärke ist, Kräfte über große Entfernungen zu versorgen und zu verlegen. Dieselbe Fähigkeit war einmal das Werkzeug der Herrschaft.
+
+**Anpassung:** Kräfte lassen sich schnell verlagern. Die schwere Aufgabe ist die Grenze zwischen Schutz einer Verbindung und neuer Herrschaft. Merovan muss international stark sein, ohne die Vergangenheit nur umzubenennen.
+
+**Kern:** Merovan muss Macht über große Entfernungen ausüben, ohne sein Imperium zu wiederholen.
 
 ## Theryn – Krieg als Mobilisierung der Gesellschaft
 
-Theryns Militärkultur ist aus der Revolution hervorgegangen. Der Staat und die Revolution werden häufig als dieselbe Sache verstanden.
+**Kriegsbild:** Theryn entstand aus einer Revolution gegen eine alte Ordnung. Der Staat und die Revolution werden oft als dasselbe behandelt. Krieg gilt als Kampf um diese Ordnung. Die ungelöste Frage lautet, wie eine Revolution verhindert, selbst die nächste Herrschaftselite zu werden.
 
-Der Soldat ist Bürger, Arbeiter und Verteidiger. Politische Zuverlässigkeit kann deshalb militärisch ebenso wichtig werden wie Fachkompetenz.
+**Soldatenbild:** Der Soldat ist Bürger, Arbeiter und Verteidiger. Politische Zuverlässigkeit kann militärisch genauso viel wiegen wie Fachkompetenz. Das wird von den einen als Zusammenhalt gelesen und von den anderen als Gesinnung vor Können.
 
-Die Gesellschaft kann umfassend mobilisiert werden: Industrie, Landwirtschaft, Genossenschaften, Jugendorganisationen und lokale Räte.
+**Führung:** Zentrale Planung trifft auf Räte, Genossenschaften und Massenorganisationen. Demokratische Rätestrukturen und zentralisierende Kräfte streiten dauerhaft. Ein Befehl kann politisch korrekt und militärisch spät sein.
 
-Große Reserven und standardisierte Systeme ermöglichen Masse. Gefallene können als revolutionäre Märtyrer geehrt werden, während Familien privat ganz anders trauern.
+**Tod:** Gefallene können als revolutionäre Märtyrer geehrt werden. Familien bewahren daneben oft eine viel persönlichere Trauer, die in der öffentlichen Feier keinen Platz hat.
 
-Theryns Stärke ist Mobilisierungsfähigkeit. Seine Schwäche ist institutionelle Trägheit: Eine Gesellschaft, die sehr stark an ihre politische Grundidee glaubt, kann lange brauchen, um eine falsche Vorstellung von Krieg aufzugeben.
+**Bevölkerung:** Fabriken, Landwirtschaft, Genossenschaften, Jugendorganisationen und lokale Räte können vollständig in die Anstrengung gezogen werden. Die Gesellschaft ist die Reserve. Deshalb ist jede Mobilisierung auch eine Entscheidung darüber, wie viel Alltag geopfert wird.
 
-**Kern:** Theryn macht aus der Gesellschaft selbst eine Reserve – und muss entscheiden, wie viel Gesellschaft dafür geopfert werden darf.
+**Technik:** Einfach, robust, standardisiert, massenhaft und notfalls improvisiert repariert. Die schlichte rotbraune Jacke mit einem glatten Balken ist Massenware mit Absicht. Sie ist nicht das Karmesin und nicht der historische Rock Rothains.
+
+**Logistik:** Große Reservebestände und zentrale Verteilung sichern die Masse und erzeugen Verwaltung. Was die Liste nicht führt, existiert für den Plan nicht.
+
+**Anpassung:** Theryn kann enorme Reserven mobilisieren. Eine Gesellschaft, die sehr fest an ihre Grundidee glaubt, braucht lange, um eine falsche Vorstellung vom Krieg aufzugeben. Reformer und alte Funktionäre streiten, wann die Revolution endet und wer das entscheiden darf.
+
+**Kern:** Theryn macht aus der Gesellschaft selbst eine Reserve und muss sagen, wie viel Gesellschaft dafür geopfert werden darf.
 
 ## Die entscheidende Unterscheidung
 
-Die sechzehn Nationen unterscheiden sich nicht primär dadurch, welche Technik sie besitzen. Sie unterscheiden sich dadurch, **was sie im Krieg für das Wertvollste halten**:
+Die sechzehn Nationen unterscheiden sich nicht zuerst durch ihre Waffen. Sie unterscheiden sich durch das, was sie im Krieg für das Wertvollste halten:
 
-- Averon: Zeit und Information
-- Karsk: Leistungsfähigkeit
-- Ossaria: menschliches Leben
-- Rothain: Ordnung und Kontinuität
+- Averon: Zeit und Information, ohne einen Malus für lange Partien
+- Karsk: messbare Leistung, auch um den Preis der Person
+- Ossaria: das Opfer der Ahnen, sichtbar auf der Rüstung, bei einer Technik, die die Lebenden schützt
+- Rothain: Ordnung und das Misstrauen gegen die eigene Größe
 - Sahr: Bewegung und Versorgung
-- Albensee: Recht und Verantwortung
+- Steinmark: Recht und verantwortbare Bürgerpflicht
 - Vael: Produktion
-- Vesper: Wissen und Unsicherheit
+- Vesper: Wissen unter Unsicherheit
 - Eldran: staatliche Kontinuität
-- Namar: Verbindung
-- Orthea: Präzision und Erkenntnis
-- Dargan: Widerstandsfähigkeit
-- Lyr: lokale Freiheit
-- Caldris: gesellschaftliche Funktionsfähigkeit
-- Merovan: internationale Verbindungen
-- Theryn: gesellschaftliche Mobilisierung
+- Namar: Verbindung über die Entfernung
+- Orthea: Präzision und die Grenze der Modelle
+- Dargan: Weiterkämpfen nach dem gescheiterten Plan
+- Lyr: lokale Freiheit im Bund
+- Caldris: Versorgung bei vollständiger Erfassung
+- Merovan: Verbindungen ohne neue Herrschaft
+- Theryn: Mobilisierung und ihr Preis
 
-Diese Begriffe sind keine Spielstile. Sie sind das mentale Betriebssystem der jeweiligen Gesellschaft. Einzelne Einheiten, Parteien, Familien und Generationen können davon abweichen. Gerade diese Abweichungen erzeugen die interessanten Geschichten.
+Diese Sätze sind das mentale Betriebssystem der Gesellschaften. Sie sind keine Spielstile.
