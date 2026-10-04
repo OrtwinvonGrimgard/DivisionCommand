@@ -3689,6 +3689,11 @@ Der Staat führt das Buch. Er besitzt die Menschen nicht. Im Frieden gibt es kei
 
 Es gehen die Namen, die am schwersten sind. Der Kader führt sie und sucht sie nicht aus.
 
+### Kleidung
+
+Der Dienstrock ist nussbraun und gerade geschnitten. Die Manschetten sind papierhell. Auf ihnen steht eine einzelne offene schwarze Zeile, das Zeichen einer noch offenen Schuld. Wer auf einen Aufruf hin gegangen ist, trägt einen kurzen Strich durch dieselbe Zeile. Das Zeichen bleibt klein. Es ist kein Rangabzeichen. Kragen und Brust bleiben für Dienstgrad und Orden frei.
+
+
 ### Lebensgefühl
 
 **Hoffnung:** Dass der eigene Name geschlossen wird.  

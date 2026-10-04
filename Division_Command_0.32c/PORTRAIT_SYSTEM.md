@@ -29,7 +29,7 @@ Die sechzehn Staaten stehen in `LORE_NATIONEN.md`. Die Uniformsprache folgt dies
 | N09 | Eldran | steingrün, kleiner Kronenspiegel, Befestigungskragen, kein Rothain-Rot | Feldmütze |
 | N10 | Namar | Dunkelblau nur hier, Marinekrause, keine Sterne, dunkle Haut in mehreren Tönen, dunkles Haar | Barett |
 | N11 | Orthea | helles Grau, eine dünne technische Linie, kein Gold, kein Knochen | Barett |
-| N12 | Dargan | staubbraun, kurze Jacke, sichtbare Reparaturstelle als festes Detail | Feldmütze |
+| N12 | Dargan | nussbraun, gerader Rock, papierhelle Manschette, eine offene schwarze Zeile; nach dem Aufruf ein kurzer Strich durch dieselbe Zeile, kein Gold | Feldmütze |
 | N13 | Lyr | Schiefergrau, kurze Jacke, Umhang in derselben Palette, kein Pelz | Feldmütze |
 | N14 | Caldris | blasses Institutionsgrün, kleines Medizin- und Kontrollzeichen, kein Vespersiegel | Barett |
 | N15 | Merovan | sandfarbener Expeditionsrock, eine helle Paspel, keine Sahr-Perlen | Barett |

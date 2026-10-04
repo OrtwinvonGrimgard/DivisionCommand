@@ -248,7 +248,7 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Bevölkerung:** Im Alltag weiß ein Mensch, was sein Haus schuldet und wem etwas geschuldet wird. Heirat, Lehre und Amt verschieben Pflichten. Schande ist eine verweigerte fällige Schuld, nicht Armut. Wohlstand heißt, dass viele einem etwas schulden. Kinder erben offene Posten. Die Häuser führen eigene Abschriften. Ein gefälschtes Datum ist ein gefälschter Krieg.
 
-**Technik:** Anlagen sind modern und tragen einen Namen an der Tür. Fällt ein Werk, ein Lager oder eine Funkstelle aus, sucht man keine Behörde. Man sucht das Haus, das haftet. Die Technik ist standardisiert, weil ein anderes Haus sie übernehmen können muss.
+**Technik:** Anlagen sind modern und tragen einen Namen an der Tür. Fällt ein Werk, ein Lager oder eine Funkstelle aus, sucht man keine Behörde. Man sucht das Haus, das haftet. Die Technik ist standardisiert, weil ein anderes Haus sie übernehmen können muss. Der Rock ist nussbraun und gerade geschnitten, mit papierheller Manschette. Darauf steht eine offene schwarze Zeile, das Zeichen der ungetilgten Schuld. Wer auf einen Aufruf hin gegangen ist, trägt einen kurzen Strich durch dieselbe Zeile. Das Zeichen wächst nicht mit dem Rang. Brust und Kragen bleiben frei für Orden und Dienstgrad.
 
 **Logistik:** Versorgung ist selbst eine Zeile. Fehlt der haftende Name, fehlt kein anonymer Nachschub. Es fehlt diese Pflicht. Der Kader ruft eine andere Zeile auf oder handelt ohne sie.
 
