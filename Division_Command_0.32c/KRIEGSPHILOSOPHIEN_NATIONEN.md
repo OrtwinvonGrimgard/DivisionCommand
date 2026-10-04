@@ -196,25 +196,25 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Kern:** Eldran verteidigt nicht nur Territorium. Es verteidigt die Kontinuität seines Staates.
 
-## Namar – Krieg als Kampf gegen Isolation
+## Namar – Krieg als Weg, der trotzdem ankommt
 
-**Kriegsbild:** Namar besteht aus Küsten, Inseln und Hafenstädten. Der Staat entstand aus der Notwendigkeit, Wasserwege gemeinsam zu schützen, nicht aus einem einzigen Volk. Krieg bedeutet vor allem, dass eine Region abgeschnitten wird.
+**Kriegsbild:** Namar ist eine Handelsnation aus Häfen. Die Häfen verständigen sich und stehen nach außen zusammen. Ein Feind, der einen Hafen angreift, ist der Feind aller. Der Krieg wird nicht auf See entschieden. Schiffe tragen Ladung. Sie sind keine eigenen Einheiten, und Flugzeuge auch nicht. Gekämpft wird an der Straße, der Bahn und dem Lager zwischen den Häfen.
 
-**Soldatenbild:** Der gute Soldat kennt Meer, Küste und seine Gemeinde. Seeleute, Küstenverteidiger und Ingenieure haben besonderes Ansehen. Ortskenntnis ist ein strategischer Vorteil, den eine zentrale Karte nicht ersetzt.
+**Soldatenbild:** Der Soldat kennt seinen Hafen und den Weg zum nächsten. Er dient der Absprache der Häfen, nicht einer starken Zentrale. Dass unterwegs ein Teil der Ladung fehlt, macht ihn nicht schwach. Der Rest kommt an, weil es keinen anderen Weg gibt.
 
-**Führung:** Die Regionen misstrauen einer starken Zentrale. Verbände haben viel Eigenständigkeit. Die Bundesinstitutionen koordinieren, ohne jedes Detail zu beherrschen. Freiheit aus Vielfalt macht Namar beweglich und Beschlüsse langsam.
+**Führung:** Oben sprechen die Häfen miteinander und handeln gemeinsam. Darunter ist das Land ungeordnet. Freie Gruppen, Schmuggel und Schutzgeld gehören zum Alltag und sind nicht zu beenden, wie Piraten gegen das Gesetz. Diese Gruppen bestimmen nicht, ob Namar in den Krieg zieht. Die Häfen können sie nicht ausheben, ohne den Kai stillzulegen. Also bleibt der Zoll, und ein fester Anteil verschwindet.
 
-**Tod:** In kleinen Inselgemeinschaften ist ein Verlust sofort persönlich. Es gibt keine anonyme Masse, in der ein Name untergeht.
+**Tod:** In einer Hafengemeinde ist ein Verlust persönlich. Es gibt keine anonyme Masse, in der ein Name untergeht. Dass die Lieferung trotzdem weitergeht, tröstet die Gemeinde nicht.
 
-**Bevölkerung:** Zivile Schiffe, Häfen und lokale Werkstätten gehören zur Verteidigung. Ein Krieg auf See ist deshalb nie nur eine Angelegenheit der Flotte.
+**Bevölkerung:** Die Menschen in Namar haben dunkle Haut, in unterschiedlichen dunklen Tönen. Dunkles Haar ist dabei der Normalfall. Der Alltag ist ein Basar, kein Amt. Viele Gruppen laden um, kassieren, zweigen ab und schicken den Rest weiter. Eine zentrale Ordnung wäre nur eine weitere Stelle, an der jemand kassiert.
 
-**Technik:** Maritime Sensorik, amphibische Fahrzeuge, Küstenschutz und mobile Hafenanlagen. Dunkelblau gehört in dieser Welt nur Namar. Die Form ist maritim, nicht die Sternenuniform Rothains.
+**Technik:** Dunkelblau gibt es nur hier. Die Form bleibt die eines Hafenbunds, nicht die einer Flotte und nicht die Sternenuniform Rothains. Was stark ist, liegt in der Unterstützung: Ein Hafen kann als Karte einen kräftigen Bonus auf Versorgung, Reparatur oder Kosten geben. Er gehört der gemeinsamen Front. Er wird nicht verkauft.
 
-**Logistik:** Es reicht nicht, Material zu besitzen. Es muss über Wasser am richtigen Ort bleiben. Verbindung ist die Ressource.
+**Logistik:** Ein Teil der Ladung verschwindet von den Schiffen und aus den Lagern. Der Rest erreicht den nächsten Kai, weil jeder, der mitverdient, den Weg offen halten will. Die Linie wird gehalten und gleichzeitig bestohlen. Das Leck ist der Preis dieser Stärke, nicht ihr Gegenteil.
 
-**Anpassung:** Namar improvisiert mit lokaler Kenntnis. Zentralplanung allein reicht nicht. Die Schwäche ist die langsame Einigung, wenn mehrere Küsten dasselbe Schiff und denselben Schutz brauchen.
+**Anpassung:** Namar lernt nicht, das Chaos abzuschaffen. Es lernt, die Lieferung durch das Chaos zu bringen. Fällt ein Hafen, schicken die anderen Entsatz, weil die Absprache gilt. Die Hilfe kommt an und ist unterwegs kleiner geworden. Eine Hafenkarte mit starkem, nie ganz sauberem Bonus wäre hier nur das Beispiel. Sie gehört Namar nicht.
 
-**Kern:** Namar verliert nicht zuerst Land. Es verliert Verbindung.
+**Kern:** Namar ist nicht schwach. Es ist ungeordnet, und die Lieferung kommt trotzdem an.
 
 ## Orthea – Krieg als Informations- und Präzisionsproblem
 
@@ -349,7 +349,7 @@ Die sechzehn Nationen unterscheiden sich nicht zuerst durch ihre Waffen. Sie unt
 - Vael: Krieg als Geschäft, der Staat als Puppe der Konzerne
 - Vesper: Überwachung als System, dem im Kern niemand folgt
 - Eldran: aufrichtige Krone, Kontinuität des Staates
-- Namar: Verbindung über die Entfernung
+- Namar: ungeordneter Hafenbund, die Lieferung kommt trotzdem an
 - Orthea: Präzision und die Grenze der Modelle
 - Dargan: Weiterkämpfen nach dem gescheiterten Plan
 - Lyr: lokale Freiheit im Bund

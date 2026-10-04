@@ -3068,7 +3068,7 @@ Namar konzentriert sich auf:
 
 ### Militär
 
-Namars Armee muss ständig zwischen Land-, Küsten- und Seestreitkräften koordinieren.
+Namars Krieg liegt an den Wegen zwischen den Häfen. Schiffe tragen Ladung und sind keine eigenen Einheiten. Die Häfen stehen nach außen zusammen. Darunter bleiben Schmuggel und Schutzgeld, und ein Teil der Ladung verschwindet. Der Rest kommt an.
 
 ### Innerer Konflikt
 
