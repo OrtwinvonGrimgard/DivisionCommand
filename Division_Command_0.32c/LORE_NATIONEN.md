@@ -3844,9 +3844,7 @@ Caldris entwickelt:
 
 ### Militär
 
-Caldris versucht, Schäden zu begrenzen und die eigene Gesellschaft vor Chaos zu schützen.
-
-Militärische und zivile Sicherheitsstrukturen sind eng miteinander verbunden.
+Caldris führt den Krieg mit derselben Maschine, mit der es die Leute versorgt. Ein Soldat ist schon eine Akte, bevor er geht. Einen Schlag, der Krankenhäuser, Wohnraum oder die Erfassung mitreißt, unterlässt die Führung. Unruhe zu Hause zieht Truppen von der Front, weil Heer und innere Sicherheit dieselbe Lage sehen. Wer nie im Formular stand, bleibt unsichtbar, bis er etwas zerbricht.
 
 ### Innerer Konflikt
 

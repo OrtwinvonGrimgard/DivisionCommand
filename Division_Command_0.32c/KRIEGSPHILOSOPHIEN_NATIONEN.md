@@ -276,25 +276,25 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Kern:** Lyr hält einen Eid, ohne einen Ort zu haben, an dem man diesen Eid auslöschen kann.
 
-## Caldris – Krieg als Versorgungskrise
+## Caldris – Krieg als Krise des Schutzschilds
 
-**Kriegsbild:** Caldris verspricht Schutz, Medizin, Wohnraum und Sicherheit vor Not. Dafür erwartet der Staat Loyalität und Zugriff. Krieg ist eine Krise der ganzen Gesellschaft: Front, Krankenhäuser, Lebensmittel, Wohnraum und innere Ordnung müssen gleichzeitig halten.
+**Kriegsbild:** Caldris verspricht Schutz, Medizin, Wohnraum und Sicherheit vor Not. Dafür erwartet der Staat Loyalität und Zugriff. Front, Krankenhaus, Lebensmittel, Wohnraum und innere Ordnung sind dieselbe Maschine. Wer eines davon verliert, verliert das Schutzschild.
 
-**Soldatenbild:** Der Soldat gehört zur staatlichen Schutzgemeinschaft. Versorgung begleitet den Dienst. Wer versorgt wird, wird auch erfasst.
+**Soldatenbild:** Der Soldat ist schon eine Akte, bevor er geht. Darin stehen, was er kann, wen er zu Hause hat und welche Leistung er bezieht. Die Familie bleibt versorgt. Das hält die Truppe und bindet sie. Wer nie im Formular stand, existiert für den Einsatz erst, wenn er etwas zerbricht.
 
-**Führung:** Militär und innere Sicherheit sind eng verbunden und stark zentralisiert. Die Regierung begründet ihre Macht weniger mit Größe als mit Stabilität. Wer außerhalb der Akten liegt, liegt für die Führung oft außerhalb der Lage.
+**Führung:** Militär und innere Sicherheit sehen dieselbe Lage. Die Führung weiß schnell, wen sie rufen kann. Einen taktisch guten Schlag unterlässt sie, wenn er die Krankenhäuser, die Wohnungen oder die Erfassung mitreißt. Lieber eine schlechtere Stellung als ein Loch im Schild. Ein Aufruhr zu Hause zieht Truppen von der Front. Unruhe ist kein Nebenschauplatz.
 
-**Tod:** Familien und Verwundete werden umfassend versorgt und vollständig registriert. Die Fürsorge ist real. Die Akte ist der Preis.
+**Tod:** Verwundete werden behandelt und neu erfasst. Ob jemand zurückgeht, entscheidet die Akte mit. Familien werden versorgt und registriert. Die Fürsorge ist real. Die Akte ist der Preis.
 
-**Bevölkerung:** Mobilisierung und Versorgung gehen zusammen. Wer Leistungen erhält, rückt tiefer in die staatlichen Strukturen. Das ist für viele ein Tausch, den sie kennen und trotzdem hassen.
+**Bevölkerung:** Wer Leistungen erhält, rückt tiefer in die Strukturen und kann gerufen werden. Das ist ein Tausch, den viele kennen und trotzdem hassen. Wer außerhalb der Akten lebt, ist für die Führung außerhalb der Lage.
 
 **Technik:** Biometrie, medizinische Systeme, Kommunikationskontrolle und zivile Notfallinfrastruktur gehören zusammen. Das blasse Institutionsgrün und das kleine Medizin- und Kontrollzeichen zeigen beides auf derselben Brust: Hilfe und Erfassung. Es ist kein Siegel Vespers und kein Knochen Ossarias.
 
-**Logistik:** Caldris kann Ressourcen schnell zentral umverteilen und große Teile der Bevölkerung stabilisieren. Dieselbe Zentrale ist blind für das, was nicht ins Formular passt.
+**Logistik:** Essen, Verbände und Ersatz laufen über dieselben Listen wie die Zuteilung in der Stadt. Caldris kann Ressourcen schnell umverteilen. Dieselbe Zentrale ist blind für das, was nicht ins Formular passt.
 
-**Anpassung:** Erkennbare Krisen werden schnell beantwortet. Lokale Probleme bleiben lange unsichtbar, wenn niemand sie nach oben meldet oder melden darf. Die offene Frage lautet, wie viel Freiheit ein Staat nehmen darf, wenn er die versprochene Sicherheit tatsächlich liefert.
+**Anpassung:** Eine erkennbare, gemeldete Krise wird schnell gestopft. Ein langer, verwalteter Krieg liegt Caldris. Ein Ort, der nicht nach oben berichtet oder nicht berichten darf, bleibt auf dem Papier gesund, bis er leer ist. Vesper beseitigt, wen das System nicht spielen kann. Caldris lässt ihn leben und sieht ihn nicht. Eine Doktrin, die Versorgung und Erfassung koppelt, wäre hier nur das Beispiel. Sie gehört Caldris nicht.
 
-**Kern:** Caldris versucht, den Staat selbst zum Schutzschild zu machen, und registriert jeden, der darunter steht.
+**Kern:** Caldris führt Krieg, indem es das Schutzschild intakt hält, und registriert jeden, der darunter steht.
 
 ## Merovan – Krieg als Schutz von Verbindungen
 
@@ -353,7 +353,7 @@ Die sechzehn Nationen unterscheiden sich nicht zuerst durch ihre Waffen. Sie unt
 - Orthea: Wissenschaft und Erkenntnis als Staatslehre
 - Dargan: Schuldenrepublik, der Krieg tilgt den Namen des Soldaten
 - Lyr: Eid der Täler, kein Sitz
-- Caldris: Versorgung bei vollständiger Erfassung
+- Caldris: das Schutzschild ist die Kriegsführung
 - Merovan: Verbindungen ohne neue Herrschaft
 - Theryn: Mobilisierung und ihr Preis
 
