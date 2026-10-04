@@ -4194,9 +4194,9 @@ Elena Miren und die leiseren Gläubigen streiten diese Zugabe ab. Manchmal gewin
 
 Die Gesellschaft ist die Reserve. Die Volksverteidigung zieht sie als geschuldete Pflicht, in einem Maß, das der Staat jedes Jahr wieder tun kann. Die mechanisierte Brigade in Novagrad ist die Spitze, die das Werk direkt versorgt. Dahinter stehen Leute aus dem Betrieb und von der Genossenschaft.
 
-Voss will die Reserve weiter ziehen, als der Feldzug verlangt. Nicht um den Staat zu retten. Weil Eifer für ihn die Pflicht ist. Der Plan kann nein sagen. Sagt er es oft, bleibt Voss eine laute Stimme. Sagt er es zu selten, wird der Eifer zur Gewohnheit, und der Staat bleibt trotzdem einer.
+Besonders starke Fanatiker sind darin wenige und bekannt. Im Krieg werden sie zuerst genutzt und höher angesehen als das gewöhnliche Aufgebot. Fanatismus ist nicht die einzige Entscheidung. Können und die leise Pflicht bleiben gültige Wege. Der Eifer ist ein legitimer Weg, das Potential der Bevölkerung für eine Sache einzusetzen, die das Land für gut hält.
 
-Glaubenseifer kann Können verdrängen. Das ist ein Konflikt im Amt, keine Spaltung des Landes.
+Voss will die Reserve weiter ziehen, als der Feldzug verlangt, und die Fanatiker sind sein bestes Werkzeug dafür. Der Plan kann nein sagen und einen anderen Weg wählen. Sagt er es oft, bleibt Voss eine laute Stimme. Sagt er es zu selten, wird der Eifer zur Gewohnheit, und der Staat bleibt trotzdem einer.
 
 ### Innerer Konflikt
 
@@ -4253,6 +4253,7 @@ Der Gefallene wird im Ritus genannt. Die Familie behält am Tisch eine leisere E
 ### Militär
 - **Mechanisierte Brigade Novagrad:** Die versorgte Spitze.
 - **Die Zugabe:** Das Kontingent, das Voss über den Plan hinaus verlangt und das der Plan verweigern kann.
+- **Die Eiferer:** Wenige, starke Fanatiker. Im Krieg genutzt und angesehen. Ein Weg neben Können und leiser Pflicht, kein Ersatz für beide.
 
 ### Historischer Anker
 - **Das Ende des Umsturzes:** Der Tag, an dem der Glaube zur Ordnung wurde und der Krieg aufhörte, die Wahrheit des Staates zu beweisen.

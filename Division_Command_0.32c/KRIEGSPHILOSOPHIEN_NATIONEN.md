@@ -320,13 +320,13 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Kriegsbild:** Theryn hat die Revolution hinter sich. Die alte Ordnung war ein weltliches Vorrecht. Der Umsturz hat sie im Namen eines Glaubens gestürzt und ist dann geendet. Der Glaube ist die gewöhnliche Ordnung. Der Staat hält im Frieden. Der Krieg dient dieser Ordnung. Er begründet sie nicht.
 
-**Soldatenbild:** Der Soldat kommt aus dem Betrieb und von der Genossenschaft. Glaubenseifer kann Können verdrängen. Das entscheidet ein Amt, nicht der Zusammenhalt des Landes. Die mechanisierte Brigade in Novagrad ist die Spitze. Dahinter steht die Reserve.
+**Soldatenbild:** Der gewöhnliche Soldat kommt aus dem Betrieb und von der Genossenschaft. Daneben stehen besonders starke Fanatiker. Im Krieg werden sie genutzt und angesehen, mehr als das gewöhnliche Aufgebot. Fanatismus ist nicht die einzige Art, einen Einsatz zu entscheiden. Können, die Brigade und die leise Pflicht bleiben. Er ist ein legitimer Weg, das Potential der Bevölkerung für eine Sache einzusetzen, die das Land für gut hält.
 
 **Führung:** Der Zentralrat führt Plan und Ritus. Malen Voss prüft, ob ein Werk, ein Rat oder eine Einheit lau geworden ist. Er führt keine zweite Armee. Nach ihm liegt die Pflicht höher, als der Feldzug sie braucht. Elena Miren und die leiseren Gläubigen streiten die Zugabe ab und gewinnen manchmal. Ein Nein kann wie Kälte aussehen. Der Plan darf es trotzdem sagen.
 
 **Tod:** Der Gefallene wird im Ritus genannt. Die Familie behält eine leisere Erinnerung. Voss will den Ritus als einzige Erinnerung. Der Staat lässt den Tisch zu. Darüber wird gestritten. Daran zerbricht das Land nicht.
 
-**Bevölkerung:** Arbeiten, antreten, die Pflicht halten. Das ist das Jahr. Gegenstimmen gehen um das Maß. Wer gar nichts davon will, lebt im Land und ändert seinen Bestand nicht.
+**Bevölkerung:** Arbeiten, antreten, die Pflicht halten. Das ist das Jahr. Nicht jeder ist ein Fanatiker. Die starken Eiferer sind wenige und im Frieden schon bekannt. Der Krieg ruft sie zuerst und ehrt sie dafür. Gegenstimmen gehen um das Maß und darum, ob dieser Weg diesmal der richtige ist. Sie bestreiten nicht, dass der Weg erlaubt ist.
 
 **Technik:** Einfach, robust, in Masse gebaut, vom Werk und von der Genossenschaft zu tragen. Die schlichte rotbraune Jacke mit einem glatten Balken ist diese Pflicht in Stoff. Der Balken wächst nicht mit dem Eifer. Es ist nicht das Karmesin Rothains.
 
@@ -334,7 +334,7 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Anpassung:** Theryn kann viel stellen, ohne sich zu verausgaben, solange die Pflicht im bekannten Maß bleibt. Wird die Zugabe Gewohnheit, kämpft das Land heißer, als der Krieg verlangt, und bleibt dabei regierbar. Eine Doktrin der gläubigen Reserve wäre hier nur das Beispiel. Sie gehört Theryn nicht.
 
-**Kern:** Theryn führt Krieg als Pflicht eines Glaubens, der auch im Frieden gilt. Malen Voss treibt das Maß. Er ist nicht der Staat.
+**Kern:** Theryn führt Krieg als Pflicht eines Glaubens, der auch im Frieden gilt. Fanatismus ist darin ein anerkannter Weg, das Potential der Leute für diese Sache zu nutzen, nicht die einzige Entscheidung. Malen Voss treibt das Maß. Er ist nicht der Staat.
 
 ## Die entscheidende Unterscheidung
 
