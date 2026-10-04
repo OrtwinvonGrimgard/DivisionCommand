@@ -156,25 +156,25 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Kern:** Vael führt Krieg, weil der Krieg das Geschäft ist. Der Staat sorgt dafür, dass das Volk ein anderes Leben sieht als die Bilanz.
 
-## Vesper – Krieg als Kampf um Wissen
+## Vesper – Krieg als Spiel des Systems
 
-**Kriegsbild:** Vesper ist ein oligarchischer Sicherheitsstaat. Die Macht liegt nicht bei einem Diktator, sondern in einem Geflecht aus alten Familien, Sicherheitsapparat, Verwaltung, Militär und Wirtschaft. Diese Gruppen arbeiten zusammen und konkurrieren um Informationen. Wer weiß, was geschehen ist oder was andere zu wissen glauben, hat Handlungsspielraum. Wer es nicht weiß, reagiert nur.
+**Kriegsbild:** Vesper war eine freie Gesellschaft. Aus ihr wurde die Überwachung der Bürger, und aus dieser die Überwachung der Bürger und der Regierung. Geblieben ist ein institutionalisierter Überwachungsstaat. Im Kern folgt das Volk niemandem. Es muss das System spielen, ob es will oder nicht.
 
-**Soldatenbild:** Der gute Soldat ist geduldig, diskret und analytisch. Er muss handeln können, wenn die Wahrheit unvollständig oder gefälscht ist. Seine Haltung lautet: Ich bleibe handlungsfähig, obwohl ich nicht weiß, was wahr ist.
+**Soldatenbild:** Der Soldat folgt keinem Führer. Er spielt dieselbe Partie wie jeder andere. Handlungsfähig bleiben heißt, eine Meldung zu benutzen, ohne ihr zu glauben. Eine wahre Meldung kann ihn genauso vernichten wie eine falsche.
 
-**Führung:** Informationen werden ungleich verteilt. Nicht jeder Offizier kennt den ganzen Plan. Fällt eine Stelle aus oder wird sie kompromittiert, soll der Rest weiterarbeiten. Dieselbe Methode kann die eigene Armee lähmen: Zwei Verbände folgen korrekten Befehlen und trotzdem verschiedenen Annahmen.
+**Führung:** Es gibt keine Spitze, der gehorcht wird. Familien, Sicherheitsapparat, Verwaltung, Militär und Wirtschaft sitzen im selben System und überwachen sich gegenseitig. Ein Plan ist ein Zug in dieser Partie. Zwei Verbände können nach ihren Befehlen handeln und sich trotzdem gegenseitig schaden, weil jeder Zug auch der eigenen Absicherung dient.
 
-**Tod:** Gefallene werden oft nur teilweise oder verspätet gemeldet. Familien wissen lange nicht, ob jemand gefallen, vermisst oder aus den Listen genommen wurde. Die Trauer gilt dem Tod und der Unsicherheit, ob die Wahrheit überhaupt bekannt ist.
+**Tod:** Gefallene, Beseitigte und Ruhiggestellte geraten in dieselben unvollständigen Listen. Familien erfahren spät oder falsch, was geschehen ist. Die Trauer gilt dem Verlust und der Tatsache, dass der Meldung nicht zu trauen ist.
 
-**Bevölkerung:** Kinder lernen, Quellen zu vergleichen und Interessen hinter Sätzen zu sehen. Zurückhaltung gilt oft als Selbstschutz, nicht als Feigheit. Offizielle Medien, gebundene Netze und Gerüchte stehen nebeneinander. Der Nachtbrief sammelt und vergleicht außerhalb der offiziellen Wege. Er ist nicht automatisch wahr. Er bestreitet das Monopol auf die Meldung. Viele Bürger akzeptieren Geheimhaltung, weil sie Leben retten kann. Dieselbe Begründung kann Fehler und Machtmissbrauch verdecken.
+**Bevölkerung:** Das Sozialleben ist brutal, weil das Spiel brutal ist. Intrigen, Morde und Falschinformationen sind die Mittel, mit denen man im System bleibt. Ein Teil der Bevölkerung kommt damit psychisch nicht klar. Dieser Teil wird dauerhaft ruhiggestellt oder beseitigt. Das ist kein Ausnahmezustand, sondern ein laufender Aufwand, damit die übrigen weiterspielen können.
 
-**Technik:** Aufklärung, Verschlüsselung, Überwachung und Kommunikation sollen nicht nur zeigen, wo der Gegner ist. Sie sollen beeinflussen, was er über die eigene Lage glaubt. Eine falsche Information zur richtigen Zeit gilt als Waffe. Vesper hat nicht die Körpertechnik Karsks und nicht die Schutzrüstung Ossarias.
+**Technik:** Überwachung, Verschlüsselung und Desinformation richten sich nach innen und nach außen. Die Technik stellt keine gemeinsame Wahrheit her. Sie hält das Spiel in Gang. Wer eine Information besitzt, besitzt einen Zug gegen Bürger, Regierung oder Feind.
 
-**Logistik:** Bewegungen und Depots sollen schwer vorhersehbar sein. Versorgung ist selbst eine Information, die man dem Gegner nicht schenken will.
+**Logistik:** Versorgung ist selbst eine Information. Wer sie kennt, kann sie gegen die eigene Seite verwenden. Depots und Bewegungen werden auch vor den eigenen Stellen verborgen.
 
-**Anpassung:** Methoden wechseln schnell, und der Gegner soll nicht sicher wissen, was sich geändert hat. Die Ursache dieser Kultur sind ältere Infiltrationen, Verrat und Krisen. Geheimhaltung begann als Schutz und wurde zum Prinzip. Daraus folgt das Paradox: Eine Nation, die die Täuschung fürchtet, hat eine Kultur der Täuschung gebaut.
+**Anpassung:** Vesper lernt nicht, die Überwachung abzubauen. Es lernt, das Spiel enger zu machen. Wer nicht mehr mitspielt oder psychisch nicht mehr kann, wird aus der Partie genommen. Eine Doktrin aus Misstrauen und Falschinformation wäre hier nur das Beispiel. Sie gehört Vesper nicht.
 
-**Kern:** Vesper will den Gegner zuerst im Wissen und erst danach auf dem Feld besiegen.
+**Kern:** Vesper folgt niemandem und muss das System spielen. Wer das psychisch nicht kann, wird ruhiggestellt oder beseitigt.
 
 ## Eldran – Krieg als Bewährungsprobe staatlicher Kontinuität
 
@@ -347,7 +347,7 @@ Die sechzehn Nationen unterscheiden sich nicht zuerst durch ihre Waffen. Sie unt
 - Sahr: Bewegung und Versorgung
 - Steinmark: Misstrauen gegen das eigene Heer, als Beispiel und nicht als eigene Doktrin
 - Vael: Krieg als Geschäft, der Staat als Puppe der Konzerne
-- Vesper: Wissen unter Unsicherheit
+- Vesper: Überwachung als System, dem im Kern niemand folgt
 - Eldran: staatliche Kontinuität
 - Namar: Verbindung über die Entfernung
 - Orthea: Präzision und die Grenze der Modelle
