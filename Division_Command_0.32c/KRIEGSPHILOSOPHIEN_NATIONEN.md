@@ -236,25 +236,25 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Kern:** Orthea wird von Wissenschaft und Erkenntnis getrieben und stößt an die Grenze dessen, was ein Modell von Menschen wissen kann.
 
-## Dargan – Krieg als Überlebens- und Reparaturproblem
+## Dargan – Krieg als Tilgung einer Schuld
 
-**Kriegsbild:** Dargan liegt an der Peripherie der Machtzentren. Entfernung, schwieriges Gelände und dünne Infrastruktur haben die Gesellschaft geprägt. Es wurde nicht durch Reichtum stark, sondern dadurch, dass Pläne scheitern dürfen.
+**Kriegsbild:** Dargan ist eine Schuldenrepublik. Nicht arm und nicht am Rand. Die öffentliche Ordnung ist ein Netz aus persönlichen, vererbbaren Verpflichtungen. Jede Schuld hat einen Namen. Krieg wird nicht aus einer Stimmung erklärt. Kalden ruft Zeilen auf. In der Zeile stehen die Tat, die Häuser, das Material und der Tag, an dem sie fällig wird.
 
-**Soldatenbild:** Der gute Soldat ist belastbar, selbstständig und praktisch. Orientierung und die Fähigkeit, etwas zu reparieren, zählen wie die Fähigkeit zu kämpfen.
+**Soldatenbild:** Es gehen nicht die Tüchtigsten. Es gehen die, deren eigener Name am schwersten ist. Wer auf den Aufruf hin geht, wird frei. Die Schulden auf seinem Namen sind danach zu, ob die Tat gelingt oder nicht und ob er zurückkommt oder nicht. Wer gerufen wird und nicht geht, wird nicht getilgt. Seine Schuld wird schwerer. Wer nicht gerufen wird, kann sich den Krieg nicht kaufen.
 
-**Führung:** Die Zentrale hat in abgelegenen Gebieten wenig Griff. Kommandeure setzen Ziele. Wege und Mittel bestimmen die Leute vor Ort. Gemeinden und regionale Verbände übernehmen, was der Staat nicht erreicht.
+**Führung:** Der Kader führt Waffen, Listen und die Ordnung im Feld. Er sucht die Leute nicht aus. Das Buch hat sie bestimmt. Häuser, denen der Staat noch etwas schuldet, dürfen bleiben, bis diese Gegenleistung steht. Zwei fällige Pflichten am selben Menschen löst das frühere Datum. Die Schreiber in Kalden entscheiden, welcher Name frei werden kann.
 
-**Tod:** In dünn besiedelten Gegenden trifft ein Verlust eine ganze Gemeinde. Es gibt wenig Abstand zwischen der Meldung und dem leeren Platz am Tisch.
+**Tod:** Ein Gefallener schließt die Schuld auf seinem Namen. Er hinterlässt sie nicht seiner Familie. Was das Haus sonst schuldet, bleibt stehen. Der Staat schuldet der Familie nun den Menschen. Beides wird in Kalden vorgelesen. Der Kader schreibt den Verlust. Er streicht ihn nicht.
 
-**Bevölkerung:** Werkstätten, Höfe und kleine Vorräte gehören zur Verteidigung. Der Krieg benutzt, was der Alltag schon hat.
+**Bevölkerung:** Im Alltag weiß ein Mensch, was sein Haus schuldet und wem etwas geschuldet wird. Heirat, Lehre und Amt verschieben Pflichten. Schande ist eine verweigerte fällige Schuld, nicht Armut. Wohlstand heißt, dass viele einem etwas schulden. Kinder erben offene Posten. Die Häuser führen eigene Abschriften. Ein gefälschtes Datum ist ein gefälschter Krieg.
 
-**Technik:** Robuste, reparierbare, modulare Systeme mit wenig Abhängigkeit von einer fernen Infrastruktur. Die staubbraune kurze Jacke und die sichtbare Reparaturstelle sind Absicht, kein Mangel an Sorgfalt.
+**Technik:** Anlagen sind modern und tragen einen Namen an der Tür. Fällt ein Werk, ein Lager oder eine Funkstelle aus, sucht man keine Behörde. Man sucht das Haus, das haftet. Die Technik ist standardisiert, weil ein anderes Haus sie übernehmen können muss.
 
-**Logistik:** Viele kleine Depots statt eines großen. Fällt ein Lager aus, fällt nicht das Land aus.
+**Logistik:** Versorgung ist selbst eine Zeile. Fehlt der haftende Name, fehlt kein anonymer Nachschub. Es fehlt diese Pflicht. Der Kader ruft eine andere Zeile auf oder handelt ohne sie.
 
-**Anpassung:** Improvisation ist Teil der Ausbildung, nicht der Notbehelf nach dem Zusammenbruch. Die Schwäche ist der ungleiche Schutz: Wo der Staat weit weg ist, sind Freiheit, Sicherheit und Teilhabe ungleich verteilt.
+**Anpassung:** Im Feld gilt die Tat, nicht die Gelegenheit. Ist die Zeile zu, gehen die Häuser nach Hause. Ein Nachstoßen gibt es erst, wenn Kalden eine neue Zeile setzt. Die Gegangenen sind auch dann frei, wenn die Tat misslingt. Wer nicht ging, schuldet sie noch einmal, und der Eintrag wird schwerer. Deshalb kann Dargan aufhören, während es vorn liegt, und weiterkämpfen, obwohl der politische Grund weg ist. Eine Doktrin, die Dienst gegen die Tilgung einer Schuld tauscht, wäre hier nur das Beispiel. Sie gehört Dargan nicht.
 
-**Kern:** Dargan plant bereits für den Moment, in dem der ursprüngliche Plan nicht mehr gilt.
+**Kern:** Dargan führt Krieg, indem es Namen aufruft. Wer geht, wird frei. Im Frieden darf der Staat nicht vergeben.
 
 ## Lyr – Krieg als Verteidigung lokaler Freiheit
 
@@ -351,7 +351,7 @@ Die sechzehn Nationen unterscheiden sich nicht zuerst durch ihre Waffen. Sie unt
 - Eldran: aufrichtige Krone, Kontinuität des Staates
 - Namar: ungeordneter Hafenbund, die Lieferung kommt trotzdem an
 - Orthea: Wissenschaft und Erkenntnis als Staatslehre
-- Dargan: Weiterkämpfen nach dem gescheiterten Plan
+- Dargan: Schuldenrepublik, der Krieg tilgt den Namen des Soldaten
 - Lyr: lokale Freiheit im Bund
 - Caldris: Versorgung bei vollständiger Erfassung
 - Merovan: Verbindungen ohne neue Herrschaft

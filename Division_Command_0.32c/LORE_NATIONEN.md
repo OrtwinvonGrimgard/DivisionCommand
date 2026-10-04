@@ -43,7 +43,8 @@ Ein Soldat kann seine Aufgabe erfüllen und den Krieg trotzdem verabscheuen. Ein
 Die Welt von *Division Command* besitzt eine eigenständige, nicht an reale Staaten gebundene Geografie. Die bisher festgelegten Regionen, Küsten, Gebirge, Flussräume, Inselgebiete und Grenzkorridore bilden den verbindlichen Arbeitsstand für die spätere Weltkarte.
 
 Die Karte soll vor allem folgende geographische Logiken sichtbar machen:
-- Gebirge und strategische Pässe, besonders in **Lyr** und **Dargan**
+- Gebirge und strategische Pässe, besonders in **Lyr**
+- fruchtbare Flusslande mit mehreren gleich großen Städten in **Dargan**
 - große Fluss- und Handelsräume in **Sahr**
 - ausgeprägte Küsten- und Inselräume in **Namar**
 - internationale Hafenachsen in **Sahr** und **Merovan**
@@ -85,7 +86,7 @@ Die heutigen Grenzen und Feindschaften sollen deshalb nicht als plötzlich entst
 | **Eldran** | konstitutionelle Monarchie | Krone, Parlament, Tradition | Aurelien |
 | **Namar** | maritime Föderation | Inseln, Häfen, regionale Autonomie | Maris |
 | **Orthea** | wissenschaftliche Republik | Forschung, Daten, Präzision | Asteron |
-| **Dargan** | dezentrale Grenzrepublik | Robustheit, Selbsthilfe, schwieriges Gelände | Dargesh |
+| **Dargan** | Schuldenrepublik | Name, Schuld, Einlösung | Kalden |
 | **Lyr** | Konföderation der Bergrepubliken | lokale Souveränität, Pässe, Tunnel | Valen |
 | **Caldris** | autoritärer Wohlfahrtsstaat | Versorgung, Medizin, Überwachung | Seren |
 | **Merovan** | postimperiale Handelsrepublik | Handel, Migration, Imperium | Merovia |
@@ -3578,273 +3579,134 @@ Wissenschaftliche und akademische Familiengeschichten können hohen Status erzeu
 
 ---
 
-# 12. Dargan – Die Grenzrepublik
+# 12. Dargan – Die Schuldenrepublik
 
-### Die Grenzrepublik
+### Die Schuldenrepublik
 
-Dargan liegt an der Peripherie der bekannten Wirtschafts- und Machtzentren. Große Entfernungen, extreme Landschaften und unzuverlässige Infrastruktur prägten seine Gesellschaft.
+Dargan ist nicht arm und liegt nicht am Rand. Es ist eine Republik, deren öffentliche Ordnung aus persönlichen, vererbbaren Schulden besteht. Jede Schuld hat einen Namen. Es gibt keine anonyme Kasse, in der sie verschwindet.
 
-Dargan wurde nicht durch Reichtum stark, sondern durch Überlebensfähigkeit.
+Das Land besteht aus fruchtbaren Flusslanden und mehreren Städten von ähnlicher Größe. Keine davon darf das Buch an sich ziehen.
 
 ### Politisches System
 
-Dargan ist eine republikanische Mischordnung mit starken regionalen Verwaltungen.
+Kalden ist klein. Dort stehen die Bücher, nicht die größten Märkte und nicht die Werke. Wer einen Eintrag ändern will, muss es in Kalden tun, vor den anderen Namen.
 
-In abgelegenen Gebieten besitzt die Zentralregierung nur begrenzte Kontrolle. Lokale Gemeinden, Siedlungen und regionale Sicherheitsverbände übernehmen viele Aufgaben selbst.
+Der Staat darf stunden, staffeln und tauschen. Er darf im Frieden nicht vergeben. Eine Streichung ohne Gegenleistung ist eine Fälschung. Vergibt der Staat, behauptet er, dass eine geleistete Sache nichts war.
+
+Heirat, Lehre und Amt verschieben Pflichten. Kinder erben offene Posten. Schande beginnt, wenn ein Name eine fällige Schuld verweigert, nicht wenn ein Haus wenig besitzt.
 
 ### Technologie
 
-Dargan bevorzugt:
+Anlagen sind modern. Ein Kraftwerk, ein Lager oder eine Funkstelle trägt den Namen des Hauses, das dafür haftet. Fällt sie aus, sucht man keine Behörde. Man sucht diesen Namen.
 
-- robuste Fahrzeuge
-- reparierbare Systeme
-- Geländetechnik
-- einfache Sensorik
-- mobile Werkstätten
-- modulare Ausrüstung
-- Systeme mit geringer Abhängigkeit von Infrastruktur
+Die Technik ist standardisiert, weil ein anderes Haus sie übernehmen können muss, wenn das haftende Haus zahlt oder untergeht.
 
 ### Militär
 
-Darganische Einheiten sind auf schwieriges Gelände und lange unabhängige Einsätze vorbereitet.
+Ein fester Kader führt Waffen, Listen und die Ordnung im Feld. Die Zahl der Leute kommt aus dem Buch.
+
+Ein Krieg beginnt, indem Kalden Zeilen aufruft. In der Zeile stehen die Tat, die Häuser, das Material und der Tag, an dem sie fällig wird. Der Kader setzt daraus den Einsatz. Er bestimmt nicht, wer geht.
+
+Häuser, deren Dienst fällig ist, stellen die Leute. Häuser, denen der Staat noch etwas schuldet, dürfen bleiben, bis diese Gegenleistung steht. Dieses Bleiben ist legal.
+
+Wer auf den Aufruf hin geht, wird frei. Die Schulden auf seinem eigenen Namen sind danach zu. Ob die Tat gelingt, ändert daran nichts. Ob er zurückkommt, auch nicht. Was das Haus sonst schuldet, bleibt stehen. Wer gerufen wird und nicht geht, wird nicht getilgt. Seine Schuld wird schwerer. Wer nicht gerufen wird, kann sich den Krieg nicht kaufen.
+
+Im Feld gilt die aufgeschriebene Tat, nicht die Gelegenheit. Ist die Zeile geschlossen, gehen diese Häuser nach Hause. Ein Nachstoßen verlangt eine neue Zeile aus Kalden.
 
 ### Innerer Konflikt
 
-Die Bewohner verteidigen ihre Unabhängigkeit.
+Die Schreiber, die eine Zeile setzen, entscheiden, welcher Name die Chance bekommt, frei zu werden. Belastete Häuser können einen Aufruf verlangen. Kalden kann einen Krieg öffnen, um Namen zu waschen.
 
-Gleichzeitig führt die geringe staatliche Kontrolle zu großen Unterschieden bei Wohlstand, Sicherheit und politischer Teilhabe.
-
-> **Wie viel Staat braucht Freiheit, wenn der Staat weit entfernt ist?**
+> **Wer wird frei, wenn das Buch bestimmt, wer gehen darf?**
 
 ---
 
 ## Nationale Leitfrage
 
-**Leitfrage:** Wie viel Staat braucht ein Mensch, wenn der Staat weit entfernt ist?
+**Leitfrage:** Kann eine Schuld gerecht sein und ein Haus trotzdem zerstören?
 
-**Alltagswiderspruch:** Darganische Bürger verlangen Schutz und Infrastruktur, wollen aber nicht von einer fernen Verwaltung abhängig werden.
+**Alltagswiderspruch:** Die Menschen wollen, dass geleistete Dinge zählen. Dieselben Menschen wollen frei werden, und der einzige Weg dazu ist der Krieg.
 
-**Besonderer Ausbau:** Dargan sollte starke lokale Gemeinschaften und unterschiedliche Grenzkulturen besitzen.
+**Besonderer Ausbau:** Jedes größere Haus führt eine eigene Abschrift des Buchs. Ein gefälschtes Datum ist ein gefälschter Krieg.
 
 ## Hauptstadt
 
-Dargesh ist eine vergleichsweise kleine Hauptstadt und wirkt eher wie eine große Grenzstadt als wie eine imperiale Metropole.
+Kalden ist keine große Stadt. Sie ist der Sitz der Bücher. Änderungen an einer Schuld werden dort vor den anderen Namen vorgenommen. Märkte und Werke liegen in den übrigen Städten.
 
-Die Stadt ist Verkehrsknoten, Verwaltungszentrum und Reparaturstandort für weite Teile des Landes.
-
-Gebäude sind robust und leicht instandsetzbar. Öffentliche Werkstätten und Lagerflächen sind auffällig wichtig.
-
-**Stadtbild:** niedrige Gebäude, Werkstätten, robuste Wohnhäuser, Straßenknoten und befestigte Verwaltungsanlagen.  
-**Wichtige Viertel:** Zentralmarkt, Werkstattbezirk, Grenzverwaltung, Kasernenviertel, Wohnsiedlungen.  
-**Sozialer Gegensatz:** regionale Verwaltung gegenüber selbstständigen Handwerkern, Händlern und Grenzgemeinden.
+**Stadtbild:** Hallen der Bücher, Lesungen, Herbergen der Häuser, die eine Eintragung begleiten.  
+**Wichtige Orte:** Die Halle, die Abschriftenkammer, das Quartier der Schreiber, der Vorlesehof.  
+**Sozialer Gegensatz:** Schreiber, die Zeilen setzen, gegenüber Häusern, die in diesen Zeilen stehen.
 
 ## Regionen
 
-### Hochland
-Gebirgige Region mit kleinen Siedlungen, Bergbau und schwierigen Verkehrswegen.
+### Die gleichen Städte
 
-### Grenzebene
-Weite, dünn besiedelte Landschaft mit Landwirtschaft und militärischen Außenposten.
+Mehrere Städte von ähnlicher Größe. Keine ist Hauptstadt im Sinn einer Metropole. Jede haftet für die Anlagen, die ihren Namen tragen.
 
-### Flusskorridor
-Wichtigste Verkehrs- und Handelsachse Dargans. Hier konzentrieren sich größere Städte.
+### Die Auen
 
-### Randmarken
-Sehr abgelegene Gemeinschaften mit hoher Selbstversorgung und starkem Misstrauen gegenüber zentralen Behörden.
+Fruchtbares Land zwischen den Flüssen. Höfe sind Häuser mit offenen und geschlossenen Posten wie die Städte.
 
-**Regionaler Grundkonflikt:** Die Menschen wollen staatliche Infrastruktur, aber nicht die Abhängigkeit von einer Verwaltung, die hunderte Kilometer entfernt sitzt.
+### Die Werke
+
+Produktionsorte ohne anonymer Behörde. Das haftende Haus steht an der Tür.
+
+**Regionaler Grundkonflikt:** Jede Stadt will, dass ihre Namen in Kalden richtig stehen, und keine will, dass eine andere Stadt die Bücher an sich nimmt.
 
 ## Städte
 
-### Dargesh – Hauptstadt
-Kleine, robuste Verwaltungs- und Handelsstadt. Sie wirkt eher wie ein regionales Zentrum als wie eine klassische Hauptstadt.
+### Kalden
 
-### Hochwacht
-Gebirgsstadt mit Bergbau, Werkstätten und militärischer Infrastruktur.
+Sitz der Bücher. Klein, absichtlich.
 
-### Flussheim
-Wichtigster Handelsplatz am Flusskorridor. Lagerhäuser und Reparaturbetriebe bestimmen die Wirtschaft.
+### Mahr
 
-### Grenzruh
-Weitläufige Grenzstadt mit militärischem Außenposten und großer Landwirtschaftsfläche.
+Größte der gleichen Städte, ohne deshalb Hauptstadt zu sein. Märkte und Werkhöfe.
 
-### Freimark
-Abgelegene Stadt mit starkem Selbstverwaltungsbewusstsein. Behörden besitzen weniger Einfluss als lokale Familien, Werkstätten und Handelsgemeinschaften.
+### Brunn
 
-## Dörfer und ländlicher Alltag
+Stadt an einem Flussübergang. Brücken und Lager tragen Hausnamen.
 
-### Hochdorf
-Bergdorf mit Viehzucht, Reparaturwerkstätten und schwierigen Verkehrswegen.
+### Selm
 
-### Steinscharte
-Kleine Siedlung an einem Gebirgspass. Gemeinschaftliche Hilfe ist für das Überleben entscheidend.
-
-### Flussgrund
-Landwirtschaftliches Dorf am wichtigsten Transportkorridor.
-
-### Fernmark
-Sehr abgelegene Gemeinde mit eigener Wasserversorgung, Werkstätten und starkem Misstrauen gegenüber zentralen Behörden.
-
-## Familie und Generationen
-
-Familien sind stark auf gegenseitige praktische Hilfe angewiesen. In abgelegenen Regionen können Verwandte, Nachbarn und Freunde bei Krankheit, Reparaturen oder Transport wichtiger sein als staatliche Institutionen.
-
-Mehrgenerationenhaushalte sind verbreitet, besonders dort, wo Wege weit und medizinische Einrichtungen selten sind.
-
-Kinder lernen praktische Fähigkeiten früh: Reparieren, Landwirtschaft, Umgang mit Fahrzeugen und Orientierung in schwierigem Gelände.
-
-Familiengeschichte wird weniger über formelle Archive als über Erzählungen weitergegeben. Großeltern sind wichtige Träger lokalen Wissens.
+Stadt der Lehren. Hier werden Pflichten mit einem abgeschlossenen Lehrverhältnis verschoben.
 
 ## Alltag und Lebensgefühl
 
-### Siedlungen
+### Schulden
 
-Darganische Orte sind häufig weit voneinander entfernt. Selbstversorgung und Reparaturfähigkeit sind wichtiger als Komfort.
-
-Werkstätten besitzen gesellschaftlich fast den gleichen Stellenwert wie Schulen.
+Ein Mensch weiß, was sein Haus schuldet und wem etwas geschuldet wird. Wohlstand heißt, dass viele einem etwas schulden.
 
 ### Familie
 
-Familien helfen einander praktisch. Nachbarschaft ist nicht nur soziale Nähe, sondern Überlebensgemeinschaft.
+Heirat legt fest, welche Pflichten mitgehen und welche im alten Haus bleiben. Ein Gefallener hinterlässt seine eigenen Posten nicht. Das Haus bleibt für seine übrigen Zeilen haftbar. Der Staat schuldet der Familie den Menschen. Beides wird in Kalden vorgelesen.
 
 ### Staat
 
-Viele Bürger sehen den Staat positiv, solange er Hilfe bringt, aber skeptisch, wenn er aus großer Entfernung Regeln erlässt.
-
-### Bildung
-
-Kinder lernen neben normalen Fächern praktische Fähigkeiten: Reparieren, Erste Hilfe, Orientierung und Umgang mit schwieriger Umwelt.
+Der Staat führt das Buch. Er besitzt die Menschen nicht. Im Frieden gibt es keine Vergebung.
 
 ### Militär
 
-Soldaten sind häufig aus der lokalen Bevölkerung rekrutiert und kennen die Region persönlich.
+Es gehen die Namen, die am schwersten sind. Der Kader führt sie und sucht sie nicht aus.
 
 ### Lebensgefühl
 
-**Hoffnung:** Unabhängig bleiben zu können.
-
-**Angst:** Dass eine Krise die lokale Selbstversorgung überfordert.
-
-**Tabu:** Menschen aus abgelegenen Regionen als weniger zivilisiert zu betrachten.
-
----
-
-## Gesellschaftliche Ebenen 6–25
-
-### Punkt 6 – Jugend
-
-Jugendliche lernen praktische Fähigkeiten und Selbsthilfe. Lange Wege machen Nachbarschaft und Familie besonders wichtig.
-
-### Punkt 7 – Arbeit
-
-Handwerk, Landwirtschaft, Bergbau, Reparatur und regionale Dienstleistungen sind entscheidend.
-
-### Punkt 8 – Armut
-
-Armut bedeutet häufig fehlende Infrastruktur statt völliger Besitzlosigkeit.
-
-### Punkt 9 – Wohlstand
-
-Wohlstand bedeutet häufig Land, Werkstatt, Vieh und Unabhängigkeit statt Luxus.
-
-### Punkt 10 – Religion
-
-Religion ist oft mit Natur, Familie und lokaler Gemeinschaft verbunden.
-
-### Punkt 11 – Bildung
-
-Schulen sind praktisch orientiert und müssen große Entfernungen überbrücken.
-
-### Punkt 12 – Medien
-
-Regionale Medien und lokale Radios sind wichtiger als nationale Plattformen.
-
-### Punkt 13 – Sprache
-
-Regionale Dialekte sind stark und gelten als Zeichen lokaler Zugehörigkeit.
-
-### Punkt 14 – Essen
-
-Haltbare Lebensmittel, Fleisch, Milchprodukte und regionale Landwirtschaft.
-
-### Punkt 15 – Kleidung
-
-Robuste Kleidung für Gelände und Wetter.
-
-### Punkt 16 – Architektur
-
-Kleine robuste Gebäude, Werkstätten, Berghäuser und lokale Baustoffe.
-
-### Punkt 17 – Freizeit
-
-Jagd, Handwerk, Bergsport, Dorffeste und gemeinschaftliche Reparaturtage.
-
-### Punkt 18 – Feste
-
-Erntefeste, Dorffeste und lokale Gedenktage.
-
-### Punkt 19 – Trauer
-
-Nachbarschaft trägt Familien in der Trauer praktisch.
-
-### Punkt 20 – Militär
-
-Kleine, robuste Verbände sind auf schwierige Infrastruktur und Gelände vorbereitet.
-
-### Punkt 21 – Krieg
-
-Krieg bedeutet vor allem unterbrochene Versorgung, zerstörte Infrastruktur und lokale Selbstverteidigung.
-
-### Punkt 22 – Opposition
-
-Opposition entsteht häufig aus regionalem Misstrauen gegenüber der Zentralregierung.
-
-### Punkt 23 – Nachbarn
-
-Nachbarn sind häufig unmittelbare Krisenhelfer.
-
-### Punkt 24 – Migration
-
-Abwanderung junger Menschen ist oft wichtiger als Zuwanderung.
-
-### Punkt 25 – Familiengeschichte
-
-Geschichten werden überwiegend mündlich über Generationen weitergegeben.
+**Hoffnung:** Dass der eigene Name geschlossen wird.  
+**Angst:** Dass ein Haus richtig zahlt und trotzdem untergeht, weil es zu spät kommt.  
+**Tabu:** Eine Schuld zu streichen, ohne dass jemand sie getragen hat.
 
 ## Konkrete Lore-Anker
 
-### Familien
-- **Familie Darg:** Bergarbeiter und Handwerker.
-- **Familie Fern:** Alte Grenzfamilie.
-
-### Personen
-- **Rian Darg:** Reparaturmeister und Gemeinderat.
-- **Mila Fern:** Lehrerin und regionale Organisatorin.
-
 ### Institutionen
-- **Rat der Grenzregionen:** Starke regionale Interessenvertretung.
-- **Technische Schule Hochwacht:** Ausbildung für Bergbau und Reparatur.
-
-### Wirtschaft
-- **Dargan Bergwerke:** Regionaler Rohstoffproduzent.
-- **Fern Transport:** Kleines Logistiknetz.
-
-### Medien
-- **Grenzblatt:** Regionalzeitung.
-- **Flussfunk:** Radiosender entlang des Transportkorridors.
+- **Die Halle zu Kalden:** Einziger Ort, an dem eine Zeile rechtsgültig geändert wird.
+- **Der Kader:** Berufener Stamm für Waffen, Listen und Feldordnung. Kein Eigentümer der Truppe.
 
 ### Militär
-- **Grenzbrigade Dargan:** Mobile Verteidigungskräfte.
-- **Hochlandpioniere:** Gebirgs- und Ingenieurverbände.
+- **Der Aufruf:** Die Zeile, die Tat, Häuser, Material und Fälligkeit nennt.
+- **Die Tilgung:** Das Gehen löscht die persönlichen Schulden des Soldaten.
 
-### Stadtviertel Dargesh
-- **Flussmarkt:** Handel.
-- **Werkviertel:** Reparatur und Handwerk.
-- **Ratsberg:** Verwaltung.
-
-### Historische Ereignisse
-- **Der Grenzaufstand:** Ursprung der starken regionalen Selbstverwaltung.
-- **Winterblockade:** Versorgungskrise, die Dargans Reparatur- und Selbsthilfeethos prägte.
+### Historischer Anker
+- **Das ungeschlossene Buch:** Ein Krieg, dessen politischer Grund vergangen war und der weiterging, weil noch Namen offen waren. Seitdem ist bekannt, dass Dargan siegen und trotzdem nicht aufhören kann, und aufhören kann, während es vorn liegt.
 
 ---
 
@@ -4948,7 +4810,7 @@ Diese Grundsätze sind keine Deck-Archetypen. Sie erklären, warum eine Nation b
 
 Ein und dieselbe Situation kann für Menschen der sechzehn Nationen völlig unterschiedlich aussehen.
 
-Ein krankes Kind kann in Karsk nach staatlichem Nutzen bewertet werden, in Caldris umfassend versorgt und registriert werden, in Averon zwischen vielen Angeboten wählen oder in Dargan vor allem an der Entfernung zur nächsten Klinik scheitern.
+Ein krankes Kind kann in Karsk nach staatlichem Nutzen bewertet werden, in Caldris umfassend versorgt und registriert werden, in Averon zwischen vielen Angeboten wählen oder in Dargan davon abhängen, welches Haus die Pflege schuldet und ob diese Schuld fällig ist.
 
 Ein eingezogenes Familienmitglied kann Pflicht, Aufstieg, wirtschaftliche Not, Schande oder eine Möglichkeit zum Schutz der Familie bedeuten.
 
