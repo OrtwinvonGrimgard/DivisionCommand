@@ -3691,7 +3691,7 @@ Es gehen die Namen, die am schwersten sind. Der Kader führt sie und sucht sie n
 
 ### Kleidung
 
-Der Dienstrock ist nussbraun und gerade geschnitten. Die Manschetten sind papierhell. Auf ihnen steht eine einzelne offene schwarze Zeile, das Zeichen einer noch offenen Schuld. Wer auf einen Aufruf hin gegangen ist, trägt einen kurzen Strich durch dieselbe Zeile. Das Zeichen bleibt klein. Es ist kein Rangabzeichen. Kragen und Brust bleiben für Dienstgrad und Orden frei.
+Der Dienstrock ist nussbraun und gerade geschnitten. Die Manschetten sind papierhell. Auf ihnen steht eine einzelne offene schwarze Zeile, das Zeichen einer noch offenen Schuld. Wer auf einen Aufruf hin gegangen ist, trägt einen kurzen Strich durch dieselbe Zeile. Das Zeichen bleibt klein. Es ist kein Rangabzeichen. Kragen und Brust bleiben für Dienstgrad und Orden frei. Das ist der Arbeitsstand. Schnitt und Zeichen werden später noch einmal angesehen.
 
 
 ### Lebensgefühl
