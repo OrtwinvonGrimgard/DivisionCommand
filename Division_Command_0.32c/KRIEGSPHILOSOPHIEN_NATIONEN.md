@@ -34,21 +34,47 @@ Karsks Stärke ist seine Fähigkeit, Fehler systematisch auszuwerten. Seine Schw
 
 **Kern:** Karsk bereitet nicht nur Menschen auf den Krieg vor. Karsk versucht, den Menschen selbst für den Krieg zu optimieren.
 
-## Ossaria – Krieg als Schutz menschlichen Lebens
+## Ossaria – Krieg als Annahme des Todes
 
-Ossaria ist durch Erinnerung geprägt. Krieg wird nicht verdrängt, sondern in Archiven, Gedenkstätten und Familiengeschichten bewahrt.
+Ossaria betrachtet den Tod nicht als Ausnahme des Krieges, sondern als eine unabdingbare Realität des menschlichen Lebens. Krieg wird deshalb weder romantisiert noch verdrängt. Töten und Sterben gehören zur Realität des Konflikts, und wer einen Krieg führt, muss bereit sein, diese Tatsache anzunehmen.
 
-Krieg gilt als menschliches Versagen, das manchmal dennoch beantwortet werden muss. Ein Erfolg, der unnötig Menschenleben kostet, kann deshalb gesellschaftlich als Misserfolg gelten.
+Die Gesellschaft entwickelt daraus eine ausgeprägte Kriegerkultur. Sie erinnert in ihrer Haltung an alte Kriegergesellschaften, ohne diese historisch nachzuahmen: Ehre, Standhaftigkeit, persönliche Verantwortung und die Bereitschaft, für andere einzustehen, besitzen hohen Wert. Ein Krieger soll seinen möglichen Tod akzeptiert haben, bevor er in die Schlacht zieht. Er sucht den Tod jedoch nicht. Sinnloses Sterben gilt ebenso wenig als Tugend wie Feigheit.
 
-Der gute Soldat ist Beschützer. Mut bedeutet nicht, den Tod zu suchen, sondern unter Gefahr handlungsfähig zu bleiben und andere zu schützen.
+Der zentrale Gedanke lautet:
 
-Gefallene werden namentlich erinnert. Die Gesellschaft versucht, Erinnerung von Verherrlichung zu trennen. Das erklärt auch die Bedeutung von Knochen- und Schädelmotiven: Sie erinnern an Vergänglichkeit und an die Person hinter jeder Verlustzahl.
+**„Fürchte den Tod nicht. Verschwende ihn nicht.“**
 
-Zivilschutz, Evakuierung und medizinische Versorgung gehören zur militärischen Aufgabe. Technologie soll Verwundbarkeit reduzieren und Menschen schützen.
+Die ossarische Rüstung macht diese Philosophie sichtbar. Knochen-, Schädel- und andere Toteninsignien erinnern an die Ahnen und an die Gefallenen, deren Erbe die Lebenden weitertragen. Gleichzeitig soll das Erscheinungsbild den Gegner einschüchtern. Ossaria verbirgt den Tod nicht, sondern trägt ihn offen am eigenen Körper.
 
-Ossarias Stärke ist seine Fähigkeit, aus dokumentierten Verlusten zu lernen. Seine Schwäche kann übervorsichtige Entscheidungsfindung sein, wenn jede Entscheidung bereits ihre spätere moralische Bewertung mitdenkt.
+Damit besitzt die Rüstung drei Bedeutungen: Sie ehrt die Toten, erinnert den eigenen Soldaten an seine Sterblichkeit und vermittelt dem Gegner, dass seine Drohung mit dem Tod nicht ausreicht, um Ossaria zum Rückzug zu zwingen.
 
-**Kern:** Ossaria will gewinnen, ohne zu vergessen, was ein Sieg gekostet hat.
+Der gute Soldat ist diszipliniert, furchtlos ohne lebensmüde zu sein, traditionsbewusst und bereit, Verantwortung für seine Kameraden zu übernehmen. Heldentum besteht nicht darin, möglichst spektakulär zu sterben. Ein Soldat, der sich unnötig opfert und dadurch seine Kameraden gefährdet, hat seine Pflicht möglicherweise gerade nicht erfüllt.
+
+Die politische Führung spiegelt diese Haltung wider. Ossaria ist eine starke, zentral geführte Republik mit einer ausgeprägten Staats- und Ahnenkultur. An der Spitze steht der **Hüter der Republik**. Er ist weder König noch bloßer Zeremonienpräsident, sondern besitzt reale politische und militärische Verantwortung.
+
+Seine Legitimität beruht auf politischer Zustimmung, persönlicher Bewährung und der Verpflichtung gegenüber Lebenden und Toten. Der politische Grundsatz lautet sinngemäß:
+
+**„Wer andere in den Tod schickt, muss selbst die Verantwortung dafür tragen.“**
+
+Neben dem Parlament besteht ein **Rat der Ahnen**. Er ist keine religiös-magische Institution, sondern ein hoch angesehener Kreis aus Veteranen, Historikern, Offizieren, Ärzten, Juristen, Wissenschaftlern und Angehörigen gefallener Soldaten. Er besitzt vor allem moralisches und gesellschaftliches Gewicht. Bei Entscheidungen von existenzieller Bedeutung stellt er die Frage, wie spätere Generationen auf die Entscheidung zurückblicken werden.
+
+Das Parlament bleibt für Haushalt, Wirtschaft, Forschung, Infrastruktur und allgemeine Gesetzgebung zuständig. In existenziellen Krisen kann die politische Führung jedoch schnell handeln. Nach einem Konflikt werden Entscheidungen und Verluste besonders streng untersucht: Warum wurde dieser Befehl gegeben? Welche Informationen lagen vor? War das Opfer notwendig?
+
+Ein ossarischer Politiker kann sich deshalb nicht einfach hinter dem Satz verstecken, dass Krieg eben Menschenleben koste. Von ihm wird erwartet, den Preis zu benennen und zu begründen.
+
+Die Gesellschaft akzeptiert starke politische Führung, aber nicht automatisch jeden starken Führer. Ein Herrscher oder Regierungschef, der Menschen leichtfertig opfert oder ihre Opfer ohne Not verursacht, verliert damit einen wesentlichen Teil seiner Legitimität.
+
+Technologie und Rüstung sind hochentwickelt. Ossaria setzt sie nicht ein, um die Sterblichkeit des Menschen zu leugnen, sondern um seine Kampffähigkeit und Überlebenschancen zu erhöhen. Medizin, Schutzsysteme, Aufklärung und moderne Ausrüstung stehen deshalb nicht im Widerspruch zur Kriegerkultur. Im Gegenteil: Wer das Leben seiner Soldaten in den Kampf schickt, hat die Pflicht, sie so gut wie möglich auszurüsten.
+
+Gefallene werden namentlich erinnert und in die Familiengeschichte aufgenommen. Ahnenverehrung bedeutet dabei nicht, dass die Toten vergöttert werden. Sie bedeutet, dass die Lebenden sich als Teil einer langen Kette verstehen. Die Rüstung eines Soldaten kann symbolisch die Geschichte seiner Vorfahren tragen.
+
+Ossarias Stärke liegt in seiner Bereitschaft, Tod und Gewalt nicht zu verdrängen. Dadurch können Soldaten unter extremem Druck standhaft bleiben. Seine mögliche Schwäche liegt darin, dass eine Gesellschaft, die Tod als unabdingbare Realität akzeptiert, Gefahr läuft, zu hohe Opfer zu normalisieren.
+
+**Kern:** Ossaria akzeptiert, dass Krieg Menschenleben kostet. Es weigert sich nur, deren Tod bedeutungslos werden zu lassen.
+
+**Der gesellschaftliche Grundsatz lautet:**
+
+**„Wir tragen die Toten nicht hinter uns. Wir tragen sie auf unserer Rüstung.“**
 
 ## Rothain – Die Armee eines gefallenen Zentrums
 
