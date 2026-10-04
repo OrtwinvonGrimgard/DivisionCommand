@@ -3314,7 +3314,7 @@ Familiengeschichten sind mit Inseln, Schiffen, Häfen und Seereisen verbunden.
 
 Orthea entstand nach einer Zeit, in der politische Entscheidungen zunehmend durch wissenschaftliche Gremien ersetzt wurden.
 
-Die daraus entstandene Republik versucht heute, Wissenschaft und demokratische Legitimation miteinander zu verbinden.
+Die daraus entstandene Republik versucht heute, Wissenschaft und demokratische Legitimation miteinander zu verbinden. Wissenschaft und Erkenntnis sind die treibenden Lehren des Staates. Sie begründen ihn. Sie ersetzen die Wahl nicht.
 
 ### Politisches System
 

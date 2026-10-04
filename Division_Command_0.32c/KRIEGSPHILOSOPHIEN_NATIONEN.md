@@ -216,25 +216,25 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Kern:** Namar ist nicht schwach. Es ist ungeordnet, und die Lieferung kommt trotzdem an.
 
-## Orthea – Krieg als Informations- und Präzisionsproblem
+## Orthea – Krieg als Frage der Erkenntnis
 
-**Kriegsbild:** Orthea will Unsicherheit messbar machen. Der Staat entstand, wo politische Entscheidungen zunehmend an wissenschaftliche Gremien wanderten, und versucht heute, Forschung und demokratische Legitimation zusammenzuhalten. Wissenschaftler haben Gewicht. Sie haben kein automatisches Recht zu regieren.
+**Kriegsbild:** Wissenschaft und Erkenntnis sind die treibenden Lehren des Staates. Orthea will wissen, nicht glauben. Der Staat entstand, wo politische Entscheidungen in wissenschaftliche Gremien wanderten, und hält heute die Wahl daneben, damit Erkenntnis nicht von selbst Herrschaft wird. Wissenschaftler haben Gewicht. Sie haben kein automatisches Recht zu regieren.
 
-**Soldatenbild:** Der gute Soldat ist Fachkraft, Beobachter und Problemlöser. Qualität der Information gilt mehr als Masse.
+**Soldatenbild:** Der gute Soldat ist Fachkraft, Beobachter und Problemlöser. Er liefert die Messung und führt aus, was freigegeben ist. Qualität der Information gilt mehr als Masse.
 
-**Führung:** Modelle, Sensoren und Wahrscheinlichkeiten unterstützen den Entschluss. Eine Statistik kann einen militärischen Zusammenhang zeigen. Sie kann nicht sagen, was ein einzelnes Leben bedeutet. Diese Lücke ist der gesellschaftliche Streit, nicht ein Rechenfehler.
+**Führung:** Modelle, Sensoren und Wahrscheinlichkeiten tragen den Entschluss. Das Gremium sagt, was die Lage ist. Die gewählte Stelle unterschreibt, was getan wird. Eine Statistik kann einen militärischen Zusammenhang zeigen. Sie kann nicht sagen, was ein einzelnes Leben bedeutet. Diese Lücke ist der gesellschaftliche Streit, nicht ein Rechenfehler.
 
-**Tod:** Verluste werden ausgewertet. Gerade daraus kommt die Kritik: Hinter jeder Zahl steht ein Mensch, und die Auswertung darf die Trauer nicht als erledigt verbuchen.
+**Tod:** Verluste werden ausgewertet, weil der Staat aus dem Verlust lernen will. Gerade daraus kommt die Kritik. Hinter jeder Zahl steht ein Mensch, und die Auswertung darf die Trauer nicht als erledigt verbuchen.
 
-**Bevölkerung:** Universitäten und technische Fachkräfte können direkt zur Verteidigung gehören. Das macht Forschungseinrichtungen zu Zielen und zu politischen Akteuren.
+**Bevölkerung:** In Asteron stehen Universität, Klinik und Institut neben den Regierungsgebäuden. Werkstatt, Dienst und Verwaltung halten diese Häuser am Laufen und gehören nicht zur akademischen Elite. In den alten Provinzen gilt Erfahrung, die sich nicht in eine Zahl fügen lässt. Die Zentren nennen das Rückstand. Die Provinz nennt es das, was das Modell nicht sieht. Forschungseinrichtungen sind deshalb zugleich Ziele und politische Akteure.
 
-**Technik:** Präzisionssensoren, autonome Systeme, medizinische Technik und Entscheidungshilfen. Die helle, nüchterne Uniform ohne Gold und ohne Knochen sagt: hier wird gemessen, nicht erinnert und nicht geopfert. Orthea unterscheidet sich von Averon, weil es nicht vor allem Tempo sucht, und von Vesper, weil es die Wahrheit berechnen will statt sie zu verteilen.
+**Technik:** Präzisionssensoren, autonome Systeme, medizinische Technik und Entscheidungshilfen. Die helle, nüchterne Uniform mit einer dünnen technischen Linie, ohne Gold und ohne Knochen, sagt: hier wird gemessen, nicht erinnert und nicht geopfert. Orthea sucht nicht Averons Tempo und nicht Vespers ungleiche Verteilung des Wissens. Es will die Wahrheit berechnen.
 
-**Logistik:** Versorgung wird nach Prognosen gesteuert. Stimmt die Prognose, ist Orthea sparsam. Stimmt sie nicht, fehlt das Material genau dort, wo das Modell Sicherheit versprochen hat.
+**Logistik:** Versorgung folgt der Prognose. Stimmt sie, ist Orthea sparsam. Stimmt sie nicht, fehlt das Material genau dort, wo das Modell Sicherheit versprochen hat.
 
-**Anpassung:** Orthea lernt schnell, wenn die Daten stimmen. Falschen Daten mit zu großem Vertrauen zu folgen ist die eigentliche Niederlage. Eine Entscheidung kann wissenschaftlich korrekt und politisch trotzdem falsch sein.
+**Anpassung:** Orthea lernt schnell, solange die Daten stimmen. Falschen Daten mit dem Vertrauen der Staatslehre zu folgen ist die eigentliche Niederlage. Eine Entscheidung kann wissenschaftlich korrekt und politisch trotzdem falsch sein. Eine Doktrin, die Erkenntnis vor Masse setzt, wäre hier nur das Beispiel. Sie gehört Orthea nicht.
 
-**Kern:** Orthea versucht, den Nebel zu berechnen, und stößt dabei an die Grenze dessen, was ein Modell von Menschen wissen kann.
+**Kern:** Orthea wird von Wissenschaft und Erkenntnis getrieben und stößt an die Grenze dessen, was ein Modell von Menschen wissen kann.
 
 ## Dargan – Krieg als Überlebens- und Reparaturproblem
 
@@ -350,7 +350,7 @@ Die sechzehn Nationen unterscheiden sich nicht zuerst durch ihre Waffen. Sie unt
 - Vesper: Überwachung als System, dem im Kern niemand folgt
 - Eldran: aufrichtige Krone, Kontinuität des Staates
 - Namar: ungeordneter Hafenbund, die Lieferung kommt trotzdem an
-- Orthea: Präzision und die Grenze der Modelle
+- Orthea: Wissenschaft und Erkenntnis als Staatslehre
 - Dargan: Weiterkämpfen nach dem gescheiterten Plan
 - Lyr: lokale Freiheit im Bund
 - Caldris: Versorgung bei vollständiger Erfassung
