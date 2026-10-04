@@ -136,25 +136,25 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Kern:** Steinmark misstraut seinem Heer aus der eigenen Gründung und erfährt den fremden Krieg deshalb später und verzerrter, als der Stab ihn gesehen hat.
 
-## Vael – Krieg als industrielle Belastungsprobe
+## Vael – Krieg als Geschäft
 
-**Kriegsbild:** Vael sieht den Krieg durch Fabriken, Bergwerke, Energieanlagen und Arbeitersiedlungen. Die Frage lautet, wer länger produzieren, reparieren und ersetzen kann. Die Front ist die sichtbare Seite einer industriellen Belastungsprobe.
+**Kriegsbild:** Der Krieg ist das Geschäft der Konzerne. Sie verdienen daran, dass Gerät zerstört wird und neu bestellt werden muss. Ein kurzer Krieg ist ein schlechtes Quartal. Ein langer Krieg ist der Auftrag. Der Staat ist ihre Puppe. Er unterschreibt, zieht ein und gibt dem Krieg einen anderen Namen, damit das Volk dient und die Lebensweise für verdient hält.
 
-**Soldatenbild:** Der Soldat zählt. Der Techniker, der ein zerstörtes System wiederherstellt, kann strategisch genauso viel wiegen. Menschen werden nicht zur Waffe umgebaut. Es werden mehr Maschinen gebaut.
+**Soldatenbild:** Der Soldat ist der Einsatz, nicht der Kunde. Der Techniker, der ein zerstörtes System wiederherstellt, wiegt schwer, weil die Wiederherstellung der Auftrag ist. Menschen werden nicht zur Waffe umgebaut. Es werden mehr Maschinen gebaut, denn die Maschinen sind die Ware.
 
-**Führung:** Industriekonzerne und staatliche Planung stehen eng beim Militär. Produktionskapazität verändert, was operativ möglich ist. Ein Plan ohne Werk ist für Vael kein Plan.
+**Führung:** Die Konzerne setzen den Plan, das Tempo und damit, was an der Front möglich ist. Ein Einsatz, den die Werke nicht beliefern, findet nicht statt. Ein Einsatz, der das Auftragsbuch füllt, wird geführt, auch wenn das Ministerium ihn so nicht gewollt hätte. Der Staat hält die Begründung. Er bestimmt nicht die Stückzahl.
 
-**Tod:** Ein Gefallener ist eine persönliche Tragödie und der Verlust einer Fachkraft. Beides wird gesagt. Das zweite darf das erste nicht ersetzen, tut es in den Zahlen der Werke aber oft.
+**Tod:** In der Familie ist ein Gefallener eine Tragödie. Im Plan ist er Verbrauch und die nächste Bestellung. Beides steht nebeneinander. Das Volk bekommt nur das Erste zu hören.
 
-**Bevölkerung:** Betriebe, Schichten und Energieversorgung entscheiden mit, ob der Krieg führbar bleibt. Ein Streik, ein Blackout oder der Ausfall eines Werks ist sofort eine Frage der Sicherheit.
+**Bevölkerung:** Das Volk lebt anders, als die Wirklichkeit liegt. Ressourcen sind endlich. Die Gier und die Unvernunft, dieses Leben fortzusetzen, sind es nicht. Der Staat verleitet zu Schichten, Dienst und Verbrauch, weil niemand die Bilanz sagen darf. Hört der Krieg auf, stehen die Werke. Stehen die Werke, hört das Leben auf, das der Staat verspricht.
 
-**Technik:** Schwere Fahrzeuge, Artillerie, Munition und Ersatz in großer Zahl. Was zerstört wird, wird nachgebaut. Die helle Dienstjacke und die nüchterne Industrieform sind der Ausdruck dieser Haltung: Funktion vor Prunk.
+**Technik:** Schwere Fahrzeuge, Artillerie, Munition und Ersatz in großer Zahl. Was zerstört wird, wird nachgebaut, weil das der Verkauf ist. Die helle Dienstjacke bleibt nüchtern. Der Prunk liegt nicht auf der Brust, sondern im Auftragsbuch.
 
-**Logistik:** Masse braucht Rohstoffe, Energie und offene Verkehrswege. Vaels Stärke und Vaels Abhängigkeit sind dasselbe.
+**Logistik:** Rohstoffe, Energie und Wege speisen das Geschäft. Was an der Front verbraucht wird, fehlt nicht aus Versehen. Es steht im Auftragsbuch. Die Knappheit, die der Soldat sieht, ist der Umsatz.
 
-**Anpassung:** Fehler werden häufig durch Umbau und höhere Produktion beantwortet. Die offene Frage ist, ob die Industrie schneller lernt als sie verbraucht, und wann ein Mensch aufhört, Soldat zu sein, und eine Zahl im Produktionsplan wird.
+**Anpassung:** Vael antwortet auf Verluste mit mehr Produktion. Es lernt, die nächste Ersatzlieferung zu verkaufen, nicht den Krieg zu beenden. Die offene Frage bleibt, wann ein Mensch aufhört, Soldat zu sein, und eine Zeile im Produktionsplan wird. Eine Doktrin, die Ersatz und Fortdauer belohnt, wäre hier nur das Beispiel. Sie gehört Vael nicht.
 
-**Kern:** Vael führt Krieg mit der Fabrik im Rücken.
+**Kern:** Vael führt Krieg, weil der Krieg das Geschäft ist. Der Staat sorgt dafür, dass das Volk ein anderes Leben sieht als die Bilanz.
 
 ## Vesper – Krieg als Kampf um Wissen
 
@@ -346,7 +346,7 @@ Die sechzehn Nationen unterscheiden sich nicht zuerst durch ihre Waffen. Sie unt
 - Rothain: Ordnung und das Misstrauen gegen die eigene Größe
 - Sahr: Bewegung und Versorgung
 - Steinmark: Misstrauen gegen das eigene Heer, als Beispiel und nicht als eigene Doktrin
-- Vael: Produktion
+- Vael: Krieg als Geschäft, der Staat als Puppe der Konzerne
 - Vesper: Wissen unter Unsicherheit
 - Eldran: staatliche Kontinuität
 - Namar: Verbindung über die Entfernung
