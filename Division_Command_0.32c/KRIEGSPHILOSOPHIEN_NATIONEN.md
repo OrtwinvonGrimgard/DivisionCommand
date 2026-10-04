@@ -180,7 +180,7 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Kriegsbild:** Eldran ist eine starke konstitutionelle Monarchie. Die Verfassung begrenzt die Krone und lässt sie nicht zur Dekoration werden. Krieg prüft, ob der Staat unter Belastung zusammenbleibt: Grenzen, Verfassung, Institutionen und die historische Ordnung.
 
-**Soldatenbild:** Der gute Soldat ist diszipliniert, professionell und loyal, nicht fanatisch. Er dient der Krone, weil die Krone nach eldranischem Verständnis dem Land dient. Ein schlechter Herrscher kann kritisiert werden, ohne dass die Monarchie als Institution damit erledigt ist.
+**Soldatenbild:** Der gute Soldat ist diszipliniert, professionell und loyal, nicht fanatisch. Er dient der Krone, weil die Krone dem Land dient. Das ist keine Behauptung. Die Krone gibt ihr Bestes. Ein schlechter Herrscher kann kritisiert werden, ohne dass die Monarchie als Institution damit erledigt ist.
 
 **Führung:** Der politische Satz lautet: Das Parlament verwaltet den Staat. Die Krone führt ihn. Das Parlament versteht sich überwiegend als Träger der Ordnung, nicht als ihr grundsätzlicher Gegner. Eine republikanische Opposition bleibt randständig. Reformer wollen die Monarchie meist anpassen, nicht abschaffen.
 
@@ -348,7 +348,7 @@ Die sechzehn Nationen unterscheiden sich nicht zuerst durch ihre Waffen. Sie unt
 - Steinmark: Misstrauen gegen das eigene Heer, als Beispiel und nicht als eigene Doktrin
 - Vael: Krieg als Geschäft, der Staat als Puppe der Konzerne
 - Vesper: Überwachung als System, dem im Kern niemand folgt
-- Eldran: staatliche Kontinuität
+- Eldran: aufrichtige Krone, Kontinuität des Staates
 - Namar: Verbindung über die Entfernung
 - Orthea: Präzision und die Grenze der Modelle
 - Dargan: Weiterkämpfen nach dem gescheiterten Plan
