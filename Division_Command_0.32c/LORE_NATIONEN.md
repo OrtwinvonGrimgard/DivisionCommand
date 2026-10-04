@@ -3038,7 +3038,7 @@ Herkunft, Adel, Bürgertum und republikanische Familiengeschichten stehen nebene
 
 ### Die maritime Föderation
 
-Namar besteht aus Küstenregionen, Inseln und Hafenstädten. Seine politische Identität entstand nicht aus einem gemeinsamen Volk, sondern aus der Notwendigkeit, Handel, Wasserwege und Küstenschutz gemeinsam zu organisieren.
+Namar besteht aus Küstenregionen, Inseln und Hafenstädten. Die Menschen dort haben dunkle Haut. Seine politische Identität entstand nicht aus einem gemeinsamen Volk, sondern aus der Notwendigkeit, Handel, Wasserwege und Küstenschutz gemeinsam zu organisieren.
 
 ### Politisches System
 

@@ -27,7 +27,7 @@ Die sechzehn Staaten stehen in `LORE_NATIONEN.md`. Die Uniformsprache folgt dies
 | N07 | Vael | helle Dienstjacke, dunkler Kragen, Silberringe | Barett |
 | N08 | Vesper | stumpfes Oliv, schwarze Siegel | Barett |
 | N09 | Eldran | steingrün, kleiner Kronenspiegel, Befestigungskragen, kein Rothain-Rot | Feldmütze |
-| N10 | Namar | Dunkelblau nur hier, Marinekrause, keine Sterne | Barett |
+| N10 | Namar | Dunkelblau nur hier, Marinekrause, keine Sterne, dunkle Haut | Barett |
 | N11 | Orthea | helles Grau, eine dünne technische Linie, kein Gold, kein Knochen | Barett |
 | N12 | Dargan | staubbraun, kurze Jacke, sichtbare Reparaturstelle als festes Detail | Feldmütze |
 | N13 | Lyr | Schiefergrau, kurze Jacke, Umhang in derselben Palette, kein Pelz | Feldmütze |
@@ -103,9 +103,10 @@ Der Spieler wählt eine Palette zum Schnitt, nicht eine freie Farbe pro Rang. Di
 
 Haarfarbe ist davon getrennt. Sie darf bei den meisten Nationen aus dem Katalog kommen. Festgelegt:
 
-- **Vael:** nur Schwarz.
-- **Sahr:** nur Schwarz.
-- **Karsk:** Weiß als Folge der Grafts, chemisches Schwarz als gefärbte Alternative. Kein weiches Braun.
+- **Vael:** Haar nur Schwarz. Haut schwarz.
+- **Sahr:** Haar nur Schwarz.
+- **Karsk:** Haar Weiß als Folge der Grafts, chemisches Schwarz als gefärbte Alternative. Kein weiches Braun.
+- **Namar:** Haut dunkel. Haarfarbe bleibt frei aus dem Katalog. Die Haut ist nicht dieselbe Festlegung wie bei Vael.
 
 Andere Nationen wählen aus dem Katalog: Schwarz, Dunkelbraun, Braun, Kupfer, Blond, Aschblond, Grau, Weiß. Die Farbe wird auf die Frisur gelegt. Sie ist kein neues Gesicht.
 
