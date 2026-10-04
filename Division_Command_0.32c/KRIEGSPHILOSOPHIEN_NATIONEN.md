@@ -4,6 +4,8 @@ Dieses Dokument ist die Arbeitsfassung. Es steht neben `LORE_NATIONEN.md` und er
 
 Jede Nation beantwortet dieselben Punkte. Die Antworten sind keine Deck-Archetypen. Einzelne Verbände, Familien und Generationen dürfen abweichen.
 
+Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Haltung, nicht der Besitzer einer Doktrin. Dieselbe Doktrin kann in einem anderen Deck aus einem anderen Grund liegen. Ein Deck kann die Uniform eines Staates zeigen und die naheliegende Doktrin weglassen. Ob eine solche Doktrin sich richtig anfühlt, wird erst beim Spielen entschieden.
+
 - **Kriegsbild:** Was ist Krieg für diese Gesellschaft?
 - **Soldatenbild:** Was ist ein guter Soldat?
 - **Führung:** Wem wird vertraut, und wer darf befehlen?
@@ -116,23 +118,23 @@ Jede Nation beantwortet dieselben Punkte. Die Antworten sind keine Deck-Archetyp
 
 ## Steinmark – Krieg als rechtlich gebundene Bürgerpflicht
 
-**Kriegsbild:** Steinmark unterstellt Gewalt dem Recht. Der Staat hat militärische Macht. Diese Macht gehört keiner Kriegerkaste. Verteidigung muss politisch legitimiert und rechtlich begrenzt bleiben. Gute Absichten gelten nicht als Ersatz für ein Verfahren.
+**Kriegsbild:** Steinmark unterstellt Gewalt dem Recht. Das Misstrauen gegenüber dem eigenen Heer ist keine Stimmung gegen Offiziere. Es steht in der Gründung. Die Länder haben sich bekriegt, und die Armeen haben dabei mitregiert. Der Bund ist dagegen gebaut. Gute Absichten gelten nicht als Ersatz für ein Verfahren.
 
-**Soldatenbild:** Der Soldat ist Bürger in Uniform. Der Dienst ist eine zeitweise übernommene Pflicht gegenüber dem Gemeinwesen. Ein guter Befehl muss funktionieren und sich später verantworten lassen.
+**Soldatenbild:** Der Soldat ist Bürger in Uniform. Der Dienst ist eine zeitweise Pflicht gegenüber dem Gemeinwesen. Ein guter Befehl muss funktionieren und sich später verantworten lassen.
 
-**Führung:** Klare Zuständigkeiten, professionelle Stäbe und starke Unteroffiziere tragen die Armee. Die Bundesländer haben eigene Verwaltungskulturen. Das Heer bleibt standardisiert, damit aus dieser Vielfalt kein Zustand eigener Herren wird. Jüngere Offiziere wollen mehr Eigenständigkeit. Die ältere Führung fürchtet, dass zu viel Eigeninitiative die Armee wieder zur politischen Macht macht.
+**Führung:** Drei Stellen müssen denselben Schritt freigeben, und keine reicht allein. Das Parlament erlaubt den Einsatz. Eine zivile Kommission gibt Depots, Bahnen und Geld frei. Das betroffene Land muss zustimmen, wenn seine Straßen, seine Leute oder seine Werke benutzt werden. Bis zum Stab befördert die Armee selbst. Darüber entscheidet eine zivile Stelle mit. Ein Offizier kann kein politisches Amt haben. Die Lage des Feindes schreiben der Stab und ein ziviles Amt nebeneinander. Uneinigkeit stoppt den Schritt nicht von allein. Sie zwingt die Politik, schriftlich zu sagen, welcher Lesart sie folgt. Die Armee darf den Gegner besser kennen als die Ministerien. Sie darf aus dieser Kenntnis keinen Marschbefehl machen.
 
 **Tod:** Gefallene werden als Bürger erinnert, nicht als Stoff einer Heldensage. Veteranenversorgung gilt als Pflicht, weil der Dienst dem Gemeinwesen geleistet wurde und nicht umgekehrt.
 
-**Bevölkerung:** Reservisten, Kommunen, Feuerwehren, technische Vereine und zivile Infrastruktur können zur Verteidigung gehören. Den Alltag dauerhaft zu militarisieren lehnt Steinmark ab. Die Menschen wissen meist, welche Behörde zuständig ist. Das ist der Stolz und die Bremse.
+**Bevölkerung:** Reservisten, Kommunen, Feuerwehren, technische Vereine und zivile Infrastruktur können zur Verteidigung gehören. Den Alltag dauerhaft zu militarisieren lehnt Steinmark ab. Die Länder bewachen dabei nicht nur den äußeren Feind, sondern auch das Gleichgewicht untereinander. Eine Bewegung jenseits der Grenze wird zuerst gefragt, welches Land davon stärker würde.
 
-**Technik:** Robust, standardisiert und wartbar gilt mehr als Komplexität um ihrer selbst willen. Steinmark versucht nicht, den einzelnen Soldaten übermenschlich zu machen. Ein Verband aus gewöhnlichen Menschen soll wie ein System funktionieren.
+**Technik:** Robust, standardisiert und wartbar gilt mehr als Komplexität um ihrer selbst willen. Steinmark versucht nicht, den einzelnen Soldaten übermenschlich zu machen. Ein Verband aus gewöhnlichen Menschen soll wie ein System funktionieren, sobald die Freigaben vorliegen.
 
-**Logistik:** Ausbildung, Vorrat und klare Wege sind die eigentliche Stärke. Grimgard liegt am Albensee. Der See wird von der Alb gespeist. Im Frieden sind das Handelswege. Im Krieg sind dieselben Wege Versorgungslinien. Der Albensee ist ein Ort in Steinmark, kein eigener Staat.
+**Logistik:** Ausbildung, Vorrat und klare Wege sind die Stärke, aber die Schlüssel zu Depot und Bahn liegen bei der zivilen Kommission. Grimgard liegt am Albensee. Der See wird von der Alb gespeist. Im Frieden sind das Handelswege. Im Krieg sind dieselben Wege Versorgungslinien. Der Albensee ist ein Ort in Steinmark, kein eigener Staat.
 
-**Anpassung:** Viele kleine Institutionen sollen auch unter Druck weiterarbeiten. Die Schwäche ist die Langsamkeit einer Gesellschaft, die Legitimität ernst nimmt. Wenn die Lage sich schneller ändert als die Zuständigkeit, kommt der Befehl zu spät und trotzdem formal richtig an.
+**Anpassung:** Sind die drei Freigaben erteilt, ist das standardisierte Heer schwer zu überraschen. Die Gefahr liegt in der Lücke davor. Offiziere lernen, so zu schreiben, dass der Apparat aufschließt. Die einen schildern die Lage kleiner, damit man ihnen keine Kriegstreiberei vorwirft. Die anderen schildern sie größer, damit die Kommission sich fürchtet und unterschreibt. Das Urteil bleibt fachlich. Die Sprache wird politisch. Eine mögliche Doktrin bildet genau diese Wahl ab: In einem Zug läuft entweder der Apparat, oder es gilt ein Marschbefehl. Diese Doktrin gehört Steinmark nicht. Sie ist hier nur das naheliegende Beispiel.
 
-**Kern:** Steinmark verteidigt nicht den Krieg. Es verteidigt die Rechtsordnung, die seine Bürger für schützenswert halten.
+**Kern:** Steinmark misstraut seinem Heer aus der eigenen Gründung und erfährt den fremden Krieg deshalb später und verzerrter, als der Stab ihn gesehen hat.
 
 ## Vael – Krieg als industrielle Belastungsprobe
 
@@ -343,7 +345,7 @@ Die sechzehn Nationen unterscheiden sich nicht zuerst durch ihre Waffen. Sie unt
 - Ossaria: das Opfer der Ahnen, sichtbar auf der Rüstung, bei einer Technik, die die Lebenden schützt
 - Rothain: Ordnung und das Misstrauen gegen die eigene Größe
 - Sahr: Bewegung und Versorgung
-- Steinmark: Recht und verantwortbare Bürgerpflicht
+- Steinmark: Misstrauen gegen das eigene Heer, als Beispiel und nicht als eigene Doktrin
 - Vael: Produktion
 - Vesper: Wissen unter Unsicherheit
 - Eldran: staatliche Kontinuität
