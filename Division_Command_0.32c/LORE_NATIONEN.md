@@ -90,7 +90,7 @@ Die heutigen Grenzen und Feindschaften sollen deshalb nicht als plötzlich entst
 | **Lyr** | Eidgenossenschaft der Täler | Eid, eigenes Recht, kein Sitz | kein Sitz |
 | **Caldris** | autoritärer Wohlfahrtsstaat | Versorgung, Medizin, Überwachung | Seren |
 | **Merovan** | Handelsrepublik | Häfen, Handel, ein Land über Distanz | Merovia |
-| **Theryn** | revolutionäre sozialistische Republik | Gleichheit, Massenorganisation, Reform | Novagrad |
+| **Theryn** | religiöse Republik nach der Revolution | Glaube, Pflicht, stabile Ordnung | Novagrad |
 
 ## Politische Vielfalt
 
@@ -4174,280 +4174,90 @@ Soldaten im eigenen Land, weit von zu Hause. Die Stadt erlebt sie als die, die d
 
 ---
 
-# 16. Theryn – Die revolutionäre Republik
+# 16. Theryn – Die gläubige Republik
 
-### Die revolutionäre Republik
+### Die gläubige Republik
 
-Theryn entstand aus einer Revolution gegen eine alte politische und wirtschaftliche Ordnung.
+Theryn hat eine Revolution hinter sich. Sie ist vorbei. Die alte Ordnung war ein weltliches Vorrecht. Der Umsturz hat sie im Namen eines Glaubens gestürzt und danach nicht weitergewütet. Geblieben ist der Glaube, und der Glaube ist die gewöhnliche Ordnung des Landes.
 
-Die Revolution versprach Gleichheit, Selbstbestimmung und das Ende einer privilegierten Elite.
-
-Nach dem Sieg stellte sich jedoch die schwierigere Frage:
-
-**Wie verhindert eine Revolution, selbst zu einer neuen Herrschaftselite zu werden?**
+Der Staat hält. Gegenstimmen ändern das Maß der Pflicht. Sie bringen das Land nicht zu Fall.
 
 ### Politisches System
 
-Theryn ist offiziell eine sozialistische Republik mit starken Massenorganisationen.
+Betrieb, Genossenschaft und Rat sind zugleich Gemeinde. Man arbeitet, man tritt an, man hält die Pflicht. Das ist das Jahr, kein Ausnahmezustand.
 
-Die politische Macht wird über Räte, Parteien und revolutionäre Institutionen organisiert.
+Der Zentralrat in Novagrad führt den Plan und den Ritus. Die Räte vor Ort tragen ihn. Malen Voss sitzt in dieser Ordnung und prüft, ob ein Werk, ein Rat oder eine Einheit lau geworden ist. Er führt keine zweite Armee. Spricht er, liegt die geschuldete Pflicht höher, als der Plan sie gebraucht hätte. Eine Schicht mehr. Ein Kontingent mehr.
 
-Innerhalb des Staates existiert jedoch ein permanenter Konflikt zwischen demokratischen Rätestrukturen und zentralisierenden Kräften.
+Elena Miren und die leiseren Gläubigen streiten diese Zugabe ab. Manchmal gewinnen sie. Manchmal nicht, weil ein Nein wie Kälte aussieht. Wo Voss Gehör findet, läuft das Jahr heißer. Wo nicht, bleibt es gewöhnlich.
 
-### Technologie und Militär
+### Militär
 
-Theryn setzt auf:
+Die Gesellschaft ist die Reserve. Die Volksverteidigung zieht sie als geschuldete Pflicht, in einem Maß, das der Staat jedes Jahr wieder tun kann. Die mechanisierte Brigade in Novagrad ist die Spitze, die das Werk direkt versorgt. Dahinter stehen Leute aus dem Betrieb und von der Genossenschaft.
 
-- einfache robuste Systeme
-- modulare Konstruktionen
-- Massenproduktion
-- improvisierte Reparaturen
-- große Reserveverbände
-- zivile Mobilisierung
+Voss will die Reserve weiter ziehen, als der Feldzug verlangt. Nicht um den Staat zu retten. Weil Eifer für ihn die Pflicht ist. Der Plan kann nein sagen. Sagt er es oft, bleibt Voss eine laute Stimme. Sagt er es zu selten, wird der Eifer zur Gewohnheit, und der Staat bleibt trotzdem einer.
+
+Glaubenseifer kann Können verdrängen. Das ist ein Konflikt im Amt, keine Spaltung des Landes.
 
 ### Innerer Konflikt
 
-Die Revolution hat echte gesellschaftliche Veränderungen ermöglicht.
-
-Sie hat aber auch politische Gewalt legitimiert.
-
-> **Wann endet die Revolution – und wer entscheidet darüber?**
+> **Wie viel Pflicht verträgt ein Glaube, der auch im Frieden gilt?**
 
 ---
 
 ## Nationale Leitfrage
 
-**Leitfrage:** Wann endet eine Revolution?
+**Leitfrage:** Wie viel Pflicht verträgt ein Glaube, der auch im Frieden gilt?
 
-**Alltagswiderspruch:** Die Revolution kann reale soziale Verbesserungen gebracht haben und gleichzeitig neue Machtstrukturen erzeugt haben.
+**Alltagswiderspruch:** Die Ordnung ist stabil und wahr ohne Krieg. Einzelne Ämter wollen sie trotzdem heißer, als das Land sie zum Leben braucht.
 
-**Besonderer Ausbau:** Theryn sollte nicht nur aus überzeugten Revolutionären bestehen. Veteranen, junge Reformisten, alte Parteifunktionäre, Genossenschaftler und unpolitische Familien müssen nebeneinander existieren.
-
----
+**Besonderer Ausbau:** Neben den Eiferern leben leise Gläubige, Reformer und Familien, die den Ritus halten und sonst ihre Arbeit tun. Der Streit geht um das Maß, nicht um den Bestand.
 
 ## Hauptstadt
 
-Novagrad entstand aus dem revolutionären Umbau einer alten Industriestadt.
+Novagrad ist der Sitz des Zentralrats, der großen Werke und des Plans. Der Ritus ist dort dichter als auf dem Land, aber er ist derselbe.
 
-Zentrale Plätze sind nach revolutionären Ereignissen benannt. Öffentliche Gebäude gehören häufig staatlichen Betrieben, Genossenschaften oder Massenorganisationen.
-
-Die Stadt besitzt große Arbeitersiedlungen, Fabriken und Versammlungsgebäude. Gleichzeitig existieren private Wohnungen und informelle Nachbarschaftsnetzwerke, die dem offiziellen Bild der Gesellschaft nicht vollständig entsprechen.
-
-**Stadtbild:** große öffentliche Plätze, Fabriken, Arbeiterwohnviertel, Genossenschaftshäuser und politische Wandbilder.  
-**Wichtige Viertel:** Revolutionsplatz, Zentralrat, Fabrikstadt, Genossenschaftsviertel, alte Arbeiterstadt.  
-**Sozialer Gegensatz:** alte revolutionäre Funktionäre gegenüber jungen Reformern, Arbeitern und unpolitischen Familien.
-
-## Regionen
-
-### Revolutionskern
-Regionen, in denen die revolutionäre Bewegung ihren Ursprung hatte. Denkmäler, Veteranenorganisationen und politische Traditionen sind besonders stark.
-
-### Industrieprovinzen
-Große staatliche Betriebe und Genossenschaften bestimmen Wirtschaft und Alltag.
-
-### Agrarbund
-Ländliche Regionen mit Genossenschaften und starken lokalen Gemeinschaften.
-
-### Reformgürtel
-Jüngere Städte mit Hochschulen und einer Generation, die die Revolution weniger als Ereignis und mehr als historische Grundlage betrachtet.
-
-**Regionaler Grundkonflikt:** Ältere Regionen verteidigen häufig die ursprünglichen revolutionären Institutionen, während jüngere Regionen stärker über Reformen und persönliche Freiheit diskutieren.
-
-## Städte
-
-### Novagrad – Hauptstadt
-Revolutionäres Zentrum mit Zentralrat, großen öffentlichen Plätzen und staatlichen Institutionen.
-
-### Rotwerk
-Große Industriestadt mit staatlichen Betrieben und starker Veteranenkultur.
-
-### Genossenschaft
-Mittelstadt, deren Wirtschaft überwiegend von landwirtschaftlichen und handwerklichen Genossenschaften getragen wird.
-
-### Freiheim
-Junge Universitätsstadt mit Reformbewegungen und einer Bevölkerung, die die Revolution vor allem aus Geschichtsbüchern kennt.
-
-### Staryn
-Alte Industriestadt, in der viele Familien direkte Erinnerungen an die Revolution und die ersten Jahrzehnte der Republik besitzen.
-
-## Dörfer und ländlicher Alltag
-
-### Rotfeld
-Landwirtschaftliche Genossenschaftsgemeinde mit starkem revolutionärem Selbstverständnis.
-
-### Werkhain
-Dorf nahe eines staatlichen Industriebetriebs. Viele Familien sind seit Generationen mit dem Betrieb verbunden.
-
-### Morgenau
-Junge Gemeinde, in der Reformideen und traditionelle revolutionäre Organisationen aufeinandertreffen.
-
-### Genossenfeld
-Große Agrargemeinschaft mit gemeinsamem Maschinenpark und kollektiv organisierten Arbeitsabläufen.
-
-## Familie und Generationen
-
-Familiengeschichten sind stark durch die Revolution geprägt. Manche Familien verehren revolutionäre Vorfahren, andere erinnern sich an Gewalt, Hunger oder politische Repression.
-
-Veteranenfamilien besitzen teilweise besonderes Ansehen. Gleichzeitig entstehen Konflikte, wenn junge Menschen die revolutionäre Vergangenheit anders bewerten als ihre Eltern oder Großeltern.
-
-In vielen Haushalten gehören politische Diskussionen zum Familienleben. Die offizielle Geschichte wird zu Hause bestätigt, kritisiert oder durch persönliche Erinnerungen ergänzt.
-
-Genossenschaften und staatliche Einrichtungen übernehmen teilweise Aufgaben, die anderswo von Familien getragen werden. Trotzdem bleiben Verwandtschaft und persönliche Loyalität wichtige Schutzräume.
-
-Die zentrale Frage lautet: **Wie lebt eine Familie mit einer Revolution, die zugleich ihre Geschichte und ihre Gegenwart geschaffen hat?**
+**Stadtbild:** Werke, Wohnhöfe, ein weiter Platz für die Pflicht, keine Tribüne der Angst.  
+**Wichtige Orte:** Zentralrat, Maschinenwerke, die Halle der Pflicht.  
+**Sozialer Gegensatz:** das Planmaß gegenüber der Zugabe, die Voss daraus macht.
 
 ## Alltag und Lebensgefühl
 
-### Gesellschaft
+### Pflicht
 
-Theryn ist von revolutionären Erinnerungen geprägt. Fast jede Familie besitzt Geschichten über den Umbruch: gefallene Verwandte, Enteignungen, Gefängnisse, neue Chancen oder alte Traumata.
+Die Pflicht ist Arbeit, Antreten und der Ritus. Sie gilt im Frieden. Der Krieg erhöht sie. Er erfindet sie nicht.
 
-### Arbeit
+### Gegenstimmen
 
-Arbeit wird als gesellschaftlicher Beitrag verstanden. Staatliche Betriebe, Genossenschaften und Massenorganisationen prägen das Wirtschaftsleben.
+Wer weniger will, will dieses Land immer noch. Wer mehr will, auch. Wer gar nichts davon will, lebt darin und trägt es nicht um.
 
-### Bildung
+### Tod
 
-Kinder lernen die Geschichte der Revolution früh. Gleichzeitig existieren unterschiedliche Interpretationen darüber, was die Revolution eigentlich erreichen sollte.
-
-### Familie
-
-Familien können politisch gespalten sein. Eine Generation erinnert sich an Unterdrückung durch die alte Ordnung, die nächste an Repression durch die revolutionäre Regierung.
-
-### Militär
-
-Militärdienst wird als Verteidigung der Revolution und des Gemeinwesens verstanden. Veteranen besitzen gesellschaftliches Gewicht.
+Der Gefallene wird im Ritus genannt. Die Familie behält am Tisch eine leisere Erinnerung. Voss will, dass der Ritus die einzige Erinnerung ist. Der Staat lässt den Tisch zu. Das ist der Streit.
 
 ### Lebensgefühl
 
-**Hoffnung:** Eine Gesellschaft ohne privilegierte Klassen.
-
-**Angst:** Dass die Revolution eine neue privilegierte Klasse geschaffen hat.
-
-**Tabu:** Die eigene revolutionäre Identität vollständig zu verleugnen.
-
----
-
-## Gesellschaftliche Ebenen 6–25
-
-### Punkt 6 – Jugend
-
-Jugendliche lernen revolutionäre Geschichte und erleben zugleich wachsende Reformdiskussionen. Generationenkonflikte sind besonders politisch geprägt.
-
-### Punkt 7 – Arbeit
-
-Staatsbetriebe, Genossenschaften, Landwirtschaft und technische Berufe dominieren.
-
-### Punkt 8 – Armut
-
-Grundversorgung ist politisches Ziel, doch regionale Produktionsunterschiede und staatliche Verteilung erzeugen Engpässe.
-
-### Punkt 9 – Wohlstand
-
-Private Vermögen sind begrenzt; privilegierter Zugang zu Wohnraum, Waren und Positionen erzeugt dennoch Unterschiede.
-
-### Punkt 10 – Religion
-
-Staatliche Säkularität dominiert, traditionelle Religion lebt in Familien und Gemeinden fort.
-
-### Punkt 11 – Bildung
-
-Revolutionäre Geschichte und technische Bildung sind zentrale Bestandteile des Lehrplans.
-
-### Punkt 12 – Medien
-
-Staatsmedien prägen das öffentliche Bild; unabhängige und reformorientierte Stimmen wachsen.
-
-### Punkt 13 – Sprache
-
-Revolutionäre Begriffe prägen Politik und öffentliche Sprache; jüngere Generationen entwickeln neue Ausdrucksweisen.
-
-### Punkt 14 – Essen
-
-Einfache, gemeinschaftlich organisierte Küche; Genossenschaften sichern Grundnahrungsmittel.
-
-### Punkt 15 – Kleidung
-
-Praktische Arbeitskleidung dominiert; revolutionäre Symbole erscheinen bei staatlichen Anlässen.
-
-### Punkt 16 – Architektur
-
-Monumentale Revolutionsplätze, öffentliche Gebäude, Fabriksiedlungen und Genossenschaftsbauten.
-
-### Punkt 17 – Freizeit
-
-Mannschaftssport, Kulturhäuser, Arbeiterclubs und politische Jugendorganisationen.
-
-### Punkt 18 – Feste
-
-Revolutionstag, Arbeiterfeste und Genossenschaftsfeiern.
-
-### Punkt 19 – Trauer
-
-Revolutionäre Märtyrer werden öffentlich geehrt, während Familien ihre private Erinnerung bewahren.
-
-### Punkt 20 – Militär
-
-Große Reserve- und Mobilisierungsstrukturen verbinden Militär und Gesellschaft.
-
-### Punkt 21 – Krieg
-
-Krieg wird in revolutionärer Sprache als Kampf um gesellschaftliche Ordnung interpretiert, während Familien seine menschlichen Kosten erinnern.
-
-### Punkt 22 – Opposition
-
-Reformisten, alte Revolutionäre und lokale Räte konkurrieren über die Zukunft des Systems.
-
-### Punkt 23 – Nachbarn
-
-Arbeits- und Genossenschaftsgemeinschaften prägen das nachbarschaftliche Leben.
-
-### Punkt 24 – Migration
-
-Arbeits- und politische Migration wird staatlich organisiert; Reformbewegungen fordern größere persönliche Mobilität.
-
-### Punkt 25 – Familiengeschichte
-
-Revolution, Bürgerkrieg, Aufbau und Reform sind in vielen Familien persönliche Geschichte.
+**Hoffnung:** Dass die Pflicht ein Leben lässt und nicht nur ein Amt.  
+**Angst:** Dass der Eifer zur Gewohnheit wird, ohne dass jemand den Staat verlassen müsste.  
+**Tabu:** Den Glauben als Vorwand zu benutzen, um das Land in einen Ausnahmezustand zu stellen. Der Ausnahmezustand ist vorbei.
 
 ## Konkrete Lore-Anker
 
-### Familien
-- **Familie Novak:** Revolutionsveteranenfamilie.
-- **Familie Miren:** Junge Reformfamilie aus Freiheim.
-
 ### Personen
-- **Viktor Novak:** alter Revolutionsveteran und Funktionär.
-- **Elena Miren:** junge Reformpolitikerin.
+- **Malen Voss:** Prüft, wo die Ordnung lau geworden ist, und treibt die Pflicht höher als der Plan.
+- **Elena Miren:** Widerspricht der Zugabe. Bleibt im Land.
 
 ### Institutionen
-- **Zentralrat Theryn:** wichtigste staatliche Institution.
-- **Rat der Genossenschaften:** Vertretung landwirtschaftlicher und industrieller Kollektive.
-
-### Wirtschaft
-- **Novagrad Maschinenwerke:** großer Staatsbetrieb.
-- **Agrarbund Theryn:** landwirtschaftliches Genossenschaftssystem.
-
-### Medien
-- **Die Revolution:** offizielles Massenmedium.
-- **Neue Stimme:** reformorientiertes, halb unabhängiges Blatt.
+- **Zentralrat Theryn:** Plan und Ritus.
+- **Volksverteidigung:** Die Reserve des Landes, gezogen als Pflicht.
 
 ### Militär
-- **Volksverteidigung Theryn:** große Reserve- und Mobilisierungsstruktur.
-- **Mechanisierte Brigade Novagrad:** industriell gut versorgter Verband.
+- **Mechanisierte Brigade Novagrad:** Die versorgte Spitze.
+- **Die Zugabe:** Das Kontingent, das Voss über den Plan hinaus verlangt und das der Plan verweigern kann.
 
-### Stadtviertel Novagrad
-- **Revolutionsplatz:** zentrale politische Gebäude.
-- **Arbeiterviertel:** staatliche Betriebe und Wohnkomplexe.
-- **Neustadt:** junge Familien und Studenten.
-
-### Historische Ereignisse
-- **Die Revolution:** Sturz der alten Ordnung.
-- **Die Jahre des Aufbaus:** Industrialisierung und Aufbau der heutigen Staatsstruktur.
-- **Die Reformkrise:** aktueller Konflikt zwischen Zentralmacht, Räten und Reformern.
+### Historischer Anker
+- **Das Ende des Umsturzes:** Der Tag, an dem der Glaube zur Ordnung wurde und der Krieg aufhörte, die Wahrheit des Staates zu beweisen.
 
 ---
-
 
 # III. Die gesellschaftlichen Kriegsphilosophien
 

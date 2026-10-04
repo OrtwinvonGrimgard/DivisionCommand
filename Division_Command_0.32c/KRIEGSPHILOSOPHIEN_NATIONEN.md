@@ -316,25 +316,25 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 
 **Kern:** Merovan führt Krieg, um den Weg im eigenen Land offen zu halten. Gleich ist das Land im Gesetz. Erreichbar ist es nur, solange der Weg fährt.
 
-## Theryn – Krieg als Mobilisierung der Gesellschaft
+## Theryn – Krieg als geschuldete Pflicht
 
-**Kriegsbild:** Theryn entstand aus einer Revolution gegen eine alte Ordnung. Der Staat und die Revolution werden oft als dasselbe behandelt. Krieg gilt als Kampf um diese Ordnung. Die ungelöste Frage lautet, wie eine Revolution verhindert, selbst die nächste Herrschaftselite zu werden.
+**Kriegsbild:** Theryn hat die Revolution hinter sich. Die alte Ordnung war ein weltliches Vorrecht. Der Umsturz hat sie im Namen eines Glaubens gestürzt und ist dann geendet. Der Glaube ist die gewöhnliche Ordnung. Der Staat hält im Frieden. Der Krieg dient dieser Ordnung. Er begründet sie nicht.
 
-**Soldatenbild:** Der Soldat ist Bürger, Arbeiter und Verteidiger. Politische Zuverlässigkeit kann militärisch genauso viel wiegen wie Fachkompetenz. Das wird von den einen als Zusammenhalt gelesen und von den anderen als Gesinnung vor Können.
+**Soldatenbild:** Der Soldat kommt aus dem Betrieb und von der Genossenschaft. Glaubenseifer kann Können verdrängen. Das entscheidet ein Amt, nicht der Zusammenhalt des Landes. Die mechanisierte Brigade in Novagrad ist die Spitze. Dahinter steht die Reserve.
 
-**Führung:** Zentrale Planung trifft auf Räte, Genossenschaften und Massenorganisationen. Demokratische Rätestrukturen und zentralisierende Kräfte streiten dauerhaft. Ein Befehl kann politisch korrekt und militärisch spät sein.
+**Führung:** Der Zentralrat führt Plan und Ritus. Malen Voss prüft, ob ein Werk, ein Rat oder eine Einheit lau geworden ist. Er führt keine zweite Armee. Nach ihm liegt die Pflicht höher, als der Feldzug sie braucht. Elena Miren und die leiseren Gläubigen streiten die Zugabe ab und gewinnen manchmal. Ein Nein kann wie Kälte aussehen. Der Plan darf es trotzdem sagen.
 
-**Tod:** Gefallene können als revolutionäre Märtyrer geehrt werden. Familien bewahren daneben oft eine viel persönlichere Trauer, die in der öffentlichen Feier keinen Platz hat.
+**Tod:** Der Gefallene wird im Ritus genannt. Die Familie behält eine leisere Erinnerung. Voss will den Ritus als einzige Erinnerung. Der Staat lässt den Tisch zu. Darüber wird gestritten. Daran zerbricht das Land nicht.
 
-**Bevölkerung:** Fabriken, Landwirtschaft, Genossenschaften, Jugendorganisationen und lokale Räte können vollständig in die Anstrengung gezogen werden. Die Gesellschaft ist die Reserve. Deshalb ist jede Mobilisierung auch eine Entscheidung darüber, wie viel Alltag geopfert wird.
+**Bevölkerung:** Arbeiten, antreten, die Pflicht halten. Das ist das Jahr. Gegenstimmen gehen um das Maß. Wer gar nichts davon will, lebt im Land und ändert seinen Bestand nicht.
 
-**Technik:** Einfach, robust, standardisiert, massenhaft und notfalls improvisiert repariert. Die schlichte rotbraune Jacke mit einem glatten Balken ist Massenware mit Absicht. Sie ist nicht das Karmesin und nicht der historische Rock Rothains.
+**Technik:** Einfach, robust, in Masse gebaut, vom Werk und von der Genossenschaft zu tragen. Die schlichte rotbraune Jacke mit einem glatten Balken ist diese Pflicht in Stoff. Der Balken wächst nicht mit dem Eifer. Es ist nicht das Karmesin Rothains.
 
-**Logistik:** Große Reservebestände und zentrale Verteilung sichern die Masse und erzeugen Verwaltung. Was die Liste nicht führt, existiert für den Plan nicht.
+**Logistik:** Die Reserve ist das Land selbst, gezogen in einem Maß, das jedes Jahr wieder möglich ist. Voss verlangt die Zugabe. Der Plan kann sie verweigern. Verweigert er sie zu selten, wird der Eifer zur Gewohnheit des Staates. Der Staat hört darum nicht auf, einer zu sein.
 
-**Anpassung:** Theryn kann enorme Reserven mobilisieren. Eine Gesellschaft, die sehr fest an ihre Grundidee glaubt, braucht lange, um eine falsche Vorstellung vom Krieg aufzugeben. Reformer und alte Funktionäre streiten, wann die Revolution endet und wer das entscheiden darf.
+**Anpassung:** Theryn kann viel stellen, ohne sich zu verausgaben, solange die Pflicht im bekannten Maß bleibt. Wird die Zugabe Gewohnheit, kämpft das Land heißer, als der Krieg verlangt, und bleibt dabei regierbar. Eine Doktrin der gläubigen Reserve wäre hier nur das Beispiel. Sie gehört Theryn nicht.
 
-**Kern:** Theryn macht aus der Gesellschaft selbst eine Reserve und muss sagen, wie viel Gesellschaft dafür geopfert werden darf.
+**Kern:** Theryn führt Krieg als Pflicht eines Glaubens, der auch im Frieden gilt. Malen Voss treibt das Maß. Er ist nicht der Staat.
 
 ## Die entscheidende Unterscheidung
 
@@ -355,6 +355,6 @@ Die sechzehn Nationen unterscheiden sich nicht zuerst durch ihre Waffen. Sie unt
 - Lyr: Eid der Täler, kein Sitz
 - Caldris: das Schutzschild ist die Kriegsführung
 - Merovan: ein Land, zusammengehalten durch Häfen und Handel
-- Theryn: Mobilisierung und ihr Preis
+- Theryn: Glaube als stabile Ordnung, Voss treibt die Pflicht
 
 Diese Sätze sind das mentale Betriebssystem der Gesellschaften. Sie sind keine Spielstile.
