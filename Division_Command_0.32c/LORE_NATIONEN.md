@@ -73,24 +73,26 @@ Die heutigen Grenzen und Feindschaften sollen deshalb nicht als plötzlich entst
 
 ## Die sechzehn Nationen im Überblick
 
-| Nation | Staats- und Gesellschaftsmodell | Prägende Themen | Hauptstadt |
-|---|---|---|---|
-| **Averon** | junge liberale Republik | Freiheit, Vernetzung, Modernisierung | Novaris |
-| **Karsk** | technokratischer Sicherheitsstaat | Kontrolle, Optimierung, Körpertechnologie | Varkesh |
-| **Ossaria** | freie technologische Republik | Erinnerung, Schutz, zivile Institutionen | Ossar |
-| **Rothain** | Republik mit imperialem Erbe | Tradition, Veteranen, Vergangenheit | Rothenburg |
-| **Sahr** | Handels- und Städtebund | Handel, Infrastruktur, Versorgung | Sarun |
-| **Steinmark** | föderale Republik | Recht, Verwaltung, Ordnung | Steinburg |
-| **Vael** | industrielles Machtzentrum | Produktion, Konzerne, Maschinen | Vaalen |
-| **Vesper** | zentralisierter Sicherheitsstaat | Geheimhaltung, Nachrichtendienste, Täuschung | Velis |
-| **Eldran** | konstitutionelle Monarchie | Krone, Parlament, Tradition | Aurelien |
-| **Namar** | maritime Föderation | Inseln, Häfen, regionale Autonomie | Maris |
-| **Orthea** | wissenschaftliche Republik | Forschung, Daten, Präzision | Asteron |
-| **Dargan** | Schuldenrepublik | Name, Schuld, Einlösung | Kalden |
-| **Lyr** | Eidgenossenschaft der Täler | Eid, eigenes Recht, kein Sitz | kein Sitz |
-| **Caldris** | autoritärer Wohlfahrtsstaat | Versorgung, Medizin, Überwachung | Seren |
-| **Merovan** | Handelsrepublik | Häfen, Handel, ein Land über Distanz | Merovia |
-| **Theryn** | religiöse Republik nach der Revolution | Glaube, Pflicht, stabile Ordnung | Novagrad |
+Die Tabelle folgt der Lesereihenfolge der Kapitel. Die Porträtnummer bleibt die alte. Sie ist keine Rangfolge.
+
+| Nation | Bindung | Staatsmodell | Hauptstadt | Porträt |
+|---|---|---|---|---|
+| **Steinmark** | Recht | föderale Republik, drei Schlüssel | Steinburg | N06 |
+| **Eldran** | Krone | konstitutionelle Monarchie | Aurelien | N09 |
+| **Rothain** | Erbe | Republik mit den Mitteln eines alten Zentrums | Rothenburg | N04 |
+| **Averon** | Zeit | junge liberale Republik | Novaris | N01 |
+| **Orthea** | Erkenntnis | wissenschaftliche Republik | Asteron | N11 |
+| **Vesper** | System | Überwachung ohne Gefolgschaft | Velis | N08 |
+| **Karsk** | Körper | technokratischer Maßstaat | Varkesh | N02 |
+| **Caldris** | Fürsorge | Schutzschild und Akte | Seren | N14 |
+| **Theryn** | Glaube | religiöse Republik nach der Revolution | Novagrad | N16 |
+| **Vael** | Geschäft | Konzerne entscheiden, der Staat begründet | Vaalen | N07 |
+| **Sahr** | Fluss | Handels- und Städtebund | Sarun | N05 |
+| **Namar** | Häfen | Hafenbund, Krieg an den Wegen | Maris | N10 |
+| **Merovan** | Weg | ein Land über Häfen und Handel | Merovia | N15 |
+| **Dargan** | Schuld | Schuldenrepublik | Kalden | N12 |
+| **Lyr** | Eid | Eid der Täler, kein Sitz | kein Sitz | N13 |
+| **Ossaria** | Tote | freie Republik, Erinnerung als Schutz | Ossar | N03 |
 
 ## Politische Vielfalt
 
@@ -157,3976 +159,3167 @@ Ein neues Unternehmen braucht einen Ort, eine soziale Funktion und eine historis
 
 ---
 
+
 # II. Die sechzehn Nationen
 
-# 1. Averon – Die junge Republik
+Die Kapitel stehen nicht in der Reihenfolge der Porträtnummern. Sie stehen danach, woran ein Staat seine Leute bindet: Recht, Krone, Erbe, Zeit, Erkenntnis, System, Körper, Fürsorge, Glaube, Geschäft, Fluss, Häfen, Weg, Schuld, Eid, Tote.
 
-### Die junge Republik
+Jedes Kapitel spricht dieselben Punkte an. Die besondere Ordnung, das politische System, die Technik, das Militär, der innere Konflikt, die Leitfrage, die Hauptstadt, vier Regionen, fünf Städte, vier Dörfer, Familie, Alltag, die Ebenen 6 bis 25 und die Lore-Anker. Was sich ändert, ist die Gesellschaft. Nicht das Gerüst.
 
-Averon ersetzt den früheren Arbeitstitel „Jetzt“. Der Staat ist eine junge, stark urbanisierte Republik, deren politische Identität auf dem Versprechen beruht, mit der Vergangenheit gebrochen zu haben.
+# 1. Steinmark – Die föderale Republik
 
-Der frühere Name „Jetzt“ war ursprünglich als politischer Slogan gedacht: Nicht gestern und nicht irgendwann – **jetzt** sollte das Land neu beginnen. Diese Idee bleibt Bestandteil der Geschichte Averons, ohne dass der Slogan selbst der Staatsname ist.
+### Die föderale Republik
 
-Averon erklärt Modernisierung, individuelle Freiheit und technologische Vernetzung zu seinen wichtigsten nationalen Idealen.
+Steinmark ist eine föderale Republik, die ihrem eigenen Heer misstraut. Das Misstrauen kommt aus den Gründungskriegen. Die Länder haben den Bund gemacht, damit keine Armee ihn an sich nimmt. Deshalb ist das Heer nicht schwach. Es ist eingesperrt.
 
-Die Gesellschaft ist schnelllebig, leistungsorientiert und stark von Medien geprägt. Politische Probleme werden bevorzugt als unmittelbare Krisen behandelt, die schnell gelöst werden müssen.
+Drei Schlüssel müssen zusammenkommen, bevor Steinmark in einen Krieg zieht. Keiner von ihnen liegt beim Stab allein. Der Stab sieht den fremden Krieg oft früher und klarer als die, die ihn freigeben dürfen. Er darf ihn deshalb noch nicht führen.
+
+### Die besondere Ordnung
+
+Die Ordnung ist ein Verfahren. Ein Einsatz, den das Verfahren nicht geöffnet hat, findet nicht statt. Das gilt auch dann, wenn die Lage ihn schon verlangt.
+
+Die Länder behalten eigene Stimmen. Der Bund führt die Armee nicht wie ein Eigentümer. Er führt sie wie etwas, das man beaufsichtigt.
 
 ### Politisches System
 
-Averon ist eine moderne liberale Republik mit stark urbanisierten Zentren, einer dezentralen Verwaltung und einer weitgehend digitalisierten Gesellschaft.
+Steinburg ist eine nüchterne Hauptstadt. Sie wurde als Verwaltung gebaut, nicht als Denkmal. Gerichte, Archive und die Schlüsselverfahren sitzen dichter beieinander als Kasernen.
 
-Die politische Kultur legt großen Wert auf persönliche Freiheit, schnelle Entscheidungen und Zugang zu Informationen.
+Die Regierung hält die Armee klein genug, dass sie den Staat nicht übernehmen kann. Dieselbe Kleinheit macht sie langsam gegenüber einem Gegner, den der Stab schon richtig eingeschätzt hat.
 
 ### Technologie
 
-Averons technische Stärke liegt weniger in einer extremen Veränderung des Menschen als in dessen **Vernetzung**.
-
-Typisch sind:
-
-- taktische Kommunikationsnetze
-- moderne Sensorik
-- Aufklärungsdrohnen
-- digitale Gefechtsführung
-- automatisierte Logistik
-- vernetzte Fahrzeuge
-- schnelle Informationsübertragung
-
-Der einzelne Soldat bleibt grundsätzlich ein normaler Mensch. Seine Stärke entsteht dadurch, dass er schneller Informationen erhält und besser mit anderen Einheiten verbunden ist.
+Steinmark bevorzugt prüfbare Systeme. Geräte, die ein Amt nachrechnen kann. Verbindungen, die ein Protokoll lassen. Keine Körpertechnik, die den Soldaten zum Projekt macht.
 
 ### Militär
 
-Die Streitkräfte Averons setzen auf schnelle Reaktion, professionelle kleine Verbände und hohe Informationsdichte. Entscheidungen werden möglichst weit nach unten delegiert, solange die Kommunikation funktioniert.
+Feldgrau, schwarzes Koppelzeug, Litzen. Die Uniform sieht nach Ordnung aus, nicht nach einem Feldherrn.
+
+Die Truppe kann führen, sobald die Schlüssel liegen. Vorher übt sie, wartet und schreibt. Der Preis ist der verzerrte Blick. Der fremde Krieg kommt in der Hauptstadt später an, als er an der Grenze schon steht.
 
 ### Der innere Konflikt
 
-Averon behauptet, Krieg verhindern zu wollen. Seine militärische Planung basiert jedoch auf der Annahme, dass ein Krieg jederzeit beginnen kann.
+Die Leute wollen Schutz und wollen die Armee nicht als Herrn. Beides ist ernst. Der Staat fällt davon nicht auseinander. Er entscheidet später, als seine Soldaten sehen.
 
-> **Um niemals wieder überrascht zu werden, muss Averon ständig bereit sein, Gewalt anzuwenden.**
+> **Wie viel Zeit darf ein Verfahren kosten, wenn der Stab die Lage schon kennt?**
+
+## Nationale Leitfrage
+
+**Leitfrage:** Wann schützt das Recht das Land, und wann hält es die eigene Erkenntnis auf?
+
+**Alltagswiderspruch:** Bürger verlangen eine Armee, die rechtzeitig da ist, und ein Recht, das dieselbe Armee nicht regieren lässt.
+
+**Besonderer Ausbau:** Die drei Schlüssel bleiben ein Verfahren, keine Stimmung. Ein einzelnes Land kann bremsen. Es kann den Bund nicht zum Militärstaat machen.
+
+## Hauptstadt
+
+Steinburg verwaltet. Sie prahlt nicht. Die Kasernen liegen am Rand, die Archive in der Mitte.
+
+**Stadtbild:** Behörden, Gerichte, ein See, niedrige Amtshäuser.  
+**Wichtige Viertel:** Archivring, Gerichtsviertel, Kasernenrand.  
+**Sozialer Gegensatz:** die Ämter, die freigeben, gegenüber dem Stab, der schon geschrieben hat.
+
+## Regionen
+
+### Bundeskern
+
+Behörden und Gerichte. Hier liegen die Schlüssel.
+
+### Die Länder
+
+Eigene Parlamente, eigene Erinnerung an die Gründungskriege. Sie geben Soldaten und behalten die Stimme.
+
+### Die Grenze
+
+Wo der Stab die Lage zuerst sieht. Meldungen von hier warten auf das Verfahren.
+
+### Das Hinterland
+
+Werkstätten und Höfe, die den Bund als fernes Recht kennen und die Armee als etwas, das man nicht rufen hört, bis es zu spät oder genau richtig ist.
+
+## Städte
+
+### Steinburg
+
+Sitz der Schlüssel.
+
+### Amtsbrück
+
+Stadt der Länderkammer. Hier wird gebremst und freigegeben.
+
+### Grenzstein
+
+Garnison an der Grenze. Sie schreibt, bevor sie marschiert.
+
+### Seehafen
+
+Kein Flottenstützpunkt. Ein Umschlag für das, was das Heer an Land braucht.
+
+### Feldwacht
+
+Übungsstadt. Die Truppe ist hier besser als ihr Ruf in der Hauptstadt.
+
+## Dörfer und ländlicher Alltag
+
+### Rechtsacker
+
+Dorf, in dem man das Verfahren kennt, weil Söhne auf den Bescheid warten.
+
+### Stillhof
+
+Hof, der die Armee selten sieht und sie deshalb entweder für harmlos oder für eine Drohung hält.
+
+### Markenrain
+
+Grenznahes Dorf. Die Meldung geht hier ab, die Entscheidung kommt von weit her.
+
+### Archivhausen
+
+Kleiner Ort mit einer Außenstelle des Archivs. Papier ist hier ein Beruf.
+
+## Familie und Generationen
+
+Familien erzählen die Gründungskriege als Warnung, nicht als Ruhm. Ein Großvater im Stab und ein Onkel im Amt können am selben Tisch verschiedener Meinung sein, ohne dass einer von ihnen den Staat verrät.
+
+Kinder lernen, dass ein Befehl ohne Verfahren kein Befehl ist.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+Ämter, Werkstätten, Höfe. Der Wohlstand ist solide und unspektakulär. Wer aufsteigt, steigt über Prüfung und Stelle, nicht über einen Feldzug.
+
+### Bildung
+
+Schulen lehren das Verfahren mit. Geschichte ist die Geschichte der Schlüssel, nicht einer Schlacht, die man sich schönredet.
+
+### Religion
+
+Glaube ist privat. Er öffnet keinen Krieg und schließt keinen.
+
+### Soldaten im Alltag
+
+Soldaten sind Nachbarn mit einem Amt, das man beaufsichtigt. Man grüßt sie. Man gibt ihnen nicht die Stadt.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass das Recht schnell genug ist, wenn es darauf ankommt.  
+**Angst:** Dass der Stab recht hat und das Verfahren noch liest.  
+**Tabu:** Die Armee als Retter des Staates zu feiern.
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche lernen Recht und Verwaltung früher als Waffendienst. Der Dienst kommt danach und bleibt ein Amt unter anderen.
+
+### Punkt 7 – Arbeit
+
+Arbeit in Ämtern, Betrieben und auf Höfen. Der Bund ist ein großer Arbeitgeber und kein Abenteuer.
+
+### Punkt 8 – Armut
+
+Armut ist eine dünne Stelle, kein Zerfall. Wer durchs Verfahren fällt, wartet lange auf Hilfe, bekommt sie aber als Anspruch und nicht als Gnade.
+
+### Punkt 9 – Wohlstand
+
+Wohlstand heißt sichere Stelle, Haus, Zugang zu den Ämtern. Er sieht nicht nach einem Hof aus.
+
+### Punkt 10 – Religion
+
+Kirchen und stille Gemeinschaften. Sie stehen neben dem Staat und nicht in ihm.
+
+### Punkt 11 – Bildung
+
+Schulen und Hochschulen sind öffentlich und auf Prüfung gebaut. Ein Titel öffnet ein Amt. Er öffnet nicht das Heer über das Recht hinweg.
+
+### Punkt 12 – Medien
+
+Zeitungen streiten über die Schlüssel. Der Stab äußert sich nüchtern. Heldenberichte gelten als geschmacklos.
+
+### Punkt 13 – Sprache
+
+Amtssprache ist genau und langsam. In den Ländern bleibt der eigene Ton. Beides gilt.
+
+### Punkt 14 – Essen
+
+Einfache, schwere Küche. Vorrat ist eine Tugend der Haushalte, keine Militäridee.
+
+### Punkt 15 – Kleidung
+
+Zivilkleidung ist schlicht. Die Uniform fällt auf, weil sie selten prunkt. Schwarzes Koppelzeug, Litzen, kein Pelz.
+
+### Punkt 16 – Architektur
+
+Amtshäuser, nicht Paläste. Kasernen am Rand. Archive mit Tageslicht.
+
+### Punkt 17 – Freizeit
+
+Vereine, Seen, Schützen nur dort, wo sie Sport sind und kein Schattenheer.
+
+### Punkt 18 – Feste
+
+Gründungstage erinnern an den Bund der Länder, nicht an einen Sieg der Armee.
+
+### Punkt 19 – Trauer
+
+Gefallene werden mit Namen und Amt beerdigt. Keine Tribüne. Die Familie bleibt der Ort der Trauer.
+
+### Punkt 20 – Militär
+
+Das Heer ist fachlich gut und politisch spät. Drei Schlüssel. Kein einzelner Wille.
+
+### Punkt 21 – Krieg
+
+Krieg beginnt für die meisten, wenn das Verfahren ihn öffnet. Für den Stab hat er oft schon früher begonnen. Diese Lücke ist Steinmarks Preis.
+
+### Punkt 22 – Opposition
+
+Opposition streitet über die Schlüssel, nicht über den Bestand der Republik. Manche wollen schneller freigeben. Manche wollen einen vierten Schlüssel. Der Staat hält beides aus.
+
+### Punkt 23 – Nachbarn
+
+Nachbarschaft ist Amt, Verein, Treppe. Man kennt den Soldaten und kennt auch den, der ihn beaufsichtigt.
+
+### Punkt 24 – Migration
+
+Zuzug läuft über Verfahren. Wer bleibt, kommt ins Recht. Es gibt kein zweites, stilles Bürgerrecht.
+
+### Punkt 25 – Familiengeschichte
+
+Die Gründungskriege sitzen in den Familien als Grund, dem eigenen Heer nicht zu trauen. Das ist keine Mode. Das ist die Herkunft des Staates.
+
+## Konkrete Lore-Anker
+
+### Familien
+
+- **Familie Holm:** Altes Amtsgeschlecht. Hält einen der Schlüssel für ein Land.
+- **Familie Berst:** Stabsoffiziere über drei Generationen. Schreiben früher, als sie marschieren dürfen.
+
+### Personen
+
+- **Ida Holm:** Länderrätin. Bremst einen Einsatz und hält das für ihre Arbeit.
+- **Konrad Berst:** Stabsoffizier. Sieht die Lage und wartet auf das Papier.
+
+### Institutionen
+
+- **Die drei Schlüssel:** Das Freigabeverfahren des Bundes.
+- **Bundesarchiv Steinburg:** Dort liegt, wer wann gesehen hat und wer wann freigegeben hat.
+
+### Wirtschaft
+
+- **Steinwerk:** Prüfbare Gerätetechnik für Ämter und Heer.
+- **Seehort:** Umschlag im Binnenland. Keine Flotte.
+
+### Medien
+
+- **Amtsblatt:** Die Freigaben.
+- **Grenzschrift:** Was der Stab schon weiß.
+
+### Militär
+
+- **Bundesheer Steinmark:** Fachlich stark, politisch gebunden.
+- **Grenzmeldeamt:** Sieht zuerst. Befiehlt nicht.
+
+### Stadtviertel
+
+- **Archivring:** Die Schlüssel und das Gedächtnis.
+- **Kasernenrand:** Die Truppe, sichtbar und nicht in der Mitte.
+
+### Historische Ereignisse
+
+- **Die Gründungskriege:** Der Grund, warum keine Armee den Bund besitzen darf.
+- **Die späte Freigabe:** Ein Feldzug, den der Stab richtig und das Verfahren zu spät gesehen hat. Seitdem ist die Lücke bekannt und das Verfahren trotzdem geblieben.
 
 ---
+
+
+# 2. Eldran – Die konstitutionelle Monarchie
+
+### Die konstitutionelle Monarchie
+
+Eldran ist eine Monarchie, deren Krone es ernst meint. Sie regiert nicht als Schmuck und nicht als Willkür. Parlament und Krone tragen denselben Staat, und die Krone versucht, ihn zu halten, auch wenn das langsam und persönlich wird.
+
+Der Krieg betrifft zuerst die, die er verschlingt. Das übrige Land lebt weiter, solange die Krone und das Parlament die Ordnung aufrechterhalten. Das ist keine Gleichgültigkeit. Es ist der Versuch, den Staat nicht mit jedem Feldzug neu zu erfinden.
+
+### Die besondere Ordnung
+
+Die Ordnung ist die Kontinuität. Ein Gesetz, ein Regiment, ein Name bleiben, auch wenn die Leute wechseln. Die Krone ist der Punkt, an dem diese Dauer eine Person hat. Das Parlament ist der Punkt, an dem sie eine Grenze hat.
+
+### Politisches System
+
+Aurelien hält Palast und Parlament in derselben Stadt, absichtlich nah. Die Krone kann drängen. Sie kann das Parlament nicht abschaffen. Das Parlament kann bremsen. Es setzt nicht eine andere Dynastie an die Stelle der Dauer.
+
+### Technologie
+
+Eldran baut haltbar. Befestigung, Gerät, das ein Regiment über Jahre pflegt, Verbindungen zwischen den alten Standorten. Keine Flotte als eigener Kriegsschauplatz. Was über Wasser kommt, kommt als Versorgung an Land.
+
+### Militär
+
+Steingrün, ein kleiner Kronenspiegel, ein Befestigungskragen. Kein Rothain-Rot. Die Uniform zeigt Zugehörigkeit zur Dauer, nicht zu einem Eroberer.
+
+Die Truppe hält Stellungen und die Orte, an denen der Staat schon immer war. Sie wird nicht als Werkzeug eines kurzen Ruhms verschickt.
+
+### Der innere Konflikt
+
+Wer in den Krieg geht, trägt ihn. Wer zu Hause bleibt, sieht die Krone weiterarbeiten. Daraus entsteht der Vorwurf, der Krieg sei nur die Sache derer, die fehlen. Die Krone hält dagegen, dass genau das der Staat ist. Beides bleibt stehen. Das Land fällt nicht.
+
+> **Wem gehört ein Krieg, den nicht das ganze Land am eigenen Leib führt?**
+
+## Nationale Leitfrage
+
+**Leitfrage:** Kann eine Krone den Staat halten, ohne den Krieg zum Inhalt des Staates zu machen?
+
+**Alltagswiderspruch:** Die Leute wollen, dass die Krone bleibt, und wollen nicht, dass nur einige Familien den Preis zahlen.
+
+**Besonderer Ausbau:** Palast und Parlament bleiben beide echt. Keines ist die Kulisse des anderen.
+
+## Hauptstadt
+
+Aurelien ist alt und bewohnt. Palast, Parlament und Bürgerstadt liegen ineinander.
+
+**Stadtbild:** Stein, Höfe, ein Fluss, keine Festung gegen die eigenen Leute.  
+**Wichtige Viertel:** Palastberg, Parlamentsgasse, die alte Bürgerstadt.  
+**Sozialer Gegensatz:** Häuser, die dienen, gegenüber Häuser, die wählen.
+
+## Regionen
+
+### Kronland
+
+Um Aurelien. Hier ist die Dauer sichtbar.
+
+### Die Flusslande
+
+Höfe und Städte, die den Staat als etwas erleben, das bleibt, auch wenn ein Regiment fehlt.
+
+### Die Marken
+
+Ältere Grenzen. Stellungen, die gehalten werden, weil sie schon gehalten wurden.
+
+### Die stillen Ämter
+
+Land ohne Garnison. Es prüft, ob die Krone auch dort noch etwas ist, wo kein Soldat steht.
+
+## Städte
+
+### Aurelien
+
+Palast und Parlament.
+
+### Brückenau
+
+Flussstadt. Handel und ein altes Zeughaus.
+
+### Markenfels
+
+Grenzstadt mit einer Stellung, die älter ist als die letzte Regierung.
+
+### Lichthofen
+
+Stadt der Schulen. Hier lernt man die Krone als Pflicht und nicht als Bild.
+
+### Niederau
+
+Stadt ohne Garnison. Misst, ob der Staat auch ohne Waffen ankommt.
+
+## Dörfer und ländlicher Alltag
+
+### Königsfeld
+
+Dorf mit einem alten Dienstweg. Familien kennen den Namen des Regiments.
+
+### Stillwasser
+
+Dorf, das den Krieg aus Briefen kennt.
+
+### Markenhof
+
+Hof an einer Stellung. Die Soldaten sind hier keine Gäste aus der Ferne.
+
+### Schulrain
+
+Kleines Dorf mit einer Schule, die das Parlament und die Krone im selben Satz nennt.
+
+## Familie und Generationen
+
+Dienst geht durch Familien, ohne ein Adelsrecht auf den Krieg zu sein. Eine Familie kann zwei Generationen im Regiment haben und die dritte im Parlament. Die Krone bleibt in beiden Erzählungen die, die es versucht.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+Höfe, Handwerk, Ämter. Das Leben ist langsam und erkennbar. Ein Krieg ändert den Tisch derer, die jemand verloren haben, und nicht die Öffnungszeiten der Stadt.
+
+### Bildung
+
+Schulen lehren die Verfassung als etwas, das die Krone bindet. Geschichte ist Dauer, nicht eine Schlacht.
+
+### Religion
+
+Der Glaube segnet die Dauer öfter als den Feldzug. Er gehört nicht der Krone. Er wirft sie auch nicht um.
+
+### Soldaten im Alltag
+
+Soldaten sind Teil der Häuser, die dienen. Man kennt ihre Namen. Man erwartet, dass sie wieder in diese Häuser passen.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass die Krone das Land hält, ohne es zu verbrauchen.  
+**Angst:** Dass der Preis in immer denselben Familien liegen bleibt.  
+**Tabu:** Die Krone als Fassade zu behandeln. Sie meint es ernst.
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche wachsen mit Palast und Parlament als zwei echten Gewalten auf. Der Dienst ist eine mögliche Pflicht, kein Lebensinhalt.
+
+### Punkt 7 – Arbeit
+
+Höfe, Werkstätten, Ämter, das Regiment. Arbeit bleibt örtlich. Der Staat ist kein einziges Werk.
+
+### Punkt 8 – Armut
+
+Armut gibt es auf dem Land und in alten Vierteln. Die Krone behandelt sie als ihre Sache, nicht als Schicksal, das den Krieg erklärt.
+
+### Punkt 9 – Wohlstand
+
+Alte Häuser haben Land und Namen. Neues Geld gibt es in den Flussstädten. Keines von beiden kauft die Krone.
+
+### Punkt 10 – Religion
+
+Feste und stille Kirchen. Sie stützen die Dauer und führen nicht das Heer.
+
+### Punkt 11 – Bildung
+
+Schulen sind alt und erreichbar. Man lernt, wer die Krone bindet.
+
+### Punkt 12 – Medien
+
+Blätter in Aurelien streiten über den letzten Feldzug und über den Haushalt. Die Krone wird kritisiert. Sie wird nicht für unecht erklärt.
+
+### Punkt 13 – Sprache
+
+Eine Amtssprache, viele örtliche Färbungen. Beides darf im Parlament vorkommen.
+
+### Punkt 14 – Essen
+
+Hausmannskost, Feste zu Ernten und zu Namenstagen der Dauer, nicht zu Siegen.
+
+### Punkt 15 – Kleidung
+
+Zivil und schlicht, die Uniform steingrün mit dem kleinen Spiegel. Kein Prunk, der mit Rothain verwechselt werden könnte.
+
+### Punkt 16 – Architektur
+
+Stein, repariert statt ersetzt. Neue Ämter fügen sich in alte Gassen.
+
+### Punkt 17 – Freizeit
+
+Fluss, Höfe, Musik. Das Regiment hat ein Fest. Es hat nicht den Kalender.
+
+### Punkt 18 – Feste
+
+Krönungstage und Parlamentstage stehen nebeneinander. Keiner löscht den anderen.
+
+### Punkt 19 – Trauer
+
+Die Familie trauert zu Hause. Die Krone nennt den Namen. Es gibt keine Feier, die den Tisch ersetzt.
+
+### Punkt 20 – Militär
+
+Das Heer hält, was der Staat schon ist. Es erfindet ihn nicht neu.
+
+### Punkt 21 – Krieg
+
+Krieg nimmt Leute und gibt sie nicht als Sinn des Landes zurück. Die Ordnung zu Hause soll denselben Namen behalten, wenn sie zurückkommen.
+
+### Punkt 22 – Opposition
+
+Opposition sitzt im Parlament. Sie will eine andere Politik der Krone, nicht das Ende der Krone. Das Land hält das aus.
+
+### Punkt 23 – Nachbarn
+
+Nachbarschaft ist alt. Man weiß, wer dient und wer das letzte Jahr den Hof gehalten hat.
+
+### Punkt 24 – Migration
+
+Zuzug wird in die Dauer aufgenommen, langsam und mit Namen. Es entsteht kein zweites Eldran daneben.
+
+### Punkt 25 – Familiengeschichte
+
+Familien messen sich an Dienst und an der Frage, ob die Krone sie gesehen hat. Der Stolz ist die Dauer, nicht die letzte Schlacht.
+
+## Konkrete Lore-Anker
+
+### Familien
+
+- **Haus Aure:** Die Krone. Sie arbeitet, sie schmückt nicht nur.
+- **Familie Lenn:** Parlamentarier über zwei Generationen. Bremsen und tragen mit.
+
+### Personen
+
+- **Königin Marei:** Hält den Staat für ihre Arbeit und den Krieg nicht für ihren Ruhm.
+- **Tomas Lenn:** Abgeordneter. Fragt, welche Familien den Preis zahlen.
+
+### Institutionen
+
+- **Palast und Parlament:** Beide echt, in Aurelien nah beieinander.
+- **Die Markenstellung:** Alte Grenze, von Regimentern gehalten, nicht von einer Flotte.
+
+### Wirtschaft
+
+- **Flusshof:** Handel auf dem Fluss, Versorgung des Landes, keine Kriegsmarine.
+- **Zeughaus Brückenau:** Gerät, das Regimenter über Jahre pflegen.
+
+### Medien
+
+- **Aurelien Blatt:** Streit über Krone und Haushalt.
+- **Markenbrief:** Was an der alten Grenze geschieht.
+
+### Militär
+
+- **Regimenter der Krone:** Landtruppen der Dauer.
+- **Die stillen Ämter:** Orte ohne Garnison, an denen der Staat sich beweisen muss.
+
+### Stadtviertel
+
+- **Palastberg:** Die Krone bei der Arbeit.
+- **Parlamentsgasse:** Die Grenze der Krone.
+
+### Historische Ereignisse
+
+- **Die Bindung:** Der Tag, an dem die Krone das Parlament als echten Teil des Staates angenommen hat.
+- **Der bezahlte Feldzug:** Ein Krieg, nach dem die gleichen Familien die Namen gelesen haben und das Land ansonsten weitergeöffnet hat.
+
+---
+
+# 3. Rothain – Die Republik mit dem alten Erbe
+
+### Die Republik mit dem alten Erbe
+
+Rothain ist eine Republik, die das Zeug eines alten Machtzentrums geerbt hat und ihm nicht traut. Die Mittel sind geblieben. Der Thron ist weg. Die Veteranen, die alten Häuser und die Erinnerung an Größe sitzen trotzdem noch in der Stadt.
+
+Die Republik benutzt diese Mittel. Sie feiert sie nicht als Erlaubnis, wieder ein Reich zu sein.
+
+### Die besondere Ordnung
+
+Die Ordnung ist ein Misstrauen mit einem Arsenal. Was die alte Macht konnte, kann die Republik noch. Sie legt jedes Mal Rechenschaft ab, warum sie es tut. Veteranen haben eine Stimme. Sie haben kein Amt kraft ihrer Narben.
+
+### Politisches System
+
+Rothenburg ist die alte Mitte und die Hauptstadt der Republik. Palastflügel sind Museen oder Ämter. Das Parlament sitzt dort, wo früher jemand allein entschieden hat, und das sieht man dem Stein an.
+
+### Technologie
+
+Schwere, gepflegte Waffentechnik, Werkstätten, die alte Gerätelinien weiterbauen, und neue Fertigung daneben. Nichts davon setzt einen Kaiser voraus. Es setzt Leute voraus, die es warten können.
+
+### Militär
+
+Dunkelroter historischer Rock, Silbersterne, Pelz, Patronentasche. Die Uniform erinnert. Sie ist kein Thron.
+
+Die Truppe ist erfahren. Einsätze werden politisch eng geführt, weil jeder Erfolg die Frage weckt, ob die Republik nur das Reich unter anderem Namen ist.
+
+### Der innere Konflikt
+
+Viele sind stolz auf das Können und beschämt über das, was dieses Können früher angerichtet hat. Die Republik hält beides im selben Satz. Sie bricht nicht daran. Sie wird langsamer und genauer, als ein Reich es wäre.
+
+> **Wie benutzt man die Mittel eines Zentrums, ohne seine Herrschaft zu wiederholen?**
+
+## Nationale Leitfrage
+
+**Leitfrage:** Wie lebt eine Republik mit einem Erbe, auf das sie stolz und das sie loswerden will?
+
+**Alltagswiderspruch:** Die Mittel sind nützlich. Die Erinnerung daran ist eine Warnung. Beides trifft dieselbe Uniform.
+
+**Besonderer Ausbau:** Veteranen bleiben sichtbar und bleiben Bürger. Kein Stand der alten Sieger.
+
+## Hauptstadt
+
+Rothenburg trägt die Schichten offen. Man sieht, was umgenutzt wurde.
+
+**Stadtbild:** Alter Stein, neue Amtsschilder, ein Fluss, Werkhöfe.  
+**Wichtige Viertel:** Der alte Palastflügel, das Parlament, das Veteranenviertel.  
+**Sozialer Gegensatz:** Häuser, die sich erinnern, gegenüber Leuten, die von der Erinnerung leben müssen.
+
+## Regionen
+
+### Die alte Mitte
+
+Um Rothenburg. Ämter, Archive, die großen Werkstätten.
+
+### Die Veteranenlande
+
+Orte, aus denen überdurchschnittlich viele gedient haben. Stolz und Erschöpfung liegen hier übereinander.
+
+### Die Werkmark
+
+Fertigung. Hier wird das Erbe zu Gerät.
+
+### Die neuen Viertel
+
+Städte, die nach der Republik gewachsen sind und das Reich nur aus der Schule kennen.
+
+## Städte
+
+### Rothenburg
+
+Parlament im alten Stein.
+
+### Narbstadt
+
+Stadt der Veteranen. Viele Namen, wenig Prunk.
+
+### Werkrott
+
+Fertigung des schweren Geräts.
+
+### Neuhoff
+
+Junge Stadt. Hier ist die Republik älter als die Häuser.
+
+### Flussrot
+
+Umschlag. Versorgung, keine Flotte als Front.
+
+## Dörfer und ländlicher Alltag
+
+### Altrot
+
+Dorf mit einem Denkmal, um das gestritten wird, ob es bleiben darf.
+
+### Stillnarbe
+
+Familien, die den Dienst kennen und die Rede davon satt haben.
+
+### Werkbach
+
+Dorf an der Fertigung. Das Erbe ist hier ein Lohn.
+
+### Neuacker
+
+Junge Höfe. Das Reich ist ein Kapitel, kein Großvater.
+
+## Familie und Generationen
+
+Ein Großvater hat unter der alten Größe gedient. Das Enkelkind dient der Republik und hört beide Sätze. Die Familie streitet über das Denkmal und bleibt eine Familie. Der Staat verlangt nicht, dass sie sich einig werden.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+Werkstätten, Ämter, Höfe. Der dunkelrote Rock fällt auf. Im Alltag trägt man ihn nicht als Kostüm.
+
+### Bildung
+
+Schulen zeigen das Reich als Können und als Schaden. Ein Lehrbuch, das nur eines von beiden sagt, gilt als falsch.
+
+### Religion
+
+Glaube ist örtlich und still. Er heiligt die Republik nicht und das Reich nicht.
+
+### Soldaten im Alltag
+
+Veteranen sitzen in Vereinen und in Räten. Sie werden gehört, weil sie etwas gesehen haben. Sie werden nicht gehört, weil ihnen das Land gehört.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass das Können bleibt und die Herrschaft wegbleibt.  
+**Angst:** Dass ein Erfolg die alte Sprache wieder hoffähig macht.  
+**Tabu:** Das Reich nur als Ruhm zu erzählen.
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche erben eine Uniform und eine Warnung. Viele wollen das Können. Wenige wollen das Reich zurück.
+
+### Punkt 7 – Arbeit
+
+Werkmark, Ämter, Landwirtschaft. Der Dienst ist ein Beruf neben anderen und einer mit einem langen Schatten.
+
+### Punkt 8 – Armut
+
+Armut sitzt in den Veteranenlanden, wenn der Dienst zu Ende ist und der Körper nicht mitkommt. Die Republik zahlt. Sie macht daraus kein Heldentum.
+
+### Punkt 9 – Wohlstand
+
+Alte Häuser haben noch Vermögen. Die Werkmark hat Lohn. Beides ist kein Titel.
+
+### Punkt 10 – Religion
+
+Örtliche Feste, keine Staatsreligion des Erbes.
+
+### Punkt 11 – Bildung
+
+Archive sind offen genug, dass man das Reich nachlesen kann. Die Schule zwingt zu beiden Hälften der Geschichte.
+
+### Punkt 12 – Medien
+
+Blätter streiten über Denkmäler. Ein Sieg wird gemeldet und im nächsten Absatz eingeordnet.
+
+### Punkt 13 – Sprache
+
+Die alte Amtssprache spukt in Reden. Die Republik hat eine neuere, kürzere. Beide werden verstanden. Nur eine gilt.
+
+### Punkt 14 – Essen
+
+Schwere Küche der Mitte. Veteranenfeste sind laut und danach verlegen.
+
+### Punkt 15 – Kleidung
+
+Der historische Rock ist Dienst. Pelz und Patronentasche gehören dazu. Im Zivilen trägt das niemand als Mode der Größe.
+
+### Punkt 16 – Architektur
+
+Umgenutzte Paläste, neue Sitzungssäle in alten Mauern, Werkhöfe aus neuerem Backstein.
+
+### Punkt 17 – Freizeit
+
+Vereine der Veteranen, Fluss, Werkstädter Feste. Das Denkmal ist kein Spielplatz und keine Kanzel.
+
+### Punkt 18 – Feste
+
+Republiktage statt Krönungstage. An den alten Sieg wird erinnert, nicht angestoßen, als wäre er eine Erlaubnis.
+
+### Punkt 19 – Trauer
+
+Namen auf Stein, Familie zu Hause. Die Republik beansprucht den Toten nicht als Beweis ihrer Größe.
+
+### Punkt 20 – Militär
+
+Erfahren, schwer, politisch eng geführt. Die Mittel sind da. Die Erlaubnis ist jedes Mal neu.
+
+### Punkt 21 – Krieg
+
+Ein Krieg beweist Können. Er beweist nicht, dass das Reich recht hatte. Diese Trennung ist die Arbeit der Republik.
+
+### Punkt 22 – Opposition
+
+Die einen wollen weniger Einsätze, die anderen wollen die Mittel weniger schämen. Beide sitzen im Parlament. Der Staat bleibt.
+
+### Punkt 23 – Nachbarn
+
+In Narbstadt kennt man die Narben. In Neuhoff kennt man sie aus Büchern. Beides ist Rothain.
+
+### Punkt 24 – Migration
+
+Zuzug in die neuen Viertel. Wer bleibt, erbt die Warnung mit, nicht nur den Lohn.
+
+### Punkt 25 – Familiengeschichte
+
+Fast jede alte Familie hat einen Satz über das Reich und einen Satz über die Republik. Der zweite gilt. Der erste wird nicht gelöscht.
+
+## Konkrete Lore-Anker
+
+### Familien
+
+- **Familie Roth:** Alter Name, heute ohne Thron, mit Archiv.
+- **Familie Pell:** Veteranen. Sitzen im Rat von Narbstadt und nicht über dem Parlament.
+
+### Personen
+
+- **Mara Pell:** Veteranin und Rätin. Verlangt Versorgung und verbietet die Heldengeschichte.
+- **Jonas Roth:** Archivar. Zeigt den Palastflügel als Gebäude, nicht als Anspruch.
+
+### Institutionen
+
+- **Parlament im Palastflügel:** Die Republik an der Stelle der alten Entscheidung.
+- **Veteranenrat Narbstadt:** Stimme ohne Kommando.
+
+### Wirtschaft
+
+- **Werkrott:** Schwere Fertigung.
+- **Flussrot Handel:** Versorgung auf dem Landweg.
+
+### Medien
+
+- **Rothenburger Blatt:** Sieg und Einordnung im selben Stück.
+- **Narbbrief:** Die Stimmen nach dem Dienst.
+
+### Militär
+
+- **Republikheer Rothain:** Die geerbten Mittel unter neuer Erlaubnis.
+- **Patronenwerk:** Gerät, das die Republik warten kann.
+
+### Stadtviertel
+
+- **Alter Palastflügel:** Umgenutzt.
+- **Veteranenviertel:** Namen, keine Tribüne der Größe.
+
+### Historische Ereignisse
+
+- **Das Ende des Throns:** Die Mittel blieben, die Herrschaft nicht.
+- **Die umgeschriebene Rede:** Ein Sieg, den das Parlament am nächsten Tag öffentlich begrenzt hat.
+
+---
+
+
+# 4. Averon – Die junge Republik
+
+### Die junge Republik
+
+Averon ist eine junge liberale Republik. Freiheit ist hier keine Rede. Sie ist die Erwartung, dass ein Mensch früher weiß als eine Zentrale und danach selbst handelt. Krieg gilt als Ausnahme. Ein langer Krieg gilt als Gefahr für diese Freiheit, nicht als Beweis von Stärke.
+
+Averon wird im Spiel nicht schwächer, nur weil eine Partie länger dauert. Der Wunsch, den Krieg kurz zu halten, ist gesellschaftlich. Er ist kein eingebauter Zeitmalus.
+
+### Die besondere Ordnung
+
+Die Ordnung ist Verbindung. Führung liegt so weit unten, wie die Verbindung hält. Ein Befehl auf alten Daten ist kein guter Befehl, nur weil er von oben kommt. Politische Kontrolle bleibt. Das Militär öffnet den Krieg nicht allein.
+
+### Politisches System
+
+Novaris ist neu, dicht und an Netze gebaut. Parlamente und Redaktionen sitzen nah an den Knoten, über die die Lage läuft. Eine Regierung, die später weiß als die Straße, verliert die Debatte.
+
+### Technologie
+
+Sensorik, Nachrichten, offene Geräte, die ein Bürger verstehen kann. Technik macht den Menschen schneller und besser informiert. Sie baut ihn nicht um.
+
+### Militär
+
+Modernes Oliv, Plattenträger, sandfarbene Streifen. Die Uniform ist Arbeitskleidung einer vernetzten Truppe.
+
+Der gute Soldat ist Bürger in Uniform. Wer vor Ort mehr weiß, soll handeln. Hohe Verluste werden politisch, weil hinter jedem Namen ein ziviles Leben steht.
+
+### Der innere Konflikt
+
+Dieselbe Verbindung, die Averon schnell macht, macht es zersplittert, wenn sie reißt. Die Republik hält. Sie wird nur gewöhnlich, und gewöhnlich ist sie nicht gern.
+
+> **Wie kurz kann ein Krieg bleiben, wenn die Gesellschaft ihn nicht zum Alltag machen will?**
 
 ## Nationale Leitfrage
 
 **Leitfrage:** Wie viel Freiheit bleibt, wenn eine Gesellschaft ständig auf die nächste Krise vorbereitet sein muss?
 
-**Alltagswiderspruch:** Menschen genießen große persönliche Freiheit, erleben aber gleichzeitig einen permanenten Druck, informiert, leistungsfähig und gesellschaftlich relevant zu bleiben.
+**Alltagswiderspruch:** Die Leute wollen früh wissen und wollen nicht dauerhaft in Uniform denken.
 
-**Besonderer Ausbau:** Averon sollte starke Unterschiede zwischen digitalisierten Großstädten und kleineren Gemeinden erhalten. Dadurch entsteht innerhalb derselben Republik ein Konflikt zwischen Geschwindigkeit und Bodenständigkeit.
+**Besonderer Ausbau:** Eigeninitiative bleibt erwünscht. Sie bleibt an die politische Kontrolle gebunden.
 
 ## Hauptstadt
 
-Novaris ist eine junge, dicht bebaute Metropole mit gläsernen Verwaltungsgebäuden, großen Wohnkomplexen und weitläufigen Verkehrsknoten. Die Stadt wurde nach mehreren politischen Reformen des jungen Staates in kurzer Zeit stark erweitert.
+Novaris ist eine Netzstadt. Man sieht die Knoten, nicht einen Palast.
 
-Das Regierungsviertel ist bewusst offen gestaltet. Ministerien, Parlament, Gerichte und öffentliche Plätze liegen nicht hinter monumentalen Mauern, sondern in einem dicht vernetzten Stadtzentrum. Das soll den Anspruch vermitteln, dass staatliche Macht öffentlich kontrollierbar bleibt.
-
-Novaris besitzt gleichzeitig eine stark ausgeprägte digitale Infrastruktur. Öffentliche Verkehrsmittel, Verwaltung, medizinische Versorgung und große Teile des Handels sind digital miteinander verbunden.
-
-Die Stadt wirkt modern, effizient und schnell – aber auch rastlos. Viele Menschen leben in kleinen Wohnungen, wechseln häufig den Arbeitsplatz und verbringen einen erheblichen Teil ihres Lebens in digitalen Räumen.
-
-**Stadtbild:** Glas, Stahl, Beton, begrünte Dächer, Verkehrsknoten, große öffentliche Plätze.  
-**Wichtige Viertel:** Regierungsviertel, Technologiering, Altstadt, Hafenbezirk, Wohnsektoren.  
-**Sozialer Gegensatz:** hochbezahlte Technologie- und Verwaltungselite gegenüber jungen Beschäftigten mit unsicheren Arbeitsverhältnissen.
+**Stadtbild:** Dichte Blöcke, offene Hallen, Leitungen, wenig Steinpomp.  
+**Wichtige Viertel:** Knotenhalle, Parlamentsraster, die Werkhöfe der Geräte.  
+**Sozialer Gegensatz:** die, die die Verbindung bauen, gegenüber denen, die von ihr leben.
 
 ## Regionen
 
 ### Nordmark
-Kühlere, dünn besiedelte Region mit kleineren Städten, Forstwirtschaft und modernen Energieanlagen. Die Menschen gelten als weniger hektisch als die Bevölkerung der Hauptstadt.
 
-**Konflikt:** Die Bewohner empfinden die politische Aufmerksamkeit für die Großstädte als übermäßig.
+Kühler, dünner besiedelt, Energie und Forst. Langsamer als Novaris und deshalb oft die Ersten, die eine Lücke im Netz merken.
 
 ### Zentralkorridor
-Dicht besiedelte urbane Achse zwischen den wichtigsten Wirtschafts- und Verwaltungszentren. Hier befinden sich Technologieunternehmen, Universitäten und die größte Zahl hochqualifizierter Arbeitsplätze.
 
-**Lebensgefühl:** schnell, teuer, leistungsorientiert.
+Die dichte Achse. Hier ist Averon so, wie es sich selbst beschreibt.
 
 ### Westküste
-Große Hafenstädte, internationale Unternehmen und eine vielfältige Bevölkerung. Der Kontakt mit anderen Nationen ist alltäglich.
 
-**Konflikt:** Alte Hafenviertel und neue Technologiebezirke entwickeln sich sehr unterschiedlich.
+Häfen als Tore der Versorgung, nicht als Flotte. Was ankommt, geht sofort ins Netz der Lager.
 
 ### Südland
-Landwirtschaftlich geprägte Region mit kleineren Städten und Gemeinden. Digitale Infrastruktur ist vorhanden, aber traditionelle Vereine und lokale Bindungen sind stärker.
 
-**Konflikt:** Viele Bewohner fühlen sich von der urbanen Kultur Averons nicht vollständig repräsentiert.
+Jünger, landwirtschaftlich, ungeduldig gegenüber einer Hauptstadt, die alles schon weiß.
 
 ## Städte
 
-### Novaris – Hauptstadt
-Politisches und digitales Zentrum. Großstadt mit Ministerien, Universitäten, Technologieunternehmen und dichtem Wohnraum.
+### Novaris
+
+Sitz von Parlament und Knoten.
 
 ### Lydon
-Technologiestadt mit großen Entwicklungszentren, Start-ups und einer jungen Bevölkerung. Hohe Mieten und starke Konkurrenz um qualifizierte Arbeitsplätze prägen den Alltag.
+
+Energie und Gerät. Weniger glanzvoll, unverzichtbar.
 
 ### Westhaven
-Internationale Hafenstadt. Handel, Migration und Logistik bestimmen das Stadtbild. Alte Hafenviertel stehen modernen Büro- und Wohnkomplexen gegenüber.
+
+Hafen der Versorgung. Schiffe bringen Ladung. Sie halten keine Stellung.
 
 ### Arven
-Mittelgroße Stadt im Übergang zwischen urbanem Zentrum und ländlichem Süden. Viele Familien leben hier bewusster lokal, während junge Menschen häufig nach Novaris oder Lydon ziehen.
+
+Südliche Handelsstadt. Streitbarer gegenüber Novaris.
 
 ### Nordfall
-Kühlere Industriestadt mit Energieanlagen und technischen Betrieben. Weniger glamourös als die Hauptstadt, aber für die nationale Infrastruktur unverzichtbar.
+
+Stadt in der Nordmark. Hier übt man, was geschieht, wenn die Verbindung fehlt.
 
 ## Dörfer und ländlicher Alltag
 
 ### Feldhain
-Landwirtschaftliches Dorf mit modernen Maschinen und digitaler Verwaltung. Junge Bewohner pendeln häufig in die Städte.
+
+Dorf am Korridor. Die Lage kommt hier früher an als der Briefträger.
 
 ### Nordruh
-Waldnahes Dorf im Norden. Forstwirtschaft, Energieversorgung und kleine Handwerksbetriebe bestimmen den Alltag.
+
+Dorf, das Stille noch kennt und sie als Mangel erlebt, wenn das Netz fehlt.
 
 ### Küstenfeld
-Küstendorf zwischen Fischerei und moderner Logistik. Alte Familien und neu zugezogene Arbeitskräfte leben nebeneinander.
+
+Höfe hinter Westhaven. Sie sehen Ladung, nicht Seekrieg.
 
 ### Sonnenau
-Dorf im Süden mit starken Sport- und Vereinsgemeinschaften. Lokale Verbundenheit ist wichtiger als politische Netzwerke.
+
+Südliches Dorf. Misstraut der Behauptung, Novaris wisse es besser.
 
 ## Familie und Generationen
 
-Die averonische Familie ist überwiegend klein und urban. Zwei Eltern mit einem oder zwei Kindern sind häufig, aber Alleinerziehende, Patchworkfamilien und bewusst kinderlose Haushalte werden gesellschaftlich weitgehend akzeptiert. Großeltern leben oft getrennt und bleiben digital verbunden.
-
-Familienentscheidungen werden stark individuell getroffen. Kinder sollen früh Selbstständigkeit entwickeln. Eltern versuchen, Bildung und persönliche Freiheit zu ermöglichen, stehen aber unter erheblichem Zeit- und Leistungsdruck.
-
-Ein typischer Konflikt entsteht zwischen beruflicher Mobilität und familiärer Nähe. Wer für eine bessere Stelle die Stadt wechselt, kann wirtschaftlich aufsteigen und gleichzeitig den Kontakt zur erweiterten Familie verlieren.
+Familien sind klein und über Städte verteilt. Man bleibt über Nachrichten in einem Haushalt. Ein langer Krieg gilt als etwas, das diese Art zu leben auffrisst. Deshalb ist Kürze ein Wert und keine Regel der Punkte.
 
 ## Alltag und Lebensgefühl
 
 ### Wohnen und Arbeit
 
-Die Mehrheit der Bevölkerung lebt in dicht besiedelten Städten. Wohnungen sind klein bis mittelgroß und stark digitalisiert. Öffentlicher Verkehr, Lieferdienste und Behörden funktionieren überwiegend über vernetzte Systeme.
+Dichte Wohnungen, Werkstätten, Bildschirme, die zur Arbeit gehören. Der Alltag ist schnell und soll zivil bleiben.
 
-Für die urbane Mittelschicht ist ein schneller Internetzugang ebenso selbstverständlich wie Strom und fließendes Wasser. Gleichzeitig gibt es Menschen, die von der Geschwindigkeit der Gesellschaft abgehängt werden: ältere Bürger, schlecht bezahlte Dienstleister und Bewohner ärmerer Randbezirke.
+### Bildung
 
-Arbeit ist häufig projektorientiert. Berufliche Identität entsteht weniger über einen lebenslangen Betrieb als über Qualifikationen, Netzwerke und wechselnde Arbeitgeber.
-
-### Familie und Bildung
-
-Kinder lernen früh, mit digitalen Informationssystemen umzugehen. Schulen fördern Selbstständigkeit und Kommunikation, stehen aber unter erheblichem Leistungsdruck.
-
-Eltern versuchen, ihren Kindern möglichst viele Möglichkeiten zu eröffnen. Dahinter steht eine verbreitete Angst: Wer nicht mithält, verliert Anschluss.
-
-Familien sind häufig klein und geografisch mobil. Großeltern leben nicht selten in einer anderen Stadt.
-
-### Medien und Gesellschaft
-
-Averoner Bürger sind ständig informiert und gleichzeitig ständig mit widersprüchlichen Informationen konfrontiert. Nachrichten, soziale Netzwerke und staatliche Warnsysteme konkurrieren um Aufmerksamkeit.
-
-Politische Empörung kann innerhalb weniger Stunden entstehen und wieder verschwinden.
-
-### Soldaten im Alltag
-
-Soldaten gelten grundsätzlich als professionelle Staatsbedienstete. Sie sind keine gesellschaftliche Kaste. Viele Bürger unterstützen die Armee, solange sie glauben, dass sie der Verteidigung dient.
-
-Der Beginn eines Krieges verändert diese Haltung schnell: Plötzlich wird aus einer abstrakten Sicherheitsfrage der Sohn aus der Nachbarwohnung, die Schwester aus dem Büro oder der Freund aus dem Sportverein.
-
-### Lebensgefühl
-
-**Hoffnung:** Die Zukunft soll besser sein als die Vergangenheit.
-
-**Angst:** Nicht vor Armut allein, sondern davor, irrelevant und abgehängt zu werden.
-
-**Tabu:** Die Vorstellung, dass persönliche Freiheit vielleicht nicht ausreicht, um eine Gesellschaft zusammenzuhalten.
-
----
-
-## Gesellschaftliche Ebenen 6–25
-
-### Punkt 6 – Jugend
-
-Jugendliche wachsen digital, selbstständig und leistungsorientiert auf. Schule, soziale Medien und frühe berufliche Projekte prägen Identität; staatliche Institutionen werden eher als Dienstleister verstanden.
-
-### Punkt 7 – Arbeit
-
-Projektarbeit, Dienstleistungen, Technologie und flexible Beschäftigung dominieren; Karrierewechsel sind normal.
-
-### Punkt 8 – Armut
-
-Armut zeigt sich vor allem als Wohnungs-, Bildungs- und Zugangsunterschied. Sozialstaatliche Hilfe existiert, ist aber komplex.
-
-### Punkt 9 – Wohlstand
-
-Wohlstand zeigt sich in Wohnlage, digitalem Zugang, Bildung und Mobilität.
-
-### Punkt 10 – Religion
-
-Religiöse Freiheit ist weitgehend selbstverständlich; organisierte Religion ist eher eine persönliche als staatliche Angelegenheit.
-
-### Punkt 11 – Bildung
-
-Digitale, flexible Bildung mit hoher Hochschulquote und starkem Wettbewerbsdruck.
-
-### Punkt 12 – Medien
-
-Freie digitale Medien, Plattformen und unabhängiger Journalismus; hohe Informationsgeschwindigkeit erzeugt Fragmentierung.
-
-### Punkt 13 – Sprache
-
-Standardsprache dominiert, urbane Jugend entwickelt schnell neue digitale Umgangsformen.
-
-### Punkt 14 – Essen
-
-Schnelle urbane Küche, internationale Einflüsse und regionale Bio-Lebensmittel.
-
-### Punkt 15 – Kleidung
-
-Funktionale urbane Kleidung, technische Stoffe und starke Individualisierung.
-
-### Punkt 16 – Architektur
-
-Glas, Stahl, digitale Infrastruktur, hohe Wohnhäuser und flexible Büroquartiere.
-
-### Punkt 17 – Freizeit
-
-Gaming, Sport, Reisen, digitale Gemeinschaften und urbane Kultur.
-
-### Punkt 18 – Feste
-
-Zukunfts- und Stadtfeste, nationale Gründungstage und große digitale Veranstaltungen.
-
-### Punkt 19 – Trauer
-
-Trauer ist privat und oft individuell; digitale Gedenkräume ergänzen traditionelle Rituale.
-
-### Punkt 20 – Militär
-
-Professionelles, technologisch vernetztes Militär; gesellschaftlich respektiert, aber nicht allgegenwärtig.
-
-### Punkt 21 – Krieg
-
-Krieg gilt öffentlich als vermeidbares Versagen, zugleich wird permanente technologische Einsatzbereitschaft als notwendig betrachtet.
-
-### Punkt 22 – Opposition
-
-Opposition ist legal und vielfältig; Konflikte entstehen eher über Medien, Wirtschaft und digitale Mobilisierung.
-
-### Punkt 23 – Nachbarn
-
-Nachbarn kennen sich weniger persönlich, sind aber über digitale Netzwerke verbunden.
-
-### Punkt 24 – Migration
-
-Hohe innere und internationale Mobilität; Migration gilt überwiegend als Teil moderner Gesellschaft.
-
-### Punkt 25 – Familiengeschichte
-
-Familiengeschichten sind häufig von Migration, Berufswechsel und urbaner Mobilität geprägt.
-
-## Konkrete Lore-Anker
-
-### Bedeutende Familien
-- **Familie Varen:** Alte bürgerliche Familie aus Novaris; mehrere Generationen im öffentlichen Dienst. Die jüngere Generation arbeitet in Technologieunternehmen.
-- **Familie Senn:** Arbeiter- und Hafenfamilie aus Westhaven. Mehrere Mitglieder sind in Logistik und Gewerkschaften tätig.
-
-### Bekannte Personen
-- **Mira Varen:** Verfassungsjuristin und öffentliche Kritikerin digitaler Überwachung.
-- **Jon Senn:** Logistikingenieur, der für autonome Versorgungssysteme arbeitet.
-
-### Institutionen
-- **Universität Novaris:** Führende Hochschule für Informatik, Politik und Kommunikationssysteme.
-- **Institut für Öffentliche Netze:** Entwickelt zivile und militärische Kommunikationsinfrastruktur.
-- **Freies Nachrichtenforum:** Zusammenschluss unabhängiger digitaler Journalisten.
-
-### Wirtschaft
-- **Aeronet Systems:** Großes Technologieunternehmen für Sensorik und Kommunikation.
-- **Westhaven Logistics:** Hafen- und Versorgungskonzern mit internationalem Geschäft.
-
-### Medien und Kultur
-- **Der Morgenkanal:** Schnelles digitales Nachrichtenmedium mit großer Reichweite.
-- **Forum 7:** Politische Debattenplattform.
-
-### Militär
-- **1. Mobile Brigade Novaris:** Hochmobile professionelle Formation mit Schwerpunkt Aufklärung und schneller Reaktion.
-- **Netzaufklärungskommando:** Militärische Einheit für Sensorik, Kommunikation und elektronische Gefechtsführung.
-
-### Stadtviertel Novaris
-- **Regierungsring:** Ministerien und öffentliche Institutionen.
-- **Neonviertel:** Start-ups, Bars, kleine Wohnungen und junge Berufstätige.
-- **Altmarkt:** Historisches Zentrum mit Familienbetrieben.
-
-### Historische Ereignisse
-- **Gründung der Jungen Republik:** Übergang von einer älteren Staatsordnung zu Averons heutiger Republik.
-- **Netzkrise:** Großer Ausfall kritischer digitaler Systeme, der das Vertrauen in vollständige Automatisierung erschütterte.
-
----
-
-# 2. Karsk – Der technokratische Sklavenstaat
-
-### Der technokratische Sklavenstaat
-
-Karsk ist kein Staat, der seine Unterdrückung versteckt. Er hat sie **systematisiert**.
-
-Das Land entstand aus Grenzkriegen, Versorgungskrisen und dem politischen Versprechen, dass Chaos nie wieder über das Leben der Bevölkerung bestimmen dürfe. Aus diesem Versprechen entstand zunächst ein Sicherheitsstaat. Später wurde daraus ein technokratisches System, in dem der menschliche Körper, die Arbeitskraft und selbst das persönliche Leben als verwaltbare Ressourcen betrachtet werden.
-
-Der Staat behauptet nicht, dass alle Menschen gleich wertvoll seien.
-
-Er behauptet, dass ihr Wert **messbar** sei.
-
-> **Der Mensch ist unvollkommen. Der Staat kann ihn verbessern.**
-
-Dieser Satz steht in Karsk nicht nur auf Plakaten. Er ist in Schulbüchern, medizinischen Formularen, Arbeitsverträgen und militärischen Vorschriften verankert.
-
-Die Grausamkeit Karsks besteht deshalb weniger in offenem Chaos als in der **Normalität der Kontrolle**.
-
-Ein Bürger kann morgens zur Arbeit gehen, seine Kinder zur Schule bringen, medizinisch versorgt werden und abends mit seiner Familie essen – und trotzdem wissen, dass der Staat jede dieser Lebenssphären bewertet.
-
-### Das System der Bewertung
-
-Jeder Bürger besitzt eine staatliche Leistungs- und Vertrauensbewertung.
-
-Sie umfasst unter anderem:
-
-- körperliche Belastbarkeit
-- berufliche Qualifikation
-- medizinische Eignung
-- psychologische Stabilität
-- bisherige Arbeitsleistung
-- militärische Verwendbarkeit
-- familiäre Zuverlässigkeit
-- politische Loyalität
-- gesellschaftlichen Nutzen
-
-Diese Bewertung entscheidet nicht offiziell darüber, ob ein Mensch „wertvoll“ ist.
-
-Praktisch entscheidet sie jedoch darüber, **welches Leben ihm offensteht**.
-
-Hohe Bewertung bedeutet bessere Wohnungen, bevorzugte medizinische Behandlung, Zugang zu Ausbildung, bessere Arbeitsplätze und größere Bewegungsfreiheit.
-
-Niedrige Bewertung bedeutet Wartelisten, schlechtere Wohnlagen, eingeschränkte Berufswahl und verstärkte Kontrolle.
-
-Niemand muss ständig bedroht werden.
-
-Es genügt, wenn jeder weiß, dass ein falscher Eintrag im System seine Zukunft verändern kann.
-
-### Die technische Symbiose
-
-Karsk besitzt eine der extremsten Formen militärischer Technologie der Welt.
-
-Maschinelle Komponenten werden direkt mit dem menschlichen Körper verbunden. Nerven, Knochen, Organe und technische Systeme bilden eine **erzwungene Symbiose**.
-
-Karsk bezeichnet diese Eingriffe als *Verbesserung*.
-
-Die Betroffenen sprechen untereinander teilweise von *Umbau*.
-
-Das menschliche Gewebe stößt Systeme ab. Implantate entzünden sich. Nerven degenerieren. Knochen müssen ersetzt werden. Medikamente verhindern Abstoßungsreaktionen, verursachen aber neue Schäden.
-
-Bei besonders schwer augmentierten Soldaten besteht der Körper aus einem Netz aus:
-
-- künstlichen Gelenken
-- verstärkten Knochen
-- Nervenverstärkern
-- künstlichen Organen
-- Filtersystemen
-- optischen Sensoren
-- implantierten Kommunikationssystemen
-
-Der Staat dokumentiert diese Schäden nicht primär als Verletzungen.
-
-Er dokumentiert sie als **Wartungsbedarf**.
-
-> **Je länger ein Soldat dient, desto weniger Mensch bleibt von ihm übrig.**
-
-Der Preis wird nicht als moralische Frage behandelt. Er erscheint in Tabellen.
-
-### Das Krankenhaus
-
-Karsker Krankenhäuser gehören zu den technisch fortschrittlichsten Einrichtungen der Welt.
-
-Sie können Menschen retten, die anderswo als verloren gelten würden.
-
-Doch jeder Eingriff besitzt eine Prioritätsstufe.
-
-Ein hochbewerteter Ingenieur erhält möglicherweise innerhalb weniger Stunden ein künstliches Organ.
-
-Ein einfacher Arbeiter wartet.
-
-Ein politisch auffälliger Bürger wartet länger.
-
-Ein Mensch, dessen Bewertung als dauerhaft zu niedrig gilt, kann erfahren, dass eine Behandlung „medizinisch nicht priorisiert“ wird.
-
-Niemand sagt:
-
-> „Du bist es nicht wert.“
-
-Das System sagt:
-
-> **„Die verfügbaren Ressourcen werden effizienter eingesetzt.“**
-
-Damit wird Grausamkeit zur Verwaltungssprache.
-
-### Kinder in Karsk
-
-Kinder werden nicht erst mit Eintritt ins Berufsleben bewertet.
-
-Die Bewertung beginnt früh.
-
-Neugeborene werden medizinisch erfasst. Kinder werden auf körperliche Belastbarkeit, Lernfähigkeit und besondere Begabungen untersucht.
-
-Eltern erhalten Entwicklungsberichte.
-
-Ein besonders begabtes Kind kann eine ganze Familie sozial aufsteigen lassen.
-
-Ein behindertes oder chronisch krankes Kind kann dagegen eine Familie in Angst versetzen.
-
-Nicht weil die Eltern es weniger lieben.
-
-Sondern weil sie wissen, dass der Staat bereits begonnen hat, **über seine Zukunft zu entscheiden**.
-
-Viele Eltern versuchen deshalb, Krankheiten und Schwächen ihrer Kinder möglichst lange aus offiziellen Systemen herauszuhalten.
-
-Das ist gefährlich.
-
-Denn das Verbergen einer medizinischen Information kann selbst als gesellschaftliche Unzuverlässigkeit bewertet werden.
-
-### Familie als letzter Schutzraum
-
-Die Familie ist in Karsk gleichzeitig Schutzraum und Gefahrenzone.
-
-Eltern lieben ihre Kinder. Geschwister helfen einander. Großeltern bewahren Geschichten, die niemals in offiziellen Archiven erscheinen.
-
-Doch jeder weiß:
-
-**Ein Familienmitglied kann das Schicksal der gesamten Familie beeinflussen.**
-
-Ein hochrangiger Staatsingenieur kann seinen Verwandten Wohnungen und Ausbildung ermöglichen.
-
-Ein wegen Sabotage verurteilter Bürger kann dagegen dazu führen, dass Angehörige plötzlich zusätzliche Überprüfungen erhalten.
-
-Offiziell gibt es keine Sippenhaft.
-
-Inoffiziell weiß jeder, dass politische Zuverlässigkeit selten ausschließlich individuell betrachtet wird.
-
-### Die Karsker Stille
-
-Karsk ist kein Land voller ständiger Schreie.
-
-Es ist ein Land voller **leiser Sätze**.
-
-Menschen senken ihre Stimme, wenn sie über die Regierung sprechen.
-
-Kollegen wissen, wann ein Gespräch beendet werden sollte.
-
-Ärzte formulieren Befunde so, dass sie keine politische Interpretation zulassen.
-
-Lehrer vermeiden bestimmte Fragen.
-
-Eltern sagen ihren Kindern:
-
-> „Das besprechen wir zu Hause.“
-
-Und selbst dort werden Türen geschlossen.
-
-Die Angst besteht nicht darin, dass jederzeit jemand vor der Tür stehen muss.
-
-Die Angst besteht darin, dass vielleicht **niemand kommen muss**, weil das System bereits alles weiß.
-
-### Militärische Fähigkeiten
-
-Karsker Soldaten können durch technische Implantate und Filtersysteme unter Bedingungen operieren, die andere Truppen erheblich beeinträchtigen.
-
-Dazu gehören beispielsweise:
-
-- Atemfilter
-- künstliche Sauerstoffsysteme
-- optische Sensoren
-- verbesserte Nachtsicht
-- Wärmebildsysteme
-- chemische Filtersysteme
-- künstliche Augen
-- verstärkte Nervensysteme
-
-Gas, Nebel, Rauch und andere Umweltbedingungen können dadurch ihre Wirkung verlieren oder zumindest reduziert werden.
-
-Karsk behandelt den Soldaten nicht primär als Individuum, sondern als **militärisches System mit menschlichem Ursprung**.
-
-### Veteranen
-
-Veteranen werden öffentlich geehrt.
-
-Ihre Gesichter erscheinen auf Plakaten.
-
-Ihre Leistungen werden in staatlichen Berichten gefeiert.
-
-Doch ein schwer beschädigter Veteran kann nach dem Ende seiner aktiven Dienstzeit seinen gesellschaftlichen Wert verlieren.
-
-Dann beginnt die zweite Tragödie.
-
-Der Mann, dessen Körper einst als Beweis staatlicher Überlegenheit präsentiert wurde, muss plötzlich beweisen, dass er noch nützlich ist.
-
-Manche erhalten Verwaltungsstellen.
-
-Manche werden medizinische Versuchspersonen.
-
-Manche verschwinden aus der Öffentlichkeit.
-
-### Der innere Konflikt
-
-Karsk behauptet, seine Bürger durch Stärke zu schützen.
-
-Und für manche Bürger stimmt das sogar.
-
-Kranke Menschen werden geheilt. Straßen sind sicher. Versorgungssysteme funktionieren. Arbeitslosigkeit ist gering. Technische Medizin rettet Leben.
-
-Genau deshalb ist das System gefährlich.
-
-Es funktioniert.
-
-Die Frage lautet nicht:
-
-**„Warum unterstützen die Menschen Karsk?“**
-
-Die Frage lautet:
-
-**„Wie weit würden Menschen gehen, um die Sicherheit, die Karsk ihnen tatsächlich gibt, nicht wieder zu verlieren?“**
-
----
-
-## Nationale Leitfrage
-
-**Leitfrage:** Was geschieht mit einer Gesellschaft, wenn menschlicher Wert messbar gemacht wird?
-
-**Alltagswiderspruch:** Karsk kann außergewöhnliche Sicherheit, medizinische Versorgung und technische Möglichkeiten bieten und gleichzeitig jeden Menschen in eine staatliche Nutzenrechnung einordnen.
-
-**Besonderer Ausbau:** Karsk soll nicht aus fanatischen Funktionären bestehen. Es soll Menschen geben, die das System aufrichtig unterstützen, weil es ihre Krankheit geheilt, ihre Familie geschützt oder ihnen sozialen Aufstieg ermöglicht hat. Gerade diese Menschen machen den Konflikt glaubwürdiger.
-
-## Hauptstadt
-
-Varkesh ist eine monumentale Verwaltungs- und Industriestadt.
-
-Die Stadtplanung folgt keinem klassischen Stadtbild. Sie folgt **Funktionen**.
-
-Wohnraum, Arbeitsstätten, medizinische Zentren, Produktionsanlagen, Schulen und militärische Einrichtungen sind räumlich und organisatorisch miteinander verbunden.
-
-Große Verkehrsachsen führen durch kontrollierte Sektoren. Zugänge werden registriert. Öffentliche Plätze sind weit und übersichtlich, nicht um Menschen zusammenzubringen, sondern um Bewegungen kontrollierbar zu halten.
-
-Unter der Stadt liegen medizinische und industrielle Anlagen, deren Existenz offiziell kaum erwähnt wird.
-
-Das Zentrum wird von Verwaltungsbauten und medizinisch-technologischen Komplexen beherrscht.
-
-Viele Gebäude sind zugleich Wohn-, Arbeits- und Versorgungseinrichtungen.
-
-**Stadtbild:** massive Beton- und Metallstrukturen, unterirdische Anlagen, kontrollierte Verkehrswege, künstlich beleuchtete Innenräume.  
-**Wichtige Viertel:** Verwaltungssektor, Medizinsektor, Produktionsgürtel, Wohnsektoren, Militärbezirk.  
-**Sozialer Gegensatz:** privilegierte technische und staatliche Funktionsträger gegenüber Menschen mit niedriger staatlicher Bewertung.
-
-## Regionen
-
-### Zentralbezirk
-
-Dicht kontrollierte Kernregion mit Regierung, Forschung, Medizin und den wichtigsten Verwaltungsstellen.
-
-Hier leben die Menschen, die vom System am stärksten profitieren.
-
-Die Gebäude sind sauberer, die medizinische Versorgung schneller und die Sicherheitskräfte weniger sichtbar.
-
-### Produktionsgürtel
-
-Schwer industrialisierte Region mit Fabriken, Raffinerien, technischen Ausbildungszentren und großen Arbeitersiedlungen.
-
-Die Arbeiter erhalten Wohnungen, medizinische Versorgung und soziale Leistungen.
-
-Dafür ist ihr gesamtes Leben an das Produktionssystem gekoppelt.
-
-**Werksausweis, Wohnberechtigung und medizinische Akte sind praktisch Teile derselben Identität.**
-
-### Grenzsektoren
-
-Militärisch geprägte Randgebiete mit hoher Sicherheitspräsenz.
-
-Kontrollen gehören zum Alltag. Kinder kennen Soldaten besser als Polizisten.
-
-Viele Familien leben dort seit Generationen und betrachten den permanenten Ausnahmezustand als normal.
-
-### Versorgungsprovinzen
-
-Landwirtschaftliche und ressourcenreiche Regionen, deren Produktion zentral verwaltet wird.
-
-Versorgung ist zuverlässig.
-
-Freiheit weniger.
-
-Die Bewohner wissen genau, wie viel sie produzieren müssen und welche Folgen ein Ausfall haben kann.
-
-**Regionaler Grundkonflikt:** Je weiter man vom Zentrum entfernt lebt, desto stärker wird die Frage, ob der Staat tatsächlich schützt oder nur kontrolliert.
-
-## Städte
-
-### Varkesh – Hauptstadt
-
-Zentrum von Staat, Medizin und technischer Kontrolle.
-
-### Karsin
-
-Medizin- und Implantationszentrum.
-
-Hier befindet sich die **Varkescher Medizinakademie**, aber auch der größte Komplex für staatlich genehmigte Körperaugmentation.
-
-Für viele Karsker ist Karsin gleichzeitig Hoffnung und Schrecken.
-
-### Dravik
-
-Schwere Industriestadt.
-
-Arbeiterstatus und technische Qualifikation bestimmen den gesellschaftlichen Rang.
-
-Die Stadt besitzt einige der größten Fabrikhallen Karsks.
-
-### Sektorstadt 7
-
-Eine vollständig geplante Stadt.
-
-Der Alltag ist nach Arbeits-, Wohn-, Transport- und Versorgungszyklen organisiert.
-
-Es gibt kaum ungenutzten Raum.
-
-Es gibt kaum spontane Orte.
-
-Und es gibt kaum einen Grund, warum ein Bürger seinen vorgesehenen Sektor verlassen sollte.
-
-### Grenzwerk
-
-Militärisch geprägte Stadt nahe der Außengrenze.
-
-Kasernen, Werkstätten, Lazarette und Sicherheitsanlagen dominieren das Stadtbild.
-
-## Dörfer und ländlicher Alltag
-
-### Werksiedlung Nord
-
-Geplante Arbeitersiedlung neben einem Produktionskomplex.
-
-Wohnung, Schule, Klinik und Arbeitsplatz liegen wenige Minuten voneinander entfernt.
-
-### Dornenfeld
-
-Landwirtschaftliche Gemeinde mit staatlich vorgegebenen Produktionszielen.
-
-Versorgung ist zuverlässig.
-
-Persönliche Selbstbestimmung begrenzter.
-
-### Grauhof
-
-Dorf nahe einer medizinischen Anlage.
-
-Viele Familien arbeiten direkt oder indirekt für den Gesundheitssektor.
-
-Inoffiziell erzählen sich die Bewohner, dass nachts Transporte in die unterirdischen Anlagen fahren.
-
-### Grenzposten
-
-Kleine Siedlung an einer kontrollierten Verkehrsroute.
-
-Militär und Staat sind im Alltag ständig präsent.
-
-## Familie und Generationen
-
-Die Familie steht unter starkem Einfluss des Staates.
-
-Kinder werden früh medizinisch untersucht und ihre Fähigkeiten systematisch erfasst.
-
-Eltern wissen, dass die Entwicklung eines Kindes später seine gesellschaftliche Einstufung beeinflussen kann.
-
-In privilegierten Familien wird die staatliche Ordnung häufig als Schutz verstanden.
-
-In anderen Familien wird dieselbe Ordnung als Eindringen in das Innerste des Menschen erlebt.
-
-Eltern versuchen häufig, Schwächen ihrer Kinder nicht öffentlich sichtbar werden zu lassen.
-
-Gleichzeitig kann eine Familie großen Stolz empfinden, wenn ein Kind als besonders leistungsfähig gilt.
-
-Der zentrale familiäre Konflikt lautet:
-
-> **Ist ein Kind zuerst ein geliebtes Familienmitglied – oder zuerst ein zukünftiger Träger gesellschaftlicher Leistung?**
-
-## Alltag und Lebensgefühl
-
-### Wohnen und Arbeit
-
-Karsker Bürger erhalten vieles über staatlich organisierte Systeme.
-
-Wohnraum, medizinische Versorgung und Arbeitsplätze werden stark nach Bedarf und staatlicher Bewertung verteilt.
-
-Ein Mensch mit hoher technischer oder militärischer Qualifikation kann privilegiert leben.
-
-Menschen mit Behinderungen oder chronischen Krankheiten erleben dagegen besonders deutlich, wie brutal eine Gesellschaft sein kann, die den Menschen nach Nutzen bewertet.
-
-Arbeitsplätze besitzen eine offizielle Leistungsbewertung.
-
-Jeder Bürger kennt seine Kennziffern.
-
-### Medizin
-
-Karsk verfügt über hervorragende technische Medizin.
-
-Aber Medizin ist niemals vollständig kostenlos im moralischen Sinn.
-
-Jede Behandlung besitzt eine Prioritätsstufe.
-
-Die entscheidende gesellschaftliche Frage lautet nicht:
-
-> **Kann der Staat mich retten?**
-
-Sondern:
-
-> **Hält der Staat es für sinnvoll, mich zu retten?**
-
-### Religion und Privatleben
-
-Private Religion existiert, wird aber überwacht.
-
-Persönliche Rituale können toleriert werden, solange sie keine politische Alternative zur Staatsideologie bilden.
-
-Viele Gläubige verstecken religiöse Gegenstände.
-
-Nicht weil Religion vollständig verboten wäre.
-
-Sondern weil niemand genau weiß, welche Bedeutung ein Symbol in seiner Akte erhalten könnte.
-
-### Medien und Sprache
-
-Karsker Medien sprechen selten von Leid.
-
-Sie sprechen von:
-
-- Ressourcen
-- Effizienz
-- Stabilität
-- Optimierung
-- Belastbarkeit
-- Wiederherstellung
-- nationaler Leistungsfähigkeit
-
-Ein verstümmelter Soldat ist ein **„komplexer Rekonstruktionsfall“**.
-
-Ein verhungernder Bezirk ist ein **„Versorgungsdefizit“**.
-
-Ein politischer Gefangener ist ein **„Sicherheitsfall“**.
-
-Die Sprache macht das Grauen verwaltbar.
-
-### Soldaten im Alltag
-
-Soldaten genießen materielles Prestige, zahlen aber einen körperlichen Preis.
-
-Veteranen mit Implantatschäden können gleichzeitig geehrt und als defekte Systeme behandelt werden.
-
-Eine Familie kann stolz auf einen ausgezeichneten Soldaten sein und dennoch jeden Abend fürchten, dass er eines Tages mit einem Körper zurückkehrt, den sie kaum noch erkennt.
-
-### Lebensgefühl
-
-**Hoffnung:** Krankheit, Unsicherheit und körperliche Schwäche könnten technisch überwunden werden.
-
-**Angst:** Nicht nur zu sterben, sondern als **unbrauchbar** eingestuft zu werden.
-
-**Tabu:** Öffentlich zu sagen, dass ein Mensch auch ohne Leistung einen eigenen, unverrechenbaren Wert besitzt.
-
----
-
-## Gesellschaftliche Ebenen 6–25
-
-### Punkt 6 – Jugend
-
-Jugend wird früh medizinisch und beruflich bewertet.
-
-Leistungsstarke Jugendliche erhalten Chancen und Privilegien.
-
-Andere lernen schon in der Schule, dass ihre Zukunft von Kennzahlen abhängt.
-
-### Punkt 7 – Arbeit
-
-Arbeit ist gesellschaftliche Bewertung.
-
-Produktivität, technische Qualifikation und staatlicher Bedarf bestimmen Aufstieg und Lebensstandard.
-
-### Punkt 8 – Armut
-
-Materielle Grundversorgung kann gesichert sein.
-
-Die eigentliche Armut besteht häufig in **fehlender gesellschaftlicher Verwendbarkeit**.
-
-Wer wenig leisten kann, besitzt weniger Auswahl, weniger Einfluss und schlechtere medizinische Priorität.
-
-### Punkt 9 – Wohlstand
-
-Wohlstand ist eng an staatliche Nützlichkeit und Position gebunden.
-
-Privilegierte Familien besitzen größere Wohnungen, bessere medizinische Zugänge und hochwertige technische Hilfsmittel.
-
-### Punkt 10 – Religion
-
-Staatliche Rationalität dominiert.
-
-Private Glaubensgemeinschaften existieren, bleiben aber politisch vorsichtig.
-
-### Punkt 11 – Bildung
-
-Bildung dient der gezielten Ausbildung gesellschaftlich benötigter Fähigkeiten.
-
-Kinder werden früh in Bildungswege eingeordnet.
-
-### Punkt 12 – Medien
-
-Medien sind staatlich gelenkt.
-
-Sie vermitteln Ordnung, Fortschritt, Sicherheit und gesellschaftliche Leistung.
-
-Kritische Berichte existieren nur innerhalb eng gesetzter Grenzen.
-
-### Punkt 13 – Sprache
-
-Verwaltungssprache ist präzise und technisch.
-
-Je technischer ein Begriff klingt, desto leichter lässt sich ein moralisches Problem als Verwaltungsproblem behandeln.
-
-### Punkt 14 – Essen
-
-Funktionale, nährstofforientierte Küche.
-
-Privilegierte Schichten pflegen aufwendigere Esskultur.
-
-In armen Sektoren ist Essen zuverlässig, aber eintönig.
-
-### Punkt 15 – Kleidung
-
-Praktische, normierte Kleidung.
-
-Status zeigt sich durch Materialqualität, Rangabzeichen und technische Ausstattung.
-
-### Punkt 16 – Architektur
-
-Monumentale Verwaltungsbauten, geplante Wohnkomplexe, unterirdische Anlagen und funktionale Industriearchitektur.
-
-Fenster sind häufig klein.
-
-Öffentliche Räume sind groß.
-
-Private Räume sind kontrollierbar.
-
-### Punkt 17 – Freizeit
-
-Sport, technische Clubs und staatlich organisierte Freizeit.
-
-Privilegierte Kreise besitzen exklusive Angebote.
-
-### Punkt 18 – Feste
-
-Staatliche Fortschritts- und Leistungstage.
-
-Besonders gefeiert werden medizinische Durchbrüche, industrielle Rekorde und militärische Erfolge.
-
-### Punkt 19 – Trauer
-
-Staatliche Anerkennung verstorbener Leistungsträger ist sichtbar.
-
-Die private Trauer ist dagegen häufig still.
-
-Bei Menschen mit niedriger Bewertung kann selbst der Tod bürokratisch wirken.
-
-### Punkt 20 – Militär
-
-Das Militär ist sichtbares Instrument des Staates und technisch eng mit medizinischer Kontrolle verbunden.
-
-Soldaten gelten als besonders wertvolle, aber zugleich besonders verfügbare Bürger.
-
-### Punkt 21 – Krieg
-
-Krieg wird als technische und gesellschaftliche Belastungsprobe verstanden.
-
-Menschen werden nach militärischer Verwendbarkeit verteilt.
-
-Verluste erscheinen in Berichten als Kennzahlen.
-
-Familien sehen dagegen Gesichter.
-
-### Punkt 22 – Opposition
-
-Offene Opposition ist riskant.
-
-Kritik existiert innerhalb von Institutionen, Familien und informellen Netzwerken.
-
-Die gefährlichste Form der Opposition ist nicht der offene Aufstand, sondern die Weigerung, das Bewertungssystem als selbstverständlich anzuerkennen.
-
-### Punkt 23 – Nachbarn
-
-Nachbarschaft ist von gegenseitiger Vorsicht geprägt.
-
-Menschen helfen einander, sprechen aber selten offen über politische Themen.
-
-### Punkt 24 – Migration
-
-Migration wird nach staatlichem Bedarf gesteuert.
-
-Qualifizierte Menschen werden bevorzugt aufgenommen.
-
-Menschen mit geringer wirtschaftlicher oder medizinischer Verwendbarkeit haben deutlich schlechtere Chancen.
-
-### Punkt 25 – Familiengeschichte
-
-Familiengeschichten bestehen aus Aufstieg, Anpassung, medizinischen Eingriffen, Dienst und Verlust.
-
-Viele Familien besitzen einen Angehörigen, der durch das System gerettet wurde – und einen anderen, den es zerstört hat.
-
-## Konkrete Lore-Anker
-
-### Familien
-
-- **Familie Koren:** Technokratische Medizinfamilie. Mehrere Generationen arbeiten im staatlichen Gesundheitssystem. Sie glauben aufrichtig daran, dass Technologie menschliches Leiden reduzieren kann.
-- **Familie Drev:** Arbeiterfamilie aus Dravik. Mehrere Generationen arbeiten in den Produktionswerken. Die Familie profitiert vom System und fürchtet es gleichzeitig.
-
-### Personen
-
-- **Dr. Elena Koren:** Leiterin eines staatlichen Implantatinstituts. Sie ist überzeugt, dass technische Medizin Leid überwinden kann. Ihre persönliche Tragödie beginnt, als ihr eigener Sohn als medizinisch „nicht ausreichend rentabel“ eingestuft wird.
-- **Marek Drev:** Arbeitervertreter. Er fordert bessere Bedingungen, ohne das gesamte System abzulehnen. Sein Bruder kehrte aus dem Militärdienst mit schweren Implantatschäden zurück.
-
-### Institutionen
-
-- **Zentralamt für Menschliche Leistungsfähigkeit:** Staatliche Behörde zur Erfassung und Bewertung der Bevölkerung.
-- **Varkescher Medizinakademie:** führendes Zentrum für Karsker Körpertechnologie.
-- **Direktion für Rekonstruktive Systeme:** staatliche Einrichtung für die Reparatur und Weiterentwicklung schwer augmentierter Soldaten.
-
-### Wirtschaft
-
-- **Karsk Biomech:** staatlich kontrollierter Technologiekonzern für Implantate und Prothesen.
-- **Zentralwerke Dravik:** riesiger Produktionskomplex, der Fahrzeuge, technische Komponenten und militärische Systeme herstellt.
-
-### Medien
-
-- **Staatsnetz Karsk:** offizielles Informationsnetz.
-- **Die Stimme der Leistung:** populäres Medium, das Erfolgsgeschichten von Soldaten, Arbeitern und Wissenschaftlern verbreitet.
-
-### Militär
-
-- **Karsker Sicherheitskorps:** zentrale Sicherheits- und Ordnungstruppe.
-- **Grenzsektor Nord:** stark mechanisierte Grenzformation.
-- **Rekonstruktionsbrigade:** Verband schwer augmentierter Soldaten, deren Mitglieder gleichzeitig Elitekämpfer und medizinische Versuchsträger des Staates sind.
-
-### Stadtviertel Varkesh
-
-- **Zentralforum:** Verwaltung, Staatspartei und zentrale Behörden.
-- **Medizinring:** Kliniken, Forschungseinrichtungen und Implantationszentren.
-- **Produktionsgürtel:** Fabriken, Arbeiterwohnungen und technische Ausbildungsstätten.
-
-### Historische Ereignisse
-
-- **Die Effizienzreform:** Einführung der zentralen Bürgerbewertung.
-- **Die Implantatkrise:** Ein medizinischer Skandal, bei dem zahlreiche schwer augmentierte Soldaten langfristige Schäden erlitten. Der Staat erklärte die Krise offiziell zur notwendigen Übergangsphase.
-- **Die Nacht der Listen:** Ein nie vollständig aufgeklärtes Ereignis, bei dem tausende Bürger über Nacht ihre bisherigen Bewertungen verloren und dadurch Wohnungen, Arbeitsplätze oder medizinische Ansprüche einbüßten.
-- **Der stille Streik:** Arbeiter legten ihre Maschinen nicht nieder. Sie erfüllten nur exakt die vorgeschriebenen Mindestleistungen. Der Staat konnte den Streik nicht als Sabotage beweisen und musste schließlich Zugeständnisse machen.
-
-# 3. Ossaria – Das freie technologische Land
-
-### Das freie technologische Land
-
-Ossaria besitzt einige der ältesten Städte des Kontinents. Seine Geschichte reicht weiter zurück als die heutigen Grenzen. Viele politische Institutionen entstanden ursprünglich als Bündnisse unabhängiger Städte und wurden später zu einem gemeinsamen Staat verbunden.
-
-Ossaria versteht sich als freie technologische Zivilisation.
-
-Seine moderne Gesellschaft ist stark von der Erinnerung an vergangene Kriege geprägt.
-
-Der zentrale Gedanke lautet:
-
-> **Die Freiheit der Lebenden wurde mit dem Leben der Toten erkauft.**
-
-### Politisches System
-
-Ossaria ist eine freie Republik mit starken zivilen Institutionen. Technologie wird nicht primär eingesetzt, um den Menschen zu ersetzen, sondern um ihn zu schützen und seine Möglichkeiten zu erweitern.
-
-### Die ossarische Rüstung
-
-Ossarische Soldaten tragen hochentwickelte technische Rüstungen. Diese Systeme können Sensorik, Kommunikation, Atemschutz, Zielerfassung und körperliche Unterstützung integrieren.
-
-Der entscheidende Unterschied zu Karsk:
-
-**Die Technik wird nicht zum Ersatz des Menschen.**
-
-Die Rüstung wird getragen. Sie soll den Körper schützen, nicht ihn langsam ersetzen.
-
-### Die Knochenmasken
-
-Viele ossarische Soldaten tragen Masken, deren Formen an Schädel, Knochen oder andere organische Strukturen erinnern.
-
-Diese Ästhetik ist keine reine Verehrung des Todes.
-
-Sie ist Erinnerung.
-
-Ein Soldat trägt symbolisch das Gesicht jener, die vor ihm gefallen sind.
-
-Die Maske sagt:
-
-> **Du stehst hier, weil andere vor dir gefallen sind.**
-
-### Militär
-
-Ossaria besitzt hochprofessionelle Truppen, moderne Aufklärung und technisch fortschrittliche gepanzerte Einheiten.
-
-Die Armee versucht, die zerstörerische Kraft moderner Technologie kontrolliert einzusetzen.
-
-### Der innere Konflikt
-
-Ossaria glaubt, dass seine Freiheit durch Vernunft, Technik und Erinnerung geschützt werden kann.
-
-Doch auch eine freie Gesellschaft kann ihre Vergangenheit romantisieren.
-
-Die zentrale Gefahr besteht darin, dass aus der Erinnerung an die Opfer irgendwann eine Rechtfertigung für neue Opfer wird.
-
----
-
-## Nationale Leitfrage
-
-**Leitfrage:** Kann Erinnerung Frieden bewahren, ohne selbst neue Feindschaft zu erzeugen?
-
-**Alltagswiderspruch:** Eine Kultur des Gedenkens schützt vor dem Vergessen, kann aber auch eine Generation an die Kriege ihrer Vorfahren binden.
-
-**Besonderer Ausbau:** Ossaria sollte regionale Unterschiede zwischen alten Städten, technologischen Zentren und ländlichen Gebieten besitzen.
-
-## Hauptstadt
-
-Ossar ist eine der ältesten Städte der Welt und zugleich eines der bedeutendsten technologischen Zentren Ossarias.
-
-Die Stadt besteht aus mehreren historischen Schichten. Alte Steinviertel stehen neben modernen Forschungszentren und geschützten Verkehrssystemen.
-
-Zahlreiche Plätze und Gebäude tragen Namen von Menschen, die in vergangenen Kriegen starben. Gedenkstätten sind kein abgegrenzter Bereich, sondern Teil des täglichen Stadtbildes.
-
-Die moderne Architektur versucht bewusst, neue Technik mit historischen Strukturen zu verbinden.
-
-**Stadtbild:** alte Steinarchitektur, moderne Schutzsysteme, Forschungszentren, Gedenkplätze.  
-**Wichtige Viertel:** Altstadt, Forschungsbezirk, Bürgerforum, Industriehafen, Gedenksiedlungen.  
-**Sozialer Gegensatz:** traditionsbewusste alte Stadtviertel gegenüber hochmodernen Technologiebezirken.
-
-## Regionen
-
-### Alte Kernstädte
-Historische Städte mit jahrhundertealten Bauwerken, Universitäten und Gedenkstätten. Familiengeschichte besitzt hier besonderes Gewicht.
-
-### Technologiebogen
-Moderne Forschungs- und Produktionsregion mit hochentwickelter Schutz- und Sensortechnik.
-
-### Westliche Ebenen
-Fruchtbare Agrarregion mit kleineren Städten und Dörfern. Traditionelle Lebensformen sind stärker ausgeprägt.
-
-### Grenzland
-Militärisch wichtige Region mit Festungen, Ausbildungsplätzen und zahlreichen Erinnerungsorten an frühere Kriege.
-
-**Regionaler Grundkonflikt:** Wie viel moderne Veränderung darf eine Gesellschaft zulassen, ohne ihre historische Identität zu verlieren?
-
-## Städte
-
-### Ossar – Hauptstadt
-Historische Metropole und technologisches Zentrum. Alte Stadtmauern, Forschungszentren und Gedenkstätten liegen unmittelbar nebeneinander.
-
-### Valeris
-Universitäts- und Kulturstadt mit zahlreichen Archiven und Museen. Hier wird besonders intensiv über die Geschichte vergangener Kriege diskutiert.
-
-### Eron
-Hochtechnologischer Produktionsstandort. Schutzsysteme, Sensorik und militärische Elektronik werden entwickelt und gefertigt.
-
-### Marenfeld
-Agrarisch geprägte Mittelstadt. Familienbetriebe, Handwerk und regionale Traditionen besitzen größere Bedeutung als in Ossar.
-
-### Kareth
-Grenzstadt mit großer Militärpräsenz. Viele Familien haben direkte Erfahrungen mit früheren Kriegen.
-
-## Dörfer und ländlicher Alltag
-
-### Altenfeld
-Historisches Dorf mit Familienhäusern, Kirche und altem Friedhof. Namen und Geschichten gefallener Vorfahren sind Teil des Ortsgedächtnisses.
-
-### Eichenau
-Landwirtschaftliches Dorf mit modernen Betrieben und traditionellen Festen.
-
-### Steinbrunn
-Handwerkerdorf, das für Metall- und Schutztechnik bekannt ist.
-
-### Grenzhof
-Kleine Gemeinde nahe alter Befestigungen. Viele Familien bewahren Erinnerungen an frühere Grenzkriege.
-
-## Familie und Generationen
-
-Familiengeschichte besitzt in Ossaria großes Gewicht. Namen von Großeltern und Urgroßeltern, Kriegserfahrungen, Berufe und Herkunft werden häufig bewusst weitergegeben.
-
-Mehrgenerationenfamilien sind verbreiteter als in den stark urbanisierten Nationen, auch wenn junge Menschen für Studium und Arbeit in größere Städte ziehen. Familien halten über Besuche, Briefe, digitale Archive und gemeinsame Gedenktage Kontakt.
-
-Kinder lernen früh, dass ihre Familie Teil einer längeren Geschichte ist. Gleichzeitig wird ihnen vermittelt, dass geerbte Schuld oder geerbter Ruhm keine automatische moralische Stellung erzeugen.
-
-Der wichtigste familiäre Wert ist **Erinnerung ohne blinden Gehorsam gegenüber der Vergangenheit**.
-
-## Alltag und Lebensgefühl
-
-### Wohnen und Arbeit
-
-Ossarische Städte verbinden historische Viertel mit moderner Infrastruktur. Alte Plätze, Friedhöfe und Denkmäler gehören selbstverständlich zum Stadtbild.
-
-Die Gesellschaft ist technisch fortschrittlich, aber nicht technikgläubig. Menschen diskutieren häufig darüber, wo technische Unterstützung endet und menschliche Verantwortung beginnt.
-
-### Familie und Bildung
-
-Kinder lernen Geschichte früh. Krieg wird nicht als Heldengeschichte vermittelt, sondern anhand von Namen, Verlustlisten und persönlichen Berichten.
-
-In vielen Familien gibt es Gegenstände von Vorfahren, die in früheren Kriegen gefallen sind.
-
-Das erzeugt Stolz, aber auch eine schwere Verantwortung.
-
-### Religion und Rituale
-
-Totengedenken besitzt hohe gesellschaftliche Bedeutung. Jahrestage gefallener Familienmitglieder werden oft gemeinsam begangen.
-
-Hochzeiten und Geburten werden dagegen bewusst als Feiern des Lebens gestaltet. Gerade die Nähe zum Tod verstärkt die Wertschätzung des Alltäglichen.
-
-### Soldaten
-
-Soldaten genießen Respekt, aber kein unkritisches Prestige. Ein Soldat soll sich bewusst sein, dass hinter jedem militärischen Erfolg menschliche Verluste stehen.
-
-Die Knochenmasken sind deshalb gesellschaftlich nicht bloß martialische Symbole. Für viele Familien bedeuten sie: Der Träger vergisst die Toten nicht.
-
-### Lebensgefühl
-
-**Hoffnung:** Dass die nächste Generation frei leben kann.
-
-**Angst:** Dass die Erinnerung an die Opfer irgendwann wieder zur Rechtfertigung neuer Opfer wird.
-
-**Tabu:** Gefallene Menschen nur als Zahlen zu behandeln.
-
----
-
-## Gesellschaftliche Ebenen 6–25
-
-### Punkt 6 – Jugend
-
-Geschichte und persönliche Verantwortung gehören zur Erziehung. Jugendliche besuchen Gedenkorte und lernen, militärische Vergangenheit kritisch zu betrachten.
-
-### Punkt 7 – Arbeit
-
-Mischung aus Industrie, Wissenschaft, Handwerk und Verwaltung; Berufsstolz ist mit Verantwortung verbunden.
-
-### Punkt 8 – Armut
-
-Armut wird über kommunale und staatliche Hilfe abgefedert; historische Städte haben deutliche soziale Unterschiede.
-
-### Punkt 9 – Wohlstand
-
-Wohlhabende Familien investieren häufig in Bildung, Kultur und langfristige Vermögenssicherung.
-
-### Punkt 10 – Religion
-
-Religion, Erinnerung und Friedenskultur verbinden sich; verschiedene Konfessionen sind gesellschaftlich anerkannt.
-
-### Punkt 11 – Bildung
-
-Geschichte, Wissenschaft und politische Bildung besitzen hohen Stellenwert.
-
-### Punkt 12 – Medien
-
-Pluralistische Medien mit starker investigativer und historischer Kultur.
-
-### Punkt 13 – Sprache
-
-Alte regionale Ausdrücke und Familiennamen besitzen hohen Erinnerungswert.
-
-### Punkt 14 – Essen
-
-Regionale Hausmannskost, Brot, Suppen, Gemüse und Familienrezepte besitzen hohen Stellenwert.
-
-### Punkt 15 – Kleidung
-
-Moderne Kleidung mit regionalen und historischen Symbolen.
-
-### Punkt 16 – Architektur
-
-Historische Stadtkerne werden mit moderner Technologie verbunden.
-
-### Punkt 17 – Freizeit
-
-Museen, Musik, Wandern, Familienfeste und historische Vereine.
-
-### Punkt 18 – Feste
-
-Gedenktage, Erntefeste und lokale historische Feiertage.
-
-### Punkt 19 – Trauer
-
-Öffentliche Erinnerung und Namen der Toten besitzen hohe Bedeutung.
-
-### Punkt 20 – Militär
-
-Militär ist stark, aber zivile Kontrolle und Erinnerung an Opfer begrenzen Heldenverehrung.
-
-### Punkt 21 – Krieg
-
-Krieg wird vor allem über seine Opfer und langfristigen Folgen erinnert.
-
-### Punkt 22 – Opposition
-
-Opposition ist Teil des normalen demokratischen Lebens.
-
-### Punkt 23 – Nachbarn
-
-Nachbarschaften pflegen Gedenkrituale und gegenseitige Hilfe.
-
-### Punkt 24 – Migration
-
-Migration ist möglich und wird gesellschaftlich vor allem über Integration und gemeinsame Institutionen diskutiert.
-
-### Punkt 25 – Familiengeschichte
-
-Namen, Briefe und Erinnerungen an Kriegstote werden bewusst archiviert.
-
-## Konkrete Lore-Anker
-
-### Familien
-- **Familie Ossan:** Historikerfamilie aus Valeris.
-- **Familie Mareth:** Handwerkerfamilie aus Marenfeld.
-
-### Personen
-- **Professor Elias Ossan:** Historiker und Verteidiger öffentlicher Erinnerungskultur.
-- **Lena Mareth:** Schutztechnikerin und Veteranenangehörige.
-
-### Institutionen
-- **Archiv der Gefallenen:** Nationales Archiv persönlicher Kriegszeugnisse.
-- **Freie Akademie Ossar:** Forschungs- und Bildungseinrichtung.
-
-### Wirtschaft
-- **Ossarische Schutzwerke:** Hersteller von Schutzsystemen und Sensorik.
-- **Marenfelder Maschinenbau:** Mittelständischer technischer Betrieb.
-
-### Medien
-- **Die Freie Stimme:** Große unabhängige Zeitung.
-- **Archivfunk:** Historischer Rundfunkkanal.
-
-### Militär
-- **Ossarische Schutzbrigade:** Professionelle Verteidigungsformation.
-- **Grenzkorps Kareth:** Territorialverbände an der Grenze.
-
-### Stadtviertel Ossar
-- **Alte Mauer:** Historisches Zentrum.
-- **Gedenkbezirk:** Museen, Friedhöfe und Archive.
-- **Technologiering:** Forschung und Produktion.
-
-### Historische Ereignisse
-- **Der Große Grenzkrieg:** Konflikt, der Ossarias moderne Erinnerungskultur prägte.
-- **Die Namenlisten:** Bürgerbewegung zur vollständigen Dokumentation der Kriegstoten.
-
----
-
-# 4. Rothain – Das Land der zerbrochenen Krone
-
-### Das Land der zerbrochenen Krone
-
-Rothain war einst das Zentrum eines großen Reiches. Dieses Reich zerfiel nach einer langen Folge von Kriegen, wirtschaftlichen Krisen und inneren Aufständen.
-
-Die heutige Republik entstand aus den Ruinen dieser Ordnung.
-
-Rothains politische Kultur ist deshalb von Erinnerung geprägt. Manche Bürger sehen die alte Ordnung als Unterdrückung, andere als verlorene Größe.
-
-### Politisches System
-
-Rothain ist eine Republik, in der alte militärische und gesellschaftliche Eliten weiterhin großen Einfluss besitzen.
-
-Historische Regimenter und Veteranenverbände sind politisch und kulturell bedeutend.
-
-### Militär
-
-Rothain besitzt eine große, vielseitige Armee. Moderne Verbände stehen neben Einheiten, deren militärische Kultur noch stark von historischen Regimentern geprägt ist.
-
-Rothain verbindet moderne Technologie mit traditionellen militärischen Strukturen.
-
-### Der innere Konflikt
-
-> **Ist die Vergangenheit eine Warnung oder ein Vermächtnis?**
-
-Rothain versucht, moderne Staatlichkeit und das Erbe seiner alten Ordnung miteinander zu verbinden.
-
----
-
-## Nationale Leitfrage
-
-**Leitfrage:** Wie lebt eine Gesellschaft mit einem Erbe, auf das sie gleichzeitig stolz und beschämt ist?
-
-**Alltagswiderspruch:** Dieselbe Uniform, dasselbe Denkmal oder dasselbe Familienwappen kann für einen Menschen Heimat und für einen anderen Unterdrückung bedeuten.
-
-**Besonderer Ausbau:** Rothain sollte besonders starke Generationenkonflikte erhalten. Ältere Menschen erinnern sich anders an das ehemalige Reich als jüngere, die nur noch die Republik kennen.
-
-## Hauptstadt
-
-Rothenburg war einst das politische Zentrum des ehemaligen Reiches. Heute ist es Hauptstadt der Republik, doch die Spuren der alten Ordnung sind überall sichtbar.
-
-Der ehemalige Kaiserpalast dient inzwischen als staatliches Museum und parlamentarisches Archiv. Alte Kasernen wurden teilweise in Universitäten, Behörden und Wohnviertel umgewandelt.
-
-Historische Regimenter besitzen noch immer eigene Häuser und Versammlungsorte. Auf manchen Plätzen stehen Denkmäler, deren Bedeutung zwischen Generationen stark umstritten ist.
-
-**Stadtbild:** monumentale Plätze, alte Paläste, Kasernen, Bürgerhäuser und moderne Regierungsgebäude.  
-**Wichtige Viertel:** Parlamentsviertel, ehemaliger Hofbezirk, Veteranenviertel, Arbeiterbezirke, neue Geschäftsstadt.  
-**Sozialer Gegensatz:** alte Familien und Veteranenverbände gegenüber jüngeren republikanischen und sozialen Bewegungen.
-
-## Regionen
-
-### Alte Krondistrikte
-Regionen, in denen ehemalige Adelshäuser, historische Güter und Veteranentraditionen besonders präsent sind.
-
-### Industrieller Osten
-Dicht besiedelte Städte mit Fabriken und einer starken Arbeiterschaft. Hier ist die alte imperiale Ordnung deutlich weniger beliebt.
-
-### Republikanischer Westen
-Region moderner Verwaltung, Universitäten und neuer Unternehmen. Die Bevölkerung identifiziert sich stärker mit der heutigen Republik.
-
-### Grenzprovinzen
-Gebiete, die während des ehemaligen Reiches mehrfach umkämpft wurden. Dort ist die Erinnerung an Krieg weniger abstrakt.
-
-**Regionaler Grundkonflikt:** Für einen Menschen im alten Kernland kann das Reich ein Familienerbe sein; für einen Menschen aus einer ehemaligen Randprovinz kann es vor allem eine Erinnerung an Fremdherrschaft sein.
-
-## Städte
-
-### Rothenburg – Hauptstadt
-Politisches Zentrum der Republik und ehemaliger Sitz der imperialen Macht. Paläste, Kasernen und republikanische Institutionen prägen die Stadt.
-
-### Eisenfurt
-Industriestadt mit großer Arbeiterschaft. Politisch stark republikanisch und sozial geprägt.
-
-### Kronfeld
-Stadt alter Familien, Veteranenverbände und historischer Regimenter. Tradition ist Teil des täglichen Lebens.
-
-### Westheim
-Moderne Universitäts- und Verwaltungsstadt. Besonders viele junge Menschen identifizieren sich mit der Republik statt mit dem ehemaligen Reich.
-
-### Grenzwacht
-Ehemalige Festungsstadt. Die Bevölkerung besitzt eine starke lokale Militärkultur, aber auch ein ausgeprägtes Bewusstsein für die Kosten vergangener Kriege.
-
-## Dörfer und ländlicher Alltag
-
-### Kronweiler
-Dorf mit ehemaligen Gutshöfen und Familien, die ihre Abstammung über Generationen dokumentieren.
-
-### Eisenried
-Arbeiterdorf nahe einer Fabrik. Die Bevölkerung steht alten aristokratischen Traditionen eher kritisch gegenüber.
-
-### Westtal
-Modernisiertes Dorf mit vielen Pendlern und jungen Familien.
-
-### Veteranenhof
-Siedlung, in der mehrere Generationen von Soldatenfamilien leben. Militärische Erinnerung ist Alltag, aber nicht unumstritten.
-
-## Familie und Generationen
-
-Rothain besitzt eine starke Tradition familiärer Herkunft. In alten Familien werden Stammbäume, Orden, Uniformen, Briefe und Fotografien aufbewahrt. In Arbeiterfamilien existieren ähnliche Erinnerungskulturen, allerdings häufig bezogen auf Fabriken, Gewerkschaften und politische Kämpfe.
-
-Militärische Familien können mehrere Generationen von Soldaten hervorbringen. Andere Familien reagieren bewusst mit Ablehnung auf diese Tradition.
-
-Heirat kann gesellschaftliche Netzwerke verbinden, ist aber längst nicht mehr ausschließlich eine Angelegenheit von Herkunft und Stand. Junge Menschen hinterfragen zunehmend die Erwartungen ihrer Eltern.
-
-Der zentrale Generationenkonflikt lautet: **Was soll man von der Vergangenheit bewahren, und was muss man bewusst beenden?**
-
-## Alltag und Lebensgefühl
-
-### Gesellschaft
-
-Rothain besitzt starke regionale Unterschiede. In ehemaligen Residenzstädten finden sich alte Familien, Veteranenvereine und historische Institutionen. Industriestädte und ländliche Gebiete besitzen dagegen eine wesentlich pragmatischere Kultur.
-
-Viele Familien bewahren militärische Erinnerungsstücke auf. Nicht jede Familie ist stolz darauf. Manche sehen darin ein Erbe, von dem sich die Gesellschaft endlich lösen sollte.
-
-### Arbeit und soziale Schichten
-
-Alte Vermögen, neue Unternehmen und öffentliche Verwaltungen stehen nebeneinander. Der soziale Aufstieg ist möglich, aber Beziehungen zu alten Eliten können weiterhin Türen öffnen.
-
-Das erzeugt einen stillen Konflikt zwischen Leistungsgesellschaft und Herkunft.
-
-### Familie
-
-Großfamilien sind kulturell stärker verankert als in Averon. Familiennamen und Herkunft besitzen gesellschaftliches Gewicht.
-
-Bei manchen Familien beginnt eine militärische Laufbahn über Generationen. Andere vermeiden den Militärdienst bewusst, weil sie mit der imperialen Vergangenheit nichts mehr zu tun haben wollen.
-
-### Kultur
-
-Historische Feste, Regimentsmusik und alte Architektur sind Teil des öffentlichen Lebens. Gleichzeitig gibt es eine starke Gegenkultur, die genau diese Traditionen kritisiert.
-
-### Lebensgefühl
-
-**Hoffnung:** Eine große Vergangenheit in eine friedliche Zukunft zu verwandeln.
-
-**Angst:** Dass die alte Ordnung unter einem neuen Namen zurückkehrt.
-
-**Tabu:** Die offene Behauptung, die vergangenen imperialen Kriege seien ausschließlich ruhmreich gewesen.
-
----
-
-## Gesellschaftliche Ebenen 6–25
-
-### Punkt 6 – Jugend
-
-Jugend erlebt den Gegensatz zwischen imperialer Familienerinnerung und republikanischer Gegenwart. Veteranenfamilien vermitteln Tradition, Schulen diskutieren deren Grenzen.
-
-### Punkt 7 – Arbeit
-
-Verwaltung, Industrie, Dienstleistungen und traditionelle Berufe koexistieren; alte Netzwerke erleichtern manchen den Zugang zu Berufen.
-
-### Punkt 8 – Armut
-
-Alte Vermögen und neue Armut können direkt nebeneinander existieren. Herkunft beeinflusst Chancen weiterhin indirekt.
-
-### Punkt 9 – Wohlstand
-
-Alte Familien besitzen kulturelles Kapital; neue Unternehmer schaffen neue Eliten.
-
-### Punkt 10 – Religion
-
-Alte Kirchen- und Militärtraditionen bestehen neben säkularer republikanischer Kultur.
-
-### Punkt 11 – Bildung
-
-Schulen verbinden republikanische Staatsbürgerkunde mit kritischer Geschichtsaufarbeitung.
-
-### Punkt 12 – Medien
-
-Freie Medien diskutieren intensiv über Monarchie, Republik und Vergangenheit.
-
-### Punkt 13 – Sprache
-
-Alte höfische Begriffe stehen neben moderner republikanischer Alltagssprache.
-
-### Punkt 14 – Essen
-
-Deftige regionale Küche und historische Festgerichte.
-
-### Punkt 15 – Kleidung
-
-Moderne Kleidung neben bewusster Pflege historischer Stile.
-
-### Punkt 16 – Architektur
-
-Kaiserliche Gebäude stehen neben republikanischen Institutionen und Arbeitervierteln.
-
-### Punkt 17 – Freizeit
-
-Fußball, Regimentstraditionen, Musik, Kneipen und historische Vereine.
-
-### Punkt 18 – Feste
-
-Republikanische Feiertage und kontrovers erinnerte ehemalige Reichstage.
-
-### Punkt 19 – Trauer
-
-Familien bewahren Briefe, Uniformen und Erinnerungsstücke; die Bewertung militärischer Toter ist umstritten.
-
-### Punkt 20 – Militär
-
-Militär besitzt starke historische Traditionen und wird zugleich kritisch beobachtet.
-
-### Punkt 21 – Krieg
-
-Krieg ist Teil der nationalen Familiengeschichte und deshalb Gegenstand heftiger Erinnerungskämpfe.
-
-### Punkt 22 – Opposition
-
-Parteien streiten besonders über Vergangenheit, Militär und soziale Ordnung.
-
-### Punkt 23 – Nachbarn
-
-Alte Viertel besitzen starke Familien- und Vereinsnetzwerke.
-
-### Punkt 24 – Migration
-
-Migration steht häufig im Spannungsfeld zwischen wirtschaftlichem Bedarf und historischer Identität.
-
-### Punkt 25 – Familiengeschichte
-
-Familien bewahren sowohl imperiale als auch republikanische Erinnerungen; dieselbe Vergangenheit kann gegensätzlich erzählt werden.
-
-## Konkrete Lore-Anker
-
-### Familien
-- **Haus Rothen:** Alte Familie mit imperialer Vergangenheit.
-- **Familie Eisen:** Arbeiterfamilie aus Eisenfurt.
-
-### Personen
-- **Albrecht Rothen:** Historiker und Vertreter traditioneller Eliten.
-- **Mara Eisen:** Gewerkschaftsorganisatorin und republikanische Aktivistin.
-
-### Institutionen
-- **Nationalarchiv Rothenburg:** Bewahrt kaiserliche und republikanische Dokumente.
-- **Bund der Veteranenfamilien:** Gesellschaftlicher Verband ehemaliger Soldatenfamilien.
-
-### Wirtschaft
-- **Eisenfurter Werke:** Großbetrieb für Maschinenbau.
-- **Rothen & Söhne:** Alte Handels- und Finanzfamilie.
-
-### Medien
-- **Republik heute:** Republikanisches Nachrichtenblatt.
-- **Die Krone:** Historisch-konservatives Magazin.
-
-### Militär
-- **1. Republikanisches Korps:** Traditionell geprägte reguläre Formation unter ziviler Kontrolle.
-- **Grenzwachtbrigade:** Verteidigungsverband ehemaliger Festungsregionen.
-
-### Stadtviertel Rothenburg
-- **Kronenviertel:** Alte Paläste und ehemalige Hofgebäude.
-- **Republikforum:** Parlament und moderne Verwaltung.
-- **Eisenring:** Arbeiter- und Industrieviertel.
-
-### Historische Ereignisse
-- **Fall der Krone:** Ende des alten Imperiums.
-- **Republikanischer Neuaufbau:** Aufbau der heutigen Staatsordnung.
-
----
-
-# 5. Sahr – Der Bund der Handelsstädte
-
-### Der Bund der Handelsstädte
-
-Sahr liegt in einer Region, in der Wasser, fruchtbares Land und Handelswege über Jahrhunderte über die politische Macht entschieden.
-
-Seine Städte entwickelten sich entlang großer Verkehrsachsen.
-
-Sahr ist kein vollständig zentralisierter Staat. Die wichtigsten Städte besitzen erheblichen politischen Einfluss und bilden gemeinsam einen Handels- und Verteidigungsbund.
-
-### Politisches System
-
-Mächtige Städte, Handelsfamilien und regionale Verwaltungen teilen sich die politische Macht.
-
-Der Zusammenhalt des Landes entsteht weniger durch eine zentrale Regierung als durch gemeinsame wirtschaftliche Interessen und gegenseitige Abhängigkeit.
-
-### Technologie und Infrastruktur
-
-Sahrs wichtigste technische Errungenschaft ist nicht eine einzelne Waffe, sondern seine Infrastruktur:
-
-- Verkehrsnetze
-- Wasseranlagen
-- Versorgungsknoten
-- mobile Werkstätten
-- Aufklärungssysteme
-- Logistikzentren
-
-Der zentrale strategische Gedanke lautet:
-
-> **Wer die Versorgung kontrolliert, kontrolliert das Land.**
-
-### Militär
-
-Die Streitkräfte Sahrs sind auf Beweglichkeit, Aufklärung und Kontrolle großer Räume spezialisiert. Kleine Verbände können über lange Zeiträume unabhängig operieren.
-
----
-
-## Nationale Leitfrage
-
-**Leitfrage:** Was hält eine Gesellschaft zusammen, wenn Handel wichtiger ist als gemeinsame Herkunft?
-
-**Alltagswiderspruch:** Die Städte leben vom offenen Austausch, fürchten aber gleichzeitig Abhängigkeit von fremden Waren, Häfen und Märkten.
-
-**Besonderer Ausbau:** Die Handelsstädte sollten untereinander konkurrieren. Sahr ist deshalb nicht einfach ein geeinter Wirtschaftsblock, sondern ein permanenter Ausgleich zwischen Eigeninteressen.
-
-## Hauptstadt
-
-Sarun ist keine klassische Zentralhauptstadt. Sie ist die größte und politisch wichtigste unter mehreren mächtigen Handelsstädten.
-
-Die Stadt liegt an einem großen Wasserweg und wird von Hafenanlagen, Märkten, Lagerhäusern und Handelsplätzen geprägt.
-
-Politische Macht ist sichtbar mit wirtschaftlicher Macht verbunden. Handelsfamilien besitzen prachtvolle Stadthäuser, während Hafenarbeiter in dicht besiedelten Vierteln leben.
-
-Sarun ist mehrsprachig und kulturell heterogen. Fremde Waren und fremde Menschen gehören zum normalen Stadtbild.
-
-**Stadtbild:** Kanäle, Hafenanlagen, Märkte, Lagerhäuser, Brücken und dicht bebaute Wohnviertel.  
-**Wichtige Viertel:** Großer Hafen, Händlerstadt, Werftbezirk, Marktviertel, Arbeiterviertel.  
-**Sozialer Gegensatz:** alte Handelsfamilien gegenüber Hafenarbeitern und kleinen Händlern.
-
-## Regionen
-
-### Saruner Becken
-Dicht besiedeltes Handelszentrum rund um die Hauptstadt. Banken, Märkte und politische Institutionen konzentrieren sich hier.
-
-### Flussländer
-Fruchtbare Regionen mit Landwirtschaft, Flusshäfen und kleineren Handelsstädten.
-
-### Küstenbund
-Mehrere konkurrierende Hafenstädte. Jede besitzt eigene Traditionen und mächtige Handelsfamilien.
-
-### Hinterland
-Weniger wohlhabende Region mit Rohstoffen, Landwirtschaft und Transportkorridoren. Viele Menschen arbeiten für Unternehmen aus den großen Städten.
-
-**Regionaler Grundkonflikt:** Die Handelsstädte profitieren vom offenen System, während das Hinterland häufig stärker von Preis- und Nachfrageänderungen abhängig ist.
-
-## Städte
-
-### Sarun – Hauptstadt
-Größtes Handelszentrum des Bundes. Hafen, Banken, Märkte und politische Institutionen liegen dicht beieinander.
-
-### Taris
-Reiche Handelsstadt mit alten Kaufmannsfamilien. Prestige und wirtschaftlicher Einfluss gehen eng miteinander einher.
-
-### Velisport
-Großer Arbeitshafen mit Werften und Lagerhäusern. Die Arbeiterbewegung besitzt hier erheblichen Einfluss.
-
-### Ravan
-Flussstadt im landwirtschaftlich geprägten Hinterland. Bedeutendes Zentrum für Getreide, Vieh und Binnenhandel.
-
-### Südtor
-Schnell wachsende Grenz- und Handelsstadt. Viele Migranten und kleinere Händler leben hier.
-
-## Dörfer und ländlicher Alltag
-
-### Flussau
-Dorf am Wasser mit Landwirtschaft, Fährbetrieb und kleinem Markt.
-
-### Kornhafen
-Umschlagdorf zwischen Agrarregion und Flusshandel. Lagerhäuser und Fuhrunternehmen sind zentral.
-
-### Küstenruh
-Fischerdorf mit starkem Familienzusammenhalt und eigener lokaler Tradition.
-
-### Südgarten
-Mischdorf aus Landwirtschaft, kleinen Händlern und neu eingewanderten Familien.
-
-## Familie und Generationen
-
-Familien sind stark in Handels- und Verwandtschaftsnetzwerke eingebunden. Ein Familienname kann auf einem Markt, in einer Werft oder bei einer Handelsgesellschaft wirtschaftliches Gewicht besitzen.
-
-Großfamilien sind besonders in kleineren Städten und Dörfern wichtig. Verwandte können gemeinsam Unternehmen führen, Waren transportieren oder sich in Krisen finanziell unterstützen.
-
-Ehe kann weiterhin wirtschaftliche Bedeutung besitzen, ohne ausschließlich geschäftlich bestimmt zu sein. Unterschiedliche religiöse und kulturelle Hintergründe sind in Handelsstädten normal.
-
-Kinder lernen früh, dass Beziehungen Vertrauen schaffen und Vertrauen wirtschaftlichen Wert besitzt. Die Schattenseite ist der soziale Druck, den Erwartungen der eigenen Familie gerecht zu werden.
-
-## Alltag und Lebensgefühl
-
-### Stadtleben
-
-Sahr ist laut, dicht und wirtschaftlich aktiv. Märkte, Häfen, Werkstätten und Lagerhäuser bestimmen das Stadtbild.
-
-Menschen sind an Fremde gewöhnt. Mehrere Sprachen können innerhalb eines einzigen Viertels gesprochen werden.
-
-### Arbeit
-
-Handel und Logistik sind die wichtigsten sozialen Aufstiegsmöglichkeiten. Eine Familie kann mit einem kleinen Lagerhaus beginnen und innerhalb einer Generation ein bedeutendes Unternehmen aufbauen.
-
-Gleichzeitig leben viele Hafenarbeiter unter unsicheren Bedingungen.
-
-### Familie
-
-Familiennetzwerke besitzen wirtschaftliche Bedeutung. Verwandte helfen bei Transport, Handel und Kredit.
-
-Ehen können deshalb sowohl persönliche als auch wirtschaftliche Bindungen sein.
+Schulen lehren Umgang mit Quellen. Wer nur einen Kanal kennt, gilt als schlecht ausgebildet.
 
 ### Religion
 
-Sahr ist religiös vielfältig. Hafenstädte haben über Jahrhunderte unterschiedliche Glaubensrichtungen aufgenommen. Religiöse Toleranz ist weniger ein philosophisches Ideal als eine praktische Notwendigkeit des Handels.
+Vielfältig und privat. Sie organisiert den Staat nicht.
 
-### Militär
+### Soldaten im Alltag
 
-Soldaten gelten als Beschützer von Handelswegen. Versorgung und Infrastruktur werden gesellschaftlich fast ebenso hoch bewertet wie Kampfkraft.
+Reservisten sind Kollegen, die zeitweise fehlen. Man erwartet, dass sie zurück in die Arbeit passen. Ein Stand des Krieges wäre eine Niederlage der Republik, auch ohne verlorene Schlacht.
 
 ### Lebensgefühl
 
-**Hoffnung:** Aufstieg durch Handel und Eigeninitiative.
-
-**Angst:** Unterbrochene Versorgung, Blockaden und wirtschaftlicher Zusammenbruch.
-
-**Tabu:** Den wirtschaftlichen Nutzen einer Krise offen über das menschliche Leid zu stellen.
-
----
+**Hoffnung:** Dass man früher weiß als der Schaden.  
+**Angst:** Dass die Vorbereitung auf die Krise selbst zum Alltag wird.  
+**Tabu:** Hohe Verluste als anonyme Masse zu verbuchen.
 
 ## Gesellschaftliche Ebenen 6–25
 
 ### Punkt 6 – Jugend
 
-Jugendliche lernen früh Handel, praktische Fähigkeiten und regionale Netzwerke kennen. In Hafenstädten ist kulturelle Vielfalt selbstverständlich.
+Jugendliche sind früh im Netz und früh in der Debatte. Dienst ist eine mögliche Unterbrechung, kein Lebensplan.
 
 ### Punkt 7 – Arbeit
 
-Handel, Logistik, Schifffahrt, Landwirtschaft und Handwerk bilden das Rückgrat.
+Gerät, Nachrichten, Handel, Energie. Arbeit hängt an der Verbindung. Fällt sie, steht die Schicht.
 
 ### Punkt 8 – Armut
 
-Hafenarbeit und Handel schaffen Aufstieg, aber prekäre Arbeitsverhältnisse und Versorgungskrisen treffen arme Familien stark.
+Armut ist, von den Knoten abgeschnitten zu sein. Materiell kann ein Haushalt halten und trotzdem nichts mehr rechtzeitig erfahren.
 
 ### Punkt 9 – Wohlstand
 
-Handel, Schifffahrt und Familienunternehmen erzeugen große Vermögen.
+Wohlstand heißt Zugang, Gerät, eine Wohnung am Korridor. Er sieht nach Beweglichkeit aus, nicht nach Land.
 
 ### Punkt 10 – Religion
 
-Handelswege haben eine religiös vielfältige Gesellschaft geschaffen.
+Viele kleine Gemeinschaften. Keine trägt die Republik.
 
 ### Punkt 11 – Bildung
 
-Praktische Handels-, Technik- und Sprachkenntnisse sind besonders wertvoll.
+Schulen und kurze, hohe Ausbildungsgänge. Urteilsfähigkeit ist das Ziel, nicht Gehorsam.
 
 ### Punkt 12 – Medien
 
-Handelsmedien, lokale Blätter und internationale Nachrichten konkurrieren.
+Viele Stimmen, schnelle Korrektur, ebenso schneller Irrtum. Die politische Kontrolle des Krieges läuft auch über diese Stimmen.
 
 ### Punkt 13 – Sprache
 
-Handelsstädte sind mehrsprachig; Lehnwörter und Händlerjargon sind verbreitet.
+Eine gemeinsame Amtssprache, im Alltag stark gemischt. Verständigung gilt mehr als Reinheit.
 
 ### Punkt 14 – Essen
 
-Fisch, Getreide, Gewürze und internationale Handelsprodukte prägen die Küche.
+Schnell, städtisch, Vorrat nur dort, wo die Nordmark ihn noch hält. Die Küste liefert, sie zelebriert nicht.
 
 ### Punkt 15 – Kleidung
 
-Leichte Kleidung, Hafen- und Arbeitskleidung, regionale Stoffe.
+Zivil und wechselnd. Die olivfarbene Arbeitsuniform mit den sandfarbenen Streifen ist Dienst, nicht Mode.
 
 ### Punkt 16 – Architektur
 
-Hafenarchitektur, Lagerhäuser, Brücken, Märkte und dichte Handelsviertel.
+Neue Blöcke, offene Hallen, wenig Denkmal. Was nicht mehr verbindet, wird umgebaut.
 
 ### Punkt 17 – Freizeit
 
-Märkte, Hafenfeste, Wassersport und Handelstreffen.
+Netze, Sport, Küste. Freizeit ist echt und jederzeit von einer Lage meldung unterbrechbar.
 
 ### Punkt 18 – Feste
 
-Hafenfeste, Handelsfeste und religiös vielfältige Stadtfeste.
+Gründungstage der Republik, lokale Feste. Kein Siegeskalender.
 
 ### Punkt 19 – Trauer
 
-Familien und Handelsgemeinschaften unterstützen Hinterbliebene praktisch und finanziell.
+Namen, zivile Berufe daneben, politischer Druck, wenn die Liste lang wird. Die Familie bleibt sichtbar.
 
 ### Punkt 20 – Militär
 
-Militär schützt Handelswege, Häfen und Versorgung.
+Bürger in Uniform, Führung nach unten, solange die Verbindung hält. Das Parlament bleibt im Raum.
 
 ### Punkt 21 – Krieg
 
-Versorgung, Blockaden und Handelswege sind zentrale Kriegserfahrungen.
+Krieg soll kurz sein, weil ein langer Krieg die Freiheit zur Ausnahme macht. Dauert er trotzdem, bricht Averon deshalb nicht zusammen.
 
 ### Punkt 22 – Opposition
 
-Stadtinteressen, Handelsgruppen und regionale Parteien bilden starke Gegenmacht.
+Opposition streitet über Überwachung der eigenen Netze und über die Länge von Einsätzen. Sie streitet nicht über den Bestand der Republik.
 
 ### Punkt 23 – Nachbarn
 
-Nachbarschaften in Hafenstädten sind kulturell besonders vielfältig.
+Nachbarn sind oft Kollegen der Verbindung. Man hilft schnell und kennt sich weniger lange als in Eldran.
 
 ### Punkt 24 – Migration
 
-Handel macht Migration alltäglich und wirtschaftlich notwendig.
+Zuzug ist normal und schnell eingebunden, solange die Person im Netz einen Ort hat. Wer keinen hat, ist ärmer als ein armer Haushalt mit Anbindung.
 
 ### Punkt 25 – Familiengeschichte
 
-Familiengeschichte ist häufig zugleich Handelsgeschichte.
+Geschichten sind kurz, weil der Staat jung ist. Man erinnert Krisen, die man früh gesehen hat, und Krisen, die man zu spät gesehen hat.
 
 ## Konkrete Lore-Anker
 
 ### Familien
-- **Familie Sarin:** Alte Handelsfamilie aus Sarun.
-- **Familie Vel:** Hafenarbeiter- und Fischerfamilie.
+
+- **Familie Nov:** Gerätebauer in Novaris. Bauen die Verbindung und benutzen sie.
+- **Familie Ruh:** Nordmark. Kennen die Lücke im Netz.
 
 ### Personen
-- **Nadia Sarin:** Handelsunternehmerin und Mitglied des Stadtrates.
-- **Tomas Vel:** Hafenmeister und Gewerkschaftsvertreter.
+
+- **Lina Nov:** Ingenieurin und Reservistin. Handelt vor Ort und erwartet, dass das Parlament das später trägt.
+- **Ed Ruh:** Melder in Nordfall. Übt den Ausfall.
 
 ### Institutionen
-- **Bund der Handelsstädte:** Politischer und wirtschaftlicher Zusammenschluss.
-- **Saruner Handelskammer:** Einflussreiche Wirtschaftsorganisation.
+
+- **Knotenhalle:** Sitz der Lage, nicht der Herrschaft.
+- **Parlament Novaris:** Öffnet den Krieg nicht dem Stab allein.
 
 ### Wirtschaft
-- **Sarin Handelsgruppe:** Familienunternehmen für Fernhandel.
-- **Velisport Werften:** Große Schiffbauindustrie.
+
+- **Novaris Gerät:** Sensorik und Nachrichten.
+- **Westhaven Lager:** Versorgung, die an Land weitergeht.
 
 ### Medien
-- **Der Handelskurier:** Wirtschafts- und Politikzeitung.
-- **Hafenstimme:** Lokales Blatt der Arbeiter.
+
+- **Lage Offen:** Schnelles Blatt. Korrigiert sich laut.
+- **Nordfall Brief:** Was ohne Verbindung noch stimmt.
 
 ### Militär
-- **Bundeshandelsflotte:** Schutz von Häfen und Handelswegen.
-- **Flusssicherungsregiment:** Sicherung von Transportwegen.
 
-### Stadtviertel Sarun
-- **Kaufmannsring:** Banken und Handelshäuser.
-- **Alter Hafen:** Lagerhäuser und Märkte.
-- **Flussviertel:** Arbeiter und kleine Händler.
+- **Bürgerheer Averon:** Vernetzt, politisch begrenzt.
+- **Nordfall Übung:** Der Ausfall als Training, nicht als Zusammenbruch.
+
+### Stadtviertel
+
+- **Parlamentsraster:** Die Kontrolle neben der Lage.
+- **Werkhöfe:** Wo die Verbindung gebaut wird.
 
 ### Historische Ereignisse
-- **Gründung des Handelsbundes:** Zusammenschluss der wichtigsten Städte.
-- **Große Blockade:** Versorgungskrise, die die Bedeutung der Handelswege endgültig bewies.
+
+- **Die frühe Meldung:** Eine Krise, die Averon kurz gehalten hat, weil jemand vor Ort gehandelt hat.
+- **Die stille Woche:** Ein Netzausfall, nach dem Eigeninitiative zur Zersplitterung wurde. Seitdem übt Nordfall.
 
 ---
 
-# 6. Steinmark – Das Land der Ordnung
+# 5. Orthea – Die wissenschaftliche Republik
 
-### Das Land der Ordnung
+### Die wissenschaftliche Republik
 
-Steinmark entstand aus mehreren Staaten, die sich nach einer langen Epoche gegenseitiger Kriege zu einem föderalen Bund zusammenschlossen.
+Orthea wird von Wissenschaft und Erkenntnis getrieben. Der Staat hält eine Behauptung für gültig, wenn sie gemessen und danach von einer gewählten Stelle unterschrieben wurde. Der Krieg ist für Orthea ein Gegenstand, den man modellieren kann, bis das Modell an den Menschen scheitert.
 
-Seine politische Kultur basiert auf Verwaltung, Gesetz und institutioneller Stabilität.
+### Die besondere Ordnung
 
-Steinmark glaubt nicht daran, dass gute Absichten einen Staat retten.
-
-> **Nur funktionierende Institutionen können einen Staat erhalten.**
+Die Ordnung ist Messung plus Unterschrift. Ein Institut liefert das Modell. Ein Amt entscheidet, ob danach gehandelt wird. Keines von beiden darf das andere spielen. Die Grenze ist das, was ein Modell von Menschen nicht weiß: Angst, Trotz, ein Tal, das sich nicht wie die Probe verhält.
 
 ### Politisches System
 
-Steinmark ist eine föderale Republik mit starken Verwaltungen, verbindlichen Gesetzen und umfangreichen staatlichen Institutionen.
+Asteron ist eine Stadt der Institute, Kliniken und des Parlaments, das die Unterschrift gibt. Forschung ist öffentlich genug, dass man sie angreifen kann. Sie ist nicht die Regierung.
+
+### Technologie
+
+Präzise Sensorik, Labore, eine dünne technische Linie auf hellem Grau. Kein Gold, kein Knochen. Technik soll erkennen. Sie soll den Körper nicht zum Träger eines Kults machen.
 
 ### Militär
 
-Die steinmärkischen Streitkräfte sind stark standardisiert.
-
-Ausbildung, Logistik und Befehlsketten besitzen einen hohen Stellenwert.
-
-Steinmark versucht nicht, den einzelnen Soldaten übermenschlich zu machen.
-
-Stattdessen soll ein Verband aus normalen Menschen funktionieren wie ein einziges System.
+Die Truppe ist klein im Vergleich zu dem, was die Institute über sie wissen. Einsätze folgen einem Modell und einer politischen Unterschrift. Scheitert das Modell, ist das ein wissenschaftlicher Fehler und ein politischer zugleich.
 
 ### Der innere Konflikt
 
-Die Stärke Steinmarks ist zugleich seine Schwäche.
+Orthea kann fast alles messen und muss trotzdem zugeben, wo die Messung aufhört. Diese Grenze ist kein Zusammenbruch. Sie ist die Pointe des Staates. Wer sie leugnet, macht aus Erkenntnis eine Religion. Das will Orthea nicht sein.
 
-Ein System, das auf Ordnung basiert, kann Schwierigkeiten bekommen, wenn die Realität schneller verändert als die Institutionen reagieren können.
-
-Jüngere Offiziere fordern deshalb mehr Eigenständigkeit. Die ältere Führung fürchtet, dass zu viel Eigeninitiative die Armee wieder in eine politische Macht verwandeln könnte.
-
----
+> **Was geschieht, wenn eine Gesellschaft fast alles messen kann und der Rest trotzdem entscheidet?**
 
 ## Nationale Leitfrage
 
-**Leitfrage:** Wann schützt Ordnung die Freiheit – und wann ersetzt sie sie?
+**Leitfrage:** Wie weit trägt Erkenntnis, wenn Menschen sich nicht wie die Probe verhalten?
 
-**Alltagswiderspruch:** Bürger verlassen sich auf funktionierende Institutionen und beginnen gerade deshalb zu spüren, wie mächtig diese Institutionen geworden sind.
+**Alltagswiderspruch:** Bürger wollen die Genauigkeit und wollen nicht von einem Modell regiert werden, das sie nicht unterschrieben haben.
 
-**Besonderer Ausbau:** Die Bundesländer Steinmarks sollten unterschiedliche Verwaltungskulturen besitzen. Dadurch wird Föderalismus im Alltag sichtbar.
+**Besonderer Ausbau:** Institut und Amt bleiben getrennt. Die Unterschrift ist politisch. Die Messung ist es nicht.
 
 ## Hauptstadt
 
-Steinburg ist eine nüchterne föderale Hauptstadt. Die Stadt wurde bewusst als Verwaltungszentrum entwickelt und besitzt weniger monumentale Selbstdarstellung als viele andere Hauptstädte.
+Asteron forscht und regiert nebeneinander. Man sieht Labore früher als Denkmäler.
 
-Bundesbehörden, Gerichte und Archive prägen das Zentrum. Die einzelnen Bundesländer unterhalten eigene Vertretungen und Kulturhäuser.
-
-Die Stadt ist bekannt für ihre Verwaltungsgebäude, öffentlichen Bibliotheken und großen Verbands- und Vereinszentren.
-
-**Stadtbild:** funktionale Verwaltungsarchitektur, breite Straßen, öffentliche Parks, Archive und Gerichte.  
-**Wichtige Viertel:** Bundesviertel, Gerichtsbezirk, Länderhäuser, Bürgerstadt, Handwerksviertel.  
-**Sozialer Gegensatz:** Bundesverwaltung und politische Institutionen gegenüber einer großen bürgerlichen Dienstleistungs- und Handwerkerschicht.
+**Stadtbild:** Helle Bauten, Höfe, Kliniken, ein Parlamentssaal ohne Pathos.  
+**Wichtige Viertel:** Institutsgürtel, Kliniken, der Saal der Unterschrift.  
+**Sozialer Gegensatz:** die, die messen, gegenüber denen, die die Folge tragen.
 
 ## Regionen
 
-### Bundeszentrum
-Verwaltungs- und Bildungsregion rund um die Hauptstadt. Bundesbehörden, Gerichte und große Archive prägen das Leben.
+### Institutsbogen
 
-### Nordbund
-Industriell und wirtschaftlich starke Bundesländer mit großer Bedeutung für Maschinenbau und Logistik.
+Um Asteron. Hier entsteht das Modell.
 
-### Südmark
-Mittelgebirgs- und Agrarregion mit kleineren Städten und ausgeprägter Vereinskultur.
+### Die Probenlande
 
-### Ostprovinzen
-Historisch stärker militarisierte Regionen an alten Konfliktgrenzen. Öffentliche Erinnerung an vergangene Kriege ist hier besonders präsent.
+Landstriche, die oft vermessen werden und das satt haben.
 
-**Regionaler Grundkonflikt:** Die Bundesländer akzeptieren den gemeinsamen Staat, wollen aber ihre eigenen Verwaltungs- und Kulturtraditionen behalten.
+### Die Werkhöfe
+
+Bauen das Gerät der Messung. Keine Körperwerke wie in Karsk.
+
+### Die Abweichung
+
+Regionen, deren Zahlen nie ganz zur Hauptstadt passen. Sie sind Ortheas Lehre, nicht seine Schande.
 
 ## Städte
 
-### Steinburg – Hauptstadt
-Bundes-, Gerichts- und Verwaltungszentrum. Die Stadt ist weniger von einer einzelnen Industrie als von Institutionen geprägt.
+### Asteron
 
-### Falkenheim
-Industrielle Stadt mit starkem Maschinenbau und ausgeprägter Berufsausbildung.
+Institute und Unterschrift.
 
-### Talheim
-Mittelstadt im Süden mit Vereinen, Handwerksbetrieben und regionaler Verwaltung.
+### Messau
 
-### Eisenau
-Historische Militär- und Festungsstadt. Veteranenvereine und Bundeswehrtraditionen sind gesellschaftlich sichtbar, ohne die Politik vollständig zu bestimmen.
+Stadt der Sensorik.
 
-### Linden
-Universitätsstadt mit wachsender junger Bevölkerung. Hier wird besonders intensiv über Reform der Verwaltung diskutiert.
+### Probenheim
+
+Stadt, die oft Objekt ist und deshalb politisch wach.
+
+### Kliniktief
+
+Medizin ohne die Akte als Herrschaft. Behandlung ja, Bewertung des Lebenswerts nein.
+
+### Randmess
+
+Stadt in der Abweichung. Hier lernt das Modell, dass es falsch lag.
 
 ## Dörfer und ländlicher Alltag
 
-### Eichenheim
-Typisches südliches Dorf mit Vereinen, Feuerwehr und regionalem Handwerk.
+### Zahlenhof
 
-### Nordfeld
-Industrienahes Dorf mit vielen Facharbeitern und Pendlern.
+Hof, der seine Ernte zweimal zählt, einmal für sich und einmal für Asteron.
 
-### Bundesau
-Dorf, in dem Verwaltung und öffentlicher Dienst überdurchschnittlich viele Familien beschäftigen.
+### Stillprobe
 
-### Grenzmark
-Alte Grenzsiedlung mit starker Erinnerung an frühere Kriege und wechselnde Herrschaften.
+Dorf, das eine Messung verweigert hat und damit recht behielt.
+
+### Werkbach
+
+Gerät, Lohn, wenig Theorie.
+
+### Abweich
+
+Kleines Dorf, dessen Krankheit nicht ins Modell passte. Seitdem steht es in der Lehre.
 
 ## Familie und Generationen
 
-Die Familie ist eine stabile, aber vergleichsweise private Institution. Ehe, Kinder und gegenseitige Unterstützung gelten als wichtige Bestandteile eines geordneten Lebens.
-
-Großeltern übernehmen häufig Aufgaben bei der Kinderbetreuung. Vereine und lokale Gemeinschaften bilden eine zweite soziale Ebene neben der Familie.
-
-Staatliche Einrichtungen helfen Familien durch Schulen, medizinische Versorgung und Verwaltungsleistungen. Gleichzeitig besteht die Erwartung, dass Familien ihre Angelegenheiten grundsätzlich selbst organisieren.
-
-Konflikte entstehen vor allem zwischen traditionellen Familienbildern und jüngeren Generationen, die stärker individuell leben möchten.
+Familien haben Forscher und Bauern im selben Stammbaum. Man streitet über eine Zahl und isst trotzdem zusammen. Kinder lernen, eine Quelle zu nennen, bevor sie eine Meinung sagen.
 
 ## Alltag und Lebensgefühl
 
-### Staat und Bürger
+### Wohnen und Arbeit
 
-Steinmark ist ein Land von Formularen, Behörden, Vereinen und klaren Zuständigkeiten. Bürger wissen meistens, welche Behörde für welches Problem verantwortlich ist.
+Helle Wohnungen, Labore, Höfe. Arbeit ist genau. Sie ist nicht die Bewertung eines Menschen als Ressource.
 
-Das schafft Sicherheit, kann aber auch Frustration erzeugen.
+### Bildung
 
-### Arbeit
+Schulen üben Messung und Widerspruch. Ein Ergebnis ohne Verfahren gilt als Gerücht.
 
-Berufe im öffentlichen Dienst besitzen hohes Ansehen. Handwerk, Ingenieurwesen und Logistik werden ebenfalls geschätzt.
+### Religion
 
-Karrieren sind häufig langfristig geplant. Stabilität gilt als Tugend.
+Selten staatstragend. Wo sie existiert, steht sie neben der Erkenntnis und wird nicht ins Modell gezwungen.
 
-### Familie und Bildung
+### Soldaten im Alltag
 
-Schulen vermitteln Disziplin, Rechtskenntnis und gemeinschaftliche Verantwortung. Kinder lernen früh, dass Regeln nicht nur Einschränkungen, sondern auch Schutzmechanismen sein können.
-
-### Freizeit
-
-Vereine spielen eine große Rolle. Sport, Feuerwehr, Musikvereine und lokale Organisationen verbinden Bürger über Generationen hinweg.
-
-### Militär
-
-Soldaten gelten weniger als Helden denn als Teil einer funktionierenden Institution. Der ideale Soldat ist zuverlässig, ausgebildet und berechenbar.
+Soldaten sind Fachleute mit einer Unterschrift im Rücken. Man erwartet, dass sie eine Lage melden, die das Modell nicht vorgesehen hat. Das gilt als Pflicht, nicht als Ungehorsam.
 
 ### Lebensgefühl
 
-**Hoffnung:** Dass Institutionen auch in Krisen funktionieren.
-
-**Angst:** Dass das System zu langsam wird, während die Welt sich verändert.
-
-**Tabu:** Den Staat grundsätzlich als persönlichen Feind zu betrachten.
-
----
+**Hoffnung:** Dass die nächste Messung die letzte Dummheit verhindert.  
+**Angst:** Dass das Modell die Leute ersetzt, die es unterschreiben sollten.  
+**Tabu:** Einen Menschen nur als Datenpunkt zu behandeln. Dafür ist Karsk da, und Orthea will das nicht sein.
 
 ## Gesellschaftliche Ebenen 6–25
 
 ### Punkt 6 – Jugend
 
-Disziplin, Vereinsleben, Gemeinsinn und staatsbürgerliche Bildung prägen die Jugend. Öffentliche Einrichtungen sind alltägliche Bezugspunkte.
+Jugendliche lernen früh, eine Behauptung zu prüfen. Dienst ist eine Fachlaufbahn, kein Eifer.
 
 ### Punkt 7 – Arbeit
 
-Verwaltung, Industrie, Handwerk und öffentlicher Dienst gelten als gleichwertige Säulen geordneter Gesellschaft.
+Forschung, Gerät, Kliniken, Höfe. Die Unterschrift bleibt ein anderes Amt als die Messung.
 
 ### Punkt 8 – Armut
 
-Verwaltung und soziale Sicherung begrenzen extreme Armut, regionale Unterschiede bleiben.
+Armut ist mangelnder Zugang zu Kliniken und Schulen, nicht mangelnder Lebenswert. Orthea behandelt das als Fehler der Verteilung.
 
 ### Punkt 9 – Wohlstand
 
-Wohlstand ist stärker institutionell und beruflich als aristokratisch geprägt.
+Wohlstand heißt Labor, Wohnung, Zeit zum Prüfen. Er ist kein Adel der Zahlen.
 
 ### Punkt 10 – Religion
 
-Religion ist frei, aber stark von bürgerlichen Vereinen und lokalen Traditionen geprägt.
+Privat, klein, nicht im Institut.
 
 ### Punkt 11 – Bildung
 
-Staatlich standardisierte Ausbildung und Berufsschulen genießen hohes Vertrauen.
+Der Stolz des Landes. Offen genug, dass Probenheim widersprechen kann.
 
 ### Punkt 12 – Medien
 
-Sachorientierter öffentlicher Rundfunk und regionale Medien dominieren.
+Blätter veröffentlichen Methoden. Ein Ergebnis ohne Methode wird nicht gedruckt.
 
 ### Punkt 13 – Sprache
 
-Verwaltungssprache ist standardisiert, regionale Dialekte bleiben erhalten.
+Präzise Amtssprache. In den Dörfern kürzer. Beide müssen in der Lehre vorkommen, sonst gilt sie als unvollständig.
 
 ### Punkt 14 – Essen
 
-Regionale Hausmannskost und Vereinsfeste sind wichtig.
+Schlicht, nachvollziehbar, wenig Festmahl. Kliniktief achtet auf Versorgung, nicht auf Rang.
 
 ### Punkt 15 – Kleidung
 
-Schlichte, ordentliche Alltagskleidung; Vereine besitzen eigene Farben und Abzeichen.
+Helles Grau im Dienst, eine dünne Linie. Im Alltag unauffällig. Kein Gold.
 
 ### Punkt 16 – Architektur
 
-Verwaltungsbauten, Bürgerhäuser und funktionale öffentliche Infrastruktur.
+Helle, reparierbare Bauten. Institute mit offenen Höfen. Kein Bunker der Wahrheit.
 
 ### Punkt 17 – Freizeit
 
-Vereinsleben, Wandern, Sport und lokale Veranstaltungen.
+Lesen, Sport, Streit über eine Veröffentlichung. Freizeit ist nicht überwacht.
 
 ### Punkt 18 – Feste
 
-Bundesfeiern, Vereinsfeste und regionale Erntefeste.
+Stiftungstage der Institute, Ernten in den Probenlanden. Kein Kult der Messung.
 
 ### Punkt 19 – Trauer
 
-Kommunale und staatliche Trauerfeiern verbinden persönliche Trauer mit öffentlicher Ordnung.
+Ein Toter ist ein Mensch mit einem Namen. Die Statistik kommt danach und ersetzt den Namen nicht.
 
 ### Punkt 20 – Militär
 
-Militär gilt als institutioneller Dienst mit standardisierten Verfahren.
+Fachtruppe unter politischer Unterschrift. Ein falsches Modell wird abgebrochen, nicht schöngeredet.
 
 ### Punkt 21 – Krieg
 
-Krieg wird als Zusammenbruch geordneter Beziehungen betrachtet; Planung und Verteidigung sollen ihn begrenzen.
+Krieg ist ein Gegenstand der Erkenntnis und bleibt eine politische Entscheidung. Wo das Modell endet, fängt die Verantwortung des Amtes an.
 
 ### Punkt 22 – Opposition
 
-Opposition arbeitet institutionell und argumentiert häufig über Verwaltungsreformen.
+Opposition greift Modelle an und greift Ämter an, die sich hinter Modellen verstecken. Sie will Orthea genauer, nicht gläubig.
 
 ### Punkt 23 – Nachbarn
 
-Vereine, Feuerwehr und lokale Einrichtungen verbinden Nachbarn.
+Nachbarn prüfen einander weniger, als Karsk es täte. Man teilt eine Messung und bleibt höflich, wenn sie unangenehm ist.
 
 ### Punkt 24 – Migration
 
-Migration wird über klare Verwaltungsverfahren organisiert.
+Zuzug in die Institute ist gewöhnlich. Wer bleibt, muss das Verfahren lernen, nicht einen Kult.
 
 ### Punkt 25 – Familiengeschichte
 
-Familien erzählen von Beamten, Handwerkern, Soldaten und Vereinsleben; lokale Geschichte ist eng eingebunden.
+Familien erinnern die Abweichung öfter als den Triumph. Ein Modell, das irrt, ist eine ehrenhafte Geschichte, wenn man es sagt.
 
 ## Konkrete Lore-Anker
 
 ### Familien
-- **Familie Stein:** Verwaltungsbeamte über mehrere Generationen.
-- **Familie Falk:** Maschinenbauerfamilie aus dem Norden.
+
+- **Familie Aster:** Institutsgründer. Halten die Messung und nicht das Amt.
+- **Familie Abweich:** Aus Randmess. Stehen in der Lehre als der Fall, der nicht passte.
 
 ### Personen
-- **Clara Stein:** Bundesrichterin.
-- **Johann Falk:** Gewerkschaftlich engagierter Ingenieur.
+
+- **Nera Aster:** Forscherin. Legt ein Modell zurück, wenn die Probe nicht trägt.
+- **Colin Abweich:** Bürgermeister von Randmess. Verlangt die Unterschrift sichtbar neben der Zahl.
 
 ### Institutionen
-- **Bundesverwaltungsakademie:** Ausbildungseinrichtung für Beamte.
-- **Bundesrechnungshof:** Symbol institutioneller Kontrolle.
+
+- **Institutsgürtel:** Messung.
+- **Saal der Unterschrift:** Politik.
 
 ### Wirtschaft
-- **Nordwerke:** Maschinenbau und Logistik.
-- **Südmark Genossenschaft:** Zusammenschluss regionaler Betriebe.
+
+- **Messau Gerät:** Sensorik.
+- **Kliniktief:** Versorgung ohne Lebenswertnote.
 
 ### Medien
-- **Bundesblatt:** Sachorientierte nationale Zeitung.
-- **Der Verein:** Wochenzeitung über regionale Gemeinschaften.
+
+- **Methode:** Blatt, das Verfahren druckt.
+- **Randmess Brief:** Die Fälle, die nicht passen.
 
 ### Militär
-- **Bundesheer Steinmark:** Stark standardisierte Streitkräfte.
-- **Ostverteidigungskommando:** Territorialverband an der historischen Grenze.
 
-### Stadtviertel Steinburg
-- **Bundesforum:** Regierung und Gerichte.
-- **Bürgerstadt:** Wohn- und Geschäftsviertel.
-- **Alte Festung:** Militärmuseum und Gedenkstätte.
+- **Fachkorps Orthea:** Einsatz nach Modell und Unterschrift.
+- **Die Abbruchregel:** Ein falsches Modell wird beendet.
+
+### Stadtviertel
+
+- **Institutsgürtel:** Die Zahlen.
+- **Saalviertel:** Die Unterschrift.
 
 ### Historische Ereignisse
-- **Der Bundesvertrag:** Gründung der heutigen Föderation.
-- **Die Verwaltungsreform:** Vereinheitlichung von Recht und Verwaltung.
+
+- **Der Fall Randmess:** Das Modell lag falsch. Orthea hat es gesagt. Seitdem ist die Grenze Teil des Staates.
+- **Die zurückgezogene Order:** Ein Einsatz, den das Amt gestoppt hat, weil die Probe die Leute nicht mehr beschrieben hat.
 
 ---
 
-# 7. Vael – Das industrielle Machtzentrum
 
-### Das industrielle Machtzentrum
+# 6. Vesper – Der Staat, den niemand führt und jeder spielen muss
 
-Vael wurde durch Industrie und Rohstoffgewinnung zu einer wirtschaftlichen Großmacht.
+### Der Staat, den niemand führt und jeder spielen muss
 
-Ganze Städte entstanden um Fabriken, Bergwerke und Energieanlagen.
+Vesper war einmal eine freie Gesellschaft. Aus der Freiheit wurde die Überwachung der Bürger, daraus die Überwachung der Bürger und der Regierung. Geblieben ist ein Volk, das im Kern niemandem folgt und das System trotzdem spielen muss, ob es will oder nicht.
 
-Die vaelische Gesellschaft misst technischer Kompetenz einen außergewöhnlich hohen Wert bei.
+Das Sozialleben ist hart. Intrigen, Morde, falsche Informationen. Ein Teil der Bevölkerung kommt psychisch nicht klar. Dieser Teil wird ruhiggestellt oder beseitigt. Das ist keine Panne. Das ist die Bedingung, unter der der Rest weiterspielt.
 
-> **Was funktioniert, gilt als richtig.**
+### Die besondere Ordnung
+
+Die Ordnung ist das Spiel. Es gibt kein Zentrum, dem man glaubt. Es gibt Regeln, deren Bruch man nicht überlebt, und Informationen, die man setzt wie Züge. Wer die Regeln nicht spielen kann, fällt aus dem Spiel. Der Staat bleibt stehen, weil genug Leute sie spielen.
 
 ### Politisches System
 
-Vael verbindet staatliche Planung mit mächtigen Industrieunternehmen und wirtschaftlichen Eliten.
+Velis ist schwer zu lesen. Die offiziellen Gebäude sind nur ein Teil der Macht. Ämter beobachten einander. Eine Regierung, die alles wüsste, wäre schon wieder eine Lüge, an die niemand glaubt. Stattdessen weiß jeder genug, um den nächsten zu fürchten, und nicht genug, um aufzuhören.
 
-Die großen Industriekonglomerate besitzen erheblichen politischen Einfluss.
+### Technologie
+
+Siegel, Abhörung, falsche Spuren, echte Akten neben präparierten. Stumpfes Oliv, schwarze Siegel. Die Technik dient dem Spiel, nicht der Fürsorge und nicht der Erkenntnis.
 
 ### Militär
 
-Vael investiert massiv in:
-
-- schwere Fahrzeuge
-- Artillerie
-- industrielle Produktion
-- Ersatzteile
-- Munition
-- Logistik
-- technische Infrastruktur
-
-Vael versucht nicht, den Menschen technisch zu ersetzen.
-
-Es baut mehr Maschinen.
-
-Wenn ein Fahrzeug zerstört wird, wird ein neues gebaut.
-
-Wenn Material verloren geht, wird die Produktion erhöht.
+Das Heer ist ein Spieler unter anderen. Es führt Kriege, deren Lagebilder mehrfach stimmen können. Der Soldat, der nur einer Version folgt, ist brauchbar. Der Soldat, der keine Version spielen kann, ist ein Risiko und wird behandelt wie der Teil der Bevölkerung, der nicht mitkommt.
 
 ### Der innere Konflikt
 
-Je stärker Vael den Krieg industrialisiert, desto schwerer wird die Frage:
+Die Leute hassen das Spiel und können ohne es nicht leben, weil außerhalb der Regeln nichts mehr gilt. Gegenstimmen gibt es. Sie sind selbst Züge. Vesper fällt nicht auseinander. Es wird nur für die, die nicht spielen können, tödlich oder still.
 
-> **Wann hört ein Mensch auf, Soldat zu sein, und wird zu einer Zahl in einem Produktionsplan?**
-
----
-
-## Nationale Leitfrage
-
-**Leitfrage:** Wie viel menschliches Leben darf wirtschaftlicher Fortschritt kosten?
-
-**Alltagswiderspruch:** Die Industrie schafft Wohlstand, Infrastruktur und soziale Aufstiegsmöglichkeiten, erzeugt aber gleichzeitig Abhängigkeit von Unternehmen und gefährliche Arbeitsbedingungen.
-
-**Besonderer Ausbau:** Vael braucht sowohl stolze Arbeiterstädte als auch Regionen, in denen Menschen unter der Macht großer Konzerne leiden.
-
-## Hauptstadt
-
-Vaalen ist eine industrielle Megastadt. Fabriken, Energieanlagen, Bahnlinien und Wohnsiedlungen bilden einen zusammenhängenden urbanen Raum.
-
-Die größten Unternehmen besitzen eigene Forschungszentren, Kliniken und Ausbildungsstätten. Manche Stadtviertel wurden ursprünglich von einzelnen Industrieunternehmen errichtet.
-
-Die Stadt ist stolz auf ihre technische Leistungsfähigkeit. Fabriken sind keine versteckten Randanlagen, sondern prägen das Stadtbild.
-
-**Stadtbild:** Hochöfen, Produktionshallen, Kraftwerke, Bahntrassen, Arbeitersiedlungen und Konzernzentren.  
-**Wichtige Viertel:** Industriegürtel, Konzernstadt, alte Arbeitersiedlungen, Forschungsbezirk, Zentralbahnhof.  
-**Sozialer Gegensatz:** Konzernleitungen und technische Elite gegenüber Industriearbeitern und prekären Beschäftigten.
-
-## Regionen
-
-### Eisenland
-Dicht besiedelte Industrieregion mit Bergwerken, Stahlwerken und Maschinenbau.
-
-### Energiegürtel
-Region großer Kraftwerke, Energieanlagen und technischer Infrastruktur. Viele Gemeinden hängen wirtschaftlich von wenigen Unternehmen ab.
-
-### Konzernstädte
-Planmäßig entwickelte Städte, die historisch um einzelne Industrieunternehmen entstanden. Unternehmen prägen dort Schulen, Kliniken und Wohnraum.
-
-### Grünes Vael
-Weniger industrialisierte Region mit Landwirtschaft, Wäldern und kleineren Städten. Hier ist die Kritik an der industriellen Dominanz stärker.
-
-**Regionaler Grundkonflikt:** Für die einen bedeutet Industrie Wohlstand und Stolz; für andere bedeutet sie Abhängigkeit, Umweltbelastung und Verlust lokaler Selbstbestimmung.
-
-## Städte
-
-### Vaalen – Hauptstadt
-Industrielles Machtzentrum mit Konzernzentralen, Forschung und gewaltigen Produktionsanlagen.
-
-### Stahlbruck
-Arbeiterstadt im Eisenland. Schichtarbeit, Gewerkschaften und Familien mit mehreren Generationen Industrieerfahrung prägen den Alltag.
-
-### Energa
-Stadt des Energiegürtels. Kraftwerke, Leitungsnetze und technische Ausbildungszentren dominieren die Umgebung.
-
-### Kronwerk
-Konzernstadt, die weitgehend um ein einzelnes Industriekonglomerat entstand. Das Unternehmen besitzt Wohnraum, Kliniken und Ausbildungsstätten.
-
-### Grünau
-Weniger industrialisierte Stadt im Grünen Vael. Hier ist die Kritik an der Macht der Industrie besonders deutlich.
-
-## Dörfer und ländlicher Alltag
-
-### Stahlhof
-Arbeitersiedlung neben einem großen Stahlwerk. Schichtpläne strukturieren Familienleben und Freizeit.
-
-### Kraftau
-Dorf im Energiegürtel. Viele Bewohner arbeiten in Kraftwerken oder Leitungsbetrieben.
-
-### Konzernfeld
-Unternehmenssiedlung mit Firmenklinik, Schule und Wohnanlagen. Das Unternehmen ist zugleich Arbeitgeber und gesellschaftlicher Mittelpunkt.
-
-### Grünweiler
-Landwirtschaftlich geprägtes Dorf mit stärkerer Kritik an der industriellen Entwicklung.
-
-## Familie und Generationen
-
-In vielen Regionen ist die Familie eng mit dem Arbeitsplatz verbunden. Wenn mehrere Generationen im selben Werk, Bergbaugebiet oder Energiebetrieb gearbeitet haben, wird der Beruf Teil der Familienidentität.
-
-Firmenwohnungen und betriebliche Versorgung können Familien Sicherheit geben. Gleichzeitig kann ein Arbeitsplatzverlust eine ganze Familie treffen.
-
-Eltern sind stolz auf technische Fähigkeiten und berufliche Zuverlässigkeit. Manche Familien hoffen, dass ihre Kinder denselben Weg gehen; andere wollen verhindern, dass sie zu einem weiteren Glied der Produktionskette werden.
-
-Die Familie wird dadurch zu einem Ort des Stolzes und zugleich zu einem Ort, an dem sich die Abhängigkeit von Industrieunternehmen besonders deutlich zeigt.
-
-## Alltag und Lebensgefühl
-
-### Städte
-
-Vaelische Industriestädte sind von Fabriken, Bahnlinien, Energieanlagen und Bergwerken geprägt. Arbeit beginnt und endet häufig nach Schichtplänen.
-
-Die Geräusche der Industrie gehören zum Alltag.
-
-### Gesellschaft
-
-Techniker, Ingenieure und Facharbeiter genießen hohen Respekt. Gleichzeitig besteht eine deutliche Trennung zwischen Industriearbeitern, Büroangestellten und Unternehmensführungen.
-
-Große Konzerne können das Leben ganzer Regionen bestimmen.
-
-### Familie
-
-Familien organisieren ihr Leben um Schichtarbeit. Kinder wachsen mit der Vorstellung auf, dass bestimmte Berufe praktisch Teil der Familiengeschichte sind.
-
-Arbeitsunfälle und Berufskrankheiten gehören zu den gefürchteten Risiken.
-
-### Kultur
-
-Industriefeste, Arbeitersport und technische Wettbewerbe sind populär. Erfolg wird gerne in sichtbaren Ergebnissen gemessen.
-
-### Militär
-
-Ein Soldat wird oft als jemand gesehen, der eine andere Form derselben industriellen Aufgabe erfüllt: Material, Logistik und menschliche Arbeitskraft müssen zusammen funktionieren.
-
-### Lebensgefühl
-
-**Hoffnung:** Dass harte Arbeit einen sichtbaren Fortschritt schafft.
-
-**Angst:** Ersetzt zu werden oder selbst nur noch eine Produktionszahl zu sein.
-
-**Tabu:** Offenen Zweifel am Wert der Leistungsgesellschaft zu äußern.
-
----
-
-## Gesellschaftliche Ebenen 6–25
-
-### Punkt 6 – Jugend
-
-Technische Ausbildung und Betriebspraktika beginnen früh. Jugendliche stehen zwischen industriellem Berufsstolz und dem Wunsch nach einem Leben außerhalb der Werke.
-
-### Punkt 7 – Arbeit
-
-Industrie und Rohstoffe dominieren; Konzernzugehörigkeit kann Identität und soziale Sicherheit bestimmen.
-
-### Punkt 8 – Armut
-
-Arbeitslosigkeit kann ganze Industrieregionen treffen. Abhängigkeit von Konzernen verschärft soziale Unsicherheit.
-
-### Punkt 9 – Wohlstand
-
-Industrieeigentum und Konzernbeteiligungen konzentrieren großen Reichtum.
-
-### Punkt 10 – Religion
-
-Arbeiterkultur und säkulare Weltbilder sind stark; religiöse Gemeinschaften bestehen dennoch lokal.
-
-### Punkt 11 – Bildung
-
-Technische und industrielle Ausbildung dominiert.
-
-### Punkt 12 – Medien
-
-Konzernmedien besitzen neben staatlichen und unabhängigen Angeboten erheblichen Einfluss.
-
-### Punkt 13 – Sprache
-
-Technische Begriffe und Werksjargon prägen viele Regionen.
-
-### Punkt 14 – Essen
-
-Kalorienreiche Arbeiterküche, Kantinen und regionale Spezialitäten.
-
-### Punkt 15 – Kleidung
-
-Robuste Arbeitskleidung und technische Schutzkleidung sind kulturell sichtbar.
-
-### Punkt 16 – Architektur
-
-Fabriken, Energieanlagen und Arbeiterquartiere prägen ganze Regionen.
-
-### Punkt 17 – Freizeit
-
-Werksvereine, Motorsport, Mannschaftssport und technische Hobbys.
-
-### Punkt 18 – Feste
-
-Werksjubiläen, Arbeitertage und regionale Industriefeste.
-
-### Punkt 19 – Trauer
-
-Bei Arbeitsunfällen entstehen starke Gemeinschaftsrituale; Werke errichten häufig Gedenkorte.
-
-### Punkt 20 – Militär
-
-Militär wird durch gewaltige industrielle Produktionskapazität getragen.
-
-### Punkt 21 – Krieg
-
-Krieg wird auch als industrielle Belastungsprobe erlebt, bei der Produktion und Ressourcen entscheidend sind.
-
-### Punkt 22 – Opposition
-
-Gewerkschaften, Umweltbewegungen und regionale Gruppen stellen Konzernmacht infrage.
-
-### Punkt 23 – Nachbarn
-
-Werksviertel können fast dörfliche Gemeinschaften bilden.
-
-### Punkt 24 – Migration
-
-Industrie zieht Arbeitskräfte an; wirtschaftliche Migration prägt ganze Städte.
-
-### Punkt 25 – Familiengeschichte
-
-Familien erinnern sich über Werke, Bergwerke, Arbeitskämpfe und technische Leistungen.
-
-## Konkrete Lore-Anker
-
-### Familien
-- **Familie Vaal:** Alte Industriellenfamilie.
-- **Familie Stahl:** Mehrgenerationenfamilie aus Stahlbruck.
-
-### Personen
-- **Rudolf Vaal:** Konzernvorsitzender und einflussreicher Industrieller.
-- **Anja Stahl:** Arbeitervertreterin und lokale Politikerin.
-
-### Institutionen
-- **Industrieverband Vael:** Dachverband der Großunternehmen.
-- **Technische Hochschule Vaalen:** Führende Ausbildungsstätte für Maschinenbau.
-
-### Wirtschaft
-- **Vaalen Industrial:** Großkonzern für Maschinen und Militärproduktion.
-- **Stahlbruck Werke:** Stahl- und Fahrzeugproduktion.
-
-### Medien
-- **Wirtschaftsrundschau:** Wirtschaftlich einflussreiches Medium.
-- **Werksstimme:** Zeitung der Industriearbeiter.
-
-### Militär
-- **Schwere Heeresgruppe Vael:** Große mechanisierte Verbände.
-- **Artilleriekorps Vaalen:** Schwerpunkt auf schwerer Feuerunterstützung.
-
-### Stadtviertel Vaalen
-- **Konzernring:** Unternehmenszentralen.
-- **Arbeiterviertel:** Dichte Wohnquartiere.
-- **Eisenhafen:** Schwerindustrie und Logistik.
-
-### Historische Ereignisse
-- **Industrialisierung Vaels:** Entstehung der modernen Wirtschaftsmacht.
-- **Großer Arbeiterstreik:** Wendepunkt im Verhältnis zwischen Staat, Konzernen und Arbeiterschaft.
-
----
-
-# 8. Vesper – Das Land hinter dem Schleier
-
-### Das Land hinter dem Schleier
-
-Vesper ist der rätselhafteste der sechzehn Staaten.
-
-Seine politische Geschichte ist von wechselnden Regierungen, geheimen Abkommen und langen Phasen der Isolation geprägt.
-
-### Politisches System
-
-Vesper ist ein stark zentralisierter Sicherheitsstaat.
-
-Nachrichtendienste und staatliche Informationskontrolle besitzen großen Einfluss.
-
-Nicht alles, was die Regierung weiß, soll die Bevölkerung wissen.
-
-### Militär
-
-Vesper setzt auf:
-
-- Aufklärung
-- Täuschung
-- Spezialverbände
-- verdeckte Operationen
-- Operationen in der Tiefe
-- Informationskontrolle
-
-Vesper besitzt keine vergleichbare körperliche oder industrielle Technologie wie Karsk oder Ossaria.
-
-Seine Stärke besteht darin, Informationen als strategische Waffe zu verwenden.
-
-> **Wenn du weißt, was der Gegner tut, brauchst du weniger Feuerkraft.**
-
-### Der innere Konflikt
-
-Geheimhaltung schützt den Staat, zerstört aber Vertrauen.
-
-Selbst viele Bürger Vespers wissen nicht mehr, welche Bedrohungen real sind und welche von ihrer eigenen Regierung geschaffen wurden.
-
----
+> **Wie lebt ein Land, in dem niemand folgt und trotzdem alle mitspielen müssen?**
 
 ## Nationale Leitfrage
 
 **Leitfrage:** Kann eine Gesellschaft funktionieren, wenn niemand sicher weiß, was wahr ist?
 
-**Alltagswiderspruch:** Geheimhaltung kann reale Gefahren verhindern, zerstört aber langfristig Vertrauen zwischen Bürgern.
+**Alltagswiderspruch:** Die Menschen wollen eine Wahrheit und benutzen täglich die Lüge, ohne die sie den nächsten Tag nicht bestehen.
 
-**Besonderer Ausbau:** Vesper sollte mehrere Schichten besitzen: überzeugte Staatsanhänger, vorsichtige Mitläufer, private Opposition und Menschen, die schlicht versuchen, unauffällig zu leben.
+**Besonderer Ausbau:** Das Spiel bleibt stabil. Die Ausgeschiedenen sind der Preis, nicht der Vorbote eines Umsturzes.
 
 ## Hauptstadt
 
-Velis ist eine schwer durchschaubare Hauptstadt. Offizielle Regierungsgebäude bilden nur einen Teil des eigentlichen Machtzentrums.
+Velis hat zwei Gesichter, und beide sind echt genug, um das andere zu decken.
 
-Die Stadt besitzt große öffentliche Plätze und moderne Verwaltungsbauten, aber auch zahlreiche abgeschirmte Anlagen, deren Funktion der Bevölkerung unbekannt ist.
-
-Menschen achten darauf, was sie in der Öffentlichkeit sagen. Manche Gebäude besitzen mehrere Eingänge und unterschiedliche Sicherheitsbereiche.
-
-Velis ist deshalb weniger durch offene Monumentalität als durch kontrollierte Zugänglichkeit geprägt.
-
-**Stadtbild:** dunkle Verwaltungsbauten, breite Plätze, Sicherheitsanlagen, Wohnblöcke und abgeschirmte Innenhöfe.  
-**Wichtige Viertel:** Regierungsbezirk, Informationszentrum, Altstadt, Sicherheitssektor, Arbeiterbezirke.  
-**Sozialer Gegensatz:** staatliche Funktionsträger gegenüber Bürgern, die bewusst außerhalb staatlicher Institutionen bleiben.
+**Stadtbild:** Graue Amtsfronten, dahinter Räume, die auf keiner Karte stimmen.  
+**Wichtige Viertel:** Die Front, die Archive, das Viertel der Ausgeschiedenen.  
+**Sozialer Gegensatz:** die, die setzen, gegenüber denen, die das Spiel nicht mehr können.
 
 ## Regionen
 
 ### Hauptstadtbezirk
-Dicht kontrollierte Region mit Ministerien, Sicherheitsorganen und staatlichen Medien.
 
-### Nebelprovinzen
-Ländliche Gebiete, in denen Informationen über die tatsächlichen Aktivitäten des Staates besonders schwer zu überprüfen sind.
+Das dichteste Spiel. Hier ist eine wahre Aussage schon ein Fehler.
 
-### Grenzkorridor
-Militärisch und geheimdienstlich bedeutende Region. Die Bevölkerung lebt mit häufigen Kontrollen und wechselnden Sicherheitsmaßnahmen.
+### Die Ämterlande
 
-### Freie Städte
-Wirtschaftlich wichtige Städte mit etwas größerem privaten Handlungsspielraum. Auch hier bleibt die staatliche Beobachtung spürbar.
+Behörden, die einander führen und einander lesen.
 
-**Regionaler Grundkonflikt:** Je nach Region unterscheiden sich die Menschen darin, ob sie die staatliche Geheimhaltung als Schutz oder als Bedrohung verstehen.
+### Die stillen Häuser
+
+Orte, an denen Menschen ruhiggestellt werden. Sie sind Teil der Karte und stehen nicht in der Rede.
+
+### Die Grenze
+
+Wo falsche Lagebilder zu echten Toten werden. Das Heer spielt hier mit schärferen Folgen.
 
 ## Städte
 
-### Velis – Hauptstadt
-Politisches und geheimdienstliches Zentrum. Viele Bereiche der Stadt sind für normale Bürger nur eingeschränkt zugänglich.
+### Velis
 
-### Darsin
-Handelsstadt mit vergleichsweise großer privater Wirtschaft. Wohlhabender als viele andere Städte, aber stark überwacht.
+Sitz des Spiels.
 
-### Nebelstadt
-Kleinere Stadt in einer abgelegenen Region. Gerüchte über geheime Anlagen gehören zum lokalen Alltag.
+### Siegelstadt
 
-### Kovar
-Grenzstadt mit hoher Militärpräsenz. Die Bevölkerung ist an Kontrollen und kurzfristige Sicherheitsmaßnahmen gewöhnt.
+Stadt der Akten. Echte und präparierte liegen in denselben Regalen.
 
-### Selin
-Alte Kulturstadt mit Universitäten, Theatern und privaten Netzwerken. Politische Gespräche finden häufig in kleinen, vertrauten Kreisen statt.
+### Stillheim
+
+Die ruhiggestellte Stadt. Ordnung, wenig Lärm, keine Karriere.
+
+### Grenzspiel
+
+Garnison. Hier muss eine Version der Lage reichen, um zu schießen.
+
+### Marktvel
+
+Handelsstadt. Das Spiel ist hier Geld und Ruf, nicht nur Akte.
 
 ## Dörfer und ländlicher Alltag
 
-### Nebelhof
-Abgelegenes Dorf mit wenig öffentlicher Infrastruktur. Die Bewohner verlassen sich stark auf Familien und Nachbarschaften.
+### Aktenhof
 
-### Wachtau
-Siedlung nahe einer militärischen Zone. Kontrollen gehören zum Alltag.
+Dorf, in dem jeder einen Nachbarn melden könnte und die meisten es nicht tun, weil auch das ein Zug ist.
 
-### Stilldorf
-Altes Dorf mit ausgeprägten privaten Netzwerken. Menschen wissen viel voneinander, sprechen aber wenig offen über Politik.
+### Stillrain
 
-### Freihain
-Landgemeinde mit etwas stärkerer wirtschaftlicher Selbstständigkeit und größerem Abstand zu staatlichen Institutionen.
+Angehörige der Ruhiggestellten. Sie sprechen leise und bleiben im Land.
+
+### Grenzacker
+
+Höfe hinter der Garnison. Sie glauben keiner der beiden Lagen ganz.
+
+### Marktdorf
+
+Handel, Gerücht, ein Siegel an der Tür, dem man nicht traut und das man trotzdem zeigt.
 
 ## Familie und Generationen
 
-Vertrauen ist innerhalb der Familie besonders wichtig. Weil politische Überwachung und staatliche Informationskontrolle zum Alltag gehören, gilt die Familie häufig als einer der wenigen Räume, in denen Menschen offen sprechen können.
-
-Gleichzeitig kann auch innerhalb einer Familie Vorsicht entstehen. Eltern überlegen, welche politischen Aussagen sie vor ihren Kindern machen, und ältere Menschen warnen Jüngere davor, private Gespräche weiterzugeben.
-
-Großfamilien und langjährige Freundschaften können deshalb ähnliche Funktionen wie politische oder religiöse Gemeinschaften übernehmen.
-
-Das wichtigste Familiengut ist nicht Besitz, sondern **gegenseitiges Vertrauen**.
+Familien lehren Kinder, was man sagt und was man meint. Das ist keine Folklore. Das ist Überleben. Ein Kind, das beides nicht unterscheiden lernt, gilt als gefährdet. Die Familie versucht es zuerst. Der Staat übernimmt, wenn die Familie scheitert.
 
 ## Alltag und Lebensgefühl
 
-### Öffentlichkeit
+### Wohnen und Arbeit
 
-Vesper ist ein Land, in dem Menschen gelernt haben, zwischen öffentlicher und privater Sprache zu unterscheiden.
-
-Was man zu Hause sagt, muss nicht dem entsprechen, was man bei der Arbeit sagt.
-
-### Arbeit
-
-Staatliche Institutionen, Sicherheitsdienste und staatsnahe Unternehmen sind wichtige Arbeitgeber. Eine unauffällige Karriere kann sicherer sein als eine besonders ambitionierte.
-
-### Familie
-
-Vertrauen innerhalb der Familie ist besonders wichtig. Eltern bringen ihren Kindern bei, Informationen nicht leichtfertig weiterzugeben.
-
-Manche Familien besitzen private Geschichten, die niemals außerhalb des Hauses erzählt werden.
-
-### Medien
-
-Nachrichten werden konsumiert, aber nicht vollständig geglaubt. Bürger vergleichen staatliche Informationen mit Gerüchten, privaten Kontakten und ausländischen Quellen.
-
-### Religion und Rituale
-
-Private religiöse und kulturelle Traditionen können als Rückzugsraum dienen. Gleichzeitig fürchten manche Bürger, dass selbst private Gemeinschaften politisch interpretiert werden.
-
-### Militär
-
-Soldaten und Geheimdienstangehörige besitzen Ansehen und Misstrauen zugleich. Niemand weiß genau, wie groß die tatsächliche Macht der Sicherheitsapparate ist.
-
-### Lebensgefühl
-
-**Hoffnung:** Einen privaten Raum zu besitzen, in den der Staat nicht eindringt.
-
-**Angst:** Nicht zu wissen, wem man vertrauen kann.
-
-**Tabu:** Offene Aussagen über die eigene Überwachung.
-
----
-
-## Gesellschaftliche Ebenen 6–25
-
-### Punkt 6 – Jugend
-
-Jugendliche lernen früh zwischen öffentlicher und privater Sprache zu unterscheiden. Vertrauen entsteht vor allem in kleinen Freundeskreisen.
-
-### Punkt 7 – Arbeit
-
-Staat, Sicherheitssektor, Handel und verborgene informelle Arbeit prägen den Arbeitsmarkt.
-
-### Punkt 8 – Armut
-
-Armut ist schwer sichtbar, weil staatliche Kontrolle und informelle Netzwerke Statistiken verzerren können.
-
-### Punkt 9 – Wohlstand
-
-Wohlstand ist schwer sichtbar; privilegierte Staats- und Sicherheitskreise leben deutlich besser.
-
-### Punkt 10 – Religion
-
-Private Religion kann ein Rückzugsraum vor staatlicher Öffentlichkeit sein.
-
-### Punkt 11 – Bildung
-
-Bildung vermittelt neben Wissen auch Diskretion und staatliche Loyalität.
-
-### Punkt 12 – Medien
-
-Medien sind kontrolliert; Gerüchte, private Netzwerke und verschlüsselte Kommunikation bilden Gegenöffentlichkeiten.
-
-### Punkt 13 – Sprache
-
-Menschen verwenden häufig unterschiedliche öffentliche und private Ausdrucksweisen.
-
-### Punkt 14 – Essen
-
-Einfache häusliche Küche; seltene Zutaten werden eher privat gehandelt.
-
-### Punkt 15 – Kleidung
-
-Unauffällige Kleidung wird bevorzugt; auffällige politische Symbole gelten als riskant.
-
-### Punkt 16 – Architektur
-
-Kontrollpunkte, abgeschirmte Regierungsviertel und unscheinbare Wohngebäude.
-
-### Punkt 17 – Freizeit
-
-Kleine private Treffen, Literatur, Musik und diskrete Freundeskreise.
-
-### Punkt 18 – Feste
-
-Offizielle Feiertage sind staatlich geprägt; private Feste bleiben bewusst kleiner.
-
-### Punkt 19 – Trauer
-
-Öffentliche Trauer kann politisch sensibel sein; private Rituale sind wichtiger.
-
-### Punkt 20 – Militär
-
-Militär, Geheimdienste und innere Sicherheit sind eng miteinander verbunden.
-
-### Punkt 21 – Krieg
-
-Unsicherheit, Spionage und Informationskrieg prägen die öffentliche Wahrnehmung.
-
-### Punkt 22 – Opposition
-
-Opposition ist verdeckt und fragmentiert.
-
-### Punkt 23 – Nachbarn
-
-Vertrauen wird vorsichtig vergeben.
-
-### Punkt 24 – Migration
-
-Migration ist stark kontrolliert und politisch sensibel.
-
-### Punkt 25 – Familiengeschichte
-
-Familiengeschichte kann aus unausgesprochenen Geheimnissen bestehen.
-
-## Konkrete Lore-Anker
-
-### Familien
-- **Familie Velan:** Beamtenfamilie mit Zugang zu staatlichen Institutionen.
-- **Familie Sora:** Händlerfamilie mit starkem privaten Netzwerk.
-
-### Personen
-- **Ilan Velan:** Nachrichtendienstbeamter, der zwischen Pflicht und persönlicher Moral steht.
-- **Mira Sora:** Buchhändlerin und diskrete Vermittlerin unabhängiger Informationen.
-
-### Institutionen
-- **Direktorat für Staatssicherheit:** Zentrale Sicherheitsbehörde.
-- **Archivamt Velis:** Kontrolliert wichtige historische Dokumente.
-
-### Wirtschaft
-- **Vespera Handelswerke:** Staatlich kontrollierter Handelskonzern.
-- **Freier Markt Darsin:** Halbprivate Wirtschaftszone.
-
-### Medien
-- **Vesperisches Staatsnetz:** Offizielle Informationsquelle.
-- **Nachtbrief:** Illegales Informationsnetzwerk.
-
-### Militär
-- **Schleierkorps:** Aufklärung und verdeckte Operationen.
-- **Grenzaufklärung Vesper:** Spezialisierte Überwachungskräfte.
-
-### Stadtviertel Velis
-- **Ministerring:** Staatliche Machtzentren.
-- **Altstadt:** Geschäfte und private Netzwerke.
-- **Sicherheitsbezirk:** Kontrollierte Regierungszone.
-
-### Historische Ereignisse
-- **Die Verschwiegene Krise:** Politische Krise, deren vollständige Geschichte bis heute unklar ist.
-- **Der Schleierpakt:** Abkommen, das die heutige Sicherheitsordnung begründete.
-
----
-
-# 9. Eldran – Die konstitutionelle Monarchie
-
-### Die konstitutionelle Monarchie
-
-Eldran ist eine alte Monarchie, die mehrere politische Krisen nur überlebt hat, weil sie ihre eigene Macht schrittweise begrenzte.
-
-Der Monarch besitzt weiterhin erhebliche symbolische Bedeutung, regiert aber nicht allein. Parlament, Gerichte, regionale Körperschaften und Krone bilden ein kompliziertes Machtgleichgewicht.
-
-Die eldranische Gesellschaft ist politisch gespalten:
-
-- Traditionalisten sehen in der Krone Kontinuität.
-- Republikaner betrachten sie als überholtes Privileg.
-- Moderate Kräfte sehen sie als institutionelles Bindeglied.
-
-### Politisches System
-
-Eldran ist eine konstitutionelle Monarchie mit parlamentarischen Institutionen.
-
-Die Monarchie ist weder reine Diktatur noch bloße Dekoration. In nationalen Krisen kann die Krone bestimmte verfassungsmäßige Funktionen übernehmen, während die tägliche Politik von gewählten Institutionen bestimmt wird.
-
-### Militär
-
-Eldran ist besonders stark in:
-
-- Befestigungen
-- Minensystemen
-- Pionierwesen
-- Territorialverteidigung
-- Artillerie
-- vorbereiteten Verteidigungsstellungen
-
-Die Streitkräfte besitzen eine starke Tradition der Landesverteidigung.
-
-### Innerer Konflikt
-
-Die zentrale Frage lautet:
-
-> **Ist Tradition ein Fundament der Freiheit – oder ein Hindernis für sie?**
-
----
-
-## Nationale Leitfrage
-
-**Leitfrage:** Kann Tradition eine demokratische Ordnung stärken, ohne sie zu beherrschen?
-
-**Alltagswiderspruch:** Die Krone ist politisch begrenzt, aber kulturell mächtig.
-
-**Besonderer Ausbau:** Eldran sollte einen klaren Gegensatz zwischen höfisch geprägten Zentren, modernen Städten und eigenständigen Regionen erhalten.
-
-## Hauptstadt
-
-Aurelien ist eine historische Hauptstadt mit königlichem Palast, Parlament und alten Adelshäusern.
-
-Die Monarchie ist politisch begrenzt, aber ihre Präsenz ist im Stadtbild weiterhin deutlich. Zeremonielle Gebäude stehen neben modernen Ministerien und Universitäten.
-
-Ein Teil der Bevölkerung empfindet die historische Architektur als gemeinsames kulturelles Erbe, ein anderer als Erinnerung an gesellschaftliche Privilegien.
-
-**Stadtbild:** Palastanlagen, alte Bürgerhäuser, moderne Ministerien, Parks und repräsentative Plätze.  
-**Wichtige Viertel:** Königlicher Bezirk, Parlament, Altstadt, Universitätsviertel, moderne Neustadt.  
-**Sozialer Gegensatz:** alte Eliten und Hofkultur gegenüber modernen urbanen Mittelschichten.
-
-## Regionen
-
-### Kronland
-Historisches Kerngebiet rund um die Hauptstadt. Königliche Institutionen und alte Familien sind kulturell besonders präsent.
-
-### Nordprovinzen
-Industriell und wirtschaftlich moderne Regionen mit einer stärkeren republikanischen und säkularen Bevölkerung.
-
-### Südmark
-Landwirtschaftlich geprägte Regionen mit traditionellen Festen und starker lokaler Identität.
-
-### Freie Randgebiete
-Regionen mit weitreichenden historischen Selbstverwaltungsrechten.
-
-**Regionaler Grundkonflikt:** Die Frage nach der Rolle der Krone wird je nach Region sehr unterschiedlich beantwortet.
-
-## Städte
-
-### Aurelien – Hauptstadt
-Königliche und parlamentarische Hauptstadt. Palast, Parlament und alte Bürgerstadt liegen eng beieinander.
-
-### Norwick
-Moderne Industriestadt mit starker republikanischer Kultur und wenig höfischer Tradition.
-
-### Rosenfeld
-Agrarische Stadt im Süden mit traditionellen Festen und regionalen Familienverbänden.
-
-### Hohenmark
-Historische Adels- und Universitätsstadt. Alte Familien besitzen kulturellen Einfluss, aber keine automatische politische Macht.
-
-### Freistadt
-Stadt mit historisch weitreichenden Selbstverwaltungsrechten. Die Einwohner reagieren empfindlich auf Eingriffe der Zentralregierung.
-
-## Dörfer und ländlicher Alltag
-
-### Kronau
-Traditionelles Dorf mit alten Festen und sichtbaren Verbindungen zu regionalen Adelsfamilien.
-
-### Talheim
-Landwirtschaftliche Gemeinde mit modernen Betrieben und starken Gemeinderäten.
-
-### Nordhain
-Arbeiterdorf mit moderner, eher republikanischer Bevölkerung.
-
-### Freital
-Gemeinde mit historisch besonderen Selbstverwaltungsrechten und starkem Lokalbewusstsein.
-
-## Familie und Generationen
-
-Familien reichen von alten aristokratischen Häusern bis zu modernen städtischen Haushalten. Die Monarchie prägt manche Familien stark, andere stehen ihr gleichgültig oder kritisch gegenüber.
-
-In traditionellen Familien werden Titel, Familienhäuser und regionale Bräuche gepflegt. Bürgerliche Familien betonen häufiger Ausbildung, Beruf und persönliche Leistung.
-
-Die Familie bleibt ein wichtiger Ort politischer Sozialisation: Kinder können mit monarchistischen, republikanischen oder pragmatisch-konstitutionellen Vorstellungen aufwachsen.
-
-Hochzeiten sind häufig große soziale Ereignisse, müssen aber nicht mehr den alten Standesgrenzen folgen.
-
-## Alltag und Lebensgefühl
-
-### Gesellschaft
-
-Eldran besitzt eine ausgeprägte zeremonielle Kultur. Feiertage der Krone, regionale Feste und parlamentarische Rituale gehören zum öffentlichen Leben.
-
-Die Gesellschaft ist dennoch modern und wirtschaftlich vielfältig.
-
-### Soziale Schichten
-
-Alte Adelsfamilien besitzen weiterhin kulturelles Kapital, aber nicht automatisch politische Macht. Eine neue urbane Mittelschicht betrachtet Titel oft als Folklore.
-
-In ländlichen Gebieten kann die Krone dagegen noch emotional stark verankert sein.
-
-### Familie
-
-Familiengeschichten werden häufig über Generationen erzählt. Abstammung besitzt kulturelle Bedeutung, aber soziale Mobilität ist real.
-
-### Militär
-
-Die Streitkräfte haben starke zeremonielle Traditionen. Gleichzeitig ist die zivile Kontrolle über das Militär ein zentraler Bestandteil der modernen Staatsordnung.
-
-### Lebensgefühl
-
-**Hoffnung:** Stabilität ohne Rückkehr zur alten Standesgesellschaft.
-
-**Angst:** Eine Verfassungskrise, die Krone und Republik gegeneinander stellt.
-
-**Tabu:** Die Vorstellung, dass Tradition allein politische Legitimität erzeugt.
-
----
-
-## Gesellschaftliche Ebenen 6–25
-
-### Punkt 6 – Jugend
-
-Jugendliche begegnen sowohl monarchischer Tradition als auch moderner republikanischer Kultur. Region und Familie beeinflussen die politische Sozialisation stark.
-
-### Punkt 7 – Arbeit
-
-Öffentlicher Dienst, moderne Wirtschaft, Landwirtschaft und traditionelle Berufe bestehen nebeneinander.
-
-### Punkt 8 – Armut
-
-Sozialhilfe existiert, doch alte Besitzstrukturen wirken fort.
-
-### Punkt 9 – Wohlstand
-
-Alte Familien und moderne Unternehmer bilden unterschiedliche Eliten.
-
-### Punkt 10 – Religion
-
-Historische Staatskirchen und moderne Religionsfreiheit koexistieren.
-
-### Punkt 11 – Bildung
-
-Klassische Bildung, moderne Hochschulen und regionale Schulen koexistieren.
-
-### Punkt 12 – Medien
-
-Freie Medien mit traditionell höfischen und modernen republikanischen Blättern.
-
-### Punkt 13 – Sprache
-
-Hofsprache und regionale Dialekte bestehen neben moderner Standardsprache.
-
-### Punkt 14 – Essen
-
-Hofgerichte und regionale bäuerliche Küche stehen nebeneinander.
-
-### Punkt 15 – Kleidung
-
-Klassische Schnitte und regionale Festkleidung bleiben sichtbar.
-
-### Punkt 16 – Architektur
-
-Paläste, Parlamente, Bürgerhäuser und moderne Vorstädte.
-
-### Punkt 17 – Freizeit
-
-Reitsport, Musik, Theater, regionale Feste und moderne Stadtkultur.
-
-### Punkt 18 – Feste
-
-Königliche Zeremonien, nationale Feiertage und regionale Feste.
-
-### Punkt 19 – Trauer
-
-Königliche und militärische Trauerzeremonien stehen neben privaten Ritualen.
-
-### Punkt 20 – Militär
-
-Territorialverteidigung, Ingenieurwesen und vorbereitete Stellungen sind zentral; zivile Kontrolle bleibt stark.
-
-### Punkt 21 – Krieg
-
-Krieg wird als Gefahr für Verfassung, Territorium und historische Ordnung betrachtet.
-
-### Punkt 22 – Opposition
-
-Republikaner, Monarchisten und Verfassungstreue konkurrieren friedlich um Einfluss.
-
-### Punkt 23 – Nachbarn
-
-Historische Viertel besitzen starke lokale Identitäten.
-
-### Punkt 24 – Migration
-
-Migration wird regional unterschiedlich bewertet.
-
-### Punkt 25 – Familiengeschichte
-
-Herkunft, Adel, Bürgertum und republikanische Familiengeschichten stehen nebeneinander.
-
-## Konkrete Lore-Anker
-
-### Familien
-- **Haus Aurel:** Alte königliche Verwandtschaft.
-- **Familie Nor:** Bürgerliche Unternehmerfamilie.
-
-### Personen
-- **König Adrian IV.:** Verfassungstreuer Monarch mit begrenzter politischer Macht.
-- **Elena Nor:** Republikanische Abgeordnete und Verfassungsjuristin.
-
-### Institutionen
-- **Kronrat:** Beratendes königliches Organ.
-- **Verfassungsgericht Aurelien:** Wächter der institutionellen Ordnung.
-
-### Wirtschaft
-- **Nor Industrien:** Moderne Maschinen- und Logistikunternehmen.
-- **Südmark Landwirtschaftsbund:** Zusammenschluss landwirtschaftlicher Betriebe.
-
-### Medien
-- **Kronenzeitung:** Konservatives Medium.
-- **Die Republik:** Liberales Nachrichtenblatt.
-
-### Militär
-- **Königliche Territorialkräfte:** Formal königliche, praktisch parlamentarisch kontrollierte Streitkräfte.
-- **Hohenmark-Pionierkorps:** Ingenieur- und Befestigungsspezialisten.
-
-### Stadtviertel Aurelien
-- **Kronenviertel:** Palast und zeremonielle Gebäude.
-- **Parlamentsstadt:** Ministerien und Parlament.
-- **Bürgerhafen:** Moderne Wirtschaft.
-
-### Historische Ereignisse
-- **Die Verfassungskrise:** Machtkampf, der die Grenzen der Monarchie festlegte.
-- **Der Verfassungspakt:** endgültige Anerkennung der parlamentarischen Ordnung.
-
----
-
-# 10. Namar – Die maritime Föderation
-
-### Die maritime Föderation
-
-Namar besteht aus Küstenregionen, Inseln und Hafenstädten. Die Menschen dort haben dunkle Haut. Seine politische Identität entstand nicht aus einem gemeinsamen Volk, sondern aus der Notwendigkeit, Handel, Wasserwege und Küstenschutz gemeinsam zu organisieren.
-
-### Politisches System
-
-Namar ist eine föderale parlamentarische Republik.
-
-Die einzelnen Regionen besitzen weitreichende Kompetenzen. Eine starke Zentralregierung wird historisch misstrauisch betrachtet.
-
-Politische Macht verteilt sich auf:
-
-- Bundesinstitutionen
-- Küstenregionen
-- Hafenverwaltungen
-- Handelsverbände
-- gewählte Kommunen
-
-### Technologie
-
-Namar konzentriert sich auf:
-
-- amphibische Fahrzeuge
-- maritime Sensorik
-- Küstenschutz
-- Transport
-- autonome Boote
-- Wasseraufbereitung
-- mobile Hafeninfrastruktur
-
-### Militär
-
-Namars Krieg liegt an den Wegen zwischen den Häfen. Schiffe tragen Ladung und sind keine eigenen Einheiten. Die Häfen stehen nach außen zusammen. Darunter bleiben Schmuggel und Schutzgeld, und ein Teil der Ladung verschwindet. Der Rest kommt an.
-
-### Innerer Konflikt
-
-Die föderale Freiheit macht Namar flexibel.
-
-Sie macht Entscheidungen aber auch langsam.
-
-> **Wie viel Einheit braucht eine Gesellschaft, die ihre Freiheit gerade aus ihrer Vielfalt ableitet?**
-
----
-
-## Nationale Leitfrage
-
-**Leitfrage:** Wie viel gemeinsame Macht braucht Freiheit zwischen voneinander entfernten Regionen?
-
-**Alltagswiderspruch:** Die Menschen verteidigen ihre regionale Selbstbestimmung, benötigen aber im Krieg gemeinsame Infrastruktur und zentrale Koordination.
-
-**Besonderer Ausbau:** Jede Küstenregion sollte eine eigene Identität besitzen. Namar wird dadurch zu einem Staat, dessen Einheit ständig ausgehandelt wird.
-
-## Hauptstadt
-
-Maris liegt an einer geschützten Küste und ist zugleich Hauptstadt, Hafen und Verkehrsknoten.
-
-Die Stadt ist stark vom Meer abhängig. Fähren, Werften, Fischmärkte und Küstenwachen gehören zum alltäglichen Bild.
-
-Die föderale Struktur Namars zeigt sich darin, dass fast jede Region eigene Verwaltungs- und Kulturhäuser besitzt.
-
-**Stadtbild:** Hafen, Werften, Küstenstraßen, Fähren, Markthallen und moderne Wohnviertel.  
-**Wichtige Viertel:** Zentralhafen, Werftstadt, Föderationsviertel, Fischmarkt, Neustadt.  
-**Sozialer Gegensatz:** maritime Arbeiter und traditionelle Familien gegenüber modernen Handels- und Verwaltungsschichten.
-
-## Regionen
-
-### Zentralküste
-Dicht besiedelte Küstenregion mit den größten Häfen und Werften.
-
-### Inselbund
-Mehrere Inselgruppen mit eigenen Dialekten, Bräuchen und lokalen Verwaltungen. Die Bewohner fühlen sich häufig zuerst ihrer Insel verbunden.
-
-### Westküste
-Fischerei, kleinere Häfen und traditionelle maritime Gemeinden.
-
-### Südliche Handelsküste
-Moderne Hafenstädte, internationale Unternehmen und starke Migration.
-
-**Regionaler Grundkonflikt:** Inseln und Randregionen fürchten, dass die Hauptstadt ihre Interessen zugunsten der großen Häfen vernachlässigt.
-
-## Städte
-
-### Maris – Hauptstadt
-Großer Hafen- und Verwaltungsstandort. Fähren, Werften und maritime Behörden bestimmen den Alltag.
-
-### Inselstadt
-Zentrum eines bedeutenden Inselbundes. Lokale Identität ist stärker als das nationale Zugehörigkeitsgefühl.
-
-### Westhaven
-Traditionelle Fischereistadt mit kleinen Werften und eng verbundenen Familien.
-
-### Port Sol
-Moderne internationale Handelsstadt mit starker Migration und großen Logistikunternehmen.
-
-### Teral
-Küstenstadt mit bedeutender Marine- und Küstenverteidigungsinfrastruktur.
-
-## Dörfer und ländlicher Alltag
-
-### Seedorf
-Fischerdorf mit kleinen Bootswerften und Familien, deren Berufe seit Generationen mit dem Meer verbunden sind.
-
-### Inselruh
-Abgelegene Inselgemeinde. Wetter, Fährverbindungen und lokale Selbstversorgung bestimmen den Alltag.
-
-### Hafenfeld
-Dorf nahe eines großen Hafens. Viele Bewohner arbeiten in Logistik und Schifffahrt.
-
-### Salzwiese
-Küstendorf mit Landwirtschaft, Fischerei und traditioneller regionaler Küche.
-
-## Familie und Generationen
-
-Die maritime Lebensweise prägt viele Familien. In Küsten- und Inselregionen wechseln sich Generationen von Fischern, Seeleuten, Hafenarbeitern und Schiffbauern ab.
-
-Abwesenheit gehört zum Familienleben: Ein Elternteil kann wochen- oder monatelang auf See sein. Dadurch entstehen starke lokale Netzwerke, in denen Großeltern, Geschwister und Nachbarn Verantwortung übernehmen.
-
-Auf Inseln ist die Familie oft besonders eng mit dem Heimatort verbunden. Wegzug wird nicht nur als persönlicher Schritt, sondern manchmal als Verlust für die Gemeinschaft verstanden.
-
-Kinder lernen früh Wetter, Meer und praktische Sicherheit. Familiengeschichten sind häufig mit bestimmten Schiffen, Häfen oder Inseln verbunden.
-
-## Alltag und Lebensgefühl
-
-### Leben am Wasser
-
-Wasser bestimmt die namaranische Gesellschaft. Fischerei, Handel, Schiffbau, Hafenarbeit und Küstenschutz sind alltägliche Themen.
-
-Kinder lernen früh schwimmen und mit wechselnden Wetterbedingungen umzugehen.
-
-### Föderale Identität
-
-Ein Bürger identifiziert sich häufig gleichzeitig mit seinem Bundesstaat, seiner Stadt und Namar als Ganzem.
-
-Die zentrale Regierung ist weit entfernt vom Alltag vieler Gemeinden.
-
-### Familie und Arbeit
-
-Berufe werden häufig innerhalb von Familien weitergegeben. Gleichzeitig ziehen junge Menschen wegen Studium und Arbeit zwischen den Küstenregionen um.
-
-### Militär
-
-Militärdienst besitzt besonders dort Ansehen, wo Küstenverteidigung unmittelbar erlebt wird. In friedlichen Regionen ist die Armee weniger präsent.
-
-### Lebensgefühl
-
-**Hoffnung:** Selbstbestimmung der eigenen Region.
-
-**Angst:** Dass eine äußere Bedrohung eine starke Zentralregierung erzwingt.
-
-**Tabu:** Den Föderalismus grundsätzlich als Schwäche zu bezeichnen.
-
----
-
-## Gesellschaftliche Ebenen 6–25
-
-### Punkt 6 – Jugend
-
-Meer, Wetter, Sport und lokale Gemeinschaft prägen die Jugend. Auf Inseln ist Selbstständigkeit besonders wichtig.
-
-### Punkt 7 – Arbeit
-
-Seefahrt, Fischerei, Schiffbau, Hafenlogistik und Küstenschutz sind zentrale Arbeitgeber.
-
-### Punkt 8 – Armut
-
-Inseln und abgelegene Küstenregionen sind bei Versorgungskrisen besonders verwundbar.
-
-### Punkt 9 – Wohlstand
-
-Hafen- und Reedereibesitz bringt erheblichen Wohlstand.
-
-### Punkt 10 – Religion
-
-Küstenreligionen, Familienrituale und unterschiedliche regionale Glaubensformen prägen die Gesellschaft.
-
-### Punkt 11 – Bildung
-
-Maritime und technische Fähigkeiten sind neben allgemeiner Bildung wichtig.
-
-### Punkt 12 – Medien
-
-Regionale Medien sind stark und unterscheiden sich zwischen Küste und Inseln.
-
-### Punkt 13 – Sprache
-
-Küsten- und Inseldialekte sind starke Identitätsmarker.
-
-### Punkt 14 – Essen
-
-Fisch, Meeresfrüchte, Salz, Getreide und Inselprodukte dominieren.
-
-### Punkt 15 – Kleidung
-
-Wetterfeste maritime Kleidung und regionale Festtrachten.
-
-### Punkt 16 – Architektur
-
-Hafenanlagen, Werften, Inselhäuser und Küstenbefestigungen.
-
-### Punkt 17 – Freizeit
-
-Segeln, Fischerei, Schwimmen, Hafenfeste und Inselsport.
-
-### Punkt 18 – Feste
-
-Saisoneröffnungen der Häfen, Seefahrtsfeste und Inseltraditionen.
-
-### Punkt 19 – Trauer
-
-Seebestattungen und maritime Gedenkrituale sind verbreitet.
-
-### Punkt 20 – Militär
-
-Marine, Küstenverteidigung und mobile Logistik dominieren.
-
-### Punkt 21 – Krieg
-
-Seewege, Häfen und Versorgung bestimmen die Kriegserfahrung.
-
-### Punkt 22 – Opposition
-
-Regionen und Inseln bilden häufig oppositionelle Bündnisse gegen Zentralisierung.
-
-### Punkt 23 – Nachbarn
-
-Nachbarschaftshilfe ist auf Inseln und an der Küste praktisch notwendig.
-
-### Punkt 24 – Migration
-
-Hafenstädte sind traditionell Einwanderungsorte.
-
-### Punkt 25 – Familiengeschichte
-
-Familiengeschichten sind mit Inseln, Schiffen, Häfen und Seereisen verbunden.
-
-## Konkrete Lore-Anker
-
-### Familien
-- **Familie Maren:** Alte Seefahrerfamilie.
-- **Familie Sol:** Werftfamilie aus Port Sol.
-
-### Personen
-- **Lio Maren:** Kapitän und Regionalpolitiker.
-- **Sara Sol:** Schiffbauingenieurin.
-
-### Institutionen
-- **Bundesrat der Inseln:** Vertretung der autonomen Regionen.
-- **Maritime Akademie Maris:** Ausbildung für Seefahrt und Küstenverteidigung.
-
-### Wirtschaft
-- **Maris Reederei:** Große Handelsreederei.
-- **Sol Werften:** Moderner Schiffbau.
-
-### Medien
-- **Küstenkurier:** Nationale maritime Zeitung.
-- **Inselstimme:** Regionales Medium des Inselbundes.
-
-### Militär
-- **Küstenverteidigungsflotte:** Schutz von Häfen und Inseln.
-- **Maritime Aufklärung:** Sensor- und Überwachungskräfte.
-
-### Stadtviertel Maris
-- **Großer Hafen:** Handel und Schifffahrt.
-- **Werftviertel:** Arbeiter und Ingenieure.
-- **Inselmarkt:** Regionale Händler.
-
-### Historische Ereignisse
-- **Bund der Küsten:** Föderationsgründung.
-- **Die große Sturmkatastrophe:** Naturkatastrophe, die nationale Küstenhilfeinstitutionen hervorbrachte.
-
----
-
-# 11. Orthea – Die wissenschaftliche Republik
-
-### Die wissenschaftliche Republik
-
-Orthea entstand nach einer Zeit, in der politische Entscheidungen zunehmend durch wissenschaftliche Gremien ersetzt wurden.
-
-Die daraus entstandene Republik versucht heute, Wissenschaft und demokratische Legitimation miteinander zu verbinden. Wissenschaft und Erkenntnis sind die treibenden Lehren des Staates. Sie begründen ihn. Sie ersetzen die Wahl nicht.
-
-### Politisches System
-
-Orthea besitzt demokratische Institutionen, unabhängige Forschungseinrichtungen und einen außergewöhnlich starken öffentlichen Wissenschaftssektor.
-
-Wissenschaftler haben erheblichen gesellschaftlichen Einfluss, besitzen aber keine automatische politische Herrschaft.
-
-### Technologie
-
-Orthea entwickelt:
-
-- Präzisionssensoren
-- autonome Systeme
-- medizinische Technik
-- Robotik
-- Zielerfassung
-- Analyse- und Entscheidungssysteme
-- hochentwickelte Kommunikationssysteme
-
-### Militär
-
-Ortheas Streitkräfte setzen auf Qualität der Informationen statt auf Masse.
-
-Der Staat versucht, menschliche Fehlentscheidungen durch technische Assistenz zu reduzieren.
-
-### Innerer Konflikt
-
-> **Kann eine Entscheidung wissenschaftlich korrekt und politisch trotzdem falsch sein?**
-
-Orthea muss ständig zwischen technischer Optimierung und menschlicher Verantwortung vermitteln.
-
----
-
-## Nationale Leitfrage
-
-**Leitfrage:** Was geschieht, wenn eine Gesellschaft lernt, fast alles zu messen?
-
-**Alltagswiderspruch:** Gute Daten verbessern Entscheidungen, können aber jene Erfahrungen unsichtbar machen, die sich nicht einfach quantifizieren lassen.
-
-**Besonderer Ausbau:** Orthea sollte neben Spitzenforschung auch eine große Schicht gewöhnlicher Bürger besitzen, die mit der akademischen Elite wenig gemeinsam hat.
-
-## Hauptstadt
-
-Asteron ist eine wissenschaftlich geprägte Hauptstadt. Universitäten, Forschungseinrichtungen, Kliniken und technische Institute bestimmen große Teile der Stadt.
-
-Viele öffentliche Gebäude sind gleichzeitig Forschungs- und Bildungszentren. Wissenschaftliche Einrichtungen besitzen einen ähnlichen gesellschaftlichen Stellenwert wie Regierungsgebäude.
-
-Die Stadt ist hochgebildet, aber nicht ausschließlich von Akademikern bewohnt. Eine große Zahl von Dienstleistungs-, Handwerks- und Verwaltungsberufen hält die wissenschaftliche Infrastruktur am Laufen.
-
-**Stadtbild:** Forschungszentren, Universitäten, Kliniken, Bibliotheken, moderne Wohnquartiere.  
-**Wichtige Viertel:** Universitätsstadt, Forschungsring, Klinikbezirk, Bürgerstadt, Industriepark.  
-**Sozialer Gegensatz:** wissenschaftliche Elite gegenüber Menschen, die vom akademischen System wenig profitieren.
-
-## Regionen
-
-### Wissenschaftsgürtel
-Universitäten, Forschungseinrichtungen und Kliniken bilden ein zusammenhängendes Netzwerk.
-
-### Industrielle Ebene
-Produktionsregion mit hochautomatisierten Fabriken und technischen Fachkräften.
-
-### Alte Provinzen
-Kleinere Städte und Dörfer mit weniger direktem Kontakt zur wissenschaftlichen Elite.
-
-### Südliche Agrarregion
-Landwirtschaftlich geprägtes Gebiet, in dem traditionelle Berufe und lokale Gemeinschaften stärker sind.
-
-**Regionaler Grundkonflikt:** Die wissenschaftlich geprägten Zentren sehen Daten und Expertise als Grundlage des Fortschritts; periphere Regionen wollen, dass ihre Erfahrung nicht als unwissenschaftlich abgetan wird.
-
-## Städte
-
-### Asteron – Hauptstadt
-Zentrum von Regierung, Universitäten und Forschung. Wissenschaft prägt die Stadtarchitektur ebenso wie das Berufsleben.
-
-### Helion
-Großes medizinisches Zentrum mit Kliniken, Biotechnologie und Ausbildungsstätten.
-
-### Quantis
-Technologiestadt mit Forschung an autonomen Systemen, Sensorik und Analyseverfahren.
-
-### Feldmark
-Mittelstadt außerhalb des Wissenschaftsgürtels. Landwirtschaft, Handwerk und normale Dienstleistungen prägen den Alltag.
-
-### Noris
-Industriestadt, die hochautomatisierte Produktion mit einer großen Schicht technischer Facharbeiter verbindet.
-
-## Dörfer und ländlicher Alltag
-
-### Forschungsfeld
-Kleine Gemeinde nahe wissenschaftlicher Anlagen. Viele Familien arbeiten in technischen oder medizinischen Berufen.
-
-### Altendorf
-Traditionelles Dorf außerhalb des Wissenschaftsgürtels. Die Bewohner stehen der akademischen Elite teilweise distanziert gegenüber.
-
-### Feldtal
-Landwirtschaftliches Dorf mit modernen Analyse- und Bewässerungssystemen.
-
-### Werkheim
-Technisches Dorf, dessen Bewohner überwiegend in automatisierten Produktionsanlagen arbeiten.
-
-## Familie und Generationen
-
-Bildung besitzt innerhalb der Familie einen außergewöhnlich hohen Stellenwert. Eltern investieren viel Zeit und Geld in die Ausbildung ihrer Kinder, sofern sie es sich leisten können.
-
-In akademischen Familien können Kinder früh an Wissenschaft herangeführt werden. Das schafft Chancen, erzeugt aber auch Leistungsdruck.
-
-Familien außerhalb der Wissenschaftselite erleben diesen Druck teilweise als soziale Distanz. Ein Kind aus einem ländlichen Haushalt kann sich gegenüber akademischen Familien gleichzeitig bewundert und fremd fühlen.
-
-Die zentrale familiäre Frage lautet: **Muss ein gutes Leben immer das Ergebnis messbarer Leistung sein?**
-
-## Alltag und Lebensgefühl
+Wohnungen mit einer öffentlichen und einer privaten Hälfte. Arbeit ist Amt, Handel oder das stille Haus. Man weiß nie, welche Hälfte gerade gilt.
 
 ### Bildung
 
-Bildung besitzt außergewöhnlich hohen gesellschaftlichen Wert. Kinder werden ermutigt, Fragen zu stellen und Hypothesen zu prüfen.
+Schulen lehren die offizielle Lage und, zwischen den Zeilen, dass sie nicht die einzige ist. Wer nur eine davon kann, besteht die Prüfung und scheitert am Leben.
 
-Universitäten und Forschungszentren sind wichtige kulturelle Orte.
+### Religion
 
-### Arbeit
+Glauben gibt es. Er ist verdächtig, wenn er eine Wahrheit behauptet, die das Spiel nicht gesetzt hat. Deshalb bleibt er klein und vorsichtig.
 
-Wissenschaft, Medizin, Ingenieurwesen und Analyseberufe genießen hohes Ansehen. Gleichzeitig entsteht eine soziale Kluft zwischen hochqualifizierten Spezialisten und Menschen, deren Arbeit weniger akademisch geprägt ist.
+### Soldaten im Alltag
 
-### Gesellschaft
-
-Entscheidungen werden häufig mit Daten begründet. Das kann Vertrauen schaffen, aber auch das Gefühl erzeugen, dass menschliche Erfahrungen gegenüber messbaren Größen zu wenig zählen.
-
-### Familie
-
-Eltern investieren stark in Bildung. Leistungsdruck beginnt früh.
-
-### Militär
-
-Soldaten arbeiten eng mit Forschern und technischen Spezialisten zusammen. Viele Systeme werden zunächst in zivilen Forschungsprogrammen entwickelt.
+Soldaten tragen Siegel und eine Lage. Zu Hause spielen sie weiter. Ein Uniformierter ist kein neutraler Nachbar. Er ist ein Zug, der gerade Uniform trägt.
 
 ### Lebensgefühl
 
-**Hoffnung:** Dass Wissen menschliches Leid verringern kann.
-
-**Angst:** Dass Optimierung den Menschen auf messbare Eigenschaften reduziert.
-
-**Tabu:** Wissenschaft grundsätzlich mit Wahrheit und Politik grundsätzlich mit Irrationalität gleichzusetzen.
-
----
+**Hoffnung:** Dass man das Spiel lange genug kann.  
+**Angst:** Dass man es eines Tages nicht mehr kann und dann still oder tot ist.  
+**Tabu:** Zu sagen, man folge jemandem. Folge ist die Lüge, die jeder durchschaut.
 
 ## Gesellschaftliche Ebenen 6–25
 
 ### Punkt 6 – Jugend
 
-Bildungserfolg besitzt hohen sozialen Wert. Jugendliche stehen unter akademischem Druck, während ländliche Jugendliche andere Lebenswege vertreten.
+Jugendliche lernen Doppelrede früh. Die, die sie nicht lernen, werden als Fälle geführt, noch bevor sie erwachsen sind.
 
 ### Punkt 7 – Arbeit
 
-Forschung, Medizin, Ingenieurwesen und automatisierte Industrie genießen hohes Prestige.
+Ämter, Handel, Überwachung, die stillen Häuser. Jede Arbeit ist ein Zug. Keine ist nur Arbeit.
 
 ### Punkt 8 – Armut
 
-Zugang zu guter Bildung entscheidet stark über soziale Mobilität.
+Armut ist, keine Züge mehr zu haben. Materiell kann das still sein und trotzdem das Ende bedeuten.
 
 ### Punkt 9 – Wohlstand
 
-Spitzenforscher, Mediziner und Techniker genießen hohes Einkommen und Prestige.
+Wohlstand heißt, andere setzen zu können. Er ist unsichtbar, weil Sichtbarkeit ein Fehler ist.
 
 ### Punkt 10 – Religion
 
-Wissenschaft dominiert öffentliche Institutionen, religiöser Glaube bleibt Privatsache.
+Klein, vorsichtig, nie als öffentliche Wahrheit.
 
 ### Punkt 11 – Bildung
 
-Wissenschaftliche Bildung ist gesellschaftliches Prestigezentrum.
+Hoch und zweideutig. Eine eindeutige Schule wäre in Vesper schon eine Opposition und damit selbst ein Spieler.
 
 ### Punkt 12 – Medien
 
-Datenjournalismus und wissenschaftliche Medien genießen Prestige, aber nicht jeder vertraut ihnen.
+Mehrere offizielle Wahrheiten. Wer eine davon ganz glaubt, ist ein Anfänger.
 
 ### Punkt 13 – Sprache
 
-Fachsprache besitzt hohes Prestige, kann aber soziale Distanz erzeugen.
+Die Amtssprache ist glatt. Die eigentliche Bedeutung sitzt in dem, was fehlt. Beides verstehen ist die Bildung.
 
 ### Punkt 14 – Essen
 
-Moderne, gesundheitsorientierte Küche neben traditionellen Gerichten.
+Unauffällig. Ein Festmahl ist eine Aussage. Die meisten vermeiden sie.
 
 ### Punkt 15 – Kleidung
 
-Funktionale, hochwertige Kleidung mit technischer Ästhetik.
+Stumpfes Oliv, schwarze Siegel im Dienst. Zivil so gewöhnlich, dass die Gewöhnlichkeit selbst eine Maske ist.
 
 ### Punkt 16 – Architektur
 
-Forschungszentren, Kliniken und Universitätsviertel mit moderner Infrastruktur.
+Fronten, die stimmen, und Räume, die nicht auf dem Plan stehen. Stillheim sieht gepflegt aus.
 
 ### Punkt 17 – Freizeit
 
-Wissenschaftsclubs, Sport, Museen, Debatten und digitale Kultur.
+Selten unschuldig. Ein Verein kann ein Netz sein. Man geht trotzdem hin, weil Fehlen auch ein Zug ist.
 
 ### Punkt 18 – Feste
 
-Wissenschaftswochen, Universitätsfeste und nationale Bildungstage.
+Staatstage mit einer Lage. Familienfeste sind klein, damit sie keine zweite Lage werden.
 
 ### Punkt 19 – Trauer
 
-Medizinische und wissenschaftliche Perspektiven auf Tod stehen neben persönlichen Ritualen.
+Trauer wird leise gehalten. Ein lauter Toter ist eine Behauptung. Die Familie weiß, ob der Tod ein Zug war.
 
 ### Punkt 20 – Militär
 
-Aufklärung, Präzision, Sensorik und autonome Systeme sind besonders wichtig.
+Ein Spieler mit Waffen. Lagebilder sind Werkzeuge. Der Schuss ist trotzdem echt.
 
 ### Punkt 21 – Krieg
 
-Krieg wird stark als Problem von Information, Technik und menschlichen Fehlentscheidungen analysiert.
+Krieg ist das Spiel mit Toten. Vesper kann ihn führen, solange genug Leute eine Version tragen. Es braucht keinen Glauben an einen Führer.
 
 ### Punkt 22 – Opposition
 
-Konflikte drehen sich oft um Daten, Wissenschaft, Ethik und politische Legitimation.
+Opposition ist der nächste Zug, nicht die Tür hinaus. Wer wirklich nicht mehr spielt, ist kein Oppositioneller. Er ist ein Fall.
 
 ### Punkt 23 – Nachbarn
 
-Akademische Viertel und normale Wohngebiete können sozial weit auseinanderliegen.
+Nachbarn sind die erste Gefahr und die erste Deckung. Man hilft und man merkt sich, wobei.
 
 ### Punkt 24 – Migration
 
-Hochqualifizierte Migration ist besonders erwünscht; soziale Integration bleibt eine Herausforderung.
+Wer kommt, muss das Spiel lernen oder verschwindet in Stillheim. Es gibt kein unschuldiges Ankommen.
 
 ### Punkt 25 – Familiengeschichte
 
-Wissenschaftliche und akademische Familiengeschichten können hohen Status erzeugen.
+Familien erinnern, wer ausgeschieden ist, und sagen es nicht laut. Die Geschichte ist eine Liste der Züge, die man überlebt hat.
 
 ## Konkrete Lore-Anker
 
 ### Familien
-- **Familie Aster:** Wissenschaftlerfamilie.
-- **Familie Feld:** Landwirtschaftliche Familie aus dem Süden.
+
+- **Familie Vel:** Altes Amtsgeschlecht. Spielt seit der Zeit, als Vesper noch frei genannt wurde.
+- **Familie Still:** Angehörige aus Stillheim. Bleiben, sprechen wenig.
 
 ### Personen
-- **Dr. Mara Aster:** Robotikforscherin.
-- **Jonas Feld:** Landwirt und Kritiker akademischer Eliten.
+
+- **Ivo Vel:** Setzt Lagen. Folgt niemandem und erwartet dasselbe von seinen Leuten.
+- **Nila Still:** Lebt neben einem ruhiggestellten Bruder. Kennt den Preis und spielt weiter.
 
 ### Institutionen
-- **Akademie Asteron:** Größter Forschungsverbund.
-- **Institut für Gesellschaftsdaten:** Analysiert öffentliche Politik.
+
+- **Die Archive:** Echt und präpariert, absichtlich vermischt.
+- **Stillheim:** Der Ort für die, die das Spiel nicht können.
 
 ### Wirtschaft
-- **Orthea Systems:** Robotik und Sensorik.
-- **Helion Medical:** Medizintechnik.
+
+- **Siegelwerk:** Geräte der Überwachung.
+- **Marktvel:** Handel als Spiel ohne Uniform.
 
 ### Medien
-- **Wissenschaft Heute:** Fach- und Nachrichtenmedium.
-- **Der Bürger:** Kritisches Massenmedium.
+
+- **Lage Eins** und **Lage Zwei:** Zwei Blätter, beide offiziell, keines vollständig.
 
 ### Militär
-- **Präzisionskorps Orthea:** Aufklärung und präzise Einsatzsysteme.
-- **Autonome Aufklärungseinheit Asteron:** Entwicklung und Einsatz unbemannter Systeme.
 
-### Stadtviertel Asteron
-- **Universitätsring:** Hochschulen und Forschung.
-- **Medizinbezirk:** Kliniken.
-- **Altstadt:** normale Wohn- und Geschäftsviertel.
+- **Spielkorps Vesper:** Heer mit mehreren gültigen Lagen.
+- **Grenzspiel Garnison:** Wo eine Version reichen muss.
+
+### Stadtviertel
+
+- **Die Front:** Das Gesicht Velis'.
+- **Die Archive:** Das eigentliche Möbel des Staates.
 
 ### Historische Ereignisse
-- **Die Große Wissenschaftsreform:** Ausbau unabhängiger Forschung.
-- **Der Algorithmusstreit:** öffentliche Krise über Grenzen automatisierter Entscheidungen.
+
+- **Der Verlust der Freiheit:** Aus Aufsicht wurde das Spiel. Niemand hat es danach wieder abgestellt.
+- **Die stille Quote:** Das Jahr, in dem Vesper öffentlich gemacht hat, dass ein Teil der Leute beseitigt oder ruhiggestellt wird. Das Land hat danach weitergespielt.
 
 ---
 
-# 12. Dargan – Die Schuldenrepublik
+# 7. Karsk – Der technokratische Maßstaat
 
-### Die Schuldenrepublik
+### Der technokratische Maßstaat
 
-Dargan ist nicht arm und liegt nicht am Rand. Es ist eine Republik, deren öffentliche Ordnung aus persönlichen, vererbbaren Schulden besteht. Jede Schuld hat einen Namen. Es gibt keine anonyme Kasse, in der sie verschwindet.
+Karsk behauptet nicht, dass alle Menschen gleich wertvoll seien. Es behauptet, dass ihr Wert messbar sei. Aus Grenzkriegen und Versorgungskrisen wurde zuerst ein Sicherheitsstaat und danach ein System, das Körper, Arbeit und Leben als verwaltbare Größen behandelt.
 
-Das Land besteht aus fruchtbaren Flusslanden und mehreren Städten von ähnlicher Größe. Keine davon darf das Buch an sich ziehen.
+Der Staat versteckt das nicht. Die Grausamkeit ist die Normalität. Ein Mensch kann zur Arbeit gehen, die Kinder zur Schule bringen und abends essen und trotzdem wissen, dass jede dieser Stunden bewertet wird.
+
+### Die besondere Ordnung
+
+Jeder Bürger hat eine Leistungs- und Vertrauensbewertung. Sie umfasst Körper, Beruf, medizinische Eignung und psychische Stabilität. Die Bewertung öffnet Wohnung, Medizin und Aufstieg. Sie ist kein Geheimnis. Sie ist das Formular.
+
+Daneben steht die technische Symbiose. Karsk verbessert den Menschen für die Aufgabe. Implantat, Graft, rote Balken auf Anthrazit. Der Verlust der Person ist ein akzeptierter Preis, kein Unfall. Es gibt keine zweite Hautfarbe außer am Graft. Der Körper bleibt als Körper kenntlich. Er wird nur zum System gemacht.
 
 ### Politisches System
 
-Kalden ist klein. Dort stehen die Bücher, nicht die größten Märkte und nicht die Werke. Wer einen Eintrag ändern will, muss es in Kalden tun, vor den anderen Namen.
-
-Der Staat darf stunden, staffeln und tauschen. Er darf im Frieden nicht vergeben. Eine Streichung ohne Gegenleistung ist eine Fälschung. Vergibt der Staat, behauptet er, dass eine geleistete Sache nichts war.
-
-Heirat, Lehre und Amt verschieben Pflichten. Kinder erben offene Posten. Schande beginnt, wenn ein Name eine fällige Schuld verweigert, nicht wenn ein Haus wenig besitzt.
+Varkesh verwaltet die Bewertung zentral. Es gibt keine Debatte darüber, ob gemessen wird. Es gibt Debatten darüber, welche Zahl gilt. Das ist der ganze politische Raum. Er reicht, um den Staat stabil zu halten. Er reicht nicht, um ihn zu verlassen.
 
 ### Technologie
 
-Anlagen sind modern. Ein Kraftwerk, ein Lager oder eine Funkstelle trägt den Namen des Hauses, das dafür haftet. Fällt sie aus, sucht man keine Behörde. Man sucht diesen Namen.
-
-Die Technik ist standardisiert, weil ein anderes Haus sie übernehmen können muss, wenn das haftende Haus zahlt oder untergeht.
+Medizin, Implantate, Sensorik am Körper, Werke, die den Menschen als Teil der Fertigung denken. Technik darf am Menschen tun, was die Bewertung als Gewinn rechnet.
 
 ### Militär
 
-Ein fester Kader führt Waffen, Listen und die Ordnung im Feld. Die Zahl der Leute kommt aus dem Buch.
+Anthrazit, rote Balken, das Implantat sichtbar. Die Truppe ist der äußerste Fall derselben Logik. Ein Soldat wird für den Krieg hergerichtet. Veteranen bleiben in der Bewertung. Ein beschädigter Körper ist ein Datensatz, keine Geschichte, es sei denn, die Familie behält sie gegen das Formular.
 
-Ein Krieg beginnt, indem Kalden Zeilen aufruft. In der Zeile stehen die Tat, die Häuser, das Material und der Tag, an dem sie fällig wird. Der Kader setzt daraus den Einsatz. Er bestimmt nicht, wer geht.
+### Der innere Konflikt
 
-Häuser, deren Dienst fällig ist, stellen die Leute. Häuser, denen der Staat noch etwas schuldet, dürfen bleiben, bis diese Gegenleistung steht. Dieses Bleiben ist legal.
+Die Familie ist der letzte Raum, der sich der Zahl widersetzt, und auch sie wird gelesen. Menschen tragen das, weil die Alternative in Karsk nicht Freiheit ist, sondern eine schlechtere Zahl. Der Staat ist stabil. Er ist nicht gütig.
 
-Wer auf den Aufruf hin geht, wird frei. Die Schulden auf seinem eigenen Namen sind danach zu. Ob die Tat gelingt, ändert daran nichts. Ob er zurückkommt, auch nicht. Was das Haus sonst schuldet, bleibt stehen. Wer gerufen wird und nicht geht, wird nicht getilgt. Seine Schuld wird schwerer. Wer nicht gerufen wird, kann sich den Krieg nicht kaufen.
-
-Im Feld gilt die aufgeschriebene Tat, nicht die Gelegenheit. Ist die Zeile geschlossen, gehen diese Häuser nach Hause. Ein Nachstoßen verlangt eine neue Zeile aus Kalden.
-
-### Innerer Konflikt
-
-Die Schreiber, die eine Zeile setzen, entscheiden, welcher Name die Chance bekommt, frei zu werden. Belastete Häuser können einen Aufruf verlangen. Kalden kann einen Krieg öffnen, um Namen zu waschen.
-
-> **Wer wird frei, wenn das Buch bestimmt, wer gehen darf?**
-
----
+> **Was bleibt von einer Person, wenn ihr Wert ein Formular ist?**
 
 ## Nationale Leitfrage
 
-**Leitfrage:** Kann eine Schuld gerecht sein und ein Haus trotzdem zerstören?
+**Leitfrage:** Was geschieht mit einer Gesellschaft, wenn menschlicher Wert messbar gemacht wird?
 
-**Alltagswiderspruch:** Die Menschen wollen, dass geleistete Dinge zählen. Dieselben Menschen wollen frei werden, und der einzige Weg dazu ist der Krieg.
+**Alltagswiderspruch:** Die Leute wollen die Medizin und die Sicherheit und wollen nicht die Zahl sein, die beides verteilt.
 
-**Besonderer Ausbau:** Jedes größere Haus führt eine eigene Abschrift des Buchs. Ein gefälschtes Datum ist ein gefälschter Krieg.
+**Besonderer Ausbau:** Die Bewertung bleibt sichtbar. Karsk lügt nicht darüber, dass es sortiert.
 
 ## Hauptstadt
 
-Kalden ist keine große Stadt. Sie ist der Sitz der Bücher. Änderungen an einer Schuld werden dort vor den anderen Namen vorgenommen. Märkte und Werke liegen in den übrigen Städten.
+Varkesh ist Klinik, Werk und Amt in einem Raster.
 
-**Stadtbild:** Hallen der Bücher, Lesungen, Herbergen der Häuser, die eine Eintragung begleiten.  
-**Wichtige Orte:** Die Halle, die Abschriftenkammer, das Quartier der Schreiber, der Vorlesehof.  
-**Sozialer Gegensatz:** Schreiber, die Zeilen setzen, gegenüber Häusern, die in diesen Zeilen stehen.
+**Stadtbild:** Graue Blöcke, rote Markierungen, Kliniken an den Werkhöfen.  
+**Wichtige Viertel:** Bewertungsamt, Klinikkern, die Werkstätten der Grafts.  
+**Sozialer Gegensatz:** hohe Zahlen gegenüber den Wohnringen der niedrigen.
 
 ## Regionen
 
-### Die gleichen Städte
+### Zentralbezirk
 
-Mehrere Städte von ähnlicher Größe. Keine ist Hauptstadt im Sinn einer Metropole. Jede haftet für die Anlagen, die ihren Namen tragen.
+Varkesh. Hier wird die Zahl gemacht.
 
-### Die Auen
+### Produktionsgürtel
 
-Fruchtbares Land zwischen den Flüssen. Höfe sind Häuser mit offenen und geschlossenen Posten wie die Städte.
+Werke. Der Körper ist hier Schicht.
 
-### Die Werke
+### Grenzsektoren
 
-Produktionsorte ohne anonymer Behörde. Das haftende Haus steht an der Tür.
+Der Krieg als Dauerprüfung. Bewertung und Einsatz liegen übereinander.
 
-**Regionaler Grundkonflikt:** Jede Stadt will, dass ihre Namen in Kalden richtig stehen, und keine will, dass eine andere Stadt die Bücher an sich nimmt.
+### Versorgungsprovinzen
+
+Essen, Grundmedizin, die niedrigen Zahlen. Stabil und eng.
 
 ## Städte
 
-### Kalden
+### Varkesh
 
-Sitz der Bücher. Klein, absichtlich.
+Sitz der Bewertung.
 
-### Mahr
+### Karsin
 
-Größte der gleichen Städte, ohne deshalb Hauptstadt zu sein. Märkte und Werkhöfe.
+Werkstadt. Grafts und Schichten.
 
-### Brunn
+### Dravik
 
-Stadt an einem Flussübergang. Brücken und Lager tragen Hausnamen.
+Klinikstadt. Hier wird entschieden, wer verbessert wird.
 
-### Selm
+### Sektorstadt 7
 
-Stadt der Lehren. Hier werden Pflichten mit einem abgeschlossenen Lehrverhältnis verschoben.
+Grenzstadt. Die Bewertung ist hier eine Einsatzliste.
 
-## Alltag und Lebensgefühl
+### Grenzwerk
 
-### Schulden
-
-Ein Mensch weiß, was sein Haus schuldet und wem etwas geschuldet wird. Wohlstand heißt, dass viele einem etwas schulden.
-
-### Familie
-
-Heirat legt fest, welche Pflichten mitgehen und welche im alten Haus bleiben. Ein Gefallener hinterlässt seine eigenen Posten nicht. Das Haus bleibt für seine übrigen Zeilen haftbar. Der Staat schuldet der Familie den Menschen. Beides wird in Kalden vorgelesen.
-
-### Staat
-
-Der Staat führt das Buch. Er besitzt die Menschen nicht. Im Frieden gibt es keine Vergebung.
-
-### Militär
-
-Es gehen die Namen, die am schwersten sind. Der Kader führt sie und sucht sie nicht aus.
-
-### Kleidung
-
-Der Dienstrock ist nussbraun und gerade geschnitten. Die Manschetten sind papierhell. Auf ihnen steht eine einzelne offene schwarze Zeile, das Zeichen einer noch offenen Schuld. Wer auf einen Aufruf hin gegangen ist, trägt einen kurzen Strich durch dieselbe Zeile. Das Zeichen bleibt klein. Es ist kein Rangabzeichen. Kragen und Brust bleiben für Dienstgrad und Orden frei. Das ist der Arbeitsstand. Schnitt und Zeichen werden später noch einmal angesehen.
-
-
-### Lebensgefühl
-
-**Hoffnung:** Dass der eigene Name geschlossen wird.  
-**Angst:** Dass ein Haus richtig zahlt und trotzdem untergeht, weil es zu spät kommt.  
-**Tabu:** Eine Schuld zu streichen, ohne dass jemand sie getragen hat.
-
-## Konkrete Lore-Anker
-
-### Institutionen
-- **Die Halle zu Kalden:** Einziger Ort, an dem eine Zeile rechtsgültig geändert wird.
-- **Der Kader:** Berufener Stamm für Waffen, Listen und Feldordnung. Kein Eigentümer der Truppe.
-
-### Militär
-- **Der Aufruf:** Die Zeile, die Tat, Häuser, Material und Fälligkeit nennt.
-- **Die Tilgung:** Das Gehen löscht die persönlichen Schulden des Soldaten.
-
-### Historischer Anker
-- **Das ungeschlossene Buch:** Ein Krieg, dessen politischer Grund vergangen war und der weiterging, weil noch Namen offen waren. Seitdem ist bekannt, dass Dargan siegen und trotzdem nicht aufhören kann, und aufhören kann, während es vorn liegt.
-
----
-
-# 13. Lyr – Der Eid der Täler
-
-### Der Eid der Täler
-
-Lyr ist kein Staat mit einer Stadt, die für die Täler mitregiert. Es ist ein Bund aus Tälern und Bergorten, die sich gegen einen äußeren Herrn zusammengeschworen haben. Jedes Tal behält sein Recht. Der Bund ist der Eid, dass ein Angriff auf eines ein Angriff auf die anderen ist.
-
-Es gibt keinen Sitz. Auch keine Stadt, die nur zum Tagen da wäre. Wer ein Tal nimmt, nimmt dieses Tal. Er nimmt nicht den Bund.
-
-### Politisches System
-
-Getagt wird dort, wo es diesmal verabredet ist, und das nächste Mal woanders. Die Abschriften des Eids liegen in jedem Tal.
-
-Einmal im Jahr, oder wenn ein Tal gerufen wird, kommen Leute aus zwei oder drei anderen Tälern. Nie nur die, mit denen man gerade im Streit liegt. Sie lesen die Abschrift laut vor den Leuten dieses Tals, setzen Namen und Datum darunter und nehmen eine gleichlautende Abschrift mit nach Hause. Der Beweis liegt dort, wo gelesen wurde, und in den Tälern, die mitgehört haben.
-
-Wer die Leser nicht einlässt, tritt nicht aus. Er macht sich stumm. Die anderen führen ihn als Tal, das den Eid nicht mehr zeigen will. Wer eine Abschrift fälscht oder einen Nachbarn an einen Fremden verkauft, bricht den Eid. Das sprechen die Täler aus, die zuletzt mitgelesen haben.
-
-### Technologie
-
-Die Täler bauen, was das Gebirge von ihnen verlangt:
-
-- Tunnel und Pässe
-- Stellungen in Engen
-- leichte Systeme, die ein Tal tragen und warten kann
-- unterirdische Sensorik an den Zugängen
-- Vorräte im eigenen Tal, nicht in einem gemeinsamen Lager
-
-### Militär
-
-Der Krieg liegt in den Pässen und Tälern. Es gibt keine Bundesarmee, die irgendwohin geschickt wird. Wer Lyr angreift, trifft zuerst ein Tal und danach die, die der Eid noch erreichen kann. Ein Tal kann zu spät kommen. Es darf den Eid nicht verkaufen.
-
-### Innerer Konflikt
-
-Die Täler handeln, heiraten, teilen Pässe und bezeugen sich den Eid. Dieselbe Nähe erzeugt Streit um Weide, Wasser, Zoll und den Besitz eines Passes. Ein Tal kann ein anderes sperren oder eine Hütte niederbrennen. Es darf den Nachbarn nicht auslöschen.
-
-Es gibt kein Gericht über den Tälern. Schlichten können nur die, die beide noch brauchen, wenn jemand von außen kommt. Deshalb bleibt mancher Streit offen.
-
-> **Wann wird aus dem Eid ein Staat, der die Täler nur noch verwaltet?**
-
----
-
-## Nationale Leitfrage
-
-**Leitfrage:** Wie bleiben viele Täler ein Bund, ohne einen Ort zu haben, an dem der Bund steht?
-
-**Alltagswiderspruch:** Die Menschen wollen Hilfe aus den anderen Tälern und wollen zugleich, dass niemand ihr Recht an sich nimmt.
-
-**Besonderer Ausbau:** Die Täler sind verwandt und nicht gleich. Jedes behält eigene Gewohnheit, eigenen Streit und eine eigene Abschrift.
-
-## Orte
-
-Lyr hat keine Hauptstadt.
-
-### Die Täler
-
-Jedes größere Tal ist eine politische Einheit mit eigenem Recht, eigenen Vorräten und einer Abschrift des Eids. Keines ist der Sitz der anderen.
-
-### Die Pässe
-
-Wege zwischen den Tälern. Um sie wird gestritten. Sie werden nicht einer Stadt unterstellt, weil eine solche Stadt zum Ziel würde.
-
-### Die Hütten und Werke
-
-Werkstätten und Vorratshäuser gehören dem Tal, in dem sie stehen. Ein verbranntes Haus löscht die Abschrift nicht, die ein anderes Tal mitgenommen hat.
-
-## Alltag und Lebensgefühl
-
-### Eid
-
-Der Eid wird laut vorgelesen, nicht in einer fernen Kanzlei hinterlegt. Leute erinnern sich, wer mitgelesen hat.
-
-### Gewalt
-
-Streit unter Nachbarn ist gewöhnlich. Das Auslöschen eines Tals ist der Bruch.
-
-### Leben
-
-Geheiratet wird auch über die Talgrenze. Gehandelt wird über die Pässe. Beides macht den Bund lebendig und den Streit persönlich.
-
-### Lebensgefühl
-
-**Hoffnung:** Dass die anderen kommen, wenn das eigene Tal getroffen wird.  
-**Angst:** Dass aus der gemeinsamen Hilfe eine Herrschaft wird.  
-**Tabu:** Ein Tal an einen Fremden zu verkaufen oder seine Abschrift zu fälschen.
-
-## Konkrete Lore-Anker
-
-### Institutionen
-- **Die Abschrift:** In jedem Tal eine, bezeugt durch Namen und Datum der Leser.
-- **Das Mitlesen:** Zwei oder drei fremde Täler, nie nur die Streitgegner.
-
-### Militär
-- **Der Ruf:** Ein angegriffenes Tal ruft die, die den Eid noch zeigen.
-- **Das zu späte Tal:** Darf zögern. Darf den Eid nicht verkaufen.
-
-### Historischer Anker
-- **Der erste Eid:** Zusammenschluss der Täler gegen einen äußeren Herrn. Seitdem gibt es bewusst keinen Ort, an dem man den Bund auslöschen könnte.
-
----
-
-# 14. Caldris – Der fürsorgliche Sicherheitsstaat
-
-### Der fürsorgliche Sicherheitsstaat
-
-Caldris ist eine der widersprüchlichsten Gesellschaften der Welt.
-
-Der Staat garantiert umfangreiche soziale Versorgung, medizinische Betreuung, Wohnraum und Schutz vor wirtschaftlicher Not.
-
-Gleichzeitig überwacht er seine Bevölkerung umfassend.
-
-### Politisches System
-
-Caldris ist ein autoritärer Wohlfahrtsstaat.
-
-Die Regierung rechtfertigt ihre Macht weniger durch nationale Größe als durch Sicherheit und soziale Stabilität.
-
-### Technologie
-
-Caldris entwickelt:
-
-- medizinische Systeme
-- elektronische Kriegsführung
-- Kommunikationskontrolle
-- Überwachung
-- biometrische Systeme
-- Schutztechnik
-- zivile Notfallinfrastruktur
-
-### Militär
-
-Caldris führt den Krieg mit derselben Maschine, mit der es die Leute versorgt. Ein Soldat ist schon eine Akte, bevor er geht. Einen Schlag, der Krankenhäuser, Wohnraum oder die Erfassung mitreißt, unterlässt die Führung. Unruhe zu Hause zieht Truppen von der Front, weil Heer und innere Sicherheit dieselbe Lage sehen. Wer nie im Formular stand, bleibt unsichtbar, bis er etwas zerbricht.
-
-### Innerer Konflikt
-
-Die Bevölkerung erhält reale soziale Leistungen.
-
-Der Preis ist ein erheblicher Verlust an Privatsphäre.
-
-> **Wie viel Freiheit darf ein Staat im Namen der Sicherheit nehmen, wenn er dafür tatsächlich Sicherheit liefert?**
-
----
-
-## Nationale Leitfrage
-
-**Leitfrage:** Was ist ein freier Mensch, wenn für fast jedes Lebensproblem bereits gesorgt wird?
-
-**Alltagswiderspruch:** Materielle Sicherheit ist real und wertvoll, während Überwachung und Konformitätsdruck ebenfalls real sind.
-
-**Besonderer Ausbau:** Caldris braucht Bürger, die das System aus Überzeugung verteidigen, weil sie dessen soziale Leistungen erlebt haben.
-
-## Hauptstadt
-
-Seren ist eine planmäßig entwickelte Hauptstadt, in der staatliche Versorgungseinrichtungen Teil des normalen Stadtbildes sind.
-
-Wohnkomplexe, Schulen, Kliniken, Kindertagesstätten und Arbeitsvermittlungen liegen in unmittelbarer Nähe zueinander.
-
-Die Stadt ist sauber, funktional und materiell gut versorgt. Gleichzeitig ist die staatliche Präsenz nahezu überall sichtbar.
-
-Biometrische Zugangssysteme, öffentliche Kameras und digitale Bürgerdienste gehören zum Alltag.
-
-**Stadtbild:** gepflegte Wohnkomplexe, breite Wege, Kliniken, Schulen, Verwaltungszentren und überwachte öffentliche Räume.  
-**Wichtige Viertel:** Regierungszentrum, Wohnsektoren, Gesundheitsbezirk, Bildungsbezirk, Produktionsstadt.  
-**Sozialer Gegensatz:** weniger räumlich als institutionell – Unterschiede zeigen sich vor allem in Zugang, Status und staatlicher Bewertung.
-
-## Regionen
-
-### Versorgungsgürtel
-Dicht besiedelte Regionen mit modernen Wohnkomplexen, Kliniken und Bildungseinrichtungen.
-
-### Industriestädte
-Große Produktionszentren, in denen der Staat Arbeitsplätze, Wohnen und soziale Versorgung eng miteinander verbindet.
-
-### Agrarprovinzen
-Ländliche Regionen mit staatlich organisierten Landwirtschaftsbetrieben und stabilen Versorgungsstrukturen.
-
-### Sicherheitsbezirk
-Strategisch wichtige Region mit besonders hoher Dichte an Sicherheits- und Überwachungseinrichtungen.
-
-**Regionaler Grundkonflikt:** In wohlversorgten Regionen wird das System eher als Schutz erlebt; in stark überwachten Gebieten stärker als Eingriff in das Privatleben.
-
-## Städte
-
-### Seren – Hauptstadt
-Planmäßig entwickelte Verwaltungs- und Versorgungsmetropole. Bürger erleben den Staat hier nahezu überall.
-
-### Gesundheim
-Medizinzentrum mit großen Kliniken und staatlichen Forschungsprogrammen.
-
-### Werksstadt
-Industriestadt, in der Arbeitsplätze, Wohnraum und soziale Versorgung eng verbunden sind.
-
-### Grünfeld
-Agrarstadt mit hoher staatlicher Versorgung und stark organisierten Gemeinschaftseinrichtungen.
-
-### Kontrollstadt
-Strategischer Sicherheitsstandort mit besonders dichter Überwachungsinfrastruktur. Die Bevölkerung erhält viele Leistungen, erlebt aber auch die stärkste staatliche Kontrolle.
+Fertigung direkt an der Grenze. Der Krieg ist der Auftraggeber.
 
 ## Dörfer und ländlicher Alltag
 
-### Versorgungsdorf
-Planmäßig errichtete Gemeinde mit staatlicher Klinik, Schule und zentraler Lebensmittelversorgung.
+### Werksiedlung Nord
 
-### Werksiedlung
-Wohnort für Beschäftigte eines staatlichen Produktionsbetriebs. Arbeit und soziale Leistungen sind eng gekoppelt.
+Wohnen an der Schicht. Kinder kennen ihre vorläufige Zahl.
 
-### Kinderfeld
-Gemeinde mit umfangreicher staatlicher Kinderbetreuung und Familienförderung.
+### Dornenfeld
 
-### Randhain
-Ländliche Gemeinde, in der staatliche Leistungen geschätzt werden, gleichzeitig aber viele Bewohner den Umfang der Kontrolle kritisch sehen.
+Versorgung. Niedrige Zahlen, feste Rationen, wenig Auswahl.
+
+### Grauhof
+
+Familien, die versuchen, eine Bewertung nicht in die Küche zu lassen. Es gelingt selten.
+
+### Grenzposten
+
+Dorf am Sektor. Der Dienst ist hier kein Beruf unter anderen.
 
 ## Familie und Generationen
 
-Familien werden umfassend durch den Sozialstaat unterstützt. Kinderbetreuung, medizinische Versorgung, Wohnraum und berufliche Vermittlung können den Alltag erheblich erleichtern.
-
-Viele Familien empfinden diese Unterstützung als echte Verbesserung ihres Lebens. Der Staat wird nicht ausschließlich als Unterdrücker erlebt, sondern als Institution, die konkrete Probleme löst.
-
-Gleichzeitig werden Familienleben und Lebensentscheidungen umfassend registriert. Manche Eltern empfinden die staatliche Fürsorge deshalb als Schutz, andere als dauernde Beobachtung.
-
-Kinder wachsen mit dem Bewusstsein auf, dass der Staat für sie sorgen kann und zugleich viel über sie weiß.
+Familien verstecken Zärtlichkeit vor dem Formular und schaffen es nicht ganz. Ein Kind wird früh eingeordnet. Die Eltern kämpfen um eine bessere Zahl und hassen sich dafür. Das ist der Schutzraum und sein Versagen zugleich. Der Staat rechnet auch das ein.
 
 ## Alltag und Lebensgefühl
 
-### Wohnen und Versorgung
+### Wohnen und Arbeit
 
-Caldrische Bürger erleben den Staat im Alltag unmittelbar. Gesundheitsversorgung, Wohnraum, Arbeitsvermittlung und soziale Absicherung sind weitgehend organisiert.
+Wohnungsgröße folgt der Zahl. Arbeit ist der Weg, sie zu halten. Ein schlechter Monat ist sichtbar.
 
-Für viele Menschen ist das Leben materiell stabil.
+### Bildung
 
-### Überwachung
+Schulen sortieren. Chancen sind echt für die, die passen. Die anderen lernen früh, dass ihre Zukunft eine Kennzahl ist.
 
-Gleichzeitig existieren umfangreiche Kontrollsysteme. Bürger wissen, dass staatliche Stellen große Mengen persönlicher Informationen besitzen.
+### Religion
 
-Viele Menschen passen ihr Verhalten deshalb an, obwohl sie persönlich nie verfolgt wurden.
+Private Reste. Sie trösten und ändern die Zahl nicht. Der Staat lässt sie, solange sie keine zweite Bewertung aufmachen.
 
-### Familie
+### Soldaten im Alltag
 
-Familien profitieren von sozialer Unterstützung. Kinderbetreuung und medizinische Versorgung sind gut ausgebaut.
-
-Die Frage der Privatsphäre beginnt jedoch früh: Eltern müssen entscheiden, wie offen sie mit ihren Kindern über politische Themen sprechen.
-
-### Militär
-
-Militär und zivile Sicherheitsorgane überschneiden sich stark. Soldaten werden als Teil des gesellschaftlichen Schutzsystems betrachtet.
+Ein Soldat ist ein optimierter Bürger. Nach dem Dienst bleibt das Implantat. Die Nachbarn sehen das System am Körper. Mitleid ist keine Kategorie des Amtes. Die Familie hat es trotzdem.
 
 ### Lebensgefühl
 
-**Hoffnung:** Niemand soll durch Armut oder Krankheit fallen gelassen werden.
-
-**Angst:** Dass Sicherheit irgendwann wichtiger wird als persönliche Freiheit.
-
-**Tabu:** Die sozialen Leistungen des Staates pauschal als wertlos zu bezeichnen.
-
----
+**Hoffnung:** Eine bessere Zahl, und dass die Familie daneben noch etwas ist.  
+**Angst:** Dass die Verbesserung die Person kostet und das Amt das einen Gewinn nennt.  
+**Tabu:** Zu behaupten, alle seien gleich wertvoll. Karsk hält das für eine Lüge.
 
 ## Gesellschaftliche Ebenen 6–25
 
 ### Punkt 6 – Jugend
 
-Staatliche Schulen, Jugendzentren und Betreuung sind umfassend. Jugendliche erfahren Sicherheit und Überwachung gleichzeitig.
+Jugend wird medizinisch und beruflich bewertet. Leistungsstarke bekommen Wege. Die anderen sehen die Grenze schon in der Schule.
 
 ### Punkt 7 – Arbeit
 
-Staat und staatsnahe Unternehmen sind zentrale Arbeitgeber; Beschäftigung wird stark vermittelt und überwacht.
+Arbeit ist Bewertung. Produktivität und staatlicher Bedarf bestimmen Aufstieg und Zimmer.
 
 ### Punkt 8 – Armut
 
-Materielle Armut ist relativ gering, da der Staat umfassend versorgt; Abhängigkeit vom System ist die Kehrseite.
+Grundversorgung kann stehen. Armut ist mangelnde Verwendbarkeit. Weniger Auswahl, schlechtere medizinische Priorität.
 
 ### Punkt 9 – Wohlstand
 
-Wohlstand wird weniger über Luxus als über Zugang zu Wohnraum, Versorgung und staatlichen Leistungen erlebt.
+Bessere Wohnung, bessere Klinik, hochwertige Grafts. Wohlstand ist Nützlichkeit, die man sieht.
 
 ### Punkt 10 – Religion
 
-Staatlich geförderte soziale Rituale konkurrieren mit privaten Religionen.
+Vorsichtig und privat. Keine Konkurrenz zum Formular.
 
 ### Punkt 11 – Bildung
 
-Bildung ist flächendeckend staatlich organisiert und eng mit Sozialplanung verbunden.
+Frühe Einordnung. Das Ziel ist die benötigte Fähigkeit, nicht die Person.
 
 ### Punkt 12 – Medien
 
-Staatliche Medien dominieren, liefern aber reale Informationen und Dienstleistungen.
+Staatlich. Ordnung, Fortschritt, Leistung. Kritik nur innerhalb der Frage, welche Zahl stimmt.
 
 ### Punkt 13 – Sprache
 
-Verwaltungssprache prägt Schule und Behörden; private Umgangssprache bleibt vielfältig.
+Amtlich, nüchtern, voller Kennwerte. In den Familien eine kürzere Sprache, die das Amt nicht führen darf.
 
 ### Punkt 14 – Essen
 
-Einheitliche Grundversorgung mit regionalen Ergänzungen; Gemeinschaftsküchen sind verbreitet.
+Rationen nach Bedarf und Zahl. Ein Festessen ist eine Zuteilung, keine Laune.
 
 ### Punkt 15 – Kleidung
 
-Staatlich geförderte Grundkleidung ist schlicht; private Kleidung markiert Individualität.
+Anthrazit, rote Balken, das Implantat nicht versteckt. Zivilkleidung der niedrigen Zahlen ist einheitlich und dünn.
 
 ### Punkt 16 – Architektur
 
-Geplante Wohnviertel, Kliniken, Schulen und zentrale Versorgungseinrichtungen.
+Raster, Kliniken an Werken, Wohnringe nach Zahl. Nichts ist zufällig hässlich. Es ist zugeteilt.
 
 ### Punkt 17 – Freizeit
 
-Staatliche Sport- und Kulturzentren bieten breite, günstige Freizeitangebote.
+Zugeordnet, gesund, auswertbar. Unbeobachtete Zeit gilt als Lücke.
 
 ### Punkt 18 – Feste
 
-Staatliche Gemeinschaftstage, Familienfeste und Versorgungsjubiläen.
+Leistungstage. Die Familie feiert daneben leiser, wenn sie es wagt.
 
 ### Punkt 19 – Trauer
 
-Staatliche Betreuung hilft Hinterbliebenen umfassend, registriert ihre Situation aber auch.
+Das Amt schließt eine Akte. Die Familie beerdigt einen Menschen. Beides geschieht. Nur eines steht im Formular.
 
 ### Punkt 20 – Militär
 
-Militär und innere Sicherheit sind eng verbunden.
+Der Krieg ist die höchste Verwendung. Herrichtung ist Pflicht. Verweigerung ist eine Zahl, die man nicht überlebt.
 
 ### Punkt 21 – Krieg
 
-Krieg wird als Rechtfertigung für Schutz, Versorgung und Überwachung verstanden; Kritiker fürchten dauerhafte Ausnahmezustände.
+Karsk kämpft mit Menschen, die es dafür umgebaut hat. Der Verlust der Person ist einkalkuliert. Der Staat bleibt danach derselbe.
 
 ### Punkt 22 – Opposition
 
-Offene Opposition ist begrenzt; viele Bürger unterscheiden zwischen Zustimmung zu Leistungen und Kritik an Kontrolle.
+Opposition fordert eine andere Gewichtung der Zahl. Sie fordert selten das Ende der Messung. Wer das fordert, hat bereits eine schlechte Zahl.
 
 ### Punkt 23 – Nachbarn
 
-Gemeinschaftseinrichtungen fördern Nachbarschaft, staatliche Verwaltung erfasst sie zugleich.
+Nachbarn kennen einander als Zahlen und als Leute. Hilfe folgt oft der Angst, die eigene Zahl zu senken.
 
 ### Punkt 24 – Migration
 
-Zuwanderung wird stark administrativ gesteuert und in das Versorgungssystem integriert.
+Zuzug wird sofort bewertet. Es gibt kein Jahr des Ankommens ohne Formular.
 
 ### Punkt 25 – Familiengeschichte
 
-Familien erinnern sich sowohl an staatliche Fürsorge als auch an Eingriffe in das Privatleben.
+Familien erinnern, wer verbessert wurde und wer danach nicht mehr derselbe war. Diese Geschichten sind der letzte Widerspruch. Sie ändern das Amt nicht.
 
 ## Konkrete Lore-Anker
 
 ### Familien
-- **Familie Seren:** Staatsbeamtenfamilie.
-- **Familie Grün:** Arbeiterfamilie aus einer Versorgungssiedlung.
+
+- **Familie Vark:** Hohe Zahlen, Grafts, Ämter.
+- **Familie Dorn:** Versorgungsprovinz. Niedrige Zahlen, dichte Familie.
 
 ### Personen
-- **Dr. Elias Seren:** Leiter einer staatlichen Klinik.
-- **Mara Grün:** Beschäftigte in einer staatlichen Fabrik und Unterstützerin des Sozialstaates.
+
+- **Oberin Kes:** Leitet eine Klinik in Dravik. Nennt den Verlust der Person einen Preis und lügt nicht.
+- **Senn Dorn:** Vater in Grauhof. Versucht, die Bewertung aus dem Abendessen zu halten.
 
 ### Institutionen
-- **Ministerium für Bürgerwohl:** Koordiniert Versorgung und Sozialleistungen.
-- **Zentrale Gesundheitsverwaltung:** Medizinische Versorgung und Registrierung.
+
+- **Bewertungsamt Varkesh:** Die Zahl.
+- **Graftwerk Karsin:** Die Verbesserung.
 
 ### Wirtschaft
-- **Caldrische Staatswerke:** Große Produktionsbetriebe.
-- **Versorgungsbund:** Landwirtschaft und Verteilung.
+
+- **Grenzwerk:** Krieg als Auftrag.
+- **Rationsamt:** Essen nach Zahl.
 
 ### Medien
-- **Bürgerkanal Caldris:** Staatliches Massenmedium.
-- **Forum der Gemeinschaft:** kontrollierte öffentliche Debattenplattform.
+
+- **Leistung:** Das staatliche Blatt.
+- **Die andere Zahl:** Internes Streitblatt darüber, welche Kennzahl gilt. Kein Ausstieg.
 
 ### Militär
-- **Schutzkorps Caldris:** Militär und innere Sicherheit eng verbunden.
-- **Versorgungsbrigade Seren:** Logistik und Schutz kritischer Infrastruktur.
 
-### Stadtviertel Seren
-- **Versorgungsring:** Kliniken, Schulen und Behörden.
-- **Wohnstadt:** Planmäßige Familienquartiere.
-- **Sicherheitsforum:** Regierungs- und Kontrollbehörden.
+- **Systemkorps Karsk:** Hergerichtete Truppe.
+- **Sektorstadt 7:** Bewertung als Einsatzliste.
+
+### Stadtviertel
+
+- **Klinikkern:** Wo entschieden wird, wer verbessert wird.
+- **Niedrigringe:** Die Wohnungen der schlechten Zahlen.
 
 ### Historische Ereignisse
-- **Der Sozialvertrag:** Einführung des heutigen umfassenden Versorgungssystems.
-- **Die Sicherheitsreform:** Ausweitung biometrischer und elektronischer Kontrolle.
+
+- **Die erste Bewertung:** Der Übergang vom Sicherheitsstaat zum Maß. Seitdem ist der Wert sichtbar.
+- **Der angenommene Preis:** Ein Programm, das Personen gekostet hat und als Gewinn verbucht wurde. Karsk hat es nicht zurückgenommen.
 
 ---
 
-# 15. Merovan – Die Handelsrepublik
 
-### Die Handelsrepublik
+# 8. Caldris – Das Schutzschild
 
-Merovan ist ein Land. Seine Teile liegen weit auseinander, und es hält sie über Häfen und Handel zusammen. Das Gesetz macht sie gleich. Die Verbindung macht sie erreichbar. Beides ist nötig, und es ist nicht dasselbe.
+### Das Schutzschild
 
-Die fernen Orte gehören zum Land. Sie sind kein anderes Recht.
+Caldris verspricht Schutz, Medizin, Wohnraum und Sicherheit vor Not. Dafür erwartet der Staat Loyalität und Zugriff. Front, Krankenhaus, Lebensmittel, Wohnraum und innere Ordnung sind dieselbe Maschine. Wer eines davon verliert, verliert das Schild.
+
+Die Fürsorge ist ernst. Die Akte ist der Preis. Wer versorgt wird, wird erfasst. Wer nie im Formular stand, existiert für den Einsatz erst, wenn er etwas zerbricht.
+
+### Die besondere Ordnung
+
+Die Ordnung ist das Schild. Eine erkennbare, gemeldete Krise wird schnell gestopft. Ein Ort, der nicht nach oben berichtet oder nicht berichten darf, bleibt auf dem Papier gesund, bis er leer ist. Vesper beseitigt, wen das System nicht spielen kann. Caldris lässt ihn leben und sieht ihn nicht.
 
 ### Politisches System
 
-Merovan ist eine parlamentarische Handelsrepublik. Im Kern sitzen das Parlament, die Banken und die Häuser, denen die Schiffe gehören. Die Häuser haben das Amt verloren und die Ladung behalten.
+Seren ist planmäßig. Kliniken, Wohnungen und Behörden sind dasselbe Stadtbild. Die Regierung begründet sich mit Stabilität, nicht mit Größe. Militär und innere Sicherheit sehen dieselbe Lage.
 
-Der Staat erteilt die Lizenz und behandelt den Hafen als Teil des Landes. Ohne die Lizenz ist das Schiff Privatgeschäft. Ohne das Schiff zerfällt das Land in der Praxis, obwohl es auf dem Papier eines bleibt. Deshalb zahlt der Staat, wenn die Häuser fahren sollen. Die Häuser fahren, weil die Lizenz ihnen den Weg sichert.
+### Technologie
+
+Biometrie, medizinische Systeme, Kommunikationskontrolle, zivile Notfallinfrastruktur. Blasses Institutionsgrün, ein kleines Zeichen für Medizin und Kontrolle auf derselben Brust. Kein Siegel Vespers, kein Knochen Ossarias.
 
 ### Militär
 
-Die Garnison ist Bodentruppe am eigenen Weg. Sie hält Kai und Straße, damit der ferne Ort erreichbar bleibt. Schiff und Flugzeug sind Unterstützung. Sie halten den Weg offen, setzen Leute ab und holen Verwundete. Sie halten keine Stellung. Fällt die Unterstützung, steht die Garnison noch, nur ohne das, was den Ort mit dem Land verbindet.
+Ein Soldat ist schon eine Akte, bevor er geht. Essen, Verbände und Ersatz laufen über dieselben Listen wie die Zuteilung in der Stadt. Einen Schlag, der Krankenhäuser, Wohnraum oder die Erfassung mitreißt, unterlässt die Führung. Lieber eine schlechtere Stellung als ein Loch im Schild. Unruhe zu Hause zieht Truppen von der Front. Unruhe ist kein Nebenschauplatz.
 
-### Gesellschaft
+### Der innere Konflikt
 
-Die fernen Orte liefern, was sie haben, und leben von der nächsten Ladung. Beamte, Medizin, Ersatz und Wahlen benutzen denselben Weg wie die Ware. Kommt der Weg, ist der Ort ein normaler Teil des Landes, später und teurer. Kommt er nicht, wird er nicht unabhängig. Er wird ärmer, und der Kern bleibt verantwortlich, weil es eigene Leute sind.
+Die Leute kennen den Tausch und hassen ihn und bleiben, weil die Leistung echt ist. Der Staat ist stabil. Er ist blind außerhalb der Liste.
 
-### Innerer Konflikt
-
-> **Wie bleibt ein Land eines, wenn die Gleichheit im Gesetz steht und die Erreichbarkeit auf einem Schiff?**
-
----
+> **Wie viel Freiheit darf ein Staat nehmen, wenn er die versprochene Sicherheit wirklich liefert?**
 
 ## Nationale Leitfrage
 
-**Leitfrage:** Was hält ein Land zusammen, wenn der Weg zwischen seinen Teilen ausfallen kann?
+**Leitfrage:** Was ist ein freier Mensch, wenn für fast jedes Lebensproblem bereits gesorgt und erfasst wird?
 
-**Alltagswiderspruch:** Dieselbe Staatsbürgerschaft, und ein Fahrplan, der sie nicht überall einlöst.
+**Alltagswiderspruch:** Materielle Sicherheit ist real. Die Akte ist es auch. Beides kommt aus derselben Hand.
 
-**Besonderer Ausbau:** Kern und Ferne bleiben ein Staat. Der Unterschied ist die Verspätung und der Preis, nicht ein zweites Recht.
+**Besonderer Ausbau:** Bürger, die das System aus Erfahrung verteidigen, weil sie die Leistung kennen. Daneben die Unsichtbaren, die das Schild nicht führt.
 
 ## Hauptstadt
 
-Merovia ist die Hafenstadt des Kerns. Parlament, Banken und die Häuser, denen die Schiffe gehören, sitzen hier. Von hier wird die Lizenz erteilt. Hier wird gezahlt, wenn ein Weg gehalten werden muss.
+Seren ist Versorgung, die man nicht verlassen kann, ohne sie zu sehen.
+
+**Stadtbild:** Kliniken, Wohnblöcke, Behördenhöfe, ein grüner Ton.  
+**Wichtige Viertel:** Versorgungsring, Wohnstadt, Sicherheitsforum.  
+**Sozialer Gegensatz:** erfasste Haushalte gegenüber denen, die in keiner Liste vollständig sind.
+
+## Regionen
+
+### Versorgungsring
+
+Um Seren. Hier ist das Schild dicht und sichtbar.
+
+### Industriestädte
+
+Arbeit, Wohnung und Leistung in einem Vertrag.
+
+### Agrarprovinzen
+
+Staatliche Höfe, stabile Lieferungen, dichte Erfassung.
+
+### Sicherheitsbezirk
+
+Mehr Kontrolle, gleiche Leistung. Hier fühlt sich das Schild wie ein Griff an.
+
+## Städte
+
+### Seren
+
+Hauptstadt des Schildes.
+
+### Gesundheim
+
+Kliniken und die Akten, die mit der Heilung wachsen.
+
+### Werksstadt
+
+Arbeit und Wohnraum gekoppelt.
+
+### Grünfeld
+
+Agrarstadt. Gemeinschaftsküchen, volle Listen.
+
+### Kontrollstadt
+
+Dichteste Erfassung. Die Leistung ist hoch. Die Luft ist eng.
+
+## Dörfer und ländlicher Alltag
+
+### Listenheim
+
+Dorf, in dem jeder Haushalt eine vollständige Akte hat und das als normal gilt.
+
+### Lückenhof
+
+Ein Hof, der eine Geburt zu spät gemeldet hat. Auf dem Papier war dort niemand krank. In der Küche schon.
+
+### Werkdorf
+
+Schicht und Wohnung vom Staat. Stabil, wenig Wahl.
+
+### Randliste
+
+Siedlung am Rand der Erfassung. Hilfe kommt, wenn jemand das Formular endlich abgibt.
+
+## Familie und Generationen
+
+Familien leben in zugeteilten Wohnungen und kennen die Akte ihrer Kinder auswendig. Man streitet, ob man eine Krankheit meldet. Die Meldung bringt Hilfe. Sie bringt auch den nächsten Eintrag. Die meisten melden. Der Staat rechnet damit.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+Geplante Wohnungen, sichere Grundarbeit, Gemeinschaftsküchen. Das Leben ist gehalten. Es ist nicht weit.
+
+### Bildung
+
+Flächendeckend, an die Sozialplanung gebunden. Ein Kind ist Schüler und Datensatz.
+
+### Religion
+
+Private Religionen neben staatlichen Gemeinschaftstagen. Sie trösten. Sie ersetzen die Akte nicht.
+
+### Soldaten im Alltag
+
+Der Soldat bleibt versorgt, und seine Familie auch, solange die Registrierung steht. Das hält ihn. Das bindet ihn. Nachbarn sehen die Uniform als Teil desselben Schilds, nicht als fremdes Heer.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass die Leistung bleibt.  
+**Angst:** Dass ein fehlender Eintrag einen unsichtbar macht, gerade wenn man Hilfe braucht.  
+**Tabu:** Die Fürsorge für unecht zu erklären. Sie ist echt. Die Akte ist es auch.
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche werden versorgt und geführt. Der Spielraum ist klein und die Klinik ist nah.
+
+### Punkt 7 – Arbeit
+
+Staatliche Werke, Höfe, Kliniken. Arbeit und Wohnung gehören zusammen.
+
+### Punkt 8 – Armut
+
+Offene Not ist selten. Armut ist ein unvollständiges Formular. Wer nicht erfasst ist, fällt durch ein Netz, das für alle anderen hält.
+
+### Punkt 9 – Wohlstand
+
+Etwas mehr Zimmer, etwas mehr Wahl in der Freizeit. Kein Reichtum gegen den Staat. Der Staat ist der Wohlstand.
+
+### Punkt 10 – Religion
+
+Geduldet, klein, neben den Gemeinschaftstagen.
+
+### Punkt 11 – Bildung
+
+Allgemein und planvoll. Man lernt den Staat als Lösung.
+
+### Punkt 12 – Medien
+
+Staatlich, nützlich, wenig überraschend. Sie melden Leistungen und Krisen, die schon im Formular stehen.
+
+### Punkt 13 – Sprache
+
+Verwaltungssprache in Schule und Amt. Zu Hause vielfältiger. Die Akte versteht nur die erste.
+
+### Punkt 14 – Essen
+
+Grundversorgung, Gemeinschaftsküchen, regionale Ergänzung. Niemand soll hungern. Jeder Teller ist gezählt.
+
+### Punkt 15 – Kleidung
+
+Schlichte Grundkleidung vom Staat. Private Kleidung markiert den kleinen Rest an Eigenem. Die Uniform ist blassgrün mit dem kleinen Doppelzeichen.
+
+### Punkt 16 – Architektur
+
+Planblöcke, Kliniken, keine Altstadt, die sich der Liste entzieht.
+
+### Punkt 17 – Freizeit
+
+Staatliche Häuser, günstig, erfasst. Ein unbekanntes Fest ist verdächtig, weil es nicht in der Planung stand.
+
+### Punkt 18 – Feste
+
+Gemeinschaftstage und Versorgungsjubiläen. Familien feiern dazwischen kleiner.
+
+### Punkt 19 – Trauer
+
+Hinterbliebene werden versorgt und registriert. Die Hilfe ist real. Der Verlust wird ein Vorgang.
+
+### Punkt 20 – Militär
+
+Dieselbe Maschine wie die Klinik. Die Akte geht vor dem Schlag, der das Schild zerreißen würde.
+
+### Punkt 21 – Krieg
+
+Krieg ist eine Krise der ganzen Versorgung. Caldris hält ihn, solange die Listen stimmen. Es ist langsam, wo niemand meldet.
+
+### Punkt 22 – Opposition
+
+Opposition will weniger Akte bei gleicher Leistung. Sie will das Schild nicht abschaffen. Der Staat hält diesen Streit aus.
+
+### Punkt 23 – Nachbarn
+
+Nachbarn sind Mitversicherte. Man hilft und man sieht, wer nicht gemeldet ist.
+
+### Punkt 24 – Migration
+
+Zuzug wird erfasst, dann versorgt. Vor der Erfassung ist man in Caldris kaum vorhanden.
+
+### Punkt 25 – Familiengeschichte
+
+Familien erinnern die Krise, in der das Schild gehalten hat, und die Krankheit, die zu spät in der Liste stand.
+
+## Konkrete Lore-Anker
+
+### Familien
+
+- **Familie Ser:** Vollständig erfasst, verteidigt das System, weil es ihre Kinder versorgt hat.
+- **Familie Lück:** Der Hof mit der zu späten Meldung.
+
+### Personen
+
+- **Dr. Alm Ser:** Leitet eine Klinik und eine Liste. Sieht keinen Widerspruch darin.
+- **Pia Lück:** Hat die Geburt zu spät gemeldet. Lebt noch in Caldris. Ist für ein halbes Jahr unsichtbar gewesen.
+
+### Institutionen
+
+- **Versorgungsring Seren:** Leistung und Erfassung.
+- **Sicherheitsforum:** Dieselbe Lage für Heer und innere Ordnung.
+
+### Wirtschaft
+
+- **Staatswerke:** Arbeit und Wohnung.
+- **Versorgungsbund:** Höfe und Verteilung.
+
+### Medien
+
+- **Bürgerkanal:** Leistungen und gemeldete Krisen.
+- **Forum der Gemeinschaft:** Debatte innerhalb des Schilds.
+
+### Militär
+
+- **Schutzkorps Caldris:** Heer und innere Sicherheit.
+- **Versorgungsbrigade:** Dieselben Listen wie die Stadt.
+
+### Stadtviertel
+
+- **Versorgungsring:** Kliniken und Behörden.
+- **Wohnstadt:** Die zugeteilten Leben.
+
+### Historische Ereignisse
+
+- **Der Sozialvertrag:** Leistung gegen Zugriff. Beide Seiten wurden gehalten.
+- **Das leere Dorf:** Ein Ort, der auf dem Papier gesund blieb, bis er leer war. Caldris hat die Regel nicht geändert. Es hat die Meldepflicht verschärft.
+
+---
+
+# 9. Theryn – Die gläubige Republik
+
+### Die gläubige Republik
+
+Theryn hat die Revolution hinter sich. Die alte Ordnung war ein weltliches Vorrecht. Der Umsturz hat sie im Namen eines Glaubens gestürzt und ist dann geendet. Der Glaube ist die gewöhnliche Ordnung. Der Staat hält im Frieden. Der Krieg dient dieser Ordnung. Er begründet sie nicht.
+
+### Die besondere Ordnung
+
+Betrieb, Genossenschaft und Rat sind zugleich Gemeinde. Man arbeitet, man tritt an, man hält die Pflicht. Das ist das Jahr.
+
+Malen Voss prüft, ob ein Werk, ein Rat oder eine Einheit lau geworden ist. Er führt keine zweite Armee. Nach ihm liegt die Pflicht höher, als der Plan sie braucht. Elena Miren und die leiseren Gläubigen streiten die Zugabe ab und gewinnen manchmal. Ein Nein kann wie Kälte aussehen. Der Plan darf es trotzdem sagen.
+
+Besonders starke Fanatiker sind wenige und bekannt. Im Krieg werden sie zuerst genutzt und höher angesehen als das gewöhnliche Aufgebot. Fanatismus ist nicht die einzige Entscheidung. Können und die leise Pflicht bleiben gültige Wege. Der Eifer ist ein legitimer Weg, das Potential der Bevölkerung für eine Sache einzusetzen, die das Land für gut hält.
+
+### Politisches System
+
+Der Zentralrat in Novagrad führt Plan und Ritus. Die Räte vor Ort tragen ihn. Der Staat ist stabil, weil der Glaube auch ohne Feldzug gilt. Voss macht ihn heißer. Er ersetzt ihn nicht.
+
+### Technologie
+
+Einfach, robust, in Masse, vom Werk und von der Genossenschaft zu tragen. Schlichtes Rotbraun, ein glatter Balken. Der Balken wächst nicht mit dem Eifer. Kein Rothain-Karmesin.
+
+### Militär
+
+Die Volksverteidigung zieht die Reserve als Pflicht, in einem Maß, das jedes Jahr wieder möglich ist. Die mechanisierte Brigade in Novagrad ist die versorgte Spitze. Voss will mehr. Der Plan kann nein sagen. Die Eiferer sind sein bestes Werkzeug und nicht die ganze Armee.
+
+### Der innere Konflikt
+
+Der Streit geht um das Maß, nicht um den Bestand. Wer weniger will, will dieses Land. Wer mehr will, auch. Der Tisch der Familie bleibt neben dem Ritus erlaubt. Voss will ihn schließen. Der Staat lässt ihn zu.
+
+> **Wie viel Pflicht verträgt ein Glaube, der auch im Frieden gilt?**
+
+## Nationale Leitfrage
+
+**Leitfrage:** Wie viel Pflicht verträgt ein Glaube, der auch im Frieden gilt?
+
+**Alltagswiderspruch:** Die Ordnung ist wahr ohne Krieg. Einzelne Ämter wollen sie heißer, als das Leben sie braucht.
+
+**Besonderer Ausbau:** Eiferer, leise Gläubige, Reformer und gewöhnliche Familien nebeneinander. Fanatismus ist ein Weg im Krieg, nicht die Verfassung.
+
+## Hauptstadt
+
+Novagrad hält Plan, Werke und Ritus. Der Ritus ist dichter als auf dem Land und derselbe.
+
+**Stadtbild:** Werke, Wohnhöfe, ein weiter Platz der Pflicht. Keine Tribüne der Angst.  
+**Wichtige Orte:** Zentralrat, Maschinenwerke, Halle der Pflicht.  
+**Sozialer Gegensatz:** das Planmaß gegenüber der Zugabe.
+
+## Regionen
+
+### Novagrad und die Werke
+
+Die Spitze und der Plan.
+
+### Die Genossenschaften
+
+Land, das die Pflicht als Arbeit kennt und den Eifer als Gast.
+
+### Die stillen Räte
+
+Orte, in denen Elena Mirens Ton öfter gewinnt.
+
+### Die heißen Häuser
+
+Orte, in denen Voss Gehör hat. Dasselbe Land, höheres Maß.
+
+## Städte
+
+### Novagrad
+
+Zentralrat und Brigade.
+
+### Freiheim
+
+Stadt der leiseren Gläubigen. Die Pflicht gilt. Die Zugabe gilt nicht automatisch.
+
+### Werknov
+
+Maschinen. Hier wird die Masse gebaut, die der Balken meint.
+
+### Feldpflicht
+
+Genossenschaftsstadt. Antreten und Ernte im selben Kalender.
+
+### Vossmark
+
+Keine Hauptstadt. Eine Stadt, die seinen Maßstab übernommen hat und trotzdem Novagrad untersteht.
+
+## Dörfer und ländlicher Alltag
+
+### Ruhhof
+
+Leise Pflicht. Der Ritus am Abend, die Arbeit am Tag.
+
+### Heißacker
+
+Ein Dorf, das die Zugabe angenommen hat. Es ist nicht reicher. Es ist strenger.
+
+### Brückenrat
+
+Dorf, das eine Zugabe abgelehnt hat und danach weiter zum Land gehört.
+
+### Tafelheim
+
+Hier wird der Gefallene im Ritus genannt und am Tisch noch einmal anders.
+
+## Familie und Generationen
+
+Familien halten den Ritus und eine eigene Erinnerung. Kinder lernen die Pflicht als das Jahr, nicht als Rausch. Ein eiferndes Kind wird im Krieg angesehen. Es wird zu Hause nicht automatisch der Herr des Tisches. Das ist der Unterschied, den der Staat noch zieht.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+Werke und Genossenschaften. Wohnen ist schlicht und stabil. Die Arbeit ist die Pflicht in gewöhnlicher Form.
+
+### Bildung
+
+Schulen lehren den Glauben als Ordnung und das Können als zweiten Weg. Ein Schüler, der nur eifert, ist unvollständig. Einer, der nur kann, auch.
+
+### Religion
+
+Der Glaube ist der Staat. Es gibt keinen zweiten öffentlichen Kult. Die leisere Praxis in den Familien ist geduldet, solange sie die Pflicht nicht verneint.
+
+### Soldaten im Alltag
+
+Die meisten Soldaten sind Arbeiter, die antreten. Die wenigen starken Fanatiker kennt man schon im Frieden. Im Krieg grüßt man sie anders. Danach sollen sie wieder in den Rat passen. Das gelingt nicht immer und bleibt ein Streit, kein Bruch.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass die Pflicht ein Leben lässt.  
+**Angst:** Dass die Zugabe zur Gewohnheit wird.  
+**Tabu:** Den Glauben zum Vorwand eines Ausnahmezustands zu machen. Der Umsturz ist vorbei.
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche lernen Arbeit, Ritus und die Tatsache, dass Eifer ein angesehener Weg ist und nicht der einzige.
+
+### Punkt 7 – Arbeit
+
+Werk und Genossenschaft. Der Plan setzt das Maß. Voss setzt die Zugabe zur Debatte.
+
+### Punkt 8 – Armut
+
+Armut ist ein zu knappes Maß an Brot und Ruhe, nicht ein verstoßener Glaube. Der Staat hält die Grundversorgung, auch wo er strenger wird.
+
+### Punkt 9 – Wohlstand
+
+Wenig Prunk. Ansehen im Krieg ist der Wohlstand der Eiferer. Er ist kein Geld und kein Amt für immer.
+
+### Punkt 10 – Religion
+
+Der Glaube ist öffentlich und alltäglich. Fanatismus ist seine scharfe Form, nicht eine zweite Kirche.
+
+### Punkt 11 – Bildung
+
+Allgemein, praktisch, mit dem Ritus. Können wird gelehrt, damit der Eifer es nicht ersetzt.
+
+### Punkt 12 – Medien
+
+Der Ritus und der Plan haben Stimmen. Die Zugabe wird gestritten. Es gibt kein Blatt, das den Staat für hinfällig erklärt.
+
+### Punkt 13 – Sprache
+
+Eine Sprache der Pflicht, im Dorf kürzer. Beide nennen denselben Glauben.
+
+### Punkt 14 – Essen
+
+Einfach, gemeinsam, ausreichend. Ein Fasten aus Eifer ist erlaubt. Es ist nicht die Ration des Landes.
+
+### Punkt 15 – Kleidung
+
+Rotbraune Massenjacke, ein glatter Balken. Im Zivilen schlichte Arbeit. Der Balken bleibt gleich groß.
+
+### Punkt 16 – Architektur
+
+Wohnhöfe, Werke, eine Halle. Kein Palast des Eifers.
+
+### Punkt 17 – Freizeit
+
+Mannschaft, Kulturhaus, der Ritus. Freizeit, die die Pflicht verhöhnt, gilt als kalt. Freizeit an sich ist erlaubt.
+
+### Punkt 18 – Feste
+
+Tage der Ordnung, nicht Tage des Umsturzes. Man erinnert das Ende der Revolution als den Anfang des Jahres.
+
+### Punkt 19 – Trauer
+
+Ritus und Tisch. Voss will nur den Ritus. Der Staat lässt den Tisch. Familien nutzen ihn.
+
+### Punkt 20 – Militär
+
+Reserve als Pflicht. Eiferer zuerst und angesehen. Die Brigade bleibt die Spitze des Könnens.
+
+### Punkt 21 – Krieg
+
+Krieg nutzt das Potential der Leute, auch über den Fanatismus, und darf andere Wege wählen. Er beweist den Glauben nicht. Der Glaube gilt schon.
+
+### Punkt 22 – Opposition
+
+Elena Miren ist Opposition im Maß. Sie ist keine Feindin des Landes. Voss auch nicht. Der Zentralrat hält beide.
+
+### Punkt 23 – Nachbarn
+
+Nachbarn treten gemeinsam an. Sie wissen, wer eifert und wer leise pflichtet. Beides wohnt auf derselben Straße.
+
+### Punkt 24 – Migration
+
+Wer kommt, lernt die Pflicht. Er muss nicht als Fanatiker ankommen. Er muss den Ritus nicht verneinen.
+
+### Punkt 25 – Familiengeschichte
+
+Familien erinnern den Umsturz als abgeschlossene Geschichte und den Eifer als etwas, das in manchen Jahren lauter war.
+
+## Konkrete Lore-Anker
+
+### Familien
+
+- **Familie Novak:** Alte Sieger des Umsturzes. Heute ein Amt im Zentralrat, kein Ausnahmezustand.
+- **Familie Miren:** Freiheim. Leise Pflicht, Widerspruch gegen die Zugabe.
+
+### Personen
+
+- **Malen Voss:** Treibt das Maß. Ist nicht der Staat.
+- **Elena Miren:** Streitet die Zugabe ab und bleibt.
+
+### Institutionen
+
+- **Zentralrat:** Plan und Ritus.
+- **Volksverteidigung:** Die Reserve als Pflicht.
+
+### Wirtschaft
+
+- **Novagrad Maschinenwerke:** Die Masse.
+- **Agrarbund:** Die Genossenschaften.
+
+### Medien
+
+- **Die Pflicht:** Blatt des Plans.
+- **Freiheim Stimme:** Blatt gegen die Zugabe.
+
+### Militär
+
+- **Mechanisierte Brigade Novagrad:** Können.
+- **Die Eiferer:** Wenige, im Krieg genutzt und angesehen.
+
+### Stadtviertel
+
+- **Halle der Pflicht:** Der Ritus.
+- **Wohnhöfe:** Das gewöhnliche Jahr.
+
+### Historische Ereignisse
+
+- **Das Ende des Umsturzes:** Der Glaube wurde die Ordnung. Der Krieg hörte auf, die Wahrheit zu beweisen.
+- **Die erste verweigerte Zugabe:** Der Plan sagte nein zu Voss. Das Land stand danach noch.
+
+---
+
+
+# 10. Vael – Das Geschäft des Krieges
+
+### Das Geschäft des Krieges
+
+Vael ist ein industrielles Machtzentrum, in dem die Konzerne entscheiden. Der Staat ist ihre Puppe. Er hält die Begründung. Er bestimmt nicht die Stückzahl. Krieg ist das Geschäft. Was an der Front verbraucht wird, fehlt nicht aus Versehen. Es steht im Auftragsbuch.
+
+Das Volk lebt anders, als die Bilanz liegt. Der Staat sorgt dafür. Nicht aus Güte. Weil ein Volk, das die Bilanz sieht, das Geschäft stört.
+
+### Die besondere Ordnung
+
+Die Ordnung ist das Auftragsbuch. Ein Einsatz, den die Werke nicht beliefern, findet nicht statt. Ein Einsatz, der das Buch füllt, wird geführt, auch wenn ein Ministerium ihn so nicht gewollt hätte. Ressourcen sind endlich. Die Gier der Gesellschaft ist es nicht. Der Staat lenkt die Gier auf ein Leben, das die Endlichkeit nicht zeigt.
+
+### Politisches System
+
+Vaalen ist Werk, Konzern und ein Ministerium, das die Sätze liefert. Wahlen gibt es. Sie wählen die Begründung, nicht die Produktion. Das Land ist stabil, weil das Geschäft stabil ist. Es ist nicht souverän im Sinn eines Staates, der nein sagen kann.
+
+### Technologie
+
+Maschinen, Serien, Ersatzteile, hohe Fertigung. Helle Dienstjacke, dunkler Kragen, Silberringe. Die Ringe zählen Serien und Verträge, nicht Adel.
+
+### Militär
+
+Die Truppe kämpft mit dem, was das Buch freigibt. Ein Mangel an der Front ist eine Zeile. Die Soldaten nennen ihn Not. Die Werke nennen ihn Umsatz. Beide haben recht, und nur eine dieser Wahrheiten hängt in den Straßen.
+
+### Der innere Konflikt
+
+Wer die Bilanz kennt, verachtet die Rede. Wer die Rede glaubt, lebt ruhiger. Der Staat braucht beide. Er fällt nicht, solange die Werke liefern und die Straßen die andere Geschichte hören.
+
+> **Wie viel Leben darf ein Auftragsbuch kosten, wenn das Volk ein anderes Leben gezeigt bekommt?**
+
+## Nationale Leitfrage
+
+**Leitfrage:** Wie viel menschliches Leben darf wirtschaftlicher Fortschritt kosten, wenn der Fortschritt das eigentliche Regierungssystem ist?
+
+**Alltagswiderspruch:** Die Städte sind versorgt und stolz. Die Bilanz frisst, was die Städte nicht sehen.
+
+**Besonderer Ausbau:** Der Staat bleibt die Stimme. Die Konzerne bleiben die Entscheidung. Diese Lüge ist stabil und bekannt bei denen, die zählen.
+
+## Hauptstadt
+
+Vaalen rechnet und fertigt. Das Ministerium sitzt sichtbar. Die Bücher sitzen besser.
+
+**Stadtbild:** Werke, helle Büros, eine Regierungszeile für die Reden.  
+**Wichtige Viertel:** Auftragsring, Werkhöfe, die Zeile der Begründungen.  
+**Sozialer Gegensatz:** die, die das Buch führen, gegenüber denen, die die Rede hören.
+
+## Regionen
+
+### Vaalen
+
+Die Entscheidung.
+
+### Die Werkmark
+
+Fertigung. Hier ist der Krieg ein Schichtplan.
+
+### Die Vorzeigestädte
+
+Das Leben, das das Volk sehen soll. Sauber, beschäftigt, ohne Bilanz.
+
+### Die Entnahmefelder
+
+Rohstoff. Endlich, und in der Rede unerschöpflich genannt.
+
+## Städte
+
+### Vaalen
+
+Konzerne und Ministerium.
+
+### Schichtheim
+
+Werkstadt. Der Mangel der Front beginnt hier als Auftrag.
+
+### Blütestadt
+
+Vorzeige. Parks, Löhne, keine Bücher in den Schaufenstern.
+
+### Erzfall
+
+Entnahme. Hier sieht man die Endlichkeit.
+
+### Ringstadt
+
+Zulieferer. Silberringe, Verträge, keine Reden.
+
+## Dörfer und ländlicher Alltag
+
+### Rechenhof
+
+Familien, die für die Konzerne zählen und zu Hause nicht sagen, was die Zahl bedeutet.
+
+### Blütenrain
+
+Dorf am Rand der Vorzeigestadt. Glaubt die Rede, weil sie stimmt, solange man nicht nach Erzfall fährt.
+
+### Erzacker
+
+Ausgedünntes Land. Die Endlichkeit wohnt hier.
+
+### Schichtbach
+
+Wohnen an der Schicht. Man kennt den Verbrauch und nennt ihn nicht Krieg.
+
+## Familie und Generationen
+
+Familien in Blütestadt und Familien in Erzfall erzählen nicht dasselbe Land. Heiraten zwischen ihnen kommen vor und werden ungemütlich, sobald jemand das Buch aufmacht. Der Staat fördert die Heirat nicht und verbietet sie nicht. Er hält die Bilder auseinander.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+In den Vorzeigestädten gut und beschäftigt. An den Werken laut und genau. In den Entnahmefeldern dünn. Arbeit folgt dem Auftrag, nicht dem Ministerium.
+
+### Bildung
+
+Schulen lehren Maschinen und die Rede vom Fortschritt. Die Bilanz ist ein Fach für die, die zählen werden. Die anderen bekommen sie nicht.
+
+### Religion
+
+Unwichtig für den Auftrag. Geduldet, solange sie die Endlichkeit nicht zur Predigt macht.
+
+### Soldaten im Alltag
+
+Soldaten sind Kunden der Werke und wissen das nur zum Teil. Ein Veteran, der das Buch gesehen hat, ist in Blütestadt ein Störfall und in Schichtheim ein Kollege.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass die Schicht hält und die Stadt hell bleibt.  
+**Angst:** Dass die Endlichkeit in der eigenen Straße ankommt.  
+**Tabu:** In der Vorzeigestadt laut zu sagen, dass der Krieg das Geschäft ist.
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche lernen Maschinen oder die Rede. Wenige lernen beides. Die, die beides lernen, werden die Nächsten, die entscheiden.
+
+### Punkt 7 – Arbeit
+
+Fertigung, Zulieferung, Entnahme, die Sätze des Ministeriums. Der Lohn kommt. Die Entscheidung liegt im Buch.
+
+### Punkt 8 – Armut
+
+Armut sitzt in den Entnahmefeldern und wird in der Vorzeigestadt nicht gezeigt. Sie ist der Rest, den das Geschäft nicht braucht.
+
+### Punkt 9 – Wohlstand
+
+Helle Wohnungen, sichere Serien, Silberringe. Wohlstand ist Nähe zum Auftrag.
+
+### Punkt 10 – Religion
+
+Klein. Eine Predigt über Endlichkeit wäre politischer als eine Partei.
+
+### Punkt 11 – Bildung
+
+Gut an den Werken, glatt in den Vorzeigestädten. Zwei Lehrpläne, ein Land.
+
+### Punkt 12 – Medien
+
+Die Rede ist laut und gut gemacht. Die Bilanz erscheint in Fachblättern, die in Blütestadt niemand auslegt.
+
+### Punkt 13 – Sprache
+
+Eine Sprache des Fortschritts und eine Sprache der Stückzahl. Wer beide spricht, arbeitet in Vaalen.
+
+### Punkt 14 – Essen
+
+In den Vorzeigestädten reichlich. An der Entnahme knapp und exportiert. Der Unterschied ist die Politik.
+
+### Punkt 15 – Kleidung
+
+Helle Dienstjacke, dunkler Kragen, Silberringe bei denen, die Verträge schließen. Die Menge trägt Werkzeug.
+
+### Punkt 16 – Architektur
+
+Helle Büros, dunkle Werke, Vorzeigestädte ohne Fabrikansicht. Erzfall sieht aus wie das, was es ist.
+
+### Punkt 17 – Freizeit
+
+Parks in Blütestadt. Schichten ohne viel Rest in Schichtheim. Freizeit ist dort echt, wo die Rede wohnt.
+
+### Punkt 18 – Feste
+
+Produktionstage, Stadtfeste. Kein Tag, an dem die Bilanz verlesen wird.
+
+### Punkt 19 – Trauer
+
+Ein Gefallener ist in der Rede ein Opfer des Landes und im Buch ein Verbrauch. Die Familie bekommt die Rede. Manche bekommen später die Zahl.
+
+### Punkt 20 – Militär
+
+Die Truppe kämpft, was geliefert wird. Sie eröffnet nicht, was die Werke nicht füttern.
+
+### Punkt 21 – Krieg
+
+Krieg ist das Geschäft. Er endet, wenn er das Buch nicht mehr füllt, oder er geht weiter, wenn er es tut. Das Ministerium erklärt beides.
+
+### Punkt 22 – Opposition
+
+Opposition in der Vorzeigestadt will sauberere Reden. Opposition an der Entnahme will, dass die Endlichkeit zugegeben wird. Die Konzerne überstehen beide, solange bestellt wird.
+
+### Punkt 23 – Nachbarn
+
+Nachbarn teilen eine Schicht oder eine Parkbank. Selten beides. Das ist die Teilung des Landes im Alltag.
+
+### Punkt 24 – Migration
+
+Arbeitsmigration in die Werke, Imagezug in die Vorzeigestädte. Die Bücher wandern nicht mit.
+
+### Punkt 25 – Familiengeschichte
+
+Familien merken sich, wer zum ersten Mal die Bilanz gesehen hat. Danach gibt es zwei Arten von Verwandten.
+
+## Konkrete Lore-Anker
+
+### Familien
+
+- **Haus Vaal:** Konzern. Führt das Buch. Sitzt nicht im Ministerium.
+- **Familie Erz:** Entnahmefeld. Kennt die Endlichkeit.
+
+### Personen
+
+- **Direktorin Vaal:** Bestimmt die Stückzahl. Lässt die Rede andere halten.
+- **Minister Klem:** Hält die Begründung. Weiß, dass er die Stückzahl nicht hat.
+
+### Institutionen
+
+- **Auftragsring:** Die eigentliche Regierung.
+- **Die Zeile:** Das Ministerium der Sätze.
+
+### Wirtschaft
+
+- **Vaalen Werke:** Krieg als Serie.
+- **Erzfall Gruben:** Die endliche Seite.
+
+### Medien
+
+- **Fortschritt:** Die Rede.
+- **Stückzahl:** Das Fachblatt.
+
+### Militär
+
+- **Vertragsheer:** Kämpft, was geliefert wird.
+- **Die leere Lieferung:** Ein Einsatz, der nicht stattfand, weil das Buch ihn nicht führte.
+
+### Stadtviertel
+
+- **Auftragsring:** Entscheidung.
+- **Blütenallee:** Das Leben, das man zeigen darf.
+
+### Historische Ereignisse
+
+- **Die übernommene Begründung:** Der Tag, an dem das Ministerium einen Krieg erklärte, den die Werke schon beliefert hatten.
+- **Die geschlossene Ausstellung:** Ein Versuch, die Bilanz in Blütestadt zu zeigen. Sie wurde abgehängt. Die Stadt blieb hell.
+
+---
+
+# 11. Sahr – Der Fluss
+
+### Der Fluss
+
+Sahr ist ein Bund aus Handelsstädten. Seine Stärke ist, dass Menschen und Versorgung fließen. Die Niederlage beginnt dort, wo sie nicht mehr fließen. Nicht an einer verlorenen Flagge. An einer stehenden Straße, einem vollen Lager, das niemand erreicht, einem Markt, der nichts mehr weitergibt.
+
+### Die besondere Ordnung
+
+Die Ordnung ist der Weg. Städte bleiben eigensinnig und halten die Strecke gemeinsam, weil jede ohne die andere nur ein Lager ist. Es gibt keinen Thron des Handels. Es gibt Verträge zwischen Städten, die wissen, dass ein Bruch alle ärmer macht.
+
+### Politisches System
+
+Sarun ist die größte Drehscheibe und nicht die Herrin. Der Bund tagt dort öfter als anderswo, weil dort die Waren sind. Eine Stadt kann widersprechen. Sie kann den Fluss nicht allein besitzen.
+
+### Technologie
+
+Straßen, Lager, Umschlag, leichte Geräte für Kolonnen. Sandfarbene Kleidung, ein gewickelter Gürtel, ein offener Knoten, Perlen als Zeichen der Stadt, nicht als Schmuck eines Hofs. Schiffe, wo es sie gibt, tragen Ladung. Sie sind keine Front.
+
+### Militär
+
+Sahr kämpft, um den Fluss offen zu halten. Die Truppe sichert Straßen, Lager und die Städte dazwischen. Eine Stellung ohne Nachschub ist für Sahr schon die Niederlage, auch wenn die Flagge noch steht.
+
+### Der innere Konflikt
+
+Die Städte misstrauen einander und brauchen einander. Das ist dauernd und stabil. Ein Krieg, der den Fluss länger sperrt, als die Vorräte reichen, ist die eigentliche Angst. Nicht der Untergang der Verfassung.
+
+> **Was hält einen Bund, dessen Frieden der nächste Transport ist?**
+
+## Nationale Leitfrage
+
+**Leitfrage:** Was hält eine Gesellschaft zusammen, wenn der Handel wichtiger ist als eine gemeinsame Herkunft?
+
+**Alltagswiderspruch:** Jede Stadt will den besseren Zoll und will, dass die andere Stadt morgen noch liefert.
+
+**Besonderer Ausbau:** Der Fluss bleibt das Maß. Herkunft ist bunt und zweitrangig.
+
+## Hauptstadt
+
+Sarun ist groß und austauschbar genug, dass eine andere Stadt die Drehscheibe werden könnte. Deshalb bleibt sie höflich.
+
+**Stadtbild:** Märkte, Lager, Straßenkreuze, wenig Denkmal.  
+**Wichtige Viertel:** Umschlag, die Hallen der Verträge, die Perlenhäuser der Städte.  
+**Sozialer Gegensatz:** die Stadt, die heute den Zoll setzt, gegenüber der Stadt, die morgen ausweichen kann.
+
+## Regionen
+
+### Sarun und der Korridor
+
+Der dichteste Fluss.
+
+### Die Speicherstädte
+
+Lager. Hier wird sichtbar, wenn nichts mehr weitergeht.
+
+### Die Straßenlande
+
+Dörfer am Weg. Sie leben vom Durchgang.
+
+### Die abseits
+
+Orte abseits der Straße. Ärmer, und der Maßstab, woran man merkt, dass der Fluss nicht das ganze Land ist.
+
+## Städte
+
+### Sarun
+
+Drehscheibe.
+
+### Speich
+
+Lagerstadt. Der erste Ort, der eine Sperre spürt.
+
+### Knoten
+
+Straßenkreuz. Verträge und Wagen.
+
+### Perlenau
+
+Stadt, deren Perlen am Gürtel die Herkunft zeigen. Der Knoten bleibt offen, weil die Straße allen gehört.
+
+### Abseitsheim
+
+Arme Stadt neben dem Fluss. Erinnert den Bund daran, dass nicht jeder am Weg wohnt.
+
+## Dörfer und ländlicher Alltag
+
+### Wagenhof
+
+Dorf der Fuhrleute. Der Krieg ist eine gesperrte Straße.
+
+### Speicherain
+
+Höfe, die das Lager beliefern. Steht der Abtransport, verdirbt die Arbeit.
+
+### Zollrain
+
+Dorf an einer Stadtgrenze. Kennt den Streit um den Zoll als Alltag.
+
+### Trockenbach
+
+Abseits. Sieht den Reichtum auf der Straße und gehört trotzdem zu Sahr.
+
+## Familie und Generationen
+
+Familien handeln über Städte hinweg. Ein Haushalt kann Perlen aus zwei Städten tragen. Herkunft ist eine Geschichte, keine Grenze. Kinder lernen Wege früher als Wappen.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+Märkte, Lager, Werkstätten an der Straße. Arbeit ist Bewegung. Stillstand ist die Krise.
+
+### Bildung
+
+Schulen lehren Rechnen, Sprachen der Nachbarstädte und die Verträge. Eine einzige Herkunftssprache reicht nicht.
+
+### Religion
+
+Viele nebeneinander, weil viele Leute durchkommen. Keine trägt den Bund. Der Bund trägt die Straße.
+
+### Soldaten im Alltag
+
+Soldaten sichern den Weg und sind selbst welche, die essen müssen. Eine Truppe, die den Markt frisst, gilt als schlechter als eine, die ihn offen hält.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass morgen wieder etwas durchkommt.  
+**Angst:** Ein volles Lager und eine leere Straße.  
+**Tabu:** Eine Stadt, die den Fluss für sich allein schließt.
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche reisen früh zwischen den Städten. Der Bund ist für sie ein Weg, kein Hof.
+
+### Punkt 7 – Arbeit
+
+Handel, Lager, Straße, Handwerk am Weg. Wer nichts bewegt, arbeitet am Rand.
+
+### Punkt 8 – Armut
+
+Armut ist Abseits oder ein stiller Weg. Mitten im Umschlag ist sie ein vorübergehender Ausfall, kein Stand.
+
+### Punkt 9 – Wohlstand
+
+Volle Lager, die sich bewegen. Perlen, die man weitergeben kann. Wohlstand, der steht, wird verdächtig.
+
+### Punkt 10 – Religion
+
+Vielstimmig, an den Markt angepasst, ohne Staatsamt.
+
+### Punkt 11 – Bildung
+
+Praktisch und mehrsprachig. Verträge sind Lehrstoff.
+
+### Punkt 12 – Medien
+
+Preislisten, Straßenlagen, Streit der Städte. Eine Heldengeschichte ohne Weg interessiert nicht.
+
+### Punkt 13 – Sprache
+
+Mehrere Stadttöne, eine Handelssprache. Wer nur eine spricht, bleibt in seiner Stadt.
+
+### Punkt 14 – Essen
+
+Was die Straße bringt. Die Küche wechselt mit der Ladung. Das ist der Stolz.
+
+### Punkt 15 – Kleidung
+
+Sand, gewickelter Gürtel, offener Knoten, Perlen der Stadt. Der Knoten bleibt offen. Er gehört nicht einer Stadt.
+
+### Punkt 16 – Architektur
+
+Lagerhallen, Märkte, wenige Mauern, die eine Straße sperren könnten. Sperren ist der Notfall und der Skandal.
+
+### Punkt 17 – Freizeit
+
+Märkte, die auch Feste sind. Reise. Eine Stadt, die niemanden einlässt, feiert falsch.
+
+### Punkt 18 – Feste
+
+Eröffnung der Straße, Vertragstage. Kein Sieg über eine Nachbarstadt, der den Weg kostet.
+
+### Punkt 19 – Trauer
+
+Ein Toter auf der Straße ist ein Loch im Fluss und ein Mensch. Die Stadt nennt beides. Die Familie nur das zweite.
+
+### Punkt 20 – Militär
+
+Sichert den Fluss. Hält keine Ehre, die den Nachschub kostet.
+
+### Punkt 21 – Krieg
+
+Krieg ist verloren, wo Menschen und Versorgung stehen bleiben. Eine gehaltene Flagge ohne Weg ist kein Sieg.
+
+### Punkt 22 – Opposition
+
+Städte opponieren mit Zöllen und Umwegen. Sie bleiben im Bund, weil der Austritt der Stillstand wäre.
+
+### Punkt 23 – Nachbarn
+
+Nachbarn sind die nächste Stadt. Man streitet über den Zoll und schickt trotzdem den Wagen.
+
+### Punkt 24 – Migration
+
+Bewegung ist der Normalfall. Wer bleibt, bleibt wegen eines Lagers oder einer Familie, nicht wegen eines Bluts.
+
+### Punkt 25 – Familiengeschichte
+
+Geschichten folgen Wegen. Ein Name ist in zwei Städten zu Hause und in keiner Hauptstadt allein.
+
+## Konkrete Lore-Anker
+
+### Familien
+
+- **Familie Sar:** Lager in Sarun. Reich, solange es sich bewegt.
+- **Familie Knoten:** Fuhrleute. Kennen die Sperre als Hunger.
+
+### Personen
+
+- **Hesse Sar:** Verhandelt Verträge und weigert sich, eine Stadt zur Herrin zu machen.
+- **Lotte Knoten:** Hält eine Kolonne. Sieht die Niederlage, bevor eine Flagge fällt.
+
+### Institutionen
+
+- **Hallen der Verträge:** Der Bund ohne Thron.
+- **Speich:** Das Lager, an dem man den Stillstand sieht.
+
+### Wirtschaft
+
+- **Sarun Umschlag:** Die Drehscheibe.
+- **Straßenbund:** Die Kolonnen.
+
+### Medien
+
+- **Preisliste:** Das eigentliche Blatt.
+- **Abseitsbrief:** Die Stimme neben dem Weg.
+
+### Militär
+
+- **Wegsicherung:** Truppe der Straße und der Lager.
+- **Die stehende Kolonne:** Der Zustand, den Sahr fürchtet.
+
+### Stadtviertel
+
+- **Umschlag:** Der Fluss in der Stadt.
+- **Perlenhäuser:** Die Städte zu Gast, nicht zu Befehl.
+
+### Historische Ereignisse
+
+- **Der offene Knoten:** Die Städte haben vereinbart, dass keine den Weg allein schließt. Der Knoten an der Kleidung erinnert daran.
+- **Die volle Halle:** Ein Krieg, in dem die Lager voll waren und die Städte hungerten. Seitdem ist Stillstand die Niederlage.
+
+---
+
+
+# 12. Namar – Die Häfen
+
+### Die Häfen
+
+Namar ist eine Handelsnation aus Häfen. Die Häfen verständigen sich und stehen nach außen zusammen. Ein Feind, der einen angreift, ist der Feind aller. Unterhalb dieser Einigung bleibt ein Alltag, der sich nicht ordnen lässt. Schmuggel, Schutzgeld, ein Teil der Ladung, der verschwindet. Der Rest kommt an. Namar ist nicht schwach. Es ist ungeordnet, und die Lieferung kommt trotzdem.
+
+Der Krieg wird nicht auf See entschieden. Schiffe tragen Ladung. Sie sind keine eigenen Einheiten. Flugzeuge auch nicht. Gekämpft wird an der Straße, der Bahn und dem Lager zwischen den Häfen. Die Haut der Menschen ist dunkel, in mehreren Tönen. Das Haar ist dunkel. Das ist die Bevölkerung, keine Staffage.
+
+### Die besondere Ordnung
+
+Zwei Schichten. Nach außen der Bund der Häfen. Nach innen ein Markt, der sich nicht beruhigen lässt und den die Häfen nicht beenden können. Wer einen Hafen ausnimmt, hat alle gegen sich. Wer auf dem Kai abzweigt, gehört zum Tag. Ein Hafen kann als Unterstützung einen starken Bonus auf Versorgung, Reparatur oder Kosten geben. Er gehört der gemeinsamen Front. Er wird nicht verkauft.
+
+### Politisches System
+
+Maris ist Hafen, Stadt und Ort, an dem die Häfen miteinander sprechen. Sie ist nicht die Herrin der anderen Kais. Freie Gruppierungen halten Stücke des Alltags. Die Häfen halten die Einigung nach außen. Beides gleichzeitig ist die Verfassung, auch wenn sie nirgends so schön steht.
+
+### Technologie
+
+Lager, Kräne, Straßen zwischen den Häfen, Reparatur am Kai. Dunkelblau gibt es nur hier. Marinekrause, keine Sterne. Die Form ist ein Hafenbund, keine Flotte und keine Sternenuniform Rothains.
+
+### Militär
+
+Bodentruppen halten die Wege zwischen den Häfen. Fällt ein Kai, ist das ein Angriff auf alle. Fällt unterwegs ein Teil der Ladung an die eigenen Leute, ist das der Preis der Stärke und nicht ihr Gegenteil.
+
+### Der innere Konflikt
+
+Die untere Unordnung hört nicht auf. Die äußere Einigung auch nicht. Namar trägt beides, ohne ein aufgeräumter Staat zu werden und ohne auseinanderzufallen.
+
+> **Wie viel Unordnung verträgt ein Bund, der nach außen geschlossen steht?**
+
+## Nationale Leitfrage
+
+**Leitfrage:** Wie viel gemeinsame Macht braucht Freiheit zwischen Häfen, die einander brauchen und einander bestehlen?
+
+**Alltagswiderspruch:** Jeder Kai will seinen Vorteil und will, dass der nächste Kai morgen noch steht, wenn der Feind kommt.
+
+**Besonderer Ausbau:** Die dunkle Haut in ihren Tönen bleibt selbstverständlich. Sie ist keine Moral und kein Kostüm.
+
+## Hauptstadt
+
+Maris liegt geschützt und ist Knoten, nicht Palast.
+
+**Stadtbild:** Kais, Lager, dichte Gassen, dunkelblaue Dienstkleidung am Rand.  
+**Wichtige Viertel:** Der große Kai, die Hallen der Häfen, das untere Marktviertel.  
+**Sozialer Gegensatz:** die Einigung der Häfen gegenüber dem Markt, der nicht gehorcht.
+
+## Regionen
+
+### Maris
+
+Der Ort, an dem die Häfen sprechen.
+
+### Die Kais
+
+Die anderen Häfen. Gleich genug, um gemeinsam zu stehen, verschieden genug, um sich zu bestehlen.
+
+### Die Wege
+
+Straßen und Bahnen zwischen den Häfen. Hier wird gekämpft und hier verschwindet Ladung.
+
+### Das Hinterland
+
+Dunkel, ländlich, abhängig vom Kai und nicht identisch mit ihm.
+
+## Städte
+
+### Maris
+
+Gespräch der Häfen.
+
+### Solkai
+
+Werften für Ladung, nicht für eine Frontflotte.
+
+### Bahnstadt
+
+Der wichtigste Weg ins Land. Wer ihn hält, hält Namar zusammen.
+
+### Kleinkai
+
+Ein Hafen, der nach außen mitsteht und nach innen besonders unordentlich ist.
+
+### Hintermark
+
+Stadt ohne eigenen Kai. Lebt von der Straße und klagt über beide Schichten.
+
+## Dörfer und ländlicher Alltag
+
+### Kaihof
+
+Familien am Hafen. Arbeit, Schutzgeld, Verwandte auf dem Schiff, das nur trägt.
+
+### Wegrain
+
+Dorf an der Straße. Sieht die Ladung und sieht, was fehlt, wenn sie ankommt.
+
+### Zollache
+
+Hier wird abgezweigt. Alle wissen es. Der Rest fährt weiter.
+
+### Trockenfeld
+
+Hinterland. Dunkle Höfe, weit vom Kai, trotzdem Namar.
+
+## Familie und Generationen
+
+Familien sind groß und über Kais verteilt. Haar und Haut sind in den Tönen verschieden und gehören zusammen. Kinder lernen den Kai, die Straße und dass ein verschwundener Sack noch kein verlorener Krieg ist.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+Dichte Häuser am Kai, Höfe dahinter. Arbeit ist Laden, Löschen, Fahren, Feilschen. Der Staat ist die Einigung. Der Tag ist der Markt.
+
+### Bildung
+
+Praktisch, mehrsprachig am Kai, einfacher im Hinterland. Man lernt, wann man zusammensteht und wann man abzweigt.
+
+### Religion
+
+Örtlich, laut am Fest, nicht die Verfassung. Sie verbindet Kais, ohne den Markt zu beruhigen.
+
+### Soldaten im Alltag
+
+Soldaten halten die Straße. Auf dem Kai sind sie Gäste einer Ordnung, die ihnen nicht ganz gehorcht. Sie wissen das. Sie schießen trotzdem, wenn ein fremder Feind kommt.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass der Rest ankommt.  
+**Angst:** Dass ein Hafen den anderen im Stich lässt, wenn es ernst wird. Bisher tun sie es nicht.  
+**Tabu:** Einen Kai an einen äußeren Feind zu verkaufen.
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche lernen Kai und Straße. Der Bund ist für sie die Selbstverständlichkeit, dass man nach außen nicht allein steht.
+
+### Punkt 7 – Arbeit
+
+Hafen, Straße, Hinterland, Schmuggel als Schatten derselben Arbeit. Der Lohn ist echt. Ein Teil davon ist niemand schuldig.
+
+### Punkt 8 – Armut
+
+Armut gibt es auf dem Kai und im Hinterland. Sie macht Namar nicht wehrlos. Sie macht den Markt härter.
+
+### Punkt 9 – Wohlstand
+
+Ein voller Kai, eine Familie auf mehreren Häfen. Wohlstand, der den Weg schließt, gilt als Dummheit.
+
+### Punkt 10 – Religion
+
+Feste, keine Staatskirche. Sie kann einen Kai verbinden und einen Streit nicht beenden.
+
+### Punkt 11 – Bildung
+
+Unordentlich und ausreichend. Wer die Häfen verstehen will, lernt sie am Kai, nicht in einer einzigen Schule.
+
+### Punkt 12 – Medien
+
+Gerüchte und Hafenblätter. Eine einheitliche Lage gibt es nach außen, wenn der Feind da ist, und sonst nicht.
+
+### Punkt 13 – Sprache
+
+Mehrere Töne, eine Verständigung am Kai. Das Hinterland spricht langsamer und gehört dazu.
+
+### Punkt 14 – Essen
+
+Fisch, Markt, was die Straße bringt. Ein Teil der guten Ware kommt nie auf den Tisch, der sie erwartet. Ein anderer Teil schon.
+
+### Punkt 15 – Kleidung
+
+Dunkelblau nur hier, Marinekrause, keine Sterne. Im Alltag Marktstoffe. Die Uniform ist der Bund, nicht die Flotte.
+
+### Punkt 16 – Architektur
+
+Kais, Lager, enge Gassen, keine Seefestung als Hauptstadt des Krieges. Die Stellung liegt an der Straße.
+
+### Punkt 17 – Freizeit
+
+Märkte, die nicht enden. Musik, Streit, ein Kai, der nachts nicht zu ist.
+
+### Punkt 18 – Feste
+
+Hafenfeste. An dem Tag, an dem die Häfen sich erinnern, dass sie zusammenstehen, ist der Markt trotzdem offen.
+
+### Punkt 19 – Trauer
+
+Ein Toter auf der Straße ist ein Toter des Bundes. Ein Toter im Streit zweier Gruppen am Kai ist eine örtliche Sache. Die Familie kennt den Unterschied. Der Feind draußen nicht.
+
+### Punkt 20 – Militär
+
+Landkrieg zwischen den Häfen. Unterstützung durch den Kai. Keine Einheit, die auf dem Wasser eine Stellung hält.
+
+### Punkt 21 – Krieg
+
+Nach außen geschlossen. Nach innen weiter unordentlich. Der Krieg ändert die untere Schicht nicht. Er verlangt nur, dass sie den Feind nicht einlädt.
+
+### Punkt 22 – Opposition
+
+Opposition ist der Streit der Gruppen und der Häfen untereinander. Sie wird nicht zum Verrat, solange sie den äußeren Feind nicht hereinholt.
+
+### Punkt 23 – Nachbarn
+
+Nachbarn sind der nächste Kai und die nächste Gasse. Man bestehlt sich und man ruft sich.
+
+### Punkt 24 – Migration
+
+Bewegung zwischen den Häfen ist normal. Wer kommt, kommt in eine vorhandene Unordnung und in eine vorhandene Einigung.
+
+### Punkt 25 – Familiengeschichte
+
+Geschichten hängen an Kais, Straßen und an dem Sack, der ankam oder nicht. Die Hautfarbe ist darin keine Pointe. Sie ist das Haus.
+
+## Konkrete Lore-Anker
+
+### Familien
+
+- **Familie Mar:** Spricht für Maris im Bund und besitzt nicht die anderen Kais.
+- **Familie Zoll:** Lebt vom Abzweig und vom Rest, der weiterfährt.
+
+### Personen
+
+- **Ada Mar:** Hält die Häfen nach außen zusammen und befiehlt den Markt nicht.
+- **Ren Zoll:** Zweigt ab und würde einen fremden Soldaten trotzdem nicht an den Kai lassen.
+
+### Institutionen
+
+- **Die Hallen der Häfen:** Die äußere Einigung.
+- **Der untere Markt:** Die Schicht, die bleibt.
+
+### Wirtschaft
+
+- **Solkai:** Werften der Ladung.
+- **Bahnstadt:** Der Weg, auf dem der Krieg liegt.
+
+### Medien
+
+- **Kai und Rest:** Blatt, das sagt, was ankam.
+- **Hintermark:** Die Stimme ohne eigenen Hafen.
+
+### Militär
+
+- **Wegtruppen Namar:** Halten Straße, Bahn und Lager.
+- **Die Hafenstütze:** Unterstützungskarte, kein Verkauf des Kais, keine Stellung auf See.
+
+### Stadtviertel
+
+- **Großer Kai:** Die Einigung.
+- **Unterer Markt:** Die Unordnung.
+
+### Historische Ereignisse
+
+- **Der gemeinsame Feind:** Der Tag, an dem die Häfen beschlossen haben, dass ein Angriff auf einen alle meint.
+- **Der angekommene Rest:** Ein Krieg, in dem ein Teil der Ladung verschwand und der Rest die Städte trotzdem gehalten hat.
+
+---
+
+# 13. Merovan – Der Weg im eigenen Land
+
+### Der Weg im eigenen Land
+
+Merovan ist ein Land. Seine Teile liegen weit auseinander, und es hält sie über Häfen und Handel zusammen. Das Gesetz macht sie gleich. Die Verbindung macht sie erreichbar. Beides ist nötig, und es ist nicht dasselbe. Die fernen Orte gehören zum Land. Sie sind kein anderes Recht.
+
+### Die besondere Ordnung
+
+Im Kern sitzen Parlament, Banken und die Häuser, denen die Schiffe gehören. Die Häuser haben das Amt verloren und die Ladung behalten. Der Staat erteilt die Lizenz. Ohne die Lizenz ist das Schiff Privatgeschäft. Ohne das Schiff zerfällt das Land in der Praxis, obwohl es auf dem Papier eines bleibt. Deshalb zahlt der Staat, wenn gefahren werden muss. Die Häuser fahren, weil die Lizenz den Weg sichert.
+
+### Politisches System
+
+Merovia erteilt die Lizenz und bleibt verantwortlich, wenn der Weg reißt. Die fernen Häfen wählen dasselbe Parlament. Die Stimmzettel fahren denselben Weg wie die Ware. Bleibt er aus, wird nicht später gezählt. Es wird nicht gezählt.
+
+### Technologie
+
+Sandfarbener Expeditionsrock, eine helle Paspel. Dieselbe Jacke, im Kern sauber und in der Ferne staubig. Kein Perlenschmuck Sahrs. Schiff und Flugzeug sind Unterstützung. Sie halten den Weg offen, setzen Leute ab und holen Verwundete. Sie halten keine Stellung.
+
+### Militär
+
+Die Garnison ist Bodentruppe am eigenen Kai und an der eigenen Straße. Sie hält die Stellung, damit der Ort erreichbar bleibt. Sie ist weit von zu Hause und trotzdem im eigenen Land. Fällt die Unterstützung, steht sie noch, nur ohne das, was den Ort mit dem Land verbindet.
+
+### Der innere Konflikt
+
+Dieselbe Staatsbürgerschaft, und ein Fahrplan, der sie nicht überall einlöst. Der Kern nennt die Ferne einen normalen Teil des Landes. Die Ferne erlebt denselben Staat als etwas, das mit dem Schiff kommt. Der Staat fällt nicht in zwei Rechte auseinander. Er wird ungleich pünktlich.
+
+> **Was hält ein Land zusammen, wenn der Weg zwischen seinen Teilen ausfallen kann?**
+
+## Nationale Leitfrage
+
+**Leitfrage:** Was hält ein Land zusammen, wenn Gleichheit im Gesetz steht und Erreichbarkeit auf einem Schiff?
+
+**Alltagswiderspruch:** Eigene Leute, und ein Fahrplan, der sie warten lässt.
+
+**Besonderer Ausbau:** Kern und Ferne bleiben ein Staat. Der Unterschied ist Verspätung und Preis.
+
+## Hauptstadt
+
+Merovia ist die Hafenstadt des Kerns. Hier werden Preise gemacht und Lizenzen vergeben.
 
 **Stadtbild:** Hafen, Handelshäuser, Banken, Parlament.  
 **Wichtige Viertel:** Hafenring, Alte Krone, Neuviertel.  
@@ -4135,130 +3328,986 @@ Merovia ist die Hafenstadt des Kerns. Parlament, Banken und die Häuser, denen d
 ## Regionen
 
 ### Der Kern
-Merovia und das Land dahinter. Hier werden Preise gemacht und Lizenzen vergeben.
+
+Merovia und das Land dahinter. Lizenzen und Preise.
 
 ### Die fernen Häfen
-Orte wie Neuport und Port Meris. Sie gehören zum Land und leben von der nächsten Ladung.
+
+Neuport, Port Meris. Sie gehören dazu und leben von der nächsten Ladung.
 
 ### Das Land hinter dem Hafen
-Südmark und vergleichbare Orte. Sie spüren eine Unterbrechung später und härter, weil zwischen ihnen und dem Kai noch ein Weg liegt.
 
-**Regionaler Grundkonflikt:** Der Kern nennt die Ferne einen normalen Teil des Landes. Die Ferne erlebt denselben Staat als etwas, das mit dem Schiff kommt.
+Südmark und vergleichbare Orte. Eine Unterbrechung kommt hier später und härter an.
+
+### Die Häuser der Schiffe
+
+Keine Region auf der Karte. Der Besitz, ohne den der Staat den Weg nicht hat.
+
+## Städte
+
+### Merovia
+
+Lizenz und Parlament.
+
+### Neuport
+
+Ferner Hafen. Erz und Fisch hinaus, Medizin und Papier hinein.
+
+### Port Meris
+
+Zweiter ferner Hafen. Dieselbe Regel, anderer Kai.
+
+### Südmark
+
+Hinter dem Hafen. Spürt die Verspätung zweimal.
+
+### Kronenhof
+
+Sitz der alten Häuser im Kern. Amtlos und unverzichtbar.
+
+## Dörfer und ländlicher Alltag
+
+### Lizenhof
+
+Familien, die für ein Haus die Ladung zählen und für den Staat die Verantwortung kennen.
+
+### Wartebach
+
+Dorf bei Neuport. Der Tag richtet sich nach dem Schiff, nicht nach der Uhr allein.
+
+### Zweifeld
+
+Hinter Südmark. Hier ist der Staat ein Gerücht, bis die Ladung da ist, und danach wieder Gesetz.
+
+### Staubrain
+
+Garnison und Dorf. Dieselbe Jacke, anderer Staub.
+
+## Familie und Generationen
+
+Im Neuviertel von Merovia warten Familien auf Leute in Neuport. Die Entfernung ist ein leerer Platz am Tisch und kein anderes Vaterland. Kinder im Kern lernen die Lizenz. Kinder in der Ferne lernen das Warten. Beide lernen denselben Namen des Landes.
 
 ## Alltag und Lebensgefühl
 
-### Weg
-Ware, Medizin, Beamte und Wahlen fahren denselben Weg. Bleibt er aus, wird in der Ferne nicht später gewählt. Es wird nicht gewählt.
+### Wohnen und Arbeit
 
-### Garnison
-Soldaten im eigenen Land, weit von zu Hause. Die Stadt erlebt sie als die, die den Kai halten, und als die, die wieder gehen. Sie sind keine Besatzung in fremdem Gebiet.
+Im Kern Banken, Häuser, Parlament. In der Ferne Kai, Klinik, Straße. Arbeit ist verbunden, sobald das Schiff kommt, und örtlich, solange es fehlt.
+
+### Bildung
+
+Dieselben Schulen auf dem Papier. Die Bücher kommen mit der Ladung. Fehlt sie, unterrichtet man mit dem, was noch da ist, und nennt es trotzdem Merovan.
+
+### Religion
+
+Örtlich verschieden, staatlich gleichgültig. Sie macht aus der Ferne kein zweites Volk.
+
+### Soldaten im Alltag
+
+Die Garnison ist für die ferne Stadt die Neuen, bis sie wieder fährt. Sie hält den Kai. Sie ist nicht die Herrschaft eines anderen Landes. Zu Hause im Kern ist derselbe Soldat ein Bürger, der weit weg war.
 
 ### Lebensgefühl
 
-**Hoffnung:** Dass der Weg kommt und der ferne Ort dadurch ein gewöhnlicher Teil des Landes ist.  
-**Angst:** Dass eigene Leute unerreichbar werden und der Kern zu spät zahlt.  
+**Hoffnung:** Dass der Weg kommt und der ferne Ort dadurch gewöhnlich wird.  
+**Angst:** Dass eigene Leute unerreichbar sind und der Kern zu spät zahlt.  
 **Tabu:** Einen fernen Ort als etwas zu behandeln, das man verlassen oder ausnehmen darf.
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche im Kern sehen Schiffe als Besitz. Jugendliche in der Ferne sehen sie als Ankunft. Der Staat behauptet, das sei dasselbe. Im Warten stimmt es nur halb.
+
+### Punkt 7 – Arbeit
+
+Lizenz, Bank, Kai, Straße, Klinik. Die Arbeit des Kerns ist die Bedingung der Arbeit in der Ferne.
+
+### Punkt 8 – Armut
+
+Armut ist eine ausgefallene Verbindung. Sie trifft eigene Bürger. Der Staat ist dafür verantwortlich, auch wenn das Schiff privat fährt.
+
+### Punkt 9 – Wohlstand
+
+Die Häuser, die den Weg besitzen. Im fernen Hafen ist Wohlstand ein volles Lager und eine pünktliche Klinik.
+
+### Punkt 10 – Religion
+
+Unterschiedlich und ohne Amt. Sie überbrückt die Entfernung nicht zuverlässiger als das Schiff.
+
+### Punkt 11 – Bildung
+
+Gleicher Lehrplan, ungleiche Pünktlichkeit der Mittel. Das ist der Streit in den Schulen.
+
+### Punkt 12 – Medien
+
+Im Kern die Lizenz und der Preis. In der Ferne die Frage, ob das Schiff schon da ist. Beide Blätter sind Merovan.
+
+### Punkt 13 – Sprache
+
+Eine Amtssprache. In der Ferne kürzer, weil man auf Dinge wartet, die im Kern schon im Satz stehen.
+
+### Punkt 14 – Essen
+
+Im Kern gewählt, in der Ferne von der letzten Ladung bestimmt. Der Unterschied ist kein zweites Recht. Er ist der Fahrplan.
+
+### Punkt 15 – Kleidung
+
+Sandfarbener Rock, eine helle Paspel. Sauber in der Alten Krone, staubig in Neuport. Dieselbe Uniform.
+
+### Punkt 16 – Architektur
+
+Im Kern Banken und Parlament. In der Ferne Kais und Forts an der Straße. Nichts davon ist eine Hauptstadt eines anderen Volkes.
+
+### Punkt 17 – Freizeit
+
+Im Kern Häfen und Höfe der Häuser. In der Ferne das Warten, das man sich als Fest einrichtet, wenn das Schiff kommt.
+
+### Punkt 18 – Feste
+
+Lizenztage, Ankunftstage. Man feiert nicht die Entfernung. Man feiert, dass sie diesmal überwunden wurde.
+
+### Punkt 19 – Trauer
+
+Wer auf dem Weg stirbt, stirbt für einen Teil des eigenen Landes. Im Kern sieht man eine Verspätung. In der Ferne einen leeren Platz. Es ist derselbe Tote.
+
+### Punkt 20 – Militär
+
+Garnison an Kai und Straße. Unterstützung hält den Weg. Die Stellung bleibt Infanterie.
+
+### Punkt 21 – Krieg
+
+Krieg schneidet eigene Bürger vom Rest ab oder hält den Weg offen. Er hebt kein fremdes Gebiet und nimmt keines aus.
+
+### Punkt 22 – Opposition
+
+Die Ferne will pünktlicher regiert werden. Die Häuser wollen die Lizenz nicht verlieren. Das Parlament trägt beide und bleibt das eine Parlament.
+
+### Punkt 23 – Nachbarn
+
+Nachbarn können einen Ozean auseinanderliegen und trotzdem derselbe Staat sein. Das ist die Behauptung. Der Alltag prüft sie an jedem Schiff.
+
+### Punkt 24 – Migration
+
+Bewegung zwischen Kern und Ferne ist Bewegung im eigenen Land. Sie hängt am Weg wie alles andere.
+
+### Punkt 25 – Familiengeschichte
+
+Familien liegen auf beiden Seiten des Weges. Die Geschichte ist die Liste der Schiffe, die kamen, und der Jahre, die warteten.
 
 ## Konkrete Lore-Anker
 
+### Familien
+
+- **Haus Merov:** Die regelmäßigen Schiffe. Hat das Amt nicht mehr.
+- **Familie Neup:** Neuport. Wartet und wählt, wenn der Weg es erlaubt.
+
+### Personen
+
+- **Luc Merov:** Sitzt im Handelsparlament. Befiehlt die Garnison nicht.
+- **Kompanie an Neuport:** Bodentruppe. Hält den Kai. Wechselt. Bleibt im eigenen Land.
+
 ### Institutionen
-- **Handelsparlament Merovia:** Erteilt die Lizenz und bleibt verantwortlich, wenn der Weg reißt.
-- **Haus Merov:** Besitzt die regelmäßigen Schiffe. Hat das Amt nicht mehr.
+
+- **Handelsparlament Merovia:** Lizenz und Verantwortung.
+- **Die Garnison:** Stellung. Nicht die Unterstützung.
+
+### Wirtschaft
+
+- **Die Lizenz:** Staatlicher Anspruch auf den privaten Weg.
+- **Neuport Umschlag:** Was hinaus- und hineingeht.
+
+### Medien
+
+- **Merovia Journal:** Preise und Lizenzen.
+- **Warteblatt:** Ob das Schiff da ist.
 
 ### Militär
-- **Die Garnison:** Bodentruppe an Kai und Straße. Hält die Stellung.
-- **Die Lizenz:** Unterstützung. Schiff oder Flugzeug auf dem Weg. Hält keine Stellung.
 
-### Historischer Anker
-- **Die eine Lizenz:** Der Moment, in dem der Staat die Schiffe der Häuser zur Verbindung des eigenen Landes gemacht hat. Seitdem ist ein ausgefallener Weg keine private Verspätung, sondern ein Loch im Land.
+- **Expeditionskorps:** Der Name der Garnison. Sie expediert im eigenen Land.
+- **Die Unterstützung:** Schiff oder Flugzeug. Keine Stellung.
+
+### Stadtviertel
+
+- **Hafenring:** Die Manifeste.
+- **Neuviertel:** Familien, die auf die Ferne warten.
+
+### Historische Ereignisse
+
+- **Die eine Lizenz:** Der Staat hat die Schiffe der Häuser zur Verbindung des eigenen Landes gemacht.
+- **Die nicht gezählte Wahl:** Ein Jahr, in dem der Weg ausfiel und die fernen Stimmen nicht ankamen. Seitdem ist ein ausgefallenes Schiff ein Loch im Land.
 
 ---
 
-# 16. Theryn – Die gläubige Republik
 
-### Die gläubige Republik
+# 14. Dargan – Die Schuldenrepublik
 
-Theryn hat eine Revolution hinter sich. Sie ist vorbei. Die alte Ordnung war ein weltliches Vorrecht. Der Umsturz hat sie im Namen eines Glaubens gestürzt und danach nicht weitergewütet. Geblieben ist der Glaube, und der Glaube ist die gewöhnliche Ordnung des Landes.
+### Die Schuldenrepublik
 
-Der Staat hält. Gegenstimmen ändern das Maß der Pflicht. Sie bringen das Land nicht zu Fall.
+Dargan ist nicht arm und liegt nicht am Rand. Die öffentliche Ordnung besteht aus persönlichen, vererbbaren Schulden. Jede Schuld hat einen Namen. Es gibt keine anonyme Kasse, in der sie verschwindet. Das Land ist fruchtbar und dicht genug, dass der Staat nicht an der Entfernung scheitert. Er scheitert oder hält an den Namen.
+
+### Die besondere Ordnung
+
+Kalden ist klein. Dort stehen die Bücher, nicht die größten Märkte. Wer einen Eintrag ändert, tut es vor den anderen Namen. Der Staat darf stunden, staffeln und tauschen. Er darf im Frieden nicht vergeben. Eine Streichung ohne Gegenleistung ist eine Fälschung.
+
+Heirat, Lehre und Amt verschieben Pflichten. Kinder erben offene Posten. Schande ist eine verweigerte fällige Schuld, nicht Armut. Wohlstand heißt, dass viele einem etwas schulden.
 
 ### Politisches System
 
-Betrieb, Genossenschaft und Rat sind zugleich Gemeinde. Man arbeitet, man tritt an, man hält die Pflicht. Das ist das Jahr, kein Ausnahmezustand.
+Die Häuser führen eigene Abschriften. Ein gefälschtes Datum ist ein gefälschter Krieg. Die Schreiber in Kalden setzen die Zeile und entscheiden damit, welcher Name die Chance bekommt, frei zu werden. Die Häuser können einen Aufruf verlangen. Kalden kann einen Krieg öffnen, um Namen zu waschen. Beides ist bekannt. Der Staat steht trotzdem, weil ohne das Buch nichts mehr gilt.
 
-Der Zentralrat in Novagrad führt den Plan und den Ritus. Die Räte vor Ort tragen ihn. Malen Voss sitzt in dieser Ordnung und prüft, ob ein Werk, ein Rat oder eine Einheit lau geworden ist. Er führt keine zweite Armee. Spricht er, liegt die geschuldete Pflicht höher, als der Plan sie gebraucht hätte. Eine Schicht mehr. Ein Kontingent mehr.
+### Technologie
 
-Elena Miren und die leiseren Gläubigen streiten diese Zugabe ab. Manchmal gewinnen sie. Manchmal nicht, weil ein Nein wie Kälte aussieht. Wo Voss Gehör findet, läuft das Jahr heißer. Wo nicht, bleibt es gewöhnlich.
+Anlagen sind modern und tragen einen Namen an der Tür. Fällt ein Werk aus, sucht man keine Behörde. Man sucht das Haus, das haftet. Die Technik ist standardisiert, weil ein anderes Haus sie übernehmen können muss. Nussbrauner, gerader Rock, papierhelle Manschette, eine offene schwarze Zeile. Nach dem Aufruf ein kurzer Strich durch dieselbe Zeile. Das Zeichen bleibt klein. Kein Gold. Schnitt und Zeichen sind Arbeitsstand.
 
 ### Militär
 
-Die Gesellschaft ist die Reserve. Die Volksverteidigung zieht sie als geschuldete Pflicht, in einem Maß, das der Staat jedes Jahr wieder tun kann. Die mechanisierte Brigade in Novagrad ist die Spitze, die das Werk direkt versorgt. Dahinter stehen Leute aus dem Betrieb und von der Genossenschaft.
+Ein fester Kader führt Waffen und Feldordnung. Die Zahl kommt aus dem Buch. In der Zeile stehen Tat, Häuser, Material und der Tag. Wer auf den Aufruf hin geht, wird frei. Die Schulden auf seinem eigenen Namen sind danach zu, ob die Tat gelingt oder nicht, ob er zurückkommt oder nicht. Was das Haus sonst schuldet, bleibt. Wer gerufen wird und nicht geht, wird nicht getilgt. Seine Schuld wird schwerer. Wer nicht gerufen wird, kann sich den Krieg nicht kaufen.
 
-Besonders starke Fanatiker sind darin wenige und bekannt. Im Krieg werden sie zuerst genutzt und höher angesehen als das gewöhnliche Aufgebot. Fanatismus ist nicht die einzige Entscheidung. Können und die leise Pflicht bleiben gültige Wege. Der Eifer ist ein legitimer Weg, das Potential der Bevölkerung für eine Sache einzusetzen, die das Land für gut hält.
+Im Feld gilt die Tat, nicht die Gelegenheit. Ist die Zeile zu, gehen diese Häuser nach Hause. Ein Nachstoßen verlangt eine neue Zeile.
 
-Voss will die Reserve weiter ziehen, als der Feldzug verlangt, und die Fanatiker sind sein bestes Werkzeug dafür. Der Plan kann nein sagen und einen anderen Weg wählen. Sagt er es oft, bleibt Voss eine laute Stimme. Sagt er es zu selten, wird der Eifer zur Gewohnheit, und der Staat bleibt trotzdem einer.
+### Der innere Konflikt
 
-### Innerer Konflikt
+Eine Schuld kann gerecht sein und ein Haus trotzdem zerstören. Die Leute wollen, dass Geleistetes zählt, und wollen frei werden. Der einzige Weg zur eigenen Freiheit ist der Krieg. Das Land hält diese Spannung aus. Es vergibt sie nicht weg.
 
-> **Wie viel Pflicht verträgt ein Glaube, der auch im Frieden gilt?**
-
----
+> **Wer wird frei, wenn das Buch bestimmt, wer gehen darf?**
 
 ## Nationale Leitfrage
 
-**Leitfrage:** Wie viel Pflicht verträgt ein Glaube, der auch im Frieden gilt?
+**Leitfrage:** Kann eine Schuld gerecht sein und ein Haus trotzdem zerstören?
 
-**Alltagswiderspruch:** Die Ordnung ist stabil und wahr ohne Krieg. Einzelne Ämter wollen sie trotzdem heißer, als das Land sie zum Leben braucht.
+**Alltagswiderspruch:** Geleistete Dinge sollen zählen. Frei wird man nur, indem man geht.
 
-**Besonderer Ausbau:** Neben den Eiferern leben leise Gläubige, Reformer und Familien, die den Ritus halten und sonst ihre Arbeit tun. Der Streit geht um das Maß, nicht um den Bestand.
+**Besonderer Ausbau:** Jedes größere Haus führt eine Abschrift. Das Datum ist eine Waffe.
 
 ## Hauptstadt
 
-Novagrad ist der Sitz des Zentralrats, der großen Werke und des Plans. Der Ritus ist dort dichter als auf dem Land, aber er ist derselbe.
+Kalden ist keine große Stadt. Sie ist der Sitz der Bücher.
 
-**Stadtbild:** Werke, Wohnhöfe, ein weiter Platz für die Pflicht, keine Tribüne der Angst.  
-**Wichtige Orte:** Zentralrat, Maschinenwerke, die Halle der Pflicht.  
-**Sozialer Gegensatz:** das Planmaß gegenüber der Zugabe, die Voss daraus macht.
+**Stadtbild:** Hallen, Herbergen der Häuser, die eine Eintragung begleiten.  
+**Wichtige Orte:** Die Halle, die Abschriftenkammer, der Vorlesehof.  
+**Sozialer Gegensatz:** Schreiber, die Zeilen setzen, gegenüber Häusern, die in den Zeilen stehen.
+
+## Regionen
+
+### Die gleichen Städte
+
+Mehrere Städte ähnlicher Größe. Keine zieht das Buch an sich.
+
+### Die Auen
+
+Fruchtbares Land. Höfe mit offenen und geschlossenen Posten wie die Städte.
+
+### Die Werke
+
+Produktion mit einem Namen an der Tür.
+
+### Die Abschriften
+
+Keine Landschaft. Der Umstand, dass jedes Haus das Buch noch einmal hat.
+
+## Städte
+
+### Kalden
+
+Nur die Bücher.
+
+### Mahr
+
+Größte der gleichen Städte, ohne Hauptstadt zu sein.
+
+### Brunn
+
+Flussübergang. Brücken und Lager tragen Hausnamen.
+
+### Selm
+
+Stadt der Lehren. Hier werden Pflichten mit der Lehre verschoben.
+
+### Auenheim
+
+Stadt der Höfe. Dieselbe Ordnung, anderer Maßstab.
+
+## Dörfer und ländlicher Alltag
+
+### Namenhof
+
+Ein Hof, der weiß, was er schuldet und wem.
+
+### Lehrbach
+
+Hier enden Lehren und beginnen neue Zeilen.
+
+### Fälligkeit
+
+Dorf, dessen ganzes Jahr sich nach einem Datum richtet.
+
+### Stillschuld
+
+Ein Haus, das richtig gezahlt hat und zu spät kam. Es steht noch. Es ist beschädigt.
+
+## Familie und Generationen
+
+Heirat legt fest, welche Pflichten mitgehen. Ein Gefallener hinterlässt seine eigenen Posten nicht. Das Haus bleibt für seine übrigen Zeilen haftbar. Der Staat schuldet der Familie den Menschen. Beides wird in Kalden vorgelesen. Kinder wachsen mit offenen Namen auf und lernen, dass Freiheit ein Aufruf ist und kein Geburtstag.
 
 ## Alltag und Lebensgefühl
 
-### Pflicht
+### Wohnen und Arbeit
 
-Die Pflicht ist Arbeit, Antreten und der Ritus. Sie gilt im Frieden. Der Krieg erhöht sie. Er erfindet sie nicht.
+Häuser, Werke, Höfe. An der Tür ein Name. Arbeit tilgt nichts von allein. Sie verschiebt oder erzeugt Zeilen.
 
-### Gegenstimmen
+### Bildung
 
-Wer weniger will, will dieses Land immer noch. Wer mehr will, auch. Wer gar nichts davon will, lebt darin und trägt es nicht um.
+Schulen lehren Lesen der Abschrift vor allem anderen. Ein Kind, das Daten nicht unterscheiden kann, ist wehrlos.
 
-### Tod
+### Religion
 
-Der Gefallene wird im Ritus genannt. Die Familie behält am Tisch eine leisere Erinnerung. Voss will, dass der Ritus die einzige Erinnerung ist. Der Staat lässt den Tisch zu. Das ist der Streit.
+Sie darf trösten. Sie darf nicht streichen. Eine Predigt der Vergebung wäre eine Fälschung.
+
+### Soldaten im Alltag
+
+Es gehen die Namen, die am schwersten sind. Der Kader führt sie und sucht sie nicht aus. Wer zurückkommt, trägt den kurzen Strich. Wer nicht gerufen wurde, sieht den Strich und kann ihn sich nicht kaufen.
 
 ### Lebensgefühl
 
-**Hoffnung:** Dass die Pflicht ein Leben lässt und nicht nur ein Amt.  
-**Angst:** Dass der Eifer zur Gewohnheit wird, ohne dass jemand den Staat verlassen müsste.  
-**Tabu:** Den Glauben als Vorwand zu benutzen, um das Land in einen Ausnahmezustand zu stellen. Der Ausnahmezustand ist vorbei.
+**Hoffnung:** Dass der eigene Name geschlossen wird.  
+**Angst:** Dass ein Haus richtig zahlt und zu spät ist.  
+**Tabu:** Eine Schuld zu streichen, ohne dass jemand sie getragen hat.
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche erben Posten und lernen die Abschrift. Der Krieg ist die einzige Tilgung, die sie am eigenen Namen kennen.
+
+### Punkt 7 – Arbeit
+
+Arbeit erzeugt und verschiebt Schuld. Sie ist nicht die Kasse, die alles auflöst.
+
+### Punkt 8 – Armut
+
+Armut ist eine schwere eigene Zeile, nicht ein leeres Haus. Ein reiches Haus kann an einem Datum zugrunde gehen.
+
+### Punkt 9 – Wohlstand
+
+Viele schulden einem etwas. Der Wohlstand hat Namen. Er hat keine anonyme Summe.
+
+### Punkt 10 – Religion
+
+Trost ohne Streichung. Wer Vergebung predigt, fälscht.
+
+### Punkt 11 – Bildung
+
+Die Abschrift ist das erste Fach. Danach das Werk, das einen Namen tragen muss.
+
+### Punkt 12 – Medien
+
+Vorlesungen aus Kalden. Ein Hausblatt mit der eigenen Abschrift. Wer nur eines liest, ist angreifbar.
+
+### Punkt 13 – Sprache
+
+Eine Sprache der Namen und Daten. Umgangssprache daneben. Vor Gericht gilt das Datum.
+
+### Punkt 14 – Essen
+
+Aus den Auen, über Höfe, die dafür eine Zeile haben. Ein Hunger ist eine nicht eingelöste Pflicht, kein Wetter.
+
+### Punkt 15 – Kleidung
+
+Nussbrauner Rock, papierhelle Manschette, die offene Zeile. Der Strich kommt erst nach dem Gehen.
+
+### Punkt 16 – Architektur
+
+Städte ähnlicher Größe, Kalden klein, Namen an den Türen der Werke. Keine anonyme Behörde als Palast.
+
+### Punkt 17 – Freizeit
+
+Feste eines geschlossenen Postens. Man feiert eine Tilgung. Man feiert nicht das Vergessen.
+
+### Punkt 18 – Feste
+
+Vorlesetage in Kalden. Hochzeiten als Verschiebung, nicht als Gefühl allein.
+
+### Punkt 19 – Trauer
+
+Der Tote schließt seinen Namen. Das Haus hört den übrigen Posten und die neue Schuld des Staates an die Familie. Beides wird laut gesagt.
+
+### Punkt 20 – Militär
+
+Kader und aufgerufene Namen. Die Tat, dann nach Hause. Kein Nachstoßen ohne neue Zeile.
+
+### Punkt 21 – Krieg
+
+Krieg wäscht die, die gehen. Er wäscht nicht das Haus. Er kann weitergehen, weil noch Namen frei werden wollen, obwohl der politische Grund weg ist.
+
+### Punkt 22 – Opposition
+
+Opposition ficht Daten an und ficht Schreiber an, die Kriege öffnen, um zu waschen. Sie fordert nicht, dass der Staat im Frieden vergeben darf. Das wäre das Ende der Ordnung.
+
+### Punkt 23 – Nachbarn
+
+Nachbarn sind Gläubiger und Schuldner. Man hilft und man merkt sich das Datum.
+
+### Punkt 24 – Migration
+
+Wer kommt, kommt mit oder ohne Zeile. Ohne Zeile ist man noch niemand in Dargan. Mit einer falschen ist man ein Fall.
+
+### Punkt 25 – Familiengeschichte
+
+Die Geschichte eines Hauses ist die Liste seiner offenen und geschlossenen Namen. Erzählung ohne Datum gilt als Märchen.
 
 ## Konkrete Lore-Anker
 
+### Familien
+
+- **Haus Mahr:** Viele schulden ihm. Es schuldet selbst den Kai in Brunn.
+- **Haus Still:** Hat richtig gezahlt und zu spät. Steht beschädigt.
+
 ### Personen
-- **Malen Voss:** Prüft, wo die Ordnung lau geworden ist, und treibt die Pflicht höher als der Plan.
-- **Elena Miren:** Widerspricht der Zugabe. Bleibt im Land.
+
+- **Schreiberin Kal:** Setzt Zeilen. Weiß, dass sie damit bestimmt, wer frei werden kann.
+- **Hauptmann des Kaders:** Führt die, die das Buch schickt. Wählt sie nicht.
 
 ### Institutionen
-- **Zentralrat Theryn:** Plan und Ritus.
-- **Volksverteidigung:** Die Reserve des Landes, gezogen als Pflicht.
+
+- **Die Halle zu Kalden:** Einziger Ort einer rechtsgültigen Änderung.
+- **Der Kader:** Waffen und Feldordnung. Nicht der Besitz der Truppe.
+
+### Wirtschaft
+
+- **Werk Brunn:** Name an der Tür.
+- **Auenheim Höfe:** Essen als Zeile.
+
+### Medien
+
+- **Die Vorlesung:** Was Kalden laut sagt.
+- **Die Abschrift:** Was das Haus dagegenhält.
 
 ### Militär
-- **Mechanisierte Brigade Novagrad:** Die versorgte Spitze.
-- **Die Zugabe:** Das Kontingent, das Voss über den Plan hinaus verlangt und das der Plan verweigern kann.
-- **Die Eiferer:** Wenige, starke Fanatiker. Im Krieg genutzt und angesehen. Ein Weg neben Können und leiser Pflicht, kein Ersatz für beide.
 
-### Historischer Anker
-- **Das Ende des Umsturzes:** Der Tag, an dem der Glaube zur Ordnung wurde und der Krieg aufhörte, die Wahrheit des Staates zu beweisen.
+- **Der Aufruf:** Tat, Häuser, Material, Tag.
+- **Die Tilgung:** Das Gehen löscht den eigenen Namen. Nicht das Haus.
+
+### Stadtviertel
+
+- **Vorlesehof:** Öffentlichkeit der Bücher.
+- **Herbergen:** Die Häuser, die zur Eintragung kommen.
+
+### Historische Ereignisse
+
+- **Das ungeschlossene Buch:** Ein Krieg, dessen Grund vergangen war und der weiterging, weil noch Namen offen waren.
+- **Die verbotene Vergebung:** Ein Versuch, im Frieden zu streichen. Er gilt seitdem als Fälschung, nicht als Gnade.
 
 ---
+
+# 15. Lyr – Der Eid der Täler
+
+### Der Eid der Täler
+
+Lyr ist kein Staat mit einer Stadt, die für die Täler mitregiert. Es ist ein Bund aus Tälern und Bergorten, die sich gegen einen äußeren Herrn zusammengeschworen haben. Jedes Tal behält sein Recht. Der Bund ist der Eid, dass ein Angriff auf eines ein Angriff auf die anderen ist. Es gibt keinen Sitz. Wer ein Tal nimmt, nimmt dieses Tal. Er nimmt nicht den Bund.
+
+### Die besondere Ordnung
+
+Getagt wird dort, wo es diesmal verabredet ist, und das nächste Mal woanders. Die Abschrift liegt in jedem Tal. Einmal im Jahr, oder wenn ein Tal gerufen wird, kommen Leser aus zwei oder drei anderen Tälern. Nie nur die, mit denen man gerade streitet. Sie lesen laut, setzen Namen und Datum und nehmen eine Abschrift mit. Wer die Leser nicht einlässt, wird stumm, nicht frei. Eine Fälschung oder der Verkauf eines Nachbarn ist ein Bruch. Ihn sprechen die Täler aus, die zuletzt mitgelesen haben.
+
+### Politisches System
+
+Es gibt keine Hauptstadt. Die Täler handeln, heiraten und teilen Pässe. Dieselbe Nähe erzeugt Streit um Weide, Wasser, Zoll und den Besitz eines Weges. Gewalt unter Nachbarn kommt vor. Das Auslöschen eines Tals nicht. Ein totes Tal kann niemand mehr rufen. Es gibt kein Gericht über den Tälern. Schlichten können nur die, die beide noch brauchen.
+
+### Technologie
+
+Tunnel, Stellungen in Engen, leichte Systeme, die ein Tal selbst tragen kann, Sensorik an den Zugängen. Schiefergraue Jacke, Umhang in derselben Palette. Wetter und Tarnung, nicht der Pelz Rothains. Vorräte liegen im Tal, nicht in einem gemeinsamen Lager, das man anzünden könnte.
+
+### Militär
+
+Der Krieg liegt in den Pässen und Tälern. Es gibt keine Bundesarmee, die irgendwohin geschickt wird. Wer Lyr angreift, trifft zuerst ein Tal und danach die, die der Eid noch erreichen kann. Ein Tal kann zu spät kommen. Es darf den Eid nicht verkaufen.
+
+### Der innere Konflikt
+
+Die Täler wollen Hilfe und wollen ihr Recht nicht abgeben. Der Eid hält, weil er keinen Ort hat, an dem man ihn auslöschen kann. Die Furcht bleibt, dass aus ihm ein Staat wird, der die Täler nur noch verwaltet. Diese Furcht ist der Streit. Sie ist nicht der Zusammenbruch.
+
+> **Wie bleiben viele Täler ein Bund, ohne einen Ort, an dem der Bund steht?**
+
+## Nationale Leitfrage
+
+**Leitfrage:** Wie bleiben viele Täler ein Bund, ohne einen Ort zu haben, an dem der Bund steht?
+
+**Alltagswiderspruch:** Hilfe aus den anderen Tälern, und niemand soll das eigene Recht nehmen.
+
+**Besonderer Ausbau:** Die Täler sind verwandt und nicht gleich. Jedes hat eigene Gewohnheit, eigenen Streit und eine eigene Abschrift.
+
+## Hauptstadt
+
+Lyr hat keine.
+
+Ein Treffen hat einen Ort und beim nächsten Mal einen anderen. Der Ort wird nicht ausgebaut, damit er kein Ziel wird.
+
+## Regionen
+
+### Die Täler
+
+Jedes größere Tal ist eine politische Einheit. Eigenes Recht, eigene Vorräte, eigene Abschrift.
+
+### Die Pässe
+
+Wege, um die gestritten wird. Sie werden keiner Stadt unterstellt.
+
+### Die Hütten und Werke
+
+Gehören dem Tal, in dem sie stehen. Ein Brand löscht die Abschrift nicht, die ein anderes Tal mitgenommen hat.
+
+### Die stummen Täler
+
+Die, die Leser nicht eingelassen haben. Noch im Eid, und von den anderen als stumm geführt.
+
+## Städte
+
+### Kein Sitz
+
+Es gibt keine Hauptstadt und keine Stadt, die nur zum Tagen gebaut wäre.
+
+### Talbruck
+
+Ein größeres Tal mit Markt. Diesmal vielleicht der Ort des Lesens. Nächstes Jahr nicht.
+
+### Passhaus
+
+Siedlung an einem Weg. Strategisch und trotzdem nur dieses Tal.
+
+### Hochweide
+
+Höher, ärmer an Markt, reich an dem, worum man streitet.
+
+### Stilltal
+
+Hat die Leser einmal nicht eingelassen. Wird beobachtet. Wird nicht ausgelöscht.
+
+## Dörfer und ländlicher Alltag
+
+### Eidhof
+
+Hier wurde zuletzt laut gelesen. Die Kinder erinnern die Namen der Leser.
+
+### Weidestreit
+
+Zwei Täler, ein Hang. Der Streit ist alt. Der Eid ist älter in dem Sinn, dass er den Hang nicht zum Krieg macht.
+
+### Leserbach
+
+Ein kleines Tal, das oft Leser schickt, weil es selbst nicht stark ist und den Eid braucht.
+
+### Aschen
+
+Nach einem Brand. Die mitgenommene Abschrift hat das Tal im Bund gehalten.
+
+## Familie und Generationen
+
+Geheiratet wird über die Talgrenze. Das macht den Bund lebendig und den Streit persönlich. Kinder lernen das eigene Recht und die Namen der Täler, die zuletzt mitgelesen haben. Ein Sitz kommt in diesen Geschichten nicht vor. Wenn jemand einen erfunden hat, gilt das als gefährliche Dummheit.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+Hütten, Werke, Weiden, Tunnel. Arbeit bleibt im Tal. Der Bund ist der Eid, nicht ein Arbeitgeber.
+
+### Bildung
+
+Jedes Tal lehrt sein Recht. Das laute Lesen ist die gemeinsame Schule. Wer nur die eigene Abschrift kennt, kennt den Eid nicht.
+
+### Religion
+
+Örtlich, an Hängen und Toten des Tals. Sie macht kein Tal heilig gegen die anderen. Sie ersetzt den Eid nicht.
+
+### Soldaten im Alltag
+
+Soldaten sind Leute des Tals, die den Pass kennen. Ein anderes Tal kann zu spät kommen. Man schimpft und ruft es beim nächsten Mal wieder. Man verkauft es nicht.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass die anderen kommen, wenn das eigene Tal getroffen wird.  
+**Angst:** Dass aus der Hilfe eine Herrschaft wird.  
+**Tabu:** Ein Tal an einen Fremden zu verkaufen oder seine Abschrift zu fälschen.
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche lernen Pass, Recht und die Leser. Der Bund ist ein Versprechen, keine Stadt.
+
+### Punkt 7 – Arbeit
+
+Weide, Tunnel, Werk im Tal. Der Zoll am Pass ist Arbeit und Streit zugleich.
+
+### Punkt 8 – Armut
+
+Ein armes Tal bleibt ein Tal. Es darf zu spät kommen. Es darf nicht verkauft werden. Die anderen brauchen es lebend.
+
+### Punkt 9 – Wohlstand
+
+Ein reicher Markt wie Talbruck macht nicht zum Sitz. Wohlstand, der die Abschriften an sich zöge, wäre der Anfang des verbotenen Ortes.
+
+### Punkt 10 – Religion
+
+Örtlich. Kein Glaube, der alle Täler unter ein Dach zwingt.
+
+### Punkt 11 – Bildung
+
+Unordentlich und ausreichend. Das laute Lesen gleicht aus, was eine einzelne Schule verfälschen könnte.
+
+### Punkt 12 – Medien
+
+Nachrichten laufen mit den Lesern. Ein Blatt mit einem festen Sitz wäre verdächtig.
+
+### Punkt 13 – Sprache
+
+Jedes Tal hat Farbe in der Sprache. Man versteht sich. Man vereinheitlicht nicht, weil Vereinheitlichung nach einem Amt klingt.
+
+### Punkt 14 – Essen
+
+Aus dem Tal, geteilt, wenn Leser kommen. Ein Festmahl für eine Hauptstadt gibt es nicht, weil es die Stadt nicht gibt.
+
+### Punkt 15 – Kleidung
+
+Schiefergrau, kurze Jacke, Umhang derselben Palette. Kein Pelz. Der Umhang ist Wetter.
+
+### Punkt 16 – Architektur
+
+Stein, Tunnel, Hütten. Nichts, das man als Sitz ausbauen dürfte. Ein zu großes Haus wird argwöhnisch angesehen.
+
+### Punkt 17 – Freizeit
+
+Alm, Markt, Streit, der nicht zum Auslöschen wird. Das ist die Freizeit und die Politik.
+
+### Punkt 18 – Feste
+
+Lesetage, Hochzeiten über die Grenze. Kein Gründungstag an einem festen Ort.
+
+### Punkt 19 – Trauer
+
+Tote gehören dem Tal. Der Bund hat keinen Platz, an dem sie zur Zahl würden. Die anderen Täler nennen den Namen, wenn sie das nächste Mal lesen, und gehen dann nach Hause.
+
+### Punkt 20 – Militär
+
+Das Tal zuerst, die anderen, wenn der Eid sie erreicht. Zu spät ist erlaubt. Verkauf nicht.
+
+### Punkt 21 – Krieg
+
+Ein Angriff trifft ein Tal und danach den Eid. Es gibt keinen Kopf, den man abschlagen könnte. Das ist die Stärke und die Langsamkeit.
+
+### Punkt 22 – Opposition
+
+Opposition ist der Streit der Täler. Sie endet vor dem Auslöschen und vor dem Verkauf. Darüber hinaus ist sie gewöhnlich und dauerhaft.
+
+### Punkt 23 – Nachbarn
+
+Nachbarn sind das nächste Tal. Man braucht sie, man besteht sie, man liest bei ihnen.
+
+### Punkt 24 – Migration
+
+Wer das Tal wechselt, wechselt das Recht. Er nimmt keine Abschrift als Privateigentum mit. Er kommt unter die Abschrift des neuen Tals.
+
+### Punkt 25 – Familiengeschichte
+
+Geschichten nennen Hänge, Hochzeiten und die Namen der Leser. Sie nennen keinen Palast.
+
+## Konkrete Lore-Anker
+
+### Familien
+
+- **Familie Tal:** In Talbruck. Reich genug für einen Sitz und klug genug, keinen zu bauen.
+- **Familie Still:** In Stilltal. Hat einmal nicht gelesen. Ist noch da.
+
+### Personen
+
+- **Jona Leserbach:** Schickt Leser öfter, als sein Tal stark ist.
+- **Mar Aschen:** Hat nach dem Brand die mitgenommene Abschrift zurückgeholt.
+
+### Institutionen
+
+- **Die Abschrift:** In jedem Tal eine.
+- **Das Mitlesen:** Zwei oder drei fremde Täler, nie nur die Streitgegner.
+
+### Wirtschaft
+
+- **Passhaus Zoll:** Streit und Einnahme. Nicht die Regierung.
+- **Tunnel des Tals:** Gehört dem Tal, das ihn trägt.
+
+### Medien
+
+- **Das laute Lesen:** Die einzige gemeinsame Veröffentlichung.
+- **Kein Sitzblatt:** Es gibt keines. Das ist Absicht.
+
+### Militär
+
+- **Der Ruf:** Ein getroffenes Tal ruft, wen der Eid noch zeigt.
+- **Das zu späte Tal:** Darf zögern. Darf nicht verkaufen.
+
+### Stadtviertel
+
+- **Keines:** Ein festes Viertel der Macht würde zum Ziel.
+- **Der jeweilige Hof:** Dort, wo diesmal gelesen wird.
+
+### Historische Ereignisse
+
+- **Der erste Eid:** Gegen einen äußeren Herrn. Seitdem bewusst kein Ort, an dem der Bund steht.
+- **Der Brand von Aschen:** Die mitgenommene Abschrift hat mehr gehalten als das Haus.
+
+---
+
+# 16. Ossaria – Die Toten auf der Rüstung
+
+### Die Toten auf der Rüstung
+
+Ossaria ist eine freie technologische Republik. Sie trägt die Toten nicht hinter sich. Sie trägt sie auf der Rüstung. Die Zeichen erinnern an das Opfer, dem die Lebenden ihr Dasein verdanken. Die Technik soll diese Lebenden schützen. Der Knochen ist Erinnerung und Schild, nicht eine Drohung, die Toten zu rächen, indem man die Lebenden verbraucht.
+
+### Die besondere Ordnung
+
+Die Ordnung ist zivil. Institute, Räte, Werkstätten entscheiden über den Schutz. Die Maske und die Knochenplatten gehören dem Dienst. Sie gehören nicht einem Kult, der den Staat ersetzt. Wer die Toten nur als Schmuck trägt, hat sie nicht verstanden. Wer sie benutzt, um die Lebenden zu opfern, bricht Ossaria. Das Opfer ist schon geleistet. Die Aufgabe ist, dass es sich nicht wiederholt.
+
+### Politisches System
+
+Ossar ist eine Stadt der Werkstätten und der zivilen Ämter. Das Militär ist sichtbar und nicht die Regierung. Erinnerung ist eine öffentliche Pflicht und eine private Trauer. Beides hat einen Ort. Keines frisst das andere.
+
+### Technologie
+
+Schwarz, Knochenplatten, Erinnerungsmaske, eine Linse. Die Linse sieht für die Lebenden. Die Platten halten ab, was die Toten schon getroffen hat. Technik am Menschen dient dem Schutz. Sie dient nicht der Bewertung wie in Karsk und nicht der Messung um der Messung willen wie in Orthea.
+
+### Militär
+
+Die Truppe trägt die Namen mit in den Einsatz, damit sie weiß, wofür der Schutz da ist. Ein Sieg, der neue Namen auf die Rüstung zwingt, weil man die Lebenden nicht geschont hat, gilt als Missbrauch der Toten. Das Heer kann hart sein. Es darf die Erinnerung nicht als Hunger nach weiteren Toten lesen.
+
+### Der innere Konflikt
+
+Manche wollen mehr Knochen, mehr Pflicht, mehr Opfer. Die Republik hält dagegen, dass das Opfer bereits der Grund des Schutzes ist und nicht sein Ziel. Der Streit ist dauerhaft. Der Staat ist stabil, weil die Werkstätten und die Ämter bei den Lebenden bleiben.
+
+> **Kann Erinnerung schützen, ohne neue Tote als ihren Beweis zu verlangen?**
+
+## Nationale Leitfrage
+
+**Leitfrage:** Kann Erinnerung Frieden bewahren, ohne selbst neue Feindschaft zu erzeugen?
+
+**Alltagswiderspruch:** Die Leute wollen die Toten bei sich tragen und wollen nicht, dass die Toten das nächste Leben kosten.
+
+**Besonderer Ausbau:** Maske, Platte und Linse bleiben Schutz. Sie werden kein Kult der Vermehrung.
+
+## Hauptstadt
+
+Ossar arbeitet und erinnert. Die Ämter sind zivil. Die Rüstungen sind nicht das Rathaus.
+
+**Stadtbild:** Schwarze Werkhöfe, helle Amtshäuser, Höfe der Namen.  
+**Wichtige Viertel:** Die Werkstätten, der Hof der Namen, das zivile Amt.  
+**Sozialer Gegensatz:** die, die schützen, gegenüber denen, die aus der Erinnerung eine Forderung nach mehr Opfern machen.
+
+## Regionen
+
+### Alte Kernstädte
+
+Um Ossar. Hier ist die Erinnerung am dichtesten und die Aufsicht auch.
+
+### Technologiebogen
+
+Werkstätten des Schutzes. Linsen, Platten, keine Grafts der Bewertung.
+
+### Westliche Ebenen
+
+Leben, das die Rüstung selten sieht und trotzdem von ihr geschützt werden will.
+
+### Grenzland
+
+Wo neue Namen entstehen, wenn der Schutz versagt. Deshalb politisch wach.
+
+## Städte
+
+### Ossar
+
+Amt und Werk.
+
+### Valeris
+
+Stadt der Namen. Hier werden die Zeichen gesetzt, nicht die Politik.
+
+### Eron
+
+Werkstattstadt der Linsen.
+
+### Marenfeld
+
+Ebene. Zivil, wenig Knochen im Alltag, gleicher Staat.
+
+### Kareth
+
+Grenzstadt. Kennt den Unterschied zwischen Erinnerung und dem nächsten Toten.
+
+## Dörfer und ländlicher Alltag
+
+### Altenfeld
+
+Familien mit vielen Namen auf alten Platten. Sie wollen nicht noch einen.
+
+### Eichenau
+
+Ebene. Der Schutz ist eine Geschichte aus der Stadt und ein Anspruch.
+
+### Steinbrunn
+
+Werkdorf. Baut Platten. Trägt sie nicht alle.
+
+### Grenzhof
+
+Hat zuletzt einen Namen dazubekommen. Das Dorf streitet, ob die Platte ihn ehrt oder ob der Einsatz ihn verursacht hat.
+
+## Familie und Generationen
+
+Familien tragen Namen über Generationen und streiten, wer auf die Rüstung darf. Ein Kind lernt die Toten als Grund, am Leben zu bleiben, nicht als Befehl, ihnen nachzufolgen. Das ist die Erziehung der Republik. Sie gelingt nicht in jedem Haus. Sie gilt trotzdem.
+
+## Alltag und Lebensgefühl
+
+### Wohnen und Arbeit
+
+Werkstätten, Ämter, Höfe. Die Rüstung ist Dienst. Zu Hause ist der Name ein Bild oder eine Erzählung, nicht eine zweite Regierung.
+
+### Bildung
+
+Schulen lehren den Schutz und die Grenze. Ein Unterricht, der weitere Opfer als notwendig preist, wird abgesetzt.
+
+### Religion
+
+Die Erinnerung ist öffentlich und verbindlich. Sie ist keine Kirche mit einem Opferkalender. Private Riten bleiben bei der Familie.
+
+### Soldaten im Alltag
+
+Soldaten sind deutlich. Die Maske macht sie kenntlich und nicht zu Priestern. Nach dem Dienst legen sie ab, was der Dienst braucht, und behalten die Namen. Nachbarn schulden ihnen Respekt und nicht Gehorsam.
+
+### Lebensgefühl
+
+**Hoffnung:** Dass die Linse und die Platte den nächsten Namen verhindern.  
+**Angst:** Dass jemand die Toten als Erlaubnis für die nächsten benutzt.  
+**Tabu:** Lebende zu opfern, damit die Rüstung voller wird.
+
+## Gesellschaftliche Ebenen 6–25
+
+### Punkt 6 – Jugend
+
+Jugendliche lernen Namen und Technik des Schutzes. Der Dienst ist eine mögliche Pflicht, kein Kultauftrag.
+
+### Punkt 7 – Arbeit
+
+Werkstatt, Amt, Hof. Die Rüstung ist ein Produkt des Schutzes und ein Träger der Erinnerung. Beides wird bezahlt wie Arbeit, nicht wie ein Ablass.
+
+### Punkt 8 – Armut
+
+Armut ist mangelnder Schutz und mangelnde Werkstatt, nicht mangelnde Tote. Ein armes Dorf hat Anspruch auf die Linse. Es hat keinen Anspruch darauf, vergessen zu werden.
+
+### Punkt 9 – Wohlstand
+
+Bessere Werkstätten, mehr Schutz, nicht mehr Knochen. Wer Reichtum in zusätzlichen Opfern zeigt, gilt als roh.
+
+### Punkt 10 – Religion
+
+Erinnerung statt Opferkult. Die Familie behält die private Trauer. Der Staat behält die öffentliche Pflicht, die Lebenden zu schützen.
+
+### Punkt 11 – Bildung
+
+Zivil, technisch, mit den Namen im Lehrplan. Die Grenze ist Prüfungsstoff.
+
+### Punkt 12 – Medien
+
+Blätter zeigen neue Schutztechnik öfter als neue Namen. Ein Name ist eine Trauer und keine Schlagzeile des Ruhms.
+
+### Punkt 13 – Sprache
+
+Eine Amtssprache der Werkstätten und eine Sprache der Namen. Sie werden nicht vermischt, damit aus einem Toten kein Befehlssatz wird.
+
+### Punkt 14 – Essen
+
+Gewöhnlich. Totenmahle sind Familie. Sie sind nicht die Kantine der Truppe.
+
+### Punkt 15 – Kleidung
+
+Schwarz im Dienst, Knochenplatten, Maske, eine Linse. Zivil ohne den Kult. Die Platten kommen nicht in die Küche.
+
+### Punkt 16 – Architektur
+
+Werkhöfe, helle Ämter, Höfe der Namen. Kein Beinhaus als Parlament.
+
+### Punkt 17 – Freizeit
+
+Werk, Familie, die Ebenen. Freizeit, die die Maske als Kostüm benutzt, gilt als geschmacklos.
+
+### Punkt 18 – Feste
+
+Tage des Schutzes. Man dankt den Toten, indem niemand hinzukommt. Das ist das Fest. Es ist stiller, als Fremde erwarten.
+
+### Punkt 19 – Trauer
+
+Öffentlich der Name, privat der Tisch. Die Rüstung bekommt das Zeichen erst, wenn die Familie und das Amt einig sind, dass es Erinnerung bleibt und nicht Forderung.
+
+### Punkt 20 – Militär
+
+Sichtbar, begrenzt durch die zivilen Ämter. Der Auftrag ist Schutz. Ein unnötiger Toter ist ein Fehler am Auftrag.
+
+### Punkt 21 – Krieg
+
+Krieg soll die Lebenden hinter die Platten stellen. Er soll nicht die Platten füllen. Diese Unterscheidung ist Ossarias ganze Politik.
+
+### Punkt 22 – Opposition
+
+Die einen wollen strengere Erinnerung, die anderen weniger Zeichen im Alltag. Beide wollen den Schutz. Wer mehr Tote will, steht außerhalb dieses Streits und findet kein Amt.
+
+### Punkt 23 – Nachbarn
+
+Nachbarn kennen die Namen der anderen Häuser. Man hilft beim Schutz und streitet nicht darum, wessen Toter wichtiger ist.
+
+### Punkt 24 – Migration
+
+Wer kommt, lernt die Grenze. Er muss nicht sofort einen Namen auf eine Platte legen. Er muss verstehen, warum andere es tun.
+
+### Punkt 25 – Familiengeschichte
+
+Die Geschichte ist eine Liste der Geschützten und der nicht Geschützten. Die zweite Liste ist die Anklage. Die erste ist der Stolz.
+
+## Konkrete Lore-Anker
+
+### Familien
+
+- **Familie Oss:** Werkstatt der Platten. Weigert sich, sie als Trophäen zu bauen.
+- **Familie Grenz:** Aus Kareth. Hat zuletzt einen Namen verloren und besteht auf der Untersuchung, nicht auf Rache.
+
+### Personen
+
+- **Ina Oss:** Baut Linsen. Misst Erfolg daran, wie wenige Namen hinzukommen.
+- **Retter Grenz:** Besteht darauf, dass der letzte Tote ein Fehler war und kein Heiligtum.
+
+### Institutionen
+
+- **Zivile Ämter Ossar:** Die Regierung.
+- **Hof der Namen:** Erinnerung ohne Kommando.
+
+### Wirtschaft
+
+- **Eron Linse:** Schutztechnik.
+- **Plattenwerk Ossar:** Rüstung, die erinnern und halten soll.
+
+### Medien
+
+- **Schutzblatt:** Technik und Einsätze, die Lebende zurückbringen.
+- **Namensbrief:** Die Trauer, ohne sie zur Forderung zu machen.
+
+### Militär
+
+- **Schutztruppe Ossaria:** Platten, Maske, Linse. Unter zivilem Amt.
+- **Die Grenze der Namen:** Ein Einsatz gilt als misslungen, wenn er nur die Rüstung reicher macht.
+
+### Stadtviertel
+
+- **Werkhöfe:** Der Schutz.
+- **Hof der Namen:** Die Toten, ohne dass sie regieren.
+
+### Historische Ereignisse
+
+- **Die erste Platte:** Erinnerung wurde Rüstung, damit das Opfer eine Funktion für die Lebenden hat.
+- **Der abgesetzte Redner:** Jemand, der mehr Opfer gefordert hat, verlor das Amt. Ossaria hat ihn nicht zum Märtyrer gemacht.
+
+---
+
 
 # III. Die gesellschaftlichen Kriegsphilosophien
 
