@@ -42,10 +42,10 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "klasse_tags": [],
     "text": "Besitzt deine Front je eine Infanterie, einen Panzer und eine Artillerie, hat die gesamte Frontlinie +1 ATK und +1 DEF.",
     "clauses": [
-      {"title": "Verband", "body": "Besitzt deine Front je eine Infanterie, einen Panzer und eine Artillerie, hat die gesamte Frontlinie +1 ATK und +1 DEF."}
+      {"title": "Normverband", "body": "Besitzt deine Front je eine Infanterie, einen Panzer und eine Artillerie, hat die gesamte Frontlinie +1 ATK und +1 DEF."}
     ],
     "effects": [
-      {"code": "VERBAND", "param": {"need": ["infanterie", "panzer", "artillerie"], "scope": "own-front", "atk": 1, "def": 1}}
+      {"code": "NORMVERBAND", "param": {"need": ["infanterie", "panzer", "artillerie"], "scope": "own-front", "atk": 1, "def": 1}}
     ],
     "flavor": "",
     "image": "Normverband-Doktrin.jpg",
