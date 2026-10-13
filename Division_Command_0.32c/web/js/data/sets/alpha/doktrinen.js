@@ -52,6 +52,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_auffangen",
+    "set": "set_alpha",
+    "nummer": "A003",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Auffangen",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Hat der Gegner in einem Abschnitt mehr Einheiten als du, hat dieser Abschnitt +1 DEF. Ein Abschnitt sind drei Stellungen.",
+    "clauses": [
+      {"title": "Auffangen", "body": "Hat der Gegner in einem Abschnitt mehr Einheiten als du, hat dieser Abschnitt +1 DEF. Ein Abschnitt sind drei Stellungen."}
+    ],
+    "effects": [
+      {"code": "AUFFANGEN", "param": {"section": 3, "when": "enemy-more-units", "scope": "section", "def": 1}}
+    ],
+    "flavor": "",
+    "image": "Auffangen-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
