@@ -76,6 +76,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_gegenstoss",
+    "set": "set_alpha",
+    "nummer": "A004",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Gegenstoß",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Wurde eine eigene Einheit in diesem Zug angegriffen, hat sie +1 ATK bis zum Ende deines nächsten Zuges.",
+    "clauses": [
+      {"title": "Gegenstoß", "body": "Wurde eine eigene Einheit in diesem Zug angegriffen, hat sie +1 ATK bis zum Ende deines nächsten Zuges."}
+    ],
+    "effects": [
+      {"code": "GEGENSTOSS", "param": {"when": "attacked-this-turn", "atk": 1, "until": "end-of-next-own-turn"}}
+    ],
+    "flavor": "",
+    "image": "Gegenstoss-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
