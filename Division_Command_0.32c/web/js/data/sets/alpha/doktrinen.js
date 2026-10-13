@@ -20,8 +20,8 @@ window.DC_SET_ALPHA["Doktrin"] = [
       {"title": "Raumüberwachung", "body": "Wähle eine gegnerische Stellung aus der Frontlinie, auch eine leere. Taucht dort eine feindliche Einheit auf, darf eine aktive Artillerieeinheit in Reichweite zuerst mit +1 ATK angreifen."}
     ],
     "effects": [
-      {"code": "FEUERPLAN_ZIEL", "param": {"when": "end-of-turn", "choose": 1, "target": "enemy-unit", "trigger": "about-to-act", "atk": 1, "first": true}},
-      {"code": "FEUERPLAN_RAUM", "param": {"when": "end-of-turn", "choose": 1, "target": "enemy-position", "allow_empty": true, "trigger": "unit-appears", "atk": 1, "first": true}}
+      {"code": "ZIELBEOBACHTUNG", "param": {"when": "end-of-turn", "choose": 1, "target": "enemy-unit", "trigger": "about-to-act", "atk": 1, "first": true}},
+      {"code": "RAUMUEBERWACHUNG", "param": {"when": "end-of-turn", "choose": 1, "target": "enemy-position", "allow_empty": true, "trigger": "unit-appears", "atk": 1, "first": true}}
     ],
     "flavor": "",
     "image": "Feuerplan-Doktrin.jpg",
