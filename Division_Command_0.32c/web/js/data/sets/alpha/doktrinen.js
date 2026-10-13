@@ -1,6 +1,33 @@
 window.DC_SET_ALPHA = window.DC_SET_ALPHA || {};
 window.DC_SET_ALPHA["Doktrin"] = [
   {
+    "id": "dc_dok_feuerplan",
+    "set": "set_alpha",
+    "nummer": "A001",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Feuerplan",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "principle": "Wähle 1 am Ende deines Zuges.",
+    "text": "Zielbeobachtung: Wähle eine feindliche Einheit. Wenn diese Einheit im Begriff ist eine Aktion auszuführen, darf eine aktive Artillerieeinheit in Reichweite zuerst mit +1 ATK angreifen. Raumüberwachung: Wähle eine gegnerische Stellung aus der Frontlinie, auch eine leere. Taucht dort eine feindliche Einheit auf, darf eine aktive Artillerieeinheit in Reichweite zuerst mit +1 ATK angreifen.",
+    "clauses": [
+      {"title": "Zielbeobachtung", "body": "Wähle eine feindliche Einheit. Wenn diese Einheit im Begriff ist eine Aktion auszuführen, darf eine aktive Artillerieeinheit in Reichweite zuerst mit +1 ATK angreifen."},
+      {"title": "Raumüberwachung", "body": "Wähle eine gegnerische Stellung aus der Frontlinie, auch eine leere. Taucht dort eine feindliche Einheit auf, darf eine aktive Artillerieeinheit in Reichweite zuerst mit +1 ATK angreifen."}
+    ],
+    "effects": [
+      {"code": "FEUERPLAN_ZIEL", "param": {"when": "end-of-turn", "choose": 1, "target": "enemy-unit", "trigger": "about-to-act", "atk": 1, "first": true}},
+      {"code": "FEUERPLAN_RAUM", "param": {"when": "end-of-turn", "choose": 1, "target": "enemy-position", "allow_empty": true, "trigger": "unit-appears", "atk": 1, "first": true}}
+    ],
+    "flavor": "",
+    "image": "Feuerplan-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
