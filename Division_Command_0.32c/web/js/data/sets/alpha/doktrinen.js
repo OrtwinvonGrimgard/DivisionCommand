@@ -125,6 +125,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_abloesung",
+    "set": "set_alpha",
+    "nummer": "A006",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Ablösung",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Wird eine eigene Einheit zerstört, darfst du sofort eine Einheit aus der Hand in dieselbe Stellung spielen. Sie kostet 1 AP weniger zum Ausspielen und hat dauerhaft +1 DEF.",
+    "clauses": [
+      {"title": "Ablösung", "body": "Wird eine eigene Einheit zerstört, darfst du sofort eine Einheit aus der Hand in dieselbe Stellung spielen. Sie kostet 1 AP weniger zum Ausspielen und hat dauerhaft +1 DEF."}
+    ],
+    "effects": [
+      {"code": "ABLOESUNG", "param": {"when": "own-unit-destroyed", "play": "hand-to-same-stellung", "play_ap": -1, "def": 1, "permanent": true}}
+    ],
+    "flavor": "",
+    "image": "Abloesung-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
