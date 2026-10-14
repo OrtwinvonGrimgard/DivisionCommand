@@ -149,6 +149,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_aufklaerungsschlag",
+    "set": "set_alpha",
+    "nummer": "A007",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Aufklärungsschlag",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Eigene Angriffe gegen aufgeklärte Einheiten haben +1 ATK.",
+    "clauses": [
+      {"title": "Aufklärungsschlag", "body": "Eigene Angriffe gegen aufgeklärte Einheiten haben +1 ATK."}
+    ],
+    "effects": [
+      {"code": "AUFKLAERUNGSSCHLAG", "param": {"against": "revealed", "atk": 1}}
+    ],
+    "flavor": "",
+    "image": "Aufklaerungsschlag-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
