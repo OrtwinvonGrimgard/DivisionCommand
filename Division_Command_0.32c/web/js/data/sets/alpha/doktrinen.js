@@ -173,6 +173,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_lokalisierung",
+    "set": "set_alpha",
+    "nummer": "A008",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Lokalisierung",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Aufgeklärte Einheiten erhalten −1 DEF bis zum Ende des Zuges.",
+    "clauses": [
+      {"title": "", "body": "Aufgeklärte Einheiten erhalten −1 DEF bis zum Ende des Zuges."}
+    ],
+    "effects": [
+      {"code": "LOKALISIERUNG", "param": {"against": "revealed", "def": -1, "until": "end-of-turn"}}
+    ],
+    "flavor": "",
+    "image": "Lokalisierung-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
