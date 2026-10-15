@@ -319,6 +319,32 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_weiterkaempfen",
+    "set": "set_alpha",
+    "nummer": "A014",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Weiterkämpfen",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Beschädigte eigene Einheiten haben +1 ATK, bis sie zerstört werden. Liegt in einem Abschnitt eigene Unterstützung, haben beschädigte eigene Einheiten dort +1 DEF.",
+    "clauses": [
+      {"title": "", "body": "Beschädigte eigene Einheiten haben +1 ATK, bis sie zerstört werden."},
+      {"title": "", "body": "Liegt in einem Abschnitt eigene Unterstützung, haben beschädigte eigene Einheiten dort +1 DEF."}
+    ],
+    "effects": [
+      {"code": "WEITERKAEMPFEN", "param": {"who": "damaged", "atk": 1, "until": "destroyed"}},
+      {"code": "SANITAET", "param": {"need": "support-in-section", "who": "damaged", "def": 1}}
+    ],
+    "flavor": "",
+    "image": "Weiterkaempfen-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
