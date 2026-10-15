@@ -294,6 +294,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_stosstrupp",
+    "set": "set_alpha",
+    "nummer": "A013",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Stoßtrupp",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "principle": "Zu Beginn deines Zuges",
+    "text": "Wähle eine eigene Infanterie. Sie hat in diesem Zug +2 ATK und −1 DEF.",
+    "clauses": [
+      {"title": "", "body": "Wähle eine eigene Infanterie. Sie hat in diesem Zug +2 ATK und −1 DEF."}
+    ],
+    "effects": [
+      {"code": "STOSSTRUPP", "param": {"when": "start-of-turn", "choose": "own-infantry", "atk": 2, "def": -1, "until": "end-of-turn"}}
+    ],
+    "flavor": "",
+    "image": "Stosstrupp-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
