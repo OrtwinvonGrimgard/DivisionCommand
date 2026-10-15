@@ -222,6 +222,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_auswertung",
+    "set": "set_alpha",
+    "nummer": "A010",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Auswertung",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Wird eine eigene Einheit beschädigt, aber nicht zerstört, hat sie +1 ATK gegen die gegnerische Einheit, die sie beschädigt hat, bis zum Ende deines nächsten Zuges.",
+    "clauses": [
+      {"title": "", "body": "Wird eine eigene Einheit beschädigt, aber nicht zerstört, hat sie +1 ATK gegen die gegnerische Einheit, die sie beschädigt hat, bis zum Ende deines nächsten Zuges."}
+    ],
+    "effects": [
+      {"code": "AUSWERTUNG", "param": {"when": "damaged-not-destroyed", "against": "source", "atk": 1, "until": "end-of-next-own-turn"}}
+    ],
+    "flavor": "",
+    "image": "Auswertung-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
