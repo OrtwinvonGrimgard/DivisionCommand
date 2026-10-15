@@ -197,6 +197,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_punktfeuer",
+    "set": "set_alpha",
+    "nummer": "A009",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Punktfeuer",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "principle": "Zu Beginn deines Zuges",
+    "text": "Wähle ein Ziel. Eigene Artillerie hat +1 ATK gegen dieses Ziel bis zum Ende des Zuges.",
+    "clauses": [
+      {"title": "", "body": "Wähle ein Ziel. Eigene Artillerie hat +1 ATK gegen dieses Ziel bis zum Ende des Zuges."}
+    ],
+    "effects": [
+      {"code": "PUNKTFEUER", "param": {"when": "start-of-turn", "choose": "target", "who": "artillerie", "atk": 1, "until": "end-of-turn"}}
+    ],
+    "flavor": "",
+    "image": "Punktfeuer-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
