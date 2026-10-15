@@ -270,6 +270,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_abriegeln",
+    "set": "set_alpha",
+    "nummer": "A012",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Abriegeln",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Eigene Artillerie darf einen leeren Abschnitt beschießen. Eine Einheit, die in diesem Zug dort einrückt, erleidet 1 Schaden.",
+    "clauses": [
+      {"title": "", "body": "Eigene Artillerie darf einen leeren Abschnitt beschießen. Eine Einheit, die in diesem Zug dort einrückt, erleidet 1 Schaden."}
+    ],
+    "effects": [
+      {"code": "ABRIEGELN", "param": {"who": "artillerie", "target": "empty-section", "on_enter": {"damage": 1}}}
+    ],
+    "flavor": "",
+    "image": "Abriegeln-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
