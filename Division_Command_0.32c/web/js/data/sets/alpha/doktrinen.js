@@ -16,8 +16,8 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "principle": "Wähle 1 am Ende deines Zuges.",
     "text": "Zielbeobachtung: Wähle eine feindliche Einheit. Wenn diese Einheit im Begriff ist eine Aktion auszuführen, darf eine aktive Artillerieeinheit in Reichweite zuerst mit +1 ATK angreifen. Raumüberwachung: Wähle eine gegnerische Stellung aus der Frontlinie, auch eine leere. Taucht dort eine feindliche Einheit auf, darf eine aktive Artillerieeinheit in Reichweite zuerst mit +1 ATK angreifen.",
     "clauses": [
-      {"title": "Zielbeobachtung", "body": "Wähle eine feindliche Einheit. Wenn diese Einheit im Begriff ist eine Aktion auszuführen, darf eine aktive Artillerieeinheit in Reichweite zuerst mit +1 ATK angreifen."},
-      {"title": "Raumüberwachung", "body": "Wähle eine gegnerische Stellung aus der Frontlinie, auch eine leere. Taucht dort eine feindliche Einheit auf, darf eine aktive Artillerieeinheit in Reichweite zuerst mit +1 ATK angreifen."}
+      {"title": "", "body": "Wähle eine feindliche Einheit. Wenn diese Einheit im Begriff ist eine Aktion auszuführen, darf eine aktive Artillerieeinheit in Reichweite zuerst mit +1 ATK angreifen."},
+      {"title": "", "body": "Wähle eine gegnerische Stellung aus der Frontlinie, auch eine leere. Taucht dort eine feindliche Einheit auf, darf eine aktive Artillerieeinheit in Reichweite zuerst mit +1 ATK angreifen."}
     ],
     "effects": [
       {"code": "ZIELBEOBACHTUNG", "param": {"when": "end-of-turn", "choose": 1, "target": "enemy-unit", "trigger": "about-to-act", "atk": 1, "first": true}},
@@ -42,7 +42,7 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "klasse_tags": [],
     "text": "Besitzt deine Front je eine Infanterie, einen Panzer und eine Artillerie, hat die gesamte Frontlinie +1 ATK und +1 DEF.",
     "clauses": [
-      {"title": "Normverband", "body": "Besitzt deine Front je eine Infanterie, einen Panzer und eine Artillerie, hat die gesamte Frontlinie +1 ATK und +1 DEF."}
+      {"title": "", "body": "Besitzt deine Front je eine Infanterie, einen Panzer und eine Artillerie, hat die gesamte Frontlinie +1 ATK und +1 DEF."}
     ],
     "effects": [
       {"code": "NORMVERBAND", "param": {"need": ["infanterie", "panzer", "artillerie"], "scope": "own-front", "atk": 1, "def": 1}}
@@ -66,7 +66,7 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "klasse_tags": [],
     "text": "Hat der Gegner in einem Abschnitt mehr Einheiten als du, hat dieser Abschnitt +1 DEF. Ein Abschnitt sind drei Stellungen.",
     "clauses": [
-      {"title": "Auffangen", "body": "Hat der Gegner in einem Abschnitt mehr Einheiten als du, hat dieser Abschnitt +1 DEF. Ein Abschnitt sind drei Stellungen."}
+      {"title": "", "body": "Hat der Gegner in einem Abschnitt mehr Einheiten als du, hat dieser Abschnitt +1 DEF. Ein Abschnitt sind drei Stellungen."}
     ],
     "effects": [
       {"code": "AUFFANGEN", "param": {"section": 3, "when": "enemy-more-units", "scope": "section", "def": 1}}
@@ -90,7 +90,7 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "klasse_tags": [],
     "text": "Wurde eine eigene Einheit in diesem Zug angegriffen, hat sie +1 ATK bis zum Ende deines nächsten Zuges.",
     "clauses": [
-      {"title": "Gegenstoß", "body": "Wurde eine eigene Einheit in diesem Zug angegriffen, hat sie +1 ATK bis zum Ende deines nächsten Zuges."}
+      {"title": "", "body": "Wurde eine eigene Einheit in diesem Zug angegriffen, hat sie +1 ATK bis zum Ende deines nächsten Zuges."}
     ],
     "effects": [
       {"code": "GEGENSTOSS", "param": {"when": "attacked-this-turn", "atk": 1, "until": "end-of-next-own-turn"}}
@@ -115,7 +115,7 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "principle": "Zu Beginn deines Zuges",
     "text": "Wähle einen Abschnitt. Einheiten in diesem Abschnitt haben +1 ATK bis zum Ende des Zuges.",
     "clauses": [
-      {"title": "Schwerpunkt", "body": "Wähle einen Abschnitt. Einheiten in diesem Abschnitt haben +1 ATK bis zum Ende des Zuges."}
+      {"title": "", "body": "Wähle einen Abschnitt. Einheiten in diesem Abschnitt haben +1 ATK bis zum Ende des Zuges."}
     ],
     "effects": [
       {"code": "SCHWERPUNKT", "param": {"when": "start-of-turn", "choose": "section", "atk": 1, "until": "end-of-turn"}}
@@ -139,7 +139,7 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "klasse_tags": [],
     "text": "Wird eine eigene Einheit zerstört, darfst du sofort eine Einheit aus der Hand in dieselbe Stellung spielen. Sie kostet 1 AP weniger zum Ausspielen und hat dauerhaft +1 DEF.",
     "clauses": [
-      {"title": "Ablösung", "body": "Wird eine eigene Einheit zerstört, darfst du sofort eine Einheit aus der Hand in dieselbe Stellung spielen. Sie kostet 1 AP weniger zum Ausspielen und hat dauerhaft +1 DEF."}
+      {"title": "", "body": "Wird eine eigene Einheit zerstört, darfst du sofort eine Einheit aus der Hand in dieselbe Stellung spielen. Sie kostet 1 AP weniger zum Ausspielen und hat dauerhaft +1 DEF."}
     ],
     "effects": [
       {"code": "ABLOESUNG", "param": {"when": "own-unit-destroyed", "play": "hand-to-same-stellung", "play_ap": -1, "def": 1, "permanent": true}}
@@ -163,7 +163,7 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "klasse_tags": [],
     "text": "Eigene Angriffe gegen aufgeklärte Einheiten haben +1 ATK.",
     "clauses": [
-      {"title": "Aufklärungsschlag", "body": "Eigene Angriffe gegen aufgeklärte Einheiten haben +1 ATK."}
+      {"title": "", "body": "Eigene Angriffe gegen aufgeklärte Einheiten haben +1 ATK."}
     ],
     "effects": [
       {"code": "AUFKLAERUNGSSCHLAG", "param": {"against": "revealed", "atk": 1}}
