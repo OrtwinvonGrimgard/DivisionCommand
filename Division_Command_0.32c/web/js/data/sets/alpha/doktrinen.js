@@ -246,6 +246,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_scheinschwerpunkt",
+    "set": "set_alpha",
+    "nummer": "A011",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Scheinschwerpunkt",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Am Ende deines Zuges lege +1 DEF auf einen Abschnitt. Am Beginn deines nächsten Zuges darfst du stattdessen +1 ATK auf einen anderen Abschnitt legen.",
+    "clauses": [
+      {"title": "", "body": "Am Ende deines Zuges lege +1 DEF auf einen Abschnitt. Am Beginn deines nächsten Zuges darfst du stattdessen +1 ATK auf einen anderen Abschnitt legen."}
+    ],
+    "effects": [
+      {"code": "SCHEINSCHWERPUNKT", "param": {"end": {"section": "def", "value": 1}, "next_start": {"move_to_other_section": "atk", "value": 1}}}
+    ],
+    "flavor": "",
+    "image": "Scheinschwerpunkt-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
