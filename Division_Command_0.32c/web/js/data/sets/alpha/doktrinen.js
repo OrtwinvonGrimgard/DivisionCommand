@@ -518,6 +518,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_umgehen",
+    "set": "set_alpha",
+    "nummer": "A022",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Umgehen",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Ein eigener Angriff in einem Abschnitt, in dem der Gegner weniger Einheiten hat als du, hat +1 ATK.",
+    "clauses": [
+      {"title": "", "body": "Ein eigener Angriff in einem Abschnitt, in dem der Gegner weniger Einheiten hat als du, hat +1 ATK."}
+    ],
+    "effects": [
+      {"code": "UMGEHEN", "param": {"if": "opponent-has-fewer-units-in-section", "atk": 1}}
+    ],
+    "flavor": "",
+    "image": "Umgehen-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
