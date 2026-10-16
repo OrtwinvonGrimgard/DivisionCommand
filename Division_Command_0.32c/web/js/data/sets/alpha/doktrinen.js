@@ -370,6 +370,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_rasten",
+    "set": "set_alpha",
+    "nummer": "A016",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Rasten",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK.",
+    "clauses": [
+      {"title": "", "body": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK."}
+    ],
+    "effects": [
+      {"code": "RASTEN", "param": {"if": "did-not-attack-last-turn", "atk": 1}}
+    ],
+    "flavor": "",
+    "image": "Rasten-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
