@@ -394,6 +394,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_breites_aufgebot",
+    "set": "set_alpha",
+    "nummer": "A017",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Breites Aufgebot",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Eigene Infanterie kostet 1 AP weniger zum Ausspielen, mindestens 1. Eigene Infanterie hat +1 DEF.",
+    "clauses": [
+      {"title": "", "body": "Eigene Infanterie kostet 1 AP weniger zum Ausspielen, mindestens 1."},
+      {"title": "", "body": "Eigene Infanterie hat +1 DEF."}
+    ],
+    "effects": [
+      {"code": "BREITES_AUFGEBOT", "param": {"who": "infanterie", "play_cost": -1, "min": 1, "def": 1}}
+    ],
+    "flavor": "",
+    "image": "Breites-Aufgebot-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
