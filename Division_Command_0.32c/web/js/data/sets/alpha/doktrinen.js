@@ -345,6 +345,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_etappensicherung",
+    "set": "set_alpha",
+    "nummer": "A015",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Etappensicherung",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "principle": "Zu Beginn deines Zuges",
+    "text": "Wähle einen Abschnitt. Er hat in diesem Zug +1 DEF.",
+    "clauses": [
+      {"title": "", "body": "Wähle einen Abschnitt. Er hat in diesem Zug +1 DEF."}
+    ],
+    "effects": [
+      {"code": "ETAPPENSICHERUNG", "param": {"when": "start-of-turn", "choose": "section", "def": 1, "until": "end-of-turn"}}
+    ],
+    "flavor": "",
+    "image": "Etappensicherung-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
