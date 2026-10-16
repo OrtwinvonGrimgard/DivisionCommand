@@ -444,6 +444,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_feuerwalze",
+    "set": "set_alpha",
+    "nummer": "A019",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Feuerwalze",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Eigene Artillerie hat +1 ATK. Wird ein Abschnitt von eigener Artillerie beschossen, haben eigene Einheiten in diesem Abschnitt +1 ATK.",
+    "clauses": [
+      {"title": "", "body": "Eigene Artillerie hat +1 ATK."},
+      {"title": "", "body": "Wird ein Abschnitt von eigener Artillerie beschossen, haben eigene Einheiten in diesem Abschnitt +1 ATK."}
+    ],
+    "effects": [
+      {"code": "FEUERWALZE", "param": {"artillerie_atk": 1, "on_shell": {"who": "own-units-in-section", "atk": 1}}}
+    ],
+    "flavor": "",
+    "image": "Feuerwalze-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
