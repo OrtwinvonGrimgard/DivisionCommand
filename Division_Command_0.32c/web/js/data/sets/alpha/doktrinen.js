@@ -567,6 +567,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_entsatz",
+    "set": "set_alpha",
+    "nummer": "A024",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Entsatz",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Eigene Einheiten, die in einen Abschnitt rücken, der im letzten Zug angegriffen wurde, haben +1 ATK und +1 DEF.",
+    "clauses": [
+      {"title": "", "body": "Eigene Einheiten, die in einen Abschnitt rücken, der im letzten Zug angegriffen wurde, haben +1 ATK und +1 DEF."}
+    ],
+    "effects": [
+      {"code": "ENTSATZ", "param": {"if": "section-attacked-last-turn", "on_enter": {"atk": 1, "def": 1}}}
+    ],
+    "flavor": "",
+    "image": "Entsatz-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
