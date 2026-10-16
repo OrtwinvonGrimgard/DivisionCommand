@@ -494,6 +494,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_linienkrieg",
+    "set": "set_alpha",
+    "nummer": "A021",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Linienkrieg",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Ein Abschnitt mit mindestens zwei eigenen Einheiten hat +1 DEF.",
+    "clauses": [
+      {"title": "", "body": "Ein Abschnitt mit mindestens zwei eigenen Einheiten hat +1 DEF."}
+    ],
+    "effects": [
+      {"code": "LINIENKRIEG", "param": {"if": "section-has-at-least", "count": 2, "def": 1}}
+    ],
+    "flavor": "",
+    "image": "Linienkrieg-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
