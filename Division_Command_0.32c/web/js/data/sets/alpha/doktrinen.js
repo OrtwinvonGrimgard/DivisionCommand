@@ -591,6 +591,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_verlegung",
+    "set": "set_alpha",
+    "nummer": "A025",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Verlegung",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Einmal pro Zug darfst du eine eigene Einheit um einen Slot nach links oder rechts schieben. Liegt in ihrem Abschnitt Unterstützung, kostet das 1 AP weniger, mindestens 1. Die verlegte Einheit hat in diesem Zug +1 DEF.",
+    "clauses": [
+      {"title": "", "body": "Einmal pro Zug darfst du eine eigene Einheit um einen Slot nach links oder rechts schieben."},
+      {"title": "", "body": "Liegt in ihrem Abschnitt Unterstützung, kostet das 1 AP weniger, mindestens 1. Die verlegte Einheit hat in diesem Zug +1 DEF."}
+    ],
+    "effects": [
+      {"code": "VERLEGUNG", "param": {"once": "per-turn", "shift": 1, "if_support": {"cost": -1, "min": 1}, "def": 1, "until": "end-of-turn"}}
+    ],
+    "flavor": "",
+    "image": "Verlegung-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
