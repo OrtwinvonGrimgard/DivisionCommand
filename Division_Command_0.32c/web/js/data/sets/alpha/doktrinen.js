@@ -419,6 +419,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_sturmangriff",
+    "set": "set_alpha",
+    "nummer": "A018",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Sturmangriff",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "principle": "Zu Beginn deines Zuges",
+    "text": "Wähle eine eigene Infanterie. Sie hat in diesem Zug +2 ATK.",
+    "clauses": [
+      {"title": "", "body": "Wähle eine eigene Infanterie. Sie hat in diesem Zug +2 ATK."}
+    ],
+    "effects": [
+      {"code": "STURMANGRIFF", "param": {"when": "start-of-turn", "choose": "own-infantry", "atk": 2, "until": "end-of-turn"}}
+    ],
+    "flavor": "",
+    "image": "Sturmangriff-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
