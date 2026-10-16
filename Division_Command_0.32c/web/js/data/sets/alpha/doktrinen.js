@@ -542,6 +542,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_marsch_aus_dem_vollen",
+    "set": "set_alpha",
+    "nummer": "A023",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Marsch aus dem Vollen",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Liegt in einem Abschnitt eigene Unterstützung, kosten eigene Einheiten dort 1 AP weniger zum Ausspielen, mindestens 1. Diese Einheiten haben in diesem Zug +1 ATK.",
+    "clauses": [
+      {"title": "", "body": "Liegt in einem Abschnitt eigene Unterstützung, kosten eigene Einheiten dort 1 AP weniger zum Ausspielen, mindestens 1."},
+      {"title": "", "body": "Diese Einheiten haben in diesem Zug +1 ATK."}
+    ],
+    "effects": [
+      {"code": "MARSCH_AUS_DEM_VOLLEN", "param": {"need": "support-in-section", "play_cost": -1, "min": 1, "atk": 1, "until": "end-of-turn"}}
+    ],
+    "flavor": "",
+    "image": "Marsch-aus-dem-Vollen-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
