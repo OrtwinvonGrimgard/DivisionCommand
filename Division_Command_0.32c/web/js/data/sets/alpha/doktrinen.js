@@ -469,6 +469,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_materialersatz",
+    "set": "set_alpha",
+    "nummer": "A020",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Materialersatz",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Eigene Panzer und Geschütze, die die Front verlassen und wieder einrücken, kosten 1 AP weniger zum Ausspielen, mindestens 1. Sie haben in diesem Zug +1 ATK.",
+    "clauses": [
+      {"title": "", "body": "Eigene Panzer und Geschütze, die die Front verlassen und wieder einrücken, kosten 1 AP weniger zum Ausspielen, mindestens 1."},
+      {"title": "", "body": "Sie haben in diesem Zug +1 ATK."}
+    ],
+    "effects": [
+      {"code": "MATERIALERSATZ", "param": {"who": ["panzer", "geschuetze"], "if": "left-and-reentered", "play_cost": -1, "min": 1, "atk": 1, "until": "end-of-turn"}}
+    ],
+    "flavor": "",
+    "image": "Materialersatz-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
