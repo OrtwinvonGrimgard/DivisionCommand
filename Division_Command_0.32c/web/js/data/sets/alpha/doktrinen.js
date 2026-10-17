@@ -640,6 +640,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_zielangriff",
+    "set": "set_alpha",
+    "nummer": "A027",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Zielangriff",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Wähle ein gegnerisches Ziel. Der erste Angriff, der diesem Ziel Schaden zufügt, hat +1 ATK. Die angreifende Einheit hat +1 DEF.",
+    "clauses": [
+      {"title": "", "body": "Wähle ein gegnerisches Ziel. Der erste Angriff, der diesem Ziel Schaden zufügt, hat +1 ATK. Die angreifende Einheit hat +1 DEF."}
+    ],
+    "effects": [
+      {"code": "ZIELANGRIFF", "param": {"choose": "enemy-target", "first_damage": {"atk": 1, "attacker_def": 1}}}
+    ],
+    "flavor": "",
+    "image": "Zielangriff-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
