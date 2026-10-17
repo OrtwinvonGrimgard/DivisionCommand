@@ -616,6 +616,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_ausharren",
+    "set": "set_alpha",
+    "nummer": "A026",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Ausharren",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 ATK und +1 DEF.",
+    "clauses": [
+      {"title": "", "body": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 ATK und +1 DEF."}
+    ],
+    "effects": [
+      {"code": "AUSHARREN", "param": {"if": "no-support-in-section", "atk": 1, "def": 1}}
+    ],
+    "flavor": "",
+    "image": "Ausharren-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
