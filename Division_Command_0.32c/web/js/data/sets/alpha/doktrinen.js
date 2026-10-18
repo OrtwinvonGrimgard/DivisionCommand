@@ -713,6 +713,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_verteilte_stellung",
+    "set": "set_alpha",
+    "nummer": "A030",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Verteilte Stellung",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Steht in einem Abschnitt nur eine eigene Einheit, hat sie +1 DEF. Stehen dort mindestens zwei eigene Einheiten, haben sie +1 ATK.",
+    "clauses": [
+      {"title": "", "body": "Steht in einem Abschnitt nur eine eigene Einheit, hat sie +1 DEF."},
+      {"title": "", "body": "Stehen dort mindestens zwei eigene Einheiten, haben sie +1 ATK."}
+    ],
+    "effects": [
+      {"code": "VERTEILTE_STELLUNG", "param": {"alone": {"def": 1}, "grouped": {"atk": 1}}}
+    ],
+    "flavor": "",
+    "image": "Verteilte-Stellung-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
