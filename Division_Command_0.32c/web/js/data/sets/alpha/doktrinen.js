@@ -664,6 +664,30 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_abschluss",
+    "set": "set_alpha",
+    "nummer": "A028",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Abschluss",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Eine eigene Einheit, die ein gegnerisches Ziel zerstört hat, hat bis zum Ende deines nächsten Zuges +1 ATK.",
+    "clauses": [
+      {"title": "", "body": "Eine eigene Einheit, die ein gegnerisches Ziel zerstört hat, hat bis zum Ende deines nächsten Zuges +1 ATK."}
+    ],
+    "effects": [
+      {"code": "ABSCHLUSS", "param": {"on": "destroyed-enemy", "atk": 1, "until": "end-of-next-own-turn"}}
+    ],
+    "flavor": "",
+    "image": "Abschluss-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
