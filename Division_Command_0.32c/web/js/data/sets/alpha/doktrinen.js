@@ -738,6 +738,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_abnutzung",
+    "set": "set_alpha",
+    "nummer": "A031",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Abnutzung",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Wird in einem Abschnitt eine gegnerische Einheit zerstört, hat dieser Abschnitt bis zum Ende des Zuges +1 ATK. Die übrigen Abschnitte haben bis zum Ende deines nächsten Zuges +1 DEF.",
+    "clauses": [
+      {"title": "", "body": "Wird in einem Abschnitt eine gegnerische Einheit zerstört, hat dieser Abschnitt bis zum Ende des Zuges +1 ATK."},
+      {"title": "", "body": "Die übrigen Abschnitte haben bis zum Ende deines nächsten Zuges +1 DEF."}
+    ],
+    "effects": [
+      {"code": "ABNUTZUNG", "param": {"on_destroy_in_section": {"section_atk": 1, "until": "end-of-turn"}, "other_sections": {"def": 1, "until": "end-of-next-own-turn"}}}
+    ],
+    "flavor": "",
+    "image": "Abnutzung-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
