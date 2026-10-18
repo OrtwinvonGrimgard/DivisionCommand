@@ -688,6 +688,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_lauer",
+    "set": "set_alpha",
+    "nummer": "A029",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Lauer",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "principle": "Am Ende deines Zuges",
+    "text": "Wähle einen Abschnitt. Rückt im nächsten Zug eine gegnerische Einheit dort ein, erleidet sie 1 Schaden und deine Infanterie dort hat +1 ATK gegen sie.",
+    "clauses": [
+      {"title": "", "body": "Wähle einen Abschnitt. Rückt im nächsten Zug eine gegnerische Einheit dort ein, erleidet sie 1 Schaden und deine Infanterie dort hat +1 ATK gegen sie."}
+    ],
+    "effects": [
+      {"code": "LAUER", "param": {"when": "end-of-turn", "choose": "section", "on_enter_next_turn": {"damage": 1, "own_infantry_atk": 1}}}
+    ],
+    "flavor": "",
+    "image": "Lauer-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
