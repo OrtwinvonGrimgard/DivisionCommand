@@ -763,6 +763,31 @@ window.DC_SET_ALPHA["Doktrin"] = [
     "max_copies": 1
   },
   {
+    "id": "dc_dok_gepanzerter_fuss",
+    "set": "set_alpha",
+    "nummer": "A032",
+    "status": "live",
+    "typ": "Doktrin",
+    "klasse": "",
+    "name": "Gepanzerter Fuß",
+    "ap": 0,
+    "atk": null,
+    "def": null,
+    "tags": ["doktrin"],
+    "klasse_tags": [],
+    "text": "Eigene Infanterie, die mit einer Ausrüstung ausgerüstet ist, hat +1 DEF. Dieselbe Infanterie hat +1 ATK.",
+    "clauses": [
+      {"title": "", "body": "Eigene Infanterie, die mit einer Ausrüstung ausgerüstet ist, hat +1 DEF."},
+      {"title": "", "body": "Dieselbe Infanterie hat +1 ATK."}
+    ],
+    "effects": [
+      {"code": "GEPANZERTER_FUSS", "param": {"if": "equipped", "def": 1, "atk": 1}}
+    ],
+    "flavor": "",
+    "image": "Gepanzerter-Fuss-Doktrin.jpg",
+    "max_copies": 1
+  },
+  {
     "id": "dc_dok_blitzkrieg",
     "set": "set_alpha",
     "status": "live",
