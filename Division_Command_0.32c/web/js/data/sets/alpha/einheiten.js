@@ -739,4 +739,24 @@ window.DC_SET_ALPHA["Einheit"] = [
     "max_copies": 4,
     "collector": "A033"
   }
+,
+  {
+    "id": "dc_eh_erstewelle",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Infanterie",
+    "name": "Erste Welle",
+    "ap": 1,
+    "atk": 2,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": ["einheit", "infanterie"],
+    "text": "+1 ATK, wenn in diesem Zug eine eigene Infanterie angegriffen hat.",
+    "effects": [{"code": "ATK_IF_INFANTRY_ATTACKED", "param": {"atk": 1}}],
+    "flavor": "Die erste Reihe. Der erste Schlag.",
+    "image": "Erste Welle.jpg",
+    "max_copies": 4,
+    "collector": "A036"
+  }
 ];

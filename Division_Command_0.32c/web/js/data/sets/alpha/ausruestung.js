@@ -136,4 +136,42 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "image": "Sanitaetstasche.jpg",
     "max_copies": 2
   }
+,
+  {
+    "id": "dc_eq_standarte",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Ausrüstung",
+    "klasse": "",
+    "name": "Standarte",
+    "ap": 1,
+    "atk": null,
+    "def": null,
+    "tags": ["ausruestung", "infanterie"],
+    "text": "Träger +1 DEF. Liegt eine zweite eigene Infanterie im Abschnitt, +1 ATK.",
+    "effects": [{"code": "EQUIP_STANDARD", "param": {"def": 1, "atk_if_second": 1}}],
+    "flavor": "Wo sie steht, steht der Abschnitt.",
+    "image": "Standarte.jpg",
+    "max_copies": 4,
+    "collector": "A037"
+  }
+,
+  {
+    "id": "dc_eq_gebetsfahne",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Ausrüstung",
+    "klasse": "",
+    "name": "Gebetsfahne",
+    "ap": 1,
+    "atk": null,
+    "def": null,
+    "tags": ["ausruestung", "glaube"],
+    "text": "Wird der Träger zerstört, hat eine eigene Infanterie im Abschnitt +1 ATK bis Zugende.",
+    "effects": [{"code": "ON_DESTROY_SECTION_ATK", "param": {"atk": 1}}],
+    "flavor": "Sie fällt. Der Abschnitt hört es.",
+    "image": "Gebetsfahne.jpg",
+    "max_copies": 4,
+    "collector": "A039"
+  }
 ];

@@ -667,4 +667,23 @@ window.DC_SET_ALPHA["Unterstützung"] = [
     "max_copies": 4,
     "collector": "A034"
   }
+,
+  {
+    "id": "dc_su_feldprediger",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Unterstützung",
+    "klasse": "",
+    "name": "Feldprediger",
+    "ap": 2,
+    "atk": null,
+    "def": null,
+    "tags": ["unterstuetzung", "glaube"],
+    "text": "Einmal pro Zug: eine eigene Infanterie in diesem Abschnitt hat +1 ATK.",
+    "effects": [{"code": "ONCE_SECTION_INFANTRY_ATK", "param": {"atk": 1}}],
+    "flavor": "Er spricht. Sie gehen.",
+    "image": "Feldprediger.jpg",
+    "max_copies": 4,
+    "collector": "A038"
+  }
 ];
