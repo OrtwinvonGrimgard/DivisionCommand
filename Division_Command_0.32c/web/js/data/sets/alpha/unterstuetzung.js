@@ -637,4 +637,34 @@ window.DC_SET_ALPHA["Unterstützung"] = [
     "image": "Verwundetennest.jpg",
     "max_copies": 2
   }
+,
+  {
+    "id": "dc_su_sammelpunkt",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Unterstützung",
+    "klasse": "",
+    "name": "Sammelpunkt",
+    "ap": 2,
+    "atk": null,
+    "def": null,
+    "tags": [
+      "unterstuetzung",
+      "logistik"
+    ],
+    "text": "Infanterie in diesem Abschnitt kostet 1 weniger, mindestens 1.",
+    "effects": [
+      {
+        "code": "SECTION_INFANTRY_COST",
+        "param": {
+          "delta": -1,
+          "min": 1
+        }
+      }
+    ],
+    "flavor": "Hier sammeln. Hier zählen. Hier weiter.",
+    "image": "Sammelpunkt.jpg",
+    "max_copies": 4,
+    "collector": "A034"
+  }
 ];

@@ -709,4 +709,34 @@ window.DC_SET_ALPHA["Einheit"] = [
     "image": "Spaehwagen.jpg",
     "max_copies": 2
   }
+,
+  {
+    "id": "dc_eh_freiwilligenzug",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Infanterie",
+    "name": "Freiwilligenzug",
+    "ap": 1,
+    "atk": 2,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "infanterie"
+    ],
+    "text": "Kostet 1 weniger, wenn in diesem Zug schon Infanterie gespielt wurde.",
+    "effects": [
+      {
+        "code": "COST_REDUCE_IF_INFANTRY_PLAYED",
+        "param": {
+          "delta": 1
+        }
+      }
+    ],
+    "flavor": "Sie kamen freiwillig. Das reicht.",
+    "image": "Freiwilligenzug.jpg",
+    "max_copies": 4,
+    "collector": "A033"
+  }
 ];

@@ -849,4 +849,30 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
     "image": "Wille des Volkes.jpg",
     "max_copies": 2
   }
+,
+  {
+    "id": "dc_so_marschbefehl",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Soforteinsatz",
+    "klasse": "",
+    "name": "Marschbefehl",
+    "ap": 1,
+    "atk": null,
+    "def": null,
+    "tags": [
+      "soforteinsatz",
+      "bewegung"
+    ],
+    "text": "Ziehe eine Infanterie. Du darfst sie in diesem Zug spielen.",
+    "effects": [
+      {
+        "code": "DRAW_AND_PLAY_INFANTRY"
+      }
+    ],
+    "flavor": "Der Befehl ist raus. Der Zug marschiert.",
+    "image": "Marschbefehl.jpg",
+    "max_copies": 4,
+    "collector": "A035"
+  }
 ];
