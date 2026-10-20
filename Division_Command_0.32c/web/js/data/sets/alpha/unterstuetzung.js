@@ -662,7 +662,7 @@ window.DC_SET_ALPHA["Unterstützung"] = [
         }
       }
     ],
-    "flavor": "Hier sammeln. Hier zählen. Hier weiter.",
+    "flavor": "Hier wird gezählt, wer noch da ist. Und wer fehlt.",
     "image": "Sammelpunkt.jpg",
     "max_copies": 4,
     "collector": "A034"
@@ -681,9 +681,28 @@ window.DC_SET_ALPHA["Unterstützung"] = [
     "tags": ["unterstuetzung", "glaube"],
     "text": "Einmal pro Zug: eine eigene Infanterie in diesem Abschnitt hat +1 ATK.",
     "effects": [{"code": "ONCE_SECTION_INFANTRY_ATK", "param": {"atk": 1}}],
-    "flavor": "Er spricht. Sie gehen.",
+    "flavor": "Er sagt, es hat Sinn. Sie glauben ihm, weil sie müssen.",
     "image": "Feldprediger.jpg",
     "max_copies": 4,
     "collector": "A038"
+  }
+,
+  {
+    "id": "dc_su_glaubensbanner",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Unterstützung",
+    "klasse": "",
+    "name": "Glaubensbanner",
+    "ap": 3,
+    "atk": null,
+    "def": null,
+    "tags": ["unterstuetzung", "glaube"],
+    "text": "Eigene Infanterie im Abschnitt hat +1 DEF.",
+    "effects": [{"code": "SECTION_INFANTRY_DEF", "param": {"def": 1}}],
+    "flavor": "Es hält niemanden am Leben. Es hält sie nur zusammen.",
+    "image": "Glaubensbanner.jpg",
+    "max_copies": 2,
+    "collector": "A042"
   }
 ];

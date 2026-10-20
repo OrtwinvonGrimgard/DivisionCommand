@@ -150,7 +150,7 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "tags": ["ausruestung", "infanterie"],
     "text": "Träger +1 DEF. Liegt eine zweite eigene Infanterie im Abschnitt, +1 ATK.",
     "effects": [{"code": "EQUIP_STANDARD", "param": {"def": 1, "atk_if_second": 1}}],
-    "flavor": "Wo sie steht, steht der Abschnitt.",
+    "flavor": "Sie steht. Ob der Abschnitt noch steht, sieht man später.",
     "image": "Standarte.jpg",
     "max_copies": 4,
     "collector": "A037"
@@ -169,7 +169,7 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "tags": ["ausruestung", "glaube"],
     "text": "Wird der Träger zerstört, hat eine eigene Infanterie im Abschnitt +1 ATK bis Zugende.",
     "effects": [{"code": "ON_DESTROY_SECTION_ATK", "param": {"atk": 1}}],
-    "flavor": "Sie fällt. Der Abschnitt hört es.",
+    "flavor": "Wenn sie fällt, hört der Abschnitt auf zu fragen, warum.",
     "image": "Gebetsfahne.jpg",
     "max_copies": 4,
     "collector": "A039"

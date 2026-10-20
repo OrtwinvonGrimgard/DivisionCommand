@@ -734,7 +734,7 @@ window.DC_SET_ALPHA["Einheit"] = [
         }
       }
     ],
-    "flavor": "Sie kamen freiwillig. Das reicht.",
+    "flavor": "Freiwillig heißt nicht, dass sie wussten, was sie erwartet.",
     "image": "Freiwilligenzug.jpg",
     "max_copies": 4,
     "collector": "A033"
@@ -754,9 +754,49 @@ window.DC_SET_ALPHA["Einheit"] = [
     "tags": ["einheit", "infanterie"],
     "text": "+1 ATK, wenn in diesem Zug eine eigene Infanterie angegriffen hat.",
     "effects": [{"code": "ATK_IF_INFANTRY_ATTACKED", "param": {"atk": 1}}],
-    "flavor": "Die erste Reihe. Der erste Schlag.",
+    "flavor": "Die erste Reihe stirbt. Die zweite sieht zu.",
     "image": "Erste Welle.jpg",
     "max_copies": 4,
     "collector": "A036"
+  }
+,
+  {
+    "id": "dc_eh_zweitewelle",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Infanterie",
+    "name": "Zweite Welle",
+    "ap": 2,
+    "atk": 3,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": ["einheit", "infanterie"],
+    "text": "+1 ATK, wenn in diesem Zug schon eine eigene Infanterie gespielt wurde.",
+    "effects": [{"code": "ATK_IF_INFANTRY_PLAYED", "param": {"atk": 1}}],
+    "flavor": "Die ersten haben den Weg freigemacht. Wir gehen ihn.",
+    "image": "Zweite Welle.jpg",
+    "max_copies": 2,
+    "collector": "A040"
+  }
+,
+  {
+    "id": "dc_eh_stosskolonne",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Infanterie",
+    "name": "Stoßkolonne",
+    "ap": 3,
+    "atk": 4,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": ["einheit", "infanterie"],
+    "text": "+2 ATK gegen ein Ziel, das in diesem Zug noch nicht angegriffen wurde.",
+    "effects": [{"code": "ATK_IF_TARGET_NOT_ATTACKED", "param": {"atk": 2}}],
+    "flavor": "Wer vorn steht, stirbt zuerst. Wer hinten steht, geht über ihn hinweg.",
+    "image": "Stoßkolonne.jpg",
+    "max_copies": 2,
+    "collector": "A041"
   }
 ];

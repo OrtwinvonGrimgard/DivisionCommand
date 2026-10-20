@@ -870,9 +870,28 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
         "code": "DRAW_AND_PLAY_INFANTRY"
       }
     ],
-    "flavor": "Der Befehl ist raus. Der Zug marschiert.",
+    "flavor": "Der Befehl ist klar. Ob er Sinn hat, ist egal.",
     "image": "Marschbefehl.jpg",
     "max_copies": 4,
     "collector": "A035"
+  }
+,
+  {
+    "id": "dc_so_blutzeuge",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Soforteinsatz",
+    "klasse": "",
+    "name": "Blutzeuge",
+    "ap": 2,
+    "atk": null,
+    "def": null,
+    "tags": ["soforteinsatz", "glaube"],
+    "text": "Opfere eine eigene Infanterie. Eine gegnerische Einheit im Abschnitt erleidet 3 Schaden.",
+    "effects": [{"code": "SACRIFICE_INFANTRY_DAMAGE", "param": {"damage": 3}}],
+    "flavor": "Einer weniger auf unserer Seite. Einer weniger auf ihrer.",
+    "image": "Blutzeuge.jpg",
+    "max_copies": 2,
+    "collector": "A043"
   }
 ];
