@@ -581,8 +581,8 @@
         // Interpret: facing slot + neighboring slots in the enemy front of adjacent sections at same depth.
       }); // nächster Schritt im Ablauf
       // Tighten: facing = same section + same row; left/right = adjacent section, same row.
-      const secBase = { L: 0, C: 3, R: 6 };
-      const attPos = (secBase[attackerLoc.section] || 0) + attackerLoc.row;
+      const secBase = { L: 1, C: 4, R: 7 };
+      const attPos = (secBase[attackerLoc.section] || 1) + attackerLoc.row;
       const tight = [];
       this.frontList(enemy).forEach((t) => {
         if (anyFront) { tight.push(t); return; }
