@@ -2568,6 +2568,7 @@
       const A = aLoc.inst, T = tLoc.inst;
       this._evt('attack', this.defOf(A), this.defOf(A).name + ' — Kampfhandlung.');
       this._fireAttackTriggers(aLoc, tLoc);
+      this._onEnemyAttack(aLoc.player, aLoc.section);
       if (fog) {
         this._evt('shout', this.defOf(T), this.defOf(T).name + ' setzt Erstschlag ein (Nebel).');
         this._damage(A, dmgToA, { tag: 'first-strike' });
@@ -3121,6 +3122,7 @@
       if (loc.zone === 'front' && def.typ === 'Einheit') {
         this._fireLossTriggers(loc.player, loc.section, inst);
         this._fireChainTriggers(loc.player, loc.section, inst);
+        this._onEnemyDestroy(loc.player, loc.section);
       }
     }
 
@@ -3411,6 +3413,79 @@
           }
         });
       });
+    }
+
+
+    // Bedingung prüfen für Trigger.
+    _checkCondition(player, cond, context) {
+      if (!cond) return true;
+      const c = cond;
+      if (c.minUnits != null) {
+        const n = this.frontList(player).length;
+        if (n < Number(c.minUnits)) return false;
+      }
+      if (c.maxUnits != null) {
+        const n = this.frontList(player).length;
+        if (n > Number(c.maxUnits)) return false;
+      }
+      if (c.section && context && context.section && c.section !== context.section) return false;
+      if (c.damaged && context && context.inst && context.inst.def >= context.inst.defMax) return false;
+      if (c.enemyLess && context && context.section) {
+        const opp = this.opponent(player.id);
+        const own = this.frontList(player).filter((l) => l.section === context.section).length;
+        const enemy = this.frontList(opp).filter((l) => l.section === context.section).length;
+        if (enemy >= own) return false;
+      }
+      return true;
+    }
+
+    // Gegen-Trigger: gegnerische Aktion.
+    _fireEnemyTriggers(owner, event, context) {
+      const opp = this.opponent(owner.id);
+      (opp.support || []).filter(Boolean).forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'ON_ENEMY_' + event.toUpperCase()) {
+            if (!this._checkCondition(opp, e.param && e.param.if, context)) return;
+            const param = e.param || {};
+            if (param.draw) this._draw(opp, Number(param.draw) || 1);
+            if (param.ap) opp.ap += Number(param.ap) || 1;
+            if (param.restrict) opp.flags.restrictNext = event;
+            this._log(sd.name + ' reagiert auf gegnerisches ' + event + '.');
+          }
+        });
+      });
+      // Auch auf Einheiten
+      this.frontList(opp).forEach((l) => {
+        const ud = this.defOf(l.inst);
+        (ud.effects || []).forEach((e) => {
+          if (e.code === 'ON_ENEMY_' + event.toUpperCase()) {
+            if (!this._checkCondition(opp, e.param && e.param.if, context)) return;
+            if (e.param && e.param.atk) l.inst.flags.tempAtk = (l.inst.flags.tempAtk || 0) + Number(e.param.atk);
+            this._log(ud.name + ' reagiert auf gegnerisches ' + event + '.');
+          }
+        });
+      });
+    }
+
+    // Gegenreaktion auf Spiel.
+    _onEnemyPlay(player, section, inst) {
+      this._fireEnemyTriggers(player, 'PLAY', { section: section, inst: inst });
+    }
+
+    // Gegenreaktion auf Angriff.
+    _onEnemyAttack(attackerPlayer, section) {
+      this._fireEnemyTriggers(attackerPlayer, 'ATTACK', { section: section });
+    }
+
+    // Gegenreaktion auf Zerstörung.
+    _onEnemyDestroy(owner, section) {
+      this._fireEnemyTriggers(owner, 'DESTROY', { section: section });
+    }
+
+    // Gegenreaktion auf Schaden.
+    _onEnemyDamage(owner, section, inst) {
+      this._fireEnemyTriggers(owner, 'DAMAGE', { section: section, inst: inst });
     }
 
     // 10 Siegpunkte?
