@@ -143,3 +143,37 @@ Wirkt auf die Stellung oder Tokens, nicht direkt auf Kampfwerte.
 `SUPPRESS` ist ein eigener Effekt, kein Trigger. Eine unterdrückte Einheit kann nicht angreifen, bleibt aber im Spiel. Die Unterdrückung baut sich pro Zug ab.
 
 Beispiel: `{ "code": "SUPPRESS", "param": { "turns": 1 } }`
+
+## Operationen
+
+Operationen sind Karten, die liegen bleiben, bis eine Bedingung erfüllt ist. Sie sind kein Einsatz und keine Unterstützung.
+
+### Zone
+
+Jeder Spieler hat `operations: []`. Operationen liegen dort, nicht in der Front oder im Support.
+
+### Bedingungen
+
+| Bedingung | Bedeutung |
+|---|---|
+| `turns` | Nach X Zügen automatisch auflösen |
+| `onDestroy` | Wenn eine Einheit zerstört wird |
+| `manual` | Nur durch eine andere Karte oder Fähigkeit beenden |
+
+### Ablauf
+
+1. `_startOperation(player, card, condition)` — legt die Karte in die Operationszone.
+2. `_tickOperations(player)` — wird pro Zug aufgerufen, prüft Bedingungen, löst auf.
+3. `_resolveOperation(player, op)` — führt den Abschluss-Effekt aus (`OP_COMPLETE`).
+4. `_endOperation(player, opUid)` — beendet manuell.
+
+### Beispiel
+
+```json
+{
+  "code": "OP_COMPLETE",
+  "param": { "draw": 2, "damage": 3 }
+}
+```
+
+Die Operation läuft, bis die Bedingung erfüllt ist. Dann feuert der Effekt und die Karte geht auf den Friedhof.

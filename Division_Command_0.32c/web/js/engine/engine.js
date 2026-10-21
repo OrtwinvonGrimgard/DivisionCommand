@@ -190,6 +190,7 @@
         support: new Array(this.rules.support_slots || 18).fill(null), // Unterstützungszone
         front: emptyFront(),
         nml: emptyFront(),
+        operations: [],
         delayed: [],
       };
     }
@@ -290,6 +291,10 @@
               }
             }
           }
+        }
+        for (let i = 0; i < (p.operations || []).length; i++) {
+          const u = p.operations[i];
+          if (u && u.uid === uid) return { inst: u, player: p, zone: 'operations', index: i };
         }
         for (let i = 0; i < p.support.length; i++) { // Unterstützungszone
           const u = p.support[i]; // Unterstützungszone
@@ -3608,6 +3613,67 @@
       if (!loc || !loc.inst.facedown) return false;
       loc.inst.facedown = false;
       this._log(this.defOf(loc.inst).name + ' aufgedeckt.');
+      return true;
+    }
+
+
+    // Operation starten.
+    _startOperation(player, card, condition) {
+      if (!player.operations) player.operations = [];
+      card.flags = card.flags || {};
+      card.flags.opCondition = condition || {};
+      card.flags.opTurns = 0;
+      player.operations.push(card);
+      this._log(this.defOf(card).name + ' läuft als Operation.');
+    }
+
+    // Operationen prüfen und auflösen.
+    _tickOperations(player) {
+      if (!player.operations) return;
+      const remaining = [];
+      player.operations.forEach((op) => {
+        op.flags.opTurns = (op.flags.opTurns || 0) + 1;
+        const cond = op.flags.opCondition || {};
+        let done = false;
+        if (cond.turns && op.flags.opTurns >= Number(cond.turns)) done = true;
+        if (cond.onDestroy && player.flags.lastDestroyed) done = true;
+        if (cond.manual) done = false;
+        if (done) {
+          this._resolveOperation(player, op);
+          player.grave.push(op);
+          this._log(this.defOf(op).name + ' abgeschlossen.');
+        } else {
+          remaining.push(op);
+        }
+      });
+      player.operations = remaining;
+    }
+
+    // Operation auflösen.
+    _resolveOperation(player, op) {
+      const def = this.defOf(op);
+      (def.effects || []).forEach((e) => {
+        if (e.code === 'OP_COMPLETE') {
+          const param = e.param || {};
+          if (param.draw) this._draw(player, Number(param.draw) || 1);
+          if (param.damage && param.target) {
+            const loc = this.findInst(param.target);
+            if (loc) this._damage(loc.inst, Number(param.damage) || 1);
+          }
+          if (param.ap) player.ap += Number(param.ap) || 1;
+        }
+      });
+    }
+
+    // Operation manuell beenden.
+    _endOperation(player, opUid) {
+      if (!player.operations) return false;
+      const idx = player.operations.findIndex((o) => o.uid === opUid);
+      if (idx < 0) return false;
+      const op = player.operations.splice(idx, 1)[0];
+      this._resolveOperation(player, op);
+      player.grave.push(op);
+      this._log(this.defOf(op).name + ' beendet.');
       return true;
     }
 
