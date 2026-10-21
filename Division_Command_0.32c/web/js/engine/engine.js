@@ -2991,6 +2991,7 @@
       const max = inst.defMax != null ? inst.defMax : (this.defOf(inst).def || 0);
       if (inst.def == null) inst.def = max;
       inst.def = Math.min(max, inst.def + Number(amount || 0));
+      this._fireHealTriggers(inst, amount);
     }
     _damage(inst, amount, meta) {
       if (meta && meta.tag === 'air') {
@@ -3270,6 +3271,146 @@
         return true;
       }
       return false;
+    }
+
+
+    // Heilungs-Trigger.
+    _fireHealTriggers(inst, amount) {
+      const loc = this.findInst(inst.uid);
+      if (!loc || loc.zone !== 'front') return;
+      const def = this.defOf(inst);
+      (def.effects || []).forEach((e) => {
+        if (e.code === 'ON_HEAL') {
+          const param = e.param || {};
+          if (param.draw) this._draw(loc.player, Number(param.draw) || 1);
+          if (param.atk) inst.flags.tempAtk = (inst.flags.tempAtk || 0) + Number(param.atk);
+          this._log(def.name + ' reagiert auf Heilung.');
+        }
+      });
+    }
+
+    // Spiel-Trigger: wenn eine Einheit in den Abschnitt kommt.
+    _firePlayTriggers(player, section, inst) {
+      (player.support || []).filter(Boolean).forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'ON_PLAY') {
+            const param = e.param || {};
+            if (!param.section || param.section === section) {
+              if (param.draw) this._draw(player, Number(param.draw) || 1);
+              if (param.atk) inst.flags.tempAtk = (inst.flags.tempAtk || 0) + Number(param.atk);
+              this._log(sd.name + ' reagiert auf Spiel in ' + section + '.');
+            }
+          }
+        });
+      });
+    }
+
+    // Zug-Start-Trigger.
+    _fireTurnStart(player) {
+      (player.support || []).filter(Boolean).forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'TURN_START') {
+            const param = e.param || {};
+            if (param.draw) this._draw(player, Number(param.draw) || 1);
+            if (param.ap) player.ap += Number(param.ap) || 1;
+            this._log(sd.name + ' zu Zugbeginn.');
+          }
+        });
+      });
+    }
+
+    // Zug-Ende-Trigger.
+    _fireTurnEnd(player) {
+      (player.support || []).filter(Boolean).forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'TURN_END') {
+            const param = e.param || {};
+            if (param.draw) this._draw(player, Number(param.draw) || 1);
+            if (param.heal) {
+              this.frontList(player).forEach((l) => {
+                if (l.inst.def < l.inst.defMax) this._heal(l.inst, Number(param.heal) || 1);
+              });
+            }
+            this._log(sd.name + ' zu Zugende.');
+          }
+        });
+      });
+    }
+
+    // Nachbar-Trigger: wenn im benachbarten Abschnitt etwas passiert.
+    _fireAdjacentTriggers(player, section, event) {
+      const adj = { L: ['C'], C: ['L','R'], R: ['C'] }[section] || [];
+      adj.forEach((sec) => {
+        [0,1,2].forEach((row) => {
+          const u = player.front[sec][row];
+          if (!u) return;
+          const ud = this.defOf(u);
+          (ud.effects || []).forEach((e) => {
+            if (e.code === 'ADJACENT_TRIGGER' && e.param && e.param.event === event) {
+              if (e.param.atk) u.flags.tempAtk = (u.flags.tempAtk || 0) + Number(e.param.atk);
+              this._log(ud.name + ' reagiert auf ' + event + ' in Nachbarabschnitt.');
+            }
+          });
+        });
+      });
+    }
+
+    // Hand-Trigger: basierend auf Handgröße oder Karten.
+    _fireHandTriggers(player) {
+      (player.support || []).filter(Boolean).forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'HAND_TRIGGER') {
+            const param = e.param || {};
+            if (param.minHand && player.hand.length >= Number(param.minHand)) {
+              if (param.draw) this._draw(player, Number(param.draw) || 1);
+              this._log(sd.name + ' reagiert auf Handgröße.');
+            }
+          }
+        });
+      });
+    }
+
+    // Friedhof-Trigger.
+    _fireGraveyardTriggers(player, card) {
+      (player.support || []).filter(Boolean).forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'GRAVEYARD_TRIGGER') {
+            const param = e.param || {};
+            if (param.draw) this._draw(player, Number(param.draw) || 1);
+            if (param.ap) player.ap += Number(param.ap) || 1;
+            this._log(sd.name + ' reagiert auf Friedhof.');
+          }
+        });
+      });
+    }
+
+    // Ressourcen-Trigger: bei AP-Änderung.
+    _fireResourceTriggers(player, delta) {
+      (player.support || []).filter(Boolean).forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'RESOURCE_TRIGGER') {
+            const param = e.param || {};
+            if (param.onGain && delta > 0) {
+              if (param.draw) this._draw(player, Number(param.draw) || 1);
+              this._log(sd.name + ' reagiert auf AP-Gewinn.');
+            }
+            if (param.onLoss && delta < 0) {
+              if (param.atk) {
+                this.frontList(player).forEach((l) => {
+                  l.inst.flags.tempAtk = (l.inst.flags.tempAtk || 0) + Number(param.atk);
+                });
+              }
+              this._log(sd.name + ' reagiert auf AP-Verlust.');
+            }
+          }
+        });
+      });
     }
 
     // 10 Siegpunkte?
