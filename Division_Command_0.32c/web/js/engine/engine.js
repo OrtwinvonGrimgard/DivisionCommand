@@ -3114,6 +3114,66 @@
           this._log(killerSide.name + ': Tiefenverteidigung merkt +1 AP (gegnerische Fronteinheit zerstört).');
         }
       }
+      // --- Reaktive Trigger ---
+      if (loc.zone === 'front' && def.typ === 'Einheit') {
+        this._fireLossTriggers(loc.player, loc.section, inst);
+        this._fireChainTriggers(loc.player, loc.section, inst);
+      }
+    }
+
+
+    // Verlust-Trigger: feuert wenn eine eigene Einheit zerstört wird.
+    _fireLossTriggers(player, section, deadInst) {
+      const supports = (player.support || []).filter(Boolean);
+      supports.forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'ON_ALLY_DESTROY') {
+            const param = e.param || {};
+            if (param.draw) this._draw(player, Number(param.draw) || 1);
+            if (param.ap) player.ap += Number(param.ap) || 1;
+            if (param.freePlay) player.flags.freePlaySection = section;
+            this._log(sd.name + ' reagiert auf Verlust in ' + section + '.');
+          }
+        });
+      });
+      ['L','C','R'].forEach((sec) => {
+        [0,1,2].forEach((row) => {
+          const u = player.front[sec][row];
+          if (!u || u.uid === deadInst.uid) return;
+          const ud = this.defOf(u);
+          (ud.effects || []).forEach((e) => {
+            if (e.code === 'ON_ALLY_DESTROY' && sec === section) {
+              if (e.param && e.param.atk) u.flags.tempAtk = (u.flags.tempAtk || 0) + Number(e.param.atk);
+              this._log(ud.name + ' erhält Bonus durch Verlust.');
+            }
+          });
+        });
+      });
+    }
+
+    // Ketten-Trigger: erlaubt eine Folgeaktion nach Zerstörung.
+    _fireChainTriggers(player, section, deadInst) {
+      const supports = (player.support || []).filter(Boolean);
+      supports.forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'CHAIN_ON_DESTROY') {
+            player.flags.chainPlay = { section: section, discount: (e.param && e.param.discount) || 0, type: (e.param && e.param.type) || 'Einheit' };
+            this._log(sd.name + ' erlaubt eine Folgeaktion in ' + section + '.');
+          }
+        });
+      });
+    }
+
+    // Einschränkung prüfen.
+    _isRestricted(player, section, restriction) {
+      const opp = this.opponent(player.id);
+      const supports = (opp.support || []).filter(Boolean);
+      return supports.some((sup) => {
+        const sd = this.defOf(sup);
+        return (sd.effects || []).some((e) => e.code === 'RESTRICT' && (!e.param || !e.param.section || e.param.section === section) && (!e.param || !e.param.what || e.param.what === restriction));
+      });
     }
 
     // 10 Siegpunkte?
