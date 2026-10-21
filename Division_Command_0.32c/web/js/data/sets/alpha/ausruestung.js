@@ -205,7 +205,7 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "atk": null,
     "def": null,
     "tags": ["ausruestung"],
-    "text": "Ausgerüsteter Träger erhält +1 DEF.",
+    "text": "Der ausgerüstete Träger erhält +1 DEF.",
     "effects": [{"code": "CARRIER_DEF", "param": {"def": 1}}],
     "flavor": "Ein Zeichen. Mehr nicht. Aber es steht.",
     "image": "Feldzeichen.jpg",
