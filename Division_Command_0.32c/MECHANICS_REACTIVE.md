@@ -78,9 +78,11 @@ Neben den allgemeinen Triggern gibt es ereignisbasierte militärische Trigger. S
 | Code | Feuert bei | Typische Reaktion |
 |---|---|---|
 | `ON_AIR` / `ON_DEFEND_AIR` | Luftangriff, Flugzeug, Drohne | Flugabwehr: Schaden reduzieren, ziehen |
-| `ON_MORTAR` / `ON_DEFEND_MORTAR` | Kleine Artillerie: Mörser, Zug- oder Bataillonsebene | Nahunterstützung, kurzer Vorlauf |
-| `ON_ARTILLERY` / `ON_DEFEND_ARTILLERY` | Mittlere Artillerie: Haubitzen, Regiment oder Division | Flächenfeuer, längerer Vorlauf |
-| `ON_BOMB` / `ON_DEFEND_BOMB` | Schwere Artillerie, Bomben, Luftschlag | Hoher Schaden, Verzögerung |
+| `ON_MORTAR` / `ON_DEFEND_MORTAR` | Zugartillerie: Mörser. Reichweite 3 (vor sich und daneben) | Nahunterstützung |
+| `ON_ARTILLERY` / `ON_DEFEND_ARTILLERY` | Artillerie: Haubitzen, Kanonen, Rohre. Reichweite 5 | Flächenfeuer |
+| `ON_HEAVY` / `ON_DEFEND_HEAVY` | Schwere Artillerie. Reichweite 7 | Hoher Schaden, langer Vorlauf |
+
+Bomben, Luftangriffe und deren Abwehr werden nicht automatisch erkannt. Sie laufen über Einsätze oder Kartenfähigkeiten.
 | `ON_MG` / `ON_DEFEND_MG` | Maschinengewehr (leicht/mittel/schwer) | Unterdrückung, ATK-Malus |
 | `ON_GRENADE` | Granate, Nahkampf-Sprengmittel | Schaden, Fläche |
 | `ON_MINE` | Mine, Minenfeld | Schaden beim Betreten, Einschränkung |

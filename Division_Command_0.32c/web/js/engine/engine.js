@@ -558,10 +558,14 @@
       const enemy = this.opponent(ownerId);
       const owner = this.player(ownerId);
       const out = []; // unveränderliche Bindung in diesem Block
-      const anyFront = (defn.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT') || isArtillery(defn);
-      // unveränderliche Bindung in diesem Block
+      const tags = ((defn.klasse || '') + ' ' + (defn.tags || []).join(' ')).toLowerCase();
+      const isMortar = tags.includes('moerser') || tags.includes('mörser') || tags.includes('zugartillerie');
+      const isArty = (tags.includes('artillerie') || tags.includes('haubitze') || tags.includes('rohr')) && !isMortar;
+      const isHeavy = tags.includes('schwerartillerie') || tags.includes('schwer');
+      const range = isHeavy ? 7 : isArty ? 5 : isMortar ? 3 : 3;
+      const anyFront = (defn.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT');
       const hasScout = this.frontList(owner).some((l) => hasTag(this.defOf(l.inst), 'aufklaerung'));
-      const pipe = hasTag(defn, 'rohrartillerie') || hasTag(defn, 'artillerie');
+      const pipe = isArty || isHeavy;
       const canSupport = (defn.effects || []).some((e) => e.code === 'ATTACK_SUPPORT') ||
         (this._hasDoctrine(owner, 'SPOTTER_SUPPORT_ATK') && pipe && hasScout);
       this.frontList(enemy).forEach((t) => { // jedes Element
@@ -3497,8 +3501,7 @@
       let events = [eventType];
       if (tags.includes('moerser') || tags.includes('mörser') || tags.includes('kleinartillerie')) events.push('MORTAR');
       if (tags.includes('artillerie') && !tags.includes('moerser') && !tags.includes('mörser')) events.push('ARTILLERY');
-      if (tags.includes('bombe') || tags.includes('schwerartillerie')) events.push('BOMB');
-      if (tags.includes('flug') || tags.includes('luft')) events.push('AIR');
+      if (tags.includes('schwerartillerie')) events.push('HEAVY');
       if (tags.includes('mg') || tags.includes('maschinengewehr')) events.push('MG');
       if (tags.includes('granate')) events.push('GRENADE');
       if (tags.includes('mine')) events.push('MINE');
