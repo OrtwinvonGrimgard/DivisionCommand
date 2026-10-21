@@ -66,7 +66,7 @@ window.DC_CATALOG = window.DC_CATALOG || {
   "exported": "2026-08-30",
   "rules": {
     "players": 2,
-    "deck_size": 40,
+    "deck_size": 60,
     "hand_start": 5,
     "ap_per_turn": 5,
     "ap_persist_through_opponent": true,

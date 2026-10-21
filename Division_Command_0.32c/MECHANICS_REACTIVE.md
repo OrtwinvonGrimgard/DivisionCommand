@@ -50,3 +50,11 @@ Beim Erstellen oder Überarbeiten einer Karte prüfen:
 4. Bei Unterstützungen: Wirkt der Effekt ohne Kampfwerte?
 
 Wenn 1 zutrifft und 2 oder 3 möglich ist, den Effekt reaktiver formulieren.
+
+## Technische Regeln
+
+Die verbindlichen Spielregeln liegen in:
+- `web/js/engine/engine.js` — Regelmaschine
+- `web/js/data/catalog.js` — Grundwerte (Deckgröße, AP, Front, etc.)
+
+Dieses Dokument beschreibt nur die Design-Ebene für Karten-Effekte. Es ersetzt die Engine nicht.
