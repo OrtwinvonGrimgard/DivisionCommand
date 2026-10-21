@@ -3547,6 +3547,70 @@
       return bronze;
     }
 
+
+    // Maschinengewehr-Staffelung: leicht, mittel, schwer.
+    _mgTier(defn) {
+      const tags = ((defn.klasse || '') + ' ' + (defn.tags || []).join(' ')).toLowerCase();
+      if (tags.includes('schwer') && tags.includes('mg')) return 'HEAVY_MG';
+      if (tags.includes('mittel') && tags.includes('mg')) return 'MED_MG';
+      if (tags.includes('mg') || tags.includes('maschinengewehr')) return 'LIGHT_MG';
+      return null;
+    }
+
+    // Panzerabwehr-Prüfung.
+    _isArmored(defn) {
+      const tags = ((defn.klasse || '') + ' ' + (defn.tags || []).join(' ')).toLowerCase();
+      return tags.includes('gepanzert') || tags.includes('panzer') || tags.includes('kette');
+    }
+
+    // Unterdrückung anwenden.
+    _applySuppress(inst, turns) {
+      if (!inst) return;
+      inst.flags.suppressed = (inst.flags.suppressed || 0) + (turns || 1);
+      inst.flags.noAttack = true;
+      this._log(this.defOf(inst).name + ' ist unterdrückt.');
+    }
+
+    // Unterdrückung prüfen und abbauen.
+    _tickSuppress(player) {
+      this.frontList(player).forEach((l) => {
+        if (l.inst.flags && l.inst.flags.suppressed > 0) {
+          l.inst.flags.suppressed -= 1;
+          if (l.inst.flags.suppressed <= 0) {
+            l.inst.flags.suppressed = 0;
+            l.inst.flags.noAttack = false;
+            this._log(this.defOf(l.inst).name + ' ist nicht mehr unterdrückt.');
+          }
+        }
+      });
+    }
+
+    // Pionier-Effekt: Token entfernen oder stellen.
+    _engineerAction(player, targetUid, action) {
+      const loc = this.findInst(targetUid);
+      if (!loc) return false;
+      if (action === 'clear_mine') {
+        loc.inst.tokens = (loc.inst.tokens || []).filter((t) => t.type !== 'minenfeld');
+        this._log('Minen geräumt.');
+        return true;
+      }
+      if (action === 'place_cover') {
+        loc.inst.flags.cover = (loc.inst.flags.cover || 0) + 1;
+        this._log('Deckung ausgebaut.');
+        return true;
+      }
+      return false;
+    }
+
+    // Aufklärung: verdeckte Einheit aufdecken.
+    _revealUnit(targetUid) {
+      const loc = this.findInst(targetUid);
+      if (!loc || !loc.inst.facedown) return false;
+      loc.inst.facedown = false;
+      this._log(this.defOf(loc.inst).name + ' aufgedeckt.');
+      return true;
+    }
+
     // 10 Siegpunkte?
     _checkVictory() { // nächster Schritt im Ablauf
       this.state.players.forEach((p) => { // jedes Element

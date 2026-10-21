@@ -103,3 +103,43 @@ Trigger können eine `if`-Bedingung haben:
 - `enemyLess` — nur wenn der Gegner im Abschnitt weniger Einheiten hat
 
 Beispiel: `{ "code": "ON_ALLY_DESTROY", "param": { "draw": 1, "if": { "enemyLess": true } } }`
+
+## Weitere militärische Trigger
+
+### Maschinengewehre
+
+| Code | Ebene | Wirkung |
+|---|---|---|
+| `ON_LIGHT_MG` | Gruppe | Unterdrückung, kurze Reichweite |
+| `ON_MED_MG` | Zug | Unterdrückung, mittlere Reichweite |
+| `ON_HEAVY_MG` | Kompanie | Unterdrückung oder Schaden, längere Reichweite |
+
+Die Engine erkennt den Typ über Tags (`mg` + `leicht`/`mittel`/`schwer`).
+
+### Panzerabwehr
+
+| Code | Feuert bei | Wirkung |
+|---|---|---|
+| `ON_AT` / `ON_DEFEND_AT` | Angriff auf oder von gepanzerter Einheit | Schaden erhöhen, Bewegung einschränken |
+
+Gepanzert wird über Tags erkannt (`gepanzert`, `panzer`, `kette`).
+
+### Pioniere
+
+| Code | Wirkung |
+|---|---|
+| `ON_ENGINEER` | Minen räumen, Deckung ausbauen, Tokens entfernen oder legen |
+
+Wirkt auf die Stellung oder Tokens, nicht direkt auf Kampfwerte.
+
+### Aufklärung
+
+| Code | Wirkung |
+|---|---|
+| `ON_RECON` | Verdeckte Einheit aufdecken, Reichweite anderer Einheiten erweitern |
+
+### Unterdrückung
+
+`SUPPRESS` ist ein eigener Effekt, kein Trigger. Eine unterdrückte Einheit kann nicht angreifen, bleibt aber im Spiel. Die Unterdrückung baut sich pro Zug ab.
+
+Beispiel: `{ "code": "SUPPRESS", "param": { "turns": 1 } }`
