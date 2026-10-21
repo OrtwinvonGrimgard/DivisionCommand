@@ -581,15 +581,15 @@
         // Interpret: facing slot + neighboring slots in the enemy front of adjacent sections at same depth.
       }); // nächster Schritt im Ablauf
       // Tighten: facing = same section + same row; left/right = adjacent section, same row.
-      const tight = []; // unveränderliche Bindung in diesem Block
-      this.frontList(enemy).forEach((t) => { // jedes Element
-        if (anyFront) tight.push(t); // Zweig nur bei zutreffender Bedingung
-        else if (t.section === attackerLoc.section && t.row === attackerLoc.row) tight.push(t); // Zweig nur bei zutreffender Bedingung
-        else if (adjacentSections(attackerLoc.section).includes(t.section) && t.row === attackerLoc.row) tight.push(t);
-        // Zweig nur bei zutreffender Bedingung
-        else if (t.section === attackerLoc.section && Math.abs(t.row - attackerLoc.row) === 1) tight.push(t);
-        // Zweig nur bei zutreffender Bedingung
-      }); // nächster Schritt im Ablauf
+      const secIdx = { L: 0, C: 1, R: 2 };
+      const tight = [];
+      this.frontList(enemy).forEach((t) => {
+        if (anyFront) { tight.push(t); return; }
+        const dSec = Math.abs((secIdx[t.section] || 0) - (secIdx[attackerLoc.section] || 0));
+        const dRow = Math.abs(t.row - attackerLoc.row);
+        const dist = dSec + dRow;
+        if (dist <= Math.floor(range / 2)) tight.push(t);
+      });
       if (canSupport) {
         (enemy.support || []).forEach((s, i) => {
           if (s) tight.push({ inst: s, player: enemy, zone: 'support', index: i, section: 'C', row: 0 });
