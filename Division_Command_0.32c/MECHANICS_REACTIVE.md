@@ -58,3 +58,42 @@ Die verbindlichen Spielregeln liegen in:
 - `web/js/data/catalog.js` — Grundwerte (Deckgröße, AP, Front, etc.)
 
 Dieses Dokument beschreibt nur die Design-Ebene für Karten-Effekte. Es ersetzt die Engine nicht.
+
+## Stufen-System (Bronze / Silber / Gold)
+
+Die Seltenheit erklärt sich mechanisch durch die Stärke und Komplexität des Effekts.
+
+| Stufe | Mechanik | Beispiel |
+|---|---|---|
+| **Bronze** | Einfacher Trigger, kleine Wirkung, keine Bedingung | ON_ALLY_DESTROY: ziehe 1 |
+| **Silber** | Trigger mit Bedingung oder Gegenreaktion | ON_ALLY_DESTROY mit if: { enemyLess: true }: ziehe 1, +1 ATK |
+| **Gold** | Kombination zweier Trigger oder starke Einschränkung | ON_ENEMY_DESTROY + RESTRICT: Gegner kann im Abschnitt keine Fähigkeiten nutzen |
+
+Eine Gold-Karte tut nicht nur mehr. Sie tut etwas, das Bronze und Silber nicht können, oder sie kombiniert zwei Dinge.
+
+## Militärische Trigger
+
+Neben den allgemeinen Triggern gibt es ereignisbasierte militärische Trigger. Sie feuern, wenn ein Angriff oder eine Einheit einen bestimmten Typ hat.
+
+| Code | Feuert bei | Typische Reaktion |
+|---|---|---|
+| `ON_AIR` / `ON_DEFEND_AIR` | Luftangriff, Flugzeug, Drohne | Flugabwehr: Schaden reduzieren, ziehen |
+| `ON_BOMB` / `ON_DEFEND_BOMB` | Artillerie, Bombe, Luftschlag | Deckung, Schaden reduzieren |
+| `ON_MG` / `ON_DEFEND_MG` | Maschinengewehr (leicht/mittel/schwer) | Unterdrückung, ATK-Malus |
+| `ON_GRENADE` | Granate, Nahkampf-Sprengmittel | Schaden, Fläche |
+| `ON_MINE` | Mine, Minenfeld | Schaden beim Betreten, Einschränkung |
+| `ON_SNIPER` | Scharfschütze, gezielter Schuss | Einzelziel, hohe Priorität |
+| `ON_ARTILLERY` | Artilleriefeuer | Flächenwirkung, Verzögerung |
+
+Die Engine erkennt den Typ über Tags auf der angreifenden Einheit (`artillerie`, `flug`, `mg`, `granate`, `mine`) und feuert die passenden Codes. `ON_DEFEND_*` reagiert auf der Verteidigerseite, `ON_*` auf der Angreiferseite.
+
+## Bedingungen
+
+Trigger können eine `if`-Bedingung haben:
+
+- `minUnits` / `maxUnits` — Anzahl eigener Einheiten
+- `section` — nur in diesem Abschnitt
+- `damaged` — nur wenn die Einheit beschädigt ist
+- `enemyLess` — nur wenn der Gegner im Abschnitt weniger Einheiten hat
+
+Beispiel: `{ "code": "ON_ALLY_DESTROY", "param": { "draw": 1, "if": { "enemyLess": true } } }`

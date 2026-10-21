@@ -3488,6 +3488,60 @@
       this._fireEnemyTriggers(owner, 'DAMAGE', { section: section, inst: inst });
     }
 
+
+    // Militärisches Ereignis feuern (Flugabwehr, Granate, MG, Bombe, etc.).
+    _fireMilitaryEvent(attacker, eventType, targetLoc) {
+      const def = this.defOf(attacker);
+      const tags = ((def.klasse || '') + ' ' + (def.tags || []).join(' ')).toLowerCase();
+      // Automatische Erkennung
+      let events = [eventType];
+      if (tags.includes('artillerie') || tags.includes('bombe')) events.push('BOMB');
+      if (tags.includes('flug') || tags.includes('luft')) events.push('AIR');
+      if (tags.includes('mg') || tags.includes('maschinengewehr')) events.push('MG');
+      if (tags.includes('granate')) events.push('GRENADE');
+      if (tags.includes('mine')) events.push('MINE');
+      events = [...new Set(events)];
+
+      events.forEach((ev) => {
+        // Eigene Reaktionen
+        this._reactToMilitary(attacker.owner != null ? this.player(attacker.owner) : null, ev, targetLoc, false);
+        // Gegnerische Reaktionen
+        if (targetLoc && targetLoc.player) {
+          this._reactToMilitary(targetLoc.player, ev, targetLoc, true);
+        }
+      });
+    }
+
+    // Reaktion auf militärisches Ereignis.
+    _reactToMilitary(player, eventType, loc, isDefender) {
+      if (!player) return;
+      const prefix = isDefender ? 'ON_DEFEND_' : 'ON_';
+      (player.support || []).filter(Boolean).forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === prefix + eventType || e.code === 'ON_' + eventType) {
+            if (!this._checkCondition(player, e.param && e.param.if, { section: loc && loc.section, inst: loc && loc.inst })) return;
+            const param = e.param || {};
+            if (param.reduce && loc && loc.inst) {
+              // Schaden reduzieren — wird vom Aufrufer genutzt
+              loc.inst.flags.dmgReduce = (loc.inst.flags.dmgReduce || 0) + Number(param.reduce);
+            }
+            if (param.draw) this._draw(player, Number(param.draw) || 1);
+            if (param.atk && loc && loc.inst) loc.inst.flags.tempAtk = (loc.inst.flags.tempAtk || 0) + Number(param.atk);
+            this._log(sd.name + ' reagiert auf ' + eventType + '.');
+          }
+        });
+      });
+    }
+
+    // Stufen-Helfer: gibt den Effekt-Parameter je nach Seltenheit zurück.
+    _tierParam(rarity, bronze, silver, gold) {
+      const r = (rarity || '').toLowerCase();
+      if (r === 'gold' || r === 'gold') return gold;
+      if (r === 'silver' || r === 'silber') return silver;
+      return bronze;
+    }
+
     // 10 Siegpunkte?
     _checkVictory() { // nächster Schritt im Ablauf
       this.state.players.forEach((p) => { // jedes Element
