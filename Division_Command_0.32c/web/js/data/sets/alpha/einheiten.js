@@ -799,4 +799,24 @@ window.DC_SET_ALPHA["Einheit"] = [
     "max_copies": 2,
     "collector": "A041"
   }
+,
+  {
+    "id": "dc_eh_nachruecker",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Infanterie",
+    "name": "Nachrücker",
+    "ap": 1,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": ["einheit", "infanterie"],
+    "text": "Kann für 0 AP gespielt werden, wenn in diesem Zug eine eigene Infanterie zerstört wurde.",
+    "effects": [{"code": "PLAY_FREE_IF_INFANTRY_DESTROYED"}],
+    "flavor": "Jemand ist ausgefallen. Jemand füllt die Lücke.",
+    "image": "Nachrücker.jpg",
+    "max_copies": 4,
+    "collector": "A045"
+  }
 ];

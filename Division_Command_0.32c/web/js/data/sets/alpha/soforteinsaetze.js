@@ -894,4 +894,23 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
     "max_copies": 2,
     "collector": "A043"
   }
+,
+  {
+    "id": "dc_so_sammelruf",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Soforteinsatz",
+    "klasse": "",
+    "name": "Sammelruf",
+    "ap": 1,
+    "atk": null,
+    "def": null,
+    "tags": ["soforteinsatz"],
+    "text": "Ziehe eine Infanterie aus dem Ablagestapel auf die Hand.",
+    "effects": [{"code": "RETURN_INFANTRY_FROM_DISCARD"}],
+    "flavor": "Wer noch laufen kann, kommt.",
+    "image": "Sammelruf.jpg",
+    "max_copies": 4,
+    "collector": "A046"
+  }
 ];

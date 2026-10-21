@@ -174,4 +174,42 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "max_copies": 4,
     "collector": "A039"
   }
+,
+  {
+    "id": "dc_au_sturmleitern",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Ausrüstung",
+    "klasse": "",
+    "name": "Sturmleitern",
+    "ap": 2,
+    "atk": null,
+    "def": null,
+    "tags": ["ausruestung"],
+    "text": "Träger +1 ATK beim ersten Angriff im Zug.",
+    "effects": [{"code": "CARRIER_FIRST_ATTACK_ATK", "param": {"atk": 1}}],
+    "flavor": "Die Leiter kommt mit. Ob sie gebraucht wird, sieht man oben.",
+    "image": "Sturmleitern.jpg",
+    "max_copies": 2,
+    "collector": "A044"
+  }
+,
+  {
+    "id": "dc_au_feldzeichen",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Ausrüstung",
+    "klasse": "",
+    "name": "Feldzeichen",
+    "ap": 1,
+    "atk": null,
+    "def": null,
+    "tags": ["ausruestung"],
+    "text": "Ausgerüsteter Träger erhält +1 DEF.",
+    "effects": [{"code": "CARRIER_DEF", "param": {"def": 1}}],
+    "flavor": "Ein Zeichen. Mehr nicht. Aber es steht.",
+    "image": "Feldzeichen.jpg",
+    "max_copies": 4,
+    "collector": "A047"
+  }
 ];
