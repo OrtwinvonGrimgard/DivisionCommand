@@ -3495,7 +3495,9 @@
       const tags = ((def.klasse || '') + ' ' + (def.tags || []).join(' ')).toLowerCase();
       // Automatische Erkennung
       let events = [eventType];
-      if (tags.includes('artillerie') || tags.includes('bombe')) events.push('BOMB');
+      if (tags.includes('moerser') || tags.includes('mörser') || tags.includes('kleinartillerie')) events.push('MORTAR');
+      if (tags.includes('artillerie') && !tags.includes('moerser') && !tags.includes('mörser')) events.push('ARTILLERY');
+      if (tags.includes('bombe') || tags.includes('schwerartillerie')) events.push('BOMB');
       if (tags.includes('flug') || tags.includes('luft')) events.push('AIR');
       if (tags.includes('mg') || tags.includes('maschinengewehr')) events.push('MG');
       if (tags.includes('granate')) events.push('GRENADE');
