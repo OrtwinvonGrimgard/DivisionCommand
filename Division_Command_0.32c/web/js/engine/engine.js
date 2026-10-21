@@ -2567,6 +2567,7 @@
     _applyCombatHits(aLoc, tLoc, dmgToT, dmgToA, fog) {
       const A = aLoc.inst, T = tLoc.inst;
       this._evt('attack', this.defOf(A), this.defOf(A).name + ' — Kampfhandlung.');
+      this._fireAttackTriggers(aLoc, tLoc);
       if (fog) {
         this._evt('shout', this.defOf(T), this.defOf(T).name + ' setzt Erstschlag ein (Nebel).');
         this._damage(A, dmgToA, { tag: 'first-strike' });
@@ -3045,6 +3046,7 @@
       inst.def -= amount;
       if (inst.def < 0) inst.def = 0;
       this._log(def.name + ' nimmt ' + amount + ' Schaden → V ' + inst.def + '/' + inst.defMax + '.'); // Zeile ins Protokoll
+      if (inst.def > 0) this._fireDamageTriggers(inst, amount);
     }
 
     // Auf den Friedhof, Stellung räumen.
@@ -3174,6 +3176,100 @@
         const sd = this.defOf(sup);
         return (sd.effects || []).some((e) => e.code === 'RESTRICT' && (!e.param || !e.param.section || e.param.section === section) && (!e.param || !e.param.what || e.param.what === restriction));
       });
+    }
+
+
+    // Schaden-Trigger: feuert wenn eine Einheit beschädigt aber nicht zerstört wird.
+    _fireDamageTriggers(inst, amount) {
+      const loc = this.findInst(inst.uid);
+      if (!loc || loc.zone !== 'front') return;
+      const def = this.defOf(inst);
+      (def.effects || []).forEach((e) => {
+        if (e.code === 'ON_DAMAGE') {
+          const param = e.param || {};
+          if (param.atk) inst.flags.tempAtk = (inst.flags.tempAtk || 0) + Number(param.atk);
+          if (param.draw) this._draw(loc.player, Number(param.draw) || 1);
+          this._log(def.name + ' reagiert auf Schaden.');
+        }
+      });
+      // Auch Unterstützungen im Abschnitt
+      (loc.player.support || []).filter(Boolean).forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'ON_DAMAGE' && e.param && e.param.section === loc.section) {
+            if (e.param.heal) this._heal(inst, Number(e.param.heal) || 1);
+            this._log(sd.name + ' reagiert auf Schaden in ' + loc.section + '.');
+          }
+        });
+      });
+    }
+
+    // Angriffs-Trigger: feuert wenn eine Einheit angreift.
+    _fireAttackTriggers(aLoc, tLoc) {
+      const A = aLoc.inst;
+      const def = this.defOf(A);
+      (def.effects || []).forEach((e) => {
+        if (e.code === 'ON_ATTACK') {
+          const param = e.param || {};
+          if (param.atk) A.flags.tempAtk = (A.flags.tempAtk || 0) + Number(param.atk);
+          if (param.draw) this._draw(aLoc.player, Number(param.draw) || 1);
+          this._log(def.name + ' reagiert auf Angriff.');
+        }
+      });
+    }
+
+    // Dauerhafte Kostenänderung durch Unterstützung.
+    _costModOngoing(player, cardType) {
+      let mod = 0;
+      (player.support || []).filter(Boolean).forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'COST_MOD_ONGOING' && e.param && e.param.type === cardType) {
+            mod += Number(e.param.delta || 0);
+          }
+        });
+      });
+      // Auch gegnerische Einschränkungen
+      const opp = this.opponent(player.id);
+      (opp.support || []).filter(Boolean).forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'COST_MOD_ONGOING' && e.param && e.param.type === cardType && e.param.enemy) {
+            mod += Number(e.param.delta || 0);
+          }
+        });
+      });
+      return mod;
+    }
+
+    // Abschnitts-Aura: Bonus nur im eigenen Abschnitt.
+    _sectionAura(player, section, stat) {
+      let bonus = 0;
+      (player.support || []).filter(Boolean).forEach((sup) => {
+        const sd = this.defOf(sup);
+        (sd.effects || []).forEach((e) => {
+          if (e.code === 'SECTION_AURA' && e.param && e.param.stat === stat) {
+            if (!e.param.section || e.param.section === section) bonus += Number(e.param.value || 1);
+          }
+        });
+      });
+      return bonus;
+    }
+
+    // Opfer-Spiel: Einheit opfern um eine andere zu spielen.
+    _sacrificePlay(player, sacrificeUid, playUid) {
+      const sac = this.findInst(sacrificeUid);
+      const card = player.hand.find((c) => c.uid === playUid);
+      if (!sac || !card || sac.zone !== 'front') return false;
+      this._destroy(sac);
+      const slot = this.emptySlots(player)[0];
+      if (slot) {
+        player.hand = player.hand.filter((c) => c.uid !== playUid);
+        player.front[slot.section][slot.row] = card;
+        this._log(this.defOf(card).name + ' durch Opfer gespielt.');
+        return true;
+      }
+      return false;
     }
 
     // 10 Siegpunkte?
