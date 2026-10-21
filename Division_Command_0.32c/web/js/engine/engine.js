@@ -581,14 +581,14 @@
         // Interpret: facing slot + neighboring slots in the enemy front of adjacent sections at same depth.
       }); // nächster Schritt im Ablauf
       // Tighten: facing = same section + same row; left/right = adjacent section, same row.
-      const secIdx = { L: 0, C: 1, R: 2 };
+      const secBase = { L: 0, C: 3, R: 6 };
+      const attPos = (secBase[attackerLoc.section] || 0) + attackerLoc.row;
       const tight = [];
       this.frontList(enemy).forEach((t) => {
         if (anyFront) { tight.push(t); return; }
-        const dSec = Math.abs((secIdx[t.section] || 0) - (secIdx[attackerLoc.section] || 0));
-        const dRow = Math.abs(t.row - attackerLoc.row);
-        const dist = dSec + dRow;
-        if (dist <= Math.floor(range / 2)) tight.push(t);
+        const tPos = (secBase[t.section] || 0) + t.row;
+        const dist = Math.abs(tPos - attPos);
+        if (dist <= Math.floor((range - 1) / 2)) tight.push(t);
       });
       if (canSupport) {
         (enemy.support || []).forEach((s, i) => {

@@ -82,7 +82,7 @@ Neben den allgemeinen Triggern gibt es ereignisbasierte militärische Trigger. S
 | `ON_ARTILLERY` / `ON_DEFEND_ARTILLERY` | Artillerie: Haubitzen, Kanonen, Rohre. Reichweite 5 | Flächenfeuer |
 | `ON_HEAVY` / `ON_DEFEND_HEAVY` | Schwere Artillerie. Reichweite 7 | Hoher Schaden, langer Vorlauf |
 
-Die Front hat 9 Felder (3 Sektionen × 3 Reihen). Die Reichweite wird als Distanz über Sektion und Reihe gemessen. Reichweite 3 erreicht die gegenüberliegende Stellung und die direkt benachbarten. Reichweite 5 und 7 reichen weiter, aber nicht über die ganze Front.
+Die Front besteht aus 9 nebeneinanderliegenden Stellungen, von links nach rechts, aufgeteilt in 3 Abschnitte (je 3 Stellungen). Es gibt keine Tiefe in der Frontlinie. Die Reichweite wird als Abstand entlang dieser Linie gemessen. Reichweite 3 erreicht die gegenüberliegende Stellung und die direkt daneben. Reichweite 5 und 7 reichen weiter entlang der Linie, aber nicht über alle 9 Stellungen.
 
 Bomben, Luftangriffe und deren Abwehr werden nicht automatisch erkannt. Sie laufen über Einsätze oder Kartenfähigkeiten.
 | `ON_MG` / `ON_DEFEND_MG` | Maschinengewehr (leicht/mittel/schwer) | Unterdrückung, ATK-Malus |
