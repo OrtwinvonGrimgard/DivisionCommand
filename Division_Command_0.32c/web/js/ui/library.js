@@ -41,6 +41,7 @@
     if (filterTab === 'Soforteinsatz') return c.typ === 'Soforteinsatz';
     if (filterTab === 'Ausrüstung') return c.typ === 'Ausrüstung';
     if (filterTab === 'Doktrinen') return c.typ === 'Doktrin';
+    if (filterTab === 'Operationen') return c.typ === 'Operation';
     return true;
   }
   function matchesQuery(c) {
@@ -60,7 +61,8 @@
       { title: 'Unterstützung', list: all.filter(function (c) { return c.typ === 'Unterstützung'; }) },
       { title: 'Soforteinsatz', list: all.filter(function (c) { return c.typ === 'Soforteinsatz'; }) },
       { title: 'Ausrüstung', list: all.filter(function (c) { return c.typ === 'Ausrüstung'; }) },
-      { title: 'Doktrinen', list: all.filter(function (c) { return c.typ === 'Doktrin'; }) }
+      { title: 'Doktrinen', list: all.filter(function (c) { return c.typ === 'Doktrin'; }) },
+      { title: 'Operationen', list: all.filter(function (c) { return c.typ === 'Operation'; }) }
     ];
     groups.forEach(function (g) { g.list.sort(byName); });
     return groups.filter(function (g) { return g.list.length; });
@@ -113,6 +115,7 @@
     scharfschuetze: { name: 'Scharfschütze', text: 'Gezielter Einzelbeschuss. Oft gegen offene oder wichtige Ziele.' },
     diplomatie: { name: 'Diplomatie', text: 'Politischer Druck, Frieden oder Gesellschaft — nicht der reine Feuerkampf.' },
     doktrin: { name: 'Doktrin', text: 'Strategische Ausrichtung des Decks. Liegt offen, bestimmt Dauereffekte.' },
+    operation: { name: 'Operation', text: 'Bleibt liegen, bis eine Bedingung erfüllt ist. Dann wird der Effekt ausgelöst.' },
     soforteinsatz: { name: 'Soforteinsatz', text: 'Einmaliger Einsatz, meist 0 AP. Danach auf den Friedhof.' },
     unterstuetzung: { name: 'Unterstützung', text: 'Dauerhafte Karte im Support. Auren, Erzeugung, Logistik.' },
     ausruestung: { name: 'Ausrüstung', text: 'Wird an eine Einheit angelegt und verändert deren Werte oder Optionen.' },
