@@ -23,6 +23,8 @@
     if (!file) return '';
     var key = String(file);
     if (ALIAS[key]) return ALIAS[key];
+    // Doktrin-Karten behalten ihre .jpg-Dateien (keine automatische .png-Umwandlung)
+    if (/doktrin/i.test(key)) return key;
     return key.replace(/\.jpe?g$/i, '.png');
   }
   function folderSrc(name) {
@@ -46,9 +48,8 @@
     var src = el.getAttribute('src') || '';
     var next = '';
     if (raw) next = resolveName(raw);
-    else if (/doktrin/i.test(src)) next = 'thumbs/rueckseite-rot.png';
-    else if (/rueckseite/i.test(src)) next = 'thumbs/rueckseite-schwarz.png';
-    else if (/\.jpe?g(\?|$)/i.test(src)) {
+    else if (/rueckseite|backside/i.test(src)) next = /doktrin|rot/i.test(src) ? 'thumbs/rueckseite-rot.png' : 'thumbs/rueckseite-schwarz.png';
+    else if (/\.jpe?g(\?|$)/i.test(src) && !/doktrin/i.test(src)) {
       try {
         var base = decodeURIComponent((src.split('?')[0].split('/').pop()) || '');
         next = resolveName(base);
