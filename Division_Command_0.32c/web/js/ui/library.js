@@ -41,7 +41,6 @@
     if (filterTab === 'Soforteinsatz') return c.typ === 'Soforteinsatz';
     if (filterTab === 'Ausrüstung') return c.typ === 'Ausrüstung';
     if (filterTab === 'Doktrinen') return c.typ === 'Doktrin';
-    if (filterTab === 'Operationen') return c.typ === 'Operation';
     return true;
   }
   function matchesQuery(c) {
@@ -61,8 +60,7 @@
       { title: 'Unterstützung', list: all.filter(function (c) { return c.typ === 'Unterstützung'; }) },
       { title: 'Soforteinsatz', list: all.filter(function (c) { return c.typ === 'Soforteinsatz'; }) },
       { title: 'Ausrüstung', list: all.filter(function (c) { return c.typ === 'Ausrüstung'; }) },
-      { title: 'Doktrinen', list: all.filter(function (c) { return c.typ === 'Doktrin'; }) },
-      { title: 'Operationen', list: all.filter(function (c) { return c.typ === 'Operation'; }) }
+      { title: 'Doktrinen', list: all.filter(function (c) { return c.typ === 'Doktrin'; }) }
     ];
     groups.forEach(function (g) { g.list.sort(byName); });
     return groups.filter(function (g) { return g.list.length; });
