@@ -29,11 +29,13 @@
     if (!file) return '';
     var key = String(file);
     if (ALIAS[key]) return ALIAS[key];
+    // Unterordner (alpha/) und Doktrin-JPGs behalten ihre Endung
+    if (/doktrin/i.test(key) || key.indexOf('/') >= 0) return key;
     return key.replace(/\.jpe?g$/i, '.png');
   }
 
   function folderSrc(name) {
-    return 'assets/cards/' + encodeURIComponent(name);
+    return 'assets/cards/' + String(name).split('/').map(encodeURIComponent).join('/');
   }
 
   function cardSrc(file) {

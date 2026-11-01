@@ -735,7 +735,7 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Freiwillig heißt nicht, dass sie wussten, was sie erwartet.",
-    "image": "Freiwilligenzug.jpg",
+    "image": "alpha/A033.jpg",
     "max_copies": 4,
     "collector": "A033"
   }
@@ -755,7 +755,7 @@ window.DC_SET_ALPHA["Einheit"] = [
     "text": "+1 ATK, wenn in diesem Zug eine eigene Infanterie angegriffen hat.",
     "effects": [{"code": "ATK_IF_INFANTRY_ATTACKED", "param": {"atk": 1}}],
     "flavor": "Die erste Reihe stirbt. Die zweite sieht zu.",
-    "image": "Erste Welle.jpg",
+    "image": "alpha/A036.jpg",
     "max_copies": 4,
     "collector": "A036"
   }
@@ -775,7 +775,7 @@ window.DC_SET_ALPHA["Einheit"] = [
     "text": "+1 ATK, wenn in diesem Zug schon eine eigene Infanterie gespielt wurde.",
     "effects": [{"code": "ATK_IF_INFANTRY_PLAYED", "param": {"atk": 1}}],
     "flavor": "Die ersten haben den Weg freigemacht. Wir gehen ihn.",
-    "image": "Zweite Welle.jpg",
+    "image": "alpha/A040.jpg",
     "max_copies": 2,
     "collector": "A040"
   }
@@ -795,7 +795,7 @@ window.DC_SET_ALPHA["Einheit"] = [
     "text": "+2 ATK gegen ein Ziel, das in diesem Zug noch nicht angegriffen wurde.",
     "effects": [{"code": "ATK_IF_TARGET_NOT_ATTACKED", "param": {"atk": 2}}],
     "flavor": "Wer vorn steht, stirbt zuerst. Wer hinten steht, geht über ihn hinweg.",
-    "image": "Stoßkolonne.jpg",
+    "image": "alpha/A041.jpg",
     "max_copies": 2,
     "collector": "A041"
   }
@@ -815,7 +815,7 @@ window.DC_SET_ALPHA["Einheit"] = [
     "text": "Kann für 0 AP gespielt werden, wenn in diesem Zug eine eigene Infanterie zerstört wurde.",
     "effects": [{"code": "PLAY_FREE_IF_INFANTRY_DESTROYED"}],
     "flavor": "Jemand ist ausgefallen. Jemand füllt die Lücke.",
-    "image": "Nachrücker.jpg",
+    "image": "alpha/A045.jpg",
     "max_copies": 4,
     "collector": "A045"
   }

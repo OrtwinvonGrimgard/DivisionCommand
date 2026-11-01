@@ -871,7 +871,7 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Der Befehl ist klar. Ob er Sinn hat, ist egal.",
-    "image": "Marschbefehl.jpg",
+    "image": "alpha/A035.jpg",
     "max_copies": 4,
     "collector": "A035"
   }
@@ -890,7 +890,7 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
     "text": "Opfere eine eigene Infanterie. Eine gegnerische Einheit im Abschnitt erleidet 3 Schaden.",
     "effects": [{"code": "SACRIFICE_INFANTRY_DAMAGE", "param": {"damage": 3}}],
     "flavor": "Einer weniger auf unserer Seite. Einer weniger auf ihrer.",
-    "image": "Blutzeuge.jpg",
+    "image": "alpha/A043.jpg",
     "max_copies": 2,
     "collector": "A043"
   }
@@ -909,7 +909,7 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
     "text": "Ziehe eine Infanterie aus dem Ablagestapel auf die Hand.",
     "effects": [{"code": "RETURN_INFANTRY_FROM_DISCARD"}],
     "flavor": "Wer noch laufen kann, kommt.",
-    "image": "Sammelruf.jpg",
+    "image": "alpha/A046.jpg",
     "max_copies": 4,
     "collector": "A046"
   }

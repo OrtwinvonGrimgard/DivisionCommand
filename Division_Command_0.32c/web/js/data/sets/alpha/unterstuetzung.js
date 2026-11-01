@@ -663,7 +663,7 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Hier wird gezählt, wer noch da ist. Und wer fehlt.",
-    "image": "Sammelpunkt.jpg",
+    "image": "alpha/A034.jpg",
     "max_copies": 4,
     "collector": "A034"
   }
@@ -682,7 +682,7 @@ window.DC_SET_ALPHA["Unterstützung"] = [
     "text": "Einmal pro Zug: eine eigene Infanterie in diesem Abschnitt hat +1 ATK.",
     "effects": [{"code": "ONCE_SECTION_INFANTRY_ATK", "param": {"atk": 1}}],
     "flavor": "Er sagt, es hat Sinn. Sie glauben ihm, weil sie müssen.",
-    "image": "Feldprediger.jpg",
+    "image": "alpha/A038.jpg",
     "max_copies": 4,
     "collector": "A038"
   }
@@ -701,7 +701,7 @@ window.DC_SET_ALPHA["Unterstützung"] = [
     "text": "Eigene Infanterie im Abschnitt hat +1 DEF.",
     "effects": [{"code": "SECTION_INFANTRY_DEF", "param": {"def": 1}}],
     "flavor": "Es hält niemanden am Leben. Es hält sie nur zusammen.",
-    "image": "Glaubensbanner.jpg",
+    "image": "alpha/A042.jpg",
     "max_copies": 2,
     "collector": "A042"
   }

@@ -23,12 +23,12 @@
     if (!file) return '';
     var key = String(file);
     if (ALIAS[key]) return ALIAS[key];
-    // Doktrin-Karten behalten ihre .jpg-Dateien (keine automatische .png-Umwandlung)
-    if (/doktrin/i.test(key)) return key;
+    // Doktrin-JPGs und Unterordner (alpha/) behalten ihre Endung
+    if (/doktrin/i.test(key) || key.indexOf('/') >= 0) return key;
     return key.replace(/\.jpe?g$/i, '.png');
   }
   function folderSrc(name) {
-    return 'assets/cards/' + encodeURIComponent(name);
+    return 'assets/cards/' + String(name).split('/').map(encodeURIComponent).join('/');
   }
   g.dcCardFile = resolveName;
   g.dcCardSrc = function (file) {

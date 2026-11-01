@@ -11,7 +11,7 @@
     var file = c && c.image;
     if (!file) return '';
     if (global.DC_IMAGES && DC_IMAGES[file]) return DC_IMAGES[file];
-    return 'assets/cards/' + encodeURIComponent(file);
+    return 'assets/cards/' + String(file).split('/').map(encodeURIComponent).join('/');
   }
   function tags(c) {
     return ((c && c.tags) || []).map(function (x) { return String(x).toLowerCase(); }).join(' ');

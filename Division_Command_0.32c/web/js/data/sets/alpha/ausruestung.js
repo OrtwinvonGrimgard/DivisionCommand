@@ -151,7 +151,7 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "text": "Träger +1 DEF. Liegt eine zweite eigene Infanterie im Abschnitt, +1 ATK.",
     "effects": [{"code": "EQUIP_STANDARD", "param": {"def": 1, "atk_if_second": 1}}],
     "flavor": "Sie steht. Ob der Abschnitt noch steht, sieht man später.",
-    "image": "Standarte.jpg",
+    "image": "alpha/A037.jpg",
     "max_copies": 4,
     "collector": "A037"
   }
@@ -170,7 +170,7 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "text": "Wird der Träger zerstört, hat eine eigene Infanterie im Abschnitt +1 ATK bis Zugende.",
     "effects": [{"code": "ON_DESTROY_SECTION_ATK", "param": {"atk": 1}}],
     "flavor": "Wenn sie fällt, hört der Abschnitt auf zu fragen, warum.",
-    "image": "Gebetsfahne.jpg",
+    "image": "alpha/A039.jpg",
     "max_copies": 4,
     "collector": "A039"
   }
@@ -189,7 +189,7 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "text": "Träger +1 ATK beim ersten Angriff im Zug.",
     "effects": [{"code": "CARRIER_FIRST_ATTACK_ATK", "param": {"atk": 1}}],
     "flavor": "Die Leiter kommt mit. Ob sie gebraucht wird, sieht man oben.",
-    "image": "Sturmleitern.jpg",
+    "image": "alpha/A044.jpg",
     "max_copies": 2,
     "collector": "A044"
   }
@@ -208,7 +208,7 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "text": "Der ausgerüstete Träger erhält +1 DEF.",
     "effects": [{"code": "CARRIER_DEF", "param": {"def": 1}}],
     "flavor": "Ein Zeichen. Mehr nicht. Aber es steht.",
-    "image": "Feldzeichen.jpg",
+    "image": "alpha/A047.jpg",
     "max_copies": 4,
     "collector": "A047"
   }
