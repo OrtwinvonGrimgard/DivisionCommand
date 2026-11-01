@@ -1,4 +1,3 @@
-window.DC_SET_ALPHA = window.DC_SET_ALPHA || {};
 window.DC_SET_ALPHA["Soforteinsatz"] = [
   {
     "id": "dc_so_armageddon",
@@ -20,8 +19,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Alles dass, was jemals war, soll nun zum Staub verfallen",
-    "image": "Armageddon.jpg",
-    "max_copies": 2
+    "image": "alpha/A098.jpg",
+    "max_copies": 2,
+    "collector": "A098"
   },
   {
     "id": "dc_so_blinder_gehorsam",
@@ -47,8 +47,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Verlass dich auf Andere und du bist verlassen.",
-    "image": "Blinder Gehorsam.jpg",
-    "max_copies": 2
+    "image": "alpha/A099.jpg",
+    "max_copies": 2,
+    "collector": "A099"
   },
   {
     "id": "dc_so_bod_luft",
@@ -72,8 +73,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Er war lang genug da oben!",
-    "image": "Boden-Luft-Rakete.jpg",
-    "max_copies": 2
+    "image": "alpha/A100.jpg",
+    "max_copies": 2,
+    "collector": "A100"
   },
   {
     "id": "dc_so_dammbruch",
@@ -95,8 +97,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Irgendwann kommt alles runter was man aufgebaut hat.",
-    "image": "Dammbruch.jpg",
-    "max_copies": 2
+    "image": "alpha/A101.jpg",
+    "max_copies": 2,
+    "collector": "A101"
   },
   {
     "id": "dc_so_letzter",
@@ -118,8 +121,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Einer gegen Alle. Alle gegen einen.",
-    "image": "Der Letzte der steht.jpg",
-    "max_copies": 2
+    "image": "alpha/A103.jpg",
+    "max_copies": 2,
+    "collector": "A103"
   },
   {
     "id": "dc_so_deckung",
@@ -143,8 +147,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
         }
       }
     ],
-    "image": "Duckung suchen.jpg",
-    "max_copies": 2
+    "image": "alpha/A102.jpg",
+    "max_copies": 2,
+    "collector": "A102"
   },
   {
     "id": "dc_so_kavallerie",
@@ -168,8 +173,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
         }
       }
     ],
-    "image": "Eingriff der Kavallerie.jpg",
-    "max_copies": 2
+    "image": "alpha/A104.jpg",
+    "max_copies": 2,
+    "collector": "A104"
   },
   {
     "id": "dc_so_gassen",
@@ -191,8 +197,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Hier wohnt fast niemand mehr.",
-    "image": "Einsame Gassen.jpg",
-    "max_copies": 2
+    "image": "alpha/A105.jpg",
+    "max_copies": 2,
+    "collector": "A105"
   },
   {
     "id": "dc_so_geist",
@@ -214,8 +221,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Es ist als wären sie immer noch dort.",
-    "image": "Geist in den Trümmern.jpg",
-    "max_copies": 2
+    "image": "alpha/A106.jpg",
+    "max_copies": 2,
+    "collector": "A106"
   },
   {
     "id": "dc_so_vorsprung",
@@ -237,8 +245,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Fest entschlossen und gerade deswegen so vorhersehbar.",
-    "image": "Geistiger Vorsprung.jpg",
-    "max_copies": 2
+    "image": "alpha/A107.jpg",
+    "max_copies": 2,
+    "collector": "A107"
   },
   {
     "id": "dc_so_mobil",
@@ -264,8 +273,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Für Gott und Vaterland!",
-    "image": "Generalmobilmachung.jpg",
-    "max_copies": 2
+    "image": "alpha/A108.jpg",
+    "max_copies": 2,
+    "collector": "A108"
   },
   {
     "id": "dc_so_durchschuss",
@@ -287,8 +297,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Eben war er noch hier. Nun ist er fort.",
-    "image": "Glatter Durchschuss.jpg",
-    "max_copies": 2
+    "image": "alpha/A109.jpg",
+    "max_copies": 2,
+    "collector": "A109"
   },
   {
     "id": "dc_so_instand",
@@ -310,8 +321,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Wir schrauben Alles wieder zusammen.",
-    "image": "Instandsetzung.jpg",
-    "max_copies": 2
+    "image": "alpha/A110.jpg",
+    "max_copies": 2,
+    "collector": "A110"
   },
   {
     "id": "dc_so_lage",
@@ -337,8 +349,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Uhrenvergleich!",
-    "image": "Lagebesprechung.jpg",
-    "max_copies": 2
+    "image": "alpha/A111.jpg",
+    "max_copies": 2,
+    "collector": "A111"
   },
   {
     "id": "dc_so_luftschlag",
@@ -365,8 +378,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Kehre zurück zum Stützpunkt!",
-    "image": "Luftschlag.jpg",
-    "max_copies": 2
+    "image": "alpha/A112.jpg",
+    "max_copies": 2,
+    "collector": "A112"
   },
   {
     "id": "dc_so_martyrium",
@@ -391,8 +405,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Niemand kommt zum Vater, außer durch mich.",
-    "image": "Martyrium.jpg",
-    "max_copies": 2
+    "image": "alpha/A113.jpg",
+    "max_copies": 2,
+    "collector": "A113"
   },
   {
     "id": "dc_so_ehren",
@@ -420,8 +435,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Nach ihren Taten sollt ihr sie messen.",
-    "image": "Militärische Ehren.jpg",
-    "max_copies": 2
+    "image": "alpha/A114.jpg",
+    "max_copies": 2,
+    "collector": "A114"
   },
   {
     "id": "dc_so_minenfeld",
@@ -449,8 +465,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Als ob man einen Schatz findet. Nur ohne die Freude.",
-    "image": "Minenfeld.jpg",
-    "max_copies": 2
+    "image": "alpha/A115.jpg",
+    "max_copies": 2,
+    "collector": "A115"
   },
   {
     "id": "dc_so_mobilisierung",
@@ -472,8 +489,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Die letzten Meter gehören uns!",
-    "image": "Mobilisierung.jpg",
-    "max_copies": 2
+    "image": "alpha/A116.jpg",
+    "max_copies": 2,
+    "collector": "A116"
   },
   {
     "id": "dc_so_munition",
@@ -496,8 +514,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Der ist geplatzt!",
-    "image": "Munitionstreffer.jpg",
-    "max_copies": 2
+    "image": "alpha/A117.jpg",
+    "max_copies": 2,
+    "collector": "A117"
   },
   {
     "id": "dc_so_napalm",
@@ -525,8 +544,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "5 Minuten von beiden Seiten scharf anbraten.",
-    "image": "Napalm.jpg",
-    "max_copies": 2
+    "image": "alpha/A118.jpg",
+    "max_copies": 2,
+    "collector": "A118"
   },
   {
     "id": "dc_so_pause",
@@ -549,8 +569,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Ich kann einfach nicht mehr weiter.",
-    "image": "Pause.jpg",
-    "max_copies": 2
+    "image": "alpha/A119.jpg",
+    "max_copies": 2,
+    "collector": "A119"
   },
   {
     "id": "dc_so_massen",
@@ -572,8 +593,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Der Geist der Masse ist nur das Gefäß der Ideologie anderer Mächte.",
-    "image": "Psychologie der Massen.jpg",
-    "max_copies": 2
+    "image": "alpha/A120.jpg",
+    "max_copies": 2,
+    "collector": "A120"
   },
   {
     "id": "dc_so_raeum",
@@ -595,8 +617,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Das war gute Arbeit!",
-    "image": "Raeumkommando.jpg",
-    "max_copies": 2
+    "image": "alpha/A122.jpg",
+    "max_copies": 2,
+    "collector": "A122"
   },
   {
     "id": "dc_so_eifer",
@@ -622,8 +645,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Unser Weg ist erleuchtet.",
-    "image": "Religioeser Eifer.jpg",
-    "max_copies": 2
+    "image": "alpha/A121.jpg",
+    "max_copies": 2,
+    "collector": "A121"
   },
   {
     "id": "dc_so_selbst",
@@ -648,8 +672,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Manche Kriege werden durch die Entschlossenheit zum Untergang entschieden.",
-    "image": "Selbstopfer.jpg",
-    "max_copies": 2
+    "image": "alpha/A123.jpg",
+    "max_copies": 2,
+    "collector": "A123"
   },
   {
     "id": "dc_so_engel",
@@ -672,8 +697,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Ein Hoch auf das Finanzwesen!",
-    "image": "Silberner Engel.jpg",
-    "max_copies": 2
+    "image": "alpha/A124.jpg",
+    "max_copies": 2,
+    "collector": "A124"
   },
   {
     "id": "dc_so_stand",
@@ -699,8 +725,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Wer den Krieg versteht sollte den Tod nicht fürchten.",
-    "image": "Standgericht.jpg",
-    "max_copies": 2
+    "image": "alpha/A125.jpg",
+    "max_copies": 2,
+    "collector": "A125"
   },
   {
     "id": "dc_so_formation",
@@ -727,8 +754,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Haltet die Linie! Der Sieg ist nah!",
-    "image": "Standhafte Formation.jpg",
-    "max_copies": 2
+    "image": "alpha/A126.jpg",
+    "max_copies": 2,
+    "collector": "A126"
   },
   {
     "id": "dc_so_strahlung",
@@ -750,8 +778,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Wenn zerreißt was verbunden, klaffen zahllose Wunden.",
-    "image": "Strahlung.jpg",
-    "max_copies": 2
+    "image": "alpha/A127.jpg",
+    "max_copies": 2,
+    "collector": "A127"
   },
   {
     "id": "dc_so_verpflegung",
@@ -776,8 +805,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Ein voller Magen und ein Moment der Ruhe.",
-    "image": "Verpflegung.jpg",
-    "max_copies": 2
+    "image": "alpha/A128.jpg",
+    "max_copies": 2,
+    "collector": "A128"
   },
   {
     "id": "dc_so_waffen",
@@ -799,8 +829,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Das nenne ich Versorgung!",
-    "image": "Waffenlieferung.jpg",
-    "max_copies": 2
+    "image": "alpha/A129.jpg",
+    "max_copies": 2,
+    "collector": "A129"
   },
   {
     "id": "dc_so_widerstand",
@@ -823,8 +854,9 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Das ist Hochverrat!",
-    "image": "Widerstand.jpg",
-    "max_copies": 2
+    "image": "alpha/A130.jpg",
+    "max_copies": 2,
+    "collector": "A130"
   },
   {
     "id": "dc_so_volk",
@@ -846,10 +878,10 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
       }
     ],
     "flavor": "Wenn einer von uns fällt, dann stehen 100 auf.",
-    "image": "Wille des Volkes.jpg",
-    "max_copies": 2
-  }
-,
+    "image": "alpha/A131.jpg",
+    "max_copies": 2,
+    "collector": "A131"
+  },
   {
     "id": "dc_so_marschbefehl",
     "set": "set_alpha",
@@ -874,8 +906,7 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
     "image": "alpha/A035.jpg",
     "max_copies": 4,
     "collector": "A035"
-  }
-,
+  },
   {
     "id": "dc_so_blutzeuge",
     "set": "set_alpha",
@@ -886,15 +917,24 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
     "ap": 2,
     "atk": null,
     "def": null,
-    "tags": ["soforteinsatz", "glaube"],
+    "tags": [
+      "soforteinsatz",
+      "glaube"
+    ],
     "text": "Opfere eine eigene Infanterie. Eine gegnerische Einheit im Abschnitt erleidet 3 Schaden.",
-    "effects": [{"code": "SACRIFICE_INFANTRY_DAMAGE", "param": {"damage": 3}}],
+    "effects": [
+      {
+        "code": "SACRIFICE_INFANTRY_DAMAGE",
+        "param": {
+          "damage": 3
+        }
+      }
+    ],
     "flavor": "Einer weniger auf unserer Seite. Einer weniger auf ihrer.",
     "image": "alpha/A043.jpg",
     "max_copies": 2,
     "collector": "A043"
-  }
-,
+  },
   {
     "id": "dc_so_sammelruf",
     "set": "set_alpha",
@@ -905,9 +945,15 @@ window.DC_SET_ALPHA["Soforteinsatz"] = [
     "ap": 1,
     "atk": null,
     "def": null,
-    "tags": ["soforteinsatz"],
+    "tags": [
+      "soforteinsatz"
+    ],
     "text": "Ziehe eine Infanterie aus dem Ablagestapel auf die Hand.",
-    "effects": [{"code": "RETURN_INFANTRY_FROM_DISCARD"}],
+    "effects": [
+      {
+        "code": "RETURN_INFANTRY_FROM_DISCARD"
+      }
+    ],
     "flavor": "Wer noch laufen kann, kommt.",
     "image": "alpha/A046.jpg",
     "max_copies": 4,
