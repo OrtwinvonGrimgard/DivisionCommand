@@ -1,4 +1,3 @@
-window.DC_SET_ALPHA = window.DC_SET_ALPHA || {};
 window.DC_SET_ALPHA["Einheit"] = [
   {
     "id": "dc_eh_aufklaerer",
@@ -30,8 +29,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Feind im Vorfeld aufgeklärt. Wir führen Bekämpfung durch!",
-    "image": "Aufklaerer.jpg",
-    "max_copies": 2
+    "image": "alpha/A048.jpg",
+    "max_copies": 2,
+    "collector": "A048"
   },
   {
     "id": "dc_eh_dschungel",
@@ -57,8 +57,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Habt ihr das auch gehört?",
-    "image": "Dschungelkrieger.jpg",
-    "max_copies": 2
+    "image": "alpha/A049.jpg",
+    "max_copies": 2,
+    "collector": "A049"
   },
   {
     "id": "dc_eh_frei",
@@ -83,8 +84,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Dies ist UNSER Land!",
-    "image": "Freischaerler.jpg",
-    "max_copies": 2
+    "image": "alpha/A050.jpg",
+    "max_copies": 2,
+    "collector": "A050"
   },
   {
     "id": "dc_eh_haubitze",
@@ -116,8 +118,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Verheerende Wirkung aus sicherer Entfernung.",
-    "image": "Haubitzenzug.jpg",
-    "max_copies": 2
+    "image": "alpha/A051.jpg",
+    "max_copies": 2,
+    "collector": "A051"
   },
   {
     "id": "dc_eh_helden",
@@ -142,8 +145,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Was die anderen nicht wagen, haben wir schon getan.",
-    "image": "Helden der zweiten Kompanie.jpg",
-    "max_copies": 2
+    "image": "alpha/A052.jpg",
+    "max_copies": 2,
+    "collector": "A052"
   },
   {
     "id": "dc_eh_himmel",
@@ -169,8 +173,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "1000 Mann und ein Befehl.",
-    "image": "Infanteriebataillon Himmelhund.jpg",
-    "max_copies": 2
+    "image": "alpha/A053.jpg",
+    "max_copies": 2,
+    "collector": "A053"
   },
   {
     "id": "dc_eh_jaeger",
@@ -199,8 +204,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Es rauschen die Bäume, es klingt ihr Gesang!",
-    "image": "Jaegerstellung.jpg",
-    "max_copies": 2
+    "image": "alpha/A054.jpg",
+    "max_copies": 2,
+    "collector": "A054"
   },
   {
     "id": "dc_eh_kommando",
@@ -232,8 +238,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Nur wenige erreichen den Geist der nötig ist.",
-    "image": "Kommandogruppe.jpg",
-    "max_copies": 2
+    "image": "alpha/A055.jpg",
+    "max_copies": 2,
+    "collector": "A055"
   },
   {
     "id": "dc_eh_mg",
@@ -260,8 +267,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Brrrt. Brrrt. Brrrrrrrrrrrt!",
-    "image": "MG-Stellung.jpg",
-    "max_copies": 2
+    "image": "alpha/A056.jpg",
+    "max_copies": 2,
+    "collector": "A056"
   },
   {
     "id": "dc_eh_donner",
@@ -289,8 +297,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Ein leichtes Ziel!",
-    "image": "Mittlerer Panzer Donnerkeil.jpg",
-    "max_copies": 2
+    "image": "alpha/A057.jpg",
+    "max_copies": 2,
+    "collector": "A057"
   },
   {
     "id": "dc_eh_eingreif",
@@ -320,8 +329,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Mobilität ist der Schlüssel zu operativer Freiheit.",
-    "image": "Mobile Eingreiftruppe.jpg",
-    "max_copies": 2
+    "image": "alpha/A058.jpg",
+    "max_copies": 2,
+    "collector": "A058"
   },
   {
     "id": "dc_eh_moerser",
@@ -349,8 +359,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Ein Schuss ein Treffer! Aber wir nehmen sicherheitshalber drei…",
-    "image": "Moerser-Team.jpg",
-    "max_copies": 2
+    "image": "alpha/A059.jpg",
+    "max_copies": 2,
+    "collector": "A059"
   },
   {
     "id": "dc_eh_pak",
@@ -381,8 +392,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Wir schneiden uns durch!",
-    "image": "Panzerabwehrtrupp.jpg",
-    "max_copies": 2
+    "image": "alpha/A060.jpg",
+    "max_copies": 2,
+    "collector": "A060"
   },
   {
     "id": "dc_eh_hammer",
@@ -413,8 +425,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Masse mal Beschleunigung gleich Kraft.",
-    "image": "Panzertrupp Hammer.jpg",
-    "max_copies": 2
+    "image": "alpha/A061.jpg",
+    "max_copies": 2,
+    "collector": "A061"
   },
   {
     "id": "dc_eh_faustkeil",
@@ -446,8 +459,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Wir sind die Front!",
-    "image": "Panzerzug Faustkeil.jpg",
-    "max_copies": 2
+    "image": "alpha/A062.jpg",
+    "max_copies": 2,
+    "collector": "A062"
   },
   {
     "id": "dc_eh_viper",
@@ -479,8 +493,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Das Gebäude ist zwar weg, aber wir haben den Stuhl getroffen!",
-    "image": "Raketenwerfer Viper.jpg",
-    "max_copies": 2
+    "image": "alpha/A063.jpg",
+    "max_copies": 2,
+    "collector": "A063"
   },
   {
     "id": "dc_eh_sniper",
@@ -514,8 +529,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Feuer! Feuer. Treffer! Treffer.",
-    "image": "Scharfschuetze.jpg",
-    "max_copies": 2
+    "image": "alpha/A064.jpg",
+    "max_copies": 2,
+    "collector": "A064"
   },
   {
     "id": "dc_eh_spz",
@@ -548,8 +564,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Geben wir ihnen Deckung!",
-    "image": "Schuetzenpanzer.jpg",
-    "max_copies": 2
+    "image": "alpha/A066.jpg",
+    "max_copies": 2,
+    "collector": "A066"
   },
   {
     "id": "dc_eh_koloss",
@@ -581,8 +598,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Ein Koloss fällt nicht. Er entscheidet sich zu knien.",
-    "image": "Schwerer Panzer Koloss.jpg",
-    "max_copies": 2
+    "image": "alpha/A065.jpg",
+    "max_copies": 2,
+    "collector": "A065"
   },
   {
     "id": "dc_eh_sich",
@@ -603,8 +621,9 @@ window.DC_SET_ALPHA["Einheit"] = [
     "text": "",
     "effects": [],
     "flavor": "Sind sie nicht alle freiwillig hier?!",
-    "image": "Sicherungstrupp.jpg",
-    "max_copies": 2
+    "image": "alpha/A067.jpg",
+    "max_copies": 2,
+    "collector": "A067"
   },
   {
     "id": "dc_eh_spaeher",
@@ -634,8 +653,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Auge am Feind!",
-    "image": "Spaehertrupp.jpg",
-    "max_copies": 2
+    "image": "alpha/A068.jpg",
+    "max_copies": 2,
+    "collector": "A068"
   },
   {
     "id": "dc_eh_glubscher",
@@ -672,8 +692,9 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Da ist böses im Busch!",
-    "image": "Spaehpanzer Glubscher.jpg",
-    "max_copies": 2
+    "image": "alpha/A069.jpg",
+    "max_copies": 2,
+    "collector": "A069"
   },
   {
     "id": "dc_eh_spahwagen",
@@ -706,10 +727,10 @@ window.DC_SET_ALPHA["Einheit"] = [
       }
     ],
     "flavor": "Fühlung zum Feind!",
-    "image": "Spaehwagen.jpg",
-    "max_copies": 2
-  }
-,
+    "image": "alpha/A070.jpg",
+    "max_copies": 2,
+    "collector": "A070"
+  },
   {
     "id": "dc_eh_freiwilligenzug",
     "set": "set_alpha",
@@ -738,8 +759,7 @@ window.DC_SET_ALPHA["Einheit"] = [
     "image": "alpha/A033.jpg",
     "max_copies": 4,
     "collector": "A033"
-  }
-,
+  },
   {
     "id": "dc_eh_erstewelle",
     "set": "set_alpha",
@@ -751,15 +771,24 @@ window.DC_SET_ALPHA["Einheit"] = [
     "atk": 2,
     "def": 1,
     "verdeckt_ok": false,
-    "tags": ["einheit", "infanterie"],
+    "tags": [
+      "einheit",
+      "infanterie"
+    ],
     "text": "+1 ATK, wenn in diesem Zug eine eigene Infanterie angegriffen hat.",
-    "effects": [{"code": "ATK_IF_INFANTRY_ATTACKED", "param": {"atk": 1}}],
+    "effects": [
+      {
+        "code": "ATK_IF_INFANTRY_ATTACKED",
+        "param": {
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Die erste Reihe stirbt. Die zweite sieht zu.",
     "image": "alpha/A036.jpg",
     "max_copies": 4,
     "collector": "A036"
-  }
-,
+  },
   {
     "id": "dc_eh_zweitewelle",
     "set": "set_alpha",
@@ -771,15 +800,24 @@ window.DC_SET_ALPHA["Einheit"] = [
     "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
-    "tags": ["einheit", "infanterie"],
+    "tags": [
+      "einheit",
+      "infanterie"
+    ],
     "text": "+1 ATK, wenn in diesem Zug schon eine eigene Infanterie gespielt wurde.",
-    "effects": [{"code": "ATK_IF_INFANTRY_PLAYED", "param": {"atk": 1}}],
+    "effects": [
+      {
+        "code": "ATK_IF_INFANTRY_PLAYED",
+        "param": {
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Die ersten haben den Weg freigemacht. Wir gehen ihn.",
     "image": "alpha/A040.jpg",
     "max_copies": 2,
     "collector": "A040"
-  }
-,
+  },
   {
     "id": "dc_eh_stosskolonne",
     "set": "set_alpha",
@@ -791,15 +829,24 @@ window.DC_SET_ALPHA["Einheit"] = [
     "atk": 4,
     "def": 2,
     "verdeckt_ok": false,
-    "tags": ["einheit", "infanterie"],
+    "tags": [
+      "einheit",
+      "infanterie"
+    ],
     "text": "+2 ATK gegen ein Ziel, das in diesem Zug noch nicht angegriffen wurde.",
-    "effects": [{"code": "ATK_IF_TARGET_NOT_ATTACKED", "param": {"atk": 2}}],
+    "effects": [
+      {
+        "code": "ATK_IF_TARGET_NOT_ATTACKED",
+        "param": {
+          "atk": 2
+        }
+      }
+    ],
     "flavor": "Wer vorn steht, stirbt zuerst. Wer hinten steht, geht über ihn hinweg.",
     "image": "alpha/A041.jpg",
     "max_copies": 2,
     "collector": "A041"
-  }
-,
+  },
   {
     "id": "dc_eh_nachruecker",
     "set": "set_alpha",
@@ -811,9 +858,16 @@ window.DC_SET_ALPHA["Einheit"] = [
     "atk": 1,
     "def": 2,
     "verdeckt_ok": false,
-    "tags": ["einheit", "infanterie"],
+    "tags": [
+      "einheit",
+      "infanterie"
+    ],
     "text": "Kann für 0 AP gespielt werden, wenn in diesem Zug eine eigene Infanterie zerstört wurde.",
-    "effects": [{"code": "PLAY_FREE_IF_INFANTRY_DESTROYED"}],
+    "effects": [
+      {
+        "code": "PLAY_FREE_IF_INFANTRY_DESTROYED"
+      }
+    ],
     "flavor": "Jemand ist ausgefallen. Jemand füllt die Lücke.",
     "image": "alpha/A045.jpg",
     "max_copies": 4,
