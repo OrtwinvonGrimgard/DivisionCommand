@@ -1,4 +1,3 @@
-window.DC_SET_ALPHA = window.DC_SET_ALPHA || {};
 window.DC_SET_ALPHA["Unterstützung"] = [
   {
     "id": "dc_su_artillerie",
@@ -32,8 +31,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Es flieeegen mit Pulver die Kugeln so weit! Ja, so weit!",
-    "image": "Artilleriestellung.jpg",
-    "max_copies": 2
+    "image": "alpha/A071.jpg",
+    "max_copies": 2,
+    "collector": "A071"
   },
   {
     "id": "dc_su_satellit",
@@ -64,8 +64,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Wir könnten sogar dein Haus von hier sehen.",
-    "image": "Aufklaerungssatellit.jpg",
-    "max_copies": 2
+    "image": "alpha/A072.jpg",
+    "max_copies": 2,
+    "collector": "A072"
   },
   {
     "id": "dc_su_ausland",
@@ -94,8 +95,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Sie können sich nicht vorstellen was man mit einem Gespräch alles erreichen kann.",
-    "image": "Auslandsvertretung.jpg",
-    "max_copies": 2
+    "image": "alpha/A073.jpg",
+    "max_copies": 2,
+    "collector": "A073"
   },
   {
     "id": "dc_su_niemand",
@@ -117,8 +119,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Wir werden Frieden haben!",
-    "image": "Bis niemand mehr lebt.jpg",
-    "max_copies": 2
+    "image": "alpha/A074.jpg",
+    "max_copies": 2,
+    "collector": "A074"
   },
   {
     "id": "dc_su_drohne",
@@ -145,8 +148,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Artillerie war gestern.",
-    "image": "Dronenkommando.jpg",
-    "max_copies": 2
+    "image": "alpha/A075.jpg",
+    "max_copies": 2,
+    "collector": "A075"
   },
   {
     "id": "dc_su_general",
@@ -180,8 +184,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Im Chaos des Krieges bringt Erfahrung den entscheidenden Vorteil.",
-    "image": "Erfahrener General.jpg",
-    "max_copies": 2
+    "image": "alpha/A076.jpg",
+    "max_copies": 2,
+    "collector": "A076"
   },
   {
     "id": "dc_su_feldlager",
@@ -206,8 +211,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Die Operation verläuft genau nach Plan!",
-    "image": "Feldlager.jpg",
-    "max_copies": 2
+    "image": "alpha/A077.jpg",
+    "max_copies": 2,
+    "collector": "A077"
   },
   {
     "id": "dc_su_festung",
@@ -233,8 +239,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Das Wunder von Zement!",
-    "image": "Festungsanlage.jpg",
-    "max_copies": 2
+    "image": "alpha/A078.jpg",
+    "max_copies": 2,
+    "collector": "A078"
   },
   {
     "id": "dc_su_flak",
@@ -261,8 +268,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Haltet die Augen offen!",
-    "image": "Flugabwehr.jpg",
-    "max_copies": 2
+    "image": "alpha/A079.jpg",
+    "max_copies": 2,
+    "collector": "A079"
   },
   {
     "id": "dc_su_komm",
@@ -294,8 +302,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Halten sie Fühlung zum Feind!",
-    "image": "Kommunikationszentrum.jpg",
-    "max_copies": 2
+    "image": "alpha/A080.jpg",
+    "max_copies": 2,
+    "collector": "A080"
   },
   {
     "id": "dc_su_nebel",
@@ -321,8 +330,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Die sehen gleich nichts mehr.",
-    "image": "Kriegsnebel.jpg",
-    "max_copies": 2
+    "image": "alpha/A081.jpg",
+    "max_copies": 2,
+    "collector": "A081"
   },
   {
     "id": "dc_su_lager",
@@ -353,8 +363,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Logistik ist die Lebenskraft einer Legion.",
-    "image": "Lagerhaus.jpg",
-    "max_copies": 2
+    "image": "alpha/A082.jpg",
+    "max_copies": 2,
+    "collector": "A082"
   },
   {
     "id": "dc_su_lazarett",
@@ -379,8 +390,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Dieser darf sein Bein behalten.",
-    "image": "Lazarett.jpg",
-    "max_copies": 2
+    "image": "alpha/A083.jpg",
+    "max_copies": 2,
+    "collector": "A083"
   },
   {
     "id": "dc_su_prop",
@@ -405,8 +417,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Wahrheit? Ihr kennt die Wahrheit! Ihre Lügen sind unser Untergang!",
-    "image": "Propaganda.jpg",
-    "max_copies": 2
+    "image": "alpha/A084.jpg",
+    "max_copies": 2,
+    "collector": "A084"
   },
   {
     "id": "dc_su_radar",
@@ -432,8 +445,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Wir haben sie auf dem Schirm",
-    "image": "Radarstation.jpg",
-    "max_copies": 2
+    "image": "alpha/A085.jpg",
+    "max_copies": 2,
+    "collector": "A085"
   },
   {
     "id": "dc_su_schlaefer",
@@ -465,8 +479,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Auch ein schwacher Geist kann eine starke Waffe sein.",
-    "image": "Schlaeferzelle.jpg",
-    "max_copies": 2
+    "image": "alpha/A086.jpg",
+    "max_copies": 2,
+    "collector": "A086"
   },
   {
     "id": "dc_su_spion",
@@ -494,8 +509,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Wissen ist Macht.",
-    "image": "Spionagenetzwerk.jpg",
-    "max_copies": 2
+    "image": "alpha/A087.jpg",
+    "max_copies": 2,
+    "collector": "A087"
   },
   {
     "id": "dc_su_staat",
@@ -517,8 +533,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Der Erfolg gibt uns Recht.",
-    "image": "Staatspropaganda.jpg",
-    "max_copies": 2
+    "image": "alpha/A088.jpg",
+    "max_copies": 2,
+    "collector": "A088"
   },
   {
     "id": "dc_su_brumm",
@@ -556,8 +573,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Sie hätten bei Kabeln bleiben sollen.",
-    "image": "Stoerwagen Brummbaer.jpg",
-    "max_copies": 2
+    "image": "alpha/A089.jpg",
+    "max_copies": 2,
+    "collector": "A089"
   },
   {
     "id": "dc_su_auge",
@@ -579,8 +597,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Es kann nicht sein, was nicht sein darf.",
-    "image": "Totale Ueberwachung.jpg",
-    "max_copies": 2
+    "image": "alpha/A090.jpg",
+    "max_copies": 2,
+    "collector": "A090"
   },
   {
     "id": "dc_su_pakt",
@@ -602,8 +621,9 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Wenn man seit Jahrhunderten wartet, kommt es nicht auf ein paar Stunden an.",
-    "image": "Uralter Pakt.jpg",
-    "max_copies": 2
+    "image": "alpha/A091.jpg",
+    "max_copies": 2,
+    "collector": "A091"
   },
   {
     "id": "dc_su_nest",
@@ -634,10 +654,10 @@ window.DC_SET_ALPHA["Unterstützung"] = [
       }
     ],
     "flavor": "Sie kämpfen mit dem Leben. Wir gegen den Tod.",
-    "image": "Verwundetennest.jpg",
-    "max_copies": 2
-  }
-,
+    "image": "alpha/A092.jpg",
+    "max_copies": 2,
+    "collector": "A092"
+  },
   {
     "id": "dc_su_sammelpunkt",
     "set": "set_alpha",
@@ -666,8 +686,7 @@ window.DC_SET_ALPHA["Unterstützung"] = [
     "image": "alpha/A034.jpg",
     "max_copies": 4,
     "collector": "A034"
-  }
-,
+  },
   {
     "id": "dc_su_feldprediger",
     "set": "set_alpha",
@@ -678,15 +697,24 @@ window.DC_SET_ALPHA["Unterstützung"] = [
     "ap": 2,
     "atk": null,
     "def": null,
-    "tags": ["unterstuetzung", "glaube"],
+    "tags": [
+      "unterstuetzung",
+      "glaube"
+    ],
     "text": "Einmal pro Zug: eine eigene Infanterie in diesem Abschnitt hat +1 ATK.",
-    "effects": [{"code": "ONCE_SECTION_INFANTRY_ATK", "param": {"atk": 1}}],
+    "effects": [
+      {
+        "code": "ONCE_SECTION_INFANTRY_ATK",
+        "param": {
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Er sagt, es hat Sinn. Sie glauben ihm, weil sie müssen.",
     "image": "alpha/A038.jpg",
     "max_copies": 4,
     "collector": "A038"
-  }
-,
+  },
   {
     "id": "dc_su_glaubensbanner",
     "set": "set_alpha",
@@ -697,9 +725,19 @@ window.DC_SET_ALPHA["Unterstützung"] = [
     "ap": 3,
     "atk": null,
     "def": null,
-    "tags": ["unterstuetzung", "glaube"],
+    "tags": [
+      "unterstuetzung",
+      "glaube"
+    ],
     "text": "Eigene Infanterie im Abschnitt hat +1 DEF.",
-    "effects": [{"code": "SECTION_INFANTRY_DEF", "param": {"def": 1}}],
+    "effects": [
+      {
+        "code": "SECTION_INFANTRY_DEF",
+        "param": {
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Es hält niemanden am Leben. Es hält sie nur zusammen.",
     "image": "alpha/A042.jpg",
     "max_copies": 2,
