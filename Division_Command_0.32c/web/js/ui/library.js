@@ -455,8 +455,27 @@
     return out;
   }
 
+  function nationStarterDecks() {
+    var out = [];
+    var map = window.DC_NATION_DECKS || {};
+    Object.keys(map).forEach(function (nat) {
+      var d = map[nat];
+      if (!d || !d.cards) return;
+      var counts = {};
+      (d.cards || []).forEach(function (id) { counts[id] = (counts[id] || 0) + 1; });
+      out.push({
+        id: 'nation:' + nat,
+        name: d.name || ('Deck ' + nat),
+        cards: counts,
+        doctrines: (d.doktrinen || []).slice(),
+        builtin: true
+      });
+    });
+    return out;
+  }
+
   function fillSelects() {
-    var list = userDecks();
+    var list = nationStarterDecks().concat(userDecks());
     ['deck-pick-single', 'deck-pick-lan', 'deck-pick-bot'].forEach(function (id) {
       var sel = document.getElementById(id);
       if (!sel) return;
@@ -475,7 +494,8 @@
   function selectedDeck(selId) {
     var sel = document.getElementById(selId || 'deck-pick-single');
     if (!sel || !sel.value) return null;
-    return userDecks().filter(function (d) { return d.id === sel.value; })[0] || null;
+    var all = nationStarterDecks().concat(userDecks());
+    return all.filter(function (d) { return d.id === sel.value; })[0] || null;
   }
 
   global.DCLib = {

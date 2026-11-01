@@ -93,6 +93,10 @@ window.DC_CATALOG.cards = [];
   Object.keys(pack).forEach(function (typ) {
     (pack[typ] || []).forEach(function (c) { window.DC_CATALOG.cards.push(c); });
   });
+  var nations = window.DC_SET_NATIONS || {};
+  Object.keys(nations).forEach(function (nat) {
+    (nations[nat] || []).forEach(function (c) { window.DC_CATALOG.cards.push(c); });
+  });
 })();
 
 /* 0.32e: fehlende Schale nachziehen, ohne index.html neu zu schreiben. */
