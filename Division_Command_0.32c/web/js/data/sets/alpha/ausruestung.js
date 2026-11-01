@@ -1,4 +1,3 @@
-window.DC_SET_ALPHA = window.DC_SET_ALPHA || {};
 window.DC_SET_ALPHA["Ausrüstung"] = [
   {
     "id": "dc_eq_fanat",
@@ -26,8 +25,9 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
       }
     ],
     "flavor": "Wer das Schwert ergreift, der soll vergehen durch das Schwert.",
-    "image": "Fanatischer Kommandant.jpg",
-    "max_copies": 2
+    "image": "alpha/A093.jpg",
+    "max_copies": 2,
+    "collector": "A093"
   },
   {
     "id": "dc_eq_spat",
@@ -53,8 +53,9 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
       }
     ],
     "flavor": "Sie werden graben bis ich ihnen befehle das Graben einzustellen!",
-    "image": "Klappspaten.jpg",
-    "max_copies": 2
+    "image": "alpha/A094.jpg",
+    "max_copies": 2,
+    "collector": "A094"
   },
   {
     "id": "dc_eq_med",
@@ -81,8 +82,9 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
       }
     ],
     "flavor": "Es ist genug für alle da.",
-    "image": "Medizinische Versorgung.jpg",
-    "max_copies": 2
+    "image": "alpha/A095.jpg",
+    "max_copies": 2,
+    "collector": "A095"
   },
   {
     "id": "dc_eq_rauch",
@@ -106,8 +108,9 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
       }
     ],
     "flavor": "Die leichteste Deckung der Welt.",
-    "image": "Rauchgranate.jpg",
-    "max_copies": 2
+    "image": "alpha/A096.jpg",
+    "max_copies": 2,
+    "collector": "A096"
   },
   {
     "id": "dc_eq_tasche",
@@ -133,10 +136,10 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
       }
     ],
     "flavor": "Ich brauche hier sofort einen Druckverband!",
-    "image": "Sanitaetstasche.jpg",
-    "max_copies": 2
-  }
-,
+    "image": "alpha/A097.jpg",
+    "max_copies": 2,
+    "collector": "A097"
+  },
   {
     "id": "dc_eq_standarte",
     "set": "set_alpha",
@@ -147,15 +150,25 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "ap": 1,
     "atk": null,
     "def": null,
-    "tags": ["ausruestung", "infanterie"],
+    "tags": [
+      "ausruestung",
+      "infanterie"
+    ],
     "text": "Träger +1 DEF. Liegt eine zweite eigene Infanterie im Abschnitt, +1 ATK.",
-    "effects": [{"code": "EQUIP_STANDARD", "param": {"def": 1, "atk_if_second": 1}}],
+    "effects": [
+      {
+        "code": "EQUIP_STANDARD",
+        "param": {
+          "def": 1,
+          "atk_if_second": 1
+        }
+      }
+    ],
     "flavor": "Sie steht. Ob der Abschnitt noch steht, sieht man später.",
     "image": "alpha/A037.jpg",
     "max_copies": 4,
     "collector": "A037"
-  }
-,
+  },
   {
     "id": "dc_eq_gebetsfahne",
     "set": "set_alpha",
@@ -166,15 +179,24 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "ap": 1,
     "atk": null,
     "def": null,
-    "tags": ["ausruestung", "glaube"],
+    "tags": [
+      "ausruestung",
+      "glaube"
+    ],
     "text": "Wird der Träger zerstört, hat eine eigene Infanterie im Abschnitt +1 ATK bis Zugende.",
-    "effects": [{"code": "ON_DESTROY_SECTION_ATK", "param": {"atk": 1}}],
+    "effects": [
+      {
+        "code": "ON_DESTROY_SECTION_ATK",
+        "param": {
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Wenn sie fällt, hört der Abschnitt auf zu fragen, warum.",
     "image": "alpha/A039.jpg",
     "max_copies": 4,
     "collector": "A039"
-  }
-,
+  },
   {
     "id": "dc_au_sturmleitern",
     "set": "set_alpha",
@@ -185,15 +207,23 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "ap": 2,
     "atk": null,
     "def": null,
-    "tags": ["ausruestung"],
+    "tags": [
+      "ausruestung"
+    ],
     "text": "Träger +1 ATK beim ersten Angriff im Zug.",
-    "effects": [{"code": "CARRIER_FIRST_ATTACK_ATK", "param": {"atk": 1}}],
+    "effects": [
+      {
+        "code": "CARRIER_FIRST_ATTACK_ATK",
+        "param": {
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Die Leiter kommt mit. Ob sie gebraucht wird, sieht man oben.",
     "image": "alpha/A044.jpg",
     "max_copies": 2,
     "collector": "A044"
-  }
-,
+  },
   {
     "id": "dc_au_feldzeichen",
     "set": "set_alpha",
@@ -204,9 +234,18 @@ window.DC_SET_ALPHA["Ausrüstung"] = [
     "ap": 1,
     "atk": null,
     "def": null,
-    "tags": ["ausruestung"],
+    "tags": [
+      "ausruestung"
+    ],
     "text": "Der ausgerüstete Träger erhält +1 DEF.",
-    "effects": [{"code": "CARRIER_DEF", "param": {"def": 1}}],
+    "effects": [
+      {
+        "code": "CARRIER_DEF",
+        "param": {
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Ein Zeichen. Mehr nicht. Aber es steht.",
     "image": "alpha/A047.jpg",
     "max_copies": 4,
