@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#12140f"/>
+  <g fill="#d4af37" stroke="#b8860b" stroke-width="4">
+    <rect x="40" y="40" width="432" height="432" rx="20" fill="none"/>
+    <rect x="60" y="60" width="392" height="392" rx="10" fill="none"/>
+    <text x="256" y="280" font-family="serif" font-size="180" font-weight="bold" text-anchor="middle" fill="#d4af37">DC</text>
+    <polygon points="256,80 280,140 340,140 290,180 310,240 256,200 202,240 222,180 172,140 232,140" fill="#d4af37"/>
+  </g>
+</svg>
