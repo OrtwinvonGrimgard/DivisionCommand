@@ -99,7 +99,7 @@ window.DC_CATALOG.cards = [];
   });
 })();
 
-/* 0.32e: fehlende Schale nachziehen, ohne index.html neu zu schreiben. */
+/* 0.5a: fehlende Schale nachziehen, ohne index.html neu zu schreiben. */
 (function () {
   if (!document.getElementById('dc-align-css')) {
     var css = document.createElement('link');
