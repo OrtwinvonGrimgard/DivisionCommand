@@ -170,7 +170,21 @@ Beispiele:
 
 Die endgültige Reichweitenstruktur einzelner Spezialtypen wird durch die entsprechenden Karten definiert.
 
-## 7.1 Gegenangriff
+## 7.1 Artillerie – Indirektes Feuer
+
+Artillerie besitzt eine Reichweitenstufe für indirektes Feuer. Die Reichweite gibt an, wie viele Stellungen die Artillerie überbrücken kann:
+
+| Reichweitenstufe | Stellungen |
+|------------------|------------|
+| 1 | 3 |
+| 2 | 5 |
+| 3 | 7 |
+
+Eine Artillerieeinheit mit Reichweitenstufe 1 kann also Ziele bis zu 3 Stellungen entfernt angreifen, Stufe 2 bis zu 5 Stellungen, Stufe 3 bis zu 7 Stellungen.
+
+Die Reichweitenstufe wird auf der Karte angegeben. Fehlt eine Angabe, gilt Stufe 1.
+
+## 7.2 Gegenangriff
 
 Wird eine Einheit angegriffen, führt sie grundsätzlich einen Gegenangriff aus, sofern kein Kartentext oder Status dies verhindert.
 
