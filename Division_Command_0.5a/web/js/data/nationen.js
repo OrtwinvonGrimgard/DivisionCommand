@@ -1,69 +1,181 @@
-// Nationen-Decks für Division Command
-// Decks aus dem Alpha-Pool, passend zu Doktrinen und Lore.
-// Bronze-Karten bis 4×, Silber bis 2×, Gold bis 1×.
+// Nationen-Decks für Division Command 0.5a
+// Bronze 4×, Silber 2×, Gold 1×. Karten folgen DECKS_SITZT / Doktrinen.
 
 window.DC_NATIONS = {
-  "Vael": {
-    "lore": "Diszipliniert, methodisch, auf Feuerkraft und Aufklärung gestützt.",
-    "doktrinen": ['Feuerplan', 'Punktfeuer'],
-    "stil": "Artillerie und Aufklärung. Erst aufklären, dann vernichten.",
-    "deck_name": "Feuerplan Vael",
-    "deck": ["dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_haubitze", "dc_eh_haubitze", "dc_eh_haubitze", "dc_eh_haubitze", "dc_eh_donner", "dc_eh_donner", "dc_eh_donner", "dc_eh_donner", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_su_artillerie", "dc_su_artillerie", "dc_su_artillerie", "dc_su_artillerie", "dc_su_satellit", "dc_su_satellit", "dc_su_satellit", "dc_su_satellit", "dc_su_drohne", "dc_su_drohne", "dc_su_drohne", "dc_su_drohne", "dc_so_armageddon", "dc_so_armageddon", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eq_med", "dc_eq_med", "dc_eq_med", "dc_eq_med", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_helden", "dc_eh_helden", "dc_eh_helden", "dc_eh_helden", "dc_su_general", "dc_su_general", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung"]
+  "Steinmark": {
+    "lore": "Professionell und methodisch.",
+    "doktrinen": [
+      "Feuerplan",
+      "Normverband"
+    ],
+    "stil": "Professionell und methodisch.",
+    "deck_name": "Deck Steinmark",
+    "deck": [],
+    "bindung": "Recht"
   },
-  "Schloter": {
-    "lore": "Hart, direkt, auf Masse und Durchhaltevermögen gesetzt.",
-    "doktrinen": ['Normverband', 'Breites Aufgebot'],
-    "stil": "Infanterie und kombinierte Waffen. Druck aufbauen und halten.",
-    "deck_name": "Massenfront Schloter",
-    "deck": ["dc_eh_himmel", "dc_eh_himmel", "dc_eh_himmel", "dc_eh_himmel", "dc_eh_helden", "dc_eh_helden", "dc_eh_helden", "dc_eh_helden", "dc_eh_frei", "dc_eh_frei", "dc_eh_frei", "dc_eh_frei", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_dschungel", "dc_eh_dschungel", "dc_eh_dschungel", "dc_eh_dschungel", "dc_su_feldlager", "dc_su_feldlager", "dc_su_feldlager", "dc_su_feldlager", "dc_su_festung", "dc_su_festung", "dc_su_festung", "dc_su_festung", "dc_su_general", "dc_su_general", "dc_su_general", "dc_su_general", "dc_so_letzter", "dc_so_letzter", "dc_so_letzter", "dc_so_letzter", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_eq_standarte", "dc_eq_standarte", "dc_eq_standarte", "dc_eq_standarte", "dc_eq_med", "dc_eq_med", "dc_eq_med", "dc_eq_med", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_so_kavallerie", "dc_so_kavallerie", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung"]
-  },
-  "Karsk": {
-    "lore": "Mobil, opportunistisch, auf Gegenstöße und Tempo ausgerichtet.",
-    "doktrinen": ['Gegenstoß', 'Stoßtrupp'],
-    "stil": "Schnelle Reaktionen. Schaden nehmen, zurückschlagen, verschieben.",
-    "deck_name": "Gegenstoß Karsk",
-    "deck": ["dc_eh_frei", "dc_eh_frei", "dc_eh_frei", "dc_eh_frei", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_su_drohne", "dc_su_drohne", "dc_su_drohne", "dc_su_drohne", "dc_su_satellit", "dc_su_satellit", "dc_su_general", "dc_su_general", "dc_su_general", "dc_su_general", "dc_so_kavallerie", "dc_so_kavallerie", "dc_so_kavallerie", "dc_so_kavallerie", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_eq_rauch", "dc_eq_rauch", "dc_eq_rauch", "dc_eq_rauch", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eh_helden", "dc_eh_helden", "dc_eh_helden", "dc_eh_helden", "dc_so_gassen", "dc_so_gassen", "dc_eq_med", "dc_eq_med", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung"]
-  },
-  "Ossar": {
-    "lore": "Defensiv, abwartend, auf Sicherung und Ablösung bedacht.",
-    "doktrinen": ['Auffangen', 'Ablösung'],
-    "stil": "Stellungen halten. Verluste ersetzen. Abschnitte sichern.",
-    "deck_name": "Schild Ossar",
-    "deck": ["dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_helden", "dc_eh_helden", "dc_eh_helden", "dc_eh_helden", "dc_eh_himmel", "dc_eh_himmel", "dc_eh_himmel", "dc_eh_himmel", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_su_festung", "dc_su_festung", "dc_su_festung", "dc_su_festung", "dc_su_feldlager", "dc_su_feldlager", "dc_su_feldlager", "dc_su_feldlager", "dc_su_general", "dc_su_general", "dc_su_general", "dc_su_general", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_letzter", "dc_so_letzter", "dc_so_letzter", "dc_so_letzter", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eq_med", "dc_eq_med", "dc_eq_med", "dc_eq_med", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_so_bod_luft", "dc_so_bod_luft", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung"]
+  "Eldran": {
+    "lore": "Halten und zurückschlagen.",
+    "doktrinen": [
+      "Sperre",
+      "Gegenstoß"
+    ],
+    "stil": "Halten und zurückschlagen.",
+    "deck_name": "Deck Eldran",
+    "deck": [],
+    "bindung": "Krone"
   },
   "Rothain": {
-    "lore": "Schwerpunktorientiert, auf Durchbruch und Feuerwalze aus.",
-    "doktrinen": ['Schwerpunkt', 'Feuerwalze'],
-    "stil": "Einen Abschnitt wählen. Dort alles hineinwerfen.",
-    "deck_name": "Durchbruch Rothain",
-    "deck": ["dc_eh_haubitze", "dc_eh_haubitze", "dc_eh_haubitze", "dc_eh_haubitze", "dc_eh_donner", "dc_eh_donner", "dc_eh_donner", "dc_eh_donner", "dc_eh_helden", "dc_eh_helden", "dc_eh_helden", "dc_eh_helden", "dc_eh_himmel", "dc_eh_himmel", "dc_eh_himmel", "dc_eh_himmel", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_su_artillerie", "dc_su_artillerie", "dc_su_artillerie", "dc_su_artillerie", "dc_su_general", "dc_su_general", "dc_su_general", "dc_su_general", "dc_su_feldlager", "dc_su_feldlager", "dc_su_feldlager", "dc_su_feldlager", "dc_so_armageddon", "dc_so_armageddon", "dc_so_kavallerie", "dc_so_kavallerie", "dc_so_kavallerie", "dc_so_kavallerie", "dc_eq_standarte", "dc_eq_standarte", "dc_eq_standarte", "dc_eq_standarte", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_so_letzter", "dc_so_letzter", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung"]
+    "lore": "Konzentration und Ersatz.",
+    "doktrinen": [
+      "Schwerpunkt",
+      "Ablösung"
+    ],
+    "stil": "Konzentration und Ersatz.",
+    "deck_name": "Deck Rothain",
+    "deck": [],
+    "bindung": "Erbe"
   },
-  "Sahr": {
-    "lore": "Unkonventionell, auf Täuschung und Scheinschwerpunkte setzend.",
-    "doktrinen": ['Scheinschwerpunkt', 'Abriegeln'],
-    "stil": "Den Gegner täuschen. Leere Abschnitte abriegeln. Überraschend zuschlagen.",
-    "deck_name": "Täuschung Sahr",
-    "deck": ["dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_frei", "dc_eh_frei", "dc_eh_frei", "dc_eh_frei", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_dschungel", "dc_eh_dschungel", "dc_eh_dschungel", "dc_eh_dschungel", "dc_su_drohne", "dc_su_drohne", "dc_su_drohne", "dc_su_drohne", "dc_su_satellit", "dc_su_satellit", "dc_su_satellit", "dc_su_satellit", "dc_su_general", "dc_su_general", "dc_so_gassen", "dc_so_gassen", "dc_so_gassen", "dc_so_gassen", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_eq_rauch", "dc_eq_rauch", "dc_eq_rauch", "dc_eq_rauch", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_so_kavallerie", "dc_so_kavallerie", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung"]
+  "Averon": {
+    "lore": "Aufklärung und zweiter Weg.",
+    "doktrinen": [
+      "Aufklärungsschlag",
+      "Zwei Wege"
+    ],
+    "stil": "Aufklärung und zweiter Weg.",
+    "deck_name": "Deck Averon",
+    "deck": [],
+    "bindung": "Zeit"
   },
-  "Steinmark": {
-    "lore": "Zäh, ausdauernd, auf beschädigte Einheiten und Weiterkämpfen gestützt.",
-    "doktrinen": ['Weiterkämpfen', 'Ausharren'],
-    "stil": "Beschädigte Einheiten nutzen. Nicht angreifen, dann hart zurückschlagen.",
-    "deck_name": "Durchhalten Steinmark",
-    "deck": ["dc_eh_helden", "dc_eh_helden", "dc_eh_helden", "dc_eh_helden", "dc_eh_himmel", "dc_eh_himmel", "dc_eh_himmel", "dc_eh_himmel", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_su_feldlager", "dc_su_feldlager", "dc_su_feldlager", "dc_su_feldlager", "dc_su_festung", "dc_su_festung", "dc_su_festung", "dc_su_festung", "dc_su_general", "dc_su_general", "dc_su_general", "dc_su_general", "dc_so_letzter", "dc_so_letzter", "dc_so_letzter", "dc_so_letzter", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_eq_med", "dc_eq_med", "dc_eq_med", "dc_eq_med", "dc_eq_tasche", "dc_eq_tasche", "dc_eq_tasche", "dc_eq_tasche", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_so_bod_luft", "dc_so_bod_luft", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung"]
-  },
-  "Jetzt": {
-    "lore": "Modern, technisch, auf Auswertung und präzise Schläge ausgerichtet.",
-    "doktrinen": ['Auswertung', 'Lokalisierung'],
-    "stil": "Daten sammeln. Ziele markieren. Artillerie präzise einsetzen.",
-    "deck_name": "Auswertung Jetzt",
-    "deck": ["dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_haubitze", "dc_eh_haubitze", "dc_eh_haubitze", "dc_eh_haubitze", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_su_satellit", "dc_su_satellit", "dc_su_satellit", "dc_su_satellit", "dc_su_drohne", "dc_su_drohne", "dc_su_drohne", "dc_su_drohne", "dc_su_artillerie", "dc_su_artillerie", "dc_su_artillerie", "dc_su_artillerie", "dc_so_armageddon", "dc_so_armageddon", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eq_med", "dc_eq_med", "dc_eq_med", "dc_eq_med", "dc_eh_donner", "dc_eh_donner", "dc_eh_donner", "dc_eh_donner", "dc_su_general", "dc_su_general", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung"]
+  "Orthea": {
+    "lore": "Präzision und Aufdecken.",
+    "doktrinen": [
+      "Punktfeuer",
+      "Lokalisierung"
+    ],
+    "stil": "Präzision und Aufdecken.",
+    "deck_name": "Deck Orthea",
+    "deck": [],
+    "bindung": "Erkenntnis"
   },
   "Vesper": {
-    "lore": "Nachtaktiv, auf Verdeckung und Überraschung bedacht.",
-    "doktrinen": ['Lauer', 'Verteilte Stellung'],
-    "stil": "Verdeckt spielen. Aufklären. Plötzlich zuschlagen.",
-    "deck_name": "Nacht Vesper",
-    "deck": ["dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_aufklaerer", "dc_eh_frei", "dc_eh_frei", "dc_eh_frei", "dc_eh_frei", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_jaeger", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_kommando", "dc_eh_dschungel", "dc_eh_dschungel", "dc_eh_dschungel", "dc_eh_dschungel", "dc_su_drohne", "dc_su_drohne", "dc_su_drohne", "dc_su_drohne", "dc_su_satellit", "dc_su_satellit", "dc_su_satellit", "dc_su_satellit", "dc_su_general", "dc_su_general", "dc_so_gassen", "dc_so_gassen", "dc_so_gassen", "dc_so_gassen", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_eq_rauch", "dc_eq_rauch", "dc_eq_rauch", "dc_eq_rauch", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eq_spat", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_eh_mg", "dc_so_kavallerie", "dc_so_kavallerie", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung", "dc_so_deckung"]
+    "lore": "Täuschung und Abriegeln.",
+    "doktrinen": [
+      "Scheinschwerpunkt",
+      "Abriegeln"
+    ],
+    "stil": "Täuschung und Abriegeln.",
+    "deck_name": "Deck Vesper",
+    "deck": [],
+    "bindung": "System"
   },
+  "Karsk": {
+    "lore": "Der eine Stoß, und weitermachen.",
+    "doktrinen": [
+      "Stoßtrupp",
+      "Weiterkämpfen"
+    ],
+    "stil": "Der eine Stoß, und weitermachen.",
+    "deck_name": "Deck Karsk",
+    "deck": [],
+    "bindung": "Körper"
+  },
+  "Caldris": {
+    "lore": "Abschnitt schützen, wer ruht schlägt.",
+    "doktrinen": [
+      "Etappensicherung",
+      "Rasten"
+    ],
+    "stil": "Abschnitt schützen, wer ruht schlägt.",
+    "deck_name": "Deck Caldris",
+    "deck": [],
+    "bindung": "Fürsorge"
+  },
+  "Theryn": {
+    "lore": "Masse und der eine harte Schlag.",
+    "doktrinen": [
+      "Breites Aufgebot",
+      "Sturmangriff"
+    ],
+    "stil": "Masse und der eine harte Schlag.",
+    "deck_name": "Deck Theryn",
+    "deck": [],
+    "bindung": "Glaube"
+  },
+  "Vael": {
+    "lore": "Feuer und Materialersatz.",
+    "doktrinen": [
+      "Feuerwalze",
+      "Materialersatz"
+    ],
+    "stil": "Feuer und Materialersatz.",
+    "deck_name": "Deck Vael",
+    "deck": [],
+    "bindung": "Geschäft"
+  },
+  "Sahr": {
+    "lore": "Linie und Umgehung.",
+    "doktrinen": [
+      "Linienkrieg",
+      "Umgehen"
+    ],
+    "stil": "Linie und Umgehung.",
+    "deck_name": "Deck Sahr",
+    "deck": [],
+    "bindung": "Fluss"
+  },
+  "Namar": {
+    "lore": "Nachschub und Entsatz.",
+    "doktrinen": [
+      "Marsch aus dem Vollen",
+      "Entsatz"
+    ],
+    "stil": "Nachschub und Entsatz.",
+    "deck_name": "Deck Namar",
+    "deck": [],
+    "bindung": "Häfen"
+  },
+  "Merovan": {
+    "lore": "Schieben und halten.",
+    "doktrinen": [
+      "Verlegung",
+      "Ausharren"
+    ],
+    "stil": "Schieben und halten.",
+    "deck_name": "Deck Merovan",
+    "deck": [],
+    "bindung": "Weg"
+  },
+  "Dargan": {
+    "lore": "Abschließen und Tilgung.",
+    "doktrinen": [
+      "Zielangriff",
+      "Abschluss"
+    ],
+    "stil": "Abschließen und Tilgung.",
+    "deck_name": "Deck Dargan",
+    "deck": [],
+    "bindung": "Schuld"
+  },
+  "Lyr": {
+    "lore": "Auflauern und verteilen.",
+    "doktrinen": [
+      "Lauer",
+      "Verteilte Stellung"
+    ],
+    "stil": "Auflauern und verteilen.",
+    "deck_name": "Deck Lyr",
+    "deck": [],
+    "bindung": "Eid"
+  },
+  "Ossaria": {
+    "lore": "Verlust wird Deckung.",
+    "doktrinen": [
+      "Abnutzung",
+      "Gepanzerter Fuß"
+    ],
+    "stil": "Verlust wird Deckung.",
+    "deck_name": "Deck Ossaria",
+    "deck": [],
+    "bindung": "Tote"
+  }
 };
