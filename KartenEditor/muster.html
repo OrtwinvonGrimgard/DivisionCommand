@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kartenlayout — Muster</title>
+  <style>
+    html, body { margin: 0; background: #0c0806; color: #e8d7a8; font-family: Georgia, serif; }
+    header { text-align: center; padding: 16px 12px 8px; }
+    h1 { margin: 0; letter-spacing: .22em; color: #e2c36a; font-size: 22px; }
+    p { margin: 8px auto 0; max-width: 52rem; font-size: 14px; color: #c9b080; }
+    a.btn { display: inline-block; margin-top: 12px; padding: 8px 18px; border: 2px solid #c9a44a; color: #e8d7a8; text-decoration: none; letter-spacing: .08em; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      padding: 16px 18px 32px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    figure { margin: 0; text-align: center; }
+    figure img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #c9a44a;
+      box-shadow: 0 8px 24px #000a;
+      background: #160e0a;
+    }
+    figcaption { margin-top: 8px; letter-spacing: .12em; font-size: 12px; color: #c9a44a; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KARTENLAYOUT</h1>
+    <p>Neues Raster: Motiv, AP-Münze, Name, Typzeile, Fähigkeiten, ATK/DEF. Motive sind aus den alten Karten ausgeschnitten.</p>
+    <a class="btn" href="index.html">Zum Editor</a>
+  </header>
+  <div class="grid">
+    <figure>
+      <img src="samples/Aufklärer.png" alt="Aufklärer">
+      <figcaption>EINHEIT — Aufklärer</figcaption>
+    </figure>
+    <figure>
+      <img src="samples/Mittlerer_Panzer_Donnerkeil.png" alt="Donnerkeil">
+      <figcaption>EINHEIT — Donnerkeil</figcaption>
+    </figure>
+    <figure>
+      <img src="samples/Armageddon.png" alt="Armageddon">
+      <figcaption>SOFORTEINSATZ — Armageddon</figcaption>
+    </figure>
+    <figure>
+      <img src="samples/Blitzkrieg.png" alt="Blitzkrieg">
+      <figcaption>DOKTRIN — Blitzkrieg</figcaption>
+    </figure>
+    <figure>
+      <img src="samples/Artilleriestellung.png" alt="Artilleriestellung">
+      <figcaption>UNTERSTÜTZUNG — Artillerie</figcaption>
+    </figure>
+    <figure>
+      <img src="samples/Klappspaten.png" alt="Klappspaten">
+      <figcaption>AUSRÜSTUNG — Klappspaten</figcaption>
+    </figure>
+  </div>
+</body>
+</html>

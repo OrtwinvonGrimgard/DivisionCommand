@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ALPHA — Einheiten</title>
+  <style>
+    html, body { margin: 0; background: #0c0806; color: #e8d7a8; font-family: Georgia, serif; }
+    h1 { text-align: center; letter-spacing: .18em; color: #e2c36a; font-size: 22px; margin: 16px 0 6px; }
+    p.lead { text-align: center; color: #b8a078; font-size: 13px; margin: 0 0 18px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px 14px;
+      padding: 8px 22px 40px;
+      max-width: 1480px;
+      margin: 0 auto;
+    }
+    figure { margin: 0; text-align: center; }
+    figure img {
+      width: 100%; height: auto; display: block;
+      border-radius: 8px;
+      box-shadow: 0 10px 22px #000a;
+    }
+    figcaption { margin-top: 8px; font-size: 12px; letter-spacing: .04em; }
+    figcaption b { display: block; color: #f0e0b0; font-size: 13px; }
+    .m-gold { color: #d4b45a; }
+    .m-silber { color: #c8c8d0; }
+    .m-bronze { color: #c08048; }
+  </style>
+</head>
+<body>
+  <h1>ALPHA · EINHEITEN 001–023</h1>
+  <p class="lead">Rahmen = Seltenheit nach Stärke · Stern bei Elite</p>
+  <div class="grid" id="g"></div>
+  <script>
+    fetch("samples/einheiten/index.json").then(r => r.json()).then(list => {
+      const g = document.getElementById("g");
+      list.forEach(c => {
+        const f = document.createElement("figure");
+        f.innerHTML = '<img src="' + c.file + '" alt="' + c.name + '">'
+          + "<figcaption><b>ALPHA-" + c.n + (c.elite ? " ★" : "") + "</b>"
+          + c.name + "<br><span class='m-" + c.metal + "'>" + c.metal.toUpperCase()
+          + "</span> · " + c.ap + " AP · " + c.atk + "/" + c.def + "</figcaption>";
+        g.appendChild(f);
+      });
+    });
+  </script>
+</body>
+</html>

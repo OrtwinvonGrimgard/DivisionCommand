@@ -1,0 +1,33 @@
+Division Command — Karteneditor
+================================
+
+Start
+-----
+Windows:  start.bat doppelklicken
+  (installiert beim ersten Mal Pillow und NumPy, öffnet dann den Editor)
+
+Voraussetzung: Python 3 von python.org, Haken bei „Add python.exe to PATH“.
+
+Falls start.bat meckert:
+  python -m pip install pillow numpy
+
+Danach nochmal start.bat.
+
+Was der Editor kann
+-------------------
+Vorlagen: Einheit, Unterstützung, Ausrüstung, Soforteinsatz, Doktrin, Token.
+Rahmen: Gold, Silber, Bronze.
+Einheit: Samt-Gattung, Tags, ATK/DEF/AP, Öl-Marmor neu würfelbar.
+Doktrin: Öl-Marmor oben, Lederfelder wachsen mit dem Text.
+Token: Minenfeld (Dreieck), Nebel (Kreis), transparenter Hintergrund.
+
+PNG speichern schreibt die gerenderte Karte.
+Entwurf speichern bleibt lokal im Browser.
+
+Ordner
+------
+editor.html     Editor
+tools/serve.py  Server + Renderer
+assets/         Bilder, Texturen, Embleme
+design/templates  gesperrte Vorlagen
+js/sets/        Kartendaten

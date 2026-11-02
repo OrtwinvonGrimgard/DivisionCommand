@@ -1,0 +1,93 @@
+.de-wrap { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(280px, 42%) 1fr; gap: 14px; overflow: hidden; }
+.de-stage {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 0; background: #080604; border: 2px solid #c9a44a; padding: 12px;
+}
+.de-stage img {
+  max-height: 100%; max-width: 100%;
+  height: min(86vh, 100%);
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 14px 32px #000d;
+  cursor: grab;
+}
+.de-stage img.dragging { cursor: grabbing; }
+#de-busy {
+  position: absolute; right: 16px; top: 16px;
+  background: #1a0c08ee; color: #e2c36a; border: 1px solid #c9a44a;
+  padding: 6px 10px; letter-spacing: .14em; font-size: 12px;
+}
+.de-form { min-height: 0; overflow: auto; background: #120a08ee; border: 2px solid #c9a44a; padding: 12px 14px 18px; display: flex; flex-direction: column; gap: 8px; }
+.de-form h2 { margin: 8px 0 0; font-size: 12px; letter-spacing: .16em; color: #c9a44a; border-bottom: 1px solid #c9a44a; padding-bottom: 4px; }
+.de-form h2:first-child { margin-top: 0; }
+.de-form label { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: #c9a44a; }
+.de-form input[type=text], .de-form input[type=number], .de-form select, .de-form textarea {
+  background: #fff; color: #1a0c0c; border: 2px solid #c9a44a; padding: 6px 8px; font: inherit; width: 100%; box-sizing: border-box;
+}
+.de-form textarea { min-height: 88px; resize: vertical; }
+.de-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+.de-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.de-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+.de-check { flex-direction: row !important; align-items: center; gap: 8px !important; color: #e8d7a8 !important; }
+.de-tiny { font-size: 11px; color: #b8a078; margin: 0; }
+.de-metal, .de-gattung {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;
+}
+.de-gattung { grid-template-columns: 1fr 1fr; }
+.de-metal label, .de-gattung label {
+  flex-direction: row !important; align-items: center; gap: 6px !important;
+  border: 2px solid #c9a44a; background: #1a100c; color: #e8d7a8; padding: 6px 8px;
+}
+.de-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.de-tag {
+  background: #1a100c; color: #e8d7a8; border: 2px solid var(--tag, #c9a44a);
+  padding: 6px 10px; font: 700 11px Georgia, serif; letter-spacing: .08em; cursor: pointer;
+}
+.de-tag.on { background: var(--tag, #c9a44a); color: #fff8e0; }
+.de-form[data-typ="Doktrin"] .einheit-only,
+.de-form[data-typ="Unterstützung"] .einheit-only,
+.de-form[data-typ="Ausrüstung"] .einheit-only,
+.de-form[data-typ="Soforteinsatz"] .einheit-only,
+.de-form[data-typ="Token"] .einheit-only { display: none !important; }
+.de-form[data-typ="Doktrin"] .no-doktrin,
+.de-form[data-typ="Token"] .no-token { display: none !important; }
+.de-form[data-typ="Soforteinsatz"] .de-row.no-doktrin { display: none !important; }
+.de-form[data-typ="Einheit"] .leather-hint,
+.de-form[data-typ="Einheit"] .doktrin-only,
+.de-form[data-typ="Einheit"] .support-only,
+.de-form[data-typ="Einheit"] .gear-only,
+.de-form[data-typ="Einheit"] .sofort-only,
+.de-form[data-typ="Einheit"] .token-only { display: none !important; }
+.de-form[data-typ="Unterstützung"] .marble-only { display: none !important; }
+.de-form[data-typ="Unterstützung"] .leather-hint,
+.de-form[data-typ="Ausrüstung"] .leather-hint,
+.de-form[data-typ="Soforteinsatz"] .leather-hint,
+.de-form[data-typ="Soforteinsatz"] .marble-only,
+.de-form[data-typ="Token"] .leather-hint { display: none !important; }
+.de-form[data-typ="Doktrin"] .support-only,
+.de-form[data-typ="Doktrin"] .gear-only,
+.de-form[data-typ="Doktrin"] .sofort-only,
+.de-form[data-typ="Doktrin"] .token-only { display: none !important; }
+.de-form[data-typ="Unterstützung"] .gear-only,
+.de-form[data-typ="Unterstützung"] .sofort-only,
+.de-form[data-typ="Unterstützung"] .token-only { display: none !important; }
+.de-form[data-typ="Ausrüstung"] .support-only,
+.de-form[data-typ="Ausrüstung"] .sofort-only,
+.de-form[data-typ="Ausrüstung"] .token-only { display: none !important; }
+.de-form[data-typ="Soforteinsatz"] .support-only,
+.de-form[data-typ="Soforteinsatz"] .gear-only,
+.de-form[data-typ="Soforteinsatz"] .token-only { display: none !important; }
+.de-form[data-typ="Token"] .support-only,
+.de-form[data-typ="Token"] .gear-only,
+.de-form[data-typ="Token"] .sofort-only { display: none !important; }
+.de-form:not([data-typ="Token"]) .token-only { display: none !important; }
+.de-form[data-typ="Token"][data-token="nebel"] .mine-only { display: none !important; }
+.de-metal#de-typ { grid-template-columns: 1fr 1fr; }
+.de-metal { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+.de-newtag { display: grid; grid-template-columns: 1fr 44px auto; gap: 6px; align-items: center; }
+.de-newtag input[type=color] { height: 34px; padding: 2px; background: #1a100c; border: 2px solid #c9a44a; }
+@media (max-width: 900px) {
+  .de-wrap { grid-template-columns: 1fr; grid-template-rows: 48% 1fr; }
+}

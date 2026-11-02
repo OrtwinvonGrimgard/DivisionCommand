@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Division Command — Karteneditor</title>
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/designer.css">
+</head>
+<body>
+  <div id="scr-designer">
+    <h1 class="page-title">KARTENEDITOR</h1>
+    <div class="de-wrap">
+      <div class="de-stage">
+        <img id="de-preview" alt="Kartenvorschau" src="">
+        <div id="de-busy" hidden>rendert …</div>
+      </div>
+      <form class="de-form" id="de-form" data-typ="Einheit" autocomplete="off">
+        <h2>Vorlage</h2>
+        <div class="de-metal" id="de-typ">
+          <label><input type="radio" name="typ" value="Einheit" checked> Einheit</label>
+          <label><input type="radio" name="typ" value="Unterstützung"> Unterstützung</label>
+          <label><input type="radio" name="typ" value="Ausrüstung"> Ausrüstung</label>
+          <label><input type="radio" name="typ" value="Soforteinsatz"> Einsatz</label>
+          <label><input type="radio" name="typ" value="Token"> Token</label>
+          <label><input type="radio" name="typ" value="Doktrin"> Doktrin</label>
+        </div>
+        <p class="de-tiny einheit-only">Titel, Werte und Tags sitzen in den festen Fonts und Plätzen der Karte. Marmor ist Öl-Muster, jedes Mal neu würfelbar.</p>
+        <p class="de-tiny support-only">Unterstützung: Stahlgrund, Messing-Titel, Rotleder-Textbox. AP-Kranz, Logo und Fonts wie Einheit, ohne ATK/DEF.</p>
+        <p class="de-tiny gear-only">Ausrüstung: Lackgrund, Öl-Marmor-Titel, Doktrin-Rotleder. AP, Logo und Maße wie Unterstützung.</p>
+        <p class="de-tiny sofort-only">Soforteinsatz: Eisengrund, Karmesin-Titel über dem Bild, Rotleder. Keine AP, keine ATK/DEF.</p>
+        <p class="de-tiny token-only">Token: Minenfeld als Dreieck, Nebel als Kreis. Metall Gold · Silber · Bronze. Nebel jedes Mal neu würfelbar.</p>
+        <div class="de-metal token-only" id="de-token-kind">
+          <label><input type="radio" name="token_kind" value="minenfeld" checked> Minenfeld</label>
+          <label><input type="radio" name="token_kind" value="nebel"> Nebel</label>
+        </div>
+        <p class="de-tiny leather-hint">Lederfelder wachsen mit dem Text. Marmor oben ist das Öl-Muster, jedes Mal neu.</p>
+
+        <label>Titel <input id="de-name" type="text" maxlength="40" value="Stoßtrupp Lehm"></label>
+        <div class="de-row no-doktrin no-token">
+          <label>AP <input id="de-ap" type="number" min="0" max="20" value="3"></label>
+          <label class="einheit-only">ATK <input id="de-atk-in" type="number" min="0" max="99" value="3"></label>
+          <label class="einheit-only">DEF <input id="de-def-in" type="number" min="0" max="99" value="4"></label>
+        </div>
+        <div class="de-row mine-only token-only">
+          <label>Schaden <input id="de-dmg" type="number" min="0" max="20" value="3"></label>
+        </div>
+
+        <h2>Edition</h2>
+        <div class="de-row2">
+          <label>Version <input id="de-edition" type="text" maxlength="16" value="ALPHA"></label>
+          <label>Kartennummer <input id="de-number" type="text" maxlength="8" value="001"></label>
+        </div>
+        <label class="de-check"><input id="de-star" type="checkbox"> Goldener Stern zwischen Logo und Nummer</label>
+
+        <h2>Rahmen</h2>
+        <div class="de-metal" id="de-metal">
+          <label><input type="radio" name="metal" value="gold" checked> Gold</label>
+          <label><input type="radio" name="metal" value="silber"> Silber</label>
+          <label><input type="radio" name="metal" value="bronze"> Bronze</label>
+        </div>
+
+        <h2 class="einheit-only">Gattung (Samt)</h2>
+        <div class="de-gattung einheit-only" id="de-gattung">
+          <label><input type="radio" name="klasse" value="Infanterie" checked> Infanterie</label>
+          <label><input type="radio" name="klasse" value="Artillerie"> Artillerie</label>
+          <label><input type="radio" name="klasse" value="Panzer"> Panzer</label>
+          <label><input type="radio" name="klasse" value="Aufklärer"> Aufklärer</label>
+        </div>
+
+        <h2 class="no-doktrin">Tags</h2>
+        <div class="de-tags no-doktrin" id="de-tags"></div>
+        <div class="de-newtag no-doktrin">
+          <input id="de-tag-new" type="text" maxlength="18" placeholder="neuer Tag">
+          <input id="de-tag-color" type="color" value="#c9a44a">
+          <button type="button" id="de-tag-add">Anlegen</button>
+        </div>
+
+        <label>Regeltext <textarea id="de-rules">Sturmangriff: +1 ATK, wenn diese Einheit angreift.
+Deckung: Nachbar erhält +1 DEF.</textarea></label>
+        <p class="de-tiny leather-hint">Jede Zeile „Name: Wirkung.“ wird ein eigenes Lederfeld, Höhe nach Text.</p>
+        <label>Zitat <input id="de-quote" type="text" value="Lehm hält, wo Stahl bricht."></label>
+
+        <h2>Motiv</h2>
+        <label>Bestehende Karte <select id="de-load"></select></label>
+        <label class="no-doktrin">Bild <input id="de-file" type="file" accept="image/*"></label>
+        <p class="de-tiny no-doktrin">Ziehen = verschieben. Mausrad = zoomen.</p>
+        <div class="de-row2 no-doktrin">
+          <label>Horizontal <input id="de-art-x" type="range" min="-100" max="100" value="0"></label>
+          <label>Vertikal <input id="de-art-y" type="range" min="-100" max="100" value="0"></label>
+        </div>
+        <label class="no-doktrin">Zoom <input id="de-art-z" type="range" min="100" max="250" value="100"></label>
+        <div class="de-actions marble-only token-nebel">
+          <button type="button" id="de-marble-btn">Marmor / Nebel neu würfeln</button>
+        </div>
+        <div class="de-actions">
+          <button type="button" class="primary" id="de-png-btn">PNG speichern</button>
+          <button type="button" id="de-save-btn">Entwurf speichern</button>
+        </div>
+        <p class="de-tiny" id="de-save-path"></p>
+      </form>
+    </div>
+  </div>
+  <div class="ver">Vorlagen Einheit · Unterstützung · Ausrüstung · Einsatz · Token · Doktrin</div>
+  <script src="js/sets/doktrinen.js"></script>
+  <script src="js/sets/tokens.js"></script>
+  <script src="js/sets/einheiten.js"></script>
+  <script src="js/sets/unterstuetzung.js"></script>
+  <script src="js/sets/soforteinsaetze.js"></script>
+  <script src="js/sets/ausruestung.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/designer.js"></script>
+</body>
+</html>
