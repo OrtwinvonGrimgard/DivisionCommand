@@ -683,17 +683,20 @@ Die 60 Karten sind ein Richtwert und kein zwingendes hartes Minimum.
 
 Das System soll grundsätzlich freie Deckkonstruktion erlauben, sofern der endgültige Kartentext keine zusätzlichen Beschränkungen erzeugt.
 
-## 24.1 Seltenheitsstufen und Kopienlimits
+## 24.1 Seltenheitsstufen
 
-Jede Spielkarte besitzt eine Seltenheitsstufe, die bestimmt, wie oft sie im Hauptdeck enthalten sein darf:
+Jede Spielkarte besitzt eine Seltenheitsstufe. Die Stufe bestimmt zwei Dinge:
 
-| Stufe | Maximale Kopien im Deck | Typische Rolle |
-|-------|-------------------------|----------------|
-| **Bronze** | 4 | Grundkarten, häufige Einheiten und Effekte |
-| **Silber** | 2 | Spezialisierte oder stärkere Karten |
-| **Gold** | 1 | Einzigartige oder besonders mächtige Karten |
+1. die maximale Kopienzahl im Hauptdeck
+2. die Sphäre (den Wirkungsbereich) des Kartentextes
 
-Die Stufe steuert ausschließlich die erlaubte Kopienzahl. Sie verändert nicht automatisch den Wirkungsgrad oder die Sphäre eines Effekts – das wird durch den Kartentext bestimmt.
+| Stufe | Max. Kopien | Sphäre / Wirkungsbereich | Typische Gestaltung |
+|-------|-------------|---------------------------|---------------------|
+| **Bronze** | 4 | Klein – eine einzelne Einheit oder ein eng begrenzter Effekt | Grundeffekte, lokale Unterstützung, Einzelziel |
+| **Silber** | 2 | Mittel – mehrere Einheiten oder ein Frontabschnitt | Bereichseffekte, Abschnittsunterstützung, koordinierte Aktionen |
+| **Gold** | 1 | Groß – ganze Fronten, mehrere Abschnitte oder weitreichende Effekte | Frontweite Wirkung, starke Synergien, strategische Eingriffe |
+
+Die Sphäre ist eine Gestaltungsrichtlinie für den Kartentext, keine harte mechanische Grenze. Ein Bronzekartentext wirkt typischerweise auf eine Einheit oder eine Stellung, ein Silberkartentext auf einen Abschnitt oder mehrere Einheiten, ein Goldkartentext auf eine ganze Front oder mehrere Abschnitte.
 
 Doktrinen unterliegen dieser Regelung nicht und werden separat behandelt (siehe 24.2).
 
