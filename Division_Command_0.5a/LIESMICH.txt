@@ -6,12 +6,12 @@ Taktisches Sammelkartenspiel. Offline, Hotseat, Bot und LAN.
 
 EIN ZIP ENTPACKEN
 -----------------
-1. Division_Command_0.32c.zip in einen leeren Ordner legen.
+1. Division_Command_0.5a.zip in einen leeren Ordner legen.
 2. Rechtsklick → Alle extrahieren.
 
 Es entsteht:
 
-  Division_Command_0.32c\
+  Division_Command_0.5a\
       start.bat
       firewall.bat
       build.bat
