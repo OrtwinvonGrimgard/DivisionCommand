@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-v1';
+const CACHE = 'divcmd-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -8,6 +8,8 @@ const ASSETS = [
   './js/data/catalog.js',
   './js/data/nationen.js',
   './assets/title-logo.png',
+  './assets/icon-192.svg',
+  './assets/icon-512.svg',
   './assets/icon-192.png',
   './assets/icon-512.png'
 ];
