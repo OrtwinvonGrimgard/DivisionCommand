@@ -683,7 +683,21 @@ Die 60 Karten sind ein Richtwert und kein zwingendes hartes Minimum.
 
 Das System soll grundsätzlich freie Deckkonstruktion erlauben, sofern der endgültige Kartentext keine zusätzlichen Beschränkungen erzeugt.
 
-## 24.1 Doktrinen
+## 24.1 Seltenheitsstufen und Kopienlimits
+
+Jede Spielkarte besitzt eine Seltenheitsstufe, die bestimmt, wie oft sie im Hauptdeck enthalten sein darf:
+
+| Stufe | Maximale Kopien im Deck | Typische Rolle |
+|-------|-------------------------|----------------|
+| **Bronze** | 4 | Grundkarten, häufige Einheiten und Effekte |
+| **Silber** | 2 | Spezialisierte oder stärkere Karten |
+| **Gold** | 1 | Einzigartige oder besonders mächtige Karten |
+
+Die Stufe steuert ausschließlich die erlaubte Kopienzahl. Sie verändert nicht automatisch den Wirkungsgrad oder die Sphäre eines Effekts – das wird durch den Kartentext bestimmt.
+
+Doktrinen unterliegen dieser Regelung nicht und werden separat behandelt (siehe 24.2).
+
+## 24.2 Doktrinen
 
 Jedes Deck besitzt:
 
