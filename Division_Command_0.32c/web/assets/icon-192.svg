@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <rect width="192" height="192" fill="#12140f"/>
+  <g fill="#d4af37" stroke="#b8860b" stroke-width="2">
+    <rect x="16" y="16" width="160" height="160" rx="8" fill="none"/>
+    <text x="96" y="110" font-family="serif" font-size="70" font-weight="bold" text-anchor="middle" fill="#d4af37">DC</text>
+  </g>
+</svg>
