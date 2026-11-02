@@ -29,7 +29,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_eh_sensortrupp",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A293.jpg",
+    "image": "nations/jetzt/A293.jpg",
     "collector": "A293"
   },
   {
@@ -60,7 +60,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_eh_drohnenbedienung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A294.jpg",
+    "image": "nations/jetzt/A294.jpg",
     "collector": "A294"
   },
   {
@@ -91,7 +91,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_eh_prazisionsgeschutz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A295.jpg",
+    "image": "nations/jetzt/A295.jpg",
     "collector": "A295"
   },
   {
@@ -119,7 +119,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_eh_datenpanzer",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A296.jpg",
+    "image": "nations/jetzt/A296.jpg",
     "collector": "A296"
   },
   {
@@ -147,7 +147,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_un_rechenknoten",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A297.jpg",
+    "image": "nations/jetzt/A297.jpg",
     "collector": "A297"
   },
   {
@@ -182,7 +182,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_un_zielnetz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A298.jpg",
+    "image": "nations/jetzt/A298.jpg",
     "collector": "A298"
   },
   {
@@ -210,7 +210,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_so_datenstoss",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A299.jpg",
+    "image": "nations/jetzt/A299.jpg",
     "collector": "A299"
   },
   {
@@ -239,7 +239,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_so_lageupdate",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A300.jpg",
+    "image": "nations/jetzt/A300.jpg",
     "collector": "A300"
   },
   {
@@ -268,7 +268,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_so_kalibrierung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A301.jpg",
+    "image": "nations/jetzt/A301.jpg",
     "collector": "A301"
   },
   {
@@ -297,7 +297,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_eq_zielhilfe",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A302.jpg",
+    "image": "nations/jetzt/A302.jpg",
     "collector": "A302"
   },
   {
@@ -333,7 +333,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_eh_prazisionsjager",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A303.jpg",
+    "image": "nations/jetzt/A303.jpg",
     "collector": "A303"
   },
   {
@@ -364,7 +364,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_eh_autonomer_keil",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A304.jpg",
+    "image": "nations/jetzt/A304.jpg",
     "collector": "A304"
   },
   {
@@ -399,7 +399,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_un_satellitenlink",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A305.jpg",
+    "image": "nations/jetzt/A305.jpg",
     "collector": "A305"
   },
   {
@@ -428,7 +428,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_un_drohnenkommando",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A306.jpg",
+    "image": "nations/jetzt/A306.jpg",
     "collector": "A306"
   },
   {
@@ -456,7 +456,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_so_prazisionsschlag",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A307.jpg",
+    "image": "nations/jetzt/A307.jpg",
     "collector": "A307"
   },
   {
@@ -481,7 +481,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_so_systemreboot",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A308.jpg",
+    "image": "nations/jetzt/A308.jpg",
     "collector": "A308"
   },
   {
@@ -510,7 +510,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_eq_sensorpaket",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A309.jpg",
+    "image": "nations/jetzt/A309.jpg",
     "collector": "A309"
   },
   {
@@ -550,7 +550,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_eh_netzwerk_elite",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A310.jpg",
+    "image": "nations/jetzt/A310.jpg",
     "collector": "A310"
   },
   {
@@ -582,7 +582,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_eh_prazisionsbatterie",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A311.jpg",
+    "image": "nations/jetzt/A311.jpg",
     "collector": "A311"
   },
   {
@@ -618,7 +618,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_un_lagezentrum",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A312.jpg",
+    "image": "nations/jetzt/A312.jpg",
     "collector": "A312"
   },
   {
@@ -647,7 +647,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_so_kill_chain",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A313.jpg",
+    "image": "nations/jetzt/A313.jpg",
     "collector": "A313"
   },
   {
@@ -677,7 +677,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_so_uberlegene_auswertung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A314.jpg",
+    "image": "nations/jetzt/A314.jpg",
     "collector": "A314"
   },
   {
@@ -707,7 +707,7 @@ window.DC_SET_NATIONS["Jetzt"] = [
     "id": "dc_n_eq_feuerleit_ai",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A315.jpg",
+    "image": "nations/jetzt/A315.jpg",
     "collector": "A315"
   }
 ];

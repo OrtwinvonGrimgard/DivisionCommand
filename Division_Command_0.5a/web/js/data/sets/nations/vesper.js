@@ -29,7 +29,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_eh_nachtpatrouille",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A316.jpg",
+    "image": "nations/vesper/A316.jpg",
     "collector": "A316"
   },
   {
@@ -57,7 +57,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_eh_schleichzug",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A317.jpg",
+    "image": "nations/vesper/A317.jpg",
     "collector": "A317"
   },
   {
@@ -84,7 +84,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_eh_uberwacher",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A318.jpg",
+    "image": "nations/vesper/A318.jpg",
     "collector": "A318"
   },
   {
@@ -121,7 +121,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_eh_stiller_spaher",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A319.jpg",
+    "image": "nations/vesper/A319.jpg",
     "collector": "A319"
   },
   {
@@ -151,7 +151,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_un_nebelwand",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A320.jpg",
+    "image": "nations/vesper/A320.jpg",
     "collector": "A320"
   },
   {
@@ -179,7 +179,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_un_kontrollzelle",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A321.jpg",
+    "image": "nations/vesper/A321.jpg",
     "collector": "A321"
   },
   {
@@ -207,7 +207,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_so_nachtangriff",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A322.jpg",
+    "image": "nations/vesper/A322.jpg",
     "collector": "A322"
   },
   {
@@ -236,7 +236,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_so_akte_offnen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A323.jpg",
+    "image": "nations/vesper/A323.jpg",
     "collector": "A323"
   },
   {
@@ -265,7 +265,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_so_verschleiern",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A324.jpg",
+    "image": "nations/vesper/A324.jpg",
     "collector": "A324"
   },
   {
@@ -295,7 +295,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_eq_nachtsicht",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A325.jpg",
+    "image": "nations/vesper/A325.jpg",
     "collector": "A325"
   },
   {
@@ -326,7 +326,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_eh_schattenkompanie",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A326.jpg",
+    "image": "nations/vesper/A326.jpg",
     "collector": "A326"
   },
   {
@@ -363,7 +363,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_eh_uberwachungskette",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A327.jpg",
+    "image": "nations/vesper/A327.jpg",
     "collector": "A327"
   },
   {
@@ -394,7 +394,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_un_abhornetz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A328.jpg",
+    "image": "nations/vesper/A328.jpg",
     "collector": "A328"
   },
   {
@@ -428,7 +428,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_un_stornebel",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A329.jpg",
+    "image": "nations/vesper/A329.jpg",
     "collector": "A329"
   },
   {
@@ -453,7 +453,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_so_stille_ubernahme",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A330.jpg",
+    "image": "nations/vesper/A330.jpg",
     "collector": "A330"
   },
   {
@@ -482,7 +482,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_so_aktenfund",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A331.jpg",
+    "image": "nations/vesper/A331.jpg",
     "collector": "A331"
   },
   {
@@ -513,7 +513,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_eq_tarnanzug",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A332.jpg",
+    "image": "nations/vesper/A332.jpg",
     "collector": "A332"
   },
   {
@@ -551,7 +551,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_eh_nachtjager",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A333.jpg",
+    "image": "nations/vesper/A333.jpg",
     "collector": "A333"
   },
   {
@@ -582,7 +582,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_eh_systemwachter",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A334.jpg",
+    "image": "nations/vesper/A334.jpg",
     "collector": "A334"
   },
   {
@@ -614,7 +614,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_un_zentrale_der_zuge",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A335.jpg",
+    "image": "nations/vesper/A335.jpg",
     "collector": "A335"
   },
   {
@@ -643,7 +643,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_so_aus_dem_spiel",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A336.jpg",
+    "image": "nations/vesper/A336.jpg",
     "collector": "A336"
   },
   {
@@ -669,7 +669,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_so_nacht_der_langen_akten",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A337.jpg",
+    "image": "nations/vesper/A337.jpg",
     "collector": "A337"
   },
   {
@@ -699,7 +699,7 @@ window.DC_SET_NATIONS["Vesper"] = [
     "id": "dc_n_eq_uberwachungsmodul",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A338.jpg",
+    "image": "nations/vesper/A338.jpg",
     "collector": "A338"
   }
 ];

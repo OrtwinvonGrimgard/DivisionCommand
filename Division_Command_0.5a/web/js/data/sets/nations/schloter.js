@@ -20,7 +20,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_eh_wehrpflichtige",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A155.jpg",
+    "image": "nations/schloter/A155.jpg",
     "collector": "A155"
   },
   {
@@ -46,7 +46,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_eh_schutzenzug",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A156.jpg",
+    "image": "nations/schloter/A156.jpg",
     "collector": "A156"
   },
   {
@@ -73,7 +73,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_eh_milizkompanie",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A157.jpg",
+    "image": "nations/schloter/A157.jpg",
     "collector": "A157"
   },
   {
@@ -99,7 +99,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_eh_sturmgruppe",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A158.jpg",
+    "image": "nations/schloter/A158.jpg",
     "collector": "A158"
   },
   {
@@ -128,7 +128,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_un_ersatzlager",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A159.jpg",
+    "image": "nations/schloter/A159.jpg",
     "collector": "A159"
   },
   {
@@ -156,7 +156,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_un_feldkuche",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A160.jpg",
+    "image": "nations/schloter/A160.jpg",
     "collector": "A160"
   },
   {
@@ -181,7 +181,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_so_sammelruf",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A161.jpg",
+    "image": "nations/schloter/A161.jpg",
     "collector": "A161"
   },
   {
@@ -210,7 +210,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_so_ansturm",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A162.jpg",
+    "image": "nations/schloter/A162.jpg",
     "collector": "A162"
   },
   {
@@ -239,7 +239,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_so_nachschub_an_mannern",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A163.jpg",
+    "image": "nations/schloter/A163.jpg",
     "collector": "A163"
   },
   {
@@ -269,7 +269,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_eq_feldspaten",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A164.jpg",
+    "image": "nations/schloter/A164.jpg",
     "collector": "A164"
   },
   {
@@ -295,7 +295,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_eh_grenadierzug",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A165.jpg",
+    "image": "nations/schloter/A165.jpg",
     "collector": "A165"
   },
   {
@@ -321,7 +321,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_eh_veteranenzug",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A166.jpg",
+    "image": "nations/schloter/A166.jpg",
     "collector": "A166"
   },
   {
@@ -356,7 +356,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_un_regimentsstab",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A167.jpg",
+    "image": "nations/schloter/A167.jpg",
     "collector": "A167"
   },
   {
@@ -390,7 +390,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_un_sammelstelle",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A168.jpg",
+    "image": "nations/schloter/A168.jpg",
     "collector": "A168"
   },
   {
@@ -415,7 +415,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_so_mobilisierung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A169.jpg",
+    "image": "nations/schloter/A169.jpg",
     "collector": "A169"
   },
   {
@@ -440,7 +440,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_so_menschenwelle",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A170.jpg",
+    "image": "nations/schloter/A170.jpg",
     "collector": "A170"
   },
   {
@@ -470,7 +470,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_eq_sturmgewehrsatz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A171.jpg",
+    "image": "nations/schloter/A171.jpg",
     "collector": "A171"
   },
   {
@@ -497,7 +497,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_eh_stosskompanie",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A172.jpg",
+    "image": "nations/schloter/A172.jpg",
     "collector": "A172"
   },
   {
@@ -527,7 +527,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_eh_ehrenzug",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A173.jpg",
+    "image": "nations/schloter/A173.jpg",
     "collector": "A173"
   },
   {
@@ -563,7 +563,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_un_armeekommando",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A174.jpg",
+    "image": "nations/schloter/A174.jpg",
     "collector": "A174"
   },
   {
@@ -592,7 +592,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_so_generalmobilmachung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A175.jpg",
+    "image": "nations/schloter/A175.jpg",
     "collector": "A175"
   },
   {
@@ -618,7 +618,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_so_letzter_antritt",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A176.jpg",
+    "image": "nations/schloter/A176.jpg",
     "collector": "A176"
   },
   {
@@ -649,7 +649,7 @@ window.DC_SET_NATIONS["Schloter"] = [
     "id": "dc_n_eq_kampfabzeichen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A177.jpg",
+    "image": "nations/schloter/A177.jpg",
     "collector": "A177"
   }
 ];

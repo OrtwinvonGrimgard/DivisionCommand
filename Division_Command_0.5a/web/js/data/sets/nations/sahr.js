@@ -29,7 +29,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_eh_scheinpatrouille",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A247.jpg",
+    "image": "nations/sahr/A247.jpg",
     "collector": "A247"
   },
   {
@@ -56,7 +56,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_eh_schattenzug",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A248.jpg",
+    "image": "nations/sahr/A248.jpg",
     "collector": "A248"
   },
   {
@@ -83,7 +83,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_eh_lockvogel",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A249.jpg",
+    "image": "nations/sahr/A249.jpg",
     "collector": "A249"
   },
   {
@@ -117,7 +117,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_eh_falschflaggen_team",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A250.jpg",
+    "image": "nations/sahr/A250.jpg",
     "collector": "A250"
   },
   {
@@ -146,7 +146,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_un_nebelwerferstaffel",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A251.jpg",
+    "image": "nations/sahr/A251.jpg",
     "collector": "A251"
   },
   {
@@ -174,7 +174,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_un_geruchtekuche",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A252.jpg",
+    "image": "nations/sahr/A252.jpg",
     "collector": "A252"
   },
   {
@@ -199,7 +199,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_so_finte",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A253.jpg",
+    "image": "nations/sahr/A253.jpg",
     "collector": "A253"
   },
   {
@@ -228,7 +228,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_so_falsche_spur",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A254.jpg",
+    "image": "nations/sahr/A254.jpg",
     "collector": "A254"
   },
   {
@@ -257,7 +257,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_so_verwirrung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A255.jpg",
+    "image": "nations/sahr/A255.jpg",
     "collector": "A255"
   },
   {
@@ -282,7 +282,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_eq_rauchgranate",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A256.jpg",
+    "image": "nations/sahr/A256.jpg",
     "collector": "A256"
   },
   {
@@ -312,7 +312,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_eh_saboteurtrupp",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A257.jpg",
+    "image": "nations/sahr/A257.jpg",
     "collector": "A257"
   },
   {
@@ -349,7 +349,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_eh_trugbild_spaher",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A258.jpg",
+    "image": "nations/sahr/A258.jpg",
     "collector": "A258"
   },
   {
@@ -381,7 +381,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_un_tauschungszentrale",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A259.jpg",
+    "image": "nations/sahr/A259.jpg",
     "collector": "A259"
   },
   {
@@ -415,7 +415,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_un_storsender",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A260.jpg",
+    "image": "nations/sahr/A260.jpg",
     "collector": "A260"
   },
   {
@@ -443,7 +443,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_so_scheinangriff",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A261.jpg",
+    "image": "nations/sahr/A261.jpg",
     "collector": "A261"
   },
   {
@@ -472,7 +472,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_so_kartenlegen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A262.jpg",
+    "image": "nations/sahr/A262.jpg",
     "collector": "A262"
   },
   {
@@ -502,7 +502,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_eq_tarnnetz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A263.jpg",
+    "image": "nations/sahr/A263.jpg",
     "collector": "A263"
   },
   {
@@ -540,7 +540,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_eh_phantomzelle",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A264.jpg",
+    "image": "nations/sahr/A264.jpg",
     "collector": "A264"
   },
   {
@@ -574,7 +574,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_eh_doppelagent_trupp",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A265.jpg",
+    "image": "nations/sahr/A265.jpg",
     "collector": "A265"
   },
   {
@@ -606,7 +606,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_un_maskenamt",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A266.jpg",
+    "image": "nations/sahr/A266.jpg",
     "collector": "A266"
   },
   {
@@ -632,7 +632,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_so_grosse_tauschung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A267.jpg",
+    "image": "nations/sahr/A267.jpg",
     "collector": "A267"
   },
   {
@@ -661,7 +661,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_so_gedankenbruch",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A268.jpg",
+    "image": "nations/sahr/A268.jpg",
     "collector": "A268"
   },
   {
@@ -692,7 +692,7 @@ window.DC_SET_NATIONS["Sahr"] = [
     "id": "dc_n_eq_identitatskit",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A269.jpg",
+    "image": "nations/sahr/A269.jpg",
     "collector": "A269"
   }
 ];

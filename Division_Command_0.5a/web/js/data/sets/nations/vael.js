@@ -29,7 +29,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_eh_beobachtertrupp",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A132.jpg",
+    "image": "nations/vael/A132.jpg",
     "collector": "A132"
   },
   {
@@ -56,7 +56,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_eh_leichte_batterie",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A133.jpg",
+    "image": "nations/vael/A133.jpg",
     "collector": "A133"
   },
   {
@@ -87,7 +87,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_eh_messzug",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A134.jpg",
+    "image": "nations/vael/A134.jpg",
     "collector": "A134"
   },
   {
@@ -117,7 +117,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_eh_rohrzug",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A135.jpg",
+    "image": "nations/vael/A135.jpg",
     "collector": "A135"
   },
   {
@@ -145,7 +145,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_un_munitionskette",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A136.jpg",
+    "image": "nations/vael/A136.jpg",
     "collector": "A136"
   },
   {
@@ -181,7 +181,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_un_feuerleitposten",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A137.jpg",
+    "image": "nations/vael/A137.jpg",
     "collector": "A137"
   },
   {
@@ -209,7 +209,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_so_sperrfeuer",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A138.jpg",
+    "image": "nations/vael/A138.jpg",
     "collector": "A138"
   },
   {
@@ -238,7 +238,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_so_zielmarkierung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A139.jpg",
+    "image": "nations/vael/A139.jpg",
     "collector": "A139"
   },
   {
@@ -267,7 +267,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_so_nachladen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A140.jpg",
+    "image": "nations/vael/A140.jpg",
     "collector": "A140"
   },
   {
@@ -296,7 +296,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_eq_richtoptik",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A141.jpg",
+    "image": "nations/vael/A141.jpg",
     "collector": "A141"
   },
   {
@@ -327,7 +327,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_eh_schwere_batterie",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A142.jpg",
+    "image": "nations/vael/A142.jpg",
     "collector": "A142"
   },
   {
@@ -364,7 +364,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_eh_spahwagen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A143.jpg",
+    "image": "nations/vael/A143.jpg",
     "collector": "A143"
   },
   {
@@ -400,7 +400,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_un_feuerleitstelle",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A144.jpg",
+    "image": "nations/vael/A144.jpg",
     "collector": "A144"
   },
   {
@@ -434,7 +434,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_un_ortungsnetz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A145.jpg",
+    "image": "nations/vael/A145.jpg",
     "collector": "A145"
   },
   {
@@ -462,7 +462,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_so_gegenbatterie",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A146.jpg",
+    "image": "nations/vael/A146.jpg",
     "collector": "A146"
   },
   {
@@ -491,7 +491,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_so_lagebild",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A147.jpg",
+    "image": "nations/vael/A147.jpg",
     "collector": "A147"
   },
   {
@@ -521,7 +521,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_eq_entfernungsmesser",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A148.jpg",
+    "image": "nations/vael/A148.jpg",
     "collector": "A148"
   },
   {
@@ -552,7 +552,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_eh_grossbatterie",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A149.jpg",
+    "image": "nations/vael/A149.jpg",
     "collector": "A149"
   },
   {
@@ -587,7 +587,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_eh_vorausbeobachter",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A150.jpg",
+    "image": "nations/vael/A150.jpg",
     "collector": "A150"
   },
   {
@@ -623,7 +623,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_un_feuerplanburo",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A151.jpg",
+    "image": "nations/vael/A151.jpg",
     "collector": "A151"
   },
   {
@@ -652,7 +652,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_so_vernichtungsfeuer",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A152.jpg",
+    "image": "nations/vael/A152.jpg",
     "collector": "A152"
   },
   {
@@ -678,7 +678,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_so_kalibrierter_schlag",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A153.jpg",
+    "image": "nations/vael/A153.jpg",
     "collector": "A153"
   },
   {
@@ -708,7 +708,7 @@ window.DC_SET_NATIONS["Vael"] = [
     "id": "dc_n_eq_feuerleitrechner",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A154.jpg",
+    "image": "nations/vael/A154.jpg",
     "collector": "A154"
   }
 ];

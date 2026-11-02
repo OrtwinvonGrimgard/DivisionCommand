@@ -24,7 +24,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_eh_grabenbesatzung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A270.jpg",
+    "image": "nations/steinmark/A270.jpg",
     "collector": "A270"
   },
   {
@@ -51,7 +51,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_eh_zahlebiges_geschutz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A271.jpg",
+    "image": "nations/steinmark/A271.jpg",
     "collector": "A271"
   },
   {
@@ -78,7 +78,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_eh_durchhaltezug",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A272.jpg",
+    "image": "nations/steinmark/A272.jpg",
     "collector": "A272"
   },
   {
@@ -106,7 +106,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_eh_narbenpanzer",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A273.jpg",
+    "image": "nations/steinmark/A273.jpg",
     "collector": "A273"
   },
   {
@@ -134,7 +134,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_un_feldlazarett",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A274.jpg",
+    "image": "nations/steinmark/A274.jpg",
     "collector": "A274"
   },
   {
@@ -162,7 +162,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_un_werkstattwagen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A275.jpg",
+    "image": "nations/steinmark/A275.jpg",
     "collector": "A275"
   },
   {
@@ -191,7 +191,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_so_zusammenbeissen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A276.jpg",
+    "image": "nations/steinmark/A276.jpg",
     "collector": "A276"
   },
   {
@@ -220,7 +220,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_so_notversorgung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A277.jpg",
+    "image": "nations/steinmark/A277.jpg",
     "collector": "A277"
   },
   {
@@ -247,7 +247,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_so_splitterfeuer",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A278.jpg",
+    "image": "nations/steinmark/A278.jpg",
     "collector": "A278"
   },
   {
@@ -277,7 +277,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_eq_verbandspackchen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A279.jpg",
+    "image": "nations/steinmark/A279.jpg",
     "collector": "A279"
   },
   {
@@ -304,7 +304,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_eh_frontveteranen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A280.jpg",
+    "image": "nations/steinmark/A280.jpg",
     "collector": "A280"
   },
   {
@@ -335,7 +335,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_eh_reparierter_keil",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A281.jpg",
+    "image": "nations/steinmark/A281.jpg",
     "collector": "A281"
   },
   {
@@ -369,7 +369,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_un_verwundetennest",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A282.jpg",
+    "image": "nations/steinmark/A282.jpg",
     "collector": "A282"
   },
   {
@@ -398,7 +398,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_un_durchhaltekommando",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A283.jpg",
+    "image": "nations/steinmark/A283.jpg",
     "collector": "A283"
   },
   {
@@ -423,7 +423,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_so_weiterkampfen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A284.jpg",
+    "image": "nations/steinmark/A284.jpg",
     "collector": "A284"
   },
   {
@@ -448,7 +448,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_so_zahne_zusammen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A285.jpg",
+    "image": "nations/steinmark/A285.jpg",
     "collector": "A285"
   },
   {
@@ -477,7 +477,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_eq_notpanzerung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A286.jpg",
+    "image": "nations/steinmark/A286.jpg",
     "collector": "A286"
   },
   {
@@ -508,7 +508,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_eh_unverwustliche",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A287.jpg",
+    "image": "nations/steinmark/A287.jpg",
     "collector": "A287"
   },
   {
@@ -543,7 +543,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_eh_kampfwagen_der_narben",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A288.jpg",
+    "image": "nations/steinmark/A288.jpg",
     "collector": "A288"
   },
   {
@@ -578,7 +578,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_un_frontlazarettnetz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A289.jpg",
+    "image": "nations/steinmark/A289.jpg",
     "collector": "A289"
   },
   {
@@ -604,7 +604,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_so_letztes_aufgebot",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A290.jpg",
+    "image": "nations/steinmark/A290.jpg",
     "collector": "A290"
   },
   {
@@ -633,7 +633,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_so_zaher_nachschub",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A291.jpg",
+    "image": "nations/steinmark/A291.jpg",
     "collector": "A291"
   },
   {
@@ -664,7 +664,7 @@ window.DC_SET_NATIONS["Steinmark"] = [
     "id": "dc_n_eq_kriegsnarbe",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A292.jpg",
+    "image": "nations/steinmark/A292.jpg",
     "collector": "A292"
   }
 ];

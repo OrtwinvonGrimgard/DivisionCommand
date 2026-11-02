@@ -25,7 +25,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_eh_kradschutzen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A178.jpg",
+    "image": "nations/karsk/A178.jpg",
     "collector": "A178"
   },
   {
@@ -57,7 +57,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_eh_spahtrupp",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A179.jpg",
+    "image": "nations/karsk/A179.jpg",
     "collector": "A179"
   },
   {
@@ -84,7 +84,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_eh_schnelle_reserve",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A180.jpg",
+    "image": "nations/karsk/A180.jpg",
     "collector": "A180"
   },
   {
@@ -112,7 +112,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_eh_jagdpanzer_leicht",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A181.jpg",
+    "image": "nations/karsk/A181.jpg",
     "collector": "A181"
   },
   {
@@ -141,7 +141,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_un_beweglicher_stab",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A182.jpg",
+    "image": "nations/karsk/A182.jpg",
     "collector": "A182"
   },
   {
@@ -169,7 +169,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_un_treibstoffkolonne",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A183.jpg",
+    "image": "nations/karsk/A183.jpg",
     "collector": "A183"
   },
   {
@@ -198,7 +198,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_so_gegenstossbefehl",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A184.jpg",
+    "image": "nations/karsk/A184.jpg",
     "collector": "A184"
   },
   {
@@ -227,7 +227,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_so_tempo_halten",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A185.jpg",
+    "image": "nations/karsk/A185.jpg",
     "collector": "A185"
   },
   {
@@ -254,7 +254,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_so_uberrumpeln",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A186.jpg",
+    "image": "nations/karsk/A186.jpg",
     "collector": "A186"
   },
   {
@@ -284,7 +284,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_eq_marschsatz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A187.jpg",
+    "image": "nations/karsk/A187.jpg",
     "collector": "A187"
   },
   {
@@ -314,7 +314,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_eh_stossreiter",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A188.jpg",
+    "image": "nations/karsk/A188.jpg",
     "collector": "A188"
   },
   {
@@ -345,7 +345,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_eh_kampfgruppe_mobil",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A189.jpg",
+    "image": "nations/karsk/A189.jpg",
     "collector": "A189"
   },
   {
@@ -373,7 +373,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_un_gefechtsstand_vorne",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A190.jpg",
+    "image": "nations/karsk/A190.jpg",
     "collector": "A190"
   },
   {
@@ -407,7 +407,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_un_aufklarungskette",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A191.jpg",
+    "image": "nations/karsk/A191.jpg",
     "collector": "A191"
   },
   {
@@ -435,7 +435,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_so_flankenstoss",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A192.jpg",
+    "image": "nations/karsk/A192.jpg",
     "collector": "A192"
   },
   {
@@ -459,7 +459,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_so_neuer_anlauf",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A193.jpg",
+    "image": "nations/karsk/A193.jpg",
     "collector": "A193"
   },
   {
@@ -488,7 +488,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_eq_schnellvisier",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A194.jpg",
+    "image": "nations/karsk/A194.jpg",
     "collector": "A194"
   },
   {
@@ -523,7 +523,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_eh_durchbruchkeil",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A195.jpg",
+    "image": "nations/karsk/A195.jpg",
     "collector": "A195"
   },
   {
@@ -554,7 +554,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_eh_reaktionstruppe",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A196.jpg",
+    "image": "nations/karsk/A196.jpg",
     "collector": "A196"
   },
   {
@@ -590,7 +590,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_un_operationszentrale",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A197.jpg",
+    "image": "nations/karsk/A197.jpg",
     "collector": "A197"
   },
   {
@@ -620,7 +620,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_so_doppelter_stoss",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A198.jpg",
+    "image": "nations/karsk/A198.jpg",
     "collector": "A198"
   },
   {
@@ -645,7 +645,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_so_durchbruchsbefehl",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A199.jpg",
+    "image": "nations/karsk/A199.jpg",
     "collector": "A199"
   },
   {
@@ -675,7 +675,7 @@ window.DC_SET_NATIONS["Karsk"] = [
     "id": "dc_n_eq_kommandowagen_kit",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A200.jpg",
+    "image": "nations/karsk/A200.jpg",
     "collector": "A200"
   }
 ];

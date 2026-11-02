@@ -23,7 +23,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_eh_stosstrupp",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A224.jpg",
+    "image": "nations/rothain/A224.jpg",
     "collector": "A224"
   },
   {
@@ -49,7 +49,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_eh_durchbruchpionier",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A225.jpg",
+    "image": "nations/rothain/A225.jpg",
     "collector": "A225"
   },
   {
@@ -76,7 +76,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_eh_sturmhaubitze",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A226.jpg",
+    "image": "nations/rothain/A226.jpg",
     "collector": "A226"
   },
   {
@@ -103,7 +103,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_eh_rammbock",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A227.jpg",
+    "image": "nations/rothain/A227.jpg",
     "collector": "A227"
   },
   {
@@ -138,7 +138,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_un_durchbruchstab",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A228.jpg",
+    "image": "nations/rothain/A228.jpg",
     "collector": "A228"
   },
   {
@@ -166,7 +166,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_un_munitionsstaffel",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A229.jpg",
+    "image": "nations/rothain/A229.jpg",
     "collector": "A229"
   },
   {
@@ -194,7 +194,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_so_sperrfeuer_dicht",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A230.jpg",
+    "image": "nations/rothain/A230.jpg",
     "collector": "A230"
   },
   {
@@ -222,7 +222,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_so_schwerpunktbefehl",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A231.jpg",
+    "image": "nations/rothain/A231.jpg",
     "collector": "A231"
   },
   {
@@ -250,7 +250,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_so_nachdrucken",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A232.jpg",
+    "image": "nations/rothain/A232.jpg",
     "collector": "A232"
   },
   {
@@ -279,7 +279,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_eq_sprengsatz_leicht",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A233.jpg",
+    "image": "nations/rothain/A233.jpg",
     "collector": "A233"
   },
   {
@@ -309,7 +309,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_eh_sturmpanzer",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A234.jpg",
+    "image": "nations/rothain/A234.jpg",
     "collector": "A234"
   },
   {
@@ -339,7 +339,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_eh_barragebatterie",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A235.jpg",
+    "image": "nations/rothain/A235.jpg",
     "collector": "A235"
   },
   {
@@ -374,7 +374,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_un_feuerwalzenleitung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A236.jpg",
+    "image": "nations/rothain/A236.jpg",
     "collector": "A236"
   },
   {
@@ -408,7 +408,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_un_pionierpark",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A237.jpg",
+    "image": "nations/rothain/A237.jpg",
     "collector": "A237"
   },
   {
@@ -436,7 +436,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_so_trommelfeuer",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A238.jpg",
+    "image": "nations/rothain/A238.jpg",
     "collector": "A238"
   },
   {
@@ -460,7 +460,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_so_bresche",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A239.jpg",
+    "image": "nations/rothain/A239.jpg",
     "collector": "A239"
   },
   {
@@ -488,7 +488,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_eq_durchbruchsladung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A240.jpg",
+    "image": "nations/rothain/A240.jpg",
     "collector": "A240"
   },
   {
@@ -522,7 +522,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_eh_durchbruchdivision",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A241.jpg",
+    "image": "nations/rothain/A241.jpg",
     "collector": "A241"
   },
   {
@@ -552,7 +552,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_eh_elite_stoss",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A242.jpg",
+    "image": "nations/rothain/A242.jpg",
     "collector": "A242"
   },
   {
@@ -588,7 +588,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_un_hauptfeuerleitung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A243.jpg",
+    "image": "nations/rothain/A243.jpg",
     "collector": "A243"
   },
   {
@@ -617,7 +617,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_so_vernichtungsbarrage",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A244.jpg",
+    "image": "nations/rothain/A244.jpg",
     "collector": "A244"
   },
   {
@@ -642,7 +642,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_so_alles_vor",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A245.jpg",
+    "image": "nations/rothain/A245.jpg",
     "collector": "A245"
   },
   {
@@ -671,7 +671,7 @@ window.DC_SET_NATIONS["Rothain"] = [
     "id": "dc_n_eq_kampfbefehl_modul",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A246.jpg",
+    "image": "nations/rothain/A246.jpg",
     "collector": "A246"
   }
 ];

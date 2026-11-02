@@ -24,7 +24,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_eh_schutztrupp",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A201.jpg",
+    "image": "nations/ossar/A201.jpg",
     "collector": "A201"
   },
   {
@@ -55,7 +55,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_eh_wachzug",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A202.jpg",
+    "image": "nations/ossar/A202.jpg",
     "collector": "A202"
   },
   {
@@ -82,7 +82,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_eh_plattenlaufer",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A203.jpg",
+    "image": "nations/ossar/A203.jpg",
     "collector": "A203"
   },
   {
@@ -110,7 +110,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_eh_sperrpanzer",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A204.jpg",
+    "image": "nations/ossar/A204.jpg",
     "collector": "A204"
   },
   {
@@ -138,7 +138,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_un_verbandplatz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A205.jpg",
+    "image": "nations/ossar/A205.jpg",
     "collector": "A205"
   },
   {
@@ -166,7 +166,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_un_bunkerleitung",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A206.jpg",
+    "image": "nations/ossar/A206.jpg",
     "collector": "A206"
   },
   {
@@ -195,7 +195,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_so_halten",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A207.jpg",
+    "image": "nations/ossar/A207.jpg",
     "collector": "A207"
   },
   {
@@ -224,7 +224,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_so_sanitatereinsatz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A208.jpg",
+    "image": "nations/ossar/A208.jpg",
     "collector": "A208"
   },
   {
@@ -251,7 +251,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_so_sperrfeuer_leicht",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A209.jpg",
+    "image": "nations/ossar/A209.jpg",
     "collector": "A209"
   },
   {
@@ -281,7 +281,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_eq_schutzplatte",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A210.jpg",
+    "image": "nations/ossar/A210.jpg",
     "collector": "A210"
   },
   {
@@ -308,7 +308,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_eh_entsatzkompanie",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A211.jpg",
+    "image": "nations/ossar/A211.jpg",
     "collector": "A211"
   },
   {
@@ -339,7 +339,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_eh_festungspanzer",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A212.jpg",
+    "image": "nations/ossar/A212.jpg",
     "collector": "A212"
   },
   {
@@ -373,7 +373,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_un_lazarettnetz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A213.jpg",
+    "image": "nations/ossar/A213.jpg",
     "collector": "A213"
   },
   {
@@ -407,7 +407,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_un_schutzschirm",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A214.jpg",
+    "image": "nations/ossar/A214.jpg",
     "collector": "A214"
   },
   {
@@ -432,7 +432,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_so_entsatzmarsch",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A215.jpg",
+    "image": "nations/ossar/A215.jpg",
     "collector": "A215"
   },
   {
@@ -457,7 +457,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_so_abfangen",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A216.jpg",
+    "image": "nations/ossar/A216.jpg",
     "collector": "A216"
   },
   {
@@ -487,7 +487,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_eq_medkit_schwer",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A217.jpg",
+    "image": "nations/ossar/A217.jpg",
     "collector": "A217"
   },
   {
@@ -518,7 +518,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_eh_schildwache",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A218.jpg",
+    "image": "nations/ossar/A218.jpg",
     "collector": "A218"
   },
   {
@@ -549,7 +549,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_eh_entsatzbrigade",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A219.jpg",
+    "image": "nations/ossar/A219.jpg",
     "collector": "A219"
   },
   {
@@ -584,7 +584,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_un_ziviles_schutzamt",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A220.jpg",
+    "image": "nations/ossar/A220.jpg",
     "collector": "A220"
   },
   {
@@ -610,7 +610,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_so_durchhalten",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A221.jpg",
+    "image": "nations/ossar/A221.jpg",
     "collector": "A221"
   },
   {
@@ -640,7 +640,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_so_grossentsatz",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A222.jpg",
+    "image": "nations/ossar/A222.jpg",
     "collector": "A222"
   },
   {
@@ -670,7 +670,7 @@ window.DC_SET_NATIONS["Ossar"] = [
     "id": "dc_n_eq_erinnerungsplatte",
     "set": "set_nations",
     "status": "live",
-    "image": "alpha/A223.jpg",
+    "image": "nations/ossar/A223.jpg",
     "collector": "A223"
   }
 ];
