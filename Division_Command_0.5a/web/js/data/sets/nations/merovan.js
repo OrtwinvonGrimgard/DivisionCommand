@@ -369,13 +369,13 @@ window.DC_SET_NATIONS["Merovan"] = [
     "rarity": "gold"
   },
   {
-    "id": "dc_b_marschbefehl",
+    "id": "dc_b_keilhalt",
     "set": "set_nations",
     "nation": "Merovan",
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Einsatz",
-    "name": "Marschbefehl",
+    "name": "Keilhalt",
     "ap": 1,
     "atk": 0,
     "def": 0,
@@ -383,9 +383,9 @@ window.DC_SET_NATIONS["Merovan"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eine eigene Einheit darf in diesem Zug zusätzlich einmal geschoben werden.",
+    "text": "Nachdem du in diesem Zug eine eigene Einheit geschoben hast: diese Einheit erhält +1 DEF bis zu deinem nächsten Zug.",
     "effects": [],
-    "flavor": "Noch ein Schub in diesem Zug.",
+    "flavor": "Erst schieben, dann fest werden.",
     "image": "alpha/B059.jpg",
     "max_copies": 1,
     "collector": "B059",

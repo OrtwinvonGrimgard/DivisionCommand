@@ -675,7 +675,7 @@ window.DC_NATIONS = {
       "dc_b_offener_weg",
       "dc_b_letzte_stellung",
       "dc_b_nachschubader",
-      "dc_b_marschbefehl",
+      "dc_b_keilhalt",
       "dc_b_rastplatz",
       "dc_b_schubkolonne",
       "dc_b_wegpunkt",

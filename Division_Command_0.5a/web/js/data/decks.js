@@ -65,8 +65,8 @@ window.DC_NATION_DECKS = {
       "dc_b_normverband_600"
     ],
     "doktrinen": [
-      "Feuerplan",
-      "Normverband"
+      "dc_dok_feuerplan",
+      "dc_dok_normverband"
     ]
   },
   "Eldran": {
@@ -135,8 +135,8 @@ window.DC_NATION_DECKS = {
       "dc_b_gegenstoss_780"
     ],
     "doktrinen": [
-      "Auffangen",
-      "Gegenstoß"
+      "dc_dok_auffangen",
+      "dc_dok_gegenstoss"
     ]
   },
   "Rothain": {
@@ -205,8 +205,8 @@ window.DC_NATION_DECKS = {
       "dc_b_ablosung_660"
     ],
     "doktrinen": [
-      "Schwerpunkt",
-      "Ablösung"
+      "dc_dok_schwerpunkt",
+      "dc_dok_abloesung"
     ]
   },
   "Averon": {
@@ -275,8 +275,8 @@ window.DC_NATION_DECKS = {
       "dc_b_lokalisierung_840"
     ],
     "doktrinen": [
-      "Aufklärungsschlag",
-      "Lokalisierung"
+      "dc_dok_aufklaerungsschlag",
+      "dc_dok_lokalisierung"
     ]
   },
   "Vesper": {
@@ -345,8 +345,8 @@ window.DC_NATION_DECKS = {
       "dc_b_abriegeln_900"
     ],
     "doktrinen": [
-      "Scheinschwerpunkt",
-      "Abriegeln"
+      "dc_dok_scheinschwerpunkt",
+      "dc_dok_abriegeln"
     ]
   },
   "Karsk": {
@@ -415,8 +415,8 @@ window.DC_NATION_DECKS = {
       "dc_b_weiterkaempfen__ereignis_420"
     ],
     "doktrinen": [
-      "Stoßtrupp",
-      "Weiterkämpfen"
+      "dc_dok_stosstrupp",
+      "dc_dok_weiterkaempfen"
     ]
   },
   "Caldris": {
@@ -485,8 +485,8 @@ window.DC_NATION_DECKS = {
       "dc_b_rasten_ereignis__ereignis_360"
     ],
     "doktrinen": [
-      "Etappensicherung",
-      "Rasten"
+      "dc_dok_etappensicherung",
+      "dc_dok_rasten"
     ]
   },
   "Theryn": {
@@ -649,7 +649,7 @@ window.DC_NATION_DECKS = {
       "dc_b_offener_weg",
       "dc_b_letzte_stellung",
       "dc_b_nachschubader",
-      "dc_b_marschbefehl",
+      "dc_b_keilhalt",
       "dc_b_rastplatz",
       "dc_b_schubkolonne",
       "dc_b_wegpunkt",
@@ -695,8 +695,8 @@ window.DC_NATION_DECKS = {
       "dc_b_ausharren_ereignis"
     ],
     "doktrinen": [
-      "Verlegung",
-      "Ausharren"
+      "dc_dok_verlegung",
+      "dc_dok_ausharren"
     ]
   },
   "Lyr": {
@@ -765,8 +765,8 @@ window.DC_NATION_DECKS = {
       "dc_b_verteilte_stellung__ereignis"
     ],
     "doktrinen": [
-      "Lauer",
-      "Verteilte Stellung"
+      "dc_dok_lauer",
+      "dc_dok_verteilte_stellung"
     ]
   },
   "Ossaria": {
@@ -835,8 +835,8 @@ window.DC_NATION_DECKS = {
       "dc_b_gepanzerter_fuss__ereignis_300"
     ],
     "doktrinen": [
-      "Abnutzung",
-      "Gepanzerter Fuß"
+      "dc_dok_abnutzung",
+      "dc_dok_gepanzerter_fuss"
     ]
   },
   "Orthea": {
@@ -905,8 +905,8 @@ window.DC_NATION_DECKS = {
       "dc_b_lokalisierung__ereignis_480"
     ],
     "doktrinen": [
-      "Punktfeuer",
-      "Lokalisierung"
+      "dc_dok_punktfeuer",
+      "dc_dok_lokalisierung"
     ]
   },
   "Namar": {
@@ -975,8 +975,8 @@ window.DC_NATION_DECKS = {
       "dc_b_entsatz_ereignis_540"
     ],
     "doktrinen": [
-      "Marsch aus dem Vollen",
-      "Entsatz"
+      "dc_dok_marsch_aus_dem_vollen",
+      "dc_dok_entsatz"
     ]
   },
   "Sahr": {
@@ -1045,8 +1045,8 @@ window.DC_NATION_DECKS = {
       "dc_b_umgehen_720"
     ],
     "doktrinen": [
-      "Linienkrieg",
-      "Umgehen"
+      "dc_dok_linienkrieg",
+      "dc_dok_umgehen"
     ]
   },
   "Dargan": {
@@ -1115,8 +1115,8 @@ window.DC_NATION_DECKS = {
       "dc_b_abschluss_960"
     ],
     "doktrinen": [
-      "Zielangriff",
-      "Abschluss"
+      "dc_dok_zielangriff",
+      "dc_dok_abschluss"
     ]
   }
 };
