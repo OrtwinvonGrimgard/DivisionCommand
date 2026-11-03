@@ -593,5 +593,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B230",
     "rarity": "gold"
+  },
+  {
+    "id": "dc_b_ina_oss_267",
+    "set": "set_nations",
+    "nation": "Ossaria",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Ina Oss",
+    "ap": 3,
+    "atk": 2,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: Ausrüstung kostet 1 weniger; ziehe 1 wenn keine neue Zerstörung.",
+    "effects": [],
+    "flavor": "Sie zählt, wie wenige Namen hinzukommen.",
+    "image": "elite/B267.jpg",
+    "max_copies": 1,
+    "collector": "B267",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_retter_grenz_268",
+    "set": "set_nations",
+    "nation": "Ossaria",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Retter Grenz",
+    "ap": 3,
+    "atk": 3,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: Feind −1 ATK; stirbt eigene: Untersuchung — ziehe 1.",
+    "effects": [],
+    "flavor": "Der letzte Tote war ein Fehler. Kein Heiligtum.",
+    "image": "elite/B268.jpg",
+    "max_copies": 1,
+    "collector": "B268",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_ahnenschmied_269",
+    "set": "set_nations",
+    "nation": "Ossaria",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Ahnenschmied",
+    "ap": 4,
+    "atk": 3,
+    "def": 5,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: rüste Infanterie aus der Hand aus (−1 Kosten). Sie +1 DEF.",
+    "effects": [],
+    "flavor": "Erinnerung wird Rüstung. Nicht Befehl.",
+    "image": "elite/B269.jpg",
+    "max_copies": 1,
+    "collector": "B269",
+    "rarity": "gold"
   }
 ];

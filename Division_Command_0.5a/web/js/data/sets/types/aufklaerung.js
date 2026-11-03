@@ -771,5 +771,97 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "max_copies": 1,
     "collector": "B227",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_linsenlaeufer_263",
+    "set": "set_nations",
+    "nation": "Ossaria",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Linsenläufer",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Feind aufgeklärt; +1 ATK wenn Ziel Ausrüstung hat.",
+    "effects": [],
+    "flavor": "Eine Linse. Keine Waage des Lebenswerts.",
+    "image": "aufklaerung/B263.jpg",
+    "max_copies": 1,
+    "collector": "B263",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_grenzmelder_264",
+    "set": "set_nations",
+    "nation": "Ossaria",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Grenzmelder",
+    "ap": 2,
+    "atk": 2,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Wenn eigene Einheit stirbt: ziehe 1 (einmal/Zug).",
+    "effects": [],
+    "flavor": "Meldung in die hellen Häuser.",
+    "image": "aufklaerung/B264.jpg",
+    "max_copies": 1,
+    "collector": "B264",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_hofspaeher_265",
+    "set": "set_nations",
+    "nation": "Ossaria",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Hofspäher",
+    "ap": 2,
+    "atk": 1,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste 2 Ausrüstungen/Einheiten; behalte 1.",
+    "effects": [],
+    "flavor": "Werkhof vor dem Feld.",
+    "image": "aufklaerung/B265.jpg",
+    "max_copies": 1,
+    "collector": "B265",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_namensblick_266",
+    "set": "set_nations",
+    "nation": "Ossaria",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Namensblick",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke Feind auf; wenn er stirbt diesen Zug, heile 1.",
+    "effects": [],
+    "flavor": "Sehen, was der Schutz verhindern sollte.",
+    "image": "aufklaerung/B266.jpg",
+    "max_copies": 1,
+    "collector": "B266",
+    "rarity": "bronze"
   }
 ];
