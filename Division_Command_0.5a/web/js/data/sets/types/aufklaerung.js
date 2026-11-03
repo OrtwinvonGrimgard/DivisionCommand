@@ -1093,5 +1093,97 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "max_copies": 1,
     "collector": "B506",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_beobachtungsposten_563",
+    "set": "set_nations",
+    "nation": "Steinmark",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Beobachtungsposten",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Einmal/Zug: decke auf; Ziel gilt als beobachtet.",
+    "effects": [],
+    "flavor": "Posten sieht. Er öffnet keinen Krieg.",
+    "image": "aufklaerung/B563.jpg",
+    "max_copies": 1,
+    "collector": "B563",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_feldmesser_564",
+    "set": "set_nations",
+    "nation": "Steinmark",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Feldmesser",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; +1 DEF bis Zugende.",
+    "effects": [],
+    "flavor": "Maß vor Meinung.",
+    "image": "aufklaerung/B564.jpg",
+    "max_copies": 1,
+    "collector": "B564",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_meldekette_565",
+    "set": "set_nations",
+    "nation": "Steinmark",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Meldekette",
+    "ap": 2,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung.",
+    "effects": [],
+    "flavor": "Kette trägt Schrift. Nicht Befehl.",
+    "image": "aufklaerung/B565.jpg",
+    "max_copies": 1,
+    "collector": "B565",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_peiltrupp_566",
+    "set": "set_nations",
+    "nation": "Steinmark",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Peiltrupp",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; ziehe 1 wenn Feind beobachtet angrenzt.",
+    "effects": [],
+    "flavor": "Peilung ohne Claim.",
+    "image": "aufklaerung/B566.jpg",
+    "max_copies": 1,
+    "collector": "B566",
+    "rarity": "bronze"
   }
 ];

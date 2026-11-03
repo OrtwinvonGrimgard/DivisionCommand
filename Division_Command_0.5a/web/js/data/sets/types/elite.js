@@ -869,5 +869,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B509",
     "rarity": "gold"
+  },
+  {
+    "id": "dc_b_ida_holm_567",
+    "set": "set_nations",
+    "nation": "Steinmark",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Ida Holm",
+    "ap": 3,
+    "atk": 2,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: verhindere 1 Sofort des Gegners ODER eigene Einheit +1 DEF.",
+    "effects": [],
+    "flavor": "Holm sagt nein, bis die anderen Hände da sind.",
+    "image": "elite/B567.jpg",
+    "max_copies": 1,
+    "collector": "B567",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_konrad_berst_568",
+    "set": "set_nations",
+    "nation": "Steinmark",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Konrad Berst",
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: decke 1 auf; Abschnitt +1 DEF.",
+    "effects": [],
+    "flavor": "Berst schreibt früher. Er stimmt nicht ab.",
+    "image": "elite/B568.jpg",
+    "max_copies": 1,
+    "collector": "B568",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_stabsoffizier_569",
+    "set": "set_nations",
+    "nation": "Steinmark",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Stabsoffizier",
+    "ap": 4,
+    "atk": 3,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: markiere Feind als beobachtet ODER ziehe 1 nach Freigabe-Sofort.",
+    "effects": [],
+    "flavor": "Stab sieht. Schlüssel liegen woanders.",
+    "image": "elite/B569.jpg",
+    "max_copies": 1,
+    "collector": "B569",
+    "rarity": "gold"
   }
 ];
