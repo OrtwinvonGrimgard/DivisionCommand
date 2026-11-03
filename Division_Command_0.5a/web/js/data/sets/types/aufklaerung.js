@@ -1185,5 +1185,97 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "max_copies": 1,
     "collector": "B566",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_pfadfinder_683",
+    "set": "set_nations",
+    "nation": "Sahr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Pfadfinder",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Einmal/Zug: decke auf; eine eigene Einheit darf 1 Abschnitt umgehen.",
+    "effects": [],
+    "flavor": "Finder zeigt den Umweg. Er befiehlt ihn nicht.",
+    "image": "aufklaerung/B683.jpg",
+    "max_copies": 1,
+    "collector": "B683",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_zollspaeher_684",
+    "set": "set_nations",
+    "nation": "Sahr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Zollspäher",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; +1 DEF bis Zugende.",
+    "effects": [],
+    "flavor": "Späher zählt Zoll und Sperren.",
+    "image": "aufklaerung/B684.jpg",
+    "max_copies": 1,
+    "collector": "B684",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_meldekarawane_685",
+    "set": "set_nations",
+    "nation": "Sahr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Meldekarawane",
+    "ap": 2,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung.",
+    "effects": [],
+    "flavor": "Karawane trägt Nachricht und Sack.",
+    "image": "aufklaerung/B685.jpg",
+    "max_copies": 1,
+    "collector": "B685",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_abseitslaeufer_686",
+    "set": "set_nations",
+    "nation": "Sahr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Abseitsläufer",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; ziehe 1 wenn Feind angrenzt ohne eigene Nachbarn.",
+    "effects": [],
+    "flavor": "Abseitsheim erinnert: der Fluss ist nicht alles.",
+    "image": "aufklaerung/B686.jpg",
+    "max_copies": 1,
+    "collector": "B686",
+    "rarity": "bronze"
   }
 ];

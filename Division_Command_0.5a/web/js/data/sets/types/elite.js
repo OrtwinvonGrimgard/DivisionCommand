@@ -938,5 +938,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B569",
     "rarity": "gold"
+  },
+  {
+    "id": "dc_b_lotte_knoten_687",
+    "set": "set_nations",
+    "nation": "Sahr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Lotte Knoten",
+    "ap": 3,
+    "atk": 2,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: bewege 1 eigene Einheit 1 Abschnitt ODER heile 1 an Kolonnen-Abschnitt.",
+    "effects": [],
+    "flavor": "Lotte sieht Stillstand früher als Fahnen.",
+    "image": "elite/B687.jpg",
+    "max_copies": 1,
+    "collector": "B687",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_hesse_sar_688",
+    "set": "set_nations",
+    "nation": "Sahr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Hesse Sar",
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: ziehe 1; Einheiten hier kosten diesen Zug 1 weniger (min. 1).",
+    "effects": [],
+    "flavor": "Hesse krönt keine Stadt. Auch nicht Sarun.",
+    "image": "elite/B688.jpg",
+    "max_copies": 1,
+    "collector": "B688",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_karawanenmeister_689",
+    "set": "set_nations",
+    "nation": "Sahr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Karawanenmeister",
+    "ap": 4,
+    "atk": 3,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: spiele eine Einheit aus der Hand 1 billiger (min. 1) ODER bewege 1 Einheit.",
+    "effects": [],
+    "flavor": "Meister hält den Fluss. Nicht den Thron.",
+    "image": "elite/B689.jpg",
+    "max_copies": 1,
+    "collector": "B689",
+    "rarity": "silver"
   }
 ];
