@@ -1,40 +1,6 @@
 window.DC_SET_TYPES = window.DC_SET_TYPES || {};
 window.DC_SET_TYPES["Elite"] = [
   {
-    "id": "dc_eh_faustkeil",
-    "set": "set_alpha",
-    "status": "live",
-    "typ": "Einheit",
-    "klasse": "Panzer",
-    "name": "Panzerzug Faustkeil",
-    "ap": 5,
-    "atk": 8,
-    "def": 6,
-    "verdeckt_ok": false,
-    "tags": [
-      "einheit",
-      "fahrzeug",
-      "gepanzert",
-      "kette",
-      "panzer",
-      "schwer",
-      "elite"
-    ],
-    "text": "Führungsfahrzeug: +2 V wenn eine Flanke gepanzert ist.",
-    "effects": [
-      {
-        "code": "FUEHRUNG_V",
-        "param": {
-          "def": 2
-        }
-      }
-    ],
-    "flavor": "Wir sind die Front!",
-    "image": "elite/A062.jpg",
-    "max_copies": 2,
-    "collector": "A062"
-  },
-  {
     "id": "dc_eh_helden",
     "set": "set_alpha",
     "status": "live",
@@ -60,40 +26,6 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/A052.jpg",
     "max_copies": 2,
     "collector": "A052"
-  },
-  {
-    "id": "dc_eh_koloss",
-    "set": "set_alpha",
-    "status": "live",
-    "typ": "Einheit",
-    "klasse": "Panzer",
-    "name": "Schwerer Panzer Koloss",
-    "ap": 5,
-    "atk": 7,
-    "def": 9,
-    "verdeckt_ok": false,
-    "tags": [
-      "einheit",
-      "fahrzeug",
-      "gepanzert",
-      "kette",
-      "panzer",
-      "schwer",
-      "elite"
-    ],
-    "text": "Jeder erlittene Schaden -2.",
-    "effects": [
-      {
-        "code": "SCHADEN_MINUS",
-        "param": {
-          "n": 2
-        }
-      }
-    ],
-    "flavor": "Ein Koloss fällt nicht. Er entscheidet sich zu knien.",
-    "image": "elite/A065.jpg",
-    "max_copies": 2,
-    "collector": "A065"
   },
   {
     "id": "dc_eh_kommando",
@@ -130,6 +62,40 @@ window.DC_SET_TYPES["Elite"] = [
     "collector": "A055"
   },
   {
+    "id": "dc_eh_faustkeil",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Panzer",
+    "name": "Panzerzug Faustkeil",
+    "ap": 5,
+    "atk": 8,
+    "def": 6,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "fahrzeug",
+      "gepanzert",
+      "kette",
+      "panzer",
+      "schwer",
+      "elite"
+    ],
+    "text": "Führungsfahrzeug: +2 V wenn eine Flanke gepanzert ist.",
+    "effects": [
+      {
+        "code": "FUEHRUNG_V",
+        "param": {
+          "def": 2
+        }
+      }
+    ],
+    "flavor": "Wir sind die Front!",
+    "image": "elite/A062.jpg",
+    "max_copies": 2,
+    "collector": "A062"
+  },
+  {
     "id": "dc_eh_sniper",
     "set": "set_alpha",
     "status": "live",
@@ -164,5 +130,114 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/A064.jpg",
     "max_copies": 2,
     "collector": "A064"
+  },
+  {
+    "id": "dc_eh_koloss",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Panzer",
+    "name": "Schwerer Panzer Koloss",
+    "ap": 5,
+    "atk": 7,
+    "def": 9,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "fahrzeug",
+      "gepanzert",
+      "kette",
+      "panzer",
+      "schwer",
+      "elite"
+    ],
+    "text": "Jeder erlittene Schaden -2.",
+    "effects": [
+      {
+        "code": "SCHADEN_MINUS",
+        "param": {
+          "n": 2
+        }
+      }
+    ],
+    "flavor": "Ein Koloss fällt nicht. Er entscheidet sich zu knien.",
+    "image": "elite/A065.jpg",
+    "max_copies": 2,
+    "collector": "A065"
+  },
+  {
+    "id": "dc_b_silberschwur_624",
+    "set": "set_nations",
+    "nation": "Rothain",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Silberschwur",
+    "ap": 4,
+    "atk": 4,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "elite",
+      "infanterie"
+    ],
+    "text": "+2 ATK, solange du in diesem Zug eine Einheit ersetzt oder geheilt hast.",
+    "effects": [],
+    "flavor": "Silbersterne. Kein Thron. Trotzdem Befehl.",
+    "image": "elite/B624.jpg",
+    "max_copies": 1,
+    "collector": "B624",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_kronmarschall_625",
+    "set": "set_nations",
+    "nation": "Rothain",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Kronmarschall",
+    "ap": 5,
+    "atk": 5,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "elite",
+      "infanterie"
+    ],
+    "text": "Beim Ausspielen: eigene Einheiten in einem Abschnitt haben +1 ATK bis Zugende.",
+    "effects": [],
+    "flavor": "Wo er steht, gilt das Dekret.",
+    "image": "elite/B625.jpg",
+    "max_copies": 1,
+    "collector": "B625",
+    "rarity": "gold"
+  },
+  {
+    "id": "dc_b_veteranenrat_626",
+    "set": "set_nations",
+    "nation": "Rothain",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Veteranenrat",
+    "ap": 3,
+    "atk": 3,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "elite",
+      "infanterie"
+    ],
+    "text": "+2 DEF. Einmal pro Zug: heile 1 DEF an einer eigenen Einheit im selben Abschnitt.",
+    "effects": [],
+    "flavor": "Narben statt Amt — und trotzdem Gehör.",
+    "image": "elite/B626.jpg",
+    "max_copies": 1,
+    "collector": "B626",
+    "rarity": "silver"
   }
 ];

@@ -1,50 +1,143 @@
 window.DC_SET_TYPES = window.DC_SET_TYPES || {};
 window.DC_SET_TYPES["Aufklärung"] = [
   {
-    "id": "dc_b_arven_spaeher_787",
-    "set": "set_nations",
-    "nation": "Averon",
+    "id": "dc_eh_aufklaerer",
+    "set": "set_alpha",
     "status": "live",
     "typ": "Einheit",
-    "klasse": "Infanterie",
-    "name": "Arven-Späher",
-    "ap": 2,
-    "atk": 2,
-    "def": 1,
+    "klasse": "Aufklärer",
+    "name": "Aufklärer",
+    "ap": 3,
+    "atk": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
-      "infanterie"
+      "einheit",
+      "fahrzeug",
+      "aufklaerung",
+      "leicht",
+      "gepanzert"
     ],
-    "text": "+2 ATK, wenn das Ziel aufgeklärt ist.",
-    "effects": [],
-    "flavor": "Arven kennt die Südblicke.",
-    "image": "aufklaerung/B787.jpg",
-    "max_copies": 1,
-    "collector": "B787",
-    "rarity": "bronze"
+    "text": "Deckt verdecktes Feindfahrzeug auf: 3 Schaden. Aufklärung (1 AP): 2 verdeckte Feindfront aufdecken.",
+    "effects": [
+      {
+        "code": "REVEAL_STRIKE",
+        "param": {
+          "dmg": 3,
+          "ap": 1,
+          "n": 2
+        }
+      }
+    ],
+    "flavor": "Feind im Vorfeld aufgeklärt. Wir führen Bekämpfung durch!",
+    "image": "aufklaerung/A048.jpg",
+    "max_copies": 2,
+    "collector": "A048"
   },
   {
-    "id": "dc_b_aufklaerer_424",
-    "set": "set_nations",
-    "nation": "Orthea",
+    "id": "dc_eh_spaeher",
+    "set": "set_alpha",
     "status": "live",
     "typ": "Einheit",
     "klasse": "Infanterie",
-    "name": "Aufklärer",
+    "name": "Spähertrupp",
     "ap": 1,
     "atk": 2,
-    "def": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
-      "infanterie"
+      "einheit",
+      "infanterie",
+      "aufklaerung",
+      "leicht"
     ],
-    "text": "Deckt beim Spielen eine gegnerische Einheit auf.",
-    "effects": [],
-    "flavor": "Voraus.",
-    "image": "aufklaerung/B424.jpg",
-    "max_copies": 1,
-    "collector": "B424",
-    "rarity": "bronze"
+    "text": "Beim Ausspielen 1 verdeckte Feindfront aufdecken. Aufklärung (1 AP): noch eine.",
+    "effects": [
+      {
+        "code": "AUFKLAERUNG",
+        "param": {
+          "n": 1,
+          "onEnter": true
+        }
+      }
+    ],
+    "flavor": "Auge am Feind!",
+    "image": "aufklaerung/A068.jpg",
+    "max_copies": 2,
+    "collector": "A068"
+  },
+  {
+    "id": "dc_eh_glubscher",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Fahrzeug",
+    "name": "Spähpanzer Glubscher",
+    "ap": 4,
+    "atk": 4,
+    "def": 5,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "fahrzeug",
+      "aufklaerung",
+      "gepanzert",
+      "kette",
+      "leicht"
+    ],
+    "text": "Beim Ausspielen 2 gegnerische Handkarten wählen und ansehen. Aufklärung (1 AP): 1 verdeckte Feindfront.",
+    "effects": [
+      {
+        "code": "HAND_PEEK",
+        "param": {
+          "n": 2
+        }
+      },
+      {
+        "code": "AUFKLAERUNG",
+        "param": {
+          "n": 1
+        }
+      }
+    ],
+    "flavor": "Da ist böses im Busch!",
+    "image": "aufklaerung/A069.jpg",
+    "max_copies": 2,
+    "collector": "A069"
+  },
+  {
+    "id": "dc_eh_spahwagen",
+    "set": "set_alpha",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Fahrzeug",
+    "name": "Spähwagen",
+    "ap": 2,
+    "atk": 2,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "infanterie",
+      "aufklaerung",
+      "fahrzeug",
+      "rad",
+      "gepanzert",
+      "leicht"
+    ],
+    "text": "Aufklärung (1 AP): 2 verdeckte Feindfront aufdecken.",
+    "effects": [
+      {
+        "code": "AUFKLAERUNG",
+        "param": {
+          "n": 2
+        }
+      }
+    ],
+    "flavor": "Fühlung zum Feind!",
+    "image": "aufklaerung/A070.jpg",
+    "max_copies": 2,
+    "collector": "A070"
   },
   {
     "id": "dc_b_pfadwaechter",
@@ -67,29 +160,6 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B224.jpg",
     "max_copies": 1,
     "collector": "B224",
-    "rarity": "bronze"
-  },
-  {
-    "id": "dc_b_spaehertrupp_442",
-    "set": "set_nations",
-    "nation": "Orthea",
-    "status": "live",
-    "typ": "Einheit",
-    "klasse": "Infanterie",
-    "name": "Spähertrupp",
-    "ap": 1,
-    "atk": 2,
-    "def": 1,
-    "verdeckt_ok": false,
-    "tags": [
-      "infanterie"
-    ],
-    "text": "Beim Einrücken: decke ein Ziel im Abschnitt auf.",
-    "effects": [],
-    "flavor": "Späht voraus.",
-    "image": "aufklaerung/B442.jpg",
-    "max_copies": 1,
-    "collector": "B442",
     "rarity": "bronze"
   },
   {
@@ -139,142 +209,168 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "rarity": "bronze"
   },
   {
-    "id": "dc_eh_aufklaerer",
-    "set": "set_alpha",
+    "id": "dc_b_aufklaerer_424",
+    "set": "set_nations",
+    "nation": "Orthea",
     "status": "live",
     "typ": "Einheit",
-    "klasse": "Aufklärer",
+    "klasse": "Infanterie",
     "name": "Aufklärer",
-    "ap": 3,
-    "atk": 4,
-    "def": 3,
+    "ap": 1,
+    "atk": 2,
+    "def": 1,
     "verdeckt_ok": false,
     "tags": [
-      "einheit",
-      "fahrzeug",
-      "aufklaerung",
-      "leicht",
-      "gepanzert"
+      "infanterie"
     ],
-    "text": "Deckt verdecktes Feindfahrzeug auf: 3 Schaden. Aufklärung (1 AP): 2 verdeckte Feindfront aufdecken.",
-    "effects": [
-      {
-        "code": "REVEAL_STRIKE",
-        "param": {
-          "dmg": 3,
-          "ap": 1,
-          "n": 2
-        }
-      }
-    ],
-    "flavor": "Feind im Vorfeld aufgeklärt. Wir führen Bekämpfung durch!",
-    "image": "aufklaerung/A048.jpg",
-    "max_copies": 2,
-    "collector": "A048"
+    "text": "Deckt beim Spielen eine gegnerische Einheit auf.",
+    "effects": [],
+    "flavor": "Voraus.",
+    "image": "aufklaerung/B424.jpg",
+    "max_copies": 1,
+    "collector": "B424",
+    "rarity": "bronze"
   },
   {
-    "id": "dc_eh_glubscher",
-    "set": "set_alpha",
-    "status": "live",
-    "typ": "Einheit",
-    "klasse": "Fahrzeug",
-    "name": "Spähpanzer Glubscher",
-    "ap": 4,
-    "atk": 4,
-    "def": 5,
-    "verdeckt_ok": false,
-    "tags": [
-      "einheit",
-      "fahrzeug",
-      "aufklaerung",
-      "gepanzert",
-      "kette",
-      "leicht"
-    ],
-    "text": "Beim Ausspielen 2 gegnerische Handkarten wählen und ansehen. Aufklärung (1 AP): 1 verdeckte Feindfront.",
-    "effects": [
-      {
-        "code": "HAND_PEEK",
-        "param": {
-          "n": 2
-        }
-      },
-      {
-        "code": "AUFKLAERUNG",
-        "param": {
-          "n": 1
-        }
-      }
-    ],
-    "flavor": "Da ist böses im Busch!",
-    "image": "aufklaerung/A069.jpg",
-    "max_copies": 2,
-    "collector": "A069"
-  },
-  {
-    "id": "dc_eh_spaeher",
-    "set": "set_alpha",
+    "id": "dc_b_spaehertrupp_442",
+    "set": "set_nations",
+    "nation": "Orthea",
     "status": "live",
     "typ": "Einheit",
     "klasse": "Infanterie",
     "name": "Spähertrupp",
     "ap": 1,
     "atk": 2,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "infanterie"
+    ],
+    "text": "Beim Einrücken: decke ein Ziel im Abschnitt auf.",
+    "effects": [],
+    "flavor": "Späht voraus.",
+    "image": "aufklaerung/B442.jpg",
+    "max_copies": 1,
+    "collector": "B442",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_kronreiter_620",
+    "set": "set_nations",
+    "nation": "Rothain",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärer",
+    "name": "Kronreiter",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "aufklaerung"
+    ],
+    "text": "Aufdecken: ziehe 1 Karte.",
+    "effects": [],
+    "flavor": "Sie melden, bevor die Krone fragt.",
+    "image": "aufklaerung/B620.jpg",
+    "max_copies": 1,
+    "collector": "B620",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_erbe_spaeher_621",
+    "set": "set_nations",
+    "nation": "Rothain",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärer",
+    "name": "Erbe-Späher",
+    "ap": 2,
+    "atk": 2,
+    "def": 1,
+    "verdeckt_ok": true,
+    "tags": [
+      "einheit",
+      "aufklaerung"
+    ],
+    "text": "+1 ATK gegen verdeckte Einheiten. Kann verdeckt gespielt werden.",
+    "effects": [],
+    "flavor": "Alte Wege. Neue Augen.",
+    "image": "aufklaerung/B621.jpg",
+    "max_copies": 1,
+    "collector": "B621",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_stillnarbe_melder_622",
+    "set": "set_nations",
+    "nation": "Rothain",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärer",
+    "name": "Stillnarbe-Melder",
+    "ap": 2,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
-      "infanterie",
-      "aufklaerung",
-      "leicht"
+      "aufklaerung"
     ],
-    "text": "Beim Ausspielen 1 verdeckte Feindfront aufdecken. Aufklärung (1 AP): noch eine.",
-    "effects": [
-      {
-        "code": "AUFKLAERUNG",
-        "param": {
-          "n": 1,
-          "onEnter": true
-        }
-      }
-    ],
-    "flavor": "Auge am Feind!",
-    "image": "aufklaerung/A068.jpg",
-    "max_copies": 2,
-    "collector": "A068"
+    "text": "Wenn eine eigene Einheit im selben Abschnitt zerstört wird: ziehe 1 Karte.",
+    "effects": [],
+    "flavor": "Die Nachricht überlebt den Boten nicht immer.",
+    "image": "aufklaerung/B622.jpg",
+    "max_copies": 1,
+    "collector": "B622",
+    "rarity": "silver"
   },
   {
-    "id": "dc_eh_spahwagen",
-    "set": "set_alpha",
+    "id": "dc_b_neuhoff_augen_623",
+    "set": "set_nations",
+    "nation": "Rothain",
     "status": "live",
     "typ": "Einheit",
-    "klasse": "Fahrzeug",
-    "name": "Spähwagen",
-    "ap": 2,
-    "atk": 2,
-    "def": 4,
+    "klasse": "Aufklärer",
+    "name": "Neuhoff-Augen",
+    "ap": 1,
+    "atk": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
-      "infanterie",
-      "aufklaerung",
-      "fahrzeug",
-      "rad",
-      "gepanzert",
-      "leicht"
+      "aufklaerung"
     ],
-    "text": "Aufklärung (1 AP): 2 verdeckte Feindfront aufdecken.",
-    "effects": [
-      {
-        "code": "AUFKLAERUNG",
-        "param": {
-          "n": 2
-        }
-      }
+    "text": "Einmal pro Zug: schaue die oberste Karte deines Decks an.",
+    "effects": [],
+    "flavor": "Die jungen Städte sehen ohne Nostalgie.",
+    "image": "aufklaerung/B623.jpg",
+    "max_copies": 1,
+    "collector": "B623",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_arven_spaeher_787",
+    "set": "set_nations",
+    "nation": "Averon",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Infanterie",
+    "name": "Arven-Späher",
+    "ap": 2,
+    "atk": 2,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "infanterie"
     ],
-    "flavor": "Fühlung zum Feind!",
-    "image": "aufklaerung/A070.jpg",
-    "max_copies": 2,
-    "collector": "A070"
+    "text": "+2 ATK, wenn das Ziel aufgeklärt ist.",
+    "effects": [],
+    "flavor": "Arven kennt die Südblicke.",
+    "image": "aufklaerung/B787.jpg",
+    "max_copies": 1,
+    "collector": "B787",
+    "rarity": "bronze"
   }
 ];
