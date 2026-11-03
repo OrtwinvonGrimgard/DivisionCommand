@@ -386,5 +386,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B110",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_konzernsekundant_150",
+    "set": "set_nations",
+    "nation": "Vael",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Konzernsekundant",
+    "ap": 3,
+    "atk": 3,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: eigener Panzer oder Artillerie +1 ATK.",
+    "effects": [],
+    "flavor": "Er spricht für das Buch, nicht für das Ministerium.",
+    "image": "elite/B150.jpg",
+    "max_copies": 1,
+    "collector": "B150",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_werkmeister_front_151",
+    "set": "set_nations",
+    "nation": "Vael",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Werkmeister Front",
+    "ap": 4,
+    "atk": 3,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: heile 2 verteilt auf Panzer/Artillerie.",
+    "effects": [],
+    "flavor": "Reparatur ist der Auftrag in Uniform.",
+    "image": "elite/B151.jpg",
+    "max_copies": 1,
+    "collector": "B151",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_kriegsaktie_152",
+    "set": "set_nations",
+    "nation": "Vael",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Kriegsaktie",
+    "ap": 4,
+    "atk": 4,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Soforteinsatz kostet 1 weniger (min. 1).",
+    "effects": [],
+    "flavor": "Die Aktie steigt mit dem Verbrauch.",
+    "image": "elite/B152.jpg",
+    "max_copies": 1,
+    "collector": "B152",
+    "rarity": "gold"
   }
 ];

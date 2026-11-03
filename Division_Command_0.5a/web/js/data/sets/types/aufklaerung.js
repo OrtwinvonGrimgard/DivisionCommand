@@ -564,5 +564,97 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "max_copies": 1,
     "collector": "B107",
     "rarity": "silver"
+  },
+  {
+    "id": "dc_b_zielmesser_146",
+    "set": "set_nations",
+    "nation": "Vael",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Zielmesser",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Feind aufgeklärt; eigene Artillerie +1 ATK gegen ihn diesen Zug.",
+    "effects": [],
+    "flavor": "Wer misst, verkauft Treffer.",
+    "image": "aufklaerung/B146.jpg",
+    "max_copies": 1,
+    "collector": "B146",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_verbrauchsspaeher_147",
+    "set": "set_nations",
+    "nation": "Vael",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Verbrauchsspäher",
+    "ap": 2,
+    "atk": 2,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Eigene Einheit stirbt: ziehe 1 (einmal/Zug).",
+    "effects": [],
+    "flavor": "Er zählt Löcher — für die nächste Lieferung.",
+    "image": "aufklaerung/B147.jpg",
+    "max_copies": 1,
+    "collector": "B147",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_depotlaeufer_148",
+    "set": "set_nations",
+    "nation": "Vael",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Depotläufer",
+    "ap": 2,
+    "atk": 1,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Zerstörst du aufgeklärte Unterstützung/Ausrüstung: ziehe 1.",
+    "effects": [],
+    "flavor": "Depots sind Ziele mit Preisschild.",
+    "image": "aufklaerung/B148.jpg",
+    "max_copies": 1,
+    "collector": "B148",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_lagebild_149",
+    "set": "set_nations",
+    "nation": "Vael",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Lagebild",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste Karte; behalte oder lege unten.",
+    "effects": [],
+    "flavor": "Wirtschaftliche Lagebilder zählen taktisch mit.",
+    "image": "aufklaerung/B149.jpg",
+    "max_copies": 1,
+    "collector": "B149",
+    "rarity": "bronze"
   }
 ];
