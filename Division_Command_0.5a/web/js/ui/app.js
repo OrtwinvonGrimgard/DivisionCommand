@@ -44,6 +44,18 @@
       if (window.DC_IMAGES[stem + '.png']) list.push(window.DC_IMAGES[stem + '.png']); // Zweig nur bei zutreffender Bedingung
     }
     function enc(p) { return p.split('/').map(function (x, i, a) { return i === a.length - 1 ? encodeURIComponent(x) : x; }).join('/'); }
+    // Typ-Pfad (infanterie/B001.jpg) oder thumbs/…: nicht nochmals thumbs/ davorsetzen
+    if (key.indexOf('/') >= 0) {
+      list.push(enc('assets/cards/' + key));
+      if (/\.jpe?g$/i.test(key)) list.push(enc('assets/cards/' + key.replace(/\.jpe?g$/i, '.png')));
+      if (/\.png$/i.test(key)) list.push(enc('assets/cards/' + key.replace(/\.png$/i, '.jpg')));
+      var base = key.split('/').pop();
+      var baseStem = base.replace(/\.(png|jpe?g)$/i, '');
+      list.push(enc('assets/cards/thumbs/' + baseStem + '.jpg'));
+      list.push(enc('assets/cards/thumbs/' + baseStem + '.png'));
+      list.push(enc('assets/cards/thumbs/' + base));
+      return list;
+    }
     list.push(enc('assets/cards/thumbs/' + stem + '.jpg'));
     list.push(enc('assets/cards/thumbs/' + key));
     list.push(enc('assets/cards/' + stem + '.png'));

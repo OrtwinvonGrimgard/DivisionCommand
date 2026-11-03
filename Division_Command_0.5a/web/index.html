@@ -11,7 +11,7 @@
   <meta name="theme-color" content="#12140f">
   <link rel="stylesheet" href="css/app.css?v=kit11">
   <link rel="stylesheet" href="css/kit-editor.css?v=1">
-  <link rel="stylesheet" href="css/align.css?v=piles4" id="dc-align-css">
+  <link rel="stylesheet" href="css/align.css?v=menufix1" id="dc-align-css">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
     .title-brand .ver-big { display: none !important; }
@@ -622,7 +622,7 @@
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/library.js?v=030n"></script>
   <script src="js/ui/portraits.js?v=kit20"></script>
-  <script src="js/ui/app.js?v=kit2"></script>
+  <script src="js/ui/app.js?v=menufix1"></script>
   <script src="js/ui/hand-drag.js?v=032d2"></script>
   <script src="js/net.js?v=030c"></script>
   <script>
@@ -956,7 +956,12 @@
         user: { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Fhr', facing: 'left' }
       };
       function portraitSrc(id, rank) {
-        if (window.DCPortrait) return DCPortrait.src(id, rank);
+        if (window.DCPortrait) {
+          var u = DCPortrait.src(id, rank);
+          if (u) return u;
+          if (id && /^(assets\/|https?:|data:|\.|\/)/.test(String(id))) return String(id);
+          return DCPortrait.legacyUrl(id) || 'assets/portraits/Vael/male/01.png?v=13';
+        }
         return 'assets/portraits/Vael/male/01.png?v=13';
       }
       function kitFromUser(u) {

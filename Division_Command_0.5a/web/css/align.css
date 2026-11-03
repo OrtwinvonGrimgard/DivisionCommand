@@ -200,7 +200,33 @@
   font-weight: 700;
   text-align: center;
 }
-#scr-setup.on label { display: none !important; }
+/* Name/Rufname wieder bedienbar (display:none auf label hatte die Inputs mitversteckt). */
+#scr-setup.on label {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 6px;
+  width: min(480px, 88%);
+  margin: 6px auto !important;
+  color: #d7d1b8 !important;
+  font-size: 12px !important;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+#scr-setup.on label.face-dir {
+  flex-direction: row !important;
+  justify-content: center;
+  gap: 8px;
+  color: #e2c36a !important;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14px !important;
+}
+#scr-setup.on label input {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
 #scr-setup.on #setup-name {
   display: block;
   width: min(320px, 80vw);
@@ -349,22 +375,24 @@ body:has(#title-root.boot-intro:not(.btn-in)) #dc-version {
 #scr-title.on .menu {
   margin: 0 auto !important;
 }
+/* Porträt rechts neben dem Menü, nicht darüber (war mit großem who-face zentriert und hat Buttons verdeckt). */
 #scr-title.on #who-line {
   position: fixed !important;
-  left: 50% !important;
-  right: auto !important;
-  top: calc(24% + 270px) !important;
+  left: auto !important;
+  right: 4vw !important;
+  top: 50% !important;
   bottom: auto !important;
-  transform: translateX(-50%) !important;
+  transform: translateY(-46%) !important;
   z-index: 8 !important;
   margin: 0 !important;
   padding: 0 !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  gap: 2px;
+  gap: 8px;
   text-align: center !important;
   pointer-events: none !important;
+  max-width: min(30vw, 440px);
 }
 #scr-title.on #who-line .who-lbl {
   font-size: 13px !important;

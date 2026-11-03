@@ -101,7 +101,7 @@ window.DC_CATALOG.cards = [];
     var css = document.createElement('link');
     css.id = 'dc-align-css';
     css.rel = 'stylesheet';
-    css.href = 'css/align.css?v=032fx2';
+    css.href = 'css/align.css?v=menufix1';
     document.head.appendChild(css);
   }
 
