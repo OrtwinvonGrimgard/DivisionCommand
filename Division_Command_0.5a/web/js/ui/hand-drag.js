@@ -119,11 +119,15 @@
   document.addEventListener('pointerup', function (ev) {
     if (!drag) return;
     if (ev.pointerId != null && drag.pointerId != null && ev.pointerId !== drag.pointerId) return;
-    ev.preventDefault();
-    ev.stopPropagation();
+    var moved = !!drag.moved;
     var x = ev.clientX || drag.lx;
     var y = ev.clientY || drag.ly;
     end(x, y);
+    /* Nur nach echtem Drag Klick unterdrücken — sonst geht Vergrößern/Auswahl kaputt. */
+    if (moved) {
+      ev.preventDefault();
+      ev.stopPropagation();
+    }
   }, true);
 
   document.addEventListener('mouseup', function (ev) {

@@ -943,9 +943,17 @@
     var el = document.getElementById('hoverzoom'); // lokale Variable
     if (el) el.classList.remove('show'); // CSS-Klasse ändern
   }
-  /* Absichtlich leer: Zoom nur per Klick. */
+  /* Hover-Zoom (große Vorschau) an Element hängen. */
     function bindHover(el, getData) { // Funktion
-    /* Zoom nur noch per Klick, nicht per Hover. */
+    if (!el || el.dataset.dcHoverBound === '1') return;
+    el.dataset.dcHoverBound = '1';
+    el.addEventListener('mouseenter', function () {
+      if (dialogOpen() || document.body.classList.contains('dc-dragging')) return;
+      var data = getData && getData();
+      if (!data || !data.def) return;
+      showHover(data.def, !!data.facedown, data.inst);
+    });
+    el.addEventListener('mouseleave', function () { hideHover(); });
   }
   /* Steht ein Systemdialog über dem Tisch? */
     function dialogOpen() { // Funktion
@@ -1441,6 +1449,7 @@
     if (canAtk) html += '<button type="button" class="primary" id="ac-atk">Angriff</button>';
     if (canAb) html += '<button type="button" id="ac-ab">Fähigkeit</button>';
     if (canRev) html += '<button type="button" id="ac-rev">Aufdecken</button>';
+    html += '<button type="button" id="ac-view">Ansehen</button>';
     html += '<button type="button" id="ac-x">Zurück</button></div></div>';
     ov.innerHTML = html;
     ov.style.display = 'flex';
@@ -1451,6 +1460,11 @@
     if (b) b.onclick = function () { go(function () { dispatch({ type: 'USE_ABILITY', player: viewer, uid: loc.inst.uid }); }); };
     var r = document.getElementById('ac-rev');
     if (r) r.onclick = function () { go(function () { dispatch({ type: 'REVEAL_UNIT', player: viewer, uid: loc.inst.uid }); }); };
+    var v = document.getElementById('ac-view');
+    if (v) v.onclick = function () {
+      ov.style.display = 'none';
+      openInspect({ def: d, inst: loc.inst, facedown: loc.inst.facedown, uid: loc.inst.uid, buttons: [{ id: 'close', label: 'Zurück' }] });
+    };
     document.getElementById('ac-x').onclick = function () { ov.style.display = 'none'; };
   }
   var placing = false;
@@ -2017,6 +2031,20 @@
         var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; }); // Handkarten
         return card ? { def: engine.defOf(card), facedown: false, inst: null } : null; // verdeckte Lage
       }); // nächster Schritt im Ablauf
+      el.ondblclick = function (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; });
+        if (!card) return;
+        hideHover();
+        openInspect({
+          def: engine.defOf(card),
+          facedown: false,
+          uid: card.uid,
+          zone: 'hand',
+          buttons: [{ id: 'close', label: 'Zurück' }]
+        });
+      };
       el.onclick = function (ev) {
         if (suppressHandClick || window.dcSuppressClick) {
           ev.preventDefault();
@@ -2224,10 +2252,60 @@
         });
       };
     }); // nächster Schritt im Ablauf
+    function bindGrave(id, cards, enemy) {
+      var pile = document.getElementById(id);
+      if (!pile || pile.dataset.dcGraveBound === '1') return;
+      pile.dataset.dcGraveBound = '1';
+      pile.style.cursor = 'pointer';
+      pile.addEventListener('click', function () {
+        if (!engine) return;
+        var viewer = mode === 'hotseat' ? engine.state.active : you;
+        var me = engine.state.players[viewer];
+        var foe = engine.state.players[viewer === 0 ? 1 : 0];
+        var list = enemy ? foe.grave : me.grave;
+        if (!list || !list.length) return;
+        var top = list[list.length - 1];
+        var def = engine.defOf(top);
+        if (!def) return;
+        openInspect({
+          def: def,
+          facedown: false,
+          uid: top.uid || def.id,
+          zone: 'grave',
+          buttons: [{ id: 'close', label: 'Zurück' }]
+        });
+      });
+    }
+    bindGrave('pile-my-grave', null, false);
+    bindGrave('pile-enemy-grave', null, true);
+    document.querySelectorAll('#hand .card, #my-front .slot.filled, #my-support .slot.filled, #enemy-front .slot.filled, #enemy-support .slot.filled, #my-doctrine .doctrine-card, #enemy-doctrine .doctrine-card').forEach(function (el) {
+      if (el.dataset.dcInspectAux === '1') return;
+      el.dataset.dcInspectAux = '1';
+      el.addEventListener('auxclick', function (ev) {
+        if (ev.button !== 1) return;
+        ev.preventDefault();
+        ev.stopPropagation();
+        if (el.classList.contains('card') && el.closest('#hand')) {
+          var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; });
+          if (!card) return;
+          openInspect({ def: engine.defOf(card), facedown: false, uid: card.uid, zone: 'hand', buttons: [{ id: 'close', label: 'Zurück' }] });
+          return;
+        }
+        if (el.classList.contains('doctrine-card')) {
+          var def = CATALOG.cards.find(function (c) { return c.id === el.dataset.id; });
+          if (def) openInspect({ def: def, zone: 'doctrine', buttons: [{ id: 'close', label: 'Zurück' }] });
+          return;
+        }
+        var loc = engine.findInst(el.dataset.uid);
+        if (!loc) return;
+        var hide = !!(loc.inst.facedown && loc.player !== viewer);
+        openInspect({ def: engine.defOf(loc.inst), inst: loc.inst, facedown: hide, uid: loc.inst.uid, buttons: [{ id: 'close', label: 'Zurück' }] });
+      });
+    });
     bindStatTips(document.getElementById('app'));
     $('#hint').textContent = st.pending // offene Wahl des Spielers
       ? 'Ziel oder Stellung wählen.' // nächster Schritt im Ablauf
-      : 'Karte auf ein Feld ziehen. Antippen öffnet die große Ansicht.'; // nächster Schritt im Ablauf
+      : 'Karte ziehen zum Ausspielen. Doppelklick/Mittelklick: vergrößern. Hover: Vorschau.'; // nächster Schritt im Ablauf
     $('#log').innerHTML = engine.log.slice(-40).reverse().map(function (l) { // HTML in den Knoten schreiben
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
     }).join(''); // nächster Schritt im Ablauf

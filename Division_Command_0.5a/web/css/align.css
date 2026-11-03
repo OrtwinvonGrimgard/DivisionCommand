@@ -503,7 +503,8 @@ body:has(#title-root.boot-intro:not(.btn-in)) #dc-version {
   flex-direction: column !important;
   min-height: 0 !important;
   height: 100% !important;
-  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important; /* Hand darf nicht am Parent abgeschnitten werden */
   gap: 2px !important;
   padding: 4px 8px 2px !important;
 }
@@ -575,59 +576,83 @@ body:has(#title-root.boot-intro:not(.btn-in)) #dc-version {
   object-fit: contain !important;
 }
 
-/* Eigene Seite: Karten groß, die untere Hälfte hängt aus dem Bild.
-   Draufzeigen schiebt sie nach oben, bis sie ganz zu sehen sind. */
+/* Eigene Hand: Karten vollständig sichtbar (kein 14vh-Dock bei 28vh-Karte). */
 #app .bottom-bar {
-  height: 14vh !important;
-  max-height: 14vh !important;
-  align-items: start !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 16vh !important;
+  align-items: end !important;
   overflow: visible !important;
+  padding-bottom: 4px !important;
 }
-#app .bottom-bar .pile { width: 17vh !important; }
+#app .bottom-bar .pile { width: min(12vh, 96px) !important; }
 #app .bottom-bar .pile img {
-  width: 17vh !important;
-  height: 24vh !important;
+  width: min(12vh, 96px) !important;
+  height: min(17vh, 136px) !important;
   object-fit: contain !important;
 }
 #app .bottom-bar .doctrine-card,
 #app .bottom-bar .doctrine-card img.art {
-  width: 18vh !important;
-  height: 26vh !important;
+  width: min(12.5vh, 100px) !important;
+  height: min(18vh, 144px) !important;
   max-height: none !important;
   flex: 0 0 auto !important;
   object-fit: contain !important;
 }
 #app .hand-dock,
 #app .hand {
-  height: 14vh !important;
-  min-height: 0 !important;
+  height: auto !important;
+  min-height: 16vh !important;
+  max-height: none !important;
   overflow: visible !important;
 }
-#app .hand { align-items: flex-start !important; }
+#app .hand {
+  align-items: end !important;
+  padding-top: 6px !important;
+}
 #app .hand .card {
-  height: 28vh !important;
+  height: min(18vh, 168px) !important;
+  max-height: 18vh !important;
   margin-bottom: 0 !important;
   transform: none;
-  transition: transform .22s ease;
+  transition: transform .18s ease, box-shadow .18s ease;
   position: relative;
   z-index: 2;
 }
-#app .hand .card img.art { height: 100% !important; object-fit: cover !important; object-position: top center !important; }
+#app .hand .card img.art {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+}
 #app .bottom-bar .pile,
 #app .bottom-bar .doctrine-card {
-  transition: transform .22s ease;
+  transition: transform .18s ease;
   position: relative;
   z-index: 2;
 }
+/* Leichter Lift nur zur Hervorhebung — Sichtbarkeit hängt nicht davon ab. */
 body:not(.dc-dragging):not(.dc-armed) #app .hand .card:hover {
-  transform: translateY(-14vh);
+  transform: translateY(-8px);
   z-index: 12;
 }
 body:not(.dc-dragging) #app .bottom-bar .pile:hover {
-  transform: translateY(-10vh);
+  transform: translateY(-6px);
   z-index: 12;
 }
 body:not(.dc-dragging) #app .bottom-bar .doctrine-card:hover {
-  transform: translateY(-12vh);
+  transform: translateY(-6px);
   z-index: 12;
+}
+@media (max-height: 900px) {
+  #app .hand .card { height: min(15vh, 132px) !important; max-height: 15vh !important; }
+  #app .hand-dock, #app .hand { min-height: 13vh !important; }
+  #app .bottom-bar { min-height: 13vh !important; }
+}
+@media (max-height: 760px) {
+  #app .hand .card { height: min(12vh, 100px) !important; max-height: 12vh !important; }
+  #app .hand-dock, #app .hand { min-height: 11vh !important; }
+  #app .bottom-bar { min-height: 11vh !important; padding-bottom: 2px !important; }
+  #app .front-line .slot, #app .support-row .slot { height: 7.5vh !important; }
+  #app #my-front .slot, #app #my-support .slot { height: 9vh !important; }
 }
