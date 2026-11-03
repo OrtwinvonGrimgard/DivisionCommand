@@ -222,6 +222,7 @@
     });
   }
   function bindChrome() {
+    bindInspectGestures();
     preloadCardArt();
     if (window.DCAudio) DCAudio.preload();
     function bind(id, fn) { // Funktion
@@ -1077,6 +1078,85 @@
     }); // nächster Schritt im Ablauf
   }
 
+  /* Robuste Vergrößerung: Delegation überlebt Re-Render; Rechtsklick+Doppelklick überall. */
+  var inspectGesturesBound = false;
+  function resolveInspectTarget(el) {
+    if (!el || !engine || !engine.state) return null;
+    var viewer = mode === 'hotseat' ? engine.state.active : you;
+    var me = engine.state.players[viewer];
+    var node = el.closest ? el : null;
+    if (!node || !node.closest) return null;
+    var card = node.closest('#hand .card');
+    if (card) {
+      var c = me.hand.find(function (x) { return x.uid === card.dataset.uid; });
+      if (!c) return null;
+      return { def: engine.defOf(c), facedown: false, uid: c.uid, zone: 'hand' };
+    }
+    var dok = node.closest('#my-doctrine .doctrine-card, #enemy-doctrine .doctrine-card');
+    if (dok) {
+      var def = CATALOG.cards.find(function (c) { return c.id === dok.dataset.id; });
+      if (!def) return null;
+      return { def: def, facedown: false, uid: def.id, zone: 'doctrine' };
+    }
+    var slot = node.closest('#my-front .slot.filled, #my-support .slot.filled, #enemy-front .slot.filled, #enemy-support .slot.filled');
+    if (slot) {
+      var loc = engine.findInst(slot.dataset.uid);
+      if (!loc) return null;
+      var hide = !!(loc.inst.facedown && loc.player !== viewer);
+      return { def: engine.defOf(loc.inst), inst: loc.inst, facedown: hide, uid: loc.inst.uid, zone: loc.zone || 'board' };
+    }
+    return null;
+  }
+  function bindInspectGestures() {
+    if (inspectGesturesBound) return;
+    inspectGesturesBound = true;
+    function openFromEvent(ev) {
+      if (document.body.classList.contains('dc-dragging')) return false;
+      var hit = resolveInspectTarget(ev.target);
+      if (!hit || !hit.def) return false;
+      ev.preventDefault();
+      ev.stopPropagation();
+      hideHover();
+      try {
+        var n = ev.target && ev.target.closest && ev.target.closest('.card, .slot, .doctrine-card');
+        if (n && n._dcActTimer) clearTimeout(n._dcActTimer);
+      } catch (eClr) {}
+      /* Act-Menü/Overlay schließen, sonst blockiert dialogOpen den Zoom nach Doppelklick. */
+      var ov = document.getElementById('overlay');
+      if (ov && ov.style.display === 'flex') { ov.style.display = 'none'; ov.innerHTML = ''; }
+      var ig = document.getElementById('ingame-opts');
+      if (ig && ig.style.display === 'flex') return false;
+      openInspect({
+        def: hit.def,
+        inst: hit.inst,
+        facedown: !!hit.facedown,
+        uid: hit.uid,
+        zone: hit.zone,
+        buttons: [{ id: 'close', label: 'Zurück' }]
+      });
+      return true;
+    }
+    document.addEventListener('dblclick', function (ev) { openFromEvent(ev); }, true);
+    document.addEventListener('contextmenu', function (ev) {
+      var card = ev.target && ev.target.closest && ev.target.closest('#hand .card');
+      if (card && ev.shiftKey) {
+        /* Shift+Rechtsklick: verdeckt scharfschalten (früher Rechtsklick allein). */
+        ev.preventDefault();
+        ev.stopPropagation();
+        if (!engine || !engine.state) return;
+        var viewer = mode === 'hotseat' ? engine.state.active : you;
+        var me = engine.state.players[viewer];
+        var c = me.hand.find(function (x) { return x.uid === card.dataset.uid; });
+        if (!c) return;
+        document.querySelectorAll('#hand .card.picked').forEach(function (n) { n.classList.remove('picked'); });
+        card.classList.add('picked');
+        armHandCard(c.uid, viewer, true);
+        return;
+      }
+      openFromEvent(ev);
+    }, true);
+  }
+
   function unitHtml(inst, mine, section, row) {
     if (!inst) return '<div class="slot empty" data-drop="front" data-section="' + (section || '') + '" data-row="' + (row || 0) + '"></div>';
     try {
@@ -1923,6 +2003,7 @@
   }
   /* Gesamten Tisch aus dem Engine-Stand neu aufbauen. */
     function render() { // Tisch neu zeichnen
+    bindInspectGestures();
     if (!engine || !engine.state || !engine.state.players) return;
     if (!armedPlay && (!engine.state.pending || engine.state.pending.kind !== 'deploy')) document.body.classList.remove('dc-armed');
     var st = engine.state; // lokale Variable
@@ -2031,20 +2112,6 @@
         var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; }); // Handkarten
         return card ? { def: engine.defOf(card), facedown: false, inst: null } : null; // verdeckte Lage
       }); // nächster Schritt im Ablauf
-      el.ondblclick = function (ev) {
-        ev.preventDefault();
-        ev.stopPropagation();
-        var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; });
-        if (!card) return;
-        hideHover();
-        openInspect({
-          def: engine.defOf(card),
-          facedown: false,
-          uid: card.uid,
-          zone: 'hand',
-          buttons: [{ id: 'close', label: 'Zurück' }]
-        });
-      };
       el.onclick = function (ev) {
         if (suppressHandClick || window.dcSuppressClick) {
           ev.preventDefault();
@@ -2067,14 +2134,16 @@
         el.classList.add('picked');
         armHandCard(card.uid, viewer, false);
       };
+      /* Rechtsklick-Zoom: Delegation. Hier nur Shift+Rechtsklick = verdeckt. */
       el.oncontextmenu = function (ev) {
+        if (!ev.shiftKey) return;
         ev.preventDefault();
         ev.stopPropagation();
-        var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; });
-        if (!card) return;
+        var cardFd = me.hand.find(function (c) { return c.uid === el.dataset.uid; });
+        if (!cardFd) return;
         document.querySelectorAll('#hand .card.picked').forEach(function (c) { c.classList.remove('picked'); });
         el.classList.add('picked');
-        armHandCard(card.uid, viewer, true);
+        armHandCard(cardFd.uid, viewer, true);
       };
       el.draggable = false;
       el.querySelectorAll('img').forEach(function (img) { img.draggable = false; });
@@ -2095,12 +2164,18 @@
         var loc = engine.findInst(el.dataset.uid); // lokale Variable
         return loc ? { def: engine.defOf(loc.inst), facedown: loc.inst.facedown, inst: loc.inst } : null; // verdeckte Lage
       }); // nächster Schritt im Ablauf
+      /* Zoom: Delegation (Rechtsklick/Doppelklick). Klick: Act-Menü verzögert. */
+      el.ondblclick = function () { clearTimeout(el._dcActTimer); };
+      el.oncontextmenu = function () { clearTimeout(el._dcActTimer); };
       el.onclick = function () { // Funktion
         if (tryPickPending(el.dataset.uid)) return; // Zweig nur bei zutreffender Bedingung
         var loc = engine.findInst(el.dataset.uid); // lokale Variable
         if (!loc) return; // Zweig nur bei zutreffender Bedingung
         var d = engine.defOf(loc.inst); // lokale Variable
-        showActChooser(loc, d, viewer); // nächster Schritt im Ablauf
+        clearTimeout(el._dcActTimer);
+        el._dcActTimer = setTimeout(function () {
+          showActChooser(loc, d, viewer); // nächster Schritt im Ablauf
+        }, 280);
       };
     }); // nächster Schritt im Ablauf
     document.querySelectorAll('#enemy-support .slot.filled').forEach(function (el) {
@@ -2143,6 +2218,8 @@
         var loc = engine.findInst(el.dataset.uid);
         return loc ? { def: engine.defOf(loc.inst), facedown: false, inst: loc.inst } : null;
       });
+      el.ondblclick = function () { clearTimeout(el._dcActTimer); };
+      el.oncontextmenu = function () { clearTimeout(el._dcActTimer); };
       el.onclick = function () {
         if (tryPickPending(el.dataset.uid)) return;
         var loc = engine.findInst(el.dataset.uid);
@@ -2151,17 +2228,20 @@
         var locked = engine._supportLocked && engine._supportLocked(viewer);
         var btns = [{ id: 'close', label: 'Zurück' }];
         if ((d.effects || []).length) btns.unshift({ id: 'activate', label: locked ? 'Blockiert' : 'Fähigkeit', primary: !locked });
-        openInspect({
-          def: d,
-          inst: loc.inst,
-          zone: 'support',
-          uid: loc.inst.uid,
-          buttons: btns,
-          onAction: function (id) {
-            if (id !== 'activate') return;
-            dispatch({ type: 'ACTIVATE_SUPPORT', player: viewer, uid: loc.inst.uid });
-          }
-        });
+        clearTimeout(el._dcActTimer);
+        el._dcActTimer = setTimeout(function () {
+          openInspect({
+            def: d,
+            inst: loc.inst,
+            zone: 'support',
+            uid: loc.inst.uid,
+            buttons: btns,
+            onAction: function (id) {
+              if (id !== 'activate') return;
+              dispatch({ type: 'ACTIVATE_SUPPORT', player: viewer, uid: loc.inst.uid });
+            }
+          });
+        }, 280);
       };
     });
     document.querySelectorAll('#enemy-doctrine .doctrine-card, #my-doctrine .doctrine-card').forEach(function (el) {
@@ -2305,7 +2385,7 @@
     bindStatTips(document.getElementById('app'));
     $('#hint').textContent = st.pending // offene Wahl des Spielers
       ? 'Ziel oder Stellung wählen.' // nächster Schritt im Ablauf
-      : 'Karte ziehen zum Ausspielen. Doppelklick/Mittelklick: vergrößern. Hover: Vorschau.'; // nächster Schritt im Ablauf
+      : 'Karte ziehen zum Ausspielen. Rechtsklick/Doppelklick: vergrößern. Hover: Vorschau. Shift+Rechtsklick: verdeckt scharf.'; // nächster Schritt im Ablauf
     $('#log').innerHTML = engine.log.slice(-40).reverse().map(function (l) { // HTML in den Knoten schreiben
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
     }).join(''); // nächster Schritt im Ablauf

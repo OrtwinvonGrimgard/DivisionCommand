@@ -83,7 +83,7 @@
     if (drag || (ev.button != null && ev.button !== 0)) return;
     var card = ev.target && ev.target.closest ? ev.target.closest('#hand .card') : null;
     if (!card || !card.getAttribute('data-uid')) return;
-    ev.preventDefault();
+    /* preventDefault erst beim echten Drag — sonst stirbt dblclick/contextmenu. */
     var img = card.querySelector('img');
     drag = {
       uid: card.getAttribute('data-uid'),
@@ -104,6 +104,7 @@
     if (!drag.moved && Math.abs(ev.clientX - drag.x) + Math.abs(ev.clientY - drag.y) < 6) return;
     if (!drag.moved) {
       drag.moved = true;
+      if (ev.cancelable) ev.preventDefault();
       document.body.classList.add('dc-dragging');
       ghost(true, ev.clientX, ev.clientY, drag.src);
       if (window.dcDragNote) {
@@ -111,7 +112,7 @@
         if (lab) lab.textContent = window.dcDragNote(drag.uid);
       }
     }
-    if (ev.cancelable) ev.preventDefault();
+    if (drag.moved && ev.cancelable) ev.preventDefault();
     ghost(true, ev.clientX, ev.clientY);
     mark(aim(ev.clientX, ev.clientY, drag.uid));
   }, true);
