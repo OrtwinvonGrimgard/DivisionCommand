@@ -863,5 +863,97 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "max_copies": 1,
     "collector": "B266",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_meldelaeufer_323",
+    "set": "set_nations",
+    "nation": "Caldris",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Meldeläufer",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Feind aufdecken; ziehe 1 wenn du diesen Zug heilst.",
+    "effects": [],
+    "flavor": "Was nicht nach oben geht, gilt als gesund.",
+    "image": "aufklaerung/B323.jpg",
+    "max_copies": 1,
+    "collector": "B323",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_aktenblick_324",
+    "set": "set_nations",
+    "nation": "Caldris",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Aktenblick",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste 2; behalte 1 Heilungs-/Unterstützungs-Karte.",
+    "effects": [],
+    "flavor": "Die Zeile vor dem Bett.",
+    "image": "aufklaerung/B324.jpg",
+    "max_copies": 1,
+    "collector": "B324",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_ringwaechter_325",
+    "set": "set_nations",
+    "nation": "Caldris",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Ringwächter",
+    "ap": 2,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "+1 DEF; Feinde im Abschnitt können nicht verdeckt bleiben.",
+    "effects": [],
+    "flavor": "Versorgungsring sieht beide Türen.",
+    "image": "aufklaerung/B325.jpg",
+    "max_copies": 1,
+    "collector": "B325",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_formularspaeher_326",
+    "set": "set_nations",
+    "nation": "Caldris",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Formularspäher",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke Feind auf; wenn er diesen Zug angreift, −1 ATK.",
+    "effects": [],
+    "flavor": "Unvollständiges Formular ist Armut hier.",
+    "image": "aufklaerung/B326.jpg",
+    "max_copies": 1,
+    "collector": "B326",
+    "rarity": "bronze"
   }
 ];

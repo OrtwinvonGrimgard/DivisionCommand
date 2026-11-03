@@ -662,5 +662,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B269",
     "rarity": "gold"
+  },
+  {
+    "id": "dc_b_alm_ser_327",
+    "set": "set_nations",
+    "nation": "Caldris",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Alm Ser",
+    "ap": 3,
+    "atk": 2,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: heile 1; ziehe 1 wenn keine eigene Zerstörung.",
+    "effects": [],
+    "flavor": "Bett und Liste auf demselben Tisch.",
+    "image": "elite/B327.jpg",
+    "max_copies": 1,
+    "collector": "B327",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_pia_lueck_328",
+    "set": "set_nations",
+    "nation": "Caldris",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Pia Lück",
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: heile 2; +1 DEF wenn sie ruht.",
+    "effects": [],
+    "flavor": "Sie holt jedes Papier früher.",
+    "image": "elite/B328.jpg",
+    "max_copies": 1,
+    "collector": "B328",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_genesener_schlag_329",
+    "set": "set_nations",
+    "nation": "Caldris",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Genesener Schlag",
+    "ap": 4,
+    "atk": 4,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Wenn sie im letzten Zug nicht angriff: +2 ATK und heile 1.",
+    "effects": [],
+    "flavor": "Ruhe wird Kraft. Nicht Theater.",
+    "image": "elite/B329.jpg",
+    "max_copies": 1,
+    "collector": "B329",
+    "rarity": "gold"
   }
 ];
