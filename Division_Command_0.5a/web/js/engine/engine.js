@@ -457,7 +457,7 @@
       if (inst.flags.buffAtk) atk += inst.flags.buffAtk;
       if (inst.flags.buffDef) dv += inst.flags.buffDef;
       if (!inst.facedown && inst.summonedTurn === this.state.turn && owner && this._hasDoctrine(owner, 'BLITZ_SUMMON_ATK')) {
-        if (hasTag(def, 'panzer') || hasTag(def, 'mech-infanterie')) atk += 1;
+        if (hasTag(def, 'panzer')) atk += 1;
       }
       if (inst.flags && inst.flags.kavUntil === this.state.turn) atk += 2;
       if (inst.flags && inst.flags.lageUntil === this.state.turn) atk += 1;

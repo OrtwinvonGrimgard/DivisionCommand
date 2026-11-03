@@ -1,5 +1,5 @@
-window.DC_SET_ALPHA = window.DC_SET_ALPHA || {};
-window.DC_SET_ALPHA["Token"] = [
+window.DC_SET_TYPES = window.DC_SET_TYPES || {};
+window.DC_SET_TYPES["Token"] = [
   {
     "id": "dc_tok_minenfeld",
     "set": "set_alpha",
@@ -25,32 +25,7 @@ window.DC_SET_ALPHA["Token"] = [
         }
       }
     ],
-    "image": "token_mine.png",
-    "max_copies": 99
-  },
-  {
-    "id": "dc_tok_nebel",
-    "set": "set_alpha",
-    "status": "live",
-    "typ": "Token",
-    "klasse": "",
-    "name": "Nebel",
-    "verdeckt_ok": false,
-    "ap": 0,
-    "atk": null,
-    "def": null,
-    "tags": [
-      "nebel",
-      "rauch",
-      "token"
-    ],
-    "text": "Liegt im Niemandsland. Sicht nehmen.",
-    "effects": [
-      {
-        "code": "NEBEL_TOKEN"
-      }
-    ],
-    "image": "token_nebel.png",
+    "image": "tokens/MINE.png",
     "max_copies": 99
   }
 ];

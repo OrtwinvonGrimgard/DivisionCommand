@@ -24,7 +24,7 @@ import render as R  # noqa: E402
 
 SRC = ROOT / "assets" / "cards"
 GAME = Path("/workspace/artifacts/DivisionCommandApp/web/assets/cards")
-SETS = Path("/workspace/artifacts/DivisionCommandApp/web/js/data/sets/alpha")
+SETS = Path("/workspace/DivisionCommand/Division_Command_0.5a/web/js/data/sets/types")
 
 # Bildfenster der bemalten Originale (1536×2136), etwas innerhalb des Goldrands.
 ART_BOX = (90, 70, 1446, 850)
@@ -45,10 +45,10 @@ const vm = require('vm');
 const ctx = { window: {}, console };
 ctx.window = ctx;
 const dir = process.argv[1];
-for (const f of ['doktrinen.js','tokens.js','einheiten.js','unterstuetzung.js','soforteinsaetze.js','ausruestung.js']) {
+for (const f of fs.readdirSync(dir).filter(x => x.endsWith('.js'))) {
   vm.runInNewContext(fs.readFileSync(dir + '/' + f, 'utf8'), ctx);
 }
-const pack = ctx.window.DC_SET_ALPHA || {};
+const pack = ctx.window.DC_SET_TYPES || {};
 const cards = [];
 for (const typ of Object.keys(pack)) for (const c of pack[typ] || []) cards.push(c);
 process.stdout.write(JSON.stringify(cards));

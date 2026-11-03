@@ -2,7 +2,7 @@
 
 > **Status:** Arbeitsstand nach den 60er-Nationendecks (B001–B960)  
 > **Stand:** November 2026  
-> **Bezug:** LORE_NATIONEN.md, KRIEGSPHILOSOPHIEN_NATIONEN.md, DOKTRIN_NATIONEN.md, DECKS_SITZT.md, MECHANICS_REACTIVE.md, `web/js/data/sets/nations/*.js`
+> **Bezug:** LORE_NATIONEN.md, KRIEGSPHILOSOPHIEN_NATIONEN.md, DOKTRIN_NATIONEN.md, DECKS_SITZT.md, MECHANICS_REACTIVE.md, `web/js/data/sets/types/*.js` (Nation nur als Deck-Feld)
 
 Dieses Dokument beschreibt, **wie** die Nationen kämpfen: Formationen, Feuerführung, Aufklärung, Manöver, Verbund und Gegenmittel. Gesellschaft und Philosophie stehen in den anderen Lore-Dateien. Hier geht es um das Gefecht und um die Übersetzung in Deck und Mechanik (60 Spielkarten + 2 Doktrinen).
 
@@ -648,4 +648,4 @@ Zielangriff + Abschluss; Gold: Buchkrieg, Gebundene Häuser, Kaderkolonne; Karte
 
 ## Pflegehinweis
 
-Ändern sich Doktrinen, Decklisten oder Trigger-Schwerpunkte in `sets/nations` / `decks.js`, dieses Dokument in derselben Runde nachziehen. Gesellschaftliche Begründung bleibt in LORE_ / KRIEGSPHILOSOPHIEN_; hier nur Gefecht und Mechanik-Spiegel.
+Ändern sich Doktrinen, Decklisten oder Trigger-Schwerpunkte in `sets/types` / `decks.js`, dieses Dokument in derselben Runde nachziehen. Gesellschaftliche Begründung bleibt in LORE_ / KRIEGSPHILOSOPHIEN_; hier nur Gefecht und Mechanik-Spiegel.

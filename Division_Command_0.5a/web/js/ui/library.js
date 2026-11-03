@@ -22,7 +22,6 @@
     if (/elite|helden/.test(t)) return 'Elite';
     if (/artillerie|haubitze|mörser|moerser/.test(t)) return 'Artillerie';
     if (/späh|spaeh|aufklär|aufklaer|aufklaerung/.test(t)) return 'Aufklärung';
-    if (/schützenpanzer|schuetzenpanzer|mech-inf|mechinf/.test(t)) return 'Schützenpanzer';
     if (/panzer|kette/.test(t)) return 'Panzer';
     return 'Infanterie';
   }
@@ -32,7 +31,6 @@
   function matchesTab(c) {
     if (filterTab === 'all') return true;
     if (filterTab === 'Infanterie') return unitGroup(c) === 'Infanterie';
-    if (filterTab === 'Schützenpanzer') return unitGroup(c) === 'Schützenpanzer';
     if (filterTab === 'Panzer') return unitGroup(c) === 'Panzer';
     if (filterTab === 'Aufklärung') return unitGroup(c) === 'Aufklärung';
     if (filterTab === 'Artillerie') return unitGroup(c) === 'Artillerie';
@@ -52,7 +50,6 @@
     var all = cards().filter(function (c) { return matchesTab(c) && matchesQuery(c); });
     var groups = [
       { title: 'Infanterie', list: all.filter(function (c) { return unitGroup(c) === 'Infanterie'; }) },
-      { title: 'Schützenpanzer', list: all.filter(function (c) { return unitGroup(c) === 'Schützenpanzer'; }) },
       { title: 'Panzer', list: all.filter(function (c) { return unitGroup(c) === 'Panzer'; }) },
       { title: 'Aufklärung', list: all.filter(function (c) { return unitGroup(c) === 'Aufklärung'; }) },
       { title: 'Artillerie', list: all.filter(function (c) { return unitGroup(c) === 'Artillerie'; }) },
@@ -77,8 +74,6 @@
   var TAG_META = {
     infanterie: { name: 'Infanterie', text: 'Zu Fuß kämpfende Truppe. Typisch für Stellungen, Deckung und Nahgefechte.' },
     panzer: { name: 'Panzer', text: 'Gepanzerte Kampffahrzeuge. Oft Kette und Panzerung; anfällig für Panzerabwehr und bestimmte Waffen.' },
-    'schuetzenpanzer': { name: 'Schützenpanzer', text: 'Gepanzertes Transport- und Kampffahrzeug für Infanterie (Mech-Infanterie).' },
-    'mech-infanterie': { name: 'Mech-Infanterie', text: 'Infanterie auf Schützenpanzern. Am Boden Infanterie, das Fahrzeug zählt als gepanzert.' },
     aufklaerung: { name: 'Aufklärung', text: 'Späht auf, deckt Verdecktes auf oder sammelt Informationen über den Gegner.' },
     aufklärer: { name: 'Aufklärer', text: 'Leichte Späheinheiten. Aufklärung und Sicht, selten Durchbruchskraft.' },
     artillerie: { name: 'Artillerie', text: 'Indirektes Feuer aus dem Support oder als Stellung. Trifft oft die Front, nicht den Nahkampf.' },

@@ -1,6 +1,6 @@
-/** Karten liegen jetzt unter js/data/sets/alpha/ nach Typ.
- *  catalog.js setzt DC_CATALOG.cards aus DC_SET_ALPHA zusammen.
- *  Diese Datei bleibt als Hinweis, damit alte Includes nicht still scheitern. */
+/** Karten liegen unter js/data/sets/types/ nach Einheitentyp.
+ *  catalog.js setzt DC_CATALOG.cards aus DC_SET_TYPES zusammen.
+ *  Nation bleibt nur als Felddaten für Deck-Verknüpfung (decks.js / nationen.js). */
 if (!window.DC_CATALOG || !window.DC_CATALOG.cards || !window.DC_CATALOG.cards.length) {
-  console.warn('DC_CATALOG leer — sets/alpha/*.js und catalog.js laden.');
+  console.warn('DC_CATALOG leer — sets/types/*.js und catalog.js laden.');
 }

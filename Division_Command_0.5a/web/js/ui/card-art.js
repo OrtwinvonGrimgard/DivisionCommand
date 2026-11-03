@@ -29,7 +29,7 @@
     if (!file) return '';
     var key = String(file);
     if (ALIAS[key]) return ALIAS[key];
-    // Unterordner (alpha/) und Doktrin-JPGs behalten ihre Endung
+    // Typ-Unterordner (infanterie/, panzer/, …) und Doktrin-JPGs behalten ihre Endung
     if (/doktrin/i.test(key) || key.indexOf('/') >= 0) return key;
     return key.replace(/\.jpe?g$/i, '.png');
   }

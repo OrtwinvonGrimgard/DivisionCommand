@@ -23,7 +23,7 @@
     if (!file) return '';
     var key = String(file);
     if (ALIAS[key]) return ALIAS[key];
-    // Doktrin-JPGs und Unterordner (alpha/) behalten ihre Endung
+    // Doktrin-JPGs und Typ-Unterordner (infanterie/, panzer/, …) behalten ihre Endung
     if (/doktrin/i.test(key) || key.indexOf('/') >= 0) return key;
     return key.replace(/\.jpe?g$/i, '.png');
   }
@@ -89,13 +89,9 @@ window.DC_CATALOG = window.DC_CATALOG || {
 };
 window.DC_CATALOG.cards = [];
 (function () {
-  var pack = window.DC_SET_ALPHA || {};
+  var pack = window.DC_SET_TYPES || {};
   Object.keys(pack).forEach(function (typ) {
     (pack[typ] || []).forEach(function (c) { window.DC_CATALOG.cards.push(c); });
-  });
-  var nations = window.DC_SET_NATIONS || {};
-  Object.keys(nations).forEach(function (nat) {
-    (nations[nat] || []).forEach(function (c) { window.DC_CATALOG.cards.push(c); });
   });
 })();
 
@@ -127,7 +123,6 @@ window.DC_CATALOG.cards = [];
     var tabs = [
       ['all', 'ALLE'],
       ['Infanterie', 'INFANTERIE'],
-      ['Schützenpanzer', 'SCHÜTZENPANZER'],
       ['Panzer', 'PANZER'],
       ['Aufklärung', 'AUFKLÄRUNG'],
       ['Artillerie', 'ARTILLERIE'],
