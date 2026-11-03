@@ -1145,5 +1145,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B809",
     "rarity": "silver"
+  },
+  {
+    "id": "dc_b_ivo_vel_867",
+    "set": "set_nations",
+    "nation": "Vesper",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Ivo Vel",
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: ziehe 1 ODER wirf 1 ab und ziehe 2; Einheiten hier +1 ATK.",
+    "effects": [],
+    "flavor": "Ivo setzt Lagen. Erfolgt niemandem.",
+    "image": "elite/B867.jpg",
+    "max_copies": 1,
+    "collector": "B867",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_nila_still_868",
+    "set": "set_nations",
+    "nation": "Vesper",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Nila Still",
+    "ap": 3,
+    "atk": 2,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: ziehe 1; Einheiten hier +1 DEF.",
+    "effects": [],
+    "flavor": "Nila spielt weiter. Bruder bleibt Fall.",
+    "image": "elite/B868.jpg",
+    "max_copies": 1,
+    "collector": "B868",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_siegelmeister_869",
+    "set": "set_nations",
+    "nation": "Vesper",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Siegelmeister",
+    "ap": 4,
+    "atk": 3,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: spiele Ausrüstung/Unterstützung 1 billiger (min. 1) ODER heile 1.",
+    "effects": [],
+    "flavor": "Meister mischt Archive. Kein Herr.",
+    "image": "elite/B869.jpg",
+    "max_copies": 1,
+    "collector": "B869",
+    "rarity": "bronze"
   }
 ];

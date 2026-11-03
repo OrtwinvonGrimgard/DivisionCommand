@@ -1438,5 +1438,97 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "max_copies": 1,
     "collector": "B806",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_aktenleser_863",
+    "set": "set_nations",
+    "nation": "Vesper",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Aktenleser",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Einmal/Zug: decke auf; eine eigene Einheit +1 DEF.",
+    "effects": [],
+    "flavor": "Liest beide Hälften. Folgt keiner.",
+    "image": "aufklaerung/B863.jpg",
+    "max_copies": 1,
+    "collector": "B863",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_gegenlage_melder_864",
+    "set": "set_nations",
+    "nation": "Vesper",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Gegenlage-Melder",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; ziehe 1.",
+    "effects": [],
+    "flavor": "Melder setzt eine Gegenlage.",
+    "image": "aufklaerung/B864.jpg",
+    "max_copies": 1,
+    "collector": "B864",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_doppelversion_865",
+    "set": "set_nations",
+    "nation": "Vesper",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Doppelversion",
+    "ap": 2,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung.",
+    "effects": [],
+    "flavor": "Zwei gültige Lagen. Beide offiziell.",
+    "image": "aufklaerung/B865.jpg",
+    "max_copies": 1,
+    "collector": "B865",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_stillrain_laeufer_866",
+    "set": "set_nations",
+    "nation": "Vesper",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Stillrain-Läufer",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; ziehe 1 wenn Feind angrenzt.",
+    "effects": [],
+    "flavor": "Läufer, der Namen nicht laut sagt.",
+    "image": "aufklaerung/B866.jpg",
+    "max_copies": 1,
+    "collector": "B866",
+    "rarity": "bronze"
   }
 ];
