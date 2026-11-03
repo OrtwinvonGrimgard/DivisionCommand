@@ -4682,9 +4682,9 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Bewege eine eigene Einheit in einen angrenzenden Abschnitt.",
+    "text": "Wähle einen Abschnitt. Eigene Angriffe dort +2 ATK diesen Zug. Danach erleidet eine eigene Einheit dort 1 Schaden.",
     "effects": [],
-    "flavor": "Die Wache wechselt. Die Krone nicht.",
+    "flavor": "Konzentration hat einen Preis.",
     "image": "soforteinsatz/B659.jpg",
     "max_copies": 1,
     "collector": "B659",
@@ -4705,9 +4705,9 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Eine eigene Einheit +2 ATK bis Zugende; erleidet danach 1 Schaden.",
+    "text": "Zerstöre eine eigene Einheit. Spiele eine Einheit aus der Hand in denselben Abschnitt mit Kosten bis Kosten der Zerstörten +1. Heile sie um 1.",
     "effects": [],
-    "flavor": "Gehorsam hat Nachwirkungen.",
+    "flavor": "Der Platz bleibt heilig. Die Person nicht.",
     "image": "soforteinsatz/B660.jpg",
     "max_copies": 1,
     "collector": "B660",
