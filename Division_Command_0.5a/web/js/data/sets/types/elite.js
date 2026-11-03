@@ -800,5 +800,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B449",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_ada_mar_507",
+    "set": "set_nations",
+    "nation": "Namar",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Ada Mar",
+    "ap": 3,
+    "atk": 2,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: Einheit im Abschnitt +1 ATK ODER Entsatz: heile 1.",
+    "effects": [],
+    "flavor": "Antwort nach außen. Nicht den Preis.",
+    "image": "elite/B507.jpg",
+    "max_copies": 1,
+    "collector": "B507",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_ren_zoll_508",
+    "set": "set_nations",
+    "nation": "Namar",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Ren Zoll",
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: ziehe 1; Abschnitt +1 DEF; Feind kann dich nicht als Unterstützung stehlen.",
+    "effects": [],
+    "flavor": "Zweigt ab. Lässt den Fremden nicht an die Mole.",
+    "image": "elite/B508.jpg",
+    "max_copies": 1,
+    "collector": "B508",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_hafenmeister_509",
+    "set": "set_nations",
+    "nation": "Namar",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Hafenmeister",
+    "ap": 4,
+    "atk": 3,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: Einheit, die in diesen Abschnitt rückt, +1 ATK.",
+    "effects": [],
+    "flavor": "Meister des Kais — nicht der Flotte.",
+    "image": "elite/B509.jpg",
+    "max_copies": 1,
+    "collector": "B509",
+    "rarity": "gold"
   }
 ];

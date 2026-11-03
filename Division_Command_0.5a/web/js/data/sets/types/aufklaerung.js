@@ -1001,5 +1001,97 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "max_copies": 1,
     "collector": "B446",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_zollspaeher_503",
+    "set": "set_nations",
+    "nation": "Namar",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Zollspäher",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Einmal/Zug: decke auf; wenn Unterstützung im Abschnitt, ziehe 1.",
+    "effects": [],
+    "flavor": "Zollache kennt den Anteil.",
+    "image": "aufklaerung/B503.jpg",
+    "max_copies": 1,
+    "collector": "B503",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_wegmelder_504",
+    "set": "set_nations",
+    "nation": "Namar",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Wegmelder",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; +1 DEF wenn Abschnitt zuletzt angegriffen.",
+    "effects": [],
+    "flavor": "Melder auf der Straße.",
+    "image": "aufklaerung/B504.jpg",
+    "max_copies": 1,
+    "collector": "B504",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_kaihof_auge_505",
+    "set": "set_nations",
+    "nation": "Namar",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Kaihof-Auge",
+    "ap": 2,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste 3; behalte 1 Unterstützungs-/Einsatzkarte.",
+    "effects": [],
+    "flavor": "Auge am Kai. Nicht in der Halle.",
+    "image": "aufklaerung/B505.jpg",
+    "max_copies": 1,
+    "collector": "B505",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_restzaehler_506",
+    "set": "set_nations",
+    "nation": "Namar",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Restzähler",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; ziehe 1 wenn Feind ohne Unterstützung angrenzt.",
+    "effects": [],
+    "flavor": "Rest zählen. Nicht die Liste vom Morgen.",
+    "image": "aufklaerung/B506.jpg",
+    "max_copies": 1,
+    "collector": "B506",
+    "rarity": "bronze"
   }
 ];
