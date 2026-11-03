@@ -140,75 +140,6 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "collector": "A070"
   },
   {
-    "id": "dc_b_pfadwaechter",
-    "set": "set_nations",
-    "nation": "Lyr",
-    "status": "live",
-    "typ": "Einheit",
-    "klasse": "Einheit",
-    "name": "Pfadwächter",
-    "ap": 1,
-    "atk": 1,
-    "def": 2,
-    "verdeckt_ok": false,
-    "tags": [
-      "aufklärer"
-    ],
-    "text": "Wenn gespielt: markiere einen angrenzenden Abschnitt.",
-    "effects": [],
-    "flavor": "Er kennt jeden Tritt.",
-    "image": "aufklaerung/B224.jpg",
-    "max_copies": 1,
-    "collector": "B224",
-    "rarity": "bronze"
-  },
-  {
-    "id": "dc_b_talspaeher",
-    "set": "set_nations",
-    "nation": "Lyr",
-    "status": "live",
-    "typ": "Einheit",
-    "klasse": "Einheit",
-    "name": "Talspäher",
-    "ap": 1,
-    "atk": 1,
-    "def": 1,
-    "verdeckt_ok": false,
-    "tags": [
-      "aufklärer"
-    ],
-    "text": "Wenn allein: ziehe eine Karte, dann wirf eine ab.",
-    "effects": [],
-    "flavor": "Augen im Tal.",
-    "image": "aufklaerung/B226.jpg",
-    "max_copies": 1,
-    "collector": "B226",
-    "rarity": "bronze"
-  },
-  {
-    "id": "dc_b_waldschatten",
-    "set": "set_nations",
-    "nation": "Lyr",
-    "status": "live",
-    "typ": "Einheit",
-    "klasse": "Einheit",
-    "name": "Waldschatten",
-    "ap": 1,
-    "atk": 2,
-    "def": 1,
-    "verdeckt_ok": false,
-    "tags": [
-      "aufklärer"
-    ],
-    "text": "Verdeckt spielbar. Wenn aufgedeckt beim Einrücken eines Feindes: +2 ATK einmalig.",
-    "effects": [],
-    "flavor": "Erst der Schatten, dann der Stoß.",
-    "image": "aufklaerung/B230.jpg",
-    "max_copies": 1,
-    "collector": "B230",
-    "rarity": "bronze"
-  },
-  {
     "id": "dc_b_aufklaerer_424",
     "set": "set_nations",
     "nation": "Orthea",
@@ -747,6 +678,98 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B188.jpg",
     "max_copies": 1,
     "collector": "B188",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_bergfuehrer_224",
+    "set": "set_nations",
+    "nation": "Lyr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Bergführer",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Feind aufgeklärt; +1 ATK gegen Einrückende diesen Zug.",
+    "effects": [],
+    "flavor": "Er kennt den Pass. Er führt kein Amt.",
+    "image": "aufklaerung/B224.jpg",
+    "max_copies": 1,
+    "collector": "B224",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_hanglaeufer_225",
+    "set": "set_nations",
+    "nation": "Lyr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Hangläufer",
+    "ap": 2,
+    "atk": 2,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Wenn Feind einrückt: ziehe 1 (einmal/Zug).",
+    "effects": [],
+    "flavor": "Nachrichten laufen mit den Lesern.",
+    "image": "aufklaerung/B225.jpg",
+    "max_copies": 1,
+    "collector": "B225",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_pfadwaechter_226",
+    "set": "set_nations",
+    "nation": "Lyr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Pfadwächter",
+    "ap": 2,
+    "atk": 1,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Zerstörst du einrückende Einheit: ziehe 1.",
+    "effects": [],
+    "flavor": "Der Pfad bleibt dem Tal.",
+    "image": "aufklaerung/B226.jpg",
+    "max_copies": 1,
+    "collector": "B226",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_abschriftblick_227",
+    "set": "set_nations",
+    "nation": "Lyr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Abschriftblick",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste 2; behalte 1, lege 1 unten.",
+    "effects": [],
+    "flavor": "Wer nur die eigene Abschrift kennt, kennt den Eid nicht.",
+    "image": "aufklaerung/B227.jpg",
+    "max_copies": 1,
+    "collector": "B227",
     "rarity": "bronze"
   }
 ];

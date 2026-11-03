@@ -524,5 +524,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B191",
     "rarity": "gold"
+  },
+  {
+    "id": "dc_b_jona_leserbach_228",
+    "set": "set_nations",
+    "nation": "Lyr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Jona Leserbach",
+    "ap": 3,
+    "atk": 3,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: eine eigene Einheit in anderem Abschnitt +1 DEF.",
+    "effects": [],
+    "flavor": "Er schickt Leser. Er entscheidet nicht für die Täler.",
+    "image": "elite/B228.jpg",
+    "max_copies": 1,
+    "collector": "B228",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_mar_aschen_229",
+    "set": "set_nations",
+    "nation": "Lyr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Mar Aschen",
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: heile 2; ziehe 1 wenn allein.",
+    "effects": [],
+    "flavor": "Die Abschrift zurück. Kein besserer Ort.",
+    "image": "elite/B229.jpg",
+    "max_copies": 1,
+    "collector": "B229",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_talruf_230",
+    "set": "set_nations",
+    "nation": "Lyr",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Talruf",
+    "ap": 4,
+    "atk": 4,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: ziehe eine Infanterie; sie +1 DEF wenn allein.",
+    "effects": [],
+    "flavor": "Der Ruf geht an die, die der Eid noch zeigt.",
+    "image": "elite/B230.jpg",
+    "max_copies": 1,
+    "collector": "B230",
+    "rarity": "gold"
   }
 ];
