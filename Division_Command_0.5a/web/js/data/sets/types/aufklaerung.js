@@ -1277,5 +1277,97 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "max_copies": 1,
     "collector": "B686",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_markenspaeher_743",
+    "set": "set_nations",
+    "nation": "Eldran",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Markenspäher",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Einmal/Zug: decke auf; eine eigene Einheit +1 DEF.",
+    "effects": [],
+    "flavor": "Späher zählt Verlust vor Glanz.",
+    "image": "aufklaerung/B743.jpg",
+    "max_copies": 1,
+    "collector": "B743",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_gassenmelder_744",
+    "set": "set_nations",
+    "nation": "Eldran",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Gassenmelder",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; ziehe 1.",
+    "effects": [],
+    "flavor": "Melder aus der Parlamentsgasse.",
+    "image": "aufklaerung/B744.jpg",
+    "max_copies": 1,
+    "collector": "B744",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_grenzlese_745",
+    "set": "set_nations",
+    "nation": "Eldran",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Grenzlese",
+    "ap": 2,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung.",
+    "effects": [],
+    "flavor": "Lese die alte Grenze. Nicht die Fahne.",
+    "image": "aufklaerung/B745.jpg",
+    "max_copies": 1,
+    "collector": "B745",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_schulrain_laeufer_746",
+    "set": "set_nations",
+    "nation": "Eldran",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Schulrain-Läufer",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; ziehe 1 wenn Feind angrenzt.",
+    "effects": [],
+    "flavor": "Schulrain lehrt Dauer, nicht Schlacht.",
+    "image": "aufklaerung/B746.jpg",
+    "max_copies": 1,
+    "collector": "B746",
+    "rarity": "bronze"
   }
 ];

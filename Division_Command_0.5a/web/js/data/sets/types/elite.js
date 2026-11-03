@@ -1007,5 +1007,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B689",
     "rarity": "silver"
+  },
+  {
+    "id": "dc_b_marei_aure_747",
+    "set": "set_nations",
+    "nation": "Eldran",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Marei Aure",
+    "ap": 3,
+    "atk": 2,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: heile 1 ODER ziehe 1; Einheiten hier +1 DEF.",
+    "effects": [],
+    "flavor": "Marei führt den Staat. Nicht den Feldzug als Ruhm.",
+    "image": "elite/B747.jpg",
+    "max_copies": 1,
+    "collector": "B747",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_tomas_lenn_748",
+    "set": "set_nations",
+    "nation": "Eldran",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Tomas Lenn",
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: ziehe 1; nächste Einheit kostet 1 weniger (min. 1).",
+    "effects": [],
+    "flavor": "Lenn bremst und trägt mit.",
+    "image": "elite/B748.jpg",
+    "max_copies": 1,
+    "collector": "B748",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_zeughausmeister_749",
+    "set": "set_nations",
+    "nation": "Eldran",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Zeughausmeister",
+    "ap": 4,
+    "atk": 3,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: spiele Ausrüstung/Unterstützung 1 billiger (min. 1) ODER heile 1.",
+    "effects": [],
+    "flavor": "Meister ölt Lafetten über Jahre.",
+    "image": "elite/B749.jpg",
+    "max_copies": 1,
+    "collector": "B749",
+    "rarity": "silver"
   }
 ];
