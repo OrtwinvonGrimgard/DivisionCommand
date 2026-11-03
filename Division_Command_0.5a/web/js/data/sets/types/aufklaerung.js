@@ -1530,5 +1530,97 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "max_copies": 1,
     "collector": "B866",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_abschriftleser_923",
+    "set": "set_nations",
+    "nation": "Dargan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Abschriftleser",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Einmal/Zug: decke auf; eine eigene Einheit +1 DEF.",
+    "effects": [],
+    "flavor": "Liest Abschrift gegen Vorlesung.",
+    "image": "aufklaerung/B923.jpg",
+    "max_copies": 1,
+    "collector": "B923",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_datums_melder_924",
+    "set": "set_nations",
+    "nation": "Dargan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Datums-Melder",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; ziehe 1.",
+    "effects": [],
+    "flavor": "Melder trägt das frühere Datum.",
+    "image": "aufklaerung/B924.jpg",
+    "max_copies": 1,
+    "collector": "B924",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_gegenrechnung_925",
+    "set": "set_nations",
+    "nation": "Dargan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Gegenrechnung",
+    "ap": 2,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung.",
+    "effects": [],
+    "flavor": "Gegenrechnung hält Kalden.",
+    "image": "aufklaerung/B925.jpg",
+    "max_copies": 1,
+    "collector": "B925",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_selm_laeufer_926",
+    "set": "set_nations",
+    "nation": "Dargan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Selm-Läufer",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; ziehe 1 wenn Feind angrenzt.",
+    "effects": [],
+    "flavor": "Läufer aus der Lehre.",
+    "image": "aufklaerung/B926.jpg",
+    "max_copies": 1,
+    "collector": "B926",
+    "rarity": "bronze"
   }
 ];

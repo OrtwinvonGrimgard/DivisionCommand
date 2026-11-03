@@ -1214,5 +1214,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B869",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_schreiberin_kal_927",
+    "set": "set_nations",
+    "nation": "Dargan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Schreiberin Kal",
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: ziehe 1 ODER wirf 1 ab und ziehe 2; Einheiten hier +1 ATK.",
+    "effects": [],
+    "flavor": "Kal setzt Zeilen. Vergibt nicht.",
+    "image": "elite/B927.jpg",
+    "max_copies": 1,
+    "collector": "B927",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_hauptmann_kader_928",
+    "set": "set_nations",
+    "nation": "Dargan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Hauptmann Kader",
+    "ap": 3,
+    "atk": 2,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: ziehe 1; Einheiten hier +1 DEF.",
+    "effects": [],
+    "flavor": "Führt Waffen. Schreibt keine Liste.",
+    "image": "elite/B928.jpg",
+    "max_copies": 1,
+    "collector": "B928",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_haus_still_929",
+    "set": "set_nations",
+    "nation": "Dargan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Haus Still",
+    "ap": 4,
+    "atk": 3,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: spiele Ausrüstung/Unterstützung 1 billiger (min. 1) ODER heile 1.",
+    "effects": [],
+    "flavor": "Richtig. Zu spät. Steht noch.",
+    "image": "elite/B929.jpg",
+    "max_copies": 1,
+    "collector": "B929",
+    "rarity": "bronze"
   }
 ];
