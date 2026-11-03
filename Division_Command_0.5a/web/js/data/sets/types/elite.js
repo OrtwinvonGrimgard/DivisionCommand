@@ -239,5 +239,80 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B626",
     "rarity": "silver"
+  },
+  {
+    "id": "dc_b_optimat_384",
+    "set": "set_nations",
+    "nation": "Karsk",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Optimat",
+    "ap": 4,
+    "atk": 4,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "elite",
+      "infanterie"
+    ],
+    "text": "+2 ATK, solange beschädigt. Beim Ausspielen: erleidet 1 Schaden.",
+    "effects": [],
+    "flavor": "Der Staat hat ihn fertig gebaut.",
+    "image": "elite/B384.jpg",
+    "max_copies": 1,
+    "collector": "B384",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_chirurgenrat_385",
+    "set": "set_nations",
+    "nation": "Karsk",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Chirurgenrat",
+    "ap": 3,
+    "atk": 3,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "elite",
+      "infanterie"
+    ],
+    "text": "+1 DEF. Einmal pro Zug: heile 1 DEF an einer eigenen Einheit; diese hat -1 ATK bis Zugende.",
+    "effects": [],
+    "flavor": "Heilung als Leistungsdrossel.",
+    "image": "elite/B385.jpg",
+    "max_copies": 1,
+    "collector": "B385",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_masskommandant_386",
+    "set": "set_nations",
+    "nation": "Karsk",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Maßkommandant",
+    "ap": 5,
+    "atk": 5,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "elite",
+      "infanterie"
+    ],
+    "text": "Beim Ausspielen: wähle einen Abschnitt; eigene Einheiten dort +1 ATK bis Zugende und erleiden je 1 Schaden.",
+    "effects": [],
+    "flavor": "Befehl in Ampere.",
+    "image": "elite/B386.jpg",
+    "max_copies": 1,
+    "collector": "B386",
+    "rarity": "gold"
   }
 ];

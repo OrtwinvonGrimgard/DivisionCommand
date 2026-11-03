@@ -372,5 +372,101 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "max_copies": 1,
     "collector": "B787",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_kunstauge_380",
+    "set": "set_nations",
+    "nation": "Karsk",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärer",
+    "name": "Kunstauge",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "aufklaerung"
+    ],
+    "text": "Aufdecken: schaue die oberste Karte des gegnerischen Decks an.",
+    "effects": [],
+    "flavor": "Sehen ohne Lid.",
+    "image": "aufklaerung/B380.jpg",
+    "max_copies": 1,
+    "collector": "B380",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_nervenspaeher_381",
+    "set": "set_nations",
+    "nation": "Karsk",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärer",
+    "name": "Nervenspäher",
+    "ap": 2,
+    "atk": 2,
+    "def": 1,
+    "verdeckt_ok": true,
+    "tags": [
+      "einheit",
+      "aufklaerung"
+    ],
+    "text": "+1 ATK gegen verdeckte Einheiten. Kann verdeckt gespielt werden.",
+    "effects": [],
+    "flavor": "Empfang vor dem Schuss.",
+    "image": "aufklaerung/B381.jpg",
+    "max_copies": 1,
+    "collector": "B381",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_leistungszaehler_382",
+    "set": "set_nations",
+    "nation": "Karsk",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärer",
+    "name": "Leistungszähler",
+    "ap": 1,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "aufklaerung"
+    ],
+    "text": "Wenn eine eigene Einheit im selben Abschnitt Schaden nimmt: ziehe 1.",
+    "effects": [],
+    "flavor": "Jeder Ausfall ist eine Messung.",
+    "image": "aufklaerung/B382.jpg",
+    "max_copies": 1,
+    "collector": "B382",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_schnitt_melder_383",
+    "set": "set_nations",
+    "nation": "Karsk",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärer",
+    "name": "Schnitt-Melder",
+    "ap": 2,
+    "atk": 2,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "aufklaerung"
+    ],
+    "text": "Wenn eine eigene Einheit zerstört wird: ziehe 1 und füge einer eigenen Einheit 1 Schaden zu.",
+    "effects": [],
+    "flavor": "Die Meldung kostet.",
+    "image": "aufklaerung/B383.jpg",
+    "max_copies": 1,
+    "collector": "B383",
+    "rarity": "silver"
   }
 ];
