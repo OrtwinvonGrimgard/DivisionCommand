@@ -1076,5 +1076,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B749",
     "rarity": "silver"
+  },
+  {
+    "id": "dc_b_lina_nov_807",
+    "set": "set_nations",
+    "nation": "Averon",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Lina Nov",
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: decke 1–2 auf ODER spiele Sofort 1 billiger (min. 0); Einheiten hier +1 ATK gegen Aufgeklärte.",
+    "effects": [],
+    "flavor": "Lina handelt vor Ort. Erwartet, getragen zu werden.",
+    "image": "elite/B807.jpg",
+    "max_copies": 1,
+    "collector": "B807",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_ed_ruh_808",
+    "set": "set_nations",
+    "nation": "Averon",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Ed Ruh",
+    "ap": 3,
+    "atk": 2,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: decke 1 auf; Einheiten hier +1 DEF wenn du diesen Zug nicht Sofort spielst.",
+    "effects": [],
+    "flavor": "Ed übt den Tag ohne Leitung.",
+    "image": "elite/B808.jpg",
+    "max_copies": 1,
+    "collector": "B808",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_werkhof_nov_809",
+    "set": "set_nations",
+    "nation": "Averon",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Werkhof-Nov",
+    "ap": 4,
+    "atk": 3,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: ziehe 1 ODER heile 1; nächste Ausrüstung kostet 1 weniger (min. 1).",
+    "effects": [],
+    "flavor": "Familie Nov baut Verbindung. Thront nicht darüber.",
+    "image": "elite/B809.jpg",
+    "max_copies": 1,
+    "collector": "B809",
+    "rarity": "silver"
   }
 ];

@@ -236,29 +236,6 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "rarity": "bronze"
   },
   {
-    "id": "dc_b_arven_spaeher_787",
-    "set": "set_nations",
-    "nation": "Averon",
-    "status": "live",
-    "typ": "Einheit",
-    "klasse": "Infanterie",
-    "name": "Arven-Späher",
-    "ap": 2,
-    "atk": 2,
-    "def": 1,
-    "verdeckt_ok": false,
-    "tags": [
-      "infanterie"
-    ],
-    "text": "+2 ATK, wenn das Ziel aufgeklärt ist.",
-    "effects": [],
-    "flavor": "Arven kennt die Südblicke.",
-    "image": "aufklaerung/B787.jpg",
-    "max_copies": 1,
-    "collector": "B787",
-    "rarity": "bronze"
-  },
-  {
     "id": "dc_b_kunstauge_380",
     "set": "set_nations",
     "nation": "Karsk",
@@ -1368,6 +1345,98 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B746.jpg",
     "max_copies": 1,
     "collector": "B746",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_lina_melder_803",
+    "set": "set_nations",
+    "nation": "Averon",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Lina-Melder",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Einmal/Zug: decke auf; eine eigene Einheit +1 ATK.",
+    "effects": [],
+    "flavor": "Melder vor Ort — Straße neuer als Halle.",
+    "image": "aufklaerung/B803.jpg",
+    "max_copies": 1,
+    "collector": "B803",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_ed_ruh_pfad_804",
+    "set": "set_nations",
+    "nation": "Averon",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Ed-Ruh-Pfad",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; ziehe 1.",
+    "effects": [],
+    "flavor": "Pfad ohne heimliche Leitung.",
+    "image": "aufklaerung/B804.jpg",
+    "max_copies": 1,
+    "collector": "B804",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_lage_offen_805",
+    "set": "set_nations",
+    "nation": "Averon",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Lage-Offen",
+    "ap": 2,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung; decke 1 auf.",
+    "effects": [],
+    "flavor": "Blatt korrigiert laut. Keine stille Akte.",
+    "image": "aufklaerung/B805.jpg",
+    "max_copies": 1,
+    "collector": "B805",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_quellenlaeufer_806",
+    "set": "set_nations",
+    "nation": "Averon",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Quellenläufer",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; ziehe 1 wenn Feind angrenzt.",
+    "effects": [],
+    "flavor": "Quellen unterscheiden vor Dienstgrad.",
+    "image": "aufklaerung/B806.jpg",
+    "max_copies": 1,
+    "collector": "B806",
     "rarity": "bronze"
   }
 ];
