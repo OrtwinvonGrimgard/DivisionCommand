@@ -314,5 +314,77 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B386",
     "rarity": "gold"
+  },
+  {
+    "id": "dc_b_glaubenszeuge_108",
+    "set": "set_nations",
+    "nation": "Theryn",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Glaubenszeuge",
+    "ap": 3,
+    "atk": 3,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "infanterie"
+    ],
+    "text": "Opfere diese Einheit: eine gegnerische Einheit im Abschnitt erleidet 3 Schaden.",
+    "effects": [],
+    "flavor": "Anerkannt. Nicht allein selig.",
+    "image": "elite/B108.jpg",
+    "max_copies": 1,
+    "collector": "B108",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_eifererzug_109",
+    "set": "set_nations",
+    "nation": "Theryn",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Eifererzug",
+    "ap": 4,
+    "atk": 4,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "infanterie"
+    ],
+    "text": "+2 ATK. Am Zugende erleidet diese Einheit 1 Schaden.",
+    "effects": [],
+    "flavor": "Voss prüft, ob sie lau geworden sind.",
+    "image": "elite/B109.jpg",
+    "max_copies": 1,
+    "collector": "B109",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_masskommandant_110",
+    "set": "set_nations",
+    "nation": "Theryn",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Maßkommandant",
+    "ap": 5,
+    "atk": 4,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "infanterie"
+    ],
+    "text": "Beim Ausspielen: eigene Infanterie im Abschnitt +1 ATK bis Zugende.",
+    "effects": [],
+    "flavor": "Der Plan darf Nein sagen.",
+    "image": "elite/B110.jpg",
+    "max_copies": 1,
+    "collector": "B110",
+    "rarity": "bronze"
   }
 ];

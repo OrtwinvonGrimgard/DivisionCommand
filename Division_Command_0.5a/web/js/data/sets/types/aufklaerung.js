@@ -468,5 +468,101 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "max_copies": 1,
     "collector": "B383",
     "rarity": "silver"
+  },
+  {
+    "id": "dc_b_wellenmelder_20",
+    "set": "set_nations",
+    "nation": "Theryn",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Wellenmelder",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "aufklaerung"
+    ],
+    "text": "Beim Ausspielen: ziehe 1 Karte.",
+    "effects": [],
+    "flavor": "Meldung aus der Reihe.",
+    "image": "aufklaerung/B020.jpg",
+    "max_copies": 1,
+    "collector": "B020",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_passlaeufer_21",
+    "set": "set_nations",
+    "nation": "Theryn",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Passläufer",
+    "ap": 2,
+    "atk": 2,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "aufklaerung"
+    ],
+    "text": "+1 ATK gegen Einheiten mit 3 oder weniger DEF.",
+    "effects": [],
+    "flavor": "Leise Pflicht vor dem Sturm.",
+    "image": "aufklaerung/B021.jpg",
+    "max_copies": 1,
+    "collector": "B021",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_ritusspaeher_106",
+    "set": "set_nations",
+    "nation": "Theryn",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Ritusspäher",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "aufklaerung"
+    ],
+    "text": "Einmal pro Zug: die nächste Infanterie, die du spielst, kostet 1 weniger (mind. 1).",
+    "effects": [],
+    "flavor": "Elena zählt Schritte, nicht Jubel.",
+    "image": "aufklaerung/B106.jpg",
+    "max_copies": 1,
+    "collector": "B106",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_bannerlaeufer_107",
+    "set": "set_nations",
+    "nation": "Theryn",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Bannerläufer",
+    "ap": 3,
+    "atk": 2,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "einheit",
+      "aufklaerung"
+    ],
+    "text": "Beim Ausspielen: eine eigene Infanterie im Abschnitt erhält +1 ATK bis Zugende.",
+    "effects": [],
+    "flavor": "Wo der Balken geht, folgt die Welle.",
+    "image": "aufklaerung/B107.jpg",
+    "max_copies": 1,
+    "collector": "B107",
+    "rarity": "silver"
   }
 ];
