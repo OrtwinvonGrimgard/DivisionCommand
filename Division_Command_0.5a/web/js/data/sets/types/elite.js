@@ -731,5 +731,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B329",
     "rarity": "gold"
+  },
+  {
+    "id": "dc_b_nera_aster_447",
+    "set": "set_nations",
+    "nation": "Orthea",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Nera Aster",
+    "ap": 3,
+    "atk": 2,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: decke auf oder brich eigenen Bonus ab und ziehe 2.",
+    "effects": [],
+    "flavor": "Mappe zurücklegen, wenn die Probe lügt.",
+    "image": "elite/B447.jpg",
+    "max_copies": 1,
+    "collector": "B447",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_colin_abweich_448",
+    "set": "set_nations",
+    "nation": "Orthea",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Colin Abweich",
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: decke 2 auf; Abschnitt +1 DEF.",
+    "effects": [],
+    "flavor": "Unterschrift neben der Zahl aushängen.",
+    "image": "elite/B448.jpg",
+    "max_copies": 1,
+    "collector": "B448",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_fachoffizier_449",
+    "set": "set_nations",
+    "nation": "Orthea",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Fachoffizier",
+    "ap": 3,
+    "atk": 3,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "+1 ATK gegen aufgeklärte; melde abweichend: ziehe 1 bei Miss.",
+    "effects": [],
+    "flavor": "Unbequeme Meldung bleibt.",
+    "image": "elite/B449.jpg",
+    "max_copies": 1,
+    "collector": "B449",
+    "rarity": "bronze"
   }
 ];
