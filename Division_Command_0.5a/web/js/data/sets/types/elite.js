@@ -455,5 +455,74 @@ window.DC_SET_TYPES["Elite"] = [
     "max_copies": 1,
     "collector": "B152",
     "rarity": "gold"
+  },
+  {
+    "id": "dc_b_kai_leutnant_189",
+    "set": "set_nations",
+    "nation": "Merovan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Kai-Leutnant",
+    "ap": 3,
+    "atk": 3,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Einmal/Zug: schiebe eine eigene Einheit um 1 Slot.",
+    "effects": [],
+    "flavor": "Er hält. Er lizenziert nicht.",
+    "image": "elite/B189.jpg",
+    "max_copies": 1,
+    "collector": "B189",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_lucs_sitz_190",
+    "set": "set_nations",
+    "nation": "Merovan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Lucs Sitz",
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Beim Ausspielen: heile 2 verteilt; keine Garnison befehligen.",
+    "effects": [],
+    "flavor": "Im Parlament. Ohne Amt über die Kompanie.",
+    "image": "elite/B190.jpg",
+    "max_copies": 1,
+    "collector": "B190",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_offener_weg_191",
+    "set": "set_nations",
+    "nation": "Merovan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Elite",
+    "name": "Offener Weg",
+    "ap": 4,
+    "atk": 4,
+    "def": 4,
+    "verdeckt_ok": false,
+    "tags": [
+      "elite"
+    ],
+    "text": "Soforteinsatz zum Schieben kostet 1 weniger (min. 1).",
+    "effects": [],
+    "flavor": "Kommt der Weg, ist der Ort gewöhnlich — später und teurer.",
+    "image": "elite/B191.jpg",
+    "max_copies": 1,
+    "collector": "B191",
+    "rarity": "gold"
   }
 ];

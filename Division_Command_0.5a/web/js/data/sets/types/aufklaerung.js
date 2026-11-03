@@ -656,5 +656,97 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "max_copies": 1,
     "collector": "B149",
     "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_wegspaeher_185",
+    "set": "set_nations",
+    "nation": "Merovan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Wegspäher",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Feind aufgeklärt; nächstes Schieben kostet 0 zusätzlich.",
+    "effects": [],
+    "flavor": "Er sieht, ob der Weg noch Land ist.",
+    "image": "aufklaerung/B185.jpg",
+    "max_copies": 1,
+    "collector": "B185",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_warteblatt_laeufer_186",
+    "set": "set_nations",
+    "nation": "Merovan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Warteblatt-Läufer",
+    "ap": 2,
+    "atk": 2,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Wenn du schiebst: ziehe 1 (einmal/Zug).",
+    "effects": [],
+    "flavor": "Das Blatt fragt vor allem, ob das Schiff schon da ist.",
+    "image": "aufklaerung/B186.jpg",
+    "max_copies": 1,
+    "collector": "B186",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_lizenzmelder_187",
+    "set": "set_nations",
+    "nation": "Merovan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Lizenzmelder",
+    "ap": 2,
+    "atk": 1,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Zerstörst du aufgeklärte Unterstützung: ziehe 1.",
+    "effects": [],
+    "flavor": "Melden, dass der Weg zu ist — nicht entscheiden.",
+    "image": "aufklaerung/B187.jpg",
+    "max_copies": 1,
+    "collector": "B187",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_fahrplanblick_188",
+    "set": "set_nations",
+    "nation": "Merovan",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Fahrplanblick",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste Karte; behalte oder lege unten.",
+    "effects": [],
+    "flavor": "Zwei Pünktlichkeiten. Ein Land.",
+    "image": "aufklaerung/B188.jpg",
+    "max_copies": 1,
+    "collector": "B188",
+    "rarity": "bronze"
   }
 ];
