@@ -3502,17 +3502,11 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Wähle ein Ziel. Erster Schaden daran +1 ATK; Angreifer +1 DEF. Wenn das Ziel fällt: ziehe 1.",
     "effects": [
       {
-        "code": "BUFF",
+        "code": "ZIELANGRIFF",
         "param": {
-          "atk": 1,
-          "def": 1,
-          "until": "turn"
-        }
-      },
-      {
-        "code": "ON_DESTROY_DRAW",
-        "param": {
-          "draw": 1
+          "firstDmgBonus": 1,
+          "attackerDef": 1,
+          "drawOnKill": 1
         }
       }
     ],
@@ -4722,11 +4716,9 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Wähle Feind: eigene Einheiten greifen ihn an, als stünden sie angrenzend; +1 ATK.",
     "effects": [
       {
-        "code": "BUFF_ALL_OWN",
+        "code": "UMGEHEN",
         "param": {
-          "atk": 1,
-          "filter": null,
-          "until": "turn"
+          "atk": 1
         }
       }
     ],
@@ -6397,21 +6389,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Negiere 2 Schaden an Abschnitt; keine eigene Zerstörung → heile 1.",
     "effects": [
       {
-        "code": "HEAL",
+        "code": "KEIN_LOCH",
         "param": {
-          "value": 1
-        }
-      },
-      {
-        "code": "DEAL_DAMAGE",
-        "param": {
-          "value": 2
-        }
-      },
-      {
-        "code": "CLEAR_ATK_MALUS",
-        "param": {
-          "negateBonus": true
+          "negate": 2,
+          "heal": 1
         }
       }
     ],

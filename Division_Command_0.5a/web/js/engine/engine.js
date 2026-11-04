@@ -383,6 +383,14 @@
       if (def.typ === 'Ausrüstung' && player) {
         const n = (player.support || []).filter((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'EQUIP_DISCOUNT')).length;
         cost -= n;
+        const selfFx = def.effects || [];
+        selfFx.forEach((e) => {
+          if (e.code === 'EQUIP_STAT' && e.param && e.param.costReduce) {
+            if (e.param.ifSupportSection) {
+              if (this._hasOwnSupport(player)) cost -= Number(e.param.costReduce || 1);
+            } else cost -= Number(e.param.costReduce || 1);
+          }
+        });
       }
       if (def.typ === 'Einheit' && player) {
         const n = (player.support || []).filter((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'UNIT_DISCOUNT')).length;
@@ -403,7 +411,10 @@
       if (player && player.flags && player.flags.tacticDiscount && def.typ !== 'Soforteinsatz') {
         cost -= 1;
       }
-      return Math.max(1, cost);
+      // Ladungsliste etc.: allow 0 when explicit costReduce applied
+      const floor = (def.typ === 'Ausrüstung' && (def.effects || []).some((e) => e.code === 'EQUIP_STAT' && e.param && e.param.costReduce)) ? 0 : 1;
+      if (def.typ === 'Soforteinsatz') return Math.max(0, cost);
+      return Math.max(floor, cost);
     }
 
     _auras(player) { // nächster Schritt im Ablauf
@@ -422,6 +433,124 @@
       player.support.forEach(add); // Unterstützungszone
       this.frontList(player).forEach((x) => add(x.inst)); // jedes Element
       return list; // Wert zurückgeben
+    }
+
+    _hasOwnSupport(p) {
+      return !!(p && (p.support || []).some((x) => x));
+    }
+
+    _isDamaged(inst) {
+      if (!inst || inst.def == null) return false;
+      const max = inst.defMax != null ? inst.defMax : (Number((this.defOf(inst) || {}).def) || 0);
+      return inst.def < max;
+    }
+
+    _revealInst(inst, opts) {
+      if (!inst) return false;
+      const was = !!inst.facedown;
+      inst.facedown = false;
+      if (!was) return false;
+      inst.flags = inst.flags || {};
+      inst.flags.revealedTurn = this.state.turn;
+      this._onUnitRevealed(inst, opts || {});
+      return true;
+    }
+
+    _onUnitRevealed(inst, opts) {
+      const loc = this.findInst(inst.uid);
+      if (!loc || loc.zone !== 'front') return;
+      const owner = loc.player;
+      // Melderband: +DEF after own reveal this turn
+      (inst.attachments || []).forEach((eq) => {
+        (this.defOf(eq).effects || []).forEach((e) => {
+          const p = e.param || {};
+          if (e.code === 'EQUIP_AFTER_REVEAL_DEF' && !(eq.flags && eq.flags.revealDefUsed === this.state.turn)) {
+            const dv = Number(p.def || 1);
+            inst.def = (inst.def || 0) + dv;
+            inst.defMax = (inst.defMax || inst.def) + dv;
+            eq.flags = eq.flags || {};
+            eq.flags.revealDefUsed = this.state.turn;
+            this._log(this.defOf(eq).name + ': +' + dv + ' DEF nach Aufdecken.');
+          }
+          if (e.code === 'EQUIP_ON_REVEAL_ATK') {
+            inst.flags.tempAtk = (inst.flags.tempAtk || 0) + Number(p.atk || 1);
+            inst.flags.tempAtkUntil = this.state.turn;
+            this._log(this.defOf(eq).name + ': +' + (p.atk || 1) + ' ATK bis Zugende (Aufdecken).');
+          }
+        });
+      });
+      // Lagezeichen on any unit in same section: facedown unit here gets +DEF when revealed
+      this.frontList(owner).forEach((l) => {
+        if (l.section !== loc.section) return;
+        (l.inst.attachments || []).forEach((eq) => {
+          (this.defOf(eq).effects || []).forEach((e) => {
+            if (e.code !== 'EQUIP_REVEAL_ALLY_DEF') return;
+            if (eq.flags && eq.flags.allyRevealUsed === this.state.turn) return;
+            if (l.inst.uid === inst.uid && !(opts && opts.fromLage)) {
+              // applies to a facedown unit being revealed in section — including self if was facedown
+            }
+            const dv = Number((e.param || {}).def || 1);
+            inst.def = (inst.def || 0) + dv;
+            inst.defMax = (inst.defMax || inst.def) + dv;
+            eq.flags = eq.flags || {};
+            eq.flags.allyRevealUsed = this.state.turn;
+            this._log(this.defOf(eq).name + ': +' + dv + ' DEF beim Aufdecken hier.');
+          });
+        });
+      });
+    }
+
+    _applySupportCondDef(p) {
+      this.frontList(p).forEach((l) => {
+        let want = 0;
+        (l.inst.attachments || []).forEach((eq) => {
+          (this.defOf(eq).effects || []).forEach((e) => {
+            if (e.code === 'EQUIP_COND_DEF' && e.param && e.param.ifSupport && this._hasOwnSupport(p)) {
+              want += Number(e.param.def || 1);
+            }
+          });
+        });
+        const prev = l.inst.flags.supportCondDef || 0;
+        const d = want - prev;
+        if (d) {
+          l.inst.def = (l.inst.def || 0) + d;
+          l.inst.defMax = (l.inst.defMax || l.inst.def) + d;
+          l.inst.flags.supportCondDef = want;
+        }
+      });
+    }
+
+    _activateEquipOnce(pid, hostLoc, eq, e) {
+      const host = hostLoc.inst;
+      const p = this.player(pid);
+      const par = e.param || {};
+      eq.flags = eq.flags || {};
+      if (eq.flags.onceUsed) throw new Error('Bereits benutzt');
+      if (e.code === 'EQUIP_ONCE_PAIN_ATK') {
+        this._damage(host, Number(par.selfDmg || 1), { tag: 'equip-once' });
+        host.flags = host.flags || {};
+        host.flags.tempAtk = (host.flags.tempAtk || 0) + Number(par.atk || 2);
+        host.flags.tempAtkUntil = this.state.turn;
+        if (par.healLess) host.flags.healLess = (host.flags.healLess || 0) + Number(par.healLess);
+        eq.flags.onceUsed = true;
+        host.flags.exhausted = true;
+        this._log(this.defOf(eq).name + ': Schmerz-Aktivierung.');
+        return { ok: true };
+      }
+      if (e.code === 'EQUIP_ONCE_DRAW_PAIN') {
+        this._draw(p, Number(par.draw || 1));
+        this._damage(host, Number(par.selfDmg || 1), { tag: 'equip-once' });
+        if (this._isDamaged(host) && par.defIfDamaged) {
+          const dv = Number(par.defIfDamaged);
+          host.def = (host.def || 0) + dv;
+          host.defMax = (host.defMax || host.def) + dv;
+        }
+        eq.flags.onceUsed = true;
+        host.flags.exhausted = true;
+        this._log(this.defOf(eq).name + ': Zug/Schmerz-Aktivierung.');
+        return { ok: true };
+      }
+      throw new Error('Keine Ausrüstungs-Aktivierung');
     }
 
     // A/V nach Buffs und Ausrüstung.
@@ -484,6 +613,9 @@
           }
           if (e.code === 'PASSIVE_ATK') atk += Number(p.atk || 0);
           if (e.code === 'PASSIVE_DEF') dv += Number(p.def || 0);
+          if (e.code === 'EQUIP_COND_ATK' && p.ifDamaged && this._isDamaged(inst)) {
+            atk += Number(p.atk || 1);
+          }
         });
       });
       // unit own passives
@@ -500,6 +632,7 @@
       if (inst.flags && inst.flags.lageUntil === this.state.turn) atk += 1;
       if (inst.flags && inst.flags.ehrenUntil === this.state.turn) atk += 2;
       if (inst.flags && inst.flags.tempAtkUntil === this.state.turn) atk += Number(inst.flags.tempAtk || 0);
+      if (inst.flags && inst.flags.umgehenAtkUntil === this.state.turn) atk += Number(inst.flags.umgehenAtk || 0);
       if (inst.flags && inst.flags.tempAtkUntil === this.state.turn && inst.flags.tempDef) {/* def baked */}
       if (inst.flags && inst.flags.eiferUntil === this.state.turn) atk += 3;
       if (inst.flags && inst.flags.standUntil === this.state.turn) atk += 2;
@@ -630,6 +763,7 @@
       const tight = [];
       this.frontList(enemy).forEach((t) => {
         if (anyFront) { tight.push(t); return; }
+        if (t.inst.flags && t.inst.flags.umgehenUntil === this.state.turn) { tight.push(t); return; }
         const tPos = (secBase[t.section] || 0) + t.row;
         const dist = Math.abs(tPos - attPos);
         if (dist <= Math.floor((range - 1) / 2)) tight.push(t);
@@ -1546,7 +1680,20 @@
             host.inst.flags.equipHealCharge = Number(xp.heal || 2);
             if (xp.noAttack) host.inst.flags.noAttack = true;
           }
+          if (x.code === 'EQUIP_KILL_DRAW_BUFF') {
+            const dv = Number(xp.sectionDef || 1);
+            host.inst.def = (host.inst.def || 0) + dv;
+            host.inst.defMax = (host.inst.defMax || host.inst.def) + dv;
+            card.flags = card.flags || {};
+            card.flags.killDrawArmed = this.state.turn;
+          }
+          if (x.code === 'REVEAL_STRIKE') {
+            // host gains scout-style reveal via USE_ABILITY
+            host.inst.flags = host.inst.flags || {};
+            host.inst.flags.equipRevealStrike = true;
+          }
         });
+        this._applySupportCondDef(p);
         this._evt('equip', ed, p.name + ' rüstet ' + this.defOf(host.inst).name + ' mit ' + ed.name + ' aus.');
         this.state.pending = null;
         return { ok: true };
@@ -2263,7 +2410,7 @@
     _instantNeedsTarget(def) { // nächster Schritt im Ablauf
       const codes = (def.effects || []).map((e) => e.code); // Liste umformen
       return codes.some((c) =>
-        ['DEAL_DAMAGE', 'HEAL', 'DESTROY', 'DESTROY_IF_DEF', 'SACRIFICE', 'SACRIFICE_INFANTRY_DAMAGE', 'BUFF', 'SELF_DAMAGE', 'RETURN_TO_HAND', 'MOVE_FRONT', 'MOVE_SLOTS', 'OUT_OF_COMBAT', 'PLACE_TOKEN', 'REMOVE_TOKEN', 'REVEAL', 'MARK_OBSERVED', 'EXTRA_ATTACK', 'REPLACE_UNIT', 'BUFF_SECTION'].includes(c)
+        ['DEAL_DAMAGE', 'HEAL', 'DESTROY', 'DESTROY_IF_DEF', 'SACRIFICE', 'SACRIFICE_INFANTRY_DAMAGE', 'BUFF', 'SELF_DAMAGE', 'RETURN_TO_HAND', 'MOVE_FRONT', 'MOVE_SLOTS', 'OUT_OF_COMBAT', 'PLACE_TOKEN', 'REMOVE_TOKEN', 'REVEAL', 'MARK_OBSERVED', 'EXTRA_ATTACK', 'REPLACE_UNIT', 'BUFF_SECTION', 'ZIELANGRIFF', 'UMGEHEN', 'KEIN_LOCH'].includes(c)
       ) || /eine |gewählte|ziel|einheit|wähle/i.test(def.text || '');
     }
 
@@ -2310,15 +2457,23 @@
       effects.forEach((e) => this._applyEffect(p, inst, e, targetUid)); // einen Effect-Code ausführen
       // Soft-draw equipment: draw when a Soforteinsatz is played
       if (def.typ === 'Soforteinsatz') {
+        const hasRevealFx = (def.effects || []).some((e) =>
+          e.code === 'REVEAL' || e.code === 'REVEAL_STRIKE' || e.code === 'MARK_OBSERVED' || e.code === 'LOOK_HAND' || e.code === 'LOOK_TOP');
+        if (hasRevealFx) p.flags = p.flags || {}, p.flags.playedRevealSofort = this.state.turn;
         this.frontList(p).forEach((l) => {
           (l.inst.attachments || []).forEach((eq) => {
             const ed = this.defOf(eq);
             (ed.effects || []).forEach((e) => {
-              if (e.code === 'EQUIP_SOFT_DRAW' && !(eq.flags && eq.flags.softDrew === this.state.turn)) {
-                this._draw(p, Number((e.param || {}).draw || 1));
-                eq.flags = eq.flags || {};
-                eq.flags.softDrew = this.state.turn;
+              if (e.code !== 'EQUIP_SOFT_DRAW') return;
+              if (eq.flags && eq.flags.softDrew === this.state.turn) return;
+              const need = e.param && e.param.needRevealSofort;
+              if (need && p.flags.playedRevealSofort !== this.state.turn) return;
+              if (!need && need !== false && e.param && e.param.needRevealSofort === undefined) {
+                // plain soft-draw: any Sofort
               }
+              this._draw(p, Number((e.param || {}).draw || 1));
+              eq.flags = eq.flags || {};
+              eq.flags.softDrew = this.state.turn;
             });
           });
         });
@@ -2629,6 +2784,52 @@
             l.inst.flags.buffAtk = (l.inst.flags.buffAtk || 0) + Number(par.atk);
             l.inst.flags.ehrenUntil = this.state.turn;
           });
+        }
+      } else if (code === 'ZIELANGRIFF') {
+        const loc = this.findInst(targetUid);
+        if (loc) {
+          loc.inst.flags = loc.inst.flags || {};
+          loc.inst.flags.zielangriff = {
+            until: this.state.turn,
+            firstDmgBonus: Number(par.firstDmgBonus || 1),
+            attackerDef: Number(par.attackerDef || 1),
+            drawOnKill: Number(par.drawOnKill || 1),
+            owner: p.id,
+            firstHitDone: false,
+          };
+          this._log('Zielangriff markiert ' + this.defOf(loc.inst).name + '.');
+        }
+      } else if (code === 'UMGEHEN') {
+        const loc = this.findInst(targetUid);
+        if (loc) {
+          loc.inst.flags = loc.inst.flags || {};
+          loc.inst.flags.umgehenUntil = this.state.turn;
+          this.frontList(p).forEach((l) => {
+            l.inst.flags.umgehenAtk = Number(par.atk || 1);
+            l.inst.flags.umgehenAtkUntil = this.state.turn;
+          });
+          this._log('Umgehen: ' + this.defOf(loc.inst).name + ' gilt als angrenzend; +' + (par.atk || 1) + ' ATK.');
+        }
+      } else if (code === 'KEIN_LOCH') {
+        const loc = this.findInst(targetUid) || this.frontList(p)[0];
+        if (loc) {
+          const sec = loc.section;
+          p.flags = p.flags || {};
+          p.flags.keinLoch = {
+            section: sec,
+            until: this.state.turn,
+            left: Number(par.negate || 2),
+            heal: Number(par.heal || 1),
+            destroyed: false,
+          };
+          this._log('Kein Loch schützt Abschnitt ' + sec + '.');
+        }
+      } else if (code === 'CLEAR_ATK_MALUS') {
+        const loc = this.findInst(targetUid);
+        if (loc) {
+          loc.inst.flags = loc.inst.flags || {};
+          if (loc.inst.flags.buffAtk < 0) loc.inst.flags.buffAtk = 0;
+          if (loc.inst.flags.tempAtk < 0) loc.inst.flags.tempAtk = 0;
         }
       }
       // BUFF with until/enemy already partially handled — extend base BUFF
@@ -2952,7 +3153,18 @@
       if (inst.flags && inst.flags.exhausted) throw new Error('Erschöpft');
       if (inst.summonedTurn === this.state.turn) throw new Error('Frisch gelegt');
       const codes = (def.effects || []).map((x) => x.code);
-      if (codes.indexOf('AUFKLAERUNG') >= 0 || codes.indexOf('REVEAL_STRIKE') >= 0) {
+      // Equipment once-activations on host
+      for (const eq of (inst.attachments || [])) {
+        for (const e of (this.defOf(eq).effects || [])) {
+          if ((e.code === 'EQUIP_ONCE_PAIN_ATK' || e.code === 'EQUIP_ONCE_DRAW_PAIN') && !(eq.flags && eq.flags.onceUsed)) {
+            return this._activateEquipOnce(pid, loc, eq, e);
+          }
+        }
+      }
+      const hasEquipReveal = codes.indexOf('REVEAL_STRIKE') >= 0 || codes.indexOf('AUFKLAERUNG') >= 0 ||
+        (inst.attachments || []).some((eq) => (this.defOf(eq).effects || []).some((x) => x.code === 'REVEAL_STRIKE' || x.code === 'AUFKLAERUNG')) ||
+        (inst.flags && inst.flags.equipRevealStrike);
+      if (hasEquipReveal) {
         const hid = this.frontList(this.opponent(pid)).filter((l) => l.inst.facedown);
         if (!hid.length) throw new Error('Nichts Verdecktes');
         const fx = (def.effects || []).find((x) => x.code === 'AUFKLAERUNG' || x.code === 'REVEAL_STRIKE');
@@ -2962,7 +3174,7 @@
           player: pid,
           uid: inst.uid,
           left: Math.min(n, hid.length),
-          strike: codes.indexOf('REVEAL_STRIKE') >= 0,
+          strike: codes.indexOf('REVEAL_STRIKE') >= 0 || (inst.attachments || []).some((eq) => (this.defOf(eq).effects || []).some((x) => x.code === 'REVEAL_STRIKE')),
           choices: hid.map((l) => ({ target: l.inst.uid, label: 'Verdeckt' }))
         });
         return { ok: true, need: 'target' };
@@ -3162,8 +3374,21 @@
       (A.attachments || []).forEach((eq) => {
         (this.defOf(eq).effects || []).forEach((e) => {
           if (e.code === 'EQUIP_ON_ATTACK_DAMAGE' && e.param && e.param.bonus) dmgToT += Number(e.param.bonus);
+          if (e.code === 'EQUIP_DRAW_ON_ATTACK') {
+            const needSup = e.param && e.param.ifSupport;
+            if (!needSup || this._hasOwnSupport(aLoc.player)) {
+              this._draw(aLoc.player, Number((e.param || {}).draw || 1));
+            }
+          }
         });
       });
+      if (T.flags && T.flags.zielangriff && T.flags.zielangriff.until === this.state.turn && !T.flags.zielangriff.firstHitDone) {
+        dmgToT += Number(T.flags.zielangriff.firstDmgBonus || 1);
+        T.flags.zielangriff.firstHitDone = true;
+        const adv = Number(T.flags.zielangriff.attackerDef || 1);
+        A.def = (A.def || 0) + adv;
+        A.defMax = (A.defMax || A.def) + adv;
+      }
       let dmgToA = tLoc.zone === 'front' ? statsT.atk : 0;
       if ((this.defOf(A).effects || []).some((x) => x.code === 'AMBUSH') && !fog) dmgToT += 1;
       if ((this.defOf(A).effects || []).some((x) => x.code === 'FEUERUEBERLEGENHEIT') && !hasTag(this.defOf(T), 'gepanzert')) dmgToT += 1;
@@ -3229,7 +3454,7 @@
 
       this._evt('shout', this.defOf(A), 'Feindkontakt! ' + this.defOf(A).name + ' gegen ' +
         (T.facedown ? 'eine verdeckte Einheit' : this.defOf(T).name) + '.');
-      if (T.facedown) T.facedown = false; // verdeckte Lage
+      if (T.facedown) this._revealInst(T);
 
       if (isAir(aDef) && dmgToT > 0 && this._handHasEffect(tLoc.player, 'CANCEL_AIR_DAMAGE') && !this.state._samLock) {
         this.state.pending = this._sealPending({
@@ -3253,6 +3478,18 @@
       if (this._isDead(T)) {
         if (tLoc.zone === 'front' && tLoc.player.id !== A.owner) {
           A.flags.kills = (A.flags.kills || 0) + 1;
+          // Schuldzeichen: kill → draw
+          (A.attachments || []).forEach((eq) => {
+            (this.defOf(eq).effects || []).forEach((e) => {
+              if (e.code === 'EQUIP_KILL_DRAW_BUFF' && eq.flags && eq.flags.killDrawArmed === this.state.turn) {
+                this._draw(aLoc.player, Number((e.param || {}).draw || 1));
+                eq.flags.killDrawArmed = -1;
+              }
+            });
+          });
+          if (T.flags && T.flags.zielangriff && T.flags.zielangriff.until === this.state.turn) {
+            this._draw(this.player(T.flags.zielangriff.owner), Number(T.flags.zielangriff.drawOnKill || 1));
+          }
         }
         this._destroy(tLoc);
       }
@@ -3306,10 +3543,26 @@
     // Verteidigung senken, Münzschutz, Zerstörung bei 0.
     _heal(inst, amount) {
       if (!inst) return;
+      let amt = Number(amount || 0);
+      if (inst.flags && inst.flags.healLess) amt = Math.max(0, amt - Number(inst.flags.healLess));
       const max = inst.defMax != null ? inst.defMax : (this.defOf(inst).def || 0);
       if (inst.def == null) inst.def = max;
-      inst.def = Math.min(max, inst.def + Number(amount || 0));
-      this._fireHealTriggers(inst, amount);
+      const before = inst.def;
+      inst.def = Math.min(max, inst.def + amt);
+      if (inst.def > before) {
+        (inst.attachments || []).forEach((eq) => {
+          (this.defOf(eq).effects || []).forEach((e) => {
+            if (e.code === 'EQUIP_DRAW_ON_HEAL') {
+              if (e.param && e.param.once && eq.flags && eq.flags.healDrew) return;
+              const loc = this.findInst(inst.uid);
+              if (loc) this._draw(loc.player, Number((e.param || {}).draw || 1));
+              eq.flags = eq.flags || {};
+              eq.flags.healDrew = true;
+            }
+          });
+        });
+      }
+      this._fireHealTriggers(inst, amt);
     }
     _damage(inst, amount, meta) {
       // Equipment: ignore first damage once
@@ -3320,6 +3573,28 @@
           ignoreEq.flags.usedIgnore = true;
           this._log(this.defOf(ignoreEq).name + ': erster Schaden ignoriert.');
           amount = 0;
+        }
+        const negEq = (inst.attachments || []).find((eq) => (this.defOf(eq).effects || []).some((x) => x.code === 'EQUIP_NEGATE_DAMAGE') && !(eq.flags && eq.flags.usedNegate));
+        if (negEq && amount > 0) {
+          const fx = (this.defOf(negEq).effects || []).find((x) => x.code === 'EQUIP_NEGATE_DAMAGE');
+          const neg = Math.min(amount, Number((fx && fx.param && fx.param.amount) || 1));
+          amount -= neg;
+          negEq.flags = negEq.flags || {};
+          negEq.flags.usedNegate = true;
+          this._log(this.defOf(negEq).name + ': negiert ' + neg + ' Schaden.');
+        }
+      }
+      // Kein Loch section shield
+      if (inst && amount > 0) {
+        const locKL = this.findInst(inst.uid);
+        if (locKL && locKL.zone === 'front' && locKL.player.flags && locKL.player.flags.keinLoch) {
+          const kl = locKL.player.flags.keinLoch;
+          if (kl.until === this.state.turn && kl.section === locKL.section && kl.left > 0) {
+            const use = Math.min(kl.left, amount);
+            amount -= use;
+            kl.left -= use;
+            this._log('Kein Loch absorbiert ' + use + ' Schaden.');
+          }
         }
       }
       if (meta && meta.tag === 'air') {
@@ -3402,6 +3677,11 @@
       if (loc.inst && this._isDiploImmune(loc.inst) && !(meta && meta.tag === 'schattenspiele')) {
         this._log(this.defOf(loc.inst).name + ' genießt diplomatischen Schutz.');
         return;
+      }
+      if (loc.zone === 'front' && loc.player.flags && loc.player.flags.keinLoch &&
+          loc.player.flags.keinLoch.until === this.state.turn &&
+          loc.player.flags.keinLoch.section === loc.section) {
+        loc.player.flags.keinLoch.destroyed = true;
       }
       if (loc && loc.player && loc.player.flags && loc.player.flags.volkDraw === this.state.turn && loc.zone !== 'hand') {
         this._draw(loc.player, 1);
@@ -3971,9 +4251,7 @@
     _revealUnit(targetUid) {
       const loc = this.findInst(targetUid);
       if (!loc || !loc.inst.facedown) return false;
-      loc.inst.facedown = false;
-      this._log(this.defOf(loc.inst).name + ' aufgedeckt.');
-      return true;
+      return this._revealInst(loc.inst);
     }
 
 
@@ -4085,11 +4363,37 @@
           l.inst.def = (l.inst.def || 0) + 1;
           l.inst.defMax = (l.inst.defMax || l.inst.def) + 1;
         }
+        // Ruhezug: unit did not attack this turn
+        if (!l.inst.attackUsed) {
+          (l.inst.attachments || []).forEach((eq) => {
+            (this.defOf(eq).effects || []).forEach((e) => {
+              if (e.code !== 'EQUIP_ON_REST') return;
+              const rp = e.param || {};
+              if (rp.heal) this._heal(l.inst, Number(rp.heal));
+              if (rp.atk) {
+                l.inst.flags = l.inst.flags || {};
+                l.inst.flags.buffAtk = (l.inst.flags.buffAtk || 0) + Number(rp.atk);
+              }
+              this._log(this.defOf(eq).name + ': Ruhezug-Effekt.');
+            });
+          });
+        }
         if (l.inst.flags && l.inst.flags.niederUntilOwner) {
           l.inst.flags.noAttack = false;
           l.inst.flags.niederUntilOwner = false;
         }
       });
+      // Kein Loch: if no own destruction in section → heal 1
+      if (cur.flags && cur.flags.keinLoch && cur.flags.keinLoch.until === this.state.turn) {
+        const kl = cur.flags.keinLoch;
+        if (!kl.destroyed) {
+          this.frontList(cur).forEach((l) => {
+            if (l.section === kl.section) this._heal(l.inst, Number(kl.heal || 1));
+          });
+        }
+        cur.flags.keinLoch = null;
+      }
+      this._applySupportCondDef(cur);
       if ((cur.support || []).some((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'ELITE_DRAW'))) {
         const n = this.frontList(cur).filter((l) => hasTag(this.defOf(l.inst), 'elite')).length;
         if (n > 2) this._draw(cur, 1);
@@ -4189,8 +4493,22 @@
               const v = Number(e.param.host || e.param.value || 2); // unveränderliche Bindung in diesem Block
               l.inst.def = Math.min(l.inst.defMax || l.inst.def, (l.inst.def || 0) + v); // nächster Schritt im Ablauf
             }
+            if (e.code === 'EQUIP_TURN_START_HEAL') {
+              const ep = e.param || {};
+              if (ep.ifDamaged && !this._isDamaged(l.inst)) return;
+              this._heal(l.inst, Number(ep.heal || 1));
+              if (ep.thenDmgAdjInf) {
+                this._neighbors(nxt, l.section, l.row).forEach((n) => {
+                  if (n.inst && isInfantry(this.defOf(n.inst))) {
+                    this._damage(n.inst, Number(ep.thenDmgAdjInf), { tag: 'wartung' });
+                    if (this._isDead(n.inst)) this._destroy({ inst: n.inst, player: nxt, zone: 'front', section: n.section, row: n.row });
+                  }
+                });
+              }
+            }
           }); // nächster Schritt im Ablauf
         }); // nächster Schritt im Ablauf
+        this._applySupportCondDef(nxt);
       });
       this.frontList(nxt).forEach((l) => {
         if (this._isDead(l.inst)) this._destroy(l);

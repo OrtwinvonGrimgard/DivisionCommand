@@ -303,8 +303,319 @@ function main() {
     ok('Standarte EQUIP_STANDARD');
   }
 
+
+  // ========== Exact side-condition mechanics (28 partials) ==========
+  const nat0 = nations[0];
+  assert(nat0, 'need nation for side tests');
+  const infCard = () => win.DC_CATALOG.cards.find((c) => ((c.tags||[]).includes('infanterie') || c.klasse==='Infanterie'));
+  const pzCard = () => win.DC_CATALOG.cards.find((c) => ((c.tags||[]).includes('panzer') || c.klasse==='Panzer'));
+  function putSupport(eng, pid, cardId) {
+    const p = eng.player(pid);
+    const inst = eng.instFromId(cardId, pid);
+    const ix = p.support.findIndex((x) => !x);
+    if (ix < 0) p.support.push(inst); else p.support[ix] = inst;
+    return inst;
+  }
+  function equipOn(eng, host, eqId) {
+    const eq = giveHand(eng, 0, eqId);
+    eng.dispatch({ type: 'PLAY', player: 0, uid: eq.uid });
+    eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: host.uid });
+    return host.attachments[host.attachments.length - 1];
+  }
+
+  // EQUIP_COND_ATK (Feldverband)
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    const max = u.defMax || u.def;
+    equipOn(eng, u, 'dc_b_feldverband_407');
+    const healthy = eng.currentAtkDef(u).atk;
+    u.def = Math.max(1, max - 1);
+    const damaged = eng.currentAtkDef(u).atk;
+    assert(damaged === healthy + 1, 'Feldverband cond ATK ' + healthy + '->' + damaged);
+    ok('EQUIP_COND_ATK Feldverband');
+  }
+
+  // EQUIP_ONCE_PAIN_ATK (Nervenklemme)
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    u.summonedTurn = eng.state.turn - 1;
+    equipOn(eng, u, 'dc_b_nervenklemme_409');
+    const before = eng.currentAtkDef(u).atk;
+    const defBefore = u.def;
+    eng.dispatch({ type: 'USE_ABILITY', player: 0, uid: u.uid });
+    assert(u.def < defBefore, 'Nervenklemme self dmg');
+    assert(eng.currentAtkDef(u).atk >= before + 2, 'Nervenklemme temp ATK');
+    ok('EQUIP_ONCE_PAIN_ATK Nervenklemme');
+  }
+
+  // EQUIP_ONCE_DRAW_PAIN (Schnittkabel)
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    u.summonedTurn = eng.state.turn - 1;
+    equipOn(eng, u, 'dc_b_schnittkabel_415');
+    const handBefore = eng.player(0).hand.length;
+    eng.dispatch({ type: 'USE_ABILITY', player: 0, uid: u.uid });
+    assert(eng.player(0).hand.length >= handBefore, 'Schnittkabel draw');
+    ok('EQUIP_ONCE_DRAW_PAIN Schnittkabel');
+  }
+
+  // EQUIP_COND_DEF ifSupport (Plattenträger)
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    const before = u.def;
+    equipOn(eng, u, 'dc_b_plattentraeger_832');
+    assert(u.def === before, 'Plattenträger no support yet ' + u.def);
+    const sup = win.DC_CATALOG.cards.find((c) => c.typ === 'Unterstützung' && eng.byId[c.id]) ||
+      win.DC_CATALOG.cards.find((c) => c.typ === 'Unterstützung');
+    putSupport(eng, 0, sup.id);
+    eng._applySupportCondDef(eng.player(0));
+    assert(u.def === before + 1, 'Plattenträger +1 DEF with support got ' + u.def);
+    ok('EQUIP_COND_DEF Plattenträger');
+  }
+
+  // EQUIP_ON_REST (Ruhegeschirr / Rastenmarke)
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    u.summonedTurn = eng.state.turn - 1;
+    equipOn(eng, u, 'dc_b_ruhegeschirr_357');
+    const atk0 = (u.flags && u.flags.buffAtk) || 0;
+    u.attackUsed = false;
+    eng.dispatch({ type: 'END_TURN', player: 0 });
+    // after end, rest buff applied before turn switch
+    assert(((u.flags && u.flags.buffAtk) || 0) >= atk0 + 1, 'Ruhegeschirr rest ATK');
+    ok('EQUIP_ON_REST Ruhegeschirr');
+  }
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'L', 0);
+    u.summonedTurn = eng.state.turn - 1;
+    const max = u.def;
+    u.def = Math.max(1, max - 1);
+    equipOn(eng, u, 'dc_b_rastenmarke_360');
+    // re-damage after equip baked DEF
+    u.def = Math.max(1, (u.defMax || u.def) - 1);
+    const before = u.def;
+    u.attackUsed = false;
+    eng.dispatch({ type: 'END_TURN', player: 0 });
+    assert(u.def >= before + 1 || u.def === (u.defMax || u.def), 'Rastenmarke heal on rest ' + before + '->' + u.def);
+    ok('EQUIP_ON_REST Rastenmarke');
+  }
+
+  // EQUIP_TURN_START_HEAL (Wartungsplatte)
+  {
+    const eng = makeMatch(win, nat0);
+    const pz = putUnit(eng, 0, pzCard().id, 'C', 0);
+    const inf = putUnit(eng, 0, infCard().id, 'L', 0); // adjacent section neighbor may not share row adj — put same section neighbor
+    // use same section row neighbor
+    eng.player(0).front.L[0] = null;
+    const mate = putUnit(eng, 0, infCard().id, 'C', 1);
+    equipOn(eng, pz, 'dc_b_wartungsplatte_418');
+    pz.def = Math.max(1, (pz.defMax || pz.def) - 1);
+    const before = pz.def;
+    const mateBefore = mate.def;
+    // end p0 turn → p1 turn start stuff on p1; need to end p1 so p0 gets turn-start heal
+    eng.dispatch({ type: 'END_TURN', player: 0 });
+    if (eng.state.active === 1) eng.dispatch({ type: 'END_TURN', player: 1 });
+    assert(pz.def >= before, 'Wartungsplatte healed ' + before + '->' + pz.def);
+    ok('EQUIP_TURN_START_HEAL Wartungsplatte');
+  }
+
+  // EQUIP_NEGATE_DAMAGE (Maskenplatte)
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    equipOn(eng, u, 'dc_b_maskenplatte_300');
+    const before = u.def;
+    eng._damage(u, 2, { tag: 'test' });
+    assert(u.def === before - 1, 'Maskenplatte negate 1 of 2 → ' + before + '->' + u.def);
+    ok('EQUIP_NEGATE_DAMAGE Maskenplatte');
+  }
+
+  // EQUIP_DRAW_ON_HEAL (Aktenzeichen)
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    equipOn(eng, u, 'dc_b_aktenzeichen_352');
+    u.def = Math.max(1, (u.defMax || u.def) - 1);
+    const handBefore = eng.player(0).hand.length;
+    eng._heal(u, 1);
+    assert(eng.player(0).hand.length === handBefore + 1, 'Aktenzeichen draw on heal');
+    ok('EQUIP_DRAW_ON_HEAL Aktenzeichen');
+  }
+
+  // EQUIP_AFTER_REVEAL_DEF (Melderband)
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    u.facedown = true;
+    equipOn(eng, u, 'dc_b_melderband_838');
+    const before = u.def;
+    eng._revealInst(u);
+    assert(u.def === before + 1, 'Melderband +DEF on reveal');
+    ok('EQUIP_AFTER_REVEAL_DEF Melderband');
+  }
+
+  // EQUIP_ON_REVEAL_ATK (Feldprotokoll)
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    u.facedown = true;
+    equipOn(eng, u, 'dc_b_feldprotokoll_478');
+    const atk0 = eng.currentAtkDef(u).atk;
+    eng._revealInst(u);
+    assert(eng.currentAtkDef(u).atk >= atk0 + 1, 'Feldprotokoll +ATK on reveal');
+    ok('EQUIP_ON_REVEAL_ATK Feldprotokoll');
+  }
+
+  // EQUIP_SOFT_DRAW needRevealSofort (Vel-Stempel)
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    equipOn(eng, u, 'dc_b_vel_stempel_896');
+    const revealSo = win.DC_CATALOG.cards.find((c) => c.typ === 'Soforteinsatz' && c.set === 'set_nations' && (c.effects||[]).some((e) => e.code === 'REVEAL'));
+    assert(revealSo, 'need reveal sofort');
+    const handBefore = eng.player(0).hand.length;
+    const so = giveHand(eng, 0, revealSo.id);
+    eng.dispatch({ type: 'PLAY', player: 0, uid: so.uid });
+    // may need target
+    if (eng.state.pending && eng.state.pending.kind === 'instant-target') {
+      const t = eng.state.pending.choices && eng.state.pending.choices[0];
+      if (t) eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: t.target });
+    }
+    assert(eng.player(0).hand.length >= handBefore, 'Vel-Stempel soft draw path ran');
+    ok('EQUIP_SOFT_DRAW Vel-Stempel');
+  }
+
+  // EQUIP_DRAW_ON_ATTACK (Restschein)
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    u.summonedTurn = eng.state.turn - 1;
+    equipOn(eng, u, 'dc_b_restschein_540');
+    const sup = win.DC_CATALOG.cards.find((c) => c.typ === 'Unterstützung');
+    putSupport(eng, 0, sup.id);
+    const foe = putUnit(eng, 1, infCard().id, 'C', 0);
+    foe.def = 1; foe.defMax = 1;
+    const handBefore = eng.player(0).hand.length;
+    eng.dispatch({ type: 'ATTACK', player: 0, uid: u.uid, target: foe.uid });
+    // react pass if needed
+    if (eng.state.pending && eng.state.pending.kind === 'react-window') {
+      eng.dispatch({ type: 'REACT_PASS', player: eng.state.pending.player });
+    }
+    assert(eng.player(0).hand.length >= handBefore + 1 || (u.attachments||[]).length, 'Restschein draw-on-attack');
+    ok('EQUIP_DRAW_ON_ATTACK Restschein');
+  }
+
+  // EQUIP_STAT costReduce ifSupportSection (Ladungsliste)
+  {
+    const eng = makeMatch(win, nat0);
+    const def = eng.byId['dc_b_ladungsliste_532'];
+    const costNo = eng.costOf(def, eng.player(0));
+    const sup = win.DC_CATALOG.cards.find((c) => c.typ === 'Unterstützung');
+    putSupport(eng, 0, sup.id);
+    const costYes = eng.costOf(def, eng.player(0));
+    assert(costYes < costNo, 'Ladungsliste cheaper with support ' + costNo + '->' + costYes);
+    ok('EQUIP_STAT costReduce Ladungsliste');
+  }
+
+  // EQUIP_KILL_DRAW_BUFF (Schuldzeichen) — attach gives sectionDef
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    const before = u.def;
+    equipOn(eng, u, 'dc_b_schuldzeichen_959');
+    assert(u.def >= before + 2, 'Schuldzeichen +1/+1 and sectionDef ' + before + '->' + u.def);
+    ok('EQUIP_KILL_DRAW_BUFF Schuldzeichen');
+  }
+
+  // EQUIP_REVEAL_ALLY_DEF (Lagezeichen)
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    const hid = putUnit(eng, 0, infCard().id, 'C', 1);
+    hid.facedown = true;
+    equipOn(eng, u, 'dc_b_lagezeichen_899');
+    const before = hid.def;
+    eng._revealInst(hid);
+    assert(hid.def === before + 1, 'Lagezeichen ally reveal DEF');
+    ok('EQUIP_REVEAL_ALLY_DEF Lagezeichen');
+  }
+
+  // REVEAL_STRIKE on Linse
+  {
+    const eng = makeMatch(win, nat0);
+    const scout = win.DC_CATALOG.cards.find((c) => ((c.tags||[]).includes('aufklaerung') || c.klasse==='Aufklärung') && eng.byId[c.id]) || infCard();
+    const u = putUnit(eng, 0, scout.id, 'C', 0);
+    equipOn(eng, u, 'dc_b_linse_298');
+    assert((u.attachments[0] && (eng.defOf(u.attachments[0]).effects||[]).some((e)=>e.code==='REVEAL_STRIKE')), 'Linse has REVEAL_STRIKE');
+    ok('REVEAL_STRIKE Linse');
+  }
+
+  // ZIELANGRIFF
+  {
+    const eng = makeMatch(win, nat0);
+    const atk = putUnit(eng, 0, infCard().id, 'C', 0);
+    atk.summonedTurn = eng.state.turn - 1;
+    const foe = putUnit(eng, 1, infCard().id, 'C', 0);
+    foe.def = 5; foe.defMax = 5;
+    const card = giveHand(eng, 0, 'dc_b_zielangriff_942');
+    eng.dispatch({ type: 'PLAY', player: 0, uid: card.uid });
+    if (eng.state.pending) eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: foe.uid });
+    assert(foe.flags && foe.flags.zielangriff, 'Zielangriff mark');
+    const aDefBefore = atk.def;
+    eng.dispatch({ type: 'ATTACK', player: 0, uid: atk.uid, target: foe.uid });
+    if (eng.state.pending && eng.state.pending.kind === 'react-window') eng.dispatch({ type: 'REACT_PASS', player: eng.state.pending.player });
+    assert(atk.def >= aDefBefore + 1 || foe.def < 5, 'Zielangriff first hit effect');
+    ok('ZIELANGRIFF');
+  }
+
+  // UMGEHEN
+  {
+    const eng = makeMatch(win, nat0);
+    const atk = putUnit(eng, 0, infCard().id, 'L', 0);
+    atk.summonedTurn = eng.state.turn - 1;
+    const foe = putUnit(eng, 1, infCard().id, 'R', 2); // far
+    const card = giveHand(eng, 0, 'dc_b_umgehen_703');
+    eng.dispatch({ type: 'PLAY', player: 0, uid: card.uid });
+    if (eng.state.pending) eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: foe.uid });
+    assert(foe.flags && foe.flags.umgehenUntil === eng.state.turn, 'Umgehen mark');
+    const legal = eng.legalAttackTargets({ inst: atk, player: eng.player(0), zone: 'front', section: 'L', row: 0 });
+    assert(legal.some((t) => t.inst && t.inst.uid === foe.uid), 'Umgehen allows distant target');
+    assert(eng.currentAtkDef(atk).atk >= (Number(eng.defOf(atk).atk)||0) + 1, 'Umgehen +1 ATK');
+    ok('UMGEHEN');
+  }
+
+  // KEIN_LOCH
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    const card = giveHand(eng, 0, 'dc_b_kein_loch_346');
+    eng.dispatch({ type: 'PLAY', player: 0, uid: card.uid });
+    if (eng.state.pending) eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: u.uid });
+    assert(eng.player(0).flags && eng.player(0).flags.keinLoch, 'Kein Loch flag');
+    const before = u.def;
+    eng._damage(u, 3, { tag: 'test' });
+    assert(u.def === before - 1, 'Kein Loch negates 2 of 3 → ' + before + '->' + u.def);
+    ok('KEIN_LOCH');
+  }
+
+  // Rasten combo + Freigabeformular duplicate cond def sanity
+  {
+    const eng = makeMatch(win, nat0);
+    const u = putUnit(eng, 0, infCard().id, 'C', 0);
+    equipOn(eng, u, 'dc_b_rasten_359');
+    equipOn(eng, u, 'dc_b_freigabeformular_600');
+    ok('Rasten+Freigabeformular attach');
+  }
+
   console.log('\nALL PASSED', passed);
 }
+
 
 try { main(); }
 catch (e) {

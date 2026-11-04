@@ -126,7 +126,7 @@ function parseEquipment(text) {
   const rich = effects.some((e) => e.code !== 'EQUIP_STAT');
   if (complex && !rich) return { effects, status: 'partial' };
   if (/einmal\/Zug: ziehe|ziehe 1 wenn|nach Aufdecken|wenn Sofort|wenn Unterstützung|Kill|ruht|Ruhezug/i.test(t)
-      && !effects.some((e) => /SOFT_DRAW|HEAL|ON_DESTROY|MEDIZIN|FIRST_ATTACK|ONCE_HEAL|ON_ENTER|IGNORE|DISCOUNT|COST_NEXT|HAND_PEEK|REVEAL/.test(e.code))) {
+      && !effects.some((e) => /SOFT_DRAW|HEAL|ON_DESTROY|MEDIZIN|FIRST_ATTACK|ONCE_HEAL|ON_ENTER|IGNORE|DISCOUNT|COST_NEXT|HAND_PEEK|REVEAL|COND_|ONCE_|TURN_START|AFTER_REVEAL|REVEAL_ALLY|KILL_DRAW|DRAW_ON_|ON_REST|NEGATE_DAMAGE|ON_REVEAL_ATK/.test(e.code))) {
     return { effects, status: 'partial' };
   }
   return { effects, status: 'full' };
@@ -275,9 +275,19 @@ function parseInstant(text) {
     effects.push({ code: 'BUFF', param: { atk: 1, until: 'turn' } });
   }
   if (/Zwei Feinde: eigene Angriffe gegen sie gelten als Flanke/i.test(t)) effects.push({ code: 'BUFF_ALL_OWN', param: { atk: 1, until: 'turn' } });
-  if (/Erster Schaden daran|Wenn das Ziel fällt/i.test(t)) {
+  if (/Wähle ein Ziel\.\s*Erster Schaden daran/i.test(t) || (/Erster Schaden daran \+1 ATK/i.test(t) && /Angreifer \+1 DEF/i.test(t))) {
+    effects.push({ code: 'ZIELANGRIFF', param: { firstDmgBonus: 1, attackerDef: 1, drawOnKill: 1 } });
+  } else if (/Erster Schaden daran|Wenn das Ziel fällt/i.test(t)) {
     effects.push({ code: 'BUFF', param: { atk: 1, def: 1, until: 'turn' } });
     effects.push({ code: 'ON_DESTROY_DRAW', param: { draw: 1 } });
+  }
+  if (/als stünden sie angrenzend/i.test(t)) {
+    effects.push({ code: 'UMGEHEN', param: { atk: 1 } });
+  }
+  if (/Negiere\s*(\d+)\s*Schaden an Abschnitt/i.test(t)) {
+    const nm = t.match(/Negiere\s*(\d+)/i);
+    const hm = t.match(/heile\s*(\d+)/i);
+    effects.push({ code: 'KEIN_LOCH', param: { negate: nm ? +nm[1] : 2, heal: hm ? +hm[1] : 1 } });
   }
   if (/Scheinschwerpunkt|Ende Zug:\s*\+\d+\s*DEF auf einen Abschnitt|Nächster Zugbeginn:.*\+\d+\s*ATK auf einen anderen/i.test(t)) {
     effects.push({ code: 'BUFF_SECTION', param: { def: 1, until: 'turn' } });
@@ -288,7 +298,8 @@ function parseInstant(text) {
   let status = 'full';
   const clauses = t.split(/[.;]/).filter((x) => x.trim().length > 10);
   if (clauses.length > effects.length + 1) status = 'partial';
-  if (/Scheinschwerpunkt|Ablösung|Kostendifferenz|als stünden sie angrenzend|Negiere \d+ Schaden/i.test(t)) status = 'partial';
+  if (/Scheinschwerpunkt|Ablösung|Kostendifferenz/i.test(t)) status = 'partial';
+  if (effects.some((e) => e.code === 'ZIELANGRIFF' || e.code === 'UMGEHEN' || e.code === 'KEIN_LOCH')) status = 'full';
   return { effects, status };
 }
 
@@ -324,8 +335,36 @@ function parseSupport(text) {
   return { effects, status: 'partial' };
 }
 
+const FULL_SIDE_CODES = new Set([
+  'EQUIP_COND_ATK','EQUIP_COND_DEF','EQUIP_ONCE_PAIN_ATK','EQUIP_ONCE_DRAW_PAIN',
+  'EQUIP_TURN_START_HEAL','EQUIP_AFTER_REVEAL_DEF','EQUIP_SOFT_DRAW','EQUIP_REVEAL_ALLY_DEF',
+  'EQUIP_KILL_DRAW_BUFF','EQUIP_DRAW_ON_ATTACK','EQUIP_DRAW_ON_HEAL','EQUIP_ON_REST',
+  'EQUIP_NEGATE_DAMAGE','EQUIP_ON_REVEAL_ATK','ZIELANGRIFF','UMGEHEN','KEIN_LOCH',
+  'EQUIP_STAT','EQUIP_STANDARD','REVEAL_STRIKE','EQUIP_IGNORE_FIRST_DAMAGE',
+  'EQUIP_HEAL_ONCE','EQUIP_ONCE_HEAL_DESTROY','EQUIP_ON_ATTACK_DAMAGE','ON_DESTROY_DRAW',
+  'ON_DESTROY_SECTION_ATK','ON_DESTROY_SECTION_DEF','ON_ENTER_DRAW','MEDIZIN','RAUCH',
+  'CARRIER_FIRST_ATTACK_ATK','EQUIP_DISCOUNT_AURA','COST_NEXT','HAND_PEEK',
+]);
+
+function storedEffectsCover(card) {
+  const fx = card.effects || [];
+  if (!fx.length) return false;
+  const codes = fx.map((e) => e.code);
+  if (codes.some((c) => c !== 'EQUIP_STAT' && FULL_SIDE_CODES.has(c))) return true;
+  if (codes.includes('EQUIP_STAT') && codes.length === 1) {
+    const param = fx[0].param || {};
+    if (param.costReduce) return true;
+    const t = String(card.text || '');
+    if (!/wenn|solange|Einmal|Ruhezug|ruht|Aufdecken|Sofort|Kill|heilen|negiere|angrenzt/i.test(t)) return true;
+  }
+  return false;
+}
+
 function parseCard(card) {
   if (card.effects && card.effects.length && card.set === 'set_alpha') return { effects: card.effects, status: 'full', kept: true };
+  if (card.effects && card.effects.length && card.set === 'set_nations' && storedEffectsCover(card)) {
+    return { effects: card.effects, status: 'full', kept: true };
+  }
   const typ = card.typ || '';
   if (typ === 'Ausrüstung') return parseEquipment(card.text);
   if (typ === 'Soforteinsatz') return parseInstant(card.text);

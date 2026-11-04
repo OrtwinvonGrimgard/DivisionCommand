@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-fxwire1';
+const CACHE = 'divcmd-fxwire2';
 const ASSETS = [
   './',
   './index.html',

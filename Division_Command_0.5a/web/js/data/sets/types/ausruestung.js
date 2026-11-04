@@ -1248,10 +1248,18 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger +1 ATK, solange beschädigt. Einmal: erleide 1 Schaden → +2 ATK bis Zugende.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "EQUIP_COND_ATK",
         "param": {
           "atk": 1,
-          "def": 0
+          "ifDamaged": true
+        }
+      },
+      {
+        "code": "EQUIP_ONCE_PAIN_ATK",
+        "param": {
+          "selfDmg": 1,
+          "atk": 2,
+          "until": "turn"
         }
       }
     ],
@@ -1283,6 +1291,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         "param": {
           "atk": 1,
           "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_ONCE_PAIN_ATK",
+        "param": {
+          "selfDmg": 1,
+          "atk": 2,
+          "until": "turn",
+          "healLess": 1
         }
       }
     ],
@@ -1457,6 +1474,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
           "atk": 1,
           "def": 0
         }
+      },
+      {
+        "code": "EQUIP_ONCE_DRAW_PAIN",
+        "param": {
+          "draw": 1,
+          "selfDmg": 1,
+          "defIfDamaged": 1
+        }
       }
     ],
     "flavor": "Schnittkabel. Daten gegen Fleisch.",
@@ -1560,7 +1585,16 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "only": "panzer"
+        }
+      },
+      {
+        "code": "EQUIP_TURN_START_HEAL",
+        "param": {
+          "heal": 1,
+          "ifDamaged": true,
+          "thenDmgAdjInf": 1
         }
       }
     ],
@@ -1619,10 +1653,10 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Plattenträger]",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "EQUIP_COND_DEF",
         "param": {
-          "atk": 0,
-          "def": 1
+          "def": 1,
+          "ifSupport": true
         }
       }
     ],
@@ -1826,9 +1860,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       },
       {
-        "code": "EQUIP_STAT",
+        "code": "EQUIP_AFTER_REVEAL_DEF",
         "param": {
-          "atk": 0,
           "def": 1
         }
       }
@@ -2105,6 +2138,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
           "atk": 0,
           "def": 1
         }
+      },
+      {
+        "code": "EQUIP_SOFT_DRAW",
+        "param": {
+          "draw": 1,
+          "needRevealSofort": true
+        }
       }
     ],
     "flavor": "Vel-Stempel. Akte gestempelt.",
@@ -2168,10 +2208,10 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "EQUIP_COND_DEF",
         "param": {
-          "atk": 0,
-          "def": 1
+          "def": 1,
+          "ifSupport": true
         }
       }
     ],
@@ -2202,6 +2242,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         "code": "EQUIP_STAT",
         "param": {
           "atk": 1,
+          "def": 1
+        }
+      },
+      {
+        "code": "EQUIP_REVEAL_ALLY_DEF",
+        "param": {
           "def": 1
         }
       }
@@ -2533,6 +2579,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
           "atk": 1,
           "def": 1
         }
+      },
+      {
+        "code": "EQUIP_KILL_DRAW_BUFF",
+        "param": {
+          "sectionDef": 1,
+          "draw": 1
+        }
       }
     ],
     "flavor": "Schuldzeichen. Offen bis zum Abschluss.",
@@ -2658,10 +2711,10 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Steingrünmantel]",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "EQUIP_COND_DEF",
         "param": {
-          "atk": 0,
-          "def": 1
+          "def": 1,
+          "ifSupport": true
         }
       }
     ],
@@ -2689,10 +2742,10 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Zeughausschlüssel]",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "EQUIP_COND_DEF",
         "param": {
-          "atk": 0,
-          "def": 1
+          "def": 1,
+          "ifSupport": true
         }
       }
     ],
@@ -2720,10 +2773,10 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Markenkragen]",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "EQUIP_COND_DEF",
         "param": {
-          "atk": 0,
-          "def": 1
+          "def": 1,
+          "ifSupport": true
         }
       }
     ],
@@ -2851,10 +2904,10 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Doppelhaus-Siegel]",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "EQUIP_COND_DEF",
         "param": {
-          "atk": 0,
-          "def": 1
+          "def": 1,
+          "ifSupport": true
         }
       }
     ],
@@ -3302,10 +3355,10 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Offener Knoten]",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "EQUIP_COND_DEF",
         "param": {
-          "atk": 0,
-          "def": 1
+          "def": 1,
+          "ifSupport": true
         }
       }
     ],
@@ -3900,10 +3953,10 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Freigabeformular]",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "EQUIP_COND_DEF",
         "param": {
-          "atk": 0,
-          "def": 1
+          "def": 1,
+          "ifSupport": true
         }
       }
     ],
@@ -3966,7 +4019,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         "param": {
           "atk": 0,
           "def": 0,
-          "costReduce": 1
+          "costReduce": 1,
+          "ifSupportSection": true
         }
       }
     ],
@@ -4214,6 +4268,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         "param": {
           "atk": 1,
           "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_DRAW_ON_ATTACK",
+        "param": {
+          "draw": 1,
+          "ifSupport": true
         }
       }
     ],
@@ -4616,6 +4677,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
           "atk": 0,
           "def": 1
         }
+      },
+      {
+        "code": "EQUIP_DRAW_ON_HEAL",
+        "param": {
+          "draw": 1,
+          "once": true
+        }
       }
     ],
     "flavor": "Zeichen für Medizin und Kontrolle.",
@@ -4778,6 +4846,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
           "atk": 0,
           "def": 1
         }
+      },
+      {
+        "code": "EQUIP_ON_REST",
+        "param": {
+          "atk": 1
+        }
       }
     ],
     "flavor": "Geschirr der Rasten-Doktrin.",
@@ -4841,6 +4915,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
           "atk": 0,
           "def": 1
         }
+      },
+      {
+        "code": "EQUIP_ON_REST",
+        "param": {
+          "heal": 1,
+          "atk": 1
+        }
       }
     ],
     "flavor": "Rasten — die Institution atmet, dann tritt sie.",
@@ -4871,6 +4952,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         "param": {
           "atk": 0,
           "def": 1
+        }
+      },
+      {
+        "code": "EQUIP_ON_REST",
+        "param": {
+          "heal": 1
         }
       }
     ],
@@ -5124,8 +5211,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "only": "aufklaerung|elite"
         }
+      },
+      {
+        "code": "REVEAL_STRIKE"
       }
     ],
     "flavor": "Sieht für die Lebenden.",
@@ -5187,6 +5278,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         "param": {
           "atk": 0,
           "def": 1
+        }
+      },
+      {
+        "code": "EQUIP_NEGATE_DAMAGE",
+        "param": {
+          "amount": 1,
+          "once": true
         }
       }
     ],
@@ -5441,6 +5539,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         "param": {
           "atk": 0,
           "def": 1
+        }
+      },
+      {
+        "code": "EQUIP_ON_REVEAL_ATK",
+        "param": {
+          "atk": 1,
+          "until": "turn"
         }
       }
     ],
