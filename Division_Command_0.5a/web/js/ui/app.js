@@ -647,11 +647,15 @@
     var face = sc.face === 'zahl' ? 'Zahl' : 'Kopf';
     var ov = document.getElementById('overlay');
     if (!ov) return;
+    var starterAp = (sc.starterApFirst != null) ? sc.starterApFirst
+      : (engine.state.starterFirstTurnAp != null ? engine.state.starterFirstTurnAp : 4);
     ov.innerHTML = '<div class="modal coin-toss-modal"><h2>Münzwurf</h2>' +
       '<div class="coin-toss-anim" aria-hidden="true">🪙</div>' +
       '<p class="coin-toss-msg">Münzwurf: <strong>' + escapeHtml(name) + '</strong> beginnt' +
       (sc.forced ? '' : ' <span class="tiny">(' + face + ')</span>') +
-      '.</p><button type="button" class="primary" id="coin-start-ok">Los</button></div>';
+      '.</p>' +
+      '<p class="coin-toss-ap tiny">Startspieler: <strong>' + starterAp + ' AP</strong> im ersten Zug</p>' +
+      '<button type="button" class="primary" id="coin-start-ok">Los</button></div>';
     ov.style.display = 'flex';
     var btn = document.getElementById('coin-start-ok');
     if (btn) btn.onclick = function () { ov.style.display = 'none'; if (typeof maybeBot === 'function') maybeBot(); };
@@ -2176,10 +2180,12 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     var foe = st.players[viewer === 0 ? 1 : 0]; // lokale Variable
     $('#turnmeta').textContent = 'Zug ' + st.turn + ' · am Zug: ' + st.players[st.active].name + (st.winner != null ? ' · ENDE: ' + st.endReason : '');
     syncBombTimer();
-    // sichtbaren Text setzen
-    $('#ap0').textContent = p0.name + ' · ' + p0.ap + ' AP / ' + p0.vp + ' SP · Hand ' + p0.hand.length + ' · Deck ' + p0.deck.length;
+    // sichtbaren Text setzen — Startspieler Zug 1: Badge zeigt „(Start: 4)“
+    var apNote0 = (st.turn === 1 && st.startCoin && st.startCoin.winner === 0 && st.active === 0) ? ' (Start: 4)' : '';
+    var apNote1 = (st.turn === 1 && st.startCoin && st.startCoin.winner === 1 && st.active === 1) ? ' (Start: 4)' : '';
+    $('#ap0').textContent = p0.name + ' · ' + p0.ap + ' AP' + apNote0 + ' / ' + p0.vp + ' SP · Hand ' + p0.hand.length + ' · Deck ' + p0.deck.length;
     // Handkarten
-    $('#ap1').textContent = p1.name + ' · ' + p1.ap + ' AP / ' + p1.vp + ' SP · Hand ' + p1.hand.length + ' · Deck ' + p1.deck.length;
+    $('#ap1').textContent = p1.name + ' · ' + p1.ap + ' AP' + apNote1 + ' / ' + p1.vp + ' SP · Hand ' + p1.hand.length + ' · Deck ' + p1.deck.length;
     // Handkarten
     function setLabel(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; } // sichtbaren Text setzen
     setLabel('enemy-support-label', foe.name + ' — Support'); // Unterstützungszone

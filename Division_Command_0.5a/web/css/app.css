@@ -4053,3 +4053,5 @@ button.pick-section:hover, button.pick-section.on {
   60% { transform: rotateY(720deg) scale(1.15); opacity: 1; }
   100% { transform: rotateY(1080deg) scale(1); }
 }
+
+.coin-toss-ap { text-align: center; margin-top: 4px; opacity: 0.9; }

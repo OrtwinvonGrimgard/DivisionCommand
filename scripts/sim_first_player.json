@@ -7,7 +7,7 @@
     "games": 1200,
     "decided": 1067,
     "ties": 133,
-    "firstPlayerWinRate": 0.5688847235238987,
+    "firstPlayerWinRate": 0.5538894095595126,
     "openingHandsEqual": true,
     "topReasons": [
       [
@@ -23,42 +23,42 @@
   "trophy": {
     "mode": "trophy",
     "games": 1200,
-    "decided": 1147,
-    "ties": 53,
-    "firstPlayerWinRate": 0.5457715780296426,
+    "decided": 1149,
+    "ties": 51,
+    "firstPlayerWinRate": 0.5369886858137511,
     "openingHandsEqual": true,
     "topReasons": [
       [
         "5 Siegpunkte (Trophy)",
-        817
+        821
       ],
       [
         "timeout-Brett",
-        122
+        123
       ],
       [
         "timeout-SP",
-        84
+        86
       ],
       [
         "6 Siegpunkte (Trophy)",
-        79
+        65
       ],
       [
         "timeout",
-        53
+        51
       ],
       [
         "Zuglimit 28 (mehr SP)",
-        23
+        28
       ],
       [
         "Keine Front ab Zug 26",
-        13
+        18
       ],
       [
         "Zuglimit 28 (Brettanteil)",
-        9
+        8
       ]
     ]
   }

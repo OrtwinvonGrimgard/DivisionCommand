@@ -202,16 +202,29 @@
       this._draw(p0, this.rules.hand_start); // Karten vom Deck auf die Hand
       this._draw(p1, this.rules.hand_start); // Karten vom Deck auf die Hand
       const starter = this.player(startPid);
+      // Startspieler: 1 AP weniger nur im ersten Zug (Default 4 statt 5). Spätere Züge normal via _actEnd.
+      const apFull = Number(this.rules.ap_per_turn || 5);
+      const pen = Number(this.rules.opening_starter_ap_penalty);
+      const starterPen = (this.rules.opening_starter_ap_penalty === false || this.rules.opening_starter_ap_penalty === 0)
+        ? 0
+        : (isFinite(pen) && pen >= 0 ? pen : 1);
+      const starterAp = Math.max(0, apFull - starterPen);
+      starter.ap = starterAp;
+      if (startCoin) {
+        startCoin.starterApFirst = starterAp;
+        startCoin.apPenalty = starterPen;
+      }
+      this.state.starterFirstTurnAp = starterAp;
       if (startCoin && !startCoin.forced) {
         const faceDe = startCoin.face === 'zahl' ? 'Zahl' : 'Kopf';
-        this._log('Münzwurf (' + faceDe + '): ' + starter.name + ' beginnt.');
-        this._evt('coin', null, 'Münzwurf: ' + starter.name + ' beginnt', {
-          face: startCoin.face, winner: startPid, name: starter.name
+        this._log('Münzwurf (' + faceDe + '): ' + starter.name + ' beginnt (' + starterAp + ' AP im ersten Zug).');
+        this._evt('coin', null, 'Münzwurf: ' + starter.name + ' beginnt — ' + starterAp + ' AP im ersten Zug', {
+          face: startCoin.face, winner: startPid, name: starter.name, starterApFirst: starterAp
         });
       } else {
-        this._log('Partie beginnt — ' + starter.name + ' ist am Zug.');
+        this._log('Partie beginnt — ' + starter.name + ' ist am Zug (' + starterAp + ' AP im ersten Zug).');
       }
-      this._log('5 AP, Front 3×3, Soforteinsätze 0 AP (Test).');
+      this._log('Startspieler ' + starterAp + ' AP im ersten Zug, danach ' + apFull + ' AP/Zug. Front 3×3.');
       (this.state.deckNotices || []).forEach((msg) => {
         this._log('Deckregel: ' + msg + ' — überzählige Kopien entfernt.');
         this._evt('shout', null, 'Deckregel: ' + msg);

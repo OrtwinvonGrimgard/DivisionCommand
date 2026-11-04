@@ -204,4 +204,29 @@ function put(eng, pid, cardId, section, row) {
   assert(eng.player(1).hand.length === before + 1, 'P2 drew +1 at turn start, got ' + eng.player(1).hand.length);
 }
 
+
+// Starter first-turn AP penalty (4); second keeps 5; later turns normal
+{
+  assert(DC_CATALOG.rules.opening_starter_ap_penalty === 1, 'starter AP penalty default 1');
+  const deck = DCEngine.buildTestDeck(DC_CATALOG, DCEngine.rng(11)).slice(0, 60);
+  const eng = new DCEngine.Engine(DC_CATALOG, { seed: 11 });
+  eng.createMatch({
+    seed: 11, startPlayer: 0,
+    deck0: deck, deck1: deck.slice(), doctrine0: [], doctrine1: [],
+    name0: 'A', name1: 'B',
+  });
+  assert(eng.state.active === 0, 'P1 starts');
+  assert(eng.player(0).ap === 4, 'starter first turn 4 AP got ' + eng.player(0).ap);
+  assert(eng.player(1).ap === 5, 'second still 5 AP bank got ' + eng.player(1).ap);
+  assert(eng.state.startCoin && eng.state.startCoin.starterApFirst === 4, 'coin records starterApFirst');
+  eng.player(0).hand = eng.player(0).hand.slice(0, 7);
+  eng.dispatch({ type: 'END_TURN', player: 0 });
+  assert(eng.state.active === 1, 'P2 turn');
+  assert(eng.player(1).ap === 5, 'P2 first own turn 5 AP got ' + eng.player(1).ap);
+  eng.player(1).hand = eng.player(1).hand.slice(0, 7);
+  eng.dispatch({ type: 'END_TURN', player: 1 });
+  assert(eng.state.active === 0, 'P1 second turn');
+  assert(eng.player(0).ap === 5, 'P1 later turns 5 AP got ' + eng.player(0).ap);
+}
+
 console.log('\nALL PASSED', passed);
