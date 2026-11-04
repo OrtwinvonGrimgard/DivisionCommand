@@ -145,6 +145,10 @@
     var aLoc = engine.findInst(act.uid);
     if (!aLoc) return -1;
     var ad = defOf(engine, aLoc.inst);
+    var isArtyAtk = false;
+    try {
+      isArtyAtk = !!(engine._isArtilleryAttacker && engine._isArtilleryAttacker(aLoc.inst));
+    } catch (eAr) { isArtyAtk = ((ad.tags || []).join(' ').toLowerCase().indexOf('artillerie') >= 0); }
     var best = null;
     var bestS = -99;
     (act.targets || []).forEach(function (t) {
@@ -154,11 +158,23 @@
         var td = defOf(engine, loc.inst);
         var atk = Number((engine.currentAtkDef && engine.currentAtkDef(aLoc.inst).atk) || ad.atk || 0);
         var defv = Number(loc.inst.def || td.def || 0);
+        var tAtk = Number((engine.currentAtkDef && engine.currentAtkDef(loc.inst).atk) || td.atk || 0);
         ts += atk;
         if (atk >= defv) ts += 28;
         else ts += Math.max(0, 10 - (defv - atk));
-        ts += (Number(td.atk) || 0) * 1.4;
+        ts += tAtk * 1.4;
         if (loc.inst.facedown) ts += 5;
+        var canCounter = true;
+        if (isArtyAtk && engine._canReachForCounter) {
+          try { canCounter = !!engine._canReachForCounter(loc, aLoc); } catch (e2) { canCounter = true; }
+        } else if (!isArtyAtk) {
+          canCounter = true;
+        }
+        if (isArtyAtk && !canCounter) {
+          ts += 22; // sicherer Artillerieschuss außer Reichweite
+        } else if (canCounter && atk < defv) {
+          ts -= tAtk * 1.6; // Gegenschlag-Risiko bei Nicht-Kill
+        }
       }
       if (ts > bestS) { bestS = ts; best = t; }
     });

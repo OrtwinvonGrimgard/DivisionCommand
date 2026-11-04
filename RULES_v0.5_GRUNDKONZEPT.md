@@ -198,7 +198,9 @@ Die Reichweitenstufe wird auf der Karte angegeben. Fehlt eine Angabe, gilt Stufe
 
 ## 7.2 Gegenangriff
 
-Wird eine Einheit angegriffen, führt sie grundsätzlich einen Gegenangriff aus, sofern kein Kartentext oder Status dies verhindert.
+Wird eine Einheit angegriffen, schlägt sie zurück, **falls sie den Treffer übersteht** und kein Kartentext oder Status dies verhindert (`combat_counter: survivor_only`).
+
+**Artillerie-Ausnahme:** Greift Artillerie (inkl. Mörser/Schwerartillerie/`ATTACK_ANY_FRONT`) an, gibt es **keinen** Gegenschlag, es sei denn, die angegriffene Einheit könnte die Artillerie selbst mit ihrer normalen Angriffsreichweite erreichen (gleiche Distanz-/Reihen-Logik wie legale Angriffsziele; Deploy-Schutz/Eingraben zählt hier nicht). Andere Angreifer unverändert.
 
 ---
 

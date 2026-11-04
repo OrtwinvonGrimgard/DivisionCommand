@@ -120,12 +120,15 @@ function instrument(engine, stats) {
     const tDv = this.currentAtkDef(tLoc.inst).def;
     // favorable: attacker ATK >= defender DEF (likely kill) OR attacker ATK > defender ATK (wins trade)
     if (aAtk >= tDv || aAtk > tAtk) stats.favorableAttacks += 1;
-    if (isArtyDef(aDef)) stats.artyAttacks += 1;
+    const wasArty = isArtyDef(aDef) || (this._isArtilleryAttacker && this._isArtilleryAttacker(aLoc.inst));
+    if (wasArty) stats.artyAttacks += 1;
     const beforeT = tLoc.inst.def;
     const beforeA = aLoc.inst.def;
     const r = origHits(aLoc, tLoc, dmgToT, dmgToA, fog);
     if (this._isDead(tLoc.inst) || (tLoc.inst.def != null && tLoc.inst.def < beforeT)) stats.attackDamageLanded += 1;
-    if (aLoc.inst.def != null && aLoc.inst.def < beforeA) stats.countersLanded += 1;
+    const countered = aLoc.inst.def != null && aLoc.inst.def < beforeA;
+    if (countered) stats.countersLanded += 1;
+    if (wasArty && countered) stats.artyCountersLanded += 1;
     return r;
   };
 }
@@ -163,7 +166,7 @@ function playOne(seed, nat0, nat1) {
   const stats = {
     deployed: 0, deployedTracked: 0, killedBeforeActing: 0, lifetimes: [],
     firstFullControlTurn: null, fullControlEvents: 0, attacks: 0, favorableAttacks: 0,
-    artyAttacks: 0, countersLanded: 0, attackDamageLanded: 0,
+    artyAttacks: 0, artyCountersLanded: 0, countersLanded: 0, attackDamageLanded: 0,
     deathsByType: {}, deathsHighAtk: 0, deathsHighDef: 0, deathsBalanced: 0,
     boardIntegral: [0, 0],
   };
@@ -214,6 +217,7 @@ function playOne(seed, nat0, nat1) {
     attacks: stats.attacks,
     favorableRate: stats.attacks ? stats.favorableAttacks / stats.attacks : 0,
     artyAttackShare: stats.attacks ? stats.artyAttacks / stats.attacks : 0,
+    artyCounterRate: stats.artyAttacks ? stats.artyCountersLanded / stats.artyAttacks : 0,
     counterRate: stats.attacks ? stats.countersLanded / stats.attacks : 0,
     deathsHighAtk: stats.deathsHighAtk,
     deathsHighDef: stats.deathsHighDef,
@@ -271,6 +275,7 @@ const summary = {
   favorableAttackShare: mean(ok.map((r) => r.favorableRate)),
   counterLandShare: mean(ok.map((r) => r.counterRate)),
   artyAttackShare: mean(ok.map((r) => r.artyAttackShare)),
+  artyCounterRate: mean(ok.map((r) => r.artyCounterRate)),
   deathShareHighAtk: deathsHighAtk / deathTot,
   deathShareHighDef: deathsHighDef / deathTot,
   deathShareBalanced: deathsBal / deathTot,

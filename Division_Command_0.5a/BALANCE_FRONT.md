@@ -111,10 +111,10 @@ Frage: *Was ändert sich, wenn nur die angegriffene Einheit Schaden nimmt — od
 1. Normal: zuerst `_damage(Verteidiger, Angreifer-ATK)`; **Gegenschlag nur wenn** `!_isDead(Verteidiger)` und Ziel in der Front → `_damage(Angreifer, Verteidiger-ATK)`.
 2. Support-Ziele: `dmgToA = 0` (kein Gegenschlag).
 3. Nebel/`nebelfeld`: Erstschlag-Reihenfolge umgekehrt (Schaden am Angreifer zuerst; Angriff nur wenn Angreifer lebt).
-4. Artillerie hat **keinen** eigenen „kein Gegenschlag“-Pass — Reichweite ja, Gegenschlag-Logik nein.
+4. **Artillerie-Gegenschlag (ab digin3):** Bei Artillerie-Angreifern Gegenschlag nur, wenn Verteidiger die Artillerie selbst per `_canReachForCounter` erreichen könnte — kombiniert mit `survivor_only`.
 5. Weitere Interaktionen vor den Hits: Minen, Richtmine, Ausrüstungs-Selbstschaden, Ambush, Panzerfaust, Zielangriff, Munitionstreffer, Schulterschluss (`_resolveCombat` ~3359–3534).
 
-Hilfe-Text („Beide schlagen“) ist etwas irreführend: bei tödlichem Treffer gibt es **keinen** Gegenschlag.
+Hilfe/RULES: Verteidiger schlägt zurück, **falls sie übersteht**; Artillerie zusätzlich nur in Reichweite des Verteidigers.
 
 Karten mit explizitem Erstschlag-/Gegen-Wortlaut: **2** (Dschungelkrieger „Überfall/Erstschlag“, Kriegsnebel „Verteidiger Erstschlag“). Allgemeiner Gegenschlag steht in den Regeln, nicht auf jeder Karte.
 
@@ -164,4 +164,25 @@ Repro: `node scripts/sim_combat_counter.mjs 200 survivor_only|none|simultaneous`
 2. Hilfe-Text präzisieren („schlägt zurück, **falls sie den Treffer übersteht**“), wenn UI-Texte angepasst werden.
 3. `none` nur playtesten, wenn man bewusst aggressiveres Tempo und schwächere DEF-Abschreckung will.
 4. `simultaneous` nur, wenn Kämpfe härter und seltener werden sollen (näher an „beide schlagen immer“).
+
+### 7.6 Entscheidung: Artillerie ohne Gegenschlag außer Reichweite (2026-11-04)
+
+Nutzerentscheid: Bei **Artillerie-Angriffen** kein Gegenschlag, außer der Verteidiger könnte die Artillerie selbst legal angreifen (gleiche Reach/Distanz wie `legalAttackTargets`, Deploy-Schutz irrelevant). Weiterhin `survivor_only` (muss überleben). Andere Angreifer unverändert.
+
+Umsetzung: `_counterDamageAllowed` in `_applyCombatHits`; Bot `scoreAttack` wertet außerreichweitige Artillerieschüsse als sicher (+22).
+
+**Sim 200 Bot-vs-Bot** (`survivor_only` + Eingraben ON, digin3):
+
+| Metrik | Vorher (nur survivor_only) | Nach Artillerie-Reichweiten-Gate |
+|---|---:|---:|
+| Angriffe / Partie | 45,6 | 46,9 |
+| Gegenschlag landet (gesamt) | 26 % | **21 %** |
+| Artillerie-Angriffsanteil | 29 % | **32 %** |
+| Gegenschlag auf Artillerie | — | **12 %** |
+| Ø Zugende | 88,6 | 88,5 |
+
+Nation-Board-Share unverändert im Muster: stark **Rothain / Theryn / Vael / Ossaria**; schwach **Karsk / Namar / Orthea / Lyr**. Artillerie-Kartenanteil je Nation gleich (~13 %), daher keine nationenspezifische Arty-Verschiebung — eher globale etwas sicherere Artillerie (höherer Arty-Angriffsanteil, seltenerer Gegenschlag).
+
+Repro: `node scripts/sim_combat_counter.mjs 200 survivor_only`
+
 

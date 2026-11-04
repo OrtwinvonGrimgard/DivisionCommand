@@ -757,6 +757,76 @@ function main() {
     }
     assert((win.DC_CATALOG.rules.combat_counter || 'survivor_only') === 'survivor_only', 'default survivor_only');
     ok('combat_counter default');
+
+    // Artillerie: Gegenschlag nur bei Reichweite des Verteidigers
+    function prepArtyCombat(atkSec, atkRow, defSec, defRow) {
+      const eng = makeMatch(win, nat0);
+      eng.rules.combat_counter = 'survivor_only';
+      const arty = win.DC_CATALOG.cards.find((c) => (c.tags || []).includes('artillerie') && !(c.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT') && eng.byId[c.id])
+        || win.DC_CATALOG.cards.find((c) => c.klasse === 'Artillerie' && eng.byId[c.id]);
+      const inf = win.DC_CATALOG.cards.find((c) => ((c.tags||[]).includes('infanterie') || c.klasse==='Infanterie') && eng.byId[c.id]);
+      assert(arty && inf, 'need arty+inf cards');
+      const atk = putUnit(eng, 0, arty.id, atkSec, atkRow);
+      const def = putUnit(eng, 1, inf.id, defSec, defRow);
+      atk.summonedTurn = eng.state.turn - 2;
+      def.summonedTurn = eng.state.turn - 2;
+      atk.facedown = false; def.facedown = false;
+      atk.flags = atk.flags || {}; def.flags = def.flags || {};
+      delete atk.flags.noCombatUntil; delete def.flags.noCombatUntil;
+      atk.def = 8; atk.defMax = 8;
+      def.def = 6; def.defMax = 6;
+      atk.flags.buffAtk = 2 - (Number(eng.defOf(atk).atk) || 0);
+      def.flags.buffAtk = 2 - (Number(eng.defOf(def).atk) || 0);
+      return { eng, atk, def, arty, inf };
+    }
+    // out of infantry range: arty C0 → inf L1 (dist 2); arty range 5 hits, inf range 3 cannot
+    {
+      const { eng, atk, def } = prepArtyCombat('C', 0, 'L', 1);
+      const aLoc = { inst: atk, player: eng.player(0), zone: 'front', section: 'C', row: 0 };
+      const tLoc = { inst: def, player: eng.player(1), zone: 'front', section: 'L', row: 1 };
+      assert(eng._isArtilleryAttacker(atk), 'attacker is artillery');
+      assert(!eng._canReachForCounter(tLoc, aLoc), 'defender out of reach of arty');
+      const aBefore = atk.def;
+      eng._applyCombatHits(aLoc, tLoc, 2, 2, false);
+      assert(!eng._isDead(def), 'arty OOR: defender lives');
+      assert(atk.def === aBefore, 'arty OOR: no counter got ' + atk.def + ' from ' + aBefore);
+      ok('artillery vs out-of-range defender: no counter');
+    }
+    // in range: arty C0 → inf C1 (dist 1); both can reach
+    {
+      const { eng, atk, def } = prepArtyCombat('C', 0, 'C', 1);
+      const aLoc = { inst: atk, player: eng.player(0), zone: 'front', section: 'C', row: 0 };
+      const tLoc = { inst: def, player: eng.player(1), zone: 'front', section: 'C', row: 1 };
+      assert(eng._canReachForCounter(tLoc, aLoc), 'defender in reach of arty');
+      const aBefore = atk.def;
+      eng._applyCombatHits(aLoc, tLoc, 2, 2, false);
+      assert(!eng._isDead(def), 'arty IR: defender lives');
+      assert(atk.def === aBefore - 2, 'arty IR: counter when survives got ' + atk.def);
+      ok('artillery vs in-range defender: counter if survives');
+    }
+    // non-artillery unchanged: dist 2 would still counter for infantry-vs-infantry? Same section chain:
+    // Inf C0 vs Inf L1: dist 2 > 1, infantry cannot "reach" either — but non-arty still counters by rule.
+    {
+      const eng = makeMatch(win, nat0);
+      eng.rules.combat_counter = 'survivor_only';
+      const inf = win.DC_CATALOG.cards.find((c) => ((c.tags||[]).includes('infanterie') || c.klasse==='Infanterie') && eng.byId[c.id]);
+      const atk = putUnit(eng, 0, inf.id, 'C', 0);
+      const def = putUnit(eng, 1, inf.id, 'L', 1);
+      atk.summonedTurn = eng.state.turn - 2; def.summonedTurn = eng.state.turn - 2;
+      atk.facedown = false; def.facedown = false;
+      atk.flags = {}; def.flags = {};
+      atk.def = 8; atk.defMax = 8; def.def = 6; def.defMax = 6;
+      atk.flags.buffAtk = 2 - (Number(eng.defOf(atk).atk) || 0);
+      def.flags.buffAtk = 2 - (Number(eng.defOf(def).atk) || 0);
+      const aLoc = { inst: atk, player: eng.player(0), zone: 'front', section: 'C', row: 0 };
+      const tLoc = { inst: def, player: eng.player(1), zone: 'front', section: 'L', row: 1 };
+      assert(!eng._isArtilleryAttacker(atk), 'non-arty attacker');
+      assert(!eng._canReachForCounter(tLoc, aLoc), 'geometry out of reach but non-arty still counters');
+      const aBefore = atk.def;
+      eng._applyCombatHits(aLoc, tLoc, 2, 2, false);
+      assert(atk.def === aBefore - 2, 'non-arty: counter unchanged even if geometry OOR');
+      ok('non-artillery attacker: counter unchanged');
+    }
   }
 
 

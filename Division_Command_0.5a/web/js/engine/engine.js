@@ -3130,11 +3130,53 @@
          survivor_only — Verteidiger nimmt Schaden zuerst; Gegenschlag nur wenn er überlebt
          simultaneous  — beide Seiten nehmen vollen Schaden (auch wenn Verteidiger stirbt)
          none          — kein Gegenschlag; nur Angreifer fügt Schaden zu
+       Artillerie-Angriffe: Gegenschlag zusätzlich nur, wenn Verteidiger die Artillerie
+       selbst per Reichweite/Distanz erreichen könnte (_canReachForCounter); sonst 0.
        Nebel/Erstschlag: Reihenfolge Angreifer zuerst; bei none entfällt Gegenschlag/Erstschlag-Schaden am Angreifer. */
     _combatCounterMode() {
       const m = (this.rules && this.rules.combat_counter) || 'survivor_only';
       if (m === 'none' || m === 'simultaneous' || m === 'survivor_only') return m;
       return 'survivor_only';
+    }
+
+    /* Artillerie (inkl. Mörser/Schwer/ATTACK_ANY_FRONT): Gegenschlag nur,
+       wenn der Verteidiger die Artillerie selbst legal erreichen könnte
+       (gleiche Reichweite/Distanz wie legalAttackTargets). */
+    _isArtilleryAttacker(inst) {
+      const def = this.defOf(inst);
+      if (!def) return false;
+      if (isArtillery(def)) return true;
+      const tags = ((def.klasse || '') + ' ' + (def.tags || []).join(' ')).toLowerCase();
+      return tags.includes('artillerie') || tags.includes('haubitze') || tags.includes('rohr')
+        || tags.includes('moerser') || tags.includes('mörser') || tags.includes('zugartillerie')
+        || tags.includes('schwerartillerie');
+    }
+
+    _canReachForCounter(fromLoc, toLoc) {
+      /* Gleiche Distanz/Reichweite wie legalAttackTargets, ohne deploy_protection-Filter. */
+      if (!fromLoc || !toLoc || !fromLoc.inst || !toLoc.inst) return false;
+      if (fromLoc.zone !== 'front' || toLoc.zone !== 'front') return false;
+      const defn = this.defOf(fromLoc.inst);
+      if (!defn) return false;
+      const tags = ((defn.klasse || '') + ' ' + (defn.tags || []).join(' ')).toLowerCase();
+      const isMortar = tags.includes('moerser') || tags.includes('mörser') || tags.includes('zugartillerie');
+      const isArty = (tags.includes('artillerie') || tags.includes('haubitze') || tags.includes('rohr')) && !isMortar;
+      const isHeavy = tags.includes('schwerartillerie') || tags.includes('schwer');
+      const range = isHeavy ? 7 : isArty ? 5 : isMortar ? 3 : 3;
+      const anyFront = (defn.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT');
+      if (anyFront) return true;
+      if (toLoc.inst.flags && toLoc.inst.flags.umgehenUntil === this.state.turn) return true;
+      const secBase = { L: 1, C: 4, R: 7 };
+      const attPos = (secBase[fromLoc.section] || 1) + fromLoc.row;
+      const tPos = (secBase[toLoc.section] || 0) + toLoc.row;
+      const dist = Math.abs(tPos - attPos);
+      return dist <= Math.floor((range - 1) / 2);
+    }
+
+    _counterDamageAllowed(aLoc, tLoc, dmgToA) {
+      if (!(dmgToA > 0) || !tLoc || tLoc.zone !== 'front') return 0;
+      if (this._isArtilleryAttacker(aLoc.inst) && !this._canReachForCounter(tLoc, aLoc)) return 0;
+      return dmgToA;
     }
 
     _applyCombatHits(aLoc, tLoc, dmgToT, dmgToA, fog) {
@@ -3143,27 +3185,28 @@
       this._fireAttackTriggers(aLoc, tLoc);
       this._onEnemyAttack(aLoc.player, aLoc.section);
       const mode = this._combatCounterMode();
+      const counterDmg = this._counterDamageAllowed(aLoc, tLoc, dmgToA);
       if (fog) {
         this._evt('shout', this.defOf(T), this.defOf(T).name + ' setzt Erstschlag ein (Nebel).');
         if (mode === 'none') {
           this._damage(T, dmgToT, { tag: 'attack' });
         } else if (mode === 'simultaneous') {
-          this._damage(A, dmgToA, { tag: 'first-strike' });
+          if (counterDmg > 0) this._damage(A, counterDmg, { tag: 'first-strike' });
           this._damage(T, dmgToT, { tag: 'attack' });
         } else {
-          // survivor_only (Ist): Erstschlag auf Angreifer, dann Angriff nur wenn Angreifer lebt
-          this._damage(A, dmgToA, { tag: 'first-strike' });
+          // survivor_only: Erstschlag nur wenn Reichweite den Gegenschlag erlaubt
+          if (counterDmg > 0) this._damage(A, counterDmg, { tag: 'first-strike' });
           if (!this._isDead(A)) this._damage(T, dmgToT, { tag: 'attack' });
         }
       } else if (mode === 'none') {
         this._damage(T, dmgToT, { tag: 'attack' });
       } else if (mode === 'simultaneous') {
         this._damage(T, dmgToT, { tag: 'attack' });
-        if (tLoc.zone === 'front' && dmgToA > 0) this._damage(A, dmgToA, { tag: 'counter' });
+        if (counterDmg > 0) this._damage(A, counterDmg, { tag: 'counter' });
       } else {
-        // survivor_only — aktueller Default
+        // survivor_only — Default + Artillerie-Reichweiten-Check
         this._damage(T, dmgToT, { tag: 'attack' });
-        if (tLoc.zone === 'front' && !this._isDead(T)) this._damage(A, dmgToA, { tag: 'counter' });
+        if (!this._isDead(T) && counterDmg > 0) this._damage(A, counterDmg, { tag: 'counter' });
       }
     }
 

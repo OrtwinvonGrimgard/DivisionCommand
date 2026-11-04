@@ -452,7 +452,7 @@
               <h2 id="regeln">Spielregeln</h2>
               <p>Eine Partie gewinnt, wer zuerst 10 Siegpunkte hat, oder durch eine Karte, die das ausdrücklich sagt. Weißer Frieden ist vorgesehen. Der Ablagestapel kann neu gemischt werden, wenn das Deck leer ist. Das Startdeck hat 40 Karten, die Starthand 5, die Hand darf auf 7 wachsen. Zwei Doktrinen liegen offen und gelten die Partie über.</p>
               <p>Einheiten kommen auf eine eigene Frontstellung <strong>offen</strong> (nicht verdeckt) und handeln erst im nächsten eigenen Zug. Frisch gelegt sind sie <strong>eingegraben</strong>: ein Schild-Symbol zeigt den Schutz — nicht angreifbar und nicht Ziel gezielter Effekte bis zum Beginn des nächsten eigenen Zugs, plus +1 DEF. Flächenschaden (z.&nbsp;B. „Allen Feinden … Schaden“) trifft trotzdem. Unterstützung kommt in den Support und bleibt dort, bis sie zerstört, entfernt oder ausgeschaltet wird. Einsätze wirken sofort und gehen danach auf den Ablagestapel. Ausrüstung hängt an einer Einheit, wenn ihr Text das sagt. Doktrinen werden nicht gespielt, sie liegen von Anfang an offen.</p>
-              <p>Ein Angriff kostet im Test 1 AP, ein Einsatz und das Anlegen von Ausrüstung im Test 0. Der Kartentext kann das ändern. Schaden senkt die Stabilität. Bei 0 ist die Einheit weg. Die Stellung bleibt leer. Niemand rückt automatisch nach. Der Verteidiger schlägt zurück, wenn sein Text das nicht verbietet. Eingegrabene Einheiten erscheinen nicht als legale Angriffsziele.</p>
+              <p>Ein Angriff kostet im Test 1 AP, ein Einsatz und das Anlegen von Ausrüstung im Test 0. Der Kartentext kann das ändern. Schaden senkt die Stabilität. Bei 0 ist die Einheit weg. Die Stellung bleibt leer. Niemand rückt automatisch nach. Der Verteidiger schlägt zurück, falls sie den Treffer übersteht und ihr Text das nicht verbietet. Bei Artillerie-Angriffen nur, wenn die angegriffene Einheit die Artillerie selbst mit ihrer Reichweite erreichen könnte. Eingegrabene Einheiten erscheinen nicht als legale Angriffsziele.</p>
               <p>Steilfeuer erhöht die Reichweite, nicht den Schaden. Stufe 1 reicht über 3 gegnerische Stellungen, Stufe 2 über 5, Stufe 3 über 9. Mörser ist Stufe 1, Haubitze Stufe 2, Raketenwerfer Stufe 3. Das Ziel wird angeklickt, der Kampf läuft danach von selbst.</p>
               <p>Verdeckt heißt: die Karte liegt mit der Rückseite nach oben und kann nicht normal angegriffen werden, bis sie aufgeklärt ist. Guerilla und Stellung gehen nach dem Kampf verdeckt, weil sie die Stellung wechseln. Artillerie und Scharfschütze tun dasselbe, sind aber keine Guerilla. Nur der Tag, den du setzt, löst das aus.</p>
               <p>Bronze, Silber und Gold sind die Bedeutung, nicht der Ladenpreis und nicht automatisch die Seltenheit. Bronze macht eine konkrete Sache an einem Ziel. Silber beeinflusst ein Gefecht. Gold verändert die operative Lage. Elite ist eine zweite Achse, keine vierte Stufe: eine besondere Art, Krieg zu führen. AP sind davon getrennt. Eine Goldkarte kann durch eine harte Bedingung billig sein.</p>
@@ -478,7 +478,7 @@
               <ol>
                 <li>Zug 1, 5 AP. Der Dschungelkrieger kostet 3 und geht auf die linke Flanke, vordere Stellung — offen, mit Schild (Eingegraben). Es bleiben 2 AP. Er handelt erst im nächsten eigenen Zug. Der Gegner sieht die Karte, kann sie aber in seinem Zug nicht angreifen und nicht gezielt mit Einsätzen treffen; Flächenschaden würde treffen.</li>
                 <li>Zug 2 beginnt mit 7 AP, den 2 vom letzten Zug und 5 neuen. Der Haubitzenzug kostet 4 und geht auf eine eigene Stellung. Es bleiben 3 AP. Auch er greift erst im Zug danach an. Steilfeuer 2 reicht später über fünf gegnerische Stellungen, nicht nur über die gegenüberliegende.</li>
-                <li>Zug 3. Der Dschungelkrieger greift für 1 AP die Stellung gegenüber oder eine seitlich daneben an. Der Haubitzenzug greift für 1 AP ein Ziel, das Steilfeuer erreicht. Ein Klick auf das Ziel schließt den Kampf. Beide schlagen, der Verteidiger schlägt zurück, wenn sein Text das nicht verbietet. Danach geht der Dschungelkrieger verdeckt, weil er die Stellung wechselt.</li>
+                <li>Zug 3. Der Dschungelkrieger greift für 1 AP die Stellung gegenüber oder eine seitlich daneben an. Der Haubitzenzug greift für 1 AP ein Ziel, das Steilfeuer erreicht. Ein Klick auf das Ziel schließt den Kampf. Der Verteidiger schlägt zurück, falls sie übersteht (bei Artillerie zusätzlich nur in eigener Reichweite). Danach geht der Dschungelkrieger verdeckt, weil er die Stellung wechselt.</li>
                 <li>Der Aufklärer kostet 3. Er deckt eine verdeckte feindliche Stellung auf, zum Beispiel den gerade verschwundenen Dschungelkrieger des Gegners. Danach ist der Zug zu Ende, oder es bleibt Rest-AP für den nächsten Zug liegen.</li>
                 <li>Armageddon ist Gold und ein Großereignis: Feld und beide Hände weg, beide ziehen fünf, die Münze bestimmt, wer neu beginnt. Dafür sind 8 AP der Arbeitspreis, ein Exemplar im Deck. In der Datei steht noch 0 AP. Der Ablauf räumt bisher Front und Support, die Hände noch nicht.</li>
               </ol>
@@ -643,10 +643,10 @@
   <script src="js/data/sets/types/soforteinsatz.js?v=fxwire2"></script>
   <script src="js/data/sets/types/ausruestung.js?v=fxwire2"></script>
   <script src="js/data/decks.js?v=dokfix"></script>
-  <script src="js/data/catalog.js?v=digin2"></script>
+  <script src="js/data/catalog.js?v=digin3"></script>
   <script src="js/data/audio-data.js?v=030c"></script>
-  <script src="js/engine/engine.js?v=digin2"></script>
-  <script src="js/ai/bot.js?v=digin1"></script>
+  <script src="js/engine/engine.js?v=digin3"></script>
+  <script src="js/ai/bot.js?v=digin3"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/library.js?v=030n"></script>
   <script src="js/ui/portraits.js?v=kit20"></script>
@@ -655,7 +655,7 @@
   <script src="js/net.js?v=030c"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js?v=digin2').catch(function () {});
+      navigator.serviceWorker.register('sw.js?v=digin3').catch(function () {});
     }
     (function () {
       document.title = window.DC_BUILD_LABEL || 'Division Command 0.5a Alpha';
