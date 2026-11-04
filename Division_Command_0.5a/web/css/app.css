@@ -4055,3 +4055,8 @@ button.pick-section:hover, button.pick-section.on {
 }
 
 .coin-toss-ap { text-align: center; margin-top: 4px; opacity: 0.9; }
+
+.end-modal h2 { text-align: center; }
+.end-modal .end-who { text-align: center; font-size: 1.15rem; }
+.end-modal .end-vp { text-align: center; margin-top: 6px; }
+.badge.you, #ap0, #ap1 { letter-spacing: 0.01em; }

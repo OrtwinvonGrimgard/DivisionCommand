@@ -1606,7 +1606,7 @@
     eventPlaying = true;
     var batch = eventQueue.splice(0);
     if (!batch.length) { eventPlaying = false; return; }
-    var titles = { attack: 'Kampfhandlung', destroy: 'Kampfhandlung', shout: 'Kampfhandlung', coin: 'Münze', spell: 'Einsatz', instant: 'Einsatz', deploy: 'Ausspielen', equip: 'Ausrüstung', support: 'Support' };
+    var titles = { attack: 'Kampfhandlung', destroy: 'Kampfhandlung', shout: 'Kampfhandlung', coin: 'Münze', spell: 'Einsatz', instant: 'Einsatz', deploy: 'Ausspielen', equip: 'Ausrüstung', support: 'Support', vp: 'Siegpunkt' };
     function flyOne(i, after) {
       if (i >= batch.length) { after(); return; }
       var ev = batch[i];
@@ -2183,9 +2183,11 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     // sichtbaren Text setzen — Startspieler Zug 1: Badge zeigt „(Start: 4)“
     var apNote0 = (st.turn === 1 && st.startCoin && st.startCoin.winner === 0 && st.active === 0) ? ' (Start: 4)' : '';
     var apNote1 = (st.turn === 1 && st.startCoin && st.startCoin.winner === 1 && st.active === 1) ? ' (Start: 4)' : '';
-    $('#ap0').textContent = p0.name + ' · ' + p0.ap + ' AP' + apNote0 + ' / ' + p0.vp + ' SP · Hand ' + p0.hand.length + ' · Deck ' + p0.deck.length;
-    // Handkarten
-    $('#ap1').textContent = p1.name + ' · ' + p1.ap + ' AP' + apNote1 + ' / ' + p1.vp + ' SP · Hand ' + p1.hand.length + ' · Deck ' + p1.deck.length;
+    var vpNeed = (engine._trophyVpToWin && engine._trophyActive && engine._trophyActive())
+      ? engine._trophyVpToWin()
+      : (Number((engine.rules && engine.rules.vp_to_win) || 5));
+    $('#ap0').textContent = p0.name + ' · ' + p0.ap + ' AP' + apNote0 + ' · SP ' + (p0.vp || 0) + '/' + vpNeed + ' · Hand ' + p0.hand.length + ' · Deck ' + p0.deck.length;
+    $('#ap1').textContent = p1.name + ' · ' + p1.ap + ' AP' + apNote1 + ' · SP ' + (p1.vp || 0) + '/' + vpNeed + ' · Hand ' + p1.hand.length + ' · Deck ' + p1.deck.length;
     // Handkarten
     function setLabel(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; } // sichtbaren Text setzen
     setLabel('enemy-support-label', foe.name + ' — Support'); // Unterstützungszone
@@ -2573,14 +2575,33 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     $('#log').innerHTML = engine.log.slice(-40).reverse().map(function (l) { // HTML in den Knoten schreiben
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
     }).join(''); // nächster Schritt im Ablauf
-    if (st.winner != null) { // Zweig nur bei zutreffender Bedingung
-      var ov = $('#overlay'); // lokale Variable
-      ov.innerHTML = '<div class="modal"><h2>' + escapeHtml(st.endReason) + '</h2><p>' + // HTML-Sonderzeichen escapen
-        (st.winner == null ? 'Unentschieden durch Frieden.' : escapeHtml(st.players[st.winner].name) + ' gewinnt.') +
-        // HTML-Sonderzeichen escapen
-        '</p><button type="button" id="again">Neue Partie</button></div>'; // nächster Schritt im Ablauf
-      ov.style.display = 'flex'; // nächster Schritt im Ablauf
-      $('#again').onclick = function () { location.reload(); }; // Funktion
+    if (st.winner != null || (st.endReason && /Frieden|unentschieden/i.test(String(st.endReason || '')))) {
+      var ov = $('#overlay');
+      var reasonRaw = String(st.endReason || '');
+      var reasonLabel = reasonRaw;
+      if (/Siegpunkte|Trophy/i.test(reasonRaw)) reasonLabel = 'Siegpunkte';
+      else if (/Keine Front/i.test(reasonRaw)) reasonLabel = 'Sicherheitsnetz — keine Front';
+      else if (/Zuglimit/i.test(reasonRaw)) reasonLabel = 'Zug 28 Wertung';
+      else if (/Aufgabe/i.test(reasonRaw)) reasonLabel = 'Aufgabe';
+      else if (/Frieden|unentschieden/i.test(reasonRaw)) reasonLabel = 'Weißer Frieden';
+      else if (/timeout-SP/i.test(reasonRaw)) reasonLabel = 'Zeitlimit (SP)';
+      else if (/timeout-Brett/i.test(reasonRaw)) reasonLabel = 'Zeitlimit (Brett)';
+      var vpLine = '';
+      if (st.players && st.players[0] && st.players[1]) {
+        vpLine = '<p class="tiny end-vp">SP ' + escapeHtml(st.players[0].name) + ': <strong>' + (st.players[0].vp || 0) +
+          '</strong> · ' + escapeHtml(st.players[1].name) + ': <strong>' + (st.players[1].vp || 0) + '</strong></p>';
+      }
+      var who = (st.winner == null)
+        ? 'Unentschieden.'
+        : (escapeHtml(st.players[st.winner].name) + ' gewinnt.');
+      ov.innerHTML = '<div class="modal end-modal"><h2>' + escapeHtml(reasonLabel) + '</h2>' +
+        '<p class="end-who">' + who + '</p>' +
+        (reasonRaw && reasonRaw !== reasonLabel ? '<p class="tiny">' + escapeHtml(reasonRaw) + '</p>' : '') +
+        vpLine +
+        '<button type="button" class="primary" id="again">Neue Partie</button></div>';
+      ov.style.display = 'flex';
+      var again = document.getElementById('again');
+      if (again) again.onclick = function () { location.reload(); };
     } else if (st.pending && st.pending.player === viewer) {
       showPending();
     }

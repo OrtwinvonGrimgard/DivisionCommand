@@ -767,31 +767,26 @@ Endet die Deaktivierung, wird die Doktrin wieder aktiv.
 
 ---
 
-# 26. Siegpunkte
+# 26. Siegpunkte (Trophy — aktiv)
 
-Der Sieg soll über Siegpunkte (SP) erreicht werden.
+Der Sieg wird über Siegpunkte (SP) erreicht. Default: `victory_mode: 'trophy'` (Bot, Hotseat, LAN).
 
-Jeder SP entsteht durch das Erfüllen einer besonderen Bedingung bzw. Leistung.
+Jeder SP entsteht durch eine besondere Leistung:
 
-Beispiele:
+- **Elite zerstört:** +2 SP
+- **Durchbruch:** +1 SP (Abschnitt halten; bis 3× pro Abschnitt, Cooldown 2)
+- **Doktrin-Ziel:** +1 SP (Need ×0,65, 1×/Partie)
+- Karten mit ausdrücklicher SP-Bedingung
 
-- bestimmte gegnerische Einheiten zerstören
-- bestimmte Operationen durchführen
-- strategische Bedingungen erfüllen
-- Elite-/Doktrinenbedingungen erfüllen
-- diplomatische Leistungen erreichen
-
-Einsätze sollen nicht einfach ohne Bedingung „+1 SP“ geben.
-
-Ein bereits gewonnener SP bleibt grundsätzlich erhalten, sofern ein Effekt ausdrücklich sagt, dass SP entfernt, gestohlen oder verändert werden.
+Einsätze sollen nicht einfach ohne Bedingung „+1 SP“ geben. Gewonnene SP bleiben, sofern kein Effekt sie ändert.
 
 ## 26.1 Siegschwelle
 
-Aktueller Arbeitswert:
+> **5 SP** (`trophy_vp_to_win`)
 
-> 10 SP
+Sicherheitsnetz: ab Zug **26** keine Front → Niederlage; ab Zug **28** SP-Wertung (sonst Brettanteil / Frieden).
 
-Die endgültige Siegschwelle bleibt playtestabhängig.
+Legacy `classic` bleibt wählbar; siehe `Division_Command_0.5a/SIEGBEDINGUNGEN.md` (Status: aktiv).
 
 ---
 

@@ -4732,7 +4732,7 @@
       return true;
     }
 
-    // 10 Siegpunkte?
+    // Siegpunkte (Trophy: 5 / classic: rules.vp_to_win)
     _checkVictory() { // nächster Schritt im Ablauf
       this.state.players.forEach((p) => { // jedes Element
         if (p.vp >= this.rules.vp_to_win) this._end(p.id, p.vp + ' Siegpunkte'); // Zweig nur bei zutreffender Bedingung

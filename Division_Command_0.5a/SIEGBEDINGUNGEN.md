@@ -1,23 +1,23 @@
-# Siegbedingungen — Trophy-Modus (Prototyp)
+# Siegbedingungen — Trophy-Modus
 
-Stand: November 2026 · Alpha 0.5a  
-Flag: `catalog.rules.victory_mode` — Default **`classic`** (unverändert). Prototyp: **`trophy`**.
+**Status: aktiv** · Stand: November 2026 · Alpha 0.5a  
+Flag: `catalog.rules.victory_mode` — Default **`trophy`** (alle Modi: Bot, Hotseat, LAN). Legacy: `classic`.
 
 Doktrin-SP sind **nicht nationenbezogen**, sondern an die 36 Doktrinen gebunden (`pt126u`).
 
 ---
 
-## 1. Classic (Default, unverändert)
+## 1. Classic (Legacy, `victory_mode: 'classic'`)
 
 | Mechanik | Ist |
 |---|---|
-| Siegschwelle | `vp_to_win: 10` |
+| Siegschwelle | `vp_to_win` (früher 10; Katalog jetzt 5 wegen Trophy-Default) |
 | SP-Quellen | praktisch nur Sonderkarten (z. B. „Der Letzte der steht“) |
 | Aufgabe / Weißer Frieden | bleiben |
 
 ---
 
-## 2. Trophy-Modus (`victory_mode: 'trophy'`)
+## 2. Trophy-Modus (`victory_mode: 'trophy'`) — **Hauptregeln**
 
 ### 2.1 Siegschwelle
 
@@ -154,10 +154,10 @@ Keine Kartenwerte in diesem Commit geändert.
 
 ---
 
-## 5. Aktivierung
+## 5. Aktivierung (Default)
 
 ```js
-victory_mode: 'trophy'              // statt 'classic'
+victory_mode: 'trophy'              // Default in catalog.rules
 trophy_vp_to_win: 5
 trophy_elite_vp: 2
 trophy_safety_empty_from: 26

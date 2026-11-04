@@ -1,5 +1,5 @@
 /**
- * Trophy victory mode unit tests (flag classic by default; tests force trophy).
+ * Trophy victory mode unit tests (default victory_mode: trophy).
  */
 const fs = require('fs');
 const path = require('path');
@@ -42,7 +42,7 @@ function assert(cond, msg) {
   console.log('ok', msg);
 }
 
-assert(DC_CATALOG.rules.victory_mode === 'classic', 'default victory_mode classic');
+assert(DC_CATALOG.rules.victory_mode === 'trophy', 'default victory_mode trophy');
 assert(DC_TROPHY && DC_TROPHY_OBJECTIVES, 'trophy module loaded');
 assert(Object.keys(DC_TROPHY_OBJECTIVES).length === 36, '36 doctrine objectives');
 
