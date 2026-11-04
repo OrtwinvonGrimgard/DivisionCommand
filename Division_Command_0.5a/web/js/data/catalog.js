@@ -84,7 +84,9 @@ window.DC_CATALOG = window.DC_CATALOG || {
     "graveyard_reshuffle": true,
     "doctrines": 2,
     "support_slots": 18,
-    "max_hand": 7
+    "max_hand": 7,
+    "deploy_protection": false,
+    "strict_facing": false
   }
 };
 window.DC_CATALOG.cards = [];

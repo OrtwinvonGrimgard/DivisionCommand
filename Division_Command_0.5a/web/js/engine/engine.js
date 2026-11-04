@@ -320,6 +320,19 @@
       return pid == null || inst.owner === pid;
     }
 
+    /* Anti-Snowball (rules.deploy_protection, default off): frisch gelegt
+       bleibt bis inkl. Gegner-Halbzug unangreifbar (noCombatUntil = turn+1),
+       plus +1 DEF Eingraben bis der Schutz endet. */
+    _applyDeployProtection(card) {
+      if (!this.rules.deploy_protection || !card) return;
+      card.flags = card.flags || {};
+      card.flags.noCombatUntil = this.state.turn + 1;
+      card.flags.digInUntil = this.state.turn + 1;
+      card.def = (card.def == null ? 0 : card.def) + 1;
+      card.defMax = (card.defMax == null ? card.def : card.defMax) + 1;
+      card.flags.digInBonus = 1;
+    }
+
     nmlAt(p, section, row) {
       if (!p.nml || !p.nml[section]) return null;
       return p.nml[section][row] || null;
@@ -758,12 +771,19 @@
         // Interpret: facing slot + neighboring slots in the enemy front of adjacent sections at same depth.
       }); // nächster Schritt im Ablauf
       // Tighten: facing = same section + same row; left/right = adjacent section, same row.
+      // rules.strict_facing (default off): nur gegenüber + seitlich gleiche Reihe — keine Spalten-Kette.
       const secBase = { L: 1, C: 4, R: 7 };
       const attPos = (secBase[attackerLoc.section] || 1) + attackerLoc.row;
       const tight = [];
+      const strict = !!this.rules.strict_facing && !(isArty || isHeavy || isMortar || anyFront);
       this.frontList(enemy).forEach((t) => {
         if (anyFront) { tight.push(t); return; }
         if (t.inst.flags && t.inst.flags.umgehenUntil === this.state.turn) { tight.push(t); return; }
+        if (strict) {
+          if (t.section === attackerLoc.section && t.row === attackerLoc.row) tight.push(t);
+          else if (adjacentSections(attackerLoc.section).includes(t.section) && t.row === attackerLoc.row) tight.push(t);
+          return;
+        }
         const tPos = (secBase[t.section] || 0) + t.row;
         const dist = Math.abs(tPos - attPos);
         if (dist <= Math.floor((range - 1) / 2)) tight.push(t);
@@ -966,6 +986,7 @@
         p.hand = p.hand.filter((c) => c.uid !== found.uid);
         found.facedown = true;
         found.summonedTurn = this.state.turn;
+      this._applyDeployProtection(found);
         p.support[idx] = found;
         this._log(def.name + ' liegt verdeckt im Support (Stellung).');
         return { ok: true };
@@ -1026,6 +1047,7 @@
         }
         p.hand = p.hand.filter((c) => c.uid !== found.uid);
         found.summonedTurn = this.state.turn;
+      this._applyDeployProtection(found);
         if (a.facedown) {
           const trap = (def.effects || []).some((e) => ['LAY_MINE','CANCEL_AIR_DAMAGE','AMMO_COOK','PAUSE_UNIT','SILVER_ANGEL','COURT_MARTIAL','FORMATION','RESIST','HONORS'].indexOf(e.code) >= 0);
           if (this._istStellung(def) || trap) found.facedown = true;
@@ -1104,7 +1126,8 @@
       if (!pend.paid && p.ap < due) throw new Error('Nicht genug AP (' + p.ap + '/' + due + ')');
       p.hand = p.hand.filter((c) => c.uid !== card.uid); // Handkarten
       card.facedown = !!pend.facedown; // verdeckte Lage
-      card.summonedTurn = this.state.turn; // Feld der Engine-Instanz
+      card.summonedTurn = this.state.turn;
+      this._applyDeployProtection(card); // Feld der Engine-Instanz
       p.front[slot.section][slot.row] = card; // nächster Schritt im Ablauf
       if (!pend.paid) {
         this._spend(p, due);
@@ -1186,6 +1209,7 @@
           p.hand = p.hand.filter((c) => c.uid !== card.uid);
           card.facedown = false;
           card.summonedTurn = this.state.turn;
+      this._applyDeployProtection(card);
           p.front[pend.section][pend.row] = card;
           this._log('Helden springen in die Bresche.');
         }
@@ -4539,6 +4563,15 @@
       this.state.active = nxtId; // Feld der Engine-Instanz
       this.state.turn += 1; // Feld der Engine-Instanz
       this.state.phase = 'main'; // Feld der Engine-Instanz
+      this.frontList(nxt).forEach((l) => {
+        if (l.inst.flags && l.inst.flags.digInBonus && l.inst.flags.digInUntil != null && l.inst.flags.digInUntil < this.state.turn) {
+          const b = Number(l.inst.flags.digInBonus || 1);
+          l.inst.def = Math.max(1, (l.inst.def || 1) - b);
+          if (l.inst.defMax != null) l.inst.defMax = Math.max(l.inst.def, l.inst.defMax - b);
+          l.inst.flags.digInBonus = 0;
+          l.inst.flags.digInUntil = null;
+        }
+      });
       this.state.peaceOffer = null; // Feld der Engine-Instanz
       this._log(nxt.name + ' — Zug ' + this.state.turn + ', ' + nxt.ap + ' AP.');
       if ((nxt.support || []).some((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'PEEK_ENEMY_TOP') && s.summonedTurn !== this.state.turn)) {

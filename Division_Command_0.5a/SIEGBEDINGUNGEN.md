@@ -109,3 +109,11 @@ Empfehlung: **Hybrid (2.1)** als Standard für PvP/Hotseat/Bot; **Wille (2.2)** 
 ## 3. Kurzfazit
 
 Heute endet das Gefecht regeltechnisch bei 10 SP, aber SP fließen fast nicht. Ohne Entscheidung hier bleiben Tutorial, Roguelike, Kampagne und Steam-Demo ohne glaubwürdiges „Partie vorbei“. Erst Siegbedingungen locken, dann Kartendesign und Roguelike darauf bauen.
+
+---
+
+## Anhang: Front-Snowball (Balance, nicht Siegbedingung)
+
+Nutzerfeedback zu Ketten-Angriffen / Soforttod frischer Deploys ist in **`BALANCE_FRONT.md`** diagnostiziert.
+Anti-Snowball-Flags `deploy_protection` / `strict_facing` (default **aus**). **Keine Änderung an Siegbedingungen.**
+
