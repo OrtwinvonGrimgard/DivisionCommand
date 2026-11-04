@@ -431,6 +431,7 @@
               <button type="button" data-jump="absatz">Absatz</button>
               <button type="button" data-jump="werbung">Werbung</button>
               <button type="button" data-jump="preis">Preis und Spielerzahl</button>
+              <button type="button" data-jump="szenarien">Erfolgsszenarien</button>
               <button type="button" data-jump="lizenz">Lizenz und Marke</button>
             </div>
             <button type="button" data-hilfe="plan">Roadmap</button>
@@ -561,6 +562,18 @@
               </ul>
               <p>Was die Spielerzahl hebt, ohne den Preis zu senken: ein Prolog zum Verschenken, Partien unter zwanzig Minuten, ein Bot, der legt, wenn er kann, und ein Frontbild, das in einem Standbild lesbar ist.</p>
 
+              <h2 id="szenarien">Drei Erfolgsszenarien</h2>
+              <p>Die Absatzzahlen oben sind Spannweiten. Der Markt selbst liegt im Median weit darunter (Card-Game-Launches 2025 grob ~470 Kopien / ~685&nbsp;$ geschätzt — <a href="https://gamesberry.app/tag/card-game" target="_blank" rel="noopener">GamesBerry</a>). Drei Szenarien für Division Command, erstes Jahr Steam:</p>
+              <table>
+                <thead><tr><th>Szenario</th><th>Verkäufe (grob)</th><th>Was dafür nötig ist</th><th>Wishlist-Orientierung</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Basis</strong></td><td>Hunderte bis wenige Tausend</td><td>Seite, Demo, wenig Reichweite; solider Tisch</td><td>~500–3&nbsp;000 (Solo-Median in Umfragen ~500 — <a href="https://kasspian.com/research/wishlists" target="_blank" rel="noopener">Kasspian</a>)</td></tr>
+                  <tr><td><strong>Gut</strong></td><td>5&nbsp;000–15&nbsp;000</td><td>Starke Demo, Next Fest o.&nbsp;Ä., Hook aus 16 Nationen + Roguelike, Creator-Keys</td><td>~5&nbsp;000–20&nbsp;000+</td></tr>
+                  <tr><td><strong>Durchbruch</strong></td><td>30&nbsp;000+</td><td>Viral/kuratiert, anhaltende Creator-Präsenz — Ausnahme, nicht Planungssockel</td><td>oft &gt;&nbsp;20&nbsp;000; kein Garant</td></tr>
+                </tbody>
+              </table>
+              <p>Detailierter Ablauf (Siegbedingungen klären → Polish → Roguelike-Slice → Steam/Demo → Kampagne → EA → PvP/Workshop), Kartendesign für den Roguelike und offene Regelentscheidungen: siehe Repo-Dateien <code>FAHRPLAN.md</code> und <code>SIEGBEDINGUNGEN.md</code>. Kurz: Zuerst Siegbedingungen einfrieren; Roguelike mit kürzeren Gefechten, Start 12–15 Karten, Orden/Befehle, sichtbaren Gegner-Absichten; Kern-PvP-Regeln bleiben die Turnierbasis.</p>
+
               <h2 id="lizenz">Lizenz und Marke — lohnt sich eine Eintragung?</h2>
               <p>„Eigene Lizenz eintragen“ meint hier vor allem den <strong>Markenschutz für den Namen</strong> (Wort- oder Wort-/Bildmarke). Daneben stehen Urheberrecht am Code/an den Karten (entsteht automatisch) und die Frage, unter welcher <strong>Software-Lizenz</strong> die Repos laufen. Das sind drei verschiedene Hebel.</p>
               <p><strong>1. Marke (empfohlen: ja, aber zeitlich gestaffelt).</strong> In Deutschland schützt eine Marke den Namen und das Logo im Geschäftsverkehr; Urheberrecht allein schützt nicht den Titel „Division Command“. Amtsgebühren Stand 2026: DPMA elektronisch 290&nbsp;€ für bis zu drei Klassen (<a href="https://www.dpma.de/service/gebuehren/marken/" target="_blank" rel="noopener">DPMA Markengebühren</a>, Stand 29.09.2026). Unionsmarke EUIPO: 850&nbsp;€ für die erste Klasse, 50&nbsp;€ für die zweite, 150&nbsp;€ ab der dritten — also 1&nbsp;050&nbsp;€ für drei Klassen (<a href="https://www.euipo.europa.eu/de/trade-marks/before-applying/fees-payments" target="_blank" rel="noopener">EUIPO Gebühren</a>). Schutz zunächst zehn Jahre. Sinnvolle Nizza-Klassen für dieses Spiel: <strong>9</strong> (herunterladbare Spielesoftware), <strong>41</strong> (Unterhaltung / Online-Spiele), optional <strong>28</strong> (Spielwaren/Apparatur), falls physische Ableger geplant sind.</p>
@@ -583,7 +596,8 @@
               <p>Im Editor lassen sich Schablonen mit Bild, rundem Schatten und eigenen Tags bauen. Ein erster Versuch hat zwanzig Karten auf die neue Schablone gesetzt. Das Set im Spiel benutzt noch die bisherigen Bilder. Die Regeln in RULES v0.5 sind das Grundkonzept, noch nicht jede Zeile im Ablauf.</p>
               <ul>
                 <li>Drin: Ziehen auf die Stellung, AP-Abzug, Zielwahl der Artillerie, Bot-Zug mit Abgabe, Hotseat, LAN, Bibliothek, Deck, Optionen, zwei Rückseiten, Menümusik und Kampfmusik.</li>
-                <li>Offen: deine Tags auf allen Karten, danach erst die Effekte daran.</li>
+                <li>Offen: Siegbedingungen (SP-Zufluss) — siehe SIEGBEDINGUNGEN.md; Entscheidung ausstehend.</li>
+                <li>Offen: Effect-Codes auf Einheiten/Unterstützung schließen; Ausrüstung/Sofort bereits verdrahtet.</li>
                 <li>Offen: Steilfeuer als Reichweite 3, 5 und 9 im Ablauf. Verdeckt nach dem Kampf nur bei den Tags, die du dafür setzt.</li>
                 <li>Offen: Moral 0–5 und das Brechen. AP der Karten auf die neue Achse. Armageddon steht noch auf 0 statt 8.</li>
                 <li>Offen: die dritte Botstufe, die anders spielt als die beiden vorhandenen. Die Kampagne mit zwei Einstiegen.</li>
@@ -592,17 +606,17 @@
               </ul>
 
               <h2 id="fahrplan">Fahrplan bis zur Vollversion</h2>
+              <p>Der verbindliche Ablauf steht im Repo unter <code>FAHRPLAN.md</code> (mit Roguelike-Kartendesign) und <code>SIEGBEDINGUNGEN.md</code> (offene Entscheidung). Kurzfassung:</p>
               <ol>
-                <li>Regeln festziehen. Tags auf den vorhandenen Karten, Steilfeuer, Verdeckt, AP-Preise. Moral erst, wenn die Tags tragen.</li>
-                <li>Die vorhandenen Karten auf die neuen Schablonen, mit eigenen Bildern. Zuerst die Karten, die der Tisch schon spielt.</li>
-                <li>Testumfang, 160 bis 200 Karten. Ein Bot, der immer legt. Hotseat und ein stabiler Tisch. Das ist die 9,99-Zeile, wenn sie sich fertig anfühlt.</li>
-                <li>Acht Fähnriche im Feldzeug, ohne Bart, Schnitt bis zum Bauch, als Prüfung von Schnitt und Farbe. Danach eine Nation über alle dreizehn Ränge.</li>
-                <li>Kampagne als Geschichte, nicht als zweite Kampfregel. Infanterie, dann der erste Mörser. Daran hängt, ob Leute bleiben.</li>
-                <li>Drei Botstufen, LAN, zehn Doktrinen, etwa 500 Karten, zwei Szenarien, die acht Fähnriche. Das ist der ehrliche Stand für 14,99&nbsp;€.</li>
-                <li>Feldzug bis zum Generalfeldmarschall, acht Nationen, 32 Gesichter, 800 bis 1000 Karten, der Tisch antwortet auf jede Aktion. Das trägt 19,99&nbsp;€.</li>
-                <li>Leitbilder und die Stücke, die bleiben sollen, ersetzen das Grundmodell. Ein Kampfbericht zum Weitergeben. Danach Sets, erspielbar. Das ist die Vollversion, nicht ein weiteres Menü.</li>
+                <li><strong>Phase 0 — Siegbedingungen einfrieren.</strong> Heute: 10 SP vorgesehen, Zufluss praktisch fehlend. Entscheidung vor weiterem Content.</li>
+                <li><strong>Phase 1 — Kern-Polish &amp; Tutorial.</strong> Fremder beendet eine Bot-Partie ohne Erklärung. Effekte und Onboarding vor Masse.</li>
+                <li><strong>Phase 2 — Roguelike-Slice.</strong> Eine Nation, Akte + Boss, Belohnungen, Orden; kürzere Gefechtsregeln als im PvP.</li>
+                <li><strong>Phase 3 — Steam Coming Soon, Demo, Next Fest.</strong> Wunschlisten aufbauen; kein Preisversprechen vor spielbarer Demo.</li>
+                <li><strong>Phase 4 — Nationen-Kampagne</strong> gestaffelt (2–4 Geschichten zuerst).</li>
+                <li><strong>Phase 5 — Early Access</strong> (Zielpreis 9,99–14,99&nbsp;€ je nach Slice): Tisch, Bot, Hotseat, Roguelike-Slice, sichtbare Nationen.</li>
+                <li><strong>Phase 6 — Live:</strong> Challenges/Leaderboards, Online/Ladder, Share-Codes, Workshop/Editor, Cosmetics ohne Pay-to-Win.</li>
               </ol>
-              <p>Vor Schritt 3 keine Steam-Seite, die einen Preis verspricht. Vor Schritt 5 kein Key an einen großen Kanal.</p>
+              <p>Vor Phase 3 keine Steam-Seite mit Preis. Vor breiten Keys kein Gefecht, das ein Fremder nicht zu Ende bringt. Portrait-Kit bleibt für die Vermarktung zurückgestellt.</p>
             </article>
           </div>
         </div>
@@ -640,7 +654,7 @@
   <script src="js/net.js?v=030c"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js?v=markt26').catch(function () {});
+      navigator.serviceWorker.register('sw.js?v=fahrplan1').catch(function () {});
     }
     (function () {
       document.title = window.DC_BUILD_LABEL || 'Division Command 0.5a Alpha';

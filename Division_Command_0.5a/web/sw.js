@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-markt26';
+const CACHE = 'divcmd-fahrplan1';
 const ASSETS = [
   './',
   './index.html',
