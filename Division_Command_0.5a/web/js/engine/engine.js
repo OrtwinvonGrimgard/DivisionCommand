@@ -3126,16 +3126,42 @@
       return { ok: true };
     }
 
+    /* combat_counter (catalog rules, default survivor_only = Ist-Zustand):
+         survivor_only — Verteidiger nimmt Schaden zuerst; Gegenschlag nur wenn er überlebt
+         simultaneous  — beide Seiten nehmen vollen Schaden (auch wenn Verteidiger stirbt)
+         none          — kein Gegenschlag; nur Angreifer fügt Schaden zu
+       Nebel/Erstschlag: Reihenfolge Angreifer zuerst; bei none entfällt Gegenschlag/Erstschlag-Schaden am Angreifer. */
+    _combatCounterMode() {
+      const m = (this.rules && this.rules.combat_counter) || 'survivor_only';
+      if (m === 'none' || m === 'simultaneous' || m === 'survivor_only') return m;
+      return 'survivor_only';
+    }
+
     _applyCombatHits(aLoc, tLoc, dmgToT, dmgToA, fog) {
       const A = aLoc.inst, T = tLoc.inst;
       this._evt('attack', this.defOf(A), this.defOf(A).name + ' — Kampfhandlung.');
       this._fireAttackTriggers(aLoc, tLoc);
       this._onEnemyAttack(aLoc.player, aLoc.section);
+      const mode = this._combatCounterMode();
       if (fog) {
         this._evt('shout', this.defOf(T), this.defOf(T).name + ' setzt Erstschlag ein (Nebel).');
-        this._damage(A, dmgToA, { tag: 'first-strike' });
-        if (!this._isDead(A)) this._damage(T, dmgToT, { tag: 'attack' });
+        if (mode === 'none') {
+          this._damage(T, dmgToT, { tag: 'attack' });
+        } else if (mode === 'simultaneous') {
+          this._damage(A, dmgToA, { tag: 'first-strike' });
+          this._damage(T, dmgToT, { tag: 'attack' });
+        } else {
+          // survivor_only (Ist): Erstschlag auf Angreifer, dann Angriff nur wenn Angreifer lebt
+          this._damage(A, dmgToA, { tag: 'first-strike' });
+          if (!this._isDead(A)) this._damage(T, dmgToT, { tag: 'attack' });
+        }
+      } else if (mode === 'none') {
+        this._damage(T, dmgToT, { tag: 'attack' });
+      } else if (mode === 'simultaneous') {
+        this._damage(T, dmgToT, { tag: 'attack' });
+        if (tLoc.zone === 'front' && dmgToA > 0) this._damage(A, dmgToA, { tag: 'counter' });
       } else {
+        // survivor_only — aktueller Default
         this._damage(T, dmgToT, { tag: 'attack' });
         if (tLoc.zone === 'front' && !this._isDead(T)) this._damage(A, dmgToA, { tag: 'counter' });
       }

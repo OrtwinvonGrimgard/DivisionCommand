@@ -679,6 +679,87 @@ function main() {
   }
 
 
+  
+  // --- combat_counter modes ---
+  {
+    function prepCombat(mode) {
+      const eng = makeMatch(win, nat0);
+      eng.rules.combat_counter = mode;
+      const inf = win.DC_CATALOG.cards.find((c) => ((c.tags||[]).includes('infanterie') || c.klasse==='Infanterie') && eng.byId[c.id]);
+      const atk = putUnit(eng, 0, inf.id, 'C', 0);
+      const def = putUnit(eng, 1, inf.id, 'C', 0);
+      atk.summonedTurn = eng.state.turn - 2;
+      def.summonedTurn = eng.state.turn - 2;
+      atk.facedown = false; def.facedown = false;
+      atk.flags = atk.flags || {}; def.flags = def.flags || {};
+      delete atk.flags.noCombatUntil; delete def.flags.noCombatUntil;
+      // Force readable trade: ATK 3 vs DEF 2 → kill; defender ATK 2
+      atk.def = 5; atk.defMax = 5;
+      def.def = 2; def.defMax = 2;
+      // Patch currentAtkDef via flags buff
+      atk.flags.buffAtk = 3 - (Number(eng.defOf(atk).atk) || 0);
+      def.flags.buffAtk = 2 - (Number(eng.defOf(def).atk) || 0);
+      return { eng, atk, def };
+    }
+    // survivor_only: kill → no counter
+    {
+      const { eng, atk, def } = prepCombat('survivor_only');
+      const aBefore = atk.def;
+      eng._applyCombatHits(
+        { inst: atk, player: eng.player(0), zone: 'front', section: 'C', row: 0 },
+        { inst: def, player: eng.player(1), zone: 'front', section: 'C', row: 0 },
+        3, 2, false
+      );
+      assert(eng._isDead(def) || def.def <= 0, 'survivor kill defender');
+      assert(atk.def === aBefore, 'survivor_only: no counter after lethal got ' + atk.def + ' from ' + aBefore);
+      ok('combat_counter survivor_only lethal no counter');
+    }
+    // survivor_only: nonlethal → counter
+    {
+      const { eng, atk, def } = prepCombat('survivor_only');
+      def.def = 5; def.defMax = 5;
+      const aBefore = atk.def;
+      eng._applyCombatHits(
+        { inst: atk, player: eng.player(0), zone: 'front', section: 'C', row: 0 },
+        { inst: def, player: eng.player(1), zone: 'front', section: 'C', row: 0 },
+        2, 2, false
+      );
+      assert(!eng._isDead(def), 'survivor nonlethal lives');
+      assert(atk.def === aBefore - 2, 'survivor_only: counter when survives');
+      ok('combat_counter survivor_only nonlethal counters');
+    }
+    // none: never counter
+    {
+      const { eng, atk, def } = prepCombat('none');
+      def.def = 5; def.defMax = 5;
+      const aBefore = atk.def;
+      eng._applyCombatHits(
+        { inst: atk, player: eng.player(0), zone: 'front', section: 'C', row: 0 },
+        { inst: def, player: eng.player(1), zone: 'front', section: 'C', row: 0 },
+        2, 2, false
+      );
+      assert(atk.def === aBefore, 'none: never counters');
+      ok('combat_counter none');
+    }
+    // simultaneous: counter even on lethal
+    {
+      const { eng, atk, def } = prepCombat('simultaneous');
+      def.def = 2; def.defMax = 2;
+      const aBefore = atk.def;
+      eng._applyCombatHits(
+        { inst: atk, player: eng.player(0), zone: 'front', section: 'C', row: 0 },
+        { inst: def, player: eng.player(1), zone: 'front', section: 'C', row: 0 },
+        3, 2, false
+      );
+      assert(eng._isDead(def) || def.def <= 0, 'simul kill defender');
+      assert(atk.def === aBefore - 2, 'simultaneous: counter even if defender dies');
+      ok('combat_counter simultaneous lethal still counters');
+    }
+    assert((win.DC_CATALOG.rules.combat_counter || 'survivor_only') === 'survivor_only', 'default survivor_only');
+    ok('combat_counter default');
+  }
+
+
   console.log('\nALL PASSED', passed);
 }
 

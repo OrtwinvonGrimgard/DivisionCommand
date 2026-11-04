@@ -86,7 +86,8 @@ window.DC_CATALOG = window.DC_CATALOG || {
     "support_slots": 18,
     "max_hand": 7,
     "deploy_protection": true,
-    "strict_facing": false
+    "strict_facing": false,
+    "combat_counter": "survivor_only"
   }
 };
 window.DC_CATALOG.cards = [];

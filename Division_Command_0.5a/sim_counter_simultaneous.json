@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "mode": "simultaneous",
+    "deploy_protection": true,
+    "nGames": 200,
+    "ok": 200,
+    "errors": 0,
+    "avgTurnEnd": 99.75,
+    "shareEverFullControl": 0.725,
+    "avgFirstFullControlTurn": 20.351724137931033,
+    "medianFirstFullControlTurn": 14,
+    "avgKillBeforeActingRate": 0.004664354852648864,
+    "avgUnitLifetimeTurns": 7.070316231967134,
+    "medianUnitLifetimeTurns": 3,
+    "avgAttacksPerGame": 33.71,
+    "favorableAttackShare": 0.6487725469823179,
+    "counterLandShare": 0.8961189446389425,
+    "artyAttackShare": 0.2885982163319017,
+    "deathShareHighAtk": 0.12419986624629789,
+    "deathShareHighDef": 0.11053788095920512,
+    "deathShareBalanced": 0.765262252794497,
+    "nationBoardShare": {
+      "Steinmark": 0.35354678338046425,
+      "Vael": 0.7798662548234732,
+      "Karsk": 0.19169419659650894,
+      "Rothain": 0.8123038580647779,
+      "Theryn": 0.7578965689323185,
+      "Orthea": 0.27431004946007803,
+      "Merovan": 0.45821848239786334,
+      "Eldran": 0.49353496310789624,
+      "Lyr": 0.4754219685354341,
+      "Ossaria": 0.6464934950368637,
+      "Vesper": 0.40726463235989585,
+      "Caldris": 0.5264024657090315,
+      "Sahr": 0.5844606897323391,
+      "Namar": 0.2400391755651399,
+      "Averon": 0.524495155718015,
+      "Dargan": 0.4635001711107625
+    }
+  }
+}

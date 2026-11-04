@@ -96,3 +96,72 @@ Nutzerentscheid: **`deploy_protection` dauerhaft ON** (beide Seiten, Bot/Hotseat
 
 Siehe Hilfe (Spielregeln) und `RULES_v0.5_GRUNDKONZEPT.md` §7.0.
 
+---
+
+## 7. Schlagabtausch / `combat_counter` (Analyse 2026-11-04)
+
+Frage: *Was ändert sich, wenn nur die angegriffene Einheit Schaden nimmt — oder gibt es Gegenschlag nur, wenn sie überlebt?*
+
+### 7.1 Ist-Zustand (Code)
+
+**Default ist bereits „nur bei Überleben“ — nicht gleichzeitig.**
+
+`engine.js` `_applyCombatHits` (~3129+):
+
+1. Normal: zuerst `_damage(Verteidiger, Angreifer-ATK)`; **Gegenschlag nur wenn** `!_isDead(Verteidiger)` und Ziel in der Front → `_damage(Angreifer, Verteidiger-ATK)`.
+2. Support-Ziele: `dmgToA = 0` (kein Gegenschlag).
+3. Nebel/`nebelfeld`: Erstschlag-Reihenfolge umgekehrt (Schaden am Angreifer zuerst; Angriff nur wenn Angreifer lebt).
+4. Artillerie hat **keinen** eigenen „kein Gegenschlag“-Pass — Reichweite ja, Gegenschlag-Logik nein.
+5. Weitere Interaktionen vor den Hits: Minen, Richtmine, Ausrüstungs-Selbstschaden, Ambush, Panzerfaust, Zielangriff, Munitionstreffer, Schulterschluss (`_resolveCombat` ~3359–3534).
+
+Hilfe-Text („Beide schlagen“) ist etwas irreführend: bei tödlichem Treffer gibt es **keinen** Gegenschlag.
+
+Karten mit explizitem Erstschlag-/Gegen-Wortlaut: **2** (Dschungelkrieger „Überfall/Erstschlag“, Kriegsnebel „Verteidiger Erstschlag“). Allgemeiner Gegenschlag steht in den Regeln, nicht auf jeder Karte.
+
+### 7.2 Config-Flag (Default unverändert)
+
+`catalog.rules.combat_counter`:
+
+| Wert | Bedeutung |
+|---|---|
+| **`survivor_only`** (Default) | Ist-Zustand: Gegenschlag nur wenn Verteidiger den Angriff überlebt |
+| `none` | Kein Gegenschlag; nur Ziel nimmt Kampfschaden |
+| `simultaneous` | Beide nehmen vollen Schaden, auch wenn das Ziel stirbt |
+
+`deploy_protection` bleibt ON; Siegbedingungen unverändert. Flag default **nicht** umgestellt.
+
+### 7.3 Simulation (200 Bot-vs-Bot, Eingraben ON)
+
+| Metrik | survivor_only (Ist) | none | simultaneous |
+|---|---:|---:|---:|
+| Kill-before-acting | 0,5 % | 0,4 % | 0,5 % |
+| Median Lebensdauer (Züge) | 3 | 3 | 3 |
+| Ø Lebensdauer | 7,87 | 8,07 | 7,07 |
+| Median 1. Full-Control | 15 | 17 | 14 |
+| Full-Control-Anteil | 72 % | 72 % | 73 % |
+| Ø Zugende | 88,6 | 84,0 | 99,8 |
+| Angriffe / Partie | **45,6** | **52,3** | **33,7** |
+| Davon „günstig“ | 64 % | 66 % | 65 % |
+| Gegenschlag landet | **26 %** | **0 %** | **90 %** |
+| Artillerie-Angriffsanteil | 29 % | 28 % | 29 % |
+| Todesanteil High-ATK / High-DEF / balanced | 12 % / 11 % / 77 % | 12 % / 10 % / 77 % | 12 % / 11 % / 77 % |
+
+Board-Share (stabil über Modi, Extreme): stark **Rothain / Vael / Theryn**; schwach **Karsk / Namar / Orthea**. Simultaneous verstärkt die Extreme leicht; `none` nivelliert etwas.
+
+Repro: `node scripts/sim_combat_counter.mjs 200 survivor_only|none|simultaneous`
+
+### 7.4 Spürgefühl
+
+| Modus | Aggression | DEF-Rolle | Snowball / Eingraben |
+|---|---|---|---|
+| **survivor_only** | Angriff lohnt, wenn man töten kann (kein Return) | DEF muss den One-Shot verhindern, sonst kein Abschreckungs-Gegenschlag | Passt zu Eingraben: frische Einheit überlebt den ersten Zug, danach klassischer Trade |
+| **none** | Deutlich offensiver (~+15 % Angriffe); Trades „kostenlos“ | DEF nur noch als Schadenstank, nicht als Abschreckung | Mehr Druck auf die Front; Eingraben bleibt der Hauptschutz für Frischgelegte |
+| **simultaneous** | Zurückhaltender (~−26 % Angriffe); jedes Gefecht tut weh | DEF + ATK auf Verteidiger zählen stärker als Abschreckung | Längere Partien, mehr Mutual Kills; High-ATK-Glasscannons riskanter |
+
+### 7.5 Empfehlung (nur Analyse)
+
+1. **Default belassen: `survivor_only`** — beantwortet die Nutzerfrage bereits: *Gegenschlag gibt es nur, wenn die angegriffene Einheit nicht sofort zerstört wird.*
+2. Hilfe-Text präzisieren („schlägt zurück, **falls sie den Treffer übersteht**“), wenn UI-Texte angepasst werden.
+3. `none` nur playtesten, wenn man bewusst aggressiveres Tempo und schwächere DEF-Abschreckung will.
+4. `simultaneous` nur, wenn Kämpfe härter und seltener werden sollen (näher an „beide schlagen immer“).
+
