@@ -976,7 +976,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Heile 2 an Panzer oder Artillerie.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 2
+        }
+      }
+    ],
     "flavor": "Was fehlt, wird gefahren.",
     "image": "soforteinsatz/B162.jpg",
     "max_copies": 1,
@@ -999,7 +1006,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Artillerie +2 ATK diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 2,
+          "filter": "artillerie",
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Regen, der bezahlt wurde.",
     "image": "soforteinsatz/B163.jpg",
     "max_copies": 1,
@@ -1022,7 +1038,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Panzer: +1 DEF und 1 heilen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Neue Kette, alte Front.",
     "image": "soforteinsatz/B164.jpg",
     "max_copies": 1,
@@ -1045,7 +1075,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziehe 1; Ausrüstung kostet 1 weniger diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Ausrüstung",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Die Bestellung war schon unterwegs.",
     "image": "soforteinsatz/B165.jpg",
     "max_copies": 1,
@@ -1068,7 +1112,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Zwei Feinde je 1 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 1,
+          "count": 2
+        }
+      }
+    ],
     "flavor": "Flächig — wie die Walze.",
     "image": "soforteinsatz/B166.jpg",
     "max_copies": 1,
@@ -1091,7 +1143,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziehe 1; Einheit kostet 1 weniger diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Einheit",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Alarm heißt Produktion, nicht Panik.",
     "image": "soforteinsatz/B167.jpg",
     "max_copies": 1,
@@ -1114,7 +1180,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Feind −2 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": -2,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Druck auf die andere Bilanz.",
     "image": "soforteinsatz/B168.jpg",
     "max_copies": 1,
@@ -1137,7 +1212,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Zerstöre Feind mit ≤2 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DESTROY_IF_DEF",
+        "param": {
+          "maxDef": 2
+        }
+      }
+    ],
     "flavor": "Was zu leicht steht, wird abgeschrieben.",
     "image": "soforteinsatz/B169.jpg",
     "max_copies": 1,
@@ -1160,7 +1242,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Artillerie greift sofort an.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EXTRA_ATTACK",
+        "param": {}
+      }
+    ],
     "flavor": "Kein Warten auf das Ministerium.",
     "image": "soforteinsatz/B170.jpg",
     "max_copies": 1,
@@ -1183,7 +1270,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Bringe zerstörten Panzer/Artillerie mit 2 DEF zurück.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "RETURN_UNIT_GRAVE",
+        "param": {
+          "def": 2,
+          "filter": "panzer|artillerie"
+        }
+      }
+    ],
     "flavor": "Nachgeliefert. Weiter.",
     "image": "soforteinsatz/B171.jpg",
     "max_copies": 1,
@@ -1206,7 +1301,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Allen Feinden 1 Schaden; Artillerie +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "MASS_DAMAGE",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Anhaltend. Munitionsintensiv. Geschäft.",
     "image": "soforteinsatz/B172.jpg",
     "max_copies": 1,
@@ -1229,7 +1331,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Heile alle Panzer und Artillerie um 1. Ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 1,
+          "all": true,
+          "filter": "panzer|artillerie"
+        }
+      }
+    ],
     "flavor": "Rohre und Ketten bleiben im Spiel.",
     "image": "soforteinsatz/B173.jpg",
     "max_copies": 1,
@@ -1252,7 +1369,11 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Ziehe eine Infanterie. Du darfst sie in diesem Zug spielen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW_AND_PLAY_INFANTRY"
+      }
+    ],
     "flavor": "Antreten ist der erste Satz.",
     "image": "soforteinsatz/B121.jpg",
     "max_copies": 1,
@@ -1275,7 +1396,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Opfere eine eigene Infanterie. Eine gegnerische Einheit im Abschnitt erleidet 3 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 3
+        }
+      },
+      {
+        "code": "SACRIFICE_INFANTRY_DAMAGE",
+        "param": {
+          "damage": 3
+        }
+      }
+    ],
     "flavor": "Das Opfer ist erlaubt. Nicht immer nötig.",
     "image": "soforteinsatz/B122.jpg",
     "max_copies": 1,
@@ -1298,7 +1432,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Eine eigene Infanterie hat +2 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 2,
+          "filter": "infanterie",
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Der Ruf trägt weiter als der Schuss.",
     "image": "soforteinsatz/B123.jpg",
     "max_copies": 1,
@@ -1321,7 +1464,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Spiele eine Infanterie aus der Hand um 1 weniger (mind. 1); sie hat −1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "PLAY_INF_DISCOUNT",
+        "param": {
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Die Lücke schließt sich mit Druck.",
     "image": "soforteinsatz/B124.jpg",
     "max_copies": 1,
@@ -1344,7 +1494,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Eigene Infanterie im Abschnitt hat +1 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "atk": 1,
+          "filter": "infanterie",
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Kurz. Klar. Genug.",
     "image": "soforteinsatz/B125.jpg",
     "max_copies": 1,
@@ -1367,7 +1526,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Opfere eine eigene Einheit mit 2 oder weniger DEF: heile eine andere um 2.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "SACRIFICE",
+        "param": {}
+      }
+    ],
     "flavor": "Der Tisch bleibt. Der Ritus nimmt.",
     "image": "soforteinsatz/B126.jpg",
     "max_copies": 1,
@@ -1390,7 +1554,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Wähle eine eigene Infanterie: +3 ATK bis Zugende. Danach 1 Schaden an ihr.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "SELF_DAMAGE",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 3,
+          "filter": "infanterie",
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Der eine Schlag.",
     "image": "soforteinsatz/B127.jpg",
     "max_copies": 1,
@@ -1413,7 +1592,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Jede eigene Infanterie im Abschnitt hat +1 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "atk": 1,
+          "filter": "infanterie",
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Eifer als Werkzeug, nicht als Ziel.",
     "image": "soforteinsatz/B128.jpg",
     "max_copies": 1,
@@ -1436,7 +1624,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Sieh die oberste Deckkarte an: Infanterie → auf die Hand, sonst abwerfen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "LOOK_TOP",
+        "param": {
+          "count": 1,
+          "infantryToHand": true
+        }
+      }
+    ],
     "flavor": "Jedes Jahr wieder möglich.",
     "image": "soforteinsatz/B129.jpg",
     "max_copies": 1,
@@ -1459,7 +1655,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Zerstöre eine eigene Infanterie: andere eigene Einheiten im Abschnitt +2 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 2,
+          "filter": "infanterie",
+          "until": "turn"
+        }
+      },
+      {
+        "code": "SACRIFICE",
+        "param": {}
+      }
+    ],
     "flavor": "Der Name trägt die anderen.",
     "image": "soforteinsatz/B130.jpg",
     "max_copies": 1,
@@ -1482,7 +1691,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Eigene Infanterie kostet 1 AP weniger zum Ausspielen, mindestens 1. Eigene Infanterie hat +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "PLAY_INF_DISCOUNT",
+        "param": {
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Breites Aufgebot — das Land stellt die Breite, nicht den Helden.",
     "image": "soforteinsatz/B143.jpg",
     "max_copies": 1,
@@ -1505,7 +1721,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Wähle eine eigene Infanterie. Sie hat in diesem Zug +2 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 2,
+          "filter": "infanterie",
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Sturmangriff — ein Schlag, geschuldet und gemessen.",
     "image": "soforteinsatz/B144.jpg",
     "max_copies": 1,
@@ -1528,7 +1753,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Eine eigene Einheit hat +2 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Gesprochen. Gezählt.",
     "image": "soforteinsatz/B637.jpg",
     "max_copies": 1,
@@ -1551,7 +1784,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Heile 2 DEF an einer eigenen Einheit oder ersetze sie gedanklich: ziehe 1, wenn sie beschädigt war.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 2
+        }
+      }
+    ],
     "flavor": "Frisch Blut in alte Stellungen.",
     "image": "soforteinsatz/B638.jpg",
     "max_copies": 1,
@@ -1574,7 +1814,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Zwei eigene Einheiten im selben Abschnitt haben +1 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Zusammen oder gar nicht.",
     "image": "soforteinsatz/B639.jpg",
     "max_copies": 1,
@@ -1597,7 +1846,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Eine eigene Einheit hat +1 ATK und +1 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Auszeichnung und Auftrag in einem.",
     "image": "soforteinsatz/B640.jpg",
     "max_copies": 1,
@@ -1620,7 +1878,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Zerstöre eine gegnerische Unterstützung oder verhindere ihre nächste Aktivierung (lege sie für einen Zug still).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DESTROY",
+        "param": {
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Was die Krone streicht, gilt als ungültig.",
     "image": "soforteinsatz/B641.jpg",
     "max_copies": 1,
@@ -1643,7 +1908,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Bewege eine eigene Einheit in einen angrenzenden Abschnitt. Sie hat dort +1 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 0,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Die Straßen erinnern sich an Kolonnen.",
     "image": "soforteinsatz/B642.jpg",
     "max_copies": 1,
@@ -1666,7 +1940,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Ziehe 2 Karten. Lege 1 Karte aus der Hand ab.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 2
+        }
+      }
+    ],
     "flavor": "Geöffnet unter Feuer.",
     "image": "soforteinsatz/B643.jpg",
     "max_copies": 1,
@@ -1689,7 +1970,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Zwei eigene Einheiten haben je +1 DEF bis Zugende. Wenn eine zerstört wird: die andere heilt 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Zwei Namen. Ein Eid.",
     "image": "soforteinsatz/B644.jpg",
     "max_copies": 1,
@@ -1712,7 +2001,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Füge einer gegnerischen Einheit 2 Schaden zu.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 2
+        }
+      }
+    ],
     "flavor": "Genau dort, wo die Karte es sagt.",
     "image": "soforteinsatz/B645.jpg",
     "max_copies": 1,
@@ -1735,7 +2031,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Alle eigenen Einheiten in einem Abschnitt haben +1 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Halten ist auch ein Angriff auf die Zeit.",
     "image": "soforteinsatz/B646.jpg",
     "max_copies": 1,
@@ -1758,7 +2062,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Wähle einen Abschnitt. Eigene Angriffe dort +2 ATK diesen Zug. Danach erleidet eine eigene Einheit dort 1 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 2,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Konzentration hat einen Preis.",
     "image": "soforteinsatz/B659.jpg",
     "max_copies": 1,
@@ -1781,7 +2100,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Zerstöre eine eigene Einheit. Spiele eine Einheit aus der Hand in denselben Abschnitt mit Kosten bis Kosten der Zerstörten +1. Heile sie um 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "SACRIFICE",
+        "param": {}
+      },
+      {
+        "code": "REPLACE_UNIT",
+        "param": {}
+      }
+    ],
     "flavor": "Der Platz bleibt heilig. Die Person nicht.",
     "image": "soforteinsatz/B660.jpg",
     "max_copies": 1,
@@ -1804,7 +2132,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Eine beschädigte eigene Einheit +2 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 2,
+          "def": 0,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Nicht stehenbleiben.",
     "image": "soforteinsatz/B397.jpg",
     "max_copies": 1,
@@ -1827,7 +2164,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Eine eigene Einheit erleidet 1 Schaden und hat +2 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "SELF_DAMAGE",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 2,
+          "def": 0,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Schmerz als Zündung.",
     "image": "soforteinsatz/B398.jpg",
     "max_copies": 1,
@@ -1850,7 +2202,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Eine eigene Infanterie greift in diesem Zug ein zweites Mal mit -1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EXTRA_ATTACK",
+        "param": {}
+      }
+    ],
     "flavor": "Der erste Stoß reicht selten.",
     "image": "soforteinsatz/B399.jpg",
     "max_copies": 1,
@@ -1873,7 +2230,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Heile 2 DEF an einer beschädigten eigenen Einheit; sie hat -1 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 2
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Stoppen, nicht heilen.",
     "image": "soforteinsatz/B400.jpg",
     "max_copies": 1,
@@ -1896,7 +2268,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Füge einer gegnerischen Einheit 2 Schaden zu; eine eigene Einheit im selben Abschnitt erleidet 1 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 2
+        }
+      }
+    ],
     "flavor": "Öffnen kostet eigene Substanz.",
     "image": "soforteinsatz/B401.jpg",
     "max_copies": 1,
@@ -1919,7 +2298,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Eine eigene Einheit +1 ATK und +1 DEF bis Zugende; erleidet zu Zugende 1 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Eingesetzt ohne Narkose.",
     "image": "soforteinsatz/B402.jpg",
     "max_copies": 1,
@@ -1942,7 +2336,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Ziehe 2. Eine eigene Einheit erleidet 1 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 2
+        }
+      },
+      {
+        "code": "SELF_DAMAGE",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Daten gegen Gewebe.",
     "image": "soforteinsatz/B403.jpg",
     "max_copies": 1,
@@ -1965,7 +2372,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Eine beschädigte eigene Einheit +1 ATK und +1 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Offen halten. Nutzen.",
     "image": "soforteinsatz/B404.jpg",
     "max_copies": 1,
@@ -1988,7 +2404,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Zwei eigene Einheiten im selben Abschnitt je +1 ATK; eine davon erleidet 1 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Gleicher Stoß. Ungleiche Last.",
     "image": "soforteinsatz/B405.jpg",
     "max_copies": 1,
@@ -2011,7 +2442,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Heile 1 DEF an einer Einheit und füge einer anderen eigenen Einheit 1 Schaden zu.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Umverteilung.",
     "image": "soforteinsatz/B406.jpg",
     "max_copies": 1,
@@ -2034,7 +2478,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Wähle eine eigene Einheit. Sie hat +3 ATK bis Zugende und erleidet 2 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 2
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 3,
+          "def": 0,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Der eine Stoß.",
     "image": "soforteinsatz/B419.jpg",
     "max_copies": 1,
@@ -2057,7 +2516,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "soforteinsatz"
     ],
     "text": "Eine beschädigte eigene Einheit hat +2 ATK und +1 DEF bis Zugende und kann in diesem Zug erneut angreifen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 2,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Weitermachen, wenn es blutet.",
     "image": "soforteinsatz/B420.jpg",
     "max_copies": 1,
@@ -2080,7 +2548,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke 2 auf; 1 eigene Einheit +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 0,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Krise kurz halten. Bevor sie Gewohnheit wird.",
     "image": "soforteinsatz/B819.jpg",
     "max_copies": 1,
@@ -2103,7 +2586,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke 1–2 auf; nächste eigene Einheit +1 ATK/+1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Straße neuer als das Bild in der Halle.",
     "image": "soforteinsatz/B820.jpg",
     "max_copies": 1,
@@ -2126,7 +2624,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nach Aufdecken: 1–2 Einheiten +2 ATK gegen Aufgeklärte diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 2,
+          "filter": null,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Kurzer Schutz nach dem Raster.",
     "image": "soforteinsatz/B821.jpg",
     "max_copies": 1,
@@ -2149,7 +2662,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Angriffe gegen aufgeklärte Einheiten +1 ATK bis Zugende. Decke danach 1 auf.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Aufklärungsschlag — sehen ist der erste Treffer.",
     "image": "soforteinsatz/B822.jpg",
     "max_copies": 1,
@@ -2172,7 +2700,24 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Aufgeklärte Feinde −1 DEF bis Zugende; eigene Aufklärung +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": -1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "def": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Lokalisierung — der Ort ist schon die Wunde.",
     "image": "soforteinsatz/B823.jpg",
     "max_copies": 1,
@@ -2195,7 +2740,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Angriffe +1 ATK bis Zugende. [Stille Woche]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Weniger Behauptung. Kleiner handeln.",
     "image": "soforteinsatz/B824.jpg",
     "max_copies": 1,
@@ -2218,7 +2772,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Angriffe +1 ATK bis Zugende. [Bürger-Ruf]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Reservist fehlt in der Schicht. Nicht auf dem Sockel.",
     "image": "soforteinsatz/B825.jpg",
     "max_copies": 1,
@@ -2241,7 +2804,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke 2 auf; 1 Einheit +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Gerät prüfen. Nicht den Körper umbauen.",
     "image": "soforteinsatz/B826.jpg",
     "max_copies": 1,
@@ -2264,7 +2841,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Spiele eine Infanterie aus der Hand mit 1 weniger (min. 1).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "PLAY_INF_DISCOUNT",
+        "param": {
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Wer unterschreiben darf?",
     "image": "soforteinsatz/B827.jpg",
     "max_copies": 1,
@@ -2287,7 +2871,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Zwei Einheiten: je +1 ATK gegen Aufgeklärte.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Wissen nach unten. Kriegseröffnung nicht.",
     "image": "soforteinsatz/B828.jpg",
     "max_copies": 1,
@@ -2310,7 +2903,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nach einem erlittenen Angriff: 1–2 Einheiten +2 ATK diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 2,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Schiffe bringen. Boden hält.",
     "image": "soforteinsatz/B829.jpg",
     "max_copies": 1,
@@ -2333,7 +2935,31 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +1 ATK/+1 DEF wenn Feind im Abschnitt aufgeklärt ist.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Oliv. Sandstreifen. Arbeitskleidung.",
     "image": "soforteinsatz/B830.jpg",
     "max_copies": 1,
@@ -2356,7 +2982,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nächste Sofort kostet 1 weniger (min. 0).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Soforteinsatz",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Lage hinlegen. Nicht folgen.",
     "image": "soforteinsatz/B879.jpg",
     "max_copies": 1,
@@ -2379,7 +3013,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Angriffe +1 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Zug gegen Zug. Kein Gehorsam.",
     "image": "soforteinsatz/B880.jpg",
     "max_copies": 1,
@@ -2402,7 +3045,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nach einem erlittenen Angriff: 1–2 Einheiten +2 ATK diesen Zug; eine davon muss verdeckt gespielt worden sein oder werden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 2,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Falsche Akte. Schmerz schreibt um.",
     "image": "soforteinsatz/B881.jpg",
     "max_copies": 1,
@@ -2425,7 +3077,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ende Zug: +1 DEF auf einen Abschnitt. Nächster Zugbeginn: statt dessen +1 ATK auf einen anderen Abschnitt (Scheinschwerpunkt).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "atk": 1,
+          "until": "next"
+        }
+      }
+    ],
     "flavor": "Scheinschwerpunkt — wohin der Feind schauen soll.",
     "image": "soforteinsatz/B882.jpg",
     "max_copies": 1,
@@ -2448,7 +3115,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Artillerie darf leeren Abschnitt beschießen; Einrückende erleiden 1 Schaden. Danach: decke 1 auf.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      },
+      {
+        "code": "MASS_DAMAGE",
+        "param": {
+          "value": 1,
+          "onEnter": true
+        }
+      }
+    ],
     "flavor": "Abriegeln — die leere Gasse beißt.",
     "image": "soforteinsatz/B883.jpg",
     "max_copies": 1,
@@ -2471,7 +3152,31 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Zwei Einheiten: je +1 ATK/+1 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Preis genannt. Partie stockt nicht.",
     "image": "soforteinsatz/B884.jpg",
     "max_copies": 1,
@@ -2494,7 +3199,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Artillerie und Infanterie im Abschnitt +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Sagen und meinen. Beides gelernt.",
     "image": "soforteinsatz/B885.jpg",
     "max_copies": 1,
@@ -2517,7 +3231,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke 2 auf; nächste eigene Einheit +1 ATK/+1 DEF. [Zwei Lagen]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Zwei gültige Versionen. Eine Stellung.",
     "image": "soforteinsatz/B886.jpg",
     "max_copies": 1,
@@ -2540,7 +3269,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "1 Einheit +2 DEF; sie darf diesen Zug nicht bewegt werden. [Aktenbefehl]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "OUT_OF_COMBAT",
+        "param": {}
+      }
+    ],
     "flavor": "Befehl aus dem Archiv.",
     "image": "soforteinsatz/B887.jpg",
     "max_copies": 1,
@@ -2563,7 +3304,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +1 ATK/+1 DEF wenn sie diesen Zug nicht bewegt wurde. [Kein Herr]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Niemand folgt. Alle spielen.",
     "image": "soforteinsatz/B888.jpg",
     "max_copies": 1,
@@ -2586,7 +3336,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziehe 2; wirf 1 ab. [Versorgungsnacht]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW_DISCARD",
+        "param": {
+          "draw": 2,
+          "discard": 1
+        }
+      }
+    ],
     "flavor": "Nachschub selbst eine Information.",
     "image": "soforteinsatz/B889.jpg",
     "max_copies": 1,
@@ -2609,7 +3367,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke 2 auf; nächste eigene Einheit +1 ATK/+1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Stumpfes Oliv hält. Siegel schwarz.",
     "image": "soforteinsatz/B890.jpg",
     "max_copies": 1,
@@ -2632,7 +3405,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Angriffe +1 ATK bis Zugende. [Fällige Zeile]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Zeile fällig. Nicht vergeben.",
     "image": "soforteinsatz/B939.jpg",
     "max_copies": 1,
@@ -2655,7 +3437,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "1 eigene Einheit +2 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Staffeln. Nicht streichen.",
     "image": "soforteinsatz/B940.jpg",
     "max_copies": 1,
@@ -2678,7 +3468,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nach einem erlittenen Angriff: 1–2 Einheiten +2 ATK diesen Zug. Eine muss diesen Zug unbewegt gewesen sein.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 2,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Früheres Datum. Wer zuerst frei — zahlt später.",
     "image": "soforteinsatz/B941.jpg",
     "max_copies": 1,
@@ -2701,7 +3500,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Wähle ein Ziel. Erster Schaden daran +1 ATK; Angreifer +1 DEF. Wenn das Ziel fällt: ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Zielangriff — genannt, dann gebrochen.",
     "image": "soforteinsatz/B942.jpg",
     "max_copies": 1,
@@ -2724,7 +3538,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit, die ein Ziel zerstört hat, +1 ATK bis Ende nächsten Zuges und heilt 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 0,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Abschluss — der Name ist durchgestrichen.",
     "image": "soforteinsatz/B943.jpg",
     "max_copies": 1,
@@ -2747,7 +3570,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nächste Sofort kostet 1 weniger (min. 0). [Stundung]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Soforteinsatz",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Frist als Zeile. Keine Gefälligkeit.",
     "image": "soforteinsatz/B944.jpg",
     "max_copies": 1,
@@ -2770,7 +3601,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "1 Einheit +2 DEF; sie darf diesen Zug nicht bewegt werden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "OUT_OF_COMBAT",
+        "param": {}
+      }
+    ],
     "flavor": "Tausch vor den Namen.",
     "image": "soforteinsatz/B945.jpg",
     "max_copies": 1,
@@ -2793,7 +3636,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "1 eigene Einheit +2 DEF bis Zugende. [Aufruf]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Aufruf nennt. Gehen schließt.",
     "image": "soforteinsatz/B946.jpg",
     "max_copies": 1,
@@ -2816,7 +3667,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nächste Sofort kostet 1 weniger (min. 0). [Hausblatt]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Soforteinsatz",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Blatt nennt Zeile. Kein Rühren.",
     "image": "soforteinsatz/B947.jpg",
     "max_copies": 1,
@@ -2839,7 +3698,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Spiele eine Infanterie aus der Hand mit 1 weniger (min. 1). [Kein Streichen]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "PLAY_INF_DISCOUNT",
+        "param": {
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Frieden vergibt nicht.",
     "image": "soforteinsatz/B948.jpg",
     "max_copies": 1,
@@ -2862,7 +3728,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziehe 2; wirf 1 ab.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW_DISCARD",
+        "param": {
+          "draw": 2,
+          "discard": 1
+        }
+      }
+    ],
     "flavor": "Material ist eine Zeile.",
     "image": "soforteinsatz/B949.jpg",
     "max_copies": 1,
@@ -2885,7 +3759,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziel −1 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Strich klein. Kein Gold.",
     "image": "soforteinsatz/B950.jpg",
     "max_copies": 1,
@@ -2908,7 +3791,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +1 ATK/+1 DEF wenn sie diesen Zug nicht bewegt wurde. [Auffangbefehl]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Auffangen vor Gegenstoß.",
     "image": "soforteinsatz/B759.jpg",
     "max_copies": 1,
@@ -2931,7 +3823,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nach einem erlittenen Angriff: 1–2 Einheiten +2 ATK diesen Zug. [Gegenruf]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 2,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Ruf gleichmäßiger — Lenn hätte genickt.",
     "image": "soforteinsatz/B760.jpg",
     "max_copies": 1,
@@ -2954,7 +3855,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziel −1 DEF bis Zugende. [Später Stoß]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Später und gleichmäßiger. Staat, kein Triumph.",
     "image": "soforteinsatz/B761.jpg",
     "max_copies": 1,
@@ -2977,7 +3887,23 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Einheiten +1 DEF; Angreifer -1 ATK. Bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Auffangen — erst halten, dann zurückgeben.",
     "image": "soforteinsatz/B762.jpg",
     "max_copies": 1,
@@ -3000,7 +3926,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nachdem du Schaden erlitten hast: eigene Einheiten +2 ATK diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 2,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Gegenstoß — die Antwort sitzt im gleichen Abschnitt.",
     "image": "soforteinsatz/B763.jpg",
     "max_copies": 1,
@@ -3023,7 +3958,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Artillerie und Infanterie im Abschnitt +1 ATK. [Haushaltsfrage]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Wer bezahlt den Einsatz?",
     "image": "soforteinsatz/B764.jpg",
     "max_copies": 1,
@@ -3046,7 +3990,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nächste Sofort kostet 1 weniger (min. 0). [Gleichmäßiger Ruf]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Soforteinsatz",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Nicht wieder dieselben drei Bezirke.",
     "image": "soforteinsatz/B765.jpg",
     "max_copies": 1,
@@ -3069,7 +4021,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +1 ATK/+1 DEF wenn sie diesen Zug nicht bewegt wurde. [Nachtstellung]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Stellung in der nassen Nacht.",
     "image": "soforteinsatz/B766.jpg",
     "max_copies": 1,
@@ -3092,7 +4053,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "1 eigene Einheit +2 DEF bis Zugende. [Aktenbefehl]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Befehl aus den stillen Ämtern.",
     "image": "soforteinsatz/B767.jpg",
     "max_copies": 1,
@@ -3115,7 +4084,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "1 Einheit +2 DEF; sie darf diesen Zug nicht bewegt werden. [Zwei Hände]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "OUT_OF_COMBAT",
+        "param": {}
+      }
+    ],
     "flavor": "Krone und Parlament — beide echt.",
     "image": "soforteinsatz/B768.jpg",
     "max_copies": 1,
@@ -3138,7 +4119,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziehe 2; wirf 1 ab. [Sperrenkette]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW_DISCARD",
+        "param": {
+          "draw": 2,
+          "discard": 1
+        }
+      }
+    ],
     "flavor": "Kette hält die Mark.",
     "image": "soforteinsatz/B769.jpg",
     "max_copies": 1,
@@ -3161,7 +4150,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +1 ATK/+1 DEF wenn sie diesen Zug nicht bewegt wurde.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Steingrün hält. Kahn ist keine Front.",
     "image": "soforteinsatz/B770.jpg",
     "max_copies": 1,
@@ -3184,7 +4182,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Schiebe eine eigene Einheit um 1; sie +1 DEF diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "MOVE_SLOTS",
+        "param": {
+          "slots": 1,
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Wechsel ist der Beweis.",
     "image": "soforteinsatz/B201.jpg",
     "max_copies": 1,
@@ -3207,7 +4220,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Schiebe bis zu zwei eigene Einheiten um je 1 Slot.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "MOVE_SLOTS",
+        "param": {
+          "slots": 1,
+          "count": 2
+        }
+      }
+    ],
     "flavor": "Zwei Gewalten auseinandergelegt — auch im Krieg.",
     "image": "soforteinsatz/B202.jpg",
     "max_copies": 1,
@@ -3230,7 +4251,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Schiebe eine Einheit um 1; ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "MOVE_SLOTS",
+        "param": {
+          "slots": 1,
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Ohne Lizenz verbindet das Schiff das Land nicht.",
     "image": "soforteinsatz/B203.jpg",
     "max_copies": 1,
@@ -3253,7 +4282,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Heile 2 an Infanterie oder Panzer.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 2
+        }
+      }
+    ],
     "flavor": "Wer zurückkommt, bringt Staub — keinen Anspruch.",
     "image": "soforteinsatz/B204.jpg",
     "max_copies": 1,
@@ -3276,7 +4312,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +2 DEF; kann diesen Zug nicht angreifen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "OUT_OF_COMBAT",
+        "param": {}
+      }
+    ],
     "flavor": "Bodentruppe am eigenen Kai.",
     "image": "soforteinsatz/B205.jpg",
     "max_copies": 1,
@@ -3299,7 +4347,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziehe 1; nächste Einheit kostet 1 weniger.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Einheit",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Nicht gezählt. Nicht erfunden. Das Loch bleibt.",
     "image": "soforteinsatz/B206.jpg",
     "max_copies": 1,
@@ -3322,7 +4384,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nächste Sofort kostet 1 weniger (min. 0). [Straßenöffnen]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Soforteinsatz",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Wer den Weg schneidet, schneidet eigene Bürger ab.",
     "image": "soforteinsatz/B207.jpg",
     "max_copies": 1,
@@ -3345,7 +4415,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziel −1 DEF bis Zugende. [Sandfarbe]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Prunk würde aus der Ferne einen Schmuck machen.",
     "image": "soforteinsatz/B208.jpg",
     "max_copies": 1,
@@ -3368,7 +4447,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziehe 2; wirf 1 ab. [Sofortlizenz]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW_DISCARD",
+        "param": {
+          "draw": 2,
+          "discard": 1
+        }
+      }
+    ],
     "flavor": "Schiff und Flugzeug halten keine Stellung.",
     "image": "soforteinsatz/B209.jpg",
     "max_copies": 1,
@@ -3391,7 +4478,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Schiebe eine eigene Einheit um bis zu 2 Slots.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "MOVE_SLOTS",
+        "param": {
+          "slots": 1,
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Verlegung hält den Weg im eigenen Land.",
     "image": "soforteinsatz/B210.jpg",
     "max_copies": 1,
@@ -3414,7 +4509,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +3 DEF diesen Zug; ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 3,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Abgeschnitten ausharren. Der Kern bleibt verantwortlich.",
     "image": "soforteinsatz/B211.jpg",
     "max_copies": 1,
@@ -3437,7 +4540,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziel −1 DEF bis Zugende. [Zweite Verspätung]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Südmark trägt die Verspätung zweimal.",
     "image": "soforteinsatz/B212.jpg",
     "max_copies": 1,
@@ -3460,7 +4572,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Bewege 1 eigene Einheit 1 Abschnitt; ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "MOVE_SLOTS",
+        "param": {
+          "slots": 1,
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Umweg ist Vertrag, kein Verrat.",
     "image": "soforteinsatz/B699.jpg",
     "max_copies": 1,
@@ -3483,7 +4603,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke 2 auf; nächste eigene Einheit +1 ATK und darf umgehen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 0,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Durchlass — Halle atmet.",
     "image": "soforteinsatz/B700.jpg",
     "max_copies": 1,
@@ -3506,7 +4641,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Bewege bis zu 2 Einheiten je 1 Abschnitt; sie +1 ATK diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 0,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Weit umgehen. Stillstand lassen.",
     "image": "soforteinsatz/B701.jpg",
     "max_copies": 1,
@@ -3529,7 +4673,31 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Einheiten +1 ATK/+1 DEF, wenn sie angrenzen. Bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Linienkrieg — der Knoten hält, die Linie zahlt.",
     "image": "soforteinsatz/B702.jpg",
     "max_copies": 1,
@@ -3552,7 +4720,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Wähle Feind: eigene Einheiten greifen ihn an, als stünden sie angrenzend; +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Umgehen — wer den Knoten meidet, trifft den Beutel.",
     "image": "soforteinsatz/B703.jpg",
     "max_copies": 1,
@@ -3575,7 +4752,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Angriffe +1 ATK bis Zugende. [Fristtafel]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Frist vor Meinung.",
     "image": "soforteinsatz/B704.jpg",
     "max_copies": 1,
@@ -3598,7 +4784,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "1 Einheit +2 DEF; sie darf diesen Zug nicht bewegt werden. [Schnellpass]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "OUT_OF_COMBAT",
+        "param": {}
+      }
+    ],
     "flavor": "Pass öffnet. Knoten bleibt offen.",
     "image": "soforteinsatz/B705.jpg",
     "max_copies": 1,
@@ -3621,7 +4819,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Bewege 1 Einheit 2 Abschnitte (nur leer/eigen); sie +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "MOVE_SLOTS",
+        "param": {
+          "slots": 1,
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Nacht nimmt den Seitenweg.",
     "image": "soforteinsatz/B706.jpg",
     "max_copies": 1,
@@ -3644,7 +4850,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziel −1 DEF bis Zugende. [Umschlagbefehl]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Befehl aus dem Umschlag.",
     "image": "soforteinsatz/B707.jpg",
     "max_copies": 1,
@@ -3667,7 +4882,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Zwei Feinde: eigene Angriffe gegen sie gelten als Flanke (+1 ATK).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Zwei Seiten. Ein Fluss.",
     "image": "soforteinsatz/B708.jpg",
     "max_copies": 1,
@@ -3690,7 +4913,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke 2 auf; nächste eigene Einheit +1 ATK/+1 DEF. [Handelskette]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Kette hält, solange sie fährt.",
     "image": "soforteinsatz/B709.jpg",
     "max_copies": 1,
@@ -3713,7 +4951,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +1 ATK/+1 DEF wenn sie diesen Zug bewegt wurde.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Pfad offen. Stellung wartet.",
     "image": "soforteinsatz/B710.jpg",
     "max_copies": 1,
@@ -3736,7 +4983,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "1 eigene Einheit +2 DEF bis Zugende. [Reglement]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Reglement vor Wunsch.",
     "image": "soforteinsatz/B579.jpg",
     "max_copies": 1,
@@ -3759,7 +5014,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke 2 auf; nächste eigene Einheit +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 0,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Runde ohne Marschbefehl.",
     "image": "soforteinsatz/B580.jpg",
     "max_copies": 1,
@@ -3782,7 +5052,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Spiele eine Einheit aus der Hand mit 3 weniger Kosten (min. 1).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Einheit",
+          "amount": 3
+        }
+      }
+    ],
     "flavor": "Drei Schlüssel. Sonst kein Krieg.",
     "image": "soforteinsatz/B581.jpg",
     "max_copies": 1,
@@ -3805,7 +5083,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Wähle eine feindliche Einheit: gilt als beobachtet. Eigene Einheiten +1 ATK gegen beobachtete diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Feuerplan — Norm vor Eifer, Steinmark zählt.",
     "image": "soforteinsatz/B582.jpg",
     "max_copies": 1,
@@ -3828,7 +5121,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke 1 auf; ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Linie ohne Anspruch.",
     "image": "soforteinsatz/B583.jpg",
     "max_copies": 1,
@@ -3851,7 +5151,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Abschnitt +2 DEF; ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Pionier nach Freigabe.",
     "image": "soforteinsatz/B584.jpg",
     "max_copies": 1,
@@ -3874,7 +5182,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziel −1 DEF bis Zugende. [Reservistenruf]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Ruf wenn Papier liegt.",
     "image": "soforteinsatz/B585.jpg",
     "max_copies": 1,
@@ -3897,7 +5214,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Kopiere: nächste Sofort kostet 1 weniger (min. 0).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Soforteinsatz",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Kopien. Kein Original-Held.",
     "image": "soforteinsatz/B586.jpg",
     "max_copies": 1,
@@ -3920,7 +5245,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Markiere 2 Feinde als beobachtet.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "MARK_OBSERVED",
+        "param": {
+          "count": 2
+        }
+      }
+    ],
     "flavor": "Zwei Augen. Ein Verfahren.",
     "image": "soforteinsatz/B587.jpg",
     "max_copies": 1,
@@ -3943,7 +5275,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "1 eigene Einheit +2 DEF bis Zugende. [Synchronfeuer]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Synchron nach Norm.",
     "image": "soforteinsatz/B588.jpg",
     "max_copies": 1,
@@ -3966,7 +5306,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Negiere feindlichen Elite-Bonus; ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "CLEAR_ATK_MALUS",
+        "param": {
+          "negateBonus": true
+        }
+      }
+    ],
     "flavor": "Bruch kostet. Verfahren bleibt.",
     "image": "soforteinsatz/B589.jpg",
     "max_copies": 1,
@@ -3989,7 +5336,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +1 ATK/+1 DEF wenn Ziel beobachtet.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Plan fest. Laune nicht.",
     "image": "soforteinsatz/B590.jpg",
     "max_copies": 1,
@@ -4012,7 +5368,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziehe zwei Karten.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 2
+        }
+      }
+    ],
     "flavor": "Volle Ladung — Anteil fehlt trotzdem.",
     "image": "soforteinsatz/B519.jpg",
     "max_copies": 1,
@@ -4035,7 +5398,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Einheit, die in angegriffenen Abschnitt rückt, +1 ATK/+1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Entlastung auf dem Boden.",
     "image": "soforteinsatz/B520.jpg",
     "max_copies": 1,
@@ -4058,7 +5430,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Spiele eine Einheit aus der Hand in einen zuletzt angegriffenen Abschnitt; sie +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Einheit",
+          "amount": 0
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Letzte Lieferung. Der Rest hält.",
     "image": "soforteinsatz/B521.jpg",
     "max_copies": 1,
@@ -4081,7 +5468,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Liegt Unterstützung im Abschnitt: Einheiten dort kosten 1 weniger; +1 ATK diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Marsch aus dem Vollen — Namars Breite wird Bewegung.",
     "image": "soforteinsatz/B522.jpg",
     "max_copies": 1,
@@ -4104,7 +5500,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Alle eigenen Einheiten +1 ATK diesen Zug gegen denselben Abschnitt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 0,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Satz ohne Ausnahme.",
     "image": "soforteinsatz/B523.jpg",
     "max_copies": 1,
@@ -4127,7 +5532,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Heile 2 an Einheiten in einem Abschnitt mit Unterstützung.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 2
+        }
+      }
+    ],
     "flavor": "Rest zählt. Nicht die Morgenliste.",
     "image": "soforteinsatz/B524.jpg",
     "max_copies": 1,
@@ -4150,7 +5562,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Abschnitt +2 DEF; Feind kann hier diesen Zug keine Unterstützung spielen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Fremder bleibt draußen.",
     "image": "soforteinsatz/B525.jpg",
     "max_copies": 1,
@@ -4173,7 +5593,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziehe 1; nächste Einheit in angegriffenen Abschnitt +2 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Ruf gilt für alle Kais.",
     "image": "soforteinsatz/B526.jpg",
     "max_copies": 1,
@@ -4196,7 +5623,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Wirf 1 ab; ziehe 2.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW_DISCARD",
+        "param": {
+          "draw": 2,
+          "discard": 1
+        }
+      }
+    ],
     "flavor": "Anteil geht. Rest fährt.",
     "image": "soforteinsatz/B527.jpg",
     "max_copies": 1,
@@ -4219,7 +5654,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit rückt in beliebigen Abschnitt; wenn Unterstützung dort, +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Einheit",
+          "amount": 0
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Bahnstadt offen halten.",
     "image": "soforteinsatz/B528.jpg",
     "max_copies": 1,
@@ -4242,7 +5692,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Negiere einen feindlichen Elite-Bonus; ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "CLEAR_ATK_MALUS",
+        "param": {
+          "negateBonus": true
+        }
+      }
+    ],
     "flavor": "Krause ohne Sterne.",
     "image": "soforteinsatz/B529.jpg",
     "max_copies": 1,
@@ -4265,7 +5722,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Unterstützung im Abschnitt: Einheiten +1 DEF; ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Markt macht nicht zu.",
     "image": "soforteinsatz/B530.jpg",
     "max_copies": 1,
@@ -4288,7 +5759,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Wähle Abschnitt: einrückende Einheit erleidet 1 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Feuer ohne Adresse.",
     "image": "soforteinsatz/B240.jpg",
     "max_copies": 1,
@@ -4311,7 +5789,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einrückende Einheit erleidet 2 Schaden; deine allein dort +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 2
+        }
+      }
+    ],
     "flavor": "Auflauern ist der Eid in Waffen.",
     "image": "soforteinsatz/B241.jpg",
     "max_copies": 1,
@@ -4334,7 +5819,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einrückende Einheit −1 ATK diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Warnen, bevor der Hang fällt.",
     "image": "soforteinsatz/B242.jpg",
     "max_copies": 1,
@@ -4357,7 +5851,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eine gegnerische Einheit erleidet 3 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 3
+        }
+      }
+    ],
     "flavor": "Der Hang antwortet laut.",
     "image": "soforteinsatz/B243.jpg",
     "max_copies": 1,
@@ -4380,7 +5881,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziehe 1; nächste Infanterie kostet 1 weniger.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "PLAY_INF_DISCOUNT",
+        "param": {
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Drei fremde Stimmen lesen laut.",
     "image": "soforteinsatz/B244.jpg",
     "max_copies": 1,
@@ -4403,7 +5917,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Feind −2 ATK bis Zugende; du ziehst nicht.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": -2,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Beobachtet. Nicht ausgelöscht.",
     "image": "soforteinsatz/B245.jpg",
     "max_copies": 1,
@@ -4426,7 +5949,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Schiebe eine eigene Einheit um 1; sie +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "MOVE_SLOTS",
+        "param": {
+          "slots": 1,
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Der Weg zur Hilfe.",
     "image": "soforteinsatz/B246.jpg",
     "max_copies": 1,
@@ -4449,7 +5980,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziel −1 DEF bis Zugende. [Schonung]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Wut darf schlagen. Nicht zu Ende bringen.",
     "image": "soforteinsatz/B247.jpg",
     "max_copies": 1,
@@ -4472,7 +6012,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Zwei eigene Einheiten +1 ATK wenn im selben Abschnitt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "filter": null,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Verbund ohne Mitte.",
     "image": "soforteinsatz/B248.jpg",
     "max_copies": 1,
@@ -4495,7 +6044,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Wähle Abschnitt: einrückende erleiden 1; Infanterie dort +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "MASS_DAMAGE",
+        "param": {
+          "value": 1,
+          "onEnter": true
+        }
+      }
+    ],
     "flavor": "Lauer ohne Stab.",
     "image": "soforteinsatz/B249.jpg",
     "max_copies": 1,
@@ -4518,7 +6075,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Allein stehende +1 DEF; Abschnitte mit 2+ Einheiten +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      },
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "atk": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Verteilt — nicht zusammengezogen.",
     "image": "soforteinsatz/B250.jpg",
     "max_copies": 1,
@@ -4541,7 +6113,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Schiebe bis zu zwei Einheiten um je 1; heile 1 verteilt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "MOVE_SLOTS",
+        "param": {
+          "slots": 1,
+          "count": 2
+        }
+      }
+    ],
     "flavor": "Danach geht man nach Hause. Beweis ohne Wohnsitz.",
     "image": "soforteinsatz/B251.jpg",
     "max_copies": 1,
@@ -4564,7 +6150,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Heile 2; Ziel greift diesen Zug nicht an.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 2
+        }
+      }
+    ],
     "flavor": "Atem vor dem nächsten Schritt.",
     "image": "soforteinsatz/B339.jpg",
     "max_copies": 1,
@@ -4587,7 +6180,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Abschnitt +2 DEF; ruhende Einheiten dort +1 ATK bis Ende nächsten Zugs.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 2,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Die Etappe ist das Schild.",
     "image": "soforteinsatz/B340.jpg",
     "max_copies": 1,
@@ -4610,7 +6212,26 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Wähle bis zu zwei Einheiten: sie greifen nicht an, heilen 2, +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "OUT_OF_COMBAT",
+        "param": {}
+      },
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 2,
+          "count": 2
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Rasten, damit das Schild hält.",
     "image": "soforteinsatz/B341.jpg",
     "max_copies": 1,
@@ -4633,7 +6254,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke Feind auf; heile 1; ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Wer meldet, wird gesehen.",
     "image": "soforteinsatz/B342.jpg",
     "max_copies": 1,
@@ -4656,7 +6290,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Heile 1; Ziel +1 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Verband vor der Höhe.",
     "image": "soforteinsatz/B343.jpg",
     "max_copies": 1,
@@ -4679,7 +6327,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Verschiebe 1 Schaden von einer Einheit auf Heilung 2 an einer anderen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "MOVE_SLOTS",
+        "param": {
+          "slots": 1,
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Schlechtes Jahr — gemeldet und geteilt.",
     "image": "soforteinsatz/B344.jpg",
     "max_copies": 1,
@@ -4702,7 +6364,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +2 DEF; wenn sie ruht, ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Fristen eng, weil Dörfer leer waren.",
     "image": "soforteinsatz/B345.jpg",
     "max_copies": 1,
@@ -4725,7 +6395,26 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Negiere 2 Schaden an Abschnitt; keine eigene Zerstörung → heile 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 2
+        }
+      },
+      {
+        "code": "CLEAR_ATK_MALUS",
+        "param": {
+          "negateBonus": true
+        }
+      }
+    ],
     "flavor": "Lieber Verzicht auf Höhe.",
     "image": "soforteinsatz/B346.jpg",
     "max_copies": 1,
@@ -4748,7 +6437,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Spiele Unterstützung/−Ausrüstung um 1 weniger; heile 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Staat ist der Wohlstand, soweit davon die Rede.",
     "image": "soforteinsatz/B347.jpg",
     "max_copies": 1,
@@ -4771,7 +6467,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nimm Einheit zurück auf Hand; heile 2 an einer anderen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 2
+        }
+      }
+    ],
     "flavor": "Unruhe zu Hause zieht Truppen.",
     "image": "soforteinsatz/B348.jpg",
     "max_copies": 1,
@@ -4794,7 +6497,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Abschnitt +1 DEF; Einheiten dort, die ruhen, +1 ATK nächsten Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Regierung begründet sich mit Stabilität.",
     "image": "soforteinsatz/B349.jpg",
     "max_copies": 1,
@@ -4817,7 +6528,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Feind −1 ATK/−1 DEF; eigene ruhende +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Unsichtbare sind Loch, nicht Gegnerkorps.",
     "image": "soforteinsatz/B350.jpg",
     "max_copies": 1,
@@ -4840,7 +6560,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Eigene Einheit mit Ausrüstung +1 ATK bis Ende nächsten Zugs.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 0,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Ruf an die Lebenden. Nicht an die Toten.",
     "image": "soforteinsatz/B279.jpg",
     "max_copies": 1,
@@ -4863,7 +6592,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Feind −2 ATK; stirbt er: ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": -2,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Respekt ist die Frage warum.",
     "image": "soforteinsatz/B280.jpg",
     "max_copies": 1,
@@ -4886,7 +6624,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Heile 2 an eigener Einheit; sie greift diesen Zug nicht an.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 2
+        }
+      }
+    ],
     "flavor": "Lebende hinter die Platten.",
     "image": "soforteinsatz/B281.jpg",
     "max_copies": 1,
@@ -4909,7 +6654,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Spiele Ausrüstung um 1 weniger; Träger +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Ausrüstung",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Freigabe vor Gravur.",
     "image": "soforteinsatz/B282.jpg",
     "max_copies": 1,
@@ -4932,7 +6685,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +2 DEF; wenn sie Ausrüstung trägt, +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 2,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Lehrling korrigiert. Nicht gesegnet.",
     "image": "soforteinsatz/B283.jpg",
     "max_copies": 1,
@@ -4955,7 +6717,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Negiere Bonus eines Feindes aus Zerstörung; eigene +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "CLEAR_ATK_MALUS",
+        "param": {
+          "negateBonus": true
+        }
+      }
+    ],
     "flavor": "Kein Altar aus dem letzten Toten.",
     "image": "soforteinsatz/B284.jpg",
     "max_copies": 1,
@@ -4978,7 +6747,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziehe 1; nächste Ausrüstung −1 Kosten.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Lieber Linse als neuer Name.",
     "image": "soforteinsatz/B285.jpg",
     "max_copies": 1,
@@ -5001,7 +6777,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Feind −1 ATK/−1 DEF; wenn er „Opfer“ erzwingen würde: +1 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Wer mehr Tote will, findet kein Amt.",
     "image": "soforteinsatz/B286.jpg",
     "max_copies": 1,
@@ -5024,7 +6815,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Heile 1; spiele Ausrüstung aus der Hand (−1).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Gerät, Atem, Glas — Zeichen zuletzt.",
     "image": "soforteinsatz/B287.jpg",
     "max_copies": 1,
@@ -5047,7 +6845,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Abschnitt +1 DEF; Einheiten mit Ausrüstung +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Hart. Nicht heilig.",
     "image": "soforteinsatz/B288.jpg",
     "max_copies": 1,
@@ -5070,7 +6876,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Entferne eine feindliche Unterstützung oder −2 ATK einer Einheit.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "CLEAR_SUPPORT_OR_DEBUFF",
+        "param": {}
+      }
+    ],
     "flavor": "Langweilig statt Märtyrer.",
     "image": "soforteinsatz/B289.jpg",
     "max_copies": 1,
@@ -5093,7 +6904,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Stirbt Feind: Abschnitt +1 ATK bis Zugende; übrige +1 DEF bis Ende nächsten Zugs.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Verlust wird Deckung.",
     "image": "soforteinsatz/B290.jpg",
     "max_copies": 1,
@@ -5116,7 +6936,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke eine Einheit auf; ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Erst sehen.",
     "image": "soforteinsatz/B459.jpg",
     "max_copies": 1,
@@ -5139,7 +6966,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Aufgeklärte Einheit erleidet 3; wenn sie stirbt, decke eine weitere auf.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Punktfeuer — Doktrin am Schuss.",
     "image": "soforteinsatz/B460.jpg",
     "max_copies": 1,
@@ -5162,7 +6996,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke bis zu zwei Einheiten auf; sie −1 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Lokalisierung vor dem Schlag.",
     "image": "soforteinsatz/B461.jpg",
     "max_copies": 1,
@@ -5185,7 +7034,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Ziel gilt als aufgeklärt; Angriffe gegen es +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      },
+      {
+        "code": "BUFF_ALL_OWN",
+        "param": {
+          "atk": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Marke ohne Kult.",
     "image": "soforteinsatz/B462.jpg",
     "max_copies": 1,
@@ -5208,7 +7071,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Negiere einen feindlichen Bonus; ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "CLEAR_ATK_MALUS",
+        "param": {
+          "negateBonus": true
+        }
+      }
+    ],
     "flavor": "Order zurückziehen.",
     "image": "soforteinsatz/B463.jpg",
     "max_copies": 1,
@@ -5231,7 +7101,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke auf; wenn schon aufgeklärt: +2 Schaden statt neu.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "DEAL_DAMAGE",
+        "param": {
+          "value": 2
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Keine Rettung der ersten Lüge.",
     "image": "soforteinsatz/B464.jpg",
     "max_copies": 1,
@@ -5254,7 +7137,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +2 DEF; Angreifer −1 ATK wenn er aufgeklärt ist.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "BUFF",
+        "param": {
+          "def": 2,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Trotz ist manchmal die richtige Antwort.",
     "image": "soforteinsatz/B465.jpg",
     "max_copies": 1,
@@ -5277,7 +7168,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Nächste Sofort kostet 1 weniger (min. 0). [Quelle nennen]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Soforteinsatz",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Quelle vor Meinung.",
     "image": "soforteinsatz/B466.jpg",
     "max_copies": 1,
@@ -5300,7 +7199,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Feind kann diesen Zug nicht aufdecken/angegriffen werden? Negiere Aufklärungsschutz; −2 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      },
+      {
+        "code": "CLEAR_ATK_MALUS",
+        "param": {
+          "negateBonus": true
+        }
+      }
+    ],
     "flavor": "Verweigerte Probe — manchmal richtig.",
     "image": "soforteinsatz/B467.jpg",
     "max_copies": 1,
@@ -5323,7 +7235,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Einheit +1 ATK/+1 DEF gegen aufgeklärte; oder brich Angriff → heile 2.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 2
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": 1,
+          "def": 1,
+          "until": "turn"
+        }
+      }
+    ],
     "flavor": "Person mit Mandat. Nicht die Zahl.",
     "image": "soforteinsatz/B468.jpg",
     "max_copies": 1,
@@ -5346,7 +7273,22 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Heile 1; ziehe 1; Feind −1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 1
+        }
+      },
+      {
+        "code": "BUFF",
+        "param": {
+          "atk": -1,
+          "until": "turn",
+          "enemy": true
+        }
+      }
+    ],
     "flavor": "Irrtum aussprechen.",
     "image": "soforteinsatz/B469.jpg",
     "max_copies": 1,
@@ -5369,7 +7311,15 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       "einsatz"
     ],
     "text": "Decke Hand des Gegners (1 Karte); spiele Sofort um 1 weniger.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "type": "Soforteinsatz",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Prüfen, nicht eifern.",
     "image": "soforteinsatz/B470.jpg",
     "max_copies": 1,

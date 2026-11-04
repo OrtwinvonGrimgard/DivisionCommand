@@ -268,7 +268,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Panzer +1 DEF; einmalig 1 heilen bei Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1,
+          "only": "panzer"
+        }
+      },
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1
+        }
+      }
+    ],
     "flavor": "Ersatz ist Standard.",
     "image": "ausruestung/B174.jpg",
     "max_copies": 1,
@@ -291,7 +306,16 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Artillerie +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0,
+          "only": "artillerie"
+        }
+      }
+    ],
     "flavor": "Die Kiste kam pünktlich.",
     "image": "ausruestung/B175.jpg",
     "max_copies": 1,
@@ -314,7 +338,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Einmalig 1 weniger aus dem Friedhof.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "COST_NEXT",
+        "param": {
+          "fromGrave": true,
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Siegel heißt: wieder lieferbar.",
     "image": "ausruestung/B176.jpg",
     "max_copies": 1,
@@ -337,7 +369,16 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Aufklärung/Artillerie +1 ATK gegen Aufgeklärte.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0,
+          "only": "artillerie"
+        }
+      }
+    ],
     "flavor": "Optik aus dem Auftragsring.",
     "image": "ausruestung/B177.jpg",
     "max_copies": 1,
@@ -360,7 +401,16 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Panzer +2 DEF, −1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": -1,
+          "def": 2,
+          "only": "panzer"
+        }
+      }
+    ],
     "flavor": "Serie schützt die Investition.",
     "image": "ausruestung/B178.jpg",
     "max_copies": 1,
@@ -383,7 +433,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Artillerie: einmal/Zug +1 Schaden nach Angriff.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_ON_ATTACK_DAMAGE",
+        "param": {
+          "bonus": 1
+        }
+      }
+    ],
     "flavor": "Endlos — solange das Buch offen ist.",
     "image": "ausruestung/B179.jpg",
     "max_copies": 1,
@@ -406,7 +463,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger stirbt: ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Marke für die nächste Zeile.",
     "image": "ausruestung/B180.jpg",
     "max_copies": 1,
@@ -429,7 +493,16 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Infanterie +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1,
+          "only": "infanterie"
+        }
+      }
+    ],
     "flavor": "Prunk liegt im Auftragsbuch.",
     "image": "ausruestung/B181.jpg",
     "max_copies": 1,
@@ -452,7 +525,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Elite/Unterstützung: Soforteinsatz −1 Kosten.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_DISCOUNT_AURA",
+        "param": {
+          "type": "Soforteinsatz",
+          "amount": 1
+        }
+      }
+    ],
     "flavor": "Der Clip hält den Preis.",
     "image": "ausruestung/B182.jpg",
     "max_copies": 1,
@@ -475,7 +556,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "+1 ATK/+1 DEF nach Soforteinsatz diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Gestempelt heißt: freigegeben zum Verbrauch.",
     "image": "ausruestung/B183.jpg",
     "max_copies": 1,
@@ -498,7 +587,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF. Zweite eigene Infanterie im Abschnitt: +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STANDARD",
+        "param": {
+          "def": 1,
+          "atk_if_second": 1
+        }
+      }
+    ],
     "flavor": "Orientierung ohne Prunk.",
     "image": "ausruestung/B131.jpg",
     "max_copies": 1,
@@ -521,7 +618,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Wird der Träger zerstört: eine eigene Infanterie im Abschnitt +1 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "ON_DESTROY_SECTION_ATK",
+        "param": {
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Der Stoff überlebt den Träger.",
     "image": "ausruestung/B132.jpg",
     "max_copies": 1,
@@ -544,7 +655,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK. Erster Angriff des Trägers in diesem Zug zusätzlich +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "CARRIER_FIRST_ATTACK_ATK",
+        "param": {
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Einfach. Robust. Genug.",
     "image": "ausruestung/B133.jpg",
     "max_copies": 1,
@@ -567,7 +692,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK, solange andere eigene Infanterie im Abschnitt liegt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Sichtbare Pflicht.",
     "image": "ausruestung/B135.jpg",
     "max_copies": 1,
@@ -590,7 +723,27 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +2 ATK. Bei Zerstörung: 1 Schaden an einer eigenen Einheit im Abschnitt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 2,
+          "def": 0
+        }
+      },
+      {
+        "code": "ON_DESTROY_SECTION_ATK",
+        "param": {
+          "atk": 2
+        }
+      },
+      {
+        "code": "ON_DESTROY_SELF_DAMAGE",
+        "param": {
+          "damage": 1
+        }
+      }
+    ],
     "flavor": "Ehre hat einen Preis.",
     "image": "ausruestung/B136.jpg",
     "max_copies": 1,
@@ -613,7 +766,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Einmal pro Zug: wenn Infanterie den Abschnitt betritt, Träger +1 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Hier sammeln.",
     "image": "ausruestung/B137.jpg",
     "max_copies": 1,
@@ -636,7 +797,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger ist nicht Ziel des ersten gegnerischen Angriffs im Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_IGNORE_FIRST_DAMAGE",
+        "param": {
+          "untouchableFirst": true
+        }
+      }
+    ],
     "flavor": "Ritus vor dem Sturm.",
     "image": "ausruestung/B138.jpg",
     "max_copies": 1,
@@ -659,7 +827,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK und +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Können und Pflicht vor Jubel.",
     "image": "ausruestung/B140.jpg",
     "max_copies": 1,
@@ -682,7 +858,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Solange Träger lebt: eigene Infanterie im Abschnitt ignoriert den ersten 1 Schaden im Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_IGNORE_FIRST_DAMAGE",
+        "param": {
+          "sectionInf": true
+        }
+      }
+    ],
     "flavor": "Ein Gebet, viele Schultern.",
     "image": "ausruestung/B141.jpg",
     "max_copies": 1,
@@ -705,7 +888,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +2 DEF. Träger kann nicht angreifen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 2
+        }
+      }
+    ],
     "flavor": "Halten ist auch Sturm.",
     "image": "ausruestung/B142.jpg",
     "max_copies": 1,
@@ -728,7 +919,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF. Einmal: ignoriere den ersten Schaden am Träger; danach Träger −1 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": -1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_IGNORE_FIRST_DAMAGE",
+        "param": {}
+      }
+    ],
     "flavor": "Wachsiegel. Schutz hat seinen Preis.",
     "image": "ausruestung/B647.jpg",
     "max_copies": 1,
@@ -751,7 +961,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK. Wenn Träger ersetzt wird: neuer Träger erhält +1 DEF und „Schwur“ (erster Schaden ignoriert).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Kronriemen. Treue geht auf den Nächsten über.",
     "image": "ausruestung/B648.jpg",
     "max_copies": 1,
@@ -774,7 +992,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK, solange er beschädigt ist.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Aus der Werkstatt der Großväter.",
     "image": "ausruestung/B651.jpg",
     "max_copies": 1,
@@ -797,7 +1023,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF. Wenn Träger zerstört wird: ziehe 1 Karte.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Die Nummer überlebt den Mann.",
     "image": "ausruestung/B652.jpg",
     "max_copies": 1,
@@ -820,7 +1060,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger hat +1 ATK und +1 DEF im Zug, in dem er gespielt wird.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Laminat über Blut.",
     "image": "ausruestung/B653.jpg",
     "max_copies": 1,
@@ -843,7 +1091,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK, solange beschädigt (Preis des Rechts).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Wärme und Rang. Beides nass.",
     "image": "ausruestung/B654.jpg",
     "max_copies": 1,
@@ -866,7 +1122,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK. Einmal: +1 zusätzlicher ATK für einen Angriff, dann ablegen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Gezählt. Verschossen. Ersetzt.",
     "image": "ausruestung/B655.jpg",
     "max_copies": 1,
@@ -889,7 +1153,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Solange ausgerüstet: einmal pro Zug darfst du statt Angriff 1 DEF an einer anderen Einheit im Abschnitt heilen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Führen heißt oft nur zählen.",
     "image": "ausruestung/B656.jpg",
     "max_copies": 1,
@@ -912,7 +1184,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger-Panzer oder -Fahrzeug: +1 DEF und heilt 1 zu Beginn deines Zuges, solange beschädigt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Ohne Stempel keine Freigabe.",
     "image": "ausruestung/B657.jpg",
     "max_copies": 1,
@@ -935,7 +1215,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger und eine andere eigene Infanterie im Abschnitt haben +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Gerollt. Nicht gehisst.",
     "image": "ausruestung/B658.jpg",
     "max_copies": 1,
@@ -958,7 +1246,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK, solange beschädigt. Einmal: erleide 1 Schaden → +2 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Feldverband. Wunde als Hebel.",
     "image": "ausruestung/B407.jpg",
     "max_copies": 1,
@@ -981,7 +1277,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK. Einmal: erleide 1 Schaden und +2 ATK bis Zugende; danach Träger heilt 1 weniger diesen Kampf.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Nervenklemme. Signal über Schmerz.",
     "image": "ausruestung/B409.jpg",
     "max_copies": 1,
@@ -1004,7 +1308,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF gegen den ersten Angriff pro Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "CARRIER_FIRST_ATTACK_ATK",
+        "param": {
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Atem als Zuteilung.",
     "image": "ausruestung/B410.jpg",
     "max_copies": 1,
@@ -1027,7 +1345,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK, solange beschädigt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Der Chip lügt den Schmerz um.",
     "image": "ausruestung/B412.jpg",
     "max_copies": 1,
@@ -1050,7 +1376,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK. Wenn Träger angreift: erleidet 1 Schaden; wenn er überlebt, +1 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_ON_ATTACK_DAMAGE",
+        "param": {
+          "self": 1
+        }
+      }
+    ],
     "flavor": "Servogurt. Kraft frisst Gelenk.",
     "image": "ausruestung/B413.jpg",
     "max_copies": 1,
@@ -1073,7 +1413,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Einmal: heile 2 DEF am Träger, dann zerstöre diese Karte.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 2
+        }
+      },
+      {
+        "code": "EQUIP_ONCE_HEAL_DESTROY",
+        "param": {
+          "heal": 2
+        }
+      }
+    ],
     "flavor": "Leihen, nicht schenken.",
     "image": "ausruestung/B414.jpg",
     "max_copies": 1,
@@ -1096,7 +1450,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK. Einmal: ziehe 1, erleide 1 Schaden; wenn dadurch beschädigt: +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Schnittkabel. Daten gegen Fleisch.",
     "image": "ausruestung/B415.jpg",
     "max_copies": 1,
@@ -1119,7 +1481,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF. Bei Zerstörung: ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Die Nummer überlebt den Träger.",
     "image": "ausruestung/B416.jpg",
     "max_copies": 1,
@@ -1142,7 +1518,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +2 ATK im ersten Angriff nach dem Anlegen.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 2,
+          "def": 0
+        }
+      },
+      {
+        "code": "CARRIER_FIRST_ATTACK_ATK",
+        "param": {
+          "atk": 2
+        }
+      }
+    ],
     "flavor": "Ein Schnitt. Eine Messung.",
     "image": "ausruestung/B417.jpg",
     "max_copies": 1,
@@ -1165,7 +1555,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "An Panzer: +1 DEF; heilt 1 zu Zugbeginn wenn beschädigt, dann erleidet angrenzende eigene Infanterie 1 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Panzer zuerst.",
     "image": "ausruestung/B418.jpg",
     "max_copies": 1,
@@ -1188,7 +1586,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK gegen Aufgeklärte.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Gerät, das ein Bürger prüfen kann.",
     "image": "ausruestung/B831.jpg",
     "max_copies": 1,
@@ -1211,7 +1617,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Plattenträger]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Träger. Kein Sockel-Kostüm.",
     "image": "ausruestung/B832.jpg",
     "max_copies": 1,
@@ -1234,7 +1648,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Sandstreifen]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Sandstreifen. Kein Rang im Alltag.",
     "image": "ausruestung/B833.jpg",
     "max_copies": 1,
@@ -1257,7 +1686,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; einmal/Zug: decke 1 auf.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Sensor hilft. Ersetzt die Person nicht.",
     "image": "ausruestung/B834.jpg",
     "max_copies": 1,
@@ -1280,7 +1717,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Werkzeug aus dem Hof Nov.",
     "image": "ausruestung/B835.jpg",
     "max_copies": 1,
@@ -1303,7 +1755,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK. [Quellenmappe]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Viele Stimmen. Ein Irrtum laut korrigiert.",
     "image": "ausruestung/B836.jpg",
     "max_copies": 1,
@@ -1326,7 +1786,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmal/Zug heile 1. [Netzlampe]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Lampe leuchtet. Gerät kann trotzdem kaputt sein.",
     "image": "ausruestung/B837.jpg",
     "max_copies": 1,
@@ -1349,7 +1817,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; +1 DEF nach Aufdecken diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Band des Melders. Keine Privatarmee.",
     "image": "ausruestung/B838.jpg",
     "max_copies": 1,
@@ -1372,7 +1855,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK gegen Aufgeklärte; einmal/Zug: decke 1 auf.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Siegel der Verbindung. Novaris bindet.",
     "image": "ausruestung/B839.jpg",
     "max_copies": 1,
@@ -1395,7 +1886,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; ziehe 1 wenn du diesen Zug Sofort spielst. [Verlustliste]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_SOFT_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Namen mit Beruf. Keine anonyme Summe.",
     "image": "ausruestung/B840.jpg",
     "max_copies": 1,
@@ -1418,7 +1923,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 0,
+          "costReduce": 1
+        }
+      },
+      {
+        "code": "ON_ENTER_DRAW",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Siegel. Stumpfes Oliv.",
     "image": "ausruestung/B891.jpg",
     "max_copies": 1,
@@ -1441,7 +1961,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmal/Zug heile 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Mappe. Zug. Kein Glauben.",
     "image": "ausruestung/B892.jpg",
     "max_copies": 1,
@@ -1464,7 +1992,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; einmal/Zug: ziehe 1 wenn Sofort gespielt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "EQUIP_SOFT_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Mantel der stummen Stadt.",
     "image": "ausruestung/B893.jpg",
     "max_copies": 1,
@@ -1487,7 +2029,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Gerät liest. Folgt nicht.",
     "image": "ausruestung/B894.jpg",
     "max_copies": 1,
@@ -1510,7 +2060,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Stillkragen]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Kragen der Familie Still.",
     "image": "ausruestung/B895.jpg",
     "max_copies": 1,
@@ -1533,7 +2098,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; einmal/Zug: ziehe 1, wenn du diesen Zug eine Sofort mit Aufdecken-Effekt gespielt hast.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Vel-Stempel. Akte gestempelt.",
     "image": "ausruestung/B896.jpg",
     "max_copies": 1,
@@ -1556,7 +2129,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; ziehe 1 wenn du diesen Zug Sofort spielst. [Falschmarke]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_SOFT_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Marke einer Version.",
     "image": "ausruestung/B897.jpg",
     "max_copies": 1,
@@ -1579,7 +2166,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Siegel am Grenzspiel.",
     "image": "ausruestung/B898.jpg",
     "max_copies": 1,
@@ -1602,7 +2197,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK/+1 DEF; einmal/Zug: eine verdeckte Einheit hier erhält +1 DEF beim Aufdecken.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Lagezeichen. Markiert, was fehlen soll.",
     "image": "ausruestung/B899.jpg",
     "max_copies": 1,
@@ -1625,7 +2228,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Akte eines Falls. Keine Fahne.",
     "image": "ausruestung/B900.jpg",
     "max_copies": 1,
@@ -1648,7 +2259,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Manschette. Schwarze Zeile.",
     "image": "ausruestung/B951.jpg",
     "max_copies": 1,
@@ -1671,7 +2290,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF. [Abschriftmappe]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Mappe gegen die Halle.",
     "image": "ausruestung/B952.jpg",
     "max_copies": 1,
@@ -1694,7 +2321,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmal/Zug heile 1. (Nussrock)",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Rock nussbraun. Gerade.",
     "image": "ausruestung/B953.jpg",
     "max_copies": 1,
@@ -1717,7 +2352,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; ziehe 1 wenn du diesen Zug Sofort spielst.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_SOFT_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Gerät liest. Streicht nicht.",
     "image": "ausruestung/B954.jpg",
     "max_copies": 1,
@@ -1740,7 +2389,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Stillmanschette]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Manschette von Stillschuld.",
     "image": "ausruestung/B955.jpg",
     "max_copies": 1,
@@ -1763,7 +2427,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; einmal/Zug: ziehe 1 wenn Sofort gespielt und ein Ziel genannt wurde diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "EQUIP_SOFT_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Kal-Feder. Setzt. Vergibt nicht.",
     "image": "ausruestung/B956.jpg",
     "max_copies": 1,
@@ -1786,7 +2464,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmal/Zug heile 1. [Fälligkeitsmarke]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Marke eines Datums.",
     "image": "ausruestung/B957.jpg",
     "max_copies": 1,
@@ -1809,7 +2495,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF. [Haussiegel]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Siegel am haftenden Haus.",
     "image": "ausruestung/B958.jpg",
     "max_copies": 1,
@@ -1832,7 +2526,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF; wenn sie diesen Zug einen Kill hat → ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Schuldzeichen. Offen bis zum Abschluss.",
     "image": "ausruestung/B959.jpg",
     "max_copies": 1,
@@ -1855,7 +2557,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF. [Fallakte]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Akte eines Falls. Kein Wappen.",
     "image": "ausruestung/B960.jpg",
     "max_copies": 1,
@@ -1878,7 +2588,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; einmal/Zug: ziehe 1 wenn Sofort gespielt. [Kronenspiegel]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "EQUIP_SOFT_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Spiegel zeigt Pflicht, nicht Glanz.",
     "image": "ausruestung/B771.jpg",
     "max_copies": 1,
@@ -1901,7 +2625,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK. [Bindungszeichen]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Zeichen beider Dächer.",
     "image": "ausruestung/B772.jpg",
     "max_copies": 1,
@@ -1924,7 +2656,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Steingrünmantel]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Steingrün. Dauerfarbe.",
     "image": "ausruestung/B773.jpg",
     "max_copies": 1,
@@ -1947,7 +2687,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Zeughausschlüssel]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Schlüssel zum Gerät über Jahre.",
     "image": "ausruestung/B774.jpg",
     "max_copies": 1,
@@ -1970,7 +2718,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Markenkragen]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Kragen ab — Rückkehr ins Dorf.",
     "image": "ausruestung/B775.jpg",
     "max_copies": 1,
@@ -1993,7 +2749,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmal/Zug heile 1. [Parlamentsstempel]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Stempel bremst den eiligen Ruf.",
     "image": "ausruestung/B776.jpg",
     "max_copies": 1,
@@ -2016,7 +2780,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK. [Ölflasche]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Öl für Lafetten. Kein Denkmal.",
     "image": "ausruestung/B777.jpg",
     "max_copies": 1,
@@ -2039,7 +2811,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Grenzmarke]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Marke der alten Grenze.",
     "image": "ausruestung/B778.jpg",
     "max_copies": 1,
@@ -2062,7 +2849,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Doppelhaus-Siegel]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Siegel beider Häuser — Dauer.",
     "image": "ausruestung/B779.jpg",
     "max_copies": 1,
@@ -2085,7 +2880,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Aktenmappe]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Mappe vor Trinkspruch.",
     "image": "ausruestung/B780.jpg",
     "max_copies": 1,
@@ -2108,7 +2918,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF. [Spare Paspel]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Hell am Schnitt. Staub am Stoff.",
     "image": "ausruestung/B213.jpg",
     "max_copies": 1,
@@ -2131,7 +2949,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; ziehe 1 wenn du diesen Zug Sofort spielst. [Marschkette]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_SOFT_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Kette für den Weg, nicht fürs Amt.",
     "image": "ausruestung/B214.jpg",
     "max_copies": 1,
@@ -2154,7 +2986,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmal/Zug heile 1. [Kai-Optik]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Sehen, ob der Kai noch Land ist.",
     "image": "ausruestung/B215.jpg",
     "max_copies": 1,
@@ -2177,7 +3017,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF. [Lizenzsiegel]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Siegel des Staates — nicht des Hauses.",
     "image": "ausruestung/B216.jpg",
     "max_copies": 1,
@@ -2200,7 +3048,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1. [Etappenplatte]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 0,
+          "costReduce": 1
+        }
+      },
+      {
+        "code": "ON_ENTER_DRAW",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Halten vor Stoßen.",
     "image": "ausruestung/B217.jpg",
     "max_copies": 1,
@@ -2223,7 +3086,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Munitionskai]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Ladung, die den Kai erreichbar hält.",
     "image": "ausruestung/B218.jpg",
     "max_copies": 1,
@@ -2246,7 +3124,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1. [Wartezettel]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 0,
+          "costReduce": 1
+        }
+      },
+      {
+        "code": "ON_ENTER_DRAW",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Zettel neben der Ware — oder nicht.",
     "image": "ausruestung/B219.jpg",
     "max_copies": 1,
@@ -2269,7 +3162,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Kaliberkiste Ferne]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Dieselbe Frist für alle.",
     "image": "ausruestung/B220.jpg",
     "max_copies": 1,
@@ -2292,7 +3200,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Clip Kronenhof]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Drängen ohne beschließen.",
     "image": "ausruestung/B221.jpg",
     "max_copies": 1,
@@ -2315,7 +3238,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "+1 ATK/+1 DEF nach Schieben diesen Zug.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Erreichbar, solange der Weg fährt.",
     "image": "ausruestung/B222.jpg",
     "max_copies": 1,
@@ -2338,7 +3269,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK, wenn du diesen Zug Sofort spielst.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Vertrag vor Schlag.",
     "image": "ausruestung/B711.jpg",
     "max_copies": 1,
@@ -2361,7 +3300,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Offener Knoten]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Knoten offen — Mode und Gesetz.",
     "image": "ausruestung/B712.jpg",
     "max_copies": 1,
@@ -2384,7 +3331,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Sandmantel]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Sandfarbe. Perlen sagen die Stadt.",
     "image": "ausruestung/B713.jpg",
     "max_copies": 1,
@@ -2407,7 +3369,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK im Zug nach Bewegung.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Zeichen am Gürtel. Kein Thron.",
     "image": "ausruestung/B714.jpg",
     "max_copies": 1,
@@ -2430,7 +3400,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; +1 DEF wenn unbewegt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Sattel trägt. Er regiert nicht.",
     "image": "ausruestung/B715.jpg",
     "max_copies": 1,
@@ -2453,7 +3438,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; einmal/Zug: bewege Träger 1 Abschnitt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Schlüssel öffnet Pass — nicht Herrschaft.",
     "image": "ausruestung/B716.jpg",
     "max_copies": 1,
@@ -2476,7 +3469,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmal/Zug heile 1 nach Bewegung.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Tuch offen gebunden.",
     "image": "ausruestung/B717.jpg",
     "max_copies": 1,
@@ -2499,7 +3500,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; bei Angriff aus Bewegung +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Marke zeigt Umweg.",
     "image": "ausruestung/B718.jpg",
     "max_copies": 1,
@@ -2522,7 +3531,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK/+1 DEF; einmal/Zug: spiele Einheit 1 billiger (min. 1) wenn Träger bewegt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Kolonne ohne Ende — solange sie fährt.",
     "image": "ausruestung/B719.jpg",
     "max_copies": 1,
@@ -2545,7 +3562,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmal/Zug heile 1. [Satteltasche]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Tasche voll. Straße leer wäre Niederlage.",
     "image": "ausruestung/B720.jpg",
     "max_copies": 1,
@@ -2568,7 +3593,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK gegen beobachtete.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Skizze vor Schuss.",
     "image": "ausruestung/B591.jpg",
     "max_copies": 1,
@@ -2591,7 +3624,28 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen decke 1 auf.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 0,
+          "costReduce": 1
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Buch vor Uniform.",
     "image": "ausruestung/B592.jpg",
     "max_copies": 1,
@@ -2614,7 +3668,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; einmal/Zug: ziehe 1 wenn Sofort gespielt. [Normhelm]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "EQUIP_SOFT_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Helm nach Liste.",
     "image": "ausruestung/B593.jpg",
     "max_copies": 1,
@@ -2637,7 +3705,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK im Zug nach Sofortkarte.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Stempel öffnet Depot.",
     "image": "ausruestung/B594.jpg",
     "max_copies": 1,
@@ -2660,7 +3736,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1. [Normgewehr]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 0,
+          "costReduce": 1
+        }
+      },
+      {
+        "code": "ON_ENTER_DRAW",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Gewehr wartbar. Gleich genug.",
     "image": "ausruestung/B595.jpg",
     "max_copies": 1,
@@ -2683,7 +3774,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; einmal/Zug: decke 1 auf.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Mappe schwer. Wetter gewöhnlich.",
     "image": "ausruestung/B596.jpg",
     "max_copies": 1,
@@ -2706,7 +3805,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmal/Zug heile 1 wenn Ziel beobachtet.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Maß statt Mythos.",
     "image": "ausruestung/B597.jpg",
     "max_copies": 1,
@@ -2729,7 +3836,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; bei Angriff Ziel gilt als beobachtet.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Zuweisung vor Meinung.",
     "image": "ausruestung/B598.jpg",
     "max_copies": 1,
@@ -2752,7 +3867,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK/+1 DEF, wenn Infanterie und Artillerie (oder Panzer) im Abschnitt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Normverband — Maß am Mann, nicht am Mut.",
     "image": "ausruestung/B599.jpg",
     "max_copies": 1,
@@ -2775,7 +3898,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Freigabeformular]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Formular vor Marsch.",
     "image": "ausruestung/B600.jpg",
     "max_copies": 1,
@@ -2798,7 +3929,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK, wenn im Abschnitt eine Unterstützung liegt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Kiste vom Kai.",
     "image": "ausruestung/B531.jpg",
     "max_copies": 1,
@@ -2821,7 +3960,16 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger kostet 1 weniger, wenn Unterstützung im Abschnitt (min. 1).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 0,
+          "costReduce": 1
+        }
+      }
+    ],
     "flavor": "Liste lügt um denselben Anteil.",
     "image": "ausruestung/B532.jpg",
     "max_copies": 1,
@@ -2844,7 +3992,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmal/Zug heile 1. [Dunkelblau]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Dunkelblau nur hier.",
     "image": "ausruestung/B533.jpg",
     "max_copies": 1,
@@ -2867,7 +4023,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK nach Entsatz-Zug (Abschnitt zuletzt angegriffen).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Krause. Keine Sterne.",
     "image": "ausruestung/B534.jpg",
     "max_copies": 1,
@@ -2890,7 +4054,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Beim Ausspielen: ziehe 1 wenn Unterstützung im Spiel.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "ON_ENTER_DRAW",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Zeichen am Kran.",
     "image": "ausruestung/B535.jpg",
     "max_copies": 1,
@@ -2913,7 +4084,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK/+1 DEF in Abschnitten mit Unterstützung.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Jacke der Wegtruppen.",
     "image": "ausruestung/B536.jpg",
     "max_copies": 1,
@@ -2936,7 +4115,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmal/Zug heile 1 wenn Unterstützung liegt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Anteil im Säckchen.",
     "image": "ausruestung/B537.jpg",
     "max_copies": 1,
@@ -2959,7 +4146,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; bei Rücken in angegriffenen Abschnitt +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Fahrplan neben der Stellung.",
     "image": "ausruestung/B538.jpg",
     "max_copies": 1,
@@ -2982,7 +4177,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK/+1 DEF, wenn er in einen zuletzt angegriffenen Abschnitt rückt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Entsatz — wer hält, wird geholt, nicht gefeiert.",
     "image": "ausruestung/B539.jpg",
     "max_copies": 1,
@@ -3005,7 +4208,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; wenn Unterstützung: ziehe 1 beim Angriff.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Schein über den Rest.",
     "image": "ausruestung/B540.jpg",
     "max_copies": 1,
@@ -3028,7 +4239,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF, wenn allein im Abschnitt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Posten des Tals. Kein Amt.",
     "image": "ausruestung/B252.jpg",
     "max_copies": 1,
@@ -3051,7 +4270,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK gegen Einrückende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Stein aus dem eigenen Hang.",
     "image": "ausruestung/B253.jpg",
     "max_copies": 1,
@@ -3074,7 +4301,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Schieferumhang]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Wetter und Tarnung. Kein Pelz.",
     "image": "ausruestung/B254.jpg",
     "max_copies": 1,
@@ -3097,7 +4339,16 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Aufklärung/Artillerie +1 ATK gegen Einrückende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0,
+          "only": "artillerie"
+        }
+      }
+    ],
     "flavor": "Sehen, wer den Zoll umgeht.",
     "image": "ausruestung/B255.jpg",
     "max_copies": 1,
@@ -3120,7 +4371,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Tunnelplatte]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Halten in der Enge.",
     "image": "ausruestung/B256.jpg",
     "max_copies": 1,
@@ -3143,7 +4409,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmal/Zug heile 1. [Leserklammer]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Namen und Datum. Abschrift mitnehmen.",
     "image": "ausruestung/B257.jpg",
     "max_copies": 1,
@@ -3166,7 +4440,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF. [Engenkette]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Kette für den Pass, nicht fürs Depot.",
     "image": "ausruestung/B258.jpg",
     "max_copies": 1,
@@ -3189,7 +4471,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Hangladung]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Ladung aus dem Tal.",
     "image": "ausruestung/B259.jpg",
     "max_copies": 1,
@@ -3212,7 +4509,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Eidstempel]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Stempel ohne Sitz.",
     "image": "ausruestung/B260.jpg",
     "max_copies": 1,
@@ -3235,7 +4547,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "+1 ATK/+1 DEF, wenn 2+ eigene Einheiten im Abschnitt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Nadel der Nähe. Nicht der Mitte.",
     "image": "ausruestung/B261.jpg",
     "max_copies": 1,
@@ -3258,7 +4578,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger heilt 1 am Zugende, wenn er nicht angriff.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "MEDIZIN",
+        "param": {
+          "self": 1,
+          "flank": 0
+        }
+      }
+    ],
     "flavor": "Kasten vor dem Angriff.",
     "image": "ausruestung/B351.jpg",
     "max_copies": 1,
@@ -3281,7 +4609,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; einmalig ziehe 1 bei Heilung.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Zeichen für Medizin und Kontrolle.",
     "image": "ausruestung/B352.jpg",
     "max_copies": 1,
@@ -3304,7 +4640,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF. [Institutionsstoff]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Blassgrün. Feiert nicht. Droht nicht.",
     "image": "ausruestung/B353.jpg",
     "max_copies": 1,
@@ -3327,7 +4671,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +2 DEF, wenn er diesen Zug nicht angreift.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 2
+        }
+      }
+    ],
     "flavor": "Lager ist Etappe.",
     "image": "ausruestung/B354.jpg",
     "max_copies": 1,
@@ -3350,7 +4702,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK gegen aufgeklärte.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Findet Verwundete wie Haushalte.",
     "image": "ausruestung/B355.jpg",
     "max_copies": 1,
@@ -3373,7 +4733,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Schutzplane]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_HEAL_ONCE",
+        "param": {
+          "heal": 1,
+          "perTurn": true
+        }
+      }
+    ],
     "flavor": "Plane über Bett und Stellung.",
     "image": "ausruestung/B356.jpg",
     "max_copies": 1,
@@ -3396,7 +4771,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; nach Ruhezug +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Geschirr der Rasten-Doktrin.",
     "image": "ausruestung/B357.jpg",
     "max_copies": 1,
@@ -3419,7 +4802,16 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Einmalig: heile 2; Träger greift diesen Zug nicht an.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_ONCE_HEAL_DESTROY",
+        "param": {
+          "heal": 2,
+          "noDestroy": true,
+          "noAttack": true
+        }
+      }
+    ],
     "flavor": "Pack für die Krise, die zusammengehört.",
     "image": "ausruestung/B358.jpg",
     "max_copies": 1,
@@ -3442,7 +4834,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; nach Ruhezug heile 1 und +1 ATK.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Rasten — die Institution atmet, dann tritt sie.",
     "image": "ausruestung/B359.jpg",
     "max_copies": 1,
@@ -3465,7 +4865,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; wenn er ruht: heile 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Marke der Pause. Kein Faulheitssiegel.",
     "image": "ausruestung/B360.jpg",
     "max_copies": 1,
@@ -3488,7 +4896,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK. [Knochenplatte]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Knochen hält, wo Stahl allein nicht reicht.",
     "image": "ausruestung/B291.jpg",
     "max_copies": 1,
@@ -3511,7 +4927,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Stirbt Träger: eigene Einheit im Abschnitt +1 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "ON_DESTROY_SECTION_DEF",
+        "param": {
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Name im Dienst am Körper.",
     "image": "ausruestung/B292.jpg",
     "max_copies": 1,
@@ -3534,7 +4964,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK, wenn in diesem Zug eigene Einheit zerstört.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Erinnerung, keine Erlaubnis.",
     "image": "ausruestung/B293.jpg",
     "max_copies": 1,
@@ -3557,7 +4995,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +2 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 2
+        }
+      }
+    ],
     "flavor": "Schutz vor Prunk.",
     "image": "ausruestung/B294.jpg",
     "max_copies": 1,
@@ -3580,7 +5026,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF. [Schmiedehammer]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Werkstatt vor Feldzeichen.",
     "image": "ausruestung/B295.jpg",
     "max_copies": 1,
@@ -3603,7 +5057,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK. [Schwere Platte]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Schwer genug. Nicht voller.",
     "image": "ausruestung/B296.jpg",
     "max_copies": 1,
@@ -3626,7 +5088,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; überlebt Angriff: +1 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Halten und antworten.",
     "image": "ausruestung/B297.jpg",
     "max_copies": 1,
@@ -3649,7 +5119,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Aufklärung/Elite: Feind aufdecken; Träger +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Sieht für die Lebenden.",
     "image": "ausruestung/B298.jpg",
     "max_copies": 1,
@@ -3672,7 +5150,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Infanterie-Träger +1 ATK und +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Gepanzerter Fuß — Platte und Schritt der Ossaria.",
     "image": "ausruestung/B299.jpg",
     "max_copies": 1,
@@ -3695,7 +5181,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; einmalig negiere 1 Schaden.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Maske kenntlich. Nicht Priester.",
     "image": "ausruestung/B300.jpg",
     "max_copies": 1,
@@ -3718,7 +5212,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF. [Messgerät]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Gerät misst. Es urteilt nicht.",
     "image": "ausruestung/B471.jpg",
     "max_copies": 1,
@@ -3741,7 +5243,11 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Angriffe gegen Träger: Angreifer gilt als aufgeklärt.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "REVEAL_STRIKE"
+      }
+    ],
     "flavor": "Marke am Körper — nicht am Wert.",
     "image": "ausruestung/B472.jpg",
     "max_copies": 1,
@@ -3764,7 +5270,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK; ziehe 1 wenn du diesen Zug Sofort spielst. [Technische Linie]",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "EQUIP_SOFT_DRAW",
+        "param": {
+          "draw": 1
+        }
+      }
+    ],
     "flavor": "Helles Grau. Dünne Linie.",
     "image": "ausruestung/B473.jpg",
     "max_copies": 1,
@@ -3787,7 +5307,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger deckt einmal/Zug kostenlos auf.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "HAND_PEEK",
+        "param": {
+          "free": true
+        }
+      }
+    ],
     "flavor": "Sehen ohne Herrschaft.",
     "image": "ausruestung/B474.jpg",
     "max_copies": 1,
@@ -3810,7 +5337,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Beim Ausspielen: decke 1 auf.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
+        }
+      }
+    ],
     "flavor": "Koffer der Probe.",
     "image": "ausruestung/B475.jpg",
     "max_copies": 1,
@@ -3833,7 +5367,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 ATK und +1 DEF gegen aufgeklärte.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 1,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Rechner hilft. Er regiert nicht.",
     "image": "ausruestung/B476.jpg",
     "max_copies": 1,
@@ -3856,7 +5398,21 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger: einmalig Angriff abbrechen → heile 2 und ziehe 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_ONCE_HEAL_DESTROY",
+        "param": {
+          "heal": 2,
+          "noDestroy": true
+        }
+      },
+      {
+        "code": "ON_ENTER_DRAW",
+        "param": {
+          "value": 1
+        }
+      }
+    ],
     "flavor": "Siegel des Abbruchs.",
     "image": "ausruestung/B477.jpg",
     "max_copies": 1,
@@ -3879,7 +5435,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +1 DEF; bei Aufdecken: +1 ATK bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Protokoll vor Pathos.",
     "image": "ausruestung/B478.jpg",
     "max_copies": 1,
@@ -3902,7 +5466,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger +2 ATK gegen aufgeklärte.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_STAT",
+        "param": {
+          "atk": 2,
+          "def": 0
+        }
+      }
+    ],
     "flavor": "Punktfeuer — ein Rohr, ein Name, ein Treffer.",
     "image": "ausruestung/B479.jpg",
     "max_copies": 1,
@@ -3925,7 +5497,17 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung"
     ],
     "text": "Träger deckt auf beim Angriff; Ziel −1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "REVEAL_STRIKE"
+      },
+      {
+        "code": "EQUIP_ON_ATTACK_DAMAGE",
+        "param": {
+          "debuffDef": 1
+        }
+      }
+    ],
     "flavor": "Ort festnageln.",
     "image": "ausruestung/B480.jpg",
     "max_copies": 1,

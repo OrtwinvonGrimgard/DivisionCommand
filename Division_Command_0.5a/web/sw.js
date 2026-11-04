@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-dokfix';
+const CACHE = 'divcmd-fxwire1';
 const ASSETS = [
   './',
   './index.html',

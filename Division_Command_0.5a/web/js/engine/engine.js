@@ -388,6 +388,18 @@
         const n = (player.support || []).filter((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'UNIT_DISCOUNT')).length;
         cost -= n;
       }
+      if (player && player.flags && player.flags.costNext && player.flags.costNext.length) {
+        const want = def.typ === 'Soforteinsatz' ? 'Soforteinsatz'
+          : def.typ === 'Ausrüstung' ? 'Ausrüstung'
+          : (def.typ === 'Infanterie' || isInfantry(def)) ? 'Infanterie'
+          : 'Einheit';
+        const ix = player.flags.costNext.findIndex((c) => c.type === want || (c.type === 'Einheit' && want !== 'Soforteinsatz' && want !== 'Ausrüstung'));
+        if (ix >= 0) {
+          const red = Number(player.flags.costNext[ix].amount || 1);
+          cost = Math.max(want === 'Soforteinsatz' ? 0 : 1, cost - red);
+          player.flags.costNext.splice(ix, 1);
+        }
+      }
       if (player && player.flags && player.flags.tacticDiscount && def.typ !== 'Soforteinsatz') {
         cost -= 1;
       }
@@ -445,16 +457,41 @@
       }); // nächster Schritt im Ablauf
       inst.attachments = inst.attachments || [];
       inst.flags = inst.flags || {};
-      inst.attachments.forEach((eq) => { // jedes Element
-        const ed = this.defOf(eq); // unveränderliche Bindung in diesem Block
-        (ed.effects || []).forEach((e) => { // jedes Element
-          if (e.code === 'BUFF' || e.code === 'AURA_STAT') { // Zweig nur bei zutreffender Bedingung
-            atk += Number(e.param.atk || 0); // nächster Schritt im Ablauf
-            dv += Number(e.param.def || 0); // nächster Schritt im Ablauf
+      const locEq = this.findInst(inst.uid);
+      inst.attachments.forEach((eq) => {
+        const ed = this.defOf(eq);
+        (ed.effects || []).forEach((e) => {
+          const p = e.param || {};
+          if (e.code === 'BUFF' || e.code === 'AURA_STAT' || e.code === 'EQUIP_STAT' || e.code === 'CARRIER_ATK' || e.code === 'CARRIER_DEF') {
+            // EQUIP_STAT ATK from attachments; DEF already applied to inst.def on attach
+            if (e.code === 'EQUIP_STAT' || e.code === 'CARRIER_ATK' || e.code === 'CARRIER_DEF') {
+              atk += Number(p.atk || (e.code === 'CARRIER_ATK' ? (p.value || 0) : 0) || 0);
+              // DEF is baked into inst.def/defMax on attach — do not add again to combat HP display via dv from printed
+            } else {
+              atk += Number(p.atk || 0);
+              dv += Number(p.def || 0);
+            }
           }
-        }); // nächster Schritt im Ablauf
-      }); // nächster Schritt im Ablauf
-      if (inst.flags.buffAtk) atk += inst.flags.buffAtk;
+          if (e.code === 'EQUIP_STANDARD') {
+            // base DEF baked on attach; conditional ATK if second infantry in section
+            if (locEq && locEq.zone === 'front' && owner) {
+              const mates = this.frontList(owner).filter((l) => l.section === locEq.section && l.inst.uid !== inst.uid && isInfantry(this.defOf(l.inst)));
+              if (mates.length >= 1) atk += Number(p.atk_if_second || 1);
+            }
+          }
+          if (e.code === 'CARRIER_FIRST_ATTACK_ATK' && inst.flags && !inst.flags._firstAtkUsed && !inst.attackUsed) {
+            atk += Number(p.atk || 1);
+          }
+          if (e.code === 'PASSIVE_ATK') atk += Number(p.atk || 0);
+          if (e.code === 'PASSIVE_DEF') dv += Number(p.def || 0);
+        });
+      });
+      // unit own passives
+      (def.effects || []).forEach((e) => {
+        if (e.code === 'PASSIVE_ATK') atk += Number((e.param || {}).atk || 0);
+        if (e.code === 'PASSIVE_DEF') dv += Number((e.param || {}).def || 0);
+      });
+      // buffAtk already counted once above from flags — do not double
       if (inst.flags.buffDef) dv += inst.flags.buffDef;
       if (!inst.facedown && inst.summonedTurn === this.state.turn && owner && this._hasDoctrine(owner, 'BLITZ_SUMMON_ATK')) {
         if (hasTag(def, 'panzer')) atk += 1;
@@ -462,6 +499,8 @@
       if (inst.flags && inst.flags.kavUntil === this.state.turn) atk += 2;
       if (inst.flags && inst.flags.lageUntil === this.state.turn) atk += 1;
       if (inst.flags && inst.flags.ehrenUntil === this.state.turn) atk += 2;
+      if (inst.flags && inst.flags.tempAtkUntil === this.state.turn) atk += Number(inst.flags.tempAtk || 0);
+      if (inst.flags && inst.flags.tempAtkUntil === this.state.turn && inst.flags.tempDef) {/* def baked */}
       if (inst.flags && inst.flags.eiferUntil === this.state.turn) atk += 3;
       if (inst.flags && inst.flags.standUntil === this.state.turn) atk += 2;
       if (inst.flags && inst.flags.formUntil === this.state.turn) atk += 1;
@@ -881,8 +920,20 @@
       }
       if (def.typ === 'Ausrüstung') { // Zweig nur bei zutreffender Bedingung
         let hosts = this.frontList(p);
-        if ((def.effects || []).some((x) => x.param && x.param.only === 'infanterie')) {
-          hosts = hosts.filter((h) => isInfantry(this.defOf(h.inst)));
+        const onlyEff = (def.effects || []).find((x) => x.param && x.param.only);
+        if (onlyEff) {
+          const only = String(onlyEff.param.only);
+          hosts = hosts.filter((h) => {
+            const hd = this.defOf(h.inst);
+            return only.split('|').some((o) => {
+              if (o === 'infanterie') return isInfantry(hd);
+              if (o === 'panzer') return hasTag(hd, 'panzer') || hd.typ === 'Panzer';
+              if (o === 'artillerie') return isArtillery(hd) || hd.typ === 'Artillerie';
+              if (o === 'aufklaerung') return hd.typ === 'Aufklärung' || hasTag(hd, 'aufklaerung');
+              if (o === 'elite') return hd.typ === 'Elite' || hasTag(hd, 'elite');
+              return hasTag(hd, o) || hd.typ === o;
+            });
+          });
         }
         if (!hosts.length) {
           p.ap += cost; // nächster Schritt im Ablauf
@@ -1469,16 +1520,36 @@
         host.inst.attachments.push(card);
         const ed = this.defOf(card);
         (ed.effects || []).forEach((x) => {
-          if (x.code === 'EQUIP_STAT') {
-            host.inst.flags.buffAtk = (host.inst.flags.buffAtk || 0) + Number(x.param.atk || 0);
-            host.inst.def = (host.inst.def || 0) + Number(x.param.def || 0);
-            host.inst.defMax = (host.inst.defMax || host.inst.def) + Number(x.param.def || 0);
+          const xp = x.param || {};
+          if (x.code === 'EQUIP_STAT' || x.code === 'CARRIER_DEF' || x.code === 'CARRIER_ATK') {
+            // ATK comes from currentAtkDef reading attachment; bake DEF into HP pool
+            const dv = Number(xp.def || (x.code === 'CARRIER_DEF' ? (xp.value || xp.def || 0) : 0) || 0);
+            if (dv) {
+              host.inst.def = (host.inst.def || 0) + dv;
+              host.inst.defMax = (host.inst.defMax || host.inst.def) + dv;
+            }
+          }
+          if (x.code === 'EQUIP_STANDARD') {
+            const dv = Number(xp.def || 1);
+            host.inst.def = (host.inst.def || 0) + dv;
+            host.inst.defMax = (host.inst.defMax || host.inst.def) + dv;
+          }
+          if (x.code === 'ON_ENTER_DRAW') this._draw(p, Number(xp.value || 1));
+          if (x.code === 'REVEAL') {
+            let n = Number(xp.count || 1);
+            this.frontList(this.opponent(p.id)).forEach((l) => {
+              if (n > 0 && l.inst.facedown) { l.inst.facedown = false; n -= 1; }
+            });
+          }
+          if (x.code === 'EQUIP_ONCE_HEAL_DESTROY' && xp.noDestroy) {
+            // available as activated later; mark charge
+            host.inst.flags.equipHealCharge = Number(xp.heal || 2);
+            if (xp.noAttack) host.inst.flags.noAttack = true;
           }
         });
         this._evt('equip', ed, p.name + ' rüstet ' + this.defOf(host.inst).name + ' mit ' + ed.name + ' aus.');
-        // Ereignis für die Rundenübersicht
-        this.state.pending = null; // offene Wahl des Spielers
-        return { ok: true }; // Ergebnis an den Aufrufer
+        this.state.pending = null;
+        return { ok: true };
       }
       if (pend.kind === 'instant-target') { // Zweig nur bei zutreffender Bedingung
         if (!pend.selected) pend.selected = []; // Zweig nur bei zutreffender Bedingung
@@ -2191,10 +2262,9 @@
     // Ob der Einsatz ein Ziel braucht.
     _instantNeedsTarget(def) { // nächster Schritt im Ablauf
       const codes = (def.effects || []).map((e) => e.code); // Liste umformen
-      return codes.some((c) => // Wert zurückgeben
-        ['DEAL_DAMAGE', 'HEAL', 'DESTROY', 'SACRIFICE', 'BUFF', 'RETURN_TO_HAND', 'MOVE_FRONT', 'OUT_OF_COMBAT', 'PLACE_TOKEN', 'REMOVE_TOKEN', 'REVEAL'].includes(c)
-        // nächster Schritt im Ablauf
-      ) || /eine |gewählte|ziel|einheit/i.test(def.text || ''); // nächster Schritt im Ablauf
+      return codes.some((c) =>
+        ['DEAL_DAMAGE', 'HEAL', 'DESTROY', 'DESTROY_IF_DEF', 'SACRIFICE', 'SACRIFICE_INFANTRY_DAMAGE', 'BUFF', 'SELF_DAMAGE', 'RETURN_TO_HAND', 'MOVE_FRONT', 'MOVE_SLOTS', 'OUT_OF_COMBAT', 'PLACE_TOKEN', 'REMOVE_TOKEN', 'REVEAL', 'MARK_OBSERVED', 'EXTRA_ATTACK', 'REPLACE_UNIT', 'BUFF_SECTION'].includes(c)
+      ) || /eine |gewählte|ziel|einheit|wähle/i.test(def.text || '');
     }
 
     // Kandidatenliste aus dem Kartentext.
@@ -2238,21 +2308,48 @@
       this._evt('instant', def, p.name + ' spielt ' + def.name + '.'); // Ereignis für die Rundenübersicht
       const effects = def.effects && def.effects.length ? def.effects : this._inferEffects(def); // Effekt aus dem Fließtext raten
       effects.forEach((e) => this._applyEffect(p, inst, e, targetUid)); // einen Effect-Code ausführen
+      // Soft-draw equipment: draw when a Soforteinsatz is played
+      if (def.typ === 'Soforteinsatz') {
+        this.frontList(p).forEach((l) => {
+          (l.inst.attachments || []).forEach((eq) => {
+            const ed = this.defOf(eq);
+            (ed.effects || []).forEach((e) => {
+              if (e.code === 'EQUIP_SOFT_DRAW' && !(eq.flags && eq.flags.softDrew === this.state.turn)) {
+                this._draw(p, Number((e.param || {}).draw || 1));
+                eq.flags = eq.flags || {};
+                eq.flags.softDrew = this.state.turn;
+              }
+            });
+          });
+        });
+      }
     }
 
     // Falls keine Codes: grob aus dem Fließtext lesen.
     _inferEffects(def) { // Effekt aus dem Fließtext raten
-      const t = def.text || ''; // unveränderliche Bindung in diesem Block
-      const out = []; // unveränderliche Bindung in diesem Block
-      const dmg = t.match(/(\d+)\s*Schaden/i); // unveränderliche Bindung in diesem Block
-      if (dmg) out.push({ code: 'DEAL_DAMAGE', param: { value: +dmg[1] } }); // Zweig nur bei zutreffender Bedingung
-      const draw = t.match(/(\d+)\s*Karten?/i); // unveränderliche Bindung in diesem Block
-      if (/zieh/i.test(t) && draw) out.push({ code: 'DRAW', param: { value: +draw[1] } }); // Zweig nur bei zutreffender Bedingung
-      if (/AP/.test(t) && /erhält|erhalt|gewinnt/i.test(t)) { // Zweig nur bei zutreffender Bedingung
-        const ap = t.match(/(\d+)\s*AP/i); // unveränderliche Bindung in diesem Block
-        if (ap) out.push({ code: 'GAIN_AP', param: { value: +ap[1] } }); // Zweig nur bei zutreffender Bedingung
+      const t = def.text || '';
+      const out = [];
+      const dmg = t.match(/(\d+)\s*Schaden/i);
+      if (dmg && !/Allen Feinden/i.test(t)) out.push({ code: 'DEAL_DAMAGE', param: { value: +dmg[1] } });
+      if (/Allen Feinden\s*(\d+)\s*Schaden/i.test(t)) out.push({ code: 'MASS_DAMAGE', param: { value: +t.match(/Allen Feinden\s*(\d+)/i)[1] } });
+      const draw = t.match(/ziehe\s*(\d+)/i) || t.match(/(\d+)\s*Karten?/i);
+      if (/zieh/i.test(t) && draw) out.push({ code: 'DRAW', param: { value: +draw[1] } });
+      if (/AP/.test(t) && /erhält|erhalt|gewinnt/i.test(t)) {
+        const ap = t.match(/(\d+)\s*AP/i);
+        if (ap) out.push({ code: 'GAIN_AP', param: { value: +ap[1] } });
       }
-      return out; // Wert zurückgeben
+      const heal = t.match(/Heile\s*(\d+)/i);
+      if (heal) out.push({ code: 'HEAL', param: { value: +heal[1] } });
+      const atk = t.match(/\+(\d+)\s*ATK/i);
+      if (atk && /bis Zugende|diesen Zug/i.test(t)) out.push({ code: 'BUFF', param: { atk: +atk[1], until: 'turn' } });
+      const defb = t.match(/\+(\d+)\s*DEF/i);
+      if (defb && /bis Zugende|diesen Zug/i.test(t) && !atk) out.push({ code: 'BUFF', param: { def: +defb[1], until: 'turn' } });
+      if (/Träger\s*\+(\d+)\s*ATK|Träger\s*\+(\d+)\s*DEF/i.test(t)) {
+        const a = t.match(/Träger[^]*?\+(\d+)\s*ATK/i);
+        const d = t.match(/Träger[^]*?\+(\d+)\s*DEF/i);
+        out.push({ code: 'EQUIP_STAT', param: { atk: a ? +a[1] : 0, def: d ? +d[1] : 0 } });
+      }
+      return out;
     }
 
     // Ein einzelner Effect-Code.
@@ -2266,10 +2363,22 @@
         const loc = this.findInst(targetUid); // unveränderliche Bindung in diesem Block
         if (loc) this._damage(loc.inst, Number(par.value || 1), { tag: par.tag }); // Verteidigung verringern
       } else if (code === 'HEAL') { // Zweig nur bei zutreffender Bedingung
-        const loc = this.findInst(targetUid); // unveränderliche Bindung in diesem Block
-        if (loc) { // Zweig nur bei zutreffender Bedingung
-          const v = Number(par.value || par.host || 1); // unveränderliche Bindung in diesem Block
-          loc.inst.def = Math.min(loc.inst.defMax || loc.inst.def, (loc.inst.def || 0) + v); // nächster Schritt im Ablauf
+        const v = Number(par.value || par.host || 1);
+        if (par.all) {
+          this.frontList(p).forEach((l) => {
+            const d = this.defOf(l.inst);
+            if (par.filter) {
+              const ok = String(par.filter).split('|').some((f) =>
+                (f === 'panzer' && (hasTag(d, 'panzer') || d.typ === 'Panzer')) ||
+                (f === 'artillerie' && (isArtillery(d) || d.typ === 'Artillerie'))
+              );
+              if (!ok) return;
+            }
+            l.inst.def = Math.min(l.inst.defMax || l.inst.def, (l.inst.def || 0) + v);
+          });
+        } else {
+          const loc = this.findInst(targetUid);
+          if (loc) loc.inst.def = Math.min(loc.inst.defMax || loc.inst.def, (loc.inst.def || 0) + v);
         }
       } else if (code === 'DESTROY') { // Zweig nur bei zutreffender Bedingung
         const loc = this.findInst(targetUid); // unveränderliche Bindung in diesem Block
@@ -2285,10 +2394,30 @@
           // Karte vom Feld auf den Friedhof
         }
       } else if (code === 'BUFF') { // Zweig nur bei zutreffender Bedingung
-        const loc = this.findInst(targetUid); // unveränderliche Bindung in diesem Block
-        if (loc) { // Zweig nur bei zutreffender Bedingung
-          loc.inst.flags.buffAtk = (loc.inst.flags.buffAtk || 0) + Number(par.atk || 0); // nächster Schritt im Ablauf
-          loc.inst.flags.buffDef = (loc.inst.flags.buffDef || 0) + Number(par.def || 0); // nächster Schritt im Ablauf
+        let loc = this.findInst(targetUid);
+        if (!loc && par.enemy) {
+          const foeU = this.frontList(opp)[0];
+          if (foeU) loc = foeU;
+        }
+        if (!loc && !par.enemy) {
+          const own = this.frontList(p)[0];
+          if (own) loc = own;
+        }
+        if (loc) {
+          const inst = loc.inst || loc;
+          inst.flags = inst.flags || {};
+          if (par.until === 'turn') {
+            inst.flags.tempAtk = (inst.flags.tempAtk || 0) + Number(par.atk || 0);
+            inst.flags.tempAtkUntil = this.state.turn;
+          } else {
+            inst.flags.buffAtk = (inst.flags.buffAtk || 0) + Number(par.atk || 0);
+          }
+          if (par.def && Number(par.def) > 0) {
+            inst.def = (inst.def || 0) + Number(par.def);
+            inst.defMax = (inst.defMax || inst.def) + Number(par.def);
+          } else if (par.def && Number(par.def) < 0) {
+            inst.def = Math.max(1, (inst.def || 0) + Number(par.def));
+          }
         }
       } else if (code === 'REVEAL') { // Zweig nur bei zutreffender Bedingung
         const n = Number(par.count || 1); // unveränderliche Bindung in diesem Block
@@ -2339,8 +2468,170 @@
         this._log('Hand des Gegners: ' + opp.hand.map((c) => this.defOf(c).name).join(', ') || '(leer)'); // Zeile ins Protokoll
       } else if (code === 'LOOK_TOP') { // Zweig nur bei zutreffender Bedingung
         const n = Number(par.count || 2); // unveränderliche Bindung in diesem Block
-        this._log('Deckspitze: ' + p.deck.slice(0, n).map((c) => this.defOf(c).name).join(', ')); // Zeile ins Protokoll
+        if (par.infantryToHand && p.deck.length) {
+          const top = p.deck[0];
+          const td = this.defOf(top);
+          p.deck.shift();
+          if (isInfantry(td) || td.typ === 'Infanterie') { p.hand.push(top); this._log(td.name + ' auf die Hand.'); }
+          else { p.grave.push(top); this._log(td.name + ' abgeworfen.'); }
+        } else {
+          this._log('Deckspitze: ' + p.deck.slice(0, n).map((c) => this.defOf(c).name).join(', '));
+        }
+      } else if (code === 'MASS_DAMAGE') {
+        this.frontList(opp).forEach((l) => this._damage(l.inst, Number(par.value || 1), { tag: par.tag || 'mass' }));
+      } else if (code === 'DESTROY_IF_DEF') {
+        const loc = this.findInst(targetUid);
+        if (loc) {
+          const st = this.currentAtkDef(loc.inst);
+          if (st.def <= Number(par.maxDef || 2)) this._destroy(loc);
+          else this._log(this.defOf(loc.inst).name + ' hat zu viel DEF.');
+        }
+      } else if (code === 'BUFF_ALL_OWN' || code === 'BUFF_SECTION') {
+        const filter = par.filter;
+        let units = this.frontList(p);
+        if (code === 'BUFF_SECTION' && targetUid) {
+          const anchor = this.findInst(targetUid);
+          if (anchor) units = units.filter((l) => l.section === anchor.section);
+        }
+        units.forEach((l) => {
+          const d = this.defOf(l.inst);
+          if (filter === 'infanterie' && !isInfantry(d)) return;
+          if (filter === 'artillerie' && !isArtillery(d)) return;
+          if (filter === 'panzer' && !(hasTag(d, 'panzer') || d.typ === 'Panzer')) return;
+          if (par.atk) {
+            if (par.until === 'turn') {
+              l.inst.flags.tempAtk = (l.inst.flags.tempAtk || 0) + Number(par.atk);
+              l.inst.flags.tempAtkUntil = this.state.turn;
+            } else {
+              l.inst.flags.buffAtk = (l.inst.flags.buffAtk || 0) + Number(par.atk);
+            }
+          }
+          if (par.def) {
+            l.inst.def = (l.inst.def || 0) + Number(par.def);
+            l.inst.defMax = (l.inst.defMax || l.inst.def) + Number(par.def);
+          }
+        });
+      } else if (code === 'DRAW_DISCARD') {
+        this._draw(p, Number(par.draw || 2));
+        // discard leftmost / first hand card as auto-choice if no pending UI
+        if (p.hand.length && Number(par.discard || 1) > 0) {
+          const dumped = p.hand.shift();
+          p.grave.push(dumped);
+          this._log('Abgeworfen: ' + this.defOf(dumped).name);
+        }
+      } else if (code === 'COST_NEXT') {
+        p.flags = p.flags || {};
+        p.flags.costNext = p.flags.costNext || [];
+        p.flags.costNext.push({ type: par.type || 'Einheit', amount: Number(par.amount || 1), fromGrave: !!par.fromGrave });
+        if (par.type === 'Soforteinsatz' || par.type === 'Ausrüstung') p.flags.tacticDiscount = true;
+      } else if (code === 'SELF_DAMAGE') {
+        const loc = this.findInst(targetUid) || this.frontList(p)[0];
+        if (loc && loc.inst) this._damage(loc.inst, Number(par.value || 1), { tag: 'self' });
+        else if (loc) this._damage(loc, Number(par.value || 1), { tag: 'self' });
+      } else if (code === 'EXTRA_ATTACK') {
+        const loc = this.findInst(targetUid);
+        if (loc) { loc.inst.attackUsed = false; loc.inst.flags.exhausted = false; loc.inst.flags.extraAtk = true; }
+      } else if (code === 'RETURN_UNIT_GRAVE') {
+        const want = String(par.filter || '');
+        const ix = p.grave.findIndex((c) => {
+          const d = this.defOf(c);
+          if (!want) return d.typ !== 'Soforteinsatz' && d.typ !== 'Ausrüstung';
+          return want.split('|').some((f) => (f === 'panzer' && (hasTag(d, 'panzer') || d.typ === 'Panzer')) || (f === 'artillerie' && (isArtillery(d) || d.typ === 'Artillerie')));
+        });
+        if (ix >= 0) {
+          const c = p.grave.splice(ix, 1)[0];
+          c.def = Number(par.def || 2);
+          c.defMax = Number(par.def || 2);
+          const slot = this.emptySlots(p)[0];
+          if (slot) { p.front[slot.section][slot.row] = c; this._log(this.defOf(c).name + ' kehrt zurück.'); }
+          else p.hand.push(c);
+        }
+      } else if (code === 'MOVE_SLOTS') {
+        // soft: mark movable; full UI is pending — shift one slot toward C if possible
+        const loc = this.findInst(targetUid);
+        if (loc && loc.zone === 'front') {
+          const order = ['L', 'C', 'R'];
+          const i = order.indexOf(loc.section);
+          const ni = Math.min(2, Math.max(0, i + (i === 0 ? 1 : -1)));
+          if (!p.front[order[ni]][loc.row]) {
+            p.front[loc.section][loc.row] = null;
+            p.front[order[ni]][loc.row] = loc.inst;
+            if (par.defBonus || true) {
+              /* optional */
+            }
+          }
+        }
+      } else if (code === 'PLAY_INF_DISCOUNT') {
+        p.flags = p.flags || {};
+        p.flags.costNext = p.flags.costNext || [];
+        p.flags.costNext.push({ type: 'Infanterie', amount: Number(par.amount || 1) });
+      } else if (code === 'MARK_OBSERVED' || code === 'REVEAL_STRIKE') {
+        const loc = this.findInst(targetUid);
+        if (loc) { loc.inst.facedown = false; loc.inst.flags.observed = true; }
+        else {
+          let n = Number(par.count || 1);
+          this.frontList(opp).forEach((l) => { if (n > 0) { l.inst.facedown = false; l.inst.flags.observed = true; n -= 1; } });
+        }
+      } else if (code === 'CLEAR_SUPPORT_OR_DEBUFF') {
+        const foe = this.opponent(p.id);
+        const ix = (foe.support || []).findIndex((x) => x);
+        if (ix >= 0) {
+          const card = foe.support[ix];
+          foe.support[ix] = null;
+          foe.grave.push(card);
+          this._log('Unterstützung entfernt: ' + this.defOf(card).name);
+        } else {
+          const loc = this.findInst(targetUid);
+          if (loc) loc.inst.flags.buffAtk = (loc.inst.flags.buffAtk || 0) - 2;
+        }
+      } else if (code === 'DRAW_AND_PLAY_INFANTRY') {
+        const ix = p.deck.findIndex((c) => isInfantry(this.defOf(c)) || this.defOf(c).typ === 'Infanterie');
+        if (ix >= 0) {
+          const c = p.deck.splice(ix, 1)[0];
+          p.hand.push(c);
+          p.flags = p.flags || {};
+          p.flags.freePlayInfUid = c.uid;
+          this._log('Marschbefehl: ' + this.defOf(c).name + ' auf die Hand (spielbar).');
+        }
+      } else if (code === 'RETURN_INFANTRY_FROM_DISCARD') {
+        const ix = p.grave.findIndex((c) => isInfantry(this.defOf(c)) || this.defOf(c).typ === 'Infanterie');
+        if (ix >= 0) { const c = p.grave.splice(ix, 1)[0]; p.hand.push(c); }
+      } else if (code === 'SACRIFICE_INFANTRY_DAMAGE') {
+        // targetUid is enemy; sacrifice cheapest own infantry first
+        const own = this.frontList(p).find((l) => isInfantry(this.defOf(l.inst)));
+        if (own) this._destroy(own);
+        const loc = this.findInst(targetUid);
+        if (loc) this._damage(loc.inst, Number(par.damage || 3), { tag: 'sacrifice' });
+      } else if (code === 'REPLACE_UNIT') {
+        // after SACRIFICE: play cheapest hand unit into freed slot if any
+        const slot = this.emptySlots(p)[0];
+        const handU = p.hand.find((c) => {
+          const d = this.defOf(c);
+          return d.typ === 'Infanterie' || d.typ === 'Panzer' || d.typ === 'Artillerie' || d.typ === 'Einheit' || d.typ === 'Elite' || d.typ === 'Aufklärung';
+        });
+        if (slot && handU) {
+          p.hand = p.hand.filter((c) => c.uid !== handU.uid);
+          handU.def = (handU.def || this.defOf(handU).def || 1);
+          handU.defMax = handU.def;
+          p.front[slot.section][slot.row] = handU;
+          handU.def = (handU.def || 0) + 1;
+          handU.defMax = (handU.defMax || handU.def) + 1;
+        }
+      } else if (code === 'ON_ENTER_DRAW') {
+        this._draw(p, Number(par.value || 1));
+      } else if (code === 'ON_ENTER_BUFF') {
+        if (par.heal) {
+          const loc = this.findInst(targetUid);
+          if (loc) loc.inst.def = Math.min(loc.inst.defMax || loc.inst.def, (loc.inst.def || 0) + Number(par.heal));
+        }
+        if (par.atk) {
+          this.frontList(p).forEach((l) => {
+            l.inst.flags.buffAtk = (l.inst.flags.buffAtk || 0) + Number(par.atk);
+            l.inst.flags.ehrenUntil = this.state.turn;
+          });
+        }
       }
+      // BUFF with until/enemy already partially handled — extend base BUFF
     }
 
     _applyMech(p) {
@@ -2855,7 +3146,24 @@
       }
       const statsA = this.currentAtkDef(A); // unveränderliche Bindung in diesem Block
       const statsT = this.currentAtkDef(T); // unveränderliche Bindung in diesem Block
+      if ((A.attachments || []).some((c) => (this.defOf(c).effects || []).some((x) => x.code === 'CARRIER_FIRST_ATTACK_ATK'))) {
+        A.flags = A.flags || {};
+        A.flags._firstAtkUsed = true;
+      }
+      // on-attack equipment self-damage / bonus
+      (A.attachments || []).forEach((eq) => {
+        (this.defOf(eq).effects || []).forEach((e) => {
+          if (e.code === 'EQUIP_ON_ATTACK_DAMAGE' && e.param && e.param.self) {
+            this._damage(A, Number(e.param.self), { tag: 'equip-self' });
+          }
+        });
+      });
       let dmgToT = statsA.atk;
+      (A.attachments || []).forEach((eq) => {
+        (this.defOf(eq).effects || []).forEach((e) => {
+          if (e.code === 'EQUIP_ON_ATTACK_DAMAGE' && e.param && e.param.bonus) dmgToT += Number(e.param.bonus);
+        });
+      });
       let dmgToA = tLoc.zone === 'front' ? statsT.atk : 0;
       if ((this.defOf(A).effects || []).some((x) => x.code === 'AMBUSH') && !fog) dmgToT += 1;
       if ((this.defOf(A).effects || []).some((x) => x.code === 'FEUERUEBERLEGENHEIT') && !hasTag(this.defOf(T), 'gepanzert')) dmgToT += 1;
@@ -3004,6 +3312,16 @@
       this._fireHealTriggers(inst, amount);
     }
     _damage(inst, amount, meta) {
+      // Equipment: ignore first damage once
+      if (inst && amount > 0) {
+        const ignoreEq = (inst.attachments || []).find((eq) => (this.defOf(eq).effects || []).some((x) => x.code === 'EQUIP_IGNORE_FIRST_DAMAGE') && !(eq.flags && eq.flags.usedIgnore));
+        if (ignoreEq) {
+          ignoreEq.flags = ignoreEq.flags || {};
+          ignoreEq.flags.usedIgnore = true;
+          this._log(this.defOf(ignoreEq).name + ': erster Schaden ignoriert.');
+          amount = 0;
+        }
+      }
       if (meta && meta.tag === 'air') {
         const loc = this.findInst(inst.uid);
         if (loc && loc.zone === 'front') {
@@ -3058,6 +3376,20 @@
       if (inst.def < 0) inst.def = 0;
       this._log(def.name + ' nimmt ' + amount + ' Schaden → V ' + inst.def + '/' + inst.defMax + '.'); // Zeile ins Protokoll
       if (inst.def > 0) this._fireDamageTriggers(inst, amount);
+      // equipment react
+      (inst.attachments || []).forEach((eq) => {
+        const ed = this.defOf(eq);
+        (ed.effects || []).forEach((e) => {
+          if (e.code === 'EQUIP_HEAL_ONCE' && !eq.flags) eq.flags = {};
+          if (e.code === 'EQUIP_HEAL_ONCE' && !(eq.flags && eq.flags.usedHeal)) {
+            const heal = Number((e.param || {}).heal || 1);
+            inst.def = Math.min(inst.defMax || inst.def, (inst.def || 0) + heal);
+            eq.flags = eq.flags || {};
+            eq.flags.usedHeal = true;
+            this._log(ed.name + ': heilt ' + heal + '.');
+          }
+        });
+      });
     }
 
     // Auf den Friedhof, Stellung räumen.
@@ -3085,8 +3417,36 @@
       const inst = loc.inst; // unveränderliche Bindung in diesem Block
       const def = this.defOf(inst); // unveränderliche Bindung in diesem Block
       this._evt('destroy', def, def.name + ' ist zerstört.', { owner: loc.player.id, uid: inst.uid });
-      inst.attachments.forEach((eq) => loc.player.grave.push(eq)); // Friedhof
-      inst.attachments = []; // nächster Schritt im Ablauf
+      const atts = (inst.attachments || []).slice();
+      atts.forEach((eq) => {
+        const ed = this.defOf(eq);
+        (ed.effects || []).forEach((e) => {
+          const ep = e.param || {};
+          if (e.code === 'ON_DESTROY_DRAW') this._draw(loc.player, Number(ep.draw || 1));
+          if (e.code === 'ON_DESTROY_SECTION_ATK' && loc.zone === 'front') {
+            this.frontList(loc.player).filter((l) => l.section === loc.section && l.inst.uid !== inst.uid).forEach((l) => {
+              l.inst.flags.buffAtk = (l.inst.flags.buffAtk || 0) + Number(ep.atk || 1);
+              l.inst.flags.ehrenUntil = this.state.turn;
+            });
+          }
+          if (e.code === 'ON_DESTROY_SECTION_DEF' && loc.zone === 'front') {
+            this.frontList(loc.player).filter((l) => l.section === loc.section && l.inst.uid !== inst.uid).forEach((l) => {
+              l.inst.def = (l.inst.def || 0) + Number(ep.def || 1);
+              l.inst.defMax = (l.inst.defMax || l.inst.def) + Number(ep.def || 1);
+            });
+          }
+          if (e.code === 'ON_DESTROY_SELF_DAMAGE' && loc.zone === 'front') {
+            const mate = this.frontList(loc.player).find((l) => l.section === loc.section && l.inst.uid !== inst.uid);
+            if (mate) this._damage(mate.inst, Number(ep.damage || 1), { tag: 'equip-backlash' });
+          }
+        });
+        loc.player.grave.push(eq);
+      });
+      // unit self ON_DESTROY_DRAW
+      (def.effects || []).forEach((e) => {
+        if (e.code === 'ON_DESTROY_DRAW') this._draw(loc.player, Number((e.param || {}).draw || 1));
+      });
+      inst.attachments = [];
       loc.player.grave.push(inst);
       if (inst.flags && inst.flags.letzterDerSteht) {
         const opp = this.opponent(loc.player.id);

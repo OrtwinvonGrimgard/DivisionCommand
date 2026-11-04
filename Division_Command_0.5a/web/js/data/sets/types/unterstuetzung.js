@@ -760,7 +760,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Eigene Artillerie +1 ATK; mit Soforteinsatz +1 zusätzlich.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "AURA_FRONT_ATK"
+      }
+    ],
     "flavor": "Wer misst, trifft härter.",
     "image": "unterstuetzung/B153.jpg",
     "max_copies": 1,
@@ -806,7 +810,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Nächste Einheit kostet 1 weniger.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "UNIT_DISCOUNT"
+      }
+    ],
     "flavor": "Die Schicht ist schon eingeteilt.",
     "image": "unterstuetzung/B155.jpg",
     "max_copies": 1,
@@ -1013,7 +1021,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Eigene Infanterie im Abschnitt hat +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "AURA_FRONT_DEF"
+      }
+    ],
     "flavor": "Der Balken hält die Reihe.",
     "image": "unterstuetzung/B113.jpg",
     "max_copies": 1,
@@ -1059,7 +1071,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Heile eine eigene Einheit um 1. Infanterie erhält zusätzlich +1 DEF bis Zugende.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "AURA_FRONT_DEF"
+      }
+    ],
     "flavor": "Reparatur ist auch Pflicht.",
     "image": "unterstuetzung/B115.jpg",
     "max_copies": 1,
@@ -1151,7 +1167,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Eigene Einheiten im Abschnitt haben +1 DEF, solange du mindestens 3 Einheiten dort hast.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "AURA_FRONT_DEF"
+      }
+    ],
     "flavor": "Breite vor Tiefe.",
     "image": "unterstuetzung/B119.jpg",
     "max_copies": 1,
@@ -1174,7 +1194,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Einmal/Zug: eine eigene Einheit hat +1 DEF bis Zugende und gilt als „unter Schwur“ (kann nicht freiwillig bewegt werden).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "AURA_FRONT_DEF"
+      }
+    ],
     "flavor": "Schwurprotokoll. Treue bindet Füße.",
     "image": "unterstuetzung/B627.jpg",
     "max_copies": 1,
@@ -1220,7 +1244,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Einmal/Zug: ersetze eine eigene beschädigte Einheit; die Neue erhält ATK/DEF der Alten bis max. aufgedrucktem Wert +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "AURA_FRONT_DEF"
+      }
+    ],
     "flavor": "Ablösungsplan. Die Linie reißt nicht.",
     "image": "unterstuetzung/B629.jpg",
     "max_copies": 1,
@@ -1312,7 +1340,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Eigene Elite und Panzer haben +1 DEF.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "AURA_FRONT_DEF"
+      }
+    ],
     "flavor": "Der Rat tagt, bis der Abschnitt hält.",
     "image": "unterstuetzung/B633.jpg",
     "max_copies": 1,
@@ -1404,7 +1436,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Eigene Ausrüstungen kosten 1 AP weniger (min. 1).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_DISCOUNT"
+      }
+    ],
     "flavor": "Teile vor Menschen.",
     "image": "unterstuetzung/B388.jpg",
     "max_copies": 1,
@@ -3497,7 +3533,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Einmal/Zug: heile 1; nächste Einheit kostet 1 weniger.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "UNIT_DISCOUNT"
+      }
+    ],
     "flavor": "Zuteilung hält die Front.",
     "image": "unterstuetzung/B332.jpg",
     "max_copies": 1,
@@ -3635,7 +3675,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Alle eigenen Einheiten: diesen Zug nicht angreifen → +2 DEF und heile 1.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "AURA_FRONT_DEF"
+      }
+    ],
     "flavor": "Rasten als Doktrin. Nicht als Faulheit.",
     "image": "unterstuetzung/B338.jpg",
     "max_copies": 1,
@@ -3658,7 +3702,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Einmal/Zug: Ausrüstung im Abschnitt kostet 1 weniger (min. 1).",
-    "effects": [],
+    "effects": [
+      {
+        "code": "EQUIP_DISCOUNT"
+      }
+    ],
     "flavor": "Stück, Glas, Dichtung — nicht Heiligkeit.",
     "image": "unterstuetzung/B270.jpg",
     "max_copies": 1,
@@ -3704,7 +3752,11 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung"
     ],
     "text": "Stirbt eigene Einheit: Abschnitt +1 DEF bis Ende nächsten Zugs.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "AURA_FRONT_DEF"
+      }
+    ],
     "flavor": "Name im Dienst. Nicht als Forderung.",
     "image": "unterstuetzung/B272.jpg",
     "max_copies": 1,
