@@ -1497,6 +1497,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "atk": 1,
           "filter": "infanterie",
@@ -1595,6 +1596,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "atk": 1,
           "filter": "infanterie",
@@ -2938,6 +2940,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "atk": 1,
           "filter": null,
@@ -3080,6 +3083,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "def": 1,
           "until": "turn"
@@ -3087,6 +3091,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       },
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "atk": 1,
           "until": "next"
@@ -3202,6 +3207,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "atk": 1,
           "filter": null,
@@ -3955,6 +3961,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "atk": 1,
           "filter": null,
@@ -5146,6 +5153,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "def": 2,
           "until": "turn"
@@ -5463,6 +5471,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "atk": 1,
           "filter": null,
@@ -5557,6 +5566,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "def": 2,
           "until": "turn"
@@ -5717,6 +5727,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "def": 1,
           "until": "turn"
@@ -6077,6 +6088,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       },
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "atk": 1,
           "until": "turn"
@@ -6390,6 +6402,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "KEIN_LOCH",
+        "targetSide": "own",
         "param": {
           "negate": 2,
           "heal": 1
@@ -6481,6 +6494,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "def": 1,
           "until": "turn"
@@ -6829,6 +6843,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "effects": [
       {
         "code": "BUFF_SECTION",
+        "targetSide": "own",
         "param": {
           "def": 1,
           "until": "turn"

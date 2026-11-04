@@ -3983,3 +3983,40 @@ body.dc-dragging .slot.legal {
 .pick-card.dig-blocked { opacity: 0.35; pointer-events: none; filter: grayscale(0.4); }
 
 .slot.filled.legal-target { border: 2px solid #e2c36a !important; box-shadow: 0 0 10px rgba(226,195,106,.55) !important; }
+
+
+/* Abschnitt-Zielwahl & aktive Abschnitts-Auren */
+.slot.legal-target.section-target {
+  border: 2px solid #7ec8e3 !important;
+  box-shadow: 0 0 12px rgba(126, 200, 227, 0.65) !important;
+  background: rgba(40, 80, 110, 0.35) !important;
+}
+.slot.section-aura {
+  outline: 2px solid rgba(226, 195, 106, 0.7);
+  outline-offset: -2px;
+}
+.slot.section-aura::after {
+  content: "◆";
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  font-size: 10px;
+  color: #e2c36a;
+  text-shadow: 0 0 4px #000;
+  z-index: 2;
+  pointer-events: none;
+}
+button.pick-section {
+  min-width: 9rem;
+  padding: 0.7rem 0.9rem;
+  margin: 0.25rem;
+  background: #2a3a4a;
+  border: 1px solid #7ec8e3;
+  color: #e8f4ff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button.pick-section:hover, button.pick-section.on {
+  background: #3a5a6a;
+  box-shadow: 0 0 8px rgba(126,200,227,.5);
+}

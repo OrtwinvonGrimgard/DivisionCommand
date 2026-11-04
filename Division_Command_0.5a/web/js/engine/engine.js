@@ -716,6 +716,19 @@
         const loc = this.findInst(inst.uid);
         if (loc && loc.zone === 'front' && this._hasCover(owner, loc.section, loc.row)) atk += 1;
       }
+      if (owner) {
+        const locA = this.findInst(inst.uid);
+        if (locA && locA.zone === 'front') {
+          this._activeSectionAuras(owner, locA.section).forEach((a) => {
+            if (!a.atk) return;
+            const d = def;
+            if (a.filter === 'infanterie' && !isInfantry(d)) return;
+            if (a.filter === 'artillerie' && !isArtillery(d)) return;
+            if (a.filter === 'panzer' && !(hasTag(d, 'panzer') || d.typ === 'Panzer')) return;
+            atk += Number(a.atk || 0);
+          });
+        }
+      }
       return { atk, def: dv };
     }
 
@@ -1074,6 +1087,10 @@
         }
       }
       if (def.typ === 'Unterstützung') { // Zweig nur bei zutreffender Bedingung
+        if (p.flags && p.flags.sectionBlockSupport && p.flags.sectionBlockSupport.until === this.state.turn) {
+          p.ap += cost;
+          throw new Error('Unterstützung in diesem Zug durch Abschnitts-Effekt gesperrt');
+        }
         let idx = -1;
         if (a.slot && a.slot.section === 'support' && a.slot.row != null) {
           const want = Number(a.slot.row);
@@ -1761,6 +1778,18 @@
         this.state.pending = null;
         return { ok: true };
       }
+      if (pend.kind === 'instant-section') {
+        const p = this.player(pid);
+        let id = a.target || (a.section ? ('sec:' + (a.side || pend.side || 'own') + ':' + a.section) : null);
+        if (!id) throw new Error('Abschnitt fehlt');
+        // Einheit als Anker → Abschnitt der erlaubten Seite
+        if (!String(id).startsWith('sec:')) {
+          const coerced = this._coerceSectionTarget(p, id, pend.side || 'own');
+          if (coerced) id = coerced;
+        }
+        if (!(pend.choices || []).some((c) => c.target === id)) throw new Error('Ungültiger Abschnitt');
+        return this._finishInstant(pid, pend, [id]);
+      }
       if (pend.kind === 'instant-target') { // Zweig nur bei zutreffender Bedingung
         if (!pend.selected) pend.selected = []; // Zweig nur bei zutreffender Bedingung
         const id = a.target; // unveränderliche Bindung in diesem Block
@@ -2356,13 +2385,43 @@
         this.state.pending = this._sealPending({ kind: 'coin', player: p.id, card, prompt: def.name }); // offene Wahl des Spielers
         return { ok: true, need: 'coin' }; // Ergebnis an den Aufrufer
       }
+      if (this._isSectionEffect(def)) {
+        const side = this._sectionTargetSide(def);
+        let secTarget = this._coerceSectionTarget(p, targetUid, side);
+        if (!secTarget) {
+          const choices = this._sectionChoices(p, side);
+          if (!choices.length) {
+            p.hand.push(card);
+            return { ok: false, error: 'Kein gültiger Abschnitt.', code: 'NO_SECTION' };
+          }
+          this.state.pending = this._sealPending({
+            kind: 'instant-section',
+            player: p.id,
+            uid: card.uid,
+            card,
+            side,
+            needCount: 1,
+            selected: [],
+            prompt: def.name + ' — Abschnitt wählen',
+            choices: choices.map((t) => ({
+              target: t.uid,
+              section: t.section,
+              side: t.side,
+              label: t.label,
+            })),
+          });
+          return { ok: true, need: 'target' };
+        }
+        this._resolveEffects(p, card, secTarget);
+        p.grave.push(card);
+        return { ok: true };
+      }
       const needs = this._instantNeedsTarget(def); // unveränderliche Bindung in diesem Block
       if (needs && !targetUid) { // Zweig nur bei zutreffender Bedingung
         const choices = this._instantTargets(p, def); // unveränderliche Bindung in diesem Block
         if (!choices.length) { // Zweig nur bei zutreffender Bedingung
-          p.grave.push(card); // Friedhof
-          this._log(def.name + ' verpufft — kein Ziel.'); // Zeile ins Protokoll
-          return { ok: true }; // Ergebnis an den Aufrufer
+          p.hand.push(card);
+          return { ok: false, error: def.name + ' — kein gültiges Ziel.', code: 'NO_TGT' };
         }
         const need = this._targetNeed(def); // unveränderliche Bindung in diesem Block
         this.state.pending = this._sealPending({ // offene Wahl des Spielers
@@ -2477,6 +2536,109 @@
       if (pend.card) p.grave.push(pend.card);
       const wname = face === 'kopf' ? p.name : this.opponent(pid).name;
       return { ok: true, face, coinWinner: wname, code: 'COIN_WINNER' };
+    }
+
+    // Abschnitt-Ziel: Soforteinsätze wie BUFF_SECTION / KEIN_LOCH.
+    _sectionEffectCodes() {
+      return ['BUFF_SECTION', 'KEIN_LOCH', 'DAMAGE_SECTION', 'HEAL_SECTION', 'BOMBARD_SECTION'];
+    }
+    _isSectionEffect(def) {
+      return (def.effects || []).some((e) => this._sectionEffectCodes().includes(e.code));
+    }
+    _sectionTargetSide(def) {
+      const fx = (def.effects || []).find((e) => e.targetSide || (e.param && e.param.targetSide));
+      if (fx) return fx.targetSide || fx.param.targetSide;
+      const codes = (def.effects || []).map((e) => e.code);
+      if (codes.some((c) => c === 'DAMAGE_SECTION' || c === 'BOMBARD_SECTION')) return 'enemy';
+      if (codes.some((c) => c === 'BUFF_SECTION' || c === 'KEIN_LOCH' || c === 'HEAL_SECTION')) return 'own';
+      const t = def.text || '';
+      if (/gegner|feind/i.test(t) && /schaden|zerstör|bombard/i.test(t) && !/eigene/i.test(t)) return 'enemy';
+      return 'own';
+    }
+    _sectionChoices(p, side) {
+      const labels = { L: 'Links', C: 'Mitte', R: 'Rechts' };
+      const sides = side === 'any' ? ['own', 'enemy'] : [side || 'own'];
+      const out = [];
+      sides.forEach((s) => {
+        ['L', 'C', 'R'].forEach((sec) => {
+          const who = s === 'own' ? 'Eigener' : 'Gegnerischer';
+          out.push({
+            uid: 'sec:' + s + ':' + sec,
+            target: 'sec:' + s + ':' + sec,
+            section: sec,
+            side: s,
+            label: who + ' Abschnitt ' + labels[sec],
+          });
+        });
+      });
+      return out;
+    }
+    _parseSectionTarget(targetUid, p) {
+      if (targetUid == null) return null;
+      if (typeof targetUid === 'object' && targetUid.section) {
+        return {
+          section: targetUid.section,
+          side: targetUid.side || 'own',
+          player: (targetUid.side === 'enemy') ? this.opponent(p.id) : p,
+        };
+      }
+      const raw = String(targetUid);
+      const m = raw.match(/^sec:(own|enemy|any):(L|C|R)$/);
+      if (m) {
+        const side = m[1] === 'any' ? 'own' : m[1];
+        return {
+          section: m[2],
+          side,
+          player: side === 'enemy' ? this.opponent(p.id) : p,
+        };
+      }
+      const loc = this.findInst(targetUid);
+      if (loc && loc.zone === 'front') {
+        const side = loc.player.id === p.id ? 'own' : 'enemy';
+        return { section: loc.section, side, player: loc.player, fromUnit: true };
+      }
+      return null;
+    }
+    _coerceSectionTarget(p, targetUid, side) {
+      const parsed = this._parseSectionTarget(targetUid, p);
+      if (!parsed) return null;
+      if (side && side !== 'any' && parsed.side !== side) return null;
+      return 'sec:' + parsed.side + ':' + parsed.section;
+    }
+    _activeSectionAuras(player, section) {
+      const list = (player.flags && player.flags.sectionAuras) || [];
+      return list.filter((a) => a.section === section && a.untilTurn >= this.state.turn);
+    }
+    _applySectionAuraToUnit(player, loc) {
+      if (!loc || !loc.inst || loc.zone !== 'front') return;
+      this._activeSectionAuras(player, loc.section).forEach((a) => {
+        const d = this.defOf(loc.inst);
+        if (a.filter === 'infanterie' && !isInfantry(d)) return;
+        if (a.filter === 'artillerie' && !isArtillery(d)) return;
+        if (a.filter === 'panzer' && !(hasTag(d, 'panzer') || d.typ === 'Panzer')) return;
+        if (a.def && !(loc.inst.flags && loc.inst.flags._secAuraDef && loc.inst.flags._secAuraDef[a.id])) {
+          loc.inst.def = (loc.inst.def || 0) + Number(a.def);
+          loc.inst.defMax = (loc.inst.defMax || loc.inst.def) + Number(a.def);
+          loc.inst.flags = loc.inst.flags || {};
+          loc.inst.flags._secAuraDef = loc.inst.flags._secAuraDef || {};
+          loc.inst.flags._secAuraDef[a.id] = Number(a.def);
+        }
+      });
+    }
+    _pushSectionAura(player, aura) {
+      player.flags = player.flags || {};
+      player.flags.sectionAuras = player.flags.sectionAuras || [];
+      const id = 'sa-' + (this.state._auraSeq = (this.state._auraSeq || 0) + 1);
+      const untilTurn = aura.until === 'next' ? (this.state.turn + 1) : this.state.turn;
+      player.flags.sectionAuras.push(Object.assign({ id, untilTurn }, aura));
+      return id;
+    }
+    _expireSectionAuras(player) {
+      if (!player.flags || !player.flags.sectionAuras) return;
+      player.flags.sectionAuras = player.flags.sectionAuras.filter((a) => a.untilTurn >= this.state.turn);
+      if (player.flags.sectionBlockSupport && player.flags.sectionBlockSupport.until < this.state.turn) {
+        player.flags.sectionBlockSupport = null;
+      }
     }
 
     // Ob der Einsatz ein Ziel braucht.
@@ -2726,22 +2888,18 @@
           if (st.def <= Number(par.maxDef || 2)) this._destroy(loc);
           else this._log(this.defOf(loc.inst).name + ' hat zu viel DEF.');
         }
-      } else if (code === 'BUFF_ALL_OWN' || code === 'BUFF_SECTION') {
+      } else if (code === 'BUFF_ALL_OWN') {
         const filter = par.filter;
-        let units = this.frontList(p);
-        if (code === 'BUFF_SECTION' && targetUid) {
-          const anchor = this.findInst(targetUid);
-          if (anchor) units = units.filter((l) => l.section === anchor.section);
-        }
+        const units = this.frontList(p);
         units.forEach((l) => {
           const d = this.defOf(l.inst);
           if (filter === 'infanterie' && !isInfantry(d)) return;
           if (filter === 'artillerie' && !isArtillery(d)) return;
           if (filter === 'panzer' && !(hasTag(d, 'panzer') || d.typ === 'Panzer')) return;
           if (par.atk) {
-            if (par.until === 'turn') {
+            if (par.until === 'turn' || par.until === 'next') {
               l.inst.flags.tempAtk = (l.inst.flags.tempAtk || 0) + Number(par.atk);
-              l.inst.flags.tempAtkUntil = this.state.turn;
+              l.inst.flags.tempAtkUntil = par.until === 'next' ? (this.state.turn + 1) : this.state.turn;
             } else {
               l.inst.flags.buffAtk = (l.inst.flags.buffAtk || 0) + Number(par.atk);
             }
@@ -2751,6 +2909,57 @@
             l.inst.defMax = (l.inst.defMax || l.inst.def) + Number(par.def);
           }
         });
+      } else if (code === 'BUFF_SECTION') {
+        const filter = par.filter;
+        const sideWant = par.targetSide || 'own';
+        let parsed = this._parseSectionTarget(targetUid, p);
+        if (parsed && sideWant && sideWant !== 'any' && parsed.side !== sideWant) {
+          this._log('Abschnitt-Bonus: Zielseite ungültig.');
+          parsed = null;
+        }
+        if (!parsed) {
+          this._log('Abschnitt-Bonus ohne gültigen Abschnitt.');
+        } else {
+          const host = parsed.player;
+          const section = parsed.section;
+          const auraId = this._pushSectionAura(host, {
+            section,
+            atk: Number(par.atk || 0),
+            def: Number(par.def || 0),
+            filter: filter || null,
+            until: par.until || 'turn',
+            bakedDef: !!par.def,
+          });
+          let applied = 0;
+          this.frontList(host).filter((l) => l.section === section).forEach((l) => {
+            const d = this.defOf(l.inst);
+            if (filter === 'infanterie' && !isInfantry(d)) return;
+            if (filter === 'artillerie' && !isArtillery(d)) return;
+            if (filter === 'panzer' && !(hasTag(d, 'panzer') || d.typ === 'Panzer')) return;
+            l.inst.flags = l.inst.flags || {};
+            if (par.atk) {
+              // ATK comes from section aura in currentAtkDef; mark so we know unit was present
+              l.inst.flags._secAuraAtk = l.inst.flags._secAuraAtk || {};
+              l.inst.flags._secAuraAtk[auraId] = Number(par.atk);
+            }
+            if (par.def) {
+              l.inst.def = (l.inst.def || 0) + Number(par.def);
+              l.inst.defMax = (l.inst.defMax || l.inst.def) + Number(par.def);
+              l.inst.flags._secAuraDef = l.inst.flags._secAuraDef || {};
+              l.inst.flags._secAuraDef[auraId] = Number(par.def);
+            }
+            applied += 1;
+          });
+          const srcText = (this.defOf(src) || {}).text || '';
+          if (/kann hier.*keine Unterstützung|Feind kann hier diesen Zug keine Unterstützung/i.test(srcText) || par.blockEnemySupport) {
+            const foe = host.id === p.id ? this.opponent(p.id) : p;
+            // Block enemy from playing support "here" — treat as opponent of the buffed side
+            const blocked = this.opponent(host.id);
+            blocked.flags = blocked.flags || {};
+            blocked.flags.sectionBlockSupport = { section, until: this.state.turn };
+          }
+          this._log('Abschnitt ' + section + ': Bonus' + (par.atk ? ' +' + par.atk + ' ATK' : '') + (par.def ? ' +' + par.def + ' DEF' : '') + ' (' + applied + ' Einheiten, Aura aktiv).');
+        }
       } else if (code === 'DRAW_DISCARD') {
         this._draw(p, Number(par.draw || 2));
         // discard leftmost / first hand card as auto-choice if no pending UI
@@ -2896,9 +3105,10 @@
           this._log('Umgehen: ' + this.defOf(loc.inst).name + ' gilt als angrenzend; +' + (par.atk || 1) + ' ATK.');
         }
       } else if (code === 'KEIN_LOCH') {
-        const loc = this.findInst(targetUid) || this.frontList(p)[0];
-        if (loc) {
-          const sec = loc.section;
+        let parsed = this._parseSectionTarget(targetUid, p);
+        if (parsed && parsed.side !== 'own') parsed = null;
+        const sec = parsed ? parsed.section : ((this.frontList(p)[0] || {}).section);
+        if (sec) {
           p.flags = p.flags || {};
           p.flags.keinLoch = {
             section: sec,
@@ -2907,7 +3117,18 @@
             heal: Number(par.heal || 1),
             destroyed: false,
           };
+          this._pushSectionAura(p, {
+            section: sec,
+            atk: 0,
+            def: 0,
+            filter: null,
+            until: 'turn',
+            kind: 'kein_loch',
+            bakedDef: false,
+          });
           this._log('Kein Loch schützt Abschnitt ' + sec + '.');
+        } else {
+          this._log('Kein Loch ohne Abschnitt — kein Effekt.');
         }
       } else if (code === 'CLEAR_ATK_MALUS') {
         const loc = this.findInst(targetUid);
@@ -2985,6 +3206,9 @@
     _onEnter(inst, zone) {
       const def = this.defOf(inst); // unveränderliche Bindung in diesem Block
       const locOwn = this.findInst(inst.uid); // unveränderliche Bindung in diesem Block
+      if (zone === 'front' && locOwn && locOwn.player) {
+        this._applySectionAuraToUnit(locOwn.player, locOwn);
+      }
       if (locOwn && locOwn.player && locOwn.player.flags && locOwn.player.flags.coinPreventInfantry === this.state.turn) {
       // Zweig nur bei zutreffender Bedingung
         const kl = ((def.klasse || '') + ' ' + (def.tags || []).join(' ') + ' ' + (def.text || '')).toLowerCase();
@@ -4693,6 +4917,7 @@
       });
       this.state.active = nxtId; // Feld der Engine-Instanz
       this.state.turn += 1; // Feld der Engine-Instanz
+      this.state.players.forEach((pl) => this._expireSectionAuras(pl));
       this.state.phase = 'main'; // Feld der Engine-Instanz
       this.frontList(nxt).forEach((l) => {
         if (!l.inst.flags) return;
@@ -5030,7 +5255,8 @@
     zeal: { title: "Eifer", pick: "card", needs: true },
     "spy-top": { title: "Spionage", pick: "confirm", needs: false },
     "command-atk": { title: "Kommandogruppe", pick: "card", needs: true },
-    "gassen-slot": { title: "Einsame Gassen", pick: "slot", needs: true }
+    "gassen-slot": { title: "Einsame Gassen", pick: "slot", needs: true },
+    "instant-section": { title: "Abschnitt wählen", pick: "section", needs: true }
   };
 
   global.DCEngine = {

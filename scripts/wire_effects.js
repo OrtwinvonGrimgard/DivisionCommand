@@ -175,6 +175,7 @@ function parseInstant(text) {
     if (all || section) {
       effects.push({
         code: section && !/Eigene Einheiten/i.test(t) ? 'BUFF_SECTION' : 'BUFF_ALL_OWN',
+        targetSide: section && !/Eigene Einheiten/i.test(t) ? 'own' : undefined,
         param: {
           atk: +m[1],
           filter: /Artillerie und Infanterie/i.test(t) ? null : /Infanterie/i.test(t) ? 'infanterie' : /Artillerie/i.test(t) ? 'artillerie' : null,
@@ -188,7 +189,7 @@ function parseInstant(text) {
   }
   if (/\+(\d+)\s*DEF/i.test(t) && !effects.some((e) => (e.code === 'BUFF' || e.code === 'BUFF_SECTION' || e.code === 'BUFF_ALL_OWN') && e.param.def)) {
     const m = t.match(/\+(\d+)\s*DEF/i);
-    if (/Abschnitt \+/i.test(t)) effects.push({ code: 'BUFF_SECTION', param: { def: +m[1], until: 'turn' } });
+    if (/Abschnitt \+/i.test(t)) effects.push({ code: 'BUFF_SECTION', targetSide: 'own', param: { def: +m[1], until: 'turn' } });
     else if (/1 Einheit \+|Einheit \+|Einheit \+/i.test(t) || /bis Zugende|diesen Zug/i.test(t)) {
       effects.push({ code: 'BUFF', param: { def: +m[1], until: 'turn' } });
     }
@@ -254,7 +255,7 @@ function parseInstant(text) {
   if (/Einrückende Einheit\s*[−\-–](\d+)\s*ATK/i.test(t)) effects.push({ code: 'BUFF', param: { atk: -1, until: 'turn', enemy: true } });
   if (/Allein stehende|Abschnitte mit 2\+/i.test(t)) {
     effects.push({ code: 'BUFF_ALL_OWN', param: { def: 1, until: 'turn' } });
-    effects.push({ code: 'BUFF_SECTION', param: { atk: 1, until: 'turn' } });
+    effects.push({ code: 'BUFF_SECTION', targetSide: 'own', param: { atk: 1, until: 'turn' } });
   }
   if (/einrückende erleiden\s*(\d+)/i.test(t)) effects.push({ code: 'MASS_DAMAGE', param: { value: +(t.match(/erleiden\s*(\d+)/i)||[0,1])[1], onEnter: true } });
   if (/Ziel gilt als aufgeklärt|Angriffe gegen es \+(\d+)\s*ATK/i.test(t)) {
@@ -267,7 +268,7 @@ function parseInstant(text) {
     effects.push({ code: 'BUFF', param: { def: 1, until: 'turn' } });
   }
   if (/Unterstützung im Abschnitt: Einheiten \+(\d+)\s*DEF/i.test(t)) {
-    effects.push({ code: 'BUFF_SECTION', param: { def: 1, until: 'turn' } });
+    effects.push({ code: 'BUFF_SECTION', targetSide: 'own', param: { def: 1, until: 'turn' } });
     if (/zieh/i.test(t)) effects.push({ code: 'DRAW', param: { value: 1 } });
   }
   if (/Einheit rückt in beliebigen Abschnitt|Spiele eine Einheit aus der Hand in einen zuletzt/i.test(t)) {
@@ -287,10 +288,10 @@ function parseInstant(text) {
   if (/Negiere\s*(\d+)\s*Schaden an Abschnitt/i.test(t)) {
     const nm = t.match(/Negiere\s*(\d+)/i);
     const hm = t.match(/heile\s*(\d+)/i);
-    effects.push({ code: 'KEIN_LOCH', param: { negate: nm ? +nm[1] : 2, heal: hm ? +hm[1] : 1 } });
+    effects.push({ code: 'KEIN_LOCH', targetSide: 'own', param: { negate: nm ? +nm[1] : 2, heal: hm ? +hm[1] : 1 } });
   }
   if (/Scheinschwerpunkt|Ende Zug:\s*\+\d+\s*DEF auf einen Abschnitt|Nächster Zugbeginn:.*\+\d+\s*ATK auf einen anderen/i.test(t)) {
-    effects.push({ code: 'BUFF_SECTION', param: { def: 1, until: 'turn' } });
+    effects.push({ code: 'BUFF_SECTION', targetSide: 'own', param: { def: 1, until: 'turn' } });
     effects.push({ code: 'BUFF_SECTION', param: { atk: 1, until: 'next' } });
   }
 

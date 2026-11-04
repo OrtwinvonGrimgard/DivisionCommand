@@ -912,6 +912,146 @@ function main() {
   }
 
 
+
+  // --- Sector / Abschnitt effects ---
+  {
+    const mole = findCard(win, (c) => c.name === 'Mole schließen');
+    const pioniere = findCard(win, (c) => c.name === 'Pioniereinsatz');
+    const kampfruf = findCard(win, (c) => c.name === 'Kampfruf');
+    const keinLoch = findCard(win, (c) => c.name === 'Kein Loch');
+    assert(mole && pioniere && kampfruf && keinLoch, 'sector cards present');
+    assert((mole.effects || []).every((e) => e.code !== 'BUFF_SECTION' || e.targetSide === 'own'), 'mole targetSide own');
+    {
+      const engProbe = makeMatch(win, nat0);
+      assert(engProbe._isSectionEffect(mole), 'mole is section effect');
+    }
+
+    // Audit: every BUFF_SECTION / KEIN_LOCH has targetSide + handler
+    const EngProto = win.DCEngine.Engine.prototype;
+    const sectorCards = win.DC_CATALOG.cards.filter((c) => (c.effects || []).some((e) => ['BUFF_SECTION', 'KEIN_LOCH', 'DAMAGE_SECTION', 'HEAL_SECTION'].includes(e.code)));
+    let missingSide = 0;
+    sectorCards.forEach((c) => {
+      (c.effects || []).forEach((e) => {
+        if (!['BUFF_SECTION', 'KEIN_LOCH', 'DAMAGE_SECTION', 'HEAL_SECTION'].includes(e.code)) return;
+        if (!e.targetSide && !(e.param && e.param.targetSide)) missingSide += 1;
+      });
+    });
+    assert(missingSide === 0, 'sector effects missing targetSide: ' + missingSide + ' / cards ' + sectorCards.length);
+    ok('audit: sector effects have targetSide (' + sectorCards.length + ' cards)');
+
+    // Friendly buff on own section — Mole schließen must NOT offer only enemies
+    {
+      const eng = makeMatch(win, nat0);
+      const inf = win.DC_CATALOG.cards.find((c) => ((c.tags || []).includes('infanterie') || c.klasse === 'Infanterie') && eng.byId[c.id]);
+      const own = putUnit(eng, 0, inf.id, 'L', 0);
+      putUnit(eng, 1, inf.id, 'C', 0);
+      own.summonedTurn = eng.state.turn - 2; own.facedown = false;
+      const before = own.def;
+      const hand = giveHand(eng, 0, mole.id);
+      eng.state.active = 0;
+      const r1 = eng.dispatch({ type: 'PLAY', player: 0, uid: hand.uid });
+      assert(r1 && r1.need === 'target', 'mole needs target');
+      assert(eng.state.pending && eng.state.pending.kind === 'instant-section', 'mole pending instant-section got ' + (eng.state.pending && eng.state.pending.kind));
+      const choices = eng.state.pending.choices || [];
+      assert(choices.length === 3, 'mole 3 own sections got ' + choices.length);
+      assert(choices.every((c) => c.side === 'own' && /^sec:own:[LCR]$/.test(c.target)), 'mole only own sections');
+      assert(!choices.some((c) => c.side === 'enemy'), 'mole no enemy sections');
+      eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: 'sec:own:L' });
+      assert(own.def === before + 2, 'mole +2 DEF on own L ' + before + '->' + own.def);
+      const auras = (eng.player(0).flags.sectionAuras || []).filter((a) => a.section === 'L' && a.untilTurn >= eng.state.turn);
+      assert(auras.length >= 1, 'mole aura stored');
+      ok('friendly sector buff (Mole schließen) targets own section');
+    }
+
+    // Enemy unit as PLAY target must not fizzle — coerce rejected, re-prompt OR we reject wrong side
+    {
+      const eng = makeMatch(win, nat0);
+      const inf = win.DC_CATALOG.cards.find((c) => ((c.tags || []).includes('infanterie') || c.klasse === 'Infanterie') && eng.byId[c.id]);
+      const own = putUnit(eng, 0, inf.id, 'L', 0);
+      const foe = putUnit(eng, 1, inf.id, 'C', 0);
+      own.summonedTurn = eng.state.turn - 2; own.facedown = false;
+      const before = own.def;
+      const hand = giveHand(eng, 0, mole.id);
+      eng.state.active = 0;
+      // Drag onto enemy unit previously caused fizzle; now should open section picker
+      const r1 = eng.dispatch({ type: 'PLAY', player: 0, uid: hand.uid, target: foe.uid });
+      assert(r1 && r1.need === 'target', 'wrong-side unit target → still need section');
+      assert(eng.state.pending.kind === 'instant-section', 'still section pending');
+      eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: 'sec:own:L' });
+      assert(own.def === before + 2, 'after correct section pick, buff applies');
+      ok('enemy unit drag no longer fizzles sector buff');
+    }
+
+    // Aura affects later-deployed units
+    {
+      const eng = makeMatch(win, nat0);
+      const inf = win.DC_CATALOG.cards.find((c) => ((c.tags || []).includes('infanterie') || c.klasse === 'Infanterie') && eng.byId[c.id]);
+      putUnit(eng, 0, inf.id, 'C', 0);
+      const hand = giveHand(eng, 0, pioniere.id);
+      eng.state.active = 0;
+      eng.dispatch({ type: 'PLAY', player: 0, uid: hand.uid });
+      eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: 'sec:own:C' });
+      const late = putUnit(eng, 0, inf.id, 'C', 1);
+      late.summonedTurn = eng.state.turn;
+      late.facedown = false;
+      // simulate enter hook
+      eng._onEnter(late, 'front');
+      const printed = Number(eng.defOf(late).def) || 0;
+      assert(late.def >= printed + 2, 'later deploy gets section DEF aura ' + late.def + ' vs printed ' + printed);
+      ok('section aura applies to later-deployed units');
+    }
+
+    // Kampfruf ATK via aura in currentAtkDef
+    {
+      const eng = makeMatch(win, nat0);
+      const inf = win.DC_CATALOG.cards.find((c) => ((c.tags || []).includes('infanterie') || c.klasse === 'Infanterie') && eng.byId[c.id]);
+      const own = putUnit(eng, 0, inf.id, 'R', 0);
+      own.summonedTurn = eng.state.turn - 2; own.facedown = false;
+      const atk0 = eng.currentAtkDef(own).atk;
+      const hand = giveHand(eng, 0, kampfruf.id);
+      eng.state.active = 0;
+      eng.dispatch({ type: 'PLAY', player: 0, uid: hand.uid });
+      eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: 'sec:own:R' });
+      const atk1 = eng.currentAtkDef(own).atk;
+      assert(atk1 === atk0 + 1, 'Kampfruf +1 ATK ' + atk0 + '->' + atk1);
+      ok('Kampfruf section ATK');
+    }
+
+    // Expiry at end of turn
+    {
+      const eng = makeMatch(win, nat0);
+      const inf = win.DC_CATALOG.cards.find((c) => ((c.tags || []).includes('infanterie') || c.klasse === 'Infanterie') && eng.byId[c.id]);
+      const own = putUnit(eng, 0, inf.id, 'L', 0);
+      own.summonedTurn = eng.state.turn - 2; own.facedown = false;
+      const hand = giveHand(eng, 0, kampfruf.id);
+      eng.state.active = 0;
+      eng.dispatch({ type: 'PLAY', player: 0, uid: hand.uid });
+      eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: 'sec:own:L' });
+      const mid = eng.currentAtkDef(own).atk;
+      // clear hand overflow to allow end turn
+      eng.player(0).hand = eng.player(0).hand.slice(0, 7);
+      eng.dispatch({ type: 'END_TURN', player: 0 });
+      // after end, turn advanced; aura untilTurn was old turn → expired
+      const auras = (eng.player(0).flags.sectionAuras || []).filter((a) => a.section === 'L' && a.untilTurn >= eng.state.turn);
+      assert(auras.length === 0, 'aura expired after end turn, left ' + auras.length);
+      ok('section aura expires at end of turn');
+    }
+
+    // Kein Loch targets own section
+    {
+      const eng = makeMatch(win, nat0);
+      const inf = win.DC_CATALOG.cards.find((c) => ((c.tags || []).includes('infanterie') || c.klasse === 'Infanterie') && eng.byId[c.id]);
+      putUnit(eng, 0, inf.id, 'C', 0);
+      const hand = giveHand(eng, 0, keinLoch.id);
+      eng.state.active = 0;
+      eng.dispatch({ type: 'PLAY', player: 0, uid: hand.uid });
+      assert(eng.state.pending && eng.state.pending.kind === 'instant-section', 'kein loch section pending');
+      eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: 'sec:own:C' });
+      assert(eng.player(0).flags.keinLoch && eng.player(0).flags.keinLoch.section === 'C', 'kein loch on C');
+      ok('Kein Loch targets own section');
+    }
+  }
+
   console.log('\nALL PASSED', passed);
 }
 

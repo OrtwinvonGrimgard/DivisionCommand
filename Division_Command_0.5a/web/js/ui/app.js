@@ -849,6 +849,9 @@
     }
     function choiceHtml(c, i) {
       var on = (pend.selected || []).indexOf(c.target) >= 0;
+      if (c.section && String(c.target || '').indexOf('sec:') === 0) {
+        return '<button type="button" class="pick-section' + (on ? ' on' : '') + '" data-i="' + i + '" data-section="' + c.section + '" data-side="' + (c.side || 'own') + '">' + escapeHtml(c.label || c.section) + '</button>';
+      }
       if (c.slot) {
         var lab = (c.label || (c.slot.section + (c.slot.row + 1)));
         return '<button type="button" class="' + (on ? 'picked' : '') + '" data-i="' + i + '">' + escapeHtml(lab) + '</button>';
@@ -884,7 +887,7 @@
     var otherBits = [];
     (pend.choices || []).forEach(function (c, i) {
       var html = choiceHtml(c, i);
-      if (c.slot) { otherBits.push(html); return; }
+      if (c.slot || (c.section && String(c.target || '').indexOf('sec:') === 0)) { otherBits.push(html); return; }
       var own = ownerOfChoice(c);
       if (own === pend.player) mineBits.push(html);
       else if (own === 0 || own === 1) foeBits.push(html);
@@ -897,7 +900,7 @@
     var extra = '';
     if ((pend.kind === 'instant-target' || pend.kind === 'honors' || pend.kind === 'mass-pick' || pend.kind === 'rations' || pend.kind === 'discard-hand') && pend.upto) extra = '<button type="button" class="primary" id="btn-confirm-tg">Auswahl bestätigen</button> ';
     var ov = $('#overlay');
-    ov.innerHTML = '<div class="modal"><h2>' + title + '</h2><p class="tiny">Karte antippen. Goldener Rand = Zeiger. Kleinere Karte = gewählt.</p><div class="choices pick-row">' + buttons +
+    ov.innerHTML = '<div class="modal"><h2>' + title + '</h2><p class="tiny">' + (pend.kind === 'instant-section' ? 'Abschnitt antippen (auch direkt auf der Front).' : 'Karte antippen. Goldener Rand = Zeiger. Kleinere Karte = gewählt.') + '</p><div class="choices pick-row">' + buttons +
     // HTML in den Knoten schreiben
       '</div>' + extra + '<button type="button" id="btn-cancel-pend">Abbrechen</button></div>'; // nächster Schritt im Ablauf
     hideHover(); // nächster Schritt im Ablauf
@@ -1185,14 +1188,36 @@
     try { return !!engine._isDeployProtected(inst); } catch (e) { return false; }
   }
   function clearTargetHighlights() {
-    document.querySelectorAll('.slot.legal-target').forEach(function (s) { s.classList.remove('legal-target'); });
+    document.querySelectorAll('.slot.legal-target, .slot.section-target, .front-line.section-pick').forEach(function (s) {
+      s.classList.remove('legal-target');
+      s.classList.remove('section-target');
+      s.classList.remove('section-pick');
+    });
   }
   function highlightPendingTargets() {
     clearTargetHighlights();
     var pend = engine && engine.state && engine.state.pending;
     if (!pend || !pend.choices) return;
-    var kinds = { 'attack-target': 1, 'instant-target': 1, napalm: 1, 'air-strike': 1, feint: 1, drone: 1 };
+    var kinds = { 'attack-target': 1, 'instant-target': 1, napalm: 1, 'air-strike': 1, feint: 1, drone: 1, 'instant-section': 1 };
     if (!kinds[pend.kind]) return;
+    if (pend.kind === 'instant-section') {
+      var secOwn = {};
+      var secEnemy = {};
+      (pend.choices || []).forEach(function (c) {
+        if (!c || !c.section) return;
+        if (c.side === 'enemy') secEnemy[c.section] = 1;
+        else secOwn[c.section] = 1;
+      });
+      document.querySelectorAll('#my-front .slot').forEach(function (el) {
+        var sec = el.getAttribute('data-section');
+        if (sec && secOwn[sec]) el.classList.add('legal-target', 'section-target');
+      });
+      document.querySelectorAll('#enemy-front .slot').forEach(function (el) {
+        var sec = el.getAttribute('data-section');
+        if (sec && secEnemy[sec]) el.classList.add('legal-target', 'section-target');
+      });
+      return;
+    }
     var allowed = {};
     (pend.choices || []).forEach(function (c) { if (c && c.target) allowed[c.target] = 1; });
     document.querySelectorAll('#enemy-front .slot.filled, #my-front .slot.filled, #enemy-support .slot.filled, #my-support .slot.filled').forEach(function (el) {
@@ -1253,8 +1278,21 @@
   /* Neun Frontstellungen einer Seite als Linie. */
     function renderFront(p, mine) { // Frontlinie zeichnen
     var order = [['L',0],['L',1],['L',2],['C',0],['C',1],['C',2],['R',0],['R',1],['R',2]]; // lokale Variable
+    var auraSecs = {};
+    try {
+      ((p.flags && p.flags.sectionAuras) || []).forEach(function (a) {
+        if (a && a.untilTurn >= engine.state.turn) auraSecs[a.section] = a;
+      });
+      if (p.flags && p.flags.keinLoch && p.flags.keinLoch.until === engine.state.turn) {
+        auraSecs[p.flags.keinLoch.section] = auraSecs[p.flags.keinLoch.section] || { kind: 'kein_loch' };
+      }
+    } catch (eA) {}
     var slots = order.map(function (pair) {
-      return unitHtml(p.front[pair[0]][pair[1]], mine, pair[0], pair[1]);
+      var html = unitHtml(p.front[pair[0]][pair[1]], mine, pair[0], pair[1]);
+      if (auraSecs[pair[0]]) {
+        html = html.replace('class="slot ', 'class="slot section-aura ');
+      }
+      return html;
     }).join(''); // nächster Schritt im Ablauf
     return '<div class="flank-legend"><span>Linke Flanke</span><span>Zentrum</span><span>Rechte Flanke</span></div>' + // Wert zurückgeben
       '<div class="front-line">' + slots + '</div>'; // nächster Schritt im Ablauf
@@ -1680,12 +1718,29 @@
       }
       return;
     }
-    if (def.typ === 'Soforteinsatz' && enemy && slot.dataset.uid) {
-      dispatch({ type: 'PLAY', player: viewer, uid: uid, target: slot.dataset.uid });
-      if (engine.state.pending && (engine.state.pending.kind === 'instant-target' || engine.state.pending.kind === 'resist-unit' || engine.state.pending.kind === 'clear-atk')) {
-        dispatch({ type: 'CHOOSE_TARGET', player: viewer, target: slot.dataset.uid });
+    if (def.typ === 'Soforteinsatz') {
+      var isSec = false;
+      try { isSec = !!(engine && engine._isSectionEffect && engine._isSectionEffect(def)); } catch (e1) {}
+      if (isSec) {
+        var sec = slot.getAttribute('data-section');
+        var side = enemy ? 'enemy' : 'own';
+        dispatch({ type: 'PLAY', player: viewer, uid: uid });
+        if (engine.state.pending && engine.state.pending.kind === 'instant-section' && sec) {
+          dispatch({ type: 'CHOOSE_TARGET', player: viewer, target: 'sec:' + side + ':' + sec });
+        }
+        return;
       }
-      return;
+      if (enemy && slot.dataset.uid) {
+        dispatch({ type: 'PLAY', player: viewer, uid: uid, target: slot.dataset.uid });
+        if (engine.state.pending && (engine.state.pending.kind === 'instant-target' || engine.state.pending.kind === 'resist-unit' || engine.state.pending.kind === 'clear-atk' || engine.state.pending.kind === 'instant-section')) {
+          if (engine.state.pending.kind === 'instant-section') {
+            dispatch({ type: 'CHOOSE_TARGET', player: viewer, target: 'sec:enemy:' + (slot.getAttribute('data-section') || 'C') });
+          } else {
+            dispatch({ type: 'CHOOSE_TARGET', player: viewer, target: slot.dataset.uid });
+          }
+        }
+        return;
+      }
     }
     if (hint) hint.textContent = def.typ === 'Einheit' ? 'Einheiten auf ein freies Feld der eigenen Front.' : 'Dieses Feld nimmt die Karte nicht.';
   }
@@ -1741,7 +1796,17 @@
     if (def.typ === 'Einheit') return '#my-front .slot.empty';
     if (def.typ === 'Unterstützung') return '#my-support .slot.empty';
     if (def.typ === 'Ausrüstung') return '#my-front .slot.filled';
-    if (def.typ === 'Soforteinsatz') return '#enemy-front .slot.filled, #enemy-support .slot.filled';
+    if (def.typ === 'Soforteinsatz') {
+      try {
+        if (engine && engine._isSectionEffect && engine._isSectionEffect(def)) {
+          var side = engine._sectionTargetSide(def);
+          if (side === 'enemy') return '#enemy-front .slot';
+          if (side === 'any') return '#my-front .slot, #enemy-front .slot';
+          return '#my-front .slot';
+        }
+      } catch (eSec) {}
+      return '#enemy-front .slot.filled, #enemy-support .slot.filled, #my-front .slot.filled';
+    }
     return '';
   }
   function clearDropMarks() {
@@ -1812,7 +1877,24 @@
         placeFromHand(data.uid, slot, viewer, !!data.facedown);
       };
     });
-    document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forEach(function (slot) {
+    
+    document.querySelectorAll('#my-front .slot, #enemy-front .slot').forEach(function (slot) {
+      var prevClick = slot.onclick;
+      slot.addEventListener('click', function (ev) {
+        var pend = engine.state.pending;
+        if (!pend || pend.kind !== 'instant-section' || pend.player !== viewer) return;
+        var sec = slot.getAttribute('data-section');
+        if (!sec) return;
+        var side = slot.closest('#enemy-front') ? 'enemy' : 'own';
+        var tid = 'sec:' + side + ':' + sec;
+        var ok = (pend.choices || []).some(function (c) { return c && c.target === tid; });
+        if (!ok) return;
+        ev.preventDefault();
+        ev.stopPropagation();
+        dispatch({ type: 'CHOOSE_TARGET', player: viewer, target: tid });
+      }, true);
+    });
+document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forEach(function (slot) {
       slot.onclick = function () {
         if (armedPlay) {
           var a = armedPlay;
