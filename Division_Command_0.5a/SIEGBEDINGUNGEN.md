@@ -1,119 +1,134 @@
-# Siegbedingungen — Ist-Analyse und Entscheidungsvorlage
+# Siegbedingungen — Trophy-Modus (Prototyp)
 
-Stand: November 2026 · Alpha 0.5a · **Nur Vorschlag, Engine noch unverändert.**
+Stand: November 2026 · Alpha 0.5a  
+Flag: `catalog.rules.victory_mode` — Default **`classic`** (unverändert). Prototyp: **`trophy`**.
 
-Ziel: Partien von **ca. 10–20 Minuten**, klarer Sieger, Raum für Comeback, wenig Patt, kompatibel mit 16 Nationsphilosophien.
+Doktrin-SP sind **nicht nationenbezogen**, sondern an die 36 Doktrinen gebunden (`pt126u`).
 
 ---
 
-## 1. Was die Engine und die Regeln heute tun
+## 1. Classic (Default, unverändert)
 
-### 1.1 Katalog / Engine (`web/js/data/catalog.js`, `web/js/engine/engine.js`)
-
-| Mechanik | Ist-Zustand |
+| Mechanik | Ist |
 |---|---|
-| Siegschwelle | `vp_to_win: 10` — `_checkVictory()` beendet bei `vp >= 10` |
-| SP-Vergabe | **praktisch nicht verdrahtet**. Einziger bekannter Code-Pfad: Flag `letzterDerSteht` → Gegner +1 SP beim Tod der Einheit (Karte „Der Letzte der steht“) |
-| Aufgabe | `CONCEDE` → Gegner gewinnt („Aufgabe“) |
-| Weißer Frieden | `PROPOSE_PEACE` / `ACCEPT_PEACE` → Unentschieden (`winner == null`) |
-| Deck leer | Ablage wird neu gemischt (`graveyard_reshuffle: true`) — **kein Deck-Out-Verlust** |
-| Zuglimit | **keins** |
-| HQ / Divisions-HP | **keins** |
-| Sektor-/Stellungskontrolle als SP | **keins** |
-| Moral als Siegbedingung | nur Konzept in RULES, nicht als Endbedingung |
+| Siegschwelle | `vp_to_win: 10` |
+| SP-Quellen | praktisch nur Sonderkarten (z. B. „Der Letzte der steht“) |
+| Aufgabe / Weißer Frieden | bleiben |
 
-Weitere Regeln im Katalog: Deckgröße 60, Starthand 5, Handmax 7, +5 AP/Zug, Angriff 1 AP, Front 3×3, Doktrinen 2.
+---
 
-### 1.2 Hilfe / RULES vs. Code
+## 2. Trophy-Modus (`victory_mode: 'trophy'`)
 
-| Quelle | Aussage | Passt zum Code? |
+### 2.1 Siegschwelle
+
+**5 SP** (`trophy_vp_to_win`, Default 5). `_checkVictory` beendet bei `vp >= 5`.
+
+### 2.2 SP-Quellen (Engine)
+
+| Quelle | SP | Regel |
 |---|---|---|
-| Hilfe („Spielregeln“) | Wer zuerst **10 Siegpunkte** hat, oder eine Karte, die das ausdrücklich sagt; weißer Frieden; Deck neu mischbar; Startdeck **40** | Schwelle und Frieden: ja. SP-Quellen: **nein** (fehlen). Startdeck 40: **nein** (Katalog/Nationen: **60** Spielkarten + 2 Doktrinen) |
-| `RULES_v0.5_GRUNDKONZEPT.md` §26 | SP durch besondere Leistungen; Arbeitswert 10 SP; Heimatfront/Wille **nicht** alleinige Siegbedingung; finale SP-Bedingungen **offen** | Passt zur Absicht, nicht zur Implementierung |
-| Praxis am Tisch | Partien enden heute vor allem durch **Aufgabe** oder **Frieden**, selten/nie durch 10 SP | Entspricht dem fehlenden SP-Zufluss |
+| **Elite zerstört** | **+2** | Gegnerische Fronteinheit mit Tag/Klasse `elite` / `Elite` |
+| **Durchbruch** | **+1** | In einem Abschnitt (L/C/R): du hast ≥1 eigene Fronteinheit, Gegner 0. Zustand muss bis **Ende deines nächsten Zuges** gehalten werden. **Max. 1× pro Abschnitt pro Partie** (`durchbruchClaimed`). Neu armieren nach Verlust der Kontrolle möglich, aber kein zweiter Claim desselben Abschnitts. |
+| **Doktrin-Ziel** | **+1** | Jede deiner beiden Doktrinen hat **ein** thematisches Ziel, **1×/Partie**, Fortschritt in UI. Ankündigung im Log + Event `vp`. |
+| Karten-SP | — | Unverändert (z. B. Letzter der steht). Optionale Gold-Soforts: nur Kandidatenliste unten, **Karten unverändert**. |
 
-### 1.3 Bewertung des Ist-Zustands
+### 2.3 Sicherheitsnetz (gewählt)
 
-| Kriterium | Bewertung |
-|---|---|
-| Klarheit | Schwach: Spieler lesen „10 SP“, sehen aber kaum SP-Bewegung |
-| Partielänge | Unbestimmt; ohne SP-Druck oder HQ kann man endlos tauschen |
-| Comeback | Theoretisch hoch (nichts entscheidet früh), praktisch demotivierend |
-| Patt-Risiko | Hoch bei vorsichtigem Spiel beider Seiten |
-| Nationsfit | Rothain (Schwerpunkt/Ersatz) und Karsk (ein Stoß) brauchen **erkennbare Fortschritte** (Durchbruch, Vernichtung, Halten) — reine Untätigkeit belohnt sie nicht |
+**Bewertet:** (A) ab Zug 18 leere eigene Front am Zugende = Verlust · (B) ab Zug 20 meiste SP, Gleichstand → Brettanteil.
 
----
+**Wahl: Hybrid**
 
-## 2. Empfohlene Regeln (zur Entscheidung)
+1. **Ab Zug 18:** Endest du deinen Zug **ohne** Fronteinheit → **Niederlage** („Keine Front ab Zug 18“). Erzwingt Präsenz, verhindert reines Support-Turtle.
+2. **Ab Zug 20** (falls noch kein Sieger): **meiste SP** gewinnt; Gleichstand → **mehr Fronteinheiten** (Brettanteil); weiterhin Gleichstand → **weißer Frieden**.
 
-### 2.1 Primärvorschlag — **Druck auf die Front + SP-Rennen (Hybrid)**
+Begründung: Reines (A) allein beendet lange Attrition-Rennen nicht, wenn beide Front halten. Reines (B) allein belohnt Frontflucht bis Zug 19. Hybrid hält Druck und garantiert ein Ende.
 
-**Ziel:** 10–20 Minuten, sichtbarer Fortschritt jede paar Züge.
+Aufgabe und weißer Frieden bleiben.
 
-1. **Siegschwelle: 7 SP** (Playtest-Korridor 5–8; Startwert 7 statt 10).
-2. **Feste SP-Quellen** (ohne Kartenpflicht):
-   - **Einheit zerstört:** +1 SP (Bronze/Silber); **Elite oder Gold-Einheit:** +2 SP.
-   - **Abschnitt leergefegt:** Wenn der Gegner in einem Abschnitt (L/C/R) keine Front-Einheit mehr hat und du dort mindestens eine hast: +1 SP **einmal pro eigenem Zug** (max. 1 SP/Zug aus Abschnitten).
-   - **Support-Durchbruch (optional):** Wenn du in einem Zug eine Support-Karte des Gegners zerstörst: +1 SP (gedeckelt, z. B. max. 2 SP/Partie aus Support).
-3. **Karten-SP** nur noch als Ausnahme (Doktrin/Gold), nie blankes „+1 SP“ ohne Bedingung — wie in RULES vorgesehen.
-4. **Weißer Frieden** bleibt (beide müssen zustimmen).
-5. **Aufgabe** bleibt.
-6. **Kein Deck-Out-Verlust** (Reshuffle bleibt), damit lange Attrition-Nationen (Ossaria, Caldris) nicht bestraft werden.
-7. **Zugdeckel (Soft):** Ab Zug 12 erhält der Spieler mit mehr Front-Einheiten (bei Gleichstand: mehr SP) **+1 SP zu Beginn seines Zuges** („Lageentscheidung“). Verhindert Endlospartien, ohne hart abzuschneiden.
+### 2.4 Bot
 
-**Matchlänge-Ziel:** Viele Partien entscheiden sich zwischen Zug 6 und 12.
-
-### 2.2 Alternative A — **Divisionswille (HQ-HP)**
-
-- Jede Seite startet mit **20 Wille**.
-- Schaden am Wille: wenn ein Angriff eine **leere** gegnerische Frontstellung trifft, die gegenüber/benachbart liegt, oder über Steilfeuer den Support „berührt“ (genaue Formel Playtest).
-- Bei **0 Wille** Niederlage.
-- SP entfallen oder dienen nur als Nebenmodus.
-
-**Pro:** Sehr klar, streamerfreundlich, Karsk-Stoß und Rothain-Schwerpunkt lesen sich als Wille-Schäden.  
-**Contra:** Braucht UI (Wille-Leiste), Balancing der Leeren-Stellung-Regel, Gefahr von Turtle hinter voller Front.
-
-### 2.3 Alternative B — **Nur Abschnittskontrolle (sektoral)**
-
-- Jeder gehaltene Abschnitt am Zugende: +1 SP (oder Kontrolle-Zähler).
-- Zuerst 5 Abschnitts-Ticks oder 3 Abschnitte gleichzeitig → Sieg.
-
-**Pro:** Passt zu Flankenkrieg und Doktrinen wie Umgehen/Abriegeln.  
-**Contra:** Weniger „Vernichtungsgefühl“; Karsk wirkt indirekter.
-
-### 2.4 Was für die 16 Nationen wichtig ist
-
-| Philosophie (Beispiele) | Braucht in der Siegbedingung |
-|---|---|
-| Karsk — ein Stoß | Schnelle SP oder Wille-Schaden durch konzentrierte Zerstörung |
-| Rothain — Schwerpunkt / Ersatz | Durchbruch belohnen, Nachrücken/Ersatz nicht bestrafen |
-| Eldran — Auffangen / Gegenstoß | Comeback nach Halten (nicht nur First-Strike-Rennen) |
-| Caldris / Merovan — Etappe / Ausharren | Attrition und Halten müssen punkten, nicht nur frühe Aggression |
-| Vesper — Scheinschwerpunkt | Täuschung/Verdeckt darf Abschnitte bedrohen |
-| Diplomatische / friedliche Wege | Weißer Frieden + optionale „Eskalation senken“-Karten behalten |
-
-Empfehlung: **Hybrid (2.1)** als Standard für PvP/Hotseat/Bot; **Wille (2.2)** optional als Szenario-/Roguelike-Bossregel.
-
-### 2.5 Entscheidungsfragen an dich
-
-1. Primär **Hybrid-SP (2.1)**, **Wille (2.2)** oder **Abschnitte (2.3)**?
-2. Siegschwelle **7** oder lieber **5** / **10**?
-3. Soft-Zugdruck ab Zug **12** — ja/nein?
-4. Soll Zerstören von Unterstützung SP geben?
-5. Bleibt weißer Frieden im Ranked später erlaubt?
-
-**Nächster Schritt nach deiner Wahl:** Phase 0 im Fahrplan — Regeln festziehen und erst dann Engine anpassen.
+Trophy-Bot bewertet Elite-Kills, Durchbruch-Druck (letzte Feindeinheit im Abschnitt) und fast fertige Doktrin-Ziele höher.
 
 ---
 
-## 3. Kurzfazit
+## 3. Doktrin-Ziele (alle 36, nationenunabhängig)
 
-Heute endet das Gefecht regeltechnisch bei 10 SP, aber SP fließen fast nicht. Ohne Entscheidung hier bleiben Tutorial, Roguelike, Kampagne und Steam-Demo ohne glaubwürdiges „Partie vorbei“. Erst Siegbedingungen locken, dann Kartendesign und Roguelike darauf bauen.
+Fortschritt nur, wenn die Doktrin im Slot liegt. Zielrate Playtest **~30–60 %** der Partien mit dieser Doktrin.
+
+| Doktrin | Ziel (+1 SP, 1×) | Need |
+|---|---|---|
+| Ablösung | 2 Einheiten im Abschnitt nach eigenem Verlust nachrücken | 2 |
+| Abnutzung | 5 gegnerische Fronteinheiten zerstören | 5 |
+| Abriegeln | 1 Artillerieangriff auf Abschnitt mit ≤1 Feind | 1 |
+| Abschluss | 2 Kills mit derselben Einheit in der Partie | 2 |
+| Auffangen | 1 Angriff bei Unterzahl/Gleichstand überleben | 1 |
+| Aufklärungsschlag | 9 Schaden an aufgeklärten Feinden | 9 |
+| Ausharren | 2 Schaden aus Abschnitten ohne eigene Unterstützung | 2 |
+| Auswertung | 3 Schaden im Zug nach erlittenem Angriff | 3 |
+| Blitzkrieg | 1 Kill mit Panzer innerhalb von 2 Zügen nach Einrücken | 1 |
+| Bollwerk | 4 Schaden aus Abschnitten mit ≥2 eigenen Einheiten | 4 |
+| Breites Aufgebot | 3 Infanterie ausspielen | 3 |
+| Entsatz | 7 Schaden aus Abschnitten mit ≥2 eigenen Einheiten | 7 |
+| Etappensicherung | 5 Züge ohne eigenen Frontverlust beenden | 5 |
+| Feuerplan | 7 Schaden an aufgeklärten Feinden | 7 |
+| Feuerwalze | 1 Artillerie-Kill | 1 |
+| Gegenstoß | 6 Schaden im Zug nach erlittenem Angriff | 6 |
+| Gepanzerter Fuß | 2 Infanterie ausspielen | 2 |
+| Lauer | 5 gegnerische Fronteinheiten zerstören | 5 |
+| Linienkrieg | 6 Schaden aus Abschnitten mit ≥2 eigenen Einheiten | 6 |
+| Lokalisierung | 8 Schaden an aufgeklärten Feinden | 8 |
+| Marsch aus dem Vollen | 3 Einheiten in Abschnitte mit Unterstützung spielen | 3 |
+| Materialersatz | 4 Panzer oder Artillerie ausspielen | 4 |
+| Normverband | 3 gegnerische Fronteinheiten zerstören | 3 |
+| Punktfeuer | 2 Artillerie-Kills | 2 |
+| Rasten | 8 Schaden mit Einheiten, die letzten Zug nicht angriffen | 8 |
+| Scheinschwerpunkt | 3 Züge mit Einheiten in ≥2 Abschnitten beenden | 3 |
+| Schwerpunkt | 7 Schaden aus dem stärksten eigenen Abschnitt | 7 |
+| Sicherer Nachschub | 3 Einheiten in Abschnitte mit Unterstützung spielen | 3 |
+| Stoßtrupp | 2 Kills mit Infanterie | 2 |
+| Sturmangriff | 2 Kills mit Infanterie | 2 |
+| Tiefenverteidigung | 3 gegnerische Fronteinheiten zerstören | 3 |
+| Umgehen | 4 Schaden bei lokaler Überzahl | 4 |
+| Verlegung | 3 Züge mit Einheiten in ≥2 Abschnitten beenden | 3 |
+| Verteilte Stellung | 2 Schaden als alleinige Einheit im Abschnitt | 2 |
+| Weiterkämpfen | 6 Schaden mit beschädigten Einheiten | 6 |
+| Zielangriff | 4 gegnerische Fronteinheiten zerstören | 4 |
+
+Implementierung: `web/js/engine/victory_trophy.js` (`DC_TROPHY_OBJECTIVES`).
+
+Hinweis: Fünf Doktrinen liegen in keinem Nationsdeck (Auswertung, Blitzkrieg, Bollwerk, Sicherer Nachschub, Tiefenverteidigung) — Trigger-Raten dort nur über Custom-Decks messbar.
+
 
 ---
 
-## Anhang: Front-Snowball (Balance, nicht Siegbedingung)
+## 4. Optionale Gold-Soforts (nur Kandidaten — **nicht** geändert)
 
-Nutzerfeedback zu Ketten-Angriffen / Soforttod frischer Deploys ist in **`BALANCE_FRONT.md`** diagnostiziert.
-Anti-Snowball: `deploy_protection` / Eingraben (default **an**); `strict_facing` bleibt **aus**. **Keine Änderung an Siegbedingungen.**
+Könnten später bedingtes +1 SP tragen:
 
+- **Abschluss** / **Zielangriff** / **Punktfeuer** — Kill-Bedingung passt thematisch
+- **Feuerwalze** (Sofort) — Massenfeuer
+- **Stoßtrupp** / **Sturmangriff** — Stoß-Kill
+- **Schwerpunkt** — Abschnittsstoß
+- **Ablösung** — Nachrücken nach Opfer
+- **Weite Umgehung** / **Umgehen** — Flankenkontrolle
+
+Keine Kartenwerte in diesem Commit geändert.
+
+---
+
+## 5. Aktivierung
+
+```js
+// catalog.js / Match-Opts rules override:
+victory_mode: 'trophy'   // statt 'classic'
+trophy_vp_to_win: 5      // optional
+```
+
+UI: Doktrin-Karten zeigen `SP cur/need`, Inspect-Text nennt das Trophy-Ziel, Log kündigt SP an.
+
+---
+
+## 6. Tests & Simulation
+
+- Unit: `scripts/test_trophy_victory.js`
+- Round-Robin: `scripts/sim_trophy_victory.mjs` (≥1000 Partien)

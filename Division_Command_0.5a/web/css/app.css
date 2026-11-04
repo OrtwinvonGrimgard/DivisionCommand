@@ -4020,3 +4020,21 @@ button.pick-section:hover, button.pick-section.on {
   background: #3a5a6a;
   box-shadow: 0 0 8px rgba(126,200,227,.5);
 }
+
+
+/* Trophy doctrine objective badge */
+.doctrine-card .dok-vp {
+  font-size: 10px;
+  line-height: 1.2;
+  padding: 2px 4px;
+  margin-top: 2px;
+  border-radius: 3px;
+  background: rgba(40, 60, 90, 0.85);
+  color: #cfe3ff;
+  text-align: center;
+}
+.doctrine-card .dok-vp.dok-vp-done {
+  background: rgba(40, 110, 60, 0.9);
+  color: #d7ffe0;
+}
+.dok-vp-inspect { color: #cfe3ff; }

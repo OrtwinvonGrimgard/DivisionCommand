@@ -1063,6 +1063,16 @@
       (stats ? '<div class="stat-block">' + stats + '</div>' : '') +
       (inst && isDigInProtected(inst) ? '<div class="inspect-dig-in">' + digInShieldSvg(16) + '<span>Eingegraben — nicht angreifbar bis zum nächsten eigenen Zug</span></div>' : '') +
       '<p>' + escapeHtml(facedown ? 'Diese Einheit liegt verdeckt.' : (def.text || '')) + '</p>' +
+      (function () {
+        if (!(engine && engine._trophyActive && engine._trophyActive() && def && def.typ === 'Doktrin')) return '';
+        var obj = (window.DC_TROPHY_OBJECTIVES && DC_TROPHY_OBJECTIVES[def.id]) || (engine.trophyObjectiveFor && engine.trophyObjectiveFor(def.id));
+        if (!obj) return '';
+        var viewer = mode === 'hotseat' ? (engine.state && engine.state.active) : you;
+        var prog = engine.trophyProgressFor && engine.trophyProgressFor(viewer, def.id);
+        var line = 'Trophy-Ziel (+1 SP, 1×/Partie): ' + (obj.label || '');
+        if (prog) line += ' — Fortschritt ' + prog.cur + '/' + prog.need + (prog.done ? ' (erreicht)' : '');
+        return '<p class="tiny dok-vp-inspect"><strong>' + escapeHtml(line) + '</strong></p>';
+      })() +
       (costNote ? '<p class="tiny">' + escapeHtml(costNote) + '</p>' : '') +
       (def.flavor && !facedown ? '<p class="tiny"><em>' + escapeHtml(def.flavor) + '</em></p>' : '') +
       '</div><div class="acts">' + // nächster Schritt im Ablauf
@@ -2203,16 +2213,24 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     if (mn) { mn.classList.add('nml-row', 'mine'); dirty = applyHtml(mn, nmlHtml(me)) || dirty; }
     setLabel('enemy-nml-label', foe.name + ' — Niemandsland');
     setLabel('my-nml-label', me.name + ' — Niemandsland');
-    function doctrineRow(list) {
+    function doctrineRow(list, pid) {
       return (list || []).map(function (d) {
         var def = engine.defOf(d);
-        return '<div class="doctrine-card" data-id="' + def.id + '">' + artTag(def, false, 'art', true) + '<div class="dn">' + escapeHtml(def.name) + '</div></div>';
+        var badge = '';
+        if (engine._trophyActive && engine._trophyActive()) {
+          var prog = engine.trophyProgressFor && engine.trophyProgressFor(pid, def.id);
+          if (prog) {
+            var cls = prog.done ? ' dok-vp-done' : '';
+            badge = '<div class="dok-vp' + cls + '" title="' + escapeHtml(prog.label || '') + '">SP ' + prog.cur + '/' + prog.need + (prog.done ? ' ✓' : '') + '</div>';
+          }
+        }
+        return '<div class="doctrine-card" data-id="' + def.id + '">' + artTag(def, false, 'art', true) + '<div class="dn">' + escapeHtml(def.name) + '</div>' + badge + '</div>';
       }).join('');
     }
     var ed = document.getElementById('enemy-doctrine');
     var md = document.getElementById('my-doctrine');
-    if (ed) ed.innerHTML = doctrineRow(foe.doctrines);
-    if (md) md.innerHTML = doctrineRow(me.doctrines);
+    if (ed) ed.innerHTML = doctrineRow(foe.doctrines, foe.id);
+    if (md) md.innerHTML = doctrineRow(me.doctrines, me.id);
     var pe = document.getElementById('plate-enemy');
     var pm = document.getElementById('plate-me');
     function plateHtml(p) {

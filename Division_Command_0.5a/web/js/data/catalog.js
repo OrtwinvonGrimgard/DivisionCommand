@@ -89,7 +89,9 @@ window.DC_CATALOG = window.DC_CATALOG || {
     "strict_facing": false,
     "combat_counter": "survivor_only",
     "deck_copy_limits": { "bronze": 4, "silver": 2, "gold": 1 },
-    "doctrine_slots": 2
+    "doctrine_slots": 2,
+    "victory_mode": "classic",
+    "trophy_vp_to_win": 5
   }
 };
 window.DC_CATALOG.cards = [];

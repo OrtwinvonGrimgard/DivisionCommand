@@ -164,6 +164,36 @@
         else ts += Math.max(0, 10 - (defv - atk));
         ts += tAtk * 1.4;
         if (loc.inst.facedown) ts += 5;
+        // Trophy mode: value elite kills, doctrine kill objectives, breakthrough pressure
+        try {
+          if (engine._trophyActive && engine._trophyActive()) {
+            var elite = engine._isEliteDef ? engine._isEliteDef(td) : ((td.tags || []).join(' ').toLowerCase().indexOf('elite') >= 0 || td.klasse === 'Elite');
+            if (elite && atk >= defv) ts += 36;
+            else if (elite) ts += 14;
+            if (atk >= defv) {
+              var bagA = ((ad.tags || []).join(' ') + ' ' + (ad.klasse || '')).toLowerCase();
+              if (bagA.indexOf('infanterie') >= 0) ts += 8;
+              if (engine._isArtilleryAttacker && engine._isArtilleryAttacker(aLoc.inst)) ts += 6;
+            }
+            // empty enemy section pressure (Durchbruch)
+            if (loc.zone === 'front') {
+              var foeLeft = 0;
+              engine.frontList(engine.player(loc.player.id)).forEach(function (l) {
+                if (l.section === loc.section) foeLeft++;
+              });
+              if (foeLeft <= 1 && atk >= defv) ts += 12;
+            }
+            // doctrine progress near completion
+            var me = engine.player(pid);
+            if (me && me.trophy && me.trophy.doctrineProg) {
+              Object.keys(me.trophy.doctrineProg).forEach(function (k) {
+                var row = me.trophy.doctrineProg[k];
+                if (!row || row.done) return;
+                if (row.cur >= row.need - 1) ts += 5;
+              });
+            }
+          }
+        } catch (eT) {}
         var canCounter = true;
         if (isArtyAtk && engine._canReachForCounter) {
           try { canCounter = !!engine._canReachForCounter(loc, aLoc); } catch (e2) { canCounter = true; }
