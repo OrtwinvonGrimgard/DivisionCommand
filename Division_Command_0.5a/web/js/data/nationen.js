@@ -75,20 +75,20 @@ window.DC_NATIONS = {
     "bindung": "Recht"
   },
   "Karsk": {
-    "lore": "Körper als System — synthetische Optimierung um jeden Preis",
+    "lore": "Körper als System",
     "doktrinen": [
-      "dc_dok_stosstrupp",
-      "dc_dok_weiterkaempfen"
+      "Stoßtrupp",
+      "Weiterkämpfen"
     ],
-    "stil": "Körper als System — synthetische Optimierung um jeden Preis",
-    "deck_name": "Körper als System",
+    "stil": "Körper als System",
+    "deck_name": "Karsk",
     "deck": [
       "dc_b_stossgruppe_361",
       "dc_b_masstrupp_362",
       "dc_b_schnittstelle_363",
       "dc_b_keilspitze_364",
-      "dc_b_filterlunge_365",
-      "dc_b_ersatzkoerper_366",
+      "dc_b_filterpanzer_365",
+      "dc_b_ersatzkeil_366",
       "dc_b_schwere_stossgruppe_367",
       "dc_b_masseinheit_368",
       "dc_b_nervenpanzer_369",
@@ -114,7 +114,7 @@ window.DC_NATIONS = {
       "dc_b_weiterkaempfen_protokoll_389",
       "dc_b_leistungsboard_390",
       "dc_b_sezierstation_391",
-      "dc_b_filterwerk_392",
+      "dc_b_filterwerk_rohr_392",
       "dc_b_prioritaetsmedizin_393",
       "dc_b_offene_front_394",
       "dc_b_stossleitung_395",
@@ -130,10 +130,10 @@ window.DC_NATIONS = {
       "dc_b_keilbefehl_405",
       "dc_b_ersatzgriff_406",
       "dc_b_feldverband_407",
-      "dc_b_ersatzglied_408",
+      "dc_b_implantatrohr_408",
       "dc_b_nervenklemme_409",
       "dc_b_filterpatrone_410",
-      "dc_b_knochenstift_411",
+      "dc_b_knochenbatterie_411",
       "dc_b_schmerzchip_412",
       "dc_b_servogurt_413",
       "dc_b_blutbeutel_414",
@@ -144,7 +144,7 @@ window.DC_NATIONS = {
       "dc_b_stosstrupp_419",
       "dc_b_weiterkaempfen_420"
     ],
-    "bindung": "Leistung vor Menschlichkeit"
+    "bindung": ""
   },
   "Theryn": {
     "lore": "Pflichtglaube, Wellen, Maß statt Eifer allein",
@@ -157,11 +157,11 @@ window.DC_NATIONS = {
     "deck": [
       "dc_b_pflichtzug_1",
       "dc_b_erste_welle_2",
-      "dc_b_genossenreihe_3",
+      "dc_b_pflichtpanzer_3",
       "dc_b_nachruecker_4",
       "dc_b_zweite_welle_5",
       "dc_b_stosskolonne_6",
-      "dc_b_dritte_welle_7",
+      "dc_b_wellenpanzer_7",
       "dc_b_heilige_front_8",
       "dc_b_werkspanzer_9",
       "dc_b_balkenwagen_10",
@@ -190,7 +190,7 @@ window.DC_NATIONS = {
       "dc_b_ritusnennung_117",
       "dc_b_genossenschaftslager_118",
       "dc_b_breite_front_119",
-      "dc_b_heilige_ordnung_120",
+      "dc_b_ordnungsbatterie_120",
       "dc_b_marschbefehl_121",
       "dc_b_blutzeuge_122",
       "dc_b_sammelruf_123",
@@ -204,19 +204,19 @@ window.DC_NATIONS = {
       "dc_b_standarte_131",
       "dc_b_gebetsfahne_132",
       "dc_b_sturmleitern_133",
-      "dc_b_rotbraune_jacke_134",
+      "dc_b_massfeuer_134",
       "dc_b_feldzeichen_135",
       "dc_b_blutbanner_136",
       "dc_b_sammelfahne_137",
       "dc_b_feldaltar_138",
-      "dc_b_weihewasser_139",
+      "dc_b_weihegeschuetz_139",
       "dc_b_glaubenssegen_140",
       "dc_b_kettengebet_141",
       "dc_b_balkenschild_142",
       "dc_b_breites_aufgebot_143",
       "dc_b_sturmangriff_144"
     ],
-    "bindung": "Pflicht und Ritus"
+    "bindung": ""
   },
   "Vael": {
     "lore": "Krieg als Geschäft — Feuerwalze und Nachlieferung",
@@ -725,11 +725,11 @@ window.DC_NATIONS = {
   "Rothain": {
     "lore": "Unfehlbare Krone",
     "doktrinen": [
-      "dc_dok_schwerpunkt",
-      "dc_dok_abloesung"
+      "Schwerpunkt",
+      "Ablösung"
     ],
     "stil": "Unfehlbare Krone",
-    "deck_name": "Unfehlbare Krone",
+    "deck_name": "Rothain",
     "deck": [
       "dc_b_schwurzug_601",
       "dc_b_kronwache_602",
@@ -737,8 +737,8 @@ window.DC_NATIONS = {
       "dc_b_abloesungskette_604",
       "dc_b_regiment_erbe_605",
       "dc_b_schwerpunktlinie_606",
-      "dc_b_narbstadt_zug_607",
-      "dc_b_parlamentsgarde_608",
+      "dc_b_kronpanzer_narbstadt_607",
+      "dc_b_erlasswagen_608",
       "dc_b_kronpanzer_609",
       "dc_b_erbe_kette_610",
       "dc_b_schwerpunktkeil_611",
@@ -766,7 +766,7 @@ window.DC_NATIONS = {
       "dc_b_kronrat_633",
       "dc_b_werkstattbefehl_634",
       "dc_b_unfehlbarer_erlass_635",
-      "dc_b_parlamentsbindung_636",
+      "dc_b_erlassbatterie_636",
       "dc_b_treueeid_637",
       "dc_b_sofortabloesung_638",
       "dc_b_konzentrationsruf_639",
@@ -779,8 +779,8 @@ window.DC_NATIONS = {
       "dc_b_linienhalten_646",
       "dc_b_wachsiegel_647",
       "dc_b_kronriemen_648",
-      "dc_b_schwurband_649",
-      "dc_b_silberstern_spange_650",
+      "dc_b_schwurfeuer_649",
+      "dc_b_silberstern_rohr_650",
       "dc_b_erbe_gewehr_651",
       "dc_b_kronplakette_652",
       "dc_b_befehlskarte_653",
@@ -792,7 +792,7 @@ window.DC_NATIONS = {
       "dc_b_schwerpunkt_659",
       "dc_b_abloesung_660"
     ],
-    "bindung": "Erbe"
+    "bindung": ""
   },
   "Sahr": {
     "lore": "Fließen und Umgehen — Linienkrieg und Umgehen",
