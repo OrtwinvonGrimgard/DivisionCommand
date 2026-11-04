@@ -9,7 +9,7 @@
   <title>Division Command 0.5a Alpha</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#12140f">
-  <link rel="stylesheet" href="css/app.css?v=trophy2">
+  <link rel="stylesheet" href="css/app.css?v=trophy3">
   <link rel="stylesheet" href="css/kit-editor.css?v=1">
   <link rel="stylesheet" href="css/align.css?v=handzoom2" id="dc-align-css">
   <style>
@@ -450,7 +450,7 @@
               <p>Das Spiel soll vom Blauhelm bis zum Abgrund der Kriegsführung reichen: Logistik, Aufklärung und Versorgung auf der einen Seite, Propaganda, Opfer und Flächenwirkung auf der anderen. Klassen sind Infanterie, Rad und Kette. Artillerie und Panzer sind Klassen, keine Tags. Tags vergibt du selbst und hängst die Effekte später daran.</p>
 
               <h2 id="regeln">Spielregeln</h2>
-              <p>Eine Partie gewinnt, wer zuerst 10 Siegpunkte hat, oder durch eine Karte, die das ausdrücklich sagt. Weißer Frieden ist vorgesehen. Der Ablagestapel kann neu gemischt werden, wenn das Deck leer ist. Das Nationendeck hat 60 Karten (Testdeck oft 40), die Starthand 5, die Hand darf auf 7 wachsen. Kopienlimit nach Seltenheit: <strong>Bronze höchstens 4×</strong>, <strong>Silber 2×</strong>, <strong>Gold 1×</strong> (gleiche Namen zählen zusammen). Zwei verschiedene Doktrinen liegen offen und gelten die Partie über.</p>
+              <p>Eine Partie gewinnt, wer zuerst 10 Siegpunkte hat, oder durch eine Karte, die das ausdrücklich sagt. Weißer Frieden ist vorgesehen. Der Ablagestapel kann neu gemischt werden, wenn das Deck leer ist. Das Nationendeck hat 60 Karten (Testdeck oft 40), die Starthand 5, die Hand darf auf 7 wachsen. Wer beginnt, entscheidet der <strong>Münzwurf</strong>. Der Startspieler zieht in Zug 1 keine Karte; der zweite Spieler zieht zu Beginn seines ersten Zuges wie üblich eine Karte und hat damit <strong>eine Karte mehr</strong> zur Verfügung (5→6). Kopienlimit nach Seltenheit: <strong>Bronze höchstens 4×</strong>, <strong>Silber 2×</strong>, <strong>Gold 1×</strong> (gleiche Namen zählen zusammen). Zwei verschiedene Doktrinen liegen offen und gelten die Partie über.</p>
               <p>Einheiten kommen auf eine eigene Frontstellung <strong>offen</strong> (nicht verdeckt) und handeln erst im nächsten eigenen Zug. Frisch gelegt sind sie <strong>eingegraben</strong>: ein Schild-Symbol zeigt den Schutz — nicht angreifbar und nicht Ziel gezielter Effekte bis zum Beginn des nächsten eigenen Zugs, plus +1 DEF. Flächenschaden (z.&nbsp;B. „Allen Feinden … Schaden“) trifft trotzdem. Unterstützung kommt in den Support und bleibt dort, bis sie zerstört, entfernt oder ausgeschaltet wird. Einsätze wirken sofort und gehen danach auf den Ablagestapel. Ausrüstung hängt an einer Einheit, wenn ihr Text das sagt. Doktrinen werden nicht gespielt, sie liegen von Anfang an offen.</p>
               <p>Ein Angriff kostet im Test 1 AP, ein Einsatz und das Anlegen von Ausrüstung im Test 0. Der Kartentext kann das ändern. Schaden senkt die Stabilität. Bei 0 ist die Einheit weg. Die Stellung bleibt leer. Niemand rückt automatisch nach. Der Verteidiger schlägt zurück, falls sie den Treffer übersteht und ihr Text das nicht verbietet. Bei Artillerie-Angriffen nur, wenn die angegriffene Einheit die Artillerie selbst mit ihrer Reichweite erreichen könnte. Eingegrabene Einheiten erscheinen nicht als legale Angriffsziele.</p>
               <p>Steilfeuer erhöht die Reichweite, nicht den Schaden. Stufe 1 reicht über 3 gegnerische Stellungen, Stufe 2 über 5, Stufe 3 über 9. Mörser ist Stufe 1, Haubitze Stufe 2, Raketenwerfer Stufe 3. Das Ziel wird angeklickt, der Kampf läuft danach von selbst.</p>
@@ -643,20 +643,20 @@
   <script src="js/data/sets/types/soforteinsatz.js?v=sector1"></script>
   <script src="js/data/sets/types/ausruestung.js?v=fxwire2"></script>
   <script src="js/data/decks.js?v=dokfix"></script>
-  <script src="js/data/catalog.js?v=trophy2"></script>
+  <script src="js/data/catalog.js?v=trophy3"></script>
   <script src="js/data/audio-data.js?v=030c"></script>
-  <script src="js/engine/engine.js?v=trophy2"></script>
-  <script src="js/engine/victory_trophy.js?v=trophy2"></script>
-  <script src="js/ai/bot.js?v=trophy2"></script>
+  <script src="js/engine/engine.js?v=trophy3"></script>
+  <script src="js/engine/victory_trophy.js?v=trophy3"></script>
+  <script src="js/ai/bot.js?v=trophy3"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/library.js?v=digin4"></script>
   <script src="js/ui/portraits.js?v=kit20"></script>
-  <script src="js/ui/app.js?v=trophy2"></script>
+  <script src="js/ui/app.js?v=trophy3"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>
   <script src="js/net.js?v=030c"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js?v=trophy2').catch(function () {});
+      navigator.serviceWorker.register('sw.js?v=trophy3').catch(function () {});
     }
     (function () {
       document.title = window.DC_BUILD_LABEL || 'Division Command 0.5a Alpha';

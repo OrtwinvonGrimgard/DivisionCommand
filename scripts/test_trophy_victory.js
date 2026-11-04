@@ -185,4 +185,23 @@ function put(eng, pid, cardId, section, row) {
   assert(need === Math.max(1, Math.ceil(5 * 0.65)), 'abnutzung scaled need got ' + need);
 }
 
+
+// Second player +1 via turn-start draw (not opening hand)
+{
+  const deck = DCEngine.buildTestDeck(DC_CATALOG, DCEngine.rng(3)).slice(0, 60);
+  const eng = new DCEngine.Engine(DC_CATALOG, { seed: 3 });
+  eng.createMatch({
+    seed: 3, startPlayer: 0,
+    deck0: deck, deck1: deck.slice(), doctrine0: [], doctrine1: [],
+    name0: 'A', name1: 'B',
+  });
+  assert(eng.player(0).hand.length === DC_CATALOG.rules.hand_start, 'P1 opening = hand_start');
+  assert(eng.player(1).hand.length === DC_CATALOG.rules.hand_start, 'P2 opening = hand_start (no extra opening card)');
+  const before = eng.player(1).hand.length;
+  eng.player(0).hand = eng.player(0).hand.slice(0, 7);
+  eng.dispatch({ type: 'END_TURN', player: 0 });
+  assert(eng.state.active === 1, 'P2 becomes active');
+  assert(eng.player(1).hand.length === before + 1, 'P2 drew +1 at turn start, got ' + eng.player(1).hand.length);
+}
+
 console.log('\nALL PASSED', passed);

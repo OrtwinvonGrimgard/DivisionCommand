@@ -1,0 +1,65 @@
+{
+  "gamesPerPairing": 5,
+  "pairings": 240,
+  "note": "Opening hands both hand_start (5). Second player draws +1 at start of their first turn (_actEnd → _draw(nxt,1)); first player has no turn-start draw on turn 1.",
+  "classic": {
+    "mode": "classic",
+    "games": 1200,
+    "decided": 1067,
+    "ties": 133,
+    "firstPlayerWinRate": 0.5688847235238987,
+    "openingHandsEqual": true,
+    "topReasons": [
+      [
+        "timeout-Brett",
+        1067
+      ],
+      [
+        "timeout",
+        133
+      ]
+    ]
+  },
+  "trophy": {
+    "mode": "trophy",
+    "games": 1200,
+    "decided": 1147,
+    "ties": 53,
+    "firstPlayerWinRate": 0.5457715780296426,
+    "openingHandsEqual": true,
+    "topReasons": [
+      [
+        "5 Siegpunkte (Trophy)",
+        817
+      ],
+      [
+        "timeout-Brett",
+        122
+      ],
+      [
+        "timeout-SP",
+        84
+      ],
+      [
+        "6 Siegpunkte (Trophy)",
+        79
+      ],
+      [
+        "timeout",
+        53
+      ],
+      [
+        "Zuglimit 28 (mehr SP)",
+        23
+      ],
+      [
+        "Keine Front ab Zug 26",
+        13
+      ],
+      [
+        "Zuglimit 28 (Brettanteil)",
+        9
+      ]
+    ]
+  }
+}
