@@ -384,7 +384,6 @@
         if (foeFace === 1) foeFace = 12;
         engine.state.players[1].portrait = 'lt-' + (foeFace<10?'0':'')+foeFace;
       }
- // nächster Schritt im Ablauf
       you = 0;
       seenEvents = 0;
       eventQueue = [];
@@ -400,6 +399,8 @@
         var tr = document.getElementById('title-root');
         if (tr) tr.style.display = 'none';
       }
+      // Opening coin after table is up (LAN host state already carries startCoin/active)
+      showOpeningCoin();
     } catch (err) { // Fehler behandeln
       showErr(String(err && err.message ? err.message : err)); // nächster Schritt im Ablauf
     }
@@ -633,6 +634,27 @@
     if (engine.state.active === 1 || (engine.state.pending && engine.state.pending.player === 1)) {
       window.setTimeout(botTick, (window.DCBot && DCBot.cfg && DCBot.cfg.delayMs) || 350);
     }
+  }
+
+
+  function showOpeningCoin() {
+    if (!engine || !engine.state || !engine.state.startCoin) return;
+    var sc = engine.state.startCoin;
+    if (sc._shown) return;
+    sc._shown = true;
+    var winner = engine.state.players[sc.winner];
+    var name = (winner && winner.name) || ('Spieler ' + (sc.winner + 1));
+    var face = sc.face === 'zahl' ? 'Zahl' : 'Kopf';
+    var ov = document.getElementById('overlay');
+    if (!ov) return;
+    ov.innerHTML = '<div class="modal coin-toss-modal"><h2>Münzwurf</h2>' +
+      '<div class="coin-toss-anim" aria-hidden="true">🪙</div>' +
+      '<p class="coin-toss-msg">Münzwurf: <strong>' + escapeHtml(name) + '</strong> beginnt' +
+      (sc.forced ? '' : ' <span class="tiny">(' + face + ')</span>') +
+      '.</p><button type="button" class="primary" id="coin-start-ok">Los</button></div>';
+    ov.style.display = 'flex';
+    var btn = document.getElementById('coin-start-ok');
+    if (btn) btn.onclick = function () { ov.style.display = 'none'; if (typeof maybeBot === 'function') maybeBot(); };
   }
 
   /* Dialog für Stellung, Ziel, Mehrfachwahl oder Münze. */
@@ -2594,6 +2616,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     presentNewEvents();
     if (first && window.dcKickoff) window.dcKickoff();
     else if (tr) { if (window.dcSetTable) window.dcSetTable(true); tr.style.display = 'none'; }
+    if (st && st.startCoin && !st.startCoin._shown) showOpeningCoin();
   };
   window.dcPresentNewEvents = presentNewEvents;
   window.dcSetNames = function (a, b) { // globale Schnittstelle der Seite

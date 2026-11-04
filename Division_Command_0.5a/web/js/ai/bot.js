@@ -137,6 +137,16 @@
     if (d.typ === 'Unterstützung' && !Number(cfg.allowSupport)) s = -200;
     if (d.typ === 'Ausrüstung' && !Number(cfg.allowEquip)) s = -200;
     if (d.typ === 'Soforteinsatz' && !Number(cfg.allowInstant)) s = -200;
+    try {
+      if (engine._trophyActive && engine._trophyActive() && d.typ === 'Einheit') {
+        var frontN = 0;
+        engine.frontList(p).forEach(function () { frontN++; });
+        if (frontN === 0) s += 40; // avoid empty-front safety / get board presence
+        else if (frontN <= 2) s += 12;
+        var needVp2 = engine._trophyVpToWin ? engine._trophyVpToWin() : 5;
+        if ((p.vp || 0) >= needVp2 - 2) s += 8;
+      }
+    } catch (eP) {}
     return s;
   }
 
@@ -164,32 +174,36 @@
         else ts += Math.max(0, 10 - (defv - atk));
         ts += tAtk * 1.4;
         if (loc.inst.facedown) ts += 5;
-        // Trophy mode: value elite kills, doctrine kill objectives, breakthrough pressure
+        // Trophy mode: actively pursue VP (elite, Durchbruch, doctrine, race)
         try {
           if (engine._trophyActive && engine._trophyActive()) {
+            var me = engine.player(pid);
+            var needVp = engine._trophyVpToWin ? engine._trophyVpToWin() : 5;
+            var myVp = (me && me.vp) || 0;
+            var race = myVp >= needVp - 2;
             var elite = engine._isEliteDef ? engine._isEliteDef(td) : ((td.tags || []).join(' ').toLowerCase().indexOf('elite') >= 0 || td.klasse === 'Elite');
-            if (elite && atk >= defv) ts += 36;
-            else if (elite) ts += 14;
+            if (elite && atk >= defv) ts += 48 + (race ? 20 : 0);
+            else if (elite) ts += 18;
             if (atk >= defv) {
+              ts += 10 + (race ? 14 : 0); // any kill advances doctrine / tempo
               var bagA = ((ad.tags || []).join(' ') + ' ' + (ad.klasse || '')).toLowerCase();
-              if (bagA.indexOf('infanterie') >= 0) ts += 8;
-              if (engine._isArtilleryAttacker && engine._isArtilleryAttacker(aLoc.inst)) ts += 6;
+              if (bagA.indexOf('infanterie') >= 0) ts += 10;
+              if (engine._isArtilleryAttacker && engine._isArtilleryAttacker(aLoc.inst)) ts += 8;
             }
-            // empty enemy section pressure (Durchbruch)
             if (loc.zone === 'front') {
               var foeLeft = 0;
               engine.frontList(engine.player(loc.player.id)).forEach(function (l) {
                 if (l.section === loc.section) foeLeft++;
               });
-              if (foeLeft <= 1 && atk >= defv) ts += 12;
+              if (foeLeft <= 1 && atk >= defv) ts += 22 + (race ? 12 : 0); // Durchbruch clear
+              else if (foeLeft <= 2 && atk >= defv) ts += 8;
             }
-            // doctrine progress near completion
-            var me = engine.player(pid);
             if (me && me.trophy && me.trophy.doctrineProg) {
               Object.keys(me.trophy.doctrineProg).forEach(function (k) {
                 var row = me.trophy.doctrineProg[k];
                 if (!row || row.done) return;
-                if (row.cur >= row.need - 1) ts += 5;
+                if (row.cur >= row.need - 1) ts += 12;
+                else if (row.cur >= row.need - 2) ts += 5;
               });
             }
           }

@@ -56,6 +56,7 @@ function makeTrophy(doctrine0, doctrine1) {
     doctrine0: doctrine0 || ['dc_dok_sturmangriff', 'dc_dok_abnutzung'],
     doctrine1: doctrine1 || ['dc_dok_feuerwalze', 'dc_dok_auffangen'],
     name0: 'A', name1: 'B',
+    startPlayer: 0,
   });
   assert(eng._trophyActive(), 'trophy active');
   assert(eng._trophyVpToWin() === 5, 'vp to win 5');
@@ -112,10 +113,24 @@ function put(eng, pid, cardId, section, row) {
 }
 
 
-// Empty front safety from turn 15
+
+// Empty front before safety turn does not end
 {
   const eng = makeTrophy();
-  eng.state.turn = 18;
+  eng.state.turn = 25;
+  eng.state.active = 0;
+  ['L', 'C', 'R'].forEach((s) => { eng.player(0).front[s] = [null, null, null]; });
+  const inf = DC_CATALOG.cards.find((c) => c.typ === 'Einheit' && eng.byId[c.id]);
+  put(eng, 1, inf.id, 'C', 0);
+  eng.player(0).hand = eng.player(0).hand.slice(0, 7);
+  eng.dispatch({ type: 'END_TURN', player: 0 });
+  assert(eng.state.winner == null, 'empty front at 25 does not end');
+}
+
+// Empty front safety from turn 26 (tuned)
+{
+  const eng = makeTrophy();
+  eng.state.turn = 26;
   eng.state.active = 0;
   // clear front
   ['L', 'C', 'R'].forEach((s) => { eng.player(0).front[s] = [null, null, null]; });
@@ -124,7 +139,7 @@ function put(eng, pid, cardId, section, row) {
   put(eng, 1, inf.id, 'C', 0);
   eng.player(0).hand = eng.player(0).hand.slice(0, 7);
   eng.dispatch({ type: 'END_TURN', player: 0 });
-  assert(eng.state.winner === 1, 'empty front at 18 loses');
+  assert(eng.state.winner === 1, 'empty front at 26 loses');
 }
 
 // Classic mode: no trophy VP on elite
@@ -133,7 +148,7 @@ function put(eng, pid, cardId, section, row) {
   const rules = Object.assign({}, catalog.rules, { victory_mode: 'classic' });
   const eng = new DCEngine.Engine(catalog, { seed: 1, rules });
   const deck = DCEngine.buildTestDeck(catalog, DCEngine.rng(99)).slice(0, 60);
-  eng.createMatch({ deck0: deck, deck1: deck.slice(), doctrine0: ['dc_dok_sturmangriff', 'dc_dok_abnutzung'], doctrine1: ['dc_dok_feuerwalze', 'dc_dok_auffangen'] });
+  eng.createMatch({ deck0: deck, deck1: deck.slice(), doctrine0: ['dc_dok_sturmangriff', 'dc_dok_abnutzung'], doctrine1: ['dc_dok_feuerwalze', 'dc_dok_auffangen'], startPlayer: 0 });
   assert(!eng._trophyActive(), 'classic not trophy');
   const before = eng.player(0).vp;
   const inf = DC_CATALOG.cards.find((c) => (c.tags || []).includes('infanterie') && eng.byId[c.id]);
@@ -143,6 +158,31 @@ function put(eng, pid, cardId, section, row) {
   eng.state.active = 0; eng.player(0).ap = 5;
   eng.dispatch({ type: 'ATTACK', player: 0, uid: a.uid, target: e.uid });
   assert(eng.player(0).vp === before, 'classic: no elite vp auto');
+}
+
+
+// Opening coin toss
+{
+  assert(DC_CATALOG.rules.opening_coin === true, 'opening_coin default on');
+  const deck = DCEngine.buildTestDeck(DC_CATALOG, DCEngine.rng(99)).slice(0, 60);
+  const eng = new DCEngine.Engine(DC_CATALOG, { seed: 7, rules: Object.assign({}, DC_CATALOG.rules, { victory_mode: 'classic' }) });
+  eng.createMatch({ seed: 7, deck0: deck, deck1: deck.slice(), doctrine0: [], doctrine1: [], name0: 'A', name1: 'B' });
+  assert(eng.state.startCoin && (eng.state.startCoin.face === 'kopf' || eng.state.startCoin.face === 'zahl'), 'coin face');
+  assert(eng.state.active === eng.state.startCoin.winner, 'active matches coin');
+  const engF = new DCEngine.Engine(DC_CATALOG, { seed: 8 });
+  engF.createMatch({ seed: 8, startPlayer: 1, deck0: deck, deck1: deck.slice(), doctrine0: [], doctrine1: [], name0: 'A', name1: 'B' });
+  assert(engF.state.active === 1 && engF.state.startCoin.forced, 'startPlayer override');
+}
+
+// Trophy knobs defaults (candidate K)
+{
+  assert(DC_CATALOG.rules.trophy_safety_empty_from === 26, 'safety empty 26');
+  assert(DC_CATALOG.rules.trophy_safety_vp_cap === 28, 'safety cap 28');
+  assert(DC_CATALOG.rules.trophy_durchbruch_max_claims === 3, 'db max 3');
+  assert(DC_CATALOG.rules.trophy_doctrine_need_scale === 0.65, 'dok scale 0.65');
+  const eng = makeTrophy(['dc_dok_abnutzung', 'dc_dok_sturmangriff']);
+  const need = eng.player(0).trophy.doctrineProg.dc_dok_abnutzung.need;
+  assert(need === Math.max(1, Math.ceil(5 * 0.65)), 'abnutzung scaled need got ' + need);
 }
 
 console.log('\nALL PASSED', passed);

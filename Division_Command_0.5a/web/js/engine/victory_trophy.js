@@ -1,6 +1,7 @@
 /**
  * Trophy victory mode (victory_mode: 'trophy').
  * Default catalog flag remains 'classic' until playtest approves.
+ * Trophy knobs (candidate K): VP5, safety 26/28, DB×3/cd2, elite 2, dok need×0.65.
  * Doctrine VP objectives are NOT nation-specific.
  */
 (function (root) {
@@ -47,8 +48,8 @@
   };
 
   var VP_WIN = 5;
-  var SAFETY_EMPTY_FROM = 18;
-  var SAFETY_VP_CAP_TURN = 20;
+  var SAFETY_EMPTY_FROM = 26;
+  var SAFETY_VP_CAP_TURN = 28;
 
   function isEliteDef(def) {
     if (!def) return false;
@@ -84,7 +85,9 @@
     });
     player.trophy = {
       sources: { elite: 0, durchbruch: 0, doctrine: 0, other: 0 },
-      durchbruchClaimed: { L: false, C: false, R: false },
+      durchbruchClaims: { L: 0, C: 0, R: 0 },
+      durchbruchClaimed: { L: false, C: false, R: false }, // legacy mirror: true when claims >= max
+      durchbruchCooldownUntil: { L: 0, C: 0, R: 0 },
       durchbruchArmed: { L: null, C: null, R: null }, // turn when emptied while own presence
       doctrineProg: prog,
       turnArtyKills: 0,
@@ -149,6 +152,35 @@
       return Number((this.rules && this.rules.trophy_vp_to_win) || VP_WIN);
     };
 
+    proto._trophyEliteVp = function () {
+      return Number((this.rules && this.rules.trophy_elite_vp) || 2);
+    };
+
+    proto._trophySafetyEmptyFrom = function () {
+      return Number((this.rules && this.rules.trophy_safety_empty_from) || SAFETY_EMPTY_FROM);
+    };
+
+    proto._trophySafetyVpCap = function () {
+      return Number((this.rules && this.rules.trophy_safety_vp_cap) || SAFETY_VP_CAP_TURN);
+    };
+
+    proto._trophyDurchbruchMaxClaims = function () {
+      // per sector: 1 = once/match (legacy), 2+ = reuse up to N
+      return Math.max(1, Number((this.rules && this.rules.trophy_durchbruch_max_claims) || 1));
+    };
+
+    proto._trophyDurchbruchCooldownTurns = function () {
+      // turns after a claim before sector can re-arm (0 = immediate if maxClaims allows)
+      return Math.max(0, Number((this.rules && this.rules.trophy_durchbruch_cooldown) || 0));
+    };
+
+    proto._trophyDoctrineNeedScale = function () {
+      // <1 eases doctrine VP (e.g. 0.75 → need ceil(need*0.75), min 1)
+      var s = Number((this.rules && this.rules.trophy_doctrine_need_scale));
+      if (!isFinite(s) || s <= 0) return 1;
+      return s;
+    };
+
     proto._isEliteDef = function (def) { return isEliteDef(def); };
 
     proto._trophyGrantVp = function (player, n, source, reason) {
@@ -169,6 +201,7 @@
     proto._trophyInitPlayers = function () {
       if (!this._trophyActive() || !this.state) return;
       var self = this;
+      var scale = this._trophyDoctrineNeedScale();
       this.state.players.forEach(function (p) {
         initTrophy(p, p.doctrines);
         // re-key by resolved card ids
@@ -176,7 +209,9 @@
         resolveDoctrineIds(self, p).forEach(function (id) {
           var obj = OBJECTIVES[id];
           if (!obj) return;
-          prog[id] = { cur: 0, need: obj.need, done: false, label: obj.label, name: obj.name, event: obj.event };
+          var need = obj.need;
+          if (scale !== 1) need = Math.max(1, Math.ceil(obj.need * scale));
+          prog[id] = { cur: 0, need: need, done: false, label: obj.label, name: obj.name, event: obj.event };
         });
         p.trophy.doctrineProg = prog;
       });
@@ -198,7 +233,7 @@
 
       // elite VP to killer
       if (isEliteDef(def) && killer) {
-        this._trophyGrantVp(killer, 2, 'elite', 'Elite zerstört: ' + def.name);
+        this._trophyGrantVp(killer, this._trophyEliteVp(), 'elite', 'Elite zerstört: ' + def.name);
       }
 
       // doctrine progress for killer
@@ -347,8 +382,12 @@
       var self = this;
       this.state.players.forEach(function (p) {
         var opp = self.opponent(p.id);
+        var maxC = self._trophyDurchbruchMaxClaims();
         ['L', 'C', 'R'].forEach(function (sec) {
-          if (p.trophy.durchbruchClaimed[sec]) return;
+          var claims = (p.trophy.durchbruchClaims && p.trophy.durchbruchClaims[sec]) || 0;
+          p.trophy.durchbruchClaimed[sec] = claims >= maxC;
+          if (claims >= maxC) return;
+          if ((p.trophy.durchbruchCooldownUntil && p.trophy.durchbruchCooldownUntil[sec] || 0) > self.state.turn) return;
           var own = sectionCount(self, p, sec);
           var foe = sectionCount(self, opp, sec);
           if (own >= 1 && foe === 0) {
@@ -367,20 +406,25 @@
       var p = this.player(endingPid);
       var opp = this.opponent(endingPid);
       var self = this;
+      var maxC = self._trophyDurchbruchMaxClaims();
+      var cd = self._trophyDurchbruchCooldownTurns();
       ['L', 'C', 'R'].forEach(function (sec) {
-        if (!p.trophy || p.trophy.durchbruchClaimed[sec]) return;
+        if (!p.trophy) return;
+        var claims = (p.trophy.durchbruchClaims && p.trophy.durchbruchClaims[sec]) || 0;
+        if (claims >= maxC) return;
+        if ((p.trophy.durchbruchCooldownUntil && p.trophy.durchbruchCooldownUntil[sec] || 0) > self.state.turn) return;
         var armed = p.trophy.durchbruchArmed[sec];
         if (armed == null) return;
-        // Must hold empty enemy sector through end of your NEXT turn after arming.
-        // Armed on turn T when emptied; claim when ending a later own turn (>= armed+1 equivalent).
-        // Turn counter increments on every END_TURN; each player ends once per full round.
-        // "through end of your next turn" ≈ endingPid's end when state.turn > armed (at least one full own turn cycle).
+        // Hold empty through end of your next turn after arming (state.turn > armed).
         if (self.state.turn <= armed) return;
         var own = sectionCount(self, p, sec);
         var foe = sectionCount(self, opp, sec);
         if (own >= 1 && foe === 0) {
-          p.trophy.durchbruchClaimed[sec] = true;
-          self._trophyGrantVp(p, 1, 'durchbruch', 'Durchbruch Abschnitt ' + sec);
+          p.trophy.durchbruchClaims[sec] = claims + 1;
+          p.trophy.durchbruchClaimed[sec] = p.trophy.durchbruchClaims[sec] >= maxC;
+          p.trophy.durchbruchCooldownUntil[sec] = self.state.turn + cd;
+          p.trophy.durchbruchArmed[sec] = null;
+          self._trophyGrantVp(p, 1, 'durchbruch', 'Durchbruch Abschnitt ' + sec + (maxC > 1 ? ' (' + p.trophy.durchbruchClaims[sec] + '/' + maxC + ')' : ''));
         } else {
           p.trophy.durchbruchArmed[sec] = null;
         }
@@ -398,27 +442,30 @@
       if (Object.keys(secs).length >= 2) bump(this, p, 'multi_section_end', 1, {});
       if (Object.keys(secs).length >= 3) bump(this, p, 'triple_section_end', 1, {});
 
-      // Safety: empty front from turn 15
-      if (turn >= SAFETY_EMPTY_FROM && frontCount(this, p) === 0) {
-        this._end(endingPid === 0 ? 1 : 0, 'Keine Front ab Zug ' + SAFETY_EMPTY_FROM);
+      var emptyFrom = this._trophySafetyEmptyFrom();
+      var vpCap = this._trophySafetyVpCap();
+
+      // Safety: empty front
+      if (turn >= emptyFrom && frontCount(this, p) === 0) {
+        this._end(endingPid === 0 ? 1 : 0, 'Keine Front ab Zug ' + emptyFrom);
         return;
       }
 
-      // Soft cap: at turn 20 end, most VP; tie → board share; still tie → white peace
-      if (turn >= SAFETY_VP_CAP_TURN) {
+      // Soft cap: most VP; tie → board share; still tie → white peace
+      if (turn >= vpCap) {
         var a = this.player(0);
         var b = this.player(1);
         if (a.vp !== b.vp) {
-          this._end(a.vp > b.vp ? 0 : 1, 'Zuglimit ' + SAFETY_VP_CAP_TURN + ' (mehr SP)');
+          this._end(a.vp > b.vp ? 0 : 1, 'Zuglimit ' + vpCap + ' (mehr SP)');
           return;
         }
         var fa = frontCount(this, a);
         var fb = frontCount(this, b);
         if (fa !== fb) {
-          this._end(fa > fb ? 0 : 1, 'Zuglimit ' + SAFETY_VP_CAP_TURN + ' (Brettanteil)');
+          this._end(fa > fb ? 0 : 1, 'Zuglimit ' + vpCap + ' (Brettanteil)');
           return;
         }
-        this._end(null, 'Zuglimit ' + SAFETY_VP_CAP_TURN + ' — unentschieden');
+        this._end(null, 'Zuglimit ' + vpCap + ' — unentschieden');
       }
     };
 

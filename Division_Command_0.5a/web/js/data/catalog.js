@@ -91,7 +91,14 @@ window.DC_CATALOG = window.DC_CATALOG || {
     "deck_copy_limits": { "bronze": 4, "silver": 2, "gold": 1 },
     "doctrine_slots": 2,
     "victory_mode": "classic",
-    "trophy_vp_to_win": 5
+    "opening_coin": true,
+    "trophy_vp_to_win": 5,
+    "trophy_elite_vp": 2,
+    "trophy_safety_empty_from": 26,
+    "trophy_safety_vp_cap": 28,
+    "trophy_durchbruch_max_claims": 3,
+    "trophy_durchbruch_cooldown": 2,
+    "trophy_doctrine_need_scale": 0.65
   }
 };
 window.DC_CATALOG.cards = [];

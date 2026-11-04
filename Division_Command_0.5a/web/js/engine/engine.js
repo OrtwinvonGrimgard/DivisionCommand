@@ -183,10 +183,35 @@
         tokensOnBoard: [],
         seq: 0,
         deckNotices: n0.notices.concat(n1.notices),
+        startCoin: null,
       };
+      // Opening coin toss (all modes). Deterministic from engine RNG/seed → LAN host seed syncs both clients.
+      // opts.startPlayer 0|1 overrides (tests / host force). rules.opening_coin === false disables.
+      let startPid = 0;
+      let startCoin = null;
+      if (opts && (opts.startPlayer === 0 || opts.startPlayer === 1)) {
+        startPid = opts.startPlayer;
+        startCoin = { face: startPid === 0 ? 'kopf' : 'zahl', winner: startPid, forced: true };
+      } else if (this.rules.opening_coin !== false) {
+        const face = this.rand() < 0.5 ? 'kopf' : 'zahl';
+        startPid = face === 'kopf' ? 0 : 1;
+        startCoin = { face: face, winner: startPid, forced: false };
+      }
+      this.state.active = startPid;
+      this.state.startCoin = startCoin;
       this._draw(p0, this.rules.hand_start); // Karten vom Deck auf die Hand
       this._draw(p1, this.rules.hand_start); // Karten vom Deck auf die Hand
-      this._log('Partie beginnt. 5 AP, Front 3×3, Soforteinsätze 0 AP (Test).'); // Zeile ins Protokoll
+      const starter = this.player(startPid);
+      if (startCoin && !startCoin.forced) {
+        const faceDe = startCoin.face === 'zahl' ? 'Zahl' : 'Kopf';
+        this._log('Münzwurf (' + faceDe + '): ' + starter.name + ' beginnt.');
+        this._evt('coin', null, 'Münzwurf: ' + starter.name + ' beginnt', {
+          face: startCoin.face, winner: startPid, name: starter.name
+        });
+      } else {
+        this._log('Partie beginnt — ' + starter.name + ' ist am Zug.');
+      }
+      this._log('5 AP, Front 3×3, Soforteinsätze 0 AP (Test).');
       (this.state.deckNotices || []).forEach((msg) => {
         this._log('Deckregel: ' + msg + ' — überzählige Kopien entfernt.');
         this._evt('shout', null, 'Deckregel: ' + msg);

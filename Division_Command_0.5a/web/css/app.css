@@ -4038,3 +4038,18 @@ button.pick-section:hover, button.pick-section.on {
   color: #d7ffe0;
 }
 .dok-vp-inspect { color: #cfe3ff; }
+
+
+/* Opening coin toss */
+.coin-toss-modal .coin-toss-anim {
+  font-size: 48px;
+  text-align: center;
+  animation: coin-spin 0.9s ease-out;
+  margin: 8px 0;
+}
+.coin-toss-msg { text-align: center; font-size: 1.05rem; }
+@keyframes coin-spin {
+  0% { transform: rotateY(0deg) scale(0.6); opacity: 0.2; }
+  60% { transform: rotateY(720deg) scale(1.15); opacity: 1; }
+  100% { transform: rotateY(1080deg) scale(1); }
+}

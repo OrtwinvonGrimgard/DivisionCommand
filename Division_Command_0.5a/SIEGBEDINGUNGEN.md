@@ -23,31 +23,56 @@ Doktrin-SP sind **nicht nationenbezogen**, sondern an die 36 Doktrinen gebunden 
 
 **5 SP** (`trophy_vp_to_win`, Default 5). `_checkVictory` beendet bei `vp >= 5`.
 
-### 2.2 SP-Quellen (Engine)
+### 2.2 SP-Quellen (Engine) — Defaults nach Tuning (Kandidat **K**)
 
 | Quelle | SP | Regel |
 |---|---|---|
-| **Elite zerstört** | **+2** | Gegnerische Fronteinheit mit Tag/Klasse `elite` / `Elite` |
-| **Durchbruch** | **+1** | In einem Abschnitt (L/C/R): du hast ≥1 eigene Fronteinheit, Gegner 0. Zustand muss bis **Ende deines nächsten Zuges** gehalten werden. **Max. 1× pro Abschnitt pro Partie** (`durchbruchClaimed`). Neu armieren nach Verlust der Kontrolle möglich, aber kein zweiter Claim desselben Abschnitts. |
-| **Doktrin-Ziel** | **+1** | Jede deiner beiden Doktrinen hat **ein** thematisches Ziel, **1×/Partie**, Fortschritt in UI. Ankündigung im Log + Event `vp`. |
-| Karten-SP | — | Unverändert (z. B. Letzter der steht). Optionale Gold-Soforts: nur Kandidatenliste unten, **Karten unverändert**. |
+| **Elite zerstört** | **+2** (`trophy_elite_vp`) | Gegnerische Fronteinheit mit Tag/Klasse `elite` / `Elite` |
+| **Durchbruch** | **+1** | Abschnitt (L/C/R): ≥1 eigene Front, Gegner 0; halten bis Ende des nächsten eigenen Zuges. **Bis 3× pro Abschnitt** (`trophy_durchbruch_max_claims: 3`), Cooldown **2 Züge** nach Claim (`trophy_durchbruch_cooldown`). |
+| **Doktrin-Ziel** | **+1** | Thematisches Ziel, 1×/Partie. Need = `ceil(base × trophy_doctrine_need_scale)` mit Scale **0.65** (min. 1). |
+| Karten-SP | — | Unverändert. Gold-Soforts nur Kandidatenliste. |
 
-### 2.3 Sicherheitsnetz (gewählt)
+### 2.3 Sicherheitsnetz (Hybrid, getunt)
 
-**Bewertet:** (A) ab Zug 18 leere eigene Front am Zugende = Verlust · (B) ab Zug 20 meiste SP, Gleichstand → Brettanteil.
+1. **Ab Zug 26** (`trophy_safety_empty_from`): Zugende ohne Fronteinheit → Niederlage.
+2. **Ab Zug 28** (`trophy_safety_vp_cap`): meiste SP; Gleichstand → Brettanteil; sonst weißer Frieden.
 
-**Wahl: Hybrid**
+Aufgabe / weißer Frieden bleiben.
 
-1. **Ab Zug 18:** Endest du deinen Zug **ohne** Fronteinheit → **Niederlage** („Keine Front ab Zug 18“). Erzwingt Präsenz, verhindert reines Support-Turtle.
-2. **Ab Zug 20** (falls noch kein Sieger): **meiste SP** gewinnt; Gleichstand → **mehr Fronteinheiten** (Brettanteil); weiterhin Gleichstand → **weißer Frieden**.
-
-Begründung: Reines (A) allein beendet lange Attrition-Rennen nicht, wenn beide Front halten. Reines (B) allein belohnt Frontflucht bis Zug 19. Hybrid hält Druck und garantiert ein Ende.
-
-Aufgabe und weißer Frieden bleiben.
+Zielbild Playtest: **VP-Siege ≥70 %**, Sicherheitsnetz **≤25 %**, Timeout klein, Median **~14–18** Züge.
 
 ### 2.4 Bot
 
-Trophy-Bot bewertet Elite-Kills, Durchbruch-Druck (letzte Feindeinheit im Abschnitt) und fast fertige Doktrin-Ziele höher.
+Aktive SP-Jagd: Elite-Kills, Durchbruch-Clear, Doktrin-Fast-fertig, Race nahe der Schwelle, Fronteinsatz bei leerer/dünner Front.
+
+### 2.5 Tuning-Vergleich (≥1200 RR-Partien / Kandidat, Bot vs Bot)
+
+Ziel: VP≥70 % · Safety≤25 % · Median 14–18.
+
+| ID | Parameter | VP% | Safety% | Timeout% | Median | FP-Win% | Note |
+|---|---|---|---|---|---|---|---|
+| A | VP5 · S18/20 · DB×1 · E2 · Dok1.0 | 40.7 | 55.2 | 4.1 | 17 | 58.1 | Baseline — Safety dominiert |
+| C | VP4 · S20/22 · DB×2/cd2 · E2 · Dok0.75 | 74.9 | 21.5 | 3.6 | 12 | 54.9 | VP ok, Partien zu kurz |
+| F | VP4 · S22/24 · DB×2/cd2 · E2 · Dok0.65 | 75.7 | 19.5 | 4.8 | 11 | 54.7 | zu kurz |
+| I | VP5 · S24/26 · DB×3/cd2 · E2 · Dok0.7 | 70.5 | 25.1 | 4.4 | 13 | 56.4 | knapp am Ziel |
+| **K** | **VP5 · S26/28 · DB×3/cd2 · E2 · Dok0.65** | **75.0** | **21.5** | **3.5** | **14** | **53.9** | **gewählt** |
+| L | VP5 · S26/28 · DB×3/cd2 · E3 · Dok0.7 | 77.8 | 17.0 | 5.2 | 12 | 55.8 | zu kurz |
+| N | VP5 · S28/30 · DB×4/cd2 · E3 · Dok0.65 | 77.8 | 18.2 | 4.0 | 12 | 56.1 | zu kurz |
+| O | VP4 · S28/30 · DB×2/cd3 · E2 · Dok1.0 | 78.5 | 17.5 | 4.0 | 12 | 56.3 | zu kurz |
+
+**Defaults = K.** Sim: `scripts/sim_trophy_sweep.mjs` → `sim_trophy_sweep.json`.
+
+**First-Player:** mit Münzwurf ~53.9 % (>53 %). **Vorschlag (nicht angewendet):** Zweispieler Zug 1 **+1 AP** oder **+1 Karte** vom Deck.
+
+
+---
+
+## 2b. Startspieler — Münzwurf (alle Modi)
+
+`rules.opening_coin` (Default **true**). In `createMatch`: RNG entscheidet Kopf→Spieler 0 / Zahl→Spieler 1 (deterministisch aus Match-Seed → **LAN: Host-State sync**, beide Clients identisch). Override: `opts.startPlayer` 0|1.
+
+UI: Overlay „Münzwurf: **&lt;Spieler&gt;** beginnt“ (Animation). Bot / Hotseat / LAN-Gast (via `dcSetState`).
+
 
 ---
 
@@ -119,9 +144,15 @@ Keine Kartenwerte in diesem Commit geändert.
 ## 5. Aktivierung
 
 ```js
-// catalog.js / Match-Opts rules override:
-victory_mode: 'trophy'   // statt 'classic'
-trophy_vp_to_win: 5      // optional
+victory_mode: 'trophy'              // statt 'classic'
+trophy_vp_to_win: 5
+trophy_elite_vp: 2
+trophy_safety_empty_from: 26
+trophy_safety_vp_cap: 28
+trophy_durchbruch_max_claims: 3
+trophy_durchbruch_cooldown: 2
+trophy_doctrine_need_scale: 0.65
+opening_coin: true
 ```
 
 UI: Doktrin-Karten zeigen `SP cur/need`, Inspect-Text nennt das Trophy-Ziel, Log kündigt SP an.
@@ -130,5 +161,6 @@ UI: Doktrin-Karten zeigen `SP cur/need`, Inspect-Text nennt das Trophy-Ziel, Log
 
 ## 6. Tests & Simulation
 
-- Unit: `scripts/test_trophy_victory.js`
-- Round-Robin: `scripts/sim_trophy_victory.mjs` (≥1000 Partien)
+- Unit: `scripts/test_trophy_victory.js` (Trophy + Münzwurf)
+- Sweep: `scripts/sim_trophy_sweep.mjs` (≥1200 RR / Kandidat)
+- Legacy RR: `scripts/sim_trophy_victory.mjs`
