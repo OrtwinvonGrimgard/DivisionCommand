@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-fxwire2';
+const CACHE = 'divcmd-markt26';
 const ASSETS = [
   './',
   './index.html',
