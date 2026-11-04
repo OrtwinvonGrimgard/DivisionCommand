@@ -232,98 +232,6 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "rarity": "bronze"
   },
   {
-    "id": "dc_b_beobachter_443",
-    "set": "set_nations",
-    "nation": "Orthea",
-    "status": "live",
-    "typ": "Einheit",
-    "klasse": "Aufklärung",
-    "name": "Beobachter",
-    "ap": 2,
-    "atk": 1,
-    "def": 2,
-    "verdeckt_ok": false,
-    "tags": [
-      "aufklaerung"
-    ],
-    "text": "Einmal/Zug: decke eine gegnerische Einheit auf.",
-    "effects": [],
-    "flavor": "Sehen, bevor unterschrieben wird.",
-    "image": "aufklaerung/B443.jpg",
-    "max_copies": 1,
-    "collector": "B443",
-    "rarity": "bronze"
-  },
-  {
-    "id": "dc_b_lokalisierer_444",
-    "set": "set_nations",
-    "nation": "Orthea",
-    "status": "live",
-    "typ": "Einheit",
-    "klasse": "Aufklärung",
-    "name": "Lokalisierer",
-    "ap": 2,
-    "atk": 1,
-    "def": 2,
-    "verdeckt_ok": false,
-    "tags": [
-      "aufklaerung"
-    ],
-    "text": "Decke auf; ziehe 1 wenn Ziel DEF ≤ 2.",
-    "effects": [],
-    "flavor": "Ort vor Meinung.",
-    "image": "aufklaerung/B444.jpg",
-    "max_copies": 1,
-    "collector": "B444",
-    "rarity": "bronze"
-  },
-  {
-    "id": "dc_b_methodenspaeher_445",
-    "set": "set_nations",
-    "nation": "Orthea",
-    "status": "live",
-    "typ": "Einheit",
-    "klasse": "Aufklärung",
-    "name": "Methodenspäher",
-    "ap": 2,
-    "atk": 2,
-    "def": 3,
-    "verdeckt_ok": false,
-    "tags": [
-      "aufklaerung"
-    ],
-    "text": "Schaue oberste 3; behalte 1 Aufklärungs-/Einsatzkarte.",
-    "effects": [],
-    "flavor": "Verfahren vor Gerücht.",
-    "image": "aufklaerung/B445.jpg",
-    "max_copies": 1,
-    "collector": "B445",
-    "rarity": "silver"
-  },
-  {
-    "id": "dc_b_trotzmelder_446",
-    "set": "set_nations",
-    "nation": "Orthea",
-    "status": "live",
-    "typ": "Einheit",
-    "klasse": "Aufklärung",
-    "name": "Trotzmelder",
-    "ap": 1,
-    "atk": 1,
-    "def": 1,
-    "verdeckt_ok": false,
-    "tags": [
-      "aufklaerung"
-    ],
-    "text": "Decke auf; wenn Ziel diesen Zug angreift, −1 ATK.",
-    "effects": [],
-    "flavor": "Trotz steht in keiner Spalte.",
-    "image": "aufklaerung/B446.jpg",
-    "max_copies": 1,
-    "collector": "B446",
-    "rarity": "bronze"
-  },
-  {
     "id": "dc_b_wellenmelder_20",
     "set": "set_nations",
     "nation": "Theryn",
@@ -1621,6 +1529,98 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B266.jpg",
     "max_copies": 1,
     "collector": "B266",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_beobachter_443",
+    "set": "set_nations",
+    "nation": "Orthea",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Beobachter",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Einmal/Zug: decke eine gegnerische Einheit auf.",
+    "effects": [],
+    "flavor": "Sehen, bevor unterschrieben wird.",
+    "image": "aufklaerung/B443.jpg",
+    "max_copies": 1,
+    "collector": "B443",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_lokalisierer_444",
+    "set": "set_nations",
+    "nation": "Orthea",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Lokalisierer",
+    "ap": 2,
+    "atk": 1,
+    "def": 2,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; ziehe 1 wenn Ziel DEF ≤ 2.",
+    "effects": [],
+    "flavor": "Ort vor Meinung.",
+    "image": "aufklaerung/B444.jpg",
+    "max_copies": 1,
+    "collector": "B444",
+    "rarity": "bronze"
+  },
+  {
+    "id": "dc_b_methodenspaeher_445",
+    "set": "set_nations",
+    "nation": "Orthea",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Methodenspäher",
+    "ap": 2,
+    "atk": 2,
+    "def": 3,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Schaue oberste 3; behalte 1 Aufklärungs-/Einsatzkarte.",
+    "effects": [],
+    "flavor": "Verfahren vor Gerücht.",
+    "image": "aufklaerung/B445.jpg",
+    "max_copies": 1,
+    "collector": "B445",
+    "rarity": "silver"
+  },
+  {
+    "id": "dc_b_trotzmelder_446",
+    "set": "set_nations",
+    "nation": "Orthea",
+    "status": "live",
+    "typ": "Einheit",
+    "klasse": "Aufklärung",
+    "name": "Trotzmelder",
+    "ap": 1,
+    "atk": 1,
+    "def": 1,
+    "verdeckt_ok": false,
+    "tags": [
+      "aufklaerung"
+    ],
+    "text": "Decke auf; wenn Ziel diesen Zug angreift, −1 ATK.",
+    "effects": [],
+    "flavor": "Trotz steht in keiner Spalte.",
+    "image": "aufklaerung/B446.jpg",
+    "max_copies": 1,
+    "collector": "B446",
     "rarity": "bronze"
   }
 ];
