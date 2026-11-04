@@ -62,7 +62,41 @@
     groups.forEach(function (g) { g.list.sort(byName); });
     return groups.filter(function (g) { return g.list.length; });
   }
-  function maxOf(c) { return c && c.typ === 'Doktrin' ? 1 : 4; }
+  function maxOf(c) {
+    if (!c) return 0;
+    if (c.typ === 'Doktrin') return 1;
+    if (window.DC_deckCopyLimit) return window.DC_deckCopyLimit(c);
+    var r = String(c.rarity || 'bronze').toLowerCase();
+    if (r === 'gold') return 1;
+    if (r === 'silver' || r === 'silber') return 2;
+    return 4;
+  }
+  function countByNameInDraft(name) {
+    var nm = String(name || '').trim().toLowerCase();
+    var n = 0;
+    Object.keys(draft.cards || {}).forEach(function (id) {
+      var c = cardById(id);
+      if (c && String(c.name || '').trim().toLowerCase() === nm) n += draft.cards[id] || 0;
+    });
+    return n;
+  }
+  function deckLimitMessage(text) {
+    var el = document.getElementById('deck-limit-msg');
+    if (!el) {
+      var host = document.getElementById('deck-meta') || document.getElementById('deck-picked');
+      if (host && host.parentNode) {
+        el = document.createElement('p');
+        el.id = 'deck-limit-msg';
+        el.className = 'tiny deck-limit-msg';
+        el.style.color = '#c44';
+        host.parentNode.insertBefore(el, host.nextSibling);
+      }
+    }
+    if (el) {
+      el.textContent = text || '';
+      el.style.display = text ? '' : 'none';
+    }
+  }
   function userId() { return localStorage.getItem('dc_user_active') || 'anon'; }
   function loadDecks() {
     try { return JSON.parse(localStorage.getItem('dc_decks') || '{}'); } catch (e) { return {}; }
@@ -238,15 +272,32 @@
   function addCard(c) {
     if (!c) return;
     if (c.typ === 'Doktrin') {
-      if (draft.doctrines.indexOf(c.id) >= 0) return;
-      if (draft.doctrines.length >= 2) return;
+      if (draft.doctrines.indexOf(c.id) >= 0) {
+        deckLimitMessage('Doktrin bereits gewählt.');
+        return;
+      }
+      if (draft.doctrines.length >= 2) {
+        deckLimitMessage('Maximal 2 verschiedene Doktrinen.');
+        return;
+      }
       draft.doctrines.push(c.id);
+      deckLimitMessage('');
       render();
       return;
     }
+    var lim = maxOf(c);
     var n = draft.cards[c.id] || 0;
-    if (n >= maxOf(c)) return;
+    if (n >= lim) {
+      deckLimitMessage((c.name || c.id) + ': maximal ' + lim + '× (' + (c.rarity || 'bronze') + ').');
+      return;
+    }
+    var nameCount = countByNameInDraft(c.name);
+    if (nameCount >= lim) {
+      deckLimitMessage((c.name || c.id) + ': maximal ' + lim + '× unter diesem Namen.');
+      return;
+    }
     draft.cards[c.id] = n + 1;
+    deckLimitMessage('');
     render();
   }
   function subCard(id) {
@@ -427,6 +478,14 @@
     if (!name) return false;
     var map = loadDecks();
     var list = map[userId()] || [];
+    var expanded = expand({ cards: draft.cards });
+    if (window.DC_validateDeck) {
+      var chk = window.DC_validateDeck(expanded, draft.doctrines.slice());
+      if (!chk.ok) {
+        deckLimitMessage('Deck ungültig: ' + (chk.notices || []).join(' · '));
+        return false;
+      }
+    }
     list.push({
       id: 'd' + Date.now(),
       name: name,
@@ -498,6 +557,11 @@
     fillSelects: fillSelects,
     saveNamed: saveNamed,
     selectedDeck: selectedDeck,
-    expand: expand
+    expand: expand,
+    maxOf: maxOf,
+    validateDraft: function () {
+      if (!window.DC_validateDeck) return { ok: true, notices: [] };
+      return window.DC_validateDeck(expand({ cards: draft.cards }), draft.doctrines.slice());
+    }
   };
 })(window);

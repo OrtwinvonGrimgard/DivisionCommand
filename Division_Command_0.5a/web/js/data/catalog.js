@@ -87,7 +87,9 @@ window.DC_CATALOG = window.DC_CATALOG || {
     "max_hand": 7,
     "deploy_protection": true,
     "strict_facing": false,
-    "combat_counter": "survivor_only"
+    "combat_counter": "survivor_only",
+    "deck_copy_limits": { "bronze": 4, "silver": 2, "gold": 1 },
+    "doctrine_slots": 2
   }
 };
 window.DC_CATALOG.cards = [];
@@ -97,6 +99,104 @@ window.DC_CATALOG.cards = [];
     (pack[typ] || []).forEach(function (c) { window.DC_CATALOG.cards.push(c); });
   });
 })();
+
+/** Seltenheit → max. Kopien (Doktrinen separat: genau 2 verschiedene). */
+window.DC_deckCopyLimit = function (cardOrRarity) {
+  var r = cardOrRarity;
+  if (r && typeof r === 'object') {
+    if (r.typ === 'Doktrin') return 1;
+    r = r.rarity;
+  }
+  r = String(r || 'bronze').toLowerCase();
+  var lim = (window.DC_CATALOG.rules && window.DC_CATALOG.rules.deck_copy_limits) || { bronze: 4, silver: 2, gold: 1 };
+  if (r === 'gold') return lim.gold != null ? lim.gold : 1;
+  if (r === 'silver' || r === 'silber') return lim.silver != null ? lim.silver : 2;
+  return lim.bronze != null ? lim.bronze : 4;
+};
+
+(function syncMaxCopiesFromRarity() {
+  (window.DC_CATALOG.cards || []).forEach(function (c) {
+    if (!c || c.typ === 'Doktrin' || c.typ === 'Token' || c.typ === 'Asset') return;
+    c.max_copies = window.DC_deckCopyLimit(c);
+  });
+})();
+
+/**
+ * validateDeck(cardIds, doctrineIds, catalog?)
+ * Zählt nach ID und nach Name (bei Namenskollisionen gilt das strengste Limit der beteiligten Karten).
+ * Returns { ok, errors:[{kind,key,name,count,limit,ids}], fixedIds, notices }
+ */
+window.DC_validateDeck = function (cardIds, doctrineIds, catalog) {
+  catalog = catalog || window.DC_CATALOG;
+  var byId = {};
+  (catalog.cards || []).forEach(function (c) { byId[c.id] = c; });
+  var ids = (cardIds || []).filter(function (id) {
+    var c = byId[id];
+    return c && c.typ !== 'Doktrin' && c.typ !== 'Token' && c.typ !== 'Asset';
+  });
+  var errors = [];
+  var countById = {};
+  var countByName = {};
+  var nameMeta = {};
+  ids.forEach(function (id) {
+    var c = byId[id];
+    if (!c) return;
+    countById[id] = (countById[id] || 0) + 1;
+    var nm = String(c.name || id).trim().toLowerCase();
+    countByName[nm] = (countByName[nm] || 0) + 1;
+    if (!nameMeta[nm]) nameMeta[nm] = { limit: window.DC_deckCopyLimit(c), ids: [], name: c.name || id };
+    nameMeta[nm].limit = Math.min(nameMeta[nm].limit, window.DC_deckCopyLimit(c));
+    if (nameMeta[nm].ids.indexOf(id) < 0) nameMeta[nm].ids.push(id);
+  });
+  Object.keys(countById).forEach(function (id) {
+    var c = byId[id];
+    var lim = window.DC_deckCopyLimit(c);
+    if (countById[id] > lim) {
+      errors.push({ kind: 'id', key: id, name: c.name || id, count: countById[id], limit: lim, ids: [id] });
+    }
+  });
+  Object.keys(countByName).forEach(function (nm) {
+    var meta = nameMeta[nm];
+    if (countByName[nm] > meta.limit) {
+      // avoid duplicate if single-id already reported same overflow
+      if (meta.ids.length === 1 && countById[meta.ids[0]] === countByName[nm]) return;
+      errors.push({ kind: 'name', key: nm, name: meta.name, count: countByName[nm], limit: meta.limit, ids: meta.ids.slice() });
+    }
+  });
+  var docs = (doctrineIds || []).filter(Boolean);
+  var docSet = {};
+  docs.forEach(function (id) { docSet[id] = (docSet[id] || 0) + 1; });
+  Object.keys(docSet).forEach(function (id) {
+    if (docSet[id] > 1) errors.push({ kind: 'doctrine', key: id, name: (byId[id] && byId[id].name) || id, count: docSet[id], limit: 1, ids: [id] });
+  });
+  if (docs.length > 2) errors.push({ kind: 'doctrine_slots', key: 'doctrines', name: 'Doktrinen', count: docs.length, limit: 2, ids: docs.slice() });
+
+  // Auto-fix: keep order, drop excess by id then by name
+  var kept = [];
+  var seenId = {};
+  var seenName = {};
+  ids.forEach(function (id) {
+    var c = byId[id];
+    if (!c) return;
+    var limId = window.DC_deckCopyLimit(c);
+    var nm = String(c.name || id).trim().toLowerCase();
+    var limName = (nameMeta[nm] && nameMeta[nm].limit) || limId;
+    seenId[id] = seenId[id] || 0;
+    seenName[nm] = seenName[nm] || 0;
+    if (seenId[id] >= limId) return;
+    if (seenName[nm] >= limName) return;
+    seenId[id]++;
+    seenName[nm]++;
+    kept.push(id);
+  });
+  var notices = errors.map(function (e) {
+    if (e.kind === 'name') return e.name + ': ' + e.count + '× (max ' + e.limit + ' wegen Namensgleichheit/' + (e.limit === 1 ? 'Gold' : 'Seltenheit') + ')';
+    if (e.kind === 'doctrine_slots') return 'Doktrinen: ' + e.count + ' (genau 2 erlaubt)';
+    return (e.name || e.key) + ': ' + e.count + '× (max ' + e.limit + ')';
+  });
+  return { ok: errors.length === 0, errors: errors, fixedIds: kept, notices: notices, doctrineIds: docs.slice(0, 2).filter(function (id, i, a) { return a.indexOf(id) === i; }) };
+};
+
 
 /* 0.5a: fehlende Schale nachziehen, ohne index.html neu zu schreiben. */
 (function () {

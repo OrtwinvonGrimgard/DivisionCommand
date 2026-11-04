@@ -17,6 +17,9 @@ function loadGame() {
   const window = { DC_SET_TYPES: {}, DC_CATALOG: null, document, addEventListener() {} };
   const ctx = { window, document, console, Math, JSON, Date, Error, Array, Object, String, Number, Boolean, RegExp, parseInt, isFinite };
   ctx.global = ctx;
+  ctx.globalThis = ctx;
+  window.window = window;
+  ctx.self = window;
   for (const f of ['doktrinen','tokens','infanterie','panzer','artillerie','aufklaerung','elite','unterstuetzung','soforteinsatz','ausruestung']) {
     vm.runInNewContext(fs.readFileSync(path.join(WEB, 'js/data/sets/types', f + '.js'), 'utf8'), ctx);
   }
@@ -827,6 +830,85 @@ function main() {
       assert(atk.def === aBefore - 2, 'non-arty: counter unchanged even if geometry OOR');
       ok('non-artillery attacker: counter unchanged');
     }
+  }
+
+
+
+  // --- deck copy limits / Jägerstellung ---
+  {
+    assert(typeof win.DC_validateDeck === 'function', 'DC_validateDeck exists');
+    assert(typeof win.DC_deckCopyLimit === 'function', 'DC_deckCopyLimit exists');
+    const jaeger = win.DC_CATALOG.cards.find((c) => c.id === 'dc_eh_jaeger' || c.name === 'Jägerstellung');
+    assert(jaeger, 'Jägerstellung card');
+    assert(jaeger.max_copies === win.DC_deckCopyLimit(jaeger), 'jaeger max_copies synced');
+    // rarity limits
+    assert(win.DC_deckCopyLimit({ rarity: 'gold' }) === 1, 'gold 1');
+    assert(win.DC_deckCopyLimit({ rarity: 'silver' }) === 2, 'silver 2');
+    assert(win.DC_deckCopyLimit({ rarity: 'bronze' }) === 4, 'bronze 4');
+    assert(win.DC_deckCopyLimit({ rarity: 'silber' }) === 2, 'silber alias');
+    assert(win.DC_deckCopyLimit({}) === 4, 'missing rarity = bronze');
+    // gold cannot be 2x
+    const gold = win.DC_CATALOG.cards.find((c) => c.rarity === 'gold' && c.typ !== 'Doktrin');
+    assert(gold, 'gold card');
+    let v = win.DC_validateDeck([gold.id, gold.id], []);
+    assert(!v.ok, 'gold 2x invalid');
+    assert(v.fixedIds.length === 1, 'gold autofix to 1');
+    // silver max 2
+    const silver = win.DC_CATALOG.cards.find((c) => c.rarity === 'silver' && c.typ !== 'Doktrin');
+    v = win.DC_validateDeck([silver.id, silver.id, silver.id], []);
+    assert(!v.ok && v.fixedIds.length === 2, 'silver autofix to 2');
+    // bronze max 4
+    const bronze = win.DC_CATALOG.cards.find((c) => c.rarity === 'bronze' && c.typ !== 'Doktrin');
+    v = win.DC_validateDeck([bronze.id, bronze.id, bronze.id, bronze.id, bronze.id], []);
+    assert(!v.ok && v.fixedIds.length === 4, 'bronze autofix to 4');
+    // Jägerstellung: historically buildTestDeck could insert 2 because max_copies:2
+    v = win.DC_validateDeck([jaeger.id, jaeger.id], []);
+    const jLim = win.DC_deckCopyLimit(jaeger);
+    assert(v.fixedIds.filter((x) => x === jaeger.id).length <= jLim, 'jaeger within limit');
+    if (jLim >= 2) assert(v.ok, 'jaeger 2x ok under bronze default');
+    // name collision: two different gold IDs same name would fail — Punktfeuer was fixed by rename
+    const pf = win.DC_CATALOG.cards.filter((c) => c.name === 'Punktfeuer' && c.typ !== 'Doktrin');
+    assert(pf.length === 1, 'Punktfeuer unique among deck cards after rename got ' + pf.length);
+    const pv = win.DC_CATALOG.cards.find((c) => c.id === 'dc_b_punktfeuer_479');
+    assert(pv && pv.name === 'Punktvisier', 'equip renamed Punktvisier');
+    // nation decks all valid
+    const decks = win.DC_NATION_DECKS || {};
+    Object.keys(decks).forEach((nat) => {
+      const d = decks[nat];
+      const res = win.DC_validateDeck(d.cards || [], d.doktrinen || []);
+      assert(res.ok, 'nation deck valid ' + nat + ' ' + JSON.stringify(res.notices));
+      assert((d.cards || []).length === 60, nat + ' has 60 cards');
+    });
+    // createMatch strips illegal copies and records notices
+    const Eng = (win.DCEngine && win.DCEngine.Engine) || (win.DC && win.DC.Engine);
+    assert(Eng, 'Engine class');
+    const eng = new Eng(win.DC_CATALOG, { seed: 7 });
+    const base0 = ((decks.Vael && decks.Vael.cards) || []).slice();
+    eng.createMatch({
+      seed: 7, mode: 'bot', name0: 'A', name1: 'B',
+      deck0: [gold.id, gold.id].concat(base0).slice(0, 60),
+      deck1: ((decks.Rothain && decks.Rothain.cards) || []).slice(),
+      doctrine0: (decks.Vael && decks.Vael.doktrinen) || [],
+      doctrine1: (decks.Rothain && decks.Rothain.doktrinen) || [],
+    });
+    const all0 = eng.state.players[0].deck.concat(eng.state.players[0].hand);
+    const gCount = all0.filter((inst) => eng.defOf(inst) && eng.defOf(inst).id === gold.id).length;
+    assert(gCount <= 1, 'createMatch strips gold dupes got ' + gCount);
+    assert(Array.isArray(eng.state.deckNotices), 'deckNotices on state');
+    assert(eng.state.deckNotices.length >= 1, 'deckNotices reports gold overflow');
+    ok('deck copy limits + Jägerstellung + nation audit + createMatch sanitize');
+
+    // buildTestDeck: no duplicates of Jägerstellung; respects rarity
+    assert(win.DCEngine && win.DCEngine.buildTestDeck, 'buildTestDeck export');
+    const td = win.DCEngine.buildTestDeck(win.DC_CATALOG, win.DCEngine.rng(99));
+    const counts = {};
+    td.forEach((id) => { counts[id] = (counts[id] || 0) + 1; });
+    Object.keys(counts).forEach((id) => {
+      const c = win.DC_CATALOG.cards.find((x) => x.id === id);
+      assert(counts[id] <= win.DC_deckCopyLimit(c), 'testdeck limit ' + id);
+    });
+    assert((counts['dc_eh_jaeger'] || 0) <= 1, 'testdeck Jägerstellung at most 1 (was 2 via max_copies)');
+    ok('buildTestDeck rarity-safe / no forced jaeger duo');
   }
 
 

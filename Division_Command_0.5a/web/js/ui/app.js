@@ -348,6 +348,16 @@
           }
         }
       }
+      if (window.DC_validateDeck) {
+        var v0 = DC_validateDeck(deck0, doctrine0);
+        var v1 = DC_validateDeck(deck1, doctrine1);
+        deck0 = v0.fixedIds; doctrine0 = v0.doctrineIds;
+        deck1 = v1.fixedIds; doctrine1 = v1.doctrineIds;
+        var warn = [].concat(v0.notices || [], v1.notices || []);
+        if (warn.length && window.alert) {
+          try { window.alert('Deckregel — überzählige Kopien entfernt:\n' + warn.join('\n')); } catch (eW) {}
+        }
+      }
       var used = deck0.concat(deck1).concat(doctrine0).concat(doctrine1);
       if (window.DCEmbed && DCEmbed.forCardIds) DCEmbed.forCardIds(used, CATALOG);
       preloadCardArt(used);

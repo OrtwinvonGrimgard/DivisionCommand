@@ -724,6 +724,8 @@ Jede Spielkarte besitzt eine Seltenheitsstufe. Die Stufe bestimmt zwei Dinge:
 | **Silber** | 2 | Mittel – mehrere Einheiten oder ein Frontabschnitt | Bereichseffekte, Abschnittsunterstützung, koordinierte Aktionen |
 | **Gold** | 1 | Groß – ganze Fronten, mehrere Abschnitte oder weitreichende Effekte | Frontweite Wirkung, starke Synergien, strategische Eingriffe |
 
+**Verbindlich ab 0.5a (digin4):** Die Kopienlimits werden in Engine, Deckbauer und Partiestart erzwungen (`DC_validateDeck`). Zählung nach Karten-ID und zusätzlich nach **Namen** (gleicher Name = gemeinsame Kopiequote; es gilt das strengste Limit der beteiligten Seltenheiten). Karten ohne gesetzte Seltenheit zählen als Bronze.
+
 Die Sphäre ist eine Gestaltungsrichtlinie für den Kartentext, keine harte mechanische Grenze. Ein Bronzekartentext wirkt typischerweise auf eine Einheit oder eine Stellung, ein Silberkartentext auf einen Abschnitt oder mehrere Einheiten, ein Goldkartentext auf eine ganze Front oder mehrere Abschnitte.
 
 Doktrinen unterliegen dieser Regelung nicht und werden separat behandelt (siehe 24.2).
@@ -947,7 +949,7 @@ Der Ausbau soll vor allem Varianten bestehender Mechaniken liefern, damit AP-Kos
 ## Deck
 
 - endgültige Mindestgröße
-- endgültige Kopienlimits
+- ~~endgültige Kopienlimits~~ → Bronze 4 / Silber 2 / Gold 1 (digin4)
 - endgültiges Handlimit und Mulliganverfahren
 
 ## Elite

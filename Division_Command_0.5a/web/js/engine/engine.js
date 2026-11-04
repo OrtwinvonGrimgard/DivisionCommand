@@ -144,9 +144,28 @@
     }
 
     // Zwei Spieler, gemischte Decks, Starthand, Zug 1.
+    _normalizeDeckInput(deckIds, doctrineIds, label) {
+      const validate = (typeof globalThis !== 'undefined' && globalThis.DC_validateDeck)
+        || (typeof window !== 'undefined' && window.DC_validateDeck)
+        || null;
+      if (!validate) {
+        return { deckIds: (deckIds || []).slice(), doctrineIds: (doctrineIds || []).slice(0, 2), notices: [] };
+      }
+      const res = validate(deckIds || [], doctrineIds || [], this.catalog);
+      const notices = (res.notices || []).map((n) => (label ? (label + ': ' + n) : n));
+      return {
+        deckIds: res.fixedIds || (deckIds || []).slice(),
+        doctrineIds: res.doctrineIds || (doctrineIds || []).slice(0, 2),
+        notices,
+        ok: !!res.ok,
+      };
+    }
+
     createMatch(opts) { // Partie mit zwei Spielern anlegen
-      const p0 = this._makePlayer(0, opts.deck0, opts.doctrine0, opts.name0); // Doktrin
-      const p1 = this._makePlayer(1, opts.deck1, opts.doctrine1, opts.name1); // Doktrin
+      const n0 = this._normalizeDeckInput(opts.deck0, opts.doctrine0, opts.name0 || 'Spieler A');
+      const n1 = this._normalizeDeckInput(opts.deck1, opts.doctrine1, opts.name1 || 'Spieler B');
+      const p0 = this._makePlayer(0, n0.deckIds, n0.doctrineIds, opts.name0); // Doktrin
+      const p1 = this._makePlayer(1, n1.deckIds, n1.doctrineIds, opts.name1); // Doktrin
       this.state = { // Feld der Engine-Instanz
         version: '0.25',
         seed: (opts && opts.seed) || 0,
@@ -163,10 +182,15 @@
         players: [p0, p1], // nächster Schritt im Ablauf
         tokensOnBoard: [],
         seq: 0,
+        deckNotices: n0.notices.concat(n1.notices),
       };
       this._draw(p0, this.rules.hand_start); // Karten vom Deck auf die Hand
       this._draw(p1, this.rules.hand_start); // Karten vom Deck auf die Hand
       this._log('Partie beginnt. 5 AP, Front 3×3, Soforteinsätze 0 AP (Test).'); // Zeile ins Protokoll
+      (this.state.deckNotices || []).forEach((msg) => {
+        this._log('Deckregel: ' + msg + ' — überzählige Kopien entfernt.');
+        this._evt('shout', null, 'Deckregel: ' + msg);
+      });
       return this.getState(); // Stand kopieren
     }
 
@@ -4930,16 +4954,26 @@
     const units = pool.filter((c) => c.typ === 'Einheit'); // Liste einschränken
     const rest = pool.filter((c) => c.typ !== 'Einheit'); // Liste einschränken
     const deck = []; // unveränderliche Bindung in diesem Block
+    const limitOf = (c) => {
+      if (typeof globalThis !== 'undefined' && globalThis.DC_deckCopyLimit) return globalThis.DC_deckCopyLimit(c);
+      if (typeof window !== 'undefined' && window.DC_deckCopyLimit) return window.DC_deckCopyLimit(c);
+      return Math.min(4, c.max_copies || 4);
+    };
     const take = (arr, n) => { // unveränderliche Bindung in diesem Block
       const s = shuffle(arr, rand); // unveränderliche Bindung in diesem Block
       for (let i = 0; i < s.length && deck.length < n; i++) { // Schleife
-        const copies = Math.min(2, s[i].max_copies || 2); // unveränderliche Bindung in diesem Block
+        // Testdeck: höchstens 1 Kopie je Karte (Vielfalt); Limit nie überschreiten
+        const copies = Math.min(1, limitOf(s[i]));
         for (let k = 0; k < copies && deck.length < n; k++) deck.push(s[i].id); // Schleife
       }
     };
     take(units, 16); // nächster Schritt im Ablauf
     take(rest, 40); // nächster Schritt im Ablauf
-    return shuffle(deck, rand).slice(0, 40); // Wert zurückgeben
+    let out = shuffle(deck, rand).slice(0, 40);
+    if (typeof globalThis !== 'undefined' && globalThis.DC_validateDeck) {
+      out = globalThis.DC_validateDeck(out, [], catalog).fixedIds;
+    }
+    return out; // Wert zurückgeben
   }
 
   var PENDING_META = {

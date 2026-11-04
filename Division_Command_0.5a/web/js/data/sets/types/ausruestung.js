@@ -4899,7 +4899,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
-    "name": "Rasten",
+    "name": "Ruhezeichen",
     "ap": 3,
     "atk": 0,
     "def": 0,
@@ -4924,7 +4924,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       }
     ],
-    "flavor": "Rasten — die Institution atmet, dann tritt sie.",
+    "flavor": "Ruhezeichen — die Institution atmet, dann tritt sie.",
     "image": "ausruestung/B359.jpg",
     "max_copies": 1,
     "collector": "B359",
@@ -5562,7 +5562,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
-    "name": "Punktfeuer",
+    "name": "Punktvisier",
     "ap": 3,
     "atk": 0,
     "def": 0,
@@ -5580,7 +5580,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       }
     ],
-    "flavor": "Punktfeuer — ein Rohr, ein Name, ein Treffer.",
+    "flavor": "Punktvisier — ein Rohr, ein Name, ein Treffer.",
     "image": "ausruestung/B479.jpg",
     "max_copies": 1,
     "collector": "B479",
@@ -5593,7 +5593,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
-    "name": "Lokalisierung",
+    "name": "Ortungsband",
     "ap": 2,
     "atk": 0,
     "def": 0,
