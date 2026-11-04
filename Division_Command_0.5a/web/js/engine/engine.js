@@ -313,24 +313,39 @@
       if (def.typ === 'Doktrin') return true;
       if (inst.flags && inst.flags.exhausted) return false;
       if (inst.flags && inst.flags.paused) return false;
-      if (inst.flags && inst.flags.noCombatUntil === this.state.turn) return false;
+      // Finte o.ä.: noCombatUntil === aktueller Zug sperrt Aktion; Eingraben nutzt turn+1 und filtert nur Ziele.
+      if (inst.flags && inst.flags.noCombatUntil === this.state.turn && !inst.flags.digInBonus) return false;
       if (inst.attackUsed) return false;
       if (inst.summonedTurn != null && inst.summonedTurn >= this.state.turn) return false;
       if (inst.summonedTurn === this.state.turn - 1 && this.state.active !== inst.owner) return false;
       return pid == null || inst.owner === pid;
     }
 
-    /* Anti-Snowball (rules.deploy_protection, default off): frisch gelegt
-       bleibt bis inkl. Gegner-Halbzug unangreifbar (noCombatUntil = turn+1),
-       plus +1 DEF Eingraben bis der Schutz endet. */
+    /* Eingraben / deploy_protection (default ON): frisch gelegt offen,
+       unangreifbar bis zum Start des nächsten eigenen Zugs
+       (noCombatUntil = turn+1 → geschützt solange state.turn <= until),
+       plus +1 DEF. Blockiert Einheitenangriffe und gezielte Effekte;
+       Flächen-/Massenschaden trifft weiterhin. */
+    _isDeployProtected(inst) {
+      if (!inst || !inst.flags) return false;
+      const until = inst.flags.noCombatUntil;
+      if (until == null) return false;
+      return this.state.turn <= until;
+    }
+
     _applyDeployProtection(card) {
       if (!this.rules.deploy_protection || !card) return;
       card.flags = card.flags || {};
+      card.facedown = false; // Schutz zeigt offene Karte + Schild, nie verdeckt
       card.flags.noCombatUntil = this.state.turn + 1;
       card.flags.digInUntil = this.state.turn + 1;
       card.def = (card.def == null ? 0 : card.def) + 1;
       card.defMax = (card.defMax == null ? card.def : card.defMax) + 1;
       card.flags.digInBonus = 1;
+    }
+
+    _hostileTargetBlocked(inst) {
+      return this._isDeployProtected(inst);
     }
 
     nmlAt(p, section, row) {
@@ -797,7 +812,7 @@
         if (!t.inst) return false;
         const td = this.defOf(t.inst);
         if (!td) return false;
-        if (t.inst.flags && t.inst.flags.noCombatUntil === this.state.turn) return false;
+        if (this._isDeployProtected(t.inst)) return false;
         if (t.inst.facedown && (td.effects || []).some((x) => x.code === 'GUERRILLA_HIDE')) return false;
         if ((td.name || '').includes('Himmelhund')) { // Zweig nur bei zutreffender Bedingung
           // needs two shouldered attackers — v1: only legal if attacker has a neighbor
@@ -1125,7 +1140,7 @@
       const due = pend.paid ? 0 : (pend.cost != null ? pend.cost : this.costOf(this.defOf(card), p, null, card));
       if (!pend.paid && p.ap < due) throw new Error('Nicht genug AP (' + p.ap + '/' + due + ')');
       p.hand = p.hand.filter((c) => c.uid !== card.uid); // Handkarten
-      card.facedown = !!pend.facedown; // verdeckte Lage
+      card.facedown = this.rules.deploy_protection ? false : !!pend.facedown; // verdeckte Lage
       card.summonedTurn = this.state.turn;
       this._applyDeployProtection(card); // Feld der Engine-Instanz
       p.front[slot.section][slot.row] = card; // nächster Schritt im Ablauf
@@ -2000,11 +2015,16 @@
           p.hand.push(card);
           return { ok: false, error: 'Keine gegnerische Front.', code: 'NO_TGT' };
         }
+        const napChoices = foe.filter((l) => !this._hostileTargetBlocked(l.inst));
+        if (!napChoices.length) {
+          p.hand.push(card);
+          return { ok: false, error: 'Alle Ziele eingegraben.', code: 'NO_TGT' };
+        }
         this.state.pending = this._sealPending({
           kind: 'napalm',
           player: p.id,
           card: card,
-          choices: foe.map((l) => ({ target: l.inst.uid, label: l.inst.facedown ? 'Verdeckt' : this.defOf(l.inst).name }))
+          choices: napChoices.map((l) => ({ target: l.inst.uid, label: l.inst.facedown ? 'Verdeckt' : this.defOf(l.inst).name }))
         });
         return { ok: true, need: 'target' };
       }
@@ -2105,12 +2125,17 @@
           p.hand.push(card);
           return { ok: false, error: 'Kein Ziel.', code: 'NO_TGT' };
         }
+        const airChoices = tg.filter((l) => !(l.zone === 'front' && this._hostileTargetBlocked(l.inst)));
+        if (!airChoices.length) {
+          p.hand.push(card);
+          return { ok: false, error: 'Alle Ziele eingegraben.', code: 'NO_TGT' };
+        }
         this.state.pending = this._sealPending({
           kind: 'air-strike',
           player: p.id,
           card: card,
           dmg: 5,
-          choices: tg.map((l) => ({ target: l.inst.uid, label: l.inst.facedown ? 'Verdeckt' : this.defOf(l.inst).name }))
+          choices: airChoices.map((l) => ({ target: l.inst.uid, label: l.inst.facedown ? 'Verdeckt' : this.defOf(l.inst).name }))
         });
         return { ok: true, need: 'target' };
       }
@@ -2441,9 +2466,14 @@
     // Kandidatenliste aus dem Kartentext.
     _instantTargets(p, def) { // nächster Schritt im Ablauf
       const out = []; // unveränderliche Bindung in diesem Block
+      const codes = (def.effects || []).map((e) => e.code);
+      const hostile = codes.some((c) => ['DEAL_DAMAGE', 'DESTROY', 'DESTROY_IF_DEF', 'OUT_OF_COMBAT', 'ZIELANGRIFF', 'UMGEHEN', 'SACRIFICE_INFANTRY_DAMAGE'].includes(c))
+        || (/gegner|feind|schaden|zerstör/i.test(def.text || '') && !/eigene/i.test(def.text || ''));
+      const allowEnemy = (l) => !(hostile && this._hostileTargetBlocked(l.inst));
       const allUnits = () => { // unveränderliche Bindung in diesem Block
         this.state.players.forEach((pl) => { // jedes Element
           this.frontList(pl).forEach((l) => { // jedes Element
+            if (pl.id !== p.id && !allowEnemy(l)) return;
             out.push({ uid: l.inst.uid, label: (pl.id === p.id ? 'Eigene ' : 'Feind ') + (l.inst.facedown ? '???' : this.defOf(l.inst).name) });
             // verdeckte Lage
           }); // nächster Schritt im Ablauf
@@ -2453,9 +2483,10 @@
       if (/eigene/i.test(def.text) && !/gegner/i.test(def.text)) { // Zweig nur bei zutreffender Bedingung
         this.frontList(p).forEach((l) => out.push({ uid: l.inst.uid, label: this.defOf(l.inst).name })); // jedes Element
       } else if (/gegner|feind/i.test(def.text)) { // Zweig nur bei zutreffender Bedingung
-        this.frontList(this.opponent(p.id)).forEach((l) => // jedes Element
-          out.push({ uid: l.inst.uid, label: l.inst.facedown ? 'Verdeckt' : this.defOf(l.inst).name }) // verdeckte Lage
-        );
+        this.frontList(this.opponent(p.id)).forEach((l) => { // jedes Element
+          if (!allowEnemy(l)) return;
+          out.push({ uid: l.inst.uid, label: l.inst.facedown ? 'Verdeckt' : this.defOf(l.inst).name }); // verdeckte Lage
+        });
       } else { // sonst
         allUnits(); // nächster Schritt im Ablauf
       }
@@ -2540,7 +2571,9 @@
       else if (code === 'GAIN_AP') p.ap += Number(par.value || 1); // Zweig nur bei zutreffender Bedingung
       else if (code === 'DEAL_DAMAGE') { // Zweig nur bei zutreffender Bedingung
         const loc = this.findInst(targetUid); // unveränderliche Bindung in diesem Block
-        if (loc) this._damage(loc.inst, Number(par.value || 1), { tag: par.tag }); // Verteidigung verringern
+        if (loc && this._hostileTargetBlocked(loc.inst) && loc.player.id !== p.id) {
+          this._log(this.defOf(loc.inst).name + ' ist eingegraben — gezielter Schaden verpufft.');
+        } else if (loc) this._damage(loc.inst, Number(par.value || 1), { tag: par.tag }); // Verteidigung verringern
       } else if (code === 'HEAL') { // Zweig nur bei zutreffender Bedingung
         const v = Number(par.value || par.host || 1);
         if (par.all) {
@@ -2561,7 +2594,9 @@
         }
       } else if (code === 'DESTROY') { // Zweig nur bei zutreffender Bedingung
         const loc = this.findInst(targetUid); // unveränderliche Bindung in diesem Block
-        if (loc) this._destroy(loc); // Karte vom Feld auf den Friedhof
+        if (loc && this._hostileTargetBlocked(loc.inst) && loc.player.id !== p.id) {
+          this._log(this.defOf(loc.inst).name + ' ist eingegraben — Zerstörung verpufft.');
+        } else if (loc) this._destroy(loc); // Karte vom Feld auf den Friedhof
       } else if (code === 'SACRIFICE') { // Zweig nur bei zutreffender Bedingung
         const loc = this.findInst(targetUid); // unveränderliche Bindung in diesem Block
         if (loc && loc.player.id === p.id) { // Zweig nur bei zutreffender Bedingung
@@ -2660,7 +2695,9 @@
         this.frontList(opp).forEach((l) => this._damage(l.inst, Number(par.value || 1), { tag: par.tag || 'mass' }));
       } else if (code === 'DESTROY_IF_DEF') {
         const loc = this.findInst(targetUid);
-        if (loc) {
+        if (loc && this._hostileTargetBlocked(loc.inst) && loc.player.id !== p.id) {
+          this._log(this.defOf(loc.inst).name + ' ist eingegraben — Zerstörung verpufft.');
+        } else if (loc) {
           const st = this.currentAtkDef(loc.inst);
           if (st.def <= Number(par.maxDef || 2)) this._destroy(loc);
           else this._log(this.defOf(loc.inst).name + ' hat zu viel DEF.');
@@ -3324,6 +3361,7 @@
       const aLoc = this.findInst(attackerUid); // unveränderliche Bindung in diesem Block
       const tLoc = this.findInst(targetUid); // unveränderliche Bindung in diesem Block
       if (!aLoc || !tLoc) throw new Error('Kampfziel fehlt'); // Regelverstoß, Zug ungültig
+      if (this._hostileTargetBlocked(tLoc.inst)) throw new Error('Ziel eingegraben — nicht angreifbar');
       const A = aLoc.inst;
       const T = tLoc.inst;
       if (T.facedown && (this.defOf(A).effects || []).some((x) => x.code === 'REVEAL_STRIKE')) {
@@ -4564,12 +4602,17 @@
       this.state.turn += 1; // Feld der Engine-Instanz
       this.state.phase = 'main'; // Feld der Engine-Instanz
       this.frontList(nxt).forEach((l) => {
-        if (l.inst.flags && l.inst.flags.digInBonus && l.inst.flags.digInUntil != null && l.inst.flags.digInUntil < this.state.turn) {
+        if (!l.inst.flags) return;
+        if (l.inst.flags.digInBonus && l.inst.flags.digInUntil != null && l.inst.flags.digInUntil < this.state.turn) {
           const b = Number(l.inst.flags.digInBonus || 1);
           l.inst.def = Math.max(1, (l.inst.def || 1) - b);
           if (l.inst.defMax != null) l.inst.defMax = Math.max(l.inst.def, l.inst.defMax - b);
           l.inst.flags.digInBonus = 0;
           l.inst.flags.digInUntil = null;
+        }
+        // Eingraben endet mit Beginn des nächsten eigenen Zugs (turn > noCombatUntil)
+        if (l.inst.flags.noCombatUntil != null && l.inst.flags.noCombatUntil < this.state.turn) {
+          l.inst.flags.noCombatUntil = null;
         }
       });
       this.state.peaceOffer = null; // Feld der Engine-Instanz

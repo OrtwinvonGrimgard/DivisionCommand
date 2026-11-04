@@ -631,10 +631,12 @@
       if (!ov) return;
       if (ov.querySelector('.recap-modal')) return;
       ov.style.display = 'none';
+      clearTargetHighlights();
     }
     function showPending() {
     var pend = engine.state.pending;
-    if (!pend) { closePendingUi(); return; }
+    if (!pend) { closePendingUi(); clearTargetHighlights(); return; }
+    highlightPendingTargets();
     var meta = (window.DCEngine && DCEngine.pendingMeta) ? DCEngine.pendingMeta(pend.kind) : { title: 'Auswahl', pick: 'card', needs: true };
     var viewer = activePlayer();
     if (meta.needs && !(pend.choices || []).length && meta.pick !== 'coin' && meta.pick !== 'confirm') {
@@ -1046,6 +1048,7 @@
       '<div class="info"><h3>' + escapeHtml(title) + '</h3>' + // HTML-Sonderzeichen escapen
       '<div class="tiny">' + escapeHtml(def.typ) + (cost ? ' · ' + cost : '') + (def.elite ? ' · ELITE' : '') + '</div>' +
       (stats ? '<div class="stat-block">' + stats + '</div>' : '') +
+      (inst && isDigInProtected(inst) ? '<div class="inspect-dig-in">' + digInShieldSvg(16) + '<span>Eingegraben — nicht angreifbar bis zum nächsten eigenen Zug</span></div>' : '') +
       '<p>' + escapeHtml(facedown ? 'Diese Einheit liegt verdeckt.' : (def.text || '')) + '</p>' +
       (costNote ? '<p class="tiny">' + escapeHtml(costNote) + '</p>' : '') +
       (def.flavor && !facedown ? '<p class="tiny"><em>' + escapeHtml(def.flavor) + '</em></p>' : '') +
@@ -1158,6 +1161,36 @@
     }, true);
   }
 
+
+  function digInShieldSvg(size) {
+    size = size || 22;
+    return '<svg class="dig-in-shield-icon" width="' + size + '" height="' + Math.round(size * 1.18) + '" viewBox="0 0 24 28" aria-hidden="true">' +
+      '<path d="M12 1.5 L21 5.2 V13.2 C21 19.2 16.8 24.2 12 26.5 C7.2 24.2 3 19.2 3 13.2 V5.2 Z" fill="#2a1c08" stroke="#e2c36a" stroke-width="1.6"/>' +
+      '<path d="M12 4.2 L18.2 6.8 V13 C18.2 17.4 15.2 21.1 12 22.8 C8.8 21.1 5.8 17.4 5.8 13 V6.8 Z" fill="#c4aa5a" opacity="0.95"/>' +
+      '<path d="M12 7.5 V18.2 M8.2 12.2 H15.8" stroke="#2a1c08" stroke-width="1.7" stroke-linecap="round"/>' +
+      '</svg>';
+  }
+  function isDigInProtected(inst) {
+    if (!inst || !engine || !engine._isDeployProtected) return false;
+    try { return !!engine._isDeployProtected(inst); } catch (e) { return false; }
+  }
+  function clearTargetHighlights() {
+    document.querySelectorAll('.slot.legal-target').forEach(function (s) { s.classList.remove('legal-target'); });
+  }
+  function highlightPendingTargets() {
+    clearTargetHighlights();
+    var pend = engine && engine.state && engine.state.pending;
+    if (!pend || !pend.choices) return;
+    var kinds = { 'attack-target': 1, 'instant-target': 1, napalm: 1, 'air-strike': 1, feint: 1, drone: 1 };
+    if (!kinds[pend.kind]) return;
+    var allowed = {};
+    (pend.choices || []).forEach(function (c) { if (c && c.target) allowed[c.target] = 1; });
+    document.querySelectorAll('#enemy-front .slot.filled, #my-front .slot.filled, #enemy-support .slot.filled, #my-support .slot.filled').forEach(function (el) {
+      var uid = el.getAttribute("data-uid");
+      if (uid && allowed[uid]) el.classList.add("legal-target");
+    });
+  }
+
   function unitHtml(inst, mine, section, row) {
     if (!inst) return '<div class="slot empty" data-drop="front" data-section="' + (section || '') + '" data-row="' + (row || 0) + '"></div>';
     try {
@@ -1195,10 +1228,14 @@
         tokHtml = '<div class="token-tri ' + cls + '">' + artTag(td, face) + '</div>';
       }
     }
-    return '<div class="slot filled ' + (mine ? 'mine' : 'enemy') + (inst.facedown ? ' facedown' : '') + (picked ? ' picked' : '') + (deadact ? ' exhausted' : '') + '" data-uid="' + inst.uid + '" data-drop="front" data-section="' + (section||'') + '" data-row="' + (row||0) + '">' +
+    var dig = isDigInProtected(inst);
+    var digTitle = dig ? ' title="Eingegraben — nicht angreifbar bis zum nächsten eigenen Zug"' : '';
+    return '<div class="slot filled ' + (mine ? 'mine' : 'enemy') + (inst.facedown ? ' facedown' : '') + (picked ? ' picked' : '') + (deadact ? ' exhausted' : '') + (dig ? ' dig-in' : '') + '" data-uid="' + inst.uid + '" data-drop="front" data-section="' + (section||'') + '" data-row="' + (row||0) + '"' + digTitle + '>' +
       tokHtml +
+      (dig ? '<div class="dig-in-shield" aria-label="Eingegraben">' + digInShieldSvg(22) + '</div>' : '') +
       artTag(d, hide) +
       (inst.facedown && mine ? '<div class="unit-hint">verdeckt</div>' : '') +
+      (dig ? '<div class="unit-hint">Eingegraben</div>' : '') +
       '<div class="unit-name">' + escapeHtml((d && d.name) || 'Einheit') + '</div>' +
       '<div class="unit-stats">' + stats + '</div></div>'; // HTML-Sonderzeichen escapen
   }
@@ -2154,9 +2191,17 @@
     function tryPickPending(uid) { // Funktion
       var pend = engine.state.pending; // offene Wahl des Spielers
       if (!pend || pend.player !== viewer) return false; // Wert zurückgeben
-      if (pend.kind === 'instant-target' || pend.kind === 'attack-target' || pend.kind === 'equip') { // Zweig nur bei zutreffender Bedingung
-        dispatch({ type: 'CHOOSE_TARGET', player: pend.player, target: uid }); // eine Aktion durch die Regeln jagen
-        return true; // Wert zurückgeben
+      if (pend.kind === 'instant-target' || pend.kind === 'attack-target' || pend.kind === 'equip' || pend.kind === 'napalm' || pend.kind === 'air-strike') {
+        if (pend.choices && pend.choices.length) {
+          var ok = pend.choices.some(function (c) { return c && c.target === uid; });
+          if (!ok) {
+            var loc = engine.findInst(uid);
+            if (loc && isDigInProtected(loc.inst)) say('Eingegraben — nicht angreifbar bis zum nächsten eigenen Zug.');
+            return true; // consume click, do not attack
+          }
+        }
+        dispatch({ type: 'CHOOSE_TARGET', player: pend.player, target: uid });
+        return true;
       }
       return false; // Wert zurückgeben
     }

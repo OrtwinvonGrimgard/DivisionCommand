@@ -115,5 +115,5 @@ Heute endet das Gefecht regeltechnisch bei 10 SP, aber SP fließen fast nicht. O
 ## Anhang: Front-Snowball (Balance, nicht Siegbedingung)
 
 Nutzerfeedback zu Ketten-Angriffen / Soforttod frischer Deploys ist in **`BALANCE_FRONT.md`** diagnostiziert.
-Anti-Snowball-Flags `deploy_protection` / `strict_facing` (default **aus**). **Keine Änderung an Siegbedingungen.**
+Anti-Snowball: `deploy_protection` / Eingraben (default **an**); `strict_facing` bleibt **aus**. **Keine Änderung an Siegbedingungen.**
 

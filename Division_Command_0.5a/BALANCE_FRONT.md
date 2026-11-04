@@ -41,7 +41,7 @@ Simulation: `scripts/sim_front_snowball.mjs` — Bot-vs-Bot, 200 Partien je Modu
 
 | # | Option | Erwarteter Effekt | Status |
 |---|---|---|---|
-| 1 | **`deploy_protection` / Eingraben** — frisch gelegt: unangreifbar bis inkl. Gegner-Halbzug (`noCombatUntil = turn+1`) +1 DEF bis Schutzende | Kill-before-acting stark ↓, Lebensdauer ↑ | **Prototyp, default OFF** |
+| 1 | **`deploy_protection` / Eingraben** — frisch gelegt: unangreifbar bis inkl. Gegner-Halbzug (`noCombatUntil = turn+1`) +1 DEF bis Schutzende | Kill-before-acting stark ↓, Lebensdauer ↑ | **AKTIV (default ON)** |
 | 2 | **`strict_facing`** — Angriff nur gegenüber (gleiche Sektion+Reihe) oder seitlich (Nachbarsektion, gleiche Reihe); Artillerie/Mörser/`ATTACK_ANY_FRONT` unverändert | Weniger Spalten-Ketten, lokalerer Kampf | **Prototyp, default OFF** |
 | 3 | Angriff kostet **2 AP** (`attack_ap`) | Weniger Ketten-Angriffe / Zug | nicht prototyped |
 | 4 | **Catch-up** — Spieler mit weniger Front-Einheiten +1 AP oder 1 Gratis-Zug-DEF | Comeback nach Board-Verlust | nicht prototyped |
@@ -63,7 +63,7 @@ Simulation: `scripts/sim_front_snowball.mjs` — Bot-vs-Bot, 200 Partien je Modu
 - **`strict_facing` allein** ändert Kill-before-acting kaum — solange *irgendeine* Einheit gegenüber/seitlich steht, stirbt der Deploy weiterhin sofort. Nutzen eher taktische Lokalität; in Kombi mit Schutz steigt Ø-Lebensdauer weiter (7,85→9,16).
 - Full-Control-Anteil bleibt hoch, weil ohne Siegbedingung Boards weiter eskalieren; der Schutz verschiebt den Zeitpunkt und bremst den Sofort-Wipe.
 
-Flags in `catalog.js` → `rules.deploy_protection` / `rules.strict_facing` (beide **false**). Engine: `_applyDeployProtection`, Filter in `legalAttackTargets` / `_canAct`, Dig-In-Ablauf nach `turn++` in `_actEnd`.
+Flags in `catalog.js` → `rules.deploy_protection` **true** (permanent), `rules.strict_facing` **false**. Engine: `_applyDeployProtection`, Filter in `legalAttackTargets` / `_canAct`, Dig-In-Ablauf nach `turn++` in `_actEnd`.
 
 ---
 
@@ -77,3 +77,22 @@ Flags in `catalog.js` → `rules.deploy_protection` / `rules.strict_facing` (bei
 Repro: `node scripts/sim_front_snowball.mjs 200 baseline|deploy_protection|strict_facing|both`
 
 Rohdaten (Stichprobe): `sim_front_*.json` im Ordner `Division_Command_0.5a/`.
+
+---
+
+## 6. Freigabe 2026-11-04 — Eingraben permanent
+
+Nutzerentscheid: **`deploy_protection` dauerhaft ON** (beide Seiten, Bot/Hotseat/LAN). `strict_facing` bleibt OFF. Siegbedingungen unverändert.
+
+### Massenschaden-Regel (fest)
+- Blockiert: Einheitenangriffe + **gezielte** Effekte (DEAL_DAMAGE/DESTROY/Napalm/Luftschlag auf ein Ziel).
+- Trifft trotzdem: **`MASS_DAMAGE`** / „Allen Feinden … Schaden“ und vergleichbarer Flächenschaden.
+
+### UI
+- Einheit wird **offen** gelegt (nicht verdeckt/ausgegraut).
+- **Schild**-Badge + Glow; Tooltip „Eingegraben — nicht angreifbar bis zum nächsten eigenen Zug“.
+- Badge verschwindet genau wenn `noCombatUntil` abläuft (Beginn nächster eigener Zug).
+- Targeting-Highlight nur auf legalen Zielen (Schutz ausgenommen).
+
+Siehe Hilfe (Spielregeln) und `RULES_v0.5_GRUNDKONZEPT.md` §7.0.
+

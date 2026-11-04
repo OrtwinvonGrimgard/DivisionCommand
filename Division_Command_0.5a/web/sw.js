@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-fahrplan1';
+const CACHE = 'divcmd-digin1';
 const ASSETS = [
   './',
   './index.html',

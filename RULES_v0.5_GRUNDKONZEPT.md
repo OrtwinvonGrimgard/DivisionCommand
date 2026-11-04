@@ -151,6 +151,18 @@ Würfel sind nicht Teil des normalen Kampfkerns.
 
 # 7. Angriff
 
+## 7.0 Eingraben (Deploy-Schutz, verbindlich ab 0.5a digin)
+
+Frisch gelegte Fronteinheiten kommen **offen** auf die Stellung (nicht verdeckt) und sind bis zum **Beginn des nächsten eigenen Zugs** eingegraben:
+
+- Sichtbares **Schild**-Zeichen und leichter Rahmen-Glow in der UI.
+- Nicht angreifbar durch Einheitenangriffe; erscheinen nicht als legale Angriffsziele.
+- Gezielte feindliche Soforteffekte (z. B. einzelner Schaden / Zerstörung / Napalm / Luftschlag auf ein Ziel) greifen nicht.
+- **Flächenschaden** („Allen Feinden … Schaden“ / `MASS_DAMAGE`) trifft weiterhin.
+- +1 DEF für die Dauer des Schutzes.
+- Der Bot respektiert dieselben Zielregeln.
+
+
 Eine normale Front-Einheit kann grundsätzlich die gegnerische Stellung
 
 - direkt gegenüber,

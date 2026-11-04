@@ -85,7 +85,7 @@ window.DC_CATALOG = window.DC_CATALOG || {
     "doctrines": 2,
     "support_slots": 18,
     "max_hand": 7,
-    "deploy_protection": false,
+    "deploy_protection": true,
     "strict_facing": false
   }
 };

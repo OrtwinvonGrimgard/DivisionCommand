@@ -613,6 +613,72 @@ function main() {
     ok('Rasten+Freigabeformular attach');
   }
 
+  
+  // --- deploy_protection / Eingraben ---
+  {
+    const eng = makeMatch(win, nat0);
+    assert(eng.rules.deploy_protection === true, 'deploy_protection default ON');
+    const inf = win.DC_CATALOG.cards.find((c) => ((c.tags||[]).includes('infanterie') || c.klasse==='Infanterie') && eng.byId[c.id]);
+    const atk = putUnit(eng, 0, inf.id, 'C', 0);
+    atk.summonedTurn = eng.state.turn - 2;
+    atk.flags = atk.flags || {};
+    const foeCard = giveHand(eng, 1, inf.id);
+    // Simulate enemy turn deploy with protection
+    eng.state.active = 1;
+    eng.player(1).ap = 10;
+    // place via engine API
+    const beforeTurn = eng.state.turn;
+    const slotCard = eng.instFromId(inf.id, 1);
+    eng.player(1).hand.push(slotCard);
+    eng.player(1).ap = 20;
+    // Direct apply like deploy
+    const found = eng.instFromId(inf.id, 1);
+    found.summonedTurn = eng.state.turn;
+    eng._applyDeployProtection(found);
+    eng.player(1).front.C[0] = found;
+    assert(found.facedown === false, 'deploy open not facedown');
+    assert(eng._isDeployProtected(found), 'protected right after deploy');
+    assert(found.flags.digInBonus === 1, 'digIn +1 DEF flag');
+    const legal = eng.legalAttackTargets({ inst: atk, player: eng.player(0), zone: 'front', section: 'C', row: 0 });
+    assert(!legal.some((t) => t.inst && t.inst.uid === found.uid), 'protected not in legalAttackTargets');
+    let threw = false;
+    try { eng._resolveCombat(0, atk.uid, found.uid); } catch (err) { threw = /eingegraben/i.test(String(err.message||err)); }
+    assert(threw, 'combat rejects protected target');
+
+    // MASS_DAMAGE still hits (Flächenschaden ignoriert Eingraben)
+    const defBefore = found.def;
+    assert(defBefore != null && defBefore > 1, 'def ready ' + defBefore);
+    eng._applyEffect(eng.player(0), found, { code: 'MASS_DAMAGE', param: { value: 1 } }, null);
+    assert(found.def === defBefore - 1, 'mass damage still hits protected got ' + found.def + ' from ' + defBefore);
+
+    // Targeted DEAL_DAMAGE blocked
+    const def2 = found.def;
+    eng._applyEffect(eng.player(0), found, { code: 'DEAL_DAMAGE', param: { value: 2 } }, found.uid);
+    assert(found.def === def2, 'targeted DEAL_DAMAGE blocked while protected');
+
+    // Expire at owner next turn start: turn advances past noCombatUntil
+    const until = found.flags.noCombatUntil;
+    eng.state.turn = until + 1;
+    // run expire logic like _actEnd
+    eng.frontList(eng.player(1)).forEach((l) => {
+      if (l.inst.flags && l.inst.flags.noCombatUntil != null && l.inst.flags.noCombatUntil < eng.state.turn) {
+        l.inst.flags.noCombatUntil = null;
+      }
+      if (l.inst.flags && l.inst.flags.digInBonus && l.inst.flags.digInUntil != null && l.inst.flags.digInUntil < eng.state.turn) {
+        const b = Number(l.inst.flags.digInBonus || 1);
+        l.inst.def = Math.max(1, (l.inst.def || 1) - b);
+        if (l.inst.defMax != null) l.inst.defMax = Math.max(l.inst.def, l.inst.defMax - b);
+        l.inst.flags.digInBonus = 0;
+        l.inst.flags.digInUntil = null;
+      }
+    });
+    assert(!eng._isDeployProtected(found), 'protection ends at owner next turn start');
+    const legal2 = eng.legalAttackTargets({ inst: atk, player: eng.player(0), zone: 'front', section: 'C', row: 0 });
+    assert(legal2.some((t) => t.inst && t.inst.uid === found.uid), 'targetable after protection ends');
+    ok('deploy_protection lifecycle + targeting + mass vs targeted');
+  }
+
+
   console.log('\nALL PASSED', passed);
 }
 
