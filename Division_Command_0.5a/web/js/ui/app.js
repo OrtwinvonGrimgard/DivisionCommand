@@ -20,7 +20,8 @@
     var h = document.getElementById('hint');
     if (h) h.textContent = msg;
     var el = document.getElementById('boot-error');
-    if (el && !h) el.textContent = msg;
+    // Immer auch Lobby-Fehlerzeile setzen — sonst verschwindet der Startfehler hinter dem Titel.
+    if (el) el.textContent = msg;
     console.error(msg);
   }
   /* Text für innerHTML unschädlich machen. */

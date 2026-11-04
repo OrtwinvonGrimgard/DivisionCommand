@@ -135,8 +135,8 @@ window.DC_NATION_DECKS = {
       "dc_b_weiterkaempfen_420"
     ],
     "doktrinen": [
-      "Stoßtrupp",
-      "Weiterkämpfen"
+      "dc_dok_stosstrupp",
+      "dc_dok_weiterkaempfen"
     ]
   },
   "Theryn": {
@@ -765,8 +765,8 @@ window.DC_NATION_DECKS = {
       "dc_b_abloesung_660"
     ],
     "doktrinen": [
-      "Schwerpunkt",
-      "Ablösung"
+      "dc_dok_schwerpunkt",
+      "dc_dok_abloesung"
     ]
   },
   "Sahr": {

@@ -77,8 +77,8 @@ window.DC_NATIONS = {
   "Karsk": {
     "lore": "Körper als System",
     "doktrinen": [
-      "Stoßtrupp",
-      "Weiterkämpfen"
+      "dc_dok_stosstrupp",
+      "dc_dok_weiterkaempfen"
     ],
     "stil": "Körper als System",
     "deck_name": "Karsk",
@@ -725,8 +725,8 @@ window.DC_NATIONS = {
   "Rothain": {
     "lore": "Unfehlbare Krone",
     "doktrinen": [
-      "Schwerpunkt",
-      "Ablösung"
+      "dc_dok_schwerpunkt",
+      "dc_dok_abloesung"
     ],
     "stil": "Unfehlbare Krone",
     "deck_name": "Rothain",

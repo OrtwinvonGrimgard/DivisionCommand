@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-handzoom2';
+const CACHE = 'divcmd-dokfix';
 const ASSETS = [
   './',
   './index.html',
