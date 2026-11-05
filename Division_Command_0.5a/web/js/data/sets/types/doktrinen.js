@@ -53,11 +53,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, du heilst 1 dort, und du ziehst 1 Karte.",
+    "text": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK und du ziehst 1 Karte — Druck ohne Verband.",
     "clauses": [
       {
         "title": "",
-        "body": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, du heilst 1 dort, und du ziehst 1 Karte."
+        "body": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK und du ziehst 1 Karte — Druck ohne Verband."
       }
     ],
     "effects": [
@@ -66,7 +66,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "param": {
           "on_destroy_in_section": {
             "section_atk": 1,
-            "heal": 1,
+            "heal": 0,
             "draw": 1,
             "until": "end-of-turn"
           }
@@ -202,11 +202,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Eigene Angriffe gegen aufgedeckte Feinde haben +1 ATK. Nur der erste solche Angriff pro Zug erhält den Bonus.",
+    "text": "Eigene Angriffe gegen aufgedeckte Feinde haben +1 ATK — wer gesehen wird, wird getroffen.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Angriffe gegen aufgedeckte Feinde haben +1 ATK. Nur der erste solche Angriff pro Zug erhält den Bonus."
+        "body": "Eigene Angriffe gegen aufgedeckte Feinde haben +1 ATK — wer gesehen wird, wird getroffen."
       }
     ],
     "effects": [
@@ -215,7 +215,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "param": {
           "against": "revealed",
           "atk": 1,
-          "once_per_turn": true
+          "once_per_turn": false
         }
       }
     ],
@@ -238,11 +238,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 DEF.",
+    "text": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 DEF und +1 ATK — ausharren heißt auch zubeißen.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 DEF."
+        "body": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 DEF und +1 ATK — ausharren heißt auch zubeißen."
       }
     ],
     "effects": [
@@ -250,7 +250,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "AUSHARREN",
         "param": {
           "if": "no-support-in-section",
-          "atk": 0,
+          "atk": 1,
           "def": 1
         }
       }
@@ -537,11 +537,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Eigene Artillerie hat +1 ATK. Feuert sie, haben alle eigenen Einheiten in ihrem Abschnitt (inkl. der Artillerie) bis Zugende +1 ATK.",
+    "text": "Eigene Artillerie hat +1 ATK. Feuert sie, haben die anderen eigenen Einheiten in ihrem Abschnitt bis Zugende +1 ATK — die Rohre selbst bleiben kalt.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Artillerie hat +1 ATK. Feuert sie, haben alle eigenen Einheiten in ihrem Abschnitt (inkl. der Artillerie) bis Zugende +1 ATK."
+        "body": "Eigene Artillerie hat +1 ATK. Feuert sie, haben die anderen eigenen Einheiten in ihrem Abschnitt bis Zugende +1 ATK — die Rohre selbst bleiben kalt."
       }
     ],
     "effects": [
@@ -552,7 +552,7 @@ window.DC_SET_TYPES["Doktrin"] = [
           "on_shell": {
             "who": "own-units-in-section",
             "atk": 1,
-            "include_self": true
+            "include_self": false
           }
         }
       }
@@ -651,11 +651,11 @@ window.DC_SET_TYPES["Doktrin"] = [
     ],
     "klasse_tags": [],
     "principle": "Am Ende deines Zuges",
-    "text": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK.",
+    "text": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK — wer wartet, schlägt einmal; der Eid zählt Totenköpfe strenger.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK."
+        "body": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK — wer wartet, schlägt einmal; der Eid zählt Totenköpfe strenger."
       }
     ],
     "effects": [
@@ -1191,11 +1191,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Hast du in einem Abschnitt mehr Einheiten als der Gegner, haben sie +1 ATK.",
+    "text": "Hast du in einem Abschnitt mehr Einheiten als der Gegner, haben sie +2 ATK — die Flanke wird zur Zange.",
     "clauses": [
       {
         "title": "",
-        "body": "Hast du in einem Abschnitt mehr Einheiten als der Gegner, haben sie +1 ATK."
+        "body": "Hast du in einem Abschnitt mehr Einheiten als der Gegner, haben sie +2 ATK — die Flanke wird zur Zange."
       }
     ],
     "effects": [
@@ -1203,7 +1203,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "UMGEHEN",
         "param": {
           "if": "opponent-has-fewer-units-in-section",
-          "atk": 1
+          "atk": 2
         }
       }
     ],
@@ -1337,18 +1337,18 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Eigene Angriffe gegen beschädigte Feinde haben +2 ATK. Beim Zerstören ziehst du 1.",
+    "text": "Eigene Angriffe gegen beschädigte Feinde haben +1 ATK. Beim Zerstören ziehst du 1 — der Abschluss bleibt, der Stoß wird knapper.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Angriffe gegen beschädigte Feinde haben +2 ATK. Beim Zerstören ziehst du 1."
+        "body": "Eigene Angriffe gegen beschädigte Feinde haben +1 ATK. Beim Zerstören ziehst du 1 — der Abschluss bleibt, der Stoß wird knapper."
       }
     ],
     "effects": [
       {
         "code": "ZIELANGRIFF",
         "param": {
-          "vs_damaged_atk": 2,
+          "vs_damaged_atk": 1,
           "draw_on_damaged_kill": 1
         }
       }

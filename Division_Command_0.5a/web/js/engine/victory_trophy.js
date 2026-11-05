@@ -10,11 +10,11 @@
   /** @type {Record<string, {id:string, name:string, label:string, need:number, event:string}>} */
   var OBJECTIVES = {
     dc_dok_abloesung: { id: 'dc_dok_abloesung', name: 'Ablösung', label: '4 Einheiten im Abschnitt nach eigenem Verlust nachrücken', need: 4, event: 'replace_after_loss' },
-    dc_dok_abnutzung: { id: 'dc_dok_abnutzung', name: 'Abnutzung', label: '5 gegnerische Fronteinheiten zerstören', need: 5, event: 'enemy_front_kill'},
+    dc_dok_abnutzung: { id: 'dc_dok_abnutzung', name: 'Abnutzung', label: '6 gegnerische Fronteinheiten zerstören', need: 6, event: 'enemy_front_kill'},
     dc_dok_abriegeln: { id: 'dc_dok_abriegeln', name: 'Abriegeln', label: '1 Artillerieangriff auf Abschnitt mit ≤1 Feind', need: 1, event: 'arty_thin_section'},
     dc_dok_abschluss: { id: 'dc_dok_abschluss', name: 'Abschluss', label: '2 Kills mit derselben Einheit in der Partie', need: 2, event: 'same_unit_kills' },
     dc_dok_auffangen: { id: 'dc_dok_auffangen', name: 'Auffangen', label: '1 Angriff bei Unterzahl/Gleichstand überleben', need: 1, event: 'survive_outnumbered'},
-    dc_dok_aufklaerungsschlag: { id: 'dc_dok_aufklaerungsschlag', name: 'Aufklärungsschlag', label: '9 Schaden an aufgeklärten Feinden', need: 9, event: 'dmg_revealed'},
+    dc_dok_aufklaerungsschlag: { id: 'dc_dok_aufklaerungsschlag', name: 'Aufklärungsschlag', label: '8 Schaden an aufgeklärten Feinden', need: 8, event: 'dmg_revealed'},
     dc_dok_ausharren: { id: 'dc_dok_ausharren', name: 'Ausharren', label: '2 Schaden aus Abschnitten ohne eigene Unterstützung', need: 2, event: 'dmg_no_support'},
     dc_dok_auswertung: { id: 'dc_dok_auswertung', name: 'Auswertung', label: '3 Schaden im Zug nach erlittenem Angriff', need: 3, event: 'dmg_after_attacked' },
     dc_dok_blitzkrieg: { id: 'dc_dok_blitzkrieg', name: 'Blitzkrieg', label: '1 Kill mit Panzer innerhalb von 2 Zügen nach Einrücken', need: 1, event: 'blitz_panzer_kill' },
@@ -26,7 +26,7 @@
     dc_dok_feuerwalze: { id: 'dc_dok_feuerwalze', name: 'Feuerwalze', label: '1 Artillerie-Kill', need: 1, event: 'arty_kill'},
     dc_dok_gegenstoss: { id: 'dc_dok_gegenstoss', name: 'Gegenstoß', label: '4 Schaden im Zug nach erlittenem Angriff', need: 4, event: 'dmg_after_attacked' },
     dc_dok_gepanzerter_fuss: { id: 'dc_dok_gepanzerter_fuss', name: 'Gepanzerter Fuß', label: '2 Infanterie ausspielen', need: 2, event: 'play_infantry'},
-    dc_dok_lauer: { id: 'dc_dok_lauer', name: 'Lauer', label: '3 gegnerische Fronteinheiten zerstören', need: 3, event: 'enemy_front_kill' },
+    dc_dok_lauer: { id: 'dc_dok_lauer', name: 'Lauer', label: '4 gegnerische Fronteinheiten zerstören', need: 4, event: 'enemy_front_kill' },
     dc_dok_linienkrieg: { id: 'dc_dok_linienkrieg', name: 'Linienkrieg', label: '6 Schaden aus Abschnitten mit ≥2 eigenen Einheiten', need: 6, event: 'dmg_massed' },
     dc_dok_lokalisierung: { id: 'dc_dok_lokalisierung', name: 'Lokalisierung', label: '5 Schaden an aufgeklärten Feinden', need: 5, event: 'dmg_revealed'},
     dc_dok_marsch_aus_dem_vollen: { id: 'dc_dok_marsch_aus_dem_vollen', name: 'Marsch aus dem Vollen', label: '3 Einheiten in Abschnitte mit Unterstützung spielen', need: 3, event: 'play_with_support' },

@@ -39,7 +39,7 @@
 ## Pro Nation: alt → neu (ein Satz)
 
 ### Averon
-- **Aufklärungsschlag:** Aufklärungsschlag: vs aufgedeckt +1 ATK → Eigene Angriffe gegen aufgedeckte Feinde haben +1 ATK. Nur der erste solche Angriff pro Zug erhält den Bonus.
+- **Aufklärungsschlag:** Jeder eigene Angriff gegen aufgedeckte Feinde +1 ATK (kein 1×/Zug-Limit mehr); Trophy 8 statt 9 Schaden.
 - **Auswertung:** Lokalisierung: aufgedeckt −1 DEF → Erleidet eine eigene Einheit Schaden und überlebt, hat sie bis zum Ende dieses Zuges +1 ATK (nicht stapelbar). Zeit wird zur Waffe — knapp bemessen.
 
 ### Caldris
@@ -47,7 +47,7 @@
 - **Rasten:** Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK (kein DEF).
 
 ### Dargan
-- **Zielangriff:** Eigene Angriffe gegen beschädigte Feinde haben +2 ATK. Beim Zerstören ziehst du 1.
+- **Zielangriff:** Gegen beschädigte Feinde +1 ATK (statt +2), Kill-Draw bleibt.
 - **Abschluss:** Zerstört eine eigene Einheit ein Ziel, hat sie +1 ATK bis Ende deines nächsten Zuges und du ziehst 1.
 
 ### Eldran
@@ -59,12 +59,12 @@
 - **Weiterkämpfen:** Weiterkämpfen: beschädigt +1 ATK → Eigene beschädigte Einheiten haben +2 ATK und +1 DEF. Zerstört eine beschädigte Einheit ein Ziel, heilt sie 1 und du erhältst 1 AP (max. 1×/Zug).
 
 ### Lyr
-- **Lauer:** Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK.
+- **Lauer:** Ruhende Einheiten +1 ATK (unverändert im Kampf); Trophy strenger: 4 statt 3 Kills.
 - **Verteilte Stellung:** Bist du allein im Abschnitt: +1 DEF (kein Gruppen-ATK mehr — verstreute Posten massieren nicht).
 
 ### Merovan
 - **Verlegung:** Einmal pro Zug für 1 AP eine eigene Einheit 1 Slot seitlich schieben (kein Passiv-+1 DEF — Beweglichkeit statt Panzerung).
-- **Ausharren:** Eigene Einheiten ohne Unterstützung haben +1 DEF (kein ATK).
+- **Ausharren:** Ohne Unterstützung im Abschnitt +1 DEF und +1 ATK.
 
 ### Namar
 - **Marsch aus dem Vollen:** Marsch aus dem Vollen: mit Support −1 AP → Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK und +1 DEF bis Zugende.
@@ -75,7 +75,7 @@
 - **Lokalisierung:** Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an (kein Extra vs. beschädigt).
 
 ### Ossaria
-- **Abnutzung:** Kill → Abschnitt +1 ATK, heile 1 dort, ziehe 1 (kein DEF mehr für übrige Abschnitte).
+- **Abnutzung:** Kill → Abschnitt +1 ATK, ziehe 1 (keine Heilung mehr — Druck ohne Verband); Trophy 6 Kills.
 - **Gepanzerter Fuß:** Eigene Einheiten haben +1 DEF. Ausgerüstete Einheiten haben +1 ATK und +1 DEF zusätzlich.
 
 ### Rothain
@@ -84,7 +84,7 @@
 
 ### Sahr
 - **Linienkrieg:** Eigene Einheiten haben +1 DEF; ≥2 im Abschnitt zusätzlich +1 DEF.
-- **Umgehen:** Hast du in einem Abschnitt mehr Einheiten als der Gegner, haben sie +1 ATK.
+- **Umgehen:** Lokale Überzahl → +2 ATK (statt +1) — die Flanke wird zur Zange.
 
 ### Steinmark
 - **Feuerplan:** Feuerplan: Markierungen → Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an (1× pro Zug).
@@ -95,7 +95,7 @@
 - **Sturmangriff:** Sturmangriff: Infanterie +2 ATK wählen → Zu Beginn deines Zuges erhält deine stärkste Infanterie +2 ATK bis zum Ende des Zuges.
 
 ### Vael
-- **Feuerwalze:** Eigene Artillerie hat +1 ATK. Feuert sie, haben alle eigenen Einheiten in ihrem Abschnitt bis Zugende +1 ATK.
+- **Feuerwalze:** Artillerie +1 ATK; Feuerschlag gibt nur den *anderen* Einheiten im Abschnitt +1 ATK (Rohre selbst nicht).
 - **Materialersatz:** Panzer und Artillerie kosten immer 1 AP weniger (min. 1); kein Einrück-+DEF.
 
 ### Vesper
@@ -142,3 +142,41 @@ Zwei Läufe `sim_nation_strength.mjs 15` (je 3600 Partien, 15 pro gerichteter Pa
 - **Merovan:** Verlegung ohne Passiv-DEF, Schieben kostet 1 AP; Ausharren nur +1 DEF.
 - Mitkorrigiert: Ossaria Abnutzung, Orthea Lokalisierung, Vael Materialersatz, Sahr Linienkrieg, Eldran Gegenstoß, Caldris Etappe, Dargan Abschluss.
 
+
+
+## Balance-Pass Nov 2026 (nach Bugfix 57bf8ae)
+
+Ausgangslage (2×3600, 15/Paar): Ossaria 56.2 %, Lyr 55.4 %, Averon 44.6 % außerhalb 45–55; Ziel 46–54 % für alle.
+
+Änderungen (lore-nah, minimal):
+- **Ossaria / Abnutzung:** Heilung beim Kill entfernt; Trophy 5 → 6 Kills.
+- **Lyr / Lauer:** Kampfwert unverändert; Trophy 3 → 4 Kills.
+- **Averon / Aufklärungsschlag:** +1 ATK gegen Aufgedeckte bei jedem Angriff (nicht nur erster); Trophy 9 → 8.
+- **Dargan / Zielangriff:** vs. beschädigt +2 → +1 ATK.
+- **Vael / Feuerwalze:** Sektor-Buff ohne die feuernde Artillerie selbst.
+- **Merovan / Ausharren:** +1 ATK zusätzlich zu +1 DEF ohne Support.
+- **Sahr / Umgehen:** Überzahl-Bonus +1 → +2 ATK.
+
+Bestätigung: 2×3600 Partien (Seeds Offset 0 / 1 000 000):
+
+| Nation | Decided-WR (Mittel) | Spanne |
+|---|---:|---|
+| Dargan | 53.22 % | 52.7–53.8 |
+| Caldris | 52.67 % | 51.8–53.6 |
+| Namar | 52.56 % | 50.2–54.9 |
+| Lyr | 51.56 % | 50.4–52.7 |
+| Merovan | 51.44 % | 50.9–52.0 |
+| Vael | 50.78 % | 48.9–52.7 |
+| Steinmark | 50.44 % | 47.3–53.6 |
+| Ossaria | 49.78 % | 48.9–50.7 |
+| Averon | 49.56 % | 47.3–51.8 |
+| Sahr | 49.44 % | 47.8–51.1 |
+| Karsk | 49.33 % | 48.4–50.2 |
+| Rothain | 49.11 % | 49.1–49.1 |
+| Orthea | 48.67 % | 47.8–49.6 |
+| Theryn | 48.33 % | 47.8–48.9 |
+| Eldran | 46.67 % | 46.2–47.1 |
+| Vesper | 46.44 % | 45.3–47.6 |
+
+- Decided-WR gesamt: **46.4–53.2 %** · **16/16 im 46–54-Korridor**
+- Startspieler-WR: **51.32 %** (51.11 / 51.53) · Median-Züge 14.5 · Remis 0 %
