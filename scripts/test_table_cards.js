@@ -74,9 +74,26 @@ const doctrine = w.document.querySelector('#my-doctrine .doctrine-card');
 let kbClicked = 0; doctrine.addEventListener('click', () => kbClicked++);
 doctrine.dispatchEvent(new w.KeyboardEvent('keydown', { key: 'Enter', bubbles: true, cancelable: true }));
 assert.equal(kbClicked, 1, 'Enter activates tile');
+// Bubbling from inner child (image/name) of a legal filled slot reaches the production handler.
+const eqHand = add(eq.id); const host = eng.frontList(eng.player(0)).find(l => l.inst.uid === hand.uid).inst;
+click(`#hand [data-uid="${eqHand.uid}"]`);
+const hostEl = w.document.querySelector(`#my-front [data-uid="${host.uid}"]`);
+assert(hostEl.classList.contains('legal'), 'equipment host marked legal');
+hostEl.querySelector('.table-art').dispatchEvent(new w.MouseEvent('click', { bubbles: true, cancelable: true }));
+assert((host.attachments || []).some(a => a.uid === eqHand.uid), 'equipment attached via bubbled child click');
 assert.equal(h.errors.length, 0);
 const css = fs.readFileSync(path.join(WEB, 'css/table-cards.css'), 'utf8');
-assert(css.includes('repeat(9, minmax(108px, 1fr))') && css.includes('overflow-x: auto'));
+assert(css.includes('repeat(9, minmax(0, 1fr))'), 'nine columns fit width, no forced horizontal overflow');
+// Regression t166u: slots must stay viewport-sized so own front/support are not pushed under the sticky hand dock.
+assert(/height: 12vh !important/.test(css) && !/min-height: 1[0-9]{2}px !important/.test(css), 'slot height bounded by viewport');
+assert(!/#my-doctrine\s*\{[^}]*grid-row/.test(css), 'no extra bottom-bar row above the hand');
+assert(!/min-width: 1020px/.test(css), 'no forced 1020px front width');
+assert(/\.slot\.empty\.legal[^{]*\{[^}]*background: rgba\(226, 195, 106/.test(css), 'playable empty slots override stripe pattern');
+const fxCss = fs.readFileSync(path.join(WEB, 'css/table-effects.css'), 'utf8');
+assert(/\.fx-badges \{ position: absolute/.test(fxCss), 'effect badges do not grow slot height');
+for (const block of (css + fxCss).match(/[^{}]*::(before|after)[^{]*\{[^}]*\}/g) || []) {
+  if (/content:\s*""/.test(block) && /inset: 0/.test(block)) assert(/pointer-events: none/.test(block), 'full-cover pseudo overlay must not catch clicks: ' + block.slice(0, 80));
+}
 assert(!/#app\s+\.hand\s*[{.]/.test(css), 'no hand style changes');
 h.dom.window.close();
 console.log(`PASS ${artwork} verified motif paths / ${textures} explicit doctrine texture crops; own/enemy unit/support, equipment detail, stats/shield/damage/buffs, hidden privacy, hand unchanged, slot/AP/target/keyboard handlers`);

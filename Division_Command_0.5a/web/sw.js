@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-fx1';
+const CACHE = 'divcmd-fit1';
 const ASSETS = [
   './',
   './index.html',

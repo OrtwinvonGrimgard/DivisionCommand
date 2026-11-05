@@ -39,7 +39,7 @@
 #app .slot.sec-trap::after { content: "⚠"; color: #ffae6a; }
 #app .slot.sec-shield::after { content: "⛨"; color: #bfe4ff; }
 /* Labels */
-#app .slot .fx-badges { display: flex; flex-wrap: wrap; gap: 2px; justify-content: center; padding: 2px; background: #111913; }
+#app .slot .fx-badges { position: absolute; z-index: 3; left: 0; right: 0; top: 30px; display: flex; flex-wrap: wrap; gap: 2px; justify-content: center; padding: 0 2px; pointer-events: none; }
 #app .slot .fx-badge { font-size: 10px; line-height: 1.3; padding: 0 4px; border-radius: 3px; border: 1px solid; white-space: nowrap; }
 #app .fx-b-shield { color: #d8ecff; border-color: #7aa8e8; background: #1c2b3d; }
 #app .fx-b-burn { color: #ffd9b0; border-color: #ff6a1a; background: #3a1608; }

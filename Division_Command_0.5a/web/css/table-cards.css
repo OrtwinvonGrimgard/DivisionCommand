@@ -2,11 +2,10 @@
 #app .table-main { overflow-y: auto !important; overflow-x: hidden !important; }
 #app #my-front, #app #enemy-front { flex: 0 0 auto; overflow-x: auto; padding: 2px 0 5px; }
 #app .front-line, #app .support-row, #app .nml-row {
-  display: grid !important; grid-template-columns: repeat(9, minmax(108px, 1fr)) !important;
+  display: grid !important; grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
   gap: 6px !important; width: 100% !important; box-sizing: border-box;
   overflow: visible !important; align-items: start;
 }
-#app .front-line, #app .flank-legend { min-width: 1020px; }
 #app .support-row, #app .nml-row { overflow-x: auto !important; padding: 2px 0 5px; flex: 0 0 auto; }
 #app .flank-legend { display: grid; grid-template-columns: repeat(3, 1fr); }
 #app .flank-legend span { text-align: center; }
@@ -14,15 +13,17 @@
 #app .front-line .slot, #app .support-row .slot,
 #app #my-front .slot, #app #my-support .slot {
   width: 100% !important; max-width: none !important; min-width: 0 !important;
-  height: auto !important; min-height: 124px !important; flex: none !important;
+  /* Höhe am Viewport (wie vor dem Umbau, 12vh), damit Front/Support nicht unter die Handleiste rutschen. */
+  height: 12vh !important; min-height: 64px !important; max-height: 132px; flex: none !important;
   margin: 0 !important; padding: 0 !important; box-sizing: border-box;
-  position: relative; overflow: visible !important; border-radius: 5px;
+  position: relative; overflow: hidden !important; border-radius: 5px;
+  display: flex !important; flex-direction: column;
 }
 #app .slot.filled { background: #151b18 !important; border: 1px solid #626958 !important; }
 #app .slot.empty { background: repeating-linear-gradient(45deg,#171d19,#171d19 6px,#20271f 6px,#20271f 12px) !important; }
 #app .slot .table-motif, #app .doctrine-card .table-motif, #app .equipment-tile .table-motif {
   display: block; position: relative; width: 100%; aspect-ratio: 4 / 3;
-  overflow: hidden; min-width: 0; background: #202723; border-radius: 4px 4px 0 0;
+  overflow: hidden; min-width: 0; flex: 1 1 auto; min-height: 0; background: #202723; border-radius: 4px 4px 0 0;
 }
 #app .table-motif img.table-art {
   display: block !important; width: 100% !important; height: 100% !important;
@@ -45,7 +46,7 @@
 }
 #app .slot .unit-stats {
   display: flex !important; flex-wrap: wrap; gap: 2px; align-items: center; justify-content: center;
-  position: static !important; padding: 4px 2px !important; min-height: 22px;
+  position: static !important; padding: 1px 2px !important; min-height: 0; flex: 0 0 auto;
   white-space: normal !important; font-size: 10px !important; line-height: 1.25;
   background: #111913; color: #e9dcae;
 }
@@ -53,8 +54,9 @@
 #app .slot .stat-chip.up { color: #9dec9a; }
 #app .slot .stat-chip.down { color: #ff998c; }
 #app .slot .unit-hint, #app .slot .table-status {
-  display: block; position: static !important; font-size: 10px !important; line-height: 1.25;
-  padding: 2px 4px; color: #f8da8c; background: #262a1c; text-align: center;
+  display: block; position: absolute !important; z-index: 3; left: 2px; bottom: 22px; max-width: calc(100% - 4px);
+  font-size: 9px !important; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  padding: 0 3px; border-radius: 3px; pointer-events: none; color: #f8da8c; background: #262a1c; text-align: center;
 }
 #app .slot .dig-in-shield { top: 36px; right: 3px; left: auto; bottom: auto; z-index: 4; }
 #app .slot.exhausted { opacity: 1 !important; }
@@ -62,22 +64,22 @@
 #app .slot.legal, #app .slot.drop-ok, #app .slot.picked, #app .slot.legal-target {
   outline: 2px solid #f3d178; outline-offset: -2px; box-shadow: 0 0 8px #dfba5d80 !important;
 }
-#app .table-equipment { display: grid; grid-template-columns: minmax(0,1fr); gap: 4px; padding: 3px; }
+#app .slot .table-status.damage { left: auto; right: 2px; bottom: 22px; }
+#app .slot .unit-hint + .unit-hint { bottom: 36px; }
+#app .table-equipment { position: absolute; z-index: 4; right: 2px; top: 34%; width: 34%; display: grid; gap: 2px; }
+#app .table-equipment .equipment-name { display: none; }
 #app .equipment-tile {
   display: block; width: 100%; max-width: 100%; position: relative; margin: 0; padding: 0;
   border: 1px solid #a99056; overflow: visible; background: #171d18;
 }
 #app .equipment-name { display: block; white-space: normal; overflow-wrap: anywhere; font-size: 11px; line-height: 1.2; padding: 3px; }
-#app .top-bar { grid-template-columns: minmax(100px,1fr) auto minmax(260px,360px) !important; }
-#app .bottom-bar { grid-template-columns: minmax(0,1fr) auto auto !important; }
-#app .bottom-bar #my-doctrine { grid-column: 1 / -1; grid-row: 1; justify-self: start; }
 #app .doc-window {
   display: flex !important; flex-wrap: wrap !important; gap: 6px !important; overflow: visible !important;
   width: auto !important; max-width: 100% !important; align-items: start !important;
 }
 #app .top-bar .doctrine-card, #app .bottom-bar .doctrine-card {
-  width: 150px !important; height: auto !important; min-height: 90px !important; max-height: none !important;
-  flex: 0 0 150px !important; margin: 0 !important; position: relative; overflow: visible;
+  width: 128px !important; height: auto !important; min-height: 0 !important; max-height: none !important;
+  flex: 0 0 128px !important; margin: 0 !important; position: relative; overflow: visible;
   transform: none !important; background: #171d18; border: 1px solid #a99056;
 }
 #app .doctrine-card .table-motif { aspect-ratio: 2 / 1; }
@@ -89,9 +91,9 @@
 #app .table-hidden, #app .art-unavailable { display: grid; place-content: center; color: #dbcd9f; font-size: 11px; text-align: center; }
 #app .table-hidden { background: repeating-linear-gradient(135deg,#1b201c,#1b201c 8px,#3a4135 8px,#3a4135 10px); }
 #app .token-tri { clip-path: none !important; }
-@media (max-width: 1000px) {
-  #app .top-bar { grid-template-columns: minmax(0,1fr) auto !important; }
-  #app #enemy-doctrine { grid-column: 1 / -1; }
-  #app .bottom-bar { grid-template-columns: minmax(0,1fr) auto !important; }
-  #app #plate-me { grid-column: 1 / -1; }
+/* Spielbare leere Felder müssen trotz Streifenmuster klar leuchten. */
+#app .slot.empty.legal, #app .slot.empty.drop-ok {
+  background: rgba(226, 195, 106, 0.22) !important; outline: 2px solid #f3d178; outline-offset: -2px;
+  box-shadow: inset 0 0 0 3px rgba(226, 195, 106, 0.55), 0 0 8px #dfba5d80 !important;
 }
+
