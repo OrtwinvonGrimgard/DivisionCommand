@@ -35,7 +35,7 @@ function loadBundle() {
     'js/data/sets/types/elite.js', 'js/data/sets/types/unterstuetzung.js',
     'js/data/sets/types/soforteinsatz.js', 'js/data/sets/types/ausruestung.js',
     'js/data/decks.js', 'js/data/catalog.js',
-    'js/engine/engine.js', 'js/engine/victory_trophy.js', 'js/ai/bot.js',
+    'js/engine/engine.js', 'js/engine/victory_trophy.js', 'js/engine/doctrine_runtime.js', 'js/ai/bot.js',
   ]) vm.runInContext(fs.readFileSync(path.join(ROOT, s), 'utf8'), ctx, { filename: s });
   return ctx;
 }

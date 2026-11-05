@@ -38,7 +38,7 @@ for (const s of [
   'js/data/sets/types/elite.js', 'js/data/sets/types/unterstuetzung.js',
   'js/data/sets/types/soforteinsatz.js', 'js/data/sets/types/ausruestung.js',
   'js/data/decks.js', 'js/data/catalog.js',
-  'js/engine/engine.js', 'js/engine/victory_trophy.js', 'js/ai/bot.js',
+  'js/engine/engine.js', 'js/engine/victory_trophy.js', 'js/engine/doctrine_runtime.js', 'js/ai/bot.js',
 ]) loadInto(ctx, s);
 
 const { DCEngine, DCBot, DC_CATALOG, DC_NATION_DECKS } = ctx;
@@ -318,7 +318,7 @@ const pairResults = [];
 const perNat = {};
 nations.forEach((n) => {
   perNat[n] = {
-    games: 0, boardShareSum: 0, wins: 0, // wins only if winner set
+    games: 0, boardShareSum: 0, wins: 0, losses: 0, // wins only if winner set
     vs: {},
     artyAttacks: 0, artyCounters: 0, attacks: 0,
     selfFx: 0, drawFx: 0, healFx: 0,
@@ -345,8 +345,8 @@ for (let i = 0; i < nations.length; i++) {
         perNat[a].vs[b] = perNat[a].vs[b] || { n: 0, shareSum: 0 };
         perNat[a].vs[b].n++;
         perNat[a].vs[b].shareSum += r.boardShare0;
-        if (r.winner === 0) perNat[a].wins++;
-        if (r.winner === 1) perNat[b].wins++;
+        if (r.winner === 0) { perNat[a].wins++; perNat[b].losses++; }
+        if (r.winner === 1) { perNat[b].wins++; perNat[a].losses++; }
         perNat[a].artyAttacks += r.focusArtyAttacks || 0;
         perNat[a].artyCounters += r.focusArtyCounters || 0;
         perNat[a].attacks += r.focusAttacks || 0;
@@ -381,7 +381,9 @@ const ranking = nations.map((n) => {
     theme: st.theme,
     boardShare: p.boardShareSum / Math.max(1, p.games),
     games: p.games,
-    winRateWhenDecided: (p.wins) / Math.max(1, p.games), // sparse — winner often null
+    winRateWhenDecided: (p.wins) / Math.max(1, p.games), // includes draws as non-wins
+    decidedWinRate: (p.wins) / Math.max(1, p.wins + p.losses),
+    drawRate: 1 - (p.wins + p.losses) / Math.max(1, p.games),
     avgTurn: mean(p.turns),
     artyAttackShare: p.attacks ? p.artyAttacks / p.attacks : 0,
     artyCounterRate: p.artyAttacks ? p.artyCounters / p.artyAttacks : 0,
@@ -438,6 +440,8 @@ console.log(JSON.stringify({
   ranking: ranking.map((r) => ({
     nat: r.nat,
     boardShare: +r.boardShare.toFixed(3),
+    decidedWinRate: +r.decidedWinRate.toFixed(3),
+    winRate: +r.winRateWhenDecided.toFixed(3),
     avgSumPerAp: r.static.avgSumPerAp && +r.static.avgSumPerAp.toFixed(3),
     avgAp: +r.static.avgAp.toFixed(2),
     selfHurt: r.static.fx.selfHurt,
