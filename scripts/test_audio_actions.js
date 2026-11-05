@@ -41,7 +41,7 @@ function setup(audioMode = 'on') {
       : () => Promise.reject(Error('intentional audio rejection'));
     w.DCAudio = { preload: fn, playSfx: fn, playForCard: fn, playEvent: fn, notifyGameEnd: fn };
   }
-  load('js/data/table-art-data.js'); load('js/ui/table-card-art.js'); load('js/ui/table-effects.js'); load('js/ui/end-screen.js'); load('js/ui/app.js'); load('js/ui/audio-feedback.js');
+  load('js/data/table-art-data.js'); load('js/ui/table-card-art.js'); load('js/ui/table-effects.js'); load('js/ui/table-camera.js'); load('js/ui/end-screen.js'); load('js/ui/app.js'); load('js/ui/audio-feedback.js');
   w.document.dispatchEvent(new w.Event('DOMContentLoaded'));
   // Invoke captured gesture listeners as code tests; no browser automation.
   gestures.forEach(fn => fn({ isTrusted: true }));

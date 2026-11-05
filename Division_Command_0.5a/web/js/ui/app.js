@@ -2828,6 +2828,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
     }).join(''); // nächster Schritt im Ablauf
     if (window.DCTableChat) { try { DCTableChat.refresh(); } catch (eChat) {} }
+    if (window.DCCamera) { try { DCCamera.afterRender(engine); } catch (eCam) {} }
     if (st.pending && st.pending.player === viewer) {
       showPending();
     }

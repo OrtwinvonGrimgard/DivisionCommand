@@ -1,0 +1,42 @@
+/* 2,5D-Tisch (Prototyp). Nur aktiv mit body.dc-cam; ohne Klasse bleibt der flache Tisch unverändert. */
+body.dc-cam #app .table-main { overflow: hidden !important; display: flex; flex-direction: column; }
+body.dc-cam #app .cam-viewport {
+  position: relative; flex: 1 1 auto; min-height: 0; overflow: hidden; border-radius: 6px;
+  background: radial-gradient(ellipse at 50% 40%, #2a2418 0%, #15110b 60%, #0b0906 100%);
+  box-shadow: inset 0 0 60px #000c; perspective: 1800px; perspective-origin: 50% 30%;
+}
+body.dc-cam #app .cam-tilt { position: absolute; inset: 0; transform: rotateX(9deg); transform-origin: 50% 50%; transform-style: preserve-3d; }
+body.dc-cam #app .cam-world {
+  position: absolute; left: 0; top: 0; width: 1760px; padding: 28px 40px 40px; box-sizing: border-box;
+  transform-origin: 0 0; will-change: transform;
+  background: linear-gradient(180deg, #3b3322, #2b2518 50%, #3b3322);
+  border: 1px solid #6a5a3a; border-radius: 12px;
+  box-shadow: 0 40px 80px #000d, inset 0 0 0 6px #241d12, inset 0 0 120px #0008;
+}
+body.dc-cam #app .cam-world.cam-smooth { transition: transform .55s cubic-bezier(.2,.7,.2,1); }
+/* Große, vollständige Karten in der Welt (keine Viewport-Höhe mehr) */
+body.dc-cam #app .cam-world .front-line .slot, body.dc-cam #app .cam-world .support-row .slot,
+body.dc-cam #app .cam-world #my-front .slot, body.dc-cam #app .cam-world #my-support .slot {
+  height: 252px !important; max-height: none !important; min-height: 252px !important;
+  box-shadow: 0 6px 14px #0009;
+}
+body.dc-cam #app .cam-world .slot .table-motif { aspect-ratio: auto; }
+body.dc-cam #app .cam-world .slot .unit-name { font-size: 14px !important; }
+body.dc-cam #app .cam-world .slot .unit-stats { font-size: 13px !important; padding: 3px !important; }
+body.dc-cam #app .cam-world .slot .stat-chip { font-size: 14px !important; }
+body.dc-cam #app .cam-world .slot .fx-badge, body.dc-cam #app .cam-world .slot .table-status, body.dc-cam #app .cam-world .slot .unit-hint { font-size: 12px !important; }
+body.dc-cam #app .cam-world .front-line, body.dc-cam #app .cam-world .support-row, body.dc-cam #app .cam-world .nml-row { gap: 12px !important; overflow: visible !important; }
+body.dc-cam #app .cam-world #my-front, body.dc-cam #app .cam-world #enemy-front { overflow: visible; }
+body.dc-cam #app .cam-world .row-label { font-size: 14px !important; color: #d8c79a; letter-spacing: .1em; }
+body.dc-cam #app .cam-world .flank-legend { font-size: 13px; }
+body.dc-cam #app .cam-world .nml-band { margin: 18px 0; }
+body.dc-cam #app .cam-world .nml-row:has(.slot.filled) .slot { min-height: 120px !important; }
+/* HUD bleibt flach und außerhalb der Welt */
+body.dc-cam #app .cam-hud { position: absolute; z-index: 20; left: 8px; top: 8px; display: flex; gap: 6px; align-items: center; pointer-events: auto; }
+body.dc-cam #app .cam-hud button { font-size: 12px; padding: 3px 8px; }
+body.dc-cam #app .cam-hud button[aria-pressed="false"] { opacity: .55; }
+body.dc-cam #app .cam-hint { font-size: 11px; color: #cdbb8a; background: #0009; padding: 2px 6px; border-radius: 4px; }
+#app .cam-on { position: absolute; z-index: 20; left: 8px; top: 8px; font-size: 12px; padding: 3px 8px; }
+body.dc-cam #app .bottom-bar { position: relative; z-index: 15; flex: 0 0 auto; }
+@media (prefers-reduced-motion: reduce) { body.dc-cam #app .cam-world.cam-smooth { transition: none; } }
+@media (max-width: 1000px) { body.dc-cam #app .cam-hint { display: none; } }
