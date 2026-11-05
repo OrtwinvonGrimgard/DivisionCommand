@@ -28,7 +28,7 @@ function setup(audioMode = 'on') {
   w.HTMLMediaElement.prototype.canPlayType = () => 'probably';
   const load = f => w.eval(fs.readFileSync(f === 'js/ui/app.js' && process.env.APP_SOURCE ? process.env.APP_SOURCE : path.join(WEB, f), 'utf8'));
   for (const f of ['doktrinen','tokens','infanterie','panzer','artillerie','aufklaerung','elite','unterstuetzung','soforteinsatz','ausruestung']) load(`js/data/sets/types/${f}.js`);
-  load('js/data/decks.js'); load('js/data/catalog.js'); load('js/engine/engine.js');
+  load('js/data/decks.js'); load('js/data/image-manifest.js'); load('js/data/catalog.js'); load('js/engine/engine.js');
   load('js/engine/victory_trophy.js'); load('js/engine/doctrine_runtime.js');
   if (audioMode === 'on' || audioMode.startsWith('media-') || audioMode === 'missing-media') {
     load('js/data/audio-data.js');

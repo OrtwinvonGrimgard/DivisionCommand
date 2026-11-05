@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-tablecards1';
+const CACHE = 'divcmd-img1';
 const ASSETS = [
   './',
   './index.html',

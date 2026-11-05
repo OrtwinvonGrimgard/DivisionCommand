@@ -44,27 +44,10 @@
       if (window.DC_IMAGES[key]) list.push(window.DC_IMAGES[key]); // Zweig nur bei zutreffender Bedingung
       if (window.DC_IMAGES[stem + '.png']) list.push(window.DC_IMAGES[stem + '.png']); // Zweig nur bei zutreffender Bedingung
     }
-    function enc(p) { return p.split('/').map(function (x, i, a) { return i === a.length - 1 ? encodeURIComponent(x) : x; }).join('/'); }
-    // Typ-Pfad (infanterie/B001.jpg) oder thumbs/…: nicht nochmals thumbs/ davorsetzen
-    if (key.indexOf('/') >= 0) {
-      list.push(enc('assets/cards/' + key));
-      if (/\.jpe?g$/i.test(key)) list.push(enc('assets/cards/' + key.replace(/\.jpe?g$/i, '.png')));
-      if (/\.png$/i.test(key)) list.push(enc('assets/cards/' + key.replace(/\.png$/i, '.jpg')));
-      var base = key.split('/').pop();
-      var baseStem = base.replace(/\.(png|jpe?g)$/i, '');
-      list.push(enc('assets/cards/thumbs/' + baseStem + '.jpg'));
-      list.push(enc('assets/cards/thumbs/' + baseStem + '.png'));
-      list.push(enc('assets/cards/thumbs/' + base));
-      return list;
-    }
-    list.push(enc('assets/cards/thumbs/' + stem + '.jpg'));
-    list.push(enc('assets/cards/thumbs/' + key));
-    list.push(enc('assets/cards/' + stem + '.png'));
-    list.push(enc('assets/cards/' + stem + '.jpg'));
-    list.push(enc('assets/cards/' + key));
-    list.push(enc('assets/cards/thumbs/' + stem + '.png'));
-    list.push(enc('./assets/cards/' + stem + '.png'));
-    list.push(enc('./assets/cards/' + stem + '.jpg'));
+    // Exakt vorhandene Datei aus dem Bildermanifest; keine spekulativen Endungs-/Ordner-Probes mehr.
+    var exact = window.dcCardFile ? window.dcCardFile(key) : '';
+    if (exact) list.push('assets/cards/' + exact.split('/').map(encodeURIComponent).join('/'));
+    else if (!list.length && window.dcCardSrc) window.dcCardSrc(key); // meldet echte Lücke einmalig
     return list;
   }
   window.DC_IMG_OK = window.DC_IMG_OK || {};
@@ -130,12 +113,13 @@
         return i === a.length - 1 ? encodeURIComponent(x) : x;
       }).join('/');
     }
-    return enc('assets/cards/' + filename);
+    var exact = window.dcCardFile ? window.dcCardFile(filename) : filename;
+    return exact ? enc('assets/cards/' + exact) : '';
   }
   function artTag(def, facedown, cls, full) {
     var file = facedown ? backFile(def) : (def && def.image);
-    var src = full ? imgSrcFull(file) : imgSrc(file);
-    if (!src) return '';
+    var src = full ? (imgSrcFull(file) || imgSrc(file)) : imgSrc(file);
+    if (!src) return '<span class="' + (cls || 'art') + ' art-missing" role="img" aria-label="Bild fehlt"></span>';
     var err = full
       ? ('this.onerror=null;this.src="' + String(imgSrc(file) || '').replace(/"/g, '') + '";')
       : 'window.dcImgErr(this)';

@@ -1,4 +1,4 @@
-/** Bildnamen: GitHub-PNG treffen, auch wenn der Katalog .jpg sagt. */
+/** Bildauflösung: nur exakt vorhandene Dateien aus DC_CARD_FILES anfordern, keine Endungs-/Ordner-Probes. */
 (function (g) {
   'use strict';
   var ALIAS = {
@@ -9,56 +9,70 @@
     'BACKSIDE DOCTRINE.jpg': 'thumbs/rueckseite-rot.png',
     'mine.jpg': 'MINE.png',
     'mine.png': 'MINE.png',
-    'token-nebel-1.jpg': 'Nebel 1.png',
-    'token-nebel-1.png': 'Nebel 1.png',
-    'token-nebel-2.jpg': 'Nebel 2.png',
-    'token-nebel-2.png': 'Nebel 2.png',
-    'token-nebel-3.jpg': 'Nebel 3.png',
-    'token-nebel-3.png': 'Nebel 3.png',
-    'nebel-1.png': 'Nebel 1.png',
-    'nebel-2.png': 'Nebel 2.png',
-    'nebel-3.png': 'Nebel 3.png'
+    'token-nebel-1.png': 'thumbs/token-nebel-1.jpg',
+    'token-nebel-2.png': 'thumbs/token-nebel-2.jpg',
+    'token-nebel-3.png': 'thumbs/token-nebel-3.jpg',
+    'nebel-1.png': 'thumbs/token-nebel-1.jpg',
+    'nebel-2.png': 'thumbs/token-nebel-2.jpg',
+    'nebel-3.png': 'thumbs/token-nebel-3.jpg'
   };
+  var SET = null;
+  function files() {
+    if (!SET && g.DC_CARD_FILES) { SET = {}; g.DC_CARD_FILES.forEach(function (f) { SET[f] = 1; }); }
+    return SET;
+  }
+  /* Geordnete Kandidaten (relativ zu assets/cards); nur der erste vorhandene wird je angefordert. */
+  function candidates(file) {
+    var key = String(file || '').replace(/^\.?\/?(assets\/cards\/)?/, '');
+    if (!key) return [];
+    var out = [];
+    if (ALIAS[key]) out.push(ALIAS[key]);
+    var stem = key.replace(/\.(png|jpe?g|webp)$/i, '');
+    var base = stem.split('/').pop();
+    out.push(key, stem + '.png', stem + '.jpg', 'thumbs/' + base + '.jpg', 'thumbs/' + base + '.png', base + '.png', base + '.jpg');
+    return out;
+  }
   function resolveName(file) {
-    if (!file) return '';
-    var key = String(file);
-    if (ALIAS[key]) return ALIAS[key];
-    // Doktrin-JPGs und Typ-Unterordner (infanterie/, panzer/, …) behalten ihre Endung
-    if (/doktrin/i.test(key) || key.indexOf('/') >= 0) return key;
-    return key.replace(/\.jpe?g$/i, '.png');
+    var set = files(), list = candidates(file);
+    if (!set) return list[0] || '';
+    for (var i = 0; i < list.length; i++) if (set[list[i]]) return list[i];
+    return '';
   }
   function folderSrc(name) {
     return 'assets/cards/' + String(name).split('/').map(encodeURIComponent).join('/');
   }
+  var missing = {};
+  function reportMissing(file) {
+    if (!file || missing[file]) return;
+    missing[file] = 1;
+    if (g.console) console.warn('[Bilder] Keine Datei für Kartenbild: ' + file);
+  }
   g.dcCardFile = resolveName;
+  g.dcCardExists = function (rel) { var s = files(); return !s || !!s[rel]; };
+  g.dcMissingImages = function () { return Object.keys(missing); };
   g.dcCardSrc = function (file) {
     if (!file) return '';
+    if (g.DC_IMAGES && g.DC_IMAGES[file]) return g.DC_IMAGES[file];
     var name = resolveName(file);
-    if (g.DC_IMAGES) {
-      if (g.DC_IMAGES[file]) return g.DC_IMAGES[file];
-      if (g.DC_IMAGES[name]) return g.DC_IMAGES[name];
-    }
+    if (!name) { reportMissing(file); return ''; }
+    if (g.DC_IMAGES && g.DC_IMAGES[name]) return g.DC_IMAGES[name];
     return folderSrc(name);
   };
+  /* Bilder ohne eigenen Handler: einmalig auf die exakte vorhandene Datei umleiten, sonst nur melden. */
   document.addEventListener('error', function (ev) {
     var el = ev.target;
-    if (!el || el.tagName !== 'IMG') return;
+    if (!el || el.tagName !== 'IMG' || el.onerror || el.getAttribute('onerror')) return;
     if (el.dataset.dcMapped === '1') return;
+    el.dataset.dcMapped = '1';
     var raw = el.getAttribute('data-file') || '';
     var src = el.getAttribute('src') || '';
-    var next = '';
-    if (raw) next = resolveName(raw);
-    else if (/rueckseite|backside/i.test(src)) next = /doktrin|rot/i.test(src) ? 'thumbs/rueckseite-rot.png' : 'thumbs/rueckseite-schwarz.png';
-    else if (/\.jpe?g(\?|$)/i.test(src) && !/doktrin/i.test(src)) {
-      try {
-        var base = decodeURIComponent((src.split('?')[0].split('/').pop()) || '');
-        next = resolveName(base);
-      } catch (e) { next = ''; }
-    }
-    if (!next) return;
-    if (src.indexOf(encodeURIComponent(next)) >= 0) return;
-    el.dataset.dcMapped = '1';
-    el.src = folderSrc(next);
+    if (!raw && src.indexOf('assets/cards/') < 0) return;
+    if (!raw) { try { raw = decodeURIComponent(src.split('?')[0].split('assets/cards/').pop()); } catch (e) { return; } }
+    var next = resolveName(raw);
+    if (!next) { reportMissing(raw); return; }
+    var want = folderSrc(next);
+    if (src.split('?')[0] === want) { reportMissing(raw); return; }
+    el.src = want;
   }, true);
 })(window);
 

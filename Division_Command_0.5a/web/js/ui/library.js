@@ -11,6 +11,7 @@
     var file = c && c.image;
     if (!file) return '';
     if (global.DC_IMAGES && DC_IMAGES[file]) return DC_IMAGES[file];
+    if (global.dcCardSrc) return global.dcCardSrc(file);
     return 'assets/cards/' + String(file).split('/').map(encodeURIComponent).join('/');
   }
   function tags(c) {
