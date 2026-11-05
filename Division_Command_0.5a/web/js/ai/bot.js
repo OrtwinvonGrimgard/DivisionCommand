@@ -271,7 +271,7 @@
       if (conf && (selected.length >= need || !pendingActs.some(function (a) {
         return a.target && selected.indexOf(a.target) < 0;
       }))) {
-        return Object.assign({ player: pid }, conf);
+        return [conf];
       }
       var unsel2 = pendingActs.filter(function (a) {
         return a.target && selected.indexOf(a.target) < 0;

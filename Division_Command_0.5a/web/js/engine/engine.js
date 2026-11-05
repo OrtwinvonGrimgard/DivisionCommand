@@ -931,7 +931,12 @@
       if (st.pending && st.pending.player === playerId) { // offene Wahl des Spielers
         const choices = st.pending.choices || [];
         if (!choices.length) return [{ type: 'RESOLVE_PENDING', confirm: true, kind: st.pending.kind }];
-        return choices.map((c) => Object.assign({ type: 'RESOLVE_PENDING' }, c)); // offene Wahl des Spielers
+        const out = choices.map((c) => Object.assign({ type: 'RESOLVE_PENDING' }, c)); // offene Wahl des Spielers
+        // „Bis zu N“: Bestätigen, sobald mind. ein Ziel gewählt ist
+        if (st.pending.upto && (st.pending.selected || []).length > 0) {
+          out.push({ type: 'RESOLVE_PENDING', confirm: true, kind: st.pending.kind });
+        }
+        return out;
       }
 
       if (isActive || canReact) { // Zweig nur bei zutreffender Bedingung
@@ -2511,32 +2516,32 @@
       }
       if ((def.effects || []).some((e) => e.code === 'CLEAR_SUPPORT_OR_DEBUFF') && !targetUid) {
         const foe = this.opponent(p.id);
-        const hasSup = (foe.support || []).some((x) => x);
-        if (!hasSup) {
-          const choices = this.frontList(foe).map((l) => ({
-            uid: l.inst.uid,
-            label: l.inst.facedown ? 'Verdeckt' : this.defOf(l.inst).name
-          }));
-          if (!choices.length) {
-            p.hand.push(card);
-            return { ok: false, error: def.name + ' — keine Unterstützung und kein Ziel.', code: 'NO_TGT' };
-          }
-          this.state.pending = this._sealPending({
-            kind: 'instant-target',
-            player: p.id,
-            uid: card.uid,
-            card,
-            needCount: 1,
-            upto: false,
-            selected: [],
-            choices: choices.map((t) => ({ target: t.uid, label: t.label })),
+        const choices = [];
+        (foe.support || []).forEach((s, i) => {
+          if (!s) return;
+          choices.push({ target: s.uid, label: 'Unterstützung: ' + this.defOf(s).name, supportIndex: i });
+        });
+        this.frontList(foe).forEach((l) => {
+          choices.push({
+            target: l.inst.uid,
+            label: (l.inst.facedown ? 'Verdeckt' : this.defOf(l.inst).name) + ' (−2 ATK)',
           });
-          return { ok: true, need: 'target' };
+        });
+        if (!choices.length) {
+          p.hand.push(card);
+          return { ok: false, error: def.name + ' — keine Unterstützung und kein Ziel.', code: 'NO_TGT' };
         }
-        // Unterstützung vorhanden → ohne Zielwahl auflösen
-        this._resolveEffects(p, card, null);
-        p.grave.push(card);
-        return { ok: true };
+        this.state.pending = this._sealPending({
+          kind: 'instant-target',
+          player: p.id,
+          uid: card.uid,
+          card,
+          needCount: 1,
+          upto: false,
+          selected: [],
+          choices: choices.map((t) => ({ target: t.target, label: t.label, supportIndex: t.supportIndex })),
+        });
+        return { ok: true, need: 'target' };
       }
       const needs = this._instantNeedsTarget(def); // unveränderliche Bindung in diesem Block
       if (needs && !targetUid) { // Zweig nur bei zutreffender Bedingung
@@ -2571,15 +2576,20 @@
     // Wie viele Ziele der Kartentext verlangt.
     _targetNeed(def) { // nächster Schritt im Ablauf
       const t = def.text || ''; // unveränderliche Bindung in diesem Block
-      const m = t.match(/[Bb]is\s*(\d+)/) || t.match(/(\d+)\s*(?:benachbarte|gegnerische|feindliche|Einheiten)/);
+      const m = t.match(/[Bb]is\s*(\d+)/) || t.match(/(\d+)\s*[–-]\s*(\d+)/) || t.match(/(\d+)\s*(?:benachbarte|gegnerische|feindliche|Einheiten)/) || t.match(/\b[Zz]wei\b/);
       // unveränderliche Bindung in diesem Block
       let count = 1; // veränderliche Bindung
-      if (m) count = Number(m[1]); // Zweig nur bei zutreffender Bedingung
+      let upto = /bis\s*\d+/i.test(t) || /\d+\s*[–-]\s*\d+/.test(t);
+      if (m) {
+        if (m[0] && /^zwei$/i.test(m[0])) count = 2;
+        else if (m[2]) { count = Number(m[2]); upto = true; }
+        else count = Number(m[1]);
+      }
       (def.effects || []).forEach((e) => { // jedes Element
         if (e.param && e.param.count) count = Number(e.param.count); // Zweig nur bei zutreffender Bedingung
+        if (e.param && e.param.upto) upto = true;
         if (e.param && e.param.then_destroy) count = Math.max(count, 1 + Number(e.param.then_destroy)); // Karte vom Feld auf den Friedhof
       }); // nächster Schritt im Ablauf
-      const upto = /bis\s*\d+/i.test(t); // unveränderliche Bindung in diesem Block
       return { count: count || 1, upto: upto }; // Wert zurückgeben
     }
 
@@ -2681,6 +2691,8 @@
       const fx = (def.effects || []).find((e) => e.targetSide || (e.param && e.param.targetSide));
       if (fx) return fx.targetSide || fx.param.targetSide;
       const codes = (def.effects || []).map((e) => e.code);
+      // Einrück-Fallen (onEnter) liegen auf dem eigenen Abschnitt.
+      if ((def.effects || []).some((e) => e.code === 'DAMAGE_SECTION' && e.param && e.param.onEnter)) return 'own';
       if (codes.some((c) => c === 'DAMAGE_SECTION' || c === 'BOMBARD_SECTION')) return 'enemy';
       if (codes.some((c) => c === 'BUFF_SECTION' || c === 'KEIN_LOCH' || c === 'HEAL_SECTION')) return 'own';
       const t = def.text || '';
@@ -3023,6 +3035,32 @@
         }
       } else if (code === 'MASS_DAMAGE') {
         this.frontList(opp).forEach((l) => this._damage(l.inst, Number(par.value || 1), { tag: par.tag || 'mass' }));
+      } else if (code === 'DAMAGE_SECTION') {
+        const sideWant = par.targetSide || 'enemy';
+        let parsed = this._parseSectionTarget(targetUid, p);
+        if (parsed && sideWant && sideWant !== 'any' && parsed.side !== sideWant) {
+          // try coerce to requested side with same letter
+          if (parsed.section) parsed = { section: parsed.section, side: sideWant, player: sideWant === 'enemy' ? opp : p };
+        }
+        if (!parsed) {
+          this._log('Abschnitts-Schaden ohne gültigen Abschnitt.');
+        } else if (par.onEnter) {
+          const host = p;
+          host.flags = host.flags || {};
+          host.flags.sectionEnterDamage = host.flags.sectionEnterDamage || [];
+          host.flags.sectionEnterDamage.push({
+            section: parsed.section,
+            value: Number(par.value || 1),
+            until: this.state.turn + 1,
+            by: p.id,
+          });
+          this._log('Abschnitt ' + parsed.section + ': Einrückende erleiden ' + Number(par.value || 1) + ' Schaden.');
+        } else {
+          const host = parsed.player;
+          this.frontList(host).filter((l) => l.section === parsed.section).forEach((l) => {
+            this._damage(l.inst, Number(par.value || 1), { tag: par.tag || 'section' });
+          });
+        }
       } else if (code === 'DESTROY_IF_DEF') {
         const loc = this.findInst(targetUid);
         if (loc && this._hostileTargetBlocked(loc.inst) && loc.player.id !== p.id) {
@@ -3192,15 +3230,33 @@
         }
       } else if (code === 'CLEAR_SUPPORT_OR_DEBUFF') {
         const foe = this.opponent(p.id);
-        const ix = (foe.support || []).findIndex((x) => x);
-        if (ix >= 0) {
-          const card = foe.support[ix];
-          foe.support[ix] = null;
-          foe.grave.push(card);
-          this._log('Unterstützung entfernt: ' + this.defOf(card).name);
-        } else {
-          const loc = this.findInst(targetUid);
-          if (loc) loc.inst.flags.buffAtk = (loc.inst.flags.buffAtk || 0) - 2;
+        let cleared = false;
+        if (targetUid != null) {
+          const six = (foe.support || []).findIndex((x) => x && x.uid === targetUid);
+          if (six >= 0) {
+            const card = foe.support[six];
+            foe.support[six] = null;
+            foe.grave.push(card);
+            this._log('Unterstützung entfernt: ' + this.defOf(card).name);
+            cleared = true;
+          } else {
+            const loc = this.findInst(targetUid);
+            if (loc) {
+              loc.inst.flags = loc.inst.flags || {};
+              loc.inst.flags.buffAtk = (loc.inst.flags.buffAtk || 0) - 2;
+              this._log(this.defOf(loc.inst).name + ': −2 ATK');
+              cleared = true;
+            }
+          }
+        }
+        if (!cleared) {
+          const ix = (foe.support || []).findIndex((x) => x);
+          if (ix >= 0) {
+            const card = foe.support[ix];
+            foe.support[ix] = null;
+            foe.grave.push(card);
+            this._log('Unterstützung entfernt: ' + this.defOf(card).name);
+          }
         }
       } else if (code === 'DRAW_AND_PLAY_INFANTRY') {
         const ix = p.deck.findIndex((c) => isInfantry(this.defOf(c)) || this.defOf(c).typ === 'Infanterie');
@@ -3377,6 +3433,19 @@
       const locOwn = this.findInst(inst.uid); // unveränderliche Bindung in diesem Block
       if (zone === 'front' && locOwn && locOwn.player) {
         this._applySectionAuraToUnit(locOwn.player, locOwn);
+        // Falle liegt beim Gegner des Einrückenden (eigener Abschnitt des Legers = gleiche Spur).
+        const trapHost = this.opponent(locOwn.player.id);
+        const traps = (trapHost.flags && trapHost.flags.sectionEnterDamage) || [];
+        const live = [];
+        traps.forEach((tr) => {
+          if (tr.until < this.state.turn) return;
+          live.push(tr);
+          if (tr.section === locOwn.section) {
+            this._damage(inst, Number(tr.value || 1), { tag: 'enter-section' });
+            this._log(def.name + ' erleidet Einrück-Schaden in Abschnitt ' + locOwn.section + '.');
+          }
+        });
+        if (trapHost.flags) trapHost.flags.sectionEnterDamage = live;
       }
       if (locOwn && locOwn.player && locOwn.player.flags && locOwn.player.flags.coinPreventInfantry === this.state.turn) {
       // Zweig nur bei zutreffender Bedingung
@@ -5137,6 +5206,7 @@
     }
 
     _resolvePending(pid, a) { // nächster Schritt im Ablauf
+      if (a.confirm) return this._actConfirmTargets(pid, a);
       if (a.slot) return this._actSlot(pid, a); // Einheit auf eine Stellung legen
       if (a.target) return this._actTarget(pid, a); // Ziel aufnehmen oder Kampf lösen
       return { ok: false, error: 'Pending unklar' }; // Ergebnis an den Aufrufer

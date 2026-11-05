@@ -69,35 +69,32 @@ win.DCBot.applyCfg({ model: 'test', delayMs: 0, aggression: 50, holdAp: 0, allow
 const INF = win.DC_CATALOG.cards.find((c) => c.typ === 'Einheit' && /infanterie/.test(tags(c)));
 assert(INF, 'infantry card');
 
-const autoIds = [
-  'dc_b_frueheres_datum_941',
-  'dc_b_gegenruf_760',
-  'dc_b_konzentrationsruf_639',
-  'dc_b_werkalarme_167',
-];
-for (const id of autoIds) {
+// Echte Auto-Effekte (kein Ziel trotz "eine" im Text)
+{
   const eng = makeEng(win, 42);
   put(eng, 0, INF.id, 'C', 0);
-  put(eng, 0, INF.id, 'C', 1);
-  put(eng, 1, INF.id, 'L', 0);
-  const card = give(eng, 0, id);
+  const card = give(eng, 0, 'dc_b_werkalarme_167');
   const res = eng.dispatch({ type: 'PLAY', player: 0, uid: card.uid });
-  assert(res && res.ok !== false, id + ' play: ' + JSON.stringify(res));
-  assert(!eng.state.pending || eng.state.pending.kind !== 'instant-target',
-    id + ' unexpected instant-target (' + (eng.state.pending && eng.state.pending.kind) + ')');
+  assert(res && res.ok !== false, 'werkalarme play');
+  assert(!eng.state.pending || eng.state.pending.kind !== 'instant-target', 'werkalarme stays auto');
 }
 
+// Früheres Datum: 1–2 Einheiten wählen
 {
   const eng = makeEng(win, 7);
-  put(eng, 0, INF.id, 'C', 0);
-  put(eng, 0, INF.id, 'L', 0);
+  const u0 = put(eng, 0, INF.id, 'C', 0);
+  const u1 = put(eng, 0, INF.id, 'L', 0);
   const card = give(eng, 0, 'dc_b_frueheres_datum_941');
   eng.dispatch({ type: 'PLAY', player: 0, uid: card.uid });
-  assert(!eng.state.pending, 'no pending after Früheres Datum');
-  const t0 = eng.player(0).front.C[0].flags.tempAtk || 0;
-  const t1 = eng.player(0).front.L[0].flags.tempAtk || 0;
-  assert(t0 === 2, 'unit0 +2 once got ' + t0);
-  assert(t1 === 2, 'unit1 +2 once got ' + t1);
+  assert(eng.state.pending && eng.state.pending.kind === 'instant-target', 'Früheres Datum pending');
+  assert(eng.state.pending.upto, 'Früheres Datum upto');
+  eng.dispatch({ type: 'RESOLVE_PENDING', player: 0, target: u0.uid });
+  eng.dispatch({ type: 'RESOLVE_PENDING', player: 0, target: u1.uid });
+  // needCount 2 + upto → finish when need reached OR confirm
+  if (eng.state.pending) eng.dispatch({ type: 'CONFIRM_TARGETS', player: 0 });
+  assert(!eng.state.pending, 'Früheres Datum resolved');
+  assert((u0.flags.tempAtk || 0) === 2, 'unit0 +2 got ' + (u0.flags.tempAtk || 0));
+  assert((u1.flags.tempAtk || 0) === 2, 'unit1 +2 got ' + (u1.flags.tempAtk || 0));
 }
 
 {
@@ -139,7 +136,7 @@ for (const id of autoIds) {
   assert(finished.indexOf(a.uid) >= 0, 'kept first');
 }
 
-// CLEAR_SUPPORT_OR_DEBUFF: with support → auto; without → target pending
+// CLEAR_SUPPORT_OR_DEBUFF: immer Wahl (Support oder Einheit −2 ATK)
 {
   const eng = makeEng(win, 3);
   put(eng, 1, INF.id, 'C', 0);
@@ -148,8 +145,10 @@ for (const id of autoIds) {
   const card = give(eng, 0, 'dc_b_absetzung_289');
   const res = eng.dispatch({ type: 'PLAY', player: 0, uid: card.uid });
   assert(res.ok, 'absetzung with support');
-  assert(!eng.state.pending, 'no pending when support present');
-  assert(!eng.player(1).support[0], 'support cleared');
+  assert(eng.state.pending && eng.state.pending.kind === 'instant-target', 'choice with support');
+  assert(eng.state.pending.choices.length >= 2, 'support + unit');
+  eng.dispatch({ type: 'RESOLVE_PENDING', player: 0, target: sup.uid });
+  assert(!eng.player(1).support[0], 'support cleared by choice');
 }
 {
   const eng = makeEng(win, 4);

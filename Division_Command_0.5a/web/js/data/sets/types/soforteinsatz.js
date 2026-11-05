@@ -1811,11 +1811,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Zwei eigene Einheiten im selben Abschnitt haben +1 ATK bis Zugende.",
     "effects": [
       {
-        "code": "BUFF_ALL_OWN",
+        "code": "BUFF_SECTION",
         "param": {
           "atk": 1,
           "filter": null,
-          "until": "turn"
+          "until": "turn",
+          "targetSide": "own"
         }
       }
     ],
@@ -2869,11 +2870,11 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Zwei Einheiten: je +1 ATK gegen Aufgeklärte.",
     "effects": [
       {
-        "code": "BUFF_ALL_OWN",
+        "code": "BUFF",
         "param": {
           "atk": 1,
-          "filter": null,
-          "until": "turn"
+          "until": "turn",
+          "count": 2
         }
       }
     ],
@@ -2901,11 +2902,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Nach einem erlittenen Angriff: 1–2 Einheiten +2 ATK diesen Zug.",
     "effects": [
       {
-        "code": "BUFF_ALL_OWN",
+        "code": "BUFF",
         "param": {
           "atk": 2,
-          "filter": null,
-          "until": "turn"
+          "until": "turn",
+          "count": 2,
+          "upto": true
         }
       }
     ],
@@ -3044,11 +3046,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Nach einem erlittenen Angriff: 1–2 Einheiten +2 ATK diesen Zug; eine davon muss verdeckt gespielt worden sein oder werden.",
     "effects": [
       {
-        "code": "BUFF_ALL_OWN",
+        "code": "BUFF",
         "param": {
           "atk": 2,
-          "filter": null,
-          "until": "turn"
+          "until": "turn",
+          "count": 2,
+          "upto": true
         }
       }
     ],
@@ -3470,11 +3473,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Nach einem erlittenen Angriff: 1–2 Einheiten +2 ATK diesen Zug. Eine muss diesen Zug unbewegt gewesen sein.",
     "effects": [
       {
-        "code": "BUFF_ALL_OWN",
+        "code": "BUFF",
         "param": {
           "atk": 2,
-          "filter": null,
-          "until": "turn"
+          "until": "turn",
+          "count": 2,
+          "upto": true
         }
       }
     ],
@@ -3819,11 +3823,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Nach einem erlittenen Angriff: 1–2 Einheiten +2 ATK diesen Zug. [Gegenruf]",
     "effects": [
       {
-        "code": "BUFF_ALL_OWN",
+        "code": "BUFF",
         "param": {
           "atk": 2,
-          "filter": null,
-          "until": "turn"
+          "until": "turn",
+          "count": 2,
+          "upto": true
         }
       }
     ],
@@ -5758,9 +5763,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Wähle Abschnitt: einrückende Einheit erleidet 1 Schaden.",
     "effects": [
       {
-        "code": "DEAL_DAMAGE",
+        "code": "DAMAGE_SECTION",
         "param": {
-          "value": 1
+          "value": 1,
+          "onEnter": true,
+          "until": "turn",
+          "targetSide": "own"
         }
       }
     ],
@@ -6011,11 +6019,11 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Zwei eigene Einheiten +1 ATK wenn im selben Abschnitt.",
     "effects": [
       {
-        "code": "BUFF_ALL_OWN",
+        "code": "BUFF",
         "param": {
           "atk": 1,
-          "filter": null,
-          "until": "turn"
+          "until": "turn",
+          "count": 2
         }
       }
     ],
@@ -6043,10 +6051,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Wähle Abschnitt: einrückende erleiden 1; Infanterie dort +1 ATK.",
     "effects": [
       {
-        "code": "MASS_DAMAGE",
+        "code": "DAMAGE_SECTION",
         "param": {
           "value": 1,
-          "onEnter": true
+          "onEnter": true,
+          "until": "turn",
+          "targetSide": "own"
+        }
+      },
+      {
+        "code": "BUFF_SECTION",
+        "param": {
+          "atk": 1,
+          "filter": "infanterie",
+          "until": "turn",
+          "targetSide": "own"
         }
       }
     ],
