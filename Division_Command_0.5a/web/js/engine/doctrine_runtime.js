@@ -63,6 +63,7 @@
     var proto = DCEngine.Engine.prototype;
     if (proto._dokRuntimePatched) return;
     proto._dokRuntimePatched = true;
+    proto._dokParam = function (p, code) { return dokParam(this, p, code); };
 
     // ---- Passive ATK/DEF ----
     var _cad = proto.currentAtkDef;
@@ -80,11 +81,11 @@
       var foeN = sectionCount(this, foe, sec);
       var p;
 
-      // AUSHARREN: no support → +ATK/+DEF
+      // AUSHARREN: no support → +ATK/+DEF (0 allowed)
       p = dokParam(this, owner, 'AUSHARREN');
       if (p && !supportInSection(this, owner, sec)) {
-        atk += Number(p.atk || 1);
-        dv += Number(p.def || 1);
+        if (p.atk) atk += Number(p.atk);
+        if (p.def) dv += Number(p.def);
       }
       // AUFFANGEN: enemy more units → +DEF (+ optional ATK when equal)
       p = dokParam(this, owner, 'AUFFANGEN');
@@ -228,14 +229,15 @@
         // bonus applied in combat when target undamaged
       }
 
-      // LAUER patience: rested units +ATK/+DEF; fresh deploy DEF
+      // LAUER patience: rested units +ATK/+DEF; optional infantry_only; fresh deploy DEF
       p = dokParam(this, owner, 'LAUER');
       if (p) {
-        if (p.rested && inst.flags && inst.flags.dokRested) {
+        var lauerOk = !p.infantry_only || isInfantry(def);
+        if (lauerOk && p.rested && inst.flags && inst.flags.dokRested) {
           atk += Number(p.rested.atk || 0);
           dv += Number(p.rested.def || 0);
         }
-        if (p.fresh_def && inst.summonedTurn === this.state.turn) dv += Number(p.fresh_def || 0);
+        if (lauerOk && p.fresh_def && inst.summonedTurn === this.state.turn) dv += Number(p.fresh_def || 0);
       }
 
       // ETAPPENSICHERUNG base DEF
@@ -263,14 +265,15 @@
       if (p && def.typ === 'Einheit' && hasSupport(player)) {
         cost = Math.max(Number(p.min || 1), cost + Number(p.play_cost || -1));
       }
-      // MATERIALERSATZ: panzer/arty cheaper if grave had same type
+      // MATERIALERSATZ: panzer/arty cheaper (always, or after loss if gated)
       p = dokParam(this, player, 'MATERIALERSATZ');
       if (p && def.typ === 'Einheit' && (isPanzer(def) || isArtillery(def))) {
         var who = p.who || ['panzer', 'geschuetze'];
         var okType = (who.indexOf('panzer') >= 0 && isPanzer(def)) ||
           ((who.indexOf('geschuetze') >= 0 || who.indexOf('artillerie') >= 0) && isArtillery(def));
         if (okType) {
-          var had = (player.grave || []).some(function (g) {
+          var always = !p.if || p.if === 'always';
+          var had = always || (player.grave || []).some(function (g) {
             var gd = this.defOf(g);
             if (!gd) return false;
             if (String(p.if || '').indexOf('any-front') >= 0) return gd.typ === 'Einheit';
@@ -328,7 +331,8 @@
       }
       p = dokParam(this, player, 'MATERIALERSATZ');
       if (p && p.enter_def && (isPanzer(def) || isArtillery(def))) {
-        var hadLoss = (player.grave || []).some(function (g) { var gd = this.defOf(g); return gd && gd.typ === 'Einheit'; }.bind(this));
+        var alwaysEnter = !p.if || p.if === 'always';
+        var hadLoss = alwaysEnter || (player.grave || []).some(function (g) { var gd = this.defOf(g); return gd && gd.typ === 'Einheit'; }.bind(this));
         if (hadLoss) {
           card.def = (card.def == null ? Number(def.def)||0 : card.def) + Number(p.enter_def||1);
           card.defMax = (card.defMax == null ? card.def : card.defMax) + Number(p.enter_def||1);
@@ -412,13 +416,15 @@
               if (mates.length) this._heal(mates[0].inst, healAmt);
             }
             if (bp.on_destroy_in_section && bp.on_destroy_in_section.draw) this._draw(killer, Number(bp.on_destroy_in_section.draw || 1));
-            killer.flags.dokSectionDef = killer.flags.dokSectionDef || {};
-            ['L', 'C', 'R'].forEach(function (s) {
-              if (s === deadSec) return;
-              killer.flags.dokSectionDef[s] = (killer.flags.dokSectionDef[s] || 0) +
-                Number((bp.other_sections && bp.other_sections.def) || 1);
-            });
-            killer.flags.dokSectionDefUntil = this.state.turn + 1;
+            if (bp.other_sections && bp.other_sections.def) {
+              killer.flags.dokSectionDef = killer.flags.dokSectionDef || {};
+              ['L', 'C', 'R'].forEach(function (s) {
+                if (s === deadSec) return;
+                killer.flags.dokSectionDef[s] = (killer.flags.dokSectionDef[s] || 0) +
+                  Number(bp.other_sections.def || 1);
+              });
+              killer.flags.dokSectionDefUntil = this.state.turn + 1;
+            }
           }
           // ABSCHLUSS: killer's unit that destroyed gets +ATK
           if (killer && hasDok(this, killer, 'ABSCHLUSS') && meta && meta.killerUid) {

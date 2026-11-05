@@ -1,7 +1,7 @@
 {
   "meta": {
-    "gamesPerDirectedPairing": 10,
-    "totalGames": 2400,
+    "gamesPerDirectedPairing": 15,
+    "totalGames": 3600,
     "errors": 0,
     "nations": 16,
     "rules": {
@@ -18,44 +18,44 @@
     {
       "nat": "Dargan",
       "theme": "Zielangriff und Abschluss — Schuld, Kalden, kein Vergeben",
-      "boardShare": 0.5375385768237122,
-      "games": 300,
-      "winRateWhenDecided": 0.31666666666666665,
-      "decidedWinRate": 0.47738693467336685,
-      "drawRate": 0.33666666666666667,
-      "avgTurn": 12.023333333333333,
-      "artyAttackShare": 0.34498834498834496,
-      "artyCounterRate": 0.17567567567567569,
+      "boardShare": 0.5391974703525672,
+      "games": 450,
+      "winRateWhenDecided": 0.3511111111111111,
+      "decidedWinRate": 0.5214521452145214,
+      "drawRate": 0.32666666666666666,
+      "avgTurn": 12.006666666666666,
+      "artyAttackShare": 0.3597560975609756,
+      "artyCounterRate": 0.18220338983050846,
       "selfFxPerGame": 0,
-      "drawFx": 34,
+      "drawFx": 54,
       "healFx": 0,
-      "avgUnitLife": 4.231920809075984,
+      "avgUnitLife": 4.530461492530458,
       "worstVs": [
         {
-          "foe": "Merovan",
-          "share": 0.4728427668065499
-        },
-        {
-          "foe": "Rothain",
-          "share": 0.49479121809704185
+          "foe": "Vesper",
+          "share": 0.49208698110602533
         },
         {
           "foe": "Namar",
-          "share": 0.5021624832887615
+          "share": 0.4931212034906877
+        },
+        {
+          "foe": "Caldris",
+          "share": 0.495154401823552
         }
       ],
       "bestVs": [
         {
-          "foe": "Theryn",
-          "share": 0.6118705745110203
-        },
-        {
           "foe": "Karsk",
-          "share": 0.5918297729411359
+          "share": 0.5804230592078018
         },
         {
-          "foe": "Caldris",
-          "share": 0.582609745555566
+          "foe": "Orthea",
+          "share": 0.5795887976175014
+        },
+        {
+          "foe": "Lyr",
+          "share": 0.5761508903324182
         }
       ],
       "static": {
@@ -141,7 +141,7 @@
           {
             "id": "dc_dok_abschluss",
             "name": "Abschluss",
-            "text": "Zerstört eine eigene Einheit ein Ziel, hat sie +2 ATK bis Ende deines nächsten Zuges und du ziehst 1.",
+            "text": "Zerstört eine eigene Einheit ein Ziel, hat sie +1 ATK bis Ende deines nächsten Zuges und du ziehst 1.",
             "effects": [
               "ABSCHLUSS"
             ]
@@ -162,955 +162,46 @@
       }
     },
     {
-      "nat": "Merovan",
-      "theme": "Weg im eigenen Land — Verlegung und Ausharren",
-      "boardShare": 0.5297129465937584,
-      "games": 300,
-      "winRateWhenDecided": 0.4166666666666667,
-      "decidedWinRate": 0.5630630630630631,
-      "drawRate": 0.26,
-      "avgTurn": 11.293333333333333,
-      "artyAttackShare": 0.285132382892057,
-      "artyCounterRate": 0.1357142857142857,
-      "selfFxPerGame": 0,
-      "drawFx": 63,
-      "healFx": 20,
-      "avgUnitLife": 4.372278911564625,
-      "worstVs": [
-        {
-          "foe": "Orthea",
-          "share": 0.4418231581940318
-        },
-        {
-          "foe": "Rothain",
-          "share": 0.4697829765214278
-        },
-        {
-          "foe": "Theryn",
-          "share": 0.49797565983794334
-        }
-      ],
-      "bestVs": [
-        {
-          "foe": "Averon",
-          "share": 0.5836126510784932
-        },
-        {
-          "foe": "Caldris",
-          "share": 0.5827675862840229
-        },
-        {
-          "foe": "Lyr",
-          "share": 0.5712496185911706
-        }
-      ],
-      "static": {
-        "avgSumPerAp": 2.0333333333333328,
-        "avgAtkPerAp": 0.9741379310344828,
-        "avgDefPerAp": 1.0591954022988506,
-        "avgAp": 2.466666666666667,
-        "costBuckets": {
-          "2": 24,
-          "3": 16,
-          "4": 8,
-          "0-1": 10,
-          "5+": 2
-        },
-        "fx": {
-          "selfHurt": 6,
-          "draw": 11,
-          "heal": 7,
-          "ap": 0,
-          "conditional": 21,
-          "protect": 2,
-          "withEffects": 22,
-          "empty": 38
-        },
-        "artyShareUnits": 0.27586206896551724,
-        "cheapUnits": [
-          "Kaikompanie(2/2/3)",
-          "Staubrain-Zug(1/1/3)",
-          "Ablösungstrupp(2/2/2)",
-          "Wartebach-Wache(2/2/4)",
-          "Südmark-Fuß(2/3/2)",
-          "Verspätungsfeuer(2/2/2)",
-          "Wegspäher(2/1/2)",
-          "Warteblatt-Läufer(2/2/1)",
-          "Lizenzmelder(2/1/3)",
-          "Fahrplanblick(1/1/1)"
-        ],
-        "topEfficient": [
-          "Staubrain-Zug 4.00 (1/3@1)",
-          "Wartebach-Wache 3.00 (2/4@2)",
-          "Kaikompanie 2.50 (2/3@2)",
-          "Südmark-Fuß 2.50 (3/2@2)",
-          "Kolonnenpanzer 2.33 (3/4@3)"
-        ],
-        "bottomEfficient": [
-          "Lizenzsalve 1.50 (4/2@4)",
-          "Staubrain-Rohre 1.50 (3/3@4)",
-          "Wegspäher 1.50 (1/2@2)",
-          "Warteblatt-Läufer 1.50 (2/1@2)",
-          "Kai-Batterie 1.67 (3/2@3)"
-        ],
-        "selfHurtCards": [
-          "Staubrain-Zug",
-          "Hafenring-Walze",
-          "Letzte Stellung",
-          "Staubrain-Rohre",
-          "Wegweiser",
-          "Haltepunkt"
-        ],
-        "drawCards": [
-          "Kronenhof-Kaliber",
-          "Warteblatt-Läufer",
-          "Lizenzmelder",
-          "Warteblatt",
-          "Lizenzfahrt",
-          "Stimmloch",
-          "Sofortlizenz",
-          "Ausharren"
-        ],
-        "healCards": [
-          "Neuport-Schild",
-          "Lucs Sitz",
-          "Lizenzhof",
-          "Nachschubader",
-          "Ablösung",
-          "Kai-Optik",
-          "Kaliberkiste Ferne"
-        ],
-        "doctrines": [
-          {
-            "id": "dc_dok_verlegung",
-            "name": "Verlegung",
-            "text": "Einmal pro Zug darfst du eine eigene Einheit um einen Slot seitlich schieben. Alle eigenen Fronteinheiten haben +1 DEF in deinem Zug (Weg bleibt offen).",
-            "effects": [
-              "VERLEGUNG"
-            ]
-          },
-          {
-            "id": "dc_dok_ausharren",
-            "name": "Ausharren",
-            "text": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 ATK und +1 DEF.",
-            "effects": [
-              "AUSHARREN"
-            ]
-          }
-        ],
-        "byTyp": {
-          "Einheit": 29,
-          "Unterstützung": 9,
-          "Soforteinsatz": 12,
-          "Ausrüstung": 10
-        },
-        "rar": {
-          "bronze": 40,
-          "silver": 14,
-          "gold": 6,
-          "other": 0
-        }
-      }
-    },
-    {
-      "nat": "Ossaria",
-      "theme": "Erinnerung als Schutz — Abnutzung und gepanzerter Fuß",
-      "boardShare": 0.5069279344386766,
-      "games": 300,
-      "winRateWhenDecided": 0.42,
-      "decidedWinRate": 0.47368421052631576,
-      "drawRate": 0.11333333333333329,
-      "avgTurn": 14.516666666666667,
-      "artyAttackShare": 0.348,
-      "artyCounterRate": 0.14367816091954022,
-      "selfFxPerGame": 0,
-      "drawFx": 37,
-      "healFx": 80,
-      "avgUnitLife": 4.663239538239539,
-      "worstVs": [
-        {
-          "foe": "Eldran",
-          "share": 0.45936729882066063
-        },
-        {
-          "foe": "Averon",
-          "share": 0.47255009303768986
-        },
-        {
-          "foe": "Dargan",
-          "share": 0.49157194417432964
-        }
-      ],
-      "bestVs": [
-        {
-          "foe": "Steinmark",
-          "share": 0.5369240429751501
-        },
-        {
-          "foe": "Theryn",
-          "share": 0.5277906486367223
-        },
-        {
-          "foe": "Namar",
-          "share": 0.5258867710554878
-        }
-      ],
-      "static": {
-        "avgSumPerAp": 2.1298850574712644,
-        "avgAtkPerAp": 0.9787356321839081,
-        "avgDefPerAp": 1.1511494252873562,
-        "avgAp": 2.4,
-        "costBuckets": {
-          "2": 24,
-          "3": 14,
-          "4": 8,
-          "0-1": 12,
-          "5+": 2
-        },
-        "fx": {
-          "selfHurt": 14,
-          "draw": 8,
-          "heal": 7,
-          "ap": 0,
-          "conditional": 21,
-          "protect": 4,
-          "withEffects": 24,
-          "empty": 36
-        },
-        "artyShareUnits": 0.27586206896551724,
-        "cheapUnits": [
-          "Namenszug(1/2/2)",
-          "Totenwache(1/2/2)",
-          "Trauerzug(2/2/3)",
-          "Grenzhof-Fuß(2/2/3)",
-          "Steinbrunn-Lehrling(2/2/4)",
-          "Kareth-Kaliber(2/2/2)",
-          "Linsenläufer(2/1/2)",
-          "Grenzmelder(2/2/1)",
-          "Hofspäher(2/1/3)",
-          "Namensblick(1/1/1)"
-        ],
-        "topEfficient": [
-          "Namenszug 4.00 (2/2@1)",
-          "Totenwache 4.00 (2/2@1)",
-          "Steinbrunn-Lehrling 3.00 (2/4@2)",
-          "Trauerzug 2.50 (2/3@2)",
-          "Grenzhof-Fuß 2.50 (2/3@2)"
-        ],
-        "bottomEfficient": [
-          "Untersuchungsalve 1.50 (4/2@4)",
-          "Valeris-Rohr 1.50 (3/3@4)",
-          "Linsenläufer 1.50 (1/2@2)",
-          "Grenzmelder 1.50 (2/1@2)",
-          "Letzte Platte 1.60 (5/3@5)"
-        ],
-        "selfHurtCards": [
-          "Totenwache",
-          "Eron-Träger",
-          "Totenwall-Keil",
-          "Letzte Platte",
-          "Feldschmied",
-          "Ahnentafel",
-          "Helles Amt",
-          "Bergungspunkt"
-        ],
-        "drawCards": [
-          "Linsenpanzer",
-          "Untersuchungsalve",
-          "Grenzmelder",
-          "Ina Oss",
-          "Retter Grenz",
-          "Helles Amt",
-          "Untersuchung",
-          "Schutzblatt"
-        ],
-        "healCards": [
-          "Bergungsbatterie",
-          "Marenfeld-Geschütz",
-          "Namensblick",
-          "Hof der Namen",
-          "Bergungspunkt",
-          "Bergung",
-          "Reihenfolge"
-        ],
-        "doctrines": [
-          {
-            "id": "dc_dok_abnutzung",
-            "name": "Abnutzung",
-            "text": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, du heilst 1 dort, und du ziehst 1 Karte. Übrige Abschnitte +1 DEF bis Ende ",
-            "effects": [
-              "ABNUTZUNG"
-            ]
-          },
-          {
-            "id": "dc_dok_gepanzerter_fuss",
-            "name": "Gepanzerter Fuß",
-            "text": "Eigene Einheiten haben +1 DEF. Ausgerüstete Einheiten haben +1 ATK und +1 DEF zusätzlich.",
-            "effects": [
-              "GEPANZERTER_FUSS"
-            ]
-          }
-        ],
-        "byTyp": {
-          "Einheit": 29,
-          "Unterstützung": 9,
-          "Soforteinsatz": 12,
-          "Ausrüstung": 10
-        },
-        "rar": {
-          "bronze": 40,
-          "silver": 14,
-          "gold": 6,
-          "other": 0
-        }
-      }
-    },
-    {
-      "nat": "Lyr",
-      "theme": "Eid ohne Ort — Lauer und verteilte Stellung",
-      "boardShare": 0.5067247706345888,
-      "games": 300,
-      "winRateWhenDecided": 0.43333333333333335,
-      "decidedWinRate": 0.6103286384976526,
-      "drawRate": 0.29000000000000004,
-      "avgTurn": 12.95,
-      "artyAttackShare": 0.3504273504273504,
-      "artyCounterRate": 0.07317073170731707,
-      "selfFxPerGame": 0,
-      "drawFx": 27,
-      "healFx": 6,
-      "avgUnitLife": 4.916979418886197,
-      "worstVs": [
-        {
-          "foe": "Merovan",
-          "share": 0.4287503814088295
-        },
-        {
-          "foe": "Dargan",
-          "share": 0.4673819940305578
-        },
-        {
-          "foe": "Ossaria",
-          "share": 0.47719847804893484
-        }
-      ],
-      "bestVs": [
-        {
-          "foe": "Namar",
-          "share": 0.5633999194016097
-        },
-        {
-          "foe": "Theryn",
-          "share": 0.5620314900661112
-        },
-        {
-          "foe": "Eldran",
-          "share": 0.5382137928258844
-        }
-      ],
-      "static": {
-        "avgSumPerAp": 2.0781609195402297,
-        "avgAtkPerAp": 0.993103448275862,
-        "avgDefPerAp": 1.085057471264368,
-        "avgAp": 2.4166666666666665,
-        "costBuckets": {
-          "2": 25,
-          "3": 14,
-          "4": 8,
-          "0-1": 11,
-          "5+": 2
-        },
-        "fx": {
-          "selfHurt": 21,
-          "draw": 8,
-          "heal": 4,
-          "ap": 0,
-          "conditional": 29,
-          "protect": 0,
-          "withEffects": 22,
-          "empty": 38
-        },
-        "artyShareUnits": 0.27586206896551724,
-        "cheapUnits": [
-          "Talwache(1/2/2)",
-          "Passmiliz(1/1/3)",
-          "Weideposten(2/2/2)",
-          "Stilltal-Fuß(2/2/4)",
-          "Hochweide-Zug(2/3/2)",
-          "Eidhof-Kaliber(2/2/2)",
-          "Bergführer(2/1/2)",
-          "Hangläufer(2/2/1)",
-          "Pfadwächter(2/1/3)",
-          "Abschriftblick(1/1/1)"
-        ],
-        "topEfficient": [
-          "Talwache 4.00 (2/2@1)",
-          "Passmiliz 4.00 (1/3@1)",
-          "Stilltal-Fuß 3.00 (2/4@2)",
-          "Hochweide-Zug 2.50 (3/2@2)",
-          "Engenwalze 2.33 (3/4@3)"
-        ],
-        "bottomEfficient": [
-          "Warnsalve 1.50 (4/2@4)",
-          "Passzoll-Rohr 1.50 (3/3@4)",
-          "Bergführer 1.50 (1/2@2)",
-          "Hangläufer 1.50 (2/1@2)",
-          "Enger Weg 1.60 (5/3@5)"
-        ],
-        "selfHurtCards": [
-          "Talwache",
-          "Weideposten",
-          "Hochweide-Zug",
-          "Tunnelkeil",
-          "Passhaus-Schild",
-          "Leserbach-Keil",
-          "Steinschlag-Batterie",
-          "Passzoll-Rohr"
-        ],
-        "drawCards": [
-          "Hangpanzer",
-          "Eidhof-Kaliber",
-          "Hangläufer",
-          "Pfadwächter",
-          "Mar Aschen",
-          "Talruf",
-          "Lesehof",
-          "Leserruf"
-        ],
-        "healCards": [
-          "Mar Aschen",
-          "Nachhausegehen",
-          "Tunnelplatte",
-          "Leserklammer"
-        ],
-        "doctrines": [
-          {
-            "id": "dc_dok_lauer",
-            "name": "Lauer",
-            "text": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK.",
-            "effects": [
-              "LAUER"
-            ]
-          },
-          {
-            "id": "dc_dok_verteilte_stellung",
-            "name": "Verteilte Stellung",
-            "text": "Bist du allein im Abschnitt: +1 DEF. Mindestens zwei eigene: +1 ATK.",
-            "effects": [
-              "VERTEILTE_STELLUNG"
-            ]
-          }
-        ],
-        "byTyp": {
-          "Einheit": 29,
-          "Unterstützung": 9,
-          "Soforteinsatz": 12,
-          "Ausrüstung": 10
-        },
-        "rar": {
-          "bronze": 40,
-          "silver": 14,
-          "gold": 6,
-          "other": 0
-        }
-      }
-    },
-    {
-      "nat": "Averon",
-      "theme": "Aufklärungsschlag und Auswertung — Zeit, Lage, der zweite Blick",
-      "boardShare": 0.5062098221740169,
-      "games": 300,
-      "winRateWhenDecided": 0.33666666666666667,
-      "decidedWinRate": 0.4855769230769231,
-      "drawRate": 0.30666666666666664,
-      "avgTurn": 12.753333333333334,
-      "artyAttackShare": 0.3,
-      "artyCounterRate": 0.09803921568627451,
-      "selfFxPerGame": 0,
-      "drawFx": 0,
-      "healFx": 0,
-      "avgUnitLife": 4.806069302721089,
-      "worstVs": [
-        {
-          "foe": "Merovan",
-          "share": 0.4163873489215068
-        },
-        {
-          "foe": "Dargan",
-          "share": 0.4299440114581638
-        },
-        {
-          "foe": "Sahr",
-          "share": 0.44024740629727227
-        }
-      ],
-      "bestVs": [
-        {
-          "foe": "Theryn",
-          "share": 0.6114857706406973
-        },
-        {
-          "foe": "Caldris",
-          "share": 0.5787708337986547
-        },
-        {
-          "foe": "Vael",
-          "share": 0.5685077755366736
-        }
-      ],
-      "static": {
-        "avgSumPerAp": 2.090804597701149,
-        "avgAtkPerAp": 0.959770114942529,
-        "avgDefPerAp": 1.1310344827586207,
-        "avgAp": 2.2333333333333334,
-        "costBuckets": {
-          "2": 22,
-          "3": 16,
-          "4": 6,
-          "0-1": 15,
-          "5+": 1
-        },
-        "fx": {
-          "selfHurt": 7,
-          "draw": 12,
-          "heal": 4,
-          "ap": 0,
-          "conditional": 31,
-          "protect": 0,
-          "withEffects": 22,
-          "empty": 38
-        },
-        "artyShareUnits": 0.27586206896551724,
-        "cheapUnits": [
-          "Knotenwache(1/2/2)",
-          "Reservisten-Zug(1/2/3)",
-          "Nordfall-Posten(2/2/3)",
-          "Korridorläufer(2/2/2)",
-          "Sensorwagen(2/2/3)",
-          "Werkhofgeschütz(2/2/2)",
-          "Lina-Melder(2/1/2)",
-          "Ed-Ruh-Pfad(2/1/2)",
-          "Lage-Offen(2/2/3)",
-          "Quellenläufer(1/1/1)"
-        ],
-        "topEfficient": [
-          "Reservisten-Zug 5.00 (2/3@1)",
-          "Knotenwache 4.00 (2/2@1)",
-          "Nordfall-Posten 2.50 (2/3@2)",
-          "Sensorwagen 2.50 (2/3@2)",
-          "Lage-Offen 2.50 (2/3@2)"
-        ],
-        "bottomEfficient": [
-          "Lokalisierbatterie 1.50 (4/2@4)",
-          "Westhaven-Batterie 1.50 (3/3@4)",
-          "Lina-Melder 1.50 (1/2@2)",
-          "Ed-Ruh-Pfad 1.50 (1/2@2)",
-          "Werkhof-Nov 1.50 (3/3@4)"
-        ],
-        "selfHurtCards": [
-          "Rasterpanzer",
-          "Knotenrohr",
-          "Nordmark-Rohr",
-          "Werkhof-Nov",
-          "Werkhöfe Novaris",
-          "Westhaven-Lager",
-          "Oliv Halt"
-        ],
-        "drawCards": [
-          "Sensorwagen",
-          "Olivkeil",
-          "Lydon-Träger",
-          "Frühstoß",
-          "Lokalisierbatterie",
-          "Westhaven-Batterie",
-          "Quellenläufer",
-          "Ed Ruh"
-        ],
-        "healCards": [
-          "Werkhof-Nov",
-          "Sandstreifen",
-          "Nov-Werkzeug",
-          "Netzlampe"
-        ],
-        "doctrines": [
-          {
-            "id": "dc_dok_aufklaerungsschlag",
-            "name": "Aufklärungsschlag",
-            "text": "Eigene Angriffe gegen aufgedeckte Feinde haben +1 ATK. Nur der erste solche Angriff pro Zug erhält den Bonus.",
-            "effects": [
-              "AUFKLAERUNGSSCHLAG"
-            ]
-          },
-          {
-            "id": "dc_dok_auswertung",
-            "name": "Auswertung",
-            "text": "Erleidet eine eigene Einheit Schaden und überlebt, hat sie bis zum Ende dieses Zuges +1 ATK (nicht stapelbar). Zeit wird zur Waffe — knapp bemessen.",
-            "effects": [
-              "AUSWERTUNG"
-            ]
-          }
-        ],
-        "byTyp": {
-          "Einheit": 29,
-          "Unterstützung": 9,
-          "Soforteinsatz": 12,
-          "Ausrüstung": 10
-        },
-        "rar": {
-          "bronze": 40,
-          "silver": 14,
-          "gold": 6,
-          "other": 0
-        }
-      }
-    },
-    {
-      "nat": "Caldris",
-      "theme": "Schild und Akte — Etappensicherung und Rasten",
-      "boardShare": 0.5054149932006406,
-      "games": 300,
-      "winRateWhenDecided": 0.36333333333333334,
-      "decidedWinRate": 0.5165876777251185,
-      "drawRate": 0.29666666666666663,
-      "avgTurn": 11.736666666666666,
-      "artyAttackShare": 0.33181818181818185,
-      "artyCounterRate": 0.13013698630136986,
-      "selfFxPerGame": 0,
-      "drawFx": 0,
-      "healFx": 138,
-      "avgUnitLife": 4.2638546798029555,
-      "worstVs": [
-        {
-          "foe": "Merovan",
-          "share": 0.4172324137159772
-        },
-        {
-          "foe": "Dargan",
-          "share": 0.417390254444434
-        },
-        {
-          "foe": "Averon",
-          "share": 0.42122916620134526
-        }
-      ],
-      "bestVs": [
-        {
-          "foe": "Steinmark",
-          "share": 0.5899190721372143
-        },
-        {
-          "foe": "Theryn",
-          "share": 0.5669444463382857
-        },
-        {
-          "foe": "Rothain",
-          "share": 0.5525439143101767
-        }
-      ],
-      "static": {
-        "avgSumPerAp": 2.086781609195402,
-        "avgAtkPerAp": 0.871264367816092,
-        "avgDefPerAp": 1.2155172413793103,
-        "avgAp": 2.3666666666666667,
-        "costBuckets": {
-          "2": 22,
-          "3": 14,
-          "4": 8,
-          "0-1": 14,
-          "5+": 2
-        },
-        "fx": {
-          "selfHurt": 15,
-          "draw": 9,
-          "heal": 29,
-          "ap": 0,
-          "conditional": 26,
-          "protect": 4,
-          "withEffects": 24,
-          "empty": 36
-        },
-        "artyShareUnits": 0.27586206896551724,
-        "cheapUnits": [
-          "Ruheposten(1/1/3)",
-          "Wachablösung(1/2/2)",
-          "Listenfuß(2/2/3)",
-          "Meldezug(2/2/2)",
-          "Schildreihe(2/2/4)",
-          "Seren-Kaliber(2/2/2)",
-          "Meldeläufer(2/1/2)",
-          "Aktenblick(2/1/2)",
-          "Ringwächter(2/2/3)",
-          "Formularspäher(1/1/1)"
-        ],
-        "topEfficient": [
-          "Ruheposten 4.00 (1/3@1)",
-          "Wachablösung 4.00 (2/2@1)",
-          "Schildreihe 3.00 (2/4@2)",
-          "Listenfuß 2.50 (2/3@2)",
-          "Ringwächter 2.50 (2/3@2)"
-        ],
-        "bottomEfficient": [
-          "Sperrfeuer-Etappe 1.50 (4/2@4)",
-          "Grünfeld-Rohr 1.50 (3/3@4)",
-          "Kontrollsalve 1.50 (4/2@4)",
-          "Meldeläufer 1.50 (1/2@2)",
-          "Aktenblick 1.50 (1/2@2)"
-        ],
-        "selfHurtCards": [
-          "Listenfuß",
-          "Versorgungskeil",
-          "Etappenwagen",
-          "Klinikschild",
-          "Schildwall",
-          "Deckungsfeuer",
-          "Sperrfeuer-Etappe",
-          "Ringwächter"
-        ],
-        "drawCards": [
-          "Meldezug",
-          "Wohnblock-Riegel",
-          "Forumspanzer",
-          "Meldeläufer",
-          "Alm Ser",
-          "Sicherheitsforum",
-          "Meldung",
-          "Frist"
-        ],
-        "healCards": [
-          "Seren-Zug",
-          "Versorgungskeil",
-          "Klinikschild",
-          "Notfallträger",
-          "Forumspanzer",
-          "Seren-Kaliber",
-          "Lückenhof-Geschütz",
-          "Aktenblick"
-        ],
-        "doctrines": [
-          {
-            "id": "dc_dok_etappensicherung",
-            "name": "Etappensicherung",
-            "text": "Zu Beginn deines Zuges heilt eine beschädigte eigene Einheit 1. Eigene Einheiten haben +1 DEF.",
-            "effects": [
-              "ETAPPENSICHERUNG"
-            ]
-          },
-          {
-            "id": "dc_dok_rasten",
-            "name": "Rasten",
-            "text": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK (kein DEF).",
-            "effects": [
-              "RASTEN"
-            ]
-          }
-        ],
-        "byTyp": {
-          "Einheit": 29,
-          "Unterstützung": 9,
-          "Soforteinsatz": 12,
-          "Ausrüstung": 10
-        },
-        "rar": {
-          "bronze": 40,
-          "silver": 14,
-          "gold": 6,
-          "other": 0
-        }
-      }
-    },
-    {
-      "nat": "Eldran",
-      "theme": "Auffangen und Gegenstoß — Dauer, Krone und Parlament",
-      "boardShare": 0.5048467670773401,
-      "games": 300,
-      "winRateWhenDecided": 0.33666666666666667,
-      "decidedWinRate": 0.48325358851674644,
-      "drawRate": 0.30333333333333334,
-      "avgTurn": 12.56,
-      "artyAttackShare": 0.34205607476635513,
-      "artyCounterRate": 0.12021857923497267,
-      "selfFxPerGame": 0,
-      "drawFx": 26,
-      "healFx": 0,
-      "avgUnitLife": 4.810883424408016,
-      "worstVs": [
-        {
-          "foe": "Dargan",
-          "share": 0.4404856482110523
-        },
-        {
-          "foe": "Vesper",
-          "share": 0.44753234495709027
-        },
-        {
-          "foe": "Lyr",
-          "share": 0.46178620717411556
-        }
-      ],
-      "bestVs": [
-        {
-          "foe": "Theryn",
-          "share": 0.5634370062190921
-        },
-        {
-          "foe": "Vael",
-          "share": 0.5542017767260078
-        },
-        {
-          "foe": "Ossaria",
-          "share": 0.5406327011793395
-        }
-      ],
-      "static": {
-        "avgSumPerAp": 2.090804597701149,
-        "avgAtkPerAp": 0.9166666666666667,
-        "avgDefPerAp": 1.1741379310344828,
-        "avgAp": 2.2333333333333334,
-        "costBuckets": {
-          "2": 22,
-          "3": 16,
-          "4": 6,
-          "0-1": 15,
-          "5+": 1
-        },
-        "fx": {
-          "selfHurt": 6,
-          "draw": 9,
-          "heal": 8,
-          "ap": 0,
-          "conditional": 25,
-          "protect": 1,
-          "withEffects": 22,
-          "empty": 38
-        },
-        "artyShareUnits": 0.27586206896551724,
-        "cheapUnits": [
-          "Kronenwache(1/2/3)",
-          "Parlamentsbote(1/1/2)",
-          "Auffangposten(2/2/3)",
-          "Markenläufer(2/2/2)",
-          "Stellungspanzer(2/2/4)",
-          "Lafettenwacht(2/2/2)",
-          "Markenspäher(2/1/2)",
-          "Gassenmelder(2/1/2)",
-          "Grenzlese(2/2/3)",
-          "Schulrain-Läufer(1/1/1)"
-        ],
-        "topEfficient": [
-          "Kronenwache 5.00 (2/3@1)",
-          "Parlamentsbote 3.00 (1/2@1)",
-          "Stellungspanzer 3.00 (2/4@2)",
-          "Auffangposten 2.50 (2/3@2)",
-          "Grenzlese 2.50 (2/3@2)"
-        ],
-        "bottomEfficient": [
-          "Sperrfeuer 1.50 (4/2@4)",
-          "Brückenau-Batterie 1.50 (3/3@4)",
-          "Markenspäher 1.50 (1/2@2)",
-          "Gassenmelder 1.50 (1/2@2)",
-          "Zeughausrohr 1.67 (3/2@3)"
-        ],
-        "selfHurtCards": [
-          "Stellungspanzer",
-          "Flussufer-Keil",
-          "Dauerrohr",
-          "Parlamentsgasse",
-          "Dauerstellung",
-          "Haushaltsfrage"
-        ],
-        "drawCards": [
-          "Kronland-Panzer",
-          "Markengeschütz",
-          "Auffangfeuer",
-          "Marei Aure",
-          "Tomas Lenn",
-          "Stille Ämter",
-          "Kronland-Hof",
-          "Sperrenkette"
-        ],
-        "healCards": [
-          "Gegenstoßkeil",
-          "Marei Aure",
-          "Zeughausmeister",
-          "Doppelhaus",
-          "Zeughaus Brückenau",
-          "Bindungstag",
-          "Lichthofen",
-          "Parlamentsstempel"
-        ],
-        "doctrines": [
-          {
-            "id": "dc_dok_auffangen",
-            "name": "Auffangen",
-            "text": "Eigene Einheiten haben +1 DEF. Hat der Gegner mehr Einheiten im Abschnitt, zusätzlich +1 DEF. Bei Gleichstand +1 ATK.",
-            "effects": [
-              "AUFFANGEN"
-            ]
-          },
-          {
-            "id": "dc_dok_gegenstoss",
-            "name": "Gegenstoß",
-            "text": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +2 ATK. Überlebt die angegriffene Einheit, heilt sie 1.",
-            "effects": [
-              "GEGENSTOSS"
-            ]
-          }
-        ],
-        "byTyp": {
-          "Einheit": 29,
-          "Unterstützung": 9,
-          "Soforteinsatz": 12,
-          "Ausrüstung": 10
-        },
-        "rar": {
-          "bronze": 40,
-          "silver": 14,
-          "gold": 6,
-          "other": 0
-        }
-      }
-    },
-    {
       "nat": "Vesper",
       "theme": "Scheinschwerpunkt und Abriegeln — Lage, Velis, niemand folgt",
-      "boardShare": 0.5042792967504005,
-      "games": 300,
-      "winRateWhenDecided": 0.3566666666666667,
-      "decidedWinRate": 0.5095238095238095,
-      "drawRate": 0.30000000000000004,
-      "avgTurn": 12.273333333333333,
-      "artyAttackShare": 0.33861386138613864,
-      "artyCounterRate": 0.05847953216374269,
+      "boardShare": 0.5167732572151167,
+      "games": 450,
+      "winRateWhenDecided": 0.33555555555555555,
+      "decidedWinRate": 0.483974358974359,
+      "drawRate": 0.30666666666666664,
+      "avgTurn": 12.395555555555555,
+      "artyAttackShare": 0.3427041499330656,
+      "artyCounterRate": 0.07421875,
       "selfFxPerGame": 0,
-      "drawFx": 32,
+      "drawFx": 41,
       "healFx": 0,
-      "avgUnitLife": 4.651875320020481,
+      "avgUnitLife": 4.6177149647737865,
       "worstVs": [
         {
-          "foe": "Caldris",
-          "share": 0.4534645816143986
-        },
-        {
-          "foe": "Dargan",
-          "share": 0.4663248408588633
+          "foe": "Merovan",
+          "share": 0.46392675787044696
         },
         {
           "foe": "Averon",
-          "share": 0.4694291020077036
+          "share": 0.4677193794340903
+        },
+        {
+          "foe": "Vael",
+          "share": 0.4834116718501331
         }
       ],
       "bestVs": [
         {
-          "foe": "Sahr",
-          "share": 0.571125940901206
+          "foe": "Rothain",
+          "share": 0.5766724054081203
+        },
+        {
+          "foe": "Karsk",
+          "share": 0.5436647885765826
         },
         {
           "foe": "Eldran",
-          "share": 0.5524676550429098
-        },
-        {
-          "foe": "Rothain",
-          "share": 0.5446316715020509
+          "share": 0.5434200492083787
         }
       ],
       "static": {
@@ -1220,46 +311,651 @@
       }
     },
     {
-      "nat": "Namar",
-      "theme": "Häfen und Rest — Marsch aus dem Vollen und Entsatz",
-      "boardShare": 0.4958928835402177,
-      "games": 300,
-      "winRateWhenDecided": 0.43,
-      "decidedWinRate": 0.4867924528301887,
-      "drawRate": 0.1166666666666667,
-      "avgTurn": 14.35,
-      "artyAttackShare": 0.39717425431711145,
-      "artyCounterRate": 0.1067193675889328,
+      "nat": "Averon",
+      "theme": "Aufklärungsschlag und Auswertung — Zeit, Lage, der zweite Blick",
+      "boardShare": 0.5149248681965085,
+      "games": 450,
+      "winRateWhenDecided": 0.35333333333333333,
+      "decidedWinRate": 0.48328267477203646,
+      "drawRate": 0.26888888888888884,
+      "avgTurn": 12.535555555555556,
+      "artyAttackShare": 0.30945945945945946,
+      "artyCounterRate": 0.1222707423580786,
       "selfFxPerGame": 0,
-      "drawFx": 113,
-      "healFx": 43,
-      "avgUnitLife": 4.780833622986909,
+      "drawFx": 0,
+      "healFx": 0,
+      "avgUnitLife": 4.756937680375181,
       "worstVs": [
         {
-          "foe": "Lyr",
-          "share": 0.4366000805983904
+          "foe": "Sahr",
+          "share": 0.44905802738996614
+        },
+        {
+          "foe": "Dargan",
+          "share": 0.46904821173282035
         },
         {
           "foe": "Merovan",
-          "share": 0.4511577430406544
-        },
-        {
-          "foe": "Caldris",
-          "share": 0.4547315690414039
+          "share": 0.4864449978134837
         }
       ],
       "bestVs": [
         {
-          "foe": "Vael",
-          "share": 0.5438609357643608
+          "foe": "Theryn",
+          "share": 0.5860262740479346
         },
         {
-          "foe": "Steinmark",
-          "share": 0.5412117980281086
+          "foe": "Caldris",
+          "share": 0.5653812326461533
+        },
+        {
+          "foe": "Vael",
+          "share": 0.5385846187346685
+        }
+      ],
+      "static": {
+        "avgSumPerAp": 2.090804597701149,
+        "avgAtkPerAp": 0.959770114942529,
+        "avgDefPerAp": 1.1310344827586207,
+        "avgAp": 2.2333333333333334,
+        "costBuckets": {
+          "2": 22,
+          "3": 16,
+          "4": 6,
+          "0-1": 15,
+          "5+": 1
+        },
+        "fx": {
+          "selfHurt": 7,
+          "draw": 12,
+          "heal": 4,
+          "ap": 0,
+          "conditional": 31,
+          "protect": 0,
+          "withEffects": 22,
+          "empty": 38
+        },
+        "artyShareUnits": 0.27586206896551724,
+        "cheapUnits": [
+          "Knotenwache(1/2/2)",
+          "Reservisten-Zug(1/2/3)",
+          "Nordfall-Posten(2/2/3)",
+          "Korridorläufer(2/2/2)",
+          "Sensorwagen(2/2/3)",
+          "Werkhofgeschütz(2/2/2)",
+          "Lina-Melder(2/1/2)",
+          "Ed-Ruh-Pfad(2/1/2)",
+          "Lage-Offen(2/2/3)",
+          "Quellenläufer(1/1/1)"
+        ],
+        "topEfficient": [
+          "Reservisten-Zug 5.00 (2/3@1)",
+          "Knotenwache 4.00 (2/2@1)",
+          "Nordfall-Posten 2.50 (2/3@2)",
+          "Sensorwagen 2.50 (2/3@2)",
+          "Lage-Offen 2.50 (2/3@2)"
+        ],
+        "bottomEfficient": [
+          "Lokalisierbatterie 1.50 (4/2@4)",
+          "Westhaven-Batterie 1.50 (3/3@4)",
+          "Lina-Melder 1.50 (1/2@2)",
+          "Ed-Ruh-Pfad 1.50 (1/2@2)",
+          "Werkhof-Nov 1.50 (3/3@4)"
+        ],
+        "selfHurtCards": [
+          "Rasterpanzer",
+          "Knotenrohr",
+          "Nordmark-Rohr",
+          "Werkhof-Nov",
+          "Werkhöfe Novaris",
+          "Westhaven-Lager",
+          "Oliv Halt"
+        ],
+        "drawCards": [
+          "Sensorwagen",
+          "Olivkeil",
+          "Lydon-Träger",
+          "Frühstoß",
+          "Lokalisierbatterie",
+          "Westhaven-Batterie",
+          "Quellenläufer",
+          "Ed Ruh"
+        ],
+        "healCards": [
+          "Werkhof-Nov",
+          "Sandstreifen",
+          "Nov-Werkzeug",
+          "Netzlampe"
+        ],
+        "doctrines": [
+          {
+            "id": "dc_dok_aufklaerungsschlag",
+            "name": "Aufklärungsschlag",
+            "text": "Eigene Angriffe gegen aufgedeckte Feinde haben +1 ATK. Nur der erste solche Angriff pro Zug erhält den Bonus.",
+            "effects": [
+              "AUFKLAERUNGSSCHLAG"
+            ]
+          },
+          {
+            "id": "dc_dok_auswertung",
+            "name": "Auswertung",
+            "text": "Erleidet eine eigene Einheit Schaden und überlebt, hat sie bis zum Ende dieses Zuges +1 ATK (nicht stapelbar). Zeit wird zur Waffe — knapp bemessen.",
+            "effects": [
+              "AUSWERTUNG"
+            ]
+          }
+        ],
+        "byTyp": {
+          "Einheit": 29,
+          "Unterstützung": 9,
+          "Soforteinsatz": 12,
+          "Ausrüstung": 10
+        },
+        "rar": {
+          "bronze": 40,
+          "silver": 14,
+          "gold": 6,
+          "other": 0
+        }
+      }
+    },
+    {
+      "nat": "Merovan",
+      "theme": "Weg im eigenen Land — Verlegung und Ausharren",
+      "boardShare": 0.5106040729554514,
+      "games": 450,
+      "winRateWhenDecided": 0.36,
+      "decidedWinRate": 0.49240121580547114,
+      "drawRate": 0.26888888888888884,
+      "avgTurn": 11.46888888888889,
+      "artyAttackShare": 0.3203463203463203,
+      "artyCounterRate": 0.12162162162162163,
+      "selfFxPerGame": 0,
+      "drawFx": 81,
+      "healFx": 37,
+      "avgUnitLife": 4.253606314320601,
+      "worstVs": [
+        {
+          "foe": "Eldran",
+          "share": 0.4453883568496353
+        },
+        {
+          "foe": "Orthea",
+          "share": 0.46012678683984665
+        },
+        {
+          "foe": "Dargan",
+          "share": 0.4829124109120579
+        }
+      ],
+      "bestVs": [
+        {
+          "foe": "Karsk",
+          "share": 0.5694716142635127
+        },
+        {
+          "foe": "Caldris",
+          "share": 0.5667136192729249
+        },
+        {
+          "foe": "Lyr",
+          "share": 0.5523108717515853
+        }
+      ],
+      "static": {
+        "avgSumPerAp": 2.0333333333333328,
+        "avgAtkPerAp": 0.9741379310344828,
+        "avgDefPerAp": 1.0591954022988506,
+        "avgAp": 2.466666666666667,
+        "costBuckets": {
+          "2": 24,
+          "3": 16,
+          "4": 8,
+          "0-1": 10,
+          "5+": 2
+        },
+        "fx": {
+          "selfHurt": 6,
+          "draw": 11,
+          "heal": 7,
+          "ap": 0,
+          "conditional": 21,
+          "protect": 2,
+          "withEffects": 22,
+          "empty": 38
+        },
+        "artyShareUnits": 0.27586206896551724,
+        "cheapUnits": [
+          "Kaikompanie(2/2/3)",
+          "Staubrain-Zug(1/1/3)",
+          "Ablösungstrupp(2/2/2)",
+          "Wartebach-Wache(2/2/4)",
+          "Südmark-Fuß(2/3/2)",
+          "Verspätungsfeuer(2/2/2)",
+          "Wegspäher(2/1/2)",
+          "Warteblatt-Läufer(2/2/1)",
+          "Lizenzmelder(2/1/3)",
+          "Fahrplanblick(1/1/1)"
+        ],
+        "topEfficient": [
+          "Staubrain-Zug 4.00 (1/3@1)",
+          "Wartebach-Wache 3.00 (2/4@2)",
+          "Kaikompanie 2.50 (2/3@2)",
+          "Südmark-Fuß 2.50 (3/2@2)",
+          "Kolonnenpanzer 2.33 (3/4@3)"
+        ],
+        "bottomEfficient": [
+          "Lizenzsalve 1.50 (4/2@4)",
+          "Staubrain-Rohre 1.50 (3/3@4)",
+          "Wegspäher 1.50 (1/2@2)",
+          "Warteblatt-Läufer 1.50 (2/1@2)",
+          "Kai-Batterie 1.67 (3/2@3)"
+        ],
+        "selfHurtCards": [
+          "Staubrain-Zug",
+          "Hafenring-Walze",
+          "Letzte Stellung",
+          "Staubrain-Rohre",
+          "Wegweiser",
+          "Haltepunkt"
+        ],
+        "drawCards": [
+          "Kronenhof-Kaliber",
+          "Warteblatt-Läufer",
+          "Lizenzmelder",
+          "Warteblatt",
+          "Lizenzfahrt",
+          "Stimmloch",
+          "Sofortlizenz",
+          "Ausharren"
+        ],
+        "healCards": [
+          "Neuport-Schild",
+          "Lucs Sitz",
+          "Lizenzhof",
+          "Nachschubader",
+          "Ablösung",
+          "Kai-Optik",
+          "Kaliberkiste Ferne"
+        ],
+        "doctrines": [
+          {
+            "id": "dc_dok_verlegung",
+            "name": "Verlegung",
+            "text": "Einmal pro Zug darfst du für 1 AP eine eigene Einheit um einen Slot seitlich schieben (Weg bleibt offen). Beweglichkeit statt Panzerung.",
+            "effects": [
+              "VERLEGUNG"
+            ]
+          },
+          {
+            "id": "dc_dok_ausharren",
+            "name": "Ausharren",
+            "text": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 DEF.",
+            "effects": [
+              "AUSHARREN"
+            ]
+          }
+        ],
+        "byTyp": {
+          "Einheit": 29,
+          "Unterstützung": 9,
+          "Soforteinsatz": 12,
+          "Ausrüstung": 10
+        },
+        "rar": {
+          "bronze": 40,
+          "silver": 14,
+          "gold": 6,
+          "other": 0
+        }
+      }
+    },
+    {
+      "nat": "Ossaria",
+      "theme": "Erinnerung als Schutz — Abnutzung und gepanzerter Fuß",
+      "boardShare": 0.510458577568938,
+      "games": 450,
+      "winRateWhenDecided": 0.4711111111111111,
+      "decidedWinRate": 0.53,
+      "drawRate": 0.11111111111111116,
+      "avgTurn": 14.613333333333333,
+      "artyAttackShare": 0.35512820512820514,
+      "artyCounterRate": 0.11913357400722022,
+      "selfFxPerGame": 0,
+      "drawFx": 54,
+      "healFx": 123,
+      "avgUnitLife": 4.648803188681239,
+      "worstVs": [
+        {
+          "foe": "Dargan",
+          "share": 0.4612468497070012
+        },
+        {
+          "foe": "Vesper",
+          "share": 0.47015819738749304
         },
         {
           "foe": "Rothain",
-          "share": 0.5311818283570109
+          "share": 0.4727446703096743
+        }
+      ],
+      "bestVs": [
+        {
+          "foe": "Theryn",
+          "share": 0.5728091846221964
+        },
+        {
+          "foe": "Steinmark",
+          "share": 0.5634166851014061
+        },
+        {
+          "foe": "Vael",
+          "share": 0.5411899247094015
+        }
+      ],
+      "static": {
+        "avgSumPerAp": 2.1298850574712644,
+        "avgAtkPerAp": 0.9787356321839081,
+        "avgDefPerAp": 1.1511494252873562,
+        "avgAp": 2.4,
+        "costBuckets": {
+          "2": 24,
+          "3": 14,
+          "4": 8,
+          "0-1": 12,
+          "5+": 2
+        },
+        "fx": {
+          "selfHurt": 14,
+          "draw": 8,
+          "heal": 7,
+          "ap": 0,
+          "conditional": 21,
+          "protect": 4,
+          "withEffects": 24,
+          "empty": 36
+        },
+        "artyShareUnits": 0.27586206896551724,
+        "cheapUnits": [
+          "Namenszug(1/2/2)",
+          "Totenwache(1/2/2)",
+          "Trauerzug(2/2/3)",
+          "Grenzhof-Fuß(2/2/3)",
+          "Steinbrunn-Lehrling(2/2/4)",
+          "Kareth-Kaliber(2/2/2)",
+          "Linsenläufer(2/1/2)",
+          "Grenzmelder(2/2/1)",
+          "Hofspäher(2/1/3)",
+          "Namensblick(1/1/1)"
+        ],
+        "topEfficient": [
+          "Namenszug 4.00 (2/2@1)",
+          "Totenwache 4.00 (2/2@1)",
+          "Steinbrunn-Lehrling 3.00 (2/4@2)",
+          "Trauerzug 2.50 (2/3@2)",
+          "Grenzhof-Fuß 2.50 (2/3@2)"
+        ],
+        "bottomEfficient": [
+          "Untersuchungsalve 1.50 (4/2@4)",
+          "Valeris-Rohr 1.50 (3/3@4)",
+          "Linsenläufer 1.50 (1/2@2)",
+          "Grenzmelder 1.50 (2/1@2)",
+          "Letzte Platte 1.60 (5/3@5)"
+        ],
+        "selfHurtCards": [
+          "Totenwache",
+          "Eron-Träger",
+          "Totenwall-Keil",
+          "Letzte Platte",
+          "Feldschmied",
+          "Ahnentafel",
+          "Helles Amt",
+          "Bergungspunkt"
+        ],
+        "drawCards": [
+          "Linsenpanzer",
+          "Untersuchungsalve",
+          "Grenzmelder",
+          "Ina Oss",
+          "Retter Grenz",
+          "Helles Amt",
+          "Untersuchung",
+          "Schutzblatt"
+        ],
+        "healCards": [
+          "Bergungsbatterie",
+          "Marenfeld-Geschütz",
+          "Namensblick",
+          "Hof der Namen",
+          "Bergungspunkt",
+          "Bergung",
+          "Reihenfolge"
+        ],
+        "doctrines": [
+          {
+            "id": "dc_dok_abnutzung",
+            "name": "Abnutzung",
+            "text": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, du heilst 1 dort, und du ziehst 1 Karte.",
+            "effects": [
+              "ABNUTZUNG"
+            ]
+          },
+          {
+            "id": "dc_dok_gepanzerter_fuss",
+            "name": "Gepanzerter Fuß",
+            "text": "Eigene Einheiten haben +1 DEF. Ausgerüstete Einheiten haben +1 ATK und +1 DEF zusätzlich.",
+            "effects": [
+              "GEPANZERTER_FUSS"
+            ]
+          }
+        ],
+        "byTyp": {
+          "Einheit": 29,
+          "Unterstützung": 9,
+          "Soforteinsatz": 12,
+          "Ausrüstung": 10
+        },
+        "rar": {
+          "bronze": 40,
+          "silver": 14,
+          "gold": 6,
+          "other": 0
+        }
+      }
+    },
+    {
+      "nat": "Eldran",
+      "theme": "Auffangen und Gegenstoß — Dauer, Krone und Parlament",
+      "boardShare": 0.5061206979412324,
+      "games": 450,
+      "winRateWhenDecided": 0.35555555555555557,
+      "decidedWinRate": 0.5,
+      "drawRate": 0.28888888888888886,
+      "avgTurn": 12.591111111111111,
+      "artyAttackShare": 0.2998776009791922,
+      "artyCounterRate": 0.11428571428571428,
+      "selfFxPerGame": 0,
+      "drawFx": 44,
+      "healFx": 0,
+      "avgUnitLife": 4.86048387096774,
+      "worstVs": [
+        {
+          "foe": "Rothain",
+          "share": 0.45159963744856174
+        },
+        {
+          "foe": "Vesper",
+          "share": 0.4565799507916213
+        },
+        {
+          "foe": "Averon",
+          "share": 0.4684838060305589
+        }
+      ],
+      "bestVs": [
+        {
+          "foe": "Merovan",
+          "share": 0.5546116431503648
+        },
+        {
+          "foe": "Orthea",
+          "share": 0.5518432823468411
+        },
+        {
+          "foe": "Theryn",
+          "share": 0.5461430722671438
+        }
+      ],
+      "static": {
+        "avgSumPerAp": 2.090804597701149,
+        "avgAtkPerAp": 0.9166666666666667,
+        "avgDefPerAp": 1.1741379310344828,
+        "avgAp": 2.2333333333333334,
+        "costBuckets": {
+          "2": 22,
+          "3": 16,
+          "4": 6,
+          "0-1": 15,
+          "5+": 1
+        },
+        "fx": {
+          "selfHurt": 6,
+          "draw": 9,
+          "heal": 8,
+          "ap": 0,
+          "conditional": 25,
+          "protect": 1,
+          "withEffects": 22,
+          "empty": 38
+        },
+        "artyShareUnits": 0.27586206896551724,
+        "cheapUnits": [
+          "Kronenwache(1/2/3)",
+          "Parlamentsbote(1/1/2)",
+          "Auffangposten(2/2/3)",
+          "Markenläufer(2/2/2)",
+          "Stellungspanzer(2/2/4)",
+          "Lafettenwacht(2/2/2)",
+          "Markenspäher(2/1/2)",
+          "Gassenmelder(2/1/2)",
+          "Grenzlese(2/2/3)",
+          "Schulrain-Läufer(1/1/1)"
+        ],
+        "topEfficient": [
+          "Kronenwache 5.00 (2/3@1)",
+          "Parlamentsbote 3.00 (1/2@1)",
+          "Stellungspanzer 3.00 (2/4@2)",
+          "Auffangposten 2.50 (2/3@2)",
+          "Grenzlese 2.50 (2/3@2)"
+        ],
+        "bottomEfficient": [
+          "Sperrfeuer 1.50 (4/2@4)",
+          "Brückenau-Batterie 1.50 (3/3@4)",
+          "Markenspäher 1.50 (1/2@2)",
+          "Gassenmelder 1.50 (1/2@2)",
+          "Zeughausrohr 1.67 (3/2@3)"
+        ],
+        "selfHurtCards": [
+          "Stellungspanzer",
+          "Flussufer-Keil",
+          "Dauerrohr",
+          "Parlamentsgasse",
+          "Dauerstellung",
+          "Haushaltsfrage"
+        ],
+        "drawCards": [
+          "Kronland-Panzer",
+          "Markengeschütz",
+          "Auffangfeuer",
+          "Marei Aure",
+          "Tomas Lenn",
+          "Stille Ämter",
+          "Kronland-Hof",
+          "Sperrenkette"
+        ],
+        "healCards": [
+          "Gegenstoßkeil",
+          "Marei Aure",
+          "Zeughausmeister",
+          "Doppelhaus",
+          "Zeughaus Brückenau",
+          "Bindungstag",
+          "Lichthofen",
+          "Parlamentsstempel"
+        ],
+        "doctrines": [
+          {
+            "id": "dc_dok_auffangen",
+            "name": "Auffangen",
+            "text": "Eigene Einheiten haben +1 DEF. Hat der Gegner mehr Einheiten im Abschnitt, zusätzlich +1 DEF. Bei Gleichstand +1 ATK.",
+            "effects": [
+              "AUFFANGEN"
+            ]
+          },
+          {
+            "id": "dc_dok_gegenstoss",
+            "name": "Gegenstoß",
+            "text": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +1 ATK. Überlebt die angegriffene Einheit, heilt sie 1.",
+            "effects": [
+              "GEGENSTOSS"
+            ]
+          }
+        ],
+        "byTyp": {
+          "Einheit": 29,
+          "Unterstützung": 9,
+          "Soforteinsatz": 12,
+          "Ausrüstung": 10
+        },
+        "rar": {
+          "bronze": 40,
+          "silver": 14,
+          "gold": 6,
+          "other": 0
+        }
+      }
+    },
+    {
+      "nat": "Namar",
+      "theme": "Häfen und Rest — Marsch aus dem Vollen und Entsatz",
+      "boardShare": 0.5023202562430237,
+      "games": 450,
+      "winRateWhenDecided": 0.4577777777777778,
+      "decidedWinRate": 0.515,
+      "drawRate": 0.11111111111111116,
+      "avgTurn": 14.36,
+      "artyAttackShare": 0.34994697773064687,
+      "artyCounterRate": 0.10303030303030303,
+      "selfFxPerGame": 0,
+      "drawFx": 185,
+      "healFx": 50,
+      "avgUnitLife": 4.760270390984675,
+      "worstVs": [
+        {
+          "foe": "Caldris",
+          "share": 0.45671418356758525
+        },
+        {
+          "foe": "Karsk",
+          "share": 0.47881113652298807
+        },
+        {
+          "foe": "Ossaria",
+          "share": 0.48556759579610015
+        }
+      ],
+      "bestVs": [
+        {
+          "foe": "Steinmark",
+          "share": 0.5487322110620302
+        },
+        {
+          "foe": "Eldran",
+          "share": 0.5187663448431182
+        },
+        {
+          "foe": "Rothain",
+          "share": 0.5170677284267439
         }
       ],
       "static": {
@@ -1371,46 +1067,496 @@
       }
     },
     {
-      "nat": "Karsk",
-      "theme": "Körper als System",
-      "boardShare": 0.49311406856067747,
-      "games": 300,
-      "winRateWhenDecided": 0.38333333333333336,
-      "decidedWinRate": 0.45634920634920634,
-      "drawRate": 0.16000000000000003,
-      "avgTurn": 15.01,
-      "artyAttackShare": 0.3018867924528302,
-      "artyCounterRate": 0.09659090909090909,
-      "selfFxPerGame": 0.3,
-      "drawFx": 23,
-      "healFx": 58,
-      "avgUnitLife": 4.784220889373561,
+      "nat": "Rothain",
+      "theme": "Unfehlbare Krone",
+      "boardShare": 0.49949636913290385,
+      "games": 450,
+      "winRateWhenDecided": 0.42444444444444446,
+      "decidedWinRate": 0.4935400516795866,
+      "drawRate": 0.14,
+      "avgTurn": 15.073333333333334,
+      "artyAttackShare": 0.3183475091130012,
+      "artyCounterRate": 0.16030534351145037,
+      "selfFxPerGame": 0.20444444444444446,
+      "drawFx": 44,
+      "healFx": 46,
+      "avgUnitLife": 4.402910704511689,
       "worstVs": [
         {
-          "foe": "Dargan",
-          "share": 0.40817022705886413
-        },
-        {
-          "foe": "Merovan",
-          "share": 0.4430702302902129
+          "foe": "Vesper",
+          "share": 0.4233275945918797
         },
         {
           "foe": "Theryn",
-          "share": 0.45693661598969415
+          "share": 0.45630019464870597
+        },
+        {
+          "foe": "Dargan",
+          "share": 0.47498351403734423
         }
       ],
       "bestVs": [
         {
-          "foe": "Averon",
-          "share": 0.5537988238071279
-        },
-        {
-          "foe": "Orthea",
-          "share": 0.5333314025983594
+          "foe": "Lyr",
+          "share": 0.5561544816597411
         },
         {
           "foe": "Vael",
-          "share": 0.5248882169144731
+          "share": 0.550192332630116
+        },
+        {
+          "foe": "Eldran",
+          "share": 0.5484003625514382
+        }
+      ],
+      "static": {
+        "avgSumPerAp": 2.0022988505747126,
+        "avgAtkPerAp": 1.0316091954022988,
+        "avgDefPerAp": 0.9706896551724139,
+        "avgAp": 2.3666666666666667,
+        "costBuckets": {
+          "2": 20,
+          "3": 16,
+          "4": 6,
+          "0-1": 15,
+          "5+": 3
+        },
+        "fx": {
+          "selfHurt": 19,
+          "draw": 6,
+          "heal": 6,
+          "ap": 2,
+          "conditional": 28,
+          "protect": 2,
+          "withEffects": 25,
+          "empty": 35
+        },
+        "artyShareUnits": 0.27586206896551724,
+        "cheapUnits": [
+          "Schwurzug(2/2/2)",
+          "Kronwache(1/2/1)",
+          "Treuekompanie(2/3/2)",
+          "Ablösungskette(2/2/3)",
+          "Erbe-Kette(2/2/3)",
+          "Flussrot-Haubitzen(2/2/2)",
+          "Kronreiter(1/1/1)",
+          "Erbe-Späher(2/2/1)",
+          "Stillnarbe-Melder(2/2/2)",
+          "Neuhoff-Augen(1/1/2)"
+        ],
+        "topEfficient": [
+          "Kronwache 3.00 (2/1@1)",
+          "Neuhoff-Augen 3.00 (1/2@1)",
+          "Treuekompanie 2.50 (3/2@2)",
+          "Ablösungskette 2.50 (2/3@2)",
+          "Erbe-Kette 2.50 (2/3@2)"
+        ],
+        "bottomEfficient": [
+          "Erbe-Späher 1.50 (2/1@2)",
+          "Silberstern-Rohr 1.50 (4/2@4)",
+          "Kronsalve 1.60 (5/3@5)",
+          "Ablösungspanzer 1.67 (3/2@3)",
+          "Dekretbatterie 1.67 (3/2@3)"
+        ],
+        "selfHurtCards": [
+          "Kronwache",
+          "Treuekompanie",
+          "Regiment Erbe",
+          "Erlasswagen",
+          "Schwerpunktkeil",
+          "Ablösungspanzer",
+          "Dekretbatterie",
+          "Glockenstellung"
+        ],
+        "drawCards": [
+          "Kronreiter",
+          "Stillnarbe-Melder",
+          "Flussrot-Umschlag",
+          "Sofortablösung",
+          "Notdepot",
+          "Kronplakette"
+        ],
+        "healCards": [
+          "Ablösungskette",
+          "Werkstattbefehl",
+          "Sofortablösung",
+          "Silberstern-Rohr",
+          "Stabskarte",
+          "Ablösung"
+        ],
+        "doctrines": [
+          {
+            "id": "dc_dok_schwerpunkt",
+            "name": "Schwerpunkt",
+            "text": "Zu Beginn deines Zuges: Stehen mindestens drei eigene Einheiten in einem Abschnitt, erhält der dichteste Abschnitt +1 ATK bis Zugende.",
+            "effects": [
+              "SCHWERPUNKT"
+            ]
+          },
+          {
+            "id": "dc_dok_abloesung",
+            "name": "Ablösung",
+            "text": "Einmal pro Zug: Wird eine eigene Einheit zerstört, kostet die nächste Einheit in denselben Abschnitt 1 AP weniger (min. 1). Kein DEF-Bonus — die Krone ersetzt, ",
+            "effects": [
+              "ABLOESUNG"
+            ]
+          }
+        ],
+        "byTyp": {
+          "Einheit": 29,
+          "Unterstützung": 9,
+          "Soforteinsatz": 12,
+          "Ausrüstung": 10
+        },
+        "rar": {
+          "bronze": 40,
+          "silver": 14,
+          "gold": 6,
+          "other": 0
+        }
+      }
+    },
+    {
+      "nat": "Caldris",
+      "theme": "Schild und Akte — Etappensicherung und Rasten",
+      "boardShare": 0.49661353406526637,
+      "games": 450,
+      "winRateWhenDecided": 0.36,
+      "decidedWinRate": 0.5094339622641509,
+      "drawRate": 0.29333333333333333,
+      "avgTurn": 12.033333333333333,
+      "artyAttackShare": 0.3138138138138138,
+      "artyCounterRate": 0.14354066985645933,
+      "selfFxPerGame": 0,
+      "drawFx": 0,
+      "healFx": 209,
+      "avgUnitLife": 4.353813559322035,
+      "worstVs": [
+        {
+          "foe": "Merovan",
+          "share": 0.4332863807270752
+        },
+        {
+          "foe": "Averon",
+          "share": 0.43461876735384675
+        },
+        {
+          "foe": "Eldran",
+          "share": 0.45791940268399567
+        }
+      ],
+      "bestVs": [
+        {
+          "foe": "Steinmark",
+          "share": 0.5438336618369136
+        },
+        {
+          "foe": "Namar",
+          "share": 0.5432858164324147
+        },
+        {
+          "foe": "Sahr",
+          "share": 0.539431430905224
+        }
+      ],
+      "static": {
+        "avgSumPerAp": 2.086781609195402,
+        "avgAtkPerAp": 0.871264367816092,
+        "avgDefPerAp": 1.2155172413793103,
+        "avgAp": 2.3666666666666667,
+        "costBuckets": {
+          "2": 22,
+          "3": 14,
+          "4": 8,
+          "0-1": 14,
+          "5+": 2
+        },
+        "fx": {
+          "selfHurt": 15,
+          "draw": 9,
+          "heal": 29,
+          "ap": 0,
+          "conditional": 26,
+          "protect": 4,
+          "withEffects": 24,
+          "empty": 36
+        },
+        "artyShareUnits": 0.27586206896551724,
+        "cheapUnits": [
+          "Ruheposten(1/1/3)",
+          "Wachablösung(1/2/2)",
+          "Listenfuß(2/2/3)",
+          "Meldezug(2/2/2)",
+          "Schildreihe(2/2/4)",
+          "Seren-Kaliber(2/2/2)",
+          "Meldeläufer(2/1/2)",
+          "Aktenblick(2/1/2)",
+          "Ringwächter(2/2/3)",
+          "Formularspäher(1/1/1)"
+        ],
+        "topEfficient": [
+          "Ruheposten 4.00 (1/3@1)",
+          "Wachablösung 4.00 (2/2@1)",
+          "Schildreihe 3.00 (2/4@2)",
+          "Listenfuß 2.50 (2/3@2)",
+          "Ringwächter 2.50 (2/3@2)"
+        ],
+        "bottomEfficient": [
+          "Sperrfeuer-Etappe 1.50 (4/2@4)",
+          "Grünfeld-Rohr 1.50 (3/3@4)",
+          "Kontrollsalve 1.50 (4/2@4)",
+          "Meldeläufer 1.50 (1/2@2)",
+          "Aktenblick 1.50 (1/2@2)"
+        ],
+        "selfHurtCards": [
+          "Listenfuß",
+          "Versorgungskeil",
+          "Etappenwagen",
+          "Klinikschild",
+          "Schildwall",
+          "Deckungsfeuer",
+          "Sperrfeuer-Etappe",
+          "Ringwächter"
+        ],
+        "drawCards": [
+          "Meldezug",
+          "Wohnblock-Riegel",
+          "Forumspanzer",
+          "Meldeläufer",
+          "Alm Ser",
+          "Sicherheitsforum",
+          "Meldung",
+          "Frist"
+        ],
+        "healCards": [
+          "Seren-Zug",
+          "Versorgungskeil",
+          "Klinikschild",
+          "Notfallträger",
+          "Forumspanzer",
+          "Seren-Kaliber",
+          "Lückenhof-Geschütz",
+          "Aktenblick"
+        ],
+        "doctrines": [
+          {
+            "id": "dc_dok_etappensicherung",
+            "name": "Etappensicherung",
+            "text": "Eigene Einheiten haben +1 DEF. Die Etappe hält — ohne automatische Versorgungsheilung.",
+            "effects": [
+              "ETAPPENSICHERUNG"
+            ]
+          },
+          {
+            "id": "dc_dok_rasten",
+            "name": "Rasten",
+            "text": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK (kein DEF).",
+            "effects": [
+              "RASTEN"
+            ]
+          }
+        ],
+        "byTyp": {
+          "Einheit": 29,
+          "Unterstützung": 9,
+          "Soforteinsatz": 12,
+          "Ausrüstung": 10
+        },
+        "rar": {
+          "bronze": 40,
+          "silver": 14,
+          "gold": 6,
+          "other": 0
+        }
+      }
+    },
+    {
+      "nat": "Vael",
+      "theme": "Krieg als Geschäft — Feuerwalze und Nachlieferung",
+      "boardShare": 0.4954384550827486,
+      "games": 450,
+      "winRateWhenDecided": 0.38222222222222224,
+      "decidedWinRate": 0.5134328358208955,
+      "drawRate": 0.25555555555555554,
+      "avgTurn": 12.593333333333334,
+      "artyAttackShare": 0.3490566037735849,
+      "artyCounterRate": 0.06177606177606178,
+      "selfFxPerGame": 0,
+      "drawFx": 129,
+      "healFx": 122,
+      "avgUnitLife": 4.574226903587371,
+      "worstVs": [
+        {
+          "foe": "Rothain",
+          "share": 0.449807667369884
+        },
+        {
+          "foe": "Dargan",
+          "share": 0.4534054828006313
+        },
+        {
+          "foe": "Ossaria",
+          "share": 0.4588100752905984
+        }
+      ],
+      "bestVs": [
+        {
+          "foe": "Steinmark",
+          "share": 0.5457574013488585
+        },
+        {
+          "foe": "Sahr",
+          "share": 0.5381378250500979
+        },
+        {
+          "foe": "Lyr",
+          "share": 0.5234076200484336
+        }
+      ],
+      "static": {
+        "avgSumPerAp": 1.983333333333333,
+        "avgAtkPerAp": 1.042528735632184,
+        "avgDefPerAp": 0.9408045977011494,
+        "avgAp": 2.6,
+        "costBuckets": {
+          "2": 20,
+          "3": 17,
+          "4": 10,
+          "0-1": 10,
+          "5+": 3
+        },
+        "fx": {
+          "selfHurt": 1,
+          "draw": 11,
+          "heal": 9,
+          "ap": 0,
+          "conditional": 21,
+          "protect": 1,
+          "withEffects": 24,
+          "empty": 36
+        },
+        "artyShareUnits": 0.27586206896551724,
+        "cheapUnits": [
+          "Werkschutz(1/2/2)",
+          "Depotwache(2/2/3)",
+          "Schichttrupp(2/3/2)",
+          "Kontingentlinie(2/2/2)",
+          "Munitionskehle(2/2/2)",
+          "Zielmesser(2/1/2)",
+          "Verbrauchsspäher(2/2/1)",
+          "Depotläufer(2/1/3)",
+          "Lagebild(1/1/1)"
+        ],
+        "topEfficient": [
+          "Werkschutz 4.00 (2/2@1)",
+          "Depotwache 2.50 (2/3@2)",
+          "Schichttrupp 2.50 (3/2@2)",
+          "Ersatzwalze 2.33 (3/4@3)",
+          "Lieferkordon 2.00 (2/4@3)"
+        ],
+        "bottomEfficient": [
+          "Kaliberzeile 1.50 (4/2@4)",
+          "Flächenauftrag 1.50 (3/3@4)",
+          "Zielmesser 1.50 (1/2@2)",
+          "Verbrauchsspäher 1.50 (2/1@2)",
+          "Rohrpark 1.67 (3/2@3)"
+        ],
+        "selfHurtCards": [
+          "Dauerfeuer"
+        ],
+        "drawCards": [
+          "Bilanzsoldaten",
+          "Volltreffer",
+          "Verbrauchsspäher",
+          "Depotläufer",
+          "Auftragsring",
+          "Erzfall-Bericht",
+          "Quartalsende",
+          "Sofortbestellung"
+        ],
+        "healCards": [
+          "Schwere Lieferung",
+          "Werkmeister Front",
+          "Auftragsring",
+          "Werksanzeige",
+          "Quartalsende",
+          "Nachschubstoß",
+          "Kettentausch",
+          "Materialersatz"
+        ],
+        "doctrines": [
+          {
+            "id": "dc_dok_feuerwalze",
+            "name": "Feuerwalze",
+            "text": "Eigene Artillerie hat +1 ATK. Feuert sie, haben alle eigenen Einheiten in ihrem Abschnitt (inkl. der Artillerie) bis Zugende +1 ATK.",
+            "effects": [
+              "FEUERWALZE"
+            ]
+          },
+          {
+            "id": "dc_dok_materialersatz",
+            "name": "Materialersatz",
+            "text": "Panzer und Artillerie kosten 1 AP weniger (min. 1). Die Werkstatt läuft durchgehend — ohne Extra-Panzerung beim Einrücken.",
+            "effects": [
+              "MATERIALERSATZ"
+            ]
+          }
+        ],
+        "byTyp": {
+          "Einheit": 29,
+          "Unterstützung": 9,
+          "Soforteinsatz": 12,
+          "Ausrüstung": 10
+        },
+        "rar": {
+          "bronze": 40,
+          "silver": 14,
+          "gold": 6,
+          "other": 0
+        }
+      }
+    },
+    {
+      "nat": "Karsk",
+      "theme": "Körper als System",
+      "boardShare": 0.49075653921697193,
+      "games": 450,
+      "winRateWhenDecided": 0.39111111111111113,
+      "decidedWinRate": 0.4595300261096606,
+      "drawRate": 0.14888888888888885,
+      "avgTurn": 15.024444444444445,
+      "artyAttackShare": 0.3212996389891697,
+      "artyCounterRate": 0.10486891385767791,
+      "selfFxPerGame": 0.3244444444444444,
+      "drawFx": 32,
+      "healFx": 100,
+      "avgUnitLife": 4.757394649907341,
+      "worstVs": [
+        {
+          "foe": "Dargan",
+          "share": 0.4195769407921981
+        },
+        {
+          "foe": "Merovan",
+          "share": 0.43052838573648733
+        },
+        {
+          "foe": "Vesper",
+          "share": 0.4563352114234174
+        }
+      ],
+      "bestVs": [
+        {
+          "foe": "Orthea",
+          "share": 0.5392739220798918
+        },
+        {
+          "foe": "Namar",
+          "share": 0.5211888634770119
+        },
+        {
+          "foe": "Steinmark",
+          "share": 0.5166137725634321
         }
       ],
       "static": {
@@ -1525,138 +1671,288 @@
       }
     },
     {
-      "nat": "Rothain",
-      "theme": "Unfehlbare Krone",
-      "boardShare": 0.4927583628932544,
-      "games": 300,
-      "winRateWhenDecided": 0.42333333333333334,
-      "decidedWinRate": 0.48659003831417624,
-      "drawRate": 0.13,
-      "avgTurn": 15.81,
-      "artyAttackShare": 0.2991150442477876,
-      "artyCounterRate": 0.16568047337278108,
-      "selfFxPerGame": 0.22,
-      "drawFx": 27,
-      "healFx": 31,
-      "avgUnitLife": 4.462753048079134,
+      "nat": "Sahr",
+      "theme": "Fließen und Umgehen — Linienkrieg und Umgehen",
+      "boardShare": 0.48755431717824793,
+      "games": 450,
+      "winRateWhenDecided": 0.3511111111111111,
+      "decidedWinRate": 0.5,
+      "drawRate": 0.2977777777777778,
+      "avgTurn": 11.751111111111111,
+      "artyAttackShare": 0.31320224719101125,
+      "artyCounterRate": 0.1210762331838565,
+      "selfFxPerGame": 0,
+      "drawFx": 0,
+      "healFx": 0,
+      "avgUnitLife": 4.457191876750703,
       "worstVs": [
         {
-          "foe": "Caldris",
-          "share": 0.44745608568982326
+          "foe": "Dargan",
+          "share": 0.4484308204323179
         },
         {
-          "foe": "Vesper",
-          "share": 0.455368328497949
+          "foe": "Merovan",
+          "share": 0.44863545479567163
         },
         {
-          "foe": "Theryn",
-          "share": 0.46681535006776986
+          "foe": "Steinmark",
+          "share": 0.45771138198942024
         }
       ],
       "bestVs": [
         {
-          "foe": "Orthea",
-          "share": 0.5356744533451956
+          "foe": "Averon",
+          "share": 0.5509419726100337
         },
         {
-          "foe": "Vael",
-          "share": 0.5334466555461963
+          "foe": "Lyr",
+          "share": 0.5488255555497238
         },
         {
-          "foe": "Merovan",
-          "share": 0.5302170234785721
+          "foe": "Theryn",
+          "share": 0.5243660101227997
         }
       ],
       "static": {
-        "avgSumPerAp": 2.0022988505747126,
-        "avgAtkPerAp": 1.0316091954022988,
-        "avgDefPerAp": 0.9706896551724139,
-        "avgAp": 2.3666666666666667,
+        "avgSumPerAp": 2.0678160919540227,
+        "avgAtkPerAp": 0.959770114942529,
+        "avgDefPerAp": 1.1080459770114943,
+        "avgAp": 2.2333333333333334,
         "costBuckets": {
-          "2": 20,
+          "2": 22,
           "3": 16,
           "4": 6,
           "0-1": 15,
-          "5+": 3
+          "5+": 1
         },
         "fx": {
           "selfHurt": 19,
-          "draw": 6,
-          "heal": 6,
-          "ap": 2,
+          "draw": 12,
+          "heal": 4,
+          "ap": 0,
           "conditional": 28,
           "protect": 2,
-          "withEffects": 25,
-          "empty": 35
+          "withEffects": 22,
+          "empty": 38
         },
         "artyShareUnits": 0.27586206896551724,
         "cheapUnits": [
-          "Schwurzug(2/2/2)",
-          "Kronwache(1/2/1)",
-          "Treuekompanie(2/3/2)",
-          "Ablösungskette(2/2/3)",
-          "Erbe-Kette(2/2/3)",
-          "Flussrot-Haubitzen(2/2/2)",
-          "Kronreiter(1/1/1)",
-          "Erbe-Späher(2/2/1)",
-          "Stillnarbe-Melder(2/2/2)",
-          "Neuhoff-Augen(1/1/2)"
+          "Kolonnenwache(1/2/2)",
+          "Flankenläufer(1/2/1)",
+          "Straßenmeister(2/2/3)",
+          "Karawanenzug(2/2/3)",
+          "Umschlagwagen(2/2/3)",
+          "Marktgeschütz(2/2/2)",
+          "Pfadfinder(2/1/2)",
+          "Zollspäher(2/1/2)",
+          "Meldekarawane(2/2/3)",
+          "Abseitsläufer(1/1/1)"
         ],
         "topEfficient": [
-          "Kronwache 3.00 (2/1@1)",
-          "Neuhoff-Augen 3.00 (1/2@1)",
-          "Treuekompanie 2.50 (3/2@2)",
-          "Ablösungskette 2.50 (2/3@2)",
-          "Erbe-Kette 2.50 (2/3@2)"
+          "Kolonnenwache 4.00 (2/2@1)",
+          "Flankenläufer 3.00 (2/1@1)",
+          "Straßenmeister 2.50 (2/3@2)",
+          "Karawanenzug 2.50 (2/3@2)",
+          "Umschlagwagen 2.50 (2/3@2)"
         ],
         "bottomEfficient": [
-          "Erbe-Späher 1.50 (2/1@2)",
-          "Silberstern-Rohr 1.50 (4/2@4)",
-          "Kronsalve 1.60 (5/3@5)",
-          "Ablösungspanzer 1.67 (3/2@3)",
-          "Dekretbatterie 1.67 (3/2@3)"
+          "Linienbatterie 1.50 (4/2@4)",
+          "Vorratsrohr 1.50 (3/3@4)",
+          "Pfadfinder 1.50 (1/2@2)",
+          "Zollspäher 1.50 (1/2@2)",
+          "Linienrohr 1.67 (3/2@3)"
         ],
         "selfHurtCards": [
-          "Kronwache",
-          "Treuekompanie",
-          "Regiment Erbe",
-          "Erlasswagen",
-          "Schwerpunktkeil",
-          "Ablösungspanzer",
-          "Dekretbatterie",
-          "Glockenstellung"
+          "Kolonnenwache",
+          "Flankenläufer",
+          "Straßenmeister",
+          "Hauptkolonne",
+          "Lagerkeil",
+          "Flankenpanzer",
+          "Flankenstoß",
+          "Vorratsrohr"
         ],
         "drawCards": [
-          "Kronreiter",
-          "Stillnarbe-Melder",
-          "Flussrot-Umschlag",
-          "Sofortablösung",
-          "Notdepot",
-          "Kronplakette"
+          "Straßenbataillon",
+          "Pfadkeil",
+          "Flankenpanzer",
+          "Linienbatterie",
+          "Marktgeschütz",
+          "Sarun-Batterie",
+          "Zollspäher",
+          "Meldekarawane"
         ],
         "healCards": [
-          "Ablösungskette",
-          "Werkstattbefehl",
-          "Sofortablösung",
-          "Silberstern-Rohr",
-          "Stabskarte",
-          "Ablösung"
+          "Lotte Knoten",
+          "Sandmantel",
+          "Tuchknoten",
+          "Satteltasche"
         ],
         "doctrines": [
           {
-            "id": "dc_dok_schwerpunkt",
-            "name": "Schwerpunkt",
-            "text": "Zu Beginn deines Zuges: Stehen mindestens drei eigene Einheiten in einem Abschnitt, erhält der dichteste Abschnitt +1 ATK bis Zugende.",
+            "id": "dc_dok_linienkrieg",
+            "name": "Linienkrieg",
+            "text": "Eigene Einheiten haben +1 DEF. Stehen mindestens zwei eigene in einem Abschnitt, zusätzlich +1 DEF. Der Fluss hält die Linie.",
             "effects": [
-              "SCHWERPUNKT"
+              "LINIENKRIEG"
             ]
           },
           {
-            "id": "dc_dok_abloesung",
-            "name": "Ablösung",
-            "text": "Einmal pro Zug: Wird eine eigene Einheit zerstört, kostet die nächste Einheit in denselben Abschnitt 1 AP weniger (min. 1). Kein DEF-Bonus — die Krone ersetzt, ",
+            "id": "dc_dok_umgehen",
+            "name": "Umgehen",
+            "text": "Hast du in einem Abschnitt mehr Einheiten als der Gegner, haben sie +1 ATK.",
             "effects": [
-              "ABLOESUNG"
+              "UMGEHEN"
+            ]
+          }
+        ],
+        "byTyp": {
+          "Einheit": 29,
+          "Unterstützung": 9,
+          "Soforteinsatz": 12,
+          "Ausrüstung": 10
+        },
+        "rar": {
+          "bronze": 40,
+          "silver": 14,
+          "gold": 6,
+          "other": 0
+        }
+      }
+    },
+    {
+      "nat": "Lyr",
+      "theme": "Eid ohne Ort — Lauer und verteilte Stellung",
+      "boardShare": 0.4849624005564183,
+      "games": 450,
+      "winRateWhenDecided": 0.37777777777777777,
+      "decidedWinRate": 0.5345911949685535,
+      "drawRate": 0.29333333333333333,
+      "avgTurn": 13.033333333333333,
+      "artyAttackShare": 0.3352112676056338,
+      "artyCounterRate": 0.0546218487394958,
+      "selfFxPerGame": 0,
+      "drawFx": 42,
+      "healFx": 8,
+      "avgUnitLife": 4.616727256782505,
+      "worstVs": [
+        {
+          "foe": "Dargan",
+          "share": 0.42384910966758177
+        },
+        {
+          "foe": "Rothain",
+          "share": 0.44384551834025887
+        },
+        {
+          "foe": "Merovan",
+          "share": 0.4476891282484145
+        }
+      ],
+      "bestVs": [
+        {
+          "foe": "Karsk",
+          "share": 0.5217950870054705
+        },
+        {
+          "foe": "Orthea",
+          "share": 0.5195135998418967
+        },
+        {
+          "foe": "Eldran",
+          "share": 0.5157898210763977
+        }
+      ],
+      "static": {
+        "avgSumPerAp": 2.0781609195402297,
+        "avgAtkPerAp": 0.993103448275862,
+        "avgDefPerAp": 1.085057471264368,
+        "avgAp": 2.4166666666666665,
+        "costBuckets": {
+          "2": 25,
+          "3": 14,
+          "4": 8,
+          "0-1": 11,
+          "5+": 2
+        },
+        "fx": {
+          "selfHurt": 21,
+          "draw": 8,
+          "heal": 4,
+          "ap": 0,
+          "conditional": 29,
+          "protect": 0,
+          "withEffects": 22,
+          "empty": 38
+        },
+        "artyShareUnits": 0.27586206896551724,
+        "cheapUnits": [
+          "Talwache(1/2/2)",
+          "Passmiliz(1/1/3)",
+          "Weideposten(2/2/2)",
+          "Stilltal-Fuß(2/2/4)",
+          "Hochweide-Zug(2/3/2)",
+          "Eidhof-Kaliber(2/2/2)",
+          "Bergführer(2/1/2)",
+          "Hangläufer(2/2/1)",
+          "Pfadwächter(2/1/3)",
+          "Abschriftblick(1/1/1)"
+        ],
+        "topEfficient": [
+          "Talwache 4.00 (2/2@1)",
+          "Passmiliz 4.00 (1/3@1)",
+          "Stilltal-Fuß 3.00 (2/4@2)",
+          "Hochweide-Zug 2.50 (3/2@2)",
+          "Engenwalze 2.33 (3/4@3)"
+        ],
+        "bottomEfficient": [
+          "Warnsalve 1.50 (4/2@4)",
+          "Passzoll-Rohr 1.50 (3/3@4)",
+          "Bergführer 1.50 (1/2@2)",
+          "Hangläufer 1.50 (2/1@2)",
+          "Enger Weg 1.60 (5/3@5)"
+        ],
+        "selfHurtCards": [
+          "Talwache",
+          "Weideposten",
+          "Hochweide-Zug",
+          "Tunnelkeil",
+          "Passhaus-Schild",
+          "Leserbach-Keil",
+          "Steinschlag-Batterie",
+          "Passzoll-Rohr"
+        ],
+        "drawCards": [
+          "Hangpanzer",
+          "Eidhof-Kaliber",
+          "Hangläufer",
+          "Pfadwächter",
+          "Mar Aschen",
+          "Talruf",
+          "Lesehof",
+          "Leserruf"
+        ],
+        "healCards": [
+          "Mar Aschen",
+          "Nachhausegehen",
+          "Tunnelplatte",
+          "Leserklammer"
+        ],
+        "doctrines": [
+          {
+            "id": "dc_dok_lauer",
+            "name": "Lauer",
+            "text": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK.",
+            "effects": [
+              "LAUER"
+            ]
+          },
+          {
+            "id": "dc_dok_verteilte_stellung",
+            "name": "Verteilte Stellung",
+            "text": "Bist du allein im Abschnitt: +1 DEF. Verstreute Posten halten, massieren nicht.",
+            "effects": [
+              "VERTEILTE_STELLUNG"
             ]
           }
         ],
@@ -1677,44 +1973,44 @@
     {
       "nat": "Orthea",
       "theme": "Messung und Unterschrift — Punktfeuer und Lokalisierung",
-      "boardShare": 0.49168967420686877,
-      "games": 300,
-      "winRateWhenDecided": 0.47333333333333333,
-      "decidedWinRate": 0.5278810408921933,
-      "drawRate": 0.10333333333333339,
-      "avgTurn": 14.76,
-      "artyAttackShare": 0.3684210526315789,
-      "artyCounterRate": 0.04433497536945813,
+      "boardShare": 0.48374295516948906,
+      "games": 450,
+      "winRateWhenDecided": 0.43333333333333335,
+      "decidedWinRate": 0.48267326732673266,
+      "drawRate": 0.10222222222222221,
+      "avgTurn": 14.84,
+      "artyAttackShare": 0.3304878048780488,
+      "artyCounterRate": 0.07380073800738007,
       "selfFxPerGame": 0,
       "drawFx": 0,
-      "healFx": 67,
-      "avgUnitLife": 4.744474736459471,
+      "healFx": 112,
+      "avgUnitLife": 4.772981973358856,
       "worstVs": [
         {
           "foe": "Dargan",
-          "share": 0.42659628732948696
-        },
-        {
-          "foe": "Averon",
-          "share": 0.4359114299734698
+          "share": 0.42041120238249857
         },
         {
           "foe": "Eldran",
-          "share": 0.4642557355815969
+          "share": 0.44815671765315895
+        },
+        {
+          "foe": "Karsk",
+          "share": 0.46072607792010817
         }
       ],
       "bestVs": [
         {
           "foe": "Merovan",
-          "share": 0.5581768418059683
-        },
-        {
-          "foe": "Steinmark",
-          "share": 0.5463980341375526
+          "share": 0.5398732131601534
         },
         {
           "foe": "Namar",
-          "share": 0.5325239297710151
+          "share": 0.5136573476694468
+        },
+        {
+          "foe": "Steinmark",
+          "share": 0.5071679071560301
         }
       ],
       "static": {
@@ -1809,7 +2105,7 @@
           {
             "id": "dc_dok_lokalisierung",
             "name": "Lokalisierung",
-            "text": "Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an. Beschädigte aufgedeckte Feinde zusätzlich +1.",
+            "text": "Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an.",
             "effects": [
               "LOKALISIERUNG"
             ]
@@ -1830,343 +2126,46 @@
       }
     },
     {
-      "nat": "Sahr",
-      "theme": "Fließen und Umgehen — Linienkrieg und Umgehen",
-      "boardShare": 0.48522645402366854,
-      "games": 300,
-      "winRateWhenDecided": 0.32,
-      "decidedWinRate": 0.463768115942029,
-      "drawRate": 0.31000000000000005,
-      "avgTurn": 12.076666666666666,
-      "artyAttackShare": 0.32170542635658916,
-      "artyCounterRate": 0.09036144578313253,
-      "selfFxPerGame": 0,
-      "drawFx": 0,
+      "nat": "Theryn",
+      "theme": "Pflichtglaube, Wellen, Maß statt Eifer allein",
+      "boardShare": 0.48072018492528645,
+      "games": 450,
+      "winRateWhenDecided": 0.4177777777777778,
+      "decidedWinRate": 0.4845360824742268,
+      "drawRate": 0.13777777777777778,
+      "avgTurn": 15.091111111111111,
+      "artyAttackShare": 0.2759051186017478,
+      "artyCounterRate": 0.11764705882352941,
+      "selfFxPerGame": 0.8266666666666667,
+      "drawFx": 38,
       "healFx": 0,
-      "avgUnitLife": 4.457285307285306,
+      "avgUnitLife": 4.378788230739451,
       "worstVs": [
         {
-          "foe": "Vesper",
-          "share": 0.428874059098794
+          "foe": "Averon",
+          "share": 0.4139737259520653
         },
         {
-          "foe": "Steinmark",
-          "share": 0.43175061396823233
+          "foe": "Dargan",
+          "share": 0.42691894945175446
         },
         {
-          "foe": "Merovan",
-          "share": 0.4371799567284317
+          "foe": "Ossaria",
+          "share": 0.4271908153778036
         }
       ],
       "bestVs": [
         {
-          "foe": "Averon",
-          "share": 0.5597525937027277
-        },
-        {
-          "foe": "Karsk",
-          "share": 0.512424447383356
-        },
-        {
-          "foe": "Lyr",
-          "share": 0.5062425398221873
-        }
-      ],
-      "static": {
-        "avgSumPerAp": 2.0678160919540227,
-        "avgAtkPerAp": 0.959770114942529,
-        "avgDefPerAp": 1.1080459770114943,
-        "avgAp": 2.2333333333333334,
-        "costBuckets": {
-          "2": 22,
-          "3": 16,
-          "4": 6,
-          "0-1": 15,
-          "5+": 1
-        },
-        "fx": {
-          "selfHurt": 19,
-          "draw": 12,
-          "heal": 4,
-          "ap": 0,
-          "conditional": 28,
-          "protect": 2,
-          "withEffects": 22,
-          "empty": 38
-        },
-        "artyShareUnits": 0.27586206896551724,
-        "cheapUnits": [
-          "Kolonnenwache(1/2/2)",
-          "Flankenläufer(1/2/1)",
-          "Straßenmeister(2/2/3)",
-          "Karawanenzug(2/2/3)",
-          "Umschlagwagen(2/2/3)",
-          "Marktgeschütz(2/2/2)",
-          "Pfadfinder(2/1/2)",
-          "Zollspäher(2/1/2)",
-          "Meldekarawane(2/2/3)",
-          "Abseitsläufer(1/1/1)"
-        ],
-        "topEfficient": [
-          "Kolonnenwache 4.00 (2/2@1)",
-          "Flankenläufer 3.00 (2/1@1)",
-          "Straßenmeister 2.50 (2/3@2)",
-          "Karawanenzug 2.50 (2/3@2)",
-          "Umschlagwagen 2.50 (2/3@2)"
-        ],
-        "bottomEfficient": [
-          "Linienbatterie 1.50 (4/2@4)",
-          "Vorratsrohr 1.50 (3/3@4)",
-          "Pfadfinder 1.50 (1/2@2)",
-          "Zollspäher 1.50 (1/2@2)",
-          "Linienrohr 1.67 (3/2@3)"
-        ],
-        "selfHurtCards": [
-          "Kolonnenwache",
-          "Flankenläufer",
-          "Straßenmeister",
-          "Hauptkolonne",
-          "Lagerkeil",
-          "Flankenpanzer",
-          "Flankenstoß",
-          "Vorratsrohr"
-        ],
-        "drawCards": [
-          "Straßenbataillon",
-          "Pfadkeil",
-          "Flankenpanzer",
-          "Linienbatterie",
-          "Marktgeschütz",
-          "Sarun-Batterie",
-          "Zollspäher",
-          "Meldekarawane"
-        ],
-        "healCards": [
-          "Lotte Knoten",
-          "Sandmantel",
-          "Tuchknoten",
-          "Satteltasche"
-        ],
-        "doctrines": [
-          {
-            "id": "dc_dok_linienkrieg",
-            "name": "Linienkrieg",
-            "text": "Stehen mindestens zwei eigene Einheiten in einem Abschnitt, haben sie +1 DEF. Der Fluss hält die Linie — ohne Solo-Bonus.",
-            "effects": [
-              "LINIENKRIEG"
-            ]
-          },
-          {
-            "id": "dc_dok_umgehen",
-            "name": "Umgehen",
-            "text": "Hast du in einem Abschnitt mehr Einheiten als der Gegner, haben sie +1 ATK.",
-            "effects": [
-              "UMGEHEN"
-            ]
-          }
-        ],
-        "byTyp": {
-          "Einheit": 29,
-          "Unterstützung": 9,
-          "Soforteinsatz": 12,
-          "Ausrüstung": 10
-        },
-        "rar": {
-          "bronze": 40,
-          "silver": 14,
-          "gold": 6,
-          "other": 0
-        }
-      }
-    },
-    {
-      "nat": "Steinmark",
-      "theme": "Verfahren und Freigabe — Feuerplan und Normverband",
-      "boardShare": 0.4804864043435208,
-      "games": 300,
-      "winRateWhenDecided": 0.36,
-      "decidedWinRate": 0.4931506849315068,
-      "drawRate": 0.27,
-      "avgTurn": 12.916666666666666,
-      "artyAttackShare": 0.35526315789473684,
-      "artyCounterRate": 0.1164021164021164,
-      "selfFxPerGame": 0,
-      "drawFx": 0,
-      "healFx": 0,
-      "avgUnitLife": 4.486216517857143,
-      "worstVs": [
-        {
-          "foe": "Caldris",
-          "share": 0.41008092786278577
+          "foe": "Rothain",
+          "share": 0.543699805351294
         },
         {
           "foe": "Vael",
-          "share": 0.45237425040814844
+          "share": 0.5178324112993143
         },
         {
-          "foe": "Orthea",
-          "share": 0.4536019658624473
-        }
-      ],
-      "bestVs": [
-        {
-          "foe": "Sahr",
-          "share": 0.5682493860317677
-        },
-        {
-          "foe": "Averon",
-          "share": 0.5089954836612905
-        },
-        {
-          "foe": "Rothain",
-          "share": 0.5010381770887168
-        }
-      ],
-      "static": {
-        "avgSumPerAp": 2.194252873563218,
-        "avgAtkPerAp": 1.0057471264367817,
-        "avgDefPerAp": 1.1885057471264369,
-        "avgAp": 2.2,
-        "costBuckets": {
-          "2": 23,
-          "3": 14,
-          "4": 6,
-          "0-1": 16,
-          "5+": 1
-        },
-        "fx": {
-          "selfHurt": 12,
-          "draw": 14,
-          "heal": 1,
-          "ap": 0,
-          "conditional": 31,
-          "protect": 3,
-          "withEffects": 22,
-          "empty": 38
-        },
-        "artyShareUnits": 0.27586206896551724,
-        "cheapUnits": [
-          "Normzug(1/2/2)",
-          "Reservekompanie(1/2/2)",
-          "Bahnsteigwache(1/2/2)",
-          "Wachzug(2/2/3)",
-          "Feldwacht-Zug(2/2/4)",
-          "Grenzstein-Posten(2/2/3)",
-          "Normwagen(2/2/3)",
-          "Messwurf(2/2/2)",
-          "Beobachtungsposten(2/1/2)",
-          "Feldmesser(2/1/2)"
-        ],
-        "topEfficient": [
-          "Normzug 4.00 (2/2@1)",
-          "Reservekompanie 4.00 (2/2@1)",
-          "Bahnsteigwache 4.00 (2/2@1)",
-          "Feldwacht-Zug 3.00 (2/4@2)",
-          "Wachzug 2.50 (2/3@2)"
-        ],
-        "bottomEfficient": [
-          "Planbatterie 1.50 (4/2@4)",
-          "Normartillerie 1.50 (3/3@4)",
-          "Beobachtungsposten 1.50 (1/2@2)",
-          "Feldmesser 1.50 (1/2@2)",
-          "Normgeschütz 1.67 (3/2@3)"
-        ],
-        "selfHurtCards": [
-          "Normzug",
-          "Bahnsteigwache",
-          "Feldwacht-Zug",
-          "Depotkeil",
-          "Bahnkeil",
-          "Messwurf",
-          "Synchronrohr",
-          "Normartillerie"
-        ],
-        "drawCards": [
-          "Standardkeil",
-          "Normgeschütz",
-          "Planbatterie",
-          "Albensee-Batterie",
-          "Meldekette",
-          "Peiltrupp",
-          "Stabsoffizier",
-          "Kommissionsdepot"
-        ],
-        "healCards": [
-          "Messlatte"
-        ],
-        "doctrines": [
-          {
-            "id": "dc_dok_feuerplan",
-            "name": "Feuerplan",
-            "text": "Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an (1× pro Zug).",
-            "effects": [
-              "AUFKLAERUNGSSCHLAG"
-            ]
-          },
-          {
-            "id": "dc_dok_normverband",
-            "name": "Normverband",
-            "text": "Hast du Infanterie, Panzer und Artillerie an der Front, haben alle eigenen Fronteinheiten +1 ATK (kein DEF).",
-            "effects": [
-              "NORMVERBAND"
-            ]
-          }
-        ],
-        "byTyp": {
-          "Einheit": 29,
-          "Unterstützung": 9,
-          "Soforteinsatz": 12,
-          "Ausrüstung": 10
-        },
-        "rar": {
-          "bronze": 40,
-          "silver": 14,
-          "gold": 6,
-          "other": 0
-        }
-      }
-    },
-    {
-      "nat": "Theryn",
-      "theme": "Pflichtglaube, Wellen, Maß statt Eifer allein",
-      "boardShare": 0.47971110765554104,
-      "games": 300,
-      "winRateWhenDecided": 0.44333333333333336,
-      "decidedWinRate": 0.51953125,
-      "drawRate": 0.1466666666666666,
-      "avgTurn": 15.223333333333333,
-      "artyAttackShare": 0.28113879003558717,
-      "artyCounterRate": 0.18354430379746836,
-      "selfFxPerGame": 0.8533333333333334,
-      "drawFx": 30,
-      "healFx": 0,
-      "avgUnitLife": 4.5527116402116405,
-      "worstVs": [
-        {
-          "foe": "Dargan",
-          "share": 0.3881294254889796
-        },
-        {
-          "foe": "Averon",
-          "share": 0.3885142293593027
-        },
-        {
-          "foe": "Caldris",
-          "share": 0.4330555536617144
-        }
-      ],
-      "bestVs": [
-        {
-          "foe": "Karsk",
-          "share": 0.5430633840103058
-        },
-        {
-          "foe": "Rothain",
-          "share": 0.5331846499322304
-        },
-        {
-          "foe": "Vesper",
-          "share": 0.5246024101910072
+          "foe": "Steinmark",
+          "share": 0.5139698410383564
         }
       ],
       "static": {
@@ -2272,134 +2271,135 @@
       }
     },
     {
-      "nat": "Vael",
-      "theme": "Krieg als Geschäft — Feuerwalze und Nachlieferung",
-      "boardShare": 0.479465937083116,
-      "games": 300,
-      "winRateWhenDecided": 0.32666666666666666,
-      "decidedWinRate": 0.45161290322580644,
-      "drawRate": 0.2766666666666666,
-      "avgTurn": 12.906666666666666,
-      "artyAttackShare": 0.32905982905982906,
-      "artyCounterRate": 0.07792207792207792,
+      "nat": "Steinmark",
+      "theme": "Verfahren und Freigabe — Feuerplan und Normverband",
+      "boardShare": 0.4803160441998289,
+      "games": 450,
+      "winRateWhenDecided": 0.37333333333333335,
+      "decidedWinRate": 0.5029940119760479,
+      "drawRate": 0.2577777777777778,
+      "avgTurn": 12.833333333333334,
+      "artyAttackShare": 0.3695090439276486,
+      "artyCounterRate": 0.10839160839160839,
       "selfFxPerGame": 0,
-      "drawFx": 80,
-      "healFx": 77,
-      "avgUnitLife": 4.774341874341873,
+      "drawFx": 0,
+      "healFx": 0,
+      "avgUnitLife": 4.383972543972544,
       "worstVs": [
         {
-          "foe": "Averon",
-          "share": 0.4314922244633264
+          "foe": "Dargan",
+          "share": 0.4250804508480798
         },
         {
-          "foe": "Eldran",
-          "share": 0.445798223273992
+          "foe": "Ossaria",
+          "share": 0.43658331489859376
         },
         {
-          "foe": "Merovan",
-          "share": 0.44708640567604385
+          "foe": "Namar",
+          "share": 0.45126778893796976
         }
       ],
       "bestVs": [
         {
-          "foe": "Steinmark",
-          "share": 0.5476257495918515
-        },
-        {
-          "foe": "Theryn",
-          "share": 0.5185903634631489
-        },
-        {
           "foe": "Sahr",
-          "share": 0.5081563840438112
+          "share": 0.5422886180105799
+        },
+        {
+          "foe": "Lyr",
+          "share": 0.5333358151439765
+        },
+        {
+          "foe": "Rothain",
+          "share": 0.5121257109740873
         }
       ],
       "static": {
-        "avgSumPerAp": 1.983333333333333,
-        "avgAtkPerAp": 1.042528735632184,
-        "avgDefPerAp": 0.9408045977011494,
-        "avgAp": 2.6,
+        "avgSumPerAp": 2.194252873563218,
+        "avgAtkPerAp": 1.0057471264367817,
+        "avgDefPerAp": 1.1885057471264369,
+        "avgAp": 2.2,
         "costBuckets": {
-          "2": 20,
-          "3": 17,
-          "4": 10,
-          "0-1": 10,
-          "5+": 3
+          "2": 23,
+          "3": 14,
+          "4": 6,
+          "0-1": 16,
+          "5+": 1
         },
         "fx": {
-          "selfHurt": 1,
-          "draw": 11,
-          "heal": 9,
+          "selfHurt": 12,
+          "draw": 14,
+          "heal": 1,
           "ap": 0,
-          "conditional": 21,
-          "protect": 1,
-          "withEffects": 24,
-          "empty": 36
+          "conditional": 31,
+          "protect": 3,
+          "withEffects": 22,
+          "empty": 38
         },
         "artyShareUnits": 0.27586206896551724,
         "cheapUnits": [
-          "Werkschutz(1/2/2)",
-          "Depotwache(2/2/3)",
-          "Schichttrupp(2/3/2)",
-          "Kontingentlinie(2/2/2)",
-          "Munitionskehle(2/2/2)",
-          "Zielmesser(2/1/2)",
-          "Verbrauchsspäher(2/2/1)",
-          "Depotläufer(2/1/3)",
-          "Lagebild(1/1/1)"
+          "Normzug(1/2/2)",
+          "Reservekompanie(1/2/2)",
+          "Bahnsteigwache(1/2/2)",
+          "Wachzug(2/2/3)",
+          "Feldwacht-Zug(2/2/4)",
+          "Grenzstein-Posten(2/2/3)",
+          "Normwagen(2/2/3)",
+          "Messwurf(2/2/2)",
+          "Beobachtungsposten(2/1/2)",
+          "Feldmesser(2/1/2)"
         ],
         "topEfficient": [
-          "Werkschutz 4.00 (2/2@1)",
-          "Depotwache 2.50 (2/3@2)",
-          "Schichttrupp 2.50 (3/2@2)",
-          "Ersatzwalze 2.33 (3/4@3)",
-          "Lieferkordon 2.00 (2/4@3)"
+          "Normzug 4.00 (2/2@1)",
+          "Reservekompanie 4.00 (2/2@1)",
+          "Bahnsteigwache 4.00 (2/2@1)",
+          "Feldwacht-Zug 3.00 (2/4@2)",
+          "Wachzug 2.50 (2/3@2)"
         ],
         "bottomEfficient": [
-          "Kaliberzeile 1.50 (4/2@4)",
-          "Flächenauftrag 1.50 (3/3@4)",
-          "Zielmesser 1.50 (1/2@2)",
-          "Verbrauchsspäher 1.50 (2/1@2)",
-          "Rohrpark 1.67 (3/2@3)"
+          "Planbatterie 1.50 (4/2@4)",
+          "Normartillerie 1.50 (3/3@4)",
+          "Beobachtungsposten 1.50 (1/2@2)",
+          "Feldmesser 1.50 (1/2@2)",
+          "Normgeschütz 1.67 (3/2@3)"
         ],
         "selfHurtCards": [
-          "Dauerfeuer"
+          "Normzug",
+          "Bahnsteigwache",
+          "Feldwacht-Zug",
+          "Depotkeil",
+          "Bahnkeil",
+          "Messwurf",
+          "Synchronrohr",
+          "Normartillerie"
         ],
         "drawCards": [
-          "Bilanzsoldaten",
-          "Volltreffer",
-          "Verbrauchsspäher",
-          "Depotläufer",
-          "Auftragsring",
-          "Erzfall-Bericht",
-          "Quartalsende",
-          "Sofortbestellung"
+          "Standardkeil",
+          "Normgeschütz",
+          "Planbatterie",
+          "Albensee-Batterie",
+          "Meldekette",
+          "Peiltrupp",
+          "Stabsoffizier",
+          "Kommissionsdepot"
         ],
         "healCards": [
-          "Schwere Lieferung",
-          "Werkmeister Front",
-          "Auftragsring",
-          "Werksanzeige",
-          "Quartalsende",
-          "Nachschubstoß",
-          "Kettentausch",
-          "Materialersatz"
+          "Messlatte"
         ],
         "doctrines": [
           {
-            "id": "dc_dok_feuerwalze",
-            "name": "Feuerwalze",
-            "text": "Eigene Artillerie hat +1 ATK. Feuert sie, haben alle eigenen Einheiten in ihrem Abschnitt (inkl. der Artillerie) bis Zugende +1 ATK.",
+            "id": "dc_dok_feuerplan",
+            "name": "Feuerplan",
+            "text": "Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an (1× pro Zug).",
             "effects": [
-              "FEUERWALZE"
+              "AUFKLAERUNGSSCHLAG"
             ]
           },
           {
-            "id": "dc_dok_materialersatz",
-            "name": "Materialersatz",
-            "text": "Panzer und Artillerie kosten 1 AP weniger (min. 1), sobald du mindestens eine Einheit verloren hast. Beim Einrücken solcher Einheiten +1 DEF.",
+            "id": "dc_dok_normverband",
+            "name": "Normverband",
+            "text": "Hast du Infanterie, Panzer und Artillerie an der Front, haben alle eigenen Fronteinheiten +1 ATK (kein DEF).",
             "effects": [
-              "MATERIALERSATZ"
+              "NORMVERBAND"
             ]
           }
         ],
@@ -2860,7 +2860,7 @@
         {
           "id": "dc_dok_materialersatz",
           "name": "Materialersatz",
-          "text": "Panzer und Artillerie kosten 1 AP weniger (min. 1), sobald du mindestens eine Einheit verloren hast. Beim Einrücken solcher Einheiten +1 DEF.",
+          "text": "Panzer und Artillerie kosten 1 AP weniger (min. 1). Die Werkstatt läuft durchgehend — ohne Extra-Panzerung beim Einrücken.",
           "effects": [
             "MATERIALERSATZ"
           ]
@@ -2967,7 +2967,7 @@
         {
           "id": "dc_dok_verlegung",
           "name": "Verlegung",
-          "text": "Einmal pro Zug darfst du eine eigene Einheit um einen Slot seitlich schieben. Alle eigenen Fronteinheiten haben +1 DEF in deinem Zug (Weg bleibt offen).",
+          "text": "Einmal pro Zug darfst du für 1 AP eine eigene Einheit um einen Slot seitlich schieben (Weg bleibt offen). Beweglichkeit statt Panzerung.",
           "effects": [
             "VERLEGUNG"
           ]
@@ -2975,7 +2975,7 @@
         {
           "id": "dc_dok_ausharren",
           "name": "Ausharren",
-          "text": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 ATK und +1 DEF.",
+          "text": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 DEF.",
           "effects": [
             "AUSHARREN"
           ]
@@ -3089,7 +3089,7 @@
         {
           "id": "dc_dok_verteilte_stellung",
           "name": "Verteilte Stellung",
-          "text": "Bist du allein im Abschnitt: +1 DEF. Mindestens zwei eigene: +1 ATK.",
+          "text": "Bist du allein im Abschnitt: +1 DEF. Verstreute Posten halten, massieren nicht.",
           "effects": [
             "VERTEILTE_STELLUNG"
           ]
@@ -3198,7 +3198,7 @@
         {
           "id": "dc_dok_abnutzung",
           "name": "Abnutzung",
-          "text": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, du heilst 1 dort, und du ziehst 1 Karte. Übrige Abschnitte +1 DEF bis Ende ",
+          "text": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, du heilst 1 dort, und du ziehst 1 Karte.",
           "effects": [
             "ABNUTZUNG"
           ]
@@ -3316,7 +3316,7 @@
         {
           "id": "dc_dok_etappensicherung",
           "name": "Etappensicherung",
-          "text": "Zu Beginn deines Zuges heilt eine beschädigte eigene Einheit 1. Eigene Einheiten haben +1 DEF.",
+          "text": "Eigene Einheiten haben +1 DEF. Die Etappe hält — ohne automatische Versorgungsheilung.",
           "effects": [
             "ETAPPENSICHERUNG"
           ]
@@ -3443,7 +3443,7 @@
         {
           "id": "dc_dok_lokalisierung",
           "name": "Lokalisierung",
-          "text": "Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an. Beschädigte aufgedeckte Feinde zusätzlich +1.",
+          "text": "Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an.",
           "effects": [
             "LOKALISIERUNG"
           ]
@@ -3778,7 +3778,7 @@
         {
           "id": "dc_dok_linienkrieg",
           "name": "Linienkrieg",
-          "text": "Stehen mindestens zwei eigene Einheiten in einem Abschnitt, haben sie +1 DEF. Der Fluss hält die Linie — ohne Solo-Bonus.",
+          "text": "Eigene Einheiten haben +1 DEF. Stehen mindestens zwei eigene in einem Abschnitt, zusätzlich +1 DEF. Der Fluss hält die Linie.",
           "effects": [
             "LINIENKRIEG"
           ]
@@ -4122,7 +4122,7 @@
         {
           "id": "dc_dok_abschluss",
           "name": "Abschluss",
-          "text": "Zerstört eine eigene Einheit ein Ziel, hat sie +2 ATK bis Ende deines nächsten Zuges und du ziehst 1.",
+          "text": "Zerstört eine eigene Einheit ein Ziel, hat sie +1 ATK bis Ende deines nächsten Zuges und du ziehst 1.",
           "effects": [
             "ABSCHLUSS"
           ]
@@ -4238,7 +4238,7 @@
         {
           "id": "dc_dok_gegenstoss",
           "name": "Gegenstoß",
-          "text": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +2 ATK. Überlebt die angegriffene Einheit, heilt sie 1.",
+          "text": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +1 ATK. Überlebt die angegriffene Einheit, heilt sie 1.",
           "effects": [
             "GEGENSTOSS"
           ]

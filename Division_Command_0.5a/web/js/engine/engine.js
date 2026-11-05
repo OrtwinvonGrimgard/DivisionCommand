@@ -974,24 +974,29 @@
         }); // nächster Schritt im Ablauf
         // Doktrin Verlegung: 1×/Zug seitlich schieben
         if (this._hasDoctrine && this._hasDoctrine(p, 'VERLEGUNG') && !(p.flags && p.flags.dokVerlegungUsed === this.state.turn)) {
-          const order = ['L', 'C', 'R'];
-          this.frontList(p).forEach((loc) => {
-            if (!loc.inst || loc.inst.facedown) return;
-            const i = order.indexOf(loc.section);
-            [-1, 1].forEach((d) => {
-              const ni = i + d;
-              if (ni < 0 || ni > 2) return;
-              const sec = order[ni];
-              if (p.front[sec][loc.row]) return;
-              acts.push({
-                type: 'DOK_SHIFT',
-                uid: loc.inst.uid,
-                slot: { section: sec, row: loc.row },
-                name: (this.defOf(loc.inst) || {}).name || 'Einheit',
-                label: 'Verlegung → ' + sec + (loc.row + 1),
+          const vp = (this._dokParam && this._dokParam(p, 'VERLEGUNG')) || {};
+          const shiftAp = Number(vp.ap || 0);
+          if (p.ap >= shiftAp) {
+            const order = ['L', 'C', 'R'];
+            this.frontList(p).forEach((loc) => {
+              if (!loc.inst || loc.inst.facedown) return;
+              const i = order.indexOf(loc.section);
+              [-1, 1].forEach((d) => {
+                const ni = i + d;
+                if (ni < 0 || ni > 2) return;
+                const sec = order[ni];
+                if (p.front[sec][loc.row]) return;
+                acts.push({
+                  type: 'DOK_SHIFT',
+                  uid: loc.inst.uid,
+                  slot: { section: sec, row: loc.row },
+                  cost: shiftAp,
+                  name: (this.defOf(loc.inst) || {}).name || 'Einheit',
+                  label: 'Verlegung → ' + sec + (loc.row + 1),
+                });
               });
             });
-          });
+          }
         }
         acts.push({ type: 'END_TURN' }); // nächster Schritt im Ablauf
         acts.push({ type: 'PROPOSE_PEACE' }); // nächster Schritt im Ablauf
@@ -5167,6 +5172,9 @@
       if (this.state.active !== pid) throw new Error('Nur im eigenen Zug');
       if (!(this._hasDoctrine && this._hasDoctrine(p, 'VERLEGUNG'))) throw new Error('Keine Verlegung');
       if (p.flags && p.flags.dokVerlegungUsed === this.state.turn) throw new Error('Verlegung schon genutzt');
+      const vp = (this._dokParam && this._dokParam(p, 'VERLEGUNG')) || {};
+      const shiftAp = Number(vp.ap || 0);
+      if (shiftAp) this._spend(p, shiftAp);
       const loc = this.findInst(a.uid);
       if (!loc || loc.player.id !== pid || loc.zone !== 'front') throw new Error('Keine eigene Einheit');
       const dest = a.slot;
@@ -5180,7 +5188,7 @@
       p.front[dest.section][dest.row] = loc.inst;
       p.flags = p.flags || {};
       p.flags.dokVerlegungUsed = this.state.turn;
-      this._log(p.name + ' verlegt ' + this.defOf(loc.inst).name + ' → ' + dest.section + (dest.row + 1) + '.');
+      this._log(p.name + ' verlegt ' + this.defOf(loc.inst).name + ' → ' + dest.section + (dest.row + 1) + (shiftAp ? ' (' + shiftAp + ' AP)' : '') + '.');
       return { ok: true };
     }
 

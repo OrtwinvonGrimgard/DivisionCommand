@@ -287,7 +287,7 @@
       }
       if (a.type === 'REVEAL_UNIT') scored.push({ act: a, score: 3 });
       if (a.type === 'DOK_SHIFT') {
-        var sc = 6;
+        var sc = 6 - 3 * Number(a.cost || 0);
         if (a.slot && a.slot.section === 'C') sc += 4;
         scored.push({ act: a, score: sc });
       }

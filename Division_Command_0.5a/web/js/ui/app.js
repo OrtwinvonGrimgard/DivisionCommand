@@ -2448,7 +2448,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
           db.unshift({ id: 'healarm', label: 'Feldreparatur (eigener Zug, 1×)', primary: true });
         }
         if (def.id === 'dc_dok_verlegung') {
-          db.unshift({ id: 'verlegung', label: 'Verlegung: 1 Slot seitlich (1× Zug)', primary: true });
+          db.unshift({ id: 'verlegung', label: 'Verlegung: 1 Slot seitlich (1 AP, 1× Zug)', primary: true });
         }
         openInspect({
           def: def,
@@ -2475,7 +2475,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
                 document.getElementById('vl-ok').onclick = function () { ovv.style.display = 'none'; };
                 return;
               }
-              ovv.innerHTML = '<div class="modal"><h2>Verlegung</h2><p>Einheit 1 Slot seitlich schieben (1× pro Zug).</p><div class="choices">' +
+              ovv.innerHTML = '<div class="modal"><h2>Verlegung</h2><p>Einheit 1 Slot seitlich schieben (1 AP, 1× pro Zug).</p><div class="choices">' +
                 shifts.map(function (a, i) {
                   return '<button type="button" data-i="' + i + '">' + (a.label || a.name) + '</button>';
                 }).join('') + '</div><button type="button" id="vl-no">Abbrechen</button></div>';

@@ -53,11 +53,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, du heilst 1 dort, und du ziehst 1 Karte. Übrige Abschnitte +1 DEF bis Ende deines nächsten Zuges.",
+    "text": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, du heilst 1 dort, und du ziehst 1 Karte.",
     "clauses": [
       {
         "title": "",
-        "body": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, du heilst 1 dort, und du ziehst 1 Karte. Übrige Abschnitte +1 DEF bis Ende deines nächsten Zuges."
+        "body": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, du heilst 1 dort, und du ziehst 1 Karte."
       }
     ],
     "effects": [
@@ -69,10 +69,6 @@ window.DC_SET_TYPES["Doktrin"] = [
             "heal": 1,
             "draw": 1,
             "until": "end-of-turn"
-          },
-          "other_sections": {
-            "def": 1,
-            "until": "end-of-next-own-turn"
           }
         }
       }
@@ -133,11 +129,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Zerstört eine eigene Einheit ein Ziel, hat sie +2 ATK bis Ende deines nächsten Zuges und du ziehst 1.",
+    "text": "Zerstört eine eigene Einheit ein Ziel, hat sie +1 ATK bis Ende deines nächsten Zuges und du ziehst 1.",
     "clauses": [
       {
         "title": "",
-        "body": "Zerstört eine eigene Einheit ein Ziel, hat sie +2 ATK bis Ende deines nächsten Zuges und du ziehst 1."
+        "body": "Zerstört eine eigene Einheit ein Ziel, hat sie +1 ATK bis Ende deines nächsten Zuges und du ziehst 1."
       }
     ],
     "effects": [
@@ -145,7 +141,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "ABSCHLUSS",
         "param": {
           "on": "destroyed-enemy",
-          "atk": 2,
+          "atk": 1,
           "draw": 1,
           "until": "end-of-next-own-turn"
         }
@@ -242,11 +238,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 ATK und +1 DEF.",
+    "text": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 DEF.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 ATK und +1 DEF."
+        "body": "Eigene Einheiten in einem Abschnitt ohne Unterstützung haben +1 DEF."
       }
     ],
     "effects": [
@@ -254,7 +250,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "AUSHARREN",
         "param": {
           "if": "no-support-in-section",
-          "atk": 1,
+          "atk": 0,
           "def": 1
         }
       }
@@ -470,19 +466,17 @@ window.DC_SET_TYPES["Doktrin"] = [
     ],
     "klasse_tags": [],
     "principle": "Zu Beginn deines Zuges",
-    "text": "Zu Beginn deines Zuges heilt eine beschädigte eigene Einheit 1. Eigene Einheiten haben +1 DEF.",
+    "text": "Eigene Einheiten haben +1 DEF. Die Etappe hält — ohne automatische Versorgungsheilung.",
     "clauses": [
       {
         "title": "",
-        "body": "Zu Beginn deines Zuges heilt eine beschädigte eigene Einheit 1. Eigene Einheiten haben +1 DEF."
+        "body": "Eigene Einheiten haben +1 DEF. Die Etappe hält — ohne automatische Versorgungsheilung."
       }
     ],
     "effects": [
       {
         "code": "ETAPPENSICHERUNG",
         "param": {
-          "when": "start-of-turn",
-          "heal": 1,
           "base_def": 1
         }
       }
@@ -582,11 +576,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +2 ATK. Überlebt die angegriffene Einheit, heilt sie 1.",
+    "text": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +1 ATK. Überlebt die angegriffene Einheit, heilt sie 1.",
     "clauses": [
       {
         "title": "",
-        "body": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +2 ATK. Überlebt die angegriffene Einheit, heilt sie 1."
+        "body": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +1 ATK. Überlebt die angegriffene Einheit, heilt sie 1."
       }
     ],
     "effects": [
@@ -594,7 +588,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "GEGENSTOSS",
         "param": {
           "when": "attacked-this-turn",
-          "atk": 2,
+          "atk": 1,
           "heal_survivor": 1,
           "until": "end-of-next-own-turn"
         }
@@ -693,11 +687,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Stehen mindestens zwei eigene Einheiten in einem Abschnitt, haben sie +1 DEF. Der Fluss hält die Linie — ohne Solo-Bonus.",
+    "text": "Eigene Einheiten haben +1 DEF. Stehen mindestens zwei eigene in einem Abschnitt, zusätzlich +1 DEF. Der Fluss hält die Linie.",
     "clauses": [
       {
         "title": "",
-        "body": "Stehen mindestens zwei eigene Einheiten in einem Abschnitt, haben sie +1 DEF. Der Fluss hält die Linie — ohne Solo-Bonus."
+        "body": "Eigene Einheiten haben +1 DEF. Stehen mindestens zwei eigene in einem Abschnitt, zusätzlich +1 DEF. Der Fluss hält die Linie."
       }
     ],
     "effects": [
@@ -706,6 +700,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "param": {
           "if": "section-has-at-least",
           "count": 2,
+          "base_def": 1,
           "def": 1
         }
       }
@@ -729,11 +724,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an. Beschädigte aufgedeckte Feinde zusätzlich +1.",
+    "text": "Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an. Beschädigte aufgedeckte Feinde zusätzlich +1."
+        "body": "Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an."
       }
     ],
     "effects": [
@@ -741,8 +736,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "LOKALISIERUNG",
         "param": {
           "against": "revealed",
-          "def": -1,
-          "vs_damaged_extra": 1
+          "def": -1
         }
       }
     ],
@@ -804,11 +798,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Panzer und Artillerie kosten 1 AP weniger (min. 1), sobald du mindestens eine Einheit verloren hast. Beim Einrücken solcher Einheiten +1 DEF.",
+    "text": "Panzer und Artillerie kosten 1 AP weniger (min. 1). Die Werkstatt läuft durchgehend — ohne Extra-Panzerung beim Einrücken.",
     "clauses": [
       {
         "title": "",
-        "body": "Panzer und Artillerie kosten 1 AP weniger (min. 1), sobald du mindestens eine Einheit verloren hast. Beim Einrücken solcher Einheiten +1 DEF."
+        "body": "Panzer und Artillerie kosten 1 AP weniger (min. 1). Die Werkstatt läuft durchgehend — ohne Extra-Panzerung beim Einrücken."
       }
     ],
     "effects": [
@@ -819,10 +813,9 @@ window.DC_SET_TYPES["Doktrin"] = [
             "panzer",
             "geschuetze"
           ],
-          "if": "any-front-loss",
+          "if": "always",
           "play_cost": -1,
-          "min": 1,
-          "enter_def": 1
+          "min": 1
         }
       }
     ],
@@ -1233,11 +1226,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Einmal pro Zug darfst du eine eigene Einheit um einen Slot seitlich schieben. Alle eigenen Fronteinheiten haben +1 DEF in deinem Zug (Weg bleibt offen).",
+    "text": "Einmal pro Zug darfst du für 1 AP eine eigene Einheit um einen Slot seitlich schieben (Weg bleibt offen). Beweglichkeit statt Panzerung.",
     "clauses": [
       {
         "title": "",
-        "body": "Einmal pro Zug darfst du eine eigene Einheit um einen Slot seitlich schieben. Alle eigenen Fronteinheiten haben +1 DEF in deinem Zug (Weg bleibt offen)."
+        "body": "Einmal pro Zug darfst du für 1 AP eine eigene Einheit um einen Slot seitlich schieben (Weg bleibt offen). Beweglichkeit statt Panzerung."
       }
     ],
     "effects": [
@@ -1246,11 +1239,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "param": {
           "once": "per-turn",
           "shift": 1,
-          "passive_def": 1,
-          "if_support": {
-            "cost": -1,
-            "min": 1
-          }
+          "ap": 1
         }
       }
     ],
@@ -1273,11 +1262,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Bist du allein im Abschnitt: +1 DEF. Mindestens zwei eigene: +1 ATK.",
+    "text": "Bist du allein im Abschnitt: +1 DEF. Verstreute Posten halten, massieren nicht.",
     "clauses": [
       {
         "title": "",
-        "body": "Bist du allein im Abschnitt: +1 DEF. Mindestens zwei eigene: +1 ATK."
+        "body": "Bist du allein im Abschnitt: +1 DEF. Verstreute Posten halten, massieren nicht."
       }
     ],
     "effects": [
@@ -1286,9 +1275,6 @@ window.DC_SET_TYPES["Doktrin"] = [
         "param": {
           "alone": {
             "def": 1
-          },
-          "grouped": {
-            "atk": 1
           }
         }
       }
