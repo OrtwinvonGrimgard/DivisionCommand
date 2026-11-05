@@ -156,6 +156,72 @@
       if (result && typeof result.then === 'function') Promise.resolve(result).catch(function () {});
     } catch (audioError) { /* audio must never prevent rules, pending choices or render */ }
   }
+  var matchSetup = null;
+  var endHandledKey = null;
+  function isTerminal(st) { return !!st && (st.winner != null || st.phase === 'gameover'); }
+  function clearMatchPresentation() {
+    if (window.DCEndScreen) DCEndScreen.reset();
+    audioCall('stopSfx');
+    audioCall('stopTable');
+    eventQueue = []; seenEvents = 0; eventPlaying = false;
+    armedPlay = null; placing = false; suppressHandClick = false;
+    window.dcSuppressClick = false; window._dcLastVpSum = 0;
+    botQueued = false; botFail = {}; botSteps = 0; botMark = '';
+    document.body.classList.remove('dc-armed', 'dc-dragging');
+    hideDragGhost();
+    document.querySelectorAll('[data-uid]').forEach(function (el) { clearTimeout(el._dcActTimer); });
+    var ov = document.getElementById('overlay');
+    if (ov) { ov.innerHTML = ''; ov.style.display = 'none'; }
+  }
+  function leaveMatch(toLobby) {
+    var ended = engine && isTerminal(engine.state);
+    if (!ended) { try { if (window.DCPlayLogger && DCPlayLogger.abort) DCPlayLogger.abort('menue'); } catch (e) {} }
+    if (window.DCNet && DCNet.disconnect) DCNet.disconnect();
+    clearMatchPresentation();
+    engine = null; matchSetup = null; endHandledKey = null; tableBound = false;
+    window.dcTimerHold = true;
+    if (window.dcShowTitle) window.dcShowTitle();
+    else {
+      if (window.dcUnmountMatch) window.dcUnmountMatch();
+      if (window.dcSetTable) window.dcSetTable(false);
+      var tr = document.getElementById('title-root'); if (tr) tr.style.display = 'flex';
+    }
+    var target = document.getElementById(toLobby ? 'go-lan' : 'go-single');
+    if (toLobby && target) target.click();
+    else { var menu = document.getElementById('go-single'); if (menu) menu.focus(); }
+  }
+  function showMatchEnd(st) {
+    if (!isTerminal(st)) return;
+    window.dcTimerHold = true;
+    eventQueue = []; eventPlaying = false; armedPlay = null;
+    document.querySelectorAll('[data-uid]').forEach(function (el) { clearTimeout(el._dcActTimer); });
+    var ov = document.getElementById('overlay'); if (ov) { ov.innerHTML = ''; ov.style.display = 'none'; }
+    var key = String(st.seed) + ':' + String(st.winner) + ':' + String(st.endReason);
+    if (endHandledKey !== key) {
+      endHandledKey = key;
+      audioCall('stopSfx');
+      var neutral = /bot.*bot|simulation|spectator/i.test((mode || '') + ' ' + (st.mode || '')) || st.botVsBot;
+      if (!neutral && st.winner != null) audioCall('notifyGameEnd', st.winner === you);
+      try {
+        if (window.DCPlayLogger && DCPlayLogger.finish) {
+          var current = DCPlayLogger.getCurrent && DCPlayLogger.getCurrent();
+          // recordAction may have already finalized this exact game.
+          if (!current || !current.end) DCPlayLogger.finish('completed', st.winner, st.endReason);
+        }
+      } catch (e) {}
+    }
+    if (window.DCEndScreen) DCEndScreen.show(st, {
+      mode: mode, you: you, lan: /^(lan|host|join)$/.test(mode),
+      onAgain: function () {
+        if (/^(lan|host|join)$/.test(mode)) { leaveMatch(true); return; }
+        if (!matchSetup) return;
+        var savedSetup = JSON.parse(JSON.stringify(matchSetup));
+        clearMatchPresentation(); endHandledKey = null;
+        startGame({ rematchSetup: savedSetup });
+      },
+      onMenu: function () { leaveMatch(false); }
+    });
+  }
   var CATALOG = window.DC_CATALOG; // lokale Variable
   function dcPortraitSrc(id, rank) {
     if (window.DCPortrait) return DCPortrait.src(id, rank);
@@ -217,19 +283,8 @@
     bind('btn-concede', function () {
       try { dispatch({ type: 'CONCEDE', player: activePlayer() }); } catch (e) {}
       if (window.DCNet && DCNet.notifyLeave) DCNet.notifyLeave('hat aufgegeben');
-      if (window.dcDefeat) window.dcDefeat();
     });
-    bind('btn-menu', function () {
-      try { if (window.DCPlayLogger && DCPlayLogger.abort) DCPlayLogger.abort('menue'); } catch (eAb) {}
-      if (window.DCNet && DCNet.notifyLeave) DCNet.notifyLeave('hat das Spiel verlassen');
-      if (window.dcUnmountMatch) window.dcUnmountMatch();
-      tableBound = false;
-      engine = null;
-      if (window.dcSetTable) window.dcSetTable(false);
-      var tr = document.getElementById('title-root');
-      if (tr) tr.style.display = 'flex';
-      if (window.dcShowTitle) window.dcShowTitle();
-    });
+    bind('btn-menu', function () { leaveMatch(false); });
     bind('btn-opts', function () {
       var box = document.getElementById('ingame-opts');
       if (!box) return;
@@ -248,23 +303,6 @@
     bind('go', startGame); // nächster Schritt im Ablauf
     bind('go-playtest', function () { if (window.DCPlayPanel) DCPlayPanel.show(); });
     bindTableControls();
-    bind('btn-end', endTurn); // eine Aktion durch die Regeln jagen
-    bind('btn-peace', function () { dispatch({ type: 'PROPOSE_PEACE', player: activePlayer() }); }); // eine Aktion durch die Regeln jagen
-    bind('btn-accept', function () { dispatch({ type: 'ACCEPT_PEACE', player: activePlayer() }); }); // eine Aktion durch die Regeln jagen
-    bind('btn-concede', function () {
-      try { dispatch({ type: 'CONCEDE', player: activePlayer() }); } catch (e) {}
-      if (window.DCNet && DCNet.notifyLeave) DCNet.notifyLeave('hat aufgegeben');
-      if (window.dcDefeat) window.dcDefeat();
-    });
-    bind('btn-menu', function () { // Funktion
-      try { if (window.DCPlayLogger && DCPlayLogger.abort) DCPlayLogger.abort('menue'); } catch (eAb) {}
-      if (window.DCNet && DCNet.notifyLeave) DCNet.notifyLeave('hat das Spiel verlassen'); // Zweig nur bei zutreffender Bedingung
-      if (window.dcSetTable) window.dcSetTable(false);
-      var tr = document.getElementById('title-root'); // lokale Variable
-      if (tr) tr.style.display = 'flex'; // Zweig nur bei zutreffender Bedingung
-      var ov = document.getElementById('overlay'); // lokale Variable
-      if (ov) ov.style.display = 'none'; // Zweig nur bei zutreffender Bedingung
-    }); // nächster Schritt im Ablauf
     bind('btn-opts', function () {
       var box = document.getElementById('ingame-opts');
       if (!box) return;
@@ -307,6 +345,7 @@
     } catch (eBeg) { console.warn('[playtest] begin', eBeg); }
     var rawDispatch = eng.dispatch.bind(eng);
     eng.dispatch = function (action) {
+      if (isTerminal(eng.state)) return { ok: false, error: 'Spiel ist vorbei' };
       var pid = action && action.player != null ? action.player : (eng.state && eng.state.active);
       var isBot = modeName === 'bot' && pid === 1;
       var suggestion = null;
@@ -338,7 +377,8 @@
     eng._playLogHooked = true;
   }
 
-    function startGame() {
+    function startGame(request) {
+    var replay = request && request.rematchSetup;
     try { // Fehler auffangen
       if (!window.DC_CATALOG || !window.DCEngine) { // Zweig nur bei zutreffender Bedingung
         showErr('Engine oder Katalog nicht geladen.'); // nächster Schritt im Ablauf
@@ -356,12 +396,18 @@
       } else if (mode === 'bot') {
         if (window.DCBot) DCBot.applyCfg({ model: 'test' });
       }
+      if (replay) {
+        mode = replay.mode;
+        if (replay.botCfg && window.DCBot && DCBot.applyCfg) DCBot.applyCfg(replay.botCfg);
+      }
+      var previousSeed = engine && engine.state && engine.state.seed;
       var seed = Date.now() >>> 0; // Zufallsstart
       if (window.crypto && crypto.getRandomValues) { // unvorhersagbarer Zufall
         var buf = new Uint32Array(1); // lokale Variable
         crypto.getRandomValues(buf); // unvorhersagbarer Zufall
         seed = buf[0] || seed; // Zufallsstart
       }
+      if (seed === previousSeed) seed = (seed + 1) >>> 0;
       var rand = DCEngine.rng(seed); // Zufallsstart
       var docs = CATALOG.cards.filter(function (c) { return c.typ === 'Doktrin'; }).map(function (c) { return c.id; });
       function takeDocs(pool, n, rnd) {
@@ -386,7 +432,7 @@
       var deck1 = DCEngine.buildTestDeck(CATALOG, rand);
       var doctrine0 = takeDocs(docs, 2, rand);
       var doctrine1 = takeDocs(docs, 2, rand);
-      if (window.DCLib && DCLib.selectedDeck) {
+      if (!replay && window.DCLib && DCLib.selectedDeck) {
         var mine = DCLib.selectedDeck(mode === 'lan' ? 'deck-pick-lan' : 'deck-pick-single');
         if (mine) {
           var built = DCLib.expand(mine);
@@ -402,7 +448,7 @@
           }
         }
       }
-      if (window.DC_validateDeck) {
+      if (!replay && window.DC_validateDeck) {
         var v0 = DC_validateDeck(deck0, doctrine0);
         var v1 = DC_validateDeck(deck1, doctrine1);
         deck0 = v0.fixedIds; doctrine0 = v0.doctrineIds;
@@ -412,6 +458,15 @@
           try { window.alert('Deckregel — überzählige Kopien entfernt:\n' + warn.join('\n')); } catch (eW) {}
         }
       }
+      if (replay) {
+        n0 = replay.name0; n1 = replay.name1;
+        deck0 = replay.deck0.slice(); deck1 = replay.deck1.slice();
+        doctrine0 = replay.doctrine0.slice(); doctrine1 = replay.doctrine1.slice();
+      }
+      matchSetup = JSON.parse(JSON.stringify({ mode: mode, name0: n0, name1: n1,
+        deck0: deck0, deck1: deck1, doctrine0: doctrine0, doctrine1: doctrine1,
+        botCfg: window.DCBot && DCBot.cfg || null }));
+      endHandledKey = null;
       var used = deck0.concat(deck1).concat(doctrine0).concat(doctrine1);
       if (window.DCEmbed && DCEmbed.forCardIds) DCEmbed.forCardIds(used, CATALOG);
       preloadCardArt(used);
@@ -474,6 +529,8 @@
     if (!engine || !engine.state) return;
     armedPlay = null;
     document.body.classList.remove('dc-armed', 'dc-dragging');
+    hideDragGhost();
+    document.querySelectorAll('[data-uid]').forEach(function (el) { clearTimeout(el._dcActTimer); });
     if (typeof clearDropMarks === 'function') clearDropMarks();
     var pend = engine.state.pending;
     var who = activePlayer();
@@ -491,6 +548,7 @@
       if (ov) ov.style.display = 'flex'; // Zweig nur bei zutreffender Bedingung
       return; // nächster Schritt im Ablauf
     }
+    if (isTerminal(engine.state)) { showMatchEnd(engine.state); return { ok: false, error: 'Spiel ist vorbei' }; }
     var soundDef = null;
     try {
       var soundLoc = action.uid && engine.findInst(action.uid);
@@ -546,6 +604,7 @@
       var hint = document.getElementById('hint');
       if (hint) hint.textContent = 'Anzeige: ' + (err && err.message ? err.message : err);
     }
+    if (isTerminal(engine.state)) { showMatchEnd(engine.state); return res; }
     if (!engine.state.pending) closePendingUi();
     if (res.coinWinner || res.code === 'COIN_WINNER') {
       var ovw = document.getElementById('overlay');
@@ -602,17 +661,20 @@
   /* Wenn der Bot am Zug ist, seinen Schritt planen. */
     var botQueued = false;
     function maybeBot() {
-    if (!engine || engine.state.winner != null) return;
+    if (!engine || isTerminal(engine.state)) return;
     if (mode !== 'bot') return;
     if (window.dcTimerHold) {
-      window.setTimeout(maybeBot, 500);
+      var waitingEngine = engine;
+      window.setTimeout(function () { if (engine === waitingEngine) maybeBot(); }, 500);
       return;
     }
     var botTurn = engine.state.active === 1 || (engine.state.pending && engine.state.pending.player === 1);
     if (!botTurn) return;
     if (botQueued) return;
     botQueued = true;
+    var queuedEngine = engine;
     window.setTimeout(function () {
+      if (engine !== queuedEngine) return;
       botQueued = false;
       botTick();
     }, (window.DCBot && DCBot.cfg && DCBot.cfg.delayMs) || 350);
@@ -652,10 +714,11 @@
       return res;
     }
     function botTick() {
-    if (!engine || engine.state.winner != null) return;
+    if (!engine || isTerminal(engine.state)) return;
     if (mode !== 'bot') return;
     if (window.dcTimerHold) {
-      window.setTimeout(botTick, 400);
+      var waitingEngine = engine;
+      window.setTimeout(function () { if (engine === waitingEngine) botTick(); }, 400);
       return;
     }
     var pend0 = engine.state.pending;
@@ -1477,7 +1540,7 @@
     paintBomb();
     if (!bombTick) {
       bombTick = window.setInterval(function () {
-        if (!engine || engine.state.winner != null) return;
+        if (!engine || isTerminal(engine.state)) return;
         if (window.dcTimerHold) return;
         if (bombLeft > 0) {
           bombLeft -= 1;
@@ -1664,7 +1727,7 @@
     return true;
   }
   function presentNewEvents() {
-    if (!engine || !engine.state) return;
+    if (!engine || !engine.state || isTerminal(engine.state)) return;
     var all = engine.state.events || [];
     if (all.length > seenEvents) {
       var fresh = all.slice(seenEvents);
@@ -1716,16 +1779,18 @@
   }
 
   function pumpEvents() {
-    if (eventPlaying) return;
+    if (!engine || isTerminal(engine.state) || eventPlaying) return;
     if (!eventQueue.length) {
       if (engine && engine.state && engine.state.pending && engine.state.pending.player === activePlayer()) showPending();
       return;
     }
     eventPlaying = true;
+    var eventEngine = engine;
     var batch = eventQueue.splice(0);
     if (!batch.length) { eventPlaying = false; return; }
     var titles = { attack: 'Kampfhandlung', destroy: 'Kampfhandlung', shout: 'Kampfhandlung', coin: 'Münze', spell: 'Einsatz', instant: 'Einsatz', deploy: 'Ausspielen', equip: 'Ausrüstung', support: 'Support', vp: 'Siegpunkt' };
     function flyOne(i, after) {
+      if (engine !== eventEngine || !engine || isTerminal(engine.state)) return;
       if (i >= batch.length) { after(); return; }
       var ev = batch[i];
       if (ev.kind !== 'draw' && ev.kind !== 'destroy') { flyOne(i + 1, after); return; }
@@ -1742,6 +1807,7 @@
       flyCard(from, pileRect(mine ? 'pile-my-grave' : 'pile-enemy-grave'), face || back, false, function () { flyOne(i + 1, after); });
     }
     flyOne(0, function () {
+      if (engine !== eventEngine || !engine || isTerminal(engine.state)) return;
       showRecap(batch, '', {
         live: true,
         title: titles[batch[0] && batch[0].kind] || 'Handlung',
@@ -1795,7 +1861,7 @@
     if (lab) lab.textContent = msg;
   }
   function placeFromHand(uid, slot, viewer, facedown) {
-    if (placing) return;
+    if (!engine || isTerminal(engine.state) || placing) return;
     placing = true;
     window.setTimeout(function () { placing = false; }, 0);
     var me = engine.player(viewer);
@@ -2223,6 +2289,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     window.addEventListener('pointercancel', up, true);
   }
   function armHandCard(uid, who, facedown) {
+    if (!engine || isTerminal(engine.state)) return;
     var mep = engine.player(who);
     var card = mep.hand.find(function (c) { return c.uid === uid; });
     if (!card) return;
@@ -2402,6 +2469,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     }).join('')) || dirty;
     updatePiles();
     rememberRects();
+    if (isTerminal(st)) { showMatchEnd(st); return; }
     if (!dirty) return;
     $('#hand').querySelectorAll('.card').forEach(function (el) { // Handkarten
       bindHover(el, function () { // Funktion
@@ -2727,48 +2795,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     $('#log').innerHTML = engine.log.slice(-40).reverse().map(function (l) { // HTML in den Knoten schreiben
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
     }).join(''); // nächster Schritt im Ablauf
-    if (st.winner != null || (st.endReason && /Frieden|unentschieden/i.test(String(st.endReason || '')))) {
-      if (!st._sfxEndPlayed) {
-        st._sfxEndPlayed = true;
-        try {
-          var youWin = (mode === 'bot') ? (st.winner === 0) : (st.winner === you);
-          if (st.winner == null) audioCall('playSfx', 'lose', { prio: 1, duck: 0.5, duckMs: 1500 });
-          else audioCall('notifyGameEnd', !!youWin);
-        } catch (eEnd) {}
-      }
-      var ov = $('#overlay');
-      var reasonRaw = String(st.endReason || '');
-      var reasonLabel = reasonRaw;
-      if (/Siegpunkte|Trophy/i.test(reasonRaw)) reasonLabel = 'Siegpunkte';
-      else if (/Keine Front/i.test(reasonRaw)) reasonLabel = 'Sicherheitsnetz — keine Front';
-      else if (/Zuglimit/i.test(reasonRaw)) reasonLabel = 'Zug 28 Wertung';
-      else if (/Aufgabe/i.test(reasonRaw)) reasonLabel = 'Aufgabe';
-      else if (/Frieden|unentschieden/i.test(reasonRaw)) reasonLabel = 'Weißer Frieden';
-      else if (/timeout-SP/i.test(reasonRaw)) reasonLabel = 'Zeitlimit (SP)';
-      else if (/timeout-Brett/i.test(reasonRaw)) reasonLabel = 'Zeitlimit (Brett)';
-      var vpLine = '';
-      if (st.players && st.players[0] && st.players[1]) {
-        vpLine = '<p class="tiny end-vp">SP ' + escapeHtml(st.players[0].name) + ': <strong>' + (st.players[0].vp || 0) +
-          '</strong> · ' + escapeHtml(st.players[1].name) + ': <strong>' + (st.players[1].vp || 0) + '</strong></p>';
-      }
-      var who = (st.winner == null)
-        ? 'Unentschieden.'
-        : (escapeHtml(st.players[st.winner].name) + ' gewinnt.');
-      ov.innerHTML = '<div class="modal end-modal"><h2>' + escapeHtml(reasonLabel) + '</h2>' +
-        '<p class="end-who">' + who + '</p>' +
-        (reasonRaw && reasonRaw !== reasonLabel ? '<p class="tiny">' + escapeHtml(reasonRaw) + '</p>' : '') +
-        vpLine +
-        '<button type="button" class="primary" id="again">Neue Partie</button></div>';
-      ov.style.display = 'flex';
-      try {
-        if (window.DCPlayLogger && DCPlayLogger.finish && !st._playLogFinished) {
-          st._playLogFinished = true;
-          DCPlayLogger.finish('completed', st.winner, st.endReason || reasonRaw);
-        }
-      } catch (eFin) {}
-      var again = document.getElementById('again');
-      if (again) again.onclick = function () { location.reload(); };
-    } else if (st.pending && st.pending.player === viewer) {
+    if (st.pending && st.pending.player === viewer) {
       showPending();
     }
     if (mode === 'bot' && !window.dcTimerHold && (st.active === 1 || (st.pending && st.pending.player === 1))) {
@@ -2783,7 +2810,19 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     if (!engine) { // Zweig nur bei zutreffender Bedingung
       engine = new DCEngine.Engine(window.DC_CATALOG, { seed: 1 }); // Zufallsstart
     }
+    if (engine.state && isTerminal(engine.state) && !isTerminal(st)) clearMatchPresentation();
     engine.state = st;
+    if (!matchSetup && st && st.players && !isTerminal(st) && !/^(lan|host|join)$/.test(mode)) {
+      function initialIds(p) {
+        var all = (p.deck || []).concat(p.hand || []).concat(p.grave || []).concat(p.support || []);
+        ['L','C','R'].forEach(function (sec) { all = all.concat(p.front[sec] || []); });
+        return all.filter(Boolean).map(function (c) { return typeof c === 'string' ? c : c.cardId; });
+      }
+      matchSetup = { mode: mode, name0: st.players[0].name, name1: st.players[1].name,
+        deck0: initialIds(st.players[0]), deck1: initialIds(st.players[1]),
+        doctrine0: (st.players[0].doctrines || []).map(function (c) { return typeof c === 'string' ? c : c.cardId; }),
+        doctrine1: (st.players[1].doctrines || []).map(function (c) { return typeof c === 'string' ? c : c.cardId; }) };
+    }
     try {
       if (window.DCPlayLogger && !engine._playLogHooked) {
         installPlayLogger(engine, mode || 'lan', you);

@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-audio-options1';
+const CACHE = 'divcmd-endscreen1';
 const ASSETS = [
   './',
   './index.html',

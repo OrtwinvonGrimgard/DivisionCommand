@@ -678,6 +678,14 @@
   }
 
 
+  function stopSfx() {
+    sfxBusy.forEach(function (a) { try { a.pause(); a.currentTime = 0; } catch (e) {} });
+    sfxBusy = [];
+    lastAttackAt = 0; lastAttackHadImpact = false; lastSelectAt = 0;
+    [document.getElementById('bgm'), document.getElementById('bgm-battle')].forEach(function (a) {
+      if (a && a._dcDuckTimer) { clearTimeout(a._dcDuckTimer); a._dcDuckTimer = null; }
+    });
+  }
   function refreshVolumes() {
     // Update already-playing effects too; zero must silence immediately.
     Object.keys(cache).forEach(function (id) {
@@ -696,6 +704,7 @@
     table: TABLE,
     sfx: SFX,
     refreshVolumes: refreshVolumes,
+    stopSfx: stopSfx,
     sfxEmbed: sfxEmbed,
     preload: function () { preload(); preloadSfx(); },
     playTitle: playTitle,

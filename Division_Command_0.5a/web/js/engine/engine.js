@@ -922,7 +922,7 @@
     // Was der Spieler jetzt tun darf (für Bot und Prüfungen).
     listActions(playerId) { // erlaubte Züge aufzählen
       const st = this.state; // unveränderliche Bindung in diesem Block
-      if (!st || st.winner != null) return []; // Wert zurückgeben
+      if (!st || st.winner != null || st.phase === 'gameover') return []; // Wert zurückgeben
       const p = this.player(playerId); // unveränderliche Bindung in diesem Block
       const acts = []; // unveränderliche Bindung in diesem Block
       const isActive = st.active === playerId && st.phase === 'main'; // unveränderliche Bindung in diesem Block
@@ -1017,7 +1017,7 @@
 
     // Eine Aktion ausführen. Einziger Eingang für Züge.
     dispatch(action) { // eine Aktion durch die Regeln jagen
-      if (!this.state || this.state.winner != null) return { ok: false, error: 'Spiel ist vorbei' }; // Ergebnis an den Aufrufer
+      if (!this.state || this.state.winner != null || this.state.phase === 'gameover') return { ok: false, error: 'Spiel ist vorbei' }; // Ergebnis an den Aufrufer
       const a = action || {}; // unveränderliche Bindung in diesem Block
       const pid = a.player; // unveränderliche Bindung in diesem Block
       if (pid !== 0 && pid !== 1) return { ok: false, error: 'Spieler fehlt' }; // Ergebnis an den Aufrufer

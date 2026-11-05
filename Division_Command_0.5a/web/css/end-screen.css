@@ -1,0 +1,27 @@
+/* Frozen battlefield beneath a full-viewport, scroll-safe final banner. */
+body.dc-game-ended > :not(#dc-end-screen):not(script):not(style):not(link) {
+  filter: grayscale(1) brightness(.38);
+  pointer-events: none !important;
+  user-select: none;
+}
+.dc-end-screen {
+  position: fixed; inset: 0; z-index: 2147483000;
+  display: flex; align-items: safe center; justify-content: center;
+  padding: clamp(12px, 3vw, 40px); box-sizing: border-box;
+  overflow-y: auto; background: rgba(8, 11, 12, .72);
+}
+.dc-end-panel {
+  width: min(880px, 100%); box-sizing: border-box; margin: auto;
+  padding: clamp(20px, 5vw, 56px); text-align: center;
+  color: #f0e5c7; background: linear-gradient(145deg, #242b29, #101614);
+  border: 2px solid #a8915d; border-top: 6px solid #c6ae76;
+  box-shadow: 0 24px 90px #000; font-family: inherit;
+}
+.dc-end-kicker { letter-spacing: .22em; color: #b5aa8d; font-size: .85rem; }
+#dc-end-heading { font-size: clamp(2rem, 7vw, 5rem); line-height: 1.1; letter-spacing: .035em; margin: .35em 0; overflow-wrap: anywhere; }
+#dc-end-reason, .dc-end-score { overflow-wrap: anywhere; line-height: 1.6; }
+.dc-end-score { font-size: clamp(1rem, 2.5vw, 1.35rem); }
+.dc-end-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 28px; }
+.dc-end-buttons button { min-height: 48px; padding: 12px 24px; max-width: 100%; white-space: normal; }
+.dc-end-buttons button:focus-visible { outline: 3px solid #f2d78b; outline-offset: 4px; }
+@media (max-width: 480px) { .dc-end-buttons { flex-direction: column; } .dc-end-buttons button { width: 100%; } }
