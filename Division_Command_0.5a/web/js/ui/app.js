@@ -144,6 +144,17 @@
       '" onload="window.dcImgOk(this)" onerror="' + err + '">';
   }
 
+  function tableArt(def, hidden) {
+    return window.DCTableArt ? DCTableArt.html(def, hidden) : '<div class="table-motif art-unavailable">Motiv nicht verfügbar</div>';
+  }
+  function tableAttachments(inst, hidden) {
+    if (hidden || !(inst.attachments || []).length) return '';
+    return '<div class="table-equipment" aria-label="Angelegte Ausrüstung">' + inst.attachments.map(function (eq) {
+      var def = engine.defOf(eq);
+      return '<button type="button" class="equipment-tile" data-equipment="' + escapeHtml(eq.uid) + '" title="' + escapeHtml(def.name) + '">' +
+        tableArt(def, false) + '<span class="equipment-name">' + escapeHtml(def.name) + '</span></button>';
+    }).join('') + '</div>';
+  }
   // Audio is optional presentation: never let it interrupt an action or mutate engine data.
   function audioCall(method) {
     try {
@@ -1422,7 +1433,7 @@
       var d = {};
       try { d = engine.defOf(inst) || {}; } catch (e2) {}
       return '<div class="slot filled ' + (mine ? 'mine' : 'enemy') + '" data-uid="' + inst.uid + '" data-drop="front" data-section="' + (section || '') + '" data-row="' + (row || 0) + '">' +
-        artTag(d, !!(inst.facedown && !mine)) +
+        tableArt(d, !!(inst.facedown && !mine)) +
         '<div class="unit-stats">' + escapeHtml(d.name || 'Einheit') + '</div></div>';
     }
   }
@@ -1448,7 +1459,7 @@
         var td = engine.defOf(tok);
         var face = tok.facedown;
         var cls = mine ? 'for-enemy' : 'for-me';
-        tokHtml = '<div class="token-tri ' + cls + '">' + artTag(td, face) + '</div>';
+        tokHtml = '<div class="token-tri ' + cls + '">' + tableArt(td, face) + '</div>';
       }
     }
     var dig = isDigInProtected(inst);
@@ -1456,11 +1467,14 @@
     return '<div class="slot filled ' + (mine ? 'mine' : 'enemy') + (inst.facedown ? ' facedown' : '') + (picked ? ' picked' : '') + (deadact ? ' exhausted' : '') + (dig ? ' dig-in' : '') + '" data-uid="' + inst.uid + '" data-drop="front" data-section="' + (section||'') + '" data-row="' + (row||0) + '"' + digTitle + '>' +
       tokHtml +
       (dig ? '<div class="dig-in-shield" aria-label="Eingegraben">' + digInShieldSvg(22) + '</div>' : '') +
-      artTag(d, hide) +
+      tableArt(d, hide) +
       (inst.facedown && mine ? '<div class="unit-hint">verdeckt</div>' : '') +
       (dig ? '<div class="unit-hint">Eingegraben</div>' : '') +
-      '<div class="unit-name">' + escapeHtml((d && d.name) || 'Einheit') + '</div>' +
-      '<div class="unit-stats">' + stats + '</div></div>'; // HTML-Sonderzeichen escapen
+      '<div class="unit-name">' + escapeHtml(hide ? 'Verdeckte Einheit' : ((d && d.name) || 'Einheit')) + '</div>' +
+      '<div class="unit-stats">' + stats + '</div>' +
+      (!hide && deadact ? '<span class="table-status">' + (inst.attackUsed ? 'Angriff genutzt' : 'Erschöpft') + '</span>' : '') +
+      (!hide && inst.defMax != null && inst.def < inst.defMax ? '<span class="table-status damage">Schaden ' + (inst.defMax - inst.def) + '</span>' : '') +
+      tableAttachments(inst, hide) + '</div>'; // HTML-Sonderzeichen escapen
   }
 
   /* Neun Frontstellungen einer Seite als Linie. */
@@ -2041,6 +2055,25 @@
     var hint = document.getElementById('hint');
     if (hint) hint.textContent = 'Feld antippen. Die Karte verlässt die Hand erst dann.';
   }
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key !== 'Enter' && ev.key !== ' ') return;
+    var tile = ev.target;
+    if (!tile || !tile.matches || !tile.matches('.slot[role="button"], .doctrine-card[role="button"]')) return;
+    if (!engine || isTerminal(engine.state)) return;
+    ev.preventDefault(); tile.click();
+  });
+  document.addEventListener('click', function (ev) {
+    var tile = ev.target && ev.target.closest && ev.target.closest('[data-equipment]');
+    if (!tile || !engine || isTerminal(engine.state)) return;
+    ev.preventDefault(); ev.stopImmediatePropagation();
+    var found = null;
+    engine.state.players.forEach(function (p) {
+      engine.frontList(p).forEach(function (loc) {
+        (loc.inst.attachments || []).forEach(function (eq) { if (eq.uid === tile.dataset.equipment) found = eq; });
+      });
+    });
+    if (found) openInspect({ def: engine.defOf(found), inst: found, uid: found.uid, zone: 'equipment', buttons: [{ id: 'close', label: 'Zurück' }] });
+  }, true);
   if (!window.dcSlotClick) {
     window.dcSlotClick = true;
     document.addEventListener('click', function (ev) {
@@ -2392,7 +2425,8 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
         var d = engine.defOf(s); // lokale Variable
         var hide = !!(s.facedown && !mine);
         var cap = hide ? '' : ((d.ap != null ? d.ap + ' AP' : ''));
-        html += '<div class="slot filled" data-drop="support" data-row="' + j + '" data-uid="' + s.uid + '">' + artTag(d, hide) +
+        html += '<div class="slot filled" data-drop="support" data-row="' + j + '" data-uid="' + s.uid + '">' + tableArt(d, hide) +
+          '<div class="unit-name">' + escapeHtml(hide ? 'Verdeckte Unterstützung' : d.name) + '</div>' +
           (s.facedown && mine ? '<div class="unit-hint">verdeckt — Gegner sieht die Rückseite</div>' : '') +
           (cap ? '<div class="unit-stats">' + cap + '</div>' : '') + '</div>';
         // Bild-HTML der Karte
@@ -2419,7 +2453,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
           d = { name: 'Minenfeld', image: tok.image || 'MINE.png' };
         }
         return '<div class="slot filled' + (hidden ? ' facedown' : '') + '" data-uid="' + tok.uid + '">' +
-          '<div class="token-tri">' + artTag(d, hidden) + '</div></div>';
+          tableArt(d, hidden) + '<div class="unit-name">' + escapeHtml(hidden ? 'Verdeckter Token' : d.name) + '</div></div>';
       }).join('');
     }
     var en = document.getElementById('enemy-nml');
@@ -2439,7 +2473,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
             badge = '<div class="dok-vp' + cls + '" title="' + escapeHtml(prog.label || '') + '">SP ' + prog.cur + '/' + prog.need + (prog.done ? ' ✓' : '') + '</div>';
           }
         }
-        return '<div class="doctrine-card" data-id="' + def.id + '">' + artTag(def, false, 'art', true) + '<div class="dn">' + escapeHtml(def.name) + '</div>' + badge + '</div>';
+        return '<div class="doctrine-card" data-id="' + def.id + '">' + tableArt(def, false) + '<div class="dn">' + escapeHtml(def.name) + '</div>' + badge + '</div>';
       }).join('');
     }
     var ed = document.getElementById('enemy-doctrine');
@@ -2470,6 +2504,9 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     updatePiles();
     rememberRects();
     if (isTerminal(st)) { showMatchEnd(st); return; }
+    document.querySelectorAll('#my-front .slot.filled, #enemy-front .slot.filled, #my-support .slot.filled, #enemy-support .slot.filled, .doctrine-card').forEach(function (tile) {
+      tile.tabIndex = 0; tile.setAttribute('role', 'button');
+    });
     if (!dirty) return;
     $('#hand').querySelectorAll('.card').forEach(function (el) { // Handkarten
       bindHover(el, function () { // Funktion

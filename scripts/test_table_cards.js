@@ -1,0 +1,82 @@
+/* Actual production renderer + DOM handlers. No browser automation. */
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const { setup } = require('./test_audio_actions');
+const WEB = path.join(__dirname, '../Division_Command_0.5a/web');
+const h = setup('off'), { w, eng, add, click } = h;
+let artwork = 0, textures = 0;
+for (const def of w.DC_CATALOG.cards) {
+  const m = w.DC_TABLE_ART[def.id]; assert(m, `mapping missing ${def.id}`);
+  assert(fs.existsSync(path.join(WEB, m.src)), `file missing ${m.src}`);
+  if (m.kind === 'artwork') {
+    artwork++;
+    assert.equal(path.basename(m.src, '.jpg'), path.basename(def.image).replace(/\.[^.]+$/, ''), 'exact collector art mapping');
+  } else if (m.kind === 'doctrine-texture') {
+    textures++; assert.equal(def.typ, 'Doktrin'); assert.equal(m.src, 'assets/cards/' + def.image);
+  }
+}
+const inf = w.DC_CATALOG.cards.find(c => c.typ === 'Einheit' && !(c.effects || []).length);
+const eq = w.DC_CATALOG.cards.find(c => c.typ === 'Ausrüstung' && (c.effects || []).some(e => e.code === 'EQUIP_STAT'));
+const sup = w.DC_CATALOG.cards.find(c => c.typ === 'Unterstützung');
+const own = eng.instFromId(inf.id, 0), enemy = eng.instFromId(inf.id, 1), equip = eng.instFromId(eq.id, 0);
+own.flags.noCombatUntil = eng.state.turn + 1; own.flags.noCombatUntil = eng.state.turn + 1; own.flags.digInUntil = eng.state.turn + 1; own.flags.digInBonus = 1;
+own.flags.tempAtk = 2; own.defMax = 10; own.def = 7; own.attackUsed = true; own.attachments = [equip];
+eng.player(0).front.C[0] = own; eng.player(1).front.C[0] = enemy;
+eng.player(0).support[0] = eng.instFromId(sup.id, 0);
+const hidden = eng.instFromId(inf.id, 1); hidden.facedown = true; eng.player(1).front.L[0] = hidden;
+eng.player(1).support[0] = eng.instFromId(sup.id, 1); eng.player(1).support[0].facedown = true;
+eng.player(0).doctrines = [eng.instFromId('dc_dok_verlegung', 0)];
+const hand = add(inf.id); w.dcRender();
+const tile = w.document.querySelector(`#my-front [data-uid="${own.uid}"]`);
+assert.equal(tile.querySelector('.unit-name').textContent, inf.name);
+assert.equal(tile.querySelector('.table-art').getAttribute('src'), w.DC_TABLE_ART[inf.id].src);
+assert(tile.querySelector('.unit-stats').textContent.includes('ATK'));
+assert(tile.querySelector('.unit-stats').textContent.includes('DEF'));
+assert(tile.querySelector('.stat-chip.up'), 'buff color badge');
+assert(tile.querySelector('.dig-in-shield'), 'dig-in shield');
+assert(tile.textContent.includes('Schaden 3')); assert(tile.textContent.includes('Angriff genutzt'));
+assert.equal(tile.querySelector('.equipment-name').textContent, eq.name);
+assert.equal(tile.querySelector('.equipment-tile .table-art').getAttribute('src'), w.DC_TABLE_ART[eq.id].src);
+assert.equal(w.document.querySelector('#my-support .unit-name').textContent, sup.name);
+const enemyTile = w.document.querySelector(`#enemy-front [data-uid="${enemy.uid}"]`);
+assert(enemyTile.querySelector('.table-art') && enemyTile.querySelector('.unit-name'));
+const hiddenTile = w.document.querySelector(`#enemy-front [data-uid="${hidden.uid}"]`);
+assert(!hiddenTile.querySelector('img')); assert.equal(hiddenTile.querySelector('.unit-name').textContent, 'Verdeckte Einheit');
+assert(!hiddenTile.querySelector('.unit-stats').textContent.trim(), 'hidden stats not leaked');
+assert.equal(w.document.querySelector('#enemy-support .unit-name').textContent, 'Verdeckte Unterstützung');
+assert(!w.document.querySelector('#enemy-support img'));
+assert(w.document.querySelector('#my-doctrine .doctrine-texture'));
+assert.equal(w.document.querySelector('#my-doctrine .dn').textContent, 'Verlegung');
+if (eng._trophyActive && eng._trophyActive() && eng.trophyProgressFor(0, 'dc_dok_verlegung')) assert(w.document.querySelector('#my-doctrine .dok-vp'), 'trophy progress still visible');
+assert(w.document.querySelector('#hand .card img.art'), 'hand still full-card renderer');
+assert(!w.document.querySelector('#hand .table-motif'), 'hand not changed to motif');
+// Missing art is honest, no substitution or fabricated request.
+const absent = w.DCTableArt.html({ id: 'not-real', name: 'Absent' }, false);
+assert(absent.includes('Motiv nicht verfügbar') && !absent.includes('<img'));
+const img = tile.querySelector('.table-art'), oldSrc = img.src;
+w.DCTableArt.failed(img); assert(img.hidden); assert.equal(img.src, oldSrc); assert(!img.parentElement.querySelector('.art-missing-label').hidden);
+// Equipment button reaches full detail, not parent attack/target handler.
+click(`[data-equipment="${equip.uid}"]`);
+assert.equal(w.document.getElementById('inspect').style.display, 'flex'); assert(w.document.getElementById('inspect').textContent.includes(eq.name));
+click('#inspect [data-act="close"]');
+// Genuine hand/slot chain still consumes AP and renders motif after deploy.
+const before = eng.player(0).ap;
+click(`#hand [data-uid="${hand.uid}"]`); click('#my-front .slot.legal');
+assert(eng.frontList(eng.player(0)).some(l => l.inst.uid === hand.uid)); assert(eng.player(0).ap < before);
+assert(w.document.querySelector(`#my-front [data-uid="${hand.uid}"] .table-art`));
+// Target markers and keyboard doctrine detail remain actionable.
+eng.state.pending = { kind: 'instant-target', player: 0, choices: [{ target: enemy.uid }] };
+w.dcRender();
+assert(w.document.querySelector(`#enemy-front [data-uid="${enemy.uid}"]`).classList.contains('legal-target'));
+eng.state.pending = null; w.dcRender();
+const doctrine = w.document.querySelector('#my-doctrine .doctrine-card');
+let kbClicked = 0; doctrine.addEventListener('click', () => kbClicked++);
+doctrine.dispatchEvent(new w.KeyboardEvent('keydown', { key: 'Enter', bubbles: true, cancelable: true }));
+assert.equal(kbClicked, 1, 'Enter activates tile');
+assert.equal(h.errors.length, 0);
+const css = fs.readFileSync(path.join(WEB, 'css/table-cards.css'), 'utf8');
+assert(css.includes('repeat(9, minmax(108px, 1fr))') && css.includes('overflow-x: auto'));
+assert(!/#app\s+\.hand\s*[{.]/.test(css), 'no hand style changes');
+h.dom.window.close();
+console.log(`PASS ${artwork} verified motif paths / ${textures} explicit doctrine texture crops; own/enemy unit/support, equipment detail, stats/shield/damage/buffs, hidden privacy, hand unchanged, slot/AP/target/keyboard handlers`);

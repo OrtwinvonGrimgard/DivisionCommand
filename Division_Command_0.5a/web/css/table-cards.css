@@ -1,0 +1,97 @@
+/* Last-loaded battlefield-only rules. Hand card dimensions, art and interactions are unchanged. */
+#app .table-main { overflow-y: auto !important; overflow-x: hidden !important; }
+#app #my-front, #app #enemy-front { flex: 0 0 auto; overflow-x: auto; padding: 2px 0 5px; }
+#app .front-line, #app .support-row, #app .nml-row {
+  display: grid !important; grid-template-columns: repeat(9, minmax(108px, 1fr)) !important;
+  gap: 6px !important; width: 100% !important; box-sizing: border-box;
+  overflow: visible !important; align-items: start;
+}
+#app .front-line, #app .flank-legend { min-width: 1020px; }
+#app .support-row, #app .nml-row { overflow-x: auto !important; padding: 2px 0 5px; flex: 0 0 auto; }
+#app .flank-legend { display: grid; grid-template-columns: repeat(3, 1fr); }
+#app .flank-legend span { text-align: center; }
+#app .front-line .slot:nth-child(3n+1) { border-left-color: #aa955f !important; }
+#app .front-line .slot, #app .support-row .slot,
+#app #my-front .slot, #app #my-support .slot {
+  width: 100% !important; max-width: none !important; min-width: 0 !important;
+  height: auto !important; min-height: 124px !important; flex: none !important;
+  margin: 0 !important; padding: 0 !important; box-sizing: border-box;
+  position: relative; overflow: visible !important; border-radius: 5px;
+}
+#app .slot.filled { background: #151b18 !important; border: 1px solid #626958 !important; }
+#app .slot.empty { background: repeating-linear-gradient(45deg,#171d19,#171d19 6px,#20271f 6px,#20271f 12px) !important; }
+#app .slot .table-motif, #app .doctrine-card .table-motif, #app .equipment-tile .table-motif {
+  display: block; position: relative; width: 100%; aspect-ratio: 4 / 3;
+  overflow: hidden; min-width: 0; background: #202723; border-radius: 4px 4px 0 0;
+}
+#app .table-motif img.table-art {
+  display: block !important; width: 100% !important; height: 100% !important;
+  max-width: none !important; max-height: none !important; object-fit: contain !important;
+  object-position: center !important; margin: 0 !important; transform: none !important;
+}
+#app .table-motif img.table-art[hidden] { display: none !important; }
+/* Doctrine files have no separate illustration: explicitly crop their own lower map texture. */
+#app .table-motif.doctrine-texture img.table-art {
+  position: absolute; height: 280% !important; top: -145%; object-fit: cover !important;
+}
+#app .slot .unit-name, #app .doctrine-card .dn {
+  display: block !important; position: absolute !important; top: 0 !important; bottom: auto !important;
+  left: 0 !important; right: 0 !important; z-index: 3;
+  padding: 4px 5px !important; margin: 0; box-sizing: border-box;
+  font-size: 12px !important; line-height: 1.18 !important; font-weight: 700;
+  white-space: normal !important; overflow: visible !important; text-overflow: clip !important;
+  overflow-wrap: anywhere; text-align: left; color: #fff4cf;
+  background: linear-gradient(#101511f5,#101511dc); pointer-events: none;
+}
+#app .slot .unit-stats {
+  display: flex !important; flex-wrap: wrap; gap: 2px; align-items: center; justify-content: center;
+  position: static !important; padding: 4px 2px !important; min-height: 22px;
+  white-space: normal !important; font-size: 10px !important; line-height: 1.25;
+  background: #111913; color: #e9dcae;
+}
+#app .slot .stat-chip { font-size: 11px !important; margin: 0 2px !important; padding: 1px 2px; }
+#app .slot .stat-chip.up { color: #9dec9a; }
+#app .slot .stat-chip.down { color: #ff998c; }
+#app .slot .unit-hint, #app .slot .table-status {
+  display: block; position: static !important; font-size: 10px !important; line-height: 1.25;
+  padding: 2px 4px; color: #f8da8c; background: #262a1c; text-align: center;
+}
+#app .slot .dig-in-shield { top: 36px; right: 3px; left: auto; bottom: auto; z-index: 4; }
+#app .slot.exhausted { opacity: 1 !important; }
+#app .slot.exhausted > .table-motif { filter: saturate(.65); }
+#app .slot.legal, #app .slot.drop-ok, #app .slot.picked, #app .slot.legal-target {
+  outline: 2px solid #f3d178; outline-offset: -2px; box-shadow: 0 0 8px #dfba5d80 !important;
+}
+#app .table-equipment { display: grid; grid-template-columns: minmax(0,1fr); gap: 4px; padding: 3px; }
+#app .equipment-tile {
+  display: block; width: 100%; max-width: 100%; position: relative; margin: 0; padding: 0;
+  border: 1px solid #a99056; overflow: visible; background: #171d18;
+}
+#app .equipment-name { display: block; white-space: normal; overflow-wrap: anywhere; font-size: 11px; line-height: 1.2; padding: 3px; }
+#app .top-bar { grid-template-columns: minmax(100px,1fr) auto minmax(260px,360px) !important; }
+#app .bottom-bar { grid-template-columns: minmax(0,1fr) auto auto !important; }
+#app .bottom-bar #my-doctrine { grid-column: 1 / -1; grid-row: 1; justify-self: start; }
+#app .doc-window {
+  display: flex !important; flex-wrap: wrap !important; gap: 6px !important; overflow: visible !important;
+  width: auto !important; max-width: 100% !important; align-items: start !important;
+}
+#app .top-bar .doctrine-card, #app .bottom-bar .doctrine-card {
+  width: 150px !important; height: auto !important; min-height: 90px !important; max-height: none !important;
+  flex: 0 0 150px !important; margin: 0 !important; position: relative; overflow: visible;
+  transform: none !important; background: #171d18; border: 1px solid #a99056;
+}
+#app .doctrine-card .table-motif { aspect-ratio: 2 / 1; }
+#app .doctrine-card .dok-vp { display: block; position: static !important; white-space: normal; font-size: 11px; padding: 3px; }
+#app .row-label { display: block !important; font-size: 11px !important; padding: 3px 0; }
+#app .nml-band { flex: 0 0 auto !important; min-height: 36px !important; }
+#app .nml-row .slot { height: auto !important; min-height: 20px !important; }
+#app .nml-row:has(.slot.filled) .slot { min-height: 56px !important; }
+#app .table-hidden, #app .art-unavailable { display: grid; place-content: center; color: #dbcd9f; font-size: 11px; text-align: center; }
+#app .table-hidden { background: repeating-linear-gradient(135deg,#1b201c,#1b201c 8px,#3a4135 8px,#3a4135 10px); }
+#app .token-tri { clip-path: none !important; }
+@media (max-width: 1000px) {
+  #app .top-bar { grid-template-columns: minmax(0,1fr) auto !important; }
+  #app #enemy-doctrine { grid-column: 1 / -1; }
+  #app .bottom-bar { grid-template-columns: minmax(0,1fr) auto !important; }
+  #app #plate-me { grid-column: 1 / -1; }
+}
