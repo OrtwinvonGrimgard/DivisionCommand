@@ -1,0 +1,60 @@
+/* Effektrahmen am Tisch: Kartenrand = Einheitenstatus (::before), Abschnitt = gestrichelter Innenrahmen (box-shadow).
+   Nur opacity/transform animiert; prefers-reduced-motion schaltet Animationen ab. Ziel-Gold hat Vorrang. */
+#app .slot.filled { isolation: isolate; }
+#app .slot.filled::before {
+  content: ""; position: absolute; inset: 0; border-radius: 5px; pointer-events: none; z-index: 2;
+  padding: 2px; opacity: 0; transition: opacity .25s;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+}
+/* Schutz: blau-silbrig irisierend */
+#app .slot.fx-shield::before {
+  opacity: 1; background: linear-gradient(115deg, #9fd4ff, #e8f1ff 25%, #7aa8e8 45%, #c7b6ff 62%, #dff7ff 80%, #8fc3f0);
+  background-size: 220% 220%; animation: dcIris 6s ease-in-out infinite alternate;
+}
+/* Brand (Napalm-Status): Glut */
+#app .slot.fx-burn::before {
+  opacity: 1; background: linear-gradient(0deg, #ff3b12, #ff8a1f 40%, #ffd06a 60%, #ff5a1a);
+  background-size: 100% 200%; animation: dcIris 3.2s ease-in-out infinite alternate;
+}
+#app .slot.fx-shield.fx-burn::before { background: linear-gradient(90deg, #9fd4ff 0 50%, #ff6a1a 50% 100%); animation: none; }
+#app .slot.fx-burn > .table-motif::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 45%; pointer-events: none;
+  background: radial-gradient(circle at 20% 100%, #ffb34788 0 2px, transparent 3px), radial-gradient(circle at 60% 90%, #ff7a2a88 0 1.5px, transparent 3px),
+              radial-gradient(circle at 85% 100%, #ffd27a88 0 2px, transparent 3px), linear-gradient(0deg, #ff4a1a40, transparent);
+  animation: dcEmber 2.6s ease-in-out infinite;
+}
+#app .slot.fx-buff:not(.fx-shield):not(.fx-burn)::before { opacity: 1; background: linear-gradient(#5fd07a, #2e8a48); }
+#app .slot.fx-debuff:not(.fx-shield):not(.fx-burn):not(.fx-buff)::before { opacity: 1; background: linear-gradient(#c25a8a, #6a2b55); }
+#app .slot.fx-buff.fx-debuff:not(.fx-shield):not(.fx-burn)::before { opacity: 1; background: linear-gradient(90deg, #5fd07a 0 50%, #c25a8a 50% 100%); }
+#app .slot.fx-fog:not(.fx-shield):not(.fx-burn):not(.fx-buff):not(.fx-debuff)::before { opacity: 1; background: linear-gradient(#a9b4b8, #5d686c); }
+#app .slot.fx-recon:not(.fx-shield):not(.fx-burn):not(.fx-buff):not(.fx-debuff):not(.fx-fog)::before { opacity: 1; background: linear-gradient(#ffe27a, #b58a2a); }
+/* Zielmarkierung bleibt dominant */
+#app .slot.legal-target::before, #app .slot.picked::before, #app .slot.drop-ok::before { opacity: .35 !important; }
+#app .slot .dig-in-shield { z-index: 5; }
+/* Abschnittseffekte: Spaltenrahmen, auch auf leeren Slots */
+#app .slot.sec-buff { box-shadow: inset 0 0 0 2px #e2c36a99, 0 0 6px #e2c36a40 !important; }
+#app .slot.sec-debuff { box-shadow: inset 0 0 0 2px #c25a8a99 !important; }
+#app .slot.sec-shield { box-shadow: inset 0 0 0 2px #9fd4ffaa, 0 0 6px #9fd4ff55 !important; }
+#app .slot.sec-trap { box-shadow: inset 0 0 0 2px #ff7a2a88 !important; }
+#app .slot.sec-trap::after { content: "⚠"; color: #ffae6a; }
+#app .slot.sec-shield::after { content: "⛨"; color: #bfe4ff; }
+/* Labels */
+#app .slot .fx-badges { display: flex; flex-wrap: wrap; gap: 2px; justify-content: center; padding: 2px; background: #111913; }
+#app .slot .fx-badge { font-size: 10px; line-height: 1.3; padding: 0 4px; border-radius: 3px; border: 1px solid; white-space: nowrap; }
+#app .fx-b-shield { color: #d8ecff; border-color: #7aa8e8; background: #1c2b3d; }
+#app .fx-b-burn { color: #ffd9b0; border-color: #ff6a1a; background: #3a1608; }
+#app .fx-b-debuff { color: #f3c6dc; border-color: #a0507a; background: #2a1522; }
+#app .fx-b-fog { color: #dfe6e8; border-color: #7b878b; background: #22292b; }
+#app .fx-b-recon { color: #ffeeb0; border-color: #b58a2a; background: #2e2610; }
+/* Einmalige Impulse (Treffer/Heilung/Brand) */
+#app .slot .fx-pulse { position: absolute; inset: 0; border-radius: 5px; pointer-events: none; z-index: 4; opacity: 0; animation: dcPulse .9s ease-out 1 both; }
+#app .fx-pulse-hit { box-shadow: inset 0 0 18px 4px #ff4a4a; }
+#app .fx-pulse-heal { box-shadow: inset 0 0 18px 4px #6dff9a; }
+#app .fx-pulse-burn { box-shadow: inset 0 0 22px 6px #ff8a1f; }
+@keyframes dcIris { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+@keyframes dcEmber { 0%,100% { opacity: .55; transform: translateY(0); } 50% { opacity: .9; transform: translateY(-3px); } }
+@keyframes dcPulse { 0% { opacity: 0; } 25% { opacity: 1; } 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  #app .slot.filled::before, #app .slot.fx-burn > .table-motif::after { animation: none !important; transition: none !important; }
+  #app .slot .fx-pulse { animation: none !important; opacity: .6; }
+}

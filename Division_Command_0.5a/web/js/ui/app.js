@@ -1447,15 +1447,18 @@
       }
     }
     var dig = isDigInProtected(inst);
+    var fx = window.DCTableFx ? DCTableFx.unitFx(engine, inst, hide) : { cls: [], badges: [] };
+    var pulseKind = (!hide && window.dcFxPulses) ? window.dcFxPulses[inst.uid] : '';
     var digTitle = dig ? ' title="Eingegraben — nicht angreifbar bis zum nächsten eigenen Zug"' : '';
-    return '<div class="slot filled ' + (mine ? 'mine' : 'enemy') + (inst.facedown ? ' facedown' : '') + (picked ? ' picked' : '') + (deadact ? ' exhausted' : '') + (dig ? ' dig-in' : '') + '" data-uid="' + inst.uid + '" data-drop="front" data-section="' + (section||'') + '" data-row="' + (row||0) + '"' + digTitle + '>' +
-      tokHtml +
+    return '<div class="slot filled ' + (mine ? 'mine' : 'enemy') + (inst.facedown ? ' facedown' : '') + (picked ? ' picked' : '') + (deadact ? ' exhausted' : '') + (dig ? ' dig-in' : '') + (fx.cls.length ? ' ' + fx.cls.join(' ') : '') + '" data-uid="' + inst.uid + '" data-drop="front" data-section="' + (section||'') + '" data-row="' + (row||0) + '"' + digTitle + '>' +
+      tokHtml + (window.DCTableFx ? DCTableFx.pulseHtml(pulseKind) : '') +
       (dig ? '<div class="dig-in-shield" aria-label="Eingegraben">' + digInShieldSvg(22) + '</div>' : '') +
       tableArt(d, hide) +
       (inst.facedown && mine ? '<div class="unit-hint">verdeckt</div>' : '') +
       (dig ? '<div class="unit-hint">Eingegraben</div>' : '') +
       '<div class="unit-name">' + escapeHtml(hide ? 'Verdeckte Einheit' : ((d && d.name) || 'Einheit')) + '</div>' +
       '<div class="unit-stats">' + stats + '</div>' +
+      (window.DCTableFx ? DCTableFx.badgesHtml(fx.badges) : '') +
       (!hide && deadact ? '<span class="table-status">' + (inst.attackUsed ? 'Angriff genutzt' : 'Erschöpft') + '</span>' : '') +
       (!hide && inst.defMax != null && inst.def < inst.defMax ? '<span class="table-status damage">Schaden ' + (inst.defMax - inst.def) + '</span>' : '') +
       tableAttachments(inst, hide) + '</div>'; // HTML-Sonderzeichen escapen
@@ -1473,10 +1476,17 @@
         auraSecs[p.flags.keinLoch.section] = auraSecs[p.flags.keinLoch.section] || { kind: 'kein_loch' };
       }
     } catch (eA) {}
+    var secFx = {};
+    try { if (window.DCTableFx) secFx = DCTableFx.sectionFx(engine, p, mine); } catch (eS) {}
     var slots = order.map(function (pair) {
       var html = unitHtml(p.front[pair[0]][pair[1]], mine, pair[0], pair[1]);
-      if (auraSecs[pair[0]]) {
-        html = html.replace('class="slot ', 'class="slot section-aura ');
+      var sf = secFx[pair[0]];
+      if (auraSecs[pair[0]] || sf) {
+        html = html.replace('class="slot ', 'class="slot section-aura ' + (sf ? sf.cls.join(' ') + ' ' : ''));
+        if (sf) {
+          var secTitle = escapeHtml(sf.titles.join(' · '));
+          html = html.replace('<div class="slot', '<div data-sec-fx="' + secTitle + '"' + (html.indexOf(' title="') < 0 ? ' title="' + secTitle + '"' : '') + ' class="slot');
+        }
       }
       return html;
     }).join(''); // nächster Schritt im Ablauf
@@ -2396,6 +2406,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     setLabel('enemy-front-label', foe.name + ' — Front'); // nächster Schritt im Ablauf
     setLabel('my-front-label', me.name + ' — Front'); // nächster Schritt im Ablauf
     setLabel('my-support-label', me.name + ' — Support'); // Unterstützungszone
+    try { window.dcFxPulses = window.DCTableFx ? DCTableFx.pulses(engine) : {}; } catch (eFx) { window.dcFxPulses = {}; }
     var dirty = applyHtml($('#enemy-front'), renderFront(foe, false));
     function supportHtml(list, mine) { // Unterstützungszone
       var filled = 0; // lokale Variable
