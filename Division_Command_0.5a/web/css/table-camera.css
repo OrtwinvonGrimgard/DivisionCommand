@@ -36,7 +36,6 @@ body.dc-cam #app .cam-hud { position: absolute; z-index: 20; left: 8px; top: 8px
 body.dc-cam #app .cam-hud button { font-size: 12px; padding: 3px 8px; }
 body.dc-cam #app .cam-hud button[aria-pressed="false"] { opacity: .55; }
 body.dc-cam #app .cam-hint { font-size: 11px; color: #cdbb8a; background: #0009; padding: 2px 6px; border-radius: 4px; }
-#app .cam-on { position: absolute; z-index: 20; left: 8px; top: 8px; font-size: 12px; padding: 3px 8px; }
 body.dc-cam #app .bottom-bar { position: relative; z-index: 15; flex: 0 0 auto; }
 @media (prefers-reduced-motion: reduce) { body.dc-cam #app .cam-world.cam-smooth { transition: none; } }
 @media (max-width: 1000px) { body.dc-cam #app .cam-hint { display: none; } }

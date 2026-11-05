@@ -18,7 +18,16 @@ const back = M.worldToScreen(zc, view, after.x, after.y); assert(Math.abs(back.x
 assert.match(M.transformCss({ x: 500, y: 300, z: 1 }, view), /translate\(0\.0px,0\.0px\) scale\(1\.000\)/);
 const fit = M.fitCam(view, world); assert(fit.z >= M.LIMITS.minZoom && fit.z <= M.LIMITS.maxZoom);
 // --- DOM wrap: board in world, hand/HUD/log outside
-w.dcRender(); C.ensure();
+w.dcRender();
+// Default for existing users: classic flat table, no camera wrapper
+assert.equal(C.prefs().enabled, false); assert(!$('#cam-viewport') && $('.table-main > #my-front'), 'flat by default');
+assert.equal($('#opt-table-view').value, 'flat'); assert.equal($('#opt-table-view-ingame').value, 'flat');
+// Graphics option (main menu) switches live; ingame select syncs; persisted in dc_camera_prefs
+const sel = $('#opt-table-view'); sel.value = 'cam'; sel.dispatchEvent(new w.Event('change', { bubbles: true }));
+assert($('#cam-world #my-front'), 'live switch without restart');
+assert.equal($('#opt-table-view-ingame').value, 'cam', 'ingame option synced');
+assert.equal(JSON.parse(w.localStorage.getItem('dc_camera_prefs')).enabled, true, 'persisted');
+w.dcRender(); assert.equal(w.document.querySelectorAll('#cam-viewport').length, 1, 'no double wrap on rerender');
 assert($('#cam-world #my-front') && $('#cam-world #enemy-front') && $('#cam-world #my-support') && $('#cam-world .nml-band'));
 assert(!$('#cam-world #hand') && !$('#cam-world .bottom-bar'), 'hand pinned outside world');
 assert(!$('#cam-world #log-win') && !$('#cam-world .top-bar'), 'HUD/protocol outside world');
@@ -55,7 +64,9 @@ C._resetTiming(); eng.state.pending = { kind: 'instant-target', player: 0, choic
 assert.equal(C.focusUid(inst.uid, 'e2'), 'busy', 'never during pending selection'); eng.state.pending = null;
 w.document.body.classList.add('dc-armed'); assert.equal(C.focusUid(inst.uid, 'e3'), 'busy'); w.document.body.classList.remove('dc-armed');
 key('d'); up('d'); assert.equal(C.focusUid(inst.uid, 'e4'), 'manual', 'manual pan has priority');
-C._resetTiming(); C.setAutoFocus(false); assert.equal(C.focusUid(inst.uid, 'e5'), 'off'); C.setAutoFocus(true);
+C._resetTiming(); const af = $('#opt-cam-auto-ingame'); af.checked = false; af.dispatchEvent(new w.Event('change', { bubbles: true }));
+assert.equal(C.focusUid(inst.uid, 'e5'), 'off'); assert.equal($('#opt-cam-auto').checked, false, 'autofocus synced to main options');
+af.checked = true; af.dispatchEvent(new w.Event('change', { bubbles: true }));
 assert.equal(JSON.parse(w.localStorage.getItem('dc_camera_prefs')).autoFocus, true, 'prefs stored separately');
 // --- production play chain still works through the world (click bubbling from slot)
 eng.player(0).front.R[2] = null; w.dcRender();
@@ -66,10 +77,20 @@ assert($('#cam-world #my-front .slot.legal'), 'legal slots marked inside world')
 click('#cam-world #my-front .slot.legal');
 assert(eng.frontList(eng.player(0)).some(l => l.inst.uid === card.uid) && eng.player(0).ap < ap, 'deploy + AP through camera');
 // --- flat fallback restores DOM, re-enable rewraps
-C.setEnabled(false);
-assert(!$('#cam-viewport') && !w.document.body.classList.contains('dc-cam') && $('.table-main > #my-front'), 'flat table restored');
-assert($('#cam-on')); key('d'); assert.equal(C._keys().join(), '', 'no WASD in flat mode');
-C.setEnabled(true); assert($('#cam-world #my-front') && !$('#cam-on'));
+// Drag in progress: switch deferred until drop, then applied
+w.document.body.classList.add('dc-dragging');
+const igs = $('#opt-table-view-ingame'); igs.value = 'flat'; igs.dispatchEvent(new w.Event('change', { bubbles: true }));
+assert($('#cam-world #my-front'), 'no DOM move during drag');
+w.document.body.classList.remove('dc-dragging'); w.dcRender();
+assert(!$('#cam-viewport') && !w.document.body.classList.contains('dc-cam') && $('.table-main > #my-front'), 'flat table restored after drag');
+assert(!$('#cam-on') && !$('#cam-flat'), 'no redundant table toggles');
+key('d'); assert.equal(C._keys().join(), '', 'no WASD in flat mode');
+assert.equal($('#opt-table-view').value, 'flat');
+// Actions still work on flat after switching back
+const card2 = add(w.DC_CATALOG.cards.find(x => x.typ === 'Einheit' && !(x.effects || []).length).id);
+click(`#hand [data-uid="${card2.uid}"]`); click('#my-front .slot.legal');
+assert(eng.frontList(eng.player(0)).some(l => l.inst.uid === card2.uid));
+C.setEnabled(true); assert($('#cam-world #my-front'));
 assert.equal(h.errors.length, 0, String(h.errors));
 h.dom.window.close();
 console.log('PASS camera: math/zoom-at-cursor/bounds, world wraps board only (hand/HUD/log pinned), WASD + input/modal/endscreen/Ctrl blocking, wheel vs native scroll, focus dedupe/pending/armed/manual/off, prefs, deploy+AP via world, flat fallback');

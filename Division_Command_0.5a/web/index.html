@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/align.css?v=handzoom2" id="dc-align-css">
   <link rel="stylesheet" href="css/table-cards.css?v=fit1">
   <link rel="stylesheet" href="css/table-effects.css?v=fit1">
-  <link rel="stylesheet" href="css/table-camera.css?v=1">
+  <link rel="stylesheet" href="css/table-camera.css?v=opt1">
   <link rel="stylesheet" href="css/table-chat.css?v=1">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
@@ -128,6 +128,10 @@
           <input id="opt-vol-ingame" aria-label="Musiklautstärke" type="range" min="0" max="100" step="1" value="55">
           <label for="opt-sfx-ingame">Soundeffekte <output id="opt-sfx-ingame-value" for="opt-sfx-ingame">55%</output></label>
           <input id="opt-sfx-ingame" aria-label="Soundeffekt-Lautstärke" type="range" min="0" max="100" step="1" value="55">
+      <h3>Grafik</h3>
+      <label for="opt-table-view-ingame">Tischansicht
+        <select id="opt-table-view-ingame" data-cam-view><option value="flat">Flach (klassisch)</option><option value="cam">2,5D (beweglich, Test)</option></select></label>
+      <label>Kamera-Auto-Fokus <input id="opt-cam-auto-ingame" type="checkbox" data-cam-auto checked> (nur 2,5D)</label>
       <h3>Bot</h3>
       <label>Aggressivität <span id="ig-v-agg">45</span>
         <input id="ig-bot-agg" type="range" min="1" max="100" value="45">
@@ -422,6 +426,9 @@
         </div>
         <div id="opt-gfx" class="opt-pane" style="display:none">
           <label>Bewegung reduzieren <input id="opt-motion" type="checkbox"> kürzere Dialoge und Flüge</label>
+          <label for="opt-table-view">Tischansicht
+            <select id="opt-table-view" data-cam-view><option value="flat">Flach (klassisch)</option><option value="cam">2,5D (beweglich, Test)</option></select></label>
+          <label>Kamera-Auto-Fokus <input id="opt-cam-auto" type="checkbox" data-cam-auto checked> folgt wichtigen Aktionen (nur 2,5D)</label>
         </div>
         <div id="opt-sys" class="opt-pane" style="display:none">
           <label>Leistung anzeigen <input id="opt-perf" type="checkbox"> FPS / Speicher</label>
@@ -678,7 +685,7 @@
   <script src="js/data/table-art-data.js?v=1"></script>
   <script src="js/ui/table-card-art.js?v=1"></script>
   <script src="js/ui/table-effects.js?v=1"></script>
-  <script src="js/ui/table-camera.js?v=1"></script>
+  <script src="js/ui/table-camera.js?v=opt1"></script>
   <script src="js/ui/end-screen.js?v=1"></script>
   <script src="js/ui/app.js?v=cam1"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>

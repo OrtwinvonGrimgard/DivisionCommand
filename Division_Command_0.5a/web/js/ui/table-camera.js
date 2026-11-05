@@ -44,7 +44,7 @@
 
   /* ---------- Präferenzen ---------- */
   function loadPrefs() {
-    var p = { enabled: true, autoFocus: true };
+    var p = { enabled: false, autoFocus: true }; // Standard: klassischer flacher Tisch
     try { var raw = JSON.parse(global.localStorage.getItem(PREF_KEY) || '{}'); if (typeof raw.enabled === 'boolean') p.enabled = raw.enabled; if (typeof raw.autoFocus === 'boolean') p.autoFocus = raw.autoFocus; } catch (e) {}
     return p;
   }
@@ -186,7 +186,9 @@
   /* Nach jedem Render: neue Fronteinheiten und tatsächliche Treffer-Impulse fokussieren (je einmal). */
   function afterRender(eng) {
     try {
-      ensure();
+      bindOptions();
+      if (deferredApply) applyEnabled();
+      if (prefs.enabled) ensure(); else if (document.getElementById('cam-viewport')) teardown();
       if (!active() || !eng || !eng.state) return;
       if (prevEngine !== eng) { prevEngine = eng; prevFront = frontUids(eng); seenEvents = {}; return; }
       var cur = frontUids(eng), target = null, key = null;
@@ -207,7 +209,7 @@
   function ensure() {
     var main = document.querySelector('#app .table-main') || document.querySelector('.table-main');
     if (!main) return false;
-    if (!prefs.enabled) { teardown(); return false; }
+    if (!prefs.enabled) return false;
     if (main.querySelector('#cam-viewport')) { viewport = main.querySelector('#cam-viewport'); world = viewport.querySelector('#cam-world'); document.body.classList.add('dc-cam'); return true; }
     var anchor = main.querySelector('.bottom-bar');
     viewport = document.createElement('div'); viewport.id = 'cam-viewport'; viewport.className = 'cam-viewport';
@@ -221,13 +223,9 @@
     });
     var hud = document.createElement('div'); hud.className = 'cam-hud';
     hud.innerHTML = '<button type="button" id="cam-center" title="Ganzen Tisch zeigen">Übersicht</button>' +
-      '<button type="button" id="cam-auto" aria-pressed="' + prefs.autoFocus + '" title="Kamera folgt wichtigen Aktionen">Auto-Fokus</button>' +
-      '<button type="button" id="cam-flat" title="Klassischer flacher Tisch">Flach</button>' +
       '<span class="cam-hint">WASD/Pfeile: bewegen · Mausrad: zoomen · Mitteltaste ziehen</span>';
     viewport.appendChild(hud);
     hud.querySelector('#cam-center').onclick = function () { overview(); };
-    hud.querySelector('#cam-auto').onclick = function () { prefs.autoFocus = !prefs.autoFocus; savePrefs(); this.setAttribute('aria-pressed', String(prefs.autoFocus)); };
-    hud.querySelector('#cam-flat').onclick = function () { setEnabled(false); };
     viewport.addEventListener('wheel', onWheel, { passive: false });
     viewport.addEventListener('pointerdown', onPointerDown);
     document.body.classList.add('dc-cam');
@@ -243,18 +241,36 @@
     while (w && w.firstChild) main.insertBefore(w.firstChild, vp);
     vp.remove();
     viewport = world = null;
-    flatToggle();
   }
-  function flatToggle() {
-    var main = document.querySelector('.table-main');
-    if (!main || main.querySelector('#cam-on')) return;
-    var b = document.createElement('button'); b.type = 'button'; b.id = 'cam-on'; b.className = 'cam-on'; b.textContent = '2,5D-Tisch';
-    b.onclick = function () { setEnabled(true); };
-    main.appendChild(b);
+  /* Live-Umschaltung. Während eines laufenden Karten-Drags wird erst nach dem Drop umgebaut. */
+  var deferredApply = false;
+  function applyEnabled() {
+    if (document.body.classList.contains('dc-dragging')) { deferredApply = true; return 'deferred'; }
+    deferredApply = false;
+    keys = {}; panDrag = null;
+    if (prefs.enabled) ensure(); else teardown();
+    return 'applied';
   }
   function setEnabled(on) {
-    prefs.enabled = !!on; savePrefs();
-    if (on) { var b = document.getElementById('cam-on'); if (b) b.remove(); ensure(); } else teardown();
+    prefs.enabled = !!on; savePrefs(); syncOptions();
+    return applyEnabled();
+  }
+  function setAutoFocus(on) { prefs.autoFocus = !!on; savePrefs(); syncOptions(); }
+  /* Grafikoptionen (Hauptmenü + Ingame) spiegeln dieselben dc_camera_prefs. */
+  function syncOptions() {
+    document.querySelectorAll('[data-cam-view]').forEach(function (el) { el.value = prefs.enabled ? 'cam' : 'flat'; });
+    document.querySelectorAll('[data-cam-auto]').forEach(function (el) { el.checked = !!prefs.autoFocus; });
+  }
+  function bindOptions() {
+    document.querySelectorAll('[data-cam-view]').forEach(function (el) {
+      if (el._camBound) return; el._camBound = true;
+      el.addEventListener('change', function () { setEnabled(el.value === 'cam'); });
+    });
+    document.querySelectorAll('[data-cam-auto]').forEach(function (el) {
+      if (el._camBound) return; el._camBound = true;
+      el.addEventListener('change', function () { setAutoFocus(el.checked); });
+    });
+    syncOptions();
   }
   function overview() {
     if (!world) return;
@@ -271,12 +287,15 @@
     document.addEventListener('pointermove', onPointerMove);
     document.addEventListener('pointerup', onPointerUp);
     global.addEventListener('resize', function () { if (world) apply(false); });
+    document.addEventListener('drop', function () { if (deferredApply) setTimeout(applyEnabled, 0); });
+    document.addEventListener('dragend', function () { if (deferredApply) setTimeout(applyEnabled, 0); });
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bindOptions); else bindOptions();
   }
 
   global.DCCamera = {
     ensure: ensure, afterRender: afterRender, focusUid: focusUid, overview: overview, setEnabled: setEnabled,
     prefs: function () { return { enabled: prefs.enabled, autoFocus: prefs.autoFocus }; },
-    setAutoFocus: function (on) { prefs.autoFocus = !!on; savePrefs(); },
+    setAutoFocus: setAutoFocus, syncOptions: syncOptions, bindOptions: bindOptions,
     state: function () { return { x: cam.x, y: cam.y, z: cam.z }; },
     set: function (c) { cam = { x: c.x, y: c.y, z: c.z }; apply(false); },
     _step: step, _keys: function () { return Object.keys(keys); }, _resetTiming: function () { manualUntil = 0; lastAutoAt = -1e9; },

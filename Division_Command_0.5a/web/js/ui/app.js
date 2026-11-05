@@ -2502,6 +2502,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     document.querySelectorAll('#my-front .slot.filled, #enemy-front .slot.filled, #my-support .slot.filled, #enemy-support .slot.filled, .doctrine-card').forEach(function (tile) {
       tile.tabIndex = 0; tile.setAttribute('role', 'button');
     });
+    if (window.DCCamera) { try { DCCamera.afterRender(engine); } catch (eCam) {} } // auch ohne DOM-Änderung (Optionen/Baseline)
     if (!dirty) return;
     $('#hand').querySelectorAll('.card').forEach(function (el) { // Handkarten
       bindHover(el, function () { // Funktion
@@ -2828,7 +2829,6 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
     }).join(''); // nächster Schritt im Ablauf
     if (window.DCTableChat) { try { DCTableChat.refresh(); } catch (eChat) {} }
-    if (window.DCCamera) { try { DCCamera.afterRender(engine); } catch (eCam) {} }
     if (st.pending && st.pending.player === viewer) {
       showPending();
     }

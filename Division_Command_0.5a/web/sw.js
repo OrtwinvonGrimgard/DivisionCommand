@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-cam1';
+const CACHE = 'divcmd-cam2';
 const ASSETS = [
   './',
   './index.html',
