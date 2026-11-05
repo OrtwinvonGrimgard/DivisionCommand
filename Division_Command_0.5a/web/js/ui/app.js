@@ -1867,7 +1867,7 @@
       var slot = t.closest('.slot');
       if (!slot) return;
       var pend = engine.state.pending;
-      if (pend && pend.kind === 'deploy' && slot.classList.contains('empty') && slot.closest('#my-front')) {
+      if (pend && (pend.kind === 'deploy' || pend.kind === 'move-dest') && slot.classList.contains('empty') && slot.closest('#my-front')) {
         ev.preventDefault();
         ev.stopPropagation();
         dispatch({
@@ -1940,7 +1940,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
           return;
         }
         var pend = engine.state.pending;
-        if (pend && pend.kind === 'deploy' && pend.player === viewer && slot.closest('#my-front')) {
+        if (pend && (pend.kind === 'deploy' || pend.kind === 'move-dest') && pend.player === viewer && slot.closest('#my-front')) {
           dispatch({ type: 'CHOOSE_SLOT', player: viewer, slot: { section: slot.getAttribute('data-section'), row: Number(slot.getAttribute('data-row')) } });
         }
       };
@@ -2447,12 +2447,15 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
           db.unshift({ id: 'ueberschuss', label: 'Überschuss (2 AP, 1× Zug, nur Support)' });
           db.unshift({ id: 'healarm', label: 'Feldreparatur (eigener Zug, 1×)', primary: true });
         }
+        if (def.id === 'dc_dok_verlegung') {
+          db.unshift({ id: 'verlegung', label: 'Verlegung: 1 Slot seitlich (1× Zug)', primary: true });
+        }
         openInspect({
           def: def,
           zone: 'doctrine',
           buttons: db,
           onAction: function (id) {
-            if (id !== 'schutzwall') return;
+            if (id === 'schutzwall') {
             var ov = document.getElementById('overlay');
             ov.innerHTML = '<div class="modal"><h2>Abweichung vom Kartentext</h2><p>Schutzwall ist abweichend vom Druck nur <strong>1× pro Runde</strong> erlaubt — das umfasst deinen Zug und den Zug des Gegners.</p><button type="button" class="primary" id="sw-go">Trotzdem einsetzen</button> <button type="button" id="sw-no">Abbrechen</button></div>';
             ov.style.display = 'flex';
@@ -2461,6 +2464,32 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
               dispatch({ type: 'SCHUTZWALL', player: viewer });
             };
             document.getElementById('sw-no').onclick = function () { ov.style.display = 'none'; };
+            return;
+            }
+            if (id === 'verlegung') {
+              var shifts = (engine.listActions(viewer) || []).filter(function (a) { return a.type === 'DOK_SHIFT'; });
+              var ovv = document.getElementById('overlay');
+              if (!shifts.length) {
+                ovv.innerHTML = '<div class="modal"><h2>Verlegung</h2><p>Kein freier Nachbarslot (oder schon genutzt).</p><button type="button" class="primary" id="vl-ok">Zurück</button></div>';
+                ovv.style.display = 'flex';
+                document.getElementById('vl-ok').onclick = function () { ovv.style.display = 'none'; };
+                return;
+              }
+              ovv.innerHTML = '<div class="modal"><h2>Verlegung</h2><p>Einheit 1 Slot seitlich schieben (1× pro Zug).</p><div class="choices">' +
+                shifts.map(function (a, i) {
+                  return '<button type="button" data-i="' + i + '">' + (a.label || a.name) + '</button>';
+                }).join('') + '</div><button type="button" id="vl-no">Abbrechen</button></div>';
+              ovv.style.display = 'flex';
+              ovv.querySelectorAll('[data-i]').forEach(function (b) {
+                b.onclick = function () {
+                  ovv.style.display = 'none';
+                  var act = shifts[Number(b.getAttribute('data-i'))];
+                  dispatch({ type: 'DOK_SHIFT', player: viewer, uid: act.uid, slot: act.slot });
+                };
+              });
+              document.getElementById('vl-no').onclick = function () { ovv.style.display = 'none'; };
+              return;
+            }
             if (id === 'tvinfo') {
               var ovt = document.getElementById('overlay');
               ovt.innerHTML = '<div class="modal"><h2>Tiefenverteidigung</h2><p>Blutzoll zählt <strong>nur zerstörte gegnerische Fronteinheiten</strong>. Jede bringt +1 AP zu Beginn deines nächsten Zuges.</p><p>Beobachterfeuer auf Support kostet 1 AP und erschöpft die Rohrartillerie.</p><button type="button" id="tv-ok">Verstanden</button></div>';

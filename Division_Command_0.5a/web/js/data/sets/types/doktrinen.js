@@ -506,7 +506,7 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "principle": "Wähle 1 am Ende deines Zuges.",
+    "principle": "Passiv — 1× pro Zug",
     "text": "Eigene Angriffe gegen aufgedeckte Feinde richten +1 Schaden an (1× pro Zug).",
     "clauses": [
       {

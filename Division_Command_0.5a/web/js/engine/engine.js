@@ -972,6 +972,27 @@
             }
           } catch (err) { /* ein Angriff darf die restliche Zugliste nicht streichen */ }
         }); // nächster Schritt im Ablauf
+        // Doktrin Verlegung: 1×/Zug seitlich schieben
+        if (this._hasDoctrine && this._hasDoctrine(p, 'VERLEGUNG') && !(p.flags && p.flags.dokVerlegungUsed === this.state.turn)) {
+          const order = ['L', 'C', 'R'];
+          this.frontList(p).forEach((loc) => {
+            if (!loc.inst || loc.inst.facedown) return;
+            const i = order.indexOf(loc.section);
+            [-1, 1].forEach((d) => {
+              const ni = i + d;
+              if (ni < 0 || ni > 2) return;
+              const sec = order[ni];
+              if (p.front[sec][loc.row]) return;
+              acts.push({
+                type: 'DOK_SHIFT',
+                uid: loc.inst.uid,
+                slot: { section: sec, row: loc.row },
+                name: (this.defOf(loc.inst) || {}).name || 'Einheit',
+                label: 'Verlegung → ' + sec + (loc.row + 1),
+              });
+            });
+          });
+        }
         acts.push({ type: 'END_TURN' }); // nächster Schritt im Ablauf
         acts.push({ type: 'PROPOSE_PEACE' }); // nächster Schritt im Ablauf
       }
@@ -1015,6 +1036,7 @@
           case 'SPY_BOTTOM': return this._spyBottom(pid);
           case 'BRUMM_JAM': return this._brummJam(pid, a);
           case 'BRUMM_HIJACK': return this._brummHijack(pid, a);
+          case 'DOK_SHIFT': return this._actDokShift(pid, a);
           case 'HEAL_ARMORED': return this._actHealArmored(pid, a);
           case 'UEBERSCHUSS': return this._actUeberschuss(pid, a);
           case 'CONCEDE': return this._end(pid === 0 ? 1 : 0, 'Aufgabe'); // Wert zurückgeben
@@ -1208,6 +1230,9 @@
     // Gewählte Frontstellung für eine wartende Einheit.
     _actSlot(pid, a) { // Einheit auf eine Stellung legen
       const pend = this.state.pending; // offene Wahl des Spielers
+      if (pend && pend.kind === 'move-dest' && pend.player === pid) {
+        return this._actTarget(pid, { target: a.slot ? ('slot:' + a.slot.section + ':' + a.slot.row) : a.target, slot: a.slot });
+      }
       if (pend && pend.kind === 'gassen-slot' && pend.player === pid) return this._gassenPlace(pid, a.slot);
       if (!pend || pend.player !== pid || pend.kind !== 'deploy') throw new Error('Kein Auslegen offen'); // Regelverstoß, Zug ungültig
       const p = this.player(pid); // unveränderliche Bindung in diesem Block
@@ -1324,6 +1349,26 @@
       }
       if (pend.kind === 'brumm-jam') return this._brummJam(pid, a);
       if (pend.kind === 'brumm-hijack') return this._brummHijack(pid, a);
+      if (pend.kind === 'move-dest') {
+        const loc = this.findInst(pend.uid);
+        const p = this.player(pid);
+        let dest = null;
+        if (a.slot) dest = a.slot;
+        else if (a.target && String(a.target).indexOf('slot:') === 0) {
+          const parts = String(a.target).split(':');
+          dest = { section: parts[1], row: Number(parts[2]) };
+        } else {
+          const ch = (pend.choices || []).find((c) => c.target === a.target);
+          if (ch && ch.slot) dest = ch.slot;
+        }
+        if (!loc || !dest || p.front[dest.section][dest.row]) throw new Error('Ungültiges Feld');
+        p.front[loc.section][loc.row] = null;
+        p.front[dest.section][dest.row] = loc.inst;
+        this._log(this.defOf(loc.inst).name + ' → ' + dest.section + (dest.row + 1));
+        if (pend.card) p.grave.push(pend.card);
+        this.state.pending = null;
+        return { ok: true };
+      }
       if (pend.kind === 'verschieben') {
         const loc = this.findInst(pend.uid);
         const p = this.player(pid);
@@ -1641,7 +1686,7 @@
         if (!loc.player.nml) loc.player.nml = { L: [null,null,null], C: [null,null,null], R: [null,null,null] };
         if (!loc.player.nml[loc.section]) loc.player.nml[loc.section] = [null,null,null];
         if (loc.player.nml[loc.section][loc.row]) throw new Error('Bereits vermint');
-        const tokDef = this.byId('dc_tok_minenfeld');
+        const tokDef = this.byId['dc_tok_minenfeld'];
         const tok = this._makeInst(tokDef ? tokDef.id : 'dc_tok_minenfeld', pid);
         tok.facedown = false;
         tok.image = tok.image || 'MINE.png';
@@ -2475,6 +2520,10 @@
         return { ok: true, need: 'target' }; // Ergebnis an den Aufrufer
       }
       this._resolveEffects(p, card, targetUid); // Karteneffekte der Reihe nach
+      if (this.state.pending && this.state.pending.kind === 'move-dest') {
+        this.state.pending.card = card;
+        return { ok: true, need: 'slot' };
+      }
       p.grave.push(card); // Friedhof
       return { ok: true }; // Ergebnis an den Aufrufer
     }
@@ -2499,10 +2548,15 @@
       const p = this.player(pid); // unveränderliche Bindung in diesem Block
       const targets = Array.isArray(targetUid) ? targetUid : (targetUid ? [targetUid] : (pend.selected || []));
       // unveränderliche Bindung in diesem Block
+      this.state.pending = null;
       if (!targets.length) this._resolveEffects(p, pend.card, null); // Karteneffekte der Reihe nach
       else targets.forEach((tid) => this._resolveEffects(p, pend.card, tid)); // Karteneffekte der Reihe nach
+      // MOVE_SLOTS may have re-opened a move-dest pending — keep card until destination chosen
+      if (this.state.pending && this.state.pending.kind === 'move-dest') {
+        this.state.pending.card = pend.card;
+        return { ok: true, need: 'slot' };
+      }
       p.grave.push(pend.card); // Friedhof
-      this.state.pending = null; // offene Wahl des Spielers
       return { ok: true }; // Ergebnis an den Aufrufer
     }
 
@@ -2824,12 +2878,21 @@
       } else if (code === 'SACRIFICE') { // Zweig nur bei zutreffender Bedingung
         const loc = this.findInst(targetUid); // unveränderliche Bindung in diesem Block
         if (loc && loc.player.id === p.id) { // Zweig nur bei zutreffender Bedingung
+          const sec = loc.section;
           this._destroy(loc); // Karte vom Feld auf den Friedhof
-          const n = Number(par.then_destroy || 2); // Karte vom Feld auf den Friedhof
-          // destroy up to n enemy front units cheapest
-          const enemies = this.frontList(opp).slice(0, n); // unveränderliche Bindung in diesem Block
-          enemies.forEach((en) => this._destroy({ inst: en.inst, player: opp, zone: 'front', section: en.section, row: en.row }));
-          // Karte vom Feld auf den Friedhof
+          if (par.section_buff_atk) {
+            this.frontList(p).forEach((l) => {
+              if (l.section !== sec) return;
+              l.inst.flags = l.inst.flags || {};
+              l.inst.flags.tempAtk = (l.inst.flags.tempAtk || 0) + Number(par.section_buff_atk || 0);
+              l.inst.flags.tempAtkUntil = this.state.turn;
+            });
+          }
+          if (!par.no_enemy_destroy) {
+            const n = Number(par.then_destroy || 2); // Karte vom Feld auf den Friedhof
+            const enemies = this.frontList(opp).slice(0, n);
+            enemies.forEach((en) => this._destroy({ inst: en.inst, player: opp, zone: 'front', section: en.section, row: en.row }));
+          }
         }
       } else if (code === 'BUFF') { // Zweig nur bei zutreffender Bedingung
         let loc = this.findInst(targetUid);
@@ -3034,18 +3097,43 @@
           else p.hand.push(c);
         }
       } else if (code === 'MOVE_SLOTS') {
-        // soft: mark movable; full UI is pending — shift one slot toward C if possible
         const loc = this.findInst(targetUid);
-        if (loc && loc.zone === 'front') {
+        if (loc && loc.zone === 'front' && loc.player.id === p.id) {
+          const maxStep = Math.max(1, Number(par.slots || par.value || 1));
           const order = ['L', 'C', 'R'];
           const i = order.indexOf(loc.section);
-          const ni = Math.min(2, Math.max(0, i + (i === 0 ? 1 : -1)));
-          if (!p.front[order[ni]][loc.row]) {
-            p.front[loc.section][loc.row] = null;
-            p.front[order[ni]][loc.row] = loc.inst;
-            if (par.defBonus || true) {
-              /* optional */
+          const choices = [];
+          for (let d = -maxStep; d <= maxStep; d++) {
+            if (!d) continue;
+            const ni = i + d;
+            if (ni < 0 || ni > 2) continue;
+            const sec = order[ni];
+            if (!p.front[sec][loc.row]) {
+              choices.push({
+                target: 'slot:' + sec + ':' + loc.row,
+                slot: { section: sec, row: loc.row },
+                label: sec + (loc.row + 1),
+              });
             }
+          }
+          if (choices.length === 1) {
+            const dest = choices[0].slot;
+            p.front[loc.section][loc.row] = null;
+            p.front[dest.section][dest.row] = loc.inst;
+            this._log(this.defOf(loc.inst).name + ' → ' + dest.section + (dest.row + 1));
+          } else if (choices.length > 1) {
+            // Queue destination choice (finishInstant may have cleared pending; re-open)
+            const prev = this.state.pending;
+            this.state.pending = this._sealPending({
+              kind: 'move-dest',
+              player: p.id,
+              uid: loc.inst.uid,
+              fromS: loc.section,
+              fromR: loc.row,
+              card: prev && prev.card,
+              prompt: 'Neues Feld wählen',
+              choices,
+            });
           }
         }
       } else if (code === 'PLAY_INF_DISCOUNT') {
@@ -5074,6 +5162,28 @@
       this._log('Schutzwall.');
       return { ok: true };
     }
+        _actDokShift(pid, a) {
+      const p = this.player(pid);
+      if (this.state.active !== pid) throw new Error('Nur im eigenen Zug');
+      if (!(this._hasDoctrine && this._hasDoctrine(p, 'VERLEGUNG'))) throw new Error('Keine Verlegung');
+      if (p.flags && p.flags.dokVerlegungUsed === this.state.turn) throw new Error('Verlegung schon genutzt');
+      const loc = this.findInst(a.uid);
+      if (!loc || loc.player.id !== pid || loc.zone !== 'front') throw new Error('Keine eigene Einheit');
+      const dest = a.slot;
+      if (!dest || !dest.section) throw new Error('Kein Zielslot');
+      const order = ['L', 'C', 'R'];
+      const i = order.indexOf(loc.section);
+      const j = order.indexOf(dest.section);
+      if (Math.abs(i - j) !== 1 || dest.row !== loc.row) throw new Error('Nur ein Slot seitlich');
+      if (p.front[dest.section][dest.row]) throw new Error('Slot belegt');
+      p.front[loc.section][loc.row] = null;
+      p.front[dest.section][dest.row] = loc.inst;
+      p.flags = p.flags || {};
+      p.flags.dokVerlegungUsed = this.state.turn;
+      this._log(p.name + ' verlegt ' + this.defOf(loc.inst).name + ' → ' + dest.section + (dest.row + 1) + '.');
+      return { ok: true };
+    }
+
     _actHealArmored(pid, a) {
       const loc = this.findInst(a.uid || a.target);
       if (!loc) throw new Error('Kein Ziel');
@@ -5277,6 +5387,7 @@
     "mob-pick": { title: "Mobilisierung", pick: "card", needs: true },
     "hero-jump": { title: "Gegenstoß", pick: "slot", needs: true },
     verschieben: { title: "Verschieben", pick: "slot", needs: true },
+    "move-dest": { title: "Feld wählen", pick: "slot", needs: true },
     "brumm-pick": { title: "Brummbär", pick: "confirm", needs: false },
     nest: { title: "Verwundetennest", pick: "card", needs: true },
     attrition: { title: "Abnutzung", pick: "card", needs: true },

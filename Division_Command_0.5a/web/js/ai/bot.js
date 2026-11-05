@@ -286,13 +286,18 @@
         return;
       }
       if (a.type === 'REVEAL_UNIT') scored.push({ act: a, score: 3 });
+      if (a.type === 'DOK_SHIFT') {
+        var sc = 6;
+        if (a.slot && a.slot.section === 'C') sc += 4;
+        scored.push({ act: a, score: sc });
+      }
     });
     var plays = scored.filter(function (x) { return playable(x.act); });
     if (plays.length) {
       plays.sort(function (x, y) { return y.score - x.score; });
       return emit(pid, plays[0]);
     }
-    var rest = scored.filter(function (x) { return x.act.type === 'ATTACK' || x.act.type === 'REVEAL_UNIT'; });
+    var rest = scored.filter(function (x) { return x.act.type === 'ATTACK' || x.act.type === 'REVEAL_UNIT' || x.act.type === 'DOK_SHIFT'; });
     if (!rest.length) return { type: 'END_TURN', player: pid };
     rest.sort(function (x, y) { return y.score - x.score; });
     return emit(pid, rest[0]);
@@ -313,6 +318,8 @@
       var target = at.targets && at.targets.length ? pick(at.targets).uid : null;
       return { type: 'ATTACK', player: pid, uid: at.uid, target: target };
     }
+    var shifts = acts.filter(function (a) { return a.type === 'DOK_SHIFT'; });
+    if (shifts.length) return Object.assign({ player: pid }, pick(shifts));
     var reveal = acts.find(function (a) { return a.type === 'REVEAL_UNIT'; });
     if (reveal) return Object.assign({ player: pid }, reveal);
     var end = acts.find(function (a) { return a.type === 'END_TURN'; });

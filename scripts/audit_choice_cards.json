@@ -1,0 +1,307 @@
+{
+  "soforteTotal": 229,
+  "choiceOk": 170,
+  "broken": 20,
+  "autoOk": 37,
+  "rejected": 4,
+  "doctrineIssues": 0,
+  "brokenList": [
+    {
+      "id": "dc_so_sammelruf",
+      "name": "Sammelruf",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_so_armageddon",
+      "name": "Armageddon",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "coin"
+    },
+    {
+      "id": "dc_so_raeum",
+      "name": "Räumkommando",
+      "issue": "NO_PENDING_AUTO_RESOLVED",
+      "exp": "special",
+      "codes": [
+        "CLEAR_MINE"
+      ],
+      "note": "Spieler bekam keine UI-Auswahl"
+    },
+    {
+      "id": "dc_b_werkalarme_167",
+      "name": "Werkalarme",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_nachruckbefehl_124",
+      "name": "Nachruckbefehl",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_konzentrationsruf_639",
+      "name": "Konzentrationsruf",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_rasterfrage_827",
+      "name": "Rasterfrage",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_zwei_saetze_828",
+      "name": "Zwei Sätze",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_boden_vor_see_829",
+      "name": "Boden vor See",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_falsche_akte_881",
+      "name": "Falsche Akte",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_frueheres_datum_941",
+      "name": "Früheres Datum",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_kein_streichen_948",
+      "name": "Kein Streichen",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_gegenruf_760",
+      "name": "Gegenruf",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_gegenstoss_763",
+      "name": "Gegenstoß",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_stimmloch_206",
+      "name": "Stimmloch",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_drei_schluessel_581",
+      "name": "Drei Schlüssel",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_entsatz_rufen_526",
+      "name": "Entsatz rufen",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_zweite_linie_248",
+      "name": "Zweite Linie",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_lauer_249",
+      "name": "Lauer",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    },
+    {
+      "id": "dc_b_absetzung_289",
+      "name": "Absetzung",
+      "issue": "UNEXPECTED_PENDING",
+      "kind": "instant-target"
+    }
+  ],
+  "doctrineList": [],
+  "rejectedSample": [
+    {
+      "id": "dc_so_bod_luft",
+      "name": "Boden-Luft-Rakete",
+      "exp": "none",
+      "error": "Kein Luftangriff im Gange."
+    },
+    {
+      "id": "dc_so_geist",
+      "name": "Geist in den Trümmern",
+      "exp": "none",
+      "error": "Im letzten Zug keine Unterstützung auf dem Ablagestapel."
+    },
+    {
+      "id": "dc_so_vorsprung",
+      "name": "Geistiger Vorsprung",
+      "exp": "special",
+      "error": "Kein Angriff im Gange."
+    },
+    {
+      "id": "dc_so_ehren",
+      "name": "Militärische Ehren",
+      "exp": "special",
+      "error": "Keine Veteranen an der Front."
+    }
+  ],
+  "okSample": [
+    {
+      "id": "dc_so_marschbefehl",
+      "name": "Marschbefehl",
+      "kind": "instant-target",
+      "choices": 7,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_blutzeuge",
+      "name": "Blutzeuge",
+      "kind": "instant-target",
+      "choices": 4,
+      "exp": "target"
+    },
+    {
+      "id": "dc_so_deckung",
+      "name": "Deckung suchen",
+      "kind": "cover-seek",
+      "choices": 7,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_letzter",
+      "name": "Der Letzte der steht",
+      "kind": "last-stand",
+      "choices": 3,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_durchschuss",
+      "name": "Glatter Durchschuss",
+      "kind": "double-dmg",
+      "choices": 1,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_instand",
+      "name": "Instandsetzung",
+      "kind": "repair-bounce",
+      "choices": 1,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_lage",
+      "name": "Lagebesprechung",
+      "kind": "briefing",
+      "choices": 3,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_luftschlag",
+      "name": "Luftschlag",
+      "kind": "air-strike",
+      "choices": 4,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_martyrium",
+      "name": "Martyrium",
+      "kind": "martyr-self",
+      "choices": 3,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_minenfeld",
+      "name": "Minenfeld",
+      "kind": "lay-mine",
+      "choices": 3,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_mobilisierung",
+      "name": "Mobilisierung",
+      "kind": "mob-pick",
+      "choices": 6,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_napalm",
+      "name": "Napalm",
+      "kind": "napalm",
+      "choices": 4,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_pause",
+      "name": "Pause",
+      "kind": "pause-unit",
+      "choices": 7,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_massen",
+      "name": "Psychologie der Massen",
+      "kind": "mass-pick",
+      "choices": 4,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_eifer",
+      "name": "Religiöser Eifer",
+      "kind": "zeal",
+      "choices": 2,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_selbst",
+      "name": "Selbstopfer",
+      "kind": "selfsac-self",
+      "choices": 3,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_engel",
+      "name": "Silberner Engel",
+      "kind": "angel-unit",
+      "choices": 2,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_stand",
+      "name": "Standgericht",
+      "kind": "court",
+      "choices": 3,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_formation",
+      "name": "Standhafte Formation",
+      "kind": "formation",
+      "choices": 3,
+      "exp": "special"
+    },
+    {
+      "id": "dc_so_strahlung",
+      "name": "Strahlung",
+      "kind": "radiation",
+      "choices": 4,
+      "exp": "special"
+    }
+  ],
+  "botHeuristic": {
+    "pending": "Test-Bot scorePending: Slot-Wahl Mitte bevorzugt (+8, Mitte +2). Eigene Ziele: ATK + 0,5·DEF. Feindziele: 2·ATK + DEF, +6 verdeckt, +8 wenn DEF≤3. Plus Zufall. Schloter-Bot: zufällige Pending-Wahl.",
+    "doctrineAuto": "Schwerpunkt → dichtester Abschnitt (≥min_units). Sturmangriff → Infanterie mit höchstem Basis-ATK. Etappe → erste beschädigte heilen. Verlegung → DOK_SHIFT (Mitte bevorzugt). Stoßtrupp → nur Passive, kein TurnStart-dokAtk."
+  }
+}

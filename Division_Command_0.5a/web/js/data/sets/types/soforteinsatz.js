@@ -1434,10 +1434,9 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Eine eigene Infanterie hat +2 ATK bis Zugende.",
     "effects": [
       {
-        "code": "BUFF_ALL_OWN",
+        "code": "BUFF",
         "param": {
           "atk": 2,
-          "filter": "infanterie",
           "until": "turn"
         }
       }
@@ -1557,17 +1556,16 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Wähle eine eigene Infanterie: +3 ATK bis Zugende. Danach 1 Schaden an ihr.",
     "effects": [
       {
-        "code": "SELF_DAMAGE",
+        "code": "BUFF",
         "param": {
-          "value": 1
+          "atk": 3,
+          "until": "turn"
         }
       },
       {
-        "code": "BUFF_ALL_OWN",
+        "code": "SELF_DAMAGE",
         "param": {
-          "atk": 3,
-          "filter": "infanterie",
-          "until": "turn"
+          "value": 1
         }
       }
     ],
@@ -1659,16 +1657,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Zerstöre eine eigene Infanterie: andere eigene Einheiten im Abschnitt +2 ATK bis Zugende.",
     "effects": [
       {
-        "code": "BUFF_ALL_OWN",
-        "param": {
-          "atk": 2,
-          "filter": "infanterie",
-          "until": "turn"
-        }
-      },
-      {
         "code": "SACRIFICE",
-        "param": {}
+        "param": {
+          "section_buff_atk": 2,
+          "until": "turn",
+          "no_enemy_destroy": true
+        }
       }
     ],
     "flavor": "Der Name trägt die anderen.",
@@ -1725,10 +1719,9 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Wähle eine eigene Infanterie. Sie hat in diesem Zug +2 ATK.",
     "effects": [
       {
-        "code": "BUFF_ALL_OWN",
+        "code": "BUFF",
         "param": {
           "atk": 2,
-          "filter": "infanterie",
           "until": "turn"
         }
       }
@@ -2035,10 +2028,11 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Alle eigenen Einheiten in einem Abschnitt haben +1 DEF bis Zugende.",
     "effects": [
       {
-        "code": "BUFF",
+        "code": "BUFF_SECTION",
         "param": {
           "def": 1,
-          "until": "turn"
+          "until": "turn",
+          "targetSide": "own"
         }
       }
     ],
@@ -5084,17 +5078,17 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Wähle eine feindliche Einheit: gilt als beobachtet. Eigene Einheiten +1 ATK gegen beobachtete diesen Zug.",
     "effects": [
       {
-        "code": "BUFF_ALL_OWN",
+        "code": "MARK_OBSERVED",
         "param": {
-          "atk": 1,
-          "filter": null,
-          "until": "turn"
+          "count": 1
         }
       },
       {
-        "code": "REVEAL",
+        "code": "BUFF_ALL_OWN",
         "param": {
-          "count": 1
+          "atk": 1,
+          "until": "turn",
+          "vs_observed": true
         }
       }
     ],
@@ -5503,11 +5497,11 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Alle eigenen Einheiten +1 ATK diesen Zug gegen denselben Abschnitt.",
     "effects": [
       {
-        "code": "BUFF",
+        "code": "BUFF_SECTION",
         "param": {
           "atk": 1,
-          "def": 0,
-          "until": "turn"
+          "until": "turn",
+          "targetSide": "own"
         }
       }
     ],

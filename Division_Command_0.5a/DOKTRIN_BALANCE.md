@@ -109,3 +109,12 @@
 3. Ablösung ohne dauerhaftes +DEF: Identität „Krone versagt nie“ noch spürbar genug, oder braucht es einen anderen Erbe-Haken?
 4. Unbenutzte Doktrinen (Blitzkrieg, Bollwerk, Sicherer Nachschub, Tiefenverteidigung) bleiben im Pool — später Nationenzuordnung?
 5. Kartendecks unverändert: Restabweichungen (Dargan hohes Board, Orthea/Vael leicht unter Board-Mittel) ggf. später über Kernkarten statt Doktrin.
+
+## Nach Choice-Wiring (Commit nach 55ae8e4)
+
+Sofort-/Doktrin-Wahl-Verdrahtung behoben (siehe `CHOICE_WIRING.md`). Kurze Nachsim `sim_nation_strength.mjs 10` (2400 Partien):
+
+- Decided-WR min/max: **45.2–61.0 %** (Lyr 61,0 % Ausreißer; Merovan 56,3 % — Verlegung-Shift jetzt nutzbar)
+- Übrige Nationen weitgehend im alten Korridor; Simrauschen ±2–3 pp
+- Kein erneuter Doktrin-Pass in diesem Commit; bei Bedarf Lyr/Merovan nachziehen
+

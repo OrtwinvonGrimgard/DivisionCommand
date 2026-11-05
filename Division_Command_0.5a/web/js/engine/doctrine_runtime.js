@@ -629,21 +629,23 @@
           pick.flags.dokAtkUntil = this.state.turn;
         }
       }
-      // STOSSTRUPP: strongest infantry +ATK (no DEF loss if param.no_def_loss)
+      // STOSSTRUPP: only legacy turn-start pick when no passive body-core params
       if (hasDok(this, p, 'STOSSTRUPP')) {
         var stp = dokParam(this, p, 'STOSSTRUPP') || {};
-        var pick2 = null; var best2 = -1;
-        this.frontList(p).forEach(function (l) {
-          if (!isInfantry(self.defOf(l.inst))) return;
-          var a = Number(self.defOf(l.inst).atk) || 0;
-          if (a > best2) { best2 = a; pick2 = l.inst; }
-        });
-        if (pick2) {
-          pick2.flags = pick2.flags || {};
-          pick2.flags.dokAtk = Number(stp.atk || 2);
-          pick2.flags.dokAtkUntil = this.state.turn;
-          if (!stp.no_def_loss && stp.def) {
-            pick2.def = Math.max(1, (pick2.def || 0) + Number(stp.def));
+        if (!(stp.base_all_atk || stp.base_inf_atk || stp.damaged_atk)) {
+          var pick2 = null; var best2 = -1;
+          this.frontList(p).forEach(function (l) {
+            if (!isInfantry(self.defOf(l.inst))) return;
+            var a = Number(self.defOf(l.inst).atk) || 0;
+            if (a > best2) { best2 = a; pick2 = l.inst; }
+          });
+          if (pick2) {
+            pick2.flags = pick2.flags || {};
+            pick2.flags.dokAtk = Number(stp.atk || 2);
+            pick2.flags.dokAtkUntil = this.state.turn;
+            if (!stp.no_def_loss && stp.def) {
+              pick2.def = Math.max(1, (pick2.def || 0) + Number(stp.def));
+            }
           }
         }
       }
