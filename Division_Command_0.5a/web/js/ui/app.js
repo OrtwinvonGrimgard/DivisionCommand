@@ -547,10 +547,42 @@
         if (loc) cdef = engine.defOf(loc.inst);
       }
       if (!cdef && action.cardId && engine) cdef = engine.byId[action.cardId];
+      if (!cdef && action.type === 'PLAY' && engine && engine.state && engine.state.events) {
+        try {
+          for (var ei = engine.state.events.length - 1; ei >= 0; ei--) {
+            var eev = engine.state.events[ei];
+            if (eev && eev.cardId && (eev.kind === 'deploy' || eev.kind === 'instant' ||
+                eev.kind === 'equip' || eev.kind === 'support' || eev.kind === 'shout')) {
+              cdef = engine.byId[eev.cardId] || { id: eev.cardId, name: eev.name, tags: [], typ: '', image: eev.image };
+              // Minenfeld / shout mit Namen
+              if (!engine.byId[eev.cardId] && eev.name) cdef.name = eev.name;
+              break;
+            }
+          }
+        } catch (eEvLook) {}
+      }
       if (action.type === 'PLAY' && DCAudio.playForCard) DCAudio.playForCard('deploy', cdef);
       else if (action.type === 'ATTACK' && DCAudio.playForCard) DCAudio.playForCard('attack', cdef);
       else if (action.type === 'END_TURN') DCAudio.playSfx('turn');
+      else if (action.type === 'REVEAL_UNIT') DCAudio.playSfx('reveal');
+      else if (action.type === 'DOK_SHIFT') DCAudio.playSfx('doktrin-shift');
+      else if (action.type === 'COIN_FLIP') DCAudio.playSfx('coin');
+      else if (action.type === 'RESOLVE_PENDING' && action.confirm) DCAudio.playSfx('ui-click', { prio: 3 });
       else DCAudio.playSfx('ui-click');
+      // VP / Trophäe nachziehen
+      try {
+        if (engine && engine.state && engine.state.players) {
+          var vpNow = (engine.state.players[0].vp || 0) + (engine.state.players[1].vp || 0);
+          if (window._dcLastVpSum == null) window._dcLastVpSum = vpNow;
+          if (vpNow > window._dcLastVpSum) {
+            DCAudio.playSfx('trophy', { prio: 1, duck: 0.5, duckMs: 1000 });
+            window._dcLastVpSum = vpNow;
+          }
+        }
+      } catch (eVp) {}
+    }
+    if (window.DCAudio && (res.coinWinner || res.code === 'COIN_WINNER')) {
+      try { DCAudio.playSfx('coin'); } catch (eC) {}
     }
     if (action.type === 'END_TURN') {
       eventQueue = [];
@@ -1636,7 +1668,36 @@
     if (!engine || !engine.state) return;
     var all = engine.state.events || [];
     if (all.length > seenEvents) {
-      eventQueue = eventQueue.concat(all.slice(seenEvents).filter(isLiveEvent));
+      var fresh = all.slice(seenEvents);
+      // SFX für neue Engine-Events (fehlende Dateien = still)
+      if (window.DCAudio && DCAudio.playEvent) {
+        fresh.forEach(function (ev) {
+          try {
+            var def = null;
+            if (ev.cardId && engine.byId) def = engine.byId[ev.cardId];
+            if (!def && ev.name) def = { name: ev.name, tags: [], typ: '', image: ev.image };
+            // Mine / Minenfeld
+            if (ev.name && /Minenfeld|Mine/i.test(ev.name)) {
+              DCAudio.playSfx('mine', { prio: 1, duck: 0.4, duckMs: 800 });
+              return;
+            }
+            if (ev.kind === 'reveal') {
+              DCAudio.playSfx('reveal', { prio: 2 });
+              return;
+            }
+            if (ev.kind === 'support') {
+              DCAudio.playSfx('deploy-unterstuetzung', { prio: 2 });
+              return;
+            }
+            // deploy/equip/instant/attack kommen schon aus dem Action-Hook — hier nur Rest
+            if (ev.kind === 'destroy' || ev.kind === 'draw' ||
+                ev.kind === 'coin' || ev.kind === 'vp' || ev.kind === 'trophy') {
+              DCAudio.playEvent(Object.assign({}, ev, { _def: def }));
+            }
+          } catch (eEv) {}
+        });
+      }
+      eventQueue = eventQueue.concat(fresh.filter(isLiveEvent));
       seenEvents = all.length;
     }
     pumpEvents();
@@ -2368,6 +2429,11 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
         }
         document.querySelectorAll('#hand .card.picked').forEach(function (c) { c.classList.remove('picked'); });
         el.classList.add('picked');
+        try {
+          if (window.DCAudio && DCAudio.playForCard) {
+            DCAudio.playForCard('select', engine.defOf(card));
+          }
+        } catch (eSel) {}
         armHandCard(card.uid, viewer, false);
       };
       /* Rechtsklick-Zoom: Delegation. Hier nur Shift+Rechtsklick = verdeckt. */
@@ -2663,6 +2729,14 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
     }).join(''); // nächster Schritt im Ablauf
     if (st.winner != null || (st.endReason && /Frieden|unentschieden/i.test(String(st.endReason || '')))) {
+      if (window.DCAudio && DCAudio.notifyGameEnd && !st._sfxEndPlayed) {
+        st._sfxEndPlayed = true;
+        try {
+          var youWin = (mode === 'bot') ? (st.winner === 0) : (st.winner === you);
+          if (st.winner == null) DCAudio.playSfx('lose', { prio: 1, duck: 0.5, duckMs: 1500 });
+          else DCAudio.notifyGameEnd(!!youWin);
+        } catch (eEnd) {}
+      }
       var ov = $('#overlay');
       var reasonRaw = String(st.endReason || '');
       var reasonLabel = reasonRaw;
