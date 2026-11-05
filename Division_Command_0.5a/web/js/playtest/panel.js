@@ -1,12 +1,11 @@
 /**
- * Playtest-Panel: Logs | Anmerkungen | Chat
+ * Playtest-Panel: Logs | Anmerkungen (Chat lebt im Tisch-Protokoll, js/ui/table-chat.js)
  */
 (function (global) {
   'use strict';
 
   var open = false;
   var tab = 'logs';
-  var chatUnsub = null;
 
   function $(id) { return document.getElementById(id); }
 
@@ -31,12 +30,10 @@
       '  <div class="playtest-tabs" role="tablist">' +
       '    <button type="button" class="pt-tab on" data-tab="logs">Logs</button>' +
       '    <button type="button" class="pt-tab" data-tab="notes">Anmerkungen</button>' +
-      '    <button type="button" class="pt-tab" data-tab="chat" id="pt-tab-chat">Chat</button>' +
       '  </div>' +
       '  <div class="playtest-body">' +
       '    <section class="pt-pane on" id="pt-pane-logs" data-pane="logs"></section>' +
       '    <section class="pt-pane" id="pt-pane-notes" data-pane="notes"></section>' +
-      '    <section class="pt-pane" id="pt-pane-chat" data-pane="chat"></section>' +
       '  </div>' +
       '</div>';
     document.body.appendChild(root);
@@ -51,7 +48,7 @@
   }
 
   function setTab(name) {
-    tab = name || 'logs';
+    tab = name === 'notes' ? 'notes' : 'logs';
     var root = ensureRoot();
     root.querySelectorAll('.pt-tab').forEach(function (b) {
       b.classList.toggle('on', b.getAttribute('data-tab') === tab);
@@ -61,11 +58,6 @@
     });
     if (tab === 'logs') renderLogs();
     if (tab === 'notes') renderNotes();
-    if (tab === 'chat') renderChat();
-  }
-
-  function lanLive() {
-    return !!(global.DCNet && DCNet.isConnected && DCNet.isConnected());
   }
 
   function renderLogs() {
@@ -197,69 +189,12 @@
     loadNoteList();
   }
 
-  function renderChat() {
-    var pane = $('pt-pane-chat');
-    if (!pane) return;
-    var live = lanLive();
-    var tabBtn = $('pt-tab-chat');
-    if (tabBtn) tabBtn.classList.toggle('disabled', !live);
-    if (!live) {
-      pane.innerHTML = '<p class="pt-hint">Chat ist nur im <strong>LAN-Modus</strong> aktiv, solange eine Verbindung besteht. ' +
-        'Starte oder trete einer LAN-Sitzung bei.</p>';
-      return;
-    }
-    var cur = global.DCPlayLogger && DCPlayLogger.getCurrent && DCPlayLogger.getCurrent();
-    var msgs = (cur && cur.chat) ? cur.chat.slice() : (global.__dcPlayChatBuf || []);
-    pane.innerHTML =
-      '<div class="pt-chat-log" id="pt-chat-log"></div>' +
-      '<div class="pt-chat-compose">' +
-      '<input id="pt-chat-in" maxlength="400" placeholder="Nachricht an den Mitspieler…" autocomplete="off">' +
-      '<button type="button" class="primary" id="pt-chat-send">Senden</button>' +
-      '</div>' +
-      '<p class="tiny">Verlauf wird mit der Partie gespeichert und beim Export mitgeliefert.</p>';
-    var log = $('pt-chat-log');
-    log.innerHTML = msgs.map(function (m) {
-      return '<div class="pt-chat-line"><span class="pt-chat-meta">' + esc(m.name) +
-        ' · ' + esc((m.t || '').replace('T', ' ').slice(11, 19)) +
-        '</span><div>' + esc(m.text) + '</div></div>';
-    }).join('') || '<p class="tiny">Noch keine Nachrichten.</p>';
-    log.scrollTop = log.scrollHeight;
-
-    function send() {
-      var inp = $('pt-chat-in');
-      var text = (inp.value || '').trim();
-      if (!text) return;
-      var name = 'Spieler';
-      try {
-        var eng = global.dcGetEngine && dcGetEngine();
-        var you = global.dcGetYou ? dcGetYou() : 0;
-        if (eng) name = eng.player(you).name || name;
-      } catch (e) {}
-      var payload = { name: name, text: text.slice(0, 400), player: global.dcGetYou ? dcGetYou() : 0, t: new Date().toISOString() };
-      if (global.DCNet && DCNet.sendChat) DCNet.sendChat(payload);
-      onChatMessage(payload, true);
-      inp.value = '';
-    }
-    $('pt-chat-send').onclick = send;
-    $('pt-chat-in').onkeydown = function (ev) {
-      if (ev.key === 'Enter') { ev.preventDefault(); send(); }
-    };
-  }
-
-  function onChatMessage(msg, fromSelf) {
-    if (!msg || !msg.text) return;
-    if (!global.__dcPlayChatBuf) global.__dcPlayChatBuf = [];
-    global.__dcPlayChatBuf.push(msg);
-    if (global.DCPlayLogger && DCPlayLogger.addChat) DCPlayLogger.addChat(msg);
-    if (open && tab === 'chat') renderChat();
-  }
-
   function show(whichTab) {
     ensureRoot();
     open = true;
     $('playtest-panel').style.display = 'flex';
+    if (whichTab === 'chat') { if (global.DCTableChat) DCTableChat.setTab('chat'); whichTab = null; }
     setTab(whichTab || tab || 'logs');
-    ensureChatSub();
   }
 
   function hide() {
@@ -273,14 +208,7 @@
     else show();
   }
 
-  function ensureChatSub() {
-    if (chatUnsub) return;
-    if (!(global.DCNet && DCNet.onChat)) return;
-    chatUnsub = DCNet.onChat(function (msg) { onChatMessage(msg, false); });
-  }
-
   function bindButtons() {
-    ensureChatSub();
     document.querySelectorAll('[data-open-playtest], #btn-playtest, #go-playtest').forEach(function (btn) {
       if (btn._ptBound) return;
       btn._ptBound = true;
@@ -297,7 +225,7 @@
     toggle: toggle,
     setTab: setTab,
     bindButtons: bindButtons,
-    onChatMessage: onChatMessage,
+    onChatMessage: function (m, self) { if (global.DCTableChat) DCTableChat.onChatMessage(m, self); },
     isOpen: function () { return open; }
   };
 

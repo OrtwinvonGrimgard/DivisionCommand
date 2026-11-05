@@ -1,0 +1,12 @@
+/* Tabs im Tisch-Protokoll (Protokoll | Chat). */
+.float-win .log-tabs { display: flex; gap: 4px; padding: 4px 6px 0; flex: 0 0 auto; background: #1a0808; }
+.float-win .log-tab { flex: 1 1 0; padding: 3px 6px; font-size: 12px; border: 1px solid #6a4a2a; background: #2a1010; color: #d8c79a; position: relative; }
+.float-win .log-tab.on { border-color: var(--gold); color: var(--gold); background: #3a1810; }
+.float-win .log-tab.disabled { opacity: .55; }
+.float-win .log-tab:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+.float-win .log-unread { display: inline-block; min-width: 16px; padding: 0 4px; margin-left: 4px; border-radius: 8px; background: #c33; color: #fff; font-size: 10px; line-height: 16px; }
+.float-win .log-unread[hidden], .float-win .log[hidden], .float-win .log-chat[hidden] { display: none !important; }
+.float-win .log-chat { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; gap: 4px; padding: 4px 6px 6px; overflow: hidden; font-size: 12px; }
+.float-win .log-chat .pt-chat-log { flex: 1 1 auto; min-height: 0; overflow: auto; max-height: none; word-break: break-word; }
+.float-win .log-chat .pt-chat-compose { display: flex; gap: 4px; flex: 0 0 auto; }
+.float-win .log-chat .pt-chat-compose input { flex: 1 1 auto; min-width: 0; font-size: 12px; }

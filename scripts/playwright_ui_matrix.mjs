@@ -343,10 +343,10 @@ async function runLan(browser) {
       return { sent: false, keys: Object.keys(window).filter((k) => /net|lan|ws/i.test(k)).slice(0, 10) };
     } catch (e) { return { err: String(e) }; }
   });
-  await a.evaluate(() => { if (window.DCPlayPanel) DCPlayPanel.show('chat'); });
-  await b.evaluate(() => { if (window.DCPlayPanel) DCPlayPanel.show('chat'); });
+  await a.evaluate(() => { if (window.DCTableChat) DCTableChat.setTab('chat'); });
+  await b.evaluate(() => { if (window.DCTableChat) DCTableChat.setTab('chat'); });
   await a.waitForTimeout(400);
-  const cin = a.locator('#pt-chat-input, .playtest-modal input[type=text], .playtest-modal textarea').first();
+  const cin = a.locator('#log-chat-in').first();
   if (await cin.count()) {
     await cin.fill('LAN Playwright Chat');
     await a.keyboard.press('Enter');

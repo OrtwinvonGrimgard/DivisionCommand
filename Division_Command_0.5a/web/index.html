@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/kit-editor.css?v=1">
   <link rel="stylesheet" href="css/align.css?v=handzoom2" id="dc-align-css">
   <link rel="stylesheet" href="css/table-cards.css?v=1">
+  <link rel="stylesheet" href="css/table-chat.css?v=1">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
     .title-brand .ver-big { display: none !important; }
@@ -107,7 +108,12 @@
 
   <div id="log-win" class="float-win">
     <div class="float-bar" id="log-drag">Protokoll</div>
-    <div class="log" id="log"></div>
+    <div class="log-tabs" role="tablist" aria-label="Protokoll und Chat">
+      <button type="button" class="log-tab on" id="log-tab-proto" role="tab" aria-selected="true" aria-controls="log">Protokoll</button>
+      <button type="button" class="log-tab" id="log-tab-chat" role="tab" aria-selected="false" aria-controls="log-chat" tabindex="-1">Chat <span class="log-unread" id="log-chat-unread" hidden></span></button>
+    </div>
+    <div class="log" id="log" role="tabpanel" aria-labelledby="log-tab-proto"></div>
+    <div class="log-chat" id="log-chat" role="tabpanel" aria-labelledby="log-tab-chat" hidden></div>
   </div>
   <div id="fx-layer"></div>
   <div id="overlay" class="overlay" style="display:none"></div>
@@ -662,14 +668,15 @@
   <script src="js/ai/bot.js?v=trophy3"></script>
   <script src="js/playtest/store.js?v=pt1"></script>
   <script src="js/playtest/logger.js?v=pt1"></script>
-  <script src="js/playtest/panel.js?v=pt1"></script>
+  <script src="js/playtest/panel.js?v=pt2"></script>
+  <script src="js/ui/table-chat.js?v=1"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/library.js?v=img1"></script>
   <script src="js/ui/portraits.js?v=kit20"></script>
   <script src="js/data/table-art-data.js?v=1"></script>
   <script src="js/ui/table-card-art.js?v=1"></script>
   <script src="js/ui/end-screen.js?v=1"></script>
-  <script src="js/ui/app.js?v=img1"></script>
+  <script src="js/ui/app.js?v=chat1"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
   <script src="js/ui/audio-options.js?v=1"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>
