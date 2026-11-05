@@ -14,7 +14,8 @@ class FakeWS { constructor(u) { this.url = u; this.readyState = 0; this.sent = [
 w.WebSocket = FakeWS;
 const logged = [];
 w.DCPlayStore = { getAll: () => Promise.resolve([]), get: () => Promise.resolve(null), uid: () => 'x' };
-w.DCPlayLogger = { addChat: m => logged.push(m), getCurrent: () => null };
+let loggerChats = 0; w.DCPlayLogger = { addChat: () => loggerChats++, getCurrent: () => ({ id: 'g', turns: [], chat: [{ name: 'Alt', text: 'ALTLOG' }] }) };
+const chatCount = () => (w.__dcPlayChatBuf || []).length;
 load('js/playtest/panel.js'); load('js/ui/table-chat.js'); load('js/net.js');
 const $ = id => w.document.getElementById(id);
 const C = w.DCTableChat;
@@ -41,7 +42,7 @@ assert(!$('log-tab-chat').classList.contains('disabled'));
 // Incoming while on Protokoll: unread, no auto-switch
 sockets[0].recv({ type: 'chat', name: 'Gast', text: 'Hallo', player: 1, t: '2026-11-05T20:01:02.000Z' });
 assert.equal(C.tab(), 'log'); assert.equal(C.unread(), 1); assert(!$('log-chat-unread').hidden);
-assert.equal(logged.length, 1, 'incoming logged exactly once');
+assert.equal(chatCount(), 1, 'incoming stored in session exactly once');
 $('log-tab-chat').click(); assert.equal(C.unread(), 0); assert($('log-chat-unread').hidden);
 assert($('log-chat').textContent.includes('Hallo')); assert($('log-chat').textContent.includes('Gast'));
 assert.equal($('log-chat-in').getAttribute('maxlength'), '400');
@@ -50,27 +51,28 @@ const inp = $('log-chat-in'); inp.value = 'Angriff links';
 inp.dispatchEvent(new w.KeyboardEvent('keydown', { key: 'Enter', bubbles: true, cancelable: true }));
 let chats = sockets[0].sent.filter(m => m.type === 'chat');
 assert.equal(chats.length, 1); assert.equal(chats[0].text, 'Angriff links');
-assert.equal(logged.length, 2);
+assert.equal(chatCount(), 2);
 assert.equal([...w.document.querySelectorAll('#log-chat .pt-chat-line')].filter(e => e.textContent.includes('Angriff links')).length, 1);
 // Send button after re-render (delegated): once
 $('log-chat-in').value = 'Zweite'; $('log-chat-send').click();
-assert.equal(sockets[0].sent.filter(m => m.type === 'chat').length, 2); assert.equal(logged.length, 3);
+assert.equal(sockets[0].sent.filter(m => m.type === 'chat').length, 2); assert.equal(chatCount(), 3);
 // Empty input does nothing
-$('log-chat-in').value = '   '; $('log-chat-send').click(); assert.equal(logged.length, 3);
+$('log-chat-in').value = '   '; $('log-chat-send').click(); assert.equal(chatCount(), 3);
 // Rematch / re-render / new connection: no stale listeners
 w.dcRender(); w.dcRender(); C.bind(); C.bind();
 w.DCNet.disconnect(); C.refresh(); assert($('log-tab-chat').classList.contains('disabled')); assert(!$('log-chat-in'));
 w.DCNet.connect('ws://y', 'Host', 'host'); sockets[1].open(); C.refresh();
 sockets[1].recv({ type: 'chat', name: 'Gast', text: 'Neu', player: 1 });
-assert.equal(logged.length, 4, 'one listener after reconnect');
+assert.equal(chatCount(), 4, 'one listener after reconnect');
 $('log-chat-in').value = 'Antwort'; $('log-chat-send').click();
 assert.equal(sockets[1].sent.filter(m => m.type === 'chat').length, 1);
-assert.equal(logged.length, 5);
+assert.equal(chatCount(), 5);
 // Playtest panel show('chat') legacy -> table chat tab, panel on logs
 C.setTab('log'); w.DCPlayPanel.show('chat'); assert.equal(C.tab(), 'chat'); w.DCPlayPanel.hide();
 // Export path unchanged: chat goes into game record via logger.addChat (covered in test_playtest_logger)
 const idx = fs.readFileSync(path.join(WEB, 'index.html'), 'utf8');
 assert(idx.indexOf('js/playtest/panel.js') < idx.indexOf('js/ui/table-chat.js'));
+assert.equal(loggerChats, 0, 'chat never written to playtest log'); assert(!$('log-chat').textContent.includes('ALTLOG'), 'UI uses own session history');
 assert.equal(h.errors.length, 0, String(h.errors));
 h.dom.window.close();
 console.log('PASS table chat: tabs/keyboard, non-LAN disabled, unread without auto-switch, in/out exactly once, delegated send, reconnect/rematch no stale listeners, panel Logs+Anmerkungen only');

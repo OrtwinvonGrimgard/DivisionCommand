@@ -1,6 +1,6 @@
 /**
  * Tisch-Protokollfenster: Tabs "Protokoll" | "Chat". Der LAN-Chat lebt nur hier (vorher im Playtest-Panel).
- * Genau ein DCNet.onChat-Abo pro Seite; Verlauf geht weiter über DCPlayLogger.addChat in den Export.
+ * Genau ein DCNet.onChat-Abo pro Seite; Verlauf nur im Sitzungsspeicher (__dcPlayChatBuf), nie im Partielog/Export.
  */
 (function (global) {
   'use strict';
@@ -18,8 +18,7 @@
   function buf() { if (!global.__dcPlayChatBuf) global.__dcPlayChatBuf = []; return global.__dcPlayChatBuf; }
 
   function messages() {
-    var cur = global.DCPlayLogger && DCPlayLogger.getCurrent && DCPlayLogger.getCurrent();
-    return (cur && cur.chat && cur.chat.length) ? cur.chat.slice() : buf().slice();
+    return buf().slice(); // eigener Sitzungsverlauf, nicht im Partielog
   }
 
   function lineHtml(m) {
@@ -66,7 +65,6 @@
   function onChatMessage(msg, fromSelf) {
     if (!msg || !msg.text) return;
     buf().push(msg);
-    if (global.DCPlayLogger && DCPlayLogger.addChat) DCPlayLogger.addChat(msg);
     if (tab === 'chat') renderChat();
     else if (!fromSelf) unread++;
     updateTabs();

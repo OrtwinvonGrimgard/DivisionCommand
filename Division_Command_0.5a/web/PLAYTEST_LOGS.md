@@ -17,7 +17,7 @@ Button **Playtest** am Spieltisch und **Playtest / Logs** im Titelmenü.
 |-----|--------|
 | Logs | Liste gespeicherter Partien, Export (ZIP), optional Löschen nach Export |
 | Anmerkungen | Text max. 500 Zeichen, Kategorie Anmerkung / Idee / Bug, Liste |
-| Chat | LAN-Chat über die bestehende WebSocket-Verbindung; ohne Verbindung deaktiviert |
+| Chat | jetzt im Tisch-Protokoll (Tab „Chat“); nur Sitzung, kein Export |
 
 ## Exportformat (ZIP)
 
@@ -34,7 +34,6 @@ notes/_index.json      # Kurzliste
 - `startPlayer`, `coin` (Münzwurf)
 - `players[]`: `name`, `nation`, `doctrines[]`, `controller` (`human`/`bot`/`remote`)
 - `turns[]`: je Aktion `t`, `thinkMs`, `player`, `actor`, `action`, `botSuggestion`, `botMatch`, `result`, `ap`, `vp`, `front`, optional `combat`
-- `chat[]`: `t`, `name`, `text`, `player`
 - `end`: `kind`, `winner`, `reason`, `turns`, `durationMs`, `aborted`
 
 ## Auswertung
@@ -51,12 +50,12 @@ Kennzahlen: WR je Nation/Doktrin, Kartennutzung, Siegarten, Partielänge, Mensch
 - Transport: bestehende Raum-WebSocket (`server.py`, Port HTTP+1).
 - Client: `DCNet.sendChat` / `DCNet.onChat` in `web/js/net.js`.
 - Server leitet Nachrichten vom Typ `chat` an **alle anderen** Clients weiter (kein Echo an den Absender).
-- Absender trägt die eigene Nachricht lokal in Logger + UI ein.
-- Chatverlauf liegt in `game.chat` und wird mit exportiert.
+- Absender trägt die eigene Nachricht nur lokal in die UI ein (Tab „Chat“ im Tisch-Protokoll).
+- Chat wird **nicht** gespeichert und **nicht** exportiert; der Verlauf gilt nur für die laufende Sitzung. Alte Partien mit `chat`-Feld werden beim Export rekursiv bereinigt.
 - Einschränkungen: nur bei aktiver LAN-Verbindung; max. 400 Zeichen; kein Verlauf vor Verbindungsaufbau; Gast und Host speichern jeweils lokal (Host hat die vollständige Zugliste).
 
 ## API (Browser)
 
 - `DCPlayStore` — IndexedDB + ZIP-Export
-- `DCPlayLogger` — beginMatch / recordAction / botSuggest / addChat / finish / abort
+- `DCPlayLogger` — beginMatch / recordAction / botSuggest / addChat (No-op, Chat wird nicht geloggt) / finish / abort
 - `DCPlayPanel` — show / hide / setTab

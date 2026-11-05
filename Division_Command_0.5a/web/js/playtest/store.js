@@ -198,11 +198,27 @@
     }, 1500);
   }
 
+  /* Chat wird nie exportiert: entfernt rekursiv Chat-Felder und Chat-Ereignisse, auch aus alten Partien. */
+  function isChatKey(k) { return /^chat/i.test(k); }
+  function isChatEvent(v) {
+    return !!(v && typeof v === 'object' && !Array.isArray(v) &&
+      [v.type, v.kind, v.event, v.action && v.action.type].some(function (x) { return /^chat$/i.test(String(x || '')); }));
+  }
+  function stripChat(v) {
+    if (Array.isArray(v)) return v.filter(function (x) { return !isChatEvent(x); }).map(stripChat);
+    if (v && typeof v === 'object') {
+      var out = {};
+      Object.keys(v).forEach(function (k) { if (!isChatKey(k)) out[k] = stripChat(v[k]); });
+      return out;
+    }
+    return v;
+  }
+
   function exportAll(opts) {
     opts = opts || {};
     var api = global.DCPlayStore || { getAll: getAll };
     return Promise.all([api.getAll('games'), api.getAll('notes')]).then(function (pair) {
-      var games = pair[0].slice().sort(function (a, b) {
+      var games = pair[0].map(stripChat).sort(function (a, b) {
         return String(a.startedAt || '').localeCompare(String(b.startedAt || ''));
       });
       var notes = pair[1].slice().sort(function (a, b) {
@@ -253,6 +269,7 @@
     uid: uid,
     buildZip: buildZip,
     exportAll: exportAll,
+    stripChat: stripChat,
     downloadBlob: downloadBlob,
     DB_NAME: DB_NAME
   };

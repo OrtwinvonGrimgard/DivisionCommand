@@ -114,7 +114,7 @@ async function run() {
   assert(g.players.length === 2, '2 players');
   assert(g.players[0].nation === 'TestA', 'nation0');
   assert(g.schema === 1, 'schema');
-  assert(Array.isArray(g.turns) && Array.isArray(g.chat), 'turns/chat');
+  assert(Array.isArray(g.turns) && !('chat' in g), 'turns, no chat field');
 
   const act = { type: 'END_TURN', player: eng.state.active };
   const beforeActive = eng.state.active;
@@ -130,7 +130,7 @@ async function run() {
   assert(g.turns[0].front && g.turns[0].front[0], 'front snap');
 
   win.DCPlayLogger.addChat({ name: 'Alpha', text: 'Hallo', player: 0 });
-  assert(g.chat.length === 1, 'chat');
+  assert(!('chat' in g) && !JSON.stringify(g).includes('Hallo'), 'chat not logged');
 
   await win.DCPlayLogger.flush();
   const stored = await win.DCPlayStore.get('games', g.id);
@@ -149,6 +149,20 @@ async function run() {
   await win.DCPlayStore.put('notes', {
     id: 'note_1', t: new Date().toISOString(), category: 'bug', text: 'Testbug', version: 'test', gameId: g.id,
   });
+  // legacy game stored before the change, with chat everywhere
+  await win.DCPlayStore.put('games', {
+    id: 'legacy_1', schema: 1, startedAt: '2026-01-01T00:00:00Z', mode: 'lan',
+    players: [{ name: 'Host', nation: 'Vael' }, { name: 'Gast', nation: 'Lyr' }],
+    chat: [{ t: '2026-01-01T00:01:00Z', name: 'Gast', text: 'GEHEIMCHAT', player: 1 }],
+    turns: [
+      { t: 1, player: 0, action: { type: 'END_TURN', player: 0 }, ap: 5 },
+      { t: 2, type: 'chat', name: 'Gast', text: 'GEHEIMCHAT2' },
+      { t: 3, player: 1, action: { type: 'chat', text: 'GEHEIMCHAT3' } },
+      { t: 4, player: 1, action: { type: 'PLAY', uid: 'u1' }, meta: { chatLog: ['GEHEIMCHAT4'] } }
+    ],
+    end: { kind: 'completed', winner: 0, reason: 'Siegpunkte' }
+  });
+  await win.DCPlayStore.put('notes', { id: 'note_chat', t: '2026-01-01T00:02:00Z', category: 'idee', text: 'Chat-Idee bleibt', gameId: 'legacy_1' });
   let downloaded = null;
   win.DCPlayStore.downloadBlob = function (blob, filename) {
     downloaded = { blob, filename };
@@ -160,6 +174,15 @@ async function run() {
   assert(exp.files.some((f) => f.name.startsWith('notes/')), 'notes/');
   assert(exp.files.some((f) => f.name === 'manifest.json'), 'manifest');
   assert(downloaded && /\.zip$/.test(downloaded.filename), 'download zip name');
+  const allText = exp.files.filter((f) => f.name.startsWith('logs/') || f.name === 'manifest.json').map((f) => f.text).join('\n');
+  assert(!/GEHEIMCHAT|"chat/i.test(allText), 'no chat in exported logs');
+  assert(!/GEHEIMCHAT/.test(JSON.stringify(exp.games)), 'no chat in returned games');
+  const leg = JSON.parse(exp.files.find((f) => f.name === 'logs/legacy_1.json').text);
+  assert(leg.turns.length === 2 && leg.turns[0].action.type === 'END_TURN' && leg.turns[1].action.type === 'PLAY', 'game events kept');
+  assert(leg.players[1].name === 'Gast' && leg.end.winner === 0, 'game data kept');
+  const stillStored = await win.DCPlayStore.get('games', 'legacy_1');
+  assert(stillStored && stillStored.turns.length === 4, 'stored game not deleted/mutated');
+  assert(exp.files.some((f) => f.name === 'notes/note_chat.json' && f.text.includes('Chat-Idee bleibt')), 'user notes kept');
 
   // second match completed
   const eng2 = makeEng(win, 22);

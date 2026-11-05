@@ -136,7 +136,6 @@
         }
       ],
       turns: [],
-      chat: [],
       end: null
     };
     lastActionAt = Date.now();
@@ -214,16 +213,8 @@
     }
   }
 
-  function addChat(msg) {
-    if (!current) return;
-    current.chat.push({
-      t: nowIso(),
-      name: msg.name || '?',
-      text: String(msg.text || '').slice(0, 500),
-      player: msg.player != null ? msg.player : null
-    });
-    schedulePersist();
-  }
+  /* Chat wird bewusst NICHT mehr im Partielog gespeichert (nicht exportieren). API bleibt als No-op. */
+  function addChat() {}
 
   function finish(kind, winner, reason) {
     if (!current || current.end) return flush();
