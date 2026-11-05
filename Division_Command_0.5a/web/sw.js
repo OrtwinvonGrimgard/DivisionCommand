@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-sfx4fix2';
+const CACHE = 'divcmd-audio-options1';
 const ASSETS = [
   './',
   './index.html',

@@ -409,7 +409,7 @@
       targets.forEach(function (el) {
         if (el._dcDuckTimer) clearTimeout(el._dcDuckTimer);
         var base = vol();
-        el.volume = Math.max(0.05, base * (1 - amount));
+        el.volume = Math.max(0, base * (1 - amount));
         el._dcDuckTimer = setTimeout(function () {
           try { el.volume = vol(); } catch (e) {}
         }, ms || 700);
@@ -510,7 +510,8 @@
 
       var a = new Audio(src);
       a._prio = prio;
-      a.volume = Math.min(1, sfxVol() * (opts.gain != null ? opts.gain : 1.05));
+      a._sfxGain = opts.gain != null ? opts.gain : 1.05;
+      a.volume = Math.min(1, sfxVol() * a._sfxGain);
       a.addEventListener('ended', function () {
         var ix = sfxBusy.indexOf(a);
         if (ix >= 0) sfxBusy.splice(ix, 1);
@@ -677,10 +678,24 @@
   }
 
 
+  function refreshVolumes() {
+    // Update already-playing effects too; zero must silence immediately.
+    Object.keys(cache).forEach(function (id) {
+      try { cache[id].volume = vol(); } catch (e) {}
+    });
+    [titleEl, tableEl, document.getElementById('bgm'), document.getElementById('bgm-battle')].forEach(function (a) {
+      try { if (a) a.volume = vol(); } catch (e) {}
+    });
+    sfxBusy.forEach(function (a) {
+      try { a.volume = Math.min(1, sfxVol() * a._sfxGain); } catch (e) {}
+    });
+  }
+
   global.DCAudio = {
     title: TITLE,
     table: TABLE,
     sfx: SFX,
+    refreshVolumes: refreshVolumes,
     sfxEmbed: sfxEmbed,
     preload: function () { preload(); preloadSfx(); },
     playTitle: playTitle,

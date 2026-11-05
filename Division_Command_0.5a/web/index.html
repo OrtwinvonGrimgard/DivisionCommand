@@ -114,7 +114,10 @@
     <div class="modal">
       <h2>Optionen</h2>
       <label>Musik <input id="opt-music-ingame" type="checkbox" checked> an</label>
-      <label>Lautstärke <input id="opt-vol-ingame" type="range" min="0" max="100" value="55"></label>
+      <label for="opt-vol-ingame">Musiklautstärke <output id="opt-vol-ingame-value" for="opt-vol-ingame">55%</output></label>
+          <input id="opt-vol-ingame" aria-label="Musiklautstärke" type="range" min="0" max="100" step="1" value="55">
+          <label for="opt-sfx-ingame">Soundeffekte <output id="opt-sfx-ingame-value" for="opt-sfx-ingame">55%</output></label>
+          <input id="opt-sfx-ingame" aria-label="Soundeffekt-Lautstärke" type="range" min="0" max="100" step="1" value="55">
       <h3>Bot</h3>
       <label>Aggressivität <span id="ig-v-agg">45</span>
         <input id="ig-bot-agg" type="range" min="1" max="100" value="45">
@@ -393,7 +396,10 @@
         </div>
         <div id="opt-audio" class="opt-pane">
           <label>Musik <input id="opt-music" type="checkbox" checked> an</label>
-          <label>Lautstärke <input id="opt-vol" type="range" min="0" max="100" value="55"></label>
+          <label for="opt-vol">Musiklautstärke <output id="opt-vol-value" for="opt-vol">55%</output></label>
+          <input id="opt-vol" aria-label="Musiklautstärke" type="range" min="0" max="100" step="1" value="55">
+          <label for="opt-sfx">Soundeffekte <output id="opt-sfx-value" for="opt-sfx">55%</output></label>
+          <input id="opt-sfx" aria-label="Soundeffekt-Lautstärke" type="range" min="0" max="100" step="1" value="55">
         </div>
         <div id="opt-game" class="opt-pane" style="display:none">
           <label>Kartenflug <span id="v-fly">0.8 s</span>
@@ -646,7 +652,7 @@
   <script src="js/data/sets/types/ausruestung.js?v=fxwire2"></script>
   <script src="js/data/decks.js?v=dokfix"></script>
   <script src="js/data/catalog.js?v=trophy3"></script>
-  <script src="js/data/audio-data.js?v=sfx4fix2"></script>
+  <script src="js/data/audio-data.js?v=audio-options1"></script>
   <script src="js/engine/engine.js?v=trophy3"></script>
   <script src="js/engine/victory_trophy.js?v=trophy3"></script>
   <script src="js/engine/doctrine_runtime.js?v=dok1"></script>
@@ -659,6 +665,7 @@
   <script src="js/ui/portraits.js?v=kit20"></script>
   <script src="js/ui/app.js?v=sfx4fix1"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
+  <script src="js/ui/audio-options.js?v=1"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>
   <script src="js/net.js?v=pt1"></script>
   <script>
@@ -701,6 +708,7 @@
         var o = {
           music: document.getElementById('opt-music').checked ? '1' : '0',
           vol: document.getElementById('opt-vol').value,
+          sfxVol: document.getElementById('opt-sfx').value,
           motion: document.getElementById('opt-motion') && document.getElementById('opt-motion').checked ? '1' : '0',
           timerSec: document.getElementById('opt-timer') ? document.getElementById('opt-timer').value : '300',
           botStock: document.getElementById('bot-stock') && document.getElementById('bot-stock').checked ? '1' : '0',
@@ -709,6 +717,7 @@
         localStorage.setItem('dc_settings', JSON.stringify(o));
         localStorage.setItem('dc_music', o.music);
         localStorage.setItem('dc_vol', o.vol);
+        localStorage.setItem('dc_sfx_vol', o.sfxVol);
         window.DC_REDUCE_MOTION = o.motion === '1';
         if (document.getElementById('opt-timer') && o.timerSec) document.getElementById('opt-timer').value = o.timerSec;
       }
@@ -767,7 +776,7 @@
         if (o.music == null) o.music = localStorage.getItem('dc_music') || '1';
         if (o.vol == null) o.vol = localStorage.getItem('dc_vol') || '55';
         document.getElementById('opt-music').checked = o.music !== '0';
-        document.getElementById('opt-vol').value = o.vol || '55';
+        document.getElementById('opt-vol').value = o.vol == null ? '55' : o.vol;
         if (document.getElementById('opt-motion')) document.getElementById('opt-motion').checked = o.motion === '1';
         window.DC_REDUCE_MOTION = o.motion === '1';
         var custom = o.botCustom || (window.DCBot && DCBot.defaults) || { playChance: 75, instantChance: 30, delayMs: 350 };
