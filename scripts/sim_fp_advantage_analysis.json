@@ -1,0 +1,1282 @@
+{
+  "gamesPerPairing": 5,
+  "note": "Analysis only. Ablations are temporary hooks in the sim, not committed rules.",
+  "digInRules": {
+    "current": "noCombatUntil = summonTurn+1; protected while state.turn <= until. Turn increments each END_TURN.",
+    "implication": "P1 deploys T_g=1 until=2 → safe during P2 first turn. P2 deploys T_g=2 until=3 → safe during P1 second turn. First free attacks on enemy opening line often open on P2 second turn (T_g=4) for P2, or later."
+  },
+  "results": [
+    {
+      "label": "classic_base",
+      "mode": "classic",
+      "ablation": null,
+      "games": 1200,
+      "decided": 1093,
+      "firstPlayerWinRate": 0.5233302836230558,
+      "firstAttackStarterRate": 0.4597156398104265,
+      "firstKillStarterRate": 0.49667616334283,
+      "firstEliteStarterRate": 0.5376016260162602,
+      "firstFreeAttackWindowStarterRate": 0.06113138686131387,
+      "firstSectorStarterRate": 0.9545064377682403,
+      "firstDurchbruchStarterRate": null,
+      "vpWinStarterRate": null,
+      "p2OneTurnShortRateAmongVpWins": null,
+      "meanOwnTurns": {
+        "starter": 32.05,
+        "second": 30.56
+      },
+      "meanApSpent": {
+        "starter": 83.8,
+        "second": 83.7
+      },
+      "meanApGranted": {
+        "starter": 151.6,
+        "second": 154.2
+      },
+      "meanAttacks": {
+        "starter": 16.31,
+        "second": 15.87
+      },
+      "meanKills": {
+        "starter": 11.39,
+        "second": 11.01
+      },
+      "meanCheapPlays": {
+        "starter": 10.16,
+        "second": 10.54
+      },
+      "apCurveByOwnTurn": {
+        "starter": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        },
+        "second": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        }
+      },
+      "frontCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.34,
+          "3": 2.14,
+          "4": 2.39,
+          "5": 2.39,
+          "6": 2.32,
+          "7": 2.26,
+          "8": 2.2
+        },
+        "second": {
+          "1": 0,
+          "2": 1.49,
+          "3": 2.12,
+          "4": 2.27,
+          "5": 2.19,
+          "6": 2.05,
+          "7": 2.03,
+          "8": 2.02
+        }
+      },
+      "foeDigInCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.49,
+          "3": 1.22,
+          "4": 0.93,
+          "5": 0.75,
+          "6": 0.59,
+          "7": 0.54,
+          "8": 0.53
+        },
+        "second": {
+          "1": 1.36,
+          "2": 1.09,
+          "3": 0.84,
+          "4": 0.67,
+          "5": 0.57,
+          "6": 0.53,
+          "7": 0.51,
+          "8": 0.52
+        }
+      }
+    },
+    {
+      "label": "trophy_base",
+      "mode": "trophy",
+      "ablation": null,
+      "games": 1200,
+      "decided": 1142,
+      "firstPlayerWinRate": 0.5481611208406305,
+      "firstAttackStarterRate": 0.47586872586872586,
+      "firstKillStarterRate": 0.501460564751704,
+      "firstEliteStarterRate": 0.5309090909090909,
+      "firstFreeAttackWindowStarterRate": 0.06057781919850885,
+      "firstSectorStarterRate": 0.960801393728223,
+      "firstDurchbruchStarterRate": 0.5350785340314136,
+      "vpWinStarterRate": 0.5309633027522935,
+      "p2OneTurnShortRateAmongVpWins": 0.39105504587155965,
+      "meanOwnTurns": {
+        "starter": 8.36,
+        "second": 6.3
+      },
+      "meanApSpent": {
+        "starter": 25.4,
+        "second": 25.2
+      },
+      "meanApGranted": {
+        "starter": 35.8,
+        "second": 38.2
+      },
+      "meanAttacks": {
+        "starter": 4.34,
+        "second": 3.33
+      },
+      "meanKills": {
+        "starter": 2.74,
+        "second": 2.33
+      },
+      "meanCheapPlays": {
+        "starter": 3.1,
+        "second": 3.18
+      },
+      "apCurveByOwnTurn": {
+        "starter": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        },
+        "second": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        }
+      },
+      "frontCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.34,
+          "3": 2.13,
+          "4": 2.33,
+          "5": 2.33,
+          "6": 2.2,
+          "7": 2.06,
+          "8": 1.88
+        },
+        "second": {
+          "1": 0,
+          "2": 1.46,
+          "3": 2.07,
+          "4": 2.15,
+          "5": 2.15,
+          "6": 2.11,
+          "7": 2.07,
+          "8": 1.97
+        }
+      },
+      "foeDigInCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.45,
+          "3": 1.21,
+          "4": 0.91,
+          "5": 0.74,
+          "6": 0.62,
+          "7": 0.56,
+          "8": 0.5
+        },
+        "second": {
+          "1": 1.37,
+          "2": 1.06,
+          "3": 0.79,
+          "4": 0.65,
+          "5": 0.55,
+          "6": 0.54,
+          "7": 0.49,
+          "8": 0.51
+        }
+      }
+    },
+    {
+      "label": "trophy_p2_ap",
+      "mode": "trophy",
+      "ablation": "p2_plus1ap_t1",
+      "games": 1200,
+      "decided": 1155,
+      "firstPlayerWinRate": 0.49696969696969695,
+      "firstAttackStarterRate": 0.41714836223506746,
+      "firstKillStarterRate": 0.44346978557504874,
+      "firstEliteStarterRate": 0.49399038461538464,
+      "firstFreeAttackWindowStarterRate": 0.057567316620241414,
+      "firstSectorStarterRate": 0.9703315881326352,
+      "firstDurchbruchStarterRate": 0.4657676348547718,
+      "vpWinStarterRate": 0.4765807962529274,
+      "p2OneTurnShortRateAmongVpWins": 0.35714285714285715,
+      "meanOwnTurns": {
+        "starter": 6.64,
+        "second": 7.24
+      },
+      "meanApSpent": {
+        "starter": 25.1,
+        "second": 25.4
+      },
+      "meanApGranted": {
+        "starter": 34.9,
+        "second": 38.6
+      },
+      "meanAttacks": {
+        "starter": 4.2,
+        "second": 3.4
+      },
+      "meanKills": {
+        "starter": 2.6,
+        "second": 2.43
+      },
+      "meanCheapPlays": {
+        "starter": 2.91,
+        "second": 3.23
+      },
+      "apCurveByOwnTurn": {
+        "starter": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        },
+        "second": {
+          "1": 6,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        }
+      },
+      "frontCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.35,
+          "3": 2.11,
+          "4": 2.28,
+          "5": 2.17,
+          "6": 2.12,
+          "7": 1.94,
+          "8": 1.84
+        },
+        "second": {
+          "1": 0,
+          "2": 1.73,
+          "3": 2.21,
+          "4": 2.26,
+          "5": 2.23,
+          "6": 2.14,
+          "7": 2.04,
+          "8": 1.96
+        }
+      },
+      "foeDigInCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.72,
+          "3": 1.11,
+          "4": 0.87,
+          "5": 0.7,
+          "6": 0.6,
+          "7": 0.57,
+          "8": 0.56
+        },
+        "second": {
+          "1": 1.38,
+          "2": 1.09,
+          "3": 0.82,
+          "4": 0.66,
+          "5": 0.59,
+          "6": 0.53,
+          "7": 0.52,
+          "8": 0.52
+        }
+      }
+    },
+    {
+      "label": "trophy_p1_noatk",
+      "mode": "trophy",
+      "ablation": "p1_no_attack_t1",
+      "games": 1200,
+      "decided": 1149,
+      "firstPlayerWinRate": 0.5439512619669278,
+      "firstAttackStarterRate": 0.48202137998056366,
+      "firstKillStarterRate": 0.5136986301369864,
+      "firstEliteStarterRate": 0.5414091470951793,
+      "firstFreeAttackWindowStarterRate": 0.0641860465116279,
+      "firstSectorStarterRate": 0.9606643356643356,
+      "firstDurchbruchStarterRate": 0.5555555555555556,
+      "vpWinStarterRate": 0.5312131919905771,
+      "p2OneTurnShortRateAmongVpWins": 0.3839811542991755,
+      "meanOwnTurns": {
+        "starter": 6.71,
+        "second": 6.79
+      },
+      "meanApSpent": {
+        "starter": 25.5,
+        "second": 25.1
+      },
+      "meanApGranted": {
+        "starter": 35.5,
+        "second": 37.9
+      },
+      "meanAttacks": {
+        "starter": 3.85,
+        "second": 3.15
+      },
+      "meanKills": {
+        "starter": 2.7,
+        "second": 2.3
+      },
+      "meanCheapPlays": {
+        "starter": 2.94,
+        "second": 3.1
+      },
+      "apCurveByOwnTurn": {
+        "starter": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        },
+        "second": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        }
+      },
+      "frontCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.33,
+          "3": 2.13,
+          "4": 2.31,
+          "5": 2.31,
+          "6": 2.22,
+          "7": 2.07,
+          "8": 2.06
+        },
+        "second": {
+          "1": 0,
+          "2": 1.42,
+          "3": 2.05,
+          "4": 2.21,
+          "5": 2.15,
+          "6": 2.06,
+          "7": 1.97,
+          "8": 1.86
+        }
+      },
+      "foeDigInCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.41,
+          "3": 1.23,
+          "4": 0.93,
+          "5": 0.74,
+          "6": 0.64,
+          "7": 0.56,
+          "8": 0.51
+        },
+        "second": {
+          "1": 1.36,
+          "2": 1.06,
+          "3": 0.77,
+          "4": 0.69,
+          "5": 0.61,
+          "6": 0.53,
+          "7": 0.54,
+          "8": 0.53
+        }
+      }
+    },
+    {
+      "label": "trophy_dig_short",
+      "mode": "trophy",
+      "ablation": "dig_in_shorter",
+      "games": 1200,
+      "decided": 1152,
+      "firstPlayerWinRate": 0.6197916666666666,
+      "firstAttackStarterRate": 0.7173281703775412,
+      "firstKillStarterRate": 0.6185365853658537,
+      "firstEliteStarterRate": 0.5181023720349563,
+      "firstFreeAttackWindowStarterRate": 0.9579439252336449,
+      "firstSectorStarterRate": 0.9650043744531933,
+      "firstDurchbruchStarterRate": 0.6217345872518286,
+      "vpWinStarterRate": 0.6068281938325991,
+      "p2OneTurnShortRateAmongVpWins": 0.4658590308370044,
+      "meanOwnTurns": {
+        "starter": 6.26,
+        "second": 6.82
+      },
+      "meanApSpent": {
+        "starter": 24.7,
+        "second": 23.4
+      },
+      "meanApGranted": {
+        "starter": 33.2,
+        "second": 35.2
+      },
+      "meanAttacks": {
+        "starter": 4.98,
+        "second": 2.8
+      },
+      "meanKills": {
+        "starter": 2.8,
+        "second": 1.94
+      },
+      "meanCheapPlays": {
+        "starter": 2.83,
+        "second": 2.55
+      },
+      "apCurveByOwnTurn": {
+        "starter": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        },
+        "second": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        }
+      },
+      "frontCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.33,
+          "3": 2.07,
+          "4": 2.38,
+          "5": 2.32,
+          "6": 2.27,
+          "7": 2.11,
+          "8": 1.98
+        },
+        "second": {
+          "1": 0,
+          "2": 1.17,
+          "3": 1.76,
+          "4": 1.89,
+          "5": 1.83,
+          "6": 1.78,
+          "7": 1.77,
+          "8": 1.8
+        }
+      },
+      "foeDigInCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0
+        },
+        "second": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0
+        }
+      }
+    },
+    {
+      "label": "trophy_dig_long",
+      "mode": "trophy",
+      "ablation": "dig_in_opp_end",
+      "games": 1200,
+      "decided": 1148,
+      "firstPlayerWinRate": 0.5235191637630662,
+      "firstAttackStarterRate": 0.45917387127761766,
+      "firstKillStarterRate": 0.5062923523717329,
+      "firstEliteStarterRate": 0.5012165450121655,
+      "firstFreeAttackWindowStarterRate": 0.041628122109158186,
+      "firstSectorStarterRate": 0.9696707105719238,
+      "firstDurchbruchStarterRate": 0.5316718587746625,
+      "vpWinStarterRate": 0.5114942528735632,
+      "p2OneTurnShortRateAmongVpWins": 0.3931034482758621,
+      "meanOwnTurns": {
+        "starter": 7.28,
+        "second": 6.76
+      },
+      "meanApSpent": {
+        "starter": 25.7,
+        "second": 25.4
+      },
+      "meanApGranted": {
+        "starter": 35.2,
+        "second": 37.9
+      },
+      "meanAttacks": {
+        "starter": 4.45,
+        "second": 3.44
+      },
+      "meanKills": {
+        "starter": 2.63,
+        "second": 2.31
+      },
+      "meanCheapPlays": {
+        "starter": 2.95,
+        "second": 3.15
+      },
+      "apCurveByOwnTurn": {
+        "starter": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        },
+        "second": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        }
+      },
+      "frontCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.35,
+          "3": 2.22,
+          "4": 2.49,
+          "5": 2.37,
+          "6": 2.24,
+          "7": 2.09,
+          "8": 1.99
+        },
+        "second": {
+          "1": 0,
+          "2": 1.47,
+          "3": 2.14,
+          "4": 2.38,
+          "5": 2.32,
+          "6": 2.25,
+          "7": 2.19,
+          "8": 2.01
+        }
+      },
+      "foeDigInCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.46,
+          "3": 1.22,
+          "4": 0.96,
+          "5": 0.76,
+          "6": 0.63,
+          "7": 0.6,
+          "8": 0.53
+        },
+        "second": {
+          "1": 1.38,
+          "2": 1.09,
+          "3": 0.84,
+          "4": 0.63,
+          "5": 0.57,
+          "6": 0.53,
+          "7": 0.53,
+          "8": 0.54
+        }
+      }
+    },
+    {
+      "label": "trophy_p2_reply",
+      "mode": "trophy",
+      "ablation": "p2_last_reply",
+      "games": 1200,
+      "decided": 1115,
+      "firstPlayerWinRate": 0.5228699551569507,
+      "firstAttackStarterRate": 0.4674329501915709,
+      "firstKillStarterRate": 0.5227492739593417,
+      "firstEliteStarterRate": 0.4908200734394125,
+      "firstFreeAttackWindowStarterRate": 0.07057745187901009,
+      "firstSectorStarterRate": 0.9524632670700086,
+      "firstDurchbruchStarterRate": 0.5281473899692938,
+      "vpWinStarterRate": 0.5028835063437139,
+      "p2OneTurnShortRateAmongVpWins": 0.26412918108419836,
+      "meanOwnTurns": {
+        "starter": 9.06,
+        "second": 8.59
+      },
+      "meanApSpent": {
+        "starter": 25.5,
+        "second": 26.1
+      },
+      "meanApGranted": {
+        "starter": 35.6,
+        "second": 39.4
+      },
+      "meanAttacks": {
+        "starter": 3.99,
+        "second": 3.44
+      },
+      "meanKills": {
+        "starter": 2.74,
+        "second": 2.42
+      },
+      "meanCheapPlays": {
+        "starter": 3.15,
+        "second": 3.1
+      },
+      "apCurveByOwnTurn": {
+        "starter": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        },
+        "second": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        }
+      },
+      "frontCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.32,
+          "3": 2.12,
+          "4": 2.34,
+          "5": 2.3,
+          "6": 2.18,
+          "7": 2.16,
+          "8": 1.99
+        },
+        "second": {
+          "1": 0,
+          "2": 1.46,
+          "3": 2.08,
+          "4": 2.24,
+          "5": 2.21,
+          "6": 2.12,
+          "7": 1.96,
+          "8": 1.91
+        }
+      },
+      "foeDigInCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.45,
+          "3": 1.23,
+          "4": 0.95,
+          "5": 0.77,
+          "6": 0.61,
+          "7": 0.6,
+          "8": 0.57
+        },
+        "second": {
+          "1": 1.35,
+          "2": 1.06,
+          "3": 0.82,
+          "4": 0.66,
+          "5": 0.59,
+          "6": 0.54,
+          "7": 0.51,
+          "8": 0.49
+        }
+      }
+    },
+    {
+      "label": "trophy_p1_ap4",
+      "mode": "trophy",
+      "ablation": "p1_ap4_t1",
+      "games": 1200,
+      "decided": 1141,
+      "firstPlayerWinRate": 0.5083260297984225,
+      "firstAttackStarterRate": 0.47317073170731705,
+      "firstKillStarterRate": 0.49706457925636005,
+      "firstEliteStarterRate": 0.5090252707581228,
+      "firstFreeAttackWindowStarterRate": 0.07592592592592592,
+      "firstSectorStarterRate": 0.9488734835355286,
+      "firstDurchbruchStarterRate": 0.505795574288725,
+      "vpWinStarterRate": 0.48574686431014824,
+      "p2OneTurnShortRateAmongVpWins": 0.346636259977195,
+      "meanOwnTurns": {
+        "starter": 7.84,
+        "second": 6.8
+      },
+      "meanApSpent": {
+        "starter": 25,
+        "second": 25.2
+      },
+      "meanApGranted": {
+        "starter": 34.4,
+        "second": 38.2
+      },
+      "meanAttacks": {
+        "starter": 3.67,
+        "second": 3.74
+      },
+      "meanKills": {
+        "starter": 2.52,
+        "second": 2.42
+      },
+      "meanCheapPlays": {
+        "starter": 3.05,
+        "second": 3.23
+      },
+      "apCurveByOwnTurn": {
+        "starter": {
+          "1": 4,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        },
+        "second": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        }
+      },
+      "frontCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.14,
+          "3": 2.01,
+          "4": 2.34,
+          "5": 2.25,
+          "6": 2.1,
+          "7": 1.97,
+          "8": 1.94
+        },
+        "second": {
+          "1": 0,
+          "2": 1.45,
+          "3": 2.15,
+          "4": 2.32,
+          "5": 2.26,
+          "6": 2.18,
+          "7": 2.05,
+          "8": 1.98
+        }
+      },
+      "foeDigInCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.44,
+          "3": 1.24,
+          "4": 0.91,
+          "5": 0.7,
+          "6": 0.61,
+          "7": 0.55,
+          "8": 0.52
+        },
+        "second": {
+          "1": 1.17,
+          "2": 1.12,
+          "3": 0.89,
+          "4": 0.66,
+          "5": 0.61,
+          "6": 0.54,
+          "7": 0.53,
+          "8": 0.53
+        }
+      }
+    },
+    {
+      "label": "trophy_ap_ramp",
+      "mode": "trophy",
+      "ablation": "ap_ramp_both",
+      "games": 1200,
+      "decided": 1145,
+      "firstPlayerWinRate": 0.5816593886462882,
+      "firstAttackStarterRate": 0.4388349514563107,
+      "firstKillStarterRate": 0.4951267056530214,
+      "firstEliteStarterRate": 0.4987745098039216,
+      "firstFreeAttackWindowStarterRate": 0.05478180129990715,
+      "firstSectorStarterRate": 0.9643167972149695,
+      "firstDurchbruchStarterRate": 0.5658995815899581,
+      "vpWinStarterRate": 0.5594563986409966,
+      "p2OneTurnShortRateAmongVpWins": 0.4292185730464326,
+      "meanOwnTurns": {
+        "starter": 6.85,
+        "second": 7.44
+      },
+      "meanApSpent": {
+        "starter": 25.7,
+        "second": 25.3
+      },
+      "meanApGranted": {
+        "starter": 35,
+        "second": 37.3
+      },
+      "meanAttacks": {
+        "starter": 3.99,
+        "second": 3.32
+      },
+      "meanKills": {
+        "starter": 2.7,
+        "second": 2.36
+      },
+      "meanCheapPlays": {
+        "starter": 2.95,
+        "second": 3.14
+      },
+      "apCurveByOwnTurn": {
+        "starter": {
+          "1": 4,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        },
+        "second": {
+          "1": 4,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        }
+      },
+      "frontCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.16,
+          "3": 2.05,
+          "4": 2.43,
+          "5": 2.49,
+          "6": 2.35,
+          "7": 2.23,
+          "8": 2.15
+        },
+        "second": {
+          "1": 0,
+          "2": 1.23,
+          "3": 1.98,
+          "4": 2.23,
+          "5": 2.21,
+          "6": 2.15,
+          "7": 2.01,
+          "8": 1.9
+        }
+      },
+      "foeDigInCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.22,
+          "3": 1.24,
+          "4": 0.99,
+          "5": 0.77,
+          "6": 0.65,
+          "7": 0.57,
+          "8": 0.52
+        },
+        "second": {
+          "1": 1.18,
+          "2": 1.14,
+          "3": 0.89,
+          "4": 0.73,
+          "5": 0.59,
+          "6": 0.56,
+          "7": 0.53,
+          "8": 0.51
+        }
+      }
+    },
+    {
+      "label": "classic_p2_ap",
+      "mode": "classic",
+      "ablation": "p2_plus1ap_t1",
+      "games": 1200,
+      "decided": 1065,
+      "firstPlayerWinRate": 0.523943661971831,
+      "firstAttackStarterRate": 0.41416100872938894,
+      "firstKillStarterRate": 0.4478048780487805,
+      "firstEliteStarterRate": 0.5080971659919028,
+      "firstFreeAttackWindowStarterRate": 0.06063432835820896,
+      "firstSectorStarterRate": 0.96512641673932,
+      "firstDurchbruchStarterRate": null,
+      "vpWinStarterRate": null,
+      "p2OneTurnShortRateAmongVpWins": null,
+      "meanOwnTurns": {
+        "starter": 30.02,
+        "second": 30.65
+      },
+      "meanApSpent": {
+        "starter": 81.5,
+        "second": 81.5
+      },
+      "meanApGranted": {
+        "starter": 146.9,
+        "second": 150.4
+      },
+      "meanAttacks": {
+        "starter": 16.07,
+        "second": 15.82
+      },
+      "meanKills": {
+        "starter": 10.88,
+        "second": 10.84
+      },
+      "meanCheapPlays": {
+        "starter": 9.86,
+        "second": 10.21
+      },
+      "apCurveByOwnTurn": {
+        "starter": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        },
+        "second": {
+          "1": 6,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        }
+      },
+      "frontCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.35,
+          "3": 2.11,
+          "4": 2.26,
+          "5": 2.21,
+          "6": 2.11,
+          "7": 2.04,
+          "8": 2.05
+        },
+        "second": {
+          "1": 0,
+          "2": 1.7,
+          "3": 2.12,
+          "4": 2.17,
+          "5": 2.11,
+          "6": 2.07,
+          "7": 2.05,
+          "8": 2.12
+        }
+      },
+      "foeDigInCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.69,
+          "3": 1.05,
+          "4": 0.82,
+          "5": 0.67,
+          "6": 0.59,
+          "7": 0.52,
+          "8": 0.53
+        },
+        "second": {
+          "1": 1.37,
+          "2": 1.1,
+          "3": 0.8,
+          "4": 0.66,
+          "5": 0.55,
+          "6": 0.53,
+          "7": 0.5,
+          "8": 0.53
+        }
+      }
+    },
+    {
+      "label": "classic_dig_short",
+      "mode": "classic",
+      "ablation": "dig_in_shorter",
+      "games": 1200,
+      "decided": 1119,
+      "firstPlayerWinRate": 0.5665773011617515,
+      "firstAttackStarterRate": 0.7012609117361784,
+      "firstKillStarterRate": 0.6339805825242718,
+      "firstEliteStarterRate": 0.5159301130524152,
+      "firstFreeAttackWindowStarterRate": 0.9459459459459459,
+      "firstSectorStarterRate": 0.9593073593073593,
+      "firstDurchbruchStarterRate": null,
+      "vpWinStarterRate": null,
+      "p2OneTurnShortRateAmongVpWins": null,
+      "meanOwnTurns": {
+        "starter": 31.41,
+        "second": 30.02
+      },
+      "meanApSpent": {
+        "starter": 67.3,
+        "second": 66.7
+      },
+      "meanApGranted": {
+        "starter": 133.3,
+        "second": 135.8
+      },
+      "meanAttacks": {
+        "starter": 13.15,
+        "second": 10.24
+      },
+      "meanKills": {
+        "starter": 9.21,
+        "second": 7.48
+      },
+      "meanCheapPlays": {
+        "starter": 7.09,
+        "second": 7.25
+      },
+      "apCurveByOwnTurn": {
+        "starter": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        },
+        "second": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        }
+      },
+      "frontCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.33,
+          "3": 2.03,
+          "4": 2.29,
+          "5": 2.29,
+          "6": 2.23,
+          "7": 2.21,
+          "8": 2.27
+        },
+        "second": {
+          "1": 0,
+          "2": 1.19,
+          "3": 1.76,
+          "4": 1.92,
+          "5": 1.85,
+          "6": 1.77,
+          "7": 1.73,
+          "8": 1.81
+        }
+      },
+      "foeDigInCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0
+        },
+        "second": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0
+        }
+      }
+    },
+    {
+      "label": "classic_p2_reply",
+      "mode": "classic",
+      "ablation": "p2_last_reply",
+      "games": 1200,
+      "decided": 1075,
+      "firstPlayerWinRate": 0.5534883720930233,
+      "firstAttackStarterRate": 0.4720908230842006,
+      "firstKillStarterRate": 0.5142585551330798,
+      "firstEliteStarterRate": 0.5151515151515151,
+      "firstFreeAttackWindowStarterRate": 0.06757990867579909,
+      "firstSectorStarterRate": 0.9558441558441558,
+      "firstDurchbruchStarterRate": null,
+      "vpWinStarterRate": null,
+      "p2OneTurnShortRateAmongVpWins": null,
+      "meanOwnTurns": {
+        "starter": 30.46,
+        "second": 30.17
+      },
+      "meanApSpent": {
+        "starter": 84.3,
+        "second": 83.9
+      },
+      "meanApGranted": {
+        "starter": 152.1,
+        "second": 154.6
+      },
+      "meanAttacks": {
+        "starter": 16.61,
+        "second": 15.7
+      },
+      "meanKills": {
+        "starter": 11.58,
+        "second": 11.03
+      },
+      "meanCheapPlays": {
+        "starter": 10.01,
+        "second": 10.26
+      },
+      "apCurveByOwnTurn": {
+        "starter": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        },
+        "second": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 5
+        }
+      },
+      "frontCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.32,
+          "3": 2.14,
+          "4": 2.37,
+          "5": 2.37,
+          "6": 2.3,
+          "7": 2.24,
+          "8": 2.22
+        },
+        "second": {
+          "1": 0,
+          "2": 1.47,
+          "3": 2.06,
+          "4": 2.18,
+          "5": 2.08,
+          "6": 2.01,
+          "7": 1.97,
+          "8": 1.97
+        }
+      },
+      "foeDigInCurveByOwnTurn": {
+        "starter": {
+          "1": 0,
+          "2": 1.45,
+          "3": 1.2,
+          "4": 0.9,
+          "5": 0.73,
+          "6": 0.62,
+          "7": 0.57,
+          "8": 0.52
+        },
+        "second": {
+          "1": 1.35,
+          "2": 1.08,
+          "3": 0.81,
+          "4": 0.65,
+          "5": 0.57,
+          "6": 0.51,
+          "7": 0.53,
+          "8": 0.49
+        }
+      }
+    }
+  ]
+}

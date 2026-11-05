@@ -1,6 +1,6 @@
 /**
  * Trophy victory mode (victory_mode: 'trophy').
- * Default catalog flag remains 'classic' until playtest approves.
+ * Catalog default is 'trophy' (candidate K); legacy 'classic' remains available.
  * Trophy knobs (candidate K): VP5, safety 26/28, DB×3/cd2, elite 2, dok need×0.65.
  * Doctrine VP objectives are NOT nation-specific.
  */

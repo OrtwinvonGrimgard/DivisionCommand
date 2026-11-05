@@ -1,7 +1,7 @@
 # Fahrplan zum Erfolg — Division Command
 
 Stand: November 2026 · Alpha 0.5a  
-Begleitdokument: [SIEGBEDINGUNGEN.md](./SIEGBEDINGUNGEN.md) (Ist-Analyse + Entscheidungsvorlage; Engine noch unverändert)
+Begleitdokument: [SIEGBEDINGUNGEN.md](./SIEGBEDINGUNGEN.md), Freeze: [REGEL_FREEZE.md](./REGEL_FREEZE.md) (Trophy K aktiv seit 2026-11-04, Tip `196ae84`)
 
 Dieser Fahrplan verbindet **Regel-Klarheit**, **Roguelike als Hebel**, **Steam-Sichtbarkeit** und drei Absatz-Szenarien. Aufwandsschätzungen gelten für **Solo / sehr kleines Team** (Vollzeit-Äquivalent in Personenwochen, grob).
 
@@ -110,9 +110,9 @@ Audit November 2026 (Typdateien): ca. **1095** Karteneinträge; Seltenheit grob 
 
 | | |
 |---|---|
-| Deliverables | Entscheidung laut SIEGBEDINGUNGEN.md; kurze REGEL_FREEZE.md; Hilfe-Text anpassen; Engine-Patch SP/Wille |
+| Deliverables | ~~Entscheidung~~ + REGEL_FREEZE.md erledigt; Hilfe-Text anpassen; Playtests |
 | Erfolg | Fremde Playtests enden mit verständlichem Siegrund in 10–20 Min |
-| Abhängigkeit | Deine Entscheidung zu Primärregel |
+| Abhängigkeit | Primärregel entschieden (Trophy K); menschliche Playtests offen |
 
 ### Phase 1 — Kern-Polish & Onboarding  
 **Aufwand:** 3–5 Wochen  
