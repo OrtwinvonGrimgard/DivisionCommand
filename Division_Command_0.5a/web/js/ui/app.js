@@ -144,6 +144,18 @@
       '" onload="window.dcImgOk(this)" onerror="' + err + '">';
   }
 
+  // Audio is optional presentation: never let it interrupt an action or mutate engine data.
+  function audioCall(method) {
+    try {
+      var audio = window.DCAudio;
+      if (!audio || typeof audio[method] !== 'function') return;
+      var args = Array.prototype.slice.call(arguments, 1).map(function (arg) {
+        return arg && typeof arg === 'object' ? JSON.parse(JSON.stringify(arg)) : arg;
+      });
+      var result = audio[method].apply(audio, args);
+      if (result && typeof result.then === 'function') Promise.resolve(result).catch(function () {});
+    } catch (audioError) { /* audio must never prevent rules, pending choices or render */ }
+  }
   var CATALOG = window.DC_CATALOG; // lokale Variable
   function dcPortraitSrc(id, rank) {
     if (window.DCPortrait) return DCPortrait.src(id, rank);
@@ -227,7 +239,7 @@
   function bindChrome() {
     bindInspectGestures();
     preloadCardArt();
-    if (window.DCAudio) DCAudio.preload();
+    audioCall('preload');
     function bind(id, fn) { // Funktion
       var el = document.getElementById(id); // lokale Variable
       if (el) el.addEventListener('click', fn); // Ereignis binden
@@ -479,6 +491,12 @@
       if (ov) ov.style.display = 'flex'; // Zweig nur bei zutreffender Bedingung
       return; // nächster Schritt im Ablauf
     }
+    var soundDef = null;
+    try {
+      var soundLoc = action.uid && engine.findInst(action.uid);
+      var originalDef = soundLoc ? engine.defOf(soundLoc.inst) : (action.cardId && engine.byId[action.cardId]);
+      if (originalDef) soundDef = JSON.parse(JSON.stringify(originalDef));
+    } catch (audioLookupError) {}
     var res; // lokale Variable
     try { res = engine.dispatch(action); }
     catch (err) { showErr(String(err.message || err)); return; }
@@ -540,49 +558,30 @@
       ovw.style.display = 'flex';
       document.getElementById('cw-ok').onclick = function () { ovw.style.display = 'none'; };
     }
-    if (window.DCAudio && res && res.ok) {
-      var cdef = null;
-      if (action.uid && engine && engine.findInst) {
-        var loc = engine.findInst(action.uid);
-        if (loc) cdef = engine.defOf(loc.inst);
-      }
-      if (!cdef && action.cardId && engine) cdef = engine.byId[action.cardId];
-      if (!cdef && action.type === 'PLAY' && engine && engine.state && engine.state.events) {
-        try {
-          for (var ei = engine.state.events.length - 1; ei >= 0; ei--) {
-            var eev = engine.state.events[ei];
-            if (eev && eev.cardId && (eev.kind === 'deploy' || eev.kind === 'instant' ||
-                eev.kind === 'equip' || eev.kind === 'support' || eev.kind === 'shout')) {
-              cdef = engine.byId[eev.cardId] || { id: eev.cardId, name: eev.name, tags: [], typ: '', image: eev.image };
-              // Minenfeld / shout mit Namen
-              if (!engine.byId[eev.cardId] && eev.name) cdef.name = eev.name;
-              break;
-            }
-          }
-        } catch (eEvLook) {}
-      }
-      if (action.type === 'PLAY' && DCAudio.playForCard) DCAudio.playForCard('deploy', cdef);
-      else if (action.type === 'ATTACK' && DCAudio.playForCard) DCAudio.playForCard('attack', cdef);
-      else if (action.type === 'END_TURN') DCAudio.playSfx('turn');
-      else if (action.type === 'REVEAL_UNIT') DCAudio.playSfx('reveal');
-      else if (action.type === 'DOK_SHIFT') DCAudio.playSfx('doktrin-shift');
-      else if (action.type === 'COIN_FLIP') DCAudio.playSfx('coin');
-      else if (action.type === 'RESOLVE_PENDING' && action.confirm) DCAudio.playSfx('ui-click', { prio: 3 });
-      else DCAudio.playSfx('ui-click');
+    if (res && res.ok) {
+      var cdef = soundDef;
+      if (action.type === 'PLAY') audioCall('playForCard', 'deploy', cdef);
+      else if (action.type === 'ATTACK') audioCall('playForCard', 'attack', cdef);
+      else if (action.type === 'END_TURN') audioCall('playSfx', 'turn');
+      else if (action.type === 'REVEAL_UNIT') audioCall('playSfx', 'reveal');
+      else if (action.type === 'DOK_SHIFT') audioCall('playSfx', 'doktrin-shift');
+      else if (action.type === 'COIN_FLIP') audioCall('playSfx', 'coin');
+      else if (action.type === 'RESOLVE_PENDING' && action.confirm) audioCall('playSfx', 'ui-click', { prio: 3 });
+      else audioCall('playSfx', 'ui-click');
       // VP / Trophäe nachziehen
       try {
         if (engine && engine.state && engine.state.players) {
           var vpNow = (engine.state.players[0].vp || 0) + (engine.state.players[1].vp || 0);
           if (window._dcLastVpSum == null) window._dcLastVpSum = vpNow;
           if (vpNow > window._dcLastVpSum) {
-            DCAudio.playSfx('trophy', { prio: 1, duck: 0.5, duckMs: 1000 });
+            audioCall('playSfx', 'trophy', { prio: 1, duck: 0.5, duckMs: 1000 });
             window._dcLastVpSum = vpNow;
           }
         }
       } catch (eVp) {}
     }
-    if (window.DCAudio && (res.coinWinner || res.code === 'COIN_WINNER')) {
-      try { DCAudio.playSfx('coin'); } catch (eC) {}
+    if (res.coinWinner || res.code === 'COIN_WINNER') {
+      try { audioCall('playSfx', 'coin'); } catch (eC) {}
     }
     if (action.type === 'END_TURN') {
       eventQueue = [];
@@ -1670,7 +1669,7 @@
     if (all.length > seenEvents) {
       var fresh = all.slice(seenEvents);
       // SFX für neue Engine-Events (fehlende Dateien = still)
-      if (window.DCAudio && DCAudio.playEvent) {
+      { // optional audio is isolated by audioCall
         fresh.forEach(function (ev) {
           try {
             var def = null;
@@ -1678,21 +1677,21 @@
             if (!def && ev.name) def = { name: ev.name, tags: [], typ: '', image: ev.image };
             // Mine / Minenfeld
             if (ev.name && /Minenfeld|Mine/i.test(ev.name)) {
-              DCAudio.playSfx('mine', { prio: 1, duck: 0.4, duckMs: 800 });
+              audioCall('playSfx', 'mine', { prio: 1, duck: 0.4, duckMs: 800 });
               return;
             }
             if (ev.kind === 'reveal') {
-              DCAudio.playSfx('reveal', { prio: 2 });
+              audioCall('playSfx', 'reveal', { prio: 2 });
               return;
             }
             if (ev.kind === 'support') {
-              DCAudio.playSfx('deploy-unterstuetzung', { prio: 2 });
+              audioCall('playSfx', 'deploy-unterstuetzung', { prio: 2 });
               return;
             }
             // deploy/equip/instant/attack kommen schon aus dem Action-Hook — hier nur Rest
             if (ev.kind === 'destroy' || ev.kind === 'draw' ||
                 ev.kind === 'coin' || ev.kind === 'vp' || ev.kind === 'trophy') {
-              DCAudio.playEvent(Object.assign({}, ev, { _def: def }));
+              audioCall('playEvent', Object.assign({}, ev, { _def: def }));
             }
           } catch (eEv) {}
         });
@@ -2430,8 +2429,8 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
         document.querySelectorAll('#hand .card.picked').forEach(function (c) { c.classList.remove('picked'); });
         el.classList.add('picked');
         try {
-          if (window.DCAudio && DCAudio.playForCard) {
-            DCAudio.playForCard('select', engine.defOf(card));
+          { // optional audio is isolated by audioCall
+            audioCall('playForCard', 'select', engine.defOf(card));
           }
         } catch (eSel) {}
         armHandCard(card.uid, viewer, false);
@@ -2729,12 +2728,12 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
     }).join(''); // nächster Schritt im Ablauf
     if (st.winner != null || (st.endReason && /Frieden|unentschieden/i.test(String(st.endReason || '')))) {
-      if (window.DCAudio && DCAudio.notifyGameEnd && !st._sfxEndPlayed) {
+      if (!st._sfxEndPlayed) {
         st._sfxEndPlayed = true;
         try {
           var youWin = (mode === 'bot') ? (st.winner === 0) : (st.winner === you);
-          if (st.winner == null) DCAudio.playSfx('lose', { prio: 1, duck: 0.5, duckMs: 1500 });
-          else DCAudio.notifyGameEnd(!!youWin);
+          if (st.winner == null) audioCall('playSfx', 'lose', { prio: 1, duck: 0.5, duckMs: 1500 });
+          else audioCall('notifyGameEnd', !!youWin);
         } catch (eEnd) {}
       }
       var ov = $('#overlay');
