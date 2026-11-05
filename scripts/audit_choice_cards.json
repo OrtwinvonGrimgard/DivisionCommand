@@ -1,23 +1,11 @@
 {
   "soforteTotal": 229,
-  "choiceOk": 170,
-  "broken": 20,
-  "autoOk": 37,
+  "choiceOk": 172,
+  "broken": 1,
+  "autoOk": 54,
   "rejected": 4,
   "doctrineIssues": 0,
   "brokenList": [
-    {
-      "id": "dc_so_sammelruf",
-      "name": "Sammelruf",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_so_armageddon",
-      "name": "Armageddon",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "coin"
-    },
     {
       "id": "dc_so_raeum",
       "name": "Räumkommando",
@@ -27,108 +15,6 @@
         "CLEAR_MINE"
       ],
       "note": "Spieler bekam keine UI-Auswahl"
-    },
-    {
-      "id": "dc_b_werkalarme_167",
-      "name": "Werkalarme",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_nachruckbefehl_124",
-      "name": "Nachruckbefehl",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_konzentrationsruf_639",
-      "name": "Konzentrationsruf",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_rasterfrage_827",
-      "name": "Rasterfrage",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_zwei_saetze_828",
-      "name": "Zwei Sätze",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_boden_vor_see_829",
-      "name": "Boden vor See",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_falsche_akte_881",
-      "name": "Falsche Akte",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_frueheres_datum_941",
-      "name": "Früheres Datum",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_kein_streichen_948",
-      "name": "Kein Streichen",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_gegenruf_760",
-      "name": "Gegenruf",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_gegenstoss_763",
-      "name": "Gegenstoß",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_stimmloch_206",
-      "name": "Stimmloch",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_drei_schluessel_581",
-      "name": "Drei Schlüssel",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_entsatz_rufen_526",
-      "name": "Entsatz rufen",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_zweite_linie_248",
-      "name": "Zweite Linie",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_lauer_249",
-      "name": "Lauer",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
-    },
-    {
-      "id": "dc_b_absetzung_289",
-      "name": "Absetzung",
-      "issue": "UNEXPECTED_PENDING",
-      "kind": "instant-target"
     }
   ],
   "doctrineList": [],
@@ -172,6 +58,13 @@
       "kind": "instant-target",
       "choices": 4,
       "exp": "target"
+    },
+    {
+      "id": "dc_so_armageddon",
+      "name": "Armageddon",
+      "kind": "coin",
+      "choices": 0,
+      "exp": "special"
     },
     {
       "id": "dc_so_deckung",
@@ -290,13 +183,6 @@
       "name": "Standhafte Formation",
       "kind": "formation",
       "choices": 3,
-      "exp": "special"
-    },
-    {
-      "id": "dc_so_strahlung",
-      "name": "Strahlung",
-      "kind": "radiation",
-      "choices": 4,
       "exp": "special"
     }
   ],

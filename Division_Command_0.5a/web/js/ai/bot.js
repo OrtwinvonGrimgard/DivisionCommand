@@ -252,6 +252,35 @@
     return [a.type || '', a.uid || '', a.cardId || '', a.target || '', slot].join('|');
   }
 
+
+  function pickPending(engine, pid, pendingActs) {
+    var pend = engine.state && engine.state.pending;
+    var selected = (pend && pend.selected) || [];
+    var need = (pend && pend.needCount) || 1;
+    var candidates = pendingActs.slice();
+    // Mehrfachwahl ohne upto: bereits gewählte Ziele nicht wieder antippen (sonst Soft-Lock durch Toggle).
+    if (pend && !pend.upto && need > 1 && selected.length < need) {
+      var unsel = pendingActs.filter(function (a) {
+        return a.target && selected.indexOf(a.target) < 0;
+      });
+      if (unsel.length) candidates = unsel;
+    }
+    // upto: wenn schon etwas gewählt und Confirm verfügbar, abschließen
+    if (pend && pend.upto && selected.length > 0) {
+      var conf = pendingActs.find(function (a) { return a.confirm; });
+      if (conf && (selected.length >= need || !pendingActs.some(function (a) {
+        return a.target && selected.indexOf(a.target) < 0;
+      }))) {
+        return Object.assign({ player: pid }, conf);
+      }
+      var unsel2 = pendingActs.filter(function (a) {
+        return a.target && selected.indexOf(a.target) < 0;
+      });
+      if (unsel2.length && selected.length < need) candidates = unsel2;
+    }
+    return candidates;
+  }
+
   function stepTest(engine, pid, skip) {
     var acts = engine.listActions(pid);
     if (!acts.length) return { type: 'END_TURN', player: pid };
@@ -260,6 +289,7 @@
       return a.type === 'RESOLVE_PENDING' && !(skip && skip[actKey(a)]);
     });
     if (pending.length) {
+      pending = pickPending(engine, pid, pending);
       var bestP = pending[0];
       var bestPs = -1e9;
       pending.forEach(function (a) {
@@ -309,7 +339,10 @@
     var pendingChoices = acts.filter(function (a) {
       return a.type === 'RESOLVE_PENDING' && !(skip && skip[actKey(a)]);
     });
-    if (pendingChoices.length) return Object.assign({ player: pid }, pick(pendingChoices));
+    if (pendingChoices.length) {
+      pendingChoices = pickPending(engine, pid, pendingChoices);
+      return Object.assign({ player: pid }, pick(pendingChoices));
+    }
     var plays = acts.filter(function (a) { return playable(a) && !(skip && skip[actKey(a)]); });
     var attacks = acts.filter(function (a) { return a.type === 'ATTACK' && Number(cfg.allowAttack) && !(skip && skip[actKey(a)]); });
     if (plays.length) return Object.assign({ player: pid }, pick(plays));
@@ -327,8 +360,29 @@
   }
 
   function step(engine, pid, skip) {
-    if ((cfg.model || 'test') === 'schloter') return stepSchloter(engine, pid, skip);
-    return stepTest(engine, pid, skip);
+    var act;
+    if ((cfg.model || 'test') === 'schloter') act = stepSchloter(engine, pid, skip);
+    else act = stepTest(engine, pid, skip);
+    var pend = engine.state && engine.state.pending;
+    if (pend && pend.player === pid) {
+      // Nie Zug beenden solange eigene Wahl offen — sonst Soft-Lock.
+      if (!act || act.type === 'END_TURN' || act.type === 'CANCEL_PENDING') {
+        var acts = engine.listActions(pid) || [];
+        var opts = acts.filter(function (a) {
+          return a.type === 'RESOLVE_PENDING' && !(skip && skip[actKey(a)]);
+        });
+        opts = pickPending(engine, pid, opts);
+        if (!opts.length) {
+          // Skip-Karte erschöpft: trotzdem irgendein Ziel erzwingen (besser als Abbruch-Schleife).
+          opts = pickPending(engine, pid, acts.filter(function (a) {
+            return a.type === 'RESOLVE_PENDING' && (a.target || a.slot || a.confirm);
+          }));
+        }
+        if (opts.length) act = Object.assign({ player: pid }, opts[0]);
+        else act = { type: 'CANCEL_PENDING', player: pid };
+      }
+    }
+    return act;
   }
 
   function applyCfg(next) {

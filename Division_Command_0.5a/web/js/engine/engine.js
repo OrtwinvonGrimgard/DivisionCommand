@@ -1885,8 +1885,13 @@
         if (ix >= 0) pend.selected.splice(ix, 1); // Zweig nur bei zutreffender Bedingung
         else pend.selected.push(id); // sonst
         const need = pend.needCount || 1; // unveränderliche Bindung in diesem Block
+        const remain = (pend.choices || []).filter((c) => c && c.target && pend.selected.indexOf(c.target) < 0);
         if (!pend.upto && pend.selected.length >= need) { // Zweig nur bei zutreffender Bedingung
           return this._finishInstant(pid, pend, pend.selected); // Wert zurückgeben
+        }
+        // Keine weiteren wählbaren Ziele → mit bisheriger Auswahl abschließen (verhindert Toggle-Soft-Lock).
+        if (!pend.upto && pend.selected.length > 0 && remain.length === 0) {
+          return this._finishInstant(pid, pend, pend.selected);
         }
         return { ok: true, need: 'target', selected: pend.selected.slice() }; // Ergebnis an den Aufrufer
       }
@@ -2504,6 +2509,35 @@
         p.grave.push(card);
         return { ok: true };
       }
+      if ((def.effects || []).some((e) => e.code === 'CLEAR_SUPPORT_OR_DEBUFF') && !targetUid) {
+        const foe = this.opponent(p.id);
+        const hasSup = (foe.support || []).some((x) => x);
+        if (!hasSup) {
+          const choices = this.frontList(foe).map((l) => ({
+            uid: l.inst.uid,
+            label: l.inst.facedown ? 'Verdeckt' : this.defOf(l.inst).name
+          }));
+          if (!choices.length) {
+            p.hand.push(card);
+            return { ok: false, error: def.name + ' — keine Unterstützung und kein Ziel.', code: 'NO_TGT' };
+          }
+          this.state.pending = this._sealPending({
+            kind: 'instant-target',
+            player: p.id,
+            uid: card.uid,
+            card,
+            needCount: 1,
+            upto: false,
+            selected: [],
+            choices: choices.map((t) => ({ target: t.uid, label: t.label })),
+          });
+          return { ok: true, need: 'target' };
+        }
+        // Unterstützung vorhanden → ohne Zielwahl auflösen
+        this._resolveEffects(p, card, null);
+        p.grave.push(card);
+        return { ok: true };
+      }
       const needs = this._instantNeedsTarget(def); // unveränderliche Bindung in diesem Block
       if (needs && !targetUid) { // Zweig nur bei zutreffender Bedingung
         const choices = this._instantTargets(p, def); // unveränderliche Bindung in diesem Block
@@ -2512,12 +2546,13 @@
           return { ok: false, error: def.name + ' — kein gültiges Ziel.', code: 'NO_TGT' };
         }
         const need = this._targetNeed(def); // unveränderliche Bindung in diesem Block
+        const capped = Math.max(1, Math.min(need.count || 1, choices.length));
         this.state.pending = this._sealPending({ // offene Wahl des Spielers
           kind: 'instant-target', // nächster Schritt im Ablauf
           player: p.id, // nächster Schritt im Ablauf
           uid: card.uid, // nächster Schritt im Ablauf
           card, // nächster Schritt im Ablauf
-          needCount: need.count, // nächster Schritt im Ablauf
+          needCount: capped, // an verfügbare Ziele kappen
           upto: need.upto, // nächster Schritt im Ablauf
           selected: [], // nächster Schritt im Ablauf
           choices: choices.map((t) => ({ target: t.uid, label: t.label })), // Liste umformen
@@ -2741,9 +2776,12 @@
     // Ob der Einsatz ein Ziel braucht.
     _instantNeedsTarget(def) { // nächster Schritt im Ablauf
       const codes = (def.effects || []).map((e) => e.code); // Liste umformen
-      return codes.some((c) =>
-        ['DEAL_DAMAGE', 'HEAL', 'DESTROY', 'DESTROY_IF_DEF', 'SACRIFICE', 'SACRIFICE_INFANTRY_DAMAGE', 'BUFF', 'SELF_DAMAGE', 'RETURN_TO_HAND', 'MOVE_FRONT', 'MOVE_SLOTS', 'OUT_OF_COMBAT', 'PLACE_TOKEN', 'REMOVE_TOKEN', 'REVEAL', 'MARK_OBSERVED', 'EXTRA_ATTACK', 'REPLACE_UNIT', 'BUFF_SECTION', 'ZIELANGRIFF', 'UMGEHEN', 'KEIN_LOCH'].includes(c)
-      ) || /eine |gewählte|ziel|einheit|wähle/i.test(def.text || '');
+      const targeted = ['DEAL_DAMAGE', 'HEAL', 'DESTROY', 'DESTROY_IF_DEF', 'SACRIFICE', 'SACRIFICE_INFANTRY_DAMAGE', 'BUFF', 'SELF_DAMAGE', 'RETURN_TO_HAND', 'MOVE_FRONT', 'MOVE_SLOTS', 'OUT_OF_COMBAT', 'PLACE_TOKEN', 'REMOVE_TOKEN', 'REVEAL', 'MARK_OBSERVED', 'EXTRA_ATTACK', 'REPLACE_UNIT', 'BUFF_SECTION', 'ZIELANGRIFF', 'UMGEHEN', 'KEIN_LOCH'];
+      if (codes.some((c) => targeted.includes(c))) return true;
+      // Globale/Auto-Effekte: Kartentext-Heuristik nicht anwenden (verhindert Schein-Zielwahl + Mehrfach-Apply).
+      const autoNoTarget = ['WILL_PEOPLE', 'MASS_DAMAGE', 'BUFF_ALL_OWN', 'DRAW', 'DRAW_DISCARD', 'DRAW_AP', 'COST_NEXT', 'PLAY_INF_DISCOUNT', 'CLEAR_ENEMY_SUPPORT', 'EMPTY_STREETS', 'LOOK_TOP', 'RETURN_INFANTRY_FROM_DISCARD', 'RETURN_UNIT_GRAVE', 'CANCEL_AIR_DAMAGE', 'COMMAND_ATTACK', 'ARMAGEDDON', 'GHOST_RUINS', 'CAVALRY_ATK', 'CLEAR_SUPPORT_OR_DEBUFF'];
+      if (codes.length && codes.every((c) => autoNoTarget.includes(c))) return false;
+      return /eine |gewählte|ziel|einheit|wähle/i.test(def.text || '');
     }
 
     // Kandidatenliste aus dem Kartentext.

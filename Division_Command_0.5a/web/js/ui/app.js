@@ -642,7 +642,13 @@
     var act = { type: 'END_TURN', player: 1 };
     try { act = (DCBot.step(engine, 1, botFail) || act); } catch (err) { act = { type: 'END_TURN', player: 1 }; }
     act.player = 1;
-    if (botFail[botActKey(act)]) act = { type: 'END_TURN', player: 1 };
+    if (botFail[botActKey(act)]) {
+      if (engine.state.pending && engine.state.pending.player === 1) act = { type: 'CANCEL_PENDING', player: 1 };
+      else act = { type: 'END_TURN', player: 1 };
+    }
+    if (act.type === 'END_TURN' && engine.state.pending && engine.state.pending.player === 1) {
+      act = { type: 'CANCEL_PENDING', player: 1 };
+    }
     var res = null;
     try {
       if (act.type === 'RESOLVE_PENDING' && act.confirm) act = botFollow(engine.state.pending) || { type: 'CANCEL_PENDING', player: 1 };
