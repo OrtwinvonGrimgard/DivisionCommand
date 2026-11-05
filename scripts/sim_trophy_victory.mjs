@@ -37,7 +37,7 @@ for (const s of [
   'js/data/sets/types/elite.js', 'js/data/sets/types/unterstuetzung.js',
   'js/data/sets/types/soforteinsatz.js', 'js/data/sets/types/ausruestung.js',
   'js/data/decks.js', 'js/data/catalog.js',
-  'js/engine/engine.js', 'js/engine/victory_trophy.js', 'js/ai/bot.js',
+  'js/engine/engine.js', 'js/engine/victory_trophy.js', 'js/engine/doctrine_runtime.js', 'js/ai/bot.js',
 ]) loadInto(ctx, s);
 
 const { DCEngine, DCBot, DC_CATALOG, DC_NATION_DECKS, DC_TROPHY_OBJECTIVES } = ctx;

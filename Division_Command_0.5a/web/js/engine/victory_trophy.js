@@ -9,7 +9,7 @@
 
   /** @type {Record<string, {id:string, name:string, label:string, need:number, event:string}>} */
   var OBJECTIVES = {
-    dc_dok_abloesung: { id: 'dc_dok_abloesung', name: 'Ablösung', label: '2 Einheiten im Abschnitt nach eigenem Verlust nachrücken', need: 2, event: 'replace_after_loss' },
+    dc_dok_abloesung: { id: 'dc_dok_abloesung', name: 'Ablösung', label: '4 Einheiten im Abschnitt nach eigenem Verlust nachrücken', need: 4, event: 'replace_after_loss' },
     dc_dok_abnutzung: { id: 'dc_dok_abnutzung', name: 'Abnutzung', label: '5 gegnerische Fronteinheiten zerstören', need: 5, event: 'enemy_front_kill'},
     dc_dok_abriegeln: { id: 'dc_dok_abriegeln', name: 'Abriegeln', label: '1 Artillerieangriff auf Abschnitt mit ≤1 Feind', need: 1, event: 'arty_thin_section'},
     dc_dok_abschluss: { id: 'dc_dok_abschluss', name: 'Abschluss', label: '2 Kills mit derselben Einheit in der Partie', need: 2, event: 'same_unit_kills' },
@@ -19,23 +19,23 @@
     dc_dok_auswertung: { id: 'dc_dok_auswertung', name: 'Auswertung', label: '3 Schaden im Zug nach erlittenem Angriff', need: 3, event: 'dmg_after_attacked' },
     dc_dok_blitzkrieg: { id: 'dc_dok_blitzkrieg', name: 'Blitzkrieg', label: '1 Kill mit Panzer innerhalb von 2 Zügen nach Einrücken', need: 1, event: 'blitz_panzer_kill' },
     dc_dok_bollwerk: { id: 'dc_dok_bollwerk', name: 'Bollwerk', label: '4 Schaden aus Abschnitten mit ≥2 eigenen Einheiten', need: 4, event: 'dmg_massed' },
-    dc_dok_breites_aufgebot: { id: 'dc_dok_breites_aufgebot', name: 'Breites Aufgebot', label: '3 Infanterie ausspielen', need: 3, event: 'play_infantry'},
+    dc_dok_breites_aufgebot: { id: 'dc_dok_breites_aufgebot', name: 'Breites Aufgebot', label: '4 Infanterie ausspielen', need: 4, event: 'play_infantry'},
     dc_dok_entsatz: { id: 'dc_dok_entsatz', name: 'Entsatz', label: '7 Schaden aus Abschnitten mit ≥2 eigenen Einheiten', need: 7, event: 'dmg_massed'},
-    dc_dok_etappensicherung: { id: 'dc_dok_etappensicherung', name: 'Etappensicherung', label: '5 Züge ohne eigenen Frontverlust beenden', need: 5, event: 'clean_end_turn'},
+    dc_dok_etappensicherung: { id: 'dc_dok_etappensicherung', name: 'Etappensicherung', label: '3 Züge ohne eigenen Frontverlust beenden', need: 3, event: 'clean_end_turn'},
     dc_dok_feuerplan: { id: 'dc_dok_feuerplan', name: 'Feuerplan', label: '7 Schaden an aufgeklärten Feinden', need: 7, event: 'dmg_revealed'},
     dc_dok_feuerwalze: { id: 'dc_dok_feuerwalze', name: 'Feuerwalze', label: '1 Artillerie-Kill', need: 1, event: 'arty_kill'},
-    dc_dok_gegenstoss: { id: 'dc_dok_gegenstoss', name: 'Gegenstoß', label: '6 Schaden im Zug nach erlittenem Angriff', need: 6, event: 'dmg_after_attacked' },
+    dc_dok_gegenstoss: { id: 'dc_dok_gegenstoss', name: 'Gegenstoß', label: '4 Schaden im Zug nach erlittenem Angriff', need: 4, event: 'dmg_after_attacked' },
     dc_dok_gepanzerter_fuss: { id: 'dc_dok_gepanzerter_fuss', name: 'Gepanzerter Fuß', label: '2 Infanterie ausspielen', need: 2, event: 'play_infantry'},
-    dc_dok_lauer: { id: 'dc_dok_lauer', name: 'Lauer', label: '5 gegnerische Fronteinheiten zerstören', need: 5, event: 'enemy_front_kill' },
+    dc_dok_lauer: { id: 'dc_dok_lauer', name: 'Lauer', label: '3 gegnerische Fronteinheiten zerstören', need: 3, event: 'enemy_front_kill' },
     dc_dok_linienkrieg: { id: 'dc_dok_linienkrieg', name: 'Linienkrieg', label: '6 Schaden aus Abschnitten mit ≥2 eigenen Einheiten', need: 6, event: 'dmg_massed' },
-    dc_dok_lokalisierung: { id: 'dc_dok_lokalisierung', name: 'Lokalisierung', label: '8 Schaden an aufgeklärten Feinden', need: 8, event: 'dmg_revealed'},
+    dc_dok_lokalisierung: { id: 'dc_dok_lokalisierung', name: 'Lokalisierung', label: '5 Schaden an aufgeklärten Feinden', need: 5, event: 'dmg_revealed'},
     dc_dok_marsch_aus_dem_vollen: { id: 'dc_dok_marsch_aus_dem_vollen', name: 'Marsch aus dem Vollen', label: '3 Einheiten in Abschnitte mit Unterstützung spielen', need: 3, event: 'play_with_support' },
     dc_dok_materialersatz: { id: 'dc_dok_materialersatz', name: 'Materialersatz', label: '4 Panzer oder Artillerie ausspielen', need: 4, event: 'play_heavy'},
     dc_dok_normverband: { id: 'dc_dok_normverband', name: 'Normverband', label: '3 gegnerische Fronteinheiten zerstören', need: 3, event: 'enemy_front_kill'},
-    dc_dok_punktfeuer: { id: 'dc_dok_punktfeuer', name: 'Punktfeuer', label: '2 Artillerie-Kills', need: 2, event: 'arty_kill' },
-    dc_dok_rasten: { id: 'dc_dok_rasten', name: 'Rasten', label: '8 Schaden mit Einheiten, die letzten Zug nicht angriffen', need: 8, event: 'dmg_rested' },
-    dc_dok_scheinschwerpunkt: { id: 'dc_dok_scheinschwerpunkt', name: 'Scheinschwerpunkt', label: '3 Züge mit Einheiten in ≥2 Abschnitten beenden', need: 3, event: 'multi_section_end' },
-    dc_dok_schwerpunkt: { id: 'dc_dok_schwerpunkt', name: 'Schwerpunkt', label: '7 Schaden aus dem stärksten eigenen Abschnitt', need: 7, event: 'dmg_main_effort' },
+    dc_dok_punktfeuer: { id: 'dc_dok_punktfeuer', name: 'Punktfeuer', label: '1 Artillerie-Kill', need: 1, event: 'arty_kill' },
+    dc_dok_rasten: { id: 'dc_dok_rasten', name: 'Rasten', label: '5 Schaden mit Einheiten, die letzten Zug nicht angriffen', need: 5, event: 'dmg_rested' },
+    dc_dok_scheinschwerpunkt: { id: 'dc_dok_scheinschwerpunkt', name: 'Scheinschwerpunkt', label: '2 Züge mit Einheiten in ≥2 Abschnitten beenden', need: 2, event: 'multi_section_end' },
+    dc_dok_schwerpunkt: { id: 'dc_dok_schwerpunkt', name: 'Schwerpunkt', label: '8 Schaden aus dem stärksten eigenen Abschnitt', need: 8, event: 'dmg_main_effort' },
     dc_dok_sicherer_nachschub: { id: 'dc_dok_sicherer_nachschub', name: 'Sicherer Nachschub', label: '3 Einheiten in Abschnitte mit Unterstützung spielen', need: 3, event: 'play_with_support' },
     dc_dok_stosstrupp: { id: 'dc_dok_stosstrupp', name: 'Stoßtrupp', label: '2 Kills mit Infanterie', need: 2, event: 'kill_infantry'},
     dc_dok_sturmangriff: { id: 'dc_dok_sturmangriff', name: 'Sturmangriff', label: '2 Kills mit Infanterie', need: 2, event: 'kill_infantry'},
@@ -43,8 +43,8 @@
     dc_dok_umgehen: { id: 'dc_dok_umgehen', name: 'Umgehen', label: '4 Schaden bei lokaler Überzahl', need: 4, event: 'dmg_outnumber' },
     dc_dok_verlegung: { id: 'dc_dok_verlegung', name: 'Verlegung', label: '3 Züge mit Einheiten in ≥2 Abschnitten beenden', need: 3, event: 'multi_section_end'},
     dc_dok_verteilte_stellung: { id: 'dc_dok_verteilte_stellung', name: 'Verteilte Stellung', label: '2 Schaden als alleinige Einheit im Abschnitt', need: 2, event: 'dmg_alone'},
-    dc_dok_weiterkaempfen: { id: 'dc_dok_weiterkaempfen', name: 'Weiterkämpfen', label: '6 Schaden mit beschädigten Einheiten', need: 6, event: 'dmg_damaged' },
-    dc_dok_zielangriff: { id: 'dc_dok_zielangriff', name: 'Zielangriff', label: '4 gegnerische Fronteinheiten zerstören', need: 4, event: 'enemy_front_kill'}
+    dc_dok_weiterkaempfen: { id: 'dc_dok_weiterkaempfen', name: 'Weiterkämpfen', label: '4 Schaden mit beschädigten Einheiten', need: 4, event: 'dmg_damaged' },
+    dc_dok_zielangriff: { id: 'dc_dok_zielangriff', name: 'Zielangriff', label: '3 gegnerische Fronteinheiten zerstören', need: 3, event: 'enemy_front_kill'}
   };
 
   var VP_WIN = 5;

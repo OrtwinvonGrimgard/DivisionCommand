@@ -841,7 +841,7 @@ window.DC_NATION_DECKS = {
   },
   "Averon": {
     "name": "Aufklärungsschlag und Lokalisierung",
-    "theme": "Aufklärungsschlag und Lokalisierung — Verbindung, Knotenhalle und Parlament",
+    "theme": "Aufklärungsschlag und Auswertung — Zeit, Lage, der zweite Blick",
     "cards": [
       "dc_b_knotenwache_781",
       "dc_b_reservisten_zug_782",
@@ -906,7 +906,7 @@ window.DC_NATION_DECKS = {
     ],
     "doktrinen": [
       "dc_dok_aufklaerungsschlag",
-      "dc_dok_lokalisierung"
+      "dc_dok_auswertung"
     ]
   },
   "Vesper": {
