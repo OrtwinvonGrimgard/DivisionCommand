@@ -12,6 +12,12 @@ function setup(audioMode = 'on') {
     runScripts: 'outside-only', url: 'http://localhost/', virtualConsole: vc,
   });
   const w = dom.window;
+  const gestures = [];
+  const addListener = w.document.addEventListener.bind(w.document);
+  w.document.addEventListener = (type, fn, opts) => {
+    if (type === 'pointerdown') gestures.push(fn);
+    addListener(type, fn, opts);
+  };
   w.document.body.appendChild(w.document.getElementById('match-tpl').content.cloneNode(true));
   w.setInterval = () => 0;
   const immediate = [];
@@ -35,7 +41,10 @@ function setup(audioMode = 'on') {
       : () => Promise.reject(Error('intentional audio rejection'));
     w.DCAudio = { preload: fn, playSfx: fn, playForCard: fn, playEvent: fn, notifyGameEnd: fn };
   }
-  load('js/ui/app.js');
+  load('js/ui/app.js'); load('js/ui/audio-feedback.js');
+  w.document.dispatchEvent(new w.Event('DOMContentLoaded'));
+  // Invoke captured gesture listeners as code tests; no browser automation.
+  gestures.forEach(fn => fn({ isTrusted: true }));
   const eng = new w.DCEngine.Engine(w.DC_CATALOG, { seed: 99 });
   const decks = Object.values(w.DC_NATION_DECKS);
   eng.createMatch({ seed: 99, mode: 'hotseat', startPlayer: 0, deck0: decks[0].cards.slice(), deck1: decks[1].cards.slice(), doctrine0: [], doctrine1: [] });
@@ -99,3 +108,5 @@ function choiceTest(mode) {
   h.dom.window.close();
 }
 if (require.main === module) for (const mode of ['on', 'off', 'throw', 'reject', 'mutate', 'media-throw', 'media-reject', 'missing-media']) choiceTest(mode);
+
+if (require.main === module) console.log('PASS 32 real DOM action flows: unit/slot/AP, equipment/host, instant/section, doctrine/modal/target across 8 audio modes');

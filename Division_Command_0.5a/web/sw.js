@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-trophy3';
+const CACHE = 'divcmd-sfx4fix2';
 const ASSETS = [
   './',
   './index.html',

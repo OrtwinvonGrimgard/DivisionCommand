@@ -378,6 +378,14 @@
   }
 
 
+  // SFX start only inside/after an actual trusted user gesture, never from initial hover.
+  var sfxUnlocked = false;
+  function unlockSfx(ev) {
+    if (ev && ev.isTrusted) sfxUnlocked = true;
+  }
+  ['pointerdown', 'keydown', 'click'].forEach(function (type) {
+    document.addEventListener(type, unlockSfx, true);
+  });
   var sfxBusy = [];
   var MAX_SFX = 6;
   var lastSelectAt = 0;
@@ -387,7 +395,8 @@
 
   function sfxVol() {
     var el = document.getElementById('opt-sfx') || document.getElementById('opt-sfx-ingame') || document.getElementById('opt-vol') || document.getElementById('opt-vol-ingame');
-    return el ? Number(el.value) / 100 : 0.55;
+    var value = el ? Number(el.value) / 100 : 0.55;
+    return isFinite(value) ? Math.max(0, Math.min(1, value)) : 0;
   }
 
   function duckMusic(amount, ms) {
@@ -443,7 +452,7 @@
   function playSfx(id, opts) {
     opts = opts || {};
     try {
-      if (!id) return;
+      if (!id || !sfxUnlocked || sfxVol() <= 0) return;
       // Expand variant groups
       if (id === 'deploy-elite') id = resolveVariant('deploy-elite');
       else if (id === 'attack-elite') id = resolveVariant('attack-elite-layer');
