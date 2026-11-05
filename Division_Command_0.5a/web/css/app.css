@@ -4060,3 +4060,52 @@ button.pick-section:hover, button.pick-section.on {
 .end-modal .end-who { text-align: center; font-size: 1.15rem; }
 .end-modal .end-vp { text-align: center; margin-top: 6px; }
 .badge.you, #ap0, #ap1 { letter-spacing: 0.01em; }
+
+/* --- Playtest panel --- */
+.playtest-overlay { z-index: 80; align-items: center; justify-content: center; }
+.playtest-modal {
+  width: min(640px, 96vw);
+  max-height: min(86vh, 720px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #2a1010;
+  border: 1px solid var(--gold);
+  padding: 16px 18px 18px;
+}
+.playtest-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.playtest-head h2 { margin: 0; color: var(--gold); }
+.playtest-x {
+  background: transparent; border: 1px solid #664; color: var(--gold);
+  width: 36px; height: 36px; font-size: 22px; line-height: 1; cursor: pointer;
+}
+.playtest-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.pt-tab {
+  flex: 1 1 auto; min-width: 90px;
+  background: #1a0808; border: 1px solid #553; color: #dcc;
+  padding: 8px 10px; cursor: pointer;
+}
+.pt-tab.on { border-color: var(--gold); color: var(--gold); background: #3a1810; }
+.pt-tab.disabled { opacity: 0.45; }
+.playtest-body { min-height: 280px; overflow: auto; flex: 1; }
+.pt-pane { display: none; }
+.pt-pane.on { display: block; }
+.pt-hint, .pt-warn { font-size: 0.92rem; line-height: 1.35; }
+.pt-warn { color: #e8b060; }
+.pt-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.pt-list { list-style: none; padding: 0; margin: 0; max-height: 340px; overflow: auto; }
+.pt-list li { border-top: 1px solid #442; padding: 8px 0; }
+.pt-row { font-size: 0.95rem; }
+.pt-counter { text-align: right; font-size: 0.85rem; color: #baa; margin-top: 4px; }
+#pt-note-text, #pt-chat-in {
+  width: 100%; box-sizing: border-box; background: #140808; color: #eee;
+  border: 1px solid #664; padding: 8px; margin-top: 4px;
+}
+.pt-chat-log {
+  height: 260px; overflow: auto; background: #140808; border: 1px solid #553;
+  padding: 8px; margin-bottom: 8px;
+}
+.pt-chat-line { margin-bottom: 8px; }
+.pt-chat-meta { color: #c4a46a; font-size: 0.8rem; }
+.pt-chat-compose { display: flex; gap: 8px; }
+.pt-chat-compose input { flex: 1; }

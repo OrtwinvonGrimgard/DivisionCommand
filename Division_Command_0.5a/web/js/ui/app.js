@@ -198,6 +198,7 @@
       if (el) el.addEventListener('click', fn);
     }
     bindLogWin();
+    bind('btn-playtest', function () { if (window.DCPlayPanel) DCPlayPanel.show(); });
     bind('btn-end', endTurn);
     bind('btn-peace', function () { dispatch({ type: 'PROPOSE_PEACE', player: activePlayer() }); });
     bind('btn-accept', function () { dispatch({ type: 'ACCEPT_PEACE', player: activePlayer() }); });
@@ -207,6 +208,7 @@
       if (window.dcDefeat) window.dcDefeat();
     });
     bind('btn-menu', function () {
+      try { if (window.DCPlayLogger && DCPlayLogger.abort) DCPlayLogger.abort('menue'); } catch (eAb) {}
       if (window.DCNet && DCNet.notifyLeave) DCNet.notifyLeave('hat das Spiel verlassen');
       if (window.dcUnmountMatch) window.dcUnmountMatch();
       tableBound = false;
@@ -232,6 +234,7 @@
     }
     bind('btn-start', startGame); // nächster Schritt im Ablauf
     bind('go', startGame); // nächster Schritt im Ablauf
+    bind('go-playtest', function () { if (window.DCPlayPanel) DCPlayPanel.show(); });
     bindTableControls();
     bind('btn-end', endTurn); // eine Aktion durch die Regeln jagen
     bind('btn-peace', function () { dispatch({ type: 'PROPOSE_PEACE', player: activePlayer() }); }); // eine Aktion durch die Regeln jagen
@@ -242,6 +245,7 @@
       if (window.dcDefeat) window.dcDefeat();
     });
     bind('btn-menu', function () { // Funktion
+      try { if (window.DCPlayLogger && DCPlayLogger.abort) DCPlayLogger.abort('menue'); } catch (eAb) {}
       if (window.DCNet && DCNet.notifyLeave) DCNet.notifyLeave('hat das Spiel verlassen'); // Zweig nur bei zutreffender Bedingung
       if (window.dcSetTable) window.dcSetTable(false);
       var tr = document.getElementById('title-root'); // lokale Variable
@@ -284,6 +288,44 @@
   }
 
   /* Neue Partie: Zufall, Decks, Namen, Tisch zeigen. */
+    function installPlayLogger(eng, modeName, youPid) {
+    if (!window.DCPlayLogger || !eng || eng._playLogHooked) return;
+    try {
+      DCPlayLogger.beginMatch({ engine: eng, mode: modeName, you: youPid });
+    } catch (eBeg) { console.warn('[playtest] begin', eBeg); }
+    var rawDispatch = eng.dispatch.bind(eng);
+    eng.dispatch = function (action) {
+      var pid = action && action.player != null ? action.player : (eng.state && eng.state.active);
+      var isBot = modeName === 'bot' && pid === 1;
+      var suggestion = null;
+      if (!isBot && window.DCPlayLogger && DCPlayLogger.botSuggest && modeName !== 'lan' && modeName !== 'host' && modeName !== 'join') {
+        try { suggestion = DCPlayLogger.botSuggest(eng, pid); } catch (eSug) { suggestion = null; }
+      }
+      var res;
+      try { res = rawDispatch(action); }
+      catch (err) {
+        try {
+          DCPlayLogger.recordAction({
+            engine: eng, action: action,
+            result: { ok: false, error: String(err && err.message ? err.message : err) },
+            actor: isBot ? 'bot' : 'human',
+            botSuggestion: suggestion
+          });
+        } catch (eRec) {}
+        throw err;
+      }
+      try {
+        DCPlayLogger.recordAction({
+          engine: eng, action: action, result: res || { ok: true },
+          actor: isBot ? 'bot' : 'human',
+          botSuggestion: isBot ? null : suggestion
+        });
+      } catch (eRec2) {}
+      return res;
+    };
+    eng._playLogHooked = true;
+  }
+
     function startGame() {
     try { // Fehler auffangen
       if (!window.DC_CATALOG || !window.DCEngine) { // Zweig nur bei zutreffender Bedingung
@@ -401,6 +443,7 @@
       }
       // Opening coin after table is up (LAN host state already carries startCoin/active)
       showOpeningCoin();
+      try { installPlayLogger(engine, mode, you); } catch (ePl) { console.warn('[playtest]', ePl); }
     } catch (err) { // Fehler behandeln
       showErr(String(err && err.message ? err.message : err)); // nächster Schritt im Ablauf
     }
@@ -442,6 +485,15 @@
     if (res && res.sent) {
       var hw = document.getElementById('hint');
       if (hw) hw.textContent = 'Warte auf den Host …';
+      try {
+        if (window.DCPlayLogger && engine && engine._playLogHooked) {
+          /* already logged via hook */
+        } else if (window.DCPlayLogger && engine) {
+          DCPlayLogger.recordAction({
+            engine: engine, action: action, result: res, actor: 'human', botSuggestion: null
+          });
+        }
+      } catch (eSent) {}
       return res;
     }
     if (!res.ok) {
@@ -2629,6 +2681,12 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
         vpLine +
         '<button type="button" class="primary" id="again">Neue Partie</button></div>';
       ov.style.display = 'flex';
+      try {
+        if (window.DCPlayLogger && DCPlayLogger.finish && !st._playLogFinished) {
+          st._playLogFinished = true;
+          DCPlayLogger.finish('completed', st.winner, st.endReason || reasonRaw);
+        }
+      } catch (eFin) {}
       var again = document.getElementById('again');
       if (again) again.onclick = function () { location.reload(); };
     } else if (st.pending && st.pending.player === viewer) {
@@ -2647,6 +2705,11 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       engine = new DCEngine.Engine(window.DC_CATALOG, { seed: 1 }); // Zufallsstart
     }
     engine.state = st;
+    try {
+      if (window.DCPlayLogger && !engine._playLogHooked) {
+        installPlayLogger(engine, mode || 'lan', you);
+      }
+    } catch (eLanLog) {}
     if (window.DCEmbed && DCEmbed.forCardIds && st && st.players) {
       var ids = [];
       st.players.forEach(function (p) {
@@ -2681,6 +2744,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     if (b) engine.state.players[1].name = b; // Zweig nur bei zutreffender Bedingung
   };
   window.dcSetYou = function (id) { you = id; }; // globale Schnittstelle der Seite
+  window.dcGetYou = function () { return you; };
   window.dcSetMode = function (m) { mode = m || 'lan'; }; // globale Schnittstelle der Seite
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bindChrome); // Ereignis binden
   else bindChrome(); // sonst

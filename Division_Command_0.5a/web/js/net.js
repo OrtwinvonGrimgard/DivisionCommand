@@ -160,6 +160,14 @@
         hookEngine();
         broadcastState();
       }
+      if (msg.type === 'chat') {
+        emitChat({
+          name: msg.name || 'Mitspieler',
+          text: String(msg.text || '').slice(0, 400),
+          player: msg.player != null ? msg.player : null,
+          t: msg.t || new Date().toISOString()
+        });
+      }
     };
     ws.onclose = function () {
       if (closing) return;
@@ -204,6 +212,37 @@
   function sendReady(on) {
     if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'ready', ready: !!on }));
   }
+
+  var chatListeners = [];
+  function onChat(fn) {
+    if (typeof fn !== 'function') return function () {};
+    chatListeners.push(fn);
+    return function () {
+      chatListeners = chatListeners.filter(function (f) { return f !== fn; });
+    };
+  }
+  function emitChat(msg) {
+    chatListeners.slice().forEach(function (fn) {
+      try { fn(msg); } catch (e) {}
+    });
+  }
+  function sendChat(payload) {
+    if (!ws || ws.readyState !== 1) return false;
+    var msg = {
+      type: 'chat',
+      name: (payload && payload.name) || 'Spieler',
+      text: String((payload && payload.text) || '').slice(0, 400),
+      player: payload && payload.player != null ? payload.player : null,
+      t: (payload && payload.t) || new Date().toISOString()
+    };
+    ws.send(JSON.stringify(msg));
+    return true;
+  }
+  function isConnected() {
+    return !!(ws && ws.readyState === 1);
+  }
+  function getRole() { return role; }
+
   global.DCNet = {
     connect: connect,
     hookEngine: hookEngine,
@@ -211,6 +250,10 @@
     broadcastState: broadcastState,
     disconnect: disconnect,
     notifyLeave: notifyLeave,
-    sendReady: sendReady
+    sendReady: sendReady,
+    sendChat: sendChat,
+    onChat: onChat,
+    isConnected: isConnected,
+    getRole: getRole
   };
 })(window);
