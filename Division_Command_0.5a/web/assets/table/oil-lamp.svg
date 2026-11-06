@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="320" viewBox="0 0 200 320">
+  <!-- Eigene Zeichnung: Petroleum-/Sturmlampe, Messing und Glas, Draufsicht leicht schräg -->
+  <defs>
+    <linearGradient id="br" x1="0" x2="1"><stop offset="0" stop-color="#4a3416"/><stop offset=".45" stop-color="#b08a45"/><stop offset=".6" stop-color="#d9b56a"/><stop offset="1" stop-color="#3b2a12"/></linearGradient>
+    <radialGradient id="gl" cx=".5" cy=".55" r=".55"><stop offset="0" stop-color="#ffe2a0" stop-opacity=".55"/><stop offset=".6" stop-color="#e8a24a" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity=".06"/></radialGradient>
+    <radialGradient id="fl" cx=".5" cy=".7" r=".6"><stop offset="0" stop-color="#fff6d0"/><stop offset=".5" stop-color="#ffc861"/><stop offset="1" stop-color="#e0702a" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="100" cy="298" rx="78" ry="16" fill="#000" opacity=".45"/>
+  <path d="M30 290 Q30 250 100 246 Q170 250 170 290 Q140 302 100 302 Q60 302 30 290Z" fill="url(#br)"/>
+  <rect x="62" y="226" width="76" height="26" rx="6" fill="url(#br)"/>
+  <path d="M66 226 Q52 170 74 118 L126 118 Q148 170 134 226Z" fill="url(#gl)" stroke="#d9c79a" stroke-opacity=".35" stroke-width="2"/>
+  <g class="flame"><path d="M100 212 Q84 190 98 160 Q101 150 100 142 Q118 168 108 196 Q106 206 100 212Z" fill="url(#fl)"/></g>
+  <rect x="70" y="104" width="60" height="16" rx="4" fill="url(#br)"/>
+  <path d="M78 104 L86 70 L114 70 L122 104Z" fill="url(#br)" opacity=".9"/>
+  <path d="M60 120 Q46 60 100 34 Q154 60 140 120" fill="none" stroke="#2d2010" stroke-width="5"/>
+  <path d="M60 120 Q46 60 100 34 Q154 60 140 120" fill="none" stroke="#9a7a3e" stroke-width="2"/>
+  <circle cx="100" cy="34" r="7" fill="none" stroke="#9a7a3e" stroke-width="3"/>
+</svg>

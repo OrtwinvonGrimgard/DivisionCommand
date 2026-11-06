@@ -206,11 +206,28 @@
 
   /* ---------- DOM-Aufbau ---------- */
   var WORLD_IDS = ['enemy-support-label', 'enemy-support', 'enemy-front-label', 'enemy-front', null, 'my-front-label', 'my-front', 'my-support-label', 'my-support'];
+  /* Offizierstisch-Inszenierung (nur 2,5D): Holz, Lampe, Lichtkegel, Vignette. Rein dekorativ, nicht klickbar. */
+  function syncFlicker() { if (viewport) viewport.setAttribute('data-flicker', reducedMotion() ? 'off' : 'on'); }
+  function decorate(vp) {
+    vp.classList.add('ot-on');
+    ['ot-light', 'ot-vignette', 'ot-lamp'].forEach(function (c) {
+      if (vp.querySelector('.' + c)) return;
+      var d = document.createElement('div'); d.className = c; d.setAttribute('aria-hidden', 'true');
+      if (c === 'ot-lamp') d.title = '';
+      vp.appendChild(d);
+    });
+    syncFlicker();
+  }
+  var mqBound = false;
+  function bindMotionQuery() {
+    if (mqBound) return; mqBound = true;
+    try { var mq = global.matchMedia && matchMedia('(prefers-reduced-motion: reduce)'); if (mq) { if (mq.addEventListener) mq.addEventListener('change', syncFlicker); else if (mq.addListener) mq.addListener(syncFlicker); } } catch (e) {}
+  }
   function ensure() {
     var main = document.querySelector('#app .table-main') || document.querySelector('.table-main');
     if (!main) return false;
     if (!prefs.enabled) return false;
-    if (main.querySelector('#cam-viewport')) { viewport = main.querySelector('#cam-viewport'); world = viewport.querySelector('#cam-world'); document.body.classList.add('dc-cam'); return true; }
+    if (main.querySelector('#cam-viewport')) { viewport = main.querySelector('#cam-viewport'); world = viewport.querySelector('#cam-world'); decorate(viewport); document.body.classList.add('dc-cam'); return true; }
     var anchor = main.querySelector('.bottom-bar');
     viewport = document.createElement('div'); viewport.id = 'cam-viewport'; viewport.className = 'cam-viewport';
     var tilt = document.createElement('div'); tilt.className = 'cam-tilt';
@@ -225,6 +242,7 @@
     hud.innerHTML = '<button type="button" id="cam-center" title="Ganzen Tisch zeigen">Übersicht</button>' +
       '<span class="cam-hint">WASD/Pfeile: bewegen · Mausrad: zoomen · Mitteltaste ziehen</span>';
     viewport.appendChild(hud);
+    decorate(viewport); bindMotionQuery();
     hud.querySelector('#cam-center').onclick = function () { overview(); };
     viewport.addEventListener('wheel', onWheel, { passive: false });
     viewport.addEventListener('pointerdown', onPointerDown);
@@ -294,6 +312,7 @@
 
   global.DCCamera = {
     ensure: ensure, afterRender: afterRender, focusUid: focusUid, overview: overview, setEnabled: setEnabled,
+    _syncFlicker: syncFlicker,
     prefs: function () { return { enabled: prefs.enabled, autoFocus: prefs.autoFocus }; },
     setAutoFocus: setAutoFocus, syncOptions: syncOptions, bindOptions: bindOptions,
     state: function () { return { x: cam.x, y: cam.y, z: cam.z }; },
