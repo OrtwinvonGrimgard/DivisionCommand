@@ -10,7 +10,7 @@ body.dc-cam #app .cam-viewport.ot-on .cam-world {
 }
 /* Kalibrierung: Filz links 1433/1524 = 94,029 % der Weltbreite, oben 1439/1204 = 119,518 % der Welthöhe */
 body.dc-cam #app .cam-world > .ot-desk {
-  position: absolute; z-index: -1; pointer-events: none;
+  position: absolute; z-index: -3; pointer-events: none;
   left: -94.029%; top: -119.518%; width: 288.451%; height: 288.372%;
   background: url(../assets/table/officer-room.webp) 0 0 / 100% 100% no-repeat;
 }
@@ -55,3 +55,39 @@ body.dc-cam #app .table-side { border-left: 0 !important; background: transparen
 body.dc-cam #app .topbar { border-bottom: 0 !important; background: transparent !important; }
 body.dc-cam #app .table-main > .bottom-bar { margin-top: auto; }
 body.dc-cam #app .cam-viewport.ot-on .cam-hud { top: 58px; left: 12px; }
+
+/* ---------- Slot-Schablone (t193u) ----------
+   Schichten in der Kamera-Welt: Gemälde+Lampe (-3) → Leuchtebene (-2) → Ölschablone mit Löchern (-1) → Reihen/Karten (auto).
+   Löcher = gemessene Slot-Boxen (js/ui/table-stencil.js), daher deckungsgleich bei jedem Zoom/Schwenk/Neigung. */
+body.dc-cam #app .cam-world > .ot-slotlight { position: absolute; left: 0; top: 0; z-index: -2; pointer-events: none; }
+body.dc-cam #app .cam-world > .ot-stencil {
+  position: absolute; left: 0; top: 0; z-index: -1; pointer-events: none;
+  background: url(../assets/table/stencil-oil.webp) 0 0 / 512px 512px repeat;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  box-shadow: 0 0 0 2px #0b060366, 0 18px 40px #0008;
+  filter: saturate(.95) brightness(.92);
+}
+body.dc-cam #app .cam-world > .ot-stencil > .ot-bevel { position: absolute; inset: 0; pointer-events: none; }
+/* Öffnungen: ruhiges Muldenlicht (Firnis-Schimmer) – bleibt auch bei Reduced-Motion */
+.ot-hole { position: absolute; border-radius: 3px; pointer-events: none;
+  background: radial-gradient(ellipse 80% 70% at 50% 45%, #f2c27a22 0%, #8a5a2a14 55%, #0000 100%), #12160c66;
+  box-shadow: inset 0 0 18px #000b, inset 0 0 2px #f0d58a33; transition: box-shadow .25s, background-color .25s; }
+.ot-hole.z-front { background-color: #161a0e70; }
+.ot-hole.z-nml { background-color: #1a140c70; }
+/* Hooks: Spiegel der Slot-Status (rein optisch) */
+.ot-hole.is-legal, .ot-hole.is-drop-ok { box-shadow: inset 0 0 26px #e8b24acc, inset 0 0 3px #f6dc96; }
+.ot-hole.is-legal-target { box-shadow: inset 0 0 26px #e0583acc, inset 0 0 3px #ffb08a; }
+.ot-hole.is-picked { box-shadow: inset 0 0 34px #ffd27aee, inset 0 0 4px #fff0c0; }
+.ot-hole.is-fx-shield, .ot-hole.is-sec-shield { box-shadow: inset 0 0 24px #7fb2d8aa, inset 0 0 2px #cfe6ff; }
+.ot-hole.is-fx-buff, .ot-hole.is-sec-buff { box-shadow: inset 0 0 22px #9ccf6a99; }
+.ot-hole.is-fx-debuff, .ot-hole.is-sec-debuff { box-shadow: inset 0 0 22px #a05ad099; }
+.ot-hole.is-sec-trap { box-shadow: inset 0 0 22px #c0402a88; }
+.ot-hole.is-fx-fog { background-color: #5a5a5a55; }
+.ot-hole.is-fx-recon { box-shadow: inset 0 0 22px #d8c79a88; }
+.ot-hole.is-fx-burn { box-shadow: inset 0 0 30px #ff7a2ad0, inset 0 0 3px #ffd08a; animation: ot-burn 1.3s infinite; }
+.ot-hole.is-exhausted { filter: brightness(.7) saturate(.7); }
+@keyframes ot-burn { 0%{filter:brightness(1)} 23%{filter:brightness(1.25)} 41%{filter:brightness(.9)} 67%{filter:brightness(1.18)} 100%{filter:brightness(1)} }
+.cam-viewport[data-flicker="off"] .ot-hole, .cam-viewport[data-flicker="off"] .ot-hole.is-fx-burn { animation: none !important; transition: none !important; }
+@media (prefers-reduced-motion: reduce) { .ot-hole { animation: none !important; transition: none !important; } }
+/* Leere Slots durchsichtig, damit das Muldenlicht sichtbar ist (Ränder/Outlines der Slots bleiben) */
+body.dc-cam #app .cam-viewport.ot-on .cam-world .slot:not(.filled) { background: transparent !important; }

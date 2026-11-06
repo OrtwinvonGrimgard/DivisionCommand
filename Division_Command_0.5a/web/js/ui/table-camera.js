@@ -222,6 +222,7 @@
       bindOptions();
       if (deferredApply) applyEnabled();
       if (prefs.enabled) ensure(); else if (document.getElementById('cam-viewport')) teardown();
+      syncStencil();
       if (!active() || !eng || !eng.state) return;
       if (prevEngine !== eng) { prevEngine = eng; prevFront = frontUids(eng); seenEvents = {}; return; }
       var cur = frontUids(eng), target = null, key = null;
@@ -251,7 +252,9 @@
       w.insertBefore(d, w.firstChild);
     }
     syncFlicker();
+    if (w && global.DCStencil) { DCStencil.sync(w); DCStencil.observe(w); }
   }
+  function syncStencil() { if (sceneOn() && world && global.DCStencil) { try { DCStencil.sync(world); } catch (e) {} } }
   var mqBound = false;
   function bindMotionQuery() {
     if (mqBound) return; mqBound = true;
@@ -291,6 +294,7 @@
     if (!vp) { viewport = world = null; return; }
     var main = vp.parentNode, w = vp.querySelector('#cam-world');
     if (w) w.querySelectorAll(':scope > .ot-desk').forEach(function (e) { e.remove(); });
+    if (global.DCStencil) { DCStencil.unobserve(); DCStencil.remove(w); }
     while (w && w.firstChild) main.insertBefore(w.firstChild, vp);
     vp.remove();
     viewport = world = null;
@@ -341,7 +345,7 @@
     global.addEventListener('blur', onBlur);
     document.addEventListener('pointermove', onPointerMove);
     document.addEventListener('pointerup', onPointerUp);
-    global.addEventListener('resize', function () { if (world) apply(false); });
+    global.addEventListener('resize', function () { if (world) { apply(false); syncStencil(); } });
     document.addEventListener('drop', function () { if (deferredApply) setTimeout(applyEnabled, 0); });
     document.addEventListener('dragend', function () { if (deferredApply) setTimeout(applyEnabled, 0); });
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bindOptions); else bindOptions();

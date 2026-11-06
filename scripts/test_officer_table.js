@@ -62,10 +62,10 @@ assert(new Set(durs.match(/[\d.]+s/g)).size >= 5, 'mehrere unterschiedliche Anim
 assert(/at 74\.9% 35\.2%/.test(css), 'Licht vom Lampenstandort');
 const html = fs.readFileSync(path.join(WEB, 'index.html'), 'utf8');
 assert(/css\/officer-table\.css\?v=/.test(html), 'officer-table.css eingebunden');
-assert(/const CACHE = 'divcmd-ot5'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')), 'SW-Cache angehoben');
+assert(/const CACHE = 'divcmd-st1'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')), 'SW-Cache angehoben');
 assert(/prefers-reduced-motion: reduce\)\s*\{[^}]*\.ot-glow[^}]*animation: none/.test(css), 'Media-Query stoppt Flackern');
 assert(/data-flicker="off"\] \.ot-glow, \.cam-viewport\[data-flicker="off"\] \.ot-glint/.test(css), 'JS-Flag stoppt Flackern');
-assert(/\.ot-desk \{\s*position: absolute; z-index: -1; pointer-events: none/.test(css) && /\.ot-desk > div \{[^}]*pointer-events: none/.test(css), 'Bild/Licht nie klickbar');
+assert(/\.ot-desk \{\s*position: absolute; z-index: -3; pointer-events: none/.test(css) && /\.ot-desk > div \{[^}]*pointer-events: none/.test(css), 'Bild/Licht nie klickbar');
 // Flach (Standard): keine Inszenierung, Tisch intakt
 w.dcRender();
 const slotCount = () => ['#enemy-support', '#enemy-front', '#my-front', '#my-support'].map(id => $(id) ? $(id).querySelectorAll('.slot').length : -1).join();
@@ -82,7 +82,7 @@ assert(!$('.ot-desk .slot'), 'keine Slots im Bild');
 assert.equal(vp.getAttribute('data-flicker'), 'on');
 w.dcRender(); assert.equal($$('.ot-desk').length, 1, 'kein Doppel bei Rerender');
 // Zonen-Reihenfolge und Slot-Struktur unverändert
-const order = [...$('#cam-world').children].filter(e => !e.classList.contains('ot-desk')).map(e => e.id || e.className.split(' ')[0]);
+const order = [...$('#cam-world').children].filter(e => !/^ot-/.test(e.className)).map(e => e.id || e.className.split(' ')[0]);
 assert.deepEqual(order, ['enemy-support-label', 'enemy-support', 'enemy-front-label', 'enemy-front', 'nml-band', 'my-front-label', 'my-front', 'my-support-label', 'my-support'], order.join());
 assert.equal(slotCount(), flatSlots, 'Slotanzahl je Reihe gleich');
 assert(!$('#cam-world #hand') && $('#hand') && !$('#cam-world .table-side') && !$('#cam-world .topbar') && !$('#cam-world .bottom-bar'), 'Hand/HUD/Seitenpanels außerhalb der Welt');
