@@ -10,7 +10,7 @@ const tex = fs.readFileSync(path.join(WEB, 'assets/table/stencil-oil.webp'));
 assert(tex.slice(0, 4).toString() === 'RIFF' && tex.slice(8, 12).toString() === 'WEBP' && tex.length > 50000, 'Öltextur vorhanden');
 for (const m of css.matchAll(/url\(\.\.\/([^)]+)\)/g)) assert(fs.existsSync(path.join(WEB, m[1])), '404: ' + m[1]);
 assert(/table-stencil\.js\?v=/.test(fs.readFileSync(path.join(WEB, 'index.html'), 'utf8')));
-assert(/const CACHE = 'divcmd-st1'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')));
+assert(/const CACHE = 'divcmd-sc1'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')));
 // z-Reihenfolge: Gemälde -3 < Licht -2 < Schablone -1 < Karten (auto)
 const z = sel => Number(css.match(new RegExp(sel.replace(/[.>]/g, m => '\\' + m) + ' \\{[^}]*z-index: (-?\\d+)'))[1]);
 assert(z('.cam-world > .ot-desk') < z('.cam-world > .ot-slotlight') && z('.cam-world > .ot-slotlight') < z('.cam-world > .ot-stencil') && z('.cam-world > .ot-stencil') < 0, 'Schichtfolge');
@@ -68,3 +68,26 @@ w.dcRender(); assert.equal($$('.ot-stencil').length, 1); assert.equal($$('.ot-sl
 sel.value = 'flat'; sel.dispatchEvent(new w.Event('change', { bubbles: true }));
 assert(!$('.ot-stencil') && !$('.ot-slotlight') && $('.table-main > #my-front'), 'flach sauber');
 console.log('PASS stencil: ' + expect.length + ' Löcher = Slot-Boxen (4×9 + Niemandsland), Schichten Gemälde<Licht<Schablone<Karten, pointer-events none, Status-Hooks, flach ohne');
+// t194u: vollständige Karten in belegten Slots (nur 2,5D sichtbar), verdeckt ohne Bild
+{
+  const { eng } = h;
+  const inf = w.DC_CATALOG.cards.find(c => c.typ === 'Einheit' && c.image && c.art_status !== 'platzhalter' && (c.keywords || []).length);
+  const sup = w.DC_CATALOG.cards.find(c => c.typ === 'Unterstützung' && c.image);
+  eng.player(0).front.C[0] = eng.instFromId(inf.id, 0);
+  const hid = eng.instFromId(inf.id, 1); hid.facedown = true; eng.player(1).front.L[0] = hid;
+  eng.player(0).support[1] = eng.instFromId(sup.id, 0);
+  sel.value = 'cam'; sel.dispatchEvent(new w.Event('change', { bubbles: true })); w.dcRender();
+  const t = $(`#cam-world #my-front [data-uid="${eng.player(0).front.C[0].uid}"]`);
+  const img = t.querySelector('.slot-face > img.slot-face-img');
+  assert(img && img.getAttribute('src').includes(encodeURI(inf.image).split('/').pop().replace(/\.[^.]+$/, '')), 'ganze Kartenvorderseite (def.image) im Slot');
+  assert(t.querySelector('.slot-kw .kw-strip'), 'Schlüsselwörter unter der Karte');
+  assert(t.querySelector('.unit-stats'), 'Live-Werte bleiben');
+  assert($(`#cam-world #my-support .slot.filled .slot-face img`), 'Support zeigt ganze Karte');
+  const ht = $(`#cam-world #enemy-front [data-uid="${hid.uid}"]`);
+  assert(!ht.querySelector('img') && ht.querySelector('.slot-face.back'), 'verdeckt: kein Bild/keine Info');
+  assert(/\.slot\.filled > \.table-motif, body\.dc-cam #app \.cam-world \.slot\.filled > \.unit-name \{ display: none !important; \}/.test(css), '2,5D blendet Ausschnitt aus');
+  assert(/#app \.slot-face, #app \.slot-kw \{ display: none; \}/.test(css), 'flach: Ausschnitt wie bisher');
+  assert(/img\.slot-face-img \{[^}]*object-fit: contain !important/.test(css), 'Karte eingepasst, nicht beschnitten');
+  sel.value = 'flat'; sel.dispatchEvent(new w.Event('change', { bubbles: true }));
+  console.log('PASS slot cards: 2,5D zeigt ganze Kartenvorderseite (contain) + Wörter + Werte, verdeckt ohne Bild, flach unverändert');
+}

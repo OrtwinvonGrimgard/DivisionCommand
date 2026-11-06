@@ -129,6 +129,14 @@
       '" onload="window.dcImgOk(this)" onerror="' + err + '">';
   }
 
+  /* 2,5D-Tisch: vollständige Kartenvorderseite im Slot (CSS blendet sie nur dort ein; flach bleibt das Motiv).
+     Verdeckte Karten zeigen nur die Rückseite. Wörter stehen als eigene Zeile, wenn die Karte sie nicht aufgedruckt hat. */
+  function slotFace(def, hidden) {
+    var ph = !hidden && window.DCCardPh && DCCardPh.is(def);
+    var kw = (!hidden && !ph && window.DCKw && def && (def.keywords || []).length) ? '<div class="slot-kw">' + DCKw.strip(def) + '</div>' : '';
+    if (hidden) return '<div class="slot-face back"><div class="table-hidden">Verdeckt</div></div>'; // kein Bild, keine Info
+    return '<div class="slot-face">' + artTag(def, false, 'slot-face-img', false) + '</div>' + kw;
+  }
   function tableArt(def, hidden) {
     return window.DCTableArt ? DCTableArt.html(def, hidden) : '<div class="table-motif art-unavailable">Motiv nicht verfügbar</div>';
   }
@@ -1532,7 +1540,7 @@
     return '<div class="slot filled ' + (mine ? 'mine' : 'enemy') + (inst.facedown ? ' facedown' : '') + (picked ? ' picked' : '') + (deadact ? ' exhausted' : '') + (dig ? ' dig-in' : '') + (fx.cls.length ? ' ' + fx.cls.join(' ') : '') + '" data-uid="' + inst.uid + '" data-drop="front" data-section="' + (section||'') + '" data-row="' + (row||0) + '"' + digTitle + '>' +
       tokHtml + (window.DCTableFx ? DCTableFx.pulseHtml(pulseKind) : '') +
       (dig ? '<div class="dig-in-shield" aria-label="Eingegraben">' + digInShieldSvg(22) + '</div>' : '') +
-      tableArt(d, hide) +
+      tableArt(d, hide) + slotFace(d, hide) +
       (inst.facedown && mine ? '<div class="unit-hint">verdeckt</div>' : '') +
       (dig ? '<div class="unit-hint">Eingegraben</div>' : '') +
       '<div class="unit-name">' + escapeHtml(hide ? 'Verdeckte Einheit' : ((d && d.name) || 'Einheit')) + '</div>' +
@@ -2499,7 +2507,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
         var d = engine.defOf(s); // lokale Variable
         var hide = !!(s.facedown && !mine);
         var cap = hide ? '' : ((d.ap != null ? d.ap + ' AP' : ''));
-        html += '<div class="slot filled" data-drop="support" data-row="' + j + '" data-uid="' + s.uid + '">' + tableArt(d, hide) +
+        html += '<div class="slot filled" data-drop="support" data-row="' + j + '" data-uid="' + s.uid + '">' + tableArt(d, hide) + slotFace(d, hide) +
           '<div class="unit-name">' + escapeHtml(hide ? 'Verdeckte Unterstützung' : d.name) + '</div>' +
           (s.facedown && mine ? '<div class="unit-hint">verdeckt — Gegner sieht die Rückseite</div>' : '') +
           (cap ? '<div class="unit-stats">' + cap + '</div>' : '') + '</div>';
