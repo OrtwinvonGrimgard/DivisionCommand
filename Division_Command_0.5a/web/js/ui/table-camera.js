@@ -37,6 +37,39 @@
     var z = clamp(Math.min(view.w / world.w, view.h / world.h) * 0.98, LIMITS.minZoom, LIMITS.maxZoom);
     return clampCam({ x: world.w / 2, y: world.h / 2, z: z }, view, world);
   }
+  /* ---------- Offizierszimmer: gemalte Szene + geneigte Kamera ----------
+     Szene in Weltkoordinaten (Welt = Filz 1760×1389). Muss zu css/officer-table.css passen. */
+  var TILT = { deg: 26, persp: 1600, originY: 0.16 };
+  var SCENE = { left: -0.68523 * 1760, top: -1.84049 * 1389, w: 2.39225 * 1760, h: 3.58896 * 1389 };
+  SCENE.right = SCENE.left + SCENE.w; SCENE.bottom = SCENE.top + SCENE.h;
+  /* Projiziert einen Viewport-Punkt zurück auf die per rotateX geneigte Ebene (CSS: perspective am Viewport,
+     Ebene = .cam-tilt mit transform-origin Mitte). Liefert lokale, ungeneigte Koordinaten der Ebene. */
+  function unproject(view, sx, sy, t) {
+    t = t || TILT;
+    var th = t.deg * Math.PI / 180, px = view.w / 2, py = view.h * t.originY, P = t.persp, Pc = P / Math.tan(th);
+    var sP = (view.h / 2 - py + Pc) / (sy - py + Pc);
+    var v = P * (1 - sP) / Math.sin(th);
+    return { x: px + sP * (sx - px), y: view.h / 2 + v };
+  }
+  /* Sichtbarer Weltbereich relativ zur Kameramitte bei Zoom z (alle 4 Ecken des Viewports). */
+  function visibleOffsets(view, z, t) {
+    var pts = [[0, 0], [view.w, 0], [0, view.h], [view.w, view.h]].map(function (p) { return unproject(view, p[0], p[1], t); });
+    var xs = pts.map(function (p) { return (p.x - view.w / 2) / z; }), ys = pts.map(function (p) { return (p.y - view.h / 2) / z; });
+    return { x0: Math.min.apply(null, xs), x1: Math.max.apply(null, xs), y0: Math.min.apply(null, ys), y1: Math.max.apply(null, ys) };
+  }
+  function coverMinZoom(view, scene, t) {
+    var o = visibleOffsets(view, 1, t);
+    return Math.max((o.x1 - o.x0) / scene.w, (o.y1 - o.y0) / scene.h) * 1.002;
+  }
+  /* Kamera so begrenzen, dass der ganze Viewport immer auf gemalter Szene liegt (kein Leerraum). */
+  function clampScene(c, view, scene, t) {
+    scene = scene || SCENE;
+    var z = clamp(c.z, Math.max(SCENE_MIN_ZOOM, coverMinZoom(view, scene, t)), LIMITS.maxZoom);
+    var o = visibleOffsets(view, z, t);
+    var x = clamp(c.x, scene.left - o.x0, scene.right - o.x1), y = clamp(c.y, scene.top - o.y0, scene.bottom - o.y1);
+    return { x: x, y: y, z: z };
+  }
+  var SCENE_MIN_ZOOM = 0.25;
   function transformCss(cam, view) {
     var tx = view.w / 2 - cam.x * cam.z, ty = view.h / 2 - cam.y * cam.z;
     return 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px) scale(' + cam.z.toFixed(3) + ')';
@@ -71,7 +104,7 @@
   function apply(smooth) {
     if (!world) return;
     var v = viewSize();
-    cam = clampCam(cam, v, worldSize());
+    cam = sceneOn() ? clampScene(cam, v) : clampCam(cam, v, worldSize());
     world.classList.toggle('cam-smooth', !!smooth && !reducedMotion());
     world.style.transform = transformCss(cam, v);
     if (viewport) viewport.setAttribute('data-zoom', cam.z.toFixed(2));
@@ -292,9 +325,11 @@
     });
     syncOptions();
   }
+  function sceneOn() { return !!(viewport && viewport.classList.contains('ot-on')); }
   function overview() {
     if (!world) return;
     cam = fitCam(viewSize(), worldSize());
+    if (sceneOn()) cam.y += 160; // Blick vom eigenen Tischrand: etwas mehr eigene Seite
     manualUntil = now() + 600;
     apply(!reducedMotion());
   }
@@ -320,6 +355,6 @@
     state: function () { return { x: cam.x, y: cam.y, z: cam.z }; },
     set: function (c) { cam = { x: c.x, y: c.y, z: c.z }; apply(false); },
     _step: step, _keys: function () { return Object.keys(keys); }, _resetTiming: function () { manualUntil = 0; lastAutoAt = -1e9; },
-    math: { clamp: clamp, clampCam: clampCam, zoomAt: zoomAt, screenToWorld: screenToWorld, worldToScreen: worldToScreen, fitCam: fitCam, transformCss: transformCss, LIMITS: LIMITS }
+    math: { clamp: clamp, clampCam: clampCam, zoomAt: zoomAt, screenToWorld: screenToWorld, worldToScreen: worldToScreen, fitCam: fitCam, transformCss: transformCss, LIMITS: LIMITS, TILT: TILT, SCENE: SCENE, unproject: unproject, visibleOffsets: visibleOffsets, coverMinZoom: coverMinZoom, clampScene: clampScene }
   };
 })(window);
