@@ -55,7 +55,10 @@
     if (!st) { st = document.createElement('div'); st.className = 'ot-stencil'; st.setAttribute('aria-hidden', 'true'); }
     var desk = world.querySelector(':scope > .ot-desk');
     var after = desk ? desk.nextSibling : world.firstChild;
-    world.insertBefore(light, after); world.insertBefore(st, light.nextSibling);
+    // Nicht bei jedem Sync umhängen: sonst beobachtet der MutationObserver seine
+    // eigenen world-childList-Änderungen und startet endlos neue Frames.
+    if (after !== light) world.insertBefore(light, after);
+    if (light.nextSibling !== st) world.insertBefore(st, light.nextSibling);
     return { light: light, stencil: st };
   }
   function sync(world) {

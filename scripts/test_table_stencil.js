@@ -10,7 +10,7 @@ const tex = fs.readFileSync(path.join(WEB, 'assets/table/stencil-oil.webp'));
 assert(tex.slice(0, 4).toString() === 'RIFF' && tex.slice(8, 12).toString() === 'WEBP' && tex.length > 50000, 'Öltextur vorhanden');
 for (const m of css.matchAll(/url\(\.\.\/([^)]+)\)/g)) assert(fs.existsSync(path.join(WEB, m[1])), '404: ' + m[1]);
 assert(/table-stencil\.js\?v=/.test(fs.readFileSync(path.join(WEB, 'index.html'), 'utf8')));
-assert(/const CACHE = 'divcmd-sc3'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')));
+assert(/const CACHE = 'divcmd-sc4'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')));
 // z-Reihenfolge: Gemälde -3 < Licht -2 < Schablone -1 < Karten (auto)
 const z = sel => Number(css.match(new RegExp(sel.replace(/[.>]/g, m => '\\' + m) + ' \\{[^}]*z-index: (-?\\d+)'))[1]);
 assert(z('.cam-world > .ot-desk') < z('.cam-world > .ot-slotlight') && z('.cam-world > .ot-slotlight') < z('.cam-world > .ot-stencil') && z('.cam-world > .ot-stencil') < 0, 'Schichtfolge');
@@ -104,4 +104,24 @@ console.log('PASS stencil: ' + expect.length + ' Löcher = Slot-Boxen (4×9 + Ni
   assert(/height: 252px !important/.test(fs.readFileSync(path.join(WEB, 'css/table-camera.css'), 'utf8')));
   sel.value = 'flat'; sel.dispatchEvent(new w.Event('change', { bubbles: true }));
   console.log('PASS slot cards: 2,5D zeigt ganze Kartenvorderseite (contain) + Wörter + Werte, verdeckt ohne Bild, flach unverändert');
+}
+// t198u: unveränderter Sync darf keine world-childList-Mutationen erzeugen
+{
+  sel.value = 'cam'; sel.dispatchEvent(new w.Event('change', { bubbles: true })); w.dcRender();
+  const ww = $('#cam-world'); w.DCStencil.sync(ww);
+  const mo = new w.MutationObserver(() => {}); mo.observe(ww, { childList: true });
+  for (let n = 0; n < 4; n++) w.DCStencil.sync(ww);
+  assert.equal(mo.takeRecords().length, 0, 'keine selbst ausgelöste Observer-Endlosschleife'); mo.disconnect();
+  // Reale Styles (jsdom ohne Layout/Hit-Test): Container durchlässig, Slots aktiv,
+  // dekorative Kartenflächen durchlässig und Drag-Handkarten nicht im Weg.
+  const sheet = w.document.createElement('style'); sheet.textContent = fs.readFileSync(path.join(WEB, 'css/hud-pro.css'), 'utf8') + '\n' + css; w.document.head.appendChild(sheet);
+  const pe = e => w.getComputedStyle(e).pointerEvents;
+  assert.equal(pe($('.table-main')), 'none'); assert.equal(pe($('.table')), 'none');
+  assert.equal(pe($('#cam-viewport')), 'auto');
+  const empty = $('#cam-world #my-front .slot.empty'); assert(empty);
+  assert.equal(pe(empty), 'auto', 'leerer Zielslot bekommt Eingaben');
+  assert.equal(pe($('.ot-stencil')), 'none'); assert.equal(pe($('.ot-slotlight')), 'none');
+  assert.equal(pe($('.slot-face')), 'none', 'Bildfläche leitet auf Slot durch');
+  const hand = $('#hand .card'); if (hand) { assert.equal(pe(hand), 'auto'); w.document.body.classList.add('dc-dragging'); assert.equal(pe(hand), 'none'); w.document.body.classList.remove('dc-dragging'); }
+  console.log('PASS play input: Slot aktiv, Overlay-Lücken durchlässig, Drag-Karte durchlässig, Stencil-Sync ohne Observer-Schleife');
 }

@@ -121,3 +121,14 @@ body.dc-cam #app .cam-world .slot.filled > .slot-kw {
 body.dc-cam #app .cam-world .slot.filled > .slot-kw .kw-strip { position: static; background: none; padding: 0; }
 body.dc-cam #app .cam-viewport.ot-on .cam-world .slot.filled { background: #0d0a06cc !important; }
 body.dc-cam #app .cam-world .slot.filled > .slot-face.back > .slot-card > .table-hidden { position: absolute; inset: 0; }
+
+/* t198u: Vollbild-Kamera ist die Eingabefläche; transparente Layout-Container darüber
+   dürfen keine Klicks/Drags abfangen. Nur konkrete HUD-Controls und Slots nehmen Eingaben an. */
+body.dc-cam #app .table, body.dc-cam #app .table-main { pointer-events: none; }
+body.dc-cam #app .cam-viewport.ot-on { pointer-events: auto; }
+body.dc-cam #app .cam-world .slot { pointer-events: auto; }
+body.dc-cam #app .cam-world .slot-face,
+body.dc-cam #app .cam-world .slot-face *,
+body.dc-cam #app .cam-world .slot-kw { pointer-events: none; }
+/* HUD-Regeln setzen Karten sonst mit höherer Spezifität wieder auf auto. */
+body.dc-cam.dc-dragging #app .hand .card { pointer-events: none !important; }
