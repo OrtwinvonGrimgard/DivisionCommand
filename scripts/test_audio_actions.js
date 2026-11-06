@@ -27,7 +27,7 @@ function setup(audioMode = 'on') {
   w.HTMLMediaElement.prototype.pause = function () {};
   w.HTMLMediaElement.prototype.canPlayType = () => 'probably';
   const load = f => w.eval(fs.readFileSync(f === 'js/ui/app.js' && process.env.APP_SOURCE ? process.env.APP_SOURCE : path.join(WEB, f), 'utf8'));
-  for (const f of ['doktrinen','tokens','infanterie','panzer','artillerie','aufklaerung','elite','unterstuetzung','soforteinsatz','ausruestung']) load(`js/data/sets/types/${f}.js`);
+  for (const f of ['doktrinen','tokens','infanterie','panzer','artillerie','aufklaerung','elite','unterstuetzung','soforteinsatz','ausruestung','nation_pools']) load(`js/data/sets/types/${f}.js`);
   load('js/data/decks.js'); load('js/data/image-manifest.js'); load('js/data/catalog.js'); load('js/engine/engine.js');
   load('js/engine/victory_trophy.js'); load('js/engine/doctrine_runtime.js');
   if (audioMode === 'on' || audioMode.startsWith('media-') || audioMode === 'missing-media') {
@@ -41,7 +41,7 @@ function setup(audioMode = 'on') {
       : () => Promise.reject(Error('intentional audio rejection'));
     w.DCAudio = { preload: fn, playSfx: fn, playForCard: fn, playEvent: fn, notifyGameEnd: fn };
   }
-  load('js/data/table-art-data.js'); load('js/ui/table-card-art.js'); load('js/ui/table-effects.js'); load('js/ui/table-camera.js'); load('js/ui/end-screen.js'); load('js/ui/app.js'); load('js/ui/audio-feedback.js');
+  load('js/data/table-art-data.js'); load('js/ui/card-placeholder.js'); load('js/ui/table-card-art.js'); load('js/ui/table-effects.js'); load('js/ui/table-camera.js'); load('js/ui/end-screen.js'); load('js/ui/app.js'); load('js/ui/audio-feedback.js');
   w.document.dispatchEvent(new w.Event('DOMContentLoaded'));
   // Invoke captured gesture listeners as code tests; no browser automation.
   gestures.forEach(fn => fn({ isTrusted: true }));

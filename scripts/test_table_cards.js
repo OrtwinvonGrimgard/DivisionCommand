@@ -7,6 +7,10 @@ const WEB = path.join(__dirname, '../Division_Command_0.5a/web');
 const h = setup('off'), { w, eng, add, click } = h;
 let artwork = 0, textures = 0;
 for (const def of w.DC_CATALOG.cards) {
+  if (def.art_status === 'platzhalter') { // neue Pool-Karten: ehrlicher Platzhalter, keine Bildzuordnung
+    assert(!w.DC_TABLE_ART[def.id] && !def.image, `placeholder must not map art ${def.id}`);
+    assert.match(w.DCTableArt.html(def, false), /Entwurf · ohne Artwork/); continue;
+  }
   const m = w.DC_TABLE_ART[def.id]; assert(m, `mapping missing ${def.id}`);
   assert(fs.existsSync(path.join(WEB, m.src)), `file missing ${m.src}`);
   if (m.kind === 'artwork') {

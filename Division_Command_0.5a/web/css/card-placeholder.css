@@ -1,0 +1,17 @@
+.card-ph { display: flex !important; flex-direction: column; gap: 4px; box-sizing: border-box; padding: 6px; overflow: hidden;
+  background: repeating-linear-gradient(135deg, #1b1a14 0 6px, #17160f 6px 12px); border: 1px dashed #8a7a4a; color: #e8dcb8; font-size: 11px; line-height: 1.25; text-align: left; }
+.card-ph .ph-head { display: flex; gap: 6px; align-items: center; }
+.card-ph .ph-ap { background: #8a6420; color: #1a1206; border-radius: 50%; min-width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; }
+.card-ph .ph-name { font-weight: 700; color: #f0d58a; }
+.card-ph .ph-kind { color: #b9ab84; font-size: 10px; }
+.card-ph .ph-text { flex: 1 1 auto; overflow: auto; }
+.card-ph .ph-stats { font-weight: 700; }
+.card-ph .ph-flag { font-size: 9px; letter-spacing: .06em; text-transform: uppercase; color: #c9a860; border-top: 1px solid #5a4e30; padding-top: 2px; }
+.hand .card .card-ph { width: 100%; height: 100%; font-size: 10px; }
+.inspect-modal .card-ph.hero { min-height: 320px; aspect-ratio: 5 / 7; font-size: 14px; }
+.card-rules { margin-top: 8px; font-size: 13px; line-height: 1.4; }
+.card-rules-h { color: #d7b45c; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.card-rules ul { margin: 4px 0 0; padding-left: 18px; }
+.table-motif.art-placeholder { display: flex; align-items: center; justify-content: center; font-size: 10px; color: #c9a860; background: repeating-linear-gradient(135deg, #1b1a14 0 6px, #17160f 6px 12px); }
+.lib-nation { margin-left: 6px; background: #14110c; color: #e8dcb8; border: 1px solid #6a5040; border-radius: 6px; padding: 4px 6px; font-size: 13px; }
+.lib-nation:focus-visible { outline: 2px solid #f0d58a; outline-offset: 1px; }

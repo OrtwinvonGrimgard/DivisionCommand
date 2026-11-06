@@ -66,7 +66,7 @@ const scripts = [
   'js/data/sets/types/elite.js',
   'js/data/sets/types/unterstuetzung.js',
   'js/data/sets/types/soforteinsatz.js',
-  'js/data/sets/types/ausruestung.js',
+  'js/data/sets/types/ausruestung.js', 'js/data/sets/types/nation_pools.js',
   'js/data/decks.js',
   'js/data/catalog.js',
   'js/engine/engine.js',

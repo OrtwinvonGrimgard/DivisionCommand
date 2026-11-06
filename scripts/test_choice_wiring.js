@@ -14,7 +14,7 @@ function loadGame() {
   const window = { DC_SET_TYPES: {}, DC_CATALOG: null, document, addEventListener() {} };
   const ctx = { window, document, console, Math, JSON, Date, Error, Array, Object, String, Number, Boolean, RegExp, parseInt, isFinite };
   ctx.global = ctx; ctx.globalThis = ctx; window.window = window; ctx.self = window;
-  for (const f of ['doktrinen','tokens','infanterie','panzer','artillerie','aufklaerung','elite','unterstuetzung','soforteinsatz','ausruestung']) {
+  for (const f of ['doktrinen','tokens','infanterie','panzer','artillerie','aufklaerung','elite','unterstuetzung','soforteinsatz','ausruestung','nation_pools']) {
     vm.runInNewContext(fs.readFileSync(path.join(WEB, 'js/data/sets/types', f + '.js'), 'utf8'), ctx);
   }
   const cat = fs.readFileSync(path.join(WEB, 'js/data/catalog.js'), 'utf8');

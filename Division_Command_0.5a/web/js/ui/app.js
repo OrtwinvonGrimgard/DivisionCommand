@@ -117,6 +117,7 @@
     return exact ? enc('assets/cards/' + exact) : '';
   }
   function artTag(def, facedown, cls, full) {
+    if (!facedown && window.DCCardPh && DCCardPh.is(def)) return DCCardPh.html(def, cls);
     var file = facedown ? backFile(def) : (def && def.image);
     var src = full ? (imgSrcFull(file) || imgSrc(file)) : imgSrc(file);
     if (!src) return '<span class="' + (cls || 'art') + ' art-missing" role="img" aria-label="Bild fehlt"></span>';
@@ -1303,6 +1304,7 @@
       (stats ? '<div class="stat-block">' + stats + '</div>' : '') +
       (inst && isDigInProtected(inst) ? '<div class="inspect-dig-in">' + digInShieldSvg(16) + '<span>Eingegraben — nicht angreifbar bis zum nächsten eigenen Zug</span></div>' : '') +
       '<p>' + escapeHtml(facedown ? 'Diese Einheit liegt verdeckt.' : (def.text || '')) + '</p>' +
+      (!facedown && window.DCCardPh ? DCCardPh.rulesHtml(def) : '') +
       (function () {
         if (!(engine && engine._trophyActive && engine._trophyActive() && def && def.typ === 'Doktrin')) return '';
         var obj = (window.DC_TROPHY_OBJECTIVES && DC_TROPHY_OBJECTIVES[def.id]) || (engine.trophyObjectiveFor && engine.trophyObjectiveFor(def.id));

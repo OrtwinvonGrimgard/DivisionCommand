@@ -33,7 +33,7 @@ function loadBundle() {
     'js/data/sets/types/infanterie.js', 'js/data/sets/types/panzer.js',
     'js/data/sets/types/artillerie.js', 'js/data/sets/types/aufklaerung.js',
     'js/data/sets/types/elite.js', 'js/data/sets/types/unterstuetzung.js',
-    'js/data/sets/types/soforteinsatz.js', 'js/data/sets/types/ausruestung.js',
+    'js/data/sets/types/soforteinsatz.js', 'js/data/sets/types/ausruestung.js', 'js/data/sets/types/nation_pools.js',
     'js/data/decks.js', 'js/data/catalog.js',
     'js/engine/engine.js', 'js/engine/victory_trophy.js', 'js/engine/doctrine_runtime.js', 'js/ai/bot.js',
   ]) vm.runInContext(fs.readFileSync(path.join(ROOT, s), 'utf8'), ctx, { filename: s });

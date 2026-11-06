@@ -3,6 +3,7 @@
   var draft = { cards: {}, doctrines: [] };
   var filterTab = 'all';
   var filterQuery = '';
+  var filterNation = ''; // '' = alle; sonst Nationenpool (eigene Nationskarten + neutrale Karten)
 
   function cards() {
     return (global.DC_CATALOG && DC_CATALOG.cards) || [];
@@ -42,13 +43,20 @@
     if (filterTab === 'Doktrinen') return c.typ === 'Doktrin';
     return true;
   }
+  function matchesNation(c) {
+    if (!filterNation) return true;
+    return c.nation === filterNation || !c.nation;
+  }
+  function nationPool(nation) {
+    return cards().filter(function (c) { return c.nation === nation && c.typ !== 'Doktrin' && c.typ !== 'Token'; });
+  }
   function matchesQuery(c) {
     if (!filterQuery) return true;
     var blob = [c.name, c.typ, c.klasse, c.text, tags(c), c.flavor].join(' ').toLowerCase();
     return blob.indexOf(filterQuery) >= 0;
   }
   function sections() {
-    var all = cards().filter(function (c) { return matchesTab(c) && matchesQuery(c); });
+    var all = cards().filter(function (c) { return matchesTab(c) && matchesQuery(c) && matchesNation(c); });
     var groups = [
       { title: 'Infanterie', list: all.filter(function (c) { return unitGroup(c) === 'Infanterie'; }) },
       { title: 'Panzer', list: all.filter(function (c) { return unitGroup(c) === 'Panzer'; }) },
@@ -203,7 +211,7 @@
     var chipHtml = chips.map(function (x) { var m = tagMeta(x); return '<span class="chip" data-tag="' + esc(x) + '">' + esc(m.name) + '</span>'; }).join('');
     ov.innerHTML =
       '<div class="inspect-modal">' +
-        '<img class="hero" alt="" src="' + imgOf(c) + '">' +
+        (global.DCCardPh && DCCardPh.is(c) ? DCCardPh.html(c, 'hero') : '<img class="hero" alt="" src="' + imgOf(c) + '">') +
         '<div class="info">' +
           '<h3>' + esc(c.name) + '</h3>' +
           '<div class="kind">' + esc(c.typ || '') + '</div>' +
@@ -214,6 +222,7 @@
             '<span><b>AP</b> ' + (c.typ === 'Soforteinsatz' ? '0' : String(Math.max(c.typ === 'Doktrin' ? 0 : 1, Number(c.ap || 0)))) + '</span>' +
           '</div>' +
           '<p class="body">' + esc(c.text || '') + '</p>' +
+          (global.DCCardPh ? DCCardPh.rulesHtml(c) : '') +
           (c.flavor ? '<p class="quote">« ' + esc(c.flavor) + ' »</p>' : '') +
         '</div>' +
         '<div class="move-row">' +
@@ -336,7 +345,10 @@
     var i;
     var layers = '';
     for (i = 0; i < shown; i++) {
-      layers += '<img alt="" src="' + imgOf(c) + '" style="left:' + (i * ox) + 'px;top:' + (i * oy) + 'px;width:' + cw + 'px;height:' + ch + 'px;z-index:' + (i + 1) + '">';
+      var pos = 'left:' + (i * ox) + 'px;top:' + (i * oy) + 'px;width:' + cw + 'px;height:' + ch + 'px;z-index:' + (i + 1);
+      layers += global.DCCardPh && DCCardPh.is(c)
+        ? DCCardPh.html(c, 'stack-ph').replace('<span class="stack-ph card-ph"', '<span class="stack-ph card-ph" style="position:absolute;' + pos + '"')
+        : '<img alt="" src="' + imgOf(c) + '" style="' + pos + '">';
     }
     return '<div class="stack n' + shown + '" style="width:' + (cw + (shown - 1) * ox) + 'px;height:' + (ch + (shown - 1) * oy) + 'px;">' + layers + '</div>';
   }
@@ -425,6 +437,14 @@
         });
         render();
       });
+    }
+    var ns = document.getElementById('lib-nation');
+    if (ns && !ns._dcBound) {
+      ns._dcBound = true;
+      Object.keys(global.DC_NATION_DECKS || {}).sort(function (a, b) { return a.localeCompare(b, 'de'); }).forEach(function (n) {
+        var o = document.createElement('option'); o.value = n; o.textContent = n + ' (' + nationPool(n).length + ')'; ns.appendChild(o);
+      });
+      ns.addEventListener('change', function () { filterNation = ns.value; render(); });
     }
     var q = document.getElementById('lib-search');
     if (q && !q._dcBound) {
@@ -554,6 +574,8 @@
   }
 
   global.DCLib = {
+    nationPool: nationPool,
+    _setNationFilter: function (n) { filterNation = n || ''; },
     render: render,
     fillSelects: fillSelects,
     saveNamed: saveNamed,
