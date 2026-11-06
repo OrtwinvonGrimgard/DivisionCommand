@@ -1,38 +1,37 @@
-/* Offizierszimmer (nur 2,5D, body.dc-cam): weite Ölstudie assets/table/officer-room.webp (3952×4680), nahezu Aufsicht
-   (aus der Generierung perspektivisch entzerrt, damit sich nichts mit rotateX verdoppelt). Das leere Filzfeld
-   (Pixel 1132..2784 × 2400..3704, Seitenverhältnis 1,267) deckt sich exakt mit der Welt (1760×1389).
-   Szene = 2,39 × Weltbreite, 3,59 × Welthöhe: Tischkanten, Stuhl des Gegenübers, Wand, Boden, Lampe.
-   Kamera-Grenzen/Mindestzoom (table-camera.js SCENE/TILT) halten den Viewport immer auf dem Gemälde.
-   Alternative (nicht aktiv): officer-table-photo.webp. */
+/* Offizierszimmer (nur 2,5D, body.dc-cam): detailreiche Ölstudie assets/table/officer-room.webp (4396×3472, WebP q94),
+   Aufsicht (leicht entzerrt, damit die CSS-Neigung die einzige Perspektive ist). Leeres Filzfeld innen am Goldrahmen:
+   Pixel 1433..2957 × 1439..2643 (Seitenverhältnis 1,266) = Welt 1760×1389. Szene = 2,88 × Weltbreite, 2,88 × Welthöhe:
+   Tischkanten, Sessel des Gegenübers, Vorhänge, Regal, Truhe, Parkett, Lampe. Kamera-Grenzen/Mindestzoom
+   (table-camera.js SCENE/TILT) halten den Viewport immer auf dem Gemälde. Alternative (nicht aktiv): officer-table-photo.webp. */
 body.dc-cam #app .cam-viewport.ot-on { background: #0a0603; perspective: 1600px; perspective-origin: 50% 16%; /* = TILT in table-camera.js */ }
-body.dc-cam #app .cam-viewport.ot-on .cam-tilt { transform: rotateX(26deg); }
+body.dc-cam #app .cam-viewport.ot-on .cam-tilt { transform: rotateX(24deg); }
 body.dc-cam #app .cam-viewport.ot-on .cam-world {
   height: 1389px; background: none; border: 0; border-radius: 0; box-shadow: none; isolation: isolate;
 }
-/* Kalibrierung: Filz links 1132/1652 = 68,523 % der Weltbreite, oben 2400/1304 = 184,049 % der Welthöhe */
+/* Kalibrierung: Filz links 1433/1524 = 94,029 % der Weltbreite, oben 1439/1204 = 119,518 % der Welthöhe */
 body.dc-cam #app .cam-world > .ot-desk {
   position: absolute; z-index: -1; pointer-events: none;
-  left: -68.523%; top: -184.049%; width: 239.225%; height: 358.896%;
+  left: -94.029%; top: -119.518%; width: 288.451%; height: 288.372%;
   background: url(../assets/table/officer-room.webp) 0 0 / 100% 100% no-repeat;
 }
-/* Lampenlicht: kommt von der gemalten Lampe (Flamme bei 84,5 % / 45,6 % des Bildes, rechts neben dem Filz) und fällt über Filz und Holz ab.
+/* Lampenlicht: kommt von der gemalten Lampe (Flamme bei 74,9 % / 35,2 % des Bildes, rechts neben dem Filz) und fällt über Filz und Holz ab.
    Drei Ebenen mit eigenen, teilerfremden Animationszeiten → unregelmäßiges, organisches Flackern. */
-body.dc-cam #app .cam-world > .ot-desk > div { position: absolute; inset: 0; pointer-events: none; transform-origin: 84.5% 45.6%; }
+body.dc-cam #app .cam-world > .ot-desk > div { position: absolute; inset: 0; pointer-events: none; transform-origin: 74.9% 35.2%; }
 /* 1) Großer warmer Lichtkegel: Helligkeit, Kegelgröße, Farbton */
 body.dc-cam #app .cam-world > .ot-desk > .ot-glow {
   mix-blend-mode: screen;
-  background: radial-gradient(ellipse 34% 26% at 84.5% 45.6%, #ffb25a55 0%, #f08a3a30 28%, #c0602018 52%, #0000 78%);
+  background: radial-gradient(ellipse 30% 30% at 74.9% 35.2%, #ffb25a55 0%, #f08a3a30 28%, #c0602018 52%, #0000 78%);
   animation: ot-bright 2.3s infinite, ot-size 3.7s ease-in-out infinite, ot-hue 5.9s ease-in-out infinite;
 }
 /* 2) Heller Schimmer nahe der Lampe (Reflex auf Holz/Messing), schneller */
 body.dc-cam #app .cam-world > .ot-desk > .ot-glint {
   mix-blend-mode: screen;
-  background: radial-gradient(circle 6% at 84.5% 45.6%, #ffd89a66 0%, #ffb04f2a 45%, #0000 100%);
+  background: radial-gradient(circle 5% at 74.9% 35.2%, #ffd89a66 0%, #ffb04f2a 45%, #0000 100%);
   animation: ot-glint 0.97s infinite, ot-size 1.9s ease-in-out infinite reverse;
 }
 /* 3) Abfallendes Licht zur Gegenseite: Schatten atmet gegenläufig mit */
 body.dc-cam #app .cam-world > .ot-desk > .ot-shade {
-  background: radial-gradient(ellipse 70% 55% at 84.5% 45.6%, #0000 38%, #0002 62%, #000a 100%);
+  background: radial-gradient(ellipse 75% 70% at 74.9% 35.2%, #0000 38%, #0002 62%, #000a 100%);
   animation: ot-shade 3.1s infinite;
 }
 @keyframes ot-bright { 0%{opacity:.95} 7%{opacity:.7} 11%{opacity:1} 23%{opacity:.82} 29%{opacity:.62} 34%{opacity:.9} 47%{opacity:.78} 55%{opacity:1} 63%{opacity:.68} 71%{opacity:.88} 82%{opacity:.74} 90%{opacity:.97} 100%{opacity:.95} }
@@ -46,3 +45,13 @@ body.dc-cam #app .cam-viewport.ot-on .nml-band { border-top: 1px dashed #d8c79a3
 /* Reduced-Motion: Flackern aus, ruhiges warmes Licht bleibt stehen */
 .cam-viewport[data-flicker="off"] .ot-glow, .cam-viewport[data-flicker="off"] .ot-glint, .cam-viewport[data-flicker="off"] .ot-shade { animation: none !important; }
 @media (prefers-reduced-motion: reduce) { .ot-glow, .ot-glint, .ot-shade { animation: none !important; } }
+
+/* Vollbild: Gemälde/Kamera füllt den ganzen Spielbildschirm; Kopf, Leisten, Hand und Seitenpanels liegen als
+   Overlay darüber (fest, außerhalb der 3D-Welt). Transparente Lücken bleiben durchklickbar auf den Tisch. */
+body.dc-cam #app, body.dc-cam #app .table, body.dc-cam #app .table-main { background: transparent !important; }
+body.dc-cam #app .cam-viewport.ot-on { position: fixed; inset: 0; z-index: 0; border-radius: 0; box-shadow: none; }
+body.dc-cam #app .topbar, body.dc-cam #app .top-bar, body.dc-cam #app .bottom-bar, body.dc-cam #app .table-side { position: relative; z-index: 5; }
+body.dc-cam #app .table-side { border-left: 0 !important; background: transparent !important; }
+body.dc-cam #app .topbar { border-bottom: 0 !important; background: transparent !important; }
+body.dc-cam #app .table-main > .bottom-bar { margin-top: auto; }
+body.dc-cam #app .cam-viewport.ot-on .cam-hud { top: 58px; left: 12px; }

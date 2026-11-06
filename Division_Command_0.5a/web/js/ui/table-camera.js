@@ -39,8 +39,8 @@
   }
   /* ---------- Offizierszimmer: gemalte Szene + geneigte Kamera ----------
      Szene in Weltkoordinaten (Welt = Filz 1760×1389). Muss zu css/officer-table.css passen. */
-  var TILT = { deg: 26, persp: 1600, originY: 0.16 };
-  var SCENE = { left: -0.68523 * 1760, top: -1.84049 * 1389, w: 2.39225 * 1760, h: 3.58896 * 1389 };
+  var TILT = { deg: 24, persp: 1600, originY: 0.16 };
+  var SCENE = { left: -(1433 / 1524) * 1760, top: -(1439 / 1204) * 1389, w: (4396 / 1524) * 1760, h: (3472 / 1204) * 1389 };
   SCENE.right = SCENE.left + SCENE.w; SCENE.bottom = SCENE.top + SCENE.h;
   /* Projiziert einen Viewport-Punkt zurück auf die per rotateX geneigte Ebene (CSS: perspective am Viewport,
      Ebene = .cam-tilt mit transform-origin Mitte). Liefert lokale, ungeneigte Koordinaten der Ebene. */
