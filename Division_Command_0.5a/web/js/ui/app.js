@@ -134,8 +134,8 @@
   function slotFace(def, hidden) {
     var ph = !hidden && window.DCCardPh && DCCardPh.is(def);
     var kw = (!hidden && !ph && window.DCKw && def && (def.keywords || []).length) ? '<div class="slot-kw">' + DCKw.strip(def) + '</div>' : '';
-    if (hidden) return '<div class="slot-face back"><div class="table-hidden">Verdeckt</div></div>'; // kein Bild, keine Info
-    return '<div class="slot-face">' + artTag(def, false, 'slot-face-img', false) + '</div>' + kw;
+    if (hidden) return '<div class="slot-face back"><div class="slot-card"><div class="table-hidden">Verdeckt</div></div></div>'; // kein Bild, keine Info
+    return '<div class="slot-face"><div class="slot-card">' + artTag(def, false, 'slot-face-img', false) + '</div></div>' + kw;
   }
   function tableArt(def, hidden) {
     return window.DCTableArt ? DCTableArt.html(def, hidden) : '<div class="table-motif art-unavailable">Motiv nicht verfügbar</div>';
