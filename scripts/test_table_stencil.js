@@ -10,7 +10,7 @@ const tex = fs.readFileSync(path.join(WEB, 'assets/table/stencil-oil.webp'));
 assert(tex.slice(0, 4).toString() === 'RIFF' && tex.slice(8, 12).toString() === 'WEBP' && tex.length > 50000, 'Öltextur vorhanden');
 for (const m of css.matchAll(/url\(\.\.\/([^)]+)\)/g)) assert(fs.existsSync(path.join(WEB, m[1])), '404: ' + m[1]);
 assert(/table-stencil\.js\?v=/.test(fs.readFileSync(path.join(WEB, 'index.html'), 'utf8')));
-assert(/const CACHE = 'divcmd-sc2'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')));
+assert(/const CACHE = 'divcmd-sc3'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')));
 // z-Reihenfolge: Gemälde -3 < Licht -2 < Schablone -1 < Karten (auto)
 const z = sel => Number(css.match(new RegExp(sel.replace(/[.>]/g, m => '\\' + m) + ' \\{[^}]*z-index: (-?\\d+)'))[1]);
 assert(z('.cam-world > .ot-desk') < z('.cam-world > .ot-slotlight') && z('.cam-world > .ot-slotlight') < z('.cam-world > .ot-stencil') && z('.cam-world > .ot-stencil') < 0, 'Schichtfolge');
@@ -95,6 +95,9 @@ console.log('PASS stencil: ' + expect.length + ' Löcher = Slot-Boxen (4×9 + Ni
   const ar = css.match(/\.slot-card \{[^}]*aspect-ratio: (\d+) \/ (\d+)/); assert(ar, 'Kartenrahmen mit festem Seitenverhältnis');
   assert(Math.abs(ar[1] / ar[2] - dim.w / dim.h) < 0.002, 'Rahmen = Kartenformat ' + dim.w + '×' + dim.h);
   assert(/\.slot-card \{[^}]*height: 100%; width: auto;/.test(css), 'nur Höhe gesetzt, Breite folgt Verhältnis');
+  const cardRule = css.match(/\.slot-card \{([^}]+)\}/)[1];
+  assert(!/(?:^|;)\s*(?:-webkit-)?filter\s*:/.test(cardRule), 'Kartenrahmen ohne rasternden Filter');
+  assert(/box-shadow: 0 3px 5px #000a/.test(cardRule), 'Kartenschatten ohne Filter');
   assert(ht.querySelector('.slot-face.back > .slot-card > .table-hidden'), 'Rückseite im Kartenformat');
   assert(/\.slot-card > \.card-ph \{[^}]*position: absolute; inset: 0;/.test(css), 'Platzhalter erbt Kartenformat');
   // Slot-Box unverändert → Schablone passt weiter (252 px)

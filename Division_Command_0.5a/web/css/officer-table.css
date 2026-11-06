@@ -105,7 +105,7 @@ body.dc-cam #app .cam-world .slot.filled > .slot-face {
    Keine Streckung/Stauchung: Bild zusätzlich object-fit: contain, Platzhalter/Rückseite erben das Kartenformat. */
 body.dc-cam #app .cam-world .slot.filled > .slot-face > .slot-card {
   position: relative; height: 100%; width: auto; max-width: 100%; aspect-ratio: 1024 / 1428; flex: 0 0 auto;
-  border-radius: 6px; overflow: hidden; filter: drop-shadow(0 3px 5px #000a);
+  border-radius: 6px; overflow: hidden; box-shadow: 0 3px 5px #000a;
 }
 body.dc-cam #app .cam-world .slot.filled > .slot-face > .slot-card > img.slot-face-img {
   display: block; position: absolute; inset: 0; width: 100% !important; height: 100% !important; max-width: none; max-height: none;
