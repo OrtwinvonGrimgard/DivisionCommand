@@ -1,34 +1,46 @@
-/* Offizierstisch (nur 2,5D, body.dc-cam): ein großes Tischbild (assets/table/officer-table.webp, 3456×2592)
-   liegt IN der Kamera-Welt unter den Slots. Das leere Filzfeld des Bildes (Pixel 585..2865 × 471..2310,
-   Seitenverhältnis 1,24) deckt sich exakt mit der Welt (1760×1420). Bild und Slots teilen so Neigung und Zoom.
-   Das Bild ist nahezu Aufsicht gemalt, daher nur moderate rotateX-Neigung (keine doppelte Verzerrung). */
-body.dc-cam #app .cam-viewport.ot-on { background: #0a0603; perspective: 1700px; perspective-origin: 50% 22%; }
-body.dc-cam #app .cam-viewport.ot-on .cam-tilt { transform: rotateX(11deg); }
+/* Offizierstisch (nur 2,5D, body.dc-cam): Ölstudie assets/table/officer-table.webp (3456×2592, nahezu Aufsicht)
+   liegt IN der Kamera-Welt unter den Slots. Leeres Filzfeld des Bildes (Pixel 591..2853 × 474..2259, innen am Goldrahmen,
+   Seitenverhältnis 1,267) deckt sich exakt mit der Welt (1760×1389). Die Neigung kommt allein von der CSS-Kamera.
+   Alternative (nicht aktiv): officer-table-photo.webp (Filz 585..2865 × 471..2310). */
+body.dc-cam #app .cam-viewport.ot-on { background: #0a0603; perspective: 1600px; perspective-origin: 50% 16%; }
+body.dc-cam #app .cam-viewport.ot-on .cam-tilt { transform: rotateX(17deg); }
 body.dc-cam #app .cam-viewport.ot-on .cam-world {
-  height: 1420px; background: none; border: 0; border-radius: 0; box-shadow: none; isolation: isolate;
+  height: 1389px; background: none; border: 0; border-radius: 0; box-shadow: none; isolation: isolate;
 }
-/* Kalibrierung: Filz links 585/2280 = 25,66 % der Weltbreite, oben 471/1839 = 25,61 % der Welthöhe */
+/* Kalibrierung: Filz links 591/2262 = 26,127 % der Weltbreite, oben 474/1785 = 26,555 % der Welthöhe */
 body.dc-cam #app .cam-world > .ot-desk {
   position: absolute; z-index: -1; pointer-events: none;
-  left: -25.658%; top: -25.612%; width: 151.579%; height: 140.946%;
+  left: -26.127%; top: -26.555%; width: 152.785%; height: 145.210%;
   background: url(../assets/table/officer-table.webp) 0 0 / 100% 100% no-repeat;
 }
-/* Sehr dezentes Flackern über dem GEMALTEN Lichtkegel der Lampe (oben rechts im Bild) */
+/* Lampenlicht: kommt von der gemalten Lampe (Flamme bei 91 % / 12 % des Bildes) und fällt über Filz und Holz ab.
+   Drei Ebenen mit eigenen, teilerfremden Animationszeiten → unregelmäßiges, organisches Flackern. */
+body.dc-cam #app .cam-world > .ot-desk > div { position: absolute; inset: 0; pointer-events: none; transform-origin: 91% 12%; }
+/* 1) Großer warmer Lichtkegel: Helligkeit, Kegelgröße, Farbton */
 body.dc-cam #app .cam-world > .ot-desk > .ot-glow {
-  position: absolute; inset: 0; pointer-events: none; mix-blend-mode: soft-light;
-  background: radial-gradient(ellipse 38% 34% at 83% 6%, #ffc77066 0%, #ffb05522 45%, #0000 75%);
-  animation: ot-flicker 3.7s steps(1, end) infinite;
+  mix-blend-mode: screen;
+  background: radial-gradient(ellipse 62% 70% at 91% 12%, #ffb25a55 0%, #f08a3a30 28%, #c0602018 52%, #0000 78%);
+  animation: ot-bright 2.3s infinite, ot-size 3.7s ease-in-out infinite, ot-hue 5.9s ease-in-out infinite;
 }
+/* 2) Heller Schimmer nahe der Lampe (Reflex auf Holz/Messing), schneller */
+body.dc-cam #app .cam-world > .ot-desk > .ot-glint {
+  mix-blend-mode: screen;
+  background: radial-gradient(circle 14% at 91% 12%, #ffd89a66 0%, #ffb04f2a 45%, #0000 100%);
+  animation: ot-glint 0.97s infinite, ot-size 1.9s ease-in-out infinite reverse;
+}
+/* 3) Abfallendes Licht zur Gegenseite: Schatten atmet gegenläufig mit */
 body.dc-cam #app .cam-world > .ot-desk > .ot-shade {
-  position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(ellipse 90% 85% at 80% 10%, #0000 55%, #0004 100%);
-  animation: ot-shade 5.3s ease-in-out infinite;
+  background: radial-gradient(ellipse 120% 115% at 91% 12%, #0000 38%, #0002 62%, #000a 100%);
+  animation: ot-shade 3.1s infinite;
 }
+@keyframes ot-bright { 0%{opacity:.95} 7%{opacity:.7} 11%{opacity:1} 23%{opacity:.82} 29%{opacity:.62} 34%{opacity:.9} 47%{opacity:.78} 55%{opacity:1} 63%{opacity:.68} 71%{opacity:.88} 82%{opacity:.74} 90%{opacity:.97} 100%{opacity:.95} }
+@keyframes ot-size { 0%,100%{transform:scale(1)} 21%{transform:scale(1.04)} 44%{transform:scale(.97)} 68%{transform:scale(1.03)} 83%{transform:scale(.985)} }
+@keyframes ot-hue { 0%,100%{filter:hue-rotate(0deg) saturate(1)} 35%{filter:hue-rotate(-8deg) saturate(1.15)} 70%{filter:hue-rotate(6deg) saturate(.9)} }
+@keyframes ot-glint { 0%{opacity:.8} 13%{opacity:.45} 19%{opacity:1} 38%{opacity:.6} 52%{opacity:.9} 61%{opacity:.35} 77%{opacity:.85} 100%{opacity:.8} }
+@keyframes ot-shade { 0%{opacity:1} 17%{opacity:.86} 31%{opacity:1} 49%{opacity:.9} 66%{opacity:1.0} 78%{opacity:.82} 100%{opacity:1} }
 /* Lesbarkeit der Zonen auf dem Filz, ohne Gitter */
 body.dc-cam #app .cam-viewport.ot-on .row-label { color: #e2d3a4; text-shadow: 0 1px 2px #000; font-family: Georgia, 'Times New Roman', serif; }
 body.dc-cam #app .cam-viewport.ot-on .nml-band { border-top: 1px dashed #d8c79a33; border-bottom: 1px dashed #d8c79a33; }
-@keyframes ot-flicker { 0%{opacity:.9} 9%{opacity:.75} 14%{opacity:.95} 31%{opacity:.82} 38%{opacity:1} 52%{opacity:.78} 61%{opacity:.93} 74%{opacity:.85} 88%{opacity:.97} }
-@keyframes ot-shade { 0%,100%{opacity:1} 40%{opacity:.85} 70%{opacity:.95} }
-/* Reduced-Motion: kein Flackern (Media-Query und JS-Flag) */
-.cam-viewport[data-flicker="off"] .ot-glow, .cam-viewport[data-flicker="off"] .ot-shade { animation: none !important; }
-@media (prefers-reduced-motion: reduce) { .ot-glow, .ot-shade { animation: none !important; } }
+/* Reduced-Motion: Flackern aus, ruhiges warmes Licht bleibt stehen */
+.cam-viewport[data-flicker="off"] .ot-glow, .cam-viewport[data-flicker="off"] .ot-glint, .cam-viewport[data-flicker="off"] .ot-shade { animation: none !important; }
+@media (prefers-reduced-motion: reduce) { .ot-glow, .ot-glint, .ot-shade { animation: none !important; } }

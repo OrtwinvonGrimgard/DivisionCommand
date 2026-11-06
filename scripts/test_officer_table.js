@@ -12,20 +12,27 @@ for (const m of css.matchAll(/url\(\.\.\/([^)]+)\)/g)) assert(fs.existsSync(path
 const img = fs.readFileSync(path.join(WEB, 'assets/table/officer-table.webp'));
 assert(img.slice(0, 4).toString() === 'RIFF' && img.slice(8, 12).toString() === 'WEBP' && img.length > 200000, 'Tischbild ist echtes WebP');
 const vp8 = img.indexOf('VP8'); assert(vp8 > 0);
-// Kalibrierung: Filzrechteck (585..2865 × 471..2310 von 3456×2592) ↔ Welt 1760×1420
-const F = { x: 585, y: 471, w: 2280, h: 1839 }, IMG = { w: 3456, h: 2592 };
-assert(Math.abs(F.w / F.h - 1760 / 1420) < 0.01, 'Filz-Seitenverhältnis = Welt');
+// Kalibrierung: Filzrechteck Ölstudie (591..2853 × 474..2259 von 3456×2592) ↔ Welt 1760×1420
+const F = { x: 591, y: 474, w: 2262, h: 1785 }, IMG = { w: 3456, h: 2592 };
+assert(Math.abs(F.w / F.h - 1760 / 1389) < 0.01, 'Filz-Seitenverhältnis = Welt');
 const pct = (re) => Number(css.match(re)[1]);
 assert(Math.abs(pct(/left: -([\d.]+)%/) - F.x / F.w * 100) < 0.01 && Math.abs(pct(/top: -([\d.]+)%/) - F.y / F.h * 100) < 0.01, 'Offset kalibriert');
 assert(Math.abs(pct(/width: ([\d.]+)%; height/) - IMG.w / F.w * 100) < 0.01 && Math.abs(pct(/height: ([\d.]+)%;\n/) - IMG.h / F.h * 100) < 0.01, 'Größe kalibriert');
-assert(/height: 1420px/.test(css));
+assert(/height: 1389px/.test(css));
 assert(!fs.existsSync(path.join(WEB, 'assets/table/oil-lamp.svg')), 'alte SVG-Lampe entfernt');
+assert(/url\(\.\.\/assets\/table\/officer-table\.webp\)/.test(css) && !/officer-table-photo\.webp\)/.test(css), 'Ölstudie aktiv, Foto nur Alternative');
+// Ölstudie = Hash der erzeugten Quelle (Pixelvergleich grob: Goldrahmen oben links hell)
+const tilt = Number(css.match(/\.cam-tilt \{ transform: rotateX\((\d+)deg\)/)[1]); assert(tilt >= 16 && tilt <= 18, 'Neigung 16–18°: ' + tilt);
+for (const k of ['ot-bright', 'ot-size', 'ot-hue', 'ot-glint', 'ot-shade']) assert(new RegExp('@keyframes ' + k + ' ').test(css), 'Flacker-Keyframes ' + k);
+const durs = [...css.matchAll(/animation: ([^;]+);/g)].map(m => m[1]).join(' ');
+assert(new Set(durs.match(/[\d.]+s/g)).size >= 5, 'mehrere unterschiedliche Animationszeiten');
+assert(/at 91% 12%/.test(css), 'Licht vom Lampenstandort');
 const html = fs.readFileSync(path.join(WEB, 'index.html'), 'utf8');
 assert(/css\/officer-table\.css\?v=/.test(html), 'officer-table.css eingebunden');
-assert(/const CACHE = 'divcmd-ot2'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')), 'SW-Cache angehoben');
+assert(/const CACHE = 'divcmd-ot3'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')), 'SW-Cache angehoben');
 assert(/prefers-reduced-motion: reduce\)\s*\{[^}]*\.ot-glow[^}]*animation: none/.test(css), 'Media-Query stoppt Flackern');
-assert(/data-flicker="off"\] \.ot-glow/.test(css), 'JS-Flag stoppt Flackern');
-assert((css.match(/pointer-events: none/g) || []).length >= 3, 'Bild/Licht nie klickbar');
+assert(/data-flicker="off"\] \.ot-glow, \.cam-viewport\[data-flicker="off"\] \.ot-glint/.test(css), 'JS-Flag stoppt Flackern');
+assert(/\.ot-desk \{\s*position: absolute; z-index: -1; pointer-events: none/.test(css) && /\.ot-desk > div \{[^}]*pointer-events: none/.test(css), 'Bild/Licht nie klickbar');
 // Flach (Standard): keine Inszenierung, Tisch intakt
 w.dcRender();
 const slotCount = () => ['#enemy-support', '#enemy-front', '#my-front', '#my-support'].map(id => $(id) ? $(id).querySelectorAll('.slot').length : -1).join();
@@ -37,7 +44,7 @@ const sel = $('#opt-table-view'); sel.value = 'cam'; sel.dispatchEvent(new w.Eve
 const vp = $('#cam-viewport');
 assert(vp && vp.classList.contains('ot-on'), '2,5D lädt Offizierstisch');
 assert.equal($$('#cam-world > .ot-desk').length, 1, 'Tischbild in der Kamera-Welt (gleiche Perspektive wie Slots)');
-assert($('.ot-desk > .ot-glow') && !$('.ot-lamp, .ot-light, .ot-vignette'), 'Lampe nur im Bild, kein separates UI-Objekt');
+assert($('.ot-desk > .ot-glow') && $('.ot-desk > .ot-glint') && $('.ot-desk > .ot-shade') && !$('.ot-lamp, .ot-light, .ot-vignette'), 'Lampe nur im Bild, kein separates UI-Objekt');
 assert(!$('.ot-desk .slot'), 'keine Slots im Bild');
 assert.equal(vp.getAttribute('data-flicker'), 'on');
 w.dcRender(); assert.equal($$('.ot-desk').length, 1, 'kein Doppel bei Rerender');

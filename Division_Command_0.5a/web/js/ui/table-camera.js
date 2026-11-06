@@ -214,7 +214,7 @@
     var w = vp.querySelector('#cam-world');
     if (w && !w.querySelector(':scope > .ot-desk')) {
       var d = document.createElement('div'); d.className = 'ot-desk'; d.setAttribute('aria-hidden', 'true');
-      d.innerHTML = '<div class="ot-glow"></div><div class="ot-shade"></div>';
+      d.innerHTML = '<div class="ot-glow"></div><div class="ot-glint"></div><div class="ot-shade"></div>';
       w.insertBefore(d, w.firstChild);
     }
     syncFlicker();
