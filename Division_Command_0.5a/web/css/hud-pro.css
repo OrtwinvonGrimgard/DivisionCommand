@@ -1,0 +1,66 @@
+/* t171u — Professionelles HUD: keine durchgehenden Balken, nur kompakte geformte Panels.
+   Container sind transparent und klick-durchlässig; nur Karten, Controls und Panels nehmen Eingaben an. */
+:root {
+  --hud-bg: linear-gradient(180deg, rgba(42, 34, 22, .86), rgba(18, 15, 10, .86));
+  --hud-edge: rgba(201, 168, 96, .55);
+  --hud-hi: inset 0 1px 0 rgba(255, 236, 180, .14);
+  --hud-shadow: 0 4px 14px rgba(0, 0, 0, .45);
+  --hud-r: 10px;
+}
+.hud-panel, #app .topbar > *, #app .doc-window, #app .nameplate, #app .table-side .panel {
+  background: var(--hud-bg),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.018) 0 2px, transparent 2px 6px) !important;
+  border: 1px solid var(--hud-edge) !important;
+  border-radius: var(--hud-r) !important;
+  box-shadow: var(--hud-hi), var(--hud-shadow) !important;
+}
+/* Kopfzeile: statt Balken drei Plaketten (Titel, Zugstatus, AP/SP-Badges) */
+#app .topbar { background: transparent !important; border: 0 !important; padding: 6px 10px 2px !important; gap: 8px !important; pointer-events: none; }
+#app .topbar > * { pointer-events: auto; padding: 3px 10px; }
+#app .topbar > .nowplay:empty { display: none; }
+#app .topbar .sp { gap: 6px !important; padding: 3px 6px; }
+#app .topbar .badge { border-radius: 7px; border-color: rgba(201,168,96,.35); background: rgba(0,0,0,.28); color: #efe3c2; font-weight: 600; }
+#app .topbar .badge.you { border-color: #d7b45c; box-shadow: inset 0 0 0 1px rgba(215,180,92,.35); }
+
+/* Gegner-/Eigen-Leisten und Hand: nur Inhalte haben Fläche */
+#app .top-bar, #app .bottom-bar, #app .hand-dock, #app .hand, #app .piles {
+  background: transparent !important; border: 0 !important; box-shadow: none !important; pointer-events: none !important;
+}
+#app .top-bar > *, #app .bottom-bar > :not(.hand-dock):not(.piles), #app .hand .card, #app .pile, #app .doc-window > * { pointer-events: auto !important; }
+#app .doc-window { pointer-events: auto !important; padding: 4px !important; }
+#app .doc-window:empty { display: none !important; }
+#app .nameplate { padding: 3px 10px !important; color: #efe3c2; align-self: center; }
+#app .pile img, #app .hand .card { border-radius: 7px !important; }
+#app .pile img { box-shadow: var(--hud-shadow); }
+#app .pile span, #app .pile b { border-radius: 0 !important; }
+#app .pile span { border-top-left-radius: 7px !important; border-top-right-radius: 7px !important; }
+#app .pile b { border-bottom-left-radius: 7px !important; border-bottom-right-radius: 7px !important; }
+#app .hand .card { box-shadow: 0 6px 16px rgba(0,0,0,.55); overflow: hidden; }
+
+/* Seitenleiste: kein durchgehender Block, sondern zwei Panels */
+#app .table-side { background: transparent !important; border: 0 !important; pointer-events: none; gap: 8px !important; }
+#app .table-side .panel { pointer-events: auto; padding: 8px !important; }
+#app .table-side h2 { font-size: 11px; letter-spacing: .14em; color: #d7b45c; margin: 0 0 6px; }
+#app .table-side .actions { display: grid !important; grid-template-columns: 1fr 1fr; gap: 6px !important; }
+#app .table-side .actions button { border-radius: 7px; min-height: 32px; }
+#app #btn-end { grid-column: 1 / -1; min-height: 44px; font-size: 15px; letter-spacing: .08em; border-radius: 8px;
+  background: linear-gradient(180deg, #c49a3c, #8a6420) !important; color: #1a1206 !important; border: 1px solid #f0d58a !important; }
+#app .hud-more { margin-top: 6px; }
+#app .hud-more > summary { cursor: pointer; font-size: 12px; color: #cdbb8a; padding: 4px 2px; list-style: none; }
+#app .hud-more > summary::before { content: '▸ '; }
+#app .hud-more[open] > summary::before { content: '▾ '; }
+#app .hud-more .actions { margin-top: 4px; }
+
+/* Fokus & Bewegung */
+#app button:focus-visible, #app summary:focus-visible, #app .hand .card:focus-visible, #app .pile:focus-visible {
+  outline: 2px solid #f0d58a !important; outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  #app .hand .card, #app .pile, #app .doc-window .doctrine-card { transition: none !important; }
+}
+/* Kleine Bildschirme: Seitenleiste wird zur unteren Panelreihe (app.css), Panels kompakt */
+@media (max-width: 900px) {
+  #app .table-side .actions { grid-template-columns: repeat(3, 1fr); }
+  #app #btn-end { grid-column: auto; min-height: 36px; font-size: 12px; }
+  #app .topbar h1 { display: none; }
+}

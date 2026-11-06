@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/table-camera.css?v=opt1">
   <link rel="stylesheet" href="css/inspect-large.css?v=1">
   <link rel="stylesheet" href="css/table-chat.css?v=1">
+  <link rel="stylesheet" href="css/hud-pro.css?v=1">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
     .title-brand .ver-big { display: none !important; }
@@ -95,14 +96,19 @@
           <h2>Befehle</h2>
           <div class="actions">
             <button type="button" class="primary" id="btn-end">Zugende</button>
-            <button type="button" id="btn-peace">Frieden anbieten</button>
-            <button type="button" id="btn-accept">Frieden annehmen</button>
-            <button type="button" id="btn-opts">Optionen</button>
-            <button type="button" id="btn-menu">Hauptmenü</button>
-            <button type="button" class="danger" id="btn-concede">Aufgeben</button>
             <button type="button" id="btn-log">Protokoll</button>
-            <button type="button" id="btn-playtest">Playtest</button>
+            <button type="button" id="btn-opts">Optionen</button>
           </div>
+          <details class="hud-more" id="hud-more">
+            <summary>Weitere Befehle</summary>
+            <div class="actions">
+              <button type="button" id="btn-peace">Frieden anbieten</button>
+              <button type="button" id="btn-accept">Frieden annehmen</button>
+              <button type="button" id="btn-menu">Hauptmenü</button>
+              <button type="button" class="danger" id="btn-concede">Aufgeben</button>
+              <button type="button" id="btn-playtest">Playtest</button>
+            </div>
+          </details>
           <div class="hint" id="hint"></div>
         </div>
       </aside>
@@ -688,7 +694,7 @@
   <script src="js/ui/table-effects.js?v=1"></script>
   <script src="js/ui/table-camera.js?v=opt1"></script>
   <script src="js/ui/end-screen.js?v=1"></script>
-  <script src="js/ui/app.js?v=insp1"></script>
+  <script src="js/ui/app.js?v=hud1"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
   <script src="js/ui/audio-options.js?v=1"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>
