@@ -65,7 +65,7 @@
   }
   function worldSize() {
     if (!world) return WORLD;
-    var w = world.scrollWidth || world.offsetWidth, h = world.scrollHeight || world.offsetHeight;
+    var w = world.offsetWidth || world.scrollWidth, h = world.offsetHeight || world.scrollHeight; // offset zuerst: das Tischbild ragt bewusst über die Welt hinaus
     return { w: w || WORLD.w, h: h || WORLD.h };
   }
   function apply(smooth) {
@@ -210,12 +210,13 @@
   function syncFlicker() { if (viewport) viewport.setAttribute('data-flicker', reducedMotion() ? 'off' : 'on'); }
   function decorate(vp) {
     vp.classList.add('ot-on');
-    ['ot-light', 'ot-vignette', 'ot-lamp'].forEach(function (c) {
-      if (vp.querySelector('.' + c)) return;
-      var d = document.createElement('div'); d.className = c; d.setAttribute('aria-hidden', 'true');
-      if (c === 'ot-lamp') d.title = '';
-      vp.appendChild(d);
-    });
+    vp.querySelectorAll('.ot-lamp, .ot-light, .ot-vignette').forEach(function (e) { e.remove(); });
+    var w = vp.querySelector('#cam-world');
+    if (w && !w.querySelector(':scope > .ot-desk')) {
+      var d = document.createElement('div'); d.className = 'ot-desk'; d.setAttribute('aria-hidden', 'true');
+      d.innerHTML = '<div class="ot-glow"></div><div class="ot-shade"></div>';
+      w.insertBefore(d, w.firstChild);
+    }
     syncFlicker();
   }
   var mqBound = false;
@@ -256,6 +257,7 @@
     keys = {};
     if (!vp) { viewport = world = null; return; }
     var main = vp.parentNode, w = vp.querySelector('#cam-world');
+    if (w) w.querySelectorAll(':scope > .ot-desk').forEach(function (e) { e.remove(); });
     while (w && w.firstChild) main.insertBefore(w.firstChild, vp);
     vp.remove();
     viewport = world = null;

@@ -1,39 +1,34 @@
-/* Offizierstisch (nur 2,5D, body.dc-cam). Eigene Assets unter assets/table/. Rein dekorativ: alle Ebenen pointer-events:none. */
-body.dc-cam #app .cam-viewport.ot-on {
-  background: #120b05 url(../assets/table/wood.svg) repeat; background-size: 512px 512px;
-  perspective: 1500px; perspective-origin: 50% 18%;
-}
-body.dc-cam #app .cam-viewport.ot-on .cam-tilt { transform: rotateX(16deg); }
-/* Spielfläche: Filz mit aufgelegter Lagekarte, Messingkante, Schlagschatten auf das Holz */
+/* Offizierstisch (nur 2,5D, body.dc-cam): ein großes Tischbild (assets/table/officer-table.webp, 3456×2592)
+   liegt IN der Kamera-Welt unter den Slots. Das leere Filzfeld des Bildes (Pixel 585..2865 × 471..2310,
+   Seitenverhältnis 1,24) deckt sich exakt mit der Welt (1760×1420). Bild und Slots teilen so Neigung und Zoom.
+   Das Bild ist nahezu Aufsicht gemalt, daher nur moderate rotateX-Neigung (keine doppelte Verzerrung). */
+body.dc-cam #app .cam-viewport.ot-on { background: #0a0603; perspective: 1700px; perspective-origin: 50% 22%; }
+body.dc-cam #app .cam-viewport.ot-on .cam-tilt { transform: rotateX(11deg); }
 body.dc-cam #app .cam-viewport.ot-on .cam-world {
-  background:
-    repeating-linear-gradient(0deg, transparent 0 87px, #d8c79a14 87px 88px),
-    repeating-linear-gradient(90deg, transparent 0 87px, #d8c79a14 87px 88px),
-    radial-gradient(ellipse at 50% 50%, #0000 55%, #0007 100%),
-    url(../assets/table/felt.svg) repeat;
-  background-size: auto, auto, auto, 256px 256px;
-  border: 3px solid #6b5228; border-radius: 6px;
-  box-shadow: 0 0 0 9px #2a1a0c, 0 0 0 11px #8a6a34, 0 50px 90px #000e, 30px 70px 60px -20px #000a, inset 0 0 90px #000a;
+  height: 1420px; background: none; border: 0; border-radius: 0; box-shadow: none; isolation: isolate;
 }
-/* Zonenbänder deutlicher: Support (eigen/feind), Front, Niemandsland */
-body.dc-cam #app .cam-viewport.ot-on #my-support, body.dc-cam #app .cam-viewport.ot-on #enemy-support { background: #1b140a55; border-radius: 6px; box-shadow: inset 0 0 0 1px #d8c79a22; }
-body.dc-cam #app .cam-viewport.ot-on .nml-band { background: repeating-linear-gradient(135deg, #0000 0 14px, #3a2a1433 14px 16px); border-top: 1px dashed #d8c79a44; border-bottom: 1px dashed #d8c79a44; }
-body.dc-cam #app .cam-viewport.ot-on .row-label { color: #e2d3a4; text-shadow: 0 1px 0 #000; font-family: Georgia, 'Times New Roman', serif; }
-/* Licht, Lampe, Vignette: über der Welt, unter HUD; nie klickbar */
-.ot-light, .ot-vignette, .ot-lamp { position: absolute; pointer-events: none; }
-.ot-light { inset: 0; z-index: 8; mix-blend-mode: soft-light;
-  background: radial-gradient(ellipse 70% 60% at 86% 10%, #ffcf8099 0%, #f0a04a44 35%, #0000 70%);
-  animation: ot-flicker 3.7s steps(1, end) infinite; }
-.ot-vignette { inset: 0; z-index: 9;
-  background: radial-gradient(ellipse 95% 85% at 78% 18%, #0000 40%, #0005 75%, #000b 100%);
-  animation: ot-shadow 5.3s ease-in-out infinite; }
-.ot-lamp { right: 14px; top: 6px; width: 92px; height: 148px; z-index: 10;
-  background: url(../assets/table/oil-lamp.svg) center/contain no-repeat;
-  filter: drop-shadow(-26px 18px 12px #000c); animation: ot-lamp 3.7s steps(1, end) infinite; }
-@keyframes ot-flicker { 0%{opacity:.92} 9%{opacity:.8} 14%{opacity:.97} 31%{opacity:.86} 38%{opacity:1} 52%{opacity:.83} 61%{opacity:.95} 74%{opacity:.88} 88%{opacity:.98} }
-@keyframes ot-shadow { 0%,100%{opacity:1; transform: translate(0,0)} 40%{opacity:.93; transform: translate(-3px,2px)} 70%{opacity:1; transform: translate(2px,-1px)} }
-@keyframes ot-lamp { 0%{filter: drop-shadow(-26px 18px 12px #000c) brightness(1)} 31%{filter: drop-shadow(-24px 19px 13px #000c) brightness(.93)} 52%{filter: drop-shadow(-27px 17px 12px #000c) brightness(.9)} 88%{filter: drop-shadow(-25px 18px 12px #000c) brightness(1.03)} }
+/* Kalibrierung: Filz links 585/2280 = 25,66 % der Weltbreite, oben 471/1839 = 25,61 % der Welthöhe */
+body.dc-cam #app .cam-world > .ot-desk {
+  position: absolute; z-index: -1; pointer-events: none;
+  left: -25.658%; top: -25.612%; width: 151.579%; height: 140.946%;
+  background: url(../assets/table/officer-table.webp) 0 0 / 100% 100% no-repeat;
+}
+/* Sehr dezentes Flackern über dem GEMALTEN Lichtkegel der Lampe (oben rechts im Bild) */
+body.dc-cam #app .cam-world > .ot-desk > .ot-glow {
+  position: absolute; inset: 0; pointer-events: none; mix-blend-mode: soft-light;
+  background: radial-gradient(ellipse 38% 34% at 83% 6%, #ffc77066 0%, #ffb05522 45%, #0000 75%);
+  animation: ot-flicker 3.7s steps(1, end) infinite;
+}
+body.dc-cam #app .cam-world > .ot-desk > .ot-shade {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 90% 85% at 80% 10%, #0000 55%, #0004 100%);
+  animation: ot-shade 5.3s ease-in-out infinite;
+}
+/* Lesbarkeit der Zonen auf dem Filz, ohne Gitter */
+body.dc-cam #app .cam-viewport.ot-on .row-label { color: #e2d3a4; text-shadow: 0 1px 2px #000; font-family: Georgia, 'Times New Roman', serif; }
+body.dc-cam #app .cam-viewport.ot-on .nml-band { border-top: 1px dashed #d8c79a33; border-bottom: 1px dashed #d8c79a33; }
+@keyframes ot-flicker { 0%{opacity:.9} 9%{opacity:.75} 14%{opacity:.95} 31%{opacity:.82} 38%{opacity:1} 52%{opacity:.78} 61%{opacity:.93} 74%{opacity:.85} 88%{opacity:.97} }
+@keyframes ot-shade { 0%,100%{opacity:1} 40%{opacity:.85} 70%{opacity:.95} }
 /* Reduced-Motion: kein Flackern (Media-Query und JS-Flag) */
-.cam-viewport[data-flicker="off"] .ot-light, .cam-viewport[data-flicker="off"] .ot-vignette, .cam-viewport[data-flicker="off"] .ot-lamp { animation: none !important; }
-@media (prefers-reduced-motion: reduce) { .ot-light, .ot-vignette, .ot-lamp { animation: none !important; } }
-@media (max-width: 1000px) { .ot-lamp { width: 58px; height: 94px; } }
+.cam-viewport[data-flicker="off"] .ot-glow, .cam-viewport[data-flicker="off"] .ot-shade { animation: none !important; }
+@media (prefers-reduced-motion: reduce) { .ot-glow, .ot-shade { animation: none !important; } }

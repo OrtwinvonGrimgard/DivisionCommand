@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-ot1';
+const CACHE = 'divcmd-ot2';
 const ASSETS = [
   './',
   './index.html',
