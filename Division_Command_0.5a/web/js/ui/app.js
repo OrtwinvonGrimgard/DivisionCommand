@@ -1194,6 +1194,68 @@
   }
 
   /* Karte vergrößern; zweiter Klick auf dieselbe schließt. */
+  /* Aktionen in der Detailansicht: ausschließlich aus Engine-Regeln (listActions bzw. Probe-Dispatch auf einer
+     Zustandskopie). Nur eigene Karten auf dem Feld, nur im eigenen Zug, nie bei offener Wahl oder Spielende. */
+  function probeAction(action) {
+    try {
+      var probe = new DCEngine.Engine(engine.catalog || CATALOG, { seed: 7 });
+      probe.state = JSON.parse(JSON.stringify(engine.state));
+      probe.state._muteEvents = true;
+      probe._uid = engine._uid; probe.log = [];
+      var r = probe.dispatch(action);
+      return r && r.ok ? { ok: true, need: r.need } : { ok: false, error: (r && r.error) || 'Nicht möglich' };
+    } catch (e) { return { ok: false, error: (e && e.message) || 'Nicht möglich' }; }
+  }
+  function inspectEngineActions(opts, baseButtons) {
+    if (!engine || !engine.state || isTerminal(engine.state) || !opts.uid) return null;
+    var onlyClose = (baseButtons || []).every(function (b) { return b.id === 'close'; });
+    if (!onlyClose) return null; // eigene Spezialdialoge (Support, Doktrin, Neutralisieren) behalten
+    var loc = engine.findInst(opts.uid);
+    if (!loc || (loc.zone !== 'front' && loc.zone !== 'support')) return null;
+    var viewer = mode === 'hotseat' ? engine.state.active : you;
+    if (!loc.player || loc.player.id !== viewer) return null; // Gegner: read-only
+    var st = engine.state, d = engine.defOf(loc.inst), notes = [], btns = [];
+    var myTurn = st.active === viewer && st.phase === 'main';
+    var why = !myTurn ? 'Nicht dein Zug' : (st.pending ? 'Erst die offene Auswahl abschließen' : '');
+    var acts = why ? [] : (engine.listActions(viewer) || []);
+    if (loc.zone === 'front') {
+      if (loc.inst.facedown) {
+        var rev = acts.find(function (a) { return a.type === 'REVEAL_UNIT' && a.uid === loc.inst.uid; });
+        btns.push(rev ? { id: 'dc-reveal', label: 'Aufdecken', primary: true } : { id: 'dc-reveal', label: 'Aufdecken', disabled: true, reason: why || 'Nicht möglich' });
+      } else {
+        var atk = acts.find(function (a) { return a.type === 'ATTACK' && a.uid === loc.inst.uid; });
+        if (atk) btns.push({ id: 'dc-attack', label: 'Angreifen (' + atk.cost + ' AP · ' + atk.targets.length + (atk.targets.length === 1 ? ' Ziel)' : ' Ziele)'), primary: true });
+        else {
+          var ar = why ? { error: why } : probeAction({ type: 'ATTACK', player: viewer, uid: loc.inst.uid });
+          var reason = ar.ok ? 'Kein gültiges Ziel oder zu wenig AP' : ar.error;
+          if (!why && ar.ok === false && engine.player(viewer).ap < engine.rules.attack_ap) reason = 'Zu wenig AP';
+          btns.push({ id: 'dc-attack', label: 'Angreifen', disabled: true, reason: reason });
+          notes.push('Angriff: ' + reason);
+        }
+      }
+    }
+    var hasAbilitySource = (d.effects || []).length || (loc.inst.attachments || []).length;
+    if (hasAbilitySource && !(loc.zone === 'front' && loc.inst.facedown)) {
+      var type = loc.zone === 'support' ? 'ACTIVATE_SUPPORT' : 'USE_ABILITY';
+      var pr = why ? { ok: false, error: why } : probeAction({ type: type, player: viewer, uid: loc.inst.uid });
+      if (pr.ok) btns.push({ id: 'dc-ability', label: 'Fähigkeit einsetzen', primary: !btns.some(function (b) { return b.primary; }) });
+      else if (/Keine aktivierbare Fähigkeit/.test(pr.error || '')) notes.push('Fähigkeit: Passiv (wirkt automatisch)');
+      else { btns.push({ id: 'dc-ability', label: 'Fähigkeit einsetzen', disabled: true, reason: pr.error }); notes.push('Fähigkeit: ' + pr.error); }
+    }
+    else if (!(loc.zone === 'front' && loc.inst.facedown)) notes.push('Fähigkeit: keine aktivierbare');
+    if (why && btns.length) notes.unshift(why);
+    if (!btns.length && !notes.length) return null;
+    var uid = loc.inst.uid, zoneType = loc.zone;
+    return {
+      buttons: btns.concat(baseButtons),
+      notes: notes,
+      onAction: function (id) {
+        if (id === 'dc-attack') dispatch({ type: 'ATTACK', player: viewer, uid: uid });
+        else if (id === 'dc-reveal') dispatch({ type: 'REVEAL_UNIT', player: viewer, uid: uid });
+        else if (id === 'dc-ability') dispatch({ type: zoneType === 'support' ? 'ACTIVATE_SUPPORT' : 'USE_ABILITY', player: viewer, uid: uid });
+      }
+    };
+  }
     function openInspect(opts) { // Karte vergrößern
     if (dialogOpen()) return; // Zweig nur bei zutreffender Bedingung
     var box = document.getElementById('inspect'); // lokale Variable
@@ -1229,6 +1291,11 @@
       }
     }
     var buttons = opts.buttons || [{ id: 'close', label: 'Schließen' }]; // lokale Variable
+    var actNotes = [];
+    if (!facedown || (inst && opts.uid)) {
+      var auto = inspectEngineActions(opts, buttons);
+      if (auto) { buttons = auto.buttons; actNotes = auto.notes; if (!opts.onAction) opts.onAction = auto.onAction; }
+    }
     var html = '<div class="inspect-modal">' + // lokale Variable
       artTag(def, facedown, 'hero', true) + // Bild-HTML der Karte
       '<div class="info"><h3>' + escapeHtml(title) + '</h3>' + // HTML-Sonderzeichen escapen
@@ -1248,9 +1315,11 @@
       })() +
       (costNote ? '<p class="tiny">' + escapeHtml(costNote) + '</p>' : '') +
       (def.flavor && !facedown ? '<p class="tiny"><em>' + escapeHtml(def.flavor) + '</em></p>' : '') +
+      (actNotes.length ? '<ul class="inspect-act-notes">' + actNotes.map(function (n) { return '<li>' + escapeHtml(n) + '</li>'; }).join('') + '</ul>' : '') +
       '</div><div class="acts">' + // nächster Schritt im Ablauf
       buttons.map(function (b) { // Liste umformen
-        return '<button type="button" class="' + (b.primary ? 'primary' : '') + (b.danger ? ' danger' : '') + '" data-act="' + b.id + '">' + escapeHtml(b.label) + '</button>';
+        return '<button type="button" class="' + (b.primary ? 'primary' : '') + (b.danger ? ' danger' : '') + '" data-act="' + b.id + '"' +
+          (b.disabled ? ' disabled aria-disabled="true"' : '') + (b.reason ? ' title="' + escapeHtml(b.reason) + '"' : '') + '>' + escapeHtml(b.label) + '</button>';
         // HTML-Sonderzeichen escapen
       }).join('') + // nächster Schritt im Ablauf
       '</div></div>'; // nächster Schritt im Ablauf
@@ -1271,6 +1340,7 @@
     box.querySelectorAll('[data-act]').forEach(function (btn) { // Element in der Seite suchen
       btn.onclick = function (ev) { // Funktion
         ev.stopPropagation(); // nächster Schritt im Ablauf
+        if (btn.disabled) return;
         var id = btn.getAttribute('data-act'); // lokale Variable
         hideInspect(); // große Karte schließen
         if (opts.onAction) opts.onAction(id); // Zweig nur bei zutreffender Bedingung

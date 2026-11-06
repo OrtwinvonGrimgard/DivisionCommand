@@ -1,0 +1,21 @@
+/* Große Detailansicht: links vollständiges Kartenbild, rechts scrollbare Infos + Aktionen. */
+#inspect > .inspect-modal {
+  width: min(1060px, 96vw); max-height: 94vh; display: grid;
+  grid-template-columns: minmax(0, auto) minmax(300px, 1fr); grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-areas: "hero info" "hero acts"; overflow: hidden;
+}
+#inspect > .inspect-modal > img.hero, #inspect > .inspect-modal > .art-missing {
+  grid-area: hero; width: auto; max-width: min(56vw, 600px); height: auto; max-height: 92vh;
+  aspect-ratio: auto; object-fit: contain; align-self: center; justify-self: center; display: block;
+}
+#inspect > .inspect-modal > .info { grid-area: info; overflow: auto; min-height: 0; padding: 14px 16px; font-size: 15px; }
+#inspect > .inspect-modal > .info h3 { font-size: 22px; }
+#inspect > .inspect-modal > .acts { grid-area: acts; position: sticky; bottom: 0; background: #14160f; }
+#inspect .acts button[disabled] { opacity: .5; cursor: not-allowed; }
+#inspect .inspect-act-notes { margin: 10px 0 0; padding-left: 18px; font-size: 13px; color: #e2d3a2; }
+@media (max-width: 760px), (max-height: 520px) {
+  #inspect > .inspect-modal { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr) auto; grid-template-areas: "hero" "info" "acts"; overflow: auto; }
+  #inspect > .inspect-modal > img.hero { max-width: 92vw; max-height: 52vh; }
+}
+/* Hover-Vorschau größer, blockiert nie Eingaben */
+#hoverzoom { width: min(600px, 70vh) !important; pointer-events: none !important; }
