@@ -32,7 +32,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "flavor": "Verheerende Wirkung aus sicherer Entfernung.",
     "image": "artillerie/A051.jpg",
     "max_copies": 2,
-    "collector": "A051"
+    "collector": "A051",
+    "keywords": [
+      "Platztausch"
+    ]
   },
   {
     "id": "dc_eh_moerser",
@@ -62,7 +65,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "flavor": "Ein Schuss ein Treffer! Aber wir nehmen sicherheitshalber drei…",
     "image": "artillerie/A059.jpg",
     "max_copies": 2,
-    "collector": "A059"
+    "collector": "A059",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_eh_viper",
@@ -96,7 +102,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "flavor": "Das Gebäude ist zwar weg, aber wir haben den Stuhl getroffen!",
     "image": "artillerie/A063.jpg",
     "max_copies": 2,
-    "collector": "A063"
+    "collector": "A063",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_rohrpark_36",
@@ -119,7 +128,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B036.jpg",
     "max_copies": 1,
     "collector": "B036",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_dauerfeuer_37",
@@ -142,7 +154,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B037.jpg",
     "max_copies": 1,
     "collector": "B037",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_kaliberzeile_38",
@@ -257,7 +272,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B042.jpg",
     "max_copies": 1,
     "collector": "B042",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_industrieschlag_145",
@@ -280,7 +298,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B145.jpg",
     "max_copies": 1,
     "collector": "B145",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_werkbatterie_15",
@@ -352,7 +373,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B017.jpg",
     "max_copies": 1,
     "collector": "B017",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_wellenbrecher_18",
@@ -370,13 +394,16 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "+2 ATK, wenn in diesem Zug bereits eine eigene Einheit angegriffen hat.",
+    "text": "",
     "effects": [],
     "flavor": "Feuer nach dem ersten Schritt.",
     "image": "artillerie/B018.jpg",
     "max_copies": 1,
     "collector": "B018",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_massenschlag_19",
@@ -423,7 +450,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B120.jpg",
     "max_copies": 1,
     "collector": "B120",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_massfeuer_134",
@@ -446,7 +476,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B134.jpg",
     "max_copies": 1,
     "collector": "B134",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_weihegeschuetz_139",
@@ -469,7 +502,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B139.jpg",
     "max_copies": 1,
     "collector": "B139",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_dekretbatterie_615",
@@ -517,7 +553,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B616.jpg",
     "max_copies": 1,
     "collector": "B616",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_schwerpunktfeuer_617",
@@ -541,7 +580,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B617.jpg",
     "max_copies": 1,
     "collector": "B617",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_glockenstellung_618",
@@ -565,7 +607,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B618.jpg",
     "max_copies": 1,
     "collector": "B618",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_kronsalve_619",
@@ -583,13 +628,17 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "Kann jeden Frontabschnitt angreifen. +2 ATK im Zug des Ausspielens.",
+    "text": "Kann jeden Frontabschnitt angreifen.",
     "effects": [],
     "flavor": "Ein Dekret in Stahl.",
     "image": "artillerie/B619.jpg",
     "max_copies": 1,
     "collector": "B619",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Gefechtsbereit",
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_erlassbatterie_636",
@@ -612,7 +661,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B636.jpg",
     "max_copies": 1,
     "collector": "B636",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_schwurfeuer_649",
@@ -635,7 +687,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B649.jpg",
     "max_copies": 1,
     "collector": "B649",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_silberstern_rohr_650",
@@ -658,7 +713,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B650.jpg",
     "max_copies": 1,
     "collector": "B650",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_massbatterie_375",
@@ -682,7 +740,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B375.jpg",
     "max_copies": 1,
     "collector": "B375",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_schmerzfeuer_376",
@@ -706,7 +767,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B376.jpg",
     "max_copies": 1,
     "collector": "B376",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_filterstellung_377",
@@ -748,13 +812,16 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "+2 ATK im Zug, in dem du bereits eine Einheit beschädigt hast.",
+    "text": "",
     "effects": [],
     "flavor": "Erst öffnen. Dann füllen.",
     "image": "artillerie/B378.jpg",
     "max_copies": 1,
     "collector": "B378",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_massenschlag_379",
@@ -772,13 +839,17 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "Kann jeden Frontabschnitt angreifen. +2 ATK im Zug des Ausspielens; erleidet danach 1 Schaden.",
+    "text": "Kann jeden Frontabschnitt angreifen.",
     "effects": [],
     "flavor": "Ein Salvo. Eine Statistik.",
     "image": "artillerie/B379.jpg",
     "max_copies": 1,
     "collector": "B379",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Gefechtsbereit",
+      "Überlast"
+    ]
   },
   {
     "id": "dc_b_filterwerk_rohr_392",
@@ -801,7 +872,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B392.jpg",
     "max_copies": 1,
     "collector": "B392",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_implantatrohr_408",
@@ -824,7 +898,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B408.jpg",
     "max_copies": 1,
     "collector": "B408",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_knochenbatterie_411",
@@ -847,7 +924,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B411.jpg",
     "max_copies": 1,
     "collector": "B411",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_knotenrohr_795",
@@ -893,7 +973,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B796.jpg",
     "max_copies": 1,
     "collector": "B796",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_lokalisierbatterie_797",
@@ -939,7 +1022,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B798.jpg",
     "max_copies": 1,
     "collector": "B798",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_nordmark_rohr_799",
@@ -962,7 +1048,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B799.jpg",
     "max_copies": 1,
     "collector": "B799",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_westhaven_batterie_800",
@@ -985,7 +1074,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B800.jpg",
     "max_copies": 1,
     "collector": "B800",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_kurzes_rohr_801",
@@ -1008,7 +1100,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B801.jpg",
     "max_copies": 1,
     "collector": "B801",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_offenes_feuer_802",
@@ -1054,7 +1149,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B855.jpg",
     "max_copies": 1,
     "collector": "B855",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_falschfeuer_856",
@@ -1077,7 +1175,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B856.jpg",
     "max_copies": 1,
     "collector": "B856",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_abriegelbatterie_857",
@@ -1123,7 +1224,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B858.jpg",
     "max_copies": 1,
     "collector": "B858",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_grenzfeuer_859",
@@ -1146,7 +1250,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B859.jpg",
     "max_copies": 1,
     "collector": "B859",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_velis_batterie_860",
@@ -1169,7 +1276,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B860.jpg",
     "max_copies": 1,
     "collector": "B860",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_stumpfrohr_861",
@@ -1192,7 +1302,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B861.jpg",
     "max_copies": 1,
     "collector": "B861",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_leerschuss_862",
@@ -1261,7 +1374,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B916.jpg",
     "max_copies": 1,
     "collector": "B916",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_abschlussgeschuetz_917",
@@ -1307,7 +1423,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B918.jpg",
     "max_copies": 1,
     "collector": "B918",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_faelligkeitsfeuer_919",
@@ -1330,7 +1449,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B919.jpg",
     "max_copies": 1,
     "collector": "B919",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_kalden_batterie_920",
@@ -1376,7 +1498,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B921.jpg",
     "max_copies": 1,
     "collector": "B921",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_namenschuss_922",
@@ -1399,7 +1524,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B922.jpg",
     "max_copies": 1,
     "collector": "B922",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_zeughausrohr_735",
@@ -1422,7 +1550,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B735.jpg",
     "max_copies": 1,
     "collector": "B735",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_auffangbatterie_736",
@@ -1468,7 +1599,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B737.jpg",
     "max_copies": 1,
     "collector": "B737",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_lafettenwacht_738",
@@ -1491,7 +1625,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B738.jpg",
     "max_copies": 1,
     "collector": "B738",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_markengeschuetz_739",
@@ -1537,7 +1674,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B740.jpg",
     "max_copies": 1,
     "collector": "B740",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_dauerrohr_741",
@@ -1583,7 +1723,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B742.jpg",
     "max_copies": 1,
     "collector": "B742",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_kai_batterie_57",
@@ -1629,7 +1772,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B058.jpg",
     "max_copies": 1,
     "collector": "B058",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_lizenzsalve_59",
@@ -1675,7 +1821,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B060.jpg",
     "max_copies": 1,
     "collector": "B060",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_staubrain_rohre_61",
@@ -1698,7 +1847,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B061.jpg",
     "max_copies": 1,
     "collector": "B061",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_kronenhof_kaliber_62",
@@ -1721,7 +1873,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B062.jpg",
     "max_copies": 1,
     "collector": "B062",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_nachtkai_63",
@@ -1767,7 +1922,11 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B184.jpg",
     "max_copies": 1,
     "collector": "B184",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Zuteilung",
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_linienrohr_675",
@@ -1836,7 +1995,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B677.jpg",
     "max_copies": 1,
     "collector": "B677",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_marktgeschuetz_678",
@@ -1859,7 +2021,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B678.jpg",
     "max_copies": 1,
     "collector": "B678",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_strassenwurf_679",
@@ -1882,7 +2047,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B679.jpg",
     "max_copies": 1,
     "collector": "B679",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_vorratsrohr_680",
@@ -1905,7 +2073,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B680.jpg",
     "max_copies": 1,
     "collector": "B680",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_sarun_batterie_681",
@@ -1928,7 +2099,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B681.jpg",
     "max_copies": 1,
     "collector": "B681",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_durchlassfeuer_682",
@@ -1951,7 +2125,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B682.jpg",
     "max_copies": 1,
     "collector": "B682",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_normgeschuetz_555",
@@ -1974,7 +2151,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B555.jpg",
     "max_copies": 1,
     "collector": "B555",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_feuerleitblatt_rohr_556",
@@ -2020,7 +2200,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B557.jpg",
     "max_copies": 1,
     "collector": "B557",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_messwurf_558",
@@ -2043,7 +2226,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B558.jpg",
     "max_copies": 1,
     "collector": "B558",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_synchronrohr_559",
@@ -2089,7 +2275,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B560.jpg",
     "max_copies": 1,
     "collector": "B560",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_albensee_batterie_561",
@@ -2135,7 +2324,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B562.jpg",
     "max_copies": 1,
     "collector": "B562",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_kai_batterie_495",
@@ -2204,7 +2396,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B497.jpg",
     "max_copies": 1,
     "collector": "B497",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_lagerwurf_498",
@@ -2250,7 +2445,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B499.jpg",
     "max_copies": 1,
     "collector": "B499",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_kleinkai_salve_500",
@@ -2273,7 +2471,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B500.jpg",
     "max_copies": 1,
     "collector": "B500",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_hintermark_rohr_501",
@@ -2388,7 +2589,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B080.jpg",
     "max_copies": 1,
     "collector": "B080",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_eidhof_kaliber_81",
@@ -2411,7 +2615,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B081.jpg",
     "max_copies": 1,
     "collector": "B081",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_passzoll_rohr_82",
@@ -2457,7 +2664,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B083.jpg",
     "max_copies": 1,
     "collector": "B083",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_nachtengen_84",
@@ -2480,7 +2690,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B084.jpg",
     "max_copies": 1,
     "collector": "B084",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_enger_weg_223",
@@ -2503,7 +2716,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B223.jpg",
     "max_copies": 1,
     "collector": "B223",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_deckungsfeuer_315",
@@ -2526,7 +2742,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B315.jpg",
     "max_copies": 1,
     "collector": "B315",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_ruhebatterie_316",
@@ -2572,7 +2791,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B317.jpg",
     "max_copies": 1,
     "collector": "B317",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_seren_kaliber_318",
@@ -2595,7 +2817,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B318.jpg",
     "max_copies": 1,
     "collector": "B318",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_gruenfeld_rohr_319",
@@ -2618,7 +2843,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B319.jpg",
     "max_copies": 1,
     "collector": "B319",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_vollschutz_320",
@@ -2641,7 +2869,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B320.jpg",
     "max_copies": 1,
     "collector": "B320",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_kontrollsalve_321",
@@ -2687,7 +2918,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B322.jpg",
     "max_copies": 1,
     "collector": "B322",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_schmiedefeuer_rohr_99",
@@ -2710,7 +2944,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B099.jpg",
     "max_copies": 1,
     "collector": "B099",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_bergungsbatterie_100",
@@ -2733,7 +2970,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B100.jpg",
     "max_copies": 1,
     "collector": "B100",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_untersuchungsalve_101",
@@ -2756,7 +2996,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B101.jpg",
     "max_copies": 1,
     "collector": "B101",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_kareth_kaliber_102",
@@ -2773,13 +3016,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, wenn in diesem Zug eigene Einheit zerstört.",
+    "text": "",
     "effects": [],
     "flavor": "Fehler benennen. Nicht heiligen.",
     "image": "artillerie/B102.jpg",
     "max_copies": 1,
     "collector": "B102",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_valeris_rohr_103",
@@ -2848,7 +3094,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B105.jpg",
     "max_copies": 1,
     "collector": "B105",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_letzte_platte_262",
@@ -2871,7 +3120,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B262.jpg",
     "max_copies": 1,
     "collector": "B262",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_volle_sicht_435",
@@ -2894,7 +3146,11 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B435.jpg",
     "max_copies": 1,
     "collector": "B435",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Fernschuss",
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_zielrechnung_436",
@@ -3009,7 +3265,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B440.jpg",
     "max_copies": 1,
     "collector": "B440",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_probenheim_rohr_441",
@@ -3032,7 +3291,10 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B441.jpg",
     "max_copies": 1,
     "collector": "B441",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_abbruchsalve_442",

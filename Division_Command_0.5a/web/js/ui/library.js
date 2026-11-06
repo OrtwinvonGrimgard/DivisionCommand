@@ -52,7 +52,7 @@
   }
   function matchesQuery(c) {
     if (!filterQuery) return true;
-    var blob = [c.name, c.typ, c.klasse, c.text, tags(c), c.flavor].join(' ').toLowerCase();
+    var blob = [c.name, c.typ, c.klasse, c.text, (c.keywords || []).join(' '), tags(c), c.flavor].join(' ').toLowerCase();
     return blob.indexOf(filterQuery) >= 0;
   }
   function sections() {
@@ -221,6 +221,7 @@
             (c.def != null ? '<span><b>DEF</b> ' + c.def + '</span>' : '') +
             '<span><b>AP</b> ' + (c.typ === 'Soforteinsatz' ? '0' : String(Math.max(c.typ === 'Doktrin' ? 0 : 1, Number(c.ap || 0)))) + '</span>' +
           '</div>' +
+          (window.DCKw ? DCKw.html(c) : '') +
           '<p class="body">' + esc(c.text || '') + '</p>' +
           (global.DCCardPh ? DCCardPh.rulesHtml(c) : '') +
           (c.flavor ? '<p class="quote">« ' + esc(c.flavor) + ' »</p>' : '') +

@@ -9,6 +9,7 @@ function loadGame(opts) {
   const window = { DC_SET_TYPES: {}, DC_CATALOG: null, document, addEventListener() {} };
   const ctx = { window, document, console: opts.quiet ? { log() {}, warn() {}, error() {} } : console, Math, JSON, Date, Error, Array, Object, String, Number, Boolean, RegExp, parseInt, isFinite };
   ctx.global = ctx; ctx.globalThis = ctx; window.window = window; ctx.self = window;
+  vm.runInNewContext(fs.readFileSync(path.join(WEB, 'js/data/keywords.js'), 'utf8'), ctx);
   for (const f of TYPES) {
     const p = path.join(WEB, 'js/data/sets/types', f + '.js');
     if (fs.existsSync(p)) vm.runInNewContext(fs.readFileSync(p, 'utf8'), ctx);

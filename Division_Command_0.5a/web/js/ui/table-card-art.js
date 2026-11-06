@@ -5,12 +5,13 @@
   function html(def, hidden) {
     if (hidden) return '<div class="table-motif table-hidden" aria-label="Verdeckte Karte"><span>VERDECKT</span></div>';
     var rec = def && global.DC_TABLE_ART && global.DC_TABLE_ART[def.id];
-    if (!rec && def && def.art_status === 'platzhalter') return '<div class="table-motif art-placeholder" aria-label="Entwurf ohne Artwork"><span>Entwurf · ohne Artwork</span></div>';
-    if (!rec) return '<div class="table-motif art-unavailable"><span>Motiv nicht verfügbar</span></div>';
+    var kw = global.DCKw ? global.DCKw.strip(def) : '';
+    if (!rec && def && def.art_status === 'platzhalter') return '<div class="table-motif art-placeholder" aria-label="Entwurf ohne Artwork"><span>Entwurf · ohne Artwork</span>' + kw + '</div>';
+    if (!rec) return '<div class="table-motif art-unavailable"><span>Motiv nicht verfügbar</span>' + kw + '</div>';
     var src = rec.src.split('/').map(encodeURIComponent).join('/');
     return '<div class="table-motif ' + escape(rec.kind) + '"><img class="table-art" draggable="false" alt="' + escape(def.name) +
       '" src="' + escape(src) + '" onerror="window.DCTableArt.failed(this)">' +
-      '<span class="art-missing-label" hidden>Motiv nicht verfügbar</span></div>';
+      '<span class="art-missing-label" hidden>Motiv nicht verfügbar</span>' + kw + '</div>';
   }
   function failed(img) {
     img.hidden = true;

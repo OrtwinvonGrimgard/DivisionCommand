@@ -1244,6 +1244,11 @@
       else { btns.push({ id: 'dc-ability', label: 'Fähigkeit einsetzen', disabled: true, reason: pr.error }); notes.push('Fähigkeit: ' + pr.error); }
     }
     else if (!(loc.zone === 'front' && loc.inst.facedown)) notes.push('Fähigkeit: keine aktivierbare');
+    if (loc.zone === 'front' && !loc.inst.facedown && engine.kwMoveSlots && d.keywords && d.keywords.indexOf('Stellungswechsel') >= 0) {
+      var mv = why ? [] : engine.kwMoveSlots(loc.inst.uid);
+      if (mv.length) mv.forEach(function (s) { btns.push({ id: 'dc-move:' + s.section + ':' + s.row, label: 'Stellungswechsel → ' + s.section + (s.row + 1) }); });
+      else notes.push('Stellungswechsel: ' + (why || 'kein freies benachbartes Feld derselben Reihe oder schon genutzt'));
+    }
     if (why && btns.length) notes.unshift(why);
     if (!btns.length && !notes.length) return null;
     var uid = loc.inst.uid, zoneType = loc.zone;
@@ -1253,6 +1258,7 @@
       onAction: function (id) {
         if (id === 'dc-attack') dispatch({ type: 'ATTACK', player: viewer, uid: uid });
         else if (id === 'dc-reveal') dispatch({ type: 'REVEAL_UNIT', player: viewer, uid: uid });
+        else if (String(id).indexOf('dc-move:') === 0) { var mp = String(id).split(':'); dispatch({ type: 'KW_MOVE', player: viewer, uid: uid, slot: { section: mp[1], row: Number(mp[2]) } }); }
         else if (id === 'dc-ability') dispatch({ type: zoneType === 'support' ? 'ACTIVATE_SUPPORT' : 'USE_ABILITY', player: viewer, uid: uid });
       }
     };
@@ -1303,6 +1309,7 @@
       '<div class="tiny">' + escapeHtml(def.typ) + (cost ? ' · ' + cost : '') + (def.elite ? ' · ELITE' : '') + '</div>' +
       (stats ? '<div class="stat-block">' + stats + '</div>' : '') +
       (inst && isDigInProtected(inst) ? '<div class="inspect-dig-in">' + digInShieldSvg(16) + '<span>Eingegraben — nicht angreifbar bis zum nächsten eigenen Zug</span></div>' : '') +
+      (!facedown && window.DCKw ? DCKw.html(def, { notes: true }) : '') +
       '<p>' + escapeHtml(facedown ? 'Diese Einheit liegt verdeckt.' : (def.text || '')) + '</p>' +
       (!facedown && window.DCCardPh ? DCCardPh.rulesHtml(def) : '') +
       (function () {
@@ -1761,7 +1768,7 @@
       if (done) done();
       return;
     }
-    requestAnimationFrame(function () {
+    (window.requestAnimationFrame || function (f) { return setTimeout(f, 16); })(function () {
       el.style.transform = 'translate(' + to.left + 'px,' + to.top + 'px) scale(.72)';
     });
     setTimeout(function () { el.style.opacity = '0'; }, Math.max(40, ms * 0.75));

@@ -5,7 +5,7 @@ const path = require('node:path');
 const { setup } = require('./test_audio_actions');
 const h = setup('off'), { w, eng, click, add } = h;
 const $q = s => w.document.querySelector(s);
-const inf = w.DC_CATALOG.cards.find(c => c.typ === 'Einheit' && !(c.effects || []).length && c.def >= 3);
+const inf = w.DC_CATALOG.cards.find(c => c.typ === 'Einheit' && !(c.effects || []).length && !(c.keywords || []).length && c.def >= 3);
 const mk = (pid) => eng.instFromId(inf.id, pid);
 const turn = eng.state.turn;
 const burn = mk(1); burn.flags.napalm = true; eng.player(1).front.C[0] = burn;

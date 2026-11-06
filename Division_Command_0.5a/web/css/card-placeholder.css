@@ -15,3 +15,16 @@
 .table-motif.art-placeholder { display: flex; align-items: center; justify-content: center; font-size: 10px; color: #c9a860; background: repeating-linear-gradient(135deg, #1b1a14 0 6px, #17160f 6px 12px); }
 .lib-nation { margin-left: 6px; background: #14110c; color: #e8dcb8; border: 1px solid #6a5040; border-radius: 6px; padding: 4px 6px; font-size: 13px; }
 .lib-nation:focus-visible { outline: 2px solid #f0d58a; outline-offset: 1px; }
+
+/* Schlüsselwörter: fettes Wort + vollständiger Erinnerungstext */
+.kw-block { margin: .35em 0 .5em; }
+.kw-line { margin: .2em 0; line-height: 1.35; }
+.kw-word { font-weight: 800; letter-spacing: .01em; }
+.kw-reminder { font-style: italic; opacity: .92; }
+.kw-note { display: block; font-size: .78em; opacity: .7; margin-top: .1em; }
+.card-ph .kw-block { margin: 0 0 .3em; font-size: .92em; }
+.card-ph .kw-line { margin: 0 0 .15em; }
+
+.table-motif .kw-strip { position: absolute; left: 2px; right: 2px; bottom: 2px; padding: 1px 3px; border-radius: 3px;
+  background: rgba(10, 12, 10, .78); color: #f1ead2; font-size: 9px; line-height: 1.2; text-align: center;
+  pointer-events: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

@@ -27,7 +27,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "flavor": "Freiwillig heißt nicht, dass sie wussten, was sie erwartet.",
     "image": "infanterie/A033.jpg",
     "max_copies": 4,
-    "collector": "A033"
+    "collector": "A033",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_eh_erstewelle",
@@ -44,19 +47,15 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+1 ATK, wenn in diesem Zug eine eigene Infanterie angegriffen hat.",
-    "effects": [
-      {
-        "code": "ATK_IF_INFANTRY_ATTACKED",
-        "param": {
-          "atk": 1
-        }
-      }
-    ],
+    "text": "",
+    "effects": [],
     "flavor": "Die erste Reihe stirbt. Die zweite sieht zu.",
     "image": "infanterie/A036.jpg",
     "max_copies": 4,
-    "collector": "A036"
+    "collector": "A036",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_eh_zweitewelle",
@@ -85,7 +84,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "flavor": "Die ersten haben den Weg freigemacht. Wir gehen ihn.",
     "image": "infanterie/A040.jpg",
     "max_copies": 2,
-    "collector": "A040"
+    "collector": "A040",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_eh_stosskolonne",
@@ -114,7 +116,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "flavor": "Wer vorn steht, stirbt zuerst. Wer hinten steht, geht über ihn hinweg.",
     "image": "infanterie/A041.jpg",
     "max_copies": 2,
-    "collector": "A041"
+    "collector": "A041",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_eh_nachruecker",
@@ -168,7 +173,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "flavor": "Habt ihr das auch gehört?",
     "image": "infanterie/A049.jpg",
     "max_copies": 2,
-    "collector": "A049"
+    "collector": "A049",
+    "keywords": [
+      "Platztausch"
+    ]
   },
   {
     "id": "dc_eh_frei",
@@ -195,7 +203,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "flavor": "Dies ist UNSER Land!",
     "image": "infanterie/A050.jpg",
     "max_copies": 2,
-    "collector": "A050"
+    "collector": "A050",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_eh_himmel",
@@ -223,7 +234,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "flavor": "1000 Mann und ein Befehl.",
     "image": "infanterie/A053.jpg",
     "max_copies": 2,
-    "collector": "A053"
+    "collector": "A053",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_eh_jaeger",
@@ -254,7 +268,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "flavor": "Es rauschen die Bäume, es klingt ihr Gesang!",
     "image": "infanterie/A054.jpg",
     "max_copies": 2,
-    "collector": "A054"
+    "collector": "A054",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_eh_mg",
@@ -283,7 +300,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "flavor": "Brrrt. Brrrt. Brrrrrrrrrrrt!",
     "image": "infanterie/A056.jpg",
     "max_copies": 2,
-    "collector": "A056"
+    "collector": "A056",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_eh_eingreif",
@@ -315,7 +335,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "flavor": "Mobilität ist der Schlüssel zu operativer Freiheit.",
     "image": "infanterie/A058.jpg",
     "max_copies": 2,
-    "collector": "A058"
+    "collector": "A058",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_eh_pak",
@@ -348,7 +371,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "flavor": "Wir schneiden uns durch!",
     "image": "infanterie/A060.jpg",
     "max_copies": 2,
-    "collector": "A060"
+    "collector": "A060",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_eh_sich",
@@ -371,7 +397,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "flavor": "Sind sie nicht alle freiwillig hier?!",
     "image": "infanterie/A067.jpg",
     "max_copies": 2,
-    "collector": "A067"
+    "collector": "A067",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_werkschutz_22",
@@ -394,7 +423,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B022.jpg",
     "max_copies": 1,
     "collector": "B022",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_depotwache_23",
@@ -417,7 +449,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B023.jpg",
     "max_copies": 1,
     "collector": "B023",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_schichttrupp_24",
@@ -440,7 +475,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B024.jpg",
     "max_copies": 1,
     "collector": "B024",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_lieferkordon_25",
@@ -509,7 +547,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B027.jpg",
     "max_copies": 1,
     "collector": "B027",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_pflichtzug_1",
@@ -551,13 +592,16 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+1 ATK, wenn in diesem Zug bereits eine eigene Infanterie angegriffen hat.",
+    "text": "",
     "effects": [],
     "flavor": "Wer zuerst geht, trägt den Balken.",
     "image": "infanterie/B002.jpg",
     "max_copies": 1,
     "collector": "B002",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_nachruecker_4",
@@ -581,7 +625,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B004.jpg",
     "max_copies": 1,
     "collector": "B004",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_zweite_welle_5",
@@ -605,7 +652,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B005.jpg",
     "max_copies": 1,
     "collector": "B005",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_stosskolonne_6",
@@ -629,7 +679,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B006.jpg",
     "max_copies": 1,
     "collector": "B006",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_heilige_front_8",
@@ -647,13 +700,16 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "Eigene Infanterie im Abschnitt hat +1 ATK. Am Zugende erleidet diese Einheit 1 Schaden.",
+    "text": "Eigene Infanterie im Abschnitt hat +1 ATK.",
     "effects": [],
     "flavor": "Voss nennt das Maß. Die Front nennt es Glauben.",
     "image": "infanterie/B008.jpg",
     "max_copies": 1,
     "collector": "B008",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Überlast"
+    ]
   },
   {
     "id": "dc_b_schwurzug_601",
@@ -677,7 +733,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B601.jpg",
     "max_copies": 1,
     "collector": "B601",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_kronwache_602",
@@ -725,7 +784,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B603.jpg",
     "max_copies": 1,
     "collector": "B603",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_b_abloesungskette_604",
@@ -773,7 +835,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B605.jpg",
     "max_copies": 1,
     "collector": "B605",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_schwerpunktlinie_606",
@@ -815,13 +880,16 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+1 ATK beim Angriff. Erleidet danach 1 Schaden. Wenn dadurch zerstört: ziehe 1 (System lernt).",
+    "text": "Wenn dadurch zerstört: ziehe 1 (System lernt).",
     "effects": [],
     "flavor": "Stoßgruppe. Leistung misst den Rest.",
     "image": "infanterie/B361.jpg",
     "max_copies": 1,
     "collector": "B361",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Überlast"
+    ]
   },
   {
     "id": "dc_b_masstrupp_362",
@@ -845,7 +913,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B362.jpg",
     "max_copies": 1,
     "collector": "B362",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_schnittstelle_363",
@@ -869,7 +940,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B363.jpg",
     "max_copies": 1,
     "collector": "B363",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_keilspitze_364",
@@ -941,7 +1015,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B368.jpg",
     "max_copies": 1,
     "collector": "B368",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Überlast"
+    ]
   },
   {
     "id": "dc_b_knotenwache_781",
@@ -964,7 +1041,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B781.jpg",
     "max_copies": 1,
     "collector": "B781",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_reservisten_zug_782",
@@ -1010,7 +1090,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B783.jpg",
     "max_copies": 1,
     "collector": "B783",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_korridorlaeufer_784",
@@ -1033,7 +1116,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B784.jpg",
     "max_copies": 1,
     "collector": "B784",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_westhaven_sicherung_785",
@@ -1102,7 +1188,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B841.jpg",
     "max_copies": 1,
     "collector": "B841",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_spielkorps_zug_842",
@@ -1142,13 +1231,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Beim Ausspielen: ziehe 1.",
+    "text": "",
     "effects": [],
     "flavor": "Posten am Siegel — lesbar, nicht treu.",
     "image": "infanterie/B843.jpg",
     "max_copies": 1,
     "collector": "B843",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_grenzspieler_844",
@@ -1171,7 +1263,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B844.jpg",
     "max_copies": 1,
     "collector": "B844",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_doppelrede_linie_845",
@@ -1194,7 +1289,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B845.jpg",
     "max_copies": 1,
     "collector": "B845",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_stillheim_wache_846",
@@ -1217,7 +1315,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B846.jpg",
     "max_copies": 1,
     "collector": "B846",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_b_zeilentraeger_901",
@@ -1263,7 +1364,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B902.jpg",
     "max_copies": 1,
     "collector": "B902",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_b_vorleser_kalden_903",
@@ -1286,7 +1390,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B903.jpg",
     "max_copies": 1,
     "collector": "B903",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_auenheim_hof_904",
@@ -1332,7 +1439,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B905.jpg",
     "max_copies": 1,
     "collector": "B905",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_stillschuld_zug_906",
@@ -1378,7 +1488,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B721.jpg",
     "max_copies": 1,
     "collector": "B721",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_parlamentsbote_722",
@@ -1424,7 +1537,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B723.jpg",
     "max_copies": 1,
     "collector": "B723",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_markenlaeufer_724",
@@ -1447,7 +1563,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B724.jpg",
     "max_copies": 1,
     "collector": "B724",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_zeughauszug_725",
@@ -1562,7 +1681,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B045.jpg",
     "max_copies": 1,
     "collector": "B045",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_wartebach_wache_46",
@@ -1585,7 +1707,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B046.jpg",
     "max_copies": 1,
     "collector": "B046",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_suedmark_fuss_47",
@@ -1608,7 +1733,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B047.jpg",
     "max_copies": 1,
     "collector": "B047",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_paspelhell_48",
@@ -1671,13 +1799,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn sie in einen angrenzenden Abschnitt rückt.",
+    "text": "",
     "effects": [],
     "flavor": "Läufer umgeht. Er schließt keinen Knoten.",
     "image": "infanterie/B662.jpg",
     "max_copies": 1,
     "collector": "B662",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_strassenmeister_663",
@@ -1700,7 +1831,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B663.jpg",
     "max_copies": 1,
     "collector": "B663",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_karawanenzug_664",
@@ -1723,7 +1857,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B664.jpg",
     "max_copies": 1,
     "collector": "B664",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_hauptkolonne_665",
@@ -1746,7 +1883,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B665.jpg",
     "max_copies": 1,
     "collector": "B665",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_strassenbataillon_666",
@@ -1763,13 +1903,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Beim Ausspielen: ziehe 1; +1 DEF bis Zugende.",
+    "text": "+1 DEF bis Zugende.",
     "effects": [],
     "flavor": "Bataillon sichert die Strecke, nicht den Thron.",
     "image": "infanterie/B666.jpg",
     "max_copies": 1,
     "collector": "B666",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_normzug_541",
@@ -1838,7 +1981,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B543.jpg",
     "max_copies": 1,
     "collector": "B543",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_wachzug_544",
@@ -1884,7 +2030,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B545.jpg",
     "max_copies": 1,
     "collector": "B545",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_b_grenzstein_posten_546",
@@ -1907,7 +2056,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B546.jpg",
     "max_copies": 1,
     "collector": "B546",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_kaiwache_481",
@@ -1930,7 +2082,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B481.jpg",
     "max_copies": 1,
     "collector": "B481",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_entsatztrupp_482",
@@ -1953,7 +2108,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B482.jpg",
     "max_copies": 1,
     "collector": "B482",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_b_entsatzposten_483",
@@ -2045,7 +2203,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B486.jpg",
     "max_copies": 1,
     "collector": "B486",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_talwache_64",
@@ -2114,7 +2275,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B066.jpg",
     "max_copies": 1,
     "collector": "B066",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_b_stilltal_fuss_67",
@@ -2137,7 +2301,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B067.jpg",
     "max_copies": 1,
     "collector": "B067",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_hochweide_zug_68",
@@ -2160,7 +2327,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B068.jpg",
     "max_copies": 1,
     "collector": "B068",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_schieferjacke_69",
@@ -2183,7 +2353,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B069.jpg",
     "max_copies": 1,
     "collector": "B069",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_ruheposten_301",
@@ -2206,7 +2379,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B301.jpg",
     "max_copies": 1,
     "collector": "B301",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_wachabloesung_302",
@@ -2229,7 +2405,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B302.jpg",
     "max_copies": 1,
     "collector": "B302",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_listenfuss_303",
@@ -2298,7 +2477,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B305.jpg",
     "max_copies": 1,
     "collector": "B305",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_schildreihe_306",
@@ -2321,7 +2503,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B306.jpg",
     "max_copies": 1,
     "collector": "B306",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_namenszug_85",
@@ -2344,7 +2529,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B085.jpg",
     "max_copies": 1,
     "collector": "B085",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_totenwache_86",
@@ -2384,13 +2572,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn in diesem Zug eine eigene Einheit zerstört wurde.",
+    "text": "",
     "effects": [],
     "flavor": "Trauer bleibt privat. Der Zug hält trotzdem.",
     "image": "infanterie/B087.jpg",
     "max_copies": 1,
     "collector": "B087",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_plattenzug_88",
@@ -2413,7 +2604,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B088.jpg",
     "max_copies": 1,
     "collector": "B088",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_grenzhof_fuss_89",
@@ -2430,13 +2624,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn in diesem Zug eine eigene Einheit zerstört wurde.",
+    "text": "",
     "effects": [],
     "flavor": "Kareth kennt neue Namen. Es macht keinen Altar daraus.",
     "image": "infanterie/B089.jpg",
     "max_copies": 1,
     "collector": "B089",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_steinbrunn_lehrling_90",
@@ -2459,7 +2656,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B090.jpg",
     "max_copies": 1,
     "collector": "B090",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_probenzug_421",
@@ -2482,7 +2682,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B421.jpg",
     "max_copies": 1,
     "collector": "B421",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_messau_fuss_422",
@@ -2528,7 +2731,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B423.jpg",
     "max_copies": 1,
     "collector": "B423",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_abweich_zug_424",
@@ -2574,7 +2780,10 @@ window.DC_SET_TYPES["Infanterie"] = [
     "image": "infanterie/B425.jpg",
     "max_copies": 1,
     "collector": "B425",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_linieninfanterie_426",

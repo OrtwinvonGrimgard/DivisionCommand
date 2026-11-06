@@ -15,10 +15,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Erst die Vorschrift, dann der Graben.",
   "collector": "NP-STM-01",
@@ -26,7 +24,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_steinmark_normschuetzen",
@@ -56,7 +57,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Erbitterung"
+  ]
  },
  {
   "id": "dc_np_steinmark_begleitzug_freigabe",
@@ -86,7 +90,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_steinmark_akteneinsichtstrupp",
@@ -119,7 +126,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Ablösung"
+  ]
  },
  {
   "id": "dc_np_steinmark_landwehr_bezirk_vier",
@@ -238,7 +248,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Ablösung"
+  ]
  },
  {
   "id": "dc_np_steinmark_freigabewagen",
@@ -270,7 +283,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Ablösung"
+  ]
  },
  {
   "id": "dc_np_steinmark_pruefstandkeil",
@@ -287,10 +303,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Hundert Stunden Prüfstand, dann erst Front.",
   "collector": "NP-STM-10",
@@ -298,7 +312,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Ablösung"
+  ]
  },
  {
   "id": "dc_np_steinmark_bundesschild_neun",
@@ -330,7 +347,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 6,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Ablösung",
+   "Zähigkeit"
+  ]
  },
  {
   "id": "dc_np_steinmark_feuerplanrohr",
@@ -427,7 +448,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_steinmark_messbatterie_grenzstein",
@@ -462,7 +486,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_steinmark_dreischluessel_haubitze",
@@ -497,7 +524,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Fernschuss"
+  ]
  },
  {
   "id": "dc_np_steinmark_vermessungstrupp",
@@ -567,7 +597,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_steinmark_grenzbeobachter",
@@ -586,7 +619,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "rules": [
    "Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.",
    "Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.",
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -607,7 +640,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_steinmark_bundesrichter_kompanie",
@@ -1279,10 +1315,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Die Linie gehört dem König, nicht dem Gelände.",
   "collector": "NP-ELD-01",
@@ -1290,7 +1324,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Sicherung"
+  ]
  },
  {
   "id": "dc_np_eldran_pioniere_der_grenzmark",
@@ -1350,7 +1387,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_eldran_haushaltstruppe",
@@ -1365,7 +1405,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
+  "text": "Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
   "rules": [
    "Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.",
    "Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden."
@@ -1381,7 +1421,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Sicherung"
+  ]
  },
  {
   "id": "dc_np_eldran_gebundene_kompanie",
@@ -1422,10 +1465,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Bauern, Erben, Wächter.",
   "collector": "NP-ELD-06",
@@ -1433,7 +1474,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung"
+  ]
  },
  {
   "id": "dc_np_eldran_gegenstossreserve",
@@ -1450,10 +1494,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Wartet hinter der Linie auf das Signal.",
   "collector": "NP-ELD-07",
@@ -1461,7 +1503,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung"
+  ]
  },
  {
   "id": "dc_np_eldran_kronwagen_wacht",
@@ -1493,7 +1538,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 2,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung"
+  ]
  },
  {
   "id": "dc_np_eldran_koenigliche_antwort",
@@ -1510,10 +1558,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Die Krone schlägt zurück – einmal, aber richtig.",
   "collector": "NP-ELD-09",
@@ -1521,7 +1567,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 5,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_eldran_bollwerkwagen",
@@ -1570,10 +1619,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Erst zurückgehalten, dann geschickt.",
   "collector": "NP-ELD-11",
@@ -1581,7 +1628,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Überlast"
+  ]
  },
  {
   "id": "dc_np_eldran_sperrfeuerbatterie",
@@ -1612,7 +1662,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_eldran_grenzhaubitze",
@@ -1643,7 +1696,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_eldran_kronmoerser",
@@ -1740,7 +1796,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag",
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_eldran_grenzreiter",
@@ -1775,7 +1835,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_eldran_wachtturmposten",
@@ -1810,7 +1873,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Fernschuss"
+  ]
  },
  {
   "id": "dc_np_eldran_kundschafter_der_krone",
@@ -1876,7 +1942,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 3,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Überlast"
+  ]
  },
  {
   "id": "dc_np_eldran_marschall_des_hauses",
@@ -1907,7 +1976,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 5,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Sicherung"
+  ]
  },
  {
   "id": "dc_np_eldran_sperrguertel",
@@ -2523,10 +2595,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Kommt, wenn die anderen müde sind.",
   "collector": "NP-ROT-02",
@@ -2534,7 +2604,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_rothain_schwerpunktgrenadiere",
@@ -2579,10 +2652,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Straße, Brücke, Umschlag – und weiter.",
   "collector": "NP-ROT-04",
@@ -2590,7 +2661,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zähigkeit"
+  ]
  },
  {
   "id": "dc_np_rothain_stabskompanie_erbe",
@@ -2635,10 +2709,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Hält die alte Straße, wie immer.",
   "collector": "NP-ROT-06",
@@ -2646,7 +2718,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Ablösung"
+  ]
  },
  {
   "id": "dc_np_rothain_erbpanzer_kronlinie",
@@ -2663,10 +2738,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Geerbt, gepflegt, gefürchtet.",
   "collector": "NP-ROT-07",
@@ -2674,7 +2747,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_rothain_schwerpunktwagen",
@@ -2691,10 +2767,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Gebaut für den einen Punkt.",
   "collector": "NP-ROT-08",
@@ -2702,7 +2776,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 5,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_rothain_geerbtes_arsenal",
@@ -2737,7 +2814,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 5,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_rothain_reservekette_erbfolge",
@@ -2769,7 +2849,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Ablösung"
+  ]
  },
  {
   "id": "dc_np_rothain_depotwagen_kronstrasse",
@@ -2786,10 +2869,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Bringt Munition an den Punkt.",
   "collector": "NP-ROT-11",
@@ -2797,7 +2878,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 2,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_rothain_schwerpunktbatterie",
@@ -2828,7 +2912,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_rothain_stabsrohr_neuhoff",
@@ -2859,7 +2946,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Fernschuss"
+  ]
  },
  {
   "id": "dc_np_rothain_erbmoerser",
@@ -2956,7 +3046,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen",
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_rothain_stabsmelder",
@@ -3026,7 +3120,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_rothain_erbkarte_spaeher",
@@ -3090,7 +3187,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff",
+   "Sicherung"
+  ]
  },
  {
   "id": "dc_np_rothain_erbmarschall_rothain",
@@ -3705,10 +3806,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Verbunden, also handlungsfähig.",
   "collector": "NP-AVE-01",
@@ -3716,7 +3815,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_averon_eigeninitiative_zug",
@@ -3731,10 +3833,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Kein Befehl nötig, solange das Netz hält.",
   "collector": "NP-AVE-02",
@@ -3742,7 +3842,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung"
+  ]
  },
  {
   "id": "dc_np_averon_sensorschuetzen",
@@ -3819,7 +3922,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -3833,7 +3936,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Platztausch"
+  ]
  },
  {
   "id": "dc_np_averon_buergerwehr_averon",
@@ -3891,7 +3997,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_averon_leichter_netzwagen",
@@ -3910,7 +4019,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -3924,7 +4033,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Überlast"
+  ]
  },
  {
   "id": "dc_np_averon_funkpanzer",
@@ -3941,10 +4053,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Mehr Antennen als Panzerung.",
   "collector": "NP-AVE-09",
@@ -3952,7 +4062,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 2,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_averon_zeitkeil",
@@ -3969,10 +4082,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Nicht stehenbleiben, wenn die Lage alt wird.",
   "collector": "NP-AVE-10",
@@ -3980,7 +4091,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_averon_aufklaerungsspaehwagen",
@@ -4015,7 +4129,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_averon_lokalisierungsbatterie",
@@ -4046,7 +4163,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_averon_schnellfeuerwerfer",
@@ -4065,7 +4185,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -4082,7 +4202,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Platztausch"
+  ]
  },
  {
   "id": "dc_np_averon_netzmoerser",
@@ -4113,7 +4236,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_averon_praezisionsrakete_zeit",
@@ -4148,7 +4274,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_averon_fruehwarnbatterie",
@@ -4214,7 +4343,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_averon_lauschposten",
@@ -4247,7 +4379,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_averon_fruehwarntrupp",
@@ -4266,7 +4401,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "rules": [
    "Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.",
    "Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.",
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -4287,7 +4422,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_averon_republikanische_antwort",
@@ -4323,7 +4461,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 5,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung",
+   "Erbitterung"
+  ]
  },
  {
   "id": "dc_np_averon_netzkommando",
@@ -4341,7 +4483,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -4355,7 +4497,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Erbitterung"
+  ]
  },
  {
   "id": "dc_np_averon_gebundene_verbindung",
@@ -4955,10 +5100,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Trägt die Probe an die Front.",
   "collector": "NP-ORT-01",
@@ -4966,7 +5109,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_orthea_kreuzpeilungstrupp",
@@ -4981,10 +5127,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Drei Peilungen, ein Schnittpunkt.",
   "collector": "NP-ORT-02",
@@ -4992,7 +5136,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_orthea_probentraeger",
@@ -5007,10 +5154,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Ohne Probe keine Erkenntnis.",
   "collector": "NP-ORT-03",
@@ -5018,7 +5163,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Erbitterung"
+  ]
  },
  {
   "id": "dc_np_orthea_praezisionsschuetzen",
@@ -5096,10 +5244,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Bewacht die Labore der Republik.",
   "collector": "NP-ORT-06",
@@ -5107,7 +5253,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_orthea_messpanzer",
@@ -5124,10 +5273,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Ein rollendes Labor.",
   "collector": "NP-ORT-07",
@@ -5135,7 +5282,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 2,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_orthea_zielrechner_wagen",
@@ -5187,10 +5337,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Bringt Messwerte zurück.",
   "collector": "NP-ORT-09",
@@ -5198,7 +5346,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_orthea_feldversuch_kette",
@@ -5233,7 +5384,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_orthea_einzelschusspanzer",
@@ -5268,7 +5422,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 5,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_orthea_punktfeuerbatterie",
@@ -5299,7 +5456,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_orthea_zentrale_feuerleitung",
@@ -5334,7 +5494,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_orthea_praezisionsmoerser",
@@ -5365,7 +5528,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Fernschuss"
+  ]
  },
  {
   "id": "dc_np_orthea_zielrechnungsrohr",
@@ -5466,7 +5632,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Fernschuss"
+  ]
  },
  {
   "id": "dc_np_orthea_gesamtlagebild",
@@ -5501,7 +5670,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Fernschuss"
+  ]
  },
  {
   "id": "dc_np_orthea_beobachterkette",
@@ -5536,7 +5708,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_orthea_institut_der_erkenntnis",
@@ -6197,7 +6372,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -6211,7 +6386,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Platztausch"
+  ]
  },
  {
   "id": "dc_np_vesper_systemtreue_linie",
@@ -6285,7 +6463,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
+  "text": "Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
   "rules": [
    "Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.",
    "Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden."
@@ -6301,7 +6479,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_vesper_abriegelungstrupp",
@@ -6331,7 +6512,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_vesper_unsichtbare_wache",
@@ -6348,7 +6532,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -6362,7 +6546,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_vesper_velis_kolonne",
@@ -6381,7 +6568,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -6395,7 +6582,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Platztausch"
+  ]
  },
  {
   "id": "dc_np_vesper_attrappenwagen",
@@ -6412,10 +6602,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Aus Holz – vielleicht.",
   "collector": "NP-VES-08",
@@ -6423,7 +6611,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 1,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_vesper_taeuschungspanzer",
@@ -6442,7 +6633,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -6456,7 +6647,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_vesper_riegelwagen",
@@ -6488,7 +6682,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung"
+  ]
  },
  {
   "id": "dc_np_vesper_schattenkeil",
@@ -6505,7 +6702,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
+  "text": "Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
   "rules": [
    "Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.",
    "Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden."
@@ -6521,7 +6718,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_vesper_abriegelungsbatterie",
@@ -6552,7 +6752,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_vesper_scheinfeuerstellung",
@@ -6571,7 +6774,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -6588,7 +6791,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_vesper_systemmoerser",
@@ -6619,7 +6825,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_vesper_riegelfeuer",
@@ -6673,7 +6882,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -6690,7 +6899,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Platztausch"
+  ]
  },
  {
   "id": "dc_np_vesper_ueberwachungsposten",
@@ -6725,7 +6937,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_vesper_doppelagent",
@@ -6758,7 +6973,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_vesper_schattenmelder",
@@ -6777,7 +6995,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "rules": [
    "Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.",
    "Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.",
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -6798,7 +7016,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Platztausch"
+  ]
  },
  {
   "id": "dc_np_vesper_spielmeister",
@@ -6832,7 +7053,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 4,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_vesper_operationsleitung_vesper",
@@ -6848,7 +7072,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "elite",
    "infanterie"
   ],
-  "text": "Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
+  "text": "Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
   "rules": [
    "Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.",
    "Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden."
@@ -7441,10 +7665,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Nerven verstärkt, Angst entfernt.",
   "collector": "NP-KAR-01",
@@ -7452,7 +7674,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_karsk_filtergrenadiere",
@@ -7482,7 +7707,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Erbitterung"
+  ]
  },
  {
   "id": "dc_np_karsk_masszug",
@@ -7497,10 +7725,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Leistung gemessen, Ergebnis geliefert.",
   "collector": "NP-KAR-03",
@@ -7508,7 +7734,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_karsk_implantatkompanie",
@@ -7564,7 +7793,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_karsk_ausfallreserve",
@@ -7635,10 +7867,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Vorne ist der einzige Ort.",
   "collector": "NP-KAR-08",
@@ -7646,7 +7876,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 5,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Überlast"
+  ]
  },
  {
   "id": "dc_np_karsk_durchbruchwagen",
@@ -7681,7 +7914,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_karsk_masspanzer",
@@ -7698,10 +7934,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Genormt auf Leistung.",
   "collector": "NP-KAR-10",
@@ -7709,7 +7943,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_karsk_leichter_stosswagen",
@@ -7726,10 +7963,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Schnell durch, bevor die Lücke schließt.",
   "collector": "NP-KAR-11",
@@ -7737,7 +7972,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_karsk_oeffnungsbatterie",
@@ -7799,7 +8037,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_karsk_massschlagrohr",
@@ -7935,7 +8176,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_karsk_biometriespaeher",
@@ -8005,7 +8249,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_karsk_letzter_stoss",
@@ -8067,7 +8314,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_karsk_medizinisch_technische_kette",
@@ -8730,10 +8980,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Ausgeruht und bereit.",
   "collector": "NP-CAL-03",
@@ -8741,7 +8989,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zähigkeit"
+  ]
  },
  {
   "id": "dc_np_caldris_schildtraeger",
@@ -8801,7 +9052,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_caldris_genesene_kompanie",
@@ -8816,10 +9070,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Zurück aus der Klinik, stärker als zuvor.",
   "collector": "NP-CAL-06",
@@ -8827,7 +9079,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Überlast"
+  ]
  },
  {
   "id": "dc_np_caldris_sanitaetspanzer",
@@ -8844,10 +9099,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Gepanzerte Fürsorge.",
   "collector": "NP-CAL-07",
@@ -8855,7 +9108,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 2,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_caldris_schildwagen",
@@ -8887,7 +9143,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Überlast"
+  ]
  },
  {
   "id": "dc_np_caldris_panzerschild_caldris",
@@ -8919,7 +9178,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 7,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung"
+  ]
  },
  {
   "id": "dc_np_caldris_etappenpanzer",
@@ -8936,10 +9198,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Sichert den Weg zur Klinik.",
   "collector": "NP-CAL-10",
@@ -8947,7 +9207,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zähigkeit"
+  ]
  },
  {
   "id": "dc_np_caldris_bergepanzer_caldris",
@@ -8964,10 +9227,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Niemand bleibt liegen.",
   "collector": "NP-CAL-11",
@@ -8975,7 +9236,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 2,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Ablösung"
+  ]
  },
  {
   "id": "dc_np_caldris_schutzfeuerbatterie",
@@ -9006,7 +9270,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Fernschuss"
+  ]
  },
  {
   "id": "dc_np_caldris_abschnittsmoerser",
@@ -9099,7 +9366,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_caldris_schlag_nach_der_genesung",
@@ -9134,7 +9404,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung",
+   "Fernschuss"
+  ]
  },
  {
   "id": "dc_np_caldris_biometrie_melder",
@@ -9239,7 +9513,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Fernschuss"
+  ]
  },
  {
   "id": "dc_np_caldris_oberste_fuersorge",
@@ -9270,7 +9547,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 4,
   "def": 6,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Erbitterung"
+  ]
  },
  {
   "id": "dc_np_caldris_schildgarde",
@@ -9301,7 +9581,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 3,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Sicherung"
+  ]
  },
  {
   "id": "dc_np_caldris_feldklinik",
@@ -9895,10 +10178,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Sie gehen voran, damit andere folgen.",
   "collector": "NP-THE-01",
@@ -9906,7 +10187,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_theryn_nachfolgende_welle",
@@ -9921,10 +10205,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Wo die erste fiel, steht die zweite.",
   "collector": "NP-THE-02",
@@ -9932,7 +10214,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_theryn_dritte_welle",
@@ -9988,7 +10273,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_theryn_eiferer",
@@ -10018,7 +10306,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_theryn_geweihte_linie",
@@ -10048,7 +10339,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_theryn_pilgerwagen",
@@ -10093,10 +10387,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Rollt im Gebet.",
   "collector": "NP-THE-08",
@@ -10104,7 +10396,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_theryn_sturmwagen",
@@ -10121,10 +10416,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Für den einen Schlag.",
   "collector": "NP-THE-09",
@@ -10132,7 +10425,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_theryn_reliquienpanzer",
@@ -10149,10 +10445,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Geweiht und gepanzert.",
   "collector": "NP-THE-10",
@@ -10160,7 +10454,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_theryn_der_wagen_des_rufes",
@@ -10192,7 +10489,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 5,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit",
+   "Abschirmung"
+  ]
  },
  {
   "id": "dc_np_theryn_sammelfeuer",
@@ -10223,7 +10524,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_theryn_glockenbatterie",
@@ -10254,7 +10558,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_theryn_wellenmoerser",
@@ -10351,7 +10658,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_theryn_pilgerkundschafter",
@@ -10386,7 +10696,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_theryn_glaubensmelder",
@@ -10421,7 +10734,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_theryn_seher_der_pflicht",
@@ -10454,7 +10770,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_theryn_sturmfuehrer",
@@ -10485,7 +10804,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Erbitterung"
+  ]
  },
  {
   "id": "dc_np_theryn_hohe_priesterschaft",
@@ -11196,7 +11518,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_vael_reparaturtrupp",
@@ -11211,10 +11536,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Repariert Rohre im Feuer.",
   "collector": "NP-VAE-05",
@@ -11222,7 +11545,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_vael_aktionaersgarde",
@@ -11265,10 +11591,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Vom Band an die Front.",
   "collector": "NP-VAE-07",
@@ -11276,7 +11600,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zähigkeit"
+  ]
  },
  {
   "id": "dc_np_vael_materialkeil",
@@ -11293,10 +11620,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Mehr Stahl als Strategie.",
   "collector": "NP-VAE-08",
@@ -11304,7 +11629,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_vael_nachlieferungswagen",
@@ -11336,7 +11664,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_vael_industriekette",
@@ -11371,7 +11702,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_vael_kriegsaktie_panzer",
@@ -11388,10 +11722,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Der Kurs steigt mit jedem Treffer.",
   "collector": "NP-VAE-11",
@@ -11399,7 +11731,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 5,
   "def": 6,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag",
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_vael_walzenbatterie",
@@ -11430,7 +11766,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_vael_industrierohr",
@@ -11461,7 +11800,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_vael_volltreffer_haubitze",
@@ -11496,7 +11838,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 6,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung",
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_vael_munitionsmoerser",
@@ -11527,7 +11873,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Fernschuss"
+  ]
  },
  {
   "id": "dc_np_vael_feuerwalzen_rohr",
@@ -11562,7 +11911,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_vael_zielerfasser",
@@ -11597,7 +11949,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_vael_verbrauchspruefer",
@@ -11632,7 +11987,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_vael_wirtschaftsspaeher",
@@ -11665,7 +12023,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_vael_konzernfaust",
@@ -11696,7 +12057,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 5,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Erbitterung"
+  ]
  },
  {
   "id": "dc_np_vael_konzernstab",
@@ -12316,10 +12680,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Hält den Posten, auch ohne Ader.",
   "collector": "NP-MER-01",
@@ -12327,7 +12689,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Sicherung"
+  ]
  },
  {
   "id": "dc_np_merovan_kolonnenschuetzen",
@@ -12342,10 +12707,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Unterwegs und bereit.",
   "collector": "NP-MER-02",
@@ -12353,7 +12716,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_merovan_wegposten",
@@ -12368,10 +12734,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Wer den Weg hält, hält das Land.",
   "collector": "NP-MER-03",
@@ -12379,7 +12743,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_merovan_keilhaltzug",
@@ -12409,7 +12776,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_merovan_verlegungskompanie",
@@ -12426,7 +12796,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -12440,7 +12810,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_merovan_ausharrende",
@@ -12455,10 +12828,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Sie bleiben, bis der Weg frei ist.",
   "collector": "NP-MER-06",
@@ -12466,7 +12837,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_merovan_achsenkolonne",
@@ -12483,10 +12857,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Fährt die Achse ab.",
   "collector": "NP-MER-07",
@@ -12494,7 +12866,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_merovan_wegsperrwagen",
@@ -12526,7 +12901,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_merovan_haltepanzer",
@@ -12543,10 +12921,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Bleibt stehen, wo andere weichen.",
   "collector": "NP-MER-09",
@@ -12554,7 +12930,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 2,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_merovan_achsenkeil",
@@ -12571,10 +12950,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Schiebt sich entlang der Achse.",
   "collector": "NP-MER-10",
@@ -12582,7 +12959,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_merovan_freigehaltene_achse",
@@ -12645,7 +13025,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_merovan_postenmoerser",
@@ -12676,7 +13059,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_merovan_achsenfeuer",
@@ -12707,7 +13093,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_merovan_haltefeuer",
@@ -12738,7 +13127,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_merovan_stellung_am_wegende",
@@ -12804,7 +13196,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_merovan_etappenmelder",
@@ -12858,7 +13253,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "rules": [
    "Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.",
    "Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.",
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -12879,7 +13274,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Platztausch"
+  ]
  },
  {
   "id": "dc_np_merovan_wegpunktkommando",
@@ -12910,7 +13308,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 4,
   "def": 6,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung",
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_merovan_garnisonsaelteste",
@@ -13526,7 +13928,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
+  "text": "Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
   "rules": [
    "Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.",
    "Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden."
@@ -13542,7 +13944,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zähigkeit"
+  ]
  },
  {
   "id": "dc_np_lyr_passhueter",
@@ -13557,10 +13962,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Kein Fremder kommt durch.",
   "collector": "NP-LYR-02",
@@ -13568,7 +13971,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_lyr_eidgenossen",
@@ -13598,7 +14004,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_lyr_lauernde_schuetzen",
@@ -13613,7 +14022,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
+  "text": "Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
   "rules": [
    "Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.",
    "Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden."
@@ -13629,7 +14038,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Überlast"
+  ]
  },
  {
   "id": "dc_np_lyr_steinwerfer",
@@ -13644,10 +14056,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Der Berg kämpft mit.",
   "collector": "NP-LYR-05",
@@ -13655,7 +14065,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_lyr_verteilte_posten",
@@ -13672,7 +14085,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -13686,7 +14099,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_lyr_bergkette",
@@ -13731,7 +14147,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
+  "text": "Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
   "rules": [
    "Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.",
    "Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden."
@@ -13747,7 +14163,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_lyr_talpanzer",
@@ -13766,7 +14185,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -13780,7 +14199,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 2,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_lyr_felskeil",
@@ -13797,10 +14219,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Wie ein Felssturz.",
   "collector": "NP-LYR-10",
@@ -13808,7 +14228,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zähigkeit"
+  ]
  },
  {
   "id": "dc_np_lyr_pass_ohne_wiederkehr",
@@ -13825,7 +14248,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
+  "text": "Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
   "rules": [
    "Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.",
    "Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden."
@@ -13841,7 +14264,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 6,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zähigkeit"
+  ]
  },
  {
   "id": "dc_np_lyr_warnfeuerstellung",
@@ -13891,7 +14317,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -13908,7 +14334,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_lyr_talbatterie",
@@ -13939,7 +14368,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_lyr_passfeuer",
@@ -13958,7 +14390,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -13975,7 +14407,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_lyr_echo_der_taeler",
@@ -14010,7 +14445,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag",
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_lyr_gamsjaeger",
@@ -14099,7 +14538,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "rules": [
    "Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.",
    "Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.",
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -14120,7 +14559,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_lyr_passwache_aeltester",
@@ -14136,7 +14578,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "elite",
    "infanterie"
   ],
-  "text": "Benachbarte eigene Fronteinheiten +2 DEF. Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
+  "text": "Benachbarte eigene Fronteinheiten +2 DEF. Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
   "rules": [
    "Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).",
    "Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.",
@@ -14174,7 +14616,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -14188,7 +14630,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Überlast",
+   "Abschirmung"
+  ]
  },
  {
   "id": "dc_np_lyr_talbund",
@@ -14845,10 +15291,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Die Toten marschieren mit.",
   "collector": "NP-OSS-04",
@@ -14856,7 +15300,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung"
+  ]
  },
  {
   "id": "dc_np_ossaria_wallbauer",
@@ -14916,7 +15363,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung"
+  ]
  },
  {
   "id": "dc_np_ossaria_plattenwagen",
@@ -14933,10 +15383,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Jede Platte ein Name.",
   "collector": "NP-OSS-07",
@@ -14944,7 +15392,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 2,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_ossaria_totenwallpanzer",
@@ -15004,7 +15455,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 6,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_ossaria_abnutzungskette",
@@ -15049,10 +15503,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Geschmiedet aus alten Rüstungen.",
   "collector": "NP-OSS-11",
@@ -15060,7 +15512,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung"
+  ]
  },
  {
   "id": "dc_np_ossaria_abnutzungsbatterie",
@@ -15091,7 +15546,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_ossaria_nahdruckmoerser",
@@ -15122,7 +15580,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_ossaria_totenglocke",
@@ -15219,7 +15680,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen",
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_ossaria_grabsucher",
@@ -15324,7 +15789,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit"
+  ]
  },
  {
   "id": "dc_np_ossaria_schmied_der_erinnerung",
@@ -15386,7 +15854,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 3,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung",
+   "Sicherung"
+  ]
  },
  {
   "id": "dc_np_ossaria_wall_der_gefallenen",
@@ -15984,10 +16456,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Der Kai gehört uns.",
   "collector": "NP-NAM-01",
@@ -15995,7 +16465,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_namar_schnelle_entsatzgruppe",
@@ -16077,7 +16550,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Ablösung"
+  ]
  },
  {
   "id": "dc_np_namar_schmugglerzug",
@@ -16094,7 +16570,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -16108,7 +16584,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Platztausch"
+  ]
  },
  {
   "id": "dc_np_namar_hafenregiment",
@@ -16123,10 +16602,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Häfen stehen zusammen.",
   "collector": "NP-NAM-06",
@@ -16134,7 +16611,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_namar_kaipanzer",
@@ -16151,10 +16631,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Vom Schiff an die Front.",
   "collector": "NP-NAM-07",
@@ -16162,7 +16640,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_namar_lieferkette",
@@ -16239,10 +16720,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Improvisiert, aber stabil.",
   "collector": "NP-NAM-10",
@@ -16250,7 +16729,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung"
+  ]
  },
  {
   "id": "dc_np_namar_herr_der_kais",
@@ -16313,7 +16795,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_namar_schiffsmoerser",
@@ -16344,7 +16829,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_namar_konvoifeuer",
@@ -16375,7 +16863,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_namar_hafengeschuetz",
@@ -16410,7 +16901,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_namar_schlag_der_ankunft",
@@ -16441,7 +16935,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung",
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_namar_hafenlotse",
@@ -16476,7 +16974,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Fernschuss"
+  ]
  },
  {
   "id": "dc_np_namar_konvoiaufklaerer",
@@ -16511,7 +17012,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_namar_kaispitzel",
@@ -16544,7 +17048,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_namar_lieferung_trotz_allem",
@@ -16575,7 +17082,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 4,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung",
+   "Sicherung"
+  ]
  },
  {
   "id": "dc_np_namar_hafenbund_garde",
@@ -16606,7 +17117,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung",
+   "Sicherung"
+  ]
  },
  {
   "id": "dc_np_namar_kai_ohne_schloss",
@@ -17255,7 +17770,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -17269,7 +17784,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 3,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Platztausch"
+  ]
  },
  {
   "id": "dc_np_sahr_handelsfrontmiliz",
@@ -17284,10 +17802,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Verteidigt die Handelswege.",
   "collector": "NP-SAH-04",
@@ -17295,7 +17811,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zuteilung"
+  ]
  },
  {
   "id": "dc_np_sahr_flankenstoss_kompanie",
@@ -17310,7 +17829,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
+  "text": "Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
   "rules": [
    "Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.",
    "Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden."
@@ -17326,7 +17845,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 4,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_sahr_routenwache",
@@ -17341,10 +17863,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Hält die Route offen.",
   "collector": "NP-SAH-06",
@@ -17352,7 +17872,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_sahr_flusskette",
@@ -17369,10 +17892,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Fährt am Ufer entlang.",
   "collector": "NP-SAH-07",
@@ -17380,7 +17901,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 3,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_sahr_umgehungspanzer",
@@ -17399,7 +17923,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -17413,7 +17937,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_sahr_kolonne_ohne_ende",
@@ -17445,7 +17972,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 5,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Zähigkeit",
+   "Durchschlag"
+  ]
  },
  {
   "id": "dc_np_sahr_handelswagen",
@@ -17462,10 +17993,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Gepanzert für die Route.",
   "collector": "NP-SAH-10",
@@ -17473,7 +18002,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 2,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_sahr_uferkeil",
@@ -17490,10 +18022,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Schneidet den Fluss.",
   "collector": "NP-SAH-11",
@@ -17501,7 +18031,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_sahr_linienfeuer",
@@ -17532,7 +18065,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_sahr_flussmoerser",
@@ -17551,7 +18087,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -17568,7 +18104,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_sahr_routenbatterie",
@@ -17599,7 +18138,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_sahr_batterie_der_weiten_wege",
@@ -17665,7 +18207,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_sahr_navigator",
@@ -17700,7 +18245,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_sahr_flusskundschafter",
@@ -17735,7 +18283,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Stellungswechsel"
+  ]
  },
  {
   "id": "dc_np_sahr_routenspaeher",
@@ -17754,7 +18305,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "rules": [
    "Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.",
    "Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.",
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -17775,7 +18326,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Aufklärung",
   "atk": 2,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt"
+  ]
  },
  {
   "id": "dc_np_sahr_herr_der_routen",
@@ -17791,7 +18345,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "elite",
    "infanterie"
   ],
-  "text": "Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
+  "text": "Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.",
   "rules": [
    "Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.",
    "Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden."
@@ -17807,7 +18361,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 5,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_sahr_flankenmeister",
@@ -17825,7 +18382,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
   "rules": [
-   "Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
+   "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
    "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
   ],
   "effects": [
@@ -17839,7 +18396,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Hinterhalt",
+   "Sicherung"
+  ]
  },
  {
   "id": "dc_np_sahr_gilde_der_routen",
@@ -18447,10 +19008,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Tilgt mit Blut.",
   "collector": "NP-DAR-02",
@@ -18458,7 +19017,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Heranführung"
+  ]
  },
  {
   "id": "dc_np_dargan_haftende_haeuser",
@@ -18533,10 +19095,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Schützt das Buch.",
   "collector": "NP-DAR-05",
@@ -18544,7 +19104,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 1,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_dargan_vollstrecker",
@@ -18574,7 +19137,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Infanterie",
   "atk": 4,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_dargan_haftungsstoss",
@@ -18591,10 +19157,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Keine Sonderfähigkeit.",
-  "rules": [
-   "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
-  ],
+  "text": "",
+  "rules": [],
   "effects": [],
   "flavor": "Selten, aber gewaltig.",
   "collector": "NP-DAR-07",
@@ -18602,7 +19166,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Überlast"
+  ]
  },
  {
   "id": "dc_np_dargan_tilgungswagen",
@@ -18672,7 +19239,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 4,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_dargan_kadersturm",
@@ -18735,7 +19305,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Panzer",
   "atk": 5,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Gefechtsbereit",
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_dargan_zielbatterie",
@@ -18797,7 +19371,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Staffelangriff"
+  ]
  },
  {
   "id": "dc_np_dargan_abschlussfeuer",
@@ -18863,7 +19440,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Nachsetzen"
+  ]
  },
  {
   "id": "dc_np_dargan_gebundene_haeuser",
@@ -18898,7 +19478,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Fernschuss"
+  ]
  },
  {
   "id": "dc_np_dargan_buchpruefer",
@@ -19032,7 +19615,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Elite",
   "atk": 5,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Abschirmung",
+   "Überlast"
+  ]
  },
  {
   "id": "dc_np_dargan_hauptbuchhalter",

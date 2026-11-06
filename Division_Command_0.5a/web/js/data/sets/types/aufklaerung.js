@@ -64,7 +64,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "flavor": "Auge am Feind!",
     "image": "aufklaerung/A068.jpg",
     "max_copies": 2,
-    "collector": "A068"
+    "collector": "A068",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_eh_glubscher",
@@ -183,7 +186,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B147.jpg",
     "max_copies": 1,
     "collector": "B147",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_depotlaeufer_148",
@@ -247,13 +253,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: ziehe 1 Karte.",
+    "text": "",
     "effects": [],
     "flavor": "Meldung aus der Reihe.",
     "image": "aufklaerung/B020.jpg",
     "max_copies": 1,
     "collector": "B020",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_passlaeufer_21",
@@ -277,7 +286,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B021.jpg",
     "max_copies": 1,
     "collector": "B021",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_ritusspaeher_106",
@@ -349,7 +361,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B620.jpg",
     "max_copies": 1,
     "collector": "B620",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_erbe_spaeher_621",
@@ -445,7 +460,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B380.jpg",
     "max_copies": 1,
     "collector": "B380",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_nervenspaeher_381",
@@ -493,7 +511,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B382.jpg",
     "max_copies": 1,
     "collector": "B382",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_schnitt_melder_383",
@@ -517,7 +538,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B383.jpg",
     "max_copies": 1,
     "collector": "B383",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_lina_melder_803",
@@ -540,7 +564,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B803.jpg",
     "max_copies": 1,
     "collector": "B803",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_ed_ruh_pfad_804",
@@ -586,7 +613,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B805.jpg",
     "max_copies": 1,
     "collector": "B805",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_quellenlaeufer_806",
@@ -609,7 +639,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B806.jpg",
     "max_copies": 1,
     "collector": "B806",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_aktenleser_863",
@@ -655,7 +688,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B864.jpg",
     "max_copies": 1,
     "collector": "B864",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_doppelversion_865",
@@ -678,7 +714,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B865.jpg",
     "max_copies": 1,
     "collector": "B865",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_stillrain_laeufer_866",
@@ -724,7 +763,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B923.jpg",
     "max_copies": 1,
     "collector": "B923",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_datums_melder_924",
@@ -747,7 +789,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B924.jpg",
     "max_copies": 1,
     "collector": "B924",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_gegenrechnung_925",
@@ -793,7 +838,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B926.jpg",
     "max_copies": 1,
     "collector": "B926",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_markenspaeher_743",
@@ -839,7 +887,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B744.jpg",
     "max_copies": 1,
     "collector": "B744",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_grenzlese_745",
@@ -885,7 +936,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B746.jpg",
     "max_copies": 1,
     "collector": "B746",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_wegspaeher_185",
@@ -908,7 +962,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B185.jpg",
     "max_copies": 1,
     "collector": "B185",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_warteblatt_laeufer_186",
@@ -931,7 +988,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B186.jpg",
     "max_copies": 1,
     "collector": "B186",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_lizenzmelder_187",
@@ -954,7 +1014,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B187.jpg",
     "max_copies": 1,
     "collector": "B187",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_fahrplanblick_188",
@@ -977,7 +1040,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B188.jpg",
     "max_copies": 1,
     "collector": "B188",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_pfadfinder_683",
@@ -1023,7 +1089,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B684.jpg",
     "max_copies": 1,
     "collector": "B684",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_meldekarawane_685",
@@ -1115,7 +1184,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B564.jpg",
     "max_copies": 1,
     "collector": "B564",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_meldekette_565",
@@ -1138,7 +1210,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B565.jpg",
     "max_copies": 1,
     "collector": "B565",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_peiltrupp_566",
@@ -1161,7 +1236,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B566.jpg",
     "max_copies": 1,
     "collector": "B566",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_zollspaeher_503",
@@ -1184,7 +1262,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B503.jpg",
     "max_copies": 1,
     "collector": "B503",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_wegmelder_504",
@@ -1207,7 +1288,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B504.jpg",
     "max_copies": 1,
     "collector": "B504",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_kaihof_auge_505",
@@ -1230,7 +1314,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B505.jpg",
     "max_copies": 1,
     "collector": "B505",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_restzaehler_506",
@@ -1276,7 +1363,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B224.jpg",
     "max_copies": 1,
     "collector": "B224",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_hanglaeufer_225",
@@ -1299,7 +1389,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B225.jpg",
     "max_copies": 1,
     "collector": "B225",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_pfadwaechter_226",
@@ -1391,7 +1484,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B324.jpg",
     "max_copies": 1,
     "collector": "B324",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_ringwaechter_325",
@@ -1414,7 +1510,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B325.jpg",
     "max_copies": 1,
     "collector": "B325",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_formularspaeher_326",
@@ -1437,7 +1536,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B326.jpg",
     "max_copies": 1,
     "collector": "B326",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_linsenlaeufer_263",
@@ -1529,7 +1631,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B266.jpg",
     "max_copies": 1,
     "collector": "B266",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_beobachter_443",
@@ -1552,7 +1657,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B443.jpg",
     "max_copies": 1,
     "collector": "B443",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_lokalisierer_444",
@@ -1575,7 +1683,10 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "image": "aufklaerung/B444.jpg",
     "max_copies": 1,
     "collector": "B444",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Fernschuss"
+    ]
   },
   {
     "id": "dc_b_methodenspaeher_445",

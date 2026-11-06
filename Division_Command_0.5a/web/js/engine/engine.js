@@ -378,7 +378,8 @@
       // Finte o.ä.: noCombatUntil === aktueller Zug sperrt Aktion; Eingraben nutzt turn+1 und filtert nur Ziele.
       if (inst.flags && inst.flags.noCombatUntil === this.state.turn && !inst.flags.digInBonus) return false;
       if (inst.attackUsed) return false;
-      if (inst.summonedTurn != null && inst.summonedTurn >= this.state.turn) return false;
+      if (inst.summonedTurn != null && inst.summonedTurn >= this.state.turn && !(inst.summonedTurn === this.state.turn && this._kw(inst, 'Gefechtsbereit'))) return false;
+      if (inst.flags && inst.flags.kwNoAtkTurn === this.state.turn) return false;
       if (inst.summonedTurn === this.state.turn - 1 && this.state.active !== inst.owner) return false;
       return pid == null || inst.owner === pid;
     }
@@ -504,6 +505,8 @@
       // Ladungsliste etc.: allow 0 when explicit costReduce applied
       const floor = (def.typ === 'Ausrüstung' && (def.effects || []).some((e) => e.code === 'EQUIP_STAT' && e.param && e.param.costReduce)) ? 0 : 1;
       if (def.typ === 'Soforteinsatz') return Math.max(0, cost);
+      // Schlüsselwort Heranführung: nächste Einheit in diesem Zug 1 AP weniger (mind. 1); verbraucht beim Auslegen.
+      if (def.typ === 'Einheit' && player && player.flags && player.flags.kwHeran === this.state.turn && cost > 1) cost -= 1;
       return Math.max(floor, cost);
     }
 
@@ -767,6 +770,8 @@
           });
         }
       }
+      const kwA = this._kwAtkBonus(inst, owner);
+      atk += kwA.total;
       return { atk, def: dv };
     }
 
@@ -820,6 +825,10 @@
           if (s && (this.defOf(s).effects || []).some((x) => x.code === 'AURA_ENEMY_ATK')) atkWhy.push(this.defOf(s).name + ': −1 Angriff');
         });
       }
+      this._kwAtkBonus(inst, owner).why.forEach((w) => atkWhy.push(w));
+      if (inst.flags && inst.flags.kwSich) defWhy.push('Sicherung: +' + inst.flags.kwSich + ' Verteidigung');
+      if (inst.flags && inst.flags.kwZaeh) defWhy.push('Zähigkeit: +' + inst.flags.kwZaeh + ' Verteidigung');
+      if (inst.flags && inst.flags.kwOver) defWhy.push('Überlast: +1 Verteidigung');
       return {
         atk: now.atk,
         def: now.def,
@@ -876,7 +885,7 @@
         }
         const tPos = (secBase[t.section] || 0) + t.row;
         const dist = Math.abs(tPos - attPos);
-        if (dist <= Math.floor((range - 1) / 2)) tight.push(t);
+        if (dist <= Math.floor((range - 1) / 2) + (this._kw(att, 'Fernschuss') ? 1 : 0)) tight.push(t);
       });
       if (canSupport) {
         (enemy.support || []).forEach((s, i) => {
@@ -1049,6 +1058,7 @@
           case 'DOK_SHIFT': return this._actDokShift(pid, a);
           case 'HEAL_ARMORED': return this._actHealArmored(pid, a);
           case 'UEBERSCHUSS': return this._actUeberschuss(pid, a);
+          case 'KW_MOVE': return this._actKwMove(pid, a); // Schlüsselwort Stellungswechsel
           case 'CONCEDE': return this._end(pid === 0 ? 1 : 0, 'Aufgabe'); // Wert zurückgeben
           case 'PROPOSE_PEACE': // dieser Aktionstyp
             this.state.peaceOffer = pid; // Feld der Engine-Instanz
@@ -1069,6 +1079,7 @@
         return { ok: false, error: String(err.message || err) };
       } finally {
         if (this.state) this.state.seq = (this.state.seq || 0) + 1;
+        if (this.state && this.state.winner == null) { try { this._kwRecompute(); } catch (e) { /* Schlüsselwort-Neuberechnung darf Aktionen nicht brechen */ } }
       }
     }
 
@@ -1119,7 +1130,7 @@
         const picked = a.slot && a.slot.section != null && String(a.slot.section) !== ''
           ? { section: a.slot.section, row: Number(a.slot.row) }
           : null;
-        if (p.ap < cost) throw new Error('Nicht genug AP (' + p.ap + '/' + cost + ')');
+        if (p.ap < cost - (cost > 1 && this._kwReliefSlots(p).length ? 1 : 0)) throw new Error('Nicht genug AP (' + p.ap + '/' + cost + ')');
         const apBefore = p.ap;
         this.state.pending = this._sealPending({
           kind: 'deploy',
@@ -1251,13 +1262,22 @@
       const slot = a.slot; // unveränderliche Bindung in diesem Block
       if (!slot || !p.front[slot.section] || !(slot.row >= 0 && slot.row <= 2)) throw new Error('Ungültige Stellung');
       if (p.front[slot.section][slot.row]) throw new Error('Stellung belegt'); // Regelverstoß, Zug ungültig
-      const due = pend.paid ? 0 : (pend.cost != null ? pend.cost : this.costOf(this.defOf(card), p, null, card));
+      let due = pend.paid ? 0 : (pend.cost != null ? pend.cost : this.costOf(this.defOf(card), p, null, card));
+      const relief = this._kwReliefAt(p, slot.section, slot.row);
+      if (!pend.paid && relief && due > 1) due -= 1;
       if (!pend.paid && p.ap < due) throw new Error('Nicht genug AP (' + p.ap + '/' + due + ')');
+      if (relief) { delete p.flags.kwRelief[slot.section + slot.row]; if (!pend.paid) this._log('Ablösung: Einsatz auf ' + slot.section + (slot.row + 1) + ' kostet 1 AP weniger.'); }
+      const heranUsed = p.flags && p.flags.kwHeran === this.state.turn;
       p.hand = p.hand.filter((c) => c.uid !== card.uid); // Handkarten
       card.facedown = this.rules.deploy_protection ? false : !!pend.facedown; // verdeckte Lage
       card.summonedTurn = this.state.turn;
       this._applyDeployProtection(card); // Feld der Engine-Instanz
+      if (this._kw(card, 'Gefechtsbereit') && card.flags && card.flags.digInBonus) {
+        card.flags.noCombatUntil = null; card.flags.digInUntil = null; card.flags.digInBonus = 0;
+        card.def = Math.max(1, (card.def || 0) - 1); card.defMax = Math.max(1, (card.defMax || 0) - 1);
+      }
       p.front[slot.section][slot.row] = card; // nächster Schritt im Ablauf
+      if (heranUsed) p.flags.kwHeran = null;
       if (!pend.paid) {
         this._spend(p, due);
         pend.paid = due;
@@ -1283,6 +1303,9 @@
       this._applyMech(this.player(pid));
       this._applyFuehrung(this.player(pid));
       this._applyFlankDef(this.player(pid));
+      if (this._kw(card, 'Heranführung')) { p.flags.kwHeran = this.state.turn; this._log('Heranführung: Die nächste Einheit in diesem Zug kostet 1 AP weniger (mind. 1).'); }
+      if (this._kw(card, 'Zuteilung')) { this._draw(p, 1); this._log('Zuteilung: ' + p.name + ' zieht 1 Karte.'); }
+      this._kwRecompute();
       return { ok: true };
     }
 
@@ -1290,6 +1313,7 @@
     _actTarget(pid, a) { // Ziel aufnehmen oder Kampf lösen
       const pend = this.state.pending; // offene Wahl des Spielers
       if (!pend || pend.player !== pid) throw new Error('Kein Ziel offen');
+      if (pend.kind === 'kw-swap') return this._resolveKwSwap(pid, a.target);
       if (pend.kind === 'command-atk') return this._resolveCommandStep(pid, a.target);
       if (pend.kind === 'last-stand') return this._resolveLastStand(pid, a.target);
       if (pend.kind === 'cover-seek') return this._resolveCoverSeek(pid, a.target);
@@ -3656,7 +3680,7 @@
       const attPos = (secBase[fromLoc.section] || 1) + fromLoc.row;
       const tPos = (secBase[toLoc.section] || 0) + toLoc.row;
       const dist = Math.abs(tPos - attPos);
-      return dist <= Math.floor((range - 1) / 2);
+      return dist <= Math.floor((range - 1) / 2) + (this._kw(fromLoc.inst, 'Fernschuss') ? 1 : 0);
     }
 
     _counterDamageAllowed(aLoc, tLoc, dmgToA) {
@@ -3856,6 +3880,7 @@
       if (loc.inst.attackUsed || (loc.inst.flags && loc.inst.flags.exhausted)) throw new Error('Keine Aktionen mehr in diesem Zug');
       if (!this._canAct(loc.inst, pid)) throw new Error('Handelt erst im nächsten eigenen Zug');
       if (loc.inst.flags.noAttack) throw new Error('Kann nicht angreifen');
+      if (loc.inst.flags.kwNoAtkTurn === this.state.turn) throw new Error('Stellungswechsel: greift in diesem Zug nicht an');
       this._spend(p, this.rules.attack_ap);
       const adef = this.defOf(loc.inst);
       this._evt("select", adef, adef.name + " wird ausgewählt.");
@@ -4007,6 +4032,9 @@
         A.defMax = (A.defMax || A.def) + adv;
       }
       let dmgToA = tLoc.zone === 'front' ? statsT.atk : 0;
+      if (this._kw(A, 'Durchschlag')) dmgToT += 1;
+      if (this._kw(A, 'Nachsetzen') && T.flags && T.flags.kwHitTurn === this.state.turn) dmgToT += 2;
+      if (this._kw(A, 'Hinterhalt') && A.flags && A.flags.kwAmbushReady) { dmgToT += 2; A.flags.kwAmbushReady = false; this._log('Hinterhalt: +2 ATK beim ersten Angriff nach dem Aufdecken.'); }
       if ((this.defOf(A).effects || []).some((x) => x.code === 'AMBUSH') && !fog) dmgToT += 1;
       if ((this.defOf(A).effects || []).some((x) => x.code === 'FEUERUEBERLEGENHEIT') && !hasTag(this.defOf(T), 'gepanzert')) dmgToT += 1;
       if ((this.defOf(A).effects || []).some((x) => x.code === 'VS_INF') && isInfantry(this.defOf(T))) dmgToT += 2;
@@ -4089,6 +4117,8 @@
       this._applyCombatHits(aLoc, tLoc, dmgToT, dmgToA, !!fog);
       A.attackUsed = true;
       A.flags.exhausted = true;
+      if (!this.state.kwAtk || this.state.kwAtk.turn !== this.state.turn) this.state.kwAtk = { turn: this.state.turn, uids: [] };
+      if (A.owner === this.state.active) this.state.kwAtk.uids.push(A.uid);
       this._evt('attack', aDef, aDef.name + ' richtet ' + dmgToT + ' Schaden an' +
         (dmgToA ? ', erhält ' + dmgToA : '') + '.');
 
@@ -4264,8 +4294,23 @@
         }
         return; // nächster Schritt im Ablauf
       }
+      if (!(meta && meta.tag === 'abschirmung') && locOwn && locOwn.zone === 'front') {
+        const guard = this._neighbors(locOwn.player, locOwn.section, locOwn.row).find((n) => n.inst && n.inst.uid !== inst.uid && !n.inst.facedown &&
+          this._kw(n.inst, 'Abschirmung') && !(n.inst.flags && n.inst.flags.kwShieldTurn === this.state.turn) && (n.inst.def || 0) > 1);
+        if (guard) {
+          guard.inst.flags = guard.inst.flags || {};
+          guard.inst.flags.kwShieldTurn = this.state.turn;
+          amount -= 1;
+          this._log('Abschirmung: ' + this.defOf(guard.inst).name + ' fängt 1 Schaden für ' + def.name + ' ab.');
+          this._damage(guard.inst, 1, { tag: 'abschirmung' });
+          if (this._isDead(guard.inst)) this._destroy(this.findInst(guard.inst.uid));
+          if (amount <= 0) return;
+        }
+      }
       inst.def -= amount;
       if (inst.def < 0) inst.def = 0;
+      inst.flags = inst.flags || {};
+      inst.flags.kwHitTurn = this.state.turn;
       this._log(def.name + ' nimmt ' + amount + ' Schaden → V ' + inst.def + '/' + inst.defMax + '.'); // Zeile ins Protokoll
       if (inst.def > 0) this._fireDamageTriggers(inst, amount);
       // equipment react
@@ -4304,6 +4349,14 @@
         this._draw(loc.player, 1);
       }
       if (loc && loc.zone === 'front' && loc.inst && this.defOf(loc.inst).typ === 'Einheit') {
+        loc.player.flags = loc.player.flags || {};
+        loc.player.flags.kwFallen = (loc.player.flags.kwFallen || 0) + 1;
+        if (this._kw(loc.inst, 'Ablösung') && loc.section && loc.row != null) {
+          loc.player.flags.kwRelief = loc.player.flags.kwRelief || {};
+          const ownTurn = this.state.active === loc.player.id;
+          loc.player.flags.kwRelief[loc.section + loc.row] = { until: this.state.turn + (ownTurn ? 2 : 1) };
+          this._log('Ablösung: Feld ' + loc.section + (loc.row + 1) + ' ist markiert.');
+        }
         const killer = this.opponent(loc.player.id);
         killer.flags.oppUnitDead = (killer.flags.oppUnitDead || 0) + 1;
         if (this.state._pactAtk) {
@@ -4940,6 +4993,126 @@
     }
 
     // Zugwechsel: AP, ziehen, Angriffe zurücksetzen.
+    /* ===== Schlüsselwörter (allgemeines Vokabular, def.keywords) ===== */
+    _kw(inst, word) {
+      if (!inst) return false;
+      const d = this.defOf(inst);
+      return !!(d && Array.isArray(d.keywords) && d.keywords.indexOf(word) >= 0);
+    }
+
+    _kwAtkBonus(inst, owner) {
+      const out = { total: 0, why: [] };
+      if (!inst || !owner) return out;
+      const loc = this.findInst(inst.uid);
+      if (!loc || loc.zone !== 'front') return out;
+      const add = (n, w) => { out.total += n; out.why.push(w); };
+      if (this._kw(inst, 'Überlast')) add(2, 'Überlast: +2 Angriff');
+      if (this._kw(inst, 'Erbitterung')) { const n = Math.min(3, Number(owner.flags && owner.flags.kwFallen || 0)); if (n) add(n, 'Erbitterung: +' + n + ' Angriff'); }
+      if (this._kw(inst, 'Staffelangriff') && this.state.active === owner.id && this.state.kwAtk && this.state.kwAtk.turn === this.state.turn &&
+          this.state.kwAtk.uids.some((u) => u !== inst.uid)) add(1, 'Staffelangriff: +1 Angriff');
+      return out;
+    }
+
+    _kwReliefAt(p, section, row) {
+      const m = p && p.flags && p.flags.kwRelief && p.flags.kwRelief[section + row];
+      return !!(m && this.state.turn <= m.until && !(p.front[section] && p.front[section][row]));
+    }
+
+    _kwReliefSlots(p) {
+      if (!p || !p.flags || !p.flags.kwRelief) return [];
+      return Object.keys(p.flags.kwRelief).filter((k) => this._kwReliefAt(p, k[0], Number(k.slice(1))));
+    }
+
+    /* Laufende Neuberechnung nach jeder Aktion: Sicherung, Zähigkeit, Überlast-DEF,
+       Ablösungs-Markierungen, Hinterhalt-/Platztausch-Erkennung beim Aufdecken. */
+    _kwRecompute() {
+      if (!this.state || !this.state.players) return;
+      this.state.players.forEach((p) => {
+        p.flags = p.flags || {};
+        if (p.flags.kwRelief) Object.keys(p.flags.kwRelief).forEach((k) => {
+          const m = p.flags.kwRelief[k];
+          if (!m || this.state.turn > m.until || (p.front[k[0]] && p.front[k[0]][Number(k.slice(1))])) delete p.flags.kwRelief[k];
+        });
+        const fl = this.frontList(p);
+        const fallen = Math.min(3, Number(p.flags.kwFallen || 0));
+        fl.forEach((l) => {
+          const inst = l.inst; inst.flags = inst.flags || {};
+          if (inst.def == null) return;
+          const sich = fl.filter((o) => o.inst.uid !== inst.uid && o.section === l.section && !o.inst.facedown && this._kw(o.inst, 'Sicherung')).length;
+          const zaeh = this._kw(inst, 'Zähigkeit') ? fallen : 0;
+          const over = this._kw(inst, 'Überlast') ? 1 : 0;
+          const delta = (sich - (inst.flags.kwSich || 0)) + (zaeh - (inst.flags.kwZaeh || 0)) + (over - (inst.flags.kwOver || 0));
+          if (delta) {
+            inst.defMax = Math.max(1, (inst.defMax == null ? inst.def : inst.defMax) + delta);
+            inst.def = delta > 0 ? inst.def + delta : Math.max(1, Math.min(inst.def + delta, inst.defMax));
+          }
+          inst.flags.kwSich = sich; inst.flags.kwZaeh = zaeh; inst.flags.kwOver = over;
+          if (inst.facedown) { inst.flags.kwHidden = true; }
+          else if (inst.flags.kwHidden) {
+            inst.flags.kwHidden = false;
+            if (this._kw(inst, 'Hinterhalt')) inst.flags.kwAmbushReady = true;
+            if (this._kw(inst, 'Platztausch')) { p.flags.kwSwap = p.flags.kwSwap || []; if (p.flags.kwSwap.indexOf(inst.uid) < 0) p.flags.kwSwap.push(inst.uid); }
+          }
+        });
+      });
+      // Platztausch-Angebot nur, wenn der Besitzer am Zug ist und nichts anderes offen ist.
+      const act = this.player(this.state.active);
+      if (!this.state.pending && act && act.flags && act.flags.kwSwap && act.flags.kwSwap.length) {
+        while (act.flags.kwSwap.length) {
+          const uid = act.flags.kwSwap.shift();
+          const loc = this.findInst(uid);
+          if (!loc || loc.zone !== 'front' || loc.inst.facedown) continue;
+          const hid = this.frontList(act).filter((l) => l.inst.facedown && l.inst.uid !== uid);
+          if (!hid.length) continue;
+          this.state.pending = this._sealPending({
+            kind: 'kw-swap', player: act.id, uid: uid,
+            prompt: 'Platztausch: ' + this.defOf(loc.inst).name + ' mit einer eigenen verdeckten Einheit tauschen?',
+            choices: hid.map((l) => ({ target: l.inst.uid, label: 'Verdeckte Einheit auf ' + l.section + (l.row + 1) })).concat([{ target: 'kw:none', label: 'Nicht tauschen' }])
+          });
+          break;
+        }
+      }
+    }
+
+    _resolveKwSwap(pid, target) {
+      const pend = this.state.pending;
+      this.state.pending = null;
+      if (target === 'kw:none' || !target) { this._log('Platztausch: kein Tausch.'); return { ok: true }; }
+      const a = this.findInst(pend.uid), b = this.findInst(target);
+      if (!a || !b || a.zone !== 'front' || b.zone !== 'front' || a.player.id !== pid || b.player.id !== pid || !b.inst.facedown) throw new Error('Platztausch nicht möglich');
+      const p = a.player;
+      p.front[a.section][a.row] = b.inst;
+      p.front[b.section][b.row] = a.inst;
+      this._log('Platztausch: ' + this.defOf(a.inst).name + ' tauscht mit einer verdeckten Einheit.');
+      this._applyMech(p); this._applyFuehrung(p); this._applyFlankDef(p);
+      return { ok: true };
+    }
+
+    kwMoveSlots(uid) {
+      const loc = this.findInst(uid);
+      if (!loc || loc.zone !== 'front' || loc.inst.facedown || !this._kw(loc.inst, 'Stellungswechsel')) return [];
+      if (loc.inst.flags && loc.inst.flags.kwMovedTurn === this.state.turn) return [];
+      return adjacentSections(loc.section).filter((s) => loc.player.front[s] && !loc.player.front[s][loc.row]).map((s) => ({ section: s, row: loc.row }));
+    }
+
+    _actKwMove(pid, a) {
+      if (this.state.active !== pid || this.state.pending) throw new Error('Stellungswechsel nur im eigenen Zug ohne offene Wahl');
+      const loc = this.findInst(a.uid);
+      if (!loc || loc.player.id !== pid) throw new Error('Einheit ungültig');
+      const slots = this.kwMoveSlots(a.uid);
+      const want = a.slot && slots.find((s) => s.section === a.slot.section && s.row === Number(a.slot.row));
+      if (!want) throw new Error('Kein freies benachbartes Feld derselben Reihe');
+      const p = loc.player;
+      p.front[loc.section][loc.row] = null;
+      p.front[want.section][want.row] = loc.inst;
+      loc.inst.flags = loc.inst.flags || {};
+      loc.inst.flags.kwMovedTurn = this.state.turn;
+      loc.inst.flags.kwNoAtkTurn = this.state.turn;
+      this._log('Stellungswechsel: ' + this.defOf(loc.inst).name + ' wechselt auf ' + want.section + (want.row + 1) + ' und greift in diesem Zug nicht an.');
+      this._applyMech(p); this._applyFuehrung(p); this._applyFlankDef(p);
+      return { ok: true };
+    }
+
     _actEnd(pid) {
       if (this.state.active !== pid) throw new Error('Nicht dein Zug');
       if (this.state.pending && this.state.pending.kind !== 'end-discard') throw new Error('Erst Ziel wählen');
@@ -4971,6 +5144,12 @@
             this._log('Blitzkrieg-Sperre bei ' + pl.name + ' endet.');
           }
         }
+      });
+      this.frontList(this.player(pid)).forEach((l) => {
+        if (!this._kw(l.inst, 'Überlast') || l.inst.def == null) return;
+        l.inst.def = Math.max(0, l.inst.def - 1); // Überlast: nicht verhinderbar
+        this._log('Überlast: ' + this.defOf(l.inst).name + ' erleidet 1 Schaden → V ' + l.inst.def + '.');
+        if (this._isDead(l.inst)) this._destroy(l);
       });
       const cur = this.player(pid);
       this.frontList(cur).forEach((l) => {

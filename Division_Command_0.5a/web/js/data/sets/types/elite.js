@@ -93,7 +93,11 @@ window.DC_SET_TYPES["Elite"] = [
     "flavor": "Wir sind die Front!",
     "image": "elite/A062.jpg",
     "max_copies": 2,
-    "collector": "A062"
+    "collector": "A062",
+    "keywords": [
+      "Nachsetzen",
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_eh_sniper",
@@ -129,7 +133,11 @@ window.DC_SET_TYPES["Elite"] = [
     "flavor": "Feuer! Feuer. Treffer! Treffer.",
     "image": "elite/A064.jpg",
     "max_copies": 2,
-    "collector": "A064"
+    "collector": "A064",
+    "keywords": [
+      "Hinterhalt",
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_eh_koloss",
@@ -163,7 +171,10 @@ window.DC_SET_TYPES["Elite"] = [
     "flavor": "Ein Koloss fällt nicht. Er entscheidet sich zu knien.",
     "image": "elite/A065.jpg",
     "max_copies": 2,
-    "collector": "A065"
+    "collector": "A065",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_konzernsekundant_150",
@@ -186,7 +197,10 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B150.jpg",
     "max_copies": 1,
     "collector": "B150",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_werkmeister_front_151",
@@ -209,7 +223,11 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B151.jpg",
     "max_copies": 1,
     "collector": "B151",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zähigkeit",
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_kriegsaktie_152",
@@ -256,7 +274,11 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B108.jpg",
     "max_copies": 1,
     "collector": "B108",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Erbitterung",
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_eifererzug_109",
@@ -274,13 +296,16 @@ window.DC_SET_TYPES["Elite"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+2 ATK. Am Zugende erleidet diese Einheit 1 Schaden.",
+    "text": "+2 ATK.",
     "effects": [],
     "flavor": "Voss prüft, ob sie lau geworden sind.",
     "image": "elite/B109.jpg",
     "max_copies": 1,
     "collector": "B109",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Überlast"
+    ]
   },
   {
     "id": "dc_b_masskommandant_110",
@@ -329,7 +354,10 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B624.jpg",
     "max_copies": 1,
     "collector": "B624",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_kronmarschall_625",
@@ -354,7 +382,11 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B625.jpg",
     "max_copies": 1,
     "collector": "B625",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Durchschlag",
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_veteranenrat_626",
@@ -379,7 +411,10 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B626.jpg",
     "max_copies": 1,
     "collector": "B626",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_optimat_384",
@@ -429,7 +464,11 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B385.jpg",
     "max_copies": 1,
     "collector": "B385",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Nachsetzen",
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_masskommandant_386",
@@ -500,7 +539,10 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B808.jpg",
     "max_copies": 1,
     "collector": "B808",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_werkhof_nov_809",
@@ -523,7 +565,10 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B809.jpg",
     "max_copies": 1,
     "collector": "B809",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_ivo_vel_867",
@@ -546,7 +591,11 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B867.jpg",
     "max_copies": 1,
     "collector": "B867",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Erbitterung",
+      "Überlast"
+    ]
   },
   {
     "id": "dc_b_nila_still_868",
@@ -563,13 +612,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: ziehe 1. Einheiten hier +1 DEF; einmal/Zug: negiere 1 Schaden, wenn mindestens eine Einheit verdeckt liegt.",
+    "text": "Einmal/Zug: negiere 1 Schaden, wenn mindestens eine Einheit verdeckt liegt.",
     "effects": [],
     "flavor": "Nila Still. Stillhalten ist Lage.",
     "image": "elite/B868.jpg",
     "max_copies": 1,
     "collector": "B868",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung",
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_siegelmeister_869",
@@ -592,7 +645,11 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B869.jpg",
     "max_copies": 1,
     "collector": "B869",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung",
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_schreiberin_kal_927",
@@ -615,7 +672,10 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B927.jpg",
     "max_copies": 1,
     "collector": "B927",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_hauptmann_kader_928",
@@ -632,13 +692,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: ziehe 1. Einheiten hier +1 DEF. Einmal/Zug: eine Einheit, die diesen Zug Schaden verursacht hat, +1 ATK.",
+    "text": "Einmal/Zug: eine Einheit, die diesen Zug Schaden verursacht hat, +1 ATK.",
     "effects": [],
     "flavor": "Hauptmann Kader. Führt Waffen. Schreibt keine Liste.",
     "image": "elite/B928.jpg",
     "max_copies": 1,
     "collector": "B928",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung",
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_haus_still_929",
@@ -678,13 +742,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: heile 1 ODER ziehe 1; Einheiten hier +1 DEF.",
+    "text": "Einmal/Zug: heile 1 ODER ziehe 1.",
     "effects": [],
     "flavor": "Marei führt den Staat. Nicht den Feldzug als Ruhm.",
     "image": "elite/B747.jpg",
     "max_copies": 1,
     "collector": "B747",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Sicherung",
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_tomas_lenn_748",
@@ -701,13 +769,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: ziehe 1; nächste Einheit kostet 1 weniger (min. 1).",
+    "text": "",
     "effects": [],
     "flavor": "Lenn bremst und trägt mit.",
     "image": "elite/B748.jpg",
     "max_copies": 1,
     "collector": "B748",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung",
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_zeughausmeister_749",
@@ -753,7 +825,10 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B189.jpg",
     "max_copies": 1,
     "collector": "B189",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_lucs_sitz_190",
@@ -776,7 +851,11 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B190.jpg",
     "max_copies": 1,
     "collector": "B190",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag",
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_offener_weg_191",
@@ -799,7 +878,11 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B191.jpg",
     "max_copies": 1,
     "collector": "B191",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Sicherung",
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_lotte_knoten_687",
@@ -839,13 +922,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: ziehe 1; Einheiten hier kosten diesen Zug 1 weniger (min. 1).",
+    "text": "Einheiten hier kosten diesen Zug 1 weniger (min. 1).",
     "effects": [],
     "flavor": "Hesse krönt keine Stadt. Auch nicht Sarun.",
     "image": "elite/B688.jpg",
     "max_copies": 1,
     "collector": "B688",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung",
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_karawanenmeister_689",
@@ -891,7 +978,11 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B567.jpg",
     "max_copies": 1,
     "collector": "B567",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Sicherung",
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_konrad_berst_568",
@@ -908,13 +999,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: decke 1 auf; Abschnitt +1 DEF.",
+    "text": "Beim Ausspielen: decke 1 auf.",
     "effects": [],
     "flavor": "Berst schreibt früher. Er stimmt nicht ab.",
     "image": "elite/B568.jpg",
     "max_copies": 1,
     "collector": "B568",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Sicherung",
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_stabsoffizier_569",
@@ -937,7 +1032,11 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B569.jpg",
     "max_copies": 1,
     "collector": "B569",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Sicherung",
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_ada_mar_507",
@@ -960,7 +1059,11 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B507.jpg",
     "max_copies": 1,
     "collector": "B507",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Heranführung",
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_ren_zoll_508",
@@ -977,13 +1080,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: ziehe 1; Abschnitt +1 DEF; Feind kann dich nicht als Unterstützung stehlen.",
+    "text": "Feind kann dich nicht als Unterstützung stehlen.",
     "effects": [],
     "flavor": "Zweigt ab. Lässt den Fremden nicht an die Mole.",
     "image": "elite/B508.jpg",
     "max_copies": 1,
     "collector": "B508",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung",
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_hafenmeister_509",
@@ -1006,7 +1113,10 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B509.jpg",
     "max_copies": 1,
     "collector": "B509",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Heranführung"
+    ]
   },
   {
     "id": "dc_b_jona_leserbach_228",
@@ -1075,7 +1185,10 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B230.jpg",
     "max_copies": 1,
     "collector": "B230",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_alm_ser_327",
@@ -1098,7 +1211,10 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B327.jpg",
     "max_copies": 1,
     "collector": "B327",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_pia_lueck_328",
@@ -1167,7 +1283,10 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B267.jpg",
     "max_copies": 1,
     "collector": "B267",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_retter_grenz_268",
@@ -1190,7 +1309,11 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B268.jpg",
     "max_copies": 1,
     "collector": "B268",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zähigkeit",
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_ahnenschmied_269",
@@ -1253,13 +1376,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: decke 2 auf; Abschnitt +1 DEF.",
+    "text": "Beim Ausspielen: decke 2 auf.",
     "effects": [],
     "flavor": "Unterschrift neben der Zahl aushängen.",
     "image": "elite/B448.jpg",
     "max_copies": 1,
     "collector": "B448",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Sicherung",
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_fachoffizier_449",
@@ -1282,6 +1409,10 @@ window.DC_SET_TYPES["Elite"] = [
     "image": "elite/B449.jpg",
     "max_copies": 1,
     "collector": "B449",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen",
+      "Heranführung"
+    ]
   }
 ];

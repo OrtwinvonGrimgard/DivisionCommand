@@ -7,6 +7,7 @@
 const fs = require('fs'), path = require('path');
 const OUT = path.join(__dirname, '..', '..', 'Division_Command_0.5a', 'web', 'js', 'data', 'sets', 'types', 'nation_pools.js');
 
+const KW = (() => { const g = {}; require('vm').runInNewContext(fs.readFileSync(path.join(__dirname, '../../Division_Command_0.5a/web/js/data/keywords.js'), 'utf8'), { window: g }); return g.DC_KEYWORDS; })();
 const KIND = {
   I: { typ: 'Einheit', klasse: 'Infanterie', tags: ['einheit', 'infanterie'] },
   P: { typ: 'Einheit', klasse: 'Panzer', tags: ['einheit', 'panzer', 'kette', 'gepanzert'] },
@@ -28,15 +29,16 @@ const UNIT = {
   any: () => ({ fx: [{ code: 'ATTACK_ANY_FRONT' }], t: 'Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.', r: ['Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.', 'Die Einheit zählt für alle Regeln als Artillerie.'] }),
   sup: () => ({ fx: [{ code: 'ATTACK_SUPPORT' }], t: 'Darf auch gegnerische Unterstützungen angreifen.', r: ['Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.'] }),
   scout: () => ({ fx: [{ code: 'AUFKLAERUNG', param: { n: 1, onEnter: true } }], t: 'Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.', r: ['Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.', 'Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.'] }),
-  hide: () => ({ fx: [{ code: 'RELOCATE_HIDE' }], t: 'Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.', r: ['Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.', 'Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.'] }),
+  hide: () => ({ fx: [{ code: 'RELOCATE_HIDE' }], t: 'Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.', r: ['Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.', 'Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.'] }),
   flank: () => ({ fx: [{ code: 'FLANK_DEF' }], t: 'Benachbarte eigene Fronteinheiten +2 DEF.', r: ['Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. ' + NBR + ' Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).'] }),
   mech: () => ({ fx: [{ code: 'MECH_AURA' }], t: 'Benachbarte eigene Infanterie +1 DEF.', r: ['Begleitschutz (solange diese Einheit steht): Jede benachbarte eigene Infanterie hat +1 DEF. ' + NBR + ' Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).'] }),
   lead: () => ({ fx: [{ code: 'FUEHRUNG_V' }], t: '+2 DEF, solange eine benachbarte eigene gepanzerte Einheit steht.', r: ['Verbund: Diese Einheit hat +2 DEF, solange mindestens eine benachbarte eigene Einheit gepanzert ist (Panzer/Kette). ' + NBR + ' Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).'] }),
   vsinf: () => ({ fx: [{ code: 'VS_INF' }], t: 'Angriffe gegen Infanterie: +2 Schaden.', r: ['Greift diese Einheit eine Infanterie an, verursacht sie 2 Schaden zusätzlich zu ihrem ATK. Der Gegenschlag des Ziels bleibt unverändert.'] }),
   ign: (n) => ({ fx: [{ code: 'IGNORE_DEF', param: { ignore_def: +n } }], t: 'Angriffe gegen gepanzerte Ziele: +' + n + ' Schaden.', r: ['Panzerbrechend: Greift diese Einheit ein gepanzertes Ziel an (Panzer, Kettenfahrzeuge), verursacht sie ' + n + ' Schaden zusätzlich zu ihrem ATK.'] }),
   fire: () => ({ fx: [{ code: 'FEUERUEBERLEGENHEIT' }], t: 'Angriffe gegen ungepanzerte Ziele: +1 Schaden.', r: ['Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.'] }),
-  ambush: () => ({ fx: [{ code: 'AMBUSH' }], t: 'Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.', r: ['Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.', 'Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.'] }),
+  ambush: () => ({ fx: [{ code: 'AMBUSH' }], t: 'Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.', r: ['Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.', 'Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.'] }),
   minus: () => ({ fx: [{ code: 'SCHADEN_MINUS' }], t: 'Jeder Schaden an dieser Einheit −2.', r: ['Schwere Panzerung: Jeder einzelne Schaden, den diese Einheit erleidet (Kampf, Soforteinsatz, Effekt), wird um 2 verringert, mindestens auf 0.'] }),
+  kw: (w) => { if (!KW[w]) throw new Error('Unbekanntes Schlüsselwort ' + w); return { fx: [], kw: [w], t: '', r: [] }; },
   peek: () => ({ fx: [{ code: 'HAND_PEEK', param: { n: 2 } }], t: 'Beim Ausspielen: sieh dir 2 gegnerische Handkarten an.', r: ['Beim Ausspielen: Hat der Gegner Handkarten, wählst du bis zu 2 davon (verdeckt) und siehst sie dir an. Die Karten bleiben auf seiner Hand; nur du erfährst sie.'] }),
 };
 // ---- Soforteinsatz-Bausteine: o = eigenes Ziel, h = gegnerisches Ziel, n = ohne Ziel, s = Abschnitt
@@ -94,8 +96,10 @@ function build(nation, short, line, idx) {
     if (sides.size > 1) throw new Error(name + ': gemischte Zielseiten ' + [...sides]);
   }
   if ((kind.typ === 'Ausrüstung' || kind.typ === 'Unterstützung') && !parts.length) throw new Error(name + ': ohne Effekt');
-  const text = parts.length ? parts.map((p) => p.t).join(' ') : 'Keine Sonderfähigkeit.';
-  const rules = parts.length ? [].concat(...parts.map((p) => p.r)) : ['Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.'];
+  const keywords = [].concat(...parts.map((p) => p.kw || []));
+  const own = parts.filter((p) => !p.kw);
+  const text = own.length ? own.map((p) => p.t).join(' ') : (keywords.length ? '' : 'Keine Sonderfähigkeit.');
+  const rules = own.length ? [].concat(...own.map((p) => p.r)) : (keywords.length ? [] : ['Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.']);
   const tags = kind.tags.slice();
   if (unit && parts.some((p) => p.fx.some((f) => f.code === 'ATTACK_ANY_FRONT')) && tags.indexOf('artillerie') < 0) tags.push('artillerie');
   const c = {
@@ -106,6 +110,7 @@ function build(nation, short, line, idx) {
   if (!c.rarity) throw new Error(name + ': Seltenheit ' + r);
   if (kind.klasse) c.klasse = kind.klasse;
   if (unit) { c.atk = +atk; c.def = +def; c.verdeckt_ok = true; }
+  if (keywords.length) { if (!unit) throw new Error(name + ': Schlüsselwörter nur auf Einheiten'); if (keywords.length > 2) throw new Error(name + ': max. 2 Schlüsselwörter'); c.keywords = keywords; }
   return c;
 }
 function main() {

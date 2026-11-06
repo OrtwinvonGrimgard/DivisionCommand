@@ -7,14 +7,15 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Paragraphenzug
 `dc_np_steinmark_paragraphenzug` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
+
 - Effektcodes: –
 - *Erst die Vorschrift, dann der Graben.*
 
 ### Normschützen
 `dc_np_steinmark_normschuetzen` · Einheit · Bronze · 1 AP
 
+- **Erbitterung** (Hat +1 ATK für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
 - Kurztext: Angriffe gegen ungepanzerte Ziele: +1 Schaden.
 - Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: FEUERUEBERLEGENHEIT
@@ -23,6 +24,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Begleitzug Freigabe
 `dc_np_steinmark_begleitzug_freigabe` · Einheit · Bronze · 2 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Benachbarte eigene Infanterie +1 DEF.
 - Begleitschutz (solange diese Einheit steht): Jede benachbarte eigene Infanterie hat +1 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: MECH_AURA
@@ -31,6 +33,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Akteneinsichtstrupp
 `dc_np_steinmark_akteneinsichtstrupp` · Einheit · undefined · 2 AP
 
+- **Ablösung** (Wird diese Einheit zerstört, kostet die nächste eigene Einheit, die du auf dasselbe Feld setzt, 1 AP weniger (mindestens 1), bis das Feld wieder besetzt wurde oder bis zum Ende deines nächsten Zugs, was zuerst eintritt. Höchstens eine solche Markierung pro Feld.)
 - Kurztext: Beim Ausspielen: sieh dir 2 gegnerische Handkarten an.
 - Beim Ausspielen: Hat der Gegner Handkarten, wählst du bis zu 2 davon (verdeckt) und siehst sie dir an. Die Karten bleiben auf seiner Hand; nur du erfährst sie.
 - Effektcodes: HAND_PEEK
@@ -63,6 +66,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Bezirkskette
 `dc_np_steinmark_bezirkskette` · Einheit · Bronze · 3 AP
 
+- **Ablösung** (Wird diese Einheit zerstört, kostet die nächste eigene Einheit, die du auf dasselbe Feld setzt, 1 AP weniger (mindestens 1), bis das Feld wieder besetzt wurde oder bis zum Ende deines nächsten Zugs, was zuerst eintritt. Höchstens eine solche Markierung pro Feld.)
 - Kurztext: Angriffe gegen gepanzerte Ziele: +1 Schaden.
 - Panzerbrechend: Greift diese Einheit ein gepanzertes Ziel an (Panzer, Kettenfahrzeuge), verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: IGNORE_DEF
@@ -71,6 +75,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Freigabewagen
 `dc_np_steinmark_freigabewagen` · Einheit · undefined · 4 AP
 
+- **Ablösung** (Wird diese Einheit zerstört, kostet die nächste eigene Einheit, die du auf dasselbe Feld setzt, 1 AP weniger (mindestens 1), bis das Feld wieder besetzt wurde oder bis zum Ende deines nächsten Zugs, was zuerst eintritt. Höchstens eine solche Markierung pro Feld.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -79,14 +84,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Prüfstandkeil
 `dc_np_steinmark_pruefstandkeil` · Einheit · Bronze · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Ablösung** (Wird diese Einheit zerstört, kostet die nächste eigene Einheit, die du auf dasselbe Feld setzt, 1 AP weniger (mindestens 1), bis das Feld wieder besetzt wurde oder bis zum Ende deines nächsten Zugs, was zuerst eintritt. Höchstens eine solche Markierung pro Feld.)
+
 - Effektcodes: –
 - *Hundert Stunden Prüfstand, dann erst Front.*
 
 ### Bundesschild Neun
 `dc_np_steinmark_bundesschild_neun` · Einheit · Gold · 5 AP
 
+- **Ablösung** (Wird diese Einheit zerstört, kostet die nächste eigene Einheit, die du auf dasselbe Feld setzt, 1 AP weniger (mindestens 1), bis das Feld wieder besetzt wurde oder bis zum Ende deines nächsten Zugs, was zuerst eintritt. Höchstens eine solche Markierung pro Feld.)
+- **Zähigkeit** (Hat +1 DEF für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
 - Kurztext: Jeder Schaden an dieser Einheit −2.
 - Schwere Panzerung: Jeder einzelne Schaden, den diese Einheit erleidet (Kampf, Soforteinsatz, Effekt), wird um 2 verringert, mindestens auf 0.
 - Effektcodes: SCHADEN_MINUS
@@ -114,6 +121,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Normmörser
 `dc_np_steinmark_normmoerser` · Einheit · Bronze · 2 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -123,6 +131,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Messbatterie Grenzstein
 `dc_np_steinmark_messbatterie_grenzstein` · Einheit · Bronze · 3 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -133,6 +142,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Dreischlüssel-Haubitze
 `dc_np_steinmark_dreischluessel_haubitze` · Einheit · Gold · 5 AP
 
+- **Fernschuss** (Hat +1 Reichweite.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -152,6 +162,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Lagebildmelder
 `dc_np_steinmark_lagebildmelder` · Einheit · Bronze · 2 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -161,10 +172,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Grenzbeobachter
 `dc_np_steinmark_grenzbeobachter` · Einheit · undefined · 2 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: AUFKLAERUNG, RELOCATE_HIDE
 - *Sieht, meldet, verschwindet im Protokoll.*
@@ -349,14 +361,15 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Optimierter Stoßtrupp
 `dc_np_karsk_optimierter_stosstrupp` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
+
 - Effektcodes: –
 - *Nerven verstärkt, Angst entfernt.*
 
 ### Filtergrenadiere
 `dc_np_karsk_filtergrenadiere` · Einheit · Bronze · 2 AP
 
+- **Erbitterung** (Hat +1 ATK für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
 - Kurztext: Angriffe gegen Infanterie: +2 Schaden.
 - Greift diese Einheit eine Infanterie an, verursacht sie 2 Schaden zusätzlich zu ihrem ATK. Der Gegenschlag des Ziels bleibt unverändert.
 - Effektcodes: VS_INF
@@ -365,8 +378,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Maßzug
 `dc_np_karsk_masszug` · Einheit · Bronze · 1 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
+
 - Effektcodes: –
 - *Leistung gemessen, Ergebnis geliefert.*
 
@@ -381,6 +394,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Durchbruchszug
 `dc_np_karsk_durchbruchszug` · Einheit · undefined · 3 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - Kurztext: Angriffe gegen Infanterie: +2 Schaden.
 - Greift diese Einheit eine Infanterie an, verursacht sie 2 Schaden zusätzlich zu ihrem ATK. Der Gegenschlag des Ziels bleibt unverändert.
 - Effektcodes: VS_INF
@@ -405,14 +419,15 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Keilspitze Karsk
 `dc_np_karsk_keilspitze_karsk` · Einheit · Bronze · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
+
 - Effektcodes: –
 - *Vorne ist der einzige Ort.*
 
 ### Durchbruchwagen
 `dc_np_karsk_durchbruchwagen` · Einheit · undefined · 4 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - Kurztext: Angriffe gegen gepanzerte Ziele: +2 Schaden.
 - Panzerbrechend: Greift diese Einheit ein gepanzertes Ziel an (Panzer, Kettenfahrzeuge), verursacht sie 2 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: IGNORE_DEF
@@ -421,16 +436,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Maßpanzer
 `dc_np_karsk_masspanzer` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
+
 - Effektcodes: –
 - *Genormt auf Leistung.*
 
 ### Leichter Stoßwagen
 `dc_np_karsk_leichter_stosswagen` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
+
 - Effektcodes: –
 - *Schnell durch, bevor die Lücke schließt.*
 
@@ -446,6 +461,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kurzfeuerwerfer
 `dc_np_karsk_kurzfeuerwerfer` · Einheit · Bronze · 2 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -484,6 +500,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Leistungsmesser
 `dc_np_karsk_leistungsmesser` · Einheit · Bronze · 1 AP
 
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -502,6 +519,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Stoßlotse
 `dc_np_karsk_stosslotse` · Einheit · undefined · 2 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -519,6 +537,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Unermüdliche
 `dc_np_karsk_unermuedliche` · Einheit · undefined · 4 AP
 
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
 - Kurztext: Jeder Schaden an dieser Einheit −2.
 - Schwere Panzerung: Jeder einzelne Schaden, den diese Einheit erleidet (Kampf, Soforteinsatz, Effekt), wird um 2 verringert, mindestens auf 0.
 - Effektcodes: SCHADEN_MINUS
@@ -687,16 +706,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Vorderste Welle
 `dc_np_theryn_vorderste_welle` · Einheit · Bronze · 1 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
+
 - Effektcodes: –
 - *Sie gehen voran, damit andere folgen.*
 
 ### Nachfolgende Welle
 `dc_np_theryn_nachfolgende_welle` · Einheit · Bronze · 1 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
+
 - Effektcodes: –
 - *Wo die erste fiel, steht die zweite.*
 
@@ -711,6 +730,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Bannerträger
 `dc_np_theryn_bannertraeger` · Einheit · undefined · 2 AP
 
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
 - Kurztext: Benachbarte eigene Infanterie +1 DEF.
 - Begleitschutz (solange diese Einheit steht): Jede benachbarte eigene Infanterie hat +1 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: MECH_AURA
@@ -719,6 +739,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Eiferer
 `dc_np_theryn_eiferer` · Einheit · Bronze · 2 AP
 
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
 - Kurztext: Angriffe gegen Infanterie: +2 Schaden.
 - Greift diese Einheit eine Infanterie an, verursacht sie 2 Schaden zusätzlich zu ihrem ATK. Der Gegenschlag des Ziels bleibt unverändert.
 - Effektcodes: VS_INF
@@ -727,6 +748,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Geweihte Linie
 `dc_np_theryn_geweihte_linie` · Einheit · undefined · 3 AP
 
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -743,30 +765,32 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Glaubenskette
 `dc_np_theryn_glaubenskette` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
+
 - Effektcodes: –
 - *Rollt im Gebet.*
 
 ### Sturmwagen
 `dc_np_theryn_sturmwagen` · Einheit · undefined · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
+
 - Effektcodes: –
 - *Für den einen Schlag.*
 
 ### Reliquienpanzer
 `dc_np_theryn_reliquienpanzer` · Einheit · Bronze · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
+
 - Effektcodes: –
 - *Geweiht und gepanzert.*
 
 ### Der Wagen des Rufes
 `dc_np_theryn_der_wagen_des_rufes` · Einheit · Gold · 5 AP
 
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
 - Kurztext: +2 DEF, solange eine benachbarte eigene gepanzerte Einheit steht.
 - Verbund: Diese Einheit hat +2 DEF, solange mindestens eine benachbarte eigene Einheit gepanzert ist (Panzer/Kette). Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FUEHRUNG_V
@@ -775,6 +799,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Sammelfeuer
 `dc_np_theryn_sammelfeuer` · Einheit · Bronze · 3 AP
 
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -784,6 +809,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Glockenbatterie
 `dc_np_theryn_glockenbatterie` · Einheit · Bronze · 2 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -811,6 +837,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ruf über das Feld
 `dc_np_theryn_ruf_ueber_das_feld` · Einheit · Gold · 5 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -821,6 +848,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Pilgerkundschafter
 `dc_np_theryn_pilgerkundschafter` · Einheit · Bronze · 1 AP
 
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -830,6 +858,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Glaubensmelder
 `dc_np_theryn_glaubensmelder` · Einheit · Bronze · 2 AP
 
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -839,6 +868,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Seher der Pflicht
 `dc_np_theryn_seher_der_pflicht` · Einheit · undefined · 2 AP
 
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
 - Kurztext: Beim Ausspielen: sieh dir 2 gegnerische Handkarten an.
 - Beim Ausspielen: Hat der Gegner Handkarten, wählst du bis zu 2 davon (verdeckt) und siehst sie dir an. Die Karten bleiben auf seiner Hand; nur du erfährst sie.
 - Effektcodes: HAND_PEEK
@@ -847,6 +877,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Sturmführer
 `dc_np_theryn_sturmfuehrer` · Einheit · undefined · 4 AP
 
+- **Erbitterung** (Hat +1 ATK für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
 - Kurztext: Angriffe gegen Infanterie: +2 Schaden.
 - Greift diese Einheit eine Infanterie an, verursacht sie 2 Schaden zusätzlich zu ihrem ATK. Der Gegenschlag des Ziels bleibt unverändert.
 - Effektcodes: VS_INF
@@ -1043,6 +1074,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Vertragssoldaten
 `dc_np_vael_vertragssoldaten` · Einheit · undefined · 3 AP
 
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
 - Kurztext: Angriffe gegen ungepanzerte Ziele: +1 Schaden.
 - Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: FEUERUEBERLEGENHEIT
@@ -1051,8 +1083,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Reparaturtrupp
 `dc_np_vael_reparaturtrupp` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
+
 - Effektcodes: –
 - *Repariert Rohre im Feuer.*
 
@@ -1067,22 +1099,23 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Fabrikpanzer Serie Neun
 `dc_np_vael_fabrikpanzer_serie_neun` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Zähigkeit** (Hat +1 DEF für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
+
 - Effektcodes: –
 - *Vom Band an die Front.*
 
 ### Materialkeil
 `dc_np_vael_materialkeil` · Einheit · Bronze · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
+
 - Effektcodes: –
 - *Mehr Stahl als Strategie.*
 
 ### Nachlieferungswagen
 `dc_np_vael_nachlieferungswagen` · Einheit · undefined · 4 AP
 
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - Kurztext: +2 DEF, solange eine benachbarte eigene gepanzerte Einheit steht.
 - Verbund: Diese Einheit hat +2 DEF, solange mindestens eine benachbarte eigene Einheit gepanzert ist (Panzer/Kette). Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FUEHRUNG_V
@@ -1091,6 +1124,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Industriekette
 `dc_np_vael_industriekette` · Einheit · Bronze · 3 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Angriffe gegen gepanzerte Ziele: +1 Schaden.
 - Panzerbrechend: Greift diese Einheit ein gepanzertes Ziel an (Panzer, Kettenfahrzeuge), verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: IGNORE_DEF
@@ -1099,14 +1133,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kriegsaktie Panzer
 `dc_np_vael_kriegsaktie_panzer` · Einheit · Gold · 5 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+
 - Effektcodes: –
 - *Der Kurs steigt mit jedem Treffer.*
 
 ### Walzenbatterie
 `dc_np_vael_walzenbatterie` · Einheit · Bronze · 3 AP
 
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -1116,6 +1152,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Industrierohr
 `dc_np_vael_industrierohr` · Einheit · Bronze · 3 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -1125,6 +1162,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Volltreffer-Haubitze
 `dc_np_vael_volltreffer_haubitze` · Einheit · Gold · 5 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -1135,6 +1174,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Munitionsmörser
 `dc_np_vael_munitionsmoerser` · Einheit · Bronze · 2 AP
 
+- **Fernschuss** (Hat +1 Reichweite.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -1144,6 +1184,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Feuerwalzen-Rohr
 `dc_np_vael_feuerwalzen_rohr` · Einheit · undefined · 4 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -1154,6 +1195,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Zielerfasser
 `dc_np_vael_zielerfasser` · Einheit · Bronze · 1 AP
 
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -1163,6 +1205,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Verbrauchsprüfer
 `dc_np_vael_verbrauchspruefer` · Einheit · Bronze · 2 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -1172,6 +1215,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Wirtschaftsspäher
 `dc_np_vael_wirtschaftsspaeher` · Einheit · undefined · 2 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Beim Ausspielen: sieh dir 2 gegnerische Handkarten an.
 - Beim Ausspielen: Hat der Gegner Handkarten, wählst du bis zu 2 davon (verdeckt) und siehst sie dir an. Die Karten bleiben auf seiner Hand; nur du erfährst sie.
 - Effektcodes: HAND_PEEK
@@ -1180,6 +1224,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Konzernfaust
 `dc_np_vael_konzernfaust` · Einheit · Gold · 5 AP
 
+- **Erbitterung** (Hat +1 ATK für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
 - Kurztext: Angriffe gegen ungepanzerte Ziele: +1 Schaden.
 - Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: FEUERUEBERLEGENHEIT
@@ -1354,30 +1399,31 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Garnison Weg Sieben
 `dc_np_merovan_garnison_weg_sieben` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Sicherung** (Andere eigene Einheiten im selben Abschnitt haben +1 DEF, solange diese Einheit offen liegt.)
+
 - Effektcodes: –
 - *Hält den Posten, auch ohne Ader.*
 
 ### Kolonnenschützen
 `dc_np_merovan_kolonnenschuetzen` · Einheit · Bronze · 1 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
+
 - Effektcodes: –
 - *Unterwegs und bereit.*
 
 ### Wegposten
 `dc_np_merovan_wegposten` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
+
 - Effektcodes: –
 - *Wer den Weg hält, hält das Land.*
 
 ### Keilhaltzug
 `dc_np_merovan_keilhaltzug` · Einheit · undefined · 3 AP
 
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -1386,8 +1432,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Verlegungskompanie
 `dc_np_merovan_verlegungskompanie` · Einheit · Bronze · 2 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Heute hier, morgen dort.*
@@ -1395,22 +1442,23 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ausharrende
 `dc_np_merovan_ausharrende` · Einheit · undefined · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
+
 - Effektcodes: –
 - *Sie bleiben, bis der Weg frei ist.*
 
 ### Achsenkolonne
 `dc_np_merovan_achsenkolonne` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+
 - Effektcodes: –
 - *Fährt die Achse ab.*
 
 ### Wegsperrwagen
 `dc_np_merovan_wegsperrwagen` · Einheit · undefined · 4 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -1419,16 +1467,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Haltepanzer
 `dc_np_merovan_haltepanzer` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+
 - Effektcodes: –
 - *Bleibt stehen, wo andere weichen.*
 
 ### Achsenkeil
 `dc_np_merovan_achsenkeil` · Einheit · Bronze · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+
 - Effektcodes: –
 - *Schiebt sich entlang der Achse.*
 
@@ -1443,6 +1491,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Wegbatterie
 `dc_np_merovan_wegbatterie` · Einheit · Bronze · 3 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -1452,6 +1501,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Postenmörser
 `dc_np_merovan_postenmoerser` · Einheit · Bronze · 2 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -1461,6 +1511,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Achsenfeuer
 `dc_np_merovan_achsenfeuer` · Einheit · Bronze · 3 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -1470,6 +1521,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Haltefeuer
 `dc_np_merovan_haltefeuer` · Einheit · undefined · 4 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -1488,6 +1540,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Wegkundschafter
 `dc_np_merovan_wegkundschafter` · Einheit · Bronze · 1 AP
 
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -1506,10 +1559,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Achsenbeobachter
 `dc_np_merovan_achsenbeobachter` · Einheit · undefined · 2 AP
 
+- **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: AUFKLAERUNG, RELOCATE_HIDE
 - *Wer die Achse sieht, sieht den Krieg.*
@@ -1517,6 +1571,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Wegpunktkommando
 `dc_np_merovan_wegpunktkommando` · Einheit · Gold · 5 AP
 
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -1689,7 +1745,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Wächter am Grat
 `dc_np_lyr_waechter_am_grat` · Einheit · Bronze · 1 AP
 
-- Kurztext: Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
+- **Zähigkeit** (Hat +1 DEF für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
+- Kurztext: Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
 - Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.
 - Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.
 - Effektcodes: AMBUSH
@@ -1698,14 +1755,15 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Passhüter
 `dc_np_lyr_passhueter` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
+
 - Effektcodes: –
 - *Kein Fremder kommt durch.*
 
 ### Eidgenossen
 `dc_np_lyr_eidgenossen` · Einheit · Bronze · 2 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -1714,7 +1772,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Lauernde Schützen
 `dc_np_lyr_lauernde_schuetzen` · Einheit · undefined · 2 AP
 
-- Kurztext: Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
+- **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
+- Kurztext: Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
 - Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.
 - Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.
 - Effektcodes: AMBUSH
@@ -1723,16 +1782,17 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Steinwerfer
 `dc_np_lyr_steinwerfer` · Einheit · Bronze · 1 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
+
 - Effektcodes: –
 - *Der Berg kämpft mit.*
 
 ### Verteilte Posten
 `dc_np_lyr_verteilte_posten` · Einheit · undefined · 3 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Kein Zentrum, keine Schwäche.*
@@ -1748,7 +1808,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Engpasswagen
 `dc_np_lyr_engpasswagen` · Einheit · undefined · 4 AP
 
-- Kurztext: Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+- Kurztext: Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
 - Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.
 - Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.
 - Effektcodes: AMBUSH
@@ -1757,8 +1818,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Talpanzer
 `dc_np_lyr_talpanzer` · Einheit · Bronze · 3 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Versteckt sich hinter jedem Fels.*
@@ -1766,15 +1828,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Felskeil
 `dc_np_lyr_felskeil` · Einheit · Bronze · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Zähigkeit** (Hat +1 DEF für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
+
 - Effektcodes: –
 - *Wie ein Felssturz.*
 
 ### Pass ohne Wiederkehr
 `dc_np_lyr_pass_ohne_wiederkehr` · Einheit · Gold · 5 AP
 
-- Kurztext: Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
+- **Zähigkeit** (Hat +1 DEF für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
+- Kurztext: Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
 - Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.
 - Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.
 - Effektcodes: AMBUSH
@@ -1792,10 +1855,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Bergmörser
 `dc_np_lyr_bergmoerser` · Einheit · Bronze · 2 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: ATTACK_ANY_FRONT, RELOCATE_HIDE
 - *Schießt und verschwindet im Fels.*
@@ -1803,6 +1867,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Talbatterie
 `dc_np_lyr_talbatterie` · Einheit · Bronze · 3 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -1812,10 +1877,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Passfeuer
 `dc_np_lyr_passfeuer` · Einheit · undefined · 4 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: ATTACK_ANY_FRONT, RELOCATE_HIDE
 - *Kurzes Feuer aus der Lauer.*
@@ -1823,6 +1889,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Echo der Täler
 `dc_np_lyr_echo_der_taeler` · Einheit · Gold · 5 AP
 
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -1851,10 +1919,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Talrufer
 `dc_np_lyr_talrufer` · Einheit · undefined · 2 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: AUFKLAERUNG, RELOCATE_HIDE
 - *Ruft und verschwindet.*
@@ -1862,7 +1931,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Passwache Ältester
 `dc_np_lyr_passwache_aeltester` · Einheit · Gold · 5 AP
 
-- Kurztext: Benachbarte eigene Fronteinheiten +2 DEF. Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
+- Kurztext: Benachbarte eigene Fronteinheiten +2 DEF. Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.
 - Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.
@@ -1872,8 +1941,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Eidträger
 `dc_np_lyr_eidtraeger` · Einheit · undefined · 4 AP
 
+- **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Der Eid ist sein Versteck.*
@@ -2062,8 +2133,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Erbzug der Toten
 `dc_np_ossaria_erbzug_der_toten` · Einheit · Bronze · 1 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
+
 - Effektcodes: –
 - *Die Toten marschieren mit.*
 
@@ -2078,6 +2149,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ahnenkompanie
 `dc_np_ossaria_ahnenkompanie` · Einheit · undefined · 3 AP
 
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -2086,8 +2158,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Plattenwagen
 `dc_np_ossaria_plattenwagen` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
+
 - Effektcodes: –
 - *Jede Platte ein Name.*
 
@@ -2102,6 +2174,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Unbrechbare Platte
 `dc_np_ossaria_unbrechbare_platte` · Einheit · Gold · 5 AP
 
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
 - Kurztext: Jeder Schaden an dieser Einheit −2.
 - Schwere Panzerung: Jeder einzelne Schaden, den diese Einheit erleidet (Kampf, Soforteinsatz, Effekt), wird um 2 verringert, mindestens auf 0.
 - Effektcodes: SCHADEN_MINUS
@@ -2118,14 +2191,15 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ahnenschmiedwagen
 `dc_np_ossaria_ahnenschmiedwagen` · Einheit · Bronze · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
+
 - Effektcodes: –
 - *Geschmiedet aus alten Rüstungen.*
 
 ### Abnutzungsbatterie
 `dc_np_ossaria_abnutzungsbatterie` · Einheit · Bronze · 3 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -2135,6 +2209,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Nahdruckmörser
 `dc_np_ossaria_nahdruckmoerser` · Einheit · Bronze · 2 AP
 
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -2162,6 +2237,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Namensruf-Batterie
 `dc_np_ossaria_namensruf_batterie` · Einheit · Gold · 5 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -2190,6 +2267,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Zeichendeuter
 `dc_np_ossaria_zeichendeuter` · Einheit · undefined · 2 AP
 
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -2207,6 +2285,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Wächter der Namen
 `dc_np_ossaria_waechter_der_namen` · Einheit · undefined · 4 AP
 
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
+- **Sicherung** (Andere eigene Einheiten im selben Abschnitt haben +1 DEF, solange diese Einheit offen liegt.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -2389,8 +2469,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ruhezug
 `dc_np_caldris_ruhezug` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Zähigkeit** (Hat +1 DEF für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
+
 - Effektcodes: –
 - *Ausgeruht und bereit.*
 
@@ -2405,6 +2485,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Etappenwache
 `dc_np_caldris_etappenwache` · Einheit · Bronze · 2 AP
 
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
 - Kurztext: Benachbarte eigene Infanterie +1 DEF.
 - Begleitschutz (solange diese Einheit steht): Jede benachbarte eigene Infanterie hat +1 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: MECH_AURA
@@ -2413,22 +2494,23 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Genesene Kompanie
 `dc_np_caldris_genesene_kompanie` · Einheit · undefined · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
+
 - Effektcodes: –
 - *Zurück aus der Klinik, stärker als zuvor.*
 
 ### Sanitätspanzer
 `dc_np_caldris_sanitaetspanzer` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
+
 - Effektcodes: –
 - *Gepanzerte Fürsorge.*
 
 ### Schildwagen
 `dc_np_caldris_schildwagen` · Einheit · undefined · 4 AP
 
+- **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -2437,6 +2519,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Panzerschild Caldris
 `dc_np_caldris_panzerschild_caldris` · Einheit · Gold · 5 AP
 
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
 - Kurztext: Jeder Schaden an dieser Einheit −2.
 - Schwere Panzerung: Jeder einzelne Schaden, den diese Einheit erleidet (Kampf, Soforteinsatz, Effekt), wird um 2 verringert, mindestens auf 0.
 - Effektcodes: SCHADEN_MINUS
@@ -2445,22 +2528,23 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Etappenpanzer
 `dc_np_caldris_etappenpanzer` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Zähigkeit** (Hat +1 DEF für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
+
 - Effektcodes: –
 - *Sichert den Weg zur Klinik.*
 
 ### Bergepanzer Caldris
 `dc_np_caldris_bergepanzer_caldris` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Ablösung** (Wird diese Einheit zerstört, kostet die nächste eigene Einheit, die du auf dasselbe Feld setzt, 1 AP weniger (mindestens 1), bis das Feld wieder besetzt wurde oder bis zum Ende deines nächsten Zugs, was zuerst eintritt. Höchstens eine solche Markierung pro Feld.)
+
 - Effektcodes: –
 - *Niemand bleibt liegen.*
 
 ### Schutzfeuerbatterie
 `dc_np_caldris_schutzfeuerbatterie` · Einheit · Bronze · 3 AP
 
+- **Fernschuss** (Hat +1 Reichweite.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -2488,6 +2572,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Sperrfeuer Fürsorge
 `dc_np_caldris_sperrfeuer_fuersorge` · Einheit · Bronze · 3 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -2497,6 +2582,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schlag nach der Genesung
 `dc_np_caldris_schlag_nach_der_genesung` · Einheit · Gold · 5 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
+- **Fernschuss** (Hat +1 Reichweite.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -2525,6 +2612,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Etappenbeobachter
 `dc_np_caldris_etappenbeobachter` · Einheit · undefined · 2 AP
 
+- **Fernschuss** (Hat +1 Reichweite.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -2534,6 +2622,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Oberste Fürsorge
 `dc_np_caldris_oberste_fuersorge` · Einheit · Gold · 5 AP
 
+- **Erbitterung** (Hat +1 ATK für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -2542,6 +2631,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schildgarde
 `dc_np_caldris_schildgarde` · Einheit · undefined · 4 AP
 
+- **Sicherung** (Andere eigene Einheiten im selben Abschnitt haben +1 DEF, solange diese Einheit offen liegt.)
 - Kurztext: Benachbarte eigene Infanterie +1 DEF.
 - Begleitschutz (solange diese Einheit steht): Jede benachbarte eigene Infanterie hat +1 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: MECH_AURA
@@ -2708,24 +2798,24 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Messkette Alpha
 `dc_np_orthea_messkette_alpha` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
+
 - Effektcodes: –
 - *Trägt die Probe an die Front.*
 
 ### Kreuzpeilungstrupp
 `dc_np_orthea_kreuzpeilungstrupp` · Einheit · Bronze · 1 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
+
 - Effektcodes: –
 - *Drei Peilungen, ein Schnittpunkt.*
 
 ### Probenträger
 `dc_np_orthea_probentraeger` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Erbitterung** (Hat +1 ATK für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
+
 - Effektcodes: –
 - *Ohne Probe keine Erkenntnis.*
 
@@ -2748,16 +2838,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Klinikwache
 `dc_np_orthea_klinikwache` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
+
 - Effektcodes: –
 - *Bewacht die Labore der Republik.*
 
 ### Messpanzer
 `dc_np_orthea_messpanzer` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
+
 - Effektcodes: –
 - *Ein rollendes Labor.*
 
@@ -2772,14 +2862,15 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Leichter Probenwagen
 `dc_np_orthea_leichter_probenwagen` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
+
 - Effektcodes: –
 - *Bringt Messwerte zurück.*
 
 ### Feldversuch Kette
 `dc_np_orthea_feldversuch_kette` · Einheit · Bronze · 3 AP
 
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - Kurztext: Angriffe gegen gepanzerte Ziele: +1 Schaden.
 - Panzerbrechend: Greift diese Einheit ein gepanzertes Ziel an (Panzer, Kettenfahrzeuge), verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: IGNORE_DEF
@@ -2788,6 +2879,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Einzelschusspanzer
 `dc_np_orthea_einzelschusspanzer` · Einheit · Gold · 5 AP
 
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - Kurztext: Angriffe gegen gepanzerte Ziele: +3 Schaden.
 - Panzerbrechend: Greift diese Einheit ein gepanzertes Ziel an (Panzer, Kettenfahrzeuge), verursacht sie 3 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: IGNORE_DEF
@@ -2796,6 +2888,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Punktfeuerbatterie
 `dc_np_orthea_punktfeuerbatterie` · Einheit · Bronze · 3 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -2805,6 +2898,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Zentrale Feuerleitung
 `dc_np_orthea_zentrale_feuerleitung` · Einheit · Gold · 5 AP
 
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -2815,6 +2909,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Präzisionsmörser
 `dc_np_orthea_praezisionsmoerser` · Einheit · Bronze · 2 AP
 
+- **Fernschuss** (Hat +1 Reichweite.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -2843,6 +2938,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Peilstation mobil
 `dc_np_orthea_peilstation_mobil` · Einheit · Bronze · 1 AP
 
+- **Fernschuss** (Hat +1 Reichweite.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -2852,6 +2948,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Gesamtlagebild
 `dc_np_orthea_gesamtlagebild` · Einheit · Gold · 3 AP
 
+- **Fernschuss** (Hat +1 Reichweite.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -2861,6 +2958,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Beobachterkette
 `dc_np_orthea_beobachterkette` · Einheit · undefined · 2 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -3046,8 +3144,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kaischützen
 `dc_np_namar_kaischuetzen` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
+
 - Effektcodes: –
 - *Der Kai gehört uns.*
 
@@ -3070,6 +3168,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Konvoischutz
 `dc_np_namar_konvoischutz` · Einheit · undefined · 3 AP
 
+- **Ablösung** (Wird diese Einheit zerstört, kostet die nächste eigene Einheit, die du auf dasselbe Feld setzt, 1 AP weniger (mindestens 1), bis das Feld wieder besetzt wurde oder bis zum Ende deines nächsten Zugs, was zuerst eintritt. Höchstens eine solche Markierung pro Feld.)
 - Kurztext: Benachbarte eigene Infanterie +1 DEF.
 - Begleitschutz (solange diese Einheit steht): Jede benachbarte eigene Infanterie hat +1 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: MECH_AURA
@@ -3078,8 +3177,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schmugglerzug
 `dc_np_namar_schmugglerzug` · Einheit · Bronze · 2 AP
 
+- **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Ein Teil verschwindet, der Rest kommt an.*
@@ -3087,16 +3187,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Hafenregiment
 `dc_np_namar_hafenregiment` · Einheit · undefined · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
+
 - Effektcodes: –
 - *Häfen stehen zusammen.*
 
 ### Kaipanzer
 `dc_np_namar_kaipanzer` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+
 - Effektcodes: –
 - *Vom Schiff an die Front.*
 
@@ -3119,8 +3219,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Containerpanzer
 `dc_np_namar_containerpanzer` · Einheit · Bronze · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
+
 - Effektcodes: –
 - *Improvisiert, aber stabil.*
 
@@ -3135,6 +3235,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kaibatterie
 `dc_np_namar_kaibatterie` · Einheit · Bronze · 3 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -3144,6 +3245,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schiffsmörser
 `dc_np_namar_schiffsmoerser` · Einheit · Bronze · 2 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -3153,6 +3255,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Konvoifeuer
 `dc_np_namar_konvoifeuer` · Einheit · Bronze · 3 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -3162,6 +3265,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Hafengeschütz
 `dc_np_namar_hafengeschuetz` · Einheit · undefined · 4 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -3172,6 +3276,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schlag der Ankunft
 `dc_np_namar_schlag_der_ankunft` · Einheit · Gold · 5 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -3181,6 +3287,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Hafenlotse
 `dc_np_namar_hafenlotse` · Einheit · Bronze · 1 AP
 
+- **Fernschuss** (Hat +1 Reichweite.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -3190,6 +3297,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Konvoiaufklärer
 `dc_np_namar_konvoiaufklaerer` · Einheit · Bronze · 2 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -3199,6 +3307,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kaispitzel
 `dc_np_namar_kaispitzel` · Einheit · undefined · 2 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Beim Ausspielen: sieh dir 2 gegnerische Handkarten an.
 - Beim Ausspielen: Hat der Gegner Handkarten, wählst du bis zu 2 davon (verdeckt) und siehst sie dir an. Die Karten bleiben auf seiner Hand; nur du erfährst sie.
 - Effektcodes: HAND_PEEK
@@ -3207,6 +3316,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Lieferung trotz allem
 `dc_np_namar_lieferung_trotz_allem` · Einheit · Gold · 5 AP
 
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
+- **Sicherung** (Andere eigene Einheiten im selben Abschnitt haben +1 DEF, solange diese Einheit offen liegt.)
 - Kurztext: Benachbarte eigene Infanterie +1 DEF.
 - Begleitschutz (solange diese Einheit steht): Jede benachbarte eigene Infanterie hat +1 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: MECH_AURA
@@ -3215,6 +3326,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Hafenbund-Garde
 `dc_np_namar_hafenbund_garde` · Einheit · undefined · 4 AP
 
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
+- **Sicherung** (Andere eigene Einheiten im selben Abschnitt haben +1 DEF, solange diese Einheit offen liegt.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -3390,8 +3503,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ablösungszug
 `dc_np_rothain_abloesungszug` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
+
 - Effektcodes: –
 - *Kommt, wenn die anderen müde sind.*
 
@@ -3406,8 +3519,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kolonne Flussrot
 `dc_np_rothain_kolonne_flussrot` · Einheit · Bronze · 1 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Zähigkeit** (Hat +1 DEF für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
+
 - Effektcodes: –
 - *Straße, Brücke, Umschlag – und weiter.*
 
@@ -3422,30 +3535,31 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Treuewache Kronstraße
 `dc_np_rothain_treuewache_kronstrasse` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Ablösung** (Wird diese Einheit zerstört, kostet die nächste eigene Einheit, die du auf dasselbe Feld setzt, 1 AP weniger (mindestens 1), bis das Feld wieder besetzt wurde oder bis zum Ende deines nächsten Zugs, was zuerst eintritt. Höchstens eine solche Markierung pro Feld.)
+
 - Effektcodes: –
 - *Hält die alte Straße, wie immer.*
 
 ### Erbpanzer Kronlinie
 `dc_np_rothain_erbpanzer_kronlinie` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+
 - Effektcodes: –
 - *Geerbt, gepflegt, gefürchtet.*
 
 ### Schwerpunktwagen
 `dc_np_rothain_schwerpunktwagen` · Einheit · Bronze · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+
 - Effektcodes: –
 - *Gebaut für den einen Punkt.*
 
 ### Geerbtes Arsenal
 `dc_np_rothain_geerbtes_arsenal` · Einheit · Gold · 5 AP
 
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
 - Kurztext: Angriffe gegen gepanzerte Ziele: +2 Schaden.
 - Panzerbrechend: Greift diese Einheit ein gepanzertes Ziel an (Panzer, Kettenfahrzeuge), verursacht sie 2 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: IGNORE_DEF
@@ -3454,6 +3568,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Reservekette Erbfolge
 `dc_np_rothain_reservekette_erbfolge` · Einheit · undefined · 3 AP
 
+- **Ablösung** (Wird diese Einheit zerstört, kostet die nächste eigene Einheit, die du auf dasselbe Feld setzt, 1 AP weniger (mindestens 1), bis das Feld wieder besetzt wurde oder bis zum Ende deines nächsten Zugs, was zuerst eintritt. Höchstens eine solche Markierung pro Feld.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -3462,14 +3577,15 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Depotwagen Kronstraße
 `dc_np_rothain_depotwagen_kronstrasse` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
+
 - Effektcodes: –
 - *Bringt Munition an den Punkt.*
 
 ### Schwerpunktbatterie
 `dc_np_rothain_schwerpunktbatterie` · Einheit · Bronze · 3 AP
 
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -3479,6 +3595,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Stabsrohr Neuhoff
 `dc_np_rothain_stabsrohr_neuhoff` · Einheit · Bronze · 3 AP
 
+- **Fernschuss** (Hat +1 Reichweite.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -3506,6 +3623,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ewige Batterie
 `dc_np_rothain_ewige_batterie` · Einheit · Gold · 5 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -3525,6 +3644,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Achsenkundschafter
 `dc_np_rothain_achsenkundschafter` · Einheit · Bronze · 2 AP
 
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -3542,6 +3662,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Regimentsälteste
 `dc_np_rothain_regimentsaelteste` · Einheit · undefined · 4 AP
 
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
+- **Sicherung** (Andere eigene Einheiten im selben Abschnitt haben +1 DEF, solange diese Einheit offen liegt.)
 - Kurztext: +2 DEF, solange eine benachbarte eigene gepanzerte Einheit steht.
 - Verbund: Diese Einheit hat +2 DEF, solange mindestens eine benachbarte eigene Einheit gepanzert ist (Panzer/Kette). Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FUEHRUNG_V
@@ -3731,8 +3853,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Umgehungstrupp
 `dc_np_sahr_umgehungstrupp` · Einheit · undefined · 2 AP
 
+- **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Kommt von dort, wo niemand wartet.*
@@ -3740,15 +3863,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Handelsfrontmiliz
 `dc_np_sahr_handelsfrontmiliz` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
+
 - Effektcodes: –
 - *Verteidigt die Handelswege.*
 
 ### Flankenstoß-Kompanie
 `dc_np_sahr_flankenstoss_kompanie` · Einheit · undefined · 3 AP
 
-- Kurztext: Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
+- Kurztext: Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
 - Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.
 - Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.
 - Effektcodes: AMBUSH
@@ -3757,24 +3881,25 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Routenwache
 `dc_np_sahr_routenwache` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
+
 - Effektcodes: –
 - *Hält die Route offen.*
 
 ### Flusskette
 `dc_np_sahr_flusskette` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
+
 - Effektcodes: –
 - *Fährt am Ufer entlang.*
 
 ### Umgehungspanzer
 `dc_np_sahr_umgehungspanzer` · Einheit · undefined · 4 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Taucht hinter der Linie auf.*
@@ -3782,6 +3907,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kolonne ohne Ende
 `dc_np_sahr_kolonne_ohne_ende` · Einheit · Gold · 5 AP
 
+- **Zähigkeit** (Hat +1 DEF für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - Kurztext: +2 DEF, solange eine benachbarte eigene gepanzerte Einheit steht.
 - Verbund: Diese Einheit hat +2 DEF, solange mindestens eine benachbarte eigene Einheit gepanzert ist (Panzer/Kette). Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FUEHRUNG_V
@@ -3790,22 +3917,23 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Handelswagen
 `dc_np_sahr_handelswagen` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+
 - Effektcodes: –
 - *Gepanzert für die Route.*
 
 ### Uferkeil
 `dc_np_sahr_uferkeil` · Einheit · Bronze · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+
 - Effektcodes: –
 - *Schneidet den Fluss.*
 
 ### Linienfeuer
 `dc_np_sahr_linienfeuer` · Einheit · Bronze · 3 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -3815,10 +3943,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Flussmörser
 `dc_np_sahr_flussmoerser` · Einheit · Bronze · 2 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: ATTACK_ANY_FRONT, RELOCATE_HIDE
 - *Vom Boot aus.*
@@ -3826,6 +3955,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Routenbatterie
 `dc_np_sahr_routenbatterie` · Einheit · Bronze · 3 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -3845,6 +3975,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Wegschließer
 `dc_np_sahr_wegschliesser` · Einheit · undefined · 4 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -3854,6 +3985,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Navigator
 `dc_np_sahr_navigator` · Einheit · Bronze · 1 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -3863,6 +3995,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Flusskundschafter
 `dc_np_sahr_flusskundschafter` · Einheit · Bronze · 2 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -3872,10 +4005,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Routenspäher
 `dc_np_sahr_routenspaeher` · Einheit · undefined · 2 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: AUFKLAERUNG, RELOCATE_HIDE
 - *Sieht den Weg, bevor der Feind ihn sieht.*
@@ -3883,7 +4017,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Herr der Routen
 `dc_np_sahr_herr_der_routen` · Einheit · Gold · 5 AP
 
-- Kurztext: Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
+- Kurztext: Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
 - Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.
 - Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.
 - Effektcodes: AMBUSH
@@ -3892,8 +4027,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Flankenmeister
 `dc_np_sahr_flankenmeister` · Einheit · undefined · 4 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
+- **Sicherung** (Andere eigene Einheiten im selben Abschnitt haben +1 DEF, solange diese Einheit offen liegt.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Erscheint immer an der Flanke.*
@@ -4058,16 +4195,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Netztrupp Novaris
 `dc_np_averon_netztrupp_novaris` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
+
 - Effektcodes: –
 - *Verbunden, also handlungsfähig.*
 
 ### Eigeninitiative-Zug
 `dc_np_averon_eigeninitiative_zug` · Einheit · Bronze · 1 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
+
 - Effektcodes: –
 - *Kein Befehl nötig, solange das Netz hält.*
 
@@ -4090,8 +4227,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schnelle Hand
 `dc_np_averon_schnelle_hand` · Einheit · undefined · 2 AP
 
+- **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Kurz zuschlagen, dann weg.*
@@ -4107,6 +4245,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Novaris-Kolonne
 `dc_np_averon_novaris_kolonne` · Einheit · Gold · 5 AP
 
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
 - Kurztext: +2 DEF, solange eine benachbarte eigene gepanzerte Einheit steht.
 - Verbund: Diese Einheit hat +2 DEF, solange mindestens eine benachbarte eigene Einheit gepanzert ist (Panzer/Kette). Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FUEHRUNG_V
@@ -4115,8 +4254,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Leichter Netzwagen
 `dc_np_averon_leichter_netzwagen` · Einheit · Bronze · 3 AP
 
+- **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Schnell rein, schnell raus.*
@@ -4124,22 +4264,23 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Funkpanzer
 `dc_np_averon_funkpanzer` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
+
 - Effektcodes: –
 - *Mehr Antennen als Panzerung.*
 
 ### Zeitkeil
 `dc_np_averon_zeitkeil` · Einheit · undefined · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
+
 - Effektcodes: –
 - *Nicht stehenbleiben, wenn die Lage alt wird.*
 
 ### Aufklärungsspähwagen
 `dc_np_averon_aufklaerungsspaehwagen` · Einheit · Bronze · 3 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Angriffe gegen gepanzerte Ziele: +1 Schaden.
 - Panzerbrechend: Greift diese Einheit ein gepanzertes Ziel an (Panzer, Kettenfahrzeuge), verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: IGNORE_DEF
@@ -4148,6 +4289,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Lokalisierungsbatterie
 `dc_np_averon_lokalisierungsbatterie` · Einheit · Bronze · 3 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -4157,10 +4299,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schnellfeuerwerfer
 `dc_np_averon_schnellfeuerwerfer` · Einheit · Bronze · 3 AP
 
+- **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: ATTACK_ANY_FRONT, RELOCATE_HIDE
 - *Feuern und Stellungswechsel.*
@@ -4168,6 +4311,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Netzmörser
 `dc_np_averon_netzmoerser` · Einheit · Bronze · 2 AP
 
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -4177,6 +4321,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Präzisionsrakete Zeit
 `dc_np_averon_praezisionsrakete_zeit` · Einheit · undefined · 4 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -4196,6 +4341,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Sensordrohne
 `dc_np_averon_sensordrohne` · Einheit · Bronze · 1 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -4205,6 +4351,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Lauschposten
 `dc_np_averon_lauschposten` · Einheit · Bronze · 2 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Beim Ausspielen: sieh dir 2 gegnerische Handkarten an.
 - Beim Ausspielen: Hat der Gegner Handkarten, wählst du bis zu 2 davon (verdeckt) und siehst sie dir an. Die Karten bleiben auf seiner Hand; nur du erfährst sie.
 - Effektcodes: HAND_PEEK
@@ -4213,10 +4360,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Frühwarntrupp
 `dc_np_averon_fruehwarntrupp` · Einheit · undefined · 2 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: AUFKLAERUNG, RELOCATE_HIDE
 - *Sieht zuerst, wird zuletzt gesehen.*
@@ -4224,6 +4372,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Republikanische Antwort
 `dc_np_averon_republikanische_antwort` · Einheit · Gold · 5 AP
 
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
+- **Erbitterung** (Hat +1 ATK für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -4233,8 +4383,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Netzkommando
 `dc_np_averon_netzkommando` · Einheit · undefined · 4 AP
 
+- **Erbitterung** (Hat +1 ATK für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Operiert ohne Signatur.*
@@ -4402,8 +4553,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Scheinkompanie
 `dc_np_vesper_scheinkompanie` · Einheit · Bronze · 1 AP
 
+- **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Sie ist da – oder auch nicht.*
@@ -4427,7 +4579,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Hinterhaltszug Velis
 `dc_np_vesper_hinterhaltszug_velis` · Einheit · Bronze · 2 AP
 
-- Kurztext: Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
+- Kurztext: Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
 - Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.
 - Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.
 - Effektcodes: AMBUSH
@@ -4436,6 +4589,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Abriegelungstrupp
 `dc_np_vesper_abriegelungstrupp` · Einheit · undefined · 3 AP
 
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -4444,8 +4598,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Unsichtbare Wache
 `dc_np_vesper_unsichtbare_wache` · Einheit · Bronze · 2 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Nie dort, wo man sucht.*
@@ -4453,8 +4608,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Velis-Kolonne
 `dc_np_vesper_velis_kolonne` · Einheit · Gold · 5 AP
 
+- **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Taucht auf, schlägt zu, verschwindet.*
@@ -4462,16 +4618,17 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Attrappenwagen
 `dc_np_vesper_attrappenwagen` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+
 - Effektcodes: –
 - *Aus Holz – vielleicht.*
 
 ### Täuschungspanzer
 `dc_np_vesper_taeuschungspanzer` · Einheit · Bronze · 3 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: RELOCATE_HIDE
 - *Ein Panzer, der nie da war.*
@@ -4479,6 +4636,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Riegelwagen
 `dc_np_vesper_riegelwagen` · Einheit · undefined · 4 AP
 
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -4487,7 +4645,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schattenkeil
 `dc_np_vesper_schattenkeil` · Einheit · Bronze · 4 AP
 
-- Kurztext: Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+- Kurztext: Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
 - Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.
 - Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.
 - Effektcodes: AMBUSH
@@ -4496,6 +4655,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Abriegelungsbatterie
 `dc_np_vesper_abriegelungsbatterie` · Einheit · Bronze · 3 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -4505,10 +4665,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Scheinfeuerstellung
 `dc_np_vesper_scheinfeuerstellung` · Einheit · Bronze · 3 AP
 
+- **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: ATTACK_ANY_FRONT, RELOCATE_HIDE
 - *Feuert, zieht um, feuert wieder.*
@@ -4516,6 +4677,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Systemmörser
 `dc_np_vesper_systemmoerser` · Einheit · Bronze · 2 AP
 
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -4535,10 +4697,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Systemantwort
 `dc_np_vesper_systemantwort` · Einheit · Gold · 5 AP
 
+- **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: ATTACK_ANY_FRONT, RELOCATE_HIDE
 - *Wenn die Partie kippt, antwortet das System.*
@@ -4546,6 +4709,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Überwachungsposten
 `dc_np_vesper_ueberwachungsposten` · Einheit · Bronze · 1 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -4555,6 +4719,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Doppelagent
 `dc_np_vesper_doppelagent` · Einheit · undefined · 2 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Beim Ausspielen: sieh dir 2 gegnerische Handkarten an.
 - Beim Ausspielen: Hat der Gegner Handkarten, wählst du bis zu 2 davon (verdeckt) und siehst sie dir an. Die Karten bleiben auf seiner Hand; nur du erfährst sie.
 - Effektcodes: HAND_PEEK
@@ -4563,10 +4728,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schattenmelder
 `dc_np_vesper_schattenmelder` · Einheit · Bronze · 2 AP
 
+- **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
-- Stellungswechsel: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
+- Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
 - Effektcodes: AUFKLAERUNG, RELOCATE_HIDE
 - *Meldet und verschwindet.*
@@ -4574,6 +4740,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Spielmeister
 `dc_np_vesper_spielmeister` · Einheit · Gold · 5 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - Kurztext: Beim Ausspielen: sieh dir 2 gegnerische Handkarten an.
 - Beim Ausspielen: Hat der Gegner Handkarten, wählst du bis zu 2 davon (verdeckt) und siehst sie dir an. Die Karten bleiben auf seiner Hand; nur du erfährst sie.
 - Effektcodes: HAND_PEEK
@@ -4582,7 +4749,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Operationsleitung Vesper
 `dc_np_vesper_operationsleitung_vesper` · Einheit · undefined · 4 AP
 
-- Kurztext: Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
+- Kurztext: Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
 - Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.
 - Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.
 - Effektcodes: AMBUSH
@@ -4756,8 +4923,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schuldner-Kompanie
 `dc_np_dargan_schuldner_kompanie` · Einheit · Bronze · 1 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Heranführung** (Wenn diese Einheit ins Spiel kommt, kostet die nächste Einheit, die du in diesem Zug ausspielst, 1 AP weniger (mindestens 1).)
+
 - Effektcodes: –
 - *Tilgt mit Blut.*
 
@@ -4780,14 +4947,15 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Registerwache
 `dc_np_dargan_registerwache` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
+
 - Effektcodes: –
 - *Schützt das Buch.*
 
 ### Vollstrecker
 `dc_np_dargan_vollstrecker` · Einheit · undefined · 3 AP
 
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
 - Kurztext: Angriffe gegen ungepanzerte Ziele: +1 Schaden.
 - Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: FEUERUEBERLEGENHEIT
@@ -4796,8 +4964,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Haftungsstoß
 `dc_np_dargan_haftungsstoss` · Einheit · Bronze · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
+
 - Effektcodes: –
 - *Selten, aber gewaltig.*
 
@@ -4812,6 +4980,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schuldbrecher
 `dc_np_dargan_schuldbrecher` · Einheit · undefined · 4 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - Kurztext: Angriffe gegen gepanzerte Ziele: +2 Schaden.
 - Panzerbrechend: Greift diese Einheit ein gepanzertes Ziel an (Panzer, Kettenfahrzeuge), verursacht sie 2 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: IGNORE_DEF
@@ -4828,6 +4997,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Buchkrieg
 `dc_np_dargan_buchkrieg` · Einheit · Gold · 5 AP
 
+- **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
 - Kurztext: Angriffe gegen gepanzerte Ziele: +2 Schaden.
 - Panzerbrechend: Greift diese Einheit ein gepanzertes Ziel an (Panzer, Kettenfahrzeuge), verursacht sie 2 Schaden zusätzlich zu ihrem ATK.
 - Effektcodes: IGNORE_DEF
@@ -4845,6 +5016,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Registermörser
 `dc_np_dargan_registermoerser` · Einheit · Bronze · 2 AP
 
+- **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -4864,6 +5036,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Zinsbatterie
 `dc_np_dargan_zinsbatterie` · Einheit · Bronze · 3 AP
 
+- **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -4873,6 +5046,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Gebundene Häuser
 `dc_np_dargan_gebundene_haeuser` · Einheit · Gold · 5 AP
 
+- **Fernschuss** (Hat +1 Reichweite.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -4909,6 +5083,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kaderkolonne
 `dc_np_dargan_kaderkolonne` · Einheit · Gold · 5 AP
 
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
+- **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
 - Kurztext: Angriffe gegen Infanterie: +2 Schaden.
 - Greift diese Einheit eine Infanterie an, verursacht sie 2 Schaden zusätzlich zu ihrem ATK. Der Gegenschlag des Ziels bleibt unverändert.
 - Effektcodes: VS_INF
@@ -5082,8 +5258,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kronlinie
 `dc_np_eldran_kronlinie` · Einheit · Bronze · 2 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Sicherung** (Andere eigene Einheiten im selben Abschnitt haben +1 DEF, solange diese Einheit offen liegt.)
+
 - Effektcodes: –
 - *Die Linie gehört dem König, nicht dem Gelände.*
 
@@ -5098,6 +5274,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Sperrzug Weißdorn
 `dc_np_eldran_sperrzug_weissdorn` · Einheit · Bronze · 2 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -5106,7 +5283,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Haushaltstruppe
 `dc_np_eldran_haushaltstruppe` · Einheit · undefined · 3 AP
 
-- Kurztext: Hinterhalt: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
+- **Sicherung** (Andere eigene Einheiten im selben Abschnitt haben +1 DEF, solange diese Einheit offen liegt.)
+- Kurztext: Überfall: +1 Schaden beim Angriff; im Nebelfeld trifft ihr Gegenschlag mit +1.
 - Greift diese Einheit an und liegt kein Nebelfeld auf Angreifer oder Ziel, verursacht sie 1 Schaden zusätzlich.
 - Wird sie angegriffen, während ein Nebelfeld liegt, erleidet der Angreifer 1 zusätzlichen Gegenschaden.
 - Effektcodes: AMBUSH
@@ -5123,22 +5301,23 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Landsturm Kronfeld
 `dc_np_eldran_landsturm_kronfeld` · Einheit · Bronze · 1 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
+
 - Effektcodes: –
 - *Bauern, Erben, Wächter.*
 
 ### Gegenstoßreserve
 `dc_np_eldran_gegenstossreserve` · Einheit · Bronze · 3 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
+
 - Effektcodes: –
 - *Wartet hinter der Linie auf das Signal.*
 
 ### Kronwagen Wacht
 `dc_np_eldran_kronwagen_wacht` · Einheit · Bronze · 3 AP
 
+- **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -5147,8 +5326,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Königliche Antwort
 `dc_np_eldran_koenigliche_antwort` · Einheit · Gold · 5 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
+
 - Effektcodes: –
 - *Die Krone schlägt zurück – einmal, aber richtig.*
 
@@ -5163,14 +5342,15 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Reservekette Erlen
 `dc_np_eldran_reservekette_erlen` · Einheit · Bronze · 4 AP
 
-- Kurztext: Keine Sonderfähigkeit.
-- Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln.
+- **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
+
 - Effektcodes: –
 - *Erst zurückgehalten, dann geschickt.*
 
 ### Sperrfeuerbatterie
 `dc_np_eldran_sperrfeuerbatterie` · Einheit · Bronze · 3 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -5180,6 +5360,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Grenzhaubitze
 `dc_np_eldran_grenzhaubitze` · Einheit · Bronze · 3 AP
 
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -5207,6 +5388,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kronarsenal
 `dc_np_eldran_kronarsenal` · Einheit · Gold · 5 AP
 
+- **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
+- **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
 - Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
 - Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
 - Die Einheit zählt für alle Regeln als Artillerie.
@@ -5217,6 +5400,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Grenzreiter
 `dc_np_eldran_grenzreiter` · Einheit · Bronze · 1 AP
 
+- **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -5226,6 +5410,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Wachtturmposten
 `dc_np_eldran_wachtturmposten` · Einheit · Bronze · 2 AP
 
+- **Fernschuss** (Hat +1 Reichweite.)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -5244,6 +5429,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Garde der Kontinuität
 `dc_np_eldran_garde_der_kontinuitaet` · Einheit · undefined · 4 AP
 
+- **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
 - Kurztext: Benachbarte eigene Fronteinheiten +2 DEF.
 - Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FLANK_DEF
@@ -5252,6 +5438,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Marschall des Hauses
 `dc_np_eldran_marschall_des_hauses` · Einheit · Gold · 5 AP
 
+- **Sicherung** (Andere eigene Einheiten im selben Abschnitt haben +1 DEF, solange diese Einheit offen liegt.)
 - Kurztext: +2 DEF, solange eine benachbarte eigene gepanzerte Einheit steht.
 - Verbund: Diese Einheit hat +2 DEF, solange mindestens eine benachbarte eigene Einheit gepanzert ist (Panzer/Kette). Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).
 - Effektcodes: FUEHRUNG_V

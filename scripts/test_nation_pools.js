@@ -34,7 +34,9 @@ for (const n of nations) {
 // ---- 2) Karten-Daten
 const LIM = { bronze: 4, silver: 2, gold: 1 };
 for (const c of NP) {
-  assert(c.text && c.rules && c.rules.length && c.flavor, 'Texte ' + c.id);
+  const kwn = (c.keywords || []).length;
+  assert((c.text || kwn) && c.rules && (c.rules.length || kwn) && c.flavor, 'Texte ' + c.id);
+  (c.keywords || []).forEach((k) => assert(w.DC_KEYWORDS ? w.DC_KEYWORDS[k] : true, c.id + ' Schlüsselwort ' + k));
   assert.equal(c.art_status, 'platzhalter'); assert(!c.image, 'kein erfundenes Bild ' + c.id);
   assert.equal(c.max_copies, LIM[c.rarity], 'Kopienlimit ' + c.id);
   assert.notEqual(c.klasse, 'Schützenpanzer');
@@ -59,9 +61,9 @@ function fresh() { const eng = L.newMatch(w, 'Steinmark', 3); L.clearBoard(eng);
 function stats(eng, i) { return eng.currentAtkDef(i); }
 function deploy(eng, c, section, row) {
   const p = eng.player(0), inst = eng.instFromId(c.id, 0); p.hand.push(inst);
-  const ap = p.ap, r = eng.dispatch({ type: 'PLAY', player: 0, uid: inst.uid }); assert(r.ok, c.id + ' PLAY ' + r.error);
+  const expect = eng.costOf(c, p), ap = p.ap, r = eng.dispatch({ type: 'PLAY', player: 0, uid: inst.uid }); assert(r.ok, c.id + ' PLAY ' + r.error);
   if (eng.state.pending && eng.state.pending.kind === 'deploy') { const r2 = eng.dispatch({ type: 'CHOOSE_SLOT', player: 0, slot: { section, row } }); assert(r2.ok, c.id + ' SLOT ' + r2.error); }
-  return { inst, spent: ap - p.ap };
+  return { inst, spent: ap - p.ap, expect };
 }
 function attack(eng, a, t) { const r = eng.dispatch({ type: 'ATTACK', player: 0, uid: a.uid }); if (r.ok && eng.state.pending) return eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: t.uid }); return r; }
 function dummy(eng, pid, s, row, def, armored) { const base = armored ? PZ : INF; const i = L.put(eng, pid, base.id, s, row); i.def = i.defMax = def || 30; return i; }
@@ -75,8 +77,8 @@ for (const c of NP) {
     const nb = dummy(eng, 0, 'C', 1, 10);
     const pk = q.hand.length; q.hand.push(eng.instFromId(INF.id, 1));
     const nbDef0 = stats(eng, nb).def;
-    const { inst, spent } = deploy(eng, c, 'C', 0);
-    assert.equal(spent, eng.costOf(c, p), c.id + ' AP-Kosten');
+    const { inst, spent, expect } = deploy(eng, c, 'C', 0);
+    assert.equal(spent, expect, c.id + ' AP-Kosten');
     const pend = eng.state.pending && eng.state.pending.kind;
     if (codes.includes('AUFKLAERUNG')) { assert.equal(pend, 'scout-rev', c.id); eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: hid.uid }); assert(!hid.facedown, c.id + ' deckt auf'); }
     else if (codes.includes('HAND_PEEK')) { assert.equal(pend, 'hand-peek', c.id); eng.state.pending = null; }

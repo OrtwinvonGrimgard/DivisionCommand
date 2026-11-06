@@ -17,7 +17,7 @@ for (const n of nat) {
   for (const c of pool) {
     const st = c.atk != null && /Infanterie|Panzer|Artillerie|Aufklärung|Elite/.test(c.typ) ? ' · ' + c.atk + '/' + c.def : '';
     out += '### ' + c.name + '\n`' + c.id + '` · ' + c.typ + ' · ' + R[c.rarity] + ' · ' + (c.typ === 'Soforteinsatz' ? '0 AP (Soforteinsatz)' : c.ap + ' AP') + st + '\n\n';
-    out += '- Kurztext: ' + c.text + '\n' + (c.rules || []).map((r) => '- ' + r).join('\n') + '\n- Effektcodes: ' + ((c.effects || []).map((e) => e.code).join(', ') || '–') + '\n- *' + c.flavor + '*\n\n';
+    out += ((c.keywords || []).map((k) => '- **' + k + '** (' + w.DC_KEYWORDS[k] + ')').join('\n') + ((c.keywords || []).length ? '\n' : '')) + (c.text ? '- Kurztext: ' + c.text + '\n' : '') + (c.rules || []).map((r) => '- ' + r).join('\n') + '\n- Effektcodes: ' + ((c.effects || []).map((e) => e.code).join(', ') || '–') + '\n- *' + c.flavor + '*\n\n';
   }
 }
 fs.writeFileSync(path.join(root, 'NATIONENPOOL_KARTEN.md'), out);

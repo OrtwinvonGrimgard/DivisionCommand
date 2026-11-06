@@ -1,0 +1,437 @@
+[
+ {
+  "id": "dc_b_wellenbrecher_18",
+  "nation": "Theryn",
+  "before": "+2 ATK, wenn in diesem Zug bereits eine eigene Einheit angegriffen hat.",
+  "after": "",
+  "words": [
+   "Staffelangriff"
+  ],
+  "converted": [
+   "+2 ATK, wenn in diesem Zug bereits eine eigene Einheit angegriffen hat."
+  ]
+ },
+ {
+  "id": "dc_b_kronsalve_619",
+  "nation": "Rothain",
+  "before": "Kann jeden Frontabschnitt angreifen. +2 ATK im Zug des Ausspielens.",
+  "after": "Kann jeden Frontabschnitt angreifen.",
+  "words": [
+   "Gefechtsbereit",
+   "Zuteilung"
+  ],
+  "converted": [
+   "+2 ATK im Zug des Ausspielens."
+  ]
+ },
+ {
+  "id": "dc_b_stossfeuer_378",
+  "nation": "Karsk",
+  "before": "+2 ATK im Zug, in dem du bereits eine Einheit beschädigt hast.",
+  "after": "",
+  "words": [
+   "Nachsetzen"
+  ],
+  "converted": [
+   "+2 ATK im Zug, in dem du bereits eine Einheit beschädigt hast."
+  ]
+ },
+ {
+  "id": "dc_b_massenschlag_379",
+  "nation": "Karsk",
+  "before": "Kann jeden Frontabschnitt angreifen. +2 ATK im Zug des Ausspielens; erleidet danach 1 Schaden.",
+  "after": "Kann jeden Frontabschnitt angreifen.",
+  "words": [
+   "Gefechtsbereit",
+   "Überlast"
+  ],
+  "converted": [
+   "+2 ATK im Zug des Ausspielens; erleidet danach 1 Schaden."
+  ]
+ },
+ {
+  "id": "dc_b_kareth_kaliber_102",
+  "nation": "Ossaria",
+  "before": "+1 ATK, wenn in diesem Zug eigene Einheit zerstört.",
+  "after": "",
+  "words": [
+   "Erbitterung"
+  ],
+  "converted": [
+   "+1 ATK, wenn in diesem Zug eigene Einheit zerstört."
+  ]
+ },
+ {
+  "id": "dc_b_wellenmelder_20",
+  "nation": "Theryn",
+  "before": "Beim Ausspielen: ziehe 1 Karte.",
+  "after": "",
+  "words": [
+   "Zuteilung"
+  ],
+  "converted": [
+   "Beim Ausspielen: ziehe 1 Karte."
+  ]
+ },
+ {
+  "id": "dc_b_eifererzug_109",
+  "nation": "Theryn",
+  "before": "+2 ATK. Am Zugende erleidet diese Einheit 1 Schaden.",
+  "after": "+2 ATK.",
+  "words": [
+   "Überlast"
+  ],
+  "converted": [
+   "Am Zugende erleidet diese Einheit 1 Schaden."
+  ]
+ },
+ {
+  "id": "dc_b_nila_still_868",
+  "nation": "Vesper",
+  "before": "Beim Ausspielen: ziehe 1. Einheiten hier +1 DEF; einmal/Zug: negiere 1 Schaden, wenn mindestens eine Einheit verdeckt liegt.",
+  "after": "Einmal/Zug: negiere 1 Schaden, wenn mindestens eine Einheit verdeckt liegt.",
+  "words": [
+   "Zuteilung",
+   "Sicherung"
+  ],
+  "converted": [
+   "Beim Ausspielen: ziehe 1.",
+   "Einheiten hier +1 DEF;"
+  ]
+ },
+ {
+  "id": "dc_b_hauptmann_kader_928",
+  "nation": "Dargan",
+  "before": "Beim Ausspielen: ziehe 1. Einheiten hier +1 DEF. Einmal/Zug: eine Einheit, die diesen Zug Schaden verursacht hat, +1 ATK.",
+  "after": "Einmal/Zug: eine Einheit, die diesen Zug Schaden verursacht hat, +1 ATK.",
+  "words": [
+   "Zuteilung",
+   "Sicherung"
+  ],
+  "converted": [
+   "Beim Ausspielen: ziehe 1.",
+   "Einheiten hier +1 DEF."
+  ]
+ },
+ {
+  "id": "dc_b_marei_aure_747",
+  "nation": "Eldran",
+  "before": "Einmal/Zug: heile 1 ODER ziehe 1; Einheiten hier +1 DEF.",
+  "after": "Einmal/Zug: heile 1 ODER ziehe 1.",
+  "words": [
+   "Sicherung",
+   "Zähigkeit"
+  ],
+  "converted": [
+   "Einheiten hier +1 DEF."
+  ]
+ },
+ {
+  "id": "dc_b_tomas_lenn_748",
+  "nation": "Eldran",
+  "before": "Beim Ausspielen: ziehe 1; nächste Einheit kostet 1 weniger (min. 1).",
+  "after": "",
+  "words": [
+   "Zuteilung",
+   "Heranführung"
+  ],
+  "converted": [
+   "Beim Ausspielen: ziehe 1;",
+   "Nächste Einheit kostet 1 weniger (min. 1)."
+  ]
+ },
+ {
+  "id": "dc_b_hesse_sar_688",
+  "nation": "Sahr",
+  "before": "Beim Ausspielen: ziehe 1; Einheiten hier kosten diesen Zug 1 weniger (min. 1).",
+  "after": "Einheiten hier kosten diesen Zug 1 weniger (min. 1).",
+  "words": [
+   "Zuteilung",
+   "Staffelangriff"
+  ],
+  "converted": [
+   "Beim Ausspielen: ziehe 1;"
+  ]
+ },
+ {
+  "id": "dc_b_konrad_berst_568",
+  "nation": "Steinmark",
+  "before": "Beim Ausspielen: decke 1 auf; Abschnitt +1 DEF.",
+  "after": "Beim Ausspielen: decke 1 auf.",
+  "words": [
+   "Sicherung",
+   "Erbitterung"
+  ],
+  "converted": [
+   "Abschnitt +1 DEF."
+  ]
+ },
+ {
+  "id": "dc_b_ren_zoll_508",
+  "nation": "Namar",
+  "before": "Beim Ausspielen: ziehe 1; Abschnitt +1 DEF; Feind kann dich nicht als Unterstützung stehlen.",
+  "after": "Feind kann dich nicht als Unterstützung stehlen.",
+  "words": [
+   "Zuteilung",
+   "Sicherung"
+  ],
+  "converted": [
+   "Beim Ausspielen: ziehe 1;",
+   "Abschnitt +1 DEF;"
+  ]
+ },
+ {
+  "id": "dc_b_colin_abweich_448",
+  "nation": "Orthea",
+  "before": "Beim Ausspielen: decke 2 auf; Abschnitt +1 DEF.",
+  "after": "Beim Ausspielen: decke 2 auf.",
+  "words": [
+   "Sicherung",
+   "Zähigkeit"
+  ],
+  "converted": [
+   "Abschnitt +1 DEF."
+  ]
+ },
+ {
+  "id": "dc_eh_erstewelle",
+  "nation": null,
+  "before": "+1 ATK, wenn in diesem Zug eine eigene Infanterie angegriffen hat.",
+  "after": "",
+  "words": [
+   "Staffelangriff"
+  ],
+  "converted": [
+   "+1 ATK, wenn in diesem Zug eine eigene Infanterie angegriffen hat."
+  ]
+ },
+ {
+  "id": "dc_b_erste_welle_2",
+  "nation": "Theryn",
+  "before": "+1 ATK, wenn in diesem Zug bereits eine eigene Infanterie angegriffen hat.",
+  "after": "",
+  "words": [
+   "Staffelangriff"
+  ],
+  "converted": [
+   "+1 ATK, wenn in diesem Zug bereits eine eigene Infanterie angegriffen hat."
+  ]
+ },
+ {
+  "id": "dc_b_heilige_front_8",
+  "nation": "Theryn",
+  "before": "Eigene Infanterie im Abschnitt hat +1 ATK. Am Zugende erleidet diese Einheit 1 Schaden.",
+  "after": "Eigene Infanterie im Abschnitt hat +1 ATK.",
+  "words": [
+   "Überlast"
+  ],
+  "converted": [
+   "Am Zugende erleidet diese Einheit 1 Schaden."
+  ]
+ },
+ {
+  "id": "dc_b_stossgruppe_361",
+  "nation": "Karsk",
+  "before": "+1 ATK beim Angriff. Erleidet danach 1 Schaden. Wenn dadurch zerstört: ziehe 1 (System lernt).",
+  "after": "Wenn dadurch zerstört: ziehe 1 (System lernt).",
+  "words": [
+   "Überlast"
+  ],
+  "converted": [
+   "+1 ATK beim Angriff. Erleidet danach 1 Schaden."
+  ]
+ },
+ {
+  "id": "dc_b_siegelposten_843",
+  "nation": "Vesper",
+  "before": "Beim Ausspielen: ziehe 1.",
+  "after": "",
+  "words": [
+   "Zuteilung"
+  ],
+  "converted": [
+   "Beim Ausspielen: ziehe 1."
+  ]
+ },
+ {
+  "id": "dc_b_flankenlaeufer_662",
+  "nation": "Sahr",
+  "before": "+1 ATK, wenn sie in einen angrenzenden Abschnitt rückt.",
+  "after": "",
+  "words": [
+   "Stellungswechsel"
+  ],
+  "converted": [
+   "+1 ATK, wenn sie in einen angrenzenden Abschnitt rückt."
+  ]
+ },
+ {
+  "id": "dc_b_strassenbataillon_666",
+  "nation": "Sahr",
+  "before": "Beim Ausspielen: ziehe 1; +1 DEF bis Zugende.",
+  "after": "+1 DEF bis Zugende.",
+  "words": [
+   "Zuteilung"
+  ],
+  "converted": [
+   "Beim Ausspielen: ziehe 1;"
+  ]
+ },
+ {
+  "id": "dc_b_trauerzug_87",
+  "nation": "Ossaria",
+  "before": "+1 DEF, wenn in diesem Zug eine eigene Einheit zerstört wurde.",
+  "after": "",
+  "words": [
+   "Zähigkeit"
+  ],
+  "converted": [
+   "+1 DEF, wenn in diesem Zug eine eigene Einheit zerstört wurde."
+  ]
+ },
+ {
+  "id": "dc_b_grenzhof_fuss_89",
+  "nation": "Ossaria",
+  "before": "+1 ATK, wenn in diesem Zug eine eigene Einheit zerstört wurde.",
+  "after": "",
+  "words": [
+   "Erbitterung"
+  ],
+  "converted": [
+   "+1 ATK, wenn in diesem Zug eine eigene Einheit zerstört wurde."
+  ]
+ },
+ {
+  "id": "dc_b_wellenpanzer_7",
+  "nation": "Theryn",
+  "before": "Beim Ausspielen: heile eine eigene Infanterie um 1. +1 ATK, wenn in diesem Zug schon eine eigene Infanterie angrifft.",
+  "after": "Beim Ausspielen: heile eine eigene Infanterie um 1.",
+  "words": [
+   "Staffelangriff"
+  ],
+  "converted": [
+   "+1 ATK, wenn in diesem Zug schon eine eigene Infanterie angrifft."
+  ]
+ },
+ {
+  "id": "dc_b_pflichtbrecher_12",
+  "nation": "Theryn",
+  "before": "+1 ATK für jede eigene Infanterie, die in diesem Zug zerstört wurde (max. +2).",
+  "after": "",
+  "words": [
+   "Erbitterung"
+  ],
+  "converted": [
+   "+1 ATK für jede eigene Infanterie, die in diesem Zug zerstört wurde (max. +2)."
+  ]
+ },
+ {
+  "id": "dc_b_stosskeil_371",
+  "nation": "Karsk",
+  "before": "+2 ATK im Zug des Ausspielens. Erleidet danach 1 Schaden.",
+  "after": "",
+  "words": [
+   "Gefechtsbereit",
+   "Überlast"
+  ],
+  "converted": [
+   "+2 ATK im Zug des Ausspielens. Erleidet danach 1 Schaden."
+  ]
+ },
+ {
+  "id": "dc_b_sensorwagen_787",
+  "nation": "Averon",
+  "before": "Einheiten hier +1 DEF; bei Kill ziehe 1. [Sensorwagen]",
+  "after": "Bei Kill ziehe 1. [Sensorwagen]",
+  "words": [
+   "Sicherung"
+  ],
+  "converted": [
+   "Einheiten hier +1 DEF;"
+  ]
+ },
+ {
+  "id": "dc_b_olivkeil_789",
+  "nation": "Averon",
+  "before": "Beim Ausspielen: ziehe 1. [Olivkeil]",
+  "after": "",
+  "words": [
+   "Zuteilung"
+  ],
+  "converted": [
+   "Beim Ausspielen: ziehe 1. [Olivkeil]"
+  ]
+ },
+ {
+  "id": "dc_b_lydon_traeger_791",
+  "nation": "Averon",
+  "before": "Einheiten hier +1 DEF; bei Kill ziehe 1. [Lydon-Träger]",
+  "after": "Bei Kill ziehe 1. [Lydon-Träger]",
+  "words": [
+   "Sicherung"
+  ],
+  "converted": [
+   "Einheiten hier +1 DEF;"
+  ]
+ },
+ {
+  "id": "dc_b_haftwagen_907",
+  "nation": "Dargan",
+  "before": "Einheiten hier +1 DEF; bei Kill ziehe 1.",
+  "after": "Bei Kill ziehe 1.",
+  "words": [
+   "Sicherung"
+  ],
+  "converted": [
+   "Einheiten hier +1 DEF;"
+  ]
+ },
+ {
+  "id": "dc_b_kronland_panzer_732",
+  "nation": "Eldran",
+  "before": "Beim Ausspielen: ziehe 1. [Kronland-Panzer]",
+  "after": "",
+  "words": [
+   "Zuteilung"
+  ],
+  "converted": [
+   "Beim Ausspielen: ziehe 1. [Kronland-Panzer]"
+  ]
+ },
+ {
+  "id": "dc_b_hangpanzer_73",
+  "nation": "Lyr",
+  "before": "Beim Ausspielen: ziehe 1. [Hangpanzer]",
+  "after": "",
+  "words": [
+   "Zuteilung"
+  ],
+  "converted": [
+   "Beim Ausspielen: ziehe 1. [Hangpanzer]"
+  ]
+ },
+ {
+  "id": "dc_b_wohnblock_riegel_310",
+  "nation": "Caldris",
+  "before": "Beim Ausspielen: ziehe 1. [Wohnblock-Riegel]",
+  "after": "",
+  "words": [
+   "Zuteilung"
+  ],
+  "converted": [
+   "Beim Ausspielen: ziehe 1. [Wohnblock-Riegel]"
+  ]
+ },
+ {
+  "id": "dc_b_grenzplatte_94",
+  "nation": "Ossaria",
+  "before": "+2 DEF, wenn in diesem Zug eigene Einheit zerstört.",
+  "after": "",
+  "words": [
+   "Zähigkeit"
+  ],
+  "converted": [
+   "+2 DEF, wenn in diesem Zug eigene Einheit zerstört."
+  ]
+ }
+]

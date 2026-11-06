@@ -28,7 +28,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "flavor": "Ein leichtes Ziel!",
     "image": "panzer/A057.jpg",
     "max_copies": 2,
-    "collector": "A057"
+    "collector": "A057",
+    "keywords": [
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_eh_hammer",
@@ -61,7 +64,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "flavor": "Masse mal Beschleunigung gleich Kraft.",
     "image": "panzer/A061.jpg",
     "max_copies": 2,
-    "collector": "A061"
+    "collector": "A061",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_eh_spz",
@@ -117,7 +123,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B028.jpg",
     "max_copies": 1,
     "collector": "B028",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_auftragskette_29",
@@ -140,7 +149,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B029.jpg",
     "max_copies": 1,
     "collector": "B029",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_werkskeil_30",
@@ -163,7 +175,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B030.jpg",
     "max_copies": 1,
     "collector": "B030",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_ersatzwalze_31",
@@ -209,7 +224,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B032.jpg",
     "max_copies": 1,
     "collector": "B032",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_schwere_lieferung_33",
@@ -232,7 +250,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B033.jpg",
     "max_copies": 1,
     "collector": "B033",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_industriewalze_34",
@@ -255,7 +276,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B034.jpg",
     "max_copies": 1,
     "collector": "B034",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_volltreffer_35",
@@ -278,7 +302,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B035.jpg",
     "max_copies": 1,
     "collector": "B035",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_pflichtpanzer_3",
@@ -318,13 +345,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: heile eine eigene Infanterie um 1. +1 ATK, wenn in diesem Zug schon eine eigene Infanterie angrifft.",
+    "text": "Beim Ausspielen: heile eine eigene Infanterie um 1.",
     "effects": [],
     "flavor": "Bricht die Welle, trägt die nächste.",
     "image": "panzer/B007.jpg",
     "max_copies": 1,
     "collector": "B007",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_werkspanzer_9",
@@ -372,7 +402,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B010.jpg",
     "max_copies": 1,
     "collector": "B010",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_genossenschaftskette_11",
@@ -414,13 +447,16 @@ window.DC_SET_TYPES["Panzer"] = [
       "einheit",
       "panzer"
     ],
-    "text": "+1 ATK für jede eigene Infanterie, die in diesem Zug zerstört wurde (max. +2).",
+    "text": "",
     "effects": [],
     "flavor": "Verlust ist Nachschub an Wille.",
     "image": "panzer/B012.jpg",
     "max_copies": 1,
     "collector": "B012",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Erbitterung"
+    ]
   },
   {
     "id": "dc_b_wellenkeil_13",
@@ -444,7 +480,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B013.jpg",
     "max_copies": 1,
     "collector": "B013",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_rituspanzer_14",
@@ -468,7 +507,11 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B014.jpg",
     "max_copies": 1,
     "collector": "B014",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Gefechtsbereit",
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_kronpanzer_narbstadt_607",
@@ -491,7 +534,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B607.jpg",
     "max_copies": 1,
     "collector": "B607",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_b_erlasswagen_608",
@@ -514,7 +560,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B608.jpg",
     "max_copies": 1,
     "collector": "B608",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_kronpanzer_609",
@@ -589,7 +638,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B611.jpg",
     "max_copies": 1,
     "collector": "B611",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_b_abloesungspanzer_612",
@@ -639,7 +691,11 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B613.jpg",
     "max_copies": 1,
     "collector": "B613",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Durchschlag",
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_werkrott_kolonne_614",
@@ -779,13 +835,17 @@ window.DC_SET_TYPES["Panzer"] = [
       "panzer",
       "kette"
     ],
-    "text": "+2 ATK im Zug des Ausspielens. Erleidet danach 1 Schaden.",
+    "text": "",
     "effects": [],
     "flavor": "Durchbruch vor Überleben.",
     "image": "panzer/B371.jpg",
     "max_copies": 1,
     "collector": "B371",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit",
+      "Überlast"
+    ]
   },
   {
     "id": "dc_b_wartungskolonne_372",
@@ -835,7 +895,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B373.jpg",
     "max_copies": 1,
     "collector": "B373",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_b_systemstoss_374",
@@ -860,7 +923,11 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B374.jpg",
     "max_copies": 1,
     "collector": "B374",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Gefechtsbereit",
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_sensorwagen_787",
@@ -877,13 +944,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Einheiten hier +1 DEF; bei Kill ziehe 1. [Sensorwagen]",
+    "text": "Bei Kill ziehe 1. [Sensorwagen]",
     "effects": [],
     "flavor": "Wagen sieht früher. Er thront nicht.",
     "image": "panzer/B787.jpg",
     "max_copies": 1,
     "collector": "B787",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_verbindungskette_788",
@@ -923,13 +993,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: ziehe 1. [Olivkeil]",
+    "text": "",
     "effects": [],
     "flavor": "Oliv mit Sandstreifen — Arbeitskleidung.",
     "image": "panzer/B789.jpg",
     "max_copies": 1,
     "collector": "B789",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_kurzkrieg_wagen_790",
@@ -952,7 +1025,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B790.jpg",
     "max_copies": 1,
     "collector": "B790",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_lydon_traeger_791",
@@ -969,13 +1045,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Einheiten hier +1 DEF; bei Kill ziehe 1. [Lydon-Träger]",
+    "text": "Bei Kill ziehe 1. [Lydon-Träger]",
     "effects": [],
     "flavor": "Energie und Gerät — ohne Denkmal.",
     "image": "panzer/B791.jpg",
     "max_copies": 1,
     "collector": "B791",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_rasterpanzer_792",
@@ -1044,7 +1123,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B794.jpg",
     "max_copies": 1,
     "collector": "B794",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_aktenwagen_847",
@@ -1067,7 +1149,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B847.jpg",
     "max_copies": 1,
     "collector": "B847",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_scheinkeil_848",
@@ -1113,7 +1198,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B849.jpg",
     "max_copies": 1,
     "collector": "B849",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_lagepanzer_850",
@@ -1136,7 +1224,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B850.jpg",
     "max_copies": 1,
     "collector": "B850",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_archive_keil_851",
@@ -1159,7 +1250,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B851.jpg",
     "max_copies": 1,
     "collector": "B851",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_zwei_versionen_852",
@@ -1228,7 +1322,11 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B854.jpg",
     "max_copies": 1,
     "collector": "B854",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Stellungswechsel",
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_b_haftwagen_907",
@@ -1245,13 +1343,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Einheiten hier +1 DEF; bei Kill ziehe 1.",
+    "text": "Bei Kill ziehe 1.",
     "effects": [],
     "flavor": "Wagen eines haftenden Hauses.",
     "image": "panzer/B907.jpg",
     "max_copies": 1,
     "collector": "B907",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Sicherung"
+    ]
   },
   {
     "id": "dc_b_kai_keil_908",
@@ -1297,7 +1398,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B909.jpg",
     "max_copies": 1,
     "collector": "B909",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_aufrufpanzer_910",
@@ -1320,7 +1424,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B910.jpg",
     "max_copies": 1,
     "collector": "B910",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_brunn_keil_911",
@@ -1343,7 +1450,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B911.jpg",
     "max_copies": 1,
     "collector": "B911",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_zwei_daten_912",
@@ -1389,7 +1499,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B913.jpg",
     "max_copies": 1,
     "collector": "B913",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_zielangriff_keil_914",
@@ -1412,7 +1525,11 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B914.jpg",
     "max_copies": 1,
     "collector": "B914",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Zähigkeit",
+      "Überlast"
+    ]
   },
   {
     "id": "dc_b_stellungspanzer_727",
@@ -1458,7 +1575,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B728.jpg",
     "max_copies": 1,
     "collector": "B728",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_markenwagen_729",
@@ -1481,7 +1601,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B729.jpg",
     "max_copies": 1,
     "collector": "B729",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_gegenstosswagen_730",
@@ -1504,7 +1627,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B730.jpg",
     "max_copies": 1,
     "collector": "B730",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_flussufer_keil_731",
@@ -1544,13 +1670,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: ziehe 1. [Kronland-Panzer]",
+    "text": "",
     "effects": [],
     "flavor": "Panzer im Kronland — Dauer vor Tempo.",
     "image": "panzer/B732.jpg",
     "max_copies": 1,
     "collector": "B732",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_doppelstellung_733",
@@ -1573,7 +1702,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B733.jpg",
     "max_copies": 1,
     "collector": "B733",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_gegenstosskeil_734",
@@ -1596,7 +1728,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B734.jpg",
     "max_copies": 1,
     "collector": "B734",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_b_etappenkeil_49",
@@ -1688,7 +1823,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B052.jpg",
     "max_copies": 1,
     "collector": "B052",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_hafenring_walze_53",
@@ -1711,7 +1849,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B053.jpg",
     "max_copies": 1,
     "collector": "B053",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_neuport_schild_54",
@@ -1734,7 +1875,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B054.jpg",
     "max_copies": 1,
     "collector": "B054",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Nachsetzen"
+    ]
   },
   {
     "id": "dc_b_port_meris_keil_55",
@@ -1757,7 +1901,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B055.jpg",
     "max_copies": 1,
     "collector": "B055",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_letzte_stellung_56",
@@ -1803,7 +1950,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B667.jpg",
     "max_copies": 1,
     "collector": "B667",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_flankenkeil_668",
@@ -1826,7 +1976,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B668.jpg",
     "max_copies": 1,
     "collector": "B668",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_lagerkeil_669",
@@ -1895,7 +2048,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B671.jpg",
     "max_copies": 1,
     "collector": "B671",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_flankenpanzer_672",
@@ -1918,7 +2074,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B672.jpg",
     "max_copies": 1,
     "collector": "B672",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_doppelkolonnen_keil_673",
@@ -1941,7 +2100,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B673.jpg",
     "max_copies": 1,
     "collector": "B673",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_flankenstoss_674",
@@ -1987,7 +2149,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B547.jpg",
     "max_copies": 1,
     "collector": "B547",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_depotkeil_548",
@@ -2033,7 +2198,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B549.jpg",
     "max_copies": 1,
     "collector": "B549",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_kommissionswagen_550",
@@ -2056,7 +2224,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B550.jpg",
     "max_copies": 1,
     "collector": "B550",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Gefechtsbereit"
+    ]
   },
   {
     "id": "dc_b_standardkeil_551",
@@ -2079,7 +2250,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B551.jpg",
     "max_copies": 1,
     "collector": "B551",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_normpanzer_552",
@@ -2102,7 +2276,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B552.jpg",
     "max_copies": 1,
     "collector": "B552",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_vollverband_keil_553",
@@ -2148,7 +2325,11 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B554.jpg",
     "max_copies": 1,
     "collector": "B554",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Ablösung",
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_entsatzkolonne_487",
@@ -2171,7 +2352,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B487.jpg",
     "max_copies": 1,
     "collector": "B487",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_volle_kolonne_488",
@@ -2240,7 +2424,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B490.jpg",
     "max_copies": 1,
     "collector": "B490",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_strassenriegel_491",
@@ -2263,7 +2450,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B491.jpg",
     "max_copies": 1,
     "collector": "B491",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_lagerwagen_492",
@@ -2309,7 +2499,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B493.jpg",
     "max_copies": 1,
     "collector": "B493",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_entsatzschlag_494",
@@ -2332,7 +2525,11 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B494.jpg",
     "max_copies": 1,
     "collector": "B494",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Staffelangriff",
+      "Ablösung"
+    ]
   },
   {
     "id": "dc_b_tunnelkeil_70",
@@ -2401,7 +2598,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B072.jpg",
     "max_copies": 1,
     "collector": "B072",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_hangpanzer_73",
@@ -2418,13 +2618,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: ziehe 1. [Hangpanzer]",
+    "text": "",
     "effects": [],
     "flavor": "Ein zu großes Haus wird argwöhnisch angesehen.",
     "image": "panzer/B073.jpg",
     "max_copies": 1,
     "collector": "B073",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_leserbach_keil_74",
@@ -2447,7 +2650,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B074.jpg",
     "max_copies": 1,
     "collector": "B074",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_steinriegel_75",
@@ -2470,7 +2676,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B075.jpg",
     "max_copies": 1,
     "collector": "B075",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_aschen_kette_76",
@@ -2539,7 +2748,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B307.jpg",
     "max_copies": 1,
     "collector": "B307",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_etappenwagen_308",
@@ -2562,7 +2774,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B308.jpg",
     "max_copies": 1,
     "collector": "B308",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_klinikschild_309",
@@ -2602,13 +2817,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: ziehe 1. [Wohnblock-Riegel]",
+    "text": "",
     "effects": [],
     "flavor": "Planblock hält. Nicht aus Prunk.",
     "image": "panzer/B310.jpg",
     "max_copies": 1,
     "collector": "B310",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_notfalltraeger_311",
@@ -2631,7 +2849,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B311.jpg",
     "max_copies": 1,
     "collector": "B311",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_forumspanzer_312",
@@ -2677,7 +2898,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B313.jpg",
     "max_copies": 1,
     "collector": "B313",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_schildwall_314",
@@ -2769,7 +2993,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B093.jpg",
     "max_copies": 1,
     "collector": "B093",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_grenzplatte_94",
@@ -2786,13 +3013,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+2 DEF, wenn in diesem Zug eigene Einheit zerstört.",
+    "text": "",
     "effects": [],
     "flavor": "Halten, damit kein neuer Name kommt.",
     "image": "panzer/B094.jpg",
     "max_copies": 1,
     "collector": "B094",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zähigkeit"
+    ]
   },
   {
     "id": "dc_b_linsenpanzer_95",
@@ -2815,7 +3045,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B095.jpg",
     "max_copies": 1,
     "collector": "B095",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Abschirmung"
+    ]
   },
   {
     "id": "dc_b_altenfeld_riegel_96",
@@ -2953,7 +3186,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B429.jpg",
     "max_copies": 1,
     "collector": "B429",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_werkbach_riegel_430",
@@ -3022,7 +3258,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B432.jpg",
     "max_copies": 1,
     "collector": "B432",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Staffelangriff"
+    ]
   },
   {
     "id": "dc_b_messwagen_433",
@@ -3045,7 +3284,10 @@ window.DC_SET_TYPES["Panzer"] = [
     "image": "panzer/B433.jpg",
     "max_copies": 1,
     "collector": "B433",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Durchschlag"
+    ]
   },
   {
     "id": "dc_b_einzelschuss_434",

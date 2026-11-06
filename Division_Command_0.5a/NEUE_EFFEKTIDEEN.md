@@ -1,5 +1,7 @@
 # Neue Effektideen – **Vorschlag, nicht implementiert**
 
+> **Hinweis:** Die 16 allgemeinen Schlüsselwörter (Gefechtsbereit … Zähigkeit) sind **implementiert** und in `SCHLUESSELWOERTER.md` beschrieben. Die Sondermechaniken unten sind davon getrennt und bleiben **Vorschläge, nicht implementiert**. Wo ein Entwurf ein gleichnamiges Wort nennt (z. B. „Stellungswechsel“ in Teil B), gilt im Spiel die Bedeutung aus dem Glossar.
+
 **Status:** Dieses Dokument enthält ausschließlich **Entwürfe**. Keine Mechanik ist in der Engine vorhanden. Keine Beispielkarte existiert im Katalog. Die 640 Nationenpool-Karten nutzen nur bereits verdrahtete Effekte.
 
 **Grundlage:**
