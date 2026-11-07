@@ -16,7 +16,8 @@ const C = w.DC_CATALOG.cards, K = w.DC_KEYWORDS;
 const kid = (k) => 'k_' + WORDS.indexOf(k);
 
 // ---------- 1) Vokabular & Daten
-assert.deepEqual(Object.keys(K).sort(), WORDS.slice().sort(), '16 Wörter');
+WORDS.forEach(k=>assert(K[k], 'ursprüngliches Wort bleibt kompatibel: '+k));
+assert.equal(Object.keys(K).length,24,'16 ursprüngliche +3 vereinheitlichte Kerne +5 taktische Wörter');
 assert.equal(K['Gefechtsbereit'], 'Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.');
 assert.equal(K['Fernschuss'], 'Hat +1 Reichweite.');
 const real = C.filter((c) => c.set !== 'test');
@@ -24,12 +25,13 @@ const count = {}, byNat = {};
 real.forEach((c) => {
   const ks = c.keywords || [];
   if (!ks.length) return;
-  assert.equal(c.typ, 'Einheit', c.id + ' Schlüsselwort nur auf Einheiten');
-  assert(ks.length <= 2, c.id + ' höchstens 2 Wörter');
+  const old=ks.filter(k=>WORDS.includes(k));
+  if (old.length) assert.equal(c.typ,'Einheit',c.id+' ursprüngliche Wörter nur auf Einheiten');
+  assert(old.length <= 2,c.id+' höchstens 2 ursprüngliche Wörter');
   assert.equal(new Set(ks).size, ks.length, c.id + ' doppelt');
   ks.forEach((k) => { assert(K[k], c.id + ' unbekannt ' + k); count[k] = (count[k] || 0) + 1; (byNat[k] = byNat[k] || {})[c.nation || 'neutral'] = (byNat[k][c.nation || 'neutral'] || 0) + 1; });
   if (ks.includes('Hinterhalt') || ks.includes('Platztausch')) assert((c.effects || []).some((e) => ['RELOCATE_HIDE', 'GUERRILLA_HIDE', 'SET_FACEDOWN'].includes(e.code)), c.id + ' kann verdeckt werden');
-  assert(!/\b(Gefechtsbereit|Staffelangriff|Fernschuss|Durchschlag|Platztausch|Überlast|Abschirmung|Erbitterung|Heranführung|Zuteilung|Sicherung|Nachsetzen|Zähigkeit)\b/.test(c.text || ''), c.id + ' kein paralleler Sondertext: ' + c.text);
+  if (c.set !== 'set_tactical_review') assert(!/\b(Gefechtsbereit|Staffelangriff|Fernschuss|Durchschlag|Platztausch|Überlast|Abschirmung|Erbitterung|Heranführung|Zuteilung|Sicherung|Nachsetzen|Zähigkeit)\b/.test(c.text || ''), c.id + ' kein paralleler Sondertext: ' + c.text);
 });
 WORDS.forEach((k) => {
   const nats = Object.keys(byNat[k] || {});
@@ -38,7 +40,7 @@ WORDS.forEach((k) => {
   const max = Math.max(...Object.values(byNat[k]));
   assert(max / count[k] < 0.5, k + ' wird von einer Nation monopolisiert');
 });
-const units = real.filter((c) => c.typ === 'Einheit').length, withKw = real.filter((c) => (c.keywords || []).length).length;
+const units = real.filter((c) => c.typ === 'Einheit').length, withKw = real.filter((c) => c.typ === 'Einheit' && (c.keywords || []).length).length;
 assert(withKw < units, 'nicht jede Karte braucht ein Wort');
 // Starterdecks unverändert und legal (60+2)
 Object.entries(w.DC_NATION_DECKS).forEach(([n, d]) => { assert.equal(d.cards.length, 60, n); assert.equal(d.doktrinen.length, 2, n); assert(w.DC_validateDeck(d.cards, d.doktrinen).ok, n + ' legal'); });

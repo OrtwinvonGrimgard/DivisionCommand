@@ -1,0 +1,45 @@
+[
+  {
+    "id": "S1",
+    "title": "FM 3-90, Tactics",
+    "body": "Headquarters, Department of the Army",
+    "date": "1. Mai 2023",
+    "url": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN38160-FM_3-90-000-WEB-1.pdf",
+    "verified_sections": [
+      "Appendix B, B-5–B-6, S. B-2: block, Unterschied zu fix",
+      "B-24, S. B-6: disengage",
+      "B-35–B-36, S. B-8: fix",
+      "B-46, S. B-9: interdict",
+      "B-58–B-61, S. B-12: support by fire vs attack by fire",
+      "B-62, S. B-12: suppress",
+      "13-56–13-59, S. 13-13: screen",
+      "13-99–13-102, S. 13-24: cover"
+    ],
+    "verification": "Offizielles öffentliches PDF lokal heruntergeladen und Textabschnitte gelesen; Seitenangaben sind gedruckte Seiten, keine PDF-Viewer-Zählung."
+  },
+  {
+    "id": "S2",
+    "title": "ADP 3-90, Offense and Defense",
+    "body": "Headquarters, Department of the Army",
+    "date": "31. Juli 2019",
+    "url": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN34828-ADP_3-90-000-WEB-1.pdf",
+    "verified_sections": [
+      "1-21, S. 1-3–1-4: combined arms",
+      "4-19–4-20, S. 4-3–4-4: retrograde, delay, withdraw, retirement"
+    ],
+    "verification": "Offizielles öffentliches PDF lokal heruntergeladen und Definitionen gelesen; aktuelle Webseite führt Fassung als active, aber Entwurf beansprucht keine Vollständigkeit aller späteren Doktrinänderungen."
+  },
+  {
+    "id": "S3",
+    "title": "Angewandte Taktik: Entschlussbeispiel",
+    "authors": "Jürgen Scherl, Alexander Böhm, Georg Stiedl",
+    "body": "TRUPPENDIENST, Herausgeber Bundesministerium für Landesverteidigung, Österreich",
+    "date": "19. April 2023",
+    "url": "https://www.truppendienst.com/beitraege/2023/angewandte-taktik-entschlussbeispiel",
+    "verified_sections": [
+      "Taktische Handlungen in der Verzögerung",
+      "Fazit"
+    ],
+    "verification": "Vollständige öffentliche Seite geöffnet. Deutsche Begriffe aus österreichischer, nicht automatisch deutscher Bundeswehr-Terminologie. Nur allgemeine Begriffsdefinitionen verwendet; operative Beispielplanung nicht in Spielanleitung übernommen."
+  }
+]

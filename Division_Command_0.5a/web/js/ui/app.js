@@ -843,7 +843,7 @@
       return;
     }
     if (pend.player !== viewer) {
-      if (mode !== 'hotseat' && (pend.kind === 'react-window' || pend.kind === 'sam' || pend.kind === 'geist-window')) {
+      if (mode !== 'hotseat' && (pend.kind === 'react-window' || pend.kind === 'sam' || pend.kind === 'geist-window' || /^tac-/.test(pend.kind))) {
         var ovw = $('#overlay');
         ovw.innerHTML = '<div class="modal"><h2>Warte auf Meldungen...</h2><p>Der Gegner prüft Reaktionen.</p></div>';
         ovw.style.display = 'flex';
@@ -1082,9 +1082,9 @@
     var extra = '';
     if ((pend.kind === 'instant-target' || pend.kind === 'honors' || pend.kind === 'mass-pick' || pend.kind === 'rations' || pend.kind === 'discard-hand') && pend.upto) extra = '<button type="button" class="primary" id="btn-confirm-tg">Auswahl bestätigen</button> ';
     var ov = $('#overlay');
-    ov.innerHTML = '<div class="modal"><h2>' + title + '</h2><p class="tiny">' + (pend.kind === 'instant-section' ? 'Abschnitt antippen (auch direkt auf der Front).' : 'Karte antippen. Goldener Rand = Zeiger. Kleinere Karte = gewählt.') + '</p><div class="choices pick-row">' + buttons +
+    ov.innerHTML = '<div class="modal"><h2>' + title + '</h2><p class="tiny">' + (pend.kind === 'instant-section' ? 'Abschnitt antippen (auch direkt auf der Front).' : pend.kind === 'tac-break' ? 'Nachbarfeld wählen oder die kostenlose Reaktion ablehnen. Schaden und Ausrüstung bleiben erhalten.' : /^tac-/.test(pend.kind) ? 'Karte oder Abschnitt antippen. Kosten erst nach der vollständigen gültigen Wahl.' : 'Karte antippen. Goldener Rand = Zeiger. Kleinere Karte = gewählt.') + '</p><div class="choices pick-row">' + buttons +
     // HTML in den Knoten schreiben
-      '</div>' + extra + '<button type="button" id="btn-cancel-pend">Abbrechen</button></div>'; // nächster Schritt im Ablauf
+      '</div>' + extra + '<button type="button" id="btn-cancel-pend"' + (pend.kind === 'tac-discard' || pend.kind === 'tac-aura-section' ? ' disabled title="Diese Auswahl ist verpflichtend"' : '') + '>Abbrechen</button></div>'; // nächster Schritt im Ablauf
     hideHover(); // nächster Schritt im Ablauf
     hideInspect(); // große Karte schließen
     ov.style.display = 'flex'; // nächster Schritt im Ablauf
@@ -1311,6 +1311,7 @@
       var auto = inspectEngineActions(opts, buttons);
       if (auto) { buttons = auto.buttons; actNotes = auto.notes; if (!opts.onAction) opts.onAction = auto.onAction; }
     }
+    if (!facedown && inst && engine && engine.tacticalStatus) actNotes=actNotes.concat(engine.tacticalStatus(inst));
     var html = '<div class="inspect-modal">' + // lokale Variable
       artTag(def, facedown, 'hero', true) + // Bild-HTML der Karte
       '<div class="info"><h3>' + escapeHtml(title) + '</h3>' + // HTML-Sonderzeichen escapen
@@ -2916,7 +2917,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
     }).join(''); // nächster Schritt im Ablauf
     if (window.DCTableChat) { try { DCTableChat.refresh(); } catch (eChat) {} }
-    if (st.pending && st.pending.player === viewer) {
+    if (st.pending && (st.pending.player === viewer || /^tac-/.test(st.pending.kind))) {
       showPending();
     }
     if (mode === 'bot' && !window.dcTimerHold && (st.active === 1 || (st.pending && st.pending.player === 1))) {

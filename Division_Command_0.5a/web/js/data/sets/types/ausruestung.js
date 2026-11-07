@@ -73,7 +73,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger +1 ATK beim ersten Angriff im Zug.",
     "effects": [
       {
-        "code": "CARRIER_FIRST_ATTACK_ATK",
+        "code": "FIRST_ATTACK_EACH_TURN",
         "param": {
           "atk": 1
         }
@@ -462,7 +462,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger stirbt: ziehe 1.",
+    "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "ON_DESTROY_DRAW",
@@ -664,9 +664,10 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       },
       {
-        "code": "CARRIER_FIRST_ATTACK_ATK",
+        "code": "FIRST_ATTACK_EACH_TURN",
         "param": {
-          "atk": 1
+          "atk": 1,
+          "attachmentTurnOnly": true
         }
       }
     ],
@@ -799,10 +800,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger ist nicht Ziel des ersten gegnerischen Angriffs im Zug.",
     "effects": [
       {
-        "code": "EQUIP_IGNORE_FIRST_DAMAGE",
-        "param": {
-          "untouchableFirst": true
-        }
+        "code": "FIRST_ENEMY_ATTACK_TARGET_DENIED",
+        "param": {}
       }
     ],
     "flavor": "Ritus vor dem Sturm.",
@@ -860,9 +859,9 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Solange Träger lebt: eigene Infanterie im Abschnitt ignoriert den ersten 1 Schaden im Zug.",
     "effects": [
       {
-        "code": "EQUIP_IGNORE_FIRST_DAMAGE",
+        "code": "SECTION_INF_FIRST_POINT_PER_TURN",
         "param": {
-          "sectionInf": true
+          "amount": 1
         }
       }
     ],
@@ -923,20 +922,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 0,
           "def": 1
         }
       },
       {
-        "code": "EQUIP_STAT",
-        "param": {
-          "atk": -1,
-          "def": 0
-        }
-      },
-      {
         "code": "EQUIP_IGNORE_FIRST_DAMAGE",
-        "param": {}
+        "param": {
+          "afterAtk": -1
+        }
       }
     ],
     "flavor": "Wachsiegel. Schutz hat seinen Preis.",
@@ -1022,7 +1015,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF. Wenn Träger zerstört wird: ziehe 1 Karte.",
+    "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -1327,16 +1320,9 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger +1 DEF gegen den ersten Angriff pro Zug.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "FIRST_DEFENSE_BONUS",
         "param": {
-          "atk": 0,
-          "def": 1
-        }
-      },
-      {
-        "code": "CARRIER_FIRST_ATTACK_ATK",
-        "param": {
-          "atk": 1
+          "amount": 1
         }
       }
     ],
@@ -1505,7 +1491,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF. Bei Zerstörung: ziehe 1.",
+    "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -5271,7 +5257,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF; einmalig negiere 1 Schaden.",
+    "text": "Träger +1 DEF; Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -5292,7 +5278,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "image": "ausruestung/B300.jpg",
     "max_copies": 1,
     "collector": "B300",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "rules": []
   },
   {
     "id": "dc_b_messgeraet_471",

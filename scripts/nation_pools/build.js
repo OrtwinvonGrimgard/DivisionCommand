@@ -57,7 +57,7 @@ const SOF = {
 };
 // ---- Ausrüstung
 const EQ = {
-  stat: (a, d, only) => ({ fx: [{ code: 'EQUIP_STAT', param: Object.assign({ atk: +a, def: +d }, only ? { only } : {}) }], t: 'Träger ' + [a ? (a > 0 ? '+' : '') + a + ' ATK' : '', d ? (d > 0 ? '+' : '') + d + ' DEF' : ''].filter(Boolean).join(' und ') + '.', r: ['Ausrüsten: Lege diese Karte an eine eigene Fronteinheit' + (only ? ' (nur ' + ONLY[only] + ')' : '') + '. Solange sie angelegt ist, hat der Träger ' + [a ? (a > 0 ? '+' : '') + a + ' ATK' : '', d ? (d > 0 ? '+' : '') + d + ' DEF' : ''].filter(Boolean).join(' und ') + '. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.'] }),
+  stat: (a, d, only) => ({ fx: [{ code: 'EQUIP_STAT', param: Object.assign({ atk: +a, def: +d }, only ? { only } : {}) }], t: 'Träger ' + [Number(a) ? (a > 0 ? '+' : '') + a + ' ATK' : '', Number(d) ? (d > 0 ? '+' : '') + d + ' DEF' : ''].filter(Boolean).join(' und ') + '.', r: ['Ausrüsten: Lege diese Karte an eine eigene Fronteinheit' + (only ? ' (nur ' + ONLY[only] + ')' : '') + '. Solange sie angelegt ist, hat der Träger ' + [Number(a) ? (a > 0 ? '+' : '') + a + ' ATK' : '', Number(d) ? (d > 0 ? '+' : '') + d + ' DEF' : ''].filter(Boolean).join(' und ') + '. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.'] }),
   ign1: () => ({ fx: [{ code: 'EQUIP_IGNORE_FIRST_DAMAGE', param: { untouchableFirst: true } }], t: 'Der erste Schaden am Träger wird ignoriert (einmalig).', r: ['Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.'] }),
   neg: (n) => ({ fx: [{ code: 'EQUIP_NEGATE_DAMAGE', param: { amount: +n, once: true } }], t: 'Einmalig: verhindere ' + n + ' Schaden am Träger.', r: ['Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um ' + n + ' verringert. Danach verbraucht.'] }),
   odraw: (n) => ({ fx: [{ code: 'ON_DESTROY_DRAW', param: { draw: +n } }], t: 'Wird der Träger zerstört: ziehe ' + n + '.', r: ['Wird der Träger zerstört, ziehst du ' + n + ' Karte' + (n > 1 ? 'n' : '') + '.'] }),
@@ -111,7 +111,7 @@ function build(nation, short, line, idx) {
   if (kind.klasse) c.klasse = kind.klasse;
   if (unit) { c.atk = +atk; c.def = +def; c.verdeckt_ok = true; }
   if (keywords.length) { if (!unit) throw new Error(name + ': Schlüsselwörter nur auf Einheiten'); if (keywords.length > 2) throw new Error(name + ': max. 2 Schlüsselwörter'); c.keywords = keywords; }
-  return c;
+  return require('../tactics/migrate.js').migrate(c);
 }
 function main() {
   const dir = path.join(__dirname, 'nations');

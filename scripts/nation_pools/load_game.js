@@ -2,7 +2,7 @@
 /* Node-Loader für Engine + Katalog (inkl. nation_pools.js), ohne DOM. */
 const fs = require('fs'), path = require('path'), vm = require('vm');
 const WEB = path.join(__dirname, '..', '..', 'Division_Command_0.5a', 'web');
-const TYPES = ['doktrinen','tokens','infanterie','panzer','artillerie','aufklaerung','elite','unterstuetzung','soforteinsatz','ausruestung','nation_pools'];
+const TYPES = ['doktrinen','tokens','infanterie','panzer','artillerie','aufklaerung','elite','unterstuetzung','soforteinsatz','ausruestung','nation_pools', 'tactical'];
 function loadGame(opts) {
   opts = opts || {};
   const document = { getElementById: () => null, querySelector: () => null, createElement: () => ({ style: {}, appendChild() {}, setAttribute() {}, remove() {} }), head: { appendChild() {} }, addEventListener() {} };
@@ -20,6 +20,7 @@ function loadGame(opts) {
   vm.runInNewContext(cat.slice(0, cut > 0 ? cut : cat.length), ctx);
   for (const f of ['js/data/decks.js', 'js/data/nationen.js', 'js/engine/engine.js']) vm.runInNewContext(fs.readFileSync(path.join(WEB, f), 'utf8'), ctx);
   for (const f of ['js/engine/victory_trophy.js', 'js/engine/doctrine_runtime.js']) { try { vm.runInNewContext(fs.readFileSync(path.join(WEB, f), 'utf8'), ctx); } catch (e) {} }
+  vm.runInNewContext(fs.readFileSync(path.join(WEB,'js/engine/tactical_runtime.js'),'utf8'),ctx);
   return window;
 }
 function newMatch(w, nation, seed) {

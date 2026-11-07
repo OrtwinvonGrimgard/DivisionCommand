@@ -1,12 +1,12 @@
 # Schlüsselwörter – **implementiert**
 
-Die 16 Wörter sind allgemeines Vokabular und an keine Nation gebunden. Sie stehen auf den Karten als **fettes Wort** mit vollständigem Erinnerungstext in Klammern. Das gilt für die Detailansicht, die Deckbuilder-Großansicht und die Platzhalterkarten. Auf dem Tisch erscheint eine Wortleiste.
+Die 24 Wörter (16 ursprüngliche, 3 vereinheitlichte Bestandskerne, 5 neue taktische Mechaniken) sind allgemeines Vokabular und an keine Nation gebunden. Sie stehen auf den Karten als **fettes Wort** mit vollständigem Erinnerungstext in Klammern. Das gilt für die Detailansicht, die Deckbuilder-Großansicht und die Platzhalterkarten. Auf dem Tisch erscheint eine Wortleiste.
 
-Die Engine wertet die Wörter strukturiert aus (`def.keywords`, `engine.js` `_kw…`). Sie verlässt sich nicht auf Fließtext. Quelle des Vokabulars ist `web/js/data/keywords.js`, die Tests liegen in `scripts/test_keywords.js`.
+Die Engine wertet die Wörter strukturiert aus (`def.keywords`, strukturierte `effects`, `engine.js` und `tactical_runtime.js`). Sie verlässt sich nicht auf Fließtext. Quelle des Vokabulars ist `web/js/data/keywords.js`, die Tests liegen in `scripts/test_keywords.js`.
 
 > Die Sondermechaniken je Nation in `NEUE_EFFEKTIDEEN.md` sind davon getrennt und bleiben **Vorschläge, nicht implementiert**.
 
-## Die 16 Wörter
+## Die 24 Wörter
 
 - **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
 - **Ablösung** (Wird diese Einheit zerstört, kostet die nächste eigene Einheit, die du auf dasselbe Feld setzt, 1 AP weniger (mindestens 1), bis das Feld wieder besetzt wurde oder bis zum Ende deines nächsten Zugs, was zuerst eintritt. Höchstens eine solche Markierung pro Feld.)
@@ -24,8 +24,16 @@ Die Engine wertet die Wörter strukturiert aus (`def.keywords`, `engine.js` `_kw
 - **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - **Zähigkeit** (Hat +1 DEF für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
+- **Indirektes Feuer** (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
+- **Binden** ((1 AP; verbraucht den Angriff dieser Einheit): Nur in deinem Zug, einmal pro Zug, wenn diese offene Einheit jetzt legal angreifen könnte. Wähle eine offene, nicht eingegrabene gegnerische Fronteinheit im gegenüberliegenden Abschnitt. Bis zum Ende des nächsten Zuges ihres Besitzers darf sie ihr Feld weder durch Versetzen, Tausch, erzwungene Bewegung noch Rücknahme auf die Hand verlassen. Zerstörung oder Opferung bleibt möglich. Sie darf weiter angreifen und Fähigkeiten nutzen. Kein Schaden. Höchstens ein Bindeneinsatz pro Besitzer pro Zug. Nicht stapelbar; eine weitere Bindung desselben Ziels ist bis zum Ablauf unzulässig. Der Status bleibt bis zum Ablauf auch bestehen, wenn der Binder zerstört wird.)
+- **Anmarschstörung** ((1 AP; einmal pro eigenem Zug): Nur in deinem Zug. Wähle einen gegnerischen Abschnitt. Solange diese offene Unterstützung liegt, kostet die erste dort neu ins Spiel kommende gegnerische Einheit bis zum Ende des nächsten gegnerischen Zuges 1 AP zusätzlich; danach ist die Markierung verbraucht. Es zählt jede neue Einheit aus Hand oder Ablage, auch durch einen sonst kostenlosen Effekt; gewöhnliche Rabatte und Mindestkosten werden zuerst berechnet, dann +1 AP. Bei unzureichenden AP ist dieser Einsatz dort nicht zulässig; die Markierung wird nicht verbraucht. Bewegung bereits liegender Einheiten, Tausch, Unterstützung, Ausrüstung und Token lösen sie nicht aus. Kein Schaden und kein Angriffsverbot. Höchstens eine eigene Anmarschstörung gleichzeitig, nicht stapelbar. Wird die Quelle verdeckt oder entfernt, endet sie sofort.)
+- **Feuerschutz** ((1 AP; verbraucht den Angriff dieser Einheit): Nur in deinem Zug, einmal pro Zug, wenn diese offene Einheit jetzt legal angreifen könnte. Wähle eine andere offene eigene Fronteinheit auf einem benachbarten Feld derselben Reihe und eine offene gegnerische Fronteinheit, die beide jetzt legal angreifen könnten. Beim nächsten Angriff der gewählten eigenen Einheit gegen genau dieses Ziel in diesem Zug verursacht dessen Gegenschlag beziehungsweise Nebel-Erstschlag 2 Schaden weniger, mindestens 0; andere Schadensquellen bleiben unverändert. Der Schutz wird bei Kampfbeginn verbraucht, auch wenn der Angreifer danach an einer Mine stirbt. Er endet vorher, wenn eine der drei Einheiten entfernt oder verdeckt wird, ihr Feld wechselt oder dein Zug endet. Kein eigener Schaden durch die Schutzhandlung. Höchstens ein Feuerschutz gleichzeitig pro Seite; nicht stapelbar.)
+- **Gefechtsabbruch** ((Reaktion, 1 AP; einmal pro gegnerischem Zug): Nachdem ein gegnerischer Angriff gegen diese offene Einheit vollständig abgewickelt wurde, einschließlich Gegenschlag und Zerstörungen, darfst du sie, falls sie überlebt hat, auf ein freies unmittelbar benachbartes Feld derselben eigenen Frontreihe versetzen. Kein Sprung über ein Feld. Sie behält Schaden, Ausrüstung, Token und Instanz-ID. Keine Heilung, kein Verdecken, kein neuer Einsatz und kein neues Eingraben. Bis zum Ende deines nächsten Zuges kann sie nicht angreifen, auch nicht durch Zusatzangriff. Ist sie gebunden oder gibt es kein freies legales Nachbarfeld, ist die Reaktion nicht möglich. Abgelehnte Reaktion kostet nichts. Nicht bei Soforteinsatzschaden oder eigenem Angriff; keine Wirkung für eine zerstörte Einheit.)
+- **Vorpostenmeldung** (Solange diese Einheit offen liegt, decke in jedem Spielerzug die erste verdeckte gegnerische Fronteinheit auf, die neu in den gegenüberliegenden Abschnitt eingesetzt oder durch gewöhnliches Versetzen dorthin bewegt wird. Erst nach Platzierung und Bezahlung, vor dem nächsten Spielerbefehl; Eingraben-Schutz bleibt unverändert bestehen. Eine bereits offen eintretende Einheit verbraucht die Meldung nicht. Bereits im Abschnitt liegende Einheiten bleiben unverändert. Aufdecken, Verdecken und Platztausch zählen hierfür nicht als Eintritt. Kein Schaden, kein Bewegungsstopp, kein Beobachtet-Marker. Mehrere Vorpostenmeldungen desselben Besitzers im selben Abschnitt teilen sich eine Auslösung pro Spielerzug. Ein zerstörter oder verdeckter Melder löst nicht aus; seine spätere Rückkehr setzt das gemeinsame Auslösungslimit nicht zurück.)
 
-## Verteilung (Einheiten mit dem Wort)
+## Verteilung (Deckkarten mit dem Wort)
 
 | Wort | gesamt | Steinmark | Karsk | Theryn | Vael | Merovan | Lyr | Ossaria | Caldris | Orthea | Namar | Rothain | Sahr | Averon | Vesper | Dargan | Eldran | neutral |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -45,8 +53,18 @@ Die Engine wertet die Wörter strukturiert aus (`def.keywords`, `engine.js` `_kw
 | Nachsetzen | 44 | · | 8 | 2 | 2 | 2 | 4 | 1 | 1 | 5 | 1 | 3 | 2 | · | 3 | 8 | · | 2 |
 | Hinterhalt | 16 | 1 | · | · | · | 1 | 5 | · | · | · | · | · | 4 | 1 | 3 | · | · | 1 |
 | Zähigkeit | 31 | 2 | 1 | 1 | 3 | 1 | 6 | 4 | 6 | 1 | 1 | 1 | 1 | · | · | 1 | 2 | · |
+| Indirektes Feuer | 83 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 3 |
+| Absetzen | 29 | 1 | · | · | · | 2 | 6 | · | · | · | 1 | · | 5 | 5 | 7 | · | · | 2 |
+| Erstschadenschutz | 14 | 1 | · | 1 | 1 | 1 | 1 | 1 | 1 | · | 1 | 1 | 1 | 1 | 1 | 1 | 1 | · |
+| Binden | 2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 2 |
+| Anmarschstörung | 2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 2 |
+| Feuerschutz | 2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 2 |
+| Gefechtsabbruch | 2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 2 |
+| Vorpostenmeldung | 2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 2 |
 
-543 von 828 Einheiten tragen mindestens ein Wort, 56 davon zwei. Nicht-Einheiten tragen keine Wörter.
+592 von 1709 Deckkarten tragen mindestens ein Wort, 109 davon genau zwei. Ausrüstung und Unterstützung können die passenden neuen allgemeinen Wörter tragen.
+
+Die Umsetzung t203 mit zehn additiven neutralen Erprobungskarten, Abgrenzungen, Quellen und dokumentierten Konfliktentscheidungen steht in [TAKTISCHE_SCHLUESSELWOERTER.md](TAKTISCHE_SCHLUESSELWOERTER.md). Reproduzierbarer Build: `npm run build:tactics`.
 
 ## Umgestellte alte Kartentexte (35)
 

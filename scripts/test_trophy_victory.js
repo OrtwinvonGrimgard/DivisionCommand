@@ -31,7 +31,7 @@ for (const s of [
   'js/data/sets/types/elite.js', 'js/data/sets/types/unterstuetzung.js',
   'js/data/sets/types/soforteinsatz.js', 'js/data/sets/types/ausruestung.js', 'js/data/sets/types/nation_pools.js',
   'js/data/decks.js', 'js/data/catalog.js',
-  'js/engine/engine.js', 'js/engine/victory_trophy.js',
+  'js/engine/engine.js', 'js/engine/tactical_runtime.js', 'js/engine/victory_trophy.js',
 ]) load(ctx, s);
 
 const { DCEngine, DC_CATALOG, DC_TROPHY, DC_TROPHY_OBJECTIVES } = ctx;

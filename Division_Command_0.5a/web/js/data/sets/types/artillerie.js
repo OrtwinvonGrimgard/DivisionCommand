@@ -20,7 +20,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "fahrzeug",
       "stellung"
     ],
-    "text": "Greift die gesamte feindliche Front an. Nach dem Angriff bis zum nächsten eigenen Zug verdeckt.",
+    "text": "",
     "effects": [
       {
         "code": "ATTACK_ANY_FRONT"
@@ -34,7 +34,13 @@ window.DC_SET_TYPES["Artillerie"] = [
     "max_copies": 2,
     "collector": "A051",
     "keywords": [
-      "Platztausch"
+      "Platztausch",
+      "Indirektes Feuer",
+      "Absetzen"
+    ],
+    "rules": [
+      "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)",
+      "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
     ]
   },
   {
@@ -56,7 +62,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "leicht",
       "moerser"
     ],
-    "text": "Indirektes Feuer: gesamte feindliche Front.",
+    "text": "",
     "effects": [
       {
         "code": "ATTACK_ANY_FRONT"
@@ -67,7 +73,11 @@ window.DC_SET_TYPES["Artillerie"] = [
     "max_copies": 2,
     "collector": "A059",
     "keywords": [
-      "Fernschuss"
+      "Fernschuss",
+      "Indirektes Feuer"
+    ],
+    "rules": [
+      "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
     ]
   },
   {
@@ -90,7 +100,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "mittel",
       "raketenwerfer"
     ],
-    "text": "Indirektes Feuer auf die ganze Front. Hohe Reichweite: auch Support.",
+    "text": "Hohe Reichweite: auch Support.",
     "effects": [
       {
         "code": "ATTACK_ANY_FRONT"
@@ -104,7 +114,11 @@ window.DC_SET_TYPES["Artillerie"] = [
     "max_copies": 2,
     "collector": "A063",
     "keywords": [
-      "Stellungswechsel"
+      "Stellungswechsel",
+      "Indirektes Feuer"
+    ],
+    "rules": [
+      "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
     ]
   },
   {

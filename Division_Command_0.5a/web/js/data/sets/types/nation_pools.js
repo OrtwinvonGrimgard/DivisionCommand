@@ -366,10 +366,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -382,7 +383,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_steinmark_freigabebatterie",
@@ -397,11 +401,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -417,7 +422,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_steinmark_normmoerser",
@@ -432,10 +440,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -450,7 +459,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Zuteilung"
+   "Zuteilung",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -466,11 +476,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+  "text": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
+   "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -488,7 +499,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Zuteilung"
+   "Zuteilung",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -504,11 +516,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -526,7 +539,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Fernschuss"
+   "Fernschuss",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -615,12 +629,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "aufklaerung"
   ],
-  "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
   "rules": [
    "Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.",
    "Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.",
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -642,7 +657,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Absetzen"
   ]
  },
  {
@@ -723,9 +739,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -779,9 +795,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte. Jeder Schaden an deinen Fronteinheiten −1.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Jeder Schaden an deinen Fronteinheiten −1.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).",
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
    "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich."
   ],
   "effects": [
@@ -1127,9 +1143,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -1156,9 +1172,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK und 0 DEF.",
+  "text": "Träger +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -1186,9 +1202,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +1 DEF. Wird der Träger zerstört: ziehe 1.",
+  "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
@@ -1250,10 +1266,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +1 DEF. Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "Träger +1 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -1272,7 +1289,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Norm erfüllt, Treffer abgefangen.",
   "collector": "NP-STM-39",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_steinmark_zielfernrohr_norm",
@@ -1646,10 +1666,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -1664,7 +1685,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Zuteilung"
+   "Zuteilung",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -1680,10 +1702,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -1698,7 +1721,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -1714,10 +1738,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -1730,7 +1755,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 1,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_eldran_burgfeuerstellung",
@@ -1745,10 +1773,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -1761,7 +1790,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_eldran_kronarsenal",
@@ -1776,11 +1808,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -1799,7 +1832,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "verdeckt_ok": true,
   "keywords": [
    "Durchschlag",
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -2379,9 +2413,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -2408,10 +2442,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +1 DEF. Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "Träger +1 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -2431,7 +2466,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Erst graben, dann kämpfen.",
   "collector": "NP-ELD-36",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_eldran_kronsiegel_der_wacht",
@@ -2445,10 +2483,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört: ziehe 1. Träger +1 ATK und 0 DEF.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 ATK.",
   "rules": [
    "Wird der Träger zerstört, ziehst du 1 Karte.",
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -2481,9 +2519,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Einmalig: verhindere 2 Schaden am Träger.",
+  "text": "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
   "rules": [
-   "Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 2 verringert. Danach verbraucht."
+   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
   ],
   "effects": [
    {
@@ -2896,10 +2934,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -2914,7 +2953,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Staffelangriff"
+   "Staffelangriff",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -2930,10 +2970,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -2948,7 +2989,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Fernschuss"
+   "Fernschuss",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -2964,10 +3006,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -2980,7 +3023,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_rothain_ballungsfeuer",
@@ -2995,10 +3041,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -3011,7 +3058,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_rothain_ewige_batterie",
@@ -3026,11 +3076,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -3049,7 +3100,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "verdeckt_ok": true,
   "keywords": [
    "Nachsetzen",
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -3236,9 +3288,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -3618,9 +3670,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK und 0 DEF.",
+  "text": "Träger +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -3647,10 +3699,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört: ziehe 1. Träger 0 ATK und +1 DEF.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.",
   "rules": [
    "Wird der Träger zerstört, ziehst du 1 Karte.",
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -3711,9 +3763,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -3768,10 +3820,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF. Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -3791,7 +3844,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Alte Platten, neu genietet.",
   "collector": "NP-ROT-40",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_averon_netztrupp_novaris",
@@ -3920,10 +3976,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -3938,7 +3995,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Platztausch"
+   "Platztausch",
+   "Absetzen"
   ]
  },
  {
@@ -4017,10 +4075,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -4035,7 +4094,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Überlast"
+   "Überlast",
+   "Absetzen"
   ]
  },
  {
@@ -4147,10 +4207,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -4165,7 +4226,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -4181,12 +4243,14 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -4204,7 +4268,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Platztausch"
+   "Platztausch",
+   "Indirektes Feuer",
+   "Absetzen"
   ]
  },
  {
@@ -4220,10 +4286,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -4238,7 +4305,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Durchschlag"
+   "Durchschlag",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -4254,11 +4322,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -4276,7 +4345,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -4292,10 +4362,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -4308,7 +4379,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_averon_sensordrohne",
@@ -4397,12 +4471,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "aufklaerung"
   ],
-  "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
   "rules": [
    "Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.",
    "Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.",
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -4424,7 +4499,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Absetzen"
   ]
  },
  {
@@ -4481,10 +4557,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "elite",
    "infanterie"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -4499,7 +4576,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Erbitterung"
+   "Erbitterung",
+   "Absetzen"
   ]
  },
  {
@@ -4542,9 +4620,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -4905,10 +4983,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört: ziehe 1. Träger 0 ATK und +1 DEF.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.",
   "rules": [
    "Wird der Träger zerstört, ziehst du 1 Karte.",
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -4941,9 +5019,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +1 DEF. Erster Angriff des Trägers: +1 ATK.",
+  "text": "Träger +1 DEF. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
@@ -4977,9 +5055,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -5035,9 +5113,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "",
   "rules": [
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -5049,7 +5128,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Der erste Treffer geht daneben.",
   "collector": "NP-AVE-39",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_averon_schnellfeuergewehr",
@@ -5063,9 +5145,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK und 0 DEF. Erster Angriff des Trägers: +1 ATK.",
+  "text": "Träger +1 ATK. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
@@ -5440,10 +5522,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -5458,7 +5541,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Nachsetzen"
+   "Nachsetzen",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -5474,11 +5558,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -5496,7 +5581,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Durchschlag"
+   "Durchschlag",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -5512,10 +5598,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -5530,7 +5617,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Fernschuss"
+   "Fernschuss",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -5546,11 +5634,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+  "text": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
+   "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -5566,7 +5655,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_orthea_nachmessbatterie",
@@ -5581,10 +5673,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -5597,7 +5690,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_orthea_peilstation_mobil",
@@ -5792,9 +5888,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -5848,9 +5944,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte. Zu Beginn deines Zuges: +1 AP.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Zu Beginn deines Zuges: +1 AP.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).",
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
    "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt."
   ],
   "effects": [
@@ -6209,9 +6305,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +1 DEF. Wird der Träger zerstört: ziehe 1.",
+  "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
@@ -6273,10 +6369,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF. Einmalig: verhindere 1 Schaden am Träger.",
+  "text": "Träger +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
-   "Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 1 verringert. Danach verbraucht."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
   ],
   "effects": [
    {
@@ -6310,9 +6406,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK und 0 DEF.",
+  "text": "Träger +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -6340,9 +6436,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -6370,10 +6466,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -6388,7 +6485,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Platztausch"
+   "Platztausch",
+   "Absetzen"
   ]
  },
  {
@@ -6530,10 +6628,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -6548,7 +6647,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Absetzen"
   ]
  },
  {
@@ -6566,10 +6666,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -6584,7 +6685,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 5,
   "verdeckt_ok": true,
   "keywords": [
-   "Platztausch"
+   "Platztausch",
+   "Absetzen"
   ]
  },
  {
@@ -6631,10 +6733,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -6649,7 +6752,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Absetzen"
   ]
  },
  {
@@ -6736,10 +6840,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -6754,7 +6859,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -6770,12 +6876,14 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -6793,7 +6901,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Indirektes Feuer",
+   "Absetzen"
   ]
  },
  {
@@ -6809,10 +6919,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -6827,7 +6938,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Durchschlag"
+   "Durchschlag",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -6843,11 +6955,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -6863,7 +6976,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_vesper_systemantwort",
@@ -6878,12 +6994,14 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -6901,7 +7019,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Platztausch"
+   "Platztausch",
+   "Indirektes Feuer",
+   "Absetzen"
   ]
  },
  {
@@ -6991,12 +7111,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "aufklaerung"
   ],
-  "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
   "rules": [
    "Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.",
    "Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.",
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -7018,7 +7139,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Platztausch"
+   "Platztausch",
+   "Absetzen"
   ]
  },
  {
@@ -7130,9 +7252,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -7158,10 +7280,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Gegnerische Fronteinheiten −1 ATK. Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Gegnerische Fronteinheiten −1 ATK. Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
    "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag).",
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -7494,9 +7616,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "",
   "rules": [
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -7508,7 +7631,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Der erste Schuss trifft den Schatten.",
   "collector": "NP-VES-35",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_vesper_falsche_papiere",
@@ -7522,7 +7648,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört: ziehe 1.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
    "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
@@ -7550,9 +7676,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Einmalig: verhindere 2 Schaden am Träger.",
+  "text": "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
   "rules": [
-   "Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 2 verringert. Danach verbraucht."
+   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
   ],
   "effects": [
    {
@@ -7607,9 +7733,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -7990,10 +8116,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -8006,7 +8133,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_karsk_kurzfeuerwerfer",
@@ -8021,10 +8151,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -8039,7 +8170,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Zuteilung"
+   "Zuteilung",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -8055,10 +8187,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -8071,7 +8204,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_karsk_durchbruchsfeuer",
@@ -8086,11 +8222,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+  "text": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
+   "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -8106,7 +8243,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_karsk_stossleitfeuer",
@@ -8121,11 +8261,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -8141,7 +8282,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_karsk_leistungsmesser",
@@ -8794,9 +8938,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -8853,9 +8997,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 ATK und 0 DEF. Solange der Träger beschädigt ist: +1 ATK.",
+  "text": "Träger +2 ATK. Solange der Träger beschädigt ist: +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +1 ATK."
   ],
   "effects": [
@@ -8890,10 +9034,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF. Einmalig: verhindere 1 Schaden am Träger.",
+  "text": "Träger +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
-   "Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 1 verringert. Danach verbraucht."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
   ],
   "effects": [
    {
@@ -9254,10 +9398,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -9272,7 +9417,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Fernschuss"
+   "Fernschuss",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -9288,10 +9434,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -9304,7 +9451,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 1,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_caldris_defensivbatterie",
@@ -9319,10 +9469,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -9335,7 +9486,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_caldris_sperrfeuer_fuersorge",
@@ -9350,10 +9504,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -9368,7 +9523,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Nachsetzen"
+   "Nachsetzen",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -9384,11 +9540,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -9407,7 +9564,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "verdeckt_ok": true,
   "keywords": [
    "Zuteilung",
-   "Fernschuss"
+   "Fernschuss",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -9626,9 +9784,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -9654,10 +9812,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Jeder Schaden an deinen Fronteinheiten −1. Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Jeder Schaden an deinen Fronteinheiten −1. Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
    "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich.",
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -9996,9 +10154,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -10025,9 +10183,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Einmalig: verhindere 2 Schaden am Träger.",
+  "text": "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
   "rules": [
-   "Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 2 verringert. Danach verbraucht."
+   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
   ],
   "effects": [
    {
@@ -10054,9 +10212,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "",
   "rules": [
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -10068,7 +10227,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Der erste Schlag prallt ab.",
   "collector": "NP-CAL-37",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_caldris_ruheabzeichen",
@@ -10082,9 +10244,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +1 DEF. Wird der Träger zerstört: ziehe 1.",
+  "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
@@ -10118,9 +10280,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +3 DEF.",
+  "text": "Träger +3 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger 0 ATK und +3 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +3 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -10508,10 +10670,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -10526,7 +10689,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Staffelangriff"
+   "Staffelangriff",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -10542,10 +10706,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -10560,7 +10725,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Nachsetzen"
+   "Nachsetzen",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -10576,10 +10742,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -10592,7 +10759,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_theryn_vorbereitungsfeuer",
@@ -10607,10 +10777,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -10623,7 +10794,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_theryn_ruf_ueber_das_feld",
@@ -10638,11 +10812,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+  "text": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
+   "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -10660,7 +10835,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -10852,9 +11028,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -10908,10 +11084,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Deine Fronteinheiten +1 ATK. Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Deine Fronteinheiten +1 ATK. Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
    "Solange diese Unterstützung liegt, haben alle deine Fronteinheiten +1 ATK.",
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -11248,9 +11424,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -11278,7 +11454,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört: ziehe 1.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
    "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
@@ -11335,9 +11511,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "",
   "rules": [
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -11349,7 +11526,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Ein Wunder rettet.",
   "collector": "NP-THE-38",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_theryn_eiferklinge",
@@ -11750,10 +11930,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -11768,7 +11949,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Durchschlag"
+   "Durchschlag",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -11784,10 +11966,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -11802,7 +11985,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Nachsetzen"
+   "Nachsetzen",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -11818,11 +12002,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -11841,7 +12026,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "verdeckt_ok": true,
   "keywords": [
    "Zuteilung",
-   "Staffelangriff"
+   "Staffelangriff",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -11857,10 +12043,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -11875,7 +12062,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Fernschuss"
+   "Fernschuss",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -11891,11 +12079,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+  "text": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
+   "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -11913,7 +12102,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Zuteilung"
+   "Zuteilung",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -12161,10 +12351,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: +1 AP. Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Zu Beginn deines Zuges: +1 AP. Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
    "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt.",
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -12492,9 +12682,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -12550,10 +12740,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört: ziehe 1. Träger 0 ATK und +1 DEF.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.",
   "rules": [
    "Wird der Träger zerstört, ziehst du 1 Karte.",
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -12614,10 +12804,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +1 DEF. Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "Träger +1 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -12636,7 +12827,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Explodiert nach außen.",
   "collector": "NP-VAE-39",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_vael_vertragsgewehr",
@@ -12650,9 +12844,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK und 0 DEF.",
+  "text": "Träger +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -12794,10 +12988,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -12812,7 +13007,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Absetzen"
   ]
  },
  {
@@ -13009,10 +13205,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -13027,7 +13224,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -13043,10 +13241,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -13061,7 +13260,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -13077,10 +13277,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -13095,7 +13296,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -13111,10 +13313,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -13129,7 +13332,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -13145,10 +13349,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -13161,7 +13366,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 5,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_merovan_wegkundschafter",
@@ -13249,12 +13457,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "aufklaerung"
   ],
-  "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
   "rules": [
    "Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.",
    "Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.",
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -13276,7 +13485,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Platztausch"
+   "Platztausch",
+   "Absetzen"
   ]
  },
  {
@@ -13738,9 +13948,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -13767,9 +13977,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +1 DEF. Wird der Träger zerstört: ziehe 1.",
+  "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
@@ -13803,9 +14013,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "",
   "rules": [
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -13817,7 +14028,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Eingegraben vor dem ersten Schuss.",
   "collector": "NP-MER-37",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_merovan_wegkarte",
@@ -13859,9 +14073,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK und 0 DEF.",
+  "text": "Träger +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -13889,10 +14103,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF. Einmalig: verhindere 1 Schaden am Träger.",
+  "text": "Träger +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
-   "Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 1 verringert. Danach verbraucht."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
   ],
   "effects": [
    {
@@ -14083,10 +14297,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -14101,7 +14316,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Absetzen"
   ]
  },
  {
@@ -14183,10 +14399,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -14201,7 +14418,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Absetzen"
   ]
  },
  {
@@ -14282,10 +14500,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -14298,7 +14517,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_lyr_bergmoerser",
@@ -14313,12 +14535,14 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -14336,7 +14560,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Indirektes Feuer",
+   "Absetzen"
   ]
  },
  {
@@ -14352,10 +14578,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -14370,7 +14597,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -14386,12 +14614,14 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -14409,7 +14639,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Indirektes Feuer",
+   "Absetzen"
   ]
  },
  {
@@ -14425,11 +14657,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -14448,7 +14681,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "verdeckt_ok": true,
   "keywords": [
    "Durchschlag",
-   "Nachsetzen"
+   "Nachsetzen",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -14534,12 +14768,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "aufklaerung"
   ],
-  "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
   "rules": [
    "Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.",
    "Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.",
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -14561,7 +14796,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Absetzen"
   ]
  },
  {
@@ -14614,10 +14850,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "elite",
    "infanterie"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -14633,7 +14870,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "verdeckt_ok": true,
   "keywords": [
    "Überlast",
-   "Abschirmung"
+   "Abschirmung",
+   "Absetzen"
   ]
  },
  {
@@ -15034,9 +15272,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "",
   "rules": [
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -15048,7 +15287,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Grau wie der Fels.",
   "collector": "NP-LYR-35",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_lyr_steinschleuder",
@@ -15090,7 +15332,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört: ziehe 1.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
    "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
@@ -15146,9 +15388,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -15175,9 +15417,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK und 0 DEF. Solange der Träger beschädigt ist: +1 ATK.",
+  "text": "Träger +1 ATK. Solange der Träger beschädigt ist: +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +1 ATK."
   ],
   "effects": [
@@ -15530,10 +15772,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -15548,7 +15791,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Zuteilung"
+   "Zuteilung",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -15564,10 +15808,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -15582,7 +15827,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Durchschlag"
+   "Durchschlag",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -15598,10 +15844,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -15614,7 +15861,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 2,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_ossaria_wallfeuer",
@@ -15629,10 +15879,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -15645,7 +15896,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 4,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_ossaria_namensruf_batterie",
@@ -15660,11 +15914,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -15683,7 +15938,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "verdeckt_ok": true,
   "keywords": [
    "Nachsetzen",
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -15907,9 +16163,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -16275,9 +16531,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -16304,9 +16560,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "",
   "rules": [
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -16318,7 +16575,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Der erste Treffer gilt den Toten.",
   "collector": "NP-OSS-36",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_ossaria_ahnenruestung",
@@ -16361,10 +16621,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört: ziehe 1. Träger 0 ATK und +1 DEF.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.",
   "rules": [
    "Wird der Träger zerstört, ziehst du 1 Karte.",
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -16397,9 +16657,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Einmalig: verhindere 2 Schaden am Träger.",
+  "text": "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
   "rules": [
-   "Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 2 verringert. Danach verbraucht."
+   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
   ],
   "effects": [
    {
@@ -16568,10 +16828,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -16586,7 +16847,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Platztausch"
+   "Platztausch",
+   "Absetzen"
   ]
  },
  {
@@ -16779,10 +17041,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -16797,7 +17060,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -16813,10 +17077,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -16831,7 +17096,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Zuteilung"
+   "Zuteilung",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -16847,10 +17113,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -16865,7 +17132,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Zuteilung"
+   "Zuteilung",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -16881,11 +17149,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -16903,7 +17172,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Zuteilung"
+   "Zuteilung",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -16919,10 +17189,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -16938,7 +17209,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "verdeckt_ok": true,
   "keywords": [
    "Zuteilung",
-   "Staffelangriff"
+   "Staffelangriff",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -17135,9 +17407,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte. Zu Beginn deines Zuges: +1 AP.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Zu Beginn deines Zuges: +1 AP.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).",
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
    "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt."
   ],
   "effects": [
@@ -17170,9 +17442,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -17537,9 +17809,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -17566,7 +17838,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört: ziehe 1.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
    "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
@@ -17594,10 +17866,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +1 DEF. Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "Träger +1 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -17616,7 +17889,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Aus Containerstahl.",
   "collector": "NP-NAM-37",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_namar_lieferwaffe",
@@ -17768,10 +18044,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "infanterie"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -17786,7 +18063,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Platztausch"
+   "Platztausch",
+   "Absetzen"
   ]
  },
  {
@@ -17921,10 +18199,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -17939,7 +18218,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Absetzen"
   ]
  },
  {
@@ -18049,10 +18329,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -18067,7 +18348,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -18083,12 +18365,14 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -18106,7 +18390,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Indirektes Feuer",
+   "Absetzen"
   ]
  },
  {
@@ -18122,10 +18408,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -18140,7 +18427,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Nachsetzen"
+   "Nachsetzen",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -18156,11 +18444,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -18176,7 +18465,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 5,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_sahr_wegschliesser",
@@ -18191,10 +18483,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -18209,7 +18502,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Stellungswechsel"
+   "Stellungswechsel",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -18301,12 +18595,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "aufklaerung"
   ],
-  "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
   "rules": [
    "Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.",
    "Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.",
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -18328,7 +18623,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
-   "Hinterhalt"
+   "Hinterhalt",
+   "Absetzen"
   ]
  },
  {
@@ -18380,10 +18676,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "elite",
    "infanterie"
   ],
-  "text": "Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.",
+  "text": "",
   "rules": [
    "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.",
-   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken."
+   "Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
+   "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
   ],
   "effects": [
    {
@@ -18399,7 +18696,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "verdeckt_ok": true,
   "keywords": [
    "Hinterhalt",
-   "Sicherung"
+   "Sicherung",
+   "Absetzen"
   ]
  },
  {
@@ -18442,9 +18740,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -18802,9 +19100,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "",
   "rules": [
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -18816,7 +19115,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Nass, aber unsichtbar.",
   "collector": "NP-SAH-35",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  },
  {
   "id": "dc_np_sahr_routenkarte",
@@ -18858,9 +19160,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK und 0 DEF.",
+  "text": "Träger +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -18887,9 +19189,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF. Wird der Träger zerstört: ziehe 1.",
+  "text": "Träger +2 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
@@ -18951,9 +19253,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -19324,10 +19626,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -19340,7 +19643,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 3,
   "def": 2,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_dargan_registermoerser",
@@ -19355,10 +19661,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -19373,7 +19680,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
-   "Staffelangriff"
+   "Staffelangriff",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -19389,11 +19697,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+  "text": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
+   "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -19409,7 +19718,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "klasse": "Artillerie",
   "atk": 4,
   "def": 3,
-  "verdeckt_ok": true
+  "verdeckt_ok": true,
+  "keywords": [
+   "Indirektes Feuer"
+  ]
  },
  {
   "id": "dc_np_dargan_zinsbatterie",
@@ -19424,10 +19736,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.",
+  "text": "",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
-   "Die Einheit zählt für alle Regeln als Artillerie."
+   "Die Einheit zählt für alle Regeln als Artillerie.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -19442,7 +19755,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Nachsetzen"
+   "Nachsetzen",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -19458,11 +19772,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "einheit",
    "artillerie"
   ],
-  "text": "Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.",
+  "text": "Darf auch gegnerische Unterstützungen angreifen.",
   "rules": [
    "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
    "Die Einheit zählt für alle Regeln als Artillerie.",
-   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
+   "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+   "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
   ],
   "effects": [
    {
@@ -19480,7 +19795,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
-   "Fernschuss"
+   "Fernschuss",
+   "Indirektes Feuer"
   ]
  },
  {
@@ -19664,9 +19980,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt)."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
   ],
   "effects": [
    {
@@ -19720,9 +20036,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte. Gegnerische Fronteinheiten −1 ATK.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Gegnerische Fronteinheiten −1 ATK.",
   "rules": [
-   "Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).",
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
    "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag)."
   ],
   "effects": [
@@ -20051,7 +20367,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört: ziehe 1.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
    "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
@@ -20136,9 +20452,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger 0 ATK und +2 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -20193,9 +20509,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Der erste Schaden am Träger wird ignoriert (einmalig).",
+  "text": "",
   "rules": [
-   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr."
+   "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
    {
@@ -20207,6 +20524,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   ],
   "flavor": "Das Haus fängt den ersten Schlag.",
   "collector": "NP-DAR-40",
-  "art_status": "platzhalter"
+  "art_status": "platzhalter",
+  "keywords": [
+   "Erstschadenschutz"
+  ]
  }
 ];

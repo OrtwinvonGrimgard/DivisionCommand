@@ -1938,9 +1938,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Ziehe 2 Karten. Lege 1 Karte aus der Hand ab.",
     "effects": [
       {
-        "code": "DRAW",
+        "code": "DRAW_THEN_CHOOSE_DISCARD",
         "param": {
-          "value": 2
+          "draw": 2,
+          "discard": 1
         }
       }
     ],
@@ -3281,7 +3282,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
         }
       },
       {
-        "code": "OUT_OF_COMBAT",
+        "code": "NO_MOVE_THIS_TURN",
         "param": {}
       }
     ],
@@ -3608,7 +3609,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
         }
       },
       {
-        "code": "OUT_OF_COMBAT",
+        "code": "NO_MOVE_THIS_TURN",
         "param": {}
       }
     ],
@@ -4482,7 +4483,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       {
         "code": "MOVE_SLOTS",
         "param": {
-          "slots": 1,
+          "slots": 2,
           "count": 1
         }
       }

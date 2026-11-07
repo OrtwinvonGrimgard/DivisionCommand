@@ -287,7 +287,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Zugbeginn: eine zusätzliche Karte ziehen.",
+    "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
     "effects": [
       {
         "code": "TURN_DRAW",
@@ -299,7 +299,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Die Operation verläuft genau nach Plan!",
     "image": "unterstuetzung/A077.jpg",
     "max_copies": 2,
-    "collector": "A077"
+    "collector": "A077",
+    "rules": []
   },
   {
     "id": "dc_su_festung",
@@ -1023,7 +1024,10 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "text": "Eigene Infanterie im Abschnitt hat +1 DEF.",
     "effects": [
       {
-        "code": "AURA_FRONT_DEF"
+        "code": "TACTICAL_SECTION_INF_DEF",
+        "param": {
+          "amount": 1
+        }
       }
     ],
     "flavor": "Der Balken hält die Reihe.",

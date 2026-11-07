@@ -370,6 +370,7 @@
 
     _canAct(inst, pid) {
       if (!inst) return false;
+      if (this._tacBlockedAttack && this._tacBlockedAttack(inst)) return false;
       const def = this.defOf(inst);
       if (!def) return false;
       if (def.typ === 'Doktrin') return true;
@@ -655,7 +656,7 @@
       });
     }
 
-    currentAtkDef(inst) { // nächster Schritt im Ablauf
+    currentAtkDef(inst, combatContext) { // nächster Schritt im Ablauf
       const def = this.defOf(inst) || { atk: 0, def: 0, effects: [], tags: [], klasse: '' };
       let atk = inst.atk == null ? (Number(def.atk) || 0) : inst.atk;
       let dv = inst.def == null ? (Number(def.def) || 0) : inst.def;
@@ -701,9 +702,10 @@
               if (mates.length >= 1) atk += Number(p.atk_if_second || 1);
             }
           }
-          if (e.code === 'CARRIER_FIRST_ATTACK_ATK' && inst.flags && !inst.flags._firstAtkUsed && !inst.attackUsed) {
+          if (e.code === 'CARRIER_FIRST_ATTACK_ATK' && !(combatContext && combatContext.defending) && !(eq.flags && eq.flags.tacFirstAttackUsed)) {
             atk += Number(p.atk || 1);
           }
+          if (e.code === 'FIRST_ATTACK_EACH_TURN' && !(combatContext && combatContext.defending) && inst.flags.tacActualAttackTurn !== this.state.turn && (!(e.param || {}).attachmentTurnOnly || eq.flags.tacAttachedTurn === this.state.turn)) atk += Number((e.param || {}).atk || 1);
           if (e.code === 'PASSIVE_ATK') atk += Number(p.atk || 0);
           if (e.code === 'PASSIVE_DEF') dv += Number(p.def || 0);
           if (e.code === 'EQUIP_COND_ATK' && p.ifDamaged && this._isDamaged(inst)) {
@@ -723,6 +725,7 @@
       }
       if (inst.flags && inst.flags.kavUntil === this.state.turn) atk += 2;
       if (inst.flags && inst.flags.lageUntil === this.state.turn) atk += 1;
+      if (inst.flags && inst.flags.tacWaxTurn === this.state.turn) atk -= Number(inst.flags.tacWaxPenalty || 0);
       if (inst.flags && inst.flags.ehrenUntil === this.state.turn) atk += 2;
       if (inst.flags && inst.flags.tempAtkUntil === this.state.turn) atk += Number(inst.flags.tempAtk || 0);
       if (inst.flags && inst.flags.umgehenAtkUntil === this.state.turn) atk += Number(inst.flags.umgehenAtk || 0);
@@ -897,6 +900,7 @@
         const td = this.defOf(t.inst);
         if (!td) return false;
         if (this._isDeployProtected(t.inst)) return false;
+        if (this._tacTargetAllowed && !this._tacTargetAllowed(att,t.inst)) return false;
         if (t.inst.facedown && (td.effects || []).some((x) => x.code === 'GUERRILLA_HIDE')) return false;
         if ((td.name || '').includes('Himmelhund')) { // Zweig nur bei zutreffender Bedingung
           // needs two shouldered attackers — v1: only legal if attacker has a neighbor
@@ -1012,6 +1016,11 @@
             });
           }
         }
+        if (this._tacActivation) {
+          this.frontList(p).concat((p.support || []).filter(Boolean).map(inst=>({inst}))).forEach(l=>{
+            try { this._tacActivation(playerId,l.inst.uid); acts.push({type:'USE_ABILITY',uid:l.inst.uid}); } catch (e) { /* passive/illegal source */ }
+          });
+        }
         acts.push({ type: 'END_TURN' }); // nächster Schritt im Ablauf
         acts.push({ type: 'PROPOSE_PEACE' }); // nächster Schritt im Ablauf
       }
@@ -1031,6 +1040,7 @@
       const pid = a.player; // unveränderliche Bindung in diesem Block
       if (pid !== 0 && pid !== 1) return { ok: false, error: 'Spieler fehlt' }; // Ergebnis an den Aufrufer
       try { // Fehler auffangen
+        if (this._tacBeforeAction) this._tacBeforeAction(pid,a);
         switch (a.type) { // Aktionstyp unterscheiden
           case 'PLAY': return this._actPlay(pid, a); // Karte aus der Hand spielen
           case 'CHOOSE_SLOT': return this._actSlot(pid, a); // Einheit auf eine Stellung legen
@@ -1080,6 +1090,7 @@
       } finally {
         if (this.state) this.state.seq = (this.state.seq || 0) + 1;
         if (this.state && this.state.winner == null) { try { this._kwRecompute(); } catch (e) { /* Schlüsselwort-Neuberechnung darf Aktionen nicht brechen */ } }
+        if (this._tacAfterAction) this._tacAfterAction();
       }
     }
 
@@ -1105,6 +1116,7 @@
       const found = p.hand.find((c) => c.uid === a.uid); // Handkarten
       if (!found) throw new Error('Karte nicht auf der Hand'); // Regelverstoß, Zug ungültig
       const def = this.defOf(found); // unveränderliche Bindung in diesem Block
+      if (a.target && this._tacEffectTargetAllowed && !this._tacEffectTargetAllowed(def,a.target)) throw new Error('Ziel darf sein Feld nicht verlassen');
       const cost = this.costOf(def, p, null, found);
       const isActive = this.state.active === pid && this.state.phase === 'main'; // unveränderliche Bindung in diesem Block
       if (def.typ !== 'Soforteinsatz' && !isActive) throw new Error('Nur Soforteinsätze als Reaktion'); // Regelverstoß, Zug ungültig
@@ -1192,6 +1204,7 @@
         p.support[idx] = found;
         this._evt('support', def, p.name + ' legt ' + (found.facedown ? 'eine verdeckte Karte' : def.name) + ' in den Support.'); // Ereignis für die Rundenübersicht
         this._onEnter(found, 'support');
+        if (this._tacOnSupport) this._tacOnSupport(found);
         this._applySatAura(p);
         if ((def.effects || []).some((x) => x.code === 'SLEEPER')) found.flags.sleeper = 3;
         if ((def.effects || []).some((x) => x.code === 'NO_FACE_DOWN')) {
@@ -1250,6 +1263,7 @@
 
     // Gewählte Frontstellung für eine wartende Einheit.
     _actSlot(pid, a) { // Einheit auf eine Stellung legen
+      if (this._tacChoose) { const r=this._tacChoose(pid,a); if (r) return r; }
       const pend = this.state.pending; // offene Wahl des Spielers
       if (pend && pend.kind === 'move-dest' && pend.player === pid) {
         return this._actTarget(pid, { target: a.slot ? ('slot:' + a.slot.section + ':' + a.slot.row) : a.target, slot: a.slot });
@@ -1264,8 +1278,11 @@
       if (p.front[slot.section][slot.row]) throw new Error('Stellung belegt'); // Regelverstoß, Zug ungültig
       let due = pend.paid ? 0 : (pend.cost != null ? pend.cost : this.costOf(this.defOf(card), p, null, card));
       const relief = this._kwReliefAt(p, slot.section, slot.row);
+      if (pend.free) due=0;
       if (!pend.paid && relief && due > 1) due -= 1;
-      if (!pend.paid && p.ap < due) throw new Error('Nicht genug AP (' + p.ap + '/' + due + ')');
+      const tacTax=this._tacEntryTax ? this._tacEntryTax(p,card,slot.section) : 0;
+      due += tacTax;
+      if (p.ap < due) throw new Error('Nicht genug AP (' + p.ap + '/' + due + ')');
       if (relief) { delete p.flags.kwRelief[slot.section + slot.row]; if (!pend.paid) this._log('Ablösung: Einsatz auf ' + slot.section + (slot.row + 1) + ' kostet 1 AP weniger.'); }
       const heranUsed = p.flags && p.flags.kwHeran === this.state.turn;
       p.hand = p.hand.filter((c) => c.uid !== card.uid); // Handkarten
@@ -1278,14 +1295,14 @@
       }
       p.front[slot.section][slot.row] = card; // nächster Schritt im Ablauf
       if (heranUsed) p.flags.kwHeran = null;
-      if (!pend.paid) {
-        this._spend(p, due);
-        pend.paid = due;
-      }
+      this._spend(p,due);
+      pend.paid=(pend.paid || 0)+due;
+      if (this._tacConsumeEntry) this._tacConsumeEntry(p,card,slot.section);
       const def = this.defOf(card); // unveränderliche Bindung in diesem Block
       this._evt('deploy', def, p.name + ' stellt ' + (card.facedown ? 'eine verdeckte Einheit' : def.name) + ' auf ' + slot.section + (slot.row + 1) + '.');
       // Ereignis für die Rundenübersicht
       this.state.pending = null; // offene Wahl des Spielers
+      if (this._tacOnEntry) this._tacOnEntry(card,slot.section);
       if (!card.facedown) this._onEnter(card, 'front');
       const d2 = this.defOf(card);
       if ((d2.effects || []).some((x) => x.code === 'AUFKLAERUNG' && x.param && x.param.onEnter)) {
@@ -1311,8 +1328,10 @@
 
     // Ein Ziel für Gerät, Soforteinsatz, Angriff; sammelt Mehrfachziele.
     _actTarget(pid, a) { // Ziel aufnehmen oder Kampf lösen
+      if (this._tacChoose) { const r=this._tacChoose(pid,a); if (r) return r; }
       const pend = this.state.pending; // offene Wahl des Spielers
       if (!pend || pend.player !== pid) throw new Error('Kein Ziel offen');
+      if (pend.card && this._tacEffectTargetAllowed && !this._tacEffectTargetAllowed(this.defOf(pend.card),a.target)) throw new Error('Ziel darf sein Feld nicht verlassen');
       if (pend.kind === 'kw-swap') return this._resolveKwSwap(pid, a.target);
       if (pend.kind === 'command-atk') return this._resolveCommandStep(pid, a.target);
       if (pend.kind === 'last-stand') return this._resolveLastStand(pid, a.target);
@@ -1359,11 +1378,13 @@
         const p = this.player(pid);
         const card = p.hand.find((c) => c.uid === pend.uid);
         if (card && !p.front[pend.section][pend.row]) {
+          if (this._tacPayFreeEntry && !this._tacPayFreeEntry(p,card,pend.section)) throw new Error('Anmarschstörung: 1 AP fehlt');
           p.hand = p.hand.filter((c) => c.uid !== card.uid);
           card.facedown = false;
           card.summonedTurn = this.state.turn;
       this._applyDeployProtection(card);
           p.front[pend.section][pend.row] = card;
+          if (this._tacOnEntry) this._tacOnEntry(card,pend.section);
           this._log('Helden springen in die Bresche.');
         }
         this.state.pending = null;
@@ -1395,9 +1416,12 @@
           const ch = (pend.choices || []).find((c) => c.target === a.target);
           if (ch && ch.slot) dest = ch.slot;
         }
-        if (!loc || !dest || p.front[dest.section][dest.row]) throw new Error('Ungültiges Feld');
+        if (!loc || loc.player.id !== pid || loc.zone !== 'front' || !dest || !p.front[dest.section] || p.front[dest.section][dest.row] || !(pend.choices || []).some(c=>c.slot && c.slot.section === dest.section && c.slot.row === Number(dest.row))) throw new Error('Ungültiges Feld');
+        if (this._tacAssertMove) this._tacAssertMove(loc.inst);
+        if (this._tacDepart) this._tacDepart(loc.inst,false);
         p.front[loc.section][loc.row] = null;
         p.front[dest.section][dest.row] = loc.inst;
+        if (this._tacOnEntry) this._tacOnEntry(loc.inst,dest.section,loc.section);
         this._log(this.defOf(loc.inst).name + ' → ' + dest.section + (dest.row + 1));
         if (pend.card) p.grave.push(pend.card);
         this.state.pending = null;
@@ -1431,9 +1455,11 @@
       if (pend.kind === 'nest') {
         const src = this.findInst(pend.uid);
         const loc = this.findInst(a.target);
+        if (loc && this._tacAssertMove) this._tacAssertMove(loc.inst);
         this._spend(this.player(pid), pend.cost);
         if (src) src.inst.flags.exhausted = true;
         if (loc && loc.zone === 'front') {
+          if (this._tacDepart) this._tacDepart(loc.inst,true);
           src.inst.flags.patientUid = loc.inst.uid;
           src.inst.flags.home = { section: loc.section, row: loc.row };
           src.inst.flags.nestReturn = true;
@@ -1445,9 +1471,11 @@
       if (pend.kind === 'hospital') {
         const src = this.findInst(pend.uid);
         const loc = this.findInst(a.target);
+        if (loc && this._tacAssertMove) this._tacAssertMove(loc.inst);
         this._spend(this.player(pid), pend.cost);
         if (src) src.inst.flags.exhausted = true;
         if (loc && loc.zone === 'front') {
+          if (this._tacDepart) this._tacDepart(loc.inst,true);
           src.inst.flags.patientUid = loc.inst.uid;
           src.inst.flags.home = { section: loc.section, row: loc.row };
           loc.player.front[loc.section][loc.row] = null;
@@ -1789,6 +1817,8 @@
       if (pend.kind === 'repair-bounce') {
         const loc = this.findInst(a.target);
         if (!loc || loc.player.id !== pid || loc.zone !== 'front') throw new Error('Kein Fahrzeug');
+        if (this._tacAssertMove) this._tacAssertMove(loc.inst);
+        if (this._tacDepart) this._tacDepart(loc.inst,true);
         const d = this.defOf(loc.inst);
         loc.inst.atk = d.atk;
         loc.inst.def = d.def;
@@ -1849,6 +1879,8 @@
         if (!card || !host || host.player.id !== pid || host.zone !== 'front') throw new Error('Ungültiges Ziel'); // Regelverstoß, Zug ungültig
         p.hand = p.hand.filter((c) => c.uid !== card.uid); // Handkarten
         host.inst.attachments.push(card);
+        card.flags.tacAttachedTurn=this.state.turn;
+        delete card.flags.tacFirstAttackUsed;
         const ed = this.defOf(card);
         (ed.effects || []).forEach((x) => {
           const xp = x.param || {};
@@ -2812,10 +2844,10 @@
     // Ob der Einsatz ein Ziel braucht.
     _instantNeedsTarget(def) { // nächster Schritt im Ablauf
       const codes = (def.effects || []).map((e) => e.code); // Liste umformen
-      const targeted = ['DEAL_DAMAGE', 'HEAL', 'DESTROY', 'DESTROY_IF_DEF', 'SACRIFICE', 'SACRIFICE_INFANTRY_DAMAGE', 'BUFF', 'SELF_DAMAGE', 'RETURN_TO_HAND', 'MOVE_FRONT', 'MOVE_SLOTS', 'OUT_OF_COMBAT', 'PLACE_TOKEN', 'REMOVE_TOKEN', 'REVEAL', 'MARK_OBSERVED', 'EXTRA_ATTACK', 'REPLACE_UNIT', 'BUFF_SECTION', 'ZIELANGRIFF', 'UMGEHEN', 'KEIN_LOCH'];
+      const targeted = ['NO_MOVE_THIS_TURN', 'DEAL_DAMAGE', 'HEAL', 'DESTROY', 'DESTROY_IF_DEF', 'SACRIFICE', 'SACRIFICE_INFANTRY_DAMAGE', 'BUFF', 'SELF_DAMAGE', 'RETURN_TO_HAND', 'MOVE_FRONT', 'MOVE_SLOTS', 'OUT_OF_COMBAT', 'PLACE_TOKEN', 'REMOVE_TOKEN', 'REVEAL', 'MARK_OBSERVED', 'EXTRA_ATTACK', 'REPLACE_UNIT', 'BUFF_SECTION', 'ZIELANGRIFF', 'UMGEHEN', 'KEIN_LOCH'];
       if (codes.some((c) => targeted.includes(c))) return true;
       // Globale/Auto-Effekte: Kartentext-Heuristik nicht anwenden (verhindert Schein-Zielwahl + Mehrfach-Apply).
-      const autoNoTarget = ['WILL_PEOPLE', 'MASS_DAMAGE', 'BUFF_ALL_OWN', 'DRAW', 'DRAW_DISCARD', 'DRAW_AP', 'COST_NEXT', 'PLAY_INF_DISCOUNT', 'CLEAR_ENEMY_SUPPORT', 'EMPTY_STREETS', 'LOOK_TOP', 'RETURN_INFANTRY_FROM_DISCARD', 'RETURN_UNIT_GRAVE', 'CANCEL_AIR_DAMAGE', 'COMMAND_ATTACK', 'ARMAGEDDON', 'GHOST_RUINS', 'CAVALRY_ATK', 'CLEAR_SUPPORT_OR_DEBUFF'];
+      const autoNoTarget = ['DRAW_THEN_CHOOSE_DISCARD', 'WILL_PEOPLE', 'MASS_DAMAGE', 'BUFF_ALL_OWN', 'DRAW', 'DRAW_DISCARD', 'DRAW_AP', 'COST_NEXT', 'PLAY_INF_DISCOUNT', 'CLEAR_ENEMY_SUPPORT', 'EMPTY_STREETS', 'LOOK_TOP', 'RETURN_INFANTRY_FROM_DISCARD', 'RETURN_UNIT_GRAVE', 'CANCEL_AIR_DAMAGE', 'COMMAND_ATTACK', 'ARMAGEDDON', 'GHOST_RUINS', 'CAVALRY_ATK', 'CLEAR_SUPPORT_OR_DEBUFF'];
       if (codes.length && codes.every((c) => autoNoTarget.includes(c))) return false;
       return /eine |gewählte|ziel|einheit|wähle/i.test(def.text || '');
     }
@@ -2858,7 +2890,7 @@
       }
       // unique
       const seen = {}; // unveränderliche Bindung in diesem Block
-      return out.filter((x) => (seen[x.uid] ? false : (seen[x.uid] = true))); // Wert zurückgeben
+      return out.filter(x=>!this._tacEffectTargetAllowed || this._tacEffectTargetAllowed(def,x.uid)).filter((x) => (seen[x.uid] ? false : (seen[x.uid] = true))); // Wert zurückgeben
     }
 
     // Alle Effect-Codes der Karte anwenden.
@@ -2921,6 +2953,7 @@
 
     // Ein einzelner Effect-Code.
     _applyEffect(p, src, e, targetUid) { // einen Effect-Code ausführen
+      if (this._tacApplyEffect && this._tacApplyEffect(p.id,e,src,targetUid)) return;
       const code = e.code; // unveränderliche Bindung in diesem Block
       const par = e.param || {}; // unveränderliche Bindung in diesem Block
       const opp = this.opponent(p.id); // unveränderliche Bindung in diesem Block
@@ -3019,9 +3052,11 @@
           if (placed >= want) return; // Zweig nur bei zutreffender Bedingung
           const slot = this.emptySlots(p)[0]; // unveränderliche Bindung in diesem Block
           if (!slot) return; // Zweig nur bei zutreffender Bedingung
+          if (this._tacPayFreeEntry && !this._tacPayFreeEntry(p,c,slot.section)) return;
           if (fromHand) p.hand = p.hand.filter((x) => x.uid !== c.uid); // Handkarten
           else p.deck = p.deck.filter((x) => x.uid !== c.uid); // sonst
           p.front[slot.section][slot.row] = c; // nächster Schritt im Ablauf
+          if (this._tacOnEntry) this._tacOnEntry(c,slot.section);
           placed += 1; // nächster Schritt im Ablauf
           this._log(this.defOf(c).name + ' kommt kostenlos auf ' + slot.section + (slot.row + 1) + '.'); // Zeile ins Protokoll
         }); // nächster Schritt im Ablauf
@@ -3041,6 +3076,8 @@
       } else if (code === 'RETURN_TO_HAND') { // Zweig nur bei zutreffender Bedingung
         const loc = this.findInst(targetUid); // unveränderliche Bindung in diesem Block
         if (loc && loc.zone === 'front') { // Zweig nur bei zutreffender Bedingung
+          if (this._tacAssertMove) this._tacAssertMove(loc.inst);
+          if (this._tacDepart) this._tacDepart(loc.inst,true);
           loc.player.front[loc.section][loc.row] = null; // nächster Schritt im Ablauf
           loc.player.hand.push(loc.inst); // Handkarten
         }
@@ -3194,16 +3231,18 @@
           return want.split('|').some((f) => (f === 'panzer' && (hasTag(d, 'panzer') || d.typ === 'Panzer')) || (f === 'artillerie' && (isArtillery(d) || d.typ === 'Artillerie')));
         });
         if (ix >= 0) {
-          const c = p.grave.splice(ix, 1)[0];
+          const c = p.grave[ix], slot = this.emptySlots(p)[0];
+          if (slot && this._tacPayFreeEntry && !this._tacPayFreeEntry(p,c,slot.section)) return;
+          p.grave.splice(ix,1);
           c.def = Number(par.def || 2);
           c.defMax = Number(par.def || 2);
-          const slot = this.emptySlots(p)[0];
-          if (slot) { p.front[slot.section][slot.row] = c; this._log(this.defOf(c).name + ' kehrt zurück.'); }
+          if (slot) { p.front[slot.section][slot.row] = c; if (this._tacOnEntry) this._tacOnEntry(c,slot.section); this._log(this.defOf(c).name + ' kehrt zurück.'); }
           else p.hand.push(c);
         }
       } else if (code === 'MOVE_SLOTS') {
         const loc = this.findInst(targetUid);
         if (loc && loc.zone === 'front' && loc.player.id === p.id) {
+          if (this._tacAssertMove) this._tacAssertMove(loc.inst);
           const maxStep = Math.max(1, Number(par.slots || par.value || 1));
           const order = ['L', 'C', 'R'];
           const i = order.indexOf(loc.section);
@@ -3223,8 +3262,10 @@
           }
           if (choices.length === 1) {
             const dest = choices[0].slot;
+            if (this._tacDepart) this._tacDepart(loc.inst,false);
             p.front[loc.section][loc.row] = null;
             p.front[dest.section][dest.row] = loc.inst;
+            if (this._tacOnEntry) this._tacOnEntry(loc.inst,dest.section,loc.section);
             this._log(this.defOf(loc.inst).name + ' → ' + dest.section + (dest.row + 1));
           } else if (choices.length > 1) {
             // Queue destination choice (finishInstant may have cleared pending; re-open)
@@ -3307,11 +3348,12 @@
           const d = this.defOf(c);
           return d.typ === 'Infanterie' || d.typ === 'Panzer' || d.typ === 'Artillerie' || d.typ === 'Einheit' || d.typ === 'Elite' || d.typ === 'Aufklärung';
         });
-        if (slot && handU) {
+        if (slot && handU && (!this._tacPayFreeEntry || this._tacPayFreeEntry(p,handU,slot.section))) {
           p.hand = p.hand.filter((c) => c.uid !== handU.uid);
           handU.def = (handU.def || this.defOf(handU).def || 1);
           handU.defMax = handU.def;
           p.front[slot.section][slot.row] = handU;
+          if (this._tacOnEntry) this._tacOnEntry(handU,slot.section);
           handU.def = (handU.def || 0) + 1;
           handU.defMax = (handU.defMax || handU.def) + 1;
         }
@@ -3750,6 +3792,11 @@
         if (aLoc && tLoc) this._applyCombatHits(aLoc, tLoc, pend.dmgToT, pend.dmgToA, pend.fog);
         if (tLoc && this._isDead(tLoc.inst)) this._destroy(tLoc);
         if (aLoc && this._isDead(aLoc.inst)) this._destroy(aLoc);
+        if (aLoc) { aLoc.inst.attackUsed=true; aLoc.inst.flags.exhausted=true; }
+      }
+      if (pend.attackerUid && pend.targetUid && this._tacAfterCombat) {
+        const attacker=this.findInst(pend.attackerUid);
+        this._tacAfterCombat(attacker ? attacker.player.id : (pid === 0 ? 1 : 0),pend.targetUid,pend.tacWasOpen);
       }
       return { ok: true };
     }
@@ -3757,6 +3804,9 @@
     _actCancel(pid, a) {
       const pend = this.state.pending;
       if (!pend || pend.player !== pid) throw new Error('Nichts abzubrechen');
+      if (pend.kind === 'tac-aura-section') throw new Error('Banner: eigenen Abschnitt festlegen');
+      if (pend.kind === 'tac-discard') throw new Error('Notdepot: eine eigene Handkarte muss abgeworfen werden');
+      if (/^tac-/.test(pend.kind)) { this.state.pending=null; return {ok:true}; }
       if (pend.kind === 'sam') return this._resolveSam(pid, false);
       if (pend.kind === 'geist-window') return this._passGeist();
       if (pend.kind === 'mob-play' || pend.kind === 'mass-pick') { this.state.pending = null; return { ok: true }; }
@@ -3786,6 +3836,7 @@
     // Angriff starten oder bei einem Ziel sofort kämpfen.
 
     _actUseAbility(pid, a) {
+      if (this._tacAbility) { const r=this._tacAbility(pid,a); if (r) return r; }
       const loc = this.findInst(a.uid);
       if (!loc) throw new Error('Karte nicht gefunden');
       const inst = loc.inst;
@@ -3881,6 +3932,7 @@
       if (!this._canAct(loc.inst, pid)) throw new Error('Handelt erst im nächsten eigenen Zug');
       if (loc.inst.flags.noAttack) throw new Error('Kann nicht angreifen');
       if (loc.inst.flags.kwNoAtkTurn === this.state.turn) throw new Error('Stellungswechsel: greift in diesem Zug nicht an');
+      if (a.target && this._tacTargetAllowed) { const t=this.findInst(a.target); if (t && !this._tacTargetAllowed(loc.inst,t.inst)) throw new Error('Feldaltar: nicht Ziel des ersten gegnerischen Angriffs'); }
       this._spend(p, this.rules.attack_ap);
       const adef = this.defOf(loc.inst);
       this._evt("select", adef, adef.name + " wird ausgewählt.");
@@ -3944,6 +3996,11 @@
       if (this._hostileTargetBlocked(tLoc.inst)) throw new Error('Ziel eingegraben — nicht angreifbar');
       const A = aLoc.inst;
       const T = tLoc.inst;
+      const tacWasOpen=!T.facedown;
+      if (this._tacTargetAllowed && !this._tacTargetAllowed(A,T)) throw new Error('Feldaltar: nicht Ziel des ersten gegnerischen Angriffs');
+      aLoc.player.flags.tacAnyAttackTurn=this.state.turn;
+      const tacCover=this._tacCombatBegin ? this._tacCombatBegin(A,T) : 0;
+      const tacDefense=A.owner !== T.owner && this._tacDefenseBonus ? this._tacDefenseBonus(T) : 0;
       if (T.facedown && (this.defOf(A).effects || []).some((x) => x.code === 'REVEAL_STRIKE')) {
         T.facedown = false;
         if (hasTag(this.defOf(T), 'fahrzeug')) this._damage(T, 3, { tag: 'scout' });
@@ -3999,11 +4056,12 @@
         }
       }
       const statsA = this.currentAtkDef(A); // unveränderliche Bindung in diesem Block
-      const statsT = this.currentAtkDef(T); // unveränderliche Bindung in diesem Block
-      if ((A.attachments || []).some((c) => (this.defOf(c).effects || []).some((x) => x.code === 'CARRIER_FIRST_ATTACK_ATK'))) {
-        A.flags = A.flags || {};
-        A.flags._firstAtkUsed = true;
-      }
+      const statsT = this.currentAtkDef(T,{defending:true}); // unveränderliche Bindung in diesem Block
+      A.flags.tacActualAttackTurn=this.state.turn;
+      aLoc.player.flags.tacAnyAttackTurn=this.state.turn;
+      (A.attachments || []).forEach(eq=>{
+        if ((this.defOf(eq).effects || []).some(e=>e.code === 'CARRIER_FIRST_ATTACK_ATK')) eq.flags.tacFirstAttackUsed=true;
+      });
       // on-attack equipment self-damage / bonus
       (A.attachments || []).forEach((eq) => {
         (this.defOf(eq).effects || []).forEach((e) => {
@@ -4100,6 +4158,9 @@
       this._evt('shout', this.defOf(A), 'Feindkontakt! ' + this.defOf(A).name + ' gegen ' +
         (T.facedown ? 'eine verdeckte Einheit' : this.defOf(T).name) + '.');
       if (T.facedown) this._revealInst(T);
+      // Feuerschutz reduziert nur Gegenschlag/Nebel-Erstschlag; Minen/Selbstschaden bleiben unberührt.
+      dmgToA=Math.max(0,dmgToA-tacCover);
+      dmgToT=Math.max(0,dmgToT-tacDefense);
 
       if (isAir(aDef) && dmgToT > 0 && this._handHasEffect(tLoc.player, 'CANCEL_AIR_DAMAGE') && !this.state._samLock) {
         this.state.pending = this._sealPending({
@@ -4110,6 +4171,7 @@
           dmgToT: dmgToT,
           dmgToA: dmgToA,
           fog: !!fog,
+          tacWasOpen: tacWasOpen,
           prompt: 'Luftangriff von ' + aDef.name
         });
         return { ok: true, need: 'sam' };
@@ -4150,7 +4212,7 @@
       }
       if (this.state._guerrilla && !this._isDead(this.state._guerrilla)) {
         const g0 = this.state._guerrilla;
-        const watched = this.state.players.some((pl) => (pl.support || []).some((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'NO_FACE_DOWN')));
+        const watched = this.state.players.some((pl) => pl.id !== g0.owner && (pl.support || []).some((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'NO_FACE_DOWN')));
         if (!watched && (this.defOf(g0).effects || []).some((x) => x.code === 'RELOCATE_HIDE')) {
           g0.facedown = true; g0.flags.hideUntilOwner = true;
         }
@@ -4178,6 +4240,7 @@
         });
       }
       this._checkVictory();
+      if (this._tacAfterCombat) this._tacAfterCombat(A.owner,T.uid,tacWasOpen);
       return { ok: true };
     }
 
@@ -4218,6 +4281,11 @@
         if (ignoreEq) {
           ignoreEq.flags = ignoreEq.flags || {};
           ignoreEq.flags.usedIgnore = true;
+          const ig=(this.defOf(ignoreEq).effects || []).find(e=>e.code === 'EQUIP_IGNORE_FIRST_DAMAGE');
+          if ((ig.param || {}).afterAtk) {
+            if (inst.flags.tacWaxTurn !== this.state.turn) inst.flags.tacWaxPenalty=0;
+            inst.flags.tacWaxTurn=this.state.turn; inst.flags.tacWaxPenalty+=Math.abs(Number(ig.param.afterAtk));
+          }
           this._log(this.defOf(ignoreEq).name + ': erster Schaden ignoriert.');
           amount = 0;
         }
@@ -4231,6 +4299,7 @@
           this._log(this.defOf(negEq).name + ': negiert ' + neg + ' Schaden.');
         }
       }
+      if (this._tacSectionDamage) amount=this._tacSectionDamage(inst,amount,meta);
       // Kein Loch section shield
       if (inst && amount > 0) {
         const locKL = this.findInst(inst.uid);
@@ -4340,6 +4409,7 @@
         this._log(this.defOf(loc.inst).name + ' genießt diplomatischen Schutz.');
         return;
       }
+      if (this._tacDepart) this._tacDepart(loc.inst,true);
       if (loc.zone === 'front' && loc.player.flags && loc.player.flags.keinLoch &&
           loc.player.flags.keinLoch.until === this.state.turn &&
           loc.player.flags.keinLoch.section === loc.section) {
@@ -4585,9 +4655,10 @@
       if (!sac || !card || sac.zone !== 'front') return false;
       this._destroy(sac);
       const slot = this.emptySlots(player)[0];
-      if (slot) {
+      if (slot && (!this._tacPayFreeEntry || this._tacPayFreeEntry(player,card,slot.section))) {
         player.hand = player.hand.filter((c) => c.uid !== playUid);
         player.front[slot.section][slot.row] = card;
+        if (this._tacOnEntry) this._tacOnEntry(card,slot.section);
         this._log(this.defOf(card).name + ' durch Opfer gespielt.');
         return true;
       }
@@ -5061,8 +5132,8 @@
         while (act.flags.kwSwap.length) {
           const uid = act.flags.kwSwap.shift();
           const loc = this.findInst(uid);
-          if (!loc || loc.zone !== 'front' || loc.inst.facedown) continue;
-          const hid = this.frontList(act).filter((l) => l.inst.facedown && l.inst.uid !== uid);
+          if (!loc || loc.zone !== 'front' || loc.inst.facedown || (this._tacMayMove && !this._tacMayMove(loc.inst))) continue;
+          const hid = this.frontList(act).filter((l) => l.inst.facedown && l.inst.uid !== uid && (!this._tacMayMove || this._tacMayMove(l.inst)));
           if (!hid.length) continue;
           this.state.pending = this._sealPending({
             kind: 'kw-swap', player: act.id, uid: uid,
@@ -5080,6 +5151,8 @@
       if (target === 'kw:none' || !target) { this._log('Platztausch: kein Tausch.'); return { ok: true }; }
       const a = this.findInst(pend.uid), b = this.findInst(target);
       if (!a || !b || a.zone !== 'front' || b.zone !== 'front' || a.player.id !== pid || b.player.id !== pid || !b.inst.facedown) throw new Error('Platztausch nicht möglich');
+      if (this._tacAssertMove) { this._tacAssertMove(a.inst); this._tacAssertMove(b.inst); }
+      if (this._tacDepart) { this._tacDepart(a.inst,false); this._tacDepart(b.inst,false); }
       const p = a.player;
       p.front[a.section][a.row] = b.inst;
       p.front[b.section][b.row] = a.inst;
@@ -5091,6 +5164,7 @@
     kwMoveSlots(uid) {
       const loc = this.findInst(uid);
       if (!loc || loc.zone !== 'front' || loc.inst.facedown || !this._kw(loc.inst, 'Stellungswechsel')) return [];
+      if (this._tacMayMove && !this._tacMayMove(loc.inst)) return [];
       if (loc.inst.flags && loc.inst.flags.kwMovedTurn === this.state.turn) return [];
       return adjacentSections(loc.section).filter((s) => loc.player.front[s] && !loc.player.front[s][loc.row]).map((s) => ({ section: s, row: loc.row }));
     }
@@ -5103,8 +5177,10 @@
       const want = a.slot && slots.find((s) => s.section === a.slot.section && s.row === Number(a.slot.row));
       if (!want) throw new Error('Kein freies benachbartes Feld derselben Reihe');
       const p = loc.player;
+      if (this._tacDepart) this._tacDepart(loc.inst,false);
       p.front[loc.section][loc.row] = null;
       p.front[want.section][want.row] = loc.inst;
+      if (this._tacOnEntry) this._tacOnEntry(loc.inst,want.section,loc.section);
       loc.inst.flags = loc.inst.flags || {};
       loc.inst.flags.kwMovedTurn = this.state.turn;
       loc.inst.flags.kwNoAtkTurn = this.state.turn;
@@ -5203,7 +5279,7 @@
       (nxt.support || []).forEach((s) => {
         if (!s) return;
         (this.defOf(s).effects || []).forEach((x) => {
-          if (x.code === 'TURN_AP') nxt.ap += Number(x.param.ap || 1);
+          if (x.code === 'TURN_AP' && (!(x.param || {}).openOnly || !s.facedown)) nxt.ap += Number(x.param.ap || 1);
         });
       });
       if (nxt.flags.bloodAp) {
@@ -5461,7 +5537,6 @@
       if (p.flags && p.flags.dokVerlegungUsed === this.state.turn) throw new Error('Verlegung schon genutzt');
       const vp = (this._dokParam && this._dokParam(p, 'VERLEGUNG')) || {};
       const shiftAp = Number(vp.ap || 0);
-      if (shiftAp) this._spend(p, shiftAp);
       const loc = this.findInst(a.uid);
       if (!loc || loc.player.id !== pid || loc.zone !== 'front') throw new Error('Keine eigene Einheit');
       const dest = a.slot;
@@ -5471,8 +5546,12 @@
       const j = order.indexOf(dest.section);
       if (Math.abs(i - j) !== 1 || dest.row !== loc.row) throw new Error('Nur ein Slot seitlich');
       if (p.front[dest.section][dest.row]) throw new Error('Slot belegt');
+      if (this._tacAssertMove) this._tacAssertMove(loc.inst);
+      if (shiftAp) this._spend(p, shiftAp);
+      if (this._tacDepart) this._tacDepart(loc.inst,false);
       p.front[loc.section][loc.row] = null;
       p.front[dest.section][dest.row] = loc.inst;
+      if (this._tacOnEntry) this._tacOnEntry(loc.inst,dest.section,loc.section);
       p.flags = p.flags || {};
       p.flags.dokVerlegungUsed = this.state.turn;
       this._log(p.name + ' verlegt ' + this.defOf(loc.inst).name + ' → ' + dest.section + (dest.row + 1) + (shiftAp ? ' (' + shiftAp + ' AP)' : '') + '.');

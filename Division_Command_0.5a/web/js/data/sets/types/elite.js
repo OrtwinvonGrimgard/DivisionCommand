@@ -118,7 +118,7 @@ window.DC_SET_TYPES["Elite"] = [
       "stellung",
       "scharfschuetze"
     ],
-    "text": "+2 A gegen Infanterie. Nach Angriff verdeckt bis zum nächsten eigenen Zug.",
+    "text": "+2 A gegen Infanterie.",
     "effects": [
       {
         "code": "VS_INF",
@@ -136,7 +136,11 @@ window.DC_SET_TYPES["Elite"] = [
     "collector": "A064",
     "keywords": [
       "Hinterhalt",
-      "Staffelangriff"
+      "Staffelangriff",
+      "Absetzen"
+    ],
+    "rules": [
+      "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
     ]
   },
   {

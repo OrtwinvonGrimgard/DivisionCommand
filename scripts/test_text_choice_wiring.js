@@ -24,6 +24,7 @@ function loadGame() {
   vm.runInNewContext(cat.slice(0, cut > 0 ? cut : cat.length), ctx);
   vm.runInNewContext(fs.readFileSync(path.join(WEB, 'js/data/decks.js'), 'utf8'), ctx);
   vm.runInNewContext(fs.readFileSync(path.join(WEB, 'js/engine/engine.js'), 'utf8'), ctx);
+  vm.runInNewContext(fs.readFileSync(path.join(WEB,'js/engine/tactical_runtime.js'),'utf8'),ctx);
   try { vm.runInNewContext(fs.readFileSync(path.join(WEB, 'js/engine/victory_trophy.js'), 'utf8'), ctx); } catch (e) {}
   try { vm.runInNewContext(fs.readFileSync(path.join(WEB, 'js/ai/bot.js'), 'utf8'), ctx); } catch (e) {}
   return ctx.window;

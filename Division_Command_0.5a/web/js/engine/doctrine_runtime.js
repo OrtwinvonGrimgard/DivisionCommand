@@ -68,7 +68,7 @@
     // ---- Passive ATK/DEF ----
     var _cad = proto.currentAtkDef;
     proto.currentAtkDef = function (inst) {
-      var r = _cad.call(this, inst);
+      var r = _cad.apply(this, arguments);
       var atk = r.atk;
       var dv = r.def;
       var loc = this.findInst(inst.uid);
