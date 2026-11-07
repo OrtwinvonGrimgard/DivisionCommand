@@ -3,18 +3,21 @@
 **Bindung:** Tote  
 **Stärke durch Opfer:** Verlust wird Deckung. Die Toten schützen, der Preis ist die Erinnerung.
 
-## Gründe für die Opfer
-Viele Bürger tragen die Erinnerung mit, weil sie glauben, dass die Toten schützen. Der Preis der Erinnerung wird akzeptiert, solange die Deckung real ist.
+## Philosophie
+Die Toten schützen. Verlust wird Deckung. Viele Bürger tragen die Erinnerung mit, weil sie glauben, dass die Toten schützen. Der Preis der Erinnerung wird akzeptiert, solange die Deckung real ist.
+
+## Kriegsführung
+Erinnerung als Schutz. Abnutzung. Die Politik rechtfertigt den Umgang mit den Toten mit dem Argument, dass Verlust Deckung schafft.
+
+## Preis
+Die Erinnerung. Der Schutz kostet die Lebenden.
 
 ## Interne Strömungen
 - Erinnerer, die die Toten als Schutz sehen und sie mit Überzeugung tragen.
 - Lebende, die den Preis der Erinnerung tragen.
 - Soldaten, die Deckung aus Verlust machen – manche sehen darin Stärke, andere Last.
 
-## Politik
-Ossaria ist eine freie Republik, in der Erinnerung als Schutz gilt. Die Politik rechtfertigt den Umgang mit den Toten mit dem Argument, dass Verlust Deckung schafft.
-
-## Familien und Alltag
+## Alltag
 Familien erzählen von den Toten als Schutz und als Last. Ein Elternteil, das die Erinnerung trägt, und ein Kind, das den Preis fürchtet, können am selben Tisch sitzen. Kinder lernen, dass Verlust schützen kann – und dass der Preis sichtbar ist.
 
 **Hoffnung:** Dass die Deckung hält.  
