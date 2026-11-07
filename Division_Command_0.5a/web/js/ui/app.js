@@ -96,7 +96,8 @@
     }
     cat.forEach(function (c) {
       if (want && !want[c.id]) return;
-      if (c.image) files[c.image] = 1;
+      var face = window.dcCardImage ? dcCardImage(c) : c.image;
+      if (face) files[face] = 1;
     });
     Object.keys(files).forEach(function (file) {
       imgCandidates(file).forEach(function (src) {
@@ -118,7 +119,7 @@
   }
   function artTag(def, facedown, cls, full) {
     if (!facedown && window.DCCardPh && DCCardPh.is(def)) return DCCardPh.html(def, cls);
-    var file = facedown ? backFile(def) : (def && def.image);
+    var file = facedown ? backFile(def) : (window.dcCardImage ? dcCardImage(def) : (def && def.image));
     var src = full ? (imgSrcFull(file) || imgSrc(file)) : imgSrc(file);
     if (!src) return '<span class="' + (cls || 'art') + ' art-missing" role="img" aria-label="Bild fehlt"></span>';
     var err = full
@@ -1129,7 +1130,7 @@
   /* Volle Druckkarte zeigen — nur noch Hilfsfunktion. */
     function showHover(def, facedown, inst) { // verdeckte Lage
     if (!def) return; // Zweig nur bei zutreffender Bedingung
-    var file = facedown ? backFile(def) : (def.image || '');
+    var file = facedown ? backFile(def) : (window.dcCardImage ? dcCardImage(def) : (def.image || ''));
     var src = imgSrcFull(file) || imgSrc(file);
     if (!src) return; // Zweig nur bei zutreffender Bedingung
     var el = hoverBox(); // lokale Variable
@@ -1799,7 +1800,7 @@
       var file, src;
       if (cards && cards.length) {
         var d = engine.defOf(cards[cards.length - 1]);
-        file = (d && d.image) || backFile(null);
+        file = (window.dcCardImage ? dcCardImage(d) : (d && d.image)) || backFile(null);
         src = imgSrcFull(file) || imgSrc(file);
       } else {
         file = backFile(null);

@@ -9,7 +9,7 @@
     return (global.DC_CATALOG && DC_CATALOG.cards) || [];
   }
   function imgOf(c) {
-    var file = c && c.image;
+    var file = global.dcCardImage ? global.dcCardImage(c) : (c && c.image);
     if (!file) return '';
     if (global.DC_IMAGES && DC_IMAGES[file]) return DC_IMAGES[file];
     if (global.dcCardSrc) return global.dcCardSrc(file);
@@ -342,14 +342,14 @@
       ox = Math.max(5, Math.round(cw * 0.07));
       oy = Math.max(6, Math.round(cw * 0.09));
     }
-    var ch = Math.round(cw * 1.4);
+    var ch = Math.round(cw * 1428 / 1024);
     var i;
     var layers = '';
     for (i = 0; i < shown; i++) {
       var pos = 'left:' + (i * ox) + 'px;top:' + (i * oy) + 'px;width:' + cw + 'px;height:' + ch + 'px;z-index:' + (i + 1);
       layers += global.DCCardPh && DCCardPh.is(c)
         ? DCCardPh.html(c, 'stack-ph').replace('<span class="stack-ph card-ph"', '<span class="stack-ph card-ph" style="position:absolute;' + pos + '"')
-        : '<img alt="" src="' + imgOf(c) + '" style="' + pos + '">';
+        : '<img alt="" src="' + imgOf(c) + '" style="' + pos + ';object-fit:contain;">';
     }
     return '<div class="stack n' + shown + '" style="width:' + (cw + (shown - 1) * ox) + 'px;height:' + (ch + (shown - 1) * oy) + 'px;">' + layers + '</div>';
   }

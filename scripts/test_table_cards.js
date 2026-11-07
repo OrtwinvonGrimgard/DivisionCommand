@@ -7,15 +7,17 @@ const WEB = path.join(__dirname, '../Division_Command_0.5a/web');
 const h = setup('off'), { w, eng, add, click } = h;
 let artwork = 0, textures = 0;
 for (const def of w.DC_CATALOG.cards) {
-  if (def.art_status === 'platzhalter') { // neue Pool-Karten: ehrlicher Platzhalter, keine Bildzuordnung
+  if (w.DCCardPh.is(def)) { // neue Pool-Karten: ehrlicher Platzhalter, keine Bildzuordnung
     assert(!w.DC_TABLE_ART[def.id] && !def.image, `placeholder must not map art ${def.id}`);
     assert.match(w.DCTableArt.html(def, false), /Entwurf · ohne Artwork/); continue;
   }
-  const m = w.DC_TABLE_ART[def.id]; assert(m, `mapping missing ${def.id}`);
+  const face=w.DC_CARD_FACES && w.DC_CARD_FACES[def.id];
+  const m = (face && face.art) || w.DC_TABLE_ART[def.id]; assert(m, `mapping missing ${def.id}`);
   assert(fs.existsSync(path.join(WEB, m.src)), `file missing ${m.src}`);
   if (m.kind === 'artwork') {
     artwork++;
-    assert.equal(path.basename(m.src, '.jpg'), path.basename(def.image).replace(/\.[^.]+$/, ''), 'exact collector art mapping');
+    if (def.image) assert.equal(path.basename(m.src, '.jpg'), path.basename(def.image).replace(/\.[^.]+$/, ''), 'exact collector art mapping');
+    else assert.equal(path.basename(m.src,'.jpg'),def.id,'new generated illustration belongs to exact ID');
   } else if (m.kind === 'doctrine-texture') {
     textures++; assert.equal(def.typ, 'Doktrin'); assert.equal(m.src, 'assets/cards/' + def.image);
   }

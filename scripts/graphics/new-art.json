@@ -1,0 +1,92 @@
+{
+  "dc_tac_haltezug_am_knotenpunkt": {
+    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_haltezug_am_knotenpunkt.jpg",
+    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6970ba9e22c69e6ca0d5eec9580e912d35de533ee217b4b27f1c21911debe817.jpg",
+    "sha256": "6970ba9e22c69e6ca0d5eec9580e912d35de533ee217b4b27f1c21911debe817",
+    "subject": "Infanterie am ländlichen Straßenknotenpunkt mit Feldtelefon",
+    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+  },
+  "dc_tac_schwerer_bindungskeil": {
+    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_schwerer_bindungskeil.jpg",
+    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/42ab7e3ecec4cdaefac6842082c3172e7a924e497d6200fc33d1bcdf7d4db90d.jpg",
+    "sha256": "42ab7e3ecec4cdaefac6842082c3172e7a924e497d6200fc33d1bcdf7d4db90d",
+    "subject": "Schwerer Panzer an steinerner Brückenrampe",
+    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+  },
+  "dc_tac_anmarschbeobachtung": {
+    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_anmarschbeobachtung.jpg",
+    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/396914d04781b4425758512abc8f88244079b979a77d8e4bcd9d5d93d9ceeb7c.jpg",
+    "sha256": "396914d04781b4425758512abc8f88244079b979a77d8e4bcd9d5d93d9ceeb7c",
+    "subject": "Beobachterin und Funkgerät über Talstraße",
+    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+  },
+  "dc_tac_taktische_verkehrsleitstelle": {
+    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_taktische_verkehrsleitstelle.jpg",
+    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/aefe02a1617e60092675863425bab0efd2c855ecacb050d0f27efc83e0c2caa1.jpg",
+    "sha256": "aefe02a1617e60092675863425bab0efd2c855ecacb050d0f27efc83e0c2caa1",
+    "subject": "Logistikraum mit Funkgeräten und Transportfahrzeug",
+    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+  },
+  "dc_tac_unterstutzungsgruppe_am_flugel": {
+    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_unterstutzungsgruppe_am_flugel.jpg",
+    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d4628279c6017470d5fe29f6b08a29a76b39a6f63134fbda2fdfd05c5ba5abf8.jpg",
+    "sha256": "d4628279c6017470d5fe29f6b08a29a76b39a6f63134fbda2fdfd05c5ba5abf8",
+    "subject": "Unterstützungsgruppe mit ruhendem Maschinengewehr",
+    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+  },
+  "dc_tac_bewegliche_feuerbasis": {
+    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_bewegliche_feuerbasis.jpg",
+    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/2b1ff1eb07285ec0ea18e53f3c2c717828a674601a91ce2b1ba44d40c32cbae5.jpg",
+    "sha256": "2b1ff1eb07285ec0ea18e53f3c2c717828a674601a91ce2b1ba44d40c32cbae5",
+    "subject": "Schwerer gepanzerter Radwagen am Feldweg",
+    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+  },
+  "dc_tac_nachhutkompanie": {
+    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_nachhutkompanie.jpg",
+    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/1868f114ab8455d5fa6c035109c47e177e1e640a60c6f33129c7ff04b68d5266.jpg",
+    "sha256": "1868f114ab8455d5fa6c035109c47e177e1e640a60c6f33129c7ff04b68d5266",
+    "subject": "Geordnete Nachhut unter steinernem Dorftor",
+    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+  },
+  "dc_tac_ausweichender_spahwagen": {
+    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_ausweichender_spahwagen.jpg",
+    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/fd64678f50d26c01ee48b74079dbe34c1757275e8a82df1c8776cbdaadb00b8e.jpg",
+    "sha256": "fd64678f50d26c01ee48b74079dbe34c1757275e8a82df1c8776cbdaadb00b8e",
+    "subject": "Leichter Aufklärungswagen an nebliger Waldkurve",
+    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+  },
+  "dc_tac_vorgeschobener_meldetrupp": {
+    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_vorgeschobener_meldetrupp.jpg",
+    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/41b546d048c986a1d8b7a8476c4de0665900dce10e81446477d5dc1243028be1.jpg",
+    "sha256": "41b546d048c986a1d8b7a8476c4de0665900dce10e81446477d5dc1243028be1",
+    "subject": "Meldetrupp mit Feldstecher und Funkgerät am Talrand",
+    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+  },
+  "dc_tac_beobachtungswagen_am_rand": {
+    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_beobachtungswagen_am_rand.jpg",
+    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/888b3ba4026280f767cc4739baeaf4df7fdb8cd19f423c55074e3410b18f3222.jpg",
+    "sha256": "888b3ba4026280f767cc4739baeaf4df7fdb8cd19f423c55074e3410b18f3222",
+    "subject": "Kompakter Aufklärungs-Radwagen am Scheunenrand",
+    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+  }
+}

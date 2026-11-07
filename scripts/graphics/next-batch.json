@@ -1,0 +1,565 @@
+{
+  "status": "not_generated",
+  "purpose": "next individual illustration batch; do not invent cards or rules",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "lore": "Division_Command_0.5a/LORE_NATIONEN.md; Steinmark chapter is required before prompts",
+  "cards": [
+    {
+      "id": "dc_np_steinmark_paragraphenzug",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Paragraphenzug",
+      "ap": 2,
+      "rarity": "bronze",
+      "tags": [
+        "einheit",
+        "infanterie"
+      ],
+      "text": "",
+      "rules": [],
+      "effects": [],
+      "flavor": "Erst die Vorschrift, dann der Graben.",
+      "collector": "NP-STM-01",
+      "art_status": "platzhalter",
+      "klasse": "Infanterie",
+      "atk": 2,
+      "def": 3,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Heranführung"
+      ],
+      "max_copies": 4
+    },
+    {
+      "id": "dc_np_steinmark_normschuetzen",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Normschützen",
+      "ap": 1,
+      "rarity": "bronze",
+      "tags": [
+        "einheit",
+        "infanterie"
+      ],
+      "text": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+      "rules": [
+        "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
+      ],
+      "effects": [
+        {
+          "code": "FEUERUEBERLEGENHEIT"
+        }
+      ],
+      "flavor": "Gleicher Abstand, gleiches Kaliber, gleiches Ergebnis.",
+      "collector": "NP-STM-02",
+      "art_status": "platzhalter",
+      "klasse": "Infanterie",
+      "atk": 1,
+      "def": 2,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Erbitterung"
+      ],
+      "max_copies": 4
+    },
+    {
+      "id": "dc_np_steinmark_begleitzug_freigabe",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Begleitzug Freigabe",
+      "ap": 2,
+      "rarity": "bronze",
+      "tags": [
+        "einheit",
+        "infanterie"
+      ],
+      "text": "Benachbarte eigene Infanterie +1 DEF.",
+      "rules": [
+        "Begleitschutz (solange diese Einheit steht): Jede benachbarte eigene Infanterie hat +1 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert)."
+      ],
+      "effects": [
+        {
+          "code": "MECH_AURA"
+        }
+      ],
+      "flavor": "Wer neben dem Standard steht, steht sicher.",
+      "collector": "NP-STM-03",
+      "art_status": "platzhalter",
+      "klasse": "Infanterie",
+      "atk": 2,
+      "def": 2,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Zuteilung"
+      ],
+      "max_copies": 4
+    },
+    {
+      "id": "dc_np_steinmark_akteneinsichtstrupp",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Akteneinsichtstrupp",
+      "ap": 2,
+      "rarity": "silver",
+      "tags": [
+        "einheit",
+        "infanterie"
+      ],
+      "text": "Beim Ausspielen: sieh dir 2 gegnerische Handkarten an.",
+      "rules": [
+        "Beim Ausspielen: Hat der Gegner Handkarten, wählst du bis zu 2 davon (verdeckt) und siehst sie dir an. Die Karten bleiben auf seiner Hand; nur du erfährst sie."
+      ],
+      "effects": [
+        {
+          "code": "HAND_PEEK",
+          "param": {
+            "n": 2
+          }
+        }
+      ],
+      "flavor": "Was der Gegner plant, steht irgendwo geschrieben.",
+      "collector": "NP-STM-04",
+      "art_status": "platzhalter",
+      "klasse": "Infanterie",
+      "atk": 2,
+      "def": 2,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Ablösung"
+      ],
+      "max_copies": 2
+    },
+    {
+      "id": "dc_np_steinmark_landwehr_bezirk_vier",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Landwehr Bezirk Vier",
+      "ap": 3,
+      "rarity": "bronze",
+      "tags": [
+        "einheit",
+        "infanterie"
+      ],
+      "text": "Keine Sonderfähigkeit.",
+      "rules": [
+        "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
+      ],
+      "effects": [],
+      "flavor": "Bürger in Uniform, Dienstzeit nach Gesetz.",
+      "collector": "NP-STM-05",
+      "art_status": "platzhalter",
+      "klasse": "Infanterie",
+      "atk": 3,
+      "def": 3,
+      "verdeckt_ok": true,
+      "max_copies": 4
+    },
+    {
+      "id": "dc_np_steinmark_verfahrensriegel",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Verfahrensriegel",
+      "ap": 3,
+      "rarity": "silver",
+      "tags": [
+        "einheit",
+        "infanterie"
+      ],
+      "text": "Benachbarte eigene Fronteinheiten +2 DEF.",
+      "rules": [
+        "Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert)."
+      ],
+      "effects": [
+        {
+          "code": "FLANK_DEF"
+        }
+      ],
+      "flavor": "Der Riegel hält, weil jeder weiß, wo er steht.",
+      "collector": "NP-STM-06",
+      "art_status": "platzhalter",
+      "klasse": "Infanterie",
+      "atk": 2,
+      "def": 4,
+      "verdeckt_ok": true,
+      "max_copies": 2
+    },
+    {
+      "id": "dc_np_steinmark_normpanzer_baureihe_zwei",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Normpanzer Baureihe Zwei",
+      "ap": 3,
+      "rarity": "bronze",
+      "tags": [
+        "einheit",
+        "panzer",
+        "kette",
+        "gepanzert"
+      ],
+      "text": "Keine Sonderfähigkeit.",
+      "rules": [
+        "Keine Zusatzregel – kämpft ausschließlich mit ATK und DEF nach den Grundregeln."
+      ],
+      "effects": [],
+      "flavor": "Ersatzteile passen in jeden Wagen der Baureihe.",
+      "collector": "NP-STM-07",
+      "art_status": "platzhalter",
+      "klasse": "Panzer",
+      "atk": 3,
+      "def": 4,
+      "verdeckt_ok": true,
+      "max_copies": 4
+    },
+    {
+      "id": "dc_np_steinmark_bezirkskette",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Bezirkskette",
+      "ap": 3,
+      "rarity": "bronze",
+      "tags": [
+        "einheit",
+        "panzer",
+        "kette",
+        "gepanzert"
+      ],
+      "text": "Angriffe gegen gepanzerte Ziele: +1 Schaden.",
+      "rules": [
+        "Panzerbrechend: Greift diese Einheit ein gepanzertes Ziel an (Panzer, Kettenfahrzeuge), verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
+      ],
+      "effects": [
+        {
+          "code": "IGNORE_DEF",
+          "param": {
+            "ignore_def": 1
+          }
+        }
+      ],
+      "flavor": "Abgenommen für Gegner mit Panzerung.",
+      "collector": "NP-STM-08",
+      "art_status": "platzhalter",
+      "klasse": "Panzer",
+      "atk": 3,
+      "def": 3,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Ablösung"
+      ],
+      "max_copies": 4
+    },
+    {
+      "id": "dc_np_steinmark_freigabewagen",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Freigabewagen",
+      "ap": 4,
+      "rarity": "silver",
+      "tags": [
+        "einheit",
+        "panzer",
+        "kette",
+        "gepanzert"
+      ],
+      "text": "Benachbarte eigene Fronteinheiten +2 DEF.",
+      "rules": [
+        "Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links ↔ Mitte ↔ rechts) oder direkt davor/dahinter im selben Abschnitt. Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert)."
+      ],
+      "effects": [
+        {
+          "code": "FLANK_DEF"
+        }
+      ],
+      "flavor": "Rollt erst, wenn die Flanken gedeckt sind.",
+      "collector": "NP-STM-09",
+      "art_status": "platzhalter",
+      "klasse": "Panzer",
+      "atk": 3,
+      "def": 5,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Ablösung"
+      ],
+      "max_copies": 2
+    },
+    {
+      "id": "dc_np_steinmark_pruefstandkeil",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Prüfstandkeil",
+      "ap": 4,
+      "rarity": "bronze",
+      "tags": [
+        "einheit",
+        "panzer",
+        "kette",
+        "gepanzert"
+      ],
+      "text": "",
+      "rules": [],
+      "effects": [],
+      "flavor": "Hundert Stunden Prüfstand, dann erst Front.",
+      "collector": "NP-STM-10",
+      "art_status": "platzhalter",
+      "klasse": "Panzer",
+      "atk": 4,
+      "def": 4,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Ablösung"
+      ],
+      "max_copies": 4
+    },
+    {
+      "id": "dc_np_steinmark_bundesschild_neun",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Bundesschild Neun",
+      "ap": 5,
+      "rarity": "gold",
+      "tags": [
+        "einheit",
+        "panzer",
+        "kette",
+        "gepanzert"
+      ],
+      "text": "Jeder Schaden an dieser Einheit −2.",
+      "rules": [
+        "Schwere Panzerung: Jeder einzelne Schaden, den diese Einheit erleidet (Kampf, Soforteinsatz, Effekt), wird um 2 verringert, mindestens auf 0."
+      ],
+      "effects": [
+        {
+          "code": "SCHADEN_MINUS"
+        }
+      ],
+      "flavor": "Abgenommen, gestempelt, unzerstörbar – laut Gutachten.",
+      "collector": "NP-STM-11",
+      "art_status": "platzhalter",
+      "klasse": "Panzer",
+      "atk": 4,
+      "def": 6,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Ablösung",
+        "Zähigkeit"
+      ],
+      "max_copies": 1
+    },
+    {
+      "id": "dc_np_steinmark_feuerplanrohr",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Feuerplanrohr",
+      "ap": 3,
+      "rarity": "bronze",
+      "tags": [
+        "einheit",
+        "artillerie"
+      ],
+      "text": "",
+      "rules": [
+        "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
+        "Die Einheit zählt für alle Regeln als Artillerie.",
+        "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
+      ],
+      "effects": [
+        {
+          "code": "ATTACK_ANY_FRONT"
+        }
+      ],
+      "flavor": "Schießt nur auf freigegebene Planquadrate – also überallhin.",
+      "collector": "NP-STM-12",
+      "art_status": "platzhalter",
+      "klasse": "Artillerie",
+      "atk": 3,
+      "def": 2,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Indirektes Feuer"
+      ],
+      "max_copies": 4
+    },
+    {
+      "id": "dc_np_steinmark_freigabebatterie",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Freigabebatterie",
+      "ap": 4,
+      "rarity": "silver",
+      "tags": [
+        "einheit",
+        "artillerie"
+      ],
+      "text": "Darf auch gegnerische Unterstützungen angreifen.",
+      "rules": [
+        "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
+        "Die Einheit zählt für alle Regeln als Artillerie.",
+        "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+        "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
+      ],
+      "effects": [
+        {
+          "code": "ATTACK_ANY_FRONT"
+        },
+        {
+          "code": "ATTACK_SUPPORT"
+        }
+      ],
+      "flavor": "Zweite Unterschrift: auch Depots sind Ziele.",
+      "collector": "NP-STM-13",
+      "art_status": "platzhalter",
+      "klasse": "Artillerie",
+      "atk": 4,
+      "def": 3,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Indirektes Feuer"
+      ],
+      "max_copies": 2
+    },
+    {
+      "id": "dc_np_steinmark_normmoerser",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Normmörser",
+      "ap": 2,
+      "rarity": "bronze",
+      "tags": [
+        "einheit",
+        "artillerie"
+      ],
+      "text": "",
+      "rules": [
+        "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
+        "Die Einheit zählt für alle Regeln als Artillerie.",
+        "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
+      ],
+      "effects": [
+        {
+          "code": "ATTACK_ANY_FRONT"
+        }
+      ],
+      "flavor": "Kleines Rohr, große Akte.",
+      "collector": "NP-STM-14",
+      "art_status": "platzhalter",
+      "klasse": "Artillerie",
+      "atk": 2,
+      "def": 1,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Zuteilung",
+        "Indirektes Feuer"
+      ],
+      "max_copies": 4
+    },
+    {
+      "id": "dc_np_steinmark_messbatterie_grenzstein",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Messbatterie Grenzstein",
+      "ap": 3,
+      "rarity": "bronze",
+      "tags": [
+        "einheit",
+        "artillerie"
+      ],
+      "text": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+      "rules": [
+        "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
+        "Die Einheit zählt für alle Regeln als Artillerie.",
+        "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.",
+        "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
+      ],
+      "effects": [
+        {
+          "code": "ATTACK_ANY_FRONT"
+        },
+        {
+          "code": "FEUERUEBERLEGENHEIT"
+        }
+      ],
+      "flavor": "Vermessen, bevor geschossen wird.",
+      "collector": "NP-STM-15",
+      "art_status": "platzhalter",
+      "klasse": "Artillerie",
+      "atk": 2,
+      "def": 3,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Zuteilung",
+        "Indirektes Feuer"
+      ],
+      "max_copies": 4
+    },
+    {
+      "id": "dc_np_steinmark_dreischluessel_haubitze",
+      "set": "set_nation_pool",
+      "nation": "Steinmark",
+      "status": "live",
+      "typ": "Einheit",
+      "name": "Dreischlüssel-Haubitze",
+      "ap": 5,
+      "rarity": "gold",
+      "tags": [
+        "einheit",
+        "artillerie"
+      ],
+      "text": "Darf auch gegnerische Unterstützungen angreifen.",
+      "rules": [
+        "Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.",
+        "Die Einheit zählt für alle Regeln als Artillerie.",
+        "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
+        "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
+      ],
+      "effects": [
+        {
+          "code": "ATTACK_ANY_FRONT"
+        },
+        {
+          "code": "ATTACK_SUPPORT"
+        }
+      ],
+      "flavor": "Drei Unterschriften, ein Einschlag.",
+      "collector": "NP-STM-16",
+      "art_status": "platzhalter",
+      "klasse": "Artillerie",
+      "atk": 5,
+      "def": 3,
+      "verdeckt_ok": true,
+      "keywords": [
+        "Fernschuss",
+        "Indirektes Feuer"
+      ],
+      "max_copies": 1
+    }
+  ]
+}

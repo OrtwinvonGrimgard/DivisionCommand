@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-tac1';
+const CACHE = 'divcmd-gfx1';
 const ASSETS = [
   './',
   './index.html',

@@ -3,7 +3,7 @@
 (function (global) {
   'use strict';
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-  function is(def) { return !!(def && def.art_status === 'platzhalter'); }
+  function is(def) { return !!(def && def.art_status === 'platzhalter' && !(global.DC_CARD_FACES && global.DC_CARD_FACES[def.id])); }
   function html(def, cls) {
     var stats = def.atk != null ? '<span class="ph-stats">ATK ' + def.atk + ' · DEF ' + def.def + '</span>' : '';
     return '<span class="' + esc(cls || 'art') + ' card-ph" role="img" aria-label="' + esc(def.name) + ' – Entwurf ohne Artwork">' +

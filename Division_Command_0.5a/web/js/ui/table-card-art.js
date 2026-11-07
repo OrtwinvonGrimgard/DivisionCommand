@@ -4,7 +4,8 @@
   function escape(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]; }); }
   function html(def, hidden) {
     if (hidden) return '<div class="table-motif table-hidden" aria-label="Verdeckte Karte"><span>VERDECKT</span></div>';
-    var rec = def && global.DC_TABLE_ART && global.DC_TABLE_ART[def.id];
+    var face = def && global.DC_CARD_FACES && global.DC_CARD_FACES[def.id];
+    var rec = (face && face.art) || (def && global.DC_TABLE_ART && global.DC_TABLE_ART[def.id]);
     var kw = global.DCKw ? global.DCKw.strip(def) : '';
     if (!rec && def && def.art_status === 'platzhalter') return '<div class="table-motif art-placeholder" aria-label="Entwurf ohne Artwork"><span>Entwurf · ohne Artwork</span>' + kw + '</div>';
     if (!rec) return '<div class="table-motif art-unavailable"><span>Motiv nicht verfügbar</span>' + kw + '</div>';

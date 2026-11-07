@@ -10,7 +10,7 @@ const tex = fs.readFileSync(path.join(WEB, 'assets/table/stencil-oil.webp'));
 assert(tex.slice(0, 4).toString() === 'RIFF' && tex.slice(8, 12).toString() === 'WEBP' && tex.length > 50000, 'Öltextur vorhanden');
 for (const m of css.matchAll(/url\(\.\.\/([^)]+)\)/g)) assert(fs.existsSync(path.join(WEB, m[1])), '404: ' + m[1]);
 assert(/table-stencil\.js\?v=/.test(fs.readFileSync(path.join(WEB, 'index.html'), 'utf8')));
-assert(/const CACHE = 'divcmd-tac1'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')));
+assert(/const CACHE = 'divcmd-gfx1'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')));
 // z-Reihenfolge: Gemälde -3 < Licht -2 < Schablone -1 < Karten (auto)
 const z = sel => Number(css.match(new RegExp(sel.replace(/[.>]/g, m => '\\' + m) + ' \\{[^}]*z-index: (-?\\d+)'))[1]);
 assert(z('.cam-world > .ot-desk') < z('.cam-world > .ot-slotlight') && z('.cam-world > .ot-slotlight') < z('.cam-world > .ot-stencil') && z('.cam-world > .ot-stencil') < 0, 'Schichtfolge');
@@ -79,7 +79,7 @@ console.log('PASS stencil: ' + expect.length + ' Löcher = Slot-Boxen (4×9 + Ni
   sel.value = 'cam'; sel.dispatchEvent(new w.Event('change', { bubbles: true })); w.dcRender();
   const t = $(`#cam-world #my-front [data-uid="${eng.player(0).front.C[0].uid}"]`);
   const img = t.querySelector('.slot-face > .slot-card > img.slot-face-img');
-  assert(img && img.getAttribute('src').includes(encodeURI(inf.image).split('/').pop().replace(/\.[^.]+$/, '')), 'ganze Kartenvorderseite (def.image) im Slot');
+  assert(img && img.getAttribute('src').includes(encodeURI(w.dcCardImage(inf)).split('/').pop().replace(/\.[^.]+$/, '')), 'ganze aktuelle Kartenvorderseite im Slot');
   assert(t.querySelector('.slot-kw .kw-strip'), 'Schlüsselwörter unter der Karte');
   assert(t.querySelector('.unit-stats'), 'Live-Werte bleiben');
   assert($(`#cam-world #my-support .slot.filled .slot-face img`), 'Support zeigt ganze Karte');
@@ -89,9 +89,9 @@ console.log('PASS stencil: ' + expect.length + ' Löcher = Slot-Boxen (4×9 + Ni
   assert(/#app \.slot-face, #app \.slot-kw \{ display: none; \}/.test(css), 'flach: Ausschnitt wie bisher');
   assert(/img\.slot-face-img \{[^}]*object-fit: contain !important/.test(css), 'Karte eingepasst, nicht beschnitten');
   // t195u: keine Streckung/Stauchung – Kartenrahmen im Format der Handkarten-Datei
-  const jpegSize = f => { const b = fs.readFileSync(f); let i = 2; while (i < b.length) { const m = b[i + 1], L = b.readUInt16BE(i + 2); if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) return { h: b.readUInt16BE(i + 5), w: b.readUInt16BE(i + 7) }; i += 2 + L; } };
   const file = decodeURIComponent(img.getAttribute('src')).split('?')[0];
-  const dim = jpegSize(path.join(WEB, file)); assert(dim, 'Kartenmaße lesbar');
+  const dim = JSON.parse(require('child_process').execFileSync('python3', ['-c', 'from PIL import Image; import json,sys; im=Image.open(sys.argv[1]); print(json.dumps({"w":im.width,"h":im.height}))', path.join(WEB,file)], {encoding:'utf8'}));
+  assert(dim.w && dim.h, 'tatsächliche JPEG/WebP-Kartenmaße lesbar');
   const ar = css.match(/\.slot-card \{[^}]*aspect-ratio: (\d+) \/ (\d+)/); assert(ar, 'Kartenrahmen mit festem Seitenverhältnis');
   assert(Math.abs(ar[1] / ar[2] - dim.w / dim.h) < 0.002, 'Rahmen = Kartenformat ' + dim.w + '×' + dim.h);
   assert(/\.slot-card \{[^}]*height: 100%; width: auto;/.test(css), 'nur Höhe gesetzt, Breite folgt Verhältnis');
