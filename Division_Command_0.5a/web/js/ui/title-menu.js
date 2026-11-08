@@ -2,11 +2,23 @@ function show(id) {
   document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('on'); });
   var el = document.getElementById(id);
   if (el) el.classList.add('on');
+
+  var titleRoot = document.getElementById('title-root');
+  if (titleRoot) {
+    if (id === 'scr-title' || id === 'scr-boot') {
+      titleRoot.style.display = '';
+    } else {
+      titleRoot.style.display = 'none';
+    }
+  }
 }
 
 document.getElementById('go-start').onclick = function () {
   var tr = document.getElementById('title-root');
-  if (tr) tr.classList.remove('boot-intro', 'logo-in', 'btn-in');
+  if (tr) {
+    tr.classList.remove('boot-intro', 'logo-in', 'btn-in');
+    tr.style.display = '';
+  }
   show('scr-title');
 };
 
