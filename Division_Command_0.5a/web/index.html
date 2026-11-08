@@ -6,8 +6,11 @@
   <title>Division Command 0.5a Alpha</title>
   <link rel="stylesheet" href="css/app.css?v=pt1">
   <style>
-    #title-root.boot-intro > .title-brand { opacity: 0 !important; }
-    #title-root.boot-intro #scr-boot .menu { opacity: 0 !important; }
+    /* Buttons and logo visible by default; boot animation can still run */
+    #title-root.boot-intro > .title-brand { opacity: 1 !important; }
+    #title-root.boot-intro #scr-boot .menu { opacity: 1 !important; }
+    #title-root.logo-in > .title-brand { opacity: 1 !important; }
+    #title-root.btn-in #scr-boot .menu { opacity: 1 !important; }
   </style>
 </head>
 <body>
