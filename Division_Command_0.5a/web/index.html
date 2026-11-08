@@ -11,9 +11,21 @@
   </style>
 </head>
 <body>
+  <audio id="bgm" autoplay preload="auto" src="assets/audio/menue/Division%20Command%20(Remastered).wav"></audio>
+  <audio id="bgm-battle" preload="auto"></audio>
+
   <div id="title-root" class="boot-intro">
+    <div class="title-world" id="title-world" aria-hidden="true">
+      <div class="title-stage">
+        <video id="title-loop" class="title-loop" src="assets/title-back.mp4?v=fx6" autoplay muted loop playsinline preload="auto" disablepictureinpicture></video>
+        <canvas id="title-sky" class="title-sky"></canvas>
+        <img class="title-battle" src="assets/title-battle.webp?v=032plate" alt="">
+        <img class="title-tent" src="assets/title-tent.webp" alt="">
+      </div>
+    </div>
     <div class="title-brand">
-      <img class="title-logo" src="assets/title-logo.png" alt="Division Command">
+      <img class="title-logo" src="assets/title-logo.png?v=6" alt="Division Command" width="1381" height="507">
+      <p class="sub ver-big" hidden>Alpha 0.5a</p>
     </div>
     <div class="title-panel">
       <div id="scr-boot" class="screen on splash">
@@ -37,6 +49,7 @@
   </div>
 
   <div id="screen-container"></div>
+  <div id="dc-version">Alpha 0.5a</div>
 
   <script src="js/ui/title-fx.js?v=05ax"></script>
   <script>window.DC_FOLDER_PNG = true;</script>
@@ -65,7 +78,6 @@
   <script src="js/playtest.js?v=05a"></script>
   <script src="js/ui/title-menu.js?v=1"></script>
   <script>
-    // Load partial screens on demand
     async function loadPartial(name) {
       if (document.getElementById('scr-' + name)) return;
       try {
