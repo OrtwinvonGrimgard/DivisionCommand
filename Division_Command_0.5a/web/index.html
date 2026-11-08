@@ -36,17 +36,7 @@
     </div>
   </div>
 
-  <div id="scr-single" class="screen"><h1>Einzelspieler</h1><p>Wird geladen...</p><button class="back" id="back-single">Zurück</button></div>
-  <div id="scr-lan" class="screen"><h1>LAN / Hamachi</h1><p>Wird geladen...</p><button class="back" id="back-lan">Zurück</button></div>
-  <div id="scr-library" class="screen"><h1>Bibliothek</h1><p>Wird geladen...</p><button class="back" id="back-library">Zurück</button></div>
-  <div id="scr-user" class="screen"><h1>Benutzer</h1><p>Wird geladen...</p><button class="back" id="back-user">Zurück</button></div>
-  <div id="scr-playtest" class="screen"><h1>Playtest</h1><p>Wird geladen...</p><button class="back" id="back-playtest">Zurück</button></div>
-  <div id="scr-options" class="screen"><h1>Optionen</h1><p>Wird geladen...</p><button class="back" id="back-options">Zurück</button></div>
-  <div id="scr-hilfe" class="screen">
-    <h1 class="page-title">HILFE</h1>
-    <div class="hilfe-body"><p>Hilfe wird geladen...</p></div>
-    <div class="menu"><button type="button" class="back" id="back-hilfe">Zurück</button></div>
-  </div>
+  <div id="screen-container"></div>
 
   <script src="js/ui/title-fx.js?v=05ax"></script>
   <script>window.DC_FOLDER_PNG = true;</script>
@@ -73,38 +63,20 @@
   <script src="js/user.js?v=05a"></script>
   <script src="js/options.js?v=05a"></script>
   <script src="js/playtest.js?v=05a"></script>
+  <script src="js/ui/title-menu.js?v=1"></script>
   <script>
-    function show(id) {
-      document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('on'); });
-      var el = document.getElementById(id);
-      if (el) el.classList.add('on');
+    // Load partial screens on demand
+    async function loadPartial(name) {
+      if (document.getElementById('scr-' + name)) return;
+      try {
+        const res = await fetch('partials/' + name + '.html');
+        if (!res.ok) return;
+        const html = await res.text();
+        document.getElementById('screen-container').insertAdjacentHTML('beforeend', html);
+      } catch (e) { console.warn('Partial load failed', name, e); }
     }
-    document.getElementById('go-start').onclick = function () {
-      var tr = document.getElementById('title-root');
-      if (tr) tr.classList.remove('boot-intro', 'logo-in', 'btn-in');
-      show('scr-title');
-    };
-    document.getElementById('go-single').onclick = function () { show('scr-single'); };
-    document.getElementById('go-lan').onclick = function () { show('scr-lan'); };
-    document.getElementById('go-library').onclick = function () { show('scr-library'); };
-    document.getElementById('go-hilfe').onclick = function () { show('scr-hilfe'); };
-    document.getElementById('go-user').onclick = function () { show('scr-user'); };
-    document.getElementById('go-playtest').onclick = function () { show('scr-playtest'); };
-    document.getElementById('go-options').onclick = function () { show('scr-options'); };
-    document.getElementById('go-quit').onclick = function () { if (confirm('Beenden?')) window.close(); };
-    document.getElementById('back-single').onclick = function () { show('scr-title'); };
-    document.getElementById('back-lan').onclick = function () { show('scr-title'); };
-    document.getElementById('back-library').onclick = function () { show('scr-title'); };
-    document.getElementById('back-user').onclick = function () { show('scr-title'); };
-    document.getElementById('back-playtest').onclick = function () { show('scr-title'); };
-    document.getElementById('back-options').onclick = function () { show('scr-title'); };
-    document.getElementById('back-hilfe').onclick = function () { show('scr-title'); };
-    (function bootIntro() {
-      var tr = document.getElementById('title-root');
-      if (!tr) return;
-      setTimeout(function () { tr.classList.add('logo-in'); }, 1400);
-      setTimeout(function () { tr.classList.add('btn-in'); }, 5000);
-    })();
+    document.getElementById('go-hilfe').addEventListener('click', function() { loadPartial('hilfe'); }, true);
+    document.getElementById('go-library').addEventListener('click', function() { loadPartial('library'); }, true);
   </script>
 </body>
 </html>
