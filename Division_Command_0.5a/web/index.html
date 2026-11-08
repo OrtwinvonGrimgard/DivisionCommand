@@ -1,1 +1,33 @@
-CONTENT_FROM_FIXED_FILE_PLACEHOLDER
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Division Command 0.5a Alpha</title>
+  <link rel="stylesheet" href="css/app.css?v=pt1">
+  <style>
+    #title-root.boot-intro > .title-brand { opacity: 0 !important; }
+    #title-root.boot-intro #scr-boot .menu { opacity: 0 !important; }
+  </style>
+</head>
+<body>
+  <div id="title-root" class="boot-intro">
+    <div class="title-brand">
+      <img class="title-logo" src="assets/title-logo.png" alt="Division Command">
+    </div>
+    <div id="scr-boot" class="screen on splash">
+      <div class="menu">
+        <button type="button" class="primary" id="go-start">Spiel starten</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function bootIntro() {
+      var tr = document.getElementById('title-root');
+      if (!tr || !tr.classList.contains('boot-intro')) return;
+      setTimeout(function () { tr.classList.add('logo-in'); }, 1400);
+      setTimeout(function () { tr.classList.add('btn-in'); }, 5000);
+    })();
+  </script>
+</body>
+</html>
