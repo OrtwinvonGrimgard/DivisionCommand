@@ -34,6 +34,79 @@
       </div>
     </div>
   </div>
+
+  <div id="scr-hilfe" class="screen">
+    <h1 class="page-title">HILFE</h1>
+    <div class="hilfe-body">
+      <nav class="hilfe-nav" aria-label="Hilfe">
+        <button type="button" data-hilfe="menu" class="on">Menüpunkte</button>
+        <div class="hilfe-sub on" data-for="menu">
+          <button type="button" data-jump="single">Einzelspieler</button>
+          <button type="button" data-jump="lan">LAN / Hamachi</button>
+          <button type="button" data-jump="library">Bibliothek</button>
+          <button type="button" data-jump="user">Benutzer</button>
+          <button type="button" data-jump="playtest">Playtest / Logs</button>
+          <button type="button" data-jump="options">Optionen</button>
+        </div>
+        <button type="button" data-hilfe="regeln">Spielregeln</button>
+        <div class="hilfe-sub" data-for="regeln">
+          <button type="button" data-jump="vorstellung">Vorstellung</button>
+          <button type="button" data-jump="regeln">Grundregeln</button>
+          <button type="button" data-jump="beispiel">Beispielzüge</button>
+          <button type="button" data-jump="glossar">Glossar</button>
+        </div>
+        <button type="button" data-hilfe="lore">Nationen & Lore</button>
+        <div class="hilfe-sub" data-for="lore">
+          <button type="button" data-jump="lore-ueberblick">Überblick</button>
+          <button type="button" data-jump="lore-staerke">Stärke durch Opfer</button>
+        </div>
+        <button type="button" data-hilfe="stand">Aktueller Stand</button>
+        <div class="hilfe-sub" data-for="stand">
+          <button type="button" data-jump="version">Version 0.5a</button>
+          <button type="button" data-jump="karten">Karten & Bot</button>
+          <button type="button" data-jump="roadmap">Roadmap</button>
+        </div>
+      </nav>
+      <div class="hilfe-pages">
+        <article class="hilfe-page dossier on" id="hilfe-menu">
+          <h2 id="single">Einzelspieler</h2>
+          <p>Spiele gegen den Bot. Nach der Auswahl kannst du Nation, Deck und Bot-Schwierigkeit festlegen. Der Bot nutzt denselben Kartenpool und reagiert auf deine Züge. Ideal zum Lernen der Regeln und Testen von Decks.</p>
+          <h2 id="lan">LAN / Hamachi</h2>
+          <p>Lokales Netzwerk oder Hamachi für Spiel mit einem zweiten Spieler. Host oder Join. Beide Spieler nutzen denselben Stand. Aktuell primär für Playtests und direkte Partien gedacht.</p>
+          <h2 id="library">Bibliothek</h2>
+          <p>Deckbuilder und Kartenübersicht. Filter nach Typ, Nation und Suche. Klick fügt eine Kopie ins Deck (Limits nach Seltenheit). Doppelklick für große Ansicht.</p>
+          <h2 id="user">Benutzer</h2>
+          <p>Offiziersakte: Name, Rufname, Gesicht, Uniform, Kopfbedeckung. Der aktive Benutzer gilt für Einzelspieler und LAN.</p>
+          <h2 id="playtest">Playtest / Logs</h2>
+          <p>Zugang zu detaillierten Logs und Playtest-Funktionen.</p>
+          <h2 id="options">Optionen</h2>
+          <p>Musik, Soundeffekte, Tischansicht (flach / 2,5D), Bot-Verhalten.</p>
+        </article>
+        <article class="hilfe-page dossier" id="hilfe-regeln">
+          <h2 id="vorstellung">Grundlegende Vorstellung</h2>
+          <p>Division Command ist ein taktisches Kartenspiel um eine moderne Division.</p>
+          <h2 id="regeln">Grundregeln</h2>
+          <p>Start mit 5 AP. Einheiten werden offen gelegt und handeln erst im nächsten Zug (eingegraben).</p>
+          <h2 id="beispiel">Beispielzüge</h2>
+          <p>Zugbeginn → Karte ziehen → Einheiten ausspielen → Angreifen → Zugende.</p>
+          <h2 id="glossar">Glossar</h2>
+          <p>Eingegraben, Doktrin, Niemandsland, Support.</p>
+        </article>
+        <article class="hilfe-page dossier" id="hilfe-lore">
+          <h2 id="lore-ueberblick">Nationen & Lore</h2>
+          <p>16 Nationen mit detaillierten Essays unter docs/lore_nationen/. Kernphilosophie: Stärke durch Opfer.</p>
+        </article>
+        <article class="hilfe-page dossier" id="hilfe-stand">
+          <h2 id="version">Version 0.5a</h2>
+          <p>Alpha 0.5a. Kernspiel spielbar. Kartenpool wird vom Bot überarbeitet.</p>
+        </article>
+      </div>
+    </div>
+    <div class="menu">
+      <button type="button" class="back" id="back-hilfe">Zurück</button>
+    </div>
+  </div>
+
   <script>
     function show(id) {
       document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('on'); });
@@ -41,10 +114,8 @@
       if (el) el.classList.add('on');
     }
     document.getElementById('go-start').onclick = function(){ show('scr-title'); };
-    document.getElementById('go-single').onclick = function(){ alert('Einzelspieler');
-    };
-    document.getElementById('go-hilfe').onclick = function(){ alert('Hilfe');
-    };
+    document.getElementById('go-hilfe').onclick = function(){ show('scr-hilfe'); };
+    document.getElementById('back-hilfe').onclick = function(){ show('scr-title'); };
     (function bootIntro() {
       var tr = document.getElementById('title-root');
       if (!tr) return;
