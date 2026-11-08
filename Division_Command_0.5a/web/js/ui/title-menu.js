@@ -13,6 +13,21 @@ function show(id) {
   }
 }
 
+async function openScreen(name) {
+  if (!document.getElementById('scr-' + name)) {
+    try {
+      const res = await fetch('partials/' + name + '.html');
+      if (res.ok) {
+        const html = await res.text();
+        document.getElementById('screen-container').insertAdjacentHTML('beforeend', html);
+        var back = document.getElementById('back-' + name);
+        if (back) back.onclick = function () { show('scr-title'); };
+      }
+    } catch (e) { console.warn('Load failed', name, e); }
+  }
+  show('scr-' + name);
+}
+
 document.getElementById('go-start').onclick = function () {
   var tr = document.getElementById('title-root');
   if (tr) {
@@ -22,19 +37,14 @@ document.getElementById('go-start').onclick = function () {
   show('scr-title');
 };
 
-document.getElementById('go-single').onclick = function () { show('scr-single'); };
-document.getElementById('go-lan').onclick = function () { show('scr-lan'); };
-document.getElementById('go-library').onclick = function () { show('scr-library'); };
-document.getElementById('go-hilfe').onclick = function () { show('scr-hilfe'); };
-document.getElementById('go-user').onclick = function () { show('scr-user'); };
-document.getElementById('go-playtest').onclick = function () { show('scr-playtest'); };
-document.getElementById('go-options').onclick = function () { show('scr-options'); };
+document.getElementById('go-single').onclick = function () { openScreen('single'); };
+document.getElementById('go-lan').onclick = function () { openScreen('lan'); };
+document.getElementById('go-library').onclick = function () { openScreen('library'); };
+document.getElementById('go-hilfe').onclick = function () { openScreen('hilfe'); };
+document.getElementById('go-user').onclick = function () { openScreen('user'); };
+document.getElementById('go-playtest').onclick = function () { openScreen('playtest'); };
+document.getElementById('go-options').onclick = function () { openScreen('options'); };
 document.getElementById('go-quit').onclick = function () { if (confirm('Beenden?')) window.close(); };
-
-['single','lan','library','user','playtest','options','hilfe'].forEach(function(name) {
-  var btn = document.getElementById('back-' + name);
-  if (btn) btn.onclick = function () { show('scr-title'); };
-});
 
 (function bootIntro() {
   var tr = document.getElementById('title-root');
