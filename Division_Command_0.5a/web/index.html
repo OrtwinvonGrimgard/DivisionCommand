@@ -1,1 +1,56 @@
-FULL_CONTENT_FROM_/tmp/index_complete.html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Division Command 0.5a Alpha</title>
+  <link rel="stylesheet" href="css/app.css?v=pt1">
+  <style>
+    #title-root.boot-intro > .title-brand { opacity: 0 !important; }
+    #title-root.boot-intro #scr-boot .menu { opacity: 0 !important; }
+  </style>
+</head>
+<body>
+  <div id="title-root" class="boot-intro">
+    <div class="title-brand">
+      <img class="title-logo" src="assets/title-logo.png" alt="Division Command">
+    </div>
+    <div class="title-panel">
+      <div id="scr-boot" class="screen on splash">
+        <div class="menu">
+          <button type="button" class="primary" id="go-start">Spiel starten</button>
+        </div>
+      </div>
+      <div id="scr-title" class="screen splash">
+        <div class="menu">
+          <button type="button" class="primary" id="go-single">Einzelspieler</button>
+          <button type="button" id="go-lan">LAN / Hamachi</button>
+          <button type="button" id="go-library">Bibliothek</button>
+          <button type="button" id="go-hilfe">Hilfe</button>
+          <button type="button" id="go-user">Benutzer</button>
+          <button type="button" id="go-playtest">Playtest / Logs</button>
+          <button type="button" id="go-options">Optionen</button>
+          <button type="button" id="go-quit">Beenden</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function show(id) {
+      document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('on'); });
+      var el = document.getElementById(id);
+      if (el) el.classList.add('on');
+    }
+    document.getElementById('go-start').onclick = function(){ show('scr-title'); };
+    document.getElementById('go-single').onclick = function(){ alert('Einzelspieler');
+    };
+    document.getElementById('go-hilfe').onclick = function(){ alert('Hilfe');
+    };
+    (function bootIntro() {
+      var tr = document.getElementById('title-root');
+      if (!tr) return;
+      setTimeout(function(){ tr.classList.add('logo-in'); }, 1400);
+      setTimeout(function(){ tr.classList.add('btn-in'); }, 5000);
+    })();
+  </script>
+</body>
+</html>
