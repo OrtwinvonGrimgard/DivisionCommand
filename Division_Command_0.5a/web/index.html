@@ -1,1 +1,363 @@
-RESTORING_FULL_WORKING_VERSION
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Division Command 0.5a Alpha</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#12140f">
+  <link rel="stylesheet" href="css/app.css?v=pt1">
+  <link rel="stylesheet" href="css/end-screen.css?v=1">
+  <link rel="stylesheet" href="css/kit-editor.css?v=1">
+  <link rel="stylesheet" href="css/align.css?v=handzoom2" id="dc-align-css">
+  <link rel="stylesheet" href="css/table-cards.css?v=fit1">
+  <link rel="stylesheet" href="css/table-effects.css?v=fit1">
+  <link rel="stylesheet" href="css/table-camera.css?v=ot1">
+  <link rel="stylesheet" href="css/officer-table.css?v=sc4">
+  <link rel="stylesheet" href="css/inspect-large.css?v=1">
+  <link rel="stylesheet" href="css/table-chat.css?v=1">
+  <link rel="stylesheet" href="css/hud-pro.css?v=1">
+  <link rel="stylesheet" href="css/card-placeholder.css?v=kw1">
+  <style>
+    /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
+    .title-brand .ver-big { display: none !important; }
+    #dc-version {
+      position: fixed !important;
+      left: 16px !important;
+      bottom: 12px !important;
+      z-index: 200 !important;
+    }
+    body:has(#title-root.boot-intro:not(.btn-in)) #dc-version { opacity: 0 !important; }
+    #title-root.boot-intro > .title-brand { opacity: 0 !important; }
+    #title-root.boot-intro #scr-boot .menu { opacity: 0 !important; }
+  </style>
+</head>
+<body>
+
+  <div id="match-host"></div>
+  <template id="match-tpl">
+  <div id="app">
+    <header class="topbar">
+      <h1>DIVISION COMMAND <span class="ver">0.5a α</span></h1>
+      <div class="meta" id="turnmeta">Lobby</div>
+      <div class="nowplay" id="nowplay"></div>
+      <div class="sp">
+        <span class="badge you" id="ap0">A</span>
+        <span class="badge" id="ap1">B</span>
+      </div>
+    </header>
+    <div class="table">
+      <div class="table-main">
+        <div class="top-bar">
+          <div class="nameplate top" id="plate-enemy">GEGNER</div>
+          <div class="piles foe" id="enemy-piles">
+            <div class="pile" id="pile-enemy-deck"><img alt="" src="assets/cards/thumbs/rueckseite-schwarz.png"><span>Deck</span><b id="n-enemy-deck">0</b></div>
+            <div class="pile" id="pile-enemy-grave"><img alt="" src="assets/cards/thumbs/rueckseite-schwarz.png"><span>Friedhof</span><b id="n-enemy-grave">0</b></div>
+          </div>
+          <div class="doc-window foe" id="enemy-doctrine"></div>
+        </div>
+        <div class="row-label" id="enemy-support-label">Support</div>
+        <div class="support-row" id="enemy-support"></div>
+        <div class="row-label" id="enemy-front-label">Front</div>
+        <div id="enemy-front"></div>
+        <div class="nml-band">
+          <div class="row-label" id="enemy-nml-label">Niemandsland</div>
+          <div class="nml-row" id="enemy-nml"></div>
+          <div class="midline"></div>
+          <div class="nml-row mine" id="my-nml"></div>
+          <div class="row-label" id="my-nml-label">Niemandsland</div>
+        </div>
+        <div class="row-label" id="my-front-label">Front</div>
+        <div id="my-front"></div>
+        <div class="row-label" id="my-support-label">Support</div>
+        <div class="support-row" id="my-support"></div>
+        <div class="bottom-bar">
+          <div class="doc-window mine" id="my-doctrine"></div>
+          <div class="hand-dock">
+            <div class="hand" id="hand"></div>
+          </div>
+          <div class="piles mine" id="my-piles">
+            <div class="pile" id="pile-my-deck"><img alt="" src="assets/cards/thumbs/rueckseite-schwarz.png"><span>Deck</span><b id="n-my-deck">0</b></div>
+            <div class="pile" id="pile-my-grave"><img alt="" src="assets/cards/thumbs/rueckseite-schwarz.png"><span>Friedhof</span><b id="n-my-grave">0</b></div>
+          </div>
+          <div class="nameplate bot" id="plate-me">SPIELER</div>
+        </div>
+      </div>
+      <aside class="table-side">
+        <div class="panel bomb-wrap">
+          <h2>Zugtimer</h2>
+          <div class="bomb-box" id="bomb-box">
+            <div class="bomb-label" id="bomb-label">—</div>
+            <div class="bomb-clock" id="bomb-clock">05:00</div>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Befehle</h2>
+          <div class="actions">
+            <button type="button" class="primary" id="btn-end">Zugende</button>
+            <button type="button" id="btn-log">Protokoll</button>
+            <button type="button" id="btn-opts">Optionen</button>
+          </div>
+          <details class="hud-more" id="hud-more">
+            <summary>Weitere Befehle</summary>
+            <div class="actions">
+              <button type="button" id="btn-peace">Frieden anbieten</button>
+              <button type="button" id="btn-accept">Frieden annehmen</button>
+              <button type="button" id="btn-menu">Hauptmenü</button>
+              <button type="button" class="danger" id="btn-concede">Aufgeben</button>
+              <button type="button" id="btn-playtest">Playtest</button>
+            </div>
+          </details>
+          <div class="hint" id="hint"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div id="log-win" class="float-win">
+    <div class="float-bar" id="log-drag">Protokoll</div>
+    <div class="log-tabs" role="tablist" aria-label="Protokoll und Chat">
+      <button type="button" class="log-tab on" id="log-tab-proto" role="tab" aria-selected="true" aria-controls="log">Protokoll</button>
+      <button type="button" class="log-tab" id="log-tab-chat" role="tab" aria-selected="false" aria-controls="log-chat" tabindex="-1">Chat <span class="log-unread" id="log-chat-unread" hidden></span></button>
+    </div>
+    <div class="log" id="log" role="tabpanel" aria-labelledby="log-tab-proto"></div>
+    <div class="log-chat" id="log-chat" role="tabpanel" aria-labelledby="log-tab-chat" hidden></div>
+  </div>
+  <div id="fx-layer"></div>
+  <div id="overlay" class="overlay" style="display:none"></div>
+  <div id="inspect" class="overlay" style="display:none"></div>
+  <div id="ingame-opts" class="overlay" style="display:none">
+    <div class="modal">
+      <h2>Optionen</h2>
+      <label>Musik <input id="opt-music-ingame" type="checkbox" checked> an</label>
+      <label for="opt-vol-ingame">Musiklautstärke <output id="opt-vol-ingame-value" for="opt-vol-ingame">55%</output></label>
+          <input id="opt-vol-ingame" aria-label="Musiklautstärke" type="range" min="0" max="100" step="1" value="55">
+          <label for="opt-sfx-ingame">Soundeffekte <output id="opt-sfx-ingame-value" for="opt-sfx-ingame">55%</output></label>
+          <input id="opt-sfx-ingame" aria-label="Soundeffekt-Lautstärke" type="range" min="0" max="100" step="1" value="55">
+      <h3>Grafik</h3>
+      <label for="opt-table-view-ingame">Tischansicht
+        <select id="opt-table-view-ingame" data-cam-view><option value="flat">Flach (klassisch)</option><option value="cam">2,5D (beweglich, Test)</option></select></label>
+      <label>Kamera-Auto-Fokus <input id="opt-cam-auto-ingame" type="checkbox" data-cam-auto checked> (nur 2,5D)</label>
+      <h3>Bot</h3>
+      <label>Aggressivität <span id="ig-v-agg">45</span>
+        <input id="ig-bot-agg" type="range" min="1" max="100" value="45">
+      </label>
+      <label>Ausspielen statt Angriff <span id="ig-v-play">75</span>%
+        <input id="ig-bot-play" type="range" min="0" max="100" value="75">
+      </label>
+      <label>Soforteinsatz <span id="ig-v-instant">30</span>%
+        <input id="ig-bot-instant" type="range" min="0" max="100" value="30">
+      </label>
+      <label>Denkpause <span id="ig-v-delay">350</span> ms
+        <input id="ig-bot-delay" type="range" min="80" max="1200" step="10" value="350">
+      </label>
+      <label><input type="checkbox" id="ig-bot-unit" checked> Einheiten legen</label>
+      <label><input type="checkbox" id="ig-bot-sup" checked> Support legen</label>
+      <label><input type="checkbox" id="ig-bot-eq" checked> Ausrüstung</label>
+      <label><input type="checkbox" id="ig-bot-inst" checked> Soforteinsätze</label>
+      <label><input type="checkbox" id="ig-bot-atk" checked> Angreifen</label>
+      <label><input type="checkbox" id="ig-bot-hold" checked> AP zurückhalten</label>
+      <button type="button" class="primary" id="ig-bot-apply">Übernehmen</button>
+      <button type="button" id="opt-ingame-close">Zurück</button>
+    </div>
+  </div>
+  </template>
+
+  <audio id="bgm" autoplay preload="auto" src="assets/audio/menue/Division%20Command%20(Remastered).wav"></audio>
+  <audio id="bgm-battle" preload="auto"></audio>
+  <div id="kick-veil"><p id="kick-msg">Viel Glück</p></div>
+  <div id="dc-version">Alpha 0.5a</div>
+
+  <div id="title-root" class="boot-intro">
+      <div class="title-world" id="title-world" aria-hidden="true">
+        <div class="title-stage">
+          <video id="title-loop" class="title-loop" src="assets/title-back.mp4?v=fx6" autoplay muted loop playsinline preload="auto" disablepictureinpicture></video>
+          <canvas id="title-sky" class="title-sky"></canvas>
+          <img class="title-battle" src="assets/title-battle.webp?v=032plate" alt="">
+          <img class="title-tent" src="assets/title-tent.webp" alt="">
+        </div>
+      </div>
+      <div class="title-brand">
+        <img class="title-logo" src="assets/title-logo.png?v=6" alt="Division Command" width="1381" height="507">
+        <p class="sub ver-big" hidden>Alpha 0.5a</p>
+      </div>
+    <div class="title-panel" id="menu-panel">
+      <div id="scr-boot" class="screen on splash">
+        <div class="menu">
+          <button type="button" class="primary" id="go-start">Spiel starten</button>
+        </div>
+      </div>
+
+      <div id="scr-setup" class="screen splash">
+        <p class="tiny">Offiziersakte</p>
+        <div class="char-editor kit-editor">
+          <div class="char-preview">
+            <img id="setup-preview" alt="Porträt" src="assets/portraits/Vael/male/01.png?v=13">
+            <p class="char-rank" id="setup-rank-lbl">Fähnrich · Kadettenzeichen</p>
+            <div class="rank-preview" id="setup-ages" role="group" aria-label="Rangvorschau"></div>
+          </div>
+          <div class="char-fields">
+            <label>Name
+              <input id="setup-name" maxlength="24" placeholder="Nachname, Vorname" autocomplete="nickname">
+            </label>
+            <label>Rufname <span class="opt">(optional)</span>
+              <input id="setup-callsign" maxlength="16" placeholder="z. B. Falke">
+            </label>
+          </div>
+        </div>
+        <p class="tiny char-pick-lbl">1 · Gesicht</p>
+        <div id="setup-faces" class="kit-grid faces" role="listbox" aria-label="Gesicht"></div>
+        <p class="tiny char-pick-lbl">2 · Uniform</p>
+        <div id="setup-uniforms" class="kit-grid uniforms" role="listbox" aria-label="Uniform"></div>
+        <p class="tiny char-pick-lbl">3 · Kopfbedeckung</p>
+        <div id="setup-hats" class="kit-grid hats" role="listbox" aria-label="Kopfbedeckung"></div>
+        <label class="face-dir"><input type="checkbox" id="setup-facing"> Blick nach rechts</label>
+        <div class="menu">
+          <button type="button" class="primary" id="setup-ok">Akte anlegen</button>
+        </div>
+      </div>
+
+      <div id="scr-title" class="screen splash">
+        <p class="who-line" id="who-line"></p>
+        <div class="menu">
+          <button type="button" class="primary" id="go-single">Einzelspieler</button>
+          <button type="button" id="go-lan">LAN / Hamachi</button>
+          <button type="button" id="go-library">Bibliothek</button>
+          <button type="button" id="go-hilfe">Hilfe</button>
+          <button type="button" id="go-user">Benutzer</button>
+          <button type="button" id="go-playtest">Playtest / Logs</button>
+          <button type="button" id="go-options">Optionen</button>
+          <button type="button" id="go-quit">Beenden</button>
+        </div>
+      </div>
+    </div>
+    <div id="work-root">
+      <div id="scr-user" class="screen">
+        <h1 class="page-title">BENUTZER</h1>
+        <p class="tiny">Aktiver Spieler gilt für LAN und Einzelspieler.</p>
+        <label>Aktiver Benutzer
+          <select id="user-active"></select>
+        </label>
+        <div class="char-editor user-char kit-editor">
+          <div class="char-preview">
+            <img id="user-preview" alt="Porträt" src="assets/portraits/Vael/male/01.png?v=13">
+            <p class="char-rank" id="user-rank-lbl">Fähnrich · Kadettenzeichen</p>
+            <div class="rank-preview" id="user-ages" role="group" aria-label="Rangvorschau"></div>
+          </div>
+          <div class="char-fields">
+            <label>Name ändern <input id="user-rename" maxlength="24"></label>
+            <label>Rufname <input id="user-callsign" maxlength="16"></label>
+          </div>
+        </div>
+        <p class="tiny char-pick-lbl">1 · Gesicht</p>
+        <div id="user-faces" class="kit-grid faces" role="listbox" aria-label="Gesicht"></div>
+        <p class="tiny char-pick-lbl">2 · Uniform</p>
+        <div id="user-uniforms" class="kit-grid uniforms" role="listbox" aria-label="Uniform"></div>
+        <p class="tiny char-pick-lbl">3 · Kopfbedeckung</p>
+        <div id="user-hats" class="kit-grid hats" role="listbox" aria-label="Kopfbedeckung"></div>
+        <label class="face-dir"><input type="checkbox" id="user-facing"> Blick nach rechts</label>
+        <div class="menu">
+          <button type="button" class="primary" id="user-save">Akte speichern</button>
+        </div>
+        <label>Neuen Benutzer anlegen <input id="user-new" maxlength="24" placeholder="Zweiter Spieler"></label>
+        <div class="menu">
+          <button type="button" id="user-add">Anlegen</button>
+          <button type="button" class="back" id="back-user">Zurück</button>
+        </div>
+      </div>
+
+      <div id="scr-library" class="screen">
+        <h1 class="page-title">BIBLIOTHEK</h1>
+        <p class="tiny" id="lib-build">Stand 0.5a</p>
+        <p class="tiny">Klick = eine Kopie ins Deck (Bronze max. 4, Silber max. 2, Gold max. 1; Doktrinen: 2 verschiedene). Doppelklick = große Ansicht. Im Deck: Klick/Doppelklick legt zurück.</p>
+        <div class="lib-wrap">
+          <div class="lib-main">
+            <div class="lib-tools">
+              <div class="lib-tabs" id="lib-tabs">
+                <button type="button" class="lib-tab on" data-tab="all">ALLE</button>
+                <button type="button" class="lib-tab" data-tab="Infanterie">INFANTERIE</button>
+                <button type="button" class="lib-tab" data-tab="Panzer">PANZER</button>
+                <button type="button" class="lib-tab" data-tab="Aufklärung">AUFKLÄRUNG</button>
+                <button type="button" class="lib-tab" data-tab="Artillerie">ARTILLERIE</button>
+                <button type="button" class="lib-tab" data-tab="Elite">ELITE</button>
+                <button type="button" class="lib-tab" data-tab="Unterstützung">UNTERSTÜTZUNG</button>
+                <button type="button" class="lib-tab" data-tab="Soforteinsatz">SOFORTEINSATZ</button>
+                <button type="button" class="lib-tab" data-tab="Ausrüstung">AUSRÜSTUNG</button>
+                <button type="button" class="lib-tab" data-tab="Doktrinen">DOKTRINEN</button>
+              </div>
+              <input id="lib-search" class="lib-search" type="search" placeholder="Suchen…" maxlength="40" autocomplete="off">
+              <select id="lib-nation" class="lib-nation" aria-label="Nationenpool filtern"><option value="">Alle Nationen</option></select>
+            </div>
+            <div id="lib-list" class="lib-list"></div>
+          </div>
+          <aside class="lib-side">
+            <!-- library side content -->
+          </aside>
+        </div>
+        <div class="menu">
+          <button type="button" class="back" id="back-library">Zurück</button>
+        </div>
+      </div>
+
+      <div id="scr-hilfe" class="screen">
+        <h1 class="page-title">HILFE</h1>
+        <div class="hilfe-body">
+          <p>Hilfe wird geladen...</p>
+        </div>
+        <div class="menu">
+          <button type="button" class="back" id="back-hilfe">Zurück</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/ui/title-fx.js?v=05ax"></script>
+  <script>window.DC_FOLDER_PNG = true;</script>
+  <script src="js/version.js?v=05a"></script>
+  <script src="js/data/keywords.js?v=tac1"></script>
+  <script src="js/data/sets/types/doktrinen.js?v=t1"></script>
+  <script src="js/data/sets/types/tokens.js?v=t1"></script>
+  <script src="js/data/sets/types/infanterie.js?v=kw1"></script>
+  <script src="js/data/sets/types/panzer.js?v=kw1"></script>
+  <script src="js/data/sets/types/artillerie.js?v=tac1"></script>
+  <script src="js/data/sets/types/aufklaerung.js?v=kw1"></script>
+  <script src="js/data/sets/types/elite.js?v=tac1"></script>
+  <script src="js/data/sets/types/unterstuetzung.js?v=tac1"></script>
+  <script src="js/data/sets/types/soforteinsatz.js?v=tac1"></script>
+  <script src="js/data/sets/types/ausruestung.js?v=tac1"></script>
+  <script src="js/data/nationen.js?v=05a"></script>
+  <script src="js/data/decks.js?v=05a"></script>
+  <script src="js/data/cards.js?v=05a"></script>
+  <script src="js/engine.js?v=05a"></script>
+  <script src="js/bot.js?v=05a"></script>
+  <script src="js/ui.js?v=05a"></script>
+  <script src="js/lan.js?v=05a"></script>
+  <script src="js/library.js?v=05a"></script>
+  <script src="js/user.js?v=05a"></script>
+  <script src="js/options.js?v=05a"></script>
+  <script src="js/playtest.js?v=05a"></script>
+  <script>
+    function show(id) {
+      document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('on'); });
+      var el = document.getElementById(id);
+      if (el) el.classList.add('on');
+    }
+    document.getElementById('go-start').onclick = function () {
+      var tr = document.getElementById('title-root');
+      if (tr) tr.classList.remove('boot-intro', 'logo-in', 'btn-in');
+      show('scr-title');
+    };
+    (function bootIntro() {
+      var tr = document.getElementById('title-root');
+      if (!tr || !tr.classList.contains('boot-intro')) return;
+      setTimeout(function () { tr.classList.add('logo-in'); }, 1400);
+      setTimeout(function () { tr.classList.add('btn-in'); }, 5000);
+    })();
+    document.getElementById('go-hilfe').onclick = function () { show('scr-hilfe'); };
+    document.getElementById('back-hilfe').onclick = function () { show('scr-title'); };
+  </script>
+</body>
+</html>
