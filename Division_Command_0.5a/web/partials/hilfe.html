@@ -1,0 +1,40 @@
+<div id="scr-hilfe" class="screen">
+  <h1 class="page-title">HILFE</h1>
+  <div class="hilfe-body">
+    <nav class="hilfe-nav" aria-label="Hilfe">
+      <button type="button" data-hilfe="menu" class="on">Menüpunkte</button>
+      <div class="hilfe-sub on" data-for="menu">
+        <button type="button" data-jump="single">Einzelspieler</button>
+        <button type="button" data-jump="lan">LAN / Hamachi</button>
+        <button type="button" data-jump="library">Bibliothek</button>
+        <button type="button" data-jump="user">Benutzer</button>
+        <button type="button" data-jump="playtest">Playtest / Logs</button>
+        <button type="button" data-jump="options">Optionen</button>
+      </div>
+      <button type="button" data-hilfe="regeln">Spielregeln</button>
+      <button type="button" data-hilfe="lore">Nationen & Lore</button>
+      <button type="button" data-hilfe="stand">Aktueller Stand</button>
+    </nav>
+    <div class="hilfe-pages">
+      <article class="hilfe-page dossier on" id="hilfe-menu">
+        <h2>Menüpunkte</h2>
+        <p>Einzelspieler, LAN, Bibliothek, Benutzer, Playtest, Optionen.</p>
+      </article>
+      <article class="hilfe-page dossier" id="hilfe-regeln">
+        <h2>Spielregeln</h2>
+        <p>Taktisches Kartenspiel mit Einheiten, Support, Soforteinsätzen, Ausrüstung und Doktrinen.</p>
+      </article>
+      <article class="hilfe-page dossier" id="hilfe-lore">
+        <h2>Nationen & Lore</h2>
+        <p>16 Nationen. Kernphilosophie: Stärke durch Opfer. Detaillierte Dateien unter docs/lore_nationen/.</p>
+      </article>
+      <article class="hilfe-page dossier" id="hilfe-stand">
+        <h2>Aktueller Stand</h2>
+        <p>Alpha 0.5a. Kartenpool wird vom Bot überarbeitet.</p>
+      </article>
+    </div>
+  </div>
+  <div class="menu">
+    <button type="button" class="back" id="back-hilfe">Zurück</button>
+  </div>
+</div>
