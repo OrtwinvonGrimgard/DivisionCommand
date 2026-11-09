@@ -1707,238 +1707,230 @@
   "keywords": []
  },
  "dc_eh_haubitze": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Platztausch",
-   "Indirektes Feuer",
    "Absetzen"
   ]
  },
  "dc_eh_moerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
   "keywords": [
-   "Fernschuss",
-   "Indirektes Feuer"
+   "Fernschuss"
   ]
  },
  "dc_eh_viper": {
-  "kurz": "Hohe Reichweite: auch Support.",
+  "kurz": "Steilfeuer III.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_b_rohrpark_36": {
-  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+  "kurz": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_dauerfeuer_37": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_kaliberzeile_38": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_munitionskehle_39": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange eine eigene Einheit Ausrüstung trägt.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange eine eigene Einheit Ausrüstung trägt.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_flaechenauftrag_40": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_werksbatterie_41": {
-  "kurz": "+2 ATK gegen beschädigte Ziele.",
+  "kurz": "Steilfeuer II. +2 ATK gegen beschädigte Ziele.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_nachtlieferung_42": {
-  "kurz": "Ihr erster Angriff hat +1 ATK.",
+  "kurz": "Steilfeuer II. Ihr erster Angriff hat +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_industrieschlag_145": {
-  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+  "kurz": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Nachsetzen"
   ]
  },
  "dc_b_werkbatterie_15": {
-  "kurz": "+1 ATK, wenn du in diesem Zug Infanterie gespielt hast.",
+  "kurz": "Steilfeuer II. +1 ATK, wenn du in diesem Zug Infanterie gespielt hast.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_sturmfeuer_16": {
-  "kurz": "Beim Ausspielen: 1 Schaden an der schwächsten gegnerischen Fronteinheit in ihrem Abschnitt.",
+  "kurz": "Steilfeuer II. Beim Ausspielen: 1 Schaden an der schwächsten gegnerischen Fronteinheit in ihrem Abschnitt.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_pflichtsalve_17": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_wellenbrecher_18": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_massenschlag_19": {
-  "kurz": "Beim Ausspielen: 1 Schaden an der schwächsten gegnerischen Fronteinheit in ihrem Abschnitt.",
+  "kurz": "Steilfeuer IV: ganze Front. Beim Ausspielen: 1 Schaden an der schwächsten gegnerischen Fronteinheit in ihrem Abschnitt.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_ordnungsbatterie_120": {
-  "kurz": "Andere eigene Infanterie in ihrem Abschnitt: +1 ATK.",
+  "kurz": "Steilfeuer II. Andere eigene Infanterie in ihrem Abschnitt: +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_massfeuer_134": {
-  "kurz": "+1 ATK, solange eigene Infanterie benachbart ist.",
+  "kurz": "Steilfeuer II. +1 ATK, solange eigene Infanterie benachbart ist.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_weihegeschuetz_139": {
-  "kurz": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit. +1 ATK gegen beschädigte Ziele.",
+  "kurz": "Steilfeuer II. Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit. +1 ATK gegen beschädigte Ziele.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_dekretbatterie_615": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_b_flussrot_haubitzen_616": {
-  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+  "kurz": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_schwerpunktfeuer_617": {
-  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+  "kurz": "Steilfeuer IV: ganze Front. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_glockenstellung_618": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_kronsalve_619": {
-  "kurz": "",
+  "kurz": "Steilfeuer IV: ganze Front.",
   "gekuerzt": false,
   "keywords": [
    "Gefechtsbereit",
-   "Zuteilung",
-   "Indirektes Feuer"
+   "Zuteilung"
   ]
  },
  "dc_b_erlassbatterie_636": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_schwurfeuer_649": {
-  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+  "kurz": "Steilfeuer I. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_silberstern_rohr_650": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_massbatterie_375": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Nachsetzen",
-   "Indirektes Feuer"
+   "Nachsetzen"
   ]
  },
  "dc_b_schmerzfeuer_376": {
-  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+  "kurz": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_filterstellung_377": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_stossfeuer_378": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": [
    "Nachsetzen"
   ]
  },
  "dc_b_massenschlag_379": {
-  "kurz": "",
+  "kurz": "Steilfeuer IV: ganze Front.",
   "gekuerzt": false,
   "keywords": [
    "Gefechtsbereit",
-   "Überlast",
-   "Indirektes Feuer"
+   "Überlast"
   ]
  },
  "dc_b_filterwerk_rohr_392": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_implantatrohr_408": {
-  "kurz": "+1 ATK, solange sie beschädigt ist.",
+  "kurz": "Steilfeuer II. +1 ATK, solange sie beschädigt ist.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_knochenbatterie_411": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Nachsetzen",
@@ -1946,254 +1938,254 @@
   ]
  },
  "dc_b_knotenrohr_795": {
-  "kurz": "+1 DEF, solange eigene Infanterie benachbart ist.",
+  "kurz": "Steilfeuer II. +1 DEF, solange eigene Infanterie benachbart ist.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_lagefeuer_796": {
-  "kurz": "+1 ATK gegen beobachtete Ziele.",
+  "kurz": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_lokalisierbatterie_797": {
-  "kurz": "+2 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. +2 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_werkhofgeschuetz_798": {
-  "kurz": "+1 ATK, solange eigene Infanterie benachbart ist.",
+  "kurz": "Steilfeuer II. +1 ATK, solange eigene Infanterie benachbart ist.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_nordmark_rohr_799": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Steilfeuer II. Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
   "gekuerzt": false,
   "keywords": [
    "Fernschuss"
   ]
  },
  "dc_b_westhaven_batterie_800": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_kurzes_rohr_801": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_offenes_feuer_802": {
-  "kurz": "+1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
-  "gekuerzt": false,
+  "kurz": "Steilfeuer II. +1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_siegelrohr_855": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_falschfeuer_856": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_abriegelbatterie_857": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_aemterlande_geschuetz_858": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_grenzfeuer_859": {
-  "kurz": "Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
-  "gekuerzt": false,
+  "kurz": "Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, nach Soforteinsatz in diesem Zug.",
+  "gekuerzt": true,
   "keywords": [
    "Nachsetzen"
   ]
  },
  "dc_b_velis_batterie_860": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_stumpfrohr_861": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_leerschuss_862": {
-  "kurz": "Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+  "kurz": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_zeilenrohr_915": {
-  "kurz": "+1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_b_vorlesefeuer_916": {
-  "kurz": "+1 DEF, solange eigene Infanterie benachbart ist.",
+  "kurz": "Steilfeuer II. +1 DEF, solange eigene Infanterie benachbart ist.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_abschlussgeschuetz_917": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_mahr_geschuetz_918": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_faelligkeitsfeuer_919": {
-  "kurz": "+1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.",
   "gekuerzt": true,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_kalden_batterie_920": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_manschettenrohr_921": {
-  "kurz": "+1 ATK, solange eigene Infanterie benachbart ist.",
+  "kurz": "Steilfeuer II. +1 ATK, solange eigene Infanterie benachbart ist.",
   "gekuerzt": false,
   "keywords": [
    "Nachsetzen"
   ]
  },
  "dc_b_namenschuss_922": {
-  "kurz": "Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+  "kurz": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
   "gekuerzt": false,
   "keywords": [
    "Nachsetzen"
   ]
  },
  "dc_b_zeughausrohr_735": {
-  "kurz": "Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+  "kurz": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_auffangbatterie_736": {
-  "kurz": "Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+  "kurz": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_sperrfeuer_737": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_lafettenwacht_738": {
-  "kurz": "+1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.",
   "gekuerzt": true,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_markengeschuetz_739": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_brueckenau_batterie_740": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_dauerrohr_741": {
-  "kurz": "+1 DEF, solange eigene Infanterie benachbart ist.",
+  "kurz": "Steilfeuer II. +1 DEF, solange eigene Infanterie benachbart ist.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_auffangfeuer_742": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_kai_batterie_57": {
-  "kurz": "+1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_b_strassenfeuer_58": {
-  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+  "kurz": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_lizenzsalve_59": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_verspaetungsfeuer_60": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_staubrain_rohre_61": {
-  "kurz": "+1 DEF, solange eigene Infanterie benachbart ist.",
+  "kurz": "Steilfeuer II. +1 DEF, solange eigene Infanterie benachbart ist.",
   "gekuerzt": false,
   "keywords": [
    "Nachsetzen"
   ]
  },
  "dc_b_kronenhof_kaliber_62": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_nachtkai_63": {
-  "kurz": "+1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_b_wegschlag_184": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung",
@@ -2201,45 +2193,45 @@
   ]
  },
  "dc_b_linienrohr_675": {
-  "kurz": "+1 ATK, solange eigene Infanterie benachbart ist.",
+  "kurz": "Steilfeuer II. +1 ATK, solange eigene Infanterie benachbart ist.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_umgehungsbatterie_676": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_linienbatterie_677": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_marktgeschuetz_678": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": [
    "Nachsetzen"
   ]
  },
  "dc_b_strassenwurf_679": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer I. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_vorratsrohr_680": {
-  "kurz": "Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
-  "gekuerzt": false,
+  "kurz": "Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, nach Soforteinsatz in diesem Zug.",
+  "gekuerzt": true,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_sarun_batterie_681": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Fernschuss",
@@ -2247,14 +2239,14 @@
   ]
  },
  "dc_b_durchlassfeuer_682": {
-  "kurz": "+1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.",
   "gekuerzt": true,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_normgeschuetz_555": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung",
@@ -2262,216 +2254,216 @@
   ]
  },
  "dc_b_feuerleitblatt_rohr_556": {
-  "kurz": "+1 ATK gegen beobachtete Ziele.",
+  "kurz": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_planbatterie_557": {
-  "kurz": "+2 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. +2 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_messwurf_558": {
-  "kurz": "Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
-  "gekuerzt": false,
+  "kurz": "Steilfeuer I. Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, nach Soforteinsatz in diesem Zug.",
+  "gekuerzt": true,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_synchronrohr_559": {
-  "kurz": "+1 ATK, solange eigene Infanterie benachbart ist.",
+  "kurz": "Steilfeuer II. +1 ATK, solange eigene Infanterie benachbart ist.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_normartillerie_560": {
-  "kurz": "+1 ATK gegen beobachtete Ziele.",
+  "kurz": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_albensee_batterie_561": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_grossfeuer_562": {
-  "kurz": "+1 ATK gegen beobachtete Ziele.",
+  "kurz": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_kai_batterie_495": {
-  "kurz": "+1 ATK, solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. +1 ATK, solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_bahnfeuer_496": {
-  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+  "kurz": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_entsatzrohr_497": {
-  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+  "kurz": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_lagerwurf_498": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer I. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_strassenfeuer_499": {
-  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+  "kurz": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_kleinkai_salve_500": {
-  "kurz": "Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_hintermark_rohr_501": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_volle_front_502": {
-  "kurz": "+1 ATK, solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. +1 ATK, solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_signalfeuer_rohr_78": {
-  "kurz": "Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+  "kurz": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_steinschlag_batterie_79": {
-  "kurz": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+  "kurz": "Steilfeuer II. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_warnsalve_80": {
-  "kurz": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+  "kurz": "Steilfeuer II. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_eidhof_kaliber_81": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_passzoll_rohr_82": {
-  "kurz": "+1 ATK, wenn du in 2+ Abschnitten Einheiten hast.",
+  "kurz": "Steilfeuer II. +1 ATK, wenn du in 2+ Abschnitten Einheiten hast.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_talbruck_geschuetz_83": {
-  "kurz": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+  "kurz": "Steilfeuer II. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_nachtengen_84": {
-  "kurz": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+  "kurz": "Steilfeuer II. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
   "gekuerzt": false,
   "keywords": [
    "Nachsetzen"
   ]
  },
  "dc_b_enger_weg_223": {
-  "kurz": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+  "kurz": "Steilfeuer II. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_deckungsfeuer_315": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_ruhebatterie_316": {
-  "kurz": "+1 ATK, wenn du in diesem Zug geheilt hast.",
+  "kurz": "Steilfeuer II. +1 ATK, wenn du in diesem Zug geheilt hast.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_sperrfeuer_etappe_317": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_seren_kaliber_318": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), wenn du in diesem Zug geheilt hast.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), wenn du in diesem Zug geheilt hast.",
   "gekuerzt": false,
   "keywords": [
    "Stellungswechsel"
   ]
  },
  "dc_b_gruenfeld_rohr_319": {
-  "kurz": "Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+  "kurz": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
   "gekuerzt": false,
   "keywords": [
    "Fernschuss"
   ]
  },
  "dc_b_vollschutz_320": {
-  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+  "kurz": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Staffelangriff"
   ]
  },
  "dc_b_kontrollsalve_321": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_lueckenhof_geschuetz_322": {
-  "kurz": "+1 ATK gegen beobachtete Ziele.",
+  "kurz": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_schmiedefeuer_rohr_99": {
-  "kurz": "+1 ATK gegen Ziele ohne Ausrüstung.",
+  "kurz": "Steilfeuer II. +1 ATK gegen Ziele ohne Ausrüstung.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_bergungsbatterie_100": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: heile 1 DEF an einer eigenen Einheit.",
+  "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: heile 1 DEF an einer eigenen Einheit.",
   "gekuerzt": false,
   "keywords": [
    "Fernschuss"
   ]
  },
  "dc_b_untersuchungsalve_101": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Fernschuss",
@@ -2479,38 +2471,38 @@
   ]
  },
  "dc_b_kareth_kaliber_102": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": [
    "Erbitterung"
   ]
  },
  "dc_b_valeris_rohr_103": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_schutzsalve_104": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_marenfeld_geschuetz_105": {
-  "kurz": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+  "kurz": "Steilfeuer II. Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
   "gekuerzt": false,
   "keywords": [
    "Fernschuss"
   ]
  },
  "dc_b_letzte_platte_262": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+  "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_volle_sicht_435": {
-  "kurz": "+1 ATK gegen beobachtete Ziele.",
+  "kurz": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
   "gekuerzt": false,
   "keywords": [
    "Fernschuss",
@@ -2518,43 +2510,43 @@
   ]
  },
  "dc_b_zielrechnung_436": {
-  "kurz": "+2 ATK gegen beobachtete Ziele.",
+  "kurz": "Steilfeuer II. +2 ATK gegen beobachtete Ziele.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_punktrohr_437": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_randmess_kaliber_438": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_feuerleit_439": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Steilfeuer II. Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_feuerleitstand_440": {
-  "kurz": "+1 ATK gegen beobachtete Ziele.",
+  "kurz": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
   "gekuerzt": false,
   "keywords": [
    "Fernschuss"
   ]
  },
  "dc_b_probenheim_rohr_441": {
-  "kurz": "Kostet 1 AP weniger (mind. 1), solange eine gegnerische Einheit beobachtet ist.",
+  "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange eine gegnerische Einheit beobachtet ist.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_abbruchsalve_442": {
-  "kurz": "Der erste Schaden je Zug sinkt um 1.",
+  "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6275,41 +6267,34 @@
   ]
  },
  "dc_np_steinmark_feuerplanrohr": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_steinmark_freigabebatterie": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_steinmark_normmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
   "keywords": [
-   "Zuteilung",
-   "Indirektes Feuer"
+   "Zuteilung"
   ]
  },
  "dc_np_steinmark_messbatterie_grenzstein": {
-  "kurz": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+  "kurz": "Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
   "gekuerzt": false,
   "keywords": [
-   "Zuteilung",
-   "Indirektes Feuer"
+   "Zuteilung"
   ]
  },
  "dc_np_steinmark_dreischluessel_haubitze": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer V: Front + Support (+2 AP).",
   "gekuerzt": false,
   "keywords": [
-   "Fernschuss",
-   "Indirektes Feuer"
+   "Fernschuss"
   ]
  },
  "dc_np_steinmark_vermessungstrupp": {
@@ -6511,42 +6496,35 @@
   ]
  },
  "dc_np_eldran_sperrfeuerbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Zuteilung",
-   "Indirektes Feuer"
+   "Zuteilung"
   ]
  },
  "dc_np_eldran_grenzhaubitze": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_eldran_kronmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_eldran_burgfeuerstellung": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_eldran_kronarsenal": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer V: Front + Support (+2 AP).",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag",
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_eldran_grenzreiter": {
@@ -6751,42 +6729,35 @@
   ]
  },
  "dc_np_rothain_schwerpunktbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Staffelangriff",
-   "Indirektes Feuer"
+   "Staffelangriff"
   ]
  },
  "dc_np_rothain_stabsrohr_neuhoff": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Fernschuss",
-   "Indirektes Feuer"
+   "Fernschuss"
   ]
  },
  "dc_np_rothain_erbmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_rothain_ballungsfeuer": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_rothain_ewige_batterie": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer V: Front + Support (+2 AP).",
   "gekuerzt": false,
   "keywords": [
    "Nachsetzen",
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_rothain_stabsmelder": {
@@ -6990,44 +6961,38 @@
   ]
  },
  "dc_np_averon_lokalisierungsbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_averon_schnellfeuerwerfer": {
-  "kurz": "",
+  "kurz": "Steilfeuer III.",
   "gekuerzt": false,
   "keywords": [
    "Platztausch",
-   "Indirektes Feuer",
    "Absetzen"
   ]
  },
  "dc_np_averon_netzmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
   "keywords": [
-   "Durchschlag",
-   "Indirektes Feuer"
+   "Durchschlag"
   ]
  },
  "dc_np_averon_praezisionsrakete_zeit": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer III.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_averon_fruehwarnbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_averon_sensordrohne": {
   "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
@@ -7236,42 +7201,35 @@
   ]
  },
  "dc_np_orthea_punktfeuerbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Nachsetzen",
-   "Indirektes Feuer"
+   "Nachsetzen"
   ]
  },
  "dc_np_orthea_zentrale_feuerleitung": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer V: Front + Support (+2 AP).",
   "gekuerzt": false,
   "keywords": [
-   "Durchschlag",
-   "Indirektes Feuer"
+   "Durchschlag"
   ]
  },
  "dc_np_orthea_praezisionsmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
   "keywords": [
-   "Fernschuss",
-   "Indirektes Feuer"
+   "Fernschuss"
   ]
  },
  "dc_np_orthea_zielrechnungsrohr": {
-  "kurz": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+  "kurz": "Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_orthea_nachmessbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_orthea_peilstation_mobil": {
   "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
@@ -7477,43 +7435,37 @@
   ]
  },
  "dc_np_vesper_abriegelungsbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_vesper_scheinfeuerstellung": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Hinterhalt",
-   "Indirektes Feuer",
    "Absetzen"
   ]
  },
  "dc_np_vesper_systemmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
   "keywords": [
-   "Durchschlag",
-   "Indirektes Feuer"
+   "Durchschlag"
   ]
  },
  "dc_np_vesper_riegelfeuer": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_vesper_systemantwort": {
-  "kurz": "",
+  "kurz": "Steilfeuer IV: ganze Front.",
   "gekuerzt": false,
   "keywords": [
    "Platztausch",
-   "Indirektes Feuer",
    "Absetzen"
   ]
  },
@@ -7720,40 +7672,31 @@
   ]
  },
  "dc_np_karsk_oeffnungsbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_karsk_kurzfeuerwerfer": {
-  "kurz": "",
+  "kurz": "Steilfeuer III.",
   "gekuerzt": false,
   "keywords": [
-   "Zuteilung",
-   "Indirektes Feuer"
+   "Zuteilung"
   ]
  },
  "dc_np_karsk_massschlagrohr": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_karsk_durchbruchsfeuer": {
-  "kurz": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+  "kurz": "Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_karsk_stossleitfeuer": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer IV: ganze Front.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_karsk_leistungsmesser": {
   "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
@@ -7953,42 +7896,35 @@
   ]
  },
  "dc_np_caldris_schutzfeuerbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Fernschuss",
-   "Indirektes Feuer"
+   "Fernschuss"
   ]
  },
  "dc_np_caldris_abschnittsmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_caldris_defensivbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_caldris_sperrfeuer_fuersorge": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Nachsetzen",
-   "Indirektes Feuer"
+   "Nachsetzen"
   ]
  },
  "dc_np_caldris_schlag_nach_der_genesung": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer IV: ganze Front.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung",
-   "Fernschuss",
-   "Indirektes Feuer"
+   "Fernschuss"
   ]
  },
  "dc_np_caldris_biometrie_melder": {
@@ -8194,41 +8130,34 @@
   ]
  },
  "dc_np_theryn_sammelfeuer": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Staffelangriff",
-   "Indirektes Feuer"
+   "Staffelangriff"
   ]
  },
  "dc_np_theryn_glockenbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Nachsetzen",
-   "Indirektes Feuer"
+   "Nachsetzen"
   ]
  },
  "dc_np_theryn_wellenmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_theryn_vorbereitungsfeuer": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_theryn_ruf_ueber_das_feld": {
-  "kurz": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+  "kurz": "Steilfeuer IV: ganze Front. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_theryn_pilgerkundschafter": {
@@ -8432,44 +8361,39 @@
   ]
  },
  "dc_np_vael_walzenbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Durchschlag",
-   "Indirektes Feuer"
+   "Durchschlag"
   ]
  },
  "dc_np_vael_industrierohr": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Nachsetzen",
-   "Indirektes Feuer"
+   "Nachsetzen"
   ]
  },
  "dc_np_vael_volltreffer_haubitze": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer V: Front + Support (+2 AP).",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung",
-   "Staffelangriff",
-   "Indirektes Feuer"
+   "Staffelangriff"
   ]
  },
  "dc_np_vael_munitionsmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
   "keywords": [
-   "Fernschuss",
-   "Indirektes Feuer"
+   "Fernschuss"
   ]
  },
  "dc_np_vael_feuerwalzen_rohr": {
-  "kurz": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+  "kurz": "Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
   "gekuerzt": false,
   "keywords": [
-   "Zuteilung",
-   "Indirektes Feuer"
+   "Zuteilung"
   ]
  },
  "dc_np_vael_zielerfasser": {
@@ -8679,43 +8603,37 @@
   "keywords": []
  },
  "dc_np_merovan_wegbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_merovan_postenmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_merovan_achsenfeuer": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_merovan_haltefeuer": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_merovan_stellung_am_wegende": {
-  "kurz": "",
+  "kurz": "Steilfeuer IV: ganze Front.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_merovan_wegkundschafter": {
   "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
@@ -8925,45 +8843,39 @@
   ]
  },
  "dc_np_lyr_warnfeuerstellung": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_lyr_bergmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
   "keywords": [
    "Hinterhalt",
-   "Indirektes Feuer",
    "Absetzen"
   ]
  },
  "dc_np_lyr_talbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_lyr_passfeuer": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Hinterhalt",
-   "Indirektes Feuer",
    "Absetzen"
   ]
  },
  "dc_np_lyr_echo_der_taeler": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag",
-   "Nachsetzen",
-   "Indirektes Feuer"
+   "Nachsetzen"
   ]
  },
  "dc_np_lyr_gamsjaeger": {
@@ -9161,42 +9073,35 @@
   ]
  },
  "dc_np_ossaria_abnutzungsbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Zuteilung",
-   "Indirektes Feuer"
+   "Zuteilung"
   ]
  },
  "dc_np_ossaria_nahdruckmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
   "keywords": [
-   "Durchschlag",
-   "Indirektes Feuer"
+   "Durchschlag"
   ]
  },
  "dc_np_ossaria_totenglocke": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_ossaria_wallfeuer": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_ossaria_namensruf_batterie": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer IV: ganze Front.",
   "gekuerzt": false,
   "keywords": [
    "Nachsetzen",
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_ossaria_grabsucher": {
@@ -9395,44 +9300,39 @@
   "keywords": []
  },
  "dc_np_namar_kaibatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_namar_schiffsmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
   "keywords": [
-   "Zuteilung",
-   "Indirektes Feuer"
+   "Zuteilung"
   ]
  },
  "dc_np_namar_konvoifeuer": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Zuteilung",
-   "Indirektes Feuer"
+   "Zuteilung"
   ]
  },
  "dc_np_namar_hafengeschuetz": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Zuteilung",
-   "Indirektes Feuer"
+   "Zuteilung"
   ]
  },
  "dc_np_namar_schlag_der_ankunft": {
-  "kurz": "",
+  "kurz": "Steilfeuer IV: ganze Front.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung",
-   "Staffelangriff",
-   "Indirektes Feuer"
+   "Staffelangriff"
   ]
  },
  "dc_np_namar_hafenlotse": {
@@ -9646,43 +9546,37 @@
   ]
  },
  "dc_np_sahr_linienfeuer": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_sahr_flussmoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
   "keywords": [
    "Hinterhalt",
-   "Indirektes Feuer",
    "Absetzen"
   ]
  },
  "dc_np_sahr_routenbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Nachsetzen",
-   "Indirektes Feuer"
+   "Nachsetzen"
   ]
  },
  "dc_np_sahr_batterie_der_weiten_wege": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer IV: ganze Front.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_sahr_wegschliesser": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Stellungswechsel",
-   "Indirektes Feuer"
+   "Stellungswechsel"
   ]
  },
  "dc_np_sahr_navigator": {
@@ -9889,41 +9783,34 @@
   ]
  },
  "dc_np_dargan_zielbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_dargan_registermoerser": {
-  "kurz": "",
+  "kurz": "Steilfeuer I.",
   "gekuerzt": false,
   "keywords": [
-   "Staffelangriff",
-   "Indirektes Feuer"
+   "Staffelangriff"
   ]
  },
  "dc_np_dargan_abschlussfeuer": {
-  "kurz": "Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+  "kurz": "Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
   "gekuerzt": false,
-  "keywords": [
-   "Indirektes Feuer"
-  ]
+  "keywords": []
  },
  "dc_np_dargan_zinsbatterie": {
-  "kurz": "",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Nachsetzen",
-   "Indirektes Feuer"
+   "Nachsetzen"
   ]
  },
  "dc_np_dargan_gebundene_haeuser": {
-  "kurz": "Darf auch gegnerische Unterstützungen angreifen.",
+  "kurz": "Steilfeuer II.",
   "gekuerzt": false,
   "keywords": [
-   "Fernschuss",
-   "Indirektes Feuer"
+   "Fernschuss"
   ]
  },
  "dc_np_dargan_buchpruefer": {

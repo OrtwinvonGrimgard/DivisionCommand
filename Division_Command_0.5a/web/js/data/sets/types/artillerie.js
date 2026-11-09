@@ -21,7 +21,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "fahrzeug",
       "stellung"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [
       {
         "code": "RELOCATE_HIDE"
@@ -36,7 +36,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "Absetzen"
     ],
     "rules": [
-      "Steilfeuer II: mittlere Reichweite."
+      "Steilfeuer II."
     ]
   },
   {
@@ -59,7 +59,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "leicht",
       "moerser"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "effects": [],
     "flavor": "Ein Schuss ein Treffer! Aber wir nehmen sicherheitshalber drei…",
     "image": "artillerie/A059.jpg",
@@ -69,7 +69,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "Fernschuss"
     ],
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie)."
+      "Steilfeuer I."
     ]
   },
   {
@@ -93,7 +93,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "mittel",
       "raketenwerfer"
     ],
-    "text": "Steilfeuer III: weite Reichweite.",
+    "text": "Steilfeuer III.",
     "effects": [],
     "flavor": "Das Gebäude ist zwar weg, aber wir haben den Stuhl getroffen!",
     "image": "artillerie/A063.jpg",
@@ -103,7 +103,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "Stellungswechsel"
     ],
     "rules": [
-      "Steilfeuer III: weite Reichweite."
+      "Steilfeuer III."
     ]
   },
   {
@@ -122,7 +122,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "text": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -157,7 +157,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -192,7 +192,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -224,7 +224,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange eine eigene Einheit Ausrüstung trägt.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange eine eigene Einheit Ausrüstung trägt.",
     "effects": [
       {
         "code": "CM",
@@ -257,7 +257,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -289,7 +289,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +2 ATK gegen beschädigte Ziele.",
+    "text": "Steilfeuer II. +2 ATK gegen beschädigte Ziele.",
     "effects": [
       {
         "code": "CM",
@@ -322,7 +322,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Ihr erster Angriff hat +1 ATK.",
+    "text": "Steilfeuer II. Ihr erster Angriff hat +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -357,7 +357,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "text": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -393,7 +393,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK, wenn du in diesem Zug Infanterie gespielt hast.",
+    "text": "Steilfeuer II. +1 ATK, wenn du in diesem Zug Infanterie gespielt hast.",
     "effects": [
       {
         "code": "CM",
@@ -427,7 +427,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Beim Ausspielen: 1 Schaden an der schwächsten gegnerischen Fronteinheit in ihrem Abschnitt.",
+    "text": "Steilfeuer II. Beim Ausspielen: 1 Schaden an der schwächsten gegnerischen Fronteinheit in ihrem Abschnitt.",
     "effects": [
       {
         "code": "CM",
@@ -461,7 +461,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -497,7 +497,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -533,7 +533,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-iv",
       "artillerie"
     ],
-    "text": "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel. Beim Ausspielen: 1 Schaden an der schwächsten gegnerischen Fronteinheit in ihrem Abschnitt.",
+    "text": "Steilfeuer IV: ganze Front. Beim Ausspielen: 1 Schaden an der schwächsten gegnerischen Fronteinheit in ihrem Abschnitt.",
     "effects": [
       {
         "code": "ATTACK_ANY_FRONT"
@@ -569,7 +569,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Andere eigene Infanterie in ihrem Abschnitt: +1 ATK.",
+    "text": "Steilfeuer II. Andere eigene Infanterie in ihrem Abschnitt: +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -606,7 +606,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK, solange eigene Infanterie benachbart ist.",
+    "text": "Steilfeuer II. +1 ATK, solange eigene Infanterie benachbart ist.",
     "effects": [
       {
         "code": "CM",
@@ -642,7 +642,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit. +1 ATK gegen beschädigte Ziele.",
+    "text": "Steilfeuer II. Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit. +1 ATK gegen beschädigte Ziele.",
     "effects": [
       {
         "code": "CM",
@@ -687,7 +687,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Der Befehl trägt weiter als die Stimme.",
     "image": "artillerie/B615.jpg",
@@ -696,7 +696,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "rarity": "bronze",
     "keywords": [],
     "rules": [
-      "Steilfeuer II: mittlere Reichweite."
+      "Steilfeuer II."
     ]
   },
   {
@@ -716,7 +716,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "text": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -752,7 +752,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-iv",
       "artillerie"
     ],
-    "text": "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "text": "Steilfeuer IV: ganze Front. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
     "effects": [
       {
         "code": "ATTACK_ANY_FRONT"
@@ -791,7 +791,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -827,7 +827,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-iv",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer IV: ganze Front.",
     "effects": [
       {
         "code": "ATTACK_ANY_FRONT"
@@ -843,7 +843,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "Zuteilung"
     ],
     "rules": [
-      "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel."
+      "Steilfeuer IV: ganze Front."
     ]
   },
   {
@@ -862,7 +862,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -897,7 +897,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie). Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "text": "Steilfeuer I. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -932,7 +932,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -969,7 +969,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Zielwerte, nicht Ziele.",
     "image": "artillerie/B375.jpg",
@@ -980,7 +980,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "Nachsetzen"
     ],
     "rules": [
-      "Steilfeuer II: mittlere Reichweite."
+      "Steilfeuer II."
     ]
   },
   {
@@ -1000,7 +1000,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "text": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -1036,7 +1036,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -1070,7 +1070,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -1106,7 +1106,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-iv",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer IV: ganze Front.",
     "effects": [
       {
         "code": "ATTACK_ANY_FRONT"
@@ -1122,7 +1122,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "Überlast"
     ],
     "rules": [
-      "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel."
+      "Steilfeuer IV: ganze Front."
     ]
   },
   {
@@ -1141,7 +1141,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -1176,7 +1176,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK, solange sie beschädigt ist.",
+    "text": "Steilfeuer II. +1 ATK, solange sie beschädigt ist.",
     "effects": [
       {
         "code": "CM",
@@ -1212,7 +1212,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Batterie aus Knochenstift und Maß.",
     "image": "artillerie/B411.jpg",
@@ -1240,7 +1240,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 DEF, solange eigene Infanterie benachbart ist.",
+    "text": "Steilfeuer II. +1 DEF, solange eigene Infanterie benachbart ist.",
     "effects": [
       {
         "code": "CM",
@@ -1274,7 +1274,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen beobachtete Ziele.",
+    "text": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
     "effects": [
       {
         "code": "CM",
@@ -1310,7 +1310,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +2 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. +2 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -1351,7 +1351,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK, solange eigene Infanterie benachbart ist.",
+    "text": "Steilfeuer II. +1 ATK, solange eigene Infanterie benachbart ist.",
     "effects": [
       {
         "code": "CM",
@@ -1387,7 +1387,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Steilfeuer II. Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
     "effects": [
       {
         "code": "CM",
@@ -1423,7 +1423,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -1459,7 +1459,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -1495,7 +1495,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Steilfeuer II. +1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
     "effects": [
       {
         "code": "CM",
@@ -1536,7 +1536,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -1572,7 +1572,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Feuer nach gesetzter Version.",
     "image": "artillerie/B856.jpg",
@@ -1599,7 +1599,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -1632,7 +1632,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -1668,7 +1668,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "text": "Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
     "effects": [
       {
         "code": "CM",
@@ -1707,7 +1707,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Batterie der Hauptstadtfront.",
     "image": "artillerie/B860.jpg",
@@ -1734,7 +1734,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -1770,7 +1770,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+    "text": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
     "effects": [
       {
         "code": "CM",
@@ -1802,7 +1802,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
     "effects": [
       {
         "code": "CM",
@@ -1843,7 +1843,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 DEF, solange eigene Infanterie benachbart ist.",
+    "text": "Steilfeuer II. +1 DEF, solange eigene Infanterie benachbart ist.",
     "effects": [
       {
         "code": "CM",
@@ -1880,7 +1880,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -1913,7 +1913,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -1949,7 +1949,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
     "effects": [
       {
         "code": "CM",
@@ -1993,7 +1993,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -2026,7 +2026,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK, solange eigene Infanterie benachbart ist.",
+    "text": "Steilfeuer II. +1 ATK, solange eigene Infanterie benachbart ist.",
     "effects": [
       {
         "code": "CM",
@@ -2062,7 +2062,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+    "text": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
     "effects": [
       {
         "code": "CM",
@@ -2097,7 +2097,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+    "text": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
     "effects": [
       {
         "code": "CM",
@@ -2132,7 +2132,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+    "text": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
     "effects": [
       {
         "code": "CM",
@@ -2164,7 +2164,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -2200,7 +2200,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
     "effects": [
       {
         "code": "CM",
@@ -2244,7 +2244,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Geschütz für nasse Jahreszeit.",
     "image": "artillerie/B739.jpg",
@@ -2271,7 +2271,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -2307,7 +2307,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 DEF, solange eigene Infanterie benachbart ist.",
+    "text": "Steilfeuer II. +1 DEF, solange eigene Infanterie benachbart ist.",
     "effects": [
       {
         "code": "CM",
@@ -2341,7 +2341,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -2377,7 +2377,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
     "effects": [
       {
         "code": "CM",
@@ -2418,7 +2418,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "text": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -2453,7 +2453,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -2486,7 +2486,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -2522,7 +2522,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 DEF, solange eigene Infanterie benachbart ist.",
+    "text": "Steilfeuer II. +1 DEF, solange eigene Infanterie benachbart ist.",
     "effects": [
       {
         "code": "CM",
@@ -2559,7 +2559,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -2595,7 +2595,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
     "effects": [
       {
         "code": "CM",
@@ -2636,7 +2636,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Den Weg öffnen. Die Bodentruppe halten.",
     "image": "artillerie/B184.jpg",
@@ -2664,7 +2664,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK, solange eigene Infanterie benachbart ist.",
+    "text": "Steilfeuer II. +1 ATK, solange eigene Infanterie benachbart ist.",
     "effects": [
       {
         "code": "CM",
@@ -2697,7 +2697,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -2729,7 +2729,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -2765,7 +2765,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -2801,7 +2801,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie). Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer I. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -2837,7 +2837,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "text": "Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
     "effects": [
       {
         "code": "CM",
@@ -2875,7 +2875,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Sarun höflich. Rohr trotzdem.",
     "image": "artillerie/B681.jpg",
@@ -2903,7 +2903,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
     "effects": [
       {
         "code": "CM",
@@ -2947,7 +2947,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Rohr nach Plan.",
     "image": "artillerie/B555.jpg",
@@ -2975,7 +2975,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen beobachtete Ziele.",
+    "text": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
     "effects": [
       {
         "code": "CM",
@@ -3008,7 +3008,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +2 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. +2 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -3052,7 +3052,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie). Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "text": "Steilfeuer I. Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
     "effects": [
       {
         "code": "CM",
@@ -3091,7 +3091,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK, solange eigene Infanterie benachbart ist.",
+    "text": "Steilfeuer II. +1 ATK, solange eigene Infanterie benachbart ist.",
     "effects": [
       {
         "code": "CM",
@@ -3124,7 +3124,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen beobachtete Ziele.",
+    "text": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
     "effects": [
       {
         "code": "CM",
@@ -3160,7 +3160,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "See ist Ader. Schlüssel bei Kommission.",
     "image": "artillerie/B561.jpg",
@@ -3187,7 +3187,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen beobachtete Ziele.",
+    "text": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
     "effects": [
       {
         "code": "CM",
@@ -3223,7 +3223,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK, solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. +1 ATK, solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -3256,7 +3256,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "text": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -3288,7 +3288,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "text": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -3323,7 +3323,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie). Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer I. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -3356,7 +3356,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "text": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -3391,7 +3391,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -3429,7 +3429,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Hintermark meckert und steht mit.",
     "image": "artillerie/B501.jpg",
@@ -3456,7 +3456,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK, solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. +1 ATK, solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -3489,7 +3489,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+    "text": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
     "effects": [
       {
         "code": "CM",
@@ -3521,7 +3521,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "text": "Steilfeuer II. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
     "effects": [
       {
         "code": "CM",
@@ -3554,7 +3554,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "text": "Steilfeuer II. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
     "effects": [
       {
         "code": "CM",
@@ -3590,7 +3590,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Die Kinder nennen fremde Namen. Die Rohre bleiben im Tal.",
     "image": "artillerie/B081.jpg",
@@ -3617,7 +3617,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK, wenn du in 2+ Abschnitten Einheiten hast.",
+    "text": "Steilfeuer II. +1 ATK, wenn du in 2+ Abschnitten Einheiten hast.",
     "effects": [
       {
         "code": "CM",
@@ -3650,7 +3650,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "text": "Steilfeuer II. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
     "effects": [
       {
         "code": "CM",
@@ -3686,7 +3686,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "text": "Steilfeuer II. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
     "effects": [
       {
         "code": "CM",
@@ -3722,7 +3722,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "text": "Steilfeuer II. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
     "effects": [
       {
         "code": "CM",
@@ -3758,7 +3758,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -3793,7 +3793,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK, wenn du in diesem Zug geheilt hast.",
+    "text": "Steilfeuer II. +1 ATK, wenn du in diesem Zug geheilt hast.",
     "effects": [
       {
         "code": "CM",
@@ -3826,7 +3826,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -3861,7 +3861,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), wenn du in diesem Zug geheilt hast.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), wenn du in diesem Zug geheilt hast.",
     "effects": [
       {
         "code": "CM",
@@ -3897,7 +3897,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+    "text": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
     "effects": [
       {
         "code": "CM",
@@ -3932,7 +3932,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "text": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -3967,7 +3967,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -3999,7 +3999,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen beobachtete Ziele.",
+    "text": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
     "effects": [
       {
         "code": "CM",
@@ -4035,7 +4035,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen Ziele ohne Ausrüstung.",
+    "text": "Steilfeuer II. +1 ATK gegen Ziele ohne Ausrüstung.",
     "effects": [
       {
         "code": "CM",
@@ -4071,7 +4071,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Zerstört sie im Angriff eine Einheit: heile 1 DEF an einer eigenen Einheit.",
+    "text": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: heile 1 DEF an einer eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
@@ -4107,7 +4107,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Nach dem Gefecht die Frage. Nicht der Schrein.",
     "image": "artillerie/B101.jpg",
@@ -4135,7 +4135,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -4170,7 +4170,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -4203,7 +4203,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
@@ -4235,7 +4235,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "text": "Steilfeuer II. Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
     "effects": [
       {
         "code": "CM",
@@ -4271,7 +4271,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "text": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -4307,7 +4307,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen beobachtete Ziele.",
+    "text": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
     "effects": [
       {
         "code": "CM",
@@ -4344,7 +4344,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +2 ATK gegen beobachtete Ziele.",
+    "text": "Steilfeuer II. +2 ATK gegen beobachtete Ziele.",
     "effects": [
       {
         "code": "CM",
@@ -4377,7 +4377,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
     "effects": [
       {
         "code": "CM",
@@ -4410,7 +4410,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "effects": [],
     "flavor": "Irrtum aussprechen. Nicht schönreden.",
     "image": "artillerie/B438.jpg",
@@ -4437,7 +4437,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Steilfeuer II. Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
     "effects": [
       {
         "code": "CM",
@@ -4470,7 +4470,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. +1 ATK gegen beobachtete Ziele.",
+    "text": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
     "effects": [
       {
         "code": "CM",
@@ -4506,7 +4506,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Kostet 1 AP weniger (mind. 1), solange eine gegnerische Einheit beobachtet ist.",
+    "text": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange eine gegnerische Einheit beobachtet ist.",
     "effects": [
       {
         "code": "CM",
@@ -4542,7 +4542,7 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Der erste Schaden je Zug sinkt um 1.",
+    "text": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",

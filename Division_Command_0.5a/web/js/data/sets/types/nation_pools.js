@@ -367,9 +367,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -396,9 +396,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -425,9 +425,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -456,9 +456,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+    "text": "Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
       "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
     ],
@@ -492,12 +492,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-v",
       "artillerie"
     ],
-    "text": "Steilfeuer V: ganze Front; Supportzone als Ziel (+2 AP, gesamt 3 AP). Frontangriff 1 AP. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer V: Front + Support (+2 AP).",
     "rules": [
-      "Steilfeuer V: ganze Front; Supportzone als Ziel (+2 AP, gesamt 3 AP). Frontangriff 1 AP.",
+      "Steilfeuer V: Front + Support (+2 AP).",
+      "Supportzone-Angriff 3 AP; Front 1 AP.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
-      "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
-      "Supportzone-Angriff kostet 3 AP (+2 Aufpreis); Frontangriff 1 AP."
+      "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
     ],
     "effects": [
       {
@@ -1642,9 +1642,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -1673,9 +1673,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -1704,9 +1704,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -1733,9 +1733,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -1762,12 +1762,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-v",
       "artillerie"
     ],
-    "text": "Steilfeuer V: ganze Front; Supportzone als Ziel (+2 AP, gesamt 3 AP). Frontangriff 1 AP. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer V: Front + Support (+2 AP).",
     "rules": [
-      "Steilfeuer V: ganze Front; Supportzone als Ziel (+2 AP, gesamt 3 AP). Frontangriff 1 AP.",
+      "Steilfeuer V: Front + Support (+2 AP).",
+      "Supportzone-Angriff 3 AP; Front 1 AP.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
-      "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
-      "Supportzone-Angriff kostet 3 AP (+2 Aufpreis); Frontangriff 1 AP."
+      "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
     ],
     "effects": [
       {
@@ -2888,9 +2888,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -2919,9 +2919,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -2950,9 +2950,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -2979,9 +2979,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -3008,12 +3008,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-v",
       "artillerie"
     ],
-    "text": "Steilfeuer V: ganze Front; Supportzone als Ziel (+2 AP, gesamt 3 AP). Frontangriff 1 AP. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer V: Front + Support (+2 AP).",
     "rules": [
-      "Steilfeuer V: ganze Front; Supportzone als Ziel (+2 AP, gesamt 3 AP). Frontangriff 1 AP.",
+      "Steilfeuer V: Front + Support (+2 AP).",
+      "Supportzone-Angriff 3 AP; Front 1 AP.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
-      "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
-      "Supportzone-Angriff kostet 3 AP (+2 Aufpreis); Frontangriff 1 AP."
+      "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
     ],
     "effects": [
       {
@@ -4139,9 +4139,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -4170,9 +4170,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-iii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer III.",
     "rules": [
-      "Steilfeuer III: weite Reichweite.",
+      "Steilfeuer III.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
       "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“."
     ],
@@ -4207,9 +4207,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -4238,9 +4238,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-iii",
       "artillerie"
     ],
-    "text": "Steilfeuer III: weite Reichweite. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer III.",
     "rules": [
-      "Steilfeuer III: weite Reichweite.",
+      "Steilfeuer III.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -4269,9 +4269,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -5423,9 +5423,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -5454,12 +5454,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-v",
       "artillerie"
     ],
-    "text": "Steilfeuer V: ganze Front; Supportzone als Ziel (+2 AP, gesamt 3 AP). Frontangriff 1 AP. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer V: Front + Support (+2 AP).",
     "rules": [
-      "Steilfeuer V: ganze Front; Supportzone als Ziel (+2 AP, gesamt 3 AP). Frontangriff 1 AP.",
+      "Steilfeuer V: Front + Support (+2 AP).",
+      "Supportzone-Angriff 3 AP; Front 1 AP.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
-      "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
-      "Supportzone-Angriff kostet 3 AP (+2 Aufpreis); Frontangriff 1 AP."
+      "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
     ],
     "effects": [
       {
@@ -5494,9 +5494,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -5525,9 +5525,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+    "text": "Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
       "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
     ],
@@ -5559,9 +5559,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -6720,9 +6720,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -6751,9 +6751,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
       "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“."
     ],
@@ -6788,9 +6788,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -6819,9 +6819,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -6848,9 +6848,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-iv",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer IV: ganze Front.",
     "rules": [
-      "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel.",
+      "Steilfeuer IV: ganze Front.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
       "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“."
     ],
@@ -7967,9 +7967,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -7996,9 +7996,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-iii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer III.",
     "rules": [
-      "Steilfeuer III: weite Reichweite.",
+      "Steilfeuer III.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -8027,9 +8027,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -8056,9 +8056,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+    "text": "Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
       "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
     ],
@@ -8090,9 +8090,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-iv",
       "artillerie"
     ],
-    "text": "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer IV: ganze Front.",
     "rules": [
-      "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel.",
+      "Steilfeuer IV: ganze Front.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [
@@ -9221,9 +9221,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -9252,9 +9252,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -9281,9 +9281,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -9310,9 +9310,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -9341,9 +9341,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-iv",
       "artillerie"
     ],
-    "text": "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer IV: ganze Front.",
     "rules": [
-      "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel.",
+      "Steilfeuer IV: ganze Front.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [
@@ -10466,9 +10466,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -10497,9 +10497,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -10528,9 +10528,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -10557,9 +10557,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -10586,9 +10586,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-iv",
       "artillerie"
     ],
-    "text": "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+    "text": "Steilfeuer IV: ganze Front. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
     "rules": [
-      "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel.",
+      "Steilfeuer IV: ganze Front.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
       "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
     ],
@@ -11703,9 +11703,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -11734,9 +11734,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -11765,12 +11765,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-v",
       "artillerie"
     ],
-    "text": "Steilfeuer V: ganze Front; Supportzone als Ziel (+2 AP, gesamt 3 AP). Frontangriff 1 AP. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer V: Front + Support (+2 AP).",
     "rules": [
-      "Steilfeuer V: ganze Front; Supportzone als Ziel (+2 AP, gesamt 3 AP). Frontangriff 1 AP.",
+      "Steilfeuer V: Front + Support (+2 AP).",
+      "Supportzone-Angriff 3 AP; Front 1 AP.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
-      "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.",
-      "Supportzone-Angriff kostet 3 AP (+2 Aufpreis); Frontangriff 1 AP."
+      "Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen."
     ],
     "effects": [
       {
@@ -11806,9 +11806,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -11837,9 +11837,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+    "text": "Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
       "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
     ],
@@ -12959,9 +12959,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -12990,9 +12990,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -13021,9 +13021,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -13052,9 +13052,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -13083,9 +13083,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-iv",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer IV: ganze Front.",
     "rules": [
-      "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel.",
+      "Steilfeuer IV: ganze Front.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [
@@ -14232,9 +14232,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -14261,9 +14261,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
       "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“."
     ],
@@ -14298,9 +14298,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -14329,9 +14329,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
       "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“."
     ],
@@ -14366,9 +14366,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -15472,9 +15472,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -15503,9 +15503,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -15534,9 +15534,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -15563,9 +15563,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -15592,9 +15592,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-iv",
       "artillerie"
     ],
-    "text": "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer IV: ganze Front.",
     "rules": [
-      "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel.",
+      "Steilfeuer IV: ganze Front.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [
@@ -16714,9 +16714,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -16745,9 +16745,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -16776,9 +16776,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -16807,9 +16807,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -16838,9 +16838,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-iv",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer IV: ganze Front.",
     "rules": [
-      "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel.",
+      "Steilfeuer IV: ganze Front.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [
@@ -17977,9 +17977,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -18008,9 +18008,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
       "Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“."
     ],
@@ -18045,9 +18045,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -18076,9 +18076,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-iv",
       "artillerie"
     ],
-    "text": "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer IV: ganze Front.",
     "rules": [
-      "Steilfeuer IV: jede gegnerische Fronteinheit als Ziel.",
+      "Steilfeuer IV: ganze Front.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [
@@ -18109,9 +18109,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -19247,9 +19247,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -19276,9 +19276,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-i",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer I.",
     "rules": [
-      "Steilfeuer I: kurze Reichweite (Nahunterstützung entlang der Frontlinie).",
+      "Steilfeuer I.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -19307,9 +19307,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
+    "text": "Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie.",
       "Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK."
     ],
@@ -19341,9 +19341,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],
@@ -19372,9 +19372,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II: mittlere Reichweite. Darf auch gegnerische Unterstützungen angreifen.",
+    "text": "Steilfeuer II.",
     "rules": [
-      "Steilfeuer II: mittlere Reichweite.",
+      "Steilfeuer II.",
       "Die Einheit zählt für alle Regeln als Artillerie."
     ],
     "effects": [],

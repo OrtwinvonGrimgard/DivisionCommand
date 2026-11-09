@@ -2,11 +2,6 @@
 
 Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schlüsselwort-Chips. Die vollständige Regel steht in der Detailansicht (Datenfeld `text`) und – für jede Karte, deren Flächentext gekürzt ist – hier, wortgleich, nach ID sortiert. Erzeugt von `scripts/cards-review/kurz.py`; `scripts/test_card_faces_text.js` prüft, dass nichts verloren geht.
 
-## Steilfeuer ersetzt Indirektes Feuer
-
-Das Schlüsselwort **Indirektes Feuer** ist entfernt. Alle Artillerie-Einheiten (211) tragen stattdessen das Tag **Steilfeuer I–V** (sichtbarer Chip `STEILFEUER II` usw.). Nur Stufen IV und V behalten `ATTACK_ANY_FRONT`; nur V behält `ATTACK_SUPPORT` (Supportangriff +2 AP). Spotter-Doktrin unverändert. Kartentext nennt die Stufe knapp; vollständige Reichweitenregeln stehen in RULES §7.1.
-
-
 ## `dc_b_abloesung_660` – Ablösung (Soforteinsatz)
 
 **Fläche:** Zerstöre eine eigene Einheit; spiele dort eine Einheit aus der Hand mit Kosten bis ihre +1 und heile sie um 1.
@@ -73,19 +68,19 @@ Das Schlüsselwort **Indirektes Feuer** ist entfernt. Alle Artillerie-Einheiten 
 
 ## `dc_b_durchlassfeuer_682` – Durchlassfeuer (Einheit)
 
-**Fläche:** +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+**Fläche:** Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.
 
 **Volltext:**
 
-> +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+> Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
 
 ## `dc_b_faelligkeitsfeuer_919` – Fälligkeitsfeuer (Einheit)
 
-**Fläche:** +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+**Fläche:** Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.
 
 **Volltext:**
 
-> +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+> Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
 
 ## `dc_b_gesundheim_333` – Gesundheim (Unterstützung)
 
@@ -94,6 +89,14 @@ Das Schlüsselwort **Indirektes Feuer** ist entfernt. Alle Artillerie-Einheiten 
 **Volltext:**
 
 > Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit im gewählten Abschnitt, die in deinem letzten Zug nicht angegriffen hat.
+
+## `dc_b_grenzfeuer_859` – Grenzfeuer (Einheit)
+
+**Fläche:** Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, nach Soforteinsatz in diesem Zug.
+
+**Volltext:**
+
+> Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.
 
 ## `dc_b_halle_kalden_930` – Halle Kalden (Unterstützung)
 
@@ -129,11 +132,11 @@ Das Schlüsselwort **Indirektes Feuer** ist entfernt. Alle Artillerie-Einheiten 
 
 ## `dc_b_kai_batterie_57` – Kai-Batterie (Einheit)
 
-**Fläche:** +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+**Fläche:** Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.
 
 **Volltext:**
 
-> +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+> Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
 
 ## `dc_b_kein_streichen_948` – Kein Streichen (Soforteinsatz)
 
@@ -145,11 +148,11 @@ Das Schlüsselwort **Indirektes Feuer** ist entfernt. Alle Artillerie-Einheiten 
 
 ## `dc_b_lafettenwacht_738` – Lafettenwacht (Einheit)
 
-**Fläche:** +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+**Fläche:** Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.
 
 **Volltext:**
 
-> +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+> Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
 
 ## `dc_b_lage_offen_desk_814` – Lage Offen Desk (Unterstützung)
 
@@ -231,13 +234,21 @@ Das Schlüsselwort **Indirektes Feuer** ist entfernt. Alle Artillerie-Einheiten 
 
 > Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug geheilt hast.
 
-## `dc_b_nachtkai_63` – Nachtkai (Einheit)
+## `dc_b_messwurf_558` – Messwurf (Einheit)
 
-**Fläche:** +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+**Fläche:** Steilfeuer I. Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, nach Soforteinsatz in diesem Zug.
 
 **Volltext:**
 
-> +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+> Steilfeuer I. Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.
+
+## `dc_b_nachtkai_63` – Nachtkai (Einheit)
+
+**Fläche:** Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.
+
+**Volltext:**
+
+> Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
 
 ## `dc_b_neuviertel_tisch_198` – Neuviertel-Tisch (Unterstützung)
 
@@ -254,6 +265,14 @@ Das Schlüsselwort **Indirektes Feuer** ist entfernt. Alle Artillerie-Einheiten 
 **Volltext:**
 
 > Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.
+
+## `dc_b_offenes_feuer_802` – Offenes Feuer (Einheit)
+
+**Fläche:** Steilfeuer II. +1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.
+
+**Volltext:**
+
+> Steilfeuer II. +1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
 
 ## `dc_b_oliv_halt_830` – Oliv Halt (Soforteinsatz)
 
@@ -359,6 +378,14 @@ Das Schlüsselwort **Indirektes Feuer** ist entfernt. Alle Artillerie-Einheiten 
 
 > Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit. Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).
 
+## `dc_b_vorratsrohr_680` – Vorratsrohr (Einheit)
+
+**Fläche:** Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, nach Soforteinsatz in diesem Zug.
+
+**Volltext:**
+
+> Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.
+
 ## `dc_b_werkhoefe_novaris_812` – Werkhöfe Novaris (Unterstützung)
 
 **Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
@@ -369,11 +396,11 @@ Das Schlüsselwort **Indirektes Feuer** ist entfernt. Alle Artillerie-Einheiten 
 
 ## `dc_b_zeilenrohr_915` – Zeilenrohr (Einheit)
 
-**Fläche:** +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+**Fläche:** Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.
 
 **Volltext:**
 
-> +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+> Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
 
 ## `dc_b_zeughaus_brueckenau_751` – Zeughaus Brückenau (Unterstützung)
 
