@@ -17,7 +17,7 @@ const kid = (k) => 'k_' + WORDS.indexOf(k);
 
 // ---------- 1) Vokabular & Daten
 WORDS.forEach(k=>assert(K[k], 'ursprüngliches Wort bleibt kompatibel: '+k));
-assert.equal(Object.keys(K).length,24,'16 ursprüngliche +3 vereinheitlichte Kerne +5 taktische Wörter');
+assert.equal(Object.keys(K).length,23,'16 ursprüngliche +2 vereinheitlichte Kerne +5 taktische Wörter (Indirektes Feuer → Steilfeuer-Tags)');
 assert.equal(K['Gefechtsbereit'], 'Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.');
 assert.equal(K['Fernschuss'], 'Hat +1 Reichweite.');
 const real = C.filter((c) => c.set !== 'test');

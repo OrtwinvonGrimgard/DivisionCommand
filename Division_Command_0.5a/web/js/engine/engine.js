@@ -67,6 +67,23 @@
   function isArtillery(card) { // Funktion
     return hasTag(card, 'artillerie') || (card.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT'); // Wert zurückgeben
   }
+
+  function steilfeuerLevel(card) {
+    const tags = ((card && card.tags) || []).map((x) => String(x).toLowerCase());
+    if (tags.includes('steilfeuer-v')) return 5;
+    if (tags.includes('steilfeuer-iv')) return 4;
+    if (tags.includes('steilfeuer-iii')) return 3;
+    if (tags.includes('steilfeuer-ii')) return 2;
+    if (tags.includes('steilfeuer-i')) return 1;
+    return 0;
+  }
+  function steilfeuerRange(level) {
+    if (level === 1) return 3;
+    if (level === 2) return 5;
+    if (level === 3) return 7;
+    return 0; // 4/5 = any front via ATTACK_ANY_FRONT / level check
+  }
+
   function isAir(card) {
     if (!card) return false;
     const bag = []
@@ -861,13 +878,14 @@
       const owner = this.player(ownerId);
       const out = []; // unveränderliche Bindung in diesem Block
       const tags = ((defn.klasse || '') + ' ' + (defn.tags || []).join(' ')).toLowerCase();
-      const isMortar = tags.includes('moerser') || tags.includes('mörser') || tags.includes('zugartillerie');
-      const isArty = (tags.includes('artillerie') || tags.includes('haubitze') || tags.includes('rohr')) && !isMortar;
-      const isHeavy = tags.includes('schwerartillerie') || tags.includes('schwer');
-      const range = isHeavy ? 7 : isArty ? 5 : isMortar ? 3 : 3;
-      const anyFront = (defn.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT');
+      const sf = steilfeuerLevel(defn);
+      const isMortar = sf === 1 || tags.includes('moerser') || tags.includes('mörser') || tags.includes('zugartillerie');
+      const isArty = sf === 2 || ((tags.includes('artillerie') || tags.includes('haubitze') || tags.includes('rohr')) && !isMortar && sf !== 1 && sf !== 3);
+      const isHeavy = sf === 3 || tags.includes('schwerartillerie') || (tags.includes('schwer') && tags.includes('artillerie'));
+      const range = steilfeuerRange(sf) || (isHeavy ? 7 : isArty ? 5 : isMortar ? 3 : 3);
+      const anyFront = sf >= 4 || (defn.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT');
       const hasScout = this.frontList(owner).some((l) => hasTag(this.defOf(l.inst), 'aufklaerung'));
-      const pipe = isArty || isHeavy;
+      const pipe = isArty || isHeavy || sf >= 2;
       const canSupport = (defn.effects || []).some((e) => e.code === 'ATTACK_SUPPORT') ||
         (this._hasDoctrine(owner, 'SPOTTER_SUPPORT_ATK') && pipe && hasScout);
       this.frontList(enemy).forEach((t) => { // jedes Element
@@ -898,7 +916,8 @@
         }
         const tPos = (secBase[t.section] || 0) + t.row;
         const dist = Math.abs(tPos - attPos);
-        if (dist <= Math.floor((range - 1) / 2) + (this._kw(att, 'Fernschuss') ? 1 : 0)) tight.push(t);
+        const fernOk = this._kw(att, 'Fernschuss') && (sf === 0 || sf <= 3);
+        if (dist <= Math.floor((range - 1) / 2) + (fernOk ? 1 : 0)) tight.push(t);
       });
       if (canSupport) {
         (enemy.support || []).forEach((s, i) => {
@@ -987,14 +1006,24 @@
             }
             if (!loc.inst.facedown && this._canAct(loc.inst, playerId) && !(loc.inst.flags && loc.inst.flags.noAttack)) {
               const targets = this.legalAttackTargets(loc);
-              if (targets.length && p.ap >= this.rules.attack_ap) {
+              const priced = targets.map((t) => {
+                const cost = this._attackCost(loc, t);
+                return {
+                  uid: t.inst.uid,
+                  name: t.inst.facedown ? 'Verdeckte Einheit' : ((this.defOf(t.inst) || {}).name || 'Ziel'),
+                  cost,
+                  zone: t.zone || 'front',
+                };
+              }).filter((t) => p.ap >= t.cost);
+              if (priced.length) {
                 const ad = this.defOf(loc.inst);
+                const minCost = priced.reduce((m, t) => Math.min(m, t.cost), priced[0].cost);
                 acts.push({
                   type: 'ATTACK',
                   uid: loc.inst.uid,
                   name: ad ? ad.name : 'Einheit',
-                  cost: this.rules.attack_ap,
-                  targets: targets.map((t) => ({ uid: t.inst.uid, name: t.inst.facedown ? 'Verdeckte Einheit' : ((this.defOf(t.inst) || {}).name || 'Ziel') })),
+                  cost: minCost,
+                  targets: priced,
                 });
               }
             }
@@ -1993,6 +2022,20 @@
       if (pend.kind === 'attack-target') {
         const loc = this.findInst(pend.attacker || pend.uid);
         const tgt = this.findInst(a.target);
+        if (loc && tgt) {
+          const need = this._attackCost(loc, tgt);
+          const spent = Number(pend.baseCostSpent) || (Number(this.rules.attack_ap) || 1);
+          if (need > spent) {
+            try { this._spend(this.player(pid), need - spent); }
+            catch (e) {
+              this.player(pid).ap += spent;
+              this.state.pending = null;
+              throw e;
+            }
+          } else if (need < spent) {
+            this.player(pid).ap += (spent - need);
+          }
+        }
         if (loc) {
           const ad = this.defOf(loc.inst);
           const tn = tgt ? (tgt.inst.facedown ? 'eine verdeckte Einheit' : this.defOf(tgt.inst).name) : 'ein Ziel';
@@ -3744,18 +3787,20 @@
       const defn = this.defOf(fromLoc.inst);
       if (!defn) return false;
       const tags = ((defn.klasse || '') + ' ' + (defn.tags || []).join(' ')).toLowerCase();
-      const isMortar = tags.includes('moerser') || tags.includes('mörser') || tags.includes('zugartillerie');
-      const isArty = (tags.includes('artillerie') || tags.includes('haubitze') || tags.includes('rohr')) && !isMortar;
-      const isHeavy = tags.includes('schwerartillerie') || tags.includes('schwer');
-      const range = isHeavy ? 7 : isArty ? 5 : isMortar ? 3 : 3;
-      const anyFront = (defn.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT');
+      const sf = steilfeuerLevel(defn);
+      const isMortar = sf === 1 || tags.includes('moerser') || tags.includes('mörser') || tags.includes('zugartillerie');
+      const isArty = sf === 2 || ((tags.includes('artillerie') || tags.includes('haubitze') || tags.includes('rohr')) && !isMortar && sf !== 1 && sf !== 3);
+      const isHeavy = sf === 3 || tags.includes('schwerartillerie') || (tags.includes('schwer') && tags.includes('artillerie'));
+      const range = steilfeuerRange(sf) || (isHeavy ? 7 : isArty ? 5 : isMortar ? 3 : 3);
+      const anyFront = sf >= 4 || (defn.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT');
       if (anyFront) return true;
       if (toLoc.inst.flags && toLoc.inst.flags.umgehenUntil === this.state.turn) return true;
       const secBase = { L: 1, C: 4, R: 7 };
       const attPos = (secBase[fromLoc.section] || 1) + fromLoc.row;
       const tPos = (secBase[toLoc.section] || 0) + toLoc.row;
       const dist = Math.abs(tPos - attPos);
-      return dist <= Math.floor((range - 1) / 2) + (this._kw(fromLoc.inst, 'Fernschuss') ? 1 : 0);
+      const fernOk = this._kw(fromLoc.inst, 'Fernschuss') && (sf === 0 || sf <= 3);
+      return dist <= Math.floor((range - 1) / 2) + (fernOk ? 1 : 0);
     }
 
     _counterDamageAllowed(aLoc, tLoc, dmgToA) {
@@ -4028,6 +4073,17 @@
       return null;
     }
 
+
+    /* Angriffskosten: Basis attack_ap; Steilfeuer V auf Support +2 AP (gesamt 3). */
+    _attackCost(attackerLoc, targetLoc) {
+      const base = Number(this.rules.attack_ap) || 1;
+      if (!attackerLoc || !attackerLoc.inst || !targetLoc) return base;
+      if (targetLoc.zone !== 'support') return base;
+      const defn = this.defOf(attackerLoc.inst);
+      if (steilfeuerLevel(defn) === 5) return base + 2;
+      return base;
+    }
+
     _actAttack(pid, a) { // Angriff einleiten
       if (this.state.active !== pid) throw new Error('Nicht dein Zug'); // Regelverstoß, Zug ungültig
       const p = this.player(pid); // unveränderliche Bindung in diesem Block
@@ -4039,7 +4095,9 @@
       if (loc.inst.flags.noAttack) throw new Error('Kann nicht angreifen');
       if (loc.inst.flags.kwNoAtkTurn === this.state.turn) throw new Error('Stellungswechsel: greift in diesem Zug nicht an');
       if (a.target && this._tacTargetAllowed) { const t=this.findInst(a.target); if (t && !this._tacTargetAllowed(loc.inst,t.inst)) throw new Error('Feldaltar: nicht Ziel des ersten gegnerischen Angriffs'); }
-      this._spend(p, this.rules.attack_ap);
+      const tLocCost = a.target ? this.findInst(a.target) : null;
+      const atkCost = a.target ? this._attackCost(loc, tLocCost) : (Number(this.rules.attack_ap) || 1);
+      this._spend(p, atkCost);
       const adef = this.defOf(loc.inst);
       this._evt("select", adef, adef.name + " wird ausgewählt.");
       if (a.target) {
@@ -4076,11 +4134,18 @@
       }
       const targets = this.legalAttackTargets(loc);
       if (!targets.length) {
-        p.ap += this.rules.attack_ap;
+        p.ap += atkCost;
         this._log(adef.name + ': kein gültiges Ziel, AP zurück.');
         return { ok: false, error: 'Kein gültiges Ziel' };
       }
       if (targets.length === 1) {
+        const oneCost = this._attackCost(loc, targets[0]);
+        if (oneCost > atkCost) {
+          try { this._spend(p, oneCost - atkCost); }
+          catch (e) { p.ap += atkCost; throw e; }
+        } else if (oneCost < atkCost) {
+          p.ap += (atkCost - oneCost);
+        }
         this._evt('attack', adef, adef.name + ' greift an.');
         return this._resolveCombat(pid, a.uid, targets[0].inst.uid);
       }
@@ -4088,7 +4153,13 @@
         kind: 'attack-target', // nächster Schritt im Ablauf
         player: pid, // nächster Schritt im Ablauf
         attacker: a.uid, // nächster Schritt im Ablauf
-        choices: targets.map((t) => ({ target: t.inst.uid, label: t.inst.facedown ? 'Verdeckt' : this.defOf(t.inst).name })), // verdeckte Lage
+        baseCostSpent: atkCost,
+        choices: targets.map((t) => {
+          const c = this._attackCost(loc, t);
+          const nm = t.inst.facedown ? 'Verdeckt' : this.defOf(t.inst).name;
+          const hint = c > atkCost ? (' (' + c + ' AP)') : '';
+          return { target: t.inst.uid, label: nm + hint, cost: c };
+        }), // verdeckte Lage
       });
       return { ok: true, need: 'target' }; // Ergebnis an den Aufrufer
     }

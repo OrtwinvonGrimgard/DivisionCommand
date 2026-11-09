@@ -162,8 +162,11 @@
     var best = null;
     var bestS = -99;
     (act.targets || []).forEach(function (t) {
+      var tCost = Number(t.cost != null ? t.cost : (act.cost || 1));
+      if (p.ap < tCost) return;
       var loc = engine.findInst(t.uid);
       var ts = 6;
+      if (tCost > 1) ts -= (tCost - 1) * 2;
       if (loc) {
         var td = defOf(engine, loc.inst);
         var atk = Number((engine.currentAtkDef && engine.currentAtkDef(aLoc.inst).atk) || ad.atk || 0);
@@ -348,7 +351,12 @@
     if (plays.length) return Object.assign({ player: pid }, pick(plays));
     if (attacks.length) {
       var at = pick(attacks);
-      var target = at.targets && at.targets.length ? pick(at.targets).uid : null;
+      var me = engine.player(pid);
+      var affordable = (at.targets || []).filter(function (t) {
+        return me.ap >= Number(t.cost != null ? t.cost : (at.cost || 1));
+      });
+      var target = affordable.length ? pick(affordable).uid : null;
+      if (!target) return { type: 'END_TURN', player: pid };
       return { type: 'ATTACK', player: pid, uid: at.uid, target: target };
     }
     var shifts = acts.filter(function (a) { return a.type === 'DOK_SHIFT'; });
