@@ -40,3 +40,7 @@ Service-Worker-Cache: `divcmd-alpha40c`.
 
 ## alpha40d
 - Tag-Leiste: kein schwarzer Balken/Goldrand hinter den Chips; Zone bleibt reserviert (Tagless + Elite-Spange). Cache `divcmd-alpha40d`.
+
+## alpha40e
+- Steilfeuer I–V Chips (`STEILFEUER II` usw.) auf Artillerie; Indirektes Feuer entfernt.
+- Cache `divcmd-alpha40e`, `app.js?v=alpha40e`.

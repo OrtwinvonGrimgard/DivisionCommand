@@ -61,8 +61,10 @@ def main():
                 r['ready'] = True; r['output'] = OUTDIR + '/' + i + '.webp'
                 o = old.get(i); dest = WEB / 'assets/cards' / r['output']
                 fresh = o and dest.is_file() and o.get('source_record_sha256') == r['source_record_sha256'] and o.get('kurz') == r['kurz'] and o.get('art_sha256') == r['art_sha256'] and o.get('renderer') == rd
-                if only: 
+                if only:
                     if i in only: todo.append((c, art, r['kurz'], str(n).zfill(3)))
+                    elif o:
+                        r['layout'] = o.get('layout'); r['renderer'] = o.get('renderer')
                 elif a.all or not fresh: todo.append((c, art, r['kurz'], str(n).zfill(3)))
                 elif o: r['layout'] = o.get('layout'); r['renderer'] = o.get('renderer')
         recs.append(r)
