@@ -1072,5 +1072,317 @@
   "sha256": "1c17ad8e0311d113796d55e38072c24afa01f9e8d99500d97ecdfa6f4db52d10",
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_aufklaerungsspaehwagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_aufklaerungsspaehwagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/effe8c53ff0b4762e3d45d149cce65d7d025c1602767997ba27db3bea7079c8a.jpg",
+  "sha256": "5f723d3318d301d0915880ef2e4fae00bb3977158241d6cf17c84380035ec643",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_buergerwehr_averon": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_buergerwehr_averon.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/81f083f4e2b9c215a6b51955b340d8abd2bae629907b3291313c442d959f7f1f.jpg",
+  "sha256": "0d963aa0b43bb4f2c2e666cfe9b43cdc531dd6d7215da893368b20ca21b5db9f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_datenflut": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_datenflut.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5cae9fdba3f440451684caa3346ce68d8dc3011076067ff16d036900da1a7207.jpg",
+  "sha256": "ebf20be0219522e9920a3f29784ad01d3c4f73a05c266a86e85818c63a488ab9",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_erstschlag_nach_ortung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_erstschlag_nach_ortung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/69ef1b0ce36ca3fe054c60292a02b628128772b1af61d651b421a9aef936c2a3.jpg",
+  "sha256": "c2ac31c7d434a9bee29d6ec00aff374f3cb04f55079e986a631126edb89c14f7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_fruehwarnbatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_fruehwarnbatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/44af8f5be7ed00a3464f595c66816c73170cabf1a0fbbe9c1e0cbbc2227f1da1.jpg",
+  "sha256": "6009b78305cdd0fb5d8b13bfaf803467987b7c4dd996d37948ea7446732d4550",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_fruehwarnnetz": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_fruehwarnnetz.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5d30815ffd18bf5f5c5a34384ed0a8e200e745e20e30d8227e311183a3413f48.jpg",
+  "sha256": "40437cb15b802876f6f418e640d4186c7348a51c6a9269a7e4f14fbe451f7553",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_fruehwarntrupp": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_fruehwarntrupp.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f0f69265c14f0ee946dc24ca9696fef8b44c012af2666d9232b66b078569f8a2.jpg",
+  "sha256": "69b094609ba40d288815419af964337dbf07e0c4f94b470cd3c2aa072e6672e7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_funkgeraet_novaris": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_funkgeraet_novaris.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/1aee4045434be3b4ccd16b2def796576e715ca2ffc5d22df983872b710cd2d10.jpg",
+  "sha256": "4e729d6cd450e2beba17dbacb6a89277537e897265ba1000c55119b0b5dcacbf",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_funkpanzer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_funkpanzer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f61597b35f56a4b8318e651eb9e36de3a85b07e4a89259741f6cb9719d6d313c.jpg",
+  "sha256": "f0e2635cd0ca3b0cf2eab3022e941dcde78009113ba37b6665d8c6478de78df1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_gebundene_verbindung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_gebundene_verbindung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8ab67000120f00f87a90c95e61b26a8b782c6695a2637ac7476661aefd890d90.jpg",
+  "sha256": "8c4ff5145fcb716687c13eef1be1032bf8460541c8af8292c9ce98e18731d497",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_initiative_ergreifen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_initiative_ergreifen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/963de615be2ee5aee596e86a487fea2e797678d316c37c9fcf9ff3999c5f7cdd.jpg",
+  "sha256": "375b9dc69038153ca6b530bcbc43a8bd0d4df50135b8eb46e2d400c04578d7eb",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_kurzer_schlag": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_kurzer_schlag.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b93ce5876a3fd467665befa98d873347c1b5c9afa0d34d345b437f2d90e555fa.jpg",
+  "sha256": "235d1d1ae4618adfec42a08a41921163e67ee92274ba7b1724ddd6f085c6dcff",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_lagebild_aktualisieren": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_lagebild_aktualisieren.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d969fc62aa091722ccb2394bd767ac08414bef37cdad2accfec840d9eb32765e.jpg",
+  "sha256": "2f087cd0861261d773947420937d78fdd57f001412a067c38a1c47530254355d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_lauschposten": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_lauschposten.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/aea28bd35a75d0a13aea0f96f2c839d74add747a4cf151902a2c2b2f6bcb0b63.jpg",
+  "sha256": "e73732d6b8bb74ef6b070892b32f71930ee81c0d4a773788460973375525cbcd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_leichter_netzwagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_leichter_netzwagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/3bba4fd637c060c8dea2e8919f62741874cdcb56d50e708cda038bee3b68c843.jpg",
+  "sha256": "5b01e6a5268d981ad9bba9460d967905dfdef19ec218d986370b468879928ec7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_leichtweste": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_leichtweste.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/90d1c324c25902a4004773d65127d498d296ee89ee6ebd2f1be0988c9e4257c8.jpg",
+  "sha256": "c8d3164c0ca37eb5f9e5b874bc150c01c8cc5ae6ff60b560a4ce890282802f00",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_lokalisierter_grossschlag": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_lokalisierter_grossschlag.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6c54d7f91c545fbbb1e43af5a9204590b37ecbaf88b29a14dfe25d471347fa45.jpg",
+  "sha256": "6dbb99bd505f6727e382031d8ac153c4bbd59e57bcbce3036999a1dd938240f1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_lokalisierungsbatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_lokalisierungsbatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/94aa3079c2b9c0e198e3a8aa96753150f626d18c48ba1374f19533d752da8269.jpg",
+  "sha256": "c20ad8410dbb6b13ae1f6ae4c8b8b2d371291c09b68c52a02389cc32aee1bbd0",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_netzimpuls": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_netzimpuls.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/409b266641a42fc965dc4f48298db5db78f1a380fc7ce377b98ca35eac8acc2d.jpg",
+  "sha256": "981dc9ba64bf0015bedfa866688a2276517ba4b7eeb6049f450ed3771d43ccfd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_netzkommando": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_netzkommando.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ccce243d9d1bbc7423a8c64887bdaaa7cec4fae596304fc28b9738ee6eb426c2.jpg",
+  "sha256": "0b5b276091ebdd744e01d2254eb3cdc9d20720c3dd2138d94f57a9a5e1cd7dc6",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_netzmoerser": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_netzmoerser.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/259cf98ceec3a281d75363f4c0763584bf4ffb3892e0abbc5242b7a73b8e5147.jpg",
+  "sha256": "40062bd6e32b731e45df8f04ec9e9b8299224a6429c2a816944f245b16ad1851",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_netztrupp_novaris": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_netztrupp_novaris.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ba793e35594950ec261d3c48e4796983e5f19cb7a1af43daf26f8b81b81bb8bf.jpg",
+  "sha256": "d56b75fedf8ac95c79ca48ea3f5c0a03864eb1236bda4ec5c57f224577138bfd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_novaris_kolonne": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_novaris_kolonne.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e38766665b3940fbc2b07a21a8828e49a0478a429ea1774a9c000dffc8bdfb6e.jpg",
+  "sha256": "097af326ec2fbe8d2a85d9788a8e4d74073a1d7646a0fd8fb3d096d9f6a4cfe2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_ortung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_ortung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/66773b25bfe651afe7a7b26f6861d741ea5672b23484f01f69e295b8c6c5eab3.jpg",
+  "sha256": "bb8e469bffd9faa2fce1ae6b2503f4c6bb26b22235212aaf6e0d225a6ec0186b",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_praezisionsrakete_zeit": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_praezisionsrakete_zeit.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a915c82ffca1ae182ac9947e38f30ff5604c29a86a863e2f5ac31be08e6f2c1e.jpg",
+  "sha256": "e5ad24a7c8833e949137f05c02af9a11d4ff18428d559e87e9f1b7adece3df86",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_republikanische_antwort": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_republikanische_antwort.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ceb119a457b7a5b1ba0d77463584500526b6c36c172d883e95c8b9850a3723af.jpg",
+  "sha256": "7ab7b08ea56d27ffb5bc95853f46c6fcd0c7ffacb10c9342a65536f7c747594c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_schnelle_hand": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_schnelle_hand.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/cc8fc7931891137b5b28fb2ddde078f50e2b4290bf45d8997788b65e70247bd2.jpg",
+  "sha256": "6032185e6162b1ec083b1bbf88f5c0161c6533e17460cfbb35c03229f6d57753",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_schnelle_verlegung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_schnelle_verlegung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a6ec82a3b2c15bce20d2d925265574342df37c11f3573ca77b5b348f6bd7f754.jpg",
+  "sha256": "94b6f6c0ad091cba71a8ae2874927ef3c191b57db0cd9a578c77d5dd37207f16",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_schnellfeuergewehr": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_schnellfeuergewehr.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/1bf44767f1d753e23872160bfc7c55e804290436711bf45118eed8cec8be1f1d.jpg",
+  "sha256": "0c8c0c165cd56c0f9b7ce258bb92e7dd2b053c6d4a7f6ab62afa261f60a297a5",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_schnellfeuerwerfer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_schnellfeuerwerfer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/1abd2f84f5dc96c41ad5499e37edc3e8e89e09411a2467f9d3ee4e5a4693f0cb.jpg",
+  "sha256": "ef155f8a3f842a6072ec91f444fabf69c3f0ffdae7641b8835b3513c6e505c6c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_sensordrohne": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_sensordrohne.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/165f5d664d63afbcadf1788ec0ff063e8d1e8d1f43ba411336b637aaee165797.jpg",
+  "sha256": "c1fdd097118a49ac7ba9dee09444a5945648e8afdf4714635190cd68e7f5691e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_sensorhelm": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_sensorhelm.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/84c616721cbc9cd0c3ea8fa5d52a2d14b26e92f2d1d85f31c744e6ff56737a5e.jpg",
+  "sha256": "ff92ed03ca2d3a04763c158813bcd3c6fd7d938a1472249ef0346276e751ccf3",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_sensorkette": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_sensorkette.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/2ecd25aabcc7e2e0a1b088f4ef02dc73ad3ab90aa8f102f5fbd8ee7ef2a19ee9.jpg",
+  "sha256": "fc208f277c41fe2263c8f25b7377c8806587f12b5f056ca532ee62628824227c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_tarnnetz_averon": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_tarnnetz_averon.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/71e9c0b2405fb9d414d4b34cc3ffbdc9e5d1c570c3a47b942814e156c410efe2.jpg",
+  "sha256": "baa866d337adbfe302c63868f4d263d32885d87d6417d278beaaaba555370b02",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_zeitgewinn": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_zeitgewinn.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/59cc73ec98023a1510cc0a9917ee65add7be6f4e4e5da517131fbee5016b17a4.jpg",
+  "sha256": "7dc3a2f46c94632ae765a6122abacdd1760fa01bf1e6219b765d939f27db3c00",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_zeitkeil": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_zeitkeil.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/0d2311e0fb6dfc7c3d67cffc154dc380851c620c3d999fb53cca7d06d956221b.jpg",
+  "sha256": "83a5fe94e8304f3b3facdb45a14348f4cccf5d14dc6b8a00260fbd1951582f10",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_zielmarker": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_zielmarker.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/1c58d22858cffe95a66144756357fe78ff585f85afa9eaa8f9d66e9748395a3d.jpg",
+  "sha256": "64f5021fa389e3798150ec3e7a6d9758d3c30216bee5996adfba0055c458d028",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_kreuzpeilungstrupp": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_kreuzpeilungstrupp.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/9f6f256154ea1b10a744c11b4a14fb9c54ff7794459c85ce49661bfe9e81eddb.jpg",
+  "sha256": "07de8435234e5d4b5f410e7d1a93190cb091b5e590b563497cd23be4d7b9738b",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_messkette_alpha": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_messkette_alpha.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a687314ef17535c3c11403951869f9ce687448c3cd50a52261ad252a22f4a301.jpg",
+  "sha256": "442ebdd7497dcbbd54566a5aa77219c3569720bfdcbca411ccc005d4a62d0278",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  }
 }

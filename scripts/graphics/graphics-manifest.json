@@ -1,47 +1,8 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1228,
+ "new_faces": 1267,
  "missing_illustrations": [
-  "dc_np_averon_netztrupp_novaris",
-  "dc_np_averon_schnelle_hand",
-  "dc_np_averon_buergerwehr_averon",
-  "dc_np_averon_novaris_kolonne",
-  "dc_np_averon_leichter_netzwagen",
-  "dc_np_averon_funkpanzer",
-  "dc_np_averon_zeitkeil",
-  "dc_np_averon_aufklaerungsspaehwagen",
-  "dc_np_averon_lokalisierungsbatterie",
-  "dc_np_averon_schnellfeuerwerfer",
-  "dc_np_averon_netzmoerser",
-  "dc_np_averon_praezisionsrakete_zeit",
-  "dc_np_averon_fruehwarnbatterie",
-  "dc_np_averon_sensordrohne",
-  "dc_np_averon_lauschposten",
-  "dc_np_averon_fruehwarntrupp",
-  "dc_np_averon_republikanische_antwort",
-  "dc_np_averon_netzkommando",
-  "dc_np_averon_gebundene_verbindung",
-  "dc_np_averon_sensorkette",
-  "dc_np_averon_fruehwarnnetz",
-  "dc_np_averon_erstschlag_nach_ortung",
-  "dc_np_averon_kurzer_schlag",
-  "dc_np_averon_lagebild_aktualisieren",
-  "dc_np_averon_zeitgewinn",
-  "dc_np_averon_initiative_ergreifen",
-  "dc_np_averon_ortung",
-  "dc_np_averon_netzimpuls",
-  "dc_np_averon_schnelle_verlegung",
-  "dc_np_averon_datenflut",
-  "dc_np_averon_lokalisierter_grossschlag",
-  "dc_np_averon_funkgeraet_novaris",
-  "dc_np_averon_sensorhelm",
-  "dc_np_averon_leichtweste",
-  "dc_np_averon_zielmarker",
-  "dc_np_averon_tarnnetz_averon",
-  "dc_np_averon_schnellfeuergewehr",
-  "dc_np_orthea_messkette_alpha",
-  "dc_np_orthea_kreuzpeilungstrupp",
   "dc_np_orthea_probentraeger",
   "dc_np_orthea_praezisionsschuetzen",
   "dc_np_orthea_modellpruefer",
@@ -48641,11 +48602,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_netztrupp_novaris.jpg",
+   "art_sha256": "d56b75fedf8ac95c79ca48ea3f5c0a03864eb1236bda4ec5c57f224577138bfd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_netztrupp_novaris.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "f71d2354111d711e8ba72c774fad847057a69e981db05b6f6efa0667528a003e"
   },
   {
    "id": "dc_np_averon_eigeninitiative_zug",
@@ -48790,11 +48767,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_schnelle_hand.jpg",
+   "art_sha256": "6032185e6162b1ec083b1bbf88f5c0161c6533e17460cfbb35c03229f6d57753",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_schnelle_hand.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "9e774219c95ecf0377dd310ad9e95a925947d15b8c1b0076f1fd588bad14b812"
   },
   {
    "id": "dc_np_averon_buergerwehr_averon",
@@ -48814,11 +48807,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_buergerwehr_averon.jpg",
+   "art_sha256": "0d963aa0b43bb4f2c2e666cfe9b43cdc531dd6d7215da893368b20ca21b5db9f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_buergerwehr_averon.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "728a83e51777566e4aebc43e57bfdd4c7ee1d1af4e8b9e92a9496bbe2641cc8d"
   },
   {
    "id": "dc_np_averon_novaris_kolonne",
@@ -48842,11 +48851,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_novaris_kolonne.jpg",
+   "art_sha256": "097af326ec2fbe8d2a85d9788a8e4d74073a1d7646a0fd8fb3d096d9f6a4cfe2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_novaris_kolonne.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1280
+    ],
+    "panel": [
+     78,
+     1506,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "d7e6de5f9b278b7e01930b197bcfceab0d2cb6dcbaa0e11087d3dd06821f5ef0"
   },
   {
    "id": "dc_np_averon_leichter_netzwagen",
@@ -48871,11 +48896,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_leichter_netzwagen.jpg",
+   "art_sha256": "5b01e6a5268d981ad9bba9460d967905dfdef19ec218d986370b468879928ec7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_leichter_netzwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "8600948f44ce38d15905c51e7834675a888b5a1b77f9cc756f9df2750554024f"
   },
   {
    "id": "dc_np_averon_funkpanzer",
@@ -48899,11 +48940,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_funkpanzer.jpg",
+   "art_sha256": "f0e2635cd0ca3b0cf2eab3022e941dcde78009113ba37b6665d8c6478de78df1",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_funkpanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "8873a5a306e280044a5ad25cf2f1c6162b9e73b2b3d250978ee6eeee5a216f45"
   },
   {
    "id": "dc_np_averon_zeitkeil",
@@ -48927,11 +48984,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_zeitkeil.jpg",
+   "art_sha256": "83a5fe94e8304f3b3facdb45a14348f4cccf5d14dc6b8a00260fbd1951582f10",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_zeitkeil.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "f01181ad709c690bdd0d2d3dde43cf62f772fdc539d56555272d3b4bdb2d0b39"
   },
   {
    "id": "dc_np_averon_aufklaerungsspaehwagen",
@@ -48955,11 +49028,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_aufklaerungsspaehwagen.jpg",
+   "art_sha256": "5f723d3318d301d0915880ef2e4fae00bb3977158241d6cf17c84380035ec643",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_aufklaerungsspaehwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "f8c0f2648b55e8b11fe4eb6cb3ae51c7d97a8e7d0684fabe4cd85e18a4cf49e3"
   },
   {
    "id": "dc_np_averon_lokalisierungsbatterie",
@@ -48982,11 +49071,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_lokalisierungsbatterie.jpg",
+   "art_sha256": "c20ad8410dbb6b13ae1f6ae4c8b8b2d371291c09b68c52a02389cc32aee1bbd0",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_lokalisierungsbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "1673a4d1f4f25619c5cd64854743f05c0af8fc14814a855002309e2b721ce0e0"
   },
   {
    "id": "dc_np_averon_schnellfeuerwerfer",
@@ -49010,11 +49115,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_schnellfeuerwerfer.jpg",
+   "art_sha256": "ef155f8a3f842a6072ec91f444fabf69c3f0ffdae7641b8835b3513c6e505c6c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_schnellfeuerwerfer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "aeb4dbb5175e2581f139c505af8c762716d67ae6d43a4561fbd5a8222947182e"
   },
   {
    "id": "dc_np_averon_netzmoerser",
@@ -49037,11 +49158,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_netzmoerser.jpg",
+   "art_sha256": "40062bd6e32b731e45df8f04ec9e9b8299224a6429c2a816944f245b16ad1851",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_netzmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "36d35f73b8ffd711bb0964fd6515e661e3648df7550a5a110791952991e5f708"
   },
   {
    "id": "dc_np_averon_praezisionsrakete_zeit",
@@ -49064,11 +49201,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_praezisionsrakete_zeit.jpg",
+   "art_sha256": "e5ad24a7c8833e949137f05c02af9a11d4ff18428d559e87e9f1b7adece3df86",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_praezisionsrakete_zeit.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "ac8dc26516256f531a7e126f585cc4d07229736d47e6ac05ba66e1b6a03bd613"
   },
   {
    "id": "dc_np_averon_fruehwarnbatterie",
@@ -49090,11 +49243,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_fruehwarnbatterie.jpg",
+   "art_sha256": "6009b78305cdd0fb5d8b13bfaf803467987b7c4dd996d37948ea7446732d4550",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_fruehwarnbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "bc56d5e3116beae07cc228c31fa2b2d8c40b59449f6d68ee25d51cb3255c29b6"
   },
   {
    "id": "dc_np_averon_sensordrohne",
@@ -49116,11 +49285,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_sensordrohne.jpg",
+   "art_sha256": "c1fdd097118a49ac7ba9dee09444a5945648e8afdf4714635190cd68e7f5691e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_sensordrohne.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1280
+    ],
+    "panel": [
+     78,
+     1506,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "be202a629fc73f41ab1b1b56ee560ffe04bfe3026fbf11ebbcfd594bba953ad5"
   },
   {
    "id": "dc_np_averon_lauschposten",
@@ -49142,11 +49327,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_lauschposten.jpg",
+   "art_sha256": "e73732d6b8bb74ef6b070892b32f71930ee81c0d4a773788460973375525cbcd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_lauschposten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "b0fea0da9af3923af1f9b5e55bb3c9d84cb5855304297f5a123ab99005d1dd97"
   },
   {
    "id": "dc_np_averon_fruehwarntrupp",
@@ -49169,11 +49370,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_fruehwarntrupp.jpg",
+   "art_sha256": "69b094609ba40d288815419af964337dbf07e0c4f94b470cd3c2aa072e6672e7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_fruehwarntrupp.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1280
+    ],
+    "panel": [
+     78,
+     1506,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "1ce2988204c366e6aaae8e409eb6b25192041aa7593bf680923f2d7590e0df3c"
   },
   {
    "id": "dc_np_averon_republikanische_antwort",
@@ -49197,11 +49414,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_republikanische_antwort.jpg",
+   "art_sha256": "7ab7b08ea56d27ffb5bc95853f46c6fcd0c7ffacb10c9342a65536f7c747594c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_republikanische_antwort.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "b2cbd76439a6eb2158b83368e6d5f62f71ff893e3d5248ee33bfd26855376046"
   },
   {
    "id": "dc_np_averon_netzkommando",
@@ -49225,11 +49458,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_netzkommando.jpg",
+   "art_sha256": "0b5b276091ebdd744e01d2254eb3cdc9d20720c3dd2138d94f57a9a5e1cd7dc6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_netzkommando.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "767e2303d0d0a5318f728d619bf026972f48632fc21902cbad36db3223e8e11c"
   },
   {
    "id": "dc_np_averon_gebundene_verbindung",
@@ -49248,11 +49497,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_gebundene_verbindung.jpg",
+   "art_sha256": "8c4ff5145fcb716687c13eef1be1032bf8460541c8af8292c9ce98e18731d497",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_gebundene_verbindung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "21f91691367ff7ca336a40b2c4d76c9f8dd6534d570ad12b3d00306cff1c9682"
   },
   {
    "id": "dc_np_averon_sensorkette",
@@ -49271,11 +49536,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_sensorkette.jpg",
+   "art_sha256": "fc208f277c41fe2263c8f25b7377c8806587f12b5f056ca532ee62628824227c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_sensorkette.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "c8961e85414394c0fe5283a4e71afa7eebf5ce5c0e8200d05f3e55400cc98d11"
   },
   {
    "id": "dc_np_averon_fruehwarnnetz",
@@ -49294,11 +49575,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_fruehwarnnetz.jpg",
+   "art_sha256": "40437cb15b802876f6f418e640d4186c7348a51c6a9269a7e4f14fbe451f7553",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_fruehwarnnetz.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "0d32317a3a7db2fd11f564ee789e6f955d326459c767778af421e87a14c85921"
   },
   {
    "id": "dc_np_averon_erstschlag_nach_ortung",
@@ -49317,11 +49614,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_erstschlag_nach_ortung.jpg",
+   "art_sha256": "c2ac31c7d434a9bee29d6ec00aff374f3cb04f55079e986a631126edb89c14f7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_erstschlag_nach_ortung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "0e4ec89608e72e6d28e3aa6f73582299b0cc7d2035445552d91c7ce7ee17842e"
   },
   {
    "id": "dc_np_averon_kurzer_schlag",
@@ -49340,11 +49653,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_kurzer_schlag.jpg",
+   "art_sha256": "235d1d1ae4618adfec42a08a41921163e67ee92274ba7b1724ddd6f085c6dcff",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_kurzer_schlag.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "0994b8acc66fb3fcb33eaa72b0ba314ba7eae2c4bac1ad5c8b5ab57c6e9a43d8"
   },
   {
    "id": "dc_np_averon_lagebild_aktualisieren",
@@ -49363,11 +49692,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_lagebild_aktualisieren.jpg",
+   "art_sha256": "2f087cd0861261d773947420937d78fdd57f001412a067c38a1c47530254355d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_lagebild_aktualisieren.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "0f6170e43a07d8fee021a5f50be05a1935865774f384b4c2cb3378f8352568d1"
   },
   {
    "id": "dc_np_averon_zeitgewinn",
@@ -49386,11 +49731,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_zeitgewinn.jpg",
+   "art_sha256": "7dc3a2f46c94632ae765a6122abacdd1760fa01bf1e6219b765d939f27db3c00",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_zeitgewinn.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "83121449e2ba20b55601bc5d88a258d9da6b4626e0c7fc49b53db7ff52015973"
   },
   {
    "id": "dc_np_averon_initiative_ergreifen",
@@ -49409,11 +49770,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_initiative_ergreifen.jpg",
+   "art_sha256": "375b9dc69038153ca6b530bcbc43a8bd0d4df50135b8eb46e2d400c04578d7eb",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_initiative_ergreifen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "fd8a350d2c8591e1e78978fce6c74c5502ddeab673b63ec16b41f95a25e3814b"
   },
   {
    "id": "dc_np_averon_ortung",
@@ -49432,11 +49809,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_ortung.jpg",
+   "art_sha256": "bb8e469bffd9faa2fce1ae6b2503f4c6bb26b22235212aaf6e0d225a6ec0186b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_ortung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "fb8e7bf5636207e13557140a2e1d1fea6e37244121b74855823df86e4653e720"
   },
   {
    "id": "dc_np_averon_netzimpuls",
@@ -49455,11 +49848,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_netzimpuls.jpg",
+   "art_sha256": "981dc9ba64bf0015bedfa866688a2276517ba4b7eeb6049f450ed3771d43ccfd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_netzimpuls.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "7f90aba67f1d2f9c7ddf81aaf544128f0ec984722689c045e08a5f314acc4d27"
   },
   {
    "id": "dc_np_averon_schnelle_verlegung",
@@ -49478,11 +49887,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_schnelle_verlegung.jpg",
+   "art_sha256": "94b6f6c0ad091cba71a8ae2874927ef3c191b57db0cd9a578c77d5dd37207f16",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_schnelle_verlegung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "4ec8a1f84d7e4a060ce1b18638bd7a11d37c7d4716d268094a1210f9b6d92f10"
   },
   {
    "id": "dc_np_averon_datenflut",
@@ -49501,11 +49926,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_datenflut.jpg",
+   "art_sha256": "ebf20be0219522e9920a3f29784ad01d3c4f73a05c266a86e85818c63a488ab9",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_datenflut.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "5dca84f9689ab68308af8b57b79449885af0cb928193b443d7fab302e2f12c99"
   },
   {
    "id": "dc_np_averon_lokalisierter_grossschlag",
@@ -49524,11 +49965,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_lokalisierter_grossschlag.jpg",
+   "art_sha256": "6dbb99bd505f6727e382031d8ac153c4bbd59e57bcbce3036999a1dd938240f1",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_lokalisierter_grossschlag.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "d018511c4e669e646f06da535cee2bf5dacfddc229e9083bf3919489b6460342"
   },
   {
    "id": "dc_np_averon_funkgeraet_novaris",
@@ -49547,11 +50004,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_funkgeraet_novaris.jpg",
+   "art_sha256": "4e729d6cd450e2beba17dbacb6a89277537e897265ba1000c55119b0b5dcacbf",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_funkgeraet_novaris.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "a58e097e779995630e6c3c3b76b58c2846724de645abea5f87267f124501a153"
   },
   {
    "id": "dc_np_averon_sensorhelm",
@@ -49570,11 +50043,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_sensorhelm.jpg",
+   "art_sha256": "ff92ed03ca2d3a04763c158813bcd3c6fd7d938a1472249ef0346276e751ccf3",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_sensorhelm.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "a800551a56ac13cfd1c8783faf5cd8b82f89a8b12b5785f9566383b0a49b7e27"
   },
   {
    "id": "dc_np_averon_leichtweste",
@@ -49593,11 +50082,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_leichtweste.jpg",
+   "art_sha256": "c8d3164c0ca37eb5f9e5b874bc150c01c8cc5ae6ff60b560a4ce890282802f00",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_leichtweste.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "f14cade785b6e62f5f0e923af493862e8b80e52e370180f8afa121426746e7fc"
   },
   {
    "id": "dc_np_averon_zielmarker",
@@ -49616,11 +50121,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_zielmarker.jpg",
+   "art_sha256": "64f5021fa389e3798150ec3e7a6d9758d3c30216bee5996adfba0055c458d028",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_zielmarker.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "3cb2ae4b8a198cd6b5e9a4ac9d574fc1553ae9874f690e2a71f8cd191a0b9b17"
   },
   {
    "id": "dc_np_averon_tarnnetz_averon",
@@ -49641,11 +50162,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_tarnnetz_averon.jpg",
+   "art_sha256": "baa866d337adbfe302c63868f4d263d32885d87d6417d278beaaaba555370b02",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_tarnnetz_averon.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "1cbddcdde828ce87392c66445d3ee67dd3f1f14fd66c7eec8867e3f0887bff4f"
   },
   {
    "id": "dc_np_averon_schnellfeuergewehr",
@@ -49664,11 +50201,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_schnellfeuergewehr.jpg",
+   "art_sha256": "0c8c0c165cd56c0f9b7ce258bb92e7dd2b053c6d4a7f6ab62afa261f60a297a5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_schnellfeuergewehr.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "2b53726c0afb2515fe6eb545347a33cda8aec039d790d7c4f395cf79528a3455"
   },
   {
    "id": "dc_np_orthea_messkette_alpha",
@@ -49690,11 +50243,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_orthea_messkette_alpha.jpg",
+   "art_sha256": "442ebdd7497dcbbd54566a5aa77219c3569720bfdcbca411ccc005d4a62d0278",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_orthea_messkette_alpha.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "aa6f050f0dbd6f4034405d0b334434f35e944dd02ddabe512a3c7acc18743675"
   },
   {
    "id": "dc_np_orthea_kreuzpeilungstrupp",
@@ -49716,11 +50285,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_orthea_kreuzpeilungstrupp.jpg",
+   "art_sha256": "07de8435234e5d4b5f410e7d1a93190cb091b5e590b563497cd23be4d7b9738b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_orthea_kreuzpeilungstrupp.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "4bc98250be69fe21b62bf9412df7eb06d9462c173a845864cf30ca57649dbc71"
   },
   {
    "id": "dc_np_orthea_probentraeger",
