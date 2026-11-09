@@ -4064,5 +4064,285 @@
   "sha256": "1fae7c1ad7aaf592342de65e84df6e58eb9faeb02ec97fd6ac902e0f67b39766",
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_containerpanzer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_containerpanzer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e4c262a176dbab9ae5672f4b5a4ccfa0b2faed530ee47633667dadbdc0112c0b.jpg",
+  "sha256": "7ce4da748b76168ae1dd98b9f5deb13dcdd34117ded50e0b0c936b95b0f7c675",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_entsatzwagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_entsatzwagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/3275060abfc2ea1241267a6e68e2e404c3f2749fdb29c57973c7f724d6edd385.jpg",
+  "sha256": "b861ec2c5fe6fbe548f53b30bf937f4db40bf294735c71ba622e70750f41644a",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_hafenarbeiter_miliz": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_hafenarbeiter_miliz.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/70032e06cadf73a7e6f25059d18908dec59258a1c3d3af518e97635bd07e8776.jpg",
+  "sha256": "8e869b61b1f01a7b6e4f18326fa1542632407606694df0b744dc7f8341c59b5d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_hafenregiment": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_hafenregiment.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/56cb0674219efb2427c9716418f03df39bcdbe556991f8885d9947e79583cfcf.jpg",
+  "sha256": "e7c7dafc82978906cf60534caab09aa36e0d78c3c33558b5a6aaacb231851298",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_herr_der_kais": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_herr_der_kais.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8e7b1d07e6bdeb28a45a0e0500da68707aacea7fb105f26cae1c72f7da6274fc.jpg",
+  "sha256": "b1e4a1dfcc80285ca7c9e4bc3263e3e898f8875ce7b744bb1af6516d18a7ea98",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_kaipanzer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_kaipanzer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5cb3405a4580b648bbaccbbfc9dd1b7b6d483490fa0eb13328a50777b5995583.jpg",
+  "sha256": "feabd1a5a9125092badec9bcbb6210ec31a0c964b6530f9c82f1e04955f99615",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_kaischuetzen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_kaischuetzen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f102f8dcce37241c0b6964560e12dddd2d8cdaa85645cfa885ba577051005736.jpg",
+  "sha256": "08800293c37bd671881f33270ac464d5f754401b4586c976c26dbfeebb6faf6e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_konvoischutz": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_konvoischutz.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c53dd80fbefb36dc53433fa0a62e96c7c3321981db4e71ddea5b70ac1a9f1c9a.jpg",
+  "sha256": "146b37ccbaee2fe87d9661939809484be70c749e5b4079d03e27488826839ced",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_lieferkette": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_lieferkette.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e69b27019a9f89f5b0a9afc107faeb8288af6c2ac19431128b44cb7393c27084.jpg",
+  "sha256": "e0b2d5db2c156228f72f165d1af3143314ad9799f3d15d77acf38a3ef86c1f4d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_schiffsmoerser": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_schiffsmoerser.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/46b153d41da7c8c79c76af8539df4f0eec6fea8acb32953b928c9670251d2e62.jpg",
+  "sha256": "3dbfcad0e21add9becbabed0781fdf380d01f156a4556a77b6de5dbb2006dc17",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_schmugglerzug": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_schmugglerzug.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8374722d0e149404f664d23419645fa48590656ab980a3c300dc1593e42142df.jpg",
+  "sha256": "b42e2e3c9ba3fa58af499901ece873886349a3664120f05975ea8f5a41263828",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_schnelle_entsatzgruppe": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_schnelle_entsatzgruppe.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b253f3889c544dac34507362a7d1f9a5d36bf058708d1bc1ec0095f1a09de274.jpg",
+  "sha256": "b94eab01007c001c1d89ab96badd9a183f9ae6f4fc25f079f3e21003b1f2e426",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_ahnen_rufen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_ahnen_rufen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/9a28d71292ebda10e73d2b638910e8da5618292bce9b45ef11655eb149b4146e.jpg",
+  "sha256": "d2cdfe45dfaae5b91bf7aee67b614ad48311641128a1f8e4f02d9ceed8505a6f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_ahnenhalle": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_ahnenhalle.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f797e70855893bdfeae3da8a2a669ab59674c5c22005a5239eee8acbaf6dab87.jpg",
+  "sha256": "57720e1d937072edb3bd85266ca2353cea3024ee65fb94a0e3e64742f2064c1f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_ahnenruestung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_ahnenruestung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/cb722018688a3d0d778227173a5207dfe11528ad6e00ef436a0260526aa48afa.jpg",
+  "sha256": "d67907259059afa2c0b4bb25fb3a3cc02d7ee219a3968cb949c33411ab3fc4ce",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_aufruf_der_namen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_aufruf_der_namen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d3fb1c4d1880e432c56e3c45ade036e1271d9c3872bade4da7c7dc1ede5ea454.jpg",
+  "sha256": "4906d30647c6794d03031dec6e50c3665067546352b20e9fc848ba0da16fea3d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_die_toten_auf_der_ruestung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_die_toten_auf_der_ruestung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/9afd0aab953a4ecec6caa86fd19432d02400e436ce8a6ccee9e730c75158b0f3.jpg",
+  "sha256": "35ef593efa5dc55f834b8ae4e06f0a982dfd1da42297db8e715a432897a2f5e7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_gedenkmarke": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_gedenkmarke.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8ed521b2a5b5c4b9ba5f9da3fc85f0edca4174c83b277610de11449e4b99b80f.jpg",
+  "sha256": "450fb61d6871d50235988dc21fd2ef9cfb04faac70f3d6b9a12e0371fcbb7772",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_gepanzerter_vorstoss": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_gepanzerter_vorstoss.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f11aee9469aca6e0ea435984433efdc4fa6e3b407d05b79c18120af2598f9efa.jpg",
+  "sha256": "a7548aec20dbced529ebc9e4ea80e5be619e3204c6648dcb7ad12c5e4a749f85",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_grabklinge": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_grabklinge.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e233b8d8222af8de9afef9f2af9646aefbf00180d492801e6ad26f6dc3a6b397.jpg",
+  "sha256": "1cd3e424e7c746ab6c3fe76a844e7f7f1abe72a40174fe7b6aa516a385997798",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_grabsucher": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_grabsucher.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/57146232421c82fc1d31b651c458f40b9db102c5c5a057220ec88d315220b0a7.jpg",
+  "sha256": "eca317c46655bd74480967af7c127b936523458ba1125eca0dd0c162d7d024af",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_namensplatte": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_namensplatte.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/3d3e0922cad3b31ee2759074510df5c1149121758f973866af765c21f5296159.jpg",
+  "sha256": "c797d75ab8cead6935f382bf4c02364fb7f32d1b8e570469a901a94788e507a3",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_namensruf_batterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_namensruf_batterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/431b9002babf7b1ba8c5e71c97d21e0ae225eabf11b5ea5b7e1aabe20e1f3c3c.jpg",
+  "sha256": "83291c5eae4735a08cdfcf32bcf433087556112281aaf1e13abdfe43d967b3f4",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_plattenschutz": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_plattenschutz.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8ee4702e3d6095a78b86a6472130d578ad50d16238a12d6f343a08b1160a8802.jpg",
+  "sha256": "a13f4187459dc2db59c97e21bb7ba40c593beaa73753999cb327431cc8ae2323",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_prozession_der_namen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_prozession_der_namen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e509a4f6c1e6b5392c0d65d55cc7db122353f4c708aca83bb88f5f593b5256fb.jpg",
+  "sha256": "9221aae8e846b460975c107d14c2b7c24100f35d0120a645dcf217a66e0d6eeb",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_ruestkammer_der_toten": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_ruestkammer_der_toten.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/dcf58f3a05a08c3e75edbb48e6a7a5bed19f5a32ebc6dd9786d68036a6b962c1.jpg",
+  "sha256": "bb8308472836619a3c5e3445bca7a7f615c6d05d15ed693feb022010a0b289b1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_ruestung_flicken": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_ruestung_flicken.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6d48fbde47852c2a7894d72efabad7d8d4d04e68336b07957df20dce1aa48fe2.jpg",
+  "sha256": "b5d11cabe712ca9311c46fe35256e4db4667ec06dbbebd1f9d01ad64ceba3ab0",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_schmied_der_erinnerung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_schmied_der_erinnerung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/3af972f1bc0d551fc3a8f44997a1e078f043254fe5da1bc31d8913550a714fbd.jpg",
+  "sha256": "b2339a8da63da6cee51bedc525b11f342405b420162dd6f304b36f8ef824a96b",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_teurer_meter": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_teurer_meter.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/21853104fe74117e0c322eb0ecc000e05a68b0323612fddfb5c0cce8b206bf07.jpg",
+  "sha256": "44001854bfcb4d7dd772d4d19eced8260027988c1123dd4d38524f44cc2ae0e8",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_totenehre": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_totenehre.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/bd029edc8f1b11cc573000b1615023b77d886da88d49bc7eb0d2e5884640cf28.jpg",
+  "sha256": "2eaae33b764077cadf97cd5abc49464af44bd8a32007658c7d382a03a9a69ac4",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_totenschild": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_totenschild.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c8f586289515ec2360526b45b3e69c655607d31591ac82b25dd11b984e900d02.jpg",
+  "sha256": "09fbf6281ea66126215a447d192f6bfba4f1676c29331345a75dbab3122d3666",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_verlust_wird_deckung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_verlust_wird_deckung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/525ec57b4568551ec92d0c8559ab080e57979bbc1811e36b767214715716821f.jpg",
+  "sha256": "82ce442877d81d419f98e20b3771b33e9c2f40ca931bdac427b5a99e864de701",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_waechter_der_namen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_waechter_der_namen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/655bd6f28d553e5427587773743d864c9f049ac040f2b2af3700270b9cc2f9ed.jpg",
+  "sha256": "c44c0e695e33c91f3eaeb1d462d5eb7b41820d5c85ee71f9900d42d460a16aba",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_wall_der_gefallenen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_wall_der_gefallenen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/70f3b026bae109d3540e047d391e8e1e2f0836ace21f5e56813b8085d930e806.jpg",
+  "sha256": "22026b7f34270293feec173a616bcca5e02ea91104491f105880f31b168861e6",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_ossaria_wall_verstaerken": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_ossaria_wall_verstaerken.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/62f428d35fdb880f27c40f0b652ce86d594dba42ec1404c994c50fe52893b6eb.jpg",
+  "sha256": "9998db4be7186112848a2c536f9ba46954c4bd12651d8ee80586566c11d15d39",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  }
 }

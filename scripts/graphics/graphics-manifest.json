@@ -1,44 +1,9 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1602,
+ "new_faces": 1637,
  "missing_illustrations": [
-  "dc_np_ossaria_namensruf_batterie",
-  "dc_np_ossaria_grabsucher",
-  "dc_np_ossaria_schmied_der_erinnerung",
-  "dc_np_ossaria_waechter_der_namen",
-  "dc_np_ossaria_wall_der_gefallenen",
-  "dc_np_ossaria_ahnenhalle",
-  "dc_np_ossaria_ruestkammer_der_toten",
-  "dc_np_ossaria_aufruf_der_namen",
-  "dc_np_ossaria_verlust_wird_deckung",
-  "dc_np_ossaria_totenehre",
-  "dc_np_ossaria_teurer_meter",
-  "dc_np_ossaria_ruestung_flicken",
-  "dc_np_ossaria_wall_verstaerken",
-  "dc_np_ossaria_ahnen_rufen",
-  "dc_np_ossaria_prozession_der_namen",
-  "dc_np_ossaria_gepanzerter_vorstoss",
-  "dc_np_ossaria_die_toten_auf_der_ruestung",
-  "dc_np_ossaria_namensplatte",
-  "dc_np_ossaria_totenschild",
-  "dc_np_ossaria_ahnenruestung",
-  "dc_np_ossaria_gedenkmarke",
-  "dc_np_ossaria_plattenschutz",
-  "dc_np_ossaria_grabklinge",
-  "dc_np_namar_kaischuetzen",
-  "dc_np_namar_schnelle_entsatzgruppe",
-  "dc_np_namar_hafenarbeiter_miliz",
-  "dc_np_namar_konvoischutz",
-  "dc_np_namar_schmugglerzug",
-  "dc_np_namar_hafenregiment",
-  "dc_np_namar_kaipanzer",
-  "dc_np_namar_lieferkette",
-  "dc_np_namar_entsatzwagen",
-  "dc_np_namar_containerpanzer",
-  "dc_np_namar_herr_der_kais",
   "dc_np_namar_kaibatterie",
-  "dc_np_namar_schiffsmoerser",
   "dc_np_namar_konvoifeuer",
   "dc_np_namar_hafengeschuetz",
   "dc_np_namar_schlag_der_ankunft",
@@ -64083,11 +64048,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_namensruf_batterie.jpg",
+   "art_sha256": "83291c5eae4735a08cdfcf32bcf433087556112281aaf1e13abdfe43d967b3f4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_namensruf_batterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "9e2cfb26f06306f780b6c9868aa98347f68c33b39a7e41c5f5339d4cbb235cb5"
   },
   {
    "id": "dc_np_ossaria_grabsucher",
@@ -64107,11 +64088,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_grabsucher.jpg",
+   "art_sha256": "eca317c46655bd74480967af7c127b936523458ba1125eca0dd0c162d7d024af",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_grabsucher.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f17f16f49f3196d13c9607d3310980fd41d8ca560ac7a74bdf775aa4d87ad3a8"
   },
   {
    "id": "dc_np_ossaria_stellungsbeobachter",
@@ -64214,11 +64211,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_schmied_der_erinnerung.jpg",
+   "art_sha256": "b2339a8da63da6cee51bedc525b11f342405b420162dd6f304b36f8ef824a96b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_schmied_der_erinnerung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "8039b1177af110772d8ed898477bce2a2428008996aa69044edd85f37387ac0f"
   },
   {
    "id": "dc_np_ossaria_waechter_der_namen",
@@ -64242,11 +64255,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_waechter_der_namen.jpg",
+   "art_sha256": "c44c0e695e33c91f3eaeb1d462d5eb7b41820d5c85ee71f9900d42d460a16aba",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_waechter_der_namen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "acd1ecd571e135344dcde41ac8c62ef83c07449253f91e00f5d3f646decc3b0e"
   },
   {
    "id": "dc_np_ossaria_wall_der_gefallenen",
@@ -64265,11 +64294,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_wall_der_gefallenen.jpg",
+   "art_sha256": "22026b7f34270293feec173a616bcca5e02ea91104491f105880f31b168861e6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_wall_der_gefallenen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "4089a5c859c0e94eb4ca0cf277c8b07a891ac2dd9dd3bdf9f2510d5ba6c345c0"
   },
   {
    "id": "dc_np_ossaria_ahnenhalle",
@@ -64288,11 +64333,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_ahnenhalle.jpg",
+   "art_sha256": "57720e1d937072edb3bd85266ca2353cea3024ee65fb94a0e3e64742f2064c1f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_ahnenhalle.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e542654e85d480a59a35222c968be6d11539f6251ce44c91fba3a6ce00620735"
   },
   {
    "id": "dc_np_ossaria_ruestkammer_der_toten",
@@ -64311,11 +64372,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_ruestkammer_der_toten.jpg",
+   "art_sha256": "bb8308472836619a3c5e3445bca7a7f615c6d05d15ed693feb022010a0b289b1",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_ruestkammer_der_toten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2a30d118325842ce66421a1be9df9b142327a19a5fe795a64bc51b77ebe8c60e"
   },
   {
    "id": "dc_np_ossaria_aufruf_der_namen",
@@ -64334,11 +64411,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_aufruf_der_namen.jpg",
+   "art_sha256": "4906d30647c6794d03031dec6e50c3665067546352b20e9fc848ba0da16fea3d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_aufruf_der_namen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "a556f618cda2a716bc088265ce1bc92b560ec05b774f46ac031e9fb149844235"
   },
   {
    "id": "dc_np_ossaria_verlust_wird_deckung",
@@ -64357,11 +64450,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_verlust_wird_deckung.jpg",
+   "art_sha256": "82ce442877d81d419f98e20b3771b33e9c2f40ca931bdac427b5a99e864de701",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_verlust_wird_deckung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "bb3831392511431142cbb1177dbaa4a0ab8eba66101a707050a8ff820cd49150"
   },
   {
    "id": "dc_np_ossaria_totenehre",
@@ -64380,11 +64489,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_totenehre.jpg",
+   "art_sha256": "2eaae33b764077cadf97cd5abc49464af44bd8a32007658c7d382a03a9a69ac4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_totenehre.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "19dc5e6f0db086ce1dfdc3a1cb5ff55696115c0c8e6a93ff221df923320667b7"
   },
   {
    "id": "dc_np_ossaria_teurer_meter",
@@ -64403,11 +64528,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_teurer_meter.jpg",
+   "art_sha256": "44001854bfcb4d7dd772d4d19eced8260027988c1123dd4d38524f44cc2ae0e8",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_teurer_meter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "b5e8eca3c0a04ae5a9e6b937b16cc09a3e714a9badddc93507bd196ced3e498c"
   },
   {
    "id": "dc_np_ossaria_ruestung_flicken",
@@ -64426,11 +64567,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_ruestung_flicken.jpg",
+   "art_sha256": "b5d11cabe712ca9311c46fe35256e4db4667ec06dbbebd1f9d01ad64ceba3ab0",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_ruestung_flicken.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e8d1569a3c36cbf64e0f74a4e6b498827825256b1ded900d73924d69e912aa95"
   },
   {
    "id": "dc_np_ossaria_wall_verstaerken",
@@ -64449,11 +64606,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_wall_verstaerken.jpg",
+   "art_sha256": "9998db4be7186112848a2c536f9ba46954c4bd12651d8ee80586566c11d15d39",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_wall_verstaerken.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5739f79db4d6657b16d4d7a7c6b9d9e9124bba60bac7bace8d475a1780022cdc"
   },
   {
    "id": "dc_np_ossaria_ahnen_rufen",
@@ -64472,11 +64645,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_ahnen_rufen.jpg",
+   "art_sha256": "d2cdfe45dfaae5b91bf7aee67b614ad48311641128a1f8e4f02d9ceed8505a6f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_ahnen_rufen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f19d4d1eefd5fc2f9a3127523ae196228eec21b0c0639aafc90ea2067909df13"
   },
   {
    "id": "dc_np_ossaria_prozession_der_namen",
@@ -64495,11 +64684,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_prozession_der_namen.jpg",
+   "art_sha256": "9221aae8e846b460975c107d14c2b7c24100f35d0120a645dcf217a66e0d6eeb",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_prozession_der_namen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "58076209cc12295b7afd20f560261a48620ed8ae7aa97546fd4584fd9461e12d"
   },
   {
    "id": "dc_np_ossaria_gepanzerter_vorstoss",
@@ -64518,11 +64723,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_gepanzerter_vorstoss.jpg",
+   "art_sha256": "a7548aec20dbced529ebc9e4ea80e5be619e3204c6648dcb7ad12c5e4a749f85",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_gepanzerter_vorstoss.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2876a8ada68b650169265898181f3390d1e726ad182decd3d7057f91df17794b"
   },
   {
    "id": "dc_np_ossaria_die_toten_auf_der_ruestung",
@@ -64541,11 +64762,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_die_toten_auf_der_ruestung.jpg",
+   "art_sha256": "35ef593efa5dc55f834b8ae4e06f0a982dfd1da42297db8e715a432897a2f5e7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_die_toten_auf_der_ruestung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "23e9db7e948c68ad3247059f93ae250a46d92858a45f0669c7bc07e9450b0ba7"
   },
   {
    "id": "dc_np_ossaria_namensplatte",
@@ -64564,11 +64801,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_namensplatte.jpg",
+   "art_sha256": "c797d75ab8cead6935f382bf4c02364fb7f32d1b8e570469a901a94788e507a3",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_namensplatte.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d1fba2a67f1ad1cb525cc00be746873ecf287f6e6c720bc940044ca5acda0777"
   },
   {
    "id": "dc_np_ossaria_totenschild",
@@ -64589,11 +64842,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_totenschild.jpg",
+   "art_sha256": "09fbf6281ea66126215a447d192f6bfba4f1676c29331345a75dbab3122d3666",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_totenschild.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "109f14defc48b523942da5afe14dc39395d51c8667425a9bf9e9ffb9c1a6a27b"
   },
   {
    "id": "dc_np_ossaria_ahnenruestung",
@@ -64612,11 +64881,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_ahnenruestung.jpg",
+   "art_sha256": "d67907259059afa2c0b4bb25fb3a3cc02d7ee219a3968cb949c33411ab3fc4ce",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_ahnenruestung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f24f0c5cd0b5fcaf44f4ffd18d238810b90ee56e795063c3ebbe296d91485fd5"
   },
   {
    "id": "dc_np_ossaria_gedenkmarke",
@@ -64635,11 +64920,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_gedenkmarke.jpg",
+   "art_sha256": "450fb61d6871d50235988dc21fd2ef9cfb04faac70f3d6b9a12e0371fcbb7772",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_gedenkmarke.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e9537c161f1eb7bf117b3eab0bbb60a54e444e6f491c4019289b77f5d4815b18"
   },
   {
    "id": "dc_np_ossaria_plattenschutz",
@@ -64658,11 +64959,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_plattenschutz.jpg",
+   "art_sha256": "a13f4187459dc2db59c97e21bb7ba40c593beaa73753999cb327431cc8ae2323",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_plattenschutz.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "a1f8ad95f66629018a4d7a6c786def64d883f8baacabf3b65a6e9ac65e8c80db"
   },
   {
    "id": "dc_np_ossaria_grabklinge",
@@ -64681,11 +64998,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_grabklinge.jpg",
+   "art_sha256": "1cd3e424e7c746ab6c3fe76a844e7f7f1abe72a40174fe7b6aa516a385997798",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_grabklinge.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "72038cd4ed1460683e81f4fac6b0735cdae51a88788c08cd3c38c05a1648ae40"
   },
   {
    "id": "dc_np_namar_kaischuetzen",
@@ -64707,11 +65040,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_kaischuetzen.jpg",
+   "art_sha256": "08800293c37bd671881f33270ac464d5f754401b4586c976c26dbfeebb6faf6e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_kaischuetzen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "93df254648a8a95d4bfe089ebee3ac2628ec989e69e8a2ba07a41ed43fb65eaf"
   },
   {
    "id": "dc_np_namar_schnelle_entsatzgruppe",
@@ -64731,11 +65080,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_schnelle_entsatzgruppe.jpg",
+   "art_sha256": "b94eab01007c001c1d89ab96badd9a183f9ae6f4fc25f079f3e21003b1f2e426",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_schnelle_entsatzgruppe.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d9fe36de7f6500ac4c8ca43e3a11ab3474ccaff0aff049f1c4b431cc7e0599b1"
   },
   {
    "id": "dc_np_namar_hafenarbeiter_miliz",
@@ -64755,11 +65120,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_hafenarbeiter_miliz.jpg",
+   "art_sha256": "8e869b61b1f01a7b6e4f18326fa1542632407606694df0b744dc7f8341c59b5d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_hafenarbeiter_miliz.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "fb16cab415a96a8c0d3c4241011ce1b15dd67e9f6ada0a6a1fa2d2c99caa7a26"
   },
   {
    "id": "dc_np_namar_konvoischutz",
@@ -64781,11 +65162,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_konvoischutz.jpg",
+   "art_sha256": "146b37ccbaee2fe87d9661939809484be70c749e5b4079d03e27488826839ced",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_konvoischutz.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5671eb8c2003c56bac7b8186a40d77e60bd5dad66d2f04e7c8f1aaa0406d589c"
   },
   {
    "id": "dc_np_namar_schmugglerzug",
@@ -64808,11 +65205,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_schmugglerzug.jpg",
+   "art_sha256": "b42e2e3c9ba3fa58af499901ece873886349a3664120f05975ea8f5a41263828",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_schmugglerzug.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d1b4ee940a8aa6f6afeef52a8f1ce83a9a19fa7529d5b93797f6b8f7ace5f464"
   },
   {
    "id": "dc_np_namar_hafenregiment",
@@ -64834,11 +65247,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_hafenregiment.jpg",
+   "art_sha256": "e7c7dafc82978906cf60534caab09aa36e0d78c3c33558b5a6aaacb231851298",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_hafenregiment.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "6543c1a54467cb95e406e3fa3f854497ffdb58376f4cd4ed97dd35d876658096"
   },
   {
    "id": "dc_np_namar_kaipanzer",
@@ -64862,11 +65291,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_kaipanzer.jpg",
+   "art_sha256": "feabd1a5a9125092badec9bcbb6210ec31a0c964b6530f9c82f1e04955f99615",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_kaipanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7978f40a8a3e80d1204cc1c63ea4e2c7810677faf640803fa9fa82796c504bac"
   },
   {
    "id": "dc_np_namar_lieferkette",
@@ -64888,11 +65333,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_lieferkette.jpg",
+   "art_sha256": "e0b2d5db2c156228f72f165d1af3143314ad9799f3d15d77acf38a3ef86c1f4d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_lieferkette.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "38344c121104d4255546dd084a93a632a509d176e4f7fa11f34b5392dc71fb97"
   },
   {
    "id": "dc_np_namar_entsatzwagen",
@@ -64914,11 +65375,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_entsatzwagen.jpg",
+   "art_sha256": "b861ec2c5fe6fbe548f53b30bf937f4db40bf294735c71ba622e70750f41644a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_entsatzwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "88ed98b7b8e5d294339ff2ca95cf415e2adfef14e20776b7f3ee348bdf471b84"
   },
   {
    "id": "dc_np_namar_containerpanzer",
@@ -64942,11 +65419,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_containerpanzer.jpg",
+   "art_sha256": "7ce4da748b76168ae1dd98b9f5deb13dcdd34117ded50e0b0c936b95b0f7c675",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_containerpanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "25de6fa257a3bbd45143a59705dc21da44d07eb6da5c31198b6865ee88969b2b"
   },
   {
    "id": "dc_np_namar_herr_der_kais",
@@ -64968,11 +65461,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_herr_der_kais.jpg",
+   "art_sha256": "b1e4a1dfcc80285ca7c9e4bc3263e3e898f8875ce7b744bb1af6516d18a7ea98",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_herr_der_kais.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "43d68d81d84cb083349c92e4858d0491793a886724af8c57cfda2f985fa572c7"
   },
   {
    "id": "dc_np_namar_kaibatterie",
@@ -65022,11 +65531,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_schiffsmoerser.jpg",
+   "art_sha256": "3dbfcad0e21add9becbabed0781fdf380d01f156a4556a77b6de5dbb2006dc17",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_schiffsmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f4c6ca5ef00d5e939e41ac550938152debe91d66794a7fffbfdfb7441e21ea81"
   },
   {
    "id": "dc_np_namar_konvoifeuer",
