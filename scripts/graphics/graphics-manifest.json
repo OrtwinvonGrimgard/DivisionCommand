@@ -1,48 +1,8 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1465,
+ "new_faces": 1505,
  "missing_illustrations": [
-  "dc_np_vael_werkschutzzug",
-  "dc_np_vael_lieferkompanie",
-  "dc_np_vael_bodenhalter",
-  "dc_np_vael_vertragssoldaten",
-  "dc_np_vael_reparaturtrupp",
-  "dc_np_vael_aktionaersgarde",
-  "dc_np_vael_fabrikpanzer_serie_neun",
-  "dc_np_vael_materialkeil",
-  "dc_np_vael_nachlieferungswagen",
-  "dc_np_vael_industriekette",
-  "dc_np_vael_kriegsaktie_panzer",
-  "dc_np_vael_walzenbatterie",
-  "dc_np_vael_industrierohr",
-  "dc_np_vael_volltreffer_haubitze",
-  "dc_np_vael_munitionsmoerser",
-  "dc_np_vael_feuerwalzen_rohr",
-  "dc_np_vael_zielerfasser",
-  "dc_np_vael_verbrauchspruefer",
-  "dc_np_vael_wirtschaftsspaeher",
-  "dc_np_vael_konzernfaust",
-  "dc_np_vael_konzernstab",
-  "dc_np_vael_ruestungswerk",
-  "dc_np_vael_munitionslager",
-  "dc_np_vael_kriegsboerse",
-  "dc_np_vael_ersatz_ab_lager",
-  "dc_np_vael_rollende_walze",
-  "dc_np_vael_lieferschein_eingetroffen",
-  "dc_np_vael_bezahlter_treffer",
-  "dc_np_vael_munitionsschub",
-  "dc_np_vael_reparatur_im_feld",
-  "dc_np_vael_auftragsbuch",
-  "dc_np_vael_grosslieferung",
-  "dc_np_vael_splitterhagel",
-  "dc_np_vael_industrielle_walze",
-  "dc_np_vael_werkspanzerung",
-  "dc_np_vael_schwere_munition",
-  "dc_np_vael_ersatzrohr",
-  "dc_np_vael_feuerleitcomputer",
-  "dc_np_vael_reaktivpanzer",
-  "dc_np_vael_vertragsgewehr",
   "dc_np_merovan_garnison_weg_sieben",
   "dc_np_merovan_kolonnenschuetzen",
   "dc_np_merovan_wegposten",
@@ -58673,11 +58633,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_werkschutzzug.jpg",
+   "art_sha256": "581c4d1be0618258f13158174ae7d1791c19e061a305723bd84c98ee2ef008ce",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_werkschutzzug.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "22ba0f6565839ed568171fc012f76c5f039954f403258e8c0cb1e9acc95403d1"
   },
   {
    "id": "dc_np_vael_lieferkompanie",
@@ -58697,11 +58673,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_lieferkompanie.jpg",
+   "art_sha256": "770696f18632fe868b2b86a9782f4258816f9ae355ceaf88609aade3135c888d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_lieferkompanie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5b0d76eb429c1abb8dc33ca9f19ae70e7f7f1b587dd8d79e051cac88fa586cf7"
   },
   {
    "id": "dc_np_vael_bodenhalter",
@@ -58721,11 +58713,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_bodenhalter.jpg",
+   "art_sha256": "f286798b990d6e60a87d93fbde1f3b1a9042e005c6b86d98f527b88149c18615",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_bodenhalter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "a6098e2a61a5dbfc967b110b3dd9d37d4f05832a7f6580a9e9ec50a276dcda1e"
   },
   {
    "id": "dc_np_vael_vertragssoldaten",
@@ -58747,11 +58755,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_vertragssoldaten.jpg",
+   "art_sha256": "c57cf3757af988a86920ae609a57471a943d798f157fe2f2ab99adfa9145adff",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_vertragssoldaten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "eec76a0e3e7eed2fefb20bf48a9b1a3788338dd4260f910d61b1a5211b1b327a"
   },
   {
    "id": "dc_np_vael_reparaturtrupp",
@@ -58773,11 +58797,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_reparaturtrupp.jpg",
+   "art_sha256": "3d8e47546d83a9bf07a88be00d1466a0dda3e9fa46f0423679eb73136335bcc8",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_reparaturtrupp.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "ba438b1fda9e2509187ca97a9cbff90e17dd94e473f2119d0c7497acaa866b19"
   },
   {
    "id": "dc_np_vael_aktionaersgarde",
@@ -58797,11 +58837,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_aktionaersgarde.jpg",
+   "art_sha256": "b919f56b9d79e8621f755313eed15e7cc286d10d696533b713a704683787f15d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_aktionaersgarde.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "73a2e12ae517c1d8877f2f45a8876edbfdccfc313f844bc17aaa6ea2949beaae"
   },
   {
    "id": "dc_np_vael_fabrikpanzer_serie_neun",
@@ -58825,11 +58881,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_fabrikpanzer_serie_neun.jpg",
+   "art_sha256": "627139853738f41d127d9667e8a18af47484299cb79eb7abf8887e20c7e78798",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_fabrikpanzer_serie_neun.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "214c1484d1370ace10c70278e035c87debb8c87c4b8a208b9f98415bfaf025d7"
   },
   {
    "id": "dc_np_vael_materialkeil",
@@ -58853,11 +58925,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_materialkeil.jpg",
+   "art_sha256": "fe5bc3906a921661246354a77be86df8e1f8d40ac6041f40b3f790d7a4f608a2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_materialkeil.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f5d1f334909a34b94017b523520b2e88362237d76e6c58c67dab71936001664c"
   },
   {
    "id": "dc_np_vael_nachlieferungswagen",
@@ -58881,11 +58969,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_nachlieferungswagen.jpg",
+   "art_sha256": "05f165bbe54356317eadc60bcda138061190973ef0e3bd4929e76f6324a9a108",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_nachlieferungswagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "1841989f3666527e3e8cae8c8899dfa7182e23d607c330135dce819d23d6bd0b"
   },
   {
    "id": "dc_np_vael_industriekette",
@@ -58909,11 +59013,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_industriekette.jpg",
+   "art_sha256": "9f0545c7df3a1f7e87ac3a244037b534505f1232637cf3bd7409e56a908c276e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_industriekette.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "165e084da13dc8e13f5ac7569eea16c45690df0b76755d05ba31a6af8f147ea1"
   },
   {
    "id": "dc_np_vael_kriegsaktie_panzer",
@@ -58938,11 +59058,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_kriegsaktie_panzer.jpg",
+   "art_sha256": "ef8680f3e84392cbac1570e02714d2d06bd35f80e0f2520ced637977109f943a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_kriegsaktie_panzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "a94fa9d983d2f0de3055e6d80aa3384f2095bcdba3fedfe321347236070c7bcd"
   },
   {
    "id": "dc_np_vael_walzenbatterie",
@@ -58965,11 +59101,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_walzenbatterie.jpg",
+   "art_sha256": "6a5b6432e30e73df842ac445fa60fb4b3488e85749913e7e2ac26894354a22e7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_walzenbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "babd932b0c4eb2b033b0cb934c7c4034647265afb8321066dd6a70afd3102d35"
   },
   {
    "id": "dc_np_vael_industrierohr",
@@ -58992,11 +59144,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_industrierohr.jpg",
+   "art_sha256": "292fe4292747ab0d238f5baf5636a78afb0f3c0c377857ff1d1ed0d8305061e5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_industrierohr.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d6eaf2665c8033d94fa3cef3bad4f6525f22b6514c2fbd5054d4b25ba9ed101e"
   },
   {
    "id": "dc_np_vael_volltreffer_haubitze",
@@ -59020,11 +59188,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_volltreffer_haubitze.jpg",
+   "art_sha256": "3c9b49a3e2a4e98bc26117f4570bc0a907dd9a54ccc2e37bc8205933c68477d3",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_volltreffer_haubitze.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "1788839877356a43d7bd03c08752e4f7d34facf86089f163ebd80b1551ef1ad4"
   },
   {
    "id": "dc_np_vael_munitionsmoerser",
@@ -59047,11 +59231,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_munitionsmoerser.jpg",
+   "art_sha256": "201104b0398d7c0c6676ac6f09665d50c33ed7fde0241095efc9e2421d0b19be",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_munitionsmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "184828e5bebb06665aba85e7ab8ba7945161b31521c71dbbc32bd95257df0cbe"
   },
   {
    "id": "dc_np_vael_feuerwalzen_rohr",
@@ -59074,11 +59274,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_feuerwalzen_rohr.jpg",
+   "art_sha256": "a0a8c90b102d440cec783e63a58e0330723dac963a9530be3eef7956537683cd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_feuerwalzen_rohr.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7370f5a079cf5eca21b352267d2ce88a5d6512f3c03f824e409714f7880d1beb"
   },
   {
    "id": "dc_np_vael_zielerfasser",
@@ -59100,11 +59316,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_zielerfasser.jpg",
+   "art_sha256": "0dfe7f5938ee8ea80323e3cc43c83bab568d5941ac1e0630b3b0bef8a5fd1b71",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_zielerfasser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "4d267951ce9c85a73f60a303c835a30496f7d53181dbdde84ddf4d043819f19d"
   },
   {
    "id": "dc_np_vael_verbrauchspruefer",
@@ -59126,11 +59358,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_verbrauchspruefer.jpg",
+   "art_sha256": "04e2b028df014ac671ae3ae7ec6225ebc857b6983a6592468f9e703be1c1fdca",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_verbrauchspruefer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "8a293636a731eb062e43df29932265e5b35dcc56b5826ae42b0e0d82d9866f84"
   },
   {
    "id": "dc_np_vael_wirtschaftsspaeher",
@@ -59152,11 +59400,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_wirtschaftsspaeher.jpg",
+   "art_sha256": "de85b1b1ab1cfa786d89b9f416f64c5aba85e4efe492b0f8f8cd33bab7cfe880",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_wirtschaftsspaeher.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "ddf813d6ccf26e91b105eea7a7d7939854a1edae5e3d2c9fbe5fa862fca92e5d"
   },
   {
    "id": "dc_np_vael_konzernfaust",
@@ -59179,11 +59443,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_konzernfaust.jpg",
+   "art_sha256": "adf0105ddb8850430f30b38f8d8e58995c922b967a7e7b343cbe2cf565ce381c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_konzernfaust.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "a3bcc4acde2fc4138c73aef6c69f6b31c59012e6a8479ceaba539bd65b4e0c52"
   },
   {
    "id": "dc_np_vael_konzernstab",
@@ -59204,11 +59484,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_konzernstab.jpg",
+   "art_sha256": "2bb51a51354e409cd2fe5dc0ae1915d642d45d77929e622d1ff69a1abf8a5ba0",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_konzernstab.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "1b4b5096b0cc7535ff6035759e5b9679df21b7ed6d9a5a98fe3d302bee51bd0b"
   },
   {
    "id": "dc_np_vael_ruestungswerk",
@@ -59227,11 +59523,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_ruestungswerk.jpg",
+   "art_sha256": "898916469d832d145c104857863cd7601a3548b205d817374f1b119f03a3a783",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_ruestungswerk.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "1b816c442cf149793b0ca128de9ca981546a79a86a231bb9622248aa86b8ec28"
   },
   {
    "id": "dc_np_vael_munitionslager",
@@ -59250,11 +59562,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_munitionslager.jpg",
+   "art_sha256": "65bf30d35cfd379afdfa021862ebc04d2ddc2d5c4c428ef1528da3ea1e86de45",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_munitionslager.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "4a988f9d06d6e066f2b988e5f3b9c98e6cfa7f2d30ae2b216470d2d163c13146"
   },
   {
    "id": "dc_np_vael_kriegsboerse",
@@ -59273,11 +59601,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_kriegsboerse.jpg",
+   "art_sha256": "e96700f3c61f945dc5c1f6a26fcf9b4293ae57c861af9ccb5c5e5aeb194e4e8b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_kriegsboerse.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "58bc652d08cf5af395c27380932dbbae38b8911cf4744cd78792b7d997e8f6d9"
   },
   {
    "id": "dc_np_vael_ersatz_ab_lager",
@@ -59296,11 +59640,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_ersatz_ab_lager.jpg",
+   "art_sha256": "48840fefe5eb0d3aec49b90aa6eaac79682356312283d62d0cebbedf94f4a9a0",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_ersatz_ab_lager.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "ebc8bdff1c90ed0827e566fd3872fc4ff0826786e224edcb014a88a1b601d824"
   },
   {
    "id": "dc_np_vael_rollende_walze",
@@ -59319,11 +59679,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_rollende_walze.jpg",
+   "art_sha256": "83a06d8caa1459fb1e425636add3c4c1b48610f94cd3f69c031e605fcc4152c0",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_rollende_walze.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e784c8092b1c5bd137d824f536a00d10990dd2608f59750b5f4a9c38e1cc4cfc"
   },
   {
    "id": "dc_np_vael_lieferschein_eingetroffen",
@@ -59342,11 +59718,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_lieferschein_eingetroffen.jpg",
+   "art_sha256": "4127f875cf51feb2d56100a99bea2a946b45e25cceb3abef1ea42c0e61dc1623",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_lieferschein_eingetroffen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "0be965367c86191a0a3258537c6724c0d489ffa9fa2337502f611845df038a33"
   },
   {
    "id": "dc_np_vael_bezahlter_treffer",
@@ -59365,11 +59757,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_bezahlter_treffer.jpg",
+   "art_sha256": "0d2d9fe1657fa224c4c38849456aa3c5a9fa68c61f97effe911cb783c256ffdb",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_bezahlter_treffer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7569bb82e2c1c6c1b138a950207c0e2b9796258206efc3cfc98f4269e09a0ccc"
   },
   {
    "id": "dc_np_vael_munitionsschub",
@@ -59388,11 +59796,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_munitionsschub.jpg",
+   "art_sha256": "dea7e6e5156a53c60b46686461d4d6f6466cec0a4ff29671b7dd1093870057c9",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_munitionsschub.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "406b99d962888845582bddc288e68792584aefad5222b0173b624193ef7fdf3c"
   },
   {
    "id": "dc_np_vael_reparatur_im_feld",
@@ -59411,11 +59835,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_reparatur_im_feld.jpg",
+   "art_sha256": "1ca19e876be0e13b387b24ec48067d0bbf4507c10d576ccbece411bd0d25529a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_reparatur_im_feld.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "3ffc5f02536cb113d8ddfc60dd1f6b50086900679588c997bd1cc7b81c28230d"
   },
   {
    "id": "dc_np_vael_auftragsbuch",
@@ -59434,11 +59874,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_auftragsbuch.jpg",
+   "art_sha256": "7e637c99195a3bbfffba0a5868639083471493672547238e43ffb12a03c3b029",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_auftragsbuch.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7290c5f0706502db4748fd226ecf98cdbcc83f5cb3a03e48438c4406e021d108"
   },
   {
    "id": "dc_np_vael_grosslieferung",
@@ -59457,11 +59913,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_grosslieferung.jpg",
+   "art_sha256": "93da53e6198efda0eb1d81898174c4ce924c3cf7e0789e551baa02fdc5e42ed2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_grosslieferung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "cc289d92bee3325e7c87fe2044fac13b93f8bb00929bd10f68ee3b26fa3b06c7"
   },
   {
    "id": "dc_np_vael_splitterhagel",
@@ -59480,11 +59952,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_splitterhagel.jpg",
+   "art_sha256": "a8e818d1cb5de14d7d9cb054fb828b60612d7bd7b75c2eff888317ce0a46d951",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_splitterhagel.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d05a106f87fc88e819402305fe8f53501d889a696f37d2c774a21480e3806d7c"
   },
   {
    "id": "dc_np_vael_industrielle_walze",
@@ -59503,11 +59991,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_industrielle_walze.jpg",
+   "art_sha256": "4c5dfd94867f0a5d184d63d9bb98ec9a52938753c80983213a134696fba597b1",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_industrielle_walze.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7aa1cfd4869e02f623acf6c46592a7d94cbd2688dff2c06d0f6966edaffe25e6"
   },
   {
    "id": "dc_np_vael_werkspanzerung",
@@ -59526,11 +60030,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_werkspanzerung.jpg",
+   "art_sha256": "a76c31871f82c79f036f92f57f0bcf0d866c4ac5d57069b230a12de4005dd735",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_werkspanzerung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "8361bf7a8a37dc2197efbd53389667b263af39558a4d3caec30ece868d549cdd"
   },
   {
    "id": "dc_np_vael_schwere_munition",
@@ -59549,11 +60069,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_schwere_munition.jpg",
+   "art_sha256": "9fff44e10fd22c80d70bba35988ebc0d915c572db8cdae3b79c999f7bd1c1d8e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_schwere_munition.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "bf85aff4a7c30b9f2ce586b75cf8c42f03927ab5012ff0e3387455c1f212490e"
   },
   {
    "id": "dc_np_vael_ersatzrohr",
@@ -59572,11 +60108,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_ersatzrohr.jpg",
+   "art_sha256": "eb2b3e84f6c1513db2af60e0002f72601c98e9a603ca2153bde9db84a47810a1",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_ersatzrohr.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "58bbb1826b2f2f406dcbcaa9f9a8f128e2b9b92875dead3a21ee7774acda263c"
   },
   {
    "id": "dc_np_vael_feuerleitcomputer",
@@ -59595,11 +60147,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_feuerleitcomputer.jpg",
+   "art_sha256": "33cd4617c19c394d316e60a096920ae1d80e606b5bb4d9360aef5d0dad9a1153",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_feuerleitcomputer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f8f6bfcf2958fc72c1547aad368099b72873f5e7c57c56a5a1e6ae4bc86a60a7"
   },
   {
    "id": "dc_np_vael_reaktivpanzer",
@@ -59620,11 +60188,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_reaktivpanzer.jpg",
+   "art_sha256": "58ce800f9194764332ad89d09676bdb15c0a28ab69477d052a95cc2240218371",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_reaktivpanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "48d247d1598a96233702ba91ac9953502782876c1616ff74e8182da45701a1bf"
   },
   {
    "id": "dc_np_vael_vertragsgewehr",
@@ -59643,11 +60227,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vael_vertragsgewehr.jpg",
+   "art_sha256": "36527a039bf1833933fdacb4ecbea323c78cf7739df190544d5d810598566cda",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vael_vertragsgewehr.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "6651df6c17b8dea6e3704fcdf01e5ea6a0ef116f7240b4320aa09360c309b6ee"
   },
   {
    "id": "dc_np_merovan_garnison_weg_sieben",

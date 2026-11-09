@@ -2968,5 +2968,325 @@
   "sha256": "449e76a7dbfb669c2b1df788e85fef0329818b1e47203809fd51c2137840acd6",
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_aktionaersgarde": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_aktionaersgarde.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/fb574d62cdac747b18e477495bb5cd7595959106609b4d59ae44ec1b022fba19.jpg",
+  "sha256": "b919f56b9d79e8621f755313eed15e7cc286d10d696533b713a704683787f15d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_auftragsbuch": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_auftragsbuch.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/9d99febe3bda9f14280085d23fd5c144233b795787b8a2010cdb6f0fcba94c84.jpg",
+  "sha256": "7e637c99195a3bbfffba0a5868639083471493672547238e43ffb12a03c3b029",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_bezahlter_treffer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_bezahlter_treffer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8ddb1a681e203fffd6c6714169eb594f40333c07ad55918d47899a839cf3408a.jpg",
+  "sha256": "0d2d9fe1657fa224c4c38849456aa3c5a9fa68c61f97effe911cb783c256ffdb",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_bodenhalter": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_bodenhalter.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4aa22a2d2201cfeb625ebcf5326107291963832739b3a773b8e92d146f537d78.jpg",
+  "sha256": "f286798b990d6e60a87d93fbde1f3b1a9042e005c6b86d98f527b88149c18615",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_ersatz_ab_lager": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_ersatz_ab_lager.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/aaa2e513375ca2aaf53b7c7fe8ba739c995fe4d9caa768e75896900539b913a7.jpg",
+  "sha256": "48840fefe5eb0d3aec49b90aa6eaac79682356312283d62d0cebbedf94f4a9a0",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_ersatzrohr": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_ersatzrohr.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/80019b85f8d92f69da131b5992ee3bc8db0583098345d8c22e7397712e95d47f.jpg",
+  "sha256": "eb2b3e84f6c1513db2af60e0002f72601c98e9a603ca2153bde9db84a47810a1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_fabrikpanzer_serie_neun": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_fabrikpanzer_serie_neun.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/603397003c2d576586e25f47af15152dc69fca6946dd0c85bd46cb5801923956.jpg",
+  "sha256": "627139853738f41d127d9667e8a18af47484299cb79eb7abf8887e20c7e78798",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_feuerleitcomputer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_feuerleitcomputer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/2e557f2a9ee7356cbbd724b32460897a27d1a9e4463382b83569f011cfeb6f04.jpg",
+  "sha256": "33cd4617c19c394d316e60a096920ae1d80e606b5bb4d9360aef5d0dad9a1153",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_feuerwalzen_rohr": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_feuerwalzen_rohr.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/fa8638a1a60eea937ba8abecd33a5348a6714b61ea018535104577912a68c86f.jpg",
+  "sha256": "a0a8c90b102d440cec783e63a58e0330723dac963a9530be3eef7956537683cd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_grosslieferung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_grosslieferung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/532fc1b5feb919a8e440d6bc9448165e34c921ceaf0db66da09be68769d38c9b.jpg",
+  "sha256": "93da53e6198efda0eb1d81898174c4ce924c3cf7e0789e551baa02fdc5e42ed2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_industriekette": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_industriekette.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/49e82304769d081349d2bf3527cf022eb40a45ac36c76e5fd2f62fb6a86d31c7.jpg",
+  "sha256": "9f0545c7df3a1f7e87ac3a244037b534505f1232637cf3bd7409e56a908c276e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_industrielle_walze": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_industrielle_walze.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/bb404d60cd9647f2d1e254ad5be74ed9ccf011c833d016fdd49fde6e7e35392f.jpg",
+  "sha256": "4c5dfd94867f0a5d184d63d9bb98ec9a52938753c80983213a134696fba597b1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_industrierohr": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_industrierohr.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/36466a939aa507d3b12a48ecc466c628cdebaa49e93221415b5bae30f77193fc.jpg",
+  "sha256": "292fe4292747ab0d238f5baf5636a78afb0f3c0c377857ff1d1ed0d8305061e5",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_konzernfaust": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_konzernfaust.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/63a1d82ba73eded7650e3fd7eda11fe484aa78304be7166ebf3abbe907e3a703.jpg",
+  "sha256": "adf0105ddb8850430f30b38f8d8e58995c922b967a7e7b343cbe2cf565ce381c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_konzernstab": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_konzernstab.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/82d85aaca7dee3f62624b126145d8cce41d3d5e577b77ebf1cd7c0f1dacf39b3.jpg",
+  "sha256": "2bb51a51354e409cd2fe5dc0ae1915d642d45d77929e622d1ff69a1abf8a5ba0",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_kriegsaktie_panzer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_kriegsaktie_panzer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/03e539d2b27779a456500dd34bf71214a6693ccaf2cec251f4034b7479495cae.jpg",
+  "sha256": "ef8680f3e84392cbac1570e02714d2d06bd35f80e0f2520ced637977109f943a",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_kriegsboerse": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_kriegsboerse.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4b96d8e3ba39bf278e15aef62df404911363c4ab1baee9ad460d57e30d61ff6e.jpg",
+  "sha256": "e96700f3c61f945dc5c1f6a26fcf9b4293ae57c861af9ccb5c5e5aeb194e4e8b",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_lieferkompanie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_lieferkompanie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/31bc8db2a33c5f50a778cae3233df3a87fdb254c45698c6be0da7100eed39544.jpg",
+  "sha256": "770696f18632fe868b2b86a9782f4258816f9ae355ceaf88609aade3135c888d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_lieferschein_eingetroffen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_lieferschein_eingetroffen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/fd349b7ce18e45b885fd7ccbffbc78b5085362db163e0dec90082a5d18e39a47.jpg",
+  "sha256": "4127f875cf51feb2d56100a99bea2a946b45e25cceb3abef1ea42c0e61dc1623",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_materialkeil": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_materialkeil.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/56d31faccbbb756700b392c12531777cb2b6130f52d6b9430a57927b74d53147.jpg",
+  "sha256": "fe5bc3906a921661246354a77be86df8e1f8d40ac6041f40b3f790d7a4f608a2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_munitionslager": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_munitionslager.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c82eaf63e5600e30ed015c726ff7fc451b56ffe6937f1bf20f186549e9cf15b1.jpg",
+  "sha256": "65bf30d35cfd379afdfa021862ebc04d2ddc2d5c4c428ef1528da3ea1e86de45",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_munitionsmoerser": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_munitionsmoerser.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/32e4687bac7511a35bcd9d4435b7ea1c83913999fe75a3dcbdc50aa72cfbe324.jpg",
+  "sha256": "201104b0398d7c0c6676ac6f09665d50c33ed7fde0241095efc9e2421d0b19be",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_munitionsschub": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_munitionsschub.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/05bf3a7ecee51b77397c72c04eb4bb6bc22ce492574d0ed2de815a64ea8a8cdd.jpg",
+  "sha256": "dea7e6e5156a53c60b46686461d4d6f6466cec0a4ff29671b7dd1093870057c9",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_nachlieferungswagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_nachlieferungswagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/fce1a1a52c9e5aea0964f46d90abc406be081d4255bfafbe4469b9a7f2e92bad.jpg",
+  "sha256": "05f165bbe54356317eadc60bcda138061190973ef0e3bd4929e76f6324a9a108",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_reaktivpanzer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_reaktivpanzer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/955ad788fb3448a22abab61613a2846a1a8fc35a3c6bae250a1a6a5b87012d8e.jpg",
+  "sha256": "58ce800f9194764332ad89d09676bdb15c0a28ab69477d052a95cc2240218371",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_reparatur_im_feld": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_reparatur_im_feld.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c86b209a3d3cdda0c9eba2fe67d799ec8531fbef48fc6bac4282978b3352081f.jpg",
+  "sha256": "1ca19e876be0e13b387b24ec48067d0bbf4507c10d576ccbece411bd0d25529a",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_reparaturtrupp": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_reparaturtrupp.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5a5c23705cdd39ea893ae6d9d056a9b7e69eab3413e602789d28f34adc39de48.jpg",
+  "sha256": "3d8e47546d83a9bf07a88be00d1466a0dda3e9fa46f0423679eb73136335bcc8",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_rollende_walze": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_rollende_walze.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6b93c4969103eb0d51d707805d6bf4b9ef56963ac98f2157927870e3af9cb1c3.jpg",
+  "sha256": "83a06d8caa1459fb1e425636add3c4c1b48610f94cd3f69c031e605fcc4152c0",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_ruestungswerk": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_ruestungswerk.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ec3600250f036383c3055f3b82215c3302bb5a1bb18ce23ed75a38bc8057b04b.jpg",
+  "sha256": "898916469d832d145c104857863cd7601a3548b205d817374f1b119f03a3a783",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_schwere_munition": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_schwere_munition.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/80663dd25b0bcbff18dc74472864d9b27fa9fe8e986bef6293043a6f95e0b4a5.jpg",
+  "sha256": "9fff44e10fd22c80d70bba35988ebc0d915c572db8cdae3b79c999f7bd1c1d8e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_splitterhagel": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_splitterhagel.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/caf5ff8b3cd1ae4e3b0afd741fdae1ce9c5a4210d2f7cb88e45c655825cc128b.jpg",
+  "sha256": "a8e818d1cb5de14d7d9cb054fb828b60612d7bd7b75c2eff888317ce0a46d951",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_verbrauchspruefer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_verbrauchspruefer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7be76fcf1a22fd7beb81a210188c11c1d516c3638d023c5a1cec9265e4517574.jpg",
+  "sha256": "04e2b028df014ac671ae3ae7ec6225ebc857b6983a6592468f9e703be1c1fdca",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_vertragsgewehr": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_vertragsgewehr.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f71e6afb7a6229d5de637113eb7b95e945f183bb18dedf2f307f16625d86581b.jpg",
+  "sha256": "36527a039bf1833933fdacb4ecbea323c78cf7739df190544d5d810598566cda",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_vertragssoldaten": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_vertragssoldaten.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/fbc40b3f1837be0dbef60698aa47c192a7a8ba298f44ff5485d688126df77c0c.jpg",
+  "sha256": "c57cf3757af988a86920ae609a57471a943d798f157fe2f2ab99adfa9145adff",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_volltreffer_haubitze": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_volltreffer_haubitze.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e9b762870a5b374b317b9ae9c3744915b1f6b920a4a8d44f0799d51a54485d25.jpg",
+  "sha256": "3c9b49a3e2a4e98bc26117f4570bc0a907dd9a54ccc2e37bc8205933c68477d3",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_walzenbatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_walzenbatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/499d4811bd3ecf80ec547adc2082be4f7ed44eb8e17b955621a0a48ddc198277.jpg",
+  "sha256": "6a5b6432e30e73df842ac445fa60fb4b3488e85749913e7e2ac26894354a22e7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_werkschutzzug": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_werkschutzzug.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/2bf8f6cccd29801c477737f1846411942d50e6a19e63cb5cc8e452edf7ac99bf.jpg",
+  "sha256": "581c4d1be0618258f13158174ae7d1791c19e061a305723bd84c98ee2ef008ce",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_werkspanzerung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_werkspanzerung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/fec72bd562b4ebfb7b2e5b2c24fb8c62da72f69ac86bf29525504461cb07a130.jpg",
+  "sha256": "a76c31871f82c79f036f92f57f0bcf0d866c4ac5d57069b230a12de4005dd735",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_wirtschaftsspaeher": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_wirtschaftsspaeher.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/81e4c2ebefe6d2e25603365154d73f2d229c502d2daddfed4a0b0918176b76c1.jpg",
+  "sha256": "de85b1b1ab1cfa786d89b9f416f64c5aba85e4efe492b0f8f8cd33bab7cfe880",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vael_zielerfasser": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vael_zielerfasser.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5de14b2f3c099f49972c07758336d403c359fb1574be12cc0bbde252bd57cef9.jpg",
+  "sha256": "0dfe7f5938ee8ea80323e3cc43c83bab568d5941ac1e0630b3b0bef8a5fd1b71",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  }
 }
