@@ -4344,5 +4344,173 @@
   "sha256": "9998db4be7186112848a2c536f9ba46954c4bd12651d8ee80586566c11d15d39",
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_aus_vollen_lagern": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_aus_vollen_lagern.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/00db63662b29fb0f5ff2e89ce05e610bc8fecb9a9d6b147d58c5bd9398b1dc2c.jpg",
+  "sha256": "fd380f3dabda25e49a8cea4343d220e453a380d89b4d0aba5211623929a2117f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_chaoslogistik": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_chaoslogistik.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d0cb0a5a63b2d85b090532b2dc53a703ce561cc932a816a41155f0bf603ebcbc.jpg",
+  "sha256": "ef7df6dedcd0754ea0be550bf862f0bb240a938648536c6bdfcda2fd2fb0e392",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_ganze_schiffsladung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_ganze_schiffsladung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b4b162bdd8ac905be6c82abb1fd4485ef05768ebda05b6d5a4610812826195a6.jpg",
+  "sha256": "3b5e6863615da4817f37a865708e277522cfdef3ed5a23514a80f4aaabe529d6",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_hafenbund_garde": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_hafenbund_garde.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/3c5b5a6fb6bff93883084f9806709bf54f464efad2f90238c6cdf1149275893c.jpg",
+  "sha256": "e0a93f7f8e748a8cbe7b96ebe7d5a7917d3bfa663b5b638f1f12fcafad8a7891",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_hafenfeuer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_hafenfeuer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/44cb7f7e44cb6c95ec4c9e0ae32df111a7e8e724361f8d8b1fe7505feefc16c3.jpg",
+  "sha256": "9dc36a7795718a772c5ecd80916d010b3be46efcfc0280878b6aa36aa6d4c676",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_hafengeschuetz": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_hafengeschuetz.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/fb6d84f1c84190e340340e81cd9f037a0f5d117767eac4a55a7b64e53f374be4.jpg",
+  "sha256": "be4163b5ba4de8607a79b73c887b247b8a191696bc1443600fde7429b3ea32bb",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_hafenkontor": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_hafenkontor.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7cc104bc3509f1138dce6da78ee091c8e9f938a28ace859e6de1e1b396b190a6.jpg",
+  "sha256": "1558c916bbd45e5bf050a49385705c7950175cfc550c88fe82ba2e32f964ab5f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_hafenlotse": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_hafenlotse.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/52b1d33c29394ba1e3fb96168c4ce80015b20801c9399987b7f0a8e425dcb845.jpg",
+  "sha256": "8e2f3b8c24da59fb8d2fcb68833f9c7dffb40f9e272fc346fe39e6add6d1714d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_hilfe_vom_kai": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_hilfe_vom_kai.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ca01a66d4e122951deab310926e305c21f77558564c028bef2ea8649301e9f8a.jpg",
+  "sha256": "d88860dfc817584a48f28277279694b162997885eb5c4cb976d3223f27e7e4c6",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_kai_ohne_schloss": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_kai_ohne_schloss.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/67899a75cdeb5d89aa224af54e2d8ae2dd950f5b9dce301c7d763c67544c0084.jpg",
+  "sha256": "8ed372eb48befc1e3d65fa3110b66b25202c107a25bc015e0fc3844b65ade338",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_kai_verteidigen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_kai_verteidigen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ae59c2bc514c52c9cdd26f6afc0939825895868356a477af7cd78ace3540b94c.jpg",
+  "sha256": "670c3c6fd4e3f904f1e79fe363e024a18a0c8aefa499e606e6320b0f841b1102",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_kaibatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_kaibatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/614ec6443b2cff6353cca77c6de7053832741f47bebae46570bda6b4b83eb476.jpg",
+  "sha256": "9fb5d204c567d4c94ecf4146bab1b174a213376e9cb23d735ff785a65ad2f1f5",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_kaispitzel": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_kaispitzel.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/dfdc23784bac23d4e867cccc9e5f73f87ae796945056c01bf2761382ca681f39.jpg",
+  "sha256": "ca0f43315bc62a0e4b4acfaefe4a9a2b73e8d352c5c7c4ab3efca9facb73591d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_konvoi_durchbringen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_konvoi_durchbringen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/2c6317ac9656b95a7a33066e59fb67cb751a504f93c71340dc976bc1ed3f541b.jpg",
+  "sha256": "b1253c531cedcb1abeb2a9e1d9bfc0bdb68c4c9e14c8381c34fa17f26ef1f990",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_konvoiaufklaerer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_konvoiaufklaerer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4c0621b6f2627baa9b7401859b399759cbe504477a50096bcedd747c8f48259f.jpg",
+  "sha256": "5e697ee866f9c96abc1c80be87aa3a448a8caa4a7966d010085569bcfa269ff7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_konvoifeuer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_konvoifeuer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b1dccaf094cec65a557332e4964563a35f64359effdb24a7f155e3a78483a9f7.jpg",
+  "sha256": "6b2f1889aca8a73a386aa6479efbee8aafa3fb3828b4a6b107c4b90a4bc91f22",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_lieferung_eingetroffen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_lieferung_eingetroffen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/994801e9cd72630d4e076693ace4e1a11342b8b59afeaa452838a0ea451c50e7.jpg",
+  "sha256": "1319dee49f3fd1d20c5361b48619174913524babbdc5eda525c19013e2b78774",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_lieferung_trotz_allem": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_lieferung_trotz_allem.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a6a592f856421ee39b935c4ed64a8f9f481b965147f21f53e3f8f708a70776ac.jpg",
+  "sha256": "4688f21fe86f4677c9865dd4ee1b6e3593e75f556d058dff00aa1bac0aa2d5e7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_nachschub": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_nachschub.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b222e9ec7d2665325438d17b000aebfb09fb0196785979bfd1f9f2b753b32886.jpg",
+  "sha256": "eb2b3d15302a822498a9a33367ff78c3e148336b1d952ae06df80b80b3e4e47d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_schlag_der_ankunft": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_schlag_der_ankunft.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7febe4075160f2e5221347bca1fd704a1c759ae4ac546023fb6e9de89e415800.jpg",
+  "sha256": "58a202ea825bf039d79e4534cc3500d690d77dacd0059e8c82d0f14a1e238deb",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_namar_speicher_am_hafen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_namar_speicher_am_hafen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5241c630655b48b08d90b9f55253c93374f7a023d5fafccfecc27c183f4501e3.jpg",
+  "sha256": "f86e94fcdc5c6522da35b24e20399997285ead187fbb07610937ba626fc4857f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  }
 }

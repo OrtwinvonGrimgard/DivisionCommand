@@ -1,29 +1,8 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1637,
+ "new_faces": 1658,
  "missing_illustrations": [
-  "dc_np_namar_kaibatterie",
-  "dc_np_namar_konvoifeuer",
-  "dc_np_namar_hafengeschuetz",
-  "dc_np_namar_schlag_der_ankunft",
-  "dc_np_namar_hafenlotse",
-  "dc_np_namar_konvoiaufklaerer",
-  "dc_np_namar_kaispitzel",
-  "dc_np_namar_lieferung_trotz_allem",
-  "dc_np_namar_hafenbund_garde",
-  "dc_np_namar_kai_ohne_schloss",
-  "dc_np_namar_speicher_am_hafen",
-  "dc_np_namar_hafenkontor",
-  "dc_np_namar_aus_vollen_lagern",
-  "dc_np_namar_hilfe_vom_kai",
-  "dc_np_namar_lieferung_eingetroffen",
-  "dc_np_namar_chaoslogistik",
-  "dc_np_namar_kai_verteidigen",
-  "dc_np_namar_nachschub",
-  "dc_np_namar_hafenfeuer",
-  "dc_np_namar_ganze_schiffsladung",
-  "dc_np_namar_konvoi_durchbringen",
   "dc_np_namar_die_grosse_flotte",
   "dc_np_namar_hafenhelm",
   "dc_np_namar_schmuggelware",
@@ -65504,11 +65483,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_kaibatterie.jpg",
+   "art_sha256": "9fb5d204c567d4c94ecf4146bab1b174a213376e9cb23d735ff785a65ad2f1f5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_kaibatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "091fb6b7351f72b4c34eaca40d1f36aaa40649163074cdc10a79074a2b3da5c3"
   },
   {
    "id": "dc_np_namar_schiffsmoerser",
@@ -65574,11 +65569,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_konvoifeuer.jpg",
+   "art_sha256": "6b2f1889aca8a73a386aa6479efbee8aafa3fb3828b4a6b107c4b90a4bc91f22",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_konvoifeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "3308c16e0c17b7c24e17e184ca54f8e28f1a4b73a3e9b5b14b7c2249b98eeaf3"
   },
   {
    "id": "dc_np_namar_hafengeschuetz",
@@ -65601,11 +65612,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_hafengeschuetz.jpg",
+   "art_sha256": "be4163b5ba4de8607a79b73c887b247b8a191696bc1443600fde7429b3ea32bb",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_hafengeschuetz.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d4c80f6f5eb1e17d78c946a3b275121d54ac0f0fd3724e1ca99e6aad10dbc09f"
   },
   {
    "id": "dc_np_namar_schlag_der_ankunft",
@@ -65629,11 +65656,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_schlag_der_ankunft.jpg",
+   "art_sha256": "58a202ea825bf039d79e4534cc3500d690d77dacd0059e8c82d0f14a1e238deb",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_schlag_der_ankunft.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "9e91cfb84f07a59dbb0a1c11e410e399aae72f71b73c81ec1a7824e5cd18098f"
   },
   {
    "id": "dc_np_namar_hafenlotse",
@@ -65655,11 +65698,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_hafenlotse.jpg",
+   "art_sha256": "8e2f3b8c24da59fb8d2fcb68833f9c7dffb40f9e272fc346fe39e6add6d1714d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_hafenlotse.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "4868ed6f334b07a26225379fa1b5aba8989abd25fcb2a1865f2260581a07fb40"
   },
   {
    "id": "dc_np_namar_konvoiaufklaerer",
@@ -65681,11 +65740,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_konvoiaufklaerer.jpg",
+   "art_sha256": "5e697ee866f9c96abc1c80be87aa3a448a8caa4a7966d010085569bcfa269ff7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_konvoiaufklaerer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5a315a00262f2c9360667fe340ab9037bc8c8e0a78f497676a289bae1a27cf61"
   },
   {
    "id": "dc_np_namar_kaispitzel",
@@ -65707,11 +65782,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_kaispitzel.jpg",
+   "art_sha256": "ca0f43315bc62a0e4b4acfaefe4a9a2b73e8d352c5c7c4ab3efca9facb73591d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_kaispitzel.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "59cfdf4cc54c68b081dd063f0aae0b8c7436508d86ad23e56151525f3bdd4f1a"
   },
   {
    "id": "dc_np_namar_lieferung_trotz_allem",
@@ -65735,11 +65826,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_lieferung_trotz_allem.jpg",
+   "art_sha256": "4688f21fe86f4677c9865dd4ee1b6e3593e75f556d058dff00aa1bac0aa2d5e7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_lieferung_trotz_allem.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "04fba668cdbf79721fde8e2c191ebadcf81f36de8addee3118b571540dc2d345"
   },
   {
    "id": "dc_np_namar_hafenbund_garde",
@@ -65763,11 +65870,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_hafenbund_garde.jpg",
+   "art_sha256": "e0a93f7f8e748a8cbe7b96ebe7d5a7917d3bfa663b5b638f1f12fcafad8a7891",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_hafenbund_garde.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "122c85c1ba00dbefe55c97398c26deb359763f40aca2d7890ad9dc1611260fef"
   },
   {
    "id": "dc_np_namar_kai_ohne_schloss",
@@ -65786,11 +65909,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_kai_ohne_schloss.jpg",
+   "art_sha256": "8ed372eb48befc1e3d65fa3110b66b25202c107a25bc015e0fc3844b65ade338",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_kai_ohne_schloss.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2aebb2ac776d3de4f6feda5d4fe6f138f6e9554d2596cea85e9ac5383224e97c"
   },
   {
    "id": "dc_np_namar_speicher_am_hafen",
@@ -65809,11 +65948,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_speicher_am_hafen.jpg",
+   "art_sha256": "f86e94fcdc5c6522da35b24e20399997285ead187fbb07610937ba626fc4857f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_speicher_am_hafen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "8e83169bb8c6b2d896fe35e7e0266428cf59c74de118295796028882941d0976"
   },
   {
    "id": "dc_np_namar_hafenkontor",
@@ -65832,11 +65987,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_hafenkontor.jpg",
+   "art_sha256": "1558c916bbd45e5bf050a49385705c7950175cfc550c88fe82ba2e32f964ab5f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_hafenkontor.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "71a53d592fadb37af29a649b968f216a89b9b8fed493ca21de326e32f007acc1"
   },
   {
    "id": "dc_np_namar_aus_vollen_lagern",
@@ -65855,11 +66026,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_aus_vollen_lagern.jpg",
+   "art_sha256": "fd380f3dabda25e49a8cea4343d220e453a380d89b4d0aba5211623929a2117f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_aus_vollen_lagern.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "9c9ab01d4ef75f85c8cef71e2041e0f99138c3964de3b42d127eb031a6748d82"
   },
   {
    "id": "dc_np_namar_hilfe_vom_kai",
@@ -65878,11 +66065,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_hilfe_vom_kai.jpg",
+   "art_sha256": "d88860dfc817584a48f28277279694b162997885eb5c4cb976d3223f27e7e4c6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_hilfe_vom_kai.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "948b5ddfc6865f6a47c1e32b6d698be8d3f2da1e9a14680bce81a7365f503542"
   },
   {
    "id": "dc_np_namar_lieferung_eingetroffen",
@@ -65901,11 +66104,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_lieferung_eingetroffen.jpg",
+   "art_sha256": "1319dee49f3fd1d20c5361b48619174913524babbdc5eda525c19013e2b78774",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_lieferung_eingetroffen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f67bf0333f52d01dec1f7ab6e08f865a1036ca99dfc4ae6838ccb3c1cd395c27"
   },
   {
    "id": "dc_np_namar_chaoslogistik",
@@ -65924,11 +66143,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_chaoslogistik.jpg",
+   "art_sha256": "ef7df6dedcd0754ea0be550bf862f0bb240a938648536c6bdfcda2fd2fb0e392",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_chaoslogistik.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5d6bc1c0c57a77d3f90573238216c5379bdace0a64d3ae0384096dd21af1f907"
   },
   {
    "id": "dc_np_namar_kai_verteidigen",
@@ -65947,11 +66182,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_kai_verteidigen.jpg",
+   "art_sha256": "670c3c6fd4e3f904f1e79fe363e024a18a0c8aefa499e606e6320b0f841b1102",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_kai_verteidigen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2be17edc5da35fb4c3a622e746ba039639cbe0d99fc2d06286753c1a7ea01289"
   },
   {
    "id": "dc_np_namar_nachschub",
@@ -65970,11 +66221,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_nachschub.jpg",
+   "art_sha256": "eb2b3d15302a822498a9a33367ff78c3e148336b1d952ae06df80b80b3e4e47d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_nachschub.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "631c44feb450c853d7b9271b01b3a67e27be81e9e67bcfb3e336689183312e41"
   },
   {
    "id": "dc_np_namar_hafenfeuer",
@@ -65993,11 +66260,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_hafenfeuer.jpg",
+   "art_sha256": "9dc36a7795718a772c5ecd80916d010b3be46efcfc0280878b6aa36aa6d4c676",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_hafenfeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "02ab6d0a128db82dc1f07b35fd74a4c86eed697501930cfe744cbe56e2f876c2"
   },
   {
    "id": "dc_np_namar_ganze_schiffsladung",
@@ -66016,11 +66299,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_ganze_schiffsladung.jpg",
+   "art_sha256": "3b5e6863615da4817f37a865708e277522cfdef3ed5a23514a80f4aaabe529d6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_ganze_schiffsladung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "883b372e0f004ea6b755920d66a02cc30e2d41f594dfc683b81228de31ac1a29"
   },
   {
    "id": "dc_np_namar_konvoi_durchbringen",
@@ -66039,11 +66338,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_konvoi_durchbringen.jpg",
+   "art_sha256": "b1253c531cedcb1abeb2a9e1d9bfc0bdb68c4c9e14c8381c34fa17f26ef1f990",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_konvoi_durchbringen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2aae045d1641f298435c67f383b9af5cab0e52c548bc3b14b82266a824425e46"
   },
   {
    "id": "dc_np_namar_die_grosse_flotte",
