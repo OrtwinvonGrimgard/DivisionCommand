@@ -14,13 +14,13 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung",
       "logistik"
     ],
-    "text": "Infanterie in diesem Abschnitt kostet 1 weniger, mindestens 1.",
+    "text": "Eigene Infanterie kostet 1 AP weniger (mind. 1).",
     "effects": [
       {
-        "code": "SECTION_INFANTRY_COST",
+        "code": "AURA_COST_MOD",
         "param": {
-          "delta": -1,
-          "min": 1
+          "filter": "infanterie",
+          "delta": -1
         }
       }
     ],
@@ -71,12 +71,12 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung",
       "glaube"
     ],
-    "text": "Eigene Infanterie im Abschnitt hat +1 DEF.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Infanterie dort +1 DEF.",
     "effects": [
       {
-        "code": "SECTION_INFANTRY_DEF",
+        "code": "TACTICAL_SECTION_INF_DEF",
         "param": {
-          "def": 1
+          "amount": 1
         }
       }
     ],
@@ -100,7 +100,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "artillerie",
       "stellung"
     ],
-    "text": "Eigene Front +1 A. Feuerkommando (2 AP): einer feindlichen Fronteinheit 3 Schaden.",
+    "text": "Eigene Front +1 ATK. Feuerkommando (2 AP): einer feindlichen Fronteinheit 3 Schaden.",
     "effects": [
       {
         "code": "AURA_FRONT_ATK",
@@ -134,7 +134,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Eigene Front +2 V. Satellitenbild (3 AP): feindliche verdeckte Front kurz aufdecken, nach Bestätigung wieder verdeckt.",
+    "text": "Eigene Front +2 DEF. Satellitenbild (3 AP): feindliche verdeckte Front kurz aufdecken, nach Bestätigung wieder verdeckt.",
     "effects": [
       {
         "code": "AURA_FRONT_DEF",
@@ -251,7 +251,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Eigene Front +2 V. Mehr als zwei Elite an der Front: Zugende +1 Karte. Finte (2 AP): Feind außer Gefecht diesen Zug.",
+    "text": "Eigene Front +2 DEF. Mehr als zwei Elite an der Front: Zugende +1 Karte. Finte (2 AP): Feind außer Gefecht diesen Zug.",
     "effects": [
       {
         "code": "AURA_FRONT_DEF_GEN",
@@ -467,7 +467,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Heilung (1 AP): Infanterie auf diese Karte, heilt 1 V/Zug, zurück nur auf denselben Slot. Stirbt das Lazarett, stirbt der Patient.",
+    "text": "Heilung (1 AP): Infanterie auf diese Karte, heilt 1 DEF/Zug, zurück nur auf denselben Slot. Stirbt das Lazarett, stirbt der Patient.",
     "effects": [
       {
         "code": "HOSPITAL",
@@ -638,7 +638,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
       "unterstuetzung",
       "fahrzeug"
     ],
-    "text": "Feindliche Front -1 A. Funkfeuer (1 AP): fliegende Drohne zerstören. Fehlfunktion (3 AP): Drohne greift Flanke an.",
+    "text": "Feindliche Front -1 ATK. Funkfeuer (1 AP): fliegende Drohne zerstören. Fehlfunktion (3 AP): Drohne greift Flanke an.",
     "effects": [
       {
         "code": "AURA_ENEMY_ATK",
@@ -701,7 +701,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Eigene Fronteinheit +2 A/+2 V. Besiegt sie eine Einheit: 2 Karten ziehen.",
+    "text": "Eigene Fronteinheit +2 ATK/+2 DEF. Besiegt sie eine Einheit: 2 Karten ziehen.",
     "effects": [
       {
         "code": "PACT_BOND"
@@ -760,10 +760,26 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Eigene Artillerie +1 ATK; mit Soforteinsatz +1 zusätzlich.",
+    "text": "Eigene Artillerie +1 ATK, weitere +1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
     "effects": [
       {
-        "code": "AURA_FRONT_ATK"
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "all",
+          "filter": "artillerie",
+          "atk": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "all",
+          "filter": "artillerie",
+          "atk": 1,
+          "when": "played:Soforteinsatz"
+        }
       }
     ],
     "flavor": "Wer misst, trifft härter.",
@@ -787,8 +803,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle: ziehe 1 oder heile 1.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Der Ring sitzt fester als das Ministerium.",
     "image": "unterstuetzung/B154.jpg",
     "max_copies": 1,
@@ -810,10 +834,15 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Nächste Einheit kostet 1 weniger.",
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
     "effects": [
       {
-        "code": "UNIT_DISCOUNT"
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true
+        }
       }
     ],
     "flavor": "Die Schicht ist schon eingeteilt.",
@@ -837,8 +866,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Gegner zeigt Handkarte; Einheit → deine nächste +1 ATK.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Zwei Wahrheiten — eine für die Straße.",
     "image": "unterstuetzung/B156.jpg",
     "max_copies": 1,
@@ -860,8 +898,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Eigene Artillerie angreift: heile 1 an Panzer.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Anzeige grün heißt: weiter verbrauchen.",
     "image": "unterstuetzung/B157.jpg",
     "max_copies": 1,
@@ -883,8 +929,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Negiere ersten Schaden gegen Unterstützung diesen Zug.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Der Staat hält die Begründung. Nicht die Stückzahl.",
     "image": "unterstuetzung/B158.jpg",
     "max_copies": 1,
@@ -906,8 +961,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Bei 2+ Karten diesen Zug: ziehe 1.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Die Halde lügt nicht. Die Stadt schon.",
     "image": "unterstuetzung/B159.jpg",
     "max_copies": 1,
@@ -929,8 +995,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheit +2 DEF, kann diesen Zug nicht angreifen.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Schwarz im Buch, bevor die Begründung kommt.",
     "image": "unterstuetzung/B160.jpg",
     "max_copies": 1,
@@ -952,8 +1027,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Zerstöre beschädigte eigene Einheit: ziehe 2, heile 1.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Abgeschrieben — nachgeliefert.",
     "image": "unterstuetzung/B161.jpg",
     "max_copies": 1,
@@ -975,8 +1058,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Infanterie in diesem Abschnitt kostet 1 weniger, mindestens 1.",
-    "effects": [],
+    "text": "Eigene Infanterie kostet 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "AURA_COST_MOD",
+        "param": {
+          "filter": "infanterie",
+          "delta": -1
+        }
+      }
+    ],
     "flavor": "Hier formiert sich die Pflicht.",
     "image": "unterstuetzung/B111.jpg",
     "max_copies": 1,
@@ -998,8 +1089,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: eine eigene Infanterie in diesem Abschnitt hat +1 ATK bis Zugende.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Worte für die, die nicht eifern.",
     "image": "unterstuetzung/B112.jpg",
     "max_copies": 1,
@@ -1021,7 +1121,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Eigene Infanterie im Abschnitt hat +1 DEF.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Infanterie dort +1 DEF.",
     "effects": [
       {
         "code": "TACTICAL_SECTION_INF_DEF",
@@ -1051,8 +1151,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Ziehe 1 Karte. Wenn du in diesem Zug Infanterie spielst, ziehe 1 weitere.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Malen Voss liest nur das Maß.",
     "image": "unterstuetzung/B114.jpg",
     "max_copies": 1,
@@ -1074,10 +1185,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Heile eine eigene Einheit um 1. Infanterie erhält zusätzlich +1 DEF bis Zugende.",
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
-        "code": "AURA_FRONT_DEF"
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
       }
     ],
     "flavor": "Reparatur ist auch Pflicht.",
@@ -1101,8 +1216,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle eine eigene Einheit: sie erleidet diesen Zug keinen Schaden durch eigene Karteneffekte.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Elena Miren streitet die Zugabe ab.",
     "image": "unterstuetzung/B116.jpg",
     "max_copies": 1,
@@ -1124,8 +1248,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wenn eine eigene Einheit zerstört wird: ziehe 1 Karte.",
-    "effects": [],
+    "text": "Einmal pro Zug, wenn eine andere eigene Einheit zerstört wird: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "own_destroyed",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Der Name bleibt im Ritus.",
     "image": "unterstuetzung/B117.jpg",
     "max_copies": 1,
@@ -1147,8 +1281,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: eine Infanterie aus der Hand kostet 1 weniger (mind. 1).",
-    "effects": [],
+    "text": "Einmal pro Zug: deine nächste Infanterie kostet 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true,
+          "filter": "infanterie"
+        }
+      }
+    ],
     "flavor": "Das Land ist die Reserve.",
     "image": "unterstuetzung/B118.jpg",
     "max_copies": 1,
@@ -1170,10 +1314,15 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Eigene Einheiten im Abschnitt haben +1 DEF, solange du mindestens 3 Einheiten dort hast.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
     "effects": [
       {
-        "code": "AURA_FRONT_DEF"
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "def": 1
+        }
       }
     ],
     "flavor": "Breite vor Tiefe.",
@@ -1197,10 +1346,15 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: eine eigene Einheit hat +1 DEF bis Zugende und gilt als „unter Schwur“ (kann nicht freiwillig bewegt werden).",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
     "effects": [
       {
-        "code": "AURA_FRONT_DEF"
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "def": 1
+        }
       }
     ],
     "flavor": "Schwurprotokoll. Treue bindet Füße.",
@@ -1224,8 +1378,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten kosten dich 1 AP weniger (mindestens 1), solange diese Karte liegt.",
-    "effects": [],
+    "text": "Deine Einheiten kosten 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": false
+        }
+      }
+    ],
     "flavor": "Die alten Magazine öffnen sich nicht von allein.",
     "image": "unterstuetzung/B628.jpg",
     "max_copies": 1,
@@ -1247,10 +1410,15 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: ersetze eine eigene beschädigte Einheit; die Neue erhält ATK/DEF der Alten bis max. aufgedrucktem Wert +1 DEF.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
     "effects": [
       {
-        "code": "AURA_FRONT_DEF"
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
       }
     ],
     "flavor": "Ablösungsplan. Die Linie reißt nicht.",
@@ -1274,8 +1442,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: wähle einen Abschnitt. Angriffe eigener Einheiten dort haben +1 ATK.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Ein Kreis auf der Karte. Darunter sterben Leute.",
     "image": "unterstuetzung/B630.jpg",
     "max_copies": 1,
@@ -1297,8 +1474,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Ziehe 1 Karte, wenn du eine Einheit spielst, die eine andere ersetzt.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Kai, Kran, Befehl — in dieser Reihenfolge.",
     "image": "unterstuetzung/B631.jpg",
     "max_copies": 1,
@@ -1320,8 +1508,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wenn eine eigene Einheit zerstört wird: lege die oberste Karte deines Friedhofs unter dein Deck.",
-    "effects": [],
+    "text": "Einmal pro Zug, wenn eine eigene Einheit zerstört wird: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "own_destroyed",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Namen bleiben. Körper nicht.",
     "image": "unterstuetzung/B632.jpg",
     "max_copies": 1,
@@ -1343,10 +1541,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Eigene Elite und Panzer haben +1 DEF.",
+    "text": "Eigene Elite und Panzer +1 DEF.",
     "effects": [
       {
-        "code": "AURA_FRONT_DEF"
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "all",
+          "filter": "elite_panzer",
+          "def": 1
+        }
       }
     ],
     "flavor": "Der Rat tagt, bis der Abschnitt hält.",
@@ -1370,8 +1574,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: heile 1 DEF an einem eigenen Panzer oder Fahrzeug.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Werkrott schläft nicht.",
     "image": "unterstuetzung/B634.jpg",
     "max_copies": 1,
@@ -1393,8 +1605,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: eine eigene Einheit ignoriert den ersten Schaden. Du darfst diesen Zug keine Sofort spielen (Preis der Unfehlbarkeit).",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Unfehlbarer Erlass. Die Krone wankt nicht — du schon.",
     "image": "unterstuetzung/B635.jpg",
     "max_copies": 1,
@@ -1416,8 +1637,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: eine eigene Infanterie +2 ATK; sie erleidet danach 1 Schaden. Wenn sie fällt: oberste Handkarte ablegen.",
-    "effects": [],
+    "text": "Einmal pro Zug, wenn eine eigene Einheit zerstört wird: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "own_destroyed",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Durchbruchspunkt. Durchbruch frisst Nachschub.",
     "image": "unterstuetzung/B387.jpg",
     "max_copies": 1,
@@ -1439,7 +1670,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Eigene Ausrüstungen kosten 1 AP weniger (min. 1).",
+    "text": "Eigene Ausrüstung kostet 1 AP weniger (mind. 1).",
     "effects": [
       {
         "code": "EQUIP_DISCOUNT"
@@ -1466,8 +1697,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: eine beschädigte eigene Einheit +2 ATK bis Zugende und darf nicht geheilt werden diesen Zug.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Weiterkämpfen-Protokoll. Pause ist Ausschuss.",
     "image": "unterstuetzung/B389.jpg",
     "max_copies": 1,
@@ -1489,8 +1728,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Ziehe 1, wenn eine eigene Einheit in diesem Zug Schaden erleidet. Einmal/Zug: erzwinge 1 Schaden an eigener Einheit → +1 ATK für sie.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Leistungsboard. Schmerz ist Kennzahl.",
     "image": "unterstuetzung/B390.jpg",
     "max_copies": 1,
@@ -1512,8 +1762,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wenn eigene Einheit zerstört wird: oberste Friedhofskarte unter dein Deck oder heile 1 an einer beschädigten Einheit.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Ausfallanalyse als Ritual.",
     "image": "unterstuetzung/B391.jpg",
     "max_copies": 1,
@@ -1535,8 +1793,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: heile 2 DEF an einer Einheit mit ATK ≥3; eine andere eigene Einheit erleidet 1 Schaden.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Nutzen vor Nähe.",
     "image": "unterstuetzung/B393.jpg",
     "max_copies": 1,
@@ -1558,8 +1824,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Beschädigte eigene Einheiten haben +1 ATK.",
-    "effects": [],
+    "text": "Beschädigte eigene Einheiten +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "all",
+          "atk": 1,
+          "when": "damaged"
+        }
+      }
+    ],
     "flavor": "Die Wunde ist der Motor.",
     "image": "unterstuetzung/B394.jpg",
     "max_copies": 1,
@@ -1581,8 +1857,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: Angriffe eigener Einheiten in einem Abschnitt +1 ATK; eine Einheit dort erleidet 1 Schaden.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Leitung heiß. Körper heiß.",
     "image": "unterstuetzung/B395.jpg",
     "max_copies": 1,
@@ -1604,8 +1889,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: wähle eine eigene Einheit; +2 ATK bis Zugende, −1 DEF dauerhaft (Implantat). Bei ihrem Tod: ziehe 2.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Körper als System. Der Preis ist die Person.",
     "image": "unterstuetzung/B396.jpg",
     "max_copies": 1,
@@ -1627,8 +1923,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK gegen aufgeklärte Feinde.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "vs": "observed",
+          "vsAtk": 1
+        }
+      }
+    ],
     "flavor": "Halle sieht. Ersetzt das Raster nicht.",
     "image": "unterstuetzung/B810.jpg",
     "max_copies": 1,
@@ -1650,8 +1956,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten, die diesen Zug hier gespielt werden, kosten 1 weniger (min. 1). [Parlamentsraster]",
-    "effects": [],
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true
+        }
+      }
+    ],
     "flavor": "Raster neben der Halle. Mandat zählt.",
     "image": "unterstuetzung/B811.jpg",
     "max_copies": 1,
@@ -1673,8 +1988,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF, wenn mindestens zwei Einheiten im Abschnitt. [Werkhöfe Novaris]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1,
+          "when": "pair"
+        }
+      }
+    ],
     "flavor": "Werkhof: Gerät das man auseinandernehmen kann.",
     "image": "unterstuetzung/B812.jpg",
     "max_copies": 1,
@@ -1696,8 +2022,26 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF; einmal/Zug: decke 1 auf ODER ziehe 1.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turn",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Übung schaltet ab. Keine heimliche Leitung.",
     "image": "unterstuetzung/B813.jpg",
     "max_copies": 1,
@@ -1719,8 +2063,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK im Zug ohne Bewegung. [Lage Offen Desk]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK, wenn die Einheit seit deinem letzten Zug nicht versetzt wurde.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "when": "still"
+        }
+      }
+    ],
     "flavor": "Korrektur laut. Kontrolle gehört dazu.",
     "image": "unterstuetzung/B814.jpg",
     "max_copies": 1,
@@ -1742,8 +2096,26 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK gegen Aufgeklärte; einmal/Zug: decke 1 auf.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK gegen beobachtete Ziele. Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "vs": "observed",
+          "vsAtk": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turn",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Netz der Bürgerwehr. Knoten vor See.",
     "image": "unterstuetzung/B815.jpg",
     "max_copies": 1,
@@ -1765,8 +2137,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten im Abschnitt +1 DEF. [Westhaven-Lager]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Lager versorgt. Eröffnet keine Front zur See.",
     "image": "unterstuetzung/B816.jpg",
     "max_copies": 1,
@@ -1788,8 +2170,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wenn du diesen Zug Sofort spielst: ziehe 1. [Lydon-Werk]",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Ohne Lydon wird die Halle dunkel.",
     "image": "unterstuetzung/B817.jpg",
     "max_copies": 1,
@@ -1811,8 +2204,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK im Zug nach Aufdecken.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turn",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Südland widerspricht der Hauptstadt.",
     "image": "unterstuetzung/B818.jpg",
     "max_copies": 1,
@@ -1834,8 +2236,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF, wenn mindestens zwei Einheiten im Abschnitt. Einmal/Zug: eine verdeckte eigene Einheit +1 ATK beim Aufdecken.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1,
+          "when": "pair"
+        }
+      }
+    ],
     "flavor": "Velis-Front. Doppelte Linie, eine Wahrheit.",
     "image": "unterstuetzung/B870.jpg",
     "max_copies": 1,
@@ -1857,8 +2270,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten im Abschnitt +1 DEF.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Archive dichter als jede Tribüne.",
     "image": "unterstuetzung/B871.jpg",
     "max_copies": 1,
@@ -1880,8 +2303,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: ziehe 1, wenn du diesen Zug eine Einheit gespielt hast.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Regal schieben ist ein Zug.",
     "image": "unterstuetzung/B872.jpg",
     "max_copies": 1,
@@ -1903,8 +2337,25 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF; einmal/Zug: heile 1.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Preis gepflegt. Keine Front.",
     "image": "unterstuetzung/B873.jpg",
     "max_copies": 1,
@@ -1926,8 +2377,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: ziehe 1, wenn du diesen Zug eine Einheit gespielt hast. [Ämterlande]",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Ämter lesen einander.",
     "image": "unterstuetzung/B874.jpg",
     "max_copies": 1,
@@ -1949,8 +2411,27 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK/+1 DEF; einmal/Zug: negiere 1 Schaden an einer Einheit hier, wenn du diesen Zug Sofort spielst.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1,
+          "when": "played:Soforteinsatz",
+          "scope": "section"
+        }
+      }
+    ],
     "flavor": "Lagebrett. Die Karte lügt nützlich.",
     "image": "unterstuetzung/B875.jpg",
     "max_copies": 1,
@@ -1972,8 +2453,26 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK/+1 DEF; einmal/Zug: negiere 1 Schaden an einer Einheit hier.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1,
+          "scope": "section"
+        }
+      }
+    ],
     "flavor": "Ruf angreifen ist Spielen.",
     "image": "unterstuetzung/B876.jpg",
     "max_copies": 1,
@@ -1995,8 +2494,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: ziehe 1, wenn du diesen Zug eine Einheit gespielt hast. [Siegelwerk]",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Gerät für den nächsten Zug.",
     "image": "unterstuetzung/B877.jpg",
     "max_copies": 1,
@@ -2018,8 +2528,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF, wenn mindestens zwei Einheiten im Abschnitt.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1,
+          "when": "pair"
+        }
+      }
+    ],
     "flavor": "Raum ohne Karte. Trotzdem echt.",
     "image": "unterstuetzung/B878.jpg",
     "max_copies": 1,
@@ -2041,8 +2562,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF, wenn mindestens zwei Einheiten im Abschnitt. Nach einem Kill hier: ziehe 1.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1,
+          "when": "pair"
+        }
+      }
+    ],
     "flavor": "Halle Kalden. Einzige Änderung — vor den Namen.",
     "image": "unterstuetzung/B930.jpg",
     "max_copies": 1,
@@ -2064,8 +2596,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: ziehe 1, wenn du diesen Zug eine Einheit gespielt hast. [Abschrift]",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Abschrift gegen Vorlesung.",
     "image": "unterstuetzung/B931.jpg",
     "max_copies": 1,
@@ -2087,8 +2630,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: ziehe 1; nächste Sofort kostet 1 weniger (min. 0).",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Laut gesagt. Gültig.",
     "image": "unterstuetzung/B932.jpg",
     "max_copies": 1,
@@ -2110,8 +2664,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK im Zug ohne Bewegung.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK, wenn die Einheit seit deinem letzten Zug nicht versetzt wurde.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "when": "still"
+        }
+      }
+    ],
     "flavor": "Herberge zur Eintragung.",
     "image": "unterstuetzung/B933.jpg",
     "max_copies": 1,
@@ -2133,8 +2697,26 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK/+1 DEF; einmal/Zug: negiere 1 Schaden an einer Einheit hier. [Markt Mahr]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1,
+          "scope": "section"
+        }
+      }
+    ],
     "flavor": "Mahr fordert. Wird nicht Halle.",
     "image": "unterstuetzung/B934.jpg",
     "max_copies": 1,
@@ -2156,8 +2738,26 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK/+1 DEF; einmal/Zug: negiere 1 Schaden an einer Einheit hier. Danach: diese Einheit gilt als „genannt“ (+1 ATK gegen sie für den Gegner bis Zugende).",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1,
+          "scope": "section"
+        }
+      }
+    ],
     "flavor": "Schuldblatt. Offene Posten. Kein Thron.",
     "image": "unterstuetzung/B935.jpg",
     "max_copies": 1,
@@ -2179,8 +2779,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wenn du diesen Zug Sofort spielst: ziehe 1.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Kai unter Hausnamen.",
     "image": "unterstuetzung/B936.jpg",
     "max_copies": 1,
@@ -2202,8 +2813,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten, die diesen Zug hier gespielt werden, kosten 1 weniger (min. 1).",
-    "effects": [],
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true
+        }
+      }
+    ],
     "flavor": "Lehre endet. Neue Zeile.",
     "image": "unterstuetzung/B937.jpg",
     "max_copies": 1,
@@ -2225,8 +2845,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten, die diesen Zug hier gespielt werden, kosten 1 weniger (min. 1). [Namenhof]",
-    "effects": [],
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true
+        }
+      }
+    ],
     "flavor": "Hof mit Schild. Datum bleibt.",
     "image": "unterstuetzung/B938.jpg",
     "max_copies": 1,
@@ -2248,8 +2877,25 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF; einmal/Zug: heile 1. [Doppelhaus]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Berg und Gasse. Beide echt.",
     "image": "unterstuetzung/B750.jpg",
     "max_copies": 1,
@@ -2271,8 +2917,25 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF; einmal/Zug: heile 1. [Zeughaus Brückenau]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Zeughaus pflegt Gerät, nicht Siege.",
     "image": "unterstuetzung/B751.jpg",
     "max_copies": 1,
@@ -2294,8 +2957,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten im Abschnitt +1 DEF. [Parlamentsgasse]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Gasse bremst. Berg führt.",
     "image": "unterstuetzung/B752.jpg",
     "max_copies": 1,
@@ -2317,8 +2990,25 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK/+1 DEF; einmal/Zug: heile 1.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Bindung gehalten — morgens beide Häuser.",
     "image": "unterstuetzung/B753.jpg",
     "max_copies": 1,
@@ -2340,8 +3030,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wenn du diesen Zug Sofort spielst: ziehe 1. [Stille Ämter]",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Akten vor Trinkspruch.",
     "image": "unterstuetzung/B754.jpg",
     "max_copies": 1,
@@ -2363,8 +3064,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten im Abschnitt +1 DEF. [Dauerstellung]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Stellung bleibt. Name bleibt.",
     "image": "unterstuetzung/B755.jpg",
     "max_copies": 1,
@@ -2386,8 +3097,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wenn du diesen Zug Sofort spielst: ziehe 1. [Kronland-Hof]",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Hof im Kronland — Staat behält Namen.",
     "image": "unterstuetzung/B756.jpg",
     "max_copies": 1,
@@ -2409,8 +3131,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten, die diesen Zug hier gespielt werden, kosten 1 weniger (min. 1). [Flusshof]",
-    "effects": [],
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true
+        }
+      }
+    ],
     "flavor": "Hof liefert. Keine eigene Front.",
     "image": "unterstuetzung/B757.jpg",
     "max_copies": 1,
@@ -2432,8 +3163,25 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF; einmal/Zug: heile 1. [Lichthofen]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Schule lehrt Dauer, nicht Feldzug.",
     "image": "unterstuetzung/B758.jpg",
     "max_copies": 1,
@@ -2455,8 +3203,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Schieben im Abschnitt kostet 1 weniger.",
-    "effects": [],
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true
+        }
+      }
+    ],
     "flavor": "Einheiten in diesem Abschnitt kosten 1 weniger zum Schieben.",
     "image": "unterstuetzung/B192.jpg",
     "max_copies": 1,
@@ -2478,8 +3235,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: eigene Einheit heilt 1.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Im Kern voll. In der Ferne die letzte Ladung.",
     "image": "unterstuetzung/B193.jpg",
     "max_copies": 1,
@@ -2501,8 +3266,26 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK/+1 DEF; einmal/Zug: negiere 1 Schaden an einer Einheit hier. [Verbindungsstraße]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1,
+          "scope": "section"
+        }
+      }
+    ],
     "flavor": "Der Zusammenhalt sitzt nicht in der Nähe zu Fuß.",
     "image": "unterstuetzung/B194.jpg",
     "max_copies": 1,
@@ -2524,8 +3307,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten +1 DEF, wenn keine andere Unterstützung im Abschnitt.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Halten ohne auszunehmen.",
     "image": "unterstuetzung/B195.jpg",
     "max_copies": 1,
@@ -2547,8 +3341,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: eine geschobene Einheit +1 ATK.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Schieben und halten — nicht entlassen.",
     "image": "unterstuetzung/B196.jpg",
     "max_copies": 1,
@@ -2570,8 +3373,25 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF; einmal/Zug: heile 1. [Lizenzhof]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Familien zählen Ladung und Verantwortung getrennt.",
     "image": "unterstuetzung/B197.jpg",
     "max_copies": 1,
@@ -2593,8 +3413,26 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK/+1 DEF; einmal/Zug: negiere 1 Schaden an einer Einheit hier. [Neuviertel-Tisch]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1,
+          "scope": "section"
+        }
+      }
+    ],
     "flavor": "Leerer Platz am Tisch ist Entfernung, kein Ausland.",
     "image": "unterstuetzung/B198.jpg",
     "max_copies": 1,
@@ -2616,8 +3454,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wenn du diesen Zug Sofort spielst: ziehe 1. [Warteblatt]",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Beschwerde geht denselben Weg wie die Stimme.",
     "image": "unterstuetzung/B199.jpg",
     "max_copies": 1,
@@ -2639,8 +3488,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten, die diesen Zug geschoben werden, heilen 1.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Der Staat zahlt, wenn gefahren werden muss.",
     "image": "unterstuetzung/B200.jpg",
     "max_copies": 1,
@@ -2662,8 +3519,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF, wenn mindestens zwei Einheiten im Abschnitt. [Linienknoten]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1,
+          "when": "pair"
+        }
+      }
+    ],
     "flavor": "Knoten offen. Linie hält.",
     "image": "unterstuetzung/B690.jpg",
     "max_copies": 1,
@@ -2685,8 +3553,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten, die diesen Zug hier gespielt werden, kosten 1 weniger (min. 1). [Vorratshalle]",
-    "effects": [],
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true
+        }
+      }
+    ],
     "flavor": "Halle voll — und sie leert sich.",
     "image": "unterstuetzung/B691.jpg",
     "max_copies": 1,
@@ -2708,8 +3585,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten im Abschnitt +1 DEF. [Umschlagplatz]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Umschlag vor Stellung.",
     "image": "unterstuetzung/B692.jpg",
     "max_copies": 1,
@@ -2731,8 +3618,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK; einmal/Zug: bewege 1 Einheit 1 Abschnitt.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Netz der Städte. Kein Thron.",
     "image": "unterstuetzung/B693.jpg",
     "max_copies": 1,
@@ -2754,8 +3650,26 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK/+1 DEF; einmal/Zug: negiere 1 Schaden an einer Einheit hier. [Umschlagzentrale]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1,
+          "scope": "section"
+        }
+      }
+    ],
     "flavor": "Zentrale in Sarun — höflich, laut.",
     "image": "unterstuetzung/B694.jpg",
     "max_copies": 1,
@@ -2777,8 +3691,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: bis zu 2 Einheiten dürfen je 1 Abschnitt bewegen; sie +1 ATK diesen Zug.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Front ist der Weg. Nicht die Fahne.",
     "image": "unterstuetzung/B695.jpg",
     "max_copies": 1,
@@ -2800,8 +3723,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF, wenn mindestens zwei Einheiten im Abschnitt. [Doppelkolonne]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1,
+          "when": "pair"
+        }
+      }
+    ],
     "flavor": "Zwei Kolonnen nebeneinander.",
     "image": "unterstuetzung/B696.jpg",
     "max_copies": 1,
@@ -2823,8 +3757,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wenn du diesen Zug bewegt hast: ziehe 1.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Wasser für den, der fährt.",
     "image": "unterstuetzung/B697.jpg",
     "max_copies": 1,
@@ -2846,8 +3791,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK im Zug, in dem Sofort gespielt wurde.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Stein zählt Strecke, nicht Sieg.",
     "image": "unterstuetzung/B698.jpg",
     "max_copies": 1,
@@ -2869,8 +3823,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: wähle Feind hier — gilt als beobachtet.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turn",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Drei Schlüssel. Eine Karte.",
     "image": "unterstuetzung/B570.jpg",
     "max_copies": 1,
@@ -2892,8 +3855,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: decke 1 auf.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turn",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Karte ohne Denkmal.",
     "image": "unterstuetzung/B571.jpg",
     "max_copies": 1,
@@ -2915,8 +3887,26 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK/+1 DEF; einmal/Zug: negiere 1 Schaden an einer Einheit hier. [Depotfreigabe]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1,
+          "scope": "section"
+        }
+      }
+    ],
     "flavor": "Freigabe vor Wagen.",
     "image": "unterstuetzung/B572.jpg",
     "max_copies": 1,
@@ -2938,8 +3928,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK gegen beobachtete.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "vs": "observed",
+          "vsAtk": 1
+        }
+      }
+    ],
     "flavor": "Leitblatt teilen.",
     "image": "unterstuetzung/B573.jpg",
     "max_copies": 1,
@@ -2961,8 +3961,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: Einheit hier gespielt kostet 1 weniger (min. 1); ziehe 1.",
-    "effects": [],
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true
+        }
+      }
+    ],
     "flavor": "Depot der Kommission.",
     "image": "unterstuetzung/B574.jpg",
     "max_copies": 1,
@@ -2984,8 +3993,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: markiere bis zu 2 Feinde als beobachtet; Einheiten hier +1 ATK gegen sie.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turn",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Plan vor Schuss. Nicht danach.",
     "image": "unterstuetzung/B575.jpg",
     "max_copies": 1,
@@ -3007,8 +4025,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF, wenn mindestens zwei Einheiten im Abschnitt. [Lagerordnung]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1,
+          "when": "pair"
+        }
+      }
+    ],
     "flavor": "Ordnung vor Marsch.",
     "image": "unterstuetzung/B576.jpg",
     "max_copies": 1,
@@ -3030,8 +4059,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wenn du diesen Zug aufgedeckt hast: ziehe 1.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug aufgedeckt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "revealed"
+        }
+      }
+    ],
     "flavor": "Bericht neben dem Amtsblatt.",
     "image": "unterstuetzung/B577.jpg",
     "max_copies": 1,
@@ -3053,8 +4093,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 ATK im Zug, in dem Freigabe-/Sofort gespielt wurde.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Land gibt Straße — oder nicht.",
     "image": "unterstuetzung/B578.jpg",
     "max_copies": 1,
@@ -3076,8 +4125,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten in diesem Abschnitt kosten 1 weniger (min. 1).",
-    "effects": [],
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true
+        }
+      }
+    ],
     "flavor": "Lieferung vor Meinung.",
     "image": "unterstuetzung/B510.jpg",
     "max_copies": 1,
@@ -3099,8 +4157,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: ziehe 1, wenn im Abschnitt eine Unterstützung liegt.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Boot trägt. Es hält keine Stellung.",
     "image": "unterstuetzung/B511.jpg",
     "max_copies": 1,
@@ -3122,8 +4191,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten, die diesen Zug hier gespielt werden, +1 ATK.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Schiff ist Weg. Nicht Einheit.",
     "image": "unterstuetzung/B512.jpg",
     "max_copies": 1,
@@ -3145,8 +4223,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: Einheit hier gespielt kostet 1 weniger (min. 1).",
-    "effects": [],
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true
+        }
+      }
+    ],
     "flavor": "Ader zwischen den Kais.",
     "image": "unterstuetzung/B513.jpg",
     "max_copies": 1,
@@ -3168,8 +4255,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: ziehe 1, wenn du diesen Zug eine Einheit gespielt hast. [Volle Front-Lager]",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Lager der vollen Front.",
     "image": "unterstuetzung/B514.jpg",
     "max_copies": 1,
@@ -3191,8 +4289,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier kosten 1 weniger und +1 ATK im Zug, in dem sie gespielt werden.",
-    "effects": [],
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true
+        }
+      }
+    ],
     "flavor": "Offener Kai — Bund, kein Hof.",
     "image": "unterstuetzung/B515.jpg",
     "max_copies": 1,
@@ -3214,8 +4321,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: heile 1 an Einheit, die diesen Zug gerückt ist.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Werft repariert Achsen. Keine Sterne.",
     "image": "unterstuetzung/B516.jpg",
     "max_copies": 1,
@@ -3237,8 +4352,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wenn Entsatz diesen Zug: ziehe 1.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Halle spricht. Sie setzt den Marktpreis nicht.",
     "image": "unterstuetzung/B517.jpg",
     "max_copies": 1,
@@ -3260,8 +4386,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten, die in zuletzt angegriffene Abschnitte rücken, +1 DEF.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Fahrplan wird Stellung.",
     "image": "unterstuetzung/B518.jpg",
     "max_copies": 1,
@@ -3283,8 +4418,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten +1 DEF gegen Einrückende.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "vs": "entering",
+          "vsAtk": 1
+        }
+      }
+    ],
     "flavor": "Stein, nicht Sitz.",
     "image": "unterstuetzung/B231.jpg",
     "max_copies": 1,
@@ -3306,8 +4451,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einrückende Feinde erleiden 1 Schaden.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "vs": "entering",
+          "vsAtk": 1
+        }
+      }
+    ],
     "flavor": "Stellung in der Enge.",
     "image": "unterstuetzung/B232.jpg",
     "max_copies": 1,
@@ -3329,8 +4484,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: einrückende Einheit erleidet 1 Schaden.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "vs": "entering",
+          "vsAtk": 1
+        }
+      }
+    ],
     "flavor": "Sperre ohne gemeinsamen Befehl.",
     "image": "unterstuetzung/B233.jpg",
     "max_copies": 1,
@@ -3352,8 +4517,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: eigene allein stehende Einheit heilt 1.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Vorräte im Tal. Kein gemeinsames Lager.",
     "image": "unterstuetzung/B234.jpg",
     "max_copies": 1,
@@ -3375,8 +4548,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Bei 2+ Abschnitten mit eigenen Einheiten: ziehe 1 einmal/Zug.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Getagt wird jedes Mal woanders.",
     "image": "unterstuetzung/B235.jpg",
     "max_copies": 1,
@@ -3398,8 +4582,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten hier +1 DEF, wenn mindestens zwei Einheiten im Abschnitt. [Tunnelnetz]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1,
+          "when": "pair"
+        }
+      }
+    ],
     "flavor": "Leichte Geräte, die ein Tal selbst tragen kann.",
     "image": "unterstuetzung/B236.jpg",
     "max_copies": 1,
@@ -3421,8 +4616,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten im Abschnitt +1 DEF. [Eidkopie]",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Dasselbe Recht an mehr als einem Ort.",
     "image": "unterstuetzung/B237.jpg",
     "max_copies": 1,
@@ -3444,8 +4649,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten in benachbarten Abschnitten +1 DEF.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Hilfe bleibt Hilfe und wird nicht Besatzung.",
     "image": "unterstuetzung/B238.jpg",
     "max_copies": 1,
@@ -3467,8 +4681,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Infanterie im Abschnitt +1 ATK gegen Einrückende.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Infanterie dort +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "vs": "entering",
+          "vsAtk": 1,
+          "filter": "infanterie"
+        }
+      }
+    ],
     "flavor": "Die Stellung gehört trotzdem nur diesem Tal.",
     "image": "unterstuetzung/B239.jpg",
     "max_copies": 1,
@@ -3490,8 +4715,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: eigene Einheit im Abschnitt heilt 1.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit im gewählten Abschnitt.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1,
+          "scope": "section"
+        }
+      }
+    ],
     "flavor": "Weiße Plane, ruhige Stimmen.",
     "image": "unterstuetzung/B330.jpg",
     "max_copies": 1,
@@ -3513,8 +4747,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Ruhende Einheiten im Abschnitt +1 DEF.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Tellersatz vor dem Angriffssatz.",
     "image": "unterstuetzung/B331.jpg",
     "max_copies": 1,
@@ -3536,10 +4779,22 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: heile 1; nächste Einheit kostet 1 weniger.",
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit. Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
     "effects": [
       {
-        "code": "UNIT_DISCOUNT"
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": true
+        }
       }
     ],
     "flavor": "Zuteilung hält die Front.",
@@ -3563,8 +4818,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten im Abschnitt heilen 1 am Zugende wenn sie nicht angriffen.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit im gewählten Abschnitt, die in deinem letzten Zug nicht angegriffen hat.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1,
+          "scope": "section",
+          "when": "rested"
+        }
+      }
+    ],
     "flavor": "Klinik und Liste — dieselbe Tür.",
     "image": "unterstuetzung/B333.jpg",
     "max_copies": 1,
@@ -3586,8 +4851,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Abschnitt +1 DEF; ruhende +1 ATK nächsten Zug.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Schlüssel und Akte aus einer Hand.",
     "image": "unterstuetzung/B334.jpg",
     "max_copies": 1,
@@ -3609,8 +4883,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Negiere ersten Schaden an Unterstützung; ziehe 1 bei Heilung.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Aufruhr und Mangel sind dieselbe dünne Stelle.",
     "image": "unterstuetzung/B335.jpg",
     "max_copies": 1,
@@ -3632,8 +4914,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Heile 1 an bis zu zwei ruhenden Einheiten.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Grünfeld meldet. Die Küche hält.",
     "image": "unterstuetzung/B336.jpg",
     "max_copies": 1,
@@ -3655,8 +4945,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: Einheit +1 DEF; wenn gemeldet (Aufklärung), +1 ATK.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Leistung gegen Zugriff.",
     "image": "unterstuetzung/B337.jpg",
     "max_copies": 1,
@@ -3678,10 +4977,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Alle eigenen Einheiten: diesen Zug nicht angreifen → +2 DEF und heile 1.",
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
-        "code": "AURA_FRONT_DEF"
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
       }
     ],
     "flavor": "Rasten als Doktrin. Nicht als Faulheit.",
@@ -3705,7 +5008,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: Ausrüstung im Abschnitt kostet 1 weniger (min. 1).",
+    "text": "Eigene Ausrüstung kostet 1 AP weniger (mind. 1).",
     "effects": [
       {
         "code": "EQUIP_DISCOUNT"
@@ -3732,8 +5035,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einheiten mit Ausrüstung +1 DEF.",
-    "effects": [],
+    "text": "Eigene Einheiten mit Ausrüstung +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "all",
+          "def": 1,
+          "when": "equipped"
+        }
+      }
+    ],
     "flavor": "Ernst ohne Liturgie.",
     "image": "unterstuetzung/B271.jpg",
     "max_copies": 1,
@@ -3755,10 +5068,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Stirbt eigene Einheit: Abschnitt +1 DEF bis Ende nächsten Zugs.",
+    "text": "Einmal pro Zug, wenn eine eigene Einheit zerstört wird: ziehe 1 Karte.",
     "effects": [
       {
-        "code": "AURA_FRONT_DEF"
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "own_destroyed",
+          "do": "draw",
+          "n": 1
+        }
       }
     ],
     "flavor": "Name im Dienst. Nicht als Forderung.",
@@ -3782,8 +5101,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: eigene Einheit mit Ausrüstung +1 ATK.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Liste der Lebenden zuerst.",
     "image": "unterstuetzung/B273.jpg",
     "max_copies": 1,
@@ -3805,8 +5133,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Negiere ersten Schaden an Unterstützung; Trauer: heile 1 bei Feindtötung.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Valeris setzt Zeichen. Nicht die Politik.",
     "image": "unterstuetzung/B274.jpg",
     "max_copies": 1,
@@ -3828,8 +5164,19 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: ziehe 1 wenn du diesen Zug niemanden opferst (keine eigene Zerstörung).",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Regierung ohne Maske.",
     "image": "unterstuetzung/B275.jpg",
     "max_copies": 1,
@@ -3851,8 +5198,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Stirbt eigene oder Feind: heile 1 an Einheit im Abschnitt.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Zuerst bergen. Zuletzt das Zeichen.",
     "image": "unterstuetzung/B276.jpg",
     "max_copies": 1,
@@ -3874,8 +5229,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Ausrüstungen im Abschnitt: Träger +1 DEF.",
-    "effects": [],
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "def": 1
+        }
+      }
+    ],
     "flavor": "Vertrag mit dem Amt. Kein Rohling der Truppe.",
     "image": "unterstuetzung/B277.jpg",
     "max_copies": 1,
@@ -3897,8 +5261,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Stirbt Feind im Abschnitt: Abschnitt +1 ATK bis Zugende; übrige Abschnitte +1 DEF bis Ende nächsten Zugs.",
-    "effects": [],
+    "text": "Einmal pro Zug, wenn eine eigene Einheit zerstört wird: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "own_destroyed",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Abnutzung als Deckung. Nicht als Hunger.",
     "image": "unterstuetzung/B278.jpg",
     "max_copies": 1,
@@ -3920,8 +5294,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: decke Feind im Abschnitt auf.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turn",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Zelt misst. Es unterschreibt nicht.",
     "image": "unterstuetzung/B450.jpg",
     "max_copies": 1,
@@ -3943,8 +5326,18 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Aufklärung kostet 1 weniger (min. 1).",
-    "effects": [],
+    "text": "Deine Aufklärung kosten 1 AP weniger (mind. 1).",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "discount",
+          "delta": -1,
+          "once": false,
+          "filter": "aufklaerung"
+        }
+      }
+    ],
     "flavor": "Gürtel der Institute — neben dem Saal.",
     "image": "unterstuetzung/B451.jpg",
     "max_copies": 1,
@@ -3966,8 +5359,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal/Zug: eigene Einheit +1 ATK gegen aufgeklärte ODER brich Angriff ab → heile 1.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Unterschrift sichtbar. Nicht hinter der Zahl.",
     "image": "unterstuetzung/B452.jpg",
     "max_copies": 1,
@@ -3989,8 +5390,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Heile 1; keine Rangsortierung — alle Einheiten im Abschnitt +1 DEF.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Behandelt. Bewertet Leben nicht.",
     "image": "unterstuetzung/B453.jpg",
     "max_copies": 1,
@@ -4012,8 +5421,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Ziehe 1 wenn du aufdeckst; Gerücht (kein Aufdecken): Feind −1 ATK.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turn",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Ergebnis ohne Verfahren ist Gerücht.",
     "image": "unterstuetzung/B454.jpg",
     "max_copies": 1,
@@ -4035,8 +5453,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Zwei Wahrheiten: ziehe 1 und decke 1 auf ODER heile 1.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Hof zählt zweimal — und sagt warum.",
     "image": "unterstuetzung/B455.jpg",
     "max_copies": 1,
@@ -4058,8 +5484,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Sensorik: einmal/Zug decke oberste Karte des Gegners auf (Hand/Deck-Top).",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turn",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Gerät ohne Herrschaft.",
     "image": "unterstuetzung/B456.jpg",
     "max_copies": 1,
@@ -4081,8 +5516,17 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Feinde im Abschnitt gelten als aufgeklärt, solange Netz liegt.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turn",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Netz der Proben. Kein Netz des Werts.",
     "image": "unterstuetzung/B457.jpg",
     "max_copies": 1,
@@ -4104,8 +5548,16 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Negiere eigenen Angriffsbonus; ziehe 2 und heile 1.",
-    "effects": [],
+    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Abbruch ist Lehre. Nicht Schwäche.",
     "image": "unterstuetzung/B458.jpg",
     "max_copies": 1,

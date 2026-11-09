@@ -125,7 +125,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung",
       "kommandant"
     ],
-    "text": "An Infanterie. Reale Kosten 4 AP. Träger +2 A / +2 V.",
+    "text": "An Infanterie. Reale Kosten 4 AP. Träger +2 ATK / +2 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -155,7 +155,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung",
       "schanzen"
     ],
-    "text": "Zug ohne Angriff: +1 V. Beim Angriff zurück auf Ursprung.",
+    "text": "Zug ohne Angriff: +1 DEF. Beim Angriff zurück auf Ursprung.",
     "effects": [
       {
         "code": "SCHANZEN",
@@ -183,7 +183,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung",
       "medizin"
     ],
-    "text": "Träger +3 V/Zug bis defMax. Flanken +2 V/Zug bis defMax.",
+    "text": "Träger +3 DEF/Zug bis defMax. Flanken +2 DEF/Zug bis defMax.",
     "effects": [
       {
         "code": "MEDIZIN",
@@ -238,7 +238,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       "ausruestung",
       "medizin"
     ],
-    "text": "Träger +2 V/Zug bis defMax.",
+    "text": "Träger +2 DEF/Zug bis defMax.",
     "effects": [
       {
         "code": "TASCHE",
@@ -267,7 +267,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Panzer +1 DEF; einmalig 1 heilen bei Schaden.",
+    "text": "Nur an Panzer. Träger +1 DEF. Einmalig: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -305,7 +305,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Artillerie +1 ATK.",
+    "text": "Nur an Artillerie. Träger +1 ATK.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -368,12 +368,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Aufklärung/Artillerie +1 ATK gegen Aufgeklärte.",
+    "text": "Nur an Artillerie.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
+          "atk": 0,
           "def": 0,
           "only": "artillerie"
         }
@@ -400,13 +400,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Panzer +2 DEF, −1 ATK.",
+    "text": "Nur an Panzer.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": -1,
-          "def": 2,
+          "atk": 0,
+          "def": 0,
           "only": "panzer"
         }
       }
@@ -462,7 +462,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
+    "text": "Wird der Träger zerstört, ziehe 1 Karte.",
     "effects": [
       {
         "code": "ON_DESTROY_DRAW",
@@ -492,7 +492,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Infanterie +1 DEF.",
+    "text": "Nur an Infanterie. Träger +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -692,13 +692,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK, solange andere eigene Infanterie im Abschnitt liegt.",
+    "text": "Träger +1 ATK, solange eigene Infanterie benachbart ist.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 1,
-          "def": 0
+          "when": "adj:infanterie"
         }
       }
     ],
@@ -825,7 +826,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK und +1 DEF.",
+    "text": "Träger +1 ATK, +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -886,7 +887,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +2 DEF. Träger kann nicht angreifen.",
+    "text": "Träger +2 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -953,7 +954,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Wenn Träger ersetzt wird: neuer Träger erhält +1 DEF und „Schwur“ (erster Schaden ignoriert).",
+    "text": "Träger +1 ATK.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -987,10 +988,11 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger +1 ATK, solange er beschädigt ist.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 1,
-          "def": 0
+          "when": "damaged"
         }
       }
     ],
@@ -1015,7 +1017,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
+    "text": "Träger +1 DEF. Wird der Träger zerstört, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -1083,13 +1085,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK, solange beschädigt (Preis des Rechts).",
+    "text": "Träger +1 ATK, solange er beschädigt ist.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 1,
-          "def": 0
+          "when": "damaged"
         }
       }
     ],
@@ -1114,7 +1117,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Einmal: +1 zusätzlicher ATK für einen Angriff, dann ablegen.",
+    "text": "Träger +1 ATK.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -1145,7 +1148,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Solange ausgerüstet: einmal pro Zug darfst du statt Angriff 1 DEF an einer anderen Einheit im Abschnitt heilen.",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -1347,13 +1350,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK, solange beschädigt.",
+    "text": "Träger +1 ATK, solange er beschädigt ist.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 1,
-          "def": 0
+          "when": "damaged"
         }
       }
     ],
@@ -1491,7 +1495,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
+    "text": "Träger +1 DEF. Wird der Träger zerstört, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -1605,13 +1609,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK gegen Aufgeklärte.",
+    "text": "Träger +1 ATK gegen beobachtete Ziele.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "vs",
           "atk": 1,
-          "def": 0
+          "vs": "observed"
         }
       }
     ],
@@ -1636,7 +1641,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Plattenträger]",
+    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
@@ -1667,7 +1672,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Sandstreifen]",
+    "text": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -1705,13 +1710,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; einmal/Zug: decke 1 auf.",
+    "text": "Träger +1 ATK. Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 1,
           "def": 0
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
         }
       }
     ],
@@ -1736,7 +1747,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf.",
+    "text": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -1774,7 +1785,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. [Quellenmappe]",
+    "text": "Träger +1 ATK.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -1805,7 +1816,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger: einmal/Zug heile 1. [Netzlampe]",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -1873,13 +1884,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK gegen Aufgeklärte; einmal/Zug: decke 1 auf.",
+    "text": "Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "vs",
           "atk": 1,
-          "def": 0
+          "vs": "observed"
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
         }
       }
     ],
@@ -1904,7 +1922,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; ziehe 1 wenn du diesen Zug Sofort spielst. [Verlustliste]",
+    "text": "Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -1934,21 +1952,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Schwarzes Siegel",
-    "ap": 1,
+    "ap": 0,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1.",
+    "text": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
-          "def": 0,
-          "costReduce": 1
+          "def": 0
         }
       },
       {
@@ -1979,7 +1996,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger: einmal/Zug heile 1.",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -2010,7 +2027,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF; einmal/Zug: ziehe 1 wenn Sofort gespielt.",
+    "text": "Träger +1 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2047,7 +2064,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF.",
+    "text": "Träger +1 ATK, +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2078,7 +2095,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Stillkragen]",
+    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2088,10 +2105,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       },
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "when": "still"
         }
       }
     ],
@@ -2116,7 +2135,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF; einmal/Zug: ziehe 1, wenn du diesen Zug eine Sofort mit Aufdecken-Effekt gespielt hast.",
+    "text": "Träger +1 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz mit Aufdecken, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2154,7 +2173,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; ziehe 1 wenn du diesen Zug Sofort spielst. [Falschmarke]",
+    "text": "Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2191,7 +2210,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, wenn Unterstützung angrenzt.",
+    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
@@ -2321,7 +2340,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF. [Abschriftmappe]",
+    "text": "Träger +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2352,7 +2371,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger: einmal/Zug heile 1. (Nussrock)",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -2383,7 +2402,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; ziehe 1 wenn du diesen Zug Sofort spielst.",
+    "text": "Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2420,7 +2439,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Stillmanschette]",
+    "text": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2458,7 +2477,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF; einmal/Zug: ziehe 1 wenn Sofort gespielt und ein Ziel genannt wurde diesen Zug.",
+    "text": "Träger +1 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2495,7 +2514,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger: einmal/Zug heile 1. [Fälligkeitsmarke]",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -2526,7 +2545,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF. [Haussiegel]",
+    "text": "Träger +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2595,7 +2614,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF. [Fallakte]",
+    "text": "Träger +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2626,7 +2645,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF; einmal/Zug: ziehe 1 wenn Sofort gespielt. [Kronenspiegel]",
+    "text": "Träger +1 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2663,7 +2682,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. [Bindungszeichen]",
+    "text": "Träger +1 ATK.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2694,7 +2713,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Steingrünmantel]",
+    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
@@ -2725,7 +2744,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Zeughausschlüssel]",
+    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
@@ -2756,7 +2775,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Markenkragen]",
+    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
@@ -2787,7 +2806,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger: einmal/Zug heile 1. [Parlamentsstempel]",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -2818,7 +2837,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. [Ölflasche]",
+    "text": "Träger +1 ATK.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2849,7 +2868,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Grenzmarke]",
+    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2859,10 +2878,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       },
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "when": "still"
         }
       }
     ],
@@ -2887,7 +2908,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Doppelhaus-Siegel]",
+    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
@@ -2918,7 +2939,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Aktenmappe]",
+    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2928,10 +2949,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       },
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "when": "still"
         }
       }
     ],
@@ -2956,7 +2979,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF. [Spare Paspel]",
+    "text": "Träger +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -2987,7 +3010,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; ziehe 1 wenn du diesen Zug Sofort spielst. [Marschkette]",
+    "text": "Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3024,7 +3047,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger: einmal/Zug heile 1. [Kai-Optik]",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -3055,7 +3078,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF. [Lizenzsiegel]",
+    "text": "Träger +1 ATK, +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3079,21 +3102,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Etappenplatte",
-    "ap": 2,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1. [Etappenplatte]",
+    "text": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
-          "def": 0,
-          "costReduce": 1
+          "def": 0
         }
       },
       {
@@ -3124,7 +3146,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Munitionskai]",
+    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3134,10 +3156,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       },
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "when": "still"
         }
       }
     ],
@@ -3155,21 +3179,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Wartezettel",
-    "ap": 1,
+    "ap": 0,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1. [Wartezettel]",
+    "text": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
-          "def": 0,
-          "costReduce": 1
+          "def": 0
         }
       },
       {
@@ -3200,7 +3223,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Kaliberkiste Ferne]",
+    "text": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3238,7 +3261,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Clip Kronenhof]",
+    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3248,10 +3271,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       },
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "when": "still"
         }
       }
     ],
@@ -3307,13 +3332,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK, wenn du diesen Zug Sofort spielst.",
+    "text": "Träger +1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 1,
-          "def": 0
+          "when": "played:Soforteinsatz"
         }
       }
     ],
@@ -3338,7 +3364,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Offener Knoten]",
+    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
@@ -3369,7 +3395,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Sandmantel]",
+    "text": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3438,7 +3464,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; +1 DEF wenn unbewegt.",
+    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3448,10 +3474,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       },
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "when": "still"
         }
       }
     ],
@@ -3476,7 +3504,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF; einmal/Zug: bewege Träger 1 Abschnitt.",
+    "text": "Träger +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3507,7 +3535,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger: einmal/Zug heile 1 nach Bewegung.",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -3538,7 +3566,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; bei Angriff aus Bewegung +1 ATK.",
+    "text": "Träger +1 ATK.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3569,7 +3597,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK/+1 DEF; einmal/Zug: spiele Einheit 1 billiger (min. 1) wenn Träger bewegt.",
+    "text": "Träger +1 ATK, +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3600,7 +3628,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger: einmal/Zug heile 1. [Satteltasche]",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -3631,13 +3659,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK gegen beobachtete.",
+    "text": "Träger +1 ATK gegen beobachtete Ziele.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "vs",
           "atk": 1,
-          "def": 0
+          "vs": "observed"
         }
       }
     ],
@@ -3655,21 +3684,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Dienstbuch",
-    "ap": 1,
+    "ap": 0,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen decke 1 auf.",
+    "text": "Beim Anlegen: decke eine verdeckte gegnerische Einheit auf. Beim Anlegen: decke eine verdeckte gegnerische Einheit auf. nerische Einheit auf.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
-          "def": 0,
-          "costReduce": 1
+          "def": 0
         }
       },
       {
@@ -3706,7 +3734,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF; einmal/Zug: ziehe 1 wenn Sofort gespielt. [Normhelm]",
+    "text": "Träger +1 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3767,21 +3795,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Normgewehr",
-    "ap": 1,
+    "ap": 0,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1. [Normgewehr]",
+    "text": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
-          "def": 0,
-          "costReduce": 1
+          "def": 0
         }
       },
       {
@@ -3812,13 +3839,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF; einmal/Zug: decke 1 auf.",
+    "text": "Träger +1 DEF. Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
           "def": 1
+        }
+      },
+      {
+        "code": "REVEAL",
+        "param": {
+          "count": 1
         }
       }
     ],
@@ -3843,7 +3876,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger: einmal/Zug heile 1 wenn Ziel beobachtet.",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -3874,7 +3907,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; bei Angriff Ziel gilt als beobachtet.",
+    "text": "Träger +1 ATK.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3905,13 +3938,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK/+1 DEF, wenn Infanterie und Artillerie (oder Panzer) im Abschnitt.",
+    "text": "Träger +1 ATK und +1 DEF, solange eigene Infanterie benachbart ist und eigene Artillerie steht.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 1,
-          "def": 1
+          "def": 1,
+          "when": "adj:infanterie&unit:artillerie"
         }
       }
     ],
@@ -3936,7 +3971,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, wenn Unterstützung angrenzt. [Freigabeformular]",
+    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
@@ -3967,13 +4002,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK, wenn im Abschnitt eine Unterstützung liegt.",
+    "text": "Träger +1 ATK, solange du eine offene Unterstützung hast.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 1,
-          "def": 0
+          "when": "support"
         }
       }
     ],
@@ -3998,7 +4034,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger kostet 1 weniger, wenn Unterstützung im Abschnitt (min. 1).",
+    "text": "Kostet 1 AP weniger, wenn du eine Unterstützung im Feld hast.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -4031,7 +4067,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger: einmal/Zug heile 1. [Dunkelblau]",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -4093,7 +4129,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Beim Ausspielen: ziehe 1 wenn Unterstützung im Spiel.",
+    "text": "Beim Anlegen: ziehe 1 Karte.",
     "effects": [
       {
         "code": "ON_ENTER_DRAW",
@@ -4154,7 +4190,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger: einmal/Zug heile 1 wenn Unterstützung liegt.",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -4185,7 +4221,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF; bei Rücken in angegriffenen Abschnitt +1 ATK.",
+    "text": "Träger +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -4285,13 +4321,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, wenn allein im Abschnitt.",
+    "text": "Träger +1 DEF, solange er allein im Abschnitt steht.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "when": "alone"
         }
       }
     ],
@@ -4316,13 +4354,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK gegen Einrückende.",
+    "text": "Träger +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "vs",
           "atk": 1,
-          "def": 0
+          "vs": "entering"
         }
       }
     ],
@@ -4347,7 +4386,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Schieferumhang]",
+    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -4357,10 +4396,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       },
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "when": "still"
         }
       }
     ],
@@ -4385,12 +4426,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Aufklärung/Artillerie +1 ATK gegen Einrückende.",
+    "text": "Nur an Artillerie.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
+          "atk": 0,
           "def": 0,
           "only": "artillerie"
         }
@@ -4417,7 +4458,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Tunnelplatte]",
+    "text": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -4455,7 +4496,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger: einmal/Zug heile 1. [Leserklammer]",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
@@ -4486,7 +4527,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF. [Engenkette]",
+    "text": "Träger +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -4517,7 +4558,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Hangladung]",
+    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -4527,10 +4568,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       },
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "when": "still"
         }
       }
     ],
@@ -4555,7 +4598,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; +1 DEF wenn unbewegt. [Eidstempel]",
+    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -4565,10 +4608,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       },
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "when": "still"
         }
       }
     ],
@@ -4593,13 +4638,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "+1 ATK/+1 DEF, wenn 2+ eigene Einheiten im Abschnitt.",
+    "text": "Träger +1 ATK und +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 1,
-          "def": 1
+          "def": 1,
+          "when": "pair"
         }
       }
     ],
@@ -4693,7 +4740,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF. [Institutionsstoff]",
+    "text": "Träger +1 ATK, +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -4755,13 +4802,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK gegen aufgeklärte.",
+    "text": "Träger +1 ATK gegen beobachtete Ziele.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "vs",
           "atk": 1,
-          "def": 0
+          "vs": "observed"
         }
       }
     ],
@@ -4786,7 +4834,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Schutzplane]",
+    "text": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -4968,7 +5016,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. [Knochenplatte]",
+    "text": "Träger +1 ATK.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -5036,13 +5084,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK, wenn in diesem Zug eigene Einheit zerstört.",
+    "text": "Träger +1 ATK, wenn in diesem Zug eine eigene Einheit zerstört wurde.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "stat",
           "atk": 1,
-          "def": 0
+          "when": "lost"
         }
       }
     ],
@@ -5098,7 +5147,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF. [Schmiedehammer]",
+    "text": "Träger +1 ATK, +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -5129,7 +5178,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. [Schwere Platte]",
+    "text": "Träger +1 ATK.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -5160,7 +5209,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF; überlebt Angriff: +1 ATK bis Zugende.",
+    "text": "Träger +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -5296,7 +5345,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF. [Messgerät]",
+    "text": "Träger +1 ATK, +1 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -5354,7 +5403,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK; ziehe 1 wenn du diesen Zug Sofort spielst. [Technische Linie]",
+    "text": "Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -5421,7 +5470,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Beim Ausspielen: decke 1 auf.",
+    "text": "Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "REVEAL",
@@ -5557,13 +5606,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +2 ATK gegen aufgeklärte.",
+    "text": "Träger +2 ATK gegen beobachtete Ziele.",
     "effects": [
       {
-        "code": "EQUIP_STAT",
+        "code": "CM",
         "param": {
+          "k": "vs",
           "atk": 2,
-          "def": 0
+          "vs": "observed"
         }
       }
     ],

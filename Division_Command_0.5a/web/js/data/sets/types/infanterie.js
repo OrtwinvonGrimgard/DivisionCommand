@@ -358,7 +358,7 @@ window.DC_SET_TYPES["Infanterie"] = [
       "panzerabwehr",
       "stellung"
     ],
-    "text": "Panzerfaust: +5 A und +5 V gegen Gepanzerte.",
+    "text": "Panzerfaust: +5 ATK und +5 DEF gegen Gepanzerte.",
     "effects": [
       {
         "code": "PANZERFAUST",
@@ -417,8 +417,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, solange eigene Panzer- oder Artillerieeinheit im Spiel.",
-    "effects": [],
+    "text": "+1 DEF, solange ein eigener Panzer oder eine eigene Artillerie steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "unit:panzer_art"
+        }
+      }
+    ],
     "flavor": "Sie halten den Boden, damit die Ware rollt.",
     "image": "infanterie/B022.jpg",
     "max_copies": 1,
@@ -443,8 +453,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Wenn du diesen Zug Ausrüstung gespielt hast: +1 DEF.",
-    "effects": [],
+    "text": "+1 DEF, wenn du in diesem Zug Ausrüstung gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "played:Ausrüstung"
+        }
+      }
+    ],
     "flavor": "Der Zaun ist billiger als die Halle.",
     "image": "infanterie/B023.jpg",
     "max_copies": 1,
@@ -469,8 +489,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn du diesen Zug schon eine Einheit gespielt hast.",
-    "effects": [],
+    "text": "+1 ATK, wenn du in diesem Zug schon eine Einheit gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "played:Einheit"
+        }
+      }
+    ],
     "flavor": "Die Schicht endet nicht am Tor.",
     "image": "infanterie/B024.jpg",
     "max_copies": 1,
@@ -495,8 +524,19 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Benachbarte eigene Einheiten +1 DEF, wenn du Soforteinsatz diesen Zug spieltest.",
-    "effects": [],
+    "text": "Benachbarte eigene Einheiten +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "adjacent",
+          "def": 1,
+          "when": "played:Soforteinsatz",
+          "self": true
+        }
+      }
+    ],
     "flavor": "Ohne Kordon keine Kolonne.",
     "image": "infanterie/B025.jpg",
     "max_copies": 1,
@@ -518,8 +558,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Kostet 1 weniger, wenn du diesen Zug Artillerie gespielt hast.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), wenn du in diesem Zug Artillerie gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "played:Artillerie"
+        }
+      }
+    ],
     "flavor": "Unter dem Feuer wird die Linie zur Rechnung.",
     "image": "infanterie/B026.jpg",
     "max_copies": 1,
@@ -541,8 +590,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Wenn diese Einheit stirbt: ziehe 1, falls Ausrüstung im Spiel.",
-    "effects": [],
+    "text": "Wird sie zerstört: ziehe 1 Karte, solange eine eigene Einheit Ausrüstung trägt.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "death",
+          "do": "draw",
+          "n": 1,
+          "when": "gear"
+        }
+      }
+    ],
     "flavor": "Im Plan sind sie Verbrauch. In der Familie nicht.",
     "image": "infanterie/B027.jpg",
     "max_copies": 1,
@@ -568,8 +627,18 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+1 DEF, solange du in diesem Zug eine Infanterie gespielt hast.",
-    "effects": [],
+    "text": "+1 DEF, wenn du in diesem Zug Infanterie gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "played:Infanterie"
+        }
+      }
+    ],
     "flavor": "Aus dem Werk, in die Reihe.",
     "image": "infanterie/B001.jpg",
     "max_copies": 1,
@@ -592,8 +661,16 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Wer zuerst geht, trägt den Balken.",
     "image": "infanterie/B002.jpg",
     "max_copies": 1,
@@ -619,8 +696,16 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "Wenn eine eigene Infanterie zerstört wird: diese Einheit darf sofort angreifen.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Die Lücke ist ein Befehl.",
     "image": "infanterie/B004.jpg",
     "max_copies": 1,
@@ -646,8 +731,18 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+1 ATK und +1 DEF, wenn in diesem Zug schon eine eigene Infanterie gespielt wurde.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, wenn du in diesem Zug Infanterie gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "played:Infanterie"
+        }
+      }
+    ],
     "flavor": "Der Zentralrat zählt Wellen, nicht Namen.",
     "image": "infanterie/B005.jpg",
     "max_copies": 1,
@@ -673,8 +768,17 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+2 ATK gegen ein Ziel, das in diesem Zug noch nicht angegriffen wurde.",
-    "effects": [],
+    "text": "+2 ATK gegen Ziele, die in diesem Zug noch nicht angegriffen wurden.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 2,
+          "vs": "fresh"
+        }
+      }
+    ],
     "flavor": "Ein Schlag. Dann der nächste.",
     "image": "infanterie/B006.jpg",
     "max_copies": 1,
@@ -700,8 +804,18 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "Eigene Infanterie im Abschnitt hat +1 ATK.",
-    "effects": [],
+    "text": "Andere eigene Infanterie in ihrem Abschnitt: +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "filter": "infanterie"
+        }
+      }
+    ],
     "flavor": "Voss nennt das Maß. Die Front nennt es Glauben.",
     "image": "infanterie/B008.jpg",
     "max_copies": 1,
@@ -727,8 +841,16 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+1 DEF, solange du in diesem Zug eine Einheit ersetzt hast. Einmal: ignoriere den ersten Schaden (Schwur hält).",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Schwurzug. Die Krone irrt nicht — du zahlst dafür.",
     "image": "infanterie/B601.jpg",
     "max_copies": 1,
@@ -754,8 +876,17 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+1 ATK, wenn sie den Abschnitt verteidigt, in dem du diesen Zug einen Erlass/Unterstützung gespielt hast.",
-    "effects": [],
+    "text": "+1 ATK, wenn du in diesem Zug eine Unterstützung gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "played:Unterstützung"
+        }
+      }
+    ],
     "flavor": "Kronwache. Unfehlbar nur am Ort des Befehls.",
     "image": "infanterie/B602.jpg",
     "max_copies": 1,
@@ -778,8 +909,18 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+1 ATK und +1 DEF, solange mindestens eine andere eigene Einheit im Abschnitt steht (Treuekette).",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "pair"
+        }
+      }
+    ],
     "flavor": "Treuekompanie. Allein bricht der Schwur.",
     "image": "infanterie/B603.jpg",
     "max_copies": 1,
@@ -805,8 +946,17 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "Wenn zerstört: heile 1 DEF an einer eigenen Einheit und sie erhält „Ersetzt“ bis Zugende (+1 DEF).",
-    "effects": [],
+    "text": "Wird sie zerstört: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "death",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Ablösungskette. Die Krone lässt niemanden fallen — teuer.",
     "image": "infanterie/B604.jpg",
     "max_copies": 1,
@@ -829,8 +979,18 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+2 DEF, solange der Gegner in diesem Abschnitt mehr Einheiten hat. Nach dem ersten erlittenen Schaden: +1 ATK.",
-    "effects": [],
+    "text": "+2 DEF, solange der Gegner im Abschnitt mehr Einheiten hat.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 2,
+          "when": "outnumbered"
+        }
+      }
+    ],
     "flavor": "Regiment Erbe. Recht behalten kostet Blut.",
     "image": "infanterie/B605.jpg",
     "max_copies": 1,
@@ -856,8 +1016,16 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+2 ATK im Zug, in dem du sie aus der Hand in die Front ersetzt hast. Danach: wirf 1 ab.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Schwerpunktlinie. Unfehlbarer Stoß — Preis der Sicherheit.",
     "image": "infanterie/B606.jpg",
     "max_copies": 1,
@@ -880,7 +1048,7 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "Wenn dadurch zerstört: ziehe 1 (System lernt).",
+    "text": "",
     "effects": [],
     "flavor": "Stoßgruppe. Leistung misst den Rest.",
     "image": "infanterie/B361.jpg",
@@ -888,7 +1056,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "B361",
     "rarity": "bronze",
     "keywords": [
-      "Überlast"
+      "Überlast",
+      "Zuteilung"
     ]
   },
   {
@@ -907,8 +1076,18 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+1 ATK und +1 DEF, solange beschädigt. Einmal/Zug: erleide 1 Schaden → ignoriere den nächsten Schaden.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange sie beschädigt ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "damaged"
+        }
+      }
+    ],
     "flavor": "Maßtrupp. Beschädigt heißt kalibriert.",
     "image": "infanterie/B362.jpg",
     "max_copies": 1,
@@ -934,8 +1113,16 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "Kann verdeckt gespielt werden. Aufdecken: +1 ATK bis Zugende; erleide 1 Schaden.",
-    "effects": [],
+    "text": "Ihr erster Angriff hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Schnittstelle. Aufdecken schneidet.",
     "image": "infanterie/B363.jpg",
     "max_copies": 1,
@@ -961,8 +1148,16 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "Der erste Angriff nach dem Ausspielen hat +2 ATK; danach −1 DEF bis Zugende.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +2 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 2
+        }
+      }
+    ],
     "flavor": "Keilspitze. Optimiert auf den ersten Schnitt.",
     "image": "infanterie/B364.jpg",
     "max_copies": 1,
@@ -978,20 +1173,23 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Schwere Stoßgruppe",
     "ap": 3,
-    "atk": 4,
+    "atk": 6,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
       "infanterie"
     ],
-    "text": "+2 ATK. Nach dem ersten Angriff: −1 DEF und ziehe 1 (Schmerzprotokoll).",
+    "text": "",
     "effects": [],
     "flavor": "Schwere Stoßgruppe. Mehr Output, weniger Körper.",
     "image": "infanterie/B367.jpg",
     "max_copies": 1,
     "collector": "B367",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_masseinheit_368",
@@ -1009,8 +1207,18 @@ window.DC_SET_TYPES["Infanterie"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "+1 ATK und +1 DEF, solange beschädigt. Heilen dieser Einheit kostet +1 AP.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange sie beschädigt ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "damaged"
+        }
+      }
+    ],
     "flavor": "Maßeinheit. Menschlichkeit ist teurer Service.",
     "image": "infanterie/B368.jpg",
     "max_copies": 1,
@@ -1030,13 +1238,22 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Knotenwache",
     "ap": 1,
     "atk": 2,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF; kostet 1 weniger bei Unterstützung (min. 1).",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Wache an der Leitung. Kein Sockel.",
     "image": "infanterie/B781.jpg",
     "max_copies": 1,
@@ -1061,8 +1278,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK/+1 DEF, wenn Infanterie und Unterstützung angrenzen. [Reservisten-Zug]",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange eigene Infanterie benachbart ist und du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "adj:infanterie&support"
+        }
+      }
+    ],
     "flavor": "Bürger in Uniform. Schicht fehlt.",
     "image": "infanterie/B782.jpg",
     "max_copies": 1,
@@ -1084,8 +1311,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn du diesen Zug aufgedeckt hast.",
-    "effects": [],
+    "text": "+1 DEF, wenn du in diesem Zug aufgedeckt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "revealed"
+        }
+      }
+    ],
     "flavor": "Posten übt die Lücke.",
     "image": "infanterie/B783.jpg",
     "max_copies": 1,
@@ -1110,8 +1347,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn Feind aufgeklärt ist.",
-    "effects": [],
+    "text": "+1 ATK, solange eine gegnerische Einheit beobachtet ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "observed"
+        }
+      }
+    ],
     "flavor": "Läufer am Raster — frühe Lage.",
     "image": "infanterie/B784.jpg",
     "max_copies": 1,
@@ -1136,8 +1382,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF gegen den ersten Angriff/Zug. [Westhaven-Sicherung]",
-    "effects": [],
+    "text": "Der erste Schaden, den sie in jedem Zug erleidet, sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Hafen sichert. Schiff eröffnet nicht.",
     "image": "infanterie/B785.jpg",
     "max_copies": 1,
@@ -1159,8 +1413,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK/+1 DEF, wenn Aufklärung angrenzt.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange eine eigene Aufklärung an der Front steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "unit:aufklaerung"
+        }
+      }
+    ],
     "flavor": "Boden hält. Keine zweite Armee zur See.",
     "image": "infanterie/B786.jpg",
     "max_copies": 1,
@@ -1182,8 +1446,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Kostet 1 weniger bei Infanterie im Abschnitt (min. 1).",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange eigene Infanterie an der Front steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "unit:infanterie"
+        }
+      }
+    ],
     "flavor": "Front deckt Hinterraum. Beide echt.",
     "image": "infanterie/B841.jpg",
     "max_copies": 1,
@@ -1208,8 +1481,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn eigene Infanterie angrenzt. [Spielkorps-Zug]",
-    "effects": [],
+    "text": "+1 ATK, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Zug trägt eine Version. Nicht den Glauben.",
     "image": "infanterie/B842.jpg",
     "max_copies": 1,
@@ -1231,8 +1513,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Posten am Siegel — lesbar, nicht treu.",
     "image": "infanterie/B843.jpg",
     "max_copies": 1,
@@ -1257,8 +1547,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Kostet 1 weniger bei Infanterie im Abschnitt (min. 1). [Grenzspieler]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange eigene Infanterie an der Front steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "unit:infanterie"
+        }
+      }
+    ],
     "flavor": "Grenzspiel schießt nach einer Version.",
     "image": "infanterie/B844.jpg",
     "max_copies": 1,
@@ -1283,8 +1582,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn du diesen Zug Sofort spielst.",
-    "effects": [],
+    "text": "+1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Linie sagt eins. Meint das andere.",
     "image": "infanterie/B845.jpg",
     "max_copies": 1,
@@ -1309,8 +1617,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn Unterstützung im Abschnitt.",
-    "effects": [],
+    "text": "+1 DEF, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Wache am Preis. Keine Fahne.",
     "image": "infanterie/B846.jpg",
     "max_copies": 1,
@@ -1335,8 +1653,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn eigene Infanterie angrenzt.",
-    "effects": [],
+    "text": "+1 ATK, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Träger einer Zeile. Kein Held.",
     "image": "infanterie/B901.jpg",
     "max_copies": 1,
@@ -1358,8 +1685,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF gegen den ersten Angriff/Zug.",
-    "effects": [],
+    "text": "Der erste Schaden, den sie in jedem Zug erleidet, sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Wache am Kai. Name an der Tür.",
     "image": "infanterie/B902.jpg",
     "max_copies": 1,
@@ -1384,8 +1719,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK/+1 DEF, wenn Infanterie und Unterstützung angrenzen.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange eigene Infanterie benachbart ist und du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "adj:infanterie&support"
+        }
+      }
+    ],
     "flavor": "Liest laut. Ändert nichts allein.",
     "image": "infanterie/B903.jpg",
     "max_copies": 1,
@@ -1410,8 +1755,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF gegen den ersten Angriff/Zug. [Auenheim-Hof]",
-    "effects": [],
+    "text": "Der erste Schaden, den sie in jedem Zug erleidet, sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Hof liefert. Zeile bleibt.",
     "image": "infanterie/B904.jpg",
     "max_copies": 1,
@@ -1433,8 +1786,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn Unterstützung im Abschnitt. [Namenhof-Schütze]",
-    "effects": [],
+    "text": "+1 DEF, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Schild am Weg. Kurze Abschrift.",
     "image": "infanterie/B905.jpg",
     "max_copies": 1,
@@ -1459,8 +1822,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK/+1 DEF, wenn Infanterie und Unterstützung angrenzen. [Stillschuld-Zug]",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange eigene Infanterie benachbart ist und du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "adj:infanterie&support"
+        }
+      }
+    ],
     "flavor": "Richtig gezahlt. Zu spät.",
     "image": "infanterie/B906.jpg",
     "max_copies": 1,
@@ -1482,8 +1855,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF gegen den ersten Angriff/Zug. [Kronenwache]",
-    "effects": [],
+    "text": "Der erste Schaden, den sie in jedem Zug erleidet, sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Wache hält den Berg. Nicht den Ruhm.",
     "image": "infanterie/B721.jpg",
     "max_copies": 1,
@@ -1508,8 +1889,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK/+1 DEF, wenn Infanterie und Unterstützung angrenzen. [Parlamentsbote]",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange eigene Infanterie benachbart ist und du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "adj:infanterie&support"
+        }
+      }
+    ],
     "flavor": "Bote zwischen Gasse und Berg.",
     "image": "infanterie/B722.jpg",
     "max_copies": 1,
@@ -1526,13 +1917,22 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Auffangposten",
     "ap": 2,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF; kostet 1 weniger bei Unterstützung (min. 1). [Auffangposten]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Posten fängt. Er stürmt nicht.",
     "image": "infanterie/B723.jpg",
     "max_copies": 1,
@@ -1557,8 +1957,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn sie diesen Zug nicht bewegt wurde.",
-    "effects": [],
+    "text": "+1 ATK, wenn sie seit deinem letzten Zug nicht versetzt wurde.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "still"
+        }
+      }
+    ],
     "flavor": "Läufer aus Markenfels — Stellung vor Eile.",
     "image": "infanterie/B724.jpg",
     "max_copies": 1,
@@ -1578,13 +1987,22 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Zeughauszug",
     "ap": 3,
     "atk": 2,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF; kostet 1 weniger bei Unterstützung (min. 1). [Zeughauszug]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Zug aus Brückenau — Gerät über Jahre.",
     "image": "infanterie/B725.jpg",
     "max_copies": 1,
@@ -1606,8 +2024,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK/+1 DEF, wenn Infanterie und Unterstützung angrenzen. [Doppelhaus-Linie]",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange eigene Infanterie benachbart ist und du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "adj:infanterie&support"
+        }
+      }
+    ],
     "flavor": "Zwei Häuser. Eine Linie.",
     "image": "infanterie/B726.jpg",
     "max_copies": 1,
@@ -1629,8 +2057,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, solange du diesen Zug eine Einheit geschoben hast.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Am Kai steht man. Das Schiff hält keine Stellung.",
     "image": "infanterie/B043.jpg",
     "max_copies": 1,
@@ -1652,8 +2088,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn im Abschnitt keine Unterstützung liegt.",
-    "effects": [],
+    "text": "+1 DEF, solange du keine Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "nosupport"
+        }
+      }
+    ],
     "flavor": "Dieselbe Jacke. Anderer Staub.",
     "image": "infanterie/B044.jpg",
     "max_copies": 1,
@@ -1675,7 +2121,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Beim Ausspielen: schiebe eine eigene Einheit um 1 Slot.",
+    "text": "",
     "effects": [],
     "flavor": "Wer bleibt ohne Ablösung, ist verspätet — nicht ein anderer Mensch.",
     "image": "infanterie/B045.jpg",
@@ -1683,7 +2129,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "B045",
     "rarity": "bronze",
     "keywords": [
-      "Heranführung"
+      "Heranführung",
+      "Stellungswechsel"
     ]
   },
   {
@@ -1701,7 +2148,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF nach Schieben diesen Zug.",
+    "text": "",
     "effects": [],
     "flavor": "Das Dorf richtet den Tag nach dem Schiff, nicht nach der Uhr.",
     "image": "infanterie/B046.jpg",
@@ -1709,7 +2156,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "B046",
     "rarity": "silver",
     "keywords": [
-      "Heranführung"
+      "Heranführung",
+      "Stellungswechsel"
     ]
   },
   {
@@ -1727,8 +2175,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Kostet 1 weniger, wenn du diesen Zug schon geschoben hast.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Was in Neuport einen Tag zu spät ist, ist hier oft eine Woche.",
     "image": "infanterie/B047.jpg",
     "max_copies": 1,
@@ -1753,8 +2210,19 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Benachbarte eigene Einheiten +1 DEF, wenn du Soforteinsatz spieltest.",
-    "effects": [],
+    "text": "Benachbarte eigene Einheiten +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "adjacent",
+          "def": 1,
+          "when": "played:Soforteinsatz",
+          "self": true
+        }
+      }
+    ],
     "flavor": "Die Paspel bleibt hell, auch wenn der Stoff es nicht mehr ist.",
     "image": "infanterie/B048.jpg",
     "max_copies": 1,
@@ -1776,8 +2244,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn du in diesem Abschnitt mindestens zwei Einheiten hast.",
-    "effects": [],
+    "text": "+1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "pair"
+        }
+      }
+    ],
     "flavor": "Der Weg hält, wenn zwei halten.",
     "image": "infanterie/B661.jpg",
     "max_copies": 1,
@@ -1799,8 +2277,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Läufer umgeht. Er schließt keinen Knoten.",
     "image": "infanterie/B662.jpg",
     "max_copies": 1,
@@ -1825,8 +2311,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF an Straßen-/Lager-Abschnitten.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Meister zählt Wagen, nicht Fahnen.",
     "image": "infanterie/B663.jpg",
     "max_copies": 1,
@@ -1851,8 +2345,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF gegen den ersten Angriff/Zug. [Karawanenzug]",
-    "effects": [],
+    "text": "Der erste Schaden, den sie in jedem Zug erleidet, sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Zug fährt, solange der Vertrag hält.",
     "image": "infanterie/B664.jpg",
     "max_copies": 1,
@@ -1877,8 +2379,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK/+1 DEF, wenn Infanterie und Unterstützung im Abschnitt.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange eigene Infanterie benachbart ist und du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "adj:infanterie&support"
+        }
+      }
+    ],
     "flavor": "Kolonne — Bund auf Rädern.",
     "image": "infanterie/B665.jpg",
     "max_copies": 1,
@@ -1903,8 +2415,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF bis Zugende.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Bataillon sichert die Strecke, nicht den Thron.",
     "image": "infanterie/B666.jpg",
     "max_copies": 1,
@@ -1929,8 +2449,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn eine feindliche Einheit im Abschnitt beobachtet ist.",
-    "effects": [],
+    "text": "+1 DEF, solange eine gegnerische Einheit beobachtet ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "observed"
+        }
+      }
+    ],
     "flavor": "Zug nach Norm. Nicht nach Laune.",
     "image": "infanterie/B541.jpg",
     "max_copies": 1,
@@ -1952,8 +2482,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Kostet 1 weniger, wenn du diesen Zug eine Sofortkarte gespielt hast (min. 1).",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Reserve wartet auf Papier.",
     "image": "infanterie/B542.jpg",
     "max_copies": 1,
@@ -1975,8 +2514,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF an Bahn-/Depot-Abschnitten.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Wache am Bahnsteig. Schlüssel nicht in der Faust.",
     "image": "infanterie/B543.jpg",
     "max_copies": 1,
@@ -2001,8 +2548,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK gegen beobachtete Einheiten.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Wache sieht. Sie befiehlt nicht.",
     "image": "infanterie/B544.jpg",
     "max_copies": 1,
@@ -2024,8 +2580,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK/+1 DEF, wenn Infanterie und Artillerie im Abschnitt.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange eigene Infanterie benachbart ist und eigene Artillerie steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "adj:infanterie&unit:artillerie"
+        }
+      }
+    ],
     "flavor": "Feldwacht übt. Freigabe fehlt noch.",
     "image": "infanterie/B545.jpg",
     "max_copies": 1,
@@ -2050,8 +2616,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Beim Ausspielen: decke 1 auf; +1 DEF bis Zugende.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Grenzstein schreibt zuerst.",
     "image": "infanterie/B546.jpg",
     "max_copies": 1,
@@ -2076,8 +2651,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn eigene Infanterie angrenzt. [Kaiwache]",
-    "effects": [],
+    "text": "+1 ATK, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Wache für den Kai. Nicht für die Liste.",
     "image": "infanterie/B481.jpg",
     "max_copies": 1,
@@ -2102,8 +2686,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn der Abschnitt im letzten Zug angegriffen wurde.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Entsatz zu Fuß. Der Rest kommt später.",
     "image": "infanterie/B482.jpg",
     "max_copies": 1,
@@ -2128,8 +2720,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn der Abschnitt im letzten Zug angegriffen wurde.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Posten hält, bis die Kolonne kommt.",
     "image": "infanterie/B483.jpg",
     "max_copies": 1,
@@ -2151,8 +2751,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Kostet 1 weniger, wenn im Abschnitt eine Unterstützung liegt.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Posten am Manifest. Nicht am Thron.",
     "image": "infanterie/B484.jpg",
     "max_copies": 1,
@@ -2174,8 +2783,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK/+1 DEF, wenn Unterstützung im Abschnitt.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Kaihof löscht und lädt. Er räumt den Markt nicht.",
     "image": "infanterie/B485.jpg",
     "max_copies": 1,
@@ -2197,8 +2816,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF an Straße/Bahn-Abschnitten; +1 ATK nach Entsatz-Zug.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Jacke dunkelblau. Sterne sitzen nicht.",
     "image": "infanterie/B486.jpg",
     "max_copies": 1,
@@ -2223,8 +2850,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn sie allein im Abschnitt steht.",
-    "effects": [],
+    "text": "+1 DEF, solange sie allein im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "alone"
+        }
+      }
+    ],
     "flavor": "Jedes Tal behält sein Recht. Die Wache gehört nur diesem.",
     "image": "infanterie/B064.jpg",
     "max_copies": 1,
@@ -2246,8 +2883,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK gegen eine Einheit, die in diesem Zug einrückt.",
-    "effects": [],
+    "text": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "entering"
+        }
+      }
+    ],
     "flavor": "Wer den Pass hält, hält den Weg zur Hilfe.",
     "image": "infanterie/B065.jpg",
     "max_copies": 1,
@@ -2269,8 +2915,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn im Abschnitt eine zweite eigene Einheit steht.",
-    "effects": [],
+    "text": "+1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "pair"
+        }
+      }
+    ],
     "flavor": "Der Hang bleibt strittig. Das Tal bleibt da.",
     "image": "infanterie/B066.jpg",
     "max_copies": 1,
@@ -2295,8 +2951,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, solange du diesen Zug keine Soforteinsatz-Karte spieltest.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Stumm heißt: noch im Eid. Nicht frei.",
     "image": "infanterie/B067.jpg",
     "max_copies": 1,
@@ -2321,8 +2985,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Kostet 1 weniger, wenn allein im Abschnitt.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Armut ist keine Erlaubnis, das Recht abzugeben.",
     "image": "infanterie/B068.jpg",
     "max_copies": 1,
@@ -2347,8 +3020,19 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Benachbarte eigene Einheiten +1 DEF, wenn allein stehen.",
-    "effects": [],
+    "text": "Benachbarte eigene Einheiten +1 DEF, solange diese Einheit allein im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "adjacent",
+          "def": 1,
+          "when": "alone",
+          "self": true
+        }
+      }
+    ],
     "flavor": "Kurz und schiefergrau. Kein Pelz. Kein Zeichen einer Mitte.",
     "image": "infanterie/B069.jpg",
     "max_copies": 1,
@@ -2373,8 +3057,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn sie im letzten Zug nicht angegriffen hat.",
-    "effects": [],
+    "text": "+1 ATK, wenn sie in deinem letzten Zug nicht angegriffen hat.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "rested"
+        }
+      }
+    ],
     "flavor": "Posten hält. Die Akte schläft nicht.",
     "image": "infanterie/B301.jpg",
     "max_copies": 1,
@@ -2399,8 +3092,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn sie diesen Zug nicht angreift.",
-    "effects": [],
+    "text": "+1 DEF, wenn sie in deinem letzten Zug nicht angegriffen hat.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "rested"
+        }
+      }
+    ],
     "flavor": "Ablösung ohne Lücke im Schild.",
     "image": "infanterie/B302.jpg",
     "max_copies": 1,
@@ -2425,8 +3128,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn im Abschnitt eine Unterstützung liegt.",
-    "effects": [],
+    "text": "+1 DEF, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Wer in der Liste steht, steht nicht allein.",
     "image": "infanterie/B303.jpg",
     "max_copies": 1,
@@ -2443,13 +3156,22 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Seren-Zug",
     "ap": 3,
     "atk": 2,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF; heile 1, wenn sie im letzten Zug nicht angriff.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Wohnstadt und Front — dieselbe Maschine.",
     "image": "infanterie/B304.jpg",
     "max_copies": 1,
@@ -2471,8 +3193,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Beim Ausspielen: ziehe 1, wenn du diesen Zug heilst.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Meldung bringt Hilfe. Und die nächste Zeile.",
     "image": "infanterie/B305.jpg",
     "max_copies": 1,
@@ -2497,8 +3228,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+2 DEF, wenn sie diesen Zug nicht angreift.",
-    "effects": [],
+    "text": "+2 DEF, wenn sie in deinem letzten Zug nicht angegriffen hat.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 2,
+          "when": "rested"
+        }
+      }
+    ],
     "flavor": "Lieber schlechtere Stellung als Loch im Schild.",
     "image": "infanterie/B306.jpg",
     "max_copies": 1,
@@ -2523,8 +3264,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn sie eine Ausrüstung trägt.",
-    "effects": [],
+    "text": "+1 DEF, solange sie Ausrüstung trägt.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "equipped"
+        }
+      }
+    ],
     "flavor": "Der Name geht mit. Nicht als Befehl.",
     "image": "infanterie/B085.jpg",
     "max_copies": 1,
@@ -2549,8 +3300,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn im Abschnitt eine Einheit mit Ausrüstung steht.",
-    "effects": [],
+    "text": "+1 ATK, solange sie Ausrüstung trägt.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "equipped"
+        }
+      }
+    ],
     "flavor": "Wache für die Lebenden hinter der Platte.",
     "image": "infanterie/B086.jpg",
     "max_copies": 1,
@@ -2572,8 +3332,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Trauer bleibt privat. Der Zug hält trotzdem.",
     "image": "infanterie/B087.jpg",
     "max_copies": 1,
@@ -2598,8 +3366,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK, wenn eigene Infanterie angrenzt. [Plattenzug]",
-    "effects": [],
+    "text": "+1 ATK, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Schwer und langsam — und noch am Leben.",
     "image": "infanterie/B088.jpg",
     "max_copies": 1,
@@ -2624,8 +3401,16 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Kareth kennt neue Namen. Es macht keinen Altar daraus.",
     "image": "infanterie/B089.jpg",
     "max_copies": 1,
@@ -2650,8 +3435,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Ausrüstung an dieser Einheit kostet 1 weniger (min. 1).",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Zuerst Gerät. Dann Name. Nie umgekehrt.",
     "image": "infanterie/B090.jpg",
     "max_copies": 1,
@@ -2676,8 +3470,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK gegen aufgeklärte Ziele.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Probe vor dem Schuss.",
     "image": "infanterie/B421.jpg",
     "max_copies": 1,
@@ -2702,8 +3505,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Beim Ausspielen: decke eine Einheit auf.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Sensorstadt schickt Schritte, keine Priester.",
     "image": "infanterie/B422.jpg",
     "max_copies": 1,
@@ -2725,8 +3537,18 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 DEF, wenn ein Feind im Abschnitt aufgeklärt ist.",
-    "effects": [],
+    "text": "+1 DEF, solange eine gegnerische Einheit beobachtet ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "observed"
+        }
+      }
+    ],
     "flavor": "Wache für die Unterschrift. Nicht für die Zahl.",
     "image": "infanterie/B423.jpg",
     "max_copies": 1,
@@ -2751,8 +3573,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+1 ATK/+1 DEF gegen aufgeklärte; ziehe 1 wenn Modell scheitert (Feind überlebt Angriff).",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Randmess lehrt: die Probe kann lügen.",
     "image": "infanterie/B424.jpg",
     "max_copies": 1,
@@ -2774,8 +3605,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Kostet 1 weniger, wenn Aufklärung im Spiel.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange eine eigene Aufklärung an der Front steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "unit:aufklaerung"
+        }
+      }
+    ],
     "flavor": "Dienst ist Fachlaufbahn. Kein Opfergang.",
     "image": "infanterie/B425.jpg",
     "max_copies": 1,
@@ -2800,8 +3640,17 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "+2 DEF nach Aufdecken eines Feindes diesen Zug.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Dünne technische Linie. Kein Gold.",
     "image": "infanterie/B426.jpg",
     "max_copies": 1,

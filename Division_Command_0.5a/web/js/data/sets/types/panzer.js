@@ -52,7 +52,7 @@ window.DC_SET_TYPES["Panzer"] = [
       "panzer",
       "schwer"
     ],
-    "text": "Wuchtgeschoss: ignoriert 2 V beim Angriff auf Gepanzerte.",
+    "text": "Wuchtgeschoss: ignoriert 2 DEF beim Angriff auf Gepanzerte.",
     "effects": [
       {
         "code": "IGNORE_DEF",
@@ -87,7 +87,7 @@ window.DC_SET_TYPES["Panzer"] = [
       "fahrzeug",
       "mittel"
     ],
-    "text": "Benachbarte Infanterie +1 A / +1 V.",
+    "text": "Benachbarte Infanterie +1 ATK / +1 DEF.",
     "effects": [
       {
         "code": "MECH_AURA",
@@ -117,8 +117,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Wenn zerstört: nächste Ausrüstung kostet 1 weniger.",
-    "effects": [],
+    "text": "Wird sie zerstört: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "death",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Zerstört heißt nachbestellt.",
     "image": "panzer/B028.jpg",
     "max_copies": 1,
@@ -143,8 +152,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK gegen Einheiten, die diesen Zug Schaden genommen haben.",
-    "effects": [],
+    "text": "+1 ATK gegen Ziele, die in diesem Zug Schaden erlitten haben.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "hit"
+        }
+      }
+    ],
     "flavor": "Die Kette folgt dem Schaden — und dem Auftrag.",
     "image": "panzer/B029.jpg",
     "max_copies": 1,
@@ -169,8 +187,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: eigene Artillerie +1 ATK diesen Zug.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Der Keil öffnet, die Rohre schreiben die Zeile.",
     "image": "panzer/B030.jpg",
     "max_copies": 1,
@@ -195,8 +221,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF, solange du diesen Zug Soforteinsatz gespielt hast.",
-    "effects": [],
+    "text": "+1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Neue Ketten, alter Auftrag.",
     "image": "panzer/B031.jpg",
     "max_copies": 1,
@@ -218,8 +254,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Kostet 1 weniger, wenn du bereits 2+ Einheiten verloren hast.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), wenn schon 2 eigene Einheiten zerstört wurden.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "losses:2"
+        }
+      }
+    ],
     "flavor": "Schlechtes Quartal für den Feind. Gutes für das Buch.",
     "image": "panzer/B032.jpg",
     "max_copies": 1,
@@ -244,8 +289,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: heile 1 an eigener Artillerie oder Panzer.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Die Ware kommt schwer — und heilend.",
     "image": "panzer/B033.jpg",
     "max_copies": 1,
@@ -270,8 +324,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Kann nicht angreifen, wenn du diesen Zug keine Artillerie gespielt hast.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Ohne Feuer kein Vorstoß. Ohne Vorstoß kein Verbrauch.",
     "image": "panzer/B034.jpg",
     "max_copies": 1,
@@ -296,7 +358,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Angriff: +2 Schaden. Wenn Ziel stirbt: ziehe 1.",
+    "text": "",
     "effects": [],
     "flavor": "Ein Treffer, der die nächste Bestellung schreibt.",
     "image": "panzer/B035.jpg",
@@ -304,7 +366,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "collector": "B035",
     "rarity": "gold",
     "keywords": [
-      "Zähigkeit"
+      "Zähigkeit",
+      "Zuteilung"
     ]
   },
   {
@@ -322,8 +385,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF, solange du in diesem Zug eine Infanterie gespielt hast. Einmal/Zug: eine eigene Infanterie im Abschnitt +1 ATK.",
-    "effects": [],
+    "text": "+1 DEF, wenn du in diesem Zug Infanterie gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "played:Infanterie"
+        }
+      }
+    ],
     "flavor": "Panzer der geschuldeten Pflicht. Keine Zugabe.",
     "image": "panzer/B003.jpg",
     "max_copies": 1,
@@ -345,8 +418,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: heile eine eigene Infanterie um 1.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Bricht die Welle, trägt die nächste.",
     "image": "panzer/B007.jpg",
     "max_copies": 1,
@@ -372,8 +454,18 @@ window.DC_SET_TYPES["Panzer"] = [
       "einheit",
       "panzer"
     ],
-    "text": "+1 DEF, solange eine eigene Infanterie im Abschnitt liegt.",
-    "effects": [],
+    "text": "+1 DEF, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Vom Hof, nicht vom Hofstaat.",
     "image": "panzer/B009.jpg",
     "max_copies": 1,
@@ -396,8 +488,17 @@ window.DC_SET_TYPES["Panzer"] = [
       "einheit",
       "panzer"
     ],
-    "text": "Kostet 1 weniger, wenn du in diesem Zug Infanterie gespielt hast (mind. 1).",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), wenn du in diesem Zug Infanterie gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "played:Infanterie"
+        }
+      }
+    ],
     "flavor": "Ein Balken auf Ketten.",
     "image": "panzer/B010.jpg",
     "max_copies": 1,
@@ -423,8 +524,16 @@ window.DC_SET_TYPES["Panzer"] = [
       "einheit",
       "panzer"
     ],
-    "text": "Beim Angriff: eine eigene Infanterie im Abschnitt erhält +1 ATK bis Zugende.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Die Kette zieht die Reihe.",
     "image": "panzer/B011.jpg",
     "max_copies": 1,
@@ -447,8 +556,16 @@ window.DC_SET_TYPES["Panzer"] = [
       "einheit",
       "panzer"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Verlust ist Nachschub an Wille.",
     "image": "panzer/B012.jpg",
     "max_copies": 1,
@@ -474,8 +591,17 @@ window.DC_SET_TYPES["Panzer"] = [
       "einheit",
       "panzer"
     ],
-    "text": "Im Zug mit der dritten gespielten Einheit: dieser Angriff kostet 0.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Drei Reihen, ein Keil.",
     "image": "panzer/B013.jpg",
     "max_copies": 1,
@@ -501,8 +627,17 @@ window.DC_SET_TYPES["Panzer"] = [
       "einheit",
       "panzer"
     ],
-    "text": "Wird zerstört: eigene Infanterie im Abschnitt hat +1 ATK bis zum Ende des nächsten Zuges.",
-    "effects": [],
+    "text": "Wird sie zerstört: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "death",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Der Name bleibt. Der Stahl nicht.",
     "image": "panzer/B014.jpg",
     "max_copies": 1,
@@ -523,13 +658,22 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Kronpanzer Narbstadt",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": true,
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF. Kann verdeckt gespielt werden. Aufdecken: ignoriere den ersten Schaden diesen Zug (die Krone irrt nicht).",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Narbstadt unter dem Erlass. Die Krone wankt nicht.",
     "image": "panzer/B607.jpg",
     "max_copies": 1,
@@ -554,8 +698,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Gegnerische Soforteinsätze gegen diesen Abschnitt kosten den Gegner +1 AP. Einmal/Zug: wenn du eine Einheit ersetzt hast → +1 ATK.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Wagen des unfehlbaren Erlasses.",
     "image": "panzer/B608.jpg",
     "max_copies": 1,
@@ -582,8 +735,16 @@ window.DC_SET_TYPES["Panzer"] = [
       "panzer",
       "kette"
     ],
-    "text": "+1 ATK und +1 DEF, solange du in diesem Zug eine Einheit ersetzt hast.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Stahl für den Namen, der nicht scheitern darf.",
     "image": "panzer/B609.jpg",
     "max_copies": 1,
@@ -600,15 +761,24 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Erbe-Kette",
     "ap": 2,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
       "panzer",
       "kette"
     ],
-    "text": "+1 DEF. Wenn sie beschädigt ist: +1 ATK.",
-    "effects": [],
+    "text": "+1 ATK, solange sie beschädigt ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "damaged"
+        }
+      }
+    ],
     "flavor": "Alte Werkstatt. Neue Front.",
     "image": "panzer/B610.jpg",
     "max_copies": 1,
@@ -632,8 +802,16 @@ window.DC_SET_TYPES["Panzer"] = [
       "panzer",
       "kette"
     ],
-    "text": "+2 ATK, wenn du in diesem Abschnitt mindestens zwei andere Einheiten hast.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Konzentration ist der einzige Befehl, der noch gilt.",
     "image": "panzer/B611.jpg",
     "max_copies": 1,
@@ -660,8 +838,17 @@ window.DC_SET_TYPES["Panzer"] = [
       "panzer",
       "kette"
     ],
-    "text": "Wenn diese Einheit zerstört wird: spiele eine Einheit mit Kosten ≤2 aus deiner Hand ohne AP-Kosten in denselben Abschnitt (falls möglich).",
-    "effects": [],
+    "text": "Wird sie zerstört: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "death",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Maschine stirbt. Auftrag bleibt.",
     "image": "panzer/B612.jpg",
     "max_copies": 1,
@@ -685,8 +872,16 @@ window.DC_SET_TYPES["Panzer"] = [
       "panzer",
       "kette"
     ],
-    "text": "+3 ATK im ersten Angriff nach dem Ausspielen. Danach -1 DEF bis Zugende.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +3 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 3
+        }
+      }
+    ],
     "flavor": "Was die Krone will, zahlt der Stahl voraus.",
     "image": "panzer/B613.jpg",
     "max_copies": 1,
@@ -707,15 +902,23 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Werkrott-Kolonne",
     "ap": 4,
     "atk": 3,
-    "def": 5,
+    "def": 7,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
       "panzer",
       "kette"
     ],
-    "text": "+2 DEF. Einmal pro Zug: eine angrenzende eigene Infanterie hat +1 ATK.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Die Werkmark liefert. Die Front verbraucht.",
     "image": "panzer/B614.jpg",
     "max_copies": 1,
@@ -732,13 +935,21 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Filterpanzer",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF. Ignoriert den ersten Schaden durch Soforteinsatz. Einmal/Zug: erleide 1 Schaden → +2 ATK bis Zugende.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Filter im Stahl. Optimiert um den Preis.",
     "image": "panzer/B365.jpg",
     "max_copies": 1,
@@ -760,8 +971,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Wenn zerstört: heile 1 DEF an einer anderen eigenen Einheit und lege die oberste Friedhofskarte unter dein Deck. +1 ATK solange beschädigt.",
-    "effects": [],
+    "text": "+1 ATK, solange sie beschädigt ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "damaged"
+        }
+      }
+    ],
     "flavor": "Keil aus Ersatzkörpern. System hält.",
     "image": "panzer/B366.jpg",
     "max_copies": 1,
@@ -785,8 +1005,17 @@ window.DC_SET_TYPES["Panzer"] = [
       "panzer",
       "kette"
     ],
-    "text": "+1 ATK, solange beschädigt.",
-    "effects": [],
+    "text": "+1 ATK, solange sie beschädigt ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "damaged"
+        }
+      }
+    ],
     "flavor": "Fahrer und Maschine teilen denselben Schmerz.",
     "image": "panzer/B369.jpg",
     "max_copies": 1,
@@ -803,15 +1032,23 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Knochenkette",
     "ap": 2,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
       "panzer",
       "kette"
     ],
-    "text": "+1 DEF. Angrenzende eigene Infanterie +1 ATK beim ersten Angriff.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Stahl stützt das, was noch Fleisch ist.",
     "image": "panzer/B370.jpg",
     "max_copies": 1,
@@ -835,8 +1072,16 @@ window.DC_SET_TYPES["Panzer"] = [
       "panzer",
       "kette"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Durchbruch vor Überleben.",
     "image": "panzer/B371.jpg",
     "max_copies": 1,
@@ -857,15 +1102,24 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Wartungskolonne",
     "ap": 4,
     "atk": 4,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
       "panzer",
       "kette"
     ],
-    "text": "+1 DEF. Einmal pro Zug: heile 1 DEF an sich selbst, wenn beschädigt; dann erleidet eine eigene Infanterie im Abschnitt 1 Schaden.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Ersatz aus dem Nachbarn.",
     "image": "panzer/B372.jpg",
     "max_copies": 1,
@@ -889,8 +1143,17 @@ window.DC_SET_TYPES["Panzer"] = [
       "panzer",
       "kette"
     ],
-    "text": "+2 ATK, solange beschädigt.",
-    "effects": [],
+    "text": "+2 ATK, solange sie beschädigt ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 2,
+          "when": "damaged"
+        }
+      }
+    ],
     "flavor": "Jeder Riss hebt die Quote.",
     "image": "panzer/B373.jpg",
     "max_copies": 1,
@@ -917,8 +1180,16 @@ window.DC_SET_TYPES["Panzer"] = [
       "panzer",
       "kette"
     ],
-    "text": "+3 ATK im ersten Angriff. Danach -1 DEF bis Zugende.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +3 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 3
+        }
+      }
+    ],
     "flavor": "Der Staat misst nur den Einschlag.",
     "image": "panzer/B374.jpg",
     "max_copies": 1,
@@ -944,8 +1215,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Bei Kill ziehe 1. [Sensorwagen]",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Wagen sieht früher. Er thront nicht.",
     "image": "panzer/B787.jpg",
     "max_copies": 1,
@@ -970,8 +1250,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK gegen aufgeklärte Feinde.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Kette hält, solange die Leitung hält.",
     "image": "panzer/B788.jpg",
     "max_copies": 1,
@@ -993,8 +1282,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Oliv mit Sandstreifen — Arbeitskleidung.",
     "image": "panzer/B789.jpg",
     "max_copies": 1,
@@ -1019,8 +1316,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK, wenn du diesen Zug Sofort spielst. [Kurzkrieg-Wagen]",
-    "effects": [],
+    "text": "+1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Kurz halten. Ausnahme nicht zum Kalender.",
     "image": "panzer/B790.jpg",
     "max_copies": 1,
@@ -1045,8 +1351,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Bei Kill ziehe 1. [Lydon-Träger]",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Energie und Gerät — ohne Denkmal.",
     "image": "panzer/B791.jpg",
     "max_copies": 1,
@@ -1071,8 +1386,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK/+1 DEF, wenn Feind im Abschnitt aufgeklärt ist.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange eine gegnerische Einheit beobachtet ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "observed"
+        }
+      }
+    ],
     "flavor": "Panzer dem Raster. Nicht der Halle allein.",
     "image": "panzer/B792.jpg",
     "max_copies": 1,
@@ -1094,8 +1419,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Bei Kill: decke 1 auf ODER ziehe 1.",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Stoß nach neuer Lage. Alte Daten sind Irrtum.",
     "image": "panzer/B793.jpg",
     "max_copies": 1,
@@ -1117,8 +1451,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+2 ATK gegen aufgeklärte Feinde; beim Ausspielen decke 2 auf. Einmal/Zug: eine eigene Aufklärung +1 DEF.",
-    "effects": [],
+    "text": "+2 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 2,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Aufklärungspanzer — Augen vor dem Keil.",
     "image": "panzer/B794.jpg",
     "max_copies": 1,
@@ -1138,13 +1481,21 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Aktenwagen",
     "ap": 2,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF; einmal/Zug: negiere 1 Schaden. [Aktenwagen]",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Wagen trägt Akten. Nicht Glauben.",
     "image": "panzer/B847.jpg",
     "max_copies": 1,
@@ -1164,13 +1515,21 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Scheinkeil",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+2 ATK gegen ein gewähltes Ziel; Träger +1 DEF. [Scheinkeil]",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +2 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 2
+        }
+      }
+    ],
     "flavor": "Keil hält hier. Stoß dort.",
     "image": "panzer/B848.jpg",
     "max_copies": 1,
@@ -1187,13 +1546,21 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Olivsiegel-Wagen",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF; einmal/Zug: negiere 1 Schaden.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Stumpfes Oliv. Schwarzes Siegel.",
     "image": "panzer/B849.jpg",
     "max_copies": 1,
@@ -1218,8 +1585,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK/+1 DEF, wenn du diesen Zug nicht bewegt hast.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, wenn sie seit deinem letzten Zug nicht versetzt wurde.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "still"
+        }
+      }
+    ],
     "flavor": "Panzer einer gesetzten Lage.",
     "image": "panzer/B850.jpg",
     "max_copies": 1,
@@ -1244,8 +1621,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Kostet 1 weniger bei Infanterie im Abschnitt (min. 1). [Archive-Keil]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange eigene Infanterie an der Front steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "unit:infanterie"
+        }
+      }
+    ],
     "flavor": "Keil aus dem Archivviertel.",
     "image": "panzer/B851.jpg",
     "max_copies": 1,
@@ -1270,8 +1656,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF an Abschnitten mit eigener Unterstützung.",
-    "effects": [],
+    "text": "+1 DEF, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Zwei Versionen. Ein Wagen.",
     "image": "panzer/B852.jpg",
     "max_copies": 1,
@@ -1293,8 +1689,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK, wenn du diesen Zug Sofort spielst. [Abriegelwagen]",
-    "effects": [],
+    "text": "+1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Wagen riegelt. Leer bleibt leer.",
     "image": "panzer/B853.jpg",
     "max_copies": 1,
@@ -1316,8 +1721,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+2 DEF diesen Zug; nächsten Zug +2 ATK. Einmal: wenn du Scheinschwerpunkt gespielt hast → ignoriere 1 Schaden.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Scheinschwerpunkt-Keil — Stahl folgt dem Blick.",
     "image": "panzer/B854.jpg",
     "max_copies": 1,
@@ -1343,8 +1756,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Bei Kill ziehe 1.",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Wagen eines haftenden Hauses.",
     "image": "panzer/B907.jpg",
     "max_copies": 1,
@@ -1364,13 +1786,21 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Kai-Keil",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+2 ATK gegen ein gewähltes Ziel; Träger +1 DEF.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +2 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 2
+        }
+      }
+    ],
     "flavor": "Keil am Kai. Name trägt.",
     "image": "panzer/B908.jpg",
     "max_copies": 1,
@@ -1387,13 +1817,21 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Nussbraun-Wagen",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+2 ATK gegen ein gewähltes Ziel; Träger +1 DEF. [Nussbraun-Wagen]",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +2 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 2
+        }
+      }
+    ],
     "flavor": "Nussbraun. Manschette hell.",
     "image": "panzer/B909.jpg",
     "max_copies": 1,
@@ -1413,13 +1851,21 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Aufrufpanzer",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+2 ATK gegen ein gewähltes Ziel; Träger +1 DEF. [Aufrufpanzer]",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +2 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 2
+        }
+      }
+    ],
     "flavor": "Panzer der genannten Zeile.",
     "image": "panzer/B910.jpg",
     "max_copies": 1,
@@ -1444,8 +1890,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK/+1 DEF, wenn du diesen Zug nicht bewegt hast. [Brunn-Keil]",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, wenn sie seit deinem letzten Zug nicht versetzt wurde.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "still"
+        }
+      }
+    ],
     "flavor": "Keil aus Brunn. Werk haftet.",
     "image": "panzer/B911.jpg",
     "max_copies": 1,
@@ -1470,8 +1926,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK, wenn du diesen Zug Sofort spielst. [Zwei Daten]",
-    "effects": [],
+    "text": "+1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Früheres Datum entscheidet.",
     "image": "panzer/B912.jpg",
     "max_copies": 1,
@@ -1493,8 +1958,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF an Abschnitten mit eigener Unterstützung. [Abschlusswagen]",
-    "effects": [],
+    "text": "+1 DEF, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Wagen schließt. Haus bleibt.",
     "image": "panzer/B913.jpg",
     "max_copies": 1,
@@ -1514,13 +1989,21 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Zielangriff-Keil",
     "ap": 5,
     "atk": 5,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+2 ATK gegen ein gewähltes Ziel; Träger +1 DEF. Bei Kill am genannten Ziel: +1 ATK bis Zugende.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +2 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 2
+        }
+      }
+    ],
     "flavor": "Zielangriff-Keil — genannt und durchbrochen.",
     "image": "panzer/B914.jpg",
     "max_copies": 1,
@@ -1546,8 +2029,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF an Abschnitten mit eigener Unterstützung. [Stellungspanzer]",
-    "effects": [],
+    "text": "+1 DEF, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Panzer für die Stellung, nicht den Paradeplatz.",
     "image": "panzer/B727.jpg",
     "max_copies": 1,
@@ -1569,7 +2062,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF gegen Feinde, die diesen Zug bewegt wurden.",
+    "text": "",
     "effects": [],
     "flavor": "Keil fängt den Stoß.",
     "image": "panzer/B728.jpg",
@@ -1577,7 +2070,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "collector": "B728",
     "rarity": "bronze",
     "keywords": [
-      "Abschirmung"
+      "Abschirmung",
+      "Stellungswechsel"
     ]
   },
   {
@@ -1595,8 +2089,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK, wenn du diesen Zug Sofort spielst. [Markenwagen]",
-    "effects": [],
+    "text": "+1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Wagen aus der Mark — langsam und haltbar.",
     "image": "panzer/B729.jpg",
     "max_copies": 1,
@@ -1621,8 +2124,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK, wenn du diesen Zug Schaden erlitten hast.",
-    "effects": [],
+    "text": "+1 ATK, wenn sie in diesem Zug Schaden erlitten hat.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "hurt"
+        }
+      }
+    ],
     "flavor": "Gegenstoß — erst halten, dann treten.",
     "image": "panzer/B730.jpg",
     "max_copies": 1,
@@ -1647,8 +2159,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Kostet 1 weniger bei Infanterie im Abschnitt (min. 1). [Flussufer-Keil]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange eigene Infanterie an der Front steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "unit:infanterie"
+        }
+      }
+    ],
     "flavor": "Keil am Fluss — Kahn ist keine Front.",
     "image": "panzer/B731.jpg",
     "max_copies": 1,
@@ -1670,8 +2191,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Panzer im Kronland — Dauer vor Tempo.",
     "image": "panzer/B732.jpg",
     "max_copies": 1,
@@ -1691,13 +2220,21 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Doppelstellung",
     "ap": 4,
     "atk": 3,
-    "def": 5,
+    "def": 6,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF; einmal/Zug: negiere 1 Schaden. [Doppelstellung]",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Zwei Stellungen. Ein Name.",
     "image": "panzer/B733.jpg",
     "max_copies": 1,
@@ -1722,8 +2259,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+3 ATK, wenn du diesen Zug angegriffen wurdest; danach heile 1.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Gegenstoßkeil — Auffangen endet im Stahl.",
     "image": "panzer/B734.jpg",
     "max_copies": 1,
@@ -1748,13 +2294,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Einmal/Zug: schiebe diese Einheit um 1 Slot.",
+    "text": "",
     "effects": [],
     "flavor": "Der Keil öffnet den Weg — er ist nicht die Lizenz.",
     "image": "panzer/B049.jpg",
     "max_copies": 1,
     "collector": "B049",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_kolonnenpanzer_50",
@@ -1771,8 +2320,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF, wenn sie diesen Zug geschoben wurde.",
-    "effects": [],
+    "text": "+1 DEF, wenn sie in diesem Zug versetzt wurde.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "moved"
+        }
+      }
+    ],
     "flavor": "Die Kolonne hält, solange der Weg zählt.",
     "image": "panzer/B050.jpg",
     "max_copies": 1,
@@ -1794,8 +2353,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK, wenn sie diesen Zug geschoben wurde.",
-    "effects": [],
+    "text": "+1 ATK, wenn sie in diesem Zug versetzt wurde.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "moved"
+        }
+      }
+    ],
     "flavor": "Brückenkopf heißt: eigener Kai, eigene Straße.",
     "image": "panzer/B051.jpg",
     "max_copies": 1,
@@ -1817,7 +2385,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Darf einmal/Zug um 1 Slot geschoben werden (zusätzlich).",
+    "text": "",
     "effects": [],
     "flavor": "Reserve ist nicht Entlassung.",
     "image": "panzer/B052.jpg",
@@ -1843,8 +2411,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Kostet 1 weniger bei Infanterie im Abschnitt (min. 1). [Hafenring-Walze]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange eigene Infanterie an der Front steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "unit:infanterie"
+        }
+      }
+    ],
     "flavor": "Im Hafenring liegen die Listen, bevor die Rede kommt.",
     "image": "panzer/B053.jpg",
     "max_copies": 1,
@@ -1869,8 +2446,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: heile 1 an Infanterie oder Panzer.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Erz und Fisch hinaus. Medizin und Papier hinein.",
     "image": "panzer/B054.jpg",
     "max_copies": 1,
@@ -1895,8 +2481,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK gegen Einheiten, die diesen Zug Schaden nahmen.",
-    "effects": [],
+    "text": "+1 ATK gegen Ziele, die in diesem Zug Schaden erlitten haben.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "hit"
+        }
+      }
+    ],
     "flavor": "Kein milderes Recht. Anderer Kai.",
     "image": "panzer/B055.jpg",
     "max_copies": 1,
@@ -1921,8 +2516,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK/+1 DEF, wenn im Abschnitt keine Unterstützung liegt.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange du keine Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "nosupport"
+        }
+      }
+    ],
     "flavor": "Abgeschnitten steht sie trotzdem. Das hebt den Befehl nicht auf.",
     "image": "panzer/B056.jpg",
     "max_copies": 1,
@@ -1944,8 +2549,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK, wenn sie diesen Zug bewegt wurde.",
-    "effects": [],
+    "text": "+1 ATK, wenn sie in diesem Zug versetzt wurde.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "moved"
+        }
+      }
+    ],
     "flavor": "Wagen aus dem Umschlag — nicht aus dem Denkmal.",
     "image": "panzer/B667.jpg",
     "max_copies": 1,
@@ -1970,8 +2584,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK gegen Feinde, die nicht angrenzend an eigene Unterstützung stehen.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Keil nimmt den Umweg.",
     "image": "panzer/B668.jpg",
     "max_copies": 1,
@@ -1996,8 +2618,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Kostet 1 weniger bei Infanterie im Abschnitt (min. 1). [Lagerkeil]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange eigene Infanterie an der Front steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "unit:infanterie"
+        }
+      }
+    ],
     "flavor": "Keil aus Speich — wenn die Halle fließt.",
     "image": "panzer/B669.jpg",
     "max_copies": 1,
@@ -2019,8 +2650,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Negiere 1 Schaden einmal/Zug, wenn du diesen Zug Sofort spielst.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1,
+          "when": "played:Soforteinsatz"
+        }
+      }
+    ],
     "flavor": "Knoten offen. Panzer trotzdem.",
     "image": "panzer/B670.jpg",
     "max_copies": 1,
@@ -2037,12 +2677,12 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Pfadkeil",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF; ziehe 1 wenn du diesen Zug umgangen/bewegt hast.",
+    "text": "",
     "effects": [],
     "flavor": "Pfad vor Stellung.",
     "image": "panzer/B671.jpg",
@@ -2068,8 +2708,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK/+1 DEF beim Angriff aus angrenzendem Abschnitt; bei Kill ziehe 1.",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Panzer umgeht. Er thront nicht.",
     "image": "panzer/B672.jpg",
     "max_copies": 1,
@@ -2094,8 +2743,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK/+1 DEF, wenn zwei eigene Einheiten angrenzen.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "pair"
+        }
+      }
+    ],
     "flavor": "Zwei Kolonnen. Ein Fluss.",
     "image": "panzer/B673.jpg",
     "max_copies": 1,
@@ -2120,13 +2779,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+3 ATK, wenn aus angrenzendem Abschnitt angegriffen; danach darfst du 1 Einheit 1 Abschnitt bewegen.",
+    "text": "",
     "effects": [],
     "flavor": "Stoß von der Seite. Stillstand stirbt zuerst.",
     "image": "panzer/B674.jpg",
     "max_copies": 1,
     "collector": "B674",
-    "rarity": "gold"
+    "rarity": "gold",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_normwagen_547",
@@ -2143,8 +2805,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK, wenn Ziel beobachtet ist.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Wagen nach Liste. Nicht nach Ruhm.",
     "image": "panzer/B547.jpg",
     "max_copies": 1,
@@ -2169,8 +2840,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Kostet 1 weniger bei Unterstützung im Abschnitt (min. 1).",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Keil aus dem Depot — wenn freigegeben.",
     "image": "panzer/B548.jpg",
     "max_copies": 1,
@@ -2192,8 +2872,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK an Bahn-Abschnitten; +1 DEF wenn beobachtet.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Bahn trägt. Stab öffnet sie nicht.",
     "image": "panzer/B549.jpg",
     "max_copies": 1,
@@ -2218,8 +2907,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Negiere 1 Schaden einmal/Zug, wenn Unterstützung liegt.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Kommission zählt mit.",
     "image": "panzer/B550.jpg",
     "max_copies": 1,
@@ -2239,13 +2937,24 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Standardkeil",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF; ziehe 1 wenn du diesen Zug aufgedeckt hast.",
-    "effects": [],
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug aufgedeckt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "revealed"
+        }
+      }
+    ],
     "flavor": "Standard. Wartbar. Gleich genug.",
     "image": "panzer/B551.jpg",
     "max_copies": 1,
@@ -2270,8 +2979,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK/+1 DEF gegen beobachtete; bei Kill decke 1 auf.",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Normpanzer — Gerät, kein Held.",
     "image": "panzer/B552.jpg",
     "max_copies": 1,
@@ -2291,13 +3009,21 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Vollverband-Keil",
     "ap": 4,
     "atk": 4,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+2 ATK gegen ein gewähltes Ziel; Träger +1 DEF. [Vollverband-Keil]",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +2 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 2
+        }
+      }
+    ],
     "flavor": "Vollverband, sobald Papier liegt.",
     "image": "panzer/B553.jpg",
     "max_copies": 1,
@@ -2319,8 +3045,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+3 ATK gegen eine beobachtete Einheit. Danach gilt eine weitere angrenzende als beobachtet.",
-    "effects": [],
+    "text": "+3 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 3,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Methode schlägt. Laune nicht.",
     "image": "panzer/B554.jpg",
     "max_copies": 1,
@@ -2346,7 +3081,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK/+1 DEF, wenn sie in einen zuletzt angegriffenen Abschnitt rückt.",
+    "text": "",
     "effects": [],
     "flavor": "Kolonne auf dem Boden. Nicht auf dem Wasser.",
     "image": "panzer/B487.jpg",
@@ -2354,7 +3089,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "collector": "B487",
     "rarity": "bronze",
     "keywords": [
-      "Abschirmung"
+      "Abschirmung",
+      "Stellungswechsel"
     ]
   },
   {
@@ -2372,8 +3108,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF an Abschnitten mit eigener Unterstützung. [Volle Kolonne]",
-    "effects": [],
+    "text": "+1 DEF, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Volle Kolonne — und trotzdem fehlt ein Sack.",
     "image": "panzer/B488.jpg",
     "max_copies": 1,
@@ -2395,8 +3141,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK, wenn Unterstützung im Spiel.",
-    "effects": [],
+    "text": "+1 ATK, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Bahnstadt hält Namar zusammen.",
     "image": "panzer/B489.jpg",
     "max_copies": 1,
@@ -2413,13 +3168,21 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Solkai-Träger",
     "ap": 3,
     "atk": 2,
-    "def": 5,
+    "def": 6,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+2 ATK gegen ein gewähltes Ziel; Träger +1 DEF. [Solkai-Träger]",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +2 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 2
+        }
+      }
+    ],
     "flavor": "Werft baut Ladung. Keine Schlachtlinie.",
     "image": "panzer/B490.jpg",
     "max_copies": 1,
@@ -2439,12 +3202,12 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Straßenriegel",
     "ap": 3,
     "atk": 2,
-    "def": 5,
+    "def": 7,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+2 DEF; ziehe 1 wenn Entsatz diesen Zug.",
+    "text": "",
     "effects": [],
     "flavor": "Stellung an der Straße. Nicht auf See.",
     "image": "panzer/B491.jpg",
@@ -2452,7 +3215,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "collector": "B491",
     "rarity": "bronze",
     "keywords": [
-      "Abschirmung"
+      "Abschirmung",
+      "Zuteilung"
     ]
   },
   {
@@ -2470,8 +3234,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Kostet 1 weniger bei Unterstützung im Spiel.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Lager fährt. Deck entscheidet nichts.",
     "image": "panzer/B492.jpg",
     "max_copies": 1,
@@ -2493,8 +3266,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK/+1 DEF, wenn Abschnitt zuletzt angegriffen.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Entsatz kleiner angekommen — und hält.",
     "image": "panzer/B493.jpg",
     "max_copies": 1,
@@ -2519,7 +3300,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+2 ATK, wenn sie in einen zuletzt angegriffenen Abschnitt rückt.",
+    "text": "",
     "effects": [],
     "flavor": "Schlag, weil der Satz fällig ist.",
     "image": "panzer/B494.jpg",
@@ -2546,8 +3327,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF in Abschnitten ohne feindliche Unterstützung.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Tunnel gehören dem Tal, das sie trägt.",
     "image": "panzer/B070.jpg",
     "max_copies": 1,
@@ -2569,8 +3358,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK gegen einrückende Einheiten.",
-    "effects": [],
+    "text": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "entering"
+        }
+      }
+    ],
     "flavor": "Stellungen in den Engen — nicht der Sitz.",
     "image": "panzer/B071.jpg",
     "max_copies": 1,
@@ -2592,8 +3390,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: Feind im Abschnitt −1 ATK bis Zugende.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Zoll ist Arbeit und Streit. Nicht die Regierung.",
     "image": "panzer/B072.jpg",
     "max_copies": 1,
@@ -2618,8 +3424,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Ein zu großes Haus wird argwöhnisch angesehen.",
     "image": "panzer/B073.jpg",
     "max_copies": 1,
@@ -2644,8 +3458,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Kostet 1 weniger bei 2+ Abschnitten mit eigenen Einheiten.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), wenn du in 2+ Abschnitten Einheiten hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "sections:2"
+        }
+      }
+    ],
     "flavor": "Klein und oft geschickt — kein Amt.",
     "image": "panzer/B074.jpg",
     "max_copies": 1,
@@ -2670,8 +3493,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Einmal/Zug: +1 DEF gegen einrückendes Ziel.",
-    "effects": [],
+    "text": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "entering"
+        }
+      }
+    ],
     "flavor": "Der Riegel hält den Weg. Er wird kein Depot.",
     "image": "panzer/B075.jpg",
     "max_copies": 1,
@@ -2696,8 +3528,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK, wenn du diesen Zug eine Einheit verloren hast.",
-    "effects": [],
+    "text": "+1 ATK, wenn in diesem Zug eine eigene Einheit zerstört wurde.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "lost"
+        }
+      }
+    ],
     "flavor": "Das Feuer entscheidet nicht, ob gerufen werden kann.",
     "image": "panzer/B076.jpg",
     "max_copies": 1,
@@ -2719,8 +3560,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+2 ATK gegen eine Einheit, die in diesem Zug einrückt.",
-    "effects": [],
+    "text": "+2 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 2,
+          "vs": "entering"
+        }
+      }
+    ],
     "flavor": "Wer den Pass nimmt, nimmt dieses Tal. Nicht den Bund.",
     "image": "panzer/B077.jpg",
     "max_copies": 1,
@@ -2737,13 +3587,22 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Versorgungskeil",
     "ap": 3,
     "atk": 2,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF; heile 1 an Infanterie im Abschnitt einmal/Zug.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Essen und Ersatz über dieselben Listen.",
     "image": "panzer/B307.jpg",
     "max_copies": 1,
@@ -2768,8 +3627,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Negiere 1 Schaden einmal/Zug, wenn Unterstützung im Abschnitt.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Die Etappe ist kein Nebenschauplatz.",
     "image": "panzer/B308.jpg",
     "max_copies": 1,
@@ -2789,13 +3657,22 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Klinikschild",
     "ap": 4,
     "atk": 3,
-    "def": 5,
+    "def": 6,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF; Einheiten im Abschnitt heilen 1 nach Ruhezug.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Bett und Panzerung aus derselben Hand.",
     "image": "panzer/B309.jpg",
     "max_copies": 1,
@@ -2817,8 +3694,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Planblock hält. Nicht aus Prunk.",
     "image": "panzer/B310.jpg",
     "max_copies": 1,
@@ -2843,8 +3728,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: heile 2 an eigener Einheit.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 2 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 2
+        }
+      }
+    ],
     "flavor": "Krise gehört zusammen — Verband und Amt.",
     "image": "panzer/B311.jpg",
     "max_copies": 1,
@@ -2869,8 +3763,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Einheiten, die nicht angriffen: +1 DEF; einmal/Zug ziehe 1 bei Heilung.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Militär und innere Sicherheit sehen dieselbe Lage.",
     "image": "panzer/B312.jpg",
     "max_copies": 1,
@@ -2892,8 +3795,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Kostet 1 weniger, wenn Unterstützung im Spiel.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Zuteilung vor dem Angriff.",
     "image": "panzer/B313.jpg",
     "max_copies": 1,
@@ -2918,8 +3830,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Trägerwirkung-ähnlich: Abschnitt +1 DEF; ruhende Einheiten +1 ATK nächsten Zug.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Schützen, dann ruhen. Nicht opfern.",
     "image": "panzer/B314.jpg",
     "max_copies": 1,
@@ -2941,8 +3861,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF mit Ausrüstung.",
-    "effects": [],
+    "text": "+1 DEF, solange sie Ausrüstung trägt.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "equipped"
+        }
+      }
+    ],
     "flavor": "Erinnerung als Schild, nicht als Trophäe.",
     "image": "panzer/B091.jpg",
     "max_copies": 1,
@@ -2964,8 +3894,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Negiere 1 Schaden einmal/Zug, wenn Ausrüstung getragen.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1, solange sie Ausrüstung trägt.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1,
+          "when": "equipped"
+        }
+      }
+    ],
     "flavor": "Schwarz vom Öl. Hell bleibt das Amt.",
     "image": "panzer/B092.jpg",
     "max_copies": 1,
@@ -2987,8 +3926,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK/+1 DEF mit Ausrüstung.",
-    "effects": [],
+    "text": "+1 ATK und +1 DEF, solange sie Ausrüstung trägt.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "def": 1,
+          "when": "equipped"
+        }
+      }
+    ],
     "flavor": "Familie Oss baut Schutz. Keine Prunkplatten.",
     "image": "panzer/B093.jpg",
     "max_copies": 1,
@@ -3013,8 +3962,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Halten, damit kein neuer Name kommt.",
     "image": "panzer/B094.jpg",
     "max_copies": 1,
@@ -3039,7 +3996,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: ziehe 1 Ausrüstung.",
+    "text": "",
     "effects": [],
     "flavor": "Die Linse sieht. Sie bewertet nicht.",
     "image": "panzer/B095.jpg",
@@ -3047,7 +4004,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "collector": "B095",
     "rarity": "bronze",
     "keywords": [
-      "Abschirmung"
+      "Abschirmung",
+      "Zuteilung"
     ]
   },
   {
@@ -3065,8 +4023,16 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Einmal/Zug: +1 DEF; wenn Feind stirbt, +1 ATK bis Zugende.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Alte Platten. Kein Hunger nach neuen.",
     "image": "panzer/B096.jpg",
     "max_copies": 1,
@@ -3088,8 +4054,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Kostet 1 weniger mit Ausrüstung im Abschnitt.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange eine eigene Einheit Ausrüstung trägt.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "gear"
+        }
+      }
+    ],
     "flavor": "Glas und Traglast vor dem Zeichen.",
     "image": "panzer/B097.jpg",
     "max_copies": 1,
@@ -3111,8 +4086,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+2 ATK/+2 DEF mit Ausrüstung; stirbt Feind: Abschnitt +1 ATK.",
-    "effects": [],
+    "text": "+2 ATK und +2 DEF, solange sie Ausrüstung trägt.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 2,
+          "def": 2,
+          "when": "equipped"
+        }
+      }
+    ],
     "flavor": "Der Wall schützt Lebende. Er füllt sich nicht.",
     "image": "panzer/B098.jpg",
     "max_copies": 1,
@@ -3134,8 +4119,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+1 ATK gegen aufgeklärte.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Gerät erkennt. Es regiert nicht.",
     "image": "panzer/B427.jpg",
     "max_copies": 1,
@@ -3157,8 +4151,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Negiere 1 Schaden einmal/Zug, wenn Ziel aufgeklärt.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Prognose hält — bis sie nicht hält.",
     "image": "panzer/B428.jpg",
     "max_copies": 1,
@@ -3175,13 +4178,22 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Asteron-Schild",
     "ap": 4,
     "atk": 3,
-    "def": 5,
+    "def": 6,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+1 DEF; einmal/Zug decke Feind im Abschnitt auf.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Institutsgürtel misst. Der Saal entscheidet.",
     "image": "panzer/B429.jpg",
     "max_copies": 1,
@@ -3201,13 +4213,22 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Werkbach-Riegel",
     "ap": 3,
     "atk": 2,
-    "def": 5,
+    "def": 7,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "+2 DEF; ziehe 1 wenn du diesen Zug aufdeckst.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Werkhöfe halten Erkenntnis am Laufen.",
     "image": "panzer/B430.jpg",
     "max_copies": 1,
@@ -3229,8 +4250,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: decke 1 auf; +1 ATK gegen ihn.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Objekt und Subjekt zugleich — vorsichtig.",
     "image": "panzer/B431.jpg",
     "max_copies": 1,
@@ -3252,8 +4282,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Wenn Angriff keinen Kill: heile 1 und ziehe 1.",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Falsches Modell wird abgebrochen.",
     "image": "panzer/B432.jpg",
     "max_copies": 1,
@@ -3278,8 +4317,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Kostet 1 weniger bei aufgeklärtem Feind im Spiel.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange eine gegnerische Einheit beobachtet ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "observed"
+        }
+      }
+    ],
     "flavor": "Messung vor Marsch.",
     "image": "panzer/B433.jpg",
     "max_copies": 1,
@@ -3304,8 +4352,17 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "+2 ATK gegen aufgeklärte; nach Kill: decke nächsten Feind auf.",
-    "effects": [],
+    "text": "+2 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 2,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Punkt statt Fläche. Unterschrift bleibt.",
     "image": "panzer/B434.jpg",
     "max_copies": 1,

@@ -22,7 +22,8 @@ for (const def of w.DC_CATALOG.cards) {
     textures++; assert.equal(def.typ, 'Doktrin'); assert.equal(m.src, 'assets/cards/' + def.image);
   }
 }
-const inf = w.DC_CATALOG.cards.find(c => c.typ === 'Einheit' && !(c.effects || []).length && !(c.keywords || []).length);
+const plainInf = c => c.typ === 'Einheit' && (c.tags || []).includes('infanterie') && !(c.keywords || []).length && w.DC_TABLE_ART[c.id];
+const inf = w.DC_CATALOG.cards.find(c => plainInf(c) && !(c.effects || []).length) || w.DC_CATALOG.cards.find(c => plainInf(c) && (c.effects || []).every(e => e.code === 'CM' && ['kill', 'death', 'turnheal'].includes(e.param.k)));
 const eq = w.DC_CATALOG.cards.find(c => c.typ === 'Ausrüstung' && (c.effects || []).some(e => e.code === 'EQUIP_STAT'));
 const sup = w.DC_CATALOG.cards.find(c => c.typ === 'Unterstützung');
 const own = eng.instFromId(inf.id, 0), enemy = eng.instFromId(inf.id, 1), equip = eng.instFromId(eq.id, 0);

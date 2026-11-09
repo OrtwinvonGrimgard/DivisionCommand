@@ -44,7 +44,7 @@ test('10 zusätzliche allgemeine Entwürfe, 1746 IDs, kein stiller Austausch',()
 });
 test('nur identische bestehende Kerne migriert; Parameter/Abgrenzungen bleiben',()=>{
  const C=w.DC_CATALOG.cards.filter(c=>c.set!=='test'),count=k=>C.filter(c=>(c.keywords||[]).includes(k)).length;
- assert.equal(count('Indirektes Feuer'),83);assert.equal(count('Absetzen'),29);assert.equal(count('Erstschadenschutz'),14);
+ assert.equal(count('Indirektes Feuer'),87); // +4 Kartenprüfung: Dekretbatterie, Kronsalve, Maßbatterie, Massenschlag (Text versprach es, Code fehlte)assert.equal(count('Absetzen'),29);assert.equal(count('Erstschadenschutz'),14);
  for(const i of ['dc_b_feldaltar_138','dc_b_kettengebet_141','dc_b_wachsiegel_647'])assert(!(C.find(c=>c.id===i).keywords||[]).includes('Erstschadenschutz'));
  assert.equal(C.filter(c=>c.effects.some(e=>e.code==='EQUIP_NEGATE_DAMAGE')).length,8);
  assert(C.find(c=>c.id==='dc_b_kronplakette_652').text.includes('+1 DEF'));

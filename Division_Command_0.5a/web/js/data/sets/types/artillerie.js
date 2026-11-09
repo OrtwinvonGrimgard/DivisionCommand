@@ -136,8 +136,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, solange 2+ Artillerie im Spiel.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Rohre in Reihe — das ist Vaels Satzbau.",
     "image": "artillerie/B036.jpg",
     "max_copies": 1,
@@ -162,8 +170,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Zweimal angreifen nach Soforteinsatz; danach 1 Selbstschaden.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Munition ist billiger als Pause.",
     "image": "artillerie/B037.jpg",
     "max_copies": 1,
@@ -188,8 +204,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Ausspielen: Feind −1 DEF bis Zugende.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Die Zeile im Buch trifft vor dem Geschoss.",
     "image": "artillerie/B038.jpg",
     "max_copies": 1,
@@ -211,8 +235,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger bei Ausrüstung im Spiel.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange eine eigene Einheit Ausrüstung trägt.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "gear"
+        }
+      }
+    ],
     "flavor": "Die Kehle muss voll bleiben.",
     "image": "artillerie/B039.jpg",
     "max_copies": 1,
@@ -234,8 +267,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Angriff: 1 Schaden auch an benachbartem Feind.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Flächig, anhaltend, berechenbar.",
     "image": "artillerie/B040.jpg",
     "max_copies": 1,
@@ -257,8 +298,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK, wenn Ziel bereits Schaden hat.",
-    "effects": [],
+    "text": "+2 ATK gegen beschädigte Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 2,
+          "vs": "damaged"
+        }
+      }
+    ],
     "flavor": "Nacharbeiten sind im Preis inbegriffen.",
     "image": "artillerie/B041.jpg",
     "max_copies": 1,
@@ -280,8 +330,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Verdeckt spielbar. Aufgedeckt: +1 ATK diesen Zug.",
-    "effects": [],
+    "text": "Ihr erster Angriff hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Nachts kommt, was tags verbraucht wurde.",
     "image": "artillerie/B042.jpg",
     "max_copies": 1,
@@ -306,8 +364,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Allen Feinden 1 Schaden; dann +1 ATK gegen einen.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Ein Schlag, der das Auftragsbuch füllt.",
     "image": "artillerie/B145.jpg",
     "max_copies": 1,
@@ -333,8 +399,17 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "+1 ATK, wenn du in diesem Zug eine Infanterie gespielt hast.",
-    "effects": [],
+    "text": "+1 ATK, wenn du in diesem Zug Infanterie gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "played:Infanterie"
+        }
+      }
+    ],
     "flavor": "Rohre aus demselben Hof.",
     "image": "artillerie/B015.jpg",
     "max_copies": 1,
@@ -357,8 +432,17 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "Beim Ausspielen: 1 Schaden an einer gegnerischen Einheit im Abschnitt.",
-    "effects": [],
+    "text": "Beim Ausspielen: 1 Schaden an der schwächsten gegnerischen Fronteinheit in ihrem Abschnitt.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "strike",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Kurz. Laut. Genug für die Leiter.",
     "image": "artillerie/B016.jpg",
     "max_copies": 1,
@@ -381,8 +465,16 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "Einmal pro Zug: diese Einheit erleidet 1 Schaden → 1 Schaden an einem Ziel im Abschnitt.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Das Maß frisst auch die eigene Batterie.",
     "image": "artillerie/B017.jpg",
     "max_copies": 1,
@@ -408,8 +500,16 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Feuer nach dem ersten Schritt.",
     "image": "artillerie/B018.jpg",
     "max_copies": 1,
@@ -435,8 +535,17 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "Beim Ausspielen: 1 Schaden an bis zu zwei gegnerischen Einheiten im Abschnitt.",
-    "effects": [],
+    "text": "Beim Ausspielen: 1 Schaden an der schwächsten gegnerischen Fronteinheit in ihrem Abschnitt.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "strike",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Ein Schlag für alle Reihen.",
     "image": "artillerie/B019.jpg",
     "max_copies": 1,
@@ -458,8 +567,18 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Eigene Infanterie im Abschnitt +1 ATK. Beim Angriff: Ziel −1 DEF bis Zugende, wenn du in diesem Zug Infanterie gespielt hast.",
-    "effects": [],
+    "text": "Andere eigene Infanterie in ihrem Abschnitt: +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "filter": "infanterie"
+        }
+      }
+    ],
     "flavor": "Maß am Rohr. Heilige Ordnung feuert.",
     "image": "artillerie/B120.jpg",
     "max_copies": 1,
@@ -484,8 +603,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, wenn eigene Infanterie angrenzt. Einmal/Zug: wenn du keine Sofort spielst → +1 DEF.",
-    "effects": [],
+    "text": "+1 ATK, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Feuer nach Maß, nicht nach Eifer.",
     "image": "artillerie/B134.jpg",
     "max_copies": 1,
@@ -510,8 +638,25 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Ausspielen: heile eine eigene Infanterie um 1. +1 ATK gegen beschädigte Ziele.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit. +1 ATK gegen beschädigte Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "damaged"
+        }
+      }
+    ],
     "flavor": "Weihe am Rohr. Wasser vor dem Schuss.",
     "image": "artillerie/B139.jpg",
     "max_copies": 1,
@@ -537,13 +682,23 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "Kann jeden gegnerischen Frontabschnitt angreifen.",
-    "effects": [],
+    "text": "",
+    "effects": [
+      {
+        "code": "ATTACK_ANY_FRONT"
+      }
+    ],
     "flavor": "Der Befehl trägt weiter als die Stimme.",
     "image": "artillerie/B615.jpg",
     "max_copies": 1,
     "collector": "B615",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Indirektes Feuer"
+    ],
+    "rules": [
+      "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
+    ]
   },
   {
     "id": "dc_b_flussrot_haubitzen_616",
@@ -561,8 +716,16 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "+1 ATK gegen Einheiten, die in diesem Zug gespielt wurden.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Umschlagplatz. Dann Feuer.",
     "image": "artillerie/B616.jpg",
     "max_copies": 1,
@@ -588,8 +751,16 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "+2 ATK, wenn du in diesem Zug bereits angegriffen hast.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Erst bündeln. Dann sprechen die Rohre.",
     "image": "artillerie/B617.jpg",
     "max_copies": 1,
@@ -609,14 +780,22 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Glockenstellung",
     "ap": 3,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
       "artillerie"
     ],
-    "text": "+1 DEF. Gegnerische Einheiten in diesem Abschnitt haben -1 ATK gegen dich.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Was früher Feier war, ist jetzt Takt.",
     "image": "artillerie/B618.jpg",
     "max_copies": 1,
@@ -642,8 +821,12 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "Kann jeden Frontabschnitt angreifen.",
-    "effects": [],
+    "text": "",
+    "effects": [
+      {
+        "code": "ATTACK_ANY_FRONT"
+      }
+    ],
     "flavor": "Ein Dekret in Stahl.",
     "image": "artillerie/B619.jpg",
     "max_copies": 1,
@@ -651,7 +834,11 @@ window.DC_SET_TYPES["Artillerie"] = [
     "rarity": "gold",
     "keywords": [
       "Gefechtsbereit",
-      "Zuteilung"
+      "Zuteilung",
+      "Indirektes Feuer"
+    ],
+    "rules": [
+      "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
     ]
   },
   {
@@ -669,8 +856,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Einmal/Zug: wähle ein Ziel; Angriffe eigener Einheiten dagegen ignorieren den ersten Schaden-Negierer des Gegners. Danach: wirf 1 ab (Preis der Unfehlbarkeit).",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Batterie des Erlasses. Recht hat seinen Preis.",
     "image": "artillerie/B636.jpg",
     "max_copies": 1,
@@ -695,8 +890,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, solange du in diesem Zug eine Einheit ersetzt hast. Träger-Abschnitt: eigene Einheiten +1 DEF gegen den ersten Angriff.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Feuer auf den Schwur. Treue hält.",
     "image": "artillerie/B649.jpg",
     "max_copies": 1,
@@ -715,14 +918,23 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Silberstern-Rohr",
     "ap": 4,
-    "atk": 4,
+    "atk": 5,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK. Wenn diese Einheit einen Kill erzielt: heile 1 DEF an einer eigenen Einheit, die diesen Zug ersetzt wurde.",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Silberstern am Rohr. Ablösung lohnt.",
     "image": "artillerie/B650.jpg",
     "max_copies": 1,
@@ -748,15 +960,23 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "Kann jeden Frontabschnitt angreifen.",
-    "effects": [],
+    "text": "",
+    "effects": [
+      {
+        "code": "ATTACK_ANY_FRONT"
+      }
+    ],
     "flavor": "Zielwerte, nicht Ziele.",
     "image": "artillerie/B375.jpg",
     "max_copies": 1,
     "collector": "B375",
     "rarity": "bronze",
     "keywords": [
-      "Nachsetzen"
+      "Nachsetzen",
+      "Indirektes Feuer"
+    ],
+    "rules": [
+      "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
     ]
   },
   {
@@ -775,8 +995,16 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "+1 ATK gegen beschädigte Einheiten.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Treffer auf Treffer stapeln.",
     "image": "artillerie/B376.jpg",
     "max_copies": 1,
@@ -796,14 +1024,23 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Filterstellung",
     "ap": 3,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
       "artillerie"
     ],
-    "text": "+1 DEF. Gegnerische Soforteinsätze gegen Einheiten hier kosten 1 AP mehr.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Die Luft ist berechnet.",
     "image": "artillerie/B377.jpg",
     "max_copies": 1,
@@ -826,8 +1063,16 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Erst öffnen. Dann füllen.",
     "image": "artillerie/B378.jpg",
     "max_copies": 1,
@@ -853,8 +1098,12 @@ window.DC_SET_TYPES["Artillerie"] = [
       "einheit",
       "artillerie"
     ],
-    "text": "Kann jeden Frontabschnitt angreifen.",
-    "effects": [],
+    "text": "",
+    "effects": [
+      {
+        "code": "ATTACK_ANY_FRONT"
+      }
+    ],
     "flavor": "Ein Salvo. Eine Statistik.",
     "image": "artillerie/B379.jpg",
     "max_copies": 1,
@@ -862,7 +1111,11 @@ window.DC_SET_TYPES["Artillerie"] = [
     "rarity": "gold",
     "keywords": [
       "Gefechtsbereit",
-      "Überlast"
+      "Überlast",
+      "Indirektes Feuer"
+    ],
+    "rules": [
+      "Indirektes Feuer (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)"
     ]
   },
   {
@@ -880,8 +1133,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Eigene Infanterie +1 DEF gegen den ersten Angriff/Zug. Beim Angriff: erleide 1 Schaden → Ziel −1 DEF bis Zugende.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Rohr aus dem Filterwerk. Luft kostet Fleisch.",
     "image": "artillerie/B392.jpg",
     "max_copies": 1,
@@ -906,8 +1167,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, solange beschädigt. Einmal/Zug: opfere 1 DEF am Rohr → ziehe 1.",
-    "effects": [],
+    "text": "+1 ATK, solange sie beschädigt ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "damaged"
+        }
+      }
+    ],
     "flavor": "Implantat am Rohr. Menschlichkeit messbar.",
     "image": "artillerie/B408.jpg",
     "max_copies": 1,
@@ -927,12 +1197,12 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Knochenbatterie",
     "ap": 4,
     "atk": 4,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 DEF. Bei Zerstörung: ziehe 1 und eine eigene Einheit erleidet 1 Schaden (Optimierungsrest).",
+    "text": "",
     "effects": [],
     "flavor": "Batterie aus Knochenstift und Maß.",
     "image": "artillerie/B411.jpg",
@@ -940,7 +1210,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "collector": "B411",
     "rarity": "bronze",
     "keywords": [
-      "Nachsetzen"
+      "Nachsetzen",
+      "Zuteilung"
     ]
   },
   {
@@ -952,14 +1223,24 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Knotenrohr",
     "ap": 3,
-    "atk": 3,
+    "atk": 4,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK; einmal/Zug: wenn Infanterie im Abschnitt → +1 DEF. [Knotenrohr]",
-    "effects": [],
+    "text": "+1 DEF, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Rohr an der Leitung — offen, prüfbar.",
     "image": "artillerie/B795.jpg",
     "max_copies": 1,
@@ -981,8 +1262,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Angriff: decke Ziel auf; +1 ATK wenn schon aufgeklärt.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Feuer folgt der Lage, nicht dem Mythos.",
     "image": "artillerie/B796.jpg",
     "max_copies": 1,
@@ -1007,8 +1297,25 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK gegen aufgeklärte Feinde; ziehe 1 bei Kill.",
-    "effects": [],
+    "text": "+2 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 2,
+          "vs": "observed"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Batterie lokalisiert. Danach trifft sie.",
     "image": "artillerie/B797.jpg",
     "max_copies": 1,
@@ -1030,8 +1337,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, wenn eigene Infanterie angrenzt. [Werkhofgeschütz]",
-    "effects": [],
+    "text": "+1 ATK, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Geschütz aus dem Werkhof Nov.",
     "image": "artillerie/B798.jpg",
     "max_copies": 1,
@@ -1050,14 +1366,23 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Nordmark-Rohr",
     "ap": 3,
-    "atk": 3,
+    "atk": 4,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK; einmal/Zug: wenn Infanterie im Abschnitt → decke 1 auf.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Rohr der dünnen Nordmark.",
     "image": "artillerie/B799.jpg",
     "max_copies": 1,
@@ -1082,8 +1407,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill. [Westhaven-Batterie]",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Batterie versorgt vom Hafen — keine Flotte.",
     "image": "artillerie/B800.jpg",
     "max_copies": 1,
@@ -1108,8 +1442,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger wenn Unterstützung im Spiel (min. 1). [Kurzes Rohr]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Kurz und früh. Kein langer Kalender.",
     "image": "artillerie/B801.jpg",
     "max_copies": 1,
@@ -1134,8 +1477,25 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK gegen aufgeklärte Feinde; bei Kill aufdecken.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Gerät offen. Körper bleibt Mensch.",
     "image": "artillerie/B802.jpg",
     "max_copies": 1,
@@ -1157,8 +1517,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill.",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Rohr am Siegelwerk.",
     "image": "artillerie/B855.jpg",
     "max_copies": 1,
@@ -1178,12 +1547,12 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Falschfeuer",
     "ap": 3,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 DEF; ziehe 1 wenn du diesen Zug nicht bewegt hast.",
+    "text": "",
     "effects": [],
     "flavor": "Feuer nach gesetzter Version.",
     "image": "artillerie/B856.jpg",
@@ -1209,8 +1578,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK wenn leerer angrenzender Abschnitt; ziehe 1 bei Kill.",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Batterie hält den leeren Abschnitt tot.",
     "image": "artillerie/B857.jpg",
     "max_copies": 1,
@@ -1232,8 +1610,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger wenn Unterstützung im Spiel (min. 1). [Ämterlande-Geschütz]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Geschütz der Ämterlande.",
     "image": "artillerie/B858.jpg",
     "max_copies": 1,
@@ -1258,8 +1645,20 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Einheiten im Abschnitt +1 DEF, wenn du diesen Zug Sofort spielst.",
-    "effects": [],
+    "text": "Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1,
+          "when": "played:Soforteinsatz",
+          "self": true
+        }
+      }
+    ],
     "flavor": "Feuer am Grenzspiel.",
     "image": "artillerie/B859.jpg",
     "max_copies": 1,
@@ -1279,12 +1678,12 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Velis-Batterie",
     "ap": 4,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 DEF; ziehe 1 wenn du diesen Zug nicht bewegt hast. [Velis-Batterie]",
+    "text": "",
     "effects": [],
     "flavor": "Batterie der Hauptstadtfront.",
     "image": "artillerie/B860.jpg",
@@ -1310,8 +1709,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger wenn Unterstützung im Spiel (min. 1). [Stumpfrohr]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Stumpf. Genau. Ohne Glauben.",
     "image": "artillerie/B861.jpg",
     "max_copies": 1,
@@ -1336,8 +1744,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Angriff: Ziel −1 ATK bis Zugende.",
-    "effects": [],
+    "text": "Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "hitdebuff",
+          "atk": -1
+        }
+      }
+    ],
     "flavor": "Schuss in den leeren Abschnitt.",
     "image": "artillerie/B862.jpg",
     "max_copies": 1,
@@ -1359,8 +1775,25 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK gegen Feinde ohne angrenzende eigene Einheit des Gegners; bei Kill aufdecken.",
-    "effects": [],
+    "text": "+1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "isolated"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Rohr einer fälligen Zeile.",
     "image": "artillerie/B915.jpg",
     "max_copies": 1,
@@ -1376,14 +1809,24 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Vorlesefeuer",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK; einmal/Zug: wenn Infanterie im Abschnitt → +1 DEF.",
-    "effects": [],
+    "text": "+1 DEF, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Feuer nach Vorlesung.",
     "image": "artillerie/B916.jpg",
     "max_copies": 1,
@@ -1408,8 +1851,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill. [Abschlussgeschütz]",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Geschütz schließt den Namen.",
     "image": "artillerie/B917.jpg",
     "max_copies": 1,
@@ -1431,8 +1883,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger wenn Unterstützung im Spiel (min. 1). [Mahr-Geschütz]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Geschütz des reichen Hauses.",
     "image": "artillerie/B918.jpg",
     "max_copies": 1,
@@ -1457,8 +1918,25 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK gegen Feinde ohne angrenzende eigene Einheit des Gegners; bei Kill aufdecken. [Fälligkeitsfeuer]",
-    "effects": [],
+    "text": "+1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "isolated"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Feuer am Fälligkeitstag.",
     "image": "artillerie/B919.jpg",
     "max_copies": 1,
@@ -1483,8 +1961,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill. [Kalden-Batterie]",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Batterie der Halle.",
     "image": "artillerie/B920.jpg",
     "max_copies": 1,
@@ -1506,8 +1993,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, wenn eigene Infanterie angrenzt. [Manschettenrohr]",
-    "effects": [],
+    "text": "+1 ATK, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Rohr. Offene Zeile am Ärmel.",
     "image": "artillerie/B921.jpg",
     "max_copies": 1,
@@ -1532,8 +2028,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Angriff: Ziel −1 ATK bis Zugende. [Namenschuss]",
-    "effects": [],
+    "text": "Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "hitdebuff",
+          "atk": -1
+        }
+      }
+    ],
     "flavor": "Schuss auf den genannten Namen.",
     "image": "artillerie/B922.jpg",
     "max_copies": 1,
@@ -1558,8 +2062,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Angriff: Ziel −1 ATK bis Zugende. [Zeughausrohr]",
-    "effects": [],
+    "text": "Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "hitdebuff",
+          "atk": -1
+        }
+      }
+    ],
     "flavor": "Rohr aus dem Zeughaus — geölt, nicht geweiht.",
     "image": "artillerie/B735.jpg",
     "max_copies": 1,
@@ -1584,8 +2096,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Angriff: Ziel -1 ATK bis Zugende.",
-    "effects": [],
+    "text": "Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "hitdebuff",
+          "atk": -1
+        }
+      }
+    ],
     "flavor": "Batterie bremst den Anlauf.",
     "image": "artillerie/B736.jpg",
     "max_copies": 1,
@@ -1607,8 +2127,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger wenn Unterstützung im Spiel (min. 1).",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Sperre hält die Mark.",
     "image": "artillerie/B737.jpg",
     "max_copies": 1,
@@ -1633,8 +2162,25 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK gegen Feinde ohne angrenzende eigene Einheit des Gegners; bei Kill aufdecken. [Lafettenwacht]",
-    "effects": [],
+    "text": "+1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "isolated"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Lafette überdauert Regierungen.",
     "image": "artillerie/B738.jpg",
     "max_copies": 1,
@@ -1654,18 +2200,21 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Markengeschütz",
     "ap": 3,
     "atk": 3,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 DEF; ziehe 1 wenn du diesen Zug nicht bewegt hast. [Markengeschütz]",
+    "text": "",
     "effects": [],
     "flavor": "Geschütz für nasse Jahreszeit.",
     "image": "artillerie/B739.jpg",
     "max_copies": 1,
     "collector": "B739",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_brueckenau_batterie_740",
@@ -1682,8 +2231,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger wenn Unterstützung im Spiel (min. 1). [Brückenau-Batterie]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Batterie vom Fluss — Versorgung, keine Flotte.",
     "image": "artillerie/B740.jpg",
     "max_copies": 1,
@@ -1702,14 +2260,24 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Dauerrohr",
     "ap": 3,
-    "atk": 3,
+    "atk": 4,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK; einmal/Zug: wenn Infanterie im Abschnitt → +1 DEF. [Dauerrohr]",
-    "effects": [],
+    "text": "+1 DEF, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Rohr bleibt. Feldzüge wechseln.",
     "image": "artillerie/B741.jpg",
     "max_copies": 1,
@@ -1731,8 +2299,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill. [Auffangfeuer]",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Feuer fängt die Lücke.",
     "image": "artillerie/B742.jpg",
     "max_copies": 1,
@@ -1757,8 +2334,25 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK gegen Feinde ohne angrenzende eigene Einheit des Gegners; bei Kill aufdecken. [Kai-Batterie]",
-    "effects": [],
+    "text": "+1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "isolated"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Rohre halten den Zugang, nicht den Ort.",
     "image": "artillerie/B057.jpg",
     "max_copies": 1,
@@ -1780,8 +2374,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, wenn eine Einheit diesen Zug geschoben wurde.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Die Straße ist die eigene. Das Feuer hält sie offen.",
     "image": "artillerie/B058.jpg",
     "max_copies": 1,
@@ -1806,8 +2408,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger wenn Unterstützung im Spiel (min. 1). [Lizenzsalve]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Ohne Lizenz ist das Schiff Privatgeschäft.",
     "image": "artillerie/B059.jpg",
     "max_copies": 1,
@@ -1829,8 +2440,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger nach Soforteinsatz diesen Zug.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Verspätung ist keine Unabhängigkeit.",
     "image": "artillerie/B060.jpg",
     "max_copies": 1,
@@ -1849,14 +2469,24 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Staubrain-Rohre",
     "ap": 4,
-    "atk": 3,
+    "atk": 4,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK; einmal/Zug: wenn Infanterie im Abschnitt → +1 DEF. [Staubrain-Rohre]",
-    "effects": [],
+    "text": "+1 DEF, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Garnison und Dorf nebeneinander. Dieselbe Jacke.",
     "image": "artillerie/B061.jpg",
     "max_copies": 1,
@@ -1881,8 +2511,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill. [Kronenhof-Kaliber]",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Amtlos und unverzichtbar — gezählt, nicht befohlen.",
     "image": "artillerie/B062.jpg",
     "max_copies": 1,
@@ -1907,8 +2546,25 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK gegen Feinde ohne angrenzende eigene Einheit des Gegners; bei Kill aufdecken. [Nachtkai]",
-    "effects": [],
+    "text": "+1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "isolated"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Nachts kommt die Ablösung — oder das Loch.",
     "image": "artillerie/B063.jpg",
     "max_copies": 1,
@@ -1930,7 +2586,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Allen Feinden 1 Schaden; dann schiebe eine eigene Einheit um 1.",
+    "text": "",
     "effects": [],
     "flavor": "Den Weg öffnen. Die Bodentruppe halten.",
     "image": "artillerie/B184.jpg",
@@ -1957,8 +2613,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, wenn eigene Infanterie angrenzt. [Linienrohr]",
-    "effects": [],
+    "text": "+1 ATK, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Rohr hält die Linie, nicht den Ruhm.",
     "image": "artillerie/B675.jpg",
     "max_copies": 1,
@@ -1980,8 +2645,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Angriff: Ziel -1 DEF bis Zugende.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Batterie nimmt den Umweg im Feuer.",
     "image": "artillerie/B676.jpg",
     "max_copies": 1,
@@ -2003,8 +2676,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK wenn eigene Einheit angrenzt; ziehe 1 bei Kill.",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Linie feuert zusammen.",
     "image": "artillerie/B677.jpg",
     "max_copies": 1,
@@ -2029,8 +2711,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill. [Marktgeschütz]",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Geschütz vom Marktplatz — geliehen, nicht geweiht.",
     "image": "artillerie/B678.jpg",
     "max_copies": 1,
@@ -2055,8 +2746,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger wenn Unterstützung im Spiel (min. 1). [Straßenwurf]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Wurf sichert die Straße.",
     "image": "artillerie/B679.jpg",
     "max_copies": 1,
@@ -2081,8 +2781,19 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Einheiten im Abschnitt +1 ATK, wenn du diesen Zug Sofort spielst.",
-    "effects": [],
+    "text": "Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "when": "played:Soforteinsatz",
+          "self": true
+        }
+      }
+    ],
     "flavor": "Rohr aus der vollen Halle — die fährt.",
     "image": "artillerie/B680.jpg",
     "max_copies": 1,
@@ -2102,12 +2813,12 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Sarun-Batterie",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 DEF; ziehe 1 wenn du diesen Zug bewegt hast.",
+    "text": "",
     "effects": [],
     "flavor": "Sarun höflich. Rohr trotzdem.",
     "image": "artillerie/B681.jpg",
@@ -2115,7 +2826,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "collector": "B681",
     "rarity": "bronze",
     "keywords": [
-      "Fernschuss"
+      "Fernschuss",
+      "Stellungswechsel"
     ]
   },
   {
@@ -2133,8 +2845,25 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK gegen Feinde ohne angrenzende eigene Einheit des Gegners; bei Kill aufdecken. [Durchlassfeuer]",
-    "effects": [],
+    "text": "+1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "isolated"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Feuer öffnet den Durchlass.",
     "image": "artillerie/B682.jpg",
     "max_copies": 1,
@@ -2154,12 +2883,12 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Normgeschütz",
     "ap": 3,
     "atk": 3,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 DEF; ziehe 1 wenn du diesen Zug nicht bewegt hast. [Normgeschütz]",
+    "text": "",
     "effects": [],
     "flavor": "Rohr nach Plan.",
     "image": "artillerie/B555.jpg",
@@ -2167,7 +2896,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "collector": "B555",
     "rarity": "bronze",
     "keywords": [
-      "Zuteilung"
+      "Zuteilung",
+      "Stellungswechsel"
     ]
   },
   {
@@ -2185,8 +2915,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Angriff: Ziel gilt als beobachtet.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Blatt vor Schuss.",
     "image": "artillerie/B556.jpg",
     "max_copies": 1,
@@ -2208,8 +2947,25 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK gegen beobachtete; ziehe 1 bei Kill.",
-    "effects": [],
+    "text": "+2 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 2,
+          "vs": "observed"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Batterie liest denselben Plan.",
     "image": "artillerie/B557.jpg",
     "max_copies": 1,
@@ -2234,8 +2990,20 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Einheiten im Abschnitt +1 DEF, wenn du diesen Zug Sofort spielst. [Messwurf]",
-    "effects": [],
+    "text": "Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 0,
+          "def": 1,
+          "when": "played:Soforteinsatz",
+          "self": true
+        }
+      }
+    ],
     "flavor": "Messwurf. Kein Feldherr.",
     "image": "artillerie/B558.jpg",
     "max_copies": 1,
@@ -2254,14 +3022,23 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Synchronrohr",
     "ap": 3,
-    "atk": 3,
+    "atk": 4,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK; einmal/Zug: wenn Infanterie im Abschnitt → +1 ATK.",
-    "effects": [],
+    "text": "+1 ATK, solange eigene Infanterie benachbart ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "adj:infanterie"
+        }
+      }
+    ],
     "flavor": "Rohr wartet auf den Zug.",
     "image": "artillerie/B559.jpg",
     "max_copies": 1,
@@ -2283,8 +3060,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Einheiten im Abschnitt +1 ATK gegen beobachtete.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Normartillerie — System, kein Star.",
     "image": "artillerie/B560.jpg",
     "max_copies": 1,
@@ -2304,18 +3090,21 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Albensee-Batterie",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 DEF; ziehe 1 wenn Freigabe-/Sofort diesen Zug.",
+    "text": "",
     "effects": [],
     "flavor": "See ist Ader. Schlüssel bei Kommission.",
     "image": "artillerie/B561.jpg",
     "max_copies": 1,
     "collector": "B561",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_grossfeuer_562",
@@ -2332,8 +3121,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK wenn Ziel beobachtet; bei Kill weitere aufdecken.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Großfeuer nach Karte.",
     "image": "artillerie/B562.jpg",
     "max_copies": 1,
@@ -2358,8 +3156,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, wenn Unterstützung im Abschnitt.",
-    "effects": [],
+    "text": "+1 ATK, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Rohr deckt den Kai. Es regiert ihn nicht.",
     "image": "artillerie/B495.jpg",
     "max_copies": 1,
@@ -2381,8 +3188,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK gegen Feinde in Abschnitten ohne eigene Unterstützung.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Feuer, wo der Weg reißt.",
     "image": "artillerie/B496.jpg",
     "max_copies": 1,
@@ -2404,8 +3219,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK, wenn Zielabschnitt zuletzt angegriffen.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Rohr folgt dem Entsatz.",
     "image": "artillerie/B497.jpg",
     "max_copies": 1,
@@ -2430,8 +3253,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger wenn Unterstützung im Spiel (min. 1). [Lagerwurf]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Wurf aus dem Lager. Kein Stern.",
     "image": "artillerie/B498.jpg",
     "max_copies": 1,
@@ -2447,14 +3279,22 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Straßenfeuer",
     "ap": 3,
-    "atk": 3,
+    "atk": 4,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK; einmal/Zug: Unterstützung im Abschnitt → +1 ATK.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Feuer hält die Straße offen.",
     "image": "artillerie/B499.jpg",
     "max_copies": 1,
@@ -2479,8 +3319,19 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Einheiten im Abschnitt +1 ATK, wenn Unterstützung liegt.",
-    "effects": [],
+    "text": "Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "when": "support",
+          "self": true
+        }
+      }
+    ],
     "flavor": "Kleinkai schickt unordentlich — und schickt.",
     "image": "artillerie/B500.jpg",
     "max_copies": 1,
@@ -2500,18 +3351,21 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Hintermark-Rohr",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 DEF; ziehe 1 wenn Entsatz diesen Zug.",
+    "text": "",
     "effects": [],
     "flavor": "Hintermark meckert und steht mit.",
     "image": "artillerie/B501.jpg",
     "max_copies": 1,
     "collector": "B501",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_volle_front_502",
@@ -2528,8 +3382,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, wenn im Abschnitt eine Unterstützung liegt.",
-    "effects": [],
+    "text": "+1 ATK, solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Front aus Nachschub. Nicht aus Flotte.",
     "image": "artillerie/B502.jpg",
     "max_copies": 1,
@@ -2551,8 +3414,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Angriff: Ziel −1 ATK bis Zugende. [Signalfeuer-Rohr]",
-    "effects": [],
+    "text": "Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "hitdebuff",
+          "atk": -1
+        }
+      }
+    ],
     "flavor": "Feuer als Ruf — nicht als Hauptstadt.",
     "image": "artillerie/B078.jpg",
     "max_copies": 1,
@@ -2574,8 +3445,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Angriff: 1 Schaden auch an einrückendem Feind im Abschnitt.",
-    "effects": [],
+    "text": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "entering"
+        }
+      }
+    ],
     "flavor": "Der Hang antwortet, bevor das Tal fällt.",
     "image": "artillerie/B079.jpg",
     "max_copies": 1,
@@ -2597,8 +3477,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Ausspielen: einrückender Feind −1 ATK bis Zugende.",
-    "effects": [],
+    "text": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "entering"
+        }
+      }
+    ],
     "flavor": "Warnen ist noch nicht entscheiden.",
     "image": "artillerie/B080.jpg",
     "max_copies": 1,
@@ -2618,12 +3507,12 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Eidhof-Kaliber",
     "ap": 2,
     "atk": 2,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 DEF; ziehe 1 wenn du diesen Zug nicht bewegt hast. [Eidhof-Kaliber]",
+    "text": "",
     "effects": [],
     "flavor": "Die Kinder nennen fremde Namen. Die Rohre bleiben im Tal.",
     "image": "artillerie/B081.jpg",
@@ -2649,8 +3538,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, wenn 2+ eigene Abschnitte besetzt.",
-    "effects": [],
+    "text": "+1 ATK, wenn du in 2+ Abschnitten Einheiten hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "sections:2"
+        }
+      }
+    ],
     "flavor": "Geld bleibt, wo das Tal es hält.",
     "image": "artillerie/B082.jpg",
     "max_copies": 1,
@@ -2672,8 +3570,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK, wenn Ziel einrückt.",
-    "effects": [],
+    "text": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "entering"
+        }
+      }
+    ],
     "flavor": "Markt bleibt Markt. Kein Sitz.",
     "image": "artillerie/B083.jpg",
     "max_copies": 1,
@@ -2698,8 +3605,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Verdeckt spielbar. Aufgedeckt: +1 ATK gegen Einrückende.",
-    "effects": [],
+    "text": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "entering"
+        }
+      }
+    ],
     "flavor": "Nachts kennt man den eigenen Pass.",
     "image": "artillerie/B084.jpg",
     "max_copies": 1,
@@ -2724,8 +3640,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Einmal/Zug: einrückende Einheit im gewählten Abschnitt erleidet 2 Schaden.",
-    "effects": [],
+    "text": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "entering"
+        }
+      }
+    ],
     "flavor": "Der enge Weg ist der Frieden, den Lyr aushält.",
     "image": "artillerie/B223.jpg",
     "max_copies": 1,
@@ -2744,14 +3669,22 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Deckungsfeuer",
     "ap": 3,
-    "atk": 3,
+    "atk": 4,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK; eigene im Zielabschnitt +1 DEF diesen Zug.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Feuer, damit die Etappe atmet.",
     "image": "artillerie/B315.jpg",
     "max_copies": 1,
@@ -2776,8 +3709,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK, wenn du diesen Zug heilst.",
-    "effects": [],
+    "text": "+1 ATK, wenn du in diesem Zug geheilt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "healed"
+        }
+      }
+    ],
     "flavor": "Rohr und Verbände — dieselbe Schicht.",
     "image": "artillerie/B316.jpg",
     "max_copies": 1,
@@ -2799,8 +3741,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Nach Angriff: Abschnitt +1 DEF bis Zugende.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Sperren, nicht ausbluten.",
     "image": "artillerie/B317.jpg",
     "max_copies": 1,
@@ -2825,8 +3775,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger bei Heilung in diesem Zug.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), wenn du in diesem Zug geheilt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "healed"
+        }
+      }
+    ],
     "flavor": "Klinikstadt kennt den Lärm.",
     "image": "artillerie/B318.jpg",
     "max_copies": 1,
@@ -2851,8 +3810,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Angriff: Ziel −1 ATK bis Zugende. [Grünfeld-Rohr]",
-    "effects": [],
+    "text": "Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "hitdebuff",
+          "atk": -1
+        }
+      }
+    ],
     "flavor": "Gemeinschaftsküche und Geschütz — gemeldet.",
     "image": "artillerie/B319.jpg",
     "max_copies": 1,
@@ -2877,8 +3844,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Eigene Einheiten +1 DEF; ruhende +1 ATK bis Ende nächsten Zugs.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Schutz vor Not — auch vor dem eigenen Hunger nach Höhe.",
     "image": "artillerie/B320.jpg",
     "max_copies": 1,
@@ -2903,8 +3878,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Feind −1 ATK; wenn er nicht ruht, zusätzlich −1 DEF.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Kontrolle ist Fürsorge mit Zähnen.",
     "image": "artillerie/B321.jpg",
     "max_copies": 1,
@@ -2926,8 +3909,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK gegen aufgeklärte; heile 1 an ruhender Einheit.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Zu spät gemeldet — trotzdem halten.",
     "image": "artillerie/B322.jpg",
     "max_copies": 1,
@@ -2953,7 +3945,16 @@ window.DC_SET_TYPES["Artillerie"] = [
       "artillerie"
     ],
     "text": "+1 ATK gegen Ziele ohne Ausrüstung.",
-    "effects": [],
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "unequipped"
+        }
+      }
+    ],
     "flavor": "Feuer der Werkstatt. Kein Kult.",
     "image": "artillerie/B099.jpg",
     "max_copies": 1,
@@ -2978,8 +3979,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Zerstörst du Feind: heile 1 an eigener Einheit.",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: heile 1 DEF an einer eigenen Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Bergen vor dem Zeichen.",
     "image": "artillerie/B100.jpg",
     "max_copies": 1,
@@ -3004,7 +4014,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Beim Ausspielen: Feind −1 ATK; ziehe 1 wenn er stirbt.",
+    "text": "",
     "effects": [],
     "flavor": "Nach dem Gefecht die Frage. Nicht der Schrein.",
     "image": "artillerie/B101.jpg",
@@ -3012,7 +4022,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "collector": "B101",
     "rarity": "silver",
     "keywords": [
-      "Fernschuss"
+      "Fernschuss",
+      "Zuteilung"
     ]
   },
   {
@@ -3030,8 +4041,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Fehler benennen. Nicht heiligen.",
     "image": "artillerie/B102.jpg",
     "max_copies": 1,
@@ -3056,8 +4075,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger bei 2+ Ausrüstungen im Spiel.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Zeichen erst nach Einigung.",
     "image": "artillerie/B103.jpg",
     "max_copies": 1,
@@ -3079,8 +4107,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Eigene Einheiten mit Ausrüstung +1 DEF diesen Zug nach Angriff.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Hart halten. Nicht opfern.",
     "image": "artillerie/B104.jpg",
     "max_copies": 1,
@@ -3097,13 +4133,22 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Marenfeld-Geschütz",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 DEF; heile 1 wenn Feind stirbt.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Wenig Knochen auf der Ebene. Derselbe Schutz.",
     "image": "artillerie/B105.jpg",
     "max_copies": 1,
@@ -3128,8 +4173,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Trägerwirkung: Einheiten mit Ausrüstung +1 ATK; Feindtötung: +1 DEF alle Abschnitte bis Ende nächsten Zugs.",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Verlust wird Deckung — nicht Forderung.",
     "image": "artillerie/B262.jpg",
     "max_copies": 1,
@@ -3154,8 +4208,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Alle Feinde im Zielabschnitt gelten als aufgeklärt; +1 ATK gegen sie.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Sicht ohne Kult.",
     "image": "artillerie/B435.jpg",
     "max_copies": 1,
@@ -3181,8 +4244,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "+2 ATK gegen aufgeklärte; kostet 1 weniger nach Aufdecken.",
-    "effects": [],
+    "text": "+2 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 2,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Rechnung vor dem Rohr.",
     "image": "artillerie/B436.jpg",
     "max_copies": 1,
@@ -3204,8 +4276,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger wenn Unterstützung im Spiel (min. 1). [Punktrohr]",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Ein Punkt. Keine Walze aus Glauben.",
     "image": "artillerie/B437.jpg",
     "max_copies": 1,
@@ -3227,13 +4308,16 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Wenn Angriff scheitert: Feind −1 ATK; ziehe 1.",
+    "text": "",
     "effects": [],
     "flavor": "Irrtum aussprechen. Nicht schönreden.",
     "image": "artillerie/B438.jpg",
     "max_copies": 1,
     "collector": "B438",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_feuerleit_439",
@@ -3250,8 +4334,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Decke Feind auf; +2 ATK gegen ihn diesen Zug.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Leitung aus Messung. Nicht aus Eifer.",
     "image": "artillerie/B439.jpg",
     "max_copies": 1,
@@ -3273,8 +4366,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Einheiten im Abschnitt +1 ATK gegen aufgeklärte.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Stand der Zahlen. Stand der Unterschrift.",
     "image": "artillerie/B440.jpg",
     "max_copies": 1,
@@ -3299,8 +4401,17 @@ window.DC_SET_TYPES["Artillerie"] = [
     "tags": [
       "artillerie"
     ],
-    "text": "Kostet 1 weniger wenn Feind aufgeklärt.",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange eine gegnerische Einheit beobachtet ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "observed"
+        }
+      }
+    ],
     "flavor": "Objekt bleibt politisch wach.",
     "image": "artillerie/B441.jpg",
     "max_copies": 1,
@@ -3319,14 +4430,22 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Abbruchsalve",
     "ap": 3,
-    "atk": 3,
+    "atk": 4,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "artillerie"
     ],
-    "text": "+1 ATK; bei Miss (kein Kill): Abschnitt +1 DEF.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Zurückgezogene Order ist billiger als schöner Lüge.",
     "image": "artillerie/B442.jpg",
     "max_copies": 1,

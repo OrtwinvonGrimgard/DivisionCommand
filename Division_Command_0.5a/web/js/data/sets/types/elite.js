@@ -44,7 +44,7 @@ window.DC_SET_TYPES["Elite"] = [
       "elite",
       "leicht"
     ],
-    "text": "Nachbarn +2 V. Beide Flanken Infanterie: kämpft nach dem Angreifer in deren Gefecht mit.",
+    "text": "Nachbarn +2 DEF. Beide Flanken Infanterie: kämpft nach dem Angreifer in deren Gefecht mit.",
     "effects": [
       {
         "code": "FLANK_DEF",
@@ -81,7 +81,7 @@ window.DC_SET_TYPES["Elite"] = [
       "schwer",
       "elite"
     ],
-    "text": "Führungsfahrzeug: +2 V wenn eine Flanke gepanzert ist.",
+    "text": "Führungsfahrzeug: +2 DEF wenn eine Flanke gepanzert ist.",
     "effects": [
       {
         "code": "FUEHRUNG_V",
@@ -118,7 +118,7 @@ window.DC_SET_TYPES["Elite"] = [
       "stellung",
       "scharfschuetze"
     ],
-    "text": "+2 A gegen Infanterie.",
+    "text": "+2 ATK gegen Infanterie.",
     "effects": [
       {
         "code": "VS_INF",
@@ -195,8 +195,16 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: eigener Panzer oder Artillerie +1 ATK.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Er spricht für das Buch, nicht für das Ministerium.",
     "image": "elite/B150.jpg",
     "max_copies": 1,
@@ -221,8 +229,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: heile 2 verteilt auf Panzer/Artillerie.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 2 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 2
+        }
+      }
+    ],
     "flavor": "Reparatur ist der Auftrag in Uniform.",
     "image": "elite/B151.jpg",
     "max_copies": 1,
@@ -248,8 +265,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Soforteinsatz kostet 1 weniger (min. 1).",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Die Aktie steigt mit dem Verbrauch.",
     "image": "elite/B152.jpg",
     "max_copies": 1,
@@ -272,8 +298,16 @@ window.DC_SET_TYPES["Elite"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "Opfere diese Einheit: eine gegnerische Einheit im Abschnitt erleidet 3 Schaden.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Anerkannt. Nicht allein selig.",
     "image": "elite/B108.jpg",
     "max_copies": 1,
@@ -293,14 +327,14 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Eifererzug",
     "ap": 4,
-    "atk": 4,
+    "atk": 6,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
       "infanterie"
     ],
-    "text": "+2 ATK.",
+    "text": "",
     "effects": [],
     "flavor": "Voss prüft, ob sie lau geworden sind.",
     "image": "elite/B109.jpg",
@@ -327,8 +361,16 @@ window.DC_SET_TYPES["Elite"] = [
       "einheit",
       "infanterie"
     ],
-    "text": "Beim Ausspielen: eigene Infanterie im Abschnitt +1 ATK bis Zugende.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Der Plan darf Nein sagen.",
     "image": "elite/B110.jpg",
     "max_copies": 1,
@@ -352,8 +394,16 @@ window.DC_SET_TYPES["Elite"] = [
       "elite",
       "infanterie"
     ],
-    "text": "Einmal/Zug: ersetze eine eigene beschädigte Einheit durch eine aus der Hand (Kostendifferenz zahlen). Die Neue +1 DEF.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Erbe selbst. Ablösung ist Gesetz.",
     "image": "elite/B624.jpg",
     "max_copies": 1,
@@ -380,8 +430,16 @@ window.DC_SET_TYPES["Elite"] = [
       "elite",
       "infanterie"
     ],
-    "text": "Beim Ausspielen: eine eigene Einheit ignoriert Schaden bis Zugende. Am Zugende: erleide 1 Schaden an einer eigenen Einheit.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Kronanwalt. Die Krone hat recht — jemand zahlt.",
     "image": "elite/B625.jpg",
     "max_copies": 1,
@@ -409,8 +467,25 @@ window.DC_SET_TYPES["Elite"] = [
       "elite",
       "infanterie"
     ],
-    "text": "Einheiten hier +1 ATK/+1 DEF. Einmal/Zug: negiere 1 Schaden; danach kostet deine nächste Sofort +1 AP.",
-    "effects": [],
+    "text": "Andere eigene Einheiten in ihrem Abschnitt: +1 ATK und +1 DEF. Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "def": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Unfehlbarer Stab. Recht behalten engt ein.",
     "image": "elite/B626.jpg",
     "max_copies": 1,
@@ -437,13 +512,16 @@ window.DC_SET_TYPES["Elite"] = [
       "elite",
       "infanterie"
     ],
-    "text": "Einmal/Zug: wähle eine eigene Einheit; +2 ATK bis Zugende, sie erleidet 1 Schaden. Wenn sie überlebt: ziehe 1.",
+    "text": "",
     "effects": [],
     "flavor": "Chirurg am Front. Schneidet am Eigenen.",
     "image": "elite/B384.jpg",
     "max_copies": 1,
     "collector": "B384",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_chirurgenrat_385",
@@ -462,8 +540,16 @@ window.DC_SET_TYPES["Elite"] = [
       "elite",
       "infanterie"
     ],
-    "text": "Beim Ausspielen: teile 2 Schaden auf eigene Einheiten auf; alle beschädigten eigenen Einheiten +1 ATK.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Kalibrator. Das System fordert Anteilsopfer.",
     "image": "elite/B385.jpg",
     "max_copies": 1,
@@ -491,8 +577,19 @@ window.DC_SET_TYPES["Elite"] = [
       "elite",
       "infanterie"
     ],
-    "text": "Einheiten hier +1 ATK solange beschädigt. Einmal/Zug: opfere 1 DEF an einer Einheit hier → heile 2 an einer anderen.",
-    "effects": [],
+    "text": "Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, solange diese Einheit beschädigt ist.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "section",
+          "atk": 1,
+          "when": "damaged",
+          "self": true
+        }
+      }
+    ],
     "flavor": "Körperwart. Umverteilen ist Optimieren.",
     "image": "elite/B386.jpg",
     "max_copies": 1,
@@ -514,8 +611,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: decke 1–2 auf. Einheiten hier +1 ATK gegen Aufgeklärte; einmal/Spiel: spiele Sofort 1 billiger (min. 0).",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Lina Nov. Raster vor dem Schlag.",
     "image": "elite/B807.jpg",
     "max_copies": 1,
@@ -537,8 +643,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: decke 1 auf und ziehe 1. Einheiten hier +1 DEF, wenn du diesen Zug keine Sofort spielst.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Ed Ruh. Stille vor dem Knoten.",
     "image": "elite/B808.jpg",
     "max_copies": 1,
@@ -563,8 +678,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: ziehe 1 ODER heile 1 an aufgeklärtem Abschnitt. Nächste Ausrüstung kostet 1 weniger (min. 1).",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Werkhof-Nov. Werkzeug vor Flagge.",
     "image": "elite/B809.jpg",
     "max_copies": 1,
@@ -589,8 +713,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: decke 1 auf ODER wirf 1 ab und ziehe 2. Einheiten hier +1 ATK, wenn du diesen Zug eine Sofort mit „Scheinschwerpunkt“/Lage-Effekt gespielt hast oder spielst.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Ivo Vel. Doppelte Akte, ein Stoß.",
     "image": "elite/B867.jpg",
     "max_copies": 1,
@@ -616,8 +749,16 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: negiere 1 Schaden, wenn mindestens eine Einheit verdeckt liegt.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Nila Still. Stillhalten ist Lage.",
     "image": "elite/B868.jpg",
     "max_copies": 1,
@@ -643,8 +784,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: spiele Ausrüstung 1 billiger (min. 1) ODER heile 1. Wenn du diesen Zug Sofort spielst: Einheiten hier +1 ATK.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Siegelmeister. Siegel vor dem Schwerpunkt.",
     "image": "elite/B869.jpg",
     "max_copies": 1,
@@ -670,8 +820,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: nenne ein Ziel (Zielangriff); Angriffe dagegen +1 ATK diesen Zug ODER ziehe 1 nach einem Kill. Einheiten hier +1 DEF nach Kill.",
-    "effects": [],
+    "text": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "kill",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Schreiberin Kal. Setzt Zeilen. Vergibt nicht.",
     "image": "elite/B927.jpg",
     "max_copies": 1,
@@ -696,8 +855,16 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: eine Einheit, die diesen Zug Schaden verursacht hat, +1 ATK.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Hauptmann Kader. Führt Waffen. Schreibt keine Liste.",
     "image": "elite/B928.jpg",
     "max_copies": 1,
@@ -723,8 +890,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: spiele Unterstützung 1 billiger (min. 1) ODER heile 1. Wenn geheilt: diese Einheit darf diesen Zug nicht angreifen (Stillschuld).",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Haus Still. Richtig. Zu spät. Steht noch.",
     "image": "elite/B929.jpg",
     "max_copies": 1,
@@ -746,8 +922,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: heile 1 ODER ziehe 1.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Marei führt den Staat. Nicht den Feldzug als Ruhm.",
     "image": "elite/B747.jpg",
     "max_copies": 1,
@@ -773,8 +958,16 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Lenn bremst und trägt mit.",
     "image": "elite/B748.jpg",
     "max_copies": 1,
@@ -800,8 +993,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: spiele Ausrüstung/Unterstützung 1 billiger (min. 1) ODER heile 1.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Meister ölt Lafetten über Jahre.",
     "image": "elite/B749.jpg",
     "max_copies": 1,
@@ -823,7 +1025,7 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: schiebe eine eigene Einheit um 1 Slot.",
+    "text": "",
     "effects": [],
     "flavor": "Er hält. Er lizenziert nicht.",
     "image": "elite/B189.jpg",
@@ -831,7 +1033,8 @@ window.DC_SET_TYPES["Elite"] = [
     "collector": "B189",
     "rarity": "silver",
     "keywords": [
-      "Sicherung"
+      "Sicherung",
+      "Stellungswechsel"
     ]
   },
   {
@@ -849,8 +1052,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: heile 2 verteilt; keine Garnison befehligen.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Im Parlament. Ohne Amt über die Kompanie.",
     "image": "elite/B190.jpg",
     "max_copies": 1,
@@ -876,7 +1088,7 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Soforteinsatz zum Schieben kostet 1 weniger (min. 1).",
+    "text": "",
     "effects": [],
     "flavor": "Kommt der Weg, ist der Ort gewöhnlich — später und teurer.",
     "image": "elite/B191.jpg",
@@ -903,13 +1115,16 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: bewege 1 eigene Einheit 1 Abschnitt ODER heile 1 an Kolonnen-Abschnitt.",
+    "text": "",
     "effects": [],
     "flavor": "Lotte sieht Stillstand früher als Fahnen.",
     "image": "elite/B687.jpg",
     "max_copies": 1,
     "collector": "B687",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_hesse_sar_688",
@@ -926,8 +1141,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einheiten hier kosten diesen Zug 1 weniger (min. 1).",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Hesse krönt keine Stadt. Auch nicht Sarun.",
     "image": "elite/B688.jpg",
     "max_copies": 1,
@@ -953,13 +1177,16 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: spiele eine Einheit aus der Hand 1 billiger (min. 1) ODER bewege 1 Einheit.",
+    "text": "",
     "effects": [],
     "flavor": "Meister hält den Fluss. Nicht den Thron.",
     "image": "elite/B689.jpg",
     "max_copies": 1,
     "collector": "B689",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Stellungswechsel"
+    ]
   },
   {
     "id": "dc_b_ida_holm_567",
@@ -976,8 +1203,16 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: verhindere 1 Sofort des Gegners ODER eigene Einheit +1 DEF.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Holm sagt nein, bis die anderen Hände da sind.",
     "image": "elite/B567.jpg",
     "max_copies": 1,
@@ -1003,8 +1238,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: decke 1 auf.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Berst schreibt früher. Er stimmt nicht ab.",
     "image": "elite/B568.jpg",
     "max_copies": 1,
@@ -1030,8 +1274,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: markiere Feind als beobachtet ODER ziehe 1 nach Freigabe-Sofort.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Stab sieht. Schlüssel liegen woanders.",
     "image": "elite/B569.jpg",
     "max_copies": 1,
@@ -1057,8 +1310,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: Einheit im Abschnitt +1 ATK ODER Entsatz: heile 1.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Antwort nach außen. Nicht den Preis.",
     "image": "elite/B507.jpg",
     "max_copies": 1,
@@ -1084,8 +1346,16 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Feind kann dich nicht als Unterstützung stehlen.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Zweigt ab. Lässt den Fremden nicht an die Mole.",
     "image": "elite/B508.jpg",
     "max_copies": 1,
@@ -1111,7 +1381,7 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: Einheit, die in diesen Abschnitt rückt, +1 ATK.",
+    "text": "",
     "effects": [],
     "flavor": "Meister des Kais — nicht der Flotte.",
     "image": "elite/B509.jpg",
@@ -1119,7 +1389,8 @@ window.DC_SET_TYPES["Elite"] = [
     "collector": "B509",
     "rarity": "gold",
     "keywords": [
-      "Heranführung"
+      "Heranführung",
+      "Stellungswechsel"
     ]
   },
   {
@@ -1137,8 +1408,16 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: eine eigene Einheit in anderem Abschnitt +1 DEF.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Er schickt Leser. Er entscheidet nicht für die Täler.",
     "image": "elite/B228.jpg",
     "max_copies": 1,
@@ -1160,8 +1439,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: heile 2; ziehe 1 wenn allein.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 2 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 2
+        }
+      }
+    ],
     "flavor": "Die Abschrift zurück. Kein besserer Ort.",
     "image": "elite/B229.jpg",
     "max_copies": 1,
@@ -1183,7 +1471,7 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: ziehe eine Infanterie; sie +1 DEF wenn allein.",
+    "text": "",
     "effects": [],
     "flavor": "Der Ruf geht an die, die der Eid noch zeigt.",
     "image": "elite/B230.jpg",
@@ -1191,7 +1479,8 @@ window.DC_SET_TYPES["Elite"] = [
     "collector": "B230",
     "rarity": "gold",
     "keywords": [
-      "Durchschlag"
+      "Durchschlag",
+      "Zuteilung"
     ]
   },
   {
@@ -1209,8 +1498,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: heile 1; ziehe 1 wenn keine eigene Zerstörung.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Bett und Liste auf demselben Tisch.",
     "image": "elite/B327.jpg",
     "max_copies": 1,
@@ -1235,8 +1533,26 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: heile 2; +1 DEF wenn sie ruht.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 2 DEF an deiner am stärksten beschädigten Einheit. +1 DEF, wenn sie seit deinem letzten Zug nicht versetzt wurde.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 2
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "def": 1,
+          "when": "still"
+        }
+      }
+    ],
     "flavor": "Sie holt jedes Papier früher.",
     "image": "elite/B328.jpg",
     "max_copies": 1,
@@ -1258,8 +1574,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Wenn sie im letzten Zug nicht angriff: +2 ATK und heile 1.",
-    "effects": [],
+    "text": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "heal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Ruhe wird Kraft. Nicht Theater.",
     "image": "elite/B329.jpg",
     "max_copies": 1,
@@ -1281,7 +1606,7 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: Ausrüstung kostet 1 weniger; ziehe 1 wenn keine neue Zerstörung.",
+    "text": "",
     "effects": [],
     "flavor": "Sie zählt, wie wenige Namen hinzukommen.",
     "image": "elite/B267.jpg",
@@ -1289,7 +1614,8 @@ window.DC_SET_TYPES["Elite"] = [
     "collector": "B267",
     "rarity": "silver",
     "keywords": [
-      "Abschirmung"
+      "Abschirmung",
+      "Zuteilung"
     ]
   },
   {
@@ -1307,7 +1633,7 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: Feind −1 ATK; stirbt eigene: Untersuchung — ziehe 1.",
+    "text": "",
     "effects": [],
     "flavor": "Der letzte Tote war ein Fehler. Kein Heiligtum.",
     "image": "elite/B268.jpg",
@@ -1334,8 +1660,16 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: rüste Infanterie aus der Hand aus (−1 Kosten). Sie +1 DEF.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Erinnerung wird Rüstung. Nicht Befehl.",
     "image": "elite/B269.jpg",
     "max_copies": 1,
@@ -1357,8 +1691,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Einmal/Zug: decke auf oder brich eigenen Bonus ab und ziehe 2.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Mappe zurücklegen, wenn die Probe lügt.",
     "image": "elite/B447.jpg",
     "max_copies": 1,
@@ -1380,8 +1723,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: decke 2 auf.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Unterschrift neben der Zahl aushängen.",
     "image": "elite/B448.jpg",
     "max_copies": 1,
@@ -1407,8 +1759,17 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "+1 ATK gegen aufgeklärte; melde abweichend: ziehe 1 bei Miss.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Unbequeme Meldung bleibt.",
     "image": "elite/B449.jpg",
     "max_copies": 1,

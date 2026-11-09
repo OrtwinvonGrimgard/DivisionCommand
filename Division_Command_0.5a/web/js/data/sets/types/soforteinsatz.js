@@ -218,7 +218,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Opfere die eigene Front bis auf eine Einheit. Sie erhält +1 A und +1 V je geopferter Einheit. Wird sie besiegt, erhält der Gegner 1 SP.",
+    "text": "Opfere die eigene Front bis auf eine Einheit. Sie erhält +1 ATK und +1 DEF je geopferter Einheit. Wird sie besiegt, erhält der Gegner 1 SP.",
     "effects": [
       {
         "code": "LAST_STAND"
@@ -501,7 +501,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Bis zu drei eigene Einheiten, die bereits feindliche Einheiten zerstört haben, +2 A und +2 V bis Zugende.",
+    "text": "Bis zu drei eigene Einheiten, die bereits feindliche Einheiten zerstört haben, +2 ATK und +2 DEF bis Zugende.",
     "effects": [
       {
         "code": "HONORS",
@@ -975,7 +975,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Heile 2 an Panzer oder Artillerie.",
+    "text": "Wähle eine eigene Fronteinheit: heile 2.",
     "effects": [
       {
         "code": "HEAL",
@@ -988,7 +988,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B162.jpg",
     "max_copies": 1,
     "collector": "B162",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_munitionsregen_163",
@@ -1005,7 +1011,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Artillerie +2 ATK diesen Zug.",
+    "text": "Alle eigenen Artillerie: +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -1020,7 +1026,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B163.jpg",
     "max_copies": 1,
     "collector": "B163",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_kettentausch_164",
@@ -1037,7 +1046,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Panzer: +1 DEF und 1 heilen.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF; heile 1.",
     "effects": [
       {
         "code": "BUFF",
@@ -1057,7 +1066,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B164.jpg",
     "max_copies": 1,
     "collector": "B164",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_sofortbestellung_165",
@@ -1074,7 +1089,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziehe 1; Ausrüstung kostet 1 weniger diesen Zug.",
+    "text": "Ziehe 1 Karte. Deine nächste Ausrüstung kostet 1 AP weniger (mind. 1).",
     "effects": [
       {
         "code": "DRAW",
@@ -1094,7 +1109,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B165.jpg",
     "max_copies": 1,
     "collector": "B165",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_flaechensalve_166",
@@ -1111,7 +1129,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Zwei Feinde je 1 Schaden.",
+    "text": "Wähle 2 gegnerische Fronteinheiten: je 1 Schaden.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
@@ -1125,7 +1143,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B166.jpg",
     "max_copies": 1,
     "collector": "B166",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 2,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_werkalarme_167",
@@ -1142,7 +1166,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziehe 1; Einheit kostet 1 weniger diesen Zug.",
+    "text": "Ziehe 1 Karte. Deine nächste Einheit kostet 1 AP weniger (mind. 1).",
     "effects": [
       {
         "code": "DRAW",
@@ -1162,7 +1186,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B167.jpg",
     "max_copies": 1,
     "collector": "B167",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_preisdruck_168",
@@ -1179,7 +1206,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Feind −2 ATK bis Zugende.",
+    "text": "Wähle eine gegnerische Fronteinheit: −2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -1194,7 +1221,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B168.jpg",
     "max_copies": 1,
     "collector": "B168",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_kolonnenbruch_169",
@@ -1211,7 +1244,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Zerstöre Feind mit ≤2 DEF.",
+    "text": "Wähle eine gegnerische Fronteinheit: zerstöre sie, wenn sie 2 DEF oder weniger hat.",
     "effects": [
       {
         "code": "DESTROY_IF_DEF",
@@ -1224,7 +1257,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B169.jpg",
     "max_copies": 1,
     "collector": "B169",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_dauerfeuerbefehl_170",
@@ -1241,7 +1280,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Artillerie greift sofort an.",
+    "text": "Wähle eine eigene Fronteinheit: sie darf erneut angreifen.",
     "effects": [
       {
         "code": "EXTRA_ATTACK",
@@ -1252,7 +1291,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B170.jpg",
     "max_copies": 1,
     "collector": "B170",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_nachlieferung_171",
@@ -1300,7 +1345,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Allen Feinden 1 Schaden; Artillerie +1 ATK.",
+    "text": "Alle gegnerischen Fronteinheiten erleiden 1 Schaden.",
     "effects": [
       {
         "code": "MASS_DAMAGE",
@@ -1313,7 +1358,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B172.jpg",
     "max_copies": 1,
     "collector": "B172",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_materialersatz_173",
@@ -1330,7 +1378,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Heile alle Panzer und Artillerie um 1. Ziehe 1.",
+    "text": "Ziehe 1 Karte. Heile 1 an allen eigenen Panzer und Artillerie.",
     "effects": [
       {
         "code": "DRAW",
@@ -1351,7 +1399,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B173.jpg",
     "max_copies": 1,
     "collector": "B173",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_marschbefehl_121",
@@ -1414,7 +1465,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B122.jpg",
     "max_copies": 1,
     "collector": "B122",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "side": "enemy"
+    }
   },
   {
     "id": "dc_b_sammelruf_123",
@@ -1431,7 +1485,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Eine eigene Infanterie hat +2 ATK bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -1445,7 +1499,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B123.jpg",
     "max_copies": 1,
     "collector": "B123",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_nachruckbefehl_124",
@@ -1492,7 +1552,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Eigene Infanterie im Abschnitt hat +1 ATK bis Zugende.",
+    "text": "Wähle einen eigenen Abschnitt: Infanterie dort +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -1536,7 +1596,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B126.jpg",
     "max_copies": 1,
     "collector": "B126",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "side": "own"
+    }
   },
   {
     "id": "dc_b_sturmglocke_127",
@@ -1553,7 +1616,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Wähle eine eigene Infanterie: +3 ATK bis Zugende. Danach 1 Schaden an ihr.",
+    "text": "Wähle eine eigene Fronteinheit: +3 ATK bis Zugende; danach erleidet sie 1 Schaden.",
     "effects": [
       {
         "code": "BUFF",
@@ -1573,7 +1636,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B127.jpg",
     "max_copies": 1,
     "collector": "B127",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_volkszorn_128",
@@ -1590,7 +1659,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Jede eigene Infanterie im Abschnitt hat +1 ATK bis Zugende.",
+    "text": "Wähle einen eigenen Abschnitt: Infanterie dort +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -1669,7 +1738,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B130.jpg",
     "max_copies": 1,
     "collector": "B130",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "side": "own"
+    }
   },
   {
     "id": "dc_b_breites_aufgebot_143",
@@ -1699,7 +1771,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B143.jpg",
     "max_copies": 1,
     "collector": "B143",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "side": "own"
+    }
   },
   {
     "id": "dc_b_sturmangriff_144",
@@ -1716,7 +1791,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Wähle eine eigene Infanterie. Sie hat in diesem Zug +2 ATK.",
+    "text": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -1730,7 +1805,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B144.jpg",
     "max_copies": 1,
     "collector": "B144",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_treueeid_637",
@@ -1747,7 +1828,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Eine eigene Einheit hat +2 DEF bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -1761,7 +1842,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B637.jpg",
     "max_copies": 1,
     "collector": "B637",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_sofortabloesung_638",
@@ -1778,12 +1865,18 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Heile 2 DEF an einer eigenen Einheit oder ersetze sie gedanklich: ziehe 1, wenn sie beschädigt war.",
+    "text": "Wähle eine eigene Fronteinheit: heile 2. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "HEAL",
         "param": {
           "value": 2
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -1791,7 +1884,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B638.jpg",
     "max_copies": 1,
     "collector": "B638",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_konzentrationsruf_639",
@@ -1808,7 +1907,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Zwei eigene Einheiten im selben Abschnitt haben +1 ATK bis Zugende.",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -1841,7 +1940,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Eine eigene Einheit hat +1 ATK und +1 DEF bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -1856,7 +1955,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B640.jpg",
     "max_copies": 1,
     "collector": "B640",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_kronbefehl_641",
@@ -1886,7 +1991,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B641.jpg",
     "max_copies": 1,
     "collector": "B641",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "side": "enemy"
+    }
   },
   {
     "id": "dc_b_erbe_marsch_642",
@@ -1903,7 +2011,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Bewege eine eigene Einheit in einen angrenzenden Abschnitt. Sie hat dort +1 ATK bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -1918,7 +2026,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B642.jpg",
     "max_copies": 1,
     "collector": "B642",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_notdepot_643",
@@ -1966,7 +2080,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Zwei eigene Einheiten haben je +1 DEF bis Zugende. Wenn eine zerstört wird: die andere heilt 1.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -1980,7 +2094,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B644.jpg",
     "max_copies": 1,
     "collector": "B644",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_druckpunkt_645",
@@ -1997,7 +2117,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Füge einer gegnerischen Einheit 2 Schaden zu.",
+    "text": "Wähle eine gegnerische Fronteinheit: 2 Schaden.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
@@ -2010,7 +2130,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B645.jpg",
     "max_copies": 1,
     "collector": "B645",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_linienhalten_646",
@@ -2027,7 +2153,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Alle eigenen Einheiten in einem Abschnitt haben +1 DEF bis Zugende.",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 DEF bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -2059,7 +2185,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Wähle einen Abschnitt. Eigene Angriffe dort +2 ATK diesen Zug. Danach erleidet eine eigene Einheit dort 1 Schaden.",
+    "text": "Wähle eine gegnerische Fronteinheit: 1 Schaden. Alle eigenen Einheiten: +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
@@ -2080,7 +2206,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B659.jpg",
     "max_copies": 1,
     "collector": "B659",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_abloesung_660",
@@ -2112,7 +2244,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B660.jpg",
     "max_copies": 1,
     "collector": "B660",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "side": "own"
+    }
   },
   {
     "id": "dc_b_weiter_397",
@@ -2129,7 +2264,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Eine beschädigte eigene Einheit +2 ATK bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -2144,7 +2279,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B397.jpg",
     "max_copies": 1,
     "collector": "B397",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_schmerzstoss_398",
@@ -2161,7 +2302,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Eine eigene Einheit erleidet 1 Schaden und hat +2 ATK bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: danach erleidet sie 1 Schaden; +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "SELF_DAMAGE",
@@ -2182,7 +2323,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B398.jpg",
     "max_copies": 1,
     "collector": "B398",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_zweiter_stoss_399",
@@ -2199,7 +2346,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Eine eigene Infanterie greift in diesem Zug ein zweites Mal mit -1 ATK.",
+    "text": "Wähle eine eigene Fronteinheit: sie darf erneut angreifen.",
     "effects": [
       {
         "code": "EXTRA_ATTACK",
@@ -2210,7 +2357,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B399.jpg",
     "max_copies": 1,
     "collector": "B399",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_blutstiller_400",
@@ -2227,7 +2380,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Heile 2 DEF an einer beschädigten eigenen Einheit; sie hat -1 ATK bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: heile 2; −1 ATK bis Zugende.",
     "effects": [
       {
         "code": "HEAL",
@@ -2248,7 +2401,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B400.jpg",
     "max_copies": 1,
     "collector": "B400",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_durchbruch_401",
@@ -2265,7 +2424,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Füge einer gegnerischen Einheit 2 Schaden zu; eine eigene Einheit im selben Abschnitt erleidet 1 Schaden.",
+    "text": "Wähle eine gegnerische Fronteinheit: 2 Schaden.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
@@ -2278,7 +2437,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B401.jpg",
     "max_copies": 1,
     "collector": "B401",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_notimplantat_402",
@@ -2295,7 +2460,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Eine eigene Einheit +1 ATK und +1 DEF bis Zugende; erleidet zu Zugende 1 Schaden.",
+    "text": "Wähle eine gegnerische Fronteinheit: 1 Schaden; +1 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
@@ -2316,7 +2481,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B402.jpg",
     "max_copies": 1,
     "collector": "B402",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_ausfallquote_403",
@@ -2333,7 +2504,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Ziehe 2. Eine eigene Einheit erleidet 1 Schaden.",
+    "text": "Wähle eine eigene Fronteinheit: danach erleidet sie 1 Schaden. Ziehe 2 Karten.",
     "effects": [
       {
         "code": "DRAW",
@@ -2352,7 +2523,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B403.jpg",
     "max_copies": 1,
     "collector": "B403",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_offene_wunde_404",
@@ -2369,7 +2546,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Eine beschädigte eigene Einheit +1 ATK und +1 DEF bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -2384,7 +2561,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B404.jpg",
     "max_copies": 1,
     "collector": "B404",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_keilbefehl_405",
@@ -2401,7 +2584,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Zwei eigene Einheiten im selben Abschnitt je +1 ATK; eine davon erleidet 1 Schaden.",
+    "text": "Wähle eine gegnerische Fronteinheit: 1 Schaden. Alle eigenen Einheiten: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
@@ -2422,7 +2605,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B405.jpg",
     "max_copies": 1,
     "collector": "B405",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_ersatzgriff_406",
@@ -2439,7 +2628,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Heile 1 DEF an einer Einheit und füge einer anderen eigenen Einheit 1 Schaden zu.",
+    "text": "Wähle eine eigene Fronteinheit: heile 1; danach erleidet sie 1 Schaden.",
     "effects": [
       {
         "code": "HEAL",
@@ -2458,7 +2647,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B406.jpg",
     "max_copies": 1,
     "collector": "B406",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_stosstrupp_419",
@@ -2475,7 +2670,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Wähle eine eigene Einheit. Sie hat +3 ATK bis Zugende und erleidet 2 Schaden.",
+    "text": "Wähle eine gegnerische Fronteinheit: 2 Schaden; +3 ATK bis Zugende.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
@@ -2496,7 +2691,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B419.jpg",
     "max_copies": 1,
     "collector": "B419",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_weiterkaempfen_420",
@@ -2513,7 +2714,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Eine beschädigte eigene Einheit hat +2 ATK und +1 DEF bis Zugende und kann in diesem Zug erneut angreifen.",
+    "text": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -2528,7 +2729,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B420.jpg",
     "max_copies": 1,
     "collector": "B420",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_fruehe_meldung_819",
@@ -2545,7 +2752,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke 2 auf; 1 eigene Einheit +1 ATK.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF",
@@ -2566,7 +2773,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B819.jpg",
     "max_copies": 1,
     "collector": "B819",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_neue_lage_820",
@@ -2583,7 +2796,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke 1–2 auf; nächste eigene Einheit +1 ATK/+1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF",
@@ -2604,7 +2817,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B820.jpg",
     "max_copies": 1,
     "collector": "B820",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_kurzer_schutz_821",
@@ -2621,7 +2840,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nach Aufdecken: 1–2 Einheiten +2 ATK gegen Aufgeklärte diesen Zug.",
+    "text": "Alle eigenen Einheiten: +2 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -2642,7 +2861,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B821.jpg",
     "max_copies": 1,
     "collector": "B821",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_aufklaerungsschlag_822",
@@ -2659,7 +2881,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Angriffe gegen aufgeklärte Einheiten +1 ATK bis Zugende. Decke danach 1 auf.",
+    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -2680,7 +2902,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B822.jpg",
     "max_copies": 1,
     "collector": "B822",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_lokalisierung_823",
@@ -2697,7 +2922,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Aufgeklärte Feinde −1 DEF bis Zugende; eigene Aufklärung +1 ATK.",
+    "text": "Wähle eine gegnerische Fronteinheit: +1 ATK bis Zugende, −1 DEF (mind. 1); −1 DEF (mind. 1).",
     "effects": [
       {
         "code": "BUFF",
@@ -2720,7 +2945,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B823.jpg",
     "max_copies": 1,
     "collector": "B823",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_stille_woche_824",
@@ -2737,7 +2968,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Angriffe +1 ATK bis Zugende. [Stille Woche]",
+    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -2752,7 +2983,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B824.jpg",
     "max_copies": 1,
     "collector": "B824",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_buerger_ruf_825",
@@ -2769,7 +3003,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Angriffe +1 ATK bis Zugende. [Bürger-Ruf]",
+    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -2784,7 +3018,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B825.jpg",
     "max_copies": 1,
     "collector": "B825",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_netz_check_826",
@@ -2801,7 +3038,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke 2 auf; 1 Einheit +1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF",
@@ -2821,7 +3058,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B826.jpg",
     "max_copies": 1,
     "collector": "B826",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_rasterfrage_827",
@@ -2868,7 +3111,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Zwei Einheiten: je +1 ATK gegen Aufgeklärte.",
+    "text": "Wähle 2 eigene Fronteinheiten: je +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -2883,7 +3126,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B828.jpg",
     "max_copies": 1,
     "collector": "B828",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 2,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_boden_vor_see_829",
@@ -2900,7 +3149,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nach einem erlittenen Angriff: 1–2 Einheiten +2 ATK diesen Zug.",
+    "text": "Wähle bis zu 2 eigene Fronteinheiten: je +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -2916,7 +3165,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B829.jpg",
     "max_copies": 1,
     "collector": "B829",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 2,
+      "upto": true
+    }
   },
   {
     "id": "dc_b_oliv_halt_830",
@@ -2933,7 +3188,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +1 ATK/+1 DEF wenn Feind im Abschnitt aufgeklärt ist.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF; +1 ATK bis Zugende, +1 DEF. Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -2981,7 +3236,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nächste Sofort kostet 1 weniger (min. 0).",
+    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -2995,7 +3250,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B879.jpg",
     "max_copies": 1,
     "collector": "B879",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_gegenzug_880",
@@ -3012,7 +3270,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Angriffe +1 ATK bis Zugende.",
+    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -3027,7 +3285,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B880.jpg",
     "max_copies": 1,
     "collector": "B880",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_falsche_akte_881",
@@ -3044,7 +3305,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nach einem erlittenen Angriff: 1–2 Einheiten +2 ATK diesen Zug; eine davon muss verdeckt gespielt worden sein oder werden.",
+    "text": "Wähle bis zu 2 eigene Fronteinheiten: je +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -3060,7 +3321,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B881.jpg",
     "max_copies": 1,
     "collector": "B881",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 2,
+      "upto": true
+    }
   },
   {
     "id": "dc_b_scheinschwerpunkt_882",
@@ -3077,7 +3344,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ende Zug: +1 DEF auf einen Abschnitt. Nächster Zugbeginn: statt dessen +1 ATK auf einen anderen Abschnitt (Scheinschwerpunkt).",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 DEF bis Zugende; Einheiten dort +1 ATK bis Ende des nächsten Zuges.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -3137,7 +3404,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B883.jpg",
     "max_copies": 1,
     "collector": "B883",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "side": "enemy"
+    }
   },
   {
     "id": "dc_b_stille_quote_884",
@@ -3154,7 +3424,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Zwei Einheiten: je +1 ATK/+1 DEF bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF; +1 ATK bis Zugende, +1 DEF. Alle eigenen Einheiten: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -3184,7 +3454,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B884.jpg",
     "max_copies": 1,
     "collector": "B884",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_doppelrede_885",
@@ -3201,7 +3477,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Artillerie und Infanterie im Abschnitt +1 ATK.",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -3234,7 +3510,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke 2 auf; nächste eigene Einheit +1 ATK/+1 DEF. [Zwei Lagen]",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF",
@@ -3255,7 +3531,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B886.jpg",
     "max_copies": 1,
     "collector": "B886",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_aktenbefehl_887",
@@ -3307,7 +3589,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +1 ATK/+1 DEF wenn sie diesen Zug nicht bewegt wurde. [Kein Herr]",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -3322,7 +3604,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B888.jpg",
     "max_copies": 1,
     "collector": "B888",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_versorgungsnacht_889",
@@ -3339,7 +3627,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziehe 2; wirf 1 ab. [Versorgungsnacht]",
+    "text": "Ziehe 2 Karten, dann wirf deine älteste Handkarte ab.",
     "effects": [
       {
         "code": "DRAW_DISCARD",
@@ -3353,7 +3641,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B889.jpg",
     "max_copies": 1,
     "collector": "B889",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_oliv_halt_890",
@@ -3370,7 +3661,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke 2 auf; nächste eigene Einheit +1 ATK/+1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF",
@@ -3391,7 +3682,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B890.jpg",
     "max_copies": 1,
     "collector": "B890",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_faellige_zeile_939",
@@ -3408,7 +3705,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Angriffe +1 ATK bis Zugende. [Fällige Zeile]",
+    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -3423,7 +3720,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B939.jpg",
     "max_copies": 1,
     "collector": "B939",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_staffelung_940",
@@ -3440,7 +3740,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "1 eigene Einheit +2 DEF bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -3454,7 +3754,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B940.jpg",
     "max_copies": 1,
     "collector": "B940",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_frueheres_datum_941",
@@ -3471,7 +3777,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nach einem erlittenen Angriff: 1–2 Einheiten +2 ATK diesen Zug. Eine muss diesen Zug unbewegt gewesen sein.",
+    "text": "Wähle bis zu 2 eigene Fronteinheiten: je +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -3487,7 +3793,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B941.jpg",
     "max_copies": 1,
     "collector": "B941",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 2,
+      "upto": true
+    }
   },
   {
     "id": "dc_b_zielangriff_942",
@@ -3519,7 +3831,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B942.jpg",
     "max_copies": 1,
     "collector": "B942",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "side": "enemy"
+    }
   },
   {
     "id": "dc_b_abschluss_943",
@@ -3536,7 +3851,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit, die ein Ziel zerstört hat, +1 ATK bis Ende nächsten Zuges und heilt 1.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -3551,7 +3866,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B943.jpg",
     "max_copies": 1,
     "collector": "B943",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_stundung_944",
@@ -3568,7 +3889,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nächste Sofort kostet 1 weniger (min. 0). [Stundung]",
+    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -3582,7 +3903,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B944.jpg",
     "max_copies": 1,
     "collector": "B944",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_tausch_945",
@@ -3634,7 +3958,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "1 eigene Einheit +2 DEF bis Zugende. [Aufruf]",
+    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -3648,7 +3972,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B946.jpg",
     "max_copies": 1,
     "collector": "B946",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_hausblatt_947",
@@ -3665,7 +3995,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nächste Sofort kostet 1 weniger (min. 0). [Hausblatt]",
+    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -3679,7 +4009,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B947.jpg",
     "max_copies": 1,
     "collector": "B947",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_kein_streichen_948",
@@ -3726,7 +4059,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziehe 2; wirf 1 ab.",
+    "text": "Ziehe 2 Karten, dann wirf deine älteste Handkarte ab.",
     "effects": [
       {
         "code": "DRAW_DISCARD",
@@ -3740,7 +4073,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B949.jpg",
     "max_copies": 1,
     "collector": "B949",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_kurzer_strich_950",
@@ -3757,7 +4093,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziel −1 DEF bis Zugende.",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
     "effects": [
       {
         "code": "BUFF",
@@ -3772,7 +4108,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B950.jpg",
     "max_copies": 1,
     "collector": "B950",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_auffangbefehl_759",
@@ -3789,7 +4131,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +1 ATK/+1 DEF wenn sie diesen Zug nicht bewegt wurde. [Auffangbefehl]",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -3804,7 +4146,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B759.jpg",
     "max_copies": 1,
     "collector": "B759",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_gegenruf_760",
@@ -3821,7 +4169,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nach einem erlittenen Angriff: 1–2 Einheiten +2 ATK diesen Zug. [Gegenruf]",
+    "text": "Wähle bis zu 2 eigene Fronteinheiten: je +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -3837,7 +4185,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B760.jpg",
     "max_copies": 1,
     "collector": "B760",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 2,
+      "upto": true
+    }
   },
   {
     "id": "dc_b_spaeter_stoss_761",
@@ -3854,7 +4208,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziel −1 DEF bis Zugende. [Später Stoß]",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
     "effects": [
       {
         "code": "BUFF",
@@ -3869,7 +4223,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B761.jpg",
     "max_copies": 1,
     "collector": "B761",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_auffangen_762",
@@ -3886,7 +4246,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Einheiten +1 DEF; Angreifer -1 ATK. Bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF; −1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -3908,7 +4268,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B762.jpg",
     "max_copies": 1,
     "collector": "B762",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_gegenstoss_763",
@@ -3925,7 +4291,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nachdem du Schaden erlitten hast: eigene Einheiten +2 ATK diesen Zug.",
+    "text": "Alle eigenen Einheiten: +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -3940,7 +4306,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B763.jpg",
     "max_copies": 1,
     "collector": "B763",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_haushaltsfrage_764",
@@ -3957,7 +4326,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Artillerie und Infanterie im Abschnitt +1 ATK. [Haushaltsfrage]",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -3990,7 +4359,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nächste Sofort kostet 1 weniger (min. 0). [Gleichmäßiger Ruf]",
+    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -4004,7 +4373,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B765.jpg",
     "max_copies": 1,
     "collector": "B765",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_nachtstellung_766",
@@ -4021,7 +4393,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +1 ATK/+1 DEF wenn sie diesen Zug nicht bewegt wurde. [Nachtstellung]",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -4036,7 +4408,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B766.jpg",
     "max_copies": 1,
     "collector": "B766",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_aktenbefehl_767",
@@ -4053,7 +4431,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "1 eigene Einheit +2 DEF bis Zugende. [Aktenbefehl]",
+    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -4067,7 +4445,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B767.jpg",
     "max_copies": 1,
     "collector": "B767",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_zwei_haende_768",
@@ -4084,7 +4468,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "1 Einheit +2 DEF; sie darf diesen Zug nicht bewegt werden. [Zwei Hände]",
+    "text": "Wähle eine eigene Fronteinheit: +2 DEF; sie kann in ihrem nächsten Zug nicht angreifen.",
     "effects": [
       {
         "code": "BUFF",
@@ -4102,7 +4486,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B768.jpg",
     "max_copies": 1,
     "collector": "B768",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_sperrenkette_769",
@@ -4119,7 +4509,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziehe 2; wirf 1 ab. [Sperrenkette]",
+    "text": "Ziehe 2 Karten, dann wirf deine älteste Handkarte ab.",
     "effects": [
       {
         "code": "DRAW_DISCARD",
@@ -4133,7 +4523,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B769.jpg",
     "max_copies": 1,
     "collector": "B769",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_steingruen_halt_770",
@@ -4150,7 +4543,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +1 ATK/+1 DEF wenn sie diesen Zug nicht bewegt wurde.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -4165,7 +4558,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B770.jpg",
     "max_copies": 1,
     "collector": "B770",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_wachwechsel_201",
@@ -4182,7 +4581,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Schiebe eine eigene Einheit um 1; sie +1 DEF diesen Zug.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF; versetze sie seitlich auf ein freies Feld derselben Reihe.",
     "effects": [
       {
         "code": "BUFF",
@@ -4203,7 +4602,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B201.jpg",
     "max_copies": 1,
     "collector": "B201",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_umgruppierung_202",
@@ -4220,7 +4625,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Schiebe bis zu zwei eigene Einheiten um je 1 Slot.",
+    "text": "Wähle eine eigene Fronteinheit: versetze sie seitlich auf ein freies Feld derselben Reihe.",
     "effects": [
       {
         "code": "MOVE_SLOTS",
@@ -4234,7 +4639,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B202.jpg",
     "max_copies": 1,
     "collector": "B202",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_lizenzfahrt_203",
@@ -4251,7 +4662,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Schiebe eine Einheit um 1; ziehe 1.",
+    "text": "Wähle eine eigene Fronteinheit: versetze sie seitlich auf ein freies Feld derselben Reihe. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "MOVE_SLOTS",
@@ -4259,13 +4670,25 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "slots": 1,
           "count": 1
         }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
       }
     ],
     "flavor": "Ohne Lizenz verbindet das Schiff das Land nicht.",
     "image": "soforteinsatz/B203.jpg",
     "max_copies": 1,
     "collector": "B203",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_abloesung_204",
@@ -4282,7 +4705,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Heile 2 an Infanterie oder Panzer.",
+    "text": "Wähle eine eigene Fronteinheit: heile 2.",
     "effects": [
       {
         "code": "HEAL",
@@ -4295,7 +4718,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B204.jpg",
     "max_copies": 1,
     "collector": "B204",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_kaihalten_205",
@@ -4312,7 +4741,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +2 DEF; kann diesen Zug nicht angreifen.",
+    "text": "Wähle eine eigene Fronteinheit: +2 DEF; sie kann in ihrem nächsten Zug nicht angreifen.",
     "effects": [
       {
         "code": "BUFF",
@@ -4330,7 +4759,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B205.jpg",
     "max_copies": 1,
     "collector": "B205",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_stimmloch_206",
@@ -4347,7 +4782,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziehe 1; nächste Einheit kostet 1 weniger.",
+    "text": "Ziehe 1 Karte. Deine nächste Einheit kostet 1 AP weniger (mind. 1).",
     "effects": [
       {
         "code": "DRAW",
@@ -4367,7 +4802,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B206.jpg",
     "max_copies": 1,
     "collector": "B206",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_strassenoeffnen_207",
@@ -4384,7 +4822,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nächste Sofort kostet 1 weniger (min. 0). [Straßenöffnen]",
+    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -4398,7 +4836,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B207.jpg",
     "max_copies": 1,
     "collector": "B207",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_sandfarbe_208",
@@ -4415,7 +4856,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziel −1 DEF bis Zugende. [Sandfarbe]",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
     "effects": [
       {
         "code": "BUFF",
@@ -4430,7 +4871,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B208.jpg",
     "max_copies": 1,
     "collector": "B208",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_sofortlizenz_209",
@@ -4447,7 +4894,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziehe 2; wirf 1 ab. [Sofortlizenz]",
+    "text": "Ziehe 2 Karten, dann wirf deine älteste Handkarte ab.",
     "effects": [
       {
         "code": "DRAW_DISCARD",
@@ -4461,7 +4908,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B209.jpg",
     "max_copies": 1,
     "collector": "B209",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_verlegung_210",
@@ -4478,7 +4928,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Schiebe eine eigene Einheit um bis zu 2 Slots.",
+    "text": "Wähle eine eigene Fronteinheit: versetze sie seitlich auf ein freies Feld derselben Reihe (bis 2 Felder).",
     "effects": [
       {
         "code": "MOVE_SLOTS",
@@ -4492,7 +4942,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B210.jpg",
     "max_copies": 1,
     "collector": "B210",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_ausharren_211",
@@ -4509,7 +4965,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +3 DEF diesen Zug; ziehe 1.",
+    "text": "Wähle eine eigene Fronteinheit: +3 DEF. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF",
@@ -4517,13 +4973,25 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "def": 3,
           "until": "turn"
         }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
       }
     ],
     "flavor": "Abgeschnitten ausharren. Der Kern bleibt verantwortlich.",
     "image": "soforteinsatz/B211.jpg",
     "max_copies": 1,
     "collector": "B211",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_zweite_verspaetung_212",
@@ -4540,7 +5008,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziel −1 DEF bis Zugende. [Zweite Verspätung]",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
     "effects": [
       {
         "code": "BUFF",
@@ -4555,7 +5023,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B212.jpg",
     "max_copies": 1,
     "collector": "B212",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_umwegbefehl_699",
@@ -4572,7 +5046,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Bewege 1 eigene Einheit 1 Abschnitt; ziehe 1.",
+    "text": "Wähle eine eigene Fronteinheit: versetze sie seitlich auf ein freies Feld derselben Reihe. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "MOVE_SLOTS",
@@ -4580,13 +5054,25 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "slots": 1,
           "count": 1
         }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
       }
     ],
     "flavor": "Umweg ist Vertrag, kein Verrat.",
     "image": "soforteinsatz/B699.jpg",
     "max_copies": 1,
     "collector": "B699",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_durchlass_700",
@@ -4603,7 +5089,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke 2 auf; nächste eigene Einheit +1 ATK und darf umgehen.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF",
@@ -4624,7 +5110,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B700.jpg",
     "max_copies": 1,
     "collector": "B700",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_weite_umgehung_701",
@@ -4641,7 +5133,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Bewege bis zu 2 Einheiten je 1 Abschnitt; sie +1 ATK diesen Zug.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -4656,7 +5148,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B701.jpg",
     "max_copies": 1,
     "collector": "B701",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_linienkrieg_702",
@@ -4673,7 +5171,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Einheiten +1 ATK/+1 DEF, wenn sie angrenzen. Bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF; +1 ATK bis Zugende, +1 DEF. Alle eigenen Einheiten: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -4703,7 +5201,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B702.jpg",
     "max_copies": 1,
     "collector": "B702",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_umgehen_703",
@@ -4733,7 +5237,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B703.jpg",
     "max_copies": 1,
     "collector": "B703",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "side": "enemy"
+    }
   },
   {
     "id": "dc_b_fristtafel_704",
@@ -4750,7 +5257,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Angriffe +1 ATK bis Zugende. [Fristtafel]",
+    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -4765,7 +5272,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B704.jpg",
     "max_copies": 1,
     "collector": "B704",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_schnellpass_705",
@@ -4782,7 +5292,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "1 Einheit +2 DEF; sie darf diesen Zug nicht bewegt werden. [Schnellpass]",
+    "text": "Wähle eine eigene Fronteinheit: +2 DEF; sie kann in ihrem nächsten Zug nicht angreifen.",
     "effects": [
       {
         "code": "BUFF",
@@ -4800,7 +5310,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B705.jpg",
     "max_copies": 1,
     "collector": "B705",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_nachtumgehung_706",
@@ -4817,7 +5333,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Bewege 1 Einheit 2 Abschnitte (nur leer/eigen); sie +1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: versetze sie seitlich auf ein freies Feld derselben Reihe.",
     "effects": [
       {
         "code": "MOVE_SLOTS",
@@ -4831,7 +5347,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B706.jpg",
     "max_copies": 1,
     "collector": "B706",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_umschlagbefehl_707",
@@ -4848,7 +5370,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziel −1 DEF bis Zugende. [Umschlagbefehl]",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
     "effects": [
       {
         "code": "BUFF",
@@ -4863,7 +5385,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B707.jpg",
     "max_copies": 1,
     "collector": "B707",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_doppelumgehung_708",
@@ -4880,7 +5408,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Zwei Feinde: eigene Angriffe gegen sie gelten als Flanke (+1 ATK).",
+    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -4894,7 +5422,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B708.jpg",
     "max_copies": 1,
     "collector": "B708",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_handelskette_709",
@@ -4911,7 +5442,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke 2 auf; nächste eigene Einheit +1 ATK/+1 DEF. [Handelskette]",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF",
@@ -4932,7 +5463,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B709.jpg",
     "max_copies": 1,
     "collector": "B709",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_pfadoeffnung_710",
@@ -4949,7 +5486,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +1 ATK/+1 DEF wenn sie diesen Zug bewegt wurde.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -4964,7 +5501,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B710.jpg",
     "max_copies": 1,
     "collector": "B710",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_reglement_579",
@@ -4981,7 +5524,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "1 eigene Einheit +2 DEF bis Zugende. [Reglement]",
+    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -4995,7 +5538,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B579.jpg",
     "max_copies": 1,
     "collector": "B579",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_planungsrunde_580",
@@ -5012,7 +5561,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke 2 auf; nächste eigene Einheit +1 ATK.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF",
@@ -5033,7 +5582,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B580.jpg",
     "max_copies": 1,
     "collector": "B580",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_drei_schluessel_581",
@@ -5050,7 +5605,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Spiele eine Einheit aus der Hand mit 3 weniger Kosten (min. 1).",
+    "text": "Deine nächste Einheit kostet 3 AP weniger (mind. 1).",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -5064,7 +5619,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B581.jpg",
     "max_copies": 1,
     "collector": "B581",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_feuerplan_582",
@@ -5081,7 +5639,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine feindliche Einheit: gilt als beobachtet. Eigene Einheiten +1 ATK gegen beobachtete diesen Zug.",
+    "text": "Wähle eine gegnerische Fronteinheit: sie gilt als beobachtet. Alle eigenen Einheiten: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "MARK_OBSERVED",
@@ -5102,7 +5660,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B582.jpg",
     "max_copies": 1,
     "collector": "B582",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_sichtlinie_583",
@@ -5119,12 +5683,18 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke 1 auf; ziehe 1.",
+    "text": "Decke eine verdeckte gegnerische Einheit auf. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "REVEAL",
         "param": {
           "count": 1
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -5132,7 +5702,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B583.jpg",
     "max_copies": 1,
     "collector": "B583",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_pioniereinsatz_584",
@@ -5149,7 +5722,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Abschnitt +2 DEF; ziehe 1.",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +2 DEF bis Zugende. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -5157,6 +5730,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
         "param": {
           "def": 2,
           "until": "turn"
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -5181,7 +5760,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziel −1 DEF bis Zugende. [Reservistenruf]",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
     "effects": [
       {
         "code": "BUFF",
@@ -5196,7 +5775,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B585.jpg",
     "max_copies": 1,
     "collector": "B585",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_befehlskopien_586",
@@ -5213,7 +5798,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Kopiere: nächste Sofort kostet 1 weniger (min. 0).",
+    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -5227,7 +5812,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B586.jpg",
     "max_copies": 1,
     "collector": "B586",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_doppelbeobachtung_587",
@@ -5244,7 +5832,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Markiere 2 Feinde als beobachtet.",
+    "text": "Wähle 2 gegnerische Fronteinheiten: je sie gilt als beobachtet.",
     "effects": [
       {
         "code": "MARK_OBSERVED",
@@ -5257,7 +5845,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B587.jpg",
     "max_copies": 1,
     "collector": "B587",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 2,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_synchronfeuer_588",
@@ -5274,7 +5868,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "1 eigene Einheit +2 DEF bis Zugende. [Synchronfeuer]",
+    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -5288,7 +5882,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B588.jpg",
     "max_copies": 1,
     "collector": "B588",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_verfahrensbruch_589",
@@ -5318,7 +5918,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B589.jpg",
     "max_copies": 1,
     "collector": "B589",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "side": "enemy"
+    }
   },
   {
     "id": "dc_b_planfestigung_590",
@@ -5335,7 +5938,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +1 ATK/+1 DEF wenn Ziel beobachtet.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -5350,7 +5953,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B590.jpg",
     "max_copies": 1,
     "collector": "B590",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_volle_ladung_519",
@@ -5367,7 +5976,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziehe zwei Karten.",
+    "text": "Ziehe 2 Karten.",
     "effects": [
       {
         "code": "DRAW",
@@ -5380,7 +5989,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B519.jpg",
     "max_copies": 1,
     "collector": "B519",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_entlastung_520",
@@ -5397,7 +6009,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Einheit, die in angegriffenen Abschnitt rückt, +1 ATK/+1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -5412,7 +6024,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B520.jpg",
     "max_copies": 1,
     "collector": "B520",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_letzte_lieferung_521",
@@ -5429,7 +6047,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Spiele eine Einheit aus der Hand in einen zuletzt angegriffenen Abschnitt; sie +1 ATK.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Deine nächste Einheit kostet 1 AP weniger (mind. 1).",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -5450,7 +6068,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B521.jpg",
     "max_copies": 1,
     "collector": "B521",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_marsch_aus_dem_vollen_522",
@@ -5467,7 +6091,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Liegt Unterstützung im Abschnitt: Einheiten dort kosten 1 weniger; +1 ATK diesen Zug.",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -5500,7 +6124,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Alle eigenen Einheiten +1 ATK diesen Zug gegen denselben Abschnitt.",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -5532,7 +6156,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Heile 2 an Einheiten in einem Abschnitt mit Unterstützung.",
+    "text": "Wähle eine eigene Fronteinheit: heile 2.",
     "effects": [
       {
         "code": "HEAL",
@@ -5545,7 +6169,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B524.jpg",
     "max_copies": 1,
     "collector": "B524",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_mole_schliessen_525",
@@ -5562,7 +6192,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Abschnitt +2 DEF; Feind kann hier diesen Zug keine Unterstützung spielen.",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +2 DEF bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -5594,7 +6224,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziehe 1; nächste Einheit in angegriffenen Abschnitt +2 ATK.",
+    "text": "Ziehe 1 Karte.",
     "effects": [
       {
         "code": "DRAW",
@@ -5607,7 +6237,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B526.jpg",
     "max_copies": 1,
     "collector": "B526",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_anteil_lassen_527",
@@ -5624,7 +6257,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wirf 1 ab; ziehe 2.",
+    "text": "Ziehe 2 Karten, dann wirf deine älteste Handkarte ab.",
     "effects": [
       {
         "code": "DRAW_DISCARD",
@@ -5638,7 +6271,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B527.jpg",
     "max_copies": 1,
     "collector": "B527",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_bahn_frei_528",
@@ -5655,7 +6291,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit rückt in beliebigen Abschnitt; wenn Unterstützung dort, +1 ATK.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Deine nächste Einheit kostet 1 AP weniger (mind. 1).",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -5676,7 +6312,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B528.jpg",
     "max_copies": 1,
     "collector": "B528",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_keine_sterne_529",
@@ -5706,7 +6348,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B529.jpg",
     "max_copies": 1,
     "collector": "B529",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "side": "enemy"
+    }
   },
   {
     "id": "dc_b_markt_bleibt_530",
@@ -5723,7 +6368,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Unterstützung im Abschnitt: Einheiten +1 DEF; ziehe 1.",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 DEF bis Zugende. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -5794,7 +6439,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einrückende Einheit erleidet 2 Schaden; deine allein dort +1 ATK.",
+    "text": "Wähle eine gegnerische Fronteinheit: 2 Schaden.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
@@ -5807,7 +6452,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B241.jpg",
     "max_copies": 1,
     "collector": "B241",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_warnfeuer_242",
@@ -5824,7 +6475,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einrückende Einheit −1 ATK diesen Zug.",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -5839,7 +6490,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B242.jpg",
     "max_copies": 1,
     "collector": "B242",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_steinschlag_243",
@@ -5856,7 +6513,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eine gegnerische Einheit erleidet 3 Schaden.",
+    "text": "Wähle eine gegnerische Fronteinheit: 3 Schaden.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
@@ -5869,7 +6526,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B243.jpg",
     "max_copies": 1,
     "collector": "B243",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_leserruf_244",
@@ -5922,7 +6585,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Feind −2 ATK bis Zugende; du ziehst nicht.",
+    "text": "Wähle eine gegnerische Fronteinheit: −2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -5937,7 +6600,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B245.jpg",
     "max_copies": 1,
     "collector": "B245",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_passoeffnen_246",
@@ -5954,7 +6623,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Schiebe eine eigene Einheit um 1; sie +1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: versetze sie seitlich auf ein freies Feld derselben Reihe.",
     "effects": [
       {
         "code": "MOVE_SLOTS",
@@ -5968,7 +6637,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B246.jpg",
     "max_copies": 1,
     "collector": "B246",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_schonung_247",
@@ -5985,7 +6660,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziel −1 DEF bis Zugende. [Schonung]",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
     "effects": [
       {
         "code": "BUFF",
@@ -6000,7 +6675,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B247.jpg",
     "max_copies": 1,
     "collector": "B247",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_zweite_linie_248",
@@ -6017,7 +6698,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Zwei eigene Einheiten +1 ATK wenn im selben Abschnitt.",
+    "text": "Wähle 2 eigene Fronteinheiten: je +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -6032,7 +6713,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B248.jpg",
     "max_copies": 1,
     "collector": "B248",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 2,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_lauer_249",
@@ -6091,7 +6778,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Allein stehende +1 DEF; Abschnitte mit 2+ Einheiten +1 ATK.",
+    "text": "Alle eigenen Einheiten: +1 DEF. Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -6130,7 +6817,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Schiebe bis zu zwei Einheiten um je 1; heile 1 verteilt.",
+    "text": "Wähle eine eigene Fronteinheit: heile 1; versetze sie seitlich auf ein freies Feld derselben Reihe.",
     "effects": [
       {
         "code": "HEAL",
@@ -6150,7 +6837,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B251.jpg",
     "max_copies": 1,
     "collector": "B251",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_erholung_339",
@@ -6167,7 +6860,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Heile 2; Ziel greift diesen Zug nicht an.",
+    "text": "Wähle eine eigene Fronteinheit: heile 2.",
     "effects": [
       {
         "code": "HEAL",
@@ -6180,7 +6873,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B339.jpg",
     "max_copies": 1,
     "collector": "B339",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_etappensicherung_340",
@@ -6197,7 +6896,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Abschnitt +2 DEF; ruhende Einheiten dort +1 ATK bis Ende nächsten Zugs.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +2 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -6212,7 +6911,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B340.jpg",
     "max_copies": 1,
     "collector": "B340",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_rasten_341",
@@ -6229,7 +6934,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle bis zu zwei Einheiten: sie greifen nicht an, heilen 2, +1 DEF.",
+    "text": "Wähle 2 gegnerische Fronteinheiten: je sie kann in ihrem nächsten Zug nicht angreifen; heile 2; +1 DEF.",
     "effects": [
       {
         "code": "OUT_OF_COMBAT",
@@ -6254,7 +6959,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B341.jpg",
     "max_copies": 1,
     "collector": "B341",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 2,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_meldung_342",
@@ -6271,7 +6982,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke Feind auf; heile 1; ziehe 1.",
+    "text": "Wähle eine eigene Fronteinheit: heile 1. Decke eine verdeckte gegnerische Einheit auf. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "HEAL",
@@ -6284,13 +6995,25 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
         "param": {
           "count": 1
         }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
       }
     ],
     "flavor": "Wer meldet, wird gesehen.",
     "image": "soforteinsatz/B342.jpg",
     "max_copies": 1,
     "collector": "B342",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_verband_343",
@@ -6307,7 +7030,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Heile 1; Ziel +1 DEF bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: heile 1; +1 DEF.",
     "effects": [
       {
         "code": "HEAL",
@@ -6327,7 +7050,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B343.jpg",
     "max_copies": 1,
     "collector": "B343",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_umverteilung_344",
@@ -6344,7 +7073,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Verschiebe 1 Schaden von einer Einheit auf Heilung 2 an einer anderen.",
+    "text": "Wähle eine gegnerische Fronteinheit: 1 Schaden; versetze sie seitlich auf ein freies Feld derselben Reihe.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
@@ -6364,7 +7093,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B344.jpg",
     "max_copies": 1,
     "collector": "B344",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_frist_345",
@@ -6381,7 +7116,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +2 DEF; wenn sie ruht, ziehe 1.",
+    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -6395,7 +7130,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B345.jpg",
     "max_copies": 1,
     "collector": "B345",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_kein_loch_346",
@@ -6427,7 +7168,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B346.jpg",
     "max_copies": 1,
     "collector": "B346",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "side": "own"
+    }
   },
   {
     "id": "dc_b_zuteilung_347",
@@ -6444,7 +7188,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Spiele Unterstützung/−Ausrüstung um 1 weniger; heile 1.",
+    "text": "Wähle eine eigene Fronteinheit: heile 1.",
     "effects": [
       {
         "code": "HEAL",
@@ -6457,7 +7201,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B347.jpg",
     "max_copies": 1,
     "collector": "B347",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_rueckruf_348",
@@ -6474,7 +7224,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nimm Einheit zurück auf Hand; heile 2 an einer anderen.",
+    "text": "Wähle eine eigene Fronteinheit: heile 2.",
     "effects": [
       {
         "code": "HEAL",
@@ -6487,7 +7237,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B348.jpg",
     "max_copies": 1,
     "collector": "B348",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_stabilitaet_349",
@@ -6504,7 +7260,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Abschnitt +1 DEF; Einheiten dort, die ruhen, +1 ATK nächsten Zug.",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 DEF bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -6536,7 +7292,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Feind −1 ATK/−1 DEF; eigene ruhende +1 DEF.",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -6551,7 +7307,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B350.jpg",
     "max_copies": 1,
     "collector": "B350",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_namensruf_279",
@@ -6568,7 +7330,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Eigene Einheit mit Ausrüstung +1 ATK bis Ende nächsten Zugs.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
@@ -6583,7 +7345,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B279.jpg",
     "max_copies": 1,
     "collector": "B279",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_untersuchung_280",
@@ -6600,7 +7368,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Feind −2 ATK; stirbt er: ziehe 1.",
+    "text": "Wähle eine gegnerische Fronteinheit: −2 ATK bis Zugende. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF",
@@ -6609,13 +7377,25 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "until": "turn",
           "enemy": true
         }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
       }
     ],
     "flavor": "Respekt ist die Frage warum.",
     "image": "soforteinsatz/B280.jpg",
     "max_copies": 1,
     "collector": "B280",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_bergung_281",
@@ -6632,7 +7412,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Heile 2 an eigener Einheit; sie greift diesen Zug nicht an.",
+    "text": "Wähle eine eigene Fronteinheit: heile 2.",
     "effects": [
       {
         "code": "HEAL",
@@ -6645,7 +7425,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B281.jpg",
     "max_copies": 1,
     "collector": "B281",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_plattenfreigabe_282",
@@ -6662,7 +7448,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Spiele Ausrüstung um 1 weniger; Träger +1 DEF.",
+    "text": "Deine nächste Ausrüstung kostet 1 AP weniger (mind. 1).",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -6676,7 +7462,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B282.jpg",
     "max_copies": 1,
     "collector": "B282",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_korrigieren_283",
@@ -6693,7 +7482,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +2 DEF; wenn sie Ausrüstung trägt, +1 ATK.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +2 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -6708,7 +7497,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B283.jpg",
     "max_copies": 1,
     "collector": "B283",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_kein_schrein_284",
@@ -6738,7 +7533,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B284.jpg",
     "max_copies": 1,
     "collector": "B284",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "side": "own"
+    }
   },
   {
     "id": "dc_b_schutzblatt_285",
@@ -6755,7 +7553,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziehe 1; nächste Ausrüstung −1 Kosten.",
+    "text": "Ziehe 1 Karte.",
     "effects": [
       {
         "code": "DRAW",
@@ -6768,7 +7566,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B285.jpg",
     "max_copies": 1,
     "collector": "B285",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_personalregel_286",
@@ -6785,7 +7586,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Feind −1 ATK/−1 DEF; wenn er „Opfer“ erzwingen würde: +1 Schaden.",
+    "text": "Wähle eine gegnerische Fronteinheit: 1 Schaden; −1 ATK bis Zugende.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
@@ -6806,7 +7607,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B286.jpg",
     "max_copies": 1,
     "collector": "B286",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_reihenfolge_287",
@@ -6823,7 +7630,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Heile 1; spiele Ausrüstung aus der Hand (−1).",
+    "text": "Wähle eine eigene Fronteinheit: heile 1.",
     "effects": [
       {
         "code": "HEAL",
@@ -6836,7 +7643,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B287.jpg",
     "max_copies": 1,
     "collector": "B287",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_grenze_halten_288",
@@ -6853,7 +7666,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Abschnitt +1 DEF; Einheiten mit Ausrüstung +1 ATK.",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 DEF bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
@@ -6896,7 +7709,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B289.jpg",
     "max_copies": 1,
     "collector": "B289",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "side": "enemy"
+    }
   },
   {
     "id": "dc_b_abnutzung_290",
@@ -6913,7 +7729,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Stirbt Feind: Abschnitt +1 ATK bis Zugende; übrige +1 DEF bis Ende nächsten Zugs.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -6928,7 +7744,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B290.jpg",
     "max_copies": 1,
     "collector": "B290",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_aufdecken_459",
@@ -6945,12 +7767,18 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke eine Einheit auf; ziehe 1.",
+    "text": "Decke eine verdeckte gegnerische Einheit auf. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "REVEAL",
         "param": {
           "count": 1
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -6958,7 +7786,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B459.jpg",
     "max_copies": 1,
     "collector": "B459",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_punktfeuer_460",
@@ -6975,7 +7806,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Aufgeklärte Einheit erleidet 3; wenn sie stirbt, decke eine weitere auf.",
+    "text": "Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "REVEAL",
@@ -6988,7 +7819,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B460.jpg",
     "max_copies": 1,
     "collector": "B460",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_lokalisierung_461",
@@ -7005,7 +7839,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke bis zu zwei Einheiten auf; sie −1 DEF bis Zugende.",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1). Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF",
@@ -7026,7 +7860,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B461.jpg",
     "max_copies": 1,
     "collector": "B461",
-    "rarity": "gold"
+    "rarity": "gold",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_zielmarkierung_462",
@@ -7043,7 +7883,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Ziel gilt als aufgeklärt; Angriffe gegen es +1 ATK.",
+    "text": "Decke eine verdeckte gegnerische Einheit auf. Alle eigenen Einheiten: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "REVEAL",
@@ -7063,7 +7903,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B462.jpg",
     "max_copies": 1,
     "collector": "B462",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_modellstopp_463",
@@ -7093,7 +7936,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B463.jpg",
     "max_copies": 1,
     "collector": "B463",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "side": "enemy"
+    }
   },
   {
     "id": "dc_b_zweite_messung_464",
@@ -7110,7 +7956,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke auf; wenn schon aufgeklärt: +2 Schaden statt neu.",
+    "text": "Wähle eine gegnerische Fronteinheit: 2 Schaden. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
@@ -7129,7 +7975,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B464.jpg",
     "max_copies": 1,
     "collector": "B464",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_trotz_465",
@@ -7146,7 +7998,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +2 DEF; Angreifer −1 ATK wenn er aufgeklärt ist.",
+    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
     "effects": [
       {
         "code": "BUFF",
@@ -7160,7 +8012,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B465.jpg",
     "max_copies": 1,
     "collector": "B465",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_quelle_nennen_466",
@@ -7177,7 +8035,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Nächste Sofort kostet 1 weniger (min. 0). [Quelle nennen]",
+    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -7191,7 +8049,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B466.jpg",
     "max_copies": 1,
     "collector": "B466",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   },
   {
     "id": "dc_b_stillprobe_467",
@@ -7227,7 +8088,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B467.jpg",
     "max_copies": 1,
     "collector": "B467",
-    "rarity": "silver"
+    "rarity": "silver",
+    "target": {
+      "side": "enemy"
+    }
   },
   {
     "id": "dc_b_unterschreiben_468",
@@ -7244,7 +8108,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Einheit +1 ATK/+1 DEF gegen aufgeklärte; oder brich Angriff → heile 2.",
+    "text": "Wähle eine eigene Fronteinheit: heile 2; +1 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "HEAL",
@@ -7265,7 +8129,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B468.jpg",
     "max_copies": 1,
     "collector": "B468",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_irrtum_sagen_469",
@@ -7282,7 +8152,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Heile 1; ziehe 1; Feind −1 ATK.",
+    "text": "Wähle eine eigene Fronteinheit: heile 1; −1 ATK bis Zugende. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "HEAL",
@@ -7297,13 +8167,25 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "until": "turn",
           "enemy": true
         }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
+        }
       }
     ],
     "flavor": "Irrtum aussprechen.",
     "image": "soforteinsatz/B469.jpg",
     "max_copies": 1,
     "collector": "B469",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
+    }
   },
   {
     "id": "dc_b_fachpruefung_470",
@@ -7320,7 +8202,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Decke Hand des Gegners (1 Karte); spiele Sofort um 1 weniger.",
+    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -7334,6 +8216,9 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "image": "soforteinsatz/B470.jpg",
     "max_copies": 1,
     "collector": "B470",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "target": {
+      "needs": false
+    }
   }
 ];

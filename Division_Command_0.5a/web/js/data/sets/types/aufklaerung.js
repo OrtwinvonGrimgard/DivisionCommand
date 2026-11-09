@@ -157,8 +157,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Feind aufgeklärt; eigene Artillerie +1 ATK gegen ihn diesen Zug.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Wer misst, verkauft Treffer.",
     "image": "aufklaerung/B146.jpg",
     "max_copies": 1,
@@ -180,8 +189,18 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Eigene Einheit stirbt: ziehe 1 (einmal/Zug).",
-    "effects": [],
+    "text": "Einmal pro Zug, wenn eine andere eigene Einheit zerstört wird: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "own_destroyed",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Er zählt Löcher — für die nächste Lieferung.",
     "image": "aufklaerung/B147.jpg",
     "max_copies": 1,
@@ -206,8 +225,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Zerstörst du aufgeklärte Unterstützung/Ausrüstung: ziehe 1.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Depots sind Ziele mit Preisschild.",
     "image": "aufklaerung/B148.jpg",
     "max_copies": 1,
@@ -229,13 +257,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Schaue oberste Karte; behalte oder lege unten.",
+    "text": "",
     "effects": [],
     "flavor": "Wirtschaftliche Lagebilder zählen taktisch mit.",
     "image": "aufklaerung/B149.jpg",
     "max_copies": 1,
     "collector": "B149",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_wellenmelder_20",
@@ -253,8 +284,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Meldung aus der Reihe.",
     "image": "aufklaerung/B020.jpg",
     "max_copies": 1,
@@ -280,8 +319,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "+1 ATK gegen Einheiten mit 3 oder weniger DEF.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Leise Pflicht vor dem Sturm.",
     "image": "aufklaerung/B021.jpg",
     "max_copies": 1,
@@ -307,8 +354,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "Einmal pro Zug: die nächste Infanterie, die du spielst, kostet 1 weniger (mind. 1).",
-    "effects": [],
+    "text": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
+        }
+      }
+    ],
     "flavor": "Elena zählt Schritte, nicht Jubel.",
     "image": "aufklaerung/B106.jpg",
     "max_copies": 1,
@@ -331,8 +387,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: eine eigene Infanterie im Abschnitt erhält +1 ATK bis Zugende.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Wo der Balken geht, folgt die Welle.",
     "image": "aufklaerung/B107.jpg",
     "max_copies": 1,
@@ -355,8 +419,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "Aufdecken: ziehe 1 Karte.",
-    "effects": [],
+    "text": "Beim Ausspielen oder Aufdecken: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Sie melden, bevor die Krone fragt.",
     "image": "aufklaerung/B620.jpg",
     "max_copies": 1,
@@ -382,13 +455,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung. [Erbe-Späher]",
+    "text": "",
     "effects": [],
     "flavor": "Alte Wege. Neue Augen.",
     "image": "aufklaerung/B621.jpg",
     "max_copies": 1,
     "collector": "B621",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_stillnarbe_melder_622",
@@ -406,8 +482,19 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "Wenn eine eigene Einheit im selben Abschnitt zerstört wird: ziehe 1 Karte.",
-    "effects": [],
+    "text": "Einmal pro Zug, wenn eine andere eigene Einheit in ihrem Abschnitt zerstört wird: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "own_destroyed",
+          "do": "draw",
+          "n": 1,
+          "scope": "section"
+        }
+      }
+    ],
     "flavor": "Die Nachricht überlebt den Boten nicht immer.",
     "image": "aufklaerung/B622.jpg",
     "max_copies": 1,
@@ -430,8 +517,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "Einmal pro Zug: schaue die oberste Karte deines Decks an.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Die jungen Städte sehen ohne Nostalgie.",
     "image": "aufklaerung/B623.jpg",
     "max_copies": 1,
@@ -454,8 +549,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "Aufdecken: schaue die oberste Karte des gegnerischen Decks an.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Sehen ohne Lid.",
     "image": "aufklaerung/B380.jpg",
     "max_copies": 1,
@@ -481,8 +585,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "+1 ATK gegen verdeckte Einheiten. Kann verdeckt gespielt werden.",
-    "effects": [],
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "first",
+          "atk": 1
+        }
+      }
+    ],
     "flavor": "Empfang vor dem Schuss.",
     "image": "aufklaerung/B381.jpg",
     "max_copies": 1,
@@ -505,7 +617,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "Wenn eine eigene Einheit im selben Abschnitt Schaden nimmt: ziehe 1.",
+    "text": "",
     "effects": [],
     "flavor": "Jeder Ausfall ist eine Messung.",
     "image": "aufklaerung/B382.jpg",
@@ -513,7 +625,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "collector": "B382",
     "rarity": "bronze",
     "keywords": [
-      "Heranführung"
+      "Heranführung",
+      "Zuteilung"
     ]
   },
   {
@@ -532,7 +645,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
       "einheit",
       "aufklaerung"
     ],
-    "text": "Wenn eine eigene Einheit zerstört wird: ziehe 1 und füge einer eigenen Einheit 1 Schaden zu.",
+    "text": "",
     "effects": [],
     "flavor": "Die Meldung kostet.",
     "image": "aufklaerung/B383.jpg",
@@ -540,7 +653,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "collector": "B383",
     "rarity": "silver",
     "keywords": [
-      "Gefechtsbereit"
+      "Gefechtsbereit",
+      "Zuteilung"
     ]
   },
   {
@@ -558,8 +672,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Einmal/Zug: decke auf; eine eigene Einheit +1 ATK.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Melder vor Ort — Straße neuer als Halle.",
     "image": "aufklaerung/B803.jpg",
     "max_copies": 1,
@@ -584,13 +707,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung.",
+    "text": "",
     "effects": [],
     "flavor": "Pfad ohne heimliche Leitung.",
     "image": "aufklaerung/B804.jpg",
     "max_copies": 1,
     "collector": "B804",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_lage_offen_805",
@@ -607,15 +733,25 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung; decke 1 auf.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Blatt korrigiert laut. Keine stille Akte.",
     "image": "aufklaerung/B805.jpg",
     "max_copies": 1,
     "collector": "B805",
     "rarity": "silver",
     "keywords": [
-      "Gefechtsbereit"
+      "Gefechtsbereit",
+      "Zuteilung"
     ]
   },
   {
@@ -633,8 +769,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1 wenn Feind angrenzt. [Quellenläufer]",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Quellen unterscheiden vor Dienstgrad.",
     "image": "aufklaerung/B806.jpg",
     "max_copies": 1,
@@ -659,8 +804,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Liest beide Hälften. Folgt keiner.",
     "image": "aufklaerung/B863.jpg",
     "max_copies": 1,
@@ -682,8 +836,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Einmal/Zug: decke auf; eine eigene Einheit +1 DEF.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Melder setzt eine Gegenlage.",
     "image": "aufklaerung/B864.jpg",
     "max_copies": 1,
@@ -708,8 +871,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1 wenn Feind angrenzt. [Doppelversion]",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Zwei gültige Lagen. Beide offiziell.",
     "image": "aufklaerung/B865.jpg",
     "max_copies": 1,
@@ -734,8 +906,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1. [Stillrain-Läufer]",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Läufer, der Namen nicht laut sagt.",
     "image": "aufklaerung/B866.jpg",
     "max_copies": 1,
@@ -757,8 +938,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1 wenn Feind angrenzt.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Liest Abschrift gegen Vorlesung.",
     "image": "aufklaerung/B923.jpg",
     "max_copies": 1,
@@ -783,8 +973,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1. [Datums-Melder]",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Melder trägt das frühere Datum.",
     "image": "aufklaerung/B924.jpg",
     "max_copies": 1,
@@ -809,13 +1008,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung. (Gegenrechnung)",
+    "text": "",
     "effects": [],
     "flavor": "Gegenrechnung hält Kalden.",
     "image": "aufklaerung/B925.jpg",
     "max_copies": 1,
     "collector": "B925",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_selm_laeufer_926",
@@ -832,8 +1034,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1 wenn Feind angrenzt. [Selm-Läufer]",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Läufer aus der Lehre.",
     "image": "aufklaerung/B926.jpg",
     "max_copies": 1,
@@ -858,8 +1069,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Einmal/Zug: decke auf; eine eigene Einheit +1 DEF. [Markenspäher]",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Späher zählt Verlust vor Glanz.",
     "image": "aufklaerung/B743.jpg",
     "max_copies": 1,
@@ -881,7 +1101,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung. [Gassenmelder]",
+    "text": "",
     "effects": [],
     "flavor": "Melder aus der Parlamentsgasse.",
     "image": "aufklaerung/B744.jpg",
@@ -889,7 +1109,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "collector": "B744",
     "rarity": "bronze",
     "keywords": [
-      "Gefechtsbereit"
+      "Gefechtsbereit",
+      "Zuteilung"
     ]
   },
   {
@@ -907,13 +1128,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung. [Grenzlese]",
+    "text": "",
     "effects": [],
     "flavor": "Lese die alte Grenze. Nicht die Fahne.",
     "image": "aufklaerung/B745.jpg",
     "max_copies": 1,
     "collector": "B745",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_schulrain_laeufer_746",
@@ -930,7 +1154,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Schaue oberste 3; behalte 1 Sofort-/Unterstützung. [Schulrain-Läufer]",
+    "text": "",
     "effects": [],
     "flavor": "Schulrain lehrt Dauer, nicht Schlacht.",
     "image": "aufklaerung/B746.jpg",
@@ -938,7 +1162,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "collector": "B746",
     "rarity": "bronze",
     "keywords": [
-      "Gefechtsbereit"
+      "Gefechtsbereit",
+      "Zuteilung"
     ]
   },
   {
@@ -956,8 +1181,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Feind aufgeklärt; nächstes Schieben kostet 0 zusätzlich.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Er sieht, ob der Weg noch Land ist.",
     "image": "aufklaerung/B185.jpg",
     "max_copies": 1,
@@ -982,7 +1216,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Wenn du schiebst: ziehe 1 (einmal/Zug).",
+    "text": "",
     "effects": [],
     "flavor": "Das Blatt fragt vor allem, ob das Schiff schon da ist.",
     "image": "aufklaerung/B186.jpg",
@@ -990,7 +1224,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "collector": "B186",
     "rarity": "bronze",
     "keywords": [
-      "Gefechtsbereit"
+      "Gefechtsbereit",
+      "Stellungswechsel"
     ]
   },
   {
@@ -1008,8 +1243,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Zerstörst du aufgeklärte Unterstützung: ziehe 1.",
-    "effects": [],
+    "text": "+1 ATK gegen beobachtete Ziele.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
+        }
+      }
+    ],
     "flavor": "Melden, dass der Weg zu ist — nicht entscheiden.",
     "image": "aufklaerung/B187.jpg",
     "max_copies": 1,
@@ -1034,8 +1278,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Einmal/Zug: decke auf; eine eigene Einheit +1 DEF. [Fahrplanblick]",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Zwei Pünktlichkeiten. Ein Land.",
     "image": "aufklaerung/B188.jpg",
     "max_copies": 1,
@@ -1060,8 +1313,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Einmal/Zug: decke auf; eine eigene Einheit darf 1 Abschnitt umgehen.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Finder zeigt den Umweg. Er befiehlt ihn nicht.",
     "image": "aufklaerung/B683.jpg",
     "max_copies": 1,
@@ -1083,8 +1345,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1 wenn Feind angrenzt. [Zollspäher]",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Späher zählt Zoll und Sperren.",
     "image": "aufklaerung/B684.jpg",
     "max_copies": 1,
@@ -1109,8 +1380,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1. [Meldekarawane]",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Karawane trägt Nachricht und Sack.",
     "image": "aufklaerung/B685.jpg",
     "max_copies": 1,
@@ -1132,8 +1412,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1 wenn Feind angrenzt ohne eigene Nachbarn.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Abseitsheim erinnert: der Fluss ist nicht alles.",
     "image": "aufklaerung/B686.jpg",
     "max_copies": 1,
@@ -1155,8 +1444,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Einmal/Zug: decke auf; Ziel gilt als beobachtet.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Posten sieht. Er öffnet keinen Krieg.",
     "image": "aufklaerung/B563.jpg",
     "max_copies": 1,
@@ -1178,8 +1476,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; +1 DEF bis Zugende.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Maß vor Meinung.",
     "image": "aufklaerung/B564.jpg",
     "max_copies": 1,
@@ -1204,8 +1511,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1. [Meldekette]",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Kette trägt Schrift. Nicht Befehl.",
     "image": "aufklaerung/B565.jpg",
     "max_copies": 1,
@@ -1230,8 +1546,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1 wenn Feind beobachtet angrenzt.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Peilung ohne Claim.",
     "image": "aufklaerung/B566.jpg",
     "max_copies": 1,
@@ -1256,8 +1581,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Einmal/Zug: decke auf; wenn Unterstützung im Abschnitt, ziehe 1.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Zollache kennt den Anteil.",
     "image": "aufklaerung/B503.jpg",
     "max_copies": 1,
@@ -1282,8 +1616,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; +1 DEF wenn Abschnitt zuletzt angegriffen.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Melder auf der Straße.",
     "image": "aufklaerung/B504.jpg",
     "max_copies": 1,
@@ -1308,7 +1651,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Schaue oberste 3; behalte 1 Unterstützungs-/Einsatzkarte.",
+    "text": "",
     "effects": [],
     "flavor": "Auge am Kai. Nicht in der Halle.",
     "image": "aufklaerung/B505.jpg",
@@ -1316,7 +1659,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "collector": "B505",
     "rarity": "silver",
     "keywords": [
-      "Heranführung"
+      "Heranführung",
+      "Zuteilung"
     ]
   },
   {
@@ -1334,8 +1678,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1 wenn Feind ohne Unterstützung angrenzt.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Rest zählen. Nicht die Liste vom Morgen.",
     "image": "aufklaerung/B506.jpg",
     "max_copies": 1,
@@ -1357,8 +1710,25 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Feind aufgeklärt; +1 ATK gegen Einrückende diesen Zug.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "entering"
+        }
+      }
+    ],
     "flavor": "Er kennt den Pass. Er führt kein Amt.",
     "image": "aufklaerung/B224.jpg",
     "max_copies": 1,
@@ -1383,8 +1753,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Wenn Feind einrückt: ziehe 1 (einmal/Zug).",
-    "effects": [],
+    "text": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "entering"
+        }
+      }
+    ],
     "flavor": "Nachrichten laufen mit den Lesern.",
     "image": "aufklaerung/B225.jpg",
     "max_copies": 1,
@@ -1409,8 +1788,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Zerstörst du einrückende Einheit: ziehe 1.",
-    "effects": [],
+    "text": "+1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "entering"
+        }
+      }
+    ],
     "flavor": "Der Pfad bleibt dem Tal.",
     "image": "aufklaerung/B226.jpg",
     "max_copies": 1,
@@ -1432,13 +1820,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Schaue oberste 2; behalte 1, lege 1 unten.",
+    "text": "",
     "effects": [],
     "flavor": "Wer nur die eigene Abschrift kennt, kennt den Eid nicht.",
     "image": "aufklaerung/B227.jpg",
     "max_copies": 1,
     "collector": "B227",
-    "rarity": "bronze"
+    "rarity": "bronze",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_meldelaeufer_323",
@@ -1455,8 +1846,27 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Feind aufdecken; ziehe 1 wenn du diesen Zug heilst.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug geheilt hast.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "played",
+          "do": "draw",
+          "n": 1,
+          "when": "healed"
+        }
+      }
+    ],
     "flavor": "Was nicht nach oben geht, gilt als gesund.",
     "image": "aufklaerung/B323.jpg",
     "max_copies": 1,
@@ -1478,7 +1888,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Schaue oberste 2; behalte 1 Heilungs-/Unterstützungs-Karte.",
+    "text": "",
     "effects": [],
     "flavor": "Die Zeile vor dem Bett.",
     "image": "aufklaerung/B324.jpg",
@@ -1486,7 +1896,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "collector": "B324",
     "rarity": "bronze",
     "keywords": [
-      "Heranführung"
+      "Heranführung",
+      "Zuteilung"
     ]
   },
   {
@@ -1499,13 +1910,21 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "name": "Ringwächter",
     "ap": 2,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
     ],
-    "text": "+1 DEF; Feinde im Abschnitt können nicht verdeckt bleiben.",
-    "effects": [],
+    "text": "Der erste Schaden je Zug sinkt um 1.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "negate",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Versorgungsring sieht beide Türen.",
     "image": "aufklaerung/B325.jpg",
     "max_copies": 1,
@@ -1530,8 +1949,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke Feind auf; wenn er diesen Zug angreift, −1 ATK.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Unvollständiges Formular ist Armut hier.",
     "image": "aufklaerung/B326.jpg",
     "max_copies": 1,
@@ -1556,8 +1984,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Feind aufgeklärt; +1 ATK wenn Ziel Ausrüstung hat.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Eine Linse. Keine Waage des Lebenswerts.",
     "image": "aufklaerung/B263.jpg",
     "max_copies": 1,
@@ -1579,8 +2016,18 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Wenn eigene Einheit stirbt: ziehe 1 (einmal/Zug).",
-    "effects": [],
+    "text": "Einmal pro Zug, wenn eine andere eigene Einheit zerstört wird: ziehe 1 Karte.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "trigger",
+          "on": "own_destroyed",
+          "do": "draw",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Meldung in die hellen Häuser.",
     "image": "aufklaerung/B264.jpg",
     "max_copies": 1,
@@ -1602,13 +2049,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Schaue oberste 2 Ausrüstungen/Einheiten; behalte 1.",
+    "text": "",
     "effects": [],
     "flavor": "Werkhof vor dem Feld.",
     "image": "aufklaerung/B265.jpg",
     "max_copies": 1,
     "collector": "B265",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_namensblick_266",
@@ -1625,8 +2075,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke Feind auf; wenn er stirbt diesen Zug, heile 1.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Sehen, was der Schutz verhindern sollte.",
     "image": "aufklaerung/B266.jpg",
     "max_copies": 1,
@@ -1651,8 +2110,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Einmal/Zug: decke eine gegnerische Einheit auf.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Sehen, bevor unterschrieben wird.",
     "image": "aufklaerung/B443.jpg",
     "max_copies": 1,
@@ -1677,8 +2145,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; ziehe 1 wenn Ziel DEF ≤ 2.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Ort vor Meinung.",
     "image": "aufklaerung/B444.jpg",
     "max_copies": 1,
@@ -1703,13 +2180,16 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Schaue oberste 3; behalte 1 Aufklärungs-/Einsatzkarte.",
+    "text": "",
     "effects": [],
     "flavor": "Verfahren vor Gerücht.",
     "image": "aufklaerung/B445.jpg",
     "max_copies": 1,
     "collector": "B445",
-    "rarity": "silver"
+    "rarity": "silver",
+    "keywords": [
+      "Zuteilung"
+    ]
   },
   {
     "id": "dc_b_trotzmelder_446",
@@ -1726,8 +2206,17 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Decke auf; wenn Ziel diesen Zug angreift, −1 ATK.",
-    "effects": [],
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "reveal",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Trotz steht in keiner Spalte.",
     "image": "aufklaerung/B446.jpg",
     "max_copies": 1,

@@ -47,8 +47,8 @@ Die Engine wertet die Wörter strukturiert aus (`def.keywords`, strukturierte `e
 | Abschirmung | 41 | 1 | · | 1 | 1 | 2 | 2 | 9 | 2 | · | 6 | 1 | · | 3 | 3 | 1 | 6 | 3 |
 | Erbitterung | 25 | 4 | 2 | 4 | 3 | 1 | · | 2 | 1 | 1 | · | 2 | 1 | 2 | 2 | · | · | · |
 | Heranführung | 39 | 1 | 1 | 1 | 3 | 10 | · | · | 1 | 2 | 6 | 2 | 4 | 1 | · | 4 | 1 | 2 |
-| Stellungswechsel | 86 | 2 | 3 | 1 | 3 | 13 | 9 | 1 | 2 | · | 4 | 4 | 15 | 6 | 15 | · | 5 | 3 |
-| Zuteilung | 62 | 9 | 3 | 1 | 8 | 1 | 1 | 3 | 2 | 2 | 10 | 1 | 3 | 5 | 3 | 1 | 6 | 3 |
+| Stellungswechsel | 100 | 3 | 3 | 1 | 3 | 18 | 9 | 1 | 2 | · | 6 | 4 | 19 | 6 | 15 | · | 7 | 3 |
+| Zuteilung | 90 | 10 | 9 | 1 | 10 | 1 | 3 | 7 | 3 | 4 | 13 | 2 | 3 | 7 | 3 | 2 | 9 | 3 |
 | Sicherung | 32 | 4 | · | · | 1 | 3 | · | 1 | 3 | 1 | 3 | 1 | 2 | 2 | 2 | 2 | 6 | 1 |
 | Nachsetzen | 44 | · | 8 | 2 | 2 | 2 | 4 | 1 | 1 | 5 | 1 | 3 | 2 | · | 3 | 8 | · | 2 |
 | Hinterhalt | 16 | 1 | · | · | · | 1 | 5 | · | · | · | · | · | 4 | 1 | 3 | · | · | 1 |
@@ -62,7 +62,7 @@ Die Engine wertet die Wörter strukturiert aus (`def.keywords`, strukturierte `e
 | Gefechtsabbruch | 2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 2 |
 | Vorpostenmeldung | 2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 2 |
 
-592 von 1709 Deckkarten tragen mindestens ein Wort, 109 davon genau zwei. Ausrüstung und Unterstützung können die passenden neuen allgemeinen Wörter tragen.
+610 von 1709 Deckkarten tragen mindestens ein Wort, 133 davon genau zwei. Ausrüstung und Unterstützung können die passenden neuen allgemeinen Wörter tragen.
 
 Die Umsetzung t203 mit zehn additiven neutralen Erprobungskarten, Abgrenzungen, Quellen und dokumentierten Konfliktentscheidungen steht in [TAKTISCHE_SCHLUESSELWOERTER.md](TAKTISCHE_SCHLUESSELWOERTER.md). Reproduzierbarer Build: `npm run build:tactics`.
 

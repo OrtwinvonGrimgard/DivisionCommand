@@ -123,7 +123,7 @@
     if (q.kind === 'tac-aura-section') {
       const l=this.findInst(q.uid); need(l && l.zone === 'support' && l.player.id === pid,'Banner fehlt');
       l.inst.flags.tacAuraSection=chosen.section; this.state.pending=null;
-      this._log('Glaubensbanner: Infanterie in '+chosen.section+' erhält +1 DEF.'); return {ok:true};
+      this._log(fx(this,l.inst,'TACTICAL_SECTION_INF_DEF') ? 'Glaubensbanner: Infanterie in '+chosen.section+' erhält +1 DEF.' : (this.defOf(l.inst).name+' wirkt in Abschnitt '+chosen.section+'.')); if (this._cmRecompute) this._cmRecompute(); return {ok:true};
     }
     if (q.kind === 'tac-discard') {
       const i=p.hand.findIndex(c=>c.uid === a.target); need(i>=0,'Keine eigene Handkarte');
@@ -270,8 +270,10 @@
     }); return out;
   };
   P._tacOnSupport = function (inst) {
-    if (!fx(this,inst,'TACTICAL_SECTION_INF_DEF')) return;
-    this.state.pending=this._sealPending({kind:'tac-aura-section',player:inst.owner,uid:inst.uid,choices:S.map(section=>({target:'sec:'+section,section,side:'own',label:section+' · eigene Infanterie +1 DEF'}))});
+    const banner=fx(this,inst,'TACTICAL_SECTION_INF_DEF'), cm=this._cmNeedsSection && this._cmNeedsSection(inst);
+    if (!banner && !cm) return;
+    const nm=(this.defOf(inst) || {}).name || 'Unterstützung';
+    this.state.pending=this._sealPending({kind:'tac-aura-section',player:inst.owner,uid:inst.uid,choices:S.map(section=>({target:'sec:'+section,section,side:'own',label:section+' · '+(banner ? 'eigene Infanterie +1 DEF' : nm+' wirkt hier')}))});
   };
   P._tacTargetAllowed = function (A,T) {
     if (!A || !T) return false;

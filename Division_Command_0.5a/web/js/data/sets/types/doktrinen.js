@@ -1032,7 +1032,7 @@ window.DC_SET_TYPES["Doktrin"] = [
     "tags": [
       "doktrin"
     ],
-    "text": "Unterstützung −1 AP, mindestens 1. 1×/Zug gepanzerte Einheit +1 V. Überschuss (2 AP): Fähigkeit einer Unterstützung ein zweites Mal.",
+    "text": "Unterstützung −1 AP, mindestens 1. 1×/Zug gepanzerte Einheit +1 DEF. Überschuss (2 AP): Fähigkeit einer Unterstützung ein zweites Mal.",
     "effects": [
       {
         "code": "AURA_COST_MOD",
@@ -1149,7 +1149,7 @@ window.DC_SET_TYPES["Doktrin"] = [
     "tags": [
       "doktrin"
     ],
-    "text": "Infanterie und Artillerie an der Front +1 V. Je zerstörter gegnerischer Fronteinheit +1 AP im nächsten eigenen Zug. Rohrartillerie kann gegnerischen Support angreifen, wenn eigene Aufklärung an der Front steht.",
+    "text": "Infanterie und Artillerie an der Front +1 DEF. Je zerstörter gegnerischer Fronteinheit +1 AP im nächsten eigenen Zug. Rohrartillerie kann gegnerischen Support angreifen, wenn eigene Aufklärung an der Front steht.",
     "effects": [
       {
         "code": "AURA_STAT",
