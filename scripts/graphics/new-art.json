@@ -5048,5 +5048,165 @@
   "sha256": "3ec93b93b66e77cdc1ad8a20eb0e1a43cbfc1e79389795dff38493bd8f805d43",
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_aufruf_der_pflicht": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_aufruf_der_pflicht.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/31fd71d1482c988547f276c84554b9e8c979ee298e4a4323a80523b7e1c83c76.jpg",
+  "sha256": "4a3bdf2ca9c510e98a8337ee7f9ce16e0551bc2749e029aa9d56d077efb18273",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_buchpruefer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_buchpruefer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/48e3f8c61443ed7e28fdd6e2da51f5173cadeab6349dbe7c032a8a7312c75961.jpg",
+  "sha256": "40bf86fef40cf636076450de0dcc5afaff74069955145b93164fb94bc306a1e4",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_das_grosse_buch": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_das_grosse_buch.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/eea3eb1ea9ba4afeb06bcb7d540a825de3ab28c942ce9851e153106fae9aae5e.jpg",
+  "sha256": "76c3dfe744f0ee04466c11cd133734592c2c1ca8610aba32ffc2fe470f9c00b1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_endabrechnung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_endabrechnung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/0568bccd97453ebdc6aa6c969ec7156f789e72bdc00902d880d5ba53fa096b08.jpg",
+  "sha256": "370e25070ce15a52f1267f180727c251d5fc2a8ab5e6c9438b6cad0c8e5a25d6",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_haftung_uebernehmen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_haftung_uebernehmen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/513606a961d35409b288c054890fe6122651359d8f47fbcb2dac3e2587913441.jpg",
+  "sha256": "5c87738c2b7f53ae2d303d43921b2f62f279074776fc944bf85d58a90fa19e6b",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_kader_nachfuehren": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_kader_nachfuehren.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6439722a2f33dfc5b47aa84661093e26d5238a310cf85e8158a078276fba6aec.jpg",
+  "sha256": "e3f2d60e4ba678376df366b29dd3b4e5c8731eb42e713f1a640007e298d72a79",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_markierter_schlag": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_markierter_schlag.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c60cd08a2b3501272587e607b60df1ed99a6248c46436b1c652a3e8990a93e21.jpg",
+  "sha256": "94bc0b104ecca5a4f1436b286af3968fc1bdd4b07b2f9f56f582016633cae949",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_schuldmarke": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_schuldmarke.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8dc1b9f5c94672b1a627adea54450f19f8a19c41034bd5bb2d91bac1d9b7ea09.jpg",
+  "sha256": "db217ac53edd32d483e9f26bb7c537020ed6299faa0d8045d4ea82f9d5b1263b",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_schuldregister": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_schuldregister.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/94a11fde8e5d87c92cabbab977bea0de8db00aa921a3e5af8adbce88456cb020.jpg",
+  "sha256": "86b146ede3dec91efe5ef4d79e3b4c88dd5e5206de276cb3054338eb924f08cd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_tilgung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_tilgung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c43d3209dcfae0610ff8e97032a82ce7971bb8567bd6f1925e3e821795c9f159.jpg",
+  "sha256": "05b9b435781cfa69c206e957afa57fb484c042b5e1d32261792d0575ac7cb299",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_zeile_schliessen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_zeile_schliessen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/22c46c4f965f814e30d19b7319140fbf4c0c4d5a2bc08696b89f12a7fd24c12e.jpg",
+  "sha256": "0aa0199fa6212835ba9b2bee21db15baf61e265ce2d3504901c6c88df0966f09",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_zeile_setzen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_zeile_setzen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/56bbacc2d600450d4bac5ddedb8d74d6f06afc845185a0955b13ba248512194a.jpg",
+  "sha256": "eb22cd8103e0da2952baab5ec8c8c92c794e201bd65e5b898e8f715d764545f0",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_zinseszins": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_zinseszins.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6c229194a905b654b7be3678d78e906c332c9df254378c4734f311784e86ec02.jpg",
+  "sha256": "8c57ea8b1a2d1bc87bb24b828adfc09695bc5ce61d7d97763c8e03fd78c7dfcb",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_buchungsstempel": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_buchungsstempel.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/edb6737e80882fb67560c5e70056242e026a5abcca8833e70cb25a15256e5738.jpg",
+  "sha256": "e3461b34192e6af9403e71223ac017eacc5f77baa30f778527218dcd295e69af",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_haftungsschild": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_haftungsschild.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ee456bc2bec38b8b0b57784025822e5ff2b04fff66a387b0d6ffd36cb53dd7fd.jpg",
+  "sha256": "74f4998fd42ce15e4bbca9042498cfe60fbb359f838b01e3d977a3e96df71785",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_hauptbuchhalter": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_hauptbuchhalter.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e91a9be62ae8583b1bfaf65ef53970ebfe8664b0a18d2919d6189e7a5ad035bd.jpg",
+  "sha256": "d59be06baff72dc39c15f818dd86b97723584d6675124d4f0416c3be3e66ab36",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_kaderabzeichen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_kaderabzeichen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/2f5963766b3d62291c828796f86e7788e7f1397143cc4b1f8336ccdb59c7de9f.jpg",
+  "sha256": "8c80ec02db25cd337ae3c836d9a5352ac84633088201c10056c5b655873fe4b2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_registerpanzer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_registerpanzer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4da6100b791bbec8d97d3f984d024c10f87ee340d5891c040539826b57f40935.jpg",
+  "sha256": "1f2899c89d3fb4738dc6fafda3984aeb4a40b2b06e8d89bc51a018e63c2dac17",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_registerpruefung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_registerpruefung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/520fd572142ad6ea834f5c34a9cf8fae2418c71daa50967582796448e9b64eb7.jpg",
+  "sha256": "0f79f3e395eaea3ea115790bb19b62c9774db4456a18476c07d0d2dde776c2b1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_dargan_vollstreckungsklinge": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_dargan_vollstreckungsklinge.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/cb0799543ccb6edce76f2203cdfec3b54dab9f71e768bee1c8db8a8f3e08df33.jpg",
+  "sha256": "b7c9d575ac0d0fb41a0253e9cc997fdd2a7d286066feb2a58ec1b92a68e5c2fd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  }
 }

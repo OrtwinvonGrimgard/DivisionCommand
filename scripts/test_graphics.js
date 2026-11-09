@@ -29,7 +29,8 @@ for(const r of records.filter(r=>r.ready && r.type!=='Token')){
  assert(collection.has(r.id));const imgs=collection.get(r.id).querySelectorAll('img');assert(imgs.length,`collection face ${r.id}`);
  imgs.forEach(img=>{assert(img.getAttribute('src').endsWith(r.output),`collection current full face ${r.id}`);assert.equal(img.style.objectFit,'contain');});
 }
-const unfinished=records.find(r=>r.provenance==='missing_illustration');assert(collection.get(unfinished.id).querySelector('.card-ph'));
+// All non-doctrine cards now have art; keep the placeholder check for any future unfinished card.
+const unfinished=records.find(r=>r.provenance==='missing_illustration');if(unfinished)assert(collection.get(unfinished.id).querySelector('.card-ph'));
 // The source model remains unchanged: presentation manifest alone retires a placeholder.
 assert.equal(c.art_status,'platzhalter');assert(!c.image);
 const html=fs.readFileSync(path.join(WEB,'index.html'),'utf8');assert(html.indexOf('js/data/card-faces.js')>html.indexOf('js/data/catalog.js'));assert(html.indexOf('js/data/card-faces.js')<html.indexOf('js/ui/app.js'));assert(html.includes('app.js?v=gfx2'));
