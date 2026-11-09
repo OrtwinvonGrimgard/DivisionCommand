@@ -1,27 +1,10 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1585,
+ "new_faces": 1602,
  "missing_illustrations": [
-  "dc_np_ossaria_namenstraeger",
-  "dc_np_ossaria_grabwacht",
-  "dc_np_ossaria_plattentraeger_zug",
-  "dc_np_ossaria_erbzug_der_toten",
-  "dc_np_ossaria_wallbauer",
-  "dc_np_ossaria_ahnenkompanie",
-  "dc_np_ossaria_plattenwagen",
-  "dc_np_ossaria_totenwallpanzer",
-  "dc_np_ossaria_unbrechbare_platte",
-  "dc_np_ossaria_abnutzungskette",
-  "dc_np_ossaria_ahnenschmiedwagen",
-  "dc_np_ossaria_abnutzungsbatterie",
-  "dc_np_ossaria_nahdruckmoerser",
-  "dc_np_ossaria_totenglocke",
-  "dc_np_ossaria_wallfeuer",
   "dc_np_ossaria_namensruf_batterie",
   "dc_np_ossaria_grabsucher",
-  "dc_np_ossaria_stellungsbeobachter",
-  "dc_np_ossaria_zeichendeuter",
   "dc_np_ossaria_schmied_der_erinnerung",
   "dc_np_ossaria_waechter_der_namen",
   "dc_np_ossaria_wall_der_gefallenen",
@@ -63466,11 +63449,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_namenstraeger.jpg",
+   "art_sha256": "233ae4a778bb4247ecdb8d861de92fd319441c480bdd62216dac3aac4f2a1db2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_namenstraeger.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "9fe7fdc471a70ba543007dc4f2e1a48bb1db58725b25865965d28db0bce1fb9e"
   },
   {
    "id": "dc_np_ossaria_grabwacht",
@@ -63490,11 +63489,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_grabwacht.jpg",
+   "art_sha256": "b0699b9c121d426b9e5fd6078336b94b3c259a5a5729fb044b2152da366de9e4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_grabwacht.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "0d3467ea991148150cc4a45fac08b5bb0aedf64ad26cbf6335454952e1d4ee2f"
   },
   {
    "id": "dc_np_ossaria_plattentraeger_zug",
@@ -63514,11 +63529,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_plattentraeger_zug.jpg",
+   "art_sha256": "c12fae9fd92256acacf2b8c2e084ecfd0422ab9a03ade49ae470273ca99efa79",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_plattentraeger_zug.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2d62df76db8550d41551889a4289ef5bcd326c8d158d290060249cd8bece154e"
   },
   {
    "id": "dc_np_ossaria_erbzug_der_toten",
@@ -63540,11 +63571,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_erbzug_der_toten.jpg",
+   "art_sha256": "9b42d83af82b60b81a0075ce5087282d83a36a80c61d79ba818885e71f34dbd4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_erbzug_der_toten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "6e50e6679f240db98db6674b7aa7118f0bb769888a72594656f84cef84d14473"
   },
   {
    "id": "dc_np_ossaria_wallbauer",
@@ -63564,11 +63611,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_wallbauer.jpg",
+   "art_sha256": "a546fd92fd1f11c91b31b0dd43ab04d3dde3964d4f8637916fd174dc85d6a2aa",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_wallbauer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "32c87bf3f0efe48e0fc676176b455bf4a87f62e1fe3d42adf7eb4401f27663aa"
   },
   {
    "id": "dc_np_ossaria_ahnenkompanie",
@@ -63590,11 +63653,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_ahnenkompanie.jpg",
+   "art_sha256": "b9afa3841f08c4b003eb3ef5f96ed11fae893fbc8183698d0d70722888b162a2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_ahnenkompanie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "6ef2c473712aa530fa78160e33df6da8fe8033c5c382813db37db29257be8c56"
   },
   {
    "id": "dc_np_ossaria_plattenwagen",
@@ -63618,11 +63697,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_plattenwagen.jpg",
+   "art_sha256": "051e78e075ff3ac16773ff34a53f9a04b2654b34e36a4244f92768dc01c5b059",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_plattenwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5a2d2be8b0b0cd1b6bc40f8b04aa96d0a39bd8addbbe2c96bab7068119d071a5"
   },
   {
    "id": "dc_np_ossaria_totenwallpanzer",
@@ -63644,11 +63739,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_totenwallpanzer.jpg",
+   "art_sha256": "9eceac3c935c418326eb526979441feb2f1eaca58570c02ef5eea6548fdbb24b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_totenwallpanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "eaf41324563bde4de1ceefd9cc2720ab2b2b3a8eb87b7f754bd7678cff2f298a"
   },
   {
    "id": "dc_np_ossaria_unbrechbare_platte",
@@ -63672,11 +63783,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_unbrechbare_platte.jpg",
+   "art_sha256": "453bfb78a13559500567bb4aff7f67882b4ea8f3204fec7335c661149f2d575a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_unbrechbare_platte.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "22cfd6dfa6f94f8a2577a45320f2c4c3b781c7f1ed00d60df5af8260cd077011"
   },
   {
    "id": "dc_np_ossaria_abnutzungskette",
@@ -63698,11 +63825,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_abnutzungskette.jpg",
+   "art_sha256": "cb582f96cb4736b5b6a15d37105983744c5a201b5137e6bc7672d32ea20fd59e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_abnutzungskette.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d781277c38094773ad44f793e4a74a9825552a7653bbbb81e19f8327d27db7d7"
   },
   {
    "id": "dc_np_ossaria_ahnenschmiedwagen",
@@ -63726,11 +63869,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_ahnenschmiedwagen.jpg",
+   "art_sha256": "5c489734e21045407e55e3ab8f3524c287e02d32127353aa2b0cc1c86a1c80b6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_ahnenschmiedwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "bdf3d9f84ff37ef444dbf83c1f81fc6c16169c9e0213f9b331968c26a4382523"
   },
   {
    "id": "dc_np_ossaria_abnutzungsbatterie",
@@ -63753,11 +63912,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_abnutzungsbatterie.jpg",
+   "art_sha256": "3a56b35b64ab45b0a87cc36ae47de4ef30243eed6ad7226f653a33bef7d7caa4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_abnutzungsbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "decf68dfedf6173a31e9f8c49ae8ac65cc782a25b0ed539b06afa9cb767480ed"
   },
   {
    "id": "dc_np_ossaria_nahdruckmoerser",
@@ -63780,11 +63955,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_nahdruckmoerser.jpg",
+   "art_sha256": "08e4ff4d8187ad177c60886434a0569f79d7a418ae2c3528a67640b5402cb8b0",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_nahdruckmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "b5f8e111b96ddc5b99228f0721c0947f59fb5db1f491d22b3b2342589c3e00ac"
   },
   {
    "id": "dc_np_ossaria_totenglocke",
@@ -63806,11 +63997,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_totenglocke.jpg",
+   "art_sha256": "f0e8afca0ab448ca0291e3cb1810c5ee08b5a61e466413ee595553d467509ba9",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_totenglocke.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "50fa06f8ac5431baf79e383f9c385efac406d2b727fe515dbd7bbd51d1682482"
   },
   {
    "id": "dc_np_ossaria_wallfeuer",
@@ -63832,11 +64039,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_wallfeuer.jpg",
+   "art_sha256": "fa465ac87fec61ed5956475b09eb071c3a043e75f02ed0ce251264d1a1f9a450",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_wallfeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "8f036999a2fc4d067fd98e278ccb8154462608fcd15cd2de5f4cc47227d6369a"
   },
   {
    "id": "dc_np_ossaria_namensruf_batterie",
@@ -63908,11 +64131,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_stellungsbeobachter.jpg",
+   "art_sha256": "2dc6132e499bc4b43229c1ed4c1cc2453dc0f49589dce01e9bb6b1696bb1a62b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_stellungsbeobachter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f343ac51f568920a0bd9140e15faf523c4aacc9936382f063bda5a99b9c1b808"
   },
   {
    "id": "dc_np_ossaria_zeichendeuter",
@@ -63934,11 +64173,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_ossaria_zeichendeuter.jpg",
+   "art_sha256": "1fae7c1ad7aaf592342de65e84df6e58eb9faeb02ec97fd6ac902e0f67b39766",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_ossaria_zeichendeuter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "49e2ddd03e268c71bc791fe05cf4de8502552bc75b45e6aafb904d4a87f4391a"
   },
   {
    "id": "dc_np_ossaria_schmied_der_erinnerung",
