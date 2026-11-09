@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """t212 Kartenvorderseite im Originalrahmen des KartenEditor-Renderers (KartenEditor/tools/render.py):
 Kostenstern, Namensbanner in Waffenfarbe, Tag-Leiste, ATK/DEF-Plaketten, Logo, Metallrahmen nach Seltenheit.
-gfx3.1: Grundschrift 100 px, nur bei Bedarf kleiner (bis 42 px); Karten ohne Regeltext zeigen Schlüsselwort-Erinnerungen; Doktrinen mit eigenem Motiv.
+gfx3.1: Grundschrift 100 px, nur bei Bedarf kleiner (bis 42 px); Karten ohne Regeltext zeigen Schlüsselwort-Erinnerungen.
 gfx3: festes Motivfenster 42 % Kartenhöhe (Original 38 %), feste große Textfläche; Schriftgröße stuft sich
 bei langen Texten automatisch ab (58 -> 40 px), Flavor fällt notfalls weg.
 Motiv: ein einziges LANCZOS-Skalieren mit Cover-Zuschnitt, nie verzerrt, keine Unschärfefüllung.

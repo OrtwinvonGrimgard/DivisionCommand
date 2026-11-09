@@ -16,8 +16,7 @@ for (const def of w.DC_CATALOG.cards) {
   assert(fs.existsSync(path.join(WEB, m.src)), `file missing ${m.src}`);
   if (m.kind === 'artwork') {
     artwork++;
-    if (def.typ === 'Doktrin' && m.src.includes('/art-v2/')) assert.equal(path.basename(m.src, '.jpg'), def.id, 'gfx3.1 doctrine motif belongs to exact ID');
-    else if (def.image) assert.equal(path.basename(m.src, '.jpg'), path.basename(def.image).replace(/\.[^.]+$/, ''), 'exact collector art mapping');
+    if (def.image) assert.equal(path.basename(m.src, '.jpg'), path.basename(def.image).replace(/\.[^.]+$/, ''), 'exact collector art mapping');
     else assert.equal(path.basename(m.src,'.jpg'),def.id,'new generated illustration belongs to exact ID');
   } else if (m.kind === 'doctrine-texture') {
     textures++; assert.equal(def.typ, 'Doktrin'); assert.equal(m.src, 'assets/cards/' + def.image);

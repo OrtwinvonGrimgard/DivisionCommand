@@ -34,7 +34,7 @@ def main():
     recs, todo = [], []
     for n, c in enumerate(data['cards'], 1):
         i = c['id']; art, prov = art_for(i, data)
-        if c['typ'] == 'Doktrin' and not art: prov = 'doctrine_design'  # gfx3.1: Doktrinen mit eigenem Motiv, sobald vorhanden
+        if c['typ'] == 'Doktrin': art, prov = None, 'doctrine_design'  # Doktrinen bekommen bewusst kein Bild (Stern-Emblem)
         if c['typ'] == 'Token': prov = 'special_token'
         r = {'id': i, 'name': c['name'], 'type': c['typ'], 'nation': c.get('nation') or 'neutral', 'rarity': c.get('rarity'),
              'source_record_sha256': src_sha(c), 'kurz': K[i]['kurz'], 'keywords': c.get('keywords') or [],

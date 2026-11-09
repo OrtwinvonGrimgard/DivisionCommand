@@ -1905,30 +1905,6 @@
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  },
- "dc_dok_abloesung": {
-  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_dok_abloesung.jpg",
-  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
-  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/de459365e61759467ec19d25fda3be3ed541bb2e61e21eb0fc9373b15d343ebe.jpg",
-  "sha256": "6c682993618e599209bb8e22929d36b9b7c01d361ccfb4f051bfc78ff91fe7bb",
-  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
- },
- "dc_dok_abnutzung": {
-  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_dok_abnutzung.jpg",
-  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
-  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6f5d4f756907e7c3346867b82d3dd4c15b671bbaba2ba0dcd2da726f47c85a96.jpg",
-  "sha256": "932e90801d619beb4f58f0d283e29d5ec81572ffa2870a280f1437efbc70e023",
-  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
- },
- "dc_dok_abriegeln": {
-  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_dok_abriegeln.jpg",
-  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
-  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/41e8fab24b88dd4139f7dbe290893b394c0edcff99c0ad9defd845876078e20f.jpg",
-  "sha256": "b724ffe6354f29481f90aff189132c30e9954b501f755260750f04cc486ae882",
-  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
- },
  "dc_np_karsk_ausfallreserve": {
   "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_ausfallreserve.jpg",
   "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
@@ -2094,6 +2070,294 @@
   "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
   "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/bc6df2bfaeff602e78bd6b1467320e7ebc9dd670241c88186d16307b9e9a8171.jpg",
   "sha256": "3726e563253b8ad5d383de8d14bb8340ca587dcf981ed3798140a8487e0ee81c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_etappenwache": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_etappenwache.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a51dc09c9ae5fc43eff76302225bdc96283887a940a7619157b694ff787d4b1b.jpg",
+  "sha256": "4bf0f541a22681589cfaa64b014aa9487e9ef1f0c09cc70aadaa8a6bffe0f71f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_ruhezug": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_ruhezug.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/3d24aaac1cc7f602111044bc1f892a1016fcc9be53db9a63e762d3b3b212239d.jpg",
+  "sha256": "ae4a41daf0b7f434f3484f4beea18b277a812deb05af67b6540a8e40c4faea76",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_schildtraeger": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_schildtraeger.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7a1b257cbbc24116ee636e1e55f11d19582dcffd23a1107c75d3b0dccfe7b5f5.jpg",
+  "sha256": "2804ca404301c335f44f35cfa193b4ff93c05d963abe49e72d09fb458679c8a4",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_schildwall_zug": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_schildwall_zug.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5fc1c1c746537fa5899547749fe273b20f0d339556f6edc5a189cd11434df34f.jpg",
+  "sha256": "6ef4e3615726df906a2044b01b3beb7d836d9b95d034daac4a255648a39a64c4",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_biometriespaeher": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_biometriespaeher.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d634edc7b18e0199cce257392c73b7a6cc01a339eb7e6061d3edd41bf99c9d08.jpg",
+  "sha256": "45d75b6777cfbb8dabc58c8b83e57499e8327b2a0aaa873e7e502760f930a2ed",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_der_eine_stoss": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_der_eine_stoss.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/08785fd87afb205878a0c889dd9936e8424f3d2c5b9811c0d6113977b2782faf.jpg",
+  "sha256": "823fa7e92785233f6b42a7de99443382d7823ba43cd887ad90a5cf1bf8443993",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_durchbruch_erzwingen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_durchbruch_erzwingen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ef5256b6727e2d12199427e1f498ff1095d3190d33ccf3eaa013a67c3966074f.jpg",
+  "sha256": "6f1af6ba3761da15ceac109a7a9da5412d67abf0dd8dfbe76998f975b76afac9",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_durchbruchsfeuer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_durchbruchsfeuer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/98859f515be9178bc20390e0f3424173a0bc83fd7ee73fb2e5855a1073e46cc5.jpg",
+  "sha256": "a7125d6635ec3415e06321e8671430cc88da342c10bcdd9b809c40544f8d9548",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_durchbruchwagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_durchbruchwagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4addcf3add3158ae2593d795a2a79977f3ddbee8748d0cfb5c66a31bbd6ae327.jpg",
+  "sha256": "ef5713b63ed3f89f98a19223422dd2eb763bfa9be607f1f6979b7bced323c274",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_endoskelett": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_endoskelett.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/50ef2a7adddfea5319f5d4a4ea82aa85651d08fc5a711d866ac7541be515d407.jpg",
+  "sha256": "1bb1cf7cdeebdfc59fef3f556d1e3e567a3d11d33a5b6c51078ccde5cf7d2079",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_filtermaske_karsk": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_filtermaske_karsk.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8092adaef3ea52afad8d6f63c0d1d5f141b2a0b6607552f7d058139b737f2ed7.jpg",
+  "sha256": "e31a40f2b10569e04bb66e468031a54f620f9b291410fe82fab52aa1ff15a61b",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_implantatwerk": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_implantatwerk.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/587aa04b8dcb39b6ff6e957fc35f84e49c98426ba03c83686ed2c0d00ebe15b7.jpg",
+  "sha256": "5c49c4d9faf5cf140b9bf15b96265b220089fd3881397a377baea9dd6c6ddff3",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_kampfimplantat": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_kampfimplantat.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/856e0a9b4ad923f2b43e21421a0403c10a429c3d70a4a8dac8a2208d398dbb9a.jpg",
+  "sha256": "b7baff53f2ac2508db92e3773e03831668de1bfb8af0dd5dd8ba67b49e3983c7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_koerper_ueber_gewissen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_koerper_ueber_gewissen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/aa59a76ccba121ae4afded706a6397e050802f283edbb2ade683fbede9c65549.jpg",
+  "sha256": "23e8fa794fc483c0759d37ff54b107c574dbb6035149d8f68167de93ded06561",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_kurzfeuerwerfer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_kurzfeuerwerfer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/9e4b846fa51dc5565ed152e01b492b30c6fc1c043e13a717c02ba96589ff0272.jpg",
+  "sha256": "fada85563252f3c0aec06a12aac94b99dc0b5c896f2ba4e7b4ca39a4da5ef336",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_leichter_stosswagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_leichter_stosswagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/1946f7a75924c9c28fc61ca1f93982a146840c89c10a1a584b0a39da203a6655.jpg",
+  "sha256": "12fb423a6ee722cd60e301662ff72cd3035d39b0531af74bf4957336a14ec4c6",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_leistungsmesser": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_leistungsmesser.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/449b4f5d9596af08b97641ce4e89a88957d965442d328c610d63b07926aed637.jpg",
+  "sha256": "3b1529ba837ffe045b080a6b38c6c4e7c95d634c1b4bda602290e63fd3191939",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_leistungsprotokoll": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_leistungsprotokoll.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d2cec3d199872d4dc7f719ba8033ee8b8fe7f3091773402e2e16e9776f2f0361.jpg",
+  "sha256": "2540ce601da351792b1658e350e1c7811953d2518813ffc30dc0cc890e94d5bf",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_letzter_stoss": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_letzter_stoss.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f9f966b86e60b922c6cea2847300c5f1e867cac5b0981320074691d5351b9d2a.jpg",
+  "sha256": "0ef1f0560898607dc7c080dc38661f0028e39404fe3715657ba3dda0dd6f2c93",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_luecke_reissen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_luecke_reissen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/cb3545ef003d3e5b2781078ebbe1384da2f653f13ffc1260ed8f72d4b720e8ac.jpg",
+  "sha256": "175834653b1e474ea17aa5e1b8e2f1b7283824a2ee9bd009b036d0b8c68c2755",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_masspanzer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_masspanzer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f00007af288b4d8d31f0fe50be016b85f5adbf9484b936f3ce6cf8f113b582da.jpg",
+  "sha256": "6489fd625fb8b5e8a54e4cf4f54cdfcc647dbb06b9564935011b762c7487b098",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_massschlag": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_massschlag.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8a940e44789ac1df0af9fdc3e3b032c2a8e904f8e3a895c9955781f1e9f42a79.jpg",
+  "sha256": "23c905027a9f33d784d29b751f443d087039a280c8cba63f322da88d01b3b168",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_massschlagrohr": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_massschlagrohr.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/09739c21cbe0068ab678ab47e73323d0fad731cc31b20a7ecdf12ca2778a3d1d.jpg",
+  "sha256": "da3ca6e5e8d2a38f7928b5ded0c47ead5c7ace30c533a215a99dc312ddb5cd17",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_medizinisch_technische_kette": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_medizinisch_technische_kette.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/2c639c64d8d82f6e60592b516c1cb8cd42b856879f415b4d75b45aa085a5d28f.jpg",
+  "sha256": "17125760b74da54c95f61671b78ced99348b6554de31768c8134cc9aa0833d14",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_muskelservo": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_muskelservo.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/32cd97629212a56c34a044708935b377edafa01482c61b05d9efbcc7d6f7f5a0.jpg",
+  "sha256": "1dd2ad38be0e1583b9c4a8110f6d8f5c51f69759cf0fd5e8823748b17bf45253",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_nachlieferung_koerperteile": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_nachlieferung_koerperteile.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a557c2bc9b006429e239258618e35be6078c0e29d9b42c431ef28478dac6783e.jpg",
+  "sha256": "23a8f635bd5d17b5e619239c8d9dfc24056e5369034b6f83e13f4b95e2c2ff52",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_nervenboost": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_nervenboost.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f0728773220deba9de7e32baf144e85b348cfe6c18a429ea4d3240adc16c142b.jpg",
+  "sha256": "75182edfa0d910e55ee8b7474b79d6fd21fc803da7b63981b57f3895d21f6ac2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_nervenverstaerker": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_nervenverstaerker.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4e4b850b3de3054fe4cbcd084018cd3e0d266b0c4d6322072f87962ab55830ee.jpg",
+  "sha256": "6b8b5a3b2708905fcce9482ed1b1d977f49fafb6ebde0c1792139fd1ab1bcca8",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_oeffnungsbatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_oeffnungsbatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7f24c25884937601f83cafcfe77fa00bb669fec4484e3aa90004d08560dbb6f1.jpg",
+  "sha256": "8f77cfbb195d98a5065e9819145d0a3a814e9ce662fb707217bb640f654dbd5c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_stimulans": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_stimulans.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a721019562230e4764f038585b144304cd10d3ee2df95347469a278ee13f6438.jpg",
+  "sha256": "145e327c7c118e872f809d24db1983d6bc2f482da3ce6383b86c267e6018e271",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_stossbajonett": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_stossbajonett.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7bcc3e534de6000fc45e730339b3b462f11b2214c8fc43b91aad7b2f8306ab4d.jpg",
+  "sha256": "a1fcfdcf611e8e23f6ea7ab924715541d24dedbead0d1a4f5bf4cf7c7e3c8855",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_stossleitfeuer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_stossleitfeuer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ba95241b418e6fbd010e1c705a87ef7624dca1d58f66ae1916b8c62eeea9e39f.jpg",
+  "sha256": "1ea81b787a24bd1b0e8847dc0796970f45ea3bc541e194d795dd3ed2d25c970b",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_stosslotse": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_stosslotse.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/076b5d3e646a2e1daf73c64b14e4ef33497d99d34859a565459238cc0e220d87.jpg",
+  "sha256": "268c759e10d608e221e3ee4e3ffa962c12f0a95a562fd5f2d64b7ce1e310d1c5",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_stosszentrale": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_stosszentrale.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/aa932981196cdea2e0900774cdadbf2f08e1e0cf06d20246529ad6c3a1533bf4.jpg",
+  "sha256": "0f9f8979ece51ea123238641e92438103c8494ab92e2febaa748eac7a18e40bd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_unermuedliche": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_unermuedliche.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/87cdd82a8f1f9824f35c0eee406c4abe085f93738c9cc8cacb2a60be33e31914.jpg",
+  "sha256": "f3a260c2fda6e4117704ed57a8d52c7684184875e00d5cfc72fc8aff3eac0dbe",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_karsk_wundverschluss": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_karsk_wundverschluss.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d12fc7c42091d77f3723aa50c6429a4b09444e33a7c947b0f097a63ac0d94bef.jpg",
+  "sha256": "f607159e2d89dbce2b458a1dac5983e3c0003d3a8449c73eef454309a77e3d95",
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  }

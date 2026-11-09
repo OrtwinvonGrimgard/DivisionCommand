@@ -26,4 +26,4 @@ npm test
 ## gfx3.1 (Textgröße, Schlüsselwort-Erinnerungen, Doktrin-Motive)
 - Regeltext beginnt bei 100 px (Arbeitsformat) und wird nur bei Bedarf in 15 Stufen bis 42 px kleiner; Flavor fällt weg, bevor die Regelschrift unter 70 px sinkt.
 - Karten ohne eigenen Regeltext (nur Schlüsselwörter) zeigen statt leerer Fläche kurze Erinnerungstexte je Schlüsselwort (`face.REMIND`, Volltext in `docs/regeln/SCHLUESSELWOERTER.md`).
-- Doktrinen bekommen eigene Motive (`art-v2/dc_dok_*.jpg`); der Sternplatzhalter bleibt nur als Rückfall ohne Motiv.
+- Doktrinen bekommen bewusst kein Bild; sie behalten das Stern-Emblem im Motivfenster.
