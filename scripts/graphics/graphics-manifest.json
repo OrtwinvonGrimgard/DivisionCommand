@@ -1,44 +1,8 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1389,
+ "new_faces": 1425,
  "missing_illustrations": [
-  "dc_np_caldris_sanitaetstrupp",
-  "dc_np_caldris_genesene_kompanie",
-  "dc_np_caldris_sanitaetspanzer",
-  "dc_np_caldris_schildwagen",
-  "dc_np_caldris_panzerschild_caldris",
-  "dc_np_caldris_etappenpanzer",
-  "dc_np_caldris_bergepanzer_caldris",
-  "dc_np_caldris_schutzfeuerbatterie",
-  "dc_np_caldris_abschnittsmoerser",
-  "dc_np_caldris_defensivbatterie",
-  "dc_np_caldris_sperrfeuer_fuersorge",
-  "dc_np_caldris_schlag_nach_der_genesung",
-  "dc_np_caldris_biometrie_melder",
-  "dc_np_caldris_sanitaetsaufklaerer",
-  "dc_np_caldris_etappenbeobachter",
-  "dc_np_caldris_oberste_fuersorge",
-  "dc_np_caldris_schildgarde",
-  "dc_np_caldris_feldklinik",
-  "dc_np_caldris_ruhezone",
-  "dc_np_caldris_unantastbare_etappe",
-  "dc_np_caldris_nachtlager",
-  "dc_np_caldris_verbandswechsel",
-  "dc_np_caldris_schild_heben",
-  "dc_np_caldris_etappe_sichern",
-  "dc_np_caldris_fuersorgemeldung",
-  "dc_np_caldris_genesung",
-  "dc_np_caldris_schutzfeuer",
-  "dc_np_caldris_ruhe_vor_dem_schlag",
-  "dc_np_caldris_genesene_zurueck_an_die_front",
-  "dc_np_caldris_wall_aus_schilden",
-  "dc_np_caldris_schutzschild_leicht",
-  "dc_np_caldris_verbandspaeckchen",
-  "dc_np_caldris_schildplatte",
-  "dc_np_caldris_ruheabzeichen",
-  "dc_np_caldris_vollschutzweste",
-  "dc_np_caldris_genesungsbajonett",
   "dc_np_theryn_vorderste_welle",
   "dc_np_theryn_nachfolgende_welle",
   "dc_np_theryn_dritte_welle",
@@ -55523,11 +55487,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_sanitaetstrupp.jpg",
+   "art_sha256": "c306c7ae5a486ef2b76ad6de663057404a7825e1efd38d67c29dc37df2717128",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_sanitaetstrupp.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "980780a8144419c9073ce70dc8315fb69bdadbdfd2246c961b80059c23b03d38"
   },
   {
    "id": "dc_np_caldris_ruhezug",
@@ -55673,11 +55653,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_genesene_kompanie.jpg",
+   "art_sha256": "bafb52475f2002d679ad6993b6f9e577627dce742750b293b35e53e65b4806ee",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_genesene_kompanie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2a5a156e5cfdf75f539abdbb87b093a14c403fd00b84b451eb57e4c58eaf4ae0"
   },
   {
    "id": "dc_np_caldris_sanitaetspanzer",
@@ -55701,11 +55697,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_sanitaetspanzer.jpg",
+   "art_sha256": "fab6743aedb931e82a34ab5021767035bae5c97cdb392c30459ad5e0219298cc",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_sanitaetspanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7e8db8068fcc508fbd6384f9633c5d92792f9a332f082a10c913e0d843df3cd2"
   },
   {
    "id": "dc_np_caldris_schildwagen",
@@ -55729,11 +55741,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_schildwagen.jpg",
+   "art_sha256": "df9040f326971d5c3ddff4262197134fdeff37c027448ba6b1c3343ac285ed41",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_schildwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "4bca8e38b6ad10658ab69a37c5ac7838a714b4da8dc98e3a57496d9b055cca03"
   },
   {
    "id": "dc_np_caldris_panzerschild_caldris",
@@ -55757,11 +55785,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_panzerschild_caldris.jpg",
+   "art_sha256": "409ef4c39405eae90c94cb23eead0549000c5a1cde99b512d8cd9d83ad5bb093",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_panzerschild_caldris.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "3113f55d940c131f0b458501cf20ab7136231d165337dcad9b326fc9b5780949"
   },
   {
    "id": "dc_np_caldris_etappenpanzer",
@@ -55785,11 +55829,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_etappenpanzer.jpg",
+   "art_sha256": "012c347d39d53acab152f5385d0aa3d86fea0f5532eed0a7d0e67ca407fbdc28",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_etappenpanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "9d21acff3865bab9f0f75cee75fe7aaa0b0a6bca99f5e1cb63c2722c7edda720"
   },
   {
    "id": "dc_np_caldris_bergepanzer_caldris",
@@ -55813,11 +55873,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_bergepanzer_caldris.jpg",
+   "art_sha256": "2c20b343c17098fc4926936054c12f735863fead19c61d11ae51e3b9faedfa2f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_bergepanzer_caldris.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "30892505a9ac63ef39f46197e0e57db28e1bdc29dc5dcced594cda0abe6fc2cb"
   },
   {
    "id": "dc_np_caldris_schutzfeuerbatterie",
@@ -55840,11 +55916,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_schutzfeuerbatterie.jpg",
+   "art_sha256": "6611729047864f9313641199a7e1d82cf61fdff568b84fc0608bc05cf7faea5e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_schutzfeuerbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "0eb939fbed7337afe80be4fb6bf30a822293d24b6376f70f2a2b2e111d29e45a"
   },
   {
    "id": "dc_np_caldris_abschnittsmoerser",
@@ -55866,11 +55958,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_abschnittsmoerser.jpg",
+   "art_sha256": "b23ec18b1d2a706605980a68cee678e32fb088ac1f5bfc30764b975f944c216d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_abschnittsmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "1643150d7d93be8200b664fade08c8a449cbcd2a84c84ba4083771b5b2dfc8cf"
   },
   {
    "id": "dc_np_caldris_defensivbatterie",
@@ -55892,11 +56000,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_defensivbatterie.jpg",
+   "art_sha256": "13feff6796f94f2855aea068764dd76a4e655aa70c0eae24099670b93930d70e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_defensivbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e670ad6bba8d1ac690b6b3e4d412d341b78238b8754f779818f4dc5175ebb725"
   },
   {
    "id": "dc_np_caldris_sperrfeuer_fuersorge",
@@ -55919,11 +56043,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_sperrfeuer_fuersorge.jpg",
+   "art_sha256": "308e6c604c5be922b26530a624a1195e6d2dea1b321f35d88a5832515b1b30af",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_sperrfeuer_fuersorge.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7d6197977692c9e346411ef9f2472e301312dcc0de21dd5c3d804d6210f672d3"
   },
   {
    "id": "dc_np_caldris_schlag_nach_der_genesung",
@@ -55947,11 +56087,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_schlag_nach_der_genesung.jpg",
+   "art_sha256": "07d87bb08b593024ca4f94577f58683dbcc144b386752180f32b63c53d4cfc39",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_schlag_nach_der_genesung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "1167887c7a23fa40c90d657e835d0c0a364d4d4f58b49c449776732952851122"
   },
   {
    "id": "dc_np_caldris_biometrie_melder",
@@ -55971,11 +56127,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_biometrie_melder.jpg",
+   "art_sha256": "b1adb6bb054d80727e541cdeda72bc0ea70b97295034ff191da1e171ad1b5b17",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_biometrie_melder.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "dbc196991acb338290af16ed68ece97610cd36e9162296d6c17a3e9cbdb48798"
   },
   {
    "id": "dc_np_caldris_sanitaetsaufklaerer",
@@ -55995,11 +56167,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_sanitaetsaufklaerer.jpg",
+   "art_sha256": "c336efd2f8efa4907fabc23e4d35eafe93fc8f7213a284abee067997134881c8",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_sanitaetsaufklaerer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d099506a55fbf369b5caa50754ec064b37fb31eea8de0d0512dc24b8a13baf1b"
   },
   {
    "id": "dc_np_caldris_etappenbeobachter",
@@ -56021,11 +56209,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_etappenbeobachter.jpg",
+   "art_sha256": "08cfdd7373811a997209b0c4bf94dfec0b37466a170e92e80fe27ecebedc9946",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_etappenbeobachter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "3b362333c323ecfdc641d9a4b910f7090a90b09fce5adcf529c974cbb4cd8bd8"
   },
   {
    "id": "dc_np_caldris_oberste_fuersorge",
@@ -56048,11 +56252,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_oberste_fuersorge.jpg",
+   "art_sha256": "72bcd6009476395fe9201e9d3dd44ef34d5e1951eed7cf6fe32d9160a171a297",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_oberste_fuersorge.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "179220bf3f0e2caa328f37335f78cb52cac1ccab7114d1b299e65bb76ff312aa"
   },
   {
    "id": "dc_np_caldris_schildgarde",
@@ -56075,11 +56295,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_schildgarde.jpg",
+   "art_sha256": "c42c6dde59ff9ea65b8f895b3bc53b857a9db414396bc5aa61a8a758632277cd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_schildgarde.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "3f2f3e59337170f1f29a30fb9396f2aa44fdd6440311ecd4733baefc5921ca8f"
   },
   {
    "id": "dc_np_caldris_feldklinik",
@@ -56098,11 +56334,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_feldklinik.jpg",
+   "art_sha256": "26ef82e9c25d7cabb42c1c69c7cd463aac28103cd659140691ea4d8b104ec884",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_feldklinik.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d8b7a7b3b34e75529c6359e9db3e162170e6faf816102ecba9acbcfb428ce33c"
   },
   {
    "id": "dc_np_caldris_ruhezone",
@@ -56121,11 +56373,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_ruhezone.jpg",
+   "art_sha256": "c84df1c5c85e7fcaaef048f40b166cb2ccd0689885a6dc6742778146e7aa4eec",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_ruhezone.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "213229db3ac381d2fad253883546dea2de837951984cbec63e45ab259dfffcc7"
   },
   {
    "id": "dc_np_caldris_unantastbare_etappe",
@@ -56144,11 +56412,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_unantastbare_etappe.jpg",
+   "art_sha256": "d1329f8d53016ca4509de9a16d5efbf651cc51eec48fd0ba29e11f8054e18a62",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_unantastbare_etappe.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "a925eea2ec61ee0f11e986c2968a413afb90b79c5586f9dcc6e439cc73ab750e"
   },
   {
    "id": "dc_np_caldris_nachtlager",
@@ -56167,11 +56451,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_nachtlager.jpg",
+   "art_sha256": "9c89c613fa5b07b1dc199286c674e715213a21fb0b9e48e4b11dc5c0dfdb5e8e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_nachtlager.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "631f50eeaaef5b0cf66dbe9f839be2cef79b80c953d8a7afc89949b7455c5a89"
   },
   {
    "id": "dc_np_caldris_verbandswechsel",
@@ -56190,11 +56490,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_verbandswechsel.jpg",
+   "art_sha256": "64188c77a019d55668fba99465eadf3d692e7668c07793dd4735d1ccad3f6a6d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_verbandswechsel.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "eac119ebe6c8d118549a15cbf102e56b37a0b7f9d168b9db1dbeea1c94077c0e"
   },
   {
    "id": "dc_np_caldris_schild_heben",
@@ -56213,11 +56529,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_schild_heben.jpg",
+   "art_sha256": "5fe0ee83ac241c8a55ca916916c746df1069e142f473c4da8ed3d8b3d03b57d4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_schild_heben.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "cbc6c590a8037750e8a71784631d3a04f763bab79c4b35445e2b4f450791652b"
   },
   {
    "id": "dc_np_caldris_etappe_sichern",
@@ -56236,11 +56568,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_etappe_sichern.jpg",
+   "art_sha256": "b6cc60aae1df6757162fe478a08a90cac6e83b9c0e17c85c4885fd38f67466cc",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_etappe_sichern.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "0ced5b77b43b66869b5c3656ad43dbe8a173107ecaf2d2fac32dc3b2a95e877c"
   },
   {
    "id": "dc_np_caldris_fuersorgemeldung",
@@ -56259,11 +56607,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_fuersorgemeldung.jpg",
+   "art_sha256": "03b32196acc549f7adff5809b4de068a61ea0eb83b8595e577219ba370171de0",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_fuersorgemeldung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "1843ec90c7897a55c9380abf77210944cd06d113a9eac357311a172113d8329d"
   },
   {
    "id": "dc_np_caldris_genesung",
@@ -56282,11 +56646,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_genesung.jpg",
+   "art_sha256": "687a744fcd7008bca6c7e92c616b6b2460d166d3031c8e00201c75c9d2d9889d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_genesung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "ae5de1997a7d8857641c4951afe3f01d7231ce6778d840d5e37612e774e7e6f1"
   },
   {
    "id": "dc_np_caldris_schutzfeuer",
@@ -56305,11 +56685,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_schutzfeuer.jpg",
+   "art_sha256": "794c501f6f2ee07f9af0d8c5a42c65f543864c052d0edb673e90758506bf01cb",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_schutzfeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "fe93986517ec47ddc1f097ae951c2272b934f592d171a5d78ffe65df4954ae50"
   },
   {
    "id": "dc_np_caldris_ruhe_vor_dem_schlag",
@@ -56328,11 +56724,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_ruhe_vor_dem_schlag.jpg",
+   "art_sha256": "d7fadd3c321d06b0751d749cccf6db5ee676387e75d4a2e2f10ee43005e8bb88",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_ruhe_vor_dem_schlag.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7f30fed0ebf0a9ed8d4f8778ae6c50ddd5d673de09b44c9472f6568518f7236a"
   },
   {
    "id": "dc_np_caldris_genesene_zurueck_an_die_front",
@@ -56351,11 +56763,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_genesene_zurueck_an_die_front.jpg",
+   "art_sha256": "5a1a1b33d7a7bd4dc2580bde3ee1fac800f778749e582ecb15a5a941b21d84de",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_genesene_zurueck_an_die_front.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "741b0af027f327c93bfe775e5be3fa59a647a158ba034f455c511f4c081c3b74"
   },
   {
    "id": "dc_np_caldris_wall_aus_schilden",
@@ -56374,11 +56802,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_wall_aus_schilden.jpg",
+   "art_sha256": "47eaba8ba9db6603075b444eb8b35b09d0599045fb128e9df683ef52b7d0404c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_wall_aus_schilden.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "74c0edfc3860e001594fba860ed4a9ce48c576aa191454c559ebe95a0fe33e10"
   },
   {
    "id": "dc_np_caldris_schutzschild_leicht",
@@ -56397,11 +56841,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_schutzschild_leicht.jpg",
+   "art_sha256": "cc96a26d22f878461576b8b537687a1789f28c19ca0fbfe7e021729a039cb3bd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_schutzschild_leicht.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "c7d3c28ce4b02369062d33eacd6b987f4379cd15e94806c928860d48def497db"
   },
   {
    "id": "dc_np_caldris_verbandspaeckchen",
@@ -56420,11 +56880,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_verbandspaeckchen.jpg",
+   "art_sha256": "70878a07821f21056c19128f2f1b5b5968ff8eb0c99e5dc2876c5c35a0c5f4a5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_verbandspaeckchen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "dbae953ecf66dd0bc733d10cd0eabe49f923718c1e1a678a298b3fcdfe94ff50"
   },
   {
    "id": "dc_np_caldris_schildplatte",
@@ -56445,11 +56921,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_schildplatte.jpg",
+   "art_sha256": "1a339d068de3dc62b1f6f2016463db0f349d7d50a7102e4bcb527657286f6739",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_schildplatte.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "8fcd2637924c76cc89e20987e80ae09588a9a377f4ad006336252b774414e1f2"
   },
   {
    "id": "dc_np_caldris_ruheabzeichen",
@@ -56468,11 +56960,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_ruheabzeichen.jpg",
+   "art_sha256": "a9fa07be6e58c44fedff7ce27f5103ff069f50305ed3b40e2cea32034263bdc4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_ruheabzeichen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "c9d974701c3840621a99a65a47fa26e0503e83ccc84bcd0278869a5ae9e71ec8"
   },
   {
    "id": "dc_np_caldris_vollschutzweste",
@@ -56491,11 +56999,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_vollschutzweste.jpg",
+   "art_sha256": "e3be5fd3e6aaa3ffceb2c6fdc532d5f3cb24d44d1208b29f8d81a2c558199db2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_vollschutzweste.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "361d37b14992907b72bfdb2b7526daa1820a5ca4a4b98677e36d36e8048c8746"
   },
   {
    "id": "dc_np_caldris_genesungsbajonett",
@@ -56514,11 +57038,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_caldris_genesungsbajonett.jpg",
+   "art_sha256": "a3cf5c7633d515eb76e6bbe068b8d2e929b873ed0ec69cbdbe9cf165ac094545",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_caldris_genesungsbajonett.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "8af74dcc11c2560ced35a52006e6a7f32a5df72f0354c5c5a3024fd11971d492"
   },
   {
    "id": "dc_np_theryn_vorderste_welle",

@@ -2360,5 +2360,293 @@
   "sha256": "f607159e2d89dbce2b458a1dac5983e3c0003d3a8449c73eef454309a77e3d95",
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_abschnittsmoerser": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_abschnittsmoerser.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e6b36949721c1c8c0ddaebbf81bbfb13eaf2d00c069d8ece845a2957dd489c4a.jpg",
+  "sha256": "b23ec18b1d2a706605980a68cee678e32fb088ac1f5bfc30764b975f944c216d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_bergepanzer_caldris": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_bergepanzer_caldris.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/bcd85d7114444418e4ee0e4079fa3705e97995a69d4cef0fa9a0246875da879b.jpg",
+  "sha256": "2c20b343c17098fc4926936054c12f735863fead19c61d11ae51e3b9faedfa2f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_biometrie_melder": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_biometrie_melder.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7b0ee32887df68622b5d606039771e576ec1f1996b5397aa41fd2bd0d3edb4f8.jpg",
+  "sha256": "b1adb6bb054d80727e541cdeda72bc0ea70b97295034ff191da1e171ad1b5b17",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_defensivbatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_defensivbatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4e8f418f9fe2fada7ecd67e6c72d3fe63e49f12e90edfdb5403570df67b34fd4.jpg",
+  "sha256": "13feff6796f94f2855aea068764dd76a4e655aa70c0eae24099670b93930d70e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_etappe_sichern": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_etappe_sichern.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6fe72abbfa8ff604cce37cd09559e6379ec2ae87a9b6be949dfcd40e97f0b0cd.jpg",
+  "sha256": "b6cc60aae1df6757162fe478a08a90cac6e83b9c0e17c85c4885fd38f67466cc",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_etappenbeobachter": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_etappenbeobachter.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/2091edc7f69280a7e06067edf18a2633e637e6da4608d4e80aff017cb366d8e8.jpg",
+  "sha256": "08cfdd7373811a997209b0c4bf94dfec0b37466a170e92e80fe27ecebedc9946",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_etappenpanzer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_etappenpanzer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d9f8f7be9a39b7469aad830097c8637a53515c55f9de024294c2fa36d64d0f2a.jpg",
+  "sha256": "012c347d39d53acab152f5385d0aa3d86fea0f5532eed0a7d0e67ca407fbdc28",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_feldklinik": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_feldklinik.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5a5dd596e2e4f0b40d8a926d051dd0854273c4190cade58ffbca721fec612241.jpg",
+  "sha256": "26ef82e9c25d7cabb42c1c69c7cd463aac28103cd659140691ea4d8b104ec884",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_fuersorgemeldung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_fuersorgemeldung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/23e9e61caadabfb3dcbafd07357590ef10f64f469d9a0881e88e682fcf4a6efa.jpg",
+  "sha256": "03b32196acc549f7adff5809b4de068a61ea0eb83b8595e577219ba370171de0",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_genesene_kompanie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_genesene_kompanie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e01d3bac24d5759aba2a145ebf8c465fcd41590d49886a6850552dc7e5c914f5.jpg",
+  "sha256": "bafb52475f2002d679ad6993b6f9e577627dce742750b293b35e53e65b4806ee",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_genesene_zurueck_an_die_front": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_genesene_zurueck_an_die_front.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4005d15dd6d388ade7a808ba5e74a31b4f08393b1c827b6f3e3526cdf5e6d2a0.jpg",
+  "sha256": "5a1a1b33d7a7bd4dc2580bde3ee1fac800f778749e582ecb15a5a941b21d84de",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_genesung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_genesung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b7005e641bb7996c6d36f13b20f7754d534bbba126a6e09dd56bf1c8706c7d78.jpg",
+  "sha256": "687a744fcd7008bca6c7e92c616b6b2460d166d3031c8e00201c75c9d2d9889d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_genesungsbajonett": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_genesungsbajonett.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/91c672aa35283edf28418d23deb2be1826328124d8bcf0e7459d9dc26ce49167.jpg",
+  "sha256": "a3cf5c7633d515eb76e6bbe068b8d2e929b873ed0ec69cbdbe9cf165ac094545",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_nachtlager": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_nachtlager.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/615c55a276ab94733600c88ec71690fa903f6582349fa8977faa255725150eaf.jpg",
+  "sha256": "9c89c613fa5b07b1dc199286c674e715213a21fb0b9e48e4b11dc5c0dfdb5e8e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_oberste_fuersorge": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_oberste_fuersorge.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/033a3e6438eab0114ac2ccb60f2a6d34b263715ce168d55368e14aec11e03b3d.jpg",
+  "sha256": "72bcd6009476395fe9201e9d3dd44ef34d5e1951eed7cf6fe32d9160a171a297",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_panzerschild_caldris": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_panzerschild_caldris.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/49e27977d67ba5870543ec9c791ae4562469da34f3599720dc03ff5b4929bc32.jpg",
+  "sha256": "409ef4c39405eae90c94cb23eead0549000c5a1cde99b512d8cd9d83ad5bb093",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_ruhe_vor_dem_schlag": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_ruhe_vor_dem_schlag.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5b876c4ec8f0be53ae171f44677c87325327402a2c0e0037c05319a51b458a1d.jpg",
+  "sha256": "d7fadd3c321d06b0751d749cccf6db5ee676387e75d4a2e2f10ee43005e8bb88",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_ruheabzeichen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_ruheabzeichen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/78b998c9fc0910503f12886db68f102ec692abf5ad2f1e15bec028d316e0707e.jpg",
+  "sha256": "a9fa07be6e58c44fedff7ce27f5103ff069f50305ed3b40e2cea32034263bdc4",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_ruhezone": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_ruhezone.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/da6525893a1aa4e07db865c4c66710727243377e93e2a626c33e8075788cfbdd.jpg",
+  "sha256": "c84df1c5c85e7fcaaef048f40b166cb2ccd0689885a6dc6742778146e7aa4eec",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_sanitaetsaufklaerer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_sanitaetsaufklaerer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/78caa10817ed49f82669fe5e89d6330c8485d47aae14bf9594c3c6804d70a051.jpg",
+  "sha256": "c336efd2f8efa4907fabc23e4d35eafe93fc8f7213a284abee067997134881c8",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_sanitaetspanzer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_sanitaetspanzer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/50e46f923b3897fddd4e47b6a737ef85d49a4fe151cca0e465fea57d080ba83e.jpg",
+  "sha256": "fab6743aedb931e82a34ab5021767035bae5c97cdb392c30459ad5e0219298cc",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_sanitaetstrupp": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_sanitaetstrupp.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ca7bca7addba2724a6f8c6b7b3f4a57b72b157b03c62035161a96bacac526b28.jpg",
+  "sha256": "c306c7ae5a486ef2b76ad6de663057404a7825e1efd38d67c29dc37df2717128",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_schild_heben": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_schild_heben.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/9f9a095ef99c5a664251dd172617f29e4767b15aa32b75c98e7c636892557434.jpg",
+  "sha256": "5fe0ee83ac241c8a55ca916916c746df1069e142f473c4da8ed3d8b3d03b57d4",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_schildgarde": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_schildgarde.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c7b1b5d8f0a8dda59e2b8ebc64ef45b132440ccb8add0771b7e868ea3f00fb13.jpg",
+  "sha256": "c42c6dde59ff9ea65b8f895b3bc53b857a9db414396bc5aa61a8a758632277cd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_schildplatte": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_schildplatte.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8b970b486b9e2a70affd863bb6283a22fe2ff9fb1e64e4247a27199648809968.jpg",
+  "sha256": "1a339d068de3dc62b1f6f2016463db0f349d7d50a7102e4bcb527657286f6739",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_schildwagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_schildwagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/dc3d8adad93df750eb18f8bf5391201be75f58d434bb27727ce5779c7541b15d.jpg",
+  "sha256": "df9040f326971d5c3ddff4262197134fdeff37c027448ba6b1c3343ac285ed41",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_schlag_nach_der_genesung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_schlag_nach_der_genesung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c75542055a9962096d4b9ccfa06838ff15c2c0a78846cd92605c426267aa00d8.jpg",
+  "sha256": "07d87bb08b593024ca4f94577f58683dbcc144b386752180f32b63c53d4cfc39",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_schutzfeuer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_schutzfeuer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d79b4e75134ce71a92a3b07ff59a4f6f12978bfbf372263e5a834998f7413484.jpg",
+  "sha256": "794c501f6f2ee07f9af0d8c5a42c65f543864c052d0edb673e90758506bf01cb",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_schutzfeuerbatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_schutzfeuerbatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6c93061696493196eac1859f4d1ccbf3088b68d76b16ca71890f223ab5653032.jpg",
+  "sha256": "6611729047864f9313641199a7e1d82cf61fdff568b84fc0608bc05cf7faea5e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_schutzschild_leicht": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_schutzschild_leicht.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/31c9bfd4f62bf096a0d4b868856098ca64b27f4e2df85308a88598c7537f1962.jpg",
+  "sha256": "cc96a26d22f878461576b8b537687a1789f28c19ca0fbfe7e021729a039cb3bd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_sperrfeuer_fuersorge": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_sperrfeuer_fuersorge.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f6ea8a67abffe23c0b7daefc13a26ca56eabb3fa9cd08824f932faa67661be0b.jpg",
+  "sha256": "308e6c604c5be922b26530a624a1195e6d2dea1b321f35d88a5832515b1b30af",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_unantastbare_etappe": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_unantastbare_etappe.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/9120a540b9ce077adf8d5d22c5cb7f47be890f1d0f88c68319dfa06dba7bcf85.jpg",
+  "sha256": "d1329f8d53016ca4509de9a16d5efbf651cc51eec48fd0ba29e11f8054e18a62",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_verbandspaeckchen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_verbandspaeckchen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/50523c6c73725cd216a887a81f08c9a46c2c7bb25a5d3fa2073ba7982950ebe9.jpg",
+  "sha256": "70878a07821f21056c19128f2f1b5b5968ff8eb0c99e5dc2876c5c35a0c5f4a5",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_verbandswechsel": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_verbandswechsel.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f0e49b0f35651e48a520a9516b3ddb3cf94bbbe2d4e76d332d1580248acfbf43.jpg",
+  "sha256": "64188c77a019d55668fba99465eadf3d692e7668c07793dd4735d1ccad3f6a6d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_vollschutzweste": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_vollschutzweste.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6b132f82bbe5b65926e0e4debd77c0c3e0a9addf38963dab7066970f18886b48.jpg",
+  "sha256": "e3be5fd3e6aaa3ffceb2c6fdc532d5f3cb24d44d1208b29f8d81a2c558199db2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_caldris_wall_aus_schilden": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_caldris_wall_aus_schilden.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ed67d4235b0331844b506c53b2690ec519d1c24ebb7030b6dfcac8607e2efa96.jpg",
+  "sha256": "47eaba8ba9db6603075b444eb8b35b09d0599045fb128e9df683ef52b7d0404c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  }
 }
