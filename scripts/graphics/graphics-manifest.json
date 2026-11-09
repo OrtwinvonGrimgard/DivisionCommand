@@ -1,17 +1,8 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1536,
+ "new_faces": 1545,
  "missing_illustrations": [
-  "dc_np_merovan_wegpunkt_melden",
-  "dc_np_merovan_kolonne_nachziehen",
-  "dc_np_merovan_halt_um_jeden_preis",
-  "dc_np_merovan_postenhelm",
-  "dc_np_merovan_marschgepaeck",
-  "dc_np_merovan_haltespaten",
-  "dc_np_merovan_wegkarte",
-  "dc_np_merovan_garnisonsgewehr",
-  "dc_np_merovan_kolonnenpanzerung",
   "dc_np_lyr_waechter_am_grat",
   "dc_np_lyr_passhueter",
   "dc_np_lyr_eidgenossen",
@@ -61520,11 +61511,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_wegpunkt_melden.jpg",
+   "art_sha256": "26beff9596ec1cbe2489bcbcf568b57f88ebb0908b54a65bc2c99a4d0d28d147",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_wegpunkt_melden.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f3dc8fdf57ae4ab2ee073f4b5e3c0172f077d4e6cca17ee479c373f633fd0bc2"
   },
   {
    "id": "dc_np_merovan_kolonne_nachziehen",
@@ -61543,11 +61550,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_kolonne_nachziehen.jpg",
+   "art_sha256": "e6db7cd82bf6a9150ef7ad13cb738da87ec616a90a4538d85360cac28e3837ea",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_kolonne_nachziehen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "bf2b2e55ecc907a9a3f582475eea824de524afd0996bf458baf473349167301a"
   },
   {
    "id": "dc_np_merovan_halt_um_jeden_preis",
@@ -61566,11 +61589,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_halt_um_jeden_preis.jpg",
+   "art_sha256": "b3944a186afba96067d62068973f487281139188157f6a9abbb8373e2fc89ae7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_halt_um_jeden_preis.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2d5e4ea3aa1320b9014738fce7db1fe9d55014f1b49e06a3be9f58e323622673"
   },
   {
    "id": "dc_np_merovan_postenhelm",
@@ -61589,11 +61628,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_postenhelm.jpg",
+   "art_sha256": "0e45e41d018a62f7fad480384efaffa5a7beb0f90ea33ba56e245d5a30eb8ba1",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_postenhelm.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "a5b961a471f9ea08f6caf20450ac467e3f188df1ce11392090c72f01f996faa3"
   },
   {
    "id": "dc_np_merovan_marschgepaeck",
@@ -61612,11 +61667,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_marschgepaeck.jpg",
+   "art_sha256": "cd89a3d54c7eb39342e83f4c720b540b7ff482369aed69f4617b49484de802bb",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_marschgepaeck.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "c65aaed71b088b9f2a5c75ff243b0144ca3198c8e283bddbf88d7c4b763b4783"
   },
   {
    "id": "dc_np_merovan_haltespaten",
@@ -61637,11 +61708,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_haltespaten.jpg",
+   "art_sha256": "8a3dcb810501ce63ab4d47791281aa820324d030b2976c7184db953d08c48211",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_haltespaten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "27ee571f2facc38efc04bf797ad41b6476132e267a9f86bb4d332f36038f387d"
   },
   {
    "id": "dc_np_merovan_wegkarte",
@@ -61660,11 +61747,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_wegkarte.jpg",
+   "art_sha256": "6e9d9e20f46114e9b4823cc6c5d1cb5cd31d2d9a83adeadad61e892337a7e508",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_wegkarte.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5ebbbf490c4986f26039ba9aa19f46f1375dddd78e451f5fcb7e9ff9bc96dc43"
   },
   {
    "id": "dc_np_merovan_garnisonsgewehr",
@@ -61683,11 +61786,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_garnisonsgewehr.jpg",
+   "art_sha256": "eb42ae1357bd0278c819df65ead42a30b78d4be7cbf6654ad920cd563b2e06ae",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_garnisonsgewehr.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "3ef8b054e4b3e1414ce673b9450347115111f30c62ba787fb008a30a01de97fe"
   },
   {
    "id": "dc_np_merovan_kolonnenpanzerung",
@@ -61706,11 +61825,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_kolonnenpanzerung.jpg",
+   "art_sha256": "5799bf4d44a2cece421b1757dbdb7fe3007384ef8397d520e4729374c70fed4e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_kolonnenpanzerung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5066455b6a8aa2af783195c934c60a5ceb4a4544e0e356dd9ed101755a8c4f6a"
   },
   {
    "id": "dc_np_lyr_waechter_am_grat",

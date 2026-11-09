@@ -3536,5 +3536,77 @@
   "sha256": "7a8e92a7784debcbbd640577006b4c5ce22f954252a7f6103ce5d257d6b11f59",
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_merovan_garnisonsgewehr": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_merovan_garnisonsgewehr.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/089993806bddf9982121a565ac555308bc6231216b664da7c3d0cf59b64d8505.jpg",
+  "sha256": "eb42ae1357bd0278c819df65ead42a30b78d4be7cbf6654ad920cd563b2e06ae",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_merovan_halt_um_jeden_preis": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_merovan_halt_um_jeden_preis.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f528392e0ad9a6a7a54759f26a51c7ba83117d27204548b5246ee21b51f9a478.jpg",
+  "sha256": "b3944a186afba96067d62068973f487281139188157f6a9abbb8373e2fc89ae7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_merovan_haltespaten": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_merovan_haltespaten.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7d1960b71b4c6a1d9671c934aa0434b5b39d213f0b79d220ac3c1d4299e62cee.jpg",
+  "sha256": "8a3dcb810501ce63ab4d47791281aa820324d030b2976c7184db953d08c48211",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_merovan_kolonne_nachziehen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_merovan_kolonne_nachziehen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/deeb64b33e922f024949cd73e9ca8dbeebe25b7d42fcdfff766c0c27c0914f01.jpg",
+  "sha256": "e6db7cd82bf6a9150ef7ad13cb738da87ec616a90a4538d85360cac28e3837ea",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_merovan_kolonnenpanzerung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_merovan_kolonnenpanzerung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e6f1f09be6a882a03e1a52c86beec9fbb60de3c46a665ca6d7dee1b1408388f6.jpg",
+  "sha256": "5799bf4d44a2cece421b1757dbdb7fe3007384ef8397d520e4729374c70fed4e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_merovan_marschgepaeck": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_merovan_marschgepaeck.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b4e8cc77c749571cf9f0e21fbfa2df50c6db0fcb586a7ed1a9b6dd859b47c21a.jpg",
+  "sha256": "cd89a3d54c7eb39342e83f4c720b540b7ff482369aed69f4617b49484de802bb",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_merovan_postenhelm": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_merovan_postenhelm.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/bcd231d48d90790aba3dab11ffacdf38c84a0c4c3d93879f9ccba48182a22903.jpg",
+  "sha256": "0e45e41d018a62f7fad480384efaffa5a7beb0f90ea33ba56e245d5a30eb8ba1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_merovan_wegkarte": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_merovan_wegkarte.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8c22f75468e2129e7143022cdac5c1fd8ec5e0bfe2c5054346d9ca7432d2dec8.jpg",
+  "sha256": "6e9d9e20f46114e9b4823cc6c5d1cb5cd31d2d9a83adeadad61e892337a7e508",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_merovan_wegpunkt_melden": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_merovan_wegpunkt_melden.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a1ebddfd9962689f2a006c09756ee6667eae564778614e622c92680cf38edb2d.jpg",
+  "sha256": "26beff9596ec1cbe2489bcbcf568b57f88ebb0908b54a65bc2c99a4d0d28d147",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  }
 }
