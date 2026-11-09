@@ -917,8 +917,6 @@ def restack_under_art(img, card, stock_fn, art_bottom=910):  # 40% art
     rim = getattr(_mod, "GOLD", GOLD)
     d.rounded_rectangle((70, title_y, ww - 70, title_y + title_h), radius=6, outline=rim, width=5)
     tag_y = after + TAG_GAP
-    rim = getattr(_mod, "GOLD", GOLD)
-    d.rounded_rectangle((70, tag_y, ww - 70, tag_y + TAG_H), radius=8, fill=(18, 12, 8), outline=rim, width=2)
     tags = gameplay_tags(card)
     if tags:
         draw_tag_banners(d, tag_y, tags, ww)
@@ -1082,7 +1080,6 @@ def finish_sofort(img, card, edition="ALPHA", number="001", footer_star=False):
     img = clear_support_well(img, burnt_stock, art_y1, ty0, card)
     d = ImageDraw.Draw(img)
     tag_y = art_y1 + TAG_GAP
-    d.rounded_rectangle((70, tag_y, ww - 70, tag_y + TAG_H), radius=8, fill=(18, 12, 8), outline=rim, width=2)
     tags = gameplay_tags(card)
     if tags:
         draw_tag_banners(d, tag_y, tags, ww)

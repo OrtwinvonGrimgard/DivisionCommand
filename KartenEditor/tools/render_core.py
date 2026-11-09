@@ -529,11 +529,9 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
     if typ == "Doktrin":
         text_top = 644
     else:
-        # Tag-Leiste immer reservieren (auch ohne Chips), damit Layout/Elite-Spange sitzen
+        # Tag-Zone immer reservieren (auch ohne Chips), damit Layout/Elite-Spange sitzen.
+        # Kein dunkler Balken hinter den Chips — Chips liegen direkt auf dem Rahmengrund (wie Alpha A048).
         ty = name_bot + TAG_GAP
-        # dezenter durchgehender Balken hinter den Chips
-        bar = (70, ty, W - 70, ty + 56)
-        d.rounded_rectangle(bar, radius=8, fill=(18, 12, 8), outline=GOLD, width=2)
         if tags:
             draw_tag_banners(d, ty, tags, W)
         text_top = ty + 56 + TAG_GAP

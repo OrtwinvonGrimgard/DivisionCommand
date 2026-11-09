@@ -38,3 +38,5 @@ Service-Worker-Cache: `divcmd-alpha40c`.
 - Tag-Leiste immer vorhanden (auch ohne Chips).
 - Elite-Orden: Ringinnenräume und Fläche zwischen Spange und Band transparent.
 
+## alpha40d
+- Tag-Leiste: kein schwarzer Balken/Goldrand hinter den Chips; Zone bleibt reserviert (Tagless + Elite-Spange). Cache `divcmd-alpha40d`.

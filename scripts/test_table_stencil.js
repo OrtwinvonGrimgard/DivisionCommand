@@ -10,7 +10,7 @@ const tex = fs.readFileSync(path.join(WEB, 'assets/table/stencil-oil.webp'));
 assert(tex.slice(0, 4).toString() === 'RIFF' && tex.slice(8, 12).toString() === 'WEBP' && tex.length > 50000, 'Öltextur vorhanden');
 for (const m of css.matchAll(/url\(\.\.\/([^)]+)\)/g)) assert(fs.existsSync(path.join(WEB, m[1])), '404: ' + m[1]);
 assert(/table-stencil\.js\?v=/.test(fs.readFileSync(path.join(WEB, 'index.html'), 'utf8')));
-assert(/const CACHE = 'divcmd-alpha40c'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')));
+assert(/const CACHE = 'divcmd-alpha40d'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')));
 // z-Reihenfolge: Gemälde -3 < Licht -2 < Schablone -1 < Karten (auto)
 const z = sel => Number(css.match(new RegExp(sel.replace(/[.>]/g, m => '\\' + m) + ' \\{[^}]*z-index: (-?\\d+)'))[1]);
 assert(z('.cam-world > .ot-desk') < z('.cam-world > .ot-slotlight') && z('.cam-world > .ot-slotlight') < z('.cam-world > .ot-stencil') && z('.cam-world > .ot-stencil') < 0, 'Schichtfolge');
