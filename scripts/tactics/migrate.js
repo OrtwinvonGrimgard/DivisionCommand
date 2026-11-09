@@ -2,7 +2,6 @@
 /* Idempotente, eng gefasste Redaktion: ein Wort = ein bestehender Effektcode.
    Keine Zuordnung nach bloßen Namen oder militärisch ähnlichen Texten. */
 const REMINDERS = {
-  'Indirektes Feuer': 'Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.',
   'Absetzen': 'Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.',
   'Erstschadenschutz': 'Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.'
 };
@@ -15,7 +14,6 @@ function migrate(c) {
     const r = word + ' (' + REMINDERS[word] + ')';
     c.rules = c.rules || []; if (!c.rules.includes(r)) c.rules.push(r);
   };
-  if (has('ATTACK_ANY_FRONT')) add('Indirektes Feuer', /(?:Indirektes Feuer: (?:darf jede gegnerische Fronteinheit angreifen|gesamte feindliche Front)|Greift die gesamte feindliche Front an|Indirektes Feuer auf die ganze Front)\./g);
   if (has('RELOCATE_HIDE')) add('Absetzen', /Nach (?:jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug|dem Angriff bis zum nächsten eigenen Zug verdeckt|Angriff verdeckt bis zum nächsten eigenen Zug)\./g);
   if (has('EQUIP_IGNORE_FIRST_DAMAGE') && !EXCLUDED.has(c.id)) add('Erstschadenschutz', /Der erste Schaden am Träger wird ignoriert \(einmalig\)\./g);
   for (const e of fx) {

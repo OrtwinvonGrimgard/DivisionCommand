@@ -36,7 +36,8 @@ window.DC_SET_TYPES["Artillerie"] = [
       "Absetzen"
     ],
     "rules": [
-      "Steilfeuer II."
+      "Steilfeuer II.",
+      "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
     ]
   },
   {
@@ -551,7 +552,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "image": "artillerie/B019.jpg",
     "max_copies": 1,
     "collector": "B019",
-    "rarity": "gold"
+    "rarity": "gold",
+    "rules": []
   },
   {
     "id": "dc_b_ordnungsbatterie_120",
@@ -772,7 +774,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "rarity": "silver",
     "keywords": [
       "Durchschlag"
-    ]
+    ],
+    "rules": []
   },
   {
     "id": "dc_b_glockenstellung_618",

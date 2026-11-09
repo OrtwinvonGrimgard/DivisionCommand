@@ -26,8 +26,10 @@ const NBR = 'Benachbart = gleiche Reihe im direkt angrenzenden Abschnitt (links 
 
 // ---- Einheiten-Fähigkeiten
 const UNIT = {
-  any: () => ({ fx: [{ code: 'ATTACK_ANY_FRONT' }], t: 'Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.', r: ['Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.', 'Die Einheit zählt für alle Regeln als Artillerie.'] }),
-  sup: () => ({ fx: [{ code: 'ATTACK_SUPPORT' }], t: 'Darf auch gegnerische Unterstützungen angreifen.', r: ['Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.'] }),
+  // Steilfeuer: any/sup are legacy tokens; final level/effects come from steilfeuer-map.json in applySteilfeuer().
+  any: () => ({ fx: [], t: '', r: ['Die Einheit zählt für alle Regeln als Artillerie.'], sfHint: true }),
+  sup: () => ({ fx: [], t: '', r: [], sfHint: true }),
+  iv: () => ({ fx: [{ code: 'ATTACK_ANY_FRONT' }], t: 'Steilfeuer IV: ganze Front.', r: ['Steilfeuer IV: ganze Front.', 'Die Einheit zählt für alle Regeln als Artillerie.'] }),
   scout: () => ({ fx: [{ code: 'AUFKLAERUNG', param: { n: 1, onEnter: true } }], t: 'Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.', r: ['Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.', 'Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.'] }),
   hide: () => ({ fx: [{ code: 'RELOCATE_HIDE' }], t: 'Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.', r: ['Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.', 'Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.'] }),
   flank: () => ({ fx: [{ code: 'FLANK_DEF' }], t: 'Benachbarte eigene Fronteinheiten +2 DEF.', r: ['Flankenschutz (solange diese Einheit steht): Jede benachbarte eigene Fronteinheit hat +2 DEF. ' + NBR + ' Der Bonus wird jedes Mal neu berechnet, wenn du eine eigene Einheit auslegst (bis dahin bleibt der zuletzt berechnete Wert).'] }),
@@ -111,8 +113,41 @@ function build(nation, short, line, idx) {
   if (kind.klasse) c.klasse = kind.klasse;
   if (unit) { c.atk = +atk; c.def = +def; c.verdeckt_ok = true; }
   if (keywords.length) { if (!unit) throw new Error(name + ': Schlüsselwörter nur auf Einheiten'); if (keywords.length > 2) throw new Error(name + ': max. 2 Schlüsselwörter'); c.keywords = keywords; }
-  return require('../tactics/migrate.js').migrate(c);
+  const migrated = require('../tactics/migrate.js').migrate(c);
+  return applySteilfeuer(migrated);
 }
+const SF_MAP = JSON.parse(fs.readFileSync(path.join(__dirname, 'steilfeuer-map.json'), 'utf8'));
+const SF_TEXT = { I: 'Steilfeuer I.', II: 'Steilfeuer II.', III: 'Steilfeuer III.', IV: 'Steilfeuer IV: ganze Front.', V: 'Steilfeuer V: Front + Support (+2 AP).' };
+const SF_TAG = { I: 'steilfeuer-i', II: 'steilfeuer-ii', III: 'steilfeuer-iii', IV: 'steilfeuer-iv', V: 'steilfeuer-v' };
+function applySteilfeuer(c) {
+  if (c.typ !== 'Einheit' || c.klasse !== 'Artillerie') return c;
+  const lvl = SF_MAP[c.id] || 'II';
+  const tag = SF_TAG[lvl];
+  c.tags = (c.tags || []).filter((t) => !/^steilfeuer-/i.test(t));
+  const ei = c.tags.findIndex((t) => t === 'einheit');
+  if (ei >= 0) c.tags.splice(ei + 1, 0, tag); else c.tags.unshift(tag);
+  // effects: only IV/V keep ANY_FRONT; only V keeps SUPPORT
+  c.effects = (c.effects || []).filter((e) => e.code !== 'ATTACK_ANY_FRONT' && e.code !== 'ATTACK_SUPPORT');
+  if (lvl === 'IV' || lvl === 'V') c.effects.unshift({ code: 'ATTACK_ANY_FRONT' });
+  if (lvl === 'V') c.effects.push({ code: 'ATTACK_SUPPORT' });
+  // strip Indirektes Feuer / old any/sup text leftovers
+  c.keywords = (c.keywords || []).filter((k) => k !== 'Indirektes Feuer');
+  if (!c.keywords.length) delete c.keywords;
+  let body = String(c.text || '')
+    .replace(/Indirektes Feuer:[^.]*\.\s*/gi, '')
+    .replace(/Darf auch gegnerische Unterstützungen angreifen\.\s*/gi, '')
+    .replace(/Steilfeuer [IVX0-9]+:?[^.]*\.\s*/gi, '')
+    .trim();
+  c.text = (SF_TEXT[lvl] + (body ? ' ' + body : '')).trim();
+  const baseRules = ['Die Einheit zählt für alle Regeln als Artillerie.'];
+  if (lvl === 'V') baseRules.push('Supportzone-Angriff 3 AP; Front 1 AP.');
+  const keep = (c.rules || []).filter((r) => !/Indirektes Feuer|Weitreichend:|Steilfeuer |Supportzone-Angriff|Die Einheit zählt für alle Regeln als Artillerie/i.test(r));
+  c.rules = [SF_TEXT[lvl]].concat(keep).concat(baseRules.filter((r) => !keep.includes(r) && r !== SF_TEXT[lvl]));
+  // dedupe rules
+  const seen = new Set(); c.rules = c.rules.filter((r) => { const k = String(r); if (seen.has(k)) return false; seen.add(k); return true; });
+  return c;
+}
+
 function main() {
   const dir = path.join(__dirname, 'nations');
   const all = [];
