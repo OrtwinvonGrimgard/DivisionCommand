@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """t212 Kartenvorderseite im Originalrahmen des KartenEditor-Renderers (KartenEditor/tools/render.py):
 Kostenstern, Namensbanner in Waffenfarbe, Tag-Leiste, ATK/DEF-Plaketten, Logo, Metallrahmen nach Seltenheit.
-Neu: das Motiv dominiert, die Textfläche ist so groß wie ihr Inhalt (knapper Flächentext + Schlüsselwort-Chips).
+gfx3: festes Motivfenster 42 % Kartenhöhe (Original 38 %), feste große Textfläche; Schriftgröße stuft sich
+bei langen Texten automatisch ab (58 -> 40 px), Flavor fällt notfalls weg.
 Motiv: ein einziges LANCZOS-Skalieren mit Cover-Zuschnitt, nie verzerrt, keine Unschärfefüllung.
 Arbeitsformat 1536x2136 -> exakt 2/3 = 1024x1424, oben/unten je 2 px transparent -> 1024x1428."""
 import sys, importlib.util
@@ -15,8 +16,9 @@ M = R._mod
 W, H = 1536, 2136
 ART_TOP, NAME_H, GAP = 56, 128, 14
 PANEL_BOTTOM = 1890
-MAX_ART_H = 1240
-BODY_PX, LINE_H, CHIP_PX = 54, 66, 40
+ART_H = 900  # fest 1396x900 (42 % Kartenhöhe; Original-Renderer 816 = 38 %); 4:3-Motive nur zugeschnitten, nie gestreckt
+STEPS = [(60, 74), (56, 68), (52, 64), (48, 59), (44, 54), (40, 49)]
+CHIP_PX = 40
 METAL = {'bronze': 'bronze', 'silber': 'silber', 'silver': 'silber', 'gold': 'gold'}
 
 def metal_of(c):
@@ -47,30 +49,31 @@ def wrap(text, fnt, max_w):
         if line: out.append(line)
     return out
 
+def fit(kurz, kws, flavor, avail):
+    inner = W - 2 * 78 - 76
+    ff = M.font(M.FONT_I, 36)
+    fl = wrap('„' + flavor + '“', ff, inner)[:2] if flavor else []
+    chips = CHIP_PX + 36 if kws else 0
+    for keep_fl in (True, False):
+        for px, lh in STEPS:
+            lines = wrap(kurz, M.font(M.FONT_R, px), inner)
+            f2 = fl if keep_fl else []
+            h = chips + lh * len(lines) + (18 + 32 + 48 * len(f2) if f2 else 0)
+            if h <= avail - 60: return px, lh, lines, f2, h
+    return px, lh, lines, [], h
+
 def plan(card, kurz, kws):
+    """Eine Geometrie für alle Typen/Nationen: Motivfenster, Namensbanner, Tag-Leiste, Textfläche immer gleich groß und gleich platziert."""
     typ = card.get('typ') or 'Einheit'
     tags = M.gameplay_tags(card) if typ != 'Doktrin' else []
-    body = M.font(M.FONT_R, BODY_PX)
-    inner = W - 2 * 78 - 76
-    lines = wrap(kurz, body, inner)
-    flavor = (card.get('flavor') or '').strip()
-    ff = M.font(M.FONT_I, 36)
-    flines = wrap('„' + flavor + '“', ff, inner)[:2] if flavor else []
-    ph = 34 + (CHIP_PX + 36 if kws else 0) + LINE_H * len(lines) + (18 + 32 + 48 * len(flines) if flines else 0) + 30
-    ph = max(ph, 150)
-    tags_h = (M.TAG_GAP + 56 + M.TAG_GAP) if tags else 0
-    sofort = typ == 'Soforteinsatz'
-    head = ART_TOP + (NAME_H + 20 if sofort else 0)
-    art_h = PANEL_BOTTOM - ph - tags_h - (0 if sofort else NAME_H + GAP) - GAP - head
-    art_h = min(art_h, MAX_ART_H)
-    art_box = (70, head, W - 70, head + art_h)
-    y = art_box[3] + GAP
-    name_y = ART_TOP if sofort else y
-    if not sofort: y += NAME_H
-    tag_y = y + M.TAG_GAP if tags else None
-    y += tags_h
+    art_box = (70, ART_TOP, W - 70, ART_TOP + ART_H)
+    name_y = art_box[3] + GAP
+    tag_y = name_y + NAME_H + M.TAG_GAP
+    y = name_y + NAME_H + M.TAG_GAP + 56 + M.TAG_GAP  # Tag-Leiste immer reserviert
     panel = (78, y, W - 78, PANEL_BOTTOM)
-    return dict(art_box=art_box, name_y=name_y, tag_y=tag_y, tags=tags, panel=panel, lines=lines, flines=flines, kws=kws)
+    px, lh, lines, flines, h = fit(kurz, kws, (card.get('flavor') or '').strip(), PANEL_BOTTOM - y)
+    return dict(art_box=art_box, name_y=name_y, tag_y=tag_y, tags=tags, panel=panel, lines=lines, flines=flines, kws=kws,
+                body_px=px, line_h=lh, content_h=h)
 
 def stock_for(card):
     typ = card.get('typ')
@@ -97,7 +100,13 @@ def render(card, art_path, kurz, kws, dest, number='001', edition='ALPHA'):
     p = plan(card, kurz, kws)
     img = stock_for(card).convert('RGB')
     ax0, ay0, ax1, ay1 = p['art_box']
-    art = cover(art_path, ax1 - ax0, ay1 - ay0)
+    if art_path: art = cover(art_path, ax1 - ax0, ay1 - ay0)
+    else:  # Doktrin ohne Motiv: dunkler Marmor im selben Fenster + Doktrin-Stern
+        art = Image.blend(M.make_panel('marmor', (ax1 - ax0, ay1 - ay0)).convert('RGB'), Image.new('RGB', (ax1 - ax0, ay1 - ay0), (12, 9, 6)), 0.35)
+        sd = ImageDraw.Draw(art); cx, cy, ro = (ax1 - ax0) / 2, (ay1 - ay0) / 2, 300
+        import math
+        pts = [(cx + (ro if k % 2 == 0 else ro * 0.4) * math.sin(math.pi * k / 5), cy - (ro if k % 2 == 0 else ro * 0.4) * math.cos(math.pi * k / 5)) for k in range(10)]
+        sd.polygon(pts, outline=tuple(M.GOLD), width=10); sd.ellipse((cx - ro - 40, cy - ro - 40, cx + ro + 40, cy + ro + 40), outline=tuple(M.GOLD_DK), width=6)
     art = ImageEnhance.Contrast(ImageEnhance.Color(art).enhance(1.06)).enhance(1.06)
     # Original-Vignette des Renderers (weiche Kante), ohne Füllflächen
     am = Image.new('L', art.size, 255); ad = ImageDraw.Draw(am)
@@ -113,18 +122,20 @@ def render(card, art_path, kurz, kws, dest, number='001', edition='ALPHA'):
     if p['tags']: R.draw_tag_banners(d, p['tag_y'], p['tags'], W)
     tx0, ty0, tx1, ty1 = p['panel']
     if typ == 'Einheit':
-        img.paste(M.make_panel('marmor', (tx1 - tx0, ty1 - ty0)), (tx0, ty0))
+        pan = M.make_panel('marmor', (tx1 - tx0, ty1 - ty0)).convert('RGB')
+        pan = Image.blend(pan, Image.new('RGB', pan.size, (12, 9, 6)), 0.45)  # Marmor abdunkeln -> Text lesbar
+        img.paste(pan, (tx0, ty0))
         d = ImageDraw.Draw(img); d._image = img
         d.rectangle((tx0, ty0, tx1, ty1), outline=rim, width=3)
     else:
         img = R.paste_leather_plaque(img, (tx0, ty0, tx1, ty1))
         d = ImageDraw.Draw(img); d._image = img
-    y = ty0 + 34
+    y = ty0 + max(30, (ty1 - ty0 - p['content_h']) // 2)  # Inhalt vertikal zentriert
     if p['kws']:
         draw_chips(d, tx0 + 36, y, p['kws'], rim); y += CHIP_PX + 36
-    body = M.font(M.FONT_R, BODY_PX)
+    body = M.font(M.FONT_R, p['body_px'])
     for ln in p['lines']:
-        d.text((tx0 + 38, y), ln, font=body, fill=(240, 230, 204)); y += LINE_H
+        d.text((tx0 + 38, y), ln, font=body, fill=(240, 230, 204)); y += p['line_h']
     if p['flines']:
         y += 18; d.line([(tx0 + 90, y), (tx1 - 90, y)], fill=rim, width=2); y += 32
         ff = M.font(M.FONT_I, 36)
@@ -143,9 +154,9 @@ def render(card, art_path, kurz, kws, dest, number='001', edition='ALPHA'):
     out = Image.new('RGBA', (1024, 1428), (0, 0, 0, 0)); out.paste(small, (0, 2))
     Path(dest).parent.mkdir(parents=True, exist_ok=True)
     out.save(dest, 'WEBP', quality=82, method=6)
-    return dict(p, art_box=list(p['art_box']), panel=list(p['panel']))
+    return dict(p, art_box=list(p['art_box']), panel=list(p['panel']), body_px=p['body_px'])
 
-def render_doctrine(card, kurz, dest, number='001', edition='ALPHA'):
+def render_doctrine_old(card, kurz, dest, number='001', edition='ALPHA'):  # gfx2, nicht mehr benutzt
     tmp = Path(dest).with_suffix('.tmp.png')
     R.render(dict(card, text=kurz), None, str(tmp), metal=metal_of(card), number=number, edition=edition)
     im = Image.open(tmp).convert('RGBA'); tmp.unlink()

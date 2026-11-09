@@ -1384,5 +1384,237 @@
   "sha256": "442ebdd7497dcbbd54566a5aa77219c3569720bfdcbca411ccc005d4a62d0278",
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_feldversuch_kette": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_feldversuch_kette.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/983ec84c45e42f70ace1fd4db62adf50e380e5c2a90538ff6e423b4629e30e63.jpg",
+  "sha256": "26e97400e356d4709b13ae7a4e286888cac23df5663e501b532c07db72bbefde",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_klinikwache": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_klinikwache.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5d46596be451a777b048e28d780e150226cf7c8c64cdbc5193593d1042761093.jpg",
+  "sha256": "dda65a33fe457456bd9238926eac7085105eea0bf98b75486630894763ca8cc1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_messpanzer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_messpanzer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/42b29d24f8021d773e2eb1d6c20225f3ca6f5c2d97f297ac4bfb976e25aa3055.jpg",
+  "sha256": "faed1176051be6446dde211fdd7762b9c809937ed37ea06560c56252a8ab0db3",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_modellpruefer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_modellpruefer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b364ab7d8b758605674f40efe9936b7e2487bcfb5a3f56ee6b3d7615ad5cbd73.jpg",
+  "sha256": "9d15361210005401f89e8ecc033f378fad6f8c6ea0d127ed4ddbbe4891158db9",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_praezisionsschuetzen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_praezisionsschuetzen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ee088aa244765bc08fd0991751c2204b9e83916c378d3dc7400570875027abd8.jpg",
+  "sha256": "b136545e56a1dd3f9375e6320ef68657240702c6c58fb558eefca36ca47131cd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_probentraeger": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_probentraeger.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ab657d1dc335a1fa0bf60fb0558ad0e033d466d2515d9d8fbe967be49cdb4eb0.jpg",
+  "sha256": "1dc8b80a7f927b4ec139fbc6aea0ecc1852637869c3163611b1caa0ff73cb1de",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_zielrechner_wagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_zielrechner_wagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/815edd51f2dd75bb8d3d1a51a4133d76004c5a6b4035b71c8fb1aa35b8e5c629.jpg",
+  "sha256": "4f48ace4eb7252377b339ba0eb4a79f451e4e683645aaf22aaade9b2e04ce880",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_beobachterkette": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_beobachterkette.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/bea764a053a3b3ee6cd16c9f186feca67c6865ecb526a1738d8313354f56f372.jpg",
+  "sha256": "43bf38544df0ad0e7d62d0ce7649e917cf2f942adbd64c128b1f04167e8c5c8d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_chefmesser": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_chefmesser.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7b4ecfc53e9bf9f306b0965973f6cc7c410760e1a5fa64d180395894f920d9f6.jpg",
+  "sha256": "96247baab9d5c31f495b27cec83c938213c2360d44f02c2c04efa584d420de95",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_einzelschusspanzer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_einzelschusspanzer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5f4ed219dd48d41e1e121d2284873e66072b61c27ff2ea0e9ff2f6774db22eb4.jpg",
+  "sha256": "f5216ecb657d4daf24a052448e12b1c874bf379c9a126e3e100613defc2e0a25",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_einzelziel_salve": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_einzelziel_salve.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/43557df93deb997d6210bbe57b91f37bceee3c19180d2ef274f5a718cab743af.jpg",
+  "sha256": "1988d52c1292dde1f3d19b31b1398a796fd43bb5f221d18e2e3a8b382b142c1d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_erkenntnisvorsprung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_erkenntnisvorsprung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/debe878d651eff1b718717170a3dc5599f6feec5169f0bb94607f274c6f93f28.jpg",
+  "sha256": "2950592e4c17f4892b7acf33290df7c89f2ad29d2e81d28246a69aa44292ba70",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_gemessener_schlag": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_gemessener_schlag.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/0839c412ccf3e6a4d97012df1f64caffed38d62ca31788c3a002bc3b269b5c46.jpg",
+  "sha256": "a32b69aa4900c7aaeeb6196d94990e86be9bd327ecb7349aa9a0a9598b572ac4",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_gesamtlagebild": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_gesamtlagebild.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5256561981f458159eaa60e5ee42b963afbde16aff3d4e5fb1e49686b02dd82b.jpg",
+  "sha256": "dd00b4569fd49c8b467e2b5e36596865af39244b9fa030d4e9e8178d7d696a44",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_institut_der_erkenntnis": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_institut_der_erkenntnis.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/36dc54ec7ad4c399bee59b476be3d4f54a6ebba8896ee16d5aa2bb16db16c7b4.jpg",
+  "sha256": "62ad53e5d6a479b37a87a980391730bb8352fd8abf815939eb94017fdd1fbb98",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_klarstellung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_klarstellung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/fea22955838d5c6cb47a62075236ba74689f05eab9d5de861be5921f346e9840.jpg",
+  "sha256": "3e31e5bb36f83b36b3df6e57db947aca00e94b3e9fc57753540522df27074492",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_klinikverfahren": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_klinikverfahren.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/54b063aff96c15eebfb6cd8f08e51ff56df20389a4f7255dbfd286b78188f8a7.jpg",
+  "sha256": "5bed5c375b7701dad365359cbcd06e689bb5a129d759066106c2de62f34982ae",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_leichter_probenwagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_leichter_probenwagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c1be9666976d122f17dad466caedfec4a5b178df8d86be3c10b2231ea9cdce08.jpg",
+  "sha256": "6c9a40340415282069f070fa523bbd091ae1fc4c5025f9123ace6cf6b01359c2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_messnetz": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_messnetz.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4d840dee13b35cd55bd4742f747c72568fd380f1d63b9eee71a2efbc8a7b4a61.jpg",
+  "sha256": "07c3ad5736cd53274cf42a0aff7e0c91e1811cdbc212f01629355b5004a390f2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_messung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_messung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a324f9a6ad0349b438f093f1f786514de99da70fa81f3ee366f04e2e982ad967.jpg",
+  "sha256": "3b94a71d41b4beaf02025be4333e0f3f59abd3bd49658484018a9e94fd128d07",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_nachmessbatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_nachmessbatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/88442b7f17b54aeee430798252911bf3430122c9711a3472781be560f1a84f8c.jpg",
+  "sha256": "1d5b4b1f6d6de8931442c2465774cb7f8ba2698a5ee72b5e6c2efa309a8df09e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_nachmessen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_nachmessen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/14a0097713963c381e0635c4fcc55414f4e42a8dc9e0464108b044a48f93c191.jpg",
+  "sha256": "476f174d105388dd505fa3b3ec5b62eaf6b109849bd7590a74bb28e152036fc2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_peilstation_mobil": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_peilstation_mobil.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/62e9f816b2305af37de8663230cdd71cf3023e72c354e8ada265658f6843d9e9.jpg",
+  "sha256": "39bf9a5304fc3fe9ae3afdc762e6fb70667b76891900ece3343f03aaa3f726e1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_praezisionsmoerser": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_praezisionsmoerser.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c84f501c08bef706d07c50fbc2e01ecce00fef27129ced2ab1341942bbee8474.jpg",
+  "sha256": "3303de776e9bd0940e220a0205cf18cac0db8ccb4a702d593786cebff1f95bb2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_punktfeuerbatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_punktfeuerbatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/77fcc26380afd1d149312d49e56669a522918db24b3aaef826f1f2f27b2ded16.jpg",
+  "sha256": "b431d0c5dc870bc8041d5735acb0cb30d81443d75d7d9ac78691ca042fd9578e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_rechenzentrum_orthea": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_rechenzentrum_orthea.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/06a26a42ddc11eea368a547366e2c4f613ce46f4d13ab3edbef6d9005b356b27.jpg",
+  "sha256": "b88329a25137bd60417b2c556c0a147a2e55e4a3cf6329976355b3567d04ffbf",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_zentrale_feuerleitung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_zentrale_feuerleitung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4a749330afdf06f6fd2cdb837e8a925d08fdf7d2d2965265e57ba8ba9f6114f5.jpg",
+  "sha256": "85e3b7f2bedd5d2d8aa16ec8fac81ce707ead2b569bcc1976848e3301758973e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_zielkorrektur": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_zielkorrektur.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8f4ffaa02947d36abf7fca89246416c0cb0025db4802ac9e5d42fa7ff7194645.jpg",
+  "sha256": "8e991a98be875f6e1ecd5f1bffb8a9539a5214a3bbf1a59082aa1a6239f98911",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_orthea_zielrechnungsrohr": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_orthea_zielrechnungsrohr.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/30ea140e5840fddbc151c7580d75b091e05a370bf16fb454b0bf67a69438890c.jpg",
+  "sha256": "b148025d8e63d8bebb5898a718905ef73e99eeb4f18efb91f4c99754958853ef",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  }
 }

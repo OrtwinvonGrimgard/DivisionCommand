@@ -4,7 +4,8 @@ Ersetzt die textlastigen gfx1-Flächen (`faces-v1`, entfernt). Neue Flächen lie
 
 ## Gestaltung
 - Originale Rahmensprache aus `KartenEditor/tools/render.py`/`render_core` (Rahmen nach Seltenheit, Kosten-Stern, Namensbanner, ATK/DEF-Plaketten, Logo, Mühlen-Münze, Typ-Velvet).
-- Motiv dominiert (Kasten bis 1240 px Höhe bei 1536er Arbeitsgröße), Cover-Zuschnitt ohne Verzerrung oder Unschärfe-Hintergrund.
+- gfx3-Layout (Nutzerwunsch: "Der Text ist das Wichtigste", "überall gleich"): EINE Geometrie für alle Typen und Nationen. Motivfenster fest 1396x900 (42 % der Kartenhöhe; Original-Renderer 816 px = 38 %), darunter Namensbanner, immer reservierte Tag-Leiste und feste Textfläche (~30 %). Text vertikal zentriert, Schrift stuft automatisch 60 -> 40 px ab, Flavor fällt notfalls weg. Doktrinen: gleiches Fenster mit Marmor + Stern. Nur Farben, Typ-Plakette und ATK/DEF-Plaketten (Einheiten) unterscheiden sich.
+- Motive: Cover-Zuschnitt (nie verzerrt, keine Unschärfefüllung); neue Motive werden mit Inhalt im mittleren Band komponiert.
 - Panel nur so groß wie nötig: Schlüsselwort-Chips + Flächentext (max. 120 Zeichen, `scripts/cards-review/kurz.json`) + Flavor.
 - Vollständige Regeltexte bleiben im Feld `text` (Detailansicht); gekürzte Fälle stehen verlustfrei in `docs/regeln/KARTEN_SONDERFAELLE.md`.
 

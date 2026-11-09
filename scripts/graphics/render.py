@@ -23,11 +23,10 @@ def art_for(ident, data):
 def job(c, art, kurz, number):
     sys.path.insert(0, str(HERE)); import face
     dest = WEB / 'assets/cards' / OUTDIR / (c['id'] + '.webp')
-    if c['typ'] == 'Doktrin': lay = face.render_doctrine(c, kurz, str(dest), number=number)
-    else: lay = face.render(c, str(art), kurz, c.get('keywords') or [], str(dest), number=number)
+    lay = face.render(c, str(art) if art else None, kurz, c.get('keywords') or [], str(dest), number=number)  # gfx3: eine Geometrie für alle Typen
     return c['id'], {k: lay[k] for k in ('art_box', 'panel') if k in lay}
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('--only'); ap.add_argument('--jobs', type=int, default=4); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument('--only'); ap.add_argument('--jobs', type=int, default=4); ap.add_argument('--all', action='store_true'); a = ap.parse_args()
     data = catalog(); K = json.loads((ROOT / 'scripts/cards-review/kurz.json').read_text())
     mp = HERE / 'graphics-manifest.json'
     old = {r['id']: r for r in json.loads(mp.read_text()).get('records', [])} if mp.is_file() and json.loads(mp.read_text()).get('version') == VERSION else {}
@@ -46,8 +45,8 @@ def main():
             r['ready'] = True; r['output'] = OUTDIR + '/' + i + '.webp'
             o = old.get(i); dest = WEB / 'assets/cards' / r['output']
             fresh = o and dest.is_file() and o.get('source_record_sha256') == r['source_record_sha256'] and o.get('kurz') == r['kurz'] and o.get('art_sha256') == r['art_sha256'] and o.get('renderer') == digest((HERE / 'face.py').read_bytes())
-            if (only is None and not fresh) or (only and i in only): todo.append((c, art, K[i]['kurz'], str(n).zfill(3)))
-            elif o: r['layout'] = o.get('layout')
+            if a.all or (only is None and not fresh) or (only and i in only): todo.append((c, art, K[i]['kurz'], str(n).zfill(3)))
+            elif o: r['layout'] = o.get('layout'); r['renderer'] = o.get('renderer')
         recs.append(r)
     print('render', len(todo), 'faces')
     lay = {}
@@ -58,7 +57,8 @@ def main():
     for r in recs:
         if r['id'] in lay: r['layout'] = lay[r['id']]
         if r['ready']:
-            r['renderer'] = rd; r['output_sha256'] = digest((WEB / 'assets/cards' / r['output']).read_bytes())
+            if r['id'] in lay: r['renderer'] = rd  # nur tatsächlich neu gerenderte bekommen den aktuellen Renderer-Hash
+            r['output_sha256'] = digest((WEB / 'assets/cards' / r['output']).read_bytes())
     missing = [r['id'] for r in recs if r['provenance'] == 'missing_illustration']
     m = {'version': VERSION, 'catalog_ids': len(recs), 'new_faces': sum(r['ready'] for r in recs), 'missing_illustrations': missing,
          'complete': not missing, 'records': recs}
