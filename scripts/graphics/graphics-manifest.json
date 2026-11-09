@@ -1,23 +1,10 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1680,
+ "new_faces": 1693,
  "missing_illustrations": [
   "dc_np_sahr_wegschliesser",
-  "dc_np_sahr_navigator",
-  "dc_np_sahr_flusskundschafter",
-  "dc_np_sahr_routenspaeher",
-  "dc_np_sahr_herr_der_routen",
-  "dc_np_sahr_flankenmeister",
   "dc_np_sahr_gilde_der_routen",
-  "dc_np_sahr_routennetz",
-  "dc_np_sahr_flusssperre",
-  "dc_np_sahr_seitenweg",
-  "dc_np_sahr_linie_binden",
-  "dc_np_sahr_stoss_von_der_seite",
-  "dc_np_sahr_neue_route",
-  "dc_np_sahr_stroemung_nutzen",
-  "dc_np_sahr_wegschnitt",
   "dc_np_sahr_fluss_ueberqueren",
   "dc_np_sahr_uferversorgung",
   "dc_np_sahr_handelsrabatt",
@@ -67303,11 +67290,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_navigator.jpg",
+   "art_sha256": "416275e6bad431744555c278dc613829f1550b627719cc02632dc3571ed4ec2c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_navigator.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "fae466f6d3fe618da432dab5995942301866ce9202fdf114a6a708609091c664"
   },
   {
    "id": "dc_np_sahr_flusskundschafter",
@@ -67329,11 +67332,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_flusskundschafter.jpg",
+   "art_sha256": "fecbc480e3d46a1a98f23cd81cf8030183059cd9926df1fdfde913540aee34b5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_flusskundschafter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "a27811eda2f905ff3bed511438abedcb4e260b4cb5b0d07d57d5882c9124d4b7"
   },
   {
    "id": "dc_np_sahr_routenspaeher",
@@ -67356,11 +67375,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_routenspaeher.jpg",
+   "art_sha256": "149e4fb1cd83401cf7fcb1d5079845b5b3eaa1f8a4f12e5c3b5447aff280ee4e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_routenspaeher.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2ab18b6e7c9da6346e5354dae625e61bc2db21ba7d8c46e7949ab8814ca6389a"
   },
   {
    "id": "dc_np_sahr_herr_der_routen",
@@ -67383,11 +67418,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_herr_der_routen.jpg",
+   "art_sha256": "fed57d25610c84d6ed6f880a023367a61a6c91d003062b7b8eec40c54b4bfc38",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_herr_der_routen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "dfb05e060e3928be17680af985f825b322c3c9e564504ad2a18be3f78b4fa828"
   },
   {
    "id": "dc_np_sahr_flankenmeister",
@@ -67412,11 +67463,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_flankenmeister.jpg",
+   "art_sha256": "acd579f48066f9372e6d6fef29a518340de6981c64bf583068be04004a96c007",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_flankenmeister.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "61e4c546c7e6f780221f0c9681246353c63c749dc7b08042f40ec3b1bb1554d1"
   },
   {
    "id": "dc_np_sahr_gilde_der_routen",
@@ -67458,11 +67525,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_routennetz.jpg",
+   "art_sha256": "80f2fcbe1e182e4a70bdd0b9dc0941f4464526c71f7fdb2d5dfb11bb382afcaf",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_routennetz.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "c3702ad3ec776cacfc12037313c595b43b23f3798a301bf1435a5f182697ef3b"
   },
   {
    "id": "dc_np_sahr_flusssperre",
@@ -67481,11 +67564,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_flusssperre.jpg",
+   "art_sha256": "77c7453a0ad3f44f0524195a3973f5383fd83f8273ff11eb59f9ac715794a5bc",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_flusssperre.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "cbf939b0c3dcbcaa619cf3a1655edb36ceb7d8b224068baaf111bf848ddd0ff9"
   },
   {
    "id": "dc_np_sahr_seitenweg",
@@ -67504,11 +67603,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_seitenweg.jpg",
+   "art_sha256": "8e2710885a09fccd63d59f0518bb1232cda36dd22fbabbd0921fd3af0d6cfbc3",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_seitenweg.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d9cfc23c6d152e5ed86476d7746929e5077111053420c9989e534247770590df"
   },
   {
    "id": "dc_np_sahr_linie_binden",
@@ -67527,11 +67642,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_linie_binden.jpg",
+   "art_sha256": "a06d8f0872aecfe30a983b57144581c934ac8a945b60f0583fb27f91ecdccb6a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_linie_binden.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "25e77cd344ac5cf625cec537d9802410ec4399323b1c541d58d76d41707f0bdb"
   },
   {
    "id": "dc_np_sahr_stoss_von_der_seite",
@@ -67550,11 +67681,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_stoss_von_der_seite.jpg",
+   "art_sha256": "d65ccdf3f7738397c71789c3c265d2263eb9f92c5af759cf3cfb72ba199786c5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_stoss_von_der_seite.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "0d25268eaf8c68aca3ac37e0a6cbb8ef59e640df18cf4980c18d1c1aeae4db32"
   },
   {
    "id": "dc_np_sahr_neue_route",
@@ -67573,11 +67720,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_neue_route.jpg",
+   "art_sha256": "b448e8d3f2111d91a87e3cb18f9c7c80adea21be30173cf3d886268119dcca3d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_neue_route.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "72f6f2a47d81ff4389caa24237ec95f455fc71ddb1e6fb8ebe25d8d530e6cd35"
   },
   {
    "id": "dc_np_sahr_stroemung_nutzen",
@@ -67596,11 +67759,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_stroemung_nutzen.jpg",
+   "art_sha256": "5bb94b026039af916f774eef43cadeb8f3cf04fb87d04ca92d91dfec47485ef5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_stroemung_nutzen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "de1013bb173b31b2bd1427673af1899d25ecc8927886be0dd96de0f53d901224"
   },
   {
    "id": "dc_np_sahr_wegschnitt",
@@ -67619,11 +67798,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_wegschnitt.jpg",
+   "art_sha256": "bc2d4707356c82d5fae44282bbe2d4e3158af671faa1bb5b5544989d44f11b31",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_wegschnitt.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "eb0f99440ea808d88cb609bd2873bc3369b5d9a80e1b57820e6c1a5cab7b35e8"
   },
   {
    "id": "dc_np_sahr_fluss_ueberqueren",
