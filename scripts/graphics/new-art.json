@@ -728,5 +728,349 @@
   "sha256": "c69269b75221a9ba79d4a58d89dd4a9c5f57b0f1f4174808b217b8fa4e6eddae",
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_eigeninitiative_zug": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_eigeninitiative_zug.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/de4103e4270b1e9de6e44c9851593c7a71a84fdb6aeb843825544cf848113571.jpg",
+  "sha256": "1c8afe97e1d8a0ba8257f656649bc3586d54530367c57ebfdc3aa876ccf1a67f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_sensorschuetzen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_sensorschuetzen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8b2ca1e9db8f1c1eac21cabde52194586b7b8cff915e085243e4d3e56af50b00.jpg",
+  "sha256": "d7b2932c4533d9828fb829ceba105b43453721f973eeb6b23b00808bd6f5ec94",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_averon_verbindungskompanie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_averon_verbindungskompanie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f52cb1971d49def5f3641800d7e372fd5cd9b264c3a9b0444f04497e175eb310.jpg",
+  "sha256": "4fbb7962f472ff202fbb27cd64fbe88d1866793388a57fd0eab317ade596b770",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_abloesung_vorziehen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_abloesung_vorziehen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e0a4c890a468143ab695278df7091ac55fed7ce441ea38a519e9c9060940cfc8.jpg",
+  "sha256": "05805812392762b267f742288aab7cb0c3752cd48a50157218f09b0a98a3ab7c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_abloesungsdepot": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_abloesungsdepot.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/37947d223c2504189c095656f3a518578e68fe7b09d00b9086ef9c8be911c7f1.jpg",
+  "sha256": "cd8714d651d098f142596ee7b3b2c047efcf91327aed8dce8b30044d7e6ca4c8",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_abloesungsgurt": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_abloesungsgurt.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8c7a1045f6bb3a83293b13c79fb53d1ca4218480dbbe75f0bfd335e5c2b701d4.jpg",
+  "sha256": "4db320764d0559cdb4f9d3f36d31e257302862da3063fff585ed17b0b3beccc2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_abloesungszug": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_abloesungszug.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/70c14d2cceff10e84b002264bcc3f73284e30dd44b708b419e2083f58af1ca18.jpg",
+  "sha256": "46d7a63e227247eaebaad39857061b6917e691ddd68d09450ac106d10dd80d48",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_achsenkundschafter": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_achsenkundschafter.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/98111b989d792f2dd342e9b8ccbb2a4b9025ce739da317979d56fb7c5f764473.jpg",
+  "sha256": "08cfe14cfd4cd1f0c36a4840bc8217b67ba5b6e06fc6f2af7042877d7057cb27",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_ballungsfeuer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_ballungsfeuer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/52c4a649019e9b4ba89e3835d18dd14a9233a7174f86a30d9137b7244fc25f6c.jpg",
+  "sha256": "7b29c0c9d38a281665a16f0cc734b26c29e965b50e4d378a0f81bdbb76a9c8dc",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_depotwagen_kronstrasse": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_depotwagen_kronstrasse.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/691671eaf8218b429c9c89bdf633f86b4cfa8954bebb661c02a8cbc0a8d0f5b1.jpg",
+  "sha256": "62147ab124452469df6856e13302d7717ec9803ce6d1bc6f82331db00e135a43",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_druck_am_punkt": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_druck_am_punkt.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/82185e5a475eca97fe86d5fc6858559b20e0a78d722540f1179d2a6f9f49e519.jpg",
+  "sha256": "85b86c67d3681a1bd0a7e1a44f34aad727ce993441e792bdcf450d1e2ec600df",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_erbkarte_spaeher": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_erbkarte_spaeher.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b5bec9776421b45e1c5d6f838b7f16e2fee8fe573f5b45b01359d1ec51fa2a73.jpg",
+  "sha256": "60cafa7d767ae65a0dd6d353017e8cb01f795b76d8cb434fad4aa61798313bcb",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_erbmarschall_rothain": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_erbmarschall_rothain.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/9d99cf99edcac5a52605ac0000592ca83b01a0bffbdd39d12156b5dd0cd56cff.jpg",
+  "sha256": "5434f40fd925d3662a8921003dca52d3b3d3ecf89be22bc02157d4a3636bc856",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_erbmoerser": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_erbmoerser.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/30ad4c8125771aba7c427bb5ad3b5676b2ab5009969b0eb6f3e9b0a6d928f98b.jpg",
+  "sha256": "196c5068066486d421f42ab56335d73a8d6feb14741b94dc4ee3d1a045b5bae8",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_erbpanzer_kronlinie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_erbpanzer_kronlinie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/cf88212c159640730c6ae9958588ab5780f077f41e6730247f5760287ee2798b.jpg",
+  "sha256": "3c0ed52c0c6724d38adf2bfd83a755da1bbef7e3ba7cf8533bbf35aa31671071",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_erbregiment_narbstadt": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_erbregiment_narbstadt.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b5a28302ff84be18b49b7133b2411fa08bf87000dae46b4c6443ee05d1cbd4c1.jpg",
+  "sha256": "6d28cf11239bc7173053494006c74bde2674f595f4b4b17f0ef1103f2d540e85",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_erbsaebel": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_erbsaebel.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/df977f246c01cba287d603c1bf638d157447dad9a59b3e502c0c6b701360db32.jpg",
+  "sha256": "b76c2ac429eff8718a93f4bbbe2861ad33cf4aad6c34737d70d202a598105d34",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_ewige_abloesung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_ewige_abloesung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/97844406b210dabb0b464f41ded2c5445fea5201464df2f6a3ccfc0792f1a7f6.jpg",
+  "sha256": "a817f23657acc575a5dda101dfcbe8441b54c42dc1dc6810407af5670547d707",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_ewige_batterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_ewige_batterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8bf68a200bb1747b7666f7817feee11b9533d01d766f3c58773be1864d330ee0.jpg",
+  "sha256": "bd79e21d9f8076ac579bef70702670dc6b5309c2207f4504132e831ff313a411",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_frische_kraefte": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_frische_kraefte.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a3f44ae84adc710ae261fb38a0ebc745796253d93da1b802fb85e26ce3f561ab.jpg",
+  "sha256": "7ba2d324ea850438a1a8b5cd9462253fe1ecd653ca822f2b0e768f7083cfa0be",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_gebuendelte_front": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_gebuendelte_front.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/0eec3745767aecba1ef8e5ff9c534f269f46f1e3a3456d79178f5aa7ee43b912.jpg",
+  "sha256": "b72f6525eb06029f3bfdf431266d6a1cce9cf8883d2b574ddb2a836a70b126d5",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_geerbtes_arsenal": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_geerbtes_arsenal.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/bd2466fa239eda6b5d23bd1b425813d69b50268775db74fbfec747dca5d0ad62.jpg",
+  "sha256": "b8c08272b80ff085dd62eb304b81526f403ad86c9b32cfc27b321141f55393bc",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_gezieltes_feuer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_gezieltes_feuer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d04a328725f9048cad6f4ae301828fda7e9b6fadfc5e38cf22dbf36b43ce43b3.jpg",
+  "sha256": "fdcfe85c46dce0819b9c97e48866ec2fa387ed36b09cc54797de205dbbf849fd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_kolonne_flussrot": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_kolonne_flussrot.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a00feec690b92e843063efb7dd80e7edd1a841a629e35549778a7b4f13d6f9b2.jpg",
+  "sha256": "5c4170e19ceacb0905cf941a99f9cba32fecc09c03f9b309414e1a466b5b3cac",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_konzentrierter_stoss": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_konzentrierter_stoss.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8cf8699e160d63199e3a0567fd28ebb5b33207381d7682074c885bd837bfde6e.jpg",
+  "sha256": "56036c4cd1a45883e79558bf033f11c8be17143062a337b068ed2232618d56d3",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_kronstrassenpanzerung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_kronstrassenpanzerung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7a8ce84de49c96136f93c54e0d927bcd44ab0ed9708e6ed4deabe092649c7c09.jpg",
+  "sha256": "88297a5e084008966babef35e201a107471fa20b9b912d5dce9c972fa1606a67",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_nachstoss": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_nachstoss.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/71aae7d2426b37e2fc61474f5bc72a393c1d77a42e5ce5ea863e40dcce0fccf0.jpg",
+  "sha256": "bf89fd8637c3128fb234a5ed199e1da13cdba819a415bebd005b0fa7d57fff49",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_regimentsabzeichen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_regimentsabzeichen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/0fe75689abd1f6bafda25d60a1dc0c611ee68171882a48a83f955960ca111edb.jpg",
+  "sha256": "e8983f86dda77e0995acf3b15530d7c5b8616a8ff0ca5c34f2839d2a154b7ada",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_regimentsaelteste": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_regimentsaelteste.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e8037ab3fdb3370570502530b6a5d6230e7fe9e7298e16171772a2d2220de807.jpg",
+  "sha256": "ffbb90140e3fde064367706ddddab08a9c491096ad047e853eeb8726c4cfc654",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_reservekette_erbfolge": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_reservekette_erbfolge.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6ea453df5869ef5c3fe047fdb057e8fc44296af7832e785d069a897ef663c3c3.jpg",
+  "sha256": "2477773db0e95c9ecaa625f9aaf03ba03cdcfbfe95216adefff9705453ec9fa4",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_schwerpunkt_setzen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_schwerpunkt_setzen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/48fa821ad767b198f0a88043e0cce17599b3323ca35978ca37037c980ce9c1fb.jpg",
+  "sha256": "a027b627623962e2e98da6fadb4d3e28f1d39bd7decd689b293934febf8814c7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_schwerpunktbatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_schwerpunktbatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/eebdd89d36576e69a71bb4fd1ed380b0afecf2ae9733e6ec8a2582a8ff7f4499.jpg",
+  "sha256": "1d53789e231c974ececa802f8e4824f3948cdbb4810176b557eabf32a7c6d71c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_schwerpunktgrenadiere": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_schwerpunktgrenadiere.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7ea33c77e0b71db4e1a4e22ea284d0de0177e5b75ab3a443119f15f20b17a028.jpg",
+  "sha256": "e51491c506cada2aa6647bcf90816ee6a4b4d096b5b75037c7788fcc8eb6920d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_schwerpunktoptik": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_schwerpunktoptik.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/beb8685316575747b74c8631de7f79adf29162052f2eb50e63486f95c4708c0b.jpg",
+  "sha256": "13c02c8339bfe5d49019a00aa2b30178f1578aaed9e597149276d29393823c16",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_schwerpunktwagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_schwerpunktwagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/906b75e5c804aac9b76b2c8484ad63d794be42fce1b1733d54d94e16dda0b51d.jpg",
+  "sha256": "0bd9035c6cdaf43d2e698d5e0713acbe9a2a829d141d26d7217f2e4686244d00",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_stabsbesprechung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_stabsbesprechung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/65d8438489126557ef67c16d73ad8d1bab2bbd4649c118711836d0ebf9347ea2.jpg",
+  "sha256": "37f673049097859dbe2ac3fbd1df1dce4e656a8577382a667e3854efd7473785",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_stabskarte_erbe": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_stabskarte_erbe.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/9a0a93005a349f61fa2b36db511b265ba0ffb9851787abc12789938706d235ac.jpg",
+  "sha256": "2ee9a2e680eb06adca4728e5b2d7e99cf99d470de9122fda125d98e2b16a5677",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_stabskompanie_erbe": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_stabskompanie_erbe.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e7ad2656a48e6c3a600e0117394f640df573ad60622399dec52100271cbc5db5.jpg",
+  "sha256": "1311e072d574956863b7afa300ce9c6cc9ccafedb137631b2fff5b4aa3e9e636",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_stabsmelder": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_stabsmelder.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/428ebe2010a0183d7ad3ef71757b99225e69a6db09b52ee9c34cd64d9c6ccdb4.jpg",
+  "sha256": "b3a61e5d6e9025aa0eab4231b09faf434cb62c3b0aacbe469ef31b04850ef21a",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_stabsrohr_neuhoff": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_stabsrohr_neuhoff.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/976ae28b7ad870e205da246b1a9fcd5dcfbad49e7c5d1b22528c97e47c41a619.jpg",
+  "sha256": "a640faff9a30d7d2199e8d0c812c29370cdb436c4ad7f2784eafe7a0c85c32ed",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_stabszentrale_erbe": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_stabszentrale_erbe.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/87104adc87720c1227939c691a71b9fd4d017491cbda79f3f1615c9938bcd04d.jpg",
+  "sha256": "ed1de4f24a23dbdde363c8fbfcc33f17a1c49d9b7a5ce41b8b4db6be0236d47e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_treuewache_kronstrasse": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_treuewache_kronstrasse.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/31df0039d59a8ea40b16c064cfb1675a4e604c66a382db7127625cb2cadbce28.jpg",
+  "sha256": "054085d32cf4f56fc48f0abb7f5aa55fe5c78df74689d11a7ca7094030a2320a",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_rothain_umschlag_flussrot": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_rothain_umschlag_flussrot.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/67079e0ef01d0b41c5a70ed2950bc5a18e489becf471488c7233320b117ab399.jpg",
+  "sha256": "1c17ad8e0311d113796d55e38072c24afa01f9e8d99500d97ecdfa6f4db52d10",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  }
 }

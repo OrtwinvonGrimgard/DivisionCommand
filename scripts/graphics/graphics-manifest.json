@@ -1,52 +1,9 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1185,
+ "new_faces": 1228,
  "missing_illustrations": [
-  "dc_np_rothain_erbregiment_narbstadt",
-  "dc_np_rothain_abloesungszug",
-  "dc_np_rothain_schwerpunktgrenadiere",
-  "dc_np_rothain_kolonne_flussrot",
-  "dc_np_rothain_stabskompanie_erbe",
-  "dc_np_rothain_treuewache_kronstrasse",
-  "dc_np_rothain_erbpanzer_kronlinie",
-  "dc_np_rothain_schwerpunktwagen",
-  "dc_np_rothain_geerbtes_arsenal",
-  "dc_np_rothain_reservekette_erbfolge",
-  "dc_np_rothain_depotwagen_kronstrasse",
-  "dc_np_rothain_schwerpunktbatterie",
-  "dc_np_rothain_stabsrohr_neuhoff",
-  "dc_np_rothain_erbmoerser",
-  "dc_np_rothain_ballungsfeuer",
-  "dc_np_rothain_ewige_batterie",
-  "dc_np_rothain_stabsmelder",
-  "dc_np_rothain_achsenkundschafter",
-  "dc_np_rothain_erbkarte_spaeher",
-  "dc_np_rothain_regimentsaelteste",
-  "dc_np_rothain_erbmarschall_rothain",
-  "dc_np_rothain_abloesungsdepot",
-  "dc_np_rothain_stabszentrale_erbe",
-  "dc_np_rothain_gebuendelte_front",
-  "dc_np_rothain_schwerpunkt_setzen",
-  "dc_np_rothain_abloesung_vorziehen",
-  "dc_np_rothain_frische_kraefte",
-  "dc_np_rothain_konzentrierter_stoss",
-  "dc_np_rothain_nachstoss",
-  "dc_np_rothain_umschlag_flussrot",
-  "dc_np_rothain_stabsbesprechung",
-  "dc_np_rothain_gezieltes_feuer",
-  "dc_np_rothain_ewige_abloesung",
-  "dc_np_rothain_druck_am_punkt",
-  "dc_np_rothain_erbsaebel",
-  "dc_np_rothain_regimentsabzeichen",
-  "dc_np_rothain_stabskarte_erbe",
-  "dc_np_rothain_abloesungsgurt",
-  "dc_np_rothain_schwerpunktoptik",
-  "dc_np_rothain_kronstrassenpanzerung",
   "dc_np_averon_netztrupp_novaris",
-  "dc_np_averon_eigeninitiative_zug",
-  "dc_np_averon_sensorschuetzen",
-  "dc_np_averon_verbindungskompanie",
   "dc_np_averon_schnelle_hand",
   "dc_np_averon_buergerwehr_averon",
   "dc_np_averon_novaris_kolonne",
@@ -47052,11 +47009,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_erbregiment_narbstadt.jpg",
+   "art_sha256": "6d28cf11239bc7173053494006c74bde2674f595f4b4b17f0ef1103f2d540e85",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_erbregiment_narbstadt.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "77df3672767955df4304d4b330d53670b48f98a5ee6e28c1f550d1c505fb27fa"
   },
   {
    "id": "dc_np_rothain_abloesungszug",
@@ -47078,11 +47051,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_abloesungszug.jpg",
+   "art_sha256": "46d7a63e227247eaebaad39857061b6917e691ddd68d09450ac106d10dd80d48",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_abloesungszug.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "37f2d5d3cc0e8d1ff09544ca80a6a8a5d2779a277ed45a7b8ee3457df2dc0552"
   },
   {
    "id": "dc_np_rothain_schwerpunktgrenadiere",
@@ -47102,11 +47091,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_schwerpunktgrenadiere.jpg",
+   "art_sha256": "e51491c506cada2aa6647bcf90816ee6a4b4d096b5b75037c7788fcc8eb6920d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_schwerpunktgrenadiere.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "422d45888bbff02207d27ef49affe67b8da4d757eef335824ce25b8dff046b60"
   },
   {
    "id": "dc_np_rothain_kolonne_flussrot",
@@ -47128,11 +47133,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_kolonne_flussrot.jpg",
+   "art_sha256": "5c4170e19ceacb0905cf941a99f9cba32fecc09c03f9b309414e1a466b5b3cac",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_kolonne_flussrot.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "ccffa768bf5035b5c0fb81cb42f2dcc34bea504915d48517a612c23f998c7461"
   },
   {
    "id": "dc_np_rothain_stabskompanie_erbe",
@@ -47152,11 +47173,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_stabskompanie_erbe.jpg",
+   "art_sha256": "1311e072d574956863b7afa300ce9c6cc9ccafedb137631b2fff5b4aa3e9e636",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_stabskompanie_erbe.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "794f5c3fbd0b800dde7034b9f200c53745dd9a6e2ce754373ad88d33064d3e23"
   },
   {
    "id": "dc_np_rothain_treuewache_kronstrasse",
@@ -47178,11 +47215,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_treuewache_kronstrasse.jpg",
+   "art_sha256": "054085d32cf4f56fc48f0abb7f5aa55fe5c78df74689d11a7ca7094030a2320a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_treuewache_kronstrasse.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "7a0adc1df8888d22712fb0aa79b845a691f3c17e15c473ffb74b228796c0141d"
   },
   {
    "id": "dc_np_rothain_erbpanzer_kronlinie",
@@ -47206,11 +47259,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_erbpanzer_kronlinie.jpg",
+   "art_sha256": "3c0ed52c0c6724d38adf2bfd83a755da1bbef7e3ba7cf8533bbf35aa31671071",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_erbpanzer_kronlinie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "d9cf6540aa33cbb1ad1f3eb99ce85690caac9def55e8c4d4432c1fe648ecafba"
   },
   {
    "id": "dc_np_rothain_schwerpunktwagen",
@@ -47234,11 +47303,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_schwerpunktwagen.jpg",
+   "art_sha256": "0bd9035c6cdaf43d2e698d5e0713acbe9a2a829d141d26d7217f2e4686244d00",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_schwerpunktwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "8aa1e4866fc7edfdc230a85eb477b3f1aa231e4f97f7d002d5b8d373f0c3886d"
   },
   {
    "id": "dc_np_rothain_geerbtes_arsenal",
@@ -47262,11 +47347,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_geerbtes_arsenal.jpg",
+   "art_sha256": "b8c08272b80ff085dd62eb304b81526f403ad86c9b32cfc27b321141f55393bc",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_geerbtes_arsenal.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "aca2c8ee617a3fed50067139a9a25a22d283e6ede43279d55afbf75bda08b460"
   },
   {
    "id": "dc_np_rothain_reservekette_erbfolge",
@@ -47290,11 +47391,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_reservekette_erbfolge.jpg",
+   "art_sha256": "2477773db0e95c9ecaa625f9aaf03ba03cdcfbfe95216adefff9705453ec9fa4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_reservekette_erbfolge.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "127c0bfe7badca5b095b44a3e86b39779351cba4cf4f55ff42dfbbda857f31b2"
   },
   {
    "id": "dc_np_rothain_depotwagen_kronstrasse",
@@ -47318,11 +47435,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_depotwagen_kronstrasse.jpg",
+   "art_sha256": "62147ab124452469df6856e13302d7717ec9803ce6d1bc6f82331db00e135a43",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_depotwagen_kronstrasse.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "fdcb11893c7dff6f3912d2caed022d893080607efe0432fa622c639cc8a5eba0"
   },
   {
    "id": "dc_np_rothain_schwerpunktbatterie",
@@ -47345,11 +47478,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_schwerpunktbatterie.jpg",
+   "art_sha256": "1d53789e231c974ececa802f8e4824f3948cdbb4810176b557eabf32a7c6d71c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_schwerpunktbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "26850c493a7bd63b04124aeb1f7fdc2dcb874cf39ef71890195033cb120e01c7"
   },
   {
    "id": "dc_np_rothain_stabsrohr_neuhoff",
@@ -47372,11 +47521,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_stabsrohr_neuhoff.jpg",
+   "art_sha256": "a640faff9a30d7d2199e8d0c812c29370cdb436c4ad7f2784eafe7a0c85c32ed",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_stabsrohr_neuhoff.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "f58dabe08b46dd05419dd9311330a7b29b4a3206c8df4cbf784d0597b7d41e23"
   },
   {
    "id": "dc_np_rothain_erbmoerser",
@@ -47398,11 +47563,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_erbmoerser.jpg",
+   "art_sha256": "196c5068066486d421f42ab56335d73a8d6feb14741b94dc4ee3d1a045b5bae8",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_erbmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "bfff1faa83cd32c99f452f45c30e33ccb42ece022128f95651b6660fcf87748b"
   },
   {
    "id": "dc_np_rothain_ballungsfeuer",
@@ -47424,11 +47605,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_ballungsfeuer.jpg",
+   "art_sha256": "7b29c0c9d38a281665a16f0cc734b26c29e965b50e4d378a0f81bdbb76a9c8dc",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_ballungsfeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "e50d6e387beaba15872a6ee2ed84e39b40affcd97d585394bbc79ad40d77e5d6"
   },
   {
    "id": "dc_np_rothain_ewige_batterie",
@@ -47452,11 +47649,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_ewige_batterie.jpg",
+   "art_sha256": "bd79e21d9f8076ac579bef70702670dc6b5309c2207f4504132e831ff313a411",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_ewige_batterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "42556cf0aaa188a4fdb8572a0f3c64b40309f9e512e93de1b37c45cb9ee60d26"
   },
   {
    "id": "dc_np_rothain_stabsmelder",
@@ -47476,11 +47689,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_stabsmelder.jpg",
+   "art_sha256": "b3a61e5d6e9025aa0eab4231b09faf434cb62c3b0aacbe469ef31b04850ef21a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_stabsmelder.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "9749de9f18aeee560dcc37516864d347bc4475c46341c786385d5042f5a4a71c"
   },
   {
    "id": "dc_np_rothain_achsenkundschafter",
@@ -47502,11 +47731,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_achsenkundschafter.jpg",
+   "art_sha256": "08cfe14cfd4cd1f0c36a4840bc8217b67ba5b6e06fc6f2af7042877d7057cb27",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_achsenkundschafter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1280
+    ],
+    "panel": [
+     78,
+     1506,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "ded01b6014b2684cd205d4e80121980adddf1ce99e0dd1327ff700fb63f10c88"
   },
   {
    "id": "dc_np_rothain_erbkarte_spaeher",
@@ -47526,11 +47771,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_erbkarte_spaeher.jpg",
+   "art_sha256": "60cafa7d767ae65a0dd6d353017e8cb01f795b76d8cb434fad4aa61798313bcb",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_erbkarte_spaeher.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "037adad05217fc0b7e5ccc91380a0b4155f43b60b1c09649cc3a7ced8c93953e"
   },
   {
    "id": "dc_np_rothain_regimentsaelteste",
@@ -47554,11 +47815,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_regimentsaelteste.jpg",
+   "art_sha256": "ffbb90140e3fde064367706ddddab08a9c491096ad047e853eeb8726c4cfc654",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_regimentsaelteste.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "f78b045c6db51fe8128ccfc9ef6d89899973ea108c128ef79a52e916a7a43403"
   },
   {
    "id": "dc_np_rothain_erbmarschall_rothain",
@@ -47579,11 +47856,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_erbmarschall_rothain.jpg",
+   "art_sha256": "5434f40fd925d3662a8921003dca52d3b3d3ecf89be22bc02157d4a3636bc856",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_erbmarschall_rothain.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "37675344734326d4cf2f81d305a1d355f36c6ee47e521938835cc22800c093fd"
   },
   {
    "id": "dc_np_rothain_abloesungsdepot",
@@ -47602,11 +47895,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_abloesungsdepot.jpg",
+   "art_sha256": "cd8714d651d098f142596ee7b3b2c047efcf91327aed8dce8b30044d7e6ca4c8",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_abloesungsdepot.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "d50c5d5ab44f69daf916ed3d3361beaf32f30141b8655a080e907cae81de81de"
   },
   {
    "id": "dc_np_rothain_stabszentrale_erbe",
@@ -47625,11 +47934,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_stabszentrale_erbe.jpg",
+   "art_sha256": "ed1de4f24a23dbdde363c8fbfcc33f17a1c49d9b7a5ce41b8b4db6be0236d47e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_stabszentrale_erbe.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "62aac3e32fd6ebc78a845a9e4c7b662c8f133bef56d7e7c7c43bfa9978d8a648"
   },
   {
    "id": "dc_np_rothain_gebuendelte_front",
@@ -47648,11 +47973,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_gebuendelte_front.jpg",
+   "art_sha256": "b72f6525eb06029f3bfdf431266d6a1cce9cf8883d2b574ddb2a836a70b126d5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_gebuendelte_front.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "8b5e26570e7c8b67be09cc11324c584d43fd49a154e1d9daa7ba4739db40d2a5"
   },
   {
    "id": "dc_np_rothain_schwerpunkt_setzen",
@@ -47671,11 +48012,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_schwerpunkt_setzen.jpg",
+   "art_sha256": "a027b627623962e2e98da6fadb4d3e28f1d39bd7decd689b293934febf8814c7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_schwerpunkt_setzen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "26d3775244482d5c4551e2bd41e737fd005e74c7cab25b32f3f839ed4834a1e9"
   },
   {
    "id": "dc_np_rothain_abloesung_vorziehen",
@@ -47694,11 +48051,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_abloesung_vorziehen.jpg",
+   "art_sha256": "05805812392762b267f742288aab7cb0c3752cd48a50157218f09b0a98a3ab7c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_abloesung_vorziehen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "03fcc2b888d31ef68e20d7034b4efe401bc38695c28f2343e5f38b5edfebb1e7"
   },
   {
    "id": "dc_np_rothain_frische_kraefte",
@@ -47717,11 +48090,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_frische_kraefte.jpg",
+   "art_sha256": "7ba2d324ea850438a1a8b5cd9462253fe1ecd653ca822f2b0e768f7083cfa0be",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_frische_kraefte.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "87eb41afa25892968a90014138002ebf54f8386298c2c3836e2f9419c4577361"
   },
   {
    "id": "dc_np_rothain_konzentrierter_stoss",
@@ -47740,11 +48129,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_konzentrierter_stoss.jpg",
+   "art_sha256": "56036c4cd1a45883e79558bf033f11c8be17143062a337b068ed2232618d56d3",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_konzentrierter_stoss.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "a4f8588d0e0bc5740edd1187bf81ed7d7851aa51165bcd1e8c792fc1d09eebe8"
   },
   {
    "id": "dc_np_rothain_nachstoss",
@@ -47763,11 +48168,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_nachstoss.jpg",
+   "art_sha256": "bf89fd8637c3128fb234a5ed199e1da13cdba819a415bebd005b0fa7d57fff49",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_nachstoss.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "b372a68c56da0a3662ae699df2d5a8eb975722d5658f2a8baa177ef724a27653"
   },
   {
    "id": "dc_np_rothain_umschlag_flussrot",
@@ -47786,11 +48207,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_umschlag_flussrot.jpg",
+   "art_sha256": "1c17ad8e0311d113796d55e38072c24afa01f9e8d99500d97ecdfa6f4db52d10",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_umschlag_flussrot.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "808d0ca10169d2b8426e998248baa02594e3ca3d0fcaa17899d8b8462d55e28d"
   },
   {
    "id": "dc_np_rothain_stabsbesprechung",
@@ -47809,11 +48246,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_stabsbesprechung.jpg",
+   "art_sha256": "37f673049097859dbe2ac3fbd1df1dce4e656a8577382a667e3854efd7473785",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_stabsbesprechung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "1f6d51ea1b8d654e5b4a15a3decf77068cab7ad4d6dc3d3afff33e6149af1606"
   },
   {
    "id": "dc_np_rothain_gezieltes_feuer",
@@ -47832,11 +48285,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_gezieltes_feuer.jpg",
+   "art_sha256": "fdcfe85c46dce0819b9c97e48866ec2fa387ed36b09cc54797de205dbbf849fd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_gezieltes_feuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "4e8f8efeb08202df06eb595e048c4bf9376a525704f7132646e8dacc5fc26b18"
   },
   {
    "id": "dc_np_rothain_ewige_abloesung",
@@ -47855,11 +48324,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_ewige_abloesung.jpg",
+   "art_sha256": "a817f23657acc575a5dda101dfcbe8441b54c42dc1dc6810407af5670547d707",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_ewige_abloesung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "415132d469eea56fa9d51a3599d75f4f3141c0b9dc03f0cb2c723390d814e8f1"
   },
   {
    "id": "dc_np_rothain_druck_am_punkt",
@@ -47878,11 +48363,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_druck_am_punkt.jpg",
+   "art_sha256": "85b86c67d3681a1bd0a7e1a44f34aad727ce993441e792bdcf450d1e2ec600df",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_druck_am_punkt.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "d58d8ea032437f3fa04a6b05bb94da8e4b15214da5f24be6156b2426f039d26b"
   },
   {
    "id": "dc_np_rothain_erbsaebel",
@@ -47901,11 +48402,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_erbsaebel.jpg",
+   "art_sha256": "b76c2ac429eff8718a93f4bbbe2861ad33cf4aad6c34737d70d202a598105d34",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_erbsaebel.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "aa0b2cbc836ba8289b03109340d70afd9dea03b7432cd9b2a9f9a4481e9f2dd3"
   },
   {
    "id": "dc_np_rothain_regimentsabzeichen",
@@ -47924,11 +48441,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_regimentsabzeichen.jpg",
+   "art_sha256": "e8983f86dda77e0995acf3b15530d7c5b8616a8ff0ca5c34f2839d2a154b7ada",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_regimentsabzeichen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "8a8da2cff5e8f6a447fa4c3237400da64318982aadae89e60ba0bb386b057a4f"
   },
   {
    "id": "dc_np_rothain_stabskarte_erbe",
@@ -47947,11 +48480,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_stabskarte_erbe.jpg",
+   "art_sha256": "2ee9a2e680eb06adca4728e5b2d7e99cf99d470de9122fda125d98e2b16a5677",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_stabskarte_erbe.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "dccaff932123ca547f4bc660cc97102e80a02e2afa1015e1a74944d561934832"
   },
   {
    "id": "dc_np_rothain_abloesungsgurt",
@@ -47970,11 +48519,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_abloesungsgurt.jpg",
+   "art_sha256": "4db320764d0559cdb4f9d3f36d31e257302862da3063fff585ed17b0b3beccc2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_abloesungsgurt.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "b42291a005608b8becc59cfe63145b932c054b52d24394459907306bd06fd88d"
   },
   {
    "id": "dc_np_rothain_schwerpunktoptik",
@@ -47993,11 +48558,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_schwerpunktoptik.jpg",
+   "art_sha256": "13c02c8339bfe5d49019a00aa2b30178f1578aaed9e597149276d29393823c16",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_schwerpunktoptik.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "ef7d429a8764b9dcd2409d62875480dae26f2a5776721d97d52620d75d284577"
   },
   {
    "id": "dc_np_rothain_kronstrassenpanzerung",
@@ -48018,11 +48599,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_rothain_kronstrassenpanzerung.jpg",
+   "art_sha256": "88297a5e084008966babef35e201a107471fa20b9b912d5dce9c972fa1606a67",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_rothain_kronstrassenpanzerung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "0289363583080105c7a7759ff69758bf9b929dab9968062fd3fdaf087baa17da"
   },
   {
    "id": "dc_np_averon_netztrupp_novaris",
@@ -48070,11 +48667,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_eigeninitiative_zug.jpg",
+   "art_sha256": "1c8afe97e1d8a0ba8257f656649bc3586d54530367c57ebfdc3aa876ccf1a67f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_eigeninitiative_zug.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "24537d12890edf44a3767e5356d04df2a3de81ba873a9f2b797a18d89ecd0b27"
   },
   {
    "id": "dc_np_averon_sensorschuetzen",
@@ -48094,11 +48707,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_sensorschuetzen.jpg",
+   "art_sha256": "d7b2932c4533d9828fb829ceba105b43453721f973eeb6b23b00808bd6f5ec94",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_sensorschuetzen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "888794ca1d30fa3fc92e23f591547fbf11cd092313b9662b7daddd6b63651623"
   },
   {
    "id": "dc_np_averon_verbindungskompanie",
@@ -48118,11 +48747,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_averon_verbindungskompanie.jpg",
+   "art_sha256": "4fbb7962f472ff202fbb27cd64fbe88d1866793388a57fd0eab317ade596b770",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_averon_verbindungskompanie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "e196b743d0d0c66cdd5d7702dac6ebe51ae176db04279588c1b56df09e300e6b"
   },
   {
    "id": "dc_np_averon_schnelle_hand",
