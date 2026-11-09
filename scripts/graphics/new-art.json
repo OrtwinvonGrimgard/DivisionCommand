@@ -456,5 +456,277 @@
   "sha256": "a354ef67613a330f401d55e43b14f070c125df465584e556d54958ec79bbca5c",
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_antwort_der_krone": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_antwort_der_krone.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/522355dbab595baa025e557bd49f73577508d4e00355087e1395cb907a484fac.jpg",
+  "sha256": "5cb4e8b429f5f89e4b447a47a72db802707b58a44cefbdb1c1c842126e2f68d8",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_auffangstellung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_auffangstellung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/83ba1b538541c6cd8bd281133c5c25b6ea33e149f370a2016a2ec5e88825baad.jpg",
+  "sha256": "db244439e018cfe2aa948a1a1c2b0ffdcd04203c9da222d17f6261673da3067f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_bajonett_der_garde": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_bajonett_der_garde.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b7e75bad847a7994b40de691104710c8505411113e9092dc43bf7bf9ef8216b1.jpg",
+  "sha256": "b6f8421fddeb23595e5847d2f0c27a69e5e632cafe58f48cf83c4534c33c045f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_bollwerkwagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_bollwerkwagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4fde4a738780174b3c9cb6c6507bf66c63ff0198075fc76113dced06c735ea12.jpg",
+  "sha256": "cf923508c1b23f48d0961595b181cbfa1a64d6f054df1860c462839a1cd63b7c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_burgfeuerstellung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_burgfeuerstellung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f5c43051f005b176af3119ef3b0b559256bf402fd075eeb53d343d608daa0202.jpg",
+  "sha256": "41c4b70ee673a0384e6729a0cb0a6619024d34ce708b4d6aa85d6853d8db3487",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_feldlazarett_der_krone": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_feldlazarett_der_krone.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e152b56436873b4bb499d6eee745f592b8193a5e8d3e47900101e889f85bca58.jpg",
+  "sha256": "91d8127f044b8cf6990cdb63f68c5dc73f7137577d97a499e2bfa5e304c2fb44",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_garde_der_kontinuitaet": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_garde_der_kontinuitaet.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/60f197b7a662ee32fb119f210178bff57880df29b52b4eb7e0a70273e7e5dc2c.jpg",
+  "sha256": "05683b0eb28a09e38420170d3aa763896892532ce3620e27038d070442475fcb",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_gebundene_front": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_gebundene_front.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/cf7725939327cc155a6ce2640fbee137b030086c524711cb5fba6d4e368c3a6c.jpg",
+  "sha256": "237985f9accc4284c3f3fb028c6eea85322c081576235f15d532e245603ec732",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_gebundene_kompanie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_gebundene_kompanie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/28e4142f6c930efda542b6ba401ddea7267155ef6f02fa9c52886e8278df894f.jpg",
+  "sha256": "e5ec600f0970dbfa25cf00bb7bffdd8851a3551a08156bcb972a14530d1cb56d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_gegenstoss_aus_der_reserve": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_gegenstoss_aus_der_reserve.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a0f803499645a5980ed5878008bd91fa1741fb476284fecc7aeeb2116a01b3c3.jpg",
+  "sha256": "1172a19068ad6fe0e3ee4a5719b44b50575a53a1d1ba01fb6e9ff9c1d18ea8d4",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_grenzhaubitze": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_grenzhaubitze.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7ad3f46ced4e1d5e30f41b4d23372ebad10e5938f3dc15a3e5e8131105794f3f.jpg",
+  "sha256": "f49ec3a0ae7e81e1d834f33ae8e6132756024c04315207c3929cf36b4bc32cbd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_grenzreiter": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_grenzreiter.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b63e81cd069558f15a60296610ba7e3f6b84ef30bc07e35f39c29d2d3d38b3d9.jpg",
+  "sha256": "4818d10009295d70e3da6b4d6c5f7bbb8dc75ec19797b161e557ed29abc80783",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_halten_und_warten": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_halten_und_warten.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c189174ac87ec077db2fa35bb7acb5d8d7a296dbdf63b02feb1ce688cd56731e.jpg",
+  "sha256": "396dbf65f9a29e2cd321e5e12bfe72fb4a4e0814349e22a8c3f67922593a42d4",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_hofbericht": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_hofbericht.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c0dc6bf731cd566a0bab46ac1bf02aa66f1104a3b5f6c3a7ea5706ca4440629a.jpg",
+  "sha256": "c08981d7b63bb902721b768debecf1a4fc044719491adddb00c0cda5dd5e1c5c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_koenigliche_antwort": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_koenigliche_antwort.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/0a407eb14ec0001ef849b0f69e8a3905f9f721aec29052e9f76958c6c18bbbda.jpg",
+  "sha256": "defffe13911246c362bb89712097608cb345297c9b738f531fa75f9f2cc85361",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_koeniglicher_befehl": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_koeniglicher_befehl.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/00727223ea856118ebced54616ac8d15157c41466ee9f2d76c7f03e97cd1c093.jpg",
+  "sha256": "e0a9b0e4eb3a974d3f99f3638c921f0376a05473f4c968f1a25e43aa760e87cf",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_kronarsenal": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_kronarsenal.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c559ecdea2a12cdc33f4b4900a10db1d8282fd684554ee4c316b05eb814f97c1.jpg",
+  "sha256": "5c3afeb336d2839d6fc7b5ed995cc471afb6ca1c5cd46f7e73276b3a4d531c9c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_kronbanner": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_kronbanner.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d329e39049adf7ee978a858cc12d33d920193a4c9844a9f9851cc21653923ab5.jpg",
+  "sha256": "0b33882fb094191514a054e5507e8700568fd244be26e740f6acf674bcea1561",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_kronhelm": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_kronhelm.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c0f0b22d4428796099efd7c6d1a6bde69a98801191facde6e6d673aeb1118db5.jpg",
+  "sha256": "6fe7c0bec19f5890c4c7a1ecc8301e85596410e6c1dcd67ef4234a6306a09d28",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_kronmoerser": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_kronmoerser.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e67255f6ab37325b4cf926c41bc29c5bd5fa3cb804422f0710452aee28f61c39.jpg",
+  "sha256": "1c7c0958f062a294e9e75220938faddc4f9cc4ec743705d1b0efa17faafeca92",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_kronrat_tagt": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_kronrat_tagt.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b2ef34082bd59bd613b4463b962f781844fbf3883c8901b249c179b1b7bf4d4f.jpg",
+  "sha256": "be2535dc482478533ffb067a8630d98c38303acd1695ad5cca1cedd8f926a7b7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_kronsiegel_der_wacht": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_kronsiegel_der_wacht.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/54f5dbc714cabf2f23f5ac829e7dd78301cbdf4f9c502c0da243ba53fbaaed83.jpg",
+  "sha256": "19b8eebec67a3dc466975ccefd2cdcaed72235388ffd26305ee2822c528304c2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_kronwagen_wacht": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_kronwagen_wacht.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/668c3cb5a1582c4f2fe8b87e211e37f975a64263a6b982ef55afb1edd3b422c7.jpg",
+  "sha256": "3602ca4503af9778a39b9a90a0794284e1a2312aede74a477fc7936ba10089a5",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_kundschafter_der_krone": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_kundschafter_der_krone.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/204762c27188cd0a76aba77ec765de3361dc7d8b9ea616d19cd8d6046f91b20c.jpg",
+  "sha256": "01ccf263364f104547e240fdc040d4a22b64c0533536e983bdc17e26acfc74ee",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_marschall_des_hauses": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_marschall_des_hauses.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/312b97679a2e4102f3b6d5d1effad5e916f2779e61967873faa415f0d81706cc.jpg",
+  "sha256": "8bdbddecff0b2bd9a089b605d75647bf78c9beb31bcf64a4bb15b32b22128171",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_mine_im_weg": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_mine_im_weg.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ff9a8ac52395d078581d7279de7638f24121358e0548b17bb54308dbd1461a63.jpg",
+  "sha256": "7174ada2ca4afa60042036048cceb1bb02a91b7ea3540ca358c551efb55dcf51",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_pionierdepot": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_pionierdepot.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f196ab28a57c97a244f012b4ba01da718470d01f881d1b0234118e98b4e371a8.jpg",
+  "sha256": "0cdf8ca563764cb71f883a432c7ac2ff1fa8fa84cfc41a33f27cb65191eebdbe",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_pionierschaufel": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_pionierschaufel.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/acaa54fd50f431358fb0a6fd33f7865b550c42b728b4fcd213e18bcdb270d58e.jpg",
+  "sha256": "68ff1aa60427daadc15b77ea7194c38e35e751a2eeb6a0038e9ae1a6db35ea95",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_reservekette_erlen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_reservekette_erlen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7d25632c0b1118b87039c7e8bbcb620759b87778e22f625c18cf975a0a5a734c.jpg",
+  "sha256": "40f3e704eacc90187cdd4e2de9312c303bc0249f1da8634cf1e19724b58584e7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_sperrdraht_kit": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_sperrdraht_kit.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/546b56f68a564b419dc847ee1c60f2ffa64503db52fad790bdcac3b2b243c0fd.jpg",
+  "sha256": "30b7f4a45d8cb6cc76157bf34148ec482de0ac9e6de8aa505ef73a604f276c76",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_sperre_verstaerken": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_sperre_verstaerken.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/9165410e6f5e502b2b46a97f45f999093b1f67d84df92fd1ab380e3186b1fe14.jpg",
+  "sha256": "2e0d41f3345ec59821b465351defd33ee517fcf891723d528fcb4117091aa185",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_sperrfeuerbatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_sperrfeuerbatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/dc30c6029cc7108d3a45cef4735560bb03b7f7155bc3ba0ea7e1bb552fb44f0a.jpg",
+  "sha256": "592e36cc27d3a4379c3a9b733eed6356241978ddacfe65501b757cccc6aec8f4",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_sperrguertel": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_sperrguertel.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/0783590a8b0a855505ab02420c3e0e875d2293cde62b555fb569985a83b62dbe.jpg",
+  "sha256": "5a9e91c44287fe5ccbbba3541e4e3be3ce822089e1e14627ca8aba8590ff7268",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_wachtturmposten": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_wachtturmposten.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/9497a509cb6d01b80585038db64905388c5876a189692de1cd1911689bdd164a.jpg",
+  "sha256": "c69269b75221a9ba79d4a58d89dd4a9c5f57b0f1f4174808b217b8fa4e6eddae",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  }
 }

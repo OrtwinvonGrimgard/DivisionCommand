@@ -1,42 +1,8 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1151,
+ "new_faces": 1185,
  "missing_illustrations": [
-  "dc_np_eldran_gebundene_kompanie",
-  "dc_np_eldran_kronwagen_wacht",
-  "dc_np_eldran_koenigliche_antwort",
-  "dc_np_eldran_bollwerkwagen",
-  "dc_np_eldran_reservekette_erlen",
-  "dc_np_eldran_sperrfeuerbatterie",
-  "dc_np_eldran_grenzhaubitze",
-  "dc_np_eldran_kronmoerser",
-  "dc_np_eldran_burgfeuerstellung",
-  "dc_np_eldran_kronarsenal",
-  "dc_np_eldran_grenzreiter",
-  "dc_np_eldran_wachtturmposten",
-  "dc_np_eldran_kundschafter_der_krone",
-  "dc_np_eldran_garde_der_kontinuitaet",
-  "dc_np_eldran_marschall_des_hauses",
-  "dc_np_eldran_sperrguertel",
-  "dc_np_eldran_pionierdepot",
-  "dc_np_eldran_gebundene_front",
-  "dc_np_eldran_auffangstellung",
-  "dc_np_eldran_koeniglicher_befehl",
-  "dc_np_eldran_feldlazarett_der_krone",
-  "dc_np_eldran_halten_und_warten",
-  "dc_np_eldran_gegenstoss_aus_der_reserve",
-  "dc_np_eldran_mine_im_weg",
-  "dc_np_eldran_hofbericht",
-  "dc_np_eldran_sperre_verstaerken",
-  "dc_np_eldran_kronrat_tagt",
-  "dc_np_eldran_antwort_der_krone",
-  "dc_np_eldran_kronhelm",
-  "dc_np_eldran_pionierschaufel",
-  "dc_np_eldran_kronsiegel_der_wacht",
-  "dc_np_eldran_sperrdraht_kit",
-  "dc_np_eldran_bajonett_der_garde",
-  "dc_np_eldran_kronbanner",
   "dc_np_rothain_erbregiment_narbstadt",
   "dc_np_rothain_abloesungszug",
   "dc_np_rothain_schwerpunktgrenadiere",
@@ -45619,11 +45585,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_gebundene_kompanie.jpg",
+   "art_sha256": "e5ec600f0970dbfa25cf00bb7bffdd8851a3551a08156bcb972a14530d1cb56d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_gebundene_kompanie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "8959f3bb70357abb1a768edff53a9a62421c317854edbd09b0d915bac166693e"
   },
   {
    "id": "dc_np_eldran_landsturm_kronfeld",
@@ -45733,11 +45715,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_kronwagen_wacht.jpg",
+   "art_sha256": "3602ca4503af9778a39b9a90a0794284e1a2312aede74a477fc7936ba10089a5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_kronwagen_wacht.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "d22c413c9709da8f58b99844a84524026614076f08b62e81f61ec519c4681f97"
   },
   {
    "id": "dc_np_eldran_koenigliche_antwort",
@@ -45761,11 +45759,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_koenigliche_antwort.jpg",
+   "art_sha256": "defffe13911246c362bb89712097608cb345297c9b738f531fa75f9f2cc85361",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_koenigliche_antwort.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "7c6329e7c26575103045921a4501f052f9d195ece773d8d502626e53938e68e9"
   },
   {
    "id": "dc_np_eldran_bollwerkwagen",
@@ -45787,11 +45801,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_bollwerkwagen.jpg",
+   "art_sha256": "cf923508c1b23f48d0961595b181cbfa1a64d6f054df1860c462839a1cd63b7c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_bollwerkwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "ae9dd43a3fa1176f5aee64443a3586121ac357709522ff174ca081594b0385ca"
   },
   {
    "id": "dc_np_eldran_reservekette_erlen",
@@ -45815,11 +45845,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_reservekette_erlen.jpg",
+   "art_sha256": "40f3e704eacc90187cdd4e2de9312c303bc0249f1da8634cf1e19724b58584e7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_reservekette_erlen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "2dd6bd368e3a7259c56028d90f2fef296afedb892ddec2bd305250a18154370e"
   },
   {
    "id": "dc_np_eldran_sperrfeuerbatterie",
@@ -45842,11 +45888,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_sperrfeuerbatterie.jpg",
+   "art_sha256": "592e36cc27d3a4379c3a9b733eed6356241978ddacfe65501b757cccc6aec8f4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_sperrfeuerbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "0d6c290fb8a2025342bdd33b2dafd01976b2557986991899748089c079e5c7b7"
   },
   {
    "id": "dc_np_eldran_grenzhaubitze",
@@ -45869,11 +45931,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_grenzhaubitze.jpg",
+   "art_sha256": "f49ec3a0ae7e81e1d834f33ae8e6132756024c04315207c3929cf36b4bc32cbd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_grenzhaubitze.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "d6073802b74aa83f0d51718a454532036de670ccd2d98aa78526b560e1efdc13"
   },
   {
    "id": "dc_np_eldran_kronmoerser",
@@ -45895,11 +45973,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_kronmoerser.jpg",
+   "art_sha256": "1c7c0958f062a294e9e75220938faddc4f9cc4ec743705d1b0efa17faafeca92",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_kronmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "f47d7aa6caf244f03df40fadd09f73b508e53cfd482809166abbe367f10bae20"
   },
   {
    "id": "dc_np_eldran_burgfeuerstellung",
@@ -45921,11 +46015,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_burgfeuerstellung.jpg",
+   "art_sha256": "41c4b70ee673a0384e6729a0cb0a6619024d34ce708b4d6aa85d6853d8db3487",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_burgfeuerstellung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "9fad523c7a8086b81a4832dc5be7f31505a20d864a85e66345ec79821e6775a7"
   },
   {
    "id": "dc_np_eldran_kronarsenal",
@@ -45949,11 +46059,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_kronarsenal.jpg",
+   "art_sha256": "5c3afeb336d2839d6fc7b5ed995cc471afb6ca1c5cd46f7e73276b3a4d531c9c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_kronarsenal.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "7d04a551e64e26b1cdeeae411edd07bca82da91c4bddfddcea004164eb85fdd1"
   },
   {
    "id": "dc_np_eldran_grenzreiter",
@@ -45975,11 +46101,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_grenzreiter.jpg",
+   "art_sha256": "4818d10009295d70e3da6b4d6c5f7bbb8dc75ec19797b161e557ed29abc80783",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_grenzreiter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1280
+    ],
+    "panel": [
+     78,
+     1506,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "175608904f92fce9594388ae3267f01852c3b4677a6d6cc3c55f5d5819d1459c"
   },
   {
    "id": "dc_np_eldran_wachtturmposten",
@@ -46001,11 +46143,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_wachtturmposten.jpg",
+   "art_sha256": "c69269b75221a9ba79d4a58d89dd4a9c5f57b0f1f4174808b217b8fa4e6eddae",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_wachtturmposten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1280
+    ],
+    "panel": [
+     78,
+     1506,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "65152ba03a97e44c482ebb933d53d3735fd7602b7e19f19ca21109343c3e6286"
   },
   {
    "id": "dc_np_eldran_kundschafter_der_krone",
@@ -46025,11 +46183,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_kundschafter_der_krone.jpg",
+   "art_sha256": "01ccf263364f104547e240fdc040d4a22b64c0533536e983bdc17e26acfc74ee",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_kundschafter_der_krone.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "961cc438429681ef0b1eed7515def80c78183aa4891b687d941bc7768c3fb449"
   },
   {
    "id": "dc_np_eldran_garde_der_kontinuitaet",
@@ -46052,11 +46226,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_garde_der_kontinuitaet.jpg",
+   "art_sha256": "05683b0eb28a09e38420170d3aa763896892532ce3620e27038d070442475fcb",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_garde_der_kontinuitaet.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "2ae1a02cd8769cf94fac43d1656fc6ae9d9723944308d4b5de8a9b4161a32b2b"
   },
   {
    "id": "dc_np_eldran_marschall_des_hauses",
@@ -46079,11 +46269,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_marschall_des_hauses.jpg",
+   "art_sha256": "8bdbddecff0b2bd9a089b605d75647bf78c9beb31bcf64a4bb15b32b22128171",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_marschall_des_hauses.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "4db243d148f00685719f413b77ef8e08d40a424587a7759b2c717f653053dbe7"
   },
   {
    "id": "dc_np_eldran_sperrguertel",
@@ -46102,11 +46308,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_sperrguertel.jpg",
+   "art_sha256": "5a9e91c44287fe5ccbbba3541e4e3be3ce822089e1e14627ca8aba8590ff7268",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_sperrguertel.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "c30420959155a714c5023991b5ff0da2512bf92ef3713d762fe49377538cbe48"
   },
   {
    "id": "dc_np_eldran_pionierdepot",
@@ -46125,11 +46347,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_pionierdepot.jpg",
+   "art_sha256": "0cdf8ca563764cb71f883a432c7ac2ff1fa8fa84cfc41a33f27cb65191eebdbe",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_pionierdepot.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "2f8f34e0b8af2fe5e082920f5f3ffdba4842ea6d5afaf0462a872051ca359e95"
   },
   {
    "id": "dc_np_eldran_gebundene_front",
@@ -46148,11 +46386,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_gebundene_front.jpg",
+   "art_sha256": "237985f9accc4284c3f3fb028c6eea85322c081576235f15d532e245603ec732",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_gebundene_front.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "6e1a7a7c5d45e62355a56bf99963526145fd888bb1b88ddbefac3b2e5495424e"
   },
   {
    "id": "dc_np_eldran_auffangstellung",
@@ -46171,11 +46425,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_auffangstellung.jpg",
+   "art_sha256": "db244439e018cfe2aa948a1a1c2b0ffdcd04203c9da222d17f6261673da3067f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_auffangstellung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "f1d2dab7ad64c7b4f8b3821a8ae45108f75130aabb626069c8e4453daa57f604"
   },
   {
    "id": "dc_np_eldran_koeniglicher_befehl",
@@ -46194,11 +46464,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_koeniglicher_befehl.jpg",
+   "art_sha256": "e0a9b0e4eb3a974d3f99f3638c921f0376a05473f4c968f1a25e43aa760e87cf",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_koeniglicher_befehl.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "9767533b0bdc7e5591e5fc7089564efd89d13cca8b61fcbe197d4f6bfa0f4269"
   },
   {
    "id": "dc_np_eldran_feldlazarett_der_krone",
@@ -46217,11 +46503,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_feldlazarett_der_krone.jpg",
+   "art_sha256": "91d8127f044b8cf6990cdb63f68c5dc73f7137577d97a499e2bfa5e304c2fb44",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_feldlazarett_der_krone.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "67a0964046ab7553e26561650a6f98d4f6b48a4fdfee11ca99253bbac313925c"
   },
   {
    "id": "dc_np_eldran_halten_und_warten",
@@ -46240,11 +46542,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_halten_und_warten.jpg",
+   "art_sha256": "396dbf65f9a29e2cd321e5e12bfe72fb4a4e0814349e22a8c3f67922593a42d4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_halten_und_warten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "bf5c4cadf4b1b5dc2fe527cf62c668b47167603540162003976927069f129ed0"
   },
   {
    "id": "dc_np_eldran_gegenstoss_aus_der_reserve",
@@ -46263,11 +46581,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_gegenstoss_aus_der_reserve.jpg",
+   "art_sha256": "1172a19068ad6fe0e3ee4a5719b44b50575a53a1d1ba01fb6e9ff9c1d18ea8d4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_gegenstoss_aus_der_reserve.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "5661c4f3858713d2db9f3e4e59ecc9dadab9d0e477ca968a3f6e07cb40e04b07"
   },
   {
    "id": "dc_np_eldran_mine_im_weg",
@@ -46286,11 +46620,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_mine_im_weg.jpg",
+   "art_sha256": "7174ada2ca4afa60042036048cceb1bb02a91b7ea3540ca358c551efb55dcf51",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_mine_im_weg.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "4629a4054130611e0b9457ec5483debb90207ac653cd012a7a01663a7bdf7c2e"
   },
   {
    "id": "dc_np_eldran_hofbericht",
@@ -46309,11 +46659,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_hofbericht.jpg",
+   "art_sha256": "c08981d7b63bb902721b768debecf1a4fc044719491adddb00c0cda5dd5e1c5c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_hofbericht.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "044e372d4b044edb0655e50db9f4ea954b386935d5ac1e69ca07168a8a06abb9"
   },
   {
    "id": "dc_np_eldran_sperre_verstaerken",
@@ -46332,11 +46698,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_sperre_verstaerken.jpg",
+   "art_sha256": "2e0d41f3345ec59821b465351defd33ee517fcf891723d528fcb4117091aa185",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_sperre_verstaerken.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "5875305f68e0c9905f3c4b8c00a9a39f0a0245dca430a6537d910d1f6eac140f"
   },
   {
    "id": "dc_np_eldran_kronrat_tagt",
@@ -46355,11 +46737,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_kronrat_tagt.jpg",
+   "art_sha256": "be2535dc482478533ffb067a8630d98c38303acd1695ad5cca1cedd8f926a7b7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_kronrat_tagt.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "36d8e86f5597b15f56e55daf1dcc221804efcedc886961ae4f288d00f64f6fcf"
   },
   {
    "id": "dc_np_eldran_antwort_der_krone",
@@ -46378,11 +46776,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_antwort_der_krone.jpg",
+   "art_sha256": "5cb4e8b429f5f89e4b447a47a72db802707b58a44cefbdb1c1c842126e2f68d8",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_antwort_der_krone.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "7ffbf02fda176bdd3d036db78ee9cb261f53eab89bbd447b91cf84c1cbcce602"
   },
   {
    "id": "dc_np_eldran_kronhelm",
@@ -46401,11 +46815,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_kronhelm.jpg",
+   "art_sha256": "6fe7c0bec19f5890c4c7a1ecc8301e85596410e6c1dcd67ef4234a6306a09d28",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_kronhelm.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "84d204c5e9baa76ef2de5acc19f4cf4f2630a7d1a58bf8d02951e839bbe40309"
   },
   {
    "id": "dc_np_eldran_pionierschaufel",
@@ -46426,11 +46856,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_pionierschaufel.jpg",
+   "art_sha256": "68ff1aa60427daadc15b77ea7194c38e35e751a2eeb6a0038e9ae1a6db35ea95",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_pionierschaufel.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "ceeb488f136a8003ac04953a2bcebf581bcca5fb0158d28be0ad9c20e5642b80"
   },
   {
    "id": "dc_np_eldran_kronsiegel_der_wacht",
@@ -46449,11 +46895,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_kronsiegel_der_wacht.jpg",
+   "art_sha256": "19b8eebec67a3dc466975ccefd2cdcaed72235388ffd26305ee2822c528304c2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_kronsiegel_der_wacht.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "2ada79043788bbabbc7bc5600cb298730eac2572ce40cd9932a5f30403bb5e87"
   },
   {
    "id": "dc_np_eldran_sperrdraht_kit",
@@ -46472,11 +46934,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_sperrdraht_kit.jpg",
+   "art_sha256": "30b7f4a45d8cb6cc76157bf34148ec482de0ac9e6de8aa505ef73a604f276c76",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_sperrdraht_kit.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "b58817a0d444696ef4c5caf298ffac9b72bf91f87bd42cac4c62134ed4ec48e3"
   },
   {
    "id": "dc_np_eldran_bajonett_der_garde",
@@ -46495,11 +46973,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_bajonett_der_garde.jpg",
+   "art_sha256": "b6f8421fddeb23595e5847d2f0c27a69e5e632cafe58f48cf83c4534c33c045f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_bajonett_der_garde.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "e33fad032a9870433bc7172bc8e949fb6f3362c16354eb1758e2ca8dc6d9ac69"
   },
   {
    "id": "dc_np_eldran_kronbanner",
@@ -46518,11 +47012,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_kronbanner.jpg",
+   "art_sha256": "0b33882fb094191514a054e5507e8700568fd244be26e740f6acf674bcea1561",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_kronbanner.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "e1324639a4df0e5811f4aef1c97043c0f47feee8aa2143e1b92435d825c8c9c4"
   },
   {
    "id": "dc_np_rothain_erbregiment_narbstadt",
