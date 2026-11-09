@@ -1,29 +1,8 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1311,
+ "new_faces": 1332,
  "missing_illustrations": [
-  "dc_np_vesper_abriegelungstrupp",
-  "dc_np_vesper_attrappenwagen",
-  "dc_np_vesper_taeuschungspanzer",
-  "dc_np_vesper_riegelwagen",
-  "dc_np_vesper_schattenkeil",
-  "dc_np_vesper_abriegelungsbatterie",
-  "dc_np_vesper_scheinfeuerstellung",
-  "dc_np_vesper_systemmoerser",
-  "dc_np_vesper_riegelfeuer",
-  "dc_np_vesper_systemantwort",
-  "dc_np_vesper_ueberwachungsposten",
-  "dc_np_vesper_doppelagent",
-  "dc_np_vesper_schattenmelder",
-  "dc_np_vesper_spielmeister",
-  "dc_np_vesper_operationsleitung_vesper",
-  "dc_np_vesper_desinformationsnetz",
-  "dc_np_vesper_systemarchiv",
-  "dc_np_vesper_das_spiel_des_systems",
-  "dc_np_vesper_gefuetterter_koeder",
-  "dc_np_vesper_falsche_meldung",
-  "dc_np_vesper_raum_schliessen",
   "dc_np_vesper_enttarnung",
   "dc_np_vesper_zug_im_spiel",
   "dc_np_vesper_schattenoperation",
@@ -52460,11 +52439,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_abriegelungstrupp.jpg",
+   "art_sha256": "e3b156d5c21167bd7678d56b51440e6c9a2ef628e21b412c45f81565e1936665",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_abriegelungstrupp.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "97f906db397e1abb1972980041569809a46fd81a213201d659762e844dac5bdd"
   },
   {
    "id": "dc_np_vesper_unsichtbare_wache",
@@ -52576,11 +52571,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_attrappenwagen.jpg",
+   "art_sha256": "e3672bd3abad2580ef13668699ba82ee0650aba4841e7dc1e3294f6d291ff9b9",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_attrappenwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "7f2a93fedc8050c73128c5b1ec66f68fb03b8767ffce3f6ec9dde3bd7c1f1a69"
   },
   {
    "id": "dc_np_vesper_taeuschungspanzer",
@@ -52605,11 +52616,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_taeuschungspanzer.jpg",
+   "art_sha256": "4794dd2cc0ad59722f48438d5c49384fc05433ae985df96068586b75bf1212bf",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_taeuschungspanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "16c4c9227514181729bf0026ac290fe4f8d8ad29e7898fb6e0aced431083ea7c"
   },
   {
    "id": "dc_np_vesper_riegelwagen",
@@ -52633,11 +52660,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_riegelwagen.jpg",
+   "art_sha256": "0a754bf52fcb723c43c2db3dd063309491e2336502a9e008c903e2294baad741",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_riegelwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "a3eb7d018b1671b35662b5f3a3271ff5da62c03f1b68c8b3d8b900fe8853f60e"
   },
   {
    "id": "dc_np_vesper_schattenkeil",
@@ -52661,11 +52704,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_schattenkeil.jpg",
+   "art_sha256": "2fedf04fce5fb878629e2410d54971ea9a5ca4e2a7c2f664b8458bb0c03c26cf",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_schattenkeil.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "3da62ff4b447cac5d9e43293c4568947fb2e776c7e8a6526e87a420112966464"
   },
   {
    "id": "dc_np_vesper_abriegelungsbatterie",
@@ -52688,11 +52747,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_abriegelungsbatterie.jpg",
+   "art_sha256": "a9a22656e33a17e76aed6b5b71cb11a2e5a9d186cda989cb71505e6d6bfe0cb1",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_abriegelungsbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "4c4c55bb6d866a6ffabb740dc2b8bb341eb2f50da2332814ea1df55002cef614"
   },
   {
    "id": "dc_np_vesper_scheinfeuerstellung",
@@ -52716,11 +52791,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_scheinfeuerstellung.jpg",
+   "art_sha256": "41ea3998c9c53bdb2a05387d1124285e35e894ce6c7f0d339bf7cfff0490ed3f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_scheinfeuerstellung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "340fa6257c8f40396c97aca042c6ed3df963c2818e9f701e2523b76da421270e"
   },
   {
    "id": "dc_np_vesper_systemmoerser",
@@ -52743,11 +52834,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_systemmoerser.jpg",
+   "art_sha256": "eeef0a5e2fbc19735f7cccca9062cad2aac61d7ef5dcc65cbcecd1fb650e2d9e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_systemmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "e179146839c91a2c1a14d74625af75a3e29e09992add0987c8e0cb002d93920f"
   },
   {
    "id": "dc_np_vesper_riegelfeuer",
@@ -52769,11 +52876,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_riegelfeuer.jpg",
+   "art_sha256": "0ae8af63d15786786bf44b91f35c24792c7572f2fefd2fda05be9dadc08d0bb8",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_riegelfeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "aae16ad63dd938e617bfa04e450c1dfb3902d2c6d25f5a417b54d31aac38d19c"
   },
   {
    "id": "dc_np_vesper_systemantwort",
@@ -52797,11 +52920,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_systemantwort.jpg",
+   "art_sha256": "f748d7a1395c47557e3f32f282007cf4c4b18e15b6bfa8fe46da0e91b7232144",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_systemantwort.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "655527d372114fd4f0725dce615c8411639744772e0084a3ddc271ff9bba6e6e"
   },
   {
    "id": "dc_np_vesper_ueberwachungsposten",
@@ -52823,11 +52962,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_ueberwachungsposten.jpg",
+   "art_sha256": "9927a8cabaa043df3d202afb782aa0a31a8ff7a9ec7094ddc361d8ee48a7012d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_ueberwachungsposten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "057a71758769bfb6d555f9d3912b44918ae95dd25d683a4cc8772c82a872284c"
   },
   {
    "id": "dc_np_vesper_doppelagent",
@@ -52849,11 +53004,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_doppelagent.jpg",
+   "art_sha256": "ae4ba0cd29c93b1ecb84dfd44e875f52ec2489a9928c823aeaa113f592cc4d7c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_doppelagent.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "60b1d05462cb3178122795bc7b7c59a284db8fc34b1be5d6d6793b2e968f5d7e"
   },
   {
    "id": "dc_np_vesper_schattenmelder",
@@ -52876,11 +53047,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_schattenmelder.jpg",
+   "art_sha256": "46c4859ec06a0dcf9f399351b8eed7b0178bf377d09507c59ee2fa4d3fcc54ea",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_schattenmelder.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "ed12466e289f28e6a3fc36fdfcf3423586fa060c070b5ada5bf18e3c1b2821d8"
   },
   {
    "id": "dc_np_vesper_spielmeister",
@@ -52903,11 +53090,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_spielmeister.jpg",
+   "art_sha256": "91ea9459e1accf33d5deb6e8d16c723a0d42d270e40e63aa2eef7ce7f08c57fd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_spielmeister.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "1d70bd069270673a07cc8e0475b1bdc19aaa732eaa520d9b4298e78fe878aa23"
   },
   {
    "id": "dc_np_vesper_operationsleitung_vesper",
@@ -52928,11 +53131,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_operationsleitung_vesper.jpg",
+   "art_sha256": "29399a5cf0f51b03ae00697aa56db19dbf7a82e4cad1d7a721dd5481bf4b3490",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_operationsleitung_vesper.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "9b119877b756b096c8a8ac222c90241a689b0c7c9ea0f5c73519b2418b18b089"
   },
   {
    "id": "dc_np_vesper_desinformationsnetz",
@@ -52951,11 +53170,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_desinformationsnetz.jpg",
+   "art_sha256": "b0f2bfcf4a63c72001b57ecb61e92812b5a4e3d5cdb1d181077b17d2e8ae60bc",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_desinformationsnetz.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "380bc8f5c17f1cefeeefee4c0cb05fdbc12050ce0acd7e66c175b40ba4720a65"
   },
   {
    "id": "dc_np_vesper_systemarchiv",
@@ -52974,11 +53209,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_systemarchiv.jpg",
+   "art_sha256": "a4b174d89f5db4e15b16f0fdf0af928bf29621ed22c928d725d45c32dfcf089b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_systemarchiv.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "445b534bd70934487f316d6852492362aa00b0522517d484327c4a0e2cae4959"
   },
   {
    "id": "dc_np_vesper_das_spiel_des_systems",
@@ -52997,11 +53248,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_das_spiel_des_systems.jpg",
+   "art_sha256": "50ffc4a347f297ab01616586e69baee92ddf2598b8c417269e40028e9cd73357",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_das_spiel_des_systems.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "ae2aeeb85410c7ab8927ccba734720c60bb3562142993e2a475ef678303506ed"
   },
   {
    "id": "dc_np_vesper_gefuetterter_koeder",
@@ -53020,11 +53287,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_gefuetterter_koeder.jpg",
+   "art_sha256": "f1cbee087b6c8e4bac0966b370a6ed77b7ef0da1fada1f5ec179564f8e888264",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_gefuetterter_koeder.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "8a961038d4324e989f14ed65e8f483fc5aa61ba14751f4ddf3aadc1884c4e2ba"
   },
   {
    "id": "dc_np_vesper_falsche_meldung",
@@ -53043,11 +53326,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_falsche_meldung.jpg",
+   "art_sha256": "1331efd94576cfcb25e8f3b9b9dbd3bf079e3ff6a17331e68bb04ed53003b46e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_falsche_meldung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "b41edb8cfb51208d35adaa5b1581a55100131e6f232f027fc2cce46230771985"
   },
   {
    "id": "dc_np_vesper_raum_schliessen",
@@ -53066,11 +53365,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_raum_schliessen.jpg",
+   "art_sha256": "9830fd5b144a400051fd2e9617abdc92ea881fbc2794a0570b0f38d064015728",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_raum_schliessen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "2712ea1476636bad282bb5f4ef07750febab0fc8a6983f6588348859dc3904ff"
   },
   {
    "id": "dc_np_vesper_enttarnung",

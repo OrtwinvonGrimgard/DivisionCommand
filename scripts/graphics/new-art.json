@@ -1736,5 +1736,173 @@
   "sha256": "2dfb49df7a1c3e32407c5bd2ded12593cf418b6843f0b3b720e5a4731538c209",
   "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
   "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_abriegelungsbatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_abriegelungsbatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ee00a2b29f79ed1165e1117445acae73d3346ab04e3eab86cc13407bec5eb18e.jpg",
+  "sha256": "a9a22656e33a17e76aed6b5b71cb11a2e5a9d186cda989cb71505e6d6bfe0cb1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_abriegelungstrupp": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_abriegelungstrupp.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/cbf80e7e10ed8f21047e3935c269c92d0e092512c3f31dae54fedece733a4b42.jpg",
+  "sha256": "e3b156d5c21167bd7678d56b51440e6c9a2ef628e21b412c45f81565e1936665",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_attrappenwagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_attrappenwagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c22e61daf842ec376252abee0cbc4db9c27c839c7c5d84b9d75207be4a537288.jpg",
+  "sha256": "e3672bd3abad2580ef13668699ba82ee0650aba4841e7dc1e3294f6d291ff9b9",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_das_spiel_des_systems": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_das_spiel_des_systems.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d26a94a60de6531ef4b67c2699f6f09989f45effc3edefdb4ff2dcb759274c58.jpg",
+  "sha256": "50ffc4a347f297ab01616586e69baee92ddf2598b8c417269e40028e9cd73357",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_desinformationsnetz": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_desinformationsnetz.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4479922e64cf6510b253aae5d93cb3c9e07bd9f7779b8321a778d94c10b89330.jpg",
+  "sha256": "b0f2bfcf4a63c72001b57ecb61e92812b5a4e3d5cdb1d181077b17d2e8ae60bc",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_doppelagent": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_doppelagent.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/e1759d77d01f3ab3e9b87d311d6df5720ad964e32db9f1ffb06f3ebfb652aeb6.jpg",
+  "sha256": "ae4ba0cd29c93b1ecb84dfd44e875f52ec2489a9928c823aeaa113f592cc4d7c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_falsche_meldung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_falsche_meldung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d93ada48333b2058cc0331293726a4ca769bad286d19a695f34c70ade78e4583.jpg",
+  "sha256": "1331efd94576cfcb25e8f3b9b9dbd3bf079e3ff6a17331e68bb04ed53003b46e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_gefuetterter_koeder": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_gefuetterter_koeder.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/905b20e4477ad91ed4c7b8e3a35d789de17cf8e8b28f8188e4efd1e61b1e7569.jpg",
+  "sha256": "f1cbee087b6c8e4bac0966b370a6ed77b7ef0da1fada1f5ec179564f8e888264",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_operationsleitung_vesper": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_operationsleitung_vesper.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/cbbeec804fee3f0642e6b8b8ffb6853e5e2ed641d3994dbdca7bd9da1273150c.jpg",
+  "sha256": "29399a5cf0f51b03ae00697aa56db19dbf7a82e4cad1d7a721dd5481bf4b3490",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_raum_schliessen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_raum_schliessen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ccfada81847e44b5ea1463269a9e96f89930a9b63746eb8b669f0aeafb5b5a9f.jpg",
+  "sha256": "9830fd5b144a400051fd2e9617abdc92ea881fbc2794a0570b0f38d064015728",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_riegelfeuer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_riegelfeuer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/dc62adfe5e63d34128751391b0603c7022c356ee94b36ef1466625c0bc5f3834.jpg",
+  "sha256": "0ae8af63d15786786bf44b91f35c24792c7572f2fefd2fda05be9dadc08d0bb8",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_riegelwagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_riegelwagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4c8b8f05894f4f09829bb53549487b6649b0a312f1010841423bf844ab216d3f.jpg",
+  "sha256": "0a754bf52fcb723c43c2db3dd063309491e2336502a9e008c903e2294baad741",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_schattenkeil": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_schattenkeil.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/706445c3919bbf2738b8bd0ba718f0376b6a5f392f846e5de16a932153223a3e.jpg",
+  "sha256": "2fedf04fce5fb878629e2410d54971ea9a5ca4e2a7c2f664b8458bb0c03c26cf",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_schattenmelder": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_schattenmelder.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/94db2c05bbce88a24db5ae223b75701c912454244cee8dffd9f92be375fa3eb2.jpg",
+  "sha256": "46c4859ec06a0dcf9f399351b8eed7b0178bf377d09507c59ee2fa4d3fcc54ea",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_scheinfeuerstellung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_scheinfeuerstellung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8a25a31d6ad5a1723dee7c18976dc0112061f0274466161c9e82f6b0e4e3b9cd.jpg",
+  "sha256": "41ea3998c9c53bdb2a05387d1124285e35e894ce6c7f0d339bf7cfff0490ed3f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_spielmeister": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_spielmeister.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/828817f77569bb1e201ea6a8fbf2f45ffaa9002b133a10ec2ec26f6bedd6d4cb.jpg",
+  "sha256": "91ea9459e1accf33d5deb6e8d16c723a0d42d270e40e63aa2eef7ce7f08c57fd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_systemantwort": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_systemantwort.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/fdb5e57fac99988911f53fa29db086d0727ab5991019fc192a1ddd3da51a4b44.jpg",
+  "sha256": "f748d7a1395c47557e3f32f282007cf4c4b18e15b6bfa8fe46da0e91b7232144",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_systemarchiv": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_systemarchiv.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/77cd1c4b8769dc4c2128c8fe376712032c71e0fd88edf23a2d7e84fa003e927d.jpg",
+  "sha256": "a4b174d89f5db4e15b16f0fdf0af928bf29621ed22c928d725d45c32dfcf089b",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_systemmoerser": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_systemmoerser.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/18b3fa3955a6492d0d5931cfc8f9e5c67766a1a7f48c2a47ef1624e721f6ef2b.jpg",
+  "sha256": "eeef0a5e2fbc19735f7cccca9062cad2aac61d7ef5dcc65cbcecd1fb650e2d9e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_taeuschungspanzer": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_taeuschungspanzer.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/69033153bbbe888476cf8fe8c20cbe7ad1d611b27168738dfa745716ccbff2e7.jpg",
+  "sha256": "4794dd2cc0ad59722f48438d5c49384fc05433ae985df96068586b75bf1212bf",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_vesper_ueberwachungsposten": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_vesper_ueberwachungsposten.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b1f2713fe2506ebf745bf53cd0c6cfc8cb44f90fe20b63fac39cf2da973116ee.jpg",
+  "sha256": "9927a8cabaa043df3d202afb782aa0a31a8ff7a9ec7094ddc361d8ee48a7012d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
  }
 }
