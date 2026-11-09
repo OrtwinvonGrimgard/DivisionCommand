@@ -1,24 +1,9 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1296,
+ "new_faces": 1311,
  "missing_illustrations": [
-  "dc_np_orthea_laborversorgung",
-  "dc_np_orthea_volltreffer_berechnet",
-  "dc_np_orthea_nachbesetzung_nach_mass",
-  "dc_np_orthea_optik_feinmessung",
-  "dc_np_orthea_peilantenne",
-  "dc_np_orthea_zielrechner_tragbar",
-  "dc_np_orthea_laborpanzerung",
-  "dc_np_orthea_messgewehr",
-  "dc_np_orthea_feldlaborkoffer",
-  "dc_np_vesper_scheinkompanie",
-  "dc_np_vesper_systemtreue_linie",
-  "dc_np_vesper_desinformanten",
-  "dc_np_vesper_hinterhaltszug_velis",
   "dc_np_vesper_abriegelungstrupp",
-  "dc_np_vesper_unsichtbare_wache",
-  "dc_np_vesper_velis_kolonne",
   "dc_np_vesper_attrappenwagen",
   "dc_np_vesper_taeuschungspanzer",
   "dc_np_vesper_riegelwagen",
@@ -51956,11 +51941,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_orthea_laborversorgung.jpg",
+   "art_sha256": "05588b69b13decd8789b813832db8da229b97d34ab8925532ea3e37a04975ad8",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_orthea_laborversorgung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "7fb0fe2afe853651d1f8dfae53dfe3d7a432d6387bbd20f56356ae154cd319ba"
   },
   {
    "id": "dc_np_orthea_volltreffer_berechnet",
@@ -51979,11 +51980,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_orthea_volltreffer_berechnet.jpg",
+   "art_sha256": "199f11e6354ac67ed995fb073a76e9618e4dbf89cddd3334dd0b148a900c9294",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_orthea_volltreffer_berechnet.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "a3f1abac20751cb103346147765f4d74f8dffa3812963652c7e31a6e078440c1"
   },
   {
    "id": "dc_np_orthea_nachbesetzung_nach_mass",
@@ -52002,11 +52019,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_orthea_nachbesetzung_nach_mass.jpg",
+   "art_sha256": "774c34b406f56decf925a472e064be37d2ca386c41766830b37ec8ef0f7c3ae6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_orthea_nachbesetzung_nach_mass.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "bfd7f040387d8946576ee7e564eb809c3fcbc3119f7c34c52560ce1affcb425b"
   },
   {
    "id": "dc_np_orthea_optik_feinmessung",
@@ -52025,11 +52058,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_orthea_optik_feinmessung.jpg",
+   "art_sha256": "3ca2359e1366d5a2ae198894e02c46c200804137539c068f40c6845f3cd90e61",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_orthea_optik_feinmessung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "2473fe23340b84ed76890f90055a7c33609150fb1b4e49a3798cce1ec07a9993"
   },
   {
    "id": "dc_np_orthea_peilantenne",
@@ -52048,11 +52097,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_orthea_peilantenne.jpg",
+   "art_sha256": "f4874f36df3fc5404f392946c78159404908bbc1df71848abe26909d3a87b60a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_orthea_peilantenne.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "a2d78c9e74dadd2770912ce7896cb8d3ff658affa00c1f456738d9e877cc6238"
   },
   {
    "id": "dc_np_orthea_zielrechner_tragbar",
@@ -52071,11 +52136,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_orthea_zielrechner_tragbar.jpg",
+   "art_sha256": "e2ef33a13380a43a10f676fdc61745d96df98f803005671007c3bcbf073883b4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_orthea_zielrechner_tragbar.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "314ca9f7452d889ab69a946c8277b234bb05b9ba440f559ceca0a2dbd8fd4669"
   },
   {
    "id": "dc_np_orthea_laborpanzerung",
@@ -52094,11 +52175,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_orthea_laborpanzerung.jpg",
+   "art_sha256": "60d80b5b8e032c2513e73e4563a54a7b18137174d94771a517bab882da649dbd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_orthea_laborpanzerung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "2f0ddc1b2dc9f208d605eceeab15f2d97a93d7946b9ee39a6782109f1596d7f9"
   },
   {
    "id": "dc_np_orthea_messgewehr",
@@ -52117,11 +52214,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_orthea_messgewehr.jpg",
+   "art_sha256": "871b28a41a8f1fd59650026021fbb366c1acfe29dc1aa7371f5e47edea94ae6f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_orthea_messgewehr.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "e8c084128953698600c4c9e3897a4408d2148cfad9de08d917f9bc20b07e7125"
   },
   {
    "id": "dc_np_orthea_feldlaborkoffer",
@@ -52140,11 +52253,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_orthea_feldlaborkoffer.jpg",
+   "art_sha256": "e99bdd681902dca24e20a430ace8676a73a23027d3f6f53008afd0e28b70446e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_orthea_feldlaborkoffer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "57b37e3be471dbcfa17c24555d1e3bde3d2a98e655b079cf7571ab25de0ffc21"
   },
   {
    "id": "dc_np_vesper_scheinkompanie",
@@ -52167,11 +52296,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_scheinkompanie.jpg",
+   "art_sha256": "ec4d8963ab70c42cc0bc987e8ada3be3e3fc33b180738c1f54f93afeabebf63c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_scheinkompanie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "a6f860d46bac1f7f749422a1bb506325906c4d2c36284908c370a915be48e4d2"
   },
   {
    "id": "dc_np_vesper_systemtreue_linie",
@@ -52191,11 +52336,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_systemtreue_linie.jpg",
+   "art_sha256": "fe07030b14b2757710359a79ca18d6a4fb96d5716965a06638446858231c44ae",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_systemtreue_linie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "daf7f33ad594e1c5f5d30b890442ba5a6d2190d255ff0adbf1c5a23159a9612c"
   },
   {
    "id": "dc_np_vesper_desinformanten",
@@ -52215,11 +52376,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_desinformanten.jpg",
+   "art_sha256": "1422f92be0813cb4eebf773d3ff4a8f5957c316a493cd363614842b156f99e16",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_desinformanten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "339f14f4a403ef48417f26a374d1d269d7c7e41bc40ad036cf873d9be5d8615e"
   },
   {
    "id": "dc_np_vesper_hinterhaltszug_velis",
@@ -52241,11 +52418,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_hinterhaltszug_velis.jpg",
+   "art_sha256": "7398750edca560257e8089b571e789bf052bc0526c74c86507e817567e6ffde6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_hinterhaltszug_velis.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "187ecc369dee8df99914a8de42a500c9bfa4166c33e01994e22ea2ac9665b076"
   },
   {
    "id": "dc_np_vesper_abriegelungstrupp",
@@ -52294,11 +52487,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_unsichtbare_wache.jpg",
+   "art_sha256": "a13c9cc2ed916448e0fc5a27de9f8f728a39f0c4401af1f2f07bd3ee59e3e96d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_unsichtbare_wache.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "712868bdac999ad7be8520a3db8efeb6ce2d38b1613477422095f7221357b493"
   },
   {
    "id": "dc_np_vesper_velis_kolonne",
@@ -52323,11 +52532,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_vesper_velis_kolonne.jpg",
+   "art_sha256": "2dfb49df7a1c3e32407c5bd2ded12593cf418b6843f0b3b720e5a4731538c209",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_vesper_velis_kolonne.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "50806b15123b0b0eab908308f9d23125229cbecf1e6832a98467f3d0d9539a7e",
+   "output_sha256": "f397dca4e1f916aa012a811b77ed9979bfba1dcc1317463bbe96de3dbca16731"
   },
   {
    "id": "dc_np_vesper_attrappenwagen",
