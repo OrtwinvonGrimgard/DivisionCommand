@@ -182,25 +182,27 @@ Beispiele:
 
 Die endgültige Reichweitenstruktur einzelner Spezialtypen wird durch die entsprechenden Karten definiert.
 
-## 7.1 Artillerie – Indirektes Feuer
+## 7.1 Artillerie – Steilfeuer
 
-Artillerie besitzt eine Reichweitenstufe für indirektes Feuer. Die Reichweite gibt an, wie viele Stellungen die Artillerie überbrücken kann:
+Artillerie trägt das Tag **Steilfeuer I–V** (Chip auf der Kartenfläche). Die Stufe steuert die Angriffsreichweite entlang der neun Frontstellungen (Distanzformel: `dist ≤ floor((range−1)/2)`):
 
-| Reichweitenstufe | Stellungen |
-|------------------|------------|
-| 1 | 3 |
-| 2 | 5 |
-| 3 | 7 |
+| Stufe | Reichweite | Ziele |
+|-------|------------|-------|
+| Steilfeuer I | 3 | Nahunterstützung (Mörser u. ä.) |
+| Steilfeuer II | 5 | Standard-Rohrartillerie |
+| Steilfeuer III | 7 | Weitreichende Werfer/Raketen |
+| Steilfeuer IV | ganze Front | Jede gegnerische Fronteinheit (`ATTACK_ANY_FRONT`) |
+| Steilfeuer V | ganze Front + Support | Wie IV, zusätzlich Supportzone (`ATTACK_SUPPORT`); Supportangriff kostet **+2 AP** (gesamt 3 AP), Frontangriff bleibt 1 AP |
 
-Eine Artillerieeinheit mit Reichweitenstufe 1 kann also Ziele bis zu 3 Stellungen entfernt angreifen, Stufe 2 bis zu 5 Stellungen, Stufe 3 bis zu 7 Stellungen.
+**Fernschuss** (+1 Reichweite) wirkt nur bei Steilfeuer I–III. Das frühere Schlüsselwort *Indirektes Feuer* entfällt; nur IV/V nutzen `ATTACK_ANY_FRONT`. Spotter-Doktrin (`SPOTTER_SUPPORT_ATK`) bleibt ein eigener Pfad für Rohrartillerie mit Aufklärung.
 
-Die Reichweitenstufe wird auf der Karte angegeben. Fehlt eine Angabe, gilt Stufe 1.
+Fehlt das Steilfeuer-Tag, greift die Engine-Heuristik (Mörser 3 / Artillerie 5 / schwer 7).
 
 ## 7.2 Gegenangriff
 
 Wird eine Einheit angegriffen, schlägt sie zurück, **falls sie den Treffer übersteht** und kein Kartentext oder Status dies verhindert (`combat_counter: survivor_only`).
 
-**Artillerie-Ausnahme:** Greift Artillerie (inkl. Mörser/Schwerartillerie/`ATTACK_ANY_FRONT`) an, gibt es **keinen** Gegenschlag, es sei denn, die angegriffene Einheit könnte die Artillerie selbst mit ihrer normalen Angriffsreichweite erreichen (gleiche Distanz-/Reihen-Logik wie legale Angriffsziele; Deploy-Schutz/Eingraben zählt hier nicht). Andere Angreifer unverändert.
+**Artillerie-Ausnahme:** Greift Artillerie (inkl. Steilfeuer I–V / Mörser/`ATTACK_ANY_FRONT`) an, gibt es **keinen** Gegenschlag, es sei denn, die angegriffene Einheit könnte die Artillerie selbst mit ihrer normalen Angriffsreichweite erreichen (gleiche Distanz-/Reihen-Logik wie legale Angriffsziele; Deploy-Schutz/Eingraben zählt hier nicht). Andere Angreifer unverändert.
 
 ---
 

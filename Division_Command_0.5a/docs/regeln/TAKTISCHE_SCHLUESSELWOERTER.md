@@ -4,13 +4,13 @@ Freigegebenes Design: [Review-Page](https://cursor.com/canvas/store-78fa5afa-fbe
 
 **Geladen:** 1746 eindeutige IDs = 1709 Deckkarten + 36 Doktrinen + 1 Token. Zehn neutrale Entwürfe sind **zusätzlich** verfügbar: acht Einheiten und zwei Unterstützungen. Keine Karte wird ersetzt. Die 16 nationalen Pools behalten je 100 normale Karten und zwei zugeordnete Doktrinen; die Starterdecks bleiben 60+2, Kopienlimits Bronze 4 / Silber 2 / Gold 1.
 
-**Vokabular:** ursprüngliche 16 Wörter unverändert kompatibel; zusätzlich drei bestehende Kerne und fünf wirklich neue Mechaniken = 24 Wörter. Vollständige Erinnerungen in Detailansicht, Deckbuilder und Entwurfs-Platzhaltern. Keine Änderung bestehender Bilddateien; im alten Kartenbitmap eingedruckte Formulierungen werden dadurch nicht neu gerendert.
+**Vokabular:** ursprüngliche 16 Wörter unverändert kompatibel; zusätzlich zwei bestehende Kerne und fünf wirklich neue Mechaniken = 23 Wörter (Indirektes Feuer durch Steilfeuer-Tags ersetzt). Vollständige Erinnerungen in Detailansicht, Deckbuilder und Entwurfs-Platzhaltern. Keine Änderung bestehender Bilddateien; im alten Kartenbitmap eingedruckte Formulierungen werden dadurch nicht neu gerendert.
 
 ## Bestandsgruppierung ohne Regelvermischung
 
 | Kern | Karten | Umsetzung |
 |---|---:|---|
-| Indirektes Feuer | 83 | `ATTACK_ANY_FRONT` bleibt der einzige Ausführungskern; nicht Fernschuss. Ein gewähltes Ziel, kein Flächenangriff. |
+| ~~Indirektes Feuer~~ → **Steilfeuer I–V** | 211 Einheiten | Ersetzt. Tags `steilfeuer-i`…`steilfeuer-v`. I/II/III = Reichweite 3/5/7; IV = ganze Front (`ATTACK_ANY_FRONT`); V = ganze Front + Support (`ATTACK_SUPPORT`, Supportangriff +2 AP / gesamt 3 AP). Spotter-Doktrin bleibt eigener Pfad. Fernschuss +1 nur I–III. |
 | Absetzen | 29 | `RELOCATE_HIDE`; Verdecken nach eigenem Angriff, kein räumlicher Rückzug. Nur gegnerischer NO_FACE_DOWN-Support verhindert es. |
 | Erstschadenschutz | 14 | `EQUIP_IGNORE_FIRST_DAMAGE`, positiver verhinderbarer Ersttreffer einmal pro Schutz. Feldaltar/Kettengebet/Wachsiegel bewusst **nicht** in dieses Wort migriert. |
 | Einmaliger Teil-Schadensschutz | 8 | Volltextbaustein mit genau 1/2 Punkten, kein neues Pflichtwort. Vollständig ignorierter Treffer verbraucht ihn nicht. |

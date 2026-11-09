@@ -252,15 +252,26 @@ def gameplay_tags(card):
         "sofort", "unterstuetzung", "einheit", "elite", "soforteinsatz",
         "ausrüstung", "unterstützung", "ausruestung", "doktrin",
     } | BRANCH_SKIP
+    roman = {"steilfeuer-i": "STEILFEUER I", "steilfeuer-ii": "STEILFEUER II",
+             "steilfeuer-iii": "STEILFEUER III", "steilfeuer-iv": "STEILFEUER IV",
+             "steilfeuer-v": "STEILFEUER V"}
+    steil = []
     tags = []
     for t in list(card.get("tags") or []):
-        low = str(t).lower().replace("ä", "a").replace("ö", "o").replace("ü", "u")
-        if low in skip or str(t).lower() in skip:
+        raw = str(t).strip()
+        low = raw.lower().replace("ä", "a").replace("ö", "o").replace("ü", "u")
+        if low in skip or raw.lower() in skip:
             continue
-        u = str(t).upper()
+        if low in roman:
+            lab = roman[low]
+            if lab not in steil:
+                steil.append(lab)
+            continue
+        u = raw.upper()
         if u not in tags:
             tags.append(u)
-    return tags[:4]
+    # Steilfeuer first so the long chip is always visible within the 4-tag cap
+    return (steil + tags)[:4]
 
 
 _mod.gameplay_tags = gameplay_tags

@@ -1,17 +1,20 @@
 # Schlüsselwörter – **implementiert**
 
-Die 24 Wörter (16 ursprüngliche, 3 vereinheitlichte Bestandskerne, 5 neue taktische Mechaniken) sind allgemeines Vokabular und an keine Nation gebunden. Sie stehen auf den Karten als **fettes Wort** mit vollständigem Erinnerungstext in Klammern. Das gilt für die Detailansicht, die Deckbuilder-Großansicht und die Platzhalterkarten. Auf dem Tisch erscheint eine Wortleiste.
+Die 23 Wörter (16 ursprüngliche, 2 vereinheitlichte Bestandskerne, 5 neue taktische Mechaniken) sind allgemeines Vokabular und an keine Nation gebunden. Sie stehen auf den Karten als **fettes Wort** mit vollständigem Erinnerungstext in Klammern. Das gilt für die Detailansicht, die Deckbuilder-Großansicht und die Platzhalterkarten. Auf dem Tisch erscheint eine Wortleiste.
 
 Die Engine wertet die Wörter strukturiert aus (`def.keywords`, strukturierte `effects`, `engine.js` und `tactical_runtime.js`). Sie verlässt sich nicht auf Fließtext. Quelle des Vokabulars ist `web/js/data/keywords.js`, die Tests liegen in `scripts/test_keywords.js`.
 
 > Die Sondermechaniken je Nation in [NEUE_EFFEKTIDEEN.md](../planung/NEUE_EFFEKTIDEEN.md) sind davon getrennt und bleiben **Vorschläge, nicht implementiert**.
 
-## Die 24 Wörter
+## Die 23 Wörter
+
+> **Hinweis:** Das frühere Schlüsselwort **Indirektes Feuer** entfällt. Artillerie-Reichweite steuert das Tag **Steilfeuer I–V** (Chip auf der Karte). Details: [RULES_v0.5_GRUNDKONZEPT.md](RULES_v0.5_GRUNDKONZEPT.md) §7.1 und [KARTEN_SONDERFAELLE.md](KARTEN_SONDERFAELLE.md).
+
 
 - **Gefechtsbereit** (Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.)
 - **Ablösung** (Wird diese Einheit zerstört, kostet die nächste eigene Einheit, die du auf dasselbe Feld setzt, 1 AP weniger (mindestens 1), bis das Feld wieder besetzt wurde oder bis zum Ende deines nächsten Zugs, was zuerst eintritt. Höchstens eine solche Markierung pro Feld.)
 - **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
-- **Fernschuss** (Hat +1 Reichweite.)
+- **Fernschuss** (Hat +1 Reichweite. Bei Steilfeuer nur Stufen I–III; IV/V erreichen bereits die ganze Front.)
 - **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.) — *Engine: Die Wahl erscheint, sobald du am Zug bist und keine andere Auswahl offen ist.*
 - **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
@@ -24,7 +27,6 @@ Die Engine wertet die Wörter strukturiert aus (`def.keywords`, strukturierte `e
 - **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - **Zähigkeit** (Hat +1 DEF für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
-- **Indirektes Feuer** (Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.)
 - **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - **Binden** ((1 AP; verbraucht den Angriff dieser Einheit): Nur in deinem Zug, einmal pro Zug, wenn diese offene Einheit jetzt legal angreifen könnte. Wähle eine offene, nicht eingegrabene gegnerische Fronteinheit im gegenüberliegenden Abschnitt. Bis zum Ende des nächsten Zuges ihres Besitzers darf sie ihr Feld weder durch Versetzen, Tausch, erzwungene Bewegung noch Rücknahme auf die Hand verlassen. Zerstörung oder Opferung bleibt möglich. Sie darf weiter angreifen und Fähigkeiten nutzen. Kein Schaden. Höchstens ein Bindeneinsatz pro Besitzer pro Zug. Nicht stapelbar; eine weitere Bindung desselben Ziels ist bis zum Ablauf unzulässig. Der Status bleibt bis zum Ablauf auch bestehen, wenn der Binder zerstört wird.)
@@ -53,7 +55,6 @@ Die Engine wertet die Wörter strukturiert aus (`def.keywords`, strukturierte `e
 | Nachsetzen | 44 | · | 8 | 2 | 2 | 2 | 4 | 1 | 1 | 5 | 1 | 3 | 2 | · | 3 | 8 | · | 2 |
 | Hinterhalt | 16 | 1 | · | · | · | 1 | 5 | · | · | · | · | · | 4 | 1 | 3 | · | · | 1 |
 | Zähigkeit | 31 | 2 | 1 | 1 | 3 | 1 | 6 | 4 | 6 | 1 | 1 | 1 | 1 | · | · | 1 | 2 | · |
-| Indirektes Feuer | 83 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 3 |
 | Absetzen | 29 | 1 | · | · | · | 2 | 6 | · | · | · | 1 | · | 5 | 5 | 7 | · | · | 2 |
 | Erstschadenschutz | 14 | 1 | · | 1 | 1 | 1 | 1 | 1 | 1 | · | 1 | 1 | 1 | 1 | 1 | 1 | 1 | · |
 | Binden | 2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 2 |

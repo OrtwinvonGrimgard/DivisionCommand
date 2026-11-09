@@ -41,6 +41,9 @@ TAG_COLORS = {
     "MOERSER": (88, 34, 16), "MÖRSER": (88, 34, 16), "PANZER": (72, 48, 16),
     "RAD": (86, 58, 22), "SCHANZEN": (58, 48, 18), "SCHWER": (52, 26, 12),
     "SPAEHER": (16, 58, 64), "SPÄHER": (16, 58, 64), "STELLUNG": (64, 40, 14),
+    "STEILFEUER I": (96, 36, 14), "STEILFEUER II": (108, 40, 16),
+    "STEILFEUER III": (118, 44, 18), "STEILFEUER IV": (128, 48, 20),
+    "STEILFEUER V": (140, 52, 22),
 }
 SAMPLES = []
 

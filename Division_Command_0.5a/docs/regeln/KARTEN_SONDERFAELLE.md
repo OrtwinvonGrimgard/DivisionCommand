@@ -2,6 +2,11 @@
 
 Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schlüsselwort-Chips. Die vollständige Regel steht in der Detailansicht (Datenfeld `text`) und – für jede Karte, deren Flächentext gekürzt ist – hier, wortgleich, nach ID sortiert. Erzeugt von `scripts/cards-review/kurz.py`; `scripts/test_card_faces_text.js` prüft, dass nichts verloren geht.
 
+## Steilfeuer ersetzt Indirektes Feuer
+
+Das Schlüsselwort **Indirektes Feuer** ist entfernt. Alle Artillerie-Einheiten (211) tragen stattdessen das Tag **Steilfeuer I–V** (sichtbarer Chip `STEILFEUER II` usw.). Nur Stufen IV und V behalten `ATTACK_ANY_FRONT`; nur V behält `ATTACK_SUPPORT` (Supportangriff +2 AP). Spotter-Doktrin unverändert. Kartentext nennt die Stufe knapp; vollständige Reichweitenregeln stehen in RULES §7.1.
+
+
 ## `dc_b_abloesung_660` – Ablösung (Soforteinsatz)
 
 **Fläche:** Zerstöre eine eigene Einheit; spiele dort eine Einheit aus der Hand mit Kosten bis ihre +1 und heile sie um 1.
