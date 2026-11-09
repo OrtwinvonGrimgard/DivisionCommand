@@ -1,30 +1,8 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1658,
+ "new_faces": 1680,
  "missing_illustrations": [
-  "dc_np_namar_die_grosse_flotte",
-  "dc_np_namar_hafenhelm",
-  "dc_np_namar_schmuggelware",
-  "dc_np_namar_kaipanzerung",
-  "dc_np_namar_lieferwaffe",
-  "dc_np_namar_signalpistole",
-  "dc_np_namar_hafenkran_haken",
-  "dc_np_sahr_flusslaeufer",
-  "dc_np_sahr_linienzug_sahr",
-  "dc_np_sahr_umgehungstrupp",
-  "dc_np_sahr_handelsfrontmiliz",
-  "dc_np_sahr_flankenstoss_kompanie",
-  "dc_np_sahr_routenwache",
-  "dc_np_sahr_flusskette",
-  "dc_np_sahr_umgehungspanzer",
-  "dc_np_sahr_kolonne_ohne_ende",
-  "dc_np_sahr_handelswagen",
-  "dc_np_sahr_uferkeil",
-  "dc_np_sahr_linienfeuer",
-  "dc_np_sahr_flussmoerser",
-  "dc_np_sahr_routenbatterie",
-  "dc_np_sahr_batterie_der_weiten_wege",
   "dc_np_sahr_wegschliesser",
   "dc_np_sahr_navigator",
   "dc_np_sahr_flusskundschafter",
@@ -66377,11 +66355,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_die_grosse_flotte.jpg",
+   "art_sha256": "18d12fab7eaedd9f7b2f9f1fc473dfd9112a86f888c7ef26d4c8faf93488e6fe",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_die_grosse_flotte.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "b708fe7fe742342218bd8f6c47d0ab698bdb94d592459cc473016f4469dc57ff"
   },
   {
    "id": "dc_np_namar_hafenhelm",
@@ -66400,11 +66394,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_hafenhelm.jpg",
+   "art_sha256": "4f71518714cd5c31262f1a09939684cbeb1f815560f2b20435c2cdd89b867994",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_hafenhelm.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "b7449b84bf74c4e8e69e5a7cfa88b56f364a47e91a0c9fd4842464aa058a5379"
   },
   {
    "id": "dc_np_namar_schmuggelware",
@@ -66423,11 +66433,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_schmuggelware.jpg",
+   "art_sha256": "c2b565607207e8af034c437fa2505539a60378a8735131187db76253589fcf9a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_schmuggelware.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "9613bf062ac464823921de5a0666f7f90f8053f98cb5112801795a525520590c"
   },
   {
    "id": "dc_np_namar_kaipanzerung",
@@ -66448,11 +66474,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_kaipanzerung.jpg",
+   "art_sha256": "fe6dcd455a8166d0ecb4c478c73555dcf0b60f9f7390abff437901cb131a0045",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_kaipanzerung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "9572b67942cccdb7ddfe76552b81e129abe9494a99360196f5b9c87537b825d9"
   },
   {
    "id": "dc_np_namar_lieferwaffe",
@@ -66471,11 +66513,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_lieferwaffe.jpg",
+   "art_sha256": "64e2a1435ab34a5dfa133c659888cad5dfff639ecec0f6c9108bc33bf704b9da",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_lieferwaffe.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "4d405f3723f2d91c7f2f1933ae170a2289ba92e6c40d09a83472e849f8820c93"
   },
   {
    "id": "dc_np_namar_signalpistole",
@@ -66494,11 +66552,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_signalpistole.jpg",
+   "art_sha256": "a109b285b113cafcfb0f3d5ea6123c03e3af1250d06865cb73195f589a7c354b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_signalpistole.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "cd4ed35e8c3bbc09da11c5312ba156d11b63f42518dbdf558797e839c632f0fa"
   },
   {
    "id": "dc_np_namar_hafenkran_haken",
@@ -66517,11 +66591,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_namar_hafenkran_haken.jpg",
+   "art_sha256": "a89aec83045fbb8e13f064d7563e10944949eac445936f2cbe59e02195327db8",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_namar_hafenkran_haken.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "9373a3ad5bb9c84a0c720cefe6348c3c449ed062a5d4e9543f25d13ee51404da"
   },
   {
    "id": "dc_np_sahr_flusslaeufer",
@@ -66541,11 +66631,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_flusslaeufer.jpg",
+   "art_sha256": "1db773f95ebeac5a83e223c8a414ec08d357a9eb45d5a026cfd88b2d5c2fc426",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_flusslaeufer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "9dae53665d55db0e3b63e9c1a14cdc25e3ea62f0d5531d446e3e7eb40cb76537"
   },
   {
    "id": "dc_np_sahr_linienzug_sahr",
@@ -66565,11 +66671,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_linienzug_sahr.jpg",
+   "art_sha256": "747450e9caa829e9318f2f6f47453d6b5ff21e762c4c734e46fc4bc2b8f05059",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_linienzug_sahr.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "03eb14f648d22ef32cde9d1ded12dfd64f24efea7a09ab3ffba4fdb526c50eb5"
   },
   {
    "id": "dc_np_sahr_umgehungstrupp",
@@ -66592,11 +66714,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_umgehungstrupp.jpg",
+   "art_sha256": "972e4d6b2c191d85e2de153c2d675efd7eeeb2f8456469a2b2654d19e26dd75c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_umgehungstrupp.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2f112d80a8aaaa8f8701098c32cf41067bb1f3980d9639b20ce260a89f34a473"
   },
   {
    "id": "dc_np_sahr_handelsfrontmiliz",
@@ -66618,11 +66756,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_handelsfrontmiliz.jpg",
+   "art_sha256": "e5702928e585c0009fd1a6d2cf29bad02117526e3678438c9b461334e2cdaa2f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_handelsfrontmiliz.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "390a94ad8f87cbfa38b3601610269d94fe10d6f93ca5e721619cf2b97f62630c"
   },
   {
    "id": "dc_np_sahr_flankenstoss_kompanie",
@@ -66644,11 +66798,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_flankenstoss_kompanie.jpg",
+   "art_sha256": "6f5f9e58fcaaf8edf2c674eccddcc77898d7c7936225934c335f98e412de2a75",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_flankenstoss_kompanie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "db816e08fac4bbfd1101581c1f42a3cdd04bdad122a4106e3e6a3260adebe218"
   },
   {
    "id": "dc_np_sahr_routenwache",
@@ -66670,11 +66840,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_routenwache.jpg",
+   "art_sha256": "0c0ce8f9d23635ba4c86d171fc07d7ed8c7735a9d50e9224adeedcda21a7b0a6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_routenwache.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "87580126c2d5b3b1cbca0e208c9c894c7ed21f58ee7d4a6352227c4102388be7"
   },
   {
    "id": "dc_np_sahr_flusskette",
@@ -66698,11 +66884,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_flusskette.jpg",
+   "art_sha256": "920bb6d69db20311afd515ff2f645ce05d662f68bed69efc97761efc72b56a76",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_flusskette.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f40d9d1ed80b50074e2d90100f41556be35b4e4352461d78124319fb583929ed"
   },
   {
    "id": "dc_np_sahr_umgehungspanzer",
@@ -66727,11 +66929,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_umgehungspanzer.jpg",
+   "art_sha256": "1da84336495c7164b44ecb526f4b6ffd104d7c14768eb23650eaca6907a09754",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_umgehungspanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "abbfa70a3edd1ba46d9d971b90854d3551747cbd28906aec74f1280581e07e61"
   },
   {
    "id": "dc_np_sahr_kolonne_ohne_ende",
@@ -66756,11 +66974,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_kolonne_ohne_ende.jpg",
+   "art_sha256": "e788a6490b03822f5df6554866aebee77747ba744b5fec74cd1d8600085e9513",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_kolonne_ohne_ende.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "fc9a94343e8260db842cc3f031225b4a603043cd7c913a810934cd3b3e5378b2"
   },
   {
    "id": "dc_np_sahr_handelswagen",
@@ -66784,11 +67018,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_handelswagen.jpg",
+   "art_sha256": "5375f780516fad9d019fc44035f7faf06df737a1620c74cd65fea62162c75b83",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_handelswagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "faace3421823acbfe5b67bff191ff6332c503898d441dc015c1381bc10fe5f70"
   },
   {
    "id": "dc_np_sahr_uferkeil",
@@ -66812,11 +67062,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_uferkeil.jpg",
+   "art_sha256": "32a7be9a5f89dfb6856e906b93ad7dd6a6c8d604cbb8aee656096984ad198d5a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_uferkeil.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "ca1966ff94a2689e5842227c6158ded974ba60a2a254c55f9aa338290a20bc5b"
   },
   {
    "id": "dc_np_sahr_linienfeuer",
@@ -66839,11 +67105,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_linienfeuer.jpg",
+   "art_sha256": "05ac7d2aea96fc6ecda0d80c97c645620e2623529c1317060570396b2f4cf607",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_linienfeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "abd570317d56e1438f1114c4979af40262453e842146db591465193823ac1c6a"
   },
   {
    "id": "dc_np_sahr_flussmoerser",
@@ -66867,11 +67149,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_flussmoerser.jpg",
+   "art_sha256": "9be672325f29e24e2680e2a193ee8720405477340faf44d5031a22517d050c12",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_flussmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "3675bfa206e08dfd90d4ff856543f43384a83f3784b3a29241d4e41f22998656"
   },
   {
    "id": "dc_np_sahr_routenbatterie",
@@ -66894,11 +67192,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_routenbatterie.jpg",
+   "art_sha256": "41f0fb18ad76ca066fb7c5d3f1921b902f65ba2d065c904fa7504579292f1fc7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_routenbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e431036553f494526693285067fe131b5c2a3f98052618e435479f8c50a1cab1"
   },
   {
    "id": "dc_np_sahr_batterie_der_weiten_wege",
@@ -66920,11 +67234,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_batterie_der_weiten_wege.jpg",
+   "art_sha256": "8de27ad752c4e129ea0706b6d3d5141e2ab99f19c641b352b289b62cda0a401c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_batterie_der_weiten_wege.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "ae97845e83967466aa826133a6d6074cebdf6d140c9521461ce756be699891ea"
   },
   {
    "id": "dc_np_sahr_wegschliesser",
