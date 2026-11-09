@@ -1,43 +1,11 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1693,
+ "new_faces": 1725,
  "missing_illustrations": [
-  "dc_np_sahr_wegschliesser",
-  "dc_np_sahr_gilde_der_routen",
-  "dc_np_sahr_fluss_ueberqueren",
-  "dc_np_sahr_uferversorgung",
-  "dc_np_sahr_handelsrabatt",
-  "dc_np_sahr_die_grosse_umgehung",
-  "dc_np_sahr_flussmantel",
-  "dc_np_sahr_routenkarte",
-  "dc_np_sahr_leichtes_gepaeck",
-  "dc_np_sahr_handelsschild",
-  "dc_np_sahr_flankenklinge",
-  "dc_np_sahr_ruderpanzer",
-  "dc_np_dargan_kaderzug",
-  "dc_np_dargan_schuldner_kompanie",
-  "dc_np_dargan_haftende_haeuser",
-  "dc_np_dargan_zeilenvollstrecker",
-  "dc_np_dargan_registerwache",
-  "dc_np_dargan_vollstrecker",
-  "dc_np_dargan_haftungsstoss",
-  "dc_np_dargan_tilgungswagen",
-  "dc_np_dargan_schuldbrecher",
-  "dc_np_dargan_kadersturm",
-  "dc_np_dargan_buchkrieg",
-  "dc_np_dargan_zielbatterie",
-  "dc_np_dargan_registermoerser",
-  "dc_np_dargan_abschlussfeuer",
-  "dc_np_dargan_zinsbatterie",
-  "dc_np_dargan_gebundene_haeuser",
   "dc_np_dargan_buchpruefer",
-  "dc_np_dargan_feldregistrator",
-  "dc_np_dargan_schuldeneintreiber",
-  "dc_np_dargan_kaderkolonne",
   "dc_np_dargan_hauptbuchhalter",
   "dc_np_dargan_schuldregister",
-  "dc_np_dargan_haftungskasse",
   "dc_np_dargan_das_grosse_buch",
   "dc_np_dargan_zeile_setzen",
   "dc_np_dargan_markierter_schlag",
@@ -67264,11 +67232,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_wegschliesser.jpg",
+   "art_sha256": "b0e6ec5efd9fe121b01999528dfeb8ed666e8374eb1d46662632a94d6b40d808",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_wegschliesser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "991c3400bd3cc5d22ad47827b084ddc10340e3d70edf2178388ea44c5dcd600a"
   },
   {
    "id": "dc_np_sahr_navigator",
@@ -67502,11 +67486,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_gilde_der_routen.jpg",
+   "art_sha256": "3212c835881cd5963e7ae2df16b185acf35d9da406f953b502e7a24c0a69da72",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_gilde_der_routen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "fd78b05f3286b1eb20880d945d72754ba5151f98a4414330e72ba0b381008d43"
   },
   {
    "id": "dc_np_sahr_routennetz",
@@ -67837,11 +67837,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_fluss_ueberqueren.jpg",
+   "art_sha256": "0d9d9aa7e8fb276307381f8d7ca9b0c965262b0ffc3bccd18edaec4badb712ab",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_fluss_ueberqueren.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "05587cdbe1e2794b3af4f9f793d1d09115a02c76b01a8c5acf9b077d4bdf9e15"
   },
   {
    "id": "dc_np_sahr_uferversorgung",
@@ -67860,11 +67876,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_uferversorgung.jpg",
+   "art_sha256": "d110efe091545f49b32b7aecc12e8836e194643e40ac15c64114ee5db5df6679",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_uferversorgung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d638b2eceac8e611c25f38e215bf99229d6fa386045d734b7b88d30b639950ce"
   },
   {
    "id": "dc_np_sahr_handelsrabatt",
@@ -67883,11 +67915,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_handelsrabatt.jpg",
+   "art_sha256": "3c6666acc6a7464639319b9c90a491001d7294bf3f4aa29d8353e43cad070087",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_handelsrabatt.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "b46f06440cbb9dcf4a0f63963560f307b351d3316e3031ccd0e593e32f246ebf"
   },
   {
    "id": "dc_np_sahr_die_grosse_umgehung",
@@ -67906,11 +67954,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_die_grosse_umgehung.jpg",
+   "art_sha256": "3513d32eeef75188fd123bfca14607fbae3ff0fe258ae2a076759af1aca5a00e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_die_grosse_umgehung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "49cbeb7585fe0e52065bc0d89f82486e3a799ad83b7f4a30aa5e1ad74040e106"
   },
   {
    "id": "dc_np_sahr_flussmantel",
@@ -67931,11 +67995,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_flussmantel.jpg",
+   "art_sha256": "c2122425ea000a2fc379076e55ce68378b9989e99caa21fd909a6932bf274352",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_flussmantel.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d56fece778e3a2dcc57d2e1606bac8e33d89ba57665d62656b8635a86f81bdb9"
   },
   {
    "id": "dc_np_sahr_routenkarte",
@@ -67954,11 +68034,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_routenkarte.jpg",
+   "art_sha256": "259d5f3e900b716504d78bbc5d5301d3007dbaaa83e7721a55376ec3b76c140f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_routenkarte.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "c55febc4a512272b14791a6fb35db529ec7a15c5053ae9701c0aa3faed40b0a9"
   },
   {
    "id": "dc_np_sahr_leichtes_gepaeck",
@@ -67977,11 +68073,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_leichtes_gepaeck.jpg",
+   "art_sha256": "95b1f3fb242dd47764e4962bcf324f87cb89b6de7653f34790549c1fa9a1c1b5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_leichtes_gepaeck.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "42112948632f9972c485b6725d624a4ec3b7e8fcf88404ec39e0155b4abf8e31"
   },
   {
    "id": "dc_np_sahr_handelsschild",
@@ -68000,11 +68112,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_handelsschild.jpg",
+   "art_sha256": "bf34292a9ddd8d02605f0d4074ab92b8021298ca46381ec55f970849109195ab",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_handelsschild.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "ddb592fc15e227a8c224c0cca43c39a2628d0d6d897b1425954e9a6bdfb53d17"
   },
   {
    "id": "dc_np_sahr_flankenklinge",
@@ -68023,11 +68151,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_flankenklinge.jpg",
+   "art_sha256": "ed2b3a7e2af59e083bd37f08649cd40c8b9d96d4023673901df1b311f26b619b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_flankenklinge.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "c4571b5f5cc4a732a3ebb7fdf25aa403142433d8aa2476b3c11f49a5bc7bb44f"
   },
   {
    "id": "dc_np_sahr_ruderpanzer",
@@ -68046,11 +68190,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_sahr_ruderpanzer.jpg",
+   "art_sha256": "5c965e5825067fbe8a4363bfbe14ff7e6df2a8bf7951f39b89119ee305652326",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_sahr_ruderpanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "978db815a58aa5d7e402c284cccd7f7d22bfdab3dbcc96a3e251f7db8a5dd437"
   },
   {
    "id": "dc_np_dargan_kaderzug",
@@ -68070,11 +68230,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_kaderzug.jpg",
+   "art_sha256": "9b259cf5db9fd587ddae370d927efa3f945b9508d52a228142e5dc64ab57cc1c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_kaderzug.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "87709b24b3a36d054e468f44378106d0f4050a4eedbbd25afe7449b71601a5df"
   },
   {
    "id": "dc_np_dargan_schuldner_kompanie",
@@ -68096,11 +68272,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_schuldner_kompanie.jpg",
+   "art_sha256": "bc52db3f0e6b15d3db838932c9643b24b74996f6ae9df293ee79fdfb8dc19fd0",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_schuldner_kompanie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "99e4b134f7008ab67838e11c410335589b2d1d1d932d99402e5db6e2984da21b"
   },
   {
    "id": "dc_np_dargan_haftende_haeuser",
@@ -68120,11 +68312,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_haftende_haeuser.jpg",
+   "art_sha256": "d55633d33f5a8aa035af08310c0a967acacba5233d9d5351f4a4a83ca49ebb64",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_haftende_haeuser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "702b84816fdeabb36e43f6bec556084b8a18686df0e117db7d61b67a687e6b2d"
   },
   {
    "id": "dc_np_dargan_zeilenvollstrecker",
@@ -68144,11 +68352,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_zeilenvollstrecker.jpg",
+   "art_sha256": "b2f3be015084e386b675d94db6e8ef29495e447dbbd719c8b70176252ec4411f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_zeilenvollstrecker.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d52d79c03946d309ac2df6f2532e827d7e1c0e952a04fc8a4b1068018ffaefaa"
   },
   {
    "id": "dc_np_dargan_registerwache",
@@ -68170,11 +68394,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_registerwache.jpg",
+   "art_sha256": "a482786ee9f3246f87682ce7803eab29c55ace74d8f66d153666c34a469095c6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_registerwache.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "77824cbfe142adb1f890a6b7fcbfd5d0ea9874b653b711d28fd7f2251ab4cf34"
   },
   {
    "id": "dc_np_dargan_vollstrecker",
@@ -68196,11 +68436,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_vollstrecker.jpg",
+   "art_sha256": "aa610b950df7138d20171a2db2462482c25583fd3033b56ca46ebe5a259f4716",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_vollstrecker.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "47e4a5c4b396651895eeffb2506ef11c18b2690fd4f6b4b3baa04c5a9fc065bc"
   },
   {
    "id": "dc_np_dargan_haftungsstoss",
@@ -68224,11 +68480,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_haftungsstoss.jpg",
+   "art_sha256": "a95956fc2421f08ad26f22d3905f6999a4101522991582c4aeddb113afb90098",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_haftungsstoss.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e4266d101bf0eb8e2d0ef40a63bde80e9fee2f1100e7434c9ac57632d622e299"
   },
   {
    "id": "dc_np_dargan_tilgungswagen",
@@ -68250,11 +68522,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_tilgungswagen.jpg",
+   "art_sha256": "31f145f5809d9c8eb2e894eb340f8886bb8a9422f56f84f66e547607f1cde350",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_tilgungswagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "161c0a8de123c58fa76a485c29dce0e17836f16fd0f50181edc644b03edbbccf"
   },
   {
    "id": "dc_np_dargan_schuldbrecher",
@@ -68278,11 +68566,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_schuldbrecher.jpg",
+   "art_sha256": "091b002a1948d0d343d077461d6d544f1e08213a58354c9cf00d6d47e0df1a7d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_schuldbrecher.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5f4c96b93356939d7ad58011b5b396d379831eb888273f66ea4551b5249a045d"
   },
   {
    "id": "dc_np_dargan_kadersturm",
@@ -68304,11 +68608,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_kadersturm.jpg",
+   "art_sha256": "ce766e78df5277f15d5ca5224926b08e74dea0e356f51d66cae695eb928193bf",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_kadersturm.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7ea609a27fd466477900e8b9777c2597c3bbae3f1769eff3fc1ec39fadbac414"
   },
   {
    "id": "dc_np_dargan_buchkrieg",
@@ -68333,11 +68653,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_buchkrieg.jpg",
+   "art_sha256": "77e044aca90630660667054b4989e0fd8fc8a3f4720c0436836d8d434c292b39",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_buchkrieg.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "79d5a34bfa081183d4e099e65b4d9ef266c0962afd5e472332bc219211b160f2"
   },
   {
    "id": "dc_np_dargan_zielbatterie",
@@ -68359,11 +68695,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_zielbatterie.jpg",
+   "art_sha256": "41793269724bf4f6fb6117eb0e5b1dac71fd638379cc8e6ea58f1a2976a8cb3e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_zielbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7caea3b4ad7b18bd7acc3a0c1af5663066b8e07867e691e7f94d8acee67a442a"
   },
   {
    "id": "dc_np_dargan_registermoerser",
@@ -68386,11 +68738,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_registermoerser.jpg",
+   "art_sha256": "e308a1e7d5d9b2a0546d64e53e6ee91d95cabdd2b75de5a63831c4295ecfcd97",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_registermoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e22395bacdb82fef1b4c271eca1715babde34c2cba8b6a417154ad4a42d12f4c"
   },
   {
    "id": "dc_np_dargan_abschlussfeuer",
@@ -68412,11 +68780,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_abschlussfeuer.jpg",
+   "art_sha256": "5595a979f78ca23ee4e9920aee18568c613aa086661faac489b3ad04672a8716",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_abschlussfeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "91ce66fdd5053b767944b3d8fe7d12c30dd71f8fba2dd023641f04dd4236a24a"
   },
   {
    "id": "dc_np_dargan_zinsbatterie",
@@ -68439,11 +68823,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_zinsbatterie.jpg",
+   "art_sha256": "200aebb9f4ea20154b41c0094ccf83695917c72ee5d32a7ebc4e3d1275fc54d8",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_zinsbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "0b10ce4e1f6404eb61d7133ed9bba227a8fbfe320b5ad70a00d102b1b27f6d7a"
   },
   {
    "id": "dc_np_dargan_gebundene_haeuser",
@@ -68466,11 +68866,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_gebundene_haeuser.jpg",
+   "art_sha256": "dfa3a6a0bf30dafc3b9b89798bf2a7524b72275cb9c345f470b36bc31c16ffae",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_gebundene_haeuser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2fe73e17c339045918a21c0c1403998c8e7ec028b12f6c443c40554fa1e8518f"
   },
   {
    "id": "dc_np_dargan_buchpruefer",
@@ -68514,11 +68930,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_feldregistrator.jpg",
+   "art_sha256": "3c6a122aaa4baa118f90b49353fdfea3156c6a0d13b0da806da3410ddec59614",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_feldregistrator.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "1d9f600eadac9216b28a2c2852d9f4a7e590f4c003467ba1ef6767dd4a042c16"
   },
   {
    "id": "dc_np_dargan_schuldeneintreiber",
@@ -68538,11 +68970,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_schuldeneintreiber.jpg",
+   "art_sha256": "3ec93b93b66e77cdc1ad8a20eb0e1a43cbfc1e79389795dff38493bd8f805d43",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_schuldeneintreiber.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "a4672d078527eecc5d59093ec554ae2018a830b589ddffdad768583b65707967"
   },
   {
    "id": "dc_np_dargan_kaderkolonne",
@@ -68566,11 +69014,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_kaderkolonne.jpg",
+   "art_sha256": "37c27772cc007e84bdcaac87148aeb8cfeab6feed4ca1537720ff8bfddf01bea",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_kaderkolonne.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "aa4d4788fa6cac301104d242cb8ed2a075389fab301ae0fb6995a74c9a634a25"
   },
   {
    "id": "dc_np_dargan_hauptbuchhalter",
@@ -68637,11 +69101,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_dargan_haftungskasse.jpg",
+   "art_sha256": "1fc31541310a9f42ea46540dcbf172072f88a8c12cdc8cf913a68681b512ba09",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_dargan_haftungskasse.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "ce0b1d1c76d4b11b60778ea33e256466f3fe93026bdfcc28e1484ecb4abd9172"
   },
   {
    "id": "dc_np_dargan_das_grosse_buch",
