@@ -1,92 +1,460 @@
 {
-  "dc_tac_haltezug_am_knotenpunkt": {
-    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_haltezug_am_knotenpunkt.jpg",
-    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
-    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6970ba9e22c69e6ca0d5eec9580e912d35de533ee217b4b27f1c21911debe817.jpg",
-    "sha256": "6970ba9e22c69e6ca0d5eec9580e912d35de533ee217b4b27f1c21911debe817",
-    "subject": "Infanterie am ländlichen Straßenknotenpunkt mit Feldtelefon",
-    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
-  },
-  "dc_tac_schwerer_bindungskeil": {
-    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_schwerer_bindungskeil.jpg",
-    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
-    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/42ab7e3ecec4cdaefac6842082c3172e7a924e497d6200fc33d1bcdf7d4db90d.jpg",
-    "sha256": "42ab7e3ecec4cdaefac6842082c3172e7a924e497d6200fc33d1bcdf7d4db90d",
-    "subject": "Schwerer Panzer an steinerner Brückenrampe",
-    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
-  },
-  "dc_tac_anmarschbeobachtung": {
-    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_anmarschbeobachtung.jpg",
-    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
-    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/396914d04781b4425758512abc8f88244079b979a77d8e4bcd9d5d93d9ceeb7c.jpg",
-    "sha256": "396914d04781b4425758512abc8f88244079b979a77d8e4bcd9d5d93d9ceeb7c",
-    "subject": "Beobachterin und Funkgerät über Talstraße",
-    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
-  },
-  "dc_tac_taktische_verkehrsleitstelle": {
-    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_taktische_verkehrsleitstelle.jpg",
-    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
-    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/aefe02a1617e60092675863425bab0efd2c855ecacb050d0f27efc83e0c2caa1.jpg",
-    "sha256": "aefe02a1617e60092675863425bab0efd2c855ecacb050d0f27efc83e0c2caa1",
-    "subject": "Logistikraum mit Funkgeräten und Transportfahrzeug",
-    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
-  },
-  "dc_tac_unterstutzungsgruppe_am_flugel": {
-    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_unterstutzungsgruppe_am_flugel.jpg",
-    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
-    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d4628279c6017470d5fe29f6b08a29a76b39a6f63134fbda2fdfd05c5ba5abf8.jpg",
-    "sha256": "d4628279c6017470d5fe29f6b08a29a76b39a6f63134fbda2fdfd05c5ba5abf8",
-    "subject": "Unterstützungsgruppe mit ruhendem Maschinengewehr",
-    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
-  },
-  "dc_tac_bewegliche_feuerbasis": {
-    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_bewegliche_feuerbasis.jpg",
-    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
-    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/2b1ff1eb07285ec0ea18e53f3c2c717828a674601a91ce2b1ba44d40c32cbae5.jpg",
-    "sha256": "2b1ff1eb07285ec0ea18e53f3c2c717828a674601a91ce2b1ba44d40c32cbae5",
-    "subject": "Schwerer gepanzerter Radwagen am Feldweg",
-    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
-  },
-  "dc_tac_nachhutkompanie": {
-    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_nachhutkompanie.jpg",
-    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
-    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/1868f114ab8455d5fa6c035109c47e177e1e640a60c6f33129c7ff04b68d5266.jpg",
-    "sha256": "1868f114ab8455d5fa6c035109c47e177e1e640a60c6f33129c7ff04b68d5266",
-    "subject": "Geordnete Nachhut unter steinernem Dorftor",
-    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
-  },
-  "dc_tac_ausweichender_spahwagen": {
-    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_ausweichender_spahwagen.jpg",
-    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
-    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/fd64678f50d26c01ee48b74079dbe34c1757275e8a82df1c8776cbdaadb00b8e.jpg",
-    "sha256": "fd64678f50d26c01ee48b74079dbe34c1757275e8a82df1c8776cbdaadb00b8e",
-    "subject": "Leichter Aufklärungswagen an nebliger Waldkurve",
-    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
-  },
-  "dc_tac_vorgeschobener_meldetrupp": {
-    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_vorgeschobener_meldetrupp.jpg",
-    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
-    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/41b546d048c986a1d8b7a8476c4de0665900dce10e81446477d5dc1243028be1.jpg",
-    "sha256": "41b546d048c986a1d8b7a8476c4de0665900dce10e81446477d5dc1243028be1",
-    "subject": "Meldetrupp mit Feldstecher und Funkgerät am Talrand",
-    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
-  },
-  "dc_tac_beobachtungswagen_am_rand": {
-    "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_beobachtungswagen_am_rand.jpg",
-    "provenance": "GenerateImage; user pt204u; individual motif, not collage",
-    "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/888b3ba4026280f767cc4739baeaf4df7fdb8cd19f423c55074e3410b18f3222.jpg",
-    "sha256": "888b3ba4026280f767cc4739baeaf4df7fdb8cd19f423c55074e3410b18f3222",
-    "subject": "Kompakter Aufklärungs-Radwagen am Scheunenrand",
-    "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-    "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
-  }
+ "dc_tac_haltezug_am_knotenpunkt": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_haltezug_am_knotenpunkt.jpg",
+  "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6970ba9e22c69e6ca0d5eec9580e912d35de533ee217b4b27f1c21911debe817.jpg",
+  "sha256": "6970ba9e22c69e6ca0d5eec9580e912d35de533ee217b4b27f1c21911debe817",
+  "subject": "Infanterie am ländlichen Straßenknotenpunkt mit Feldtelefon",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+ },
+ "dc_tac_schwerer_bindungskeil": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_schwerer_bindungskeil.jpg",
+  "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/42ab7e3ecec4cdaefac6842082c3172e7a924e497d6200fc33d1bcdf7d4db90d.jpg",
+  "sha256": "42ab7e3ecec4cdaefac6842082c3172e7a924e497d6200fc33d1bcdf7d4db90d",
+  "subject": "Schwerer Panzer an steinerner Brückenrampe",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+ },
+ "dc_tac_anmarschbeobachtung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_anmarschbeobachtung.jpg",
+  "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/396914d04781b4425758512abc8f88244079b979a77d8e4bcd9d5d93d9ceeb7c.jpg",
+  "sha256": "396914d04781b4425758512abc8f88244079b979a77d8e4bcd9d5d93d9ceeb7c",
+  "subject": "Beobachterin und Funkgerät über Talstraße",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+ },
+ "dc_tac_taktische_verkehrsleitstelle": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_taktische_verkehrsleitstelle.jpg",
+  "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/aefe02a1617e60092675863425bab0efd2c855ecacb050d0f27efc83e0c2caa1.jpg",
+  "sha256": "aefe02a1617e60092675863425bab0efd2c855ecacb050d0f27efc83e0c2caa1",
+  "subject": "Logistikraum mit Funkgeräten und Transportfahrzeug",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+ },
+ "dc_tac_unterstutzungsgruppe_am_flugel": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_unterstutzungsgruppe_am_flugel.jpg",
+  "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d4628279c6017470d5fe29f6b08a29a76b39a6f63134fbda2fdfd05c5ba5abf8.jpg",
+  "sha256": "d4628279c6017470d5fe29f6b08a29a76b39a6f63134fbda2fdfd05c5ba5abf8",
+  "subject": "Unterstützungsgruppe mit ruhendem Maschinengewehr",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+ },
+ "dc_tac_bewegliche_feuerbasis": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_bewegliche_feuerbasis.jpg",
+  "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/2b1ff1eb07285ec0ea18e53f3c2c717828a674601a91ce2b1ba44d40c32cbae5.jpg",
+  "sha256": "2b1ff1eb07285ec0ea18e53f3c2c717828a674601a91ce2b1ba44d40c32cbae5",
+  "subject": "Schwerer gepanzerter Radwagen am Feldweg",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+ },
+ "dc_tac_nachhutkompanie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_nachhutkompanie.jpg",
+  "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/1868f114ab8455d5fa6c035109c47e177e1e640a60c6f33129c7ff04b68d5266.jpg",
+  "sha256": "1868f114ab8455d5fa6c035109c47e177e1e640a60c6f33129c7ff04b68d5266",
+  "subject": "Geordnete Nachhut unter steinernem Dorftor",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+ },
+ "dc_tac_ausweichender_spahwagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_ausweichender_spahwagen.jpg",
+  "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/fd64678f50d26c01ee48b74079dbe34c1757275e8a82df1c8776cbdaadb00b8e.jpg",
+  "sha256": "fd64678f50d26c01ee48b74079dbe34c1757275e8a82df1c8776cbdaadb00b8e",
+  "subject": "Leichter Aufklärungswagen an nebliger Waldkurve",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+ },
+ "dc_tac_vorgeschobener_meldetrupp": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_vorgeschobener_meldetrupp.jpg",
+  "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/41b546d048c986a1d8b7a8476c4de0665900dce10e81446477d5dc1243028be1.jpg",
+  "sha256": "41b546d048c986a1d8b7a8476c4de0665900dce10e81446477d5dc1243028be1",
+  "subject": "Meldetrupp mit Feldstecher und Funkgerät am Talrand",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+ },
+ "dc_tac_beobachtungswagen_am_rand": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v1/dc_tac_beobachtungswagen_am_rand.jpg",
+  "provenance": "GenerateImage; user pt204u; individual motif, not collage",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/888b3ba4026280f767cc4739baeaf4df7fdb8cd19f423c55074e3410b18f3222.jpg",
+  "sha256": "888b3ba4026280f767cc4739baeaf4df7fdb8cd19f423c55074e3410b18f3222",
+  "subject": "Kompakter Aufklärungs-Radwagen am Scheunenrand",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "generated image viewed; no card text/frame; fictional military oil study"
+ },
+ "dc_np_eldran_gegenstossreserve": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_gegenstossreserve.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4317ace6936abafe20f4f27d0c5688fe395d442eb545f862fb1721424c679311.jpg",
+  "sha256": "e8c64c27bf65e5593ff5d25437d5ee7bb483da027ab21905248696598e3676b1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_haushaltstruppe": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_haushaltstruppe.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/6447ed39cfdd2bba0dd7b0c2fce62b2461044a0c23694cb1dace48fae57d684c.jpg",
+  "sha256": "17786b43d7c28e9cd3d65ae9b48105d0f81dfd63c08e8150df698a5bfc816be6",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_kronlinie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_kronlinie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/b611144943ce31bf299c01961dfb175952916cbc690473384180bf7697b0310b.jpg",
+  "sha256": "67b6c4147cc7e54c98dfdf9bc54ac3e331e4539fccf4d61e8fa2e1b5676ee9aa",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_landsturm_kronfeld": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_landsturm_kronfeld.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c9b965cedf50a191850a35326c4d70ce331e06b5e2f92f263546b8886afa65d5.jpg",
+  "sha256": "3aae402fdbcfd7c77e2f46c5d194b423672b99a922394897c94e1c6a0d42e0fb",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_pioniere_der_grenzmark": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_pioniere_der_grenzmark.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/9e70f90fc07d95d903b35700cca5212e0c50f74c0bd9d4cf4e7822d45f98f90e.jpg",
+  "sha256": "6fa2539150d8d6de99e674f1865666f9c06a5aff84afcce54a21502f3896e4be",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_eldran_sperrzug_weissdorn": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_eldran_sperrzug_weissdorn.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/f683c7cf7b616ac6765689be7b27c894e881a31a6db30bb019474a2d30d9983c.jpg",
+  "sha256": "ad444a8dbfe6b3eabe798942b2c05d71ba3193cc39972659f03b718fa9af3b29",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_akteneinsichtstrupp": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_akteneinsichtstrupp.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c84427873a24a3bf83b8f822268c15fa611b7f2290b8b93c23972d8ed8fd1a6f.jpg",
+  "sha256": "e4a1a9ec4ef956d4761b79e57d6e5c5ce97c85deee457c14a74bd08c4353525f",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_begleitzug_freigabe": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_begleitzug_freigabe.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/76ef3741416dfa878c97ee82d66f80732cd9af401da2390f0675fd2ad4022c82.jpg",
+  "sha256": "06f53819c5380cbeb1f8f6d77e3ca5968820992bc2116d10820b943cacc42f9a",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_beschaffungsvorlauf": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_beschaffungsvorlauf.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4448597e7263312d9aac9f41fb08a6e38b764d52e477eb7defb20d1458283506.jpg",
+  "sha256": "73b4b2b1e64fbe2152ef4fb5c6d008054d3a3d51811aafda9a9a4d026ee04c7d",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_beweisaufnahme": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_beweisaufnahme.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/804e509ac41a1910a3b6e9aecebb1e856b85c23af5f81b90dc36f9ae817c483f.jpg",
+  "sha256": "709f9265fc46673c3315ec954c0149e97934ccbe305aaeaccdd4dd487d2a8660",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_bezirksarchiv": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_bezirksarchiv.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a837c97ae80596c29845caea3db8ad1144ce59d3893120b795aa07d182cb0dcb.jpg",
+  "sha256": "90abc25519b9ea5d837bc8c2290754e8283ba2816de0034793b0cfcf61e6d7d0",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_bezirkskette": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_bezirkskette.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8ce3c9a6b027fec4a3f5df07b1e4f6c122c4c0e056317ce9493b6fd2ae0428e0.jpg",
+  "sha256": "4db577648d79aa92046d5a19a1e99c647002fa931e5f8babe6361fcbc951eabd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_bundesrichter_kompanie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_bundesrichter_kompanie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8105187649cc11b26d467e733243f25f1d40962e5dbc3952ea603c5a7fde0c5b.jpg",
+  "sha256": "51a51d3070690dbffc7e31c2e5cb8c0223fcbdbcc08120faffcd0b02d44064f1",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_bundesschild_neun": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_bundesschild_neun.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ac2ec77c65b2bdbbcc18844499572b7abf9aa860e85282f1410177dd19831281.jpg",
+  "sha256": "90182866abfe976a8f25a66c72f40033cd0ed5271b1ce7eabbfd37c63ff34318",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_dienstgewehr_muster_vier": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_dienstgewehr_muster_vier.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/49cfe752fde136c106e3386ae37d3970a3c401f04e1f7f4a11a29eccc34dbbee.jpg",
+  "sha256": "f7c0b54e86dd8fe2abba73800a96c165825f1f9f659bf0a7188e72c9e5727685",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_dienstweg": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_dienstweg.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/2b113164179452de16c1a0cbd624382ffc44227870e843c002ba23cf61228709.jpg",
+  "sha256": "c2fff15b6bec0714fa8997f43ecbcd719e7e692a0a0ee4b8302d938ee86ffa5a",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_dreischluessel_haubitze": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_dreischluessel_haubitze.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/5517a57cda19508113d2d9a3c799b22b1ef063018fea90c02c110eab2ff33b52.jpg",
+  "sha256": "80c70219eb07cc85b1985d83f3e524de249bfcbbabf5c038b9f5f5ee7f6a01d9",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_feuerplan_ausgeloest": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_feuerplan_ausgeloest.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/86f45c9e21a783fe5c11baac949f3a487fc00b88f3140a79b67dcf3a693a8120.jpg",
+  "sha256": "967c235ed0b66cca02753f20756c03f8b58ba76dc9530ecb644cb434c24b5bf6",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_feuerplanrohr": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_feuerplanrohr.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/99c3739e61dd6f2d16e0b4ca81378d7246516bd51daa0ac856f9426e324c6e63.jpg",
+  "sha256": "bd6096a5c3e15ce560d55c286d3ef442e278f579a6f49abd1319f711c0372610",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_formale_freigabe": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_formale_freigabe.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/63eaafa645da438146e87f7dceb30b06ae3aaeede58a9e2b1fec95e43c14fe11.jpg",
+  "sha256": "d5450ac713ae91d9a79980c095867f33f993e6a3e5e9ff3fff61a7bdc952eeb5",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_freigabebatterie": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_freigabebatterie.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/829a4b3b26561451efe02bdd9e1fec39f16d30d821962facdaf8d8bb403ce5f9.jpg",
+  "sha256": "62fd345a4639e77f51561edc1a6b93090dabe44f50d2917c47c580058d118e14",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_freigabewagen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_freigabewagen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ea3f74e6b6521da06af4e6a8e10c2883a0db423945787926f35c733244e03078.jpg",
+  "sha256": "548c3ecdfbb848eae84eeb8ee2a75cc8b6d71e73c3b600fc4ca3c0de3fbe1275",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_grenzbeobachter": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_grenzbeobachter.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/62d929f288692ffaea1ece919e9471e74db9cc583d9c3d64332c426b5640f3e9.jpg",
+  "sha256": "b19b3750b4ea0797fcaf89d101207ee982eb859853f78b57c474864e058d66be",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_grosser_feuerplan": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_grosser_feuerplan.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/69d949d16f4ef910a1171238f9478683b029ca38905bb2552bc21108c74f781a.jpg",
+  "sha256": "62599320414b5eaffa3201ab85afb658ad81a2d3dffd22e9dcbf4634a6ee2fe9",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_kommission_der_drei": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_kommission_der_drei.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c1c89d52ca49627cea2cea97a0636bdb5c61f2c35c069cfd07a2a07fd77906b0.jpg",
+  "sha256": "b21d381c3838d464b3a827ab18c25ef234c9e8fe3384351fed9644f4e123f1cf",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_lagebildmelder": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_lagebildmelder.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/4ae1f6facd9c6de3f3a6e568cd3a21c1ef205458a8622c92a2272ce1769d9a26.jpg",
+  "sha256": "e026f6458b35bdbebe2836120b810f808b1173b2436f93ea30922b673717e147",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_landwehr_bezirk_vier": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_landwehr_bezirk_vier.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/847b53e1110ddbdf3aa3e8dd7e5fc8777cd6311a426154108095463c5102c47b.jpg",
+  "sha256": "239e256aab4065715d86a64908dd76086cacf3db1aa0ce34f2960fd6501f5cb2",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_messbatterie_grenzstein": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_messbatterie_grenzstein.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/dd5cf4df03c755fe6d509f2ffa864aa345cab1d18436816d14d0223a299ed376.jpg",
+  "sha256": "42ef2436e7cf5cd6871dec8d939f7ae8daa53f1e4b159207bd48c5491fbd21b5",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_methodischer_vorstoss": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_methodischer_vorstoss.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c0752ea5a96e135edf3ed76889fdde3e62329744e2990db2ff476b2fe287b12d.jpg",
+  "sha256": "48a0913b814e9ed6be3748cb58d9bd5c00168551daad175cc6f3bf9646aa721e",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_normmoerser": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_normmoerser.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/27dae71bbb983807078f7d92760653bdaeed5e601df0e08d78787850e3fc80ef.jpg",
+  "sha256": "b90b5e55d0bfc124eb00d70e295f14932161e1549d9a9f81d114bdd8eca44e05",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_normpanzer_baureihe_zwei": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_normpanzer_baureihe_zwei.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/7606564fa3efc8d6fc6d812ce4a365ffa9a89093668098cb03940c41b716a418.jpg",
+  "sha256": "0bb37d53451c0a8a58192ff065901ca47f1189e9b85b0e317c0c87a3ec925c76",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_normschuetzen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_normschuetzen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/a1cde031c0241831611abf8db84e866d5cccdfe6b3bb983de0ae5aa14de95a76.jpg",
+  "sha256": "373f850b92b448a0a652cc4e7881862c0acf8661204cb2d405627cda6ae27625",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_normverband_schliessen": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_normverband_schliessen.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/ff1d8bfd95157d4e030c6dc1eb5e8e10879ec37f525a923507468e3385e16d1f.jpg",
+  "sha256": "499ab1a9eb456e64957ebaa4c0816ba97bc205fc99227ffca5ce2d3bb2fd7921",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_ordnungsamt_front": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_ordnungsamt_front.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/828500f9f82a3d559a3240e285b345a6869b6ff9475b9bb104f0bdda73737e4c.jpg",
+  "sha256": "f3f9b00a6c52871cd0fdf93753d594ad8515a707f13a140ed9d620c00ad86ee8",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_paragraphenzug": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_paragraphenzug.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/238eee3e7b43375bc05be90f66dfaa742d2d958f81292ca8eb90d0027a09f1d6.jpg",
+  "sha256": "409ff4fa6e0a0a277780b43f2405a30c4a81581e27b122f8e512f01e6a504836",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_planmaessige_abloesung": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_planmaessige_abloesung.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/c55217eea0c1c8207dccb901500e892fa7524941c9413e8f727e7eed2a9770b1.jpg",
+  "sha256": "ad74347e2c859ba9c41a7e9f76227bdd86fd055b934a7c9ca5ef57dc210dc139",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_pruefplakette": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_pruefplakette.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/2f123c088bfb6597c8f9ffbbf3b7cb1c59d31752df92f933eeda9b5a7adfed0c.jpg",
+  "sha256": "72397786a12662b8aba089ad1bf1fef2ba22266c23c870598430061bf99014da",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_pruefstandkeil": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_pruefstandkeil.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/960c2efb933ecaf06a5380e0a859d1f50aae661761edd8778bdf6101515df7d5.jpg",
+  "sha256": "b1bd50fad10b67526dd23cdb54381124a694c60052b806aae876f2873eff6968",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_sachstandsbericht": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_sachstandsbericht.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/8ee213020d3616e213f15e5ddc7469cf70651b9411ed5417131ab065b28c736b.jpg",
+  "sha256": "097c627eb34a6c75516f1d1e78161da5869efcd68c278850bcdebb45e08a5a16",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_schusstafel_bezirk": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_schusstafel_bezirk.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/060d687b431645805c0374437ee9eab082c2343124bf2ef15a7b193845de4190.jpg",
+  "sha256": "ea722705e32e9cca525eb51793a5654e44e90afc1393d917184cb7a8df1696bd",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_schutzweste_klasse_drei": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_schutzweste_klasse_drei.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/650dfb892819521bceb8737067d3949fad034dcbe6d77a3339f4090c2cd55e2f.jpg",
+  "sha256": "aea7266643ea5e5d6c73e1d53114ec4d41db69e6f684701b974bdc40bfb5c7bc",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_stahlhelm_bundesnorm": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_stahlhelm_bundesnorm.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/99b31ccfc5ee33de57278f4db232876f71db88202148725afa116ad2cf1c60bb.jpg",
+  "sha256": "acd4c8c41dd9d5e487610842be6a1718ae9c844ba78bad4f3c1fb35cec41b1b6",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_verfahrenshoheit": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_verfahrenshoheit.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/1092071927de86e22c4863c8a1d5dcbc622de5173059d8893c5a3115989e7b34.jpg",
+  "sha256": "7e8b8ef7cf17cdcda3f46d884add082d89214b8598cbfc66de0fb6870d404ec7",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_verfahrensriegel": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_verfahrensriegel.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/d0a4dcc38525f6cf3968180c4cc62008d21b407645981247ddd2692fbd72361a.jpg",
+  "sha256": "f9a7147485447892ba296f358d3248b7300d617beeb8b98585f541b96ddfcdd5",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_vermessungstrupp": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_vermessungstrupp.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/951ee6aac21849193a473d34917b6afc3a6d5963f0f88a5581188b726d770beb.jpg",
+  "sha256": "ba9bffad710ca75b32c6b1a36a1f275770622e38f500ec32b34336680a8cdeda",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ },
+ "dc_np_steinmark_zielfernrohr_norm": {
+  "path": "Division_Command_0.5a/web/assets/cards/art-v2/dc_np_steinmark_zielfernrohr_norm.jpg",
+  "provenance": "GenerateImage; user pt212u/pt213u; individual motif per card, painterly oil, nation lore motif",
+  "original_asset": "/cursor/stores/user/grok-bot/agents/8aa627b6-a98e-43b1-bed3-8598caf55e74/assets/cc10404f56a9f7142024fec7b7202203d63bd034f879160490a2ebffddcca143.jpg",
+  "sha256": "a354ef67613a330f401d55e43b14f070c125df465584e556d54958ec79bbca5c",
+  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
+  "visual_review": "viewed after generation; rejected/regenerated if text, real insignia or artefacts"
+ }
 }

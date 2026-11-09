@@ -1,55 +1,9 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1105,
+ "new_faces": 1151,
  "missing_illustrations": [
-  "dc_np_steinmark_paragraphenzug",
-  "dc_np_steinmark_normschuetzen",
-  "dc_np_steinmark_begleitzug_freigabe",
-  "dc_np_steinmark_akteneinsichtstrupp",
-  "dc_np_steinmark_landwehr_bezirk_vier",
-  "dc_np_steinmark_verfahrensriegel",
-  "dc_np_steinmark_normpanzer_baureihe_zwei",
-  "dc_np_steinmark_bezirkskette",
-  "dc_np_steinmark_freigabewagen",
-  "dc_np_steinmark_pruefstandkeil",
-  "dc_np_steinmark_bundesschild_neun",
-  "dc_np_steinmark_feuerplanrohr",
-  "dc_np_steinmark_freigabebatterie",
-  "dc_np_steinmark_normmoerser",
-  "dc_np_steinmark_messbatterie_grenzstein",
-  "dc_np_steinmark_dreischluessel_haubitze",
-  "dc_np_steinmark_vermessungstrupp",
-  "dc_np_steinmark_lagebildmelder",
-  "dc_np_steinmark_grenzbeobachter",
-  "dc_np_steinmark_bundesrichter_kompanie",
-  "dc_np_steinmark_kommission_der_drei",
-  "dc_np_steinmark_bezirksarchiv",
-  "dc_np_steinmark_ordnungsamt_front",
-  "dc_np_steinmark_verfahrenshoheit",
-  "dc_np_steinmark_formale_freigabe",
-  "dc_np_steinmark_sachstandsbericht",
-  "dc_np_steinmark_planmaessige_abloesung",
-  "dc_np_steinmark_beweisaufnahme",
-  "dc_np_steinmark_feuerplan_ausgeloest",
-  "dc_np_steinmark_normverband_schliessen",
-  "dc_np_steinmark_methodischer_vorstoss",
-  "dc_np_steinmark_beschaffungsvorlauf",
-  "dc_np_steinmark_dienstweg",
-  "dc_np_steinmark_grosser_feuerplan",
-  "dc_np_steinmark_stahlhelm_bundesnorm",
-  "dc_np_steinmark_dienstgewehr_muster_vier",
-  "dc_np_steinmark_pruefplakette",
-  "dc_np_steinmark_schusstafel_bezirk",
-  "dc_np_steinmark_schutzweste_klasse_drei",
-  "dc_np_steinmark_zielfernrohr_norm",
-  "dc_np_eldran_kronlinie",
-  "dc_np_eldran_pioniere_der_grenzmark",
-  "dc_np_eldran_sperrzug_weissdorn",
-  "dc_np_eldran_haushaltstruppe",
   "dc_np_eldran_gebundene_kompanie",
-  "dc_np_eldran_landsturm_kronfeld",
-  "dc_np_eldran_gegenstossreserve",
   "dc_np_eldran_kronwagen_wacht",
   "dc_np_eldran_koenigliche_antwort",
   "dc_np_eldran_bollwerkwagen",
@@ -43871,11 +43825,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_paragraphenzug.jpg",
+   "art_sha256": "409ff4fa6e0a0a277780b43f2405a30c4a81581e27b122f8e512f01e6a504836",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_paragraphenzug.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "880998ec8b7b44e8f3b86ae2827fcd3d926e70a928f918006647da19823e6b8c"
   },
   {
    "id": "dc_np_steinmark_normschuetzen",
@@ -43897,11 +43867,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_normschuetzen.jpg",
+   "art_sha256": "373f850b92b448a0a652cc4e7881862c0acf8661204cb2d405627cda6ae27625",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_normschuetzen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "877566012c37eff79564606dbd62e2a5f32dce40dc41d309d18e210e02c113a3"
   },
   {
    "id": "dc_np_steinmark_begleitzug_freigabe",
@@ -43923,11 +43909,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_begleitzug_freigabe.jpg",
+   "art_sha256": "06f53819c5380cbeb1f8f6d77e3ca5968820992bc2116d10820b943cacc42f9a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_begleitzug_freigabe.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "851138c8af021fbfeefc408a42179789f2696ec2472fb774289ea7af109c98a8"
   },
   {
    "id": "dc_np_steinmark_akteneinsichtstrupp",
@@ -43949,11 +43951,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_akteneinsichtstrupp.jpg",
+   "art_sha256": "e4a1a9ec4ef956d4761b79e57d6e5c5ce97c85deee457c14a74bd08c4353525f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_akteneinsichtstrupp.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "5baa712da44d2885e01ed700099b1c4d62654e07f3856b97c76221b618dbf9bc"
   },
   {
    "id": "dc_np_steinmark_landwehr_bezirk_vier",
@@ -43973,11 +43991,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_landwehr_bezirk_vier.jpg",
+   "art_sha256": "239e256aab4065715d86a64908dd76086cacf3db1aa0ce34f2960fd6501f5cb2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_landwehr_bezirk_vier.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "1f9dce7abc82e9390555f58eedd9ce7ed6da039cc6299e3ab0faf1ef60227afe"
   },
   {
    "id": "dc_np_steinmark_verfahrensriegel",
@@ -43997,11 +44031,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_verfahrensriegel.jpg",
+   "art_sha256": "f9a7147485447892ba296f358d3248b7300d617beeb8b98585f541b96ddfcdd5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_verfahrensriegel.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "76978810a7a0c8b5824ed6274805c5ac39a285fe47a559d300586296d8c0a0fd"
   },
   {
    "id": "dc_np_steinmark_normpanzer_baureihe_zwei",
@@ -44023,11 +44073,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_normpanzer_baureihe_zwei.jpg",
+   "art_sha256": "0bb37d53451c0a8a58192ff065901ca47f1189e9b85b0e317c0c87a3ec925c76",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_normpanzer_baureihe_zwei.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "e55a0f99bb75ea1ead83ff26e508de12023534737b60d1e4b918f5b255dbaeaa"
   },
   {
    "id": "dc_np_steinmark_bezirkskette",
@@ -44051,11 +44117,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_bezirkskette.jpg",
+   "art_sha256": "4db577648d79aa92046d5a19a1e99c647002fa931e5f8babe6361fcbc951eabd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_bezirkskette.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "7c0f77ce6b834a357ad5466f2c4a1dc08b00166e751a38dd203119e1b8232059"
   },
   {
    "id": "dc_np_steinmark_freigabewagen",
@@ -44079,11 +44161,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_freigabewagen.jpg",
+   "art_sha256": "548c3ecdfbb848eae84eeb8ee2a75cc8b6d71e73c3b600fc4ca3c0de3fbe1275",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_freigabewagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "377ee46aa8f49b7c88d1c25df16a8a84c12183fe728604f2f2606d4c81fa590a"
   },
   {
    "id": "dc_np_steinmark_pruefstandkeil",
@@ -44107,11 +44205,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_pruefstandkeil.jpg",
+   "art_sha256": "b1bd50fad10b67526dd23cdb54381124a694c60052b806aae876f2873eff6968",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_pruefstandkeil.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "9267301d9a5720d5e7777d94db55f96c817f7f5730289ecd47c653531e2fb747"
   },
   {
    "id": "dc_np_steinmark_bundesschild_neun",
@@ -44136,11 +44250,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_bundesschild_neun.jpg",
+   "art_sha256": "90182866abfe976a8f25a66c72f40033cd0ed5271b1ce7eabbfd37c63ff34318",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_bundesschild_neun.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "e59c5e9eb320b5f2f6a30938d6e69f5bb0dae6542afd5d31ab8d7c8c27bbef8a"
   },
   {
    "id": "dc_np_steinmark_feuerplanrohr",
@@ -44162,11 +44292,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_feuerplanrohr.jpg",
+   "art_sha256": "bd6096a5c3e15ce560d55c286d3ef442e278f579a6f49abd1319f711c0372610",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_feuerplanrohr.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "c51fe11bd3fbaad4b5a34c078c8e8bcda9b68f06c6c529080fcef82b05f02ab1"
   },
   {
    "id": "dc_np_steinmark_freigabebatterie",
@@ -44188,11 +44334,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_freigabebatterie.jpg",
+   "art_sha256": "62fd345a4639e77f51561edc1a6b93090dabe44f50d2917c47c580058d118e14",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_freigabebatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "90650630353ac18b493e4669dd8b1fde6dbbc7ab49350ea15622cf3a842053e3"
   },
   {
    "id": "dc_np_steinmark_normmoerser",
@@ -44215,11 +44377,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_normmoerser.jpg",
+   "art_sha256": "b90b5e55d0bfc124eb00d70e295f14932161e1549d9a9f81d114bdd8eca44e05",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_normmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "200d1d04241cc3c77467aa990839a51a2bada02fc407a8bf1b097a06f6a7d231"
   },
   {
    "id": "dc_np_steinmark_messbatterie_grenzstein",
@@ -44242,11 +44420,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_messbatterie_grenzstein.jpg",
+   "art_sha256": "42ef2436e7cf5cd6871dec8d939f7ae8daa53f1e4b159207bd48c5491fbd21b5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_messbatterie_grenzstein.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "219a537c3e50c56aacd6552ea4f9aac10878c2e61a543b7a24f1e9169f81278f"
   },
   {
    "id": "dc_np_steinmark_dreischluessel_haubitze",
@@ -44269,11 +44463,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_dreischluessel_haubitze.jpg",
+   "art_sha256": "80c70219eb07cc85b1985d83f3e524de249bfcbbabf5c038b9f5f5ee7f6a01d9",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_dreischluessel_haubitze.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "08597d3fa550a7a51280001b3bf7e24488ca8a75edf7a33ff24b6106033f051e"
   },
   {
    "id": "dc_np_steinmark_vermessungstrupp",
@@ -44293,11 +44503,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_vermessungstrupp.jpg",
+   "art_sha256": "ba9bffad710ca75b32c6b1a36a1f275770622e38f500ec32b34336680a8cdeda",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_vermessungstrupp.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "fbdd2632b0eb500f2e5db88408f4379cbc28ac669d98ce59e966f672d9e53b61"
   },
   {
    "id": "dc_np_steinmark_lagebildmelder",
@@ -44319,11 +44545,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_lagebildmelder.jpg",
+   "art_sha256": "e026f6458b35bdbebe2836120b810f808b1173b2436f93ea30922b673717e147",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_lagebildmelder.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1280
+    ],
+    "panel": [
+     78,
+     1506,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "0e8f6693c0d862273f81dcbdc7955a7fdd1493b23d663d7cfdc3ccf34f7b4b37"
   },
   {
    "id": "dc_np_steinmark_grenzbeobachter",
@@ -44346,11 +44588,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_grenzbeobachter.jpg",
+   "art_sha256": "b19b3750b4ea0797fcaf89d101207ee982eb859853f78b57c474864e058d66be",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_grenzbeobachter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1280
+    ],
+    "panel": [
+     78,
+     1506,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "19ece7f7bae2333261c50e82e91286ec93a72afa086c87e4a9573c2a75fc7a88"
   },
   {
    "id": "dc_np_steinmark_bundesrichter_kompanie",
@@ -44371,11 +44629,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_bundesrichter_kompanie.jpg",
+   "art_sha256": "51a51d3070690dbffc7e31c2e5cb8c0223fcbdbcc08120faffcd0b02d44064f1",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_bundesrichter_kompanie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "6757e4ef9505551132f0f4e5790b159b3193bc2e8415ff574d3352095ce6d4b4"
   },
   {
    "id": "dc_np_steinmark_kommission_der_drei",
@@ -44396,11 +44670,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_kommission_der_drei.jpg",
+   "art_sha256": "b21d381c3838d464b3a827ab18c25ef234c9e8fe3384351fed9644f4e123f1cf",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_kommission_der_drei.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "4676b96310aeb66e96a70d3b7f2303764f4f617d7796376fb2663bf9d59403a8"
   },
   {
    "id": "dc_np_steinmark_bezirksarchiv",
@@ -44419,11 +44709,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_bezirksarchiv.jpg",
+   "art_sha256": "90abc25519b9ea5d837bc8c2290754e8283ba2816de0034793b0cfcf61e6d7d0",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_bezirksarchiv.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "8c258f6fff9108b17e5e98c793c55caf6d288899bd594e9fbddf578abe8978d1"
   },
   {
    "id": "dc_np_steinmark_ordnungsamt_front",
@@ -44442,11 +44748,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_ordnungsamt_front.jpg",
+   "art_sha256": "f3f9b00a6c52871cd0fdf93753d594ad8515a707f13a140ed9d620c00ad86ee8",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_ordnungsamt_front.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "f45103321fffa6df76a16aa6e3bbd50642a7bb0ea9afd903f768bb9e56790a89"
   },
   {
    "id": "dc_np_steinmark_verfahrenshoheit",
@@ -44465,11 +44787,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_verfahrenshoheit.jpg",
+   "art_sha256": "7e8b8ef7cf17cdcda3f46d884add082d89214b8598cbfc66de0fb6870d404ec7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_verfahrenshoheit.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "9bbbeb11147bcd9507782639fad23288d202fa78a1402ed52532b2872b620375"
   },
   {
    "id": "dc_np_steinmark_formale_freigabe",
@@ -44488,11 +44826,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_formale_freigabe.jpg",
+   "art_sha256": "d5450ac713ae91d9a79980c095867f33f993e6a3e5e9ff3fff61a7bdc952eeb5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_formale_freigabe.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "0b07182261abd7e9a6615bbed3decdd7c3df6c2f68c8c6c86e77c908ee74cb59"
   },
   {
    "id": "dc_np_steinmark_sachstandsbericht",
@@ -44511,11 +44865,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_sachstandsbericht.jpg",
+   "art_sha256": "097c627eb34a6c75516f1d1e78161da5869efcd68c278850bcdebb45e08a5a16",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_sachstandsbericht.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "2057eb3ca3d05a071a46cfc3df507a263e628eb3a957694eb0ec2abcb6fcc64c"
   },
   {
    "id": "dc_np_steinmark_planmaessige_abloesung",
@@ -44534,11 +44904,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_planmaessige_abloesung.jpg",
+   "art_sha256": "ad74347e2c859ba9c41a7e9f76227bdd86fd055b934a7c9ca5ef57dc210dc139",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_planmaessige_abloesung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "dc764f8f698cb34e7bf64fa41040014c1143ce832dce471d52a63dd94edaaaf9"
   },
   {
    "id": "dc_np_steinmark_beweisaufnahme",
@@ -44557,11 +44943,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_beweisaufnahme.jpg",
+   "art_sha256": "709f9265fc46673c3315ec954c0149e97934ccbe305aaeaccdd4dd487d2a8660",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_beweisaufnahme.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "fc2987c09d4769fe6b1918f4efa9dc180929d95ea52ff78d4bd1e82e484e488e"
   },
   {
    "id": "dc_np_steinmark_feuerplan_ausgeloest",
@@ -44580,11 +44982,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_feuerplan_ausgeloest.jpg",
+   "art_sha256": "967c235ed0b66cca02753f20756c03f8b58ba76dc9530ecb644cb434c24b5bf6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_feuerplan_ausgeloest.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "a3daa180117d861373f44ec8c5fef089c49105b4bdc66cbb08455e728141b0e9"
   },
   {
    "id": "dc_np_steinmark_normverband_schliessen",
@@ -44603,11 +45021,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_normverband_schliessen.jpg",
+   "art_sha256": "499ab1a9eb456e64957ebaa4c0816ba97bc205fc99227ffca5ce2d3bb2fd7921",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_normverband_schliessen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "41356328e739738aee418fddb7dd57fca575539a365875c77ecd29253cafde7c"
   },
   {
    "id": "dc_np_steinmark_methodischer_vorstoss",
@@ -44626,11 +45060,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_methodischer_vorstoss.jpg",
+   "art_sha256": "48a0913b814e9ed6be3748cb58d9bd5c00168551daad175cc6f3bf9646aa721e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_methodischer_vorstoss.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "7bb090a688735ca4cd8f64cbe787dad64f5e3263a6ae2ef9b774a86224237505"
   },
   {
    "id": "dc_np_steinmark_beschaffungsvorlauf",
@@ -44649,11 +45099,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_beschaffungsvorlauf.jpg",
+   "art_sha256": "73b4b2b1e64fbe2152ef4fb5c6d008054d3a3d51811aafda9a9a4d026ee04c7d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_beschaffungsvorlauf.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "6d1bd6b477c6a71b5eca996678d24661e37bd2700e5e9d52bb299b132b017cfb"
   },
   {
    "id": "dc_np_steinmark_dienstweg",
@@ -44672,11 +45138,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_dienstweg.jpg",
+   "art_sha256": "c2fff15b6bec0714fa8997f43ecbcd719e7e692a0a0ee4b8302d938ee86ffa5a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_dienstweg.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "054a4d783ba73006877f9f67f5ff7b2af5d741110130adbc74c57c58f6cfd863"
   },
   {
    "id": "dc_np_steinmark_grosser_feuerplan",
@@ -44695,11 +45177,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_grosser_feuerplan.jpg",
+   "art_sha256": "62599320414b5eaffa3201ab85afb658ad81a2d3dffd22e9dcbf4634a6ee2fe9",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_grosser_feuerplan.webp",
+   "layout": {
+    "art_box": [
+     70,
+     204,
+     1466,
+     1444
+    ],
+    "panel": [
+     78,
+     1458,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "ebd63869a5ca8a59f56addba9d4cdfb3c273ac50c2a59faeefa6b59369cc4980"
   },
   {
    "id": "dc_np_steinmark_stahlhelm_bundesnorm",
@@ -44718,11 +45216,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_stahlhelm_bundesnorm.jpg",
+   "art_sha256": "acd4c8c41dd9d5e487610842be6a1718ae9c844ba78bad4f3c1fb35cec41b1b6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_stahlhelm_bundesnorm.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "a0ee6692aba7f0b98586ae42a69ec5a0a2c34d9a3c27685702bb2c520764718e"
   },
   {
    "id": "dc_np_steinmark_dienstgewehr_muster_vier",
@@ -44741,11 +45255,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_dienstgewehr_muster_vier.jpg",
+   "art_sha256": "f7c0b54e86dd8fe2abba73800a96c165825f1f9f659bf0a7188e72c9e5727685",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_dienstgewehr_muster_vier.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "ec9b2d0dca48c7acaf3ebdea70507cebba6591fe4a5bd64a9976bd45b77fd053"
   },
   {
    "id": "dc_np_steinmark_pruefplakette",
@@ -44764,11 +45294,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_pruefplakette.jpg",
+   "art_sha256": "72397786a12662b8aba089ad1bf1fef2ba22266c23c870598430061bf99014da",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_pruefplakette.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "3f944f731ab0c31cab3b91600ba623ac00a9030bfefe07a26474f56208769237"
   },
   {
    "id": "dc_np_steinmark_schusstafel_bezirk",
@@ -44787,11 +45333,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_schusstafel_bezirk.jpg",
+   "art_sha256": "ea722705e32e9cca525eb51793a5654e44e90afc1393d917184cb7a8df1696bd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_schusstafel_bezirk.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "2318af07ff47c19ea25fe663ff06cf8231ff7421dba525e49094a63bc8b62df7"
   },
   {
    "id": "dc_np_steinmark_schutzweste_klasse_drei",
@@ -44812,11 +45374,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_schutzweste_klasse_drei.jpg",
+   "art_sha256": "aea7266643ea5e5d6c73e1d53114ec4d41db69e6f684701b974bdc40bfb5c7bc",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_schutzweste_klasse_drei.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "6126cec86a9b8ccc78ba1cf4228e9f5bfaf8417693a614952100af0fa1d501b1"
   },
   {
    "id": "dc_np_steinmark_zielfernrohr_norm",
@@ -44835,11 +45413,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_steinmark_zielfernrohr_norm.jpg",
+   "art_sha256": "a354ef67613a330f401d55e43b14f070c125df465584e556d54958ec79bbca5c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_steinmark_zielfernrohr_norm.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "75e1ac508b9d4b0ed2d76a5af5a04b8f386533f25572a00e5edf3715d2c2b174"
   },
   {
    "id": "dc_np_eldran_kronlinie",
@@ -44861,11 +45455,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_kronlinie.jpg",
+   "art_sha256": "67b6c4147cc7e54c98dfdf9bc54ac3e331e4539fccf4d61e8fa2e1b5676ee9aa",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_kronlinie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "176c61c61122487e03d9a7eea10ee03dddfd0c0f84790b2bbd194b780e4b3c97"
   },
   {
    "id": "dc_np_eldran_pioniere_der_grenzmark",
@@ -44885,11 +45495,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_pioniere_der_grenzmark.jpg",
+   "art_sha256": "6fa2539150d8d6de99e674f1865666f9c06a5aff84afcce54a21502f3896e4be",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_pioniere_der_grenzmark.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "6aaad983c16eb03a1e265ddcc6b0c150bc7608ff72a4c0cbca6461c6b6cd5210"
   },
   {
    "id": "dc_np_eldran_sperrzug_weissdorn",
@@ -44911,11 +45537,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_sperrzug_weissdorn.jpg",
+   "art_sha256": "ad444a8dbfe6b3eabe798942b2c05d71ba3193cc39972659f03b718fa9af3b29",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_sperrzug_weissdorn.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "b4ca611f60704b53609f73b4f3100a3907e72fe9bd1af0b48dd5907c7854e490"
   },
   {
    "id": "dc_np_eldran_haushaltstruppe",
@@ -44937,11 +45579,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_haushaltstruppe.jpg",
+   "art_sha256": "17786b43d7c28e9cd3d65ae9b48105d0f81dfd63c08e8150df698a5bfc816be6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_haushaltstruppe.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "60938319b541cf02bc0111bb25e934b7ec08414f530c8a2109979beb62240f10"
   },
   {
    "id": "dc_np_eldran_gebundene_kompanie",
@@ -44987,11 +45645,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_landsturm_kronfeld.jpg",
+   "art_sha256": "3aae402fdbcfd7c77e2f46c5d194b423672b99a922394897c94e1c6a0d42e0fb",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_landsturm_kronfeld.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1438,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "a48df7f16bc01967102955cac6604f2bcf7d765f325aaf94ac2c8a160266bbc3"
   },
   {
    "id": "dc_np_eldran_gegenstossreserve",
@@ -45015,11 +45689,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_eldran_gegenstossreserve.jpg",
+   "art_sha256": "e8c64c27bf65e5593ff5d25437d5ee7bb483da027ab21905248696598e3676b1",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_eldran_gegenstossreserve.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     1296
+    ],
+    "panel": [
+     78,
+     1522,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "b96985332f3916c898fea5c3e3cc5f4e63f9c1d3d24f15354d03e71c86a2ce7c",
+   "output_sha256": "50cc7e0ca438bf0d66e77e40eb3033b2a5e647c676997f1f2ae2a7ca8b0f3555"
   },
   {
    "id": "dc_np_eldran_kronwagen_wacht",
