@@ -1,48 +1,8 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1425,
+ "new_faces": 1465,
  "missing_illustrations": [
-  "dc_np_theryn_vorderste_welle",
-  "dc_np_theryn_nachfolgende_welle",
-  "dc_np_theryn_dritte_welle",
-  "dc_np_theryn_bannertraeger",
-  "dc_np_theryn_eiferer",
-  "dc_np_theryn_geweihte_linie",
-  "dc_np_theryn_pilgerwagen",
-  "dc_np_theryn_glaubenskette",
-  "dc_np_theryn_sturmwagen",
-  "dc_np_theryn_reliquienpanzer",
-  "dc_np_theryn_der_wagen_des_rufes",
-  "dc_np_theryn_sammelfeuer",
-  "dc_np_theryn_glockenbatterie",
-  "dc_np_theryn_wellenmoerser",
-  "dc_np_theryn_vorbereitungsfeuer",
-  "dc_np_theryn_ruf_ueber_das_feld",
-  "dc_np_theryn_pilgerkundschafter",
-  "dc_np_theryn_glaubensmelder",
-  "dc_np_theryn_seher_der_pflicht",
-  "dc_np_theryn_sturmfuehrer",
-  "dc_np_theryn_hohe_priesterschaft",
-  "dc_np_theryn_ruf_zum_aufgebot",
-  "dc_np_theryn_banner_der_pflicht",
-  "dc_np_theryn_glaubensaufgebot",
-  "dc_np_theryn_alle_sind_gerufen",
-  "dc_np_theryn_sturm_der_glaeubigen",
-  "dc_np_theryn_luecke_fuellen",
-  "dc_np_theryn_gebet_vor_der_schlacht",
-  "dc_np_theryn_maertyrersegen",
-  "dc_np_theryn_welle_binden",
-  "dc_np_theryn_eifer",
-  "dc_np_theryn_pflichtruf",
-  "dc_np_theryn_der_eine_schlag",
-  "dc_np_theryn_heilige_woge",
-  "dc_np_theryn_pilgerschild",
-  "dc_np_theryn_glaubenszeichen",
-  "dc_np_theryn_bannerstange",
-  "dc_np_theryn_reliquie",
-  "dc_np_theryn_eiferklinge",
-  "dc_np_theryn_gebetsband",
   "dc_np_vael_werkschutzzug",
   "dc_np_vael_lieferkompanie",
   "dc_np_vael_bodenhalter",
@@ -57080,11 +57040,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_vorderste_welle.jpg",
+   "art_sha256": "4a7534195bba70601c1f29fa0252e7a4d4dbf121db9b70321bed3a5bf242dc28",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_vorderste_welle.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "4342ba1c31f482d8f6b62925f826cde0159da5f515347e5553dfeae02d02b003"
   },
   {
    "id": "dc_np_theryn_nachfolgende_welle",
@@ -57106,11 +57082,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_nachfolgende_welle.jpg",
+   "art_sha256": "78d6ee338e1c0ae4554155150ecef7a50963aae95425720a7e0377282e0837fa",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_nachfolgende_welle.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2a66bd094d6db8598ced8926b31312bb1dc909ad419a7f23f195dcd4f6a343f5"
   },
   {
    "id": "dc_np_theryn_dritte_welle",
@@ -57130,11 +57122,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_dritte_welle.jpg",
+   "art_sha256": "288eb89786edce7cb2c356a98236cd4970101fa94a3ed2792559b66f2b9fde0a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_dritte_welle.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e30e484e4a30881fd36efbdc0fa27a4d10270f71396f32866f2d220756bf460f"
   },
   {
    "id": "dc_np_theryn_bannertraeger",
@@ -57156,11 +57164,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_bannertraeger.jpg",
+   "art_sha256": "7f01a9c00c8298f752f4db3cf3a3ccaf4340ca18bd68b07e5234a9dea6b4741c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_bannertraeger.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "4355f57f5ed2312e32849b13b0111172e795bd7f213229355ffa01390c91126a"
   },
   {
    "id": "dc_np_theryn_eiferer",
@@ -57182,11 +57206,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_eiferer.jpg",
+   "art_sha256": "96ad06b8793ad821d56415beedc3bcbc8b8ecd7a0f6aceb4c68cf1fb302d48c3",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_eiferer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "3f7d4fc89205b07e2e42c48978fe28691154964608cca4bf57b04a0c08d5a17a"
   },
   {
    "id": "dc_np_theryn_geweihte_linie",
@@ -57208,11 +57248,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_geweihte_linie.jpg",
+   "art_sha256": "4744b2c5581d2650e32bbf5e961f35beeaaa0a3d494e8dd746527bcd35cda2e2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_geweihte_linie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "ed9312ab07638beb76a93f2391e0f4b9e15721dc916c681b361652f8f85f6acf"
   },
   {
    "id": "dc_np_theryn_pilgerwagen",
@@ -57234,11 +57290,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_pilgerwagen.jpg",
+   "art_sha256": "fcbe323856319eeb1fc0b5f6029b65d6a8fbfe8f130dc6da1664e9e9fcf7293b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_pilgerwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "de5cff1f07ec703e4cb1795c37944516d484a713690df7258e3146bf92a072e9"
   },
   {
    "id": "dc_np_theryn_glaubenskette",
@@ -57262,11 +57334,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_glaubenskette.jpg",
+   "art_sha256": "340bb13d85526eb360d7e6dcb9339bc3566c1d7b19048496b78d7b8778390041",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_glaubenskette.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "b84324929a825949394fba3507590cca11da21057b01ef45252b6fd230100fc6"
   },
   {
    "id": "dc_np_theryn_sturmwagen",
@@ -57290,11 +57378,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_sturmwagen.jpg",
+   "art_sha256": "5f26eeac2601fc26d44df77d15375aa9612a3b8b54ef10ab36d0a5514c4ae843",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_sturmwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7c6a66a61e5223ba3ade49669444f31ea6a55f3a05a5a88aaafd60077834067f"
   },
   {
    "id": "dc_np_theryn_reliquienpanzer",
@@ -57318,11 +57422,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_reliquienpanzer.jpg",
+   "art_sha256": "b7ea868c70ce0894c67b3a7c0f26932ee63d378a0eb763a5263f706137dd1cc4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_reliquienpanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d4da873df7cc4fcd0d2d2edf96d217c637418a9a9ee6705b119302e1a700210c"
   },
   {
    "id": "dc_np_theryn_der_wagen_des_rufes",
@@ -57347,11 +57467,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_der_wagen_des_rufes.jpg",
+   "art_sha256": "ab87cdc61907d917102f3ee32543ef5e7d7a384876e945d1aee24407894d206f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_der_wagen_des_rufes.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "4a9ede08d216ead780c9e874f9ad53d80dfdaa51c189bf89f63e69f68838d8e7"
   },
   {
    "id": "dc_np_theryn_sammelfeuer",
@@ -57374,11 +57510,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_sammelfeuer.jpg",
+   "art_sha256": "34333ba1e6973540d5fc9966811934ff46afaa6dd0152adb8ae270d53848b79e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_sammelfeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2f05541c3662b6247fb58b9375517d44c9fc61f7b9eb41d880de5989dab1c108"
   },
   {
    "id": "dc_np_theryn_glockenbatterie",
@@ -57401,11 +57553,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_glockenbatterie.jpg",
+   "art_sha256": "c249e6aa0706a22511f49ea456c7d31ddb149353217c36de0711a60ae3eb4531",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_glockenbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "aac25dae5bb57c092c0138080ce15d99e00f95bec09b6380d945dfc6d421d3cb"
   },
   {
    "id": "dc_np_theryn_wellenmoerser",
@@ -57427,11 +57595,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_wellenmoerser.jpg",
+   "art_sha256": "449e76a7dbfb669c2b1df788e85fef0329818b1e47203809fd51c2137840acd6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_wellenmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d1dfa3491b006f8638c32aa3aefe7c5395bab45d7c930f4f271563336ba09847"
   },
   {
    "id": "dc_np_theryn_vorbereitungsfeuer",
@@ -57453,11 +57637,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_vorbereitungsfeuer.jpg",
+   "art_sha256": "10ad80a2084321039d236543715ed45de17276165f2a9be6ab21d0277c62591b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_vorbereitungsfeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "04345d9a99a389f31461c3681e548fd04d7a5183139ad60681233d82e29dbca8"
   },
   {
    "id": "dc_np_theryn_ruf_ueber_das_feld",
@@ -57480,11 +57680,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_ruf_ueber_das_feld.jpg",
+   "art_sha256": "fd06f0f4ff6c63e9b2e0c2f411f11d7ac91298fdb65e69c86659499590e6848c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_ruf_ueber_das_feld.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "260505cb6d9a3df175336e5c389015fa7c80e623e62336bb0beba3a412249883"
   },
   {
    "id": "dc_np_theryn_pilgerkundschafter",
@@ -57506,11 +57722,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_pilgerkundschafter.jpg",
+   "art_sha256": "46bf1a8e0a08b90def2223f482789b158c59c8267c10c5b412516dd570607e30",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_pilgerkundschafter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "b6eeb23bae1c8c2660eaff0831d3815f368c0c20e4160116c13921c2a4c5ea20"
   },
   {
    "id": "dc_np_theryn_glaubensmelder",
@@ -57532,11 +57764,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_glaubensmelder.jpg",
+   "art_sha256": "eb018fa8ba50a9edc761efde516178810de0fc50e2e184b2ca4f10f44bfd8c98",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_glaubensmelder.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "79adac45f5619bc73774d3bd22c58dfd10d53727a7534481a888ee37cba307e4"
   },
   {
    "id": "dc_np_theryn_seher_der_pflicht",
@@ -57558,11 +57806,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_seher_der_pflicht.jpg",
+   "art_sha256": "afcbca833df3e29ef3839f82dce12698f4e304e68ac034d46c3914df13acb330",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_seher_der_pflicht.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f77b1f20b08647f64785f2f78028a0a0ab14cde3d2d1e1747293110d809621a7"
   },
   {
    "id": "dc_np_theryn_sturmfuehrer",
@@ -57585,11 +57849,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_sturmfuehrer.jpg",
+   "art_sha256": "63b9b2a8ce91195dd09de4010df4485f3d0e1ed3b4517f5c8d8c6c14b2b43a18",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_sturmfuehrer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5b2c51bcdda448050df56976bbb8b335ef91c9aaa8b1708107a9df5f13775812"
   },
   {
    "id": "dc_np_theryn_hohe_priesterschaft",
@@ -57610,11 +57890,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_hohe_priesterschaft.jpg",
+   "art_sha256": "b3d418b326d52c8ab46e3602c4db4bf7b38485f5b9fdb35c7d9d9c48ec9c5067",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_hohe_priesterschaft.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "197f9d3f98dfb2b5f9e008a7eab61da8d9fd2c1d355bdee11ad649de75dc8937"
   },
   {
    "id": "dc_np_theryn_ruf_zum_aufgebot",
@@ -57633,11 +57929,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_ruf_zum_aufgebot.jpg",
+   "art_sha256": "cb0afe641c56c2787105f1bb6c305b47cad0f4f9789c7fbfb4fde2145ac38e59",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_ruf_zum_aufgebot.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d8888c481b64ef7dbb2bcc936dfb00bddc0012340e40a6d27409c3494cdc122e"
   },
   {
    "id": "dc_np_theryn_banner_der_pflicht",
@@ -57656,11 +57968,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_banner_der_pflicht.jpg",
+   "art_sha256": "6cedbc6936390c36394c9ad1fcd1a6466426e3a9190329b1cb2eeb21877e15ef",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_banner_der_pflicht.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7cde28a52ff55bf329b837e978b38de76feda845371f12f863deda56e4afde90"
   },
   {
    "id": "dc_np_theryn_glaubensaufgebot",
@@ -57679,11 +58007,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_glaubensaufgebot.jpg",
+   "art_sha256": "0a095b35e4a772aa77ed1f40bbb05325f701c085e370d1e166ee1f16470e2070",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_glaubensaufgebot.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "50b8312add2a779354beab25147dc74937793835ad8d7b054137c40647dbffbd"
   },
   {
    "id": "dc_np_theryn_alle_sind_gerufen",
@@ -57702,11 +58046,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_alle_sind_gerufen.jpg",
+   "art_sha256": "11fea80949bbdc03557310196207edbb2b18c1e7dae5d17a4e0cfec7b23f4279",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_alle_sind_gerufen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e310c3de8725819a080bec3f473f3017d5d1ab6678b2702402e94fdd3ab25b4d"
   },
   {
    "id": "dc_np_theryn_sturm_der_glaeubigen",
@@ -57725,11 +58085,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_sturm_der_glaeubigen.jpg",
+   "art_sha256": "13b6bc316fe3a950dcb59ceeddb12a4409693aae825968721b54e05ba901d1e6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_sturm_der_glaeubigen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5d2410b3ef9cc0e1588222503ef46a6919b751558f31c1bd6cb5251c537ca9bb"
   },
   {
    "id": "dc_np_theryn_luecke_fuellen",
@@ -57748,11 +58124,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_luecke_fuellen.jpg",
+   "art_sha256": "97f1991cdcc2ce0c3b82ece6f791923f60909b2e41543436baf1e193ac4058fe",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_luecke_fuellen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "15a060064e840ef4d68a05e794de629616b6f3b94039be43faf4fc6388918220"
   },
   {
    "id": "dc_np_theryn_gebet_vor_der_schlacht",
@@ -57771,11 +58163,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_gebet_vor_der_schlacht.jpg",
+   "art_sha256": "6e52c757f770435b18b87825b7b57f6a21c92dc5151b6bbfabdbf79ebe0636b6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_gebet_vor_der_schlacht.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "6cd3bf55a8a6369f106065f3746a385baf288c9fe6765a192c26e002cdf14514"
   },
   {
    "id": "dc_np_theryn_maertyrersegen",
@@ -57794,11 +58202,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_maertyrersegen.jpg",
+   "art_sha256": "d914f7187c867f68b018c5f4a1eb64f14e271c70a5e91cfdc0f4f5d3c4415872",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_maertyrersegen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "04fe3ef62e071a9661c6b6490fbb5a30643e2c8da488a2171244c6e3faed4b4e"
   },
   {
    "id": "dc_np_theryn_welle_binden",
@@ -57817,11 +58241,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_welle_binden.jpg",
+   "art_sha256": "7753fe70104b1e9a1471f1fd1fdac94574dd633df5385144b65def9cde00b3a1",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_welle_binden.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "479d7d8bdcc9b28cdab2ee2b1a87f4854dc008afa647977d27e305f6c5401fcc"
   },
   {
    "id": "dc_np_theryn_eifer",
@@ -57840,11 +58280,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_eifer.jpg",
+   "art_sha256": "ce23a428c25f3f1c01f82eda39f6bff126d848d81a319300fb0a7c5b37473438",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_eifer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e3873811656957f265dd711a7b538ba67323e9d2388b53736be048c605cce056"
   },
   {
    "id": "dc_np_theryn_pflichtruf",
@@ -57863,11 +58319,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_pflichtruf.jpg",
+   "art_sha256": "a5b54f1349c01e7756c42b3a2449ce6a2b257151421b0403597bfad4d0269c72",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_pflichtruf.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "6494bdddb9b438eeadfea4bb57b8d5f43d530a000116d3909617a9e8abad284c"
   },
   {
    "id": "dc_np_theryn_der_eine_schlag",
@@ -57886,11 +58358,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_der_eine_schlag.jpg",
+   "art_sha256": "fa7dd55d6dad1c77188e6a49d69f0f073664149c476a3d15b1733fce7e3cb72c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_der_eine_schlag.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d6281827d77fe0a94c5266cbc6515eec1175c152ab063e8d4641d7a9d7cd5711"
   },
   {
    "id": "dc_np_theryn_heilige_woge",
@@ -57909,11 +58397,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_heilige_woge.jpg",
+   "art_sha256": "07a53154fe16ca8a0b765b500bce1436b26c8eab98c74e4b816f6cf54d73c210",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_heilige_woge.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "0b6374cdfee1c1cf32e23356fc24e0eec4b5340488b4a9e6df18e4863f5f2eb6"
   },
   {
    "id": "dc_np_theryn_pilgerschild",
@@ -57932,11 +58436,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_pilgerschild.jpg",
+   "art_sha256": "071dcbc1d09eeb4ebacc9469e599d7e57add9b1ba7f798dbbe5d16ea109fbdf8",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_pilgerschild.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "8f3f8159c178dee37787517f90ef708db17a02e900541b46764f60836eddf36b"
   },
   {
    "id": "dc_np_theryn_glaubenszeichen",
@@ -57955,11 +58475,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_glaubenszeichen.jpg",
+   "art_sha256": "7b23803b05b0ce29fba531659fb0c53def5fd2e7a24196b02bb1bae0dcf8e20c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_glaubenszeichen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "37fb0a2c5e815ee8bf30a0d7fec3fea3ef161b443aa7bffca1cd76942cc68ac5"
   },
   {
    "id": "dc_np_theryn_bannerstange",
@@ -57978,11 +58514,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_bannerstange.jpg",
+   "art_sha256": "d567cf988e86ec216290594558f56b66989862515548fac424667d836d2e07d6",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_bannerstange.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "54613c66562f70e9c2ce74590b31e80dd2f9a15b989ff5d1126007c1047b30ca"
   },
   {
    "id": "dc_np_theryn_reliquie",
@@ -58003,11 +58555,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_reliquie.jpg",
+   "art_sha256": "8989980e7dc06921b18e5ffdeb3ac3cd2ffa6efda127eab32d458a068404c76b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_reliquie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "48a379270009dbade49b60ef16ac580dc831c42e9e9db2c85f418f6fcea9f3bb"
   },
   {
    "id": "dc_np_theryn_eiferklinge",
@@ -58026,11 +58594,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_eiferklinge.jpg",
+   "art_sha256": "aa10f9b961fcd45c0843ee797afe1db11847b8f6a605cf7132dc45f52f97fcb7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_eiferklinge.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "4b84c73d257acee0698e5c7b5d8371a964596551dae42e787f7048f4c4f8e58b"
   },
   {
    "id": "dc_np_theryn_gebetsband",
@@ -58049,11 +58633,27 @@
      "ausruestung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_theryn_gebetsband.jpg",
+   "art_sha256": "a3b3e0e90fc004427da8b5ab2462767d28ce71b782e0fc014dc901e39a3035b2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_theryn_gebetsband.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "abe13fc057456a05b39a15f593c7a92de24f4ab28b18d6c987b13409a4cb91e4"
   },
   {
    "id": "dc_np_vael_werkschutzzug",
