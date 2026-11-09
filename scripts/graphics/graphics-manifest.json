@@ -1,23 +1,8 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1545,
+ "new_faces": 1560,
  "missing_illustrations": [
-  "dc_np_lyr_waechter_am_grat",
-  "dc_np_lyr_passhueter",
-  "dc_np_lyr_eidgenossen",
-  "dc_np_lyr_lauernde_schuetzen",
-  "dc_np_lyr_steinwerfer",
-  "dc_np_lyr_verteilte_posten",
-  "dc_np_lyr_bergkette",
-  "dc_np_lyr_engpasswagen",
-  "dc_np_lyr_talpanzer",
-  "dc_np_lyr_felskeil",
-  "dc_np_lyr_pass_ohne_wiederkehr",
-  "dc_np_lyr_warnfeuerstellung",
-  "dc_np_lyr_bergmoerser",
-  "dc_np_lyr_talbatterie",
-  "dc_np_lyr_passfeuer",
   "dc_np_lyr_echo_der_taeler",
   "dc_np_lyr_gamsjaeger",
   "dc_np_lyr_zugangswaechter",
@@ -61867,11 +61852,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_waechter_am_grat.jpg",
+   "art_sha256": "30130b694148b9b3976e0a11a10fecf539dcb8314aad1e263313d2fbcd4514e0",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_waechter_am_grat.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "c0d361cf4c560145294745f757cbfd3bfe025360828bf11c81ee6aa7e8938fc7"
   },
   {
    "id": "dc_np_lyr_passhueter",
@@ -61893,11 +61894,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_passhueter.jpg",
+   "art_sha256": "8b19cc043cbe76c01e515274a19c544ec21f38e5abfa60ee57d85de7d1451a64",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_passhueter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "afccf7b82560494e7d4502fd21bcdbbcc8a0c63051e9d37870ad8c5ded0b21bc"
   },
   {
    "id": "dc_np_lyr_eidgenossen",
@@ -61919,11 +61936,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_eidgenossen.jpg",
+   "art_sha256": "8682cca0109ca39a1a77beab565ae956479190a18b044a48b1a164e8d28043c7",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_eidgenossen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "1898ad0c859119e7ee665cee1eb5f46e572209f8fdf4150614f2717fd542cd4e"
   },
   {
    "id": "dc_np_lyr_lauernde_schuetzen",
@@ -61945,11 +61978,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_lauernde_schuetzen.jpg",
+   "art_sha256": "be5e8a5d9716b42c6ce3a80f770df1fcf4ea8bce560a66682594bc6919c5dbc0",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_lauernde_schuetzen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "dabcd5ce2cbc6316242db9743d18f9dbbea4d85e10576f3ef956a560583b9cb9"
   },
   {
    "id": "dc_np_lyr_steinwerfer",
@@ -61971,11 +62020,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_steinwerfer.jpg",
+   "art_sha256": "dba3da3ac3691b7989f99275ee32f8ad69e0b3645a815bea4e38fe35f279e4fe",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_steinwerfer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "42096120deafe4c73c9f0c246f5518449101afa4582d7ea55b0c0e389912a27d"
   },
   {
    "id": "dc_np_lyr_verteilte_posten",
@@ -61998,11 +62063,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_verteilte_posten.jpg",
+   "art_sha256": "24cdd64d2e4a769743b6e0587747343d87003c82cb7b454f2e1e69f7cf6a8d25",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_verteilte_posten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "74f668894d5d45f13e6838c8fbd6ce44aa7a423b930f6d8602e511eb4f58c556"
   },
   {
    "id": "dc_np_lyr_bergkette",
@@ -62024,11 +62105,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_bergkette.jpg",
+   "art_sha256": "3e4d70af8707d50726b2ee5a3c48f2bca5fcc48afe87f677d65c0de1abdbee18",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_bergkette.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "95e22379ac85c09a2846b8c710f6385c71b693dbf5cb4c6261313411e7022fd3"
   },
   {
    "id": "dc_np_lyr_engpasswagen",
@@ -62052,11 +62149,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_engpasswagen.jpg",
+   "art_sha256": "b9b277efafb067a3ea87731ca66cdc6a314879a2db0f6ee39d8153b4f43491ce",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_engpasswagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "630dde4a8314144e2ee47f82af563d52215333243545a839caef22685ddf9781"
   },
   {
    "id": "dc_np_lyr_talpanzer",
@@ -62081,11 +62194,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_talpanzer.jpg",
+   "art_sha256": "9c3ac1338cdbf3910b99c398af49db68c32015f09ff8ce5490c2770d91e2ffb4",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_talpanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "ac0768e1118c6c39a37c7bc5f1517906ae5a303d8dc98bb85a3bebd323b39466"
   },
   {
    "id": "dc_np_lyr_felskeil",
@@ -62109,11 +62238,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_felskeil.jpg",
+   "art_sha256": "0924f8cbb804ebffeebe4e1e95e742fdf5828f7b31b935e52f9ed9b85d96d237",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_felskeil.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "ddef1bd163af13aab8c74b850ba4fc6db0d7d5905bcab09655faa5017a28f7e2"
   },
   {
    "id": "dc_np_lyr_pass_ohne_wiederkehr",
@@ -62137,11 +62282,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_pass_ohne_wiederkehr.jpg",
+   "art_sha256": "e47e3c6eb44a1d56a5c6ef4ae5deec4964e8d5404aea2c11903c51bc91a0c04e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_pass_ohne_wiederkehr.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "bf16f3f7cafe06f6df11093d5eef3649e0dde02b6bba31efc4abeb60a07d3637"
   },
   {
    "id": "dc_np_lyr_warnfeuerstellung",
@@ -62163,11 +62324,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_warnfeuerstellung.jpg",
+   "art_sha256": "7c2c2c713d23940bec7ef1b4816e6c1c1c58253d26748a4af699f8c4aab994eb",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_warnfeuerstellung.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e13242c4be87dea72c86233b88edd607da3f94e30c21197fbaf3d25ba57a4634"
   },
   {
    "id": "dc_np_lyr_bergmoerser",
@@ -62191,11 +62368,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_bergmoerser.jpg",
+   "art_sha256": "9f4ee9a13360836d73b308e65ae2831272984b3bbcd7db1e054838074bdc9a22",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_bergmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "8e8734b38520e636d6d5d95e87ef1441c6459501895285316d24dff17ecc435e"
   },
   {
    "id": "dc_np_lyr_talbatterie",
@@ -62218,11 +62411,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_talbatterie.jpg",
+   "art_sha256": "deadfcbf0d2f11f57193fa5702883b7881158d971c3069b0ccf883c2209c2845",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_talbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "e80c7e710dd18938143d7498533c99dd9f2eb0852cbdf931502596b75f9f077c"
   },
   {
    "id": "dc_np_lyr_passfeuer",
@@ -62246,11 +62455,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_lyr_passfeuer.jpg",
+   "art_sha256": "be1d1ad0a626d9dabca7aa33480f54c33713fa746331ee56b340056a8465152a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_lyr_passfeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "da0230c70523af438c9ad0a6dd9288ea42647e8cfb5afb517506fcd0f960f493"
   },
   {
    "id": "dc_np_lyr_echo_der_taeler",
