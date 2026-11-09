@@ -58,7 +58,7 @@ function setup(audioMode = 'on') {
 }
 function unitTest(mode) {
   const h = setup(mode), { w, eng, add, click } = h;
-  const def = w.DC_CATALOG.cards.find(c => c.typ === 'Einheit' && !(c.effects || []).length && !(c.keywords || []).length);
+  const def = w.DC_CATALOG.cards.find(c => c.typ === 'Einheit' && ((c.tags || []).includes('infanterie') || c.klasse === 'Infanterie') && !(c.effects || []).length && !(c.keywords || []).length && !(c.tags || []).some(t => String(t).startsWith('steilfeuer')));
   const c = add(def.id), ap = eng.player(0).ap, originalDef = JSON.stringify(def);
   click(`#hand [data-uid="${c.uid}"]`);
   assert(w.document.querySelector('#my-front .slot.legal'), 'hand click must arm legal slots');
@@ -75,7 +75,7 @@ if (require.main === module && !process.env.CHOICES_ONLY) for (const mode of ['o
 module.exports = { setup };
 function choiceTest(mode) {
   const h = setup(mode), { w, eng, add, click } = h;
-  const inf = w.DC_CATALOG.cards.find(c => c.typ === 'Einheit' && !(c.effects || []).length && !(c.keywords || []).length);
+  const inf = w.DC_CATALOG.cards.find(c => c.typ === 'Einheit' && ((c.tags || []).includes('infanterie') || c.klasse === 'Infanterie') && !(c.effects || []).length && !(c.keywords || []).length && !(c.tags || []).some(t => String(t).startsWith('steilfeuer')));
   const u = eng.instFromId(inf.id, 0); u.summonedTurn = -99;
   eng.player(0).front.C[0] = u;
   eng.player(0).doctrines = [eng.instFromId('dc_dok_verlegung', 0)];

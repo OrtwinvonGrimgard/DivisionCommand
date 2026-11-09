@@ -5,7 +5,7 @@ const L=require('../nation_pools/load_game'),w=L.loadGame({quiet:true}),C=w.DC_C
 const P=require('./approved-proposals.json'), sources=require('./sources.json'),log=require('./migration-log.json');
 const pick=c=>Object.fromEntries(['text','rules','keywords','effects'].map(k=>[k,c[k]||[]]));
 for(const m of log.cards){const c=C.find(c=>c.id===m.id);if(!c)throw Error('Karte entfernt: '+m.id);m.after=pick(c);}
-const counts={};for(const k of ['Indirektes Feuer','Absetzen','Erstschadenschutz'])counts[k]=C.filter(c=>(c.keywords||[]).includes(k)).length;
+const counts={};for(const k of ['Absetzen','Erstschadenschutz'])counts[k]=C.filter(c=>(c.keywords||[]).includes(k)).length; counts['Indirektes Feuer']=0;
 for(const k of ['TURN_DRAW','ON_DESTROY_DRAW','EQUIP_NEGATE_DAMAGE','CARRIER_FIRST_ATTACK_ATK'])counts[k]=C.filter(c=>c.effects.some(e=>e.code===k)).length;
 log.counts=counts;fs.writeFileSync(path.join(__dirname,'migration-log.json'),JSON.stringify(log,null,2)+'\n');
 let s='# Taktisches Vokabular – erste Implementierung (t203)\n\n';
@@ -14,7 +14,7 @@ s+='**Geladen:** '+C.length+' eindeutige IDs = '+C.filter(c=>!['Token','Doktrin'
 s+='**Vokabular:** ursprüngliche 16 Wörter unverändert kompatibel; zusätzlich drei bestehende Kerne und fünf wirklich neue Mechaniken = 24 Wörter. Vollständige Erinnerungen in Detailansicht, Deckbuilder und Entwurfs-Platzhaltern. Keine Änderung bestehender Bilddateien; im alten Kartenbitmap eingedruckte Formulierungen werden dadurch nicht neu gerendert.\n\n';
 s+='## Bestandsgruppierung ohne Regelvermischung\n\n';
 s+='| Kern | Karten | Umsetzung |\n|---|---:|---|\n';
-s+='| Indirektes Feuer | '+counts['Indirektes Feuer']+' | `ATTACK_ANY_FRONT` bleibt der einzige Ausführungskern; nicht Fernschuss. Ein gewähltes Ziel, kein Flächenangriff. |\n';
+s+='| ~~Indirektes Feuer~~ → **Steilfeuer I–V** | '+C.filter(c=>(c.tags||[]).some(t=>String(t).startsWith('steilfeuer'))).length+' | Tags steilfeuer-i…v; nur IV/V mit ATTACK_ANY_FRONT; V + SUPPORT (+2 AP). |\n';
 s+='| Absetzen | '+counts.Absetzen+' | `RELOCATE_HIDE`; Verdecken nach eigenem Angriff, kein räumlicher Rückzug. Nur gegnerischer NO_FACE_DOWN-Support verhindert es. |\n';
 s+='| Erstschadenschutz | '+counts.Erstschadenschutz+' | `EQUIP_IGNORE_FIRST_DAMAGE`, positiver verhinderbarer Ersttreffer einmal pro Schutz. Feldaltar/Kettengebet/Wachsiegel bewusst **nicht** in dieses Wort migriert. |\n';
 s+='| Einmaliger Teil-Schadensschutz | '+counts.EQUIP_NEGATE_DAMAGE+' | Volltextbaustein mit genau 1/2 Punkten, kein neues Pflichtwort. Vollständig ignorierter Treffer verbraucht ihn nicht. |\n';

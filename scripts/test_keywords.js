@@ -19,7 +19,7 @@ const kid = (k) => 'k_' + WORDS.indexOf(k);
 WORDS.forEach(k=>assert(K[k], 'ursprüngliches Wort bleibt kompatibel: '+k));
 assert.equal(Object.keys(K).length,23,'16 ursprüngliche +2 vereinheitlichte Kerne +5 taktische Wörter (Indirektes Feuer → Steilfeuer-Tags)');
 assert.equal(K['Gefechtsbereit'], 'Kann im Zug des Einsatzes angreifen. Sie erhält keinen Eingraben-Schutz und keinen Eingraben-Bonus.');
-assert.equal(K['Fernschuss'], 'Hat +1 Reichweite.');
+assert.equal(K['Fernschuss'], 'Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).');
 const real = C.filter((c) => c.set !== 'test');
 const count = {}, byNat = {};
 real.forEach((c) => {

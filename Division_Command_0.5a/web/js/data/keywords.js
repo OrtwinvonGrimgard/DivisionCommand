@@ -23,7 +23,6 @@
   };
   /* t203:auto */
   Object.assign(K, {
-  "Indirektes Feuer": "Beim Angriff darf diese Einheit jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt. Bestehende Zielverbote gelten weiter.",
   "Absetzen": "Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.",
   "Erstschadenschutz": "Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
   "Binden": "(1 AP; verbraucht den Angriff dieser Einheit): Nur in deinem Zug, einmal pro Zug, wenn diese offene Einheit jetzt legal angreifen könnte. Wähle eine offene, nicht eingegrabene gegnerische Fronteinheit im gegenüberliegenden Abschnitt. Bis zum Ende des nächsten Zuges ihres Besitzers darf sie ihr Feld weder durch Versetzen, Tausch, erzwungene Bewegung noch Rücknahme auf die Hand verlassen. Zerstörung oder Opferung bleibt möglich. Sie darf weiter angreifen und Fähigkeiten nutzen. Kein Schaden. Höchstens ein Bindeneinsatz pro Besitzer pro Zug. Nicht stapelbar; eine weitere Bindung desselben Ziels ist bis zum Ablauf unzulässig. Der Status bleibt bis zum Ablauf auch bestehen, wenn der Binder zerstört wird.",

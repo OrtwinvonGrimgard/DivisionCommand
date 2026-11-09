@@ -73,7 +73,7 @@ const C = w.DC_CATALOG.cards.filter((c) => c.set !== 'test');
 const KINDS = ['stat', 'cost', 'vs', 'enter', 'kill', 'death', 'negate', 'first', 'aura', 'trigger', 'turnheal', 'turn', 'discount', 'hitdebuff'];
 C.forEach((c) => (c.effects || []).forEach((e) => { if (e.code === 'CM') assert(KINDS.includes(e.param.k), c.id + ' CM-Art ' + e.param.k); }));
 const nat = C.filter((c) => c.set === 'set_nations');
-const noImpl = nat.filter((c) => (c.text || '').trim() && !/^Keine Sonderfähigkeit/.test(c.text) && !(c.effects || []).length && !(c.keywords || []).length);
+const noImpl = nat.filter((c) => (c.text || '').trim() && !/^Keine Sonderfähigkeit/.test(c.text) && !/^Steilfeuer [IVX]+\b/.test(c.text) && !(c.effects || []).length && !(c.keywords || []).length);
 assert.equal(noImpl.length, 0, 'set_nations: kein Fähigkeitstext ohne Implementierung: ' + noImpl.map((c) => c.id).join(','));
 ok('set_nations: jede Fähigkeit implementiert (' + nat.length + ' Karten)');
 const tgt = C.filter((c) => c.typ === 'Soforteinsatz' && c.target);
