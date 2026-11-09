@@ -1,7 +1,7 @@
 # Fahrplan zum Erfolg — Division Command
 
 Stand: November 2026 · Alpha 0.5a  
-Begleitdokument: [SIEGBEDINGUNGEN.md](./SIEGBEDINGUNGEN.md), Freeze: [REGEL_FREEZE.md](./REGEL_FREEZE.md) (Trophy K aktiv seit 2026-11-04, Tip `196ae84`)
+Begleitdokument: [SIEGBEDINGUNGEN.md](../regeln/SIEGBEDINGUNGEN.md), Freeze: [REGEL_FREEZE.md](../regeln/REGEL_FREEZE.md) (Trophy K aktiv seit 2026-11-04, Tip `196ae84`)
 
 Dieser Fahrplan verbindet **Regel-Klarheit**, **Roguelike als Hebel**, **Steam-Sichtbarkeit** und drei Absatz-Szenarien. Aufwandsschätzungen gelten für **Solo / sehr kleines Team** (Vollzeit-Äquivalent in Personenwochen, grob).
 
@@ -17,7 +17,7 @@ Ein Fremder versteht in zehn Minuten die Front, beendet eine Partie mit klarem S
 
 Ohne feste Siegbedingungen sind Roguelike-Gefechte, Tutorials und Stream-Clips nicht planbar.
 
-- **Ist:** Schwelle 10 SP existiert; SP-Zufluss praktisch fehlend; Ende heute vor allem Aufgabe/Frieden. Details und Inkonsistenzen (Hilfe 40er-Deck vs. 60er-Katalog, keine HQ/Zuglimit): siehe [SIEGBEDINGUNGEN.md](./SIEGBEDINGUNGEN.md).
+- **Ist:** Schwelle 10 SP existiert; SP-Zufluss praktisch fehlend; Ende heute vor allem Aufgabe/Frieden. Details und Inkonsistenzen (Hilfe 40er-Deck vs. 60er-Katalog, keine HQ/Zuglimit): siehe [SIEGBEDINGUNGEN.md](../regeln/SIEGBEDINGUNGEN.md).
 - **Soll:** Eine gewählte Primärregel (empfohlen: Hybrid-SP mit Abschnittsdruck, Ziel 10–20 Min) + optionale Alternativen für Szenarien/Bosse.
 - **Deliverable:** Schriftliche Regel-Freeze-Notiz + danach erst Engine-Patch.
 - **Erfolgskriterium:** 10 Playtests mit Fremden/Bot enden ohne Aufgabe in ≤ 20 Minuten mit verständlichem Siegrund.

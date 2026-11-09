@@ -1,7 +1,7 @@
 # REGEL_FREEZE — Phase 0 (Alpha 0.5a)
 
 **Status:** eingefroren für Playtests · Stand: 2026-11-05 · Tip `196ae84`  
-Quelle der Wahrheit: `web/js/data/catalog.js` → `rules` + `SIEGBEDINGUNGEN.md`.
+Quelle der Wahrheit: `web/js/data/catalog.js` → `rules` + [SIEGBEDINGUNGEN.md](SIEGBEDINGUNGEN.md).
 
 ## Primärregel
 

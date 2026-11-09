@@ -1,12 +1,12 @@
 # Neue Effektideen – **Vorschlag, nicht implementiert**
 
-> **Hinweis:** Die 16 allgemeinen Schlüsselwörter (Gefechtsbereit … Zähigkeit) sind **implementiert** und in `SCHLUESSELWOERTER.md` beschrieben. Die Sondermechaniken unten sind davon getrennt und bleiben **Vorschläge, nicht implementiert**. Wo ein Entwurf ein gleichnamiges Wort nennt (z. B. „Stellungswechsel“ in Teil B), gilt im Spiel die Bedeutung aus dem Glossar.
+> **Hinweis:** Die 16 allgemeinen Schlüsselwörter (Gefechtsbereit … Zähigkeit) sind **implementiert** und in [SCHLUESSELWOERTER.md](../regeln/SCHLUESSELWOERTER.md) beschrieben. Die Sondermechaniken unten sind davon getrennt und bleiben **Vorschläge, nicht implementiert**. Wo ein Entwurf ein gleichnamiges Wort nennt (z. B. „Stellungswechsel“ in Teil B), gilt im Spiel die Bedeutung aus dem Glossar.
 
 **Status:** Dieses Dokument enthält ausschließlich **Entwürfe**. Keine Mechanik ist in der Engine vorhanden. Keine Beispielkarte existiert im Katalog. Die 640 Nationenpool-Karten nutzen nur bereits verdrahtete Effekte.
 
 **Grundlage:**
-- Nationenidentität aus `LORE_NATIONEN.md` (Bindung je Nation).
-- Kampfregeln aus `BALANCE_FRONT.md` und `RULES_v0.5_GRUNDKONZEPT.md`.
+- Nationenidentität aus [LORE_NATIONEN.md](../nationen/LORE_NATIONEN.md) (Bindung je Nation).
+- Kampfregeln aus [BALANCE_FRONT.md](../balance/BALANCE_FRONT.md) und [RULES_v0.5_GRUNDKONZEPT.md](../regeln/RULES_v0.5_GRUNDKONZEPT.md).
 
 **Bezugsregeln für die Wechselwirkungen:**
 - **Eingraben:** Eine frisch eingesetzte Einheit ist bis zum Beginn ihres nächsten eigenen Zugs nicht angreifbar und nicht gezielt beschädigbar. Sie hat in dieser Zeit +1 DEF. Flächenschaden trifft trotzdem.

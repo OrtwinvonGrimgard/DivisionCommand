@@ -43,6 +43,6 @@ Stand: Branch `doktrin-balance`. Audit: `scripts/audit_choice_cards.mjs`, Tests:
 ## Bewusst unverändert
 
 - Räumkommando mit genau 1 Mine: Auto-Auflösung (kein Dialog nötig).
-- Remis-/Roh-WR und Trophy-Tempo: siehe offene Fragen in `DOKTRIN_BALANCE.md`.
+- Remis-/Roh-WR und Trophy-Tempo: siehe offene Fragen in [DOKTRIN_BALANCE.md](../balance/DOKTRIN_BALANCE.md).
 
 Screenshot (Modal-Fixture): `/workspace/choice_ui_pending.png`

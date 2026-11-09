@@ -12,7 +12,7 @@ Die Darstellung ist ein realistisches Ölgemälde mit sichtbarer Pinselstruktur 
 
 Lore und Mechanik bleiben getrennt. Eine Nation erklärt, warum eine Uniform so aussieht. Sie schreibt nicht vor, welches Deck gespielt wird. Im Editor darf Gesicht A auf Schnitt B in Farbe C liegen. In der Kampagne tragen Gegner eine stimmige Nation.
 
-Die sechzehn Staaten stehen in `LORE_NATIONEN.md`. Die Uniformsprache folgt dieser Lore. Sie ist keine eigene Mechanik.
+Die sechzehn Staaten stehen in [LORE_NATIONEN.md](../nationen/LORE_NATIONEN.md). Die Uniformsprache folgt dieser Lore. Sie ist keine eigene Mechanik.
 
 ## Die 16 Nationen
 

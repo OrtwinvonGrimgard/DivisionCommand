@@ -17,5 +17,5 @@ p.write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n')
 d=json.loads(subprocess.check_output(['node',str(R.HERE/'export_catalog.js')],cwd=R.ROOT));C={c['id']:c for c in d['cards']};missing=[C[i] for i in m['missing_illustrations']]
 (R.HERE/'missing-illustrations.json').write_text(json.dumps({'remaining_count':len(missing),'cards':missing},ensure_ascii=False,indent=2)+'\n')
 batch=[c for c in missing if c.get('nation')=='Steinmark'][:16]
-(R.HERE/'next-batch.json').write_text(json.dumps({'status':'not_generated','purpose':'next individual illustration batch; do not invent cards or rules','style_reference':'Division_Command_0.5a/web/assets/cards/art/A033.jpg','lore':'Division_Command_0.5a/LORE_NATIONEN.md; Steinmark chapter is required before prompts','cards':batch},ensure_ascii=False,indent=2)+'\n')
+(R.HERE/'next-batch.json').write_text(json.dumps({'status':'not_generated','purpose':'next individual illustration batch; do not invent cards or rules','style_reference':'Division_Command_0.5a/web/assets/cards/art/A033.jpg','lore':'Division_Command_0.5a/docs/nationen/LORE_NATIONEN.md; Steinmark chapter is required before prompts','cards':batch},ensure_ascii=False,indent=2)+'\n')
 print('Finalized:',m['new_faces'],'faces,',len(missing),'missing illustrations;',len(batch),'in next executable batch')

@@ -1,6 +1,6 @@
 # Front-Snowball — Diagnose & Anti-Snowball-Prototypen
 
-Stand: 2026-11-04 · Alpha 0.5a · **Siegbedingungen unverändert** (siehe `SIEGBEDINGUNGEN.md`).
+Stand: 2026-11-04 · Alpha 0.5a · **Siegbedingungen unverändert** (siehe [SIEGBEDINGUNGEN.md](../regeln/SIEGBEDINGUNGEN.md)).
 
 Nutzerfeedback: *„Oft hat man die Front relativ schnell an den Gegner verloren. Meistens hat sich eine Kette von Einheiten gebildet, die dann direkt jede Karte zerstört hat, die man legt.“*
 
@@ -72,7 +72,7 @@ Flags in `catalog.js` → `rules.deploy_protection` **true** (permanent), `rules
 1. **Als nächstes playtesten: `deploy_protection` einschalten** (Config/`localStorage` oder Katalog-Toggle) — stärkster Hebel gegen „jede neue Karte stirbt sofort“.
 2. **`strict_facing` optional dazu**, wenn Spalten-Ketten thematisch unerwünscht sind; allein kein Snowball-Fix.
 3. Danach ggf. `attack_ap: 2` oder Catch-up als Feintuning, sobald Siegbedingungen feststehen.
-4. **Siegbedingungen hier nicht anfassen** — Entscheidung offen in `SIEGBEDINGUNGEN.md`.
+4. **Siegbedingungen hier nicht anfassen** — Entscheidung offen in [SIEGBEDINGUNGEN.md](../regeln/SIEGBEDINGUNGEN.md).
 
 Repro: `node scripts/sim_front_snowball.mjs 200 baseline|deploy_protection|strict_facing|both`
 
@@ -94,7 +94,7 @@ Nutzerentscheid: **`deploy_protection` dauerhaft ON** (beide Seiten, Bot/Hotseat
 - Badge verschwindet genau wenn `noCombatUntil` abläuft (Beginn nächster eigener Zug).
 - Targeting-Highlight nur auf legalen Zielen (Schutz ausgenommen).
 
-Siehe Hilfe (Spielregeln) und `RULES_v0.5_GRUNDKONZEPT.md` §7.0.
+Siehe Hilfe (Spielregeln) und [RULES_v0.5_GRUNDKONZEPT.md](../regeln/RULES_v0.5_GRUNDKONZEPT.md) §7.0.
 
 ---
 

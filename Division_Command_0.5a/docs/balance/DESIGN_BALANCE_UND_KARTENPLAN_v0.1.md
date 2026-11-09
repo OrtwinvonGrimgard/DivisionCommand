@@ -4,7 +4,7 @@ Stand: 2026-09-27
 
 Diese Datei ist die zentrale Arbeitsgrundlage für den Aufbau des Kartensets und die spätere Neubewertung von Karten. Sie soll auch außerhalb des aktuellen Gesprächs verständlich machen, **wie viele Karten zunächst benötigt werden, wie sie verteilt werden und nach welchen Kriterien AP-Kosten sowie Bronze/Silber/Gold vergeben werden**.
 
-Sie ergänzt den konkreten ersten Kostenpass in `BALANCE_AP_STUFEN_v0.1.md`.
+Sie ergänzt den konkreten ersten Kostenpass in [BALANCE_AP_STUFEN_v0.1.md](BALANCE_AP_STUFEN_v0.1.md).
 
 ---
 
@@ -548,6 +548,6 @@ Die bisherigen Karten sind deshalb **Prototypen und Designanker**, keine fertige
 
 Der konkrete erste Kostenpass für den bestehenden Kartenbestand liegt in:
 
-`KartenEditor/BALANCE_AP_STUFEN_v0.1.md`
+[BALANCE_AP_STUFEN_v0.1.md](BALANCE_AP_STUFEN_v0.1.md)
 
 Dort stehen die aktuell vorgeschlagenen AP-Kosten und die konkrete Bronze-/Silber-/Gold-Einstufung für den vorhandenen Kartenpool.

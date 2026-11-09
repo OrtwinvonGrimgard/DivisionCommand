@@ -109,4 +109,4 @@ Spieler bauen Decks frei aus dem gesamten Pool. Die Nationen liefern thematische
 ---
 
 **Ende der Datei**  
-Diese Datei ergänzt die einzelnen Nationendateien in `docs/lore_nationen/`.
+Diese Datei ergänzt die einzelnen Nationendateien in [lore_nationen/](lore_nationen/).

@@ -1,6 +1,6 @@
 # Gesellschaftliche Kriegsphilosophien der sechzehn Nationen
 
-Dieses Dokument ist die Arbeitsfassung. Es steht neben `LORE_NATIONEN.md` und ersetzt dort keinen Staat, sondern vertieft eine Frage: Wie versteht diese Gesellschaft den Krieg?
+Dieses Dokument ist die Arbeitsfassung. Es steht neben [LORE_NATIONEN.md](LORE_NATIONEN.md) und ersetzt dort keinen Staat, sondern vertieft eine Frage: Wie versteht diese Gesellschaft den Krieg?
 
 Jede Nation beantwortet dieselben Punkte. Die Antworten sind keine Deck-Archetypen. Einzelne Verbände, Familien und Generationen dürfen abweichen.
 
@@ -16,7 +16,7 @@ Doktrinen sind frei kombinierbar. Ein Staat ist das Anwendungsbeispiel einer Hal
 - **Anpassung:** Wie wird aus einer Niederlage gelernt?
 - **Kern:** Der eine Satz, an dem die anderen gemessen werden.
 
-Die Nationen stehen in derselben Lesereihenfolge wie in `LORE_NATIONEN.md`. Die Porträtnummern bleiben davon unberührt.
+Die Nationen stehen in derselben Lesereihenfolge wie in [LORE_NATIONEN.md](LORE_NATIONEN.md). Die Porträtnummern bleiben davon unberührt.
 
 ## Steinmark – Krieg als rechtlich gebundene Bürgerpflicht
 

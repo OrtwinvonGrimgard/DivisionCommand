@@ -291,4 +291,4 @@ Dieses Prinzip gilt für alle Nationen, jeweils in ihrer eigenen Form. Die Karte
 ---
 
 **Ende der detaillierten Lore-Grundlage**  
-Diese Datei kann die bestehende `LORE_NATIONEN.md` ergänzen oder ersetzen. Für weitere Details siehe die bestehenden Aufsätze und die taktische Lore.
+Diese Datei kann die bestehende [LORE_NATIONEN.md](LORE_NATIONEN.md) ergänzen oder ersetzen. Für weitere Details siehe die bestehenden Aufsätze und die taktische Lore.

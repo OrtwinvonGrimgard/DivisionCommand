@@ -55,5 +55,5 @@ s+='- Neue Werte sind ein erster Balancing-Durchlauf. Der Bot kann aktivierbare 
 s+='- Build: `npm run build:tactics`; Quellen `scripts/tactics/cards.json`, `approved-proposals.json`, `migrate.js`; nationale DSL bleibt Quelle der 640 Poolkarten. Alt-Typdateien im Spiel sind die verwendeten kanonischen JSON-Arrays; der historische KartenEditor-Spiegel ist keine zweite aktive Bibliothek.\n';
 s+='- Cache: `divcmd-tac1`, betroffene App-/Daten-/Engine-URLs `?v=tac1`.\n\n## Verifizierte Literatur des freigegebenen Reviews\n\n';
 for(const q of sources)s+='### '+q.id+': '+q.title+'\n\n'+q.body+' · '+q.date+' · [Originalquelle]('+q.url+')\n\n'+q.verified_sections.map(x=>'- '+x).join('\n')+'\n\n'+q.verification+' Keine Behauptung einer amtlichen deutschen Entsprechung der eigenen Spielnamen.\n\n';
-fs.writeFileSync(path.join(L.WEB,'../TAKTISCHE_SCHLUESSELWOERTER.md'),s.trimEnd()+'\n');
+fs.writeFileSync(path.join(L.WEB,'../docs/regeln/TAKTISCHE_SCHLUESSELWOERTER.md'),s.trimEnd()+'\n');
 console.log('TAKTISCHE_SCHLUESSELWOERTER.md:',C.length,'IDs,',log.cards.length,'Bestandsänderungen');

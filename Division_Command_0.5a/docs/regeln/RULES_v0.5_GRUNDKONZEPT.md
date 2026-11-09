@@ -786,7 +786,7 @@ Einsätze sollen nicht einfach ohne Bedingung „+1 SP“ geben. Gewonnene SP bl
 
 Sicherheitsnetz: ab Zug **26** keine Front → Niederlage; ab Zug **28** SP-Wertung (sonst Brettanteil / Frieden).
 
-Legacy `classic` bleibt wählbar; siehe `Division_Command_0.5a/SIEGBEDINGUNGEN.md` (Status: aktiv).
+Legacy `classic` bleibt wählbar; siehe [SIEGBEDINGUNGEN.md](SIEGBEDINGUNGEN.md) (Status: aktiv).
 
 ---
 

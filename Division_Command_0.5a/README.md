@@ -21,5 +21,10 @@ Hotseat, Bot und LAN-Lobby liegen im Hauptmenü.
 | `web/assets/audio/index.json` | Welche Stücke auf welchem Schirm laufen |
 | `server.py` | Lokaler Host für Vorschau und LAN |
 | `portraits/` | Werkzeug für Porträtebenen, nicht das Spiel |
+| `docs/` | Gesamte Dokumentation: Regeln, Nationen und Lore, Karten, Balance, Planung, Technik |
 
 Die WAV-Dateien liegen nach Verwendung getrennt in `web/assets/audio/menue/` und `web/assets/audio/kampf/`. Der Dateiname von Inside Out ist korrigiert.
+
+## Dokumentation
+
+Alle Regeln, Lore-Texte und Planungen liegen in [`docs/`](docs/README.md). Das Inhaltsverzeichnis steht in [docs/README.md](docs/README.md), zum Beispiel [Siegbedingungen](docs/regeln/SIEGBEDINGUNGEN.md), [Schlüsselwörter](docs/regeln/SCHLUESSELWOERTER.md), [Lore der Nationen](docs/nationen/LORE_NATIONEN.md) und [Fahrplan](docs/planung/FAHRPLAN.md).

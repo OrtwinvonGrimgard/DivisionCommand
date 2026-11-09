@@ -46,7 +46,7 @@ Jede Nation bekommt 40 neue Karten: 6 Infanterie, 5 Panzer, 5 Artillerie, 3 Aufk
 | Dargan | Schuld und Vollstreckung | Verteidigung ignorieren, Markieren, Schaden |
 | Eldran | Kronlinie und Grenzmark | Flankenschutz, Abschnittsbuff |
 
-Die vollständige Liste aller 640 Karten mit Kurztext, kompletter Regel, Effektcodes und Flavor steht in `NATIONENPOOL_KARTEN.md` (aus den Spieldaten generiert).
+Die vollständige Liste aller 640 Karten mit Kurztext, kompletter Regel, Effektcodes und Flavor steht in [NATIONENPOOL_KARTEN.md](NATIONENPOOL_KARTEN.md) (aus den Spieldaten generiert).
 
 ## Wie die Karten gebaut sind
 - **Quelle:**

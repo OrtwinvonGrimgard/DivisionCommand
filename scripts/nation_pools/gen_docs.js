@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 'use strict';
-/* Erzeugt Division_Command_0.5a/NATIONENPOOL_KARTEN.md und die Zahlentabelle in NATIONENPOOLS_100.md aus den echten Spieldaten. */
+/* Erzeugt Division_Command_0.5a/docs/karten/NATIONENPOOL_KARTEN.md und die Zahlentabelle in NATIONENPOOLS_100.md aus den echten Spieldaten. */
 const fs = require('fs'), path = require('path');
 const L = require('./load_game.js'); const w = L.loadGame({ quiet: true });
-const C = w.DC_CATALOG.cards, root = path.join(L.WEB, '..');
+const C = w.DC_CATALOG.cards, root = path.join(L.WEB, '..', 'docs', 'karten');
 const nat = Object.keys(w.DC_NATION_DECKS);
 const R = { bronze: 'Bronze', silber: 'Silber', gold: 'Gold' };
 let out = '# Nationenpool – vollständige Liste der 640 neuen Karten\n\nAutomatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/nation_pools/gen_docs.js`). Alle Karten: Artwork-Platzhalter (`art_status: platzhalter`), Effekte ausschließlich über bestehende Engine-Codes.\n\n';

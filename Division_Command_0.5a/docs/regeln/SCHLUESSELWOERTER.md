@@ -4,7 +4,7 @@ Die 24 Wörter (16 ursprüngliche, 3 vereinheitlichte Bestandskerne, 5 neue takt
 
 Die Engine wertet die Wörter strukturiert aus (`def.keywords`, strukturierte `effects`, `engine.js` und `tactical_runtime.js`). Sie verlässt sich nicht auf Fließtext. Quelle des Vokabulars ist `web/js/data/keywords.js`, die Tests liegen in `scripts/test_keywords.js`.
 
-> Die Sondermechaniken je Nation in `NEUE_EFFEKTIDEEN.md` sind davon getrennt und bleiben **Vorschläge, nicht implementiert**.
+> Die Sondermechaniken je Nation in [NEUE_EFFEKTIDEEN.md](../planung/NEUE_EFFEKTIDEEN.md) sind davon getrennt und bleiben **Vorschläge, nicht implementiert**.
 
 ## Die 24 Wörter
 

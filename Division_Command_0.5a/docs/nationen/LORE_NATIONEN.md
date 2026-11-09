@@ -4311,7 +4311,7 @@ Die Geschichte ist eine Liste der Geschützten und der nicht Geschützten. Die z
 
 # III. Die gesellschaftlichen Kriegsphilosophien
 
-Die ausgearbeitete Fassung steht in `KRIEGSPHILOSOPHIEN_NATIONEN.md`. Dort beantwortet jede der sechzehn Nationen dieselben Punkte: Kriegsbild, Soldatenbild, Führung, Tod, Bevölkerung, Technik, Logistik, Anpassung und Kern.
+Die ausgearbeitete Fassung steht in [KRIEGSPHILOSOPHIEN_NATIONEN.md](KRIEGSPHILOSOPHIEN_NATIONEN.md). Dort beantwortet jede der sechzehn Nationen dieselben Punkte: Kriegsbild, Soldatenbild, Führung, Tod, Bevölkerung, Technik, Logistik, Anpassung und Kern.
 
 Diese Grundsätze sind keine Deck-Archetypen. Sie erklären, warum eine Nation bestimmte Fähigkeiten und Prioritäten entwickelt. Einzelne Verbände können davon abweichen.
 
