@@ -155,12 +155,94 @@ def wrap(draw, text, fnt, max_w):
     return lines
 
 
+# German / card-text abbreviations: a "." after these is NOT a sentence end.
+_ABBREV_TOKEN = re.compile(
+    r"(?i)^(?:"
+    r"mind|min|max|ggf|ca|inkl|bzw|etc|usw|bzgl|evtl|nr|abs|vgl|sog|insb|"
+    r"u\.?a|z\.?b|d\.?h|z\.?t|a\.?a\.?o|m\.?e|o\.?ä|v\.?a"
+    r")$"
+)
+
+
+def _ability_segments(raw: str) -> list[str]:
+    """Split ability text into plaque segments.
+
+    Boundaries: '.' or ';' followed by whitespace (or end), but never inside
+    parentheses/brackets, never after common abbreviations, and never after an
+    ordinal/numeric marker before a following word (e.g. '1. Runde').
+    """
+    s = (raw or "").strip()
+    if not s:
+        return []
+    parts: list[str] = []
+    buf: list[str] = []
+    depth = 0
+    i = 0
+    n = len(s)
+    while i < n:
+        ch = s[i]
+        if ch in "([{":
+            depth += 1
+            buf.append(ch)
+            i += 1
+            continue
+        if ch in ")]}" and depth:
+            depth -= 1
+            buf.append(ch)
+            i += 1
+            continue
+        if depth == 0 and ch in ".;":
+            j = i + 1
+            while j < n and s[j] in " \t":
+                j += 1
+            at_end = j >= n
+            spaced = (j > i + 1) or at_end
+            if ch == "." and spaced:
+                prev = "".join(buf)
+                # Abbreviation? last whitespace-delimited token before '.'
+                token = re.split(r"\s+", prev.rstrip())[-1] if prev.rstrip() else ""
+                # strip trailing punctuation from token except internal dots
+                token_clean = token.rstrip(".,;:!?")
+                if token_clean and _ABBREV_TOKEN.match(token_clean):
+                    buf.append(ch)
+                    i += 1
+                    continue
+                # Number / ordinal before a following word: '1. Runde', 'Nr'-like already covered
+                if prev and prev[-1].isdigit() and j < n and (s[j].isalpha() or s[j] in "ÄÖÜäöüß"):
+                    buf.append(ch)
+                    i += 1
+                    continue
+                buf.append(ch)
+                part = "".join(buf).strip()
+                if part:
+                    parts.append(part)
+                buf = []
+                i = j
+                continue
+            # Semicolon: only a plaque boundary when the next clause starts
+            # with a capital (new effect); lowercase continuations stay together.
+            if ch == ";" and j > i + 1 and j < n and (s[j].isupper() or s[j] in "ÄÖÜ"):
+                buf.append(ch)
+                part = "".join(buf).strip()
+                if part:
+                    parts.append(part)
+                buf = []
+                i = j
+                continue
+        buf.append(ch)
+        i += 1
+    tail = "".join(buf).strip()
+    if tail:
+        parts.append(tail)
+    return parts
+
+
 def abilities(text):
     raw = (text or "").strip()
     if not raw:
         return []
     out = []
-    for p in re.split(r"(?<=\.)\s+", raw):
+    for p in _ability_segments(raw):
         p = p.strip()
         if not p:
             continue

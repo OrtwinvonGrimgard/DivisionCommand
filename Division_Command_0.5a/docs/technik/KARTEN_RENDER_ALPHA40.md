@@ -27,7 +27,11 @@ python3 scripts/graphics/verify.py
 ```
 
 Quellen: `KartenEditor/tools/render.py`, `render_core.py`, `scripts/graphics/alpha40.py`.
-Service-Worker-Cache: `divcmd-alpha40b`.
+Service-Worker-Cache: `divcmd-alpha40c`.
+
+## alpha40c
+- Doktrin-/Fähigkeitstext: Plaque-Splitter splittet nicht mehr in Klammern oder nach Abkürzungen (mind., min., max., ggf., …); Semikolon nur vor Großbuchstaben.
+
 
 ## alpha40b
 - Elite: Textpanel volle Breite, Orden darüber; nur Textumbruch rechts eingezogen.
