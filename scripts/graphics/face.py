@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """t212 Kartenvorderseite im Originalrahmen des KartenEditor-Renderers (KartenEditor/tools/render.py):
 Kostenstern, Namensbanner in Waffenfarbe, Tag-Leiste, ATK/DEF-Plaketten, Logo, Metallrahmen nach Seltenheit.
+gfx3.1: Grundschrift 100 px, nur bei Bedarf kleiner (bis 42 px); Karten ohne Regeltext zeigen Schlüsselwort-Erinnerungen; Doktrinen mit eigenem Motiv.
 gfx3: festes Motivfenster 42 % Kartenhöhe (Original 38 %), feste große Textfläche; Schriftgröße stuft sich
 bei langen Texten automatisch ab (58 -> 40 px), Flavor fällt notfalls weg.
 Motiv: ein einziges LANCZOS-Skalieren mit Cover-Zuschnitt, nie verzerrt, keine Unschärfefüllung.
@@ -17,7 +18,40 @@ W, H = 1536, 2136
 ART_TOP, NAME_H, GAP = 56, 128, 14
 PANEL_BOTTOM = 1890
 ART_H = 900  # fest 1396x900 (42 % Kartenhöhe; Original-Renderer 816 = 38 %); 4:3-Motive nur zugeschnitten, nie gestreckt
-STEPS = [(60, 74), (56, 68), (52, 64), (48, 59), (44, 54), (40, 49)]
+STEPS = [(100, 118), (94, 111), (88, 104), (83, 98), (78, 94), (74, 89), (70, 84), (66, 80), (62, 76), (58, 71), (54, 66), (50, 61), (46, 56), (42, 51)]  # gfx3.1: groß beginnen, nur bei Bedarf kleiner
+FLAVOR_PX, FLAVOR_LH = 40, 52
+# Kurz-Erinnerungstexte für Karten ohne eigenen Regeltext (Volltext: docs/regeln/SCHLUESSELWOERTER.md)
+REMIND = {
+ 'Gefechtsbereit': 'Greift schon im Zug des Einsatzes an; ohne Eingraben-Schutz.',
+ 'Ablösung': 'Zerstört: nächste eigene Einheit auf diesem Feld kostet 1 AP weniger.',
+ 'Staffelangriff': '+1 ATK, wenn diesen Zug schon eine andere eigene Einheit angriff.',
+ 'Fernschuss': '+1 Reichweite.',
+ 'Durchschlag': 'Ignoriert 1 DEF des Ziels.',
+ 'Platztausch': 'Beim Aufdecken darf sie mit einer eigenen verdeckten Einheit tauschen.',
+ 'Überlast': '+2 ATK, +1 DEF; am Ende deines Zugs 1 unverhinderbarer Schaden.',
+ 'Abschirmung': '1× pro Zug 1 Schaden einer benachbarten eigenen Einheit auf sich umleiten.',
+ 'Erbitterung': '+1 ATK je zerstörter eigener Einheit (max. +3).',
+ 'Heranführung': 'Beim Einsatz: nächste Einheit in diesem Zug kostet 1 AP weniger.',
+ 'Stellungswechsel': '1× pro Zug auf ein freies Nachbarfeld der Reihe; dann kein Angriff.',
+ 'Zuteilung': 'Beim Einsatz: ziehe 1 Karte.',
+ 'Sicherung': 'Andere eigene Einheiten im Abschnitt +1 DEF, solange sie offen liegt.',
+ 'Nachsetzen': '+2 ATK gegen Ziele, die diesen Zug schon Schaden nahmen.',
+ 'Hinterhalt': '+2 ATK beim ersten Angriff nach dem Aufdecken.',
+ 'Zähigkeit': '+1 DEF je zerstörter eigener Einheit (max. +3).',
+ 'Indirektes Feuer': 'Darf jede gegnerische Fronteinheit angreifen.',
+ 'Absetzen': 'Nach ihrem Angriff verdeckt bis zu deinem nächsten Zug.',
+ 'Erstschadenschutz': 'Der erste verhinderbare Schaden wird ignoriert.',
+ 'Binden': '1 AP, statt Angriff: gegnerische Fronteinheit gegenüber darf nicht weg.',
+ 'Anmarschstörung': '1 AP: erste neue gegnerische Einheit im Abschnitt kostet +1 AP.',
+ 'Feuerschutz': '1 AP, statt Angriff: Nachbar greift gewähltes Ziel verstärkt an.',
+ 'Gefechtsabbruch': 'Reaktion, 1 AP: nach überlebtem Angriff aufs Nachbarfeld ausweichen.',
+ 'Vorpostenmeldung': 'Deckt die erste neu gegenüber eingesetzte verdeckte Einheit auf.',
+}
+
+def body_text(kurz, kws):
+    """Kein eigener Regeltext -> Erinnerungstexte der Schlüsselwörter statt leerer Fläche (dann ohne Chips)."""
+    if (kurz or '').strip() or not kws: return kurz, kws, False
+    return '\n'.join(k + ': ' + REMIND.get(k, '') for k in kws), [], True
 CHIP_PX = 40
 METAL = {'bronze': 'bronze', 'silber': 'silber', 'silver': 'silber', 'gold': 'gold'}
 
@@ -51,14 +85,15 @@ def wrap(text, fnt, max_w):
 
 def fit(kurz, kws, flavor, avail):
     inner = W - 2 * 78 - 76
-    ff = M.font(M.FONT_I, 36)
+    ff = M.font(M.FONT_I, FLAVOR_PX)
     fl = wrap('„' + flavor + '“', ff, inner)[:2] if flavor else []
     chips = CHIP_PX + 36 if kws else 0
     for keep_fl in (True, False):
         for px, lh in STEPS:
+            if keep_fl and px < 70: break  # Regeltext hat Vorrang: lieber Flavor weglassen als winzige Schrift
             lines = wrap(kurz, M.font(M.FONT_R, px), inner)
             f2 = fl if keep_fl else []
-            h = chips + lh * len(lines) + (18 + 32 + 48 * len(f2) if f2 else 0)
+            h = chips + lh * len(lines) + (24 + 36 + FLAVOR_LH * len(f2) if f2 else 0)
             if h <= avail - 60: return px, lh, lines, f2, h
     return px, lh, lines, [], h
 
@@ -71,8 +106,9 @@ def plan(card, kurz, kws):
     tag_y = name_y + NAME_H + M.TAG_GAP
     y = name_y + NAME_H + M.TAG_GAP + 56 + M.TAG_GAP  # Tag-Leiste immer reserviert
     panel = (78, y, W - 78, PANEL_BOTTOM)
+    kurz, kws, remind = body_text(kurz, kws)
     px, lh, lines, flines, h = fit(kurz, kws, (card.get('flavor') or '').strip(), PANEL_BOTTOM - y)
-    return dict(art_box=art_box, name_y=name_y, tag_y=tag_y, tags=tags, panel=panel, lines=lines, flines=flines, kws=kws,
+    return dict(art_box=art_box, name_y=name_y, tag_y=tag_y, tags=tags, panel=panel, lines=lines, flines=flines, kws=kws, remind=remind,
                 body_px=px, line_h=lh, content_h=h)
 
 def stock_for(card):
@@ -134,13 +170,20 @@ def render(card, art_path, kurz, kws, dest, number='001', edition='ALPHA'):
     if p['kws']:
         draw_chips(d, tx0 + 36, y, p['kws'], rim); y += CHIP_PX + 36
     body = M.font(M.FONT_R, p['body_px'])
+    bold = M.font(M.FONT_B, p['body_px'])
     for ln in p['lines']:
-        d.text((tx0 + 38, y), ln, font=body, fill=(240, 230, 204)); y += p['line_h']
+        if p.get('remind') and ':' in ln and ln.split(':')[0] in REMIND:  # Schlüsselwort fett, Erinnerung normal
+            k, rest = ln.split(':', 1)
+            d.text((tx0 + 38, y), k + ':', font=bold, fill=(246, 224, 160))
+            d.text((tx0 + 38 + d.textlength(k + ':', font=bold), y), rest, font=body, fill=(240, 230, 204))
+        else:
+            d.text((tx0 + 38, y), ln, font=body, fill=(240, 230, 204))
+        y += p['line_h']
     if p['flines']:
-        y += 18; d.line([(tx0 + 90, y), (tx1 - 90, y)], fill=rim, width=2); y += 32
-        ff = M.font(M.FONT_I, 36)
+        y += 24; d.line([(tx0 + 90, y), (tx1 - 90, y)], fill=rim, width=2); y += 36
+        ff = M.font(M.FONT_I, FLAVOR_PX)
         for ln in p['flines']:
-            d.text((W / 2, y + 20), ln, font=ff, fill=(196, 168, 110), anchor='mm'); y += 48
+            d.text((W / 2, y + 22), ln, font=ff, fill=(196, 168, 110), anchor='mm'); y += FLAVOR_LH
     if typ == 'Einheit':
         img = M.draw_stat_box(img, 120, 1920, 'ATK', card.get('atk', 0), 'crosshair')
         img = M.draw_stat_box(img, W - 400, 1920, 'DEF', card.get('def', 0), 'shield')
