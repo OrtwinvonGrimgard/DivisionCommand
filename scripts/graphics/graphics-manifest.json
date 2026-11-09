@@ -1,39 +1,8 @@
 {
  "version": "gfx2",
  "catalog_ids": 1746,
- "new_faces": 1505,
+ "new_faces": 1536,
  "missing_illustrations": [
-  "dc_np_merovan_garnison_weg_sieben",
-  "dc_np_merovan_kolonnenschuetzen",
-  "dc_np_merovan_wegposten",
-  "dc_np_merovan_keilhaltzug",
-  "dc_np_merovan_verlegungskompanie",
-  "dc_np_merovan_ausharrende",
-  "dc_np_merovan_achsenkolonne",
-  "dc_np_merovan_wegsperrwagen",
-  "dc_np_merovan_haltepanzer",
-  "dc_np_merovan_achsenkeil",
-  "dc_np_merovan_freigehaltene_achse",
-  "dc_np_merovan_wegbatterie",
-  "dc_np_merovan_postenmoerser",
-  "dc_np_merovan_achsenfeuer",
-  "dc_np_merovan_haltefeuer",
-  "dc_np_merovan_stellung_am_wegende",
-  "dc_np_merovan_wegkundschafter",
-  "dc_np_merovan_etappenmelder",
-  "dc_np_merovan_achsenbeobachter",
-  "dc_np_merovan_wegpunktkommando",
-  "dc_np_merovan_garnisonsaelteste",
-  "dc_np_merovan_lebensader_merovan",
-  "dc_np_merovan_wegdepot",
-  "dc_np_merovan_postenkette",
-  "dc_np_merovan_umgruppieren",
-  "dc_np_merovan_keilhalt",
-  "dc_np_merovan_posten_halten",
-  "dc_np_merovan_ader_offen_halten",
-  "dc_np_merovan_wegsperre",
-  "dc_np_merovan_garnison_versorgen",
-  "dc_np_merovan_schieben",
   "dc_np_merovan_wegpunkt_melden",
   "dc_np_merovan_kolonne_nachziehen",
   "dc_np_merovan_halt_um_jeden_preis",
@@ -60269,11 +60238,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_garnison_weg_sieben.jpg",
+   "art_sha256": "9310e2c7ff678782535ab76903ef1611e64300eef2682e9f3ff4ee6da43daba9",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_garnison_weg_sieben.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "66a19c12e8e416db5044e6f78bb51fe9d1a599dde85fadca828683cc23b5fbd3"
   },
   {
    "id": "dc_np_merovan_kolonnenschuetzen",
@@ -60295,11 +60280,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_kolonnenschuetzen.jpg",
+   "art_sha256": "1096cdce6f06032edda770a61fb247947362f860e119398ec288afe7b462b14c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_kolonnenschuetzen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f9b4f94a0e5a85c0ee71729a062dbadc57fa9a93e1db27e798582c2be64463e4"
   },
   {
    "id": "dc_np_merovan_wegposten",
@@ -60321,11 +60322,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_wegposten.jpg",
+   "art_sha256": "87232de55ea8e368d5e2d25b76b9288b4fdf5ab79b21955b52601386ec36fdc9",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_wegposten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "008a60fbddb022d6fad326edc827e969ab26c4c1f716105a33b122c98c90f28f"
   },
   {
    "id": "dc_np_merovan_keilhaltzug",
@@ -60347,11 +60364,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_keilhaltzug.jpg",
+   "art_sha256": "56c0c647552318bd75aa102b5666c63fd0fa5acc25c044aec2135bd1f7571c8d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_keilhaltzug.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "cb0c48619eb90d3076d66c22dc2e5c5a74f47d081aebd46f37749d60400697cd"
   },
   {
    "id": "dc_np_merovan_verlegungskompanie",
@@ -60374,11 +60407,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_verlegungskompanie.jpg",
+   "art_sha256": "3fa17f5a287a6292ad7bbe776d9aca7e8fd4755b70aeb467209eb1e22a2dca89",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_verlegungskompanie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "2ead53c42a62c088ca9f04dbdc2c9a037c11ee0f41f6856d9dc5a1ad3e601175"
   },
   {
    "id": "dc_np_merovan_ausharrende",
@@ -60400,11 +60449,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_ausharrende.jpg",
+   "art_sha256": "e84b6b2ddf025753a128c05d8bf4759b53c8737a9e68cfcea5fb4101cc8bc812",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_ausharrende.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "402a28f326272490f414dc548eb12aca075c8edb8581a9bedac4396e5e42cf45"
   },
   {
    "id": "dc_np_merovan_achsenkolonne",
@@ -60428,11 +60493,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_achsenkolonne.jpg",
+   "art_sha256": "f699b19a8f527138d5d7c75ffa1a75b2599b706259e46e26f3065dde1ff62a18",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_achsenkolonne.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "71374aa15b8110966b47e776acd7986d4542d3dbdab05fe72cb070f911cd2ac6"
   },
   {
    "id": "dc_np_merovan_wegsperrwagen",
@@ -60456,11 +60537,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_wegsperrwagen.jpg",
+   "art_sha256": "7a8e92a7784debcbbd640577006b4c5ce22f954252a7f6103ce5d257d6b11f59",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_wegsperrwagen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "43734421e71f93f471718f1ab26b4851074c31c7820e84cda11fe2566e5fd5bc"
   },
   {
    "id": "dc_np_merovan_haltepanzer",
@@ -60484,11 +60581,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_haltepanzer.jpg",
+   "art_sha256": "68e79ca36a72fab48717313e73dc195cca33c675e6a70302c38306dde1d8995a",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_haltepanzer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d32d041fa5887730c6d371173befc11989b7df74c35d03d2624c5be7b2e45df0"
   },
   {
    "id": "dc_np_merovan_achsenkeil",
@@ -60512,11 +60625,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_achsenkeil.jpg",
+   "art_sha256": "5a083a54fb2d2c1a80791aee5c96c33b954160b0a6760b756d71d6f771be168e",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_achsenkeil.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "0e8ea2ceb18405fd5da2c77517596dbaadde3379a6a5ac7df31418583d366a44"
   },
   {
    "id": "dc_np_merovan_freigehaltene_achse",
@@ -60538,11 +60667,27 @@
      "gepanzert"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_freigehaltene_achse.jpg",
+   "art_sha256": "f701614b980a26c76328cbd05d8d718327040f5246859ce893671f949eedc2fa",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_freigehaltene_achse.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "c5bf48c9011ab4c95e9716d6e32eb3680e17c329f4d539a36868138dca80a486"
   },
   {
    "id": "dc_np_merovan_wegbatterie",
@@ -60565,11 +60710,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_wegbatterie.jpg",
+   "art_sha256": "7e62f3740e1838785f9ff1cf90ff155b1f55353887abac04599ced412f72d59b",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_wegbatterie.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "1914b64f14b1b1ae315c769ced3b271639076b3f034559e393f00e9183a9b03a"
   },
   {
    "id": "dc_np_merovan_postenmoerser",
@@ -60592,11 +60753,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_postenmoerser.jpg",
+   "art_sha256": "974542dad9da5ed189549ceaee6ba385255cfd1815e6dffb3b4acfd1428fe6dd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_postenmoerser.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "f9a630568f89a9d60b17ef9889195f1c3c03b246e4d9c6ab03bade67c5023118"
   },
   {
    "id": "dc_np_merovan_achsenfeuer",
@@ -60619,11 +60796,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_achsenfeuer.jpg",
+   "art_sha256": "60937716b5c802cfdd9385bcfd4412fbf8e0a2c9c0b3fdd46f147342594752f2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_achsenfeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "4f71ea56e0a278625567b74046b5ae402936fe2a6817b94321d0f55c70b37dea"
   },
   {
    "id": "dc_np_merovan_haltefeuer",
@@ -60646,11 +60839,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_haltefeuer.jpg",
+   "art_sha256": "ca2b344d3b9b1545d282ed442b99733ceb273fe0feba58c5cef4762e23ee4b3f",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_haltefeuer.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "772499bad53f0084d2e7105490ccdeee321b9d8c7e4109043f4053b6e2ada606"
   },
   {
    "id": "dc_np_merovan_stellung_am_wegende",
@@ -60672,11 +60881,27 @@
      "artillerie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_stellung_am_wegende.jpg",
+   "art_sha256": "1877e94749cdb72f9366b42d1d7a8c32f6c219156c9df25c8c76300d6af70054",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_stellung_am_wegende.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "323dc39d194db83d1ce68be0b55f73dd3bec4db80f561d7e6eda0d68047485cc"
   },
   {
    "id": "dc_np_merovan_wegkundschafter",
@@ -60698,11 +60923,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_wegkundschafter.jpg",
+   "art_sha256": "e8c71fe938fc90f7669e90ed2ebce09f3a7ebe90df969486c5d938d06b6556a2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_wegkundschafter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5965fea9040a33cff34be645cdbecef345e5d64c013dcbae07ef188edab1dcb8"
   },
   {
    "id": "dc_np_merovan_etappenmelder",
@@ -60722,11 +60963,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_etappenmelder.jpg",
+   "art_sha256": "e96a4acab68694c5150efb22e1399642fe2b81b2422073f2855cff72ec15285c",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_etappenmelder.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "9b00632af4cc62a8fe569e118e91dfff67718fffcf102faf6744b3b36078e22b"
   },
   {
    "id": "dc_np_merovan_achsenbeobachter",
@@ -60749,11 +61006,27 @@
      "aufklaerung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_achsenbeobachter.jpg",
+   "art_sha256": "b196a683230401d35925f7f18c642931ac59fee1edef5dbee856a9d0cc57d5cc",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_achsenbeobachter.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "8d2d77f409b4f1eac67cb9644ac698d3fc528fd204c57cfd3f8317b5030bca07"
   },
   {
    "id": "dc_np_merovan_wegpunktkommando",
@@ -60777,11 +61050,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_wegpunktkommando.jpg",
+   "art_sha256": "7491d701810467616d7e3cf7bf4ae71d4fe11f6ef59b475a879dbe2569a12c3d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_wegpunktkommando.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "389acd816c3d11b0a784e3ca0d69c7fdbc4ceb74949d7f6d5313a2473916a5f1"
   },
   {
    "id": "dc_np_merovan_garnisonsaelteste",
@@ -60802,11 +61091,27 @@
      "infanterie"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_garnisonsaelteste.jpg",
+   "art_sha256": "ccc52fcbda2843024e96f6d3cc682476096634839831ce641f063b16b4571363",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_garnisonsaelteste.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "5f5e752566a6365a66bef9a29494f3e71a6f3d5163be5cd2291bf5907eac84b3"
   },
   {
    "id": "dc_np_merovan_lebensader_merovan",
@@ -60825,11 +61130,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_lebensader_merovan.jpg",
+   "art_sha256": "736868386f898a9251c30203a20381500131163da8ae091874301cb3c3f3bc52",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_lebensader_merovan.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "b3bc667af14c31613c42ccdbceb4d2b0dc0a0821b205d09fb7c59d7530be47ea"
   },
   {
    "id": "dc_np_merovan_wegdepot",
@@ -60848,11 +61169,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_wegdepot.jpg",
+   "art_sha256": "90f68a3f1baa7c9c2329f81c7e8067f7f4e790486bbc9b2925676dcf2109f3a5",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_wegdepot.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "d2b8736e0473e709ea5b1b2a4816191ee0d8d0f4242f21b7d49ea7361a9d86dc"
   },
   {
    "id": "dc_np_merovan_postenkette",
@@ -60871,11 +61208,27 @@
      "unterstuetzung"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_postenkette.jpg",
+   "art_sha256": "d7b5aa59d12c9279dba9d4bee761eac87fd6017976e16c3faaf42d87c4429070",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_postenkette.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7edbdd5d1e04ec434e85be0197c150c289c6f08453e09c25cdf471ff705708a5"
   },
   {
    "id": "dc_np_merovan_umgruppieren",
@@ -60894,11 +61247,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_umgruppieren.jpg",
+   "art_sha256": "3cfb9c39562a2bc169bb3952b1820d637f7c67ae8005733a6488e9bdeb44cdc2",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_umgruppieren.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "3250896d45f630e8f1a3e777c2eb0b5c6755392a2110003d5e56047708085bc1"
   },
   {
    "id": "dc_np_merovan_keilhalt",
@@ -60917,11 +61286,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_keilhalt.jpg",
+   "art_sha256": "9b6e71bbb32f8082bd165a2253fa7b628fe84d3c0a4d91c41bbfffda8957bb2d",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_keilhalt.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "094a4deb666bd160f047877d8e4dee747782365600a3eccb2b9856031fbffcda"
   },
   {
    "id": "dc_np_merovan_posten_halten",
@@ -60940,11 +61325,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_posten_halten.jpg",
+   "art_sha256": "81141b9ae24bcbfbb4fc919ded2796a62cbcdd312d45a03e3971f30c731021c1",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_posten_halten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "69a26c8266f5c4404cfc2c929f11a3196aa888b3d7fc0bf8dac2dfff5f793e82"
   },
   {
    "id": "dc_np_merovan_ader_offen_halten",
@@ -60963,11 +61364,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_ader_offen_halten.jpg",
+   "art_sha256": "048421003e057a64eceb3692b72242996b58227ad538ed88c6de595d943a3703",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_ader_offen_halten.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "0ca7d0feb19df3fa3ae32213c952b01aa56895a27b8fcdd501e8537e872050de"
   },
   {
    "id": "dc_np_merovan_wegsperre",
@@ -60986,11 +61403,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_wegsperre.jpg",
+   "art_sha256": "53edb03c8890f6e3d8c83a615ed7685bed6465ebcf6f3cbc38ca5e9b7e7a89ba",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_wegsperre.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "70fdbdcf9a08bed0f820fd77223d2c346176f35e0f662035f964dbd9732dbde5"
   },
   {
    "id": "dc_np_merovan_garnison_versorgen",
@@ -61009,11 +61442,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_garnison_versorgen.jpg",
+   "art_sha256": "72cf874c94f523363d5aeb647e144394a15f591ab53ff4ef4fcfd3f1aa5ab926",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_garnison_versorgen.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "7b8e331e129126d722a50fc03adb53f5ffc39a963ddc9a3dfc5d39804feb8c26"
   },
   {
    "id": "dc_np_merovan_schieben",
@@ -61032,11 +61481,27 @@
      "soforteinsatz"
     ]
    },
-   "art": null,
-   "art_sha256": null,
-   "provenance": "missing_illustration",
-   "ready": false,
-   "output": null
+   "art": "assets/cards/art-v2/dc_np_merovan_schieben.jpg",
+   "art_sha256": "5914e7d6eb25c8fa4d7010b01b6013fb6d63807a1e80b7bf306a46c3231846fd",
+   "provenance": "generated_art",
+   "ready": true,
+   "output": "faces-v2/dc_np_merovan_schieben.webp",
+   "layout": {
+    "art_box": [
+     70,
+     56,
+     1466,
+     956
+    ],
+    "panel": [
+     78,
+     1182,
+     1458,
+     1890
+    ]
+   },
+   "renderer": "d90be2a1bd3ab159eed7c01558423c2d1159d3182020fd1802d412777f869d32",
+   "output_sha256": "32b17523fe36511cd4533e875ab747fb7c6956c46217c18c4f1bf9a6b541cc0a"
   },
   {
    "id": "dc_np_merovan_wegpunkt_melden",
