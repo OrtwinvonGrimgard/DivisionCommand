@@ -18,7 +18,7 @@ Das Spiel verbindet Deckbuilding und reaktive Karteneffekte mit taktischer Posit
 - 16 Nationen mit eigener Lore, Kriegsphilosophie und taktischer Doktrin
 - Reaktive Trigger und Bedingungen (Verlust, Handlung, Einschränkung, Kette)
 - Trophy-Siegmodus (5 SP über Elite, Durchbruch, Doktrin-Ziele)
-- Großer Kartenpool (aktuell ~1.096, geplant 1.600+ Nationenkarten)
+- Großer Kartenpool: 1.709 Deckkarten (16 × 100 Nationenkarten + neutrale), im Deckbau frei mischbar
 
 ---
 
@@ -109,8 +109,10 @@ Jede Nation hat eigene Doktrinen und thematische Decks. Taktische Lore beschreib
 
 - Aktuell: ~1.096 Karten (960 Nationenkarten B001–B960 + Alpha-Set).
 - Decks: 60 Karten + 2 Doktrinen.
+- Nationenpools: je Nation 100 spielbare Karten + 2 Doktrinen, in sich schlüssig (Identität, Starterdecks, Filter).
+- Deckbau mischt frei: Eigene Decks dürfen Karten aller Nationen und neutrale Karten kombinieren (1.709 Deckkarten); die 2 Doktrinen sind frei aus allen 36 wählbar. Es gelten nur Kopienlimits (Bronze 4 / Silber 2 / Gold 1) und 60 + 2. Details: `regeln/RULES_v0.5_GRUNDKONZEPT.md` §24.0.
 - Organisation: Nach Typ (nicht nach Nation) in `web/js/data/sets/types/` und `web/assets/cards/<typ>/`.
-- Laufende Erweiterung (Bot): 100 spielbare Karten pro Nation → 1.600 Nationenkarten + Doktrinen.
+- Stand Nov 2026: 100 spielbare Karten pro Nation umgesetzt → 1.600 Nationenkarten + 109 neutrale + 36 Doktrinen.
 - Seltenheitsstufen: Bronze / Silber / Gold (mechanisch begründet durch Trigger-Komplexität).
 - Ziel: Jede Karte eigener Regeltext, lorebezogene Flavortexte.
 
@@ -185,7 +187,7 @@ Division Command positioniert sich in dieser Nische: zugänglicher als Wargames,
 
 ### 9.4 Content-Strategie und 1.600 Karten
 Die Erweiterung auf 100 Karten pro Nation schafft:
-- Echte Intra-Nation-Vielfalt im Deckbau (60er-Deck aus 100er-Pool).
+- Echte Vielfalt im Deckbau: nationenreine 60er-Decks aus dem 100er-Pool oder frei gemischte Decks über alle Nationen.
 - Langfristige Retention (Rotationen, Limited, Events ohne neue Nationen).
 - Basis für kosmetische Monetarisierung und Expansion-Sets.
 - Risiko: Engine muss die zusätzlichen Trigger zuverlässig auswerten.

@@ -104,7 +104,7 @@ Die Kriegsführung und Philosophie der Nationen sollen in den Karten sichtbar we
 - Als leichte mechanische Akzente (Trigger, Einschränkungen, Bedingungen).
 - Nicht als harte Pool-Trennung.
 
-Spieler bauen Decks frei aus dem gesamten Pool. Die Nationen liefern thematische und visuelle Identitäten, keine Fraktionsgrenzen.
+Jede Nation hat einen in sich schlüssigen Pool (100 Karten + 2 Doktrinen). Spieler bauen Decks trotzdem frei aus allen Nationenpools und neutralen Karten. Die Nationen liefern Identität, keine Fraktionsgrenzen.
 
 ---
 

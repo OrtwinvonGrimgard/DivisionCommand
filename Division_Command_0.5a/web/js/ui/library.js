@@ -3,7 +3,10 @@
   var draft = { cards: {}, doctrines: [] };
   var filterTab = 'all';
   var filterQuery = '';
-  var filterNation = ''; // '' = alle; sonst Nationenpool (eigene Nationskarten + neutrale Karten)
+  // Nur Ansichtsfilter, keine Deckbauregel: Decks dürfen Karten aller Nationen frei mischen.
+  // '' = alle Karten; NEUTRAL = nur neutrale; sonst Nationenpool (eigene 100 Karten + 2 Doktrinen + Neutrale).
+  var NEUTRAL = '__neutral';
+  var filterNation = '';
 
   function cards() {
     return (global.DC_CATALOG && DC_CATALOG.cards) || [];
@@ -43,12 +46,45 @@
     if (filterTab === 'Doktrinen') return c.typ === 'Doktrin';
     return true;
   }
+  function isNeutral(c) {
+    return !c.nation || String(c.nation).toLowerCase() === 'neutral';
+  }
+  // Doktrinen tragen kein Nationsfeld; ihre Zuordnung kommt aus den Nationendecks (2 je Nation).
+  function doctrineNation(id) {
+    var map = global.DC_NATION_DECKS || {};
+    var hit = '';
+    Object.keys(map).forEach(function (n) {
+      if (!hit && map[n] && (map[n].doktrinen || []).indexOf(id) >= 0) hit = n;
+    });
+    return hit;
+  }
+  function nationOf(c) {
+    if (!c) return '';
+    if (c.typ === 'Doktrin') return doctrineNation(c.id);
+    return isNeutral(c) ? '' : c.nation;
+  }
   function matchesNation(c) {
     if (!filterNation) return true;
-    return c.nation === filterNation || !c.nation;
+    var n = nationOf(c);
+    if (filterNation === NEUTRAL) return !n;
+    return n === filterNation || !n;
   }
   function nationPool(nation) {
     return cards().filter(function (c) { return c.nation === nation && c.typ !== 'Doktrin' && c.typ !== 'Token'; });
+  }
+  function deckCards() {
+    return cards().filter(function (c) { return c.typ !== 'Doktrin' && c.typ !== 'Token' && c.typ !== 'Asset'; });
+  }
+  // Herkunft der Karten im Entwurf, z. B. { Steinmark: 30, Vael: 28, '': 2 } ('' = neutral).
+  function draftNations() {
+    var out = {};
+    Object.keys(draft.cards || {}).forEach(function (id) {
+      var c = cardById(id);
+      if (!c) return;
+      var n = nationOf(c);
+      out[n] = (out[n] || 0) + (draft.cards[id] || 0);
+    });
+    return out;
   }
   function matchesQuery(c) {
     if (!filterQuery) return true;
@@ -412,7 +448,15 @@
     var total = tally.Einheit + tally.Ausrüstung + tally.Unterstützung + tally.Soforteinsatz;
     var meta = document.getElementById('deck-meta');
     if (meta) {
-      meta.textContent = 'Karten · ' + total;
+      meta.textContent = 'Karten · ' + total + ' / 60';
+    }
+    var origin = document.getElementById('deck-nations');
+    if (origin) {
+      var mix = draftNations();
+      var parts = Object.keys(mix).filter(function (n) { return n; }).sort(function (a, b) { return mix[b] - mix[a] || a.localeCompare(b, 'de'); })
+        .map(function (n) { return n + ' ' + mix[n]; });
+      if (mix['']) parts.push('Neutral ' + mix['']);
+      origin.textContent = parts.length ? 'Herkunft · ' + parts.join(' · ') : 'Herkunft · Karten aller Nationen frei mischbar';
     }
     var types = document.getElementById('deck-types');
     if (types) {
@@ -442,9 +486,14 @@
     var ns = document.getElementById('lib-nation');
     if (ns && !ns._dcBound) {
       ns._dcBound = true;
+      var all0 = ns.querySelector('option[value=""]');
+      if (all0) all0.textContent = 'Alle Nationen (' + deckCards().length + ')';
       Object.keys(global.DC_NATION_DECKS || {}).sort(function (a, b) { return a.localeCompare(b, 'de'); }).forEach(function (n) {
-        var o = document.createElement('option'); o.value = n; o.textContent = n + ' (' + nationPool(n).length + ')'; ns.appendChild(o);
+        var o = document.createElement('option'); o.value = n; o.textContent = n + ' (' + nationPool(n).length + ' + 2 Doktrinen)'; ns.appendChild(o);
       });
+      var on = document.createElement('option'); on.value = NEUTRAL;
+      on.textContent = 'Neutral (' + deckCards().filter(isNeutral).length + ')'; ns.appendChild(on);
+      ns.value = filterNation;
       ns.addEventListener('change', function () { filterNation = ns.value; render(); });
     }
     var q = document.getElementById('lib-search');
@@ -576,6 +625,14 @@
 
   global.DCLib = {
     nationPool: nationPool,
+    deckCards: deckCards,
+    nationOf: nationOf,
+    draftNations: draftNations,
+    addCard: function (id) { addCard(cardById(id)); },
+    clearDraft: function () { draft = { cards: {}, doctrines: [] }; },
+    draft: function () { return { cards: JSON.parse(JSON.stringify(draft.cards)), doctrines: draft.doctrines.slice() }; },
+    visibleIds: function () { var out = []; sections().forEach(function (g) { g.list.forEach(function (c) { out.push(c.id); }); }); return out; },
+    NEUTRAL: NEUTRAL,
     _setNationFilter: function (n) { filterNation = n || ''; },
     render: render,
     fillSelects: fillSelects,

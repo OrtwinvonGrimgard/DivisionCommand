@@ -289,7 +289,7 @@
                 <button type="button" class="lib-tab" data-tab="Doktrinen">DOKTRINEN</button>
               </div>
               <input id="lib-search" class="lib-search" type="search" placeholder="Suchen…" maxlength="40" autocomplete="off">
-              <select id="lib-nation" class="lib-nation" aria-label="Nationenpool filtern"><option value="">Alle Nationen</option></select>
+              <select id="lib-nation" class="lib-nation" aria-label="Nationenpool filtern" title="Nur Ansichtsfilter: Decks dürfen Karten aller Nationen mischen."><option value="">Alle Nationen</option></select>
             </div>
             <div id="lib-list" class="lib-list"></div>
           </div>
@@ -297,6 +297,7 @@
             <h3 class="deck-head">DECK</h3>
             <p class="deck-sub" id="deck-meta">Karten</p>
             <p class="deck-types" id="deck-types"></p>
+            <p class="deck-types deck-nations" id="deck-nations"></p>
             <div id="deck-docs" class="deck-docs"></div>
             <div id="deck-picked" class="deck-picked"></div>
             <div class="deck-save-box">
@@ -521,7 +522,7 @@
               <p>Das Spiel soll vom Blauhelm bis zum Abgrund der Kriegsführung reichen: Logistik, Aufklärung und Versorgung auf der einen Seite, Propaganda, Opfer und Flächenwirkung auf der anderen. Klassen sind Infanterie, Rad und Kette. Artillerie und Panzer sind Klassen, keine Tags. Tags vergibt du selbst und hängst die Effekte später daran.</p>
 
               <h2 id="regeln">Spielregeln</h2>
-              <p>Eine Partie gewinnt vor allem über <strong>Siegpunkte (SP)</strong>: zuerst <strong>5 SP</strong> (Trophy-Modus). SP kommen aus Elite-Kills (+2), Durchbrüchen (Abschnitt halten, bis 3× pro Flanke), Doktrin-Zielen und Karten. Abzug 26 gilt das Sicherheitsnetz (keine Front → Niederlage), ab Zug 28 entscheidet die SP-Wertung. Aufgabe und weißer Frieden bleiben. Der Ablagestapel kann neu gemischt werden, wenn das Deck leer ist. Das Nationendeck hat 60 Karten (Testdeck oft 40), die Starthand 5, die Hand darf auf 7 wachsen. Wer beginnt, entscheidet der <strong>Münzwurf</strong>. Der Startspieler hat im <strong>ersten Zug nur 4 AP</strong> (danach wieder 5), zieht in Zug 1 keine Karte; der zweite Spieler startet mit 5 AP und zieht zu Beginn seines ersten Zuges eine Karte (5→6). Kopienlimit nach Seltenheit: <strong>Bronze höchstens 4×</strong>, <strong>Silber 2×</strong>, <strong>Gold 1×</strong> (gleiche Namen zählen zusammen). Zwei verschiedene Doktrinen liegen offen und gelten die Partie über.</p>
+              <p>Eine Partie gewinnt vor allem über <strong>Siegpunkte (SP)</strong>: zuerst <strong>5 SP</strong> (Trophy-Modus). SP kommen aus Elite-Kills (+2), Durchbrüchen (Abschnitt halten, bis 3× pro Flanke), Doktrin-Zielen und Karten. Abzug 26 gilt das Sicherheitsnetz (keine Front → Niederlage), ab Zug 28 entscheidet die SP-Wertung. Aufgabe und weißer Frieden bleiben. Der Ablagestapel kann neu gemischt werden, wenn das Deck leer ist. Ein Deck hat 60 Karten plus 2 Doktrinen (Testdeck oft 40). Eigene Decks dürfen Karten aller Nationen und neutrale Karten frei mischen; die Nationenpools sind Identität und Filter, keine Deckbausperre. Die Starthand hat 5 Karten, die Hand darf auf 7 wachsen. Wer beginnt, entscheidet der <strong>Münzwurf</strong>. Der Startspieler hat im <strong>ersten Zug nur 4 AP</strong> (danach wieder 5), zieht in Zug 1 keine Karte; der zweite Spieler startet mit 5 AP und zieht zu Beginn seines ersten Zuges eine Karte (5→6). Kopienlimit nach Seltenheit: <strong>Bronze höchstens 4×</strong>, <strong>Silber 2×</strong>, <strong>Gold 1×</strong> (gleiche Namen zählen zusammen). Zwei verschiedene Doktrinen liegen offen und gelten die Partie über.</p>
               <p>Einheiten kommen auf eine eigene Frontstellung <strong>offen</strong> (nicht verdeckt) und handeln erst im nächsten eigenen Zug. Frisch gelegt sind sie <strong>eingegraben</strong>: ein Schild-Symbol zeigt den Schutz — nicht angreifbar und nicht Ziel gezielter Effekte bis zum Beginn des nächsten eigenen Zugs, plus +1 DEF. Flächenschaden (z.&nbsp;B. „Allen Feinden … Schaden“) trifft trotzdem. Unterstützung kommt in den Support und bleibt dort, bis sie zerstört, entfernt oder ausgeschaltet wird. Einsätze wirken sofort und gehen danach auf den Ablagestapel. Ausrüstung hängt an einer Einheit, wenn ihr Text das sagt. Doktrinen werden nicht gespielt, sie liegen von Anfang an offen.</p>
               <p>Ein Angriff kostet im Test 1 AP, ein Einsatz und das Anlegen von Ausrüstung im Test 0. Der Kartentext kann das ändern. Schaden senkt die Stabilität. Bei 0 ist die Einheit weg. Die Stellung bleibt leer. Niemand rückt automatisch nach. Der Verteidiger schlägt zurück, falls sie den Treffer übersteht und ihr Text das nicht verbietet. Bei Artillerie-Angriffen nur, wenn die angegriffene Einheit die Artillerie selbst mit ihrer Reichweite erreichen könnte. Eingegrabene Einheiten erscheinen nicht als legale Angriffsziele.</p>
               <p>Steilfeuer erhöht die Reichweite, nicht den Schaden. Stufe 1 reicht über 3 gegnerische Stellungen, Stufe 2 über 5, Stufe 3 über 9. Mörser ist Stufe 1, Haubitze Stufe 2, Raketenwerfer Stufe 3. Das Ziel wird angeklickt, der Kampf läuft danach von selbst.</p>
@@ -585,7 +586,7 @@
 
             <article class="hilfe-page dossier" id="hilfe-lore">
               <h2 id="lore-ueberblick">Nationen & Lore</h2>
-              <p>Es gibt 16 Nationen, jede mit eigener Bindung und Philosophie. Die Lore liegt detailliert in den Dateien unter <code>docs/nationen/lore_nationen/</code> (jeweils ≥1500 Wörter mit Philosophie, Kriegsführung, Preis, internen Strömungen, Alltag, Regionen, Städten und gesellschaftlichen Ebenen). Die Nationen sind thematisch unterschiedlich, der Kartenpool ist jedoch gemeinsam – Decks können frei oder lore-konform gebaut werden.</p>
+              <p>Es gibt 16 Nationen, jede mit eigener Bindung und Philosophie. Die Lore liegt detailliert in den Dateien unter <code>docs/nationen/lore_nationen/</code> (jeweils ≥1500 Wörter mit Philosophie, Kriegsführung, Preis, internen Strömungen, Alltag, Regionen, Städten und gesellschaftlichen Ebenen). Jede Nation hat einen in sich schlüssigen Pool aus 100 spielbaren Karten und 2 Doktrinen. Beim Deckbau darfst du Karten aus allen 1.709 Deckkarten mischen (16 Nationenpools plus neutrale Karten) – nationenrein und lore-konform oder frei gemischt. Die 2 Doktrinen wählst du frei aus allen 36.</p>
               <h2 id="lore-staerke">Stärke durch Opfer</h2>
               <p>Kernphilosophie über alle Nationen: Stärke entsteht durch Opfer. Beispiele: Karsk (Körper/Technik zum humanistischen Preis), Steinmark (Recht und Verzögerung als Schutz vor der eigenen Armee), Rothain (Krone, die nie versagt), Ossaria (Verlust als Deckung). Die detaillierten Essays beschreiben Pathos, interne Konflikte und den Preis, den die Bürger tragen. Die Karten sollen diese Themen visuell und mechanisch aufgreifen.</p>
             </article>
@@ -595,8 +596,8 @@
 
               <h2 id="markt-bild">Marktanalyse</h2>
               <p>Nur Steam, ohne bezahltes Werbebudget. Division Command sitzt zwischen Kartenspiel und Taktikspiel: freier Deckbau, ein sichtbares Frontfeld mit neun Stellungen, kurze Partien, militärischer Ton. Die nächste Vergleichsgruppe sind digitale Kartenspiele mit festem Tisch und eigenem Deckbau — nicht große Strategiespiele mit zwanzig Stunden Kampagnenkarte und nicht Free-to-Play-Live-Service-CCGs wie Hearthstone.</p>
-              <p><strong>Aktueller Produktstand:</strong> 16 Nationen mit je 60 Spielkarten und 2 Doktrinen (62 Einträge). Kartentypen Infanterie, Panzer, Artillerie, Aufklärung, Elite, Unterstützung, Soforteinsatz und Ausrüstung; Nationenzuordnung nur über die Decks. Die Engine verdrahtet Ausrüstungs- und Soforteffekte (Boni, Trigger, Heilung, Flächenschaden, Kostensenkung). Spielbar: Bot, Hotseat, LAN, Bibliothek, Deckbau. Separater Karten-Editor (DC). Offiziers-/Portrait-Kit ist für die Vermarktung zurückgestellt und zählt hier nicht als Release-Inhalt.</p>
-              <p>Die 16 Nationen sind Welt-, Karten- und Themenpool, keine 16 starren Fraktionskäfige. Langfristig zwei Doktrinen je Nation (32 Ausgangspunkte). Spieler sollen Karten kombinieren und eigene Decks bauen. Lore und Bildsprache liefern Synergien; einzelne Karten können universell oder national gebunden sein. Das hebt den Wiederspielwert stärker als reine Fertigdecks. Neben militärischer Durchsetzung bleibt ein diplomatischer Weg denkbar: Schaden abfangen, Eskalation drosseln, Richtung Verhandlung.</p>
+              <p><strong>Aktueller Produktstand:</strong> 16 Nationen mit je 100 spielbaren Karten und 2 Doktrinen im Nationenpool, dazu neutrale Karten; die Starterdecks haben 60 + 2. Kartentypen Infanterie, Panzer, Artillerie, Aufklärung, Elite, Unterstützung, Soforteinsatz und Ausrüstung; Jede Karte trägt ihre Nation; Decks mischen frei über alle Nationen. Die Engine verdrahtet Ausrüstungs- und Soforteffekte (Boni, Trigger, Heilung, Flächenschaden, Kostensenkung). Spielbar: Bot, Hotseat, LAN, Bibliothek, Deckbau. Separater Karten-Editor (DC). Offiziers-/Portrait-Kit ist für die Vermarktung zurückgestellt und zählt hier nicht als Release-Inhalt.</p>
+              <p>Die 16 Nationen sind Welt-, Karten- und Themenpool, keine 16 starren Fraktionskäfige: Jeder Nationenpool ist in sich schlüssig, aber beim Deckbau darf frei gemischt werden. Zwei Doktrinen je Nation (32 Ausgangspunkte, dazu 4 übergreifende). Spieler sollen Karten kombinieren und eigene Decks bauen. Lore und Bildsprache liefern Synergien; einzelne Karten können universell oder national gebunden sein. Das hebt den Wiederspielwert stärker als reine Fertigdecks. Neben militärischer Durchsetzung bleibt ein diplomatischer Weg denkbar: Schaden abfangen, Eskalation drosseln, Richtung Verhandlung.</p>
               <p>Der Steam-Kartenspielmarkt ist treffergetrieben. Unter dem Tag Card Game liegen grob 4&nbsp;400 Titel; der Median der geschätzten Lebenszeit-Umsätze liegt bei etwa 1&nbsp;200&nbsp;$, der Mittelwert bei mehreren hunderttausend — gezogen von wenigen Hits. Von den 2025er-Veröffentlichungen lag der Medianumsatz bei etwa 685&nbsp;$ (~470 Kopien); nur rund 10&nbsp;% erreichten 100&nbsp;000&nbsp;$, rund 3&nbsp;% eine Million. Rund 70&nbsp;% der Card-Game-Titel bleiben unter 5&nbsp;000&nbsp;$. Quelle: <a href="https://gamesberry.app/tag/card-game" target="_blank" rel="noopener">GamesBerry, Card Game auf Steam (2026)</a>. Die großen Steam-Zahlen im Genre kommen oft von Roguelike-Deckbuildern (Slay the Spire, Balatro, Inscryption), nicht von WW-Tisch-CCGs.</p>
               <p>Nähere Verwandte: KARDS (WW2-Kartenspiel, Free-to-Play) liegt nach Steam-Schätzungen bei grob 3,5&nbsp;Mio.&nbsp;$ Bruttoumsatz und über einer Million Einheiten, mit vierstelligen Concurrent Players — ein Live-Service-Modell, kein Premium-Indie-Verkauf. Legends of Runeterra hat PvP weitgehend zugunsten von PvE zurückgefahren; Marvel Snap bleibt mobil-lastig. Für Division Command ist die ehrlichere Vergleichslinie ein bezahltes, einmalig gekauftes Indie-Kartenspiel mit Bot und Hotseat, nicht ein F2P-Kartenladen.</p>
               <p>Ohne eigene Reichweite bleiben viele Indie-Karten-Titel bei wenigen hundert bis wenigen tausend Kopien. Wunschlisten vor dem Release, eine Partie, die ein Fremder in zehn Minuten versteht, und ein Standbild, das ohne Erklärung lesbar ist, entscheiden mehr als die reine Kartenanzahl. Die frühere Zahl „etwa 170&nbsp;000&nbsp;€ bei 9,99&nbsp;€“ war und bleibt der Fall „getroffen“ (~30&nbsp;000 Verkäufe im ersten Jahr), nicht der Normalfall. Der Normalfall liegt näher an der stillen Spalte der Tabelle unten.</p>
@@ -634,7 +635,7 @@
               <ul>
                 <li>Stabiler Tisch mit lesbarer Front und Effekten, die der Regeltext verspricht — Ausrüstung und Soforteinsätze inklusive.</li>
                 <li>Ein großer, frei kombinierbarer Kartenpool statt 16 starrer Fraktionsdecks. Die Nationen liefern Identität; die Karten dürfen darüber hinaus gemischt werden.</li>
-                <li>32 Doktrinen als langfristiger Rahmen: zwei je Nation, unterschiedliche Spielweisen ohne künstliche Pool-Trennung.</li>
+                <li>32 Nationendoktrinen (zwei je Nation, dazu 4 übergreifende): Jede Nation hat einen schlüssigen Pool aus 100 Karten + 2 Doktrinen, doch Decks dürfen Karten und Doktrinen aller Nationen frei mischen.</li>
                 <li>Mehrspieler mit Hotseat, LAN und später möglichst asynchronen Partien.</li>
                 <li>Sets und Erweiterungen, die im Spiel nachvollziehbar eingebunden bleiben.</li>
                 <li>Optional später: Feldzug/Offizierspfad, falls er wieder Produktbestandteil wird — aktuell kein Verkaufsargument.</li>
@@ -663,9 +664,9 @@
               <p><strong>Kurzfazit:</strong> Ja — eine eigene Marke lohnt sich, sobald Steam Coming Soon ernst wird. Zuerst DPMA (Klassen 9 und 41, ggf. 28) für ~290&nbsp;€, Name inkl. Logo prüfen, Konflikte mit dem Brettspiel und beschreibender Schwäche einkalkulieren. EUIPO später. Software-OSS-Lizenz jetzt nicht nötig; Urheberrecht läuft bereits. Das ersetzt keine Rechtsberatung.</p>
 
               <h2 id="markt-praezise">Marktanalyse (präzise): Zielgruppe, Konkurrenz, Spannen</h2>
-              <p><strong>Zielgruppe:</strong> Spieler, die mehr räumliche und thematische Tiefe suchen als in klassischen digitalen TCGs, ohne die Länge klassischer Wargames. Freier Deckbau aus einem gemeinsamen Pool ist das zentrale Feature.</p>
-              <p><strong>Konkurrenz:</strong> Digitale TCGs (Magic Arena, Hearthstone, Legends of Runeterra) und leichte Wargames. Differenzierung durch lineare Front + freie Kombination + Nationenthematik ohne Pool-Trennung.</p>
-              <p><strong>Kartenpool:</strong> Aktuell ~1.096 Karten. Ziel ~1.600 (100 pro Nation + gemeinsamer Pool). Der Bot arbeitet an der Überarbeitung.</p>
+              <p><strong>Zielgruppe:</strong> Spieler, die mehr räumliche und thematische Tiefe suchen als in klassischen digitalen TCGs, ohne die Länge klassischer Wargames. Freier Deckbau über alle Nationenpools hinweg ist das zentrale Feature.</p>
+              <p><strong>Konkurrenz:</strong> Digitale TCGs (Magic Arena, Hearthstone, Legends of Runeterra) und leichte Wargames. Differenzierung durch lineare Front + freie Kombination + Nationen mit eigenen, schlüssigen Pools, aber ohne Deckbausperre.</p>
+              <p><strong>Kartenpool:</strong> 1.709 Deckkarten: 16 Nationenpools à 100 Karten plus 109 neutrale, dazu 36 Doktrinen. Alle sind im Deckbau frei kombinierbar. Der Bot arbeitet an der Überarbeitung.</p>
               <p><strong>Monetarisierung (geplant):</strong> Einmaliger Kauf + optionale Erweiterungen / Kosmetik. Kein Pay-to-Win. Gewinnspanne hängt stark von der Qualität der Effekt-Verdrahtung und der Präsentation (HUD, Sound, Feedback) ab.</p>
               <p><strong>Gewinnspannen (Schätzung, Alpha-Stand):</strong></p>
               <ul>
@@ -680,7 +681,7 @@
               <h2 id="version">Version 0.5a</h2>
               <p>Aktueller Stand: Alpha 0.5a. Kernspiel (Feld, Züge, Einheiten, Support, Soforteinsätze, Ausrüstung, Doktrinen, Bot, LAN, Deckbuilder, Benutzerakte) ist spielbar. Grafik und Sound sind funktional, aber noch nicht auf professionellem Niveau. 2,5D-Tischansicht als Option vorhanden.</p>
               <h2 id="karten">Karten & Bot</h2>
-              <p>Der Kartenpool wird aktuell vom Bot überarbeitet (Ziel: ~100 Karten pro Nation bzw. umfassender gemeinsamer Pool mit nationenspezifischen Varianten). Alte Karten werden ersetzt. Effekte und Verknüpfungen werden parallel verbessert. Die Lore-Dateien sind bereits auf den detaillierten Stand gebracht.</p>
+              <p>Der Kartenpool wird aktuell vom Bot überarbeitet (je Nation 100 Karten + 2 Doktrinen, frei über Nationen kombinierbar). Alte Karten werden ersetzt. Effekte und Verknüpfungen werden parallel verbessert. Die Lore-Dateien sind bereits auf den detaillierten Stand gebracht.</p>
               <h2 id="roadmap">Roadmap (kurz)</h2>
               <p>Kurzfristig: Vollständige Kartenüberarbeitung, Effekt-Stabilität, HUD/Sound-Verbesserungen.<br>
               Mittelfristig: Roguelike-Modus zum Erspeilen des Kartenpools, Kampagnen-Modus, Balancing für freie und lore-konforme Decks.<br>
@@ -763,7 +764,7 @@
   <script src="js/ui/table-chat.js?v=nochat1"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/card-placeholder.js?v=gfx1-kw1"></script>
-  <script src="js/ui/library.js?v=gfx1"></script>
+  <script src="js/ui/library.js?v=mix1"></script>
   <script src="js/ui/portraits.js?v=kit20"></script>
   <script src="js/data/table-art-data.js?v=1"></script>
   <script src="js/ui/table-card-art.js?v=gfx1-kw1"></script>
@@ -778,7 +779,7 @@
   <script src="js/net.js?v=pt1"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js?v=fix1').catch(function () {});
+      navigator.serviceWorker.register('sw.js?v=mix1').catch(function () {});
     }
     (function () {
       document.title = window.DC_BUILD_LABEL || 'Division Command 0.5a Alpha';

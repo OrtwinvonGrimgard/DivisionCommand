@@ -9,8 +9,8 @@
 
 - Engine und Trophy-Modus funktionieren.
 - ~960 Nationenkarten + Alpha-Set vorhanden.
-- Nationen sind thematische Identitäten, kein Pool-Trennung.
-- Freier Deckbau aus dem gesamten Pool ist das zentrale Feature.
+- Jede Nation hat einen in sich schlüssigen Pool (100 Karten + 2 Doktrinen); er liefert Identität, Starterdecks und Filter.
+- Freier Deckbau: Eigene Decks mischen Karten aller Nationen (1.709 Deckkarten) – das ist das zentrale Feature.
 - Effekt-Verdrahtung (Ausrüstung, Soforteinsätze, Trigger) ist unvollständig.
 - HUD, Sound und visuelles Feedback sind noch nicht auf professionellem Niveau.
 - Roguelike und Kampagne sind geplant, aber nicht implementiert.
@@ -57,8 +57,8 @@ Parallel oder direkt nach Phase B.
 
 ## 3. Beide Modi (Thematisch / Frei)
 
-- **Thematisch:** Decks nur aus einer Nation (+ neutrale Karten).
-- **Frei:** Decks aus dem gesamten Pool.
+- **Frei (Standard, umgesetzt):** Decks aus allen Nationenpools und neutralen Karten, Doktrinen frei aus allen 36.
+- **Thematisch (optional, geplant):** Decks nur aus einer Nation (+ neutrale Karten).
 - PvP: Host oder beide Spieler wählen den Modus vor dem Start.
 - Kampagne und Roguelike: thematisch sinnvoll.
 - Offenes PvP und Hotseat: freie Wahl.
@@ -67,8 +67,8 @@ Parallel oder direkt nach Phase B.
 
 ## 4. Markt und Positionierung
 
-- Freier Deckbau aus einem gemeinsamen Pool ist das zentrale Verkaufsargument.
-- Nationen liefern thematische und visuelle Identitäten, keine Pool-Trennung.
+- Freier Deckbau über alle Nationenpools hinweg ist das zentrale Verkaufsargument.
+- Nationen liefern schlüssige Pools und thematische Identität, aber keine Deckbausperre.
 - Beide Modi vergrößern die potenzielle Spielerbasis moderat.
 - Der entscheidende Erfolgsfaktor bleibt die Qualität der Effects und die Präsentation.
 

@@ -2,6 +2,8 @@
 
 **Deckformat bleibt:** 60 Karten + 2 Doktrinen. Die Starterdecks wurden **nicht verändert**. Neu ist der Auswahlpool: jede der 16 Nationen hat jetzt 100 einzigartige spielbare Karten (60 aus dem Starter + 40 neue) plus ihre 2 Doktrinen. Insgesamt kommen 640 Karten dazu. Regeln, Balance-Werte der Bestandskarten und Sounds sind unverändert.
 
+**Deckbau mischt frei (Entscheidung Nov 2026):** Die Nationenpools sind in sich schlüssig und bestimmen Identität, Starterdecks, Bot-/Testdecks und den Filter. Ein eigenes Deck darf aber Karten aus **allen** 1.709 Deckkarten mischen (16 × 100 Nationenkarten + 109 neutrale). Die 2 Doktrinen sind frei aus allen 36 wählbar. Es gelten nur Kopienlimits (1/2/4 nach Seltenheit, nach Namen gezählt) und 60 + 2. Regeltext: [RULES §24.0](../regeln/RULES_v0.5_GRUNDKONZEPT.md#240-nationen-pools-und-mischen-verbindlich).
+
 ## Zahlen je Nation
 <!--TBL-->
 | Nation | vorher (einzigartige Starterkarten) | neu | nachher (Pool) | Doktrinen |
@@ -63,14 +65,15 @@ Die vollständige Liste aller 640 Karten mit Kurztext, kompletter Regel, Effektc
   - Der Platzhalter ist ein Datenrahmen mit AP, Name, Typ, Nation, Text, Werten und dem Hinweis „Entwurf · noch kein Artwork“.
   - Es gibt keine 404-Fehler und keine fremden Bilder. Das Bildmanifest bleibt unverändert.
 - **Deckbuilder:**
-  - Neuer Filter „Nation (Anzahl)“. Er zeigt die Karten der gewählten Nation plus die neutralen Karten.
+  - Filter „Nation (Anzahl + 2 Doktrinen)“, „Neutral“ und Standard „Alle Nationen“. Eine Nation zeigt ihre 100 Karten, ihre 2 Doktrinen und die neutralen Karten.
+  - Der Filter ist nur eine Ansicht: Karten aus verschiedenen Nationen können in dasselbe Deck. Die Seitenleiste zeigt die Herkunft (z. B. „Steinmark 30 · Vael 30“).
   - Kopienlimits und Deckprüfung laufen über die bestehende `DC_validateDeck`.
 
 ## Tests
 - `scripts/test_nation_pools.js` (in `npm test`) prüft:
   - 100 Karten je Nation, 2 Doktrinen, Starterdecks 60+2 unverändert und legal;
   - eindeutige IDs und Namen ohne Kollision mit Bestandskarten;
-  - Kopienlimits, ein legales gemischtes Deck je Nation und den Platzhalter;
+  - Kopienlimits, ein legales gemischtes Deck je Nation, ein nationenübergreifendes 60+2-Deck (auch mit Doktrinen zweier Nationen) und den Platzhalter;
   - das Ausspielen **jeder** neuen Karte über `dispatch`, mit effektspezifischen Prüfungen;
   - den Deckbuilder-Pool und das Platzhalter-/Regel-HTML.
 - `scripts/nation_pools/smoke_sim.js` ist ein technischer Bot-gegen-Bot-Smoke-Test mit Decks aus 30 Starter- + 30 Poolkarten. Er sucht nur nach Abstürzen und Hängern und trifft **keine Balance-Aussage**.

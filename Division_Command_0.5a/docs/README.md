@@ -67,6 +67,8 @@ Diese Texte überschneiden sich mit den Hauptdokumenten. Bei Widersprüchen gilt
 
 ## Karten, Decks und Pools – `karten/`
 
+Grundregel: Jede Nation hat einen schlüssigen Pool aus 100 Karten + 2 Doktrinen. Eigene Decks dürfen Karten aller Nationen frei mischen (60 + 2, Kopienlimits 1/2/4, Doktrinen frei aus allen 36). Verbindlicher Regeltext: [RULES §24.0](regeln/RULES_v0.5_GRUNDKONZEPT.md#240-nationen-pools-und-mischen-verbindlich).
+
 | Dokument | Inhalt |
 |---|---|
 | [NATIONENPOOLS_100.md](karten/NATIONENPOOLS_100.md) | Nationenpools mit 100 Karten je Nation, Deckformat 60 + 2 und Zahlentabelle. |

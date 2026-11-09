@@ -55,6 +55,37 @@ for (const n of nations) {
   assert.equal(new Set(mix).size, 60); assert(w.DC_validateDeck(mix, w.DC_NATION_DECKS[n].doktrinen).ok, n + ' gemischtes Deck legal');
 }
 
+// Freier Deckbau über Nationen (Entscheidung Nov 2026): Pools sind Identität, keine Sperre.
+{
+  const deckable = C.filter((c) => !['Doktrin', 'Token', 'Asset'].includes(c.typ) && !c.id.startsWith('t_'));
+  assert.equal(deckable.length, 1709, 'alle Deckkarten');
+  const four = nations.slice(0, 4), cross = [];
+  for (const n of four) C.filter((c) => c.nation === n && c.typ !== 'Doktrin' && c.typ !== 'Token').slice(0, 15).forEach((c) => cross.push(c.id));
+  assert.equal(cross.length, 60); assert.equal(new Set(cross.map((id) => C.find((c) => c.id === id).nation)).size, 4);
+  const docA = w.DC_NATION_DECKS[four[0]].doktrinen[0], docB = w.DC_NATION_DECKS[four[3]].doktrinen[1];
+  const vx = w.DC_validateDeck(cross, [docA, docB]);
+  assert(vx.ok, 'nationenübergreifendes 60+2-Deck legal: ' + vx.notices.join('; '));
+  assert.equal(vx.fixedIds.length, 60); assert.deepEqual(vx.doctrineIds, [docA, docB]);
+  // Doktrinen frei, auch ohne Bezug zu den Kartennationen; aber genau 2 verschiedene
+  const otherDoc = w.DC_NATION_DECKS[nations[9]].doktrinen[0];
+  assert(w.DC_validateDeck(cross, [otherDoc, docB]).ok, 'Doktrin einer dritten Nation erlaubt');
+  assert(!w.DC_validateDeck(cross, [docA, docA]).ok, 'gleiche Doktrin doppelt verboten');
+  assert(!w.DC_validateDeck(cross, [docA, docB, otherDoc]).ok, 'mehr als 2 Doktrinen verboten');
+  // Kopienlimits gelten im gemischten Deck unverändert
+  const brx = C.find((c) => c.nation === four[1] && c.rarity === 'bronze' && c.typ !== 'Doktrin');
+  const gox = C.find((c) => c.nation === four[2] && c.rarity === 'gold' && c.typ !== 'Doktrin');
+  const over = cross.slice(0, 54).concat(Array(5).fill(brx.id)).concat([gox.id]);
+  const vo = w.DC_validateDeck(over, [docA, docB]);
+  assert(!vo.ok && vo.fixedIds.filter((id) => id === brx.id).length === 4, 'Bronze max 4 auch nationsübergreifend');
+  assert(!w.DC_validateDeck(cross.slice(0, 58).concat([gox.id, gox.id]), [docA, docB]).ok, 'Gold max 1');
+  // Engine übernimmt das gemischte Deck vollständig
+  const eng = new w.DCEngine.Engine(w.DC_CATALOG, { seed: 11 });
+  eng.createMatch({ seed: 11, mode: 'hotseat', startPlayer: 0, deck0: cross.slice(), deck1: cross.slice(), doctrine0: [docA, docB], doctrine1: [otherDoc, docB], name0: 'A', name1: 'B' });
+  const p0 = eng.player(0);
+  assert.equal(p0.deck.length + p0.hand.length, 60, 'Engine behält alle 60 gemischten Karten');
+  assert(!(eng.state.deckNotices || []).length, 'keine Deckregel-Meldung');
+}
+
 // ---- 3) Funktionsprüfung je Karte
 const INF = C.find((c) => c.id === 't_inf'), PZ = C.find((c) => c.id === 't_pz'), SUPX = C.find((c) => c.id === 't_sup');
 function fresh() { const eng = L.newMatch(w, 'Steinmark', 3); L.clearBoard(eng); eng.state.active = 0; eng.state.phase = 'main'; eng.player(0).ap = 20; eng.player(1).ap = 20; return eng; }
@@ -200,10 +231,34 @@ for (const c of NP) {
   const h = setup('off'), fs = require('fs'), path = require('path');
   h.w.eval(fs.readFileSync(path.join(L.WEB, 'js/ui/library.js'), 'utf8'));
   for (const n of nations) assert.equal(h.w.DCLib.nationPool(n).length, 100, n + ' im Deckbuilder wählbar');
+  // Deckbuilder: Standardfilter „Alle“, Nationenfilter nur Ansicht, Karten aus mehreren Nationen in einem Deck
+  const Lib = h.w.DCLib, HC = h.w.DC_CATALOG.cards;
+  const deckN = HC.filter((c) => !['Doktrin', 'Token', 'Asset'].includes(c.typ)).length;
+  Lib._setNationFilter('');
+  const vis = Lib.visibleIds();
+  assert.equal(vis.length, deckN + HC.filter((c) => c.typ === 'Doktrin').length, 'Alle zeigt alle Deckkarten + Doktrinen');
+  const nA = nations[0], nB = nations[5];
+  Lib._setNationFilter(nA);
+  const visA = Lib.visibleIds().map((id) => HC.find((c) => c.id === id));
+  assert(visA.every((c) => { const n = Lib.nationOf(c); return n === nA || !n; }), 'Nationenfilter: eigene + neutrale');
+  assert.equal(visA.filter((c) => c.typ !== 'Doktrin' && Lib.nationOf(c) === nA).length, 100);
+  assert(h.w.DC_NATION_DECKS[nA].doktrinen.every((id) => visA.some((c) => c.id === id)), 'Nationendoktrinen sichtbar');
+  Lib._setNationFilter(Lib.NEUTRAL);
+  assert(Lib.visibleIds().every((id) => !Lib.nationOf(HC.find((c) => c.id === id))), 'Neutralfilter');
+  Lib.clearDraft(); Lib._setNationFilter(nA);
+  const ca = HC.find((c) => c.nation === nA && c.typ === 'Einheit'), cb = HC.find((c) => c.nation === nB && c.typ === 'Einheit');
+  Lib.addCard(ca.id); Lib.addCard(cb.id); // cb trotz Filter auf nA
+  Lib.addCard(h.w.DC_NATION_DECKS[nA].doktrinen[0]); Lib.addCard(h.w.DC_NATION_DECKS[nB].doktrinen[0]);
+  const dr = Lib.draft();
+  assert.equal(dr.cards[ca.id], 1); assert.equal(dr.cards[cb.id], 1, 'nationsfremde Karte im Deck');
+  assert.equal(dr.doctrines.length, 2, 'Doktrinen zweier Nationen');
+  const mixN = Lib.draftNations(); assert.equal(mixN[nA], 1); assert.equal(mixN[nB], 1);
+  assert(Lib.validateDraft().ok, 'gemischter Entwurf gültig');
+  Lib.clearDraft(); Lib._setNationFilter('');
   const pc = h.w.DC_CATALOG.cards.find((c) => c.set === 'set_nation_pool' && c.typ === 'Soforteinsatz');
   const ph = h.w.DCCardPh.html(pc, 'hero'); assert(/Entwurf · noch kein Artwork/.test(ph) && !/<img/.test(ph) && ph.includes(pc.name));
   const rh = h.w.DCCardPh.rulesHtml(pc); pc.rules.forEach((r) => assert(rh.includes(r.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'))));
 }
-console.log('PASS nation pools: ' + NP.length + ' neue Karten, alle 16 Nationen ≥100 einzigartig (+2 Doktrinen), Starterdecks 60+2 unverändert, Limits, Zielseiten/AP/Effekte je Karte geprüft');
+console.log('PASS nation pools: ' + NP.length + ' neue Karten, alle 16 Nationen ≥100 einzigartig (+2 Doktrinen), Starterdecks 60+2 unverändert, Limits, freies Mischen über Nationen, Zielseiten/AP/Effekte je Karte geprüft');
 console.log('  ' + report.join(' · '));
 console.log('  Codes: ' + Object.entries(seen).map(([k, v]) => k + '×' + v).join(' '));

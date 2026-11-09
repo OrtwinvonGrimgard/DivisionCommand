@@ -711,6 +711,15 @@ Die 60 Karten sind ein Richtwert und kein zwingendes hartes Minimum.
 
 Das System soll grundsätzlich freie Deckkonstruktion erlauben, sofern der endgültige Kartentext keine zusätzlichen Beschränkungen erzeugt.
 
+## 24.0 Nationen, Pools und Mischen (verbindlich)
+
+- **Nationenpool:** Jede der 16 Nationen hat einen in sich schlüssigen Pool aus **100 spielbaren Karten + 2 Doktrinen**. Dazu kommen neutrale Karten ohne Nation (aktuell 109) und 4 übergreifende Doktrinen. Insgesamt: **1.709 Deckkarten und 36 Doktrinen**.
+- **Wozu der Pool dient:** Identität und Lore der Nation, die Starterdecks (60 + 2, nationenrein), Bot-/Testdecks und der Nationenfilter in Bibliothek und Deckbau.
+- **Deckbau ohne Poolsperre:** Ein eigenes Deck darf Karten **aller** Nationen und neutrale Karten frei mischen. Es gibt keine Mindest- oder Höchstzahl je Nation. Der Nationenfilter im Deckbau ist nur eine Ansicht (Standard „Alle Nationen“).
+- **Doktrinen:** genau 2 **verschiedene** Doktrinen, frei wählbar aus allen 36 – auch nationsfremd oder aus zwei Nationen (siehe 24.2). Die Nationendoktrinen sind die Empfehlung für nationenreine Decks.
+- **Unverändert gelten:** Kopienlimits nach Seltenheit (24.1, auch über Nationen hinweg nach Namen gezählt) und die Deckgröße 60 + 2.
+- **Optionaler Modus (geplant, nicht umgesetzt):** Ein „thematischer“ Modus für Kampagne/Roguelike kann Decks später auf eine Nation plus Neutrale beschränken. Das ist eine Modusregel, nicht die Standardregel.
+
 ## 24.1 Seltenheitsstufen
 
 Jede Spielkarte besitzt eine Seltenheitsstufe. Die Stufe bestimmt zwei Dinge:
@@ -742,7 +751,7 @@ Beide Doktrinen sind zu Spielbeginn aktiv.
 
 Sie müssen nicht erst bezahlt oder aus der Hand gespielt werden.
 
-Die beiden Doktrinen dürfen frei kombiniert werden.
+Die beiden Doktrinen dürfen frei kombiniert werden: beliebige 2 verschiedene aus allen 36, unabhängig davon, aus welchen Nationen die Karten des Decks stammen. Die Zuordnung „2 Doktrinen je Nation“ beschreibt den Nationenpool und die Starterdecks, sie ist keine Deckbausperre.
 
 ---
 
