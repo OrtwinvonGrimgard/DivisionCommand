@@ -27,4 +27,10 @@ python3 scripts/graphics/verify.py
 ```
 
 Quellen: `KartenEditor/tools/render.py`, `render_core.py`, `scripts/graphics/alpha40.py`.
-Service-Worker-Cache: `divcmd-alpha40`.
+Service-Worker-Cache: `divcmd-alpha40b`.
+
+## alpha40b
+- Elite: Textpanel volle Breite, Orden darüber; nur Textumbruch rechts eingezogen.
+- Tag-Leiste immer vorhanden (auch ohne Chips).
+- Elite-Orden: Ringinnenräume und Fläche zwischen Spange und Band transparent.
+

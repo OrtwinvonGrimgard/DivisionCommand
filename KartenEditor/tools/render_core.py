@@ -444,15 +444,19 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
 
     tags = gameplay_tags(card)
     name_bot = ny + 128
-    if typ != "Doktrin" and tags:
-        ty = name_bot + TAG_GAP
-        text_top = draw_tag_banners(d, ty, tags, W) + TAG_GAP
-    elif typ == "Doktrin":
+    if typ == "Doktrin":
         text_top = 644
     else:
-        text_top = name_bot + 16
+        # Tag-Leiste immer reservieren (auch ohne Chips), damit Layout/Elite-Spange sitzen
+        ty = name_bot + TAG_GAP
+        # dezenter durchgehender Balken hinter den Chips
+        bar = (70, ty, W - 70, ty + 56)
+        d.rounded_rectangle(bar, radius=8, fill=(18, 12, 8), outline=GOLD, width=2)
+        if tags:
+            draw_tag_banners(d, ty, tags, W)
+        text_top = ty + 56 + TAG_GAP
 
-    tx0, ty0, tx1 = 78, text_top, W - 78
+    tx0, ty0, tx1 = 78, text_top, W - 78  # Panel immer volle Breite
     ty1 = 1890 if show_stats else 1988
     later = typ in ("Unterstützung", "Soforteinsatz", "Ausrüstung")
     ink, head_c, flav = (236, 224, 196), accent, (196, 168, 110)
@@ -478,21 +482,16 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
         return font(FONT_R, 36), font(FONT_B, 38), 46, 44, 36, False
     blocks_pre = abilities(card.get("text") or "")
     flavor = (card.get("flavor") or "").strip()
-    # Elite medal: narrow text panel so orden never covers body text
+    # Elite: Panel volle Breite; nur Textumbruch rechts einziehen (Orden hängt darüber)
     elite = card_is_elite(card) and typ != "Doktrin"
-    medal_inset = 0
-    if elite:
-        # matches paste_elite_order scaled width (~259) + left gap + right frame pad
-        medal_inset = 270  # elite-orden scaled width + gap; keeps text clear of medal
-    tx1_text = (W - 78) - medal_inset
-    inner_for_fit = max(200, tx1_text - 78 - 72)
+    medal_inset = 270 if elite else 0
+    text_right = tx1 - medal_inset  # wrap boundary; panel box stays tx1
+    inner_for_fit = max(200, text_right - tx0 - 72)
     body, head, BODY_LH, HEAD_LH, _bp, keep_flavor = _fit_fonts(
         blocks_pre, inner_for_fit, (1890 if show_stats else 1988) - text_top, bool(flavor))
     if not keep_flavor:
         flavor = ""
     ff = font(FONT_I, 36)
-    if elite:
-        tx1 = tx1_text
 
     if typ == "Doktrin":
         # Bollwerk-style: continuous parchment/leather body under crest (no art), ability plaques on top
@@ -519,16 +518,17 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
                 ty += BODY_LH
             y = y + hh + 24
     elif not later:
-        box = make_panel(panel, (tx1 - tx0, ty1 - ty0))
+        box = make_panel(panel, (tx1 - tx0, ty1 - ty0))  # volle Breite inkl. Elite
         stock.paste(box, (tx0, ty0))
         d = ImageDraw.Draw(stock)
         d.rectangle((tx0, ty0, tx1, ty1), outline=GOLD, width=3)
         y = ty0 + 48
+        wrap_w = text_right - tx0 - 72
         for title, rest in blocks_pre:
             if title:
                 d.text((tx0 + 36, y), title, font=head, fill=head_c)
                 y += HEAD_LH
-            for ln in wrap(d, rest, body, tx1 - tx0 - 72):
+            for ln in wrap(d, rest, body, wrap_w):
                 d.text((tx0 + 36, y), ln, font=body, fill=ink)
                 y += BODY_LH
             y += 18
@@ -536,8 +536,10 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
             d.line([(tx0 + 90, ty1 - 118), (tx1 - 90, ty1 - 118)], fill=GOLD, width=2)
             fy = ty1 - 78
             quoted = "„" + flavor + "“"
-            for ln in wrap(d, quoted, ff, tx1 - tx0 - 80)[:2]:
-                d.text((W / 2, fy), ln, font=ff, fill=flav, anchor="mm")
+            # Flavor in der Textspalte zentrieren (links vom Orden)
+            flav_cx = (tx0 + text_right) / 2
+            for ln in wrap(d, quoted, ff, wrap_w)[:2]:
+                d.text((flav_cx, fy), ln, font=ff, fill=flav, anchor="mm")
                 fy += 48
 
     if show_stats:

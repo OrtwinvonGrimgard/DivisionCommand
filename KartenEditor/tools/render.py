@@ -875,11 +875,8 @@ TAG_H = 56
 
 
 def support_text_top(card, after_y=1028):
-    """Textbox sitzt wie bei der Einheit direkt unter Titel/Tags."""
-    tags = gameplay_tags(card)
-    if tags:
-        return int(after_y + TAG_GAP + TAG_H + TAG_GAP)
-    return int(after_y + TEXT_GAP)
+    """Textbox sitzt wie bei der Einheit direkt unter Titel/Tags. Tag-Leiste immer reserviert."""
+    return int(after_y + TAG_GAP + TAG_H + TAG_GAP)
 
 
 def fill_band(img, stock_fn, y0, y1, keep=None):
@@ -900,9 +897,7 @@ def clear_support_well(img, stock_fn=None, y0=1028, y1=None, card=None):
     """Alles zwischen Titel und Textbox ist Typ-Hintergrund, keine Marmor-Restfläche."""
     if y1 is None:
         y1 = support_text_top(card, y0)
-    keep = None
-    if card and gameplay_tags(card):
-        keep = (int(y0 + TAG_GAP), int(y0 + TAG_GAP + TAG_H))
+    keep = (int(y0 + TAG_GAP), int(y0 + TAG_GAP + TAG_H))  # Tag-Leiste immer
     return fill_band(img, stock_fn, y0, y1, keep=keep)
 
 
@@ -921,9 +916,12 @@ def restack_under_art(img, card, stock_fn, art_bottom=910):  # 40% art
     name_plaque(d, "rect", title_y, str((card or {}).get("name") or ""), ww)
     rim = getattr(_mod, "GOLD", GOLD)
     d.rounded_rectangle((70, title_y, ww - 70, title_y + title_h), radius=6, outline=rim, width=5)
+    tag_y = after + TAG_GAP
+    rim = getattr(_mod, "GOLD", GOLD)
+    d.rounded_rectangle((70, tag_y, ww - 70, tag_y + TAG_H), radius=8, fill=(18, 12, 8), outline=rim, width=2)
     tags = gameplay_tags(card)
     if tags:
-        draw_tag_banners(d, after + TAG_GAP, tags, ww)
+        draw_tag_banners(d, tag_y, tags, ww)
     return rgb, ty0, title_y, title_h
 
 
@@ -1083,9 +1081,11 @@ def finish_sofort(img, card, edition="ALPHA", number="001", footer_star=False):
     ty0 = support_text_top(card, art_y1)
     img = clear_support_well(img, burnt_stock, art_y1, ty0, card)
     d = ImageDraw.Draw(img)
+    tag_y = art_y1 + TAG_GAP
+    d.rounded_rectangle((70, tag_y, ww - 70, tag_y + TAG_H), radius=8, fill=(18, 12, 8), outline=rim, width=2)
     tags = gameplay_tags(card)
     if tags:
-        draw_tag_banners(d, art_y1 + TAG_GAP, tags, ww)
+        draw_tag_banners(d, tag_y, tags, ww)
     ww, hh = img.size
     tx0, tx1, ty1 = 78, ww - 78, 1890
     img = paste_leather_plaque(img, (tx0, ty0, tx1, ty1))
