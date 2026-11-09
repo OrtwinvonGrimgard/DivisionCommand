@@ -5,6 +5,7 @@ cp.execFileSync('python3',['scripts/graphics/verify.py'],{cwd:ROOT,stdio:'inheri
 const {setup}=require('./test_audio_actions'),h=setup('off'),{w,eng,add,click}=h;
 const records=require('./graphics/graphics-manifest.json').records,faces=w.DC_CARD_FACES;
 assert.equal(Object.keys(faces).length,require('./graphics/graphics-manifest.json').new_faces);assert(Object.keys(faces).length>=1105);
+for(const r of records.filter(r=>r.ready))assert(r.output.startsWith('faces-v2/'),'gfx2 face '+r.id);
 for(const r of records){const c=w.DC_CATALOG.cards.find(c=>c.id===r.id);assert(c);
  if(faces[r.id]){assert.equal(w.dcCardImage(c),r.output);assert.equal(w.dcCardFile(r.output),r.output);assert(!w.DCCardPh.is(c));assert(fs.existsSync(path.join(WEB,'assets/cards',r.output)));}
  else if(r.provenance==='missing_illustration'){assert(w.DCCardPh.is(c));assert(!w.dcCardImage(c));assert(!faces[c.id]);}
@@ -31,7 +32,7 @@ for(const r of records.filter(r=>r.ready && r.type!=='Token')){
 const unfinished=records.find(r=>r.provenance==='missing_illustration');assert(collection.get(unfinished.id).querySelector('.card-ph'));
 // The source model remains unchanged: presentation manifest alone retires a placeholder.
 assert.equal(c.art_status,'platzhalter');assert(!c.image);
-const html=fs.readFileSync(path.join(WEB,'index.html'),'utf8');assert(html.indexOf('js/data/card-faces.js')>html.indexOf('js/data/catalog.js'));assert(html.indexOf('js/data/card-faces.js')<html.indexOf('js/ui/app.js'));assert(html.includes('app.js?v=gfx1'));
-assert(fs.readFileSync(path.join(WEB,'sw.js'),'utf8').includes('divcmd-mix1'));
+const html=fs.readFileSync(path.join(WEB,'index.html'),'utf8');assert(html.indexOf('js/data/card-faces.js')>html.indexOf('js/data/catalog.js'));assert(html.indexOf('js/data/card-faces.js')<html.indexOf('js/ui/app.js'));assert(html.includes('app.js?v=gfx2'));
+assert(fs.readFileSync(path.join(WEB,'sw.js'),'utf8').includes('divcmd-gfx2'));
 console.log('PASS graphics UI: ready-only routing; full-resolution hand/slot/inspect/collection/deckbuilder; hidden privacy; no unfinished artwork relabelled; rule records unchanged');
 h.dom.window.close();

@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-mix1';
+const CACHE = 'divcmd-gfx2';
 const ASSETS = [
   './',
   './index.html',
