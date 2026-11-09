@@ -6,8 +6,8 @@ Alle Regeln, Lore-Texte, Planungen und technischen Erklärungen zu Division Comm
 
 | Dokument | Inhalt |
 |---|---|
-| `Division_Command_Dokumentation.md` | **Platzhalter – wird noch ergänzt.** Vollständige Projektdokumentation; die Datei liegt noch nicht im Repo. |
-| `Division_Command_Dokumentation.pdf` | **Platzhalter – wird noch ergänzt.** PDF-Fassung der Projektdokumentation (optional). |
+| [`Division_Command_Dokumentation.md`](Division_Command_Dokumentation.md) | Vollständige Projektdokumentation (Alpha 0.5a, Stand November 2026). |
+| [`Division_Command_Dokumentation.pdf`](Division_Command_Dokumentation.pdf) | PDF-Fassung der Projektdokumentation. |
 
 ## Regeln – `regeln/`
 
