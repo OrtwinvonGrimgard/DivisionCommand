@@ -738,7 +738,7 @@ def dress_support_frame(img):
     crate_corner(d, ww - 36, 28, -1, 1, 54, 11)
     crate_corner(d, 36, hh - 28, 1, -1, 54, 11)
     crate_corner(d, ww - 36, hh - 28, -1, -1, 54, 11)
-    ax0, ay0, ax1, ay1 = 70, 56, ww - 70, 872
+    ax0, ay0, ax1, ay1 = 70, 56, ww - 70, 910  # 40% art
     for x in range(ax0 + 28, ax1 - 20, 46):
         _steel_rivet(d, x, ay0 + 10, 5)
         _steel_rivet(d, x, ay1 - 10, 5)
@@ -906,7 +906,7 @@ def clear_support_well(img, stock_fn=None, y0=1028, y1=None, card=None):
     return fill_band(img, stock_fn, y0, y1, keep=keep)
 
 
-def restack_under_art(img, card, stock_fn, art_bottom=872):
+def restack_under_art(img, card, stock_fn, art_bottom=910):  # 40% art
     """Titel und Tags direkt unter die Bildbox, ohne Restfläche dazwischen."""
     rgb = img.convert("RGB")
     ww, hh = rgb.size
@@ -927,6 +927,55 @@ def restack_under_art(img, card, stock_fn, art_bottom=872):
     return rgb, ty0, title_y, title_h
 
 
+
+def _draw_ability_text(img, card, box, ink=(236, 224, 196), head_c=None):
+    """Draw abilities+flavor into leather plaque with auto font step-down."""
+    from PIL import ImageDraw as _ID
+    tx0, ty0, tx1, ty1 = [int(v) for v in box]
+    rim = head_c or getattr(_mod, "GOLD", GOLD)
+    dummy = _ID.Draw(Image.new("RGB", (10, 10)))
+    blocks = abilities(str((card or {}).get("text") or ""))
+    flavor = str((card or {}).get("flavor") or "").strip()
+    inner_w = tx1 - tx0 - 80
+    avail = ty1 - ty0 - 48 - (118 if flavor else 24)
+    steps = [(60, 62, 72, 70), (56, 58, 68, 66), (52, 54, 64, 62), (48, 50, 58, 56), (44, 46, 54, 52), (40, 42, 50, 48), (36, 38, 46, 44)]
+    chosen = steps[-1]
+    use_flavor = bool(flavor)
+    for attempt_fl in ((True, False) if use_flavor else (False,)):
+        flav_h = 118 if attempt_fl else 24
+        room = ty1 - ty0 - 48 - flav_h
+        for bp, hp, blh, hlh in steps:
+            if attempt_fl and bp < 48:
+                break
+            h = 0
+            for title, rest in blocks:
+                if title: h += hlh
+                lines = wrap(dummy, rest, font(FONT_R, bp), inner_w) if rest else [""]
+                h += blh * max(1, len(lines)) + 24
+            if h <= room:
+                chosen = (bp, hp, blh, hlh); use_flavor = attempt_fl; break
+        else:
+            continue
+        break
+    bp, hp, blh, hlh = chosen
+    body, head = font(FONT_R, bp), font(FONT_B, hp)
+    d = _ID.Draw(img); d._image = img
+    y = ty0 + 48
+    for title, rest in blocks:
+        if title:
+            d.text((tx0 + 36, y), title, font=head, fill=rim); y += hlh
+        for ln in wrap(dummy, rest, body, inner_w):
+            d.text((tx0 + 36, y), ln, font=body, fill=ink); y += blh
+        y += 24
+    d.line([(tx0 + 90, ty1 - 118), (tx1 - 90, ty1 - 118)], fill=rim, width=2)
+    if use_flavor and flavor:
+        ff = font(FONT_I, 36)
+        quoted = "„" + flavor + "“"
+        fy = ty1 - 78
+        for ln in wrap(dummy, quoted, ff, tx1 - tx0 - 80)[:2]:
+            d.text(((tx0 + tx1) / 2, fy), ln, font=ff, fill=(196, 168, 110), anchor="mm"); fy += 48
+    return img
+
 def finish_support(img, card, edition="ALPHA", number="001", footer_star=False):
     """Stahlkarte, Textbox aus Doktrin-Rotleder, ohne ATK/DEF."""
     img = mill_coin(img, 210, 210, 118, int((card or {}).get("ap") or 0))
@@ -936,33 +985,7 @@ def finish_support(img, card, edition="ALPHA", number="001", footer_star=False):
     tx0, tx1, ty1 = 78, ww - 78, 1890
     img = paste_leather_plaque(img, (tx0, ty0, tx1, ty1))
     rim = getattr(_mod, "GOLD", GOLD)
-    d = ImageDraw.Draw(img)
-    d._image = img
-    ink = (236, 224, 196)
-    head_c = rim
-    body = font(FONT_R, 52)
-    head = font(FONT_B, 54)
-    y = ty0 + 48
-    inner_w = tx1 - tx0 - 80
-    dummy = ImageDraw.Draw(Image.new("RGB", (10, 10)))
-    for title, rest in abilities(str((card or {}).get("text") or "")):
-        if title:
-            d.text((tx0 + 36, y), title, font=head, fill=head_c)
-            y += 62
-        for ln in wrap(dummy, rest, body, inner_w):
-            d.text((tx0 + 36, y), ln, font=body, fill=ink)
-            y += 64
-        y += 24
-    d.line([(tx0 + 90, ty1 - 118), (tx1 - 90, ty1 - 118)], fill=rim, width=2)
-    flavor = str((card or {}).get("flavor") or "").strip()
-    if flavor:
-        ff = font(FONT_I, 36)
-        quoted = "„" + flavor + "“"
-        lines = wrap(dummy, quoted, ff, tx1 - tx0 - 80)[:2]
-        fy = ty1 - 78
-        for ln in lines:
-            d.text((ww / 2, fy), ln, font=ff, fill=(196, 168, 110), anchor="mm")
-            fy += 48
+    img = _draw_ability_text(img, card, (tx0, ty0, tx1, ty1), head_c=rim)
     return paste_main_logo(img, number, edition, footer_star)
 
 
@@ -996,33 +1019,7 @@ def finish_gear(img, card, edition="ALPHA", number="001", footer_star=False):
     tx0, tx1, ty1 = 78, ww - 78, 1890
     img = paste_leather_plaque(img, (tx0, ty0, tx1, ty1))
     rim = getattr(_mod, "GOLD", GOLD)
-    d = ImageDraw.Draw(img)
-    d._image = img
-    ink = (236, 224, 196)
-    head_c = rim
-    body = font(FONT_R, 52)
-    head = font(FONT_B, 54)
-    y = ty0 + 48
-    inner_w = tx1 - tx0 - 80
-    dummy = ImageDraw.Draw(Image.new("RGB", (10, 10)))
-    for title, rest in abilities(str((card or {}).get("text") or "")):
-        if title:
-            d.text((tx0 + 36, y), title, font=head, fill=head_c)
-            y += 62
-        for ln in wrap(dummy, rest, body, inner_w):
-            d.text((tx0 + 36, y), ln, font=body, fill=ink)
-            y += 64
-        y += 24
-    d.line([(tx0 + 90, ty1 - 118), (tx1 - 90, ty1 - 118)], fill=rim, width=2)
-    flavor = str((card or {}).get("flavor") or "").strip()
-    if flavor:
-        ff = font(FONT_I, 36)
-        quoted = "„" + flavor + "“"
-        lines = wrap(dummy, quoted, ff, tx1 - tx0 - 80)[:2]
-        fy = ty1 - 78
-        for ln in lines:
-            d.text((ww / 2, fy), ln, font=ff, fill=(196, 168, 110), anchor="mm")
-            fy += 48
+    img = _draw_ability_text(img, card, (tx0, ty0, tx1, ty1), head_c=rim)
     return paste_main_logo(img, number, edition, footer_star)
 
 
@@ -1061,10 +1058,10 @@ def finish_sofort(img, card, edition="ALPHA", number="001", footer_star=False):
     img = img.convert("RGB")
     ww, hh = img.size
     x0, x1 = 70, ww - 70
-    art = img.crop((x0, 56, x1, 872))
+    art = img.crop((x0, 56, x1, 910))  # 40% art
     title_y, title_h, gap = 56, 128, 28
     art_y0 = title_y + title_h + gap
-    art_y1 = 1028
+    art_y1 = art_y0 + 854  # 40% art window
     stock = burnt_stock(img.size)
     gx0, gx1 = 54, ww - 54
     img.paste(stock.crop((gx0, title_y, gx1, art_y0 + 4)), (gx0, title_y))
@@ -1092,31 +1089,7 @@ def finish_sofort(img, card, edition="ALPHA", number="001", footer_star=False):
     ww, hh = img.size
     tx0, tx1, ty1 = 78, ww - 78, 1890
     img = paste_leather_plaque(img, (tx0, ty0, tx1, ty1))
-    d = ImageDraw.Draw(img)
-    ink = (236, 224, 196)
-    body = font(FONT_R, 52)
-    head = font(FONT_B, 54)
-    y = ty0 + 48
-    inner_w = tx1 - tx0 - 80
-    dummy = ImageDraw.Draw(Image.new("RGB", (10, 10)))
-    for title, rest in abilities(str((card or {}).get("text") or "")):
-        if title:
-            d.text((tx0 + 36, y), title, font=head, fill=rim)
-            y += 62
-        for ln in wrap(dummy, rest, body, inner_w):
-            d.text((tx0 + 36, y), ln, font=body, fill=ink)
-            y += 64
-        y += 24
-    d.line([(tx0 + 90, ty1 - 118), (tx1 - 90, ty1 - 118)], fill=rim, width=2)
-    flavor = str((card or {}).get("flavor") or "").strip()
-    if flavor:
-        ff = font(FONT_I, 36)
-        quoted = "„" + flavor + "“"
-        lines = wrap(dummy, quoted, ff, tx1 - tx0 - 80)[:2]
-        fy = ty1 - 78
-        for ln in lines:
-            d.text((ww / 2, fy), ln, font=ff, fill=(196, 168, 110), anchor="mm")
-            fy += 48
+    img = _draw_ability_text(img, card, (tx0, ty0, tx1, ty1), head_c=rim)
     return paste_main_logo(img, number, edition, footer_star)
 
 
@@ -1163,6 +1136,22 @@ def wipe_atk_def(img):
     return rgb
 
 
+def elite_medal_inset(ww=None):
+    """Right-side clearance (px) so body text never sits under the elite orden."""
+    path = Path(__file__).resolve().parent.parent / "assets" / "elite-orden.png"
+    if not path.is_file():
+        return 280
+    medal = Image.open(path)
+    clasp_top, clasp_bot = 4, 112
+    clasp_png_h = clasp_bot - clasp_top
+    clasp_h = 56 - 2 * 4
+    sc = clasp_h / clasp_png_h
+    nw = max(1, int(medal.size[0] * sc))
+    # medal x = ww-64-nw; leave 24px gap before medal; panel right pad already 78
+    # inset from default tx1 (W-78): medal overlaps [ww-64-nw, ww-64] into panel
+    return int(64 + nw + 24 - 78)  # ~= 269 for current asset; caller does tx1 -= inset
+
+
 def paste_elite_order(img):
     """Öl-Orden: Spange sitzt mit gleichem Abstand in der Tag-Leiste."""
     path = Path(__file__).resolve().parent.parent / "assets" / "elite-orden.png"
@@ -1173,7 +1162,7 @@ def paste_elite_order(img):
     # Spange im PNG: Gold von y=4 bis y=148
     clasp_top, clasp_bot = 4, 112
     clasp_png_h = clasp_bot - clasp_top
-    bar_y, bar_h, pad = 1042, 56, 4
+    bar_y, bar_h, pad = 1066, 56, 4  # 40% art: name ends ~1052, tags at +TAG_GAP
     clasp_h = bar_h - 2 * pad
     sc = clasp_h / clasp_png_h
     nw, nh = max(1, int(medal.size[0] * sc)), max(1, int(medal.size[1] * sc))

@@ -102,6 +102,7 @@ Grundregel: Jede Nation hat einen schlüssigen Pool aus 100 Karten + 2 Doktrinen
 | [CHOICE_WIRING.md](technik/CHOICE_WIRING.md) | Verdrahtung von Wahl-Karten und Doktrinen, Bot-Faustregel. |
 | [PLAYTEST_LOGS.md](technik/PLAYTEST_LOGS.md) | Partie-Protokollierung im Browser, Export und Auswertung. |
 | [SOUND_QUELLEN_SFX.md](technik/SOUND_QUELLEN_SFX.md) | Herkunft und Stil der Soundeffekte (SFX v4). |
+| [KARTEN_RENDER_ALPHA40.md](technik/KARTEN_RENDER_ALPHA40.md) | Old-Alpha-Vorderseiten: 40 %-Motiv, Schriftstufen, Elite-Einzug, Bollwerk-Doktrinen. |
 
 ## Bewusst außerhalb von `docs/`
 

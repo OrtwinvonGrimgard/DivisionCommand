@@ -371,7 +371,7 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
     # Quadratisch bis zum Rand: Metall ist die Druckfläche.
     # Runde Ecken schneidet die Druckerei. Keine schwarze Maske.
 
-    art_box = (70, 56, W - 70, 872 if show_art else 560)
+    art_box = (70, 56, W - 70, (56 + 854) if show_art else 560)  # oldstyle-40%: 854px = 40% of 2136
     tw, th = art_box[2] - art_box[0], art_box[3] - art_box[1]
 
     if show_art and art_file and os.path.isfile(art_file):
@@ -437,9 +437,10 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
         stock = paste_elite_order(stock)
         d = ImageDraw.Draw(stock)
 
-    ny = 900
+    ny = (56 + 854 + 14) if show_art else 900  # name directly under 40% art window
     if typ != "Doktrin":
-        name_plaque(d, "rect", ny, card["name"])
+        d._image = stock  # velvet name_plaque needs image handle for wood/samt texture
+        name_plaque(d, "rect", ny, card["name"], W)
 
     tags = gameplay_tags(card)
     name_bot = ny + 128
@@ -455,29 +456,67 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
     ty1 = 1890 if show_stats else 1988
     later = typ in ("Unterstützung", "Soforteinsatz", "Ausrüstung")
     ink, head_c, flav = (236, 224, 196), accent, (196, 168, 110)
-    body = font(FONT_R, 52)
-    head = font(FONT_B, 54)
+    # oldstyle-40: auto font step-down so multi-effect texts fit the larger panel
+    def _fit_fonts(blocks, inner_w, avail_h, want_flavor):
+        # Start ~60 px (1–2 steps up from old 52); drop flavour before shrinking too far; never overflow
+        steps = [(60, 62, 72, 70), (56, 58, 68, 66), (52, 54, 64, 62), (48, 50, 58, 56), (44, 46, 54, 52), (40, 42, 50, 48), (36, 38, 46, 44)]
+        dummy = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+        keep_fl = bool(want_flavor)
+        for attempt_fl in ((True, False) if keep_fl else (False,)):
+            flav_h = 118 if attempt_fl else 24
+            for bp, hp, blh, hlh in steps:
+                if attempt_fl and bp < 48:
+                    break  # prefer dropping flavour over tiny body text
+                bf, hf = font(FONT_R, bp), font(FONT_B, hp)
+                h = 48
+                for title, rest in blocks:
+                    if title: h += hlh
+                    lines = wrap(dummy, rest, bf, inner_w) if rest else []
+                    h += blh * max(1, len(lines)) + 18
+                if h + flav_h <= avail_h:
+                    return bf, hf, blh, hlh, bp, attempt_fl
+        return font(FONT_R, 36), font(FONT_B, 38), 46, 44, 36, False
+    blocks_pre = abilities(card.get("text") or "")
+    flavor = (card.get("flavor") or "").strip()
+    # Elite medal: narrow text panel so orden never covers body text
+    elite = card_is_elite(card) and typ != "Doktrin"
+    medal_inset = 0
+    if elite:
+        # matches paste_elite_order scaled width (~259) + left gap + right frame pad
+        medal_inset = 270  # elite-orden scaled width + gap; keeps text clear of medal
+    tx1_text = (W - 78) - medal_inset
+    inner_for_fit = max(200, tx1_text - 78 - 72)
+    body, head, BODY_LH, HEAD_LH, _bp, keep_flavor = _fit_fonts(
+        blocks_pre, inner_for_fit, (1890 if show_stats else 1988) - text_top, bool(flavor))
+    if not keep_flavor:
+        flavor = ""
     ff = font(FONT_I, 36)
+    if elite:
+        tx1 = tx1_text
 
     if typ == "Doktrin":
+        # Bollwerk-style: continuous parchment/leather body under crest (no art), ability plaques on top
+        body_field = taut_leather(rotleder_panel((W - 108, H - 560 - 48))).convert("RGB")
+        stock.paste(body_field, (54, 560))
+        d = ImageDraw.Draw(stock)
         blocks = []
         dummy = ImageDraw.Draw(Image.new("RGB", (10, 10)))
         inner_w = tx1 - tx0 - 80
-        for title, rest in abilities(card.get("text") or ""):
+        for title, rest in blocks_pre:
             lines = wrap(dummy, rest, body, inner_w)
-            hh = 44 + (62 if title else 0) + 64 * max(1, len(lines)) + 32
+            hh = 44 + (HEAD_LH if title else 0) + BODY_LH * max(1, len(lines)) + 32
             blocks.append((title, lines, hh))
-        y = ty0
+        y = max(ty0, 644)
         for title, lines, hh in blocks:
             stock = paste_leather_plaque(stock, (tx0, y, tx1, y + hh))
             d = ImageDraw.Draw(stock)
             ty = y + 40
             if title:
                 d.text((W / 2, ty), title, font=head, fill=head_c, anchor="mt")
-                ty += 62
+                ty += HEAD_LH
             for ln in lines:
                 d.text((W / 2, ty), ln, font=body, fill=ink, anchor="mt")
-                ty += 64
+                ty += BODY_LH
             y = y + hh + 24
     elif not later:
         box = make_panel(panel, (tx1 - tx0, ty1 - ty0))
@@ -485,15 +524,14 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
         d = ImageDraw.Draw(stock)
         d.rectangle((tx0, ty0, tx1, ty1), outline=GOLD, width=3)
         y = ty0 + 48
-        for title, rest in abilities(card.get("text") or ""):
+        for title, rest in blocks_pre:
             if title:
                 d.text((tx0 + 36, y), title, font=head, fill=head_c)
-                y += 62
+                y += HEAD_LH
             for ln in wrap(d, rest, body, tx1 - tx0 - 72):
                 d.text((tx0 + 36, y), ln, font=body, fill=ink)
-                y += 64
+                y += BODY_LH
             y += 18
-        flavor = (card.get("flavor") or "").strip()
         if flavor:
             d.line([(tx0 + 90, ty1 - 118), (tx1 - 90, ty1 - 118)], fill=GOLD, width=2)
             fy = ty1 - 78
