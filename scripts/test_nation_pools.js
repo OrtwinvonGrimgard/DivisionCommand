@@ -119,7 +119,7 @@ for (const c of NP) {
     const nbDef = stats(eng, nb).def;
     if (codes.includes('FLANK_DEF')) assert(nbDef >= nbDef0 + 2, c.id + ' Flanke ' + nbDef0 + '→' + nbDef);
     if (codes.includes('MECH_AURA')) { assert(stats(eng, nb).def >= nbDef0 + 1, c.id + ' Begleitschutz'); }
-    if (codes.includes('SCHADEN_MINUS')) { const d0 = inst.def; eng._damage(inst, 3, {}); assert.equal(d0 - inst.def, 1, c.id + ' −2'); }
+    if (codes.includes('SCHADEN_MINUS')) { const sm = c.effects.find((e) => e.code === 'SCHADEN_MINUS'), n = sm.param && sm.param.n != null ? sm.param.n : 2; const d0 = inst.def; eng._damage(inst, 3, {}); assert.equal(d0 - inst.def, 3 - n, c.id + ' −' + n); }
     if (codes.includes('FUEHRUNG_V')) { const d0 = stats(eng, inst).def; p.ap = 20; deploy(eng, PZ, 'L', 0); assert(stats(eng, inst).def >= d0 + 2, c.id + ' Verbund'); }
     // Angriff (nächster eigener Zug, damit Einsatzsperre vorbei)
     inst.summonedTurn = -9; inst.playedTurn = -9; inst.attackUsed = false; inst.flags.exhausted = false; inst.flags.noCombatUntil = 0; p.ap = 20;

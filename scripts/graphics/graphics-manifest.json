@@ -41480,13 +41480,13 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "82e1437281b8992ad37873c0c5aaf82be72f820c67cfc2ada59354aa272aa2b3",
+   "source_record_sha256": "13bb6070528ffb452a3f341eca88bcae969b85a287d2a0eb43e176e45df1e25e",
    "kurz": "Keine Sonderfähigkeit.",
    "keywords": [],
    "printed_stats": {
     "ap": 2,
     "atk": 1,
-    "def": 4,
+    "def": 3,
     "tags": [
      "einheit",
      "infanterie"
@@ -41502,7 +41502,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "c788c4faf230bea44b7d38d612cb1c019865f72f3aa9180b33c4b04e268b2a8e"
+   "output_sha256": "9e08e0a22100d066a1cf7b4ac03a0903bda991514d56b012ac5f1c08183ab2cb"
   },
   {
    "id": "dc_np_caldris_sanitaetstrupp",
@@ -41602,14 +41602,14 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "1cae433f5fa0bbfe414f4f67bef7f0e0a0ed2cf89036954908cb0447840bc392",
+   "source_record_sha256": "5355c4bd3ff0ff77bc5b4745f11635f8560c102ff1a2c70bb3acee3adfc9a053",
    "kurz": "Benachbarte eigene Infanterie +1 DEF.",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
     "ap": 2,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "tags": [
      "einheit",
@@ -41626,7 +41626,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "8df1dd019fc7339f2accd3e8604ffe1ec82315c1c7fcf140d30e4b9ad681d79a"
+   "output_sha256": "007fe173c4d8b2833ef5985e9a3f9439b39e9723b8524d21981e82b018ed0097"
   },
   {
    "id": "dc_np_caldris_genesene_kompanie",
@@ -41634,7 +41634,7 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "silver",
-   "source_record_sha256": "a9f35ec066291d11eea3ca44165bdb545097819bfd3fb862d6dd627425b94bd9",
+   "source_record_sha256": "3c8fca67f668099deb9dfb2c34bd2639aeb18ae7addf071b233e974423bbc324",
    "kurz": "",
    "keywords": [
     "Überlast"
@@ -41642,7 +41642,7 @@
    "printed_stats": {
     "ap": 3,
     "atk": 3,
-    "def": 4,
+    "def": 3,
     "tags": [
      "einheit",
      "infanterie"
@@ -41658,7 +41658,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "c36767e55d177c8236c5c806f6d88233da24f4c23f336e15feeec372e10a2af1"
+   "output_sha256": "2f335becc3018fdb0c2ba1351493f3be610e05463d565b1a18f9af327cf107c4"
   },
   {
    "id": "dc_np_caldris_sanitaetspanzer",
@@ -41700,7 +41700,7 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "silver",
-   "source_record_sha256": "d40007778e7875ca70bd79bce7deb36609b871b86b15e51449ae17fb10736323",
+   "source_record_sha256": "d772a8a0042a2cb6eff11795caa5a46af56e2aab2efb4de351aaef35bd5aefc2",
    "kurz": "Benachbarte eigene Fronteinheiten +2 DEF.",
    "keywords": [
     "Überlast"
@@ -41708,7 +41708,7 @@
    "printed_stats": {
     "ap": 4,
     "atk": 3,
-    "def": 5,
+    "def": 4,
     "tags": [
      "einheit",
      "panzer",
@@ -41726,7 +41726,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "24075bc7191f92bab5452723ea78543e70a389e10224445bdeecfd9739dc6b42"
+   "output_sha256": "5d59991c6fa83c8cc4418f6a288bee66f47925a1e7f03a47509978d2fed7a621"
   },
   {
    "id": "dc_np_caldris_panzerschild_caldris",
@@ -41734,8 +41734,8 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "gold",
-   "source_record_sha256": "63fecfd21db1a710ce12b64755e32e1911fea472cd9f825af8f8a45e122c10d9",
-   "kurz": "Jeder Schaden an dieser Einheit −2.",
+   "source_record_sha256": "7be550fd5a93277b53eced7685451529cbc187b64c9a92649dfae1c427a4fed3",
+   "kurz": "Jeder Schaden an dieser Einheit −1.",
    "keywords": [
     "Abschirmung"
    ],
@@ -41760,7 +41760,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "4d3e75beb994d61a38795c45dd8bcc63fe2b9f9b0a388503e2d788c61f77efc3"
+   "output_sha256": "441a7aa3cbfb81713db868601c0caef9f57c1e748b940d989bffb73fbf6121dd"
   },
   {
    "id": "dc_np_caldris_etappenpanzer",
@@ -41802,7 +41802,7 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "761ef9a58680b656b0bd77a86e73173b158d5bce70a4e9260c2a234d3493d92a",
+   "source_record_sha256": "17f30a0282c1ea81da182926b53d154e477e34d8a100c15c1ed1ef1cbe9c7c74",
    "kurz": "",
    "keywords": [
     "Ablösung"
@@ -41810,7 +41810,7 @@
    "printed_stats": {
     "ap": 3,
     "atk": 2,
-    "def": 5,
+    "def": 4,
     "tags": [
      "einheit",
      "panzer",
@@ -41828,7 +41828,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "5102c35f9627cf6a7f9dfdd43b39627e871b9e0773e431095fea957bbf1c8b47"
+   "output_sha256": "3e1fb748c365c36e38823c7b0330c101816a67035d508ef3b7864c7e04bf6e3d"
   },
   {
    "id": "dc_np_caldris_schutzfeuerbatterie",
@@ -41900,13 +41900,13 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "silver",
-   "source_record_sha256": "d7bb58d24e9b9e7eeddb6851d73820aeac7b0482a36cb894d1d055e82526bbcf",
+   "source_record_sha256": "b5970266e31d49f75165a95e38882385da517edd0a672d00324141af5d923da0",
    "kurz": "Steilfeuer II.",
    "keywords": [],
    "printed_stats": {
     "ap": 4,
     "atk": 3,
-    "def": 4,
+    "def": 3,
     "tags": [
      "einheit",
      "steilfeuer-ii",
@@ -41923,7 +41923,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "9808affd19a9ff3bd284f097ecbb2f23a598763b544f4f847397f8034ffe5d21"
+   "output_sha256": "29c13ac3ad1dde0fefdb6a616eec419ac5640b6e3e1b8876f06c3ba44d545e4f"
   },
   {
    "id": "dc_np_caldris_sperrfeuer_fuersorge",
@@ -42058,7 +42058,7 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "silver",
-   "source_record_sha256": "97124efc10b1f7ad50d20cced2de5d3ab898e8e0283a22381658ebf9852ce498",
+   "source_record_sha256": "603e3e6bd505659740450fd5cb7357755286ce1d1efada8b9b7ac224d0048ef4",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
    "keywords": [
     "Fernschuss"
@@ -42066,7 +42066,7 @@
    "printed_stats": {
     "ap": 2,
     "atk": 2,
-    "def": 2,
+    "def": 1,
     "tags": [
      "einheit",
      "aufklaerung"
@@ -42082,7 +42082,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "f424cbed5c11f2f5ac10e2d441cfd0d31aa6083222853af3070d909c13deee6e"
+   "output_sha256": "fd99a5982b417c71574390b1d8b764bf7857330f26b0692c139a73b578ed6d7a"
   },
   {
    "id": "dc_np_caldris_oberste_fuersorge",
@@ -42123,7 +42123,7 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "silver",
-   "source_record_sha256": "02c5755d0494d5fe524030e2312ba96f4ef4e9fcbc76eefea236a89cc79ad915",
+   "source_record_sha256": "236655c4ffc3d2003256b6b817ce12cf2affa0f70466e1f8987a0b06ad7c97ac",
    "kurz": "Benachbarte eigene Infanterie +1 DEF.",
    "keywords": [
     "Sicherung"
@@ -42131,7 +42131,7 @@
    "printed_stats": {
     "ap": 4,
     "atk": 3,
-    "def": 5,
+    "def": 4,
     "tags": [
      "einheit",
      "elite",
@@ -42148,7 +42148,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "954f30bc91a3e510ac8072b80ac1c7be9a355b344f64b45bd678b79dfabc419a"
+   "output_sha256": "29106ed32af8f12ea45746829d47005a257f960ec7a2752b94ad4df45f77969b"
   },
   {
    "id": "dc_np_caldris_feldklinik",
@@ -42156,11 +42156,11 @@
    "type": "Unterstützung",
    "nation": "Caldris",
    "rarity": "silver",
-   "source_record_sha256": "4819c3e50a0697ffdeb6efecdd773904b5a44e7259404c8464f1cc50fa1514c1",
+   "source_record_sha256": "e8e281caa006488c82d792246be7f4e9ad177416eb4ec952380b7a3dc4683563",
    "kurz": "Jeder Schaden an deinen Fronteinheiten −1.",
    "keywords": [],
    "printed_stats": {
-    "ap": 3,
+    "ap": 4,
     "atk": null,
     "def": null,
     "tags": [
@@ -42177,7 +42177,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "a889dd9e0e66f4bbfcb69f649624b78eff16a94b90b3e911fbf0cdbd1b4aad5b"
+   "output_sha256": "23afb9b8e9e8bb917bd72cca8d147f47eb0dbf0a4c871ef604cab77c22434605"
   },
   {
    "id": "dc_np_caldris_ruhezone",
@@ -42446,8 +42446,8 @@
    "type": "Soforteinsatz",
    "nation": "Caldris",
    "rarity": "silver",
-   "source_record_sha256": "011969e72bf7e095200dedd42fc385e511f535b977fade340d543ca1b5f1d35b",
-   "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF dauerhaft.",
+   "source_record_sha256": "de74216dd7e71a163de29f4eb995a553a8a193d2e5e734c61d71d149a8823779",
+   "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
    "keywords": [],
    "printed_stats": {
     "ap": 2,
@@ -42467,7 +42467,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "6c9067230974f89bc6418b0f6fe29616d44ae09cd98e9fbabc5cbb3ad4d574e7"
+   "output_sha256": "9b93b55718db888792f17aad08e7ff02390256061fe34765cfbedf6cc3575e0f"
   },
   {
    "id": "dc_np_caldris_genesene_zurueck_an_die_front",
@@ -42475,11 +42475,11 @@
    "type": "Soforteinsatz",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "ad8c1ec38c09d08b54bf88a6ba602a980997f0251839a737ed1dc4a2f9470b37",
+   "source_record_sha256": "4f789d7bb8daa59cf132828fee7c9cfe13aa203823c3542cb791d6e1b167b266",
    "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
    "keywords": [],
    "printed_stats": {
-    "ap": 1,
+    "ap": 2,
     "atk": null,
     "def": null,
     "tags": [
@@ -42496,7 +42496,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "11847a7bff801d2b1048d4a404e116cf7290d7ea78594f36741c374785934d84"
+   "output_sha256": "1ac13367a552e43f2a08d09cdc83050ddae6b58f022a76c129ffba8f79992ea3"
   },
   {
    "id": "dc_np_caldris_wall_aus_schilden",
@@ -42591,13 +42591,13 @@
    "type": "Ausrüstung",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "8d92f0a93ab01ae5b278da79ea7e2a2bc4629ea58d952e023c925d40a0243de9",
+   "source_record_sha256": "5a82ff87a839345151d1615e2ea1b4a34ee58441e8b5ff16c35e264b4dc20adc",
    "kurz": "",
    "keywords": [
     "Erstschadenschutz"
    ],
    "printed_stats": {
-    "ap": 1,
+    "ap": 2,
     "atk": null,
     "def": null,
     "tags": [
@@ -42614,7 +42614,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "3a83c3bae649b49c52312fb89a223160d797b4103f647ae7a3f56488a099e600"
+   "output_sha256": "0eb136b2bac18459cdb0cd9a335d9296f6ff173657d7d91d56fb16a3b6e46261"
   },
   {
    "id": "dc_np_caldris_ruheabzeichen",
@@ -42651,8 +42651,8 @@
    "type": "Ausrüstung",
    "nation": "Caldris",
    "rarity": "silver",
-   "source_record_sha256": "b9274e2dede7ed9cddd3594131042cab95c8e68b40a4ab2e377b3141121749c4",
-   "kurz": "Träger +3 DEF.",
+   "source_record_sha256": "6103924294d070466cf99acf6a44b01b84696cd8638ea0bd6cb4f1da9a2ec040",
+   "kurz": "Träger +2 DEF.",
    "keywords": [],
    "printed_stats": {
     "ap": 2,
@@ -42672,7 +42672,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "71d15645ce2736ec293b9d428db218cd639817a27e70fadecc98c52d853cb0d8"
+   "output_sha256": "f9a33990d4e985f4a681a11d9aab3def9af8e1bb9161cbf3daefa827b8aebf7b"
   },
   {
    "id": "dc_np_caldris_genesungsbajonett",
@@ -49993,13 +49993,13 @@
    "type": "Ausrüstung",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "adddffe1344eaf6b466af63cee6c4139459d48eab6c001ce16dc98a33f7398d5",
+   "source_record_sha256": "126334b0530cbd0af64dd49f96ca46fffe1083c6887cfc4abca2fe092e6d2cf0",
    "kurz": "Träger +1 DEF.",
    "keywords": [
     "Erstschadenschutz"
    ],
    "printed_stats": {
-    "ap": 1,
+    "ap": 2,
     "atk": null,
     "def": null,
     "tags": [
@@ -50016,7 +50016,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "4f7ade897d82b48759488b183b10366158bb72e711c4985075d57245194850e9"
+   "output_sha256": "cf422a2709d8f9b9c8447b606b059a83ccfccdb486ebffd630f07b90eaf86957"
   },
   {
    "id": "dc_np_namar_lieferwaffe",

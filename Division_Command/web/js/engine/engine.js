@@ -4552,8 +4552,10 @@
           amount = Math.max(0, amount - n * 2);
         }
       }
-      if (inst && (this.defOf(inst).effects || []).some((x) => x.code === 'SCHADEN_MINUS')) {
-        amount = Math.max(0, amount - 2);
+      const smEff = inst && (this.defOf(inst).effects || []).find((x) => x.code === 'SCHADEN_MINUS');
+      if (smEff) { // Standard −2; param.n überschreibt (t238)
+        const smN = smEff.param && smEff.param.n != null ? Number(smEff.param.n) : 2;
+        amount = Math.max(0, amount - smN);
       }
       const nestLoc = this.findInst(inst && inst.uid);
       if (nestLoc && nestLoc.zone === 'front') {

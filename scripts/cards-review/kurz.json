@@ -7875,7 +7875,7 @@
   ]
  },
  "dc_np_caldris_panzerschild_caldris": {
-  "kurz": "Jeder Schaden an dieser Einheit −2.",
+  "kurz": "Jeder Schaden an dieser Einheit −1.",
   "gekuerzt": false,
   "keywords": [
    "Abschirmung"
@@ -8009,7 +8009,7 @@
   "keywords": []
  },
  "dc_np_caldris_ruhe_vor_dem_schlag": {
-  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF dauerhaft.",
+  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8046,7 +8046,7 @@
   "keywords": []
  },
  "dc_np_caldris_vollschutzweste": {
-  "kurz": "Träger +3 DEF.",
+  "kurz": "Träger +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },

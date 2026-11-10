@@ -85,6 +85,8 @@ Sim FP-Winrate nach Startspieler−1 AP Zug 1 (`scripts/sim_first_player.mjs
 | classic | **55.4 %** | 1067 / 1200 |
 | trophy (K) | **53.7 %** | 1149 / 1200 |
 
+**t238 (3 AP im ersten Zug, Bot-Sim 11.520 Partien je Modus, ±0,9):** Starterdecks 54,5 % → **50,9 %**, gemischt 56,1 % → **52,6 %**. Details: `balance/BALANCE_T238.md`.
+
 
 
 ---

@@ -8892,7 +8892,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 1,
-  "def": 4,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -9004,7 +9004,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-CAL-05",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
@@ -9032,7 +9032,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 3,
-  "def": 4,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Überlast"
@@ -9096,7 +9096,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 3,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Überlast"
@@ -9117,13 +9117,16 @@ window.DC_SET_TYPES["Nationenpool"] = [
    "kette",
    "gepanzert"
   ],
-  "text": "Jeder Schaden an dieser Einheit −2.",
+  "text": "Jeder Schaden an dieser Einheit −1.",
   "rules": [
-   "Schwere Panzerung: Jeder einzelne Schaden, den diese Einheit erleidet (Kampf, Soforteinsatz, Effekt), wird um 2 verringert, mindestens auf 0."
+   "Schwere Panzerung: Jeder einzelne Schaden, den diese Einheit erleidet (Kampf, Soforteinsatz, Effekt), wird um 1 verringert, mindestens auf 0."
   ],
   "effects": [
    {
-    "code": "SCHADEN_MINUS"
+    "code": "SCHADEN_MINUS",
+    "param": {
+     "n": 1
+    }
    }
   ],
   "flavor": "Nichts kommt durch.",
@@ -9189,7 +9192,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 2,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Ablösung"
@@ -9279,7 +9282,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 3,
-  "def": 4,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -9451,7 +9454,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
   "atk": 2,
-  "def": 2,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Fernschuss"
@@ -9519,7 +9522,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 3,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Sicherung"
@@ -9532,7 +9535,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Feldklinik",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
@@ -9837,16 +9840,16 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF dauerhaft.",
+  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges."
   ],
   "effects": [
    {
     "code": "BUFF",
     "param": {
      "atk": 2,
-     "def": 1,
+     "def": 0,
      "until": "turn"
     }
    }
@@ -9862,7 +9865,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Genesene zurück an die Front",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
@@ -9988,7 +9991,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Schildplatte",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
@@ -10061,16 +10064,16 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +3 DEF.",
+  "text": "Träger +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +3 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
      "atk": 0,
-     "def": 3,
+     "def": 2,
      "only": "infanterie"
     }
    }
@@ -17491,7 +17494,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Kaipanzerung",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"

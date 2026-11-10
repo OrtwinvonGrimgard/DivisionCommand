@@ -78,7 +78,7 @@ module.exports = {
     'X|Die große Flotte|g|4|-|-|draw:3+cost:Einheit:1|Ein ganzer Konvoi auf einmal.',
     'R|Hafenhelm|b|1|-|-|stat:0:2|Gegen Kisten und Kugeln.',
     'R|Schmuggelware|b|1|-|-|odraw:1|Irgendwas fällt immer ab.',
-    'R|Kaipanzerung|b|1|-|-|stat:0:1+ign1|Aus Containerstahl.',
+    'R|Kaipanzerung|b|2|-|-|stat:0:1+ign1|Aus Containerstahl.',
     'R|Lieferwaffe|s|1|-|-|stat:1:1|Frisch aus der Kiste.',
     'R|Signalpistole|b|1|-|-|first:2|Signal für den Entsatz.',
     'R|Hafenkran-Haken|s|1|-|-|bonus:1|Improvisiert und wirksam.',
