@@ -5,6 +5,9 @@
 (function (global) {
   'use strict';
   function escape(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]; }); }
+  /**
+   * Baut das HTML für die Kunst einer Tischkarte (Bild oder Platzhalter).
+   */
   function html(def, hidden) {
     if (hidden) return '<div class="table-motif table-hidden" aria-label="Verdeckte Karte"><span>VERDECKT</span></div>';
     var face = def && global.DC_CARD_FACES && global.DC_CARD_FACES[def.id];
@@ -17,6 +20,9 @@
       '" src="' + escape(src) + '" onerror="window.DCTableArt.failed(this)">' +
       '<span class="art-missing-label" hidden>Motiv nicht verfügbar</span>' + kw + '</div>';
   }
+  /**
+   * Markiert bzw. behandelt ein fehlgeschlagenes Laden der Kartenkunst.
+   */
   function failed(img) {
     img.hidden = true;
     var root = img.parentElement;

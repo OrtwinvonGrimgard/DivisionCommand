@@ -11,22 +11,67 @@ const plain={set:'test',status:'live',name:'Prüfeinheit',verdeckt_ok:true,typ:'
 const fixtures=[{id:'tac_air',klasse:'Flugzeug',tags:['einheit','luft']},{id:'tac_sam',typ:'Soforteinsatz',effects:[{code:'CANCEL_AIR_DAMAGE'}]}, {id:'tac_inf'}, {id:'tac_move',keywords:['Stellungswechsel']}, {id:'tac_swap',keywords:['Platztausch'],effects:[{code:'RELOCATE_HIDE'}]}, {id:'tac_hide',keywords:['Hinterhalt','Platztausch'],effects:[{code:'RELOCATE_HIDE'}]}, {id:'tac_bounce',typ:'Soforteinsatz',text:'Nimm eine eigene Einheit auf die Hand.',effects:[{code:'RETURN_TO_HAND'}]}].map(c=>Object.assign({},plain,c));
 const w=L.loadGame({quiet:true,inject:w=>w.DC_SET_TYPES.TaktischePruefung=fixtures});
 assert(w.DC_TACTICAL_RUNTIME);
+/**
+ * Sucht eine Kartendefinition über die ID, bricht den Test sonst ab.
+ */
 const id=name=>w.DC_CATALOG.cards.find(c=>c.name===name && c.set==='set_tactical_review').id;
 const CARD={bind:id('Haltezug am Knotenpunkt'),bind2:id('Schwerer Bindungskeil'),interdict:id('Anmarschbeobachtung'),traffic:id('Taktische Verkehrsleitstelle'),cover:id('Unterstützungsgruppe am Flügel'),cover2:id('Bewegliche Feuerbasis'),break:id('Nachhutkompanie'),break2:id('Ausweichender Spähwagen'),screen:id('Vorgeschobener Meldetrupp'),screen2:id('Beobachtungswagen am Rand')};
+/**
+ * Erzeugt eine frische Test-Engine bzw. Partie in bekanntem Ausgangszustand.
+ */
 function fresh(){const e=L.newMatch(w,'Steinmark',7);L.clearBoard(e);e.state.active=0;e.state.turn=10;e.state.phase='main';e.state.pending=null;for(const p of e.state.players){p.ap=30;p.hand=[];p.grave=[];p.flags={};p.doctrines=[];}return e;}
+/**
+ * Legt eine Einheit aus dem Katalog auf eine Stellung.
+ */
 function put(e,p,c,s='C',r=0){return L.put(e,p,c,s,r);}
+/**
+ * Legt eine Unterstützungskarte im Test auf die Unterstützungsreihe.
+ */
 function support(e,p,c,i=0){const x=e.instFromId(c,p);x.summonedTurn=-9;e.player(p).support[i]=x;return x;}
+/**
+ * Führt eine Engine-Aktion aus und erwartet Erfolg.
+ */
 function act(e,p,type,x={}){const r=e.dispatch(Object.assign({type,player:p},x));assert(r.ok,type+': '+r.error);return r;}
+/**
+ * Führt eine Engine-Aktion aus und erwartet einen Fehler.
+ */
 function bad(e,p,type,x={}){const ap=e.player(p).ap;const r=e.dispatch(Object.assign({type,player:p},x));assert(!r.ok,type+' hätte scheitern müssen');assert.equal(e.player(p).ap,ap,'ungültige Aktion kostet keine AP');return r;}
+/**
+ * Beantwortet eine ausstehende Auswahl in der Engine.
+ */
 function choose(e,p,target){return act(e,p,'CHOOSE_TARGET',{target});}
+/**
+ * Aktiviert eine Einheitenfähigkeit im Test.
+ */
 function ability(e,p,u){return act(e,p,'USE_ABILITY',{uid:u.uid});}
+/**
+ * Führt einen Angriff im Test aus.
+ */
 function attack(e,p,a,t){return act(e,p,'ATTACK',{uid:a.uid,target:t.uid});}
+/**
+ * Rüstet eine Testeinheit mit der genannten Ausrüstung aus.
+ */
 function equip(e,p,c,host){const x=e.instFromId(c,p);e.player(p).hand.push(x);act(e,p,'PLAY',{uid:x.uid});choose(e,p,host.uid);return x;}
+/**
+ * Spielt eine Karte aus der Hand im Test.
+ */
 function play(e,p,c,section='C',row=0,facedown=false){const x=e.instFromId(c,p);e.player(p).hand.push(x);act(e,p,'PLAY',{uid:x.uid,facedown});if(e.state.pending && e.state.pending.kind==='deploy')act(e,p,'CHOOSE_SLOT',{slot:{section,row}});return x;}
+/**
+ * Beendet den aktuellen Zug im Test.
+ */
 function end(e){assert(!e.state.pending,'keine unerwartete Auswahl beim Zugende');act(e,e.state.active,'END_TURN');}
 let passed=0;
+/**
+ * Registriert bzw. führt einen benannten Teiltest aus.
+ */
 function test(name,fn){fn();passed++;console.log('  PASS '+name);}
+/**
+ * Rüstet das Brett für Bindungs-Schlüsselworttests.
+ */
 function bindSetup(target='tac_move'){const e=fresh(),a=put(e,0,CARD.bind),t=put(e,1,target);ability(e,0,a);choose(e,0,t.uid);return {e,a,t};}
+/**
+ * Rüstet das Brett für Deckungs-Schlüsselworttests.
+ */
 function coverSetup(){const e=fresh(),a=put(e,0,CARD.cover,'C',0),ally=put(e,0,'tac_inf','C',1),t=put(e,1,'tac_inf','C',1);t.atk=5;ability(e,0,a);choose(e,0,ally.uid);choose(e,0,t.uid);return {e,a,ally,t};}
 
 // -------- Katalog, Volltexte, Kopien, Idempotenz und historische Kompatibilität.
@@ -255,8 +300,17 @@ test('Binden-Reichweite ist der Abschnitt, sobald irgendein legaler Angriff mög
 test('alle zehn Entwürfe tatsächlich über PLAY/Slot im geladenen Spiel spielbar',()=>{
  for(const card of Object.values(CARD)){const e=fresh(),c=play(e,0,card),d=e.defOf(c);assert.equal(e.findInst(c.uid).zone,d.typ==='Unterstützung'?'support':'front');assert.equal(e.player(0).ap,30-d.ap);assert.equal(c.cardId,card);}
 });
+/**
+ * Frische UI-Instanz für Schlüsselwort-Oberflächentests.
+ */
 function uiFresh(){const h=require('./test_audio_actions').setup('off');h.eng.state.turn=10;L.clearBoard(h.eng);h.eng.state.active=0;h.eng.state.phase='main';for(const p of h.eng.state.players){p.flags={};p.hand=[];p.ap=30;}return h;}
+/**
+ * Öffnet die Inspektion einer Stellung in der Test-UI.
+ */
 function uiInspect(h,u){h.w.dcRender();const el=h.w.document.querySelector('[data-uid="'+u.uid+'"]');assert(el);el.dispatchEvent(new h.w.MouseEvent('dblclick',{bubbles:true,cancelable:true}));}
+/**
+ * Wählt in der Test-UI eine angebotene Option.
+ */
 function uiChoose(h,test){const i=h.eng.state.pending.choices.findIndex(test);assert(i>=0);h.click('#overlay .choices button[data-i="'+i+'"]');}
 test('DOM: Binden über echte Detailansicht/Fähigkeitsknopf/Zielwahl, ohne AP bei Öffnen',()=>{
  const h=uiFresh(),e=h.eng,inf=e.catalog.cards.find(c=>c.typ==='Einheit'&&!c.effects.length&&!(c.keywords||[]).length),a=put(e,0,CARD.bind),t=put(e,1,inf.id);uiInspect(h,a);assert.equal(e.player(0).ap,30);h.click('#inspect [data-act="dc-ability"]');assert.equal(e.state.pending.kind,'tac-bind');uiChoose(h,c=>c.target===t.uid);assert(t.flags.tacBoundUntil);assert.equal(e.player(0).ap,29);assert.equal(h.errors.length,0);h.dom.window.close();

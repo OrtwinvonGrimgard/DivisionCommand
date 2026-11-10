@@ -12,6 +12,9 @@ const manifestSrc = fs.readFileSync(path.join(WEB, 'js/data/image-manifest.js'),
 const { setup } = require('./test_audio_actions');
 const h = setup('off'), { w } = h;
 assert.deepEqual([...w.DC_CARD_FILES], files, 'manifest matches disk exactly');
+/**
+ * Prüft, ob eine Datei bzw. ein Bildpfad existiert.
+ */
 const exists = url => {
   if (!url || /^(data:|blob:)/.test(url)) return true;
   const rel = decodeURIComponent(url.replace(/^https?:\/\/[^/]+\//, '').replace(/^\.\//, '').split('?')[0]);
@@ -29,6 +32,9 @@ const requested = new Set();
 const desc = Object.getOwnPropertyDescriptor(w.HTMLImageElement.prototype, 'src');
 Object.defineProperty(w.HTMLImageElement.prototype, 'src', { configurable: true, get: desc.get, set(v) { requested.add(String(v)); desc.set.call(this, v); } });
 const origSetAttr = w.Element.prototype.setAttribute;
+/**
+ * JSDOM-Attrappe: setzt ein Elementattribut.
+ */
 w.Element.prototype.setAttribute = function (k, v) { if (this.tagName === 'IMG' && k === 'src') requested.add(String(v)); return origSetAttr.call(this, k, v); };
 // preload all card art exactly as startup does
 cards.forEach(c => { const im = new w.Image(); im.src = w.dcCardSrc(c.image) || ''; });

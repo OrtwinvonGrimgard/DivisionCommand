@@ -9,6 +9,9 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const WEB = path.join(__dirname, '../Division_Command/web');
 const html = fs.readFileSync(path.join(WEB, 'index.html'), 'utf8');
+/**
+ * Baut die Audio-Testumgebung (DOM, Optionen, Stub-Ausgaben).
+ */
 function fixture(saved) {
   const dom = new JSDOM(html, { runScripts: 'outside-only', url: 'http://localhost/' });
   const w = dom.window, media = [], gestures = [];

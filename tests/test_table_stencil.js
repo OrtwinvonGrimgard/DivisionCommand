@@ -8,6 +8,9 @@ const fs = require('fs'), path = require('path');
 const { setup } = require('./test_audio_actions');
 const WEB = path.join(__dirname, '..', 'Division_Command', 'web');
 const h = setup('off'), { w } = h;
+/**
+ * Kurzselektor: findet ein Element in der Testdom bzw. jsdom.
+ */
 const $ = s => w.document.querySelector(s), $$ = s => w.document.querySelectorAll(s);
 const css = fs.readFileSync(path.join(WEB, 'css/officer-table.css'), 'utf8');
 const tex = fs.readFileSync(path.join(WEB, 'assets/table/stencil-oil.webp'));

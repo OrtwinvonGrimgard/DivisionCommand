@@ -49,10 +49,12 @@ SAMPLES = []
 
 
 def _win_fonts():
+    """Sucht System- bzw. Windows-Schriftpfade für den Renderer."""
     return Path(os.environ.get("WINDIR", r"C:\Windows")) / "Fonts"
 
 
 def _pick_font(*names):
+    """Wählt die erste vorhandene Schrift aus der Namensliste."""
     roots = [
         Path("/usr/share/fonts/truetype/liberation"),
         Path("/usr/share/fonts/truetype/dejavu"),
@@ -73,6 +75,7 @@ FONT_R = _pick_font("LiberationSerif-Regular.ttf", "times.ttf", "georgia.ttf", "
 
 
 def font(path, size):
+    """Lädt eine TrueType-Schrift in der angegebenen Größe."""
     p = path or FONT_R
     try:
         return ImageFont.truetype(p, size)
@@ -81,6 +84,7 @@ def font(path, size):
 
 
 def apply_metal(kind):
+    """Wendet die Metallpalette (Gold/Silber/Bronze) auf den Zeichenkontext an."""
     g = globals()
     pack = METALS.get(str(kind or "gold").lower(), METALS["gold"])
     g.update(pack)
@@ -88,11 +92,13 @@ def apply_metal(kind):
 
 
 def outlined_num(d, xy, text, fnt, fill=None, stroke=2):
+    """Zeichnet eine Zahl mit Umriss (ATK/DEF/AP) auf die Karte."""
     col = fill or GOLD_LT
     d.text(xy, str(text), font=fnt, fill=col, stroke_width=stroke, stroke_fill=(10, 8, 6), anchor="mm")
 
 
 def round_mask(size, radius=48):
+    """Rechteckmaske mit abgerundeten Ecken."""
     w, h = size
     m = Image.new("L", (w, h), 0)
     ImageDraw.Draw(m).rounded_rectangle((0, 0, w - 1, h - 1), radius=radius, fill=255)
@@ -100,18 +106,21 @@ def round_mask(size, radius=48):
 
 
 def rivet(draw, x, y, r=11):
+    """Zeichnet eine Niete an die Position."""
     draw.ellipse((x - r - 2, y - r - 2, x + r + 2, y + r + 2), fill=GOLD_DK, outline=GOLD, width=2)
     draw.ellipse((x - r, y - r, x + r, y + r), fill=(118, 82, 32))
     draw.ellipse((x - r + 3, y - r + 2, x - 1, y + 1), fill=GOLD_LT)
 
 
 def gold_band(d, box, width=22):
+    """Zeichnet ein goldenes Band in die angegebene Box."""
     x0, y0, x1, y1 = box
     d.rounded_rectangle((x0, y0, x1, y1), radius=48, outline=GOLD, width=width)
     d.rounded_rectangle((x0 + 6, y0 + 6, x1 - 6, y1 - 6), radius=42, outline=GOLD_DK, width=2)
 
 
 def star_verts(cx, cy, r, inner=0.4):
+    """Eckpunkte eines Sterns um den Mittelpunkt."""
     pts = []
     for i in range(5):
         a = math.radians(-90 + i * 72)
@@ -122,10 +131,12 @@ def star_verts(cx, cy, r, inner=0.4):
 
 
 def tag_color(name):
+    """Farbe eines Spiel-Tags für Banner und Chips."""
     return TAG_COLORS.get(str(name).upper(), (48, 32, 16))
 
 
 def card_is_elite(card):
+    """Prüft, ob die Karte als Elite gilt."""
     if str((card or {}).get("klasse") or "").lower() == "elite":
         return True
     tags = (card or {}).get("tags") or []
@@ -133,6 +144,7 @@ def card_is_elite(card):
 
 
 def gameplay_tags(card):
+    """Sichtbare Spiel-Tags einer Karte (ohne interne Hilfstags)."""
     skip = {"infanterie", "artillerie", "panzer", "aufklärer", "aufklärung", "aufklarung"}
     out = []
     for t in (card or {}).get("tags") or []:
@@ -143,6 +155,7 @@ def gameplay_tags(card):
 
 
 def wrap(draw, text, fnt, max_w):
+    """Umbricht Text auf die maximale Breite mit der gegebenen Schrift."""
     words = str(text or "").split()
     lines, cur = [], ""
     for w in words:
@@ -241,6 +254,7 @@ def _ability_segments(raw: str) -> list[str]:
 
 
 def abilities(text):
+    """Zerlegt den Fähigkeitstext in darstellbare Absätze."""
     raw = (text or "").strip()
     if not raw:
         return []
@@ -260,6 +274,7 @@ def abilities(text):
 
 
 def crop_art(path):
+    """Schneidet die Kunst auf den Nutzbereich zu."""
     im = Image.open(path).convert("RGB")
     w, h = im.size
     side = min(w, h)
@@ -269,6 +284,7 @@ def crop_art(path):
 
 
 def cover_art(path, tw, th):
+    """Platziert Kunst proportional im Zielrahmen (cover, ohne Strecken)."""
     im = Image.open(path).convert("RGB")
     w, h = im.size
     sc = max(tw / max(1, w), th / max(1, h))
@@ -280,6 +296,7 @@ def cover_art(path, tw, th):
 
 
 def _tex(name, size, fallback=(20, 16, 12)):
+    """Lädt eine benannte Textur oder erzeugt einen Farb-Fallback."""
     folder = ROOT / "assets" / "textures"
     p = folder / name
     if not p.is_file():
@@ -289,43 +306,52 @@ def _tex(name, size, fallback=(20, 16, 12)):
 
 
 def marble_panel(size):
+    """Marmorplatte in der angegebenen Größe."""
     return _tex("marmor-oel.jpg", size, (18, 16, 14))
 
 
 def rotleder_panel(size):
+    """Rotleder-Platte in der angegebenen Größe."""
     return _tex("rotleder-oel.jpg", size, (80, 18, 16))
 
 
 def brushed_stock(size):
+    """Gebürsteter Metallstock als Kartenhintergrund."""
     w, h = size if isinstance(size, tuple) else (int(size), int(size))
     base = _tex("metal-gehaemmert.jpg", (w, h), METAL_FILL)
     return base
 
 
 def make_panel(kind, size):
+    """Erzeugt eine Platte des gewünschten Materials."""
     if str(kind) == "leder":
         return rotleder_panel(size)
     return marble_panel(size)
 
 
 def dispatch_panel(kind, size):
+    """Wählt die Plattenfunktion anhand der Materialkennung."""
     return make_panel(kind, size)
 
 
 def paper(size, col=(236, 224, 196)):
+    """Papierhintergrund in der angegebenen Farbe und Größe."""
     return Image.new("RGB", size, col)
 
 
 def leather_stitch(draw, box, spacing=18):
+    """Zeichnet eine Ziernaht entlang der Lederbox."""
     x0, y0, x1, y1 = box
     draw.rounded_rectangle(box, radius=12, outline=(40, 18, 12), width=2)
 
 
 def taut_leather(img):
+    """Spannte Ledertextur über das Bild (leichte Wölbung)."""
     return img
 
 
 def paste_leather_plaque(stock, box):
+    """Setzt eine Lederplakette in die Box."""
     x0, y0, x1, y1 = [int(v) for v in box]
     w, h = max(1, x1 - x0), max(1, y1 - y0)
     patch = rotleder_panel((w, h))
@@ -337,14 +363,17 @@ def paste_leather_plaque(stock, box):
 
 
 def fill_plaque(draw, pts, name, cx, cy, size):
+    """Füllt die Namensplakette und schreibt den Kartennamen."""
     draw.polygon(pts, fill=(20, 14, 10), outline=GOLD)
 
 
 def taper_bar(d, cx, y, half, thick):
+    """Zeichnet einen sich verjüngenden Zierbalken."""
     d.line([(cx - half, y), (cx + half, y)], fill=GOLD, width=thick)
 
 
 def doctrine_crest(img, cx, cy):
+    """Setzt das Doktrin-Wappen auf die Karte."""
     d = ImageDraw.Draw(img)
     r = 70
     d.ellipse((cx - r, cy - r, cx + r, cy + r), outline=GOLD, width=6)
@@ -354,6 +383,7 @@ def doctrine_crest(img, cx, cy):
 
 
 def name_plaque(draw, style, ny, name, w=None):
+    """Zeichnet die Namensplakette im gewünschten Stil."""
     ww = w or W
     draw.rounded_rectangle((70, ny, ww - 70, ny + 110), radius=8, fill=(20, 14, 10), outline=GOLD, width=3)
     fnt = font(FONT_B, 54 if len(str(name)) < 18 else 42)
@@ -397,6 +427,7 @@ def icon_crosshair(draw, cx, cy, r, col=None):
 
 
 def icon_shield_norman_cross(draw, cx, cy, r, col=None):
+    """Zeichnet das Schild-Icon (normannisches Kreuz) für DEF."""
     c = col or GOLD
     draw.rounded_rectangle((cx - r, cy - r, cx + r, cy + r * 1.15), radius=r * 0.3, outline=c, width=3)
     draw.line((cx, cy - r * 0.6, cx, cy + r * 0.6), fill=c, width=3)
@@ -404,6 +435,7 @@ def icon_shield_norman_cross(draw, cx, cy, r, col=None):
 
 
 def draw_stat_box(stock, x, y, label, value, icon):
+    """Zeichnet die ATK- oder DEF-Box mit Icon und Wert."""
     d = ImageDraw.Draw(stock)
     d.rounded_rectangle((x, y, x + 280, y + 120), radius=12, outline=GOLD, width=4, fill=(18, 12, 8))
     if icon == "crosshair":
@@ -415,6 +447,7 @@ def draw_stat_box(stock, x, y, label, value, icon):
 
 
 def draw_tag_banners(d, y, tags, width):
+    """Zeichnet Tag-Banner unter der Kunst."""
     if not tags:
         return y
     n = min(4, len(tags))
@@ -431,10 +464,12 @@ def draw_tag_banners(d, y, tags, width):
 
 
 def paste_elite_order(img):
+    """Setzt den Elite-Orden auf die Karte."""
     return img
 
 
 def paste_logo_star(img, cx, cy, r):
+    """Setzt den Logo-Stern an die Position."""
     d = ImageDraw.Draw(img)
     verts = star_verts(cx, cy, r)
     d.polygon(verts, fill=GOLD, outline=GOLD_DK)
@@ -442,6 +477,7 @@ def paste_logo_star(img, cx, cy, r):
 
 
 def render(card, art_file, dest, number="001", native=True, metal="gold", panel="marmor", stat_style=None):
+    """Rendert eine vollständige Editor-Karte (Front, 1024×1428) in die Zieldatei."""
     apply_metal(metal)
     globals()["_MARBLE_SEED"] = random.randint(1, 2147483647)
     globals()["_MARBLE_NAME"] = card.get("name") or "marmor"
@@ -494,6 +530,7 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
     d.rectangle(art_box, outline=GOLD, width=3)
 
     def corner(x, y, dx, dy, s=54):
+        """Zeichnet eine verzierte Kartenecke."""
         d.line([(x, y + dy * s), (x, y), (x + dx * s, y)], fill=GOLD_LT, width=6)
         d.line([(x, y + dy * (s - 10)), (x, y), (x + dx * (s - 10), y)], fill=GOLD_DK, width=2)
 

@@ -11,7 +11,13 @@ const assert = require('node:assert/strict');
 const fs = require('fs'), path = require('path');
 const L = require('../scripts/nation_pools/load_game.js');
 const base = { set: 'test', status: 'live', rarity: 'bronze', typ: 'Einheit', ap: 2, atk: 2, def: 5, tags: ['einheit', 'infanterie'], klasse: 'Infanterie', text: '', effects: [] };
+/**
+ * Baut eine minimale Testkarte oder -instanz.
+ */
 const mk = (id, o) => Object.assign({ id, name: id }, base, o);
+/**
+ * Baut einen Kampfmodifikator (CM) für den Test.
+ */
 const CMx = (p) => ({ code: 'CM', param: p });
 const TEST = [
   mk('r_inf'), mk('r_wall', { atk: 0, def: 30 }), mk('r_art', { tags: ['einheit', 'artillerie'], klasse: 'Artillerie' }),
@@ -29,11 +35,29 @@ const TEST = [
   mk('r_gear3', { typ: 'Ausrüstung', ap: 3, tags: ['ausruestung'], effects: [{ code: 'EQUIP_STAT', param: { atk: 1, def: 0 } }] }),
 ];
 const w = L.loadGame({ quiet: true, inject: (win) => { win.DC_SET_TYPES.__ReviewTest = TEST; } });
+/**
+ * Erzeugt eine frische Test-Engine bzw. Partie in bekanntem Ausgangszustand.
+ */
 function fresh() { const e = L.newMatch(w, 'Steinmark', 7); L.clearBoard(e); e.state.active = 0; e.state.phase = 'main'; e.player(0).ap = 30; e.player(1).ap = 30; e.player(0).hand = []; return e; }
+/**
+ * Legt eine Einheit aus dem Katalog auf eine Stellung.
+ */
 const put = (e, pid, id, s, r) => L.put(e, pid, id, s, r);
+/**
+ * Führt den nächsten Engine-Schritt bzw. Zugtakt im Test aus.
+ */
 const tick = (e) => e.dispatch({ type: 'NOOP', player: 0 });
+/**
+ * Gibt einem Spieler eine Karte auf die Hand.
+ */
 const hand = (e, pid, id) => { const i = e.instFromId(id, pid); e.player(pid).hand.push(i); return i; };
+/**
+ * Spielt oder legt eine Unterstützungskarte im Test.
+ */
 const sup = (e, pid, id) => { const i = e.instFromId(id, pid); const p = e.player(pid); const ix = p.support.findIndex((x) => !x); if (ix < 0) p.support.push(i); else p.support[ix] = i; return i; };
+/**
+ * Rüstet eine Testeinheit mit der genannten Ausrüstung aus.
+ */
 const equip = (e, host, id) => { const q = hand(e, 0, id); e.dispatch({ type: 'PLAY', player: 0, uid: q.uid }); const r = e.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: host.uid }); assert(r.ok, r.error); return q; };
 let n = 0; const ok = (m) => { n++; console.log('  PASS ' + m); };
 

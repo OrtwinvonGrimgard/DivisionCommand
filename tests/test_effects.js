@@ -10,6 +10,9 @@ const vm = require('vm');
 
 const WEB = path.join(__dirname, '..', 'Division_Command', 'web');
 
+/**
+ * Lädt Katalog und Engine in einen Node-Kontext und gibt den Kontext zurück.
+ */
 function loadGame() {
   const document = {
     getElementById: () => null,

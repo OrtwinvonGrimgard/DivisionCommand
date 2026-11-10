@@ -10,11 +10,17 @@ const L = require('../scripts/nation_pools/load_game.js');
 const w = L.loadGame({ quiet: true });
 const C = w.DC_CATALOG.cards;
 
+/**
+ * Filtert Kartendefinitionen nach einem Spiel-Tag.
+ */
 function byTag(tag) {
   return C.find((c) => (c.tags || []).includes(tag) && c.typ === 'Einheit'
     && !(c.keywords || []).includes('Fernschuss'))
     || C.find((c) => (c.tags || []).includes(tag) && c.typ === 'Einheit');
 }
+/**
+ * Sammelt die Effektcodes einer Karte als flache Liste.
+ */
 function codes(c) {
   return (c.effects || []).map((e) => e.code);
 }
@@ -66,6 +72,9 @@ if (artStell) {
   assert.ok(!(artStell.tags || []).some((t) => String(t).startsWith('steilfeuer')), 'Support no steilfeuer');
 }
 
+/**
+ * Baut ein Testbrett mit den angegebenen Einheiten.
+ */
 function boardWith(atkId, atkSec, atkRow) {
   const eng = L.newMatch(w, 'Steinmark', 42);
   L.clearBoard(eng);
@@ -96,6 +105,9 @@ function boardWith(atkId, atkSec, atkRow) {
   return { eng, atk, enemies, supportUid: sInst.uid, aLoc: { inst: atk, player: eng.player(0), zone: 'front', section: atkSec, row: atkRow } };
 }
 
+/**
+ * Prüft, welche Stellungen für Steilfeuer erreichbar sind.
+ */
 function reachable(eng, aLoc) {
   return eng.legalAttackTargets(aLoc).filter((t) => t.zone === 'front' || !t.zone).map((t) => t.section + t.row);
 }

@@ -8,8 +8,14 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { setup } = require('./test_audio_actions');
 const h = setup('off'), { w, eng, click, add } = h;
+/**
+ * querySelector-Kurzform in der Testdom.
+ */
 const $q = s => w.document.querySelector(s);
 const inf = w.DC_CATALOG.cards.find(c => c.typ === 'Einheit' && ((c.tags || []).includes('infanterie') || c.klasse === 'Infanterie') && !(c.effects || []).length && !(c.keywords || []).length && c.def >= 3 && !(c.tags || []).some(t => String(t).startsWith('steilfeuer')));
+/**
+ * Baut eine minimale Testkarte oder -instanz.
+ */
 const mk = (pid) => eng.instFromId(inf.id, pid);
 const turn = eng.state.turn;
 const burn = mk(1); burn.flags.napalm = true; eng.player(1).front.C[0] = burn;
@@ -23,6 +29,9 @@ eng.player(0).flags.keinLoch = { until: turn, section: 'L', left: 2 };
 eng.player(1).flags.sectionEnterDamage = [{ section: 'R', value: 2, until: turn + 1, by: 1 }];
 eng.player(0).flags.sectionEnterDamage = [{ section: 'C', value: 1, until: turn + 1, by: 0 }];
 w.dcRender();
+/**
+ * Kurzhelfer für den Effekt-Test (Tabelle bzw. Erwartung).
+ */
 const T = uid => $q(`#my-front [data-uid="${uid}"], #enemy-front [data-uid="${uid}"]`);
 // Burn: real napalm status
 assert(T(burn.uid).classList.contains('fx-burn')); assert(T(burn.uid).querySelector('.fx-b-burn').title.includes('Napalm'));

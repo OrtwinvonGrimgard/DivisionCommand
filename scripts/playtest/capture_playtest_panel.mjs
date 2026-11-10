@@ -12,6 +12,9 @@ const WEB = path.resolve(__dirname, '../../Division_Command/web');
 const OUT = '/workspace';
 const css = fs.readFileSync(path.join(WEB, 'css/app.css'), 'utf8');
 
+/**
+ * Basis-URL bzw. Wurzelpfad des lokalen Playtest-Servers.
+ */
 function base(title, body) {
   return `<!doctype html><html lang="de"><head><meta charset="utf-8">
 <title>${title}</title><style>${css}
@@ -23,6 +26,9 @@ body{margin:0;background:#1a0808;min-height:100vh}
 }
 
 const head = `<div class="playtest-head"><h2>Playtest</h2><button class="playtest-x">×</button></div>`;
+/**
+ * Öffnet nacheinander die Karten des Playtest-Panels für Screenshots.
+ */
 const tabs = (on) => `<div class="playtest-tabs">
 <button class="pt-tab${on === 'logs' ? ' on' : ''}">Logs</button>
 <button class="pt-tab${on === 'notes' ? ' on' : ''}">Anmerkungen</button>

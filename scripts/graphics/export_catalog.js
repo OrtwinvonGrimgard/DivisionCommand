@@ -1,3 +1,7 @@
+/**
+ * Exportiert den autoritativen Katalog (ohne Darstellungs-Overrides) als JSON.
+ * Nur Lesen; mutiert keine Kartendaten.
+ */
 'use strict';
 // Source catalog only: presentation overrides never mutate authoritative records.
 const fs=require('fs'),path=require('path'),vm=require('vm');

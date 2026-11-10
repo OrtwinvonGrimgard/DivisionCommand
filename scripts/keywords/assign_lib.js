@@ -1,3 +1,7 @@
+/**
+ * Zuordnung der 16 allgemeinen Schlüsselwörter zu spielbaren Einheiten.
+ * Textumstellung oder deterministische Ergänzung nach Klasse/Effekt/ID.
+ */
 'use strict';
 /* Schlüsselwort-Zuordnung für alle spielbaren Einheiten (alte Sets + Nationenpools).
    1) Texte, die einem Wort entsprechen, werden auf das Wort umgestellt (Satzteil entfernt).
@@ -40,7 +44,13 @@ const CLASS = {
   scout: ['Zuteilung', 'Heranführung', 'Stellungswechsel', 'Fernschuss', 'Gefechtsbereit'],
   elite: ['Überlast', 'Abschirmung', 'Sicherung', 'Erbitterung', 'Zähigkeit', 'Durchschlag', 'Nachsetzen', 'Staffelangriff', 'Heranführung'],
 };
+/**
+ * Deterministischer Zahlenhash eines Strings (für Mischdeck oder Zuordnung).
+ */
 function hash(s) { let h = 2166136261; for (const ch of String(s)) { h ^= ch.codePointAt(0); h = Math.imul(h, 16777619); } return h >>> 0; }
+/**
+ * Ordnet eine Einheit einer Wortklasse (Aufklärer, Führung, …) zu.
+ */
 function klass(c) {
   const t = ((c.klasse || '') + ' ' + (c.tags || []).join(' ')).toLowerCase();
   if (c.elite || /elite|kommandant/.test(t)) return 'elite';
@@ -49,6 +59,9 @@ function klass(c) {
   if (/panzer|gepanzert|fahrzeug/.test(t)) return 'pz';
   return 'inf';
 }
+/**
+ * Prüft, ob ein Schlüsselwort auf dieser Klasse verborgen bleiben soll.
+ */
 function hides(c) { return (c.effects || []).some((e) => ['RELOCATE_HIDE', 'GUERRILLA_HIDE', 'SET_FACEDOWN'].includes(e.code)); }
 
 /* Liefert { keywords, text, converted: [{from, words}] } – ändert die Karte nicht. */

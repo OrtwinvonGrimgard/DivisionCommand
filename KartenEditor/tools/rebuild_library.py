@@ -39,6 +39,7 @@ TYP_ORDER = {
 
 
 def load_catalog() -> list[dict]:
+    """Lädt den Kartenkatalog der Editor- bzw. Spielbibliothek."""
     js = r"""
 const fs = require('fs');
 const vm = require('vm');
@@ -65,6 +66,7 @@ process.stdout.write(JSON.stringify(cards));
 
 
 def find_src(name: str) -> Path | None:
+    """Findet die Quellkunst zu einem Kartennamen in der Bibliothek."""
     for folder in (SRC, GAME):
         p = folder / name
         if p.is_file():
@@ -73,11 +75,13 @@ def find_src(name: str) -> Path | None:
 
 
 def marble_seed(name: str) -> int:
+    """Seed für die Marmortextur aus dem Kartennamen."""
     h = hashlib.md5(str(name).encode("utf-8")).hexdigest()
     return int(h[:8], 16) or 1
 
 
 def extract_art(src: Path, typ: str) -> Path | None:
+    """Schneidet die Kunst aus einer bestehenden Karte oder Quelldatei."""
     if typ == "Doktrin":
         return None
     im = Image.open(src).convert("RGB")
@@ -92,6 +96,7 @@ def extract_art(src: Path, typ: str) -> Path | None:
 
 
 def to_jpeg(png_path: Path, dest: Path) -> None:
+    """Wandelt ein gerendertes PNG in JPEG für die Bibliothek um."""
     im = Image.open(png_path)
     if im.mode == "RGBA":
         bg = Image.new("RGB", im.size, (12, 8, 6))
@@ -104,6 +109,7 @@ def to_jpeg(png_path: Path, dest: Path) -> None:
 
 
 def render_one(card: dict, number: str, dest_jpg: Path) -> None:
+    """Rendert eine einzelne Bibliothekskarte nach JPEG."""
     typ = str(card.get("typ") or "Einheit")
     src = find_src(str(card.get("image") or ""))
     if not src:
@@ -163,6 +169,7 @@ def render_one(card: dict, number: str, dest_jpg: Path) -> None:
 
 
 def main() -> int:
+    """Baut die Editor-Bibliothek (JPEG-Fronten) aus Katalog und Kunst neu auf."""
     only = set(sys.argv[1:]) if len(sys.argv) > 1 else None
     out_dir = GAME
     if os.environ.get("DC_REBUILD_OUT"):

@@ -23,6 +23,9 @@ const BASE = process.env.DC_BASE || 'http://127.0.0.1:8765';
 const report = { ok: [], fail: [], console: [], pageerrors: [], shots: [] };
 let srv = null;
 
+/**
+ * Wartet, bis der lokale HTTP-Server auf dem Port antwortet.
+ */
 function waitHttp(url, ms = 25000) {
   const t0 = Date.now();
   return new Promise((resolve, reject) => {
@@ -36,6 +39,9 @@ function waitHttp(url, ms = 25000) {
   });
 }
 
+/**
+ * Startet bei Bedarf den lokalen Spielserver und wartet auf Bereitschaft.
+ */
 async function ensureServer() {
   try {
     await waitHttp(BASE + '/', 1500);
@@ -52,12 +58,18 @@ async function ensureServer() {
   report.ok.push('server:started');
 }
 
+/**
+ * Fertigt einen Screenshot der gegebenen HTML-Datei an.
+ */
 async function shot(page, name) {
   const p = path.join(OUT, 'bf_' + name + '.png');
   await page.screenshot({ path: p, fullPage: false });
   report.shots.push(p);
 }
 
+/**
+ * Verdrahtet die Playwright-Seite mit den benötigten Selektoren bzw. Hooks.
+ */
 async function wire(page, tag) {
   page.on('console', (msg) => {
     if (msg.type() !== 'error') return;

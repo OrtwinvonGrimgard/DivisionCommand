@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Erzeugt `docs/karten/NATIONENPOOL_KARTEN.md` und die Zahlentabelle in
+ * `NATIONENPOOLS_100.md` aus den echten Spieldaten.
+ */
 'use strict';
 /* Erzeugt Division_Command/docs/karten/NATIONENPOOL_KARTEN.md und die Zahlentabelle in NATIONENPOOLS_100.md aus den echten Spieldaten. */
 const fs = require('fs'), path = require('path');

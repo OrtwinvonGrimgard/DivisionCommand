@@ -6,16 +6,20 @@ TYPES=ROOT/'Division_Command/web/js/data/sets/types'
 FILES=['doktrinen','tokens','infanterie','panzer','artillerie','aufklaerung','elite','unterstuetzung','soforteinsatz','ausruestung','nation_pools','tactical']
 RX=re.compile(r'^(.*?window\.DC_SET_TYPES(?:\[[^\]]+\]|\.\w+)\s*=\s*)(\[.*\])(\s*;?\s*)$',re.S)
 def load(name):
+    """Lädt Spielmodule (Katalog/Engine/UI) in den Test- oder Simulationskontext."""
     s=(TYPES/(name+'.js')).read_text(encoding='utf8')
     m=RX.match(s); assert m,name
     return m.group(1),json.loads(m.group(2)),m.group(3)
 def indent_of(name):
+    """Ermittelt die Einrückung einer Typdatei, damit das Speichern das Format erhält."""
     s=(TYPES/(name+'.js')).read_text(encoding='utf8')
     m=re.search(r'\[\n( +)\{',s); return len(m.group(1)) if m else 2
 def save(name,head,arr,tail):
+    """Schreibt Head, Kartenarray und Tail zurück in eine Typdatei."""
     ind=indent_of(name)
     (TYPES/(name+'.js')).write_text(head+json.dumps(arr,ensure_ascii=False,indent=ind)+(tail if tail.strip() else ';\n'),encoding='utf8')
 def all_cards():
+    """Alle Kartendefinitionen aus den Typdateien."""
     out={}
     for f in FILES:
         if not (TYPES/(f+'.js')).exists(): continue

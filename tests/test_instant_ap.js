@@ -12,6 +12,9 @@ const w = L.loadGame({ quiet: true });
 const C = w.DC_CATALOG.cards;
 assert.ok(!('instant_ap_test' in (w.DC_CATALOG.rules || {})), 'rules.instant_ap_test entfernt');
 
+/**
+ * Erzeugt eine frische Test-Engine bzw. Partie in bekanntem Ausgangszustand.
+ */
 function fresh() {
   const eng = L.newMatch(w, 'Steinmark', 9);
   L.clearBoard(eng);
@@ -24,6 +27,9 @@ function fresh() {
   return eng;
 }
 
+/**
+ * Sucht eine Kartendefinition anhand der ID.
+ */
 function byId(id) {
   const c = C.find((x) => x.id === id);
   assert.ok(c, 'fehlt ' + id);

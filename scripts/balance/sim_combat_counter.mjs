@@ -17,6 +17,9 @@ if (!['survivor_only', 'none', 'simultaneous'].includes(mode)) {
   process.exit(1);
 }
 
+/**
+ * Lädt eine Spiel-JS-Datei in den Node-vm-Kontext (ohne Browser-DOM).
+ */
 function loadInto(context, rel) {
   const full = path.join(ROOT, rel);
   vm.runInContext(fs.readFileSync(full, 'utf8'), context, { filename: full });
@@ -25,9 +28,18 @@ function loadInto(context, rel) {
 const sandbox = {
   console, setTimeout, clearTimeout, setInterval, clearInterval,
   document: {
+    /**
+     * DOM-Attrappe im Node-Kontext; liefert ein Minimal-Element oder null.
+     */
     getElementById: () => null, querySelector: () => null, querySelectorAll: () => [],
+    /**
+     * DOM-Attrappe: erzeugt ein Minimal-Element für die Engine im Node-Kontext.
+     */
     createElement: () => ({ style: {}, appendChild() {}, remove() {}, setAttribute() {}, onload: null, onerror: null }),
     head: { appendChild() {} }, body: { classList: { add() {}, remove() {} } },
+    /**
+     * DOM-Attrappe: Event-Listener werden ignoriert (kein Browser).
+     */
     addEventListener() {}, removeEventListener() {},
   },
   localStorage: { getItem: () => null, setItem() {} },
@@ -52,20 +64,39 @@ const { DCEngine, DCBot, DC_CATALOG, DC_NATION_DECKS } = ctx;
 DCBot.applyCfg({ model: 'test', delayMs: 0, aggression: 70, holdAp: 0, allowAttack: 1 });
 const nations = Object.keys(DC_NATION_DECKS || {});
 
+/**
+ * Starterdeck der genannten Nation aus dem geladenen Katalog.
+ */
 function nationDeck(nat) {
   const d = DC_NATION_DECKS[nat];
   return { cards: (d.cards || []).slice(), doctrines: (d.doktrinen || []).slice(0, 2), name: d.name || nat };
 }
+/**
+ * Anzahl der Einheiten in der Front eines Spielers.
+ */
 function frontCount(p) {
   let n = 0;
   for (const s of ['L', 'C', 'R']) for (let r = 0; r < 3; r++) if (p.front[s][r]) n++;
   return n;
 }
+/**
+ * Prüft, ob eine Einheit als Artillerie bzw. Verteidiger der Artillerie zählt.
+ */
 function isArtyDef(def) {
   const tags = ((def.klasse || '') + ' ' + (def.tags || []).join(' ')).toLowerCase();
   return tags.includes('artillerie') || tags.includes('haubitze') || tags.includes('mörser') || tags.includes('moerser');
 }
+/**
+ * Arithmetisches Mittel einer Zahlenliste.
+ * @param {number[]} xs
+ * @returns {number}
+ */
 function mean(a) { return a.length ? a.reduce((x, y) => x + y, 0) / a.length : null; }
+/**
+ * Median einer Zahlenliste.
+ * @param {number[]} xs
+ * @returns {number}
+ */
 function median(a) {
   if (!a.length) return null;
   const s = a.slice().sort((x, y) => x - y);
@@ -73,6 +104,9 @@ function median(a) {
   return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
 }
 
+/**
+ * Hängt Messfühler an die Engine (Schaden, Züge, Siege), ohne Regeln zu ändern.
+ */
 function instrument(engine, stats) {
   const origDestroy = engine._destroy.bind(engine);
   engine._destroy = function (loc, meta) {
@@ -134,6 +168,9 @@ function instrument(engine, stats) {
   };
 }
 
+/**
+ * Nächste legale Bot-Aktion (`DCBot.step`) oder Zugende, falls nichts möglich ist.
+ */
 function botAct(engine, fail) {
   const pend = engine.state.pending;
   const pid = pend && typeof pend.player === 'number' ? pend.player : engine.state.active;
@@ -154,6 +191,9 @@ function botAct(engine, fail) {
   return act;
 }
 
+/**
+ * Spielt eine einzelne Bot-gegen-Bot-Partie und gibt das Messergebnis zurück.
+ */
 function playOne(seed, nat0, nat1) {
   const catalog = JSON.parse(JSON.stringify(DC_CATALOG));
   const rules = { deploy_protection: true, strict_facing: false, combat_counter: mode };

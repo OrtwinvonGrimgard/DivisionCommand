@@ -18,6 +18,9 @@ const BASE = process.env.DC_BASE || 'http://127.0.0.1:8765';
 const report = { ok: [], fail: [], console: [], pageerrors: [], failed404: [], sfxLog: [] };
 let srv = null;
 
+/**
+ * Wartet, bis der lokale HTTP-Server auf dem Port antwortet.
+ */
 function waitHttp(url, ms = 25000) {
   const t0 = Date.now();
   return new Promise((resolve, reject) => {
@@ -31,6 +34,9 @@ function waitHttp(url, ms = 25000) {
   });
 }
 
+/**
+ * Startet bei Bedarf den lokalen Spielserver und wartet auf Bereitschaft.
+ */
 async function ensureServer() {
   try { await waitHttp(BASE + '/', 1200); report.ok.push('server:up'); return; } catch (_) {}
   srv = spawn('python3', [SERVER, '--port', '8765'], {
@@ -41,6 +47,9 @@ async function ensureServer() {
   report.ok.push('server:started');
 }
 
+/**
+ * Schließt störende Overlays (Hilfe, Hinweise), damit der Screenshot sauber ist.
+ */
 async function dismissOverlays(page) {
   await page.evaluate(() => {
     const ov = document.getElementById('overlay');
@@ -51,6 +60,9 @@ async function dismissOverlays(page) {
   });
 }
 
+/**
+ * Playwright-Smoke: startet den Server, spielt Kernaktionen und prüft SFX-Hooks.
+ */
 async function main() {
   await ensureServer();
   const browser = await chromium.launch({ headless: true });

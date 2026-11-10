@@ -40,7 +40,13 @@
     'Stellungswechsel': 'Bedienung: Detailansicht der eigenen Einheit → „Stellungswechsel“.'
   };
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  /**
+   * Liste der allgemeinen Schlüsselwörter aus den Spieldaten.
+   */
   function list(def) { return (def && Array.isArray(def.keywords) ? def.keywords : []).filter(function (k) { return K[k]; }); }
+  /**
+   * HTML-Darstellung (Icons/Chips) für Schlüsselwörter bzw. Platzhalter.
+   */
   function html(def, opts) {
     var ks = list(def); if (!ks.length) return '';
     return '<div class="kw-block">' + ks.map(function (k) {
@@ -48,10 +54,16 @@
         (opts && opts.notes && NOTE[k] ? '<small class="kw-note">' + esc(NOTE[k]) + '</small>' : '') + '</p>';
     }).join('') + '</div>';
   }
+  /**
+   * Entfernt Schlüsselwort-Markup aus einem Text.
+   */
   function strip(def) {
     var ks = list(def); if (!ks.length) return '';
     return '<span class="kw-strip" title="' + esc(ks.map(function (k) { return k + ' (' + K[k] + ')'; }).join(' · ')) + '">' + ks.map(function (k) { return '<b>' + esc(k) + '</b>'; }).join(' · ') + '</span>';
   }
+  /**
+   * Liefert den Klartext eines Schlüsselworts ohne HTML-Markup.
+   */
   function plain(def) { return list(def).map(function (k) { return k + ' (' + K[k] + ')'; }).join(' '); }
   root.DC_KEYWORDS = K;
   root.DCKw = { list: list, html: html, strip: strip, plain: plain, text: K, notes: NOTE };

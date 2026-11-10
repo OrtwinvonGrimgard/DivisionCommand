@@ -7,6 +7,9 @@
 const assert = require('assert');
 const L = require('../scripts/nation_pools/load_game.js');
 const w = L.loadGame({ quiet: true });
+/**
+ * Sucht eine Kartendefinition anhand der ID im geladenen Katalog.
+ */
 const by = (id) => w.DC_CATALOG.cards.find((c) => c.id === id);
 assert.deepStrictEqual([by('dc_np_caldris_schildtraeger').atk, by('dc_np_caldris_schildtraeger').def], [2, 3]);
 assert.deepStrictEqual([by('dc_np_caldris_sanitaetspanzer').atk, by('dc_np_caldris_sanitaetspanzer').def], [2, 3]);

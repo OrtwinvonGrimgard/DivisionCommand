@@ -56,12 +56,14 @@ CHIP_PX = 40
 METAL = {'bronze': 'bronze', 'silber': 'silber', 'silver': 'silber', 'gold': 'gold'}
 
 def metal_of(c):
+    """Wählt die Metallfarbe (Gold/Silber/Bronze) zur Seltenheit."""
     r = str(c.get('rarity') or '').lower()
     if r in METAL: return METAL[r]
     mc = c.get('max_copies')
     return {1: 'gold', 2: 'silber'}.get(mc, 'bronze')
 
 def cover(path, tw, th):
+    """Skaliert Kunst proportional und füllt den Zielrahmen (kein Strecken)."""
     src = Image.open(path).convert('RGB')
     sw, sh = src.size
     s = max(tw / sw, th / sh)
@@ -70,6 +72,7 @@ def cover(path, tw, th):
     return src.resize((tw, th), Image.Resampling.LANCZOS, box=(x0, y0, x0 + cw, y0 + ch))
 
 def wrap(text, fnt, max_w):
+    """Umbricht Text auf die maximale Breite mit der gegebenen Schrift."""
     d = ImageDraw.Draw(Image.new('RGB', (8, 8)))
     out = []
     for para in str(text or '').split('\n'):
@@ -84,6 +87,7 @@ def wrap(text, fnt, max_w):
     return out
 
 def fit(kurz, kws, flavor, avail):
+    """Passt Schriftgrößen so an, dass Text und Schlüsselwörter in die Fläche passen."""
     inner = W - 2 * 78 - 76
     ff = M.font(M.FONT_I, FLAVOR_PX)
     fl = wrap('„' + flavor + '“', ff, inner)[:2] if flavor else []
@@ -112,6 +116,7 @@ def plan(card, kurz, kws):
                 body_px=px, line_h=lh, content_h=h)
 
 def stock_for(card):
+    """Wählt den Hintergrundstock (Leder, Stahl, …) passend zum Kartentyp."""
     typ = card.get('typ')
     if typ == 'Unterstützung': return R.steel_stock((W, H))
     if typ == 'Soforteinsatz': return R.burnt_stock((W, H))
@@ -120,6 +125,7 @@ def stock_for(card):
     return M.brushed_stock((W, H))
 
 def draw_chips(d, x0, y, kws, rim):
+    """Zeichnet Schlüsselwort-Chips in die Kartenfront."""
     f = M.font(M.FONT_B, CHIP_PX - 6)
     x = x0
     for k in kws:
@@ -129,6 +135,7 @@ def draw_chips(d, x0, y, kws, rim):
         x += tw + 44 + 18
 
 def render(card, art_path, kurz, kws, dest, number='001', edition='ALPHA'):
+    """Rendert die Kartenfront in die Zieldatei."""
     M.apply_metal(metal_of(card))
     M._current_card = card
     R._mod._current_card = card
@@ -199,7 +206,9 @@ def render(card, art_path, kurz, kws, dest, number='001', edition='ALPHA'):
     out.save(dest, 'WEBP', quality=82, method=6)
     return dict(p, art_box=list(p['art_box']), panel=list(p['panel']), body_px=p['body_px'])
 
-def render_doctrine_old(card, kurz, dest, number='001', edition='ALPHA'):  # gfx2, nicht mehr benutzt
+def render_doctrine_old(card, kurz, dest, number='001', edition='ALPHA'):
+    """Ältere Doktrin-Front (Legacy-Layout), nur für Vergleich oder Altbestand."""
+    # gfx2, nicht mehr benutzt
     tmp = Path(dest).with_suffix('.tmp.png')
     R.render(dict(card, text=kurz), None, str(tmp), metal=metal_of(card), number=number, edition=edition)
     im = Image.open(tmp).convert('RGBA'); tmp.unlink()

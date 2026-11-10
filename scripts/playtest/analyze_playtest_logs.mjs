@@ -16,6 +16,9 @@ if (!target) {
   process.exit(1);
 }
 
+/**
+ * Liest einen exportierten Playtest-Log (JSON) von der Platte.
+ */
 function loadExport(src) {
   const abs = path.resolve(src);
   if (!fs.existsSync(abs)) throw new Error('nicht gefunden: ' + abs);
@@ -51,11 +54,17 @@ function loadExport(src) {
   return { games, notes, root, tmp };
 }
 
+/**
+ * Prozentwert (0–100) aus Anteil und Gesamtzahl.
+ */
 function pct(n, d) {
   if (!d) return '—';
   return ((100 * n) / d).toFixed(1) + '%';
 }
 
+/**
+ * Liest exportierte Playtest-Logs und gibt eine kurze Statistik aus.
+ */
 function main() {
   const { games, notes, tmp } = loadExport(target);
   console.log('=== Division Command Playtest-Auswertung ===');

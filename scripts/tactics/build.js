@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/**
+ * Schreibt die taktischen Schlüsselwörter in die Typdateien unter
+ * `web/js/data/sets/types/`. Quelle sind die vorhandenen JSON-Arrays.
+ * Aufruf: `node scripts/tactics/build.js` von der Repo-Wurzel.
+ */
 'use strict';
 const fs = require('fs'), path = require('path');
 const {migrate} = require('./migrate.js');

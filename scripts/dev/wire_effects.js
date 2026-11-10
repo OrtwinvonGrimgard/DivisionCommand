@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Hilfsskript: leitet strukturierte Effektcodes aus Kartentexten ab und schreibt
+ * sie zurück in die Typdateien. Einmal-Werkzeug, nicht Teil von `npm test`.
+ */
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -14,10 +18,19 @@ const FILE_MAP = {
   Doktrin: 'doktrinen.js', Token: 'tokens.js', Operation: 'operationen.js',
 };
 
+/**
+ * Normalisiert einen Kartentext (Whitespace, Bindestriche) vor dem Parsen.
+ */
 function clean(t) {
   return String(t || '').replace(/\[[^\]]*\]/g, '').replace(/\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
 }
+/**
+ * Liest eine vorzeichenbehaftete Zahl (z. B. −1) aus dem Text.
+ */
 function minusNum(s) { return Number(String(s).replace(/[−–]/g, '-')); }
+/**
+ * Parst ATK/DEF-Änderungen aus einem Ausrüstungs- oder Effekttext.
+ */
 function parseAtkDef(chunk) {
   let atk = 0, def = 0;
   const both = chunk.match(/([+\-−–]?\d+)\s*ATK\s*\/\s*([+\-−–]?\d+)\s*DEF/i);
@@ -28,6 +41,9 @@ function parseAtkDef(chunk) {
   if (d) def = minusNum(d[1]);
   return { atk, def };
 }
+/**
+ * Erkennt eine Einschränkung „Nur an …“ und liefert zulässige Typen.
+ */
 function detectOnly(t) {
   const low = t.toLowerCase();
   if (/träger/.test(low)) return null;
@@ -40,6 +56,9 @@ function detectOnly(t) {
   return null;
 }
 
+/**
+ * Leitet Effektcodes für eine Ausrüstungskarte aus ihrem Text ab.
+ */
 function parseEquipment(text) {
   const t = clean(text);
   const effects = [];
@@ -132,6 +151,9 @@ function parseEquipment(text) {
   return { effects, status: 'full' };
 }
 
+/**
+ * Leitet Effektcodes für einen Soforteinsatz aus dem Text ab.
+ */
 function parseInstant(text) {
   const t = clean(text);
   const effects = [];
@@ -304,6 +326,9 @@ function parseInstant(text) {
   return { effects, status };
 }
 
+/**
+ * Leitet Effektcodes für eine Einheit aus dem Text ab.
+ */
 function parseUnit(text, typ) {
   const t = clean(text);
   const effects = [];
@@ -324,6 +349,9 @@ function parseUnit(text, typ) {
   return { effects, status: 'full' };
 }
 
+/**
+ * Leitet Effektcodes für eine Unterstützungskarte aus dem Text ab.
+ */
 function parseSupport(text) {
   const t = clean(text);
   const effects = [];
@@ -347,6 +375,9 @@ const FULL_SIDE_CODES = new Set([
   'CARRIER_FIRST_ATTACK_ATK','EQUIP_DISCOUNT_AURA','COST_NEXT','HAND_PEEK',
 ]);
 
+/**
+ * Prüft, ob die gespeicherten Effektcodes den erkannten Text abdecken.
+ */
 function storedEffectsCover(card) {
   const fx = card.effects || [];
   if (!fx.length) return false;
@@ -361,6 +392,9 @@ function storedEffectsCover(card) {
   return false;
 }
 
+/**
+ * Wählt den passenden Parser je Kartentyp und liefert Effektcodes.
+ */
 function parseCard(card) {
   if (card.effects && card.effects.length && card.set === 'set_alpha') return { effects: card.effects, status: 'full', kept: true };
   if (card.effects && card.effects.length && card.set === 'set_nations' && storedEffectsCover(card)) {
@@ -374,6 +408,9 @@ function parseCard(card) {
   return { effects: card.effects || [], status: (card.effects && card.effects.length) ? 'full' : 'none' };
 }
 
+/**
+ * Lädt alle Typdateien unter `web/js/data/sets/types/`.
+ */
 function loadTypes() {
   const ctx = { window: { DC_SET_TYPES: {} } };
   for (const f of fs.readdirSync(TYPES_DIR).filter((x) => x.endsWith('.js'))) {
@@ -382,6 +419,9 @@ function loadTypes() {
   return ctx.window.DC_SET_TYPES;
 }
 
+/**
+ * Schreibt geänderte Effektarrays zurück in eine Typdatei (Format bleibt).
+ */
 function rewriteFile(typName, cards) {
   const file = FILE_MAP[typName];
   if (!file) return;
@@ -390,6 +430,9 @@ function rewriteFile(typName, cards) {
   fs.writeFileSync(path.join(TYPES_DIR, file), out);
 }
 
+/**
+ * Fasst Parser-Treffer und Lücken für die Konsole zusammen.
+ */
 function summarize(types) {
   const byTyp = {};
   const noneEq = [], noneSo = [], partialEq = [], partialSo = [];
@@ -416,6 +459,9 @@ function summarize(types) {
   return { byTyp, noneEq, noneSo, partialEq, partialSo, wiredEq, wiredSo, emptyEq, emptySo };
 }
 
+/**
+ * CLI: leitet Effektcodes aus Kartentexten ab und schreibt sie optional zurück.
+ */
 function main() {
   const apply = process.argv.includes('--apply');
   const types = loadTypes();

@@ -65,6 +65,9 @@ function setup(audioMode = 'on') {
   function click(sel) { const el = w.document.querySelector(sel); assert(el, `missing ${sel}`); el.click(); while (immediate.length) immediate.shift()(); }
   return { w, dom, eng: real, errors, add, click };
 }
+/**
+ * Ein einzelner Audio-Testfall für eine Einheitshandlung.
+ */
 function unitTest(mode) {
   const h = setup(mode), { w, eng, add, click } = h;
   const def = w.DC_CATALOG.cards.find(c => c.typ === 'Einheit' && ((c.tags || []).includes('infanterie') || c.klasse === 'Infanterie') && !(c.effects || []).length && !(c.keywords || []).length && !(c.tags || []).some(t => String(t).startsWith('steilfeuer')));
@@ -82,6 +85,9 @@ function unitTest(mode) {
 }
 if (require.main === module && !process.env.CHOICES_ONLY) for (const mode of ['on', 'off', 'throw', 'reject', 'mutate', 'media-throw', 'media-reject', 'missing-media']) unitTest(mode);
 module.exports = { setup };
+/**
+ * Ein einzelner Audio-Testfall für eine Auswahlhandlung.
+ */
 function choiceTest(mode) {
   const h = setup(mode), { w, eng, add, click } = h;
   const inf = w.DC_CATALOG.cards.find(c => c.typ === 'Einheit' && ((c.tags || []).includes('infanterie') || c.klasse === 'Infanterie') && !(c.effects || []).length && !(c.keywords || []).length && !(c.tags || []).some(t => String(t).startsWith('steilfeuer')));

@@ -9,10 +9,22 @@ const assert = require('node:assert/strict');
 const L = require('../scripts/nation_pools/load_game.js');
 const w = L.loadGame({ quiet: true });
 const C = w.DC_CATALOG.cards;
+/**
+ * Sucht eine Kartendefinition anhand der ID im geladenen Katalog.
+ */
 const by = (id) => { const c = C.find((x) => x.id === id); assert.ok(c, id); return c; };
 
+/**
+ * Liest die Effektliste einer Karte bzw. Instanz.
+ */
 function fx(c) { return c.effects || []; }
+/**
+ * Prüft, ob ein bestimmter Effektcode auf der Karte vorkommt.
+ */
 function has(c, pred) { return fx(c).some(pred); }
+/**
+ * Liest einen Ausrüstungswert (ATK/DEF) aus dem Effekt.
+ */
 function stat(c) {
   const e = fx(c).find((x) => x.code === 'EQUIP_STAT');
   assert.ok(e, c.id + ' EQUIP_STAT');
@@ -50,6 +62,9 @@ function giveHand(eng, pid, id) {
   eng.player(pid).hand.push(inst);
   return inst;
 }
+/**
+ * Spielt eine Ausrüstung im Test auf eine vorhandene Einheit.
+ */
 function playEquip(eng, host, eqId) {
   const eq = giveHand(eng, 0, eqId);
   const r = eng.dispatch({ type: 'PLAY', player: 0, uid: eq.uid });

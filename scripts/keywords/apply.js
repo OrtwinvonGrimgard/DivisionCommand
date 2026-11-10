@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Schreibt Schlüsselwörter in die Kartendaten (alte Sets und Nationenpools).
+ * Idempotent; Protokoll in `conversion_log.json`.
+ */
 'use strict';
 /* Schreibt Schlüsselwörter in die Kartendaten:
    - alte Sets: web/js/data/sets/types/*.js (JSON-Arrays) → Feld "keywords", umgestellter "text"

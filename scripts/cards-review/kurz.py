@@ -4,6 +4,7 @@ import json, re
 from pathlib import Path
 import datafiles as DF, subprocess
 def catalog():
+    """Lädt den autoritativen Kartenkatalog."""
     d = json.loads(subprocess.check_output(['node', str(ROOT / 'scripts/graphics/export_catalog.js')], cwd=ROOT))
     return {c['id']: ('runtime', c) for c in d['cards']}
 HERE = Path(__file__).parent; ROOT = DF.ROOT
@@ -34,11 +35,13 @@ RULES = [
     (r'\s+', ' '),
 ]
 def shorten(t):
+    """Kürzt einen Kartentext auf die Frontlänge (kurz.json-Regeln)."""
     for rx, rep in RULES:
         if len(t) <= 120 and rx not in (r'\s*\[[^\]]*\]', r'\s+'): continue
         t = re.sub(rx, rep, t)
     return t.strip()
 def main():
+    """Kürzt Kartentexte und schreibt `kurz.json` sowie die zugehörige Dokumentation."""
     out = {}; long_ = []
     for i, (f, c) in catalog().items():
         t = (c.get('text') or '').strip()
@@ -52,6 +55,7 @@ if __name__ == '__main__':
     for x in main(): print(x[0], x[1], x[2], '|', x[3])
 
 def write_docs():
+    """Schreibt die zugehörige Kartentext-Dokumentation aus den Kürzungen."""
     K = json.loads((HERE / 'kurz.json').read_text()); A = catalog()
     o = ['# Karten – Sonderfälle und Langtexte', '',
          'Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schlüsselwort-Chips. Die vollständige Regel steht in der Detailansicht (Datenfeld `text`) und – für jede Karte, deren Flächentext gekürzt ist – hier, wortgleich, nach ID sortiert. Erzeugt von `scripts/cards-review/kurz.py`; `tests/test_card_faces_text.js` prüft, dass nichts verloren geht.', '']

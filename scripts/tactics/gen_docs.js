@@ -1,8 +1,15 @@
 #!/usr/bin/env node
+/**
+ * Erzeugt die Dokumentation der taktischen Schlüsselwörter aus den Spieldaten
+ * (`docs/regeln/TAKTISCHE_SCHLUESSELWOERTER.md`). Aufruf von der Repo-Wurzel.
+ */
 'use strict';
 const fs=require('fs'),path=require('path');
 const L=require('../nation_pools/load_game'),w=L.loadGame({quiet:true}),C=w.DC_CATALOG.cards;
 const P=require('./approved-proposals.json'), sources=require('./sources.json'),log=require('./migration-log.json');
+/**
+ * Wählt ein Beispiel bzw. eine repräsentative Karte für die Dokumentation.
+ */
 const pick=c=>Object.fromEntries(['text','rules','keywords','effects'].map(k=>[k,c[k]||[]]));
 for(const m of log.cards){const c=C.find(c=>c.id===m.id);if(!c)throw Error('Karte entfernt: '+m.id);m.after=pick(c);}
 const counts={};for(const k of ['Absetzen','Erstschadenschutz'])counts[k]=C.filter(c=>(c.keywords||[]).includes(k)).length; counts['Indirektes Feuer']=0;

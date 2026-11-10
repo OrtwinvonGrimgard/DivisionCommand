@@ -8,6 +8,9 @@
    und jede neue Karte wird über die Produktions-Dispatch-Pfade gespielt und ihr Effekt geprüft. */
 const assert = require('node:assert/strict');
 const L = require('../scripts/nation_pools/load_game.js');
+/**
+ * Baut eine minimale Testkarte oder -instanz.
+ */
 const mk = (id, o) => Object.assign({ id, set: 'test', status: 'live', name: id, rarity: 'bronze', typ: 'Einheit', ap: 1, atk: 2, def: 5, tags: ['einheit', 'infanterie'], klasse: 'Infanterie', text: 'Keine Sonderfähigkeit.', effects: [] }, o);
 const w = L.loadGame({ quiet: true, inject: (w) => { w.DC_SET_TYPES.__Test = [mk('t_inf'), mk('t_pz', { tags: ['einheit', 'panzer', 'kette', 'gepanzert'], klasse: 'Panzer' }), mk('t_wall', { atk: 0 }), mk('t_wallpz', { atk: 0, tags: ['einheit', 'panzer', 'kette', 'gepanzert'], klasse: 'Panzer' }), mk('t_eq', { typ: 'Ausrüstung', ap: 2, text: 'Testausrüstung.', effects: [{ code: 'EQUIP_STAT', param: { atk: 0, def: 0 } }] }), mk('t_sup', { typ: 'Unterstützung', text: 'Testunterstützung.' })]; } });
 const C = w.DC_CATALOG.cards, NP = C.filter((c) => c.set === 'set_nation_pool');
@@ -93,15 +96,30 @@ for (const n of nations) {
 
 // ---- 3) Funktionsprüfung je Karte
 const INF = C.find((c) => c.id === 't_inf'), PZ = C.find((c) => c.id === 't_pz'), SUPX = C.find((c) => c.id === 't_sup');
+/**
+ * Erzeugt eine frische Test-Engine bzw. Partie in bekanntem Ausgangszustand.
+ */
 function fresh() { const eng = L.newMatch(w, 'Steinmark', 3); L.clearBoard(eng); eng.state.active = 0; eng.state.phase = 'main'; eng.player(0).ap = 20; eng.player(1).ap = 20; return eng; }
+/**
+ * Liest aktuelle ATK/DEF (bzw. Lebenswerte) einer Instanz.
+ */
 function stats(eng, i) { return eng.currentAtkDef(i); }
+/**
+ * Stellt eine Testeinheit in eine Frontstellung.
+ */
 function deploy(eng, c, section, row) {
   const p = eng.player(0), inst = eng.instFromId(c.id, 0); p.hand.push(inst);
   const expect = eng.costOf(c, p), ap = p.ap, r = eng.dispatch({ type: 'PLAY', player: 0, uid: inst.uid }); assert(r.ok, c.id + ' PLAY ' + r.error);
   if (eng.state.pending && eng.state.pending.kind === 'deploy') { const r2 = eng.dispatch({ type: 'CHOOSE_SLOT', player: 0, slot: { section, row } }); assert(r2.ok, c.id + ' SLOT ' + r2.error); }
   return { inst, spent: ap - p.ap, expect };
 }
+/**
+ * Führt einen Angriff im Test aus.
+ */
 function attack(eng, a, t) { const r = eng.dispatch({ type: 'ATTACK', player: 0, uid: a.uid }); if (r.ok && eng.state.pending) return eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: t.uid }); return r; }
+/**
+ * Platzhalter-Einheit, typischerweise als Angriffsziel.
+ */
 function dummy(eng, pid, s, row, def, armored) { const base = armored ? PZ : INF; const i = L.put(eng, pid, base.id, s, row); i.def = i.defMax = def || 30; return i; }
 const seen = {};
 for (const c of NP) {

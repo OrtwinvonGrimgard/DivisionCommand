@@ -6,15 +6,27 @@ const path = require('path');
 const vm = require('vm');
 
 const ROOT = path.resolve(__dirname, '../Division_Command/web');
+/**
+ * Lädt Spielmodule (Katalog/Engine/UI) in den Test- oder Simulationskontext.
+ */
 function load(ctx, rel) {
   vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), ctx, { filename: rel });
 }
 const sandbox = {
   console, setTimeout, clearTimeout,
   document: {
+    /**
+     * DOM-Attrappe im Node-Kontext; liefert ein Minimal-Element oder null.
+     */
     getElementById: () => null, querySelector: () => null, querySelectorAll: () => [],
+    /**
+     * DOM-Attrappe: erzeugt ein Minimal-Element für die Engine im Node-Kontext.
+     */
     createElement: () => ({ style: {}, appendChild() {}, setAttribute() {} }),
     head: { appendChild() {} }, body: { classList: { add() {}, remove() {} } },
+    /**
+     * DOM-Attrappe: Event-Listener werden ignoriert (kein Browser).
+     */
     addEventListener() {},
   },
   localStorage: { getItem: () => null, setItem() {} },
@@ -36,6 +48,9 @@ for (const s of [
 
 const { DCEngine, DC_CATALOG, DC_TROPHY, DC_TROPHY_OBJECTIVES } = ctx;
 let passed = 0;
+/**
+ * Testprüfung: wirft mit Meldung, wenn die Bedingung nicht gilt.
+ */
 function assert(cond, msg) {
   if (!cond) throw new Error(msg || 'assert failed');
   passed++;
@@ -46,6 +61,9 @@ assert(DC_CATALOG.rules.victory_mode === 'trophy', 'default victory_mode trophy'
 assert(DC_TROPHY && DC_TROPHY_OBJECTIVES, 'trophy module loaded');
 assert(Object.keys(DC_TROPHY_OBJECTIVES).length === 36, '36 doctrine objectives');
 
+/**
+ * Legt eine Trophäe für den Test ins Spiel.
+ */
 function makeTrophy(doctrine0, doctrine1) {
   const catalog = DC_CATALOG;
   const rules = Object.assign({}, catalog.rules, { victory_mode: 'trophy', trophy_vp_to_win: 5 });
@@ -63,6 +81,9 @@ function makeTrophy(doctrine0, doctrine1) {
   return eng;
 }
 
+/**
+ * Legt eine Einheit aus dem Katalog auf eine Stellung.
+ */
 function put(eng, pid, cardId, section, row) {
   const inst = eng.instFromId(cardId, pid);
   inst.summonedTurn = eng.state.turn - 2;

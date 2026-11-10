@@ -11,8 +11,14 @@ const zlib = require('zlib');
 
 const WEB = path.join(__dirname, '..', 'Division_Command', 'web');
 
+/**
+ * Testprüfung: wirft mit Meldung, wenn die Bedingung nicht gilt.
+ */
 function assert(c, m) { if (!c) throw new Error('ASSERT: ' + m); }
 
+/**
+ * Lädt Katalog und Engine in einen Node-Kontext und gibt den Kontext zurück.
+ */
 function loadGame() {
   const document = {
     getElementById: () => null,

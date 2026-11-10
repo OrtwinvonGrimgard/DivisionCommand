@@ -5,6 +5,7 @@ nicht stillschweigend gelöscht, sondern als 'dropped' protokolliert (KARTENPRUE
 import re
 
 def clean(t):
+    """Normalisiert einen Kartentext (Whitespace, Bindestriche) vor dem Parsen."""
     t = re.sub(r'\s*\[[^\]]*\]', '', t or '')
     t = re.sub(r'\s*\((?:[^()]*?)\)', lambda m: '' if not re.search(r'min|mind|einmal', m.group(0), re.I) else m.group(0), t)
     return re.sub(r'\s+', ' ', t).strip()
@@ -89,15 +90,19 @@ VS_TXT = {'damaged': 'beschädigte Ziele', 'hit': 'Ziele, die in diesem Zug Scha
 FILTER_TXT = {None: 'eigene Einheiten', 'infanterie': 'eigene Infanterie', 'artillerie': 'eigene Artillerie', 'panzer': 'eigene Panzer'}
 
 def match_table(s, table):
+    """Sucht den ersten passenden Eintrag einer Übersetzungstabelle."""
     for rx, code in table:
         if re.fullmatch(r'(?:' + rx + r')', s): return code
     for rx, code in table:
         if re.search(rx, s): return code
     return None
 
-def num(x): return int(x.replace('−', '-').replace('–', '-'))
+def num(x):
+    """Parst eine ganze Zahl aus einem Textfragment."""
+    return int(x.replace('−', '-').replace('–', '-'))
 
 def stat_txt(a, d):
+    """Formatiert ein ATK/DEF-Paar als kurzen Kartentext."""
     parts = []
     if a: parts.append(('+' if a > 0 else '') + str(a) + ' ATK')
     if d: parts.append(('+' if d > 0 else '') + str(d) + ' DEF')
@@ -106,6 +111,7 @@ def stat_txt(a, d):
 STAT = r'([+\-−]\d)\s*atk(?:\s*(?:und|/)\s*([+\-−]\d)\s*def)?|([+\-−]\d)\s*def'
 
 def parse_stat(s):
+    """Parst ein ATK/DEF-Paar aus einem Klauseltext."""
     m = re.match(r'^(?:' + STAT + r')', s)
     if not m: return None
     if m.group(3): return 0, num(m.group(3)), s[m.end():]
@@ -299,6 +305,7 @@ def translate(card):
     return res
 
 def clause2(c, card, out):
+    """Zweite Übersetzungsstufe einer Klausel, falls die erste nicht greift."""
     s = c.lower().strip(' .;:').replace('–', '-')
     sup = card['typ'] == 'Unterstützung'
     E = lambda **p: out['fx'].append({'code': 'CM', 'param': p})

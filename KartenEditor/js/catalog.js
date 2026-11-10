@@ -1,3 +1,7 @@
+/**
+ * Minimaler Katalog und Bildpfad-Helfer für den eigenständigen Karteneditor.
+ * Unabhängig vom Spielkatalog in `Division_Command/web`.
+ */
 (function (g) {
   'use strict';
   g.dcCardSrc = function (file) {

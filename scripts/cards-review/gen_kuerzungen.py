@@ -18,6 +18,7 @@ RESTORED = {
 SIEGEL = 'dc_b_verbindungssiegel_839'
 
 def hint(c):
+    """Kurzhinweis, welche Klausel bei einer Karte gekürzt wurde."""
     if c['id'] in RESTORED:
         return RESTORED[c['id']]
     if c['id'] == SIEGEL:
@@ -76,6 +77,7 @@ lines.append('## Karten')
 lines.append('')
 
 def typ_nat(c):
+    """Typ- und Nationenzeile für den Kürzungsbericht."""
     live = cat.get(c['id']) or {}
     return live.get('typ') or c['typ'], live.get('nation') or '–'
 

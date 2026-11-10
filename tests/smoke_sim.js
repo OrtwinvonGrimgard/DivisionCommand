@@ -11,6 +11,9 @@ const w = L.loadGame({ quiet: true });
 const ctxWin = w; vm.runInNewContext(fs.readFileSync(path.join(L.WEB, 'js/ai/bot.js'), 'utf8'), { window: w, console: { log() {}, warn() {} }, Math, JSON, Object, Array, String, Number, Error });
 const Bot = w.DCBot; if (!Bot) throw new Error('Bot nicht geladen');
 const nations = Object.keys(w.DC_NATION_DECKS), C = w.DC_CATALOG.cards;
+/**
+ * Baut ein Mischdeck für den Smoke-Lauf.
+ */
 function mixed(n) {
   const d = w.DC_NATION_DECKS[n], pool = C.filter((c) => c.nation === n && c.set === 'set_nation_pool').map((c) => c.id);
   return { cards: d.cards.slice(0, 30).concat(pool.slice(0, 30)), doctrines: d.doktrinen.slice() };

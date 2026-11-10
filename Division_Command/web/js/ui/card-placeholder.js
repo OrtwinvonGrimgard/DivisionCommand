@@ -3,7 +3,13 @@
 (function (global) {
   'use strict';
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  /**
+   * Prüft, ob für die Karte ein Platzhalter statt einer fertigen Front gezeigt wird.
+   */
   function is(def) { return !!(def && def.art_status === 'platzhalter' && !(global.DC_CARD_FACES && global.DC_CARD_FACES[def.id])); }
+  /**
+   * HTML-Darstellung (Icons/Chips) für Schlüsselwörter bzw. Platzhalter.
+   */
   function html(def, cls) {
     var stats = def.atk != null ? '<span class="ph-stats">ATK ' + def.atk + ' · DEF ' + def.def + '</span>' : '';
     return '<span class="' + esc(cls || 'art') + ' card-ph" role="img" aria-label="' + esc(def.name) + ' – Entwurf ohne Artwork">' +
@@ -12,6 +18,9 @@
       '<span class="ph-text">' + (global.DCKw ? global.DCKw.html(def) : '') + esc(def.text || '') + '</span>' + stats +
       '<span class="ph-flag">Entwurf · noch kein Artwork</span></span>';
   }
+  /**
+   * HTML mit Regeltext für die Platzhalter-Kartenrückseite bzw. -front.
+   */
   function rulesHtml(def) {
     if (!def || !def.rules || !def.rules.length) return '';
     return '<div class="card-rules"><div class="card-rules-h">Regeln im Detail</div><ul>' +

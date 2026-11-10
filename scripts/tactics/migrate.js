@@ -1,3 +1,8 @@
+/**
+ * Idempotente Redaktion: ein taktisches Wort entspricht genau einem Effektcode.
+ * Keine Zuordnung nur nach Namen oder ähnlich klingendem Text.
+ * Export: `migrate`.
+ */
 'use strict';
 /* Idempotente, eng gefasste Redaktion: ein Wort = ein bestehender Effektcode.
    Keine Zuordnung nach bloßen Namen oder militärisch ähnlichen Texten. */
@@ -6,6 +11,9 @@ const REMINDERS = {
   'Erstschadenschutz': 'Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.'
 };
 const EXCLUDED = new Set(['dc_b_feldaltar_138', 'dc_b_kettengebet_141', 'dc_b_wachsiegel_647']);
+/**
+ * Führt die idempotente taktische Migration auf einer Kartendefinition aus.
+ */
 function migrate(c) {
   const fx = c.effects || [], has = k => fx.some(e => e.code === k);
   const add = (word, pattern) => {

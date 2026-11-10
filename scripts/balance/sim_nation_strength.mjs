@@ -12,6 +12,9 @@ const ROOT = path.resolve(__dirname, '../../Division_Command/web');
 fs.mkdirSync(path.join(__dirname, 'out'), { recursive: true });
 const gamesPer = Math.max(1, Number(process.argv[2] || 10));
 
+/**
+ * Lädt eine Spiel-JS-Datei in den Node-vm-Kontext (ohne Browser-DOM).
+ */
 function loadInto(context, rel) {
   const full = path.join(ROOT, rel);
   vm.runInContext(fs.readFileSync(full, 'utf8'), context, { filename: full });
@@ -19,9 +22,18 @@ function loadInto(context, rel) {
 const sandbox = {
   console, setTimeout, clearTimeout, setInterval, clearInterval,
   document: {
+    /**
+     * DOM-Attrappe im Node-Kontext; liefert ein Minimal-Element oder null.
+     */
     getElementById: () => null, querySelector: () => null, querySelectorAll: () => [],
+    /**
+     * DOM-Attrappe: erzeugt ein Minimal-Element für die Engine im Node-Kontext.
+     */
     createElement: () => ({ style: {}, appendChild() {}, remove() {}, setAttribute() {}, onload: null, onerror: null }),
     head: { appendChild() {} }, body: { classList: { add() {}, remove() {} } },
+    /**
+     * DOM-Attrappe: Event-Listener werden ignoriert (kein Browser).
+     */
     addEventListener() {}, removeEventListener() {},
   },
   localStorage: { getItem: () => null, setItem() {} },
@@ -47,22 +59,41 @@ DCBot.applyCfg({ model: 'test', delayMs: 0, aggression: 70, holdAp: 0, allowAtta
 const nations = Object.keys(DC_NATION_DECKS);
 const byId = Object.fromEntries(DC_CATALOG.cards.map((c) => [c.id, c]));
 
+/**
+ * Starterdeck der genannten Nation aus dem geladenen Katalog.
+ */
 function nationDeck(nat) {
   const d = DC_NATION_DECKS[nat];
   return { cards: (d.cards || []).slice(), doctrines: (d.doktrinen || []).slice(0, 2), name: d.name || nat, theme: d.theme || '' };
 }
+/**
+ * Anzahl der Einheiten in der Front eines Spielers.
+ */
 function frontCount(p) {
   let n = 0;
   for (const s of ['L', 'C', 'R']) for (let r = 0; r < 3; r++) if (p.front[s][r]) n++;
   return n;
 }
+/**
+ * Prüft, ob eine Einheit als Artillerie bzw. Verteidiger der Artillerie zählt.
+ */
 function isArtyDef(def) {
   if (!def) return false;
   const tags = ((def.klasse || '') + ' ' + (def.tags || []).join(' ')).toLowerCase();
   return tags.includes('artillerie') || tags.includes('haubitze') || tags.includes('mörser') || tags.includes('moerser')
     || (def.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT');
 }
+/**
+ * Arithmetisches Mittel einer Zahlenliste.
+ * @param {number[]} xs
+ * @returns {number}
+ */
 function mean(a) { return a.length ? a.reduce((x, y) => x + y, 0) / a.length : null; }
+/**
+ * Median einer Zahlenliste.
+ * @param {number[]} xs
+ * @returns {number}
+ */
 function median(a) {
   if (!a.length) return null;
   const s = a.slice().sort((x, y) => x - y);
@@ -77,6 +108,9 @@ const APISH = /AP_|GAIN_AP|EXTRA_AP|AP_BANK|AKTION/;
 const CONDITIONAL = /IF_|WHEN_|ON_|COND_|GEGEN_|NUR_/;
 const PROTECT = /NEGATE|SHIELD|DIG|EINGRAB|PROTECT|NO_COMBAT|DEPLOY/;
 
+/**
+ * Ordnet Effektcodes groben Wirkungsklassen für die Auswertung zu.
+ */
 function classifyEffects(card) {
   const codes = (card.effects || []).map((e) => String(e.code || '').toUpperCase());
   const text = String(card.text || '').toLowerCase();
@@ -92,6 +126,9 @@ function classifyEffects(card) {
   };
 }
 
+/**
+ * Statische Kennzahlen einer Nation aus dem Katalog (ohne Simulation).
+ */
 function staticNation(nat) {
   const d = nationDeck(nat);
   const cards = d.cards.map((id) => byId[id]).filter(Boolean);
@@ -169,6 +206,9 @@ function staticNation(nat) {
   };
 }
 
+/**
+ * Hängt Messfühler an die Engine (Schaden, Züge, Siege), ohne Regeln zu ändern.
+ */
 function instrument(engine, stats, focusPid) {
   const origHits = engine._applyCombatHits.bind(engine);
   engine._applyCombatHits = function (aLoc, tLoc, dmgToT, dmgToA, fog) {
@@ -224,6 +264,9 @@ function instrument(engine, stats, focusPid) {
   }
 }
 
+/**
+ * Nächste legale Bot-Aktion (`DCBot.step`) oder Zugende, falls nichts möglich ist.
+ */
 function botAct(engine, fail) {
   const pend = engine.state.pending;
   const pid = pend && typeof pend.player === 'number' ? pend.player : engine.state.active;
@@ -244,6 +287,9 @@ function botAct(engine, fail) {
   return act;
 }
 
+/**
+ * Spielt eine einzelne Bot-gegen-Bot-Partie und gibt das Messergebnis zurück.
+ */
 function playOne(seed, nat0, nat1) {
   const catalog = JSON.parse(JSON.stringify(DC_CATALOG));
   catalog.rules = Object.assign({}, catalog.rules, { deploy_protection: true, combat_counter: 'survivor_only' });

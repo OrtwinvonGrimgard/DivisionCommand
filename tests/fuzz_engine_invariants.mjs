@@ -14,15 +14,27 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../Division_Command/web');
 
+/**
+ * Lädt eine Spiel-JS-Datei in den Node-vm-Kontext (ohne Browser-DOM).
+ */
 function loadInto(context, rel) {
   vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), context, { filename: rel });
 }
 const sandbox = {
   console, setTimeout, clearTimeout, setInterval, clearInterval,
   document: {
+    /**
+     * DOM-Attrappe im Node-Kontext; liefert ein Minimal-Element oder null.
+     */
     getElementById: () => null, querySelector: () => null, querySelectorAll: () => [],
+    /**
+     * DOM-Attrappe: erzeugt ein Minimal-Element für die Engine im Node-Kontext.
+     */
     createElement: () => ({ style: {}, appendChild() {}, remove() {}, setAttribute() {}, onload: null, onerror: null }),
     head: { appendChild() {} }, body: { classList: { add() {}, remove() {} } },
+    /**
+     * DOM-Attrappe: Event-Listener werden ignoriert (kein Browser).
+     */
     addEventListener() {}, removeEventListener() {},
   },
   localStorage: { getItem: () => null, setItem() {} },
@@ -54,11 +66,17 @@ DCPlayStore.get = (s, k) => Promise.resolve(mem[s].has(k) ? JSON.parse(JSON.stri
 DCPlayStore.getAll = (s) => Promise.resolve([...mem[s].values()].map((v) => JSON.parse(JSON.stringify(v))));
 DCPlayStore.clearStore = (s) => { mem[s].clear(); return Promise.resolve(); };
 
+/**
+ * Starterdeck der genannten Nation aus dem geladenen Katalog.
+ */
 function nationDeck(nat) {
   const d = DC_NATION_DECKS[nat];
   return { cards: (d.cards || []).slice(), doctrines: (d.doktrinen || []).slice(0, 2), name: d.name || nat };
 }
 
+/**
+ * Nächste legale Bot-Aktion (`DCBot.step`) oder Zugende, falls nichts möglich ist.
+ */
 function botAct(engine, fail) {
   const pend = engine.state.pending;
   const pid = pend && typeof pend.player === 'number' ? pend.player : engine.state.active;
@@ -74,6 +92,9 @@ function botAct(engine, fail) {
   return act;
 }
 
+/**
+ * Sammelt alle Instanz-UIDs der aktuellen Partie.
+ */
 function collectUids(engine) {
   const seen = new Map();
   const add = (uid, where) => {
@@ -98,6 +119,9 @@ function collectUids(engine) {
   return seen;
 }
 
+/**
+ * Prüft Engine-Invarianten (Zonen, AP, Instanzen) und wirft bei Verletzung.
+ */
 function checkInvariants(engine, tag) {
   const errs = [];
   for (let pi = 0; pi < 2; pi++) {
@@ -152,6 +176,9 @@ function checkInvariants(engine, tag) {
   return errs;
 }
 
+/**
+ * Spielt eine vollständige Bot-gegen-Bot-Partie bis zum Ende oder Zuglimit.
+ */
 function playMatch(seed, mode) {
   const nats = Object.keys(DC_NATION_DECKS);
   const nat0 = nats[seed % nats.length];

@@ -8,6 +8,9 @@ const fs = require('fs'), path = require('path');
 const { setup } = require('./test_audio_actions');
 const WEB = path.join(__dirname, '..', 'Division_Command', 'web');
 const h = setup('off'), { w } = h;
+/**
+ * Kurzselektor: findet ein Element in der Testdom bzw. jsdom.
+ */
 const $ = s => w.document.querySelector(s), $$ = s => w.document.querySelectorAll(s);
 const C = w.DCCamera;
 // Assets existieren (keine 404-Platzhalter), CSS eingebunden, Cache angehoben
@@ -20,6 +23,9 @@ const vp8 = img.indexOf('VP8'); assert(vp8 > 0);
 const F = { x: 1433, y: 1439, w: 1524, h: 1204 }, IMG = { w: 4396, h: 3472 };
 assert(IMG.w / F.w >= 2 && IMG.h / F.h >= 2, 'Szene mindestens 2× Spielfeld in jeder Richtung');
 assert(Math.abs(F.w / F.h - 1760 / 1389) < 0.01, 'Filz-Seitenverhältnis = Welt');
+/**
+ * Prozentwert (0–100) aus Anteil und Gesamtzahl.
+ */
 const pct = (re) => Number(css.match(re)[1]);
 assert(Math.abs(pct(/left: -([\d.]+)%/) - F.x / F.w * 100) < 0.01 && Math.abs(pct(/top: -([\d.]+)%/) - F.y / F.h * 100) < 0.01, 'Offset kalibriert');
 assert(Math.abs(pct(/width: ([\d.]+)%; height/) - IMG.w / F.w * 100) < 0.01 && Math.abs(pct(/height: ([\d.]+)%;\n/) - IMG.h / F.h * 100) < 0.01, 'Größe kalibriert');

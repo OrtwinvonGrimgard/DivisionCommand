@@ -8,6 +8,9 @@ const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
 const WEB = path.join(__dirname, '../Division_Command/web');
+/**
+ * Baut die Audio-Testumgebung (DOM, Optionen, Stub-Ausgaben).
+ */
 function fixture() {
   const dom = new JSDOM(`<button id="menu"><span>A</span><b>B</b></button><button id="next">Next</button>
     <button id="disabled" disabled>No</button><div id="hand"><div class="card"><img><span>C</span></div></div>
@@ -31,6 +34,9 @@ function fixture() {
   const hover = (target, relatedTarget = null) => emit('pointerover', { target, relatedTarget });
   return { w, dom, media, load, emit, hover, tick: (ms = 101) => { now += ms; } };
 }
+/**
+ * Führt die Audio-Feedback-Tests in der jsdom-Umgebung aus.
+ */
 async function main() {
   const h = fixture(), { w, load, emit, hover, media, tick } = h;
   load('js/data/audio-data.js'); load('js/ui/audio-feedback.js');

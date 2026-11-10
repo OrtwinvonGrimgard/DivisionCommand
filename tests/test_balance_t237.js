@@ -8,6 +8,9 @@ const assert = require('assert');
 const L = require('../scripts/nation_pools/load_game.js');
 const w = L.loadGame({ quiet: true });
 const C = w.DC_CATALOG.cards, by = (id) => C.find((c) => c.id === id);
+/**
+ * Liest die Effektliste einer Karte bzw. Instanz.
+ */
 const fx = (id) => by(id).effects[0].param;
 assert.strictEqual(fx('dc_dok_materialersatz').if, 'after-loss');
 assert.strictEqual(fx('dc_dok_abnutzung').on_destroy_in_section.heal, 1);

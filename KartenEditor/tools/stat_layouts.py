@@ -17,10 +17,12 @@ ACCENT = (212, 170, 78)
 
 
 def fnt(path, size):
+    """Lädt eine Schrift für die Layout-Varianten."""
     return ImageFont.truetype(path, size)
 
 
 def base_card():
+    """Leere Basiskarte (Format 1024×1428) für Layoutversuche."""
     im = Image.new("RGB", (CW, CH), (28, 22, 14))
     n = Image.effect_noise((CW, CH), 16).convert("L")
     im = Image.blend(im, Image.merge("RGB", (n, n, n)), 0.1)
@@ -28,6 +30,7 @@ def base_card():
 
 
 def paste_art(im, box):
+    """Setzt Beispielkunst in die Kunstbox."""
     x0, y0, x1, y1 = box
     art = cover_art(ART, x1 - x0, y1 - y0)
     art = ImageEnhance.Contrast(art).enhance(1.05)
@@ -36,21 +39,25 @@ def paste_art(im, box):
 
 
 def frame(d):
+    """Zeichnet den Kartenrahmen."""
     gold_band(d, (3, 3, CW - 4, CH - 4), width=8)
     d.rounded_rectangle((12, 12, CW - 13, CH - 13), 10, outline=(72, 92, 48), width=3)
 
 
 def name_bar(d, y, h=28):
+    """Zeichnet die Namensleiste."""
     d.rectangle((18, y, CW - 19, y + h), fill=(28, 16, 8), outline=GOLD, width=2)
     d.text((CW / 2, y + h / 2), "NACHTPATROUILLE", font=fnt(FONT_N, 13), fill=GOLD_LT, anchor="mm")
 
 
 def type_bar(d, y, h=18):
+    """Zeichnet die Typzeile."""
     d.rectangle((18, y, CW - 19, y + h), fill=(72, 92, 48))
     d.text((CW / 2, y + h / 2), "EINHEIT  ·  INFANTERIE", font=fnt(FONT_N, 9), fill=GOLD_LT, anchor="mm")
 
 
 def text_box(im, box):
+    """Zeichnet den Regeltextkasten."""
     x0, y0, x1, y1 = box
     p = dispatch_panel((x1 - x0, y1 - y0), (42, 28, 16))
     im.paste(p, (x0, y0))
@@ -62,6 +69,7 @@ def text_box(im, box):
 
 
 def ap_coin(d, cx, cy, r=28):
+    """Zeichnet die AP-Münze."""
     d.ellipse((cx - r - 3, cy - r - 3, cx + r + 3, cy + r + 3), fill=(18, 10, 6), outline=GOLD, width=3)
     d.ellipse((cx - r + 4, cy - r + 4, cx + r - 4, cy + r - 4), fill=(48, 26, 10), outline=GOLD_LT, width=2)
     d.text((cx, cy - 10), "AP", font=fnt(FONT_N, 8), fill=ACCENT, anchor="mm")
@@ -69,12 +77,14 @@ def ap_coin(d, cx, cy, r=28):
 
 
 def plate(d, x, y, w, h, lab, n):
+    """Zeichnet eine Werteplatte (ATK oder DEF)."""
     d.rounded_rectangle((x, y, x + w, y + h), 5, fill=(22, 12, 8), outline=GOLD, width=2)
     d.text((x + w / 2, y + 10), lab, font=fnt(FONT_N, 8), fill=ACCENT, anchor="mm")
     d.text((x + w / 2, y + h / 2 + 6), str(n), font=fnt(FONT_B, 18), fill=(250, 236, 196), anchor="mm")
 
 
 def combo(d, x, y, w, h):
+    """Zeichnet die kombinierte ATK/DEF-Platte."""
     d.rounded_rectangle((x, y, x + w, y + h), 6, fill=(22, 12, 8), outline=GOLD, width=2)
     d.text((x + w * 0.28, y + 8), "ATK", font=fnt(FONT_N, 8), fill=ACCENT, anchor="mm")
     d.text((x + w * 0.72, y + 8), "DEF", font=fnt(FONT_N, 8), fill=ACCENT, anchor="mm")
@@ -84,6 +94,7 @@ def combo(d, x, y, w, h):
 
 
 def logo_tiny(im, cx, cy, max_w=90):
+    """Setzt das verkleinerte Logo."""
     path = os.path.join(ROOT, "assets", "title-logo.png")
     if not os.path.isfile(path):
         return
@@ -98,6 +109,7 @@ def logo_tiny(im, cx, cy, max_w=90):
 
 
 def finish(im):
+    """Schlussbearbeitung (Ecken, Export) einer Layoutkarte."""
     m = round_mask((CW, CH), 16)
     table = Image.new("RGB", (CW, CH), (8, 4, 3))
     return Image.composite(im, table, m)
@@ -274,6 +286,7 @@ LAYOUTS = [
 
 
 def main():
+    """Rendert die Stat-Layout-Varianten A–H zum visuellen Vergleich."""
     cols, rows = 2, 4
     pad, cap = 28, 56
     sheet_w = pad + cols * (CW + pad)

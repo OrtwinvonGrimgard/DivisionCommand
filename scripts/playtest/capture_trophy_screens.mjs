@@ -11,15 +11,27 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../../Division_Command/web');
 const OUT = '/workspace';
 
+/**
+ * Lädt eine Spiel-JS-Datei in den Node-vm-Kontext (ohne Browser-DOM).
+ */
 function loadInto(context, rel) {
   vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), context, { filename: rel });
 }
 const sandbox = {
   console, setTimeout, clearTimeout, setInterval, clearInterval,
   document: {
+    /**
+     * DOM-Attrappe im Node-Kontext; liefert ein Minimal-Element oder null.
+     */
     getElementById: () => null, querySelector: () => null, querySelectorAll: () => [],
+    /**
+     * DOM-Attrappe: erzeugt ein Minimal-Element für die Engine im Node-Kontext.
+     */
     createElement: () => ({ style: {}, appendChild() {}, remove() {}, setAttribute() {}, onload: null, onerror: null }),
     head: { appendChild() {} }, body: { classList: { add() {}, remove() {} } },
+    /**
+     * DOM-Attrappe: Event-Listener werden ignoriert (kein Browser).
+     */
     addEventListener() {}, removeEventListener() {},
   },
   localStorage: { getItem: () => null, setItem() {} },
@@ -43,11 +55,17 @@ for (const s of [
 const { DCEngine, DCBot, DC_CATALOG, DC_NATION_DECKS } = ctx;
 DCBot.applyCfg({ model: 'test', delayMs: 0, aggression: 70, holdAp: 0, allowAttack: 1 });
 
+/**
+ * Starterdeck der genannten Nation aus dem geladenen Katalog.
+ */
 function nationDeck(nat) {
   const d = DC_NATION_DECKS[nat];
   return { cards: (d.cards || []).slice(), doctrines: (d.doktrinen || []).slice(0, 2), name: d.name || nat };
 }
 
+/**
+ * Nächste legale Bot-Aktion (`DCBot.step`) oder Zugende, falls nichts möglich ist.
+ */
 function botAct(engine, fail) {
   const pend = engine.state.pending;
   const pid = pend && typeof pend.player === 'number' ? pend.player : engine.state.active;
@@ -68,6 +86,9 @@ function botAct(engine, fail) {
   return act;
 }
 
+/**
+ * Erzeugt einen Screenshot bzw. eine HTML-Momentaufnahme der aktuellen Partie.
+ */
 function snap(eng) {
   const need = eng._trophyVpToWin();
   const players = [0, 1].map((pid) => {
@@ -92,6 +113,9 @@ function snap(eng) {
   };
 }
 
+/**
+ * Spielt die Partie mit Bots weiter, bis sie endet oder das Zuglimit erreicht ist.
+ */
 function playUntilDone(seed) {
   const nats = Object.keys(DC_NATION_DECKS);
   const nat0 = nats[seed % nats.length];
@@ -145,10 +169,16 @@ function playUntilDone(seed) {
   return { mid, end, steps, seed, nat0, nat1 };
 }
 
+/**
+ * HTML-escapt einen Text für die eingefügte Berichtseite.
+ */
 function esc(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
+/**
+ * Lesbares deutsches Label für den Spielende-Grund.
+ */
 function reasonLabel(raw) {
   const reasonRaw = String(raw || '');
   if (/Siegpunkte|Trophy/i.test(reasonRaw)) return 'Siegpunkte';
@@ -161,10 +191,16 @@ function reasonLabel(raw) {
   return reasonRaw || 'Ende';
 }
 
+/**
+ * Relativer Pfad zur Spiel-CSS für die Screenshot-HTML.
+ */
 function cssHref() {
   return 'file://' + path.join(ROOT, 'css/app.css');
 }
 
+/**
+ * Baut die HTML-Seite für einen Zwischenstand der Trophäen-Partie.
+ */
 function midHtml(s) {
   const p0 = s.players[0], p1 = s.players[1];
   const dokCards = (p) => p.doctrines.map((d) => {
@@ -195,6 +231,9 @@ h1{font-size:18px;margin:0 0 12px}
 </div></body></html>`;
 }
 
+/**
+ * Baut die HTML-Seite für den Endstand der Trophäen-Partie.
+ */
 function endHtml(s) {
   const p0 = s.players[0], p1 = s.players[1];
   const label = reasonLabel(s.endReason);
@@ -246,6 +285,9 @@ fs.writeFileSync(midPath, midHtml(result.mid));
 fs.writeFileSync(endPath, endHtml(result.end));
 fs.writeFileSync(path.join(tmp, 'match.json'), JSON.stringify(result, null, 2));
 
+/**
+ * Fertigt einen Screenshot der gegebenen HTML-Datei an.
+ */
 function shot(html, png) {
   const r = spawnSync('google-chrome', [
     '--headless=new', '--disable-gpu', '--no-sandbox', '--hide-scrollbars',

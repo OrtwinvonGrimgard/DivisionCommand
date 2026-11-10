@@ -13,6 +13,9 @@ const st = eng.state;
 const atkP = eng.player(st.active), defP = eng.opponent(st.active);
 st.pending = null; st.heldAttack = null;
 const unitId = cards.find((c) => c.typ === 'Einheit' && (c.atk || 0) >= 1 && (c.def || 0) >= 3 && !(c.effects || []).length).id;
+/**
+ * Legt eine Einheit aus dem Katalog auf eine Stellung.
+ */
 const put = (pl, sec) => { const u = eng.instFromId(unitId, pl.id); u.summonedTurn = -9; u.facedown = false; pl.front[sec][0] = u; return u; };
 ['L', 'C', 'R'].forEach((s) => [0, 1, 2].forEach((r) => { atkP.front[s][r] = null; defP.front[s][r] = null; }));
 const attacker = put(atkP, 'C');

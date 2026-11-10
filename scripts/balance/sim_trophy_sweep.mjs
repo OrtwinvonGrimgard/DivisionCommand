@@ -12,15 +12,27 @@ const ROOT = path.resolve(__dirname, '../../Division_Command/web');
 fs.mkdirSync(path.join(__dirname, 'out'), { recursive: true });
 const gamesPer = Math.max(1, Number(process.argv[2] || 5));
 
+/**
+ * Lädt eine Spiel-JS-Datei in den Node-vm-Kontext (ohne Browser-DOM).
+ */
 function loadInto(context, rel) {
   vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), context, { filename: rel });
 }
 const sandbox = {
   console, setTimeout, clearTimeout, setInterval, clearInterval,
   document: {
+    /**
+     * DOM-Attrappe im Node-Kontext; liefert ein Minimal-Element oder null.
+     */
     getElementById: () => null, querySelector: () => null, querySelectorAll: () => [],
+    /**
+     * DOM-Attrappe: erzeugt ein Minimal-Element für die Engine im Node-Kontext.
+     */
     createElement: () => ({ style: {}, appendChild() {}, remove() {}, setAttribute() {}, onload: null, onerror: null }),
     head: { appendChild() {} }, body: { classList: { add() {}, remove() {} } },
+    /**
+     * DOM-Attrappe: Event-Listener werden ignoriert (kein Browser).
+     */
     addEventListener() {}, removeEventListener() {},
   },
   localStorage: { getItem: () => null, setItem() {} },
@@ -45,16 +57,27 @@ const { DCEngine, DCBot, DC_CATALOG, DC_NATION_DECKS } = ctx;
 DCBot.applyCfg({ model: 'test', delayMs: 0, aggression: 70, holdAp: 0, allowAttack: 1 });
 const nations = Object.keys(DC_NATION_DECKS);
 
+/**
+ * Starterdeck der genannten Nation aus dem geladenen Katalog.
+ */
 function nationDeck(nat) {
   const d = DC_NATION_DECKS[nat];
   return { cards: (d.cards || []).slice(), doctrines: (d.doktrinen || []).slice(0, 2), name: d.name || nat };
 }
+/**
+ * Median einer Zahlenliste.
+ * @param {number[]} xs
+ * @returns {number}
+ */
 function median(a) {
   if (!a.length) return null;
   const s = a.slice().sort((x, y) => x - y);
   const m = Math.floor(s.length / 2);
   return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
 }
+/**
+ * Normiert den Sieggrund (Trophäen, Deck, Aufgeben) für die Statistik.
+ */
 function classifyReason(reason) {
   const r = String(reason || '');
   if (/Siegpunkte|Trophy/i.test(r)) return 'vp_win';
@@ -65,6 +88,9 @@ function classifyReason(reason) {
   return 'other:' + r.slice(0, 40);
 }
 
+/**
+ * Nächste legale Bot-Aktion (`DCBot.step`) oder Zugende, falls nichts möglich ist.
+ */
 function botAct(engine, fail) {
   const pend = engine.state.pending;
   const pid = pend && typeof pend.player === 'number' ? pend.player : engine.state.active;
@@ -85,6 +111,9 @@ function botAct(engine, fail) {
   return act;
 }
 
+/**
+ * Spielt eine vollständige Bot-gegen-Bot-Partie bis zum Ende oder Zuglimit.
+ */
 function playMatch(nat0, nat1, seed, rulesPatch) {
   const d0 = nationDeck(nat0);
   const d1 = nationDeck(nat1);
@@ -218,6 +247,9 @@ const CANDIDATES = [
   },
 ];
 
+/**
+ * Bewertet einen Trophäen-Kandidaten über mehrere Simulationspartien.
+ */
 function runCandidate(cand, baseSeed) {
   const endReasons = {};
   const turns = [];
@@ -263,6 +295,9 @@ function runCandidate(cand, baseSeed) {
   };
 }
 
+/**
+ * Verdichtet die Simulationsergebnisse zu einer Kennzahl für den Kandidaten.
+ */
 function score(row) {
   // Prefer VP≥70%, safety≤25%, timeout small, median 14–18
   const vp = row.rates.vp_win;

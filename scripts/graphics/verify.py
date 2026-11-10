@@ -8,6 +8,7 @@ HERE = Path(__file__).resolve().parent; ROOT = HERE.parents[1]; WEB = ROOT / 'Di
 TOOLS = ROOT / 'KartenEditor' / 'tools'
 sha = lambda b: hashlib.sha256(b).hexdigest()
 def renderer_digest():
+    """Hash der Renderer-Quellen; ändert sich der Renderer, werden Faces neu gebaut."""
     parts = b''
     for p in (HERE / 'alpha40.py', TOOLS / 'render.py', TOOLS / 'render_core.py'):
         parts += p.read_bytes()

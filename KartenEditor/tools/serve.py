@@ -41,10 +41,12 @@ METAL_DIR = {
 
 
 def user_home() -> Path:
+    """Heimatverzeichnis des aktuellen Benutzers."""
     return Path(os.environ.get("USERPROFILE") or Path.home())
 
 
 def _writable(folder: Path) -> bool:
+    """Prüft, ob in den Ordner geschrieben werden kann."""
     try:
         folder.mkdir(parents=True, exist_ok=True)
         probe = folder / ".dc_write"
@@ -56,6 +58,7 @@ def _writable(folder: Path) -> bool:
 
 
 def output_candidates() -> list:
+    """Mögliche Zielordner für gerenderte Karten (Outbox, Desk, …)."""
     home = user_home()
     od = os.environ.get("OneDrive") or os.environ.get("OneDriveConsumer") or ""
     return [
@@ -83,6 +86,7 @@ def outbox_root() -> Path:
 
 
 def ensure_outbox_tree(root: Path | None = None) -> Path:
+    """Legt die Outbox-Verzeichnisse an, falls sie fehlen."""
     folder = root or outbox_root()
     for typ in TYP_DIR.values():
         for metal in ("gold", "silber", "bronze"):
@@ -91,6 +95,7 @@ def ensure_outbox_tree(root: Path | None = None) -> Path:
 
 
 def card_number(body: dict) -> str:
+    """Kartennummer aus dem Render-Request (oder Fallback)."""
     raw = str(body.get("number") or "001")
     digits = re.sub(r"\D+", "", raw) or "1"
     return digits.zfill(3)[:4]
@@ -109,6 +114,7 @@ def save_png(png: bytes, body: dict) -> Path:
 
 
 def _send_json(handler, obj, status=200):
+    """Sendet ein JSON-Objekt als Antwort des Editor-Servers."""
     payload = json.dumps(obj, ensure_ascii=False).encode("utf-8")
     handler.send_response(status)
     handler.send_header("Content-Type", "application/json; charset=utf-8")
@@ -119,10 +125,12 @@ def _send_json(handler, obj, status=200):
 
 class Handler(SimpleHTTPRequestHandler):
     def end_headers(self):
+        """Setzt CORS- bzw. Cache-Header und schließt den Headerblock."""
         self.send_header("Cache-Control", "no-store")
         super().end_headers()
 
     def do_GET(self):
+        """GET-Endpunkte: Spielverzeichnis, Lobby-Status, statische Dateien."""
         path = self.path.split("?", 1)[0]
         preview = (ROOT / ".preview-only").is_file()
         if path in ("/", "/index.html"):
@@ -138,6 +146,7 @@ class Handler(SimpleHTTPRequestHandler):
         super().do_GET()
 
     def do_POST(self):
+        """POST-Endpunkte: Lobby, Chat, Editor-Render und verwandte Aktionen."""
         path = self.path.split("?", 1)[0]
         if path not in ("/api/render", "/api/export"):
             self.send_error(404)
@@ -170,10 +179,12 @@ class Handler(SimpleHTTPRequestHandler):
         self.wfile.write(png)
 
     def log_message(self, fmt, *args):
+        """Unterdrückt bzw. formatiert die Zugriffslogs des HTTP-Servers."""
         sys.stderr.write("[editor] " + (fmt % args) + "\n")
 
 
 def render_card(body: dict) -> bytes:
+    """Rendert eine Karte aus dem POST-Body und liefert PNG-Bytes."""
     name = str(body.get("name") or "Neue Karte")
     tags = [str(t).strip() for t in (body.get("tags") or []) if str(t).strip()]
     typ = str(body.get("typ") or "Einheit")

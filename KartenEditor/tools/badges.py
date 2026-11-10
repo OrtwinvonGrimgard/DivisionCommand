@@ -13,6 +13,7 @@ W, H = 1600, 2480
 
 
 def bg():
+    """Hintergrundfläche für die Abzeichen-Vergleichstafel."""
     im = Image.new("RGB", (W, H), (14, 8, 6))
     n = Image.effect_noise((W, H), 18).convert("L")
     im = Image.blend(im, Image.merge("RGB", (n, n, n)), 0.08)
@@ -20,10 +21,12 @@ def bg():
 
 
 def label_row(d, y, text):
+    """Beschriftungszeile über einer Abzeichen-Variante."""
     d.text((80, y), text, font=font(FONT_N, 28), fill=GOLD_LT)
 
 
 def v1_current(d, y):
+    """Zeichnet Variante 1: aktuelles Abzeichen."""
     mill_coin(d, 280, y, 78, ACCENT, "AP", 3)
     d.rounded_rectangle((520, y - 70, 760, y + 70), 10, fill=(22, 12, 8), outline=GOLD, width=5)
     rivet(d, 542, y - 48, 8)
@@ -38,10 +41,12 @@ def v1_current(d, y):
 
 
 def hexagon(cx, cy, r):
+    """Eckpunkte eines Sechsecks."""
     return [(cx + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a))) for a in range(0, 360, 60)]
 
 
 def v2_stencil(d, y):
+    """Zeichnet Variante 2: Schablonentyp."""
     for cx, lab, n in ((280, "AP", "3"), (640, "ATK", "3"), (980, "DEF", "4")):
         d.polygon(hexagon(cx, y, 78), fill=(18, 12, 8), outline=GOLD, width=4)
         d.polygon(hexagon(cx, y, 68), outline=GOLD_DK, width=1)
@@ -50,8 +55,10 @@ def v2_stencil(d, y):
 
 
 def v3_dogtag(d, y):
+    """Zeichnet Variante 3: Dogtag."""
     mill_coin(d, 280, y, 70, ACCENT, "AP", 3)
     def tag(x, lab, n):
+        """Einzelnes Dogtag-Schild mit Beschriftung und Wert."""
         d.rounded_rectangle((x, y - 62, x + 220, y + 70), 40, fill=(70, 72, 68), outline=(180, 182, 170), width=4)
         d.ellipse((x + 96, y - 88, x + 124, y - 58), outline=(180, 182, 170), width=4)
         d.text((x + 110, y - 18), lab, font=font(FONT_N, 20), fill=(30, 28, 22), anchor="mm")
@@ -61,6 +68,7 @@ def v3_dogtag(d, y):
 
 
 def v4_enamel(d, y):
+    """Zeichnet Variante 4: Emaille."""
     cols = [(280, "AP", "3", (86, 56, 18)), (640, "ATK", "3", (92, 28, 22)), (980, "DEF", "4", (42, 62, 40))]
     for cx, lab, n, fill in cols:
         d.ellipse((cx - 82, y - 82, cx + 82, y + 82), fill=(18, 10, 6), outline=GOLD, width=6)
@@ -70,8 +78,10 @@ def v4_enamel(d, y):
 
 
 def v5_crate(d, y):
+    """Zeichnet Variante 5: Kistenbeschlag."""
     mill_coin(d, 280, y, 70, ACCENT, "AP", 3)
     def crate(x, lab, n):
+        """Einzelne Kistenplakette mit Beschriftung und Wert."""
         d.rectangle((x, y - 68, x + 230, y + 68), fill=(48, 30, 14), outline=GOLD, width=4)
         d.line([(x + 10, y - 68), (x + 10, y + 68)], fill=GOLD_DK, width=3)
         d.line([(x + 220, y - 68), (x + 220, y + 68)], fill=GOLD_DK, width=3)
@@ -82,6 +92,7 @@ def v5_crate(d, y):
 
 
 def v6_prägung(d, y):
+    """Zeichnet Variante 6: Prägung."""
     d.ellipse((280 - 78, y - 78, 280 + 78, y + 78), outline=GOLD_DK, width=3)
     d.text((280, y - 28), "AP", font=font(FONT_N, 22), fill=GOLD_DK, anchor="mm")
     d.text((280, y + 18), "3", font=font(FONT_B, 64), fill=GOLD_LT, anchor="mm")
@@ -92,6 +103,7 @@ def v6_prägung(d, y):
 
 
 def main():
+    """Rendert die Vergleichstafel der Abzeichen-Varianten als PNG."""
     im = bg()
     d = ImageDraw.Draw(im)
     d.text((W / 2, 56), "SCHILDER — VARIANTEN", font=font(FONT_B, 36), fill=GOLD_LT, anchor="mm")

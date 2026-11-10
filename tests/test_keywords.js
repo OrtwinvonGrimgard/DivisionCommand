@@ -11,12 +11,18 @@ const fs = require('fs'), path = require('path');
 const L = require('../scripts/nation_pools/load_game.js');
 const WORDS = require('../scripts/keywords/assign_lib.js').WORDS;
 const base = { set: 'test', status: 'live', rarity: 'bronze', typ: 'Einheit', ap: 2, atk: 2, def: 5, tags: ['einheit', 'infanterie'], klasse: 'Infanterie', text: '', effects: [] };
+/**
+ * Baut eine minimale Testkarte oder -instanz.
+ */
 const mk = (id, o) => Object.assign({ id, name: id }, base, o);
 const TEST = [mk('t_inf'), mk('t_cheap', { ap: 1 }), mk('t_wall', { atk: 0, def: 30 }), mk('t_sup', { typ: 'Unterstützung', ap: 1, tags: ['unterstuetzung'], effects: [{ code: 'REDUCE_DAMAGE', param: { n: 1 } }] }),
   mk('t_hide', { effects: [{ code: 'RELOCATE_HIDE' }] })];
 WORDS.forEach((k, i) => TEST.push(mk('k_' + i, { name: 'KW ' + k, keywords: [k], effects: ['Hinterhalt', 'Platztausch'].includes(k) ? [{ code: 'RELOCATE_HIDE' }] : [] })));
 const w = L.loadGame({ quiet: true, inject: (win) => { win.DC_SET_TYPES.__KwTest = TEST; } });
 const C = w.DC_CATALOG.cards, K = w.DC_KEYWORDS;
+/**
+ * Schlüsselwort-ID bzw. -lookup für den Test.
+ */
 const kid = (k) => 'k_' + WORDS.indexOf(k);
 
 // ---------- 1) Vokabular & Daten
@@ -63,13 +69,25 @@ assert(/if \(hidden\) return '<div class="table-motif table-hidden"/.test(tca) &
 
 // ---------- 3) Engine je Wort
 function fresh() { const e = L.newMatch(w, 'Steinmark', 5); L.clearBoard(e); e.state.active = 0; e.state.phase = 'main'; e.player(0).ap = 30; e.player(1).ap = 30; e.player(0).hand = []; return e; }
+/**
+ * Spielt eine Karte aus der Hand im Test.
+ */
 function play(e, id, section, row, pid) {
   pid = pid || 0; const p = e.player(pid), inst = e.instFromId(id, pid); p.hand.push(inst); const ap = p.ap;
   const r = e.dispatch({ type: 'PLAY', player: pid, uid: inst.uid, slot: { section, row } }); assert(r.ok, id + ' ' + r.error);
   return { inst, spent: ap - p.ap };
 }
+/**
+ * Legt eine Einheit aus dem Katalog auf eine Stellung.
+ */
 const put = (e, pid, id, s, r) => L.put(e, pid, id, s, r);
+/**
+ * Führt einen Testangriff zwischen zwei Stellungen aus.
+ */
 const atk = (e, a, t) => { a.attackUsed = false; a.flags.exhausted = false; const r = e.dispatch({ type: 'ATTACK', player: a.owner, uid: a.uid, target: t.uid }); return r; };
+/**
+ * Führt den nächsten Engine-Schritt bzw. Zugtakt im Test aus.
+ */
 const tick = (e) => e.dispatch({ type: 'NOOP', player: 0 }); // löst die Neuberechnung aus (unbekannte Aktion, ändert nichts)
 
 { // Gefechtsbereit

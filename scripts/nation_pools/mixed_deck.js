@@ -1,3 +1,8 @@
+/**
+ * Realistischer Mischdeck-Generator (t238): 30 Einheiten, 10 Ausrüstung,
+ * 8 Unterstützung, 12 Soforteinsätze; je zur Hälfte Pool und Starter.
+ * Export: `buildMixedDeck`.
+ */
 'use strict';
 /*
  * Realistischer gemischter Testdeck-Generator (t238).
@@ -8,10 +13,22 @@
  */
 const QUOTA = { 'Einheit': [30, 15], 'Ausrüstung': [10, 5], 'Unterstützung': [8, 3], 'Soforteinsatz': [12, 7] };
 
+/**
+ * Deterministischer Zufallsgenerator aus einem Seed.
+ */
 function rng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+/**
+ * Deterministischer Zahlenhash eines Strings (für Mischdeck oder Zuordnung).
+ */
 function hash(s) { let h = 2166136261; for (const ch of s) h = Math.imul(h ^ ch.charCodeAt(0), 16777619); return h >>> 0; }
+/**
+ * Mischt eine Liste deterministisch (Fisher-Yates) mit dem gegebenen RNG.
+ */
 function shuffle(arr, r) { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
+/**
+ * Baut ein realistisches Mischdeck (t238) aus Pool- und Starterkarten.
+ */
 function buildMixedDeck(w, nation, seed) {
   const C = w.DC_CATALOG.cards, by = {};
   C.forEach((c) => { by[c.id] = c; });

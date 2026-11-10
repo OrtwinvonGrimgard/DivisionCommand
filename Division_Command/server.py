@@ -277,18 +277,22 @@ def local_ips() -> list[str]:
 
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
+        """Initialisiert die Instanz (HTTP-Handler bzw. Zufallsgenerator)."""
         super().__init__(*args, directory=str(WEB), **kwargs)
 
     def log_message(self, fmt, *args):
+        """Unterdrückt bzw. formatiert die Zugriffslogs des HTTP-Servers."""
         sys.stdout.write("[http] " + (fmt % args) + "\n")
 
     def log_error(self, fmt, *args):
+        """Unterdrückt bzw. formatiert Fehlerlogs des HTTP-Servers."""
         msg = fmt % args
         if "Broken pipe" in msg or "Connection reset" in msg:
             return
         sys.stderr.write("[http] " + msg + "\n")
 
     def end_headers(self):
+        """Setzt CORS- bzw. Cache-Header und schließt den Headerblock."""
         path = (self.path or "").split("?", 1)[0].lower()
         if path.endswith((".mp4", ".mp3", ".wav", ".jpg", ".jpeg", ".png", ".webp", ".webm")):
             self.send_header("Cache-Control", "public, max-age=86400")
@@ -305,6 +309,7 @@ class Handler(SimpleHTTPRequestHandler):
         super().end_headers()
 
     def do_GET(self):
+        """GET-Endpunkte: Spielverzeichnis, Lobby-Status, statische Dateien."""
         if self.path.startswith("/api/status"):
             return self._json(
                 {
@@ -328,6 +333,7 @@ class Handler(SimpleHTTPRequestHandler):
             return
 
     def do_POST(self):
+        """POST-Endpunkte: Lobby, Chat, Editor-Render und verwandte Aktionen."""
         length = int(self.headers.get("Content-Length") or 0)
         raw = self.rfile.read(length) if length else b"{}"
         try:
@@ -364,6 +370,7 @@ class Handler(SimpleHTTPRequestHandler):
             if os.environ.get("DC_KEEP_ALIVE") == "1":
                 return
             def _die():
+                """Beendet die HTTP-Antwort mit Status und kurzer Fehlermeldung."""
                 import time
                 time.sleep(0.2)
                 os._exit(0)
@@ -372,6 +379,7 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_error(404)
 
     def _json(self, obj, status=200):
+        """Sendet ein JSON-Objekt als HTTP-Antwort."""
         raw = json.dumps(obj, ensure_ascii=False).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
@@ -380,6 +388,7 @@ class Handler(SimpleHTTPRequestHandler):
         self.wfile.write(raw)
 
     def _bytes(self, data, content_type):
+        """Sendet rohe Bytes mit angegebenem Content-Type."""
         self.send_response(200)
         self.send_header("Content-Type", content_type)
         self.send_header("Content-Length", str(len(data)))
@@ -463,6 +472,7 @@ def ws_thread(port: int):
     seats = {"host": None, "guest": None}
 
     async def handler(ws):
+        """WebSocket-Handler: eine eingehende Peer-Verbindung der Lobby."""
         seat = None
         try:
             async for raw in ws:
@@ -527,6 +537,7 @@ def ws_thread(port: int):
                 pass
 
     async def push_lobby():
+        """Verteilt den aktuellen Lobby-Zustand an alle verbundenen Peers."""
         base = {
             "type": "lobby",
             "host": seats["host"]["name"] if seats["host"] else None,
@@ -542,6 +553,7 @@ def ws_thread(port: int):
                 pass
 
     async def main():
+        """Startet den lokalen Spielserver (HTTP, UDP-Discovery, optional WebSocket)."""
         async with serve(handler, "0.0.0.0", port):
             print(f"[ws] ws://0.0.0.0:{port}")
             await asyncio.Future()

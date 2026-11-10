@@ -14,6 +14,9 @@ fs.mkdirSync(path.join(__dirname, 'out'), { recursive: true });
 const gamesPer = Math.max(1, Number(process.argv[2] || 5));
 const which = process.argv[3] || 'all';
 
+/**
+ * Lädt den kompletten Spielbundle (Daten, Engine, Bot) in den vm-Kontext.
+ */
 function loadBundle() {
   const sandbox = {
     console, setTimeout, clearTimeout, setInterval, clearInterval,
@@ -41,11 +44,17 @@ function loadBundle() {
   return ctx;
 }
 
+/**
+ * Starterdeck der genannten Nation aus dem geladenen Katalog.
+ */
 function nationDeck(DC_NATION_DECKS, nat) {
   const d = DC_NATION_DECKS[nat];
   return { cards: (d.cards || []).slice(), doctrines: (d.doktrinen || []).slice(0, 2), name: d.name || nat };
 }
 
+/**
+ * Nächste legale Bot-Aktion (`DCBot.step`) oder Zugende, falls nichts möglich ist.
+ */
 function botAct(DCBot, engine, fail) {
   const pend = engine.state.pending;
   const pid = pend && typeof pend.player === 'number' ? pend.player : engine.state.active;
@@ -66,6 +75,9 @@ function botAct(DCBot, engine, fail) {
   return act;
 }
 
+/**
+ * Prüft, ob die Karte bzw. Instanz das Elite-Merkmal trägt.
+ */
 function isElite(eng, inst) {
   const d = eng.defOf(inst);
   if (!d) return false;
@@ -74,6 +86,9 @@ function isElite(eng, inst) {
   return bag.some((x) => String(x).trim().toLowerCase() === 'elite') || d.klasse === 'Elite';
 }
 
+/**
+ * Setzt optionale Ablations-Haken (z. B. Elite/Erstspieler) an die Engine.
+ */
 function applyAblationHooks(eng, ablation, startPid) {
   // (a) P2 +1 AP on their first own turn
   if (ablation === 'p2_plus1ap_t1') {
@@ -199,6 +214,9 @@ function applyAblationHooks(eng, ablation, startPid) {
   return eng;
 }
 
+/**
+ * Sichert den aktuellen Stand der Typdateien vor einer Batch-Änderung.
+ */
 function snapshot(eng, startPid) {
   const front = (pid) => eng.frontList(eng.player(pid)).length;
   const dig = (pid) => eng.frontList(eng.player(pid)).filter((l) => eng._isDeployProtected(l.inst)).length;
@@ -226,6 +244,9 @@ function snapshot(eng, startPid) {
   };
 }
 
+/**
+ * Spielt eine vollständige Bot-gegen-Bot-Partie bis zum Ende oder Zuglimit.
+ */
 function playMatch(ctx, nat0, nat1, seed, mode, ablation) {
   const { DCEngine, DCBot, DC_CATALOG, DC_NATION_DECKS } = ctx;
   const d0 = nationDeck(DC_NATION_DECKS, nat0);
@@ -416,8 +437,14 @@ function playMatch(ctx, nat0, nat1, seed, mode, ablation) {
   };
 }
 
+/**
+ * Mittelwert einer Zahlenliste.
+ */
 function avg(arr) { return arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : null; }
 
+/**
+ * Führt eine Simulationsvariante (viele Partien) aus und fasst die Kennzahlen zusammen.
+ */
 function runVariant(ctx, label, mode, ablation, baseSeed) {
   const { DC_NATION_DECKS } = ctx;
   const nations = Object.keys(DC_NATION_DECKS);

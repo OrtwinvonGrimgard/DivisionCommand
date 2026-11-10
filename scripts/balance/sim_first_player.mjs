@@ -12,15 +12,27 @@ const ROOT = path.resolve(__dirname, '../../Division_Command/web');
 fs.mkdirSync(path.join(__dirname, 'out'), { recursive: true });
 const gamesPer = Math.max(1, Number(process.argv[2] || 5));
 
+/**
+ * Lädt eine Spiel-JS-Datei in den Node-vm-Kontext (ohne Browser-DOM).
+ */
 function loadInto(context, rel) {
   vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), context, { filename: rel });
 }
 const sandbox = {
   console, setTimeout, clearTimeout, setInterval, clearInterval,
   document: {
+    /**
+     * DOM-Attrappe im Node-Kontext; liefert ein Minimal-Element oder null.
+     */
     getElementById: () => null, querySelector: () => null, querySelectorAll: () => [],
+    /**
+     * DOM-Attrappe: erzeugt ein Minimal-Element für die Engine im Node-Kontext.
+     */
     createElement: () => ({ style: {}, appendChild() {}, remove() {}, setAttribute() {}, onload: null, onerror: null }),
     head: { appendChild() {} }, body: { classList: { add() {}, remove() {} } },
+    /**
+     * DOM-Attrappe: Event-Listener werden ignoriert (kein Browser).
+     */
     addEventListener() {}, removeEventListener() {},
   },
   localStorage: { getItem: () => null, setItem() {} },
@@ -45,10 +57,16 @@ const { DCEngine, DCBot, DC_CATALOG, DC_NATION_DECKS } = ctx;
 DCBot.applyCfg({ model: 'test', delayMs: 0, aggression: 70, holdAp: 0, allowAttack: 1 });
 const nations = Object.keys(DC_NATION_DECKS);
 
+/**
+ * Starterdeck der genannten Nation aus dem geladenen Katalog.
+ */
 function nationDeck(nat) {
   const d = DC_NATION_DECKS[nat];
   return { cards: (d.cards || []).slice(), doctrines: (d.doktrinen || []).slice(0, 2), name: d.name || nat };
 }
+/**
+ * Nächste legale Bot-Aktion (`DCBot.step`) oder Zugende, falls nichts möglich ist.
+ */
 function botAct(engine, fail) {
   const pend = engine.state.pending;
   const pid = pend && typeof pend.player === 'number' ? pend.player : engine.state.active;
@@ -69,6 +87,9 @@ function botAct(engine, fail) {
   return act;
 }
 
+/**
+ * Spielt eine vollständige Bot-gegen-Bot-Partie bis zum Ende oder Zuglimit.
+ */
 function playMatch(nat0, nat1, seed, mode) {
   const d0 = nationDeck(nat0);
   const d1 = nationDeck(nat1);
@@ -132,6 +153,9 @@ function playMatch(nat0, nat1, seed, mode) {
   };
 }
 
+/**
+ * Führt einen Simulationsmodus (Erstspieler/Regeln) über mehrere Partien aus.
+ */
 function runMode(mode, baseSeed) {
   let firstWins = 0, decided = 0, games = 0, ties = 0;
   const reasons = {};

@@ -25,6 +25,9 @@ if (!ruleOverrides) {
   process.exit(1);
 }
 
+/**
+ * Lädt eine Spiel-JS-Datei in den Node-vm-Kontext (ohne Browser-DOM).
+ */
 function loadInto(context, rel) {
   const full = path.join(ROOT, rel);
   const code = fs.readFileSync(full, 'utf8');
@@ -39,13 +42,31 @@ const sandbox = {
   clearInterval,
   window: null,
   document: {
+    /**
+     * DOM-Attrappe im Node-Kontext; liefert ein Minimal-Element oder null.
+     */
     getElementById: () => null,
+    /**
+     * DOM-Attrappe: querySelector ohne echte Seite.
+     */
     querySelector: () => null,
+    /**
+     * DOM-Attrappe: querySelectorAll ohne echte Seite.
+     */
     querySelectorAll: () => [],
+    /**
+     * DOM-Attrappe: erzeugt ein Minimal-Element für die Engine im Node-Kontext.
+     */
     createElement: () => ({ style: {}, appendChild() {}, remove() {}, setAttribute() {}, onload: null, onerror: null }),
     head: { appendChild() {} },
     body: { classList: { add() {}, remove() {} } },
+    /**
+     * DOM-Attrappe: Event-Listener werden ignoriert (kein Browser).
+     */
     addEventListener() {},
+    /**
+     * DOM-Attrappe: entfernen eines Listeners ist ein No-Op.
+     */
     removeEventListener() {},
   },
   localStorage: { getItem: () => null, setItem() {} },
@@ -88,6 +109,9 @@ if (!nations.length) {
   process.exit(1);
 }
 
+/**
+ * Starterdeck der genannten Nation aus dem geladenen Katalog.
+ */
 function nationDeck(nat) {
   const d = DC_NATION_DECKS[nat];
   return {
@@ -97,16 +121,25 @@ function nationDeck(nat) {
   };
 }
 
+/**
+ * Anzahl der Einheiten in der Front eines Spielers.
+ */
 function frontCount(p) {
   let n = 0;
   for (const s of ['L', 'C', 'R']) for (let r = 0; r < 3; r++) if (p.front[s][r]) n++;
   return n;
 }
 
+/**
+ * Anzahl leerer Frontstellungen eines Spielers.
+ */
 function emptyFront(p) {
   return frontCount(p) === 0;
 }
 
+/**
+ * Hängt Messfühler an die Engine (Schaden, Züge, Siege), ohne Regeln zu ändern.
+ */
 function instrument(engine, stats) {
   const origDestroy = engine._destroy.bind(engine);
   engine._destroy = function (loc, meta) {
@@ -142,6 +175,9 @@ function instrument(engine, stats) {
   };
 }
 
+/**
+ * Nächste legale Bot-Aktion (`DCBot.step`) oder Zugende, falls nichts möglich ist.
+ */
 function botAct(engine, fail) {
   const pend = engine.state.pending;
   const pid = pend && typeof pend.player === 'number' ? pend.player : engine.state.active;
@@ -176,6 +212,9 @@ function botAct(engine, fail) {
   return act;
 }
 
+/**
+ * Spielt eine einzelne Bot-gegen-Bot-Partie und gibt das Messergebnis zurück.
+ */
 function playOne(seed, nat0, nat1) {
   const catalog = JSON.parse(JSON.stringify(DC_CATALOG));
   catalog.rules = Object.assign({}, catalog.rules, ruleOverrides);
@@ -282,10 +321,20 @@ function playOne(seed, nat0, nat1) {
   };
 }
 
+/**
+ * Arithmetisches Mittel einer Zahlenliste.
+ * @param {number[]} xs
+ * @returns {number}
+ */
 function mean(arr) {
   if (!arr.length) return null;
   return arr.reduce((a, b) => a + b, 0) / arr.length;
 }
+/**
+ * Median einer Zahlenliste.
+ * @param {number[]} xs
+ * @returns {number}
+ */
 function median(arr) {
   if (!arr.length) return null;
   const s = arr.slice().sort((a, b) => a - b);

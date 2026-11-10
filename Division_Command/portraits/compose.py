@@ -16,15 +16,18 @@ OUT_PATH = ROOT / "build" / "portrait.png"
 
 
 def load_frame() -> dict:
+    """Lädt den Porträt-Rahmen als Bild."""
     with FRAME_PATH.open(encoding="utf-8") as handle:
         return json.load(handle)
 
 
 def layer_path(name: str) -> Path:
+    """Pfad zu einer Porträt-Ebene (Helm, Schulterstück, …)."""
     return LAYER_DIR / f"{name}.png"
 
 
 def opaque_below(image: Image.Image, chin_y: int) -> int:
+    """Macht den Bereich unter dem Kinn undurchsichtig, damit der Rahmen hält."""
     width, height = image.size
     start = max(0, min(chin_y, height))
     pixels = image.load()
@@ -37,6 +40,7 @@ def opaque_below(image: Image.Image, chin_y: int) -> int:
 
 
 def compose() -> int:
+    """Setzt Rahmen und Ebenen zu einem Offiziersporträt zusammen und schreibt die Datei."""
     frame = load_frame()
     width = frame["canvas"]["width"]
     height = frame["canvas"]["height"]

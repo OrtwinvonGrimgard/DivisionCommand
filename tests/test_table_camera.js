@@ -39,6 +39,9 @@ assert($('#cam-center') && $('.cam-hint').textContent.includes('WASD'));
 assert(w.document.body.classList.contains('dc-cam'));
 // --- WASD input & blocking
 const key = (k, target, extra) => (target || w.document).dispatchEvent(new w.KeyboardEvent('keydown', Object.assign({ key: k, bubbles: true, cancelable: true }, extra || {})));
+/**
+ * Simuliert das Loslassen bzw. Anheben beim Kameratest.
+ */
 const up = k => w.document.dispatchEvent(new w.KeyboardEvent('keyup', { key: k, bubbles: true }));
 C.set({ x: 880, y: 750, z: 1 });
 key('d'); assert.equal(C._keys().join(), 'd'); const x0 = C.state().x; C._step(100); assert(C.state().x > x0, 'D pans right'); up('d');
@@ -51,6 +54,9 @@ $('#overlay').style.display = 'flex'; key('s'); assert.equal(C._keys().join(), '
 const end = w.document.createElement('section'); end.id = 'dc-end-screen'; w.document.body.appendChild(end); key('s'); assert.equal(C._keys().join(), '', 'blocked on end screen'); end.remove();
 // --- wheel: zoom on board, native scroll in hand/log untouched
 C.set({ x: 880, y: 750, z: 1 });
+/**
+ * Simuliert ein Mausrad-Ereignis für Zoom/Kamera.
+ */
 const wheel = (el, dy) => { const e = new w.WheelEvent('wheel', { deltaY: dy, bubbles: true, cancelable: true, clientX: 100, clientY: 100 }); el.dispatchEvent(e); return e; };
 let ev = wheel($('#cam-world #my-front'), -200); assert(ev.defaultPrevented && C.state().z > 1, 'wheel zooms');
 ev = wheel($('#cam-world #my-front'), 100000); assert(C.state().z >= M.LIMITS.minZoom);

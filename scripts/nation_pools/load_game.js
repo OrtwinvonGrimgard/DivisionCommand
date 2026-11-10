@@ -1,8 +1,15 @@
+/**
+ * Node-Lader für Katalog und Engine (inkl. Nationenpools), ohne DOM.
+ * Wird von Tests, Simulationen und Generatoren genutzt. Export: `loadGame`, `WEB`.
+ */
 'use strict';
 /* Node-Loader für Engine + Katalog (inkl. nation_pools.js), ohne DOM. */
 const fs = require('fs'), path = require('path'), vm = require('vm');
 const WEB = path.join(__dirname, '..', '..', 'Division_Command', 'web');
 const TYPES = ['doktrinen','tokens','infanterie','panzer','artillerie','aufklaerung','elite','unterstuetzung','soforteinsatz','ausruestung','nation_pools', 'tactical'];
+/**
+ * Lädt Katalog und Engine in einen Node-Kontext und gibt den Kontext zurück.
+ */
 function loadGame(opts) {
   opts = opts || {};
   const document = { getElementById: () => null, querySelector: () => null, createElement: () => ({ style: {}, appendChild() {}, setAttribute() {}, remove() {} }), head: { appendChild() {} }, addEventListener() {} };

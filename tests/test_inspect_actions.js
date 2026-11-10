@@ -13,7 +13,13 @@ const own = eng.instFromId(inf.id, 0), enemy = eng.instFromId(inf.id, 1);
 own.flags = {}; own.attackUsed = false; own.playedTurn = -99; own.placedTurn = -99; eng.player(0).front.C[0] = own; eng.player(1).front.C[0] = enemy;
 const hidden = eng.instFromId(inf.id, 1); hidden.facedown = true; eng.player(1).front.L[0] = hidden;
 eng.player(0).ap = 5; w.dcRender();
+/**
+ * Simuliert einen Doppelklick auf eine Stellung bzw. Karte.
+ */
 const dbl = el => el.dispatchEvent(new w.MouseEvent('dblclick', { bubbles: true, cancelable: true }));
+/**
+ * Liest oder findet eine Tischkachel anhand der Stellung.
+ */
 const tile = uid => $(`[data-uid="${uid}"]`);
 // eigene Einheit: Angreifen nur wenn listActions es erlaubt
 dbl(tile(own.uid));

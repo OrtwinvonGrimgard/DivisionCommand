@@ -9,15 +9,27 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../../Division_Command/web');
 
+/**
+ * Lädt eine Spiel-JS-Datei in den Node-vm-Kontext (ohne Browser-DOM).
+ */
 function loadInto(context, rel) {
   vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), context, { filename: rel });
 }
 const sandbox = {
   console, setTimeout, clearTimeout, setInterval, clearInterval,
   document: {
+    /**
+     * DOM-Attrappe im Node-Kontext; liefert ein Minimal-Element oder null.
+     */
     getElementById: () => null, querySelector: () => null, querySelectorAll: () => [],
+    /**
+     * DOM-Attrappe: erzeugt ein Minimal-Element für die Engine im Node-Kontext.
+     */
     createElement: () => ({ style: {}, appendChild() {}, remove() {}, setAttribute() {}, onload: null, onerror: null }),
     head: { appendChild() {} }, body: { classList: { add() {}, remove() {} } },
+    /**
+     * DOM-Attrappe: Event-Listener werden ignoriert (kein Browser).
+     */
     addEventListener() {}, removeEventListener() {},
   },
   localStorage: { getItem: () => null, setItem() {} },
@@ -42,6 +54,9 @@ const nKeys = Object.keys(DC_NATION_DECKS);
 const d0 = DC_NATION_DECKS[nKeys[0]];
 const d1 = DC_NATION_DECKS[nKeys[1]];
 
+/**
+ * Erzeugt eine frische Engine für das Choice-Audit.
+ */
 function makeEng(seed) {
   const catalog = JSON.parse(JSON.stringify(DC_CATALOG));
   catalog.rules = Object.assign({}, catalog.rules, { deploy_protection: true, combat_counter: 'survivor_only', opening_coin: false });
@@ -55,9 +70,15 @@ function makeEng(seed) {
   return eng;
 }
 
+/**
+ * Sammelt Tags einer Einheit als Menge.
+ */
 function tagBag(c) {
   return ((c.tags || []).join(' ') + ' ' + (c.klasse || '')).toLowerCase();
 }
+/**
+ * Findet eine Instanz auf dem Brett anhand von ID oder Stellung.
+ */
 function findUnit(pred) {
   return DC_CATALOG.cards.find((c) => c.typ === 'Einheit' && pred(c));
 }
@@ -66,6 +87,9 @@ const PANZ = findUnit((c) => /panzer/.test(tagBag(c)));
 const ARTY = findUnit((c) => /artillerie/.test(tagBag(c)));
 const ANY = DC_CATALOG.cards.find((c) => c.typ === 'Einheit' && c.id !== INF.id);
 
+/**
+ * Entfernt temporäre Schutzflags, damit der Audit-Fall testbar ist.
+ */
 function clearProtect(inst) {
   inst.summonedTurn = -99;
   inst.flags = inst.flags || {};
@@ -75,6 +99,9 @@ function clearProtect(inst) {
   delete inst.flags.eingraben;
 }
 
+/**
+ * Setzt eine Einheit auf eine Stellung im Audit-Brett.
+ */
 function putUnit(eng, pid, cardId, section, row, opts) {
   const p = eng.player(pid);
   const inst = eng.instFromId(cardId, pid);
@@ -85,6 +112,9 @@ function putUnit(eng, pid, cardId, section, row, opts) {
   return inst;
 }
 
+/**
+ * Richtet ein typisches Audit-Brett (eigene und gegnerische Front) ein.
+ */
 function setupBoard(eng) {
   putUnit(eng, 0, INF.id, 'L', 0);
   putUnit(eng, 0, PANZ.id, 'C', 0, { damage: 1 });
@@ -102,6 +132,9 @@ function setupBoard(eng) {
   p1.nml.L[1] = tok;
 }
 
+/**
+ * Gibt dem Spieler die zu prüfende Karte auf die Hand.
+ */
 function giveHand(eng, pid, cardId) {
   const p = eng.player(pid);
   const inst = eng.instFromId(cardId, pid);
@@ -130,6 +163,9 @@ const TARGET_CODES = new Set([
   'REVEAL','MARK_OBSERVED','EXTRA_ATTACK','REPLACE_UNIT','ZIELANGRIFF','UMGEHEN',
 ]);
 
+/**
+ * Prüft, ob die Karte laut Text oder Code eine Spielerwahl verlangt.
+ */
 function expectsChoice(def) {
   const codes = (def.effects || []).map((e) => e.code);
   if (!codes.length) {
@@ -144,6 +180,9 @@ function expectsChoice(def) {
   return { kind: 'none' };
 }
 
+/**
+ * Löst alle ausstehenden Wahlen automatisch (erste legale Option).
+ */
 function resolveAll(eng, pid) {
   let guard = 0;
   let last = { ok: true };

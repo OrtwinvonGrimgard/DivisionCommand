@@ -8,6 +8,9 @@ const assert = require('node:assert/strict');
 const L = require('../scripts/nation_pools/load_game.js');
 const w = L.loadGame({ quiet: true });
 const C = w.DC_CATALOG.cards;
+/**
+ * Sucht eine Kartendefinition anhand der ID im geladenen Katalog.
+ */
 const by = (id) => { const c = C.find((x) => x.id === id); assert.ok(c, id); return c; };
 
 const expect = {
@@ -34,6 +37,9 @@ for (const id of ['dc_su_lager', 'dc_b_implantatlager_388', 'dc_b_feldschmied_27
 }
 console.log('ok stacking discounts');
 
+/**
+ * Erzeugt eine frische Test-Engine bzw. Partie in bekanntem Ausgangszustand.
+ */
 function fresh() {
   const eng = L.newMatch(w, 'Steinmark', 21);
   L.clearBoard(eng);

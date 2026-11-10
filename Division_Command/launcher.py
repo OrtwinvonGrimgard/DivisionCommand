@@ -17,6 +17,7 @@ import server  # noqa: E402
 
 
 def wait_port(port: int, timeout: float = 8.0) -> bool:
+    """Wartet, bis der lokale Port geöffnet ist, oder bricht nach Timeout ab."""
     end = time.time() + timeout
     while time.time() < end:
         s = socket.socket()
@@ -36,6 +37,7 @@ def wait_port(port: int, timeout: float = 8.0) -> bool:
 
 
 def main():
+    """Startet den Desktop-Launcher: wählt Port, öffnet den Browser, hält den Server."""
     name = "Spieler"
     if len(sys.argv) > 1:
         name = sys.argv[1][:24]

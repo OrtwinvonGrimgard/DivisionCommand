@@ -10,15 +10,18 @@ QUARTZ = 0.18
 
 
 def _i32(x):
+    """Beschränkt eine Zahl auf einen 32-Bit-Signed-Integer."""
     x = x & 0xFFFFFFFF
     return x - 0x100000000 if x >= 0x80000000 else x
 
 
 def _u32(x):
+    """Beschränkt eine Zahl auf einen 32-Bit-Unsigned-Integer."""
     return x & 0xFFFFFFFF
 
 
 def _imul(a, b):
+    """32-Bit-Integer-Multiplikation (wie Math.imul), für den PRNG."""
     return _i32((_i32(a) * _i32(b)))
 
 
@@ -26,9 +29,11 @@ class Mulberry32:
     """Gleicher PRNG wie js/marble.js, damit gleicher Seed = gleiches Muster."""
 
     def __init__(self, seed):
+        """Initialisiert den Mulberry32-PRNG mit dem gegebenen Seed."""
         self.a = _i32(seed)
 
     def random(self):
+        """Nächste Zufallszahl des Mulberry32-Generators im Intervall [0, 1)."""
         self.a = _i32(self.a + 0x6D2B79F5)
         t = _imul(self.a ^ (_u32(self.a) >> 15), 1 | self.a)
         t = _i32(t + _imul(t ^ (_u32(t) >> 7), 61 | t) ^ t)
@@ -36,6 +41,7 @@ class Mulberry32:
 
 
 def _noise(w, h, cell, rng):
+    """Wertet ein Wert-Rauschfeld für die Marmortextur aus."""
     gw = max(2, w // max(2, cell) + 1)
     gh = max(2, h // max(2, cell) + 1)
     buf = bytes(int(rng.random() * 255) for _ in range(gw * gh))
@@ -43,6 +49,7 @@ def _noise(w, h, cell, rng):
 
 
 def name_seed(name):
+    """Bildet einen deterministischen Seed aus einem Kartennamen."""
     s = 2166136261
     for ch in str(name or "marmor"):
         s ^= ord(ch)
@@ -51,6 +58,7 @@ def name_seed(name):
 
 
 def make_marble(w, h, seed=1, brightness=BRIGHTNESS, contrast=CONTRAST, veil=VEIL, quartz=QUARTZ):
+    """Erzeugt eine Marmortextur der gewünschten Größe und Farbe."""
     rng = Mulberry32(int(seed) & 0xFFFFFFFF)
     tw = 320
     th = max(160, int(320 * h / max(1, w)))

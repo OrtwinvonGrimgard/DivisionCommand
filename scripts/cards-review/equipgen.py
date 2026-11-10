@@ -7,9 +7,11 @@ COVER = [  # Klauselmuster -> vorhandener Code, der sie abdeckt
     (r'(?:zerstört|stirbt).*zieh', 'ON_DESTROY_DRAW'), (r'kostet \d weniger', 'costReduce'), (r'decke \d auf|aufdecken', 'REVEAL'),
 ]
 def split(t):
+    """Zerlegt einen Ausrüstungstext in einzelne Klauseln."""
     t = re.sub(r'\b(mind?)\. ', r'\1§ ', M.clean(t))
     return [p.strip().replace('§', '.') for p in re.split(r'(?<=[.;])\s+|;\s*', t) if p.strip()]
 def gen(card):
+    """Erzeugt den gedruckten Kurztext einer Karte aus Typ und Effektcodes."""
     fx0 = card.get('effects') or []
     codes = {e['code'] for e in fx0}
     keep = [e for e in fx0 if e['code'] != 'EQUIP_STAT']

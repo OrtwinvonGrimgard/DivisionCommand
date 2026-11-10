@@ -9,18 +9,36 @@ const path = require('node:path');
 const WEB = path.join(__dirname, '../Division_Command/web');
 const { setup } = require('./test_audio_actions');
 const h = setup('off'), { w } = h;
+/**
+ * Lädt Spielmodule (Katalog/Engine/UI) in den Test- oder Simulationskontext.
+ */
 const load = f => w.eval(fs.readFileSync(path.join(WEB, f), 'utf8'));
 const sockets = [];
 class FakeWS { constructor(u) { this.url = u; this.readyState = 0; this.sent = []; sockets.push(this); }
+  /**
+   * Sendet eine Chat-Nachricht im Test.
+   */
   send(d) { this.sent.push(JSON.parse(d)); } close() { this.readyState = 3; }
+  /**
+   * Öffnet das Chat-Panel im Test.
+   */
   open() { this.readyState = 1; this.onopen && this.onopen(); }
+  /**
+   * Simuliert den Empfang einer Chat-Nachricht.
+   */
   recv(o) { this.onmessage({ data: JSON.stringify(o) }); } }
 w.WebSocket = FakeWS;
 const logged = [];
 w.DCPlayStore = { getAll: () => Promise.resolve([]), get: () => Promise.resolve(null), uid: () => 'x' };
 let loggerChats = 0; w.DCPlayLogger = { addChat: () => loggerChats++, getCurrent: () => ({ id: 'g', turns: [], chat: [{ name: 'Alt', text: 'ALTLOG' }] }) };
+/**
+ * Anzahl der sichtbaren Chat-Nachrichten.
+ */
 const chatCount = () => (w.__dcPlayChatBuf || []).length;
 load('js/playtest/panel.js'); load('js/ui/table-chat.js'); load('js/net.js');
+/**
+ * Kurzselektor: findet ein Element in der Testdom bzw. jsdom.
+ */
 const $ = id => w.document.getElementById(id);
 const C = w.DCTableChat;
 C.refresh(); C.refresh(); assert(C._subscribed());

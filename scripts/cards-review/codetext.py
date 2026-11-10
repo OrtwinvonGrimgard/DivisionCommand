@@ -9,12 +9,18 @@ GLOBAL = {'DRAW', 'REVEAL', 'COST_NEXT', 'DRAW_DISCARD', 'BUFF_ALL_OWN', 'MASS_D
 EQUIP = {'EQUIP_STAT', 'EQUIP_HEAL_ONCE', 'EQUIP_SOFT_DRAW', 'EQUIP_COND_DEF', 'ON_ENTER_DRAW', 'ON_DESTROY_DRAW', 'REVEAL'}
 
 def n(x):
+    """Formatiert eine Zahl ohne überflüssige Vorzeichen/Nullen für den Kartentext."""
     try: return int(x or 0)
     except Exception: return 0
-def sg(v): return ('+' if v > 0 else '−') + str(abs(v))
-def karten(v): return f'{v} Karte' if v == 1 else f'{v} Karten'
+def sg(v):
+    """Vorzeichenbehaftete Zahl als kurzer Text (z. B. +2 / −1)."""
+    return ('+' if v > 0 else '−') + str(abs(v))
+def karten(v):
+    """Singular/Plural „Karte/Karten“ passend zur Anzahl."""
+    return f'{v} Karte' if v == 1 else f'{v} Karten'
 
 def buff_parts(p, sec=False):
+    """Baut die Textteile eines Buffs (ATK/DEF, Abschnitt optional)."""
     a, d = n(p.get('atk')), n(p.get('def'))
     out = []
     if a: out.append(f"{sg(a)} ATK" + (' bis Zugende' if p.get('until') == 'turn' else ' bis Ende des nächsten Zuges' if p.get('until') == 'next' else ''))
@@ -24,6 +30,7 @@ def buff_parts(p, sec=False):
     return out
 
 def side_of(e):
+    """Ermittelt die Wirkungsseite (eigen/gegnerisch) eines Effekts."""
     c, p = e['code'], e.get('param') or {}
     if c == 'BUFF':
         return 'enemy' if (p.get('enemy') or n(p.get('atk')) < 0 or n(p.get('def')) < 0) else 'own'
@@ -32,6 +39,7 @@ def side_of(e):
     return None
 
 def per_target(e):
+    """Text für einen zielbezogenen Effekt (eine oder mehrere Figuren)."""
     c, p = e['code'], e.get('param') or {}
     if c == 'BUFF': return ', '.join(buff_parts(p))
     if c == 'HEAL': return f"heile {n(p.get('value')) or 1}"
@@ -47,6 +55,7 @@ def per_target(e):
     return None
 
 def glob(e):
+    """Text für einen globalen (nicht zielbezogenen) Effekt."""
     c, p = e['code'], e.get('param') or {}
     if c == 'DRAW': return f"Ziehe {karten(n(p.get('value')) or 1)}."
     if c == 'REVEAL':
@@ -74,6 +83,7 @@ def glob(e):
     return None
 
 def gen_instant(card, upto_hint=None):
+    """Erzeugt den gedruckten Kurztext eines Soforteinsatzes aus den Codes."""
     fx = card.get('effects') or []
     tgt = [e for e in fx if per_target(e) is not None and not (e['code'] == 'HEAL' and (e.get('param') or {}).get('all'))]
     gl = [e for e in fx if e not in tgt]
@@ -108,6 +118,7 @@ def gen_instant(card, upto_hint=None):
     return {'ok': True, 'text': t[0].upper() + t[1:], 'target': target, 'unsupported': []}
 
 def gen_equip(card):
+    """Erzeugt den gedruckten Kurztext einer Ausrüstung aus den Codes."""
     fx = card.get('effects') or []
     bad = [e['code'] for e in fx if e['code'] not in EQUIP]
     if bad or not fx: return {'ok': False, 'unsupported': bad}
@@ -138,6 +149,7 @@ def gen_equip(card):
     return {'ok': True, 'text': ' '.join(parts), 'unsupported': []}
 
 def gen(card):
+    """Erzeugt den gedruckten Kurztext einer beliebigen Karte aus Typ und Effektcodes."""
     if card.get('typ') == 'Soforteinsatz': return gen_instant(card)
     if card.get('typ') == 'Ausrüstung': return gen_equip(card)
     return {'ok': False, 'unsupported': []}

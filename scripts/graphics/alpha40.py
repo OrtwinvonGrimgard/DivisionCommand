@@ -47,6 +47,7 @@ ART_PCT = 40.0
 
 
 def metal_of(c):
+    """Wählt die Metallfarbe (Gold/Silber/Bronze) zur Seltenheit."""
     r = str(c.get('rarity') or '').lower()
     if r in ('gold', 'silber', 'silver', 'bronze'):
         return {'silver': 'silber'}.get(r, r)
@@ -54,6 +55,7 @@ def metal_of(c):
 
 
 def face_text(kurz, card):
+    """Setzt den sichtbaren Fronttext aus kurz.json und Kartendaten zusammen."""
     kurz = (kurz or '').strip()
     kws = card.get('keywords') or []
     if kurz:
@@ -64,6 +66,7 @@ def face_text(kurz, card):
 
 
 def enrich_tags(card):
+    """Ergänzt sichtbare Spiel-Tags für die Front (ohne Regeländerung)."""
     tags = list(card.get('tags') or [])
     have = {str(t).lower() for t in tags}
     for k in (card.get('keywords') or []):
@@ -93,6 +96,7 @@ def to_face(im: Image.Image, dest: Path):
 
 
 def render(card, art_path, kurz, dest, number='001', edition='ALPHA'):
+    """Rendert eine Kartenfront im alpha40-Layout (1024×1428, ohne Strecken) nach dest."""
     import render as R  # KartenEditor/tools/render.py
     c = dict(card)
     typ = c.get('typ') or 'Einheit'

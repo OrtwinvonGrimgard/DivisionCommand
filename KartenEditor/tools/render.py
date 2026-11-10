@@ -153,6 +153,7 @@ def _tint_gold_png(im, gold):
 
 
 def _paste_emblem(stock, path, cx, cy, size, gold):
+    """Setzt ein Nation- bzw. Typemblem in der Metallfarbe auf den Stock."""
     if not path.is_file():
         return stock
     wr = Image.open(path).convert("RGBA")
@@ -483,6 +484,7 @@ _STEEL_TEX = Path(__file__).resolve().parent.parent / "assets" / "textures" / "s
 
 
 def _card_seed():
+    """Deterministischer Seed aus der Kartenidentität für Texturen."""
     card = getattr(_mod, "_current_card", {}) or {}
     s = 1
     for ch in str(card.get("name") or "stahl"):
@@ -662,6 +664,7 @@ def grim_card(img):
 
 
 def _steel_rivet(d, x, y, r=6):
+    """Zeichnet eine Stahl-Niete an die angegebene Position."""
     d.ellipse((x - r, y - r, x + r, y + r), fill=STEEL, outline=STEEL_DK, width=2)
     d.ellipse((x - 3, y - 4, x + 2, y), fill=STEEL_LT)
 
@@ -777,6 +780,7 @@ def unit_branch(card):
     if typ == "Ausrüstung":
         return "gear"
     def norm(s):
+        """Normalisiert einen Namen (Kleinbuchstaben, Umlaute) für Vergleiche."""
         return str(s).lower().replace("ä", "a").replace("ö", "o").replace("ü", "u")
     tags = [norm(t) for t in (card or {}).get("tags") or []]
     klasse = norm((card or {}).get("klasse") or "")
@@ -1305,6 +1309,7 @@ CARDS = _CARDS
 
 
 def _triangle_mask(w, h, inset=18):
+    """Alpha-Maske in Dreiecksform für gerahmte Token-Kunst."""
     m = Image.new("L", (w, h), 0)
     ImageDraw.Draw(m).polygon(
         [(w / 2, inset), (w - inset, h - inset), (inset, h - inset)],
@@ -1314,12 +1319,14 @@ def _triangle_mask(w, h, inset=18):
 
 
 def _circle_mask(w, h, inset=10):
+    """Alpha-Maske in Kreisform für gerahmte Token-Kunst."""
     m = Image.new("L", (w, h), 0)
     ImageDraw.Draw(m).ellipse((inset, inset, w - inset - 1, h - inset - 1), fill=255)
     return m
 
 
 def _paint_metal_yellow(rgb):
+    """Tönt ein RGB-Tripel in die gelbe Metallfarbe."""
     arr = np.array(rgb.convert("RGB"), dtype=np.float32)
     r, g, b = arr[:, :, 0], arr[:, :, 1], arr[:, :, 2]
     yellow = (r > 70) & (g > 50) & (r > b * 1.12) & (g > b * 0.95)
@@ -1333,6 +1340,7 @@ def _paint_metal_yellow(rgb):
 
 
 def _erode_mask(m, n):
+    """Verkleinert eine Maske um n Pixel (Erosion)."""
     out = m
     for _ in range(max(0, int(n))):
         out = out.filter(ImageFilter.MinFilter(3))
@@ -1340,6 +1348,7 @@ def _erode_mask(m, n):
 
 
 def _metal_fill(w, h):
+    """Füllt eine Fläche mit der gebürsteten Metalltextur."""
     enamel = np.array(getattr(_mod, "GOLD", GOLD), dtype=np.float32)
     dk = np.array(getattr(_mod, "GOLD_DK", GOLD_DK), dtype=np.float32)
     plate = brass_plate(w, h)
@@ -1352,6 +1361,7 @@ def _metal_fill(w, h):
 
 
 def _paint_rivet(d, x, y, enamel, dk, r=11):
+    """Zeichnet eine emaillierte Niete mit Licht und Schatten."""
     d.ellipse((x - r, y - r, x + r, y + r), fill=enamel, outline=dk, width=3)
     d.ellipse((x - 4, y - 5, x + 3, y - 1), fill=(240, 220, 150, 255))
 
@@ -1468,6 +1478,7 @@ def render_fog_token(card, art=None):
 
 
 def render_token(card, dest, metal="gold", art=None):
+    """Rendert ein Spieltoken (Mine, Nebel o. Ä.) und schreibt es nach dest."""
     kind = str((card or {}).get("token_kind") or "minenfeld").lower()
     apply_metal({"silver": "silber", "silber": "silber"}.get(str(metal).lower(), str(metal).lower()))
     _mod._current_card = card

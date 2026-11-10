@@ -6480,6 +6480,12 @@
       this._log('Schutzwall.');
       return { ok: true };
     }
+        /**
+         * Doktrin „Verlegung“: verschiebt eine eigene Fronteinheit in einen Zielslot (AP laut Doktrinparameter).
+         * RULES: Doktrin Verlegung.
+         * @param {number} pid
+         * @param {object} a  Aktion mit `uid` und `slot`.
+         */
         _actDokShift(pid, a) {
       const p = this.player(pid);
       if (this.state.active !== pid) throw new Error('Nur im eigenen Zug');

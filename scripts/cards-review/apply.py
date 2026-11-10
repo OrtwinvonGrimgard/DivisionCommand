@@ -10,6 +10,7 @@ EDIT = ['doktrinen', 'tokens', 'infanterie', 'panzer', 'artillerie', 'aufklaerun
 UNIT_FILES = ['infanterie', 'panzer', 'artillerie', 'aufklaerung', 'elite']
 
 def snapshot():
+    """Sichert den aktuellen Stand der Typdateien vor einer Batch-Änderung."""
     if SNAP.exists(): return json.loads(SNAP.read_text())
     snap = {f: DF.load(f)[1] for f in DF.FILES}
     SNAP.write_text(json.dumps(snap, ensure_ascii=False))
@@ -17,6 +18,7 @@ def snapshot():
 
 ABBR_FIX = [(re.compile(r'([+−-]?\d+)\s*V\b(?!P)'), r'\1 DEF'), (re.compile(r'([+−-]?\d+)\s*A\b(?!P)'), r'\1 ATK'), (re.compile(r'\bV/Zug\b'), 'DEF/Zug')]
 def fix_abbr(t):
+    """Normalisiert Abkürzungen im Kartentext (ATK, DEF, AP)."""
     for rx, rep in ABBR_FIX: t = rx.sub(rep, t)
     return t
 
@@ -57,6 +59,7 @@ def add_draw_reveal(orig_text, fx):
     return added
 
 def main():
+    """Wendet Review-Korrekturen (Abkürzungen, gezogene Effekte) auf die Typdateien an."""
     snap = snapshot()
     review = []; stats = collections.Counter()
     for f in EDIT:
