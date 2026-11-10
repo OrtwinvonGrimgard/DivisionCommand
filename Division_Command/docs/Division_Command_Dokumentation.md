@@ -72,7 +72,7 @@ Militärische Engine-Trigger: ON_AIR, ON_ARTILLERY, ON_MG, ON_AT, ON_RECON, SUPP
 - 5 SP zum Sieg.
 - Quellen: Elite zerstört (+2), Durchbruch (+1, max. 3× pro Abschnitt, Cooldown), Doktrin-Ziel (+1, thematisch).
 - Sicherheitsnetz ab Zug 26 (leere Front) / 28 (SP-Vergleich).
-- Münzwurf für Startspieler + AP-Ausgleich im ersten Zug.
+- Münzwurf für Startspieler; der Startspieler hat im ersten Zug 3 AP und zieht nicht, der Zweite zieht beim ersten Zugwechsel normal.
 - Ziel-Median: 14–18 Züge, VP-Siege ≥70 %.
 
 Details und Tuning-Daten: `SIEGBEDINGUNGEN.md`.
@@ -95,6 +95,7 @@ Artillerie trägt das Tag **Steilfeuer I–V** (Chip auf der Kartenfläche). Die
 
 ### 3.6 Reaktionsfenster
 - **Feindkontakt:** Der Verteidiger kann einen bezahlbaren Soforteinsatz als Antwort spielen oder weitergeben.
+- **Verdeckte Fallen** (Mine, Munitionsbrand, Lähmung u. a.) liegen verdeckt im Support und sind beim Legen bezahlt. Bei Feindkontakt löst eine passende Falle ohne weitere AP aus und wird aufgedeckt; ohne gültiges Ziel bleibt sie liegen (RULES §12.1).
 - **Gezeigte Karten**, **SAM** und **Geist** haben immer eine Schließen- bzw. Weitergeben-Aktion. Kein Fenster blockiert die Partie.
 
 ---
@@ -161,11 +162,12 @@ Jede Nation hat eigene Doktrinen und thematische Decks. Taktische Lore beschreib
 - Doktrin-IDs korrigiert (Gefecht startet wieder).
 - 0.6a: Kartenprüfung aller 1.746 Karten, alpha40-Design, Steilfeuer I–V, Soforteinsätze mit gedruckten AP, Bibliotheksfilter (Seltenheit, Tags).
 - 0.6a: Bot-Hänger behoben (Reaktionsfenster bieten immer eine legale Aktion); Smoke- und Fuzz-Test schlagen bei Hängern fehl.
+- t238: Startspieler 3 AP im ersten Zug → Siegquote Startspieler 50,0 % (Starterdecks) / 50,2 % (gemischt), vorher 54,5 / 56,1 %.
+- t238: Verdeckte Fallen lösen bei Feindkontakt aus; realistischer Mischdeck-Generator; Caldris-Pool abgeschwächt.
 - 0.6a: Balance aus 11.520 Bot-Partien je Modus. Starterdecks liegen bei 45–53 % (`balance/BALANCE_T237.md`).
 
 **In Arbeit / Offen:**
-- Startspieler hat seit t238 im ersten Zug 3 AP: Siegquote 50,9 % (Starterdecks) bzw. 52,6 % (gemischt), vorher mit 4 AP 54,5 / 56,1 %.
-- Gemischte Decks von Ossaria und Dargan unter 45 %.
+- Caldris-Doktrinen Etappensicherung/Rasten als größerer Balance-Hebel prüfen (`balance/BALANCE_T238.md`).
 - Tutorial und Onboarding.
 - Roguelike-Vertical-Slice (Fahrplan).
 
