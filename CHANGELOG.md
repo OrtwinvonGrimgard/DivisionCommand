@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- **Soforteinsätze (t249):** Zehn Grundset-Karten mit 0 AP neu bepreist: Luftschlag 4, Dammbruch 6, Psychologie der Massen 6, Generalmobilmachung 4, Blinder Gehorsam 6, Einsame Gassen 6, Mobilisierung 3, Deckung suchen 2, Selbstopfer 2, Der Letzte der steht 3. Deckung suchen gewährt jetzt wirklich +3 V bis zum Angriff. Vorderseiten neu (alpha40), Cache `divcmd-alpha40r`. Begründung und Simulation: `docs/balance/BALANCE_T249.md`.
+
 - **Bibliothek (t248):** Der Nationsfilter zeigt nur noch die 100 Karten der Nation plus ihre 2 Starter-Doktrinen. Neutrale (Grundset, Taktik-Entwürfe, 4 unzugeordnete Doktrinen) erscheinen unter „Neutral“ und „Alle Nationen“. Die Dropdown-Zähler entsprechen der Listenlänge. In der Alle-Ansicht tragen Neutrale ein Herkunfts-Badge „Neutral“. Deckbau (freies Mischen, beliebige 2 aus 36 Doktrinen) unverändert.
 - **Napalm (t248):** `dc_so_napalm` kostet **3 AP** statt 0 (3 Sofortschaden plus DoT 1 je Zug des Besitzers). Vorderseite neu gerendert (alpha40). Begründung und Simulation: `docs/balance/BALANCE_T248.md`. Service-Worker-Cache `divcmd-alpha40q`.
 

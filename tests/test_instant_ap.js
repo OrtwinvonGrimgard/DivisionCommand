@@ -106,8 +106,9 @@ function byId(id) {
 
 // 4) Gedruckte 0-AP-Soforteinsätze bleiben legal kostenlos
 {
+  const skip = ['DEAL_DAMAGE', 'BUFF', 'HEAL', 'MARK_OBSERVED', 'CANCEL_AIR_DAMAGE', 'CLEAR_MINE', 'GHOST_RUINS', 'LAY_MINE'];
   const zero = C.find((c) => c.typ === 'Soforteinsatz' && Number(c.ap) === 0 && !(c.target && c.target.needs)
-    && (c.effects || []).every((e) => !['DEAL_DAMAGE', 'BUFF', 'HEAL', 'MARK_OBSERVED'].includes(e.code)));
+    && (c.effects || []).every((e) => !skip.includes(e.code)));
   assert.ok(zero, '0-AP Soforteinsatz');
   const eng = fresh();
   const p = eng.player(0);

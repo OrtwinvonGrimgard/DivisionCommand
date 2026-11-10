@@ -115,7 +115,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Blinder Gehorsam",
-    "ap": 0,
+    "ap": 6,
     "atk": null,
     "def": null,
     "tags": [
@@ -169,7 +169,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Dammbruch",
-    "ap": 0,
+    "ap": 6,
     "atk": null,
     "def": null,
     "tags": [
@@ -193,7 +193,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Deckung suchen",
-    "ap": 0,
+    "ap": 2,
     "atk": null,
     "def": null,
     "tags": [
@@ -219,7 +219,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Der Letzte der steht",
-    "ap": 0,
+    "ap": 3,
     "atk": null,
     "def": null,
     "tags": [
@@ -269,7 +269,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Einsame Gassen",
-    "ap": 0,
+    "ap": 6,
     "atk": null,
     "def": null,
     "tags": [
@@ -341,7 +341,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Generalmobilmachung",
-    "ap": 0,
+    "ap": 4,
     "atk": null,
     "def": null,
     "tags": [
@@ -445,7 +445,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Luftschlag",
-    "ap": 0,
+    "ap": 4,
     "atk": null,
     "def": null,
     "tags": [
@@ -561,7 +561,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Mobilisierung",
-    "ap": 0,
+    "ap": 3,
     "atk": null,
     "def": null,
     "tags": [
@@ -665,7 +665,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Psychologie der Massen",
-    "ap": 0,
+    "ap": 6,
     "atk": null,
     "def": null,
     "tags": [
@@ -741,7 +741,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Selbstopfer",
-    "ap": 0,
+    "ap": 2,
     "atk": null,
     "def": null,
     "tags": [

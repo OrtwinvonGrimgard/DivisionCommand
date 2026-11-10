@@ -6447,6 +6447,13 @@
      */
     _dropCover(inst) {
       if (!inst || !inst.tokens) return;
+      const covers = inst.tokens.filter((t) => t.type === 'deckung' || t.type === 'cover');
+      if (covers.length) {
+        const bonus = covers.reduce((s, tok) => s + Number(tok.def != null ? tok.def : 3), 0);
+        inst.def = Math.max(1, (inst.def || 0) - bonus);
+        inst.defMax = Math.max(1, (inst.defMax || inst.def) - bonus);
+        if (inst.def > inst.defMax) inst.def = inst.defMax;
+      }
       inst.tokens = inst.tokens.filter((t) => t.type !== 'deckung' && t.type !== 'cover');
     }
     /**
@@ -6733,11 +6740,19 @@
      */
     _resolveCoverSeek(pid, targetUid) {
       const loc = this.findInst(targetUid);
+      const p = this.player(pid);
+      const pend = this.state.pending;
       if (loc) {
+        const bonus = 3;
+        loc.inst.def = (loc.inst.def || 0) + bonus;
+        loc.inst.defMax = (loc.inst.defMax || loc.inst.def) + bonus;
         loc.inst.tokens = loc.inst.tokens || [];
-        loc.inst.tokens.push({ type: 'deckung' });
+        loc.inst.tokens.push({ type: 'deckung', def: bonus });
+        this._log(this.defOf(loc.inst).name + ' sucht Deckung (+' + bonus + ' V, endet beim Angriff).');
       }
+      if (pend && pend.card) p.grave.push(pend.card);
       this.state.pending = null;
+      if (this.state.heldAttack) return this._resumeAfterReact();
       return { ok: true };
     }
     /**

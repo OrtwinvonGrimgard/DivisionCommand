@@ -106,7 +106,7 @@ Operative bzw. spielzustandsverändernde Wirkung: ganze Front, ganze Unterstütz
 | ID | Karte | bisher AP | neue AP | Stufe | Begründung |
 |---|---|---:|---:|---|---|
 | dc_so_bod_luft | Boden-Luft-Rakete | 0 | **0** | **Bronze** | Sehr enge Reaktion; nur gegen Luftangriff. |
-| dc_so_deckung | Deckung suchen | 0 | **0** | **Bronze** | Kleine lokale Reaktion; Bonus endet beim Angriff. |
+| dc_so_deckung | Deckung suchen | 0 | **0** | **Bronze** | Kleine lokale Reaktion; Bonus endet beim Angriff. *Umgesetzt t249: 2 AP, +3 V wirkt jetzt wirklich.* |
 | dc_so_pause | Pause | 0 | **0** | **Bronze** | Sehr enger taktischer Eingriff. |
 | dc_so_raeum | Räumkommando | 0 | **0** | **Bronze** | Reiner Konter gegen einen bestimmten Token. |
 | dc_so_formation | Standhafte Formation | 0 | **0** | **Bronze** | Kleiner Einzelzielbonus. |
@@ -121,23 +121,23 @@ Operative bzw. spielzustandsverändernde Wirkung: ganze Front, ganze Unterstütz
 | dc_so_widerstand | Widerstand | 0 | **1** | **Silber** | Erzwingt ein alternatives Gefecht einer gegnerischen Einheit. |
 | dc_so_vorsprung | Geistiger Vorsprung | 0 | **0** | **Silber** | Kostenlose Reaktion, aber nur bei unmittelbar angekündigtem Angriff. |
 | dc_so_kavallerie | Eingriff der Kavallerie | 0 | **2** | **Silber** | Globaler Bonus für gepanzerte Fahrzeuge. |
-| dc_so_luftschlag | Luftschlag | 0 | **2** | **Silber** | 5 Schaden auf Einheit oder Support. |
+| dc_so_luftschlag | Luftschlag | 0 | **2** | **Silber** | 5 Schaden auf Einheit oder Support. *Umgesetzt t249: gedruckter Preis 4 AP, siehe `BALANCE_T249.md`.* |
 | dc_so_napalm | Napalm | 0 | **2** | **Silber** | Direktschaden plus anhaltender Schaden. *Umgesetzt t248: gedruckter Preis 3 AP (nicht 2), siehe `BALANCE_T248.md`.* |
 | dc_so_engel | Silberner Engel | 0 | **2** | **Silber** | Starker Schutz, aber zufallsabhängig. |
 | dc_so_ehren | Militärische Ehren | 0 | **3** | **Silber** | Bis zu drei bereits erfolgreiche Einheiten mit +2/+2. |
-| dc_so_mobilisierung | Mobilisierung | 0 | **3** | **Gold** | Decksuche plus kostenlose Infanterie; großer Tempoeffekt. |
+| dc_so_mobilisierung | Mobilisierung | 0 | **3** | **Gold** | Decksuche plus kostenlose Infanterie; großer Tempoeffekt. *Umgesetzt t249: 3 AP.* |
 | dc_so_eifer | Religiöser Eifer | 0 | **4** | **Gold** | +3 Angriff für die gesamte eigene Infanterie trotz Selbstschaden. |
-| dc_so_letzter | Der Letzte der steht | 0 | **3** | **Gold** | Greift die Struktur der gesamten eigenen Front an; hoher Skalierungseffekt. |
+| dc_so_letzter | Der Letzte der steht | 0 | **3** | **Gold** | Greift die Struktur der gesamten eigenen Front an; hoher Skalierungseffekt. *Umgesetzt t249: 3 AP (Engine-Stub, siehe `BALANCE_T249.md`).* |
 | dc_so_durchschuss | Glatter Durchschuss | 0 | **5** | **Gold** | Verdoppelt Kampfschaden einer gepanzerten Einheit. |
 | dc_so_stand | Standgericht | 0 | **4** | **Gold** | Opfer einer Einheit gegen massiven Flächenbonus für die übrige Front. |
-| dc_so_selbst | Selbstopfer | 0 | **4** | **Gold** | Ein eigener Verlust ermöglicht zwei gegnerische Zerstörungen. |
+| dc_so_selbst | Selbstopfer | 0 | **4** | **Gold** | Ein eigener Verlust ermöglicht zwei gegnerische Zerstörungen. *Umgesetzt t249: 2 AP (Opfer bleibt Hauptpreis).* |
 | dc_so_volk | Wille des Volkes | 0 | **4** | **Gold** | Frontweiter Infanteriebonus plus skalierender Kartenvorteil. |
-| dc_so_mobil | Generalmobilmachung | 0 | **4** | **Gold** | +3 Karten plus +2 AP für den Zug. |
-| dc_so_blinder_gehorsam | Blinder Gehorsam | 0 | **6** | **Gold** | Gesamte eigene Front greift kostenlos an und erhält +2 Angriff. |
+| dc_so_mobil | Generalmobilmachung | 0 | **4** | **Gold** | +3 Karten plus +2 AP für den Zug. *Umgesetzt t249: 4 AP.* |
+| dc_so_blinder_gehorsam | Blinder Gehorsam | 0 | **6** | **Gold** | Gesamte eigene Front greift kostenlos an und erhält +2 Angriff. *Umgesetzt t249: 6 AP (Engine-Stub).* |
 | dc_so_strahlung | Strahlung | 0 | **5** | **Gold** | Bis zu drei benachbarte Gegner werden massiv ausgeschaltet oder verdrängt. |
-| dc_so_dammbruch | Dammbruch | 0 | **6** | **Gold** | Entfernt die gesamte gegnerische Supportzone. |
-| dc_so_gassen | Einsame Gassen | 0 | **7** | **Gold** | Kann alle freien Frontstellungen kostenlos aus dem Deck besetzen. |
-| dc_so_massen | Psychologie der Massen | 0 | **6** | **Gold** | Ignoriert für beliebig viele Fronteinheiten die AP-Kosten. |
+| dc_so_dammbruch | Dammbruch | 0 | **6** | **Gold** | Entfernt die gesamte gegnerische Supportzone. *Umgesetzt t249: 6 AP.* |
+| dc_so_gassen | Einsame Gassen | 0 | **7** | **Gold** | Kann alle freien Frontstellungen kostenlos aus dem Deck besetzen. *Umgesetzt t249: 6 AP (Engine-Stub).* |
+| dc_so_massen | Psychologie der Massen | 0 | **6** | **Gold** | Ignoriert für beliebig viele Fronteinheiten die AP-Kosten. *Umgesetzt t249: 6 AP (Engine legt nur eine Einheit aus).* |
 | dc_so_armageddon | Armageddon | 0 | **8** | **Gold** | Kompletter globaler Reset von Spielfeld und Händen. |
 
 

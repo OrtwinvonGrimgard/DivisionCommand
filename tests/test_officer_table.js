@@ -72,7 +72,7 @@ assert(new Set(durs.match(/[\d.]+s/g)).size >= 5, 'mehrere unterschiedliche Anim
 assert(/at 74\.9% 35\.2%/.test(css), 'Licht vom Lampenstandort');
 const html = fs.readFileSync(path.join(WEB, 'index.html'), 'utf8');
 assert(/css\/officer-table\.css\?v=/.test(html), 'officer-table.css eingebunden');
-assert(/const CACHE = 'divcmd-alpha40q'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')), 'SW-Cache angehoben');
+assert(/const CACHE = 'divcmd-alpha40r'/.test(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8')), 'SW-Cache angehoben');
 assert(/prefers-reduced-motion: reduce\)\s*\{[^}]*\.ot-glow[^}]*animation: none/.test(css), 'Media-Query stoppt Flackern');
 assert(/data-flicker="off"\] \.ot-glow, \.cam-viewport\[data-flicker="off"\] \.ot-glint/.test(css), 'JS-Flag stoppt Flackern');
 assert(/\.ot-desk \{\s*position: absolute; z-index: -3; pointer-events: none/.test(css) && /\.ot-desk > div \{[^}]*pointer-events: none/.test(css), 'Bild/Licht nie klickbar');

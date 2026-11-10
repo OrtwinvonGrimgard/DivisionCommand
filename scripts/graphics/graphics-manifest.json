@@ -21423,11 +21423,11 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "d8f35b61a49a1d5c462964ad2034e4465540423ebcc5f5f00f11dd794de5d7f6",
+   "source_record_sha256": "0fdcd7d9b0a432d8097b29da867714c3d9d887b746b8eb04785a19a5bf190e10",
    "kurz": "Auf Befehl: Alle eigenen Fronteinheiten greifen in diesem Zug ohne AP an und erhalten +2 Angriff. Nur eigener Zug.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 6,
     "atk": null,
     "def": null,
     "tags": [
@@ -21444,7 +21444,7 @@
     "art_pct": 40.0
    },
    "renderer": "15a96e700d4227fbee4f0a5a3232342a81932fb5daa325493f92b1d58b4bb62b",
-   "output_sha256": "d82ffb066719762ec17720e6f2fb76805ff31ae0c7525c22d052d768185a590e"
+   "output_sha256": "87e31048b50bc6c761b53ccb3928726f74be1cffc328a6ded5aad44f398b28e9"
   },
   {
    "id": "dc_so_bod_luft",
@@ -21482,11 +21482,11 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "08dc3b15be85a23e61d18107aeba43059ec4a0f52e054f6cbd6286d5b9c290b9",
+   "source_record_sha256": "ac5226d37ca5803d83027255fd25f2099262e077abf1b42018f2925f2c701236",
    "kurz": "Die gesamte Unterstützungslinie des Gegners wird vom Spielfeld entfernt.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 6,
     "atk": null,
     "def": null,
     "tags": [
@@ -21503,7 +21503,7 @@
     "art_pct": 40.0
    },
    "renderer": "15a96e700d4227fbee4f0a5a3232342a81932fb5daa325493f92b1d58b4bb62b",
-   "output_sha256": "9bb5eaa55760b32a225f700fa7e7b73b949e18112c07d7c358ce82353844727b"
+   "output_sha256": "f88b7dd4a356e64d35da3b779bc00a8df5b54693a77d79d095c55077428870fa"
   },
   {
    "id": "dc_so_deckung",
@@ -21511,11 +21511,11 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "b82429a0bc9caf19303d1caffb0ad7fbbab59707e6c30e3575ebf185892f35fc",
+   "source_record_sha256": "5b9e07aeea1cc3cb540f4461f742db4b7b93a3c8c64d58b524a17a264fa4b87b",
    "kurz": "Eine Fronteinheit deiner Wahl erhält +3 Verteidigung. Der Bonus endet, wenn die Einheit angreift.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 2,
     "atk": null,
     "def": null,
     "tags": [
@@ -21532,7 +21532,7 @@
     "art_pct": 40.0
    },
    "renderer": "15a96e700d4227fbee4f0a5a3232342a81932fb5daa325493f92b1d58b4bb62b",
-   "output_sha256": "160a196965ce414a9f9a87de0e4e093029fececf3205ef0f727d7444171ff9a9"
+   "output_sha256": "cd09635cb5d34e8d6892b9e08ce449b9096693b1f41dce1684dab42d1788d7e8"
   },
   {
    "id": "dc_so_letzter",
@@ -21540,11 +21540,11 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "d538a47095da7a9b5db55a0d5a2175c65464a3bb85a14372f672e71a27a8b891",
+   "source_record_sha256": "5fcc32d07835437551bc93724310caf772f5e29581c6fcfe5a53c580029d4414",
    "kurz": "Opfere deine Front bis auf eine Einheit; sie erhält je Opfer +1 ATK/+1 DEF. Fällt sie, erhält der Gegner 1 SP.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 3,
     "atk": null,
     "def": null,
     "tags": [
@@ -21561,7 +21561,7 @@
     "art_pct": 40.0
    },
    "renderer": "15a96e700d4227fbee4f0a5a3232342a81932fb5daa325493f92b1d58b4bb62b",
-   "output_sha256": "5665d0ca25cf792f049dac94b6367583798016598a026e658e40dd4d0ab1eab0"
+   "output_sha256": "477037f450425cd8af1740bf0059860245329d6a21d8cca1be25bb337bdc70f0"
   },
   {
    "id": "dc_so_kavallerie",
@@ -21598,11 +21598,11 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "5f1e0b6e27fa7cc361540a53ddbafb82e11bcbaeedf4cfe90207bdab03cebe7b",
+   "source_record_sha256": "b15c72d5cc213e6617b46bb049f37b94aa12dd239ad344f43f4e5771cac72a98",
    "kurz": "Suche so viele Einheiten im Deck wie freie Frontplätze. Lege sie kostenlos offen auf gewählte Slots.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 6,
     "atk": null,
     "def": null,
     "tags": [
@@ -21619,7 +21619,7 @@
     "art_pct": 40.0
    },
    "renderer": "15a96e700d4227fbee4f0a5a3232342a81932fb5daa325493f92b1d58b4bb62b",
-   "output_sha256": "ff6b8a5d6ae8aec5e59d67937f6f1deaf8c25d54c5d63918f126019de4c1ad41"
+   "output_sha256": "f2b9335725dae0beebc167d9e053167a2ee5a28b5547a2ba87feaea680da0849"
   },
   {
    "id": "dc_so_geist",
@@ -21685,11 +21685,11 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "6012d7a66d6a2496254e595050c744cad51c13dfd364b422f997a4e32b7a1297",
+   "source_record_sha256": "2547c17e1890238ef17fb592e025d1cc54e1fbb9d1eb0f3f81205c441bc3f831",
    "kurz": "Ziehe 3 Karten und erhalte zusätzlich 2 AP für diesen Zug.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 4,
     "atk": null,
     "def": null,
     "tags": [
@@ -21706,7 +21706,7 @@
     "art_pct": 40.0
    },
    "renderer": "15a96e700d4227fbee4f0a5a3232342a81932fb5daa325493f92b1d58b4bb62b",
-   "output_sha256": "37546226806198eb4052f313eac2dbe7777278385de3fc6fd4d389e7f89474a5"
+   "output_sha256": "c207fcc575228e576264c154c185587f5d057783ef60de74e8919d4cb8fcae50"
   },
   {
    "id": "dc_so_durchschuss",
@@ -21801,11 +21801,11 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "c7fb85d6e25f197832bf41a4ee31ae20ed6afe4727894f409d7525cb05285d24",
+   "source_record_sha256": "b96710aff8358e298d2d848c0fad5b3c643788ba333b57299fc8d1c44c0658e9",
    "kurz": "Füge einer feindlichen Einheit oder Unterstützung 5 Schadenspunkte zu.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 4,
     "atk": null,
     "def": null,
     "tags": [
@@ -21824,7 +21824,7 @@
     "art_pct": 40.0
    },
    "renderer": "15a96e700d4227fbee4f0a5a3232342a81932fb5daa325493f92b1d58b4bb62b",
-   "output_sha256": "dd61f5153f1776902319d8ef08679b8b2c5990184bab318aca874e5b56dab42f"
+   "output_sha256": "aed7b7eddb143b0e636f13e92b2431cc27f1417cfd531cfa05528e1c8f162223"
   },
   {
    "id": "dc_so_martyrium",
@@ -21921,11 +21921,11 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "dd60f1345cb9504b5ac65ccc28c0e416fce0a489f9991539da5dc2bb103df0ec",
+   "source_record_sha256": "1725831713ed534c9d3a925f6fad944a745064fd000245c3089c8ada5c1cc7bc",
    "kurz": "Durchsuche das Deck nach bis zu 2 Infanterie-Einheiten auf die Hand. Eine davon darfst du sofort ohne AP spielen.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 3,
     "atk": null,
     "def": null,
     "tags": [
@@ -21942,7 +21942,7 @@
     "art_pct": 40.0
    },
    "renderer": "15a96e700d4227fbee4f0a5a3232342a81932fb5daa325493f92b1d58b4bb62b",
-   "output_sha256": "eb317940c41808b1a085b16e91666d0abca007a73ced6c0a0752f76ceaa47487"
+   "output_sha256": "8c6e1728a03990a61afd42b526b84af7cd6bd6bcac090e1fd559b56e1dd20ed8"
   },
   {
    "id": "dc_so_munition",
@@ -22039,11 +22039,11 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "f0734b0b8e04aa43d2a0a0d54fd7303bc7e812cf671ea77cfbb2f6d0224add47",
+   "source_record_sha256": "3878f77e23685a7d0493c5cbbf5737c6a6e77c2f0a256bdcf8748ef0125cdc3d",
    "kurz": "Spiele so viele Fronteinheiten von der Hand wie du möchtest, ohne AP-Kosten.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 6,
     "atk": null,
     "def": null,
     "tags": [
@@ -22060,7 +22060,7 @@
     "art_pct": 40.0
    },
    "renderer": "15a96e700d4227fbee4f0a5a3232342a81932fb5daa325493f92b1d58b4bb62b",
-   "output_sha256": "7ca3cce1300df05d858690678c1a5dd58b1ffb015ae026ab5c09643718773c59"
+   "output_sha256": "476a486ca473fd848d157c4571a8ca19b77ac9c6a49610647fff5a11e20619a5"
   },
   {
    "id": "dc_so_eifer",
@@ -22126,11 +22126,11 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "882246a6ea8fa54cc284a09e17282f918d834c8d2813181b76588ad98ba0b97e",
+   "source_record_sha256": "91cdcc829346bce69e23d0205c4197d7ae99065296fa9cc1f08642c57dde8b6d",
    "kurz": "Zerstöre eine eigene Fronteinheit, um zwei gegnerische Karten in Reichweite zu zerstören.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 2,
     "atk": null,
     "def": null,
     "tags": [
@@ -22147,7 +22147,7 @@
     "art_pct": 40.0
    },
    "renderer": "15a96e700d4227fbee4f0a5a3232342a81932fb5daa325493f92b1d58b4bb62b",
-   "output_sha256": "b98bc528f17492dbc6aaf2672fb203674757059c03a0148769894da610ad6b85"
+   "output_sha256": "dd99dd68aad4ffb2e1351eb6cb7beca8170a1c705654244e2846df322459ec4b"
   },
   {
    "id": "dc_so_engel",
