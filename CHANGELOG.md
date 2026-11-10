@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- **Bibliothek (t248):** Der Nationsfilter zeigt nur noch die 100 Karten der Nation plus ihre 2 Starter-Doktrinen. Neutrale (Grundset, Taktik-Entwürfe, 4 unzugeordnete Doktrinen) erscheinen unter „Neutral“ und „Alle Nationen“. Die Dropdown-Zähler entsprechen der Listenlänge. In der Alle-Ansicht tragen Neutrale ein Herkunfts-Badge „Neutral“. Deckbau (freies Mischen, beliebige 2 aus 36 Doktrinen) unverändert.
+- **Napalm (t248):** `dc_so_napalm` kostet **3 AP** statt 0 (3 Sofortschaden plus DoT 1 je Zug des Besitzers). Vorderseite neu gerendert (alpha40). Begründung und Simulation: `docs/balance/BALANCE_T248.md`. Service-Worker-Cache `divcmd-alpha40q`.
+
 - **Kommentare (t245):** Dateiköpfe und JSDoc/Docstrings an Engine, UI, Bots, Tests, Skripten und Kartendaten (Köpfe/Abschnitte, nicht pro Karte). Keine Logikänderung.
 - **Repo-Aufräumung (t245):** Klare Ordnerstruktur (`tests/`, `scripts/` nach Zweck, Doku mit `entwicklung/` und `archiv/`). Simulations-Rohdaten nicht mehr im Repo (`scripts/balance/out/`, `.gitignore`). Keine Regel- oder Balanceänderungen.
 - **Ausrüstung-Reparatur (t244):** Panzerplatte Serie, Zieloptik Konzern und Passoptik – durch den Parser der Kartenprüfung auf 0 gesetzte Werte sind wiederhergestellt (inkl. Originalbedingungen im Effekt und Text). Verbindungssiegel wirkt nur noch wie gedruckt (Aufdecken beim Anlegen, ohne +1 ATK gegen beobachtete Ziele). Die übrigen Kürzungen der Prüfung t212 bleiben bewusst. Verzeichnis: `docs/regeln/KARTEN_KUERZUNGEN.md`.

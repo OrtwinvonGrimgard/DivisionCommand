@@ -11,7 +11,8 @@
   var filterTab = 'all';
   var filterQuery = '';
   // Nur Ansichtsfilter, keine Deckbauregel: Decks dürfen Karten aller Nationen frei mischen.
-  // '' = alle Karten; NEUTRAL = nur neutrale; sonst Nationenpool (eigene 100 Karten + 2 Doktrinen + Neutrale).
+  // '' = alle Karten; NEUTRAL = nur neutrale / unzugeordnete Doktrinen;
+  // sonst genau die Karten dieser Nation plus ihre 2 Starter-Doktrinen (keine Neutralen).
   var NEUTRAL = '__neutral';
   var filterNation = '';
   var filterRarity = ''; // '' | bronze | silver | gold
@@ -77,7 +78,17 @@
     if (!filterNation) return true;
     var n = nationOf(c);
     if (filterNation === NEUTRAL) return !n;
-    return n === filterNation || !n;
+    return n === filterNation;
+  }
+  /* Karten, die die Bibliotheksliste für diesen Nationsfilter zeigt (ohne Suche/Tab/Seltenheit/Tags; Token haben keine Sektion). */
+  function listedForNation(filter) {
+    var saved = filterNation;
+    filterNation = filter || '';
+    var n = cards().filter(function (c) {
+      return c.typ !== 'Token' && c.typ !== 'Asset' && matchesNation(c);
+    }).length;
+    filterNation = saved;
+    return n;
   }
   function nationPool(nation) {
     return cards().filter(function (c) { return c.nation === nation && c.typ !== 'Doktrin' && c.typ !== 'Token'; });
@@ -570,12 +581,17 @@
     if (ns && !ns._dcBound) {
       ns._dcBound = true;
       var all0 = ns.querySelector('option[value=""]');
-      if (all0) all0.textContent = 'Alle Nationen (' + deckCards().length + ')';
+      if (all0) all0.textContent = 'Alle Nationen (' + listedForNation('') + ')';
       Object.keys(global.DC_NATION_DECKS || {}).sort(function (a, b) { return a.localeCompare(b, 'de'); }).forEach(function (n) {
-        var o = document.createElement('option'); o.value = n; o.textContent = n + ' (' + nationPool(n).length + ' + 2 Doktrinen)'; ns.appendChild(o);
+        var o = document.createElement('option'); o.value = n;
+        var total = listedForNation(n);
+        var pool = nationPool(n).length;
+        var dok = total - pool;
+        o.textContent = n + ' (' + pool + ' + ' + dok + ' Doktrin' + (dok === 1 ? '' : 'en') + ')';
+        ns.appendChild(o);
       });
       var on = document.createElement('option'); on.value = NEUTRAL;
-      on.textContent = 'Neutral (' + deckCards().filter(isNeutral).length + ')'; ns.appendChild(on);
+      on.textContent = 'Neutral (' + listedForNation(NEUTRAL) + ')'; ns.appendChild(on);
       ns.value = filterNation;
       ns.addEventListener('change', function () { filterNation = ns.value; render(); });
     }
@@ -696,9 +712,10 @@
           var max = maxOf(c);
           var left = Math.max(0, max - taken);
           var full = left <= 0;
+          var origin = (!filterNation && !nationOf(c)) ? '<span class="lib-origin">Neutral</span>' : '';
           return '<button type="button" class="lib-card' + (full ? ' full' : '') + '" data-add="' + c.id + '">' +
             stackHtml(c, Math.max(1, left), 'lib') +
-            '<span class="lib-cap">' + (c.name || c.id) + '</span>' +
+            '<span class="lib-cap">' + (c.name || c.id) + '</span>' + origin +
             '</button>';
         }).join('') + '</div>';
       }).join('');

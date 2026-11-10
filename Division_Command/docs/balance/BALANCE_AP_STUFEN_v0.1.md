@@ -122,7 +122,7 @@ Operative bzw. spielzustandsverändernde Wirkung: ganze Front, ganze Unterstütz
 | dc_so_vorsprung | Geistiger Vorsprung | 0 | **0** | **Silber** | Kostenlose Reaktion, aber nur bei unmittelbar angekündigtem Angriff. |
 | dc_so_kavallerie | Eingriff der Kavallerie | 0 | **2** | **Silber** | Globaler Bonus für gepanzerte Fahrzeuge. |
 | dc_so_luftschlag | Luftschlag | 0 | **2** | **Silber** | 5 Schaden auf Einheit oder Support. |
-| dc_so_napalm | Napalm | 0 | **2** | **Silber** | Direktschaden plus anhaltender Schaden. |
+| dc_so_napalm | Napalm | 0 | **2** | **Silber** | Direktschaden plus anhaltender Schaden. *Umgesetzt t248: gedruckter Preis 3 AP (nicht 2), siehe `BALANCE_T248.md`.* |
 | dc_so_engel | Silberner Engel | 0 | **2** | **Silber** | Starker Schutz, aber zufallsabhängig. |
 | dc_so_ehren | Militärische Ehren | 0 | **3** | **Silber** | Bis zu drei bereits erfolgreiche Einheiten mit +2/+2. |
 | dc_so_mobilisierung | Mobilisierung | 0 | **3** | **Gold** | Decksuche plus kostenlose Infanterie; großer Tempoeffekt. |

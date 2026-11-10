@@ -610,7 +610,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Napalm",
-    "ap": 0,
+    "ap": 3,
     "atk": null,
     "def": null,
     "tags": [

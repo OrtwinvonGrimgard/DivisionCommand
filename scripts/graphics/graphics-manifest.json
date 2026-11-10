@@ -21979,11 +21979,11 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "517c668e8b966cb09b26cd2c723c99d50b9791ba4f6009425c24bb887da24977",
+   "source_record_sha256": "6aa53653d2ca4a8e0ff3c58db59a20c9ad3003886aca6deb18961358905a74ee",
    "kurz": "Gegnerische Fronteinheit: 3 Schaden, danach jeder eigene Zug des Besitzers 1 Schaden.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 3,
     "atk": null,
     "def": null,
     "tags": [
@@ -22002,7 +22002,7 @@
     "art_pct": 40.0
    },
    "renderer": "15a96e700d4227fbee4f0a5a3232342a81932fb5daa325493f92b1d58b4bb62b",
-   "output_sha256": "a8bd5386edff50ee7005d3be1056494ea30a308ce040753b5e6d2f9e7330d6c7"
+   "output_sha256": "f1befdd8ec59aab09686aa4639bf14700a97029124b5f7dc085248786b429a57"
   },
   {
    "id": "dc_so_pause",

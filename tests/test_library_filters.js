@@ -119,10 +119,84 @@ lib._setRarityFilter('');
 lib.render();
 assert.equal(ids().length, all);
 
-assert(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8').includes('divcmd-alpha40p'));
-assert(html.includes('app.js?v=alpha40p'));
+// Nationsfilter: Neutrale nur unter Neutral und Alle, Zähler = Listenlänge
+{
+  lib._setRarityFilter('');
+  lib._setTagFilters([]);
+  const qEl = w.document.getElementById('lib-search');
+  qEl.value = '';
+  qEl.dispatchEvent(new w.Event('input', { bubbles: true }));
+  const ns = w.document.getElementById('lib-nation');
+  const label = {};
+  [...ns.options].forEach((o) => { label[o.value] = o.textContent; });
+
+  lib._setNationFilter('');
+  lib.render();
+  const allN = ids();
+  assert.equal(allN.length, 1745, 'Alle sichtbar ' + allN.length);
+  assert(allN.includes('dc_so_napalm'), 'Napalm unter Alle');
+  assert(!allN.includes('dc_tok_minenfeld'), 'Token nicht in der Liste');
+  assert.equal(label[''], 'Alle Nationen (1745)', label['']);
+  assert(allN.some((id) => {
+    const el = w.document.querySelector('[data-add="' + id + '"] .lib-origin');
+    return el && el.textContent === 'Neutral';
+  }), 'Herkunfts-Badge Neutral in Alle-Ansicht');
+
+  const nations = Object.keys(w.DC_NATION_DECKS);
+  nations.forEach((n) => {
+    lib._setNationFilter(n);
+    lib.render();
+    const vis = ids();
+    const pool = w.DC_CATALOG.cards.filter((c) => c.nation === n && c.typ !== 'Doktrin' && c.typ !== 'Token');
+    const dok = (w.DC_NATION_DECKS[n].doktrinen || []);
+    assert.equal(vis.length, 102, n + ' sichtbar ' + vis.length);
+    assert.equal(new Set(vis).size, 102);
+    assert.equal(pool.length, 100, n + ' Pool');
+    assert.equal(dok.length, 2, n + ' Doktrinen');
+    assert(dok.every((id) => vis.includes(id)), n + ' Starter-Doktrinen sichtbar');
+    assert(pool.every((c) => vis.includes(c.id)), n + ' Pool sichtbar');
+    assert(!vis.includes('dc_so_napalm'), 'Napalm nicht unter ' + n);
+    vis.forEach((id) => {
+      const c = w.DC_CATALOG.cards.find((x) => x.id === id);
+      if (c.typ === 'Doktrin') assert.ok(dok.includes(id), n + ' fremde Doktrin ' + id);
+      else assert.equal(c.nation, n, n + ' Fremdkarte ' + id);
+    });
+    assert.equal(label[n], n + ' (100 + 2 Doktrinen)', label[n]);
+  });
+
+  lib._setNationFilter('__neutral');
+  lib.render();
+  const neu = ids();
+  assert.equal(neu.length, 113, 'Neutral sichtbar ' + neu.length);
+  assert(neu.includes('dc_so_napalm'));
+  assert.equal(label['__neutral'], 'Neutral (113)', label['__neutral']);
+  const unusedDok = ['dc_dok_blitzkrieg', 'dc_dok_bollwerk', 'dc_dok_sicherer_nachschub', 'dc_dok_tiefenverteidigung'];
+  unusedDok.forEach((id) => assert(neu.includes(id), 'unzugeordnete Doktrin ' + id));
+  nations.forEach((n) => {
+    (w.DC_NATION_DECKS[n].doktrinen || []).forEach((id) => {
+      assert(!neu.includes(id), 'Starter-Doktrin ' + id + ' nicht unter Neutral');
+    });
+  });
+
+  // Deckbau: freies Mischen und beliebige 2 Doktrinen bleiben unabhängig vom Ansichtsfilter
+  lib.clearDraft();
+  lib._setNationFilter('Averon');
+  lib.render();
+  lib.addCard('dc_so_napalm');
+  lib.addCard('dc_dok_feuerplan'); // Steinmark-Starterdoktrin
+  lib.addCard('dc_dok_abloesung'); // Rothain
+  const d = lib.draft();
+  assert.equal(d.cards['dc_so_napalm'], 1, 'Napalm trotz Averon-Filter hinzufügbar');
+  assert.deepEqual(d.doctrines.slice().sort(), ['dc_dok_abloesung', 'dc_dok_feuerplan'].sort());
+  lib.clearDraft();
+  lib._setNationFilter('');
+  lib.render();
+}
+
+assert(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8').includes('divcmd-alpha40q'));
+assert(html.includes('app.js?v=alpha40q'));
 assert(html.includes('id="lib-rarity"'));
 assert(html.includes('id="lib-tag-panel"'));
 
-console.log('PASS library filters: rarity counts, tag AND, search display names, UI chrome');
+console.log('PASS library filters: rarity counts, tag AND, search display names, UI chrome, nation counts');
 dom.window.close();
