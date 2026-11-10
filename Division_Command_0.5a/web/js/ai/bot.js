@@ -131,7 +131,7 @@
     var hold = Number(cfg.holdAp) ? reserveNeed(engine, pid) : 0;
     if (agg >= 90) hold = 0;
     hold = Math.round(hold * (100 - agg) / 100);
-    if (apAfter < hold && d.typ !== 'Soforteinsatz') s -= (hold - apAfter) * 7;
+    if (apAfter < hold) s -= (hold - apAfter) * 7;
     if (p.ap <= 2 && cost >= 3 && empty > 2 && agg < 70) s -= 12;
     if (d.typ === 'Einheit' && !Number(cfg.allowUnit)) s = -200;
     if (d.typ === 'Unterstützung' && !Number(cfg.allowSupport)) s = -200;

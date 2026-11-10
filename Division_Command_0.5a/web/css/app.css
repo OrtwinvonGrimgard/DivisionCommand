@@ -85,6 +85,7 @@ button.primary {
 .card:hover { border-color: var(--gold); }
 .card .typ { font-size: 9px; letter-spacing: .1em; color: var(--gold); }
 .card.sofort { border-color: #c45c3e; }
+.card.unaffordable { opacity: 0.45; filter: grayscale(0.35); }
 .card.unit { border-color: #8b3a2a; }
 .card.eq { border-color: #5a5a5a; }
 .log { height: 220px; overflow: auto; font-size: 12px; color: #e6d4c8; background: #120808; padding: 6px; }

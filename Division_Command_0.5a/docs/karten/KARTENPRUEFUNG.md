@@ -38,7 +38,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 
 ## Offene Systemhinweise
 
-- Soforteinsätze kosten derzeit regelseitig 0 AP (`rules.instant_ap_test`); gedruckte AP und Rabatte auf Soforteinsätze sind wirkungslos (markiert).
+- (keine; Soforteinsätze kosten seit t231 den gedruckten AP-Wert, Rabatte greifen.)
 
 ## Geänderte Karten (vorher → nachher)
 
@@ -3150,7 +3150,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 ### Gesetzte Lage (`dc_b_gesetzte_lage_879`, Soforteinsatz) – aus-code
 - vorher: Nächste Sofort kostet 1 weniger (min. 0).
 - nachher: Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).
-- Hinweis: wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)
 
 ### Gegenzug (`dc_b_gegenzug_880`, Soforteinsatz) – aus-code
 - vorher: Eigene Angriffe +1 ATK bis Zugende.
@@ -3215,7 +3214,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 ### Stundung (`dc_b_stundung_944`, Soforteinsatz) – aus-code
 - vorher: Nächste Sofort kostet 1 weniger (min. 0). [Stundung]
 - nachher: Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).
-- Hinweis: wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)
 
 ### Aufruf (`dc_b_aufruf_946`, Soforteinsatz) – aus-code
 - vorher: 1 eigene Einheit +2 DEF bis Zugende. [Aufruf]
@@ -3224,7 +3222,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 ### Hausblatt (`dc_b_hausblatt_947`, Soforteinsatz) – aus-code
 - vorher: Nächste Sofort kostet 1 weniger (min. 0). [Hausblatt]
 - nachher: Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).
-- Hinweis: wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)
 
 ### Versorgungszeile (`dc_b_versorgungszeile_949`, Soforteinsatz) – aus-code
 - vorher: Ziehe 2; wirf 1 ab.
@@ -3261,7 +3258,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 ### Gleichmäßiger Ruf (`dc_b_gleichmaessiger_ruf_765`, Soforteinsatz) – aus-code
 - vorher: Nächste Sofort kostet 1 weniger (min. 0). [Gleichmäßiger Ruf]
 - nachher: Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).
-- Hinweis: wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)
 
 ### Nachtstellung (`dc_b_nachtstellung_766`, Soforteinsatz) – aus-code
 - vorher: Einheit +1 ATK/+1 DEF wenn sie diesen Zug nicht bewegt wurde. [Nachtstellung]
@@ -3310,7 +3306,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 ### Straßenöffnen (`dc_b_strassenoeffnen_207`, Soforteinsatz) – aus-code
 - vorher: Nächste Sofort kostet 1 weniger (min. 0). [Straßenöffnen]
 - nachher: Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).
-- Hinweis: wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)
 
 ### Sandfarbe (`dc_b_sandfarbe_208`, Soforteinsatz) – aus-code
 - vorher: Ziel −1 DEF bis Zugende. [Sandfarbe]
@@ -3411,7 +3406,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 ### Befehlskopien (`dc_b_befehlskopien_586`, Soforteinsatz) – aus-code
 - vorher: Kopiere: nächste Sofort kostet 1 weniger (min. 0).
 - nachher: Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).
-- Hinweis: wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)
 
 ### Doppelbeobachtung (`dc_b_doppelbeobachtung_587`, Soforteinsatz) – aus-code
 - vorher: Markiere 2 Feinde als beobachtet.
@@ -3640,7 +3634,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 ### Quelle nennen (`dc_b_quelle_nennen_466`, Soforteinsatz) – aus-code
 - vorher: Nächste Sofort kostet 1 weniger (min. 0). [Quelle nennen]
 - nachher: Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).
-- Hinweis: wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)
 
 ### Stillprobe (`dc_b_stillprobe_467`, Soforteinsatz) – spezifisch
 - vorher: Feind kann diesen Zug nicht aufdecken/angegriffen werden? Negiere Aufklärungsschutz; −2 ATK.
@@ -3657,7 +3650,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 ### Fachprüfung (`dc_b_fachpruefung_470`, Soforteinsatz) – aus-code
 - vorher: Decke Hand des Gegners (1 Karte); spiele Sofort um 1 weniger.
 - nachher: Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).
-- Hinweis: wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)
 
 ### Fanatischer Kommandant (`dc_eq_fanat`, Ausrüstung) – abkürzung
 - vorher: An Infanterie. Reale Kosten 4 AP. Träger +2 A / +2 V.
@@ -4138,4 +4130,3 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - Haubitzenzug (`dc_eh_haubitze`): Werte 10 weit über Median 7 bei 4 AP
 - Schwerer Panzer Koloss (`dc_eh_koloss`): Werte 16 weit über Median 9 bei 5 AP
 - Lagerhaus (`dc_su_lager`): dauerhafter Ausrüstungsrabatt (stapelbar je Unterstützung)
-- Vertragsclip (`dc_b_vertragsclip_182`): wirkungslos: Soforteinsätze kosten derzeit 0 AP

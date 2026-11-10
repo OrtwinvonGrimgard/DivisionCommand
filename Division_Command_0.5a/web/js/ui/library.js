@@ -192,7 +192,7 @@
     diplomatie: { name: 'Diplomatie', text: 'Politischer Druck, Frieden oder Gesellschaft — nicht der reine Feuerkampf.' },
     doktrin: { name: 'Doktrin', text: 'Strategische Ausrichtung des Decks. Liegt offen, bestimmt Dauereffekte.' },
     operation: { name: 'Operation', text: 'Bleibt liegen, bis eine Bedingung erfüllt ist. Dann wird der Effekt ausgelöst.' },
-    soforteinsatz: { name: 'Soforteinsatz', text: 'Einmaliger Einsatz, meist 0 AP. Danach auf den Friedhof.' },
+    soforteinsatz: { name: 'Soforteinsatz', text: 'Einmaliger Einsatz zum gedruckten AP-Preis. Danach auf den Friedhof.' },
     unterstuetzung: { name: 'Unterstützung', text: 'Dauerhafte Karte im Support. Auren, Erzeugung, Logistik.' },
     ausruestung: { name: 'Ausrüstung', text: 'Wird an eine Einheit angelegt und verändert deren Werte oder Optionen.' },
     token: { name: 'Token', text: 'Kein Deckblatt, sondern Markierung auf dem Feld (Mine, Nebel, Befestigung).' }
@@ -267,7 +267,7 @@
   }
   function realCost(c) {
     if (!c || c.typ === 'Doktrin') return '—';
-    if (c.typ === 'Soforteinsatz') return '0 AP (Soforteinsatz)';
+    if (c.typ === 'Soforteinsatz') return String(Math.max(0, Number(c.ap || 0))) + ' AP';
     var printed = Number(c.ap || 0);
     var real = Math.max(1, printed);
     return real + ' AP real' + (printed !== real ? ' (gedruckt ' + printed + ')' : '');
@@ -312,7 +312,7 @@
           '<div class="fight">' +
             (c.atk != null ? '<span><b>ATK</b> ' + c.atk + '</span>' : '') +
             (c.def != null ? '<span><b>DEF</b> ' + c.def + '</span>' : '') +
-            '<span><b>AP</b> ' + (c.typ === 'Soforteinsatz' ? '0' : String(Math.max(c.typ === 'Doktrin' ? 0 : 1, Number(c.ap || 0)))) + '</span>' +
+            '<span><b>AP</b> ' + (c.typ === 'Soforteinsatz' ? String(Math.max(0, Number(c.ap || 0))) : String(Math.max(c.typ === 'Doktrin' ? 0 : 1, Number(c.ap || 0)))) + '</span>' +
           '</div>' +
           (window.DCKw ? DCKw.html(c) : '') +
           '<p class="body">' + esc(c.text || '') + '</p>' +

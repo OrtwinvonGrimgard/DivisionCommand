@@ -87,7 +87,6 @@ window.DC_CATALOG = window.DC_CATALOG || {
     "ap_persist_through_opponent": true,
     "ap_expire_on_own_turn": true,
     "attack_ap": 1,
-    "instant_ap_test": 0,
     "equip_ap_test": 0,
     "front_sections": 3,
     "slots_per_section": 3,

@@ -33384,9 +33384,7 @@
    "set": "set_nations",
    "typ": "Soforteinsatz",
    "datei": "soforteinsatz",
-   "flags": [
-    "wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Nächste Sofort kostet 1 weniger (min. 0).",
@@ -34323,9 +34321,7 @@
    "set": "set_nations",
    "typ": "Soforteinsatz",
    "datei": "soforteinsatz",
-   "flags": [
-    "wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Nächste Sofort kostet 1 weniger (min. 0). [Stundung]",
@@ -34475,9 +34471,7 @@
    "set": "set_nations",
    "typ": "Soforteinsatz",
    "datei": "soforteinsatz",
-   "flags": [
-    "wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Nächste Sofort kostet 1 weniger (min. 0). [Hausblatt]",
@@ -34988,9 +34982,7 @@
    "set": "set_nations",
    "typ": "Soforteinsatz",
    "datei": "soforteinsatz",
-   "flags": [
-    "wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Nächste Sofort kostet 1 weniger (min. 0). [Gleichmäßiger Ruf]",
@@ -35631,9 +35623,7 @@
    "set": "set_nations",
    "typ": "Soforteinsatz",
    "datei": "soforteinsatz",
-   "flags": [
-    "wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Nächste Sofort kostet 1 weniger (min. 0). [Straßenöffnen]",
@@ -36989,9 +36979,7 @@
    "set": "set_nations",
    "typ": "Soforteinsatz",
    "datei": "soforteinsatz",
-   "flags": [
-    "wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Kopiere: nächste Sofort kostet 1 weniger (min. 0).",
@@ -40122,9 +40110,7 @@
    "set": "set_nations",
    "typ": "Soforteinsatz",
    "datei": "soforteinsatz",
-   "flags": [
-    "wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Nächste Sofort kostet 1 weniger (min. 0). [Quelle nennen]",
@@ -40362,9 +40348,7 @@
    "set": "set_nations",
    "typ": "Soforteinsatz",
    "datei": "soforteinsatz",
-   "flags": [
-    "wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Decke Hand des Gegners (1 Karte); spiele Sofort um 1 weniger.",
@@ -41182,9 +41166,7 @@
    "set": "set_nations",
    "typ": "Ausrüstung",
    "datei": "ausruestung",
-   "flags": [
-    "wirkungslos: Soforteinsätze kosten derzeit 0 AP"
-   ],
+   "flags": [],
    "modus": "spezifisch",
    "vorher": {
     "text": "Elite/Unterstützung: Soforteinsatz −1 Kosten.",

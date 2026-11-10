@@ -474,10 +474,9 @@
       return false;
     }
 
-    costOf(def, player, kind, inst) {
+    costOf(def, player, kind, inst, consume) {
       if (inst && inst.flags && inst.flags.freePlayOnTurn === this.state.turn) return 0;
       if (player && player.flags && player.flags.infLostTurn === this.state.turn && (def.effects || []).some((e) => e.code === 'PLAY_FREE_IF_INFANTRY_DESTROYED')) return 0;
-      if (kind === 'instant' || def.typ === 'Soforteinsatz') return this.rules.instant_ap_test || 0;
       let cost = Number(def.ap || 0);
       if (def.typ === 'Ausrüstung') cost = Number(def.ap || 0) + Number(this.rules.equip_ap_test || 0);
       if (player) this._auras(player).forEach((a) => { // jedes Element
@@ -520,7 +519,7 @@
         if (ix >= 0) {
           const red = Number(player.flags.costNext[ix].amount || 1);
           cost = Math.max(want === 'Soforteinsatz' ? 0 : 1, cost - red);
-          player.flags.costNext.splice(ix, 1);
+          if (consume) player.flags.costNext.splice(ix, 1);
         }
       }
       if (player && player.flags && player.flags.tacticDiscount && def.typ !== 'Soforteinsatz') {
@@ -1156,7 +1155,7 @@
       if (!found) throw new Error('Karte nicht auf der Hand'); // Regelverstoß, Zug ungültig
       const def = this.defOf(found); // unveränderliche Bindung in diesem Block
       if (a.target && this._tacEffectTargetAllowed && !this._tacEffectTargetAllowed(def,a.target)) throw new Error('Ziel darf sein Feld nicht verlassen');
-      const cost = this.costOf(def, p, null, found);
+      const cost = this.costOf(def, p, null, found, true);
       const isActive = this.state.active === pid && this.state.phase === 'main'; // unveränderliche Bindung in diesem Block
       if (def.typ !== 'Soforteinsatz' && !isActive) throw new Error('Nur Soforteinsätze als Reaktion'); // Regelverstoß, Zug ungültig
       if (def.typ !== 'Einheit') {
@@ -1315,7 +1314,7 @@
       const slot = a.slot; // unveränderliche Bindung in diesem Block
       if (!slot || !p.front[slot.section] || !(slot.row >= 0 && slot.row <= 2)) throw new Error('Ungültige Stellung');
       if (p.front[slot.section][slot.row]) throw new Error('Stellung belegt'); // Regelverstoß, Zug ungültig
-      let due = pend.paid ? 0 : (pend.cost != null ? pend.cost : this.costOf(this.defOf(card), p, null, card));
+      let due = pend.paid ? 0 : (pend.cost != null ? pend.cost : this.costOf(this.defOf(card), p, null, card, true));
       const relief = this._kwReliefAt(p, slot.section, slot.row);
       if (pend.free) due=0;
       if (!pend.paid && relief && due > 1) due -= 1;

@@ -23,8 +23,6 @@ for c in units:
 for c in cards.values():
     for e in c.get('effects') or []:
         p = e.get('param') or {}
-        if e['code'] == 'COST_NEXT' and p.get('type') == 'Soforteinsatz': flags[c['id']].append('wirkungslos: Soforteinsätze kosten derzeit 0 AP (Regel instant_ap_test)')
-        if e['code'] == 'EQUIP_DISCOUNT_AURA' and p.get('type') == 'Soforteinsatz': flags[c['id']].append('wirkungslos: Soforteinsätze kosten derzeit 0 AP')
         if e['code'] == 'CM' and p.get('k') == 'aura' and p.get('scope') == 'all' and not p.get('filter') and not p.get('when'): flags[c['id']].append('globale Aura ohne Filter/Bedingung – stark')
         if e['code'] == 'EQUIP_DISCOUNT': flags[c['id']].append('dauerhafter Ausrüstungsrabatt (stapelbar je Unterstützung)')
 out = []
@@ -50,7 +48,7 @@ o += ['', '## Engine-Korrekturen', '',
       '- `EQUIP_HEAL_ONCE` mit `perTurn` wurde nie zurückgesetzt → einmal pro Zug.',
       '- Alpha: Freiwilligenzug, Zweite Welle, Stoßkolonne, Nachrücker, Feldprediger implementiert; Unterstützungsfähigkeiten (Feuerauftrag, Drohnenschlag, Finte, Lazarett, Nachangriff, Aufklärung, Nachschub, Satellit) startbar; Lazarett behält den Patienten; Kommunikationszentrale macht eine Einheit erneut angriffsbereit.',
       '- Sammelpunkt / Glaubensbanner: tote Codes durch implementierte ersetzt.', '',
-      '## Offene Systemhinweise', '', '- Soforteinsätze kosten derzeit regelseitig 0 AP (`rules.instant_ap_test`); gedruckte AP und Rabatte auf Soforteinsätze sind wirkungslos (markiert).', '',
+      '## Offene Systemhinweise', '', '- (keine; Soforteinsätze kosten den gedruckten AP-Wert, Rabatte greifen.)', '',
       '## Geänderte Karten (vorher → nachher)', '']
 for e in out:
     if not (e['text_geaendert'] or e['mechanik_geaendert']): continue

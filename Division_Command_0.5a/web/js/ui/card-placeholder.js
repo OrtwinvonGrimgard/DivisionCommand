@@ -7,7 +7,7 @@
   function html(def, cls) {
     var stats = def.atk != null ? '<span class="ph-stats">ATK ' + def.atk + ' · DEF ' + def.def + '</span>' : '';
     return '<span class="' + esc(cls || 'art') + ' card-ph" role="img" aria-label="' + esc(def.name) + ' – Entwurf ohne Artwork">' +
-      '<span class="ph-head"><b class="ph-ap" title="AP-Kosten">' + esc(def.typ === 'Soforteinsatz' ? 0 : def.ap) + '</b><span class="ph-name">' + esc(def.name) + '</span></span>' +
+      '<span class="ph-head"><b class="ph-ap" title="AP-Kosten">' + esc(def.typ === 'Soforteinsatz' ? Math.max(0, Number(def.ap || 0)) : def.ap) + '</b><span class="ph-name">' + esc(def.name) + '</span></span>' +
       '<span class="ph-kind">' + esc(def.klasse || def.typ) + ' · ' + esc(def.nation || '') + '</span>' +
       '<span class="ph-text">' + (global.DCKw ? global.DCKw.html(def) : '') + esc(def.text || '') + '</span>' + stats +
       '<span class="ph-flag">Entwurf · noch kein Artwork</span></span>';

@@ -251,8 +251,8 @@
 
     // ---- Cost discounts ----
     var _cost = proto.costOf;
-    proto.costOf = function (def, player, kind, inst) {
-      var cost = _cost.call(this, def, player, kind, inst);
+    proto.costOf = function (def, player, kind, inst, consume) {
+      var cost = _cost.call(this, def, player, kind, inst, consume);
       if (!player || !def) return cost;
       var p;
       // BREITES_AUFGEBOT: infantry cheaper + later DEF baked on play

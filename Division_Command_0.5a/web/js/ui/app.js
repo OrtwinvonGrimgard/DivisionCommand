@@ -1296,12 +1296,12 @@
     var cost = '';
     var costNote = '';
     if (engine && def && def.typ !== 'Doktrin' && !facedown) {
-      var printed = def.typ === 'Soforteinsatz' ? 0 : Number(def.ap || 0);
+      var printed = Number(def.ap || 0);
       var real = engine.costOf(def, engine.player(activePlayer()));
+      cost = real + ' AP real';
       if (def.typ === 'Soforteinsatz') {
-        cost = '0 AP (Soforteinsatz)';
+        if (printed !== real) costNote = 'Gedruckt: ' + printed + ' AP. Rabatte können senken (mind. 0).';
       } else {
-        cost = real + ' AP real';
         if (printed !== real) costNote = 'Gedruckt: ' + printed + ' AP. Abweichend gilt mindestens 1 AP, plus Doktrinen.';
         else if (printed === 0) costNote = 'Gedruckt 0 AP — abweichend kostet die Karte 1 AP.';
       }
@@ -2579,7 +2579,8 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     dirty = applyHtml($('#hand'), me.hand.map(function (c) { // Handkarten
       var d = engine.defOf(c); // lokale Variable
       var cost = engine.costOf(d, me); // lokale Variable
-      return '<div class="card ' + cardClass(d.typ) + '" data-uid="' + c.uid + '">' + // Wert zurückgeben
+      var una = (me.ap < cost) ? ' unaffordable' : '';
+      return '<div class="card ' + cardClass(d.typ) + una + '" data-uid="' + c.uid + '"' + (me.ap < cost ? ' title="Nicht genug AP (' + me.ap + '/' + cost + ')"' : '') + '>' + // Wert zurückgeben
         artTag(d, false) + // Bild-HTML der Karte
         '<div class="body"><div class="unit-name">' + escapeHtml(d.name) + '</div>' + // HTML-Sonderzeichen escapen
         '<div class="unit-stats">' + cost + ' AP' + (d.atk != null ? ' · A' + d.atk + '/V' + d.def : '') + '</div></div></div>';
