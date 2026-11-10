@@ -536,7 +536,7 @@
               <h2 id="vorstellung">Grundlegende Vorstellung</h2>
               <p>Division Command ist ein taktisches Kartenspiel um eine moderne Division. Zwei Spieler führen Einheiten, Unterstützung, Einsätze, Ausrüstung und zwei Doktrinen. Die Grundregeln bleiben kurz. Die Tiefe kommt aus den Karten, nicht aus einer langen Phasenliste.</p>
               <p>Das Feld ist eine Front aus neun Stellungen: linke Flanke, Zentrum und rechte Flanke, jede mit drei Reihen. Dahinter liegt der Support. Dazwischen das Niemandsland für Minen, Sperren und andere Marker. Einheiten werden in eine Stellung gelegt und bleiben dort, bis eine Karte sie verlegt oder zerstört. Ein normaler Angriff trifft die Stellung gegenüber und die beiden seitlich daneben. Artillerie mit Steilfeuer reicht weiter.</p>
-              <p>Ein Zug ist frei: legen, angreifen, aufdecken, reagieren, solange die Aktionspunkte reichen, dann abgeben. Zu Beginn des eigenen Zuges kommen 5 AP dazu (Ausnahme: der Startspieler hat im allerersten Zug nur 3 AP). Was übrig bleibt, liegt weiter. 5 ist der Startwert, kein Limit. Ein Speicherdeckel, etwa 10, ist noch nicht fest.</p>
+              <p>Ein Zug ist frei: legen, angreifen, aufdecken, reagieren, solange die Aktionspunkte reichen, dann abgeben. Zu Beginn des eigenen Zuges kommen 5 AP dazu, auch für den Startspieler im ersten Zug. Dafür zieht der Startspieler in Zug 1 keine Karte; der Gegner zieht zu Beginn seines ersten Zuges wie immer 1. Was übrig bleibt, liegt weiter. 5 ist der Startwert, kein Limit. Ein Speicherdeckel, etwa 10, ist noch nicht fest.</p>
               <p>Das Spiel soll vom Blauhelm bis zum Abgrund der Kriegsführung reichen: Logistik, Aufklärung und Versorgung auf der einen Seite, Propaganda, Opfer und Flächenwirkung auf der anderen. Klassen sind Infanterie, Rad und Kette. Artillerie und Panzer sind Klassen, keine Tags. Tags vergibt du selbst und hängst die Effekte später daran.</p>
 
               <h2 id="regeln">Spielregeln</h2>
@@ -578,7 +578,7 @@
               <table>
                 <thead><tr><th>Begriff</th><th>Bedeutung</th></tr></thead>
                 <tbody>
-                  <tr><td>AP</td><td>Aktionspunkte. Bezahlen Legen, Angriff und Reaktion. +5 zu Beginn des eigenen Zuges (Startspieler im ersten Zug nur 3), Rest bleibt liegen.</td></tr>
+                  <tr><td>AP</td><td>Aktionspunkte. Bezahlen Legen, Angriff und Reaktion. +5 zu Beginn des eigenen Zuges (auch im ersten Zug), Rest bleibt liegen.</td></tr>
                   <tr><td>Stellung</td><td>Ein Platz an der Front. Neun Stück, drei je Flanke.</td></tr>
                   <tr><td>Eingraben</td><td>Frisch gelegte Einheit: offen mit Schild-Badge, nicht angreifbar / kein gezielter Effekt bis zum nächsten eigenen Zug; Flächenschaden trifft. +1 DEF bis Schutzende.</td></tr>
                   <tr><td>Flanke</td><td>Links, Zentrum oder rechts. Ein normaler Angriff trifft gegenüber und die Nachbarstellungen.</td></tr>
@@ -698,7 +698,7 @@
 
             <article class="hilfe-page dossier" id="hilfe-stand">
               <h2 id="version">Version 0.6b</h2>
-              <p>Aktueller Stand: Alpha 0.6b. Neu in 0.6b: Der Startspieler hat im ersten Zug 3 AP, verdeckte Fallen lösen bei Feindkontakt aus, Balance für gemischte Decks. Neu seit 0.5a: alle 1.746 Karten geprüft und im alpha40-Design neu gesetzt, Steilfeuer I–V für Artillerie, Soforteinsätze kosten ihre gedruckten AP, Balance aus Bot-Simulationen, Bibliotheksfilter nach Seltenheit und Tags. Kernspiel (Feld, Züge, Einheiten, Support, Soforteinsätze, Ausrüstung, Doktrinen, Bot, LAN, Deckbuilder, Benutzerakte) ist spielbar. Grafik und Sound sind funktional, aber noch nicht auf professionellem Niveau. 2,5D-Tischansicht als Option vorhanden.</p>
+              <p>Aktueller Stand: Alpha 0.6b. Neu in 0.6b: verdeckte Fallen, Balance; seit t257 haben beide Spieler im ersten Zug 5 AP (der Startspieler zieht in Zug 1 keine Karte), verdeckte Fallen lösen bei Feindkontakt aus, Balance für gemischte Decks. Neu seit 0.5a: alle 1.746 Karten geprüft und im alpha40-Design neu gesetzt, Steilfeuer I–V für Artillerie, Soforteinsätze kosten ihre gedruckten AP, Balance aus Bot-Simulationen, Bibliotheksfilter nach Seltenheit und Tags. Kernspiel (Feld, Züge, Einheiten, Support, Soforteinsätze, Ausrüstung, Doktrinen, Bot, LAN, Deckbuilder, Benutzerakte) ist spielbar. Grafik und Sound sind funktional, aber noch nicht auf professionellem Niveau. 2,5D-Tischansicht als Option vorhanden.</p>
               <h2 id="karten">Karten & Bot</h2>
               <p>Der Kartenpool umfasst 1.746 Karten: je Nation 100 Karten + 2 Doktrinen, frei über Nationen kombinierbar, 36 Doktrinen. Jede Fähigkeit ist in der Engine umgesetzt und getestet. Die Lore-Dateien sind bereits auf den detaillierten Stand gebracht.</p>
               <h2 id="roadmap">Roadmap (kurz)</h2>
@@ -791,7 +791,7 @@
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=st1"></script>
   <script src="js/ui/end-screen.js?v=1"></script>
-  <script src="js/ui/app.js?v=alpha40t"></script>
+  <script src="js/ui/app.js?v=alpha40u"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
   <script src="js/ui/audio-options.js?v=1"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>

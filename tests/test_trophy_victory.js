@@ -226,9 +226,9 @@ function put(eng, pid, cardId, section, row) {
 }
 
 
-// Starter first-turn AP penalty (4); second keeps 5; later turns normal
+// t257: kein Startspieler-AP-Abzug mehr – beide 5 AP im ersten Zug; später normal
 {
-  assert(DC_CATALOG.rules.opening_starter_ap_penalty === 2, 'starter AP penalty default 2');
+  assert(DC_CATALOG.rules.opening_starter_ap_penalty === 0, 'starter AP penalty default 0 (t257)');
   const deck = DCEngine.buildTestDeck(DC_CATALOG, DCEngine.rng(11)).slice(0, 60);
   const eng = new DCEngine.Engine(DC_CATALOG, { seed: 11 });
   eng.createMatch({
@@ -237,9 +237,9 @@ function put(eng, pid, cardId, section, row) {
     name0: 'A', name1: 'B',
   });
   assert(eng.state.active === 0, 'P1 starts');
-  assert(eng.player(0).ap === 3, 'starter first turn 3 AP got ' + eng.player(0).ap);
+  assert(eng.player(0).ap === 5, 'starter first turn 5 AP got ' + eng.player(0).ap);
   assert(eng.player(1).ap === 5, 'second still 5 AP bank got ' + eng.player(1).ap);
-  assert(eng.state.startCoin && eng.state.startCoin.starterApFirst === 3, 'coin records starterApFirst');
+  assert(eng.state.startCoin && eng.state.startCoin.starterApFirst === 5, 'coin records starterApFirst');
   eng.player(0).hand = eng.player(0).hand.slice(0, 7);
   eng.dispatch({ type: 'END_TURN', player: 0 });
   assert(eng.state.active === 1, 'P2 turn');

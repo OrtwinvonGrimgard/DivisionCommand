@@ -470,7 +470,7 @@ const summary = {
       victory_mode: (DC_CATALOG.rules && DC_CATALOG.rules.victory_mode) || 'trophy',
       deploy_protection: true,
       combat_counter: 'survivor_only',
-      opening_starter_ap_penalty: (DC_CATALOG.rules && DC_CATALOG.rules.opening_starter_ap_penalty) || 1,
+      opening_starter_ap_penalty: (DC_CATALOG.rules && DC_CATALOG.rules.opening_starter_ap_penalty != null) ? DC_CATALOG.rules.opening_starter_ap_penalty : 0,
       trophy_vp_to_win: (DC_CATALOG.rules && DC_CATALOG.rules.trophy_vp_to_win) || 5,
     },
     caveat: 'Trophy default (catalog.rules). Board-share + win rate; generic test bot may underplay nation-specific mechanics.',

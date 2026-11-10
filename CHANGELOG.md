@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- **Startspieler (t257):** Beide Spieler haben im ersten Zug **5 AP** (`opening_starter_ap_penalty` 2 → 0). Ausgleich bleibt das Ziehen: Der Startspieler zieht in Zug 1 keine Karte, der Zweite zieht zu Beginn seines ersten Zuges 1 und hat damit eine Karte mehr. Regeltexte (Hilfe, Glossar, Münzwurf-Overlay, docs/regeln). Startspieler-Quote mit dem t254-Bot: 47,8 % (Starter) und 48,5 % (Misch), zuvor 43,7 / 43,8 % angepasst; das „(Start: N)“-Badge erscheint nur noch bei aktivem Abzug. Cache `divcmd-alpha40u`. Messung: `docs/balance/STARTSPIELER_T257.md`.
+
 - **Balance und Reskins (t255):** Nationen neu ausbalanciert (Ziel 46–54 %). Gemessen wurde mit dem t254-Bot in 69.120 Partien je Modus. Hebel waren vor allem Doktrinpaare:
   - Abnutzung zieht keine Karte mehr.
   - Gepanzerter Fuß gibt nur noch ausgerüsteten Einheiten +1 DEF.

@@ -867,13 +867,13 @@
     var ov = document.getElementById('overlay');
     if (!ov) return;
     var starterAp = (sc.starterApFirst != null) ? sc.starterApFirst
-      : (engine.state.starterFirstTurnAp != null ? engine.state.starterFirstTurnAp : 3);
+      : (engine.state.starterFirstTurnAp != null ? engine.state.starterFirstTurnAp : 5);
     ov.innerHTML = '<div class="modal coin-toss-modal"><h2>Münzwurf</h2>' +
       '<div class="coin-toss-anim" aria-hidden="true">🪙</div>' +
       '<p class="coin-toss-msg">Münzwurf: <strong>' + escapeHtml(name) + '</strong> beginnt' +
       (sc.forced ? '' : ' <span class="tiny">(' + face + ')</span>') +
       '.</p>' +
-      '<p class="coin-toss-ap tiny">Startspieler: <strong>' + starterAp + ' AP</strong> im ersten Zug</p>' +
+      '<p class="coin-toss-ap tiny">Startspieler: <strong>' + starterAp + ' AP</strong> im ersten Zug, zieht in Zug 1 keine Karte. Der Gegner zieht zu Beginn seines ersten Zuges 1 Karte.</p>' +
       '<button type="button" class="primary" id="coin-start-ok">Los</button></div>';
     ov.style.display = 'flex';
     var btn = document.getElementById('coin-start-ok');
@@ -2570,9 +2570,11 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     var foe = st.players[viewer === 0 ? 1 : 0];
     $('#turnmeta').textContent = 'Zug ' + st.turn + ' · am Zug: ' + st.players[st.active].name + (st.winner != null ? ' · ENDE: ' + st.endReason : '');
     syncBombTimer();
-    // sichtbaren Text setzen — Startspieler Zug 1: Badge zeigt „(Start: 4)“
-    var apNote0 = (st.turn === 1 && st.startCoin && st.startCoin.winner === 0 && st.active === 0) ? ' (Start: 4)' : '';
-    var apNote1 = (st.turn === 1 && st.startCoin && st.startCoin.winner === 1 && st.active === 1) ? ' (Start: 4)' : '';
+    // Startspieler Zug 1: Badge „(Start: N)“ nur, wenn ein AP-Abzug aktiv ist (seit t257 Standard 0 → kein Badge)
+    var startAp = st.starterFirstTurnAp;
+    var startNote = (startAp != null && startAp < Number((engine.rules && engine.rules.ap_per_turn) || 5)) ? ' (Start: ' + startAp + ')' : '';
+    var apNote0 = (st.turn === 1 && st.startCoin && st.startCoin.winner === 0 && st.active === 0) ? startNote : '';
+    var apNote1 = (st.turn === 1 && st.startCoin && st.startCoin.winner === 1 && st.active === 1) ? startNote : '';
     var vpNeed = (engine._trophyVpToWin && engine._trophyActive && engine._trophyActive())
       ? engine._trophyVpToWin()
       : (Number((engine.rules && engine.rules.vp_to_win) || 5));

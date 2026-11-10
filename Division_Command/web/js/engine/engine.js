@@ -19,7 +19,7 @@
  * `{ ok:false }`. Nach Erfolg liegt der neue Stand in `state`.
  *
  * Regelbezüge (Auswahl): Eingraben; Gegenschlag `survivor_only`;
- * Steilfeuer RULES §7.1; verdeckte Fallen RULES §12.1; Startspieler 3 AP
+ * Steilfeuer RULES §7.1; verdeckte Fallen RULES §12.1; Startspieler 5 AP (kein Abzug seit t257)
  * im ersten Zug (`opening_starter_ap_penalty`).
  */
 (function (global) {
@@ -275,7 +275,7 @@
     }
     /**
      * Legt eine neue Partie an: zwei Spieler, gemischte Decks, Starthand, Zug 1.
-     * Startspieler hat im ersten Zug 3 statt 4 AP (`opening_starter_ap_penalty`, Standard 2).
+     * Beide Spieler haben im ersten Zug 5 AP (`opening_starter_ap_penalty`, Standard 0 seit t257). Ausgleich: Der Startspieler zieht in Zug 1 keine Karte, der Zweite zieht zu Beginn seines ersten Zuges 1.
      * Optionaler Münzwurf (`opening_coin`) bestimmt den Startspieler. Überschreibt `this.state`.
      * @param {object} opts `deck0/1`, `doctrine0/1`, `name0/1`, `mode`, `seed`, `startPlayer`, …
      * @returns {object} `this.state`
@@ -321,12 +321,12 @@
       this._draw(p0, this.rules.hand_start); // Karten vom Deck auf die Hand
       this._draw(p1, this.rules.hand_start); // Karten vom Deck auf die Hand
       const starter = this.player(startPid);
-      // Startspieler: 2 AP weniger nur im ersten Zug (Default 3 statt 5, t238). Spätere Züge normal via _actEnd.
+      // Startspieler-Abzug nur im ersten Zug (`opening_starter_ap_penalty`, Default 0 seit t257, vorher 2). Spätere Züge normal via _actEnd.
       const apFull = Number(this.rules.ap_per_turn || 5);
       const pen = Number(this.rules.opening_starter_ap_penalty);
       const starterPen = (this.rules.opening_starter_ap_penalty === false || this.rules.opening_starter_ap_penalty === 0)
         ? 0
-        : (isFinite(pen) && pen >= 0 ? pen : 2);
+        : (isFinite(pen) && pen >= 0 ? pen : 0);
       const starterAp = Math.max(0, apFull - starterPen);
       starter.ap = starterAp;
       if (startCoin) {
