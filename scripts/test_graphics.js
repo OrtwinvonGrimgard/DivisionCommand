@@ -33,7 +33,7 @@ for(const r of records.filter(r=>r.ready && r.type!=='Token')){
 const unfinished=records.find(r=>r.provenance==='missing_illustration');if(unfinished)assert(collection.get(unfinished.id).querySelector('.card-ph'));
 // The source model remains unchanged: presentation manifest alone retires a placeholder.
 assert.equal(c.art_status,'platzhalter');assert(!c.image);
-const html=fs.readFileSync(path.join(WEB,'index.html'),'utf8');assert(html.indexOf('js/data/card-faces.js')>html.indexOf('js/data/catalog.js'));assert(html.indexOf('js/data/card-faces.js')<html.indexOf('js/ui/app.js'));assert(html.includes('app.js?v=alpha40i'));
-assert(fs.readFileSync(path.join(WEB,'sw.js'),'utf8').includes('divcmd-alpha40i'));
+const html=fs.readFileSync(path.join(WEB,'index.html'),'utf8');assert(html.indexOf('js/data/card-faces.js')>html.indexOf('js/data/catalog.js'));assert(html.indexOf('js/data/card-faces.js')<html.indexOf('js/ui/app.js'));assert(html.includes('app.js?v=alpha40j'));
+assert(fs.readFileSync(path.join(WEB,'sw.js'),'utf8').includes('divcmd-alpha40j'));
 console.log('PASS graphics UI: ready-only routing; full-resolution hand/slot/inspect/collection/deckbuilder; hidden privacy; no unfinished artwork relabelled; rule records unchanged');
 h.dom.window.close();

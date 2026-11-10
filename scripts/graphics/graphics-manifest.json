@@ -21394,7 +21394,7 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": "gold",
-   "source_record_sha256": "ee5959a348a775aaa7c033a529af0fbb5a14a636aab6ae8857f524d01b93823e",
+   "source_record_sha256": "16cd7b02b93a0e7e449fe0dd8cc80fd694af3ba3d4efca7dfd70eeb939f9dff2",
    "kurz": "Feld und beide Hände auf den Ablagestapel. Beide ziehen 5. Münzwurf: wer beginnt.",
    "keywords": [],
    "printed_stats": {
@@ -21415,7 +21415,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "df4101f5895941e825c9a88d228401147c24f4989fe1d282dbaacb0c7e67c00a"
+   "output_sha256": "6ab0ae208d2fcdc6228ed91dff3a8bb8add4285e36babbc7204ff401fbd15449"
   },
   {
    "id": "dc_so_blinder_gehorsam",

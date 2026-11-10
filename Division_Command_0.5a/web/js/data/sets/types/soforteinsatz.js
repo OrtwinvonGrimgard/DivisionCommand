@@ -96,7 +96,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
         "code": "ARMAGEDDON"
       }
     ],
-    "flavor": "Alles dass, was jemals war, soll nun zum Staub verfallen",
+    "flavor": "Alles, was jemals war, soll nun zu Staub verfallen",
     "image": "soforteinsatz/A098.jpg",
     "max_copies": 1,
     "collector": "A098",
