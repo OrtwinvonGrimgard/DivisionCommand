@@ -7,6 +7,9 @@
   // '' = alle Karten; NEUTRAL = nur neutrale; sonst Nationenpool (eigene 100 Karten + 2 Doktrinen + Neutrale).
   var NEUTRAL = '__neutral';
   var filterNation = '';
+  var filterRarity = ''; // '' | bronze | silver | gold
+  var filterTags = []; // raw tag keys (lower), AND
+  var tagPanelQ = '';
 
   function cards() {
     return (global.DC_CATALOG && DC_CATALOG.cards) || [];
@@ -88,11 +91,12 @@
   }
   function matchesQuery(c) {
     if (!filterQuery) return true;
-    var blob = [c.name, c.typ, c.klasse, c.text, (c.keywords || []).join(' '), tags(c), c.flavor].join(' ').toLowerCase();
+    var tagNames = ((c && c.tags) || []).map(function (x) { return tagMeta(x).name; }).join(' ');
+    var blob = [c.name, c.typ, c.klasse, c.text, (c.keywords || []).join(' '), tags(c), tagNames, c.flavor, c.rarity].join(' ').toLowerCase();
     return blob.indexOf(filterQuery) >= 0;
   }
   function sections() {
-    var all = cards().filter(function (c) { return matchesTab(c) && matchesQuery(c) && matchesNation(c); });
+    var all = cards().filter(function (c) { return matchesTab(c) && matchesQuery(c) && matchesNation(c) && matchesRarity(c) && matchesTags(c); });
     var groups = [
       { title: 'Infanterie', list: all.filter(function (c) { return unitGroup(c) === 'Infanterie'; }) },
       { title: 'Panzer', list: all.filter(function (c) { return unitGroup(c) === 'Panzer'; }) },
@@ -195,10 +199,63 @@
   };
   function tagMeta(raw) {
     var key = String(raw || '').toLowerCase().replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss');
+    var sf = key.match(/^steilfeuer-(v|iv|iii|ii|i)$/);
+    if (sf) {
+      var roman = { i: 'I', ii: 'II', iii: 'III', iv: 'IV', v: 'V' }[sf[1]];
+      return { name: 'Steilfeuer ' + roman, text: 'Artillerie-Reichweite Stufe ' + roman + ' (Chip auf der Karte).' };
+    }
     if (TAG_META[key]) return TAG_META[key];
-    var pretty = String(raw || '');
-    pretty = pretty.charAt(0).toUpperCase() + pretty.slice(1);
+    var pretty = String(raw || '').replace(/-/g, ' ');
+    pretty = pretty.replace(/\b([a-zäöü])/g, function (m) { return m.toUpperCase(); });
     return { name: pretty, text: 'Kennzeichnung dieser Karte. Wirkt, sobald Regeln oder andere Karten diesen Begriff suchen.' };
+  }
+  function tagKey(raw) {
+    return String(raw || '').toLowerCase().replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss');
+  }
+  function rarityOf(c) {
+    if (!c) return '';
+    if (c.typ === 'Doktrin' || c.typ === 'Token' || c.typ === 'Asset') return '';
+    var r = String(c.rarity || 'bronze').toLowerCase();
+    if (r === 'silber') return 'silver';
+    if (r === 'bronze' || r === 'silver' || r === 'gold') return r;
+    return 'bronze';
+  }
+  function matchesRarity(c) {
+    if (!filterRarity) return true;
+    var r = rarityOf(c);
+    if (!r) return false; // Doktrinen/Token nur unter Alle
+    return r === filterRarity;
+  }
+  function matchesTags(c) {
+    if (!filterTags.length) return true;
+    var have = {};
+    ((c && c.tags) || []).forEach(function (x) { have[tagKey(x)] = true; });
+    for (var i = 0; i < filterTags.length; i++) {
+      if (!have[filterTags[i]]) return false;
+    }
+    return true;
+  }
+  function catalogTagStats() {
+    var counts = {};
+    cards().forEach(function (c) {
+      ((c && c.tags) || []).forEach(function (raw) {
+        var k = tagKey(raw);
+        if (!k) return;
+        counts[k] = (counts[k] || 0) + 1;
+      });
+    });
+    return Object.keys(counts).sort(function (a, b) {
+      return tagMeta(a).name.localeCompare(tagMeta(b).name, 'de') || a.localeCompare(b);
+    }).map(function (k) { return { key: k, name: tagMeta(k).name, count: counts[k] }; });
+  }
+  function rarityCounts() {
+    var out = { bronze: 0, silver: 0, gold: 0, other: 0 };
+    cards().forEach(function (c) {
+      var r = rarityOf(c);
+      if (!r) out.other++;
+      else out[r]++;
+    });
+    return out;
   }
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"]/g, function (ch) {
@@ -504,6 +561,94 @@
         render();
       });
     }
+    var rar = document.getElementById('lib-rarity');
+    if (rar && !rar._dcBound) {
+      rar._dcBound = true;
+      var rc = rarityCounts();
+      var optAll = rar.querySelector('option[value=""]');
+      if (optAll) optAll.textContent = 'Alle Seltenheiten (' + (rc.bronze + rc.silver + rc.gold + rc.other) + ')';
+      var ob = rar.querySelector('option[value="bronze"]');
+      if (ob) ob.textContent = 'Bronze (' + rc.bronze + ')';
+      var os = rar.querySelector('option[value="silver"]');
+      if (os) os.textContent = 'Silber (' + rc.silver + ')';
+      var og = rar.querySelector('option[value="gold"]');
+      if (og) og.textContent = 'Gold (' + rc.gold + ')';
+      rar.value = filterRarity;
+      rar.addEventListener('change', function () { filterRarity = rar.value; render(); });
+    }
+    bindTagFilter();
+  }
+
+  function bindTagFilter() {
+    var root = document.getElementById('lib-tag-filter');
+    var toggle = document.getElementById('lib-tag-toggle');
+    var panel = document.getElementById('lib-tag-panel');
+    var list = document.getElementById('lib-tag-list');
+    var q = document.getElementById('lib-tag-q');
+    var clear = document.getElementById('lib-tag-clear');
+    if (!root || !toggle || !panel || !list) return;
+    function paintToggle() {
+      var n = filterTags.length;
+      toggle.textContent = n ? ('Tags (' + n + ')') : 'Tags';
+      toggle.classList.toggle('on', n > 0);
+      toggle.setAttribute('aria-expanded', panel.hidden ? 'false' : 'true');
+    }
+    function paintList() {
+      var qv = String(tagPanelQ || '').trim().toLowerCase();
+      var rows = catalogTagStats().filter(function (row) {
+        if (!qv) return true;
+        return row.name.toLowerCase().indexOf(qv) >= 0 || row.key.indexOf(qv) >= 0;
+      });
+      list.innerHTML = rows.map(function (row) {
+        var on = filterTags.indexOf(row.key) >= 0;
+        return '<button type="button" class="lib-tag-opt' + (on ? ' on' : '') + '" role="option" aria-selected="' + (on ? 'true' : 'false') + '" data-tag="' + esc(row.key) + '">' +
+          '<span class="lib-tag-opt-name">' + esc(row.name) + '</span>' +
+          '<span class="lib-tag-opt-n">' + row.count + '</span></button>';
+      }).join('') || '<p class="tiny lib-tag-empty">Kein Tag.</p>';
+      list.querySelectorAll('[data-tag]').forEach(function (b) {
+        b.onclick = function (ev) {
+          ev.preventDefault();
+          var k = b.getAttribute('data-tag');
+          var i = filterTags.indexOf(k);
+          if (i >= 0) filterTags.splice(i, 1);
+          else filterTags.push(k);
+          paintToggle();
+          paintList();
+          render();
+        };
+      });
+    }
+    if (!root._dcBound) {
+      root._dcBound = true;
+      toggle.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        panel.hidden = !panel.hidden;
+        paintToggle();
+        if (!panel.hidden) {
+          paintList();
+          if (q) q.focus();
+        }
+      });
+      document.addEventListener('click', function (ev) {
+        if (panel.hidden) return;
+        if (root.contains(ev.target)) return;
+        panel.hidden = true;
+        paintToggle();
+      });
+      if (q) q.addEventListener('input', function () {
+        tagPanelQ = String(q.value || '');
+        paintList();
+      });
+      if (clear) clear.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        filterTags = [];
+        paintToggle();
+        paintList();
+        render();
+      });
+    }
+    paintToggle();
+    if (!panel.hidden) paintList();
   }
 
   function render() {
@@ -634,6 +779,12 @@
     visibleIds: function () { var out = []; sections().forEach(function (g) { g.list.forEach(function (c) { out.push(c.id); }); }); return out; },
     NEUTRAL: NEUTRAL,
     _setNationFilter: function (n) { filterNation = n || ''; },
+    _setRarityFilter: function (r) { filterRarity = r || ''; },
+    _setTagFilters: function (tags) { filterTags = (tags || []).map(tagKey); },
+    _tagMeta: tagMeta,
+    _rarityOf: rarityOf,
+    _catalogTagStats: catalogTagStats,
+    _rarityCounts: rarityCounts,
     render: render,
     fillSelects: fillSelects,
     saveNamed: saveNamed,

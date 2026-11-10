@@ -288,8 +288,26 @@
                 <button type="button" class="lib-tab" data-tab="Ausrüstung">AUSRÜSTUNG</button>
                 <button type="button" class="lib-tab" data-tab="Doktrinen">DOKTRINEN</button>
               </div>
-              <input id="lib-search" class="lib-search" type="search" placeholder="Suchen…" maxlength="40" autocomplete="off">
-              <select id="lib-nation" class="lib-nation" aria-label="Nationenpool filtern" title="Nur Ansichtsfilter: Decks dürfen Karten aller Nationen mischen."><option value="">Alle Nationen</option></select>
+              <div class="lib-filters">
+                <input id="lib-search" class="lib-search" type="search" placeholder="Suchen…" maxlength="40" autocomplete="off">
+                <select id="lib-nation" class="lib-nation" aria-label="Nationenpool filtern" title="Nur Ansichtsfilter: Decks dürfen Karten aller Nationen mischen."><option value="">Alle Nationen</option></select>
+                <select id="lib-rarity" class="lib-rarity" aria-label="Seltenheit filtern" title="Bronze 4× · Silber 2× · Gold 1×. Doktrinen nur unter Alle.">
+                  <option value="">Alle Seltenheiten</option>
+                  <option value="bronze">Bronze</option>
+                  <option value="silver">Silber</option>
+                  <option value="gold">Gold</option>
+                </select>
+                <div class="lib-tag-filter" id="lib-tag-filter">
+                  <button type="button" class="lib-tag-toggle" id="lib-tag-toggle" aria-expanded="false" aria-controls="lib-tag-panel">Tags</button>
+                  <div class="lib-tag-panel" id="lib-tag-panel" hidden>
+                    <div class="lib-tag-panel-head">
+                      <input id="lib-tag-q" class="lib-tag-q" type="search" placeholder="Tag suchen…" maxlength="40" autocomplete="off">
+                      <button type="button" class="lib-tag-clear" id="lib-tag-clear" title="Alle Tag-Filter löschen">Löschen</button>
+                    </div>
+                    <div class="lib-tag-list" id="lib-tag-list" role="listbox" aria-label="Tags" aria-multiselectable="true"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div id="lib-list" class="lib-list"></div>
           </div>
@@ -764,7 +782,7 @@
   <script src="js/ui/table-chat.js?v=nochat1"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/card-placeholder.js?v=gfx2-kw1"></script>
-  <script src="js/ui/library.js?v=mix1"></script>
+  <script src="js/ui/library.js?v=tag1"></script>
   <script src="js/ui/portraits.js?v=kit20"></script>
   <script src="js/data/table-art-data.js?v=1"></script>
   <script src="js/ui/table-card-art.js?v=gfx2-kw1"></script>
@@ -772,7 +790,7 @@
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=st1"></script>
   <script src="js/ui/end-screen.js?v=1"></script>
-  <script src="js/ui/app.js?v=alpha40e"></script>
+  <script src="js/ui/app.js?v=alpha40f"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
   <script src="js/ui/audio-options.js?v=1"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>
