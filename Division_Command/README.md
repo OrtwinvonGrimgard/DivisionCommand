@@ -1,6 +1,6 @@
 # Division Command
 
-Alpha **0.6a** — zynisch-dunkles Sammelkartenspiel (Front, Support, Niemandsland).
+Alpha **0.6b** — zynisch-dunkles Sammelkartenspiel (Front, Support, Niemandsland).
 
 ## Starten (Windows)
 

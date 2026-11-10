@@ -1,6 +1,6 @@
 # Division Command – Vollständige Projektdokumentation
 
-**Version:** Alpha 0.6a  
+**Version:** Alpha 0.6b  
 **Stand:** November 2026  
 **Repository:** DivisionCommand (OrtwinvonGrimgard)
 
@@ -153,7 +153,7 @@ Jede Nation hat eigene Doktrinen und thematische Decks. Taktische Lore beschreib
 
 ---
 
-## 7. Aktueller Status (Alpha 0.6a)
+## 7. Aktueller Status (Alpha 0.6b)
 
 **Erledigt:**
 - Grundengine, Trophy-Modus, Nationendecks, Lore-Dokumente.
@@ -162,12 +162,11 @@ Jede Nation hat eigene Doktrinen und thematische Decks. Taktische Lore beschreib
 - Doktrin-IDs korrigiert (Gefecht startet wieder).
 - 0.6a: Kartenprüfung aller 1.746 Karten, alpha40-Design, Steilfeuer I–V, Soforteinsätze mit gedruckten AP, Bibliotheksfilter (Seltenheit, Tags).
 - 0.6a: Bot-Hänger behoben (Reaktionsfenster bieten immer eine legale Aktion); Smoke- und Fuzz-Test schlagen bei Hängern fehl.
-- t238: Startspieler 3 AP im ersten Zug → Siegquote Startspieler 50,0 % (Starterdecks) / 50,2 % (gemischt), vorher 54,5 / 56,1 %.
-- t238: Verdeckte Fallen lösen bei Feindkontakt aus; realistischer Mischdeck-Generator; Caldris-Pool abgeschwächt.
+- 0.6b: Startspieler 3 AP im ersten Zug → Siegquote Startspieler 50,0 % (Starterdecks) / 50,2 % (gemischt), vorher 54,5 / 56,1 %.
+- 0.6b: Verdeckte Fallen lösen bei Feindkontakt aus; realistischer Mischdeck-Generator; Caldris-Pool in zwei Schritten abgeschwächt (Mischdeck 57,7 → 52,9 %).
 - 0.6a: Balance aus 11.520 Bot-Partien je Modus. Starterdecks liegen bei 45–53 % (`balance/BALANCE_T237.md`).
 
 **In Arbeit / Offen:**
-- Caldris-Doktrinen Etappensicherung/Rasten als größerer Balance-Hebel prüfen (`balance/BALANCE_T238.md`).
 - Tutorial und Onboarding.
 - Roguelike-Vertical-Slice (Fahrplan).
 
@@ -271,4 +270,4 @@ Division Command hat ein realistisch erreichbares Marktpotenzial in der Nische z
 ---
 
 **Ende der Dokumentation**  
-Diese Dokumentation fasst den Stand von Alpha 0.6a zusammen und dient als Einstieg für Entwickler, Playtester und Interessierte. Für detaillierte Regeltexte und Balancing-Daten siehe die genannten Markdown-Dateien im Repository.
+Diese Dokumentation fasst den Stand von Alpha 0.6b zusammen und dient als Einstieg für Entwickler, Playtester und Interessierte. Für detaillierte Regeltexte und Balancing-Daten siehe die genannten Markdown-Dateien im Repository.

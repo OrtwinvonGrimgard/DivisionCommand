@@ -8975,7 +8975,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 2,
-  "def": 4,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -9061,7 +9061,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 2,
-  "def": 4,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Durchschlag"
@@ -9488,7 +9488,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 4,
-  "def": 6,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Erbitterung"
@@ -9694,16 +9694,16 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +2 DEF dauerhaft.",
+  "text": "Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
   ],
   "effects": [
    {
     "code": "BUFF",
     "param": {
      "atk": 0,
-     "def": 2,
+     "def": 1,
      "until": "turn"
     }
    }
@@ -9938,16 +9938,16 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +1 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
      "atk": 0,
-     "def": 2
+     "def": 1
     }
    }
   ],

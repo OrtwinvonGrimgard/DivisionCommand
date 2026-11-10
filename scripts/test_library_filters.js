@@ -115,8 +115,8 @@ lib._setRarityFilter('');
 lib.render();
 assert.equal(ids().length, all);
 
-assert(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8').includes('divcmd-alpha40n'));
-assert(html.includes('app.js?v=alpha40n'));
+assert(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8').includes('divcmd-alpha40o'));
+assert(html.includes('app.js?v=alpha40o'));
 assert(html.includes('id="lib-rarity"'));
 assert(html.includes('id="lib-tag-panel"'));
 

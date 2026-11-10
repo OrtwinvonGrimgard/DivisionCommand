@@ -7984,7 +7984,7 @@
   "keywords": []
  },
  "dc_np_caldris_schild_heben": {
-  "kurz": "Eine eigene Fronteinheit: +2 DEF dauerhaft.",
+  "kurz": "Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8024,7 +8024,7 @@
   "keywords": []
  },
  "dc_np_caldris_schutzschild_leicht": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },

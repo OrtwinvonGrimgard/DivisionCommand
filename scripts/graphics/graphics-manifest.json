@@ -41572,13 +41572,13 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "silver",
-   "source_record_sha256": "e53a76c24193b70708be26805ac6c77083b5355fdde1a77113f29a440407c9ec",
+   "source_record_sha256": "96f5c6af72573e01e6b29ea91639cfb1e6e3b449b56ce2fec84618bb57101db8",
    "kurz": "Benachbarte eigene Fronteinheiten +2 DEF.",
    "keywords": [],
    "printed_stats": {
     "ap": 3,
     "atk": 2,
-    "def": 4,
+    "def": 3,
     "tags": [
      "einheit",
      "infanterie"
@@ -41594,7 +41594,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "8337a5ef0c81a62a5ef1e5b86f088b922bfcf5109dd4911f0bec129ce70051bb"
+   "output_sha256": "bb9a518719a5d4f9d59cbe7136766335d8cf9db813e3f4a14a827a9d6c96854a"
   },
   {
    "id": "dc_np_caldris_etappenwache",
@@ -41666,7 +41666,7 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "745da99e1599bd85603200a60be86137bd1de810e96ac2f1392f8c88b209cce9",
+   "source_record_sha256": "9d90d2fb5d4a3b83d54e4a21bf78658537e861b334f9e16280da536c8bf232de",
    "kurz": "",
    "keywords": [
     "Durchschlag"
@@ -41674,7 +41674,7 @@
    "printed_stats": {
     "ap": 3,
     "atk": 2,
-    "def": 4,
+    "def": 3,
     "tags": [
      "einheit",
      "panzer",
@@ -41692,7 +41692,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "e16a8620fb62f682684630b8cd2e6cc686425de16d056c70906e8dc68a66e480"
+   "output_sha256": "cd3bc8f80ac3b46f157401b0f0b967102957b21c2e317dab47b741c30e29ea65"
   },
   {
    "id": "dc_np_caldris_schildwagen",
@@ -42090,7 +42090,7 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "gold",
-   "source_record_sha256": "1027efadcb3dfe06eecb84367dd2a3191356c8a4bf6358a715130ccf6c819d0a",
+   "source_record_sha256": "81d83998a0342b85112e2e13dadd96d42d38cd346d0bc4d69a1b3286e0130452",
    "kurz": "Benachbarte eigene Fronteinheiten +2 DEF.",
    "keywords": [
     "Erbitterung"
@@ -42098,7 +42098,7 @@
    "printed_stats": {
     "ap": 5,
     "atk": 4,
-    "def": 6,
+    "def": 5,
     "tags": [
      "einheit",
      "elite",
@@ -42115,7 +42115,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "def56392386739f5e8070b3e68facc73944750b22afff30e961d4d004c4aaa61"
+   "output_sha256": "c52d987a1b11592ac5ee4da1f28ff3402f75e39855563fa1cf3163458952dc1c"
   },
   {
    "id": "dc_np_caldris_schildgarde",
@@ -42301,8 +42301,8 @@
    "type": "Soforteinsatz",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "04571aa96259f7b7807c8073b8e072e6f0b7118d145fb3ccbe5c6a425fe0f5d0",
-   "kurz": "Eine eigene Fronteinheit: +2 DEF dauerhaft.",
+   "source_record_sha256": "ecf3069f10e36964c768bf0626beb55d3bf41d4cfef399a55daf60b9245e2f9b",
+   "kurz": "Eine eigene Fronteinheit: +1 DEF dauerhaft.",
    "keywords": [],
    "printed_stats": {
     "ap": 1,
@@ -42322,7 +42322,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "4aac0fae916a3ff509c3ae3cc5ec60b49a9c7cad13e3f772aa26105f9778a5e4"
+   "output_sha256": "524a2b4c74e2a64628e3b3ccb07e09939f469f145b7d5e3548cd1bb830cfd7d4"
   },
   {
    "id": "dc_np_caldris_etappe_sichern",
@@ -42533,8 +42533,8 @@
    "type": "Ausrüstung",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "5aed7c963bac2bc01b0e8c0612ad24565e4d5d8f9b8d4c749fc9031eba3bf867",
-   "kurz": "Träger +2 DEF.",
+   "source_record_sha256": "68dcc8f6c86dbec4c5610cc93031f3638642a78c0ee303f44fab59a6532649d9",
+   "kurz": "Träger +1 DEF.",
    "keywords": [],
    "printed_stats": {
     "ap": 1,
@@ -42554,7 +42554,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "b792cdee668c05a214023940b8d3e75cf6a55240ead738349b6378f123696be3"
+   "output_sha256": "a8871cce6f962461a08ec0e7c15782730818c352d3db8d4a490946b4570efcf0"
   },
   {
    "id": "dc_np_caldris_verbandspaeckchen",

@@ -1,6 +1,8 @@
 # Changelog – Division Command
 
-## Unreleased (nach v0.6a)
+## 0.6b Alpha – 10.11.2026
+
+Neue Buchstabenversion: Startspieler-Regel geändert (3 AP im ersten Zug), verdeckte Fallen spielbar, Balance für realistische Mischdecks.
 
 ### Regeln & Engine
 - **Startspieler-Ausgleich:** Der Startspieler hat im ersten Zug **3 statt 4 AP** (`opening_starter_ap_penalty` 1 → 2). Keine Zusatzkarte; der Zweite zieht beim ersten Zugwechsel wie bisher 1 Karte. Simulation: Siegquote Startspieler 54,5 → 50,0 % (Starterdecks), realistische Mischdecks 50,2 % (je 34.560 Partien, ±0,5).
@@ -8,13 +10,14 @@
 
 ### Balance
 - **Realistischer Mischdeck-Generator** für Simulationen (`scripts/nation_pools/mixed_deck.js`): 30 Einheiten, 10 Ausrüstung, 8 Unterstützung, 12 Soforteinsätze, halb Pool, halb Starterdeck. Averon, Dargan und Ossaria liegen damit bei 48–51 %; die Werte unter 45 % aus t237 waren ein Artefakt des alten Testdecks.
-- **Caldris** im Mischdeck 57,7 → 53,7 %: 14 Poolkarten um eine Stufe schwächer (u. a. Panzerschild Caldris Schaden −2 → −1, Feldklinik 3 → 4 AP, Vollschutzweste +3 → +2 DEF). **Namar** Kaipanzerung 1 → 2 AP. Spannen: Starterdecks 47,1–53,5 %, Mischdecks 47,2–53,7 %. Details: `docs/balance/BALANCE_T238.md`.
+- **Caldris** im Mischdeck 57,7 → 53,7 %: 14 Poolkarten um eine Stufe schwächer (u. a. Panzerschild Caldris Schaden −2 → −1, Feldklinik 3 → 4 AP, Vollschutzweste +3 → +2 DEF). **Namar** Kaipanzerung 1 → 2 AP. Zweiter Schritt (t240): Schildträger 2/4 → 2/3, Sanitätspanzer 2/4 → 2/3, Oberste Fürsorge 4/6 → 4/5, Schild heben +2 → +1 DEF, Schutzschild leicht +2 → +1 DEF; Caldris gemischt 54,5 → 52,9 % (69.120 Partien), Starter 50,6 %. Details: `docs/balance/BALANCE_T240.md`. Spannen nach 0.6b: Starterdecks 47,0–53,3 %, Mischdecks 47,0–52,9 %. Details: `docs/balance/BALANCE_T238.md`.
 
 ### Grafik
 - Neue Motive: **Routenwache** (Sahr) in Sahr-Petrol-Tarnung statt Oliv/Khaki; **Ruderpanzer** zeigt nur das Ausrüstungsteil (Ruder-Panzerkit) statt eines ganzen Fahrzeugs.
 
-### Doku
-- Projektdokumentation (MD + PDF) mit 3-AP-Start, verdeckten Fallen und Balance-Stand t238 neu gebaut.
+### Doku & Version
+- Version 0.6b überall (VERSION, version.js, Build-Label, file_version_info 0.6.1.0, start.bat, Hilfe, README, LIESMICH).
+- Projektdokumentation (MD + PDF) mit 3-AP-Start, verdeckten Fallen und Balance-Stand neu gebaut.
 
 ### Aufräumen
 - Spielordner versionsneutral: `Division_Command_0.5a/` → `Division_Command/` (alle Skripte, Tests, Editor- und Doku-Pfade angepasst).
