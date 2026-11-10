@@ -1288,7 +1288,7 @@ def render(card, *args, **kwargs):
         im = paste_elite_order(im)
     im = finish_frame(im)
     typ = (card or {}).get("typ") or "Einheit"
-    if typ in ("Einheit", "Unterstützung", "Ausrüstung"):
+    if typ in ("Einheit", "Unterstützung", "Ausrüstung", "Soforteinsatz"):
         im = mill_coin(im, 210, 210, 118, int((card or {}).get("ap") or 0))
     if (card or {}).get("typ") == "Doktrin":
         d = ImageDraw.Draw(im)

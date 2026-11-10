@@ -84,7 +84,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Armageddon",
-    "ap": 0,
+    "ap": 8,
     "atk": null,
     "def": null,
     "tags": [
@@ -98,8 +98,9 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     ],
     "flavor": "Alles dass, was jemals war, soll nun zum Staub verfallen",
     "image": "soforteinsatz/A098.jpg",
-    "max_copies": 2,
-    "collector": "A098"
+    "max_copies": 1,
+    "collector": "A098",
+    "rarity": "gold"
   },
   {
     "id": "dc_so_blinder_gehorsam",

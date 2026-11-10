@@ -820,11 +820,15 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_so_armageddon` – Armageddon (Soforteinsatz)
 
+**Kosten:** 8 AP · Gold · max. 1 Kopie
+
 **Fläche:** Feld und beide Hände auf den Ablagestapel. Beide ziehen 5. Münzwurf: wer beginnt.
 
 **Volltext:**
 
 > Sämtliche Karten und Tokens vom Spielfeld und beide Hände auf den Ablagestapel. Beide ziehen 5. Münze bestimmt, wer wieder beginnt.
+
+**Engine-Stand:** Räumt Front und Support beider Seiten, danach Münze für den Neubeginn. Hände werden noch nicht geleert/nachgezogen (Dokumentation voraus).
 
 ## `dc_so_letzter` – Der Letzte der steht (Soforteinsatz)
 

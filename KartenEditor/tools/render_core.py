@@ -448,7 +448,7 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
     typ = card.get("typ") or "Einheit"
     pal = PAL.get(typ) or PAL["Einheit"]
     enamel, accent = pal["enamel"], pal["accent"]
-    show_ap = typ == "Einheit"
+    show_ap = typ not in ("Doktrin", "Token")
     show_stats = typ == "Einheit"
     show_art = typ != "Doktrin"
 
