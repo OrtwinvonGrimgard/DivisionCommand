@@ -219,12 +219,12 @@
       this._draw(p0, this.rules.hand_start); // Karten vom Deck auf die Hand
       this._draw(p1, this.rules.hand_start); // Karten vom Deck auf die Hand
       const starter = this.player(startPid);
-      // Startspieler: 1 AP weniger nur im ersten Zug (Default 4 statt 5). Spätere Züge normal via _actEnd.
+      // Startspieler: 2 AP weniger nur im ersten Zug (Default 3 statt 5, t238). Spätere Züge normal via _actEnd.
       const apFull = Number(this.rules.ap_per_turn || 5);
       const pen = Number(this.rules.opening_starter_ap_penalty);
       const starterPen = (this.rules.opening_starter_ap_penalty === false || this.rules.opening_starter_ap_penalty === 0)
         ? 0
-        : (isFinite(pen) && pen >= 0 ? pen : 1);
+        : (isFinite(pen) && pen >= 0 ? pen : 2);
       const starterAp = Math.max(0, apFull - starterPen);
       starter.ap = starterAp;
       if (startCoin) {

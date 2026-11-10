@@ -27,7 +27,7 @@ Playtest-Zielbild: VP-Siege ≥70 %, Sicherheitsnetz ≤25 %, Median ~14–18 Z�
 ## Eröffnung (alle Modi)
 
 - `opening_coin`: true (Münzwurf, seed-deterministisch; LAN über Host-State).
-- `opening_starter_ap_penalty`: 1 → Startspieler **4 AP nur im ersten Zug**, danach 5.
+- `opening_starter_ap_penalty`: 2 → Startspieler **3 AP nur im ersten Zug**, danach 5 (t238; vorher 1 → 4 AP).
 - Starthände 5/5; Startspieler zieht in Zug 1 nicht; Zweiter +1 Karte beim Zugbeginn.
 
 ## Weitere eingefrorene Kernregeln (Nov 2026)

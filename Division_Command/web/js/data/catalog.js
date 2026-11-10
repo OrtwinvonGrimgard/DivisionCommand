@@ -105,7 +105,7 @@ window.DC_CATALOG = window.DC_CATALOG || {
     "doctrine_slots": 2,
     "victory_mode": "trophy",
     "opening_coin": true,
-    "opening_starter_ap_penalty": 1,
+    "opening_starter_ap_penalty": 2,
     "trophy_vp_to_win": 5,
     "trophy_elite_vp": 2,
     "trophy_safety_empty_from": 26,

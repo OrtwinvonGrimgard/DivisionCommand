@@ -536,6 +536,8 @@ Vorläufige Grundregel:
 
 > Zu Beginn des eigenen Zuges erhält der Spieler 5 AP.
 
+**Startspieler-Ausgleich (verbindlich ab 0.6a, t238):** Der Startspieler (Münzwurf) hat im ersten Zug nur **3 AP** und zieht in Zug 1 nicht. Der Zweite zieht beim eigenen ersten Zugbeginn normal 1 Karte und erhält 5 AP. Regelwert `opening_starter_ap_penalty: 2` (vorher 1, also 4 AP).
+
 AP kann für normale Kartenaktionen und Reaktionen verwendet werden.
 
 AP kann durch Karten:

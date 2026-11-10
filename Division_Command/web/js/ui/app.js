@@ -805,7 +805,7 @@
     var ov = document.getElementById('overlay');
     if (!ov) return;
     var starterAp = (sc.starterApFirst != null) ? sc.starterApFirst
-      : (engine.state.starterFirstTurnAp != null ? engine.state.starterFirstTurnAp : 4);
+      : (engine.state.starterFirstTurnAp != null ? engine.state.starterFirstTurnAp : 3);
     ov.innerHTML = '<div class="modal coin-toss-modal"><h2>Münzwurf</h2>' +
       '<div class="coin-toss-anim" aria-hidden="true">🪙</div>' +
       '<p class="coin-toss-msg">Münzwurf: <strong>' + escapeHtml(name) + '</strong> beginnt' +

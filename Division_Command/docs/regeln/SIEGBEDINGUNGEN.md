@@ -62,7 +62,7 @@ Ziel: VP≥70 % · Safety≤25 % · Median 14–18.
 
 **Defaults = K.** Sim: `scripts/sim_trophy_sweep.mjs` → `sim_trophy_sweep.json`.
 
-**First-Player-Ausgleich (aktiv):** Startspieler **4 AP nur im ersten Zug** (`opening_starter_ap_penalty: 1`), danach 5. Starthände 5/5; Startspieler zieht in Zug 1 nicht, Zweiter +1 beim Zugbeginn. FP-Rate siehe 2b.
+**First-Player-Ausgleich (aktiv):** Startspieler **3 AP nur im ersten Zug** (`opening_starter_ap_penalty: 2`, seit t238; vorher 1 → 4 AP), danach 5. Starthände 5/5; Startspieler zieht in Zug 1 nicht, Zweiter +1 beim Zugbeginn. FP-Rate siehe 2b.
 
 
 ---
@@ -71,11 +71,11 @@ Ziel: VP≥70 % · Safety≤25 % · Median 14–18.
 
 `rules.opening_coin` (Default **true**). In `createMatch`: RNG entscheidet Kopf→Spieler 0 / Zahl→Spieler 1 (deterministisch aus Match-Seed → **LAN: Host-State sync**, beide Clients identisch). Override: `opts.startPlayer` 0|1.
 
-UI: Overlay „Münzwurf: **&lt;Spieler&gt;** beginnt“ + „Startspieler: 4 AP im ersten Zug“. Bot / Hotseat / LAN-Gast (via `dcSetState`).
+UI: Overlay „Münzwurf: **&lt;Spieler&gt;** beginnt“ + „Startspieler: 3 AP im ersten Zug“. Bot / Hotseat / LAN-Gast (via `dcSetState`).
 
 **Ausgleich im Detail:**
 
-1. **Startspieler −1 AP nur Zug 1** (4 statt 5) — `rules.opening_starter_ap_penalty` (Default 1). UI: „Startspieler: 4 AP im ersten Zug“.
+1. **Startspieler −2 AP nur Zug 1** (3 statt 5) — `rules.opening_starter_ap_penalty` (Default 2 seit t238, vorher 1). UI: „Startspieler: 3 AP im ersten Zug“.
 2. Starthände 5/5; Startspieler ohne Draw in Zug 1; Zweiter +1 beim Zugbeginn.
 
 Sim FP-Winrate nach Startspieler−1 AP Zug 1 (`scripts/sim_first_player.mjs`, ≥1200 RR):

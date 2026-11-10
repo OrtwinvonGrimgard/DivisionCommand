@@ -45,7 +45,7 @@ Der lokale Server (`server.py`) stellt das Spiel im Browser bereit. Hauptmenü e
 - **Support:** Unterstützungskarten ohne eigene ATK/DEF.
 - **Niemandsland:** Zwischen den Fronten.
 - **Hand, Deck, Friedhof, Doktrin-Fenster, Stapel, Operationszone.**
-- **AP:** 5 pro Zug (Startspieler im ersten Zug 4 als Ausgleich). Jede Karte kostet ihre gedruckten AP, auch Soforteinsätze; Rabatte greifen, nie unter 0. Unbezahlbare Karten sind ausgegraut.
+- **AP:** 5 pro Zug (Startspieler im ersten Zug 3 als Ausgleich). Jede Karte kostet ihre gedruckten AP, auch Soforteinsätze; Rabatte greifen, nie unter 0. Unbezahlbare Karten sind ausgegraut.
 - **Starthand:** 5 Karten.
 - **Verdeckt:** Teilweise implementiert.
 - **Steilfeuer I–V:** Reichweite der Artillerie, siehe 3.5.
@@ -164,7 +164,7 @@ Jede Nation hat eigene Doktrinen und thematische Decks. Taktische Lore beschreib
 - 0.6a: Balance aus 11.520 Bot-Partien je Modus. Starterdecks liegen bei 45–53 % (`balance/BALANCE_T237.md`).
 
 **In Arbeit / Offen:**
-- Startspielervorteil ≈ 54–56 % (Test mit 3 AP im ersten Zug: ≈ 51 %).
+- Startspieler hat seit t238 im ersten Zug 3 AP: Siegquote 50,9 % (Starterdecks) bzw. 52,6 % (gemischt), vorher mit 4 AP 54,5 / 56,1 %.
 - Gemischte Decks von Ossaria und Dargan unter 45 %.
 - Tutorial und Onboarding.
 - Roguelike-Vertical-Slice (Fahrplan).

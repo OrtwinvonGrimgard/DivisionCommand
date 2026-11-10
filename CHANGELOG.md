@@ -3,6 +3,7 @@
 ## Unreleased (nach v0.6a)
 
 ### Regeln & Engine
+- **Startspieler-Ausgleich:** Der Startspieler hat im ersten Zug **3 statt 4 AP** (`opening_starter_ap_penalty` 1 → 2). Keine Zusatzkarte; der Zweite zieht beim ersten Zugwechsel wie bisher 1 Karte. Simulation (11.520 Partien je Modus): Siegquote Startspieler 54,5 → 50,9 % (Starterdecks), 56,1 → 52,6 % (altes gemischtes Testdeck), je ±0,9.
 - **Verdeckte Fallen** im Support lösen bei Feindkontakt als Reaktion aus (ohne weitere AP, RULES §12.1). Vorher wurden sie angeboten, ließen sich aber nicht spielen. Ohne gültiges Ziel bleiben sie verdeckt liegen.
 
 ### Aufräumen
