@@ -427,7 +427,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Sturmfeuer",
     "ap": 2,
     "atk": 2,
-    "def": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -829,7 +829,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Kronsalve",
     "ap": 5,
     "atk": 5,
-    "def": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -934,7 +934,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Silberstern-Rohr",
     "ap": 4,
-    "atk": 5,
+    "atk": 4,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1072,7 +1072,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Stoßfeuer",
     "ap": 4,
     "atk": 4,
-    "def": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -1243,7 +1243,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Knotenrohr",
     "ap": 3,
     "atk": 4,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1276,7 +1276,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Lagefeuer",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -1313,7 +1313,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Lokalisierbatterie",
     "ap": 4,
     "atk": 4,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1390,19 +1390,19 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Nordmark-Rohr",
     "ap": 3,
     "atk": 4,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II. Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Steilfeuer II. Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -1425,7 +1425,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Westhaven-Batterie",
     "ap": 4,
-    "atk": 3,
+    "atk": 4,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -1462,7 +1462,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Kurzes Rohr",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1498,13 +1498,13 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Offenes Feuer",
     "ap": 4,
     "atk": 4,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II. +1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Steilfeuer II. +1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
@@ -1518,7 +1518,7 @@ window.DC_SET_TYPES["Artillerie"] = [
         "code": "CM",
         "param": {
           "k": "kill",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -1710,7 +1710,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Velis-Batterie",
     "ap": 4,
     "atk": 3,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1805,7 +1805,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Zeilenrohr",
     "ap": 3,
     "atk": 3,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1883,7 +1883,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Abschlussgeschütz",
     "ap": 4,
     "atk": 4,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1952,7 +1952,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Fälligkeitsfeuer",
     "ap": 3,
     "atk": 3,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1995,7 +1995,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Kalden-Batterie",
     "ap": 4,
-    "atk": 3,
+    "atk": 4,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -2667,7 +2667,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Linienrohr",
     "ap": 3,
     "atk": 3,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -2699,7 +2699,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Umgehungsbatterie",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -2732,7 +2732,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Linienbatterie",
     "ap": 4,
     "atk": 4,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -2804,7 +2804,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Straßenwurf",
     "ap": 3,
     "atk": 3,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-i",
@@ -2840,7 +2840,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Vorratsrohr",
     "ap": 4,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -2949,7 +2949,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Normgeschütz",
     "ap": 3,
-    "atk": 3,
+    "atk": 4,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -2977,7 +2977,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Feuerleitblatt-Rohr",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -3359,7 +3359,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Straßenfeuer",
     "ap": 3,
     "atk": 4,
-    "def": 2,
+    "def": 1,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -3492,7 +3492,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Signalfeuer-Rohr",
     "ap": 3,
     "atk": 3,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -3524,7 +3524,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Steinschlag-Batterie",
     "ap": 3,
     "atk": 4,
-    "def": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -3557,7 +3557,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Warnsalve",
     "ap": 4,
     "atk": 4,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -3619,7 +3619,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Passzoll-Rohr",
     "ap": 4,
-    "atk": 3,
+    "atk": 4,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -3725,7 +3725,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Enger Weg",
     "ap": 5,
     "atk": 5,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -3795,7 +3795,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Ruhebatterie",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -3829,7 +3829,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Sperrfeuer-Etappe",
     "ap": 4,
     "atk": 4,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -3899,7 +3899,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Grünfeld-Rohr",
     "ap": 4,
-    "atk": 3,
+    "atk": 4,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -3935,7 +3935,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Vollschutz",
     "ap": 5,
     "atk": 5,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -3970,7 +3970,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Kontrollsalve",
     "ap": 4,
     "atk": 4,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -4137,7 +4137,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Kareth-Kaliber",
     "ap": 2,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -4446,13 +4446,13 @@ window.DC_SET_TYPES["Artillerie"] = [
       "steilfeuer-ii",
       "artillerie"
     ],
-    "text": "Steilfeuer II. Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Steilfeuer II. Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }

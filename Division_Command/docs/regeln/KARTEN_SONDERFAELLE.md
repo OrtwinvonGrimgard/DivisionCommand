@@ -2,8 +2,6 @@
 
 Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schlüsselwort-Chips. Die vollständige Regel steht in der Detailansicht (Datenfeld `text`) und – für jede Karte, deren Flächentext gekürzt ist – hier, wortgleich, nach ID sortiert. Erzeugt von `scripts/cards-review/kurz.py`; `tests/test_card_faces_text.js` prüft, dass nichts verloren geht.
 
-Die bewusst gekürzten Teilsätze der Prüfung t212 (147 Sätze auf 143 Karten) stehen in [KARTEN_KUERZUNGEN.md](KARTEN_KUERZUNGEN.md), nicht hier. Hier stehen nur Flächentexte, die aus Platzgründen gegenüber dem Datenfeld `text` gekürzt sind.
-
 ## `dc_b_abloesung_660` – Ablösung (Soforteinsatz)
 
 **Fläche:** Zerstöre eine eigene Einheit; spiele dort eine Einheit aus der Hand mit Kosten bis ihre +1 und heile sie um 1.
@@ -92,14 +90,6 @@ Die bewusst gekürzten Teilsätze der Prüfung t212 (147 Sätze auf 143 Karten) 
 
 > Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.
 
-## `dc_b_halle_kalden_930` – Halle Kalden (Unterstützung)
-
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
-
-**Volltext:**
-
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
-
 ## `dc_b_hangstellung_232` – Hangstellung (Unterstützung)
 
 **Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.
@@ -180,14 +170,6 @@ Die bewusst gekürzten Teilsätze der Prüfung t212 (147 Sätze auf 143 Karten) 
 
 > Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 
-## `dc_b_linienknoten_690` – Linienknoten (Unterstützung)
-
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
-
-**Volltext:**
-
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
-
 ## `dc_b_lizenzhof_197` – Lizenzhof (Unterstützung)
 
 **Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.
@@ -254,19 +236,11 @@ Die bewusst gekürzten Teilsätze der Prüfung t212 (147 Sätze auf 143 Karten) 
 
 ## `dc_b_nordfall_uebung_813` – Nordfall-Übung (Unterstützung)
 
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.
 
 **Volltext:**
 
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.
-
-## `dc_b_offenes_feuer_802` – Offenes Feuer (Einheit)
-
-**Fläche:** Steilfeuer II. +1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.
-
-**Volltext:**
-
-> Steilfeuer II. +1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.
 
 ## `dc_b_oliv_halt_830` – Oliv Halt (Soforteinsatz)
 
@@ -324,14 +298,6 @@ Die bewusst gekürzten Teilsätze der Prüfung t212 (147 Sätze auf 143 Karten) 
 
 > Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 
-## `dc_b_tunnelnetz_236` – Tunnelnetz (Unterstützung)
-
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
-
-**Volltext:**
-
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
-
 ## `dc_b_umschlagzentrale_694` – Umschlagzentrale (Unterstützung)
 
 **Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK und +1 DEF. Dort sinkt der erste Schaden je Zug um 1.
@@ -340,21 +306,13 @@ Die bewusst gekürzten Teilsätze der Prüfung t212 (147 Sätze auf 143 Karten) 
 
 > Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.
 
-## `dc_b_velis_front_870` – Velis-Front (Unterstützung)
-
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
-
-**Volltext:**
-
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
-
 ## `dc_b_verbindungsnetz_815` – Verbindungsnetz (Unterstützung)
 
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK gegen beobachtete Ziele. Zugbeginn: decke einen verdeckten Feind auf.
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK gegen beobachtete Ziele. Zugbeginn: markiere 1 Feind als beobachtet.
 
 **Volltext:**
 
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK gegen beobachtete Ziele. Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK gegen beobachtete Ziele. Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.
 
 ## `dc_b_verbindungsstrasse_194` – Verbindungsstraße (Unterstützung)
 
@@ -379,14 +337,6 @@ Die bewusst gekürzten Teilsätze der Prüfung t212 (147 Sätze auf 143 Karten) 
 **Volltext:**
 
 > Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.
-
-## `dc_b_werkhoefe_novaris_812` – Werkhöfe Novaris (Unterstützung)
-
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
-
-**Volltext:**
-
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
 
 ## `dc_b_zeilenrohr_915` – Zeilenrohr (Einheit)
 
@@ -418,7 +368,7 @@ Die bewusst gekürzten Teilsätze der Prüfung t212 (147 Sätze auf 143 Karten) 
 
 **Volltext:**
 
-> Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, eine eigene Einheit dort heilt 1 und du ziehst 1 Karte.
+> Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK und eine eigene Einheit dort heilt 1.
 
 ## `dc_dok_auswertung` – Auswertung (Doktrin)
 
@@ -426,7 +376,7 @@ Die bewusst gekürzten Teilsätze der Prüfung t212 (147 Sätze auf 143 Karten) 
 
 **Volltext:**
 
-> Erleidet eine eigene Einheit Schaden und überlebt, hat sie bis zum Ende dieses Zuges +1 ATK (nicht stapelbar). Zeit wird zur Waffe — knapp bemessen.
+> Erleidet eine eigene Einheit Schaden und überlebt, hat sie bis zum Ende deines nächsten Zuges +1 ATK (nicht stapelbar).
 
 ## `dc_dok_blitzkrieg` – Blitzkrieg (Doktrin)
 
@@ -499,14 +449,6 @@ Die bewusst gekürzten Teilsätze der Prüfung t212 (147 Sätze auf 143 Karten) 
 **Volltext:**
 
 > Eigene Einheiten in Abschnitten mit höchstens zwei eigenen Einheiten haben +1 DEF und +1 ATK. Das System täuscht Stärke vor.
-
-## `dc_dok_schwerpunkt` – Schwerpunkt (Doktrin)
-
-**Fläche:** Zugbeginn: Stehen mindestens drei eigene Einheiten in einem Abschnitt, erhält der dichteste Abschnitt +1 ATK (Zug).
-
-**Volltext:**
-
-> Zu Beginn deines Zuges: Stehen mindestens drei eigene Einheiten in einem Abschnitt, erhält der dichteste Abschnitt +1 ATK bis Zugende.
 
 ## `dc_dok_sicherer_nachschub` – Sicherer Nachschub (Doktrin)
 

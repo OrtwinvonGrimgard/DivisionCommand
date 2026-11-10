@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+- **Balance und Reskins (t255):** Nationen neu ausbalanciert (Ziel 46–54 %). Gemessen wurde mit dem t254-Bot in 69.120 Partien je Modus. Hebel waren vor allem Doktrinpaare:
+  - Abnutzung zieht keine Karte mehr.
+  - Gepanzerter Fuß gibt nur noch ausgerüsteten Einheiten +1 DEF.
+  - Marsch aus dem Vollen gibt beim Einrücken kein dauerhaftes +1 DEF mehr. Das war ein Text-Fehler: gedruckt war „bis Zugende“.
+  - Schwerpunkt greift ab 2 Einheiten.
+  - Sturmangriff wirkt auf die zwei stärksten Infanterien.
+  - Auswertung hält bis zum Ende des nächsten eigenen Zuges.
+  - Verteilte Stellung gibt +2 DEF.
+
+  Dazu kommen gezielte Wertänderungen (±1 ATK/DEF/AP) an Karten aus den Starterdecks und Pools.
+  - **Regelkorrektur:** „Erleidet der Träger Schaden, heilt er danach 1“ rettet nicht mehr vor tödlichem Schaden.
+  - **Reskins:** 54 mechanisch gleiche Karten verschiedener Nationen haben jetzt je Nation eine eigene Wendung, zum Beispiel allein im Abschnitt, Überzahl, Klassenbedingung, Heilung mehrerer Einheiten oder Beobachten. Averon und Orthea markieren Feinde jetzt als beobachtet, statt nur aufzudecken.
+  - **Engine:** Neue CM-Bedingungen `is:`, `superior` und `wounded`. Neue Optionen `turnheal count`, `REVEAL observe` und Sturmangriff `count`. Der Bot nutzt alles über `listActions`/`dispatch`.
+  - **Karten und Cache:** 224 Vorderseiten neu (alpha40), Cache `divcmd-alpha40t`.
+  - **Doku:** Sonderfälle in `docs/regeln/EFFEKT_SONDERFAELLE_T255.md`, Details in `docs/balance/BALANCE_T255.md`.
+
 - **Bot-KI (t254):** Der Test-Bot ordnet seinen Zug in Stufen (dringende Neutralisierung, Kampfausrüstung und starke Effekte, vernichtende Angriffe, übrige Ausspielungen), prüft Massen, Gassen, Gehorsam, Letzter und Mobilisierung per Vorausschau auf einer Engine-Kopie, nutzt aktivierbare Fähigkeiten eigener Karten, spielt Panzer gezielt für Blitzkrieg, legt Vertragsclip nur mit Soforteinsätzen und testet jede Aktion vorab (0 abgelehnte Aktionen). Im Browser trifft der Bot Folgewahlen jetzt selbst statt mit der ersten Option. Neuer Bot gegen alten: 78,6 % (Misch) / 78,0 % (Starter). Kartenregeln und Preise unverändert. Cache `divcmd-alpha40s`. Messung, Balancefolgen und Vorschläge: `docs/balance/BOT_KI_T254.md`.
 
 - **Effekte (t251):** Drei Teil-Stubs aus dem Scan t250 greifen jetzt wie gedruckt: Vertragsclip (`EQUIP_DISCOUNT_AURA` in `costOf`, Träger Elite oder Unterstützung), Blitzkrieg (`BLITZ_LOCK_SUPPORT`: Sperre gegnerischer Unterstützungsfähigkeiten in der nächsten Runde nach einem Panzer-Ausspiel) und Schläferzelle (`NEUTRALIZE`, 2 AP über `listActions`/`dispatch`). Preise unverändert, sofern die Nachsim das bestätigt. Sonderfälle: `docs/regeln/EFFEKT_SONDERFAELLE_T251.md`. Begründung: `docs/balance/BALANCE_T251.md`.

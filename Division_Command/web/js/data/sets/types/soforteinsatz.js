@@ -1446,7 +1446,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Blutzeuge",
-    "ap": 2,
+    "ap": 1,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
@@ -1723,7 +1723,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Letzter Ruf",
-    "ap": 3,
+    "ap": 2,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
@@ -2759,7 +2759,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "BUFF",
@@ -2772,7 +2772,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       {
         "code": "REVEAL",
         "param": {
-          "count": 1
+          "count": 1,
+          "observe": true
         }
       }
     ],
@@ -2803,7 +2804,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "BUFF",
@@ -2816,7 +2817,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       {
         "code": "REVEAL",
         "param": {
-          "count": 1
+          "count": 1,
+          "observe": true
         }
       }
     ],
@@ -2847,7 +2849,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Alle eigenen Einheiten: +2 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
+    "text": "Alle eigenen Einheiten: +2 ATK bis Zugende. Markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -2860,7 +2862,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       {
         "code": "REVEAL",
         "param": {
-          "count": 1
+          "count": 1,
+          "observe": true
         }
       }
     ],
@@ -2888,7 +2891,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
+    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende. Markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -2901,7 +2904,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       {
         "code": "REVEAL",
         "param": {
-          "count": 1
+          "count": 1,
+          "observe": true
         }
       }
     ],
@@ -3003,7 +3007,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Bürger-Ruf",
-    "ap": 2,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -3045,7 +3049,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF. Markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "BUFF",
@@ -3057,7 +3061,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       {
         "code": "REVEAL",
         "param": {
-          "count": 1
+          "count": 1,
+          "observe": true
         }
       }
     ],
@@ -5377,7 +5382,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1). Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF",
@@ -5385,6 +5390,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "def": -1,
           "until": "turn",
           "enemy": true
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -6667,12 +6678,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
+    "text": "Wähle eine gegnerische Fronteinheit: −2 DEF (mind. 1).",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "def": -1,
+          "def": -2,
           "until": "turn",
           "enemy": true
         }
@@ -6867,12 +6878,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: heile 2.",
+    "text": "Wähle eine eigene Fronteinheit: heile 3.",
     "effects": [
       {
         "code": "HEAL",
         "param": {
-          "value": 2
+          "value": 3
         }
       }
     ],
@@ -7123,8 +7134,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: heile 1; +2 DEF.",
     "effects": [
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 1
+        }
+      },
       {
         "code": "BUFF",
         "param": {

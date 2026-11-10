@@ -130,8 +130,9 @@
       if (p) {
         if (p.base_def) dv += Number(p.base_def || 0);
         if ((inst.attachments || []).length) {
-          atk += Number(p.atk || 1);
-          dv += Number(p.def || 1);
+          /* t255: ein ausdrückliches 0 gilt (nur DEF-Bonus); fehlender Wert bleibt 1. */
+          atk += p.atk != null ? Number(p.atk) : 1;
+          dv += p.def != null ? Number(p.def) : 1;
         }
       }
 
@@ -196,6 +197,7 @@
 
       // Temp doctrine buffs from turn-start / triggers
       if (inst.flags && inst.flags.dokAtkUntil === this.state.turn) atk += Number(inst.flags.dokAtk || 0);
+      if (inst.flags && inst.flags.dokAuswUntil >= this.state.turn) atk += Number(inst.flags.dokAuswAtk || 0);
       if (inst.flags && inst.flags.dokDefUntil === this.state.turn) dv += Number(inst.flags.dokDef || 0);
       if (owner.flags && owner.flags.dokSectionAtk && owner.flags.dokSectionAtk[sec] != null &&
           owner.flags.dokSectionAtkUntil === this.state.turn) {
@@ -625,17 +627,15 @@
       // STURMANGRIFF: strongest infantry +ATK
       if (hasDok(this, p, 'STURMANGRIFF')) {
         var st = dokParam(this, p, 'STURMANGRIFF') || {};
-        var pick = null; var bestAtk = -1;
-        this.frontList(p).forEach(function (l) {
-          if (!isInfantry(self.defOf(l.inst))) return;
-          var a = Number(self.defOf(l.inst).atk) || 0;
-          if (a > bestAtk) { bestAtk = a; pick = l.inst; }
+        /* t255: `count` – so viele der stärksten Infanterien erhalten den Bonus (Standard 1). */
+        var inf = this.frontList(p).filter(function (l) { return isInfantry(self.defOf(l.inst)); })
+          .map(function (l, i) { return { inst: l.inst, a: Number(self.defOf(l.inst).atk) || 0, i: i }; })
+          .sort(function (x, y) { return (y.a - x.a) || (x.i - y.i); });
+        inf.slice(0, Math.max(1, Number(st.count || 1))).forEach(function (x) {
+          x.inst.flags = x.inst.flags || {};
+          x.inst.flags.dokAtk = Number(st.atk || 2);
+          x.inst.flags.dokAtkUntil = self.state.turn;
         });
-        if (pick) {
-          pick.flags = pick.flags || {};
-          pick.flags.dokAtk = Number(st.atk || 2);
-          pick.flags.dokAtkUntil = this.state.turn;
-        }
       }
       // STOSSTRUPP: only legacy turn-start pick when no passive body-core params
       if (hasDok(this, p, 'STOSSTRUPP')) {
@@ -709,7 +709,13 @@
             } else {
               inst.flags.dokAtk = (inst.flags.dokAtk || 0) + Number(ap.atk || 1);
             }
-            inst.flags.dokAtkUntil = this.state.turn; // end of this turn
+            if (ap.until === 'end-of-next-own-turn') {
+              /* t255: Bonus hält bis zum Ende des nächsten eigenen Zuges (eigener Merker, kein Überschreiben durch Sturmangriff o. Ä.). */
+              inst.flags.dokAuswAtk = Number(ap.atk || 1);
+              inst.flags.dokAuswUntil = this.state.turn + (this.state.active === loc.player.id ? 0 : 1);
+            } else {
+              inst.flags.dokAtkUntil = this.state.turn; // end of this turn
+            }
           }
         }
       } catch (e) {}

@@ -908,7 +908,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Treuekompanie",
     "ap": 2,
-    "atk": 3,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -946,7 +946,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Ablösungskette",
     "ap": 2,
     "atk": 2,
-    "def": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -1112,7 +1112,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Schnittstelle",
     "ap": 2,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "verdeckt_ok": true,
     "tags": [
@@ -1147,7 +1147,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Keilspitze",
     "ap": 2,
-    "atk": 3,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1348,7 +1348,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Korridorläufer",
     "ap": 2,
     "atk": 2,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -1382,7 +1382,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Westhaven-Sicherung",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -1756,7 +1756,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Auenheim-Hof",
     "ap": 2,
     "atk": 2,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -1786,7 +1786,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Namenhof-Schütze",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -1856,7 +1856,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Kronenwache",
     "ap": 1,
     "atk": 2,
-    "def": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -2058,7 +2058,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Kaikompanie",
     "ap": 2,
     "atk": 2,
-    "def": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -2916,7 +2916,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Weideposten",
     "ap": 2,
     "atk": 2,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -3264,7 +3264,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Namenszug",
     "ap": 1,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -3333,7 +3333,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Trauerzug",
     "ap": 2,
     "atk": 2,
-    "def": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -3402,7 +3402,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Grenzhof-Fuß",
     "ap": 2,
     "atk": 2,
-    "def": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -3436,7 +3436,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Steinbrunn-Lehrling",
     "ap": 2,
     "atk": 2,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -3511,13 +3511,13 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -3646,13 +3646,13 @@ window.DC_SET_TYPES["Infanterie"] = [
     "tags": [
       "infanterie"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }

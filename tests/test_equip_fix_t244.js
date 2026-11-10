@@ -50,7 +50,8 @@ assert.equal(stat(pass).only, 'artillerie|aufklaerung');
 assert.ok(has(pass, (e) => e.code === 'CM' && e.param && e.param.k === 'vs' && e.param.vs === 'entering' && e.param.atk === 1), 'Passoptik CM vs entering');
 
 const siegel = by('dc_b_verbindungssiegel_839');
-assert.equal(siegel.text, 'Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.');
+assert.equal(siegel.text, 'Beim Anlegen: markiere 1 Feind als beobachtet.'); // t255: Aufdecken → Beobachten
+assert.equal(fx(siegel)[0].param.observe, true);
 assert.equal(fx(siegel).length, 1);
 assert.equal(fx(siegel)[0].code, 'REVEAL');
 assert.equal(fx(siegel)[0].param.count, 1);

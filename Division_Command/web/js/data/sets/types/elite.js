@@ -611,7 +611,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Lina Nov",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -649,13 +649,13 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -679,7 +679,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Werkhof-Nov",
     "ap": 4,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -820,7 +820,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Schreiberin Kal",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -891,7 +891,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Haus Still",
     "ap": 4,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1115,7 +1115,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Lotte Knoten",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -1141,7 +1141,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Hesse Sar",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -1177,7 +1177,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Karawanenmeister",
     "ap": 4,
-    "atk": 3,
+    "atk": 4,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -1238,7 +1238,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Konrad Berst",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -1440,7 +1440,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Mar Aschen",
     "ap": 3,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1534,7 +1534,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Pia Lück",
     "ap": 3,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1697,13 +1697,13 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -1729,13 +1729,13 @@ window.DC_SET_TYPES["Elite"] = [
     "tags": [
       "elite"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }

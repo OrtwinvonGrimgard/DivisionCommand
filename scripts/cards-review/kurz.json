@@ -80,7 +80,7 @@
   "keywords": []
  },
  "dc_dok_gepanzerter_fuss": {
-  "kurz": "Eigene Einheiten haben +1 DEF. Ausgerüstete Einheiten haben +1 ATK und +1 DEF zusätzlich.",
+  "kurz": "Ausgerüstete eigene Einheiten haben +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -100,7 +100,7 @@
   "keywords": []
  },
  "dc_dok_marsch_aus_dem_vollen": {
-  "kurz": "Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK und +1 DEF bis Zugende.",
+  "kurz": "Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -130,8 +130,8 @@
   "keywords": []
  },
  "dc_dok_schwerpunkt": {
-  "kurz": "Zugbeginn: Stehen mindestens drei eigene Einheiten in einem Abschnitt, erhält der dichteste Abschnitt +1 ATK (Zug).",
-  "gekuerzt": true,
+  "kurz": "Zu Beginn deines Zuges: Dein dichtester Abschnitt mit mindestens zwei eigenen Einheiten erhält +1 ATK bis Zugende.",
+  "gekuerzt": false,
   "keywords": []
  },
  "dc_dok_sicherer_nachschub": {
@@ -145,7 +145,7 @@
   "keywords": []
  },
  "dc_dok_sturmangriff": {
-  "kurz": "Zu Beginn deines Zuges erhält deine stärkste Infanterie +2 ATK bis zum Ende des Zuges.",
+  "kurz": "Zu Beginn deines Zuges erhalten deine zwei stärksten Infanterien +2 ATK bis zum Ende des Zuges.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -165,7 +165,7 @@
   "keywords": []
  },
  "dc_dok_verteilte_stellung": {
-  "kurz": "Bist du allein im Abschnitt: +1 DEF. Verstreute Posten halten, massieren nicht.",
+  "kurz": "Bist du allein im Abschnitt: +2 DEF. Verstreute Posten halten, massieren nicht.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -850,7 +850,7 @@
   ]
  },
  "dc_b_messau_fuss_422": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -874,7 +874,7 @@
   ]
  },
  "dc_b_linieninfanterie_426": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -1040,7 +1040,7 @@
   "keywords": []
  },
  "dc_b_thronbruch_613": {
-  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +3 ATK.",
+  "kurz": "Ihr erster Angriff nach dem Ausspielen hat +2 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag",
@@ -1139,7 +1139,7 @@
   "keywords": []
  },
  "dc_b_fruehstoss_793": {
-  "kurz": "Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Zerstört sie im Angriff eine Einheit: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -1671,19 +1671,19 @@
   "keywords": []
  },
  "dc_b_asteron_schild_429": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": [
    "Durchschlag"
   ]
  },
  "dc_b_werkbach_riegel_430": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_probenpanzer_431": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -1962,7 +1962,7 @@
   ]
  },
  "dc_b_nordmark_rohr_799": {
-  "kurz": "Steilfeuer II. Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Steilfeuer II. Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": [
    "Fernschuss"
@@ -1983,8 +1983,8 @@
   ]
  },
  "dc_b_offenes_feuer_802": {
-  "kurz": "Steilfeuer II. +1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.",
-  "gekuerzt": true,
+  "kurz": "Steilfeuer II. +1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: markiere 1 Feind als beobachtet.",
+  "gekuerzt": false,
   "keywords": []
  },
  "dc_b_siegelrohr_855": {
@@ -2527,7 +2527,7 @@
   ]
  },
  "dc_b_feuerleit_439": {
-  "kurz": "Steilfeuer II. Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Steilfeuer II. Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -2573,7 +2573,7 @@
   "keywords": []
  },
  "dc_b_zielmesser_146": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Benachbarte eigene Artillerie +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -2673,21 +2673,21 @@
   ]
  },
  "dc_b_lina_melder_803": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_ed_ruh_pfad_804": {
-  "kurz": "",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": [
    "Zuteilung"
   ]
  },
  "dc_b_lage_offen_805": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": [
    "Gefechtsbereit",
@@ -2695,7 +2695,7 @@
   ]
  },
  "dc_b_quellenlaeufer_806": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": [
    "Gefechtsbereit"
@@ -2754,7 +2754,7 @@
   ]
  },
  "dc_b_markenspaeher_743": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. +1 DEF bei gegnerischer Überzahl im Abschnitt.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -2782,7 +2782,7 @@
   ]
  },
  "dc_b_wegspaeher_185": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. +1 ATK, wenn sie in diesem Zug versetzt wurde.",
   "gekuerzt": false,
   "keywords": [
    "Heranführung"
@@ -2811,7 +2811,7 @@
   ]
  },
  "dc_b_pfadfinder_683": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. +1 ATK bei eigener Überzahl im Abschnitt.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -2833,7 +2833,7 @@
   "keywords": []
  },
  "dc_b_beobachtungsposten_563": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -2963,14 +2963,14 @@
   ]
  },
  "dc_b_beobachter_443": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": [
    "Fernschuss"
   ]
  },
  "dc_b_lokalisierer_444": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": [
    "Fernschuss"
@@ -2984,7 +2984,7 @@
   ]
  },
  "dc_b_trotzmelder_446": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3110,7 +3110,7 @@
   "keywords": []
  },
  "dc_b_ed_ruh_808": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": [
    "Abschirmung"
@@ -3339,12 +3339,12 @@
   "keywords": []
  },
  "dc_b_nera_aster_447": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_colin_abweich_448": {
-  "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": [
    "Sicherung",
@@ -3490,7 +3490,7 @@
   "keywords": []
  },
  "dc_b_auftragsring_154": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: heile 2 an einem beschädigten eigenen Panzer oder einer Artillerie.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3500,7 +3500,7 @@
   "keywords": []
  },
  "dc_b_bilanzrede_156": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK, Artillerie dort +2 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3535,7 +3535,7 @@
   "keywords": []
  },
  "dc_b_feldprediger_112": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Infanterie dort +1 ATK und +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3550,7 +3550,7 @@
   "keywords": []
  },
  "dc_b_werkhof_115": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: heile 1 an bis zu zwei beschädigten eigenen Infanterien.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3585,7 +3585,7 @@
   "keywords": []
  },
  "dc_b_abloesungsplan_629": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK; stehen zwei oder mehr dort, auch +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3610,7 +3610,7 @@
   "keywords": []
  },
  "dc_b_werkstattbefehl_634": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: heile 2 an einer beschädigten eigenen Einheit, die nicht allein im Abschnitt steht.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3630,7 +3630,7 @@
   "keywords": []
  },
  "dc_b_weiterkaempfen_protokoll_389": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: ziehe 1 Karte, wenn eine eigene Fronteinheit beschädigt ist.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3655,7 +3655,7 @@
   "keywords": []
  },
  "dc_b_stossleitung_395": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK, beschädigte dort +2 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3675,12 +3675,12 @@
   "keywords": []
  },
  "dc_b_werkhoefe_novaris_812": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
-  "gekuerzt": true,
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF; stehen zwei oder mehr dort, auch +1 ATK.",
+  "gekuerzt": false,
   "keywords": []
  },
  "dc_b_nordfall_uebung_813": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -3690,7 +3690,7 @@
   "keywords": []
  },
  "dc_b_verbindungsnetz_815": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 ATK gegen beobachtete Ziele. Zugbeginn: decke einen verdeckten Feind auf.",
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 ATK gegen beobachtete Ziele. Zugbeginn: markiere 1 Feind als beobachtet.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -3705,13 +3705,13 @@
   "keywords": []
  },
  "dc_b_arven_widerspruch_818": {
-  "kurz": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_velis_front_870": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
-  "gekuerzt": true,
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange sie allein im Abschnitt stehen.",
+  "gekuerzt": false,
   "keywords": []
  },
  "dc_b_archive_871": {
@@ -3745,7 +3745,7 @@
   "keywords": []
  },
  "dc_b_siegelwerk_877": {
-  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Aufklärung gespielt hast.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3755,8 +3755,8 @@
   "keywords": []
  },
  "dc_b_halle_kalden_930": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
-  "gekuerzt": true,
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: beschädigte eigene Einheiten dort +1 DEF.",
+  "gekuerzt": false,
   "keywords": []
  },
  "dc_b_abschrift_931": {
@@ -3790,7 +3790,7 @@
   "keywords": []
  },
  "dc_b_lehrbach_937": {
-  "kurz": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+  "kurz": "Einmal pro Zug: deine nächste Infanterie kostet 1 AP weniger (mind. 1).",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3845,7 +3845,7 @@
   "keywords": []
  },
  "dc_b_wegweiser_192": {
-  "kurz": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+  "kurz": "Einmal pro Zug: dein nächster Panzer kostet 1 AP weniger (mind. 1).",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3890,8 +3890,8 @@
   "keywords": []
  },
  "dc_b_linienknoten_690": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
-  "gekuerzt": true,
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: stehen dort zwei oder mehr eigene Einheiten, haben sie +1 ATK und +1 DEF.",
+  "gekuerzt": false,
   "keywords": []
  },
  "dc_b_vorratshalle_691": {
@@ -3930,7 +3930,7 @@
   "keywords": []
  },
  "dc_b_meilenstein_698": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK, bei eigener Überzahl dort +2 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3980,7 +3980,7 @@
   "keywords": []
  },
  "dc_b_hafenlieferung_510": {
-  "kurz": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+  "kurz": "Einmal pro Zug: deine nächste Artillerie kostet 1 AP weniger (mind. 1).",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3990,7 +3990,7 @@
   "keywords": []
  },
  "dc_b_versorgungsschiff_512": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK, wenn du in diesem Zug eine Einheit gespielt hast.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4010,12 +4010,12 @@
   "keywords": []
  },
  "dc_b_solkai_werft_516": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt. Zu Beginn deines Zuges: heile 1 an einer beschädigten eigenen Einheit dort.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_maris_halle_517": {
-  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit und eine Ausrüstung gespielt hast.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4040,7 +4040,7 @@
   "keywords": []
  },
  "dc_b_verteilte_vorraete_234": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: heile 2 an einer beschädigten eigenen Einheit, die allein im Abschnitt steht.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4050,8 +4050,8 @@
   "keywords": []
  },
  "dc_b_tunnelnetz_236": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
-  "gekuerzt": true,
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF, solange sie allein im Abschnitt stehen.",
+  "gekuerzt": false,
   "keywords": []
  },
  "dc_b_eidkopie_237": {
@@ -4090,12 +4090,12 @@
   "keywords": []
  },
  "dc_b_wohnzuteilung_334": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK; wer zuletzt nicht angriff, auch +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_sicherheitsforum_335": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: heile 1 an bis zu zwei beschädigten eigenen Einheiten.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4135,17 +4135,17 @@
   "keywords": []
  },
  "dc_b_hof_der_namen_274": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: heile 1 an einer beschädigten eigenen Einheit mit Ausrüstung.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_helles_amt_275": {
-  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Ausrüstung gespielt hast.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_bergungspunkt_276": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: heile 1 an einer beschädigten eigenen Infanterie.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4160,7 +4160,7 @@
   "keywords": []
  },
  "dc_b_laborzelt_450": {
-  "kurz": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4180,7 +4180,7 @@
   "keywords": []
  },
  "dc_b_methodenblatt_454": {
-  "kurz": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4190,17 +4190,17 @@
   "keywords": []
  },
  "dc_b_messau_bank_456": {
-  "kurz": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_probennetz_457": {
-  "kurz": "Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.",
+  "kurz": "Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_abbruchregel_458": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: heile 1 an einer beschädigten eigenen Einheit und markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4630,22 +4630,22 @@
   "keywords": []
  },
  "dc_b_fruehe_meldung_819": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
+  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_neue_lage_820": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
+  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_kurzer_schutz_821": {
-  "kurz": "Alle eigenen Einheiten: +2 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
+  "kurz": "Alle eigenen Einheiten: +2 ATK bis Zugende. Markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_aufklaerungsschlag_822": {
-  "kurz": "Alle eigenen Einheiten: +1 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
+  "kurz": "Alle eigenen Einheiten: +1 ATK bis Zugende. Markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4665,7 +4665,7 @@
   "keywords": []
  },
  "dc_b_netz_check_826": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
+  "kurz": "Wähle eine eigene Fronteinheit: +1 DEF. Markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4970,7 +4970,7 @@
   "keywords": []
  },
  "dc_b_umschlagbefehl_707": {
-  "kurz": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
+  "kurz": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1). Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5145,7 +5145,7 @@
   "keywords": []
  },
  "dc_b_schonung_247": {
-  "kurz": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
+  "kurz": "Wähle eine gegnerische Fronteinheit: −2 DEF (mind. 1).",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5170,7 +5170,7 @@
   "keywords": []
  },
  "dc_b_erholung_339": {
-  "kurz": "Wähle eine eigene Fronteinheit: heile 2.",
+  "kurz": "Wähle eine eigene Fronteinheit: heile 3.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5200,7 +5200,7 @@
   "keywords": []
  },
  "dc_b_frist_345": {
-  "kurz": "Wähle eine eigene Fronteinheit: +2 DEF.",
+  "kurz": "Wähle eine eigene Fronteinheit: heile 1; +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5440,7 +5440,7 @@
   "keywords": []
  },
  "dc_b_auftragsstempel_183": {
-  "kurz": "+1 ATK/+1 DEF nach Soforteinsatz diesen Zug.",
+  "kurz": "Träger +1 ATK und +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5610,7 +5610,7 @@
   "keywords": []
  },
  "dc_b_sensor_knoten_834": {
-  "kurz": "Träger +1 ATK. Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.",
+  "kurz": "Träger +1 ATK. Beim Anlegen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5620,12 +5620,12 @@
   "keywords": []
  },
  "dc_b_quellenmappe_836": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +1 ATK, gegen beobachtete Ziele +2 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_netzlampe_837": {
-  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Träger +1 ATK gegen beobachtete Ziele. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5635,7 +5635,7 @@
   "keywords": []
  },
  "dc_b_verbindungssiegel_839": {
-  "kurz": "Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.",
+  "kurz": "Beim Anlegen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5650,7 +5650,7 @@
   "keywords": []
  },
  "dc_b_aktenmappe_892": {
-  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Der erste Schaden je Zug am Träger sinkt um 1, solange er allein im Abschnitt steht.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5705,7 +5705,7 @@
   "keywords": []
  },
  "dc_b_nussrock_953": {
-  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Zerstört der Träger im Angriff eine Einheit: heile 1 an deiner am stärksten beschädigten Einheit.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5810,7 +5810,7 @@
   "keywords": []
  },
  "dc_b_lizenzsiegel_216": {
-  "kurz": "Träger +1 ATK, +1 DEF.",
+  "kurz": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5840,7 +5840,7 @@
   "keywords": []
  },
  "dc_b_stempel_erreichbar_222": {
-  "kurz": "+1 ATK/+1 DEF nach Schieben diesen Zug.",
+  "kurz": "Träger +1 ATK und +1 DEF, wenn er in diesem Zug versetzt wurde.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5860,7 +5860,7 @@
   "keywords": []
  },
  "dc_b_zollzeichen_714": {
-  "kurz": "Träger +1 ATK im Zug nach Bewegung.",
+  "kurz": "Träger +1 ATK; +1 DEF mit einer weiteren eigenen Einheit im Abschnitt.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5870,12 +5870,12 @@
   "keywords": []
  },
  "dc_b_passschluessel_716": {
-  "kurz": "Träger +1 DEF.",
+  "kurz": "Träger +1 DEF; +1 ATK bei eigener Überzahl in seinem Abschnitt.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_tuchknoten_717": {
-  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Träger +1 DEF mit einer weiteren eigenen Einheit im Abschnitt. Einmal pro Zug: Erleidet er Schaden, heilt er danach 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5910,7 +5910,7 @@
   "keywords": []
  },
  "dc_b_freigabestempel_594": {
-  "kurz": "Träger +1 ATK im Zug nach Sofortkarte.",
+  "kurz": "Träger +1 ATK. Kostet 1 AP weniger, solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5970,7 +5970,7 @@
   "keywords": []
  },
  "dc_b_wegjacke_536": {
-  "kurz": "Träger +1 ATK/+1 DEF in Abschnitten mit Unterstützung.",
+  "kurz": "Träger +1 ATK und +1 DEF, solange du eine offene Unterstützung hast.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6020,12 +6020,12 @@
   "keywords": []
  },
  "dc_b_leserklammer_257": {
-  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Zu Beginn deines Zuges: Hat der Träger im letzten Zug nicht angegriffen, heilt er 2.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_engenkette_258": {
-  "kurz": "Träger +1 DEF.",
+  "kurz": "Träger +2 DEF, solange er allein im Abschnitt steht.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6115,7 +6115,7 @@
   "keywords": []
  },
  "dc_b_schmiedehammer_295": {
-  "kurz": "Träger +1 ATK, +1 DEF.",
+  "kurz": "Träger +1 ATK; Infanterie-Träger zusätzlich +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6145,7 +6145,7 @@
   "keywords": []
  },
  "dc_b_messgeraet_471": {
-  "kurz": "Träger +1 ATK, +1 DEF.",
+  "kurz": "Träger +1 ATK, +1 DEF; gegen beobachtete Ziele +1 ATK zusätzlich.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6165,12 +6165,12 @@
   "keywords": []
  },
  "dc_b_probenkoffer_475": {
-  "kurz": "Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.",
+  "kurz": "Beim Anlegen: markiere 1 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_leitrechner_476": {
-  "kurz": "Träger +1 ATK und +1 DEF gegen aufgeklärte.",
+  "kurz": "Träger +1 DEF; +1 ATK gegen beobachtete Ziele.",
   "gekuerzt": false,
   "keywords": []
  },

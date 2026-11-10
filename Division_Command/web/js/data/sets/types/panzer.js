@@ -386,7 +386,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Pflichtpanzer",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -664,7 +664,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Kronpanzer Narbstadt",
     "ap": 3,
     "atk": 3,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": true,
     "tags": [
       "panzer"
@@ -871,20 +871,20 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Thronbruch",
     "ap": 5,
     "atk": 5,
-    "def": 5,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
       "panzer",
       "kette"
     ],
-    "text": "Ihr erster Angriff nach dem Ausspielen hat +3 ATK.",
+    "text": "Ihr erster Angriff nach dem Ausspielen hat +2 ATK.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "first",
-          "atk": 3
+          "atk": 2
         }
       }
     ],
@@ -941,7 +941,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Filterpanzer",
     "ap": 3,
     "atk": 3,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1070,7 +1070,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Stoßkeil",
     "ap": 3,
-    "atk": 4,
+    "atk": 3,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1251,7 +1251,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Verbindungskette",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1283,7 +1283,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Olivkeil",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1317,7 +1317,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Kurzkrieg-Wagen",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1351,7 +1351,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Lydon-Träger",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -1420,18 +1420,18 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Frühstoß",
     "ap": 4,
     "atk": 4,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
     ],
-    "text": "Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Zerstört sie im Angriff eine Einheit: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "kill",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -1452,7 +1452,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Aufklärungspanzer",
     "ap": 5,
     "atk": 5,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1722,7 +1722,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Scheinschwerpunkt-Keil",
     "ap": 5,
     "atk": 5,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1792,7 +1792,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Kai-Keil",
     "ap": 3,
     "atk": 3,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1890,7 +1890,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Brunn-Keil",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -2226,7 +2226,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Doppelstellung",
     "ap": 4,
     "atk": 3,
-    "def": 6,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -2517,7 +2517,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Letzte Stellung",
     "ap": 5,
     "atk": 4,
-    "def": 6,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -2585,7 +2585,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Flankenkeil",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -2619,7 +2619,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Lagerkeil",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -2780,7 +2780,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Flankenstoß",
     "ap": 5,
     "atk": 5,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3174,7 +3174,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Solkai-Träger",
     "ap": 3,
     "atk": 2,
-    "def": 6,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3208,7 +3208,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Straßenriegel",
     "ap": 3,
     "atk": 2,
-    "def": 5,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3266,7 +3266,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Entsatzbataillon",
     "ap": 3,
-    "atk": 4,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -3301,7 +3301,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Entsatzschlag",
     "ap": 5,
     "atk": 5,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3328,7 +3328,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Tunnelkeil",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3459,7 +3459,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Leserbach-Keil",
     "ap": 4,
     "atk": 4,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3529,7 +3529,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Aschen-Kette",
     "ap": 3,
     "atk": 4,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3796,7 +3796,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Zuteilungsräumer",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3963,7 +3963,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Grenzplatte",
     "ap": 3,
     "atk": 2,
-    "def": 5,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -4087,7 +4087,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Totenwall-Keil",
     "ap": 5,
     "atk": 4,
-    "def": 6,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -4189,13 +4189,13 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -4224,13 +4224,13 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -4256,13 +4256,13 @@ window.DC_SET_TYPES["Panzer"] = [
     "tags": [
       "panzer"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }

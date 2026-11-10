@@ -163,7 +163,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Benachbarte eigene Artillerie +1 ATK.",
     "effects": [
       {
         "code": "CM",
@@ -171,6 +171,15 @@ window.DC_SET_TYPES["Aufklärung"] = [
           "k": "enter",
           "do": "reveal",
           "n": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "aura",
+          "scope": "adjacent",
+          "atk": 1,
+          "filter": "artillerie"
         }
       }
     ],
@@ -319,7 +328,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "name": "Passläufer",
     "ap": 2,
     "atk": 2,
-    "def": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -353,7 +362,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Ritusspäher",
     "ap": 2,
-    "atk": 1,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -678,13 +687,13 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -707,14 +716,23 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Ed-Ruh-Pfad",
     "ap": 2,
-    "atk": 1,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
     ],
-    "text": "",
-    "effects": [],
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
+    "effects": [
+      {
+        "code": "CM",
+        "param": {
+          "k": "enter",
+          "do": "observe",
+          "n": 1
+        }
+      }
+    ],
     "flavor": "Pfad ohne heimliche Leitung.",
     "image": "aufklaerung/B804.jpg",
     "max_copies": 1,
@@ -739,13 +757,13 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -770,18 +788,18 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "name": "Quellenläufer",
     "ap": 1,
     "atk": 1,
-    "def": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -938,7 +956,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Abschriftleser",
     "ap": 2,
-    "atk": 1,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -973,7 +991,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Datums-Melder",
     "ap": 2,
-    "atk": 1,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1035,7 +1053,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "name": "Selm-Läufer",
     "ap": 1,
     "atk": 1,
-    "def": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1075,7 +1093,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. +1 DEF bei gegnerischer Überzahl im Abschnitt.",
     "effects": [
       {
         "code": "CM",
@@ -1083,6 +1101,15 @@ window.DC_SET_TYPES["Aufklärung"] = [
           "k": "enter",
           "do": "reveal",
           "n": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 0,
+          "when": "outnumbered",
+          "def": 1
         }
       }
     ],
@@ -1187,7 +1214,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. +1 ATK, wenn sie in diesem Zug versetzt wurde.",
     "effects": [
       {
         "code": "CM",
@@ -1195,6 +1222,14 @@ window.DC_SET_TYPES["Aufklärung"] = [
           "k": "enter",
           "do": "reveal",
           "n": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "moved"
         }
       }
     ],
@@ -1313,13 +1348,13 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Pfadfinder",
     "ap": 2,
-    "atk": 1,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. +1 ATK bei eigener Überzahl im Abschnitt.",
     "effects": [
       {
         "code": "CM",
@@ -1327,6 +1362,14 @@ window.DC_SET_TYPES["Aufklärung"] = [
           "k": "enter",
           "do": "reveal",
           "n": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "stat",
+          "atk": 1,
+          "when": "superior"
         }
       }
     ],
@@ -1345,7 +1388,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Zollspäher",
     "ap": 2,
-    "atk": 1,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1413,7 +1456,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "name": "Abseitsläufer",
     "ap": 1,
     "atk": 1,
-    "def": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1450,13 +1493,13 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
-          "k": "enter",
-          "do": "reveal",
+          "k": "turn",
+          "do": "observe",
           "n": 1
         }
       }
@@ -1476,7 +1519,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Feldmesser",
     "ap": 2,
-    "atk": 1,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1547,7 +1590,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "name": "Peiltrupp",
     "ap": 1,
     "atk": 1,
-    "def": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1710,7 +1753,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Bergführer",
     "ap": 2,
-    "atk": 1,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1754,7 +1797,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "name": "Hangläufer",
     "ap": 2,
     "atk": 2,
-    "def": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1821,7 +1864,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "name": "Abschriftblick",
     "ap": 1,
     "atk": 1,
-    "def": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1888,7 +1931,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Aktenblick",
     "ap": 2,
-    "atk": 1,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -2116,13 +2159,13 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -2151,13 +2194,13 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }
@@ -2212,13 +2255,13 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "tags": [
       "aufklaerung"
     ],
-    "text": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
+    "text": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "enter",
-          "do": "reveal",
+          "do": "observe",
           "n": 1
         }
       }

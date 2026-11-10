@@ -1593,7 +1593,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 3,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -4479,7 +4479,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Gebundene Verbindung",
-  "ap": 4,
+  "ap": 3,
   "rarity": "gold",
   "tags": [
    "unterstuetzung"
@@ -4835,7 +4835,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Lokalisierter Großschlag",
-  "ap": 4,
+  "ap": 3,
   "rarity": "gold",
   "tags": [
    "soforteinsatz"
@@ -5898,7 +5898,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Gemessener Schlag",
-  "ap": 3,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
@@ -6076,7 +6076,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Volltreffer berechnet",
-  "ap": 4,
+  "ap": 3,
   "rarity": "gold",
   "tags": [
    "soforteinsatz"
@@ -6580,7 +6580,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 1,
-  "def": 4,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -10132,7 +10132,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 1,
-  "def": 1,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -10159,7 +10159,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 2,
-  "def": 1,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Gefechtsbereit"
@@ -10188,7 +10188,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 2,
-  "def": 1,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -10218,7 +10218,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 2,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Heranführung"
@@ -10251,7 +10251,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 3,
-  "def": 1,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Gefechtsbereit"
@@ -10314,7 +10314,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-07",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 2,
+  "atk": 3,
   "def": 4,
   "verdeckt_ok": true
  },
@@ -10341,7 +10341,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 3,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -10370,7 +10370,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 4,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -10465,7 +10465,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-12",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
+  "atk": 3,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -10497,7 +10497,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 2,
-  "def": 1,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Nachsetzen"
@@ -10667,7 +10667,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-18",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
+  "atk": 2,
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
@@ -10704,7 +10704,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
   "atk": 2,
-  "def": 1,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Gefechtsbereit"
@@ -11118,7 +11118,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Der eine Schlag",
-  "ap": 3,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
@@ -11146,7 +11146,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Heilige Woge",
-  "ap": 4,
+  "ap": 3,
   "rarity": "gold",
   "tags": [
    "soforteinsatz"
@@ -15152,7 +15152,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 2,
-  "def": 4,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -15204,7 +15204,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 3,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -15351,7 +15351,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 3,
-  "def": 6,
+  "def": 5,
   "verdeckt_ok": true
  },
  {
@@ -15383,7 +15383,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 4,
-  "def": 7,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -16683,7 +16683,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 5,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -18543,7 +18543,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Wegschnitt",
-  "ap": 2,
+  "ap": 1,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"

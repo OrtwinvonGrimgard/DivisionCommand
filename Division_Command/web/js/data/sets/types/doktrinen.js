@@ -59,11 +59,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, eine eigene Einheit dort heilt 1 und du ziehst 1 Karte.",
+    "text": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK und eine eigene Einheit dort heilt 1.",
     "clauses": [
       {
         "title": "",
-        "body": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, eine eigene Einheit dort heilt 1 und du ziehst 1 Karte."
+        "body": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK und eine eigene Einheit dort heilt 1."
       }
     ],
     "effects": [
@@ -73,7 +73,7 @@ window.DC_SET_TYPES["Doktrin"] = [
           "on_destroy_in_section": {
             "section_atk": 1,
             "heal": 1,
-            "draw": 1,
+            "draw": 0,
             "until": "end-of-turn"
           }
         }
@@ -280,11 +280,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Erleidet eine eigene Einheit Schaden und überlebt, hat sie bis zum Ende dieses Zuges +1 ATK (nicht stapelbar). Zeit wird zur Waffe — knapp bemessen.",
+    "text": "Erleidet eine eigene Einheit Schaden und überlebt, hat sie bis zum Ende deines nächsten Zuges +1 ATK (nicht stapelbar).",
     "clauses": [
       {
         "title": "",
-        "body": "Erleidet eine eigene Einheit Schaden und überlebt, hat sie bis zum Ende dieses Zuges +1 ATK (nicht stapelbar). Zeit wird zur Waffe — knapp bemessen."
+        "body": "Erleidet eine eigene Einheit Schaden und überlebt, hat sie bis zum Ende deines nächsten Zuges +1 ATK (nicht stapelbar)."
       }
     ],
     "effects": [
@@ -293,7 +293,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "param": {
           "when": "damaged-not-destroyed",
           "atk": 1,
-          "until": "end-of-turn",
+          "until": "end-of-next-own-turn",
           "no_stack": true
         }
       }
@@ -619,11 +619,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Eigene Einheiten haben +1 DEF. Ausgerüstete Einheiten haben +1 ATK und +1 DEF zusätzlich.",
+    "text": "Ausgerüstete eigene Einheiten haben +1 DEF.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Einheiten haben +1 DEF. Ausgerüstete Einheiten haben +1 ATK und +1 DEF zusätzlich."
+        "body": "Ausgerüstete eigene Einheiten haben +1 DEF."
       }
     ],
     "effects": [
@@ -632,8 +632,8 @@ window.DC_SET_TYPES["Doktrin"] = [
         "param": {
           "if": "equipped",
           "def": 1,
-          "atk": 1,
-          "base_def": 1
+          "atk": 0,
+          "base_def": 0
         }
       }
     ],
@@ -765,11 +765,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK und +1 DEF bis Zugende.",
+    "text": "Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK bis Zugende.",
     "clauses": [
       {
         "title": "",
-        "body": "Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK und +1 DEF bis Zugende."
+        "body": "Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK bis Zugende."
       }
     ],
     "effects": [
@@ -780,7 +780,7 @@ window.DC_SET_TYPES["Doktrin"] = [
           "play_cost": -1,
           "min": 1,
           "atk": 1,
-          "def": 1,
+          "def": 0,
           "until": "end-of-turn"
         }
       }
@@ -1002,11 +1002,11 @@ window.DC_SET_TYPES["Doktrin"] = [
     ],
     "klasse_tags": [],
     "principle": "Zu Beginn deines Zuges",
-    "text": "Zu Beginn deines Zuges: Stehen mindestens drei eigene Einheiten in einem Abschnitt, erhält der dichteste Abschnitt +1 ATK bis Zugende.",
+    "text": "Zu Beginn deines Zuges: Dein dichtester Abschnitt mit mindestens zwei eigenen Einheiten erhält +1 ATK bis Zugende.",
     "clauses": [
       {
         "title": "",
-        "body": "Zu Beginn deines Zuges: Stehen mindestens drei eigene Einheiten in einem Abschnitt, erhält der dichteste Abschnitt +1 ATK bis Zugende."
+        "body": "Zu Beginn deines Zuges: Dein dichtester Abschnitt mit mindestens zwei eigenen Einheiten erhält +1 ATK bis Zugende."
       }
     ],
     "effects": [
@@ -1016,7 +1016,7 @@ window.DC_SET_TYPES["Doktrin"] = [
           "when": "start-of-turn",
           "auto": "densest",
           "atk": 1,
-          "min_units": 3,
+          "min_units": 2,
           "until": "end-of-turn"
         }
       }
@@ -1120,11 +1120,11 @@ window.DC_SET_TYPES["Doktrin"] = [
     ],
     "klasse_tags": [],
     "principle": "Zu Beginn deines Zuges",
-    "text": "Zu Beginn deines Zuges erhält deine stärkste Infanterie +2 ATK bis zum Ende des Zuges.",
+    "text": "Zu Beginn deines Zuges erhalten deine zwei stärksten Infanterien +2 ATK bis zum Ende des Zuges.",
     "clauses": [
       {
         "title": "",
-        "body": "Zu Beginn deines Zuges erhält deine stärkste Infanterie +2 ATK bis zum Ende des Zuges."
+        "body": "Zu Beginn deines Zuges erhalten deine zwei stärksten Infanterien +2 ATK bis zum Ende des Zuges."
       }
     ],
     "effects": [
@@ -1134,6 +1134,7 @@ window.DC_SET_TYPES["Doktrin"] = [
           "when": "start-of-turn",
           "auto": "strongest-infantry",
           "atk": 2,
+          "count": 2,
           "until": "end-of-turn"
         }
       }
@@ -1268,11 +1269,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Bist du allein im Abschnitt: +1 DEF. Verstreute Posten halten, massieren nicht.",
+    "text": "Bist du allein im Abschnitt: +2 DEF. Verstreute Posten halten, massieren nicht.",
     "clauses": [
       {
         "title": "",
-        "body": "Bist du allein im Abschnitt: +1 DEF. Verstreute Posten halten, massieren nicht."
+        "body": "Bist du allein im Abschnitt: +2 DEF. Verstreute Posten halten, massieren nicht."
       }
     ],
     "effects": [
@@ -1280,7 +1281,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "VERTEILTE_STELLUNG",
         "param": {
           "alone": {
-            "def": 1
+            "def": 2
           }
         }
       }

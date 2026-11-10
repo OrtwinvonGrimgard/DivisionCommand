@@ -2319,9 +2319,12 @@
           if (x.code === 'ON_ENTER_DRAW') this._draw(p, Number(xp.value || 1));
           if (x.code === 'REVEAL') {
             let n = Number(xp.count || 1);
-            this.frontList(this.opponent(p.id)).forEach((l) => {
-              if (n > 0 && l.inst.facedown) { l.inst.facedown = false; n -= 1; }
+            const foes = this.frontList(this.opponent(p.id));
+            foes.forEach((l) => {
+              if (n > 0 && l.inst.facedown) { l.inst.facedown = false; n -= 1; if (xp.observe) { l.inst.flags = l.inst.flags || {}; l.inst.flags.observed = true; } }
             });
+            /* t255: `observe` beim Anlegen – ohne verdeckten Feind wird ein noch nicht beobachteter Feind markiert. */
+            if (xp.observe && n > 0) foes.filter((l) => !(l.inst.flags && l.inst.flags.observed)).slice(0, n).forEach((l) => { l.inst.flags = l.inst.flags || {}; l.inst.flags.observed = true; });
           }
           if (x.code === 'EQUIP_ONCE_HEAL_DESTROY' && xp.noDestroy) {
             // available as activated later; mark charge
@@ -3580,9 +3583,17 @@
           if (l.inst.facedown && revealed < n) { // verdeckte Lage
             l.inst.facedown = false; // verdeckte Lage
             revealed += 1;
+            if (par.observe) { l.inst.flags = l.inst.flags || {}; l.inst.flags.observed = true; }
             this._log('Aufgedeckt: ' + this.defOf(l.inst).name); // Zeile ins Protokoll
           }
         });
+        /* t255: `observe` – ohne verdeckten Feind wird ein noch nicht beobachteter Feind als beobachtet markiert. */
+        if (par.observe && revealed < n) {
+          this.frontList(opp).filter((l) => !(l.inst.flags && l.inst.flags.observed)).slice(0, n - revealed).forEach((l) => {
+            l.inst.flags = l.inst.flags || {}; l.inst.flags.observed = true;
+            this._log('Beobachtet: ' + this.defOf(l.inst).name);
+          });
+        }
       } else if (code === 'SEARCH_DECK' || code === 'PLAY_FREE') {
         const want = code === 'PLAY_FREE' ? 99 : Number(par.count || 1);
         const fromHand = code === 'PLAY_FREE';
@@ -5212,8 +5223,8 @@
       inst.flags.kwHitTurn = this.state.turn;
       this._log(def.name + ' nimmt ' + amount + ' Schaden → V ' + inst.def + '/' + inst.defMax + '.'); // Zeile ins Protokoll
       if (inst.def > 0) this._fireDamageTriggers(inst, amount);
-      // equipment react
-      (inst.attachments || []).forEach((eq) => {
+      // equipment react (t255: nur wenn der Träger überlebt – „heilt danach 1“ rettet nicht vor tödlichem Schaden)
+      if (inst.def > 0) (inst.attachments || []).forEach((eq) => {
         const ed = this.defOf(eq);
         (ed.effects || []).forEach((e) => {
           if (e.code === 'EQUIP_HEAL_ONCE' && !eq.flags) eq.flags = {};
@@ -7410,6 +7421,12 @@
         case 'healed': return !!(p.flags && p.flags.cmHealTurn === this.state.turn);
         case 'hurt': return !!(inst && inst.flags && inst.flags.kwHitTurn === this.state.turn);
         case 'sections': return SECTIONS.filter((s) => this.frontList(p).some((l) => l.section === s)).length >= Number(v || 2);
+        /* t255: Klassenbedingung der Einheit selbst (`is:panzer_art`, `is:infanterie`, …). */
+        case 'is': return !!inst && this._cmIs(this.defOf(inst), v);
+        /* t255: eigene Überzahl im Abschnitt der Einheit (Gegenstück zu `outnumbered`). */
+        case 'superior': return front && this.frontList(p).filter((l) => l.section === loc.section).length > this.frontList(opp).filter((l) => l.section === loc.section).length;
+        /* t255: mindestens eine eigene Fronteinheit ist beschädigt (Spielerbedingung). */
+        case 'wounded': return this.frontList(p).some((l) => this._isDamaged(l.inst));
         default: return false;
       }
     },
@@ -7589,7 +7606,9 @@
       } else if (what === 'reveal' || what === 'observe') {
         const opp = this.opponent(p.id);
         const hid = this.frontList(opp).filter((l) => l.inst.facedown);
-        const pick = hid.length ? hid : (what === 'observe' ? this.frontList(opp) : []);
+        /* t255: `observe` markiert zuerst verdeckte, dann noch nicht beobachtete Feinde. */
+        const fresh = this.frontList(opp).filter((l) => !(l.inst.flags && l.inst.flags.observed));
+        const pick = hid.length ? hid : (what === 'observe' ? (fresh.length ? fresh : this.frontList(opp)) : []);
         pick.slice(0, n).forEach((l) => { this._revealInst ? this._revealInst(l.inst) : (l.inst.facedown = false); l.inst.facedown = false; l.inst.flags.observed = true; });
         p.flags.cmRevealTurn = this.state.turn;
       } else if (what === 'strike') {
@@ -7667,7 +7686,8 @@
         if (q.scope === 'section') { const sec = l ? l.section : (src.flags && src.flags.tacAuraSection); cand = cand.filter((x) => x.section === sec); }
         if (q.scope === 'self') cand = cand.filter((x) => x.inst.uid === src.uid);
         if (q.when) cand = cand.filter((x) => this._cmWhen(q.when, p, x.inst));
-        if (cand.length) this._heal(cand[0].inst, Number(q.n || 1));
+        /* t255: `count` heilt bis zu so viele verschiedene beschädigte Einheiten (Standard 1). */
+        cand.slice(0, Math.max(1, Number(q.count || 1))).forEach((x) => this._heal(x.inst, Number(q.n || 1)));
       });
       const run2 = (src) => this._cmFx(src).forEach((e) => { const q = e.param; if (q.k === 'turn' && this._cmWhen(q.when, p, null)) this._cmDo(p, q.do, q.n, src); });
       this.frontList(p).forEach((l) => { if (!l.inst.facedown) run2(l.inst); });
