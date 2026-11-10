@@ -50283,7 +50283,7 @@
     ]
    },
    "art": "assets/cards/art-v2/dc_np_sahr_routenwache.jpg",
-   "art_sha256": "0c0ce8f9d23635ba4c86d171fc07d7ed8c7735a9d50e9224adeedcda21a7b0a6",
+   "art_sha256": "a9faff3cddd9c817ea06330618605262b215f0b6e2ff1bad69dfba2e17f7f42c",
    "provenance": "generated_art",
    "ready": true,
    "output": "faces-v2/dc_np_sahr_routenwache.webp",
@@ -50292,7 +50292,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "bd1aaa92c4a00c91ce4358339bc214d35d7e3466920fb8ab0dc9ae3e7dd24534"
+   "output_sha256": "dfb2e18f67d01c9ca82eb8c3b13dfd636ea340816061d9797b539a91080f3e1b"
   },
   {
    "id": "dc_np_sahr_flusskette",
@@ -51337,7 +51337,7 @@
     ]
    },
    "art": "assets/cards/art-v2/dc_np_sahr_ruderpanzer.jpg",
-   "art_sha256": "5c965e5825067fbe8a4363bfbe14ff7e6df2a8bf7951f39b89119ee305652326",
+   "art_sha256": "294fade1c72520845c0ba5cb73fbd445d027343dd9b731e2398050c14b97ccea",
    "provenance": "generated_art",
    "ready": true,
    "output": "faces-v2/dc_np_sahr_ruderpanzer.webp",
@@ -51346,7 +51346,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "7af8a3ba9cf5397a9c938a6653a8ec3b40f8c53ca3aba7073d52353c803a9293"
+   "output_sha256": "e5a89813e81d689efde4e51a59101ab663eb550718d34865aae141c2997e005b"
   },
   {
    "id": "dc_np_dargan_kaderzug",

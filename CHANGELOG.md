@@ -10,6 +10,9 @@
 - **Realistischer Mischdeck-Generator** für Simulationen (`scripts/nation_pools/mixed_deck.js`): 30 Einheiten, 10 Ausrüstung, 8 Unterstützung, 12 Soforteinsätze, halb Pool, halb Starterdeck. Averon, Dargan und Ossaria liegen damit bei 48–51 %; die Werte unter 45 % aus t237 waren ein Artefakt des alten Testdecks.
 - **Caldris** im Mischdeck 57,7 → 53,7 %: 14 Poolkarten um eine Stufe schwächer (u. a. Panzerschild Caldris Schaden −2 → −1, Feldklinik 3 → 4 AP, Vollschutzweste +3 → +2 DEF). **Namar** Kaipanzerung 1 → 2 AP. Spannen: Starterdecks 47,1–53,5 %, Mischdecks 47,2–53,7 %. Details: `docs/balance/BALANCE_T238.md`.
 
+### Grafik
+- Neue Motive: **Routenwache** (Sahr) in Sahr-Petrol-Tarnung statt Oliv/Khaki; **Ruderpanzer** zeigt nur das Ausrüstungsteil (Ruder-Panzerkit) statt eines ganzen Fahrzeugs.
+
 ### Aufräumen
 - Spielordner versionsneutral: `Division_Command_0.5a/` → `Division_Command/` (alle Skripte, Tests, Editor- und Doku-Pfade angepasst).
 
