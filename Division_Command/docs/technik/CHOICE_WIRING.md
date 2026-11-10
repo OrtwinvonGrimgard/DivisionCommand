@@ -1,6 +1,6 @@
 # Wahl-Karten / Doktrinen — Verdrahtung
 
-Stand: Branch `doktrin-balance`. Audit: `scripts/audit_choice_cards.mjs`, Tests: `scripts/test_choice_wiring.js`.
+Stand: Branch `doktrin-balance`. Audit: `scripts/dev/audit_choice_cards.mjs`, Tests: `tests/test_choice_wiring.js`.
 
 ## Bot-Faustregel (Test-Bot)
 
@@ -45,4 +45,4 @@ Stand: Branch `doktrin-balance`. Audit: `scripts/audit_choice_cards.mjs`, Tests:
 - Räumkommando mit genau 1 Mine: Auto-Auflösung (kein Dialog nötig).
 - Remis-/Roh-WR und Trophy-Tempo: siehe offene Fragen in [DOKTRIN_BALANCE.md](../balance/DOKTRIN_BALANCE.md).
 
-Screenshot (Modal-Fixture): `/workspace/choice_ui_pending.png`
+Screenshot (Modal-Fixture): [choice_ui_pending.png](choice_ui_pending.png)

@@ -40,7 +40,7 @@ Playtest-Zielbild: VP-Siege ≥70 %, Sicherheitsnetz ≤25 %, Median ~14–18 Z�
 ## Bewusst offen (nicht Teil dieses Freezes)
 
 - Roguelike / Feldzug (Fahrplan Phase 2+).
-- Nation-Balance-Feinabstimmung unter Trophy (siehe `scripts/sim_nation_strength.mjs`).
+- Nation-Balance-Feinabstimmung unter Trophy (siehe `scripts/balance/sim_nation_strength.mjs`).
 - Hilfe-Text/Onboarding-Angleichung an Trophy-Default.
 - Menschliche Playtests (Erfolgskriterium Phase 0: 10 Fremden-/Bot-Partien ≤20 Min mit klarem Siegrund).
 

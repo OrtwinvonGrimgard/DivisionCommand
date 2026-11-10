@@ -59,4 +59,4 @@ Caldris gemischt **54,5 → 52,9 %** (±1,1), Starter 50,1 → 50,6 %. Nebenwirk
 
 - Wertband Median ±2 bleibt eingehalten. Keine Caldris-Karte im Starterdeck ist betroffen.
 - 5 Vorderseiten alpha40 neu gerendert, Kontaktbogen `/workspace/t212-cards/sheets/balance-04.png`.
-- Test `scripts/test_balance_t240.js`.
+- Test `tests/test_balance_t240.js`.

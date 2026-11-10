@@ -174,7 +174,7 @@ Jede Nation hat eigene Doktrinen und thematische Decks. Taktische Lore beschreib
 
 ## 8. Fahrplan (Zusammenfassung)
 
-Siehe `FAHRPLAN.md` für Details.
+Siehe [`archiv/FAHRPLAN.md`](archiv/FAHRPLAN.md) (historisch, kein aktueller Arbeitsstand) für die ältere Langfassung.
 
 1. Regel-Freeze und Siegbedingungen (weitgehend erledigt).
 2. Kern-Polish und Tutorial.
@@ -263,7 +263,7 @@ Division Command hat ein realistisch erreichbares Marktpotenzial in der Nische z
 | `SIEGBEDINGUNGEN.md` | Trophy-Modus und SP-Quellen |
 | `TAKTIK_NATIONEN.md` | Taktische Lore aller Nationen |
 | `LORE_NATIONEN.md` | Gesellschaftliche Lore |
-| `FAHRPLAN.md` | Entwicklungs- und Release-Plan |
+| `archiv/FAHRPLAN.md` | Historischer Entwicklungs- und Release-Plan (Archiv) |
 | `web/js/engine/engine.js` | Regelmaschine |
 | `web/js/data/catalog.js` | Grundwerte und Regeln |
 

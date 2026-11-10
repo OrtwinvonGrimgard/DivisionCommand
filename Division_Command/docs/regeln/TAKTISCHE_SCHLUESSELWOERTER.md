@@ -150,7 +150,7 @@ Elf konkrete Bestands-IDs erhalten korrigierte strukturierte Codes. Die 13 genan
 
 ## Qualitätssicherung / Grenzen
 
-- `node scripts/test_tactical_keywords.js`: positive und ungültige Ziele, fremde/verdeckte/frische Quellen, Kosten/Abbruch, Dauer/Ablauf, Feld-/Quellenverlust, Interaktionen, alle zehn tatsächlichen PLAY-Pfade, Decklimits, Byte-Reproduzierbarkeit und echte jsdom-Detail-/Ziel-/Reaktionsklicks.
+- `node tests/test_tactical_keywords.js`: positive und ungültige Ziele, fremde/verdeckte/frische Quellen, Kosten/Abbruch, Dauer/Ablauf, Feld-/Quellenverlust, Interaktionen, alle zehn tatsächlichen PLAY-Pfade, Decklimits, Byte-Reproduzierbarkeit und echte jsdom-Detail-/Ziel-/Reaktionsklicks.
 - `npm test`: vollständige bestehende Suite einschließlich 16-Wörter-Engine, nationale Pools, 32 Smoke-Matches, Karten-Spielinput, Kamera, Vollbild-HUD, Stencil-Ausrichtung, Proportionen, Privatsphäre, Modals und Audio-Isolation. **Keine Browser-Sichtprüfung**; jsdom ist kein gerenderter Browser.
 - Keine Änderung der 24°-Kamera, Hand/HUD-Pinnung, Ölstudie, Licht-/Stencil-CSS, Kartenbilder oder Proportionen. Keine Änderung an Sounds, Porträts oder Chat.
 - Neue Werte sind ein erster Balancing-Durchlauf. Der Bot kann aktivierbare Aktionen und allgemeine Pending-Choices verarbeiten; keine optimierte taktische KI und kein behaupteter Langzeit-Balancenachweis.

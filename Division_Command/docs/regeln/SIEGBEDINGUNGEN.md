@@ -60,7 +60,7 @@ Ziel: VP≥70 % · Safety≤25 % · Median 14–18.
 | N | VP5 · S28/30 · DB×4/cd2 · E3 · Dok0.65 | 77.8 | 18.2 | 4.0 | 12 | 56.1 | zu kurz |
 | O | VP4 · S28/30 · DB×2/cd3 · E2 · Dok1.0 | 78.5 | 17.5 | 4.0 | 12 | 56.3 | zu kurz |
 
-**Defaults = K.** Sim: `scripts/sim_trophy_sweep.mjs` → `sim_trophy_sweep.json`.
+**Defaults = K.** Sim: `scripts/balance/sim_trophy_sweep.mjs` → `scripts/balance/out/sim_trophy_sweep.json`.
 
 **First-Player-Ausgleich (aktiv):** Startspieler **3 AP nur im ersten Zug** (`opening_starter_ap_penalty: 2`, seit t238; vorher 1 → 4 AP), danach 5. Starthände 5/5; Startspieler zieht in Zug 1 nicht, Zweiter +1 beim Zugbeginn. FP-Rate siehe 2b.
 
@@ -78,7 +78,7 @@ UI: Overlay „Münzwurf: **&lt;Spieler&gt;** beginnt“ + „Startspieler: 3 AP
 1. **Startspieler −2 AP nur Zug 1** (3 statt 5) — `rules.opening_starter_ap_penalty` (Default 2 seit t238, vorher 1). UI: „Startspieler: 3 AP im ersten Zug“.
 2. Starthände 5/5; Startspieler ohne Draw in Zug 1; Zweiter +1 beim Zugbeginn.
 
-Sim FP-Winrate nach Startspieler−1 AP Zug 1 (`scripts/sim_first_player.mjs`, ≥1200 RR):
+Sim FP-Winrate nach Startspieler−1 AP Zug 1 (`scripts/balance/sim_first_player.mjs`, ≥1200 RR):
 
 | Modus | FP-Win% | Entschieden |
 |---|---|---|
@@ -176,6 +176,6 @@ UI: Doktrin-Karten zeigen `SP cur/need`, Inspect-Text nennt das Trophy-Ziel, Log
 
 ## 6. Tests & Simulation
 
-- Unit: `scripts/test_trophy_victory.js` (Trophy + Münzwurf)
-- Sweep: `scripts/sim_trophy_sweep.mjs` (≥1200 RR / Kandidat)
-- Legacy RR: `scripts/sim_trophy_victory.mjs`
+- Unit: `tests/test_trophy_victory.js` (Trophy + Münzwurf)
+- Sweep: `scripts/balance/sim_trophy_sweep.mjs` (≥1200 RR / Kandidat)
+- Legacy RR: `scripts/balance/sim_trophy_victory.mjs`

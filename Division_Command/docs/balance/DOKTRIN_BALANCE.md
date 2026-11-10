@@ -7,7 +7,7 @@
 - Doktrin-Kampfeffekte waren größtenteils unverdrahtet; neu: `web/js/engine/doctrine_runtime.js`.
 - Kreativ lore-nah umgeschrieben (Texte + `effects`), Trophy-Bedarf teils angepasst.
 - Averon: zweite Doktrin `Lokalisierung` → `Auswertung` (kein Doppel mehr mit Orthea).
-- Iteration: ändern → `node scripts/sim_nation_strength.mjs 10` → nachjustieren.
+- Iteration: ändern → `node scripts/balance/sim_nation_strength.mjs 10` → nachjustieren.
 - Metrik: **Decided-WR** = Siege/(Siege+Niederlagen), Züge zählen nicht. Roh-WR inkl. Remis liegt tiefer (viele Partien ohne Winner vor Timeout).
 - Simrauschen ca. ±2–3 pp; Zielkorridor 45–55 % Decided-WR.
 

@@ -1,6 +1,6 @@
 # Karten – Sonderfälle und Langtexte
 
-Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schlüsselwort-Chips. Die vollständige Regel steht in der Detailansicht (Datenfeld `text`) und – für jede Karte, deren Flächentext gekürzt ist – hier, wortgleich, nach ID sortiert. Erzeugt von `scripts/cards-review/kurz.py`; `scripts/test_card_faces_text.js` prüft, dass nichts verloren geht.
+Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schlüsselwort-Chips. Die vollständige Regel steht in der Detailansicht (Datenfeld `text`) und – für jede Karte, deren Flächentext gekürzt ist – hier, wortgleich, nach ID sortiert. Erzeugt von `scripts/cards-review/kurz.py`; `tests/test_card_faces_text.js` prüft, dass nichts verloren geht.
 
 Die bewusst gekürzten Teilsätze der Prüfung t212 (147 Sätze auf 143 Karten) stehen in [KARTEN_KUERZUNGEN.md](KARTEN_KUERZUNGEN.md), nicht hier. Hier stehen nur Flächentexte, die aus Platzgründen gegenüber dem Datenfeld `text` gekürzt sind.
 

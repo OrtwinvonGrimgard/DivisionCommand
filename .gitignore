@@ -2,5 +2,9 @@ node_modules/
 package-lock.json
 *.log
 .playtest_shots/
+.trophy_shots/
 __pycache__/
 *.py[cod]
+
+# Generierte Simulations-Rohdaten (nicht versionieren)
+scripts/balance/out/

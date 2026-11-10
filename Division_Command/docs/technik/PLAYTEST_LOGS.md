@@ -39,7 +39,7 @@ notes/_index.json      # Kurzliste
 ## Auswertung
 
 ```bash
-node scripts/analyze_playtest_logs.mjs pfad/zu/dc_playtest_….zip
+node scripts/playtest/analyze_playtest_logs.mjs pfad/zu/dc_playtest_….zip
 # oder entpackter Ordner mit logs/ und notes/
 ```
 

@@ -1,4 +1,6 @@
-# Nationenpools auf 100 Karten (Branch `nation-pools-100`)
+# Nationenpools auf 100 Karten
+
+Stand: gültig in `main` (Alpha 0.6b). Die Überschrift nannte früher den Arbeitsbranch `nation-pools-100`; der Inhalt ist der lebende Pool, kein offener Branch.
 
 **Deckformat bleibt:** 60 Karten + 2 Doktrinen. Die Starterdecks wurden **nicht verändert**. Neu ist der Auswahlpool: jede der 16 Nationen hat jetzt 100 einzigartige spielbare Karten (60 aus dem Starter + 40 neue) plus ihre 2 Doktrinen. Insgesamt kommen 640 Karten dazu. Regeln, Balance-Werte der Bestandskarten und Sounds sind unverändert.
 
@@ -70,7 +72,7 @@ Die vollständige Liste aller 640 Karten mit Kurztext, kompletter Regel, Effektc
   - Kopienlimits und Deckprüfung laufen über die bestehende `DC_validateDeck`.
 
 ## Tests
-- `scripts/test_nation_pools.js` (in `npm test`) prüft:
+- `tests/test_nation_pools.js` (in `npm test`) prüft:
   - 100 Karten je Nation, 2 Doktrinen, Starterdecks 60+2 unverändert und legal;
   - eindeutige IDs und Namen ohne Kollision mit Bestandskarten;
   - Kopienlimits, ein legales gemischtes Deck je Nation, ein nationenübergreifendes 60+2-Deck (auch mit Doktrinen zweier Nationen) und den Platzhalter;

@@ -75,25 +75,38 @@ Grundregel: Jede Nation hat einen schlüssigen Pool aus 100 Karten + 2 Doktrinen
 |---|---|
 | [NATIONENPOOLS_100.md](karten/NATIONENPOOLS_100.md) | Nationenpools mit 100 Karten je Nation, Deckformat 60 + 2 und Zahlentabelle. |
 | [NATIONENPOOL_KARTEN.md](karten/NATIONENPOOL_KARTEN.md) | Vollständige Liste der 640 neuen Poolkarten (generiert). |
-| [DECKS_SITZT.md](karten/DECKS_SITZT.md) | Konzeptlisten für die Decks der sitzenden Nationen. |
 
 ## Balance – `balance/`
 
 | Dokument | Inhalt |
 |---|---|
+| [BALANCE_T240.md](balance/BALANCE_T240.md) | Zweiter Caldris-Schritt (t240), Mischdeck-Ergebnis 0.6b. |
+| [BALANCE_T238.md](balance/BALANCE_T238.md) | Realistischer Mischdeck-Generator, Caldris/Namar-Poolwerte. |
+| [BALANCE_T237.md](balance/BALANCE_T237.md) | Erster Balance-Durchgang t237 (Doktrinen, Starterdeck-Tausche). |
 | [BALANCE_FRONT.md](balance/BALANCE_FRONT.md) | Diagnose des Front-Snowballs und Anti-Snowball-Prototypen. |
 | [DOKTRIN_BALANCE.md](balance/DOKTRIN_BALANCE.md) | Balance-Pass der Doktrinen mit Methode und Ergebnissen. |
 | [FP_VORTEIL_ANALYSE.md](balance/FP_VORTEIL_ANALYSE.md) | Analyse des Vorteils für den ersten Spieler (Simulation). |
 | [BALANCE_AP_STUFEN_v0.1.md](balance/BALANCE_AP_STUFEN_v0.1.md) | AP-Bepreisung und Stufeneinstufung, erster Balancepass. |
 | [DESIGN_BALANCE_UND_KARTENPLAN_v0.1.md](balance/DESIGN_BALANCE_UND_KARTENPLAN_v0.1.md) | Zentrale Grundlage für Kartenset-Aufbau und Neubewertung. |
 
-## Planung – `planung/`
+## Entwicklung – `entwicklung/`
+
+Ideen, die nicht (vollständig) im Spiel stecken. Übersicht: [entwicklung/README.md](entwicklung/README.md).
 
 | Dokument | Inhalt |
 |---|---|
-| [GESAMTPLAN.md](planung/GESAMTPLAN.md) | Übergeordneter Arbeitsplan mit Phasen und nächsten Schritten. |
-| [FAHRPLAN.md](planung/FAHRPLAN.md) | Fahrplan bis zur Vollversion, inklusive Roguelike-Kartendesign. |
-| [NEUE_EFFEKTIDEEN.md](planung/NEUE_EFFEKTIDEEN.md) | Entwürfe für nationale Sondermechaniken, nicht implementiert. |
+| [NEUE_EFFEKTIDEEN.md](entwicklung/NEUE_EFFEKTIDEEN.md) | Entwürfe für nationale Sondermechaniken, nicht implementiert. |
+
+## Archiv – `archiv/`
+
+Überholte Pläne und Konzeptlisten, nur zur Nachvollziehbarkeit. Übersicht: [archiv/README.md](archiv/README.md).
+
+| Dokument | Inhalt |
+|---|---|
+| [GESAMTPLAN.md](archiv/GESAMTPLAN.md) | Historischer Arbeitsplan (Bestand und Phasen nicht mehr aktuell). |
+| [FAHRPLAN.md](archiv/FAHRPLAN.md) | Historischer Fahrplan bis zur Vollversion. |
+| [DECKS_SITZT.md](archiv/DECKS_SITZT.md) | Konzeptlisten der sitzenden Nationen (Oktober 2026), nicht der lebende Katalog. |
+| [packete_0.30.json](archiv/packete_0.30.json) | Altes Split-Paket der Version 0.30. |
 
 ## Technik – `technik/`
 
@@ -110,6 +123,7 @@ Grundregel: Jede Nation hat einen schlüssigen Pool aus 100 Karten + 2 Doktrinen
 
 | Datei | Grund |
 |---|---|
+| [`../../README.md`](../../README.md) | Repo-Einstieg und Ordnerbaum (t245). |
 | [`../README.md`](../README.md) | Einstieg ins Spiel (Starten, Ordner); bleibt im Spielordner. |
 | `../web/assets/sfx/SOUND_QUELLEN.md` | Quellennachweis direkt bei den Sounddateien; inhaltsgleich mit `technik/SOUND_QUELLEN_SFX.md`. |
 | `../portraits/README.md`, `../portraits/layers/README.md` | Anleitung zum Porträtwerkzeug, gehört zum Werkzeugordner. |

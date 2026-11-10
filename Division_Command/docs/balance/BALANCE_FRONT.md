@@ -4,7 +4,7 @@ Stand: 2026-11-04 · Alpha 0.5a · **Siegbedingungen unverändert** (siehe [SIEG
 
 Nutzerfeedback: *„Oft hat man die Front relativ schnell an den Gegner verloren. Meistens hat sich eine Kette von Einheiten gebildet, die dann direkt jede Karte zerstört hat, die man legt.“*
 
-Simulation: `scripts/sim_front_snowball.mjs` — Bot-vs-Bot, 200 Partien je Modus, Nationen rotiert.
+Simulation: `scripts/balance/sim_front_snowball.mjs` — Bot-vs-Bot, 200 Partien je Modus, Nationen rotiert.
 
 ---
 
@@ -74,9 +74,9 @@ Flags in `catalog.js` → `rules.deploy_protection` **true** (permanent), `rules
 3. Danach ggf. `attack_ap: 2` oder Catch-up als Feintuning, sobald Siegbedingungen feststehen.
 4. **Siegbedingungen hier nicht anfassen** — Entscheidung offen in [SIEGBEDINGUNGEN.md](../regeln/SIEGBEDINGUNGEN.md).
 
-Repro: `node scripts/sim_front_snowball.mjs 200 baseline|deploy_protection|strict_facing|both`
+Repro: `node scripts/balance/sim_front_snowball.mjs 200 baseline|deploy_protection|strict_facing|both`
 
-Rohdaten (Stichprobe): `sim_front_*.json` im Ordner `Division_Command/`.
+Rohdaten (Stichprobe, nicht versioniert): `scripts/balance/out/sim_front_*.json`.
 
 ---
 
@@ -148,7 +148,7 @@ Karten mit explizitem Erstschlag-/Gegen-Wortlaut: **2** (Dschungelkrieger „Üb
 
 Board-Share (stabil über Modi, Extreme): stark **Rothain / Vael / Theryn**; schwach **Karsk / Namar / Orthea**. Simultaneous verstärkt die Extreme leicht; `none` nivelliert etwas.
 
-Repro: `node scripts/sim_combat_counter.mjs 200 survivor_only|none|simultaneous`
+Repro: `node scripts/balance/sim_combat_counter.mjs 200 survivor_only|none|simultaneous`
 
 ### 7.4 Spürgefühl
 
@@ -183,6 +183,6 @@ Umsetzung: `_counterDamageAllowed` in `_applyCombatHits`; Bot `scoreAttack` wert
 
 Nation-Board-Share unverändert im Muster: stark **Rothain / Theryn / Vael / Ossaria**; schwach **Karsk / Namar / Orthea / Lyr**. Artillerie-Kartenanteil je Nation gleich (~13 %), daher keine nationenspezifische Arty-Verschiebung — eher globale etwas sicherere Artillerie (höherer Arty-Angriffsanteil, seltenerer Gegenschlag).
 
-Repro: `node scripts/sim_combat_counter.mjs 200 survivor_only`
+Repro: `node scripts/balance/sim_combat_counter.mjs 200 survivor_only`
 
 

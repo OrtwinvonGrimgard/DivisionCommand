@@ -1,6 +1,6 @@
 # First-Player-Vorteil — Analyse (ohne Regeländerung)
 
-Stand: 2026-11-04 · ≥1200 RR je Variante (`scripts/sim_fp_advantage_analysis.mjs`)
+Stand: 2026-11-04 · ≥1200 RR je Variante (`scripts/balance/sim_fp_advantage_analysis.mjs`)
 
 ## Kurzfazit
 

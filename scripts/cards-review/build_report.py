@@ -35,7 +35,7 @@ tc = [e for e in out if e['text_geaendert']]; mc = [e for e in out if e['mechani
 o = ['# Kartenprüfung (t212)', '',
      'Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext = Implementierung.** Wo ein Text Dinge versprach, die die Engine nicht umsetzte, wurde die Fähigkeit in die allgemeine Mechanik `CM` (Werte mit Bedingung, Kampfboni gegen Zielarten, Auren, Auslöser, Rabatte, Heilung zu Zugbeginn …) übersetzt und der Kartentext aus dieser Implementierung neu erzeugt. Nichts ist stillschweigend verloren: der alte Text steht unten je ID und vollständig in `scripts/cards-review/review.json`.', '',
      '## Zahlen', '', f'- geprüft: **{len(out)}** IDs', f'- Text geändert: **{len(tc)}**', f'- Mechanik geändert (Effekte/Werte/Ziel/Schlüsselwörter): **{len(mc)}**',
-     f'- Fähigkeitstext ohne Implementierung vorher: **607** (davon 578 in `set_nations`) → jetzt **0** (Test `scripts/test_card_review.js`)',
+     f'- Fähigkeitstext ohne Implementierung vorher: **607** (davon 578 in `set_nations`) → jetzt **0** (Test `tests/test_card_review.js`)',
      f'- Balance-/Regelhinweise: **{sum(1 for e in out if e["flags"])}** IDs', '', '| Modus | Anzahl | Bedeutung |', '|---|---|---|']
 for k, v in C.most_common(): o.append(f'| {k} | {v} | {MODE_TXT.get(k, k)} |')
 o += ['', '## Engine-Korrekturen', '',

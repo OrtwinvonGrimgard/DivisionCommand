@@ -7,7 +7,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - geprüft: **1746** IDs
 - Text geändert: **899**
 - Mechanik geändert (Effekte/Werte/Ziel/Schlüsselwörter): **802**
-- Fähigkeitstext ohne Implementierung vorher: **607** (davon 578 in `set_nations`) → jetzt **0** (Test `scripts/test_card_review.js`)
+- Fähigkeitstext ohne Implementierung vorher: **607** (davon 578 in `set_nations`) → jetzt **0** (Test `tests/test_card_review.js`)
 - Balance-/Regelhinweise: **24** IDs
 
 | Modus | Anzahl | Bedeutung |
