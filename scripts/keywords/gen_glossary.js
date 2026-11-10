@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+/**
+ * Erzeugt `docs/regeln/SCHLUESSELWOERTER.md` aus den Spieldaten.
+ */
 'use strict';
 /* Erzeugt Division_Command/docs/regeln/SCHLUESSELWOERTER.md aus den Spieldaten. */
 const fs = require('fs'), path = require('path');
@@ -12,7 +15,7 @@ C.forEach((c) => (c.keywords || []).forEach((k) => { const n = c.nation || 'neut
 let o = '# Schlüsselwörter – **implementiert**\n\n';
 o += 'Die 24 Wörter (16 ursprüngliche, 3 vereinheitlichte Bestandskerne, 5 neue taktische Mechaniken) sind allgemeines Vokabular und an keine Nation gebunden. Sie stehen auf den Karten als **fettes Wort** mit vollständigem Erinnerungstext in Klammern. Das gilt für die Detailansicht, die Deckbuilder-Großansicht und die Platzhalterkarten. Auf dem Tisch erscheint eine Wortleiste.\n\n';
 o += 'Die Engine wertet die Wörter strukturiert aus (`def.keywords`, strukturierte `effects`, `engine.js` und `tactical_runtime.js`). Sie verlässt sich nicht auf Fließtext. Quelle des Vokabulars ist `web/js/data/keywords.js`, die Tests liegen in `tests/test_keywords.js`.\n\n';
-o += '> Die Sondermechaniken je Nation in [NEUE_EFFEKTIDEEN.md](../planung/NEUE_EFFEKTIDEEN.md) sind davon getrennt und bleiben **Vorschläge, nicht implementiert**.\n\n## Die 24 Wörter\n\n';
+o += '> Die Sondermechaniken je Nation in [NEUE_EFFEKTIDEEN.md](../entwicklung/NEUE_EFFEKTIDEEN.md) sind davon getrennt und bleiben **Vorschläge, nicht implementiert**.\n\n## Die 24 Wörter\n\n';
 WORDS.forEach((k) => { o += '- **' + k + '** (' + w.DC_KEYWORDS[k] + ')' + (w.DCKw.notes[k] ? ' — *' + w.DCKw.notes[k] + '*' : '') + '\n'; });
 o += '\n## Verteilung (Deckkarten mit dem Wort)\n\n| Wort | gesamt | ' + nat.join(' | ') + ' |\n|---|---|' + nat.map(() => '---').join('|') + '|\n';
 WORDS.forEach((k) => { const t = Object.values(cnt[k]).reduce((a, b) => a + b, 0); o += '| ' + k + ' | ' + t + ' | ' + nat.map((n) => cnt[k][n] || '·').join(' | ') + ' |\n'; });

@@ -143,13 +143,18 @@ Jede Nation hat eigene Doktrinen und thematische Decks. Taktische Lore beschreib
 
 ## 6. Technische Architektur
 
-- **Frontend:** HTML/CSS/JS (`web/`), Engine in `web/js/engine/engine.js`, Katalog in `catalog.js`.
-- **Server:** `server.py` (lokaler Host, LAN auf Port 8765/8766).
-- **Karten-Editor:** Eigenes Repo (DC) + Integration.
-- **Assets:** Kartenbilder, Porträts, Audio (Menü + Kampf).
-- **Simulationen:** Bot-vs-Bot für Balancing (Trophy-Modus, First-Player, Nation-Strength).
+Das spielbare Paket liegt unter `Division_Command/`. Werkzeuge, Tests und der Karteneditor stehen daneben im selben Repository (siehe Wurzel-`README.md`).
 
-**Engine-Hinweis:** Die Regelmaschine wertet Effect-Codes, Trigger und die allgemeine Kartenmechanik `CM` aus. Seit 0.6a ist jede Fähigkeit implementiert (Test `test_card_review.js`).
+- **Frontend:** HTML/CSS/JS (`Division_Command/web/`), Engine in `web/js/engine/engine.js`, Katalog in `web/js/data/catalog.js`.
+- **Server / Launcher:** `Division_Command/server.py` (lokaler Host, LAN auf Port 8765/8766) und `launcher.py`.
+- **Karten-Editor:** `KartenEditor/` im selben Repository (nicht mehr ein separates Repo).
+- **Tests:** `tests/` (`npm test`, Fuzz, Smoke); der Kartentext-Test ist `tests/test_card_review.js`.
+- **Skripte:** `scripts/` nach Zweck (`graphics`, `cards-review`, `balance`, `nation_pools`, `tactics`, `keywords`, `build`, `playtest`, `dev`).
+- **Dokumentation:** `Division_Command/docs/` mit `regeln/`, `karten/`, `balance/`, `technik/`, `nationen/`, `entwicklung/` (Ideen) und `archiv/` (historische Pläne).
+- **Assets:** Kartenbilder, Porträts, Audio (Menü + Kampf).
+- **Simulationen:** Bot-vs-Bot unter `scripts/balance/` (Trophy-Modus, First-Player, Nation-Strength).
+
+**Engine-Hinweis:** Die Regelmaschine wertet Effect-Codes, Trigger und die allgemeine Kartenmechanik `CM` aus. Seit 0.6a ist jede Fähigkeit implementiert (Test `tests/test_card_review.js`).
 
 ---
 
@@ -264,6 +269,11 @@ Division Command hat ein realistisch erreichbares Marktpotenzial in der Nische z
 | `TAKTIK_NATIONEN.md` | Taktische Lore aller Nationen |
 | `LORE_NATIONEN.md` | Gesellschaftliche Lore |
 | `archiv/FAHRPLAN.md` | Historischer Entwicklungs- und Release-Plan (Archiv) |
+| `entwicklung/NEUE_EFFEKTIDEEN.md` | Nicht implementierte Effektideen |
+| `../../README.md` | Repo-Einstieg und aktuelle Ordnerstruktur |
+| `../../tests/` | Automatisierte Tests (Node, Fuzz, Smoke) |
+| `../../scripts/` | Build-, Grafik-, Balance- und Review-Skripte |
+| `../../KartenEditor/` | Eigenständiger Karteneditor |
 | `web/js/engine/engine.js` | Regelmaschine |
 | `web/js/data/catalog.js` | Grundwerte und Regeln |
 
