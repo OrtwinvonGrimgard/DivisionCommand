@@ -423,6 +423,29 @@
    * @param {object} [skip]
    * @returns {object|null} Aktion oder null
    */
+  function isNeutralize(a) {
+    return a && (a.ability === 'NEUTRALIZE' || ((a.type === 'ACTIVATE_SUPPORT' || a.type === 'USE_ABILITY' || a.type === 'NEUTRALIZE') && a.label === 'Neutralisieren'));
+  }
+
+  /**
+   * Bewertung: gegnerische Schläferzelle für 2 AP entfernen, bevor sie zündet.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} a
+   * @returns {number}
+   */
+  function scoreNeutralize(engine, pid, a) {
+    var loc = engine.findInst(a.uid);
+    var left = loc && loc.inst && loc.inst.flags && loc.inst.flags.sleeper != null ? Number(loc.inst.flags.sleeper) : 3;
+    var vuln = 0;
+    engine.frontList(engine.player(pid)).forEach(function (l) {
+      var d = engine.defOf(l.inst);
+      if (Number(d.ap || 99) <= 3) vuln += 1;
+    });
+    if (!vuln) return 3 - Number(a.cost || 2);
+    return 14 + vuln * 4 + Math.max(0, 4 - left) * 5 - Number(a.cost || 2);
+  }
+
   function stepTest(engine, pid, skip) {
     var acts = engine.listActions(pid);
     if (!acts.length) return { type: 'END_TURN', player: pid };
@@ -467,13 +490,14 @@
         if (a.slot && a.slot.section === 'C') sc += 4;
         scored.push({ act: a, score: sc });
       }
+      if (isNeutralize(a)) scored.push({ act: a, score: scoreNeutralize(engine, pid, a) });
     });
     var plays = scored.filter(function (x) { return playable(x.act); });
     if (plays.length) {
       plays.sort(function (x, y) { return y.score - x.score; });
       return emit(pid, plays[0]);
     }
-    var rest = scored.filter(function (x) { return x.act.type === 'ATTACK' || x.act.type === 'REVEAL_UNIT' || x.act.type === 'DOK_SHIFT'; });
+    var rest = scored.filter(function (x) { return x.act.type === 'ATTACK' || x.act.type === 'REVEAL_UNIT' || x.act.type === 'DOK_SHIFT' || isNeutralize(x.act); });
     if (!rest.length) return { type: 'END_TURN', player: pid };
     rest.sort(function (x, y) { return y.score - x.score; });
     return emit(pid, rest[0]);
@@ -517,6 +541,8 @@
     if (shifts.length) return Object.assign({ player: pid }, pick(shifts));
     var reveal = acts.find(function (a) { return a.type === 'REVEAL_UNIT'; });
     if (reveal) return Object.assign({ player: pid }, reveal);
+    var neut = acts.filter(function (a) { return isNeutralize(a) && !(skip && skip[actKey(a)]); });
+    if (neut.length) return Object.assign({ player: pid }, pick(neut));
     var end = acts.find(function (a) { return a.type === 'END_TURN'; });
     return end ? { type: 'END_TURN', player: pid } : Object.assign({ player: pid }, pick(acts));
   }

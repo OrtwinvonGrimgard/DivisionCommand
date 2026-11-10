@@ -33,3 +33,10 @@ _keine_
 ## Hänger in der Probe
 
 _keine_
+
+## Nachtrag t251
+
+Drei der vier gemeldeten Codes sind umgesetzt (siehe `docs/regeln/EFFEKT_SONDERFAELLE_T251.md`). Unverändert bleibt nur:
+
+- `MINE_TOKEN` — Minenfeld (`dc_tok_minenfeld`): der Code wird weiterhin nicht gelesen; die Mine zündet über den Token-Sonderfall (fest 3 Schaden = Parameter). Kein No-Op der Karte.
+

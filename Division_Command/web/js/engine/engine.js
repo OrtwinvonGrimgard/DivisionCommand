@@ -518,6 +518,11 @@
         for (let i = 0; i < p.support.length; i++) { // Unterstützungszone
           const u = p.support[i]; // Unterstützungszone
           if (u && u.uid === uid) return { inst: u, player: p, zone: 'support', index: i }; // Unterstützungszone
+          if (u) {
+            for (const a of (u.attachments || [])) {
+              if (a.uid === uid) return { inst: a, player: p, zone: 'equip', host: u, supportIndex: i };
+            }
+          }
           if (u && u.flags && u.flags.patient && u.flags.patient.uid === uid) return { inst: u.flags.patient, player: p, zone: 'patient', host: u, index: i };
         }
         for (const u of p.hand) if (u.uid === uid) return { inst: u, player: p, zone: 'hand' }; // Handkarten
@@ -714,6 +719,7 @@
       if (player && player.flags && player.flags.tacticDiscount && def.typ !== 'Soforteinsatz') {
         cost -= 1;
       }
+      if (player && def.typ === 'Soforteinsatz') cost -= this._equipDiscountAura(player, def.typ);
       // Ladungsliste etc.: allow 0 when explicit costReduce applied
       const floor = (def.typ === 'Ausrüstung' && (def.effects || []).some((e) => (e.code === 'EQUIP_STAT' && e.param && e.param.costReduce) || (e.code === 'CM' && e.param && e.param.k === 'cost'))) ? 0 : 1;
       if (def.typ === 'Soforteinsatz') return Math.max(0, cost);
@@ -750,6 +756,86 @@
      */
     _hasOwnSupport(p) {
       return !!(p && (p.support || []).some((x) => x));
+    }
+    /**
+     * True bei Elite-Klasse oder -Tag (Trägerfilter, z. B. Vertragsclip).
+     * @param {object} def
+     * @returns {boolean}
+     */
+    _isElite(def) {
+      return !!(def && (hasTag(def, 'elite') || def.typ === 'Elite' || def.klasse === 'Elite'));
+    }
+    /**
+     * Summe der Ausrüstungs-Auren `EQUIP_DISCOUNT_AURA` auf legalen Trägern des Spielers.
+     * Vertragsclip: nur Elite oder Unterstützung, typischerweise Soforteinsatz −1.
+     * @param {object} player
+     * @param {string} typ
+     * @returns {number}
+     */
+    _equipDiscountAura(player, typ) {
+      if (!player) return 0;
+      let n = 0;
+      const take = (host, zone) => {
+        if (!host) return;
+        const hd = this.defOf(host);
+        (host.attachments || []).forEach((eq) => {
+          (this.defOf(eq).effects || []).forEach((e) => {
+            if (e.code !== 'EQUIP_DISCOUNT_AURA') return;
+            const want = String((e.param && e.param.type) || 'Soforteinsatz');
+            if (want && typ && want !== typ) return;
+            if (zone === 'support' || this._isElite(hd)) n += Number((e.param && e.param.amount) || 1);
+          });
+        });
+      };
+      this.frontList(player).forEach((l) => take(l.inst, 'front'));
+      (player.support || []).forEach((s) => take(s, 'support'));
+      return n;
+    }
+    /**
+     * Trägerliste für eine Ausrüstung inkl. Elite/Unterstützungs-Filter (Vertragsclip).
+     * @param {object} p
+     * @param {object} def
+     * @returns {{inst: object, zone: string, label: string}[]}
+     */
+    _equipHostChoices(p, def) {
+      const fx = (def.effects || []).find((x) => x.code === 'EQUIP_DISCOUNT_AURA')
+        || (def.effects || []).find((x) => x.param && x.param.only);
+      let only = fx && fx.param && fx.param.only ? String(fx.param.only) : '';
+      if (!only && fx && fx.code === 'EQUIP_DISCOUNT_AURA') only = 'elite|unterstuetzung';
+      const parts = only ? only.split('|') : [];
+      const allow = (hd, kind) => {
+        if (!parts.length) return kind === 'front';
+        return parts.some((o) => {
+          if (o === 'infanterie') return kind === 'front' && isInfantry(hd);
+          if (o === 'panzer') return kind === 'front' && (hasTag(hd, 'panzer') || hd.typ === 'Panzer');
+          if (o === 'artillerie') return kind === 'front' && (isArtillery(hd) || hd.typ === 'Artillerie');
+          if (o === 'aufklaerung') return kind === 'front' && (hd.typ === 'Aufklärung' || hasTag(hd, 'aufklaerung'));
+          if (o === 'elite') return kind === 'front' && this._isElite(hd);
+          if (o === 'unterstuetzung' || o === 'unterstützung') return kind === 'support';
+          return kind === 'front' && (hasTag(hd, o) || hd.typ === o);
+        });
+      };
+      const out = [];
+      this.frontList(p).forEach((h) => {
+        if (allow(this.defOf(h.inst), 'front')) {
+          out.push({ inst: h.inst, zone: 'front', label: this.defOf(h.inst).name });
+        }
+      });
+      (p.support || []).forEach((s) => {
+        if (s && !s.facedown && allow(this.defOf(s), 'support')) {
+          out.push({ inst: s, zone: 'support', label: this.defOf(s).name });
+        }
+      });
+      return out;
+    }
+    /**
+     * True, wenn Blitzkrieg die Sonderfähigkeiten der Unterstützung dieses Spielers sperrt.
+     * @param {number} pid
+     * @returns {boolean}
+     */
+    _supportLocked(pid) {
+      const p = this.player(pid);
+      return !!(p && p.flags && p.flags.blitzLock > 0);
     }
     /**
      * True, wenn die aktuelle DEF unter der Maximal-DEF liegt.
@@ -1322,10 +1408,23 @@
           }
         }
         if (this._tacActivation) {
-          this.frontList(p).concat((p.support || []).filter(Boolean).map(inst=>({inst}))).forEach(l=>{
+          const locked = this._supportLocked(playerId);
+          this.frontList(p).concat((p.support || []).filter(Boolean).map(inst=>({inst,zone:'support'}))).forEach(l=>{
+            if (locked && l.zone === 'support') return;
             try { this._tacActivation(playerId,l.inst.uid); acts.push({type:'USE_ABILITY',uid:l.inst.uid}); } catch (e) { /* passive/illegal source */ }
           });
         }
+        const foe = this.opponent(playerId);
+        (foe.support || []).forEach((s) => {
+          if (!s || s.facedown) return;
+          const sd = this.defOf(s);
+          const nx = (sd.effects || []).find((x) => x.code === 'NEUTRALIZE');
+          if (!nx) return;
+          const nCost = Number((nx.param && nx.param.ap) || 2);
+          if (p.ap >= nCost) {
+            acts.push({ type: 'ACTIVATE_SUPPORT', uid: s.uid, cardId: sd.id, name: sd.name, cost: nCost, ability: 'NEUTRALIZE', label: 'Neutralisieren' });
+          }
+        });
         acts.push({ type: 'END_TURN' });
         acts.push({ type: 'PROPOSE_PEACE' });
       }
@@ -1547,22 +1646,7 @@
         return { ok: true };
       }
       if (def.typ === 'Ausrüstung') {
-        let hosts = this.frontList(p);
-        const onlyEff = (def.effects || []).find((x) => x.param && x.param.only);
-        if (onlyEff) {
-          const only = String(onlyEff.param.only);
-          hosts = hosts.filter((h) => {
-            const hd = this.defOf(h.inst);
-            return only.split('|').some((o) => {
-              if (o === 'infanterie') return isInfantry(hd);
-              if (o === 'panzer') return hasTag(hd, 'panzer') || hd.typ === 'Panzer';
-              if (o === 'artillerie') return isArtillery(hd) || hd.typ === 'Artillerie';
-              if (o === 'aufklaerung') return hd.typ === 'Aufklärung' || hasTag(hd, 'aufklaerung');
-              if (o === 'elite') return hd.typ === 'Elite' || hasTag(hd, 'elite');
-              return hasTag(hd, o) || hd.typ === o;
-            });
-          });
-        }
+        const hosts = this._equipHostChoices(p, def);
         if (!hosts.length) {
           p.ap += cost;
           throw new Error('Keine Einheit für Ausrüstung'); // Regelverstoß, Zug ungültig
@@ -1572,7 +1656,7 @@
           player: pid,
           uid: found.uid,
           paid: cost,
-          choices: hosts.map((h) => ({ target: h.inst.uid, label: this.defOf(h.inst).name })),
+          choices: hosts.map((h) => ({ target: h.inst.uid, label: h.label })),
         });
         return { ok: true, need: 'target' };
       }
@@ -1619,6 +1703,7 @@
         card.def = Math.max(1, (card.def || 0) - 1); card.defMax = Math.max(1, (card.defMax || 0) - 1);
       }
       p.front[slot.section][slot.row] = card;
+      this._maybeBlitzLock({ inst: card, player: p, zone: 'front', section: slot.section, row: slot.row });
       if (isInfantry(this.defOf(card))) {
         if (!p.flags.infPlayed || p.flags.infPlayed.turn !== this.state.turn) p.flags.infPlayed = { turn: this.state.turn, uids: [] };
         p.flags.infPlayed.uids.push(card.uid);
@@ -2206,8 +2291,12 @@
         const p = this.player(pid);
         const card = p.hand.find((c) => c.uid === pend.uid); // Handkarten
         const host = this.findInst(a.target);
-        if (!card || !host || host.player.id !== pid || host.zone !== 'front') throw new Error('Ungültiges Ziel'); // Regelverstoß, Zug ungültig
+        const zonesOk = host && (host.zone === 'front' || host.zone === 'support');
+        if (!card || !host || host.player.id !== pid || !zonesOk) throw new Error('Ungültiges Ziel'); // Regelverstoß, Zug ungültig
+        const legal = this._equipHostChoices(p, this.defOf(card)).some((h) => h.inst.uid === host.inst.uid);
+        if (!legal) throw new Error('Ungültiges Ziel');
         p.hand = p.hand.filter((c) => c.uid !== card.uid); // Handkarten
+        host.inst.attachments = host.inst.attachments || [];
         host.inst.attachments.push(card);
         card.flags.tacAttachedTurn=this.state.turn;
         delete card.flags.tacFirstAttackUsed;
@@ -4430,8 +4519,16 @@
      * @param {object} a
      */
     _actUseAbility(pid, a) {
+      const locEarly = this.findInst(a && a.uid);
+      if (locEarly) {
+        const neut = this._tryNeutralize(pid, locEarly);
+        if (neut) return neut;
+      }
+      if (locEarly && locEarly.zone === 'support' && locEarly.player.id === pid && this._supportLocked(pid)) {
+        throw new Error('Blitzkrieg-Sperre: Unterstützung nicht aktivierbar');
+      }
       if (this._tacAbility) { const r=this._tacAbility(pid,a); if (r) return r; }
-      const loc = this.findInst(a.uid);
+      const loc = locEarly || this.findInst(a.uid);
       if (!loc) throw new Error('Karte nicht gefunden');
       const inst = loc.inst;
       const def = this.defOf(inst);
@@ -6473,11 +6570,40 @@
      * @param {object} loc
      */
     _maybeBlitzLock(loc) {
-      if (!loc || !loc.inst) return;
+      if (!loc || !loc.inst || !loc.player) return;
+      if (loc.zone && loc.zone !== 'front') return;
+      if (loc.inst.summonedTurn !== this.state.turn) return;
       const p = loc.player;
-      if (!this._hasDoctrine(p, 'BLITZ_SUMMON_ATK') && !this._hasDoctrine(p, 'BLITZ')) return;
+      if (!this._hasDoctrine(p, 'BLITZ_LOCK_SUPPORT')) return;
       const d = this.defOf(loc.inst);
-      if (hasTag(d, 'panzer') && loc.inst.facedown) loc.inst.flags.blitzLock = true;
+      if (!hasTag(d, 'panzer')) return;
+      const opp = this.opponent(p.id);
+      opp.flags = opp.flags || {};
+      // Zähler 2: überlebt das Zugende des Ausspielenden, gilt im folgenden gegnerischen Zug, fällt an dessen Ende.
+      opp.flags.blitzLock = 2;
+      this._log('Blitzkrieg: Sonderfähigkeiten der Unterstützung von ' + opp.name + ' sind in der nächsten Runde gesperrt.');
+    }
+    /**
+     * Gegner zahlt AP und entfernt eine Schläferzelle (Effekt `NEUTRALIZE`).
+     * @param {number} pid
+     * @param {object} loc
+     * @returns {object|null}
+     */
+    _tryNeutralize(pid, loc) {
+      if (!loc || loc.zone !== 'support' || !loc.inst || loc.player.id === pid) return null;
+      const def = this.defOf(loc.inst);
+      const fx = (def.effects || []).find((x) => x.code === 'NEUTRALIZE');
+      if (!fx) return null;
+      if (this.state.active !== pid) throw new Error('Neutralisierung nur im eigenen Zug');
+      if (this.state.pending) throw new Error('Erst Ziel wählen');
+      if (loc.inst.facedown) throw new Error('Verdeckt');
+      const cost = Number((fx.param && fx.param.ap) || 2);
+      const p = this.player(pid);
+      if (p.ap < cost) throw new Error('Zu wenig AP');
+      this._spend(p, cost);
+      this._destroy({ inst: loc.inst, player: loc.player, zone: 'support', index: loc.index });
+      this._log(p.name + ' neutralisiert ' + def.name + ' (' + cost + ' AP).');
+      return { ok: true };
     }
     /**
      * Aktiviert eine Unterstützungsfähigkeit (allgemeiner Einstieg).

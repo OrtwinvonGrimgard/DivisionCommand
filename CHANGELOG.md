@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- **Effekte (t251):** Drei Teil-Stubs aus dem Scan t250 greifen jetzt wie gedruckt: Vertragsclip (`EQUIP_DISCOUNT_AURA` in `costOf`, Träger Elite oder Unterstützung), Blitzkrieg (`BLITZ_LOCK_SUPPORT`: Sperre gegnerischer Unterstützungsfähigkeiten in der nächsten Runde nach einem Panzer-Ausspiel) und Schläferzelle (`NEUTRALIZE`, 2 AP über `listActions`/`dispatch`). Preise unverändert, sofern die Nachsim das bestätigt. Sonderfälle: `docs/regeln/EFFEKT_SONDERFAELLE_T251.md`. Begründung: `docs/balance/BALANCE_T251.md`.
+
 - **Soforteinsätze (t250):** Psychologie der Massen, Blinder Gehorsam, Einsame Gassen, Der Letzte der steht und Mobilisierung wirken jetzt wie gedruckt (Massen-Folge, +2 ATK und freie Frontangriffe, Füllen aus dem Deck, Opfer/+1/+1/SP-Flag `letzterDerSteht`, Mobilisierung bis zu 2). Bots und LAN-Sync über bestehende Pending-Aktionen. t249-Preise nach kurzer Sim mit echter Wirkung belassen. Sonderfälle: `docs/regeln/SOFORT_SONDERFAELLE.md`. Stub-Scan (nur Liste): `docs/balance/STUB_SCAN_T250.md`. Begründung: `docs/balance/BALANCE_T250.md`.
 
 - **Soforteinsätze (t249):** Zehn Grundset-Karten mit 0 AP neu bepreist: Luftschlag 4, Dammbruch 6, Psychologie der Massen 6, Generalmobilmachung 4, Blinder Gehorsam 6, Einsame Gassen 6, Mobilisierung 3, Deckung suchen 2, Selbstopfer 2, Der Letzte der steht 3. Deckung suchen gewährt jetzt wirklich +3 V bis zum Angriff. Vorderseiten neu (alpha40), Cache `divcmd-alpha40r`. Begründung und Simulation: `docs/balance/BALANCE_T249.md`.
