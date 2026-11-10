@@ -53,11 +53,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK und du ziehst 1 Karte — Druck ohne Verband.",
+    "text": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, eine eigene Einheit dort heilt 1 und du ziehst 1 Karte.",
     "clauses": [
       {
         "title": "",
-        "body": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK und du ziehst 1 Karte — Druck ohne Verband."
+        "body": "Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, eine eigene Einheit dort heilt 1 und du ziehst 1 Karte."
       }
     ],
     "effects": [
@@ -66,7 +66,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "param": {
           "on_destroy_in_section": {
             "section_atk": 1,
-            "heal": 0,
+            "heal": 1,
             "draw": 1,
             "until": "end-of-turn"
           }
@@ -129,11 +129,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Zerstört eine eigene Einheit ein Ziel, hat sie +1 ATK bis Ende deines nächsten Zuges und du ziehst 1.",
+    "text": "Zerstört eine eigene Einheit ein Ziel, hat sie +2 ATK bis Ende deines nächsten Zuges und du ziehst 1.",
     "clauses": [
       {
         "title": "",
-        "body": "Zerstört eine eigene Einheit ein Ziel, hat sie +1 ATK bis Ende deines nächsten Zuges und du ziehst 1."
+        "body": "Zerstört eine eigene Einheit ein Ziel, hat sie +2 ATK bis Ende deines nächsten Zuges und du ziehst 1."
       }
     ],
     "effects": [
@@ -141,7 +141,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "ABSCHLUSS",
         "param": {
           "on": "destroyed-enemy",
-          "atk": 1,
+          "atk": 2,
           "draw": 1,
           "until": "end-of-next-own-turn"
         }
@@ -798,11 +798,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Panzer und Artillerie kosten 1 AP weniger (min. 1). Die Werkstatt läuft durchgehend — ohne Extra-Panzerung beim Einrücken.",
+    "text": "Nach dem ersten Verlust eines eigenen Panzers oder einer Artillerie kosten Panzer und Artillerie 1 AP weniger (min. 1).",
     "clauses": [
       {
         "title": "",
-        "body": "Panzer und Artillerie kosten 1 AP weniger (min. 1). Die Werkstatt läuft durchgehend — ohne Extra-Panzerung beim Einrücken."
+        "body": "Nach dem ersten Verlust eines eigenen Panzers oder einer Artillerie kosten Panzer und Artillerie 1 AP weniger (min. 1)."
       }
     ],
     "effects": [
@@ -813,7 +813,7 @@ window.DC_SET_TYPES["Doktrin"] = [
             "panzer",
             "geschuetze"
           ],
-          "if": "always",
+          "if": "after-loss",
           "play_cost": -1,
           "min": 1
         }
@@ -1337,18 +1337,18 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Eigene Angriffe gegen beschädigte Feinde haben +1 ATK. Beim Zerstören ziehst du 1 — der Abschluss bleibt, der Stoß wird knapper.",
+    "text": "Eigene Angriffe gegen beschädigte Feinde haben +2 ATK. Beim Zerstören ziehst du 1 — der Abschluss bleibt, der Stoß wird knapper.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Angriffe gegen beschädigte Feinde haben +1 ATK. Beim Zerstören ziehst du 1 — der Abschluss bleibt, der Stoß wird knapper."
+        "body": "Eigene Angriffe gegen beschädigte Feinde haben +2 ATK. Beim Zerstören ziehst du 1 — der Abschluss bleibt, der Stoß wird knapper."
       }
     ],
     "effects": [
       {
         "code": "ZIELANGRIFF",
         "param": {
-          "vs_damaged_atk": 1,
+          "vs_damaged_atk": 2,
           "draw_on_damaged_kill": 1
         }
       }

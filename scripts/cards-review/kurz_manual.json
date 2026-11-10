@@ -8,14 +8,14 @@
  "dc_dok_gegenstoss": "Angegriffener eigener Abschnitt: Einheiten dort +1 ATK bis Ende deines nächsten Zuges; überlebendes Ziel heilt 1.",
  "dc_dok_lauer": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, +1 ATK.",
  "dc_dok_linienkrieg": "Eigene Einheiten +1 DEF; mit 2+ eigenen Einheiten im Abschnitt dort weitere +1 DEF.",
- "dc_dok_materialersatz": "Panzer und Artillerie kosten 1 AP weniger (mind. 1).",
+ "dc_dok_materialersatz": "Nach eigenem Panzer- oder Artillerieverlust kosten Panzer und Artillerie 1 AP weniger (mind. 1).",
  "dc_dok_scheinschwerpunkt": "Eigene Einheiten in Abschnitten mit höchstens 2 eigenen Einheiten +1 ATK/+1 DEF.",
  "dc_dok_sicherer_nachschub": "Unterstützung −1 AP (mind. 1). 1×/Zug: gepanzerte Einheit +1 DEF. Überschuss (2 AP): Unterstützung erneut nutzen.",
  "dc_dok_stosstrupp": "Eigene Einheiten +1 ATK; Infanterie weitere +1, beschädigte Einheiten weitere +1.",
  "dc_dok_tiefenverteidigung": "Infanterie/Artillerie +1 DEF. Je zerstörtem Feind +1 AP nächsten Zug. Rohrartillerie mit Aufklärung trifft Support.",
  "dc_dok_verlegung": "1×/Zug, 1 AP: versetze eine eigene Einheit um ein Feld seitlich.",
  "dc_dok_weiterkaempfen": "Beschädigte eigene Einheiten +2 ATK/+1 DEF. Zerstören sie ein Ziel: heile 1, +1 AP (1×/Zug).",
- "dc_dok_zielangriff": "Eigene Angriffe gegen beschädigte Feinde +1 ATK. Zerstörst du dabei ein Ziel, ziehe 1.",
+ "dc_dok_zielangriff": "Eigene Angriffe gegen beschädigte Feinde +2 ATK. Zerstörst du dabei ein Ziel, ziehe 1.",
  "dc_eh_himmel": "Schulterschluss nur zu zweit: erst die gewählte, dann die zweite Einheit; 1 AP, beide erschöpft.",
  "dc_su_lazarett": "Heilung (1 AP): Infanterie hierher; heilt 1/Zug, kehrt geheilt auf ihr Feld zurück. Fällt das Lazarett, fällt sie.",
  "dc_su_schlaefer": "Nach 3 eigenen Zügen: zerstöre zufälligen Feind mit AP ≤ 3, dann Friedhof. Gegner kann für 2 AP neutralisieren.",
@@ -35,5 +35,6 @@
  "dc_tac_nachhutkompanie": "Gefechtsabbruch (Reaktion, 1 AP): überlebt sie einen Angriff, auf ein freies Nachbarfeld; greift dann 1 Zug nicht an.",
  "dc_tac_ausweichender_spahwagen": "Gefechtsabbruch (Reaktion, 1 AP): überlebt sie einen Angriff, auf ein freies Nachbarfeld; greift dann 1 Zug nicht an.",
  "dc_tac_vorgeschobener_meldetrupp": "Vorpostenmeldung: deckt je Spielerzug den ersten verdeckten Feind auf, der gegenüber einrückt.",
- "dc_tac_beobachtungswagen_am_rand": "Vorpostenmeldung: deckt je Spielerzug den ersten verdeckten Feind auf, der gegenüber einrückt."
+ "dc_tac_beobachtungswagen_am_rand": "Vorpostenmeldung: deckt je Spielerzug den ersten verdeckten Feind auf, der gegenüber einrückt.",
+ "dc_dok_abnutzung": "Zerstörst du einen Feind: Abschnitt bis Zugende +1 ATK, eine eigene Einheit dort heilt 1, ziehe 1."
 }

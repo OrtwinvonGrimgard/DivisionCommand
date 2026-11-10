@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-/* Nationenpools: 100 einzigartige Karten je Nation (+2 Doktrinen), Starterdecks 60+2 unverändert, Limits,
+/* Nationenpools: 100 einzigartige Karten je Nation (+2 Doktrinen), Starterdecks 60+2 aus eigener Nation, Limits,
    und jede neue Karte wird über die Produktions-Dispatch-Pfade gespielt und ihr Effekt geprüft. */
 const assert = require('node:assert/strict');
 const L = require('./nation_pools/load_game.js');
@@ -26,7 +26,8 @@ for (const n of nations) {
   assert.equal(new Set(pool.map((c) => c.id)).size, pool.length);
   const d = w.DC_NATION_DECKS[n];
   assert.equal(d.cards.length, 60, n + ' Starterdeck 60'); assert.equal(d.doktrinen.length, 2, n + ' 2 Doktrinen');
-  assert(d.cards.every((id) => !id.startsWith('dc_np_')), n + ' Starterdeck unverändert (keine Poolkarten)');
+  // t237: Starterdecks dürfen Karten aus dem eigenen Nationenpool enthalten (Balance-Tausch), nie fremde.
+  assert(d.cards.every((id) => { const c = C.find((x) => x.id === id); return c && (c.nation === n || c.nation == null); }), n + ' Starterdeck nur eigene Nation');
   d.doktrinen.forEach((id) => assert.equal(C.find((c) => c.id === id).typ, 'Doktrin'));
   const v = w.DC_validateDeck(d.cards, d.doktrinen); assert(v.ok, n + ' Starterdeck legal');
   report.push(n + ' ' + pool.length);
@@ -259,6 +260,6 @@ for (const c of NP) {
   const ph = h.w.DCCardPh.html(pc, 'hero'); assert(/Entwurf · noch kein Artwork/.test(ph) && !/<img/.test(ph) && ph.includes(pc.name));
   const rh = h.w.DCCardPh.rulesHtml(pc); pc.rules.forEach((r) => assert(rh.includes(r.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'))));
 }
-console.log('PASS nation pools: ' + NP.length + ' neue Karten, alle 16 Nationen ≥100 einzigartig (+2 Doktrinen), Starterdecks 60+2 unverändert, Limits, freies Mischen über Nationen, Zielseiten/AP/Effekte je Karte geprüft');
+console.log('PASS nation pools: ' + NP.length + ' neue Karten, alle 16 Nationen ≥100 einzigartig (+2 Doktrinen), Starterdecks 60+2 aus eigener Nation, Limits, freies Mischen über Nationen, Zielseiten/AP/Effekte je Karte geprüft');
 console.log('  ' + report.join(' · '));
 console.log('  Codes: ' + Object.entries(seen).map(([k, v]) => k + '×' + v).join(' '));

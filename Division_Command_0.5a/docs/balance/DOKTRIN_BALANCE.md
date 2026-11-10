@@ -180,3 +180,12 @@ Bestätigung: 2×3600 Partien (Seeds Offset 0 / 1 000 000):
 
 - Decided-WR gesamt: **46.4–53.2 %** · **16/16 im 46–54-Korridor**
 - Startspieler-WR: **51.32 %** (51.11 / 51.53) · Median-Züge 14.5 · Remis 0 %
+
+## t237 (10.11.2026) – Simulationspass
+
+Aus 11.520 Bot-Partien je Modus (Details, alle Vorher/Nachher-Werte: [BALANCE_T237.md](BALANCE_T237.md)):
+
+- **Materialersatz:** Rabatt −1 AP auf Panzer/Artillerie gilt erst, nachdem ein eigener Panzer oder eine eigene Artillerie verloren ging (vorher immer). Vael im gemischten Pool 71,8 % → 53,7 %.
+- **Abnutzung:** Kill → Abschnitt +1 ATK, eine eigene Einheit dort heilt 1 (neu), ziehe 1.
+- **Zielangriff:** gegen beschädigte Feinde +2 ATK (vorher +1).
+- **Abschluss:** Killer +2 ATK bis Ende des nächsten eigenen Zuges (vorher +1).

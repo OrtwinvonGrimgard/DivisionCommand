@@ -5,7 +5,7 @@
   "keywords": []
  },
  "dc_dok_abnutzung": {
-  "kurz": "Zerstörst du eine Feind, hat dieser Abschnitt bis Zugende +1 ATK und du ziehst 1 Karte — Druck ohne Verband.",
+  "kurz": "Zerstörst du einen Feind: Abschnitt bis Zugende +1 ATK, eine eigene Einheit dort heilt 1, ziehe 1.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -15,7 +15,7 @@
   "keywords": []
  },
  "dc_dok_abschluss": {
-  "kurz": "Zerstört eine eigene Einheit ein Ziel, hat sie +1 ATK bis Ende deines nächsten Zuges und du ziehst 1.",
+  "kurz": "Zerstört eine eigene Einheit ein Ziel, hat sie +2 ATK bis Ende deines nächsten Zuges und du ziehst 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -105,7 +105,7 @@
   "keywords": []
  },
  "dc_dok_materialersatz": {
-  "kurz": "Panzer und Artillerie kosten 1 AP weniger (mind. 1).",
+  "kurz": "Nach eigenem Panzer- oder Artillerieverlust kosten Panzer und Artillerie 1 AP weniger (mind. 1).",
   "gekuerzt": true,
   "keywords": []
  },
@@ -175,7 +175,7 @@
   "keywords": []
  },
  "dc_dok_zielangriff": {
-  "kurz": "Eigene Angriffe gegen beschädigte Feinde +1 ATK. Zerstörst du dabei ein Ziel, ziehe 1.",
+  "kurz": "Eigene Angriffe gegen beschädigte Feinde +2 ATK. Zerstörst du dabei ein Ziel, ziehe 1.",
   "gekuerzt": true,
   "keywords": []
  },

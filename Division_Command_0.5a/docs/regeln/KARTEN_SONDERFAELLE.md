@@ -42,14 +42,6 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 > Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.
 
-## `dc_b_dienstbuch_592` – Dienstbuch (Ausrüstung)
-
-**Fläche:** Beim Anlegen: decke einen verdeckten Feind auf. Beim Anlegen: decke einen verdeckten Feind auf. nerische Einheit auf.
-
-**Volltext:**
-
-> Beim Anlegen: decke eine verdeckte gegnerische Einheit auf. Beim Anlegen: decke eine verdeckte gegnerische Einheit auf. nerische Einheit auf.
-
 ## `dc_b_doppelhaus_750` – Doppelhaus (Unterstützung)
 
 **Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.
@@ -420,11 +412,11 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_dok_abnutzung` – Abnutzung (Doktrin)
 
-**Fläche:** Zerstörst du eine Feind, hat dieser Abschnitt bis Zugende +1 ATK und du ziehst 1 Karte — Druck ohne Verband.
+**Fläche:** Zerstörst du einen Feind: Abschnitt bis Zugende +1 ATK, eine eigene Einheit dort heilt 1, ziehe 1.
 
 **Volltext:**
 
-> Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK und du ziehst 1 Karte — Druck ohne Verband.
+> Zerstörst du eine gegnerische Fronteinheit, hat dieser Abschnitt bis Zugende +1 ATK, eine eigene Einheit dort heilt 1 und du ziehst 1 Karte.
 
 ## `dc_dok_auswertung` – Auswertung (Doktrin)
 
@@ -492,11 +484,11 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_dok_materialersatz` – Materialersatz (Doktrin)
 
-**Fläche:** Panzer und Artillerie kosten 1 AP weniger (mind. 1).
+**Fläche:** Nach eigenem Panzer- oder Artillerieverlust kosten Panzer und Artillerie 1 AP weniger (mind. 1).
 
 **Volltext:**
 
-> Panzer und Artillerie kosten 1 AP weniger (min. 1). Die Werkstatt läuft durchgehend — ohne Extra-Panzerung beim Einrücken.
+> Nach dem ersten Verlust eines eigenen Panzers oder einer Artillerie kosten Panzer und Artillerie 1 AP weniger (min. 1).
 
 ## `dc_dok_scheinschwerpunkt` – Scheinschwerpunkt (Doktrin)
 
@@ -556,11 +548,11 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_dok_zielangriff` – Zielangriff (Doktrin)
 
-**Fläche:** Eigene Angriffe gegen beschädigte Feinde +1 ATK. Zerstörst du dabei ein Ziel, ziehe 1.
+**Fläche:** Eigene Angriffe gegen beschädigte Feinde +2 ATK. Zerstörst du dabei ein Ziel, ziehe 1.
 
 **Volltext:**
 
-> Eigene Angriffe gegen beschädigte Feinde haben +1 ATK. Beim Zerstören ziehst du 1 — der Abschluss bleibt, der Stoß wird knapper.
+> Eigene Angriffe gegen beschädigte Feinde haben +2 ATK. Beim Zerstören ziehst du 1 — der Abschluss bleibt, der Stoß wird knapper.
 
 ## `dc_eh_himmel` – Infanteriebataillon Himmelhund (Einheit)
 
@@ -820,15 +812,11 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_so_armageddon` – Armageddon (Soforteinsatz)
 
-**Kosten:** 8 AP · Gold · max. 1 Kopie
-
 **Fläche:** Feld und beide Hände auf den Ablagestapel. Beide ziehen 5. Münzwurf: wer beginnt.
 
 **Volltext:**
 
 > Sämtliche Karten und Tokens vom Spielfeld und beide Hände auf den Ablagestapel. Beide ziehen 5. Münze bestimmt, wer wieder beginnt.
-
-**Engine-Stand:** Räumt Front und Support beider Seiten, danach Münze für den Neubeginn. Hände werden noch nicht geleert/nachgezogen (Dokumentation voraus).
 
 ## `dc_so_letzter` – Der Letzte der steht (Soforteinsatz)
 
