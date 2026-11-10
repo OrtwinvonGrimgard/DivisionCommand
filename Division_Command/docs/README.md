@@ -19,6 +19,8 @@ Alle Regeln, Lore-Texte, Planungen und technischen Erklärungen zu Division Comm
 | [SCHLUESSELWOERTER.md](regeln/SCHLUESSELWOERTER.md) | Alle implementierten Schlüsselwörter mit Regeltext (generiert aus den Spieldaten). |
 | [TAKTISCHE_SCHLUESSELWOERTER.md](regeln/TAKTISCHE_SCHLUESSELWOERTER.md) | Taktisches Vokabular aus t203: Abgrenzungen, Quellen, Sonderfälle und Konfliktentscheidungen (generiert). |
 | [RULES_v0.5_GRUNDKONZEPT.md](regeln/RULES_v0.5_GRUNDKONZEPT.md) | Ausführliches Arbeitsregelwerk v0.5 mit festen und offenen Regeln. |
+| [KARTEN_SONDERFAELLE.md](regeln/KARTEN_SONDERFAELLE.md) | Volltexte zu Flächentexten, die auf der Karte gekürzt sind. |
+| [KARTEN_KUERZUNGEN.md](regeln/KARTEN_KUERZUNGEN.md) | Bewusst gestrichene Teilsätze der Prüfung t212 (147 Sätze, 143 Karten). |
 
 ## Nationen und Lore – `nationen/`
 

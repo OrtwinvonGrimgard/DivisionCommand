@@ -28311,8 +28311,8 @@
    "type": "Ausrüstung",
    "nation": "Vael",
    "rarity": "silver",
-   "source_record_sha256": "f9d3df5154a54dd42d3733a07a89608987b33c92b7c56ee2b913c098a68d12ca",
-   "kurz": "Nur an Artillerie.",
+   "source_record_sha256": "8f70258251c89799a1fa653f65597bcfc78f58ccdb6c2470e84cc313aa1ab87f",
+   "kurz": "Nur an Aufklärung oder Artillerie. +1 ATK gegen beobachtete Ziele.",
    "keywords": [],
    "printed_stats": {
     "ap": 2,
@@ -28332,7 +28332,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "84d1e5b7d9ceb55f13b5f8fc6dc0263e7ceaf93016e05628a3537d99546afa86"
+   "output_sha256": "e4ea40c9c35285639b9b177b2af7a2af5fba42f48f685662e0bc320c09ce0393"
   },
   {
    "id": "dc_b_panzerplatte_serie_178",
@@ -28340,8 +28340,8 @@
    "type": "Ausrüstung",
    "nation": "Vael",
    "rarity": "bronze",
-   "source_record_sha256": "c076bdf3ffb46c0b9c042d7d6fb364858e5eb491f1343c6fc5018d44dc9520d8",
-   "kurz": "Nur an Panzer.",
+   "source_record_sha256": "34ddb414d139307db7fd4aef52109dc19732a58bd0a04eab0283cc590dee7b84",
+   "kurz": "Nur an Panzer. +2 DEF, −1 ATK.",
    "keywords": [],
    "printed_stats": {
     "ap": 2,
@@ -28361,7 +28361,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "ab8697a5190b655de957a006adcbf30b80980c33b003579100760b5b11759940"
+   "output_sha256": "90888888b71e875181ca2533bcb55bca7e73ba17cc9326af04f13c618f6d0161"
   },
   {
    "id": "dc_b_munitionsgurt_endlos_179",
@@ -29616,7 +29616,7 @@
    "type": "Ausrüstung",
    "nation": "Averon",
    "rarity": "gold",
-   "source_record_sha256": "d754dc73fbeaac47d953e856a93cae5cd955efe9d0246871e7066dbe4088bc8c",
+   "source_record_sha256": "7e15525a7bd197ca62a5c2124ffa54451414df5cd6096c8848f2ffddb0b7e4c1",
    "kurz": "Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.",
    "keywords": [],
    "printed_stats": {
@@ -31791,8 +31791,8 @@
    "type": "Ausrüstung",
    "nation": "Lyr",
    "rarity": "silver",
-   "source_record_sha256": "d7a765cf72dea9a96e7ac17bf0106169d97af164e3c40e09a700219654bb6dbd",
-   "kurz": "Nur an Artillerie.",
+   "source_record_sha256": "dea199792704f4d03f2f47c1aed4a333e091d8b012dcfd631f2f93003b458510",
+   "kurz": "Nur an Aufklärung oder Artillerie. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
    "keywords": [],
    "printed_stats": {
     "ap": 2,
@@ -31812,7 +31812,7 @@
     "art_pct": 40.0
    },
    "renderer": "72ab2136fa424b1f82cca8a224f6ea92580913e0e57a1c44c7693a80330bcd0a",
-   "output_sha256": "cb347592bd37f0c68d4feec4d35eb2d4b74300df02f6e2638b81bd8127f739e8"
+   "output_sha256": "c75328284e2e98066b6b9d1a217073a3cdd3dfd4ba8d583770349cc1673efc36"
   },
   {
    "id": "dc_b_tunnelplatte_256",

@@ -368,14 +368,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Nur an Artillerie.",
+    "text": "Nur an Aufklärung oder Artillerie. +1 ATK gegen beobachtete Ziele.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
           "def": 0,
-          "only": "artillerie"
+          "only": "artillerie|aufklaerung"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "observed"
         }
       }
     ],
@@ -400,13 +408,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Nur an Panzer.",
+    "text": "Nur an Panzer. +2 DEF, −1 ATK.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 0,
-          "def": 0,
+          "atk": -1,
+          "def": 2,
           "only": "panzer"
         }
       }
@@ -1886,14 +1894,6 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     ],
     "text": "Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
-      {
-        "code": "CM",
-        "param": {
-          "k": "vs",
-          "atk": 1,
-          "vs": "observed"
-        }
-      },
       {
         "code": "REVEAL",
         "param": {
@@ -4460,14 +4460,22 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Nur an Artillerie.",
+    "text": "Nur an Aufklärung oder Artillerie. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
           "def": 0,
-          "only": "artillerie"
+          "only": "artillerie|aufklaerung"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "vs",
+          "atk": 1,
+          "vs": "entering"
         }
       }
     ],

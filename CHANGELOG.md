@@ -1,5 +1,10 @@
 # Changelog – Division Command
 
+## Unreleased
+
+- **Ausrüstung-Reparatur (t244):** Panzerplatte Serie, Zieloptik Konzern und Passoptik – durch den Parser der Kartenprüfung auf 0 gesetzte Werte sind wiederhergestellt (inkl. Originalbedingungen im Effekt und Text). Verbindungssiegel wirkt nur noch wie gedruckt (Aufdecken beim Anlegen, ohne +1 ATK gegen beobachtete Ziele). Die übrigen Kürzungen der Prüfung t212 bleiben bewusst. Verzeichnis: `docs/regeln/KARTEN_KUERZUNGEN.md`.
+
+
 ## 0.6b Alpha – 10.11.2026
 
 Neue Buchstabenversion: Startspieler-Regel geändert (3 AP im ersten Zug), verdeckte Fallen spielbar, Balance für realistische Mischdecks.

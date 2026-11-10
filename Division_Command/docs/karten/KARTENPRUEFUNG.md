@@ -1,6 +1,6 @@
 # Kartenprüfung (t212)
 
-Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext = Implementierung.** Wo ein Text Dinge versprach, die die Engine nicht umsetzte, wurde die Fähigkeit in die allgemeine Mechanik `CM` (Werte mit Bedingung, Kampfboni gegen Zielarten, Auren, Auslöser, Rabatte, Heilung zu Zugbeginn …) übersetzt und der Kartentext aus dieser Implementierung neu erzeugt. Nichts ist stillschweigend verloren: der alte Text steht unten je ID und vollständig in `scripts/cards-review/review.json`.
+Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext = Implementierung.** Wo ein Text Dinge versprach, die die Engine nicht umsetzte, wurde die Fähigkeit in die allgemeine Mechanik `CM` (Werte mit Bedingung, Kampfboni gegen Zielarten, Auren, Auslöser, Rabatte, Heilung zu Zugbeginn …) übersetzt und der Kartentext aus dieser Implementierung neu erzeugt. Nichts ist stillschweigend verloren: der alte Text steht unten je ID und vollständig in `scripts/cards-review/review.json`. Die Bezeichnung „teilweise übersetzt“ meinte diese Regelangleichung mit Kürzung, keine Sprachübersetzung. Das vollständige Verzeichnis der 147 entfallenen Teilsätze steht lesbar in [`docs/regeln/KARTEN_KUERZUNGEN.md`](../regeln/KARTEN_KUERZUNGEN.md). Reparaturen t244 (drei Ausrüstungen mit Parser-Nullwerten, Verbindungssiegel ohne heimlichen ATK-Bonus) sind dort vermerkt; die übrigen Kürzungen bleiben bewusst.
 
 ## Zahlen
 
@@ -17,9 +17,9 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 | aus-code | 244 | Text aus implementiertem Code neu erzeugt |
 | ersetzt | 220 | nicht abbildbar – durch gleichwertige allgemeine Mechanik ersetzt |
 | unverändert | 114 | geprüft, unverändert |
-| teilweise | 109 | teilweise übersetzt, Rest entfallen (protokolliert) |
+| teilweise | 109 | Regelangleichung mit Kürzung, Rest entfallen (protokolliert) |
 | spezifisch | 78 | eigene Spezialmechanik, Text geprüft/Zielseite festgelegt |
-| teilweise+ersetzt | 34 | teilweise übersetzt, Rest ersetzt |
+| teilweise+ersetzt | 34 | Regelangleichung mit Kürzung, Rest durch allgemeine Mechanik ersetzt |
 | abkürzung | 20 | alte Abkürzung V/A → DEF/ATK |
 | manuell | 10 | Unterstützung manuell korrigiert |
 | aus-code+DRAW | 10 | Text aus Code, versprochenes Ziehen ergänzt |
@@ -121,7 +121,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Wird sie zerstört: ziehe 1 Karte.
 - entfallen/ersetzt: Wenn zerstört: heile 1 DEF an einer eigenen Einheit und sie erhält „Ersetzt“ bis Zugende.
 
-### Regiment Erbe (`dc_b_regiment_erbe_605`, Einheit) – teilweise
+### Regiment Erbe (`dc_b_regiment_erbe_605`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 DEF, solange der Gegner in diesem Abschnitt mehr Einheiten hat. Nach dem ersten erlittenen Schaden: +1 ATK.
 - nachher: +2 DEF, solange der Gegner im Abschnitt mehr Einheiten hat. · Wörter: Erbitterung
 - entfallen/ersetzt: Nach dem ersten erlittenen Schaden: +1 ATK.
@@ -136,33 +136,33 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: — · Wörter: Überlast, Zuteilung
 - entfallen/ersetzt: Wenn dadurch zerstört: ziehe 1.
 
-### Maßtrupp (`dc_b_masstrupp_362`, Einheit) – teilweise
+### Maßtrupp (`dc_b_masstrupp_362`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +1 ATK und +1 DEF, solange beschädigt. Einmal/Zug: erleide 1 Schaden → ignoriere den nächsten Schaden.
 - nachher: +1 ATK und +1 DEF, solange sie beschädigt ist. · Wörter: Gefechtsbereit
 - entfallen/ersetzt: Einmal/Zug: erleide 1 Schaden → ignoriere den nächsten Schaden.
 
-### Schnittstelle (`dc_b_schnittstelle_363`, Einheit) – teilweise
+### Schnittstelle (`dc_b_schnittstelle_363`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Kann verdeckt gespielt werden. Aufdecken: +1 ATK bis Zugende; erleide 1 Schaden.
 - nachher: Ihr erster Angriff hat +1 ATK. · Wörter: Zuteilung
 - entfallen/ersetzt: erleide 1 Schaden.
 
-### Keilspitze (`dc_b_keilspitze_364`, Einheit) – teilweise
+### Keilspitze (`dc_b_keilspitze_364`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Der erste Angriff nach dem Ausspielen hat +2 ATK; danach −1 DEF bis Zugende.
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +2 ATK.
 - entfallen/ersetzt: danach −1 DEF bis Zugende.
 
-### Schwere Stoßgruppe (`dc_b_schwere_stossgruppe_367`, Einheit) – teilweise+ersetzt
+### Schwere Stoßgruppe (`dc_b_schwere_stossgruppe_367`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +2 ATK. Nach dem ersten Angriff: −1 DEF und ziehe 1 (Schmerzprotokoll).
 - nachher: — · Wörter: Zuteilung
 - Werte: 4/2 → 6/2
 - entfallen/ersetzt: Nach dem ersten Angriff: −1 DEF und ziehe 1.
 
-### Maßeinheit (`dc_b_masseinheit_368`, Einheit) – teilweise
+### Maßeinheit (`dc_b_masseinheit_368`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +1 ATK und +1 DEF, solange beschädigt. Heilen dieser Einheit kostet +1 AP.
 - nachher: +1 ATK und +1 DEF, solange sie beschädigt ist. · Wörter: Überlast
 - entfallen/ersetzt: Heilen dieser Einheit kostet +1 AP.
 
-### Knotenwache (`dc_b_knotenwache_781`, Einheit) – teilweise+ersetzt
+### Knotenwache (`dc_b_knotenwache_781`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; kostet 1 weniger bei Unterstützung (min. 1).
 - nachher: Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast. · Wörter: Gefechtsbereit
 - Werte: 2/2 → 2/3
@@ -244,7 +244,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 ATK/+1 DEF, wenn Infanterie und Unterstützung angrenzen. [Parlamentsbote]
 - nachher: +1 ATK und +1 DEF, solange eigene Infanterie benachbart ist und du eine offene Unterstützung hast.
 
-### Auffangposten (`dc_b_auffangposten_723`, Einheit) – teilweise+ersetzt
+### Auffangposten (`dc_b_auffangposten_723`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; kostet 1 weniger bei Unterstützung (min. 1). [Auffangposten]
 - nachher: Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast. · Wörter: Sicherung
 - Werte: 2/3 → 2/4
@@ -254,7 +254,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 ATK, wenn sie diesen Zug nicht bewegt wurde.
 - nachher: +1 ATK, wenn sie seit deinem letzten Zug nicht versetzt wurde. · Wörter: Sicherung
 
-### Zeughauszug (`dc_b_zeughauszug_725`, Einheit) – teilweise+ersetzt
+### Zeughauszug (`dc_b_zeughauszug_725`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; kostet 1 weniger bei Unterstützung (min. 1). [Zeughauszug]
 - nachher: Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.
 - Werte: 2/4 → 2/5
@@ -339,7 +339,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 ATK/+1 DEF, wenn Infanterie und Artillerie im Abschnitt.
 - nachher: +1 ATK und +1 DEF, solange eigene Infanterie benachbart ist und eigene Artillerie steht. · Wörter: Ablösung
 
-### Grenzstein-Posten (`dc_b_grenzstein_posten_546`, Einheit) – teilweise
+### Grenzstein-Posten (`dc_b_grenzstein_posten_546`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Beim Ausspielen: decke 1 auf; +1 DEF bis Zugende.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Erbitterung
 - entfallen/ersetzt: +1 DEF bis Zugende.
@@ -409,7 +409,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 DEF, wenn im Abschnitt eine Unterstützung liegt.
 - nachher: +1 DEF, solange du eine offene Unterstützung hast.
 
-### Seren-Zug (`dc_b_seren_zug_304`, Einheit) – teilweise+ersetzt
+### Seren-Zug (`dc_b_seren_zug_304`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; heile 1, wenn sie im letzten Zug nicht angriff.
 - nachher: Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.
 - Werte: 2/4 → 2/5
@@ -520,7 +520,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: — · Wörter: Zähigkeit, Zuteilung
 - entfallen/ersetzt: Beim Angriff: +2 Schaden. | Wenn Ziel stirbt: ziehe 1.
 
-### Pflichtpanzer (`dc_b_pflichtpanzer_3`, Einheit) – teilweise
+### Pflichtpanzer (`dc_b_pflichtpanzer_3`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +1 DEF, solange du in diesem Zug eine Infanterie gespielt hast. Einmal/Zug: eine eigene Infanterie im Abschnitt +1 ATK.
 - nachher: +1 DEF, wenn du in diesem Zug Infanterie gespielt hast.
 - entfallen/ersetzt: Einmal/Zug: eine eigene Infanterie im Abschnitt +1 ATK.
@@ -556,7 +556,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Wird sie zerstört: ziehe 1 Karte. · Wörter: Gefechtsbereit, Zähigkeit
 - entfallen/ersetzt: Wird zerstört: eigene Infanterie im Abschnitt hat +1 ATK bis zum Ende des nächsten Zuges.
 
-### Kronpanzer Narbstadt (`dc_b_kronpanzer_narbstadt_607`, Einheit) – teilweise+ersetzt
+### Kronpanzer Narbstadt (`dc_b_kronpanzer_narbstadt_607`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF. Kann verdeckt gespielt werden. Aufdecken: ignoriere den ersten Schaden diesen Zug (die Krone irrt nicht).
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Ablösung
 - Werte: 3/3 → 3/4
@@ -587,25 +587,25 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Wird sie zerstört: ziehe 1 Karte.
 - entfallen/ersetzt: Wenn diese Einheit zerstört wird: spiele eine Einheit mit Kosten ≤2 aus deiner Hand ohne AP-Kosten in denselben Abschnitt.
 
-### Thronbruch (`dc_b_thronbruch_613`, Einheit) – teilweise
+### Thronbruch (`dc_b_thronbruch_613`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +3 ATK im ersten Angriff nach dem Ausspielen. Danach -1 DEF bis Zugende.
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +3 ATK. · Wörter: Durchschlag, Nachsetzen
 - entfallen/ersetzt: Danach -1 DEF bis Zugende.
 
-### Werkrott-Kolonne (`dc_b_werkrott_kolonne_614`, Einheit) – teilweise+ersetzt
+### Werkrott-Kolonne (`dc_b_werkrott_kolonne_614`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +2 DEF. Einmal pro Zug: eine angrenzende eigene Infanterie hat +1 ATK.
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +1 ATK.
 - Werte: 3/5 → 3/7
 - entfallen/ersetzt: Einmal pro Zug: eine angrenzende eigene Infanterie hat +1 ATK.
 - Hinweis: Werte 10 weit über Median 7 bei 4 AP
 
-### Filterpanzer (`dc_b_filterpanzer_365`, Einheit) – teilweise+ersetzt
+### Filterpanzer (`dc_b_filterpanzer_365`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF. Ignoriert den ersten Schaden durch Soforteinsatz. Einmal/Zug: erleide 1 Schaden → +2 ATK bis Zugende.
 - nachher: Der erste Schaden je Zug sinkt um 1.
 - Werte: 3/3 → 3/4
 - entfallen/ersetzt: Ignoriert den ersten Schaden durch Soforteinsatz. | Einmal/Zug: erleide 1 Schaden → +2 ATK bis Zugende.
 
-### Ersatzkeil (`dc_b_ersatzkeil_366`, Einheit) – teilweise
+### Ersatzkeil (`dc_b_ersatzkeil_366`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Wenn zerstört: heile 1 DEF an einer anderen eigenen Einheit und lege die oberste Friedhofskarte unter dein Deck. +1 ATK solange beschädigt.
 - nachher: +1 ATK, solange sie beschädigt ist.
 - entfallen/ersetzt: Wenn zerstört: heile 1 DEF an einer anderen eigenen Einheit und lege die oberste Friedhofskarte unter dein Deck.
@@ -614,7 +614,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 ATK, solange beschädigt.
 - nachher: +1 ATK, solange sie beschädigt ist.
 
-### Knochenkette (`dc_b_knochenkette_370`, Einheit) – teilweise+ersetzt
+### Knochenkette (`dc_b_knochenkette_370`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF. Angrenzende eigene Infanterie +1 ATK beim ersten Angriff.
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +1 ATK.
 - Werte: 2/3 → 2/4
@@ -624,7 +624,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: —
 - nachher: Der erste Schaden je Zug sinkt um 1. · Wörter: Gefechtsbereit, Überlast
 
-### Wartungskolonne (`dc_b_wartungskolonne_372`, Einheit) – teilweise+ersetzt
+### Wartungskolonne (`dc_b_wartungskolonne_372`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF. Einmal pro Zug: heile 1 DEF an sich selbst, wenn beschädigt; dann erleidet eine eigene Infanterie im Abschnitt 1 Schaden.
 - nachher: Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.
 - Werte: 4/4 → 4/5
@@ -634,7 +634,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +2 ATK, solange beschädigt.
 - nachher: +2 ATK, solange sie beschädigt ist. · Wörter: Ablösung
 
-### Systemstoß (`dc_b_systemstoss_374`, Einheit) – teilweise
+### Systemstoß (`dc_b_systemstoss_374`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +3 ATK im ersten Angriff. Danach -1 DEF bis Zugende.
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +3 ATK. · Wörter: Gefechtsbereit, Zähigkeit
 - entfallen/ersetzt: Danach -1 DEF bis Zugende.
@@ -663,12 +663,12 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 ATK/+1 DEF, wenn Feind im Abschnitt aufgeklärt ist.
 - nachher: +1 ATK und +1 DEF, solange eine gegnerische Einheit beobachtet ist.
 
-### Frühstoß (`dc_b_fruehstoss_793`, Einheit) – teilweise
+### Frühstoß (`dc_b_fruehstoss_793`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Bei Kill: decke 1 auf ODER ziehe 1.
 - nachher: Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: ODER ziehe 1.
 
-### Aufklärungspanzer (`dc_b_aufklaerungspanzer_794`, Einheit) – teilweise
+### Aufklärungspanzer (`dc_b_aufklaerungspanzer_794`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK gegen aufgeklärte Feinde; beim Ausspielen decke 2 auf. Einmal/Zug: eine eigene Aufklärung +1 DEF.
 - nachher: +2 ATK gegen beobachtete Ziele. · Wörter: Gefechtsbereit
 - entfallen/ersetzt: beim Ausspielen decke 2 auf. | Einmal/Zug: eine eigene Aufklärung +1 DEF.
@@ -740,7 +740,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 DEF an Abschnitten mit eigener Unterstützung. [Abschlusswagen]
 - nachher: +1 DEF, solange du eine offene Unterstützung hast. · Wörter: Nachsetzen
 
-### Zielangriff-Keil (`dc_b_zielangriff_keil_914`, Einheit) – teilweise
+### Zielangriff-Keil (`dc_b_zielangriff_keil_914`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK gegen ein gewähltes Ziel; Träger +1 DEF. Bei Kill am genannten Ziel: +1 ATK bis Zugende.
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +2 ATK. · Wörter: Zähigkeit, Überlast
 - Werte: 5/4 → 5/5
@@ -830,13 +830,13 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Negiere 1 Schaden einmal/Zug, wenn du diesen Zug Sofort spielst.
 - nachher: Der erste Schaden je Zug sinkt um 1, wenn du in diesem Zug einen Soforteinsatz gespielt hast.
 
-### Pfadkeil (`dc_b_pfadkeil_671`, Einheit) – teilweise+ersetzt
+### Pfadkeil (`dc_b_pfadkeil_671`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; ziehe 1 wenn du diesen Zug umgangen/bewegt hast.
 - nachher: — · Wörter: Stellungswechsel
 - Werte: 3/3 → 3/4
 - entfallen/ersetzt: ziehe 1 wenn du diesen Zug umgangen/bewegt hast.
 
-### Flankenpanzer (`dc_b_flankenpanzer_672`, Einheit) – teilweise
+### Flankenpanzer (`dc_b_flankenpanzer_672`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +1 ATK/+1 DEF beim Angriff aus angrenzendem Abschnitt; bei Kill ziehe 1.
 - nachher: Zerstört sie im Angriff eine Einheit: ziehe 1 Karte. · Wörter: Gefechtsbereit
 - entfallen/ersetzt: +1 ATK/+1 DEF beim Angriff aus angrenzendem Abschnitt
@@ -872,7 +872,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug aufgedeckt hast. · Wörter: Stellungswechsel
 - Werte: 3/3 → 3/4
 
-### Normpanzer (`dc_b_normpanzer_552`, Einheit) – teilweise
+### Normpanzer (`dc_b_normpanzer_552`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +1 ATK/+1 DEF gegen beobachtete; bei Kill decke 1 auf.
 - nachher: Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Abschirmung
 - entfallen/ersetzt: +1 ATK/+1 DEF gegen beobachtete
@@ -882,7 +882,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +2 ATK.
 - Werte: 4/4 → 4/5
 
-### Methodenschlag (`dc_b_methodenschlag_554`, Einheit) – teilweise
+### Methodenschlag (`dc_b_methodenschlag_554`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +3 ATK gegen eine beobachtete Einheit. Danach gilt eine weitere angrenzende als beobachtet.
 - nachher: +3 ATK gegen beobachtete Ziele. · Wörter: Ablösung, Durchschlag
 - entfallen/ersetzt: Danach gilt eine weitere angrenzende als beobachtet.
@@ -905,7 +905,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +2 ATK. · Wörter: Abschirmung
 - Werte: 2/5 → 2/6
 
-### Straßenriegel (`dc_b_strassenriegel_491`, Einheit) – teilweise+ersetzt
+### Straßenriegel (`dc_b_strassenriegel_491`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +2 DEF; ziehe 1 wenn Entsatz diesen Zug.
 - nachher: — · Wörter: Abschirmung, Zuteilung
 - Werte: 2/5 → 2/7
@@ -961,7 +961,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +2 ATK gegen eine Einheit, die in diesem Zug einrückt.
 - nachher: +2 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.
 
-### Versorgungskeil (`dc_b_versorgungskeil_307`, Einheit) – teilweise+ersetzt
+### Versorgungskeil (`dc_b_versorgungskeil_307`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; heile 1 an Infanterie im Abschnitt einmal/Zug.
 - nachher: Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit. · Wörter: Durchschlag
 - Werte: 2/4 → 2/5
@@ -971,7 +971,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Negiere 1 Schaden einmal/Zug, wenn Unterstützung im Abschnitt.
 - nachher: Der erste Schaden je Zug sinkt um 1, solange du eine offene Unterstützung hast. · Wörter: Abschirmung
 
-### Klinikschild (`dc_b_klinikschild_309`, Einheit) – teilweise+ersetzt
+### Klinikschild (`dc_b_klinikschild_309`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; Einheiten im Abschnitt heilen 1 nach Ruhezug.
 - nachher: Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.
 - Werte: 3/5 → 3/6
@@ -1029,7 +1029,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Kostet 1 weniger mit Ausrüstung im Abschnitt.
 - nachher: Kostet 1 AP weniger (mind. 1), solange eine eigene Einheit Ausrüstung trägt.
 
-### Totenwall-Keil (`dc_b_totenwall_keil_98`, Einheit) – teilweise
+### Totenwall-Keil (`dc_b_totenwall_keil_98`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK/+2 DEF mit Ausrüstung; stirbt Feind: Abschnitt +1 ATK.
 - nachher: +2 ATK und +2 DEF, solange sie Ausrüstung trägt.
 - entfallen/ersetzt: stirbt Feind: Abschnitt +1 ATK.
@@ -1043,20 +1043,20 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: +1 ATK gegen beobachtete Ziele.
 - entfallen/ersetzt: Negiere 1 Schaden einmal/Zug, wenn Ziel aufgeklärt.
 
-### Asteron-Schild (`dc_b_asteron_schild_429`, Einheit) – teilweise+ersetzt
+### Asteron-Schild (`dc_b_asteron_schild_429`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; einmal/Zug decke Feind im Abschnitt auf.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Durchschlag
 - Werte: 3/5 → 3/6
 - entfallen/ersetzt: einmal/Zug decke Feind im Abschnitt auf.
 
-### Werkbach-Riegel (`dc_b_werkbach_riegel_430`, Einheit) – teilweise+ersetzt
+### Werkbach-Riegel (`dc_b_werkbach_riegel_430`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +2 DEF; ziehe 1 wenn du diesen Zug aufdeckst.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - Werte: 2/5 → 2/7
 - entfallen/ersetzt: ziehe 1 wenn du diesen Zug aufdeckst.
 - Hinweis: Werte 9 weit über Median 6 bei 3 AP
 
-### Probenpanzer (`dc_b_probenpanzer_431`, Einheit) – teilweise
+### Probenpanzer (`dc_b_probenpanzer_431`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Beim Ausspielen: decke 1 auf; +1 ATK gegen ihn.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: +1 ATK gegen ihn.
@@ -1070,7 +1070,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Kostet 1 weniger bei aufgeklärtem Feind im Spiel.
 - nachher: Kostet 1 AP weniger (mind. 1), solange eine gegnerische Einheit beobachtet ist. · Wörter: Durchschlag
 
-### Einzelschuss (`dc_b_einzelschuss_434`, Einheit) – teilweise
+### Einzelschuss (`dc_b_einzelschuss_434`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK gegen aufgeklärte; nach Kill: decke nächsten Feind auf.
 - nachher: +2 ATK gegen beobachtete Ziele.
 - entfallen/ersetzt: nach Kill: decke nächsten Feind auf.
@@ -1133,12 +1133,12 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Beim Ausspielen: 1 Schaden an bis zu zwei gegnerischen Einheiten im Abschnitt.
 - nachher: Beim Ausspielen: 1 Schaden an der schwächsten gegnerischen Fronteinheit in ihrem Abschnitt.
 
-### Ordnungsbatterie (`dc_b_ordnungsbatterie_120`, Einheit) – teilweise
+### Ordnungsbatterie (`dc_b_ordnungsbatterie_120`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Eigene Infanterie im Abschnitt +1 ATK. Beim Angriff: Ziel −1 DEF bis Zugende, wenn du in diesem Zug Infanterie gespielt hast.
 - nachher: Andere eigene Infanterie in ihrem Abschnitt: +1 ATK. · Wörter: Durchschlag
 - entfallen/ersetzt: Beim Angriff: Ziel −1 DEF bis Zugende, wenn du in diesem Zug Infanterie gespielt hast.
 
-### Maßfeuer (`dc_b_massfeuer_134`, Einheit) – teilweise
+### Maßfeuer (`dc_b_massfeuer_134`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +1 ATK, wenn eigene Infanterie angrenzt. Einmal/Zug: wenn du keine Sofort spielst → +1 DEF.
 - nachher: +1 ATK, solange eigene Infanterie benachbart ist. · Wörter: Durchschlag
 - entfallen/ersetzt: Einmal/Zug: wenn du keine Sofort spielst → +1 DEF.
@@ -1161,7 +1161,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +1 ATK. · Wörter: Durchschlag
 - entfallen/ersetzt: +2 ATK, wenn du in diesem Zug bereits angegriffen hast.
 
-### Glockenstellung (`dc_b_glockenstellung_618`, Einheit) – teilweise+ersetzt
+### Glockenstellung (`dc_b_glockenstellung_618`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF. Gegnerische Einheiten in diesem Abschnitt haben -1 ATK gegen dich.
 - nachher: Der erste Schaden je Zug sinkt um 1. · Wörter: Durchschlag
 - Werte: 2/3 → 2/4
@@ -1181,7 +1181,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +1 ATK. · Wörter: Durchschlag
 - entfallen/ersetzt: +1 ATK, solange du in diesem Zug eine Einheit ersetzt hast. | Träger-Abschnitt: eigene Einheiten +1 DEF gegen den ersten Angriff.
 
-### Silberstern-Rohr (`dc_b_silberstern_rohr_650`, Einheit) – teilweise+ersetzt
+### Silberstern-Rohr (`dc_b_silberstern_rohr_650`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 ATK. Wenn diese Einheit einen Kill erzielt: heile 1 DEF an einer eigenen Einheit, die diesen Zug ersetzt wurde.
 - nachher: Zerstört sie im Angriff eine Einheit: ziehe 1 Karte. · Wörter: Durchschlag
 - Werte: 4/2 → 5/2
@@ -1196,7 +1196,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +1 ATK. · Wörter: Stellungswechsel
 - entfallen/ersetzt: +1 ATK gegen beschädigte Einheiten.
 
-### Filterstellung (`dc_b_filterstellung_377`, Einheit) – teilweise+ersetzt
+### Filterstellung (`dc_b_filterstellung_377`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF. Gegnerische Soforteinsätze gegen Einheiten hier kosten 1 AP mehr.
 - nachher: Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.
 - Werte: 2/3 → 2/4
@@ -1215,12 +1215,12 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Der erste Schaden je Zug sinkt um 1. · Wörter: Stellungswechsel
 - entfallen/ersetzt: Eigene Infanterie +1 DEF gegen den ersten Angriff/Zug. | Beim Angriff: erleide 1 Schaden → Ziel −1 DEF bis Zugende.
 
-### Implantatrohr (`dc_b_implantatrohr_408`, Einheit) – teilweise
+### Implantatrohr (`dc_b_implantatrohr_408`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +1 ATK, solange beschädigt. Einmal/Zug: opfere 1 DEF am Rohr → ziehe 1.
 - nachher: +1 ATK, solange sie beschädigt ist. · Wörter: Zuteilung
 - entfallen/ersetzt: Einmal/Zug: opfere 1 DEF am Rohr → ziehe 1.
 
-### Knochenbatterie (`dc_b_knochenbatterie_411`, Einheit) – teilweise+ersetzt
+### Knochenbatterie (`dc_b_knochenbatterie_411`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF. Bei Zerstörung: ziehe 1 und eine eigene Einheit erleidet 1 Schaden (Optimierungsrest).
 - nachher: — · Wörter: Nachsetzen, Zuteilung
 - Werte: 4/2 → 4/3
@@ -1244,13 +1244,13 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 ATK, wenn eigene Infanterie angrenzt. [Werkhofgeschütz]
 - nachher: +1 ATK, solange eigene Infanterie benachbart ist. · Wörter: Zuteilung
 
-### Nordmark-Rohr (`dc_b_nordmark_rohr_799`, Einheit) – teilweise+ersetzt
+### Nordmark-Rohr (`dc_b_nordmark_rohr_799`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 ATK; einmal/Zug: wenn Infanterie im Abschnitt → decke 1 auf.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Fernschuss
 - Werte: 3/2 → 4/2
 - entfallen/ersetzt: einmal/Zug: wenn Infanterie im Abschnitt → decke 1 auf.
 
-### Westhaven-Batterie (`dc_b_westhaven_batterie_800`, Einheit) – teilweise
+### Westhaven-Batterie (`dc_b_westhaven_batterie_800`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill. [Westhaven-Batterie]
 - nachher: Zerstört sie im Angriff eine Einheit: ziehe 1 Karte. · Wörter: Stellungswechsel
 - entfallen/ersetzt: +2 ATK nach einem Kill diesen Zug
@@ -1263,18 +1263,18 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 ATK gegen aufgeklärte Feinde; bei Kill aufdecken.
 - nachher: +1 ATK gegen beobachtete Ziele. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
 
-### Siegelrohr (`dc_b_siegelrohr_855`, Einheit) – teilweise
+### Siegelrohr (`dc_b_siegelrohr_855`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill.
 - nachher: Zerstört sie im Angriff eine Einheit: ziehe 1 Karte. · Wörter: Stellungswechsel
 - entfallen/ersetzt: +2 ATK nach einem Kill diesen Zug
 
-### Falschfeuer (`dc_b_falschfeuer_856`, Einheit) – teilweise+ersetzt
+### Falschfeuer (`dc_b_falschfeuer_856`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; ziehe 1 wenn du diesen Zug nicht bewegt hast.
 - nachher: — · Wörter: Stellungswechsel
 - Werte: 2/3 → 2/4
 - entfallen/ersetzt: ziehe 1 wenn du diesen Zug nicht bewegt hast.
 
-### Abriegelbatterie (`dc_b_abriegelbatterie_857`, Einheit) – teilweise
+### Abriegelbatterie (`dc_b_abriegelbatterie_857`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK wenn leerer angrenzender Abschnitt; ziehe 1 bei Kill.
 - nachher: Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.
 - entfallen/ersetzt: +2 ATK wenn leerer angrenzender Abschnitt
@@ -1287,7 +1287,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Einheiten im Abschnitt +1 DEF, wenn du diesen Zug Sofort spielst.
 - nachher: Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast. · Wörter: Nachsetzen
 
-### Velis-Batterie (`dc_b_velis_batterie_860`, Einheit) – teilweise+ersetzt
+### Velis-Batterie (`dc_b_velis_batterie_860`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; ziehe 1 wenn du diesen Zug nicht bewegt hast. [Velis-Batterie]
 - nachher: — · Wörter: Stellungswechsel
 - Werte: 3/3 → 3/4
@@ -1310,7 +1310,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: +1 DEF, solange eigene Infanterie benachbart ist. · Wörter: Staffelangriff
 - Werte: 2/3 → 3/3
 
-### Abschlussgeschütz (`dc_b_abschlussgeschuetz_917`, Einheit) – teilweise
+### Abschlussgeschütz (`dc_b_abschlussgeschuetz_917`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill. [Abschlussgeschütz]
 - nachher: Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.
 - entfallen/ersetzt: +2 ATK nach einem Kill diesen Zug
@@ -1323,7 +1323,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 ATK gegen Feinde ohne angrenzende eigene Einheit des Gegners; bei Kill aufdecken. [Fälligkeitsfeuer]
 - nachher: +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Staffelangriff
 
-### Kalden-Batterie (`dc_b_kalden_batterie_920`, Einheit) – teilweise
+### Kalden-Batterie (`dc_b_kalden_batterie_920`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill. [Kalden-Batterie]
 - nachher: Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.
 - entfallen/ersetzt: +2 ATK nach einem Kill diesen Zug
@@ -1352,7 +1352,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 ATK gegen Feinde ohne angrenzende eigene Einheit des Gegners; bei Kill aufdecken. [Lafettenwacht]
 - nachher: +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Stellungswechsel
 
-### Markengeschütz (`dc_b_markengeschuetz_739`, Einheit) – teilweise+ersetzt
+### Markengeschütz (`dc_b_markengeschuetz_739`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; ziehe 1 wenn du diesen Zug nicht bewegt hast. [Markengeschütz]
 - nachher: — · Wörter: Stellungswechsel
 - Werte: 3/2 → 3/3
@@ -1367,7 +1367,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: +1 DEF, solange eigene Infanterie benachbart ist.
 - Werte: 3/3 → 4/3
 
-### Auffangfeuer (`dc_b_auffangfeuer_742`, Einheit) – teilweise
+### Auffangfeuer (`dc_b_auffangfeuer_742`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill. [Auffangfeuer]
 - nachher: Zerstört sie im Angriff eine Einheit: ziehe 1 Karte. · Wörter: Durchschlag
 - entfallen/ersetzt: +2 ATK nach einem Kill diesen Zug
@@ -1395,7 +1395,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: +1 DEF, solange eigene Infanterie benachbart ist. · Wörter: Nachsetzen
 - Werte: 3/3 → 4/3
 
-### Kronenhof-Kaliber (`dc_b_kronenhof_kaliber_62`, Einheit) – teilweise
+### Kronenhof-Kaliber (`dc_b_kronenhof_kaliber_62`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill. [Kronenhof-Kaliber]
 - nachher: Zerstört sie im Angriff eine Einheit: ziehe 1 Karte. · Wörter: Stellungswechsel
 - entfallen/ersetzt: +2 ATK nach einem Kill diesen Zug
@@ -1418,12 +1418,12 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Der erste Schaden je Zug sinkt um 1.
 - entfallen/ersetzt: Beim Angriff: Ziel -1 DEF bis Zugende.
 
-### Linienbatterie (`dc_b_linienbatterie_677`, Einheit) – teilweise
+### Linienbatterie (`dc_b_linienbatterie_677`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK wenn eigene Einheit angrenzt; ziehe 1 bei Kill.
 - nachher: Zerstört sie im Angriff eine Einheit: ziehe 1 Karte. · Wörter: Durchschlag
 - entfallen/ersetzt: +2 ATK wenn eigene Einheit angrenzt
 
-### Marktgeschütz (`dc_b_marktgeschuetz_678`, Einheit) – teilweise
+### Marktgeschütz (`dc_b_marktgeschuetz_678`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK nach einem Kill diesen Zug; ziehe 1 bei Kill. [Marktgeschütz]
 - nachher: Zerstört sie im Angriff eine Einheit: ziehe 1 Karte. · Wörter: Nachsetzen
 - entfallen/ersetzt: +2 ATK nach einem Kill diesen Zug
@@ -1436,7 +1436,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Einheiten im Abschnitt +1 ATK, wenn du diesen Zug Sofort spielst.
 - nachher: Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast. · Wörter: Stellungswechsel
 
-### Sarun-Batterie (`dc_b_sarun_batterie_681`, Einheit) – teilweise+ersetzt
+### Sarun-Batterie (`dc_b_sarun_batterie_681`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; ziehe 1 wenn du diesen Zug bewegt hast.
 - nachher: — · Wörter: Fernschuss, Stellungswechsel
 - Werte: 3/3 → 3/4
@@ -1446,7 +1446,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 ATK gegen Feinde ohne angrenzende eigene Einheit des Gegners; bei Kill aufdecken. [Durchlassfeuer]
 - nachher: +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Stellungswechsel
 
-### Normgeschütz (`dc_b_normgeschuetz_555`, Einheit) – teilweise+ersetzt
+### Normgeschütz (`dc_b_normgeschuetz_555`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; ziehe 1 wenn du diesen Zug nicht bewegt hast. [Normgeschütz]
 - nachher: — · Wörter: Zuteilung, Stellungswechsel
 - Werte: 3/2 → 3/3
@@ -1475,13 +1475,13 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: +1 ATK gegen beobachtete Ziele. · Wörter: Staffelangriff
 - entfallen/ersetzt: Einheiten im Abschnitt +1 ATK gegen beobachtete.
 
-### Albensee-Batterie (`dc_b_albensee_batterie_561`, Einheit) – teilweise+ersetzt
+### Albensee-Batterie (`dc_b_albensee_batterie_561`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; ziehe 1 wenn Freigabe-/Sofort diesen Zug.
 - nachher: — · Wörter: Zuteilung
 - Werte: 3/3 → 3/4
 - entfallen/ersetzt: ziehe 1 wenn Freigabe-/Sofort diesen Zug.
 
-### Großfeuer (`dc_b_grossfeuer_562`, Einheit) – teilweise
+### Großfeuer (`dc_b_grossfeuer_562`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +1 ATK wenn Ziel beobachtet; bei Kill weitere aufdecken.
 - nachher: +1 ATK gegen beobachtete Ziele. · Wörter: Zuteilung
 - entfallen/ersetzt: bei Kill weitere aufdecken.
@@ -1504,7 +1504,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Kostet 1 weniger wenn Unterstützung im Spiel (min. 1). [Lagerwurf]
 - nachher: Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.
 
-### Straßenfeuer (`dc_b_strassenfeuer_499`, Einheit) – teilweise+ersetzt
+### Straßenfeuer (`dc_b_strassenfeuer_499`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 ATK; einmal/Zug: Unterstützung im Abschnitt → +1 ATK.
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +1 ATK. · Wörter: Staffelangriff
 - Werte: 3/2 → 4/2
@@ -1514,7 +1514,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Einheiten im Abschnitt +1 ATK, wenn Unterstützung liegt.
 - nachher: Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, solange du eine offene Unterstützung hast. · Wörter: Zuteilung
 
-### Hintermark-Rohr (`dc_b_hintermark_rohr_501`, Einheit) – teilweise+ersetzt
+### Hintermark-Rohr (`dc_b_hintermark_rohr_501`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; ziehe 1 wenn Entsatz diesen Zug.
 - nachher: — · Wörter: Zuteilung
 - Werte: 3/3 → 3/4
@@ -1538,7 +1538,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind. · Wörter: Stellungswechsel
 - entfallen/ersetzt: Beim Ausspielen: einrückender Feind −1 ATK bis Zugende.
 
-### Eidhof-Kaliber (`dc_b_eidhof_kaliber_81`, Einheit) – teilweise+ersetzt
+### Eidhof-Kaliber (`dc_b_eidhof_kaliber_81`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; ziehe 1 wenn du diesen Zug nicht bewegt hast. [Eidhof-Kaliber]
 - nachher: — · Wörter: Stellungswechsel
 - Werte: 2/2 → 2/3
@@ -1563,7 +1563,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind. · Wörter: Staffelangriff
 - entfallen/ersetzt: Einmal/Zug: einrückende Einheit im gewählten Abschnitt erleidet 2 Schaden.
 
-### Deckungsfeuer (`dc_b_deckungsfeuer_315`, Einheit) – teilweise+ersetzt
+### Deckungsfeuer (`dc_b_deckungsfeuer_315`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 ATK; eigene im Zielabschnitt +1 DEF diesen Zug.
 - nachher: Der erste Schaden je Zug sinkt um 1. · Wörter: Durchschlag
 - Werte: 3/2 → 4/2
@@ -1596,7 +1596,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Der erste Schaden je Zug sinkt um 1.
 - entfallen/ersetzt: Feind −1 ATK | wenn er nicht ruht, zusätzlich −1 DEF.
 
-### Lückenhof-Geschütz (`dc_b_lueckenhof_geschuetz_322`, Einheit) – teilweise
+### Lückenhof-Geschütz (`dc_b_lueckenhof_geschuetz_322`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +1 ATK gegen aufgeklärte; heile 1 an ruhender Einheit.
 - nachher: +1 ATK gegen beobachtete Ziele. · Wörter: Durchschlag
 - entfallen/ersetzt: heile 1 an ruhender Einheit.
@@ -1628,7 +1628,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Der erste Schaden je Zug sinkt um 1.
 - entfallen/ersetzt: Eigene Einheiten mit Ausrüstung +1 DEF diesen Zug nach Angriff.
 
-### Marenfeld-Geschütz (`dc_b_marenfeld_geschuetz_105`, Einheit) – teilweise+ersetzt
+### Marenfeld-Geschütz (`dc_b_marenfeld_geschuetz_105`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; heile 1 wenn Feind stirbt.
 - nachher: Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit. · Wörter: Fernschuss
 - Werte: 3/3 → 3/4
@@ -1644,7 +1644,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: +1 ATK gegen beobachtete Ziele. · Wörter: Fernschuss, Durchschlag
 - entfallen/ersetzt: Alle Feinde im Zielabschnitt gelten als aufgeklärt | +1 ATK gegen sie.
 
-### Zielrechnung (`dc_b_zielrechnung_436`, Einheit) – teilweise
+### Zielrechnung (`dc_b_zielrechnung_436`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +2 ATK gegen aufgeklärte; kostet 1 weniger nach Aufdecken.
 - nachher: +2 ATK gegen beobachtete Ziele.
 - entfallen/ersetzt: kostet 1 weniger nach Aufdecken.
@@ -1658,7 +1658,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: — · Wörter: Zuteilung
 - entfallen/ersetzt: Wenn Angriff scheitert: Feind −1 ATK | ziehe 1.
 
-### Feuerleit (`dc_b_feuerleit_439`, Einheit) – teilweise
+### Feuerleit (`dc_b_feuerleit_439`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke Feind auf; +2 ATK gegen ihn diesen Zug.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: +2 ATK gegen ihn diesen Zug.
@@ -1672,13 +1672,13 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Kostet 1 weniger wenn Feind aufgeklärt.
 - nachher: Kostet 1 AP weniger (mind. 1), solange eine gegnerische Einheit beobachtet ist. · Wörter: Zuteilung
 
-### Abbruchsalve (`dc_b_abbruchsalve_442`, Einheit) – teilweise+ersetzt
+### Abbruchsalve (`dc_b_abbruchsalve_442`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 ATK; bei Miss (kein Kill): Abschnitt +1 DEF.
 - nachher: Der erste Schaden je Zug sinkt um 1.
 - Werte: 3/3 → 4/3
 - entfallen/ersetzt: bei Miss: Abschnitt +1 DEF.
 
-### Zielmesser (`dc_b_zielmesser_146`, Einheit) – teilweise
+### Zielmesser (`dc_b_zielmesser_146`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Feind aufgeklärt; eigene Artillerie +1 ATK gegen ihn diesen Zug.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: eigene Artillerie +1 ATK gegen ihn diesen Zug.
@@ -1692,7 +1692,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: +1 ATK gegen beobachtete Ziele.
 - entfallen/ersetzt: Zerstörst du aufgeklärte Unterstützung/Ausrüstung: ziehe 1.
 
-### Lagebild (`dc_b_lagebild_149`, Einheit) – teilweise
+### Lagebild (`dc_b_lagebild_149`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste Karte; behalte oder lege unten.
 - nachher: — · Wörter: Zuteilung
 - entfallen/ersetzt: behalte oder lege unten.
@@ -1720,7 +1720,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Aufdecken: ziehe 1 Karte.
 - nachher: Beim Ausspielen oder Aufdecken: ziehe 1 Karte. · Wörter: Gefechtsbereit
 
-### Erbe-Späher (`dc_b_erbe_spaeher_621`, Einheit) – teilweise
+### Erbe-Späher (`dc_b_erbe_spaeher_621`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste 3; behalte 1 Sofort-/Unterstützung. [Erbe-Späher]
 - nachher: — · Wörter: Zuteilung
 - entfallen/ersetzt: behalte 1 Sofort-/Unterstützung.
@@ -1754,87 +1754,87 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: — · Wörter: Gefechtsbereit, Zuteilung
 - entfallen/ersetzt: Wenn eine eigene Einheit zerstört wird: ziehe 1 und füge einer eigenen Einheit 1 Schaden zu.
 
-### Lina-Melder (`dc_b_lina_melder_803`, Einheit) – teilweise
+### Lina-Melder (`dc_b_lina_melder_803`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Einmal/Zug: decke auf; eine eigene Einheit +1 ATK.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Zuteilung
 - entfallen/ersetzt: eine eigene Einheit +1 ATK.
 
-### Ed-Ruh-Pfad (`dc_b_ed_ruh_pfad_804`, Einheit) – teilweise
+### Ed-Ruh-Pfad (`dc_b_ed_ruh_pfad_804`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste 3; behalte 1 Sofort-/Unterstützung.
 - nachher: — · Wörter: Zuteilung
 - entfallen/ersetzt: behalte 1 Sofort-/Unterstützung.
 
-### Lage-Offen (`dc_b_lage_offen_805`, Einheit) – teilweise
+### Lage-Offen (`dc_b_lage_offen_805`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste 3; behalte 1 Sofort-/Unterstützung; decke 1 auf.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Gefechtsbereit, Zuteilung
 - entfallen/ersetzt: behalte 1 Sofort-/Unterstützung
 
-### Quellenläufer (`dc_b_quellenlaeufer_806`, Einheit) – teilweise
+### Quellenläufer (`dc_b_quellenlaeufer_806`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1 wenn Feind angrenzt. [Quellenläufer]
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Gefechtsbereit
 - entfallen/ersetzt: ziehe 1 wenn Feind angrenzt.
 
-### Aktenleser (`dc_b_aktenleser_863`, Einheit) – teilweise
+### Aktenleser (`dc_b_aktenleser_863`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: ziehe 1.
 
-### Gegenlage-Melder (`dc_b_gegenlage_melder_864`, Einheit) – teilweise
+### Gegenlage-Melder (`dc_b_gegenlage_melder_864`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Einmal/Zug: decke auf; eine eigene Einheit +1 DEF.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Stellungswechsel
 - entfallen/ersetzt: eine eigene Einheit +1 DEF.
 
-### Doppelversion (`dc_b_doppelversion_865`, Einheit) – teilweise
+### Doppelversion (`dc_b_doppelversion_865`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1 wenn Feind angrenzt. [Doppelversion]
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Fernschuss
 - entfallen/ersetzt: ziehe 1 wenn Feind angrenzt.
 
-### Stillrain-Läufer (`dc_b_stillrain_laeufer_866`, Einheit) – teilweise
+### Stillrain-Läufer (`dc_b_stillrain_laeufer_866`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1. [Stillrain-Läufer]
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: ziehe 1.
 
-### Abschriftleser (`dc_b_abschriftleser_923`, Einheit) – teilweise
+### Abschriftleser (`dc_b_abschriftleser_923`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1 wenn Feind angrenzt.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Gefechtsbereit
 - entfallen/ersetzt: ziehe 1 wenn Feind angrenzt.
 
-### Datums-Melder (`dc_b_datums_melder_924`, Einheit) – teilweise
+### Datums-Melder (`dc_b_datums_melder_924`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1. [Datums-Melder]
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Heranführung
 - entfallen/ersetzt: ziehe 1.
 
-### Gegenrechnung (`dc_b_gegenrechnung_925`, Einheit) – teilweise
+### Gegenrechnung (`dc_b_gegenrechnung_925`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste 3; behalte 1 Sofort-/Unterstützung. (Gegenrechnung)
 - nachher: — · Wörter: Zuteilung
 - entfallen/ersetzt: behalte 1 Sofort-/Unterstützung.
 
-### Selm-Läufer (`dc_b_selm_laeufer_926`, Einheit) – teilweise
+### Selm-Läufer (`dc_b_selm_laeufer_926`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1 wenn Feind angrenzt. [Selm-Läufer]
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Heranführung
 - entfallen/ersetzt: ziehe 1 wenn Feind angrenzt.
 
-### Markenspäher (`dc_b_markenspaeher_743`, Einheit) – teilweise
+### Markenspäher (`dc_b_markenspaeher_743`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Einmal/Zug: decke auf; eine eigene Einheit +1 DEF. [Markenspäher]
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: eine eigene Einheit +1 DEF.
 
-### Gassenmelder (`dc_b_gassenmelder_744`, Einheit) – teilweise
+### Gassenmelder (`dc_b_gassenmelder_744`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste 3; behalte 1 Sofort-/Unterstützung. [Gassenmelder]
 - nachher: — · Wörter: Gefechtsbereit, Zuteilung
 - entfallen/ersetzt: behalte 1 Sofort-/Unterstützung.
 
-### Grenzlese (`dc_b_grenzlese_745`, Einheit) – teilweise
+### Grenzlese (`dc_b_grenzlese_745`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste 3; behalte 1 Sofort-/Unterstützung. [Grenzlese]
 - nachher: — · Wörter: Zuteilung
 - entfallen/ersetzt: behalte 1 Sofort-/Unterstützung.
 
-### Schulrain-Läufer (`dc_b_schulrain_laeufer_746`, Einheit) – teilweise
+### Schulrain-Läufer (`dc_b_schulrain_laeufer_746`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste 3; behalte 1 Sofort-/Unterstützung. [Schulrain-Läufer]
 - nachher: — · Wörter: Gefechtsbereit, Zuteilung
 - entfallen/ersetzt: behalte 1 Sofort-/Unterstützung.
 
-### Wegspäher (`dc_b_wegspaeher_185`, Einheit) – teilweise
+### Wegspäher (`dc_b_wegspaeher_185`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Feind aufgeklärt; nächstes Schieben kostet 0 zusätzlich.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Heranführung
 - entfallen/ersetzt: nächstes Schieben kostet 0 zusätzlich.
@@ -1849,67 +1849,67 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: +1 ATK gegen beobachtete Ziele. · Wörter: Heranführung
 - entfallen/ersetzt: Zerstörst du aufgeklärte Unterstützung: ziehe 1.
 
-### Fahrplanblick (`dc_b_fahrplanblick_188`, Einheit) – teilweise
+### Fahrplanblick (`dc_b_fahrplanblick_188`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Einmal/Zug: decke auf; eine eigene Einheit +1 DEF. [Fahrplanblick]
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Stellungswechsel
 - entfallen/ersetzt: eine eigene Einheit +1 DEF.
 
-### Pfadfinder (`dc_b_pfadfinder_683`, Einheit) – teilweise
+### Pfadfinder (`dc_b_pfadfinder_683`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Einmal/Zug: decke auf; eine eigene Einheit darf 1 Abschnitt umgehen.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: eine eigene Einheit darf 1 Abschnitt umgehen.
 
-### Zollspäher (`dc_b_zollspaeher_684`, Einheit) – teilweise
+### Zollspäher (`dc_b_zollspaeher_684`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1 wenn Feind angrenzt. [Zollspäher]
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Stellungswechsel
 - entfallen/ersetzt: ziehe 1 wenn Feind angrenzt.
 
-### Meldekarawane (`dc_b_meldekarawane_685`, Einheit) – teilweise
+### Meldekarawane (`dc_b_meldekarawane_685`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1. [Meldekarawane]
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: ziehe 1.
 
-### Abseitsläufer (`dc_b_abseitslaeufer_686`, Einheit) – teilweise
+### Abseitsläufer (`dc_b_abseitslaeufer_686`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1 wenn Feind angrenzt ohne eigene Nachbarn.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: ziehe 1 wenn Feind angrenzt ohne eigene Nachbarn.
 
-### Beobachtungsposten (`dc_b_beobachtungsposten_563`, Einheit) – teilweise
+### Beobachtungsposten (`dc_b_beobachtungsposten_563`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Einmal/Zug: decke auf; Ziel gilt als beobachtet.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: Ziel gilt als beobachtet.
 
-### Feldmesser (`dc_b_feldmesser_564`, Einheit) – teilweise
+### Feldmesser (`dc_b_feldmesser_564`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; +1 DEF bis Zugende.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Stellungswechsel
 - entfallen/ersetzt: +1 DEF bis Zugende.
 
-### Meldekette (`dc_b_meldekette_565`, Einheit) – teilweise
+### Meldekette (`dc_b_meldekette_565`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1. [Meldekette]
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Zuteilung
 - entfallen/ersetzt: ziehe 1.
 
-### Peiltrupp (`dc_b_peiltrupp_566`, Einheit) – teilweise
+### Peiltrupp (`dc_b_peiltrupp_566`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1 wenn Feind beobachtet angrenzt.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Zuteilung
 - entfallen/ersetzt: ziehe 1 wenn Feind beobachtet angrenzt.
 
-### Zollspäher (`dc_b_zollspaeher_503`, Einheit) – teilweise
+### Zollspäher (`dc_b_zollspaeher_503`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Einmal/Zug: decke auf; wenn Unterstützung im Abschnitt, ziehe 1.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Heranführung
 - entfallen/ersetzt: wenn Unterstützung im Abschnitt, ziehe 1.
 
-### Wegmelder (`dc_b_wegmelder_504`, Einheit) – teilweise
+### Wegmelder (`dc_b_wegmelder_504`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; +1 DEF wenn Abschnitt zuletzt angegriffen.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Zuteilung
 - entfallen/ersetzt: +1 DEF wenn Abschnitt zuletzt angegriffen.
 
-### Kaihof-Auge (`dc_b_kaihof_auge_505`, Einheit) – teilweise
+### Kaihof-Auge (`dc_b_kaihof_auge_505`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste 3; behalte 1 Unterstützungs-/Einsatzkarte.
 - nachher: — · Wörter: Heranführung, Zuteilung
 - entfallen/ersetzt: behalte 1 Unterstützungs-/Einsatzkarte.
 
-### Restzähler (`dc_b_restzaehler_506`, Einheit) – teilweise
+### Restzähler (`dc_b_restzaehler_506`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1 wenn Feind ohne Unterstützung angrenzt.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: ziehe 1 wenn Feind ohne Unterstützung angrenzt.
@@ -1928,7 +1928,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.
 - entfallen/ersetzt: Zerstörst du einrückende Einheit: ziehe 1.
 
-### Abschriftblick (`dc_b_abschriftblick_227`, Einheit) – teilweise
+### Abschriftblick (`dc_b_abschriftblick_227`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste 2; behalte 1, lege 1 unten.
 - nachher: — · Wörter: Zuteilung
 - entfallen/ersetzt: behalte 1, lege 1 unten.
@@ -1937,23 +1937,23 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Feind aufdecken; ziehe 1 wenn du diesen Zug heilst.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug geheilt hast.
 
-### Aktenblick (`dc_b_aktenblick_324`, Einheit) – teilweise
+### Aktenblick (`dc_b_aktenblick_324`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste 2; behalte 1 Heilungs-/Unterstützungs-Karte.
 - nachher: — · Wörter: Heranführung, Zuteilung
 - entfallen/ersetzt: behalte 1 Heilungs-/Unterstützungs-Karte.
 
-### Ringwächter (`dc_b_ringwaechter_325`, Einheit) – teilweise+ersetzt
+### Ringwächter (`dc_b_ringwaechter_325`, Einheit) – Regelangleichung mit Kürzung, Rest ersetzt
 - vorher: +1 DEF; Feinde im Abschnitt können nicht verdeckt bleiben.
 - nachher: Der erste Schaden je Zug sinkt um 1. · Wörter: Stellungswechsel
 - Werte: 2/3 → 2/4
 - entfallen/ersetzt: Feinde im Abschnitt können nicht verdeckt bleiben.
 
-### Formularspäher (`dc_b_formularspaeher_326`, Einheit) – teilweise
+### Formularspäher (`dc_b_formularspaeher_326`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke Feind auf; wenn er diesen Zug angreift, −1 ATK.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Fernschuss
 - entfallen/ersetzt: wenn er diesen Zug angreift, −1 ATK.
 
-### Linsenläufer (`dc_b_linsenlaeufer_263`, Einheit) – teilweise
+### Linsenläufer (`dc_b_linsenlaeufer_263`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Feind aufgeklärt; +1 ATK wenn Ziel Ausrüstung hat.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: +1 ATK wenn Ziel Ausrüstung hat.
@@ -1962,12 +1962,12 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Wenn eigene Einheit stirbt: ziehe 1 (einmal/Zug).
 - nachher: Einmal pro Zug, wenn eine andere eigene Einheit zerstört wird: ziehe 1 Karte.
 
-### Hofspäher (`dc_b_hofspaeher_265`, Einheit) – teilweise
+### Hofspäher (`dc_b_hofspaeher_265`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste 2 Ausrüstungen/Einheiten; behalte 1.
 - nachher: — · Wörter: Zuteilung
 - entfallen/ersetzt: behalte 1.
 
-### Namensblick (`dc_b_namensblick_266`, Einheit) – teilweise
+### Namensblick (`dc_b_namensblick_266`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke Feind auf; wenn er stirbt diesen Zug, heile 1.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Zuteilung
 - entfallen/ersetzt: wenn er stirbt diesen Zug, heile 1.
@@ -1976,17 +1976,17 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Einmal/Zug: decke eine gegnerische Einheit auf.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Fernschuss
 
-### Lokalisierer (`dc_b_lokalisierer_444`, Einheit) – teilweise
+### Lokalisierer (`dc_b_lokalisierer_444`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; ziehe 1 wenn Ziel DEF ≤ 2.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Fernschuss
 - entfallen/ersetzt: ziehe 1 wenn Ziel DEF ≤ 2.
 
-### Methodenspäher (`dc_b_methodenspaeher_445`, Einheit) – teilweise
+### Methodenspäher (`dc_b_methodenspaeher_445`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Schaue oberste 3; behalte 1 Aufklärungs-/Einsatzkarte.
 - nachher: — · Wörter: Zuteilung
 - entfallen/ersetzt: behalte 1 Aufklärungs-/Einsatzkarte.
 
-### Trotzmelder (`dc_b_trotzmelder_446`, Einheit) – teilweise
+### Trotzmelder (`dc_b_trotzmelder_446`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Decke auf; wenn Ziel diesen Zug angreift, −1 ATK.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: wenn Ziel diesen Zug angreift, −1 ATK.
@@ -2043,7 +2043,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Der erste Schaden je Zug sinkt um 1. · Wörter: Durchschlag, Staffelangriff
 - entfallen/ersetzt: Beim Ausspielen: eine eigene Einheit ignoriert Schaden bis Zugende. | Am Zugende: erleide 1 Schaden an einer eigenen Einheit.
 
-### Veteranenrat (`dc_b_veteranenrat_626`, Einheit) – teilweise
+### Veteranenrat (`dc_b_veteranenrat_626`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Einheiten hier +1 ATK/+1 DEF. Einmal/Zug: negiere 1 Schaden; danach kostet deine nächste Sofort +1 AP.
 - nachher: Andere eigene Einheiten in ihrem Abschnitt: +1 ATK und +1 DEF. Der erste Schaden je Zug sinkt um 1. · Wörter: Nachsetzen
 - entfallen/ersetzt: danach kostet deine nächste Sofort +1 AP.
@@ -2058,7 +2058,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Ihr erster Angriff nach dem Ausspielen hat +1 ATK. · Wörter: Nachsetzen, Erbitterung
 - entfallen/ersetzt: Beim Ausspielen: teile 2 Schaden auf eigene Einheiten auf | alle beschädigten eigenen Einheiten +1 ATK.
 
-### Maßkommandant (`dc_b_masskommandant_386`, Einheit) – teilweise
+### Maßkommandant (`dc_b_masskommandant_386`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Einheiten hier +1 ATK solange beschädigt. Einmal/Zug: opfere 1 DEF an einer Einheit hier → heile 2 an einer anderen.
 - nachher: Andere eigene Einheiten in ihrem Abschnitt: +1 ATK, solange diese Einheit beschädigt ist.
 - entfallen/ersetzt: Einmal/Zug: opfere 1 DEF an einer Einheit hier → heile 2 an einer anderen.
@@ -2078,7 +2078,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: +1 ATK gegen beobachtete Ziele. · Wörter: Abschirmung
 - entfallen/ersetzt: Einmal/Zug: ziehe 1 ODER heile 1 an aufgeklärtem Abschnitt. | Nächste Ausrüstung kostet 1 weniger (min. 1).
 
-### Ivo Vel (`dc_b_ivo_vel_867`, Einheit) – teilweise
+### Ivo Vel (`dc_b_ivo_vel_867`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Einmal/Zug: decke 1 auf ODER wirf 1 ab und ziehe 2. Einheiten hier +1 ATK, wenn du diesen Zug eine Sofort mit „Scheinschwerpunkt“/Lage-Effekt gespielt hast oder spielst.
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Erbitterung, Überlast
 - entfallen/ersetzt: ODER wirf 1 ab und ziehe 2. | Einheiten hier +1 ATK, wenn du diesen Zug eine Sofort mit „Scheinschwerpunkt“/Lage-Effekt gespielt hast oder spielst.
@@ -2186,7 +2186,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Der erste Schaden je Zug sinkt um 1.
 - entfallen/ersetzt: Einmal/Zug: eine eigene Einheit in anderem Abschnitt +1 DEF.
 
-### Mar Aschen (`dc_b_mar_aschen_229`, Einheit) – teilweise
+### Mar Aschen (`dc_b_mar_aschen_229`, Einheit) – Regelangleichung mit Kürzung
 - vorher: Beim Ausspielen: heile 2; ziehe 1 wenn allein.
 - nachher: Beim Ausspielen: heile 2 DEF an deiner am stärksten beschädigten Einheit.
 - entfallen/ersetzt: ziehe 1 wenn allein.
@@ -2235,7 +2235,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. · Wörter: Sicherung, Zähigkeit
 - entfallen/ersetzt: Beim Ausspielen: decke 2 auf.
 
-### Fachoffizier (`dc_b_fachoffizier_449`, Einheit) – teilweise
+### Fachoffizier (`dc_b_fachoffizier_449`, Einheit) – Regelangleichung mit Kürzung
 - vorher: +1 ATK gegen aufgeklärte; melde abweichend: ziehe 1 bei Miss.
 - nachher: +1 ATK gegen beobachtete Ziele. · Wörter: Nachsetzen, Heranführung
 - entfallen/ersetzt: melde abweichend: ziehe 1 bei Miss.
@@ -2454,7 +2454,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Einheiten hier +1 DEF, wenn mindestens zwei Einheiten im Abschnitt. [Werkhöfe Novaris]
 - nachher: Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
 
-### Nordfall-Übung (`dc_b_nordfall_uebung_813`, Unterstützung) – teilweise
+### Nordfall-Übung (`dc_b_nordfall_uebung_813`, Unterstützung) – Regelangleichung mit Kürzung
 - vorher: Einheiten hier +1 DEF; einmal/Zug: decke 1 auf ODER ziehe 1.
 - nachher: Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: ODER ziehe 1.
@@ -2480,7 +2480,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Zu Beginn deines Zuges: decke 1 verdeckte gegnerische Fronteinheit auf.
 - entfallen/ersetzt: Einheiten hier +1 ATK im Zug nach Aufdecken.
 
-### Velis-Front (`dc_b_velis_front_870`, Unterstützung) – teilweise
+### Velis-Front (`dc_b_velis_front_870`, Unterstützung) – Regelangleichung mit Kürzung
 - vorher: Einheiten hier +1 DEF, wenn mindestens zwei Einheiten im Abschnitt. Einmal/Zug: eine verdeckte eigene Einheit +1 ATK beim Aufdecken.
 - nachher: Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
 - entfallen/ersetzt: Einmal/Zug: eine verdeckte eigene Einheit +1 ATK beim Aufdecken.
@@ -2517,7 +2517,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Einheiten hier +1 DEF, wenn mindestens zwei Einheiten im Abschnitt.
 - nachher: Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
 
-### Halle Kalden (`dc_b_halle_kalden_930`, Unterstützung) – teilweise
+### Halle Kalden (`dc_b_halle_kalden_930`, Unterstützung) – Regelangleichung mit Kürzung
 - vorher: Einheiten hier +1 DEF, wenn mindestens zwei Einheiten im Abschnitt. Nach einem Kill hier: ziehe 1.
 - nachher: Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
 - entfallen/ersetzt: Nach einem Kill hier: ziehe 1.
@@ -2539,7 +2539,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Einheiten hier +1 ATK/+1 DEF; einmal/Zug: negiere 1 Schaden an einer Einheit hier. [Markt Mahr]
 - nachher: Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.
 
-### Schuldblatt (`dc_b_schuldblatt_935`, Unterstützung) – teilweise
+### Schuldblatt (`dc_b_schuldblatt_935`, Unterstützung) – Regelangleichung mit Kürzung
 - vorher: Einheiten hier +1 ATK/+1 DEF; einmal/Zug: negiere 1 Schaden an einer Einheit hier. Danach: diese Einheit gilt als „genannt“ (+1 ATK gegen sie für den Gegner bis Zugende).
 - nachher: Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.
 - entfallen/ersetzt: Danach: diese Einheit gilt als „genannt“.
@@ -2643,7 +2643,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Einheiten im Abschnitt +1 DEF. [Umschlagplatz]
 - nachher: Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.
 
-### Vertragsnetz (`dc_b_vertragsnetz_693`, Unterstützung) – teilweise
+### Vertragsnetz (`dc_b_vertragsnetz_693`, Unterstützung) – Regelangleichung mit Kürzung
 - vorher: Einheiten hier +1 ATK; einmal/Zug: bewege 1 Einheit 1 Abschnitt.
 - nachher: Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.
 - entfallen/ersetzt: einmal/Zug: bewege 1 Einheit 1 Abschnitt.
@@ -2688,7 +2688,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Einheiten hier +1 ATK gegen beobachtete.
 - nachher: Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK gegen beobachtete Ziele.
 
-### Kommissionsdepot (`dc_b_kommissionsdepot_574`, Unterstützung) – teilweise
+### Kommissionsdepot (`dc_b_kommissionsdepot_574`, Unterstützung) – Regelangleichung mit Kürzung
 - vorher: Einmal/Zug: Einheit hier gespielt kostet 1 weniger (min. 1); ziehe 1.
 - nachher: Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).
 - entfallen/ersetzt: ziehe 1.
@@ -2893,7 +2893,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 - entfallen/ersetzt: Einmal/Zug: eigene Einheit +1 ATK gegen aufgeklärte ODER brich Angriff ab → heile 1.
 
-### Kliniktief (`dc_b_kliniktief_453`, Unterstützung) – teilweise
+### Kliniktief (`dc_b_kliniktief_453`, Unterstützung) – Regelangleichung mit Kürzung
 - vorher: Heile 1; keine Rangsortierung — alle Einheiten im Abschnitt +1 DEF.
 - nachher: Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 - entfallen/ersetzt: keine Rangsortierung — alle Einheiten im Abschnitt +1 DEF.
@@ -3675,12 +3675,12 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Artillerie +1 ATK.
 - nachher: Nur an Artillerie. Träger +1 ATK.
 
-### Zieloptik Konzern (`dc_b_zieloptik_konzern_177`, Ausrüstung) – teilweise
+### Zieloptik Konzern (`dc_b_zieloptik_konzern_177`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Aufklärung/Artillerie +1 ATK gegen Aufgeklärte.
 - nachher: Nur an Artillerie.
 - entfallen/ersetzt: Aufklärung/Artillerie +1 ATK gegen Aufgeklärte.
 
-### Panzerplatte Serie (`dc_b_panzerplatte_serie_178`, Ausrüstung) – teilweise
+### Panzerplatte Serie (`dc_b_panzerplatte_serie_178`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Panzer +2 DEF, −1 ATK.
 - nachher: Nur an Panzer.
 - entfallen/ersetzt: Panzer +2 DEF, −1 ATK.
@@ -3701,12 +3701,12 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger +1 ATK und +1 DEF.
 - nachher: Träger +1 ATK, +1 DEF.
 
-### Balkenschild (`dc_b_balkenschild_142`, Ausrüstung) – teilweise
+### Balkenschild (`dc_b_balkenschild_142`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +2 DEF. Träger kann nicht angreifen.
 - nachher: Träger +2 DEF.
 - entfallen/ersetzt: Träger kann nicht angreifen.
 
-### Kronriemen (`dc_b_kronriemen_648`, Ausrüstung) – teilweise
+### Kronriemen (`dc_b_kronriemen_648`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 ATK. Wenn Träger ersetzt wird: neuer Träger erhält +1 DEF und „Schwur“ (erster Schaden ignoriert).
 - nachher: Träger +1 ATK.
 - entfallen/ersetzt: Wenn Träger ersetzt wird: neuer Träger erhält +1 DEF und „Schwur“.
@@ -3723,7 +3723,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger +1 ATK, solange beschädigt (Preis des Rechts).
 - nachher: Träger +1 ATK, solange er beschädigt ist.
 
-### Patronengurt Erbe (`dc_b_patronengurt_erbe_655`, Ausrüstung) – teilweise
+### Patronengurt Erbe (`dc_b_patronengurt_erbe_655`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 ATK. Einmal: +1 zusätzlicher ATK für einen Angriff, dann ablegen.
 - nachher: Träger +1 ATK.
 - entfallen/ersetzt: Einmal: +1 zusätzlicher ATK für einen Angriff, dann ablegen.
@@ -3752,7 +3752,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Sandstreifen]
 - nachher: Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.
 
-### Sensor-Knoten (`dc_b_sensor_knoten_834`, Ausrüstung) – teilweise
+### Sensor-Knoten (`dc_b_sensor_knoten_834`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 ATK; einmal/Zug: decke 1 auf.
 - nachher: Träger +1 ATK. Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.
 - entfallen/ersetzt: einmal/Zug: decke 1 auf.
@@ -3769,7 +3769,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger: einmal/Zug heile 1. [Netzlampe]
 - nachher: Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.
 
-### Verbindungssiegel (`dc_b_verbindungssiegel_839`, Ausrüstung) – teilweise
+### Verbindungssiegel (`dc_b_verbindungssiegel_839`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 ATK gegen Aufgeklärte; einmal/Zug: decke 1 auf.
 - nachher: Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.
 - entfallen/ersetzt: einmal/Zug: decke 1 auf.
@@ -3791,7 +3791,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger +1 DEF; einmal/Zug: ziehe 1 wenn Sofort gespielt.
 - nachher: Träger +1 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.
 
-### Lesegerät (`dc_b_lesegeraet_894`, Ausrüstung) – teilweise
+### Lesegerät (`dc_b_lesegeraet_894`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF.
 - nachher: Träger +1 ATK, +1 DEF.
 - entfallen/ersetzt: einmal/Zug: Einheit hier +1 DEF.
@@ -3896,7 +3896,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger: einmal/Zug heile 1. [Kai-Optik]
 - nachher: Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.
 
-### Lizenzsiegel (`dc_b_lizenzsiegel_216`, Ausrüstung) – teilweise
+### Lizenzsiegel (`dc_b_lizenzsiegel_216`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF. [Lizenzsiegel]
 - nachher: Träger +1 ATK, +1 DEF.
 - entfallen/ersetzt: einmal/Zug: Einheit hier +1 DEF.
@@ -3939,7 +3939,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger +1 ATK; +1 DEF wenn unbewegt.
 - nachher: Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.
 
-### Passschlüssel (`dc_b_passschluessel_716`, Ausrüstung) – teilweise
+### Passschlüssel (`dc_b_passschluessel_716`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 DEF; einmal/Zug: bewege Träger 1 Abschnitt.
 - nachher: Träger +1 DEF.
 - entfallen/ersetzt: einmal/Zug: bewege Träger 1 Abschnitt.
@@ -3948,12 +3948,12 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger: einmal/Zug heile 1 nach Bewegung.
 - nachher: Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.
 
-### Wegmarke (`dc_b_wegmarke_718`, Ausrüstung) – teilweise
+### Wegmarke (`dc_b_wegmarke_718`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 ATK; bei Angriff aus Bewegung +1 ATK.
 - nachher: Träger +1 ATK.
 - entfallen/ersetzt: bei Angriff aus Bewegung +1 ATK.
 
-### Endlose Kolonne (`dc_b_endlose_kolonne_719`, Ausrüstung) – teilweise
+### Endlose Kolonne (`dc_b_endlose_kolonne_719`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 ATK/+1 DEF; einmal/Zug: spiele Einheit 1 billiger (min. 1) wenn Träger bewegt.
 - nachher: Träger +1 ATK, +1 DEF.
 - entfallen/ersetzt: einmal/Zug: spiele Einheit 1 billiger (min. 1) wenn Träger bewegt.
@@ -3980,7 +3980,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - nachher: Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.
 - AP: 1 → 0
 
-### Aktenmappe (`dc_b_aktenmappe_596`, Ausrüstung) – teilweise
+### Aktenmappe (`dc_b_aktenmappe_596`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 DEF; einmal/Zug: decke 1 auf.
 - nachher: Träger +1 DEF. Beim Anlegen: decke eine verdeckte gegnerische Einheit auf.
 - entfallen/ersetzt: einmal/Zug: decke 1 auf.
@@ -3989,7 +3989,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger: einmal/Zug heile 1 wenn Ziel beobachtet.
 - nachher: Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.
 
-### Zielzuweisung (`dc_b_zielzuweisung_598`, Ausrüstung) – teilweise
+### Zielzuweisung (`dc_b_zielzuweisung_598`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 ATK; bei Angriff Ziel gilt als beobachtet.
 - nachher: Träger +1 ATK.
 - entfallen/ersetzt: bei Angriff Ziel gilt als beobachtet.
@@ -4022,7 +4022,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger: einmal/Zug heile 1 wenn Unterstützung liegt.
 - nachher: Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.
 
-### Fahrplan (`dc_b_fahrplan_538`, Ausrüstung) – teilweise
+### Fahrplan (`dc_b_fahrplan_538`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 DEF; bei Rücken in angegriffenen Abschnitt +1 ATK.
 - nachher: Träger +1 DEF.
 - entfallen/ersetzt: bei Rücken in angegriffenen Abschnitt +1 ATK.
@@ -4039,7 +4039,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger +1 ATK; +1 DEF wenn unbewegt. [Schieferumhang]
 - nachher: Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.
 
-### Passoptik (`dc_b_passoptik_255`, Ausrüstung) – teilweise
+### Passoptik (`dc_b_passoptik_255`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Aufklärung/Artillerie +1 ATK gegen Einrückende.
 - nachher: Nur an Artillerie.
 - entfallen/ersetzt: Aufklärung/Artillerie +1 ATK gegen Einrückende.
@@ -4068,7 +4068,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: +1 ATK/+1 DEF, wenn 2+ eigene Einheiten im Abschnitt.
 - nachher: Träger +1 ATK und +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
 
-### Institutionsstoff (`dc_b_institutionsstoff_353`, Ausrüstung) – teilweise
+### Institutionsstoff (`dc_b_institutionsstoff_353`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF. [Institutionsstoff]
 - nachher: Träger +1 ATK, +1 DEF.
 - entfallen/ersetzt: einmal/Zug: Einheit hier +1 DEF.
@@ -4089,7 +4089,7 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger +1 ATK, wenn in diesem Zug eigene Einheit zerstört.
 - nachher: Träger +1 ATK, wenn in diesem Zug eine eigene Einheit zerstört wurde.
 
-### Schmiedehammer (`dc_b_schmiedehammer_295`, Ausrüstung) – teilweise
+### Schmiedehammer (`dc_b_schmiedehammer_295`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF. [Schmiedehammer]
 - nachher: Träger +1 ATK, +1 DEF.
 - entfallen/ersetzt: einmal/Zug: Einheit hier +1 DEF.
@@ -4098,12 +4098,12 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger +1 ATK. [Schwere Platte]
 - nachher: Träger +1 ATK.
 
-### Knochennagel (`dc_b_knochennagel_297`, Ausrüstung) – teilweise
+### Knochennagel (`dc_b_knochennagel_297`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 DEF; überlebt Angriff: +1 ATK bis Zugende.
 - nachher: Träger +1 DEF.
 - entfallen/ersetzt: überlebt Angriff: +1 ATK bis Zugende.
 
-### Messgerät (`dc_b_messgeraet_471`, Ausrüstung) – teilweise
+### Messgerät (`dc_b_messgeraet_471`, Ausrüstung) – Regelangleichung mit Kürzung
 - vorher: Träger +1 ATK/+1 DEF; einmal/Zug: Einheit hier +1 DEF. [Messgerät]
 - nachher: Träger +1 ATK, +1 DEF.
 - entfallen/ersetzt: einmal/Zug: Einheit hier +1 DEF.

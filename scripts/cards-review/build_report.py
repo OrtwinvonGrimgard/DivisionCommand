@@ -5,8 +5,8 @@ import datafiles as DF
 HERE = Path(__file__).parent; ROOT = DF.ROOT
 R = json.loads((HERE / 'review_raw.json').read_text())
 cards = {i: c for i, (f, c) in DF.all_cards().items()}
-MODE_TXT = {'voll': 'Text vollständig in allgemeine Mechanik übersetzt', 'teilweise': 'teilweise übersetzt, Rest entfallen (protokolliert)',
-            'ersetzt': 'nicht abbildbar – durch gleichwertige allgemeine Mechanik ersetzt', 'teilweise+ersetzt': 'teilweise übersetzt, Rest ersetzt',
+MODE_TXT = {'voll': 'Text vollständig in allgemeine Mechanik übersetzt', 'teilweise': 'Regelangleichung mit Kürzung, Rest entfallen (protokolliert)',
+            'ersetzt': 'nicht abbildbar – durch gleichwertige allgemeine Mechanik ersetzt', 'teilweise+ersetzt': 'Regelangleichung mit Kürzung, Rest durch allgemeine Mechanik ersetzt',
             'aus-code': 'Text aus implementiertem Code neu erzeugt', 'aus-code+DRAW': 'Text aus Code, versprochenes Ziehen ergänzt',
             'spezifisch': 'eigene Spezialmechanik, Text geprüft/Zielseite festgelegt', 'manuell': 'Unterstützung manuell korrigiert',
             'abkürzung': 'alte Abkürzung V/A → DEF/ATK', 'unverändert': 'geprüft, unverändert', 'generiert-geprüft': 'generierter Nationenpool/Taktikentwurf, geprüft', 'vanilla': 'ohne Fähigkeit'}

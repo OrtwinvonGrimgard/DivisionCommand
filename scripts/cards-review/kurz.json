@@ -5410,12 +5410,12 @@
   "keywords": []
  },
  "dc_b_zieloptik_konzern_177": {
-  "kurz": "Nur an Artillerie.",
+  "kurz": "Nur an Aufklärung oder Artillerie. +1 ATK gegen beobachtete Ziele.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_panzerplatte_serie_178": {
-  "kurz": "Nur an Panzer.",
+  "kurz": "Nur an Panzer. +2 DEF, −1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6010,7 +6010,7 @@
   "keywords": []
  },
  "dc_b_passoptik_255": {
-  "kurz": "Nur an Artillerie.",
+  "kurz": "Nur an Aufklärung oder Artillerie. +1 ATK gegen Einheiten, die seit dem letzten Zug eingerückt sind.",
   "gekuerzt": false,
   "keywords": []
  },
