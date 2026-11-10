@@ -979,6 +979,8 @@
         // Feindkontakt: nur Handkarten anbieten, die jetzt bezahlbar sind; Weitergeben ist immer legal.
         if (pk === 'react-window') {
           choices = choices.filter((c) => {
+            // Verdeckte Falle im Support (RULES §12.1): bereits bezahlt, löst ohne AP aus.
+            if ((p.support || []).some((x) => x && x.uid === c.target && x.facedown)) return true;
             const inst = p.hand.find((x) => x.uid === c.target);
             if (!inst) return false;
             try { return p.ap >= this.costOf(this.defOf(inst), p, null, inst, false); } catch (e) { return false; }
@@ -1770,6 +1772,9 @@
       if (pend.kind === 'pause-unit') return this._applyPause(pid, a.target, pend);
       if (pend.kind === 'napalm') return this._doNapalm(pid, a.target, pend);
       if (pend.kind === 'react-window') {
+        const rp = this.player(pid);
+        const si = (rp.support || []).findIndex((c) => c && c.uid === a.target && c.facedown);
+        if (si >= 0) return this._springTrap(rp, si);
         return this._actPlay(pid, { uid: a.target });
       }
       if (pend.kind === 'mob-pick') {
@@ -3669,6 +3674,28 @@
         else if (codes.indexOf('WILL_PEOPLE') >= 0) out.push({ target: c.uid, label: d.name });
       });
       return out;
+    }
+
+    // Verdeckte Falle aus dem Support als Reaktion auslösen (RULES §12.1).
+    // AP wurden beim verdeckten Legen bezahlt; die Karte wird aufgedeckt und wie ein Soforteinsatz abgehandelt.
+    _springTrap(p, si) {
+      const card = p.support[si];
+      const def = this.defOf(card);
+      p.support[si] = null;
+      card.facedown = false;
+      if (card.flags) card.flags.trap = false;
+      p.hand.push(card);
+      this._evt('instant', def, p.name + ' deckt ' + def.name + ' auf.');
+      const res = this._playInstant(p, card, undefined, false);
+      if (res && res.ok === false) { // nicht auslösbar: Falle bleibt verdeckt liegen
+        p.hand = p.hand.filter((c) => c.uid !== card.uid);
+        card.facedown = true;
+        if (card.flags) card.flags.trap = true;
+        p.support[si] = card;
+        const pw = this.state.pending;
+        if (pw && pw.kind === 'react-window' && Array.isArray(pw.choices)) pw.choices = pw.choices.filter((c) => c.target !== card.uid);
+      }
+      return res;
     }
 
     _resumeAfterReact() {

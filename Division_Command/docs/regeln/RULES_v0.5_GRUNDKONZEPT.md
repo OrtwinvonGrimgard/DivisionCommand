@@ -331,6 +331,8 @@ Bestimmte Einsätze können verdeckt in der Support-Zone liegen.
 
 Sie werden durch Trigger oder einen geeigneten Zeitpunkt aufgedeckt und aktiviert.
 
+**Verbindlich ab 0.6a (t238):** Wird eine eigene Einheit angegriffen, bietet das Fenster **Feindkontakt** neben passenden Soforteinsätzen der Hand auch passende verdeckte Fallen aus dem Support an. Eine Falle kostet beim Auslösen **keine AP** (bezahlt beim verdeckten Legen), wird aufgedeckt und wie ein Soforteinsatz abgehandelt. Hat sie gerade kein gültiges Ziel, bleibt sie verdeckt liegen.
+
 Es gibt keine allgemeine Beschränkung auf zwei Fallen.
 
 ---
