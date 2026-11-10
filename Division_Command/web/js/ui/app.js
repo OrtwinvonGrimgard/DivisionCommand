@@ -805,7 +805,8 @@
     var mark = engine.state.turn + ':' + engine.state.active;
     if (botMark !== mark) { botMark = mark; botFail = {}; botSteps = 0; }
     botSteps += 1;
-    if (botSteps > 18) { botForceEnd(); return; }
+    // t254: Folgewahlen (Ziel, Stellung, Massen-/Gassen-Folgen) zählen mit; 60 Schritte statt 18.
+    if (botSteps > 60) { botForceEnd(); return; }
     var pid = pend0 ? pend0.player : engine.state.active;
     if (pid !== 1) return;
     var act = { type: 'END_TURN', player: 1 };
@@ -820,14 +821,13 @@
     }
     var res = null;
     try {
-      if (act.type === 'RESOLVE_PENDING' && act.confirm) act = botFollow(engine.state.pending) || { type: 'CANCEL_PENDING', player: 1 };
-      if (act.type === 'RESOLVE_PENDING') {
-        if (act.slot) res = engine.dispatch({ type: 'CHOOSE_SLOT', player: 1, slot: act.slot });
-        else if (act.target) res = engine.dispatch({ type: 'CHOOSE_TARGET', player: 1, target: act.target });
-        else res = engine.dispatch(botFollow(engine.state.pending) || { type: 'CANCEL_PENDING', player: 1 });
-      } else {
-        res = engine.dispatch(act);
-      }
+      // t254: Die Wahl des Bots (Ziel, Stellung, Bestätigen) direkt über dispatch ausführen.
+      // Nur Münze/SAM/Geist/Feindkontakt/Blick ohne eigene Wahl laufen über botFollow.
+      var pendNow = engine.state.pending;
+      var autoKinds = ['coin', 'angel-coin', 'resist-coin', 'sam', 'geist-window', 'hand-show', 'peek'];
+      if (act.type === 'RESOLVE_PENDING' && act.confirm && pendNow && autoKinds.indexOf(pendNow.kind) >= 0) act = botFollow(pendNow) || { type: 'CANCEL_PENDING', player: 1 };
+      if (act.type === 'RESOLVE_PENDING' && !act.slot && !act.target && !act.confirm) act = botFollow(pendNow) || { type: 'CANCEL_PENDING', player: 1 };
+      res = engine.dispatch(act);
     } catch (err) {
       res = { ok: false, error: String(err && err.message || err) };
     }
@@ -835,19 +835,8 @@
       botFail[botActKey(act)] = 1;
       botSay(res.error || 'Gegner setzt aus.');
     }
+    // t254: Eine neue eigene Folgewahl löst der nächste botTick mit DCBot.step (bewertet) statt mit der ersten Option.
     var pend = engine.state.pending;
-    if (pend && pend.player === 1 && res && res.ok !== false) {
-      var follow = botFollow(pend);
-      if (follow) {
-        var res2 = null;
-        try { res2 = engine.dispatch(follow); } catch (e) { res2 = { ok: false }; }
-        if (res2 && res2.ok === false) {
-          try { engine.dispatch({ type: 'CANCEL_PENDING', player: 1 }); } catch (e2) {}
-          if (engine.state.pending && engine.state.pending.player === 1) engine.state.pending = null;
-        }
-      }
-    }
-    pend = engine.state.pending;
     if (pend && pend.player !== 1) {
       render();
       try { if (!eventPlaying) showPending(); } catch (e) {}

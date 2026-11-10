@@ -9,6 +9,7 @@ Stand: Branch `doktrin-balance`. Audit: `scripts/dev/audit_choice_cards.mjs`, Te
 3. **Doktrin-Autos (kein Spieler-Dialog):** Schwerpunkt → dichtester Abschnitt (≥ `min_units`). Sturmangriff → Infanterie mit höchstem Basis-ATK. Etappensicherung → erste beschädigte Einheit heilen.
 4. **Verlegung:** Bot nimmt `DOK_SHIFT` aus `listActions` (Mitte bevorzugt, Score ~6–10).
 5. **Schloter-Bot:** zufällige Pending-Wahl / zufälliger Shift.
+6. **t254:** Eigene Wahlfenster mit Sonderlogik: „Der Letzte der steht“ behält die stärkste Einheit, befohlene Angriffe (Blinder Gehorsam) und Feuerauftrag zielen auf vernichtbare Feinde, Deck-Suchen (Mobilisierung, Einsame Gassen) nehmen die stärksten Einheiten. Im Browser löst `botTick` Folgewahlen mit `DCBot.step` statt mit der ersten Option. Details: `docs/balance/BOT_KI_T254.md`.
 
 ## Spieler-UI
 

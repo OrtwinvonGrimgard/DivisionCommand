@@ -1,6 +1,12 @@
 /**
  * Bots: „Schloter“ (gewichteter Zufall) und „Test“ (Brett- und Handbewertung).
  *
+ * t254: Der Test-Bot ordnet seinen Zug in Stufen (dringende Neutralisierung, Ausrüstung und
+ * starke Fähigkeiten, Angriffe mit Vernichtung, übrige Ausspielungen, Rest), findet aktivierbare
+ * Fähigkeiten eigener Karten, bewertet lageabhängige Soforteinsätze durch Vorausschau auf einer
+ * Kopie (nur `dispatch`, keine nachgebauten Regeln) und prüft jede gewählte Aktion vorab.
+ * Doku: docs/balance/BOT_KI_T254.md.
+ *
  * Einziger erlaubter Regelzugriff ist `engine.listActions` / `engine.dispatch`
  * bzw. `Bot.step(engine, playerId)`. Keine eigenen Regeln.
  * Export: `window.DCBot`.
@@ -19,7 +25,17 @@
     allowEquip: 1,
     allowInstant: 1,
     allowAttack: 1,
-    holdAp: 1
+    holdAp: 1,
+    // t254: Zugreihenfolge in Stufen (1) statt „erst alles ausspielen“ (0).
+    tiered: 1,
+    // t254: Sonder-Soforteinsätze und Fähigkeiten auf einer Kopie durchspielen und bewerten.
+    lookahead: 1,
+    // t254: gewählte Aktion vorher auf einer Kopie prüfen; scheitert sie, die nächstbeste nehmen.
+    probe: 1,
+    // t254: Bewertungspunkte, die ein AP in der Vorausschau kostet.
+    apWeight: 4,
+    // t254: Angriffe auf einer Kopie ausführen und Siegpunkt-Gewinne (Doktrinziele, Durchbruch) einpreisen.
+    vpLook: 1
   };
 
   var cfg = {};
@@ -77,6 +93,194 @@
     return codes(d).indexOf(code) >= 0;
   }
 
+  /* ------------------------------------------------------------------
+   * t254: Vorausschau auf einer Kopie der Partie.
+   * Der Bot rechnet keine Regeln nach: er spielt eine legale Aktion auf
+   * einer tiefen Kopie über `dispatch` durch und bewertet das Brett danach.
+   * ------------------------------------------------------------------ */
+
+  /** Soforteinsätze, deren Wert stark von der Lage abhängt (Vorausschau statt Pauschalwert). */
+  var LOOK_CODES = ['MASS_DEPLOY', 'EMPTY_STREETS', 'COMMAND_ATTACK', 'LAST_STAND', 'MOBILIZE_INF'];
+
+  /** Effektcodes, hinter denen eine aktivierbare Fähigkeit stehen kann (Einheit, Unterstützung, Ausrüstung). */
+  var ABILITY_CODES = ['FIRE_MISSION', 'DRONE_STRIKE', 'FEINT', 'HOSPITAL', 'REATTACK', 'SCOUT_DECK',
+    'FETCH_EQUIP', 'SAT_PEEK', 'FOG_TOKEN', 'VERSCHIEBEN', 'JAM_DRONE', 'HIJACK_DRONE', 'TACTIC_DISCOUNT',
+    'NEST_BED', 'REVEAL_STRIKE', 'AUFKLAERUNG', 'EQUIP_ONCE_PAIN_ATK', 'EQUIP_ONCE_DRAW_PAIN',
+    'TACTICAL_INTERDICT', 'TACTICAL_COVER', 'TACTICAL_BIND'];
+
+  /** Rekursionssperre: in der Vorausschau keine weitere Vorausschau und keine Probe. */
+  var depth = 0;
+
+  /**
+   * True, wenn die Definition einen der Codes trägt.
+   * @param {object} d
+   * @param {string[]} list
+   * @returns {boolean}
+   */
+  function hasAny(d, list) {
+    return codes(d).some(function (c) { return list.indexOf(c) >= 0; });
+  }
+
+  /**
+   * True, wenn die ausliegende Karte (oder eine angehängte Ausrüstung) eine Fähigkeit haben kann.
+   * @param {object} engine
+   * @param {object} inst
+   * @returns {boolean}
+   */
+  function mayHaveAbility(engine, inst) {
+    if (!inst || inst.facedown) return false;
+    if (hasAny(defOf(engine, inst), ABILITY_CODES)) return true;
+    return (inst.attachments || []).some(function (eq) { return hasAny(defOf(engine, eq), ABILITY_CODES); });
+  }
+
+  /**
+   * Aktuelle Werte einer Instanz (Auren eingerechnet, wenn die Engine sie liefert).
+   * @param {object} engine
+   * @param {object} inst
+   * @returns {{atk: number, def: number}}
+   */
+  function statsOf(engine, inst) {
+    var d = defOf(engine, inst);
+    var atk = inst.atk != null ? inst.atk : (Number(d.atk) || 0);
+    var dv = inst.def != null ? inst.def : (Number(d.def) || 0);
+    try {
+      if (engine.currentAtkDef) {
+        var c = engine.currentAtkDef(inst);
+        if (c && isFinite(c.atk)) atk = c.atk;
+        if (c && isFinite(c.def)) dv = c.def;
+      }
+    } catch (e) { /* Werte aus der Instanz genügen */ }
+    return { atk: Number(atk) || 0, def: Number(dv) || 0 };
+  }
+
+  /**
+   * Grober Materialwert einer Seite: Front, Unterstützung, Hand, Siegpunkte.
+   * @param {object} engine
+   * @param {object} p Spieler
+   * @returns {number}
+   */
+  function sideValue(engine, p) {
+    var v = 0;
+    engine.frontList(p).forEach(function (l) {
+      var st = statsOf(engine, l.inst);
+      v += 8 + st.atk * 3 + Math.max(0, st.def) * 2;
+      // „Der Letzte der steht“: fällt sie, bekommt der Gegner 1 SP.
+      if (l.inst.flags && l.inst.flags.letzterDerSteht) v -= 14;
+    });
+    (p.support || []).forEach(function (s) { if (s) v += 7; });
+    v += (p.hand || []).length * 3;
+    v += (Number(p.vp) || 0) * 30;
+    return v;
+  }
+
+  /**
+   * Brettbewertung aus Sicht von `pid` (eigener minus gegnerischer Wert, Sieg/Niederlage dominiert).
+   * @param {object} engine
+   * @param {number} pid
+   * @returns {number}
+   */
+  function evalBoard(engine, pid) {
+    var st = engine.state;
+    if (st && st.winner != null) return st.winner === pid ? 1e4 : (st.winner === null ? 0 : -1e4);
+    return sideValue(engine, engine.player(pid)) - sideValue(engine, engine.opponent(pid));
+  }
+
+  /**
+   * Tiefe Kopie der Partie für Proben. Gleicher Prototyp, eigener Zustand, eigener Zufall,
+   * stumme Ereignisse; der echte Spielstand und sein Zufallsstrom bleiben unberührt.
+   * @param {object} engine
+   * @returns {object}
+   */
+  function cloneEngine(engine) {
+    var c = Object.create(Object.getPrototypeOf(engine));
+    Object.keys(engine).forEach(function (k) { c[k] = engine[k]; });
+    c.state = JSON.parse(JSON.stringify(engine.state));
+    c.state._muteEvents = true;
+    c.log = [];
+    var s = (((engine.state && engine.state.seq) || 1) * 2654435761) >>> 0 || 1;
+    c.rand = function () { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; };
+    return c;
+  }
+
+  /**
+   * Prüft eine Aktion auf einer Kopie. Ändert den echten Stand nicht.
+   * @param {object} engine
+   * @param {object} act
+   * @returns {boolean} true, wenn `dispatch` die Aktion annimmt
+   */
+  function probeOk(engine, act) {
+    try {
+      var c = cloneEngine(engine);
+      var r = c.dispatch(act);
+      return !!(r && r.ok);
+    } catch (e) { return false; }
+  }
+
+
+  /**
+   * t254: Siegpunkt-Saldo einer Aktion (eigene minus gegnerische SP-Änderung) auf einer Kopie.
+   * Erfasst Doktrinziele, Elite-Abschüsse, Durchbruch und den SP aus „Der Letzte der steht“ ohne eigene Regeln.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} act
+   * @returns {number|null} null, wenn `dispatch` die Aktion ablehnt
+   */
+  function vpSwing(engine, pid, act) {
+    try {
+      var c = cloneEngine(engine);
+      var me0 = Number(engine.player(pid).vp) || 0, op0 = Number(engine.opponent(pid).vp) || 0;
+      var r = c.dispatch(act);
+      if (!r || !r.ok) return null;
+      if (c.state.winner === pid) return 10;
+      var d = (Number(c.player(pid).vp) || 0) - me0 - ((Number(c.opponent(pid).vp) || 0) - op0);
+      if (c.state.winner != null && c.state.winner !== pid) d -= 10;
+      return d;
+    } catch (e) { return null; }
+  }
+
+  /**
+   * Spielt `act` auf einer Kopie und löst eigene Folgewahlen mit dem Bot selbst auf.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} act
+   * @returns {{ok: boolean, delta?: number, apSpent?: number}}
+   */
+  function lookahead(engine, pid, act) {
+    if (depth > 0) return { ok: false };
+    var before = evalBoard(engine, pid);
+    var ap0 = engine.player(pid).ap;
+    depth++;
+    try {
+      var c = cloneEngine(engine);
+      var r = c.dispatch(act);
+      if (!r || !r.ok) return { ok: false };
+      var steps = 0;
+      while (c.state.winner == null && c.state.pending && c.state.pending.player === pid && steps++ < 40) {
+        var a = stepTest(c, pid, {});
+        if (!a || a.type === 'END_TURN') break;
+        if (a.player == null) a.player = pid;
+        var r2 = c.dispatch(a);
+        if (!r2 || !r2.ok) { try { c.dispatch({ type: 'CANCEL_PENDING', player: pid }); } catch (e2) { /* egal */ } break; }
+      }
+      return { ok: true, delta: evalBoard(c, pid) - before, apSpent: ap0 - c.player(pid).ap };
+    } catch (e) {
+      return { ok: false };
+    } finally {
+      depth--;
+    }
+  }
+
+  /**
+   * Vorausschau-Ergebnis in die Bewertungsskala von `scorePlay` übersetzen.
+   * Eine 2/3-Einheit für 2 AP liegt dort bei etwa 30 Punkten.
+   * @param {{delta: number, apSpent: number}} la
+   * @returns {number}
+   */
+  function lookScore(la) {
+    var w = n('apWeight', 0, 20, 4);
+    return 10 + 1.4 * la.delta - w * Math.max(0, la.apSpent);
+  }
+
   /**
    * Anzahl eigener Fronteinheiten.
    * @param {object} engine
@@ -131,6 +335,66 @@
     return need;
   }
 
+
+  /**
+   * t254: Schlagwert gegen ein feindliches Ziel bei `dmg` Schaden (Vernichtung zählt am meisten).
+   * @param {object} engine
+   * @param {object} loc Ziel (findInst)
+   * @param {number} dmg
+   * @returns {number}
+   */
+  function hitValue(engine, loc, dmg) {
+    var st = statsOf(engine, loc.inst);
+    var v = st.atk * 2 + 2;
+    if (dmg >= st.def) v += 20 + st.atk * 2 + Math.min(st.def, 6);
+    else v += Math.max(0, 6 - (st.def - dmg) * 2);
+    if (loc.inst.facedown) v += 3;
+    if (loc.zone === 'support') v += 4;
+    return v;
+  }
+
+  /**
+   * t254: Antworten auf Wahlfenster mit eigener Logik (Überlebende, befohlene Angriffe, Schadensziele).
+   * Liefert null, wenn die allgemeine Bewertung greifen soll.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} act
+   * @param {object} pend
+   * @returns {number|null}
+   */
+  function scorePendingKind(engine, pid, act, pend) {
+    if (!pend || act.confirm || !act.target) return null;
+    // Deck-Suchen (Mobilisierung, Einsame Gassen): stärkste Einheiten aus dem Pool nehmen.
+    var poolCard = (pend.pool || []).find(function (c) { return c && typeof c === 'object' && c.uid === act.target; });
+    if (poolCard) {
+      var pd = defOf(engine, poolCard);
+      return 10 + (Number(pd.atk) || 0) * 3 + (Number(pd.def) || 0) * 2;
+    }
+    var loc = engine.findInst(act.target);
+    if (!loc) return null;
+    var mine = loc.player && loc.player.id === pid;
+    var st = statsOf(engine, loc.inst);
+    if (pend.kind === 'last-stand' && mine) {
+      // Überlebende: stärkste Einheit, Elite bevorzugt.
+      var d = defOf(engine, loc.inst);
+      return 10 + st.atk * 3 + st.def * 2 + (d.klasse === 'Elite' ? 4 : 0);
+    }
+    if ((pend.kind === 'command-atk' || pend.kind === 'attack-target') && !mine) {
+      var aUid = pend.attackerUid || pend.attacker;
+      var aLoc = aUid ? engine.findInst(aUid) : null;
+      var dmg = aLoc ? statsOf(engine, aLoc.inst).atk : 0;
+      var v = 10 + hitValue(engine, loc, dmg);
+      // Gegenschlag einer überlebenden Einheit einpreisen.
+      if (aLoc && dmg < st.def) v -= st.atk * 1.2;
+      if (act.cost != null && pend.baseCostSpent != null && act.cost > pend.baseCostSpent) v -= (act.cost - pend.baseCostSpent) * 3;
+      return v;
+    }
+    if (pend.kind === 'fire-mission' && !mine) {
+      return 10 + hitValue(engine, loc, Number(pend.dmg || 3));
+    }
+    return null;
+  }
+
   /**
    * Bewertet eine Antwort auf ein offenes `pending`.
    * @param {object} engine
@@ -141,6 +405,8 @@
   function scorePending(engine, pid, act) {
     var s = 1;
     var pend = engine.state && engine.state.pending;
+    var special = scorePendingKind(engine, pid, act, pend);
+    if (special != null) return special + Math.random() * 0.5;
     if (act.confirm) {
       // Massen/Mobilisierung: erst Einheiten wählen, wenn noch welche offen sind.
       var left = ((pend && pend.choices) || []).some(function (c) {
@@ -174,6 +440,40 @@
       if ((loc.inst.def || 0) <= 3) s += 8;
     }
     return s + Math.random();
+  }
+
+
+  /**
+   * t254: True, wenn der Spieler eine Doktrin mit dem Effektcode hat.
+   * @param {object} engine
+   * @param {object} p
+   * @param {string} code
+   * @returns {boolean}
+   */
+  function ownDoctrine(engine, p, code) {
+    try { return !!(engine._hasDoctrine && engine._hasDoctrine(p, code)); } catch (e) { return false; }
+  }
+
+  /**
+   * t254: Anzahl offener gegnerischer Unterstützungskarten mit aktivierbarer Fähigkeit.
+   * @param {object} engine
+   * @param {number} pid
+   * @returns {number}
+   */
+  function foeActiveSupports(engine, pid) {
+    var opp = engine.opponent(pid);
+    return (opp.support || []).filter(function (x) { return x && mayHaveAbility(engine, x); }).length;
+  }
+
+  /**
+   * t254: True, wenn die Blitzkrieg-Sperre gegen den Gegner schon für seinen nächsten Zug steht.
+   * @param {object} engine
+   * @param {number} pid
+   * @returns {boolean}
+   */
+  function lockAlreadySet(engine, pid) {
+    var opp = engine.opponent(pid);
+    return !!(opp.flags && opp.flags.blitzLock > 1);
   }
 
   /**
@@ -218,6 +518,32 @@
       if (hasCode(d, 'NAPALM') || hasCode(d, 'AIR_STRIKE')) s += threat(engine, pid) > 12 ? 12 : 2;
     }
 
+    // t254: Doktrin Blitzkrieg — Panzer ausspielen sperrt im nächsten gegnerischen Zug dessen Unterstützungsfähigkeiten.
+    if (d.typ === 'Einheit' && tag.toLowerCase().indexOf('panzer') >= 0 && ownDoctrine(engine, p, 'BLITZ_LOCK_SUPPORT')) {
+      s += 5;
+      if (foeActiveSupports(engine, pid) > 0 && !lockAlreadySet(engine, pid)) s += 12;
+      if ((d.keywords || []).indexOf('Gefechtsbereit') >= 0 && frontCount(engine, engine.opponent(pid).id) > 0) s += 4;
+      // Trophy-Doktrinziel „Kill mit Panzer innerhalb von 2 Zügen nach Einrücken“ noch offen: frische Panzer bringen es.
+      var row = p.trophy && p.trophy.doctrineProg && p.trophy.doctrineProg.dc_dok_blitzkrieg;
+      if (row && !row.done && frontCount(engine, engine.opponent(pid).id) > 0) s += 6;
+    }
+    // t254: Vertragsclip (Soforteinsätze −1 AP) lohnt sich mit Soforteinsätzen auf der Hand.
+    if (hasCode(d, 'EQUIP_DISCOUNT_AURA')) {
+      var inst = 0;
+      p.hand.forEach(function (c) { if (c.uid !== act.uid && defOf(engine, c).typ === 'Soforteinsatz') inst++; });
+      s += inst ? inst * 4 - 8 : -30;
+    }
+    // t254: lageabhängige Soforteinsätze auf einer Kopie durchspielen statt pauschal bewerten.
+    if (d.typ === 'Soforteinsatz' && Number(cfg.lookahead) && depth === 0 && hasAny(d, LOOK_CODES)) {
+      var la = lookahead(engine, pid, { type: 'PLAY', player: pid, uid: act.uid });
+      if (!la.ok) return -500;
+      // Bringt der Einsatz auf dem Brett nichts (z. B. Massen ohne Einheiten auf der Hand), Karte behalten.
+      if (la.delta <= 0) return -150;
+      s = lookScore(la);
+      if (!Number(cfg.allowInstant)) s = -200;
+      return s;
+    }
+
     var agg = n('aggression', 1, 100, 45);
     var hold = Number(cfg.holdAp) ? reserveNeed(engine, pid) : 0;
     if (agg >= 90) hold = 0;
@@ -259,11 +585,13 @@
     } catch (eAr) { isArtyAtk = ((ad.tags || []).join(' ').toLowerCase().indexOf('artillerie') >= 0); }
     var best = null;
     var bestS = -99;
+    var bestKill = false;
     (act.targets || []).forEach(function (t) {
       var tCost = Number(t.cost != null ? t.cost : (act.cost || 1));
       if (p.ap < tCost) return;
       var loc = engine.findInst(t.uid);
       var ts = 6;
+      var tk = false;
       if (tCost > 1) ts -= (tCost - 1) * 2;
       if (loc) {
         var td = defOf(engine, loc.inst);
@@ -275,6 +603,7 @@
         else ts += Math.max(0, 10 - (defv - atk));
         ts += tAtk * 1.4;
         if (loc.inst.facedown) ts += 5;
+        tk = atk >= defv;
         // Trophy mode: actively pursue VP (elite, Durchbruch, doctrine, race)
         try {
           if (engine._trophyActive && engine._trophyActive()) {
@@ -316,12 +645,13 @@
           canCounter = true;
         }
         if (isArtyAtk && !canCounter) {
+          tk = true;
           ts += 22; // sicherer Artillerieschuss außer Reichweite
         } else if (canCounter && atk < defv) {
           ts -= tAtk * 1.6; // Gegenschlag-Risiko bei Nicht-Kill
         }
       }
-      if (ts > bestS) { bestS = ts; best = t; }
+      if (ts > bestS) { bestS = ts; best = t; bestKill = tk; }
     });
     var agg = n('aggression', 1, 100, 45);
     bestS += (agg - 50) * 0.55;
@@ -329,7 +659,7 @@
     var hold = Number(cfg.holdAp) && agg < 90 ? reserveNeed(engine, pid) : 0;
     if (p.ap - 1 < hold && bestS < 30) bestS -= 10;
     if (!Number(cfg.allowAttack)) bestS = -200;
-    return { score: bestS, target: best && best.uid };
+    return { score: bestS, target: best && best.uid, kill: bestKill };
   }
 
   /**
@@ -374,9 +704,9 @@
    * Gibt eine legale Pass-/Weiter-Aktion zurück, sonst Ende des Zugs.
    * @param {object[]} acts
    * @param {object} [skip]
+   * Weitergeben/Schließen offener Fenster (REACT_PASS, PEEK_DONE …), von der Engine als pass:true geliefert.
    * @returns {object|null}
    */
-  // Weitergeben/Schließen offener Fenster (REACT_PASS, PEEK_DONE …), von der Engine als pass:true geliefert.
   function passAction(acts, skip) {
     return (acts || []).find(function (a) { return a.pass && !(skip && skip[actKey(a)]); }) || null;
   }
@@ -417,11 +747,9 @@
   }
 
   /**
-   * Ein Schritt des Test-Bots (Bewertung).
-   * @param {object} engine
-   * @param {number} pid
-   * @param {object} [skip]
-   * @returns {object|null} Aktion oder null
+   * True, wenn die Aktion eine gegnerische Schläferzelle neutralisiert.
+   * @param {object} a
+   * @returns {boolean}
    */
   function isNeutralize(a) {
     return a && (a.ability === 'NEUTRALIZE' || ((a.type === 'ACTIVATE_SUPPORT' || a.type === 'USE_ABILITY' || a.type === 'NEUTRALIZE') && a.label === 'Neutralisieren'));
@@ -429,23 +757,106 @@
 
   /**
    * Bewertung: gegnerische Schläferzelle für 2 AP entfernen, bevor sie zündet.
+   * t254: Dringlichkeit als Stufe. Zündet sie zu Beginn des nächsten gegnerischen Zuges
+   * (Restzähler 1) und steht eine eigene Einheit mit AP ≤ 3 an der Front, kommt sie vor allem anderen.
    * @param {object} engine
    * @param {number} pid
    * @param {object} a
-   * @returns {number}
+   * @returns {{score: number, tier: number}}
    */
   function scoreNeutralize(engine, pid, a) {
     var loc = engine.findInst(a.uid);
     var left = loc && loc.inst && loc.inst.flags && loc.inst.flags.sleeper != null ? Number(loc.inst.flags.sleeper) : 3;
     var vuln = 0;
+    var best = 0;
     engine.frontList(engine.player(pid)).forEach(function (l) {
-      var d = engine.defOf(l.inst);
-      if (Number(d.ap || 99) <= 3) vuln += 1;
+      var d = defOf(engine, l.inst);
+      if (Number(d.ap != null ? d.ap : 99) <= 3) {
+        vuln += 1;
+        var st = statsOf(engine, l.inst);
+        best = Math.max(best, st.atk * 3 + st.def * 2);
+      }
     });
-    if (!vuln) return 3 - Number(a.cost || 2);
-    return 14 + vuln * 4 + Math.max(0, 4 - left) * 5 - Number(a.cost || 2);
+    var cost = Number(a.cost || 2);
+    if (!vuln) return { score: 3 - cost, tier: 0 };
+    if (left <= 1) return { score: 60 + best + vuln * 4 - cost, tier: 4 };
+    if (left === 2) return { score: 30 + vuln * 4 - cost, tier: 1 };
+    return { score: 12 + vuln * 3 - cost, tier: 0 };
   }
 
+  /**
+   * t254: Aktivierbare Fähigkeiten eigener offener Karten finden, die `listActions` nicht aufzählt
+   * (Grundset-Unterstützungen, Aufklärung, Einmal-Ausrüstung). Jede Kandidatin wird auf einer Kopie
+   * durchgespielt; nur was `dispatch` annimmt, kommt in die Auswahl.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object[]} acts bereits gelistete Aktionen
+   * @param {object} [skip]
+   * @returns {object[]} Zeilen {act, score, tier}
+   */
+  function abilityCandidates(engine, pid, acts, skip) {
+    if (!Number(cfg.lookahead) || depth > 0) return [];
+    var p = engine.player(pid);
+    var seen = {};
+    var out = [];
+    var srcs = [];
+    acts.forEach(function (a) {
+      if (a.type === 'USE_ABILITY' && a.uid) { seen[a.uid] = 1; srcs.push({ type: 'USE_ABILITY', uid: a.uid }); }
+    });
+    engine.frontList(p).forEach(function (l) {
+      if (!seen[l.inst.uid] && mayHaveAbility(engine, l.inst)) { seen[l.inst.uid] = 1; srcs.push({ type: 'USE_ABILITY', uid: l.inst.uid }); }
+    });
+    (p.support || []).forEach(function (x) {
+      if (x && !seen[x.uid] && mayHaveAbility(engine, x)) { seen[x.uid] = 1; srcs.push({ type: 'ACTIVATE_SUPPORT', uid: x.uid }); }
+    });
+    srcs.forEach(function (src) {
+      var act = { type: src.type, player: pid, uid: src.uid };
+      if (skip && skip[actKey(act)]) return;
+      var la = lookahead(engine, pid, act);
+      if (!la.ok) return;
+      var sc = lookScore(la);
+      // Aufklärung/Blick: Information hat einen kleinen Eigenwert, den die Materialbewertung nicht sieht.
+      if (la.apSpent <= 1) sc += 2;
+      if (sc <= 4) return;
+      out.push({ act: src, score: sc, tier: sc >= 24 ? 3 : 1, probed: true });
+    });
+    return out;
+  }
+
+  /**
+   * t254: Stufe einer Hauptphasen-Aktion. Höhere Stufen kommen zuerst:
+   * 4 dringend (Schläferzelle kurz vor dem Zünden), 3 Vorbereitung (Ausrüstung, starke Fähigkeiten und
+   * Sondereinsätze), 2 Angriffe mit Vernichtung, 1 übrige Ausspielungen, 0 Rest.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} row
+   * @returns {number}
+   */
+  function tierOf(engine, pid, row) {
+    var a = row.act;
+    if (row.tier != null) return row.tier;
+    if (!Number(cfg.tiered)) return a.type === 'PLAY' ? 1 : 0;
+    if (a.type === 'PLAY') {
+      var d = engine.byId ? engine.byId[a.cardId] : null;
+      if (!d) d = {};
+      // Kampfausrüstung vor den Angriffen; der Kosten-Rabatt (Vertragsclip) zählt nicht dazu.
+      if (d.typ === 'Ausrüstung' && frontCount(engine, pid) > 0 && !hasCode(d, 'EQUIP_DISCOUNT_AURA')) return 3;
+      if (d.typ === 'Soforteinsatz' && hasAny(d, LOOK_CODES) && row.score >= 24) return 3;
+      return 1;
+    }
+    if (a.type === 'ATTACK') return row.kill ? 2 : 0;
+    return 0;
+  }
+
+  /**
+   * Ein Schritt des Test-Bots (Bewertung).
+   * t254: alle Hauptphasen-Optionen (Ausspielen, Angriff, Fähigkeit, Neutralisieren, Verlegung) in einer
+   * Liste nach Stufe und Wert; die beste wird vorab auf einer Kopie geprüft.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} [skip]
+   * @returns {object|null} Aktion oder null
+   */
   function stepTest(engine, pid, skip) {
     var acts = engine.listActions(pid);
     if (!acts.length) return { type: 'END_TURN', player: pid };
@@ -475,13 +886,24 @@
       if (a.type === 'END_TURN') return;
       if (a.type === 'PLAY') {
         if (!playable(a)) return;
-        scored.push({ act: a, score: scorePlay(engine, pid, a) });
+        var ps = scorePlay(engine, pid, a);
+        // t254: klar schädliche Ausspielungen (volle Front, aussichtsloser Sondereinsatz) auslassen.
+        if (Number(cfg.tiered) && ps <= -100) return;
+        scored.push({ act: a, score: ps });
         return;
       }
       if (a.type === 'ATTACK') {
         if (!Number(cfg.allowAttack)) return;
         var ev = scoreAttack(engine, pid, a);
-        scored.push({ act: a, score: ev.score, target: ev.target });
+        if (!ev.target) return;
+        if (Number(cfg.vpLook) && depth === 0) {
+          var vp = vpSwing(engine, pid, { type: 'ATTACK', player: pid, uid: a.uid, target: ev.target });
+          if (vp == null) return;
+          ev.score += vp * 35;
+          if (vp > 0) ev.kill = true;
+        }
+        if (skip && skip[actKey({ type: 'ATTACK', uid: a.uid, target: ev.target })]) return;
+        scored.push({ act: a, score: ev.score, target: ev.target, kill: ev.kill });
         return;
       }
       if (a.type === 'REVEAL_UNIT') scored.push({ act: a, score: 3 });
@@ -490,17 +912,22 @@
         if (a.slot && a.slot.section === 'C') sc += 4;
         scored.push({ act: a, score: sc });
       }
-      if (isNeutralize(a)) scored.push({ act: a, score: scoreNeutralize(engine, pid, a) });
+      if (isNeutralize(a)) {
+        var nz = scoreNeutralize(engine, pid, a);
+        scored.push({ act: a, score: nz.score, tier: Number(cfg.tiered) ? nz.tier : 0 });
+      }
     });
-    var plays = scored.filter(function (x) { return playable(x.act); });
-    if (plays.length) {
-      plays.sort(function (x, y) { return y.score - x.score; });
-      return emit(pid, plays[0]);
+    if (Number(cfg.tiered)) abilityCandidates(engine, pid, acts, skip).forEach(function (r) { scored.push(r); });
+    if (!scored.length) return { type: 'END_TURN', player: pid };
+    scored.forEach(function (r) { r.tierN = tierOf(engine, pid, r); });
+    scored.sort(function (x, y) { return (y.tierN - x.tierN) || (y.score - x.score); });
+    var useProbe = Number(cfg.probe) && depth === 0;
+    for (var i = 0; i < scored.length; i++) {
+      var out = emit(pid, scored[i]);
+      if (!useProbe || scored[i].probed || i >= 6 || probeOk(engine, out)) return out;
+      // Probe gescheitert: die nächstbeste Aktion versuchen (die Sperrliste des Aufrufers bleibt unberührt).
     }
-    var rest = scored.filter(function (x) { return x.act.type === 'ATTACK' || x.act.type === 'REVEAL_UNIT' || x.act.type === 'DOK_SHIFT' || isNeutralize(x.act); });
-    if (!rest.length) return { type: 'END_TURN', player: pid };
-    rest.sort(function (x, y) { return y.score - x.score; });
-    return emit(pid, rest[0]);
+    return { type: 'END_TURN', player: pid };
   }
 
   /**
