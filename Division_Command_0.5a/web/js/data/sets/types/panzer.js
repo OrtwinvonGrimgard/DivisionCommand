@@ -40,9 +40,9 @@ window.DC_SET_TYPES["Panzer"] = [
     "typ": "Einheit",
     "klasse": "Panzer",
     "name": "Panzertrupp Hammer",
-    "ap": 4,
-    "atk": 7,
-    "def": 6,
+    "ap": 5,
+    "atk": 6,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -902,7 +902,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Werkrott-Kolonne",
     "ap": 4,
     "atk": 3,
-    "def": 7,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -3202,7 +3202,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Straßenriegel",
     "ap": 3,
     "atk": 2,
-    "def": 7,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -4213,7 +4213,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Werkbach-Riegel",
     "ap": 3,
     "atk": 2,
-    "def": 7,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"

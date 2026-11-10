@@ -4040,15 +4040,15 @@
    "type": "Einheit",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "cafa71d98c4e784c05c2c480896781cd7f36b69c382f1d16385d321f4102c629",
+   "source_record_sha256": "ec69d3bb9beb8884c93c0370832b10e536df2679651822f1e9ceeb3ea252fc3c",
    "kurz": "Wuchtgeschoss: ignoriert 2 DEF beim Angriff auf Gepanzerte.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
-    "ap": 4,
-    "atk": 7,
-    "def": 6,
+    "ap": 5,
+    "atk": 6,
+    "def": 5,
     "tags": [
      "einheit",
      "fahrzeug",
@@ -4063,9 +4063,12 @@
    "provenance": "existing_art",
    "ready": true,
    "output": "faces-v2/dc_eh_hammer.webp",
-   "layout": null,
+   "layout": {
+    "art_h": 854,
+    "art_pct": 40.0
+   },
    "renderer": "685cbd95beb199f39ca766dfa59f2b0feb6f799d960c6bed6f5c38549c05b034",
-   "output_sha256": "5656c73bc8a2f73609f63309921a287cf3344676de1608f0054d8411c86d49f9"
+   "output_sha256": "47ce99fdc0c7b239095a8bcc896467a2b0fbbec24a64a41620d84fd05f3aaca0"
   },
   {
    "id": "dc_eh_spz",
@@ -4752,13 +4755,13 @@
    "type": "Einheit",
    "nation": "Rothain",
    "rarity": "silver",
-   "source_record_sha256": "9864a5ad0652c38ded56b02914cb947f57cddcd93b586319471b01f4d8976eb4",
+   "source_record_sha256": "8db1e1f4532269ba59997b8e6b54b9cdd6fa47c96493065d8000c36eb2df5962",
    "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
    "keywords": [],
    "printed_stats": {
     "ap": 4,
     "atk": 3,
-    "def": 7,
+    "def": 5,
     "tags": [
      "einheit",
      "panzer",
@@ -4770,9 +4773,12 @@
    "provenance": "existing_art",
    "ready": true,
    "output": "faces-v2/dc_b_werkrott_kolonne_614.webp",
-   "layout": null,
+   "layout": {
+    "art_h": 854,
+    "art_pct": 40.0
+   },
    "renderer": "685cbd95beb199f39ca766dfa59f2b0feb6f799d960c6bed6f5c38549c05b034",
-   "output_sha256": "e79b37be8caf8e09786a2efea440f90a05059333ebff40c24f077c11f460d739"
+   "output_sha256": "a5baf2a2f673f825f97da342092dd6fbe5e5b7c7b8bed0aa9bd84d587aad2004"
   },
   {
    "id": "dc_b_filterpanzer_365",
@@ -6655,7 +6661,7 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "b628fdeec64f4abd9be1aef548a8980b515932501a6a27bd1f148b49072c19cc",
+   "source_record_sha256": "8c10a945e1bb0aea3e8d9039617a9fcadef6ac9f05f7ceb622208f7873e9030f",
    "kurz": "",
    "keywords": [
     "Abschirmung",
@@ -6664,7 +6670,7 @@
    "printed_stats": {
     "ap": 3,
     "atk": 2,
-    "def": 7,
+    "def": 5,
     "tags": [
      "panzer"
     ]
@@ -6674,9 +6680,12 @@
    "provenance": "existing_art",
    "ready": true,
    "output": "faces-v2/dc_b_strassenriegel_491.webp",
-   "layout": null,
+   "layout": {
+    "art_h": 854,
+    "art_pct": 40.0
+   },
    "renderer": "685cbd95beb199f39ca766dfa59f2b0feb6f799d960c6bed6f5c38549c05b034",
-   "output_sha256": "9e231af76cd46a9fb789f027bc97de8fbaadd9403cf83c954194e920fb43eea0"
+   "output_sha256": "d948b5121bfb979f99eb22c584db6566e0e5a87915ee5fa564e7e5fccb40add1"
   },
   {
    "id": "dc_b_lagerwagen_492",
@@ -7496,13 +7505,13 @@
    "type": "Einheit",
    "nation": "Orthea",
    "rarity": "bronze",
-   "source_record_sha256": "20ac307f1d8b3e331c1cd2ac669a8161174852eb7f5789359ec56ec23e7d6a93",
+   "source_record_sha256": "50ebc9c0a961a2f1cfd7f6478f9fe2458571c59ba8ff5aa3dda090cb0582cdba",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
    "keywords": [],
    "printed_stats": {
     "ap": 3,
     "atk": 2,
-    "def": 7,
+    "def": 5,
     "tags": [
      "panzer"
     ]
@@ -7512,9 +7521,12 @@
    "provenance": "existing_art",
    "ready": true,
    "output": "faces-v2/dc_b_werkbach_riegel_430.webp",
-   "layout": null,
+   "layout": {
+    "art_h": 854,
+    "art_pct": 40.0
+   },
    "renderer": "685cbd95beb199f39ca766dfa59f2b0feb6f799d960c6bed6f5c38549c05b034",
-   "output_sha256": "0023233d9125baf96bb21de0da74a38b4777d573061d9a5b88213092b5c89f37"
+   "output_sha256": "af3ace2e53981b3d07e2558537ed72c26e05df5ff04306497088dd25aca20ee3"
   },
   {
    "id": "dc_b_probenpanzer_431",
@@ -7630,7 +7642,7 @@
    "type": "Einheit",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "54c9054bb1cd091f7ee37c8ccf1a10f04c6149004555b01101226db890435728",
+   "source_record_sha256": "9498609b6d35c4944f151e3a2146c1bcaecfe5d6a01a16e4845824347607c539",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Platztausch",
@@ -7638,7 +7650,7 @@
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 6,
+    "atk": 5,
     "def": 4,
     "tags": [
      "einheit",
@@ -7661,7 +7673,7 @@
     "art_pct": 40.0
    },
    "renderer": "685cbd95beb199f39ca766dfa59f2b0feb6f799d960c6bed6f5c38549c05b034",
-   "output_sha256": "5a6c39aaee3b4d89b947f1dd913dc2146c1bac2235d438130f478d789ca1b119"
+   "output_sha256": "6b55b08f5b796c1af41185a9cb086a31c8cc0d063ea4badcff6a0bb76704fc65"
   },
   {
    "id": "dc_eh_moerser",
@@ -13734,16 +13746,16 @@
    "type": "Einheit",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "a193bad50563bf7cd606342a7d48d719e12880203920fa8f2e96c5454beafdd8",
+   "source_record_sha256": "277e65d893cd238a0b80a962fcc8738b8ba3ddbe03ef965841ca4df1e340acbc",
    "kurz": "Führungsfahrzeug: +2 DEF wenn eine Flanke gepanzert ist.",
    "keywords": [
     "Nachsetzen",
     "Sicherung"
    ],
    "printed_stats": {
-    "ap": 5,
-    "atk": 8,
-    "def": 6,
+    "ap": 6,
+    "atk": 7,
+    "def": 5,
     "tags": [
      "einheit",
      "fahrzeug",
@@ -13759,9 +13771,12 @@
    "provenance": "existing_art",
    "ready": true,
    "output": "faces-v2/dc_eh_faustkeil.webp",
-   "layout": null,
+   "layout": {
+    "art_h": 854,
+    "art_pct": 40.0
+   },
    "renderer": "685cbd95beb199f39ca766dfa59f2b0feb6f799d960c6bed6f5c38549c05b034",
-   "output_sha256": "243e00f2e294a0147457e08cb92e2cf6d6c889fec63a38c24f2da6138023485b"
+   "output_sha256": "bcb9e96f8a781493f279581c2907cff20e37193934194b1b4d4beaf9aa15666d"
   },
   {
    "id": "dc_eh_sniper",
@@ -13804,15 +13819,15 @@
    "type": "Einheit",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "a620c42cb2283bfbf32c720ce1439c0bbbd60a6da59d276f74893843004a3af4",
+   "source_record_sha256": "2b8b0657be3c36766a7bac2bba95b130c9b217ac887cf3475cc9cde007c6b788",
    "kurz": "Jeder erlittene Schaden -2.",
    "keywords": [
     "Abschirmung"
    ],
    "printed_stats": {
-    "ap": 5,
-    "atk": 7,
-    "def": 9,
+    "ap": 6,
+    "atk": 6,
+    "def": 6,
     "tags": [
      "einheit",
      "fahrzeug",
@@ -13828,9 +13843,12 @@
    "provenance": "existing_art",
    "ready": true,
    "output": "faces-v2/dc_eh_koloss.webp",
-   "layout": null,
+   "layout": {
+    "art_h": 854,
+    "art_pct": 40.0
+   },
    "renderer": "685cbd95beb199f39ca766dfa59f2b0feb6f799d960c6bed6f5c38549c05b034",
-   "output_sha256": "726da9f5288735a2271a55a1f9e765639d035e822c694fcfe00c26eb57c96fa5"
+   "output_sha256": "ec675c502ba0d8fe8bc3a4382bc6beeb71647103432b443c3eb9c6f697bf623b"
   },
   {
    "id": "dc_b_konzernsekundant_150",
@@ -27112,11 +27130,11 @@
    "type": "Ausrüstung",
    "nation": "Vesper",
    "rarity": "bronze",
-   "source_record_sha256": "3e316af579f746bff56a4d87e2df623af24f18d237646b2a5270f6a3be274f30",
-   "kurz": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
+   "source_record_sha256": "47f6608607c4af9f0e88e85b8e71ac6e1ea5ae83ee62944dd11751e142400c5f",
+   "kurz": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "tags": [
@@ -27128,9 +27146,12 @@
    "provenance": "existing_art",
    "ready": true,
    "output": "faces-v2/dc_b_schwarzes_siegel_891.webp",
-   "layout": null,
+   "layout": {
+    "art_h": 854,
+    "art_pct": 40.0
+   },
    "renderer": "685cbd95beb199f39ca766dfa59f2b0feb6f799d960c6bed6f5c38549c05b034",
-   "output_sha256": "b448c273f1cbf0be2a5632a5cfee99255484661a545bbd3c171b84686b6fd633"
+   "output_sha256": "241f4f5710132ef470d65b2e44d3f68048739939a1eb4126a78edcd4424b34ce"
   },
   {
    "id": "dc_b_aktenmappe_892",
@@ -27996,11 +28017,11 @@
    "type": "Ausrüstung",
    "nation": "Merovan",
    "rarity": "bronze",
-   "source_record_sha256": "aa51ac1c5ac503ff9bcc17ba8d3967a65ff8e474e30dabb9ff0e742508a2b962",
-   "kurz": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
+   "source_record_sha256": "235986fbefef7f683f7d662e464bf249c047fb6e2bbcf14cbf20783c831ff1fa",
+   "kurz": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
    "keywords": [],
    "printed_stats": {
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "tags": [
@@ -28012,9 +28033,12 @@
    "provenance": "existing_art",
    "ready": true,
    "output": "faces-v2/dc_b_etappenplatte_217.webp",
-   "layout": null,
+   "layout": {
+    "art_h": 854,
+    "art_pct": 40.0
+   },
    "renderer": "685cbd95beb199f39ca766dfa59f2b0feb6f799d960c6bed6f5c38549c05b034",
-   "output_sha256": "facd96896abab0a8e303b0167713d51ae00a4bcf806abf9c868a2e6c0c9a7c74"
+   "output_sha256": "016ad90cf761d3edbd7f8db0a55bc5c6353f823cdddfe37423966e7f424f8fa4"
   },
   {
    "id": "dc_b_munitionskai_218",
@@ -28048,11 +28072,11 @@
    "type": "Ausrüstung",
    "nation": "Merovan",
    "rarity": "bronze",
-   "source_record_sha256": "f29c09d1b204b582a80469bc9510a30a9c1f6ebc18f63b82d4b890000480a98d",
-   "kurz": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
+   "source_record_sha256": "dedc11d7167ef099db344f487078c14eee9bb516b45f6ab102d38e97aeef75a1",
+   "kurz": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "tags": [
@@ -28064,9 +28088,12 @@
    "provenance": "existing_art",
    "ready": true,
    "output": "faces-v2/dc_b_wartezettel_219.webp",
-   "layout": null,
+   "layout": {
+    "art_h": 854,
+    "art_pct": 40.0
+   },
    "renderer": "685cbd95beb199f39ca766dfa59f2b0feb6f799d960c6bed6f5c38549c05b034",
-   "output_sha256": "addda6ffcfe268d7d124fce10d9a85d27defda2face14de1a6bde54b011c18b8"
+   "output_sha256": "959e555f6783b6e9fdf928537b025ab5fb0f980c535eb5d64785d7d87feeb76c"
   },
   {
    "id": "dc_b_kaliberkiste_ferne_220",
@@ -28438,11 +28465,11 @@
    "type": "Ausrüstung",
    "nation": "Steinmark",
    "rarity": "silver",
-   "source_record_sha256": "f0d72bf5844f98398fb44f81cfbc4d4bebf77ea31d114f0eb14a88b10fb58dfc",
-   "kurz": "Beim Anlegen: decke einen verdeckten Feind auf. Beim Anlegen: decke einen verdeckten Feind auf. nerische Einheit auf.",
+   "source_record_sha256": "ab356e7876b5d4600e9276f9f43615327342d26fe7ce2b39fdae00655b195afe",
+   "kurz": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: decke 1 verdeckten Feind auf.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "tags": [
@@ -28454,9 +28481,12 @@
    "provenance": "existing_art",
    "ready": true,
    "output": "faces-v2/dc_b_dienstbuch_592.webp",
-   "layout": null,
+   "layout": {
+    "art_h": 854,
+    "art_pct": 40.0
+   },
    "renderer": "685cbd95beb199f39ca766dfa59f2b0feb6f799d960c6bed6f5c38549c05b034",
-   "output_sha256": "dffb80d58ef0acd1f6280c2d00c2a5bcffdd8f48dc4a56e9f2ccf6b59ae6a10d"
+   "output_sha256": "eeba3f42ac472a65d43c621e8a99919d7c0e14a375acd28373745ee6a37c40cc"
   },
   {
    "id": "dc_b_normhelm_593",
@@ -28516,11 +28546,11 @@
    "type": "Ausrüstung",
    "nation": "Steinmark",
    "rarity": "bronze",
-   "source_record_sha256": "3fc074c3d45bbe012d451cb05d4315524f38bf23eaef72aef2fd6301500bb626",
-   "kurz": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
+   "source_record_sha256": "0db010fc1ec3fea8ab230f0913d42febae1b249ca08c0c161636da2a747d7f9c",
+   "kurz": "Kostet 1 AP weniger (mind. 0), solange eigene Infanterie an der Front steht. Beim Anlegen: ziehe 1.",
    "keywords": [],
    "printed_stats": {
-    "ap": 0,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "tags": [
@@ -28532,9 +28562,12 @@
    "provenance": "existing_art",
    "ready": true,
    "output": "faces-v2/dc_b_normgewehr_595.webp",
-   "layout": null,
+   "layout": {
+    "art_h": 854,
+    "art_pct": 40.0
+   },
    "renderer": "685cbd95beb199f39ca766dfa59f2b0feb6f799d960c6bed6f5c38549c05b034",
-   "output_sha256": "94bebad482ddaf896e4ce779324c184e016c27d9a7217ef6b5f00c47aba4b396"
+   "output_sha256": "9f769efd9f575882af4b96568046ad54146085a794f637fc6c635dd551dc37dd"
   },
   {
    "id": "dc_b_aktenmappe_596",

@@ -8,7 +8,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Haubitzenzug",
     "ap": 4,
-    "atk": 6,
+    "atk": 5,
     "def": 4,
     "verdeckt_ok": true,
     "tags": [

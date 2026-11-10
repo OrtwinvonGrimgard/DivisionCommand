@@ -43314,9 +43314,7 @@
    "set": "set_nations",
    "typ": "Ausrüstung",
    "datei": "ausruestung",
-   "flags": [
-    "Selbstrabatt in AP eingerechnet"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1.",
@@ -45037,9 +45035,7 @@
    "set": "set_nations",
    "typ": "Ausrüstung",
    "datei": "ausruestung",
-   "flags": [
-    "Selbstrabatt in AP eingerechnet"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1. [Etappenplatte]",
@@ -45158,9 +45154,7 @@
    "set": "set_nations",
    "typ": "Ausrüstung",
    "datei": "ausruestung",
-   "flags": [
-    "Selbstrabatt in AP eingerechnet"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1. [Wartezettel]",
@@ -45916,9 +45910,7 @@
    "set": "set_nations",
    "typ": "Ausrüstung",
    "datei": "ausruestung",
-   "flags": [
-    "Selbstrabatt in AP eingerechnet"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen decke 1 auf.",
@@ -46090,9 +46082,7 @@
    "set": "set_nations",
    "typ": "Ausrüstung",
    "datei": "ausruestung",
-   "flags": [
-    "Selbstrabatt in AP eingerechnet"
-   ],
+   "flags": [],
    "modus": "aus-code",
    "vorher": {
     "text": "Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1. [Normgewehr]",

@@ -3782,7 +3782,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1.
 - nachher: Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.
 - AP: 1 → 0
-- Hinweis: Selbstrabatt in AP eingerechnet
 
 ### Aktenmappe (`dc_b_aktenmappe_892`, Ausrüstung) – aus-code
 - vorher: Träger: einmal/Zug heile 1.
@@ -3906,7 +3905,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1. [Etappenplatte]
 - nachher: Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.
 - AP: 2 → 1
-- Hinweis: Selbstrabatt in AP eingerechnet
 
 ### Munitionskai (`dc_b_munitionskai_218`, Ausrüstung) – aus-code
 - vorher: Träger +1 ATK; +1 DEF wenn unbewegt. [Munitionskai]
@@ -3916,7 +3914,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1. [Wartezettel]
 - nachher: Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.
 - AP: 1 → 0
-- Hinweis: Selbstrabatt in AP eingerechnet
 
 ### Kaliberkiste Ferne (`dc_b_kaliberkiste_ferne_220`, Ausrüstung) – aus-code
 - vorher: Träger +1 ATK; einmal/Zug heile 1 nach Kampf. [Kaliberkiste Ferne]
@@ -3973,7 +3970,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger kostet 1 weniger (min. 1); beim Ausspielen decke 1 auf.
 - nachher: Beim Anlegen: decke eine verdeckte gegnerische Einheit auf. Beim Anlegen: decke eine verdeckte gegnerische Einheit auf. nerische Einheit auf.
 - AP: 1 → 0
-- Hinweis: Selbstrabatt in AP eingerechnet
 
 ### Normhelm (`dc_b_normhelm_593`, Ausrüstung) – aus-code
 - vorher: Träger +1 DEF; einmal/Zug: ziehe 1 wenn Sofort gespielt. [Normhelm]
@@ -3983,7 +3979,6 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger kostet 1 weniger (min. 1); beim Ausspielen ziehe 1. [Normgewehr]
 - nachher: Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.
 - AP: 1 → 0
-- Hinweis: Selbstrabatt in AP eingerechnet
 
 ### Aktenmappe (`dc_b_aktenmappe_596`, Ausrüstung) – teilweise
 - vorher: Träger +1 DEF; einmal/Zug: decke 1 auf.
@@ -4125,8 +4120,28 @@ Alle 1746 Karten-IDs wurden gegen die Engine geprüft. Grundsatz: **Kartentext =
 - vorher: Träger +2 ATK gegen aufgeklärte.
 - nachher: Träger +2 ATK gegen beobachtete Ziele.
 
-## Balance-Hinweise (unverändert gelassen)
+## Balance-Hinweise
 
-- Haubitzenzug (`dc_eh_haubitze`): Werte 10 weit über Median 7 bei 4 AP
-- Schwerer Panzer Koloss (`dc_eh_koloss`): Werte 16 weit über Median 9 bei 5 AP
-- Lagerhaus (`dc_su_lager`): dauerhafter Ausrüstungsrabatt (stapelbar je Unterstützung)
+### t231 bereinigt (Werte / AP)
+| Karte | vorher | nachher | Begründung |
+|---|---|---|---|
+| Panzertrupp Hammer (`dc_eh_hammer`) | 4 AP, 7/6 (13) | **5 AP, 6/5 (11)** | schwerer Trupp: AP hoch, Werte Richtung Median+2 @5 |
+| Werkrott-Kolonne (`dc_b_werkrott_kolonne_614`) | 4 AP, 3/7 (10) | **4 AP, 3/5 (8)** | Silber-Kolonne, Defensive gesenkt |
+| Straßenriegel (`dc_b_strassenriegel_491`) | 3 AP, 2/7 (9) | **3 AP, 2/5 (7)** | Bronze-Riegel auf Median+1 |
+| Werkbach-Riegel (`dc_b_werkbach_riegel_430`) | 3 AP, 2/7 (9) | **3 AP, 2/5 (7)** | wie Straßenriegel |
+| Panzerzug Faustkeil (`dc_eh_faustkeil`) | 5 AP, 8/6 (14) | **6 AP, 7/5 (12)** | Elite/Führungsfahrzeug: AP hoch |
+| Haubitzenzug (`dc_eh_haubitze`) | 4 AP, 6/4 (10) | **4 AP, 5/4 (9)** | Artillerie ATK −1 auf Median+2 |
+| Schwerer Panzer Koloss (`dc_eh_koloss`) | 5 AP, 7/9 (16) | **6 AP, 6/6 (12)** | Elite mit SCHADEN_MINUS: AP hoch, Werte geglättet |
+
+### Selbstrabatt-Ausrüstung (t231)
+Gedruckte AP wieder der unrabattierte Wert; −1 AP nur unter Bedingung (CM `cost`):
+| Karte | AP | Bedingung |
+|---|---|---|
+| Schwarzes Siegel | 0→**1** | Unterstützung im Spiel |
+| Etappenplatte | 1→**2** | Unterstützung im Spiel |
+| Wartezettel | 0→**1** | Unterstützung im Spiel |
+| Dienstbuch | 0→**1** | Unterstützung im Spiel |
+| Normgewehr | 0→**1** | eigene Infanterie an der Front |
+
+### Unverändert
+- Lagerhaus (`dc_su_lager`), Implantatlager (`dc_b_implantatlager_388`), Feldschmied (`dc_b_feldschmied_270`): stapelbarer Ausrüstungsrabatt bleibt.

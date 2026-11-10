@@ -5645,7 +5645,7 @@
   "keywords": []
  },
  "dc_b_schwarzes_siegel_891": {
-  "kurz": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
+  "kurz": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5815,7 +5815,7 @@
   "keywords": []
  },
  "dc_b_etappenplatte_217": {
-  "kurz": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
+  "kurz": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5825,7 +5825,7 @@
   "keywords": []
  },
  "dc_b_wartezettel_219": {
-  "kurz": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
+  "kurz": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5900,8 +5900,8 @@
   "keywords": []
  },
  "dc_b_dienstbuch_592": {
-  "kurz": "Beim Anlegen: decke einen verdeckten Feind auf. Beim Anlegen: decke einen verdeckten Feind auf. nerische Einheit auf.",
-  "gekuerzt": true,
+  "kurz": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: decke 1 verdeckten Feind auf.",
+  "gekuerzt": false,
   "keywords": []
  },
  "dc_b_normhelm_593": {
@@ -5915,7 +5915,7 @@
   "keywords": []
  },
  "dc_b_normgewehr_595": {
-  "kurz": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
+  "kurz": "Kostet 1 AP weniger (mind. 0), solange eigene Infanterie an der Front steht. Beim Anlegen: ziehe 1.",
   "gekuerzt": false,
   "keywords": []
  },

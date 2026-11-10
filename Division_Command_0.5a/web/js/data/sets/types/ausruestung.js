@@ -1952,20 +1952,28 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Schwarzes Siegel",
-    "ap": 0,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
+    "text": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
           "def": 0
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
         }
       },
       {
@@ -3102,20 +3110,28 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Etappenplatte",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
+    "text": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
           "def": 0
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
         }
       },
       {
@@ -3179,20 +3195,28 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Wartezettel",
-    "ap": 0,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
+    "text": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
           "def": 0
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
         }
       },
       {
@@ -3684,14 +3708,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Dienstbuch",
-    "ap": 0,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Beim Anlegen: decke eine verdeckte gegnerische Einheit auf. Beim Anlegen: decke eine verdeckte gegnerische Einheit auf. nerische Einheit auf.",
+    "text": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: decke 1 verdeckten Feind auf.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -3701,9 +3725,11 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         }
       },
       {
-        "code": "REVEAL",
+        "code": "CM",
         "param": {
-          "count": 1
+          "k": "cost",
+          "delta": -1,
+          "when": "support"
         }
       },
       {
@@ -3795,20 +3821,28 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Normgewehr",
-    "ap": 0,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Beim Anlegen: ziehe 1 Karte. legen: ziehe 1 Karte.",
+    "text": "Kostet 1 AP weniger (mind. 0), solange eigene Infanterie an der Front steht. Beim Anlegen: ziehe 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
           "def": 0
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "cost",
+          "delta": -1,
+          "when": "unit:infanterie"
         }
       },
       {

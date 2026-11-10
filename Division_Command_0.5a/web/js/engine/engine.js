@@ -502,6 +502,7 @@
             } else cost -= Number(e.param.costReduce || 1);
           }
         });
+        cost += this._cmCost(def, player);
       }
       if (def.typ === 'Einheit' && player) {
         const n = (player.support || []).filter((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'UNIT_DISCOUNT')).length;
@@ -526,7 +527,7 @@
         cost -= 1;
       }
       // Ladungsliste etc.: allow 0 when explicit costReduce applied
-      const floor = (def.typ === 'Ausrüstung' && (def.effects || []).some((e) => e.code === 'EQUIP_STAT' && e.param && e.param.costReduce)) ? 0 : 1;
+      const floor = (def.typ === 'Ausrüstung' && (def.effects || []).some((e) => (e.code === 'EQUIP_STAT' && e.param && e.param.costReduce) || (e.code === 'CM' && e.param && e.param.k === 'cost'))) ? 0 : 1;
       if (def.typ === 'Soforteinsatz') return Math.max(0, cost);
       // Schlüsselwort Heranführung: nächste Einheit in diesem Zug 1 AP weniger (mind. 1); verbraucht beim Auslegen.
       if (def.typ === 'Einheit' && player && player.flags && player.flags.kwHeran === this.state.turn && cost > 1) cost -= 1;
