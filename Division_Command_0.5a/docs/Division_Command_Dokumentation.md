@@ -1,6 +1,6 @@
 # Division Command – Vollständige Projektdokumentation
 
-**Version:** Alpha 0.5a  
+**Version:** Alpha 0.6a  
 **Stand:** November 2026  
 **Repository:** DivisionCommand (OrtwinvonGrimgard)
 
@@ -45,9 +45,10 @@ Der lokale Server (`server.py`) stellt das Spiel im Browser bereit. Hauptmenü e
 - **Support:** Unterstützungskarten ohne eigene ATK/DEF.
 - **Niemandsland:** Zwischen den Fronten.
 - **Hand, Deck, Friedhof, Doktrin-Fenster, Stapel, Operationszone.**
-- **AP:** 5 pro Zug (Startspieler im ersten Zug 4 als Ausgleich).
+- **AP:** 5 pro Zug (Startspieler im ersten Zug 4 als Ausgleich). Jede Karte kostet ihre gedruckten AP, auch Soforteinsätze; Rabatte greifen, nie unter 0. Unbezahlbare Karten sind ausgegraut.
 - **Starthand:** 5 Karten.
-- **Verdeckt / Steilfeuer:** Teilweise implementiert, noch nicht vollständig stabil.
+- **Verdeckt:** Teilweise implementiert.
+- **Steilfeuer I–V:** Reichweite der Artillerie, siehe 3.5.
 
 ### 3.2 Kartentypen und Rollen
 - **Einheiten** (Infanterie, Panzer, Artillerie, Aufklärung, Elite): ATK/DEF, Tags (z. B. gepanzert, flug, mg, artillerie).
@@ -75,6 +76,26 @@ Militärische Engine-Trigger: ON_AIR, ON_ARTILLERY, ON_MG, ON_AT, ON_RECON, SUPP
 - Ziel-Median: 14–18 Züge, VP-Siege ≥70 %.
 
 Details und Tuning-Daten: `SIEGBEDINGUNGEN.md`.
+
+### 3.5 Artillerie – Steilfeuer (RULES §7.1)
+Artillerie trägt das Tag **Steilfeuer I–V** (Chip auf der Kartenfläche). Die Stufe steuert die Angriffsreichweite entlang der neun Frontstellungen (`dist ≤ floor((Reichweite−1)/2)`):
+
+| Stufe | Reichweite | Ziele |
+|-------|------------|-------|
+| Steilfeuer I | 3 | Nahunterstützung (Mörser u. ä.) |
+| Steilfeuer II | 5 | Standard-Rohrartillerie |
+| Steilfeuer III | 7 | Weitreichende Werfer/Raketen |
+| Steilfeuer IV | ganze Front | Jede gegnerische Fronteinheit |
+| Steilfeuer V | ganze Front + Support | Wie IV, zusätzlich Supportzone; Supportangriff kostet +2 AP (gesamt 3 AP), Frontangriff 1 AP |
+
+- **Fernschuss** (+1 Reichweite) wirkt nur bei Steilfeuer I–III.
+- Das frühere Schlüsselwort *Indirektes Feuer* entfällt.
+- Fehlt das Tag, gilt die Heuristik Mörser 3 / Artillerie 5 / schwer 7.
+- **Gegenangriff:** Eine angegriffene Einheit schlägt zurück, wenn sie den Treffer übersteht. Greift Artillerie an, gibt es keinen Gegenschlag, außer das Ziel könnte die Artillerie mit seiner eigenen Reichweite erreichen.
+
+### 3.6 Reaktionsfenster
+- **Feindkontakt:** Der Verteidiger kann einen bezahlbaren Soforteinsatz als Antwort spielen oder weitergeben.
+- **Gezeigte Karten**, **SAM** und **Geist** haben immer eine Schließen- bzw. Weitergeben-Aktion. Kein Fenster blockiert die Partie.
 
 ---
 
@@ -107,14 +128,15 @@ Jede Nation hat eigene Doktrinen und thematische Decks. Taktische Lore beschreib
 
 ## 5. Karten und Content
 
-- Aktuell: ~1.096 Karten (960 Nationenkarten B001–B960 + Alpha-Set).
+- Aktuell: 1.746 Karten-IDs, alle gegen die Engine geprüft („Kartentext = Implementierung“, `karten/KARTENPRUEFUNG.md`).
 - Decks: 60 Karten + 2 Doktrinen.
 - Nationenpools: je Nation 100 spielbare Karten + 2 Doktrinen, in sich schlüssig (Identität, Starterdecks, Filter).
 - Deckbau mischt frei: Eigene Decks dürfen Karten aller Nationen und neutrale Karten kombinieren (1.709 Deckkarten); die 2 Doktrinen sind frei aus allen 36 wählbar. Es gelten nur Kopienlimits (Bronze 4 / Silber 2 / Gold 1) und 60 + 2. Details: `regeln/RULES_v0.5_GRUNDKONZEPT.md` §24.0.
 - Organisation: Nach Typ (nicht nach Nation) in `web/js/data/sets/types/` und `web/assets/cards/<typ>/`.
 - Stand Nov 2026: 100 spielbare Karten pro Nation umgesetzt → 1.600 Nationenkarten + 109 neutrale + 36 Doktrinen.
 - Seltenheitsstufen: Bronze / Silber / Gold (mechanisch begründet durch Trigger-Komplexität).
-- Ziel: Jede Karte eigener Regeltext, lorebezogene Flavortexte.
+- Jede Karte hat einen knappen Regeltext (≤ 120 Zeichen); Langfassungen stehen verlustfrei in `regeln/KARTEN_SONDERFAELLE.md`.
+- Vorderseiten im alpha40-Design: 1024×1428, Motivfenster 40 %, Motive nie gestreckt.
 
 ---
 
@@ -126,22 +148,24 @@ Jede Nation hat eigene Doktrinen und thematische Decks. Taktische Lore beschreib
 - **Assets:** Kartenbilder, Porträts, Audio (Menü + Kampf).
 - **Simulationen:** Bot-vs-Bot für Balancing (Trophy-Modus, First-Player, Nation-Strength).
 
-**Engine-Hinweis:** Die Regelmaschine wertet Effect-Codes und Trigger aus. Viele nationenspezifische Texte müssen noch vollständig verdrahtet werden (besonders Ausrüstung und Soforteinsätze).
+**Engine-Hinweis:** Die Regelmaschine wertet Effect-Codes, Trigger und die allgemeine Kartenmechanik `CM` aus. Seit 0.6a ist jede Fähigkeit implementiert (Test `test_card_review.js`).
 
 ---
 
-## 7. Aktueller Status (Alpha 0.5a)
+## 7. Aktueller Status (Alpha 0.6a)
 
 **Erledigt:**
 - Grundengine, Trophy-Modus, Nationendecks, Lore-Dokumente.
 - Umstrukturierung der Karten nach Typ.
 - Menü- und Handkarten-Fixes.
 - Doktrin-IDs korrigiert (Gefecht startet wieder).
+- 0.6a: Kartenprüfung aller 1.746 Karten, alpha40-Design, Steilfeuer I–V, Soforteinsätze mit gedruckten AP, Bibliotheksfilter (Seltenheit, Tags).
+- 0.6a: Bot-Hänger behoben (Reaktionsfenster bieten immer eine legale Aktion); Smoke- und Fuzz-Test schlagen bei Hängern fehl.
+- 0.6a: Balance aus 11.520 Bot-Partien je Modus. Starterdecks liegen bei 45–53 % (`balance/BALANCE_T237.md`).
 
 **In Arbeit / Offen:**
-- Effekt-Verknüpfung (Ausrüstung, Soforteinsätze) vollständig und stabil.
-- Erweiterung auf 100 Karten/Nation (Bot).
-- 2.5D-Tisch als optionale Grafik.
+- Startspielervorteil ≈ 54–56 % (Test mit 3 AP im ersten Zug: ≈ 51 %).
+- Gemischte Decks von Ossaria und Dargan unter 45 %.
 - Tutorial und Onboarding.
 - Roguelike-Vertical-Slice (Fahrplan).
 
@@ -232,6 +256,8 @@ Division Command hat ein realistisch erreichbares Marktpotenzial in der Nische z
 | Datei | Inhalt |
 |-------|--------|
 | `README.md` / `LIESMICH.txt` | Startanleitung |
+| `CHANGELOG.md` (Repo-Wurzel) | Änderungen je Version |
+| `regeln/RULES_v0.5_GRUNDKONZEPT.md` | Vollständige Regeln (inkl. §7.1 Steilfeuer) |
 | `MECHANICS_REACTIVE.md` | Design der reaktiven Effekte |
 | `SIEGBEDINGUNGEN.md` | Trophy-Modus und SP-Quellen |
 | `TAKTIK_NATIONEN.md` | Taktische Lore aller Nationen |
@@ -243,4 +269,4 @@ Division Command hat ein realistisch erreichbares Marktpotenzial in der Nische z
 ---
 
 **Ende der Dokumentation**  
-Diese Dokumentation fasst den Stand von Alpha 0.5a zusammen und dient als Einstieg für Entwickler, Playtester und Interessierte. Für detaillierte Regeltexte und Balancing-Daten siehe die genannten Markdown-Dateien im Repository.
+Diese Dokumentation fasst den Stand von Alpha 0.6a zusammen und dient als Einstieg für Entwickler, Playtester und Interessierte. Für detaillierte Regeltexte und Balancing-Daten siehe die genannten Markdown-Dateien im Repository.

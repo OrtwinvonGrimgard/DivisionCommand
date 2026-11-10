@@ -1,7 +1,7 @@
 @echo off
 cd /d "%~dp0"
-title Division Command 0.5a Alpha
-echo Division Command 0.5a
+title Division Command 0.6a Alpha
+echo Division Command 0.6a
 echo Beende alte Python-Prozesse auf Port 8765 ...
 for /f "tokens=5" %%P in ('netstat -ano ^| findstr ":8765" ^| findstr "LISTENING"') do (
   echo Beende PID %%P

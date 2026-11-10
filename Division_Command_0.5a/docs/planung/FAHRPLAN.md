@@ -1,6 +1,6 @@
 # Fahrplan zum Erfolg — Division Command
 
-Stand: November 2026 · Alpha 0.5a  
+Stand: November 2026 · Alpha 0.6a  
 Begleitdokument: [SIEGBEDINGUNGEN.md](../regeln/SIEGBEDINGUNGEN.md), Freeze: [REGEL_FREEZE.md](../regeln/REGEL_FREEZE.md) (Trophy K aktiv seit 2026-11-04, Tip `196ae84`)
 
 Dieser Fahrplan verbindet **Regel-Klarheit**, **Roguelike als Hebel**, **Steam-Sichtbarkeit** und drei Absatz-Szenarien. Aufwandsschätzungen gelten für **Solo / sehr kleines Team** (Vollzeit-Äquivalent in Personenwochen, grob).

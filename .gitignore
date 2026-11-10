@@ -3,3 +3,4 @@ package-lock.json
 *.log
 .playtest_shots/
 __pycache__/
+*.py[cod]

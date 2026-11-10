@@ -102,51 +102,50 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Feuerplanrohr
 `dc_np_steinmark_feuerplanrohr` · Einheit · Bronze · 3 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Schießt nur auf freigegebene Planquadrate – also überallhin.*
 
 ### Freigabebatterie
 `dc_np_steinmark_freigabebatterie` · Einheit · undefined · 4 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
-- Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
+- Effektcodes: –
 - *Zweite Unterschrift: auch Depots sind Ziele.*
 
 ### Normmörser
 `dc_np_steinmark_normmoerser` · Einheit · Bronze · 2 AP
 
 - **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Kleines Rohr, große Akte.*
 
 ### Messbatterie Grenzstein
 `dc_np_steinmark_messbatterie_grenzstein` · Einheit · Bronze · 3 AP
 
 - **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
-- Die Einheit zählt für alle Regeln als Artillerie.
+- Kurztext: Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
+- Steilfeuer II.
 - Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
-- Effektcodes: ATTACK_ANY_FRONT, FEUERUEBERLEGENHEIT
+- Die Einheit zählt für alle Regeln als Artillerie.
+- Effektcodes: FEUERUEBERLEGENHEIT
 - *Vermessen, bevor geschossen wird.*
 
 ### Dreischlüssel-Haubitze
 `dc_np_steinmark_dreischluessel_haubitze` · Einheit · Gold · 5 AP
 
-- **Fernschuss** (Hat +1 Reichweite.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- **Fernschuss** (Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).)
+- Kurztext: Steilfeuer V: Front + Support (+2 AP).
+- Steilfeuer V: Front + Support (+2 AP).
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
+- Supportzone-Angriff 3 AP; Front 1 AP.
 - Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
 - *Drei Unterschriften, ein Einschlag.*
 
@@ -173,11 +172,13 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_steinmark_grenzbeobachter` · Einheit · undefined · 2 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: AUFKLAERUNG, RELOCATE_HIDE
 - *Sieht, meldet, verschwindet im Protokoll.*
 
@@ -201,8 +202,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Bezirksarchiv
 `dc_np_steinmark_bezirksarchiv` · Unterstützung · undefined · 3 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: TURN_DRAW
 - *Jede Lage hat eine Vorlage.*
 
@@ -217,14 +218,14 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Verfahrenshoheit
 `dc_np_steinmark_verfahrenshoheit` · Unterstützung · Gold · 5 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte. Jeder Schaden an deinen Fronteinheiten −1.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Jeder Schaden an deinen Fronteinheiten −1.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich.
 - Effektcodes: TURN_DRAW, REDUCE_DAMAGE
 - *Wer das Verfahren führt, führt den Krieg.*
 
 ### Formale Freigabe
-`dc_np_steinmark_formale_freigabe` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_steinmark_formale_freigabe` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.
@@ -232,7 +233,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Stempel drauf, Feuer frei.*
 
 ### Sachstandsbericht
-`dc_np_steinmark_sachstandsbericht` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_steinmark_sachstandsbericht` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Ziehe 2 Karten.
 - Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -240,7 +241,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Zwei Seiten, nichts ausgelassen.*
 
 ### Planmäßige Ablösung
-`dc_np_steinmark_planmaessige_abloesung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_steinmark_planmaessige_abloesung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -248,7 +249,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Pünktlich zum Schichtwechsel.*
 
 ### Beweisaufnahme
-`dc_np_steinmark_beweisaufnahme` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_steinmark_beweisaufnahme` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Ziehe 1 Karte.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -257,7 +258,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Erst wird festgestellt, dann wird entschieden.*
 
 ### Feuerplan ausgelöst
-`dc_np_steinmark_feuerplan_ausgeloest` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_steinmark_feuerplan_ausgeloest` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -265,7 +266,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Bewegung im markierten Raum – Feuer nach Plan.*
 
 ### Normverband schließen
-`dc_np_steinmark_normverband_schliessen` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_steinmark_normverband_schliessen` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: deine Infanterie dort +1 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Infanterie-Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -273,7 +274,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Abstände korrigiert, Lücken geschlossen.*
 
 ### Methodischer Vorstoß
-`dc_np_steinmark_methodischer_vorstoss` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_steinmark_methodischer_vorstoss` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -281,7 +282,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Ein Meter nach dem anderen, alle zugleich.*
 
 ### Beschaffungsvorlauf
-`dc_np_steinmark_beschaffungsvorlauf` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_steinmark_beschaffungsvorlauf` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -290,7 +291,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Ausgeschrieben im Frieden, geliefert im Krieg.*
 
 ### Dienstweg
-`dc_np_steinmark_dienstweg` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_steinmark_dienstweg` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 2, dann wirf deine älteste Handkarte ab.
 - Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.
@@ -298,7 +299,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Was zu spät kommt, landet in der Ablage.*
 
 ### Großer Feuerplan
-`dc_np_steinmark_grosser_feuerplan` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_steinmark_grosser_feuerplan` · Soforteinsatz · Gold · 4 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 4 Schaden zu. Ziehe 1 Karte.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 4 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -309,24 +310,24 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Stahlhelm Bundesnorm
 `dc_np_steinmark_stahlhelm_bundesnorm` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Passt jedem Kopf der Republik.*
 
 ### Dienstgewehr Muster Vier
 `dc_np_steinmark_dienstgewehr_muster_vier` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger +1 ATK und 0 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 ATK.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Gewartet nach Dienstvorschrift.*
 
 ### Prüfplakette
 `dc_np_steinmark_pruefplakette` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +1 DEF. Wird der Träger zerstört: ziehe 1.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Wird der Träger zerstört, ziehst du 1 Karte.
 - Effektcodes: EQUIP_STAT, ON_DESTROY_DRAW
 - *Selbst der Verlust wird dokumentiert.*
@@ -342,9 +343,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schutzweste Klasse Drei
 `dc_np_steinmark_schutzweste_klasse_drei` · Ausrüstung · undefined · 2 AP
 
-- Kurztext: Träger 0 ATK und +1 DEF. Der erste Schaden am Träger wird ignoriert (einmalig).
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
+- Kurztext: Träger +1 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_STAT, EQUIP_IGNORE_FIRST_DAMAGE
 - *Norm erfüllt, Treffer abgefangen.*
 
@@ -452,49 +455,48 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Öffnungsbatterie
 `dc_np_karsk_oeffnungsbatterie` · Einheit · Bronze · 3 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuer öffnet für den Stoßtrupp.*
 
 ### Kurzfeuerwerfer
 `dc_np_karsk_kurzfeuerwerfer` · Einheit · Bronze · 2 AP
 
 - **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer III.
+- Steilfeuer III.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Kurz, brutal, am Durchbruchspunkt.*
 
 ### Maßschlagrohr
 `dc_np_karsk_massschlagrohr` · Einheit · undefined · 4 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Ein Einschlag nach Maß.*
 
 ### Durchbruchsfeuer
 `dc_np_karsk_durchbruchsfeuer` · Einheit · Bronze · 3 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
-- Die Einheit zählt für alle Regeln als Artillerie.
+- Kurztext: Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
+- Steilfeuer II.
 - Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
-- Effektcodes: ATTACK_ANY_FRONT, FEUERUEBERLEGENHEIT
+- Die Einheit zählt für alle Regeln als Artillerie.
+- Effektcodes: FEUERUEBERLEGENHEIT
 - *Feuer ersetzt den Stoß nicht – es bereitet ihn vor.*
 
 ### Stoßleitfeuer
 `dc_np_karsk_stossleitfeuer` · Einheit · Gold · 5 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer IV: ganze Front.
+- Steilfeuer IV: ganze Front.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
-- Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
+- Effektcodes: ATTACK_ANY_FRONT
 - *Schaltet die Etappe aus, bevor der Stoß kommt.*
 
 ### Leistungsmesser
@@ -568,7 +570,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Leistung ist eine Fertigungsfrage.*
 
 ### Stimulans
-`dc_np_karsk_stimulans` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_karsk_stimulans` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +3 ATK bis Zugende. Danach erleidet sie 1 Schaden.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +3 ATK bis zum Ende dieses Zuges.
@@ -577,7 +579,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Drei Minuten wie ein Gott, danach Schmerzen.*
 
 ### Wundverschluss
-`dc_np_karsk_wundverschluss` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_karsk_wundverschluss` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -585,7 +587,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Wunde geschlossen, Befehl bleibt.*
 
 ### Lücke reißen
-`dc_np_karsk_luecke_reissen` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_karsk_luecke_reissen` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit darf in diesem Zug erneut angreifen. Danach erleidet sie 1 Schaden.
 - Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).
@@ -594,7 +596,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Durch die Lücke, egal was es kostet.*
 
 ### Maßschlag
-`dc_np_karsk_massschlag` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_karsk_massschlag` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 3 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 3 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -602,7 +604,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Dosiert auf tödlich.*
 
 ### Nervenboost
-`dc_np_karsk_nervenboost` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_karsk_nervenboost` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 ATK bis Zugende.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges.
@@ -610,7 +612,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Reflexe auf Maximum.*
 
 ### Körper über Gewissen
-`dc_np_karsk_koerper_ueber_gewissen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_karsk_koerper_ueber_gewissen` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: deine Infanterie dort +2 ATK bis Zugende. Ziehe 1 Karte.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Infanterie-Einheit dort hat bis zum Ende dieses Zuges +2 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -619,7 +621,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Rechnung kennt kein Zögern.*
 
 ### Leistungsprotokoll
-`dc_np_karsk_leistungsprotokoll` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_karsk_leistungsprotokoll` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 1 Karte.
 - Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -627,7 +629,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Verluste sind eingeplant.*
 
 ### Durchbruch erzwingen
-`dc_np_karsk_durchbruch_erzwingen` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_karsk_durchbruch_erzwingen` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 ATK bis Zugende.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +2 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -635,7 +637,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der ganze Abschnitt stößt vor.*
 
 ### Nachlieferung Körperteile
-`dc_np_karsk_nachlieferung_koerperteile` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_karsk_nachlieferung_koerperteile` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -643,7 +645,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Ersatz ist bestellt.*
 
 ### Der eine Stoß
-`dc_np_karsk_der_eine_stoss` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_karsk_der_eine_stoss` · Soforteinsatz · Gold · 3 AP
 
 - Kurztext: Eine eigene Fronteinheit: +5 ATK bis Zugende. Danach erleidet sie 2 Schaden.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +5 ATK bis zum Ende dieses Zuges.
@@ -670,8 +672,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Filtermaske Karsk
 `dc_np_karsk_filtermaske_karsk` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Atmet, wo andere sterben.*
 
@@ -686,8 +688,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Muskelservo
 `dc_np_karsk_muskelservo` · Ausrüstung · undefined · 2 AP
 
-- Kurztext: Träger +2 ATK und 0 DEF. Solange der Träger beschädigt ist: +1 ATK.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 ATK. Solange der Träger beschädigt ist: +1 ATK.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +1 ATK.
 - Effektcodes: EQUIP_STAT, EQUIP_COND_ATK
 - *Die Maschine trägt, wenn der Mensch versagt.*
@@ -695,9 +697,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Endoskelett
 `dc_np_karsk_endoskelett` · Ausrüstung · undefined · 2 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF. Einmalig: verhindere 1 Schaden am Träger.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
-- Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 1 verringert. Danach verbraucht.
+- Kurztext: Träger +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
 - Effektcodes: EQUIP_STAT, EQUIP_NEGATE_DAMAGE
 - *Knochen aus Stahl.*
 
@@ -800,48 +802,48 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_theryn_sammelfeuer` · Einheit · Bronze · 3 AP
 
 - **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuer deckt die Nachrücker.*
 
 ### Glockenbatterie
 `dc_np_theryn_glockenbatterie` · Einheit · Bronze · 2 AP
 
 - **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Ruft zur Welle.*
 
 ### Wellenmörser
 `dc_np_theryn_wellenmoerser` · Einheit · Bronze · 3 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Einfach, massig, wirksam.*
 
 ### Vorbereitungsfeuer
 `dc_np_theryn_vorbereitungsfeuer` · Einheit · undefined · 4 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Bereitet den Sturm vor.*
 
 ### Ruf über das Feld
 `dc_np_theryn_ruf_ueber_das_feld` · Einheit · Gold · 5 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
-- Die Einheit zählt für alle Regeln als Artillerie.
+- Kurztext: Steilfeuer IV: ganze Front. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
+- Steilfeuer IV: ganze Front.
 - Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
+- Die Einheit zählt für alle Regeln als Artillerie.
 - Effektcodes: ATTACK_ANY_FRONT, FEUERUEBERLEGENHEIT
 - *Der Ruf geht über das ganze Feld.*
 
@@ -894,8 +896,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ruf zum Aufgebot
 `dc_np_theryn_ruf_zum_aufgebot` · Unterstützung · undefined · 3 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: TURN_DRAW
 - *Immer neue Gläubige.*
 
@@ -910,14 +912,14 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Glaubensaufgebot
 `dc_np_theryn_glaubensaufgebot` · Unterstützung · Gold · 5 AP
 
-- Kurztext: Deine Fronteinheiten +1 ATK. Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
+- Kurztext: Deine Fronteinheiten +1 ATK. Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Solange diese Unterstützung liegt, haben alle deine Fronteinheiten +1 ATK.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: AURA_FRONT_ATK, TURN_DRAW
 - *Die Welle endet nie.*
 
 ### Alle sind gerufen
-`dc_np_theryn_alle_sind_gerufen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_theryn_alle_sind_gerufen` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -925,7 +927,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Jeder ist gerufen.*
 
 ### Sturm der Gläubigen
-`dc_np_theryn_sturm_der_glaeubigen` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_theryn_sturm_der_glaeubigen` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: deine Infanterie dort +2 ATK bis Zugende.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Infanterie-Einheit dort hat bis zum Ende dieses Zuges +2 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -933,7 +935,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Jetzt alle.*
 
 ### Lücke füllen
-`dc_np_theryn_luecke_fuellen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_theryn_luecke_fuellen` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 1 Karte.
 - Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -941,7 +943,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Wo einer fällt, kommt der nächste.*
 
 ### Gebet vor der Schlacht
-`dc_np_theryn_gebet_vor_der_schlacht` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_theryn_gebet_vor_der_schlacht` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.
@@ -949,7 +951,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Gestärkt im Glauben.*
 
 ### Märtyrersegen
-`dc_np_theryn_maertyrersegen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_theryn_maertyrersegen` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -957,7 +959,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Wunden sind heilig.*
 
 ### Welle binden
-`dc_np_theryn_welle_binden` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_theryn_welle_binden` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: deine Infanterie dort +1 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Infanterie-Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -965,7 +967,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Welle hält.*
 
 ### Eifer
-`dc_np_theryn_eifer` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_theryn_eifer` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +3 ATK bis Zugende. Danach erleidet sie 1 Schaden.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +3 ATK bis zum Ende dieses Zuges.
@@ -974,7 +976,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Eifer verzehrt.*
 
 ### Pflichtruf
-`dc_np_theryn_pflichtruf` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_theryn_pflichtruf` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 2 AP weniger (mind. 1).
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 2 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -982,7 +984,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Niemand bleibt zu Hause.*
 
 ### Der eine Schlag
-`dc_np_theryn_der_eine_schlag` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_theryn_der_eine_schlag` · Soforteinsatz · undefined · 3 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 3 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 3 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -990,7 +992,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Gott führt die Hand.*
 
 ### Heilige Woge
-`dc_np_theryn_heilige_woge` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_theryn_heilige_woge` · Soforteinsatz · Gold · 4 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: deine Infanterie dort +3 ATK bis Zugende.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Infanterie-Einheit dort hat bis zum Ende dieses Zuges +3 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -1000,15 +1002,15 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Pilgerschild
 `dc_np_theryn_pilgerschild` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Gesegnet vom Abt.*
 
 ### Glaubenszeichen
 `dc_np_theryn_glaubenszeichen` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Wird der Träger zerstört: ziehe 1.
+- Kurztext: Wird der Träger zerstört, ziehst du 1 Karte.
 - Wird der Träger zerstört, ziehst du 1 Karte.
 - Effektcodes: ON_DESTROY_DRAW
 - *Wer fällt, ruft den Nächsten.*
@@ -1024,8 +1026,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Reliquie
 `dc_np_theryn_reliquie` · Ausrüstung · undefined · 1 AP
 
-- Kurztext: Der erste Schaden am Träger wird ignoriert (einmalig).
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_IGNORE_FIRST_DAMAGE
 - *Ein Wunder rettet.*
 
@@ -1143,20 +1146,20 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_vael_walzenbatterie` · Einheit · Bronze · 3 AP
 
 - **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Flächig, anhaltend, teuer.*
 
 ### Industrierohr
 `dc_np_vael_industrierohr` · Einheit · Bronze · 3 AP
 
 - **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Hauptsache, es knallt.*
 
 ### Volltreffer-Haubitze
@@ -1164,32 +1167,32 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 
 - **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer V: Front + Support (+2 AP).
+- Steilfeuer V: Front + Support (+2 AP).
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
+- Supportzone-Angriff 3 AP; Front 1 AP.
 - Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
 - *Jeder Schuss ein Abschluss.*
 
 ### Munitionsmörser
 `dc_np_vael_munitionsmoerser` · Einheit · Bronze · 2 AP
 
-- **Fernschuss** (Hat +1 Reichweite.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- **Fernschuss** (Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).)
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Billig in der Herstellung.*
 
 ### Feuerwalzen-Rohr
 `dc_np_vael_feuerwalzen_rohr` · Einheit · undefined · 4 AP
 
 - **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
-- Die Einheit zählt für alle Regeln als Artillerie.
+- Kurztext: Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
+- Steilfeuer II.
 - Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
-- Effektcodes: ATTACK_ANY_FRONT, FEUERUEBERLEGENHEIT
+- Die Einheit zählt für alle Regeln als Artillerie.
+- Effektcodes: FEUERUEBERLEGENHEIT
 - *Die Walze rollt.*
 
 ### Zielerfasser
@@ -1257,14 +1260,14 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kriegsbörse
 `dc_np_vael_kriegsboerse` · Unterstützung · Gold · 5 AP
 
-- Kurztext: Zu Beginn deines Zuges: +1 AP. Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
+- Kurztext: Zu Beginn deines Zuges: +1 AP. Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: TURN_AP, TURN_DRAW
 - *Der Krieg ist ein Geschäft.*
 
 ### Ersatz ab Lager
-`dc_np_vael_ersatz_ab_lager` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_vael_ersatz_ab_lager` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -1272,7 +1275,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Neues Material, alte Front.*
 
 ### Rollende Walze
-`dc_np_vael_rollende_walze` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_vael_rollende_walze` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: deine Artillerie dort +2 ATK bis Zugende.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Artillerie-Einheit dort hat bis zum Ende dieses Zuges +2 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -1280,7 +1283,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Alle Rohre zugleich.*
 
 ### Lieferschein eingetroffen
-`dc_np_vael_lieferschein_eingetroffen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_vael_lieferschein_eingetroffen` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Ziehe 2 Karten.
 - Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -1288,7 +1291,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Lieferung eingetroffen.*
 
 ### Bezahlter Treffer
-`dc_np_vael_bezahlter_treffer` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_vael_bezahlter_treffer` · Soforteinsatz · undefined · 3 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 3 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 3 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -1296,7 +1299,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Bezahlt und geliefert.*
 
 ### Munitionsschub
-`dc_np_vael_munitionsschub` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_vael_munitionsschub` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 ATK bis Zugende.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges.
@@ -1304,7 +1307,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Doppelte Ladung.*
 
 ### Reparatur im Feld
-`dc_np_vael_reparatur_im_feld` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_vael_reparatur_im_feld` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -1312,7 +1315,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Geschweißt und weiter.*
 
 ### Auftragsbuch
-`dc_np_vael_auftragsbuch` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_vael_auftragsbuch` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 2, dann wirf deine älteste Handkarte ab.
 - Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.
@@ -1320,7 +1323,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Verluste sind Aufträge.*
 
 ### Großlieferung
-`dc_np_vael_grosslieferung` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_vael_grosslieferung` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 2 AP weniger (mind. 1).
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 2 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -1328,7 +1331,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Ein ganzer Zug Material.*
 
 ### Splitterhagel
-`dc_np_vael_splitterhagel` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_vael_splitterhagel` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -1336,7 +1339,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Billig und wirksam.*
 
 ### Industrielle Walze
-`dc_np_vael_industrielle_walze` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_vael_industrielle_walze` · Soforteinsatz · Gold · 4 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 4 Schaden zu. Ziehe 1 Karte.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 4 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -1347,8 +1350,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Werkspanzerung
 `dc_np_vael_werkspanzerung` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Ab Werk verstärkt.*
 
@@ -1363,9 +1366,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ersatzrohr
 `dc_np_vael_ersatzrohr` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Wird der Träger zerstört: ziehe 1. Träger 0 ATK und +1 DEF.
+- Kurztext: Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.
 - Wird der Träger zerstört, ziehst du 1 Karte.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: ON_DESTROY_DRAW, EQUIP_STAT
 - *Kaputt? Nachbestellen.*
 
@@ -1380,17 +1383,19 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Reaktivpanzer
 `dc_np_vael_reaktivpanzer` · Ausrüstung · undefined · 2 AP
 
-- Kurztext: Träger 0 ATK und +1 DEF. Der erste Schaden am Träger wird ignoriert (einmalig).
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
+- Kurztext: Träger +1 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_STAT, EQUIP_IGNORE_FIRST_DAMAGE
 - *Explodiert nach außen.*
 
 ### Vertragsgewehr
 `dc_np_vael_vertragsgewehr` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger +1 ATK und 0 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 ATK.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Bezahlt wird nach Leistung.*
 
@@ -1433,9 +1438,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_merovan_verlegungskompanie` · Einheit · Bronze · 2 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Heute hier, morgen dort.*
 
@@ -1492,47 +1498,47 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_merovan_wegbatterie` · Einheit · Bronze · 3 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Sichert den Halt nach der Verlegung.*
 
 ### Postenmörser
 `dc_np_merovan_postenmoerser` · Einheit · Bronze · 2 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Für jeden Posten ein Rohr.*
 
 ### Achsenfeuer
 `dc_np_merovan_achsenfeuer` · Einheit · Bronze · 3 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuer entlang der Straße.*
 
 ### Haltefeuer
 `dc_np_merovan_haltefeuer` · Einheit · undefined · 4 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Hält den Gegner auf Abstand.*
 
 ### Stellung am Wegende
 `dc_np_merovan_stellung_am_wegende` · Einheit · Gold · 5 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer IV: ganze Front.
+- Steilfeuer IV: ganze Front.
 - Die Einheit zählt für alle Regeln als Artillerie.
 - Effektcodes: ATTACK_ANY_FRONT
 - *Wenn der Weg zu ist, schießt sie weiter.*
@@ -1560,11 +1566,13 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_merovan_achsenbeobachter` · Einheit · undefined · 2 AP
 
 - **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
-- Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: AUFKLAERUNG, RELOCATE_HIDE
 - *Wer die Achse sieht, sieht den Krieg.*
 
@@ -1611,7 +1619,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Ein Posten stützt den nächsten.*
 
 ### Umgruppieren
-`dc_np_merovan_umgruppieren` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_merovan_umgruppieren` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.
@@ -1619,7 +1627,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Angekommen und eingerichtet.*
 
 ### Keilhalt
-`dc_np_merovan_keilhalt` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_merovan_keilhalt` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +2 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -1627,7 +1635,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Schub wird zum Halt.*
 
 ### Posten halten
-`dc_np_merovan_posten_halten` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_merovan_posten_halten` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 DEF dauerhaft.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.
@@ -1635,7 +1643,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Bleiben ist Kämpfen.*
 
 ### Ader offen halten
-`dc_np_merovan_ader_offen_halten` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_merovan_ader_offen_halten` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Ziehe 2 Karten.
 - Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -1643,7 +1651,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Nachschub kommt durch.*
 
 ### Wegsperre
-`dc_np_merovan_wegsperre` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_merovan_wegsperre` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -1651,7 +1659,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Hier kommt niemand durch.*
 
 ### Garnison versorgen
-`dc_np_merovan_garnison_versorgen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_merovan_garnison_versorgen` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -1659,7 +1667,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Auch ferne Posten werden versorgt.*
 
 ### Schieben
-`dc_np_merovan_schieben` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_merovan_schieben` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -1667,7 +1675,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der ganze Abschnitt drückt.*
 
 ### Wegpunkt melden
-`dc_np_merovan_wegpunkt_melden` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_merovan_wegpunkt_melden` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 1 Karte.
 - Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -1675,7 +1683,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Position bestätigt.*
 
 ### Kolonne nachziehen
-`dc_np_merovan_kolonne_nachziehen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_merovan_kolonne_nachziehen` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -1683,7 +1691,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die nächste Kolonne ist unterwegs.*
 
 ### Halt um jeden Preis
-`dc_np_merovan_halt_um_jeden_preis` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_merovan_halt_um_jeden_preis` · Soforteinsatz · Gold · 3 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +3 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +3 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -1693,16 +1701,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Postenhelm
 `dc_np_merovan_postenhelm` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Für lange Wachen.*
 
 ### Marschgepäck
 `dc_np_merovan_marschgepaeck` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +1 DEF. Wird der Träger zerstört: ziehe 1.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Wird der Träger zerstört, ziehst du 1 Karte.
 - Effektcodes: EQUIP_STAT, ON_DESTROY_DRAW
 - *Alles dabei, was man braucht.*
@@ -1710,8 +1718,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Haltespaten
 `dc_np_merovan_haltespaten` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Der erste Schaden am Träger wird ignoriert (einmalig).
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_IGNORE_FIRST_DAMAGE
 - *Eingegraben vor dem ersten Schuss.*
 
@@ -1726,17 +1735,17 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Garnisonsgewehr
 `dc_np_merovan_garnisonsgewehr` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger +1 ATK und 0 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 ATK.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Gepflegt in langen Wachen.*
 
 ### Kolonnenpanzerung
 `dc_np_merovan_kolonnenpanzerung` · Ausrüstung · undefined · 2 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF. Einmalig: verhindere 1 Schaden am Träger.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
-- Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 1 verringert. Danach verbraucht.
+- Kurztext: Träger +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
 - Effektcodes: EQUIP_STAT, EQUIP_NEGATE_DAMAGE
 - *Für die lange Achse.*
 
@@ -1791,9 +1800,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_lyr_verteilte_posten` · Einheit · undefined · 3 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Kein Zentrum, keine Schwäche.*
 
@@ -1819,9 +1829,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_lyr_talpanzer` · Einheit · Bronze · 3 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Versteckt sich hinter jedem Fels.*
 
@@ -1846,44 +1857,48 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Warnfeuerstellung
 `dc_np_lyr_warnfeuerstellung` · Einheit · Bronze · 3 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Ein Schuss als Warnung.*
 
 ### Bergmörser
 `dc_np_lyr_bergmoerser` · Einheit · Bronze · 2 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
-- Die Einheit zählt für alle Regeln als Artillerie.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
-- Effektcodes: ATTACK_ANY_FRONT, RELOCATE_HIDE
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Die Einheit zählt für alle Regeln als Artillerie.
+- Effektcodes: RELOCATE_HIDE
 - *Schießt und verschwindet im Fels.*
 
 ### Talbatterie
 `dc_np_lyr_talbatterie` · Einheit · Bronze · 3 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuer aus dem Tal.*
 
 ### Passfeuer
 `dc_np_lyr_passfeuer` · Einheit · undefined · 4 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
-- Die Einheit zählt für alle Regeln als Artillerie.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
-- Effektcodes: ATTACK_ANY_FRONT, RELOCATE_HIDE
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Die Einheit zählt für alle Regeln als Artillerie.
+- Effektcodes: RELOCATE_HIDE
 - *Kurzes Feuer aus der Lauer.*
 
 ### Echo der Täler
@@ -1891,11 +1906,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 
 - **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
-- Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
+- Effektcodes: –
 - *Alle Täler antworten.*
 
 ### Gamsjäger
@@ -1920,11 +1934,13 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_lyr_talrufer` · Einheit · undefined · 2 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: AUFKLAERUNG, RELOCATE_HIDE
 - *Ruft und verschwindet.*
 
@@ -1943,9 +1959,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 
 - **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
 - **Abschirmung** (Einmal pro Zug darfst du 1 Schaden, den eine benachbarte eigene Einheit erleiden würde, auf diese Einheit umleiten.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Der Eid ist sein Versteck.*
 
@@ -1975,7 +1992,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Kein Sitz, aber ein Eid.*
 
 ### Aus der Deckung
-`dc_np_lyr_aus_der_deckung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_lyr_aus_der_deckung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 ATK bis Zugende.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges.
@@ -1983,7 +2000,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Jetzt!*
 
 ### Nadelöhr
-`dc_np_lyr_nadeloehr` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_lyr_nadeloehr` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +2 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -1991,7 +2008,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Nur einer kommt durch.*
 
 ### Schuss vor den Bug
-`dc_np_lyr_schuss_vor_den_bug` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_lyr_schuss_vor_den_bug` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 1 Schaden zu. Ziehe 1 Karte.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 1 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -2000,7 +2017,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Das war die Warnung.*
 
 ### Geröllhagel
-`dc_np_lyr_geroellhagel` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_lyr_geroellhagel` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -2008,7 +2025,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Berg wirft zurück.*
 
 ### Talruf hören
-`dc_np_lyr_talruf_hoeren` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_lyr_talruf_hoeren` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 1 Karte.
 - Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -2016,7 +2033,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Das Tal antwortet.*
 
 ### Zerstreute Posten
-`dc_np_lyr_zerstreute_posten` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_lyr_zerstreute_posten` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -2024,7 +2041,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Kein Ziel für den Schwerpunkt.*
 
 ### Aus dem Hinterhalt
-`dc_np_lyr_aus_dem_hinterhalt` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_lyr_aus_dem_hinterhalt` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.
 - Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).
@@ -2032,7 +2049,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Noch ein Schlag aus der Deckung.*
 
 ### Bergquelle
-`dc_np_lyr_bergquelle` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_lyr_bergquelle` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -2040,7 +2057,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Das Tal versorgt.*
 
 ### Pass entdeckt
-`dc_np_lyr_pass_entdeckt` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_lyr_pass_entdeckt` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -2048,7 +2065,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Wer den Pass nicht sieht, kämpft blind.*
 
 ### Lawine
-`dc_np_lyr_lawine` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_lyr_lawine` · Soforteinsatz · Gold · 4 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 4 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 4 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -2058,8 +2075,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Bergmantel
 `dc_np_lyr_bergmantel` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Der erste Schaden am Träger wird ignoriert (einmalig).
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_IGNORE_FIRST_DAMAGE
 - *Grau wie der Fels.*
 
@@ -2074,7 +2092,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Talabzeichen
 `dc_np_lyr_talabzeichen` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Wird der Träger zerstört: ziehe 1.
+- Kurztext: Wird der Träger zerstört, ziehst du 1 Karte.
 - Wird der Träger zerstört, ziehst du 1 Karte.
 - Effektcodes: ON_DESTROY_DRAW
 - *Das Tal vergisst niemanden.*
@@ -2090,16 +2108,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Eidring
 `dc_np_lyr_eidring` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Ein Eid ist stärker als Stahl.*
 
 ### Passbüchse
 `dc_np_lyr_passbuechse` · Ausrüstung · undefined · 1 AP
 
-- Kurztext: Träger +1 ATK und 0 DEF. Solange der Träger beschädigt ist: +1 ATK.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 ATK. Solange der Träger beschädigt ist: +1 ATK.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +1 ATK.
 - Effektcodes: EQUIP_STAT, EQUIP_COND_ATK
 - *Lang, schwer, tödlich.*
@@ -2200,38 +2218,38 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_ossaria_abnutzungsbatterie` · Einheit · Bronze · 3 AP
 
 - **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Jeder Meter kostet.*
 
 ### Nahdruckmörser
 `dc_np_ossaria_nahdruckmoerser` · Einheit · Bronze · 2 AP
 
 - **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuer dient dem Aushalten.*
 
 ### Totenglocke
 `dc_np_ossaria_totenglocke` · Einheit · Bronze · 3 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Läutet für jeden Gefallenen.*
 
 ### Wallfeuer
 `dc_np_ossaria_wallfeuer` · Einheit · undefined · 4 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Schützt den Wall.*
 
 ### Namensruf-Batterie
@@ -2239,11 +2257,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 
 - **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer IV: ganze Front.
+- Steilfeuer IV: ganze Front.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
-- Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
+- Effektcodes: ATTACK_ANY_FRONT
 - *Jeder Schuss trägt einen Namen.*
 
 ### Grabsucher
@@ -2304,8 +2321,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ahnenhalle
 `dc_np_ossaria_ahnenhalle` · Unterstützung · undefined · 3 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: TURN_DRAW
 - *Jeder Name hat eine Geschichte.*
 
@@ -2318,7 +2335,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Rüstungen der Gefallenen leben weiter.*
 
 ### Aufruf der Namen
-`dc_np_ossaria_aufruf_der_namen` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_ossaria_aufruf_der_namen` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 ATK bis Zugende, +2 DEF dauerhaft.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges. Sie erhält +2 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.
@@ -2326,7 +2343,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Für die, die vor uns fielen.*
 
 ### Verlust wird Deckung
-`dc_np_ossaria_verlust_wird_deckung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_ossaria_verlust_wird_deckung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 DEF dauerhaft.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.
@@ -2334,7 +2351,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Hinter den Gefallenen in Deckung.*
 
 ### Totenehre
-`dc_np_ossaria_totenehre` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_ossaria_totenehre` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 1 Karte.
 - Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -2342,7 +2359,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Wir erinnern uns.*
 
 ### Teurer Meter
-`dc_np_ossaria_teurer_meter` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_ossaria_teurer_meter` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -2350,7 +2367,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Teurer Preis für jeden Meter.*
 
 ### Rüstung flicken
-`dc_np_ossaria_ruestung_flicken` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_ossaria_ruestung_flicken` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -2358,7 +2375,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Neue Niete, alter Name.*
 
 ### Wall verstärken
-`dc_np_ossaria_wall_verstaerken` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_ossaria_wall_verstaerken` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +2 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -2366,7 +2383,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Noch eine Lage.*
 
 ### Ahnen rufen
-`dc_np_ossaria_ahnen_rufen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_ossaria_ahnen_rufen` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -2375,7 +2392,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die alten Rüstungen kommen zurück.*
 
 ### Prozession der Namen
-`dc_np_ossaria_prozession_der_namen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_ossaria_prozession_der_namen` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Ziehe 3, dann wirf deine älteste Handkarte ab.
 - Ziehe 3 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.
@@ -2383,7 +2400,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Wir tragen sie mit.*
 
 ### Gepanzerter Vorstoß
-`dc_np_ossaria_gepanzerter_vorstoss` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_ossaria_gepanzerter_vorstoss` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -2391,7 +2408,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Fuß drückt nach.*
 
 ### Die Toten auf der Rüstung
-`dc_np_ossaria_die_toten_auf_der_ruestung` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_ossaria_die_toten_auf_der_ruestung` · Soforteinsatz · Gold · 4 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft. Ziehe 2 Karten.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +2 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -2402,16 +2419,17 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Namensplatte
 `dc_np_ossaria_namensplatte` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Ein Name schützt.*
 
 ### Totenschild
 `dc_np_ossaria_totenschild` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Der erste Schaden am Träger wird ignoriert (einmalig).
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_IGNORE_FIRST_DAMAGE
 - *Der erste Treffer gilt den Toten.*
 
@@ -2426,17 +2444,17 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Gedenkmarke
 `dc_np_ossaria_gedenkmarke` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Wird der Träger zerstört: ziehe 1. Träger 0 ATK und +1 DEF.
+- Kurztext: Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.
 - Wird der Träger zerstört, ziehst du 1 Karte.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: ON_DESTROY_DRAW, EQUIP_STAT
 - *Wer fällt, wird erinnert.*
 
 ### Plattenschutz
 `dc_np_ossaria_plattenschutz` · Ausrüstung · undefined · 1 AP
 
-- Kurztext: Einmalig: verhindere 2 Schaden am Träger.
-- Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 2 verringert. Danach verbraucht.
+- Kurztext: Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+- Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
 - Effektcodes: EQUIP_NEGATE_DAMAGE
 - *Hält den Schlag ab.*
 
@@ -2544,51 +2562,50 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schutzfeuerbatterie
 `dc_np_caldris_schutzfeuerbatterie` · Einheit · Bronze · 3 AP
 
-- **Fernschuss** (Hat +1 Reichweite.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- **Fernschuss** (Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).)
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuer schützt die Etappe.*
 
 ### Abschnittsmörser
 `dc_np_caldris_abschnittsmoerser` · Einheit · Bronze · 2 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Deckt den eigenen Abschnitt.*
 
 ### Defensivbatterie
 `dc_np_caldris_defensivbatterie` · Einheit · undefined · 4 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Schießt nur, wenn der Schild bedroht ist.*
 
 ### Sperrfeuer Fürsorge
 `dc_np_caldris_sperrfeuer_fuersorge` · Einheit · Bronze · 3 AP
 
 - **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Hält den Gegner von den Verwundeten fern.*
 
 ### Schlag nach der Genesung
 `dc_np_caldris_schlag_nach_der_genesung` · Einheit · Gold · 5 AP
 
 - **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
-- **Fernschuss** (Hat +1 Reichweite.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- **Fernschuss** (Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).)
+- Kurztext: Steilfeuer IV: ganze Front.
+- Steilfeuer IV: ganze Front.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
-- Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
+- Effektcodes: ATTACK_ANY_FRONT
 - *Nach dem Rasten kommt der Schlag.*
 
 ### Biometrie-Melder
@@ -2612,7 +2629,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Etappenbeobachter
 `dc_np_caldris_etappenbeobachter` · Einheit · undefined · 2 AP
 
-- **Fernschuss** (Hat +1 Reichweite.)
+- **Fernschuss** (Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -2648,22 +2665,22 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ruhezone
 `dc_np_caldris_ruhezone` · Unterstützung · undefined · 3 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: TURN_DRAW
 - *Wer ruht, hält länger.*
 
 ### Unantastbare Etappe
 `dc_np_caldris_unantastbare_etappe` · Unterstützung · Gold · 5 AP
 
-- Kurztext: Jeder Schaden an deinen Fronteinheiten −1. Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
+- Kurztext: Jeder Schaden an deinen Fronteinheiten −1. Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: REDUCE_DAMAGE, TURN_DRAW
 - *Die Etappe ist unantastbar.*
 
 ### Nachtlager
-`dc_np_caldris_nachtlager` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_caldris_nachtlager` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 3 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 3 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -2671,7 +2688,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Eine Nacht Schlaf wirkt Wunder.*
 
 ### Verbandswechsel
-`dc_np_caldris_verbandswechsel` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_caldris_verbandswechsel` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit. Ziehe 1 Karte.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -2680,7 +2697,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Versorgt und weiter.*
 
 ### Schild heben
-`dc_np_caldris_schild_heben` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_caldris_schild_heben` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 DEF dauerhaft.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.
@@ -2688,7 +2705,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Alle hinter den Schild.*
 
 ### Etappe sichern
-`dc_np_caldris_etappe_sichern` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_caldris_etappe_sichern` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +2 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -2696,7 +2713,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Abschnitt wird zur Festung.*
 
 ### Fürsorgemeldung
-`dc_np_caldris_fuersorgemeldung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_caldris_fuersorgemeldung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 1 Karte.
 - Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -2704,7 +2721,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Alle sind versorgt.*
 
 ### Genesung
-`dc_np_caldris_genesung` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_caldris_genesung` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Heile 4 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 4 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -2712,7 +2729,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Vollständig wiederhergestellt.*
 
 ### Schutzfeuer
-`dc_np_caldris_schutzfeuer` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_caldris_schutzfeuer` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -2720,7 +2737,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Weg von unseren Verwundeten.*
 
 ### Ruhe vor dem Schlag
-`dc_np_caldris_ruhe_vor_dem_schlag` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_caldris_ruhe_vor_dem_schlag` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF dauerhaft.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.
@@ -2728,7 +2745,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Ausgeruht zuschlagen.*
 
 ### Genesene zurück an die Front
-`dc_np_caldris_genesene_zurueck_an_die_front` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_caldris_genesene_zurueck_an_die_front` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -2737,7 +2754,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Klinik wird erweitert.*
 
 ### Wall aus Schilden
-`dc_np_caldris_wall_aus_schilden` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_caldris_wall_aus_schilden` · Soforteinsatz · Gold · 3 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +3 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +3 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -2747,32 +2764,33 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schutzschild leicht
 `dc_np_caldris_schutzschild_leicht` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Leicht, aber schützend.*
 
 ### Verbandspäckchen
 `dc_np_caldris_verbandspaeckchen` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Einmalig: verhindere 2 Schaden am Träger.
-- Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 2 verringert. Danach verbraucht.
+- Kurztext: Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+- Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
 - Effektcodes: EQUIP_NEGATE_DAMAGE
 - *Erste Hilfe beim ersten Treffer.*
 
 ### Schildplatte
 `dc_np_caldris_schildplatte` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Der erste Schaden am Träger wird ignoriert (einmalig).
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_IGNORE_FIRST_DAMAGE
 - *Der erste Schlag prallt ab.*
 
 ### Ruheabzeichen
 `dc_np_caldris_ruheabzeichen` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +1 DEF. Wird der Träger zerstört: ziehe 1.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Wird der Träger zerstört, ziehst du 1 Karte.
 - Effektcodes: EQUIP_STAT, ON_DESTROY_DRAW
 - *Wer fällt, wird betrauert und ersetzt.*
@@ -2780,8 +2798,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Vollschutzweste
 `dc_np_caldris_vollschutzweste` · Ausrüstung · undefined · 2 AP
 
-- Kurztext: Träger 0 ATK und +3 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger 0 ATK und +3 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +3 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +3 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Das Beste für die Infanterie.*
 
@@ -2889,56 +2907,56 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_orthea_punktfeuerbatterie` · Einheit · Bronze · 3 AP
 
 - **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Ein Ziel, hoher Effekt.*
 
 ### Zentrale Feuerleitung
 `dc_np_orthea_zentrale_feuerleitung` · Einheit · Gold · 5 AP
 
 - **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer V: Front + Support (+2 AP).
+- Steilfeuer V: Front + Support (+2 AP).
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
+- Supportzone-Angriff 3 AP; Front 1 AP.
 - Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
 - *Die Rechnung vor dem Schuss.*
 
 ### Präzisionsmörser
 `dc_np_orthea_praezisionsmoerser` · Einheit · Bronze · 2 AP
 
-- **Fernschuss** (Hat +1 Reichweite.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- **Fernschuss** (Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).)
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Trifft das gemessene Planquadrat.*
 
 ### Zielrechnungsrohr
 `dc_np_orthea_zielrechnungsrohr` · Einheit · undefined · 4 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
-- Die Einheit zählt für alle Regeln als Artillerie.
+- Kurztext: Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
+- Steilfeuer II.
 - Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
-- Effektcodes: ATTACK_ANY_FRONT, FEUERUEBERLEGENHEIT
+- Die Einheit zählt für alle Regeln als Artillerie.
+- Effektcodes: FEUERUEBERLEGENHEIT
 - *Abweichung kleiner als ein Meter.*
 
 ### Nachmessbatterie
 `dc_np_orthea_nachmessbatterie` · Einheit · Bronze · 3 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Schießt, misst, schießt nach.*
 
 ### Peilstation mobil
 `dc_np_orthea_peilstation_mobil` · Einheit · Bronze · 1 AP
 
-- **Fernschuss** (Hat +1 Reichweite.)
+- **Fernschuss** (Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -2948,7 +2966,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Gesamtlagebild
 `dc_np_orthea_gesamtlagebild` · Einheit · Gold · 3 AP
 
-- **Fernschuss** (Hat +1 Reichweite.)
+- **Fernschuss** (Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -2985,8 +3003,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Messnetz
 `dc_np_orthea_messnetz` · Unterstützung · undefined · 3 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: TURN_DRAW
 - *Jede Stunde neue Werte.*
 
@@ -3001,14 +3019,14 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Rechenzentrum Orthea
 `dc_np_orthea_rechenzentrum_orthea` · Unterstützung · Gold · 5 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte. Zu Beginn deines Zuges: +1 AP.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Zu Beginn deines Zuges: +1 AP.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt.
 - Effektcodes: TURN_DRAW, TURN_AP
 - *Das Modell rechnet schneller als der Gegner.*
 
 ### Messung
-`dc_np_orthea_messung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_orthea_messung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -3016,7 +3034,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Erfasst und aufgezeichnet.*
 
 ### Einzelziel-Salve
-`dc_np_orthea_einzelziel_salve` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_orthea_einzelziel_salve` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -3024,7 +3042,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Ein Ziel, ein Einschlag.*
 
 ### Gemessener Schlag
-`dc_np_orthea_gemessener_schlag` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_orthea_gemessener_schlag` · Soforteinsatz · undefined · 3 AP
 
 - Kurztext: Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 3 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -3033,7 +3051,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Erst messen, dann vernichten.*
 
 ### Klarstellung
-`dc_np_orthea_klarstellung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_orthea_klarstellung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 1 Karte.
 - Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -3041,7 +3059,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Das Modell wird korrigiert.*
 
 ### Nachmessen
-`dc_np_orthea_nachmessen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_orthea_nachmessen` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 2, dann wirf deine älteste Handkarte ab.
 - Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.
@@ -3049,7 +3067,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Falsche Daten werden verworfen.*
 
 ### Zielkorrektur
-`dc_np_orthea_zielkorrektur` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_orthea_zielkorrektur` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 ATK bis Zugende.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges.
@@ -3057,7 +3075,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Plus zwei Strich, Feuer.*
 
 ### Erkenntnisvorsprung
-`dc_np_orthea_erkenntnisvorsprung` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_orthea_erkenntnisvorsprung` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Ziehe 2 Karten.
 - Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -3065,7 +3083,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Wer mehr weiß, entscheidet.*
 
 ### Laborversorgung
-`dc_np_orthea_laborversorgung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_orthea_laborversorgung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -3073,7 +3091,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Wundversorgung nach neuester Studie.*
 
 ### Volltreffer berechnet
-`dc_np_orthea_volltreffer_berechnet` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_orthea_volltreffer_berechnet` · Soforteinsatz · Gold · 4 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 5 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 5 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -3081,7 +3099,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Rechnung geht auf.*
 
 ### Nachbesetzung nach Maß
-`dc_np_orthea_nachbesetzung_nach_mass` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_orthea_nachbesetzung_nach_mass` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -3100,8 +3118,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Peilantenne
 `dc_np_orthea_peilantenne` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +1 DEF. Wird der Träger zerstört: ziehe 1.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Wird der Träger zerstört, ziehst du 1 Karte.
 - Effektcodes: EQUIP_STAT, ON_DESTROY_DRAW
 - *Die letzte Peilung geht nicht verloren.*
@@ -3117,25 +3135,25 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Laborpanzerung
 `dc_np_orthea_laborpanzerung` · Ausrüstung · undefined · 2 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF. Einmalig: verhindere 1 Schaden am Träger.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
-- Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 1 verringert. Danach verbraucht.
+- Kurztext: Träger +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
 - Effektcodes: EQUIP_STAT, EQUIP_NEGATE_DAMAGE
 - *Getestet bis zur Bruchgrenze.*
 
 ### Messgewehr
 `dc_np_orthea_messgewehr` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger +1 ATK und 0 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 ATK.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Kalibriert im Institut.*
 
 ### Feldlaborkoffer
 `dc_np_orthea_feldlaborkoffer` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Schwer, aber schützend.*
 
@@ -3178,9 +3196,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_namar_schmugglerzug` · Einheit · Bronze · 2 AP
 
 - **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Ein Teil verschwindet, der Rest kommt an.*
 
@@ -3236,41 +3255,40 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_namar_kaibatterie` · Einheit · Bronze · 3 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Deckt Entsatz und Kai.*
 
 ### Schiffsmörser
 `dc_np_namar_schiffsmoerser` · Einheit · Bronze · 2 AP
 
 - **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Ausgeladen und aufgestellt.*
 
 ### Konvoifeuer
 `dc_np_namar_konvoifeuer` · Einheit · Bronze · 3 AP
 
 - **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Schützt die Lieferung.*
 
 ### Hafengeschütz
 `dc_np_namar_hafengeschuetz` · Einheit · undefined · 4 AP
 
 - **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
-- Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
+- Effektcodes: –
 - *Trifft auch fremde Depots.*
 
 ### Schlag der Ankunft
@@ -3278,8 +3296,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 
 - **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
 - **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer IV: ganze Front.
+- Steilfeuer IV: ganze Front.
 - Die Einheit zählt für alle Regeln als Artillerie.
 - Effektcodes: ATTACK_ANY_FRONT
 - *Wenn die Lieferung ankommt, schlägt sie zu.*
@@ -3287,7 +3305,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Hafenlotse
 `dc_np_namar_hafenlotse` · Einheit · Bronze · 1 AP
 
-- **Fernschuss** (Hat +1 Reichweite.)
+- **Fernschuss** (Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -3336,8 +3354,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kai ohne Schloss
 `dc_np_namar_kai_ohne_schloss` · Unterstützung · Gold · 4 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte. Zu Beginn deines Zuges: +1 AP.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Zu Beginn deines Zuges: +1 AP.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt.
 - Effektcodes: TURN_DRAW, TURN_AP
 - *Alles kommt an.*
@@ -3345,8 +3363,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Speicher am Hafen
 `dc_np_namar_speicher_am_hafen` · Unterstützung · undefined · 3 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: TURN_DRAW
 - *Immer etwas auf Lager.*
 
@@ -3359,7 +3377,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Wer zahlt, bekommt.*
 
 ### Aus vollen Lagern
-`dc_np_namar_aus_vollen_lagern` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_namar_aus_vollen_lagern` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -3367,7 +3385,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Vorrat geht in den Abschnitt.*
 
 ### Hilfe vom Kai
-`dc_np_namar_hilfe_vom_kai` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_namar_hilfe_vom_kai` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Heile 3 DEF an einer eigenen Fronteinheit. Ziehe 1 Karte.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 3 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -3376,7 +3394,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Hilfe ist da.*
 
 ### Lieferung eingetroffen
-`dc_np_namar_lieferung_eingetroffen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_namar_lieferung_eingetroffen` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Ziehe 2 Karten.
 - Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -3384,7 +3402,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Kisten voller Munition.*
 
 ### Chaoslogistik
-`dc_np_namar_chaoslogistik` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_namar_chaoslogistik` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 3, dann wirf deine älteste Handkarte ab.
 - Ziehe 3 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.
@@ -3392,7 +3410,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Ein Teil fehlt immer.*
 
 ### Kai verteidigen
-`dc_np_namar_kai_verteidigen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_namar_kai_verteidigen` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -3400,7 +3418,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Hafen hält.*
 
 ### Nachschub
-`dc_np_namar_nachschub` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_namar_nachschub` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -3408,7 +3426,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Frische Verbände.*
 
 ### Hafenfeuer
-`dc_np_namar_hafenfeuer` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_namar_hafenfeuer` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -3416,7 +3434,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Vom Kai aus getroffen.*
 
 ### Ganze Schiffsladung
-`dc_np_namar_ganze_schiffsladung` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_namar_ganze_schiffsladung` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF dauerhaft.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.
@@ -3424,7 +3442,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Alles, was das Schiff hatte.*
 
 ### Konvoi durchbringen
-`dc_np_namar_konvoi_durchbringen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_namar_konvoi_durchbringen` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -3433,7 +3451,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Ladung ist sicher.*
 
 ### Die große Flotte
-`dc_np_namar_die_grosse_flotte` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_namar_die_grosse_flotte` · Soforteinsatz · Gold · 4 AP
 
 - Kurztext: Ziehe 3 Karten. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
 - Ziehe 3 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -3444,15 +3462,15 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Hafenhelm
 `dc_np_namar_hafenhelm` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Gegen Kisten und Kugeln.*
 
 ### Schmuggelware
 `dc_np_namar_schmuggelware` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Wird der Träger zerstört: ziehe 1.
+- Kurztext: Wird der Träger zerstört, ziehst du 1 Karte.
 - Wird der Träger zerstört, ziehst du 1 Karte.
 - Effektcodes: ON_DESTROY_DRAW
 - *Irgendwas fällt immer ab.*
@@ -3460,9 +3478,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kaipanzerung
 `dc_np_namar_kaipanzerung` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +1 DEF. Der erste Schaden am Träger wird ignoriert (einmalig).
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
+- Kurztext: Träger +1 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_STAT, EQUIP_IGNORE_FIRST_DAMAGE
 - *Aus Containerstahl.*
 
@@ -3586,38 +3606,38 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_rothain_schwerpunktbatterie` · Einheit · Bronze · 3 AP
 
 - **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuer nur dort, wo es zählt.*
 
 ### Stabsrohr Neuhoff
 `dc_np_rothain_stabsrohr_neuhoff` · Einheit · Bronze · 3 AP
 
-- **Fernschuss** (Hat +1 Reichweite.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- **Fernschuss** (Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).)
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Nach alten Feuerplänen eingerichtet.*
 
 ### Erbmörser
 `dc_np_rothain_erbmoerser` · Einheit · Bronze · 2 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Der Großvater schoss schon damit.*
 
 ### Ballungsfeuer
 `dc_np_rothain_ballungsfeuer` · Einheit · undefined · 4 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Alle Rohre auf einen Abschnitt.*
 
 ### Ewige Batterie
@@ -3625,10 +3645,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 
 - **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer V: Front + Support (+2 AP).
+- Steilfeuer V: Front + Support (+2 AP).
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
+- Supportzone-Angriff 3 AP; Front 1 AP.
 - Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
 - *Sie schoss im letzten Krieg und schießt in diesem.*
 
@@ -3680,8 +3700,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ablösungsdepot
 `dc_np_rothain_abloesungsdepot` · Unterstützung · undefined · 3 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: TURN_DRAW
 - *Ersatz steht immer bereit.*
 
@@ -3702,7 +3722,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Alle Kraft an einem Punkt.*
 
 ### Schwerpunkt setzen
-`dc_np_rothain_schwerpunkt_setzen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_rothain_schwerpunkt_setzen` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -3710,7 +3730,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Hier und nicht anderswo.*
 
 ### Ablösung vorziehen
-`dc_np_rothain_abloesung_vorziehen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_rothain_abloesung_vorziehen` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -3718,7 +3738,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die nächste Welle steht bereit.*
 
 ### Frische Kräfte
-`dc_np_rothain_frische_kraefte` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_rothain_frische_kraefte` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -3726,7 +3746,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Abgelösten erholen sich.*
 
 ### Konzentrierter Stoß
-`dc_np_rothain_konzentrierter_stoss` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_rothain_konzentrierter_stoss` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF dauerhaft.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.
@@ -3734,7 +3754,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Gebündelte Kraft am Punkt.*
 
 ### Nachstoß
-`dc_np_rothain_nachstoss` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_rothain_nachstoss` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.
 - Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).
@@ -3742,7 +3762,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Schwerpunkt hält den Druck.*
 
 ### Umschlag Flussrot
-`dc_np_rothain_umschlag_flussrot` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_rothain_umschlag_flussrot` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Ziehe 2 Karten.
 - Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -3750,7 +3770,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Nachschub über die alte Straße.*
 
 ### Stabsbesprechung
-`dc_np_rothain_stabsbesprechung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_rothain_stabsbesprechung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 2, dann wirf deine älteste Handkarte ab.
 - Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.
@@ -3758,7 +3778,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Neue Lage, alte Karten.*
 
 ### Gezieltes Feuer
-`dc_np_rothain_gezieltes_feuer` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_rothain_gezieltes_feuer` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -3766,7 +3786,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Ein Schuss für den Schwerpunkt.*
 
 ### Ewige Ablösung
-`dc_np_rothain_ewige_abloesung` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_rothain_ewige_abloesung` · Soforteinsatz · Gold · 3 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 2 AP weniger (mind. 1). Ziehe 1 Karte.
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 2 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -3775,7 +3795,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Linie stirbt nie.*
 
 ### Druck am Punkt
-`dc_np_rothain_druck_am_punkt` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_rothain_druck_am_punkt` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: deine Infanterie dort +2 ATK bis Zugende.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Infanterie-Einheit dort hat bis zum Ende dieses Zuges +2 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -3785,17 +3805,17 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Erbsäbel
 `dc_np_rothain_erbsaebel` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger +1 ATK und 0 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 ATK.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Mehr Tradition als Waffe – und trotzdem scharf.*
 
 ### Regimentsabzeichen
 `dc_np_rothain_regimentsabzeichen` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Wird der Träger zerstört: ziehe 1. Träger 0 ATK und +1 DEF.
+- Kurztext: Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.
 - Wird der Träger zerstört, ziehst du 1 Karte.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: ON_DESTROY_DRAW, EQUIP_STAT
 - *Wer fällt, wird ersetzt.*
 
@@ -3810,8 +3830,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ablösungsgurt
 `dc_np_rothain_abloesungsgurt` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Hält bis zur Ablösung.*
 
@@ -3826,9 +3846,11 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kronstraßenpanzerung
 `dc_np_rothain_kronstrassenpanzerung` · Ausrüstung · undefined · 2 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF. Der erste Schaden am Träger wird ignoriert (einmalig).
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_STAT, EQUIP_IGNORE_FIRST_DAMAGE
 - *Alte Platten, neu genietet.*
 
@@ -3854,9 +3876,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_sahr_umgehungstrupp` · Einheit · undefined · 2 AP
 
 - **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Kommt von dort, wo niemand wartet.*
 
@@ -3898,9 +3921,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_sahr_umgehungspanzer` · Einheit · undefined · 4 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Taucht hinter der Linie auf.*
 
@@ -3934,52 +3958,53 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_sahr_linienfeuer` · Einheit · Bronze · 3 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Bindet die Linie.*
 
 ### Flussmörser
 `dc_np_sahr_flussmoerser` · Einheit · Bronze · 2 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
-- Die Einheit zählt für alle Regeln als Artillerie.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
-- Effektcodes: ATTACK_ANY_FRONT, RELOCATE_HIDE
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Die Einheit zählt für alle Regeln als Artillerie.
+- Effektcodes: RELOCATE_HIDE
 - *Vom Boot aus.*
 
 ### Routenbatterie
 `dc_np_sahr_routenbatterie` · Einheit · Bronze · 3 AP
 
 - **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Öffnet Wege.*
 
 ### Batterie der weiten Wege
 `dc_np_sahr_batterie_der_weiten_wege` · Einheit · Gold · 5 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer IV: ganze Front.
+- Steilfeuer IV: ganze Front.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
-- Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
+- Effektcodes: ATTACK_ANY_FRONT
 - *Trifft das Depot hinter der Linie.*
 
 ### Wegschließer
 `dc_np_sahr_wegschliesser` · Einheit · undefined · 4 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Schließt den Weg des Gegners.*
 
 ### Navigator
@@ -4006,11 +4031,13 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_sahr_routenspaeher` · Einheit · undefined · 2 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: AUFKLAERUNG, RELOCATE_HIDE
 - *Sieht den Weg, bevor der Feind ihn sieht.*
 
@@ -4029,9 +4056,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
 - **Sicherung** (Andere eigene Einheiten im selben Abschnitt haben +1 DEF, solange diese Einheit offen liegt.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Erscheint immer an der Flanke.*
 
@@ -4046,8 +4074,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Routennetz
 `dc_np_sahr_routennetz` · Unterstützung · undefined · 3 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: TURN_DRAW
 - *Fällt eine Route, kommt die nächste.*
 
@@ -4060,7 +4088,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Feind kämpft gegen den Strom.*
 
 ### Seitenweg
-`dc_np_sahr_seitenweg` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_sahr_seitenweg` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.
 - Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).
@@ -4068,7 +4096,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Noch ein Weg.*
 
 ### Linie binden
-`dc_np_sahr_linie_binden` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_sahr_linie_binden` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -4076,7 +4104,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Linie hält den Fluss.*
 
 ### Stoß von der Seite
-`dc_np_sahr_stoss_von_der_seite` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_sahr_stoss_von_der_seite` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 ATK bis Zugende.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges.
@@ -4084,7 +4112,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Von der Seite.*
 
 ### Neue Route
-`dc_np_sahr_neue_route` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_sahr_neue_route` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 1 Karte.
 - Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -4092,7 +4120,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Es gibt immer einen Weg.*
 
 ### Strömung nutzen
-`dc_np_sahr_stroemung_nutzen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_sahr_stroemung_nutzen` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 2, dann wirf deine älteste Handkarte ab.
 - Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.
@@ -4100,7 +4128,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Mit dem Fluss, nicht gegen ihn.*
 
 ### Wegschnitt
-`dc_np_sahr_wegschnitt` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_sahr_wegschnitt` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -4108,7 +4136,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Weg des Feindes endet hier.*
 
 ### Fluss überqueren
-`dc_np_sahr_fluss_ueberqueren` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_sahr_fluss_ueberqueren` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -4116,7 +4144,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Alle zugleich über den Fluss.*
 
 ### Uferversorgung
-`dc_np_sahr_uferversorgung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_sahr_uferversorgung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -4124,7 +4152,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Wasser heilt.*
 
 ### Handelsrabatt
-`dc_np_sahr_handelsrabatt` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_sahr_handelsrabatt` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -4133,7 +4161,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Gute Geschäfte.*
 
 ### Die große Umgehung
-`dc_np_sahr_die_grosse_umgehung` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_sahr_die_grosse_umgehung` · Soforteinsatz · Gold · 3 AP
 
 - Kurztext: Eine eigene Fronteinheit darf in diesem Zug erneut angreifen. Eine eigene Fronteinheit: +2 ATK bis Zugende.
 - Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).
@@ -4144,8 +4172,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Flussmantel
 `dc_np_sahr_flussmantel` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Der erste Schaden am Träger wird ignoriert (einmalig).
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_IGNORE_FIRST_DAMAGE
 - *Nass, aber unsichtbar.*
 
@@ -4160,16 +4189,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Leichtes Gepäck
 `dc_np_sahr_leichtes_gepaeck` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger +1 ATK und 0 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 ATK.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Schnell ist sicher.*
 
 ### Handelsschild
 `dc_np_sahr_handelsschild` · Ausrüstung · undefined · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF. Wird der Träger zerstört: ziehe 1.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF. Wird der Träger zerstört, ziehst du 1 Karte.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Wird der Träger zerstört, ziehst du 1 Karte.
 - Effektcodes: EQUIP_STAT, ON_DESTROY_DRAW
 - *Bezahlt von der Gilde.*
@@ -4185,8 +4214,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Ruderpanzer
 `dc_np_sahr_ruderpanzer` · Ausrüstung · undefined · 2 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Schwimmfähig und gepanzert.*
 
@@ -4228,9 +4257,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_averon_schnelle_hand` · Einheit · undefined · 2 AP
 
 - **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Kurz zuschlagen, dann weg.*
 
@@ -4255,9 +4285,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_averon_leichter_netzwagen` · Einheit · Bronze · 3 AP
 
 - **Überlast** (Hat +2 ATK und +1 DEF. Am Ende jedes deiner Züge erleidet sie 1 Schaden, der nicht verhindert werden kann (nicht durch Eingraben oder Schadensreduktion).)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Schnell rein, schnell raus.*
 
@@ -4290,52 +4321,53 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_averon_lokalisierungsbatterie` · Einheit · Bronze · 3 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Erst geortet, dann getroffen.*
 
 ### Schnellfeuerwerfer
 `dc_np_averon_schnellfeuerwerfer` · Einheit · Bronze · 3 AP
 
 - **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
-- Die Einheit zählt für alle Regeln als Artillerie.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Kurztext: Steilfeuer III.
+- Steilfeuer III.
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
-- Effektcodes: ATTACK_ANY_FRONT, RELOCATE_HIDE
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Die Einheit zählt für alle Regeln als Artillerie.
+- Effektcodes: RELOCATE_HIDE
 - *Feuern und Stellungswechsel.*
 
 ### Netzmörser
 `dc_np_averon_netzmoerser` · Einheit · Bronze · 2 AP
 
 - **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuer auf Koordinaten aus dem Netz.*
 
 ### Präzisionsrakete Zeit
 `dc_np_averon_praezisionsrakete_zeit` · Einheit · undefined · 4 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer III.
+- Steilfeuer III.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
-- Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
+- Effektcodes: –
 - *Trifft Depots, bevor sie liefern.*
 
 ### Frühwarnbatterie
 `dc_np_averon_fruehwarnbatterie` · Einheit · Bronze · 3 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuert auf die erste Bewegung.*
 
 ### Sensordrohne
@@ -4361,11 +4393,13 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_averon_fruehwarntrupp` · Einheit · undefined · 2 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: AUFKLAERUNG, RELOCATE_HIDE
 - *Sieht zuerst, wird zuletzt gesehen.*
 
@@ -4384,9 +4418,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_averon_netzkommando` · Einheit · undefined · 4 AP
 
 - **Erbitterung** (Hat +1 ATK für jede eigene Einheit, die in dieser Partie zerstört wurde, höchstens +3.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Operiert ohne Signatur.*
 
@@ -4401,8 +4436,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Sensorkette
 `dc_np_averon_sensorkette` · Unterstützung · undefined · 3 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: TURN_DRAW
 - *Ein Strom aus Lagebildern.*
 
@@ -4415,7 +4450,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Gegner greift an, was längst weg ist.*
 
 ### Erstschlag nach Ortung
-`dc_np_averon_erstschlag_nach_ortung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_averon_erstschlag_nach_ortung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Ziehe 1 Karte.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -4424,7 +4459,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Erst sehen, dann schlagen.*
 
 ### Kurzer Schlag
-`dc_np_averon_kurzer_schlag` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_averon_kurzer_schlag` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -4432,7 +4467,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Rein, treffen, raus.*
 
 ### Lagebild aktualisieren
-`dc_np_averon_lagebild_aktualisieren` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_averon_lagebild_aktualisieren` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 1 Karte.
 - Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -4440,7 +4475,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Lage ist nie alt, wenn man schnell ist.*
 
 ### Zeitgewinn
-`dc_np_averon_zeitgewinn` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_averon_zeitgewinn` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -4449,7 +4484,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Jede gesparte Minute ist ein Zug.*
 
 ### Initiative ergreifen
-`dc_np_averon_initiative_ergreifen` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_averon_initiative_ergreifen` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.
 - Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).
@@ -4457,7 +4492,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Wer zögert, verliert das Fenster.*
 
 ### Ortung
-`dc_np_averon_ortung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_averon_ortung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -4465,7 +4500,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Signatur erfasst.*
 
 ### Netzimpuls
-`dc_np_averon_netzimpuls` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_averon_netzimpuls` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -4473,7 +4508,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Alle wissen gleichzeitig, was zu tun ist.*
 
 ### Schnelle Verlegung
-`dc_np_averon_schnelle_verlegung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_averon_schnelle_verlegung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.
@@ -4481,7 +4516,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Ankommen, bevor der Gegner zielt.*
 
 ### Datenflut
-`dc_np_averon_datenflut` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_averon_datenflut` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Ziehe 3, dann wirf deine älteste Handkarte ab.
 - Ziehe 3 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.
@@ -4489,7 +4524,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Zu viel Lage ist besser als zu wenig.*
 
 ### Lokalisierter Großschlag
-`dc_np_averon_lokalisierter_grossschlag` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_averon_lokalisierter_grossschlag` · Soforteinsatz · Gold · 4 AP
 
 - Kurztext: Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 3 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -4500,17 +4535,17 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Funkgerät Novaris
 `dc_np_averon_funkgeraet_novaris` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Wird der Träger zerstört: ziehe 1. Träger 0 ATK und +1 DEF.
+- Kurztext: Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.
 - Wird der Träger zerstört, ziehst du 1 Karte.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: ON_DESTROY_DRAW, EQUIP_STAT
 - *Die letzte Meldung kommt immer an.*
 
 ### Sensorhelm
 `dc_np_averon_sensorhelm` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +1 DEF. Erster Angriff des Trägers: +1 ATK.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 DEF. Erster Angriff des Trägers: +1 ATK.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus.
 - Effektcodes: EQUIP_STAT, CARRIER_FIRST_ATTACK_ATK
 - *Sieht den ersten Gegner zuerst.*
@@ -4518,8 +4553,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Leichtweste
 `dc_np_averon_leichtweste` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Leicht, damit man schnell bleibt.*
 
@@ -4534,16 +4569,17 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Tarnnetz Averon
 `dc_np_averon_tarnnetz_averon` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Der erste Schaden am Träger wird ignoriert (einmalig).
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_IGNORE_FIRST_DAMAGE
 - *Der erste Treffer geht daneben.*
 
 ### Schnellfeuergewehr
 `dc_np_averon_schnellfeuergewehr` · Ausrüstung · undefined · 1 AP
 
-- Kurztext: Träger +1 ATK und 0 DEF. Erster Angriff des Trägers: +1 ATK.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +1 ATK. Erster Angriff des Trägers: +1 ATK.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus.
 - Effektcodes: EQUIP_STAT, CARRIER_FIRST_ATTACK_ATK
 - *Kurz, schnell, präzise.*
@@ -4554,9 +4590,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_vesper_scheinkompanie` · Einheit · Bronze · 1 AP
 
 - **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Sie ist da – oder auch nicht.*
 
@@ -4599,9 +4636,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_vesper_unsichtbare_wache` · Einheit · Bronze · 2 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Nie dort, wo man sucht.*
 
@@ -4609,9 +4647,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_vesper_velis_kolonne` · Einheit · Gold · 5 AP
 
 - **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Taucht auf, schlägt zu, verschwindet.*
 
@@ -4627,9 +4666,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_vesper_taeuschungspanzer` · Einheit · Bronze · 3 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: RELOCATE_HIDE
 - *Ein Panzer, der nie da war.*
 
@@ -4656,53 +4696,56 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_vesper_abriegelungsbatterie` · Einheit · Bronze · 3 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuer, das Räume schließt.*
 
 ### Scheinfeuerstellung
 `dc_np_vesper_scheinfeuerstellung` · Einheit · Bronze · 3 AP
 
 - **Hinterhalt** (Hat +2 ATK bei ihrem ersten Angriff nach dem Aufdecken.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
-- Die Einheit zählt für alle Regeln als Artillerie.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
-- Effektcodes: ATTACK_ANY_FRONT, RELOCATE_HIDE
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Die Einheit zählt für alle Regeln als Artillerie.
+- Effektcodes: RELOCATE_HIDE
 - *Feuert, zieht um, feuert wieder.*
 
 ### Systemmörser
 `dc_np_vesper_systemmoerser` · Einheit · Bronze · 2 AP
 
 - **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Teil eines größeren Plans.*
 
 ### Riegelfeuer
 `dc_np_vesper_riegelfeuer` · Einheit · undefined · 4 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
-- Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
+- Effektcodes: –
 - *Schließt auch die Depots.*
 
 ### Systemantwort
 `dc_np_vesper_systemantwort` · Einheit · Gold · 5 AP
 
 - **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
-- Die Einheit zählt für alle Regeln als Artillerie.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Kurztext: Steilfeuer IV: ganze Front.
+- Steilfeuer IV: ganze Front.
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Die Einheit zählt für alle Regeln als Artillerie.
 - Effektcodes: ATTACK_ANY_FRONT, RELOCATE_HIDE
 - *Wenn die Partie kippt, antwortet das System.*
 
@@ -4729,11 +4772,13 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_vesper_schattenmelder` · Einheit · Bronze · 2 AP
 
 - **Platztausch** (Wird die Einheit aufgedeckt, darfst du sie mit einer anderen eigenen verdeckten Einheit tauschen. Der Tausch gilt nicht als neuer Einsatz (kein neues Eingraben). Der Gegner erfährt nicht den Namen der anderen Karte, nur dass getauscht wurde bzw. die Wahl existiert.)
-- Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut. Nach jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug.
+- **Absetzen** (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
+- Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
 - Absetzen: Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Der Gegner sieht dann nur „Verdeckte Einheit“.
 - Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.
+- Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)
 - Effektcodes: AUFKLAERUNG, RELOCATE_HIDE
 - *Meldet und verschwindet.*
 
@@ -4766,22 +4811,22 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Systemarchiv
 `dc_np_vesper_systemarchiv` · Unterstützung · undefined · 3 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: TURN_DRAW
 - *Alles wird gespeichert, alles wird genutzt.*
 
 ### Das Spiel des Systems
 `dc_np_vesper_das_spiel_des_systems` · Unterstützung · Gold · 5 AP
 
-- Kurztext: Gegnerische Fronteinheiten −1 ATK. Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
+- Kurztext: Gegnerische Fronteinheiten −1 ATK. Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag).
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: AURA_ENEMY_ATK, TURN_DRAW
 - *Niemand führt, alle spielen.*
 
 ### Gefütterter Köder
-`dc_np_vesper_gefuetterter_koeder` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_vesper_gefuetterter_koeder` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -4789,7 +4834,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Hier sieht es stark aus.*
 
 ### Falsche Meldung
-`dc_np_vesper_falsche_meldung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_vesper_falsche_meldung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 2, dann wirf deine älteste Handkarte ab.
 - Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.
@@ -4797,7 +4842,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Eine Wahrheit, eine Lüge.*
 
 ### Raum schließen
-`dc_np_vesper_raum_schliessen` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_vesper_raum_schliessen` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -4805,7 +4850,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Raum wird geschlossen.*
 
 ### Enttarnung
-`dc_np_vesper_enttarnung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_vesper_enttarnung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -4813,7 +4858,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Das System sieht dich.*
 
 ### Zug im Spiel
-`dc_np_vesper_zug_im_spiel` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_vesper_zug_im_spiel` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.
 - Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).
@@ -4821,7 +4866,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Noch ein Zug, den niemand sah.*
 
 ### Schattenoperation
-`dc_np_vesper_schattenoperation` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_vesper_schattenoperation` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 ATK bis Zugende.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges.
@@ -4829,7 +4874,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Aus dem Nichts.*
 
 ### Systemzugriff
-`dc_np_vesper_systemzugriff` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_vesper_systemzugriff` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Ziehe 2 Karten.
 - Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -4837,7 +4882,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Das Archiv öffnet sich.*
 
 ### Verdeckter Rabatt
-`dc_np_vesper_verdeckter_rabatt` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_vesper_verdeckter_rabatt` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -4846,7 +4891,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Rechnung zahlt jemand anders.*
 
 ### Doppeltes Spiel
-`dc_np_vesper_doppeltes_spiel` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_vesper_doppeltes_spiel` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 1 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -4855,7 +4900,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Erst entlarven, dann bestrafen.*
 
 ### Der große Bluff
-`dc_np_vesper_der_grosse_bluff` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_vesper_der_grosse_bluff` · Soforteinsatz · Gold · 3 AP
 
 - Kurztext: Ziehe 4, dann wirf deine älteste Handkarte ab.
 - Ziehe 4 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.
@@ -4865,15 +4910,16 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Tarnanzug Velis
 `dc_np_vesper_tarnanzug_velis` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Der erste Schaden am Träger wird ignoriert (einmalig).
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_IGNORE_FIRST_DAMAGE
 - *Der erste Schuss trifft den Schatten.*
 
 ### Falsche Papiere
 `dc_np_vesper_falsche_papiere` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Wird der Träger zerstört: ziehe 1.
+- Kurztext: Wird der Träger zerstört, ziehst du 1 Karte.
 - Wird der Träger zerstört, ziehst du 1 Karte.
 - Effektcodes: ON_DESTROY_DRAW
 - *Wer fällt, nimmt das Geheimnis nicht mit.*
@@ -4881,8 +4927,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Störsender
 `dc_np_vesper_stoersender` · Ausrüstung · undefined · 1 AP
 
-- Kurztext: Einmalig: verhindere 2 Schaden am Träger.
-- Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 2 verringert. Danach verbraucht.
+- Kurztext: Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+- Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
 - Effektcodes: EQUIP_NEGATE_DAMAGE
 - *Zielerfassung gestört.*
 
@@ -4897,8 +4943,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Systemausweis
 `dc_np_vesper_systemausweis` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Zugang zu allen Ebenen.*
 
@@ -5007,51 +5053,50 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Zielbatterie
 `dc_np_dargan_zielbatterie` · Einheit · Bronze · 3 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuer ist Tilgung.*
 
 ### Registermörser
 `dc_np_dargan_registermoerser` · Einheit · Bronze · 2 AP
 
 - **Staffelangriff** (Hat +1 ATK, wenn in diesem Zug bereits eine andere eigene Einheit angegriffen hat.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Jeder Schuss verbucht.*
 
 ### Abschlussfeuer
 `dc_np_dargan_abschlussfeuer` · Einheit · undefined · 4 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
-- Die Einheit zählt für alle Regeln als Artillerie.
+- Kurztext: Steilfeuer II. Angriffe gegen ungepanzerte Ziele: +1 Schaden.
+- Steilfeuer II.
 - Feuerüberlegenheit: Greift diese Einheit ein ungepanzertes Ziel an, verursacht sie 1 Schaden zusätzlich zu ihrem ATK.
-- Effektcodes: ATTACK_ANY_FRONT, FEUERUEBERLEGENHEIT
+- Die Einheit zählt für alle Regeln als Artillerie.
+- Effektcodes: FEUERUEBERLEGENHEIT
 - *Schließt die Zeile.*
 
 ### Zinsbatterie
 `dc_np_dargan_zinsbatterie` · Einheit · Bronze · 3 AP
 
 - **Nachsetzen** (Hat +2 ATK gegen Ziele, die in diesem Zug bereits Schaden erlitten haben.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuert regelmäßig.*
 
 ### Gebundene Häuser
 `dc_np_dargan_gebundene_haeuser` · Einheit · Gold · 5 AP
 
-- **Fernschuss** (Hat +1 Reichweite.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- **Fernschuss** (Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).)
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
-- Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
+- Effektcodes: –
 - *Alle Häuser feuern zusammen.*
 
 ### Buchprüfer
@@ -5101,8 +5146,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schuldregister
 `dc_np_dargan_schuldregister` · Unterstützung · undefined · 3 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Effektcodes: TURN_DRAW
 - *Jeder Name steht im Buch.*
 
@@ -5117,14 +5162,14 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Das Große Buch
 `dc_np_dargan_das_grosse_buch` · Unterstützung · Gold · 5 AP
 
-- Kurztext: Zu Beginn deines Zuges: ziehe 1 zusätzliche Karte. Gegnerische Fronteinheiten −1 ATK.
-- Zu Beginn jedes deiner Züge ziehst du 1 zusätzliche Karte, solange diese Unterstützung liegt (Handlimit 7 gilt).
+- Kurztext: Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Gegnerische Fronteinheiten −1 ATK.
+- Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
 - Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag).
 - Effektcodes: TURN_DRAW, AURA_ENEMY_ATK
 - *Was im Buch steht, wird getilgt.*
 
 ### Zeile setzen
-`dc_np_dargan_zeile_setzen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_dargan_zeile_setzen` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -5132,7 +5177,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Name steht im Buch.*
 
 ### Markierter Schlag
-`dc_np_dargan_markierter_schlag` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_dargan_markierter_schlag` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -5141,7 +5186,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Markiert und getroffen.*
 
 ### Zeile schließen
-`dc_np_dargan_zeile_schliessen` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_dargan_zeile_schliessen` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.
 - Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).
@@ -5149,7 +5194,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Zu Ende bringen.*
 
 ### Tilgung
-`dc_np_dargan_tilgung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_dargan_tilgung` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -5157,7 +5202,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Schuld wird beglichen.*
 
 ### Aufruf der Pflicht
-`dc_np_dargan_aufruf_der_pflicht` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_dargan_aufruf_der_pflicht` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 ATK bis Zugende.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges.
@@ -5165,7 +5210,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Name wird gerufen.*
 
 ### Registerprüfung
-`dc_np_dargan_registerpruefung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_dargan_registerpruefung` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 1 Karte.
 - Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -5173,7 +5218,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Alles verbucht.*
 
 ### Haftung übernehmen
-`dc_np_dargan_haftung_uebernehmen` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_dargan_haftung_uebernehmen` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -5181,7 +5226,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Das Haus zahlt.*
 
 ### Zinseszins
-`dc_np_dargan_zinseszins` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_dargan_zinseszins` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 2, dann wirf deine älteste Handkarte ab.
 - Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.
@@ -5189,7 +5234,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Schuld wächst.*
 
 ### Kader nachführen
-`dc_np_dargan_kader_nachfuehren` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_dargan_kader_nachfuehren` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
 - Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.
@@ -5197,7 +5242,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die nächste Zeile ist bereit.*
 
 ### Endabrechnung
-`dc_np_dargan_endabrechnung` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_dargan_endabrechnung` · Soforteinsatz · Gold · 4 AP
 
 - Kurztext: Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 4 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -5208,7 +5253,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Schuldmarke
 `dc_np_dargan_schuldmarke` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Wird der Träger zerstört: ziehe 1.
+- Kurztext: Wird der Träger zerstört, ziehst du 1 Karte.
 - Wird der Träger zerstört, ziehst du 1 Karte.
 - Effektcodes: ON_DESTROY_DRAW
 - *Die Schuld geht weiter.*
@@ -5232,8 +5277,8 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Registerpanzer
 `dc_np_dargan_registerpanzer` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Gebunden in Leder und Stahl.*
 
@@ -5248,8 +5293,9 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Haftungsschild
 `dc_np_dargan_haftungsschild` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Der erste Schaden am Träger wird ignoriert (einmalig).
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_IGNORE_FIRST_DAMAGE
 - *Das Haus fängt den ersten Schlag.*
 
@@ -5351,38 +5397,38 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 `dc_np_eldran_sperrfeuerbatterie` · Einheit · Bronze · 3 AP
 
 - **Zuteilung** (Ziehe 1 Karte, wenn sie ins Spiel kommt.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Feuer, das Räume schließt.*
 
 ### Grenzhaubitze
 `dc_np_eldran_grenzhaubitze` · Einheit · Bronze · 3 AP
 
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Kennt jede Furt der Grenzmark.*
 
 ### Kronmörser
 `dc_np_eldran_kronmoerser` · Einheit · Bronze · 2 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer I.
+- Steilfeuer I.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Kleine Granaten für große Tradition.*
 
 ### Burgfeuerstellung
 `dc_np_eldran_burgfeuerstellung` · Einheit · undefined · 4 AP
 
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer II.
+- Steilfeuer II.
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Effektcodes: ATTACK_ANY_FRONT
+- Effektcodes: –
 - *Aus den alten Mauern schießt es noch immer.*
 
 ### Kronarsenal
@@ -5390,10 +5436,10 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 
 - **Durchschlag** (Ignoriert 1 DEF des Ziels. Eingegrabene Ziele bleiben tabu (Eingraben schützt weiter vor gezielten Angriffen).)
 - **Stellungswechsel** (Einmal in deinem Zug darfst du diese Einheit auf ein freies benachbartes Feld derselben Reihe versetzen. Danach greift sie in diesem Zug nicht an. Das Versetzen gilt nicht als neuer Einsatz.)
-- Kurztext: Indirektes Feuer: darf jede gegnerische Fronteinheit angreifen. Darf auch gegnerische Unterstützungen angreifen.
-- Indirektes Feuer: Beim Angriff darfst du jede gegnerische Fronteinheit als Ziel wählen, nicht nur Ziele im gegenüberliegenden Abschnitt.
+- Kurztext: Steilfeuer V: Front + Support (+2 AP).
+- Steilfeuer V: Front + Support (+2 AP).
 - Die Einheit zählt für alle Regeln als Artillerie.
-- Weitreichend: Zusätzlich zu Fronteinheiten darf diese Einheit gegnerische Unterstützungskarten als Angriffsziel wählen.
+- Supportzone-Angriff 3 AP; Front 1 AP.
 - Effektcodes: ATTACK_ANY_FRONT, ATTACK_SUPPORT
 - *Was die Krone hortete, kommt nun heraus.*
 
@@ -5410,7 +5456,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Wachtturmposten
 `dc_np_eldran_wachtturmposten` · Einheit · Bronze · 2 AP
 
-- **Fernschuss** (Hat +1 Reichweite.)
+- **Fernschuss** (Hat +1 Reichweite (bei Steilfeuer nur Stufen I–III; IV/V bereits ganze Front).)
 - Kurztext: Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.
 - Beim Ausspielen (kostenlos): Hat der Gegner verdeckte Fronteinheiten, wählst du genau eine davon; sie wird aufgedeckt. Ohne verdeckte Ziele passiert nichts.
 - Fähigkeit „Aufklären“: Kostet 1 AP und erschöpft diese Einheit (nicht im Zug, in dem sie gelegt wurde). Wähle eine verdeckte gegnerische Fronteinheit und decke sie auf. Ohne verdeckte Ziele nicht nutzbar.
@@ -5470,7 +5516,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die ganze Linie trägt den Eid.*
 
 ### Auffangstellung
-`dc_np_eldran_auffangstellung` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_eldran_auffangstellung` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -5478,7 +5524,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Der Stoß läuft ins Leere.*
 
 ### Königlicher Befehl
-`dc_np_eldran_koeniglicher_befehl` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_eldran_koeniglicher_befehl` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.
 - Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).
@@ -5486,7 +5532,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Antwort kommt sofort.*
 
 ### Feldlazarett der Krone
-`dc_np_eldran_feldlazarett_der_krone` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_eldran_feldlazarett_der_krone` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Heile 2 DEF an einer eigenen Fronteinheit.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.
@@ -5494,7 +5540,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Die Krone vergisst ihre Soldaten nicht.*
 
 ### Halten und warten
-`dc_np_eldran_halten_und_warten` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_eldran_halten_und_warten` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 DEF dauerhaft.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.
@@ -5502,7 +5548,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Geduld ist eine Waffe.*
 
 ### Gegenstoß aus der Reserve
-`dc_np_eldran_gegenstoss_aus_der_reserve` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_eldran_gegenstoss_aus_der_reserve` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Eine eigene Fronteinheit: +2 ATK bis Zugende.
 - Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges.
@@ -5510,7 +5556,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Jetzt.*
 
 ### Mine im Weg
-`dc_np_eldran_mine_im_weg` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_eldran_mine_im_weg` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 - Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.
@@ -5518,7 +5564,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Gelegt vor Jahren, gezündet heute.*
 
 ### Hofbericht
-`dc_np_eldran_hofbericht` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_eldran_hofbericht` · Soforteinsatz · Bronze · 1 AP
 
 - Kurztext: Ziehe 1 Karte.
 - Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.
@@ -5526,7 +5572,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Was der Hof weiß, weiß die Front.*
 
 ### Sperre verstärken
-`dc_np_eldran_sperre_verstaerken` · Soforteinsatz · Bronze · 0 AP (Soforteinsatz)
+`dc_np_eldran_sperre_verstaerken` · Soforteinsatz · Bronze · 2 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: deine Infanterie dort +2 DEF dauerhaft.
 - Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Infanterie-Einheit, die jetzt dort steht, erhält +2 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.
@@ -5534,7 +5580,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Noch eine Reihe Draht.*
 
 ### Kronrat tagt
-`dc_np_eldran_kronrat_tagt` · Soforteinsatz · undefined · 0 AP (Soforteinsatz)
+`dc_np_eldran_kronrat_tagt` · Soforteinsatz · undefined · 2 AP
 
 - Kurztext: Ziehe 3, dann wirf deine älteste Handkarte ab.
 - Ziehe 3 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.
@@ -5542,7 +5588,7 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 - *Viele Stimmen, eine Entscheidung.*
 
 ### Antwort der Krone
-`dc_np_eldran_antwort_der_krone` · Soforteinsatz · Gold · 0 AP (Soforteinsatz)
+`dc_np_eldran_antwort_der_krone` · Soforteinsatz · Gold · 4 AP
 
 - Kurztext: Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 ATK bis Zugende.
 - Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +2 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).
@@ -5552,34 +5598,36 @@ Automatisch erzeugt aus `web/js/data/sets/types/nation_pools.js` (`node scripts/
 ### Kronhelm
 `dc_np_eldran_kronhelm` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +2 DEF.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger 0 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Kurztext: Träger +2 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: EQUIP_STAT
 - *Alt, schwer, verlässlich.*
 
 ### Pionierschaufel
 `dc_np_eldran_pionierschaufel` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Träger 0 ATK und +1 DEF. Der erste Schaden am Träger wird ignoriert (einmalig).
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger 0 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- **Erstschadenschutz** (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
+- Kurztext: Träger +1 DEF.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.
+- Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)
 - Effektcodes: EQUIP_STAT, EQUIP_IGNORE_FIRST_DAMAGE
 - *Erst graben, dann kämpfen.*
 
 ### Kronsiegel der Wacht
 `dc_np_eldran_kronsiegel_der_wacht` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Wird der Träger zerstört: ziehe 1. Träger +1 ATK und 0 DEF.
+- Kurztext: Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 ATK.
 - Wird der Träger zerstört, ziehst du 1 Karte.
-- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und 0 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
+- Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.
 - Effektcodes: ON_DESTROY_DRAW, EQUIP_STAT
 - *Wer fällt, hinterlässt ein Siegel.*
 
 ### Sperrdraht-Kit
 `dc_np_eldran_sperrdraht_kit` · Ausrüstung · Bronze · 1 AP
 
-- Kurztext: Einmalig: verhindere 2 Schaden am Träger.
-- Einmalig: Erleidet der Träger erstmals Schaden, wird dieser um 2 verringert. Danach verbraucht.
+- Kurztext: Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+- Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
 - Effektcodes: EQUIP_NEGATE_DAMAGE
 - *Der Draht fängt den ersten Schlag.*
 

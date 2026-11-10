@@ -1,6 +1,6 @@
 # Division Command – Gesamtplan
 
-**Stand:** November 2026 · Alpha 0.5a  
+**Stand:** November 2026 · Alpha 0.6a  
 **Zweck:** Zusammenführung der einzelnen Planungsdokumente zu einem übergeordneten Arbeitsplan.
 
 ---

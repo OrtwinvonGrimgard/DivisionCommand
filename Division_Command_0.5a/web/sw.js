@@ -1,4 +1,4 @@
-const CACHE = 'divcmd-alpha40k';
+const CACHE = 'divcmd-alpha40l';
 const ASSETS = [
   './',
   './index.html',
