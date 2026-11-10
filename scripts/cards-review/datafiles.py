@@ -2,7 +2,7 @@
 import json,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-TYPES=ROOT/'Division_Command_0.5a/web/js/data/sets/types'
+TYPES=ROOT/'Division_Command/web/js/data/sets/types'
 FILES=['doktrinen','tokens','infanterie','panzer','artillerie','aufklaerung','elite','unterstuetzung','soforteinsatz','ausruestung','nation_pools','tactical']
 RX=re.compile(r'^(.*?window\.DC_SET_TYPES(?:\[[^\]]+\]|\.\w+)\s*=\s*)(\[.*\])(\s*;?\s*)$',re.S)
 def load(name):

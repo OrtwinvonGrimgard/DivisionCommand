@@ -24,7 +24,7 @@ import render as R  # noqa: E402
 
 SRC = ROOT / "assets" / "cards"
 GAME = Path("/workspace/artifacts/DivisionCommandApp/web/assets/cards")
-SETS = Path("/workspace/DivisionCommand/Division_Command_0.5a/web/js/data/sets/types")
+SETS = Path("/workspace/DivisionCommand/Division_Command/web/js/data/sets/types")
 
 # Bildfenster der bemalten Originale (1536×2136), etwas innerhalb des Goldrands.
 ART_BOX = (90, 70, 1446, 850)

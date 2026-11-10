@@ -8,7 +8,7 @@ import vm from 'vm';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../Division_Command_0.5a/web');
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../Division_Command/web');
 
 function loadInto(context, rel) {
   vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), context, { filename: rel });

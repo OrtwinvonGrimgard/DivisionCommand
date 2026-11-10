@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-/* Erzeugt Division_Command_0.5a/docs/karten/NATIONENPOOL_KARTEN.md und die Zahlentabelle in NATIONENPOOLS_100.md aus den echten Spieldaten. */
+/* Erzeugt Division_Command/docs/karten/NATIONENPOOL_KARTEN.md und die Zahlentabelle in NATIONENPOOLS_100.md aus den echten Spieldaten. */
 const fs = require('fs'), path = require('path');
 const L = require('./load_game.js'); const w = L.loadGame({ quiet: true });
 const C = w.DC_CATALOG.cards, root = path.join(L.WEB, '..', 'docs', 'karten');

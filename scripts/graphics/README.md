@@ -1,7 +1,7 @@
 # Kartenvorderseiten alpha40 (old-alpha)
 
 Aktuell: **alpha40** ersetzt gfx3.1. Motivfenster 40 % (854 px), Schrift ab 60 px, Elite-Text neben dem Orden, Doktrinen im Bollwerk-Stil.
-Details: `Division_Command_0.5a/docs/technik/KARTEN_RENDER_ALPHA40.md`.
+Details: `Division_Command/docs/technik/KARTEN_RENDER_ALPHA40.md`.
 
 Ausgabe weiter in `web/assets/cards/faces-v2/<id>.webp` (1024×1428). Build: `npm run build:graphics`.
 

@@ -1,8 +1,8 @@
 {
   "status": "not_generated",
   "purpose": "next individual illustration batch; do not invent cards or rules",
-  "style_reference": "Division_Command_0.5a/web/assets/cards/art/A033.jpg",
-  "lore": "Division_Command_0.5a/docs/nationen/LORE_NATIONEN.md; Steinmark chapter is required before prompts",
+  "style_reference": "Division_Command/web/assets/cards/art/A033.jpg",
+  "lore": "Division_Command/docs/nationen/LORE_NATIONEN.md; Steinmark chapter is required before prompts",
   "cards": [
     {
       "id": "dc_np_steinmark_paragraphenzug",

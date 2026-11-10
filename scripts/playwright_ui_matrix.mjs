@@ -12,7 +12,7 @@ import http from 'http';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const SERVER = path.join(ROOT, 'Division_Command_0.5a', 'server.py');
+const SERVER = path.join(ROOT, 'Division_Command', 'server.py');
 const OUT = '/workspace';
 const BASE = process.env.DC_BASE || 'http://127.0.0.1:8765';
 

@@ -2,7 +2,7 @@
 'use strict';
 const fs = require('fs'), path = require('path');
 const {migrate} = require('./migrate.js');
-const root = path.join(__dirname, '../..'), types = path.join(root,'Division_Command_0.5a/web/js/data/sets/types');
+const root = path.join(__dirname, '../..'), types = path.join(root,'Division_Command/web/js/data/sets/types');
 // Die JSON-Arrays der alten Typdateien sind die hier benutzte kanonische Quelle.
 // Editor-Altspiegel werden absichtlich nicht als zweite aktive Bibliothek behandelt.
 for (const file of fs.readdirSync(types).filter(f => f.endsWith('.js') && !['nation_pools.js','tactical.js'].includes(f))) {

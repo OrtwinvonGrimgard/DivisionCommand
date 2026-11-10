@@ -1,6 +1,6 @@
 # Division Command – Dokumentation
 
-Alle Regeln, Lore-Texte, Planungen und technischen Erklärungen zu Division Command an einem Ort. Der Ordner liegt bewusst direkt neben dem Spiel (`Division_Command_0.5a/`), damit Spiel und Dokumentation zusammen versioniert und ausgeliefert werden. Pfade in Code-Kommentaren und Dokumenten beziehen sich, wenn nicht anders angegeben, auf `Division_Command_0.5a/`.
+Alle Regeln, Lore-Texte, Planungen und technischen Erklärungen zu Division Command an einem Ort. Der Ordner liegt bewusst direkt neben dem Spiel (`Division_Command/`), damit Spiel und Dokumentation zusammen versioniert und ausgeliefert werden. Pfade in Code-Kommentaren und Dokumenten beziehen sich, wenn nicht anders angegeben, auf `Division_Command/`.
 
 ## Gesamtdokumentation
 

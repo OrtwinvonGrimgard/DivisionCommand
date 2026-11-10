@@ -5,9 +5,9 @@
    Kurztext (text) steuert zugleich die Zielwahl-Heuristik der Engine (eigene ↔ gegnerische); die
    ausführliche Regel steht in rules[] und wird in der Detailansicht vollständig angezeigt. */
 const fs = require('fs'), path = require('path');
-const OUT = path.join(__dirname, '..', '..', 'Division_Command_0.5a', 'web', 'js', 'data', 'sets', 'types', 'nation_pools.js');
+const OUT = path.join(__dirname, '..', '..', 'Division_Command', 'web', 'js', 'data', 'sets', 'types', 'nation_pools.js');
 
-const KW = (() => { const g = {}; require('vm').runInNewContext(fs.readFileSync(path.join(__dirname, '../../Division_Command_0.5a/web/js/data/keywords.js'), 'utf8'), { window: g }); return g.DC_KEYWORDS; })();
+const KW = (() => { const g = {}; require('vm').runInNewContext(fs.readFileSync(path.join(__dirname, '../../Division_Command/web/js/data/keywords.js'), 'utf8'), { window: g }); return g.DC_KEYWORDS; })();
 const KIND = {
   I: { typ: 'Einheit', klasse: 'Infanterie', tags: ['einheit', 'infanterie'] },
   P: { typ: 'Einheit', klasse: 'Panzer', tags: ['einheit', 'panzer', 'kette', 'gepanzert'] },

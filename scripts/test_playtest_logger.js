@@ -5,7 +5,7 @@ const path = require('path');
 const vm = require('vm');
 const zlib = require('zlib');
 
-const WEB = path.join(__dirname, '..', 'Division_Command_0.5a', 'web');
+const WEB = path.join(__dirname, '..', 'Division_Command', 'web');
 
 function assert(c, m) { if (!c) throw new Error('ASSERT: ' + m); }
 

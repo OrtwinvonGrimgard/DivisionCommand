@@ -7,7 +7,7 @@ from __future__ import annotations
 import argparse, hashlib, json, subprocess, sys
 from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor, as_completed
-ROOT = Path(__file__).resolve().parents[2]; WEB = ROOT / 'Division_Command_0.5a/web'; HERE = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]; WEB = ROOT / 'Division_Command/web'; HERE = Path(__file__).resolve().parent
 VERSION = 'alpha40'; OUTDIR = 'faces-v2'
 TOOLS = ROOT / 'KartenEditor' / 'tools'
 def digest(b): return hashlib.sha256(b).hexdigest()

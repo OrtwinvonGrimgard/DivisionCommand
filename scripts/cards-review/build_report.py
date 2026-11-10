@@ -64,5 +64,5 @@ for e in out:
 o += ['## Balance-Hinweise (unverändert gelassen)', '']
 for e in out:
     if e['flags'] and not (e['text_geaendert'] or e['mechanik_geaendert']): o.append(f"- {e['name']} (`{e['id']}`): " + '; '.join(e['flags']))
-(ROOT / 'Division_Command_0.5a/docs/karten/KARTENPRUEFUNG.md').write_text('\n'.join(o) + '\n')
+(ROOT / 'Division_Command/docs/karten/KARTENPRUEFUNG.md').write_text('\n'.join(o) + '\n')
 print('review', len(out), 'text', len(tc), 'mech', len(mc), 'flags', sum(1 for e in out if e['flags']))

@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
-const ROOT = path.resolve(__dirname, '../Division_Command_0.5a/web');
+const ROOT = path.resolve(__dirname, '../Division_Command/web');
 function load(ctx, rel) {
   vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), ctx, { filename: rel });
 }

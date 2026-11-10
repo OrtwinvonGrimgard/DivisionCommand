@@ -1,5 +1,10 @@
 # Changelog – Division Command
 
+## Unreleased (nach v0.6a)
+
+### Aufräumen
+- Spielordner versionsneutral: `Division_Command_0.5a/` → `Division_Command/` (alle Skripte, Tests, Editor- und Doku-Pfade angepasst).
+
 ## 0.6a Alpha – 10.11.2026
 
 Seit 0.5a (02.11.2026): über 300 Commits. Neue Nebenversion, weil sich Regeln geändert haben, die Partien anders laufen lassen (Soforteinsatz-AP, Steilfeuer, Trophy-Standard), und weil alle Karten neu geprüft und gesetzt sind.

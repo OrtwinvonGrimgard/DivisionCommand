@@ -8,7 +8,7 @@ import vm from 'vm';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, '../Division_Command_0.5a/web');
+const ROOT = path.resolve(__dirname, '../Division_Command/web');
 const gamesPer = Math.max(1, Number(process.argv[2] || 10));
 
 function loadInto(context, rel) {
@@ -433,7 +433,7 @@ const summary = {
   statics,
 };
 
-const outPath = path.resolve(__dirname, '../Division_Command_0.5a/sim_nation_strength.json');
+const outPath = path.resolve(__dirname, '../Division_Command/sim_nation_strength.json');
 fs.writeFileSync(outPath, JSON.stringify(summary, null, 2));
 console.log(JSON.stringify({
   meta: summary.meta,

@@ -3,7 +3,7 @@
 import json, sys, argparse, random
 from pathlib import Path
 from PIL import Image
-HERE = Path(__file__).resolve().parent; WEB = HERE.parents[1] / 'Division_Command_0.5a/web'
+HERE = Path(__file__).resolve().parent; WEB = HERE.parents[1] / 'Division_Command/web'
 ap = argparse.ArgumentParser(); ap.add_argument('out'); ap.add_argument('--ids'); ap.add_argument('--nation'); ap.add_argument('--type'); ap.add_argument('--per', type=int, default=24); ap.add_argument('--name', default='sheet'); ap.add_argument('--sample', type=int); a = ap.parse_args()
 R = [r for r in json.loads((HERE / 'graphics-manifest.json').read_text())['records'] if r['ready']]
 if a.ids: s = set(a.ids.split(',')); R = [r for r in R if r['id'] in s]

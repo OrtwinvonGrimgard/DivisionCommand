@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
-const WEB = path.join(__dirname, '..', 'Division_Command_0.5a', 'web');
+const WEB = path.join(__dirname, '..', 'Division_Command', 'web');
 const TYPES_DIR = path.join(WEB, 'js/data/sets/types');
 
 const FILE_MAP = {

@@ -59,7 +59,7 @@ assert(eng.frontList(eng.player(0)).some(l => l.inst.uid === hc.uid), 'deploy st
 eng.state.pending = { kind: 'instant-target', player: 0, choices: [{ target: buff.uid }] }; w.dcRender();
 assert(T(buff.uid).classList.contains('legal-target'), 'gold target over effect frame');
 eng.state.pending = null; w.dcRender();
-const css = fs.readFileSync(path.join(__dirname, '../Division_Command_0.5a/web/css/table-effects.css'), 'utf8');
+const css = fs.readFileSync(path.join(__dirname, '../Division_Command/web/css/table-effects.css'), 'utf8');
 assert(css.includes('prefers-reduced-motion'));
 for (const m of css.matchAll(/@keyframes[^{]+\{([\s\S]*?)\}\s*\}/g)) assert(!/(width|height|top|left|box-shadow)\s*:/.test(m[1]), 'only opacity/transform/background-position');
 assert.equal(h.errors.length, 0, String(h.errors));

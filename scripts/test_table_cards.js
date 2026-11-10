@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { setup } = require('./test_audio_actions');
-const WEB = path.join(__dirname, '../Division_Command_0.5a/web');
+const WEB = path.join(__dirname, '../Division_Command/web');
 const h = setup('off'), { w, eng, add, click } = h;
 let artwork = 0, textures = 0;
 for (const def of w.DC_CATALOG.cards) {

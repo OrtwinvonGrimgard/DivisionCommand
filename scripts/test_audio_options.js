@@ -3,7 +3,7 @@ const { JSDOM } = require('jsdom');
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
-const WEB = path.join(__dirname, '../Division_Command_0.5a/web');
+const WEB = path.join(__dirname, '../Division_Command/web');
 const html = fs.readFileSync(path.join(WEB, 'index.html'), 'utf8');
 function fixture(saved) {
   const dom = new JSDOM(html, { runScripts: 'outside-only', url: 'http://localhost/' });

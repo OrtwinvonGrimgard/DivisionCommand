@@ -8,7 +8,7 @@ import vm from 'vm';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, '../Division_Command_0.5a/web');
+const ROOT = path.resolve(__dirname, '../Division_Command/web');
 const gamesPer = Math.max(1, Number(process.argv[2] || 8));
 
 function loadInto(context, rel) {

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-/* Erzeugt Division_Command_0.5a/docs/regeln/SCHLUESSELWOERTER.md aus den Spieldaten. */
+/* Erzeugt Division_Command/docs/regeln/SCHLUESSELWOERTER.md aus den Spieldaten. */
 const fs = require('fs'), path = require('path');
 const L = require('../nation_pools/load_game.js'); const w = L.loadGame({ quiet: true });
 const WORDS = Object.keys(w.DC_KEYWORDS);

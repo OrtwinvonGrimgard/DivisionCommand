@@ -8,7 +8,7 @@ import vm from 'vm';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, '../Division_Command_0.5a/web');
+const ROOT = path.resolve(__dirname, '../Division_Command/web');
 
 const nGames = Number(process.argv[2] || 200);
 const mode = String(process.argv[3] || 'baseline');
@@ -327,5 +327,5 @@ const summary = {
 };
 
 console.log(JSON.stringify(summary, null, 2));
-const outDir = path.resolve(__dirname, '../Division_Command_0.5a');
+const outDir = path.resolve(__dirname, '../Division_Command');
 fs.writeFileSync(path.join(outDir, `sim_front_${mode}.json`), JSON.stringify({ summary, results: ok.slice(0, 20) }, null, 2));

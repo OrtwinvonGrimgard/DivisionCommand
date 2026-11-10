@@ -8,7 +8,7 @@ import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const WEB = path.resolve(__dirname, '../Division_Command_0.5a/web');
+const WEB = path.resolve(__dirname, '../Division_Command/web');
 const OUT = '/workspace';
 const css = fs.readFileSync(path.join(WEB, 'css/app.css'), 'utf8');
 

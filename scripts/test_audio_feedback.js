@@ -3,7 +3,7 @@ const { JSDOM } = require('jsdom');
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
-const WEB = path.join(__dirname, '../Division_Command_0.5a/web');
+const WEB = path.join(__dirname, '../Division_Command/web');
 function fixture() {
   const dom = new JSDOM(`<button id="menu"><span>A</span><b>B</b></button><button id="next">Next</button>
     <button id="disabled" disabled>No</button><div id="hand"><div class="card"><img><span>C</span></div></div>

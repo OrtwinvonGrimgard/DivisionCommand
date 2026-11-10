@@ -2,7 +2,7 @@
 const assert = require('node:assert/strict');
 const fs = require('fs'), path = require('path');
 const { setup } = require('./test_audio_actions');
-const web = path.join(__dirname, '../Division_Command_0.5a/web');
+const web = path.join(__dirname, '../Division_Command/web');
 const css = fs.readFileSync(path.join(web, 'css/hud-pro.css'), 'utf8');
 const html = fs.readFileSync(path.join(web, 'index.html'), 'utf8');
 assert(html.indexOf('hud-pro.css') > html.indexOf('table-chat.css'), 'hud css loaded last');

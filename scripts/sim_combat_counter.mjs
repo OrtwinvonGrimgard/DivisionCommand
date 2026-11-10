@@ -8,7 +8,7 @@ import vm from 'vm';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, '../Division_Command_0.5a/web');
+const ROOT = path.resolve(__dirname, '../Division_Command/web');
 const nGames = Number(process.argv[2] || 200);
 const mode = String(process.argv[3] || 'survivor_only');
 if (!['survivor_only', 'none', 'simultaneous'].includes(mode)) {
@@ -284,6 +284,6 @@ const summary = {
 
 console.log(JSON.stringify(summary, null, 2));
 fs.writeFileSync(
-  path.resolve(__dirname, `../Division_Command_0.5a/sim_counter_${mode}.json`),
+  path.resolve(__dirname, `../Division_Command/sim_counter_${mode}.json`),
   JSON.stringify({ summary }, null, 2)
 );

@@ -2,7 +2,7 @@
 const assert = require('node:assert/strict');
 const fs = require('fs'), path = require('path');
 const { setup } = require('./test_audio_actions');
-const WEB = path.join(__dirname, '..', 'Division_Command_0.5a', 'web');
+const WEB = path.join(__dirname, '..', 'Division_Command', 'web');
 const h = setup('off'), { w } = h;
 const $ = s => w.document.querySelector(s), $$ = s => w.document.querySelectorAll(s);
 const css = fs.readFileSync(path.join(WEB, 'css/officer-table.css'), 'utf8');

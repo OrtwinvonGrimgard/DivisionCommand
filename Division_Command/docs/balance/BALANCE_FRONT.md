@@ -76,7 +76,7 @@ Flags in `catalog.js` → `rules.deploy_protection` **true** (permanent), `rules
 
 Repro: `node scripts/sim_front_snowball.mjs 200 baseline|deploy_protection|strict_facing|both`
 
-Rohdaten (Stichprobe): `sim_front_*.json` im Ordner `Division_Command_0.5a/`.
+Rohdaten (Stichprobe): `sim_front_*.json` im Ordner `Division_Command/`.
 
 ---
 

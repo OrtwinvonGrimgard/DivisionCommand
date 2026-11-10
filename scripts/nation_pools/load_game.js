@@ -1,7 +1,7 @@
 'use strict';
 /* Node-Loader für Engine + Katalog (inkl. nation_pools.js), ohne DOM. */
 const fs = require('fs'), path = require('path'), vm = require('vm');
-const WEB = path.join(__dirname, '..', '..', 'Division_Command_0.5a', 'web');
+const WEB = path.join(__dirname, '..', '..', 'Division_Command', 'web');
 const TYPES = ['doktrinen','tokens','infanterie','panzer','artillerie','aufklaerung','elite','unterstuetzung','soforteinsatz','ausruestung','nation_pools', 'tactical'];
 function loadGame(opts) {
   opts = opts || {};

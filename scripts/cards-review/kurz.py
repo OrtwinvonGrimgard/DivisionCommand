@@ -60,7 +60,7 @@ def write_docs():
         if not v['gekuerzt']: continue
         f, c = A[i]
         o += [f'## `{i}` – {c.get("name")} ({c.get("typ")})', '', f'**Fläche:** {v["kurz"]}', '', '**Volltext:**', '', '> ' + (c.get('text') or '').replace('\n', '\n> '), '']
-    (ROOT / 'Division_Command_0.5a/docs/regeln/KARTEN_SONDERFAELLE.md').write_text('\n'.join(o) + '\n')
+    (ROOT / 'Division_Command/docs/regeln/KARTEN_SONDERFAELLE.md').write_text('\n'.join(o) + '\n')
     print('docs', sum(v['gekuerzt'] for v in K.values()))
 if __name__ == '__main__':
     write_docs()

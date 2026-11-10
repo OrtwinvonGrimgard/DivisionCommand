@@ -1,6 +1,6 @@
 // Regenerates web/js/data/image-manifest.js from the real files under web/assets/cards.
 const fs = require('fs'), path = require('path');
-const WEB = path.join(__dirname, '../Division_Command_0.5a/web');
+const WEB = path.join(__dirname, '../Division_Command/web');
 const ROOT = path.join(WEB, 'assets/cards');
 function walk(d) { return fs.readdirSync(d, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]); }
 const files = walk(ROOT).map(f => path.relative(ROOT, f).split(path.sep).join('/')).filter(f => /\.(png|jpe?g|webp)$/i.test(f)).sort();

@@ -7,7 +7,7 @@
 const fs = require('fs'), path = require('path'), vm = require('vm');
 const A = require('./assign_lib.js');
 const ROOT = path.join(__dirname, '..', '..');
-const TYPES = path.join(ROOT, 'Division_Command_0.5a/web/js/data/sets/types');
+const TYPES = path.join(ROOT, 'Division_Command/web/js/data/sets/types');
 const log = [];
 for (const f of fs.readdirSync(TYPES)) {
   if (!f.endsWith('.js') || f === 'nation_pools.js') continue;

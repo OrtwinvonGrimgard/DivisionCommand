@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('fs'),path=require('path'),cp=require('child_process');
-const ROOT=path.join(__dirname,'..'),WEB=path.join(ROOT,'Division_Command_0.5a/web');
+const ROOT=path.join(__dirname,'..'),WEB=path.join(ROOT,'Division_Command/web');
 cp.execFileSync('python3',['scripts/graphics/verify.py'],{cwd:ROOT,stdio:'inherit'});
 const {setup}=require('./test_audio_actions'),h=setup('off'),{w,eng,add,click}=h;
 const records=require('./graphics/graphics-manifest.json').records,faces=w.DC_CARD_FACES;

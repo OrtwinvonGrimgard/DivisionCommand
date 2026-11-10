@@ -2,7 +2,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const WEB = path.join(__dirname, '../Division_Command_0.5a/web');
+const WEB = path.join(__dirname, '../Division_Command/web');
 const { files } = require('./build_image_manifest'); // regenerates + returns disk listing
 const manifestSrc = fs.readFileSync(path.join(WEB, 'js/data/image-manifest.js'), 'utf8');
 const { setup } = require('./test_audio_actions');

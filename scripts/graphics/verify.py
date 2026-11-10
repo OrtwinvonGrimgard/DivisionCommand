@@ -4,7 +4,7 @@ Renderer-Hash (alpha40+KartenEditor), Laufzeitmanifest. Keine OCR-Behauptung."""
 import json, hashlib, subprocess, re
 from pathlib import Path
 from PIL import Image
-HERE = Path(__file__).resolve().parent; ROOT = HERE.parents[1]; WEB = ROOT / 'Division_Command_0.5a/web'
+HERE = Path(__file__).resolve().parent; ROOT = HERE.parents[1]; WEB = ROOT / 'Division_Command/web'
 TOOLS = ROOT / 'KartenEditor' / 'tools'
 sha = lambda b: hashlib.sha256(b).hexdigest()
 def renderer_digest():

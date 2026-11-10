@@ -54,7 +54,7 @@ test('nur identische bestehende Kerne migriert; Parameter/Abgrenzungen bleiben',
  const original=require('./keywords/assign_lib').WORDS;assert.equal(original.length,16);original.forEach(k=>assert(w.DC_KEYWORDS[k]));
 });
 test('generierte Quellen und Ausgaben sind byte-idempotent',()=>{
- const files=['Division_Command_0.5a/web/js/data/sets/types/tactical.js','Division_Command_0.5a/web/js/data/sets/types/nation_pools.js','Division_Command_0.5a/web/js/data/keywords.js'];
+ const files=['Division_Command/web/js/data/sets/types/tactical.js','Division_Command/web/js/data/sets/types/nation_pools.js','Division_Command/web/js/data/keywords.js'];
  const before=files.map(f=>fs.readFileSync(path.join(__dirname,'..',f),'utf8'));
  cp.execFileSync(process.execPath,['scripts/tactics/build.js'],{cwd:path.join(__dirname,'..')});cp.execFileSync(process.execPath,['scripts/nation_pools/build.js'],{cwd:path.join(__dirname,'..')});
  files.forEach((f,i)=>assert.equal(fs.readFileSync(path.join(__dirname,'..',f),'utf8'),before[i],f+' reproduzierbar'));
