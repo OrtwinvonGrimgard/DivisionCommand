@@ -1,4 +1,9 @@
-// LAN: Host rechnet allein. Gast sendet Absichten, zeigt sie vorläufig, wartet auf seq.
+/**
+ * LAN-Protokoll: Der Host rechnet allein (autoritative Engine).
+ * Der Gast sendet Absichten, zeigt sie vorläufig und wartet auf die Sequenznummer.
+ * Keine Regelauswertung auf der Gastseite.
+ * Export: `window.DCNet`.
+ */
 (function (global) {
   'use strict';
 

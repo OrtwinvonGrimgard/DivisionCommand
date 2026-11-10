@@ -1,4 +1,8 @@
-/* Terminal presentation only. App owns lifecycle, networking and logging. */
+/**
+ * Endbildschirm (Sieg/Niederlage/Unentschieden). Nur Darstellung;
+ * Lebenszyklus, Netz und Protokoll bleiben in app.js.
+ * Export: `window.DCEndScreen`.
+ */
 (function (global) {
   'use strict';
   var root = null, background = [], previousFocus = null;

@@ -1,3 +1,7 @@
+/**
+ * Wartefenster (PEEK, Reaktionen) müssen immer beendbar sein; der Bot gibt weiter, statt zu hängen.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 /* Bot-Hänger t237: Wartefenster müssen immer eine legale Aktion anbieten. */
 const assert = require('assert');

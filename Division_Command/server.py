@@ -13,6 +13,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 def _base():
+    """Installationswurzel: PyInstaller-Bundle oder Ordner dieser Datei."""
     if getattr(sys, "frozen", False):
         return Path(sys._MEIPASS)
     return Path(__file__).resolve().parent
@@ -24,6 +25,7 @@ HTTP_PORT = 8765
 BEACON = b"DIVISION-COMMAND-V1"
 
 def _find_editor_root() -> Path:
+    """Pfad zum KartenEditor (neben dem Spiel, im Elternordner oder Fallback)."""
     here = _base()
     candidates = [
         here / "KartenEditor",
@@ -66,6 +68,7 @@ except Exception as exc:
 
 
 def _writable(folder: Path) -> bool:
+    """True, wenn in den Ordner geschrieben werden kann."""
     try:
         folder.mkdir(parents=True, exist_ok=True)
         probe = folder / ".dc_write"
@@ -77,6 +80,7 @@ def _writable(folder: Path) -> bool:
 
 
 def outbox_root() -> Path:
+    """Wurzel für exportierte Editor-Karten (Documents/Spielordner)."""
     home = Path(os.environ.get("USERPROFILE") or Path.home())
     od = os.environ.get("OneDrive") or os.environ.get("OneDriveConsumer") or ""
     candidates = [
@@ -101,6 +105,7 @@ def outbox_root() -> Path:
 
 
 def ensure_outbox_tree(root: Path | None = None) -> Path:
+    """Legt die typ-/seltenheitsbezogenen Unterordner im Export an."""
     folder = root or outbox_root()
     for typ in TYP_DIR.values():
         for metal in ("gold", "silber", "bronze"):
@@ -109,6 +114,7 @@ def ensure_outbox_tree(root: Path | None = None) -> Path:
 
 
 def card_number(body: dict) -> str:
+    """Normalisierte Kartennummer aus dem Editor-Request."""
     import re
     raw = str(body.get("number") or "001")
     digits = re.sub(r"\D+", "", raw) or "1"
@@ -116,6 +122,7 @@ def card_number(body: dict) -> str:
 
 
 def find_art(image_name: str, typ: str, token_kind: str) -> Path:
+    """Sucht ein Motiv in Editor- und Spiel-Kartenordnern."""
     dirs = [EDITOR_CARDS, GAME_CARDS]
     name = str(image_name or "").strip()
     if name:
@@ -140,6 +147,7 @@ def find_art(image_name: str, typ: str, token_kind: str) -> Path:
 
 
 def render_card(body: dict) -> bytes:
+    """Rendert eine Editor-Karte als PNG-Bytes."""
     if DCRender is None:
         raise RuntimeError("Kartenrenderer nicht geladen")
     import base64
@@ -216,6 +224,7 @@ def render_card(body: dict) -> bytes:
 
 
 def preview_jpeg(png: bytes, width: int = 640) -> bytes:
+    """Verkleinert ein PNG zu einem JPEG-Preview."""
     from io import BytesIO
     from PIL import Image
     im = Image.open(BytesIO(png)).convert("RGB")
@@ -228,6 +237,7 @@ def preview_jpeg(png: bytes, width: int = 640) -> bytes:
 
 
 def save_png(png: bytes, body: dict) -> Path:
+    """Speichert ein gerendertes PNG im Exportordner."""
     typ = TYP_DIR.get(str(body.get("typ") or "Einheit"), "Einheit")
     metal = METAL_DIR.get(str(body.get("metal") or "gold").lower(), "gold")
     num = card_number(body)
@@ -246,6 +256,7 @@ host_name = "Spieler"
 
 
 def local_ips() -> list[str]:
+    """Lokale IPv4-Adressen für die LAN-Anzeige."""
     found: set[str] = set()
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -377,6 +388,7 @@ class Handler(SimpleHTTPRequestHandler):
 
 
 def _peers_view():
+    """Sichtbare Lobby-Peers (veraltete Einträge werden verworfen)."""
     now = time.time()
     with peers_lock:
         dead = [k for k, v in peers.items() if now - v["seen"] > 8]
@@ -389,6 +401,7 @@ def _peers_view():
 
 
 def udp_loop(http_port: int):
+    """UDP-Antworten für die LAN-Suche (Port 47831). Läuft im Hintergrund."""
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
@@ -438,6 +451,7 @@ def udp_loop(http_port: int):
 
 
 def ws_thread(port: int):
+    """WebSocket-Lobby: Relais zwischen Host und Gast, keine Regelauswertung."""
     try:
         import asyncio
         from websockets.asyncio.server import serve
@@ -536,6 +550,7 @@ def ws_thread(port: int):
 
 
 def main():
+    """Startet den HTTP-Server und optional die Lobby-Dienste; blockiert bis zum Abbruch."""
     global HTTP_PORT, host_name
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", type=int, default=HTTP_PORT)
@@ -594,6 +609,7 @@ def main():
 
 
 def main_from_launcher(name="Spieler", port=None):
+    """Einstieg vom Launcher: setzt Namen/Port und delegiert an main()."""
     global HTTP_PORT, host_name
     if port:
         HTTP_PORT = port

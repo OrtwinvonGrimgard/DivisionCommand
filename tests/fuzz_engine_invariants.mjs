@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 /**
+ * Zufällige Partien: Engine-Invarianten (keine hängenden pending, Partie endet, Stand bleibt legal).
+ * Aufruf von der Repo-Wurzel.
+ */
+/**
  * Engine fuzz: many seeds, bot-vs-bot, invariant checks.
  */
 import fs from 'fs';

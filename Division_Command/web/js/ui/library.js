@@ -1,3 +1,10 @@
+/**
+ * Kartensammlung und Deckbauer der Oberfläche.
+ *
+ * Filtert den Katalog, verwaltet den Deck-Entwurf und spricht die Engine
+ * nicht an — erst „Spielen“ startet eine Partie über app.js.
+ * Export: `window.DCLib`.
+ */
 (function (global) {
   'use strict';
   var draft = { cards: {}, doctrines: [] };
@@ -89,6 +96,11 @@
     });
     return out;
   }
+  /**
+   * True, wenn die Karte zur Suchzeile passt (Name, Text, ID).
+   * @param {object} c
+   * @returns {boolean}
+   */
   function matchesQuery(c) {
     if (!filterQuery) return true;
     var tagNames = ((c && c.tags) || []).map(function (x) { return tagMeta(x).name; }).join(' ');
@@ -111,6 +123,11 @@
     groups.forEach(function (g) { g.list.sort(byName); });
     return groups.filter(function (g) { return g.list.length; });
   }
+  /**
+   * Maximale Kopien dieser Karte (Gold 1, Silber 2, Bronze 4).
+   * @param {object} c
+   * @returns {number}
+   */
   function maxOf(c) {
     if (!c) return 0;
     if (c.typ === 'Doktrin') return 1;
@@ -373,6 +390,11 @@
     ov.querySelector('[data-lib-close]').onclick = function () { ov.style.display = 'none'; };
   }
 
+  /**
+   * Fügt eine Karte zum Entwurf hinzu, sofern das Kopienlimit es erlaubt.
+   * @param {object} c
+   * @returns {boolean}
+   */
   function addCard(c) {
     if (!c) return;
     if (c.typ === 'Doktrin') {
@@ -404,6 +426,10 @@
     deckLimitMessage('');
     render();
   }
+  /**
+   * Entfernt ein Exemplar der ID aus dem Entwurf.
+   * @param {string} id
+   */
   function subCard(id) {
     var c = cardById(id);
     if (c && c.typ === 'Doktrin') {
@@ -651,6 +677,9 @@
     if (!panel.hidden) paintList();
   }
 
+  /**
+   * Zeichnet Sammlung und Deck-Entwurf neu (Filter, Zähler, Listen).
+   */
   function render() {
     bindChrome();
     var host = document.getElementById('lib-list');
@@ -689,6 +718,10 @@
     renderSide();
   }
 
+  /**
+   * Speichert den aktuellen Entwurf unter `name` im LocalStorage.
+   * @param {string} name
+   */
   function saveNamed(name) {
     name = String(name || '').trim().slice(0, 32);
     if (!name) return false;
@@ -725,6 +758,10 @@
     return out;
   }
 
+  /**
+   * Starterdecks aller Nationen aus den Spieldaten.
+   * @returns {object}
+   */
   function nationStarterDecks() {
     var out = [];
     var map = window.DC_NATION_DECKS || {};

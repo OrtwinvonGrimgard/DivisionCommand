@@ -1,3 +1,7 @@
+/**
+ * Jede von der UI angeforderte Bild-URL existiert auf der Platte.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* Image request audit: every card/help/menu/preload image URL must be an existing file; no extension/folder probes. */
 const assert = require('node:assert/strict');
 const fs = require('node:fs');

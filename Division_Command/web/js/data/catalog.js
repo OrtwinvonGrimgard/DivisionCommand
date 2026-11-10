@@ -1,4 +1,10 @@
-/** Bildauflösung: nur exakt vorhandene Dateien aus DC_CARD_FILES anfordern, keine Endungs-/Ordner-Probes. */
+/**
+ * Kartenkatalog: vereinigt alle Typdateien, löst Bildpfade auf und prüft Decks.
+ *
+ * `DC_CATALOG` ist die Quelle für die Engine. Bildanfragen laufen nur über
+ * exakt vorhandene Dateien in `DC_CARD_FILES` (kein Raten von Endungen).
+ * Export: `window.DC_CATALOG`, `dcCardImage`, `DC_validateDeck`.
+ */
 (function (g) {
   'use strict';
   var ALIAS = {

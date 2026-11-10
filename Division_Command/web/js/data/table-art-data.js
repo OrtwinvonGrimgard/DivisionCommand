@@ -1,4 +1,6 @@
-// Audited against actual repository files. No inferred paths or substitute images.
+/**
+ * Tisch-Motive und Rahmen-Zuordnungen. Nur Daten für die 2,5D-Darstellung.
+ */
 window.DC_TABLE_ART = {
   "dc_eh_freiwilligenzug": {
     "src": "assets/cards/art/A033.jpg",

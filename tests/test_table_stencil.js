@@ -1,3 +1,7 @@
+/**
+ * Öl-Schablone: 54 Löcher = Slot-Boxen, Cache-Version.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* Ölgemalte Slot-Schablone (2,5D): Löcher = gemessene Slot-Boxen, Schichtfolge, pointer-events, Status-Licht, flach ohne Schablone. */
 const assert = require('node:assert/strict');
 const fs = require('fs'), path = require('path');

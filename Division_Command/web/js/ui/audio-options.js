@@ -1,4 +1,7 @@
-/* Separate music/SFX levels; delegated input also covers dynamically mounted in-game options. */
+/**
+ * Getrennte Lautstärken für Musik und SFX, inklusive In-Game-Optionen
+ * und Migration älterer Speicherwerte. Keine Spiellogik.
+ */
 (function () {
   'use strict';
   function read(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }

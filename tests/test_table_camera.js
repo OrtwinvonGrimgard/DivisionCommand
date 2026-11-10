@@ -1,3 +1,7 @@
+/**
+ * Tischkamera: Zoom, Pan, Grenzen, Eingaben.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* 2,5D camera: math, bounds, input blocking, focus dedupe/override/pending, pinned hand, actions. No browser. */
 const assert = require('node:assert/strict');
 const { setup } = require('./test_audio_actions');

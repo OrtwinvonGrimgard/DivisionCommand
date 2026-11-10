@@ -1,4 +1,7 @@
-/* Battlefield uses verified motif files, never a different card as fallback. Hand/detail are untouched. */
+/**
+ * Motiv am Tisch: nur geprüfte Bilddateien, nie das Motiv einer anderen Karte
+ * als Ersatz. Hand und Detailansicht bleiben unberührt.
+ */
 (function (global) {
   'use strict';
   function escape(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]; }); }

@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Text/Wahl-Karten aus dem Katalog sind spielbar verdrahtet.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 const fs = require('fs');
 const path = require('path');

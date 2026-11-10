@@ -1,4 +1,10 @@
-// Bots: Schloter (Zufallsprozente) und Test (Bewertung von Brett und Hand).
+/**
+ * Bots: „Schloter“ (gewichteter Zufall) und „Test“ (Brett- und Handbewertung).
+ *
+ * Einziger erlaubter Regelzugriff ist `engine.listActions` / `engine.dispatch`
+ * bzw. `Bot.step(engine, playerId)`. Keine eigenen Regeln.
+ * Export: `window.DCBot`.
+ */
 (function (global) {
   'use strict';
 
@@ -19,37 +25,85 @@
   var cfg = {};
   Object.keys(DEFAULTS).forEach(function (k) { cfg[k] = DEFAULTS[k]; });
 
+  /**
+   * Zufälliges Element oder null.
+   * @param {Array} arr
+   * @returns {*}
+   */
   function pick(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
   }
 
+  /**
+   * Ganzzahl aus der Bot-Konfiguration, begrenzt auf [min, max].
+   * @param {string} key
+   * @param {number} min
+   * @param {number} max
+   * @param {number} fallback
+   * @returns {number}
+   */
   function n(key, min, max, fallback) {
     var v = Number(cfg[key]);
     if (!isFinite(v)) v = fallback;
     return Math.max(min, Math.min(max, v));
   }
 
+  /**
+   * Katalogdefinition einer Hand- oder Feldkarte.
+   * @param {object} engine
+   * @param {object} card
+   * @returns {object|null}
+   */
   function defOf(engine, card) {
     try { return engine.defOf(card); } catch (e) { return {}; }
   }
 
+  /**
+   * Effektcodes der Definition.
+   * @param {object} d
+   * @returns {string[]}
+   */
   function codes(d) {
     return ((d && d.effects) || []).map(function (x) { return x.code; });
   }
 
+  /**
+   * True, wenn die Definition den Effektcode besitzt.
+   * @param {object} d
+   * @param {string} code
+   * @returns {boolean}
+   */
   function hasCode(d, code) {
     return codes(d).indexOf(code) >= 0;
   }
 
+  /**
+   * Anzahl eigener Fronteinheiten.
+   * @param {object} engine
+   * @param {number} pid
+   * @returns {number}
+   */
   function frontCount(engine, pid) {
     var p = engine.player(pid);
     return engine.frontList(p).length;
   }
 
+  /**
+   * Anzahl leerer eigener Frontstellungen.
+   * @param {object} engine
+   * @param {number} pid
+   * @returns {number}
+   */
   function emptyFront(engine, pid) {
     return 9 - frontCount(engine, pid);
   }
 
+  /**
+   * Grobe Bedrohungsschätzung (gegnerische Frontstärke).
+   * @param {object} engine
+   * @param {number} pid
+   * @returns {number}
+   */
   function threat(engine, pid) {
     var opp = engine.opponent(pid);
     var t = 0;
@@ -60,6 +114,12 @@
     return t;
   }
 
+  /**
+   * Wie sehr der Bot noch Einheiten nachlegen sollte.
+   * @param {object} engine
+   * @param {number} pid
+   * @returns {number}
+   */
   function reserveNeed(engine, pid) {
     var p = engine.player(pid);
     var need = 1;
@@ -71,6 +131,13 @@
     return need;
   }
 
+  /**
+   * Bewertet eine Antwort auf ein offenes `pending`.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} act
+   * @returns {number}
+   */
   function scorePending(engine, pid, act) {
     var s = 1;
     var loc = act.target ? engine.findInst(act.target) : null;
@@ -92,6 +159,13 @@
     return s + Math.random();
   }
 
+  /**
+   * Bewertet eine PLAY-Aktion (Test-Bot).
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} act
+   * @returns {number}
+   */
   function scorePlay(engine, pid, act) {
     var p = engine.player(pid);
     var d = engine.byId ? engine.byId[act.cardId] : null;
@@ -150,6 +224,13 @@
     return s;
   }
 
+  /**
+   * Bewertet einen Angriff (Test-Bot).
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} act
+   * @returns {number}
+   */
   function scoreAttack(engine, pid, act) {
     var p = engine.player(pid);
     var aLoc = engine.findInst(act.uid);
@@ -234,6 +315,11 @@
     return { score: bestS, target: best && best.uid };
   }
 
+  /**
+   * True, wenn die Aktion ein Ausspielen von der Hand ist.
+   * @param {object} a
+   * @returns {boolean}
+   */
   function playable(a) {
     if (!a || a.type !== 'PLAY') return false;
     if (a.typ === 'Einheit' && !Number(cfg.allowUnit)) return false;
@@ -243,12 +329,23 @@
     return true;
   }
 
+  /**
+   * Baut eine Bot-Aktion mit gesetztem `player`.
+   * @param {number} pid
+   * @param {object} row
+   * @returns {object}
+   */
   function emit(pid, row) {
     if (!row) return { type: 'END_TURN', player: pid };
     if (row.act.type === 'ATTACK') return { type: 'ATTACK', player: pid, uid: row.act.uid, target: row.target };
     return Object.assign({ player: pid }, row.act);
   }
 
+  /**
+   * Stabile Signatur einer Aktion, um Wiederholungen zu sperren.
+   * @param {object} a
+   * @returns {string}
+   */
   function actKey(a) {
     if (!a) return '';
     var slot = a.slot ? (a.slot.section + ':' + a.slot.row) : '';
@@ -256,11 +353,24 @@
   }
 
 
+  /**
+   * Gibt eine legale Pass-/Weiter-Aktion zurück, sonst Ende des Zugs.
+   * @param {object[]} acts
+   * @param {object} [skip]
+   * @returns {object|null}
+   */
   // Weitergeben/Schließen offener Fenster (REACT_PASS, PEEK_DONE …), von der Engine als pass:true geliefert.
   function passAction(acts, skip) {
     return (acts || []).find(function (a) { return a.pass && !(skip && skip[actKey(a)]); }) || null;
   }
 
+  /**
+   * Wählt unter den legalen Antworten auf `pending`.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object[]} pendingActs
+   * @returns {object|null}
+   */
   function pickPending(engine, pid, pendingActs) {
     var pend = engine.state && engine.state.pending;
     var selected = (pend && pend.selected) || [];
@@ -289,6 +399,13 @@
     return candidates;
   }
 
+  /**
+   * Ein Schritt des Test-Bots (Bewertung).
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} [skip]
+   * @returns {object|null} Aktion oder null
+   */
   function stepTest(engine, pid, skip) {
     var acts = engine.listActions(pid);
     if (!acts.length) return { type: 'END_TURN', player: pid };
@@ -345,6 +462,13 @@
     return emit(pid, rest[0]);
   }
 
+  /**
+   * Ein Schritt des Schloter-Bots (gewichteter Zufall).
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} [skip]
+   * @returns {object|null}
+   */
   function stepSchloter(engine, pid, skip) {
     var acts = engine.listActions(pid);
     if (!acts.length) return { type: 'END_TURN', player: pid };
@@ -380,6 +504,14 @@
     return end ? { type: 'END_TURN', player: pid } : Object.assign({ player: pid }, pick(acts));
   }
 
+  /**
+   * Öffentliche Bot-API: nächste Aktion für `playerId`, oder null wenn nichts legal ist.
+   * Liest nur `listActions` und erzeugt ein Aktionsobjekt — der Aufrufer macht `dispatch`.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} [skip] bereits gescheiterte Aktions-Schlüssel
+   * @returns {object|null}
+   */
   function step(engine, pid, skip) {
     var act;
     if ((cfg.model || 'test') === 'schloter') act = stepSchloter(engine, pid, skip);
@@ -408,6 +540,10 @@
     return act;
   }
 
+  /**
+   * Überschreibt Bot-Parameter (Chancen, erlaubte Aktionstypen).
+   * @param {object} next
+   */
   function applyCfg(next) {
     if (!next) return;
     Object.keys(DEFAULTS).forEach(function (k) {
@@ -416,6 +552,9 @@
     if (next.model) cfg.model = String(next.model);
   }
 
+  /**
+   * Setzt die Bot-Konfiguration auf die Standardwerte zurück.
+   */
   function useDefaults() {
     var m = cfg.model;
     applyCfg(DEFAULTS);

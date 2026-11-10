@@ -1,3 +1,8 @@
+/**
+ * Quellliste neuer Poolkarten für mehrere Nationen.
+ * Wird von `scripts/nation_pools/build.js` zu `nation_pools.js` verarbeitet.
+ * Nur Daten, keine Spiellogik.
+ */
 module.exports = {
   Theryn: { short: 'THE', cards: [
     'I|Vorderste Welle|b|1|1|1|kw:Staffelangriff|Sie gehen voran, damit andere folgen.',

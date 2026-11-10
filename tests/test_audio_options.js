@@ -1,3 +1,7 @@
+/**
+ * Getrennte Musik-/SFX-Regler, Migration, Mute, Persistenz.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* Real options HTML + audio modules in a DOM, no browser automation. */
 const { JSDOM } = require('jsdom');
 const fs = require('node:fs');

@@ -1,3 +1,7 @@
+/**
+ * Kartendarstellung auf dem Tisch (Vorderseite, verdeckt, CSS).
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* Actual production renderer + DOM handlers. No browser automation. */
 const assert = require('node:assert/strict');
 const fs = require('node:fs');

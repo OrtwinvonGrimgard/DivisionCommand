@@ -1,5 +1,7 @@
-// Nationen-Decks für Division Command 0.5a
-// Bronze 4×, Silber 2×, Gold 1×.
+/**
+ * Stammdaten der 16 Nationen (Namen, Farben, Kurzprofile). Nur Daten, keine Regeln.
+ * Wird von Sammlung, Deckbau und UI gelesen.
+ */
 
 window.DC_NATIONS = {
   "Steinmark": {

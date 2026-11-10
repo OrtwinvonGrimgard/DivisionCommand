@@ -1,3 +1,7 @@
+/**
+ * Offizielle Starterdecks je Nation (60 Karten + 2 Doktrinen).
+ * Nur Daten. Kopienlimits und Mischen prüft `DC_validateDeck` im Katalog.
+ */
 window.DC_NATION_DECKS = {
   "Steinmark": {
     "name": "Professionell und methodisch",

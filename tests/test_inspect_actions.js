@@ -1,3 +1,7 @@
+/**
+ * Aktionen in der Kartenansicht.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* Detailansicht: Aktionen nur aus Engine-Regeln, Dispatch über Produktionspfad, Gegner read-only. */
 const assert = require('node:assert/strict');
 const { setup } = require('./test_audio_actions');

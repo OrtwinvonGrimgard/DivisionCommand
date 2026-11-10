@@ -1,3 +1,9 @@
+/**
+ * Doktrinen (Katalog). Nur Daten; Auswertung in doctrine_runtime.js und victory_trophy.js.
+ *
+ * Keine Kommentare pro Karte (zu umfangreich). Änderungen an Werten oder
+ * Effekten sind Regeländerungen und gehören nicht in diese Aufräumung.
+ */
 window.DC_SET_TYPES = window.DC_SET_TYPES || {};
 window.DC_SET_TYPES["Doktrin"] = [
   {

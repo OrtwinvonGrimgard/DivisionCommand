@@ -1,3 +1,7 @@
+/**
+ * Regression: Caldris zweiter Balance-Schritt und Version 0.6b (t240).
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 /* Balance-Pass t240 (0.6b): Caldris zweiter Schritt (docs/balance/BALANCE_T240.md). */
 const assert = require('assert');

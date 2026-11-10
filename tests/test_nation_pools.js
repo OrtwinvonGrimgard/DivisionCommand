@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * 100 Karten je Nation, Starter 60+2, Limits, freies Mischen, Effekte.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 /* Nationenpools: 100 einzigartige Karten je Nation (+2 Doktrinen), Starterdecks 60+2 aus eigener Nation, Limits,
    und jede neue Karte wird über die Produktions-Dispatch-Pfade gespielt und ihr Effekt geprüft. */

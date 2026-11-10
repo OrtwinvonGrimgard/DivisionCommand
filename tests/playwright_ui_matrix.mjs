@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 /**
+ * Playwright-Matrix der Oberfläche (braucht Browser; nicht Teil von `npm test`).
+ * Aufruf von der Repo-Wurzel.
+ */
+/**
  * UI-Matrix against server.py (expects http://127.0.0.1:8765 or starts one).
  * Screenshots → /workspace/bf_*.png
  */

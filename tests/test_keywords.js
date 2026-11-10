@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Die 16 allgemeinen Schlüsselwörter: Daten, Darstellung, Engine-Wirkung.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 /* Die 16 allgemeinen Schlüsselwörter: Daten (alle spielbaren Karten), Darstellung und Engine-Wirkung je Wort
    inkl. Limits, Eingraben und keine Preisgabe verdeckter Informationen (Platztausch/Hinterhalt). */

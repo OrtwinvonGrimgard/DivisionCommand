@@ -1,4 +1,7 @@
-/* Presentation-only delegated UI feedback. No game dispatch, render or state writes. */
+/**
+ * Delegiertes UI-Audio-Feedback (Hover, Klick, Fehler). Keine Spielzüge,
+ * kein `dispatch`, kein Rendern. Wird von app.js und Menüs genutzt.
+ */
 (function () {
   'use strict';
   var unlocked = false;

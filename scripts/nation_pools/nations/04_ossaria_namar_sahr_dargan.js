@@ -1,3 +1,8 @@
+/**
+ * Quellliste neuer Poolkarten für mehrere Nationen.
+ * Wird von `scripts/nation_pools/build.js` zu `nation_pools.js` verarbeitet.
+ * Nur Daten, keine Spiellogik.
+ */
 module.exports = {
   Ossaria: { short: 'OSS', cards: [
     'I|Namensträger|b|2|2|4|-|Trägt die Namen der Toten auf der Rüstung.',

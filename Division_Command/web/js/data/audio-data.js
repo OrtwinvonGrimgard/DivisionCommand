@@ -1,5 +1,7 @@
-// Musik- und Effekt-Cache. Lieder bleiben Dateien (zu groß zum Einbetten).
-// Kurze SFX können später als data-URL in DCAudio.sfxEmbed landen.
+/**
+ * Audiokatalog: welche Stücke und SFX auf welchem Schirm laufen.
+ * Keine Spiellogik; die Wiedergabe liegt in der UI.
+ */
 (function (global) {
   'use strict';
 

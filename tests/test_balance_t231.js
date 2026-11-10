@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Regression: frühe Balance-Fälle (Siegel, Normgewehr, Rabatte).
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 const assert = require('node:assert/strict');
 const L = require('../scripts/nation_pools/load_game.js');

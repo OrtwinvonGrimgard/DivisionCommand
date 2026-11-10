@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Regression t244: reparierte Ausrüstungswerte und Verbindungssiegel ohne heimlichen ATK-Bonus.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 /* t244: Parser-Nullwerte an drei Ausrüstungen und Verbindungssiegel ohne heimlichen ATK-Bonus. */
 const assert = require('node:assert/strict');

@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Sammlungsfilter, Suche, Seltenheitszahlen, UI-Chrome.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 const assert = require('assert');
 const fs = require('fs');

@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Playwright-Smoke für Soundeffekte (braucht Browser).
+ * Aufruf von der Repo-Wurzel.
+ */
 import { chromium } from 'playwright';
 import { spawn } from 'child_process';
 import http from 'http';

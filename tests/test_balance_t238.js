@@ -1,3 +1,7 @@
+/**
+ * Regression: Mischdeck-Generator und Poolwerte aus t238.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 /* Balance-Pass t238: realistischer Mischdeck-Generator, Caldris-/Namar-Poolwerte, SCHADEN_MINUS n (docs/balance/BALANCE_T238.md). */
 const assert = require('assert');

@@ -1,4 +1,7 @@
-// Titelhintergrund: Gemälde als Dauerschleife (Lampe, Fransen, Flaggen, Stadtfeuer).
+/**
+ * Titelhintergrund: Gemälde als Dauerschleife (Lampe, Fransen, Flaggen, Stadtfeuer).
+ * Rein kosmetisch, keine Spiellogik.
+ */
 (function () {
   'use strict';
   var vid = document.getElementById('title-loop');

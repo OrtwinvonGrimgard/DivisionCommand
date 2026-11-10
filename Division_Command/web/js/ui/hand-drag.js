@@ -1,4 +1,7 @@
-/* Karte aus der Hand auf einen Slot ziehen. Nur dieses Modul. */
+/**
+ * Ziehen einer Handkarte auf eine Front- oder Support-Stellung.
+ * Nur Darstellung und das Auslösen der bereits legalen PLAY/SLOT-Aktion in app.js.
+ */
 (function () {
   var drag = null;
 

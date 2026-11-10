@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Taktische Schlüsselwörter: Legalität, Kosten, DOM-Klicks, Reproduzierbarkeit.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 /* Dispatch-Regressionsprüfungen für t203: keine Bild-/Browserprüfung, kein Text-Effektparser. */
 const assert=require('node:assert/strict'),fs=require('fs'),path=require('path'),cp=require('child_process');

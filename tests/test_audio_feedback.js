@@ -1,3 +1,7 @@
+/**
+ * Hover, Tastaturfokus, Lautstärke und Isolation von Audiofehlern.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* DOM/event-listener tests only. No browser or desktop automation. */
 const { JSDOM } = require('jsdom');
 const fs = require('node:fs');

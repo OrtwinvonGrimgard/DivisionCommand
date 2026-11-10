@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Playtest-Logger: Speichern, Export, keine Spielstandsänderung.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 const fs = require('fs');
 const path = require('path');

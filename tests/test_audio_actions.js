@@ -1,9 +1,18 @@
+/**
+ * DOM-Durchläufe echter Aktionen (Einheit, Ausrüstung, Soforteinsatz, Doktrin) über mehrere Audiomodi. Exportiert `setup()` für andere UI-Tests.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* DOM-only integration: production event handlers + real engine; no browser. */
 const { JSDOM, VirtualConsole } = require('jsdom');
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
 const WEB = path.join(__dirname, '../Division_Command/web');
+/**
+ * Baut eine jsdom-Umgebung mit Katalog, Engine und UI (`mode` steuert Audio).
+ * @param {string} [mode] Audiomodus (`off`, `on`, …)
+ * @returns {{w: object, eng: object, add: Function, click: Function}}
+ */
 function setup(audioMode = 'on') {
   const errors = [];
   const vc = new VirtualConsole();

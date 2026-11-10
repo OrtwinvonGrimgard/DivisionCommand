@@ -1,3 +1,7 @@
+/**
+ * LAN-Chat am Tisch, kein Leck in das Partieprotokoll.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* Table protocol window: Protokoll | Chat tabs with real net.js over a fake WebSocket. No browser. */
 const assert = require('node:assert/strict');
 const fs = require('node:fs');

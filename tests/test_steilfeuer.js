@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Steilfeuer I–V: Reichweiten und Support-Angriff (RULES §7.1).
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 const assert = require('assert');
 const L = require('../scripts/nation_pools/load_game.js');

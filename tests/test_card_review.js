@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Kartenprüfung: implementierte Fähigkeiten, keine Alt-Abkürzungen, CM-Fälle.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 /* t212 Kartenprüfung: Text = Implementierung. Prüft die allgemeine CM-Mechanik, Ausrüstungs-CM für den Träger,
    strukturierte Zielwahl, Engine-Fixes (Mehrfachziel, COST_NEXT, OUT_OF_COMBAT, EQUIP_HEAL_ONCE pro Zug)

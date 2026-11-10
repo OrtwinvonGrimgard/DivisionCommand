@@ -1,3 +1,7 @@
+/**
+ * Effektdarstellung liest nur echte Engine-Daten, nichts erfinden.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* Effect frames/labels from real engine data; DOM only, no browser. */
 const assert = require('node:assert/strict');
 const fs = require('node:fs');

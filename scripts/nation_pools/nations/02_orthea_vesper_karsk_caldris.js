@@ -1,3 +1,8 @@
+/**
+ * Quellliste neuer Poolkarten für mehrere Nationen.
+ * Wird von `scripts/nation_pools/build.js` zu `nation_pools.js` verarbeitet.
+ * Nur Daten, keine Spiellogik.
+ */
 module.exports = {
   Orthea: { short: 'ORT', cards: [
     'I|Messkette Alpha|b|2|2|2|kw:Staffelangriff|Trägt die Probe an die Front.',

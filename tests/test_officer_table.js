@@ -1,3 +1,7 @@
+/**
+ * 2,5D-Offizierstisch: Kalibrierung, Zonen, Reduced Motion.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* Offizierstisch (2,5D-Inszenierung): Lampe/Licht/Holz nur im 2,5D-Modus, Zonen & Slots unverändert, Reduced-Motion, flacher Modus intakt. */
 const assert = require('node:assert/strict');
 const fs = require('fs'), path = require('path');

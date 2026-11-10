@@ -1,3 +1,7 @@
+/**
+ * Prüft Vorderseiten-Pipeline (verify.py, card-faces, SW-Cache, HTML-Ladereihenfolge).
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 const assert=require('node:assert/strict'),fs=require('fs'),path=require('path'),cp=require('child_process');
 const ROOT=path.join(__dirname,'..'),WEB=path.join(ROOT,'Division_Command/web');

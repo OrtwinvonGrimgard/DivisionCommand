@@ -1,3 +1,7 @@
+/**
+ * Verdeckte Support-Fallen lösen bei Feindkontakt als Reaktion ohne AP aus (RULES §12.1).
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 /* t238: Verdeckte Fallen im Support lösen als Feindkontakt-Reaktion aus (RULES §12.1). */
 const assert = require('assert');

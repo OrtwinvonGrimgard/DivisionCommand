@@ -1,3 +1,7 @@
+/**
+ * Endbildschirm: Gründe, Rematch, Fokusfalle, keine Regeländerungen.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* DOM-only integration of production end screen, action handlers and engine lifecycle. */
 const assert = require('node:assert/strict');
 const fs = require('node:fs');

@@ -1,7 +1,9 @@
 /**
- * Doctrine combat/passive runtime.
- * Wires structured doctrine effect codes into Engine (passives, costs, triggers, turn-start).
- * Loads after engine.js; same install pattern as victory_trophy.js.
+ * Doktrin-Laufzeit: strukturierte Doktrin-Effektcodes an die Engine anbinden
+ * (Passive, Kosten, Trigger, Zugbeginn).
+ *
+ * Lädt nach `engine.js`, gleiches Installationsmuster wie `victory_trophy.js`.
+ * Hängt Methoden am Engine-Prototyp ein; ändert keine Kartendaten.
  */
 (function (root) {
   'use strict';

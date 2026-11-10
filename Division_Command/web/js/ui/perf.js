@@ -1,3 +1,7 @@
+/**
+ * Optionaler Leistungsmonitor (FPS/GPU) für die Oberfläche. Keine Spiellogik.
+ * Export: `window.DCPerf`.
+ */
 (function (global) {
   'use strict';
   var box, on = false, frames = 0, last = 0, fps = 0;

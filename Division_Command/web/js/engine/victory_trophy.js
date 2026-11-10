@@ -1,8 +1,11 @@
 /**
- * Trophy victory mode (victory_mode: 'trophy').
- * Catalog default is 'trophy' (candidate K); legacy 'classic' remains available.
- * Trophy knobs (candidate K): VP5, safety 26/28, DB×3/cd2, elite 2, dok need×0.65.
- * Doctrine VP objectives are NOT nation-specific.
+ * Trophy-Siegmodus (`victory_mode: 'trophy'`, Kandidat K).
+ *
+ * Vorgabe im Katalog ist Trophy; Legacy `classic` bleibt wählbar.
+ * Knöpfe (K): 5 SP, Safety 26/28, Doktrin-Bedarf ×0,65, Elite +2 SP.
+ * Doktrin-Ziele sind nicht nationsgebunden. Siehe `docs/regeln/SIEGBEDINGUNGEN.md`.
+ *
+ * Installiert sich am Engine-Prototyp, sobald die Datei nach `engine.js` lädt.
  */
 (function (root) {
   'use strict';

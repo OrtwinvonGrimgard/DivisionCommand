@@ -1,3 +1,7 @@
+/**
+ * HUD-Layout, Klick-Durchlass, Zugende- und Log-Handler.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 /* t171u HUD: Struktur, klick-durchlässige Container, Handler intakt, Kamera-Trennung. Kein Browser. */
 const assert = require('node:assert/strict');
 const fs = require('fs'), path = require('path');

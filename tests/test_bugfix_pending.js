@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Hänger und offene pending-Zustände dürfen eine Partie nicht blockieren.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 const fs = require('fs');
 const path = require('path');

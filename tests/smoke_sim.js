@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Kurzer Bot-gegen-Bot-Smoke (Standard 32 Partien). Technischer Lauf, keine Balance-Aussage.
+ * Aufruf von der Repo-Wurzel.
+ */
 'use strict';
 /* Technischer Smoke-Test (keine Balance-Aussage): Bot-gegen-Bot-Partien mit Decks aus 30 Starter- + 30 neuen Poolkarten. */
 const fs = require('fs'), path = require('path'), vm = require('vm');

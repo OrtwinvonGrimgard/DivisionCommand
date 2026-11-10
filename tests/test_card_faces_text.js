@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Jeder Flächentext ≤120 Zeichen; gekürzte Texte stehen verlustfrei in KARTEN_SONDERFAELLE.md.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 /* Phase 2 (t212): Flächentext ≤120 Zeichen je ID; jede gekürzte Karte steht mit wortgleichem Volltext in
    docs/regeln/KARTEN_SONDERFAELLE.md; Volltext bleibt im Datenfeld `text` (Detailansicht). */

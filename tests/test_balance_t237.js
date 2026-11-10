@@ -1,3 +1,7 @@
+/**
+ * Regression: Balance-Pass t237 (Doktrinwerte, Starterdeck-Tausche, Wertband).
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 /* Balance-Pass t237: Doktrinwerte, Starterdeck-Tausch, Poolwerte (siehe docs/balance/BALANCE_T237.md). */
 const assert = require('assert');

@@ -11,12 +11,12 @@
  * 4. Offene Wahlen (Ziel, Münze, Stellung) laufen über Overlay-Dialoge.
  * 5. Die Rundenübersicht erzählt den gegnerischen Zug nacheinander.
  */
-(function () { // Funktion
-  'use strict'; // nächster Schritt im Ablauf
+(function () {
+  'use strict';
   /* Erstes Element zur CSS-Auswahl. */
-    function $(s) { return document.querySelector(s); } // Element in der Seite suchen
+    function $(s) { return document.querySelector(s); }
   /* Fehler ins Lobby- oder Hinweis-Feld schreiben. */
-    function showErr(msg) { // Funktion
+    function showErr(msg) {
     var h = document.getElementById('hint');
     if (h) h.textContent = msg;
     var el = document.getElementById('boot-error');
@@ -26,23 +26,23 @@
   }
   /* Text für innerHTML unschädlich machen. */
     function escapeHtml(s) { // HTML-Sonderzeichen escapen
-    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { // Wert zurückgeben
-      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; // Wert zurückgeben
-    }); // nächster Schritt im Ablauf
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c];
+    });
   }
   /* Mögliche Bildpfade zu einer Kartendatei, eingebettet zuerst. */
     function imgCandidates(filename) { // Fallback-Pfade für das Artwork
-    if (!filename) return []; // Wert zurückgeben
-    var list = []; // lokale Variable
-    var key = String(filename); // lokale Variable
-    var stem = key.replace(/\.png$/i, '').replace(/\.jpg$/i, ''); // lokale Variable
+    if (!filename) return [];
+    var list = [];
+    var key = String(filename);
+    var stem = key.replace(/\.png$/i, '').replace(/\.jpg$/i, '');
     if (/^f\d{2}-/.test(stem)) { // Kit-Porträt: nicht in assets/cards suchen
       if (window.DCPortrait) { var u = DCPortrait.src(stem, 'Lt') || DCPortrait.src(stem.replace(/-(lt|olt|hptm|maj|obstlt|obst|gen|y|m|s)$/,''), 'Lt'); return u ? [u] : []; }
       return [];
     }
-    if (window.DC_IMAGES) { // Zweig nur bei zutreffender Bedingung
-      if (window.DC_IMAGES[key]) list.push(window.DC_IMAGES[key]); // Zweig nur bei zutreffender Bedingung
-      if (window.DC_IMAGES[stem + '.png']) list.push(window.DC_IMAGES[stem + '.png']); // Zweig nur bei zutreffender Bedingung
+    if (window.DC_IMAGES) {
+      if (window.DC_IMAGES[key]) list.push(window.DC_IMAGES[key]);
+      if (window.DC_IMAGES[stem + '.png']) list.push(window.DC_IMAGES[stem + '.png']);
     }
     // Exakt vorhandene Datei aus dem Bildermanifest; keine spekulativen Endungs-/Ordner-Probes mehr.
     var exact = window.dcCardFile ? window.dcCardFile(key) : '';
@@ -51,10 +51,20 @@
     return list;
   }
   window.DC_IMG_OK = window.DC_IMG_OK || {};
+  /**
+   * Dateiname der Kartenvorder- bzw. Rückseite.
+   * @param {object} def
+   * @returns {string}
+   */
   function backFile(def) {
     var typ = def && (def.typ || def.type || '');
     return typ === 'Doktrin' ? 'thumbs/rueckseite-rot.png' : 'thumbs/rueckseite-schwarz.png';
   }
+  /**
+   * Bild-URL relativ zum Karten-Assetordner.
+   * @param {string} filename
+   * @returns {string}
+   */
   function imgSrc(filename) {
     if (!filename) return '';
     if (window.DC_IMG_OK[filename]) return window.DC_IMG_OK[filename];
@@ -86,6 +96,10 @@
     var raw = el.getAttribute('data-file') || '';
     if (raw && el.src && el.src.indexOf('data:') === 0) window.DC_IMG_OK[raw] = el.src;
   };
+  /**
+   * Lädt Kartenmotive vor, optional nur für die gegebenen IDs.
+   * @param {string[]} [onlyIds]
+   */
   function preloadCardArt(onlyIds) {
     var files = {}; files[backFile(null)] = 1; files[backFile({ typ: 'Doktrin' })] = 1;
     var cat = window.DC_CATALOG && DC_CATALOG.cards || [];
@@ -107,6 +121,11 @@
       });
     });
   }
+  /**
+   * Volle Motiv-URL (Inspect/Zoom).
+   * @param {string} filename
+   * @returns {string}
+   */
   function imgSrcFull(filename) {
     if (!filename) return '';
     function enc(p) {
@@ -117,6 +136,14 @@
     var exact = window.dcCardFile ? window.dcCardFile(filename) : filename;
     return exact ? enc('assets/cards/' + exact) : '';
   }
+  /**
+   * HTML für das Kartenmotiv, inkl. verdeckter Lage.
+   * @param {object} def
+   * @param {boolean} facedown
+   * @param {string} [cls]
+   * @param {boolean} [full]
+   * @returns {string}
+   */
   function artTag(def, facedown, cls, full) {
     if (!facedown && window.DCCardPh && DCCardPh.is(def)) return DCCardPh.html(def, cls);
     var file = facedown ? backFile(def) : (window.dcCardImage ? dcCardImage(def) : (def && def.image));
@@ -138,9 +165,21 @@
     if (hidden) return '<div class="slot-face back"><div class="slot-card"><div class="table-hidden">Verdeckt</div></div></div>'; // kein Bild, keine Info
     return '<div class="slot-face"><div class="slot-card">' + artTag(def, false, 'slot-face-img', false) + '</div></div>' + kw;
   }
+  /**
+   * Motivwrapper für eine Einheit am Tisch.
+   * @param {object} def
+   * @param {boolean} hidden
+   * @returns {string}
+   */
   function tableArt(def, hidden) {
     return window.DCTableArt ? DCTableArt.html(def, hidden) : '<div class="table-motif art-unavailable">Motiv nicht verfügbar</div>';
   }
+  /**
+   * HTML der Ausrüstung am Träger; leer, wenn der Feind verdeckt liegt.
+   * @param {object} inst
+   * @param {boolean} hidden
+   * @returns {string}
+   */
   function tableAttachments(inst, hidden) {
     if (hidden || !(inst.attachments || []).length) return '';
     return '<div class="table-equipment" aria-label="Angelegte Ausrüstung">' + inst.attachments.map(function (eq) {
@@ -149,6 +188,10 @@
         tableArt(def, false) + '<span class="equipment-name">' + escapeHtml(def.name) + '</span></button>';
     }).join('') + '</div>';
   }
+  /**
+   * Ruft eine Audio-Methode isoliert auf (Fehler dürfen die UI nicht reißen).
+   * @param {string} method
+   */
   // Audio is optional presentation: never let it interrupt an action or mutate engine data.
   function audioCall(method) {
     try {
@@ -163,7 +206,15 @@
   }
   var matchSetup = null;
   var endHandledKey = null;
+  /**
+   * True, wenn die Partie vorbei ist.
+   * @param {object} st
+   * @returns {boolean}
+   */
   function isTerminal(st) { return !!st && (st.winner != null || st.phase === 'gameover'); }
+  /**
+   * Räumt partiebezogene UI (Timer, Highlights, Endbild) auf. Kein Engine-Zugriff.
+   */
   function clearMatchPresentation() {
     if (window.DCEndScreen) DCEndScreen.reset();
     audioCall('stopSfx');
@@ -178,6 +229,10 @@
     var ov = document.getElementById('overlay');
     if (ov) { ov.innerHTML = ''; ov.style.display = 'none'; }
   }
+  /**
+   * Verlässt die Partie in die Lobby oder bleibt im Endbild.
+   * @param {boolean} [toLobby]
+   */
   function leaveMatch(toLobby) {
     var ended = engine && isTerminal(engine.state);
     if (!ended) { try { if (window.DCPlayLogger && DCPlayLogger.abort) DCPlayLogger.abort('menue'); } catch (e) {} }
@@ -195,6 +250,10 @@
     if (toLobby && target) target.click();
     else { var menu = document.getElementById('go-single'); if (menu) menu.focus(); }
   }
+  /**
+   * Zeigt den Endbildschirm aus dem Engine-Stand.
+   * @param {object} st
+   */
   function showMatchEnd(st) {
     if (!isTerminal(st)) return;
     window.dcTimerHold = true;
@@ -227,7 +286,7 @@
       onMenu: function () { leaveMatch(false); }
     });
   }
-  var CATALOG = window.DC_CATALOG; // lokale Variable
+  var CATALOG = window.DC_CATALOG;
   function dcPortraitSrc(id, rank) {
     if (window.DCPortrait) return DCPortrait.src(id, rank);
     return 'assets/portraits/Vael/male/01.png?v=13';
@@ -239,10 +298,10 @@
       return list.filter(function (u) { return u.id === id; })[0] || list[0] || null;
     } catch (e) { return null; }
   }
-  var engine = null; // lokale Variable
-  var you = 0; // lokale Variable
-  var mode = 'hotseat'; // lokale Variable
-  var previewUid = null; // lokale Variable
+  var engine = null;
+  var you = 0;
+  var mode = 'hotseat';
+  var previewUid = null;
 
   /* Feste Knöpfe der Seite einmal verdrahten. */
   
@@ -296,16 +355,19 @@
       box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
     });
   }
+  /**
+   * Verdrahtet Menü- und Lobby-Buttons (Start, LAN, Sammlung).
+   */
   function bindChrome() {
     bindInspectGestures();
     preloadCardArt();
     audioCall('preload');
-    function bind(id, fn) { // Funktion
-      var el = document.getElementById(id); // lokale Variable
-      if (el) el.addEventListener('click', fn); // Ereignis binden
+    function bind(id, fn) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener('click', fn);
     }
-    bind('btn-start', startGame); // nächster Schritt im Ablauf
-    bind('go', startGame); // nächster Schritt im Ablauf
+    bind('btn-start', startGame);
+    bind('go', startGame);
     bind('go-playtest', function () { if (window.DCPlayPanel) DCPlayPanel.show(); });
     bindTableControls();
     bind('btn-opts', function () {
@@ -328,18 +390,18 @@
         chk('ig-bot-atk', c.allowAttack == null ? 1 : c.allowAttack);
         chk('ig-bot-hold', c.holdAp == null ? 1 : c.holdAp);
       }
-    }); // nächster Schritt im Ablauf
-    document.addEventListener('keydown', function (e) { // Ereignis binden
-      if (e.key === 'Escape') { // Zweig nur bei zutreffender Bedingung
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
         hideInspect(); // große Karte schließen
-        hideHover(); // nächster Schritt im Ablauf
+        hideHover();
         if (engine && engine.state && engine.state.pending) { // offene Wahl des Spielers
-          var ov = document.getElementById('overlay'); // lokale Variable
-          if (ov) ov.style.display = 'none'; // Zweig nur bei zutreffender Bedingung
+          var ov = document.getElementById('overlay');
+          if (ov) ov.style.display = 'none';
           dispatch({ type: 'CANCEL_PENDING', player: engine.state.pending.player }); // eine Aktion durch die Regeln jagen
         }
       }
-    }); // nächster Schritt im Ablauf
+    });
   }
 
   /* Neue Partie: Zufall, Decks, Namen, Tisch zeigen. */
@@ -382,16 +444,21 @@
     eng._playLogHooked = true;
   }
 
+    /**
+     * Startet eine neue Partie: Engine anlegen, `createMatch`, ersten Stand zeichnen.
+     * Keine Regeln in dieser Funktion — nur Aufbau und `render`.
+     * @param {object} [request] Rematch-Setup, Modus, Decks, Namen
+     */
     function startGame(request) {
     var replay = request && request.rematchSetup;
     try { // Fehler auffangen
-      if (!window.DC_CATALOG || !window.DCEngine) { // Zweig nur bei zutreffender Bedingung
-        showErr('Engine oder Katalog nicht geladen.'); // nächster Schritt im Ablauf
-        return; // nächster Schritt im Ablauf
+      if (!window.DC_CATALOG || !window.DCEngine) {
+        showErr('Engine oder Katalog nicht geladen.');
+        return;
       }
       if (window.dcMountMatch) window.dcMountMatch();
       bindTableControls();
-      var modeEl = $('#mode'); // lokale Variable
+      var modeEl = $('#mode');
       if (mode !== 'lan' && mode !== 'host' && mode !== 'join') {
         mode = (modeEl && modeEl.value) || 'hotseat';
       }
@@ -406,14 +473,14 @@
         if (replay.botCfg && window.DCBot && DCBot.applyCfg) DCBot.applyCfg(replay.botCfg);
       }
       var previousSeed = engine && engine.state && engine.state.seed;
-      var seed = Date.now() >>> 0; // Zufallsstart
-      if (window.crypto && crypto.getRandomValues) { // unvorhersagbarer Zufall
-        var buf = new Uint32Array(1); // lokale Variable
-        crypto.getRandomValues(buf); // unvorhersagbarer Zufall
-        seed = buf[0] || seed; // Zufallsstart
+      var seed = Date.now() >>> 0;
+      if (window.crypto && crypto.getRandomValues) {
+        var buf = new Uint32Array(1);
+        crypto.getRandomValues(buf);
+        seed = buf[0] || seed;
       }
       if (seed === previousSeed) seed = (seed + 1) >>> 0;
-      var rand = DCEngine.rng(seed); // Zufallsstart
+      var rand = DCEngine.rng(seed);
       var docs = CATALOG.cards.filter(function (c) { return c.typ === 'Doktrin'; }).map(function (c) { return c.id; });
       function takeDocs(pool, n, rnd) {
         var bag = pool.slice();
@@ -429,10 +496,10 @@
       }
       window.dcMusicSeed = seed;
       engine = new DCEngine.Engine(CATALOG, { seed: seed });
-      var n0 = (($('#player-name') && $('#player-name').value) || 'Spieler').trim().slice(0, 24); // lokale Variable
-      var n1el = $('#opponent-name'); // lokale Variable
-      var n1 = (n1el && n1el.value.trim()) || (mode === 'bot' ? ((window.DCBot && DCBot.cfg && DCBot.cfg.model === 'schloter') ? 'Schloter' : 'Test') : 'Gegner'); // lokale Variable
-      n1 = n1.slice(0, 24); // nächster Schritt im Ablauf
+      var n0 = (($('#player-name') && $('#player-name').value) || 'Spieler').trim().slice(0, 24);
+      var n1el = $('#opponent-name');
+      var n1 = (n1el && n1el.value.trim()) || (mode === 'bot' ? ((window.DCBot && DCBot.cfg && DCBot.cfg.model === 'schloter') ? 'Schloter' : 'Test') : 'Gegner');
+      n1 = n1.slice(0, 24);
       var deck0 = DCEngine.buildTestDeck(CATALOG, rand);
       var deck1 = DCEngine.buildTestDeck(CATALOG, rand);
       var doctrine0 = takeDocs(docs, 2, rand);
@@ -501,9 +568,9 @@
       you = 0;
       seenEvents = 0;
       eventQueue = [];
-      eventPlaying = false; // nächster Schritt im Ablauf
-      var ov = $('#overlay'); // lokale Variable
-      if (ov) ov.style.display = 'none'; // Zweig nur bei zutreffender Bedingung
+      eventPlaying = false;
+      var ov = $('#overlay');
+      if (ov) ov.style.display = 'none';
       document.title = (window.DC_BUILD_LABEL || 'Division Command 0.30c Alpha');
       window.dcTimerHold = true;
       render();
@@ -517,7 +584,7 @@
       showOpeningCoin();
       try { installPlayLogger(engine, mode, you); } catch (ePl) { console.warn('[playtest]', ePl); }
     } catch (err) { // Fehler behandeln
-      showErr(String(err && err.message ? err.message : err)); // nächster Schritt im Ablauf
+      showErr(String(err && err.message ? err.message : err));
     }
   }
 
@@ -530,6 +597,9 @@
     if (mode === 'hotseat') return engine.state.active;
     return you;
   }
+  /**
+   * Sendet `END_TURN` für den aktiven lokalen Spieler an die Engine und zeichnet neu.
+   */
   function endTurn() {
     if (!engine || !engine.state) return;
     armedPlay = null;
@@ -547,11 +617,11 @@
 
   /* Zug an die Engine, danach zeichnen, Bot anstoßen. */
     function dispatch(action) { // eine Aktion durch die Regeln jagen
-    if (!engine) { // Zweig nur bei zutreffender Bedingung
-      showErr('Zuerst „Partie starten“ klicken.'); // nächster Schritt im Ablauf
-      var ov = $('#overlay'); // lokale Variable
-      if (ov) ov.style.display = 'flex'; // Zweig nur bei zutreffender Bedingung
-      return; // nächster Schritt im Ablauf
+    if (!engine) {
+      showErr('Zuerst „Partie starten“ klicken.');
+      var ov = $('#overlay');
+      if (ov) ov.style.display = 'flex';
+      return;
     }
     if (isTerminal(engine.state)) { showMatchEnd(engine.state); return { ok: false, error: 'Spiel ist vorbei' }; }
     var soundDef = null;
@@ -560,7 +630,7 @@
       var originalDef = soundLoc ? engine.defOf(soundLoc.inst) : (action.cardId && engine.byId[action.cardId]);
       if (originalDef) soundDef = JSON.parse(JSON.stringify(originalDef));
     } catch (audioLookupError) {}
-    var res; // lokale Variable
+    var res;
     try { res = engine.dispatch(action); }
     catch (err) { showErr(String(err.message || err)); return; }
     if (res && res.sent) {
@@ -660,7 +730,7 @@
       if (!eventPlaying) showPending();
     }
     maybeBot();
-    return res; // Wert zurückgeben
+    return res;
   }
 
   /* Wenn der Bot am Zug ist, seinen Schritt planen. */
@@ -794,6 +864,9 @@
   }
 
 
+  /**
+   * Zeigt den Eröffnungsmünzwurf und schickt die Wahl an die Engine.
+   */
   function showOpeningCoin() {
     if (!engine || !engine.state || !engine.state.startCoin) return;
     var sc = engine.state.startCoin;
@@ -1009,26 +1082,26 @@
       };
       return;
     }
-    if (pend.kind === 'coin' || pend.kind === 'angel-coin' || pend.kind === 'resist-coin') { // Zweig nur bei zutreffender Bedingung
-      var ov = $('#overlay'); // lokale Variable
+    if (pend.kind === 'coin' || pend.kind === 'angel-coin' || pend.kind === 'resist-coin') {
+      var ov = $('#overlay');
       ov.innerHTML = '<div class="modal"><h2>Münzwurf</h2><p>' + escapeHtml(pend.prompt || 'Kopf oder Zahl') + // HTML-Sonderzeichen escapen
-        '</p><p class="tiny">Kopf — Effekt tritt ein. Zahl — kein Effekt.</p>' + // nächster Schritt im Ablauf
-        '<button type="button" class="primary" id="btn-coin">Münze werfen</button> ' + // nächster Schritt im Ablauf
-        '<button type="button" id="btn-cancel-pend">Abbrechen</button></div>'; // nächster Schritt im Ablauf
-      ov.style.display = 'flex'; // nächster Schritt im Ablauf
-      document.getElementById('btn-coin').onclick = function () { // DOM der Seite
-        ov.style.display = 'none'; // nächster Schritt im Ablauf
+        '</p><p class="tiny">Kopf — Effekt tritt ein. Zahl — kein Effekt.</p>' +
+        '<button type="button" class="primary" id="btn-coin">Münze werfen</button> ' +
+        '<button type="button" id="btn-cancel-pend">Abbrechen</button></div>';
+      ov.style.display = 'flex';
+      document.getElementById('btn-coin').onclick = function () {
+        ov.style.display = 'none';
         dispatch({ type: 'COIN_FLIP', player: pend.player }); // eine Aktion durch die Regeln jagen
       };
-      document.getElementById('btn-cancel-pend').onclick = function () { // DOM der Seite
-        ov.style.display = 'none'; // nächster Schritt im Ablauf
+      document.getElementById('btn-cancel-pend').onclick = function () {
+        ov.style.display = 'none';
         dispatch({ type: 'CANCEL_PENDING', player: pend.player }); // eine Aktion durch die Regeln jagen
       };
-      return; // nächster Schritt im Ablauf
+      return;
     }
     var title = pend.prompt || meta.title || (pend.kind === 'deploy' ? 'Stellung wählen' : 'Ziel wählen');
-    if (pend.needCount && pend.needCount > 1) { // Zweig nur bei zutreffender Bedingung
-      title += ' (' + (pend.selected || []).length + '/' + pend.needCount + (pend.upto ? ', bis zu' : '') + ')'; // nächster Schritt im Ablauf
+    if (pend.needCount && pend.needCount > 1) {
+      title += ' (' + (pend.selected || []).length + '/' + pend.needCount + (pend.upto ? ', bis zu' : '') + ')';
     }
     function choiceHtml(c, i) {
       var on = (pend.selected || []).indexOf(c.target) >= 0;
@@ -1084,11 +1157,11 @@
     if ((pend.kind === 'instant-target' || pend.kind === 'honors' || pend.kind === 'mass-pick' || pend.kind === 'rations' || pend.kind === 'discard-hand') && pend.upto) extra = '<button type="button" class="primary" id="btn-confirm-tg">Auswahl bestätigen</button> ';
     var ov = $('#overlay');
     ov.innerHTML = '<div class="modal"><h2>' + title + '</h2><p class="tiny">' + (pend.kind === 'instant-section' ? 'Abschnitt antippen (auch direkt auf der Front).' : pend.kind === 'tac-break' ? 'Nachbarfeld wählen oder die kostenlose Reaktion ablehnen. Schaden und Ausrüstung bleiben erhalten.' : /^tac-/.test(pend.kind) ? 'Karte oder Abschnitt antippen. Kosten erst nach der vollständigen gültigen Wahl.' : 'Karte antippen. Goldener Rand = Zeiger. Kleinere Karte = gewählt.') + '</p><div class="choices pick-row">' + buttons +
-    // HTML in den Knoten schreiben
-      '</div>' + extra + '<button type="button" id="btn-cancel-pend"' + (pend.kind === 'tac-discard' || pend.kind === 'tac-aura-section' ? ' disabled title="Diese Auswahl ist verpflichtend"' : '') + '>Abbrechen</button></div>'; // nächster Schritt im Ablauf
-    hideHover(); // nächster Schritt im Ablauf
+
+      '</div>' + extra + '<button type="button" id="btn-cancel-pend"' + (pend.kind === 'tac-discard' || pend.kind === 'tac-aura-section' ? ' disabled title="Diese Auswahl ist verpflichtend"' : '') + '>Abbrechen</button></div>';
+    hideHover();
     hideInspect(); // große Karte schließen
-    ov.style.display = 'flex'; // nächster Schritt im Ablauf
+    ov.style.display = 'flex';
     ov.querySelectorAll('.pick-card, .choices button').forEach(function (btn) {
       btn.onmouseenter = function () { btn.classList.add('hovering'); };
       btn.onmouseleave = function () { btn.classList.remove('hovering'); };
@@ -1106,45 +1179,45 @@
         else dispatch({ type: 'CHOOSE_TARGET', player: pend.player, target: c.target });
       };
     });
-    var cbtn = document.getElementById('btn-cancel-pend'); // lokale Variable
-    if (cbtn) cbtn.onclick = function () { // Zweig nur bei zutreffender Bedingung
-      ov.style.display = 'none'; // nächster Schritt im Ablauf
+    var cbtn = document.getElementById('btn-cancel-pend');
+    if (cbtn) cbtn.onclick = function () {
+      ov.style.display = 'none';
       dispatch({ type: 'CANCEL_PENDING', player: pend.player }); // eine Aktion durch die Regeln jagen
     };
-    var conf = document.getElementById('btn-confirm-tg'); // lokale Variable
-    if (conf) conf.onclick = function () { // Zweig nur bei zutreffender Bedingung
-      ov.style.display = 'none'; // nächster Schritt im Ablauf
+    var conf = document.getElementById('btn-confirm-tg');
+    if (conf) conf.onclick = function () {
+      ov.style.display = 'none';
       dispatch({ type: 'CONFIRM_TARGETS', player: pend.player }); // eine Aktion durch die Regeln jagen
     };
   }
 
   /* (ungenutzt am Tisch) Schachtel für den alten Hover-Zoom. */
-    function hoverBox() { // Funktion
-    var el = document.getElementById('hoverzoom'); // lokale Variable
-    if (el) return el; // Wert zurückgeben
-    el = document.createElement('div'); // DOM der Seite
-    el.id = 'hoverzoom'; // nächster Schritt im Ablauf
-    document.body.appendChild(el); // DOM der Seite
-    return el; // Wert zurückgeben
+    function hoverBox() {
+    var el = document.getElementById('hoverzoom');
+    if (el) return el;
+    el = document.createElement('div');
+    el.id = 'hoverzoom';
+    document.body.appendChild(el);
+    return el;
   }
   /* Volle Druckkarte zeigen — nur noch Hilfsfunktion. */
     function showHover(def, facedown, inst) { // verdeckte Lage
-    if (!def) return; // Zweig nur bei zutreffender Bedingung
+    if (!def) return;
     var file = facedown ? backFile(def) : (window.dcCardImage ? dcCardImage(def) : (def.image || ''));
     var src = imgSrcFull(file) || imgSrc(file);
-    if (!src) return; // Zweig nur bei zutreffender Bedingung
-    var el = hoverBox(); // lokale Variable
+    if (!src) return;
+    var el = hoverBox();
     el.innerHTML = '<img class="fullcard" alt="' + escapeHtml(def.name || '') + '" src="' + src + // HTML-Sonderzeichen escapen
       '" data-file="' + file + '" data-i="0" onerror="window.dcImgErr && window.dcImgErr(this)">'; // globale Schnittstelle der Seite
-    el.classList.add('show'); // CSS-Klasse ändern
+    el.classList.add('show');
   }
   /* Hover-Zoom ausblenden. */
-    function hideHover() { // Funktion
-    var el = document.getElementById('hoverzoom'); // lokale Variable
-    if (el) el.classList.remove('show'); // CSS-Klasse ändern
+    function hideHover() {
+    var el = document.getElementById('hoverzoom');
+    if (el) el.classList.remove('show');
   }
   /* Hover-Zoom (große Vorschau) an Element hängen. */
-    function bindHover(el, getData) { // Funktion
+    function bindHover(el, getData) {
     if (!el || el.dataset.dcHoverBound === '1') return;
     el.dataset.dcHoverBound = '1';
     el.addEventListener('mouseenter', function () {
@@ -1156,16 +1229,16 @@
     el.addEventListener('mouseleave', function () { hideHover(); });
   }
   /* Steht ein Systemdialog über dem Tisch? */
-    function dialogOpen() { // Funktion
-    var ov = document.getElementById('overlay'); // lokale Variable
-    var ig = document.getElementById('ingame-opts'); // lokale Variable
-    return (ov && ov.style.display === 'flex') || (ig && ig.style.display === 'flex'); // Wert zurückgeben
+    function dialogOpen() {
+    var ov = document.getElementById('overlay');
+    var ig = document.getElementById('ingame-opts');
+    return (ov && ov.style.display === 'flex') || (ig && ig.style.display === 'flex');
   }
 
   /* Große Kartenansicht schließen. */
     function hideInspect() { // große Karte schließen
-    var el = document.getElementById('inspect'); // lokale Variable
-    if (el) el.style.display = 'none'; // Zweig nur bei zutreffender Bedingung
+    var el = document.getElementById('inspect');
+    if (el) el.style.display = 'none';
   }
 
   function statTone(now, printed) {
@@ -1273,16 +1346,16 @@
     };
   }
     function openInspect(opts) { // Karte vergrößern
-    if (dialogOpen()) return; // Zweig nur bei zutreffender Bedingung
-    var box = document.getElementById('inspect'); // lokale Variable
+    if (dialogOpen()) return;
+    var box = document.getElementById('inspect');
     if (box && box.style.display === 'flex' && box.getAttribute('data-uid') === String(opts.uid || opts.def && opts.def.id || '')) {
-    // Zweig nur bei zutreffender Bedingung
+
       hideInspect(); // große Karte schließen
-      return; // nächster Schritt im Ablauf
+      return;
     }
-    var def = opts.def; // lokale Variable
+    var def = opts.def;
     var facedown = !!opts.facedown; // verdeckte Lage
-    var inst = opts.inst; // lokale Variable
+    var inst = opts.inst;
     var title = facedown ? 'Verdeckte Karte' : def.name;
     var stats = '';
     var expl = (!facedown && inst && engine && engine.explainStats) ? engine.explainStats(inst) : null;
@@ -1306,14 +1379,14 @@
         else if (printed === 0) costNote = 'Gedruckt 0 AP — abweichend kostet die Karte 1 AP.';
       }
     }
-    var buttons = opts.buttons || [{ id: 'close', label: 'Schließen' }]; // lokale Variable
+    var buttons = opts.buttons || [{ id: 'close', label: 'Schließen' }];
     var actNotes = [];
     if (!facedown || (inst && opts.uid)) {
       var auto = inspectEngineActions(opts, buttons);
       if (auto) { buttons = auto.buttons; actNotes = auto.notes; if (!opts.onAction) opts.onAction = auto.onAction; }
     }
     if (!facedown && inst && engine && engine.tacticalStatus) actNotes=actNotes.concat(engine.tacticalStatus(inst));
-    var html = '<div class="inspect-modal">' + // lokale Variable
+    var html = '<div class="inspect-modal">' +
       artTag(def, facedown, 'hero', true) + // Bild-HTML der Karte
       '<div class="info"><h3>' + escapeHtml(title) + '</h3>' + // HTML-Sonderzeichen escapen
       '<div class="tiny">' + escapeHtml(def.typ) + (cost ? ' · ' + cost : '') + (def.elite ? ' · ELITE' : '') + '</div>' +
@@ -1335,36 +1408,36 @@
       (costNote ? '<p class="tiny">' + escapeHtml(costNote) + '</p>' : '') +
       (def.flavor && !facedown ? '<p class="tiny"><em>' + escapeHtml(def.flavor) + '</em></p>' : '') +
       (actNotes.length ? '<ul class="inspect-act-notes">' + actNotes.map(function (n) { return '<li>' + escapeHtml(n) + '</li>'; }).join('') + '</ul>' : '') +
-      '</div><div class="acts">' + // nächster Schritt im Ablauf
-      buttons.map(function (b) { // Liste umformen
+      '</div><div class="acts">' +
+      buttons.map(function (b) {
         return '<button type="button" class="' + (b.primary ? 'primary' : '') + (b.danger ? ' danger' : '') + '" data-act="' + b.id + '"' +
           (b.disabled ? ' disabled aria-disabled="true"' : '') + (b.reason ? ' title="' + escapeHtml(b.reason) + '"' : '') + '>' + escapeHtml(b.label) + '</button>';
         // HTML-Sonderzeichen escapen
-      }).join('') + // nächster Schritt im Ablauf
-      '</div></div>'; // nächster Schritt im Ablauf
-    var box = document.getElementById('inspect'); // lokale Variable
-    if (!box) { // Zweig nur bei zutreffender Bedingung
-      box = document.createElement('div'); // DOM der Seite
-      box.id = 'inspect'; // nächster Schritt im Ablauf
-      box.className = 'overlay'; // nächster Schritt im Ablauf
-      document.body.appendChild(box); // DOM der Seite
+      }).join('') +
+      '</div></div>';
+    var box = document.getElementById('inspect');
+    if (!box) {
+      box = document.createElement('div');
+      box.id = 'inspect';
+      box.className = 'overlay';
+      document.body.appendChild(box);
     }
-    box.innerHTML = html; // HTML in den Knoten schreiben
-    box.style.display = 'flex'; // nächster Schritt im Ablauf
-    box.setAttribute('data-uid', String(opts.uid || (def && def.id) || '')); // nächster Schritt im Ablauf
-    box.onclick = function (ev) { // Funktion
+    box.innerHTML = html;
+    box.style.display = 'flex';
+    box.setAttribute('data-uid', String(opts.uid || (def && def.id) || ''));
+    box.onclick = function (ev) {
       if (ev.target === box || (ev.target && ev.target.tagName === 'IMG')) hideInspect(); // große Karte schließen
     };
     bindStatTips(box);
-    box.querySelectorAll('[data-act]').forEach(function (btn) { // Element in der Seite suchen
-      btn.onclick = function (ev) { // Funktion
-        ev.stopPropagation(); // nächster Schritt im Ablauf
+    box.querySelectorAll('[data-act]').forEach(function (btn) {
+      btn.onclick = function (ev) {
+        ev.stopPropagation();
         if (btn.disabled) return;
-        var id = btn.getAttribute('data-act'); // lokale Variable
+        var id = btn.getAttribute('data-act');
         hideInspect(); // große Karte schließen
-        if (opts.onAction) opts.onAction(id); // Zweig nur bei zutreffender Bedingung
+        if (opts.onAction) opts.onAction(id);
       };
-    }); // nächster Schritt im Ablauf
+    });
   }
 
   /* Robuste Vergrößerung: Delegation überlebt Re-Render; Rechtsklick+Doppelklick überall. */
@@ -1455,6 +1528,11 @@
       '<path d="M12 7.5 V18.2 M8.2 12.2 H15.8" stroke="#2a1c08" stroke-width="1.7" stroke-linecap="round"/>' +
       '</svg>';
   }
+  /**
+   * True, wenn die Instanz laut Stand eingegraben ist (nur Anzeige des Schilds).
+   * @param {object} inst
+   * @returns {boolean}
+   */
   function isDigInProtected(inst) {
     if (!inst || !engine || !engine._isDeployProtected) return false;
     try { return !!engine._isDeployProtected(inst); } catch (e) { return false; }
@@ -1466,6 +1544,9 @@
       s.classList.remove('section-pick');
     });
   }
+  /**
+   * Markiert im offenen `pending` alle wählbaren Ziele. Kein Regelcode.
+   */
   function highlightPendingTargets() {
     clearTargetHighlights();
     var pend = engine && engine.state && engine.state.pending;
@@ -1498,6 +1579,14 @@
     });
   }
 
+  /**
+   * HTML einer Fronteinheit (Werte, Motiv, verdeckt).
+   * @param {object} inst
+   * @param {boolean} mine
+   * @param {string} section
+   * @param {number} row
+   * @returns {string}
+   */
   function unitHtml(inst, mine, section, row) {
     if (!inst) return '<div class="slot empty" data-drop="front" data-section="' + (section || '') + '" data-row="' + (row || 0) + '"></div>';
     try {
@@ -1511,8 +1600,8 @@
     }
   }
   function unitHtmlBody(inst, mine, section, row) {
-    var d = engine.defOf(inst); // lokale Variable
-    var st = engine.currentAtkDef(inst); // lokale Variable
+    var d = engine.defOf(inst);
+    var st = engine.currentAtkDef(inst);
     var hide = !!(inst.facedown && !mine);
     var expl = (!hide && engine.explainStats) ? engine.explainStats(inst) : null;
     var locu = engine.findInst(inst.uid);
@@ -1555,7 +1644,7 @@
 
   /* Neun Frontstellungen einer Seite als Linie. */
     function renderFront(p, mine) { // Frontlinie zeichnen
-    var order = [['L',0],['L',1],['L',2],['C',0],['C',1],['C',2],['R',0],['R',1],['R',2]]; // lokale Variable
+    var order = [['L',0],['L',1],['L',2],['C',0],['C',1],['C',2],['R',0],['R',1],['R',2]];
     var auraSecs = {};
     try {
       ((p.flags && p.flags.sectionAuras) || []).forEach(function (a) {
@@ -1578,16 +1667,16 @@
         }
       }
       return html;
-    }).join(''); // nächster Schritt im Ablauf
-    return '<div class="flank-legend"><span>Linke Flanke</span><span>Zentrum</span><span>Rechte Flanke</span></div>' + // Wert zurückgeben
-      '<div class="front-line">' + slots + '</div>'; // nächster Schritt im Ablauf
+    }).join('');
+    return '<div class="flank-legend"><span>Linke Flanke</span><span>Zentrum</span><span>Rechte Flanke</span></div>' +
+      '<div class="front-line">' + slots + '</div>';
   }
 
-  function cardClass(typ) { // Funktion
-    if (typ === 'Soforteinsatz') return 'sofort'; // Wert zurückgeben
-    if (typ === 'Einheit') return 'unit'; // Wert zurückgeben
-    if (typ === 'Ausrüstung') return 'eq'; // Wert zurückgeben
-    return ''; // Wert zurückgeben
+  function cardClass(typ) {
+    if (typ === 'Soforteinsatz') return 'sofort';
+    if (typ === 'Einheit') return 'unit';
+    if (typ === 'Ausrüstung') return 'eq';
+    return '';
   }
 
 
@@ -1655,43 +1744,43 @@
     syncBombTimer();
   };
 
-  var recapShown = ''; // lokale Variable
-  var recapTimer = 0; // lokale Variable
+  var recapShown = '';
+  var recapTimer = 0;
   /* Letzte Runde: Karte links, Text rechts, danach Revue. */
     function showRecap(items, whose, opts) { // Aktion erklären
-    var ov = document.getElementById('overlay'); // lokale Variable
-    if (!ov) return; // Zweig nur bei zutreffender Bedingung
+    var ov = document.getElementById('overlay');
+    if (!ov) return;
     window.clearTimeout(recapTimer); // globale Schnittstelle der Seite
-    ov.innerHTML = // HTML in den Knoten schreiben
-      '<div class="recap-stage">' + // nächster Schritt im Ablauf
-        '<div class="recap-left"><img id="recap-art" alt=""></div>' + // nächster Schritt im Ablauf
-        '<div class="recap-right">' + // nächster Schritt im Ablauf
+    ov.innerHTML =
+      '<div class="recap-stage">' +
+        '<div class="recap-left"><img id="recap-art" alt=""></div>' +
+        '<div class="recap-right">' +
           '<h2>' + escapeHtml((opts && opts.title) || (opts && opts.live ? 'Meldung' : 'Letzte Runde')) + '</h2>' +
           '<p class="tiny" id="recap-whose">' + escapeHtml(whose || '') + '</p>' + // HTML-Sonderzeichen escapen
           '<div class="recap-typed" id="recap-typed"></div>' +
-          '<button type="button" class="primary" id="recap-ok" style="display:none">Weiter</button>' + // nächster Schritt im Ablauf
-        '</div>' + // nächster Schritt im Ablauf
-      '</div>'; // nächster Schritt im Ablauf
-    hideHover(); // nächster Schritt im Ablauf
+          '<button type="button" class="primary" id="recap-ok" style="display:none">Weiter</button>' +
+        '</div>' +
+      '</div>';
+    hideHover();
     hideInspect(); // große Karte schließen
-    ov.style.display = 'flex'; // nächster Schritt im Ablauf
-    var art = document.getElementById('recap-art'); // lokale Variable
-    var typed = document.getElementById('recap-typed'); // lokale Variable
-    var ok = document.getElementById('recap-ok'); // lokale Variable
+    ov.style.display = 'flex';
+    var art = document.getElementById('recap-art');
+    var typed = document.getElementById('recap-typed');
+    var ok = document.getElementById('recap-ok');
     var list = (items && items.length) ? items.slice() : [];
     if (!list.length) { if (opts && opts.onDone) opts.onDone(); return; }
     opts = opts || {};
     var live = !!opts.live;
     var cancelled = false;
-    ok.onclick = function () { // Funktion
-      cancelled = true; // nächster Schritt im Ablauf
+    ok.onclick = function () {
+      cancelled = true;
       window.clearTimeout(recapTimer); // globale Schnittstelle der Seite
-      ov.style.display = 'none'; // nächster Schritt im Ablauf
+      ov.style.display = 'none';
     };
-    function wait(ms) { // Funktion
-      return new Promise(function (resolve) { // Wert zurückgeben
+    function wait(ms) {
+      return new Promise(function (resolve) {
         recapTimer = window.setTimeout(resolve, ms); // später fortsetzen
-      }); // nächster Schritt im Ablauf
+      });
     }
     function typeLine(text) {
       var line = document.createElement('p');
@@ -1713,9 +1802,9 @@
         tick();
       });
     }
-    async function run() { // Funktion
-      for (var n = 0; n < list.length; n++) { // Schleife
-        if (cancelled) return; // Zweig nur bei zutreffender Bedingung
+    async function run() {
+      for (var n = 0; n < list.length; n++) {
+        if (cancelled) return;
         var ev = list[n];
         var def = ev.cardId && CATALOG.cards.find(function (c) { return c.id === ev.cardId; });
         if (!def && ev.name) def = CATALOG.cards.find(function (c) { return c.name === ev.name; });
@@ -1951,12 +2040,23 @@
     document.getElementById('ac-x').onclick = function () { ov.style.display = 'none'; };
   }
   var placing = false;
+  /**
+   * Kurzer Hinweis in der Statuszeile.
+   * @param {string} msg
+   */
   function say(msg) {
     var hint = document.getElementById('hint');
     if (hint) hint.textContent = msg;
     var lab = document.getElementById('my-front-label');
     if (lab) lab.textContent = msg;
   }
+  /**
+   * Spielt eine Handkarte auf einen Slot über `dispatch` (nach legaler Markierung).
+   * @param {string} uid
+   * @param {object} slot
+   * @param {number} viewer
+   * @param {boolean} [facedown]
+   */
   function placeFromHand(uid, slot, viewer, facedown) {
     if (!engine || isTerminal(engine.state) || placing) return;
     placing = true;
@@ -2473,12 +2573,12 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     bindInspectGestures();
     if (!engine || !engine.state || !engine.state.players) return;
     if (!armedPlay && (!engine.state.pending || engine.state.pending.kind !== 'deploy')) document.body.classList.remove('dc-armed');
-    var st = engine.state; // lokale Variable
-    var p0 = st.players[0], p1 = st.players[1]; // lokale Variable
-    var viewer = mode === 'hotseat' ? st.active : you; // lokale Variable
+    var st = engine.state;
+    var p0 = st.players[0], p1 = st.players[1];
+    var viewer = mode === 'hotseat' ? st.active : you;
     window.dcViewer = viewer;
-    var me = st.players[viewer]; // lokale Variable
-    var foe = st.players[viewer === 0 ? 1 : 0]; // lokale Variable
+    var me = st.players[viewer];
+    var foe = st.players[viewer === 0 ? 1 : 0];
     $('#turnmeta').textContent = 'Zug ' + st.turn + ' · am Zug: ' + st.players[st.active].name + (st.winner != null ? ' · ENDE: ' + st.endReason : '');
     syncBombTimer();
     // sichtbaren Text setzen — Startspieler Zug 1: Badge zeigt „(Start: 4)“
@@ -2492,21 +2592,21 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     // Handkarten
     function setLabel(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; } // sichtbaren Text setzen
     setLabel('enemy-support-label', foe.name + ' — Support'); // Unterstützungszone
-    setLabel('enemy-front-label', foe.name + ' — Front'); // nächster Schritt im Ablauf
-    setLabel('my-front-label', me.name + ' — Front'); // nächster Schritt im Ablauf
+    setLabel('enemy-front-label', foe.name + ' — Front');
+    setLabel('my-front-label', me.name + ' — Front');
     setLabel('my-support-label', me.name + ' — Support'); // Unterstützungszone
     try { window.dcFxPulses = window.DCTableFx ? DCTableFx.pulses(engine) : {}; } catch (eFx) { window.dcFxPulses = {}; }
     var dirty = applyHtml($('#enemy-front'), renderFront(foe, false));
     function supportHtml(list, mine) { // Unterstützungszone
-      var filled = 0; // lokale Variable
-      for (var i = 0; i < list.length; i++) if (list[i]) filled++; // Zweig nur bei zutreffender Bedingung
-      var show = Math.max(9, Math.ceil(Math.max(filled, 1) / 9) * 9); // lokale Variable
-      if (filled === 0) show = 9; // Zweig nur bei zutreffender Bedingung
-      var html = ''; // lokale Variable
-      for (var j = 0; j < show && j < list.length; j++) { // Schleife
-        var s = list[j]; // lokale Variable
-        if (!s) { html += '<div class="slot empty" data-drop="support" data-row="' + j + '"></div>'; continue; } // Zweig nur bei zutreffender Bedingung
-        var d = engine.defOf(s); // lokale Variable
+      var filled = 0;
+      for (var i = 0; i < list.length; i++) if (list[i]) filled++;
+      var show = Math.max(9, Math.ceil(Math.max(filled, 1) / 9) * 9);
+      if (filled === 0) show = 9;
+      var html = '';
+      for (var j = 0; j < show && j < list.length; j++) {
+        var s = list[j];
+        if (!s) { html += '<div class="slot empty" data-drop="support" data-row="' + j + '"></div>'; continue; }
+        var d = engine.defOf(s);
         var hide = !!(s.facedown && !mine);
         var cap = hide ? '' : ((d.ap != null ? d.ap + ' AP' : ''));
         html += '<div class="slot filled" data-drop="support" data-row="' + j + '" data-uid="' + s.uid + '">' + tableArt(d, hide) + slotFace(d, hide) +
@@ -2515,7 +2615,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
           (cap ? '<div class="unit-stats">' + cap + '</div>' : '') + '</div>';
         // Bild-HTML der Karte
       }
-      return html; // Wert zurückgeben
+      return html;
     }
     dirty = applyHtml($('#enemy-support'), supportHtml(foe.support, false)) || dirty;
     dirty = applyHtml($('#my-support'), supportHtml(me.support, true)) || dirty;
@@ -2577,14 +2677,14 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     if (pe) pe.innerHTML = plateHtml(foe);
     if (pm) pm.innerHTML = plateHtml(me);
     dirty = applyHtml($('#hand'), me.hand.map(function (c) { // Handkarten
-      var d = engine.defOf(c); // lokale Variable
-      var cost = engine.costOf(d, me); // lokale Variable
+      var d = engine.defOf(c);
+      var cost = engine.costOf(d, me);
       var una = (me.ap < cost) ? ' unaffordable' : '';
-      return '<div class="card ' + cardClass(d.typ) + una + '" data-uid="' + c.uid + '"' + (me.ap < cost ? ' title="Nicht genug AP (' + me.ap + '/' + cost + ')"' : '') + '>' + // Wert zurückgeben
+      return '<div class="card ' + cardClass(d.typ) + una + '" data-uid="' + c.uid + '"' + (me.ap < cost ? ' title="Nicht genug AP (' + me.ap + '/' + cost + ')"' : '') + '>' +
         artTag(d, false) + // Bild-HTML der Karte
         '<div class="body"><div class="unit-name">' + escapeHtml(d.name) + '</div>' + // HTML-Sonderzeichen escapen
         '<div class="unit-stats">' + cost + ' AP' + (d.atk != null ? ' · A' + d.atk + '/V' + d.def : '') + '</div></div></div>';
-        // nächster Schritt im Ablauf
+
     }).join('')) || dirty;
     updatePiles();
     rememberRects();
@@ -2595,10 +2695,10 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     if (window.DCCamera) { try { DCCamera.afterRender(engine); } catch (eCam) {} } // auch ohne DOM-Änderung (Optionen/Baseline)
     if (!dirty) return;
     $('#hand').querySelectorAll('.card').forEach(function (el) { // Handkarten
-      bindHover(el, function () { // Funktion
+      bindHover(el, function () {
         var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; }); // Handkarten
         return card ? { def: engine.defOf(card), facedown: false, inst: null } : null; // verdeckte Lage
-      }); // nächster Schritt im Ablauf
+      });
       el.onclick = function (ev) {
         if (suppressHandClick || window.dcSuppressClick) {
           ev.preventDefault();
@@ -2642,9 +2742,9 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       el.ondragstart = function (ev) { ev.preventDefault(); };
     });
     bindBoardDrops(viewer);
-    function tryPickPending(uid) { // Funktion
+    function tryPickPending(uid) {
       var pend = engine.state.pending; // offene Wahl des Spielers
-      if (!pend || pend.player !== viewer) return false; // Wert zurückgeben
+      if (!pend || pend.player !== viewer) return false;
       if (pend.kind === 'instant-target' || pend.kind === 'attack-target' || pend.kind === 'equip' || pend.kind === 'napalm' || pend.kind === 'air-strike') {
         if (pend.choices && pend.choices.length) {
           var ok = pend.choices.some(function (c) { return c && c.target === uid; });
@@ -2657,27 +2757,27 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
         dispatch({ type: 'CHOOSE_TARGET', player: pend.player, target: uid });
         return true;
       }
-      return false; // Wert zurückgeben
+      return false;
     }
-    document.querySelectorAll('#my-front .slot.filled').forEach(function (el) { // Element in der Seite suchen
-      bindHover(el, function () { // Funktion
-        var loc = engine.findInst(el.dataset.uid); // lokale Variable
+    document.querySelectorAll('#my-front .slot.filled').forEach(function (el) {
+      bindHover(el, function () {
+        var loc = engine.findInst(el.dataset.uid);
         return loc ? { def: engine.defOf(loc.inst), facedown: loc.inst.facedown, inst: loc.inst } : null; // verdeckte Lage
-      }); // nächster Schritt im Ablauf
+      });
       /* Zoom: Delegation (Rechtsklick/Doppelklick). Klick: Act-Menü verzögert. */
       el.ondblclick = function () { clearTimeout(el._dcActTimer); };
       el.oncontextmenu = function () { clearTimeout(el._dcActTimer); };
-      el.onclick = function () { // Funktion
-        if (tryPickPending(el.dataset.uid)) return; // Zweig nur bei zutreffender Bedingung
-        var loc = engine.findInst(el.dataset.uid); // lokale Variable
-        if (!loc) return; // Zweig nur bei zutreffender Bedingung
-        var d = engine.defOf(loc.inst); // lokale Variable
+      el.onclick = function () {
+        if (tryPickPending(el.dataset.uid)) return;
+        var loc = engine.findInst(el.dataset.uid);
+        if (!loc) return;
+        var d = engine.defOf(loc.inst);
         clearTimeout(el._dcActTimer);
         el._dcActTimer = setTimeout(function () {
-          showActChooser(loc, d, viewer); // nächster Schritt im Ablauf
+          showActChooser(loc, d, viewer);
         }, 280);
       };
-    }); // nächster Schritt im Ablauf
+    });
     document.querySelectorAll('#enemy-support .slot.filled').forEach(function (el) {
       el.addEventListener('click', function (ev) {
         var loc = engine.findInst(el.dataset.uid);
@@ -2745,13 +2845,13 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       };
     });
     document.querySelectorAll('#enemy-doctrine .doctrine-card, #my-doctrine .doctrine-card').forEach(function (el) {
-      bindHover(el, function () { // Funktion
-        var def = CATALOG.cards.find(function (c) { return c.id === el.dataset.id; }); // Wert zurückgeben
+      bindHover(el, function () {
+        var def = CATALOG.cards.find(function (c) { return c.id === el.dataset.id; });
         return def ? { def: def, facedown: false, inst: null } : null; // verdeckte Lage
-      }); // nächster Schritt im Ablauf
-      el.onclick = function () { // Funktion
-        var def = CATALOG.cards.find(function (c) { return c.id === el.dataset.id; }); // Wert zurückgeben
-        if (!def) return; // Zweig nur bei zutreffender Bedingung
+      });
+      el.onclick = function () {
+        var def = CATALOG.cards.find(function (c) { return c.id === el.dataset.id; });
+        if (!def) return;
         var db = [{ id: 'close', label: 'Zurück' }];
         if (def.id === 'dc_dok_bollwerk') db.unshift({ id: 'schutzwall', label: 'Schutzwall (2 AP)', primary: true });
         if (def.id === 'dc_dok_tiefenverteidigung') {
@@ -2860,7 +2960,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
           }
         });
       };
-    }); // nächster Schritt im Ablauf
+    });
     function bindGrave(id, cards, enemy) {
       var pile = document.getElementById(id);
       if (!pile || pile.dataset.dcGraveBound === '1') return;
@@ -2913,11 +3013,11 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     });
     bindStatTips(document.getElementById('app'));
     $('#hint').textContent = st.pending // offene Wahl des Spielers
-      ? 'Ziel oder Stellung wählen.' // nächster Schritt im Ablauf
-      : 'Karte ziehen zum Ausspielen. Rechtsklick/Doppelklick: vergrößern. Hover: Vorschau. Shift+Rechtsklick: verdeckt scharf.'; // nächster Schritt im Ablauf
-    $('#log').innerHTML = engine.log.slice(-40).reverse().map(function (l) { // HTML in den Knoten schreiben
+      ? 'Ziel oder Stellung wählen.'
+      : 'Karte ziehen zum Ausspielen. Rechtsklick/Doppelklick: vergrößern. Hover: Vorschau. Shift+Rechtsklick: verdeckt scharf.';
+    $('#log').innerHTML = engine.log.slice(-40).reverse().map(function (l) {
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
-    }).join(''); // nächster Schritt im Ablauf
+    }).join('');
     if (window.DCTableChat) { try { DCTableChat.refresh(); } catch (eChat) {} }
     if (st.pending && (st.pending.player === viewer || /^tac-/.test(st.pending.kind))) {
       showPending();
@@ -2929,10 +3029,10 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
 
   window.dcRender = render; // globale Schnittstelle der Seite
   window.dcStart = startGame; // globale Schnittstelle der Seite
-  window.dcGetEngine = function () { return engine; }; // Wert zurückgeben
+  window.dcGetEngine = function () { return engine; };
   window.dcSetState = function (st) { // globale Schnittstelle der Seite
-    if (!engine) { // Zweig nur bei zutreffender Bedingung
-      engine = new DCEngine.Engine(window.DC_CATALOG, { seed: 1 }); // Zufallsstart
+    if (!engine) {
+      engine = new DCEngine.Engine(window.DC_CATALOG, { seed: 1 });
     }
     if (engine.state && isTerminal(engine.state) && !isTerminal(st)) clearMatchPresentation();
     engine.state = st;
@@ -2968,8 +3068,8 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     if (st && st.seed) window.dcMusicSeed = st.seed;
     var tr = document.getElementById('title-root');
     var first = tr && !tr.classList.contains('dc-off');
-    var ov = document.getElementById('overlay'); // lokale Variable
-    if (ov && ov.querySelector('.recap-modal') === null && ov.querySelector('.inspect-modal') === null) { // Element in der Seite suchen
+    var ov = document.getElementById('overlay');
+    if (ov && ov.querySelector('.recap-modal') === null && ov.querySelector('.inspect-modal') === null) {
       /* keep recap; hide leftover lobby overlay */
     }
     if (window.DCNet && DCNet.hookEngine) DCNet.hookEngine();
@@ -2981,13 +3081,13 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
   };
   window.dcPresentNewEvents = presentNewEvents;
   window.dcSetNames = function (a, b) { // globale Schnittstelle der Seite
-    if (!engine || !engine.state) return; // Zweig nur bei zutreffender Bedingung
-    if (a) engine.state.players[0].name = a; // Zweig nur bei zutreffender Bedingung
-    if (b) engine.state.players[1].name = b; // Zweig nur bei zutreffender Bedingung
+    if (!engine || !engine.state) return;
+    if (a) engine.state.players[0].name = a;
+    if (b) engine.state.players[1].name = b;
   };
   window.dcSetYou = function (id) { you = id; }; // globale Schnittstelle der Seite
   window.dcGetYou = function () { return you; };
   window.dcSetMode = function (m) { mode = m || 'lan'; }; // globale Schnittstelle der Seite
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bindChrome); // Ereignis binden
-  else bindChrome(); // sonst
-})(); // nächster Schritt im Ablauf
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bindChrome);
+  else bindChrome();
+})();

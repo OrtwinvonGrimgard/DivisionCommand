@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Soforteinsätze zahlen die gedruckten AP, inklusive Rabatte.
+ * Läuft über `npm test` von der Repo-Wurzel. Keine Produktlogik.
+ */
 'use strict';
 /* Soforteinsätze kosten den gedruckten AP-Wert; Rabatte greifen; unerschwingliche nicht spielbar. */
 const assert = require('node:assert/strict');
