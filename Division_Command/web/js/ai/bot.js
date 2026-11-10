@@ -140,7 +140,24 @@
    */
   function scorePending(engine, pid, act) {
     var s = 1;
+    var pend = engine.state && engine.state.pending;
+    if (act.confirm) {
+      // Massen/Mobilisierung: erst Einheiten wählen, wenn noch welche offen sind.
+      var left = ((pend && pend.choices) || []).some(function (c) {
+        return c.target && ((pend.selected || []).indexOf(c.target) < 0);
+      });
+      if (pend && (pend.kind === 'mass-pick' || pend.kind === 'mob-pick') && left) return -3 + Math.random();
+      return 4 + Math.random();
+    }
     var loc = act.target ? engine.findInst(act.target) : null;
+    if (!loc && act.target && engine.player) {
+      var pl = engine.player(pid);
+      var handC = (pl.hand || []).find(function (c) { return c.uid === act.target; });
+      if (handC) {
+        var hd = defOf(engine, handC);
+        return 10 + (Number(hd.atk) || 0) + (Number(hd.def) || 0) * 0.5 + Math.random();
+      }
+    }
     if (act.slot) {
       s += 8;
       if (act.slot.section === 'C') s += 2;

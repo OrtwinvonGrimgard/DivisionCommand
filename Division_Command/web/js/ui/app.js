@@ -1154,7 +1154,7 @@
     if (mineBits.length) buttons += '<p class="tiny">Eigene</p><div class="pick-row">' + mineBits.join('') + '</div>';
     if (otherBits.length) buttons += '<div class="pick-row">' + otherBits.join('') + '</div>';
     var extra = '';
-    if ((pend.kind === 'instant-target' || pend.kind === 'honors' || pend.kind === 'mass-pick' || pend.kind === 'rations' || pend.kind === 'discard-hand') && pend.upto) extra = '<button type="button" class="primary" id="btn-confirm-tg">Auswahl bestätigen</button> ';
+    if (((pend.kind === 'instant-target' || pend.kind === 'honors' || pend.kind === 'mass-pick' || pend.kind === 'mob-pick' || pend.kind === 'rations' || pend.kind === 'discard-hand') && pend.upto) || pend.kind === 'mass-pick') extra = '<button type="button" class="primary" id="btn-confirm-tg">Auswahl bestätigen</button> ';
     var ov = $('#overlay');
     ov.innerHTML = '<div class="modal"><h2>' + title + '</h2><p class="tiny">' + (pend.kind === 'instant-section' ? 'Abschnitt antippen (auch direkt auf der Front).' : pend.kind === 'tac-break' ? 'Nachbarfeld wählen oder die kostenlose Reaktion ablehnen. Schaden und Ausrüstung bleiben erhalten.' : /^tac-/.test(pend.kind) ? 'Karte oder Abschnitt antippen. Kosten erst nach der vollständigen gültigen Wahl.' : 'Karte antippen. Goldener Rand = Zeiger. Kleinere Karte = gewählt.') + '</p><div class="choices pick-row">' + buttons +
 

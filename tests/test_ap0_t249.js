@@ -236,7 +236,7 @@ function logMsgs(eng) {
   console.log('ok Mobilisierung 2 Inf auf Hand, eine frei / 3 AP');
 }
 
-// Psychologie der Massen: 6 AP, mindestens eine Einheit kostenlos (Engine legt derzeit nur eine aus)
+// Psychologie der Massen: 6 AP, beliebig viele Einheiten kostenlos nacheinander
 {
   const eng = fresh(6);
   const u = unit(3);
@@ -256,53 +256,101 @@ function logMsgs(eng) {
   assert.ok(placed.ok, 'Massen deploy ' + (placed && placed.error));
   const onFront = ['L', 'C', 'R'].some((s) => (eng.player(0).front[s] || []).some((x) => x && x.uid === a.uid));
   assert.ok(onFront, 'erste Einheit liegt');
-  // Engine-Ist: nach einem Auslegen endet die Folge (weicht vom Text „so viele wie du möchtest“ ab).
-  assert.equal(eng.state.pending, null, 'nach einem Auslegen kein weiteres mass-pick (bekannte Abweichung)');
-  console.log('ok Psychologie der Massen 6 AP, eine Einheit frei (Engine: nur eine)');
+  assert.equal(eng.state.pending && eng.state.pending.kind, 'mass-pick', 'weitere Einheit anbieten');
+  const slotWait = eng.dispatch({ type: 'CONFIRM_TARGETS', player: 0 });
+  assert.ok(slotWait.ok, 'fertig ' + (slotWait && slotWait.error));
+  assert.equal(eng.state.pending, null, 'Folge beendet');
+  const stillHand = eng.player(0).hand.some((c) => c.uid === b.uid);
+  assert.ok(stillHand, 'zweite Einheit bleibt auf der Hand wenn man aufhört');
+  console.log('ok Psychologie der Massen 6 AP, Folge, vorzeitig beenden');
 }
 
-// Blinder Gehorsam / Einsame Gassen / Der Letzte der steht: Kosten fallen, Wirkung derzeit Stub
+// Blinder Gehorsam: +2 ATK, freie Angriffe der Front
 {
   const eng = fresh(6);
-  L.put(eng, 0, unit(3).id, 'C', 0);
-  L.put(eng, 0, unit(3).id, 'L', 0);
-  const atk0 = ['L', 'C', 'R'].flatMap((s) => (eng.player(0).front[s] || []).filter(Boolean)).map((x) => x.atk);
+  const u = unit(3);
+  const mine = L.put(eng, 0, u.id, 'C', 0);
+  const foe = L.put(eng, 1, u.id, 'C', 0);
+  foe.def = 20; foe.defMax = 20;
+  const printed = Number((eng.defOf(mine).atk));
+  const ap0 = eng.player(0).ap;
   const { r } = play(eng, 'dc_so_blinder_gehorsam');
   assert.ok(r.ok, 'Gehorsam PLAY ' + (r && r.error));
-  assert.equal(eng.player(0).ap, 0, 'Gehorsam 6 AP');
-  assert.ok(logMsgs(eng).some((m) => /Kommandogruppe|Gehorsam|greift/i.test(m)), 'Log');
-  console.log('ok Blinder Gehorsam 6 AP (Engine-Stub, siehe Bericht)');
+  assert.equal(eng.player(0).ap, ap0 - 6, 'Gehorsam 6 AP');
+  assert.equal(mine.flags.commandAtkUntil, eng.state.turn, '+2-Flag');
+  const stats = eng.currentAtkDef(mine);
+  assert.equal(stats.atk, printed + 2, 'ATK +2, got ' + stats.atk);
+  assert.equal(eng.state.pending && eng.state.pending.kind, 'command-atk', 'Zielwahl');
+  const tgt = (eng.state.pending.choices || []).map((c) => c.target);
+  assert.ok(tgt.includes(foe.uid), 'Feind ist Ziel');
+  const startDef = foe.def;
+  const r2 = eng.dispatch({ type: 'RESOLVE_PENDING', player: 0, target: foe.uid });
+  assert.ok(r2.ok, 'Gehorsam Angriff ' + (r2 && r2.error));
+  assert.equal(eng.player(0).ap, ap0 - 6, 'Angriff ohne AP');
+  assert.ok(foe.def < startDef, 'Schaden durch befohlenen Angriff');
+  console.log('ok Blinder Gehorsam +2 ATK, freier Angriff / 6 AP');
 }
 
 {
   const eng = fresh(6);
-  const deckUnits = 3;
   const u = unit(3);
-  for (let i = 0; i < deckUnits; i++) eng.player(0).deck.unshift(eng.instFromId(u.id, 0));
-  const emptyBefore = ['L', 'C', 'R'].reduce((n, s) => n + (eng.player(0).front[s] || []).filter((x) => !x).length, 0);
+  eng.player(0).deck = [];
+  for (let i = 0; i < 3; i++) eng.player(0).deck.unshift(eng.instFromId(u.id, 0));
   const { r } = play(eng, 'dc_so_gassen');
   assert.ok(r.ok, 'Gassen PLAY ' + (r && r.error));
   assert.equal(eng.player(0).ap, 0, 'Gassen 6 AP');
+  assert.ok(eng.state.pending && (eng.state.pending.kind === 'gassen-slot' || eng.state.pending.kind === 'gassen-pick'), 'pending ' + (eng.state.pending && eng.state.pending.kind));
+  let steps = 0;
+  while (eng.state.pending && steps++ < 12) {
+    const pend = eng.state.pending;
+    if (pend.kind === 'gassen-pick') {
+      const ch = pend.choices || [];
+      const need = pend.needCount || ch.length;
+      for (let i = 0; i < need && i < ch.length; i++) {
+        const rr = eng.dispatch({ type: 'RESOLVE_PENDING', player: 0, target: ch[i].target });
+        assert.ok(rr.ok, 'gassen-pick ' + (rr && rr.error));
+        if (!eng.state.pending || eng.state.pending.kind !== 'gassen-pick') break;
+      }
+      continue;
+    }
+    if (pend.kind === 'gassen-slot' || pend.kind === 'deploy') {
+      const slot = (pend.choices || []).map((c) => c.slot).find(Boolean);
+      assert.ok(slot, 'Slot');
+      let pl = eng.dispatch({ type: 'CHOOSE_SLOT', player: 0, slot });
+      if (!pl.ok) pl = eng.dispatch({ type: 'RESOLVE_PENDING', player: 0, slot });
+      assert.ok(pl.ok, 'gassen place ' + (pl && pl.error));
+      continue;
+    }
+    break;
+  }
   const onFront = ['L', 'C', 'R'].reduce((n, s) => n + (eng.player(0).front[s] || []).filter(Boolean).length, 0);
-  assert.equal(onFront, 0, 'Gassen legt derzeit keine Einheiten aus (Stub)');
-  console.log('ok Einsame Gassen 6 AP (Engine-Stub, Front unverändert)');
+  assert.equal(onFront, 3, 'drei Einheiten offen ausgelegt, got ' + onFront);
+  console.log('ok Einsame Gassen 6 AP, Front aus dem Deck gefüllt');
 }
 
 {
   const eng = fresh(3);
-  const a = L.put(eng, 0, unit(3).id, 'C', 0);
-  const b = L.put(eng, 0, unit(3).id, 'L', 0);
+  const u = unit(3);
+  const a = L.put(eng, 0, u.id, 'C', 0);
+  const b = L.put(eng, 0, u.id, 'L', 0);
+  a.atk = 2; a.def = 4; a.defMax = 4;
   const { r } = play(eng, 'dc_so_letzter');
   assert.ok(r.ok, 'Letzter PLAY ' + (r && r.error));
   assert.equal(eng.state.pending && eng.state.pending.kind, 'last-stand');
   const r2 = eng.dispatch({ type: 'RESOLVE_PENDING', player: 0, target: a.uid });
   assert.ok(r2.ok, 'Letzter resolve ' + (r2 && r2.error));
   assert.equal(eng.player(0).ap, 0, 'Letzter 3 AP');
-  // Stub: keine Opferung, nur Flag lastStand (nicht letzterDerSteht)
   assert.ok(eng.player(0).front.C[0], 'Überlebende bleibt');
-  assert.ok(eng.player(0).front.L[0], 'zweite Einheit wurde nicht geopfert (Stub)');
-  assert.equal(!!a.flags.lastStand, true, 'Flag lastStand gesetzt');
-  console.log('ok Der Letzte der steht 3 AP (Engine-Stub, keine Opferung)');
+  assert.ok(!eng.player(0).front.L[0], 'zweite Einheit geopfert');
+  assert.equal(!!a.flags.letzterDerSteht, true, 'Flag letzterDerSteht');
+  assert.equal(a.atk, 3, ' +1 ATK, atk=' + a.atk);
+  assert.equal(a.def, 5, ' +1 DEF, def=' + a.def);
+  const vp1 = eng.player(1).vp || 0;
+  const loc = eng.findInst(a.uid);
+  loc.inst.def = 0;
+  eng._destroy(loc);
+  assert.equal(eng.player(1).vp, vp1 + 1, 'Gegner +1 SP beim Tod');
+  console.log('ok Der Letzte der steht 3 AP, Opfer, +1/+1, SP-Pfad');
 }
 
 console.log('PASS ap0 t249: Preise und geprüfte Wirkungen');

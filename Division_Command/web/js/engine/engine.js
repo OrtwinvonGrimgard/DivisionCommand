@@ -981,6 +981,7 @@
       if (inst.flags && inst.flags.tempAtkUntil === this.state.turn) atk += Number(inst.flags.tempAtk || 0);
       if (inst.flags && inst.flags.umgehenAtkUntil === this.state.turn) atk += Number(inst.flags.umgehenAtk || 0);
       if (inst.flags && inst.flags.tempAtkUntil === this.state.turn && inst.flags.tempDef) {/* def baked */}
+      if (inst.flags && inst.flags.commandAtkUntil === this.state.turn) atk += Number(inst.flags.commandAtkBonus || 2);
       if (inst.flags && inst.flags.eiferUntil === this.state.turn) atk += 3;
       if (inst.flags && inst.flags.standUntil === this.state.turn) atk += 2;
       if (inst.flags && inst.flags.formUntil === this.state.turn) atk += 1;
@@ -1239,6 +1240,10 @@
         if (st.pending.upto && (st.pending.selected || []).length > 0) {
           out.push({ type: 'RESOLVE_PENDING', confirm: true, kind: st.pending.kind });
         }
+        // Massen: Folge jederzeit beenden (auch ohne weitere Wahl)
+        if (pk === 'mass-pick' && !out.some((a) => a.confirm)) {
+          out.push({ type: 'RESOLVE_PENDING', confirm: true, kind: pk });
+        }
         return out;
       }
 
@@ -1395,6 +1400,7 @@
         if (this.state) this.state.seq = (this.state.seq || 0) + 1;
         if (this.state && this.state.winner == null) { try { this._kwRecompute(); } catch (e) { /* Schlüsselwort-Neuberechnung darf Aktionen nicht brechen */ } try { this._cmAfterAction(); this._cmRecompute(); } catch (e) { /* CM-Neuberechnung darf Aktionen nicht brechen */ } }
         if (this._tacAfterAction) this._tacAfterAction();
+        try { this._maybeContinueSequences(); } catch (e) { /* Folgen (Gehorsam/Massen/Gassen) dürfen Aktionen nicht brechen */ }
       }
     }
     /**
@@ -1624,7 +1630,11 @@
       const def = this.defOf(card);
       this._evt('deploy', def, p.name + ' stellt ' + (card.facedown ? 'eine verdeckte Einheit' : def.name) + ' auf ' + slot.section + (slot.row + 1) + '.');
       // Ereignis für die Rundenübersicht
+      const continueMass = !!pend.mass;
+      const continueGassen = !!pend.gassen;
       this.state.pending = null; // offene Wahl des Spielers
+      if (continueMass) this.state._massFollow = { pid };
+      if (continueGassen) this.state._gassenFollow = this.state._gassenFollow || { pid, queue: [] };
       if (this._tacOnEntry) this._tacOnEntry(card,slot.section);
       if (!card.facedown) this._onEnter(card, 'front');
       const d2 = this.defOf(card);
@@ -2030,11 +2040,12 @@
         const p = this.player(pid);
         const card = p.hand.find((c) => c.uid === a.target);
         if (!card || this.defOf(card).typ !== 'Einheit') {
-          this.state.pending = null;
-          return { ok: true };
+          return this._finishMassDeploy(pid);
         }
+        if (!this._emptyFrontSlots(p).length) return this._finishMassDeploy(pid);
         card.flags.freePlayOnTurn = this.state.turn;
         this.state.pending = this._sealPending({ kind: 'deploy', player: pid, uid: card.uid, facedown: false, free: true, mass: true });
+        this.state._massFollow = { pid };
         return { ok: true, need: 'slot' };
       }
       if (pend.kind === 'pause-unit') return this._applyPause(pid, a.target, pend);
@@ -2047,25 +2058,7 @@
       }
       if (pend.kind === 'mob-pick') {
         if (a.target && pend.selected.indexOf(a.target) < 0) pend.selected.push(a.target);
-        if (pend.selected.length >= 2) {
-          const p = this.player(pid);
-          pend.pool.forEach((c) => {
-            if (pend.selected.indexOf(c.uid) >= 0) p.hand.push(c);
-            else p.deck.push(c);
-          });
-          this._shuffle(p.deck);
-          const taken = pend.selected.slice();
-          this.state.pending = this._sealPending({
-            kind: 'mob-play',
-            player: pid,
-            pool: taken,
-            choices: taken.map((uid) => {
-              const c = this.player(pid).hand.find((x) => x.uid === uid);
-              return { target: uid, label: c ? this.defOf(c).name : uid };
-            })
-          });
-          return { ok: true, need: 'target' };
-        }
+        if (pend.selected.length >= (pend.needCount || 2)) return this._finishMobPick(pid);
         return { ok: true, need: 'target' };
       }
       if (pend.kind === 'mob-play') {
@@ -3049,6 +3042,10 @@
         return { ok: true };
       }
       if (pend && pend.kind === 'honors' && pend.player === pid) return this._finishHonors(pid);
+      if (pend && pend.kind === 'mass-pick' && pend.player === pid) return this._finishMassDeploy(pid);
+      if (pend && pend.kind === 'mob-pick' && pend.player === pid) return this._finishMobPick(pid);
+      if (pend && pend.kind === 'gassen-pick' && pend.player === pid) return this._gassenAfterPick(pid);
+      if (pend && pend.kind === 'command-atk' && pend.player === pid) return this._resolveCommandStep(pid, null);
       if (!pend || pend.player !== pid || pend.kind !== 'instant-target') throw new Error('Keine Mehrfachwahl'); // Regelverstoß, Zug ungültig
       return this._finishInstant(pid, pend, pend.selected || []);
     }
@@ -4387,7 +4384,20 @@
       if (/^tac-/.test(pend.kind)) { this.state.pending=null; return {ok:true}; }
       if (pend.kind === 'sam') return this._resolveSam(pid, false);
       if (pend.kind === 'geist-window') return this._passGeist();
-      if (pend.kind === 'mob-play' || pend.kind === 'mass-pick') { this.state.pending = null; return { ok: true }; }
+      if (pend.kind === 'mob-play' || pend.kind === 'mass-pick') {
+        if (pend.kind === 'mass-pick') return this._finishMassDeploy(pid);
+        this.state.pending = null;
+        return { ok: true };
+      }
+      if (pend.kind === 'gassen-pick' || pend.kind === 'gassen-slot') {
+        return this._gassenCancel(pid);
+      }
+      if (pend.kind === 'command-atk') {
+        this.state.pending = null;
+        this.state._commandFollow = null;
+        return { ok: true };
+      }
+      if (pend.kind === 'mob-pick') return this._finishMobPick(pid);
       if (pend.kind === 'react-window') return this._resumeAfterReact(pid);
       if (pend.card && pend.kind !== 'command-atk') {
         const p = this.player(pid);
@@ -4582,6 +4592,8 @@
 
     /* Angriffskosten: Basis attack_ap; Steilfeuer V auf Support +2 AP (gesamt 3). */
     _attackCost(attackerLoc, targetLoc) {
+      const inst = attackerLoc && attackerLoc.inst;
+      if (inst && inst.flags && inst.flags.commandFreeUntil === this.state.turn) return 0;
       const base = Number(this.rules.attack_ap) || 1;
       if (!attackerLoc || !attackerLoc.inst || !targetLoc) return base;
       if (targetLoc.zone !== 'support') return base;
@@ -5208,7 +5220,7 @@
       }
       if (loc.zone === 'front') {
         loc.player.front[loc.section][loc.row] = null;
-        const hero = (meta && meta.tag === 'armageddon') ? null : loc.player.hand.find((c) => (this.defOf(c).effects || []).some((x) => x.code === 'BREACH_JUMP'));
+        const hero = (meta && meta.tag === 'armageddon') || this.state._inLastStand ? null : loc.player.hand.find((c) => (this.defOf(c).effects || []).some((x) => x.code === 'BREACH_JUMP'));
         if (hero) {
           this.state.pending = this._sealPending({
             kind: 'hero-jump',
@@ -6696,33 +6708,199 @@
      * @param {object} slot
      */
     _gassenPlace(pid, slot) {
-      this.state.pending = null;
+      const follow = this.state._gassenFollow;
+      const pend = this.state.pending;
+      const p = this.player(pid);
+      const queue = (pend && pend.queue) || (follow && follow.queue) || [];
+      if (!queue.length || !slot) {
+        this.state.pending = null;
+        this.state._gassenFollow = null;
+        return { ok: true };
+      }
+      const card = queue[0];
+      const rest = queue.slice(1);
+      p.hand = (p.hand || []).filter((c) => c.uid !== card.uid);
+      p.hand.push(card);
+      this.state._gassenFollow = { pid, queue: rest };
+      this.state.pending = this._sealPending({
+        kind: 'deploy',
+        player: pid,
+        uid: card.uid,
+        facedown: false,
+        free: true,
+        gassen: true,
+        choices: this._emptyFrontSlots(p).map((s) => ({ slot: s, label: s.section + (s.row + 1) })),
+      });
       return this._actSlot(pid, { slot: slot });
     }
     /**
-     * Gassen: Nach der Wahl aufräumen bzw. fortsetzen.
+     * Gassen: gewählte Einheiten merken und die Platzierung starten.
      * @param {number} pid
      */
     _gassenAfterPick(pid) {
+      const pend = this.state.pending;
+      const p = this.player(pid);
+      const selected = (pend && pend.selected) || [];
+      const pool = (pend && pend.pool) || [];
+      const taken = [];
+      pool.forEach((c) => {
+        if (selected.indexOf(c.uid) >= 0) taken.push(c);
+        else p.deck.push(c);
+      });
+      this._shuffle(p.deck);
       this.state.pending = null;
+      if (!taken.length || !this._emptyFrontSlots(p).length) {
+        this.state._gassenFollow = null;
+        this._log('Einsame Gassen: keine Stellung.');
+        return { ok: true };
+      }
+      this.state._gassenFollow = { pid, queue: taken };
+      return this._continueGassen(pid);
+    }
+    /**
+     * Bricht Gassen ab: nicht gelegte Einheiten zurück ins Deck, mischen.
+     * @param {number} pid
+     */
+    _gassenCancel(pid) {
+      const p = this.player(pid);
+      const pend = this.state.pending;
+      const follow = this.state._gassenFollow;
+      const leftover = [];
+      if (pend && pend.kind === 'gassen-pick' && pend.pool) {
+        pend.pool.forEach((c) => leftover.push(c));
+      }
+      if (follow && follow.queue) follow.queue.forEach((c) => leftover.push(c));
+      leftover.forEach((c) => {
+        if (!p.deck.some((x) => x.uid === c.uid) && !p.hand.some((x) => x.uid === c.uid) && !this.findInst(c.uid)) p.deck.push(c);
+      });
+      this._shuffle(p.deck);
+      this.state.pending = null;
+      this.state._gassenFollow = null;
       return { ok: true };
     }
     /**
-     * Startet die Gassen-Platzierung.
+     * Startet die Gassen-Suche: so viele Einheiten wie freie Frontplätze.
      * @param {object} p
      */
     _startGassen(p) {
-      this._log('Einsame Gassen.');
-      return { ok: true };
+      const slots = this._emptyFrontSlots(p);
+      const units = (p.deck || []).filter((c) => this.defOf(c) && this.defOf(c).typ === 'Einheit');
+      p.deck = (p.deck || []).filter((c) => !(this.defOf(c) && this.defOf(c).typ === 'Einheit'));
+      const n = slots.length;
+      this._evt('instant', { name: 'Einsame Gassen' }, p.name + ' sucht ' + n + ' Einheit(en) für freie Stellungen.');
+      if (!n || !units.length) {
+        units.forEach((c) => p.deck.push(c));
+        this._shuffle(p.deck);
+        this._log('Einsame Gassen: nichts einzusetzen.');
+        return { ok: true };
+      }
+      if (units.length <= n) {
+        this.state._gassenFollow = { pid: p.id, queue: units };
+        return this._continueGassen(p.id);
+      }
+      this.state._gassenFollow = { pid: p.id, queue: [] };
+      this.state.pending = this._sealPending({
+        kind: 'gassen-pick',
+        player: p.id,
+        pool: units,
+        needCount: n,
+        upto: false,
+        selected: [],
+        choices: units.map((c) => ({ target: c.uid, label: this.defOf(c).name })),
+      });
+      return { ok: true, need: 'target' };
     }
     /**
-     * Startet eine befohlene Mehrfach-Angriffsfolge (`n` Schritte).
+     * Nächste Gassen-Einheit auf eine freie Stellung legen.
+     * @param {number} pid
+     */
+    _continueGassen(pid) {
+      const p = this.player(pid);
+      const follow = this.state._gassenFollow;
+      const slots = this._emptyFrontSlots(p);
+      if (!follow || !follow.queue || !follow.queue.length || !slots.length) {
+        if (follow && follow.queue && follow.queue.length) {
+          follow.queue.forEach((c) => p.deck.push(c));
+          this._shuffle(p.deck);
+        }
+        this.state._gassenFollow = null;
+        this.state.pending = null;
+        return { ok: true };
+      }
+      const card = follow.queue[0];
+      this.state.pending = this._sealPending({
+        kind: 'gassen-slot',
+        player: pid,
+        queue: follow.queue.slice(),
+        uid: card.uid,
+        choices: slots.map((s) => ({ slot: s, label: this.defOf(card).name + ' → ' + s.section + (s.row + 1) })),
+        prompt: this.defOf(card).name + ' offen einsetzen',
+      });
+      return { ok: true, need: 'slot' };
+    }
+    /**
+     * Startet Blinder Gehorsam: +2 ATK in diesem Zug, freie Angriffe, Angriffsfolge jetzt.
      * @param {object} p
-     * @param {number} n
+     * @param {number} n ATK-Bonus
      */
     _startCommandAttack(p, n) {
-      this._log('Kommandogruppe greift mit an.');
-      return { ok: true };
+      const bonus = n == null ? 2 : n;
+      this.frontList(p).forEach((l) => {
+        l.inst.flags = l.inst.flags || {};
+        l.inst.flags.commandAtkUntil = this.state.turn;
+        l.inst.flags.commandAtkBonus = bonus;
+        l.inst.flags.commandFreeUntil = this.state.turn;
+      });
+      const ready = this._commandStrikeList(p.id);
+      this._evt('instant', { name: 'Blinder Gehorsam' }, p.name + ': Front +' + bonus + ' A, Angriffe in diesem Zug ohne AP' + (ready.length ? (' (' + ready.length + ' greifen an).') : '.'));
+      this.state._commandFollow = { pid: p.id, left: ready.map((l) => l.inst.uid) };
+      return this._nextCommandAttack(p.id);
+    }
+    /**
+     * Einheiten, die unter Blindem Gehorsam jetzt angreifen können.
+     * @param {number} pid
+     * @returns {object[]}
+     */
+    _commandStrikeList(pid) {
+      const p = this.player(pid);
+      const done = (this.state._commandFollow && this.state._commandFollow.done) || [];
+      return this.frontList(p).filter((l) => {
+        if (!l.inst || done.indexOf(l.inst.uid) >= 0) return false;
+        if (l.inst.facedown) return false;
+        const f = l.inst.flags || {};
+        if (f.noAttack || f.paused || f.kwNoAtkTurn === this.state.turn) return false;
+        if (f.noCombatUntil === this.state.turn && !f.digInBonus) return false;
+        if (l.inst.summonedTurn != null && l.inst.summonedTurn >= this.state.turn && !(l.inst.summonedTurn === this.state.turn && this._kw(l.inst, 'Gefechtsbereit'))) return false;
+        return this.legalAttackTargets(l).length > 0;
+      });
+    }
+    /**
+     * Nächsten befohlenen Angriff eröffnen (Zielwahl).
+     * @param {number} pid
+     */
+    _nextCommandAttack(pid) {
+      if (this.state.pending || this.state.heldAttack || this.state.winner != null) return { ok: true };
+      const follow = this.state._commandFollow;
+      if (!follow || follow.pid !== pid) return { ok: true };
+      const units = this._commandStrikeList(pid);
+      if (!units.length) {
+        this.state._commandFollow = null;
+        this.state.pending = null;
+        return { ok: true };
+      }
+      const loc = units[0];
+      const tg = this.legalAttackTargets(loc);
+      this.state.pending = this._sealPending({
+        kind: 'command-atk',
+        player: pid,
+        attackerUid: loc.inst.uid,
+        choices: tg.map((t) => ({
+          target: t.inst.uid,
+          label: t.inst.facedown ? 'Verdeckt' : this.defOf(t.inst).name,
+        })),
+        prompt: this.defOf(loc.inst).name + ' greift an (0 AP)',
+      });
+      return { ok: true, need: 'target' };
     }
     /**
      * Ein Schritt der befohlenen Angriffsfolge.
@@ -6730,8 +6908,116 @@
      * @param {string} targetUid
      */
     _resolveCommandStep(pid, targetUid) {
+      const pend = this.state.pending;
+      const attackerUid = pend && pend.attackerUid;
+      const follow = this.state._commandFollow || { pid, left: [], done: [] };
+      follow.done = follow.done || [];
+      if (attackerUid) follow.done.push(attackerUid);
+      this.state._commandFollow = follow;
       this.state.pending = null;
+      if (!attackerUid || !targetUid) return this._nextCommandAttack(pid);
+      const aLoc = this.findInst(attackerUid);
+      const tLoc = this.findInst(targetUid);
+      if (!aLoc || !tLoc) return this._nextCommandAttack(pid);
+      // Bereits angegriffen: Befehl erlaubt trotzdem diesen Angriff.
+      aLoc.inst.attackUsed = false;
+      if (aLoc.inst.flags) aLoc.inst.flags.exhausted = false;
+      const rw = this._attackReactChoices(tLoc.player, aLoc.inst, tLoc.inst);
+      if (rw.length && !this.state._reactLock) {
+        this.state.heldAttack = { atkPlayer: pid, attackerUid, targetUid, command: true };
+        this.state.pending = this._sealPending({
+          kind: 'react-window',
+          player: tLoc.player.id,
+          attackerUid,
+          targetUid,
+          atkPlayer: pid,
+          choices: rw,
+          prompt: 'Feindkontakt!',
+        });
+        return { ok: true, need: 'react' };
+      }
+      return this._resolveCombat(pid, attackerUid, targetUid);
+    }
+    /**
+     * Psychologie der Massen: weitere Einheiten anbieten oder beenden.
+     * @param {number} pid
+     */
+    _continueMassDeploy(pid) {
+      const p = this.player(pid);
+      const units = (p.hand || []).filter((c) => this.defOf(c) && this.defOf(c).typ === 'Einheit');
+      const slots = this._emptyFrontSlots(p);
+      if (!units.length || !slots.length) return this._finishMassDeploy(pid);
+      this.state._massFollow = { pid };
+      this.state.pending = this._sealPending({
+        kind: 'mass-pick',
+        player: pid,
+        upto: true,
+        selected: [],
+        choices: units.map((c) => ({ target: c.uid, label: this.defOf(c).name })),
+      });
+      return { ok: true, need: 'target' };
+    }
+    /**
+     * Beendet die Massen-Auslegefolge.
+     * @param {number} pid
+     */
+    _finishMassDeploy(pid) {
+      this.state.pending = null;
+      this.state._massFollow = null;
       return { ok: true };
+    }
+    /**
+     * Mobilisierung: gewählte Infanterie auf die Hand, Rest ins Deck, optional eine frei spielen.
+     * @param {number} pid
+     */
+    _finishMobPick(pid) {
+      const pend = this.state.pending;
+      const p = this.player(pid);
+      const selected = (pend && pend.selected) || [];
+      const pool = (pend && pend.pool) || [];
+      pool.forEach((c) => {
+        if (selected.indexOf(c.uid) >= 0) p.hand.push(c);
+        else p.deck.push(c);
+      });
+      this._shuffle(p.deck);
+      this.state.pending = null;
+      if (!selected.length) return { ok: true };
+      const taken = selected.slice();
+      this.state.pending = this._sealPending({
+        kind: 'mob-play',
+        player: pid,
+        pool: taken,
+        choices: taken.map((uid) => {
+          const c = p.hand.find((x) => x.uid === uid);
+          return { target: uid, label: c ? this.defOf(c).name : uid };
+        }),
+      });
+      return { ok: true, need: 'target' };
+    }
+    /**
+     * Setzt unterbrochene Folgen (Massen, Gassen, Gehorsam) fort, sobald keine Wahl offen ist.
+     */
+    _maybeContinueSequences() {
+      if (!this.state || this.state.winner != null) return;
+      if (this.state.pending || this.state.heldAttack) return;
+      if (this.state._inSeqContinue) return;
+      this.state._inSeqContinue = true;
+      try {
+        if (this.state._massFollow) {
+          const pid = this.state._massFollow.pid;
+          this._continueMassDeploy(pid);
+          if (this.state.pending) return;
+        }
+        if (this.state._gassenFollow && this.state._gassenFollow.queue && this.state._gassenFollow.queue.length) {
+          this._continueGassen(this.state._gassenFollow.pid);
+          if (this.state.pending) return;
+        }
+        if (this.state._commandFollow) {
+          this._nextCommandAttack(this.state._commandFollow.pid);
+        }
+      } finally {
+        this.state._inSeqContinue = false;
+      }
     }
     /**
      * Löst „Deckung suchen“ auf das gewählte Ziel auf.
@@ -6761,9 +7047,30 @@
      * @param {string} targetUid
      */
     _resolveLastStand(pid, targetUid) {
+      const pend = this.state.pending;
+      const p = this.player(pid);
       const loc = this.findInst(targetUid);
-      if (loc) loc.inst.flags.lastStand = true;
+      if (!loc || loc.player.id !== pid || loc.zone !== 'front') {
+        this.state.pending = null;
+        return { ok: false, error: 'Keine eigene Fronteinheit.' };
+      }
+      const others = this.frontList(p).filter((l) => l.inst.uid !== loc.inst.uid);
+      const n = others.length;
+      this.state._inLastStand = true;
+      try {
+        others.forEach((l) => {
+          this._destroy({ inst: l.inst, player: p, zone: 'front', section: l.section, row: l.row });
+        });
+      } finally { this.state._inLastStand = false; }
+      loc.inst.atk = (loc.inst.atk == null ? Number((this.defOf(loc.inst) || {}).atk) || 0 : loc.inst.atk) + n;
+      loc.inst.def = (loc.inst.def || 0) + n;
+      loc.inst.defMax = (loc.inst.defMax || loc.inst.def) + n;
+      loc.inst.flags = loc.inst.flags || {};
+      loc.inst.flags.letzterDerSteht = true;
+      if (pend && pend.card) p.grave.push(pend.card);
       this.state.pending = null;
+      this._evt('instant', { name: 'Der Letzte der steht' }, this.defOf(loc.inst).name + ' bleibt (+' + n + '/+' + n + '). Fällt sie, erhält der Gegner 1 SP.');
+      this._checkVictory();
       return { ok: true };
     }
     /**
@@ -6838,7 +7145,7 @@
     "hand-peek": { title: "Handkarten ansehen", pick: "card", needs: true, multi: true },
     "hand-show": { title: "Gezeigte Karten", pick: "confirm", needs: false },
     honors: { title: "Militärische Ehren", pick: "card", needs: true, multi: true },
-    "mass-pick": { title: "Einheiten wählen", pick: "card", needs: true, multi: true },
+    "mass-pick": { title: "Weitere Einheiten auslegen", pick: "card", needs: true, multi: true },
     rations: { title: "Verpflegung", pick: "card", needs: true, multi: true },
     napalm: { title: "Napalm", pick: "card", needs: true },
     "air-strike": { title: "Luftschlag", pick: "card", needs: true },
@@ -6853,7 +7160,7 @@
     "selfsac-foe": { title: "Selbstopfer", pick: "card", needs: true, multi: true },
     "selfsac-self": { title: "Selbstopfer eigene", pick: "card", needs: true },
     "mob-play": { title: "Mobilisierung", pick: "card", needs: true },
-    "mob-pick": { title: "Mobilisierung", pick: "card", needs: true },
+    "mob-pick": { title: "Mobilisierung (bis zu 2)", pick: "card", needs: true, multi: true },
     "hero-jump": { title: "Gegenstoß", pick: "slot", needs: true },
     verschieben: { title: "Verschieben", pick: "slot", needs: true },
     "move-dest": { title: "Feld wählen", pick: "slot", needs: true },
@@ -6872,8 +7179,9 @@
     "repair-bounce": { title: "Instandsetzung", pick: "card", needs: true },
     zeal: { title: "Eifer", pick: "card", needs: true },
     "spy-top": { title: "Spionage", pick: "confirm", needs: false },
-    "command-atk": { title: "Kommandogruppe", pick: "card", needs: true },
-    "gassen-slot": { title: "Einsame Gassen", pick: "slot", needs: true },
+    "command-atk": { title: "Blinder Gehorsam: Ziel", pick: "card", needs: true },
+    "gassen-pick": { title: "Einsame Gassen: Einheiten", pick: "card", needs: true, multi: true },
+    "gassen-slot": { title: "Einsame Gassen: Stellung", pick: "slot", needs: true },
     "instant-section": { title: "Abschnitt wählen", pick: "section", needs: true }
   };
 
