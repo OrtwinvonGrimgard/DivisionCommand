@@ -971,9 +971,22 @@
       const canReact = st.active !== playerId && p.ap > 0 && st.phase !== 'gameover'; // unveränderliche Bindung in diesem Block
 
       if (st.pending && st.pending.player === playerId) { // offene Wahl des Spielers
-        const choices = st.pending.choices || [];
-        if (!choices.length) return [{ type: 'RESOLVE_PENDING', confirm: true, kind: st.pending.kind }];
-        const out = choices.map((c) => Object.assign({ type: 'RESOLVE_PENDING' }, c)); // offene Wahl des Spielers
+        const pk = st.pending.kind;
+        // Fenster ohne Wahl (gezeigte Karten / Blick): nur Schließen ist legal.
+        if (pk === 'hand-show' || pk === 'peek') return [{ type: 'PEEK_DONE', kind: pk, pass: true }];
+        const PASS = { 'react-window': 'REACT_PASS', 'sam': 'SAM_PASS', 'geist-window': 'GEIST_PASS' };
+        let choices = st.pending.choices || [];
+        // Feindkontakt: nur Handkarten anbieten, die jetzt bezahlbar sind; Weitergeben ist immer legal.
+        if (pk === 'react-window') {
+          choices = choices.filter((c) => {
+            const inst = p.hand.find((x) => x.uid === c.target);
+            if (!inst) return false;
+            try { return p.ap >= this.costOf(this.defOf(inst), p, null, inst, false); } catch (e) { return false; }
+          });
+        }
+        const passAct = PASS[pk] ? [{ type: PASS[pk], kind: pk, pass: true }] : [];
+        if (!choices.length) return passAct.length ? passAct : [{ type: 'RESOLVE_PENDING', confirm: true, kind: pk }];
+        const out = choices.map((c) => Object.assign({ type: 'RESOLVE_PENDING' }, c)).concat(passAct); // offene Wahl des Spielers
         // „Bis zu N“: Bestätigen, sobald mind. ein Ziel gewählt ist
         if (st.pending.upto && (st.pending.selected || []).length > 0) {
           out.push({ type: 'RESOLVE_PENDING', confirm: true, kind: st.pending.kind });

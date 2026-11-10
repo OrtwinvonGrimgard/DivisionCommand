@@ -256,6 +256,11 @@
   }
 
 
+  // Weitergeben/Schließen offener Fenster (REACT_PASS, PEEK_DONE …), von der Engine als pass:true geliefert.
+  function passAction(acts, skip) {
+    return (acts || []).find(function (a) { return a.pass && !(skip && skip[actKey(a)]); }) || null;
+  }
+
   function pickPending(engine, pid, pendingActs) {
     var pend = engine.state && engine.state.pending;
     var selected = (pend && pend.selected) || [];
@@ -291,6 +296,10 @@
     var pending = acts.filter(function (a) {
       return a.type === 'RESOLVE_PENDING' && !(skip && skip[actKey(a)]);
     });
+    if (!pending.length) {
+      var passT = passAction(acts, skip);
+      if (passT) return Object.assign({ player: pid }, passT);
+    }
     if (pending.length) {
       pending = pickPending(engine, pid, pending);
       var bestP = pending[0];
@@ -342,6 +351,10 @@
     var pendingChoices = acts.filter(function (a) {
       return a.type === 'RESOLVE_PENDING' && !(skip && skip[actKey(a)]);
     });
+    if (!pendingChoices.length) {
+      var passS = passAction(acts, skip);
+      if (passS) return Object.assign({ player: pid }, passS);
+    }
     if (pendingChoices.length) {
       pendingChoices = pickPending(engine, pid, pendingChoices);
       return Object.assign({ player: pid }, pick(pendingChoices));
@@ -386,7 +399,9 @@
             return a.type === 'RESOLVE_PENDING' && (a.target || a.slot || a.confirm);
           }));
         }
+        var passF = passAction(acts, null);
         if (opts.length) act = Object.assign({ player: pid }, opts[0]);
+        else if (passF) act = Object.assign({ player: pid }, passF);
         else act = { type: 'CANCEL_PENDING', player: pid };
       }
     }

@@ -165,7 +165,8 @@ function playMatch(seed, mode) {
 
   const fail = {};
   let steps = 0, stuck = 0;
-  const MAX = 1200;
+  const MAX = 4000; // Schrittobergrenze; Partien enden regulär spätestens bei Zuglimit 28
+  const TURN_CAP = 30;
   const errors = [];
   let lastPending = null, pendingStuck = 0;
 
@@ -185,6 +186,7 @@ function playMatch(seed, mode) {
     else pendingStuck = 0;
     lastPending = pendKey;
     if (pendingStuck === 30) {
+      errors.push(`s${seed}: pending hang ${pendKey}`);
       try {
         const pid = eng.state.pending.player;
         const acts = eng.listActions(pid) || [];
@@ -214,6 +216,7 @@ function playMatch(seed, mode) {
       fail[DCBot.actKey(act)] = 1;
       stuck++;
       if (stuck > 50) {
+        errors.push(`s${seed}: hang (50 abgelehnte Aktionen) act=${JSON.stringify(act).slice(0,120)}`);
         try {
           eng.dispatch({ type: 'END_TURN', player: eng.state.active });
           stuck = 0; Object.keys(fail).forEach((k) => delete fail[k]);
@@ -227,6 +230,7 @@ function playMatch(seed, mode) {
       Object.keys(fail).forEach((k) => delete fail[k]);
     }
     steps++;
+    if (eng.state.turn > TURN_CAP) { errors.push(`s${seed}: turn cap ${TURN_CAP} überschritten`); break; }
   }
 
   if (eng.state.winner == null && !eng.state.endReason) {
@@ -271,3 +275,4 @@ console.log(JSON.stringify({
   failMatches: allErr.length,
   sample: allErr.slice(0, 8).map((r) => ({ seed: r.seed, reason: r.reason, steps: r.steps, errs: r.errors.slice(0, 6) })),
 }, null, 2));
+if (allErr.length || natural < N) process.exitCode = 1;
