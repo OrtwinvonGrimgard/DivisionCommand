@@ -1201,7 +1201,15 @@ window.DC_SET_TYPES["Ausrüstung"] = [
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
-          "def": 1
+          "def": 1,
+          "only": "panzer|fahrzeug"
+        }
+      },
+      {
+        "code": "EQUIP_TURN_START_HEAL",
+        "param": {
+          "heal": 1,
+          "ifDamaged": true
         }
       }
     ],
@@ -4795,10 +4803,9 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "text": "Träger heilt 1 am Zugende, wenn er nicht angriff.",
     "effects": [
       {
-        "code": "MEDIZIN",
+        "code": "EQUIP_ON_REST",
         "param": {
-          "self": 1,
-          "flank": 0
+          "heal": 1
         }
       }
     ],

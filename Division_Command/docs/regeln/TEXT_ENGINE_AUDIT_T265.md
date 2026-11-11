@@ -1,6 +1,6 @@
 # Kartentext gegen Engine – Prüfung t265
 
-Stand 11.11.2026, `main` nach t259 (`d15377b`). Nur Diagnose: Es wurde keine Spielmechanik geändert. Die gefundenen Abweichungen sind gemeldet, nicht behoben.
+Stand 11.11.2026, `main` nach t259 (`d15377b`). Nur Diagnose: Es wurde keine Spielmechanik geändert. **Nachtrag t267:** Alle 14 Karten sind behoben, Lesarten in `KARTEN_T267.md`.
 
 ## Vorgehen
 

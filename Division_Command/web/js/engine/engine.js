@@ -1117,6 +1117,12 @@
       if (owner && owner.flags && owner.flags.infPlayed && owner.flags.infPlayed.turn === this.state.turn && owner.flags.infPlayed.uids.some((u) => u !== inst.uid)) {
         (def.effects || []).forEach((e) => { if (e.code === 'ATK_IF_INFANTRY_PLAYED') atk += Number((e.param || {}).atk || 1); });
       }
+      // t267: negierter Bonus – nicht über Druckwert (ATK) bzw. aktuelle Stabilität (DEF); Mali bleiben
+      if (inst.flags.bonusNegatedUntil != null && inst.flags.bonusNegatedUntil >= this.state.turn) {
+        atk = Math.min(atk, Number(def.atk) || 0);
+        const base = inst.def == null ? (Number(def.def) || 0) : inst.def;
+        dv = Math.min(dv, base);
+      }
       return { atk, def: dv };
     }
     /**
@@ -2378,6 +2384,16 @@
         }
         return { ok: true, need: 'target', selected: pend.selected.slice() };
       }
+      if (pend.kind === 'own-bonus') {
+        const loc = this.findInst(a.target);
+        if (!loc || loc.player.id !== pid || loc.zone !== 'front') throw new Error('Keine eigene Fronteinheit');
+        const pl = this.player(pid);
+        this.state.pending = null;
+        this._applyOwnBonus(pl, pend.effects || [], a.target, pend.card);
+        if (pend.card) pl.grave.push(pend.card);
+        if (this.state.heldAttack) return this._resumeAfterReact();
+        return { ok: true };
+      }
       if (pend.kind === 'shoulder-2') {
         const a1 = this.findInst(pend.uid);
         const a2 = this.findInst(a.target);
@@ -2482,7 +2498,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'CLEAR_ATK_MALUS')) {
+      if ((def.effects || []).some((e) => e.code === 'CLEAR_ATK_MALUS' && !(e.param && e.param.negateBonus))) {
         const units = this.frontList(p);
         if (!units.length) {
           p.hand.push(card);
@@ -3043,6 +3059,11 @@
         });
         return { ok: true, need: 'target' };
       }
+      // t267: direkt mitgegebenes Ziel (Ziehen auf ein Feld) muss die Zielbedingungen der Karte erfüllen
+      if (targetUid && !this._instantTargetFilterOk(def, targetUid)) {
+        p.hand.push(card);
+        return { ok: false, error: def.name + ' — Ziel erfüllt die Bedingung nicht.', code: 'BAD_TGT' };
+      }
       const needs = this._instantNeedsTarget(def);
       if (needs && !targetUid) {
         const choices = this._instantTargets(p, def);
@@ -3064,11 +3085,14 @@
         });
         return { ok: true, need: 'target' };
       }
+      this._ownBonusQueue = [];
       this._resolveEffects(p, card, targetUid); // Karteneffekte der Reihe nach
       if (this.state.pending && this.state.pending.kind === 'move-dest') {
         this.state.pending.card = card;
         return { ok: true, need: 'slot' };
       }
+      const ob = this._openOwnBonus(p, card);
+      if (ob) return ob;
       p.grave.push(card); // Friedhof
       return { ok: true };
     }
@@ -3107,6 +3131,7 @@
       const targets = Array.isArray(targetUid) ? targetUid : (targetUid ? [targetUid] : (pend.selected || []));
 
       this.state.pending = null;
+      this._ownBonusQueue = [];
       if (!targets.length) this._resolveEffects(p, pend.card, null); // Karteneffekte der Reihe nach
       else targets.forEach((tid, i) => { // t212: zielfreie Effekte (Ziehen, Kosten, Aufdecken …) nur einmal
         this._fxRepeat = i > 0;
@@ -3117,8 +3142,48 @@
         this.state.pending.card = pend.card;
         return { ok: true, need: 'slot' };
       }
+      const ob = this._openOwnBonus(p, pend.card);
+      if (ob) return ob;
       p.grave.push(pend.card); // Friedhof
       return { ok: true };
+    }
+    /**
+     * t267: Öffnet nach einem Soforteinsatz die Wahl der eigenen Einheit für Effekte mit `param.side === 'own'`
+     * (Kartentext: „Wähle eine gegnerische Fronteinheit: …; +1 ATK …“ – der Bonus gilt einer eigenen Einheit).
+     * Bei genau einer eigenen Fronteinheit wird sofort angewendet; ohne eigene Front verfällt der Bonus.
+     * @param {object} p Spieler
+     * @param {object} card gespielte Karte
+     * @returns {object|null} Ergebnis mit `need: 'target'`, wenn eine Wahl offen ist; sonst null (Karte noch nicht abgelegt)
+     */
+    _openOwnBonus(p, card) {
+      const queue = this._ownBonusQueue || [];
+      this._ownBonusQueue = [];
+      if (!queue.length) return null;
+      const own = this.frontList(p);
+      if (!own.length) { this._log(this.defOf(card).name + ': keine eigene Fronteinheit für den Bonus.'); return null; }
+      if (own.length === 1) { this._applyOwnBonus(p, queue, own[0].inst.uid, card); return null; }
+      this.state.pending = this._sealPending({
+        kind: 'own-bonus',
+        player: p.id,
+        card,
+        effects: queue,
+        prompt: this.defOf(card).name + ' — eigene Einheit wählen',
+        choices: own.map((l) => ({ target: l.inst.uid, label: l.inst.facedown ? 'Verdeckt' : this.defOf(l.inst).name })),
+      });
+      return { ok: true, need: 'target' };
+    }
+    /**
+     * t267: Wendet zurückgestellte Eigen-Effekte (`side: 'own'`) auf die gewählte eigene Einheit an.
+     * @param {object} p Spieler
+     * @param {object[]} effects Effektliste
+     * @param {string} uid eigene Ziel-UID
+     * @param {object} card Quellkarte
+     */
+    _applyOwnBonus(p, effects, uid, card) {
+      this._ownBonusPhase = true;
+      try { effects.forEach((e) => this._applyEffect(p, card, e, uid)); } finally { this._ownBonusPhase = false; }
+      const loc = this.findInst(uid);
+      if (loc) this._log(this.defOf(card).name + ': Bonus für ' + this.defOf(loc.inst).name + '.');
     }
     /**
      * Bestätigt eine Mehrfach-Zielwahl.
@@ -3363,7 +3428,7 @@
      */
     _instantNeedsTarget(def) {
       const codes = (def.effects || []).map((e) => e.code);
-      const targeted = ['NO_MOVE_THIS_TURN', 'DEAL_DAMAGE', 'HEAL', 'DESTROY', 'DESTROY_IF_DEF', 'SACRIFICE', 'SACRIFICE_INFANTRY_DAMAGE', 'BUFF', 'SELF_DAMAGE', 'RETURN_TO_HAND', 'MOVE_FRONT', 'MOVE_SLOTS', 'OUT_OF_COMBAT', 'PLACE_TOKEN', 'REMOVE_TOKEN', 'REVEAL', 'MARK_OBSERVED', 'EXTRA_ATTACK', 'REPLACE_UNIT', 'BUFF_SECTION', 'ZIELANGRIFF', 'UMGEHEN', 'KEIN_LOCH'];
+      const targeted = ['NO_MOVE_THIS_TURN', 'DEAL_DAMAGE', 'HEAL', 'DESTROY', 'DESTROY_IF_DEF', 'SACRIFICE', 'SACRIFICE_INFANTRY_DAMAGE', 'BUFF', 'SELF_DAMAGE', 'RETURN_TO_HAND', 'MOVE_FRONT', 'MOVE_SLOTS', 'OUT_OF_COMBAT', 'PLACE_TOKEN', 'REMOVE_TOKEN', 'REVEAL', 'MARK_OBSERVED', 'EXTRA_ATTACK', 'REPLACE_UNIT', 'BUFF_SECTION', 'ZIELANGRIFF', 'UMGEHEN', 'KEIN_LOCH', 'NEGATE_BONUS'];
       if (def.target && def.target.needs != null) return !!def.target.needs;
       if (codes.some((c) => targeted.includes(c))) return true;
       // Globale/Auto-Effekte: Kartentext-Heuristik nicht anwenden (verhindert Schein-Zielwahl + Mehrfach-Apply).
@@ -3419,7 +3484,32 @@
       }
       // unique
       const seen = {};
-      return out.filter(x=>!this._tacEffectTargetAllowed || this._tacEffectTargetAllowed(def,x.uid)).filter((x) => (seen[x.uid] ? false : (seen[x.uid] = true)));
+      return out.filter(x=>!this._tacEffectTargetAllowed || this._tacEffectTargetAllowed(def,x.uid)).filter((x) => this._instantTargetFilterOk(def, x.uid)).filter((x) => (seen[x.uid] ? false : (seen[x.uid] = true)));
+    }
+    /**
+     * t267: Zusatzbedingungen der Zielwahl aus `def.target` (Kartentext): `filter` ('elite', Tag oder Typ)
+     * und `maxDef` (aktuelle DEF höchstens n, z. B. Opfergabe „mit 2 oder weniger DEF“).
+     * @param {object} def Kartendefinition
+     * @param {string} uid Ziel-UID
+     * @returns {boolean} true, wenn das Ziel erlaubt ist
+     */
+    _instantTargetFilterOk(def, uid) {
+      const t = def && def.target;
+      if (!t || (t.filter == null && t.maxDef == null)) return true;
+      const loc = this.findInst(uid);
+      if (!loc || !loc.inst) return true;
+      const d = this.defOf(loc.inst) || {};
+      if (t.filter) {
+        const f = String(t.filter);
+        if (loc.inst.facedown) return false;
+        if (f === 'elite' ? !this._isElite(d) : !(hasTag(d, f) || d.typ === f || d.klasse === f)) return false;
+      }
+      if (t.maxDef != null) {
+        let dv = loc.inst.def;
+        try { dv = this.currentAtkDef(loc.inst).def; } catch (e) { /* Rohwert */ }
+        if (Number(dv) > Number(t.maxDef)) return false;
+      }
+      return true;
     }
     /**
      * Wertet die Effektliste einer Instanz der Reihe nach aus.
@@ -3497,6 +3587,11 @@
      * @param {string} [targetUid]
      */
     _applyEffect(p, src, e, targetUid) { // einen Effect-Code ausführen
+      // t267: Eigen-Bonus eines Soforteinsatzes mit Feindziel wird zurückgestellt und nach der Zielwahl einer eigenen Einheit gegeben.
+      if (e.param && e.param.side === 'own' && !this._ownBonusPhase && Array.isArray(this._ownBonusQueue)) {
+        if (!this._fxRepeat) this._ownBonusQueue.push(e);
+        return;
+      }
       if (this._fxRepeat && !PER_TARGET_CODES.includes(e.code)) return;
       if (this._tacApplyEffect && this._tacApplyEffect(p.id,e,src,targetUid)) return;
       const code = e.code;
@@ -3536,6 +3631,7 @@
         const loc = this.findInst(targetUid);
         if (loc && loc.player.id === p.id) {
           const sec = loc.section;
+          this._lastSacrifice = { pid: p.id, section: sec, row: loc.row, ap: Number(this.defOf(loc.inst).ap) || 0 };
           this._destroy(loc); // Karte vom Feld auf den Friedhof
           if (par.section_buff_atk) {
             this.frontList(p).forEach((l) => {
@@ -3545,8 +3641,9 @@
               l.inst.flags.tempAtkUntil = this.state.turn;
             });
           }
-          if (!par.no_enemy_destroy) {
-            const n = Number(par.then_destroy || 2); // Karte vom Feld auf den Friedhof
+          // t267: Feinde nur zerstören, wenn die Karte es ausdrücklich sagt (`then_destroy`); vorher Vorgabe 2 (Opfergabe/Ablösung).
+          if (!par.no_enemy_destroy && Number(par.then_destroy) > 0) {
+            const n = Number(par.then_destroy); // Karte vom Feld auf den Friedhof
             const enemies = this.frontList(opp).slice(0, n);
             enemies.forEach((en) => this._destroy({ inst: en.inst, player: opp, zone: 'front', section: en.section, row: en.row }));
           }
@@ -3577,6 +3674,10 @@
             inst.def = Math.max(1, (inst.def || 0) + Number(par.def));
           }
         }
+      } else if (code === 'REVEAL' && par.targeted) {
+        // t267: gezieltes Aufdecken (Stillprobe): genau die gewählte Einheit
+        const loc = this.findInst(targetUid);
+        if (loc && loc.inst.facedown) { loc.inst.facedown = false; this._log('Aufgedeckt: ' + this.defOf(loc.inst).name); }
       } else if (code === 'REVEAL') {
         const n = Number(par.count || 1);
         let revealed = 0;
@@ -3895,20 +3996,28 @@
         const loc = this.findInst(targetUid);
         if (loc) this._damage(loc.inst, Number(par.damage || 3), { tag: 'sacrifice' });
       } else if (code === 'REPLACE_UNIT') {
-        // after SACRIFICE: play cheapest hand unit into freed slot if any
-        const slot = this.emptySlots(p)[0];
-        const handU = p.hand.find((c) => {
-          const d = this.defOf(c);
-          return d.typ === 'Infanterie' || d.typ === 'Panzer' || d.typ === 'Artillerie' || d.typ === 'Einheit' || d.typ === 'Elite' || d.typ === 'Aufklärung';
-        });
+        // t267 (Ablösung): Einheit aus der Hand in denselben Abschnitt wie die geopferte, Kosten bis Kosten der Zerstörten + costPlus; danach heilen.
+        const sac = this._lastSacrifice && this._lastSacrifice.pid === p.id ? this._lastSacrifice : null;
+        this._lastSacrifice = null;
+        if (!sac) return;
+        const maxAp = sac.ap + Number(par.costPlus != null ? par.costPlus : 1);
+        let slot = !p.front[sac.section][sac.row] ? { section: sac.section, row: sac.row } : this.emptySlots(p).find((x) => x.section === sac.section);
+        const isUnit = (d) => d.typ === 'Infanterie' || d.typ === 'Panzer' || d.typ === 'Artillerie' || d.typ === 'Einheit' || d.typ === 'Elite' || d.typ === 'Aufklärung';
+        const pool = p.hand.filter((c) => { const d = this.defOf(c); return isUnit(d) && (Number(d.ap) || 0) <= maxAp; });
+        // stärkste erlaubte Einheit: höchste Kosten, dann ATK+DEF
+        pool.sort((a, b) => { const da = this.defOf(a), db = this.defOf(b); return ((Number(db.ap) || 0) - (Number(da.ap) || 0)) || (((Number(db.atk) || 0) + (Number(db.def) || 0)) - ((Number(da.atk) || 0) + (Number(da.def) || 0))); });
+        const handU = pool[0];
         if (slot && handU && (!this._tacPayFreeEntry || this._tacPayFreeEntry(p,handU,slot.section))) {
           p.hand = p.hand.filter((c) => c.uid !== handU.uid);
           handU.def = (handU.def || this.defOf(handU).def || 1);
-          handU.defMax = handU.def;
+          handU.defMax = handU.defMax || handU.def;
+          handU.summonedTurn = this.state.turn;
           p.front[slot.section][slot.row] = handU;
           if (this._tacOnEntry) this._tacOnEntry(handU,slot.section);
-          handU.def = (handU.def || 0) + 1;
-          handU.defMax = (handU.defMax || handU.def) + 1;
+          if (par.heal) this._heal(handU, Number(par.heal));
+          this._log(this.defOf(handU).name + ' löst ab (' + slot.section + (slot.row + 1) + ').');
+        } else {
+          this._log('Ablösung: keine passende Einheit auf der Hand.');
         }
       } else if (code === 'ON_ENTER_DRAW') {
         this._draw(p, Number(par.value || 1));
@@ -3974,6 +4083,9 @@
         } else {
           this._log('Kein Loch ohne Abschnitt — kein Effekt.');
         }
+      } else if (code === 'NEGATE_BONUS' || (code === 'CLEAR_ATK_MALUS' && par.negateBonus)) {
+        const loc = this.findInst(targetUid);
+        if (loc && loc.zone === 'front') this._negateBonus(loc.inst);
       } else if (code === 'CLEAR_ATK_MALUS') {
         const loc = this.findInst(targetUid);
         if (loc) {
@@ -3983,6 +4095,25 @@
         }
       }
       // BUFF with until/enemy already partially handled — extend base BUFF
+    }
+    /**
+     * t267: „Negiere einen Bonus“ (NEGATE_BONUS). Entfernt gespeicherte ATK-Boni (dauerhaft und bis Zugende) und
+     * DEF über dem Druckwert sofort; laufende Boni (Auren, Ausrüstung, Schlüsselwörter, Doktrinen) zählen bis zum Ende
+     * des nächsten gegnerischen Zugs nicht (`flags.bonusNegatedUntil`, ausgewertet in `currentAtkDef`). Mali bleiben.
+     * @param {object} inst Ziel-Instanz
+     */
+    _negateBonus(inst) {
+      const d = this.defOf(inst) || {};
+      const pd = Number(d.def) || 0;
+      inst.flags = inst.flags || {};
+      const f = inst.flags;
+      if ((f.buffAtk || 0) > 0) f.buffAtk = 0;
+      if ((f.tempAtk || 0) > 0) f.tempAtk = 0;
+      if ((f.buffDef || 0) > 0) f.buffDef = 0;
+      if (inst.defMax != null && inst.defMax > pd) inst.defMax = pd;
+      if (inst.def != null && inst.def > pd) inst.def = Math.max(1, pd);
+      f.bonusNegatedUntil = this.state.turn + 1;
+      this._log('Bonus negiert: ' + (inst.facedown ? 'verdeckte Einheit' : d.name) + '.');
     }
     /**
      * Wendet mechanisierte Auren (MECH_AURA) an.
@@ -4518,6 +4649,14 @@
       }
       if (pend.kind === 'mob-pick') return this._finishMobPick(pid);
       if (pend.kind === 'react-window') return this._resumeAfterReact(pid);
+      // t267: Feindwirkung ist schon geschehen – Abbrechen lässt nur den Eigen-Bonus verfallen, die Karte bleibt gespielt
+      if (pend.kind === 'own-bonus') {
+        if (pend.card) this.player(pid).grave.push(pend.card);
+        this.state.pending = null;
+        this._log('Bonus verfällt.');
+        if (this.state.heldAttack) return this._resumeAfterReact();
+        return { ok: true };
+      }
       if (pend.card && pend.kind !== 'command-atk') {
         const p = this.player(pid);
         if (!p.hand.some((c) => c.uid === pend.card.uid) && pend.card) p.hand.push(pend.card);
@@ -4885,6 +5024,15 @@
           return { ok: true };
         }
       }
+      // t267: Ausrüstung „Ziel −n DEF“ beim Angriff (Ortungsband, `EQUIP_ON_ATTACK_DAMAGE.debuffDef`), mind. 1
+      (A.attachments || []).forEach((eq) => {
+        (this.defOf(eq).effects || []).forEach((e) => {
+          if (e.code !== 'EQUIP_ON_ATTACK_DAMAGE' || !e.param || !e.param.debuffDef || T.def == null) return;
+          const n = Number(e.param.debuffDef);
+          T.def = Math.max(1, T.def - n);
+          if (T.defMax != null) T.defMax = Math.max(T.def, T.defMax - n);
+        });
+      });
       const statsA = this.currentAtkDef(A);
       const statsT = this.currentAtkDef(T,{defending:true});
       A.flags.tacActualAttackTurn=this.state.turn;
@@ -6434,14 +6582,17 @@
       });
       nxt.flags.oppUnitDead = 0;
       this.frontList(nxt).forEach((l) => {
-        const med = (l.inst.attachments || []).filter((c) => (this.defOf(c).effects || []).some((x) => x.code === 'MEDIZIN')).length;
+        // t267: MEDIZIN liest `self`/`flank` (Vorgabe 3/2 wie Feldlazarett-Ausrüstung)
+        const medFx = [];
+        (l.inst.attachments || []).forEach((c) => (this.defOf(c).effects || []).forEach((x) => { if (x.code === 'MEDIZIN') medFx.push(x.param || {}); }));
         const bag = (l.inst.attachments || []).filter((c) => (this.defOf(c).effects || []).some((x) => x.code === 'TASCHE')).length;
-        if (med) l.inst.def = Math.min(l.inst.defMax || l.inst.def, (l.inst.def || 0) + 3 * med);
+        const medSelf = medFx.reduce((s2, q) => s2 + Number(q.self != null ? q.self : 3), 0);
+        const medFlank = medFx.reduce((s2, q) => s2 + Number(q.flank != null ? q.flank : 2), 0);
+        if (medSelf) l.inst.def = Math.min(l.inst.defMax || l.inst.def, (l.inst.def || 0) + medSelf);
         if (bag) l.inst.def = Math.min(l.inst.defMax || l.inst.def, (l.inst.def || 0) + 2 * bag);
-        this._neighbors(nxt, l.section, l.row).forEach((n) => {
+        if (medFlank) this._neighbors(nxt, l.section, l.row).forEach((n) => {
           if (!n.inst) return;
-          const srcMed = (l.inst.attachments || []).filter((c) => (this.defOf(c).effects || []).some((x) => x.code === 'MEDIZIN')).length;
-          if (srcMed) n.inst.def = Math.min(n.inst.defMax || n.inst.def, (n.inst.def || 0) + 2 * srcMed);
+          n.inst.def = Math.min(n.inst.defMax || n.inst.def, (n.inst.def || 0) + medFlank);
         });
       });
       this.state.active = nxtId;
@@ -7367,7 +7518,8 @@
     "command-atk": { title: "Blinder Gehorsam: Ziel", pick: "card", needs: true },
     "gassen-pick": { title: "Einsame Gassen: Einheiten", pick: "card", needs: true, multi: true },
     "gassen-slot": { title: "Einsame Gassen: Stellung", pick: "slot", needs: true },
-    "instant-section": { title: "Abschnitt wählen", pick: "section", needs: true }
+    "instant-section": { title: "Abschnitt wählen", pick: "section", needs: true },
+    "own-bonus": { title: "Eigene Einheit für den Bonus", pick: "card", needs: true }
   };
 
 
@@ -7376,7 +7528,7 @@
      Unterstützungsfähigkeiten, die vorher nur als Fließtext existierten.
      Arten: stat, cost, vs, enter, kill, death, negate, first, aura, trigger, turnheal.
      Bedingungen (param.when) und Zielbedingungen (param.vs) siehe docs/regeln/KARTEN_SONDERFAELLE.md §CM. */
-  const PER_TARGET_CODES = ['NO_MOVE_THIS_TURN', 'DEAL_DAMAGE', 'HEAL', 'DESTROY', 'DESTROY_IF_DEF', 'SACRIFICE', 'SACRIFICE_INFANTRY_DAMAGE', 'BUFF', 'SELF_DAMAGE', 'RETURN_TO_HAND', 'MOVE_FRONT', 'MOVE_SLOTS', 'OUT_OF_COMBAT', 'PLACE_TOKEN', 'REMOVE_TOKEN', 'MARK_OBSERVED', 'EXTRA_ATTACK', 'REPLACE_UNIT', 'ZIELANGRIFF', 'UMGEHEN'];
+  const PER_TARGET_CODES = ['NO_MOVE_THIS_TURN', 'DEAL_DAMAGE', 'HEAL', 'DESTROY', 'DESTROY_IF_DEF', 'SACRIFICE', 'SACRIFICE_INFANTRY_DAMAGE', 'BUFF', 'SELF_DAMAGE', 'RETURN_TO_HAND', 'MOVE_FRONT', 'MOVE_SLOTS', 'OUT_OF_COMBAT', 'PLACE_TOKEN', 'REMOVE_TOKEN', 'MARK_OBSERVED', 'EXTRA_ATTACK', 'REPLACE_UNIT', 'ZIELANGRIFF', 'UMGEHEN', 'NEGATE_BONUS'];
   const GEAR_CM_KINDS = ['stat', 'vs', 'negate', 'kill', 'death', 'turnheal', 'turn', 'hitdebuff'];
   const CM = {
     /**

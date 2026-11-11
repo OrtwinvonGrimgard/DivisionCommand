@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+- **Kartenreparatur t267:** Die 14 Karten aus der Prüfung t265 wirken wie gedruckt (Lesarten und Sonderfälle in `docs/regeln/KARTEN_T267.md`).
+  - Neuer Effekt `NEGATE_BONUS` (gegnerische Einheit: gespeicherte ATK-Boni und DEF über Druckwert weg, laufende Boni bis Ende des nächsten gegnerischen Zugs aus): Verfahrensbruch und Keine Sterne (nur Elite-Ziel, ziehe 1), Modellstopp (ziehe 1), Kein Schrein (danach eigene Einheit +1 DEF).
+  - Eigener Bonus nach Feindziel (`param.side: 'own'`, neue Wahl „Eigene Einheit für den Bonus“): Notimplantat, Stoßtrupp, Lokalisierung (Soforteinsatz), Rasten, Kein Schrein, Opfergabe. Vorher stärkte der Bonus die gewählte Feindeinheit.
+  - Opfern zerstört keine Feinde mehr ohne Kartentext (vorher 2): Opfergabe (nur DEF ≤ 2, heilt eine andere eigene um 2), Ablösung (Ersatz aus der Hand in denselben Abschnitt, Kosten bis +1, heilt 1). Letzter Ruf nur noch mit eigener Infanterie.
+  - Verbandskasten heilt 1 am Zugende ohne Angriff (vorher 3 + Nachbarn 2 zu Zugbeginn); Werkstattmarke nur Panzer/Fahrzeug, heilt 1 zu Zugbeginn, solange beschädigt; Ortungsband: Ziel −1 DEF beim Angriff. `MEDIZIN` liest `self`/`flank`.
+  - Stillprobe: neuer Text „Wähle eine gegnerische Fronteinheit: decke sie auf; −2 ATK bis Zugende.“ (alter Text war ein Entwurfsrest mit Fragezeichen), Front neu gerendert.
+  - Bot bewertet die neue Wahl. Test `tests/test_cards_t267.js` (20 Fälle, rot auf altem Stand), Prüfskript mit Abschnitt `t267` (14/14 OK). Balance neu gemessen (`docs/entwicklung/STATUS_T267.md`): Rothain Starter 55,7 → 51,7 %, Theryn Starter 50,9 → 49,1 %, übrige Nationen innerhalb der Streuung. Hilfe (Entwicklungsstand, Fehlende Features, Fortschritt, Fortschritt in Prozent: 66 %, Kernspiel 75 %). Cache `divcmd-alpha40z`.
+
 - **Analyse t265 (nur Diagnose, keine Spielmechanik geändert):**
   - Prüfung Kartentext gegen Engine über alle 1.746 Karten, alle 389 Soforteinsätze im Ablauf, alle Effektparameter und Soforteinsätze mit Feindziel (`scripts/balance/audit_text_engine_t265.js`). Ergebnis in `docs/regeln/TEXT_ENGINE_AUDIT_T265.md`: 10 Karten wirken anders als gedruckt (Verfahrensbruch, Keine Sterne, Modellstopp, Kein Schrein, Stillprobe, Opfergabe, Ablösung, Verbandskasten, Werkstattmarke, Ortungsband), 4 Texte stärken die gewählte Feindeinheit (Notimplantat, Stoßtrupp, Lokalisierung, Rasten). Gemeldet, nicht behoben.
   - Statusanalyse `docs/entwicklung/STATUS_T265.md`; Hilfe Entwicklungsstand, Fehlende Features, Fortschritt und Fortschritt in Prozent aktualisiert (64 % bis Early Access, Kernspiel 74 %). Musik nachgezählt: 15 Stücke statt 16.

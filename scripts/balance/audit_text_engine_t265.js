@@ -13,6 +13,10 @@
  *
  * Ausgabe: scripts/balance/out/audit_text_engine_t265.json (Rohdaten zur Sichtung).
  * Ergebnis der Sichtung: docs/regeln/TEXT_ENGINE_AUDIT_T265.md.
+ *
+ * t267: Effektfamilien um EQUIP_ON_REST/REPLACE_UNIT (Heilen) und EQUIP_ON_ATTACK (DEF) ergänzt, Eigen-Bonus
+ * (`param.side === 'own'`) zählt nicht als Feind-Buff, Zielfilter (`target.filter`) bekommt ein passendes Feindziel.
+ * Zusätzlich Abschnitt `t267` mit dem Status der 14 Karten aus t265 (alle müssen OK sein, sonst Exit 1).
  */
 'use strict';
 const fs = require('fs');
@@ -38,9 +42,9 @@ function num(s) { if (s == null) return null; const n = parseInt(s, 10); return 
 const CLAIMS = [
   { kind: 'draw', re: /\b(?:ziehe|ziehst du|ziehen|zieht)\s+(\d+|eine?n?)\b/gi, fam: /DRAW|PEEK|DISCARD|ARMAGEDDON|CARD|HAND|DECK|TUTOR|SEARCH|INF|RECRUIT|CYCLE/ },
   { kind: 'dmg', re: /(\d+)\s+Schaden/g, fam: /DAMAGE|DMG|STRIKE|NAPALM|BOMB|FIRE|SCHADEN|MINE|SHOT|ATTACK|ART|SNIPE|BARRAGE|SALVO|KILL|AMBUSH|ÜBERLEG|UEBERLEG/ },
-  { kind: 'heal', re: /\bheil(?:e|t|en)?\s+(?:[^.;:]*?\s)?(\d+)/gi, fam: /HEAL|MEDIZIN|REPAIR|LAZARETT|REGEN|RESTORE/ },
+  { kind: 'heal', re: /\bheil(?:e|t|en)?\s+(?:[^.;:]*?\s)?(\d+)/gi, fam: /HEAL|MEDIZIN|REPAIR|LAZARETT|REGEN|RESTORE|EQUIP_ON_REST|REPLACE_UNIT/ },
   { kind: 'atk', re: /([+−-]\s?\d+)\s*ATK/g, fam: /ATK|BUFF|STAT|CM|AURA|VS_|MARK|REVEAL|FLANK|SELF|BONUS|LEAD|FUEHR|STRIKE|UMGEHEN|PAIN|COND|FIRST|STANDARD|REST/ },
-  { kind: 'def', re: /([+−-]\s?\d+)\s*DEF/g, fam: /DEF|BUFF|STAT|CM|AURA|FLANK|MOVE|OUT_OF|NO_MOVE|FUEHR|MEDIZIN|COND|HEAL|STANDARD|REST|PLAY_INF/ },
+  { kind: 'def', re: /([+−-]\s?\d+)\s*DEF/g, fam: /DEF|BUFF|STAT|CM|AURA|FLANK|MOVE|OUT_OF|NO_MOVE|FUEHR|MEDIZIN|COND|HEAL|STANDARD|REST|PLAY_INF|EQUIP_ON_ATTACK/ },
   { kind: 'ap', re: /([+−-]\s?\d+)\s*AP\b|erh[äa]lt(?:st)?\s+(\d+)\s+AP/g, fam: /AP|COST|DISCOUNT|REFUND/ },
   { kind: 'destroy', re: /\bzerst[öo]r(?:e|t|en)\b/gi, fam: /DESTROY|KILL|SACRIFICE|ARMAGEDDON|SLEEPER|EXECUT|ASSASS|NEUTRAL|CLEAR|REMOVE|ONCE_HEAL_DESTROY|ON_DESTROY|BOMB|STRIKE|MINE/ },
   { kind: 'handDiscard', re: /\b(?:Hand|Handkarte)[^.]*?(?:Ablagestapel|abwerfen)|\bwirf\b[^.]*?(?:Hand|Handkarte)/gi, fam: /DISCARD|ARMAGEDDON|HAND/ },
@@ -145,6 +149,12 @@ function firstAct(eng, pid, seen) {
 function playInstant(eng, w, def) {
   richSetup(eng, w);
   const p = eng.player(0);
+  // t267: Zielfilter (z. B. Elite) – eine passende gegnerische Einheit bereitstellen
+  const tf = def.target && def.target.filter;
+  if (tf) {
+    const fit = w.DC_CATALOG.cards.find((c) => c.typ === 'Einheit' && (tf === 'elite' ? c.klasse === 'Elite' : (c.tags || []).includes(tf)));
+    if (fit) L.put(eng, 1, fit.id, 'C', 0);
+  }
   const inst = eng.instFromId(def.id, 0);
   p.hand.push(inst);
   p.ap = Math.max(12, (def.ap || 0) + 4);
@@ -238,7 +248,7 @@ function main() {
     const miss = behaviourCheck(c, res);
     if (miss.length) beh.push({ id: c.id, name: c.name, ap: c.ap, text: c.text, codes: (c.effects || []).map((e) => e.code + (e.param ? JSON.stringify(e.param) : '')).join(' '), miss, m: res.m });
   });
-  const enemyBuff = cards.filter((c) => c.typ === 'Soforteinsatz' && c.target && c.target.side === 'enemy' && (c.effects || []).some((e) => e.code === 'BUFF' && !(e.param || {}).enemy && (Number((e.param || {}).atk) > 0 || Number((e.param || {}).def) > 0))).map((c) => ({ id: c.id, name: c.name, text: c.text }));
+  const enemyBuff = cards.filter((c) => c.typ === 'Soforteinsatz' && c.target && c.target.side === 'enemy' && (c.effects || []).some((e) => e.code === 'BUFF' && !(e.param || {}).enemy && (e.param || {}).side !== 'own' && (Number((e.param || {}).atk) > 0 || Number((e.param || {}).def) > 0))).map((c) => ({ id: c.id, name: c.name, text: c.text }));
   const src = ['engine.js', 'tactical_runtime.js', 'doctrine_runtime.js', 'victory_trophy.js'].map((f) => fs.readFileSync(path.join(L.WEB, 'js/engine', f), 'utf8')).join('\n');
   const keys = {};
   cards.forEach((c) => (c.effects || []).forEach((e) => {
@@ -249,6 +259,20 @@ function main() {
   const out = { enemyBuff, unreadParams, control: { id: ctrlDef.id, m: ctrl }, generated: new Date().toISOString(), cards: cards.length, instants: cards.filter((c) => c.typ === 'Soforteinsatz').length, staticCount: staticRows.length, behaviourCount: beh.length, unplayableCount: unplayable.length, staticRows, behaviour: beh, unplayable };
   const dir = path.join(__dirname, 'out'); fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'audit_text_engine_t265.json'), JSON.stringify(out, null, 1));
+  // t267: Status der 14 Karten aus t265
+  const T267 = ['dc_b_verfahrensbruch_589', 'dc_b_keine_sterne_529', 'dc_b_modellstopp_463', 'dc_b_kein_schrein_284', 'dc_b_stillprobe_467', 'dc_b_opfergabe_126', 'dc_b_abloesung_660', 'dc_b_verbandskasten_351', 'dc_b_werkstattmarke_657', 'dc_b_lokalisierung_480', 'dc_b_notimplantat_402', 'dc_b_stosstrupp_419', 'dc_b_lokalisierung_823', 'dc_b_rasten_341'];
+  out.t267 = T267.map((id) => {
+    const f = [];
+    const b = beh.find((x) => x.id === id); if (b) f.push('Verhalten: ' + b.miss.join('/'));
+    const st = staticRows.find((x) => x.id === id); if (st) f.push('statisch: ' + st.findings.map((x) => x.kind + ' ' + x.issue).join('/'));
+    if (enemyBuff.find((x) => x.id === id)) f.push('Feind-Buff');
+    unreadParams.forEach((u) => { if (u.cards.includes(id)) f.push('Parameter ungelesen: ' + u.key); });
+    const un = unplayable.find((x) => x.id === id); if (un) f.push('nicht spielbar: ' + un.error);
+    return { id, ok: !f.length, findings: f };
+  });
+  fs.writeFileSync(path.join(dir, 'audit_text_engine_t265.json'), JSON.stringify(out, null, 1));
+  out.t267.forEach((r) => console.log((r.ok ? 'OK   ' : 'FAIL ') + r.id + (r.ok ? '' : ' – ' + r.findings.join('; '))));
+  if (out.t267.some((r) => !r.ok)) process.exitCode = 1;
   console.log({ cards: out.cards, instants: out.instants, static: out.staticCount, behaviour: out.behaviourCount, unplayable: out.unplayableCount, enemyBuff: enemyBuff.length, unreadParams: unreadParams.length });
 }
 

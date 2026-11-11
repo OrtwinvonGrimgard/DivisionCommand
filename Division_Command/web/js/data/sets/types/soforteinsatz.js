@@ -1597,6 +1597,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       {
         "code": "SACRIFICE",
         "param": {}
+      },
+      {
+        "code": "HEAL",
+        "param": {
+          "value": 2,
+          "side": "own"
+        }
       }
     ],
     "flavor": "Der Tisch bleibt. Der Ritus nimmt.",
@@ -1605,7 +1612,11 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "collector": "B126",
     "rarity": "bronze",
     "target": {
-      "side": "own"
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false,
+      "maxDef": 2
     }
   },
   {
@@ -1747,7 +1758,11 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "collector": "B130",
     "rarity": "gold",
     "target": {
-      "side": "own"
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false,
+      "filter": "infanterie"
     }
   },
   {
@@ -2244,7 +2259,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       },
       {
         "code": "REPLACE_UNIT",
-        "param": {}
+        "param": {
+          "costPlus": 1,
+          "heal": 1
+        }
       }
     ],
     "flavor": "Der Platz bleibt heilig. Die Person nicht.",
@@ -2253,7 +2271,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "collector": "B660",
     "rarity": "gold",
     "target": {
-      "side": "own"
+      "needs": true,
+      "side": "own",
+      "count": 1,
+      "upto": false
     }
   },
   {
@@ -2480,7 +2501,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
         "param": {
           "atk": 1,
           "def": 1,
-          "until": "turn"
+          "until": "turn",
+          "side": "own"
         }
       }
     ],
@@ -2690,7 +2712,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
         "param": {
           "atk": 3,
           "def": 0,
-          "until": "turn"
+          "until": "turn",
+          "side": "own"
         }
       }
     ],
@@ -2940,7 +2963,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
         "param": {
           "atk": 1,
           "def": -1,
-          "until": "turn"
+          "until": "turn",
+          "side": "own"
         }
       },
       {
@@ -5926,9 +5950,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Negiere feindlichen Elite-Bonus; ziehe 1.",
     "effects": [
       {
-        "code": "CLEAR_ATK_MALUS",
+        "code": "NEGATE_BONUS",
+        "param": {}
+      },
+      {
+        "code": "DRAW",
         "param": {
-          "negateBonus": true
+          "value": 1
         }
       }
     ],
@@ -5938,7 +5966,11 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "collector": "B589",
     "rarity": "bronze",
     "target": {
-      "side": "enemy"
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false,
+      "filter": "elite"
     }
   },
   {
@@ -6356,9 +6388,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Negiere einen feindlichen Elite-Bonus; ziehe 1.",
     "effects": [
       {
-        "code": "CLEAR_ATK_MALUS",
+        "code": "NEGATE_BONUS",
+        "param": {}
+      },
+      {
+        "code": "DRAW",
         "param": {
-          "negateBonus": true
+          "value": 1
         }
       }
     ],
@@ -6368,7 +6404,11 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "collector": "B529",
     "rarity": "bronze",
     "target": {
-      "side": "enemy"
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false,
+      "filter": "elite"
     }
   },
   {
@@ -6962,14 +7002,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
         "code": "HEAL",
         "param": {
           "value": 2,
-          "count": 2
+          "side": "own"
         }
       },
       {
         "code": "BUFF",
         "param": {
           "def": 1,
-          "until": "turn"
+          "side": "own"
         }
       }
     ],
@@ -7547,9 +7587,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Negiere Bonus eines Feindes aus Zerstörung; eigene +1 DEF.",
     "effects": [
       {
-        "code": "CLEAR_ATK_MALUS",
+        "code": "NEGATE_BONUS",
+        "param": {}
+      },
+      {
+        "code": "BUFF",
         "param": {
-          "negateBonus": true
+          "def": 1,
+          "side": "own"
         }
       }
     ],
@@ -7559,7 +7604,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "collector": "B284",
     "rarity": "silver",
     "target": {
-      "side": "own"
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
     }
   },
   {
@@ -7950,9 +7998,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "text": "Negiere einen feindlichen Bonus; ziehe 1.",
     "effects": [
       {
-        "code": "CLEAR_ATK_MALUS",
+        "code": "NEGATE_BONUS",
+        "param": {}
+      },
+      {
+        "code": "DRAW",
         "param": {
-          "negateBonus": true
+          "value": 1
         }
       }
     ],
@@ -7962,7 +8014,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "collector": "B463",
     "rarity": "silver",
     "target": {
-      "side": "enemy"
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
     }
   },
   {
@@ -8093,18 +8148,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Feind kann diesen Zug nicht aufdecken/angegriffen werden? Negiere Aufklärungsschutz; −2 ATK.",
+    "text": "Wähle eine gegnerische Fronteinheit: decke sie auf; −2 ATK bis Zugende.",
     "effects": [
       {
         "code": "REVEAL",
         "param": {
-          "count": 1
+          "targeted": true
         }
       },
       {
-        "code": "CLEAR_ATK_MALUS",
+        "code": "BUFF",
         "param": {
-          "negateBonus": true
+          "atk": -2,
+          "until": "turn",
+          "enemy": true
         }
       }
     ],
@@ -8114,7 +8171,10 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "collector": "B467",
     "rarity": "silver",
     "target": {
-      "side": "enemy"
+      "needs": true,
+      "side": "enemy",
+      "count": 1,
+      "upto": false
     }
   },
   {

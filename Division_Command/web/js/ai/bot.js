@@ -397,6 +397,15 @@
       if (act.cost != null && pend.baseCostSpent != null && act.cost > pend.baseCostSpent) v -= (act.cost - pend.baseCostSpent) * 3;
       return v;
     }
+    if (pend.kind === 'own-bonus' && mine) {
+      // t267: Eigen-Bonus nach Feindziel – Heilung auf die am stärksten beschädigte, ATK auf eine noch angriffsbereite Einheit.
+      var fx = pend.effects || [];
+      var heal = fx.some(function (e) { return e.code === 'HEAL'; });
+      var atkB = fx.reduce(function (s2, e) { return s2 + (Number((e.param || {}).atk) || 0); }, 0);
+      var miss = Math.max(0, (loc.inst.defMax || st.def) - (loc.inst.def || 0));
+      var ready = !loc.inst.attackUsed && !(loc.inst.flags && (loc.inst.flags.noAttack || loc.inst.flags.exhausted));
+      return 10 + (heal ? miss * 3 : 0) + (atkB > 0 ? (ready ? atkB * 3 + st.atk : st.atk * 0.5) : st.atk) + st.def * 0.5;
+    }
     if (pend.kind === 'fire-mission' && !mine) {
       return 10 + hitValue(engine, loc, Number(pend.dmg || 3));
     }

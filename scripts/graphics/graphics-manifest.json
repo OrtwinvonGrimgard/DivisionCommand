@@ -22880,7 +22880,7 @@
    "type": "Soforteinsatz",
    "nation": "Theryn",
    "rarity": "bronze",
-   "source_record_sha256": "2b734fdbe616409643b1a7d794b761223ca206c987031035438ff0060f1a3b53",
+   "source_record_sha256": "3d5e052a1d53995249ec5912be8758ad8a5d0248f66c15ce0dbe0d6061d4ede4",
    "kurz": "Opfere eine eigene Einheit mit 2 oder weniger DEF: heile eine andere um 2.",
    "keywords": [],
    "printed_stats": {
@@ -22996,7 +22996,7 @@
    "type": "Soforteinsatz",
    "nation": "Theryn",
    "rarity": "gold",
-   "source_record_sha256": "f9e97e3575c812dff7449ed2ea45cdd0040c6487a4eb13343b3b7c948c608ed7",
+   "source_record_sha256": "fa79d57d333916ce60a00e0f37e82a75b57e60d408213fd27576d599212eb625",
    "kurz": "Zerstöre eine eigene Infanterie: andere eigene Einheiten im Abschnitt +2 ATK bis Zugende.",
    "keywords": [],
    "printed_stats": {
@@ -23402,7 +23402,7 @@
    "type": "Soforteinsatz",
    "nation": "Rothain",
    "rarity": "gold",
-   "source_record_sha256": "9298498aeb4cfcf61caccddb5dcbb2fb11c0590a9f98e2521c99c85038461f4d",
+   "source_record_sha256": "345156b8d995532aaca311d7389654fe61a4edf7f56c901b6691f253d418db83",
    "kurz": "Zerstöre eine eigene Einheit; spiele dort eine Einheit aus der Hand mit Kosten bis ihre +1 und heile sie um 1.",
    "keywords": [],
    "printed_stats": {
@@ -23576,7 +23576,7 @@
    "type": "Soforteinsatz",
    "nation": "Karsk",
    "rarity": "bronze",
-   "source_record_sha256": "add53eb424bb70046e518dbbb26731cc424bf0016f7b5c3c5b7e456bef65f968",
+   "source_record_sha256": "c7605ba30f546e577a64539bf5481f69b146ec9d6e6ee9e2560431b82774ccb2",
    "kurz": "Wähle eine gegnerische Fronteinheit: 1 Schaden; +1 ATK bis Zugende, +1 DEF.",
    "keywords": [],
    "printed_stats": {
@@ -23721,7 +23721,7 @@
    "type": "Soforteinsatz",
    "nation": "Karsk",
    "rarity": "gold",
-   "source_record_sha256": "847244df0c79ad1cb05dd87d1c79fb59fca6ec78580599cadcb36e93da9a540e",
+   "source_record_sha256": "99ed2699a1f66510cf798430a6a067557fbb446512fdacca826488f679b4aed8",
    "kurz": "Wähle eine gegnerische Fronteinheit: 2 Schaden; +3 ATK bis Zugende.",
    "keywords": [],
    "printed_stats": {
@@ -23895,7 +23895,7 @@
    "type": "Soforteinsatz",
    "nation": "Averon",
    "rarity": "gold",
-   "source_record_sha256": "dc10159b643dd13433bc21aed4e766c9ccef50d3a14e36b9d7e633db9c55386d",
+   "source_record_sha256": "f9ead6216164e9c8dc4217f384c6e79f349588a12809fc49cd35ae43d154a1e2",
    "kurz": "Wähle eine gegnerische Fronteinheit: +1 ATK bis Zugende, −1 DEF (mind. 1); −1 DEF (mind. 1).",
    "keywords": [],
    "printed_stats": {
@@ -26157,7 +26157,7 @@
    "type": "Soforteinsatz",
    "nation": "Steinmark",
    "rarity": "bronze",
-   "source_record_sha256": "96a55597cdfc372ba675e51fdf45a946ac793e2268a71e02d733dba89e53658b",
+   "source_record_sha256": "44b89cf0f7be8c91ef9bf73a8e1c6e1e90102391d6bda69f21042c3e0db38698",
    "kurz": "Negiere feindlichen Elite-Bonus; ziehe 1.",
    "keywords": [],
    "printed_stats": {
@@ -26505,7 +26505,7 @@
    "type": "Soforteinsatz",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "b3bcf30388cf2bb409bac9927300603ca890f8a2c0adf823d899ded8721ce951",
+   "source_record_sha256": "4eac6c565fbfc29012c6690e3b45240f132af1b88bb8e42fd64ca7ef97552c1a",
    "kurz": "Negiere einen feindlichen Elite-Bonus; ziehe 1.",
    "keywords": [],
    "printed_stats": {
@@ -26969,7 +26969,7 @@
    "type": "Soforteinsatz",
    "nation": "Caldris",
    "rarity": "silver",
-   "source_record_sha256": "7f0420251dbfd464fa35078995f21456c2556d3670f88c29b1868868fdc98bc6",
+   "source_record_sha256": "6a7088760bef83eaf0f6a17b28efbd0e0510f5942c8d3f06a4a7b9b24316630a",
    "kurz": "Wähle 2 gegnerische Fronteinheiten: je sie kann in ihrem nächsten Zug nicht angreifen; heile 2; +1 DEF.",
    "keywords": [],
    "printed_stats": {
@@ -27404,7 +27404,7 @@
    "type": "Soforteinsatz",
    "nation": "Ossaria",
    "rarity": "silver",
-   "source_record_sha256": "0a3a8271c8a0c1a749d8d5c7752cfed7419aac4e981fe5a33db28fec8018eadd",
+   "source_record_sha256": "657a196b67959df2f912a6aa3f0c317c23b9496cc7ab516c0d0dc29419f12cc5",
    "kurz": "Negiere Bonus eines Feindes aus Zerstörung; eigene +1 DEF.",
    "keywords": [],
    "printed_stats": {
@@ -27723,7 +27723,7 @@
    "type": "Soforteinsatz",
    "nation": "Orthea",
    "rarity": "silver",
-   "source_record_sha256": "d9c13ca175e98176732bdc7014f0a8b125fee4144dfd240be5c3252fbfe1a497",
+   "source_record_sha256": "d931562e952db8b0ffe38f1275e315f9762d031514b77c15c9b2fac1eb066772",
    "kurz": "Negiere einen feindlichen Bonus; ziehe 1.",
    "keywords": [],
    "printed_stats": {
@@ -27839,8 +27839,8 @@
    "type": "Soforteinsatz",
    "nation": "Orthea",
    "rarity": "silver",
-   "source_record_sha256": "385ab2d81b0349e94c9e6af5ab93e172d324615fcee14c0632be70560f8e5d3a",
-   "kurz": "Feind kann diesen Zug nicht aufdecken/angegriffen werden? Negiere Aufklärungsschutz; −2 ATK.",
+   "source_record_sha256": "1d2d74cc921e60cffa1a016d7eeb3445dbe9d68fdb6092689f85dc893af39434",
+   "kurz": "Wähle eine gegnerische Fronteinheit: decke sie auf; −2 ATK bis Zugende.",
    "keywords": [],
    "printed_stats": {
     "ap": 2,
@@ -27860,7 +27860,7 @@
     "art_pct": 40.0
    },
    "renderer": "15a96e700d4227fbee4f0a5a3232342a81932fb5daa325493f92b1d58b4bb62b",
-   "output_sha256": "30893ce9db79ae1f0fed376f2edb903f45e2761358cbc25742134fb4c162927a"
+   "output_sha256": "e461a8dd6d5e635e02c0fd7700fb90e2e0cd5405152fc05a6d1e02f89831f71f"
   },
   {
    "id": "dc_b_unterschreiben_468",
@@ -29036,7 +29036,7 @@
    "type": "Ausrüstung",
    "nation": "Rothain",
    "rarity": "bronze",
-   "source_record_sha256": "b08ad6be941281ab969341d8a87d22658e34607c45904512debaff4af49a3df0",
+   "source_record_sha256": "26d4ffc251e64db010dde4cc0d297def8a920fbed28e9c37b474e334accae5b3",
    "kurz": "Träger-Panzer oder -Fahrzeug: +1 DEF und heilt 1 zu Beginn deines Zuges, solange beschädigt.",
    "keywords": [],
    "printed_stats": {
@@ -31994,7 +31994,7 @@
    "type": "Ausrüstung",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "d561e31d79210e49dcbbf07fb9737f368811acdc5840205f5d6853e887126cf3",
+   "source_record_sha256": "469b460c789e4054410fb7b4747f3730a6aa7299261d039a4aee2f6057ba52f0",
    "kurz": "Träger heilt 1 am Zugende, wenn er nicht angriff.",
    "keywords": [],
    "printed_stats": {

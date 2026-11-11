@@ -21,7 +21,8 @@ Alle Regeln, Lore-Texte, Planungen und technischen Erklärungen zu Division Comm
 | [RULES_v0.5_GRUNDKONZEPT.md](regeln/RULES_v0.5_GRUNDKONZEPT.md) | Ausführliches Arbeitsregelwerk v0.5 mit festen und offenen Regeln. |
 | [KARTEN_SONDERFAELLE.md](regeln/KARTEN_SONDERFAELLE.md) | Volltexte zu Flächentexten, die auf der Karte gekürzt sind. |
 | [KARTEN_KUERZUNGEN.md](regeln/KARTEN_KUERZUNGEN.md) | Bewusst gestrichene Teilsätze der Prüfung t212 (147 Sätze, 143 Karten). |
-| [TEXT_ENGINE_AUDIT_T265.md](regeln/TEXT_ENGINE_AUDIT_T265.md) | Prüfung t265: Kartentext gegen Engine, 10 Abweichungen und 4 widersinnige Texte (nur gemeldet). |
+| [TEXT_ENGINE_AUDIT_T265.md](regeln/TEXT_ENGINE_AUDIT_T265.md) | Prüfung t265: Kartentext gegen Engine, 10 Abweichungen und 4 widersinnige Texte (in t267 behoben). |
+| [KARTEN_T267.md](regeln/KARTEN_T267.md) | Reparatur t267: die 14 Karten wirken wie gedruckt; neue Engine-Regeln (Bonus negieren, eigener Bonus nach Feindziel, Zielbedingungen, Opfern) und Lesarten je Karte. |
 
 ## Nationen und Lore – `nationen/`
 

@@ -1706,7 +1706,7 @@
     clearTargetHighlights();
     var pend = engine && engine.state && engine.state.pending;
     if (!pend || !pend.choices) return;
-    var kinds = { 'attack-target': 1, 'instant-target': 1, napalm: 1, 'air-strike': 1, feint: 1, drone: 1, 'instant-section': 1 };
+    var kinds = { 'attack-target': 1, 'instant-target': 1, napalm: 1, 'air-strike': 1, feint: 1, drone: 1, 'instant-section': 1, 'own-bonus': 1 };
     if (!kinds[pend.kind]) return;
     if (pend.kind === 'instant-section') {
       var secOwn = {};
@@ -2958,7 +2958,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     function tryPickPending(uid) {
       var pend = engine.state.pending; // offene Wahl des Spielers
       if (!pend || pend.player !== viewer) return false;
-      if (pend.kind === 'instant-target' || pend.kind === 'attack-target' || pend.kind === 'equip' || pend.kind === 'napalm' || pend.kind === 'air-strike') {
+      if (pend.kind === 'instant-target' || pend.kind === 'attack-target' || pend.kind === 'equip' || pend.kind === 'napalm' || pend.kind === 'air-strike' || pend.kind === 'own-bonus') {
         if (pend.choices && pend.choices.length) {
           var ok = pend.choices.some(function (c) { return c && c.target === uid; });
           if (!ok) {

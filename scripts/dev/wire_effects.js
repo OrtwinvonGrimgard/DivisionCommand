@@ -265,7 +265,7 @@ function parseInstant(text) {
   if (/Unterstützung.*entferne|Entferne eine feindliche Unterstützung|Unterstützungslinie/i.test(t)) {
     effects.push({ code: 'CLEAR_SUPPORT_OR_DEBUFF', param: {} });
   }
-  if (/Negiere/i.test(t)) effects.push({ code: 'CLEAR_ATK_MALUS', param: { negateBonus: true } });
+  if (/Negiere/i.test(t)) effects.push({ code: 'NEGATE_BONUS', param: {} }); // t267: generisch, Feindziel; Ziehen über DRAW
   if (/oberste Deckkarte|Sieh die oberste/i.test(t)) effects.push({ code: 'LOOK_TOP', param: { count: 1, infantryToHand: true } });
   if (/kann diesen Zug nicht angreifen|darf diesen Zug nicht bewegt/i.test(t)) effects.push({ code: 'OUT_OF_COMBAT', param: {} });
   // Remaining nation-specific fallbacks

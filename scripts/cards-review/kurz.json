@@ -5330,7 +5330,7 @@
   "keywords": []
  },
  "dc_b_stillprobe_467": {
-  "kurz": "Feind kann diesen Zug nicht aufdecken/angegriffen werden? Negiere Aufklärungsschutz; −2 ATK.",
+  "kurz": "Wähle eine gegnerische Fronteinheit: decke sie auf; −2 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
