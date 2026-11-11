@@ -259,7 +259,8 @@ async function waitHumanTurn(page, ms = 180000) {
     if (st.active === 0 && !st.hold && !st.busy && st.phase === 'main' && !st.pend) return st;
     await sleep(250);
   }
-  throw new Error('Zeitüberschreitung beim Warten auf den eigenen Zug: ' + JSON.stringify(await gameState(page)));
+  const dbg = await page.evaluate(() => (window.dcEventDebug ? window.dcEventDebug() : null)).catch(() => null);
+  throw new Error('Zeitüberschreitung beim Warten auf den eigenen Zug: ' + JSON.stringify(await gameState(page)) + ' events=' + JSON.stringify(dbg));
 }
 
 /**

@@ -485,6 +485,26 @@
   }
 
   /**
+   * t259: Bewertet „Armageddon“ nach dem vollständigen Kartentext: Spielfeld beider Seiten
+   * leer, beide Hände abgeworfen, beide ziehen 5. Lohnt nur, wenn der Gegner auf dem Brett
+   * klar vorne liegt; der Handsaldo zählt mit (eigene Resthand geht verloren, Gegner bekommt
+   * ebenfalls 5 frische Karten).
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} act PLAY-Aktion mit Armageddon
+   * @returns {number} Wert; deutlich negativ = Karte behalten
+   */
+  function scoreArmageddon(engine, pid, act) {
+    var p = engine.player(pid), o = engine.opponent(pid);
+    var board = evalBoard(engine, pid); // > 0: eigenes Brett stärker → Armageddon schadet
+    var ownRest = Math.max(0, p.hand.length - 1); // ohne Armageddon selbst
+    var handSwing = (5 - ownRest) - (5 - o.hand.length);
+    var s = -board * 1.2 + handSwing * 3 - 10;
+    if (frontCount(engine, o.id) === 0 && (o.support || []).every(function (x) { return !x; })) s -= 60;
+    return s > 0 ? 10 + s : -150;
+  }
+
+  /**
    * Bewertet eine PLAY-Aktion (Test-Bot).
    * @param {object} engine
    * @param {number} pid
@@ -524,6 +544,7 @@
       if (hasCode(d, 'PAUSE_UNIT') && frontCount(engine, engine.opponent(pid).id) > 0) s += 8;
       if (hasCode(d, 'LAY_MINE')) s += frontCount(engine, pid) ? 10 : 0;
       if (hasCode(d, 'NAPALM') || hasCode(d, 'AIR_STRIKE')) s += threat(engine, pid) > 12 ? 12 : 2;
+      if (hasCode(d, 'ARMAGEDDON')) return Number(cfg.allowInstant) ? scoreArmageddon(engine, pid, act) : -200;
     }
 
     // t254: Doktrin Blitzkrieg — Panzer ausspielen sperrt im nächsten gegnerischen Zug dessen Unterstützungsfähigkeiten.

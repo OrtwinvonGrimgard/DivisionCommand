@@ -762,6 +762,19 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 > Sämtliche Karten und Tokens vom Spielfeld und beide Hände auf den Ablagestapel. Beide ziehen 5. Münze bestimmt, wer wieder beginnt.
 
+**Ablauf in der Engine (t259, `_armageddonSweep` + `_armageddonHands`):**
+
+1. Front und Support beider Spieler werden zerstört (inkl. Ausrüstung und Tokens auf dem Feld), Minen/NML-Marker geräumt. Alles kommt auf den Ablagestapel des Besitzers. „Durchbruch“-Sprünge aus der Hand greifen dabei nicht.
+2. Armageddon selbst kommt auf den Ablagestapel des Ausspielers.
+3. Beide Hände kommen vollständig auf den eigenen Ablagestapel.
+4. Erst der Ausspieler, dann der Gegner ziehen je 5 Karten nach den normalen Ziehregeln (`_draw`): Ist das Deck leer, wird der Ablagestapel (inklusive der eben abgeworfenen Karten) neu gemischt. Sind Deck und Ablage zusammen kleiner als 5, zieht man nur so viele, wie da sind. Ein leeres Deck führt nicht zur Niederlage („der Kampf endet nicht“). Das Handlimit greift nicht, weil die Hände vorher leer sind.
+5. Siegprüfung. Ist die Partie nicht vorbei, folgt der Münzwurf: Bei Kopf beginnt der Ausspieler erneut, bei Zahl der Gegner. Der Gewinner wird aktiv und erhält die normalen AP pro Zug.
+
+Auslegungsfragen (Kartentext unverändert):
+- „Beide ziehen 5“ ist gleichzeitig gemeint. Die Engine zieht nacheinander (Ausspieler zuerst); da jeder aus dem eigenen Deck zieht, ändert das nichts.
+- Ob Armageddon selbst „vom Spielfeld“ kommt, lässt der Text offen. Als Soforteinsatz geht es wie jeder Einsatz auf den Ablagestapel (vorher ging die Karte verloren).
+- Der Bot bewertet Armageddon gesondert (`scoreArmageddon`): nur bei klarem Brettrückstand, Handsaldo zählt mit.
+
 ## `dc_so_letzter` – Der Letzte der steht (Soforteinsatz)
 
 **Fläche:** Opfere deine Front bis auf eine Einheit; sie erhält je Opfer +1 ATK/+1 DEF. Fällt sie, erhält der Gegner 1 SP.

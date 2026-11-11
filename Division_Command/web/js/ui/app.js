@@ -219,7 +219,7 @@
     if (window.DCEndScreen) DCEndScreen.reset();
     audioCall('stopSfx');
     audioCall('stopTable');
-    eventQueue = []; seenEvents = 0; eventPlaying = false;
+    eventQueue = []; seenEvents = 0; eventPlaying = false; eventFlying = false;
     armedPlay = null; placing = false; suppressHandClick = false;
     window.dcSuppressClick = false; window._dcLastVpSum = 0;
     botQueued = false; botFail = {}; botSteps = 0; botMark = '';
@@ -257,7 +257,7 @@
   function showMatchEnd(st) {
     if (!isTerminal(st)) return;
     window.dcTimerHold = true;
-    eventQueue = []; eventPlaying = false; armedPlay = null;
+    eventQueue = []; eventPlaying = false; eventFlying = false; armedPlay = null;
     document.querySelectorAll('[data-uid]').forEach(function (el) { clearTimeout(el._dcActTimer); });
     var ov = document.getElementById('overlay'); if (ov) { ov.innerHTML = ''; ov.style.display = 'none'; }
     var key = String(st.seed) + ':' + String(st.winner) + ':' + String(st.endReason);
@@ -569,7 +569,7 @@
       you = 0;
       seenEvents = 0;
       eventQueue = [];
-      eventPlaying = false;
+      eventPlaying = false; eventFlying = false;
       var ov = $('#overlay');
       if (ov) ov.style.display = 'none';
       document.title = (window.DC_BUILD_LABEL || 'Division Command 0.30c Alpha');
@@ -848,6 +848,7 @@
       return;
     }
     render();
+    closeStaleWaitOverlay();
     presentNewEvents();
     if (act.type === 'END_TURN' && engine.state.active !== 1 && !(engine.state.pending && engine.state.pending.player === 1)) {
       botSay('Gegner beendet den Zug.');
@@ -913,6 +914,142 @@
       ov.style.display = 'none';
       clearTargetHighlights();
     }
+    /**
+     * t259: Prüft, ob der Warte-Dialog „Der Gegner prüft Reaktionen“ noch berechtigt ist,
+     * d. h. ob noch eine Wahl des Gegners (Feindkontakt, SAM, Geist, tac-*) offen ist.
+     * @returns {boolean} true, solange der Gegner tatsächlich noch wählt
+     */
+    function foeWaitPending() {
+      var pend = engine && engine.state && engine.state.pending;
+      if (!pend || mode === 'hotseat' || isTerminal(engine.state)) return false;
+      if (pend.player === activePlayer()) return false;
+      return pend.kind === 'react-window' || pend.kind === 'sam' || pend.kind === 'geist-window' || /^tac-/.test(pend.kind);
+    }
+    /**
+     * t259: Schließt einen verwaisten Warte-Dialog. Ursache des Hängers aus ui-play (t258):
+     * Der Bot erledigte seine Wahl, ohne dass eine Live-Meldung folgte (z. B. Gefechtsabbruch
+     * verworfen, „Angriff fällt aus“). Danach rief niemand das Overlay zurück; der Dialog lag
+     * über dem Tisch, der eigene Zug ließ sich nicht mehr bedienen.
+     * Zeigt anschließend eine eigene offene Wahl an, falls vorhanden.
+     * @returns {boolean} true, wenn ein Warte-Dialog geschlossen wurde
+     */
+    function closeStaleWaitOverlay() {
+      var ov = document.getElementById('overlay');
+      if (!ov || ov.style.display === 'none' || !ov.querySelector('.wait-react')) return false;
+      if (foeWaitPending()) return false;
+      ov.style.display = 'none';
+      ov.innerHTML = '';
+      clearTargetHighlights();
+      var pend = engine && engine.state && engine.state.pending;
+      if (pend && pend.player === activePlayer() && !eventPlaying) { try { showPending(); } catch (e) {} }
+      return true;
+    }
+    /**
+     * t259: Eigene Dialog-Wahlen (Feindkontakt, SAM, Geist), die nur im Overlay bedient werden.
+     * Brett-Wahlen (Stellung, Ziel) zeigen bewusst kein Overlay und zählen nicht.
+     * @type {string[]}
+     */
+    var OWN_DIALOG_KINDS = ['react-window', 'sam', 'geist-window'];
+    /**
+     * t259: Stellt einen verlorenen eigenen Wahl-Dialog wieder her und räumt einen verwaisten
+     * Warte-Dialog. Browser-Test (Seed 77): Ein Feindkontakt-Fenster des Menschen war offen,
+     * das Overlay aber zu; render() kehrte bei unverändertem Brett vor showPending() zurück,
+     * also kam der Dialog nie wieder. Läuft in render() (auch ohne DOM-Änderung) und jede
+     * Sekunde über den Zugtimer.
+     * @param {boolean} [fromTimer] true nur aus dem Sekundentakt; zählt dann auch die Meldungs-Wache
+     * @returns {boolean} true, wenn etwas repariert wurde
+     */
+    function guardPendingUi(fromTimer) {
+      if (!engine || !engine.state || isTerminal(engine.state)) return false;
+      if (closeStaleWaitOverlay()) return true;
+      if (fromTimer && guardEventPump()) return true;
+      var pend = engine.state.pending;
+      if (!pend || eventPlaying || pend.player !== activePlayer()) return false;
+      if (OWN_DIALOG_KINDS.indexOf(pend.kind) < 0) return false;
+      var ov = document.getElementById('overlay');
+      if (!ov) return false;
+      var open = ov.style.display !== 'none' && ov.innerHTML.trim();
+      if (open && !ov.querySelector('.wait-react')) return false;
+      try { showPending(); } catch (e) { return false; }
+      return true;
+    }
+    var pumpStuckTicks = 0;
+    var recapStillTicks = 0;
+    var pumpLastSig = '';
+    /**
+     * t259: Meldungs-Warteschlange darf nicht ohne sichtbare Meldung „beschäftigt“ bleiben.
+     * Browser-Test (Seed 259): eventPlaying blieb gesetzt, das Overlay war zu, der eigene Zug
+     * startete nie. Wird jede Sekunde (Zugtimer) geprüft: Liegt eine Warteschlange ohne Lauf
+     * vor, wird sie sofort abgespielt; ist „beschäftigt“ 8 s lang ohne sichtbares Overlay
+     * (Flug-Animationen dauern deutlich kürzer), wird der Lauf freigegeben und neu gepumpt.
+     * @returns {boolean} true, wenn eingegriffen wurde
+     */
+    function guardEventPump() {
+      var ov = document.getElementById('overlay');
+      var visible = !!(ov && ov.style.display !== 'none' && ov.innerHTML.trim());
+      if (!eventPlaying && eventQueue.length && !visible) { pumpStuckTicks = 0; pumpEvents(); return true; }
+      if (eventPlaying && !visible && !eventFlying) {
+        pumpStuckTicks += 1;
+        if (pumpStuckTicks >= 8) {
+          pumpStuckTicks = 0;
+          eventPlaying = false;
+          pumpEvents();
+          if (!eventPlaying) maybeBot();
+          return true;
+        }
+        return false;
+      }
+      // t259: Sichtbare Meldung, die sich 15 s lang nicht verändert (Tippen ruht sonst höchstens
+      // ~3 s), gilt als hängend: Overlay schließen, Pumpe freigeben (ui-play Seed 259, Spiel 5:
+      // „Ausspielen“ ohne Text, 180 s beschäftigt).
+      if (eventPlaying && visible && !eventFlying && ov.querySelector('.recap-stage')) {
+        var sig = ov.textContent.length + '|' + ov.innerHTML.length;
+        if (sig === pumpLastSig) recapStillTicks += 1; else { recapStillTicks = 0; pumpLastSig = sig; }
+        if (recapStillTicks >= 15) {
+          recapStillTicks = 0; pumpLastSig = '';
+          if (recapCancelPrev) { try { recapCancelPrev(); } catch (eRc) {} recapCancelPrev = null; }
+          ov.style.display = 'none'; ov.innerHTML = '';
+          eventPlaying = false;
+          pumpEvents();
+          if (!eventPlaying) { try { guardPendingUi(false); } catch (eG) {} maybeBot(); }
+          return true;
+        }
+        pumpStuckTicks = 0;
+        return false;
+      }
+      recapStillTicks = 0; pumpLastSig = '';
+      pumpStuckTicks = 0;
+      return false;
+    }
+    var waitWatchdogArmed = false;
+    var waitWatchdogSince = 0;
+    /**
+     * t259: Wächter für den Warte-Dialog. Prüft jede Sekunde: Ist keine Gegner-Wahl mehr offen,
+     * schließt er den Dialog; wartet der Bot zu lange (>4 s) auf seine Wahl, stößt er maybeBot()
+     * erneut an. So kann der Dialog die Partie nie dauerhaft blockieren.
+     */
+    function armWaitWatchdog() {
+      if (waitWatchdogArmed) return;
+      waitWatchdogArmed = true;
+      waitWatchdogSince = Date.now();
+      var watchedEngine = engine;
+      function tick() {
+        waitWatchdogArmed = false;
+        if (engine !== watchedEngine || !engine) return;
+        var ov = document.getElementById('overlay');
+        if (!ov || ov.style.display === 'none' || !ov.querySelector('.wait-react')) return;
+        if (closeStaleWaitOverlay()) return;
+        var waited = Date.now() - waitWatchdogSince;
+        if (mode === 'bot' && waited > 4000 && !eventPlaying) {
+          // Ein verlorener Bot-Timer (botQueued ohne Lauf) wird nach 8 s freigegeben.
+          if (botQueued && waited > 8000) botQueued = false;
+          if (!botQueued) { maybeBot(); waitWatchdogSince = Date.now(); }
+        }
+        waitWatchdogArmed = true;
+        window.setTimeout(tick, 1000);
+      }
+      window.setTimeout(tick, 1000);
+    }
     function showPending() {
     var pend = engine.state.pending;
     if (!pend) { closePendingUi(); clearTargetHighlights(); return; }
@@ -933,8 +1070,12 @@
     if (pend.player !== viewer) {
       if (mode !== 'hotseat' && (pend.kind === 'react-window' || pend.kind === 'sam' || pend.kind === 'geist-window' || /^tac-/.test(pend.kind))) {
         var ovw = $('#overlay');
-        ovw.innerHTML = '<div class="modal"><h2>Warte auf Meldungen...</h2><p>Der Gegner prüft Reaktionen.</p></div>';
-        ovw.style.display = 'flex';
+        // t259: Markerklasse, damit closeStaleWaitOverlay() den Dialog sicher wiederfindet.
+        if (!eventPlaying) { // t259: nie über eine laufende Meldung legen
+          ovw.innerHTML = '<div class="modal wait-react"><h2>Warte auf Meldungen...</h2><p>Der Gegner prüft Reaktionen.</p></div>';
+          ovw.style.display = 'flex';
+          armWaitWatchdog();
+        }
       }
       return;
     }
@@ -1741,6 +1882,7 @@
     if (!bombTick) {
       bombTick = window.setInterval(function () {
         if (!engine || isTerminal(engine.state)) return;
+        try { guardPendingUi(true); } catch (eGuard) {} // t259: Dialoge nie dauerhaft verlieren
         if (window.dcTimerHold) return;
         if (bombLeft > 0) {
           bombLeft -= 1;
@@ -1760,6 +1902,8 @@
 
   var recapShown = '';
   var recapTimer = 0;
+  /** t259: Abbruch der zuletzt gestarteten Meldung (setzt nur deren cancelled-Flag). */
+  var recapCancelPrev = null;
   /* Letzte Runde: Karte links, Text rechts, danach Revue. */
     /**
      * t256: Verdeckte Information in der Meldung nicht zeigen. Gezogene Karten des Gegners
@@ -1778,6 +1922,11 @@
     function showRecap(items, whose, opts) { // Aktion erklären
     var ov = document.getElementById('overlay');
     if (!ov) return;
+    // t259: Vorherige Meldung sauber beenden statt nur „ihren“ Timer zu löschen. Vorher teilten
+    // sich alle Meldungen einen Timer; eine neue Meldung löschte den Tipp-Timer einer laufenden,
+    // deren Promise löste nie auf (Text blieb z. B. bei „Test“ stehen) und die Meldungs-Pumpe
+    // blieb bis zur langen Frist „beschäftigt“ (ui-play Seed 259).
+    if (recapCancelPrev) { try { recapCancelPrev(); } catch (eRc) {} recapCancelPrev = null; }
     window.clearTimeout(recapTimer); // globale Schnittstelle der Seite
     ov.innerHTML =
       '<div class="recap-stage">' +
@@ -1801,6 +1950,8 @@
     var live = !!opts.live;
     var cancelled = false;
     var finished = false;
+    var myTimers = [];
+    recapCancelPrev = function () { cancelled = true; myTimers.forEach(function (t) { window.clearTimeout(t); }); };
     ok.onclick = function () {
       cancelled = true;
       window.clearTimeout(recapTimer); // globale Schnittstelle der Seite
@@ -1818,6 +1969,7 @@
       cancelled = true;
       window.clearTimeout(deadline);
       if (ov.querySelector('#recap-typed') === typed) ov.style.display = 'none';
+      else closeStaleWaitOverlay(); // t259: ersetzter Recap darf keinen Warte-Dialog hinterlassen
       if (opts.onDone) opts.onDone();
     }
     var holdMs = (window.DCTune && window.DCTune.dialogMs) || 2000;
@@ -1832,6 +1984,7 @@
     function wait(ms) {
       return new Promise(function (resolve) {
         recapTimer = window.setTimeout(resolve, ms); // später fortsetzen
+        myTimers.push(recapTimer);
       });
     }
     function typeLine(text) {
@@ -1850,6 +2003,8 @@
           var hold = (window.DCTune && window.DCTune.dialogMs) || 2000;
           var ch = Math.max(12, Math.min(70, hold / 50));
           recapTimer = window.setTimeout(tick, text.charAt(i - 1) === ' ' ? ch * 0.55 : ch);
+          if (myTimers.length > 64) myTimers.splice(0, myTimers.length - 8);
+          myTimers.push(recapTimer);
         }
         tick();
       });
@@ -1887,6 +2042,8 @@
   var seenEvents = 0;
   var eventQueue = [];
   var eventPlaying = false;
+  /** t259: true, solange Karten-Flüge vor einer Meldung laufen (Overlay dann bewusst zu). */
+  var eventFlying = false;
 
 
   var lastRects = {};
@@ -2018,13 +2175,15 @@
   function pumpEvents() {
     if (!engine || isTerminal(engine.state) || eventPlaying) return;
     if (!eventQueue.length) {
+      closeStaleWaitOverlay();
       if (engine && engine.state && engine.state.pending && engine.state.pending.player === activePlayer()) showPending();
       return;
     }
     eventPlaying = true;
+    eventFlying = true;
     var eventEngine = engine;
     var batch = eventQueue.splice(0);
-    if (!batch.length) { eventPlaying = false; return; }
+    if (!batch.length) { eventPlaying = false; eventFlying = false; return; }
     var titles = { attack: 'Kampfhandlung', destroy: 'Kampfhandlung', shout: 'Kampfhandlung', coin: 'Münze', spell: 'Einsatz', instant: 'Einsatz', deploy: 'Ausspielen', equip: 'Ausrüstung', support: 'Support', vp: 'Siegpunkt' };
     function flyOne(i, after) {
       if (engine !== eventEngine || !engine || isTerminal(engine.state)) return;
@@ -2044,6 +2203,7 @@
       flyCard(from, pileRect(mine ? 'pile-my-grave' : 'pile-enemy-grave'), face || back, false, function () { flyOne(i + 1, after); });
     }
     flyOne(0, function () {
+      eventFlying = false;
       if (engine !== eventEngine || !engine || isTerminal(engine.state)) return;
       showRecap(batch, '', {
         live: true,
@@ -2746,7 +2906,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       tile.tabIndex = 0; tile.setAttribute('role', 'button');
     });
     if (window.DCCamera) { try { DCCamera.afterRender(engine); } catch (eCam) {} } // auch ohne DOM-Änderung (Optionen/Baseline)
-    if (!dirty) return;
+    if (!dirty) { guardPendingUi(); return; }
     $('#hand').querySelectorAll('.card').forEach(function (el) { // Handkarten
       bindHover(el, function () {
         var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; }); // Handkarten
@@ -3072,8 +3232,12 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
     }).join('');
     if (window.DCTableChat) { try { DCTableChat.refresh(); } catch (eChat) {} }
-    if (st.pending && (st.pending.player === viewer || /^tac-/.test(st.pending.kind))) {
+    // t259: Fremde tac-Wahl nicht über eine laufende Meldung legen (ersetzte sonst den Recap,
+    // dessen Abschluss das Overlay dann nicht mehr schloss).
+    if (st.pending && (st.pending.player === viewer || (/^tac-/.test(st.pending.kind) && !eventPlaying))) {
       showPending();
+    } else {
+      closeStaleWaitOverlay();
     }
     if (mode === 'bot' && !window.dcTimerHold && (st.active === 1 || (st.pending && st.pending.player === 1))) {
       window.setTimeout(maybeBot, 200);
@@ -3135,12 +3299,22 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     }
   };
   window.dcPresentNewEvents = presentNewEvents;
+  window.dcDispatch = function (a) { return dispatch(a); };
   /**
    * t256: Läuft gerade eine Meldung/Flug-Animation oder wartet eine in der Warteschlange?
    * Für UI-Tests (Playwright), damit Klicks nicht in eine startende Meldung fallen.
    * @returns {boolean}
    */
   window.dcEventBusy = function () { return !!(eventPlaying || eventQueue.length); };
+  /**
+   * t259: Diagnose für den Browser-Test: Zustand der Meldungs-Pumpe und des Overlays.
+   * @returns {{playing: boolean, queue: number, stuckTicks: number, timer: boolean, overlay: string}}
+   */
+  window.dcEventDebug = function () {
+    var ov = document.getElementById('overlay');
+    return { playing: !!eventPlaying, queue: eventQueue.length, stuckTicks: pumpStuckTicks, timer: !!bombTick,
+      overlay: ov ? (ov.style.display + '|' + ov.className + '|' + ov.innerHTML.slice(0, 120)) : 'none' };
+  };
   window.dcSetNames = function (a, b) { // globale Schnittstelle der Seite
     if (!engine || !engine.state) return;
     if (a) engine.state.players[0].name = a;

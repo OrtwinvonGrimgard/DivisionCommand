@@ -333,6 +333,8 @@ Sie werden durch Trigger oder einen geeigneten Zeitpunkt aufgedeckt und aktivier
 
 **Verbindlich ab 0.6a (t238):** Wird eine eigene Einheit angegriffen, bietet das Fenster **Feindkontakt** neben passenden Soforteinsätzen der Hand auch passende verdeckte Fallen aus dem Support an. Eine Falle kostet beim Auslösen **keine AP** (bezahlt beim verdeckten Legen), wird aufgedeckt und wie ein Soforteinsatz abgehandelt. Hat sie gerade kein gültiges Ziel, bleibt sie verdeckt liegen.
 
+**Ergänzung t259:** Soforteinsätze aus der Hand erscheinen im Feindkontakt-Fenster nur, wenn der Verteidiger ihre aktuellen Kosten mit seinen verbleibenden AP bezahlen kann. Ist danach keine Wahl übrig, öffnet sich kein Fenster und der Angriff läuft direkt weiter.
+
 Es gibt keine allgemeine Beschränkung auf zwei Fallen.
 
 ---

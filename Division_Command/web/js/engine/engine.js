@@ -2974,6 +2974,7 @@
       }
       if ((def.effects || []).some((e) => e.code === 'ARMAGEDDON')) {
         this._armageddonSweep(p, card);
+        if (this.state.winner != null || this.state.phase === 'gameover') return { ok: true };
         this.state.pending = this._sealPending({ kind: 'coin', player: p.id, card: null, reason: 'armageddon', prompt: 'Wer beginnt erneut?' });
         return { ok: true, need: 'coin' };
       }
@@ -4166,7 +4167,25 @@
         else if (codes.indexOf('CLEAR_ATK_MALUS') >= 0) out.push({ target: c.uid, label: d.name });
         else if (codes.indexOf('WILL_PEOPLE') >= 0) out.push({ target: c.uid, label: d.name });
       });
-      return out;
+      // t259: Handkarten nur anbieten, wenn der Verteidiger sie bezahlen kann. Vorher bot das
+      // Feindkontakt-Fenster z. B. Napalm bei 0 AP an; die Wahl scheiterte („Nicht genug AP“),
+      // der Dialog verschwand und die Partie wartete (ui-play Seeds 77/259).
+      // Verdeckte Fallen aus dem Support lösen ohne AP aus und bleiben immer wählbar.
+      return out.filter((o) => {
+        const h = defender.hand.find((c) => c.uid === o.target);
+        if (!h) return true;
+        return this._reactAffordable(defender, h);
+      });
+    }
+    /**
+     * t259: Kann der Verteidiger diese Handkarte als Reaktion bezahlen?
+     * @param {object} defender Spieler
+     * @param {object} card Handkarten-Instanz
+     * @returns {boolean}
+     */
+    _reactAffordable(defender, card) {
+      try { return this.costOf(this.defOf(card), defender, null, card) <= (Number(defender.ap) || 0); }
+      catch (e) { return true; }
     }
     /**
      * Löst eine verdeckte Unterstützung als Falle aus, ohne weitere AP. RULES §12.1.
@@ -6696,7 +6715,8 @@
       return { ok: true };
     }
     /**
-     * Flächeneffekt „Armageddon“ auf die Front des Gegners.
+     * Flächeneffekt „Armageddon“: räumt Front, Support und Tokens beider Spieler, wirft
+     * Armageddon und beide Hände ab, beide ziehen 5 (t259). Die Münze folgt im Aufrufer.
      * @param {object} p
      * @param {object} card
      */
@@ -6714,9 +6734,37 @@
           ['L', 'C', 'R'].forEach((s) => { pl.nml[s] = [null, null, null]; });
         }
       });
+      // t259: Kartentext vollständig: Armageddon selbst und beide Hände auf den Ablagestapel,
+      // danach ziehen beide 5 (normales Ziehen: leeres Deck → Ablagestapel mischen, sonst Ende).
+      if (card && !p.grave.includes(card)) p.grave.push(card);
+      this._armageddonHands(p);
       this.state._muteEvents = false;
-      this._evt('spell', defn, 'Armageddon — Front und Support sind leer.');
+      this._evt('spell', defn, 'Armageddon — Spielfeld und beide Hände abgeworfen, beide ziehen 5.');
       this._checkVictory();
+    }
+    /**
+     * t259: Zweiter Teil von „Armageddon“ (dc_so_armageddon): beide Hände auf den jeweils
+     * eigenen Ablagestapel, dann zieht zuerst der Ausspieler, danach der Gegner je 5 Karten
+     * über {@link Engine#_draw} (gleiche Regeln wie beim normalen Ziehen: leeres Deck mischt den
+     * Ablagestapel neu; ist auch der leer, endet das Ziehen ohne Niederlage).
+     * @param {object} p ausspielender Spieler
+     * @returns {number[]} gezogene Kartenzahl je Spieler-ID
+     */
+    _armageddonHands(p) {
+      const order = [p, this.opponent(p.id)];
+      order.forEach((pl) => {
+        const n = pl.hand.length;
+        while (pl.hand.length) pl.grave.push(pl.hand.shift());
+        this._log('Armageddon: ' + pl.name + ' wirft ' + n + ' Handkarte' + (n === 1 ? '' : 'n') + ' ab.');
+      });
+      const drawn = [0, 0];
+      order.forEach((pl) => {
+        const before = pl.hand.length;
+        this._draw(pl, 5);
+        drawn[pl.id] = pl.hand.length - before;
+        this._log('Armageddon: ' + pl.name + ' zieht ' + drawn[pl.id] + '.');
+      });
+      return drawn;
     }
     /**
      * Kartenspezifisch: Brumm-Störung.

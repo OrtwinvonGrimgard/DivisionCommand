@@ -594,7 +594,7 @@
                 <li>Zug 2 beginnt mit 7 AP, den 2 vom letzten Zug und 5 neuen. Der Haubitzenzug kostet 4 und geht auf eine eigene Stellung. Es bleiben 3 AP. Auch er greift erst im Zug danach an. Steilfeuer 2 reicht später über fünf gegnerische Stellungen, nicht nur über die gegenüberliegende.</li>
                 <li>Zug 3. Der Dschungelkrieger greift für 1 AP die Stellung gegenüber oder eine seitlich daneben an. Der Haubitzenzug greift für 1 AP ein Ziel, das Steilfeuer erreicht. Ein Klick auf das Ziel schließt den Kampf. Der Verteidiger schlägt zurück, falls sie übersteht (bei Artillerie zusätzlich nur in eigener Reichweite). Danach geht der Dschungelkrieger verdeckt, weil er die Stellung wechselt.</li>
                 <li>Der Aufklärer kostet 3. Er deckt eine verdeckte feindliche Stellung auf, zum Beispiel den gerade verschwundenen Dschungelkrieger des Gegners. Danach ist der Zug zu Ende, oder es bleibt Rest-AP für den nächsten Zug liegen.</li>
-                <li>Armageddon ist Gold und ein Großereignis: Feld und beide Hände weg, beide ziehen fünf, die Münze bestimmt, wer neu beginnt. Kostet 8 AP, ein Exemplar im Deck. Der Ablauf räumt bisher Front und Support; die Hände werden noch nicht geleert.</li>
+                <li>Armageddon ist Gold und ein Großereignis: Feld und beide Hände weg, beide ziehen fünf, die Münze bestimmt, wer neu beginnt. Kostet 8 AP, ein Exemplar im Deck. Reihenfolge: Feld räumen, Armageddon und beide Hände auf den Ablagestapel, erst der Ausspieler, dann der Gegner ziehen 5 (leeres Deck: Ablagestapel wird gemischt), danach die Münze.</li>
               </ol>
 
               <h2 id="glossar">Glossar</h2>
@@ -760,7 +760,7 @@
                 <li>Spielbar: Front 3×3 je Seite, Support, Niemandsland, AP-Ökonomie (5 je Zug, Rest bleibt), Angriff mit Gegenschlag, Eingraben, Steilfeuer I–V, verdeckte Fallen bei Feindkontakt, Doktrinen, Trophy-Sieg (5 SP, Sicherheitsnetz Zug 26/28).</li>
                 <li>Seit t257 haben beide Spieler im ersten Zug 5 AP; der Startspieler zieht in Zug 1 keine Karte.</li>
                 <li>210 Effektcodes im Katalog. Seit t250/t251 wirken alle gefundenen Teil-Stubs wie gedruckt (Vertragsclip, Blitzkrieg-Sperre im nächsten gegnerischen Zug, Schläferzelle neutralisierbar für 2&nbsp;AP).</li>
-                <li>Offen: Moral 0–5 und Brechen stehen nur im Regeltext. Armageddon räumt Front und Support, leert aber die Hände nicht und lässt nicht 5 ziehen, obwohl der Kartentext das sagt. Der Effektcode <code>MINE_TOKEN</code> wird nicht gelesen (die Mine wirkt über einen Sonderfall mit festen 3 Schaden).</li>
+                <li>Offen: Moral 0–5 und Brechen stehen nur im Regeltext. Armageddon wirkt seit t259 vollständig nach Kartentext (Feld, Hände, 5 ziehen, Münze). Der Effektcode <code>MINE_TOKEN</code> wird nicht gelesen (die Mine wirkt über einen Sonderfall mit festen 3 Schaden).</li>
               </ul>
               <h2 id="karten">Karten & Grafik</h2>
               <table>
@@ -792,9 +792,9 @@
               </ul>
               <h2 id="stand-tests">Tests & Doku</h2>
               <ul>
-                <li><code>npm test</code>: 44 Testskripte grün, darunter Smoke (Bot gegen Bot), Effekte, Bot, Oberfläche (jsdom).</li>
+                <li><code>npm test</code>: 46 Testskripte grün, darunter Smoke (Bot gegen Bot), Effekte, Bot, Oberfläche (jsdom).</li>
                 <li>Fuzz 80/80 Partien regulär beendet; <code>verify.py</code>: 1.746 Vorderseiten geprüft.</li>
-                <li>Browser-Test <code>npm run ui-play</code> (Chromium): alle Schaltflächen, Legen per Klick und Ziehen, ganze Partien gegen den Bot. Nicht abgedeckt: 2,5D, EXE, echtes LAN.</li>
+                <li>Browser-Test <code>npm run ui-play</code> (Chromium): alle Schaltflächen, Legen per Klick und Ziehen, ganze Partien gegen den Bot. Der Warte-Dialog „Der Gegner prüft Reaktionen“ schließt sich selbst, sobald keine Gegnerwahl mehr offen ist (Wächter, t259). Nicht abgedeckt: 2,5D, EXE, echtes LAN.</li>
                 <li>100 Markdown-Dokumente, davon 34 in Regeln, Balance und Technik. Die Projektdokumentation (PDF) steht noch auf dem Stand t245.</li>
               </ul>
             </article>
@@ -819,7 +819,6 @@
               <h2 id="fehlt-regeln">Regeln & Karten</h2>
               <ul>
                 <li>Moral 0–5 und Brechen nur im Regeltext, nicht im Ablauf.</li>
-                <li>Armageddon: Hände leeren und 5 ziehen fehlt in der Engine.</li>
                 <li><code>MINE_TOKEN</code> wird nicht gelesen (Wirkung über Sonderfall).</li>
                 <li>155 funktionsgleiche Kartengruppen umgehen das Kopienlimit über verschiedene Namen.</li>
                 <li>Balance: Sahr gemischt 41,8&nbsp;%, Blitzkrieg etwa 7 Punkte unter Kontrolle, 6-AP-Soforteinsätze selten gespielt, Neutralisierung der Schläferzelle evtl. 3 statt 2&nbsp;AP.</li>
@@ -850,6 +849,7 @@
                   <tr><td>11.&nbsp;11., 00:43</td><td>t257: beide Spieler 5 AP im ersten Zug.</td></tr>
                   <tr><td>11.&nbsp;11., 02:06</td><td>t256: Browser-Hänger beim Ausspielen behoben, Browser-Test <code>ui-play</code>.</td></tr>
                   <tr><td>11.&nbsp;11.</td><td>t258: Gesamtanalyse, Hilfe mit Markt, Stand, fehlenden Features und Fortschritt.</td></tr>
+                  <tr><td>11.&nbsp;11.</td><td>t259: Hänger „Der Gegner prüft Reaktionen“ behoben (mit Wächter), Armageddon vollständig nach Kartentext.</td></tr>
                 </tbody>
               </table>
               <h2 id="fortschritt-meilensteine">Meilensteine bis Early Access</h2>
@@ -858,7 +858,7 @@
                 <tbody>
                   <tr><td>Siegbedingungen festgelegt (Trophy 5 SP)</td><td>erledigt</td></tr>
                   <tr><td>Kartenpool 16 × 100 + 2, alle Vorderseiten</td><td>erledigt</td></tr>
-                  <tr><td>Kartentexte wirken wie gedruckt</td><td>fast erledigt (Armageddon, MINE_TOKEN offen)</td></tr>
+                  <tr><td>Kartentexte wirken wie gedruckt</td><td>fast erledigt (MINE_TOKEN offen)</td></tr>
                   <tr><td>Bot spielt alle Kartentypen sinnvoll</td><td>erledigt (t254)</td></tr>
                   <tr><td>Oberfläche im Browser getestet</td><td>erledigt (t256), ohne 2,5D</td></tr>
                   <tr><td>Nationen im Ziel 46–54&nbsp;%</td><td>teilweise (Bot-Messung)</td></tr>
@@ -881,14 +881,14 @@
               <table>
                 <thead><tr><th>Bereich</th><th>Gewicht</th><th>Stand</th><th>Beitrag</th><th>Begründung</th></tr></thead>
                 <tbody>
-                  <tr><td>Regeln & Engine</td><td>20&nbsp;%</td><td><span class="prog"><i style="width:90%"></i></span> 90&nbsp;%</td><td>18,0</td><td>Kernregeln, Sieg, Fallen, 210 Effektcodes laufen; offen Moral, Armageddon-Hände, MINE_TOKEN, AP-Deckel.</td></tr>
+                  <tr><td>Regeln & Engine</td><td>20&nbsp;%</td><td><span class="prog"><i style="width:90%"></i></span> 90&nbsp;%</td><td>18,0</td><td>Kernregeln, Sieg, Fallen, 210 Effektcodes laufen; offen Moral, MINE_TOKEN, AP-Deckel.</td></tr>
                   <tr><td>Kartenbestand</td><td>15&nbsp;%</td><td><span class="prog"><i style="width:85%"></i></span> 85&nbsp;%</td><td>12,75</td><td>1.746 Karten, alle Vorderseiten; offen 155 funktionsgleiche Gruppen, 650 vorläufige Motive.</td></tr>
                   <tr><td>Balance</td><td>10&nbsp;%</td><td><span class="prog"><i style="width:75%"></i></span> 75&nbsp;%</td><td>7,5</td><td>Spannen 44,6–55,5 / 41,8–55,8&nbsp;%, Startspieler 47,8 / 48,5&nbsp;%; nur Bot-Messung.</td></tr>
                   <tr><td>Bot-KI</td><td>10&nbsp;%</td><td><span class="prog"><i style="width:70%"></i></span> 70&nbsp;%</td><td>7,0</td><td>Zugstufen, Vorausschau, 0 Fehler; keine Stufen, Schadens-/Opferkarten schwach genutzt.</td></tr>
                   <tr><td>Oberfläche, Grafik, Ton</td><td>15&nbsp;%</td><td><span class="prog"><i style="width:65%"></i></span> 65&nbsp;%</td><td>9,75</td><td>Alle Menüs, Browser-Test grün; kein Tutorial, Porträts unvollständig, 2,5D ungetestet.</td></tr>
                   <tr><td>Mehrspieler</td><td>10&nbsp;%</td><td><span class="prog"><i style="width:45%"></i></span> 45&nbsp;%</td><td>4,5</td><td>Hotseat und LAN gebaut; keine Zwei-Rechner-Partie, kein Online.</td></tr>
                   <tr><td>Spielmodi (Tutorial, Roguelike, Kampagne)</td><td>10&nbsp;%</td><td><span class="prog"><i style="width:5%"></i></span> 5&nbsp;%</td><td>0,5</td><td>Nur Konzepte im Fahrplan.</td></tr>
-                  <tr><td>Tests & Doku</td><td>5&nbsp;%</td><td><span class="prog"><i style="width:80%"></i></span> 80&nbsp;%</td><td>4,0</td><td>44 Testskripte, Fuzz, Browser-Test, 100 Dokumente; kein Playtest-Protokoll, PDF veraltet.</td></tr>
+                  <tr><td>Tests & Doku</td><td>5&nbsp;%</td><td><span class="prog"><i style="width:80%"></i></span> 80&nbsp;%</td><td>4,0</td><td>46 Testskripte, Fuzz, Browser-Test, 100 Dokumente; kein Playtest-Protokoll, PDF veraltet.</td></tr>
                   <tr><td>Build & Vertrieb</td><td>5&nbsp;%</td><td><span class="prog"><i style="width:20%"></i></span> 20&nbsp;%</td><td>1,0</td><td>PWA und EXE-Skript vorhanden; EXE ungetestet, keine Steam-Seite, keine Marke.</td></tr>
                   <tr><td><strong>Summe</strong></td><td>100&nbsp;%</td><td><strong>65&nbsp;%</strong></td><td>65,0</td><td></td></tr>
                 </tbody>
@@ -909,7 +909,7 @@
               <h2 id="fahrplan">Fahrplan bis zur Vollversion</h2>
               <ol>
                 <li><strong>Phase 0 – Siegbedingungen einfrieren.</strong> Erledigt: Trophy-Modus mit 5 SP, Sicherheitsnetz Zug 26/28.</li>
-                <li><strong>Phase 1 – Kern-Polish und Tutorial.</strong> Läuft: Effekte und Bot fertig, Browser-Test grün. Offen: Tutorial, menschlicher Playtest, Armageddon, Moral.</li>
+                <li><strong>Phase 1 – Kern-Polish und Tutorial.</strong> Läuft: Effekte und Bot fertig, Browser-Test grün. Offen: Tutorial, menschlicher Playtest, Moral.</li>
                 <li><strong>Phase 2 – Roguelike-Slice.</strong> Eine Nation, Akte und Boss, Belohnungen, kürzere Gefechte als im PvP.</li>
                 <li><strong>Phase 3 – Steam Coming Soon, Demo, Next Fest.</strong> Wunschlisten aufbauen; Marke vorher anmelden.</li>
                 <li><strong>Phase 4 – Kampagne</strong> gestaffelt, zuerst 2–4 Geschichten.</li>
@@ -968,7 +968,7 @@
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=st1"></script>
   <script src="js/ui/end-screen.js?v=1"></script>
-  <script src="js/ui/app.js?v=alpha40w"></script>
+  <script src="js/ui/app.js?v=alpha40x"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
   <script src="js/ui/audio-options.js?v=1"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>
