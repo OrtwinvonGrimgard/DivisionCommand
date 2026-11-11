@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- **Hilfe und Statusanalyse (t258):** Hilfe-Menü neu gegliedert: Marktanalyse (Vergleichsspiele KARDS, Hearthstone, Legends of Runeterra, Gwent, Marvel Snap, Flames of War; Steam-Kennzahlen von Game Market Data, mit Quellen), Entwicklungsstand (nachgezählte Zahlen), Fehlende Features, Fortschritt (Verlauf, Meilensteine) und Fortschritt in Prozent (65 % bis Early Access, Gewichtung je Bereich, Methodik). Veraltete Regelzeile „Startspieler 3 AP“ in der Hilfe korrigiert. Cache `divcmd-alpha40w`. Doku: `docs/entwicklung/STATUS_T258.md`.
+
 - **Browser-Fehler beim Ausspielen (t256):** Im Browser hing die Seite, sobald man eine Karte auf ein Feld legte. Ursache: Die Bot-Proben aus t254 kopierten die Engine samt dem `dispatch`-Hook der Oberfläche (Playtest-Logger). Jede Probe lief dadurch über die echte Partie und rief erneut den Bot-Vorschlag auf. Das war eine Endlosschleife, und der Bot veränderte beim Nachdenken den echten Stand. `cloneEngine` übernimmt jetzt keine eigenen Funktionen bzw. Hooks mehr. Weitere Fehler aus dem Browser-Durchlauf:
   - „Gefecht beginnen“ startete jede Partie doppelt.
   - Der Münzwurf lag unter dem Schleier und wurde vom Countdown überschrieben. Begann der Bot, zog er nie.
