@@ -17,7 +17,9 @@ const C = w.DC_CATALOG.cards, NP = C.filter((c) => c.set === 'set_nation_pool');
 const WL = new Set(['ATTACK_ANY_FRONT', 'ATTACK_SUPPORT', 'AUFKLAERUNG', 'RELOCATE_HIDE', 'FLANK_DEF', 'MECH_AURA', 'FUEHRUNG_V', 'VS_INF', 'IGNORE_DEF', 'FEUERUEBERLEGENHEIT', 'AMBUSH', 'SCHADEN_MINUS', 'HAND_PEEK',
   'BUFF', 'HEAL', 'SELF_DAMAGE', 'EXTRA_ATTACK', 'DEAL_DAMAGE', 'MARK_OBSERVED', 'DRAW', 'DRAW_DISCARD', 'COST_NEXT', 'BUFF_SECTION',
   'EQUIP_STAT', 'EQUIP_IGNORE_FIRST_DAMAGE', 'EQUIP_NEGATE_DAMAGE', 'ON_DESTROY_DRAW', 'EQUIP_ON_ATTACK_DAMAGE', 'CARRIER_FIRST_ATTACK_ATK', 'EQUIP_COND_ATK',
-  'TURN_DRAW', 'TURN_AP', 'REDUCE_DAMAGE', 'AURA_ENEMY_ATK', 'AURA_FRONT_ATK']);
+  'TURN_DRAW', 'TURN_AP', 'REDUCE_DAMAGE', 'AURA_ENEMY_ATK', 'AURA_FRONT_ATK', 'CM']);
+// t268: CM im Pool nur als Zugbeginn-Heilung (turnheal) und Abschnitts-Aura (aura/section) einer Unterstützung – unten geprüft
+const CM_OK = (c, e) => c.typ === 'Unterstützung' && e.param && (e.param.k === 'turnheal' || (e.param.k === 'aura' && e.param.scope === 'section'));
 
 // ---- 1) Bestand / Pools
 const nations = Object.keys(w.DC_NATION_DECKS);
@@ -48,7 +50,7 @@ for (const c of NP) {
   assert.equal(c.art_status, 'platzhalter'); assert(!c.image, 'kein erfundenes Bild ' + c.id);
   assert.equal(c.max_copies, LIM[c.rarity], 'Kopienlimit ' + c.id);
   assert.notEqual(c.klasse, 'Schützenpanzer');
-  (c.effects || []).forEach((e) => assert(WL.has(e.code), c.id + ' ungeprüfter Code ' + e.code));
+  (c.effects || []).forEach((e) => assert(WL.has(e.code) && (e.code !== 'CM' || CM_OK(c, e)), c.id + ' ungeprüfter Code ' + e.code));
   if (c.typ !== 'Einheit') assert((c.effects || []).length, 'Effekt verdrahtet ' + c.id);
 }
 // Kopienlimits im Deckbau
@@ -181,8 +183,8 @@ for (const c of NP) {
     assert.equal(ap0 - p.ap, eng.costOf(c, p), c.id + ' AP');
     const fx = (k) => c.effects.find((e) => e.code === k);
     const sd = fx('SELF_DAMAGE') ? fx('SELF_DAMAGE').param.value : 0;
-    if (fx('BUFF')) { const b = fx('BUFF').param; assert.equal(stats(eng, own).atk, a0 + b.atk, c.id + ' ATK'); assert.equal(own.def, dOwn + b.def - sd, c.id + ' DEF'); }
-    if (fx('HEAL')) assert.equal(own.def, Math.min(own.defMax, dOwn + fx('HEAL').param.value) - sd, c.id + ' Heilung');
+    if (fx('BUFF')) { const b = fx('BUFF').param; assert.equal(stats(eng, own).atk, a0 + b.atk, c.id + ' ATK'); const h = fx('HEAL') ? fx('HEAL').param.value : 0; assert.equal(own.def, Math.min(Math.max(own.defMax, dOwn + b.def), dOwn + b.def + h) - sd, c.id + ' DEF'); }
+    if (fx('HEAL') && !fx('BUFF')) assert.equal(own.def, Math.min(own.defMax, dOwn + fx('HEAL').param.value) - sd, c.id + ' Heilung');
     if (fx('SELF_DAMAGE') && !fx('BUFF') && !fx('HEAL')) assert.equal(own.def, dOwn - sd, c.id);
     if (fx('EXTRA_ATTACK')) assert.equal(own.attackUsed, false, c.id + ' erneut');
     if (fx('DEAL_DAMAGE')) { const t = codes.includes('MARK_OBSERVED') ? hid : foe; assert.equal((codes.includes('MARK_OBSERVED') ? 10 : dFoe) - t.def, fx('DEAL_DAMAGE').param.value, c.id + ' Schaden'); }
@@ -232,10 +234,20 @@ for (const c of NP) {
     const inst = eng.instFromId(c.id, 0); p.hand.push(inst);
     const ap0 = p.ap; const r = eng.dispatch({ type: 'PLAY', player: 0, uid: inst.uid }); assert(r.ok, c.id + ' ' + r.error);
     if (eng.state.pending && eng.state.pending.kind === 'deploy') assert(eng.dispatch({ type: 'CHOOSE_SLOT', player: 0, slot: { section: 'C', row: 0 } }).ok);
+    const aura = c.effects.find((e) => e.code === 'CM' && e.param.k === 'aura');
+    if (aura) { assert.equal(eng.state.pending && eng.state.pending.kind, 'tac-aura-section', c.id + ' Abschnitt wählen'); assert(eng.dispatch({ type: 'CHOOSE_TARGET', player: 0, target: 'sec:C' }).ok, c.id + ' Abschnitt'); }
     assert(p.support.some((s) => s && s.uid === inst.uid), c.id + ' liegt'); assert.equal(ap0 - p.ap, eng.costOf(c, p), c.id + ' AP');
     const has = (k) => codes.includes(k);
-    assert.equal(stats(eng, own).atk, so.atk + (has('AURA_FRONT_ATK') ? 1 : 0), c.id + ' eigene ATK');
-    assert.equal(stats(eng, own).def, so.def + (has('AURA_FRONT_DEF') ? 2 : 0), c.id + ' eigene DEF');
+    const aA = aura ? aura.param.atk || 0 : 0, aD = aura ? aura.param.def || 0 : 0;
+    assert.equal(stats(eng, own).atk, so.atk + (has('AURA_FRONT_ATK') ? 1 : 0) + aA, c.id + ' eigene ATK');
+    assert.equal(stats(eng, own).def, so.def + (has('AURA_FRONT_DEF') ? 2 : 0) + aD, c.id + ' eigene DEF');
+    const th = c.effects.find((e) => e.code === 'CM' && e.param.k === 'turnheal');
+    if (th) {
+      const e2 = fresh(); const o2 = dummy(e2, 0, 'C', 0, 10); const s2 = e2.instFromId(c.id, 0); e2.player(0).support[0] = s2;
+      o2.def = Math.max(1, o2.def - 3);
+      const before = o2.def; e2.dispatch({ type: 'END_TURN', player: 0 }); e2.dispatch({ type: 'END_TURN', player: 1 });
+      assert.equal(e2.findInst(o2.uid).inst.def - before, th.param.n, c.id + ' Zugbeginn-Heilung ' + th.param.n);
+    }
     assert.equal(stats(eng, foe).atk, Math.max(0, sf.atk - (has('AURA_ENEMY_ATK') ? 1 : 0)), c.id + ' Feind ATK');
     if (has('REDUCE_DAMAGE')) { const d0 = own.def; eng._damage(own, 2, {}); assert.equal(d0 - own.def, 1, c.id + ' −1'); }
     if (has('TURN_DRAW') || has('TURN_AP')) {

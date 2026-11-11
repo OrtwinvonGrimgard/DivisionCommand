@@ -594,7 +594,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "",
-    "name": "Standarte",
+    "name": "Feldstandarte",
     "ap": 1,
     "atk": null,
     "def": null,
@@ -625,7 +625,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "",
-    "name": "Gebetsfahne",
+    "name": "Gebetswimpel",
     "ap": 1,
     "atk": null,
     "def": null,
@@ -662,7 +662,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "",
-    "name": "Sturmleitern",
+    "name": "Sturmleiter",
     "ap": 2,
     "atk": null,
     "def": null,
@@ -700,7 +700,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "",
-    "name": "Feldzeichen",
+    "name": "Feldabzeichen",
     "ap": 1,
     "atk": null,
     "def": null,
@@ -776,20 +776,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "",
     "name": "Sammelfahne",
-    "ap": 1,
+    "ap": 2,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Einmal pro Zug: wenn Infanterie den Abschnitt betritt, Träger +1 DEF bis Zugende.",
+    "text": "Einmal pro Zug: wenn Infanterie den Abschnitt betritt, Träger +1 DEF bis Zugende. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
           "def": 1
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -835,20 +841,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "",
     "name": "Glaubenssegen",
-    "ap": 2,
+    "ap": 3,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK, +1 DEF.",
+    "text": "Träger +1 ATK, +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 1,
           "def": 1
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -896,20 +908,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "",
     "name": "Balkenschild",
-    "ap": 2,
+    "ap": 3,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +2 DEF.",
+    "text": "Träger +3 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
-          "def": 2
+          "def": 3
         }
       }
     ],
@@ -1094,20 +1106,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "",
     "name": "Pelzkragen",
-    "ap": 1,
+    "ap": 2,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK, solange er beschädigt ist.",
+    "text": "Träger +2 ATK, solange er beschädigt ist.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "stat",
-          "atk": 1,
+          "atk": 2,
           "when": "damaged"
         }
       }
@@ -1156,7 +1168,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "",
-    "name": "Stabskarte",
+    "name": "Stabsplan",
     "ap": 2,
     "atk": null,
     "def": null,
@@ -1367,14 +1379,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "",
     "name": "Schmerzchip",
-    "ap": 1,
+    "ap": 2,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK, solange er beschädigt ist.",
+    "text": "Träger +1 ATK, solange er beschädigt ist. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -1382,6 +1394,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
           "k": "stat",
           "atk": 1,
           "when": "damaged"
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -1519,13 +1537,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF. Wird der Träger zerstört, ziehe 1 Karte.",
+    "text": "Träger +1 ATK. Wird der Träger zerstört, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 0,
-          "def": 1
+          "atk": 1,
+          "def": 0
         }
       },
       {
@@ -1626,14 +1644,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Offenes Gerät",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK gegen beobachtete Ziele.",
+    "text": "Träger +1 ATK gegen beobachtete Ziele. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "CM",
@@ -1641,6 +1659,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
           "k": "vs",
           "atk": 1,
           "vs": "observed"
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -1689,19 +1713,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Sandstreifen",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+    "text": "Träger +2 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "def": 0
         }
       },
@@ -2063,20 +2087,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Stumpfmantel",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
+    "text": "Träger +2 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
-          "def": 1
+          "def": 2
         }
       },
       {
@@ -2131,20 +2155,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Stillkragen",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+    "text": "Träger +1 ATK und +1 DEF. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 1,
-          "def": 0
+          "def": 1
         }
       },
       {
@@ -2246,19 +2270,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Grenzsiegel",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
+    "text": "Träger +2 DEF, solange du eine Unterstützung im Feld hast.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
         "param": {
-          "def": 1,
+          "def": 2,
           "ifSupport": true
         }
       }
@@ -2314,20 +2338,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Fallakte",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF.",
+    "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
           "def": 1
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -2345,20 +2375,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Offene Zeile",
-    "ap": 1,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK.",
+    "text": "Träger +2 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "def": 0
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -2439,19 +2475,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Vorlesegerät",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
+    "text": "Träger +2 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "def": 0
         }
       },
@@ -2476,20 +2512,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Stillmanschette",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+    "text": "Träger +1 ATK und +1 DEF. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 1,
-          "def": 0
+          "def": 1
         }
       },
       {
@@ -2551,19 +2587,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Fälligkeitsmarke",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 2.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
         "param": {
-          "heal": 1,
+          "heal": 2,
           "perTurn": true
         }
       }
@@ -2582,20 +2618,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Haussiegel",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF.",
+    "text": "Träger +1 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 0,
-          "def": 1
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -2650,8 +2692,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
-    "name": "Fallakte",
-    "ap": 2,
+    "name": "Schuldakte",
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -2750,20 +2792,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Steingrünmantel",
-    "ap": 1,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
+    "text": "Träger +2 DEF, solange du eine Unterstützung im Feld hast. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
         "param": {
-          "def": 1,
+          "def": 2,
           "ifSupport": true
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -2781,20 +2829,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Zeughausschlüssel",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
+    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
         "param": {
           "def": 1,
           "ifSupport": true
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -2812,19 +2866,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Markenkragen",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
+    "text": "Träger +2 DEF, solange du eine Unterstützung im Feld hast.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
         "param": {
-          "def": 1,
+          "def": 2,
           "ifSupport": true
         }
       }
@@ -2843,19 +2897,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Parlamentsstempel",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 2.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
         "param": {
-          "heal": 1,
+          "heal": 2,
           "perTurn": true
         }
       }
@@ -2874,20 +2928,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Ölflasche",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK.",
+    "text": "Träger +1 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 1,
           "def": 0
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -2905,20 +2965,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Grenzmarke",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+    "text": "Träger +1 ATK und +1 DEF. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 1,
-          "def": 0
+          "def": 1
         }
       },
       {
@@ -2975,7 +3035,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
-    "name": "Aktenmappe",
+    "name": "Kronakte",
     "ap": 2,
     "atk": 0,
     "def": 0,
@@ -3016,20 +3076,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Spare Paspel",
-    "ap": 1,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF.",
+    "text": "Träger +1 ATK und +2 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 0,
-          "def": 1
+          "atk": 1,
+          "def": 2
         }
       }
     ],
@@ -3047,19 +3107,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Marschkette",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
+    "text": "Träger +2 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "def": 0
         }
       },
@@ -3247,13 +3307,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
+    "text": "Träger +1 DEF. Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
-          "def": 0
+          "def": 1
         }
       },
       {
@@ -3330,13 +3390,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+    "text": "Träger +1 DEF. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
-          "def": 0
+          "atk": 0,
+          "def": 1
         }
       },
       {
@@ -3428,20 +3488,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Offener Knoten",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
+    "text": "Träger +1 DEF, solange du eine Unterstützung im Feld hast. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_COND_DEF",
         "param": {
           "def": 1,
           "ifSupport": true
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -3466,13 +3532,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+    "text": "Träger +1 DEF. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
-          "def": 0
+          "atk": 0,
+          "def": 1
         }
       },
       {
@@ -3544,13 +3610,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+    "text": "Träger +1 DEF. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
-          "def": 0
+          "atk": 0,
+          "def": 1
         }
       },
       {
@@ -3656,20 +3722,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Wegmarke",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK.",
+    "text": "Träger +2 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
-          "def": 0
+          "atk": 0,
+          "def": 2
         }
       }
     ],
@@ -3718,20 +3784,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Satteltasche",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
         "param": {
           "heal": 1,
           "perTurn": true
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -3749,7 +3821,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Zielskizze",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -3826,19 +3898,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Normhelm",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
+    "text": "Träger +1 ATK und +1 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 0,
+          "atk": 1,
           "def": 1
         }
       },
@@ -3946,7 +4018,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
-    "name": "Aktenmappe",
+    "name": "Dienstmappe",
     "ap": 2,
     "atk": 0,
     "def": 0,
@@ -3984,20 +4056,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Messlatte",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
         "param": {
           "heal": 1,
           "perTurn": true
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -4015,20 +4093,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Zielzuweisung",
-    "ap": 2,
+    "ap": 4,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK.",
+    "text": "Träger +2 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "def": 0
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -4045,7 +4129,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
-    "name": "Normverband",
+    "name": "Verbandsabzeichen",
     "ap": 3,
     "atk": 0,
     "def": 0,
@@ -4300,20 +4384,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Zollsäckchen",
-    "ap": 1,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+    "text": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 2. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_HEAL_ONCE",
         "param": {
-          "heal": 1,
+          "heal": 2,
           "perTurn": true
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -4361,8 +4451,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
-    "name": "Entsatz",
-    "ap": 3,
+    "name": "Entsatzpaket",
+    "ap": 4,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -4496,19 +4586,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Schieferumhang",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+    "text": "Träger +2 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "def": 0
         }
       },
@@ -4576,19 +4666,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Tunnelplatte",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+    "text": "Träger +2 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "def": 0
         }
       },
@@ -4680,14 +4770,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Hangladung",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -4703,6 +4793,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
           "atk": 0,
           "def": 1,
           "when": "still"
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -4720,19 +4816,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Eidstempel",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+    "text": "Träger +2 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "def": 0
         }
       },
@@ -4891,7 +4987,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
-    "name": "Feldlager",
+    "name": "Lagergepäck",
     "ap": 2,
     "atk": 0,
     "def": 0,
@@ -4962,13 +5058,13 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+    "text": "Träger +1 DEF. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
-          "def": 0
+          "atk": 0,
+          "def": 1
         }
       },
       {
@@ -5137,19 +5233,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Knochenplatte",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK.",
+    "text": "Träger +2 ATK.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "def": 0
         }
       }
@@ -5237,20 +5333,20 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Plattenrüstung",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +2 DEF.",
+    "text": "Träger +3 DEF.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
-          "def": 2
+          "def": 3
         }
       }
     ],
@@ -5308,20 +5404,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Schwere Platte",
-    "ap": 2,
+    "ap": 4,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK.",
+    "text": "Träger +1 ATK und +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 1,
-          "def": 0
+          "def": 1
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -5346,13 +5448,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 DEF.",
+    "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 0,
           "def": 1
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -5404,7 +5512,7 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "status": "live",
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
-    "name": "Gepanzerter Fuß",
+    "name": "Panzerstiefel",
     "ap": 3,
     "atk": 0,
     "def": 0,
@@ -5412,13 +5520,19 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "tags": [
       "ausruestung"
     ],
-    "text": "Infanterie-Träger +1 ATK und +1 DEF.",
+    "text": "Infanterie-Träger +1 ATK und +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
         "param": {
           "atk": 1,
           "def": 1
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],
@@ -5541,14 +5655,14 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Technische Linie",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
+    "text": "Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "EQUIP_STAT",
@@ -5559,6 +5673,12 @@ window.DC_SET_TYPES["Ausrüstung"] = [
       },
       {
         "code": "EQUIP_SOFT_DRAW",
+        "param": {
+          "draw": 1
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
         "param": {
           "draw": 1
         }
@@ -5608,20 +5728,26 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "typ": "Ausrüstung",
     "klasse": "Ausrüstung",
     "name": "Probenkoffer",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "ausruestung"
     ],
-    "text": "Beim Anlegen: markiere 1 Feind als beobachtet.",
+    "text": "Beim Anlegen: markiere 1 Feind als beobachtet. Wird der Träger zerstört, ziehst du 1 Karte.",
     "effects": [
       {
         "code": "REVEAL",
         "param": {
           "count": 1,
           "observe": true
+        }
+      },
+      {
+        "code": "ON_DESTROY_DRAW",
+        "param": {
+          "draw": 1
         }
       }
     ],

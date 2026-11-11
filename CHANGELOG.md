@@ -2,6 +2,20 @@
 
 ## Unreleased
 
+- **Balance und eindeutige Karten t268, Elite-Zitat t269:**
+  - Alle 16 Nationen liegen zwischen 48 und 52 % (Bot gegen Bot, 23.040 Partien je Modus).
+    - Starterdecks 44,9–55,3 → 48,9–51,1 %, Mischdecks 42,1–56,1 → 48,4–51,4 %.
+    - Startspieler 48,7 bzw. 49,6 %.
+  - Keine funktionsgleichen Karten mehr (vorher 179 Gruppen / 599 Karten mit gleichen Werten und gleichem Text) und keine doppelten Namen (vorher 57, IDs unverändert).
+    - Unterschieden wird über Wertetausch, Zahl ±1 mit AP ±1 oder einen kleinen Zusatz bei +1 AP: Ziehe 1 Karte / Träger zerstört → ziehe 1 / Heilung 1 zu Zugbeginn.
+    - Alles läuft über bestehende Engine-Effekte; Pool-Bausteine `theal`/`sdef` über `CM`.
+  - 712 Karten geändert; vollständige Liste alt → neu in `docs/regeln/BALANCE_T268.md`, Vorgehen und Tabellen in `docs/entwicklung/STATUS_T268.md`.
+  - Werkzeuge: `scripts/balance/cards_t268.js`, `profile_t268.js`, `tune_t268.js`, `names_t268.json`, `manual_t268.json`.
+  - Neuer Test `tests/test_unique_cards_t268.js`; `tests/test_nation_pools.js` prüft die neuen `CM`-Bausteine sowie Bonus mit Heilung.
+  - Kurztexte: Fehler „1 K..“ und „Wähle eine Feind“ behoben, keine Vorderseite mehr über 120 Zeichen.
+  - Elitekarten: Zitat wieder mittig über die volle Breite, Orden darüber ohne Überdeckung. Alle Vorderseiten neu gerendert (alpha40, 1024×1428).
+  - Hilfe (Entwicklungsstand, Fehlende Features, Fortschritt, Fortschritt in Prozent: 67 %, Kernspiel 77 %). Cache `divcmd-alpha41a`.
+
 - **Kartenreparatur t267:** Die 14 Karten aus der Prüfung t265 wirken wie gedruckt (Lesarten und Sonderfälle in `docs/regeln/KARTEN_T267.md`).
   - Neuer Effekt `NEGATE_BONUS` (gegnerische Einheit: gespeicherte ATK-Boni und DEF über Druckwert weg, laufende Boni bis Ende des nächsten gegnerischen Zugs aus): Verfahrensbruch und Keine Sterne (nur Elite-Ziel, ziehe 1), Modellstopp (ziehe 1), Kein Schrein (danach eigene Einheit +1 DEF).
   - Eigener Bonus nach Feindziel (`param.side: 'own'`, neue Wahl „Eigene Einheit für den Bonus“): Notimplantat, Stoßtrupp, Lokalisierung (Soforteinsatz), Rasten, Kein Schrein, Opfergabe. Vorher stärkte der Bonus die gewählte Feindeinheit.

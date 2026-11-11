@@ -3495,8 +3495,8 @@
   "keywords": []
  },
  "dc_b_schichtplan_155": {
-  "kurz": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
-  "gekuerzt": false,
+  "kurz": "1×/Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zugbeginn: heile 1 eigene Einheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_bilanzrede_156": {
@@ -3505,12 +3505,12 @@
   "keywords": []
  },
  "dc_b_werksanzeige_157": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: heile 2 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_puppenstaat_158": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3525,7 +3525,7 @@
   "keywords": []
  },
  "dc_b_quartalsende_161": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: heile 2 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3545,8 +3545,8 @@
   "keywords": []
  },
  "dc_b_zentralratsplan_114": {
-  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
-  "gekuerzt": false,
+  "kurz": "1×/Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast. Zugbeginn: heile 1 eigene Einheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_werkhof_115": {
@@ -3555,12 +3555,12 @@
   "keywords": []
  },
  "dc_b_leises_nein_116": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_ritusnennung_117": {
-  "kurz": "Einmal pro Zug, wenn eine andere eigene Einheit zerstört wird: ziehe 1 Karte.",
+  "kurz": "Einmal pro Zug, wenn eine andere eigene Einheit zerstört wird: ziehe 2 Karten.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3590,7 +3590,7 @@
   "keywords": []
  },
  "dc_b_schwerpunktkarte_630": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3635,7 +3635,7 @@
   "keywords": []
  },
  "dc_b_leistungsboard_390": {
-  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+  "kurz": "Einmal pro Zug: ziehe 2 Karten, sobald du in diesem Zug eine Einheit gespielt hast.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3685,7 +3685,7 @@
   "keywords": []
  },
  "dc_b_lage_offen_desk_814": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 ATK, wenn die Einheit seit deinem letzten Zug nicht versetzt wurde.",
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +2 ATK, wenn die Einheit seit deinem letzten Zug nicht versetzt wurde.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -3695,13 +3695,13 @@
   "keywords": []
  },
  "dc_b_westhaven_lager_816": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_lydon_werk_817": {
-  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast.",
-  "gekuerzt": false,
+  "kurz": "1×/Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast. Zugbeginn: heile 1 eigene Einheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_arven_widerspruch_818": {
@@ -3720,7 +3720,7 @@
   "keywords": []
  },
  "dc_b_siegelstadt_872": {
-  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+  "kurz": "Einmal pro Zug: ziehe 2 Karten, sobald du in diesem Zug eine Einheit gespielt hast.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3740,7 +3740,7 @@
   "keywords": []
  },
  "dc_b_marktvel_876": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 ATK und +1 DEF. Dort sinkt der erste Schaden je Zug um 1.",
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +2 ATK. Dort sinkt der erste Schaden je Zug um 1.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -3750,7 +3750,7 @@
   "keywords": []
  },
  "dc_b_hinterraum_878": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +2 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -3765,8 +3765,8 @@
   "keywords": []
  },
  "dc_b_vorlesehof_932": {
-  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
-  "gekuerzt": false,
+  "kurz": "1×/Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast. Zugbeginn: heile 1 eigene Einheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_herberge_kalden_933": {
@@ -3795,8 +3795,8 @@
   "keywords": []
  },
  "dc_b_namenhof_938": {
-  "kurz": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
-  "gekuerzt": false,
+  "kurz": "1×/Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zugbeginn: heile 1 eigene Einheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_doppelhaus_750": {
@@ -3810,8 +3810,8 @@
   "keywords": []
  },
  "dc_b_parlamentsgasse_752": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
-  "gekuerzt": false,
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 ATK. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_bindungstag_753": {
@@ -3830,7 +3830,7 @@
   "keywords": []
  },
  "dc_b_kronland_hof_756": {
-  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast.",
+  "kurz": "Einmal pro Zug: ziehe 2 Karten, sobald du in diesem Zug einen Soforteinsatz gespielt hast.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3840,7 +3840,7 @@
   "keywords": []
  },
  "dc_b_lichthofen_758": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +2 DEF. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -3855,7 +3855,7 @@
   "keywords": []
  },
  "dc_b_verbindungsstrasse_194": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 ATK und +1 DEF. Dort sinkt der erste Schaden je Zug um 1.",
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +2 ATK und +1 DEF. Dort sinkt der erste Schaden je Zug um 1.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -3865,17 +3865,17 @@
   "keywords": []
  },
  "dc_b_marschordnung_196": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_lizenzhof_197": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 ATK. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_b_neuviertel_tisch_198": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 ATK und +1 DEF. Dort sinkt der erste Schaden je Zug um 1.",
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +2 DEF. Dort sinkt der erste Schaden je Zug um 1.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -3895,22 +3895,22 @@
   "keywords": []
  },
  "dc_b_vorratshalle_691": {
-  "kurz": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
-  "gekuerzt": false,
+  "kurz": "1×/Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zugbeginn: heile 1 eigene Einheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_umschlagplatz_692": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_vertragsnetz_693": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_umschlagzentrale_694": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 ATK und +1 DEF. Dort sinkt der erste Schaden je Zug um 1.",
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +2 ATK. Dort sinkt der erste Schaden je Zug um 1.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -3925,7 +3925,7 @@
   "keywords": []
  },
  "dc_b_wasserstelle_697": {
-  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+  "kurz": "Einmal pro Zug: ziehe 2 Karten, sobald du in diesem Zug eine Einheit gespielt hast.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -3965,7 +3965,7 @@
   "keywords": []
  },
  "dc_b_lagerordnung_576": {
-  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF, mit 2+ eigenen Einheiten dort. Zugbeginn: heile 1 eigene Einheit.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -3995,8 +3995,8 @@
   "keywords": []
  },
  "dc_b_nachschubader_513": {
-  "kurz": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
-  "gekuerzt": false,
+  "kurz": "1×/Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zugbeginn: heile 1 eigene Einheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_volle_front_lager_514": {
@@ -4010,7 +4010,7 @@
   "keywords": []
  },
  "dc_b_solkai_werft_516": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt. Zu Beginn deines Zuges: heile 1 an einer beschädigten eigenen Einheit dort.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt. Zu Beginn deines Zuges: heile 2 an einer beschädigten eigenen Einheit dort.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4045,8 +4045,8 @@
   "keywords": []
  },
  "dc_b_lesehof_235": {
-  "kurz": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
-  "gekuerzt": false,
+  "kurz": "1×/Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast. Zugbeginn: heile 1 eigene Einheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_tunnelnetz_236": {
@@ -4055,12 +4055,12 @@
   "keywords": []
  },
  "dc_b_eidkopie_237": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_nachbarhilfe_238": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4075,8 +4075,8 @@
   "keywords": []
  },
  "dc_b_feldbaeckerei_331": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
-  "gekuerzt": false,
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 ATK. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_versorgungspunkt_332": {
@@ -4130,7 +4130,7 @@
   "keywords": []
  },
  "dc_b_namensliste_273": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4150,17 +4150,17 @@
   "keywords": []
  },
  "dc_b_werkvertrag_277": {
-  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+  "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_totenwall_278": {
-  "kurz": "Einmal pro Zug, wenn eine eigene Einheit zerstört wird: ziehe 1 Karte.",
+  "kurz": "Einmal pro Zug, wenn eine eigene Einheit zerstört wird: ziehe 2 Karten.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_laborzelt_450": {
-  "kurz": "Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.",
+  "kurz": "Zu Beginn deines Zuges: markiere 2 Feind als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4170,7 +4170,7 @@
   "keywords": []
  },
  "dc_b_saal_der_unterschrift_452": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: heile 2 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4180,12 +4180,12 @@
   "keywords": []
  },
  "dc_b_methodenblatt_454": {
-  "kurz": "Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.",
-  "gekuerzt": false,
+  "kurz": "Zugbeginn: markiere 1 Feind als beobachtet. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_zahlenhof_455": {
-  "kurz": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+  "kurz": "Zu Beginn deines Zuges: heile 2 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4390,7 +4390,7 @@
   "keywords": []
  },
  "dc_b_nachschubstoss_162": {
-  "kurz": "Wähle eine eigene Fronteinheit: heile 2.",
+  "kurz": "Wähle eine eigene Fronteinheit: heile 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4525,7 +4525,7 @@
   "keywords": []
  },
  "dc_b_silberstern_640": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+  "kurz": "Wähle eine eigene Fronteinheit: +2 DEF. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4570,7 +4570,7 @@
   "keywords": []
  },
  "dc_b_weiter_397": {
-  "kurz": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "kurz": "Wähle eine eigene Fronteinheit: +3 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4590,7 +4590,7 @@
   "keywords": []
  },
  "dc_b_durchbruch_401": {
-  "kurz": "Wähle eine gegnerische Fronteinheit: 2 Schaden.",
+  "kurz": "Wähle eine gegnerische Fronteinheit: 1 Schaden.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4605,7 +4605,7 @@
   "keywords": []
  },
  "dc_b_offene_wunde_404": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4675,12 +4675,12 @@
   "keywords": []
  },
  "dc_b_zwei_saetze_828": {
-  "kurz": "Wähle 2 eigene Fronteinheiten: je +1 ATK bis Zugende.",
+  "kurz": "Wähle 2 eigene Fronteinheiten: je +2 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_boden_vor_see_829": {
-  "kurz": "Wähle bis zu 2 eigene Fronteinheiten: je +2 ATK bis Zugende.",
+  "kurz": "Wähle bis zu 2 eigene Fronteinheiten: je +2 ATK bis Zugende. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4725,7 +4725,7 @@
   "keywords": []
  },
  "dc_b_zwei_lagen_886": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
+  "kurz": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4735,12 +4735,12 @@
   "keywords": []
  },
  "dc_b_kein_herr_888": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+  "kurz": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_versorgungsnacht_889": {
-  "kurz": "Ziehe 2 Karten, dann wirf deine älteste Handkarte ab.",
+  "kurz": "Ziehe 1 Karte, dann wirf deine älteste Handkarte ab.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4750,12 +4750,12 @@
   "keywords": []
  },
  "dc_b_faellige_zeile_939": {
-  "kurz": "Alle eigenen Einheiten: +1 ATK bis Zugende.",
+  "kurz": "Alle eigenen Einheiten: +2 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_staffelung_940": {
-  "kurz": "Wähle eine eigene Fronteinheit: +2 DEF.",
+  "kurz": "Wähle eine eigene Fronteinheit: +3 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4775,7 +4775,7 @@
   "keywords": []
  },
  "dc_b_stundung_944": {
-  "kurz": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
+  "kurz": "Dein nächster Soforteinsatz kostet 2 AP weniger (mind. 0).",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4790,7 +4790,7 @@
   "keywords": []
  },
  "dc_b_hausblatt_947": {
-  "kurz": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
+  "kurz": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0). Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4815,7 +4815,7 @@
   "keywords": []
  },
  "dc_b_gegenruf_760": {
-  "kurz": "Wähle bis zu 2 eigene Fronteinheiten: je +2 ATK bis Zugende.",
+  "kurz": "Wähle bis zu 2 eigene Fronteinheiten: je +3 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4835,17 +4835,17 @@
   "keywords": []
  },
  "dc_b_haushaltsfrage_764": {
-  "kurz": "Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende.",
+  "kurz": "Wähle einen eigenen Abschnitt: Einheiten dort +2 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_gleichmaessiger_ruf_765": {
-  "kurz": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
+  "kurz": "Dein nächster Soforteinsatz kostet 2 AP weniger (mind. 0).",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_nachtstellung_766": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+  "kurz": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4855,17 +4855,17 @@
   "keywords": []
  },
  "dc_b_zwei_haende_768": {
-  "kurz": "Wähle eine eigene Fronteinheit: +2 DEF; sie kann in ihrem nächsten Zug nicht angreifen.",
+  "kurz": "Wähle eine eigene Fronteinheit: +1 DEF; sie kann in ihrem nächsten Zug nicht angreifen.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_sperrenkette_769": {
-  "kurz": "Ziehe 2 Karten, dann wirf deine älteste Handkarte ab.",
+  "kurz": "Ziehe 3 Karten, dann wirf deine älteste Handkarte ab.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_steingruen_halt_770": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4900,12 +4900,12 @@
   "keywords": []
  },
  "dc_b_strassenoeffnen_207": {
-  "kurz": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
+  "kurz": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0). Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_sandfarbe_208": {
-  "kurz": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
+  "kurz": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1). Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4925,7 +4925,7 @@
   "keywords": []
  },
  "dc_b_zweite_verspaetung_212": {
-  "kurz": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
+  "kurz": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1). Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4940,7 +4940,7 @@
   "keywords": []
  },
  "dc_b_weite_umgehung_701": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende.",
+  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4955,12 +4955,12 @@
   "keywords": []
  },
  "dc_b_fristtafel_704": {
-  "kurz": "Alle eigenen Einheiten: +1 ATK bis Zugende.",
+  "kurz": "Alle eigenen Einheiten: +1 ATK bis Zugende. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_schnellpass_705": {
-  "kurz": "Wähle eine eigene Fronteinheit: +2 DEF; sie kann in ihrem nächsten Zug nicht angreifen.",
+  "kurz": "Wähle eine eigene Fronteinheit: +3 DEF; sie kann in ihrem nächsten Zug nicht angreifen.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4975,7 +4975,7 @@
   "keywords": []
  },
  "dc_b_doppelumgehung_708": {
-  "kurz": "Alle eigenen Einheiten: +1 ATK bis Zugende.",
+  "kurz": "Alle eigenen Einheiten: +2 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -4985,17 +4985,17 @@
   "keywords": []
  },
  "dc_b_pfadoeffnung_710": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+  "kurz": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_reglement_579": {
-  "kurz": "Wähle eine eigene Fronteinheit: +2 DEF.",
+  "kurz": "Wähle eine eigene Fronteinheit: +3 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_planungsrunde_580": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
+  "kurz": "Wähle eine eigene Fronteinheit: +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5010,7 +5010,7 @@
   "keywords": []
  },
  "dc_b_sichtlinie_583": {
-  "kurz": "Decke eine verdeckte gegnerische Einheit auf. Ziehe 1 Karte.",
+  "kurz": "Decke eine verdeckte gegnerische Einheit auf. Ziehe 2 Karten.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5025,7 +5025,7 @@
   "keywords": []
  },
  "dc_b_befehlskopien_586": {
-  "kurz": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
+  "kurz": "Dein nächster Soforteinsatz kostet 2 AP weniger (mind. 0).",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5035,7 +5035,7 @@
   "keywords": []
  },
  "dc_b_synchronfeuer_588": {
-  "kurz": "Wähle eine eigene Fronteinheit: +2 DEF.",
+  "kurz": "Wähle eine eigene Fronteinheit: +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5045,7 +5045,7 @@
   "keywords": []
  },
  "dc_b_planfestigung_590": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5060,12 +5060,12 @@
   "keywords": []
  },
  "dc_b_letzte_lieferung_521": {
-  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+  "kurz": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Deine nächste Einheit kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_marsch_aus_dem_vollen_522": {
-  "kurz": "Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende.",
+  "kurz": "Wähle einen eigenen Abschnitt: Einheiten dort +2 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5120,7 +5120,7 @@
   "keywords": []
  },
  "dc_b_warnfeuer_242": {
-  "kurz": "Wähle eine gegnerische Fronteinheit: −1 ATK bis Zugende.",
+  "kurz": "Wähle eine gegnerische Fronteinheit: −1 ATK bis Zugende. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5140,7 +5140,7 @@
   "keywords": []
  },
  "dc_b_passoeffnen_246": {
-  "kurz": "Wähle eine eigene Fronteinheit: versetze sie seitlich auf ein freies Feld derselben Reihe.",
+  "kurz": "Wähle eine eigene Fronteinheit: versetze sie seitlich auf ein freies Feld derselben Reihe. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5210,12 +5210,12 @@
   "keywords": []
  },
  "dc_b_zuteilung_347": {
-  "kurz": "Wähle eine eigene Fronteinheit: heile 1.",
+  "kurz": "Wähle eine eigene Fronteinheit: heile 2.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_rueckruf_348": {
-  "kurz": "Wähle eine eigene Fronteinheit: heile 2.",
+  "kurz": "Wähle eine eigene Fronteinheit: heile 3.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5240,7 +5240,7 @@
   "keywords": []
  },
  "dc_b_bergung_281": {
-  "kurz": "Wähle eine eigene Fronteinheit: heile 2.",
+  "kurz": "Wähle eine eigene Fronteinheit: heile 3.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5320,7 +5320,7 @@
   "keywords": []
  },
  "dc_b_trotz_465": {
-  "kurz": "Wähle eine eigene Fronteinheit: +2 DEF.",
+  "kurz": "Wähle eine eigene Fronteinheit: +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5470,8 +5470,8 @@
   "keywords": []
  },
  "dc_b_sammelfahne_137": {
-  "kurz": "Einmal pro Zug: wenn Infanterie den Abschnitt betritt, Träger +1 DEF bis Zugende.",
-  "gekuerzt": false,
+  "kurz": "1×/Zug: wenn Infanterie den Abschnitt betritt, Träger +1 DEF bis Zugende. Wird der Träger zerstört, ziehst du 1 Karte.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_feldaltar_138": {
@@ -5480,7 +5480,7 @@
   "keywords": []
  },
  "dc_b_glaubenssegen_140": {
-  "kurz": "Träger +1 ATK, +1 DEF.",
+  "kurz": "Träger +1 ATK, +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5490,7 +5490,7 @@
   "keywords": []
  },
  "dc_b_balkenschild_142": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +3 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5520,7 +5520,7 @@
   "keywords": []
  },
  "dc_b_pelzkragen_654": {
-  "kurz": "Träger +1 ATK, solange er beschädigt ist.",
+  "kurz": "Träger +2 ATK, solange er beschädigt ist.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5560,7 +5560,7 @@
   "keywords": []
  },
  "dc_b_schmerzchip_412": {
-  "kurz": "Träger +1 ATK, solange er beschädigt ist.",
+  "kurz": "Träger +1 ATK, solange er beschädigt ist. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5580,7 +5580,7 @@
   "keywords": []
  },
  "dc_b_massplakette_416": {
-  "kurz": "Träger +1 DEF. Wird der Träger zerstört, ziehe 1 Karte.",
+  "kurz": "Träger +1 ATK. Wird der Träger zerstört, ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5595,7 +5595,7 @@
   "keywords": []
  },
  "dc_b_offenes_geraet_831": {
-  "kurz": "Träger +1 ATK gegen beobachtete Ziele.",
+  "kurz": "Träger +1 ATK gegen beobachtete Ziele. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5605,7 +5605,7 @@
   "keywords": []
  },
  "dc_b_sandstreifen_833": {
-  "kurz": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Träger +2 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5655,7 +5655,7 @@
   "keywords": []
  },
  "dc_b_stumpfmantel_893": {
-  "kurz": "Träger +1 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
+  "kurz": "Träger +2 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5665,7 +5665,7 @@
   "keywords": []
  },
  "dc_b_stillkragen_895": {
-  "kurz": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+  "kurz": "Träger +1 ATK und +1 DEF. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5680,7 +5680,7 @@
   "keywords": []
  },
  "dc_b_grenzsiegel_898": {
-  "kurz": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
+  "kurz": "Träger +2 DEF, solange du eine Unterstützung im Feld hast.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5690,12 +5690,12 @@
   "keywords": []
  },
  "dc_b_fallakte_900": {
-  "kurz": "Träger +1 DEF.",
+  "kurz": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_offene_zeile_951": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +2 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5710,12 +5710,12 @@
   "keywords": []
  },
  "dc_b_vorlesegeraet_954": {
-  "kurz": "Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
+  "kurz": "Träger +2 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_stillmanschette_955": {
-  "kurz": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Träger +1 ATK und +1 DEF. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5725,12 +5725,12 @@
   "keywords": []
  },
  "dc_b_faelligkeitsmarke_957": {
-  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 2.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_haussiegel_958": {
-  "kurz": "Träger +1 DEF.",
+  "kurz": "Träger +1 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5755,32 +5755,32 @@
   "keywords": []
  },
  "dc_b_steingruenmantel_773": {
-  "kurz": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
+  "kurz": "Träger +2 DEF, solange du eine Unterstützung im Feld hast. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_zeughausschluessel_774": {
-  "kurz": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
+  "kurz": "Träger +1 DEF, solange du eine Unterstützung im Feld hast. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_markenkragen_775": {
-  "kurz": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
+  "kurz": "Träger +2 DEF, solange du eine Unterstützung im Feld hast.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_parlamentsstempel_776": {
-  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 2.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_oelflasche_777": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +1 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_grenzmarke_778": {
-  "kurz": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+  "kurz": "Träger +1 ATK und +1 DEF. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5795,12 +5795,12 @@
   "keywords": []
  },
  "dc_b_spare_paspel_213": {
-  "kurz": "Träger +1 DEF.",
+  "kurz": "Träger +1 ATK und +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_marschkette_214": {
-  "kurz": "Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
+  "kurz": "Träger +2 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5825,7 +5825,7 @@
   "keywords": []
  },
  "dc_b_wartezettel_219": {
-  "kurz": "Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
+  "kurz": "Träger +1 DEF. Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5835,7 +5835,7 @@
   "keywords": []
  },
  "dc_b_clip_kronenhof_221": {
-  "kurz": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+  "kurz": "Träger +1 DEF. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5850,12 +5850,12 @@
   "keywords": []
  },
  "dc_b_offener_knoten_712": {
-  "kurz": "Träger +1 DEF, solange du eine Unterstützung im Feld hast.",
+  "kurz": "Träger +1 DEF, solange du eine Unterstützung im Feld hast. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_sandmantel_713": {
-  "kurz": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Träger +1 DEF. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5865,7 +5865,7 @@
   "keywords": []
  },
  "dc_b_packsattel_715": {
-  "kurz": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+  "kurz": "Träger +1 DEF. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5880,7 +5880,7 @@
   "keywords": []
  },
  "dc_b_wegmarke_718": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5890,7 +5890,7 @@
   "keywords": []
  },
  "dc_b_satteltasche_720": {
-  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5905,7 +5905,7 @@
   "keywords": []
  },
  "dc_b_normhelm_593": {
-  "kurz": "Träger +1 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
+  "kurz": "Träger +1 ATK und +1 DEF. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5925,12 +5925,12 @@
   "keywords": []
  },
  "dc_b_messlatte_597": {
-  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_zielzuweisung_598": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +2 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -5975,7 +5975,7 @@
   "keywords": []
  },
  "dc_b_zollsaeckchen_537": {
-  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 2. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6005,7 +6005,7 @@
   "keywords": []
  },
  "dc_b_schieferumhang_254": {
-  "kurz": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+  "kurz": "Träger +2 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6015,7 +6015,7 @@
   "keywords": []
  },
  "dc_b_tunnelplatte_256": {
-  "kurz": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Träger +2 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6030,12 +6030,12 @@
   "keywords": []
  },
  "dc_b_hangladung_259": {
-  "kurz": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
-  "gekuerzt": false,
+  "kurz": "Träger +1 ATK. Träger +1 DEF, wenn unbewegt. Wird der Träger zerstört, ziehst du 1 Karte.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_eidstempel_260": {
-  "kurz": "Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
+  "kurz": "Träger +2 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6070,7 +6070,7 @@
   "keywords": []
  },
  "dc_b_schutzplane_356": {
-  "kurz": "Träger +1 ATK. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
+  "kurz": "Träger +1 DEF. Einmal pro Zug: Erleidet der Träger Schaden, heilt er danach 1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6095,7 +6095,7 @@
   "keywords": []
  },
  "dc_b_knochenplatte_291": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +2 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6110,7 +6110,7 @@
   "keywords": []
  },
  "dc_b_plattenruestung_294": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +3 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6120,12 +6120,12 @@
   "keywords": []
  },
  "dc_b_schwere_platte_296": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +1 ATK und +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_b_knochennagel_297": {
-  "kurz": "Träger +1 DEF.",
+  "kurz": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6135,7 +6135,7 @@
   "keywords": []
  },
  "dc_b_gepanzerter_fuss_299": {
-  "kurz": "Infanterie-Träger +1 ATK und +1 DEF.",
+  "kurz": "Infanterie-Träger +1 ATK und +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6155,8 +6155,8 @@
   "keywords": []
  },
  "dc_b_technische_linie_473": {
-  "kurz": "Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte.",
-  "gekuerzt": false,
+  "kurz": "Träger +1 ATK. 1×/Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte. Wird der Träger zerstört, ziehst du 1 Karte.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_b_sensorbrille_474": {
@@ -6165,7 +6165,7 @@
   "keywords": []
  },
  "dc_b_probenkoffer_475": {
-  "kurz": "Beim Anlegen: markiere 1 Feind als beobachtet.",
+  "kurz": "Beim Anlegen: markiere 1 Feind als beobachtet. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6328,12 +6328,12 @@
   "keywords": []
  },
  "dc_np_steinmark_bezirksarchiv": {
-  "kurz": "Zugbeginn: ziehe 1 zusätzlich.",
+  "kurz": "Zugbeginn: ziehe 1 zusätzlich. Abschnitt wählen: eigene Einheiten dort +1 ATK.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_np_steinmark_ordnungsamt_front": {
-  "kurz": "Jeder Schaden an deinen Fronteinheiten −1.",
+  "kurz": "Jeder Schaden an deinen Fronteinheiten −1. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6343,27 +6343,27 @@
   "keywords": []
  },
  "dc_np_steinmark_formale_freigabe": {
-  "kurz": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft.",
-  "gekuerzt": false,
+  "kurz": "Eine eigene Einheit: +1 ATK bis Zugende, +1 DEF dauerhaft. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_steinmark_sachstandsbericht": {
-  "kurz": "Ziehe 2 Karten.",
+  "kurz": "Ziehe 2 Karten. Heile 1 DEF an einer eigenen Fronteinheit.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_steinmark_planmaessige_abloesung": {
-  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "kurz": "Heile 1 DEF an einer eigenen Fronteinheit. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_steinmark_beweisaufnahme": {
-  "kurz": "Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Ziehe 1 Karte.",
+  "kurz": "Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Ziehe 2 Karten.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_steinmark_feuerplan_ausgeloest": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6378,12 +6378,12 @@
   "keywords": []
  },
  "dc_np_steinmark_beschaffungsvorlauf": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
-  "gekuerzt": false,
+  "kurz": "Nächste Einheit/Unterstützung kostet 1 AP weniger. Ziehe 1 Karte. Wähle einen Feind: aufdecken, gilt als beobachtet.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_steinmark_dienstweg": {
-  "kurz": "Ziehe 2, dann wirf deine älteste Handkarte ab.",
+  "kurz": "Ziehe 2, dann wirf deine älteste Handkarte ab. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6393,17 +6393,17 @@
   "keywords": []
  },
  "dc_np_steinmark_stahlhelm_bundesnorm": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +1 ATK und +2 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_steinmark_dienstgewehr_muster_vier": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +1 ATK. Solange der Träger beschädigt ist: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_steinmark_pruefplakette": {
-  "kurz": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
+  "kurz": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte. Erster Angriff des Trägers: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6413,7 +6413,7 @@
   "keywords": []
  },
  "dc_np_steinmark_schutzweste_klasse_drei": {
-  "kurz": "Träger +1 DEF.",
+  "kurz": "Träger +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -6561,12 +6561,12 @@
   ]
  },
  "dc_np_eldran_sperrguertel": {
-  "kurz": "Gegnerische Fronteinheiten −1 ATK.",
+  "kurz": "Gegnerische Fronteinheiten −1 ATK. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_eldran_pionierdepot": {
-  "kurz": "Jeder Schaden an deinen Fronteinheiten −1.",
+  "kurz": "Jeder Schaden an deinen Fronteinheiten −1. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6581,12 +6581,12 @@
   "keywords": []
  },
  "dc_np_eldran_koeniglicher_befehl": {
-  "kurz": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.",
+  "kurz": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen. Heile 1 DEF an einer eigenen Fronteinheit.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_eldran_feldlazarett_der_krone": {
-  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "kurz": "Heile 3 DEF an einer eigenen Fronteinheit.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6596,7 +6596,7 @@
   "keywords": []
  },
  "dc_np_eldran_gegenstoss_aus_der_reserve": {
-  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "kurz": "Eine eigene Fronteinheit: +3 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6606,7 +6606,7 @@
   "keywords": []
  },
  "dc_np_eldran_hofbericht": {
-  "kurz": "Ziehe 1 Karte.",
+  "kurz": "Ziehe 1 Karte. Heile 1 DEF an einer eigenen Fronteinheit.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6616,7 +6616,7 @@
   "keywords": []
  },
  "dc_np_eldran_kronrat_tagt": {
-  "kurz": "Ziehe 3, dann wirf deine älteste Handkarte ab.",
+  "kurz": "Ziehe 3, dann wirf deine älteste Handkarte ab. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6626,7 +6626,7 @@
   "keywords": []
  },
  "dc_np_eldran_kronhelm": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +3 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6648,12 +6648,12 @@
   "keywords": []
  },
  "dc_np_eldran_bajonett_der_garde": {
-  "kurz": "Solange der Träger beschädigt ist: +2 ATK.",
+  "kurz": "Solange der Träger beschädigt ist: +3 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_eldran_kronbanner": {
-  "kurz": "Träger +1 ATK und +1 DEF.",
+  "kurz": "Träger +2 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6791,27 +6791,27 @@
   "keywords": []
  },
  "dc_np_rothain_abloesungsdepot": {
-  "kurz": "Zugbeginn: ziehe 1 zusätzlich.",
+  "kurz": "Zugbeginn: ziehe 1 zusätzlich. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_np_rothain_stabszentrale_erbe": {
-  "kurz": "Zu Beginn deines Zuges: +1 AP.",
+  "kurz": "Zu Beginn deines Zuges: +1 AP. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_rothain_gebuendelte_front": {
-  "kurz": "Deine Fronteinheiten +1 ATK.",
+  "kurz": "Deine Fronteinheiten +1 ATK. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_rothain_schwerpunkt_setzen": {
-  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.",
-  "gekuerzt": false,
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 ATK bis Zugende. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_rothain_abloesung_vorziehen": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
+  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6821,28 +6821,28 @@
   "keywords": []
  },
  "dc_np_rothain_konzentrierter_stoss": {
-  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF dauerhaft.",
+  "kurz": "Eine eigene Fronteinheit: +3 ATK bis Zugende, +1 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_rothain_nachstoss": {
-  "kurz": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.",
+  "kurz": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen. Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_rothain_umschlag_flussrot": {
-  "kurz": "Ziehe 2 Karten.",
+  "kurz": "Ziehe 2 Karten. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_rothain_stabsbesprechung": {
-  "kurz": "Ziehe 2, dann wirf deine älteste Handkarte ab.",
+  "kurz": "Ziehe 2, dann wirf deine älteste Handkarte ab. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_rothain_gezieltes_feuer": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
-  "gekuerzt": false,
+  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_rothain_ewige_abloesung": {
@@ -6856,27 +6856,27 @@
   "keywords": []
  },
  "dc_np_rothain_erbsaebel": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +2 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_rothain_regimentsabzeichen": {
-  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.",
+  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_rothain_stabskarte_erbe": {
-  "kurz": "Erster Angriff des Trägers: +2 ATK.",
+  "kurz": "Erster Angriff des Trägers: +2 ATK. Träger +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_rothain_abloesungsgurt": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +1 ATK und +1 DEF. Solange der Träger beschädigt ist: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_rothain_schwerpunktoptik": {
-  "kurz": "Angriffe des Trägers: +1 Schaden.",
+  "kurz": "Angriffe des Trägers: +1 Schaden. Träger +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7053,7 +7053,7 @@
   "keywords": []
  },
  "dc_np_averon_kurzer_schlag": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7063,12 +7063,12 @@
   "keywords": []
  },
  "dc_np_averon_zeitgewinn": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
+  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 2 Karten.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_averon_initiative_ergreifen": {
-  "kurz": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.",
+  "kurz": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7083,7 +7083,7 @@
   "keywords": []
  },
  "dc_np_averon_schnelle_verlegung": {
-  "kurz": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft.",
+  "kurz": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +2 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7093,7 +7093,7 @@
   "keywords": []
  },
  "dc_np_averon_lokalisierter_grossschlag": {
-  "kurz": "Wähle eine Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 3 Schaden zu.",
+  "kurz": "Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 3 Schaden zu.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -7113,7 +7113,7 @@
   "keywords": []
  },
  "dc_np_averon_zielmarker": {
-  "kurz": "Angriffe des Trägers: +1 Schaden.",
+  "kurz": "Angriffe des Trägers: +2 Schaden.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7263,12 +7263,12 @@
   "keywords": []
  },
  "dc_np_orthea_messnetz": {
-  "kurz": "Zugbeginn: ziehe 1 zusätzlich.",
+  "kurz": "Zugbeginn: ziehe 1 zusätzlich. Deine Fronteinheiten +1 ATK.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_np_orthea_klinikverfahren": {
-  "kurz": "Jeder Schaden an deinen Fronteinheiten −1.",
+  "kurz": "Jeder Schaden an deinen Fronteinheiten −1. Deine Fronteinheiten +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7283,37 +7283,37 @@
   "keywords": []
  },
  "dc_np_orthea_einzelziel_salve": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
-  "gekuerzt": false,
+  "kurz": "Füge einer gegnerischen Fronteinheit 1 Schaden zu. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_orthea_gemessener_schlag": {
-  "kurz": "Wähle eine Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 3 Schaden zu.",
+  "kurz": "Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 3 Schaden zu.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_np_orthea_klarstellung": {
-  "kurz": "Ziehe 1 Karte.",
+  "kurz": "Ziehe 1 Karte. Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_orthea_nachmessen": {
-  "kurz": "Ziehe 2, dann wirf deine älteste Handkarte ab.",
+  "kurz": "Ziehe 1, dann wirf deine älteste Handkarte ab.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_orthea_zielkorrektur": {
-  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende. Heile 1 DEF an einer eigenen Fronteinheit.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_orthea_erkenntnisvorsprung": {
-  "kurz": "Ziehe 2 Karten.",
+  "kurz": "Ziehe 2 Karten. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_orthea_laborversorgung": {
-  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit. Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7323,37 +7323,37 @@
   "keywords": []
  },
  "dc_np_orthea_nachbesetzung_nach_mass": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
+  "kurz": "Deine nächste Einheit oder Unterstützung kostet 2 AP weniger (mind. 1). Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_orthea_optik_feinmessung": {
-  "kurz": "Angriffe des Trägers: +1 Schaden.",
+  "kurz": "Angriffe des Trägers: +1 Schaden. Träger +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_orthea_peilantenne": {
-  "kurz": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
+  "kurz": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 2 Karten.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_orthea_zielrechner_tragbar": {
-  "kurz": "Erster Angriff des Trägers: +2 ATK.",
+  "kurz": "Erster Angriff des Trägers: +2 ATK. Träger +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_orthea_laborpanzerung": {
-  "kurz": "Träger +2 DEF. Einmalig: erster verhinderbarer Treffer am Träger −1.",
+  "kurz": "Träger +1 ATK und +2 DEF. Einmalig: erster verhinderbarer Treffer am Träger −1.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_np_orthea_messgewehr": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +1 ATK. Erster Angriff des Trägers: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_orthea_feldlaborkoffer": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +1 ATK und +1 DEF. Erster Angriff des Trägers: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7504,12 +7504,12 @@
   "keywords": []
  },
  "dc_np_vesper_desinformationsnetz": {
-  "kurz": "Gegnerische Fronteinheiten −1 ATK.",
+  "kurz": "Gegnerische Fronteinheiten −1 ATK. Deine Fronteinheiten +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vesper_systemarchiv": {
-  "kurz": "Zugbeginn: ziehe 1 zusätzlich.",
+  "kurz": "Zugbeginn: ziehe 1 zusätzlich. Gegnerische Fronteinheiten −1 ATK.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -7524,13 +7524,13 @@
   "keywords": []
  },
  "dc_np_vesper_falsche_meldung": {
-  "kurz": "Ziehe 2, dann wirf deine älteste Handkarte ab.",
+  "kurz": "Ziehe 2, dann wirf deine älteste Handkarte ab. Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vesper_raum_schliessen": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
-  "gekuerzt": false,
+  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_vesper_enttarnung": {
@@ -7544,22 +7544,22 @@
   "keywords": []
  },
  "dc_np_vesper_schattenoperation": {
-  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "kurz": "Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vesper_systemzugriff": {
-  "kurz": "Ziehe 2 Karten.",
+  "kurz": "Ziehe 2 Karten. Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vesper_verdeckter_rabatt": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
-  "gekuerzt": false,
+  "kurz": "Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte. Heile 1 DEF an einer eigenen Fronteinheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_vesper_doppeltes_spiel": {
-  "kurz": "Wähle eine Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 1 Schaden zu.",
+  "kurz": "Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 1 Schaden zu.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -7569,34 +7569,34 @@
   "keywords": []
  },
  "dc_np_vesper_tarnanzug_velis": {
-  "kurz": "",
+  "kurz": "Erster Angriff des Trägers: +2 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
   ]
  },
  "dc_np_vesper_falsche_papiere": {
-  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte.",
+  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vesper_stoersender": {
-  "kurz": "Einmalig: erster verhinderbarer Treffer am Träger −2.",
+  "kurz": "Einmalig: erster verhinderbarer Treffer am Träger −2. Erster Angriff des Trägers: +1 ATK.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_np_vesper_schalldaempfer": {
-  "kurz": "Erster Angriff des Trägers: +2 ATK.",
+  "kurz": "Erster Angriff des Trägers: +1 ATK. Angriffe des Trägers: +1 Schaden.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vesper_systemausweis": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +1 ATK und +2 DEF. Erster Angriff des Trägers: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vesper_hinterhaltsmesser": {
-  "kurz": "Angriffe des Trägers: +1 Schaden.",
+  "kurz": "Angriffe des Trägers: +1 Schaden. Träger +2 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7730,7 +7730,7 @@
   ]
  },
  "dc_np_karsk_medizinisch_technische_kette": {
-  "kurz": "Jeder Schaden an deinen Fronteinheiten −1.",
+  "kurz": "Jeder Schaden an deinen Fronteinheiten −1. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7740,7 +7740,7 @@
   "keywords": []
  },
  "dc_np_karsk_implantatwerk": {
-  "kurz": "Zu Beginn deines Zuges: +1 AP.",
+  "kurz": "Zu Beginn deines Zuges: +1 AP. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7750,7 +7750,7 @@
   "keywords": []
  },
  "dc_np_karsk_wundverschluss": {
-  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "kurz": "Heile 1 DEF an einer eigenen Fronteinheit.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7765,7 +7765,7 @@
   "keywords": []
  },
  "dc_np_karsk_nervenboost": {
-  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7775,7 +7775,7 @@
   "keywords": []
  },
  "dc_np_karsk_leistungsprotokoll": {
-  "kurz": "Ziehe 1 Karte.",
+  "kurz": "Ziehe 1 Karte. Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7785,8 +7785,8 @@
   "keywords": []
  },
  "dc_np_karsk_nachlieferung_koerperteile": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
-  "gekuerzt": false,
+  "kurz": "Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1). Wähle einen Feind: aufdecken, gilt als beobachtet.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_karsk_der_eine_stoss": {
@@ -7800,12 +7800,12 @@
   "keywords": []
  },
  "dc_np_karsk_nervenverstaerker": {
-  "kurz": "Solange der Träger beschädigt ist: +2 ATK.",
+  "kurz": "Solange der Träger beschädigt ist: +2 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_karsk_filtermaske_karsk": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +2 DEF. Erster Angriff des Trägers: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7964,7 +7964,7 @@
   "keywords": []
  },
  "dc_np_caldris_ruhezone": {
-  "kurz": "Zugbeginn: ziehe 1 zusätzlich.",
+  "kurz": "Zugbeginn: ziehe 1 zusätzlich. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -7979,7 +7979,7 @@
   "keywords": []
  },
  "dc_np_caldris_verbandswechsel": {
-  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit. Ziehe 1 Karte.",
+  "kurz": "Heile 1 DEF an einer eigenen Fronteinheit. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -7994,7 +7994,7 @@
   "keywords": []
  },
  "dc_np_caldris_fuersorgemeldung": {
-  "kurz": "Ziehe 1 Karte.",
+  "kurz": "Ziehe 1 Karte. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8004,8 +8004,8 @@
   "keywords": []
  },
  "dc_np_caldris_schutzfeuer": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
-  "gekuerzt": false,
+  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_caldris_ruhe_vor_dem_schlag": {
@@ -8029,7 +8029,7 @@
   "keywords": []
  },
  "dc_np_caldris_verbandspaeckchen": {
-  "kurz": "Einmalig: erster verhinderbarer Treffer am Träger −2.",
+  "kurz": "Einmalig: erster verhinderbarer Treffer am Träger −3.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -8041,7 +8041,7 @@
   ]
  },
  "dc_np_caldris_ruheabzeichen": {
-  "kurz": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
+  "kurz": "Träger +1 ATK und +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8194,12 +8194,12 @@
   "keywords": []
  },
  "dc_np_theryn_ruf_zum_aufgebot": {
-  "kurz": "Zugbeginn: ziehe 1 zusätzlich.",
+  "kurz": "Zugbeginn: ziehe 1 zusätzlich. Jeder Schaden an deinen Fronteinheiten −1.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_np_theryn_banner_der_pflicht": {
-  "kurz": "Deine Fronteinheiten +1 ATK.",
+  "kurz": "Deine Fronteinheiten +1 ATK. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8209,37 +8209,37 @@
   "keywords": []
  },
  "dc_np_theryn_alle_sind_gerufen": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
-  "gekuerzt": false,
+  "kurz": "Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1). Füge einer gegnerischen Fronteinheit 1 Schaden zu.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_theryn_sturm_der_glaeubigen": {
-  "kurz": "Wähle einen eigenen Abschnitt: deine Infanterie dort +2 ATK bis Zugende.",
+  "kurz": "Wähle einen eigenen Abschnitt: deine Infanterie dort +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_theryn_luecke_fuellen": {
-  "kurz": "Ziehe 1 Karte.",
+  "kurz": "Ziehe 2 Karten.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_theryn_gebet_vor_der_schlacht": {
-  "kurz": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft.",
+  "kurz": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft. Heile 1 DEF an einer eigenen Fronteinheit.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_theryn_maertyrersegen": {
-  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "kurz": "Heile 1 DEF an einer eigenen Fronteinheit. Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_theryn_welle_binden": {
-  "kurz": "Wähle einen eigenen Abschnitt: deine Infanterie dort +1 DEF dauerhaft.",
+  "kurz": "Wähle einen eigenen Abschnitt: deine Infanterie dort +2 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_theryn_eifer": {
-  "kurz": "Eine eigene Fronteinheit: +3 ATK bis Zugende. Danach erleidet sie 1 Schaden.",
+  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF dauerhaft. Danach erleidet sie 1 Schaden.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8249,7 +8249,7 @@
   "keywords": []
  },
  "dc_np_theryn_der_eine_schlag": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 3 Schaden zu.",
+  "kurz": "Füge einer gegnerischen Fronteinheit 4 Schaden zu.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8259,34 +8259,34 @@
   "keywords": []
  },
  "dc_np_theryn_pilgerschild": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_theryn_glaubenszeichen": {
-  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte.",
+  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte. Angriffe des Trägers: +1 Schaden.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_theryn_bannerstange": {
-  "kurz": "Träger +1 ATK und +1 DEF.",
+  "kurz": "Träger +2 ATK und +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_theryn_reliquie": {
-  "kurz": "",
+  "kurz": "Wird der Träger zerstört, ziehst du 2 Karten.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
   ]
  },
  "dc_np_theryn_eiferklinge": {
-  "kurz": "Angriffe des Trägers: +1 Schaden.",
+  "kurz": "Angriffe des Trägers: +1 Schaden. Träger +1 ATK und +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_theryn_gebetsband": {
-  "kurz": "Solange der Träger beschädigt ist: +2 ATK.",
+  "kurz": "Solange der Träger beschädigt ist: +2 ATK. Angriffe des Trägers: +1 Schaden.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8430,7 +8430,7 @@
   "keywords": []
  },
  "dc_np_vael_ruestungswerk": {
-  "kurz": "Zu Beginn deines Zuges: +1 AP.",
+  "kurz": "Zu Beginn deines Zuges: +1 AP. Jeder Schaden an deinen Fronteinheiten −1.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8445,8 +8445,8 @@
   "keywords": []
  },
  "dc_np_vael_ersatz_ab_lager": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
-  "gekuerzt": false,
+  "kurz": "Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1). Abschnitt wählen: eigene Einheiten dort +1 DEF dauerhaft.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_vael_rollende_walze": {
@@ -8455,7 +8455,7 @@
   "keywords": []
  },
  "dc_np_vael_lieferschein_eingetroffen": {
-  "kurz": "Ziehe 2 Karten.",
+  "kurz": "Ziehe 2 Karten. Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8470,59 +8470,59 @@
   "keywords": []
  },
  "dc_np_vael_reparatur_im_feld": {
-  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "kurz": "Heile 1 DEF an einer eigenen Fronteinheit. Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vael_auftragsbuch": {
-  "kurz": "Ziehe 2, dann wirf deine älteste Handkarte ab.",
+  "kurz": "Ziehe 2, dann wirf deine älteste Handkarte ab. Heile 1 DEF an einer eigenen Fronteinheit.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vael_grosslieferung": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 2 AP weniger (mind. 1).",
+  "kurz": "Deine nächste Einheit oder Unterstützung kostet 3 AP weniger (mind. 1).",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vael_splitterhagel": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
-  "gekuerzt": false,
+  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_vael_industrielle_walze": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 4 Schaden zu. Ziehe 1 Karte.",
+  "kurz": "Füge einer gegnerischen Fronteinheit 5 Schaden zu. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vael_werkspanzerung": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +1 DEF. Angriffe des Trägers: +1 Schaden.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vael_schwere_munition": {
-  "kurz": "Angriffe des Trägers: +1 Schaden.",
+  "kurz": "Angriffe des Trägers: +1 Schaden. Träger +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vael_ersatzrohr": {
-  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.",
+  "kurz": "Wird der Träger zerstört, ziehst du 2 Karten. Träger +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vael_feuerleitcomputer": {
-  "kurz": "Erster Angriff des Trägers: +2 ATK.",
+  "kurz": "Erster Angriff des Trägers: +1 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_vael_reaktivpanzer": {
-  "kurz": "Träger +1 DEF.",
+  "kurz": "Träger +1 ATK und +1 DEF.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
   ]
  },
  "dc_np_vael_vertragsgewehr": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +1 DEF. Erster Angriff des Trägers: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8674,27 +8674,27 @@
   "keywords": []
  },
  "dc_np_merovan_wegdepot": {
-  "kurz": "Jeder Schaden an deinen Fronteinheiten −1.",
+  "kurz": "Jeder Schaden an deinen Fronteinheiten −1. Zu Beginn deines Zuges: +1 AP.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_postenkette": {
-  "kurz": "Gegnerische Fronteinheiten −1 ATK.",
+  "kurz": "Gegnerische Fronteinheiten −1 ATK. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_umgruppieren": {
-  "kurz": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft.",
+  "kurz": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_keilhalt": {
-  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft.",
+  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_posten_halten": {
-  "kurz": "Eine eigene Fronteinheit: +2 DEF dauerhaft.",
+  "kurz": "Eine eigene Fronteinheit: +3 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8704,64 +8704,64 @@
   "keywords": []
  },
  "dc_np_merovan_wegsperre": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "kurz": "Füge einer gegnerischen Fronteinheit 1 Schaden zu. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_garnison_versorgen": {
-  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_schieben": {
-  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.",
+  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_wegpunkt_melden": {
-  "kurz": "Ziehe 1 Karte.",
+  "kurz": "Ziehe 1 Karte. Füge einer gegnerischen Fronteinheit 1 Schaden zu.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_kolonne_nachziehen": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
+  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Heile 1 DEF an einer eigenen Fronteinheit.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_halt_um_jeden_preis": {
-  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +3 DEF dauerhaft.",
+  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +4 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_postenhelm": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +2 DEF. Solange der Träger beschädigt ist: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_marschgepaeck": {
-  "kurz": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
+  "kurz": "Träger +2 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_haltespaten": {
-  "kurz": "",
+  "kurz": "Angriffe des Trägers: +1 Schaden.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
   ]
  },
  "dc_np_merovan_wegkarte": {
-  "kurz": "Erster Angriff des Trägers: +2 ATK.",
+  "kurz": "Erster Angriff des Trägers: +2 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_garnisonsgewehr": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +1 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_merovan_kolonnenpanzerung": {
-  "kurz": "Träger +2 DEF. Einmalig: erster verhinderbarer Treffer am Träger −1.",
+  "kurz": "Träger +1 ATK und +1 DEF. Einmalig: erster verhinderbarer Treffer am Träger −1.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -8911,12 +8911,12 @@
   ]
  },
  "dc_np_lyr_talbund": {
-  "kurz": "Gegnerische Fronteinheiten −1 ATK.",
+  "kurz": "Gegnerische Fronteinheiten −1 ATK. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_lyr_engen_und_paesse": {
-  "kurz": "Jeder Schaden an deinen Fronteinheiten −1.",
+  "kurz": "Jeder Schaden an deinen Fronteinheiten −1. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8926,12 +8926,12 @@
   "keywords": []
  },
  "dc_np_lyr_aus_der_deckung": {
-  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_lyr_nadeloehr": {
-  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft.",
+  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -8941,33 +8941,33 @@
   "keywords": []
  },
  "dc_np_lyr_geroellhagel": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
-  "gekuerzt": false,
+  "kurz": "Füge einer gegnerischen Fronteinheit 3 Schaden zu. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_lyr_talruf_hoeren": {
-  "kurz": "Ziehe 1 Karte.",
+  "kurz": "Ziehe 1 Karte. Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_lyr_zerstreute_posten": {
-  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.",
+  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_lyr_aus_dem_hinterhalt": {
-  "kurz": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.",
+  "kurz": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen. Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_lyr_bergquelle": {
-  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_lyr_pass_entdeckt": {
-  "kurz": "Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
-  "gekuerzt": false,
+  "kurz": "Wähle einen Feind: aufdecken, gilt als beobachtet. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_lyr_lawine": {
@@ -8976,29 +8976,29 @@
   "keywords": []
  },
  "dc_np_lyr_bergmantel": {
-  "kurz": "",
+  "kurz": "Erster Angriff des Trägers: +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
   ]
  },
  "dc_np_lyr_steinschleuder": {
-  "kurz": "Angriffe des Trägers: +1 Schaden.",
+  "kurz": "Angriffe des Trägers: +1 Schaden. Erster Angriff des Trägers: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_lyr_talabzeichen": {
-  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte.",
+  "kurz": "Wird der Träger zerstört, ziehst du 2 Karten.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_lyr_kletterausruestung": {
-  "kurz": "Erster Angriff des Trägers: +2 ATK.",
+  "kurz": "Erster Angriff des Trägers: +3 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_lyr_eidring": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +2 DEF. Angriffe des Trägers: +1 Schaden.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9135,8 +9135,8 @@
   ]
  },
  "dc_np_ossaria_wall_der_gefallenen": {
-  "kurz": "Jeder Schaden an deinen Fronteinheiten −1. Gegnerische Fronteinheiten −1 ATK.",
-  "gekuerzt": false,
+  "kurz": "Jeder Schaden an deinen Fronteinheiten −1. Gegnerische Fronteinheiten −1 ATK. Zugbeginn: heile 1 eigene Einheit.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_ossaria_ahnenhalle": {
@@ -9155,17 +9155,17 @@
   "keywords": []
  },
  "dc_np_ossaria_verlust_wird_deckung": {
-  "kurz": "Eine eigene Fronteinheit: +2 DEF dauerhaft.",
+  "kurz": "Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_ossaria_totenehre": {
-  "kurz": "Ziehe 1 Karte.",
+  "kurz": "Ziehe 1 Karte. Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_ossaria_teurer_meter": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "kurz": "Füge einer gegnerischen Fronteinheit 1 Schaden zu.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9175,22 +9175,22 @@
   "keywords": []
  },
  "dc_np_ossaria_wall_verstaerken": {
-  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft.",
-  "gekuerzt": false,
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +2 DEF dauerhaft. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_ossaria_ahnen_rufen": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
+  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 2 Karten.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_ossaria_prozession_der_namen": {
-  "kurz": "Ziehe 3, dann wirf deine älteste Handkarte ab.",
-  "gekuerzt": false,
+  "kurz": "Ziehe 3, dann wirf deine älteste Handkarte ab. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_ossaria_gepanzerter_vorstoss": {
-  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.",
+  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9200,12 +9200,12 @@
   "keywords": []
  },
  "dc_np_ossaria_namensplatte": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +1 ATK und +1 DEF. Angriffe des Trägers: +1 Schaden.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_ossaria_totenschild": {
-  "kurz": "",
+  "kurz": "Solange der Träger beschädigt ist: +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -9217,17 +9217,17 @@
   "keywords": []
  },
  "dc_np_ossaria_gedenkmarke": {
-  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.",
+  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 ATK und +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_ossaria_plattenschutz": {
-  "kurz": "Einmalig: erster verhinderbarer Treffer am Träger −2.",
+  "kurz": "Einmalig: erster verhinderbarer Treffer am Träger −2. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_np_ossaria_grabklinge": {
-  "kurz": "Solange der Träger beschädigt ist: +2 ATK.",
+  "kurz": "Solange der Träger beschädigt ist: +2 ATK. Erster Angriff des Trägers: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9378,17 +9378,17 @@
   "keywords": []
  },
  "dc_np_namar_speicher_am_hafen": {
-  "kurz": "Zugbeginn: ziehe 1 zusätzlich.",
+  "kurz": "Zugbeginn: ziehe 1 zusätzlich. Abschnitt wählen: eigene Einheiten dort +1 ATK.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_np_namar_hafenkontor": {
-  "kurz": "Zu Beginn deines Zuges: +1 AP.",
+  "kurz": "Zu Beginn deines Zuges: +1 AP. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_namar_aus_vollen_lagern": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
+  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9398,7 +9398,7 @@
   "keywords": []
  },
  "dc_np_namar_lieferung_eingetroffen": {
-  "kurz": "Ziehe 2 Karten.",
+  "kurz": "Ziehe 3 Karten.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9408,18 +9408,18 @@
   "keywords": []
  },
  "dc_np_namar_kai_verteidigen": {
-  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.",
-  "gekuerzt": false,
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF dauerhaft. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_namar_nachschub": {
-  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit. Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_namar_hafenfeuer": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
-  "gekuerzt": false,
+  "kurz": "Füge einer gegnerischen Fronteinheit 1 Schaden zu. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_namar_ganze_schiffsladung": {
@@ -9438,12 +9438,12 @@
   "keywords": []
  },
  "dc_np_namar_hafenhelm": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +1 ATK und +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_namar_schmuggelware": {
-  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte.",
+  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte. Erster Angriff des Trägers: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9455,12 +9455,12 @@
   ]
  },
  "dc_np_namar_lieferwaffe": {
-  "kurz": "Träger +1 ATK und +1 DEF.",
+  "kurz": "Träger +2 ATK und +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_namar_signalpistole": {
-  "kurz": "Erster Angriff des Trägers: +2 ATK.",
+  "kurz": "Erster Angriff des Trägers: +2 ATK. Angriffe des Trägers: +1 Schaden.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9618,17 +9618,17 @@
   ]
  },
  "dc_np_sahr_gilde_der_routen": {
-  "kurz": "Zu Beginn deines Zuges: +1 AP.",
+  "kurz": "Zu Beginn deines Zuges: +1 AP. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_sahr_routennetz": {
-  "kurz": "Zugbeginn: ziehe 1 zusätzlich.",
+  "kurz": "Zugbeginn: ziehe 1 zusätzlich. Abschnitt wählen: eigene Einheiten dort +1 DEF.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_np_sahr_flusssperre": {
-  "kurz": "Gegnerische Fronteinheiten −1 ATK.",
+  "kurz": "Gegnerische Fronteinheiten −1 ATK. Zu Beginn deines Zuges: +1 AP.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9638,8 +9638,8 @@
   "keywords": []
  },
  "dc_np_sahr_linie_binden": {
-  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.",
-  "gekuerzt": false,
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 DEF dauerhaft. Abschnitt wählen: eigene Einheiten dort +1 ATK bis Zugende.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_sahr_stoss_von_der_seite": {
@@ -9648,13 +9648,13 @@
   "keywords": []
  },
  "dc_np_sahr_neue_route": {
-  "kurz": "Ziehe 1 Karte.",
+  "kurz": "Ziehe 1 Karte. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_sahr_stroemung_nutzen": {
-  "kurz": "Ziehe 2, dann wirf deine älteste Handkarte ab.",
-  "gekuerzt": false,
+  "kurz": "Ziehe 2, dann wirf deine älteste Handkarte ab. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_sahr_wegschnitt": {
@@ -9663,18 +9663,18 @@
   "keywords": []
  },
  "dc_np_sahr_fluss_ueberqueren": {
-  "kurz": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.",
-  "gekuerzt": false,
+  "kurz": "Abschnitt wählen: eigene Einheiten dort +1 ATK bis Zugende. Abschnitt wählen: eigene Einheiten dort +1 DEF dauerhaft.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_sahr_uferversorgung": {
-  "kurz": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "kurz": "Heile 1 DEF an einer eigenen Fronteinheit. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_sahr_handelsrabatt": {
-  "kurz": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
-  "gekuerzt": false,
+  "kurz": "Nächste Einheit/Unterstützung kostet 1 AP weniger. Ziehe 1 Karte. Wähle einen Feind: aufdecken, gilt als beobachtet.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_sahr_die_grosse_umgehung": {
@@ -9683,19 +9683,19 @@
   "keywords": []
  },
  "dc_np_sahr_flussmantel": {
-  "kurz": "",
+  "kurz": "Träger +2 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
   ]
  },
  "dc_np_sahr_routenkarte": {
-  "kurz": "Erster Angriff des Trägers: +2 ATK.",
+  "kurz": "Erster Angriff des Trägers: +2 ATK. Solange der Träger beschädigt ist: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_sahr_leichtes_gepaeck": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Träger +1 ATK. Angriffe des Trägers: +1 Schaden.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9705,12 +9705,12 @@
   "keywords": []
  },
  "dc_np_sahr_flankenklinge": {
-  "kurz": "Angriffe des Trägers: +1 Schaden.",
+  "kurz": "Angriffe des Trägers: +1 Schaden. Solange der Träger beschädigt ist: +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_sahr_ruderpanzer": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +2 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9842,7 +9842,7 @@
   "keywords": []
  },
  "dc_np_dargan_schuldregister": {
-  "kurz": "Zugbeginn: ziehe 1 zusätzlich.",
+  "kurz": "Zugbeginn: ziehe 1 zusätzlich. Abschnitt wählen: eigene Einheiten dort +1 DEF.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -9857,32 +9857,32 @@
   "keywords": []
  },
  "dc_np_dargan_zeile_setzen": {
-  "kurz": "Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
+  "kurz": "Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Ziehe 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_dargan_markierter_schlag": {
-  "kurz": "Wähle eine Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "kurz": "Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
   "gekuerzt": true,
   "keywords": []
  },
  "dc_np_dargan_zeile_schliessen": {
-  "kurz": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.",
-  "gekuerzt": false,
+  "kurz": "Eine eigene Einheit darf in diesem Zug erneut angreifen. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_dargan_tilgung": {
-  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
-  "gekuerzt": false,
+  "kurz": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_np_dargan_aufruf_der_pflicht": {
-  "kurz": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "kurz": "Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_dargan_registerpruefung": {
-  "kurz": "Ziehe 1 Karte.",
+  "kurz": "Ziehe 1 Karte. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9902,7 +9902,7 @@
   "keywords": []
  },
  "dc_np_dargan_endabrechnung": {
-  "kurz": "Wähle eine Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 4 Schaden zu.",
+  "kurz": "Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 4 Schaden zu.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -9917,12 +9917,12 @@
   "keywords": []
  },
  "dc_np_dargan_vollstreckungsklinge": {
-  "kurz": "Angriffe des Trägers: +1 Schaden.",
+  "kurz": "Angriffe des Trägers: +1 Schaden. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": []
  },
  "dc_np_dargan_registerpanzer": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Träger +1 ATK und +2 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -9932,7 +9932,7 @@
   "keywords": []
  },
  "dc_np_dargan_haftungsschild": {
-  "kurz": "",
+  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"

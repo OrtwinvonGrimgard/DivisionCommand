@@ -196,6 +196,14 @@ const SUP = {
    * Unterstützung: alle eigenen Fronteinheiten haben +1 ATK.
    */
   fatk: () => ({ fx: [{ code: 'AURA_FRONT_ATK', param: { atk: 1 } }], t: 'Deine Fronteinheiten +1 ATK.', r: ['Solange diese Unterstützung liegt, haben alle deine Fronteinheiten +1 ATK.'] }),
+  /**
+   * t268 – Unterstützung: zu Beginn des eigenen Zuges heilt eine beschädigte eigene Einheit n DEF (CM turnheal, wie im Starterset).
+   */
+  theal: (n) => ({ fx: [{ code: 'CM', param: { k: 'turnheal', n: +n } }], t: 'Zu Beginn deines Zuges: heile ' + n + ' DEF an einer beschädigten eigenen Einheit.', r: ['Zu Beginn jedes deiner Züge heilt eine beschädigte eigene Fronteinheit bis zu ' + n + ' DEF (höchstens bis zur maximalen DEF), solange diese Unterstützung liegt.'] }),
+  /**
+   * t268 – Unterstützung: beim Ausspielen einen eigenen Abschnitt wählen; eigene Einheiten dort +a ATK/+d DEF (CM aura, wie im Starterset).
+   */
+  sdef: (a, d) => { const s = [+a ? '+' + a + ' ATK' : '', +d ? '+' + d + ' DEF' : ''].filter(Boolean).join(' und '); return { fx: [{ code: 'CM', param: { k: 'aura', scope: 'section', atk: +a, def: +d } }], t: 'Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort ' + s + '.', r: ['Beim Ausspielen wählst du einen eigenen Frontabschnitt. Solange diese Unterstützung liegt, haben deine Einheiten in diesem Abschnitt ' + s + '.'] }; },
 };
 
 /**

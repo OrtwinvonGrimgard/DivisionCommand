@@ -158,7 +158,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "name": "Zielmesser",
     "ap": 2,
     "atk": 1,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -653,7 +653,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärer",
     "name": "Schnitt-Melder",
     "ap": 2,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -889,7 +889,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Doppelversion",
     "ap": 2,
-    "atk": 2,
+    "atk": 1,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -923,9 +923,9 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "typ": "Einheit",
     "klasse": "Aufklärung",
     "name": "Stillrain-Läufer",
-    "ap": 1,
-    "atk": 1,
-    "def": 1,
+    "ap": 2,
+    "atk": 2,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -957,7 +957,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "name": "Abschriftleser",
     "ap": 2,
     "atk": 2,
-    "def": 2,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1027,7 +1027,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "name": "Gegenrechnung",
     "ap": 2,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1155,8 +1155,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Grenzlese",
     "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "atk": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1386,9 +1386,9 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "status": "live",
     "typ": "Einheit",
     "klasse": "Aufklärung",
-    "name": "Zollspäher",
+    "name": "Karawanenspäher",
     "ap": 2,
-    "atk": 2,
+    "atk": 3,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1487,8 +1487,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Beobachtungsposten",
     "ap": 2,
-    "atk": 1,
-    "def": 2,
+    "atk": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1520,7 +1520,7 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "name": "Feldmesser",
     "ap": 2,
     "atk": 2,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -2027,8 +2027,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Linsenläufer",
     "ap": 2,
-    "atk": 1,
-    "def": 2,
+    "atk": 2,
+    "def": 1,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -2188,8 +2188,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Lokalisierer",
     "ap": 2,
-    "atk": 1,
-    "def": 2,
+    "atk": 2,
+    "def": 1,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -2223,8 +2223,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Methodenspäher",
     "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "atk": 1,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"

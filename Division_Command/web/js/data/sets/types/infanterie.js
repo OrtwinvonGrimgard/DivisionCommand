@@ -524,8 +524,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Lieferkordon",
     "ap": 3,
-    "atk": 2,
-    "def": 4,
+    "atk": 3,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -658,7 +658,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "status": "live",
     "typ": "Einheit",
     "klasse": "Infanterie",
-    "name": "Erste Welle",
+    "name": "Speerspitzenwelle",
     "ap": 1,
     "atk": 2,
     "def": 1,
@@ -693,7 +693,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "status": "live",
     "typ": "Einheit",
     "klasse": "Infanterie",
-    "name": "Nachrücker",
+    "name": "Nachrückzug",
     "ap": 2,
     "atk": 3,
     "def": 2,
@@ -728,7 +728,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "status": "live",
     "typ": "Einheit",
     "klasse": "Infanterie",
-    "name": "Zweite Welle",
+    "name": "Folgewelle",
     "ap": 2,
     "atk": 3,
     "def": 3,
@@ -765,7 +765,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "status": "live",
     "typ": "Einheit",
     "klasse": "Infanterie",
-    "name": "Stoßkolonne",
+    "name": "Sturmkolonne",
     "ap": 3,
     "atk": 4,
     "def": 2,
@@ -908,7 +908,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Treuekompanie",
     "ap": 2,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -945,7 +945,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Ablösungskette",
     "ap": 2,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1015,7 +1015,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Schwerpunktlinie",
     "ap": 3,
-    "atk": 4,
+    "atk": 3,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1047,7 +1047,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Stoßgruppe",
     "ap": 2,
-    "atk": 3,
+    "atk": 1,
     "def": 1,
     "verdeckt_ok": false,
     "tags": [
@@ -1075,7 +1075,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Maßtrupp",
     "ap": 1,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1113,7 +1113,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Schnittstelle",
     "ap": 2,
     "atk": 1,
-    "def": 2,
+    "def": 1,
     "verdeckt_ok": true,
     "tags": [
       "einheit",
@@ -1147,7 +1147,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Keilspitze",
     "ap": 2,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1179,7 +1179,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Schwere Stoßgruppe",
     "ap": 3,
-    "atk": 6,
+    "atk": 5,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1206,7 +1206,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Maßeinheit",
     "ap": 3,
-    "atk": 3,
+    "atk": 1,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -1312,7 +1312,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Nordfall-Posten",
     "ap": 2,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -1446,7 +1446,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Frontwache",
     "ap": 1,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1513,7 +1513,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Siegelposten",
     "ap": 2,
-    "atk": 2,
+    "atk": 1,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -1547,7 +1547,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Grenzspieler",
     "ap": 2,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1822,8 +1822,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Stillschuld-Zug",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -2175,7 +2175,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Südmark-Fuß",
     "ap": 2,
-    "atk": 3,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -2379,7 +2379,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Hauptkolonne",
     "ap": 3,
-    "atk": 3,
+    "atk": 2,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -3058,7 +3058,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Ruheposten",
     "ap": 1,
     "atk": 1,
-    "def": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -3229,7 +3229,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "name": "Schildreihe",
     "ap": 2,
     "atk": 2,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -3470,7 +3470,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Probenzug",
     "ap": 1,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -3537,7 +3537,7 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Unterschriftswache",
     "ap": 2,
-    "atk": 2,
+    "atk": 1,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -3640,8 +3640,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Linieninfanterie",
     "ap": 2,
-    "atk": 2,
-    "def": 4,
+    "atk": 1,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"

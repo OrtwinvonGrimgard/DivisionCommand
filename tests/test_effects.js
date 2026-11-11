@@ -147,7 +147,7 @@ function main() {
   const mass = findCard(win, (c) => c.typ === 'Soforteinsatz' && (c.effects || []).some((e) => e.code === 'MASS_DAMAGE'));
   const drawCard = findCard(win, (c) => c.typ === 'Soforteinsatz' && c.set === 'set_nations' && (c.effects || []).some((e) => e.code === 'DRAW' && e.param && e.param.value >= 1));
   const buffSo = findCard(win, (c) => c.typ === 'Soforteinsatz' && c.set === 'set_nations' && (c.effects || []).some((e) => e.code === 'BUFF' && e.param && e.param.atk > 0));
-  const standarte = findCard(win, (c) => c.set === 'set_nations' && c.name === 'Standarte' && c.typ === 'Ausrüstung');
+  const standarte = findCard(win, (c) => c.id === 'dc_b_standarte_131'); // t268: umbenannt in „Feldstandarte“
 
   console.log('samples', {
     jacke: jacke && jacke.id,
@@ -878,8 +878,11 @@ function main() {
     assert(v.fixedIds.filter((x) => x === jaeger.id).length <= jLim, 'jaeger within limit');
     if (jLim >= 2) assert(v.ok, 'jaeger 2x ok under bronze default');
     // name collision: two different gold IDs same name would fail — Punktfeuer was fixed by rename
-    const pf = win.DC_CATALOG.cards.filter((c) => c.name === 'Punktfeuer' && c.typ !== 'Doktrin');
-    assert(pf.length === 1, 'Punktfeuer unique among deck cards after rename got ' + pf.length);
+    // t268: alle Namen von Deckkarten und Doktrinen eindeutig (Kopienlimit zählt nach Namen)
+    const seenNames = {};
+    win.DC_CATALOG.cards.filter((c) => c.typ !== 'Token').forEach((c) => { seenNames[c.name] = (seenNames[c.name] || 0) + 1; });
+    const dupNames = Object.keys(seenNames).filter((n) => seenNames[n] > 1);
+    assert(dupNames.length === 0, 'card names unique, duplicates: ' + dupNames.join(', '));
     const pv = win.DC_CATALOG.cards.find((c) => c.id === 'dc_b_punktfeuer_479');
     assert(pv && pv.name === 'Punktvisier', 'equip renamed Punktvisier');
     // nation decks all valid

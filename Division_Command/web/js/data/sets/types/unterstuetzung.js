@@ -834,14 +834,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Schichtplan",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
@@ -849,6 +849,13 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "discount",
           "delta": -1,
           "once": true
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
         }
       }
     ],
@@ -914,13 +921,13 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "text": "Zu Beginn deines Zuges: heile 2 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "turnheal",
-          "n": 1
+          "n": 2
         }
       }
     ],
@@ -945,14 +952,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "def": 1
+          "def": 2
         }
       }
     ],
@@ -1036,20 +1043,20 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Quartalsende",
-    "ap": 4,
+    "ap": 5,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "text": "Zu Beginn deines Zuges: heile 2 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "turnheal",
-          "n": 1
+          "n": 2
         }
       }
     ],
@@ -1066,7 +1073,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "status": "live",
     "typ": "Unterstützung",
     "klasse": "",
-    "name": "Sammelpunkt",
+    "name": "Sammelplatz",
     "ap": 2,
     "atk": null,
     "def": null,
@@ -1097,7 +1104,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "status": "live",
     "typ": "Unterstützung",
     "klasse": "",
-    "name": "Feldprediger",
+    "name": "Lagerprediger",
     "ap": 2,
     "atk": null,
     "def": null,
@@ -1131,7 +1138,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "status": "live",
     "typ": "Unterstützung",
     "klasse": "",
-    "name": "Glaubensbanner",
+    "name": "Glaubensfahne",
     "ap": 3,
     "atk": null,
     "def": null,
@@ -1162,14 +1169,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "",
     "name": "Zentralratsplan",
-    "ap": 2,
+    "ap": 3,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
@@ -1179,6 +1186,13 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "do": "draw",
           "n": 1,
           "when": "played:Einheit"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
         }
       }
     ],
@@ -1229,21 +1243,21 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "",
     "name": "Leises Nein",
-    "ap": 3,
+    "ap": 4,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "def": 1
+          "def": 2
         }
       }
     ],
@@ -1261,14 +1275,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "",
     "name": "Ritusnennung",
-    "ap": 2,
+    "ap": 3,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug, wenn eine andere eigene Einheit zerstört wird: ziehe 1 Karte.",
+    "text": "Einmal pro Zug, wenn eine andere eigene Einheit zerstört wird: ziehe 2 Karten.",
     "effects": [
       {
         "code": "CM",
@@ -1276,7 +1290,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "trigger",
           "on": "own_destroyed",
           "do": "draw",
-          "n": 1
+          "n": 2
         }
       }
     ],
@@ -1465,21 +1479,21 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "",
     "name": "Schwerpunktkarte",
-    "ap": 3,
+    "ap": 4,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 1
+          "atk": 2
         }
       }
     ],
@@ -1754,14 +1768,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "",
     "name": "Leistungsboard",
-    "ap": 2,
+    "ap": 3,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "text": "Einmal pro Zug: ziehe 2 Karten, sobald du in diesem Zug eine Einheit gespielt hast.",
     "effects": [
       {
         "code": "CM",
@@ -1769,7 +1783,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "trigger",
           "on": "played",
           "do": "draw",
-          "n": 1,
+          "n": 2,
           "when": "played:Einheit"
         }
       }
@@ -2106,21 +2120,21 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Lage Offen Desk",
-    "ap": 3,
+    "ap": 4,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK, wenn die Einheit seit deinem letzten Zug nicht versetzt wurde.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK, wenn die Einheit seit deinem letzten Zug nicht versetzt wurde.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 1,
+          "atk": 2,
           "when": "still"
         }
       }
@@ -2180,22 +2194,22 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Westhaven-Lager",
-    "ap": 2,
+    "ap": 4,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +2 DEF.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 0,
-          "def": 1
+          "atk": 1,
+          "def": 2
         }
       }
     ],
@@ -2213,14 +2227,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Lydon-Werk",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
@@ -2230,6 +2244,13 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "do": "draw",
           "n": 1,
           "when": "played:Soforteinsatz"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
         }
       }
     ],
@@ -2346,14 +2367,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Siegelstadt",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "text": "Einmal pro Zug: ziehe 2 Karten, sobald du in diesem Zug eine Einheit gespielt hast.",
     "effects": [
       {
         "code": "CM",
@@ -2361,7 +2382,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "trigger",
           "on": "played",
           "do": "draw",
-          "n": 1,
+          "n": 2,
           "when": "played:Einheit"
         }
       }
@@ -2503,15 +2524,15 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 1,
-          "def": 1
+          "atk": 2,
+          "def": 0
         }
       },
       {
@@ -2571,14 +2592,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Hinterraum",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
     "effects": [
       {
         "code": "CM",
@@ -2586,7 +2607,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "aura",
           "scope": "section",
           "atk": 0,
-          "def": 1,
+          "def": 2,
           "when": "pair"
         }
       }
@@ -2673,14 +2694,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Vorlesehof",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
@@ -2690,6 +2711,13 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "do": "draw",
           "n": 1,
           "when": "played:Einheit"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
         }
       }
     ],
@@ -2889,14 +2917,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Namenhof",
-    "ap": 2,
+    "ap": 4,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
@@ -2904,6 +2932,13 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "discount",
           "delta": -1,
           "once": true
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
         }
       }
     ],
@@ -3001,22 +3036,29 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Parlamentsgasse",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 0,
-          "def": 1
+          "atk": 1,
+          "def": 0
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
         }
       }
     ],
@@ -3141,14 +3183,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Kronland-Hof",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast.",
+    "text": "Einmal pro Zug: ziehe 2 Karten, sobald du in diesem Zug einen Soforteinsatz gespielt hast.",
     "effects": [
       {
         "code": "CM",
@@ -3156,7 +3198,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "trigger",
           "on": "played",
           "do": "draw",
-          "n": 1,
+          "n": 2,
           "when": "played:Soforteinsatz"
         }
       }
@@ -3207,14 +3249,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Lichthofen",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
@@ -3222,7 +3264,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "aura",
           "scope": "section",
           "atk": 0,
-          "def": 1
+          "def": 2
         }
       },
       {
@@ -3311,21 +3353,21 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Verbindungsstraße",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 1,
+          "atk": 2,
           "def": 1
         }
       },
@@ -3393,14 +3435,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 1
+          "atk": 2
         }
       }
     ],
@@ -3418,22 +3460,22 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Lizenzhof",
-    "ap": 2,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 0,
-          "def": 1
+          "atk": 1,
+          "def": 0
         }
       },
       {
@@ -3465,15 +3507,15 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 1,
-          "def": 1
+          "atk": 0,
+          "def": 2
         }
       },
       {
@@ -3499,7 +3541,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Warteblatt",
-    "ap": 2,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -3598,14 +3640,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Vorratshalle",
-    "ap": 1,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
@@ -3613,6 +3655,13 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "discount",
           "delta": -1,
           "once": true
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
         }
       }
     ],
@@ -3637,14 +3686,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 0,
+          "atk": 1,
           "def": 1
         }
       }
@@ -3663,21 +3712,22 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Vertragsnetz",
-    "ap": 3,
+    "ap": 4,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 1
+          "atk": 1,
+          "def": 1
         }
       }
     ],
@@ -3702,15 +3752,15 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 1,
-          "def": 1
+          "atk": 2,
+          "def": 0
         }
       },
       {
@@ -3809,7 +3859,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "text": "Einmal pro Zug: ziehe 2 Karten, sobald du in diesem Zug eine Einheit gespielt hast.",
     "effects": [
       {
         "code": "CM",
@@ -3817,7 +3867,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "trigger",
           "on": "played",
           "do": "draw",
-          "n": 1,
+          "n": 2,
           "when": "played:Einheit"
         }
       }
@@ -4079,14 +4129,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Lagerordnung",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
@@ -4096,6 +4146,13 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "atk": 0,
           "def": 1,
           "when": "pair"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
         }
       }
     ],
@@ -4278,15 +4335,15 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "status": "live",
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
-    "name": "Nachschubader",
-    "ap": 3,
+    "name": "Nachschubstrang",
+    "ap": 5,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "text": "Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
@@ -4294,6 +4351,13 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "discount",
           "delta": -1,
           "once": true
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
         }
       }
     ],
@@ -4311,7 +4375,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Volle Front-Lager",
-    "ap": 3,
+    "ap": 4,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -4377,20 +4441,20 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Solkai-Werft",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt. Zu Beginn deines Zuges: heile 1 an einer beschädigten eigenen Einheit dort.",
+    "text": "Wähle beim Ausspielen einen Abschnitt. Zu Beginn deines Zuges: heile 2 an einer beschädigten eigenen Einheit dort.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "turnheal",
-          "n": 1,
+          "n": 2,
           "scope": "section"
         }
       }
@@ -4606,14 +4670,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Lesehof",
-    "ap": 3,
+    "ap": 4,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast.",
+    "text": "Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
@@ -4623,6 +4687,13 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "do": "draw",
           "n": 1,
           "when": "played:Einheit"
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
         }
       }
     ],
@@ -4674,14 +4745,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Eidkopie",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF.",
     "effects": [
       {
         "code": "CM",
@@ -4689,7 +4760,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "aura",
           "scope": "section",
           "atk": 0,
-          "def": 1
+          "def": 2
         }
       }
     ],
@@ -4707,21 +4778,22 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Nachbarhilfe",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "def": 1
+          "def": 1,
+          "atk": 1
         }
       }
     ],
@@ -4805,21 +4877,29 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Feldbäckerei",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "def": 1
+          "def": 0,
+          "atk": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
+          "n": 1
         }
       }
     ],
@@ -5046,7 +5126,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Vollständige Ruhe",
-    "ap": 4,
+    "ap": 5,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -5170,21 +5250,21 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Namensliste",
-    "ap": 3,
+    "ap": 4,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "atk": 1
+          "atk": 2
         }
       }
     ],
@@ -5300,21 +5380,22 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Werkvertrag",
-    "ap": 1,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
+    "text": "Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +2 DEF.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "aura",
           "scope": "section",
-          "def": 1
+          "def": 2,
+          "atk": 1
         }
       }
     ],
@@ -5332,14 +5413,14 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Totenwall",
-    "ap": 4,
+    "ap": 5,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Einmal pro Zug, wenn eine eigene Einheit zerstört wird: ziehe 1 Karte.",
+    "text": "Einmal pro Zug, wenn eine eigene Einheit zerstört wird: ziehe 2 Karten.",
     "effects": [
       {
         "code": "CM",
@@ -5347,7 +5428,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
           "k": "trigger",
           "on": "own_destroyed",
           "do": "draw",
-          "n": 1
+          "n": 2
         }
       }
     ],
@@ -5365,21 +5446,21 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Laborzelt",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.",
+    "text": "Zu Beginn deines Zuges: markiere 2 Feind als beobachtet.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "turn",
           "do": "observe",
-          "n": 1
+          "n": 2
         }
       }
     ],
@@ -5430,20 +5511,20 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Saal der Unterschrift",
-    "ap": 3,
+    "ap": 4,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "text": "Zu Beginn deines Zuges: heile 2 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "turnheal",
-          "n": 1
+          "n": 2
         }
       }
     ],
@@ -5492,20 +5573,27 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Methodenblatt",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Zu Beginn deines Zuges: markiere 1 Feind als beobachtet.",
+    "text": "Zu Beginn deines Zuges: markiere 1 Feind als beobachtet. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "turn",
           "do": "observe",
+          "n": 1
+        }
+      },
+      {
+        "code": "CM",
+        "param": {
+          "k": "turnheal",
           "n": 1
         }
       }
@@ -5531,13 +5619,13 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "tags": [
       "unterstuetzung"
     ],
-    "text": "Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
+    "text": "Zu Beginn deines Zuges: heile 2 DEF an einer beschädigten eigenen Einheit.",
     "effects": [
       {
         "code": "CM",
         "param": {
           "k": "turnheal",
-          "n": 1
+          "n": 2
         }
       }
     ],
@@ -5587,7 +5675,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "Unterstützung",
     "name": "Probennetz",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,

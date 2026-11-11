@@ -752,7 +752,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Schwerpunktfeuer",
     "ap": 4,
-    "atk": 4,
+    "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -793,7 +793,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Glockenstellung",
     "ap": 3,
     "atk": 2,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -934,7 +934,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Silberstern-Rohr",
     "ap": 4,
-    "atk": 4,
+    "atk": 3,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1002,7 +1002,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Schmerzfeuer",
     "ap": 2,
     "atk": 2,
-    "def": 2,
+    "def": 1,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -1105,7 +1105,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "status": "live",
     "typ": "Einheit",
     "klasse": "Artillerie",
-    "name": "Massenschlag",
+    "name": "Massenstoß",
     "ap": 5,
     "atk": 5,
     "def": 3,
@@ -1178,7 +1178,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Implantatrohr",
     "ap": 3,
-    "atk": 3,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1242,8 +1242,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Knotenrohr",
     "ap": 3,
-    "atk": 4,
-    "def": 3,
+    "atk": 5,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1575,7 +1575,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Falschfeuer",
     "ap": 3,
     "atk": 2,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1601,7 +1601,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Abriegelbatterie",
     "ap": 4,
-    "atk": 4,
+    "atk": 3,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1634,7 +1634,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Ämterlande-Geschütz",
     "ap": 2,
-    "atk": 2,
+    "atk": 1,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -1804,8 +1804,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Zeilenrohr",
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 4,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1846,7 +1846,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Vorlesefeuer",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1952,7 +1952,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Fälligkeitsfeuer",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1995,8 +1995,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Kalden-Batterie",
     "ap": 4,
-    "atk": 4,
-    "def": 3,
+    "atk": 5,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -2488,8 +2488,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Verspätungsfeuer",
     "ap": 2,
-    "atk": 2,
-    "def": 2,
+    "atk": 3,
+    "def": 1,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -2561,7 +2561,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Kronenhof-Kaliber",
     "ap": 4,
-    "atk": 5,
+    "atk": 3,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -2638,7 +2638,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Wegschlag",
     "ap": 5,
-    "atk": 6,
+    "atk": 4,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -2666,7 +2666,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Linienrohr",
     "ap": 3,
-    "atk": 3,
+    "atk": 2,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -2731,8 +2731,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Linienbatterie",
     "ap": 4,
-    "atk": 4,
-    "def": 3,
+    "atk": 5,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -3223,7 +3223,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "status": "live",
     "typ": "Einheit",
     "klasse": "Artillerie",
-    "name": "Kai-Batterie",
+    "name": "Hafenbatterie",
     "ap": 3,
     "atk": 3,
     "def": 2,
@@ -3291,7 +3291,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Entsatzrohr",
     "ap": 4,
     "atk": 4,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -3356,7 +3356,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "status": "live",
     "typ": "Einheit",
     "klasse": "Artillerie",
-    "name": "Straßenfeuer",
+    "name": "Gassenfeuer",
     "ap": 3,
     "atk": 4,
     "def": 1,
@@ -3431,8 +3431,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Hintermark-Rohr",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -4379,7 +4379,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Punktrohr",
     "ap": 3,
-    "atk": 3,
+    "atk": 2,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -4412,7 +4412,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Randmess-Kaliber",
     "ap": 3,
-    "atk": 2,
+    "atk": 1,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -4472,7 +4472,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Feuerleitstand",
     "ap": 4,
-    "atk": 3,
+    "atk": 2,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -4508,8 +4508,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Probenheim-Rohr",
     "ap": 2,
-    "atk": 2,
-    "def": 2,
+    "atk": 1,
+    "def": 1,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -4545,7 +4545,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Abbruchsalve",
     "ap": 3,
     "atk": 4,
-    "def": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",

@@ -656,9 +656,9 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
             d.line([(tx0 + 90, ty1 - 118), (tx1 - 90, ty1 - 118)], fill=GOLD, width=2)
             fy = ty1 - 78
             quoted = "„" + flavor + "“"
-            # Flavor in der Textspalte zentrieren (links vom Orden)
-            flav_cx = (tx0 + text_right) / 2
-            for ln in wrap(d, quoted, ff, wrap_w)[:2]:
+            # t269: Flavor mittig über die volle Panelbreite; der Orden endet oberhalb der Trennlinie
+            flav_cx = (tx0 + tx1) / 2
+            for ln in wrap(d, quoted, ff, tx1 - tx0 - 72)[:2]:
                 d.text((flav_cx, fy), ln, font=ff, fill=flav, anchor="mm")
                 fy += 48
 

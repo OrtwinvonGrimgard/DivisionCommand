@@ -193,8 +193,8 @@ assert.equal(ids().length, all);
   lib.render();
 }
 
-assert(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8').includes('divcmd-alpha40z'));
-assert(html.includes('app.js?v=alpha40z'));
+assert(fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8').includes('divcmd-alpha41a'));
+assert(html.includes('app.js?v=alpha41a'));
 assert(html.includes('id="lib-rarity"'));
 assert(html.includes('id="lib-tag-panel"'));
 

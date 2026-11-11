@@ -2,7 +2,7 @@
 
 Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schlüsselwort-Chips. Die vollständige Regel steht in der Detailansicht (Datenfeld `text`) und – für jede Karte, deren Flächentext gekürzt ist – hier, wortgleich, nach ID sortiert. Erzeugt von `scripts/cards-review/kurz.py`; `tests/test_card_faces_text.js` prüft, dass nichts verloren geht.
 
-## `dc_b_abloesung_660` – Ablösung (Soforteinsatz)
+## `dc_b_abloesung_660` – Ablösung der Wache (Soforteinsatz)
 
 **Fläche:** Zerstöre eine eigene Einheit; spiele dort eine Einheit aus der Hand mit Kosten bis ihre +1 und heile sie um 1.
 
@@ -74,6 +74,14 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 > Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
 
+## `dc_b_feldbaeckerei_331` – Feldbäckerei (Unterstützung)
+
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.
+
+**Volltext:**
+
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+
 ## `dc_b_gesundheim_333` – Gesundheim (Unterstützung)
 
 **Fläche:** Zugbeginn: heile 1 eigene Einheit im gewählten Abschnitt, die in deinem letzten Zug nicht angegriffen hat.
@@ -89,6 +97,14 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 **Volltext:**
 
 > Steilfeuer II. Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.
+
+## `dc_b_hangladung_259` – Hangladung (Ausrüstung)
+
+**Fläche:** Träger +1 ATK. Träger +1 DEF, wenn unbewegt. Wird der Träger zerstört, ziehst du 1 Karte.
+
+**Volltext:**
+
+> Träger +1 ATK. Träger +1 DEF, wenn er seit deinem letzten Zug nicht versetzt wurde. Wird der Träger zerstört, ziehst du 1 Karte.
 
 ## `dc_b_hangstellung_232` – Hangstellung (Unterstützung)
 
@@ -108,11 +124,11 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_b_hinterraum_878` – Hinterraum (Unterstützung)
 
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +2 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
 
 **Volltext:**
 
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
 
 ## `dc_b_kai_batterie_57` – Kai-Batterie (Einheit)
 
@@ -140,11 +156,11 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_b_lage_offen_desk_814` – Lage Offen Desk (Unterstützung)
 
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK, wenn die Einheit seit deinem letzten Zug nicht versetzt wurde.
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +2 ATK, wenn die Einheit seit deinem letzten Zug nicht versetzt wurde.
 
 **Volltext:**
 
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK, wenn die Einheit seit deinem letzten Zug nicht versetzt wurde.
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK, wenn die Einheit seit deinem letzten Zug nicht versetzt wurde.
 
 ## `dc_b_lagebrett_875` – Lagebrett (Unterstützung)
 
@@ -156,27 +172,43 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_b_lagerordnung_576` – Lagerordnung (Unterstützung)
 
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF, mit 2+ eigenen Einheiten dort. Zugbeginn: heile 1 eigene Einheit.
 
 **Volltext:**
 
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht.
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF, solange eine weitere eigene Einheit im Abschnitt steht. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+
+## `dc_b_lesehof_235` – Lesehof (Unterstützung)
+
+**Fläche:** 1×/Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast. Zugbeginn: heile 1 eigene Einheit.
+
+**Volltext:**
+
+> Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 
 ## `dc_b_lichthofen_758` – Lichthofen (Unterstützung)
 
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +2 DEF. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.
 
 **Volltext:**
 
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 
 ## `dc_b_lizenzhof_197` – Lizenzhof (Unterstützung)
 
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.
 
 **Volltext:**
 
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+
+## `dc_b_lydon_werk_817` – Lydon-Werk (Unterstützung)
+
+**Fläche:** 1×/Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast. Zugbeginn: heile 1 eigene Einheit.
+
+**Volltext:**
+
+> Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug einen Soforteinsatz gespielt hast. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 
 ## `dc_b_markt_mahr_934` – Markt Mahr (Unterstützung)
 
@@ -188,11 +220,11 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_b_marktvel_876` – Marktvel (Unterstützung)
 
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK und +1 DEF. Dort sinkt der erste Schaden je Zug um 1.
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +2 ATK. Dort sinkt der erste Schaden je Zug um 1.
 
 **Volltext:**
 
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.
 
 ## `dc_b_maskenplatte_300` – Maskenplatte (Ausrüstung)
 
@@ -218,6 +250,22 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 > Steilfeuer I. Andere eigene Einheiten in ihrem Abschnitt: +1 DEF, wenn du in diesem Zug einen Soforteinsatz gespielt hast.
 
+## `dc_b_methodenblatt_454` – Methodenblatt (Unterstützung)
+
+**Fläche:** Zugbeginn: markiere 1 Feind als beobachtet. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.
+
+**Volltext:**
+
+> Zu Beginn deines Zuges: markiere 1 Feind als beobachtet. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+
+## `dc_b_nachschubader_513` – Nachschubstrang (Unterstützung)
+
+**Fläche:** 1×/Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zugbeginn: heile 1 eigene Einheit.
+
+**Volltext:**
+
+> Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+
 ## `dc_b_nachtkai_63` – Nachtkai (Einheit)
 
 **Fläche:** Steilfeuer II. +1 ATK gegen isolierte Ziele. Zerstört sie im Angriff eine Einheit: decke einen verdeckten Feind auf.
@@ -226,13 +274,21 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 > Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
 
-## `dc_b_neuviertel_tisch_198` – Neuviertel-Tisch (Unterstützung)
+## `dc_b_namenhof_938` – Namenhof (Unterstützung)
 
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK und +1 DEF. Dort sinkt der erste Schaden je Zug um 1.
+**Fläche:** 1×/Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zugbeginn: heile 1 eigene Einheit.
 
 **Volltext:**
 
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.
+> Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+
+## `dc_b_neuviertel_tisch_198` – Neuviertel-Tisch (Unterstützung)
+
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +2 DEF. Dort sinkt der erste Schaden je Zug um 1.
+
+**Volltext:**
+
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.
 
 ## `dc_b_nordfall_uebung_813` – Nordfall-Übung (Unterstützung)
 
@@ -249,6 +305,14 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 **Volltext:**
 
 > Wähle eine eigene Fronteinheit: +1 DEF; +1 ATK bis Zugende, +1 DEF. Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende.
+
+## `dc_b_parlamentsgasse_752` – Parlamentsgasse (Unterstützung)
+
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK. Zugbeginn: heile 1 DEF an einer beschädigten eigenen Einheit.
+
+**Volltext:**
+
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 
 ## `dc_b_passsperre_233` – Passsperre (Unterstützung)
 
@@ -274,6 +338,22 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 > Beim Ausspielen: heile 2 DEF an deiner am stärksten beschädigten Einheit. +1 DEF, wenn sie seit deinem letzten Zug nicht versetzt wurde.
 
+## `dc_b_sammelfahne_137` – Sammelfahne (Ausrüstung)
+
+**Fläche:** 1×/Zug: wenn Infanterie den Abschnitt betritt, Träger +1 DEF bis Zugende. Wird der Träger zerstört, ziehst du 1 Karte.
+
+**Volltext:**
+
+> Einmal pro Zug: wenn Infanterie den Abschnitt betritt, Träger +1 DEF bis Zugende. Wird der Träger zerstört, ziehst du 1 Karte.
+
+## `dc_b_schichtplan_155` – Schichtplan (Unterstützung)
+
+**Fläche:** 1×/Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zugbeginn: heile 1 eigene Einheit.
+
+**Volltext:**
+
+> Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+
 ## `dc_b_schuldblatt_935` – Schuldblatt (Unterstützung)
 
 **Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK und +1 DEF. Dort sinkt der erste Schaden je Zug um 1.
@@ -298,13 +378,21 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 > Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 
-## `dc_b_umschlagzentrale_694` – Umschlagzentrale (Unterstützung)
+## `dc_b_technische_linie_473` – Technische Linie (Ausrüstung)
 
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK und +1 DEF. Dort sinkt der erste Schaden je Zug um 1.
+**Fläche:** Träger +1 ATK. 1×/Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte. Wird der Träger zerstört, ziehst du 1 Karte.
 
 **Volltext:**
 
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.
+> Träger +1 ATK. Einmal pro Zug: Spielst du einen Soforteinsatz, ziehe 1 Karte. Wird der Träger zerstört, ziehst du 1 Karte.
+
+## `dc_b_umschlagzentrale_694` – Umschlagzentrale (Unterstützung)
+
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +2 ATK. Dort sinkt der erste Schaden je Zug um 1.
+
+**Volltext:**
+
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.
 
 ## `dc_b_verbindungsnetz_815` – Verbindungsnetz (Unterstützung)
 
@@ -316,11 +404,11 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_b_verbindungsstrasse_194` – Verbindungsstraße (Unterstützung)
 
-**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK und +1 DEF. Dort sinkt der erste Schaden je Zug um 1.
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +2 ATK und +1 DEF. Dort sinkt der erste Schaden je Zug um 1.
 
 **Volltext:**
 
-> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.
+> Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +2 ATK und +1 DEF. Eigene Einheiten im gewählten Abschnitt: Der erste Schaden je Zug sinkt um 1.
 
 ## `dc_b_versorgungspunkt_332` – Versorgungspunkt (Unterstützung)
 
@@ -329,6 +417,22 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 **Volltext:**
 
 > Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit. Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1).
+
+## `dc_b_vorlesehof_932` – Vorlesehof (Unterstützung)
+
+**Fläche:** 1×/Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast. Zugbeginn: heile 1 eigene Einheit.
+
+**Volltext:**
+
+> Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+
+## `dc_b_vorratshalle_691` – Vorratshalle (Unterstützung)
+
+**Fläche:** 1×/Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zugbeginn: heile 1 eigene Einheit.
+
+**Volltext:**
+
+> Einmal pro Zug: deine nächste Einheit kostet 1 AP weniger (mind. 1). Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 
 ## `dc_b_vorratsrohr_680` – Vorratsrohr (Einheit)
 
@@ -345,6 +449,14 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 **Volltext:**
 
 > Steilfeuer II. +1 ATK gegen Ziele ohne benachbarte Einheit ihres Besitzers. Zerstört sie im Angriff eine Einheit: decke 1 verdeckte gegnerische Fronteinheit auf.
+
+## `dc_b_zentralratsplan_114` – Zentralratsplan (Unterstützung)
+
+**Fläche:** 1×/Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast. Zugbeginn: heile 1 eigene Einheit.
+
+**Volltext:**
+
+> Einmal pro Zug: ziehe 1 Karte, sobald du in diesem Zug eine Einheit gespielt hast. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 
 ## `dc_b_zeughaus_brueckenau_751` – Zeughaus Brückenau (Unterstützung)
 
@@ -508,7 +620,7 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_np_averon_lokalisierter_grossschlag` – Lokalisierter Großschlag (Soforteinsatz)
 
-**Fläche:** Wähle eine Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 3 Schaden zu.
+**Fläche:** Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 3 Schaden zu.
 
 **Volltext:**
 
@@ -524,11 +636,19 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_np_caldris_ruhezone` – Ruhezone (Unterstützung)
 
-**Fläche:** Zugbeginn: ziehe 1 zusätzlich.
+**Fläche:** Zugbeginn: ziehe 1 zusätzlich. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 
 **Volltext:**
 
-> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+
+## `dc_np_caldris_schutzfeuer` – Schutzfeuer (Soforteinsatz)
+
+**Fläche:** Füge einer gegnerischen Fronteinheit 2 Schaden zu. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.
+
+**Volltext:**
+
+> Füge einer gegnerischen Fronteinheit 2 Schaden zu. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
 
 ## `dc_np_caldris_unantastbare_etappe` – Unantastbare Etappe (Unterstützung)
 
@@ -540,11 +660,11 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_np_caldris_verbandspaeckchen` – Verbandspäckchen (Ausrüstung)
 
-**Fläche:** Einmalig: erster verhinderbarer Treffer am Träger −2.
+**Fläche:** Einmalig: erster verhinderbarer Treffer am Träger −3.
 
 **Volltext:**
 
-> Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+> Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 3 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
 
 ## `dc_np_dargan_das_grosse_buch` – Das Große Buch (Unterstützung)
 
@@ -556,7 +676,7 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_np_dargan_endabrechnung` – Endabrechnung (Soforteinsatz)
 
-**Fläche:** Wähle eine Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 4 Schaden zu.
+**Fläche:** Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 4 Schaden zu.
 
 **Volltext:**
 
@@ -564,7 +684,7 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_np_dargan_markierter_schlag` – Markierter Schlag (Soforteinsatz)
 
-**Fläche:** Wähle eine Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 2 Schaden zu.
+**Fläche:** Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 2 Schaden zu.
 
 **Volltext:**
 
@@ -572,11 +692,27 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_np_dargan_schuldregister` – Schuldregister (Unterstützung)
 
-**Fläche:** Zugbeginn: ziehe 1 zusätzlich.
+**Fläche:** Zugbeginn: ziehe 1 zusätzlich. Abschnitt wählen: eigene Einheiten dort +1 DEF.
 
 **Volltext:**
 
-> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.
+
+## `dc_np_dargan_tilgung` – Tilgung (Soforteinsatz)
+
+**Fläche:** Füge einer gegnerischen Fronteinheit 2 Schaden zu. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).
+
+**Volltext:**
+
+> Füge einer gegnerischen Fronteinheit 2 Schaden zu. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
+
+## `dc_np_dargan_zeile_schliessen` – Zeile schließen (Soforteinsatz)
+
+**Fläche:** Eine eigene Einheit darf in diesem Zug erneut angreifen. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).
+
+**Volltext:**
+
+> Eine eigene Fronteinheit darf in diesem Zug erneut angreifen. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
 
 ## `dc_np_eldran_sperrdraht_kit` – Sperrdraht-Kit (Ausrüstung)
 
@@ -594,13 +730,45 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 > Träger +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
 
-## `dc_np_merovan_kolonnenpanzerung` – Kolonnenpanzerung (Ausrüstung)
+## `dc_np_karsk_nachlieferung_koerperteile` – Nachlieferung Körperteile (Soforteinsatz)
 
-**Fläche:** Träger +2 DEF. Einmalig: erster verhinderbarer Treffer am Träger −1.
+**Fläche:** Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1). Wähle einen Feind: aufdecken, gilt als beobachtet.
 
 **Volltext:**
 
-> Träger +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+> Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
+
+## `dc_np_lyr_geroellhagel` – Geröllhagel (Soforteinsatz)
+
+**Fläche:** Füge einer gegnerischen Fronteinheit 3 Schaden zu. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.
+
+**Volltext:**
+
+> Füge einer gegnerischen Fronteinheit 3 Schaden zu. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
+
+## `dc_np_lyr_pass_entdeckt` – Pass entdeckt (Soforteinsatz)
+
+**Fläche:** Wähle einen Feind: aufdecken, gilt als beobachtet. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).
+
+**Volltext:**
+
+> Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
+
+## `dc_np_merovan_kolonnenpanzerung` – Kolonnenpanzerung (Ausrüstung)
+
+**Fläche:** Träger +1 ATK und +1 DEF. Einmalig: erster verhinderbarer Treffer am Träger −1.
+
+**Volltext:**
+
+> Träger +1 ATK und +1 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+
+## `dc_np_namar_hafenfeuer` – Hafenfeuer (Soforteinsatz)
+
+**Fläche:** Füge einer gegnerischen Fronteinheit 1 Schaden zu. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.
+
+**Volltext:**
+
+> Füge einer gegnerischen Fronteinheit 1 Schaden zu. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
 
 ## `dc_np_namar_kai_ohne_schloss` – Kai ohne Schloss (Unterstützung)
 
@@ -610,17 +778,33 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 > Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Zu Beginn deines Zuges: +1 AP.
 
-## `dc_np_namar_speicher_am_hafen` – Speicher am Hafen (Unterstützung)
+## `dc_np_namar_kai_verteidigen` – Kai verteidigen (Soforteinsatz)
 
-**Fläche:** Zugbeginn: ziehe 1 zusätzlich.
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF dauerhaft. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).
 
 **Volltext:**
 
-> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+> Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
+
+## `dc_np_namar_speicher_am_hafen` – Speicher am Hafen (Unterstützung)
+
+**Fläche:** Zugbeginn: ziehe 1 zusätzlich. Abschnitt wählen: eigene Einheiten dort +1 ATK.
+
+**Volltext:**
+
+> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.
+
+## `dc_np_orthea_einzelziel_salve` – Einzelziel-Salve (Soforteinsatz)
+
+**Fläche:** Füge einer gegnerischen Fronteinheit 1 Schaden zu. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).
+
+**Volltext:**
+
+> Füge einer gegnerischen Fronteinheit 1 Schaden zu. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
 
 ## `dc_np_orthea_gemessener_schlag` – Gemessener Schlag (Soforteinsatz)
 
-**Fläche:** Wähle eine Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 3 Schaden zu.
+**Fläche:** Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 3 Schaden zu.
 
 **Volltext:**
 
@@ -628,19 +812,19 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_np_orthea_laborpanzerung` – Laborpanzerung (Ausrüstung)
 
-**Fläche:** Träger +2 DEF. Einmalig: erster verhinderbarer Treffer am Träger −1.
+**Fläche:** Träger +1 ATK und +2 DEF. Einmalig: erster verhinderbarer Treffer am Träger −1.
 
 **Volltext:**
 
-> Träger +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+> Träger +1 ATK und +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
 
 ## `dc_np_orthea_messnetz` – Messnetz (Unterstützung)
 
-**Fläche:** Zugbeginn: ziehe 1 zusätzlich.
+**Fläche:** Zugbeginn: ziehe 1 zusätzlich. Deine Fronteinheiten +1 ATK.
 
 **Volltext:**
 
-> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Deine Fronteinheiten +1 ATK.
 
 ## `dc_np_orthea_rechenzentrum_orthea` – Rechenzentrum Orthea (Unterstützung)
 
@@ -660,35 +844,123 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_np_ossaria_plattenschutz` – Plattenschutz (Ausrüstung)
 
-**Fläche:** Einmalig: erster verhinderbarer Treffer am Träger −2.
+**Fläche:** Einmalig: erster verhinderbarer Treffer am Träger −2. Wird der Träger zerstört, ziehst du 1 Karte.
 
 **Volltext:**
 
-> Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+> Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar. Wird der Träger zerstört, ziehst du 1 Karte.
+
+## `dc_np_ossaria_prozession_der_namen` – Prozession der Namen (Soforteinsatz)
+
+**Fläche:** Ziehe 3, dann wirf deine älteste Handkarte ab. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.
+
+**Volltext:**
+
+> Ziehe 3, dann wirf deine älteste Handkarte ab. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
+
+## `dc_np_ossaria_wall_der_gefallenen` – Wall der Gefallenen (Unterstützung)
+
+**Fläche:** Jeder Schaden an deinen Fronteinheiten −1. Gegnerische Fronteinheiten −1 ATK. Zugbeginn: heile 1 eigene Einheit.
+
+**Volltext:**
+
+> Jeder Schaden an deinen Fronteinheiten −1. Gegnerische Fronteinheiten −1 ATK. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+
+## `dc_np_ossaria_wall_verstaerken` – Wall verstärken (Soforteinsatz)
+
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +2 DEF dauerhaft. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).
+
+**Volltext:**
+
+> Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
 
 ## `dc_np_rothain_abloesungsdepot` – Ablösungsdepot (Unterstützung)
 
-**Fläche:** Zugbeginn: ziehe 1 zusätzlich.
+**Fläche:** Zugbeginn: ziehe 1 zusätzlich. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
 
 **Volltext:**
 
-> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.
+
+## `dc_np_rothain_gezieltes_feuer` – Gezieltes Feuer (Soforteinsatz)
+
+**Fläche:** Füge einer gegnerischen Fronteinheit 2 Schaden zu. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.
+
+**Volltext:**
+
+> Füge einer gegnerischen Fronteinheit 2 Schaden zu. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
+
+## `dc_np_rothain_schwerpunkt_setzen` – Schwerpunkt setzen (Soforteinsatz)
+
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK bis Zugende. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).
+
+**Volltext:**
+
+> Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
+
+## `dc_np_sahr_fluss_ueberqueren` – Fluss überqueren (Soforteinsatz)
+
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 ATK bis Zugende. Abschnitt wählen: eigene Einheiten dort +1 DEF dauerhaft.
+
+**Volltext:**
+
+> Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende. Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.
+
+## `dc_np_sahr_handelsrabatt` – Handelsrabatt (Soforteinsatz)
+
+**Fläche:** Nächste Einheit/Unterstützung kostet 1 AP weniger. Ziehe 1 Karte. Wähle einen Feind: aufdecken, gilt als beobachtet.
+
+**Volltext:**
+
+> Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
+
+## `dc_np_sahr_linie_binden` – Linie binden (Soforteinsatz)
+
+**Fläche:** Abschnitt wählen: eigene Einheiten dort +1 DEF dauerhaft. Abschnitt wählen: eigene Einheiten dort +1 ATK bis Zugende.
+
+**Volltext:**
+
+> Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft. Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.
 
 ## `dc_np_sahr_routennetz` – Routennetz (Unterstützung)
 
-**Fläche:** Zugbeginn: ziehe 1 zusätzlich.
+**Fläche:** Zugbeginn: ziehe 1 zusätzlich. Abschnitt wählen: eigene Einheiten dort +1 DEF.
 
 **Volltext:**
 
-> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.
+
+## `dc_np_sahr_stroemung_nutzen` – Strömung nutzen (Soforteinsatz)
+
+**Fläche:** Ziehe 2, dann wirf deine älteste Handkarte ab. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.
+
+**Volltext:**
+
+> Ziehe 2, dann wirf deine älteste Handkarte ab. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
+
+## `dc_np_steinmark_beschaffungsvorlauf` – Beschaffungsvorlauf (Soforteinsatz)
+
+**Fläche:** Nächste Einheit/Unterstützung kostet 1 AP weniger. Ziehe 1 Karte. Wähle einen Feind: aufdecken, gilt als beobachtet.
+
+**Volltext:**
+
+> Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
 
 ## `dc_np_steinmark_bezirksarchiv` – Bezirksarchiv (Unterstützung)
 
-**Fläche:** Zugbeginn: ziehe 1 zusätzlich.
+**Fläche:** Zugbeginn: ziehe 1 zusätzlich. Abschnitt wählen: eigene Einheiten dort +1 ATK.
 
 **Volltext:**
 
-> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.
+
+## `dc_np_steinmark_formale_freigabe` – Formale Freigabe (Soforteinsatz)
+
+**Fläche:** Eine eigene Einheit: +1 ATK bis Zugende, +1 DEF dauerhaft. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).
+
+**Volltext:**
+
+> Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
 
 ## `dc_np_steinmark_verfahrenshoheit` – Verfahrenshoheit (Unterstützung)
 
@@ -697,6 +969,14 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 **Volltext:**
 
 > Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Jeder Schaden an deinen Fronteinheiten −1.
+
+## `dc_np_theryn_alle_sind_gerufen` – Alle sind gerufen (Soforteinsatz)
+
+**Fläche:** Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1). Füge einer gegnerischen Fronteinheit 1 Schaden zu.
+
+**Volltext:**
+
+> Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Füge einer gegnerischen Fronteinheit 1 Schaden zu.
 
 ## `dc_np_theryn_glaubensaufgebot` – Glaubensaufgebot (Unterstützung)
 
@@ -708,11 +988,19 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_np_theryn_ruf_zum_aufgebot` – Ruf zum Aufgebot (Unterstützung)
 
-**Fläche:** Zugbeginn: ziehe 1 zusätzlich.
+**Fläche:** Zugbeginn: ziehe 1 zusätzlich. Jeder Schaden an deinen Fronteinheiten −1.
 
 **Volltext:**
 
-> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Jeder Schaden an deinen Fronteinheiten −1.
+
+## `dc_np_vael_ersatz_ab_lager` – Ersatz ab Lager (Soforteinsatz)
+
+**Fläche:** Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1). Abschnitt wählen: eigene Einheiten dort +1 DEF dauerhaft.
+
+**Volltext:**
+
+> Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.
 
 ## `dc_np_vael_kriegsboerse` – Kriegsbörse (Unterstützung)
 
@@ -721,6 +1009,14 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 **Volltext:**
 
 > Zu Beginn deines Zuges: +1 AP. Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+
+## `dc_np_vael_splitterhagel` – Splitterhagel (Soforteinsatz)
+
+**Fläche:** Füge einer gegnerischen Fronteinheit 2 Schaden zu. Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet.
+
+**Volltext:**
+
+> Füge einer gegnerischen Fronteinheit 2 Schaden zu. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.
 
 ## `dc_np_vesper_das_spiel_des_systems` – Das Spiel des Systems (Unterstützung)
 
@@ -732,27 +1028,43 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_np_vesper_doppeltes_spiel` – Doppeltes Spiel (Soforteinsatz)
 
-**Fläche:** Wähle eine Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 1 Schaden zu.
+**Fläche:** Wähle einen Feind: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 1 Schaden zu.
 
 **Volltext:**
 
 > Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Füge einer gegnerischen Fronteinheit 1 Schaden zu.
 
-## `dc_np_vesper_stoersender` – Störsender (Ausrüstung)
+## `dc_np_vesper_raum_schliessen` – Raum schließen (Soforteinsatz)
 
-**Fläche:** Einmalig: erster verhinderbarer Treffer am Träger −2.
+**Fläche:** Füge einer gegnerischen Fronteinheit 2 Schaden zu. Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1).
 
 **Volltext:**
 
-> Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.
+> Füge einer gegnerischen Fronteinheit 2 Schaden zu. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).
+
+## `dc_np_vesper_stoersender` – Störsender (Ausrüstung)
+
+**Fläche:** Einmalig: erster verhinderbarer Treffer am Träger −2. Erster Angriff des Trägers: +1 ATK.
+
+**Volltext:**
+
+> Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar. Erster Angriff des Trägers: +1 ATK.
 
 ## `dc_np_vesper_systemarchiv` – Systemarchiv (Unterstützung)
 
-**Fläche:** Zugbeginn: ziehe 1 zusätzlich.
+**Fläche:** Zugbeginn: ziehe 1 zusätzlich. Gegnerische Fronteinheiten −1 ATK.
 
 **Volltext:**
 
-> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.
+> Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Gegnerische Fronteinheiten −1 ATK.
+
+## `dc_np_vesper_verdeckter_rabatt` – Verdeckter Rabatt (Soforteinsatz)
+
+**Fläche:** Nächste Einheit/Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte. Heile 1 DEF an einer eigenen Fronteinheit.
+
+**Volltext:**
+
+> Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte. Heile 1 DEF an einer eigenen Fronteinheit.
 
 ## `dc_so_armageddon` – Armageddon (Soforteinsatz)
 
@@ -761,19 +1073,6 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 **Volltext:**
 
 > Sämtliche Karten und Tokens vom Spielfeld und beide Hände auf den Ablagestapel. Beide ziehen 5. Münze bestimmt, wer wieder beginnt.
-
-**Ablauf in der Engine (t259, `_armageddonSweep` + `_armageddonHands`):**
-
-1. Front und Support beider Spieler werden zerstört (inkl. Ausrüstung und Tokens auf dem Feld), Minen/NML-Marker geräumt. Alles kommt auf den Ablagestapel des Besitzers. „Durchbruch“-Sprünge aus der Hand greifen dabei nicht.
-2. Armageddon selbst kommt auf den Ablagestapel des Ausspielers.
-3. Beide Hände kommen vollständig auf den eigenen Ablagestapel.
-4. Erst der Ausspieler, dann der Gegner ziehen je 5 Karten nach den normalen Ziehregeln (`_draw`): Ist das Deck leer, wird der Ablagestapel (inklusive der eben abgeworfenen Karten) neu gemischt. Sind Deck und Ablage zusammen kleiner als 5, zieht man nur so viele, wie da sind. Ein leeres Deck führt nicht zur Niederlage („der Kampf endet nicht“). Das Handlimit greift nicht, weil die Hände vorher leer sind.
-5. Siegprüfung. Ist die Partie nicht vorbei, folgt der Münzwurf: Bei Kopf beginnt der Ausspieler erneut, bei Zahl der Gegner. Der Gewinner wird aktiv und erhält die normalen AP pro Zug.
-
-Auslegungsfragen (Kartentext unverändert):
-- „Beide ziehen 5“ ist gleichzeitig gemeint. Die Engine zieht nacheinander (Ausspieler zuerst); da jeder aus dem eigenen Deck zieht, ändert das nichts.
-- Ob Armageddon selbst „vom Spielfeld“ kommt, lässt der Text offen. Als Soforteinsatz geht es wie jeder Einsatz auf den Ablagestapel (vorher ging die Karte verloren).
-- Der Bot bewertet Armageddon gesondert (`scoreArmageddon`): nur bei klarem Brettrückstand, Handsaldo zählt mit.
 
 ## `dc_so_letzter` – Der Letzte der steht (Soforteinsatz)
 

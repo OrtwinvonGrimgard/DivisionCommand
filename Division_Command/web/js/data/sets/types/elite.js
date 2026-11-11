@@ -196,7 +196,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Konzernsekundant",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -229,8 +229,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Werkmeister Front",
     "ap": 4,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -266,7 +266,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Kriegsaktie",
     "ap": 4,
     "atk": 4,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -333,8 +333,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Eifererzug",
     "ap": 4,
-    "atk": 6,
-    "def": 3,
+    "atk": 5,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -361,7 +361,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Maßkommandant",
     "ap": 5,
     "atk": 4,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -573,7 +573,7 @@ window.DC_SET_TYPES["Elite"] = [
     "status": "live",
     "typ": "Einheit",
     "klasse": "Elite",
-    "name": "Maßkommandant",
+    "name": "Maßoffizier",
     "ap": 5,
     "atk": 5,
     "def": 4,
@@ -612,7 +612,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Lina Nov",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -643,8 +643,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Ed Ruh",
     "ap": 3,
-    "atk": 2,
-    "def": 4,
+    "atk": 3,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -678,8 +678,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Werkhof-Nov",
     "ap": 4,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -714,7 +714,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Ivo Vel",
     "ap": 3,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -749,7 +749,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Nila Still",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -785,7 +785,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Siegelmeister",
     "ap": 4,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -820,8 +820,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Schreiberin Kal",
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 4,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -855,8 +855,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Hauptmann Kader",
     "ap": 3,
-    "atk": 2,
-    "def": 4,
+    "atk": 3,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -890,8 +890,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Haus Still",
     "ap": 4,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -922,7 +922,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Marei Aure",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -959,7 +959,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Tomas Lenn",
     "ap": 3,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -993,7 +993,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Zeughausmeister",
     "ap": 4,
-    "atk": 3,
+    "atk": 5,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -1116,7 +1116,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Lotte Knoten",
     "ap": 3,
     "atk": 3,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1142,7 +1142,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Hesse Sar",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1178,7 +1178,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Karawanenmeister",
     "ap": 4,
     "atk": 4,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1203,7 +1203,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Ida Holm",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -1239,7 +1239,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Konrad Berst",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1274,8 +1274,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Stabsoffizier",
     "ap": 4,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1310,7 +1310,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Ada Mar",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -1346,7 +1346,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Ren Zoll",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -1382,7 +1382,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Hafenmeister",
     "ap": 4,
     "atk": 3,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1409,7 +1409,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Jona Leserbach",
     "ap": 3,
     "atk": 3,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1439,7 +1439,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Mar Aschen",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -1472,7 +1472,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Talruf",
     "ap": 4,
     "atk": 4,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1691,7 +1691,7 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Nera Aster",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -1760,7 +1760,7 @@ window.DC_SET_TYPES["Elite"] = [
     "name": "Fachoffizier",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "elite"

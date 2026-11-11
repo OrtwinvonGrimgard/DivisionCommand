@@ -1,0 +1,6 @@
+{
+ "_info": "t268: Handentscheidungen für Paare, deren beide Karten von Tests festgeschrieben sind (Verhalten bleibt, nur Zahl bzw. Kosten ändern sich).",
+ "dc_b_gegenruf_760": { "ap": 3, "text": "Wähle bis zu 2 eigene Fronteinheiten: je +3 ATK bis Zugende.", "effects": [{ "code": "BUFF", "param": { "atk": 3, "until": "turn", "count": 2, "upto": true } }] },
+ "dc_b_keine_sterne_529": { "ap": 0 },
+ "dc_b_wartezettel_219": { "text": "Träger +1 DEF. Kostet 1 AP weniger (mind. 0), solange du eine Unterstützung hast. Beim Anlegen: ziehe 1.", "effects": [{ "code": "EQUIP_STAT", "param": { "atk": 0, "def": 1 } }, { "code": "CM", "param": { "k": "cost", "delta": -1, "when": "support" } }, { "code": "ON_ENTER_DRAW", "param": { "value": 1 } }] }
+}

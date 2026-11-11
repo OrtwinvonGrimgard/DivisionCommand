@@ -975,19 +975,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Nachschubstoß",
-    "ap": 1,
+    "ap": 0,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: heile 2.",
+    "text": "Wähle eine eigene Fronteinheit: heile 1.",
     "effects": [
       {
         "code": "HEAL",
         "param": {
-          "value": 2
+          "value": 1
         }
       }
     ],
@@ -1344,7 +1344,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Feuerwalze",
+    "name": "Walzenfeuer",
     "ap": 4,
     "atk": 0,
     "def": 0,
@@ -1377,7 +1377,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Materialersatz",
+    "name": "Materialnachschub",
     "ap": 3,
     "atk": 0,
     "def": 0,
@@ -1418,7 +1418,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "",
-    "name": "Marschbefehl",
+    "name": "Marschorder",
     "ap": 1,
     "atk": null,
     "def": null,
@@ -1445,7 +1445,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "",
-    "name": "Blutzeuge",
+    "name": "Blutzeugnis",
     "ap": 1,
     "atk": null,
     "def": null,
@@ -1484,7 +1484,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "",
-    "name": "Sammelruf",
+    "name": "Sammelsignal",
     "ap": 1,
     "atk": null,
     "def": null,
@@ -1772,7 +1772,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "",
-    "name": "Breites Aufgebot",
+    "name": "Volksaufgebot",
     "ap": 0,
     "atk": null,
     "def": null,
@@ -1805,7 +1805,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "",
-    "name": "Sturmangriff",
+    "name": "Sturmlauf",
     "ap": 0,
     "atk": null,
     "def": null,
@@ -1955,21 +1955,27 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Silberstern",
-    "ap": 1,
+    "ap": 2,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +2 DEF. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "atk": 1,
-          "def": 1,
+          "atk": 0,
+          "def": 2,
           "until": "turn"
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -2199,7 +2205,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "",
-    "name": "Schwerpunkt",
+    "name": "Schwerpunktbildung",
     "ap": 3,
     "atk": null,
     "def": null,
@@ -2243,7 +2249,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "",
-    "name": "Ablösung",
+    "name": "Ablösung der Wache",
     "ap": 3,
     "atk": null,
     "def": null,
@@ -2285,19 +2291,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Weiter",
-    "ap": 1,
+    "ap": 2,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: +3 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "atk": 2,
+          "atk": 3,
           "def": 0,
           "until": "turn"
         }
@@ -2445,19 +2451,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Durchbruch",
-    "ap": 2,
+    "ap": 1,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Wähle eine gegnerische Fronteinheit: 2 Schaden.",
+    "text": "Wähle eine gegnerische Fronteinheit: 1 Schaden.",
     "effects": [
       {
         "code": "DEAL_DAMAGE",
         "param": {
-          "value": 2
+          "value": 1
         }
       }
     ],
@@ -2568,14 +2574,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Offene Wunde",
-    "ap": 2,
+    "ap": 3,
     "atk": null,
     "def": null,
     "verdeckt_ok": false,
     "tags": [
       "soforteinsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF",
@@ -2583,6 +2589,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "atk": 1,
           "def": 1,
           "until": "turn"
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -2691,7 +2703,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "",
-    "name": "Stoßtrupp",
+    "name": "Stoßtruppbefehl",
     "ap": 3,
     "atk": null,
     "def": null,
@@ -2736,7 +2748,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "",
-    "name": "Weiterkämpfen",
+    "name": "Weiter vorwärts",
     "ap": 3,
     "atk": null,
     "def": null,
@@ -2906,7 +2918,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Aufklärungsschlag",
+    "name": "Spähschlag",
     "ap": 0,
     "atk": 0,
     "def": 0,
@@ -2948,7 +2960,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Lokalisierung",
+    "name": "Ortungsbefehl",
     "ap": 0,
     "atk": 0,
     "def": 0,
@@ -2996,7 +3008,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Stille Woche",
-    "ap": 1,
+    "ap": 0,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -3140,19 +3152,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Zwei Sätze",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle 2 eigene Fronteinheiten: je +1 ATK bis Zugende.",
+    "text": "Wähle 2 eigene Fronteinheiten: je +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "until": "turn",
           "count": 2
         }
@@ -3178,14 +3190,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Boden vor See",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle bis zu 2 eigene Fronteinheiten: je +2 ATK bis Zugende.",
+    "text": "Wähle bis zu 2 eigene Fronteinheiten: je +2 ATK bis Zugende. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF",
@@ -3194,6 +3206,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "until": "turn",
           "count": 2,
           "upto": true
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -3334,7 +3352,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Falsche Akte",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -3372,7 +3390,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Scheinschwerpunkt",
+    "name": "Scheinangriff",
     "ap": 0,
     "atk": 0,
     "def": 0,
@@ -3412,7 +3430,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Abriegeln",
+    "name": "Abriegelungsbefehl",
     "ap": 0,
     "atk": 0,
     "def": 0,
@@ -3546,13 +3564,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
+    "text": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "atk": 1,
-          "def": 1,
+          "atk": 2,
+          "def": 0,
           "until": "turn"
         }
       },
@@ -3625,13 +3643,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "atk": 1,
-          "def": 1,
+          "atk": 2,
+          "def": 0,
           "until": "turn"
         }
       }
@@ -3656,19 +3674,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Versorgungsnacht",
-    "ap": 2,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Ziehe 2 Karten, dann wirf deine älteste Handkarte ab.",
+    "text": "Ziehe 1 Karte, dann wirf deine älteste Handkarte ab.",
     "effects": [
       {
         "code": "DRAW_DISCARD",
         "param": {
-          "draw": 2,
+          "draw": 1,
           "discard": 1
         }
       }
@@ -3689,7 +3707,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Oliv Halt",
+    "name": "Olivstopp",
     "ap": 1,
     "atk": 0,
     "def": 0,
@@ -3734,19 +3752,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Fällige Zeile",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende.",
+    "text": "Alle eigenen Einheiten: +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "filter": null,
           "until": "turn"
         }
@@ -3769,19 +3787,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Staffelung",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +3 DEF.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "def": 2,
+          "def": 3,
           "until": "turn"
         }
       }
@@ -3844,7 +3862,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Zielangriff",
+    "name": "Gezielter Zugriff",
     "ap": 0,
     "atk": 0,
     "def": 0,
@@ -3879,7 +3897,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Abschluss",
+    "name": "Abschlussbuchung",
     "ap": 0,
     "atk": 0,
     "def": 0,
@@ -3925,13 +3943,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
+    "text": "Dein nächster Soforteinsatz kostet 2 AP weniger (mind. 0).",
     "effects": [
       {
         "code": "COST_NEXT",
         "param": {
           "type": "Soforteinsatz",
-          "amount": 1
+          "amount": 2
         }
       }
     ],
@@ -4024,20 +4042,26 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Hausblatt",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
+    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0). Ziehe 1 Karte.",
     "effects": [
       {
         "code": "COST_NEXT",
         "param": {
           "type": "Soforteinsatz",
           "amount": 1
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -4088,7 +4112,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Versorgungszeile",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -4198,19 +4222,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Gegenruf",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle bis zu 2 eigene Fronteinheiten: je +2 ATK bis Zugende.",
+    "text": "Wähle bis zu 2 eigene Fronteinheiten: je +3 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "atk": 2,
+          "atk": 3,
           "until": "turn",
           "count": 2,
           "upto": true
@@ -4237,7 +4261,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Später Stoß",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -4274,7 +4298,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Auffangen",
+    "name": "Auffanglinie",
     "ap": 0,
     "atk": 0,
     "def": 0,
@@ -4319,7 +4343,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Gegenstoß",
+    "name": "Kronengegenstoß",
     "ap": 0,
     "atk": 0,
     "def": 0,
@@ -4355,20 +4379,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Haushaltsfrage",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende.",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
         "targetSide": "own",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "filter": null,
           "until": "turn"
         }
@@ -4388,20 +4412,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Gleichmäßiger Ruf",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
+    "text": "Dein nächster Soforteinsatz kostet 2 AP weniger (mind. 0).",
     "effects": [
       {
         "code": "COST_NEXT",
         "param": {
           "type": "Soforteinsatz",
-          "amount": 1
+          "amount": 2
         }
       }
     ],
@@ -4422,19 +4446,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Nachtstellung",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "def": 1,
           "until": "turn"
         }
@@ -4459,7 +4483,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Aktenbefehl",
+    "name": "Kronweisung",
     "ap": 1,
     "atk": 0,
     "def": 0,
@@ -4497,19 +4521,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Zwei Hände",
-    "ap": 2,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +2 DEF; sie kann in ihrem nächsten Zug nicht angreifen.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF; sie kann in ihrem nächsten Zug nicht angreifen.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "def": 2,
+          "def": 1,
           "until": "turn"
         }
       },
@@ -4538,19 +4562,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Sperrenkette",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Ziehe 2 Karten, dann wirf deine älteste Handkarte ab.",
+    "text": "Ziehe 3 Karten, dann wirf deine älteste Handkarte ab.",
     "effects": [
       {
         "code": "DRAW_DISCARD",
         "param": {
-          "draw": 2,
+          "draw": 3,
           "discard": 1
         }
       }
@@ -4572,14 +4596,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Steingrün Halt",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF",
@@ -4587,6 +4611,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "atk": 1,
           "def": 1,
           "until": "turn"
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -4654,7 +4684,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Umgruppierung",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -4733,7 +4763,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Ablösung",
+    "name": "Schichtablösung",
     "ap": 1,
     "atk": 0,
     "def": 0,
@@ -4811,7 +4841,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Stimmloch",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -4851,20 +4881,26 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Straßenöffnen",
-    "ap": 3,
+    "ap": 4,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
+    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0). Ziehe 1 Karte.",
     "effects": [
       {
         "code": "COST_NEXT",
         "param": {
           "type": "Soforteinsatz",
           "amount": 1
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -4885,14 +4921,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Sandfarbe",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1). Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF",
@@ -4900,6 +4936,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "def": -1,
           "until": "turn",
           "enemy": true
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -4956,7 +4998,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Verlegung",
+    "name": "Truppenverlegung",
     "ap": 3,
     "atk": 0,
     "def": 0,
@@ -4993,7 +5035,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Ausharren",
+    "name": "Durchhaltebefehl",
     "ap": 3,
     "atk": 0,
     "def": 0,
@@ -5044,7 +5086,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1).",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 DEF (mind. 1). Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF",
@@ -5052,6 +5094,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "def": -1,
           "until": "turn",
           "enemy": true
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -5162,14 +5210,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Weite Umgehung",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF",
@@ -5177,6 +5225,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "atk": 1,
           "def": 0,
           "until": "turn"
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -5199,7 +5253,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Linienkrieg",
+    "name": "Linienhalt",
     "ap": 0,
     "atk": 0,
     "def": 0,
@@ -5252,7 +5306,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Umgehen",
+    "name": "Umgehungsmarsch",
     "ap": 0,
     "atk": 0,
     "def": 0,
@@ -5286,14 +5340,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Fristtafel",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende.",
+    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
@@ -5301,6 +5355,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "atk": 1,
           "filter": null,
           "until": "turn"
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -5321,19 +5381,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Schnellpass",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +2 DEF; sie kann in ihrem nächsten Zug nicht angreifen.",
+    "text": "Wähle eine eigene Fronteinheit: +3 DEF; sie kann in ihrem nächsten Zug nicht angreifen.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "def": 2,
+          "def": 3,
           "until": "turn"
         }
       },
@@ -5443,19 +5503,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Doppelumgehung",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Alle eigenen Einheiten: +1 ATK bis Zugende.",
+    "text": "Alle eigenen Einheiten: +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_ALL_OWN",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "until": "turn"
         }
       }
@@ -5521,19 +5581,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Pfadöffnung",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "def": 1,
           "until": "turn"
         }
@@ -5559,19 +5619,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Reglement",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +3 DEF.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "def": 2,
+          "def": 3,
           "until": "turn"
         }
       }
@@ -5603,13 +5663,13 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Decke eine verdeckte gegnerische Einheit auf.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF. Decke eine verdeckte gegnerische Einheit auf.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "atk": 1,
-          "def": 0,
+          "atk": 0,
+          "def": 1,
           "until": "turn"
         }
       },
@@ -5673,7 +5733,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Feuerplan",
+    "name": "Planfeuer",
     "ap": 0,
     "atk": 0,
     "def": 0,
@@ -5718,14 +5778,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Sichtlinie",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Decke eine verdeckte gegnerische Einheit auf. Ziehe 1 Karte.",
+    "text": "Decke eine verdeckte gegnerische Einheit auf. Ziehe 2 Karten.",
     "effects": [
       {
         "code": "REVEAL",
@@ -5736,7 +5796,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
       {
         "code": "DRAW",
         "param": {
-          "value": 1
+          "value": 2
         }
       }
     ],
@@ -5833,20 +5893,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Befehlskopien",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Dein nächster Soforteinsatz kostet 1 AP weniger (mind. 0).",
+    "text": "Dein nächster Soforteinsatz kostet 2 AP weniger (mind. 0).",
     "effects": [
       {
         "code": "COST_NEXT",
         "param": {
           "type": "Soforteinsatz",
-          "amount": 1
+          "amount": 2
         }
       }
     ],
@@ -5903,19 +5963,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Synchronfeuer",
-    "ap": 2,
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "def": 2,
+          "def": 1,
           "until": "turn"
         }
       }
@@ -5981,20 +6041,20 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Planfestigung",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende, +2 DEF.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
           "atk": 1,
-          "def": 1,
+          "def": 2,
           "until": "turn"
         }
       }
@@ -6090,14 +6150,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Letzte Lieferung",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Deine nächste Einheit kostet 1 AP weniger (mind. 1).",
+    "text": "Wähle eine eigene Fronteinheit: +1 ATK bis Zugende. Deine nächste Einheit kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
     "effects": [
       {
         "code": "COST_NEXT",
@@ -6111,6 +6171,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
         "param": {
           "atk": 1,
           "until": "turn"
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -6133,21 +6199,21 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Marsch aus dem Vollen",
-    "ap": 0,
+    "name": "Gewaltmarsch",
+    "ap": 1,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende.",
+    "text": "Wähle einen eigenen Abschnitt: Einheiten dort +2 ATK bis Zugende.",
     "effects": [
       {
         "code": "BUFF_SECTION",
         "targetSide": "own",
         "param": {
-          "atk": 1,
+          "atk": 2,
           "filter": null,
           "until": "turn"
         }
@@ -6378,7 +6444,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Keine Sterne",
-    "ap": 1,
+    "ap": 0,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
@@ -6526,14 +6592,14 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Warnfeuer",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine gegnerische Fronteinheit: −1 ATK bis Zugende.",
+    "text": "Wähle eine gegnerische Fronteinheit: −1 ATK bis Zugende. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "BUFF",
@@ -6541,6 +6607,12 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
           "atk": -1,
           "until": "turn",
           "enemy": true
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -6674,20 +6746,26 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Passöffnen",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: versetze sie seitlich auf ein freies Feld derselben Reihe.",
+    "text": "Wähle eine eigene Fronteinheit: versetze sie seitlich auf ein freies Feld derselben Reihe. Ziehe 1 Karte.",
     "effects": [
       {
         "code": "MOVE_SLOTS",
         "param": {
           "slots": 1,
           "count": 1
+        }
+      },
+      {
+        "code": "DRAW",
+        "param": {
+          "value": 1
         }
       }
     ],
@@ -6786,7 +6864,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Lauer",
+    "name": "Auf der Lauer",
     "ap": 3,
     "atk": 0,
     "def": 0,
@@ -6828,7 +6906,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Verteilte Stellung",
+    "name": "Verstreute Posten",
     "ap": 3,
     "atk": 0,
     "def": 0,
@@ -6946,7 +7024,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Etappensicherung",
+    "name": "Etappenschutz",
     "ap": 3,
     "atk": 0,
     "def": 0,
@@ -6984,7 +7062,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Rasten",
+    "name": "Rastpause",
     "ap": 2,
     "atk": 0,
     "def": 0,
@@ -7245,19 +7323,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Zuteilung",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: heile 1.",
+    "text": "Wähle eine eigene Fronteinheit: heile 2.",
     "effects": [
       {
         "code": "HEAL",
         "param": {
-          "value": 1
+          "value": 2
         }
       }
     ],
@@ -7281,19 +7359,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Rückruf",
-    "ap": 2,
+    "ap": 3,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: heile 2.",
+    "text": "Wähle eine eigene Fronteinheit: heile 3.",
     "effects": [
       {
         "code": "HEAL",
         "param": {
-          "value": 2
+          "value": 3
         }
       }
     ],
@@ -7469,19 +7547,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Bergung",
-    "ap": 1,
+    "ap": 2,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: heile 2.",
+    "text": "Wähle eine eigene Fronteinheit: heile 3.",
     "effects": [
       {
         "code": "HEAL",
         "param": {
-          "value": 2
+          "value": 3
         }
       }
     ],
@@ -7793,7 +7871,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Abnutzung",
+    "name": "Zermürbung",
     "ap": 3,
     "atk": 0,
     "def": 0,
@@ -7870,7 +7948,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Punktfeuer",
+    "name": "Punktziel",
     "ap": 3,
     "atk": 0,
     "def": 0,
@@ -7903,7 +7981,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "status": "live",
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
-    "name": "Lokalisierung",
+    "name": "Peilung",
     "ap": 2,
     "atk": 0,
     "def": 0,
@@ -8070,19 +8148,19 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Trotz",
-    "ap": 1,
+    "ap": 0,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine eigene Fronteinheit: +2 DEF.",
+    "text": "Wähle eine eigene Fronteinheit: +1 DEF.",
     "effects": [
       {
         "code": "BUFF",
         "param": {
-          "def": 2,
+          "def": 1,
           "until": "turn"
         }
       }
@@ -8107,7 +8185,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "Soforteinsatz",
     "name": "Quelle nennen",
-    "ap": 1,
+    "ap": 0,
     "atk": 0,
     "def": 0,
     "verdeckt_ok": false,

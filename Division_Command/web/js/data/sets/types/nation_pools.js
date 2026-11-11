@@ -22,8 +22,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-01",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
-  "def": 3,
+  "atk": 3,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Heranführung"
@@ -56,7 +56,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 1,
-  "def": 2,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Erbitterung"
@@ -88,8 +88,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-03",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
-  "def": 2,
+  "atk": 1,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Zuteilung"
@@ -124,7 +124,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-04",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
@@ -153,7 +153,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-05",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 3,
+  "atk": 2,
   "def": 3,
   "verdeckt_ok": true
  },
@@ -183,8 +183,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-06",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
-  "def": 4,
+  "atk": 1,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -246,7 +246,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-08",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
+  "atk": 2,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -281,8 +281,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-09",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
-  "def": 5,
+  "atk": 2,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Ablösung"
@@ -310,7 +310,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-10",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 4,
+  "atk": 3,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -345,8 +345,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-11",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 4,
-  "def": 6,
+  "atk": 3,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Ablösung",
@@ -360,7 +360,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Feuerplanrohr",
-  "ap": 3,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -377,8 +377,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-12",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 3,
-  "def": 2,
+  "atk": 1,
+  "def": 1,
   "verdeckt_ok": true
  },
  {
@@ -433,7 +433,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-14",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
+  "atk": 1,
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
@@ -469,7 +469,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-15",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
+  "atk": 1,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -508,7 +508,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-16",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 5,
+  "atk": 4,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -522,7 +522,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Vermessungstrupp",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -546,8 +546,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-17",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
-  "def": 1,
+  "atk": 3,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -557,7 +557,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Lagebildmelder",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -581,8 +581,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-18",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
-  "def": 2,
+  "atk": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Zuteilung"
@@ -595,7 +595,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Grenzbeobachter",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "einheit",
@@ -625,8 +625,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-19",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 2,
-  "def": 2,
+  "atk": 3,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Hinterhalt",
@@ -660,7 +660,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-20",
   "art_status": "platzhalter",
   "klasse": "Elite",
-  "atk": 4,
+  "atk": 3,
   "def": 4,
   "verdeckt_ok": true
  },
@@ -711,15 +711,25 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
   "rules": [
-   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+   "Beim Ausspielen wählst du einen eigenen Frontabschnitt. Solange diese Unterstützung liegt, haben deine Einheiten in diesem Abschnitt +1 ATK."
   ],
   "effects": [
    {
     "code": "TURN_DRAW",
     "param": {
      "n": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "aura",
+     "scope": "section",
+     "atk": 1,
+     "def": 0
     }
    }
   ],
@@ -739,14 +749,22 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Jeder Schaden an deinen Fronteinheiten −1.",
+  "text": "Jeder Schaden an deinen Fronteinheiten −1. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "rules": [
-   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich."
+   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich.",
+   "Zu Beginn jedes deiner Züge heilt eine beschädigte eigene Fronteinheit bis zu 1 DEF (höchstens bis zur maximalen DEF), solange diese Unterstützung liegt."
   ],
   "effects": [
    {
     "code": "REDUCE_DAMAGE",
     "param": {
+     "n": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "turnheal",
      "n": 1
     }
    }
@@ -797,14 +815,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Formale Freigabe",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft.",
+  "text": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
@@ -813,6 +832,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "atk": 1,
      "def": 1,
      "until": "turn"
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -827,20 +853,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Sachstandsbericht",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 2 Karten.",
+  "text": "Ziehe 2 Karten. Heile 1 DEF an einer eigenen Fronteinheit.",
   "rules": [
-   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "HEAL",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -860,15 +893,23 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "text": "Heile 1 DEF an einer eigenen Fronteinheit. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
     "code": "HEAL",
     "param": {
-     "value": 2
+     "value": 1
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -883,15 +924,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Beweisaufnahme",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Ziehe 1 Karte.",
+  "text": "Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Ziehe 2 Karten.",
   "rules": [
    "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
@@ -903,7 +944,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    {
     "code": "DRAW",
     "param": {
-     "value": 1
+     "value": 2
     }
    }
   ],
@@ -923,15 +964,22 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -978,7 +1026,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Methodischer Vorstoß",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
@@ -1015,10 +1063,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
    "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
@@ -1033,6 +1082,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "value": 1
     }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
+    }
    }
   ],
   "flavor": "Ausgeschrieben im Frieden, geliefert im Krieg.",
@@ -1046,14 +1101,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Dienstweg",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 2, dann wirf deine älteste Handkarte ab.",
+  "text": "Ziehe 2, dann wirf deine älteste Handkarte ab. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof."
+   "Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
@@ -1061,6 +1117,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "draw": 2,
      "discard": 1
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -1110,21 +1173,29 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Stahlhelm Bundesnorm",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +1 ATK und +2 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 2
+     "atk": 1,
+     "def": 2,
+     "only": "infanterie"
+    }
+   },
+   {
+    "code": "ON_DESTROY_DRAW",
+    "param": {
+     "draw": 1
     }
    }
   ],
@@ -1139,14 +1210,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Dienstgewehr Muster Vier",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK.",
+  "text": "Träger +1 ATK. Solange der Träger beschädigt ist: +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +1 ATK."
   ],
   "effects": [
    {
@@ -1155,6 +1227,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "atk": 1,
      "def": 0,
      "only": "infanterie"
+    }
+   },
+   {
+    "code": "EQUIP_COND_ATK",
+    "param": {
+     "atk": 1,
+     "ifDamaged": true
     }
    }
   ],
@@ -1169,15 +1248,16 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Prüfplakette",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
+  "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
    "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
-   "Wird der Träger zerstört, ziehst du 1 Karte."
+   "Wird der Träger zerstört, ziehst du 1 Karte.",
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
    {
@@ -1192,6 +1272,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "draw": 1
     }
+   },
+   {
+    "code": "CARRIER_FIRST_ATTACK_ATK",
+    "param": {
+     "atk": 1
+    }
    }
   ],
   "flavor": "Selbst der Verlust wird dokumentiert.",
@@ -1205,7 +1291,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Schusstafel Bezirk",
-  "ap": 1,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "ausruestung"
@@ -1238,9 +1324,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 DEF.",
+  "text": "Träger +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
    "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
@@ -1248,8 +1334,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 1
+     "atk": 1,
+     "def": 0
     }
    },
    {
@@ -1273,7 +1359,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Zielfernrohr Norm",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
@@ -1314,7 +1400,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ELD-01",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -1377,7 +1463,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ELD-03",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
@@ -1411,7 +1497,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ELD-04",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 3,
+  "atk": 2,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -1465,7 +1551,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 1,
-  "def": 2,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Abschirmung"
@@ -1529,7 +1615,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 2,
-  "def": 4,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Abschirmung"
@@ -1592,7 +1678,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ELD-10",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
+  "atk": 2,
   "def": 4,
   "verdeckt_ok": true
  },
@@ -1739,8 +1825,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ELD-15",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 3,
-  "def": 3,
+  "atk": 4,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -1790,7 +1876,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Grenzreiter",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -1814,8 +1900,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ELD-17",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
-  "def": 1,
+  "atk": 2,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Zuteilung"
@@ -1969,20 +2055,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Sperrgürtel",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Gegnerische Fronteinheiten −1 ATK.",
+  "text": "Gegnerische Fronteinheiten −1 ATK. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "rules": [
-   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag)."
+   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag).",
+   "Zu Beginn jedes deiner Züge heilt eine beschädigte eigene Fronteinheit bis zu 1 DEF (höchstens bis zur maximalen DEF), solange diese Unterstützung liegt."
   ],
   "effects": [
    {
     "code": "AURA_ENEMY_ATK",
     "param": {
      "atk": -1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "turnheal",
+     "n": 1
     }
    }
   ],
@@ -1997,19 +2091,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Pionierdepot",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Jeder Schaden an deinen Fronteinheiten −1.",
+  "text": "Jeder Schaden an deinen Fronteinheiten −1. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "rules": [
-   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich."
+   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich.",
+   "Zu Beginn jedes deiner Züge heilt eine beschädigte eigene Fronteinheit bis zu 1 DEF (höchstens bis zur maximalen DEF), solange diese Unterstützung liegt."
   ],
   "effects": [
    {
     "code": "REDUCE_DAMAGE",
     "param": {
+     "n": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "turnheal",
      "n": 1
     }
    }
@@ -2092,19 +2194,26 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Königlicher Befehl",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.",
+  "text": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen. Heile 1 DEF an einer eigenen Fronteinheit.",
   "rules": [
-   "Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten)."
+   "Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
   ],
   "effects": [
    {
     "code": "EXTRA_ATTACK",
     "param": {}
+   },
+   {
+    "code": "HEAL",
+    "param": {
+     "value": 1
+    }
    }
   ],
   "flavor": "Die Antwort kommt sofort.",
@@ -2118,20 +2227,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Feldlazarett der Krone",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "text": "Heile 3 DEF an einer eigenen Fronteinheit.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 3 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
   ],
   "effects": [
    {
     "code": "HEAL",
     "param": {
-     "value": 2
+     "value": 3
     }
    }
   ],
@@ -2176,20 +2285,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Gegenstoß aus der Reserve",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "text": "Eine eigene Fronteinheit: +3 ATK bis Zugende.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +3 ATK bis zum Ende dieses Zuges."
   ],
   "effects": [
    {
     "code": "BUFF",
     "param": {
-     "atk": 2,
+     "atk": 3,
      "def": 0,
      "until": "turn"
     }
@@ -2206,7 +2315,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Mine im Weg",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
@@ -2234,18 +2343,25 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Hofbericht",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 1 Karte.",
+  "text": "Ziehe 1 Karte. Heile 1 DEF an einer eigenen Fronteinheit.",
   "rules": [
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
   ],
   "effects": [
    {
     "code": "DRAW",
+    "param": {
+     "value": 1
+    }
+   },
+   {
+    "code": "HEAL",
     "param": {
      "value": 1
     }
@@ -2294,14 +2410,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Kronrat tagt",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 3, dann wirf deine älteste Handkarte ab.",
+  "text": "Ziehe 3, dann wirf deine älteste Handkarte ab. Ziehe 1 Karte.",
   "rules": [
-   "Ziehe 3 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof."
+   "Ziehe 3 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
@@ -2309,6 +2426,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "draw": 3,
      "discard": 1
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -2360,16 +2483,17 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +3 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +3 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
      "atk": 0,
-     "def": 2
+     "def": 3,
+     "only": "infanterie"
     }
    }
   ],
@@ -2490,20 +2614,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Bajonett der Garde",
-  "ap": 1,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "Solange der Träger beschädigt ist: +2 ATK.",
+  "text": "Solange der Träger beschädigt ist: +3 ATK.",
   "rules": [
-   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +2 ATK."
+   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +3 ATK."
   ],
   "effects": [
    {
     "code": "EQUIP_COND_ATK",
     "param": {
-     "atk": 2,
+     "atk": 3,
      "ifDamaged": true
     }
    }
@@ -2524,16 +2648,16 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK und +1 DEF.",
+  "text": "Träger +2 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 1,
-     "def": 1
+     "atk": 2,
+     "def": 0
     }
    }
   ],
@@ -2563,8 +2687,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ROT-01",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
-  "def": 3,
+  "atk": 3,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -2587,8 +2711,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ROT-02",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
-  "def": 2,
+  "atk": 3,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Heranführung"
@@ -2621,7 +2745,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 4,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -2677,8 +2801,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ROT-05",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 3,
-  "def": 3,
+  "atk": 4,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -2715,7 +2839,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Erbpanzer Kronlinie",
-  "ap": 3,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -2730,8 +2854,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ROT-07",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
-  "def": 3,
+  "atk": 2,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -2760,7 +2884,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 5,
-  "def": 3,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -2797,8 +2921,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ROT-09",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 5,
-  "def": 4,
+  "atk": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -2862,7 +2986,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 2,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Durchschlag"
@@ -2923,8 +3047,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ROT-13",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
-  "def": 3,
+  "atk": 3,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Fernschuss"
@@ -2937,7 +3061,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Erbmörser",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -2954,7 +3078,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ROT-14",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
+  "atk": 4,
   "def": 1,
   "verdeckt_ok": true
  },
@@ -2982,8 +3106,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ROT-15",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 5,
-  "def": 2,
+  "atk": 6,
+  "def": 1,
   "verdeckt_ok": true
  },
  {
@@ -3033,7 +3157,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Stabsmelder",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -3057,7 +3181,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ROT-17",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
+  "atk": 3,
   "def": 1,
   "verdeckt_ok": true
  },
@@ -3129,7 +3253,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
   "atk": 1,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -3160,7 +3284,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 4,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff",
@@ -3195,7 +3319,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 5,
-  "def": 5,
+  "def": 6,
   "verdeckt_ok": true
  },
  {
@@ -3210,14 +3334,22 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "rules": [
-   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+   "Zu Beginn jedes deiner Züge heilt eine beschädigte eigene Fronteinheit bis zu 1 DEF (höchstens bis zur maximalen DEF), solange diese Unterstützung liegt."
   ],
   "effects": [
    {
     "code": "TURN_DRAW",
     "param": {
+     "n": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "turnheal",
      "n": 1
     }
    }
@@ -3233,20 +3365,30 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Stabszentrale Erbe",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: +1 AP.",
+  "text": "Zu Beginn deines Zuges: +1 AP. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
   "rules": [
-   "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt."
+   "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt.",
+   "Beim Ausspielen wählst du einen eigenen Frontabschnitt. Solange diese Unterstützung liegt, haben deine Einheiten in diesem Abschnitt +1 ATK."
   ],
   "effects": [
    {
     "code": "TURN_AP",
     "param": {
      "ap": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "aura",
+     "scope": "section",
+     "atk": 1,
+     "def": 0
     }
    }
   ],
@@ -3261,20 +3403,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Gebündelte Front",
-  "ap": 4,
+  "ap": 5,
   "rarity": "gold",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Deine Fronteinheiten +1 ATK.",
+  "text": "Deine Fronteinheiten +1 ATK. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "rules": [
-   "Solange diese Unterstützung liegt, haben alle deine Fronteinheiten +1 ATK."
+   "Solange diese Unterstützung liegt, haben alle deine Fronteinheiten +1 ATK.",
+   "Zu Beginn jedes deiner Züge heilt eine beschädigte eigene Fronteinheit bis zu 1 DEF (höchstens bis zur maximalen DEF), solange diese Unterstützung liegt."
   ],
   "effects": [
    {
     "code": "AURA_FRONT_ATK",
     "param": {
      "atk": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "turnheal",
+     "n": 1
     }
    }
   ],
@@ -3289,14 +3439,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Schwerpunkt setzen",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.",
+  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung)."
+   "Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
@@ -3307,6 +3458,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "filter": null,
      "until": "turn",
      "targetSide": "own"
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -3321,14 +3479,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Ablösung vorziehen",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "rules": [
-   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
   ],
   "effects": [
    {
@@ -3336,6 +3495,14 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "type": "Einheit",
      "amount": 1
+    }
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 0,
+     "def": 1,
+     "until": "turn"
     }
    }
   ],
@@ -3350,7 +3517,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Frische Kräfte",
-  "ap": 1,
+  "ap": 0,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
@@ -3378,20 +3545,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Konzentrierter Stoß",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF dauerhaft.",
+  "text": "Eine eigene Fronteinheit: +3 ATK bis Zugende, +1 DEF dauerhaft.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +3 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
   ],
   "effects": [
    {
     "code": "BUFF",
     "param": {
-     "atk": 2,
+     "atk": 3,
      "def": 1,
      "until": "turn"
     }
@@ -3408,19 +3575,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Nachstoß",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.",
+  "text": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen. Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "rules": [
-   "Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten)."
+   "Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
   ],
   "effects": [
    {
     "code": "EXTRA_ATTACK",
     "param": {}
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 0,
+     "def": 1,
+     "until": "turn"
+    }
    }
   ],
   "flavor": "Der Schwerpunkt hält den Druck.",
@@ -3434,20 +3610,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Umschlag Flussrot",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 2 Karten.",
+  "text": "Ziehe 2 Karten. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -3462,14 +3646,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Stabsbesprechung",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 2, dann wirf deine älteste Handkarte ab.",
+  "text": "Ziehe 2, dann wirf deine älteste Handkarte ab. Ziehe 1 Karte.",
   "rules": [
-   "Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof."
+   "Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
@@ -3477,6 +3662,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "draw": 2,
      "discard": 1
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -3491,20 +3682,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Gezieltes Feuer",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
     }
    }
   ],
@@ -3592,16 +3790,17 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK.",
+  "text": "Träger +2 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 1,
-     "def": 0
+     "atk": 2,
+     "def": 0,
+     "only": "infanterie"
     }
    }
   ],
@@ -3621,10 +3820,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +2 DEF.",
   "rules": [
    "Wird der Träger zerstört, ziehst du 1 Karte.",
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -3637,7 +3836,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "code": "EQUIP_STAT",
     "param": {
      "atk": 0,
-     "def": 1
+     "def": 2,
+     "only": "infanterie"
     }
    }
   ],
@@ -3652,20 +3852,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Stabskarte Erbe",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Erster Angriff des Trägers: +2 ATK.",
+  "text": "Erster Angriff des Trägers: +2 ATK. Träger +1 ATK.",
   "rules": [
-   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus."
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "CARRIER_FIRST_ATTACK_ATK",
     "param": {
      "atk": 2
+    }
+   },
+   {
+    "code": "EQUIP_STAT",
+    "param": {
+     "atk": 1,
+     "def": 0
     }
    }
   ],
@@ -3680,21 +3888,29 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Ablösungsgurt",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +1 ATK und +1 DEF. Solange der Träger beschädigt ist: +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +1 ATK."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 2
+     "atk": 1,
+     "def": 1
+    }
+   },
+   {
+    "code": "EQUIP_COND_ATK",
+    "param": {
+     "atk": 1,
+     "ifDamaged": true
     }
    }
   ],
@@ -3709,20 +3925,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Schwerpunktoptik",
-  "ap": 1,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "Angriffe des Trägers: +1 Schaden.",
+  "text": "Angriffe des Trägers: +1 Schaden. Träger +1 ATK.",
   "rules": [
-   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_ON_ATTACK_DAMAGE",
     "param": {
      "bonus": 1
+    }
+   },
+   {
+    "code": "EQUIP_STAT",
+    "param": {
+     "atk": 1,
+     "def": 0
     }
    }
   ],
@@ -4043,7 +4267,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 2,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -4179,7 +4403,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 3,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Platztausch",
@@ -4428,7 +4652,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 5,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Heranführung",
@@ -4465,7 +4689,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 4,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Erbitterung",
@@ -4598,20 +4822,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Kurzer Schlag",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -4654,15 +4885,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Zeitgewinn",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 2 Karten.",
   "rules": [
    "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
@@ -4675,7 +4906,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    {
     "code": "DRAW",
     "param": {
-     "value": 1
+     "value": 2
     }
    }
   ],
@@ -4690,19 +4921,26 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Initiative ergreifen",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.",
+  "text": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen. Ziehe 1 Karte.",
   "rules": [
-   "Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten)."
+   "Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EXTRA_ATTACK",
     "param": {}
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
+    }
    }
   ],
   "flavor": "Wer zögert, verliert das Fenster.",
@@ -4776,21 +5014,21 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Schnelle Verlegung",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft.",
+  "text": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +2 DEF dauerhaft.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges. Sie erhält +2 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
   ],
   "effects": [
    {
     "code": "BUFF",
     "param": {
      "atk": 1,
-     "def": 1,
+     "def": 2,
      "until": "turn"
     }
    }
@@ -4972,20 +5210,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Zielmarker",
-  "ap": 1,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "Angriffe des Trägers: +1 Schaden.",
+  "text": "Angriffe des Trägers: +2 Schaden.",
   "rules": [
-   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
+   "Jeder Angriff des Trägers verursacht 2 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
   ],
   "effects": [
    {
     "code": "EQUIP_ON_ATTACK_DAMAGE",
     "param": {
-     "bonus": 1
+     "bonus": 2
     }
    }
   ],
@@ -5109,7 +5347,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 1,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Nachsetzen"
@@ -5169,7 +5407,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 3,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -5202,7 +5440,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 2,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -5225,8 +5463,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ORT-06",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 1,
-  "def": 4,
+  "atk": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -5254,7 +5492,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ORT-07",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 2,
+  "atk": 3,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -5293,7 +5531,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 4,
-  "def": 3,
+  "def": 5,
   "verdeckt_ok": true
  },
  {
@@ -5319,7 +5557,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 3,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Gefechtsbereit"
@@ -5357,7 +5595,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 3,
-  "def": 2,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Durchschlag"
@@ -5395,7 +5633,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 5,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Durchschlag"
@@ -5408,7 +5646,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Punktfeuerbatterie",
-  "ap": 3,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -5425,8 +5663,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ORT-12",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 3,
-  "def": 2,
+  "atk": 2,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Nachsetzen"
@@ -5465,7 +5703,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 5,
-  "def": 3,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Durchschlag"
@@ -5532,7 +5770,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 4,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -5542,7 +5780,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Nachmessbatterie",
-  "ap": 3,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -5559,8 +5797,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ORT-16",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
-  "def": 3,
+  "atk": 1,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -5570,7 +5808,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Peilstation mobil",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -5594,8 +5832,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ORT-17",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
-  "def": 1,
+  "atk": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Fernschuss"
@@ -5633,7 +5871,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
   "atk": 2,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Fernschuss"
@@ -5670,8 +5908,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ORT-19",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
-  "def": 2,
+  "atk": 2,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Zuteilung"
@@ -5710,7 +5948,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 4,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true
  },
  {
@@ -5740,7 +5978,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ORT-21",
   "art_status": "platzhalter",
   "klasse": "Elite",
-  "atk": 3,
+  "atk": 4,
   "def": 5,
   "verdeckt_ok": true
  },
@@ -5751,20 +5989,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Messnetz",
-  "ap": 3,
+  "ap": 6,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Deine Fronteinheiten +1 ATK.",
   "rules": [
-   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+   "Solange diese Unterstützung liegt, haben alle deine Fronteinheiten +1 ATK."
   ],
   "effects": [
    {
     "code": "TURN_DRAW",
     "param": {
      "n": 1
+    }
+   },
+   {
+    "code": "AURA_FRONT_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -5779,20 +6024,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Klinikverfahren",
-  "ap": 3,
+  "ap": 6,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Jeder Schaden an deinen Fronteinheiten −1.",
+  "text": "Jeder Schaden an deinen Fronteinheiten −1. Deine Fronteinheiten +1 ATK.",
   "rules": [
-   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich."
+   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich.",
+   "Solange diese Unterstützung liegt, haben alle deine Fronteinheiten +1 ATK."
   ],
   "effects": [
    {
     "code": "REDUCE_DAMAGE",
     "param": {
      "n": 1
+    }
+   },
+   {
+    "code": "AURA_FRONT_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -5842,7 +6094,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Messung",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
@@ -5875,15 +6127,23 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 1 Schaden zu. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 1 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
-     "value": 2
+     "value": 1
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -5933,20 +6193,31 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Klarstellung",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 1 Karte.",
+  "text": "Ziehe 1 Karte. Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.",
   "rules": [
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
      "value": 1
+    }
+   },
+   {
+    "code": "BUFF_SECTION",
+    "targetSide": "own",
+    "param": {
+     "def": 1,
+     "filter": null,
+     "until": "turn",
+     "targetSide": "own"
     }
    }
   ],
@@ -5961,20 +6232,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Nachmessen",
-  "ap": 1,
+  "ap": 0,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 2, dann wirf deine älteste Handkarte ab.",
+  "text": "Ziehe 1, dann wirf deine älteste Handkarte ab.",
   "rules": [
-   "Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof."
+   "Ziehe 1 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof."
   ],
   "effects": [
    {
     "code": "DRAW_DISCARD",
     "param": {
-     "draw": 2,
+     "draw": 1,
      "discard": 1
     }
    }
@@ -5990,14 +6261,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Zielkorrektur",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende. Heile 1 DEF an einer eigenen Fronteinheit.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
   ],
   "effects": [
    {
@@ -6006,6 +6278,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "atk": 2,
      "def": 0,
      "until": "turn"
+    }
+   },
+   {
+    "code": "HEAL",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -6025,15 +6303,22 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 2 Karten.",
+  "text": "Ziehe 2 Karten. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
-   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
     }
    }
   ],
@@ -6048,20 +6333,29 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Laborversorgung",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "text": "Heile 2 DEF an einer eigenen Fronteinheit. Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
   ],
   "effects": [
    {
     "code": "HEAL",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 0,
+     "def": 1,
+     "until": "turn"
     }
    }
   ],
@@ -6104,14 +6398,14 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Nachbesetzung nach Maß",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 2 AP weniger (mind. 1). Ziehe 1 Karte.",
   "rules": [
-   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 2 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
    "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
@@ -6119,7 +6413,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "code": "COST_NEXT",
     "param": {
      "type": "Einheit",
-     "amount": 1
+     "amount": 2
     }
    },
    {
@@ -6140,20 +6434,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Optik Feinmessung",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Angriffe des Trägers: +1 Schaden.",
+  "text": "Angriffe des Trägers: +1 Schaden. Träger +1 DEF.",
   "rules": [
-   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_ON_ATTACK_DAMAGE",
     "param": {
      "bonus": 1
+    }
+   },
+   {
+    "code": "EQUIP_STAT",
+    "param": {
+     "atk": 0,
+     "def": 1
     }
    }
   ],
@@ -6168,15 +6470,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Peilantenne",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
+  "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 2 Karten.",
   "rules": [
    "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
-   "Wird der Träger zerstört, ziehst du 1 Karte."
+   "Wird der Träger zerstört, ziehst du 2 Karten."
   ],
   "effects": [
    {
@@ -6189,7 +6491,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    {
     "code": "ON_DESTROY_DRAW",
     "param": {
-     "draw": 1
+     "draw": 2
     }
    }
   ],
@@ -6204,20 +6506,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Zielrechner tragbar",
-  "ap": 1,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "Erster Angriff des Trägers: +2 ATK.",
+  "text": "Erster Angriff des Trägers: +2 ATK. Träger +1 DEF.",
   "rules": [
-   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus."
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "CARRIER_FIRST_ATTACK_ATK",
     "param": {
      "atk": 2
+    }
+   },
+   {
+    "code": "EQUIP_STAT",
+    "param": {
+     "atk": 0,
+     "def": 1
     }
    }
   ],
@@ -6237,17 +6547,18 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
+  "text": "Träger +1 ATK und +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 2
+     "atk": 1,
+     "def": 2,
+     "only": "infanterie"
     }
    },
    {
@@ -6269,14 +6580,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Messgewehr",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK.",
+  "text": "Träger +1 ATK. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
    {
@@ -6285,6 +6597,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "atk": 1,
      "def": 0,
      "only": "infanterie"
+    }
+   },
+   {
+    "code": "CARRIER_FIRST_ATTACK_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -6299,21 +6617,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Feldlaborkoffer",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +1 ATK und +1 DEF. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 2
+     "atk": 1,
+     "def": 1
+    }
+   },
+   {
+    "code": "CARRIER_FIRST_ATTACK_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -6364,7 +6689,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Systemtreue Linie",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -6379,8 +6704,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VES-02",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
-  "def": 3,
+  "atk": 5,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -6412,8 +6737,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VES-03",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
-  "def": 2,
+  "atk": 3,
+  "def": 1,
   "verdeckt_ok": true
  },
  {
@@ -6653,7 +6978,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 3,
-  "def": 6,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Abschirmung"
@@ -6789,8 +7114,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VES-14",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
-  "def": 2,
+  "atk": 3,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Durchschlag"
@@ -6820,8 +7145,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VES-15",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 4,
-  "def": 3,
+  "atk": 2,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -6911,7 +7236,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Doppelagent",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "einheit",
@@ -6933,8 +7258,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VES-18",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 2,
-  "def": 1,
+  "atk": 3,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -6978,7 +7303,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
   "atk": 1,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Platztausch",
@@ -7016,7 +7341,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 4,
-  "def": 5,
+  "def": 6,
   "verdeckt_ok": true,
   "keywords": [
    "Nachsetzen"
@@ -7051,7 +7376,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 4,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true
  },
  {
@@ -7061,20 +7386,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Desinformationsnetz",
-  "ap": 3,
+  "ap": 6,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Gegnerische Fronteinheiten −1 ATK.",
+  "text": "Gegnerische Fronteinheiten −1 ATK. Deine Fronteinheiten +1 ATK.",
   "rules": [
-   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag)."
+   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag).",
+   "Solange diese Unterstützung liegt, haben alle deine Fronteinheiten +1 ATK."
   ],
   "effects": [
    {
     "code": "AURA_ENEMY_ATK",
     "param": {
      "atk": -1
+    }
+   },
+   {
+    "code": "AURA_FRONT_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -7089,20 +7421,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Systemarchiv",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Gegnerische Fronteinheiten −1 ATK.",
   "rules": [
-   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag)."
   ],
   "effects": [
    {
     "code": "TURN_DRAW",
     "param": {
      "n": 1
+    }
+   },
+   {
+    "code": "AURA_ENEMY_ATK",
+    "param": {
+     "atk": -1
     }
    }
   ],
@@ -7152,7 +7491,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Gefütterter Köder",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
@@ -7184,14 +7523,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Falsche Meldung",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 2, dann wirf deine älteste Handkarte ab.",
+  "text": "Ziehe 2, dann wirf deine älteste Handkarte ab. Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "rules": [
-   "Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof."
+   "Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges."
   ],
   "effects": [
    {
@@ -7199,6 +7539,14 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "draw": 2,
      "discard": 1
+    }
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 1,
+     "def": 0,
+     "until": "turn"
     }
    }
   ],
@@ -7218,15 +7566,23 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -7241,7 +7597,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Enttarnung",
-  "ap": 1,
+  "ap": 0,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
@@ -7269,7 +7625,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Zug im Spiel",
-  "ap": 2,
+  "ap": 1,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
@@ -7295,20 +7651,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Schattenoperation",
-  "ap": 2,
+  "ap": 1,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "text": "Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges."
   ],
   "effects": [
    {
     "code": "BUFF",
     "param": {
-     "atk": 2,
+     "atk": 1,
      "def": 0,
      "until": "turn"
     }
@@ -7325,20 +7681,29 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Systemzugriff",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 2 Karten.",
+  "text": "Ziehe 2 Karten. Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "rules": [
-   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 0,
+     "def": 1,
+     "until": "turn"
     }
    }
   ],
@@ -7353,15 +7718,16 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Verdeckter Rabatt",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte. Heile 1 DEF an einer eigenen Fronteinheit.",
   "rules": [
    "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
   ],
   "effects": [
    {
@@ -7373,6 +7739,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
    },
    {
     "code": "DRAW",
+    "param": {
+     "value": 1
+    }
+   },
+   {
+    "code": "HEAL",
     "param": {
      "value": 1
     }
@@ -7453,14 +7825,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Tarnanzug Velis",
-  "ap": 1,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "",
+  "text": "Erster Angriff des Trägers: +2 ATK.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus.",
    "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
@@ -7468,6 +7841,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "code": "EQUIP_IGNORE_FIRST_DAMAGE",
     "param": {
      "untouchableFirst": true
+    }
+   },
+   {
+    "code": "CARRIER_FIRST_ATTACK_ATK",
+    "param": {
+     "atk": 2
     }
    }
   ],
@@ -7485,20 +7864,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Falsche Papiere",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.",
   "rules": [
-   "Wird der Träger zerstört, ziehst du 1 Karte."
+   "Wird der Träger zerstört, ziehst du 1 Karte.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "ON_DESTROY_DRAW",
     "param": {
      "draw": 1
+    }
+   },
+   {
+    "code": "EQUIP_STAT",
+    "param": {
+     "atk": 0,
+     "def": 1
     }
    }
   ],
@@ -7513,14 +7900,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Störsender",
-  "ap": 1,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
+  "text": "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
-   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
+   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
    {
@@ -7528,6 +7916,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "amount": 2,
      "once": true
+    }
+   },
+   {
+    "code": "CARRIER_FIRST_ATTACK_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -7547,15 +7941,22 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Erster Angriff des Trägers: +2 ATK.",
+  "text": "Erster Angriff des Trägers: +1 ATK. Angriffe des Trägers: +1 Schaden.",
   "rules": [
-   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus."
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus.",
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
   ],
   "effects": [
    {
     "code": "CARRIER_FIRST_ATTACK_ATK",
     "param": {
-     "atk": 2
+     "atk": 1
+    }
+   },
+   {
+    "code": "EQUIP_ON_ATTACK_DAMAGE",
+    "param": {
+     "bonus": 1
     }
    }
   ],
@@ -7570,21 +7971,29 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Systemausweis",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +1 ATK und +2 DEF. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 2
+     "atk": 1,
+     "def": 2,
+     "only": "infanterie"
+    }
+   },
+   {
+    "code": "CARRIER_FIRST_ATTACK_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -7599,20 +8008,29 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Hinterhaltsmesser",
-  "ap": 1,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "Angriffe des Trägers: +1 Schaden.",
+  "text": "Angriffe des Trägers: +1 Schaden. Träger +2 ATK.",
   "rules": [
-   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_ON_ATTACK_DAMAGE",
     "param": {
      "bonus": 1
+    }
+   },
+   {
+    "code": "EQUIP_STAT",
+    "param": {
+     "atk": 2,
+     "def": 0,
+     "only": "infanterie"
     }
    }
   ],
@@ -7759,7 +8177,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-KAR-05",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 4,
+  "atk": 3,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -7788,7 +8206,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-KAR-06",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 2,
   "verdeckt_ok": true
  },
@@ -7939,7 +8357,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 4,
-  "def": 2,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Gefechtsbereit"
@@ -7969,7 +8387,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-KAR-12",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 3,
+  "atk": 4,
   "def": 2,
   "verdeckt_ok": true
  },
@@ -8029,7 +8447,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 5,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -8062,7 +8480,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 3,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -8093,8 +8511,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-KAR-16",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 5,
-  "def": 3,
+  "atk": 4,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -8129,7 +8547,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
   "atk": 1,
-  "def": 1,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Gefechtsbereit"
@@ -8142,7 +8560,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Biometriespäher",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -8166,8 +8584,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-KAR-18",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 2,
-  "def": 1,
+  "atk": 3,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -8202,7 +8620,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
   "atk": 2,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -8236,7 +8654,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 6,
-  "def": 3,
+  "def": 5,
   "verdeckt_ok": true
  },
  {
@@ -8267,7 +8685,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 4,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -8280,20 +8698,30 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Medizinisch-technische Kette",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Jeder Schaden an deinen Fronteinheiten −1.",
+  "text": "Jeder Schaden an deinen Fronteinheiten −1. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
   "rules": [
-   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich."
+   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich.",
+   "Beim Ausspielen wählst du einen eigenen Frontabschnitt. Solange diese Unterstützung liegt, haben deine Einheiten in diesem Abschnitt +1 DEF."
   ],
   "effects": [
    {
     "code": "REDUCE_DAMAGE",
     "param": {
      "n": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "aura",
+     "scope": "section",
+     "atk": 0,
+     "def": 1
     }
    }
   ],
@@ -8336,20 +8764,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Implantatwerk",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: +1 AP.",
+  "text": "Zu Beginn deines Zuges: +1 AP. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "rules": [
-   "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt."
+   "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt.",
+   "Zu Beginn jedes deiner Züge heilt eine beschädigte eigene Fronteinheit bis zu 1 DEF (höchstens bis zur maximalen DEF), solange diese Unterstützung liegt."
   ],
   "effects": [
    {
     "code": "TURN_AP",
     "param": {
      "ap": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "turnheal",
+     "n": 1
     }
    }
   ],
@@ -8401,20 +8837,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Wundverschluss",
-  "ap": 1,
+  "ap": 0,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "text": "Heile 1 DEF an einer eigenen Fronteinheit.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
   ],
   "effects": [
    {
     "code": "HEAL",
     "param": {
-     "value": 2
+     "value": 1
     }
    }
   ],
@@ -8490,14 +8926,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Nervenboost",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges.",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
@@ -8506,6 +8943,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "atk": 2,
      "def": 0,
      "until": "turn"
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -8559,20 +9002,29 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Leistungsprotokoll",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 1 Karte.",
+  "text": "Ziehe 1 Karte. Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "rules": [
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
      "value": 1
+    }
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 1,
+     "def": 0,
+     "until": "turn"
     }
    }
   ],
@@ -8624,9 +9076,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
-   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
@@ -8634,6 +9087,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "type": "Einheit",
      "amount": 1
+    }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
     }
    }
   ],
@@ -8714,14 +9173,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Nervenverstärker",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Solange der Träger beschädigt ist: +2 ATK.",
+  "text": "Solange der Träger beschädigt ist: +2 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +2 ATK."
+   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +2 ATK.",
+   "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
    {
@@ -8729,6 +9189,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "atk": 2,
      "ifDamaged": true
+    }
+   },
+   {
+    "code": "ON_DESTROY_DRAW",
+    "param": {
+     "draw": 1
     }
    }
   ],
@@ -8743,14 +9209,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Filtermaske Karsk",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +2 DEF. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
    {
@@ -8759,6 +9226,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "atk": 0,
      "def": 2,
      "only": "infanterie"
+    }
+   },
+   {
+    "code": "CARRIER_FIRST_ATTACK_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -8902,7 +9375,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Sanitätstrupp",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -8917,8 +9390,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-CAL-02",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 1,
-  "def": 2,
+  "atk": 3,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -8941,7 +9414,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-CAL-03",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -9162,7 +9635,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-CAL-10",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
+  "atk": 2,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -9253,7 +9726,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-CAL-13",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
+  "atk": 1,
   "def": 1,
   "verdeckt_ok": true
  },
@@ -9292,7 +9765,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Sperrfeuer Fürsorge",
-  "ap": 3,
+  "ap": 4,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -9310,7 +9783,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 3,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Nachsetzen"
@@ -9344,7 +9817,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-CAL-16",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 5,
+  "atk": 4,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -9563,19 +10036,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Ruhezone",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "rules": [
-   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+   "Zu Beginn jedes deiner Züge heilt eine beschädigte eigene Fronteinheit bis zu 1 DEF (höchstens bis zur maximalen DEF), solange diese Unterstützung liegt."
   ],
   "effects": [
    {
     "code": "TURN_DRAW",
     "param": {
+     "n": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "turnheal",
      "n": 1
     }
    }
@@ -9654,21 +10135,21 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Verbandswechsel",
-  "ap": 1,
+  "ap": 0,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Heile 2 DEF an einer eigenen Fronteinheit. Ziehe 1 Karte.",
+  "text": "Heile 1 DEF an einer eigenen Fronteinheit. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.",
    "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
     "code": "HEAL",
     "param": {
-     "value": 2
+     "value": 1
     }
    },
    {
@@ -9756,15 +10237,22 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 1 Karte.",
+  "text": "Ziehe 1 Karte. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
      "value": 1
+    }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
     }
    }
   ],
@@ -9812,15 +10300,22 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
     }
    }
   ],
@@ -9962,20 +10457,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Verbandspäckchen",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
+  "text": "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 3 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
   "rules": [
-   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
+   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 3 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
   ],
   "effects": [
    {
     "code": "EQUIP_NEGATE_DAMAGE",
     "param": {
-     "amount": 2,
+     "amount": 3,
      "once": true
     }
    }
@@ -10028,17 +10523,18 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
+  "text": "Träger +1 ATK und +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 1
+     "atk": 1,
+     "def": 1,
+     "only": "infanterie"
     }
    },
    {
@@ -10132,7 +10628,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 1,
-  "def": 2,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -10188,7 +10684,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 2,
-  "def": 2,
+  "def": 1,
   "verdeckt_ok": true
  },
  {
@@ -10250,7 +10746,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-05",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 3,
+  "atk": 1,
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
@@ -10283,8 +10779,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-06",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 3,
-  "def": 4,
+  "atk": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -10314,7 +10810,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-07",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
+  "atk": 4,
   "def": 4,
   "verdeckt_ok": true
  },
@@ -10341,7 +10837,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 3,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -10369,7 +10865,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-09",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 4,
+  "atk": 5,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -10398,7 +10894,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-10",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
+  "atk": 4,
   "def": 5,
   "verdeckt_ok": true,
   "keywords": [
@@ -10434,7 +10930,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 5,
-  "def": 5,
+  "def": 6,
   "verdeckt_ok": true,
   "keywords": [
    "Gefechtsbereit",
@@ -10466,7 +10962,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 3,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -10497,7 +10993,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 2,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Nachsetzen"
@@ -10528,7 +11024,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 3,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -10555,8 +11051,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-15",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 3,
-  "def": 3,
+  "atk": 2,
+  "def": 5,
   "verdeckt_ok": true
  },
  {
@@ -10592,7 +11088,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 4,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -10605,7 +11101,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Pilgerkundschafter",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -10629,8 +11125,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-17",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
-  "def": 1,
+  "atk": 3,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Gefechtsbereit"
@@ -10704,7 +11200,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
   "atk": 2,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Gefechtsbereit"
@@ -10737,7 +11233,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-20",
   "art_status": "platzhalter",
   "klasse": "Elite",
-  "atk": 4,
+  "atk": 3,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -10772,7 +11268,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 4,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true
  },
  {
@@ -10782,18 +11278,25 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Ruf zum Aufgebot",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Jeder Schaden an deinen Fronteinheiten −1.",
   "rules": [
-   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich."
   ],
   "effects": [
    {
     "code": "TURN_DRAW",
+    "param": {
+     "n": 1
+    }
+   },
+   {
+    "code": "REDUCE_DAMAGE",
     "param": {
      "n": 1
     }
@@ -10810,20 +11313,30 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Banner der Pflicht",
-  "ap": 4,
+  "ap": 5,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Deine Fronteinheiten +1 ATK.",
+  "text": "Deine Fronteinheiten +1 ATK. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
   "rules": [
-   "Solange diese Unterstützung liegt, haben alle deine Fronteinheiten +1 ATK."
+   "Solange diese Unterstützung liegt, haben alle deine Fronteinheiten +1 ATK.",
+   "Beim Ausspielen wählst du einen eigenen Frontabschnitt. Solange diese Unterstützung liegt, haben deine Einheiten in diesem Abschnitt +1 DEF."
   ],
   "effects": [
    {
     "code": "AURA_FRONT_ATK",
     "param": {
      "atk": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "aura",
+     "scope": "section",
+     "atk": 0,
+     "def": 1
     }
    }
   ],
@@ -10873,14 +11386,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Alle sind gerufen",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Füge einer gegnerischen Fronteinheit 1 Schaden zu.",
   "rules": [
-   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 1 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
@@ -10888,6 +11402,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "type": "Einheit",
      "amount": 1
+    }
+   },
+   {
+    "code": "DEAL_DAMAGE",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -10902,21 +11422,21 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Sturm der Gläubigen",
-  "ap": 2,
+  "ap": 1,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: deine Infanterie dort +2 ATK bis Zugende.",
+  "text": "Wähle einen eigenen Abschnitt: deine Infanterie dort +1 ATK bis Zugende.",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Infanterie-Einheit dort hat bis zum Ende dieses Zuges +2 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung)."
+   "Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Infanterie-Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung)."
   ],
   "effects": [
    {
     "code": "BUFF_SECTION",
     "targetSide": "own",
     "param": {
-     "atk": 2,
+     "atk": 1,
      "filter": "infanterie",
      "until": "turn",
      "targetSide": "own"
@@ -10939,15 +11459,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 1 Karte.",
+  "text": "Ziehe 2 Karten.",
   "rules": [
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
-     "value": 1
+     "value": 2
     }
    }
   ],
@@ -10962,14 +11482,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Gebet vor der Schlacht",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft.",
+  "text": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft. Heile 1 DEF an einer eigenen Fronteinheit.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
   ],
   "effects": [
    {
@@ -10978,6 +11499,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "atk": 1,
      "def": 1,
      "until": "turn"
+    }
+   },
+   {
+    "code": "HEAL",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -10997,15 +11524,24 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "text": "Heile 1 DEF an einer eigenen Fronteinheit. Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges."
   ],
   "effects": [
    {
     "code": "HEAL",
     "param": {
-     "value": 2
+     "value": 1
+    }
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 1,
+     "def": 0,
+     "until": "turn"
     }
    }
   ],
@@ -11020,21 +11556,21 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Welle binden",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: deine Infanterie dort +1 DEF dauerhaft.",
+  "text": "Wähle einen eigenen Abschnitt: deine Infanterie dort +2 DEF dauerhaft.",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Infanterie-Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
+   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Infanterie-Einheit, die jetzt dort steht, erhält +2 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
   ],
   "effects": [
    {
     "code": "BUFF_SECTION",
     "targetSide": "own",
     "param": {
-     "def": 1,
+     "def": 2,
      "filter": "infanterie",
      "until": "turn",
      "targetSide": "own"
@@ -11057,17 +11593,17 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +3 ATK bis Zugende. Danach erleidet sie 1 Schaden.",
+  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende, +1 DEF dauerhaft. Danach erleidet sie 1 Schaden.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +3 ATK bis zum Ende dieses Zuges.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.",
    "Preis: Dieselbe eigene Einheit erleidet danach 1 Schaden. Sinkt ihre DEF auf 0, wird sie zerstört."
   ],
   "effects": [
    {
     "code": "BUFF",
     "param": {
-     "atk": 3,
-     "def": 0,
+     "atk": 2,
+     "def": 1,
      "until": "turn"
     }
    },
@@ -11118,20 +11654,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Der eine Schlag",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 3 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 4 Schaden zu.",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 3 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 4 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
-     "value": 3
+     "value": 4
     }
    }
   ],
@@ -11183,17 +11719,24 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
      "atk": 0,
-     "def": 2,
+     "def": 1,
      "only": "infanterie"
+    }
+   },
+   {
+    "code": "ON_DESTROY_DRAW",
+    "param": {
+     "draw": 1
     }
    }
   ],
@@ -11208,20 +11751,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Glaubenszeichen",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Angriffe des Trägers: +1 Schaden.",
   "rules": [
-   "Wird der Träger zerstört, ziehst du 1 Karte."
+   "Wird der Träger zerstört, ziehst du 1 Karte.",
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
   ],
   "effects": [
    {
     "code": "ON_DESTROY_DRAW",
     "param": {
      "draw": 1
+    }
+   },
+   {
+    "code": "EQUIP_ON_ATTACK_DAMAGE",
+    "param": {
+     "bonus": 1
     }
    }
   ],
@@ -11236,20 +11786,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Bannerstange",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK und +1 DEF.",
+  "text": "Träger +2 ATK und +1 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 1,
+     "atk": 2,
      "def": 1
     }
    }
@@ -11265,14 +11815,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Reliquie",
-  "ap": 1,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "",
+  "text": "Wird der Träger zerstört, ziehst du 2 Karten.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Wird der Träger zerstört, ziehst du 2 Karten.",
    "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
@@ -11280,6 +11831,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "code": "EQUIP_IGNORE_FIRST_DAMAGE",
     "param": {
      "untouchableFirst": true
+    }
+   },
+   {
+    "code": "ON_DESTROY_DRAW",
+    "param": {
+     "draw": 2
     }
    }
   ],
@@ -11297,20 +11854,29 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Eiferklinge",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Angriffe des Trägers: +1 Schaden.",
+  "text": "Angriffe des Trägers: +1 Schaden. Träger +1 ATK und +1 DEF.",
   "rules": [
-   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_ON_ATTACK_DAMAGE",
     "param": {
      "bonus": 1
+    }
+   },
+   {
+    "code": "EQUIP_STAT",
+    "param": {
+     "atk": 1,
+     "def": 1,
+     "only": "infanterie"
     }
    }
   ],
@@ -11325,14 +11891,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Gebetsband",
-  "ap": 1,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "Solange der Träger beschädigt ist: +2 ATK.",
+  "text": "Solange der Träger beschädigt ist: +2 ATK. Angriffe des Trägers: +1 Schaden.",
   "rules": [
-   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +2 ATK."
+   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +2 ATK.",
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
   ],
   "effects": [
    {
@@ -11340,6 +11907,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "atk": 2,
      "ifDamaged": true
+    }
+   },
+   {
+    "code": "EQUIP_ON_ATTACK_DAMAGE",
+    "param": {
+     "bonus": 1
     }
    }
   ],
@@ -11354,7 +11927,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Werkschutzzug",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -11369,7 +11942,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VAE-01",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 4,
   "def": 3,
   "verdeckt_ok": true
  },
@@ -11396,7 +11969,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 1,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -11425,8 +11998,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VAE-03",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
-  "def": 2,
+  "atk": 3,
+  "def": 1,
   "verdeckt_ok": true
  },
  {
@@ -11496,7 +12069,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Aktionärsgarde",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "einheit",
@@ -11511,8 +12084,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VAE-06",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 3,
-  "def": 4,
+  "atk": 4,
+  "def": 5,
   "verdeckt_ok": true
  },
  {
@@ -11668,8 +12241,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VAE-11",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 5,
-  "def": 6,
+  "atk": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Durchschlag",
@@ -11700,7 +12273,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VAE-12",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 3,
+  "atk": 2,
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
@@ -11770,7 +12343,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VAE-14",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 6,
+  "atk": 5,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -11802,8 +12375,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VAE-15",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
-  "def": 1,
+  "atk": 1,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Fernschuss"
@@ -11838,7 +12411,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VAE-16",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 4,
+  "atk": 3,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -11852,7 +12425,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Zielerfasser",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -11876,8 +12449,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VAE-17",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
-  "def": 1,
+  "atk": 2,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Heranführung"
@@ -11890,7 +12463,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Verbrauchsprüfer",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -11914,7 +12487,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VAE-18",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
+  "atk": 3,
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
@@ -12029,20 +12602,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Rüstungswerk",
-  "ap": 3,
+  "ap": 5,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: +1 AP.",
+  "text": "Zu Beginn deines Zuges: +1 AP. Jeder Schaden an deinen Fronteinheiten −1.",
   "rules": [
-   "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt."
+   "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt.",
+   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich."
   ],
   "effects": [
    {
     "code": "TURN_AP",
     "param": {
      "ap": 1
+    }
+   },
+   {
+    "code": "REDUCE_DAMAGE",
+    "param": {
+     "n": 1
     }
    }
   ],
@@ -12120,14 +12700,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Ersatz ab Lager",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.",
   "rules": [
-   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
+   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
   ],
   "effects": [
    {
@@ -12135,6 +12716,16 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "type": "Einheit",
      "amount": 1
+    }
+   },
+   {
+    "code": "BUFF_SECTION",
+    "targetSide": "own",
+    "param": {
+     "def": 1,
+     "filter": null,
+     "until": "turn",
+     "targetSide": "own"
     }
    }
   ],
@@ -12181,20 +12772,29 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Lieferschein eingetroffen",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 2 Karten.",
+  "text": "Ziehe 2 Karten. Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "rules": [
-   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 1,
+     "def": 0,
+     "until": "turn"
     }
    }
   ],
@@ -12272,15 +12872,24 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "text": "Heile 1 DEF an einer eigenen Fronteinheit. Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
   ],
   "effects": [
    {
     "code": "HEAL",
     "param": {
-     "value": 2
+     "value": 1
+    }
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 0,
+     "def": 1,
+     "until": "turn"
     }
    }
   ],
@@ -12295,14 +12904,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Auftragsbuch",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 2, dann wirf deine älteste Handkarte ab.",
+  "text": "Ziehe 2, dann wirf deine älteste Handkarte ab. Heile 1 DEF an einer eigenen Fronteinheit.",
   "rules": [
-   "Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof."
+   "Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
   ],
   "effects": [
    {
@@ -12310,6 +12920,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "draw": 2,
      "discard": 1
+    }
+   },
+   {
+    "code": "HEAL",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -12324,21 +12940,21 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Großlieferung",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 2 AP weniger (mind. 1).",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 3 AP weniger (mind. 1).",
   "rules": [
-   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 2 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 3 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
     "code": "COST_NEXT",
     "param": {
      "type": "Einheit",
-     "amount": 2
+     "amount": 3
     }
    }
   ],
@@ -12353,20 +12969,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Splitterhagel",
-  "ap": 2,
+  "ap": 1,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
     }
    }
   ],
@@ -12381,21 +13004,21 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Industrielle Walze",
-  "ap": 4,
+  "ap": 5,
   "rarity": "gold",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 4 Schaden zu. Ziehe 1 Karte.",
+  "text": "Füge einer gegnerischen Fronteinheit 5 Schaden zu. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 4 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 5 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
    "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
-     "value": 4
+     "value": 5
     }
    },
    {
@@ -12421,17 +13044,24 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +1 DEF. Angriffe des Trägers: +1 Schaden.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
      "atk": 0,
-     "def": 2,
+     "def": 1,
      "only": "panzer"
+    }
+   },
+   {
+    "code": "EQUIP_ON_ATTACK_DAMAGE",
+    "param": {
+     "bonus": 1
     }
    }
   ],
@@ -12446,20 +13076,29 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Schwere Munition",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Angriffe des Trägers: +1 Schaden.",
+  "text": "Angriffe des Trägers: +1 Schaden. Träger +2 DEF.",
   "rules": [
-   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_ON_ATTACK_DAMAGE",
     "param": {
      "bonus": 1
+    }
+   },
+   {
+    "code": "EQUIP_STAT",
+    "param": {
+     "atk": 0,
+     "def": 2,
+     "only": "infanterie"
     }
    }
   ],
@@ -12474,21 +13113,21 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Ersatzrohr",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.",
+  "text": "Wird der Träger zerstört, ziehst du 2 Karten. Träger +1 DEF.",
   "rules": [
-   "Wird der Träger zerstört, ziehst du 1 Karte.",
+   "Wird der Träger zerstört, ziehst du 2 Karten.",
    "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "ON_DESTROY_DRAW",
     "param": {
-     "draw": 1
+     "draw": 2
     }
    },
    {
@@ -12515,15 +13154,22 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Erster Angriff des Trägers: +2 ATK.",
+  "text": "Erster Angriff des Trägers: +1 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus."
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus.",
+   "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
    {
     "code": "CARRIER_FIRST_ATTACK_ATK",
     "param": {
-     "atk": 2
+     "atk": 1
+    }
+   },
+   {
+    "code": "ON_DESTROY_DRAW",
+    "param": {
+     "draw": 1
     }
    }
   ],
@@ -12543,9 +13189,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 DEF.",
+  "text": "Träger +1 ATK und +1 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
    "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
@@ -12553,8 +13199,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 1
+     "atk": 1,
+     "def": 1,
+     "only": "infanterie"
     }
    },
    {
@@ -12578,21 +13225,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Vertragsgewehr",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK.",
+  "text": "Träger +1 DEF. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 1,
-     "def": 0
+     "atk": 0,
+     "def": 1
+    }
+   },
+   {
+    "code": "CARRIER_FIRST_ATTACK_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -12708,7 +13362,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 2,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Heranführung"
@@ -12770,7 +13424,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-MER-06",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 3,
+  "atk": 2,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -12835,7 +13489,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 3,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -12927,7 +13581,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-MER-11",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 5,
+  "atk": 4,
   "def": 5,
   "verdeckt_ok": true
  },
@@ -12955,8 +13609,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-MER-12",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
-  "def": 2,
+  "atk": 3,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -13048,7 +13702,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-MER-15",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 3,
+  "atk": 2,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -13083,7 +13737,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-MER-16",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 4,
+  "atk": 3,
   "def": 4,
   "verdeckt_ok": true
  },
@@ -13132,7 +13786,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Etappenmelder",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -13157,7 +13811,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
   "atk": 1,
-  "def": 2,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -13306,20 +13960,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Wegdepot",
-  "ap": 3,
+  "ap": 5,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Jeder Schaden an deinen Fronteinheiten −1.",
+  "text": "Jeder Schaden an deinen Fronteinheiten −1. Zu Beginn deines Zuges: +1 AP.",
   "rules": [
-   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich."
+   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich.",
+   "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt."
   ],
   "effects": [
    {
     "code": "REDUCE_DAMAGE",
     "param": {
      "n": 1
+    }
+   },
+   {
+    "code": "TURN_AP",
+    "param": {
+     "ap": 1
     }
    }
   ],
@@ -13334,20 +13995,30 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Postenkette",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Gegnerische Fronteinheiten −1 ATK.",
+  "text": "Gegnerische Fronteinheiten −1 ATK. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
   "rules": [
-   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag)."
+   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag).",
+   "Beim Ausspielen wählst du einen eigenen Frontabschnitt. Solange diese Unterstützung liegt, haben deine Einheiten in diesem Abschnitt +1 ATK."
   ],
   "effects": [
    {
     "code": "AURA_ENEMY_ATK",
     "param": {
      "atk": -1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "aura",
+     "scope": "section",
+     "atk": 1,
+     "def": 0
     }
    }
   ],
@@ -13362,14 +14033,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Umgruppieren",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft.",
+  "text": "Eine eigene Fronteinheit: +1 ATK bis Zugende, +1 DEF dauerhaft. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges. Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF.",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
@@ -13378,6 +14050,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "atk": 1,
      "def": 1,
      "until": "turn"
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -13392,14 +14070,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Keilhalt",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft.",
+  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +2 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
+   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +2 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
@@ -13410,6 +14089,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "filter": null,
      "until": "turn",
      "targetSide": "own"
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -13424,21 +14109,21 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Posten halten",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +2 DEF dauerhaft.",
+  "text": "Eine eigene Fronteinheit: +3 DEF dauerhaft.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +3 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
   ],
   "effects": [
    {
     "code": "BUFF",
     "param": {
      "atk": 0,
-     "def": 2,
+     "def": 3,
      "until": "turn"
     }
    }
@@ -13487,15 +14172,22 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 1 Schaden zu. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 1 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
-     "value": 2
+     "value": 1
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -13510,20 +14202,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Garnison versorgen",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "text": "Heile 2 DEF an einer eigenen Fronteinheit. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
     "code": "HEAL",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -13538,21 +14238,21 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Schieben",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.",
+  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 ATK bis Zugende.",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung)."
+   "Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +2 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung)."
   ],
   "effects": [
    {
     "code": "BUFF_SECTION",
     "targetSide": "own",
     "param": {
-     "atk": 1,
+     "atk": 2,
      "filter": null,
      "until": "turn",
      "targetSide": "own"
@@ -13570,18 +14270,25 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Wegpunkt melden",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 1 Karte.",
+  "text": "Ziehe 1 Karte. Füge einer gegnerischen Fronteinheit 1 Schaden zu.",
   "rules": [
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 1 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
     "code": "DRAW",
+    "param": {
+     "value": 1
+    }
+   },
+   {
+    "code": "DEAL_DAMAGE",
     "param": {
      "value": 1
     }
@@ -13598,14 +14305,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Kolonne nachziehen",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Heile 1 DEF an einer eigenen Fronteinheit.",
   "rules": [
-   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
   ],
   "effects": [
    {
@@ -13613,6 +14321,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "type": "Einheit",
      "amount": 1
+    }
+   },
+   {
+    "code": "HEAL",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -13627,21 +14341,21 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Halt um jeden Preis",
-  "ap": 3,
+  "ap": 4,
   "rarity": "gold",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +3 DEF dauerhaft.",
+  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +4 DEF dauerhaft.",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +3 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
+   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +4 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
   ],
   "effects": [
    {
     "code": "BUFF_SECTION",
     "targetSide": "own",
     "param": {
-     "def": 3,
+     "def": 4,
      "filter": null,
      "until": "turn",
      "targetSide": "own"
@@ -13659,14 +14373,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Postenhelm",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +2 DEF. Solange der Träger beschädigt ist: +1 ATK.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +1 ATK."
   ],
   "effects": [
    {
@@ -13674,6 +14389,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "atk": 0,
      "def": 2
+    }
+   },
+   {
+    "code": "EQUIP_COND_ATK",
+    "param": {
+     "atk": 1,
+     "ifDamaged": true
     }
    }
   ],
@@ -13688,14 +14410,14 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Marschgepäck",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
+  "text": "Träger +2 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
@@ -13703,7 +14425,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "code": "EQUIP_STAT",
     "param": {
      "atk": 0,
-     "def": 1
+     "def": 2
     }
    },
    {
@@ -13724,14 +14446,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Haltespaten",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "",
+  "text": "Angriffe des Trägers: +1 Schaden.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert.",
    "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
@@ -13739,6 +14462,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "code": "EQUIP_IGNORE_FIRST_DAMAGE",
     "param": {
      "untouchableFirst": true
+    }
+   },
+   {
+    "code": "EQUIP_ON_ATTACK_DAMAGE",
+    "param": {
+     "bonus": 1
     }
    }
   ],
@@ -13756,20 +14485,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Wegkarte",
-  "ap": 1,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "Erster Angriff des Trägers: +2 ATK.",
+  "text": "Erster Angriff des Trägers: +2 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus."
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus.",
+   "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
    {
     "code": "CARRIER_FIRST_ATTACK_ATK",
     "param": {
      "atk": 2
+    }
+   },
+   {
+    "code": "ON_DESTROY_DRAW",
+    "param": {
+     "draw": 1
     }
    }
   ],
@@ -13784,14 +14520,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Garnisonsgewehr",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK.",
+  "text": "Träger +1 ATK. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
    {
@@ -13800,6 +14537,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "atk": 1,
      "def": 0,
      "only": "infanterie"
+    }
+   },
+   {
+    "code": "ON_DESTROY_DRAW",
+    "param": {
+     "draw": 1
     }
    }
   ],
@@ -13819,17 +14562,17 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
+  "text": "Träger +1 ATK und +1 DEF. Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 1 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 2,
+     "atk": 1,
+     "def": 1,
      "only": "panzer"
     }
    },
@@ -13980,7 +14723,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Steinwerfer",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -13993,8 +14736,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-LYR-05",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
-  "def": 1,
+  "atk": 3,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Nachsetzen"
@@ -14060,8 +14803,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-LYR-07",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
-  "def": 3,
+  "atk": 4,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -14227,8 +14970,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-LYR-12",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
-  "def": 3,
+  "atk": 1,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -14294,8 +15037,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-LYR-14",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 3,
-  "def": 2,
+  "atk": 4,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -14333,7 +15076,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 4,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Hinterhalt",
@@ -14379,7 +15122,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Gamsjäger",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -14403,8 +15146,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-LYR-17",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
-  "def": 1,
+  "atk": 2,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -14414,7 +15157,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Zugangswächter",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -14438,8 +15181,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-LYR-18",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
-  "def": 2,
+  "atk": 2,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -14479,8 +15222,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-LYR-19",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 2,
-  "def": 2,
+  "atk": 3,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Hinterhalt",
@@ -14520,7 +15263,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 4,
-  "def": 5,
+  "def": 6,
   "verdeckt_ok": true
  },
  {
@@ -14553,7 +15296,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 4,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Überlast",
@@ -14568,20 +15311,30 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Talbund",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Gegnerische Fronteinheiten −1 ATK.",
+  "text": "Gegnerische Fronteinheiten −1 ATK. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
   "rules": [
-   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag)."
+   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag).",
+   "Beim Ausspielen wählst du einen eigenen Frontabschnitt. Solange diese Unterstützung liegt, haben deine Einheiten in diesem Abschnitt +1 DEF."
   ],
   "effects": [
    {
     "code": "AURA_ENEMY_ATK",
     "param": {
      "atk": -1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "aura",
+     "scope": "section",
+     "atk": 0,
+     "def": 1
     }
    }
   ],
@@ -14596,20 +15349,30 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Engen und Pässe",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Jeder Schaden an deinen Fronteinheiten −1.",
+  "text": "Jeder Schaden an deinen Fronteinheiten −1. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
   "rules": [
-   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich."
+   "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich.",
+   "Beim Ausspielen wählst du einen eigenen Frontabschnitt. Solange diese Unterstützung liegt, haben deine Einheiten in diesem Abschnitt +1 ATK."
   ],
   "effects": [
    {
     "code": "REDUCE_DAMAGE",
     "param": {
      "n": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "aura",
+     "scope": "section",
+     "atk": 1,
+     "def": 0
     }
    }
   ],
@@ -14659,14 +15422,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Aus der Deckung",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
@@ -14675,6 +15439,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "atk": 2,
      "def": 0,
      "until": "turn"
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -14689,21 +15460,21 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Nadelöhr",
-  "ap": 2,
+  "ap": 1,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft.",
+  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +2 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
+   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
   ],
   "effects": [
    {
     "code": "BUFF_SECTION",
     "targetSide": "own",
     "param": {
-     "def": 2,
+     "def": 1,
      "filter": null,
      "until": "turn",
      "targetSide": "own"
@@ -14756,20 +15527,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Geröllhagel",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 3 Schaden zu. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 3 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
-     "value": 2
+     "value": 3
+    }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
     }
    }
   ],
@@ -14784,20 +15562,29 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Talruf hören",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 1 Karte.",
+  "text": "Ziehe 1 Karte. Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "rules": [
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
      "value": 1
+    }
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 0,
+     "def": 1,
+     "until": "turn"
     }
    }
   ],
@@ -14812,14 +15599,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Zerstreute Posten",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.",
+  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
+   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
@@ -14830,6 +15618,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "filter": null,
      "until": "turn",
      "targetSide": "own"
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -14844,19 +15638,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Aus dem Hinterhalt",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.",
+  "text": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen. Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "rules": [
-   "Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten)."
+   "Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges."
   ],
   "effects": [
    {
     "code": "EXTRA_ATTACK",
     "param": {}
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 1,
+     "def": 0,
+     "until": "turn"
+    }
    }
   ],
   "flavor": "Noch ein Schlag aus der Deckung.",
@@ -14870,20 +15673,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Bergquelle",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "text": "Heile 2 DEF an einer eigenen Fronteinheit. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
     "code": "HEAL",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -14898,20 +15708,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Pass entdeckt",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
+  "text": "Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
     "code": "MARK_OBSERVED",
     "param": {
      "count": 1
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -14954,14 +15772,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Bergmantel",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "",
+  "text": "Erster Angriff des Trägers: +1 ATK.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus.",
    "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
@@ -14969,6 +15788,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "code": "EQUIP_IGNORE_FIRST_DAMAGE",
     "param": {
      "untouchableFirst": true
+    }
+   },
+   {
+    "code": "CARRIER_FIRST_ATTACK_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -14986,20 +15811,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Steinschleuder",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Angriffe des Trägers: +1 Schaden.",
+  "text": "Angriffe des Trägers: +1 Schaden. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
-   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert.",
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
    {
     "code": "EQUIP_ON_ATTACK_DAMAGE",
     "param": {
      "bonus": 1
+    }
+   },
+   {
+    "code": "CARRIER_FIRST_ATTACK_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -15014,20 +15846,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Talabzeichen",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
+  "text": "Wird der Träger zerstört, ziehst du 2 Karten.",
   "rules": [
-   "Wird der Träger zerstört, ziehst du 1 Karte."
+   "Wird der Träger zerstört, ziehst du 2 Karten."
   ],
   "effects": [
    {
     "code": "ON_DESTROY_DRAW",
     "param": {
-     "draw": 1
+     "draw": 2
     }
    }
   ],
@@ -15042,20 +15874,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Kletterausrüstung",
-  "ap": 1,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "Erster Angriff des Trägers: +2 ATK.",
+  "text": "Erster Angriff des Trägers: +3 ATK.",
   "rules": [
-   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus."
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +3 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
    {
     "code": "CARRIER_FIRST_ATTACK_ATK",
     "param": {
-     "atk": 2
+     "atk": 3
     }
    }
   ],
@@ -15070,14 +15902,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Eidring",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +2 DEF. Angriffe des Trägers: +1 Schaden.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
   ],
   "effects": [
    {
@@ -15085,6 +15918,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "atk": 0,
      "def": 2
+    }
+   },
+   {
+    "code": "EQUIP_ON_ATTACK_DAMAGE",
+    "param": {
+     "bonus": 1
     }
    }
   ],
@@ -15260,7 +16099,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-OSS-05",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 2,
   "verdeckt_ok": true
  },
@@ -15290,7 +16129,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-OSS-06",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 3,
+  "atk": 2,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -15382,7 +16221,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-OSS-09",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 4,
+  "atk": 3,
   "def": 5,
   "verdeckt_ok": true,
   "keywords": [
@@ -15396,7 +16235,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Abnutzungskette",
-  "ap": 3,
+  "ap": 4,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -15413,8 +16252,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-OSS-10",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
-  "def": 3,
+  "atk": 4,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -15592,7 +16431,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-OSS-16",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 5,
+  "atk": 4,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -15631,8 +16470,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-OSS-17",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
-  "def": 2,
+  "atk": 2,
+  "def": 1,
   "verdeckt_ok": true
  },
  {
@@ -15642,7 +16481,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Stellungsbeobachter",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -15666,8 +16505,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-OSS-18",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
-  "def": 3,
+  "atk": 2,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -15735,7 +16574,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-OSS-20",
   "art_status": "platzhalter",
   "klasse": "Elite",
-  "atk": 4,
+  "atk": 5,
   "def": 6,
   "verdeckt_ok": true
  },
@@ -15766,8 +16605,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-OSS-21",
   "art_status": "platzhalter",
   "klasse": "Elite",
-  "atk": 3,
-  "def": 6,
+  "atk": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Abschirmung",
@@ -15781,15 +16620,16 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Wall der Gefallenen",
-  "ap": 5,
+  "ap": 6,
   "rarity": "gold",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Jeder Schaden an deinen Fronteinheiten −1. Gegnerische Fronteinheiten −1 ATK.",
+  "text": "Jeder Schaden an deinen Fronteinheiten −1. Gegnerische Fronteinheiten −1 ATK. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "rules": [
    "Jeder einzelne Schaden, den eine deiner Fronteinheiten erleidet, wird um 1 verringert (mindestens 0). Mehrere solcher Karten addieren sich.",
-   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag)."
+   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag).",
+   "Zu Beginn jedes deiner Züge heilt eine beschädigte eigene Fronteinheit bis zu 1 DEF (höchstens bis zur maximalen DEF), solange diese Unterstützung liegt."
   ],
   "effects": [
    {
@@ -15802,6 +16642,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "code": "AURA_ENEMY_ATK",
     "param": {
      "atk": -1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "turnheal",
+     "n": 1
     }
    }
   ],
@@ -15816,7 +16663,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Ahnenhalle",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
@@ -15844,7 +16691,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Rüstkammer der Toten",
-  "ap": 3,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
@@ -15902,21 +16749,21 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Verlust wird Deckung",
-  "ap": 1,
+  "ap": 0,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +2 DEF dauerhaft.",
+  "text": "Eine eigene Fronteinheit: +1 DEF dauerhaft.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 DEF; der Bonus ist dauerhaft und erhöht auch ihre maximale DEF."
   ],
   "effects": [
    {
     "code": "BUFF",
     "param": {
      "atk": 0,
-     "def": 2,
+     "def": 1,
      "until": "turn"
     }
    }
@@ -15932,20 +16779,31 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Totenehre",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 1 Karte.",
+  "text": "Ziehe 1 Karte. Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.",
   "rules": [
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung)."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
      "value": 1
+    }
+   },
+   {
+    "code": "BUFF_SECTION",
+    "targetSide": "own",
+    "param": {
+     "atk": 1,
+     "filter": null,
+     "until": "turn",
+     "targetSide": "own"
     }
    }
   ],
@@ -15965,15 +16823,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 1 Schaden zu.",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 1 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
-     "value": 2
+     "value": 1
     }
    }
   ],
@@ -15988,7 +16846,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Rüstung flicken",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
@@ -16016,14 +16874,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Wall verstärken",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft.",
+  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +2 DEF dauerhaft. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +2 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
+   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +2 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
@@ -16034,6 +16893,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "filter": null,
      "until": "turn",
      "targetSide": "own"
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -16048,15 +16914,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Ahnen rufen",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 2 Karten.",
   "rules": [
    "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
@@ -16069,7 +16935,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
    {
     "code": "DRAW",
     "param": {
-     "value": 1
+     "value": 2
     }
    }
   ],
@@ -16089,9 +16955,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 3, dann wirf deine älteste Handkarte ab.",
+  "text": "Ziehe 3, dann wirf deine älteste Handkarte ab. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
-   "Ziehe 3 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof."
+   "Ziehe 3 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
@@ -16099,6 +16966,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "draw": 3,
      "discard": 1
+    }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
     }
    }
   ],
@@ -16113,14 +16986,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Gepanzerter Vorstoß",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.",
+  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung)."
+   "Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
@@ -16131,6 +17005,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "filter": null,
      "until": "turn",
      "targetSide": "own"
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -16184,21 +17064,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Namensplatte",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +1 ATK und +1 DEF. Angriffe des Trägers: +1 Schaden.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 2
+     "atk": 1,
+     "def": 1
+    }
+   },
+   {
+    "code": "EQUIP_ON_ATTACK_DAMAGE",
+    "param": {
+     "bonus": 1
     }
    }
   ],
@@ -16213,14 +17100,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Totenschild",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "",
+  "text": "Solange der Träger beschädigt ist: +1 ATK.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +1 ATK.",
    "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
@@ -16228,6 +17116,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "code": "EQUIP_IGNORE_FIRST_DAMAGE",
     "param": {
      "untouchableFirst": true
+    }
+   },
+   {
+    "code": "EQUIP_COND_ATK",
+    "param": {
+     "atk": 1,
+     "ifDamaged": true
     }
    }
   ],
@@ -16279,10 +17174,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 DEF.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Träger +1 ATK und +1 DEF.",
   "rules": [
    "Wird der Träger zerstört, ziehst du 1 Karte.",
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
@@ -16294,8 +17189,9 @@ window.DC_SET_TYPES["Nationenpool"] = [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 1
+     "atk": 1,
+     "def": 1,
+     "only": "infanterie"
     }
    }
   ],
@@ -16310,14 +17206,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Plattenschutz",
-  "ap": 1,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
+  "text": "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar."
+   "Einmalig: Erleidet der Träger erstmals noch positiven, verhinderbaren Schaden, wird dieser Treffer um bis zu 2 verringert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.",
+   "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
    {
@@ -16325,6 +17222,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "amount": 2,
      "once": true
+    }
+   },
+   {
+    "code": "ON_DESTROY_DRAW",
+    "param": {
+     "draw": 1
     }
    }
   ],
@@ -16339,14 +17242,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Grabklinge",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Solange der Träger beschädigt ist: +2 ATK.",
+  "text": "Solange der Träger beschädigt ist: +2 ATK. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
-   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +2 ATK."
+   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +2 ATK.",
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
    {
@@ -16354,6 +17258,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "atk": 2,
      "ifDamaged": true
+    }
+   },
+   {
+    "code": "CARRIER_FIRST_ATTACK_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -16410,7 +17320,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-02",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 1,
   "verdeckt_ok": true
  },
@@ -16436,7 +17346,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-03",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 1,
+  "atk": 2,
   "def": 2,
   "verdeckt_ok": true
  },
@@ -16501,7 +17411,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-05",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
@@ -16529,7 +17439,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-06",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 3,
+  "atk": 2,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -16559,7 +17469,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 3,
-  "def": 3,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -16621,7 +17531,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-09",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 4,
+  "atk": 3,
   "def": 4,
   "verdeckt_ok": true
  },
@@ -16682,7 +17592,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-11",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 5,
+  "atk": 4,
   "def": 4,
   "verdeckt_ok": true
  },
@@ -16693,7 +17603,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Kaibatterie",
-  "ap": 3,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -16710,8 +17620,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-12",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 3,
-  "def": 2,
+  "atk": 2,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -16773,7 +17683,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 2,
-  "def": 3,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Zuteilung"
@@ -16803,7 +17713,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-15",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 4,
+  "atk": 3,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -16838,7 +17748,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-16",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 5,
+  "atk": 4,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -16951,7 +17861,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-19",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 2,
+  "atk": 1,
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
@@ -17070,20 +17980,30 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Speicher am Hafen",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 ATK.",
   "rules": [
-   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+   "Beim Ausspielen wählst du einen eigenen Frontabschnitt. Solange diese Unterstützung liegt, haben deine Einheiten in diesem Abschnitt +1 ATK."
   ],
   "effects": [
    {
     "code": "TURN_DRAW",
     "param": {
      "n": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "aura",
+     "scope": "section",
+     "atk": 1,
+     "def": 0
     }
    }
   ],
@@ -17098,20 +18018,30 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Hafenkontor",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: +1 AP.",
+  "text": "Zu Beginn deines Zuges: +1 AP. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
   "rules": [
-   "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt."
+   "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt.",
+   "Beim Ausspielen wählst du einen eigenen Frontabschnitt. Solange diese Unterstützung liegt, haben deine Einheiten in diesem Abschnitt +1 DEF."
   ],
   "effects": [
    {
     "code": "TURN_AP",
     "param": {
      "ap": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "aura",
+     "scope": "section",
+     "atk": 0,
+     "def": 1
     }
    }
   ],
@@ -17126,14 +18056,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Aus vollen Lagern",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "rules": [
-   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges."
   ],
   "effects": [
    {
@@ -17141,6 +18072,14 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "type": "Einheit",
      "amount": 1
+    }
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 1,
+     "def": 0,
+     "until": "turn"
     }
    }
   ],
@@ -17190,20 +18129,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Lieferung eingetroffen",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 2 Karten.",
+  "text": "Ziehe 3 Karten.",
   "rules": [
-   "Ziehe 2 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 3 Karten von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
-     "value": 2
+     "value": 3
     }
    }
   ],
@@ -17247,14 +18186,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Kai verteidigen",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.",
+  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
+   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
@@ -17265,6 +18205,13 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "filter": null,
      "until": "turn",
      "targetSide": "own"
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -17279,20 +18226,29 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Nachschub",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "text": "Heile 2 DEF an einer eigenen Fronteinheit. Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.",
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges."
   ],
   "effects": [
    {
     "code": "HEAL",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "BUFF",
+    "param": {
+     "atk": 1,
+     "def": 0,
+     "until": "turn"
     }
    }
   ],
@@ -17307,20 +18263,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Hafenfeuer",
-  "ap": 2,
+  "ap": 1,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 1 Schaden zu. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 1 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
-     "value": 2
+     "value": 1
+    }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
     }
    }
   ],
@@ -17437,21 +18400,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Hafenhelm",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +1 ATK und +1 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 2
+     "atk": 1,
+     "def": 1
+    }
+   },
+   {
+    "code": "ON_DESTROY_DRAW",
+    "param": {
+     "draw": 1
     }
    }
   ],
@@ -17466,20 +18436,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Schmuggelware",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
-   "Wird der Träger zerstört, ziehst du 1 Karte."
+   "Wird der Träger zerstört, ziehst du 1 Karte.",
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus."
   ],
   "effects": [
    {
     "code": "ON_DESTROY_DRAW",
     "param": {
      "draw": 1
+    }
+   },
+   {
+    "code": "CARRIER_FIRST_ATTACK_ATK",
+    "param": {
+     "atk": 1
     }
    }
   ],
@@ -17539,16 +18516,17 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK und +1 DEF.",
+  "text": "Träger +2 ATK und +1 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 1,
-     "def": 1
+     "atk": 2,
+     "def": 1,
+     "only": "infanterie"
     }
    }
   ],
@@ -17563,20 +18541,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Signalpistole",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Erster Angriff des Trägers: +2 ATK.",
+  "text": "Erster Angriff des Trägers: +2 ATK. Angriffe des Trägers: +1 Schaden.",
   "rules": [
-   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus."
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus.",
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
   ],
   "effects": [
    {
     "code": "CARRIER_FIRST_ATTACK_ATK",
     "param": {
      "atk": 2
+    }
+   },
+   {
+    "code": "EQUIP_ON_ATTACK_DAMAGE",
+    "param": {
+     "bonus": 1
     }
    }
   ],
@@ -17619,7 +18604,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Flussläufer",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -17634,8 +18619,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-SAH-01",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
-  "def": 1,
+  "atk": 4,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -17660,8 +18645,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-SAH-02",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
-  "def": 3,
+  "atk": 4,
+  "def": 1,
   "verdeckt_ok": true
  },
  {
@@ -17671,7 +18656,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Umgehungstrupp",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "einheit",
@@ -17692,8 +18677,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-SAH-03",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 3,
-  "def": 1,
+  "atk": 4,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Platztausch",
@@ -17720,7 +18705,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-SAH-04",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
@@ -17810,7 +18795,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-SAH-07",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
+  "atk": 4,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -17847,8 +18832,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-SAH-08",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 4,
-  "def": 3,
+  "atk": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Hinterhalt",
@@ -17883,7 +18868,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-SAH-09",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 5,
+  "atk": 4,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -17913,7 +18898,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-SAH-10",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 2,
+  "atk": 3,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -17943,7 +18928,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 4,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -17974,7 +18959,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 3,
-  "def": 2,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -18011,8 +18996,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-SAH-13",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
-  "def": 1,
+  "atk": 1,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Hinterhalt",
@@ -18078,7 +19063,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-SAH-15",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 5,
+  "atk": 6,
   "def": 3,
   "verdeckt_ok": true
  },
@@ -18107,7 +19092,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 4,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -18183,7 +19168,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
   "atk": 1,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -18227,7 +19212,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
   "atk": 2,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Hinterhalt",
@@ -18263,7 +19248,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 5,
-  "def": 4,
+  "def": 6,
   "verdeckt_ok": true,
   "keywords": [
    "Heranführung"
@@ -18299,7 +19284,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 4,
-  "def": 3,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Hinterhalt",
@@ -18314,20 +19299,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Gilde der Routen",
-  "ap": 4,
+  "ap": 5,
   "rarity": "gold",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn deines Zuges: +1 AP.",
+  "text": "Zu Beginn deines Zuges: +1 AP. Zu Beginn deines Zuges: heile 1 DEF an einer beschädigten eigenen Einheit.",
   "rules": [
-   "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt."
+   "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt.",
+   "Zu Beginn jedes deiner Züge heilt eine beschädigte eigene Fronteinheit bis zu 1 DEF (höchstens bis zur maximalen DEF), solange diese Unterstützung liegt."
   ],
   "effects": [
    {
     "code": "TURN_AP",
     "param": {
      "ap": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "turnheal",
+     "n": 1
     }
    }
   ],
@@ -18347,15 +19340,25 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
   "rules": [
-   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+   "Beim Ausspielen wählst du einen eigenen Frontabschnitt. Solange diese Unterstützung liegt, haben deine Einheiten in diesem Abschnitt +1 DEF."
   ],
   "effects": [
    {
     "code": "TURN_DRAW",
     "param": {
      "n": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "aura",
+     "scope": "section",
+     "atk": 0,
+     "def": 1
     }
    }
   ],
@@ -18370,20 +19373,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Flusssperre",
-  "ap": 3,
+  "ap": 5,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Gegnerische Fronteinheiten −1 ATK.",
+  "text": "Gegnerische Fronteinheiten −1 ATK. Zu Beginn deines Zuges: +1 AP.",
   "rules": [
-   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag)."
+   "Solange diese Unterstützung liegt, haben alle gegnerischen Fronteinheiten −1 ATK (Angriff und Gegenschlag).",
+   "Zu Beginn jedes deiner Züge erhältst du 1 zusätzlichen AP, solange diese Unterstützung liegt."
   ],
   "effects": [
    {
     "code": "AURA_ENEMY_ATK",
     "param": {
      "atk": -1
+    }
+   },
+   {
+    "code": "TURN_AP",
+    "param": {
+     "ap": 1
     }
    }
   ],
@@ -18398,7 +19408,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Seitenweg",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
@@ -18424,14 +19434,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Linie binden",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.",
+  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft. Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
+   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts.",
+   "Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung)."
   ],
   "effects": [
    {
@@ -18439,6 +19450,16 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "targetSide": "own",
     "param": {
      "def": 1,
+     "filter": null,
+     "until": "turn",
+     "targetSide": "own"
+    }
+   },
+   {
+    "code": "BUFF_SECTION",
+    "targetSide": "own",
+    "param": {
+     "atk": 1,
      "filter": null,
      "until": "turn",
      "targetSide": "own"
@@ -18456,7 +19477,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Stoß von der Seite",
-  "ap": 1,
+  "ap": 0,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
@@ -18486,20 +19507,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Neue Route",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 1 Karte.",
+  "text": "Ziehe 1 Karte. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
      "value": 1
+    }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
     }
    }
   ],
@@ -18519,9 +19547,10 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 2, dann wirf deine älteste Handkarte ab.",
+  "text": "Ziehe 2, dann wirf deine älteste Handkarte ab. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
-   "Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof."
+   "Ziehe 2 Karten. Danach wird automatisch die am längsten gehaltene Handkarte (ganz links) abgeworfen – keine freie Wahl. Handlimit 7: Überzählige gezogene Karten gehen auf den Friedhof.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
@@ -18529,6 +19558,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "draw": 2,
      "discard": 1
+    }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
     }
    }
   ],
@@ -18571,14 +19606,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Fluss überqueren",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende.",
+  "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende. Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 DEF dauerhaft.",
   "rules": [
-   "Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung)."
+   "Ziel: ein eigener Frontabschnitt (links, Mitte oder rechts; Pflichtwahl). Jede eigene Einheit dort hat bis zum Ende dieses Zuges +1 ATK. Auch leere Abschnitte dürfen gewählt werden (dann ohne Wirkung).",
+   "Ziel: ein eigener Frontabschnitt (Pflichtwahl). Jede eigene Einheit, die jetzt dort steht, erhält +1 DEF; der Bonus bleibt dauerhaft und erhöht auch die maximale DEF. Später gelegte Einheiten erhalten nichts."
   ],
   "effects": [
    {
@@ -18586,6 +19622,16 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "targetSide": "own",
     "param": {
      "atk": 1,
+     "filter": null,
+     "until": "turn",
+     "targetSide": "own"
+    }
+   },
+   {
+    "code": "BUFF_SECTION",
+    "targetSide": "own",
+    "param": {
+     "def": 1,
      "filter": null,
      "until": "turn",
      "targetSide": "own"
@@ -18608,15 +19654,22 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Heile 2 DEF an einer eigenen Fronteinheit.",
+  "text": "Heile 1 DEF an einer eigenen Fronteinheit. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 2 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie heilt bis zu 1 DEF, höchstens bis zu ihrer maximalen DEF. Unbeschädigte Ziele erhalten nichts.",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
     "code": "HEAL",
     "param": {
-     "value": 2
+     "value": 1
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -18636,10 +19689,11 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte.",
+  "text": "Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1). Ziehe 1 Karte. Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
   "rules": [
    "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen.",
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
   ],
   "effects": [
    {
@@ -18653,6 +19707,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "code": "DRAW",
     "param": {
      "value": 1
+    }
+   },
+   {
+    "code": "MARK_OBSERVED",
+    "param": {
+     "count": 1
     }
    }
   ],
@@ -18702,14 +19762,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Flussmantel",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "",
+  "text": "Träger +2 ATK.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
@@ -18717,6 +19778,14 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "code": "EQUIP_IGNORE_FIRST_DAMAGE",
     "param": {
      "untouchableFirst": true
+    }
+   },
+   {
+    "code": "EQUIP_STAT",
+    "param": {
+     "atk": 2,
+     "def": 0,
+     "only": "infanterie"
     }
    }
   ],
@@ -18734,20 +19803,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Routenkarte",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Erster Angriff des Trägers: +2 ATK.",
+  "text": "Erster Angriff des Trägers: +2 ATK. Solange der Träger beschädigt ist: +1 ATK.",
   "rules": [
-   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus."
+   "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus.",
+   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +1 ATK."
   ],
   "effects": [
    {
     "code": "CARRIER_FIRST_ATTACK_ATK",
     "param": {
      "atk": 2
+    }
+   },
+   {
+    "code": "EQUIP_COND_ATK",
+    "param": {
+     "atk": 1,
+     "ifDamaged": true
     }
    }
   ],
@@ -18762,14 +19839,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Leichtes Gepäck",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK.",
+  "text": "Träger +1 ATK. Angriffe des Trägers: +1 Schaden.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
   ],
   "effects": [
    {
@@ -18777,6 +19855,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "param": {
      "atk": 1,
      "def": 0
+    }
+   },
+   {
+    "code": "EQUIP_ON_ATTACK_DAMAGE",
+    "param": {
+     "bonus": 1
     }
    }
   ],
@@ -18827,20 +19911,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Flankenklinge",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "Angriffe des Trägers: +1 Schaden.",
+  "text": "Angriffe des Trägers: +1 Schaden. Solange der Träger beschädigt ist: +1 ATK.",
   "rules": [
-   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert.",
+   "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +1 ATK."
   ],
   "effects": [
    {
     "code": "EQUIP_ON_ATTACK_DAMAGE",
     "param": {
      "bonus": 1
+    }
+   },
+   {
+    "code": "EQUIP_COND_ATK",
+    "param": {
+     "atk": 1,
+     "ifDamaged": true
     }
    }
   ],
@@ -18855,14 +19947,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Ruderpanzer",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +2 DEF. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
+   "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
    {
@@ -18871,6 +19964,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
      "atk": 0,
      "def": 2,
      "only": "panzer"
+    }
+   },
+   {
+    "code": "ON_DESTROY_DRAW",
+    "param": {
+     "draw": 1
     }
    }
   ],
@@ -18924,7 +20023,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-DAR-02",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
@@ -18958,7 +20057,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 3,
-  "def": 3,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -18987,7 +20086,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-DAR-04",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 2,
   "verdeckt_ok": true
  },
@@ -19073,7 +20172,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-DAR-07",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 4,
+  "atk": 3,
   "def": 5,
   "verdeckt_ok": true,
   "keywords": [
@@ -19111,7 +20210,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-DAR-08",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
+  "atk": 1,
   "def": 3,
   "verdeckt_ok": true
  },
@@ -19146,7 +20245,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-DAR-09",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 4,
+  "atk": 3,
   "def": 5,
   "verdeckt_ok": true,
   "keywords": [
@@ -19212,8 +20311,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-DAR-11",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 5,
-  "def": 6,
+  "atk": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Gefechtsbereit",
@@ -19308,7 +20407,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-DAR-14",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 4,
+  "atk": 2,
   "def": 4,
   "verdeckt_ok": true
  },
@@ -19336,7 +20435,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-DAR-15",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
+  "atk": 1,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -19550,20 +20649,30 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Unterstützung",
   "name": "Schuldregister",
-  "ap": 3,
+  "ap": 4,
   "rarity": "silver",
   "tags": [
    "unterstuetzung"
   ],
-  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+  "text": "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert. Wähle beim Ausspielen einen Abschnitt: eigene Einheiten dort +1 DEF.",
   "rules": [
-   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert."
+   "Zu Beginn jedes deiner Züge: Ziehe 1 zusätzliche Karte, solange diese Unterstützung liegt. Das Handlimit gilt unverändert.",
+   "Beim Ausspielen wählst du einen eigenen Frontabschnitt. Solange diese Unterstützung liegt, haben deine Einheiten in diesem Abschnitt +1 DEF."
   ],
   "effects": [
    {
     "code": "TURN_DRAW",
     "param": {
      "n": 1
+    }
+   },
+   {
+    "code": "CM",
+    "param": {
+     "k": "aura",
+     "scope": "section",
+     "atk": 0,
+     "def": 1
     }
    }
   ],
@@ -19641,20 +20750,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Zeile setzen",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet.",
+  "text": "Wähle eine gegnerische Fronteinheit: sie wird aufgedeckt und gilt als beobachtet. Ziehe 1 Karte.",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl). Ist sie verdeckt, wird sie aufgedeckt. Sie gilt als „beobachtet“ (für Aufklärungs-Doktrinen wie Lokalisierung relevant). Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
   ],
   "effects": [
    {
     "code": "MARK_OBSERVED",
     "param": {
      "count": 1
+    }
+   },
+   {
+    "code": "DRAW",
+    "param": {
+     "value": 1
     }
    }
   ],
@@ -19704,19 +20820,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Zeile schließen",
-  "ap": 2,
+  "ap": 3,
   "rarity": "silver",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen.",
+  "text": "Eine eigene Fronteinheit darf in diesem Zug erneut angreifen. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten)."
+   "Die gewählte eigene Einheit wird bereit gemacht: Sie darf in diesem Zug noch einmal angreifen (normale AP-Kosten des Angriffs gelten).",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
     "code": "EXTRA_ATTACK",
     "param": {}
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
+    }
    }
   ],
   "flavor": "Zu Ende bringen.",
@@ -19730,20 +20854,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Tilgung",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu.",
+  "text": "Füge einer gegnerischen Fronteinheit 2 Schaden zu. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden."
+   "Ziel: eine gegnerische Fronteinheit (Pflichtwahl, auch verdeckt). Sie erleidet 2 Schaden; Schadensminderungen gelten. Eingegrabene oder anderweitig geschützte gegnerische Einheiten stehen nicht zur Wahl; gibt es kein gültiges Ziel, kann die Karte nicht gespielt werden.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
     "code": "DEAL_DAMAGE",
     "param": {
      "value": 2
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -19758,20 +20890,20 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Aufruf der Pflicht",
-  "ap": 1,
+  "ap": 0,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Eine eigene Fronteinheit: +2 ATK bis Zugende.",
+  "text": "Eine eigene Fronteinheit: +1 ATK bis Zugende.",
   "rules": [
-   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +2 ATK bis zum Ende dieses Zuges."
+   "Ziel: eine eigene Fronteinheit (Pflichtwahl). Sie erhält +1 ATK bis zum Ende dieses Zuges."
   ],
   "effects": [
    {
     "code": "BUFF",
     "param": {
-     "atk": 2,
+     "atk": 1,
      "def": 0,
      "until": "turn"
     }
@@ -19788,20 +20920,28 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Soforteinsatz",
   "name": "Registerprüfung",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "soforteinsatz"
   ],
-  "text": "Ziehe 1 Karte.",
+  "text": "Ziehe 1 Karte. Deine nächste Einheit oder Unterstützung kostet 1 AP weniger (mind. 1).",
   "rules": [
-   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof."
+   "Ziehe 1 Karte von deinem Deck. Ist das Deck leer, wird der Friedhof neu gemischt; bei voller Hand (7 Karten) wandert jede weitere gezogene Karte direkt auf den Friedhof.",
+   "Rabatt: Die nächste Einheit oder Unterstützung, die du ausspielst, kostet 1 AP weniger, mindestens aber 1 AP. Der Rabatt verfällt nicht am Zugende, sondern wird beim nächsten passenden Ausspielen verbraucht. Soforteinsätze und Ausrüstung sind ausgenommen."
   ],
   "effects": [
    {
     "code": "DRAW",
     "param": {
      "value": 1
+    }
+   },
+   {
+    "code": "COST_NEXT",
+    "param": {
+     "type": "Einheit",
+     "amount": 1
     }
    }
   ],
@@ -19994,20 +21134,27 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Vollstreckungsklinge",
-  "ap": 1,
+  "ap": 2,
   "rarity": "silver",
   "tags": [
    "ausruestung"
   ],
-  "text": "Angriffe des Trägers: +1 Schaden.",
+  "text": "Angriffe des Trägers: +1 Schaden. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
-   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert."
+   "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert.",
+   "Wird der Träger zerstört, ziehst du 1 Karte."
   ],
   "effects": [
    {
     "code": "EQUIP_ON_ATTACK_DAMAGE",
     "param": {
      "bonus": 1
+    }
+   },
+   {
+    "code": "ON_DESTROY_DRAW",
+    "param": {
+     "draw": 1
     }
    }
   ],
@@ -20027,16 +21174,17 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Träger +1 ATK und +2 DEF.",
   "rules": [
-   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
+   "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof."
   ],
   "effects": [
    {
     "code": "EQUIP_STAT",
     "param": {
-     "atk": 0,
-     "def": 2
+     "atk": 1,
+     "def": 2,
+     "only": "infanterie"
     }
    }
   ],
@@ -20079,14 +21227,15 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Ausrüstung",
   "name": "Haftungsschild",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "ausruestung"
   ],
-  "text": "",
+  "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
+   "Wird der Träger zerstört, ziehst du 1 Karte.",
    "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
   ],
   "effects": [
@@ -20094,6 +21243,12 @@ window.DC_SET_TYPES["Nationenpool"] = [
     "code": "EQUIP_IGNORE_FIRST_DAMAGE",
     "param": {
      "untouchableFirst": true
+    }
+   },
+   {
+    "code": "ON_DESTROY_DRAW",
+    "param": {
+     "draw": 1
     }
    }
   ],

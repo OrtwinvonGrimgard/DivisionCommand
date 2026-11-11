@@ -222,7 +222,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Ersatzwalze",
     "ap": 3,
     "atk": 3,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -733,7 +733,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Kronpanzer",
     "ap": 3,
-    "atk": 3,
+    "atk": 2,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -800,7 +800,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Schwerpunktkeil",
     "ap": 4,
-    "atk": 4,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -940,7 +940,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Filterpanzer",
     "ap": 3,
-    "atk": 3,
+    "atk": 2,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -1038,7 +1038,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Knochenkette",
     "ap": 2,
     "atk": 2,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -1107,8 +1107,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Wartungskolonne",
     "ap": 4,
-    "atk": 4,
-    "def": 5,
+    "atk": 2,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "einheit",
@@ -1215,8 +1215,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Sensorwagen",
     "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "atk": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1282,8 +1282,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Olivkeil",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1487,7 +1487,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Aktenwagen",
     "ap": 2,
     "atk": 2,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1657,7 +1657,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Zwei-Versionen",
     "ap": 3,
     "atk": 3,
-    "def": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1721,7 +1721,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Scheinschwerpunkt-Keil",
     "ap": 5,
-    "atk": 5,
+    "atk": 4,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -1822,8 +1822,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Nussbraun-Wagen",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1958,7 +1958,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Abschlusswagen",
     "ap": 4,
-    "atk": 3,
+    "atk": 4,
     "def": 5,
     "verdeckt_ok": false,
     "tags": [
@@ -2260,7 +2260,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Gegenstoßkeil",
     "ap": 5,
     "atk": 5,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -2320,7 +2320,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Kolonnenpanzer",
     "ap": 3,
-    "atk": 3,
+    "atk": 2,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -2353,7 +2353,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Brückenkopf",
     "ap": 4,
-    "atk": 4,
+    "atk": 3,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -2411,7 +2411,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Hafenring-Walze",
     "ap": 4,
-    "atk": 4,
+    "atk": 3,
     "def": 3,
     "verdeckt_ok": false,
     "tags": [
@@ -2516,7 +2516,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Letzte Stellung",
     "ap": 5,
-    "atk": 4,
+    "atk": 3,
     "def": 5,
     "verdeckt_ok": false,
     "tags": [
@@ -2650,7 +2650,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Knotenwagen",
     "ap": 3,
-    "atk": 2,
+    "atk": 3,
     "def": 5,
     "verdeckt_ok": false,
     "tags": [
@@ -2841,7 +2841,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Depotkeil",
     "ap": 3,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3234,8 +3234,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Lagerwagen",
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 4,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3301,7 +3301,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Entsatzschlag",
     "ap": 5,
     "atk": 5,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3694,7 +3694,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Wohnblock-Riegel",
     "ap": 3,
-    "atk": 2,
+    "atk": 1,
     "def": 5,
     "verdeckt_ok": false,
     "tags": [
@@ -3831,7 +3831,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Schildwall",
     "ap": 5,
     "atk": 3,
-    "def": 7,
+    "def": 6,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -4184,7 +4184,7 @@ window.DC_SET_TYPES["Panzer"] = [
     "name": "Asteron-Schild",
     "ap": 4,
     "atk": 3,
-    "def": 6,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -4282,8 +4282,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Abbruchkeil",
     "ap": 4,
-    "atk": 3,
-    "def": 5,
+    "atk": 2,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
