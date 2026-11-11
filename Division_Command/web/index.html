@@ -776,7 +776,7 @@
   <script src="js/engine/victory_trophy.js?v=trophy3"></script>
   <script src="js/engine/doctrine_runtime.js?v=tac1"></script>
   <script src="js/engine/tactical_runtime.js?v=tac1"></script>
-  <script src="js/ai/bot.js?v=t254"></script>
+  <script src="js/ai/bot.js?v=t256"></script>
   <script src="js/playtest/store.js?v=nochat1"></script>
   <script src="js/playtest/logger.js?v=nochat1"></script>
   <script src="js/playtest/panel.js?v=pt2"></script>
@@ -791,7 +791,7 @@
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=st1"></script>
   <script src="js/ui/end-screen.js?v=1"></script>
-  <script src="js/ui/app.js?v=alpha40u"></script>
+  <script src="js/ui/app.js?v=alpha40v"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
   <script src="js/ui/audio-options.js?v=1"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>
@@ -994,7 +994,14 @@
           }, 1000);
         }, 1200);
       };
+      /**
+       * Blendet den Tisch ein (Schleier, „Viel Glück“, Countdown) und ruft danach done().
+       * t256: Jeder neue Aufruf entwertet einen laufenden (Generationszähler), damit nie
+       * zwei Countdowns gleichzeitig das Overlay schließen.
+       * @param {Function} [done]
+       */
       window.dcKickoff = function (done) {
+        var gen = (window.dcKickGen = (window.dcKickGen || 0) + 1);
         var veil = document.getElementById('kick-veil');
         var msg = document.getElementById('kick-msg');
         var title = document.getElementById('title-root');
@@ -1040,6 +1047,7 @@
                   }
                   if (musicOn && window.dcTableMusic) window.dcTableMusic(true);
                   setTimeout(function () {
+                    if (gen !== window.dcKickGen) return;
                     veil.style.display = 'none';
                     var ov = document.getElementById('overlay');
                     if (ov) {
@@ -1048,6 +1056,7 @@
                     }
                     var n = 3;
                     var tick = setInterval(function () {
+                      if (gen !== window.dcKickGen) { clearInterval(tick); return; }
                       n -= 1;
                       var el = document.getElementById('krieg-count');
                       if (n >= 1) {

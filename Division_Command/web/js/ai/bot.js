@@ -193,7 +193,15 @@
    */
   function cloneEngine(engine) {
     var c = Object.create(Object.getPrototypeOf(engine));
-    Object.keys(engine).forEach(function (k) { c[k] = engine[k]; });
+    // t256: Keine eigenen Funktions-Properties übernehmen. Die Oberfläche hängt Hooks als
+    // eigenes `dispatch` an (Playtest-Logger, LAN). Kopiert, liefen Proben über den an die
+    // ECHTE Engine gebundenen Hook: der Bot veränderte den echten Stand, und der Logger rief
+    // bei jeder Probe erneut DCBot.step auf (Rekursion → Browser hing beim Ausspielen).
+    Object.keys(engine).forEach(function (k) {
+      if (typeof engine[k] === 'function') return;
+      if (k === '_playLogHooked' || k === '_dcNetHooked') return;
+      c[k] = engine[k];
+    });
     c.state = JSON.parse(JSON.stringify(engine.state));
     c.state._muteEvents = true;
     c.log = [];

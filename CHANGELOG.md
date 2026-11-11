@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+- **Browser-Fehler beim Ausspielen (t256):** Im Browser hing die Seite, sobald man eine Karte auf ein Feld legte. Ursache: Die Bot-Proben aus t254 kopierten die Engine samt dem `dispatch`-Hook der Oberfläche (Playtest-Logger). Jede Probe lief dadurch über die echte Partie und rief erneut den Bot-Vorschlag auf. Das war eine Endlosschleife, und der Bot veränderte beim Nachdenken den echten Stand. `cloneEngine` übernimmt jetzt keine eigenen Funktionen bzw. Hooks mehr. Weitere Fehler aus dem Browser-Durchlauf:
+  - „Gefecht beginnen“ startete jede Partie doppelt.
+  - Der Münzwurf lag unter dem Schleier und wurde vom Countdown überschrieben. Begann der Bot, zog er nie.
+  - Gezogene Karten des Gegners erschienen in der Meldung offen.
+  - Eine Meldung konnte stehen bleiben; jetzt per Klick überspringbar, mit Sicherheitsfrist.
+  - Neuladen (F5) beendete `server.py` (jetzt Gnadenfrist).
+  
+  Neu ist der Browser-Test `npm run ui-play` (Playwright/Chromium, nicht in `npm test`) und `tests/test_ui_t256.js` (in `npm test`). Cache `divcmd-alpha40v`. Doku: `docs/technik/UI_TEST_T256.md`.
+
 - **Startspieler (t257):** Beide Spieler haben im ersten Zug **5 AP** (`opening_starter_ap_penalty` 2 → 0). Ausgleich bleibt das Ziehen: Der Startspieler zieht in Zug 1 keine Karte, der Zweite zieht zu Beginn seines ersten Zuges 1 und hat damit eine Karte mehr. Regeltexte (Hilfe, Glossar, Münzwurf-Overlay, docs/regeln). Startspieler-Quote mit dem t254-Bot: 47,8 % (Starter) und 48,5 % (Misch), zuvor 43,7 / 43,8 % angepasst; das „(Start: N)“-Badge erscheint nur noch bei aktivem Abzug. Cache `divcmd-alpha40u`. Messung: `docs/balance/STARTSPIELER_T257.md`.
 
 - **Balance und Reskins (t255):** Nationen neu ausbalanciert (Ziel 46–54 %). Gemessen wurde mit dem t254-Bot in 69.120 Partien je Modus. Hebel waren vor allem Doktrinpaare:

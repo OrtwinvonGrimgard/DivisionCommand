@@ -366,7 +366,8 @@
       var el = document.getElementById(id);
       if (el) el.addEventListener('click', fn);
     }
-    bind('btn-start', startGame);
+    // t256: „Gefecht beginnen“ startet über index.html (onclick → dcStart). Ein zweiter
+    // Listener hier startete jede Partie doppelt (zwei Engines, zwei Countdowns).
     bind('go', startGame);
     bind('go-playtest', function () { if (window.DCPlayPanel) DCPlayPanel.show(); });
     bindTableControls();
@@ -574,14 +575,16 @@
       document.title = (window.DC_BUILD_LABEL || 'Division Command 0.30c Alpha');
       window.dcTimerHold = true;
       render();
-      if (window.dcKickoff) window.dcKickoff();
+      // t256: Münzwurf erst nach dem Einblend-Countdown zeigen. Vorher lag er unter dem
+      // Schleier und wurde vom Countdown überschrieben; „Los“ war nie klickbar, und ein
+      // startender Bot bekam nie maybeBot() → Partie hing, Karten ließen sich nicht legen.
+      if (window.dcKickoff) window.dcKickoff(afterKickoff);
       else {
         if (window.dcSetTable) window.dcSetTable(true);
         var tr = document.getElementById('title-root');
         if (tr) tr.style.display = 'none';
+        afterKickoff();
       }
-      // Opening coin after table is up (LAN host state already carries startCoin/active)
-      showOpeningCoin();
       try { installPlayLogger(engine, mode, you); } catch (ePl) { console.warn('[playtest]', ePl); }
     } catch (err) { // Fehler behandeln
       showErr(String(err && err.message ? err.message : err));
@@ -745,6 +748,8 @@
     }
     var botTurn = engine.state.active === 1 || (engine.state.pending && engine.state.pending.player === 1);
     if (!botTurn) return;
+    // t256: Solange der Münzwurf offen ist, wartet der Bot; „Los“ ruft maybeBot() erneut.
+    if (coinDialogOpen()) return;
     if (botQueued) return;
     botQueued = true;
     var queuedEngine = engine;
@@ -852,6 +857,26 @@
     }
   }
 
+
+  /**
+   * Prüft, ob der Eröffnungsmünzwurf gerade sichtbar auf „Los“ wartet.
+   * @returns {boolean}
+   */
+  function coinDialogOpen() {
+    var ov = document.getElementById('overlay');
+    return !!(ov && ov.style.display !== 'none' && ov.querySelector('#coin-start-ok'));
+  }
+  /**
+   * Läuft nach dem Einblend-Countdown (oder sofort ohne Kickoff): zeigt den
+   * Eröffnungsmünzwurf; ist keiner offen, darf ein startender Bot sofort ziehen.
+   * Verhindert, dass der Bot-Zug 1 ohne Auslöser hängen bleibt (t256).
+   */
+  function afterKickoff() {
+    if (!engine || !engine.state) return;
+    var sc = engine.state.startCoin;
+    if (sc && !sc._shown) { showOpeningCoin(); return; }
+    if (!coinDialogOpen()) maybeBot();
+  }
 
   /**
    * Zeigt den Eröffnungsmünzwurf und schickt die Wahl an die Engine.
@@ -1736,6 +1761,20 @@
   var recapShown = '';
   var recapTimer = 0;
   /* Letzte Runde: Karte links, Text rechts, danach Revue. */
+    /**
+     * t256: Verdeckte Information in der Meldung nicht zeigen. Gezogene Karten des Gegners
+     * und verdeckt gelegte Karten erscheinen mit der Rückseite statt mit dem Kartenbild.
+     * @param {object} ev Engine-Ereignis
+     * @returns {boolean}
+     */
+    function recapHidden(ev) {
+      if (!ev) return false;
+      var viewer = mode === 'hotseat' ? (engine && engine.state ? engine.state.active : 0) : you;
+      var owner = ev.owner != null ? ev.owner : ev.actor;
+      if (ev.kind === 'draw' && owner !== viewer) return true;
+      if ((ev.kind === 'deploy' || ev.kind === 'support') && /verdeckte/.test(ev.text || '') && owner !== viewer) return true;
+      return false;
+    }
     function showRecap(items, whose, opts) { // Aktion erklären
     var ov = document.getElementById('overlay');
     if (!ov) return;
@@ -1761,11 +1800,35 @@
     opts = opts || {};
     var live = !!opts.live;
     var cancelled = false;
+    var finished = false;
     ok.onclick = function () {
       cancelled = true;
       window.clearTimeout(recapTimer); // globale Schnittstelle der Seite
+      window.clearTimeout(deadline);
       ov.style.display = 'none';
     };
+    /**
+     * t256: Live-Meldung genau einmal abschließen (Overlay zu, onDone). Im Browser-Test blieb
+     * eine Meldung mitten im Tippen stehen; danach liefen keine Meldungen mehr und der Zug war
+     * blockiert. Absicherung: Klick auf die Meldung überspringt, eine Frist beendet sie sicher.
+     */
+    function finishLive() {
+      if (finished) return;
+      finished = true;
+      cancelled = true;
+      window.clearTimeout(deadline);
+      if (ov.querySelector('#recap-typed') === typed) ov.style.display = 'none';
+      if (opts.onDone) opts.onDone();
+    }
+    var holdMs = (window.DCTune && window.DCTune.dialogMs) || 2000;
+    var deadline = live ? window.setTimeout(finishLive, list.length * (holdMs * 2 + 4000) + 5000) : 0;
+    if (live) {
+      var stage = ov.querySelector('.recap-stage');
+      if (stage) {
+        stage.title = 'Klicken: Meldung überspringen';
+        stage.onclick = function () { finishLive(); };
+      }
+    }
     function wait(ms) {
       return new Promise(function (resolve) {
         recapTimer = window.setTimeout(resolve, ms); // später fortsetzen
@@ -1797,7 +1860,7 @@
         var ev = list[n];
         var def = ev.cardId && CATALOG.cards.find(function (c) { return c.id === ev.cardId; });
         if (!def && ev.name) def = CATALOG.cards.find(function (c) { return c.name === ev.name; });
-        var file = ev.image || (def && def.image) || backFile(def);
+        var file = recapHidden(ev) ? backFile(null) : (ev.image || (def && def.image) || backFile(def));
         art.classList.remove('show');
         art.onerror = function () { if (window.dcImgErr) window.dcImgErr(art); };
         art.setAttribute('data-file', file);
@@ -1812,8 +1875,7 @@
       }
       if (cancelled) return;
       if (live) {
-        ov.style.display = 'none';
-        if (opts.onDone) opts.onDone();
+        finishLive();
         return;
       }
       typed.textContent = 'Bereit für deinen Zug.';
@@ -3066,11 +3128,19 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     if (window.DCNet && DCNet.hookEngine) DCNet.hookEngine();
     render();
     presentNewEvents();
-    if (first && window.dcKickoff) window.dcKickoff();
-    else if (tr) { if (window.dcSetTable) window.dcSetTable(true); tr.style.display = 'none'; }
-    if (st && st.startCoin && !st.startCoin._shown) showOpeningCoin();
+    if (first && window.dcKickoff) window.dcKickoff(afterKickoff);
+    else {
+      if (tr) { if (window.dcSetTable) window.dcSetTable(true); tr.style.display = 'none'; }
+      if (st && st.startCoin && !st.startCoin._shown) showOpeningCoin();
+    }
   };
   window.dcPresentNewEvents = presentNewEvents;
+  /**
+   * t256: Läuft gerade eine Meldung/Flug-Animation oder wartet eine in der Warteschlange?
+   * Für UI-Tests (Playwright), damit Klicks nicht in eine startende Meldung fallen.
+   * @returns {boolean}
+   */
+  window.dcEventBusy = function () { return !!(eventPlaying || eventQueue.length); };
   window.dcSetNames = function (a, b) { // globale Schnittstelle der Seite
     if (!engine || !engine.state) return;
     if (a) engine.state.players[0].name = a;

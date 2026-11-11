@@ -275,10 +275,24 @@ def local_ips() -> list[str]:
     return sorted(found) or ["127.0.0.1"]
 
 
+# t256: Zeitpunkt der letzten Anfrage (außer /api/quit). Ein Neuladen der Seite (F5) feuert
+# `pagehide` → /api/quit; kommt danach binnen QUIT_GRACE_S eine neue Anfrage, bleibt der
+# Server am Leben. Nur ein wirklich geschlossenes Fenster beendet ihn.
+LAST_REQUEST = [0.0]
+QUIT_GRACE_S = 4.0
+
+
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         """Initialisiert die Instanz (HTTP-Handler bzw. Zufallsgenerator)."""
         super().__init__(*args, directory=str(WEB), **kwargs)
+
+    def parse_request(self):
+        """Merkt sich den Zeitpunkt jeder Anfrage (für die Gnadenfrist von /api/quit)."""
+        ok = super().parse_request()
+        if ok and not (self.path or "").startswith("/api/quit"):
+            LAST_REQUEST[0] = time.monotonic()
+        return ok
 
     def log_message(self, fmt, *args):
         """Unterdrückt bzw. formatiert die Zugriffslogs des HTTP-Servers."""
@@ -369,10 +383,13 @@ class Handler(SimpleHTTPRequestHandler):
             self._json({"ok": True})
             if os.environ.get("DC_KEEP_ALIVE") == "1":
                 return
+            asked = time.monotonic()
+
             def _die():
-                """Beendet die HTTP-Antwort mit Status und kurzer Fehlermeldung."""
-                import time
-                time.sleep(0.2)
+                """Beendet den Server nach der Gnadenfrist, wenn keine neue Anfrage kam (Neuladen)."""
+                time.sleep(QUIT_GRACE_S)
+                if LAST_REQUEST[0] > asked:
+                    return
                 os._exit(0)
             threading.Thread(target=_die, daemon=True).start()
             return
