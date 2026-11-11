@@ -863,7 +863,8 @@ def name_plaque(draw, style, ny, name, w=None):
     x0, x1 = 70, w - 70
     y0, y1 = ny, ny + 128
     cx, cy = w / 2, ny + 66
-    size = 86 if len(name) < 18 else 62 if len(name) < 26 else 50
+    # t270: eine Namensgröße für alle Karten; nur zu breite Namen werden passend verkleinert
+    size = None
     card = getattr(_mod, "_current_card", None) or {}
     branch = unit_branch(card)
     rgb = VELVET[branch]
@@ -879,7 +880,7 @@ def name_plaque(draw, style, ny, name, w=None):
         draw.rounded_rectangle((x0, y0, x1, y1), radius=6, fill=rgb, outline=rim, width=5)
     draw.rounded_rectangle((x0, y0, x1, y1), radius=6, outline=rim, width=5)
     fill = (248, 244, 236)
-    outlined_num(draw, (cx, cy), name.upper(), font(FONT_B, size), fill=fill)
+    outlined_num(draw, (cx, cy), name.upper(), _mod.fit_font(draw, name.upper(), FONT_B, _mod.NAME_PX, _mod.NAME_MAX_W), fill=fill)
 
 
 _mod.name_plaque = name_plaque
@@ -949,7 +950,8 @@ def _draw_ability_text(img, card, box, ink=(236, 224, 196), head_c=None):
     flavor = str((card or {}).get("flavor") or "").strip()
     inner_w = tx1 - tx0 - 80
     avail = ty1 - ty0 - 48 - (118 if flavor else 24)
-    steps = [(60, 62, 72, 70), (56, 58, 68, 66), (52, 54, 64, 62), (48, 50, 58, 56), (44, 46, 54, 52), (40, 42, 50, 48), (36, 38, 46, 44)]
+    # t270: feste Größe (_mod.BODY_PX) für alle Typen; kleinere Stufen nur als Notfall mit Warnung
+    steps = [(_mod.BODY_PX, _mod.HEAD_PX, _mod.BODY_LINE, _mod.HEAD_LINE), (56, 58, 68, 66), (52, 54, 64, 62), (48, 50, 58, 56), (44, 46, 54, 52), (40, 42, 50, 48), (36, 38, 46, 44)]
     chosen = steps[-1]
     use_flavor = bool(flavor)
     for attempt_fl in ((True, False) if use_flavor else (False,)):
@@ -969,6 +971,8 @@ def _draw_ability_text(img, card, box, ink=(236, 224, 196), head_c=None):
             continue
         break
     bp, hp, blh, hlh = chosen
+    if bp != _mod.BODY_PX:
+        print("WARN t270: Regeltext passt nicht in", _mod.BODY_PX, "px:", (card or {}).get("id") or (card or {}).get("name"))
     body, head = font(FONT_R, bp), font(FONT_B, hp)
     d = _ID.Draw(img); d._image = img
     y = ty0 + 48
@@ -980,11 +984,7 @@ def _draw_ability_text(img, card, box, ink=(236, 224, 196), head_c=None):
         y += 24
     d.line([(tx0 + 90, ty1 - 118), (tx1 - 90, ty1 - 118)], fill=rim, width=2)
     if use_flavor and flavor:
-        ff = font(FONT_I, 36)
-        quoted = "„" + flavor + "“"
-        fy = ty1 - 78
-        for ln in wrap(dummy, quoted, ff, tx1 - tx0 - 80)[:2]:
-            d.text(((tx0 + tx1) / 2, fy), ln, font=ff, fill=(196, 168, 110), anchor="mm"); fy += 48
+        _mod.draw_flavor(d, "„" + flavor + "“", (tx0 + tx1) / 2, ty1, tx1 - tx0 - 80, (196, 168, 110))
     return img
 
 def finish_support(img, card, edition="ALPHA", number="001", footer_star=False):

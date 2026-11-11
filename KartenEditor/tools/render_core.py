@@ -74,6 +74,49 @@ FONT_N = _pick_font("LiberationSansNarrow-Bold.ttf", "ARIALNB.TTF", "arialbd.ttf
 FONT_R = _pick_font("LiberationSerif-Regular.ttf", "times.ttf", "georgia.ttf", "DejaVuSerif.ttf")
 
 
+FONT_BI = _pick_font("LiberationSerif-BoldItalic.ttf", "timesbi.ttf", "georgiaz.ttf", "DejaVuSerif-BoldItalic.ttf")
+
+# t270: einheitliche Schriftgrößen (Arbeitsfläche 1536×2136, Ausgabe 1024×1428 = ×2/3).
+# Regeltext: feste Größe für alle Kartentypen; die alten Auto-Stufen bleiben nur als Notfall,
+# falls ein Text trotzdem nicht passt (Build meldet ihn dann).
+BODY_PX, HEAD_PX, BODY_LINE, HEAD_LINE = 66, 68, 78, 76
+# Kartenname: eine Größe für alle Karten; nur zu breite Namen werden auf Plakettenbreite verkleinert.
+NAME_PX, NAME_MAX_W = 80, 1320
+DOCTRINE_NAME_PX = 80
+# Zitat (Flavor): Varianten für den Vergleich, Auswahl über DC_FLAVOR (cur/A/B/C).
+FLAVOR_STYLES = {
+    "cur": ("I", 36, 48),   # bisher: kursiv 36
+    "A": ("I", 42, 50),     # ~17 % größer, kursiv
+    "B": ("BI", 36, 48),    # fett-kursiv, bisherige Größe
+    "C": ("BI", 42, 50),    # größer und fett-kursiv
+}
+FLAVOR_VARIANT = os.environ.get("DC_FLAVOR", "C")  # t270: Nutzerwahl C (fett-kursiv 42)
+
+
+def flavor_font():
+    """Liefert (Schrift, Zeilenabstand) für das Zitat gemäß FLAVOR_VARIANT."""
+    kind, px, lh = FLAVOR_STYLES.get(FLAVOR_VARIANT, FLAVOR_STYLES["cur"])
+    return font(FONT_BI if kind == "BI" else FONT_I, px), lh
+
+
+def fit_font(draw, text, path, size, max_w, min_size=40):
+    """Größte Schrift ≤ size, mit der text in max_w passt (für Namen; sonst fest)."""
+    s = size
+    while s > min_size and draw.textlength(str(text), font=font(path, s)) > max_w:
+        s -= 2
+    return font(path, s)
+
+
+def draw_flavor(d, quoted, cx, ty1, max_w, fill):
+    """Zitat mittig zwischen Trennlinie (ty1-118) und Panelunterkante, max. 2 Zeilen."""
+    ff, lh = flavor_font()
+    lines = wrap(d, quoted, ff, max_w)[:2]
+    fy = ty1 - 59 - (len(lines) - 1) * lh / 2
+    for ln in lines:
+        d.text((cx, fy), ln, font=ff, fill=fill, anchor="mm")
+        fy += lh
+
+
 def font(path, size):
     """Lädt eine TrueType-Schrift in der angegebenen Größe."""
     p = path or FONT_R
@@ -545,7 +588,7 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
         stock = doctrine_crest(stock, W / 2, 148)
         d = ImageDraw.Draw(stock)
         nm = card["name"].upper()
-        nf = font(FONT_B, 92 if len(nm) < 16 else 70)
+        nf = fit_font(d, nm, FONT_B, DOCTRINE_NAME_PX, W - 240)
         outlined_num(d, (W / 2, 330), nm, nf, fill=GOLD_LT)
         d.line([(160, 510), (W - 160, 510)], fill=GOLD, width=3)
         stock = paste_logo_star(stock, W / 2, 510, 32)
@@ -583,7 +626,8 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
     # oldstyle-40: auto font step-down so multi-effect texts fit the larger panel
     def _fit_fonts(blocks, inner_w, avail_h, want_flavor):
         # Start ~60 px (1–2 steps up from old 52); drop flavour before shrinking too far; never overflow
-        steps = [(60, 62, 72, 70), (56, 58, 68, 66), (52, 54, 64, 62), (48, 50, 58, 56), (44, 46, 54, 52), (40, 42, 50, 48), (36, 38, 46, 44)]
+        # t270: feste Größe zuerst; kleinere Stufen nur als Notfall (Build-Warnung)
+        steps = [(BODY_PX, HEAD_PX, BODY_LINE, HEAD_LINE), (56, 58, 68, 66), (52, 54, 64, 62), (48, 50, 58, 56), (44, 46, 54, 52), (40, 42, 50, 48), (36, 38, 46, 44)]
         dummy = ImageDraw.Draw(Image.new("RGB", (10, 10)))
         keep_fl = bool(want_flavor)
         for attempt_fl in ((True, False) if keep_fl else (False,)):
@@ -598,6 +642,8 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
                     lines = wrap(dummy, rest, bf, inner_w) if rest else []
                     h += blh * max(1, len(lines)) + 18
                 if h + flav_h <= avail_h:
+                    if bp != BODY_PX:
+                        print("WARN t270: Regeltext passt nicht in", BODY_PX, "px:", (card.get("id") or card.get("name")))
                     return bf, hf, blh, hlh, bp, attempt_fl
         return font(FONT_R, 36), font(FONT_B, 38), 46, 44, 36, False
     blocks_pre = abilities(card.get("text") or "")
@@ -611,7 +657,6 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
         blocks_pre, inner_for_fit, (1890 if show_stats else 1988) - text_top, bool(flavor))
     if not keep_flavor:
         flavor = ""
-    ff = font(FONT_I, 36)
 
     if typ == "Doktrin":
         # Bollwerk-style: continuous parchment/leather body under crest (no art), ability plaques on top
@@ -654,13 +699,8 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
             y += 18
         if flavor:
             d.line([(tx0 + 90, ty1 - 118), (tx1 - 90, ty1 - 118)], fill=GOLD, width=2)
-            fy = ty1 - 78
-            quoted = "„" + flavor + "“"
             # t269: Flavor mittig über die volle Panelbreite; der Orden endet oberhalb der Trennlinie
-            flav_cx = (tx0 + tx1) / 2
-            for ln in wrap(d, quoted, ff, tx1 - tx0 - 72)[:2]:
-                d.text((flav_cx, fy), ln, font=ff, fill=flav, anchor="mm")
-                fy += 48
+            draw_flavor(d, "„" + flavor + "“", (tx0 + tx1) / 2, ty1, tx1 - tx0 - 72, flav)
 
     if show_stats:
         d = ImageDraw.Draw(stock)

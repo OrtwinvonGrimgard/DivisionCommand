@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Old-alpha Kartenvorderseite (freigegebenes Layout):
 - Motivfenster 40 % der Kartenhöhe (854 von 2136), Cover-Zuschnitt, nie gestreckt
-- Grundschrift 60/62 px mit Auto-Stufen bis 36; Flavor fällt vor zu kleiner Schrift weg
+- Grundschrift fest 66/68 px (t270), Namen fest 80 px, Zitat fett-kursiv 42 px; Auto-Stufen nur als Notfall
 - Elite: Textpanel rechts um Ordenbreite eingezogen
 - Doktrinen: Bollwerk-Stil (Sternwappen, Leder-Tafeln, kein Motiv)
 Arbeitet über KartenEditor/tools/render.py (+ render_core.py). Ausgabe 1024×1428 WEBP.

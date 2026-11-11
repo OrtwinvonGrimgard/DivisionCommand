@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Vorderseiten-Build (alpha40 / old-alpha): faces-v2/<id>.webp via KartenEditor-Renderer
-(40 % Motiv, Schrift 60/62, Elite-Einzug, Bollwerk-Doktrinen). Flächentext = kurz.json;
+(40 % Motiv, Schrift 66/68 fest, Elite-Einzug, Bollwerk-Doktrinen). Flächentext = kurz.json;
 Volltext bleibt in `text` / docs/regeln/KARTEN_SONDERFAELLE.md.
 Aufruf: python3 render.py [--only id,id] [--jobs 4] [--all]"""
 from __future__ import annotations

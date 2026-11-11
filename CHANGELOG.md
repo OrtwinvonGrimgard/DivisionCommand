@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- **Einheitliche Schrift auf den Vorderseiten (t270):**
+  - Regeltext für alle Kartentypen fest 66 px (Überschrift 68) auf der 1536er-Arbeitsfläche. Vorher gab es automatische Stufen von 60 bis 36 px.
+  - Nur Eidträger und Flankenmeister (Elite mit drei Schlüsselwörtern) fallen auf die Notfallstufe 48 px zurück. Der Build meldet das als `WARN t270`.
+  - Kartennamen fest 80 px; vorher 86/62/50 px je nach Zeichenzahl. Nur 9 sehr lange Namen werden auf Plakettenbreite verkleinert (66–76 px). Doktrin-Namen fest 80 px (vorher 92/70).
+  - Zitat fett-kursiv 42 px statt kursiv 36, senkrecht mittig zwischen Trennlinie und Unterkante. 13 lange Zitate laufen zweizeilig. Bei Elitekarten bleibt das Zitat mittig und frei vom Orden.
+  - Alle 1.746 Vorderseiten neu gerendert (alpha40, 1024×1428). Cache `divcmd-alpha41b`.
+
 - **Balance und eindeutige Karten t268, Elite-Zitat t269:**
   - Alle 16 Nationen liegen zwischen 48 und 52 % (Bot gegen Bot, 23.040 Partien je Modus).
     - Starterdecks 44,9–55,3 → 48,9–51,1 %, Mischdecks 42,1–56,1 → 48,4–51,4 %.
