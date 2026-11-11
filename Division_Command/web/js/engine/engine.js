@@ -4302,11 +4302,34 @@
       // Feindkontakt-Fenster z. B. Napalm bei 0 AP an; die Wahl scheiterte („Nicht genug AP“),
       // der Dialog verschwand und die Partie wartete (ui-play Seeds 77/259).
       // Verdeckte Fallen aus dem Support lösen ohne AP aus und bleiben immer wählbar.
+      // t271: Auch nur Karten anbieten, deren Bedingung jetzt erfüllt ist. Vorher bot das Fenster
+      // z. B. „Militärische Ehren“ ohne Veteranen an; die Wahl scheiterte („Keine Veteranen an der
+      // Front.“) und das Fenster kam unverändert zurück (ui-play Seed 1234).
       return out.filter((o) => {
         const h = defender.hand.find((c) => c.uid === o.target);
+        const card = h || (defender.support || []).find((c) => c && c.uid === o.target);
+        if (card && !this._reactUsable(defender, card)) return false;
         if (!h) return true;
         return this._reactAffordable(defender, h);
       });
+    }
+    /**
+     * t271: Ist die Vorbedingung einer Reaktionskarte gerade erfüllt (dieselben Prüfungen wie beim Ausspielen)?
+     * @param {object} defender Spieler
+     * @param {object} card Karten-Instanz (Hand oder verdeckter Support)
+     * @returns {boolean}
+     */
+    _reactUsable(defender, card) {
+      try {
+        const codes = (this.defOf(card).effects || []).map((x) => x.code);
+        const front = this.frontList(defender);
+        if (codes.indexOf('HONORS') >= 0) return front.some((l) => (l.inst.flags.kills || 0) >= 1);
+        if (codes.indexOf('COURT_MARTIAL') >= 0) return front.length >= 2;
+        if (codes.indexOf('RATIONS') >= 0) return front.some((l) => isInfantry(this.defOf(l.inst)));
+        if (codes.indexOf('LAY_MINE') >= 0) return front.some((l) => !defender.nml[l.section][l.row]);
+        if (codes.indexOf('NAPALM') >= 0) return this.frontList(this.opponent(defender.id)).length > 0;
+        return true;
+      } catch (e) { return true; }
     }
     /**
      * t259: Kann der Verteidiger diese Handkarte als Reaktion bezahlen?

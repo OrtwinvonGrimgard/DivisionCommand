@@ -178,7 +178,7 @@ async function handleOverlay(page, round) {
     const isCancel = (b) => /Abbrechen|Zurück|Cancel/i.test(b.textContent) || /cancel|-x$|^ac-x$/i.test(b.id || '');
     const choice = all.filter((b) => b.matches('.choices button, .pick-row button, [data-react], [data-id], [data-i], .pick-section')
       && !b.classList.contains('on') && !b.classList.contains('picked'));
-    const confirm = all.find((b) => /confirm|^end-ok$|cw-ok|coin-start-ok|peek-ok|hp-ok|blk-ok|pend-empty-ok/.test(b.id || ''));
+    const confirm = all.find((b) => /confirm|^end-ok$|cw-ok|coin-start-ok|peek-ok|hp-ok|blk-ok|pend-empty-ok|react-pass/.test(b.id || ''));
     let target = null;
     if (r >= 6) target = all.find(isCancel) || all[0];
     else if (choice.length && !(r % 2 === 1 && confirm)) target = choice[0];
@@ -426,11 +426,13 @@ async function tryAbility(page) {
     return a ? a.uid : null;
   });
   if (!uid) return false;
-  const slot = page.locator(`#my-support .slot[data-uid="${uid}"]`);
+  // t271: ACTIVATE_SUPPORT ist das Neutralisieren eines gegnerischen Supports (Schläferzelle);
+  // das Feld liegt daher in #enemy-support, der Dialog im Karten-Inspektor (#inspect).
+  const slot = page.locator(`#my-support .slot[data-uid="${uid}"], #enemy-support .slot[data-uid="${uid}"], #enemy-support [data-uid="${uid}"]`).first();
   if (!(await slot.count())) throw new Error('Support ohne DOM-Feld ' + uid);
   await slot.click({ timeout: 5000 });
   await sleep(300);
-  const btn = page.locator('#overlay button:not([disabled])').filter({ hasText: /Fähigkeit|Neutralisieren|Aktivieren/ }).first();
+  const btn = page.locator('#overlay button:not([disabled]), #inspect button:not([disabled])').filter({ hasText: /Fähigkeit|Neutralisieren|Aktivieren/ }).first();
   if (!(await btn.count())) { await handleOverlay(page, 9); return false; }
   await btn.click({ timeout: 5000 });
   await sleep(300);

@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- **Analyse und Stand t271:**
+  - Feindkontakt-Fenster bietet nur noch Reaktionen an, deren Bedingung erfüllt ist: Militärische Ehren (Veteran), Kriegsgericht (zwei Fronteinheiten), Rationen (Infanterie), Minen legen (freier Platz), Napalm (gegnerische Front). Vorher scheiterte die Wahl, und das Fenster kam wieder (ui-play Seed 1234). Neu `_reactUsable`, Test `tests/test_react_usable_t271.js`; `ui-play` drückt auch „Bestätigen und weitergeben“.
+  - Balance bestätigt ohne Änderung: Starter 48,3–52,1 %, Misch 49,1–51,0 %, Startspieler 48,7 / 49,3 %.
+  - Prüfskript unverändert zu t268 (t267 14/14), Browser-Test Seeds 1234, 31337, 4711, 271, 77 grün (je 5 Partien); `ui-play` sucht das Neutralisieren jetzt im gegnerischen Support (vorher Fehlmeldung bei Seed 77).
+  - Status in `docs/entwicklung/STATUS_T271.md`; Hilfe (Entwicklungsstand, Fehlende Features, Fortschritt, Prozent: 67 %, Kernspiel 77 %). Cache `divcmd-alpha41c`.
+
 - **Einheitliche Schrift auf den Vorderseiten (t270):**
   - Regeltext für alle Kartentypen fest 66 px (Überschrift 68) auf der 1536er-Arbeitsfläche. Vorher gab es automatische Stufen von 60 bis 36 px.
   - Nur Eidträger und Flankenmeister (Elite mit drei Schlüsselwörtern) fallen auf die Notfallstufe 48 px zurück. Der Build meldet das als `WARN t270`.

@@ -752,9 +752,9 @@
             </article>
 
             <article class="hilfe-page dossier" id="hilfe-stand">
-              <p class="tiny">Stand 11.&nbsp;November&nbsp;2026, nachgezählt im Code auf <code>main</code> nach t259 (Analyse t265, Kartenreparatur t267, Balance und Eindeutigkeit t268). Alle Zahlen stammen aus Katalog, Tests und Messdateien im Repo.</p>
+              <p class="tiny">Stand 12.&nbsp;November&nbsp;2026, nachgezählt im Code auf <code>main</code> nach t270 (Analyse t265, Kartenreparatur t267, Balance und Eindeutigkeit t268, einheitliche Schrift t270, Analyse t271). Alle Zahlen stammen aus Katalog, Tests und Messdateien im Repo.</p>
               <h2 id="version">Version 0.6b Alpha</h2>
-              <p>Gesetzte Version 0.6b (Tag v0.6b vom 10.&nbsp;11.&nbsp;2026), seither 15 weitere Commits auf <code>main</code> ohne neue Versionsnummer. Das Repo hat seit dem 8.&nbsp;9.&nbsp;2026 937 Commits (September 181, Oktober 388, November bis t259 368). Code ohne Kartendaten: rund 17&nbsp;300 Zeilen JavaScript (Engine 7.761, Oberfläche 3.328, Bot 1.072), dazu <code>server.py</code> mit 651 Zeilen.</p>
+              <p>Gesetzte Version 0.6b (Tag v0.6b vom 10.&nbsp;11.&nbsp;2026), seither 20 weitere Commits auf <code>main</code> ohne neue Versionsnummer. Das Repo hat seit dem 8.&nbsp;9.&nbsp;2026 942 Commits (September 181, Oktober 388, November bis t271 373). Code ohne Kartendaten: rund 17&nbsp;500 Zeilen JavaScript (Engine 7.936, Oberfläche 3.328, Bot 1.081), dazu <code>server.py</code> mit 651 Zeilen.</p>
               <h2 id="stand-engine">Regeln & Engine</h2>
               <ul>
                 <li>Spielbar: Front 3×3 je Seite, Support, Niemandsland, AP-Ökonomie (5 je Zug, Rest bleibt), Angriff mit Gegenschlag, Eingraben, Steilfeuer I–V, verdeckte Fallen bei Feindkontakt, Doktrinen, Trophy-Sieg (5 SP, Sicherheitsnetz Zug 26/28).</li>
@@ -762,6 +762,7 @@
                 <li>210 Effektcodes im Katalog. Seit t250/t251 wirken die damals gefundenen Teil-Stubs wie gedruckt (Vertragsclip, Blitzkrieg-Sperre im nächsten gegnerischen Zug, Schläferzelle neutralisierbar für 2&nbsp;AP); Armageddon seit t259.</li>
                 <li>Prüfung t265 fand 14 Karten mit falscher Wirkung; <strong>seit t267 wirken alle 14 wie gedruckt</strong> (Opfergabe und Ablösung zerstören keine Feinde mehr, Bonus negieren, eigener Bonus nach Feindziel, Verbandskasten, Werkstattmarke, Ortungsband). Lesarten in <code>docs/regeln/KARTEN_T267.md</code>. Einziger geänderter Text: Stillprobe (Entwurfsrest).</li>
                 <li>Offen: Moral 0–5 und Brechen stehen nur im Regeltext (die Engine kennt keine Moral). Der Effektcode <code>MINE_TOKEN</code> wird nicht gelesen (die Mine wirkt über einen Sonderfall mit festen 3 Schaden). Speicherdeckel für AP nicht festgelegt.</li>
+                <li>t271: Das Feindkontakt-Fenster bietet nur noch Reaktionen an, deren Bedingung erfüllt ist (vorher z.&nbsp;B. „Militärische Ehren“ ohne Veteranen; die Wahl scheiterte und das Fenster kam wieder). Test <code>tests/test_react_usable_t271.js</code>.</li>
               </ul>
               <h2 id="karten">Karten & Grafik</h2>
               <table>
@@ -781,6 +782,7 @@
               <ul>
                 <li>Zwei Bots: „Test (Analyse)“ mit Zugstufen, Vorausschau auf einer Engine-Kopie und Vorabprüfung (0 abgelehnte Aktionen, gewinnt 78,6&nbsp;% gegen den alten Bot), „Schloter (Prozente)“. Bot-Verhalten in den Optionen einstellbar; feste Schwierigkeitsstufen gibt es nicht.</li>
                 <li>Nationen (Bot gegen Bot, t268 nach Feinabstimmung, 23.040 Partien je Modus, ±1,8 Punkte): Starterdecks 48,9–51,1&nbsp;% (vorher 44,9–55,3), Mischdecks 48,4–51,4&nbsp;% (vorher 42,1–56,1). Streuung um 50&nbsp;%: 0,7 bzw. 0,9 Punkte (vorher 3,2 bzw. 4,6), also etwa im Messrauschen. Startspieler 48,7&nbsp;% bzw. 49,6&nbsp;%.</li>
+                <li>Bestätigung t271 (neuer Lauf, ohne Änderung): Starterdecks 48,3–52,1&nbsp;%, Mischdecks 49,1–51,0&nbsp;%, Startspieler 48,7&nbsp;% bzw. 49,3&nbsp;%. Nur Vael (Starter 52,1&nbsp;%) liegt knapp über 52&nbsp;%, innerhalb des Messrauschens; daher keine Feinabstimmung.</li>
                 <li>Außerhalb 48–52&nbsp;%: keine Nation mehr (vorher 10 mit Starterdeck, 15 mit Mischdeck). 712 Karten geändert, Liste in <code>docs/regeln/BALANCE_T268.md</code>.</li>
                 <li>Blitzkrieg liegt etwa 7 Punkte unter der Kontrolle; die 6-AP-Soforteinsätze (Massen, Gehorsam, Gassen) werden in rund 4&nbsp;% der Partien gespielt.</li>
                 <li>Wirkung der Reparatur (gleicher Lauf vorher/nachher): Rothain Starter 55,7 → 51,7&nbsp;% (Ablösung), Theryn Starter 50,9 → 49,1&nbsp;% (Opfergabe), Caldris +1,5/+1,1. Karsk und Averon bewegen sich nur innerhalb der Messstreuung. Details in <code>docs/entwicklung/STATUS_T267.md</code>; Feinabstimmung t268 in <code>docs/entwicklung/STATUS_T268.md</code>.</li>
@@ -794,16 +796,16 @@
               </ul>
               <h2 id="stand-tests">Tests & Doku</h2>
               <ul>
-                <li><code>npm test</code>: 48 Testskripte grün (neu t268: keine funktionsgleichen Karten, eindeutige Namen), darunter Smoke (Bot gegen Bot), Effekte, Bot, Oberfläche (jsdom), Armageddon und Warte-Dialog (t259).</li>
-                <li><code>scripts/balance/audit_text_engine_t265.js</code> prüft alle Kartentexte gegen Effektliste und Ablauf; seit t267 mit Abschnitt für die 14 reparierten Karten (alle OK). Neu t267: <code>tests/test_cards_t267.js</code> (20 Fälle, in <code>npm test</code>).</li>
+                <li><code>npm test</code>: 49 Testskripte grün (neu t268: keine funktionsgleichen Karten, eindeutige Namen; neu t271: Feindkontakt nur mit nutzbaren Reaktionen), darunter Smoke (Bot gegen Bot), Effekte, Bot, Oberfläche (jsdom), Armageddon und Warte-Dialog (t259).</li>
+                <li><code>scripts/balance/audit_text_engine_t265.js</code> prüft alle Kartentexte gegen Effektliste und Ablauf; seit t267 mit Abschnitt für die 14 reparierten Karten (alle OK). Lauf t271 unverändert zu t268: 269 statische Hinweise (17 davon Fehlalarme durch <code>CM</code>), 15 im Ablauf, 6 nicht spielbar, 9 ungelesene Parameter. Neu t267: <code>tests/test_cards_t267.js</code> (20 Fälle, in <code>npm test</code>).</li>
                 <li>Fuzz 80/80 Partien regulär beendet; <code>verify.py</code>: 1.746 Vorderseiten geprüft.</li>
-                <li>Browser-Test <code>npm run ui-play</code> (Chromium): alle Schaltflächen, Legen per Klick und Ziehen, ganze Partien gegen den Bot. Der Warte-Dialog „Der Gegner prüft Reaktionen“ schließt sich selbst, sobald keine Gegnerwahl mehr offen ist (Wächter, t259). t259: 5 von 5 Seeds grün; t265: 8 weitere Seeds mit 38 Partien: 6 von 8 Seeds grün, 2 Abbrüche (4711 Spiel 1, 31337 Spiel 3) durch Zeitüberschreitung des Testskripts beim Warten auf den eigenen Zug. Kein eingefrorenes Spiel: Die Meldungen nach einem langen Bot-Zug liefen noch (Text tippte weiter, Zugtimer lief), dauerten aber zusammen länger als die 180 s Wartezeit des Tests. Spielerisch heißt das: lange Wartezeit nach großen Bot-Zügen. t268: Seeds 268, 269 und 4711 mit je 5 Partien grün (4711 brach in t265 noch ab). Nicht abgedeckt: 2,5D, EXE, echtes LAN.</li>
-                <li>103 Markdown-Dokumente in docs/, davon 35 in Regeln, Balance und Technik. Die Projektdokumentation (PDF) beschreibt Version 0.6b und enthält t254–t265 noch nicht.</li>
+                <li>Browser-Test <code>npm run ui-play</code> (Chromium): alle Schaltflächen, Legen per Klick und Ziehen, ganze Partien gegen den Bot. Der Warte-Dialog „Der Gegner prüft Reaktionen“ schließt sich selbst, sobald keine Gegnerwahl mehr offen ist (Wächter, t259). t259: 5 von 5 Seeds grün; t265: 8 weitere Seeds mit 38 Partien: 6 von 8 Seeds grün, 2 Abbrüche (4711 Spiel 1, 31337 Spiel 3) durch Zeitüberschreitung des Testskripts beim Warten auf den eigenen Zug. Kein eingefrorenes Spiel: Die Meldungen nach einem langen Bot-Zug liefen noch (Text tippte weiter, Zugtimer lief), dauerten aber zusammen länger als die 180 s Wartezeit des Tests. Spielerisch heißt das: lange Wartezeit nach großen Bot-Zügen. t268: Seeds 268, 269 und 4711 mit je 5 Partien grün (4711 brach in t265 noch ab). t271: Seeds 1234, 31337, 4711, 271 und 77 mit je 5 Partien grün (je 16 Prüfungen ok), keine hängenden Meldungen (31337 brach in t265 noch ab). Seed 1234 fand vorher den Feindkontakt-Fehler (siehe Regeln & Engine). Nicht abgedeckt: 2,5D, EXE, echtes LAN.</li>
+                <li>108 Markdown-Dokumente in docs/ (Stand t271: <code>docs/entwicklung/STATUS_T271.md</code>). Die Projektdokumentation (PDF) beschreibt Version 0.6b und enthält t254–t271 noch nicht.</li>
               </ul>
             </article>
 
             <article class="hilfe-page dossier" id="hilfe-fehlend">
-              <p class="tiny">Was für eine Early-Access-Fassung fehlt, nach Dringlichkeit. Stand 11.&nbsp;11.&nbsp;2026, Analyse t265, nach Kartenreparatur t267 und Balance t268.</p>
+              <p class="tiny">Was für eine Early-Access-Fassung fehlt, nach Dringlichkeit. Stand 12.&nbsp;11.&nbsp;2026, Analyse t271 (nach Kartenreparatur t267, Balance t268 und Schrift t270).</p>
               <h2 id="fehlt-kritisch">Vor Early Access (kritisch)</h2>
               <ol>
                                 <li><strong>Menschlicher Playtest.</strong> Alle Balancezahlen stammen aus Bot-gegen-Bot-Partien. Kein dokumentierter Test mit Menschen.</li>
@@ -824,7 +826,7 @@
                 <li>Kartentext gegen Engine: die 14 Karten aus t265 sind seit t267 behoben. Offen bleibt nur <code>MINE_TOKEN</code> (siehe unten).</li>
                 <li>Moral 0–5 und Brechen nur im Regeltext, nicht im Ablauf.</li>
                 <li><code>MINE_TOKEN</code> wird nicht gelesen (Wirkung über Sonderfall).</li>
-                <li>Balance: alle Nationen 48–52&nbsp;% (t268, nur Bot-Messung). Offen: Startspieler gewinnt 48,7–49,6&nbsp;%, Blitzkrieg etwa 7 Punkte unter Kontrolle, 6-AP-Soforteinsätze selten gespielt, Neutralisierung der Schläferzelle evtl. 3 statt 2&nbsp;AP.</li>
+                <li>Balance: alle Nationen 48–52&nbsp;% (t268, nur Bot-Messung; t271 bestätigt, Vael Starter 52,1&nbsp;% im Rauschen). Offen: Startspieler gewinnt 48,7–49,3&nbsp;%, Blitzkrieg etwa 7 Punkte unter Kontrolle, 6-AP-Soforteinsätze selten gespielt, Neutralisierung der Schläferzelle evtl. 3 statt 2&nbsp;AP.</li>
                 <li>Speicherdeckel für AP (etwa 10) nicht festgelegt.</li>
               </ul>
               <h2 id="fehlt-technik">Technik & Vertrieb</h2>
@@ -832,7 +834,8 @@
                 <li>2,5D-Tischansicht ist im Browser-Test nicht abgedeckt.</li>
                 <li>Porträts: Frauen und acht Nationen fehlen; Ordnernamen „Ossar“ und „Jetzt“ passen nicht zu den 16 Nationen.</li>
                 <li>Endgültige Kartenmotive für 650 als vorläufig markierte Karten.</li>
-                <li>Projektdokumentation und PDF (Stand Version 0.6b) um t254–t265 ergänzen.</li>
+                <li>Projektdokumentation und PDF (Stand Version 0.6b) um t254–t271 ergänzen.</li>
+                <li>Prüfskript Kartentext gegen Engine: <code>CM</code>-Heilung/-Ziehen als Effektfamilie erkennen (17 Fehlalarme).</li>
                 <li>Markenanmeldung (DPMA) vor öffentlicher Steam-Seite.</li>
               </ul>
             </article>
@@ -857,6 +860,7 @@
                   <tr><td>11.&nbsp;11.</td><td>t267: die 14 Karten wirken wie gedruckt (Bonus negieren, eigener Bonus nach Feindziel, Opfern ohne Feindzerstörung, Ausrüstung), Balance neu gemessen.</td></tr>
                   <tr><td>11.&nbsp;11.</td><td>t268/t269: keine funktionsgleichen Karten und keine doppelten Namen mehr, alle Nationen 48–52&nbsp;% (Bot gegen Bot), Zitat auf Elitekarten wieder mittig.</td></tr>
                   <tr><td>11.&nbsp;11.</td><td>t270: einheitliche Schrift auf allen Vorderseiten (Regeltext fest, Kartennamen in einer Größe), Zitat größer und fett-kursiv.</td></tr>
+                  <tr><td>12.&nbsp;11.</td><td>t271: Analyse und Stand: keine Rückschritte, Balance bestätigt, Browser-Test 5/5 Seeds; Feindkontakt bietet nur noch nutzbare Reaktionen an.</td></tr>
                 </tbody>
               </table>
               <h2 id="fortschritt-meilensteine">Meilensteine bis Early Access</h2>
@@ -883,21 +887,21 @@
               <h2 id="prozent-gesamt">Gesamt: 67&nbsp;%</h2>
               <p><span class="prog" role="img" aria-label="67 Prozent"><i style="width:67%"></i></span></p>
               <p>Bezugspunkt (100&nbsp;%) ist die Early-Access-Fassung laut Fahrplan: stabiler Tisch, Bot, Hotseat und LAN, Tutorial, Roguelike-Slice, erste Kampagnengeschichten, Steam-Seite mit Demo. Live-Funktionen (Ladder, Workshop) zählen nicht dazu.</p>
-              <p>Nur das Kernspiel (ohne Spielmodi und Vertrieb) liegt bei <strong>77&nbsp;%</strong>. Stand t268 nach Balance und Eindeutigkeit; vorher (t267) 66&nbsp;% bzw. 75&nbsp;%. Keine funktionsgleichen Karten mehr, alle Nationen 48–52&nbsp;% in der Bot-Messung.</p>
+              <p>Nur das Kernspiel (ohne Spielmodi und Vertrieb) liegt bei <strong>77&nbsp;%</strong>. Stand t271 (Analyse): Gesamt und Kernspiel unverändert zu t268 (67&nbsp;% bzw. 77&nbsp;%), weil kein neuer Lieferpunkt fertig wurde. Kleine Anhebung bei Oberfläche und Tests & Doku.</p>
               <h2 id="prozent-bereiche">Je Bereich</h2>
               <table>
-                <thead><tr><th>Bereich</th><th>Gewicht</th><th>Stand</th><th>Beitrag</th><th>Begründung (Änderung zu t267)</th></tr></thead>
+                <thead><tr><th>Bereich</th><th>Gewicht</th><th>Stand</th><th>Beitrag</th><th>Begründung (Änderung zu t268)</th></tr></thead>
                 <tbody>
-                  <tr><td>Regeln & Engine</td><td>20&nbsp;%</td><td><span class="prog"><i style="width:90%"></i></span> 90&nbsp;%</td><td>18,0</td><td>Unverändert: alle 14 Karten aus t265 wirken wie gedruckt (t267); offen weiter Moral, MINE_TOKEN, AP-Deckel.</td></tr>
-                  <tr><td>Kartenbestand</td><td>15&nbsp;%</td><td><span class="prog"><i style="width:88%"></i></span> 88&nbsp;%</td><td>13,2</td><td>85 → 88: keine funktionsgleichen Karten, Namen eindeutig, Elite-Zitat mittig (t268/t269); offen 650 vorläufige Motive.</td></tr>
-                  <tr><td>Balance</td><td>10&nbsp;%</td><td><span class="prog"><i style="width:82%"></i></span> 82&nbsp;%</td><td>8,2</td><td>74 → 82: Spanne 48,4–51,4&nbsp;% in beiden Modi (t268); nur Bot-Messung, kein menschlicher Test.</td></tr>
+                  <tr><td>Regeln & Engine</td><td>20&nbsp;%</td><td><span class="prog"><i style="width:90%"></i></span> 90&nbsp;%</td><td>18,0</td><td>Unverändert: Feindkontakt bietet nur nutzbare Reaktionen (t271); offen weiter Moral, MINE_TOKEN, AP-Deckel.</td></tr>
+                  <tr><td>Kartenbestand</td><td>15&nbsp;%</td><td><span class="prog"><i style="width:88%"></i></span> 88&nbsp;%</td><td>13,2</td><td>Unverändert: keine funktionsgleichen Karten, einheitliche Schrift (t270); offen 650 vorläufige Motive.</td></tr>
+                  <tr><td>Balance</td><td>10&nbsp;%</td><td><span class="prog"><i style="width:82%"></i></span> 82&nbsp;%</td><td>8,2</td><td>Unverändert: t271 bestätigt (48,3–52,1 bzw. 49,1–51,0&nbsp;%); nur Bot-Messung, kein menschlicher Test.</td></tr>
                   <tr><td>Bot-KI</td><td>10&nbsp;%</td><td><span class="prog"><i style="width:70%"></i></span> 70&nbsp;%</td><td>7,0</td><td>Unverändert: Zugstufen, Vorausschau, 0 abgelehnte Aktionen; keine Schwierigkeitsstufen.</td></tr>
-                  <tr><td>Oberfläche, Grafik, Ton</td><td>15&nbsp;%</td><td><span class="prog"><i style="width:68%"></i></span> 68&nbsp;%</td><td>10,2</td><td>Unverändert: Hänger „Gegner prüft Reaktionen“ behoben mit Wächtern, Hilfe besser lesbar; offen Tutorial, Porträts, 2,5D ungetestet.</td></tr>
+                  <tr><td>Oberfläche, Grafik, Ton</td><td>15&nbsp;%</td><td><span class="prog"><i style="width:69%"></i></span> 69&nbsp;%</td><td>10,35</td><td>68 → 69: einheitliche Schrift (t270), Browser-Test 5/5 Seeds ohne hängende Meldungen (t271); offen Tutorial, Porträts, 2,5D ungetestet.</td></tr>
                   <tr><td>Mehrspieler</td><td>10&nbsp;%</td><td><span class="prog"><i style="width:45%"></i></span> 45&nbsp;%</td><td>4,5</td><td>Unverändert: Hotseat und LAN gebaut; keine Zwei-Rechner-Partie, kein Online.</td></tr>
                   <tr><td>Spielmodi (Tutorial, Roguelike, Kampagne)</td><td>10&nbsp;%</td><td><span class="prog"><i style="width:5%"></i></span> 5&nbsp;%</td><td>0,5</td><td>Unverändert: nur Konzepte im Fahrplan.</td></tr>
-                  <tr><td>Tests & Doku</td><td>5&nbsp;%</td><td><span class="prog"><i style="width:86%"></i></span> 86&nbsp;%</td><td>4,3</td><td>85 → 86: Test gegen funktionsgleiche Karten und doppelte Namen, Änderungsliste aller Karten; kein Playtest-Protokoll, PDF veraltet.</td></tr>
+                  <tr><td>Tests & Doku</td><td>5&nbsp;%</td><td><span class="prog"><i style="width:87%"></i></span> 87&nbsp;%</td><td>4,35</td><td>86 → 87: neuer Feindkontakt-Test, Browser-Testskript bedient „Weitergeben“, Status t271; kein Playtest-Protokoll, PDF veraltet.</td></tr>
                   <tr><td>Build & Vertrieb</td><td>5&nbsp;%</td><td><span class="prog"><i style="width:20%"></i></span> 20&nbsp;%</td><td>1,0</td><td>Unverändert: PWA und EXE-Skript vorhanden; EXE nie gebaut, keine Steam-Seite, keine Marke.</td></tr>
-                  <tr><td><strong>Summe</strong></td><td>100&nbsp;%</td><td><strong>67&nbsp;%</strong></td><td>66,9</td><td></td></tr>
+                  <tr><td><strong>Summe</strong></td><td>100&nbsp;%</td><td><strong>67&nbsp;%</strong></td><td>67,1</td><td></td></tr>
                 </tbody>
               </table>
               <h2 id="prozent-methodik">Methodik</h2>
@@ -975,7 +979,7 @@
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=st1"></script>
   <script src="js/ui/end-screen.js?v=1"></script>
-  <script src="js/ui/app.js?v=alpha41b"></script>
+  <script src="js/ui/app.js?v=alpha41c"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
   <script src="js/ui/audio-options.js?v=1"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>
