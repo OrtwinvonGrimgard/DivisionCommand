@@ -609,8 +609,8 @@ def ws_thread(port: int):
                             continue
                         try:
                             await other.send(packed)
-                        except Exception:
-                            pass
+                        except Exception as exc:  # t283: nicht stumm schlucken
+                            print("[relay] Senden an Client fehlgeschlagen:", exc, file=sys.stderr)
                 else:
                     # Spielzüge: nur von Sitzinhabern; Spielstände nur vom Host, Aktionen nur vom Gast.
                     if not (seat and seats.get(seat) and seats[seat]["ws"] is ws):
@@ -625,8 +625,8 @@ def ws_thread(port: int):
                             continue
                         try:
                             await other.send(packed)
-                        except Exception:
-                            pass
+                        except Exception as exc:  # t283: nicht stumm schlucken
+                            print("[relay] Senden an Client fehlgeschlagen:", exc, file=sys.stderr)
         finally:
             name = (clients.get(ws) or {}).get("name") or "Spieler"
             clients.pop(ws, None)

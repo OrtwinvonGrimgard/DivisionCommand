@@ -601,7 +601,7 @@
         var needVp2 = engine._trophyVpToWin ? engine._trophyVpToWin() : 5;
         if ((p.vp || 0) >= needVp2 - 2) s += 8;
       }
-    } catch (eP) {}
+    } catch (eP) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] bot.js: ignorierter Fehler', eP); }
     return s;
   }
 
@@ -675,7 +675,7 @@
               });
             }
           }
-        } catch (eT) {}
+        } catch (eT) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] bot.js: ignorierter Fehler', eT); }
         var canCounter = true;
         if (isArtyAtk && engine._canReachForCounter) {
           try { canCounter = !!engine._canReachForCounter(loc, aLoc); } catch (e2) { canCounter = true; }

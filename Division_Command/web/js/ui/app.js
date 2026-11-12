@@ -235,7 +235,7 @@
    */
   function leaveMatch(toLobby) {
     var ended = engine && isTerminal(engine.state);
-    if (!ended) { try { if (window.DCPlayLogger && DCPlayLogger.abort) DCPlayLogger.abort('menue'); } catch (e) {} }
+    if (!ended) { try { if (window.DCPlayLogger && DCPlayLogger.abort) DCPlayLogger.abort('menue'); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', e); } }
     if (window.DCNet && DCNet.disconnect) DCNet.disconnect();
     clearMatchPresentation();
     engine = null; matchSetup = null; endHandledKey = null; tableBound = false;
@@ -276,7 +276,7 @@
           // recordAction may have already finalized this exact game.
           if (!current || !current.end) DCPlayLogger.finish('completed', st.winner, st.endReason);
         }
-      } catch (e) {}
+      } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', e); }
     }
     if (window.DCEndScreen) DCEndScreen.show(st, {
       mode: mode, you: you, lan: /^(lan|host|join)$/.test(mode),
@@ -354,7 +354,7 @@
     bind('btn-peace', function () { dispatch({ type: 'PROPOSE_PEACE', player: activePlayer() }); });
     bind('btn-accept', function () { dispatch({ type: 'ACCEPT_PEACE', player: activePlayer() }); });
     bind('btn-concede', function () {
-      try { dispatch({ type: 'CONCEDE', player: activePlayer() }); } catch (e) {}
+      try { dispatch({ type: 'CONCEDE', player: activePlayer() }); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', e); }
       if (window.DCNet && DCNet.notifyLeave) DCNet.notifyLeave('hat aufgegeben');
     });
     bind('btn-menu', function () { leaveMatch(false); });
@@ -439,7 +439,7 @@
             actor: isBot ? 'bot' : 'human',
             botSuggestion: suggestion
           });
-        } catch (eRec) {}
+        } catch (eRec) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eRec); }
         throw err;
       }
       try {
@@ -448,7 +448,7 @@
           actor: isBot ? 'bot' : 'human',
           botSuggestion: isBot ? null : suggestion
         });
-      } catch (eRec2) {}
+      } catch (eRec2) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eRec2); }
       return res;
     };
     eng._playLogHooked = true;
@@ -556,7 +556,7 @@
         deck1 = v1.fixedIds; doctrine1 = v1.doctrineIds;
         var warn = [].concat(v0.notices || [], v1.notices || []);
         if (warn.length && window.alert) {
-          try { window.alert('Deckregel — überzählige Kopien entfernt:\n' + warn.join('\n')); } catch (eW) {}
+          try { window.alert('Deckregel — überzählige Kopien entfernt:\n' + warn.join('\n')); } catch (eW) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eW); }
         }
       }
       if (replay) {
@@ -660,7 +660,7 @@
       var soundLoc = action.uid && engine.findInst(action.uid);
       var originalDef = soundLoc ? engine.defOf(soundLoc.inst) : (action.cardId && engine.byId[action.cardId]);
       if (originalDef) soundDef = JSON.parse(JSON.stringify(originalDef));
-    } catch (audioLookupError) {}
+    } catch (audioLookupError) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', audioLookupError); }
     var res;
     try { res = engine.dispatch(action); }
     catch (err) { showErr(String(err.message || err)); return; }
@@ -675,7 +675,7 @@
             engine: engine, action: action, result: res, actor: 'human', botSuggestion: null
           });
         }
-      } catch (eSent) {}
+      } catch (eSent) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eSent); }
       return res;
     }
     if (!res.ok) {
@@ -743,10 +743,10 @@
             window._dcLastVpSum = vpNow;
           }
         }
-      } catch (eVp) {}
+      } catch (eVp) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eVp); }
     }
     if (res.coinWinner || res.code === 'COIN_WINNER') {
-      try { audioCall('playSfx', 'coin'); } catch (eC) {}
+      try { audioCall('playSfx', 'coin'); } catch (eC) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eC); }
     }
     if (action.type === 'END_TURN') {
       eventQueue = [];
@@ -814,7 +814,7 @@
       return { type: 'CANCEL_PENDING', player: 1 };
     }
     function botForceEnd() {
-      try { engine.dispatch({ type: 'CANCEL_PENDING', player: 1 }); } catch (e) {}
+      try { engine.dispatch({ type: 'CANCEL_PENDING', player: 1 }); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', e); }
       if (engine.state.pending && engine.state.pending.player === 1) engine.state.pending = null;
       var res = null;
       try { res = engine.dispatch({ type: 'END_TURN', player: 1 }); } catch (e2) { res = { ok: false }; }
@@ -833,7 +833,7 @@
     var pend0 = engine.state.pending;
     if (pend0 && pend0.player !== 1) {
       render();
-      try { if (!eventPlaying) showPending(); } catch (e) {}
+      try { if (!eventPlaying) showPending(); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', e); }
       return;
     }
     if (mode === 'tutorial') { scriptedTick(); return; }
@@ -874,7 +874,7 @@
     var pend = engine.state.pending;
     if (pend && pend.player !== 1) {
       render();
-      try { if (!eventPlaying) showPending(); } catch (e) {}
+      try { if (!eventPlaying) showPending(); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', e); }
       return;
     }
     render();
@@ -914,7 +914,7 @@
     var pend = engine.state.pending;
     render();
     if (pend && pend.player !== 1) {
-      try { if (!eventPlaying) showPending(); } catch (e) {}
+      try { if (!eventPlaying) showPending(); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', e); }
       presentNewEvents();
       return;
     }
@@ -1007,7 +1007,7 @@
       ov.innerHTML = '';
       clearTargetHighlights();
       var pend = engine && engine.state && engine.state.pending;
-      if (pend && pend.player === activePlayer() && !eventPlaying) { try { showPending(); } catch (e) {} }
+      if (pend && pend.player === activePlayer() && !eventPlaying) { try { showPending(); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', e); } }
       return true;
     }
     /**
@@ -1073,11 +1073,11 @@
         if (sig === pumpLastSig) recapStillTicks += 1; else { recapStillTicks = 0; pumpLastSig = sig; }
         if (recapStillTicks >= 15) {
           recapStillTicks = 0; pumpLastSig = '';
-          if (recapCancelPrev) { try { recapCancelPrev(); } catch (eRc) {} recapCancelPrev = null; }
+          if (recapCancelPrev) { try { recapCancelPrev(); } catch (eRc) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eRc); } recapCancelPrev = null; }
           ov.style.display = 'none'; ov.innerHTML = '';
           eventPlaying = false;
           pumpEvents();
-          if (!eventPlaying) { try { guardPendingUi(false); } catch (eG) {} maybeBot(); }
+          if (!eventPlaying) { try { guardPendingUi(false); } catch (eG) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eG); } maybeBot(); }
           return true;
         }
         pumpStuckTicks = 0;
@@ -1703,7 +1703,7 @@
       try {
         var n = ev.target && ev.target.closest && ev.target.closest('.card, .slot, .doctrine-card');
         if (n && n._dcActTimer) clearTimeout(n._dcActTimer);
-      } catch (eClr) {}
+      } catch (eClr) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eClr); }
       /* Act-Menü/Overlay schließen, sonst blockiert dialogOpen den Zoom nach Doppelklick. */
       var ov = document.getElementById('overlay');
       if (ov && ov.style.display === 'flex') { ov.style.display = 'none'; ov.innerHTML = ''; }
@@ -1814,7 +1814,7 @@
       return unitHtmlBody(inst, mine, section, row);
     } catch (err) {
       var d = {};
-      try { d = engine.defOf(inst) || {}; } catch (e2) {}
+      try { d = engine.defOf(inst) || {}; } catch (e2) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', e2); }
       return '<div class="slot filled ' + (mine ? 'mine' : 'enemy') + '" data-uid="' + inst.uid + '" data-drop="front" data-section="' + (section || '') + '" data-row="' + (row || 0) + '">' +
         tableArt(d, !!(inst.facedown && !mine)) +
         '<div class="unit-stats">' + escapeHtml(d.name || 'Einheit') + '</div></div>';
@@ -1874,9 +1874,9 @@
       if (p.flags && p.flags.keinLoch && p.flags.keinLoch.until === engine.state.turn) {
         auraSecs[p.flags.keinLoch.section] = auraSecs[p.flags.keinLoch.section] || { kind: 'kein_loch' };
       }
-    } catch (eA) {}
+    } catch (eA) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eA); }
     var secFx = {};
-    try { if (window.DCTableFx) secFx = DCTableFx.sectionFx(engine, p, mine); } catch (eS) {}
+    try { if (window.DCTableFx) secFx = DCTableFx.sectionFx(engine, p, mine); } catch (eS) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eS); }
     var slots = order.map(function (pair) {
       var html = unitHtml(p.front[pair[0]][pair[1]], mine, pair[0], pair[1]);
       var sf = secFx[pair[0]];
@@ -1948,7 +1948,7 @@
     if (!bombTick) {
       bombTick = window.setInterval(function () {
         if (!engine || isTerminal(engine.state)) return;
-        try { guardPendingUi(true); } catch (eGuard) {} // t259: Dialoge nie dauerhaft verlieren
+        try { guardPendingUi(true); } catch (eGuard) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eGuard); } // t259: Dialoge nie dauerhaft verlieren
         if (window.dcTimerHold || mode === 'tutorial') return; // t275: kein Zugtimer im Tutorial
         if (bombLeft > 0) {
           bombLeft -= 1;
@@ -1992,7 +1992,7 @@
     // sich alle Meldungen einen Timer; eine neue Meldung löschte den Tipp-Timer einer laufenden,
     // deren Promise löste nie auf (Text blieb z. B. bei „Test“ stehen) und die Meldungs-Pumpe
     // blieb bis zur langen Frist „beschäftigt“ (ui-play Seed 259).
-    if (recapCancelPrev) { try { recapCancelPrev(); } catch (eRc) {} recapCancelPrev = null; }
+    if (recapCancelPrev) { try { recapCancelPrev(); } catch (eRc) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eRc); } recapCancelPrev = null; }
     window.clearTimeout(recapTimer); // globale Schnittstelle der Seite
     ov.innerHTML =
       '<div class="recap-stage">' +
@@ -2216,7 +2216,7 @@
                 ev.kind === 'coin' || ev.kind === 'vp' || ev.kind === 'trophy') {
               audioCall('playEvent', Object.assign({}, ev, { _def: def }));
             }
-          } catch (eEv) {}
+          } catch (eEv) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eEv); }
         });
       }
       eventQueue = eventQueue.concat(fresh.filter(isLiveEvent));
@@ -2413,7 +2413,7 @@
     }
     if (def.typ === 'Soforteinsatz') {
       var isSec = false;
-      try { isSec = !!(engine && engine._isSectionEffect && engine._isSectionEffect(def)); } catch (e1) {}
+      try { isSec = !!(engine && engine._isSectionEffect && engine._isSectionEffect(def)); } catch (e1) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', e1); }
       if (isSec) {
         var sec = slot.getAttribute('data-section');
         var side = enemy ? 'enemy' : 'own';
@@ -2497,7 +2497,7 @@
           if (side === 'any') return '#my-front .slot, #enemy-front .slot';
           return '#my-front .slot';
         }
-      } catch (eSec) {}
+      } catch (eSec) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eSec); }
       return '#enemy-front .slot.filled, #enemy-support .slot.filled, #my-front .slot.filled';
     }
     return '';
@@ -2724,7 +2724,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     var hover = null;
     var lastX = startX;
     var lastY = startY;
-    try { el.setPointerCapture(ev.pointerId); } catch (err) {}
+    try { el.setPointerCapture(ev.pointerId); } catch (err) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', err); }
     function move(e) {
       lastX = e.clientX;
       lastY = e.clientY;
@@ -2751,7 +2751,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       window.removeEventListener('pointermove', move, true);
       window.removeEventListener('pointerup', up, true);
       window.removeEventListener('pointercancel', up, true);
-      try { el.releasePointerCapture(e.pointerId); } catch (err2) {}
+      try { el.releasePointerCapture(e.pointerId); } catch (err2) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', err2); }
       hideDragGhost();
       if (!moved) {
         document.body.classList.remove('dc-dragging');
@@ -3042,7 +3042,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     document.querySelectorAll('#my-front .slot.filled, #enemy-front .slot.filled, #my-support .slot.filled, #enemy-support .slot.filled, .doctrine-card').forEach(function (tile) {
       tile.tabIndex = 0; tile.setAttribute('role', 'button');
     });
-    if (window.DCCamera) { try { DCCamera.afterRender(engine); } catch (eCam) {} } // auch ohne DOM-Änderung (Optionen/Baseline)
+    if (window.DCCamera) { try { DCCamera.afterRender(engine); } catch (eCam) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eCam); } } // auch ohne DOM-Änderung (Optionen/Baseline)
     if (!dirty) { guardPendingUi(); return; }
     $('#hand').querySelectorAll('.card').forEach(function (el) { // Handkarten
       bindHover(el, function () {
@@ -3076,7 +3076,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
           { // optional audio is isolated by audioCall
             audioCall('playForCard', 'select', engine.defOf(card));
           }
-        } catch (eSel) {}
+        } catch (eSel) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eSel); }
         armHandCard(card.uid, viewer, false);
       };
       /* Rechtsklick-Zoom: Delegation. Hier nur Shift+Rechtsklick = verdeckt. */
@@ -3371,7 +3371,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     $('#log').innerHTML = engine.log.slice(-40).reverse().map(function (l) {
       return '<div>' + escapeHtml(l.msg) + '</div>'; // HTML-Sonderzeichen escapen
     }).join('');
-    if (window.DCTableChat) { try { DCTableChat.refresh(); } catch (eChat) {} }
+    if (window.DCTableChat) { try { DCTableChat.refresh(); } catch (eChat) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eChat); } }
     // t259: Fremde tac-Wahl nicht über eine laufende Meldung legen (ersetzte sonst den Recap,
     // dessen Abschluss das Overlay dann nicht mehr schloss).
     if (st.pending && (st.pending.player === viewer || (/^tac-/.test(st.pending.kind) && !eventPlaying))) {
@@ -3413,7 +3413,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       if (window.DCPlayLogger && !engine._playLogHooked) {
         installPlayLogger(engine, mode || 'lan', you);
       }
-    } catch (eLanLog) {}
+    } catch (eLanLog) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eLanLog); }
     if (window.DCEmbed && DCEmbed.forCardIds && st && st.players) {
       var ids = [];
       st.players.forEach(function (p) {

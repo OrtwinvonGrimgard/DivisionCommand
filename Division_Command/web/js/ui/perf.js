@@ -13,7 +13,7 @@
       var ext = gl.getExtension('WEBGL_debug_renderer_info');
       gpu = ext ? gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) : (gl.getParameter(gl.RENDERER) || 'WebGL');
     }
-  } catch (e) {}
+  } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] perf.js: ignorierter Fehler', e); }
   var cores = navigator.hardwareConcurrency || '—';
 
   function heap() {

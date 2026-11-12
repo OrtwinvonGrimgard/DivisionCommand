@@ -1,0 +1,38 @@
+# VORLAGE (t283): Zum Aktivieren nach .github/workflows/ci.yml kopieren und committen.
+# Der Push durch Grok Bot wurde von GitHub abgelehnt (OAuth-Token ohne `workflow`-Scope).
+# t283: Grund-CI für Division Command.
+# Läuft bei Push/PR auf main: Unit-/Regeltests (npm test), Kartenflächen-Prüfung (verify.py) und Engine-Fuzz.
+# Die Playwright-Spielläufe (ui-play, tutorial-play, lan-play …) bleiben lokale Gates, weil sie lange laufen und Chromium brauchen.
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1   # Historie ist ~5,6 GB groß (Kartenbilder), nur den Stand holen
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Abhängigkeiten
+        run: |
+          npm ci
+          python -m pip install --upgrade pip pillow websockets
+      - name: npm test
+        run: npm test
+      - name: Kartenflächen prüfen
+        run: python3 scripts/graphics/verify.py
+      - name: Engine-Fuzz
+        run: npm run fuzz
+      - name: Text-Engine-Audit
+        run: node scripts/balance/audit_text_engine_t265.js

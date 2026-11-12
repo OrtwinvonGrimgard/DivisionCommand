@@ -21,7 +21,7 @@
           return d.nation || d.name || id || null;
         }
       }
-    } catch (e) {}
+    } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] logger.js: ignorierter Fehler', e); }
     return null;
   }
 

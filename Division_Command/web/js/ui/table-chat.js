@@ -80,7 +80,7 @@
       var eng = global.dcGetEngine && dcGetEngine();
       var you = global.dcGetYou ? dcGetYou() : 0;
       if (eng) name = eng.player(you).name || name;
-    } catch (e) {}
+    } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] table-chat.js: ignorierter Fehler', e); }
     var payload = { name: name, text: text.slice(0, MAX), player: global.dcGetYou ? dcGetYou() : 0, t: new Date().toISOString() };
     inp.value = '';
     if (global.DCNet && DCNet.sendChat) DCNet.sendChat(payload);

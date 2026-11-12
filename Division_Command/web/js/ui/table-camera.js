@@ -78,10 +78,10 @@
   /* ---------- Präferenzen ---------- */
   function loadPrefs() {
     var p = { enabled: false, autoFocus: true }; // Standard: klassischer flacher Tisch
-    try { var raw = JSON.parse(global.localStorage.getItem(PREF_KEY) || '{}'); if (typeof raw.enabled === 'boolean') p.enabled = raw.enabled; if (typeof raw.autoFocus === 'boolean') p.autoFocus = raw.autoFocus; } catch (e) {}
+    try { var raw = JSON.parse(global.localStorage.getItem(PREF_KEY) || '{}'); if (typeof raw.enabled === 'boolean') p.enabled = raw.enabled; if (typeof raw.autoFocus === 'boolean') p.autoFocus = raw.autoFocus; } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] table-camera.js: ignorierter Fehler', e); }
     return p;
   }
-  function savePrefs() { try { global.localStorage.setItem(PREF_KEY, JSON.stringify(prefs)); } catch (e) {} }
+  function savePrefs() { try { global.localStorage.setItem(PREF_KEY, JSON.stringify(prefs)); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] table-camera.js: ignorierter Fehler', e); } }
   var prefs = loadPrefs();
 
   /* ---------- Zustand ---------- */
@@ -254,11 +254,11 @@
     syncFlicker();
     if (w && global.DCStencil) { DCStencil.sync(w); DCStencil.observe(w); }
   }
-  function syncStencil() { if (sceneOn() && world && global.DCStencil) { try { DCStencil.sync(world); } catch (e) {} } }
+  function syncStencil() { if (sceneOn() && world && global.DCStencil) { try { DCStencil.sync(world); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] table-camera.js: ignorierter Fehler', e); } } }
   var mqBound = false;
   function bindMotionQuery() {
     if (mqBound) return; mqBound = true;
-    try { var mq = global.matchMedia && matchMedia('(prefers-reduced-motion: reduce)'); if (mq) { if (mq.addEventListener) mq.addEventListener('change', syncFlicker); else if (mq.addListener) mq.addListener(syncFlicker); } } catch (e) {}
+    try { var mq = global.matchMedia && matchMedia('(prefers-reduced-motion: reduce)'); if (mq) { if (mq.addEventListener) mq.addEventListener('change', syncFlicker); else if (mq.addListener) mq.addListener(syncFlicker); } } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] table-camera.js: ignorierter Fehler', e); }
   }
   function ensure() {
     var main = document.querySelector('#app .table-main') || document.querySelector('.table-main');

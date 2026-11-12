@@ -13,12 +13,12 @@
     if (!engine || !inst || hidden) return out;
     var f = inst.flags || {}, turn = engine.state ? engine.state.turn : 0;
     var dig = false;
-    try { dig = !!(engine._isDeployProtected && engine._isDeployProtected(inst)); } catch (e) {}
+    try { dig = !!(engine._isDeployProtected && engine._isDeployProtected(inst)); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] table-effects.js: ignorierter Fehler', e); }
     if (dig) out.cls.push('fx-shield');
     if (f.angelUntil === turn) { out.cls.push('fx-shield'); out.badges.push(badge('shield', 'Engel', 'Silberner Engel: kein Schaden in diesem Zug')); }
     if (f.napalm) { out.cls.push('fx-burn'); out.badges.push(badge('burn', 'Brand', 'Napalm: 1 Schaden zu Beginn jedes eigenen Zugs des Besitzers')); }
     var ex = null;
-    try { ex = engine.explainStats ? engine.explainStats(inst) : null; } catch (e) {}
+    try { ex = engine.explainStats ? engine.explainStats(inst) : null; } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] table-effects.js: ignorierter Fehler', e); }
     if (ex) {
       var maxDef = inst.defMax != null ? inst.defMax : ex.def;
       var up = ex.atk > ex.printedAtk || maxDef > ex.printedDef;

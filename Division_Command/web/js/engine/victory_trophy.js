@@ -548,7 +548,7 @@
           // reset flags for the player who will act next? reset ending player's turn counters after end processed
           this._trophyResetTurnFlags(pid);
           this._trophyArmDurchbruch();
-        } catch (e2) {}
+        } catch (e2) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] victory_trophy.js: ignorierter Fehler', e2); }
       }
       return ret;
     };
@@ -562,7 +562,7 @@
           var p = this.player(pid);
           var loc = a && a.uid ? this.findInst(a.uid) : null;
           if (loc) this._trophyOnPlay(p, loc.inst, loc.zone, loc.section);
-        } catch (e) {}
+        } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] victory_trophy.js: ignorierter Fehler', e); }
       }
       return ret;
     };
@@ -577,7 +577,7 @@
             var p = this.player(pid);
             var loc = this.findInst(uid);
             if (loc) this._trophyOnPlay(p, loc.inst, loc.zone, loc.section);
-          } catch (e) {}
+          } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] victory_trophy.js: ignorierter Fehler', e); }
         }
         return ret;
       };
@@ -589,7 +589,7 @@
       var _heal = proto._actHealArmored;
       proto._actHealArmored = function (pid, a) {
         var ret = _heal.call(this, pid, a);
-        try { if (this._trophyActive()) this._trophyOnHealArmored(this.player(pid)); } catch (e) {}
+        try { if (this._trophyActive()) this._trophyOnHealArmored(this.player(pid)); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] victory_trophy.js: ignorierter Fehler', e); }
         return ret;
       };
     }
@@ -604,7 +604,7 @@
           if (typ === 'MOVE' || typ === 'SHIFT' || typ === 'VERLEGUNG' || typ === 'MOVE_UNIT') {
             this._trophyOnMove(this.player(a.player));
           }
-        } catch (e) {}
+        } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] victory_trophy.js: ignorierter Fehler', e); }
       }
       return ret;
     };
@@ -654,7 +654,7 @@
         };
         this._trophyOnCombatDamage(ctx);
         this._trophyAfterCombat(ctx);
-      } catch (e) {}
+      } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] victory_trophy.js: ignorierter Fehler', e); }
       this.state._trophyCombatMeta = null;
       return ret;
     };

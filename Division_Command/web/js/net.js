@@ -139,7 +139,7 @@
     outbox = [];
     if (ws) {
       closing = true;
-      try { ws.close(); } catch (e) {}
+      try { ws.close(); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] net.js: ignorierter Fehler', e); }
       ws = null;
       hooked = false;
       closing = false;
@@ -256,7 +256,7 @@
     inflight = null;
     outbox = [];
     if (ws) {
-      try { ws.close(); } catch (e) {}
+      try { ws.close(); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] net.js: ignorierter Fehler', e); }
       ws = null;
     }
     closing = false;

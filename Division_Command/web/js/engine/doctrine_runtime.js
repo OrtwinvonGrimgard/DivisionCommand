@@ -369,7 +369,7 @@
       try {
         var p0 = this.player(pid);
         // snapshot occupied
-      } catch (e) {}
+      } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] doctrine_runtime.js: ignorierter Fehler', e); }
       var res = _actSlot.call(this, pid, a);
       try {
         if (res && res.ok) {
@@ -380,7 +380,7 @@
             this._dokAfterPlace(p, p.front[sec][row], sec, row);
           }
         }
-      } catch (e2) {}
+      } catch (e2) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] doctrine_runtime.js: ignorierter Fehler', e2); }
       return res;
     };
 
@@ -447,7 +447,7 @@
             }
           }
         }
-      } catch (e) {}
+      } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] doctrine_runtime.js: ignorierter Fehler', e); }
       return ret;
     };
 
@@ -532,7 +532,7 @@
             defP.flags.dokAttackedThisTurn = true;
           }
         }
-      } catch (e) {}
+      } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] doctrine_runtime.js: ignorierter Fehler', e); }
       var ret = _applyHits.call(this, aLoc, tLoc, dmgToT, dmgToA, fog);
       // GEGENSTOSS: after attack, buff surviving defenders in section
       try {
@@ -574,7 +574,7 @@
             }
           }
         }
-      } catch (e2) {}
+      } catch (e2) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] doctrine_runtime.js: ignorierter Fehler', e2); }
       return ret;
     };
 
@@ -612,7 +612,7 @@
           });
           nxt.flags.dokAttackedSections = keep;
         }
-      } catch (e) {}
+      } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] doctrine_runtime.js: ignorierter Fehler', e); }
       return res;
     };
 
@@ -734,7 +734,7 @@
             }
           }
         }
-      } catch (e) {}
+      } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] doctrine_runtime.js: ignorierter Fehler', e); }
       return ret;
     };
 
@@ -745,7 +745,7 @@
       try {
         var active = this.player(this.state.active);
         this._dokTurnStart(active);
-      } catch (e) {}
+      } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] doctrine_runtime.js: ignorierter Fehler', e); }
       return ret;
     };
   }

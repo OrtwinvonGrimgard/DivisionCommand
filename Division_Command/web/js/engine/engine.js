@@ -119,7 +119,7 @@
    * @returns {boolean}
    */
   function isArtillery(card) {
-    return hasTag(card, 'artillerie') || (card.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT');
+    return hasTag(card, 'artillerie') || (card.effects || []).some((x) => x.code === 'ATTACK_ANY_FRONT');
   }
   /**
    * Steilfeuer-Stufe I–V aus den Kartentags, sonst 0. Siehe RULES §7.1.
@@ -774,7 +774,7 @@
      */
     costOf(def, player, kind, inst, consume) {
       if (inst && inst.flags && inst.flags.freePlayOnTurn === this.state.turn) return 0;
-      if (player && player.flags && player.flags.infLostTurn === this.state.turn && (def.effects || []).some((e) => e.code === 'PLAY_FREE_IF_INFANTRY_DESTROYED')) return 0;
+      if (player && player.flags && player.flags.infLostTurn === this.state.turn && this._defHas(def, 'PLAY_FREE_IF_INFANTRY_DESTROYED')) return 0;
       let cost = Number(def.ap || 0);
       if (def.typ === 'Ausrüstung') cost = Number(def.ap || 0) + Number(this.rules.equip_ap_test || 0);
       if (player) this._auras(player).forEach((a) => {
@@ -790,7 +790,7 @@
         }
       });
       if (def.typ === 'Ausrüstung' && player) {
-        const n = (player.support || []).filter((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'EQUIP_DISCOUNT')).length;
+        const n = (player.support || []).filter((s) => s && this._defHas(this.defOf(s), 'EQUIP_DISCOUNT')).length;
         cost -= n;
         const selfFx = def.effects || [];
         selfFx.forEach((e) => {
@@ -803,7 +803,7 @@
         cost += this._cmCost(def, player);
       }
       if (def.typ === 'Einheit' && player) {
-        const n = (player.support || []).filter((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'UNIT_DISCOUNT')).length;
+        const n = (player.support || []).filter((s) => s && this._defHas(this.defOf(s), 'UNIT_DISCOUNT')).length;
         cost -= n;
         cost += this._cmCost(def, player);
         const ip = player.flags && player.flags.infPlayed;
@@ -1085,6 +1085,15 @@
      * @returns {boolean}
      */
     /**
+     * t283: Hat die Kartendefinition einen Effekt mit diesem Code? (ersetzt 80+ gleichlautende Inline-Prüfungen)
+     * @param {object|null|undefined} def Kartendefinition
+     * @param {string} code Effektcode
+     * @returns {boolean}
+     */
+    _defHas(def, code) {
+      return !!(def && (def.effects || []).some((x) => x.code === code));
+    }
+    /**
      * t283: Parameter eines Effektcodes aus dem Katalog lesen (erste Karte mit diesem Code), mit Standardwert.
      * Für Effekte, deren Auflösung die Karte nicht mehr kennt (Napalm-Brand, Eifer-Nachschaden, Schläfer).
      * @param {string} code Effektcode
@@ -1203,7 +1212,7 @@
         const loc = this.findInst(inst.uid);
         if (loc && loc.zone === 'front') {
           this._neighbors(owner, loc.section, loc.row).forEach((n) => {
-            if (n.inst && (this.defOf(n.inst).effects || []).some((x) => x.code === 'FLANK_DEF')) dv += 2;
+            if (n.inst && this._defHas(this.defOf(n.inst), 'FLANK_DEF')) dv += 2;
           });
         }
       }
@@ -1211,13 +1220,13 @@
         (owner.support || []).forEach((s) => {
           if (!s) return;
           const sd = this.defOf(s);
-          if ((sd.effects || []).some((x) => x.code === 'AURA_FRONT_ATK')) atk += 1;
-          if ((sd.effects || []).some((x) => x.code === 'AURA_FRONT_DEF')) dv += 2;
-          if ((sd.effects || []).some((x) => x.code === 'AURA_FRONT_DEF_GEN')) dv += 2;
+          if (this._defHas(sd, 'AURA_FRONT_ATK')) atk += 1;
+          if (this._defHas(sd, 'AURA_FRONT_DEF')) dv += 2;
+          if (this._defHas(sd, 'AURA_FRONT_DEF_GEN')) dv += 2;
         });
         const foe = this.opponent(owner.id);
         (foe.support || []).forEach((s) => {
-          if (s && (this.defOf(s).effects || []).some((x) => x.code === 'AURA_ENEMY_ATK')) atk -= 1;
+          if (s && this._defHas(this.defOf(s), 'AURA_ENEMY_ATK')) atk -= 1;
         });
       }
       if (owner && this._hasDoctrine(owner, 'BOLLWERK_COVER_ATK')) {
@@ -1298,12 +1307,12 @@
         (owner.support || []).forEach((s) => {
           if (!s) return;
           const sd = this.defOf(s);
-          if ((sd.effects || []).some((x) => x.code === 'AURA_FRONT_ATK')) atkWhy.push(sd.name + ': +1 Angriff');
+          if (this._defHas(sd, 'AURA_FRONT_ATK')) atkWhy.push(sd.name + ': +1 Angriff');
           if ((sd.effects || []).some((x) => x.code === 'AURA_FRONT_DEF' || x.code === 'AURA_FRONT_DEF_GEN')) defWhy.push(sd.name + ': +2 Verteidigung');
         });
         const foe = this.opponent(owner.id);
         (foe.support || []).forEach((s) => {
-          if (s && (this.defOf(s).effects || []).some((x) => x.code === 'AURA_ENEMY_ATK')) atkWhy.push(this.defOf(s).name + ': −1 Angriff');
+          if (s && this._defHas(this.defOf(s), 'AURA_ENEMY_ATK')) atkWhy.push(this.defOf(s).name + ': −1 Angriff');
         });
       }
       this._kwAtkBonus(inst, owner).why.forEach((w) => atkWhy.push(w));
@@ -1337,10 +1346,10 @@
       const isArty = sf === 2 || ((tags.includes('artillerie') || tags.includes('haubitze') || tags.includes('rohr')) && !isMortar && sf !== 1 && sf !== 3);
       const isHeavy = sf === 3 || tags.includes('schwerartillerie') || (tags.includes('schwer') && tags.includes('artillerie'));
       const range = steilfeuerRange(sf) || (isHeavy ? 7 : isArty ? 5 : isMortar ? 3 : 3);
-      const anyFront = sf >= 4 || (defn.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT');
+      const anyFront = sf >= 4 || this._defHas(defn, 'ATTACK_ANY_FRONT');
       const hasScout = this.frontList(owner).some((l) => hasTag(this.defOf(l.inst), 'aufklaerung'));
       const pipe = isArty || isHeavy || sf >= 2;
-      const canSupport = (defn.effects || []).some((e) => e.code === 'ATTACK_SUPPORT') ||
+      const canSupport = this._defHas(defn, 'ATTACK_SUPPORT') ||
         (this._hasDoctrine(owner, 'SPOTTER_SUPPORT_ATK') && pipe && hasScout);
       this.frontList(enemy).forEach((t) => {
         if (anyFront) {
@@ -1384,7 +1393,7 @@
         if (!td) return false;
         if (this._isDeployProtected(t.inst)) return false;
         if (this._tacTargetAllowed && !this._tacTargetAllowed(att,t.inst)) return false;
-        if (t.inst.facedown && (td.effects || []).some((x) => x.code === 'GUERRILLA_HIDE')) return false;
+        if (t.inst.facedown && this._defHas(td, 'GUERRILLA_HIDE')) return false;
         if ((td.name || '').includes('Himmelhund')) {
           // needs two shouldered attackers — v1: only legal if attacker has a neighbor
           const neighbors = this._neighbors(this.player(att.owner), attackerLoc.section, attackerLoc.row);
@@ -1765,11 +1774,11 @@
         this._onEnter(found, 'support');
         if (this._tacOnSupport) this._tacOnSupport(found);
         this._applySatAura(p);
-        if ((def.effects || []).some((x) => x.code === 'SLEEPER')) { const slp = (def.effects.find((x) => x.code === 'SLEEPER').param) || {}; found.flags.sleeper = Number(slp.turns || 3); found.flags.sleeperMaxAp = Number(slp.maxAp || 3); }
-        if ((def.effects || []).some((x) => x.code === 'NO_FACE_DOWN')) {
+        if (this._defHas(def, 'SLEEPER')) { const slp = (def.effects.find((x) => x.code === 'SLEEPER').param) || {}; found.flags.sleeper = Number(slp.turns || 3); found.flags.sleeperMaxAp = Number(slp.maxAp || 3); }
+        if (this._defHas(def, 'NO_FACE_DOWN')) {
           this.frontList(this.opponent(p.id)).forEach((l) => { l.inst.facedown = false; });
         }
-        if ((def.effects || []).some((x) => x.code === 'PACT_BOND')) {
+        if (this._defHas(def, 'PACT_BOND')) {
           const units = this.frontList(p);
           if (units.length) {
             this.state.pending = this._sealPending({
@@ -1867,7 +1876,7 @@
           this.state.pending = this._sealPending({ kind: 'scout-rev', player: pid, uid: card.uid, left: 1, free: true, choices: hid.map((l) => ({ target: l.inst.uid, label: 'Verdeckt' })) });
         }
       }
-      if ((d2.effects || []).some((x) => x.code === 'HAND_PEEK')) {
+      if (this._defHas(d2, 'HAND_PEEK')) {
         const opp = this.opponent(pid);
         if (opp.hand.length) {
           this.state.pending = this._sealPending({ kind: 'hand-peek', player: pid, needCount: Math.min(2, opp.hand.length), selected: [], choices: opp.hand.map((c) => ({ target: c.uid, label: 'Verdeckt' })) });
@@ -2561,7 +2570,7 @@
           this._evt('attack', ad, ad.name + ' wird ausgewählt.');
           this._evt('attack', ad, ad.name + ' greift ' + tn + ' an.');
         }
-        if (loc && tgt && (this.defOf(tgt.inst).effects || []).some((x) => x.code === 'NEED_SHOULDER') && !(this.defOf(loc.inst).effects || []).some((x) => x.code === 'ATTACK_ANY_FRONT') && !isArtillery(this.defOf(loc.inst))) {
+        if (loc && tgt && this._defHas(this.defOf(tgt.inst), 'NEED_SHOULDER') && !this._defHas(this.defOf(loc.inst), 'ATTACK_ANY_FRONT') && !isArtillery(this.defOf(loc.inst))) {
           const mates = this._neighbors(this.player(pid), loc.section, loc.row).filter((n) => n.inst && n.inst.uid !== loc.inst.uid);
           if (!mates.length) throw new Error('Kein Schulterschluss');
           this.state.pending = this._sealPending({
@@ -2600,7 +2609,7 @@
         this._log(p.name + ' legt ' + def.name + ' verdeckt in den Support.', { secret: p.id, pub: p.name + ' legt eine verdeckte Karte in den Support.' });
         return { ok: true };
       }
-      if ((def.effects || []).some((e) => e.code === 'WILL_PEOPLE')) {
+      if (this._defHas(def, 'WILL_PEOPLE')) {
         this.state.players.forEach((pl) => {
           this.frontList(pl).forEach((l) => {
             if (isInfantry(this.defOf(l.inst))) l.inst.flags.volkUntil = this.state.turn;
@@ -2612,7 +2621,7 @@
         if (this.state.heldAttack) return this._resumeAfterReact();
         return { ok: true };
       }
-      if ((def.effects || []).some((e) => e.code === 'RESIST')) {
+      if (this._defHas(def, 'RESIST')) {
         if (this.state.active !== p.id) {
           p.hand.push(card);
           return { ok: false, error: 'Widerstand nur im eigenen Zug.', code: 'OWN_TURN' };
@@ -2644,7 +2653,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'RATIONS')) {
+      if (this._defHas(def, 'RATIONS')) {
         const units = this.frontList(p).filter((l) => isInfantry(this.defOf(l.inst)));
         if (!units.length) {
           p.hand.push(card);
@@ -2660,7 +2669,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'RADIATION')) {
+      if (this._defHas(def, 'RADIATION')) {
         if (this.state.active !== p.id) {
           p.hand.push(card);
           return { ok: false, error: 'Strahlung nur im eigenen Zug.', code: 'OWN_TURN' };
@@ -2678,7 +2687,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'FORMATION')) {
+      if (this._defHas(def, 'FORMATION')) {
         const units = this.frontList(p);
         if (!units.length) {
           p.hand.push(card);
@@ -2692,7 +2701,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'COURT_MARTIAL')) {
+      if (this._defHas(def, 'COURT_MARTIAL')) {
         const units = this.frontList(p);
         if (units.length < 2) {
           p.hand.push(card);
@@ -2706,7 +2715,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'SILVER_ANGEL')) {
+      if (this._defHas(def, 'SILVER_ANGEL')) {
         const units = this.frontList(p).filter((l) => isInfantry(this.defOf(l.inst)));
         if (!units.length) {
           p.hand.push(card);
@@ -2720,7 +2729,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'SELF_SAC')) {
+      if (this._defHas(def, 'SELF_SAC')) {
         const mine = this.frontList(p);
         if (!mine.length) {
           p.hand.push(card);
@@ -2734,7 +2743,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'ZEAL')) {
+      if (this._defHas(def, 'ZEAL')) {
         const units = this.frontList(p).filter((l) => isInfantry(this.defOf(l.inst)));
         if (!units.length) {
           p.hand.push(card);
@@ -2748,7 +2757,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'CLEAR_MINE')) {
+      if (this._defHas(def, 'CLEAR_MINE')) {
         const opp = this.opponent(p.id);
         const mines = [];
         SECTIONS.forEach((s) => {
@@ -2777,7 +2786,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'MASS_DEPLOY')) {
+      if (this._defHas(def, 'MASS_DEPLOY')) {
         if (this.state.active !== p.id) {
           p.hand.push(card);
           return { ok: false, error: 'Psychologie der Massen nur im eigenen Zug.', code: 'OWN_TURN' };
@@ -2793,7 +2802,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'PAUSE_UNIT')) {
+      if (this._defHas(def, 'PAUSE_UNIT')) {
         const units = this.frontList(p).concat(this.frontList(this.opponent(p.id)));
         if (!units.length) {
           p.hand.push(card);
@@ -2807,7 +2816,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'NAPALM')) {
+      if (this._defHas(def, 'NAPALM')) {
         const foe = this.frontList(this.opponent(p.id));
         if (!foe.length) {
           p.hand.push(card);
@@ -2826,14 +2835,14 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'AMMO_COOK')) {
+      if (this._defHas(def, 'AMMO_COOK')) {
         p.flags.ammoCook = this.state.turn;
         p.grave.push(card);
         this._log(p.name + ' bereitet einen Munitionstreffer vor.');
         if (this.state.heldAttack) return this._resumeAfterReact(p.id);
         return { ok: true };
       }
-      if ((def.effects || []).some((e) => e.code === 'MOBILIZE_INF')) {
+      if (this._defHas(def, 'MOBILIZE_INF')) {
         if (this.state.active !== p.id) {
           p.hand.push(card);
           return { ok: false, error: 'Mobilisierung nur im eigenen Zug.', code: 'OWN_TURN' };
@@ -2864,7 +2873,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'LAY_MINE')) {
+      if (this._defHas(def, 'LAY_MINE')) {
         const units = this.frontList(p).filter((l) => !p.nml[l.section][l.row]);
         if (!units.length) {
           p.hand.push(card);
@@ -2878,7 +2887,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'HONORS')) {
+      if (this._defHas(def, 'HONORS')) {
         const vets = this.frontList(p).filter((l) => (l.inst.flags.kills || 0) >= 1);
         if (!vets.length) {
           p.hand.push(card);
@@ -2895,7 +2904,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'MARTYR')) {
+      if (this._defHas(def, 'MARTYR')) {
         const mine = this.frontList(p);
         const foe = this.frontList(this.opponent(p.id));
         if (!mine.length || !foe.length) {
@@ -2910,7 +2919,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'AIR_STRIKE')) {
+      if (this._defHas(def, 'AIR_STRIKE')) {
         if (this.state.active !== p.id) {
           p.hand.push(card);
           return { ok: false, error: 'Luftschlag nur im eigenen Zug.', code: 'OWN_TURN' };
@@ -2937,7 +2946,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'BRIEFING')) {
+      if (this._defHas(def, 'BRIEFING')) {
         const units = this.frontList(p);
         if (units.length < 2) {
           p.hand.push(card);
@@ -2953,7 +2962,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'REPAIR_BOUNCE')) {
+      if (this._defHas(def, 'REPAIR_BOUNCE')) {
         if (this.state.active !== p.id) {
           p.hand.push(card);
           return { ok: false, error: 'Instandsetzung nur im eigenen Zug.', code: 'OWN_TURN' };
@@ -2971,7 +2980,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'DOUBLE_COMBAT')) {
+      if (this._defHas(def, 'DOUBLE_COMBAT')) {
         const units = this.frontList(p).filter((l) => hasTag(this.defOf(l.inst), 'gepanzert'));
         if (!units.length) {
           p.hand.push(card);
@@ -2985,7 +2994,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'DRAW_AP')) {
+      if (this._defHas(def, 'DRAW_AP')) {
         if (this.state.active !== p.id) {
           p.hand.push(card);
           return { ok: false, error: 'Generalmobilmachung nur im eigenen Zug.', code: 'OWN_TURN' };
@@ -2996,7 +3005,7 @@
         this._evt('instant', def, p.name + ' zieht 3 und erhält 2 AP.');
         return { ok: true };
       }
-      if ((def.effects || []).some((e) => e.code === 'GHOST_STRIKE')) {
+      if (this._defHas(def, 'GHOST_STRIKE')) {
         if (!this.state.pending || this.state.pending.kind !== 'geist-window') {
           p.hand.push(card);
           return { ok: false, error: 'Kein Angriff im Gange.', code: 'NO_ATK' };
@@ -3015,7 +3024,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'GHOST_RUINS')) {
+      if (this._defHas(def, 'GHOST_RUINS')) {
         if (this.state.active !== p.id) {
           p.hand.push(card);
           return { ok: false, error: 'Geist in den Trümmern nur im eigenen Zug.', code: 'OWN_TURN' };
@@ -3037,7 +3046,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'EMPTY_STREETS')) {
+      if (this._defHas(def, 'EMPTY_STREETS')) {
         if (this.state.active !== p.id) {
           p.hand.push(card);
           return { ok: false, error: 'Einsame Gassen nur im eigenen Zug.', code: 'OWN_TURN' };
@@ -3045,7 +3054,7 @@
         p.grave.push(card);
         return this._startGassen(p);
       }
-      if ((def.effects || []).some((e) => e.code === 'CAVALRY_ATK')) {
+      if (this._defHas(def, 'CAVALRY_ATK')) {
         let n = 0;
         this.frontList(p).forEach((l) => {
           const d = this.defOf(l.inst);
@@ -3058,7 +3067,7 @@
         this._evt('instant', def, n ? (p.name + ': ' + n + ' gepanzerte Fahrzeuge +2 A bis Zugende.') : (p.name + ': kein gepanzertes Fahrzeug.'));
         return { ok: true };
       }
-      if ((def.effects || []).some((e) => e.code === 'COVER_SEEK')) {
+      if (this._defHas(def, 'COVER_SEEK')) {
         const units = this.frontList(p).concat(this.frontList(this.opponent(p.id)));
         if (!units.length) {
           p.hand.push(card);
@@ -3072,7 +3081,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'LAST_STAND')) {
+      if (this._defHas(def, 'LAST_STAND')) {
         if (this.state.active !== p.id) {
           p.hand.push(card);
           return { ok: false, error: 'Der Letzte der steht nur im eigenen Zug.', code: 'OWN_TURN' };
@@ -3090,7 +3099,7 @@
         });
         return { ok: true, need: 'target' };
       }
-      if ((def.effects || []).some((e) => e.code === 'CLEAR_ENEMY_SUPPORT')) {
+      if (this._defHas(def, 'CLEAR_ENEMY_SUPPORT')) {
         const opp = this.opponent(p.id);
         let n = 0;
         (opp.support || []).forEach((s, i) => {
@@ -3104,7 +3113,7 @@
         this._evt('instant', def, p.name + ' reißt die Unterstützung von ' + opp.name + ' ein (' + n + ').');
         return { ok: true };
       }
-      if ((def.effects || []).some((e) => e.code === 'CANCEL_AIR_DAMAGE')) {
+      if (this._defHas(def, 'CANCEL_AIR_DAMAGE')) {
         if (this.state.pending && this.state.pending.kind === 'sam') {
           p.hand.push(card); // still in playInstant already removed - put back then resolve
           return this._resolveSam(p.id, true);
@@ -3112,7 +3121,7 @@
         p.hand.push(card);
         return { ok: false, error: 'Kein Luftangriff im Gange.', code: 'NO_AIR' };
       }
-      if ((def.effects || []).some((e) => e.code === 'COMMAND_ATTACK')) {
+      if (this._defHas(def, 'COMMAND_ATTACK')) {
         if (this.state.active !== p.id) {
           p.hand.push(card);
           return { ok: false, error: 'Blinder Gehorsam nur im eigenen Zug.', code: 'OWN_TURN' };
@@ -3120,13 +3129,13 @@
         p.grave.push(card);
         return this._startCommandAttack(p, 2);
       }
-      if ((def.effects || []).some((e) => e.code === 'ARMAGEDDON')) {
+      if (this._defHas(def, 'ARMAGEDDON')) {
         this._armageddonSweep(p, card);
         if (this.state.winner != null || this.state.phase === 'gameover') return { ok: true };
         this.state.pending = this._sealPending({ kind: 'coin', player: p.id, card: null, reason: 'armageddon', prompt: 'Wer beginnt erneut?' });
         return { ok: true, need: 'coin' };
       }
-      if ((def.effects || []).some((e) => e.code === 'COIN_PREVENT') || /Münze|muenzwurf|Kopf/i.test(def.text || '')) {
+      if (this._defHas(def, 'COIN_PREVENT') || /Münze|muenzwurf|Kopf/i.test(def.text || '')) {
 
         this.state.pending = this._sealPending({ kind: 'coin', player: p.id, card, prompt: def.name }); // offene Wahl des Spielers
         return { ok: true, need: 'coin' };
@@ -3162,7 +3171,7 @@
         p.grave.push(card);
         return { ok: true };
       }
-      if ((def.effects || []).some((e) => e.code === 'CLEAR_SUPPORT_OR_DEBUFF') && !targetUid) {
+      if (this._defHas(def, 'CLEAR_SUPPORT_OR_DEBUFF') && !targetUid) {
         const foe = this.opponent(p.id);
         const choices = [];
         (foe.support || []).forEach((s, i) => {
@@ -4260,7 +4269,7 @@
     _applyMech(p) {
       this.frontList(p).forEach((l) => {
         if (!isInfantry(this.defOf(l.inst))) return;
-        const n = this._neighbors(p, l.section, l.row).filter((x) => x.inst && (this.defOf(x.inst).effects || []).some((e) => e.code === 'MECH_AURA')).length;
+        const n = this._neighbors(p, l.section, l.row).filter((x) => x.inst && this._defHas(this.defOf(x.inst), 'MECH_AURA')).length;
         const want = n;
         const prev = l.inst.flags.mechAura || 0;
         const d = want - prev;
@@ -4278,7 +4287,7 @@
      */
     _applyFuehrung(p) {
       this.frontList(p).forEach((l) => {
-        if (!(this.defOf(l.inst).effects || []).some((x) => x.code === 'FUEHRUNG_V')) return;
+        if (!this._defHas(this.defOf(l.inst), 'FUEHRUNG_V')) return;
         const sides = this._neighbors(p, l.section, l.row);
         const ok = sides.some((n) => n.inst && hasTag(this.defOf(n.inst), 'gepanzert'));
         const want = ok ? 2 : 0;
@@ -4297,7 +4306,7 @@
      */
     _applyFlankDef(p) {
       this.frontList(p).forEach((l) => {
-        const want = this._neighbors(p, l.section, l.row).filter((n) => n.inst && (this.defOf(n.inst).effects || []).some((x) => x.code === 'FLANK_DEF')).length * 2;
+        const want = this._neighbors(p, l.section, l.row).filter((n) => n.inst && this._defHas(this.defOf(n.inst), 'FLANK_DEF')).length * 2;
         const prev = l.inst.flags.flankDef || 0;
         const d = want - prev;
         if (d) {
@@ -4679,7 +4688,7 @@
       const isArty = sf === 2 || ((tags.includes('artillerie') || tags.includes('haubitze') || tags.includes('rohr')) && !isMortar && sf !== 1 && sf !== 3);
       const isHeavy = sf === 3 || tags.includes('schwerartillerie') || (tags.includes('schwer') && tags.includes('artillerie'));
       const range = steilfeuerRange(sf) || (isHeavy ? 7 : isArty ? 5 : isMortar ? 3 : 3);
-      const anyFront = sf >= 4 || (defn.effects || []).some((e) => e.code === 'ATTACK_ANY_FRONT');
+      const anyFront = sf >= 4 || this._defHas(defn, 'ATTACK_ANY_FRONT');
       if (anyFront) return true;
       if (toLoc.inst.flags && toLoc.inst.flags.umgehenUntil === this.state.turn) return true;
       const secBase = { L: 1, C: 4, R: 7 };
@@ -4750,8 +4759,8 @@
       this.state.pending = null;
       if (block) {
         const p = this.player(pid);
-        let card = p.hand.find((c) => (this.defOf(c).effects || []).some((e) => e.code === 'CANCEL_AIR_DAMAGE'));
-        if (!card) card = (p.support || []).find((c) => c && (this.defOf(c).effects || []).some((e) => e.code === 'CANCEL_AIR_DAMAGE'));
+        let card = p.hand.find((c) => this._defHas(this.defOf(c), 'CANCEL_AIR_DAMAGE'));
+        if (!card) card = (p.support || []).find((c) => c && this._defHas(this.defOf(c), 'CANCEL_AIR_DAMAGE'));
         if (card) {
           p.hand = p.hand.filter((c) => c.uid !== card.uid);
           p.support = (p.support || []).map((s) => (s && s.uid === card.uid ? null : s));
@@ -4886,7 +4895,7 @@
           player: pid,
           uid: inst.uid,
           left: Math.min(n, hid.length),
-          strike: codes.indexOf('REVEAL_STRIKE') >= 0 || (inst.attachments || []).some((eq) => (this.defOf(eq).effects || []).some((x) => x.code === 'REVEAL_STRIKE')),
+          strike: codes.indexOf('REVEAL_STRIKE') >= 0 || (inst.attachments || []).some((eq) => this._defHas(this.defOf(eq), 'REVEAL_STRIKE')),
           choices: hid.map((l) => ({ target: l.inst.uid, label: 'Verdeckt' }))
         });
         return { ok: true, need: 'target' };
@@ -5131,7 +5140,7 @@
       aLoc.player.flags.tacAnyAttackTurn=this.state.turn;
       const tacCover=this._tacCombatBegin ? this._tacCombatBegin(A,T) : 0;
       const tacDefense=A.owner !== T.owner && this._tacDefenseBonus ? this._tacDefenseBonus(T) : 0;
-      if (T.facedown && (this.defOf(A).effects || []).some((x) => x.code === 'REVEAL_STRIKE')) {
+      if (T.facedown && this._defHas(this.defOf(A), 'REVEAL_STRIKE')) {
         T.facedown = false;
         if (hasTag(this.defOf(T), 'fahrzeug')) this._damage(T, 3, { tag: 'scout' });
       }
@@ -5142,7 +5151,7 @@
         A.flags.schanzen = 0;
       }
       this.state._pactAtk = A.flags && A.flags.pact ? A : null;
-      if ((this.defOf(A).effects || []).some((x) => x.code === 'NIEDERHALTEN') && isInfantry(this.defOf(T))) {
+      if (this._defHas(this.defOf(A), 'NIEDERHALTEN') && isInfantry(this.defOf(T))) {
         T.flags.noAttack = true;
         T.flags.niederUntilOwner = true;
       }
@@ -5171,12 +5180,12 @@
         }
       }
 
-      if ((T.attachments || []).some((c) => (this.defOf(c).effects || []).some((x) => x.code === 'RAUCH'))) {
+      if ((T.attachments || []).some((c) => this._defHas(this.defOf(c), 'RAUCH'))) {
         T.tokens = T.tokens || [];
         if (!T.tokens.some((x) => x.type === 'nebelfeld' && x.rauch)) T.tokens.push({ type: 'nebelfeld', rauch: true });
       }
       const fog = T.tokens.find((t) => t.type === 'nebelfeld') || A.tokens.find((t) => t.type === 'nebelfeld'); // erstes Treffer-Element
-      if ((this.defOf(T).effects || []).some((x) => x.code === 'RICHTMINE')) {
+      if (this._defHas(this.defOf(T), 'RICHTMINE')) {
         this._log('Richtmine!');
         this._damage(A, 3, { tag: 'richtmine' });
         if (this._isDead(A)) {
@@ -5235,22 +5244,22 @@
       { const nt = (this.defOf(A).effects || []).find((x) => x.code === 'ATK_IF_TARGET_NOT_ATTACKED');
         if (nt && !(T.flags && T.flags.attackedTurn === this.state.turn)) dmgToT += Number((nt.param || {}).atk || 2); }
       if (isInfantry(this.defOf(A)) && aLoc.player.flags && aLoc.player.flags.predigerTurn !== this.state.turn) {
-        const pr = (aLoc.player.support || []).find((s) => s && !s.facedown && (this.defOf(s).effects || []).some((x) => x.code === 'ONCE_SECTION_INFANTRY_ATK'));
+        const pr = (aLoc.player.support || []).find((s) => s && !s.facedown && this._defHas(this.defOf(s), 'ONCE_SECTION_INFANTRY_ATK'));
         if (pr) { dmgToT += 1; aLoc.player.flags.predigerTurn = this.state.turn; this._log(this.defOf(pr).name + ': +1 ATK für den ersten Infanterieangriff.'); }
       }
       if (this._kw(A, 'Hinterhalt') && A.flags && A.flags.kwAmbushReady) { dmgToT += 2; A.flags.kwAmbushReady = false; this._log('Hinterhalt: +2 ATK beim ersten Angriff nach dem Aufdecken.'); }
-      if ((this.defOf(A).effects || []).some((x) => x.code === 'AMBUSH') && !fog) dmgToT += 1;
-      if ((this.defOf(A).effects || []).some((x) => x.code === 'FEUERUEBERLEGENHEIT') && !hasTag(this.defOf(T), 'gepanzert')) dmgToT += 1;
-      if ((this.defOf(A).effects || []).some((x) => x.code === 'VS_INF') && isInfantry(this.defOf(T))) dmgToT += 2;
-      if ((this.defOf(A).effects || []).some((x) => x.code === 'PANZERFAUST') && hasTag(this.defOf(T), 'gepanzert')) dmgToT += 5;
-      if ((this.defOf(T).effects || []).some((x) => x.code === 'PANZERFAUST') && hasTag(this.defOf(A), 'gepanzert')) {
+      if (this._defHas(this.defOf(A), 'AMBUSH') && !fog) dmgToT += 1;
+      if (this._defHas(this.defOf(A), 'FEUERUEBERLEGENHEIT') && !hasTag(this.defOf(T), 'gepanzert')) dmgToT += 1;
+      if (this._defHas(this.defOf(A), 'VS_INF') && isInfantry(this.defOf(T))) dmgToT += 2;
+      if (this._defHas(this.defOf(A), 'PANZERFAUST') && hasTag(this.defOf(T), 'gepanzert')) dmgToT += 5;
+      if (this._defHas(this.defOf(T), 'PANZERFAUST') && hasTag(this.defOf(A), 'gepanzert')) {
         dmgToA += 5;
         dmgToT = Math.max(0, dmgToT - 5);
       }
-      if ((this.defOf(A).effects || []).some((x) => x.code === 'PANZERFAUST') && hasTag(this.defOf(T), 'gepanzert')) {
+      if (this._defHas(this.defOf(A), 'PANZERFAUST') && hasTag(this.defOf(T), 'gepanzert')) {
         dmgToA = Math.max(0, dmgToA - 5);
       }
-      if ((this.defOf(T).effects || []).some((x) => x.code === 'AMBUSH') && fog) dmgToA += 1;
+      if (this._defHas(this.defOf(T), 'AMBUSH') && fog) dmgToA += 1;
       if (A.flags && A.flags.doubleDmgUntil === this.state.turn) dmgToT *= 2;
       if (T.flags && T.flags.doubleDmgUntil === this.state.turn) dmgToA *= 2;
       const aDefEarly = this.defOf(A);
@@ -5353,23 +5362,23 @@
       if (this._isDead(A)) this._destroy(aLoc);
       else {
         // Scharfschütze stellungswechsel
-        if ((aDef.effects || []).some((e) => e.code === 'SET_FACEDOWN')) {
+        if (this._defHas(aDef, 'SET_FACEDOWN')) {
           A.facedown = true; // verdeckte Lage
           this._log(aDef.name + ' geht in Deckung (verdeckt).'); // Zeile ins Protokoll
         }
       }
       if (this.state._guerrilla && !this._isDead(this.state._guerrilla)) {
         const g0 = this.state._guerrilla;
-        const watched = this.state.players.some((pl) => pl.id !== g0.owner && (pl.support || []).some((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'NO_FACE_DOWN')));
-        if (!watched && (this.defOf(g0).effects || []).some((x) => x.code === 'RELOCATE_HIDE')) {
+        const watched = this.state.players.some((pl) => pl.id !== g0.owner && (pl.support || []).some((s) => s && this._defHas(this.defOf(s), 'NO_FACE_DOWN')));
+        if (!watched && this._defHas(this.defOf(g0), 'RELOCATE_HIDE')) {
           g0.facedown = true; g0.flags.hideUntilOwner = true;
         }
-        if (!watched && (this.defOf(g0).effects || []).some((x) => x.code === 'GUERRILLA_HIDE')) g0.facedown = true;
+        if (!watched && this._defHas(this.defOf(g0), 'GUERRILLA_HIDE')) g0.facedown = true;
       }
       if (false) {
         const g = this.state._guerrilla;
-        const watched = this.state.players.some((pl) => pl.id !== g.owner && (pl.support || []).some((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'NO_FACE_DOWN')));
-        if (!watched && (this.defOf(g).effects || []).some((x) => x.code === 'GUERRILLA_HIDE')) g.facedown = true;
+        const watched = this.state.players.some((pl) => pl.id !== g.owner && (pl.support || []).some((s) => s && this._defHas(this.defOf(s), 'NO_FACE_DOWN')));
+        if (!watched && this._defHas(this.defOf(g), 'GUERRILLA_HIDE')) g.facedown = true;
       }
       if (T && T.tokens) T.tokens = T.tokens.filter((x) => !(x.rauch));
       this.state._guerrilla = null;
@@ -5377,7 +5386,7 @@
         const pals = this._neighbors(aLoc.player, aLoc.section, aLoc.row);
         pals.forEach((n) => {
           if (!n.inst || this.state._inOpFight) return;
-          if (!(this.defOf(n.inst).effects || []).some((x) => x.code === 'OP_MITKAEMPFEN')) return;
+          if (!this._defHas(this.defOf(n.inst), 'OP_MITKAEMPFEN')) return;
           const sides = this._neighbors(n.player, n.section, n.row);
           const inf = sides.filter((s) => s.inst && isInfantry(this.defOf(s.inst)));
           if (inf.length >= 2 && this.findInst(tLoc.inst.uid)) {
@@ -5456,7 +5465,7 @@
           this._log(this.defOf(ignoreEq).name + ': erster Schaden ignoriert.');
           amount = 0;
         }
-        const negEq = (inst.attachments || []).find((eq) => (this.defOf(eq).effects || []).some((x) => x.code === 'EQUIP_NEGATE_DAMAGE') && !(eq.flags && eq.flags.usedNegate));
+        const negEq = (inst.attachments || []).find((eq) => this._defHas(this.defOf(eq), 'EQUIP_NEGATE_DAMAGE') && !(eq.flags && eq.flags.usedNegate));
         if (negEq && amount > 0) {
           const fx = (this.defOf(negEq).effects || []).find((x) => x.code === 'EQUIP_NEGATE_DAMAGE');
           const neg = Math.min(amount, Number((fx && fx.param && fx.param.amount) || 1));
@@ -5484,11 +5493,11 @@
       if (meta && meta.tag === 'air') {
         const loc = this.findInst(inst.uid);
         if (loc && loc.zone === 'front') {
-          const n = (loc.player.support || []).filter((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'AA_REDUCE')).length;
+          const n = (loc.player.support || []).filter((s) => s && this._defHas(this.defOf(s), 'AA_REDUCE')).length;
           amount = Math.max(0, amount - n);
         }
         if (loc && loc.zone === 'support') {
-          const n = (loc.player.support || []).filter((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'RADAR_AA')).length;
+          const n = (loc.player.support || []).filter((s) => s && this._defHas(this.defOf(s), 'RADAR_AA')).length;
           amount = Math.max(0, amount - n * 2);
         }
       }
@@ -5499,7 +5508,7 @@
       }
       const nestLoc = this.findInst(inst && inst.uid);
       if (nestLoc && nestLoc.zone === 'front') {
-        const n = (nestLoc.player.support || []).filter((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'REDUCE_DAMAGE')).length;
+        const n = (nestLoc.player.support || []).filter((s) => s && this._defHas(this.defOf(s), 'REDUCE_DAMAGE')).length;
         amount = Math.max(0, amount - n);
       }
       if (inst && inst.flags && inst.flags.angelUntil === this.state.turn) {
@@ -5574,7 +5583,7 @@
      * @returns {boolean}
      */
     _isDiploImmune(inst) {
-      return (this.defOf(inst).effects || []).some((x) => x.code === 'DIPLO_IMMUNE');
+      return this._defHas(this.defOf(inst), 'DIPLO_IMMUNE');
     }
     /**
      * Entfernt die Einheit/Unterstützung vom Feld auf den Friedhof, löst Todes-Trigger aus, räumt Ausrüstung.
@@ -5657,7 +5666,7 @@
       }
       if (loc.zone === 'front') {
         loc.player.front[loc.section][loc.row] = null;
-        const hero = (meta && meta.tag === 'armageddon') || this.state._inLastStand ? null : loc.player.hand.find((c) => (this.defOf(c).effects || []).some((x) => x.code === 'BREACH_JUMP'));
+        const hero = (meta && meta.tag === 'armageddon') || this.state._inLastStand ? null : loc.player.hand.find((c) => this._defHas(this.defOf(c), 'BREACH_JUMP'));
         if (hero) {
           this.state.pending = this._sealPending({
             kind: 'hero-jump',
@@ -6606,7 +6615,7 @@
       });
       const cur = this.player(pid);
       this.frontList(cur).forEach((l) => {
-        const hasShovel = (l.inst.attachments || []).some((c) => (this.defOf(c).effects || []).some((x) => x.code === 'SCHANZEN'));
+        const hasShovel = (l.inst.attachments || []).some((c) => this._defHas(this.defOf(c), 'SCHANZEN'));
         if (hasShovel && !l.inst.attackUsed) {
           l.inst.flags.schanzen = (l.inst.flags.schanzen || 0) + 1;
           l.inst.def = (l.inst.def || 0) + 1;
@@ -6643,7 +6652,7 @@
         cur.flags.keinLoch = null;
       }
       this._applySupportCondDef(cur);
-      if ((cur.support || []).some((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'ELITE_DRAW'))) {
+      if ((cur.support || []).some((s) => s && this._defHas(this.defOf(s), 'ELITE_DRAW'))) {
         const n = this.frontList(cur).filter((l) => hasTag(this.defOf(l.inst), 'elite')).length;
         if (n > 2) this._draw(cur, 1);
       }
@@ -6790,7 +6799,7 @@
         // t267: MEDIZIN liest `self`/`flank` (Vorgabe 3/2 wie Feldlazarett-Ausrüstung)
         const medFx = [];
         (l.inst.attachments || []).forEach((c) => (this.defOf(c).effects || []).forEach((x) => { if (x.code === 'MEDIZIN') medFx.push(x.param || {}); }));
-        const bag = (l.inst.attachments || []).filter((c) => (this.defOf(c).effects || []).some((x) => x.code === 'TASCHE')).length;
+        const bag = (l.inst.attachments || []).filter((c) => this._defHas(this.defOf(c), 'TASCHE')).length;
         const medSelf = medFx.reduce((s2, q) => s2 + Number(q.self != null ? q.self : 3), 0);
         const medFlank = medFx.reduce((s2, q) => s2 + Number(q.flank != null ? q.flank : 2), 0);
         if (medSelf) l.inst.def = Math.min(l.inst.defMax || l.inst.def, (l.inst.def || 0) + medSelf);
@@ -6821,7 +6830,7 @@
       });
       this.state.peaceOffer = null;
       this._log(nxt.name + ' — Zug ' + this.state.turn + ', ' + nxt.ap + ' AP.');
-      if ((nxt.support || []).some((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'PEEK_ENEMY_TOP') && s.summonedTurn !== this.state.turn)) {
+      if ((nxt.support || []).some((s) => s && this._defHas(this.defOf(s), 'PEEK_ENEMY_TOP') && s.summonedTurn !== this.state.turn)) {
         const opp = this.opponent(nxtId);
         if (opp.deck.length) {
           const top = opp.deck[0];
@@ -6834,7 +6843,7 @@
           return { ok: true, need: 'spy' };
         }
       }
-      const grind = (nxt.support || []).find((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'ATTRITION') && s.summonedTurn !== this.state.turn);
+      const grind = (nxt.support || []).find((s) => s && this._defHas(this.defOf(s), 'ATTRITION') && s.summonedTurn !== this.state.turn);
       if (grind) {
         const opp = this.opponent(nxtId);
         const tg = [];
