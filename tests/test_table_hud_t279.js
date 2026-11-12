@@ -13,8 +13,8 @@ const sw = fs.readFileSync(path.join(web, 'sw.js'), 'utf8');
 // Stylesheet zuletzt geladen und offline verfügbar
 const links = [...html.matchAll(/<link rel="stylesheet" href="([^"?]+)/g)].map(m => m[1]);
 assert.equal(links[links.length - 1], 'css/table-hud.css', 'table-hud.css als letztes Stylesheet');
-assert(sw.includes("'./css/table-hud.css'") && sw.includes("'divcmd-alpha41f'"), 'Offline-Cache alpha41f mit table-hud.css');
-assert(html.includes('js/ui/app.js?v=alpha41f'));
+assert(sw.includes("'./css/table-hud.css'") && sw.includes("'divcmd-alpha42a'"), 'Offline-Cache alpha42a mit table-hud.css');
+assert(html.includes('js/ui/app.js?v=alpha42a'));
 
 // Musiktitel nicht mehr absolut über der Kopfleiste, Höhenraster mit allen sieben Zeilen
 assert(/\.hud-scn \.nowplay \{[^}]*position: static !important/.test(css), 'Musiktitel im Fluss');
@@ -55,4 +55,4 @@ const before = $('#my-front-label').innerHTML;
 w.dcRender();
 assert.equal($('#my-front-label').innerHTML, before);
 assert.equal(h.errors.filter(e => !/requestAnimationFrame/.test(String(e))).length, 0, h.errors.join('\n'));
-console.log('PASS table hud t279: Kopfleiste dreiteilig, Plaketten mit AP/SP/Hand, Protokoll angedockt, Höhenraster, Cache alpha41f');
+console.log('PASS table hud t279: Kopfleiste dreiteilig, Plaketten mit AP/SP/Hand, Protokoll angedockt, Höhenraster, Cache alpha42a');

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="ui280">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="css/card-placeholder.css?v=kw1">
   <link rel="stylesheet" href="css/tutorial.css?v=t275">
   <link rel="stylesheet" href="css/reset.css?v=t278">
+  <link rel="stylesheet" href="css/ui-system.css?v=t280">
+  <link rel="stylesheet" href="css/ui-screens.css?v=t280">
   <link rel="stylesheet" href="css/table-hud.css?v=t279">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
@@ -179,7 +181,7 @@
   <div id="title-root" class="boot-intro">
       <div class="title-world" id="title-world" aria-hidden="true">
         <div class="title-stage">
-          <video id="title-loop" class="title-loop" src="assets/title-back.mp4?v=fx6" autoplay muted loop playsinline preload="auto" disablepictureinpicture></video>
+          <video id="title-loop" class="title-loop" poster="assets/title-back-poster.webp" src="assets/title-back.mp4?v=fx6" autoplay muted loop playsinline preload="auto" disablepictureinpicture></video>
           <canvas id="title-sky" class="title-sky"></canvas>
           <img class="title-battle" src="assets/title-battle.webp?v=032plate" alt="">
           <img class="title-tent" src="assets/title-tent.webp" alt="">
@@ -279,7 +281,7 @@
       <div id="scr-library" class="screen">
         <h1 class="page-title">BIBLIOTHEK</h1>
         <p class="tiny" id="lib-build">Stand 0.6b</p>
-        <p class="tiny">Klick = eine Kopie ins Deck (Bronze max. 4, Silber max. 2, Gold max. 1; Doktrinen: 2 verschiedene). Doppelklick = große Ansicht. Im Deck: Klick/Doppelklick legt zurück.</p>
+        <p class="tiny lib-hint">Klick = große Ansicht · Doppelklick = eine Kopie ins Deck · im Deck: Doppelklick legt zurück. Kopien: Gold 1× · Silber 2× · Bronze 4× · 2 verschiedene Doktrinen.</p>
         <div class="lib-wrap">
           <div class="lib-main">
             <div class="lib-tools">
@@ -986,15 +988,15 @@
   <script src="js/ui/table-chat.js?v=nochat1"></script>
   <script src="js/ui/perf.js?v=030c"></script>
   <script src="js/ui/card-placeholder.js?v=gfx2-kw1"></script>
-  <script src="js/ui/library.js?v=tag1"></script>
+  <script src="js/ui/library.js?v=t280"></script>
   <script src="js/ui/portraits.js?v=kit20"></script>
   <script src="js/data/table-art-data.js?v=1"></script>
   <script src="js/ui/table-card-art.js?v=gfx2-kw1"></script>
   <script src="js/ui/table-effects.js?v=1"></script>
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=st1"></script>
-  <script src="js/ui/end-screen.js?v=1"></script>
-  <script src="js/ui/app.js?v=alpha41f"></script>
+  <script src="js/ui/end-screen.js?v=t280"></script>
+  <script src="js/ui/app.js?v=alpha42a"></script>
   <script src="js/ui/reset.js?v=t278"></script>
   <script src="js/tutorial/scenario.js?v=t275"></script>
   <script src="js/ui/tutorial.js?v=t275"></script>
@@ -1002,6 +1004,7 @@
   <script src="js/ui/audio-options.js?v=1"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>
   <script src="js/net.js?v=pt1"></script>
+  <script src="js/ui/ui-screens.js?v=t280"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js?v=mix1').catch(function () {});
@@ -1689,12 +1692,17 @@
         saveUsers(loadUsers(), this.value);
         paintUsers();
       };
-      document.getElementById('mode').onchange = function () {
-        document.getElementById('hotseat-row').style.display = this.value === 'hotseat' ? 'block' : 'none';
-        document.getElementById('btn-bot-cfg').style.display = this.value === 'hotseat' ? 'none' : 'inline-block';
+      /** Zeilen für KI- bzw. Hotseat-Gegner ein- und ausblenden (t280: wurde vorher vom zweiten onchange überschrieben). */
+      function paintModeRows() {
+        var v = document.getElementById('mode').value;
+        document.getElementById('hotseat-row').style.display = v === 'hotseat' ? 'block' : 'none';
+        document.getElementById('btn-bot-cfg').style.display = v === 'hotseat' ? 'none' : 'inline-block';
         var bd = document.getElementById('bot-deck-row');
-        if (bd) bd.style.display = this.value === 'hotseat' ? 'none' : 'block';
-      };
+        if (bd) bd.style.display = v === 'hotseat' ? 'none' : 'block';
+        var sc = document.getElementById('scr-single');
+        if (sc) sc.setAttribute('data-mode', v === 'hotseat' ? 'hotseat' : 'bot');
+      }
+      document.getElementById('mode').onchange = paintModeRows;
       window.addEventListener('pagehide', function () {
         try { navigator.sendBeacon('/api/quit', '{}'); } catch (e) {}
       });
@@ -1918,6 +1926,7 @@
       }
       var modeEl = document.getElementById('mode');
       if (modeEl) modeEl.onchange = function () {
+        paintModeRows();
         var box = document.getElementById('bot-box');
         if (box) box.style.display = modeEl.value === 'bot' ? 'block' : 'none';
       };

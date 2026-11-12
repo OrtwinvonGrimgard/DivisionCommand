@@ -1,0 +1,143 @@
+/*
+ * t280 – Designsystem (Tokens und Bausteine). Siehe docs/UI_DESIGN_T280.md.
+ * Wird nach allen bisherigen Stylesheets geladen. Bausteinregeln laufen über :where(), damit sie
+ * nur die alten Grundregeln (button, input …) ersetzen und speziellere Regeln (Tisch, Bibliothek) stehen bleiben.
+ * Seitenspezifische Anordnung steht in ui-screens.css.
+ */
+:root {
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px; --sp-7: 48px;
+  --fs-xs: 11px; --fs-sm: 13px; --fs-md: 15px; --fs-lg: 18px; --fs-xl: 22px; --fs-xxl: 28px; --fs-display: 40px;
+  --ff-head: Cinzel, Georgia, "Times New Roman", serif;
+  --ff-ui: "Segoe UI", system-ui, sans-serif;
+  --ff-num: Oswald, "Arial Narrow", Impact, sans-serif;
+  --c-bg: #140202;
+  --c-panel-a: #2c110e; --c-panel-b: #160707;
+  --c-edge: rgba(201, 168, 96, .45); --c-edge-strong: rgba(226, 195, 106, .85);
+  --c-gold: #e2c36a; --c-gold-hi: #f3d993; --c-gold-lo: #b8892f;
+  --c-ink: #f0e6d4; --c-muted: #c9a8a0; --c-dim: #9d8a7a;
+  --c-danger: #c45c3e; --c-ok: #9fc27a;
+  --c-bronze: #c08a55; --c-silver: #c9ced6;
+  --c-field: #1a0b09;
+  --r-sm: 6px; --r-md: 10px; --r-lg: 14px;
+  --t-fast: 120ms; --t-mid: 220ms;
+  --shadow-panel: 0 18px 50px rgba(0, 0, 0, .55), inset 0 1px 0 rgba(255, 230, 170, .06);
+  --panel-bg: linear-gradient(180deg, rgba(44, 17, 14, .96), rgba(22, 7, 7, .97)), url("../assets/ui/panel-grain.webp") center / 256px repeat;
+}
+
+/* ---------- Knöpfe ---------- */
+:where(html.ui280) button {
+  border-radius: var(--r-sm);
+  min-height: 34px;
+  padding: 6px 14px;
+  font-size: var(--fs-sm);
+  letter-spacing: .04em;
+  border: 1px solid var(--c-edge);
+  background: linear-gradient(180deg, #6a2a22 0%, #3c1612 55%, #26100c 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 210, 170, .18), 0 2px 0 #0e0404, 0 4px 10px rgba(0, 0, 0, .45);
+  transition: background var(--t-fast), border-color var(--t-fast), color var(--t-fast), box-shadow var(--t-fast), transform var(--t-fast);
+}
+:where(html.ui280) button:hover:not(:disabled) {
+  color: var(--c-gold-hi); border-color: var(--c-edge-strong);
+  background: linear-gradient(180deg, #7c3428 0%, #4a1c16 55%, #2c110c 100%);
+}
+:where(html.ui280) button:active:not(:disabled) { transform: translateY(1px); box-shadow: inset 0 1px 3px rgba(0, 0, 0, .6); }
+:where(html.ui280) button.primary {
+  color: #1d0d05; font-weight: 700; letter-spacing: .06em; text-shadow: 0 1px 0 rgba(255, 240, 200, .45);
+  border-color: #f0d488;
+  background: linear-gradient(180deg, #f3d993 0%, #d6ac4c 48%, #a87a26 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 250, 225, .7), 0 2px 0 #4a3010, 0 6px 16px rgba(0, 0, 0, .5);
+}
+:where(html.ui280) button.primary:hover:not(:disabled) {
+  color: #120802; border-color: #fff0bf;
+  background: linear-gradient(180deg, #fbe6aa 0%, #e2bb5e 48%, #b88a30 100%);
+}
+:where(html.ui280) button.danger {
+  color: #ffe6dc; border-color: rgba(230, 120, 90, .7);
+  background: linear-gradient(180deg, #8a2a1c 0%, #5a160e 60%, #3a0c08 100%);
+}
+:where(html.ui280) button.danger:hover:not(:disabled) { color: #fff; border-color: #ff9a7a; background: linear-gradient(180deg, #a3321f 0%, #6c1a10 60%, #440e08 100%); }
+:where(html.ui280) button.back {
+  background: rgba(10, 4, 3, .55); color: var(--c-ink); border-color: var(--c-edge); box-shadow: none;
+}
+:where(html.ui280) button.back::before { content: "‹"; display: inline-block; margin-right: 8px; font-size: 1.3em; line-height: 0; transform: translateY(1px); color: var(--c-gold); }
+:where(html.ui280) button.back:hover:not(:disabled) { background: rgba(60, 20, 14, .7); }
+:where(html.ui280) button:disabled {
+  opacity: .45; cursor: not-allowed; filter: saturate(.6); box-shadow: none; transform: none;
+}
+:where(html.ui280) :is(button, a, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--c-gold); outline-offset: 2px;
+}
+
+/* ---------- Felder ---------- */
+:where(html.ui280) :is(input:not([type=checkbox]):not([type=radio]):not([type=range]), select, textarea) {
+  font: inherit; font-size: var(--fs-md);
+  min-height: 36px; padding: 6px 10px; border-radius: var(--r-sm);
+  color: var(--c-ink); background: var(--c-field); border: 1px solid var(--c-edge);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, .45);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+:where(html.ui280) :is(input, select, textarea)::placeholder { color: #8d7a6e; }
+:where(html.ui280) :is(input, select, textarea):hover { border-color: var(--c-edge-strong); }
+:where(html.ui280) :is(input, select, textarea):focus { border-color: var(--c-gold); outline: none; box-shadow: inset 0 2px 4px rgba(0, 0, 0, .45), 0 0 0 2px rgba(226, 195, 106, .35); }
+:where(html.ui280) select option { background: #1f0c0a; color: var(--c-ink); }
+:where(html.ui280) :is(input[type=checkbox], input[type=radio], input[type=range]) { accent-color: var(--c-gold); }
+:where(html.ui280) input[type=checkbox], :where(html.ui280) input[type=radio] { width: 18px; height: 18px; vertical-align: -3px; cursor: pointer; }
+
+/* ---------- Panel ---------- */
+.ui-panel {
+  position: relative; color: var(--c-ink);
+  background: var(--panel-bg);
+  border: 1px solid var(--c-edge); border-radius: var(--r-md);
+  box-shadow: var(--shadow-panel);
+}
+.ui-corners::before, .ui-corners::after,
+.ui-corners > .ui-c::before, .ui-corners > .ui-c::after {
+  content: ""; position: absolute; width: 34px; height: 34px; pointer-events: none; z-index: 3;
+  background: url("../assets/ui/corner.svg") center / contain no-repeat;
+}
+.ui-corners::before { left: -3px; top: -3px; }
+.ui-corners::after { right: -3px; top: -3px; transform: scaleX(-1); }
+.ui-panel-head {
+  margin: 0 0 var(--sp-3); padding-bottom: var(--sp-2);
+  font: 600 var(--fs-xs)/1.2 var(--ff-ui); letter-spacing: .18em; text-transform: uppercase; color: var(--c-gold);
+  border-bottom: 1px solid rgba(201, 168, 96, .3);
+}
+.ui-ico { display: inline-block; width: 20px; height: 20px; flex: none; vertical-align: -5px; color: currentColor; }
+.ui-hint { font-size: var(--fs-xs); color: var(--c-dim); line-height: 1.4; }
+.ui-empty {
+  display: grid; place-items: center; gap: var(--sp-2); padding: var(--sp-5); text-align: center;
+  color: var(--c-muted); font-size: var(--fs-sm); border: 1px dashed rgba(201, 168, 96, .3); border-radius: var(--r-md);
+}
+.ui-kbd {
+  display: inline-block; min-width: 18px; padding: 0 5px; border-radius: 4px; font: 600 10px/16px var(--ff-ui);
+  color: var(--c-gold); border: 1px solid rgba(201, 168, 96, .5); background: rgba(0, 0, 0, .35); text-align: center;
+}
+
+/* ---------- Bewegung ---------- */
+@media (prefers-reduced-motion: reduce) {
+  :where(html.ui280) * { transition-duration: 0ms !important; }
+}
+
+/* ---------- Schieberegler ---------- */
+:where(html.ui280) input[type=range] { -webkit-appearance: none; appearance: none; height: 22px; background: transparent; cursor: pointer; }
+:where(html.ui280) input[type=range]::-webkit-slider-runnable-track {
+  height: 6px; border-radius: 3px; border: 1px solid rgba(201, 168, 96, .5);
+  background: linear-gradient(90deg, var(--c-gold-lo), var(--c-gold)) 0 / var(--fill, 50%) 100% no-repeat, #1a0b09;
+}
+:where(html.ui280) input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 18px; height: 18px; margin-top: -7px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff3c8, #d6ac4c 55%, #8a6220); border: 1px solid #2a1606; box-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+}
+:where(html.ui280) input[type=range]::-moz-range-track { height: 6px; border-radius: 3px; background: #1a0b09; border: 1px solid rgba(201, 168, 96, .5); }
+:where(html.ui280) input[type=range]::-moz-range-progress { height: 6px; border-radius: 3px; background: var(--c-gold); }
+:where(html.ui280) input[type=range]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: #d6ac4c; border: 1px solid #2a1606; }
+
+/* Ältere Regeln geben allen Feldern 100 % Breite und Goldrahmen; Kästchen und Regler hier fest zurücksetzen.
+   :not(#_) hebt nur die Spezifität an (drei Id-Stufen), ohne etwas auszuschließen. */
+html.ui280 input:is([type=checkbox], [type=radio]):not(#_):not(#_):not(#_) {
+  width: 18px !important; min-width: 18px !important; height: 18px !important; min-height: 0 !important; flex: none !important;
+  margin: 0 !important; padding: 0 !important; border: 0 !important; box-shadow: none !important; background: none !important; display: inline-block !important;
+}
+html.ui280 input[type=range]:not(#_):not(#_):not(#_) {
+  border: 0 !important; background: transparent !important; box-shadow: none !important; padding: 0 !important; min-height: 0 !important; height: 22px !important;
+}

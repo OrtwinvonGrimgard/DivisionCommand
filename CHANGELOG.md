@@ -2,6 +2,23 @@
 
 ## Unreleased
 
+- **Alle Bildschirme überarbeitet (t280, Stufe 1):**
+  - Messung vorher (25 Ansichten bei 1024×576, 1280×720 und 1920×1080): 109 Befunde. Im Hauptmenü lagen die neun Knöpfe auf dem Logo, der oberste war abgeschnitten. Der Startknopf lag auf dem Sternenemblem. In der Offiziersakte füllte das Porträt bei 576 px den Schirm, Felder und „Akte anlegen“ lagen darunter. Einzelspieler hatte weiße Standardfelder, „Bereit“ und „Gefecht beginnen“ lagen unter dem Rand. Der Bot-Dialog lag im Seitenfluss und hatte bei Werkseinstellung keinen Ausgang. Die Optionen hatten winzige Reiter mit grünem Aktivzustand. Der Rückblick „Handlung“ lief unten aus dem Bild. Der Bibliothekshinweis beschrieb Klick und Doppelklick vertauscht.
+  - Designsystem (`docs/UI_DESIGN_T280.md`, `web/css/ui-system.css`): Abstände, Schriftstufen, Farben, Knöpfe (Haupt/Neben/Gefahr/Zurück mit Hover, Fokusring, gesperrt), dunkle Felder, goldene Regler mit Füllstand, Kästchen, Panels, Bewegung mit reduced-motion.
+  - `web/css/ui-screens.css` und `web/js/ui/ui-screens.js`:
+    - Hauptmenü mit kleinerem Logo oben links, Kommandopanel links (Symbole, Kurzbeschreibungen, Nebenpunkte 2×2) und Porträt rechts.
+    - Arbeitsseiten als Panel mit Titelleiste und klebender Aktionsleiste (Zurück links, Hauptaktion rechts). Auf großen Schirmen wachsen die Panels mit. Esc = Zurück.
+    - Einzelspieler mit Bildkarten „Gegen die KI“ und „Hotseat“, zweispaltigem Formular und Hinweis, wenn kein zweiter Offizier existiert. Dabei behoben: Das zweite `onchange` hatte das Ein- und Ausblenden der Hotseat- und Bot-Zeilen überschrieben.
+    - Bot-Dialog als Overlay, Speichern/Zurücksetzen/Abbrechen immer sichtbar, Esc schließt.
+    - LAN mit Bildband, Suchzeile über der Aktionsleiste und Lobby-Sitzen als Karten.
+    - Offiziersakte und Benutzer: Formular links, Porträt rechts, Kacheln ohne überlaufende Namen, „Akte speichern“ in der Aktionsleiste.
+    - Optionen mit Reiterleiste samt Symbolen, Einstellungszeilen und Gefahrenzone.
+    - Playtest-Fenster und Partie-Optionen im selben Dialogstil. Der Rückblick scrollt.
+    - Endbildschirm mit Sieg- oder Niederlagengemälde.
+  - Bibliothek: Abzeichen „im Deck / erlaubt“ je Karte in Seltenheitsfarbe (Gold 1, Silber 2, Bronze 4, „voll“) und Fortschrittsbalken 60 Karten + 2 Doktrinen mit Restangabe. Die Limitmeldung ist deutsch und fällt auf. Leerer Filter mit „Filter zurücksetzen“. Der Hinweis passt zur Bedienung.
+  - Generierte Grafiken (WebP, im Offline-Cache): `assets/ui/mode-ki`, `mode-hotseat`, `mode-lan` (960×540), `end-victory`, `end-defeat` (1280×720), `panel-grain`; dazu `title-back-poster.webp` (Standbild des Titelvideos) sowie die SVGs `icons.svg` (18 Symbole), `corner.svg` und `search.svg`.
+  - Tests: `tests/test_ui_screens_t280.js` (npm test) und `tests/playwright_screens_t280.mjs` (`npm run screens-test`: 25 Ansichten × 3 Größen, Überlappung, abgeschnittener Text, außerhalb, Hauptaktion sichtbar). Cache `divcmd-alpha42a`.
+
 - **Tisch aufgeräumt (t279):**
   - Messung vorher (6 Fenstergrößen von 1024×576 bis 2560×1440, Partie mit eigenem Zug und Gegnerzug, Tutorial, Feindkontakt): 755 Befunde. Der Musiktitel lag absolut über der ganzen Kopfzeile (Logo, Zuganzeige, beide Statuszeilen). Hand, eigene Stapel, Doktrinen und Name ragten unten aus dem Bild. Das schwebende Protokoll und das Versionsschild „Alpha 0.6b“ deckten Felder ab. Die Befehlsspalte rutschte unter 1100 px unter den Tisch. Schlüsselwörter auf Feldern waren abgeschnitten.
   - Neue Kopfleiste in drei Zonen: links Logo mit Version, in der Mitte Partie (Gefecht gegen KI / Hotseat / LAN / Grundausbildung, ggf. Trophäen-Modus) mit Musiktitel und „Zug X · am Zug: …“. Rechts je Spieler eine Plakette mit Name, „am Zug“-Marke, AP als Rauten, SP-Balken und Hand/Deck. Die eigene Plakette steht außen, der aktive Spieler leuchtet gold. Auf großen Bildschirmen wächst die Leiste mit.

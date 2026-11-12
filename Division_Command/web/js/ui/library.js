@@ -425,7 +425,8 @@
     var lim = maxOf(c);
     var n = draft.cards[c.id] || 0;
     if (n >= lim) {
-      deckLimitMessage((c.name || c.id) + ': maximal ' + lim + '× (' + (c.rarity || 'bronze') + ').');
+      var rDe = { gold: 'Gold', silver: 'Silber', silber: 'Silber', bronze: 'Bronze' }[String(c.rarity || 'bronze').toLowerCase()] || 'Bronze';
+      deckLimitMessage((c.name || c.id) + ': maximal ' + lim + '× (' + rDe + ').');
       return;
     }
     var nameCount = countByNameInDraft(c.name);
@@ -483,6 +484,70 @@
     }
     return '<div class="stack n' + shown + '" style="width:' + (cw + (shown - 1) * ox) + 'px;height:' + (ch + (shown - 1) * oy) + 'px;">' + layers + '</div>';
   }
+  /**
+   * Abzeichen „im Deck / erlaubt“ für eine Bibliothekskarte (t280).
+   * @param {object} c Karte.
+   * @param {number} taken Exemplare im Entwurf.
+   * @param {number} max Kopienlimit (Gold 1, Silber 2, Bronze 4, Doktrin 1).
+   * @returns {string} HTML
+   */
+  function copiesBadge(c, taken, max) {
+    var r = c.typ === 'Doktrin' ? 'doktrin' : rarityOf(c);
+    var label = { gold: 'Gold', silver: 'Silber', bronze: 'Bronze', doktrin: 'Doktrin' }[r] || '';
+    var cls = 'lib-copies r-' + r + (taken >= max ? ' is-full' : (taken > 0 ? ' is-some' : ''));
+    var title = label + ': ' + taken + ' von ' + max + ' im Deck';
+    return '<span class="' + cls + '" title="' + esc(title) + '">' + taken + '/' + max + '</span>';
+  }
+
+  /** Setzt alle Ansichtsfilter (Reiter, Suche, Nation, Seltenheit, Tags) zurück. */
+  function resetFilters() {
+    filterTab = 'all';
+    filterQuery = '';
+    filterNation = '';
+    filterRarity = '';
+    filterTags = [];
+    var q = document.getElementById('lib-search'); if (q) q.value = '';
+    var ns = document.getElementById('lib-nation'); if (ns) ns.value = '';
+    var rs = document.getElementById('lib-rarity'); if (rs) rs.value = '';
+    var tabs = document.getElementById('lib-tabs');
+    if (tabs) tabs.querySelectorAll('.lib-tab').forEach(function (x) { x.classList.toggle('on', x.getAttribute('data-tab') === 'all'); });
+    var tg = document.getElementById('lib-tag-toggle');
+    if (tg) { tg.textContent = 'Tags'; tg.classList.remove('on'); }
+    render();
+  }
+
+  /**
+   * Fortschrittsbalken 60 Karten + 2 Doktrinen unter dem Deckkopf (t280).
+   * @param {number} total Karten ohne Doktrinen.
+   * @param {number} docs Gewählte Doktrinen.
+   */
+  function paintProgress(total, docs) {
+    var meta = document.getElementById('deck-meta');
+    if (!meta || !meta.parentNode) return;
+    var box = document.getElementById('deck-progress');
+    if (!box) {
+      box = document.createElement('div');
+      box.id = 'deck-progress';
+      box.className = 'deck-progress';
+      box.innerHTML = '<div class="deck-bar" role="progressbar" aria-valuemin="0" aria-valuemax="60"><i></i></div>' +
+        '<div class="deck-docbar"><b data-doc="0"></b><b data-doc="1"></b></div><p class="deck-status"></p>';
+      meta.parentNode.insertBefore(box, meta.nextSibling);
+    }
+    var bar = box.querySelector('.deck-bar');
+    var pct = Math.min(100, Math.round((total / 60) * 100));
+    bar.setAttribute('aria-valuenow', String(total));
+    bar.firstChild.style.width = pct + '%';
+    box.classList.toggle('over', total > 60);
+    box.classList.toggle('done', total === 60 && docs === 2);
+    box.querySelectorAll('[data-doc]').forEach(function (el) { el.classList.toggle('on', Number(el.getAttribute('data-doc')) < docs); });
+    var st = box.querySelector('.deck-status');
+    var parts = [];
+    if (total < 60) parts.push('noch ' + (60 - total) + ' Karte' + (60 - total === 1 ? '' : 'n'));
+    else if (total > 60) parts.push((total - 60) + ' zu viel');
+    if (docs < 2) parts.push('noch ' + (2 - docs) + ' Doktrin' + (2 - docs === 1 ? '' : 'en'));
+    st.textContent = parts.length ? 'Fehlt: ' + parts.join(' · ') : 'Deck vollständig – 60 Karten + 2 Doktrinen';
+  }
+
   function renderSide() {
     var box = document.getElementById('deck-picked');
     var docs = document.getElementById('deck-docs');
@@ -495,7 +560,7 @@
         return '<div class="deck-stack" data-id="' + id + '">' +
           '<div class="deck-cap">' + (c.name || id) + ' ×' + n + '</div>' +
           stackHtml(c, n, 'deck') + '</div>';
-      }).join('') || '<p class="tiny deck-empty">Noch keine Karten.</p>';
+      }).join('') || '<p class="tiny deck-empty">Noch keine Karten.<br>Doppelklick auf eine Karte links legt sie ins Deck.</p>';
       box.querySelectorAll('.deck-stack').forEach(function (el) {
         var timer = 0;
         el.onclick = function () {
@@ -544,6 +609,7 @@
     if (meta) {
       meta.textContent = 'Karten · ' + total + ' / 60';
     }
+    paintProgress(total, draft.doctrines.length);
     var origin = document.getElementById('deck-nations');
     if (origin) {
       var mix = draftNations();
@@ -702,7 +768,10 @@
     if (!host) return;
     var groups = sections();
     if (!groups.length) {
-      host.innerHTML = '<p class="tiny lib-empty">Keine Karten für diesen Filter.</p>';
+      host.innerHTML = '<div class="lib-empty ui-empty"><p class="tiny">Keine Karten für diesen Filter.</p>' +
+        '<button type="button" id="lib-reset-filters">Filter zurücksetzen</button></div>';
+      var rs = document.getElementById('lib-reset-filters');
+      if (rs) rs.onclick = resetFilters;
     } else {
       host.innerHTML = groups.map(function (g) {
         return '<h3>' + g.title + '</h3><div class="lib-grid">' + g.list.map(function (c) {
@@ -713,8 +782,9 @@
           var left = Math.max(0, max - taken);
           var full = left <= 0;
           var origin = (!filterNation && !nationOf(c)) ? '<span class="lib-origin">Neutral</span>' : '';
-          return '<button type="button" class="lib-card' + (full ? ' full' : '') + '" data-add="' + c.id + '">' +
+          return '<button type="button" class="lib-card' + (full ? ' full' : '') + '" data-add="' + c.id + '" data-rarity="' + rarityOf(c) + '">' +
             stackHtml(c, Math.max(1, left), 'lib') +
+            copiesBadge(c, taken, max) +
             '<span class="lib-cap">' + (c.name || c.id) + '</span>' + origin +
             '</button>';
         }).join('') + '</div>';

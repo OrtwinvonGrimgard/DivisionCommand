@@ -15,6 +15,17 @@
     }
     return st.winner === you ? 'GEWONNEN' : 'VERLOREN';
   }
+  /**
+   * Stimmung des Endbildschirms für Hintergrundbild und Farben (t280).
+   * @param {string} text Ergebnis aus result().
+   * @returns {'win'|'loss'|'draw'|'neutral'}
+   */
+  function tone(text) {
+    if (text === 'GEWONNEN') return 'win';
+    if (text === 'VERLOREN') return 'loss';
+    if (text === 'UNENTSCHIEDEN') return 'draw';
+    return 'neutral';
+  }
   function reset() {
     if (root) root.remove(); root = null;
     background.forEach(function (entry) {
@@ -40,6 +51,7 @@
     var kicker = document.createElement('p'); kicker.className = 'dc-end-kicker'; kicker.textContent = 'PARTIE BEENDET';
     var title = document.createElement('h1'); title.id = 'dc-end-heading';
     title.textContent = result(st, opts.mode, opts.you);
+    root.classList.add('is-' + tone(title.textContent));
     var reason = document.createElement('p'); reason.id = 'dc-end-reason'; reason.textContent = st.endReason || 'Partie beendet';
     var score = document.createElement('p'); score.className = 'dc-end-score';
     score.textContent = st.players.map(function (p, i) { return (p.name || ('Seite ' + (i + 1))) + ': ' + (p.vp || 0) + ' SP'; }).join('  ·  ');
@@ -49,6 +61,7 @@
       b.onclick = function () { if (cb) cb(); }; buttons.appendChild(b); return b;
     }
     var first = button('dc-end-again', opts.lan ? 'Zur Lobby' : 'Erneut spielen', opts.onAgain);
+    first.className = 'primary';
     button('dc-end-menu', 'Zurück zum Menü', opts.onMenu);
     [kicker, title, reason, score, buttons].forEach(function (el) { panel.appendChild(el); });
     root.appendChild(panel); document.body.appendChild(root);
@@ -68,5 +81,5 @@
     });
     first.focus();
   }
-  global.DCEndScreen = { terminal: terminal, result: result, show: show, reset: reset };
+  global.DCEndScreen = { terminal: terminal, result: result, tone: tone, show: show, reset: reset };
 })(window);

@@ -1,0 +1,550 @@
+/*
+ * t280 – Anordnung der Bildschirme außerhalb des Tisches (Start, Hauptmenü, Arbeitsseiten, Dialoge).
+ * Präfix html.ui280 hebt die Spezifität über die älteren !important-Schichten aus app.css/align.css.
+ */
+
+/* =========================================================
+   Hauptmenü: Logo oben links, Kommandopanel links unten, Akte rechts
+   ========================================================= */
+html.ui280 #title-root:has(#scr-title.on) > .title-brand {
+  position: fixed !important; top: 3.5vh !important; left: 5vw !important; right: auto !important;
+  transform: none !important; width: min(640px, 36vw, calc(26vh * 2.72)) !important; max-width: none !important;
+  align-items: flex-start !important;
+}
+html.ui280 #title-root:has(#scr-title.on) > .title-brand .title-logo { width: 100% !important; filter: drop-shadow(0 6px 18px rgba(0, 0, 0, .7)); }
+html.ui280 #title-root:has(#scr-title.on) #menu-panel {
+  position: fixed !important; left: 5vw !important; bottom: 4.5vh !important; top: auto !important;
+  width: clamp(320px, 28vw, 520px) !important; margin: 0 !important; padding: var(--sp-4) !important;
+  background: var(--panel-bg) !important; border: 1px solid var(--c-edge) !important; border-radius: var(--r-md) !important;
+  box-shadow: var(--shadow-panel) !important;
+}
+html.ui280 #title-root:has(#scr-title.on) #scr-title { gap: 0 !important; }
+html.ui280 #title-root:has(#scr-title.on) #scr-title .menu {
+  display: grid !important; grid-template-columns: 1fr 1fr; gap: var(--sp-2) !important; width: 100% !important; margin: 0 !important;
+}
+html.ui280 #title-root:has(#scr-title.on) #scr-title .menu > button {
+  display: flex !important; align-items: center; gap: var(--sp-3); width: 100% !important; margin: 0 !important;
+  min-width: 0 !important; min-height: clamp(36px, 4vh, 46px) !important; padding: 6px 12px !important; font-size: clamp(13px, calc(.4vw + 8px), 16px) !important; letter-spacing: .05em !important;
+  text-align: left; justify-content: flex-start;
+}
+html.ui280 #title-root:has(#scr-title.on) #scr-title .menu > :is(#go-single, #go-lan, #go-library, #go-tutorial) {
+  grid-column: 1 / -1; min-height: clamp(46px, 5.4vh, 60px) !important; font-size: clamp(14px, calc(.55vw + 8px), 18px) !important; letter-spacing: .1em !important; text-transform: uppercase;
+}
+html.ui280 #title-root:has(#scr-title.on) #scr-title .menu > #go-quit {
+  grid-column: 1 / -1; justify-content: center; background: rgba(10, 4, 3, .5) !important; box-shadow: none !important; min-height: 32px !important; color: var(--c-muted);
+}
+html.ui280 #title-root:has(#scr-title.on) #scr-title .menu > button > .menu-btn-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; line-height: 1.15; }
+html.ui280 .menu-btn-sub { font-size: var(--fs-xs); letter-spacing: .02em; text-transform: none; font-weight: 400; color: var(--c-dim); white-space: normal; }
+html.ui280 #go-single .menu-btn-sub { color: #4a3210; }
+html.ui280 #title-root:has(#scr-title.on) #scr-title .menu > :is(#go-single, #go-lan, #go-library, #go-tutorial) .ui-ico { width: 26px; height: 26px; }
+html.ui280 #title-root:has(#scr-title.on) #scr-title .menu > button .ui-ico { color: var(--c-gold); }
+html.ui280 #title-root:has(#scr-title.on) #scr-title .menu > #go-single .ui-ico { color: #2a1606; }
+@media (max-height: 680px) {
+  html.ui280 .menu-btn-sub { display: none; }
+  html.ui280 #title-root:has(#scr-title.on) #scr-title .menu > :is(#go-single, #go-lan, #go-library, #go-tutorial) { min-height: 42px !important; }
+}
+/* Akte rechts: Porträt nie höher als 58 % des Fensters */
+html.ui280 #title-root:has(#scr-title.on) #who-line { right: 5vw !important; max-width: min(28vw, 380px) !important; }
+html.ui280 #title-root:has(#scr-title.on) #who-line .who-face {
+  width: min(22vw, 300px, 38vh) !important; max-width: none !important; height: auto !important;
+  border: 1px solid var(--c-edge-strong) !important; border-radius: var(--r-sm); box-shadow: 0 16px 40px rgba(0, 0, 0, .6);
+}
+html.ui280 #title-root:has(#scr-title.on) ~ #dc-version, html.ui280 body:has(#scr-title.on) #dc-version { left: auto !important; right: 16px !important; bottom: 10px !important; font-size: 12px !important; opacity: .75; }
+
+/* Start: Logo oben, Startknopf klar darunter (vorher lag er auf dem Sternenemblem des Logos) */
+html.ui280 #title-root#title-root:has(#scr-boot.on) > .title-brand { top: 7vh !important; width: min(1100px, 84vw, calc(50vh * 2.72)) !important; }
+html.ui280 #title-root#title-root:has(#scr-boot.on) { justify-content: flex-end !important; padding-bottom: 15vh !important; }
+/* Start: großer Startknopf */
+html.ui280 #title-root#title-root #scr-boot.on #go-start { min-height: clamp(56px, 6.5vh, 80px) !important; min-width: clamp(280px, 22vw, 460px) !important; font-size: clamp(18px, 1.3vw, 26px) !important; letter-spacing: .2em !important; text-transform: uppercase; }
+
+/* =========================================================
+   Arbeitsseiten (#work-root): ein Panel, Titel oben, Aktionsleiste unten
+   ========================================================= */
+html.ui280 #work-root#work-root.open {
+  padding: var(--sp-5) !important;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(20, 2, 2, .25) 0%, rgba(8, 1, 1, .7) 80%),
+    #140202 url("../assets/title-back.jpg") center / cover no-repeat !important;
+}
+html.ui280 #work-root#work-root .screen.on {
+  position: relative !important; box-sizing: border-box !important;
+  max-height: calc(100vh - 2 * var(--sp-5)) !important; height: auto !important;
+  padding: 0 0 0 !important; overflow: hidden auto !important;
+  background: var(--panel-bg) !important; border: 1px solid var(--c-edge) !important; border-radius: var(--r-lg) !important;
+  box-shadow: var(--shadow-panel) !important; text-align: left !important;
+  align-items: stretch !important; justify-content: flex-start !important;
+}
+html.ui280 #work-root#work-root .screen.on:not(#scr-library):not(#scr-hilfe) { width: min(760px, 94vw) !important; margin: 0 auto !important; }
+html.ui280 #work-root#work-root .screen.on > :not(.page-title):not(.menu):not(.lib-foot):not(.hilfe-body):not(.lib-wrap):not(.modal-layer) { margin-left: var(--sp-5) !important; margin-right: var(--sp-5) !important; }
+html.ui280 #work-root#work-root .page-title {
+  position: sticky !important; top: 0 !important; z-index: 4 !important; flex: none !important;
+  margin: 0 0 var(--sp-4) !important; padding: 14px var(--sp-6) 12px !important; min-height: 0 !important; height: auto !important;
+  width: auto !important; align-self: stretch !important; font: 600 var(--fs-xxl)/1.15 var(--ff-head) !important; letter-spacing: .2em !important; text-align: center !important;
+  -webkit-text-stroke: 0 !important; filter: none !important; text-shadow: 0 2px 10px rgba(0, 0, 0, .8) !important;
+  background: linear-gradient(180deg, rgba(90, 26, 18, .96), rgba(48, 14, 10, .96)) !important;
+  border: 0 !important; border-bottom: 1px solid var(--c-edge-strong) !important; border-radius: var(--r-lg) var(--r-lg) 0 0 !important;
+}
+html.ui280 #work-root#work-root .page-title::before, html.ui280 #work-root#work-root .page-title::after {
+  content: "◆" !important; font-size: 10px !important; vertical-align: middle !important; color: var(--c-gold-lo) !important; margin: 0 18px !important; letter-spacing: 0 !important; -webkit-text-fill-color: var(--c-gold-lo) !important;
+}
+html.ui280 #work-root#work-root .screen.on .tiny { font-size: var(--fs-xs) !important; color: var(--c-dim) !important; }
+/* Formulare: Beschriftung über dem Feld */
+html.ui280 #work-root#work-root .screen.on:is(#scr-single, #scr-lan) label:not(:has(> input[type=checkbox])):not([style*="none"]) {
+  display: flex !important; flex-direction: column !important; align-items: stretch !important; justify-content: flex-start !important; gap: 4px !important; margin: 0 var(--sp-5) var(--sp-3) !important;
+  font-size: var(--fs-xs) !important; letter-spacing: .14em !important; text-transform: uppercase !important; color: var(--c-gold) !important; text-align: left !important;
+}
+html.ui280 #work-root#work-root .screen.on:is(#scr-single, #scr-lan) label > :is(input:not([type=checkbox]):not([type=radio]):not([type=range]), select) {
+  width: 100% !important; text-transform: none !important; letter-spacing: 0 !important; margin: 0 !important;
+}
+html.ui280 #work-root#work-root .screen.on :is(input:not([type=checkbox]):not([type=radio]):not([type=range]), select) {
+  background: var(--c-field) !important; color: var(--c-ink) !important; border: 1px solid var(--c-edge) !important; border-radius: var(--r-sm) !important;
+}
+/* Aktionsleiste: Zurück links, Hauptaktion rechts, immer sichtbar */
+html.ui280 #work-root#work-root .screen.on > .menu:has(> .back),
+html.ui280 #work-root#work-root .screen.on > .lib-foot,
+html.ui280 #work-root#work-root .screen.on #lan-pick > .menu:has(> .back) {
+  position: sticky !important; bottom: 0 !important; z-index: 4 !important;
+  display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; align-items: center !important; justify-content: flex-end !important; gap: var(--sp-2) !important;
+  width: auto !important; margin: var(--sp-4) 0 0 !important; padding: var(--sp-3) var(--sp-5) !important;
+  background: linear-gradient(180deg, rgba(30, 10, 8, .92), rgba(16, 5, 4, .98)) !important;
+  border-top: 1px solid rgba(201, 168, 96, .35) !important; border-radius: 0 0 var(--r-lg) var(--r-lg) !important;
+}
+html.ui280 #work-root#work-root .screen.on #lan-pick > .menu:has(> .back) { margin: var(--sp-4) calc(-1 * var(--sp-5)) 0 !important; }
+html.ui280 #work-root#work-root .screen.on :is(.menu, .lib-foot) > .back { order: -1 !important; margin-right: auto !important; width: auto !important; min-width: 120px !important; }
+html.ui280 #work-root#work-root .screen.on :is(.menu, .lib-foot) > button { width: auto !important; min-width: 140px !important; margin: 0 !important; }
+html.ui280 #work-root#work-root .screen.on .menu:not(:has(> .back)) {
+  display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; justify-content: flex-start !important; gap: var(--sp-2) !important;
+  width: auto !important; margin: var(--sp-2) var(--sp-5) var(--sp-3) !important;
+}
+html.ui280 #work-root#work-root .screen.on .menu:not(:has(> .back)) > button { width: auto !important; min-width: 160px !important; margin: 0 !important; }
+/* Versionsschild nur im Hauptmenü und auf dem Start */
+html.ui280 body:has(#work-root.open) #dc-version { display: none !important; }
+html.ui280 .menu-btn-text[data-sub]::after { content: attr(data-sub); display: block; margin-top: 2px; font-size: var(--fs-xs); letter-spacing: .02em; text-transform: none; font-weight: 400; color: var(--c-dim); white-space: normal; }
+html.ui280 #go-single .menu-btn-text[data-sub]::after { color: #4a3210; }
+@media (max-height: 680px) { html.ui280 .menu-btn-text[data-sub]::after { display: none; } }
+
+/* =========================================================
+   Einzelspieler: Modus-Karten mit Illustration, Formular zweispaltig
+   ========================================================= */
+html.ui280 .ui-modes { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: var(--sp-3) !important; margin: 0 var(--sp-5) var(--sp-4) !important; }
+html.ui280 .ui-mode {
+  position: relative !important; display: flex !important; flex-direction: column !important; justify-content: flex-end !important; align-items: flex-start !important;
+  min-height: clamp(96px, 20vh, 190px) !important; padding: var(--sp-3) var(--sp-4) !important; margin: 0 !important; width: auto !important;
+  text-align: left !important; overflow: hidden !important; border-radius: var(--r-md) !important; border: 1px solid var(--c-edge) !important;
+  background: #1a0806 var(--img) center / cover no-repeat !important; box-shadow: 0 6px 18px rgba(0, 0, 0, .5) !important;
+  filter: saturate(.75) brightness(.8) !important; transition: filter var(--t-mid), border-color var(--t-mid), transform var(--t-mid) !important;
+}
+html.ui280 .ui-mode::before { content: "" !important; position: absolute !important; inset: 0 !important; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(10, 2, 1, .88) 100%) !important; }
+html.ui280 .ui-mode > * { position: relative !important; }
+html.ui280 .ui-mode b { font: 600 var(--fs-lg)/1.1 var(--ff-head) !important; letter-spacing: .08em !important; color: var(--c-ink) !important; text-shadow: 0 2px 6px #000 !important; }
+html.ui280 .ui-mode small { font-size: var(--fs-xs) !important; color: var(--c-muted) !important; letter-spacing: .02em !important; text-shadow: 0 1px 4px #000 !important; }
+html.ui280 .ui-mode:hover { filter: saturate(.95) brightness(.95) !important; border-color: var(--c-edge-strong) !important; }
+html.ui280 .ui-mode[aria-pressed="true"] { filter: none !important; border-color: var(--c-gold) !important; box-shadow: 0 0 0 2px rgba(226, 195, 106, .45), 0 8px 22px rgba(0, 0, 0, .55) !important; }
+html.ui280 .ui-mode[aria-pressed="true"]::after {
+  content: "✓ gewählt" !important; position: absolute !important; top: 8px !important; right: 10px !important; padding: 2px 8px !important; border-radius: 999px !important;
+  font: 700 10px/16px var(--ff-ui) !important; letter-spacing: .12em !important; text-transform: uppercase !important; color: #1d0d05 !important; background: var(--c-gold) !important;
+}
+html.ui280 #work-root#work-root #scr-single.screen.on { display: grid !important; grid-template-columns: 1fr 1fr !important; grid-auto-rows: max-content !important; align-content: start !important; column-gap: 0 !important; }
+html.ui280 #work-root#work-root #scr-single.screen.on > :is(.page-title, .ui-modes, .menu, #boot-error, .modal-layer) { grid-column: 1 / -1 !important; }
+html.ui280 #work-root#work-root #scr-single.screen.on > label { width: auto !important; min-width: 0 !important; }
+html.ui280 #work-root#work-root #scr-single.screen.on > label:nth-of-type(odd) { margin-right: var(--sp-2) !important; }
+html.ui280 #work-root#work-root #scr-single.screen.on > label:nth-of-type(even) { margin-left: var(--sp-2) !important; }
+html.ui280 #work-root#work-root #scr-single[data-mode="hotseat"] :is(#bot-deck-row, #btn-bot-cfg) { display: none !important; }
+html.ui280 #work-root#work-root #scr-single[data-mode="hotseat"] > label:has(#opponent-name) { display: none !important; }
+html.ui280 #work-root#work-root #scr-single:not([data-mode="hotseat"]) #hotseat-row { display: none !important; }
+/* „Bot einstellen“ ist Nebenaktion, nicht Hauptaktion */
+html.ui280 #work-root#work-root #scr-single.screen.on .menu:has(> #btn-bot-cfg) { margin-top: 0 !important; }
+html.ui280 #work-root#work-root #btn-bot-cfg {
+  color: var(--c-ink) !important; font-weight: 500 !important; text-shadow: none !important; border-color: var(--c-edge) !important;
+  background: linear-gradient(180deg, #6a2a22 0%, #3c1612 55%, #26100c 100%) !important; box-shadow: inset 0 1px 0 rgba(255, 210, 170, .18), 0 2px 0 #0e0404 !important;
+}
+html.ui280 #work-root#work-root #btn-bot-cfg::before { content: "⚙" !important; margin-right: 8px !important; color: var(--c-gold) !important; }
+html.ui280 #boot-error:empty { display: none; }
+html.ui280 #boot-error:not(:empty) { margin: var(--sp-2) var(--sp-5) !important; padding: var(--sp-2) var(--sp-3); border-radius: var(--r-sm); background: rgba(196, 92, 62, .18); border: 1px solid rgba(196, 92, 62, .6); color: #ffd6c8; }
+html.ui280 .ui-steps { margin: 0 var(--sp-5) var(--sp-3) !important; font-size: var(--fs-xs) !important; color: var(--c-dim); }
+@media (max-width: 700px) {
+  html.ui280 #work-root#work-root #scr-single.screen.on { grid-template-columns: 1fr !important; }
+  html.ui280 #work-root#work-root #scr-single.screen.on > label { margin-left: var(--sp-5) !important; margin-right: var(--sp-5) !important; }
+}
+html.ui280 #ui-hotseat-empty { display: none; }
+html.ui280 #work-root#work-root #scr-single[data-mode="hotseat"].ui-hs-empty #ui-hotseat-empty {
+  display: block !important; grid-column: 1 / -1 !important; margin: 0 var(--sp-5) var(--sp-3) !important; padding: var(--sp-2) var(--sp-3) !important;
+  border: 1px dashed rgba(201, 168, 96, .4) !important; border-radius: var(--r-sm) !important; color: var(--c-muted) !important; font-size: var(--fs-sm) !important;
+}
+html.ui280 #work-root#work-root #scr-single.screen.on > .menu:has(> #btn-bot-cfg) { grid-column: 2 !important; align-self: end !important; margin: 0 var(--sp-5) var(--sp-3) var(--sp-2) !important; width: auto !important; }
+html.ui280 #work-root#work-root #scr-single.screen.on > .menu:has(> #btn-bot-cfg) > button { width: 100% !important; min-height: 36px !important; }
+html.ui280 #work-root#work-root #scr-single.screen.on > #ui-hotseat-empty { width: auto !important; }
+
+/* =========================================================
+   Offiziersakte (Erststart) und Benutzer: Formular links, Porträt rechts, Aktionsleiste unten
+   ========================================================= */
+html.ui280 #title-root#title-root:has(#scr-setup.on) { padding: var(--sp-5) !important; align-items: center !important; justify-content: center !important; }
+html.ui280 #title-root#title-root:has(#scr-setup.on) #menu-panel {
+  width: min(1120px, 100%) !important; height: auto !important; max-height: 100% !important; margin: 0 auto !important; padding: 0 !important;
+  background: none !important; border: 0 !important; box-shadow: none !important; overflow: visible !important; flex: 0 1 auto !important;
+}
+html.ui280 #title-root#title-root #scr-setup.on,
+html.ui280 #work-root#work-root #scr-user.screen.on {
+  display: grid !important; grid-template-columns: minmax(0, 1fr) clamp(220px, 30vw, 400px) !important; grid-auto-rows: max-content !important;
+  align-content: start !important; column-gap: var(--sp-5) !important; row-gap: var(--sp-2) !important;
+  width: min(1120px, 100%) !important; max-width: none !important; height: auto !important; max-height: calc(100vh - 2 * var(--sp-5)) !important;
+  margin: 0 auto !important; padding: 0 !important; overflow: hidden auto !important; box-sizing: border-box !important;
+  background: var(--panel-bg) !important; border: 1px solid var(--c-edge) !important; border-radius: var(--r-lg) !important; box-shadow: var(--shadow-panel) !important;
+  text-align: left !important;
+}
+html.ui280 #title-root#title-root #scr-setup.on > *,
+html.ui280 #work-root#work-root #scr-user.screen.on > *,
+html.ui280 #title-root#title-root #scr-setup.on .char-fields,
+html.ui280 #work-root#work-root #scr-user.screen.on .char-fields { grid-column: 1 !important; margin-left: var(--sp-5) !important; margin-right: 0 !important; width: auto !important; min-width: 0 !important; }
+html.ui280 #title-root#title-root #scr-setup.on > p.tiny:first-child {
+  grid-column: 1 / -1 !important; position: sticky !important; top: 0 !important; z-index: 4 !important; margin: 0 0 var(--sp-3) !important; padding: 14px var(--sp-6) 12px !important;
+  font: 600 var(--fs-xxl)/1.15 var(--ff-head) !important; letter-spacing: .2em !important; text-transform: uppercase !important; text-align: center !important; color: var(--c-gold) !important;
+  background: linear-gradient(180deg, rgba(90, 26, 18, .96), rgba(48, 14, 10, .96)) !important; border-bottom: 1px solid var(--c-edge-strong) !important;
+}
+html.ui280 #work-root#work-root #scr-user.screen.on > .page-title { grid-column: 1 / -1 !important; margin: 0 0 var(--sp-3) !important; }
+html.ui280 :is(#scr-setup, #scr-user).on .char-editor { display: contents !important; }
+html.ui280 #title-root#title-root #scr-setup.on .char-preview,
+html.ui280 #work-root#work-root #scr-user.screen.on .char-preview {
+  grid-column: 2 !important; grid-row: 2 / span 30 !important; align-self: start !important; justify-self: stretch !important;
+  position: sticky !important; top: 76px !important; width: auto !important; margin: 0 var(--sp-5) var(--sp-4) 0 !important;
+  display: flex !important; flex-direction: column !important; align-items: center !important; gap: var(--sp-2) !important;
+}
+html.ui280 #title-root#title-root #scr-setup.on .char-preview img,
+html.ui280 #work-root#work-root #scr-user.screen.on .char-preview img {
+  width: auto !important; max-width: 100% !important; height: auto !important; max-height: calc(100vh - 290px) !important; aspect-ratio: 3 / 4; object-fit: cover !important;
+  border: 1px solid var(--c-edge-strong) !important; border-radius: var(--r-sm) !important; box-shadow: 0 12px 30px rgba(0, 0, 0, .55) !important; background: #0d0a08 !important;
+}
+html.ui280 :is(#scr-setup, #scr-user).on .char-rank { margin: 0 !important; font-size: var(--fs-xs) !important; letter-spacing: .18em !important; color: var(--c-gold) !important; text-align: center !important; }
+html.ui280 :is(#scr-setup, #scr-user).on .rank-preview { justify-content: center !important; gap: 4px !important; margin: 0 !important; }
+html.ui280 :is(#scr-setup, #scr-user).on .rank-preview button { min-height: 24px !important; padding: 2px 6px !important; font-size: 10px !important; box-shadow: none !important; }
+html.ui280 :is(#scr-setup, #scr-user).on .char-fields { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: var(--sp-3) !important; margin-top: 0 !important; }
+html.ui280 #title-root#title-root #scr-setup.on label:not(.face-dir),
+html.ui280 #work-root#work-root #scr-user.screen.on label:not(.face-dir) {
+  display: flex !important; flex-direction: column !important; align-items: stretch !important; gap: 4px !important; margin: 0 !important; padding: 0 !important;
+  font-size: var(--fs-xs) !important; letter-spacing: .14em !important; text-transform: uppercase !important; color: var(--c-gold) !important; text-align: left !important;
+}
+html.ui280 :is(#scr-setup, #scr-user).on label .opt { text-transform: none; letter-spacing: 0; color: var(--c-dim); }
+html.ui280 :is(#scr-setup, #scr-user).on label > :is(input, select) { width: 100% !important; text-transform: none !important; letter-spacing: 0 !important; font-size: var(--fs-md) !important; }
+html.ui280 #title-root#title-root #scr-setup.on .char-pick-lbl,
+html.ui280 #work-root#work-root #scr-user.screen.on .char-pick-lbl {
+  margin-top: var(--sp-3) !important; margin-bottom: 0 !important; font-size: var(--fs-xs) !important; letter-spacing: .16em !important; text-transform: uppercase !important; color: var(--c-gold) !important;
+  border-bottom: 1px solid rgba(201, 168, 96, .25); padding-bottom: 4px !important;
+}
+html.ui280 :is(#scr-setup, #scr-user).on .kit-grid { background: rgba(0, 0, 0, .35) !important; border: 1px solid rgba(201, 168, 96, .25) !important; border-radius: var(--r-sm) !important; gap: 6px !important; padding: 6px !important; margin: 0 !important; }
+html.ui280 :is(#scr-setup, #scr-user).on :is(.kit-tile, .portrait-pick) { height: auto !important; aspect-ratio: auto !important; display: flex !important; flex-direction: column !important; line-height: 1.2 !important; min-height: 0 !important; padding: 0 !important; border-radius: 4px !important; overflow: hidden !important; box-shadow: none !important; background: #120c0a !important; border: 2px solid transparent !important; }
+html.ui280 :is(#scr-setup, #scr-user).on :is(.kit-tile, .portrait-pick):hover { border-color: rgba(226, 195, 106, .5) !important; }
+html.ui280 :is(#scr-setup, #scr-user).on :is(.kit-tile, .portrait-pick).on { border-color: var(--c-gold) !important; box-shadow: 0 0 0 1px var(--c-gold) inset, 0 0 12px rgba(226, 195, 106, .35) !important; }
+html.ui280 :is(#scr-setup, #scr-user).on :is(.kit-tile, .portrait-pick) span { overflow: hidden !important; text-overflow: ellipsis !important; white-space: nowrap !important; font-size: 10px !important; letter-spacing: .04em !important; padding: 3px 2px !important; text-align: center; }
+html.ui280 :is(#scr-setup, #scr-user).on .kit-grid.faces { grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)) !important; }
+html.ui280 :is(#scr-setup, #scr-user).on .kit-grid.uniforms { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)) !important; }
+html.ui280 :is(#scr-setup, #scr-user).on .kit-grid.hats { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)) !important; }
+html.ui280 :is(#scr-setup, #scr-user).on label.face-dir { display: flex !important; flex-direction: row !important; align-items: center !important; gap: var(--sp-2) !important; margin-top: var(--sp-2) !important; font-size: var(--fs-sm) !important; color: var(--c-ink) !important; text-transform: none !important; letter-spacing: 0 !important; }
+/* Aktionsleisten */
+html.ui280 #title-root#title-root #scr-setup.on > .menu,
+html.ui280 #work-root#work-root #scr-user.screen.on > .menu.ui-actionbar {
+  grid-column: 1 / -1 !important; position: sticky !important; bottom: 0 !important; z-index: 4 !important; margin: var(--sp-4) 0 0 !important;
+  display: flex !important; flex-direction: row !important; justify-content: flex-end !important; align-items: center !important; gap: var(--sp-2) !important; width: auto !important;
+  padding: var(--sp-3) var(--sp-5) !important; background: linear-gradient(180deg, rgba(30, 10, 8, .92), rgba(16, 5, 4, .98)) !important; border-top: 1px solid rgba(201, 168, 96, .35) !important;
+}
+html.ui280 #title-root#title-root #scr-setup.on > .menu > button { width: auto !important; min-width: 200px !important; min-height: 44px !important; margin: 0 !important; font-size: var(--fs-md) !important; }
+html.ui280 #title-root#title-root #scr-setup.on > .menu::before { content: "Name eingeben, Gesicht und Uniform wählen – alles lässt sich später unter „Benutzer“ ändern."; margin-right: auto; font-size: var(--fs-xs); color: var(--c-dim); max-width: 60%; }
+html.ui280 #work-root#work-root #scr-user.screen.on > .menu.ui-empty-menu { display: none !important; }
+html.ui280 #work-root#work-root #scr-user.screen.on .ui-user-new { display: grid !important; grid-template-columns: minmax(0, 1fr) auto !important; align-items: end !important; gap: var(--sp-2) !important; margin-top: var(--sp-4) !important; padding-top: var(--sp-3) !important; border-top: 1px solid rgba(201, 168, 96, .25) !important; }
+html.ui280 #work-root#work-root #scr-user.screen.on .ui-user-new > button { min-height: 36px !important; margin: 0 !important; width: auto !important; min-width: 120px !important; }
+@media (max-width: 760px) {
+  html.ui280 #title-root#title-root #scr-setup.on, html.ui280 #work-root#work-root #scr-user.screen.on { grid-template-columns: 1fr !important; }
+  html.ui280 :is(#scr-setup, #scr-user).on .char-preview { grid-column: 1 !important; grid-row: auto !important; position: static !important; margin-left: var(--sp-5) !important; }
+}
+html.ui280 :is(#scr-setup, #scr-user).on :is(.kit-tile, .portrait-pick) img { width: 100% !important; height: auto !important; aspect-ratio: 3 / 4 !important; object-fit: cover !important; object-position: top !important; flex: none !important; }
+html.ui280 #work-root#work-root #scr-user.screen.on > label { margin-left: var(--sp-5) !important; }
+html.ui280 #title-root#title-root #scr-setup.on #setup-name { width: 100% !important; margin: 0 !important; box-sizing: border-box !important; font-size: var(--fs-md) !important; text-align: left !important; padding: 6px 10px !important; height: auto !important; min-height: 36px !important; letter-spacing: 0 !important; }
+html.ui280 #title-root#title-root #scr-setup.on .char-pick-lbl { text-align: left !important; }
+html.ui280 :is(#scr-setup, #scr-user).on label.face-dir { justify-content: flex-start !important; width: auto !important; }
+html.ui280 :is(#scr-setup, #scr-user).on label.face-dir input { width: 18px !important; min-width: 18px !important; margin: 0 !important; flex: none !important; }
+html.ui280 body:has(#scr-setup.on) #dc-version { display: none !important; }
+
+/* Große Fenster: Panels mitwachsen lassen statt winzig in der Mitte (am Dateiende, damit es gewinnt) */
+@media (min-width: 1600px) and (min-height: 900px) {
+  html.ui280 #work-root#work-root .screen.on:not(#scr-library):not(#scr-hilfe),
+  html.ui280 #title-root#title-root #scr-setup.on { zoom: 1.25; max-height: calc((100vh - 48px) / 1.25) !important; }
+  html.ui280 #title-root#title-root #scr-setup.on .char-preview img,
+  html.ui280 #work-root#work-root #scr-user.screen.on .char-preview img { max-height: calc((100vh - 48px) / 1.25 - 250px) !important; }
+}
+@media (min-width: 2300px) and (min-height: 1300px) {
+  html.ui280 #work-root#work-root .screen.on:not(#scr-library):not(#scr-hilfe),
+  html.ui280 #title-root#title-root #scr-setup.on { zoom: 1.6; max-height: calc((100vh - 48px) / 1.6) !important; }
+  html.ui280 #title-root#title-root #scr-setup.on .char-preview img,
+  html.ui280 #work-root#work-root #scr-user.screen.on .char-preview img { max-height: calc((100vh - 48px) / 1.6 - 250px) !important; }
+}
+/* Beim Hineinscrollen (Tastatur, Tests) Abstand zu klebender Titel- und Aktionsleiste halten */
+html.ui280 #work-root#work-root .screen.on, html.ui280 #title-root#title-root #scr-setup.on { scroll-padding: 80px 0 90px !important; }
+
+/* =========================================================
+   LAN: Bildband, Suchzeile, Lobby
+   ========================================================= */
+html.ui280 .ui-banner {
+  position: relative; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px;
+  min-height: clamp(84px, 18vh, 170px); margin: 0 var(--sp-5) var(--sp-4); padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--c-edge); border-radius: var(--r-md); overflow: hidden;
+  background: linear-gradient(90deg, rgba(10, 3, 2, .92) 0%, rgba(10, 3, 2, .55) 45%, rgba(10, 3, 2, .1) 100%), #1a0806 var(--img) center 40% / cover no-repeat;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .45);
+}
+html.ui280 .ui-banner b { font: 600 var(--fs-xl)/1.1 var(--ff-head); letter-spacing: .06em; color: var(--c-gold); text-shadow: 0 2px 6px #000; }
+html.ui280 .ui-banner span { max-width: 60%; font-size: var(--fs-sm); color: var(--c-ink); text-shadow: 0 1px 4px #000; }
+html.ui280 #work-root#work-root #scr-lan.screen.on > .ui-banner { margin: 0 var(--sp-5) var(--sp-4) !important; width: auto !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on > :is(#lan-pick, #lan-room) { width: auto !important; margin: 0 !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on #lan-pick > label { margin: 0 var(--sp-5) var(--sp-3) !important; width: auto !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on #join-row:not([style*="none"]) {
+  display: grid !important; grid-template-columns: minmax(0, 1fr) auto auto !important; align-items: end !important; gap: var(--sp-2) !important;
+  margin: 0 var(--sp-5) var(--sp-3) !important; padding: var(--sp-3) !important; border: 1px solid rgba(201, 168, 96, .3) !important; border-radius: var(--r-md) !important; background: rgba(0, 0, 0, .25) !important;
+}
+html.ui280 #work-root#work-root #scr-lan.screen.on #join-row > label { margin: 0 !important; grid-column: 1 !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on #join-row > button { width: auto !important; min-width: 0 !important; min-height: 36px !important; margin: 0 !important; padding: 6px 14px !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on #peer-list { grid-column: 1 / -1 !important; order: 5; }
+html.ui280 #work-root#work-root #scr-lan.screen.on #peer-list:empty::before { content: "Noch keine Sitzung gefunden. „Im Netz suchen“ oder die Adresse des Hosts eintragen."; color: var(--c-dim); }
+html.ui280 #work-root#work-root #scr-lan.screen.on #peer-list button { width: auto !important; min-width: 0 !important; margin: 4px 4px 0 0 !important; min-height: 30px !important; padding: 4px 10px !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on #lan-room:not([style*="none"]) { display: flex !important; flex-direction: column !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on #host-info { margin: 0 var(--sp-5) var(--sp-3) !important; padding: var(--sp-2) var(--sp-3) !important; border-left: 3px solid var(--c-gold) !important; background: rgba(226, 195, 106, .08) !important; color: var(--c-ink) !important; font-size: var(--fs-sm) !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on .lobby-seats { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: var(--sp-3) !important; margin: 0 var(--sp-5) !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on .lobby-seats > div {
+  padding: var(--sp-3) var(--sp-4) !important; border: 1px solid var(--c-edge) !important; border-radius: var(--r-md) !important; background: rgba(0, 0, 0, .3) !important;
+  font-size: var(--fs-xs) !important; letter-spacing: .14em !important; text-transform: uppercase !important; color: var(--c-gold) !important;
+}
+html.ui280 #work-root#work-root #scr-lan.screen.on .lobby-seats span { display: block !important; margin-top: 4px !important; font-size: var(--fs-lg) !important; letter-spacing: .02em !important; text-transform: none !important; color: var(--c-ink) !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on .lobby-seats .seat-empty { color: var(--c-dim) !important; font-style: italic; }
+html.ui280 #work-root#work-root #scr-lan.screen.on #lan-room > .menu {
+  position: sticky !important; bottom: 0 !important; display: flex !important; flex-direction: row !important; justify-content: flex-end !important; gap: var(--sp-2) !important;
+  width: auto !important; margin: var(--sp-4) 0 0 !important; padding: var(--sp-3) var(--sp-5) !important; background: linear-gradient(180deg, rgba(30, 10, 8, .92), rgba(16, 5, 4, .98)) !important; border-top: 1px solid rgba(201, 168, 96, .35) !important;
+}
+html.ui280 #work-root#work-root #scr-lan.screen.on #lan-room > .menu > button { width: auto !important; min-width: 140px !important; margin: 0 !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on #lan-room > .menu > .ui-back { order: -1 !important; margin-right: auto !important; background: rgba(10, 4, 3, .55) !important; box-shadow: none !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on #lan-room > .menu > .ui-back::before { content: "‹"; margin-right: 8px; color: var(--c-gold); }
+html.ui280 #lan-error:empty { display: none !important; }
+html.ui280 #work-root#work-root #scr-lan.screen.on #lan-error:not(:empty) { margin: var(--sp-2) var(--sp-5) !important; padding: var(--sp-2) var(--sp-3) !important; width: auto !important; border-radius: var(--r-sm) !important; background: rgba(196, 92, 62, .18) !important; border: 1px solid rgba(196, 92, 62, .6) !important; color: #ffd6c8 !important; font-size: var(--fs-sm) !important; }
+
+/* Bot-Dialog: echtes Overlay über der Seite, nicht im Seitenfluss */
+html.ui280 #work-root#work-root #bot-modal.modal-layer:not([style*="none"]) {
+  position: fixed !important; inset: 0 !important; z-index: 60 !important; display: flex !important; align-items: center !important; justify-content: center !important;
+  margin: 0 !important; width: auto !important; background: rgba(6, 1, 1, .72) !important; zoom: 1;
+}
+html.ui280 #work-root#work-root #scr-lan.screen.on #lan-pick > .menu:has(> .back) { margin: var(--sp-4) 0 0 !important; }
+/* Bot-Dialog */
+html.ui280 #work-root#work-root #bot-modal .modal.bot-dlg {
+  width: min(520px, 92vw) !important; max-height: calc(100vh - 48px) !important; overflow: auto !important; padding: 0 !important; text-align: left !important;
+  background: var(--panel-bg) !important; border: 1px solid var(--c-edge-strong) !important; border-radius: var(--r-lg) !important; box-shadow: 0 24px 60px rgba(0, 0, 0, .7) !important;
+  display: flex !important; flex-direction: column !important;
+}
+html.ui280 #work-root#work-root #bot-modal #bot-dlg-title { margin: 0 !important; padding: 12px var(--sp-5) !important; font: 600 var(--fs-xl)/1.2 var(--ff-head) !important; letter-spacing: .12em !important; color: var(--c-gold) !important; background: linear-gradient(180deg, rgba(90, 26, 18, .96), rgba(48, 14, 10, .96)) !important; border-bottom: 1px solid var(--c-edge-strong) !important; }
+html.ui280 #work-root#work-root #bot-modal #bot-dlg-title::before { content: "Bot-Einstellungen · "; font-size: var(--fs-sm); letter-spacing: .14em; color: var(--c-muted); text-transform: uppercase; }
+html.ui280 #work-root#work-root #bot-modal #bot-box { padding: var(--sp-4) var(--sp-5) !important; display: block !important; }
+html.ui280 #work-root#work-root #bot-modal #bot-box label { display: flex !important; align-items: center !important; gap: var(--sp-2) !important; margin: 0 0 var(--sp-2) !important; font-size: var(--fs-sm) !important; color: var(--c-ink) !important; text-align: left !important; justify-content: flex-start !important; flex-direction: row !important; flex-wrap: wrap !important; }
+html.ui280 #work-root#work-root #bot-modal #bot-box label:has(input[type=range]) { display: block !important; font-size: var(--fs-xs) !important; letter-spacing: .12em !important; text-transform: uppercase !important; color: var(--c-gold) !important; }
+html.ui280 #work-root#work-root #bot-modal #bot-box label:has(input[type=range]) span { color: var(--c-ink) !important; font-weight: 700; }
+html.ui280 #work-root#work-root #bot-modal #bot-box label input[type=range] { display: block !important; width: 100% !important; margin: 4px 0 0 !important; }
+html.ui280 #work-root#work-root #bot-modal .bot-sliders:not([style*="none"]) { display: grid !important; grid-template-columns: 1fr 1fr !important; column-gap: var(--sp-4) !important; margin-top: var(--sp-3) !important; padding-top: var(--sp-3) !important; border-top: 1px solid rgba(201, 168, 96, .25) !important; }
+html.ui280 #work-root#work-root #bot-modal .bot-sliders > label:has(input[type=range]) { grid-column: 1 / -1 !important; }
+html.ui280 #work-root#work-root #bot-modal .ui-dlg-foot { display: flex !important; flex-direction: row !important; justify-content: flex-end !important; gap: var(--sp-2) !important; width: auto !important; margin: 0 !important; padding: var(--sp-3) var(--sp-5) !important; border-top: 1px solid rgba(201, 168, 96, .35) !important; background: rgba(16, 5, 4, .9) !important; }
+html.ui280 #work-root#work-root #bot-modal .ui-dlg-foot > button { width: auto !important; min-width: 0 !important; margin: 0 !important; padding: 6px 16px !important; }
+html.ui280 #work-root#work-root #bot-modal .ui-dlg-foot > #bot-cancel { margin-right: auto !important; }
+html.ui280 #work-root#work-root #bot-modal .ui-dlg-foot > #bot-reset { order: 1 !important; }
+html.ui280 #work-root#work-root #bot-modal .ui-dlg-foot > #bot-apply { order: 2 !important; }
+
+/* =========================================================
+   Optionen: Reiter als Leiste, Einstellungen als Zeilen, Gefahrenzone
+   ========================================================= */
+html.ui280 #work-root#work-root #scr-options.screen.on > .opt-tabs {
+  display: flex !important; flex-wrap: nowrap !important; justify-content: stretch !important; gap: 0 !important; width: auto !important;
+  margin: calc(-1 * var(--sp-4)) 0 var(--sp-4) !important; padding: 0 var(--sp-5) !important; border-bottom: 1px solid rgba(201, 168, 96, .3) !important; background: rgba(0, 0, 0, .25) !important;
+}
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-tab {
+  flex: 1 1 0 !important; min-width: 0 !important; width: auto !important; min-height: 44px !important; margin: 0 !important; padding: 8px 10px !important;
+  background: transparent !important; border: 0 !important; border-bottom: 3px solid transparent !important; border-radius: 0 !important; box-shadow: none !important;
+  color: var(--c-muted) !important; font-size: var(--fs-sm) !important; letter-spacing: .14em !important; text-transform: uppercase !important; font-weight: 600 !important; text-shadow: none !important;
+}
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-tab:hover { color: var(--c-ink) !important; background: rgba(226, 195, 106, .06) !important; }
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-tab.on { color: var(--c-gold) !important; border-bottom-color: var(--c-gold) !important; background: linear-gradient(180deg, rgba(226, 195, 106, 0), rgba(226, 195, 106, .12)) !important; }
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-tab .ui-ico { width: 18px; height: 18px; margin-right: 8px; vertical-align: -4px; }
+html.ui280 #work-root#work-root #scr-options.screen.on > .opt-pane:not([style*="none"]) { min-height: 210px !important; display: flex !important; flex-direction: column !important; gap: 0 !important; width: auto !important; margin: 0 var(--sp-5) !important; }
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-pane > label,
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-pane > input[type=range] { margin: 0 !important; width: auto !important; }
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-pane > label {
+  display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; align-items: center !important; justify-content: flex-start !important; gap: var(--sp-2) var(--sp-3) !important;
+  padding: var(--sp-3) 0 !important; border-bottom: 1px solid rgba(201, 168, 96, .14) !important; font-size: var(--fs-md) !important; color: var(--c-ink) !important; text-align: left !important;
+}
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-pane > label[for] { border-bottom: 0 !important; padding-bottom: 0 !important; justify-content: space-between !important; }
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-pane > input[type=range] { padding-bottom: var(--sp-3) !important; height: 36px !important; border-bottom: 1px solid rgba(201, 168, 96, .14) !important; }
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-pane > label:has(input[type=range]) > span,
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-pane output { margin-left: auto !important; font: 600 var(--fs-sm) var(--ff-num) !important; color: var(--c-gold) !important; letter-spacing: .06em !important; }
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-pane > label > input[type=range] { flex: 1 0 100% !important; width: 100% !important; }
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-pane > label > select { margin-left: auto !important; width: auto !important; min-width: 220px !important; }
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-pane > p.tiny { margin: var(--sp-2) 0 0 !important; width: auto !important; text-align: left !important; }
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-danger {
+  margin: var(--sp-4) 0 var(--sp-2) !important; padding: var(--sp-3) var(--sp-4) !important; width: auto !important; text-align: left !important;
+  border: 1px solid rgba(196, 92, 62, .55) !important; border-radius: var(--r-md) !important; background: linear-gradient(180deg, rgba(120, 30, 18, .22), rgba(60, 10, 6, .3)) !important;
+}
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-danger h3 { margin: 0 0 4px !important; font: 600 var(--fs-md)/1.2 var(--ff-head) !important; letter-spacing: .08em !important; color: #ffb59e !important; text-align: left !important; }
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-danger p { margin: 0 0 var(--sp-3) !important; font-size: var(--fs-sm) !important; color: var(--c-muted) !important; width: auto !important; text-align: left !important; }
+html.ui280 #work-root#work-root #scr-options.screen.on .opt-danger button { width: auto !important; min-width: 0 !important; margin: 0 !important; padding: 8px 16px !important; }
+
+/* =========================================================
+   Bibliothek / Deckbau
+   ========================================================= */
+html.ui280 #work-root#work-root #scr-library.screen.on {
+  display: flex !important; flex-direction: column !important; width: min(1480px, calc(100vw - 32px)) !important; height: calc(100vh - 32px) !important; max-height: calc(100vh - 32px) !important;
+  margin: 0 auto !important; overflow: hidden !important;
+}
+html.ui280 #work-root#work-root.open:has(#scr-library.on) { padding: 16px !important; }
+html.ui280 #work-root#work-root #scr-library.screen.on > .page-title { margin: 0 !important; padding: 10px var(--sp-6) 8px !important; font-size: var(--fs-xl) !important; }
+html.ui280 #work-root#work-root #scr-library.screen.on > p.lib-hint {
+  display: block !important; flex: none !important; margin: 0 !important; padding: 6px var(--sp-5) !important; text-align: center !important;
+  font-size: var(--fs-xs) !important; color: var(--c-muted) !important; background: rgba(0, 0, 0, .25) !important; border-bottom: 1px solid rgba(201, 168, 96, .2) !important;
+}
+html.ui280 #work-root#work-root #scr-library.screen.on > #lib-build { display: none !important; }
+html.ui280 #work-root#work-root #scr-library.screen.on .lib-wrap {
+  margin: var(--sp-3) var(--sp-4) 0 !important; width: auto !important; box-sizing: border-box !important; gap: var(--sp-4) !important; grid-template-columns: minmax(0, 1fr) clamp(240px, 23vw, 340px) !important;
+}
+html.ui280 #work-root#work-root #scr-library.screen.on .lib-list { border-right: 1px solid rgba(201, 168, 96, .35) !important; padding-right: var(--sp-3) !important; }
+html.ui280 #work-root#work-root #scr-library.screen.on .lib-side { overflow: hidden auto !important; overflow-x: hidden !important; padding: 0 var(--sp-1) 0 0 !important; box-sizing: border-box !important; min-width: 0 !important; }
+html.ui280 #scr-library :is(.lib-list, .lib-side, .deck-picked) { scrollbar-width: thin !important; scrollbar-color: #8a6a3a rgba(0, 0, 0, .3) !important; }
+html.ui280 #scr-library :is(.lib-list, .lib-side, .deck-picked)::-webkit-scrollbar { width: 10px !important; height: 10px !important; }
+html.ui280 #scr-library :is(.lib-list, .lib-side, .deck-picked)::-webkit-scrollbar-track { background: rgba(0, 0, 0, .3) !important; border: 0 !important; border-radius: 5px; }
+html.ui280 #scr-library :is(.lib-list, .lib-side, .deck-picked)::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #a07a3a, #6a4a1e) !important; border: 2px solid rgba(0, 0, 0, .4) !important; border-radius: 5px; }
+/* Werkzeugleiste */
+html.ui280 #work-root#work-root #scr-library.screen.on .lib-tools { border: 1px solid rgba(201, 168, 96, .35) !important; border-radius: var(--r-md) !important; background: rgba(0, 0, 0, .25) !important; padding: var(--sp-2) !important; gap: var(--sp-2) !important; }
+html.ui280 #work-root#work-root #scr-library.screen.on .lib-tab { min-height: 28px !important; padding: 4px 10px !important; border-radius: 999px !important; font-size: var(--fs-xs) !important; letter-spacing: .08em !important; box-shadow: none !important; background: rgba(60, 20, 14, .6) !important; }
+html.ui280 #work-root#work-root #scr-library.screen.on .lib-tab.on { background: linear-gradient(180deg, #f3d993, #c79a3e) !important; color: #1d0d05 !important; border-color: #f0d488 !important; }
+html.ui280 #work-root#work-root #scr-library.screen.on .lib-filters > :is(input, select, .lib-tag-filter > button) { min-height: 34px !important; }
+html.ui280 #work-root#work-root #scr-library.screen.on .lib-search { padding-left: 32px !important; background: var(--c-field) url("../assets/ui/search.svg") 9px 50% / 16px no-repeat !important; }
+/* Kopien-Abzeichen auf Bibliothekskarten */
+html.ui280 #scr-library .lib-card { position: relative !important; }
+html.ui280 #scr-library .lib-copies {
+  position: absolute !important; top: 4px !important; right: 4px !important; left: auto !important; width: auto !important; display: inline-block !important; margin: 0 !important; z-index: 30; padding: 1px 7px !important; border-radius: 999px; pointer-events: none; text-align: center !important;
+  font: 700 11px/16px var(--ff-num); letter-spacing: .06em; color: #1a0d05; box-shadow: 0 1px 4px rgba(0, 0, 0, .6); border: 1px solid rgba(0, 0, 0, .5);
+}
+html.ui280 #scr-library .lib-copies.r-bronze { background: linear-gradient(180deg, #e0ab72, #a8703c); }
+html.ui280 #scr-library .lib-copies.r-silver { background: linear-gradient(180deg, #eef1f5, #a9b0ba); }
+html.ui280 #scr-library .lib-copies.r-gold { background: linear-gradient(180deg, #fbe39b, #c99a35); }
+html.ui280 #scr-library .lib-copies.r-doktrin { background: linear-gradient(180deg, #d9c6ef, #8a6bb3); }
+html.ui280 #scr-library .lib-copies.is-some { outline: 2px solid rgba(159, 194, 122, .9); }
+html.ui280 #scr-library .lib-copies.is-full { background: #3a2a22 !important; color: #c9b8a8; }
+html.ui280 #scr-library .lib-copies.is-full::after { content: " voll"; font-weight: 600; }
+html.ui280 #scr-library .lib-card.full .lib-cap { color: var(--c-dim) !important; }
+/* Leerer Zustand */
+html.ui280 #scr-library .lib-empty.ui-empty { margin: var(--sp-6) auto; max-width: 420px; }
+html.ui280 #scr-library .lib-empty.ui-empty .tiny { font-size: var(--fs-md) !important; color: var(--c-muted) !important; margin: 0 !important; }
+/* Deckseite */
+html.ui280 #scr-library .deck-head { margin: 0 !important; font: 600 var(--fs-xl)/1.1 var(--ff-head) !important; letter-spacing: .3em !important; color: var(--c-gold) !important; text-align: center !important; }
+html.ui280 #scr-library #deck-meta { margin: 2px 0 6px !important; font: 600 var(--fs-md) var(--ff-num) !important; letter-spacing: .08em !important; color: var(--c-ink) !important; text-align: center !important; }
+html.ui280 #scr-library .deck-progress { display: block !important; margin: 0 0 var(--sp-2) !important; }
+html.ui280 #scr-library .deck-bar { display: block !important; height: 8px !important; border-radius: 4px; background: rgba(0, 0, 0, .45); border: 1px solid rgba(201, 168, 96, .45); overflow: hidden; }
+html.ui280 #scr-library .deck-bar > i { display: block !important; height: 100% !important; width: 0; background: linear-gradient(90deg, var(--c-gold-lo), var(--c-gold)); transition: width var(--t-mid); }
+html.ui280 #scr-library .deck-progress.done .deck-bar > i { background: linear-gradient(90deg, #6f9a4a, var(--c-ok)); }
+html.ui280 #scr-library .deck-progress.over .deck-bar > i { background: var(--c-danger); }
+html.ui280 #scr-library .deck-docbar { display: flex !important; gap: 4px; margin-top: 4px; }
+html.ui280 #scr-library .deck-docbar > b { display: block !important; flex: 1; height: 4px !important; border-radius: 2px; background: rgba(0, 0, 0, .45); border: 1px solid rgba(217, 198, 239, .35); }
+html.ui280 #scr-library .deck-docbar > b.on { background: #b69ad8; }
+html.ui280 #scr-library .deck-status { margin: 4px 0 0 !important; font-size: var(--fs-xs) !important; color: var(--c-muted) !important; text-align: center !important; }
+html.ui280 #scr-library .deck-progress.done .deck-status { color: var(--c-ok) !important; font-weight: 600; }
+html.ui280 #scr-library .deck-types { font-size: var(--fs-xs) !important; color: var(--c-dim) !important; }
+html.ui280 #scr-library .deck-limit-msg:not(:empty) {
+  margin: var(--sp-2) 0 !important; padding: 6px 10px !important; border-radius: var(--r-sm); font-size: var(--fs-sm) !important; text-align: center !important;
+  color: #ffd6c8 !important; background: rgba(196, 92, 62, .2); border: 1px solid rgba(196, 92, 62, .7); animation: ui-shake 260ms ease-out;
+}
+@keyframes ui-shake { 0%, 100% { transform: none; } 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+html.ui280 #scr-library .deck-docs { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: var(--sp-2) !important; }
+html.ui280 #scr-library .doc-slot { margin: 0 !important; min-width: 0 !important; width: auto !important; box-sizing: border-box !important; }
+html.ui280 #scr-library .doc-slot.empty { display: grid !important; place-items: center !important; min-height: 48px !important; border: 1px dashed rgba(217, 198, 239, .45) !important; border-radius: var(--r-sm) !important; color: #cdbbe3 !important; font-size: var(--fs-xs) !important; background: rgba(0, 0, 0, .2) !important; }
+html.ui280 #scr-library .deck-empty { text-align: center !important; line-height: 1.5 !important; }
+html.ui280 #scr-library .deck-save-box { display: grid !important; gap: var(--sp-2) !important; position: sticky; bottom: 0; padding-top: var(--sp-2) !important; background: linear-gradient(180deg, rgba(22, 7, 7, 0), rgba(22, 7, 7, .96) 30%) !important; }
+html.ui280 #scr-library .deck-save-box > * { width: 100% !important; box-sizing: border-box !important; margin: 0 !important; min-width: 0 !important; }
+html.ui280 #work-root#work-root #scr-library.screen.on > .lib-foot { margin-top: var(--sp-3) !important; }
+@media (prefers-reduced-motion: reduce) { html.ui280 #scr-library .deck-limit-msg { animation: none !important; } }
+html.ui280 body:has(#scr-boot.on) #dc-version { left: 16px !important; right: auto !important; bottom: 12px !important; transform: none !important; }
+
+/* =========================================================
+   Endbildschirm: Gemälde je nach Ausgang, Ergebnis groß, Hauptaktion golden
+   ========================================================= */
+html.ui280 .dc-end-screen {
+  background: radial-gradient(ellipse at 50% 55%, rgba(8, 3, 2, .1) 0%, rgba(8, 3, 2, .55) 80%), #120604 url("../assets/ui/end-victory.webp") center / cover no-repeat;
+}
+html.ui280 .dc-end-screen.is-loss { background-image: radial-gradient(ellipse at 50% 55%, rgba(6, 6, 8, .1) 0%, rgba(6, 6, 8, .6) 80%), url("../assets/ui/end-defeat.webp"); }
+html.ui280 .dc-end-screen.is-draw { background-image: radial-gradient(ellipse at 50% 55%, rgba(6, 6, 8, .3) 0%, rgba(6, 6, 8, .7) 80%), url("../assets/ui/end-defeat.webp"); }
+html.ui280 .dc-end-panel {
+  width: min(680px, 100%); padding: clamp(18px, 3.5vw, 40px) clamp(20px, 5vw, 56px);
+  background: linear-gradient(180deg, rgba(30, 10, 8, .55), rgba(14, 4, 3, .72)); border: 1px solid var(--c-edge-strong); border-top: 1px solid var(--c-edge-strong);
+  border-radius: var(--r-lg); box-shadow: 0 30px 90px rgba(0, 0, 0, .75), inset 0 1px 0 rgba(255, 230, 170, .08); backdrop-filter: blur(3px);
+  animation: ui-rise 420ms cubic-bezier(.2, .8, .2, 1) both;
+}
+html.ui280 .dc-end-kicker { font-size: var(--fs-xs); letter-spacing: .32em; color: var(--c-gold); margin: 0; }
+html.ui280 .dc-end-kicker::before, html.ui280 .dc-end-kicker::after { content: "◆"; font-size: 8px; margin: 0 12px; vertical-align: 2px; color: var(--c-gold-lo); }
+html.ui280 #dc-end-heading {
+  font-family: var(--ff-head); font-weight: 700; letter-spacing: .08em; font-size: clamp(2rem, 6vw, 4.4rem); margin: .25em 0 .2em;
+  background: linear-gradient(180deg, #fff1c4 0%, #e2c36a 55%, #a87a26 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, .8));
+}
+html.ui280 .dc-end-screen.is-loss #dc-end-heading { background: linear-gradient(180deg, #f1ddd4 0%, #c9a8a0 55%, #8a5a50 100%); -webkit-background-clip: text; background-clip: text; }
+html.ui280 #dc-end-reason { font-size: var(--fs-md); color: var(--c-muted); margin: 0; }
+html.ui280 .dc-end-score { display: inline-block; margin: var(--sp-4) 0 0; padding: 6px 18px; border-radius: 999px; border: 1px solid var(--c-edge); background: rgba(0, 0, 0, .35); font: 600 var(--fs-md) var(--ff-num); letter-spacing: .06em; color: var(--c-ink); }
+html.ui280 .dc-end-buttons button { min-width: 180px; font-size: var(--fs-md) !important; }
+@keyframes ui-rise { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { html.ui280 .dc-end-panel { animation: none; } }
+
+/* Ereignis-Rückblick („Handlung“): lange Listen scrollen statt aus dem Bild zu laufen */
+html.ui280 #overlay .recap-stage { max-height: calc(100vh - 40px) !important; min-height: 0 !important; }
+html.ui280 #overlay .recap-right { min-height: 0 !important; max-height: calc(100vh - 80px) !important; overflow-y: auto !important; }
+html.ui280 #overlay .recap-left img { max-height: calc(100vh - 100px) !important; width: auto !important; max-width: 100% !important; object-fit: contain !important; }
+
+/* =========================================================
+   Optionen in der Partie: geordnetes Raster statt Fließtext
+   ========================================================= */
+html.ui280 #ingame-opts#ingame-opts > .modal {
+  display: grid !important; grid-template-columns: 1fr 1fr !important; column-gap: var(--sp-4) !important; row-gap: 2px !important; align-content: start !important;
+  width: min(620px, 94vw) !important; max-width: none !important; max-height: calc(100vh - 32px) !important; overflow: hidden auto !important; box-sizing: border-box !important;
+  padding: 0 var(--sp-5) 0 !important; text-align: left !important;
+  background: var(--panel-bg) !important; border: 1px solid var(--c-edge-strong) !important; border-radius: var(--r-lg) !important; box-shadow: 0 24px 60px rgba(0, 0, 0, .7) !important;
+}
+html.ui280 #ingame-opts#ingame-opts > .modal > * { grid-column: 1 / -1 !important; margin: 0 !important; min-width: 0 !important; }
+html.ui280 #ingame-opts#ingame-opts > .modal > h2 {
+  position: sticky !important; top: 0 !important; z-index: 2 !important; margin: 0 calc(-1 * var(--sp-5)) var(--sp-2) !important; padding: 12px var(--sp-5) !important;
+  font: 600 var(--fs-xl)/1.2 var(--ff-head) !important; letter-spacing: .14em !important; color: var(--c-gold) !important; text-align: left !important;
+  background: linear-gradient(180deg, rgba(90, 26, 18, .98), rgba(48, 14, 10, .98)) !important; border-bottom: 1px solid var(--c-edge-strong) !important;
+}
+html.ui280 #ingame-opts#ingame-opts > .modal > h3 { margin: var(--sp-3) 0 var(--sp-1) !important; padding-bottom: 4px !important; font: 600 var(--fs-xs)/1.2 var(--ff-ui) !important; letter-spacing: .2em !important; text-transform: uppercase !important; color: var(--c-gold) !important; border-bottom: 1px solid rgba(201, 168, 96, .25) !important; }
+html.ui280 #ingame-opts#ingame-opts > .modal > label { display: flex !important; flex-wrap: wrap !important; align-items: center !important; gap: 4px var(--sp-2) !important; padding: 4px 0 !important; font-size: var(--fs-sm) !important; color: var(--c-ink) !important; }
+html.ui280 #ingame-opts#ingame-opts > .modal > label > :is(output, span) { margin-left: auto !important; font: 600 var(--fs-sm) var(--ff-num) !important; color: var(--c-gold) !important; }
+html.ui280 #ingame-opts#ingame-opts > .modal > label > input[type=range] { flex: 1 0 100% !important; width: 100% !important; }
+html.ui280 #ingame-opts#ingame-opts > .modal > input[type=range] { width: 100% !important; }
+html.ui280 #ingame-opts#ingame-opts > .modal > label > select { margin-left: auto !important; width: auto !important; min-width: 200px !important; }
+html.ui280 #ingame-opts#ingame-opts > .modal > label:has(> input[type=checkbox]:first-child) { grid-column: auto !important; }
+html.ui280 #ingame-opts#ingame-opts > .modal > button {
+  position: sticky !important; bottom: 0 !important; z-index: 2 !important; margin: var(--sp-3) 0 0 !important; width: auto !important; min-width: 140px !important;
+}
+html.ui280 #ingame-opts#ingame-opts > .modal > #opt-ingame-close { grid-column: 1 !important; grid-row: 999 !important; justify-self: start !important; }
+html.ui280 #ingame-opts#ingame-opts > .modal > #ig-bot-apply { grid-column: 2 !important; grid-row: 999 !important; justify-self: end !important; }
+html.ui280 #ingame-opts#ingame-opts > .modal::after {
+  content: ""; grid-column: 1 / -1; grid-row: 999; position: sticky; bottom: 0; align-self: stretch; z-index: 1; margin: var(--sp-3) calc(-1 * var(--sp-5)) 0;
+  min-height: 60px; background: linear-gradient(180deg, rgba(30, 10, 8, .95), rgba(16, 5, 4, .99)); border-top: 1px solid rgba(201, 168, 96, .35);
+}
+html.ui280 #ingame-opts#ingame-opts > .modal > #opt-ingame-close::before { content: "‹"; margin-right: 8px; color: var(--c-gold); }
+
+/* Hilfe: mittig */
+html.ui280 #work-root#work-root #scr-hilfe.screen.on { margin: 0 auto !important; }
+
+/* Playtest-Fenster im gleichen Stil wie die übrigen Dialoge */
+html.ui280 .playtest-overlay .playtest-modal {
+  padding: 0 !important; overflow: hidden auto !important; max-height: calc(100vh - 40px) !important;
+  background: var(--panel-bg) !important; border: 1px solid var(--c-edge-strong) !important; border-radius: var(--r-lg) !important; box-shadow: 0 24px 60px rgba(0, 0, 0, .7) !important;
+}
+html.ui280 .playtest-overlay .playtest-head {
+  position: sticky; top: 0; z-index: 2; display: flex !important; align-items: center !important; justify-content: space-between !important; margin: 0 !important; padding: 10px var(--sp-4) 10px var(--sp-5) !important;
+  background: linear-gradient(180deg, rgba(90, 26, 18, .98), rgba(48, 14, 10, .98)) !important; border-bottom: 1px solid var(--c-edge-strong) !important;
+}
+html.ui280 .playtest-overlay .playtest-head h2 { margin: 0 !important; font: 600 var(--fs-xl)/1.2 var(--ff-head) !important; letter-spacing: .14em !important; color: var(--c-gold) !important; }
+html.ui280 .playtest-overlay .playtest-x { min-width: 34px !important; min-height: 34px !important; padding: 0 !important; font-size: 20px !important; line-height: 1 !important; border-radius: 50% !important; }
+html.ui280 .playtest-overlay .playtest-tabs { display: flex !important; gap: 0 !important; margin: 0 !important; padding: 0 var(--sp-5) !important; border-bottom: 1px solid rgba(201, 168, 96, .3) !important; background: rgba(0, 0, 0, .25) !important; }
+html.ui280 .playtest-overlay .pt-tab {
+  flex: 1 1 0 !important; min-height: 40px !important; margin: 0 !important; border: 0 !important; border-bottom: 3px solid transparent !important; border-radius: 0 !important; box-shadow: none !important;
+  background: transparent !important; color: var(--c-muted) !important; font-size: var(--fs-sm) !important; letter-spacing: .14em !important; text-transform: uppercase !important; font-weight: 600 !important;
+}
+html.ui280 .playtest-overlay .pt-tab.on { color: var(--c-gold) !important; border-bottom-color: var(--c-gold) !important; background: linear-gradient(180deg, rgba(226, 195, 106, 0), rgba(226, 195, 106, .12)) !important; }
+html.ui280 .playtest-overlay .playtest-body { padding: var(--sp-4) var(--sp-5) !important; }
