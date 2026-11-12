@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="css/card-placeholder.css?v=kw1">
   <link rel="stylesheet" href="css/tutorial.css?v=t275">
   <link rel="stylesheet" href="css/reset.css?v=t278">
+  <link rel="stylesheet" href="css/table-hud.css?v=t279">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
     .title-brand .ver-big { display: none !important; }
@@ -44,8 +45,10 @@
   <div id="app">
     <header class="topbar">
       <h1>DIVISION COMMAND <span class="ver">0.6b α</span></h1>
-      <div class="meta" id="turnmeta">Lobby</div>
-      <div class="nowplay" id="nowplay"></div>
+      <div class="hud-center">
+        <div class="hud-scn"><span id="hud-scn">Gefecht</span><span class="nowplay" id="nowplay"></span></div>
+        <div class="meta" id="turnmeta">Lobby</div>
+      </div>
       <div class="sp">
         <span class="badge you" id="ap0">A</span>
         <span class="badge" id="ap1">B</span>
@@ -115,19 +118,19 @@
           </details>
           <div class="hint" id="hint"></div>
         </div>
+        <div id="log-win" class="float-win docked">
+          <div class="float-bar" id="log-drag">Protokoll</div>
+          <div class="log-tabs" role="tablist" aria-label="Protokoll und Chat">
+            <button type="button" class="log-tab on" id="log-tab-proto" role="tab" aria-selected="true" aria-controls="log">Protokoll</button>
+            <button type="button" class="log-tab" id="log-tab-chat" role="tab" aria-selected="false" aria-controls="log-chat" tabindex="-1">Chat <span class="log-unread" id="log-chat-unread" hidden></span></button>
+          </div>
+          <div class="log" id="log" role="tabpanel" aria-labelledby="log-tab-proto"></div>
+          <div class="log-chat" id="log-chat" role="tabpanel" aria-labelledby="log-tab-chat" hidden></div>
+        </div>
       </aside>
     </div>
   </div>
 
-  <div id="log-win" class="float-win">
-    <div class="float-bar" id="log-drag">Protokoll</div>
-    <div class="log-tabs" role="tablist" aria-label="Protokoll und Chat">
-      <button type="button" class="log-tab on" id="log-tab-proto" role="tab" aria-selected="true" aria-controls="log">Protokoll</button>
-      <button type="button" class="log-tab" id="log-tab-chat" role="tab" aria-selected="false" aria-controls="log-chat" tabindex="-1">Chat <span class="log-unread" id="log-chat-unread" hidden></span></button>
-    </div>
-    <div class="log" id="log" role="tabpanel" aria-labelledby="log-tab-proto"></div>
-    <div class="log-chat" id="log-chat" role="tabpanel" aria-labelledby="log-tab-chat" hidden></div>
-  </div>
   <div id="fx-layer"></div>
   <div id="overlay" class="overlay" style="display:none"></div>
   <div id="inspect" class="overlay" style="display:none"></div>
@@ -991,7 +994,7 @@
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=st1"></script>
   <script src="js/ui/end-screen.js?v=1"></script>
-  <script src="js/ui/app.js?v=alpha41e"></script>
+  <script src="js/ui/app.js?v=alpha41f"></script>
   <script src="js/ui/reset.js?v=t278"></script>
   <script src="js/tutorial/scenario.js?v=t275"></script>
   <script src="js/ui/tutorial.js?v=t275"></script>

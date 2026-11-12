@@ -324,6 +324,7 @@
     if (!bar) return;
     var drag = null;
     bar.onmousedown = function (ev) {
+      if (win.classList.contains('docked')) return; // t279: angedockt in der Befehlsspalte, nicht verschiebbar
       drag = { x: ev.clientX - win.offsetLeft, y: ev.clientY - win.offsetTop };
       ev.preventDefault();
     };
@@ -2302,8 +2303,7 @@
   function say(msg) {
     var hint = document.getElementById('hint');
     if (hint) hint.textContent = msg;
-    var lab = document.getElementById('my-front-label');
-    if (lab) lab.textContent = msg;
+    // t279: nicht mehr in die Zonen-Beschriftung schreiben – die steht jetzt hochkant in der Randleiste.
   }
   /**
    * Spielt eine Handkarte auf einen Slot über `dispatch` (nach legaler Markierung).
@@ -2823,6 +2823,47 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     el.innerHTML = html;
     return true;
   }
+  /**
+   * t279: Name der laufenden Partie für die Mitte der Kopfleiste (Modus, ggf. Trophäen-Modus).
+   * @returns {string}
+   */
+  function hudScenarioName() {
+    var name = mode === 'tutorial' ? 'Grundausbildung'
+      : mode === 'bot' ? 'Gefecht gegen KI'
+      : mode === 'hotseat' ? 'Hotseat-Gefecht'
+      : 'LAN-Gefecht';
+    try { if (engine && engine._trophyActive && engine._trophyActive()) name += ' · Trophäen-Modus'; } catch (e) { /* Regelmodul fehlt */ }
+    return name;
+  }
+  /**
+   * t279: kompakte Spielerplakette der Kopfleiste (Name, AP-Punkte, SP-Fortschritt, Hand/Deck).
+   * Der Text enthält weiter „N AP“, „SP a/b“ und „Hand n“ (Tests, Tutorial-Spotlight auf #ap0/#ap1).
+   * @param {HTMLElement|null} el Plakette (#ap0 / #ap1)
+   * @param {object} p Spielerzustand
+   * @param {string} note Zusatz zum AP-Wert (Startspieler-Hinweis) oder ''
+   * @param {number} vpNeed Siegpunkte zum Sieg
+   * @param {number} apTurn AP pro Zug (Anzahl der Punkte)
+   * @param {boolean} isViewer Plakette des Betrachters
+   * @param {boolean} isActive Spieler ist am Zug
+   */
+  function hudPlate(el, p, note, vpNeed, apTurn, isViewer, isActive) {
+    if (!el || !p) return;
+    var ap = Number(p.ap) || 0, vp = Number(p.vp) || 0, need = Math.max(1, Number(vpNeed) || 5);
+    var pipN = Math.min(8, Math.max(apTurn || 5, ap));
+    var pips = '';
+    for (var i = 0; i < pipN; i++) pips += '<i class="pp-pip' + (i < ap ? ' on' : '') + '"></i>';
+    var pct = Math.max(0, Math.min(100, Math.round(vp / need * 100)));
+    var html = '<span class="pp-row pp-top"><span class="pp-name">' + escapeHtml(p.name) + '</span>' +
+      (isActive ? '<span class="pp-turn">am Zug</span>' : '') + '</span>' +
+      '<span class="pp-row pp-bot">' +
+      '<span class="pp-ap" title="Aktionspunkte: ' + ap + note + '"><span class="pp-pips" aria-hidden="true">' + pips + '</span><b>' + ap + ' AP' + escapeHtml(note) + '</b></span>' +
+      '<span class="pp-sp" title="Siegpunkte: ' + vp + ' von ' + need + '"><span class="pp-bar" aria-hidden="true"><i style="width:' + pct + '%"></i></span><b>SP ' + vp + '/' + need + '</b></span>' +
+      '<span class="pp-cnt">Hand ' + p.hand.length + ' · Deck ' + p.deck.length + '</span></span>';
+    if (el.innerHTML !== html) el.innerHTML = html;
+    el.classList.toggle('you', !!isViewer);
+    el.classList.toggle('active', !!isActive);
+    el.classList.add('pplate');
+  }
   /* Gesamten Tisch aus dem Engine-Stand neu aufbauen. */
     function render() { // Tisch neu zeichnen
     bindInspectGestures();
@@ -2844,14 +2885,32 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     var vpNeed = (engine._trophyVpToWin && engine._trophyActive && engine._trophyActive())
       ? engine._trophyVpToWin()
       : (Number((engine.rules && engine.rules.vp_to_win) || 5));
-    $('#ap0').textContent = p0.name + ' · ' + p0.ap + ' AP' + apNote0 + ' · SP ' + (p0.vp || 0) + '/' + vpNeed + ' · Hand ' + p0.hand.length + ' · Deck ' + p0.deck.length;
-    $('#ap1').textContent = p1.name + ' · ' + p1.ap + ' AP' + apNote1 + ' · SP ' + (p1.vp || 0) + '/' + vpNeed + ' · Hand ' + p1.hand.length + ' · Deck ' + p1.deck.length;
+    var apTurn = Number((engine.rules && engine.rules.ap_per_turn) || 5);
+    hudPlate($('#ap0'), p0, apNote0, vpNeed, apTurn, viewer === 0, st.active === 0);
+    hudPlate($('#ap1'), p1, apNote1, vpNeed, apTurn, viewer === 1, st.active === 1);
+    var scn = document.getElementById('hud-scn');
+    if (scn) scn.textContent = hudScenarioName();
     // Handkarten
-    function setLabel(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; } // sichtbaren Text setzen
-    setLabel('enemy-support-label', foe.name + ' — Support'); // Unterstützungszone
-    setLabel('enemy-front-label', foe.name + ' — Front');
-    setLabel('my-front-label', me.name + ' — Front');
-    setLabel('my-support-label', me.name + ' — Support'); // Unterstützungszone
+    /**
+     * Zonen-Beschriftung setzen (t279): Besitzer und Zone getrennt, damit der flache Tisch
+     * nur die Zone in der linken Randleiste zeigt und die 2.5D-Ansicht weiter „Name — Zone“.
+     * @param {string} id Element-ID der Beschriftung
+     * @param {string} who Spielername
+     * @param {string} zone Zonenname
+     * @param {string} [short] Kurzform für schmale Randleisten (z. B. „NML“)
+     */
+    function setLabel(id, who, zone, short) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var html = '<span class="rl-who">' + escapeHtml(who) + ' — </span><span class="rl-zone">' + escapeHtml(zone) + '</span>' +
+        (short ? '<span class="rl-short">' + escapeHtml(short) + '</span>' : '');
+      if (el.innerHTML !== html) el.innerHTML = html;
+      el.title = who + ' — ' + zone;
+    }
+    setLabel('enemy-support-label', foe.name, 'Support'); // Unterstützungszone
+    setLabel('enemy-front-label', foe.name, 'Front');
+    setLabel('my-front-label', me.name, 'Front');
+    setLabel('my-support-label', me.name, 'Support'); // Unterstützungszone
     try { window.dcFxPulses = window.DCTableFx ? DCTableFx.pulses(engine) : {}; } catch (eFx) { window.dcFxPulses = {}; }
     var dirty = applyHtml($('#enemy-front'), renderFront(foe, false));
     function supportHtml(list, mine) { // Unterstützungszone
@@ -2901,8 +2960,8 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     var mn = document.getElementById('my-nml');
     if (en) { en.classList.add('nml-row'); dirty = applyHtml(en, nmlHtml(foe)) || dirty; }
     if (mn) { mn.classList.add('nml-row', 'mine'); dirty = applyHtml(mn, nmlHtml(me)) || dirty; }
-    setLabel('enemy-nml-label', foe.name + ' — Niemandsland');
-    setLabel('my-nml-label', me.name + ' — Niemandsland');
+    setLabel('enemy-nml-label', foe.name, 'Niemandsland', 'NML');
+    setLabel('my-nml-label', me.name, 'Niemandsland', 'NML');
     function doctrineRow(list, pid) {
       return (list || []).map(function (d) {
         var def = engine.defOf(d);

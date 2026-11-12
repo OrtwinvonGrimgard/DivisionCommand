@@ -1,0 +1,341 @@
+/*
+ * t279 – Aufgeräumter Tisch: eine Kopfleiste (HUD) und ein festes Höhenraster.
+ *
+ * Als letztes Stylesheet geladen. Ziele:
+ *  - Kopfleiste in drei Zonen: links Logo/Version, Mitte Partie + „Zug X · am Zug“,
+ *    rechts je Spieler eine kompakte Plakette (AP-Punkte, SP-Balken, Hand/Deck).
+ *    Der Musiktitel liegt nicht mehr absolut über allem, sondern in der Mitte.
+ *  - Flacher Tisch als CSS-Grid mit Zeilenhöhen aus dem Viewport: Gegnerleiste, Support,
+ *    Front, Niemandsland, eigene Front, eigener Support und Handleiste passen immer ganz ins Bild.
+ *  - Zonenbeschriftungen stehen hochkant in einer schmalen Randleiste links statt als eigene Zeilen.
+ *  - Protokoll ist in der rechten Befehlsspalte angedockt und überdeckt keine Felder mehr.
+ *  - Versionsschild unten links ist während der Partie aus (Version steht im Logo).
+ * Die 2.5D-Ansicht (body.dc-cam) behält ihr eigenes Layout; geteilt werden nur Kopfleiste und Spalte.
+ */
+
+/* ---------- Maße ---------- */
+#app {
+  --hud-h: 46px;
+  --side-w: clamp(172px, 14.5vw, 236px);
+  --gutter: 18px;
+  --tm-gap: 3px;
+  --legend-h: 13px;
+  --hud-A: calc(100dvh - var(--hud-h));
+  --strip-h: clamp(50px, calc(var(--hud-A) * .105), 112px);
+  --bottom-h: clamp(92px, calc(var(--hud-A) * .205), 216px);
+  /* Rest für die Spielfelder: Innenabstand 8px + 6 Zeilenabstände */
+  --hud-R: calc(var(--hud-A) - var(--strip-h) - var(--bottom-h) - 8px - 6 * var(--tm-gap));
+  --nml-h: clamp(42px, calc(var(--hud-R) * .1), 72px);
+  --hud-R2: calc(var(--hud-R) - var(--nml-h));
+  --es-h: calc(var(--hud-R2) * .20);
+  --ef-h: calc(var(--hud-R2) * .27);
+  --mf-h: calc(var(--hud-R2) * .31);
+  --ms-h: calc(var(--hud-R2) * .22);
+}
+/* Liegen Token im Niemandsland, bekommt das Band mehr Höhe (zulasten aller Reihen anteilig). */
+#app:has(.nml-row .slot.filled) { --nml-h: clamp(62px, calc(var(--hud-R) * .16), 120px); }
+
+/* ---------- Kopfleiste ---------- */
+#app .topbar {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px !important;
+  flex: 0 0 auto;
+  height: var(--hud-h); min-height: var(--hud-h); box-sizing: border-box;
+  padding: 4px 10px !important;
+  background: linear-gradient(180deg, #2e100d 0%, #1a0807 100%) !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(201, 168, 96, .55) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .55), inset 0 -1px 0 rgba(0, 0, 0, .6);
+  overflow: hidden;
+}
+#app .topbar > * { min-width: 0; }
+#app .topbar h1 {
+  display: flex; align-items: baseline; gap: 8px;
+  margin: 0; padding: 7px 12px !important;
+  font-size: 13px; line-height: 1; letter-spacing: .16em; white-space: nowrap;
+}
+#app .topbar h1 .ver { font-size: 10px; letter-spacing: .06em; color: #c9a8a0; }
+#app .topbar .hud-center {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  padding: 3px 14px !important; justify-self: center; max-width: 100%; box-sizing: border-box;
+}
+#app .hud-scn {
+  display: flex; align-items: baseline; justify-content: center; gap: 10px;
+  font-size: 9.5px; line-height: 1.15; letter-spacing: .16em; text-transform: uppercase;
+  color: #c9a24a; white-space: nowrap;
+}
+#app .hud-scn .nowplay {
+  position: static !important; padding: 0 !important; display: inline;
+  font-size: 9.5px; letter-spacing: .08em; text-transform: none; color: #9d8a6a;
+}
+#app .hud-scn .nowplay:empty { display: none; }
+#app .topbar #turnmeta {
+  font-size: 13px; line-height: 1.15; font-weight: 600; letter-spacing: .02em;
+  color: #f0e2bd; white-space: nowrap; padding: 0;
+}
+#app .topbar .sp {
+  display: flex; gap: 8px !important; margin: 0; padding: 0 !important;
+  background: none !important; border: 0 !important; box-shadow: none !important;
+}
+
+/* Spielerplakette */
+#app .topbar .badge.pplate {
+  display: flex; flex-direction: column; justify-content: center; gap: 3px;
+  box-sizing: border-box; height: calc(var(--hud-h) - 10px);
+  min-width: 190px; padding: 2px 10px !important; letter-spacing: 0;
+  border: 1px solid rgba(201, 168, 96, .32) !important; border-radius: 8px;
+  background: linear-gradient(180deg, rgba(60, 22, 18, .85), rgba(20, 8, 7, .9)) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 230, 170, .06);
+  color: #efe3c2; font-weight: 500; font-size: 11px;
+}
+#app .topbar .badge.pplate.you { order: 2; border-color: rgba(215, 180, 92, .6) !important; }
+#app .topbar .badge.pplate.active {
+  border-color: #e0bd62 !important;
+  box-shadow: 0 0 0 1px rgba(224, 189, 98, .35), 0 0 12px rgba(224, 189, 98, .25), inset 0 1px 0 rgba(255, 230, 170, .1);
+}
+#app .pplate .pp-row { display: flex; align-items: center; gap: 8px; line-height: 1.1; white-space: nowrap; }
+#app .pplate .pp-top { justify-content: space-between; }
+#app .pplate .pp-name { font-size: 12px; font-weight: 700; color: #f3e6c4; overflow: hidden; text-overflow: ellipsis; max-width: 170px; }
+#app .pplate:not(.you) .pp-name { color: #e6b3a6; }
+#app .pplate .pp-turn {
+  flex: none; font-size: 8.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  padding: 1px 5px; border-radius: 3px; color: #1a0c06; background: linear-gradient(#f0d488, #c79b3c);
+}
+#app .pplate .pp-bot { font-size: 10px; color: #cdbb94; }
+#app .pplate .pp-bot b { font-weight: 600; color: #efe3c2; }
+#app .pplate .pp-ap, #app .pplate .pp-sp { display: inline-flex; align-items: center; gap: 4px; }
+#app .pplate .pp-pips { display: inline-flex; gap: 2px; }
+#app .pplate .pp-pip {
+  display: block; width: 5px; height: 5px; transform: rotate(45deg);
+  border: 1px solid rgba(215, 180, 92, .7); background: transparent;
+}
+#app .pplate .pp-pip.on { background: #e8c66a; box-shadow: 0 0 3px rgba(232, 198, 106, .7); }
+#app .pplate .pp-bar {
+  display: block; position: relative; width: 34px; height: 5px; border-radius: 3px; overflow: hidden;
+  background: rgba(0, 0, 0, .5); border: 1px solid rgba(201, 168, 96, .35);
+}
+#app .pplate .pp-bar > i { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(90deg, #9b2a1f, #e0b85a); }
+#app .pplate .pp-cnt { color: #a8987a; }
+
+@media (max-width: 1240px) {
+  #app .topbar h1 { letter-spacing: .1em; font-size: 12px; padding: 7px 9px !important; }
+  #app .topbar h1 .ver { display: none; }
+  #app .hud-scn .nowplay { display: none; }
+  #app .topbar .badge.pplate { min-width: 0; padding: 2px 8px !important; }
+  #app .pplate .pp-bot { gap: 6px; }
+  #app .pplate .pp-name { max-width: 120px; }
+}
+
+/* Große Bildschirme: Kopfleiste mitwachsen lassen, damit sie nicht verloren wirkt */
+@media (min-width: 1700px) and (min-height: 950px) {
+  #app { --hud-h: 56px; }
+  #app .topbar h1 { font-size: 15px; }
+  #app .topbar h1 .ver { font-size: 11px; }
+  #app .hud-scn, #app .hud-scn .nowplay { font-size: 11px; }
+  #app .topbar #turnmeta { font-size: 16px; }
+  #app .topbar .badge.pplate { min-width: 250px; padding: 3px 12px !important; gap: 4px; }
+  #app .pplate .pp-name { font-size: 14px; max-width: 220px; }
+  #app .pplate .pp-turn { font-size: 9.5px; }
+  #app .pplate .pp-bot { font-size: 12px; gap: 10px; }
+  #app .pplate .pp-pip { width: 7px; height: 7px; }
+  #app .pplate .pp-bar { width: 46px; height: 6px; }
+}
+@media (min-width: 2300px) and (min-height: 1300px) {
+  #app { --hud-h: 66px; }
+  #app .topbar h1 { font-size: 18px; }
+  #app .hud-scn, #app .hud-scn .nowplay { font-size: 13px; }
+  #app .topbar #turnmeta { font-size: 19px; }
+  #app .topbar .badge.pplate { min-width: 300px; }
+  #app .pplate .pp-name { font-size: 16px; max-width: 260px; }
+  #app .pplate .pp-bot { font-size: 14px; }
+  #app .pplate .pp-pip { width: 8px; height: 8px; }
+  #app .pplate .pp-bar { width: 56px; height: 7px; }
+}
+
+/* ---------- Spalten: Tisch | Befehlsspalte ---------- */
+@media (min-width: 900px) {
+  #app .table {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) var(--side-w) !important;
+    grid-template-rows: minmax(0, 1fr) !important;
+    flex: 1 1 auto; min-height: 0 !important; overflow: hidden !important;
+  }
+  #app .table-side {
+    display: flex !important; flex-direction: column; gap: 6px;
+    min-height: 0; height: 100%; box-sizing: border-box;
+    padding: 6px 8px 8px 0 !important; border: 0 !important;
+    overflow-x: hidden; overflow-y: auto;
+  }
+  #app .table-side > .panel { flex: 0 0 auto; margin: 0 !important; }
+  #app .table-side .hud-more .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+  #app .table-side .hud-more .actions button { min-width: 0; white-space: normal; line-height: 1.15; }
+  #app .table-side .hint { font-size: 11px; line-height: 1.3; overflow-wrap: anywhere; }
+}
+
+/* Protokoll angedockt unter den Befehlen */
+#app #log-win.docked {
+  position: relative !important; inset: auto !important;
+  width: auto !important; height: auto !important; min-width: 0 !important;
+  flex: 1 1 140px; min-height: 120px !important; resize: none !important;
+  z-index: auto; pointer-events: auto; box-shadow: 0 4px 14px rgba(0, 0, 0, .45);
+  border: 1px solid rgba(201, 168, 96, .45) !important; border-radius: 10px; overflow: hidden;
+}
+#app #log-win.docked.off { display: none !important; }
+#app #log-win.docked .float-bar { cursor: default; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; padding: 5px 9px; }
+#app #log-win.docked .log { flex: 1 1 auto; min-height: 0; height: auto !important; font-size: 11.5px; overflow-wrap: anywhere; }
+
+/* Versionsschild nur im Menü – im Spiel steht die Version im Logo */
+body:has(#app .table) #dc-version { display: none !important; }
+
+/* Schlüsselwort-Leiste auf Feldern: umbrechen statt abschneiden */
+#app .table-motif .kw-strip { white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; line-height: 1.15; }
+
+/* ---------- Flacher Tisch: Höhenraster ---------- */
+@media (min-width: 900px) {
+  body:not(.dc-cam) #app .table-main {
+    display: grid !important;
+    grid-template-columns: var(--gutter) minmax(0, 1fr) !important;
+    grid-template-rows: var(--strip-h) var(--es-h) var(--ef-h) var(--nml-h) var(--mf-h) var(--ms-h) var(--bottom-h) !important;
+    column-gap: 4px !important; row-gap: var(--tm-gap) !important;
+    align-content: start;
+    height: 100% !important; min-height: 0 !important; box-sizing: border-box;
+    padding: 4px 8px 4px 6px !important;
+    overflow: hidden !important;
+  }
+  body:not(.dc-cam) #app .table-main > .top-bar { grid-column: 1 / -1; grid-row: 1; }
+  body:not(.dc-cam) #app #enemy-support-label { grid-column: 1; grid-row: 2; }
+  body:not(.dc-cam) #app #enemy-support { grid-column: 2; grid-row: 2; }
+  body:not(.dc-cam) #app #enemy-front-label { grid-column: 1; grid-row: 3; }
+  body:not(.dc-cam) #app #enemy-front { grid-column: 2; grid-row: 3; }
+  body:not(.dc-cam) #app .table-main > .nml-band { grid-column: 1 / -1; grid-row: 4; }
+  body:not(.dc-cam) #app #my-front-label { grid-column: 1; grid-row: 5; }
+  body:not(.dc-cam) #app #my-front { grid-column: 2; grid-row: 5; }
+  body:not(.dc-cam) #app #my-support-label { grid-column: 1; grid-row: 6; }
+  body:not(.dc-cam) #app #my-support { grid-column: 2; grid-row: 6; }
+  body:not(.dc-cam) #app .table-main > .bottom-bar { grid-column: 1 / -1; grid-row: 7; }
+
+  /* Zonenbeschriftung hochkant in der Randleiste */
+  body:not(.dc-cam) #app .table-main > .row-label,
+  body:not(.dc-cam) #app .nml-band > .row-label {
+    display: flex !important; align-items: center; justify-content: center;
+    writing-mode: vertical-rl; transform: rotate(180deg);
+    min-height: 0; height: auto; align-self: stretch; box-sizing: border-box;
+    margin: 0 !important; padding: 0 !important;
+    font-size: 9px !important; line-height: 1 !important; letter-spacing: .2em; text-transform: uppercase; white-space: nowrap;
+    color: #d6bb7e; background: linear-gradient(90deg, rgba(0, 0, 0, .35), rgba(40, 20, 10, .35));
+    border: 1px solid rgba(201, 168, 96, .25); border-radius: 4px; overflow: visible;
+  }
+  body:not(.dc-cam) #app #enemy-support-label,
+  body:not(.dc-cam) #app #enemy-front-label,
+  body:not(.dc-cam) #app #enemy-nml-label { color: #e0a08e; border-color: rgba(190, 90, 70, .35); }
+  body:not(.dc-cam) #app .row-label .rl-who { display: none; }
+  #app .row-label .rl-short { display: none; }
+
+  /* Felder füllen ihre Rasterzeile */
+  body:not(.dc-cam) #app #enemy-support, body:not(.dc-cam) #app #my-support,
+  body:not(.dc-cam) #app .front-line, body:not(.dc-cam) #app .nml-row {
+    grid-template-rows: minmax(0, 1fr) !important; grid-auto-rows: minmax(0, 1fr) !important;
+    align-items: stretch !important; min-height: 0 !important; height: 100% !important;
+    padding: 0 !important; margin: 0 !important; box-sizing: border-box;
+  }
+  body:not(.dc-cam) #app #enemy-support, body:not(.dc-cam) #app #my-support { overflow: hidden auto !important; }
+  body:not(.dc-cam) #app #enemy-front, body:not(.dc-cam) #app #my-front {
+    display: flex; flex-direction: column; min-height: 0; height: 100%;
+    padding: 0 !important; overflow: hidden !important;
+  }
+  body:not(.dc-cam) #app .flank-legend { flex: 0 0 var(--legend-h); height: var(--legend-h); font-size: 9.5px; line-height: var(--legend-h); margin: 0; padding: 0; }
+  body:not(.dc-cam) #app .front-line { flex: 1 1 auto; height: auto !important; overflow: hidden !important; }
+  body:not(.dc-cam) #app .front-line .slot,
+  body:not(.dc-cam) #app .support-row .slot,
+  body:not(.dc-cam) #app #my-front .slot,
+  body:not(.dc-cam) #app #my-support .slot,
+  body:not(.dc-cam) #app .nml-row .slot {
+    height: auto !important; min-height: 0 !important; max-height: none !important; align-self: stretch;
+  }
+
+  /* Niemandsland: zwei schmale Reihen, eine Beschriftung */
+  body:not(.dc-cam) #app .table-main > .nml-band {
+    display: grid !important;
+    grid-template-columns: var(--gutter) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) 2px minmax(0, 1fr);
+    column-gap: 4px; row-gap: 2px;
+    flex: none !important; min-height: 0 !important; height: 100%; padding: 0 !important; margin: 0 !important; overflow: hidden;
+  }
+  body:not(.dc-cam) #app #enemy-nml-label { grid-column: 1; grid-row: 1 / 4; }
+  body:not(.dc-cam) #app #enemy-nml-label .rl-zone { display: none; }
+  body:not(.dc-cam) #app #enemy-nml-label .rl-short { display: inline; }
+  body:not(.dc-cam) #app #my-nml-label { display: none !important; }
+  body:not(.dc-cam) #app #enemy-nml { grid-column: 2; grid-row: 1; }
+  body:not(.dc-cam) #app .nml-band > .midline { grid-column: 2; grid-row: 2; margin: 0 !important; height: 2px; }
+  body:not(.dc-cam) #app #my-nml { grid-column: 2; grid-row: 3; }
+  body:not(.dc-cam) #app .nml-row { overflow: hidden !important; }
+
+  /* Gegnerleiste: Name links, Stapel und Ziele rechts in fester Höhe */
+  body:not(.dc-cam) #app .top-bar {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) auto auto !important;
+    align-items: center !important; gap: 8px !important;
+    height: 100%; min-height: 0 !important; box-sizing: border-box;
+    padding: 0 0 0 calc(var(--gutter) + 4px) !important; margin: 0 !important; overflow: hidden !important;
+  }
+  body:not(.dc-cam) #app #plate-enemy { grid-column: 1; justify-self: start; max-width: 100%; }
+  body:not(.dc-cam) #app #enemy-piles { grid-column: 3; display: flex; gap: 6px; align-items: center; height: 100%; }
+  body:not(.dc-cam) #app #enemy-doctrine { grid-column: 4; }
+  body:not(.dc-cam) #app .top-bar .pile,
+  body:not(.dc-cam) #app .top-bar .pile img {
+    height: calc(var(--strip-h) - 4px) !important; width: max(50px, calc((var(--strip-h) - 4px) * .7)) !important;
+  }
+  body:not(.dc-cam) #app .top-bar .pile span { font-size: 9px; letter-spacing: .04em; white-space: nowrap; }
+  body:not(.dc-cam) #app .doc-window {
+    flex-wrap: nowrap !important; align-items: stretch !important; box-sizing: border-box;
+    padding: 3px !important; gap: 4px !important;
+  }
+  body:not(.dc-cam) #app .top-bar .doc-window { height: calc(var(--strip-h) - 4px); }
+  body:not(.dc-cam) #app .top-bar .doctrine-card {
+    height: 100% !important; width: clamp(84px, calc(var(--strip-h) * 1.7), 170px) !important;
+    flex: 0 0 auto !important; display: flex; flex-direction: column; overflow: hidden !important;
+  }
+  body:not(.dc-cam) #app .doctrine-card .table-motif { aspect-ratio: auto !important; flex: 1 1 auto; min-height: 0; }
+  body:not(.dc-cam) #app .doctrine-card .dn { font-size: 10px !important; padding: 2px 4px !important; }
+  body:not(.dc-cam) #app .doctrine-card .dok-vp { flex: none; font-size: 10px !important; line-height: 1.2; padding: 1px 4px !important; }
+
+  /* Handleiste: Doktrinen | Hand | Stapel | Name – alles innerhalb der letzten Zeile */
+  body:not(.dc-cam) #app .bottom-bar {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) auto auto !important;
+    align-items: end !important; gap: 8px !important;
+    height: 100% !important; min-height: 0 !important; max-height: none !important; box-sizing: border-box;
+    margin: 0 !important; padding: 0 0 0 calc(var(--gutter) + 4px) !important; overflow: visible !important;
+  }
+  body:not(.dc-cam) #app #my-doctrine { height: calc(var(--bottom-h) - 4px); align-self: end; }
+  body:not(.dc-cam) #app .bottom-bar .doctrine-card {
+    height: 100% !important; width: clamp(80px, calc(var(--bottom-h) * .85), 170px) !important;
+    flex: 0 0 auto !important; display: flex; flex-direction: column; overflow: hidden !important;
+  }
+  body:not(.dc-cam) #app .hand-dock {
+    height: 100% !important; min-height: 0 !important; min-width: 0; overflow: visible !important;
+  }
+  body:not(.dc-cam) #app .hand {
+    display: flex !important; grid-template-columns: none !important;
+    justify-content: center; align-items: flex-end !important; gap: 6px !important;
+    height: 100% !important; min-height: 0 !important; padding: 0 !important; overflow: visible !important;
+  }
+  body:not(.dc-cam) #app .hand .card {
+    height: calc(var(--bottom-h) - 4px) !important; max-height: none !important;
+    width: auto !important; aspect-ratio: 5 / 7; flex: 0 1 auto; min-width: 0;
+  }
+  body:not(.dc-cam) #app #my-piles { display: flex; gap: 6px; align-items: flex-end; height: 100%; }
+  body:not(.dc-cam) #app .bottom-bar .pile,
+  body:not(.dc-cam) #app .bottom-bar .pile img {
+    height: calc(var(--bottom-h) - 4px) !important; width: calc((var(--bottom-h) - 4px) * .7) !important;
+  }
+  body:not(.dc-cam) #app #plate-me { align-self: center; max-width: 200px; }
+}
+/* Schmaler Tisch: eigene Plakette nur mit Porträt (Name steht oben in der Kopfleiste) */
+@media (min-width: 900px) and (max-width: 1400px) {
+  body:not(.dc-cam) #app #plate-me:has(.plate-face) .plate-name,
+  body:not(.dc-cam) #app #plate-me:has(.plate-face) .plate-call { display: none; }
+  body:not(.dc-cam) #app #plate-me { padding: 3px 6px !important; }
+}

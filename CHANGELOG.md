@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- **Tisch aufgeräumt (t279):**
+  - Messung vorher (6 Fenstergrößen von 1024×576 bis 2560×1440, Partie mit eigenem Zug und Gegnerzug, Tutorial, Feindkontakt): 755 Befunde. Der Musiktitel lag absolut über der ganzen Kopfzeile (Logo, Zuganzeige, beide Statuszeilen). Hand, eigene Stapel, Doktrinen und Name ragten unten aus dem Bild. Das schwebende Protokoll und das Versionsschild „Alpha 0.6b“ deckten Felder ab. Die Befehlsspalte rutschte unter 1100 px unter den Tisch. Schlüsselwörter auf Feldern waren abgeschnitten.
+  - Neue Kopfleiste in drei Zonen: links Logo mit Version, in der Mitte Partie (Gefecht gegen KI / Hotseat / LAN / Grundausbildung, ggf. Trophäen-Modus) mit Musiktitel und „Zug X · am Zug: …“. Rechts je Spieler eine Plakette mit Name, „am Zug“-Marke, AP als Rauten, SP-Balken und Hand/Deck. Die eigene Plakette steht außen, der aktive Spieler leuchtet gold. Auf großen Bildschirmen wächst die Leiste mit.
+  - Flacher Tisch als festes Höhenraster aus der Fensterhöhe (Gegnerleiste, Support, Front, Niemandsland, eigene Front, eigener Support, Handleiste). Alles passt ohne Scrollen ins Bild, die Handkarten sind größer als vorher. Die Zonennamen stehen hochkant in einer Randleiste. Gegnerstapel und Ziele haben einen eigenen Platz rechts in der Gegnerleiste.
+  - Das Protokoll ist in der rechten Befehlsspalte angedockt, weiter über „Protokoll“ ein- und ausblendbar. Das Versionsschild ist im Spiel aus. Schlüsselwörter brechen um. „Weitere Befehle“ sind zweispaltig. Die 2.5D-Ansicht bleibt unverändert.
+  - Neu `web/css/table-hud.css`, Plaketten und Zonenbeschriftung in `app.js` (`hudPlate`, `hudScenarioName`). Tests: `tests/test_table_hud_t279.js` (npm test) und `tests/playwright_layout_t279.mjs` (`npm run layout-test`: keine überlappenden HUD-Boxen, kein abgeschnittener Text, nichts außerhalb des Fensters bei allen 6 Größen). Cache `divcmd-alpha41f`.
+
 - **Spielstand zurücksetzen (t278):**
   - Neuer Knopf „Spielstand zurücksetzen …“ in Optionen › System, dazu klein „Speicher löschen“ unten rechts auf dem Startbildschirm. Zweistufige Bestätigung im Spielstil, die auflistet, was gelöscht wird.
   - Gelöscht werden alle Speicherschlüssel mit Präfix `dc_` in localStorage und sessionStorage (Offiziersakten, aktiver Benutzer, Decks, Einstellungen, Audio, Tempo, Kamera, Tutorial-Merker …) sowie die IndexedDB `dc_playtest`. Fremde Schlüssel desselben Ursprungs und die Offline-Caches (nur Programmdateien und Bilder) bleiben. Danach lädt das Spiel neu auf den Startbildschirm; „Spiel starten“ öffnet wieder das Tutorial.
