@@ -16,7 +16,8 @@
     "reset-play": "node tests/playwright_reset_t278.mjs",
     "layout-test": "node tests/playwright_layout_t279.mjs",
     "screens-test": "node tests/playwright_screens_t280.mjs",
-    "libzoom-play": "node tests/playwright_libzoom_t281.mjs"
+    "libzoom-play": "node tests/playwright_libzoom_t281.mjs",
+    "lan-play": "node tests/playwright_lan_t283.mjs"
   },
   "repository": {
     "type": "git",

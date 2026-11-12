@@ -3356,6 +3356,11 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     }
     if (engine.state && isTerminal(engine.state) && !isTerminal(st)) clearMatchPresentation();
     engine.state = st;
+    // t283: Der LAN-Gast startet keine eigene Partie (kein startGame) – Tisch hier einhängen, sonst fehlt #app.
+    if (st && st.players && !document.getElementById('app') && window.dcMountMatch) {
+      window.dcMountMatch();
+      bindTableControls();
+    }
     if (!matchSetup && st && st.players && !isTerminal(st) && !/^(lan|host|join)$/.test(mode)) {
       function initialIds(p) {
         var all = (p.deck || []).concat(p.hand || []).concat(p.grave || []).concat(p.support || []);

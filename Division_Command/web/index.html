@@ -978,7 +978,7 @@
   <script src="js/data/catalog.js?v=t238"></script>
   <script src="js/data/card-faces.js?v=gfx2"></script>
   <script src="js/data/audio-data.js?v=endscreen1"></script>
-  <script src="js/engine/engine.js?v=alpha43a"></script>
+  <script src="js/engine/engine.js?v=alpha43b"></script>
   <script src="js/engine/victory_trophy.js?v=trophy3"></script>
   <script src="js/engine/doctrine_runtime.js?v=tac1"></script>
   <script src="js/engine/tactical_runtime.js?v=tac1"></script>
@@ -997,14 +997,14 @@
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=st1"></script>
   <script src="js/ui/end-screen.js?v=t280"></script>
-  <script src="js/ui/app.js?v=alpha43a"></script>
+  <script src="js/ui/app.js?v=alpha43b"></script>
   <script src="js/ui/reset.js?v=t278"></script>
   <script src="js/tutorial/scenario.js?v=t275"></script>
   <script src="js/ui/tutorial.js?v=t275"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
   <script src="js/ui/audio-options.js?v=1"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>
-  <script src="js/net.js?v=alpha43a"></script>
+  <script src="js/net.js?v=alpha43b"></script>
   <script src="js/ui/ui-screens.js?v=t280b"></script>
   <script>
     if ('serviceWorker' in navigator) {
@@ -2042,8 +2042,10 @@
           return;
         }
         var ip = (document.getElementById('join-ip').value || location.hostname).trim();
-        var host = ip.replace(/^https?:\/\//, '').split('/')[0].split(':')[0];
-        var httpPort = 8765;
+        var hostPort = ip.replace(/^https?:\/\//, '').split('/')[0].split(':');
+        var host = hostPort[0];
+        // t283: optionaler Port in der Host-Adresse (z. B. 192.168.1.5:8765); Standard 8765, WebSocket = HTTP-Port + 1.
+        var httpPort = Number(hostPort[1]) > 0 ? Number(hostPort[1]) : 8765;
         var wsUrl = 'ws://' + host + ':' + (httpPort + 1);
         document.getElementById('lan-error').textContent = 'Prüfe Host http://' + host + ':' + httpPort + ' …';
         fetch('http://' + host + ':' + httpPort + '/api/status').then(function () {
