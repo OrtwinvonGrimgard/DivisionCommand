@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import ipaddress
 import os
 import json
 import socket
@@ -277,6 +278,55 @@ def local_ips() -> list[str]:
 
 # t256: Zeitpunkt der letzten Anfrage (außer /api/quit). Ein Neuladen der Seite (F5) feuert
 # `pagehide` → /api/quit; kommt danach binnen QUIT_GRACE_S eine neue Anfrage, bleibt der
+# --- t283: Härtung ---------------------------------------------------------------
+# Standard: HTTP und WebSocket lauschen im LAN, nehmen aber nur Anfragen aus privaten Netzen
+# (inkl. Hamachi 25.0.0.0/8) an. `--local-only` bindet nur an 127.0.0.1.
+# Ändernde Endpunkte (/api/quit, /api/export, /api/render, /api/name) nur vom eigenen Rechner
+# und nur same-origin (Origin fehlt oder entspricht dem Host-Header). Anfragen über MAX_BODY werden abgewiesen.
+MAX_BODY = 8 * 1024 * 1024
+BIND_HOST = os.environ.get("DC_BIND", "0.0.0.0")
+_HAMACHI = ipaddress.ip_network("25.0.0.0/8")
+MUTATING = ("/api/quit", "/api/export", "/api/render", "/api/name")
+
+
+def is_lan_ip(ip: str) -> bool:
+    """True für Loopback, private, link-lokale und Hamachi-Adressen (IPv4/IPv6)."""
+    try:
+        a = ipaddress.ip_address((ip or "").split("%")[0])
+    except ValueError:
+        return False
+    if getattr(a, "ipv4_mapped", None):
+        a = a.ipv4_mapped
+    return a.is_loopback or a.is_private or a.is_link_local or (a.version == 4 and a in _HAMACHI)
+
+
+def is_local_client(ip: str) -> bool:
+    """True, wenn die Anfrage vom eigenen Rechner kommt (Loopback oder eigene LAN-Adresse)."""
+    try:
+        a = ipaddress.ip_address((ip or "").split("%")[0])
+        if getattr(a, "ipv4_mapped", None):
+            a = a.ipv4_mapped
+        if a.is_loopback:
+            return True
+    except ValueError:
+        return False
+    return str(a) in local_ips()
+
+
+def origin_host_ok(origin: str | None) -> bool:
+    """WebSocket-Origin: fehlt (kein Browser) oder zeigt auf localhost bzw. eine LAN-Adresse."""
+    if origin is None:
+        return True
+    from urllib.parse import urlparse
+    try:
+        host = urlparse(origin).hostname or ""
+    except ValueError:
+        return False
+    if host in ("localhost",):
+        return True
+    return is_lan_ip(host)
+
+
 # Server am Leben. Nur ein wirklich geschlossenes Fenster beendet ihn.
 LAST_REQUEST = [0.0]
 QUIT_GRACE_S = 4.0
@@ -290,6 +340,9 @@ class Handler(SimpleHTTPRequestHandler):
     def parse_request(self):
         """Merkt sich den Zeitpunkt jeder Anfrage (für die Gnadenfrist von /api/quit)."""
         ok = super().parse_request()
+        if ok and not is_lan_ip(self.client_address[0]):
+            self.send_error(403, "nur LAN")
+            return False
         if ok and not (self.path or "").startswith("/api/quit"):
             LAST_REQUEST[0] = time.monotonic()
         return ok
@@ -319,7 +372,8 @@ class Handler(SimpleHTTPRequestHandler):
             self.send_header("Content-Disposition", f'attachment; filename="{name}"')
         else:
             self.send_header("Cache-Control", "no-store, no-cache, must-revalidate")
-        self.send_header("Access-Control-Allow-Origin", "*")
+        if self.command in ("GET", "HEAD"):
+            self.send_header("Access-Control-Allow-Origin", "*")
         super().end_headers()
 
     def do_GET(self):
@@ -348,7 +402,16 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_POST(self):
         """POST-Endpunkte: Lobby, Chat, Editor-Render und verwandte Aktionen."""
-        length = int(self.headers.get("Content-Length") or 0)
+        try:
+            length = int(self.headers.get("Content-Length") or 0)
+        except ValueError:
+            length = -1
+        if length < 0 or length > MAX_BODY:
+            self.send_error(413, "zu gross")
+            return
+        if self.path.startswith(MUTATING) and not self._mutation_allowed():
+            self.send_error(403, "nur lokal und same-origin")
+            return
         raw = self.rfile.read(length) if length else b"{}"
         try:
             data = json.loads(raw.decode("utf-8") or "{}")
@@ -394,6 +457,16 @@ class Handler(SimpleHTTPRequestHandler):
             threading.Thread(target=_die, daemon=True).start()
             return
         self.send_error(404)
+
+    def _mutation_allowed(self) -> bool:
+        """Ändernde Endpunkte: nur vom eigenen Rechner; ein Browser-Origin muss zum Host-Header passen."""
+        if not is_local_client(self.client_address[0]):
+            return False
+        origin = self.headers.get("Origin")
+        if origin is None:
+            return True
+        host = self.headers.get("Host") or ""
+        return origin in ("http://" + host, "https://" + host)
 
     def _json(self, obj, status=200):
         """Sendet ein JSON-Objekt als HTTP-Antwort."""
@@ -492,6 +565,17 @@ def ws_thread(port: int):
         """WebSocket-Handler: eine eingehende Peer-Verbindung der Lobby."""
         seat = None
         try:
+            origin = None
+            try:
+                origin = ws.request.headers.get("Origin")
+                peer = (ws.remote_address or ("",))[0]
+            except Exception as exc:  # ältere websockets-Versionen
+                print("[ws] Header nicht lesbar:", exc)
+                peer = ""
+            if not origin_host_ok(origin) or (peer and not is_lan_ip(peer)):
+                print("[ws] abgewiesen:", origin, peer)
+                await ws.close(1008, "Origin/Netz nicht erlaubt")
+                return
             async for raw in ws:
                 try:
                     msg = json.loads(raw)
@@ -528,7 +612,13 @@ def ws_thread(port: int):
                         except Exception:
                             pass
                 else:
-                    # Spielzüge: an alle anderen
+                    # Spielzüge: nur von Sitzinhabern; Spielstände nur vom Host, Aktionen nur vom Gast.
+                    if not (seat and seats.get(seat) and seats[seat]["ws"] is ws):
+                        continue
+                    if typ in ("state", "boot") and seat != "host":
+                        continue
+                    if typ == "action" and seat != "guest":
+                        continue
                     packed = json.dumps(msg)
                     for other in list(clients):
                         if other is ws:
@@ -571,8 +661,8 @@ def ws_thread(port: int):
 
     async def main():
         """Startet den lokalen Spielserver (HTTP, UDP-Discovery, optional WebSocket)."""
-        async with serve(handler, "0.0.0.0", port):
-            print(f"[ws] ws://0.0.0.0:{port}")
+        async with serve(handler, BIND_HOST, port, max_size=4 * 1024 * 1024):
+            print(f"[ws] ws://{BIND_HOST}:{port}")
             await asyncio.Future()
 
     asyncio.run(main())
@@ -580,11 +670,14 @@ def ws_thread(port: int):
 
 def main():
     """Startet den HTTP-Server und optional die Lobby-Dienste; blockiert bis zum Abbruch."""
-    global HTTP_PORT, host_name
+    global HTTP_PORT, host_name, BIND_HOST
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", type=int, default=HTTP_PORT)
     parser.add_argument("--name", default="Spieler")
+    parser.add_argument("--local-only", action="store_true", help="nur 127.0.0.1 (kein LAN)")
     args = parser.parse_args()
+    if args.local_only:
+        BIND_HOST = "127.0.0.1"
     HTTP_PORT = args.port
     host_name = args.name[:24]
     if not WEB.exists():
@@ -595,7 +688,7 @@ def main():
     if HTTP_PORT != 8080:
         threading.Thread(target=ws_thread, args=(HTTP_PORT + 1,), daemon=True).start()
 
-    httpd = ThreadingHTTPServer(("0.0.0.0", HTTP_PORT), Handler)
+    httpd = ThreadingHTTPServer((BIND_HOST, HTTP_PORT), Handler)
     ips = local_ips()
     print("Division Command 0.21 Alpha — Host")
     if sys.platform == "win32":

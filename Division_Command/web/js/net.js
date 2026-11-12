@@ -16,11 +16,18 @@
   var inflight = null;
   var outbox = [];
 
+  /**
+   * Zeigt einen kurzen Hinweis in der Statuszeile.
+   * @param {string} text
+   */
   function hint(text) {
     var el = document.getElementById('hint');
     if (el && text) el.textContent = text;
   }
 
+  /**
+   * Hängt sich einmalig an `engine.dispatch`: Der Gast schickt Absichten, der Host rechnet und sendet den gefilterten Stand.
+   */
   function hookEngine() {
     var eng = global.dcGetEngine && global.dcGetEngine();
     if (!eng) return;
@@ -43,6 +50,10 @@
     hooked = true;
   }
 
+  /**
+   * Reiht eine Gast-Aktion ein (immer Spieler 1) und sendet sie, sobald die vorige bestätigt ist.
+   * @param {object} action
+   */
   function queueGuest(action) {
     if (!action) return;
     action.player = 1;
@@ -52,6 +63,9 @@
     flushGuest();
   }
 
+  /**
+   * Sendet die nächste wartende Gast-Aktion, wenn keine unterwegs ist.
+   */
   function flushGuest() {
     if (inflight || !outbox.length) return;
     if (!ws || ws.readyState !== 1) return;
@@ -59,6 +73,10 @@
     ws.send(JSON.stringify({ type: 'action', action: inflight }));
   }
 
+  /**
+   * Host: sendet den Stand aus Sicht des Gastes (`getStateFor(1)`) samt gefiltertem Protokoll.
+   * @param {string} [ackId] bestätigte Client-Aktion
+   */
   function broadcastState(ackId) {
     var eng = global.dcGetEngine && global.dcGetEngine();
     if (!eng || !ws || ws.readyState !== 1) return;
@@ -67,11 +85,16 @@
       type: 'state',
       seq: eng.state.seq,
       ack: ackId || null,
-      state: eng.getState(),
-      log: (eng.log || []).slice(-40)
+      // t283: Der Gast (Spieler 1) bekommt nur seine Sicht: keine Hand, kein Deck, keine verdeckten Karten des Hosts.
+      state: eng.getStateFor ? eng.getStateFor(1) : eng.getState(),
+      log: eng.logFor ? eng.logFor(1, 40) : (eng.log || []).slice(-40)
     }));
   }
 
+  /**
+   * Gast: übernimmt einen Host-Stand in Sequenzreihenfolge und fordert bei Lücken neu an.
+   * @param {object} msg `state`- oder `boot`-Nachricht
+   */
   function applyGuestState(msg) {
     var incoming = (msg.seq != null ? msg.seq : (msg.state && msg.state.seq)) || 0;
     if (lastSeq >= 0 && incoming < lastSeq) return;
@@ -92,11 +115,23 @@
     flushGuest();
   }
 
+  /**
+   * Schreibt eine Verbindungsmeldung in den LAN-Dialog.
+   * @param {string} msg
+   */
   function say(msg) {
     var el = document.getElementById('lan-error') || document.getElementById('boot-error');
     if (el) el.textContent = msg;
   }
 
+  /**
+   * Baut die WebSocket-Verbindung zur Lobby auf.
+   * @param {string} url ws://host:port
+   * @param {string} name Anzeigename
+   * @param {string} asRole `host` oder `guest`
+   * @param {function(object)} [onLobby] Lobby-Rückruf
+   * @returns {WebSocket|null}
+   */
   function connect(url, name, asRole, onLobby) {
     role = asRole;
     lastSeq = -1;
@@ -151,8 +186,9 @@
         var eng = global.dcGetEngine && global.dcGetEngine();
         if (eng) {
           try {
-            msg.action.player = 1;
-            eng.dispatch(msg.action);
+            var act = eng.resolveAliases ? eng.resolveAliases(msg.action || {}) : (msg.action || {});
+            act.player = 1;
+            eng.dispatch(act);
           } catch (err) {
             if (!eng.state.seq) eng.state.seq = 0;
             eng.state.seq += 1;
@@ -182,6 +218,11 @@
     return ws;
   }
 
+  /**
+   * Host: startet die Partie und sendet den ersten Stand.
+   * @param {string} nameHost
+   * @param {string} [nameGuest]
+   */
   function startHostMatch(nameHost, nameGuest) {
     if (global.dcSetMode) global.dcSetMode('lan');
     if (global.dcStart) global.dcStart();
@@ -194,12 +235,19 @@
     broadcastState();
   }
 
+  /**
+   * Meldet dem Gegenüber das Verlassen.
+   * @param {string} [text]
+   */
   function notifyLeave(text) {
     if (ws && ws.readyState === 1) {
       ws.send(JSON.stringify({ type: 'leave', msg: (text || 'hat die Verbindung getrennt') }));
     }
   }
 
+  /**
+   * Trennt die Verbindung und setzt den Netzstatus zurück.
+   */
   function disconnect() {
     notifyLeave('hat die Lobby verlassen');
     closing = true;
@@ -214,11 +262,20 @@
     closing = false;
   }
 
+  /**
+   * Setzt den Bereit-Status in der Lobby.
+   * @param {boolean} on
+   */
   function sendReady(on) {
     if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'ready', ready: !!on }));
   }
 
   var chatListeners = [];
+  /**
+   * Abonniert Chatnachrichten.
+   * @param {function(object)} fn
+   * @returns {function()} Abmelden
+   */
   function onChat(fn) {
     if (typeof fn !== 'function') return function () {};
     chatListeners.push(fn);
@@ -226,11 +283,20 @@
       chatListeners = chatListeners.filter(function (f) { return f !== fn; });
     };
   }
+  /**
+   * Verteilt eine Chatnachricht an alle Abonnenten.
+   * @param {object} msg
+   */
   function emitChat(msg) {
     chatListeners.slice().forEach(function (fn) {
-      try { fn(msg); } catch (e) {}
+      try { fn(msg); } catch (e) { if (global.console) console.warn('[net] Chat-Abonnent fehlgeschlagen:', e); }
     });
   }
+  /**
+   * Sendet eine Chatnachricht (max. 400 Zeichen).
+   * @param {object} payload `{name, text, player, t}`
+   * @returns {boolean} gesendet
+   */
   function sendChat(payload) {
     if (!ws || ws.readyState !== 1) return false;
     var msg = {
@@ -243,9 +309,15 @@
     ws.send(JSON.stringify(msg));
     return true;
   }
+  /**
+   * @returns {boolean} true bei offener Verbindung
+   */
   function isConnected() {
     return !!(ws && ws.readyState === 1);
   }
+  /**
+   * @returns {string|null} `host`, `guest` oder null
+   */
   function getRole() { return role; }
 
   global.DCNet = {

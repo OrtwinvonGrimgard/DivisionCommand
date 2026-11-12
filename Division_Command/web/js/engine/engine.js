@@ -39,6 +39,13 @@
       return s / 4294967296;
     };
   }
+  /** Platzhalter-ID für Karten, die der Betrachter im LAN nicht sehen darf (t283). */
+  const HIDDEN_CARD_ID = 'dc_hidden';
+  /** Platzhalter-Definition: keine Werte, keine Effekte, schwarze Rückseite. */
+  const HIDDEN_CARD_DEF = Object.freeze({
+    id: HIDDEN_CARD_ID, name: 'Verdeckte Karte', typ: 'Einheit', klasse: '', text: '', ap: 0, atk: 0, def: 1,
+    rarity: 'bronze', tags: Object.freeze([]), effects: Object.freeze([]), keywords: Object.freeze([]), hidden: true,
+  });
   /**
    * Fisher-Yates-Mischung einer Kopie, das Original bleibt unverändert.
    * @param {Array} arr Ausgangsliste
@@ -200,6 +207,7 @@
     constructor(catalog, options) {
       this.catalog = catalog;
       this.byId = catalogMap(catalog);
+      if (!this.byId[HIDDEN_CARD_ID]) this.byId[HIDDEN_CARD_ID] = HIDDEN_CARD_DEF;
       this.rules = Object.assign({}, catalog.rules, (options && options.rules) || {});
       this.rand = rng((options && options.seed) || Date.now());
       this.log = [];
@@ -397,6 +405,100 @@
       } catch (e) {
         return { seq: raw.seq || 0, error: 'Stand nicht kopierbar', turn: raw.turn, active: raw.active, pending: raw.pending, players: raw.players };
       }
+    }
+    /**
+     * Spielstand aus Sicht eines Spielers (LAN, t283): Hand, Deck und verdeckte Karten des Gegners
+     * werden durch Platzhalter mit Decknamen-UIDs ersetzt; offene Wahlen des Gegners verlieren ihre Optionen;
+     * Ereignisse zu verborgenen Karten verlieren Name und Bild. Der Host-Stand selbst bleibt unverändert.
+     * Rückübersetzung eingehender Aktionen: `resolveAliases`.
+     * @param {number} viewer 0|1 (Betrachter); andere Werte liefern den vollen Stand
+     * @returns {object}
+     */
+    getStateFor(viewer) {
+      const st = this.getState();
+      if ((viewer !== 0 && viewer !== 1) || !st || !st.players || !st.players[1 - viewer]) return st;
+      const oppId = 1 - viewer;
+      const opp = st.players[oppId];
+      const A = this._aliases || (this._aliases = { fwd: {}, back: {}, pub: {}, n: 0 });
+      const hiddenNow = {};
+      /** Deckname für eine verborgene UID; neu, wenn die Karte zuvor offen sichtbar war. */
+      const alias = (uid) => {
+        if (!uid) return uid;
+        if (!A.fwd[uid] || A.pub[uid]) {
+          if (A.fwd[uid]) delete A.back[A.fwd[uid]];
+          A.n += 1;
+          A.fwd[uid] = 'v-' + A.n;
+          A.back[A.fwd[uid]] = uid;
+          delete A.pub[uid];
+        }
+        hiddenNow[uid] = A.fwd[uid];
+        return A.fwd[uid];
+      };
+      /** Ersetzt eine Instanz durch einen Platzhalter ohne Kartenidentität. */
+      const mask = (c) => (c ? {
+        uid: alias(c.uid), cardId: HIDDEN_CARD_ID, owner: c.owner, facedown: true, hidden: true,
+        atk: 0, def: 1, defMax: 1, attachments: (c.attachments || []).map(mask), tokens: c.tokens || [], flags: {},
+        summonedTurn: c.summonedTurn || 0, tapped: !!c.tapped, attackUsed: !!c.attackUsed,
+      } : c);
+      opp.hand = (opp.hand || []).map(mask);
+      opp.deck = (opp.deck || []).map(mask);
+      opp.support = (opp.support || []).map((c) => (c && c.facedown ? mask(c) : c));
+      ['front', 'nml'].forEach((zone) => {
+        const z = opp[zone];
+        if (!z) return;
+        Object.keys(z).forEach((sec) => { z[sec] = (z[sec] || []).map((c) => (c && c.facedown ? mask(c) : c)); });
+      });
+      // Offen sichtbare UIDs merken: wandern sie später in eine verdeckte Zone, bekommen sie einen neuen Decknamen.
+      const markPub = (c) => { if (c && c.uid && !c.hidden) A.pub[c.uid] = 1; };
+      st.players.forEach((p) => {
+        (p.grave || []).forEach(markPub); (p.support || []).forEach(markPub);
+        ['front', 'nml'].forEach((zone) => { const z = p[zone]; if (z) Object.keys(z).forEach((sec) => (z[sec] || []).forEach(markPub)); });
+      });
+      (st.players[viewer].hand || []).forEach(markPub);
+      const pend = st.pending;
+      if (pend && typeof pend.player === 'number' && pend.player !== viewer) {
+        if (Array.isArray(pend.choices)) pend.choices = pend.choices.map(() => ({ hidden: true }));
+      } else if (pend && Array.isArray(pend.choices)) {
+        pend.choices.forEach((c) => { if (c && hiddenNow[c.target]) { c.target = hiddenNow[c.target]; } });
+      }
+      (st.events || []).forEach((ev) => {
+        const secret = (ev.uid && hiddenNow[ev.uid]) || (ev.kind === 'draw' && ev.owner === oppId)
+          || (ev.actor === oppId && /verdeckt/i.test(ev.text || ''));
+        if (!secret) return;
+        ev.cardId = null; ev.image = null; ev.name = null;
+        if (ev.uid) ev.uid = hiddenNow[ev.uid] || null;
+      });
+      return st;
+    }
+    /**
+     * Protokoll aus Sicht eines Spielers: Zeilen mit `extra.secret` des Gegners zeigen nur `extra.pub`.
+     * @param {number} viewer 0|1
+     * @param {number} [n] nur die letzten n Zeilen
+     * @returns {object[]}
+     */
+    logFor(viewer, n) {
+      const src = n ? this.log.slice(-n) : this.log.slice();
+      return src.map((l) => {
+        const ex = l && l.extra;
+        if (ex && typeof ex.secret === 'number' && ex.secret !== viewer) return { t: l.t, a: l.a, msg: ex.pub || 'Verdeckte Aktion.', extra: null };
+        return l;
+      });
+    }
+    /**
+     * Übersetzt Decknamen-UIDs (`v-…` aus `getStateFor`) in einer eingehenden Aktion zurück in echte UIDs.
+     * Unbekannte Werte bleiben unverändert; die Aktion wird tief kopiert.
+     * @param {object} action
+     * @returns {object}
+     */
+    resolveAliases(action) {
+      const back = (this._aliases && this._aliases.back) || {};
+      const walk = (v) => {
+        if (typeof v === 'string') return Object.prototype.hasOwnProperty.call(back, v) ? back[v] : v;
+        if (Array.isArray(v)) return v.map(walk);
+        if (v && typeof v === 'object') { const o = {}; Object.keys(v).forEach((k) => { o[k] = walk(v[k]); }); return o; }
+        return v;
+      };
+      return walk(action);
     }
     /**
      * Hängt eine Protokollzeile an (wird auf 400 Einträge gekürzt).
@@ -1560,7 +1662,7 @@
         found.summonedTurn = this.state.turn;
       this._applyDeployProtection(found);
         p.support[idx] = found;
-        this._log(def.name + ' liegt verdeckt im Support (Stellung).');
+        this._log(def.name + ' liegt verdeckt im Support (Stellung).', { secret: p.id, pub: p.name + ' legt eine verdeckte Stellung in den Support.' });
         return { ok: true };
       }
       if (def.typ === 'Einheit') {
@@ -2465,7 +2567,7 @@
         card.flags.trap = true;
         if (i < 0) p.support.push(card);
         else p.support[i] = card;
-        this._log(p.name + ' legt ' + def.name + ' verdeckt in den Support.');
+        this._log(p.name + ' legt ' + def.name + ' verdeckt in den Support.', { secret: p.id, pub: p.name + ' legt eine verdeckte Karte in den Support.' });
         return { ok: true };
       }
       if ((def.effects || []).some((e) => e.code === 'WILL_PEOPLE')) {
