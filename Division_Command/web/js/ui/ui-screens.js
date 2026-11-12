@@ -73,7 +73,7 @@
    * @returns {boolean}
    */
   function modalOpen() {
-    var sel = '.modal-layer:not([hidden]), #dc-reset-dialog, .dc-reset-layer, #tut-coach:not([hidden]), #dc-end-screen, #playtest-panel.open';
+    var sel = '.modal-layer:not([hidden]), #dc-reset, #tut-coach:not([hidden]), #dc-end-screen, #playtest-panel.open';
     var list = document.querySelectorAll(sel);
     for (var i = 0; i < list.length; i++) {
       var el = list[i];
@@ -97,6 +97,11 @@
       var cancel = document.getElementById('bot-cancel');
       if (cancel) { e.preventDefault(); cancel.click(); }
       return;
+    }
+    // Große Kartenansicht der Bibliothek zuerst schließen, nicht gleich die ganze Bibliothek verlassen
+    var zoom = document.getElementById('lib-zoom');
+    if (zoom && zoom.style.display !== 'none' && zoom.getClientRects().length) {
+      e.preventDefault(); zoom.style.display = 'none'; return;
     }
     if (modalOpen()) return;
     var t = e.target;

@@ -349,12 +349,12 @@
         '</div>' +
         '<div class="move-row">' +
           '<span class="cnt cnt-lib"></span>' +
-          '<button type="button" data-lib-back>In Bibliothek Ablegen</button>' +
-          '<button type="button" data-lib-add>Zum Deck hinzufügen</button>' +
+          '<button type="button" data-lib-back>Aus dem Deck nehmen</button>' +
+          '<button type="button" class="primary" data-lib-add>Zum Deck hinzufügen</button>' +
           '<span class="cnt cnt-deck"></span>' +
         '</div>' +
         '<div class="acts">' +
-          '<button type="button" class="primary" data-lib-close>Schließen</button>' +
+          '<button type="button" class="ui-close" data-lib-close title="Schließen (Esc)">Schließen</button>' +
         '</div>' +
       '</div>';
     var taken = c.typ === 'Doktrin'
@@ -687,6 +687,22 @@
     bindTagFilter();
   }
 
+  /**
+   * Richtet die Tag-Auswahl am Knopf aus, ohne das Fenster oder die Filterbox zu verlassen:
+   * nach links aufklappen (rechtsbündig), außer der Knopf steht zu weit links – dann nach rechts.
+   * @param {HTMLElement} root Wrapper #lib-tag-filter (Bezugsrahmen des Panels)
+   * @param {HTMLElement} panel #lib-tag-panel
+   */
+  function placeTagPanel(root, panel) {
+    if (!root || !panel || !root.getBoundingClientRect) return;
+    var box = root.closest ? (root.closest('.lib-filters') || root.parentElement) : root.parentElement;
+    var r = root.getBoundingClientRect();
+    var b = box && box.getBoundingClientRect ? box.getBoundingClientRect() : { left: 0, right: window.innerWidth || 0 };
+    var w = panel.offsetWidth || 320;
+    var left = Math.max(b.left, 0);
+    panel.classList.toggle('open-right', r.right - w < left);
+  }
+
   function bindTagFilter() {
     var root = document.getElementById('lib-tag-filter');
     var toggle = document.getElementById('lib-tag-toggle');
@@ -734,7 +750,8 @@
         paintToggle();
         if (!panel.hidden) {
           paintList();
-          if (q) q.focus();
+          placeTagPanel(root, panel);
+          if (q) q.focus({ preventScroll: true });
         }
       });
       document.addEventListener('click', function (ev) {
@@ -898,6 +915,8 @@
     nationOf: nationOf,
     draftNations: draftNations,
     addCard: function (id) { addCard(cardById(id)); },
+    /** Öffnet die große Kartenansicht (#lib-zoom) für eine Karten-ID. */
+    zoom: function (id) { zoom(cardById(id)); },
     clearDraft: function () { draft = { cards: {}, doctrines: [] }; },
     draft: function () { return { cards: JSON.parse(JSON.stringify(draft.cards)), doctrines: draft.doctrines.slice() }; },
     visibleIds: function () { var out = []; sections().forEach(function (g) { g.list.forEach(function (c) { out.push(c.id); }); }); return out; },

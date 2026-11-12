@@ -1,0 +1,222 @@
+/*
+ * t280 Stufe 2 – Spieltisch im Designsystem (flach und 2,5D-HUD).
+ *
+ * Nur Optik: Farben, Flächen, Rahmen, Schatten, Schrift. Keine Maße, Abstände oder Positionen –
+ * das Höhenraster aus table-hud.css (t279) und die Spotlight-Ausrichtung des Tutorials bleiben unberührt.
+ * Wird vor table-hud.css geladen; Vorrang über `html.ui280 body #app` statt über die Reihenfolge.
+ * Grafiken: assets/ui/table-felt.webp (Filzbespannung), assets/ui/hand-leather.webp (Handablage),
+ * assets/ui/panel-grain.webp (Körnung), assets/ui/corner.svg (Eckzier). Bilder nur mit cover/auto – nie gestreckt.
+ */
+
+/* ---------- Tischfläche ---------- */
+html.ui280 body:not(.dc-cam) #app .table {
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .55) 100%),
+    linear-gradient(180deg, rgba(40, 8, 6, .35), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, rgba(20, 14, 4, .3)),
+    url('../assets/ui/table-felt.webp') center / cover no-repeat,
+    #10140c !important;
+}
+
+/* Leere Felder: eingelassene Mulde statt Schraffur; Zustände (legal, drop-ok, Effekte) bleiben unberührt */
+html.ui280 body:not(.dc-cam) #app .slot.empty:not(.legal):not(.legal-target):not(.drop-ok):not(.picked):not(.section-aura):not([class*="sec-"]):not([class*="fx-"]) {
+  background:
+    linear-gradient(180deg, rgba(255, 240, 200, .035), rgba(0, 0, 0, 0) 40%),
+    linear-gradient(rgba(6, 9, 5, .52), rgba(6, 9, 5, .52)) !important;
+  border: 1px solid rgba(214, 187, 126, .16) !important;
+  border-radius: 6px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, .55), inset 0 0 0 1px rgba(0, 0, 0, .35) !important;
+}
+html.ui280 body:not(.dc-cam) #app :is(#enemy-support, #enemy-front, #enemy-nml) .slot.empty:not(.legal):not(.legal-target):not(.drop-ok):not(.picked):not(.section-aura):not([class*="sec-"]):not([class*="fx-"]) {
+  border-color: rgba(200, 110, 90, .18) !important;
+  background:
+    linear-gradient(180deg, rgba(120, 30, 20, .10), rgba(0, 0, 0, 0) 60%),
+    linear-gradient(rgba(10, 6, 5, .5), rgba(10, 6, 5, .5)) !important;
+}
+html.ui280 body:not(.dc-cam) #app .slot.filled { border-radius: 6px; }
+
+/* Flankenbeschriftung und Zonen-Randleiste */
+html.ui280 body:not(.dc-cam) #app .flank-legend {
+  color: rgba(226, 195, 106, .72); letter-spacing: .18em; text-transform: uppercase; font-weight: 600;
+  text-shadow: 0 1px 2px #000;
+}
+html.ui280 body:not(.dc-cam) #app .table-main > .row-label,
+html.ui280 body:not(.dc-cam) #app .nml-band > .row-label {
+  background: linear-gradient(90deg, rgba(0, 0, 0, .55), rgba(46, 24, 10, .55)) !important;
+  border-color: rgba(214, 187, 126, .32) !important;
+  font-weight: 700; text-shadow: 0 1px 2px #000;
+}
+
+/* Niemandsland: schlammiges Band mit goldener Frontlinie */
+html.ui280 body:not(.dc-cam) #app .table-main > .nml-band {
+  background:
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, .018) 0 2px, rgba(0, 0, 0, 0) 2px 9px),
+    linear-gradient(180deg, rgba(48, 32, 16, .55), rgba(28, 18, 8, .7) 50%, rgba(48, 32, 16, .55));
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgba(214, 187, 126, .18), inset 0 -1px 0 rgba(214, 187, 126, .18);
+}
+html.ui280 body:not(.dc-cam) #app .nml-band > .midline {
+  background: linear-gradient(90deg, rgba(226, 195, 106, 0), rgba(226, 195, 106, .85) 12%, rgba(226, 195, 106, .85) 88%, rgba(226, 195, 106, 0)) !important;
+  box-shadow: 0 0 6px rgba(226, 195, 106, .35);
+}
+
+/* ---------- Gegnerleiste und Handablage ---------- */
+html.ui280 body:not(.dc-cam) #app .hand-dock {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)),
+    url('../assets/ui/hand-leather.webp') center top / cover no-repeat;
+  border: 1px solid rgba(214, 187, 126, .38);
+  border-radius: 10px 10px 4px 4px;
+  box-shadow: inset 0 2px 0 rgba(255, 230, 170, .08), inset 0 -8px 18px rgba(0, 0, 0, .5), 0 -2px 12px rgba(0, 0, 0, .45);
+}
+html.ui280 body:not(.dc-cam) #app .doc-window,
+html.ui280 body #app .table-side > .panel,
+html.ui280 body #app .nameplate {
+  background:
+    linear-gradient(180deg, rgba(58, 24, 18, .86), rgba(20, 9, 7, .92)),
+    url('../assets/ui/panel-grain.webp') !important;
+  border: 1px solid rgba(214, 187, 126, .42) !important;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 230, 170, .10), 0 6px 18px rgba(0, 0, 0, .5) !important;
+}
+html.ui280 body:not(.dc-cam) #app .doc-window.foe { border-color: rgba(200, 110, 90, .4) !important; }
+
+/* Stapel: Zahl als Plakette */
+html.ui280 body #app .pile b {
+  color: #f3dfa2; text-shadow: 0 1px 2px #000; font-variant-numeric: tabular-nums;
+}
+html.ui280 body #app .pile span { color: #e8d9a8; text-shadow: 0 1px 2px #000; letter-spacing: .06em; }
+
+/* ---------- Befehlsspalte ---------- */
+html.ui280 body #app .table-side > .panel > h2 {
+  display: flex; align-items: center; gap: 8px;
+  color: #e2c36a; letter-spacing: .2em; text-shadow: 0 1px 2px #000;
+}
+html.ui280 body #app .table-side > .panel > h2::after {
+  content: ''; flex: 1 1 auto; height: 1px;
+  background: linear-gradient(90deg, rgba(226, 195, 106, .6), rgba(226, 195, 106, 0));
+}
+html.ui280 body #app #bomb-box {
+  background: radial-gradient(ellipse at 50% 30%, #2a0d0b, #0c0404 75%) !important;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .7), inset 0 2px 12px rgba(0, 0, 0, .8), 0 0 0 1px rgba(214, 187, 126, .25) !important;
+}
+html.ui280 body #app .hud-more > summary { color: #d6bb7e; border-radius: 6px; }
+html.ui280 body #app .hud-more > summary:hover { color: #f3dfa2; background: rgba(226, 195, 106, .08); }
+/* Zugeklapptes „Weitere Befehle“ wirklich ausblenden (sonst bleiben unsichtbare Knöpfe im Layout) */
+html.ui280 body #app .hud-more:not([open]) > .actions { display: none !important; }
+html.ui280 body #app .table-side .hint { color: #cdbb94; }
+
+/* Protokoll */
+html.ui280 body #app #log-win.docked {
+  background: linear-gradient(180deg, rgba(40, 14, 11, .92), rgba(16, 7, 6, .95)), url('../assets/ui/panel-grain.webp') !important;
+  border-color: rgba(214, 187, 126, .42) !important;
+}
+html.ui280 body #app #log-win.docked .float-bar {
+  background: linear-gradient(180deg, #3a1611, #22100c) !important; color: #e2c36a;
+  border-bottom: 1px solid rgba(214, 187, 126, .3);
+}
+html.ui280 body #app .float-win .log-tabs { background: transparent !important; }
+html.ui280 body #app .float-win .log-tab {
+  border-radius: 6px; border-color: rgba(214, 187, 126, .28) !important;
+  background: linear-gradient(180deg, #2c120e, #1a0a08) !important; color: #cdbb94;
+}
+html.ui280 body #app .float-win .log-tab.on {
+  border-color: #e2c36a !important; color: #f3dfa2;
+  background: linear-gradient(180deg, #4a1d14, #2a0f0b) !important;
+  box-shadow: inset 0 -2px 0 #e2c36a;
+}
+html.ui280 body #app #log-win .log > * { border-bottom-color: rgba(214, 187, 126, .12) !important; }
+
+/* ---------- Kopfleiste und Spielerplaketten ---------- */
+html.ui280 body #app .topbar {
+  background:
+    linear-gradient(180deg, rgba(58, 20, 15, .96), rgba(24, 9, 7, .98)),
+    url('../assets/ui/panel-grain.webp') !important;
+  border-bottom: 1px solid rgba(226, 195, 106, .6) !important;
+}
+html.ui280 body #app .topbar .hud-center {
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .35), rgba(0, 0, 0, .15)) !important;
+  border: 1px solid rgba(214, 187, 126, .3) !important;
+}
+html.ui280 body #app .topbar .badge.pplate {
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, rgba(70, 26, 20, .9), rgba(22, 9, 7, .95)),
+    url('../assets/ui/panel-grain.webp') !important;
+}
+html.ui280 body #app .topbar .badge.pplate:not(.you) { border-left: 3px solid rgba(190, 80, 60, .75) !important; }
+html.ui280 body #app .topbar .badge.pplate.you { border-left: 3px solid #d6b35c !important; }
+html.ui280 body #app .topbar .badge.pplate.active {
+  background:
+    linear-gradient(180deg, rgba(96, 40, 22, .92), rgba(30, 12, 8, .96)),
+    url('../assets/ui/panel-grain.webp') !important;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html.ui280 body #app .topbar .badge.pplate.active { animation: ui280-turn-glow 2.8s ease-in-out infinite; }
+}
+@keyframes ui280-turn-glow {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(224, 189, 98, .35), 0 0 8px rgba(224, 189, 98, .18); }
+  50% { box-shadow: 0 0 0 1px rgba(224, 189, 98, .6), 0 0 16px rgba(224, 189, 98, .38); }
+}
+
+/* ---------- 2,5D-Ansicht: HUD ---------- */
+html.ui280 body.dc-cam #app .cam-hud {
+  padding: 4px 6px; border-radius: 999px;
+  background: linear-gradient(180deg, rgba(48, 18, 14, .9), rgba(18, 8, 6, .92));
+  border: 1px solid rgba(214, 187, 126, .45);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .5);
+}
+html.ui280 body.dc-cam #app .cam-hud button { border-radius: 999px; }
+html.ui280 body.dc-cam #app .cam-hud :not(button) { color: #cdbb94; text-shadow: 0 1px 2px #000; }
+
+/* ---------- Tutorial: Ausbilder-Box ---------- */
+html.ui280 #tut-coach {
+  background:
+    var(--corners),
+    linear-gradient(180deg, rgba(62, 24, 20, .97), rgba(28, 10, 8, .98)),
+    url('../assets/ui/panel-grain.webp') !important;
+  border-color: var(--c-edge-strong) !important;
+  border-radius: var(--r-lg) !important;
+}
+html.ui280 #tut-coach::before { border-radius: 10px !important; border-color: rgba(226, 195, 106, .18) !important; }
+/* Überschrift hält Abstand zum Knopf „Tutorial überspringen“ oben rechts (vorher 12 px Überdeckung) */
+html.ui280 #tut-coach .tut-title { width: fit-content; max-width: calc(100% - 150px); }
+html.ui280 #tut-coach #tut-skip { border-radius: 999px; top: 11px; right: 14px; }
+html.ui280 #tut-coach .tut-portrait img { border-radius: var(--r-sm) !important; box-shadow: 0 0 0 3px rgba(0, 0, 0, .5), 0 0 0 4px rgba(226, 195, 106, .45), 0 6px 14px rgba(0, 0, 0, .6) !important; }
+html.ui280 #tut-coach .tut-progress { height: 6px; border-radius: 999px; }
+html.ui280 #tut-coach .tut-progress i { border-radius: 999px; box-shadow: 0 0 8px rgba(226, 195, 106, .5); }
+html.ui280 #tut-coach .tut-foot button { border-radius: var(--r-sm); min-height: 32px; }
+html.ui280 #tut-coach .tut-todo { border-radius: var(--r-sm); }
+html.ui280 #tut-coach .tut-hint { border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+html.ui280 .tut-confirm-box {
+  position: relative; border-radius: var(--r-lg) !important;
+  background: var(--corners), linear-gradient(180deg, #3a1614, #1e0a08), url('../assets/ui/panel-grain.webp') !important;
+}
+
+/* Befehlsknöpfe passen in schmale Spalten (1024 px: vorher ragte „Zugende“ 8 px aus dem Fenster) */
+html.ui280 body #app .table-side .actions { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+html.ui280 body #app .table-side .actions > button { min-width: 0 !important; padding-left: 4px !important; padding-right: 4px !important; white-space: nowrap; }
+@media (max-width: 1300px) {
+  html.ui280 body #app .table-side .actions > button:not(#btn-end) { font-size: 12px !important; letter-spacing: 0 !important; }
+}
+html.ui280 body #app .table-side .actions > #btn-end { grid-column: 1 / -1; }
+/* 2,5D: Gegnerplakette nicht unter der Kamera-Leiste, sondern unten links in der Gegnerleiste und nur so breit wie der Name */
+html.ui280 body.dc-cam #app #plate-enemy { align-self: end !important; justify-self: start !important; width: auto !important; max-width: 100%; padding-left: 14px !important; padding-right: 14px !important; }
+html.ui280 body.dc-cam #app .cam-hud { padding: 3px 5px; }
+html.ui280 body.dc-cam #app .cam-hud .cam-hint { font-size: 11px; padding-right: 6px; }
+
+/* ---------- Dialoge im Spiel (#overlay: Münzwurf, Rückblick „Handlung“, Rückfragen) ---------- */
+html.ui280 #overlay.overlay > :is(.modal, .recap-stage) {
+  position: relative;
+  background:
+    var(--corners),
+    linear-gradient(180deg, rgba(50, 19, 15, .97), rgba(20, 8, 7, .98)),
+    url('../assets/ui/panel-grain.webp') !important;
+  border: 1px solid var(--c-edge-strong) !important;
+  border-radius: var(--r-lg) !important;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .7), inset 0 1px 0 rgba(255, 230, 170, .08) !important;
+}
+html.ui280 #overlay.overlay > :is(.modal, .recap-stage) :is(h2, h3) { font-family: var(--ff-head); color: var(--c-gold-hi) !important; letter-spacing: .04em; }
+html.ui280 #overlay .recap-line { border-bottom: 1px solid rgba(201, 168, 96, .12); padding-bottom: 4px; }
+html.ui280 #overlay .recap-left img { filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .65)); }

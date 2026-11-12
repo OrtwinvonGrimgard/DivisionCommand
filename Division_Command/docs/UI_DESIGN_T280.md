@@ -62,3 +62,19 @@ Eigene SVG-Symbole (`assets/ui/icons.svg`, Strich 1.6 px, 24er Raster, `currentC
 - Esc = Zurück bzw. Dialog schließen, Enter = Hauptaktion (wo eindeutig).
 - Jede Schaltfläche hat einen sichtbaren Text oder `title`.
 - Leere Listen zeigen einen Hinweis, was zu tun ist.
+
+## Spieltisch (Stufe 2, `css/ui-table.css`)
+- **Nur Optik:** Farben, Flächen, Rahmen, Schatten und Schrift. Maße, Raster und Positionen gehören `table-hud.css` (t279), damit Layout-Test und Tutorial-Spotlight stimmen. `tests/test_ui_table_t280b.js` prüft, dass Felder, Hand und Raster keine Höhen oder Zeilen aus `ui-table.css` bekommen.
+- **Vorrang:** über `html.ui280 body #app …` und nicht über die Ladereihenfolge. `table-hud.css` bleibt das letzte Stylesheet.
+- **Flächen:**
+  - Tisch: `table-felt.webp` mit `cover` und Vignette.
+  - Handablage: `hand-leather.webp` mit `cover`.
+  - Panels, Plaketten und Protokoll: Verlauf plus `panel-grain.webp`.
+- **Seitenfarbe:** Der Gegner hat rötliche Kanten (Felder, Plakette, Doktrinfenster), die eigene Seite Messing.
+- **Felder:**
+  - Leere Felder sind eingelassene Mulden.
+  - Zustände (`legal`, `drop-ok`, `picked`, `fx-*`, `sec-*`) werden nie überschrieben, deshalb steht im Selektor eine `:not()`-Liste.
+- **Eckzierden:** `--corners` (vier SVGs, je 30 px, nie gestreckt) für Kartenansicht, Rückfragen und Tutorial-Box; als Klasse `.ui-frame`.
+- **Dialoge:**
+  - Eine Hauptaktion (gold), Nebenaktionen dunkel, Gefahr rot.
+  - Esc schließt den obersten Dialog zuerst: Kartenansicht → Bot-Dialog → Seite.

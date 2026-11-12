@@ -2,6 +2,34 @@
 
 ## Unreleased
 
+- **Alle Bildschirme überarbeitet (t280, Stufe 2): Tisch, Kartenansicht, Rückfragen, Tutorial:**
+  - Messung vorher (Bildschirm-Prüfung nach Stufe 1): 14 Befunde.
+    - 2,5D: „Hauptmenü“, „Aufgeben“ und „Playtest“ lagen über den Reitern Protokoll/Chat. Das waren unsichtbare Knöpfe im zugeklappten „Weitere Befehle“, die trotzdem Platz belegten.
+    - 2,5D bei 1024 px: „Zugende“ und „Optionen“ ragten 8 px aus dem Fenster.
+    - Tutorial-Einstieg: Der Knopf „Tutorial überspringen“ lag 12 px über dem Titel.
+    - Bibliothek bei 1024 px: Die Tag-Auswahl klappte links aus dem Bild.
+  - Flacher Tisch im Designsystem (`web/css/ui-table.css`, nur Optik, das t279-Raster bleibt):
+    - generierte Filzbespannung mit Höhenlinien (`assets/ui/table-felt.webp`)
+    - eingelassene Felder mit roter Gegner- und goldener eigener Seite
+    - Niemandsland als Band mit Frontlinie
+    - Handablage aus Leder (`assets/ui/hand-leather.webp`)
+    - gekörnte Panels und Spielerplaketten mit Seitenfarbe; die Plakette des aktiven Spielers pulsiert sanft, außer bei „reduced motion“
+    - Protokoll-Reiter, Zugtimer und Spaltentitel im neuen Stil
+  - 2,5D-Ansicht:
+    - Kamera-Leiste als Plakette.
+    - Die Gegnerplakette liegt nicht mehr unter der Leiste.
+    - Die Befehlsknöpfe passen in schmale Spalten.
+    - Zugeklappte Befehle sind wirklich ausgeblendet.
+  - Große Kartenansicht (Bibliothek und Partie):
+    - Panel mit Eckzierden (`assets/ui/corner-tr|bl|br.svg`), Werte als Plaketten, runde Schlagwort-Chips.
+    - In der Bibliothek ist „Zum Deck hinzufügen“ die Hauptaktion. „In Bibliothek Ablegen“ heißt jetzt „Aus dem Deck nehmen“, und Schließen ist eine Nebenaktion.
+    - Esc schließt nur die Ansicht statt die ganze Bibliothek.
+  - Rückfragen „Spielstand zurücksetzen“: Panel mit Warnzeichen und Eckzierden. Esc gehört dem Dialog, die Kennung `#dc-reset` war vorher falsch.
+  - Tutorial-Box:
+    - Eckzierden, Körnung, gerahmtes Porträt und runder Fortschrittsbalken.
+    - Der Titel hält Abstand zum Überspringen-Knopf.
+  - Tests: `tests/test_ui_table_t280b.js` (npm test). Cache `divcmd-alpha42b`.
+
 - **Alle Bildschirme überarbeitet (t280, Stufe 1):**
   - Messung vorher (25 Ansichten bei 1024×576, 1280×720 und 1920×1080): 109 Befunde. Im Hauptmenü lagen die neun Knöpfe auf dem Logo, der oberste war abgeschnitten. Der Startknopf lag auf dem Sternenemblem. In der Offiziersakte füllte das Porträt bei 576 px den Schirm, Felder und „Akte anlegen“ lagen darunter. Einzelspieler hatte weiße Standardfelder, „Bereit“ und „Gefecht beginnen“ lagen unter dem Rand. Der Bot-Dialog lag im Seitenfluss und hatte bei Werkseinstellung keinen Ausgang. Die Optionen hatten winzige Reiter mit grünem Aktivzustand. Der Rückblick „Handlung“ lief unten aus dem Bild. Der Bibliothekshinweis beschrieb Klick und Doppelklick vertauscht.
   - Designsystem (`docs/UI_DESIGN_T280.md`, `web/css/ui-system.css`): Abstände, Schriftstufen, Farben, Knöpfe (Haupt/Neben/Gefahr/Zurück mit Hover, Fokusring, gesperrt), dunkle Felder, goldene Regler mit Füllstand, Kästchen, Panels, Bewegung mit reduced-motion.
