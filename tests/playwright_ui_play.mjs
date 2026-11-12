@@ -475,6 +475,14 @@ async function openApp(ctx, tag) {
   await page.waitForSelector('#go-start, #scr-title.on', { timeout: 20000 });
   if (await page.locator('#scr-boot.on #go-start').count()) await page.click('#go-start');
   await sleep(300);
+  // t275: Frisches Profil startet zuerst das Tutorial → über „Tutorial überspringen“ verlassen.
+  await page.waitForSelector('#tut-skip, #scr-setup.on, #scr-title.on', { timeout: 15000 });
+  if (await page.locator('#tut-skip').count()) {
+    await page.click('#tut-skip');
+    await page.click('#tut-confirm .tut-leave', { timeout: 5000 });
+    await page.waitForSelector('#scr-setup.on, #scr-title.on', { timeout: 15000 });
+    report.ok.push('tutorial-skip');
+  }
   if (await page.locator('#scr-setup.on').count()) {
     await page.fill('#setup-name', 'Test, Tester');
     await page.click('#setup-ok');

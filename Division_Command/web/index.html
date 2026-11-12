@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/table-chat.css?v=1">
   <link rel="stylesheet" href="css/hud-pro.css?v=1">
   <link rel="stylesheet" href="css/card-placeholder.css?v=kw1">
+  <link rel="stylesheet" href="css/tutorial.css?v=t275">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
     .title-brand .ver-big { display: none !important; }
@@ -226,6 +227,7 @@
           <button type="button" class="primary" id="go-single">Einzelspieler</button>
           <button type="button" id="go-lan">LAN / Hamachi</button>
           <button type="button" id="go-library">Bibliothek</button>
+          <button type="button" id="go-tutorial">Tutorial</button>
           <button type="button" id="go-hilfe">Hilfe</button>
           <button type="button" id="go-user">Benutzer</button>
           <button type="button" id="go-playtest">Playtest / Logs</button>
@@ -541,6 +543,8 @@
           </nav>
           <div class="hilfe-pages">
             <article class="hilfe-page dossier on" id="hilfe-menu">
+              <h2 id="tutorial">Tutorial</h2>
+              <p>Die Grundausbildung: ein geführtes Übungsgefecht von etwa zehn Minuten mit Hauptmann Kessler. Ziel und Siegpunkte, AP, Hand, Einheit legen, Eingraben, Angriff und Gegenschlag, Steilfeuer, Feindkontakt, Support, Ausrüstung, Soforteinsätze, Doktrinen, Zugende und Deckbau (60 Karten + 2 Doktrinen, Nationen frei mischbar, Kopien Gold 1 · Silber 2 · Bronze 4). Es startet beim allerersten „Spiel starten“ von selbst und lässt sich jederzeit überspringen. Wiederholen: dieser Menüpunkt. Das Tutorial nutzt die echten Regeln, aber eine eigene Partie; Decks, Benutzer und Spielstände bleiben unberührt.</p>
               <h2 id="single">Einzelspieler</h2>
               <p>Spiele gegen den Bot. Du wählst dein Deck, das Deck des Bots und den Gegner: Test-Bot (Analyse), Schloter-Bot (Prozente) oder Hotseat. Das Bot-Verhalten stellst du in den Optionen ein. Der Bot nutzt denselben Kartenpool und reagiert auf deine Züge. Ideal zum Lernen der Regeln und Testen von Decks.</p>
               <h2 id="lan">LAN / Hamachi</h2>
@@ -979,7 +983,9 @@
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=st1"></script>
   <script src="js/ui/end-screen.js?v=1"></script>
-  <script src="js/ui/app.js?v=alpha41c"></script>
+  <script src="js/ui/app.js?v=alpha41d"></script>
+  <script src="js/tutorial/scenario.js?v=t275"></script>
+  <script src="js/ui/tutorial.js?v=t275"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
   <script src="js/ui/audio-options.js?v=1"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>
@@ -1531,15 +1537,44 @@
       window.addEventListener('focus', tryPlay);
       document.getElementById('title-root').addEventListener('pointerdown', tryPlay);
       document.getElementById('title-root').addEventListener('click', tryPlay);
+      /**
+       * t275: Erststart-Weiche. Beim allerersten Start (kein Tutorial-Merker, kein Benutzer) läuft
+       * zuerst das Tutorial als eigene Instanz; danach (oder nach Überspringen) die bisherige Folge.
+       * @param {Function} after bisheriger Ablauf
+       */
+      function tutorialGate(after) {
+        if (!window.DCTutorial || !DCTutorial.shouldAutoStart()) { after(); return; }
+        DCTutorial.start({ onExit: function () { returnFromTutorial(after); } });
+      }
+      /**
+       * t275: Rückkehr vom Tutorial-Tisch ins Titelmenü (Musik wie gewohnt), dann `after`.
+       * @param {Function} [after]
+       */
+      function returnFromTutorial(after) {
+        if (window.dcUnmountMatch) window.dcUnmountMatch();
+        if (window.dcSetTable) window.dcSetTable(false);
+        var trBack = document.getElementById('title-root');
+        if (trBack) trBack.style.display = 'flex';
+        if (after) after(); else show('scr-title');
+        applyAudio();
+      }
+      document.getElementById('go-tutorial').onclick = function () {
+        if (!window.DCTutorial) return;
+        DCTutorial.start({ onExit: function () { returnFromTutorial(); } });
+      };
       document.getElementById('go-start').onclick = function () {
         var tr = document.getElementById('title-root');
         if (tr) tr.classList.remove('boot-intro', 'logo-in', 'btn-in');
+        tutorialGate(afterStart);
+      };
+      /** Bisheriger Ablauf von „Spiel starten“: Offiziersakte beim ersten Mal, sonst Hauptmenü. */
+      function afterStart() {
         if (!loadUsers().length) {
           kitDraft.setup = { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Fhr', facing: 'left' };
           paintKit('setup');
           show('scr-setup');
         } else show('scr-title');
-      };
+      }
       (function bootIntro() {
         var tr = document.getElementById('title-root');
         if (!tr || !tr.classList.contains('boot-intro')) return;

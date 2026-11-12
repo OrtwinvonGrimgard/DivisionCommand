@@ -257,6 +257,10 @@
   function showMatchEnd(st) {
     if (!isTerminal(st)) return;
     window.dcTimerHold = true;
+    if (mode === 'tutorial') { // t275: das Tutorial zeigt seinen eigenen Siegmoment, kein Endbild
+      if (scripted && scripted.onEnd) { try { scripted.onEnd(st); } catch (eEnd) { console.warn('[tutorial]', eEnd); } }
+      return;
+    }
     eventQueue = []; eventPlaying = false; eventFlying = false; armedPlay = null;
     document.querySelectorAll('[data-uid]').forEach(function (el) { clearTimeout(el._dcActTimer); });
     var ov = document.getElementById('overlay'); if (ov) { ov.innerHTML = ''; ov.style.display = 'none'; }
@@ -301,6 +305,8 @@
   var engine = null;
   var you = 0;
   var mode = 'hotseat';
+  /** t275: Haken der geskripteten Partie (Tutorial): `{botStep, onEnd, delayMs}` oder null. */
+  var scripted = null;
   var previewUid = null;
 
   /* Feste Knöpfe der Seite einmal verdrahten. */
@@ -723,6 +729,7 @@
     if (action.type === 'END_TURN') {
       eventQueue = [];
       seenEvents = (engine.state.events || []).length;
+      if (mode === 'tutorial') { maybeBot(); return res; } // t275: kein Bestätigungsdialog im Tutorial
       showEndTurnGate();
       return res;
     }
@@ -740,7 +747,7 @@
     var botQueued = false;
     function maybeBot() {
     if (!engine || isTerminal(engine.state)) return;
-    if (mode !== 'bot') return;
+    if (mode !== 'bot' && mode !== 'tutorial') return;
     if (window.dcTimerHold) {
       var waitingEngine = engine;
       window.setTimeout(function () { if (engine === waitingEngine) maybeBot(); }, 500);
@@ -757,7 +764,7 @@
       if (engine !== queuedEngine) return;
       botQueued = false;
       botTick();
-    }, (window.DCBot && DCBot.cfg && DCBot.cfg.delayMs) || 350);
+    }, (mode === 'tutorial' && scripted && scripted.delayMs) || (window.DCBot && DCBot.cfg && DCBot.cfg.delayMs) || 350);
   }
 
   /* Einen Bot-Zug ausführen und bei Bedarf den nächsten. */
@@ -795,7 +802,7 @@
     }
     function botTick() {
     if (!engine || isTerminal(engine.state)) return;
-    if (mode !== 'bot') return;
+    if (mode !== 'bot' && mode !== 'tutorial') return;
     if (window.dcTimerHold) {
       var waitingEngine = engine;
       window.setTimeout(function () { if (engine === waitingEngine) botTick(); }, 400);
@@ -807,6 +814,7 @@
       try { if (!eventPlaying) showPending(); } catch (e) {}
       return;
     }
+    if (mode === 'tutorial') { scriptedTick(); return; }
     var mark = engine.state.turn + ':' + engine.state.active;
     if (botMark !== mark) { botMark = mark; botFail = {}; botSteps = 0; }
     botSteps += 1;
@@ -858,6 +866,42 @@
     }
   }
 
+
+  /**
+   * t275: Ein Schritt des geskripteten Gegners (Tutorial). `scripted.botStep` liefert die
+   * nächste Aktion oder null (warten, bis das Tutorial weiterschaltet; dann neu prüfen).
+   */
+  function scriptedTick() {
+    if (!engine || !scripted || isTerminal(engine.state)) return;
+    var pid = engine.state.pending ? engine.state.pending.player : engine.state.active;
+    if (pid !== 1) return;
+    var act = null;
+    try { act = scripted.botStep(engine); } catch (eStep) { act = null; }
+    var tickEngine = engine;
+    var delay = scripted.delayMs || 900;
+    if (!act) {
+      window.setTimeout(function () { if (engine === tickEngine) maybeBot(); }, 400);
+      return;
+    }
+    var res;
+    try { res = engine.dispatch(act); } catch (err) { res = { ok: false, error: String(err && err.message || err) }; }
+    if (res && res.ok && act.type === 'PLAY') audioCall('playForCard', 'deploy', engine.byId[(engine.findInst(act.uid) || { inst: {} }).inst.cardId]);
+    else if (res && res.ok && act.type === 'ATTACK') audioCall('playSfx', 'attack');
+    else if (res && res.ok && act.type === 'END_TURN') audioCall('playSfx', 'turn');
+    if (isTerminal(engine.state)) { render(); showMatchEnd(engine.state); return; }
+    var pend = engine.state.pending;
+    render();
+    if (pend && pend.player !== 1) {
+      try { if (!eventPlaying) showPending(); } catch (e) {}
+      presentNewEvents();
+      return;
+    }
+    closeStaleWaitOverlay();
+    presentNewEvents();
+    if (engine.state.active === 1 || (engine.state.pending && engine.state.pending.player === 1)) {
+      window.setTimeout(function () { if (engine === tickEngine) botTick(); }, delay);
+    }
+  }
 
   /**
    * Prüft, ob der Eröffnungsmünzwurf gerade sichtbar auf „Los“ wartet.
@@ -1040,7 +1084,7 @@
         if (!ov || ov.style.display === 'none' || !ov.querySelector('.wait-react')) return;
         if (closeStaleWaitOverlay()) return;
         var waited = Date.now() - waitWatchdogSince;
-        if (mode === 'bot' && waited > 4000 && !eventPlaying) {
+        if ((mode === 'bot' || mode === 'tutorial') && waited > 4000 && !eventPlaying) {
           // Ein verlorener Bot-Timer (botQueued ohne Lauf) wird nach 8 s freigegeben.
           if (botQueued && waited > 8000) botQueued = false;
           if (!botQueued) { maybeBot(); waitWatchdogSince = Date.now(); }
@@ -1883,7 +1927,7 @@
       bombTick = window.setInterval(function () {
         if (!engine || isTerminal(engine.state)) return;
         try { guardPendingUi(true); } catch (eGuard) {} // t259: Dialoge nie dauerhaft verlieren
-        if (window.dcTimerHold) return;
+        if (window.dcTimerHold || mode === 'tutorial') return; // t275: kein Zugtimer im Tutorial
         if (bombLeft > 0) {
           bombLeft -= 1;
           paintBomb();
@@ -3239,7 +3283,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     } else {
       closeStaleWaitOverlay();
     }
-    if (mode === 'bot' && !window.dcTimerHold && (st.active === 1 || (st.pending && st.pending.player === 1))) {
+    if ((mode === 'bot' || mode === 'tutorial') && !window.dcTimerHold && (st.active === 1 || (st.pending && st.pending.player === 1))) {
       window.setTimeout(maybeBot, 200);
     }
   }
@@ -3323,6 +3367,56 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
   window.dcSetYou = function (id) { you = id; }; // globale Schnittstelle der Seite
   window.dcGetYou = function () { return you; };
   window.dcSetMode = function (m) { mode = m || 'lan'; }; // globale Schnittstelle der Seite
+  /**
+   * t275: Startet eine vom Aufrufer gebaute, geskriptete Partie (Tutorial) auf dem echten Tisch.
+   * Die Engine gehört dem Aufrufer und ist eine eigene Instanz. Kein Münzwurf, kein Zugtimer,
+   * kein Playtest-Protokoll, kein Endbild, kein Rematch-Setup.
+   * @param {{engine: object, botStep: function(object): (object|null), onEnd: function(object), delayMs?: number}} opts
+   * @returns {boolean} true, wenn der Tisch steht
+   */
+  window.dcStartScripted = function (opts) {
+    if (!opts || !opts.engine) return false;
+    clearMatchPresentation();
+    engine = opts.engine; mode = 'tutorial'; you = 0; scripted = opts;
+    matchSetup = null; endHandledKey = null;
+    if (window.dcMountMatch) window.dcMountMatch();
+    bindTableControls();
+    seenEvents = (engine.state.events || []).length;
+    window.dcTimerHold = false;
+    if (window.dcSetTable) window.dcSetTable(true);
+    var tr = document.getElementById('title-root');
+    if (tr) tr.style.display = 'none';
+    document.body.classList.add('dc-tutorial');
+    render();
+    return true;
+  };
+  /**
+   * t275: Beendet die geskriptete Partie und verwirft ihre Engine. Der Aufrufer zeigt danach das Menü.
+   */
+  window.dcEndScripted = function () {
+    if (mode !== 'tutorial') return;
+    clearMatchPresentation();
+    engine = null; scripted = null; mode = 'hotseat'; matchSetup = null; endHandledKey = null; tableBound = false;
+    window.dcTimerHold = true;
+    document.body.classList.remove('dc-tutorial');
+  };
+  /**
+   * t275: Nach „Zurück“ im Tutorial (Engine-Stand ersetzt): Meldungen verwerfen, Tisch neu zeichnen.
+   */
+  window.dcScriptedSync = function () {
+    if (mode !== 'tutorial' || !engine) return;
+    eventQueue = []; eventPlaying = false; eventFlying = false;
+    seenEvents = (engine.state.events || []).length;
+    armedPlay = null; placing = false;
+    document.body.classList.remove('dc-armed', 'dc-dragging');
+    hideDragGhost();
+    var ov = document.getElementById('overlay');
+    if (ov) { ov.innerHTML = ''; ov.style.display = 'none'; }
+    window.dcTimerHold = false;
+    render();
+  };
+  /** t275: Ist gerade die geskriptete Partie (Tutorial) aktiv? @returns {boolean} */
+  window.dcIsScripted = function () { return mode === 'tutorial' && !!scripted; };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bindChrome);
   else bindChrome();
 })();

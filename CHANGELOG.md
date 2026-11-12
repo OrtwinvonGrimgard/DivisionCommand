@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- **Tutorial „Grundausbildung“ (t275):**
+  - Beim allerersten „Spiel starten“ (kein Merker, noch kein Benutzer) läuft zuerst ein geführtes Übungsgefecht als eigene Instanz, danach Offiziersakte bzw. Hauptmenü. Ab dem zweiten Start direkt ins Menü.
+  - 6 Kapitel, 25 Schritte, etwa 10 Minuten, mit Ausbilder Hauptmann Kessler: Ziel 5 SP, Front, AP (beide 5 in Zug 1), Hand, Einheit legen, Eingraben, Angriff und Gegenschlag, Steilfeuer I–V, AP-Reserve, Zugende, Feindkontakt (Deckung suchen, 2 AP wie aufgedruckt), Doktrinen, Support, Ausrüstung, Soforteinsatz, Sieg über die Elite, Deckbau (60 + 2, Nationen mischbar, Gold 1 · Silber 2 · Bronze 4, Elite als Merkmal).
+  - Echte Engine-Regeln mit festen Decks und Zugfolge; falsche Aktionen werden mit Hinweis geblockt. Spotlight mit Ausschnitt, Pulsrahmen, wandernder Pfeil, schwebende Schadenszahlen und SP, Siegbanner, Töne aus dem vorhandenen Satz, „Zurück“ und „Tutorial überspringen“ (mit Rückfrage, auch Esc).
+  - Eigenständig: eigene Engine, kein Timer, kein Playtest-Protokoll, keine Benutzer/Decks/Spielstände; einziger Speicher `dc_tutorial_done`. Wiederholen über den neuen Menüpunkt „Tutorial“.
+  - Neu `web/js/tutorial/scenario.js`, `web/js/ui/tutorial.js`, `web/css/tutorial.css`, Haken in `app.js`, Design `docs/TUTORIAL_T275.md`, Tests `tests/test_tutorial_t275.js` (npm test) und `tests/playwright_tutorial_t275.mjs`; `ui-play` überspringt das Tutorial beim frischen Profil. Hilfe (Menüpunkte). Cache `divcmd-alpha41d`.
+
 - **Analyse und Stand t271:**
   - Feindkontakt-Fenster bietet nur noch Reaktionen an, deren Bedingung erfüllt ist: Militärische Ehren (Veteran), Kriegsgericht (zwei Fronteinheiten), Rationen (Infanterie), Minen legen (freier Platz), Napalm (gegnerische Front). Vorher scheiterte die Wahl, und das Fenster kam wieder (ui-play Seed 1234). Neu `_reactUsable`, Test `tests/test_react_usable_t271.js`; `ui-play` drückt auch „Bestätigen und weitergeben“.
   - Balance bestätigt ohne Änderung: Starter 48,3–52,1 %, Misch 49,1–51,0 %, Startspieler 48,7 / 49,3 %.
