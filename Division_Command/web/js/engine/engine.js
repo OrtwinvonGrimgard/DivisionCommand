@@ -1084,6 +1084,27 @@
      * @param {string} code
      * @returns {boolean}
      */
+    /**
+     * t283: Parameter eines Effektcodes aus dem Katalog lesen (erste Karte mit diesem Code), mit Standardwert.
+     * Für Effekte, deren Auflösung die Karte nicht mehr kennt (Napalm-Brand, Eifer-Nachschaden, Schläfer).
+     * @param {string} code Effektcode
+     * @param {string} key Parametername
+     * @param {*} dflt Standardwert
+     * @returns {*}
+     */
+    _codeParam(code, key, dflt) {
+      this._codeParamCache = this._codeParamCache || {};
+      if (!(code in this._codeParamCache)) {
+        let found = null;
+        for (const id in this.byId) {
+          const e = (this.byId[id].effects || []).find((x) => x.code === code);
+          if (e) { found = e.param || {}; break; }
+        }
+        this._codeParamCache[code] = found || {};
+      }
+      const v = this._codeParamCache[code][key];
+      return v == null ? dflt : v;
+    }
     _hasDoctrine(p, code) {
       return (p.doctrines || []).some((d) => {
         const def = this.defOf(d);
@@ -1173,7 +1194,7 @@
       if (inst.flags && inst.flags.umgehenAtkUntil === this.state.turn) atk += Number(inst.flags.umgehenAtk || 0);
       if (inst.flags && inst.flags.tempAtkUntil === this.state.turn && inst.flags.tempDef) {/* def baked */}
       if (inst.flags && inst.flags.commandAtkUntil === this.state.turn) atk += Number(inst.flags.commandAtkBonus || 2);
-      if (inst.flags && inst.flags.eiferUntil === this.state.turn) atk += 3;
+      if (inst.flags && inst.flags.eiferUntil === this.state.turn) atk += Number(this._codeParam('ZEAL', 'atk', 3));
       if (inst.flags && inst.flags.standUntil === this.state.turn) atk += 2;
       if (inst.flags && inst.flags.formUntil === this.state.turn) atk += 1;
       if (inst.flags && inst.flags.volkUntil === this.state.turn) atk += 2;
@@ -1267,7 +1288,7 @@
       if (inst.flags && inst.flags.kavUntil === this.state.turn) atkWhy.push('Eingriff der Kavallerie: +2 Angriff');
       if (inst.flags && inst.flags.lageUntil === this.state.turn) atkWhy.push('Lagebesprechung: +1 Angriff');
       if (inst.flags && inst.flags.ehrenUntil === this.state.turn) atkWhy.push('Militärische Ehren: +2 Angriff');
-      if (inst.flags && inst.flags.eiferUntil === this.state.turn) atkWhy.push('Religiöser Eifer: +3 Angriff');
+      if (inst.flags && inst.flags.eiferUntil === this.state.turn) atkWhy.push('Religiöser Eifer: +' + this._codeParam('ZEAL', 'atk', 3) + ' Angriff');
       if (inst.flags && inst.flags.standUntil === this.state.turn) atkWhy.push('Standgericht: +2 Angriff');
       if (inst.flags && inst.flags.formUntil === this.state.turn) atkWhy.push('Standhafte Formation: +1 Angriff');
       if (inst.flags && inst.flags.volkUntil === this.state.turn) atkWhy.push('Wille des Volkes: +2 Angriff');
@@ -1744,7 +1765,7 @@
         this._onEnter(found, 'support');
         if (this._tacOnSupport) this._tacOnSupport(found);
         this._applySatAura(p);
-        if ((def.effects || []).some((x) => x.code === 'SLEEPER')) found.flags.sleeper = 3;
+        if ((def.effects || []).some((x) => x.code === 'SLEEPER')) { const slp = (def.effects.find((x) => x.code === 'SLEEPER').param) || {}; found.flags.sleeper = Number(slp.turns || 3); found.flags.sleeperMaxAp = Number(slp.maxAp || 3); }
         if ((def.effects || []).some((x) => x.code === 'NO_FACE_DOWN')) {
           this.frontList(this.opponent(p.id)).forEach((l) => { l.inst.facedown = false; });
         }
@@ -2217,7 +2238,7 @@
         const pl = this.player(pid);
         if (pend.card) pl.grave.push(pend.card);
         this.state.pending = null;
-        this._log(this.defOf(loc.inst).name + ' +3 A bis Zugende, danach 2 Schaden.');
+        this._log(this.defOf(loc.inst).name + ' +' + this._codeParam('ZEAL', 'atk', 3) + ' A bis Zugende, danach ' + this._codeParam('ZEAL', 'after', 2) + ' Schaden.');
         return { ok: true };
       }
       if (pend.kind === 'clear-mine') {
@@ -3898,6 +3919,12 @@
         }
       } else if (code === 'BUFF_ALL_OWN') {
         const filter = par.filter;
+        // t283: Param `vs_observed` – eine gegnerische Fronteinheit gilt danach als beobachtet (verdeckte zuerst, sonst stärkste).
+        if (par.vs_observed) {
+          const foes = this.frontList(this.opponent(p.id)).filter((l) => !(l.inst.flags && l.inst.flags.observed));
+          foes.sort((x, y) => ((y.inst.facedown ? 1 : 0) - (x.inst.facedown ? 1 : 0)) || ((Number(this.defOf(y.inst).atk) || 0) - (Number(this.defOf(x.inst).atk) || 0)));
+          if (foes[0]) { foes[0].inst.flags = foes[0].inst.flags || {}; foes[0].inst.flags.observed = true; this._log('Planfeuer: ' + (foes[0].inst.facedown ? 'verdeckte Einheit' : this.defOf(foes[0].inst).name) + ' gilt als beobachtet.'); }
+        }
         const units = this.frontList(p);
         units.forEach((l) => {
           const d = this.defOf(l.inst);
@@ -4568,7 +4595,7 @@
       this._evt('shout', { name: 'Napalm', image: 'Napalm.jpg' }, 'Napalm!');
       this._damage(loc.inst, dmg, { tag: 'air' });
       if (this._isDead(loc.inst)) this._destroy(loc);
-      else loc.inst.flags.napalm = true;
+      else loc.inst.flags.napalm = Number(this._codeParam('NAPALM', 'tick', 1)); // Brandschaden je Zug (Param `tick`)
     }
     /**
      * Führt den Napalm-Soforteinsatz auf das gewählte Ziel aus.
@@ -4583,10 +4610,10 @@
       this.state.pending = null;
       if (!loc || loc.zone !== 'front') return { ok: true };
       if (this._handHasEffect(loc.player, 'CANCEL_AIR_DAMAGE')) {
-        this.state.pending = this._sealPending({ kind: 'sam', player: loc.player.id, spell: true, napalm: true, targetUid: uid, dmgToT: 3, prompt: 'Napalm' });
+        this.state.pending = this._sealPending({ kind: 'sam', player: loc.player.id, spell: true, napalm: true, targetUid: uid, dmgToT: Number(this._codeParam('NAPALM', 'now', 3)), prompt: 'Napalm' });
         return { ok: true, need: 'sam' };
       }
-      this._applyNapalm(loc, 3);
+      this._applyNapalm(loc, Number(this._codeParam('NAPALM', 'now', 3)));
       return { ok: true };
     }
     /**
@@ -5416,7 +5443,8 @@
     _damage(inst, amount, meta) {
       // Equipment: ignore first damage once
       if (inst && amount > 0) {
-        const ignoreEq = (inst.attachments || []).find((eq) => (this.defOf(eq).effects || []).some((x) => x.code === 'EQUIP_IGNORE_FIRST_DAMAGE') && !(eq.flags && eq.flags.usedIgnore));
+        // t283: Param `untouchableFirst:false` schaltet den Schutz ab (Standard an).
+        const ignoreEq = (inst.attachments || []).find((eq) => (this.defOf(eq).effects || []).some((x) => x.code === 'EQUIP_IGNORE_FIRST_DAMAGE' && (x.param || {}).untouchableFirst !== false) && !(eq.flags && eq.flags.usedIgnore));
         if (ignoreEq) {
           ignoreEq.flags = ignoreEq.flags || {};
           ignoreEq.flags.usedIgnore = true;
@@ -5655,7 +5683,9 @@
       }
       if (loc.zone === 'front' && def.typ === 'Einheit') {
         const killerSide = this.opponent(loc.player.id);
-        if (this._hasDoctrine(killerSide, 'BLOOD_AP')) {
+        // t283: Param `from` – 'enemy-front-unit' (Standard) zählt gegnerische Fronteinheiten, 'enemy-unit' jede gegnerische Einheit.
+        const bloodFrom = (this._dokParam && (this._dokParam(killerSide, 'BLOOD_AP') || {}).from) || 'enemy-front-unit';
+        if (this._hasDoctrine(killerSide, 'BLOOD_AP') && (bloodFrom === 'enemy-front-unit' || bloodFrom === 'enemy-unit')) {
           killerSide.flags.bloodAp = (killerSide.flags.bloodAp || 0) + 1;
           this._log(killerSide.name + ': Tiefenverteidigung merkt +1 AP (gegnerische Fronteinheit zerstört).');
         }
@@ -6555,7 +6585,7 @@
       this.state.players.forEach((pl) => {
         this.frontList(pl).forEach((l) => {
           if (l.inst.flags && l.inst.flags.eiferUntil === this.state.turn) {
-            this._damage(l.inst, 2, { tag: 'eifer' });
+            this._damage(l.inst, Number(this._codeParam('ZEAL', 'after', 2)), { tag: 'eifer' });
             l.inst.flags.eiferUntil = 0;
             if (this._isDead(l.inst)) this._destroy(l);
           }
@@ -6639,7 +6669,7 @@
           s.flags.sleeper -= 1;
           if (s.flags.sleeper <= 0) {
             const opp = this.opponent(nxt.id);
-            const pool = this.frontList(opp).filter((l) => Number(this.defOf(l.inst).ap || 99) <= 3);
+            const pool = this.frontList(opp).filter((l) => Number(this.defOf(l.inst).ap || 99) <= Number(s.flags.sleeperMaxAp || 3)); // Param `maxAp`
             if (pool.length) {
               const pick = pool[Math.floor(this.rand() * pool.length)];
               this._destroy(pick);
@@ -6682,7 +6712,7 @@
         if (l.inst.flags) l.inst.flags.paused = false;
         if (l.inst.flags && l.inst.flags.dekon) l.inst.flags.exhausted = true;
         if (l.inst.flags && l.inst.flags.eiferUntil === this.state.turn) {
-          this._damage(l.inst, 2, { tag: 'eifer' });
+          this._damage(l.inst, Number(this._codeParam('ZEAL', 'after', 2)), { tag: 'eifer' });
           l.inst.flags.eiferUntil = 0;
         }
         if (l.inst.flags && l.inst.flags.hideUntilOwner) {
@@ -6712,8 +6742,9 @@
         if (l.inst.flags && l.inst.flags.noAttackHold) l.inst.flags.noAttackHold = false;
         else if (l.inst.flags && l.inst.flags.noAttack) l.inst.flags.noAttack = false;
         if (l.inst.flags && l.inst.flags.napalm) {
-          this._damage(l.inst, 1, { tag: 'napalm' });
-          this._log(this.defOf(l.inst).name + ' brennt (Napalm 1).');
+          const nTick = l.inst.flags.napalm === true ? 1 : Number(l.inst.flags.napalm) || 1;
+          this._damage(l.inst, nTick, { tag: 'napalm' });
+          this._log(this.defOf(l.inst).name + ' brennt (Napalm ' + nTick + ').');
         }
         // heal equipment
         l.inst.attachments.forEach((eq) => {

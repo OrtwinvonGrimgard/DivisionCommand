@@ -36,7 +36,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "A033",
     "keywords": [
       "Nachsetzen"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_erstewelle",
@@ -61,7 +62,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "A036",
     "keywords": [
       "Staffelangriff"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_zweitewelle",
@@ -93,7 +95,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "A040",
     "keywords": [
       "Abschirmung"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_stosskolonne",
@@ -125,7 +128,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "A041",
     "keywords": [
       "Heranführung"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_nachruecker",
@@ -151,7 +155,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "flavor": "Jemand ist ausgefallen. Jemand füllt die Lücke.",
     "image": "infanterie/A045.jpg",
     "max_copies": 4,
-    "collector": "A045"
+    "collector": "A045",
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_dschungel",
@@ -182,7 +187,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "A049",
     "keywords": [
       "Platztausch"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_frei",
@@ -212,7 +218,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "A050",
     "keywords": [
       "Abschirmung"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_himmel",
@@ -243,7 +250,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "A053",
     "keywords": [
       "Staffelangriff"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_jaeger",
@@ -277,7 +285,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "A054",
     "keywords": [
       "Zuteilung"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_mg",
@@ -309,7 +318,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "A056",
     "keywords": [
       "Zuteilung"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_eingreif",
@@ -344,7 +354,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "A058",
     "keywords": [
       "Heranführung"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_pak",
@@ -380,7 +391,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "A060",
     "keywords": [
       "Stellungswechsel"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_sich",
@@ -406,7 +418,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "collector": "A067",
     "keywords": [
       "Zuteilung"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_b_werkschutz_22",

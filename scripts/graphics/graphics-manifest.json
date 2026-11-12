@@ -1086,8 +1086,8 @@
    "name": "Freiwilligenzug",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "0d45466f27f315a0475ad7e52db3a4a1aa2881ab8800aa1453e73bbc7c9f2196",
+   "rarity": "bronze",
+   "source_record_sha256": "33573515e0d2cb2d9b5bde5e591e725e642836a881c86d1061b1fd24f1d4bbdd",
    "kurz": "Kostet 1 weniger, wenn in diesem Zug schon Infanterie gespielt wurde.",
    "keywords": [
     "Nachsetzen"
@@ -1118,8 +1118,8 @@
    "name": "Erste Welle",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "a9c38760bb7332896693da9b1ff3da3b8f08604c7537a5be7de90ccd314b8416",
+   "rarity": "bronze",
+   "source_record_sha256": "8ebb863342ac0c51ca10853fcac9440b2ff28090682ace835e87fbac6084dc45",
    "kurz": "",
    "keywords": [
     "Staffelangriff"
@@ -1150,8 +1150,8 @@
    "name": "Zweite Welle",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "ebc7d970e56a9c4e5afd5e289b1c60cfbafc6beeaf461e5629cfa9ee48d9ce61",
+   "rarity": "bronze",
+   "source_record_sha256": "4f16118b462480a7bfe2e8846d07fff9775093f44b2c6dc66495eaed349255d2",
    "kurz": "+1 ATK, wenn in diesem Zug schon eine eigene Infanterie gespielt wurde.",
    "keywords": [
     "Abschirmung"
@@ -1182,8 +1182,8 @@
    "name": "Stoßkolonne",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "72d610db16a72ab9eeb4be7f04f6003d4a12e46723621039a00fa4682f9579be",
+   "rarity": "bronze",
+   "source_record_sha256": "e98df580771f094669fc226d609f8dcc0299ad6ae90aa2247bb210a8bf4b5c9b",
    "kurz": "+2 ATK gegen ein Ziel, das in diesem Zug noch nicht angegriffen wurde.",
    "keywords": [
     "Heranführung"
@@ -1214,8 +1214,8 @@
    "name": "Nachrücker",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "fb15956ad80a6ffcffa8cbe794f622adc1901ccd01295a6d789602e0acded51d",
+   "rarity": "bronze",
+   "source_record_sha256": "592f7a83cad10ef80cda52cde8e9c1eea90fba05f0ed6cf734e73b28fa53501d",
    "kurz": "Kann für 0 AP gespielt werden, wenn in diesem Zug eine eigene Infanterie zerstört wurde.",
    "keywords": [],
    "printed_stats": {
@@ -1244,8 +1244,8 @@
    "name": "Dschungelkrieger",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "5557f4285d75056b99a0f9a4dd044d84577f47d21ec133b7c380863f3b127f4c",
+   "rarity": "bronze",
+   "source_record_sha256": "83f6c8fc9f4a5afcb5283a533ece40b6d0f2f2ed3983f84ae3a8d167d26a23fb",
    "kurz": "Nach dem Angriff verdeckt. Erst nach Aufklärung wieder angreifbar.",
    "keywords": [
     "Platztausch"
@@ -1278,8 +1278,8 @@
    "name": "Freischärler",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "737b512dc5e4702f0b70d0b50cfbd4859237516b6261106f611768018c639ee6",
+   "rarity": "bronze",
+   "source_record_sha256": "58e2a5c4a99b6981732baae9eee9792e5e8bf7cecba758f736900dee644c9eaa",
    "kurz": "Überfall: +1 Schaden wenn diese Einheit den Erstschlag führt.",
    "keywords": [
     "Abschirmung"
@@ -1311,8 +1311,8 @@
    "name": "Infanteriebataillon Himmelhund",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "5be01ff86598b3b35765abbd09ca0f440b9cb71bfbb69c899612242ed08a4a7e",
+   "rarity": "bronze",
+   "source_record_sha256": "7273bb894e81e32699ca9c2d9e4656fe0002ada9eb611c02b2b598160ecbc4d6",
    "kurz": "Schulterschluss nur zu zweit: erst die gewählte, dann die zweite Einheit; 1 AP, beide erschöpft.",
    "keywords": [
     "Staffelangriff"
@@ -1345,8 +1345,8 @@
    "name": "Jägerstellung",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "643694e622a9092ee597b93b1f8350f0ef082948f7289a1d7f48e48eec88e43b",
+   "rarity": "bronze",
+   "source_record_sha256": "cdf437516f566f73936c499d614013ccebfff7e4d8a3bd56effa007497623de9",
    "kurz": "Richtmine: bei Angriff zuerst 3 Schaden am Angreifer nach NML-Minen, dann Kampf.",
    "keywords": [
     "Zuteilung"
@@ -1379,8 +1379,8 @@
    "name": "MG-Stellung",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "6020ab31b01e74c335e1c87b029a43ce757ef384a7ec256dd2479f3d4c3d0f00",
+   "rarity": "bronze",
+   "source_record_sha256": "d088ac424231218950b34f124e262d7712f648616f93c27ee29ffdec939bb3ec",
    "kurz": "Niederhalten: getroffene feindliche Infanterie darf im nächsten Zug ihres Besitzers nicht angreifen.",
    "keywords": [
     "Zuteilung"
@@ -1414,8 +1414,8 @@
    "name": "Mobile Eingreiftruppe",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "7fb81f7ab967dfaa6380c1c67ee8e8a54799ed8b30af6ce193a7dc86c074f42a",
+   "rarity": "bronze",
+   "source_record_sha256": "320b93d3b7542364d4d42a3b1f0bc127999bcdc4454bbd3f5bb2e286052de49e",
    "kurz": "Verschieben (2 AP): leerer Frontslot, kein Feind gegenüber. Währenddessen Lufteinheit.",
    "keywords": [
     "Heranführung"
@@ -1449,8 +1449,8 @@
    "name": "Panzerabwehrtrupp",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "eadb1ffd185843ed1402e671dce0a6bbd4e7dc7ab7ee6b379f18c24771823ed8",
+   "rarity": "bronze",
+   "source_record_sha256": "15510d8c0caa2bc078efd0d453aef16ee9fe9e612b6abb484cee2ab1ff203292",
    "kurz": "Panzerfaust: +5 ATK und +5 DEF gegen Gepanzerte.",
    "keywords": [
     "Stellungswechsel"
@@ -1484,8 +1484,8 @@
    "name": "Sicherungstrupp",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "71128e3900339a931eea40f2c2d878667ccd65bd94ca3842e30c8969a08c6920",
+   "rarity": "bronze",
+   "source_record_sha256": "c19c6e4de567f283288f7a7f9b90f78e7a033dc4e5752abe9e2616284a2b7e9c",
    "kurz": "",
    "keywords": [
     "Zuteilung"
@@ -4444,8 +4444,8 @@
    "name": "Mittlerer Panzer Donnerkeil",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "f622fda5083f6489b73f1c94931b7dfd597b15bfecab68a20bfbaeeab208f96e",
+   "rarity": "bronze",
+   "source_record_sha256": "03ffb7f8c9c143696eb9797f2d8cd5a10862e4a7f439a316e8658df957261d6f",
    "kurz": "Feuerüberlegenheit: +1 Schaden gegen ungepanzerte Einheiten.",
    "keywords": [
     "Ablösung"
@@ -4480,8 +4480,8 @@
    "name": "Panzertrupp Hammer",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "ec69d3bb9beb8884c93c0370832b10e536df2679651822f1e9ceeb3ea252fc3c",
+   "rarity": "bronze",
+   "source_record_sha256": "5e3ef81cd45e46263ac531174d845e6420580abd2444f3cf91a17cfb190142e3",
    "kurz": "Wuchtgeschoss: ignoriert 2 DEF beim Angriff auf Gepanzerte.",
    "keywords": [
     "Stellungswechsel"
@@ -4516,8 +4516,8 @@
    "name": "Schützenpanzer",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "2b2484388e895f51b042e8c3a84903307b0d4956a948294cc2fe665a40e51727",
+   "rarity": "bronze",
+   "source_record_sha256": "815fa665f8201d5898e1855f69f042e7f7ca8bb8f87bdd196f2cd7e30c2dd080",
    "kurz": "Benachbarte Infanterie +1 ATK / +1 DEF.",
    "keywords": [],
    "printed_stats": {
@@ -6526,15 +6526,15 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "bronze",
-   "source_record_sha256": "ac32d8ef6f0148e25ca85e10c9fb45802d234e8e1916e45cdf38d2c703e0b4f5",
+   "source_record_sha256": "ca270c796cfc958a6379ffe91b4f6c3961e745a367fb54eb84559a073e69e236",
    "kurz": "",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 4,
+    "def": 2,
     "tags": [
      "panzer"
     ]
@@ -6549,7 +6549,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "25d2dc07ab75440e6f92763dfac71276fba7d197637b420d15f095e3eeb5901b"
+   "output_sha256": "ee3a54fb820d37ea8e9e9a3a835e5fd6b051da2ef704400fe33a80196e731fbc"
   },
   {
    "id": "dc_b_kolonnenpanzer_50",
@@ -6888,15 +6888,15 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "bronze",
-   "source_record_sha256": "31ca54869ca7b0eb0c3d9cfc0714e37450c69f927239e8c111b1b9ed2dfe41b4",
+   "source_record_sha256": "e579d8110235c9371e522b7de0cf77fe9f1a111c38aa50727bebde6f0a6c550a",
    "kurz": "",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "tags": [
      "panzer"
     ]
@@ -6911,7 +6911,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "6ec039b02f707d3772674acfae0cb4988e92ee13f25f115e32b1b7716da6f6cb"
+   "output_sha256": "c1bc810f6a20a952ab92c1fa3bb8e3d84c2ef9c3c7401ff1e0b3619c865bef28"
   },
   {
    "id": "dc_b_flankenpanzer_672",
@@ -8136,13 +8136,13 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "silver",
-   "source_record_sha256": "c589bc59f00275ace52463f0c10581e047dfe15b8bc5b0c9ea18740ecc547e29",
+   "source_record_sha256": "c385f1df0dd9f8232217576dd31cb4fd2e7285b93b284e3f460a18b3b7bd7694",
    "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
    "keywords": [],
    "printed_stats": {
     "ap": 4,
-    "atk": 3,
-    "def": 5,
+    "atk": 2,
+    "def": 6,
     "tags": [
      "panzer"
     ]
@@ -8157,7 +8157,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "786ca3e2a15a8d91652d7bab5e6caf5e6ebd5ef8d8b10fdac701ef8785ca3921"
+   "output_sha256": "0b29e3394219f9bbe6a234ba934ade1e12c29dd7ba57bedc7569300e727a4ec7"
   },
   {
    "id": "dc_b_eron_traeger_97",
@@ -8460,8 +8460,8 @@
    "name": "Haubitzenzug",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "9498609b6d35c4944f151e3a2146c1bcaecfe5d6a01a16e4845824347607c539",
+   "rarity": "bronze",
+   "source_record_sha256": "b0643d2ea27d27ca2748e29ad1096f028d367a4494a3ab20316b3526efdec09d",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Platztausch",
@@ -8499,8 +8499,8 @@
    "name": "Mörser-Team",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "a06c80df06b6f7b3e80e03dbd074a9a62f13da619327f8e203d0b1c76b59b1fc",
+   "rarity": "bronze",
+   "source_record_sha256": "476e43c30d7a911c568e36974287b30294d18862607ff6fb73b116c6eba1bec3",
    "kurz": "Steilfeuer I.",
    "keywords": [
     "Fernschuss"
@@ -8536,8 +8536,8 @@
    "name": "Raketenwerfer Viper",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "1d95b2378d0492739a3391e8a4cc9c853ea344d5200bb6b64399f193b45dd06e",
+   "rarity": "bronze",
+   "source_record_sha256": "40e6229c6bc7c5e125aaf81e33270135d18cf1788f2c8564cef75672f42fd7b5",
    "kurz": "Steilfeuer III.",
    "keywords": [
     "Stellungswechsel"
@@ -9881,15 +9881,15 @@
    "type": "Einheit",
    "nation": "Vesper",
    "rarity": "bronze",
-   "source_record_sha256": "ad75d703f03623957fcd5126a9dd1d40696b685021708f12d4dda9a4474ba24d",
+   "source_record_sha256": "895fc670b08a417091c8ff347c52d247bc35542f0ad8944df1c75d0acf0452dd",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 2,
-    "def": 3,
+    "atk": 1,
+    "def": 4,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -9905,7 +9905,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "6b3628de01ad4b868f40f817f475aa34621a607977b11d7a22f387200f2d9c96"
+   "output_sha256": "2669a9d550b5785a1b3a4084a0d08f0ba92b0fef214a947b5a9d33531e6d7c18"
   },
   {
    "id": "dc_b_abriegelbatterie_857",
@@ -10477,15 +10477,15 @@
    "type": "Einheit",
    "nation": "Eldran",
    "rarity": "bronze",
-   "source_record_sha256": "34c8406234120dc0329b105cfd36eccad8def7c29dc1a14b0e96cbf0a0ead658",
+   "source_record_sha256": "26f958ce48c2b822c84e192cf8ceed61d33e596eb8a184415705cee46c16435d",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 2,
+    "def": 4,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -10501,7 +10501,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "f88ed2b540bbc15fc13deeedad7bc0708ad7045a41579f9d64c3b6c2265b8c9d"
+   "output_sha256": "b1c9fed7a9f9118a7fd8a635f1b7d54782a46c731e517d88b70bcfe7c9e36ee8"
   },
   {
    "id": "dc_b_brueckenau_batterie_740",
@@ -12611,8 +12611,8 @@
    "name": "Aufklärer",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "d8f0b44d4fef3b3edd6439b44f60ac49c9e9ee1abdb64e8b7b6f6b9f767d14cf",
+   "rarity": "bronze",
+   "source_record_sha256": "21de7ff933f0d62b31c11e6dd50a5c332d66e9273d8ca6a51ad6987331dfea4b",
    "kurz": "Deckt verdecktes Feindfahrzeug auf: 3 Schaden. Aufklärung (1 AP): 2 verdeckte Feindfront aufdecken.",
    "keywords": [],
    "printed_stats": {
@@ -12644,8 +12644,8 @@
    "name": "Spähertrupp",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "091a726525252b3958f7175ae62f01961f569e1a8cba982b2ee7aaa58940e919",
+   "rarity": "bronze",
+   "source_record_sha256": "eeaafbdaaee1024852c0667499fb3f343a4072afd3ebffc2f11b335240692570",
    "kurz": "Beim Ausspielen 1 verdeckte Feindfront aufdecken. Aufklärung (1 AP): noch eine.",
    "keywords": [
     "Gefechtsbereit"
@@ -12678,8 +12678,8 @@
    "name": "Spähpanzer Glubscher",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "4d3e57cfc2049a17f5ea5548c859a98df6c7ac5e80de98f9767ad6b66e143159",
+   "rarity": "bronze",
+   "source_record_sha256": "89c3f3a8ebdea52f92f76d1c98885ca516d6d1a5ffb5ae341afd4a25b69ab95c",
    "kurz": "Beim Ausspielen 2 gegnerische Handkarten wählen und ansehen. Aufklärung (1 AP): 1 verdeckte Feindfront.",
    "keywords": [],
    "printed_stats": {
@@ -12712,8 +12712,8 @@
    "name": "Spähwagen",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "59b89b5572aa768aa3f5d0c9f3e9672511beded10d3592e1024803839bc31667",
+   "rarity": "bronze",
+   "source_record_sha256": "dceb689bdd8546821ce55d7c38e6368f6d4c3e631a8316bdc47fdcd4b7830997",
    "kurz": "Aufklärung (1 AP): 2 verdeckte Feindfront aufdecken.",
    "keywords": [],
    "printed_stats": {
@@ -14711,8 +14711,8 @@
    "name": "Helden der zweiten Kompanie",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "f2bc6c1623409d885533b4c793486c0d129107bbe5c3798c5c5a419ad841b5f7",
+   "rarity": "bronze",
+   "source_record_sha256": "b9fa2338f06e1843e3c065b0699d36181a6bd82b864ebf0d799fd4aeb575b635",
    "kurz": "Wenn eine eigene Fronteinheit stirbt: kostenlos offen in denselben Slot.",
    "keywords": [],
    "printed_stats": {
@@ -14742,8 +14742,8 @@
    "name": "Kommandogruppe",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "065a49d65d08eda9811dc21d44d717c763ea50ffc4a7e9dc05c1e23e22979490",
+   "rarity": "bronze",
+   "source_record_sha256": "45c16e8998edf02471daab44ad90b110c2cdc599c01c821c5e7e0c0e16dd0dc8",
    "kurz": "Nachbarn +2 DEF. Beide Flanken Infanterie: kämpft nach dem Angreifer in deren Gefecht mit.",
    "keywords": [],
    "printed_stats": {
@@ -14774,8 +14774,8 @@
    "name": "Panzerzug Faustkeil",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "277e65d893cd238a0b80a962fcc8738b8ba3ddbe03ef965841ca4df1e340acbc",
+   "rarity": "bronze",
+   "source_record_sha256": "dcd27017ed2ccffc74c40f5767484e6e0f474b68e06a0e03cfea1f3e6f7d54ef",
    "kurz": "Führungsfahrzeug: +2 DEF wenn eine Flanke gepanzert ist.",
    "keywords": [
     "Nachsetzen",
@@ -14812,8 +14812,8 @@
    "name": "Scharfschütze",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "431455ae61592bbb937f31b6a3629dad355bd6ad7619c28ff2d7f1cccd855cea",
+   "rarity": "bronze",
+   "source_record_sha256": "605ce6dbf3d8d7b7314a45a5065dd6745329e3ea3b9331ca7812bc150f1964c8",
    "kurz": "+2 ATK gegen Infanterie.",
    "keywords": [
     "Hinterhalt",
@@ -14850,8 +14850,8 @@
    "name": "Schwerer Panzer Koloss",
    "type": "Einheit",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "2b8b0657be3c36766a7bac2bba95b130c9b217ac887cf3475cc9cde007c6b788",
+   "rarity": "bronze",
+   "source_record_sha256": "1d07c82503f845fd77769df46b43d832842d8d0e676f9e658bb033227b72e2a0",
    "kurz": "Jeder erlittene Schaden -2.",
    "keywords": [
     "Abschirmung"
@@ -16391,8 +16391,8 @@
    "name": "Sammelpunkt",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "998bf334dfbdf4535a5b518d03beebc98e23827cf6228a2772b575a21d4fff33",
+   "rarity": "bronze",
+   "source_record_sha256": "1620e1709c54d45f6591c40e10e2683a4b0cda4dfedb523a80bde35e7484d043",
    "kurz": "Eigene Infanterie kostet 1 AP weniger (mind. 1).",
    "keywords": [],
    "printed_stats": {
@@ -16421,8 +16421,8 @@
    "name": "Feldprediger",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "7fc3ba6cfa426f720275952d457a484d51d7c6e7922852a04e4e7e63909949d6",
+   "rarity": "bronze",
+   "source_record_sha256": "2f61242ed65507854e16315df8b059cc4a51de0c7c6b9eca868f93eb52a140bf",
    "kurz": "Einmal pro Zug: eine eigene Infanterie in diesem Abschnitt hat +1 ATK.",
    "keywords": [],
    "printed_stats": {
@@ -16451,8 +16451,8 @@
    "name": "Glaubensbanner",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "cfbee72cc3cda19c9234f15e1139f8e929595bc8dc02bc661711f95f0ad28c6c",
+   "rarity": "bronze",
+   "source_record_sha256": "c7df9a09a4ee18397a13f877df3d5056e240d3202c54b583206e71c4782283b7",
    "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Infanterie dort +1 DEF.",
    "keywords": [],
    "printed_stats": {
@@ -16481,8 +16481,8 @@
    "name": "Artilleriestellung",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "92b23ea0a7aa08753a3beff5596c6b9b41139cd9f29befa5c33657e0b35b0be4",
+   "rarity": "bronze",
+   "source_record_sha256": "05c83e0e099cd97c8a9517a86266c057e31e795721e85132546cb0c42101f07a",
    "kurz": "Eigene Front +1 ATK. Feuerkommando (2 AP): einer feindlichen Fronteinheit 3 Schaden.",
    "keywords": [],
    "printed_stats": {
@@ -16512,8 +16512,8 @@
    "name": "Aufklärungssatellit",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "ff3465d4208b8e9cfa817f258975510f3bb2b4166e4864119dc1d82b10e97221",
+   "rarity": "bronze",
+   "source_record_sha256": "dd59a286e095dd04f214a127215514530eea8d23f085dc90085e920dea76b2d8",
    "kurz": "Eigene Front +2 DEF. Satellitenbild (3 AP): feindliche verdeckte Front kurz aufdecken, nach Bestätigung wieder verdeckt.",
    "keywords": [],
    "printed_stats": {
@@ -16541,8 +16541,8 @@
    "name": "Auslandsvertretung",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "0cfa321f2425db6865535581175d37502f401e73328f453a9ddba52ea9b80960",
+   "rarity": "bronze",
+   "source_record_sha256": "77331d3242d9fdf3d4eeaed52ca41a0e5a842afaffc107f98cdb6bf194decc6d",
    "kurz": "Zugbeginn +1 AP. Diplomatischer Schutz: nur durch Schattenspiele zerstörbar.",
    "keywords": [],
    "printed_stats": {
@@ -16571,8 +16571,8 @@
    "name": "Bis niemand mehr lebt",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "d859bc4df88b536304504e07a1fbf48c75fc99fe7cd8e48c982d1ea7a94ed29f",
+   "rarity": "bronze",
+   "source_record_sha256": "3d89810ab216f0118cda89e9b8b88a2e2cf1d38cdfaebe0eae6c80db0280c955",
    "kurz": "Zugbeginn: zerstöre eine gegnerische Front- oder Supportkarte. Bleibt, bis der Gegner keine solchen Karten mehr hat.",
    "keywords": [],
    "printed_stats": {
@@ -16600,8 +16600,8 @@
    "name": "Dronenkommando",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "f154519228c43d3b74dcaf6c18c14f8bcaa6b68693939a0464d9e152204c4985",
+   "rarity": "bronze",
+   "source_record_sha256": "1c2d7f23dd261ae9f6cfd0a8387baa195a389636968d07479b5fe3a6f2496122",
    "kurz": "Drohnenangriff (2 AP): 6 Schaden an feindlicher Front, -1 je feindlicher Luftverteidigung.",
    "keywords": [],
    "printed_stats": {
@@ -16630,8 +16630,8 @@
    "name": "Erfahrener General",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "6db73bac2c3c9ffcb043c0d9fb37fc2b59f3e05b2e0482b1ef28ff22a1495927",
+   "rarity": "bronze",
+   "source_record_sha256": "7df7fb8a8e953987e893d1467acb879df5def0eb00d1c0183093fbcb7a1306e8",
    "kurz": "Eigene Front +2 DEF. Mehr als zwei Elite an der Front: Zugende +1 Karte. Finte (2 AP): Feind außer Gefecht diesen Zug.",
    "keywords": [],
    "printed_stats": {
@@ -16659,8 +16659,8 @@
    "name": "Feldlager",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "a079be0ca419457a106f1887015c46f940cbac8f7d128f120ccf5b13dac89c13",
+   "rarity": "bronze",
+   "source_record_sha256": "55eeaeffc5d28bb087b383147f952834b30a3e6d808630996cf837bed15f13fa",
    "kurz": "Zugbeginn: ziehe 1 zusätzlich.",
    "keywords": [],
    "printed_stats": {
@@ -16688,8 +16688,8 @@
    "name": "Festungsanlage",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "b36dbf4c7e96c7e768515bdcbf656862474eb230ea87b9a763cd9f36a2c9db53",
+   "rarity": "bronze",
+   "source_record_sha256": "9a799bdcda19db6d803733aa3f145c5f14231aa1989c33f46cc6f85495c2758e",
    "kurz": "Eigene Front +2 Verteidigung.",
    "keywords": [],
    "printed_stats": {
@@ -16718,8 +16718,8 @@
    "name": "Flugabwehr",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "8569debf5be48cd2a63901ba67b0d1fef4da396a2d4c5ae2a24a2072088a636d",
+   "rarity": "bronze",
+   "source_record_sha256": "2085f22d4ff17d6c1993428084df83dea6b2b213f8f0470f7a44db6ef8a394d3",
    "kurz": "Eigene Front erleidet 1 Luftschaden weniger.",
    "keywords": [],
    "printed_stats": {
@@ -16749,8 +16749,8 @@
    "name": "Kommunikationszentrum",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "92ceeb181573fde30f105503d644bc4984ed36e6cdb1f8b7e790110e7f760726",
+   "rarity": "bronze",
+   "source_record_sha256": "d887557888000197e0d081913a0acf97659e7282b2a81143a24596368ae0c7e7",
    "kurz": "Koordination (1 AP): eigene Front greift erneut. Aufklärung (2 AP): 3 Oberste des gegnerischen Decks ordnen.",
    "keywords": [],
    "printed_stats": {
@@ -16778,8 +16778,8 @@
    "name": "Kriegsnebel",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "bde4e11db6f34236b445f46100f83d6b2b017a5e20426c983b9392009784ed23",
+   "rarity": "bronze",
+   "source_record_sha256": "fa34850934f35846a5f8ad606d1a8163eb7c54a3d39634d2868fe26168dc4729",
    "kurz": "Nebelwerfer (2 AP): Token vor eigene Front, 2 eigene Züge. Verteidiger Erstschlag. Stapelt mit Mine.",
    "keywords": [],
    "printed_stats": {
@@ -16807,8 +16807,8 @@
    "name": "Lagerhaus",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "5bb8b51b8cd3fc0850f46308b39891d9e87338006391dce7e8b7c589143fdea3",
+   "rarity": "bronze",
+   "source_record_sha256": "528bf931a06086473c194d666dba5b8863cff24259cd9963e1f9f044ecac4a41",
    "kurz": "Ausrüstungen -1 AP (min. 1). Logistikzentrum (2 AP): erste Ausrüstung im Deck auf die Hand.",
    "keywords": [],
    "printed_stats": {
@@ -16836,8 +16836,8 @@
    "name": "Lazarett",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "da0bc99aaa18bcb0c97d21eccafc7e910c502fb4c1d50afe06e2179a9baabc44",
+   "rarity": "bronze",
+   "source_record_sha256": "b136684f7d6950854212a4eb6b1116cdf28a139dd378cbc5700652d548bc515c",
    "kurz": "Heilung (1 AP): Infanterie hierher; heilt 1/Zug, kehrt geheilt auf ihr Feld zurück. Fällt das Lazarett, fällt sie.",
    "keywords": [],
    "printed_stats": {
@@ -16865,8 +16865,8 @@
    "name": "Propaganda",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "45759143f11bdfce476c7172e8f89e17b36399ac3dad2afe79da80252cfeeb5d",
+   "rarity": "bronze",
+   "source_record_sha256": "808110c30d4185b684fa1d5bed433126f10cec82ac3cffbd693f405e2cd38d3c",
    "kurz": "Eigene Fronteinheiten kosten 1 AP weniger (min. 1).",
    "keywords": [],
    "printed_stats": {
@@ -16894,8 +16894,8 @@
    "name": "Radarstation",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "c278f60d20a472bd83d2469f875d1665af090d8fc8ffb229f18be5419b381251",
+   "rarity": "bronze",
+   "source_record_sha256": "b91241b1ede1de630a3b14019a19880a73243b9d94bc7c9d1ed6ecc0702b227b",
    "kurz": "Eigene Unterstützungen erleiden 2 Luftschaden weniger.",
    "keywords": [],
    "printed_stats": {
@@ -16924,8 +16924,8 @@
    "name": "Schläferzelle",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "6144a0f540093bb0427888050cf4590a68ddf78083e887dfed1df1ba3cac37c4",
+   "rarity": "bronze",
+   "source_record_sha256": "db790d77df0c5b1b7cd35c84a05aacd7826aa3e1543bc78c49de2a394241f5ed",
    "kurz": "Nach 3 eigenen Zügen: zerstöre zufälligen Feind mit AP ≤ 3, dann Friedhof. Gegner kann für 2 AP neutralisieren.",
    "keywords": [],
    "printed_stats": {
@@ -16953,8 +16953,8 @@
    "name": "Spionagenetzwerk",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "28e24bce53c1556458350f105e4f9bb49c85d63d2bce44239e1daeacecbe3bfd",
+   "rarity": "bronze",
+   "source_record_sha256": "2d1d11578acd62ef5e35e96886ce54b6dcde629e6e31d11b824f44a896c4568a",
    "kurz": "Zugstart: oberste Feindkarte sehen, optional unters Deck. Taktik (1 AP): nächste Nicht-Sofort-Karte -1 AP.",
    "keywords": [],
    "printed_stats": {
@@ -16982,8 +16982,8 @@
    "name": "Staatspropaganda",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "692f043b12a8929a700b3ac6b431a018020b56b3470797f7fcc1b3cecf776d8f",
+   "rarity": "bronze",
+   "source_record_sha256": "9fdb8a9648553f94dcef0247c57a758b6ceea0ce324e559b3e98441976f9f0df",
    "kurz": "Zugstart: +1 Karte je gegnerischer Einheit, die seit dem letzten eigenen Zugstart zerstört wurde.",
    "keywords": [],
    "printed_stats": {
@@ -17011,8 +17011,8 @@
    "name": "Störwagen Brummbär",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "d9b1c94730e704599a87268d8deecd41812c98276450d1a101338fbabd2453e0",
+   "rarity": "bronze",
+   "source_record_sha256": "0af2db9256a80faa47d98da7c082ed5d47c07b8d844067f2f18b466cf0d79bc2",
    "kurz": "Feindliche Front -1 ATK. Funkfeuer (1 AP): fliegende Drohne zerstören. Fehlfunktion (3 AP): Drohne greift Flanke an.",
    "keywords": [],
    "printed_stats": {
@@ -17041,8 +17041,8 @@
    "name": "Totale Überwachung",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "7a8ad67f5cf1c93bff7fcad9ad149bd6a97dad674b88a43097f99c50017b0aab",
+   "rarity": "bronze",
+   "source_record_sha256": "92f84d406f5217d4c8f2a30f27acc319945b4b258cd88d14ce950b7a6ef224e4",
    "kurz": "Gegnerische Einheiten können nicht verdeckt liegen. Fallen bleiben erlaubt.",
    "keywords": [],
    "printed_stats": {
@@ -17070,8 +17070,8 @@
    "name": "Uralter Pakt",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "ad621d62fc6a6aeeec34c4dba5d223a300ce0436b10bb010e678a72efdfc3487",
+   "rarity": "bronze",
+   "source_record_sha256": "14906d7b21e444d995d618657b9000a700974d08778ac6e14a220159920a6e17",
    "kurz": "Eigene Fronteinheit +2 ATK/+2 DEF. Besiegt sie eine Einheit: 2 Karten ziehen.",
    "keywords": [],
    "printed_stats": {
@@ -17099,8 +17099,8 @@
    "name": "Verwundetennest",
    "type": "Unterstützung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "e975c2faa3f3f0914941cea8d4533d814ce25198cd663fd94ea71008f6343d87",
+   "rarity": "bronze",
+   "source_record_sha256": "be4eac07320542238e0310be339e86a6c3cd9f6a694e56019e2601a28121e6b0",
    "kurz": "Eigene Front -1 Schaden. Lazarett (2 AP): Einheit auf diese Karte, nächsten Zug volle V auf alten Slot.",
    "keywords": [],
    "printed_stats": {
@@ -21304,8 +21304,8 @@
    "name": "Marschbefehl",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "d6567f0548e342765f810b53a90a9e1ee341e3c0dfce19c3d821118af69aa44e",
+   "rarity": "bronze",
+   "source_record_sha256": "41a437c87404c6952a48c88637ca88aa7248387d127f5a9cec77fd9346ecdf54",
    "kurz": "Ziehe eine Infanterie. Du darfst sie in diesem Zug spielen.",
    "keywords": [],
    "printed_stats": {
@@ -21334,8 +21334,8 @@
    "name": "Blutzeuge",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "224409a671b6c4e84ef62c96077b1907a656db96737bfcdaa4bfdb3c2610a964",
+   "rarity": "bronze",
+   "source_record_sha256": "393386aaf3cf9d7f4e6ad4120ad5cf32102cd025a1c9eee30486bde4b71ac5f4",
    "kurz": "Opfere eine eigene Infanterie. Eine gegnerische Einheit im Abschnitt erleidet 3 Schaden.",
    "keywords": [],
    "printed_stats": {
@@ -21364,8 +21364,8 @@
    "name": "Sammelruf",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "b5ff17e23980de38a212d90677569456c34278b6523a3318dd719486bc12f39c",
+   "rarity": "bronze",
+   "source_record_sha256": "6f35cc00a1862940a167b106aac59311eddc23907d12aa47687311796e18b40e",
    "kurz": "Ziehe eine Infanterie aus dem Ablagestapel auf die Hand.",
    "keywords": [],
    "printed_stats": {
@@ -21422,8 +21422,8 @@
    "name": "Blinder Gehorsam",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "0fdcd7d9b0a432d8097b29da867714c3d9d887b746b8eb04785a19a5bf190e10",
+   "rarity": "bronze",
+   "source_record_sha256": "75a378d605be6cd20ad66ab3b844940a29035bf448498379b6a5371a2c3eeb56",
    "kurz": "Auf Befehl: Alle eigenen Fronteinheiten greifen in diesem Zug ohne AP an und erhalten +2 Angriff. Nur eigener Zug.",
    "keywords": [],
    "printed_stats": {
@@ -21451,8 +21451,8 @@
    "name": "Boden-Luft-Rakete",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "fb68808bf1732e877d9a3ea93f906fc804ff9e65aa9e58f195c1b1013d2386b0",
+   "rarity": "bronze",
+   "source_record_sha256": "e394da55e95bf99bdf8347f0cf5960acecc6ccb4f6a5c3b740b67950f3d3f068",
    "kurz": "Verhindere den Schaden eines feindlichen Luftangriffs.",
    "keywords": [],
    "printed_stats": {
@@ -21481,8 +21481,8 @@
    "name": "Dammbruch",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "ac5226d37ca5803d83027255fd25f2099262e077abf1b42018f2925f2c701236",
+   "rarity": "bronze",
+   "source_record_sha256": "657af9a6cfcaf897fe3a64d1fbe662e87f5bf64f5be43ca6682b4b50382b40c5",
    "kurz": "Die gesamte Unterstützungslinie des Gegners wird vom Spielfeld entfernt.",
    "keywords": [],
    "printed_stats": {
@@ -21510,8 +21510,8 @@
    "name": "Deckung suchen",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "5b9e07aeea1cc3cb540f4461f742db4b7b93a3c8c64d58b524a17a264fa4b87b",
+   "rarity": "bronze",
+   "source_record_sha256": "730a618375575c5c13b59680a707295b127a6ad427768db741d7834e80db09fb",
    "kurz": "Eine Fronteinheit deiner Wahl erhält +3 Verteidigung. Der Bonus endet, wenn die Einheit angreift.",
    "keywords": [],
    "printed_stats": {
@@ -21539,8 +21539,8 @@
    "name": "Der Letzte der steht",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "5fcc32d07835437551bc93724310caf772f5e29581c6fcfe5a53c580029d4414",
+   "rarity": "bronze",
+   "source_record_sha256": "3aeceedde5de49e48e8ea6c99e63536c7c2e2f6107ced836e43f0f67ee2f5f5c",
    "kurz": "Opfere deine Front bis auf eine Einheit; sie erhält je Opfer +1 ATK/+1 DEF. Fällt sie, erhält der Gegner 1 SP.",
    "keywords": [],
    "printed_stats": {
@@ -21568,8 +21568,8 @@
    "name": "Eingriff der Kavallerie",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "35d73a72d9b2c4c758663b3f3b4fbbdc1736746d6aa7f66bf5aff1631540bc0c",
+   "rarity": "bronze",
+   "source_record_sha256": "30dae06a3378e804d6eb0198956495732fda2f882e822242085117fd125b7b6b",
    "kurz": "Gepanzerte Fahrzeuge erhalten +2 Angriff bis zum Ende des Zuges.",
    "keywords": [],
    "printed_stats": {
@@ -21597,8 +21597,8 @@
    "name": "Einsame Gassen",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "b15c72d5cc213e6617b46bb049f37b94aa12dd239ad344f43f4e5771cac72a98",
+   "rarity": "bronze",
+   "source_record_sha256": "da8fa5f4c5037b73266601d44575c2de4a2dfa9612fa8f5b31dd4ef23de575fb",
    "kurz": "Suche so viele Einheiten im Deck wie freie Frontplätze. Lege sie kostenlos offen auf gewählte Slots.",
    "keywords": [],
    "printed_stats": {
@@ -21626,8 +21626,8 @@
    "name": "Geist in den Trümmern",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "829b6931659b641d9bdd9fbe003121575442eb72337dbb521a0bb1bd620c3aeb",
+   "rarity": "bronze",
+   "source_record_sha256": "11bd5dd014054637f0bbf904dfa09fcc955218cc4d64526f861dc6e62a29c084",
    "kurz": "Wenn der Gegner im letzten Zug eine Unterstützung verloren hat, wirft er 2 Handkarten ab.",
    "keywords": [],
    "printed_stats": {
@@ -21655,8 +21655,8 @@
    "name": "Geistiger Vorsprung",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "7a6fed47ea02d29ae308a864fd014b57b4dab783f25f77782526270e8fcf1e0c",
+   "rarity": "bronze",
+   "source_record_sha256": "5a30524823e4a851e2b86784fb5e96d2f9b2b3158c3752ce7b44bbc3f5432cbd",
    "kurz": "Mobilisiere eine Einheit sofort für einen Angriff, wenn der Gegner dich gerade angreifen möchte.",
    "keywords": [],
    "printed_stats": {
@@ -21684,8 +21684,8 @@
    "name": "Generalmobilmachung",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "2547c17e1890238ef17fb592e025d1cc54e1fbb9d1eb0f3f81205c441bc3f831",
+   "rarity": "bronze",
+   "source_record_sha256": "4251c0896239e7445bef72a26cfcc2944e2133f53901160722108fb86ca6f97a",
    "kurz": "Ziehe 3 Karten und erhalte zusätzlich 2 AP für diesen Zug.",
    "keywords": [],
    "printed_stats": {
@@ -21713,8 +21713,8 @@
    "name": "Glatter Durchschuss",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "8a06c252bdc058160c32c79c5b71c45ffde20f4d8864d468505b83a44f3df78f",
+   "rarity": "bronze",
+   "source_record_sha256": "042707051971f384eb179e5a3614bbdf79fbd320b9ff73abb36d6889ea2d6f3b",
    "kurz": "Eine deiner gepanzerten Einheiten verursacht doppelten Kampfschaden bis zum Ende des Zuges.",
    "keywords": [],
    "printed_stats": {
@@ -21742,8 +21742,8 @@
    "name": "Instandsetzung",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "0f2bd5ae9c39201f5a33b6fd49b4804c4465643ea398be87f26bbb363b60df1d",
+   "rarity": "bronze",
+   "source_record_sha256": "42d17d799f1b417ed6252174b77ace43c68ac111fbce3d43073d4aeb4757f439",
    "kurz": "Fahrzeug von der Front auf die Hand. Nächster eigener Zug 0 AP erneut ausspielen. Negative Werte weg, Ausrüstung bleibt.",
    "keywords": [],
    "printed_stats": {
@@ -21771,8 +21771,8 @@
    "name": "Lagebesprechung",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "b74cfebf47dc499f0f2fe845f6551cf39eb61c7bcbff955308817c73eeb95a23",
+   "rarity": "bronze",
+   "source_record_sha256": "63aca6de4f3faf81927d27bf080a30ba2a28ff666d3ffd1b40a5ad6ee3b10a40",
    "kurz": "Wähle 2 eigene Fronteinheiten. Beide +1 Angriff bis zum Ende des Zuges.",
    "keywords": [],
    "printed_stats": {
@@ -21800,8 +21800,8 @@
    "name": "Luftschlag",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "b96710aff8358e298d2d848c0fad5b3c643788ba333b57299fc8d1c44c0658e9",
+   "rarity": "bronze",
+   "source_record_sha256": "ca90e48ca7a8299ccca1d59f0d947f875edfc7cc70a3e6cc093ae12c96df167e",
    "kurz": "Füge einer feindlichen Einheit oder Unterstützung 5 Schadenspunkte zu.",
    "keywords": [],
    "printed_stats": {
@@ -21831,8 +21831,8 @@
    "name": "Martyrium",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "d3577ca87f475681e55a68ebd2deee2e5fab184029197e75c0109436c4ea4ec7",
+   "rarity": "bronze",
+   "source_record_sha256": "6acfb49be6dd116e9851277cf76a36845616f1be13ff326c574e0b4bb4f814a7",
    "kurz": "Opfere eine eigene Fronteinheit. Einer feindlichen Fronteinheit 4 Schaden.",
    "keywords": [],
    "printed_stats": {
@@ -21860,8 +21860,8 @@
    "name": "Militärische Ehren",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "e451b2ee3acbc66db3a5b45ac070df38c07d588712d8faff2569e829566e2f58",
+   "rarity": "bronze",
+   "source_record_sha256": "bbf9f993d5f10690e4bb2b311c7f3f1864baac267599e9e8b2d78123ba8f279c",
    "kurz": "Bis zu drei eigene Einheiten, die bereits feindliche Einheiten zerstört haben, +2 ATK und +2 DEF bis Zugende.",
    "keywords": [],
    "printed_stats": {
@@ -21889,8 +21889,8 @@
    "name": "Minenfeld",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "021f96e6436cff3dd75f1aa23e92a10b0acad77ce8ff70e4c0eb47633d2d3187",
+   "rarity": "bronze",
+   "source_record_sha256": "9eddbcd1cc5c3edaae239d1ccfe1f774232e473a97cb1f22f3b6d161de3edba8",
    "kurz": "Minenfeld-Token vor eine eigene Einheit. Angreifer erleidet 3 Schaden vor dem Kampf. Token hält 2 Auslösungen.",
    "keywords": [],
    "printed_stats": {
@@ -21920,8 +21920,8 @@
    "name": "Mobilisierung",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "1725831713ed534c9d3a925f6fad944a745064fd000245c3089c8ada5c1cc7bc",
+   "rarity": "bronze",
+   "source_record_sha256": "a5e57f2f0d799a27a08dce8937dc6800f8adfbe7b9ec1cb19fb23c766191c60c",
    "kurz": "Durchsuche das Deck nach bis zu 2 Infanterie-Einheiten auf die Hand. Eine davon darfst du sofort ohne AP spielen.",
    "keywords": [],
    "printed_stats": {
@@ -21949,8 +21949,8 @@
    "name": "Munitionstreffer",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "2d22dea5fbb90ce160005a87e88fda4f7c3de2ad91fc93c16006bb23720ad030",
+   "rarity": "bronze",
+   "source_record_sha256": "520afdc82c24aa275ab1d0c57c800d4605ac8a90fb47bdbbc21742707f9b6fde",
    "kurz": "Greift dich in diesem Zug ein feindlicher Panzer an, erleidet er stattdessen Schaden in Höhe seiner AP.",
    "keywords": [],
    "printed_stats": {
@@ -21978,8 +21978,8 @@
    "name": "Napalm",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "6aa53653d2ca4a8e0ff3c58db59a20c9ad3003886aca6deb18961358905a74ee",
+   "rarity": "bronze",
+   "source_record_sha256": "cca379f4dd74b74a3b7ba6f50456b82f9fb875c9698729c4c6302f6d49b90fd7",
    "kurz": "Gegnerische Fronteinheit: 3 Schaden, danach jeder eigene Zug des Besitzers 1 Schaden.",
    "keywords": [],
    "printed_stats": {
@@ -22009,8 +22009,8 @@
    "name": "Pause",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "7f814bca6459bcacb7303d7cb0d14b2fefbf9691a2852762f37d26b13813ef3c",
+   "rarity": "bronze",
+   "source_record_sha256": "aa8ab76f3e72617602896d2337d34f7bef860f0f4627141b1f9b01e0c94bf7ec",
    "kurz": "Gewählte Einheit bricht ab und handelt erst im nächsten Zug ihres Besitzers wieder. Verdeckt in den Support legbar.",
    "keywords": [],
    "printed_stats": {
@@ -22038,8 +22038,8 @@
    "name": "Psychologie der Massen",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "3878f77e23685a7d0493c5cbbf5737c6a6e77c2f0a256bdcf8748ef0125cdc3d",
+   "rarity": "bronze",
+   "source_record_sha256": "41a7a57b8db49e9b2bd3ad908517ea90c4555794e05c30b0354452ef67c727ba",
    "kurz": "Spiele so viele Fronteinheiten von der Hand wie du möchtest, ohne AP-Kosten.",
    "keywords": [],
    "printed_stats": {
@@ -22067,8 +22067,8 @@
    "name": "Religiöser Eifer",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "ede522d5404e37419cb6c3844ea68ea46b592e3ecc43d350404a42cc36d2ba2c",
+   "rarity": "bronze",
+   "source_record_sha256": "7217e2551258f6d3a678c2da4f6eebdb1e39ff35c12e70bda3338b2771f21b2b",
    "kurz": "Eigene Infanterie +3 Angriff bis Zugende. Danach 2 Schaden an diese Einheit.",
    "keywords": [],
    "printed_stats": {
@@ -22096,8 +22096,8 @@
    "name": "Räumkommando",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "b9865d98f062328e06fce1a9a39f8daf421953b97f137df4b2caf6649135d247",
+   "rarity": "bronze",
+   "source_record_sha256": "56a684e794508a9e45d6f360655446ba919d2ae8dab5402fbd3c056e7a55a5f9",
    "kurz": "Entferne ein Minenfeld-Token vor einer feindlichen Einheit.",
    "keywords": [],
    "printed_stats": {
@@ -22125,8 +22125,8 @@
    "name": "Selbstopfer",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "91cdcc829346bce69e23d0205c4197d7ae99065296fa9cc1f08642c57dde8b6d",
+   "rarity": "bronze",
+   "source_record_sha256": "a389a74c0b1811e91ba86a7ca7c5a815f155b49f84d725011d2fd5a7a59b2452",
    "kurz": "Zerstöre eine eigene Fronteinheit, um zwei gegnerische Karten in Reichweite zu zerstören.",
    "keywords": [],
    "printed_stats": {
@@ -22154,8 +22154,8 @@
    "name": "Silberner Engel",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "b90249144bfde7a1fe8d5dbf6fff11dd55408656360a08f9c831c2d167f18cbe",
+   "rarity": "bronze",
+   "source_record_sha256": "7cd90b6d0a02d1d843fd3063be668f6bfb69557ad28f2b7b7afa8fd4646e8633",
    "kurz": "Eigene Infanterie, die diesen Zug Schaden erleiden würde: Münze, Kopf negiert allen Schaden diesen Zug.",
    "keywords": [],
    "printed_stats": {
@@ -22183,8 +22183,8 @@
    "name": "Standgericht",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "adb0adc6b00f837c1497541a6066eca436bd86268f7a68ac1aca69f7e69aac53",
+   "rarity": "bronze",
+   "source_record_sha256": "2a0a417755deb810e5602d510f8ecc6305b368de532cb02ccdf8fc9a80fe61e4",
    "kurz": "Opfere eine eigene Fronteinheit. Die übrigen +2 Angriff bis Zugende.",
    "keywords": [],
    "printed_stats": {
@@ -22212,8 +22212,8 @@
    "name": "Standhafte Formation",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "fcc182d6db254e882771f9966abdd9ccc97b3bd56e64aeb529de2c61bc404efe",
+   "rarity": "bronze",
+   "source_record_sha256": "587af55281ba82e727a22c8d927a0531c07d84189b544d765b0f1c46f11fe517",
    "kurz": "Eigene Fronteinheit +1 Angriff und +2 Verteidigung bis Zugende.",
    "keywords": [],
    "printed_stats": {
@@ -22241,8 +22241,8 @@
    "name": "Strahlung",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "251765c8f815ac33da1b049d3aff5721b84a8a12a45d150f4fcfe8c779a34bbd",
+   "rarity": "bronze",
+   "source_record_sha256": "488894c98bb8b616625b0f7fea5f8f34fdf78d818cf9550cc37745b22a4cc8b9",
    "kurz": "Bis zu 3 benachbarte Feinde: nur mittlere/schwere Panzer überleben und weichen einen Zug in den Support.",
    "keywords": [],
    "printed_stats": {
@@ -22270,8 +22270,8 @@
    "name": "Verpflegung",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "de05b77b05fbc762b6cc14e286c29a6cc59034f9d7e95e6db43b9e1b84ee4d25",
+   "rarity": "bronze",
+   "source_record_sha256": "0f0de5fdd9f79efe8bcf6e38e2c7b9fe4d1f1135003048c973b7159d7a9e316c",
    "kurz": "Bis zu 3 Verteidigung auf eigene Infanterie verteilen. Diese Einheiten greifen diesen Zug nicht an.",
    "keywords": [],
    "printed_stats": {
@@ -22299,8 +22299,8 @@
    "name": "Waffenlieferung",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "f2f6699965330d9154b203e40e0760708d6fa8443656c1ffc513e4864b690957",
+   "rarity": "bronze",
+   "source_record_sha256": "25355757afab49cfe12e889145f5bbd84db55aabff14aa3d0ccf8eb64b447158",
    "kurz": "Entferne jeden Angriffs-Malus der gewählten eigenen Einheit. Verteidigungseffekte bleiben.",
    "keywords": [],
    "printed_stats": {
@@ -22328,8 +22328,8 @@
    "name": "Widerstand",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "f3c2e79764e1c2333d9ae76efc55080c026d2b52a5fb44bb2d6f9ad87011ff7f",
+   "rarity": "bronze",
+   "source_record_sha256": "5bbc459548510c8a8c134f443c6e595cc02a836e86eddb21cb97a79d8708fdd6",
    "kurz": "Feindliche Fronteinheit. Münze: Kopf Kampf gegen rechten Nachbarn, Zahl gegen linken. Ohne Niemandsland.",
    "keywords": [],
    "printed_stats": {
@@ -22357,8 +22357,8 @@
    "name": "Wille des Volkes",
    "type": "Soforteinsatz",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "5877b5c7794ee64fe7122784f6be6bccea76927f505ac8a0e9221782b5618e70",
+   "rarity": "bronze",
+   "source_record_sha256": "d132f71a28d1cec45e8cfb708785e519614163a51c71371e314ec947db893f0a",
    "kurz": "Alle Infanterie +2 Angriff bis Zugende. Ziehe 1 für jede eigene Einheit, die in diesem Zug zerstört wird.",
    "keywords": [],
    "printed_stats": {
@@ -25954,8 +25954,8 @@
    "type": "Soforteinsatz",
    "nation": "Steinmark",
    "rarity": "gold",
-   "source_record_sha256": "512ad822d96ef9909001190eb58b5f25c77e3ff2de089be796a4ee1d0932be03",
-   "kurz": "Wähle eine gegnerische Fronteinheit: sie gilt als beobachtet. Alle eigenen Einheiten: +1 ATK bis Zugende.",
+   "source_record_sha256": "d5043055fa3c958251f0840760921ac4c1ca25f1a5fd85f699d88c4e2889583e",
+   "kurz": "Eine gegnerische Fronteinheit (verdeckte zuerst) gilt als beobachtet. Alle eigenen Einheiten: +1 ATK bis Zugende.",
    "keywords": [],
    "printed_stats": {
     "ap": 0,
@@ -25975,7 +25975,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "affe8563f11c6cccc58ca6124ea6643d35d288b92dc26360add331b14fd79fbc"
+   "output_sha256": "dbe3d3a1b0cdc769ec3ab31a271d3b3922b303d25b164d14b39a702c431cec9f"
   },
   {
    "id": "dc_b_sichtlinie_583",
@@ -27954,8 +27954,8 @@
    "name": "Standarte",
    "type": "Ausrüstung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "65dae91e6b617cb4127f53ccb759ee5dfe28d4f72fd8b4beeb18a306e2cefb11",
+   "rarity": "bronze",
+   "source_record_sha256": "6be74893386da5d10c1556ac23b9f1998853e24834c92f59138b4dd3b9567569",
    "kurz": "Träger +1 DEF. Liegt eine zweite eigene Infanterie im Abschnitt, +1 ATK.",
    "keywords": [],
    "printed_stats": {
@@ -27984,8 +27984,8 @@
    "name": "Gebetsfahne",
    "type": "Ausrüstung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "51a95acf8171dfca73ff168d18c61a44d661ea4b56d925f1489d97d077911d81",
+   "rarity": "bronze",
+   "source_record_sha256": "1095cba017e59bbdfbb3834505068d361f89d517e2ea55977558e3c9454b4178",
    "kurz": "Wird der Träger zerstört, hat eine eigene Infanterie im Abschnitt +1 ATK bis Zugende.",
    "keywords": [],
    "printed_stats": {
@@ -28014,8 +28014,8 @@
    "name": "Sturmleitern",
    "type": "Ausrüstung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "a6a7ddb8d5d59a9045db3c0d956130bdadd072401679ab7bff16595806b20544",
+   "rarity": "bronze",
+   "source_record_sha256": "bac505840701768b62a6df81ccafa471f8f671f9b659bf6562dfa8932a2c4a7e",
    "kurz": "Träger +1 ATK beim ersten Angriff im Zug.",
    "keywords": [],
    "printed_stats": {
@@ -28043,8 +28043,8 @@
    "name": "Feldzeichen",
    "type": "Ausrüstung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "5ac2fc2e73eb1a5e9b3da862cd1619afd3d2311f39cefea1f6346f27ad6ab053",
+   "rarity": "bronze",
+   "source_record_sha256": "16ce799a113315d9d85738cbd0fd21491148fc2df06d2ae266c7258ddd036f6e",
    "kurz": "Der ausgerüstete Träger erhält +1 DEF.",
    "keywords": [],
    "printed_stats": {
@@ -28072,8 +28072,8 @@
    "name": "Fanatischer Kommandant",
    "type": "Ausrüstung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "3d4e1b1a1cafea0bc5265557034087eb90343bc1bf6b7a7a2ad836ba49670f7b",
+   "rarity": "bronze",
+   "source_record_sha256": "c2639bfe6a3404cc9c9f5f71e9f6a12fe36275224e035acaeea10c4f28cf8ab5",
    "kurz": "An Infanterie. Reale Kosten 4 AP. Träger +2 ATK / +2 DEF.",
    "keywords": [],
    "printed_stats": {
@@ -28102,8 +28102,8 @@
    "name": "Klappspaten",
    "type": "Ausrüstung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "89fe6e1ac5a6ab4ba1ab4285b932cc3f4fe22f1ebb30e6de9b6b3fa9545de28a",
+   "rarity": "bronze",
+   "source_record_sha256": "05a41100ec82b7acb8f107df9e325c4a24ccff4b6ea3acb5e1a75fbf3ebde7e8",
    "kurz": "Zug ohne Angriff: +1 DEF. Beim Angriff zurück auf Ursprung.",
    "keywords": [],
    "printed_stats": {
@@ -28132,8 +28132,8 @@
    "name": "Medizinische Versorgung",
    "type": "Ausrüstung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "1f3c15a56d827cfe2deb1204e5573fcf73f8500aa2386cd4d2dece532be4d089",
+   "rarity": "bronze",
+   "source_record_sha256": "c1ff3b86938c935ef282116c6589eeabd2b41edf4d597b796f8e6db138ead8ce",
    "kurz": "Träger +3 DEF/Zug bis defMax. Flanken +2 DEF/Zug bis defMax.",
    "keywords": [],
    "printed_stats": {
@@ -28162,8 +28162,8 @@
    "name": "Rauchgranate",
    "type": "Ausrüstung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "37ffaa25c1216477314374719ee530d7e6b0eb5dd5d9735b6eee3b3c2c3bd252",
+   "rarity": "bronze",
+   "source_record_sha256": "cef0cb96f614f31302b9021a356fe508517a58c6250f6b1346f2ce318b510417",
    "kurz": "Wird der Träger angegriffen, Nebelfeld für diesen Kampf.",
    "keywords": [],
    "printed_stats": {
@@ -28193,8 +28193,8 @@
    "name": "Sanitätstasche",
    "type": "Ausrüstung",
    "nation": "neutral",
-   "rarity": null,
-   "source_record_sha256": "252194ee2fc49a755521a2557dc72266d33f4a0ddeb40e939cf75f62c999d515",
+   "rarity": "bronze",
+   "source_record_sha256": "4ed0c40839da7988a6a82a2c5d068cb5ba99b0abc3027549647917d46c7cd225",
    "kurz": "Träger +2 DEF/Zug bis defMax.",
    "keywords": [],
    "printed_stats": {
@@ -34032,8 +34032,8 @@
    "type": "Ausrüstung",
    "nation": "Steinmark",
    "rarity": "silver",
-   "source_record_sha256": "05f7dc37c1ec62b34217418fcc1222f24d9990f9a42b1c524c03c21f25ee624f",
-   "kurz": "Träger +1 ATK.",
+   "source_record_sha256": "0bba21205974a3ebf3ac236bc81dde524735cd31ac43e3c39b13d244d3fb9b0a",
+   "kurz": "Erster Schaden am Träger wird ignoriert. Träger +1 ATK.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -34055,7 +34055,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "cbc3f0236294007645851062925ba850eafa4ff3795e06bdb9ad8de1b020f259"
+   "output_sha256": "40c73a6077e584a4b943685d4a14163cbef43161c50434b04ced037cb42dd33e"
   },
   {
    "id": "dc_np_steinmark_zielfernrohr_norm",
@@ -35176,8 +35176,8 @@
    "type": "Ausrüstung",
    "nation": "Eldran",
    "rarity": "bronze",
-   "source_record_sha256": "00e5a33d0fa319f3b798c1fa43bece0e2adaeea9431d56e765fed07c560906fb",
-   "kurz": "Träger +1 DEF.",
+   "source_record_sha256": "bb6b2d77a8379e1d0a3adc99e67d52c250fe2e82fdb2483a6838db8738df8af7",
+   "kurz": "Erster Schaden am Träger wird ignoriert. Träger +1 DEF.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -35199,7 +35199,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "ffba61374a87c5e368d5ac016f9362fa5214793347697a8b4e6b42e2cad35724"
+   "output_sha256": "947d594f77249ef26057a9541f56acc8acd4b3dd57be88f99b26c3a0e2108ca6"
   },
   {
    "id": "dc_np_eldran_kronsiegel_der_wacht",
@@ -36520,8 +36520,8 @@
    "type": "Ausrüstung",
    "nation": "Rothain",
    "rarity": "silver",
-   "source_record_sha256": "b36b2a4f8a6b1733c3bc9454e5a25787a4af7516c1cce3ed8113824abefee04c",
-   "kurz": "Träger +2 DEF.",
+   "source_record_sha256": "d8255888a3143214fc04aaffe96387c13bdc4b259351773e1d15cc5d6895aa39",
+   "kurz": "Erster Schaden am Träger wird ignoriert. Träger +2 DEF.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -36543,7 +36543,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "11067d1bf058cef710bd401f28a220d75b50b07dea7ef088ff9736de9ad2d8ad"
+   "output_sha256": "eae3b80a5a0e51a5f3dae0655e97230b12af4e429397834447bb4920d553ae9f"
   },
   {
    "id": "dc_np_averon_netztrupp_novaris",
@@ -37731,8 +37731,8 @@
    "type": "Ausrüstung",
    "nation": "Averon",
    "rarity": "bronze",
-   "source_record_sha256": "e0bfb2ec9c7f7860060426c06397e0735c6c1653ef73dd46525aecc7502556fa",
-   "kurz": "",
+   "source_record_sha256": "99260abb8cc7e6faed7b95fd82f3416286ebc9bce0f451e0b0a1eb46a8285216",
+   "kurz": "Erster Schaden am Träger wird ignoriert.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -37754,7 +37754,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "f4665087cc525961438d31cbd7506a66dcbc217404b36f6fc9cd9e86687a9805"
+   "output_sha256": "3132f92a7f3d13d3b8d70f4af186dfd153c65aad95eb1fc270b2a8c1547b0dcd"
   },
   {
    "id": "dc_np_averon_schnellfeuergewehr",
@@ -40082,8 +40082,8 @@
    "type": "Ausrüstung",
    "nation": "Vesper",
    "rarity": "bronze",
-   "source_record_sha256": "cab8fbdba9a2a025d903399340789ea9275f429785a74ccbc08cc33d78da3914",
-   "kurz": "Erster Angriff des Trägers: +2 ATK.",
+   "source_record_sha256": "502c8a85fbc710c2d54f5e4a7a3db88d13ae2a348da8c50b384f952ba71d8360",
+   "kurz": "Erster Schaden am Träger wird ignoriert. Erster Angriff des Trägers: +2 ATK.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -40105,7 +40105,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "d0e12889a22371deb44229a37248be762fd9089c0355471f51117880d73e7b42"
+   "output_sha256": "ee94c742ff5d4dec256f37bce3937ec1004dcc61ef5f6f2ee58b7f04f3756bff"
   },
   {
    "id": "dc_np_vesper_falsche_papiere",
@@ -42591,8 +42591,8 @@
    "type": "Ausrüstung",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "5a82ff87a839345151d1615e2ea1b4a34ee58441e8b5ff16c35e264b4dc20adc",
-   "kurz": "",
+   "source_record_sha256": "5f60b1b6ce51d9c67bbd639f16b7832a2d6104af5841fab159d7e1691a6a86fb",
+   "kurz": "Erster Schaden am Träger wird ignoriert.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -42614,7 +42614,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "12f2d3cac891015dde8c9297964f6d09667d1142ba13b9c6b01ca6647d9b75fd"
+   "output_sha256": "3d08c1b73d4a86ac4a254ca8914ba7a174e285979f9f518973cdeac8d1f6d546"
   },
   {
    "id": "dc_np_caldris_ruheabzeichen",
@@ -43853,8 +43853,8 @@
    "type": "Ausrüstung",
    "nation": "Theryn",
    "rarity": "silver",
-   "source_record_sha256": "e96cfbb53b508620c8c122564727aaa1e42c1ce277a35422cd52731563740339",
-   "kurz": "Wird der Träger zerstört, ziehst du 2 Karten.",
+   "source_record_sha256": "e80b05721fcd79b510d3a0cf2d031a75112826687b20d0461ca51e1f03fe6210",
+   "kurz": "Erster Schaden am Träger wird ignoriert. Wird der Träger zerstört, ziehst du 2 Karten.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -43876,7 +43876,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "85a819943c11000c2842a94d9efbc90fe5c21ad15757772e94d5091d6c8d9196"
+   "output_sha256": "23a1f9caac4bea59fce90b509f7296d42f072d18d57bceab4c1b4305d67687c4"
   },
   {
    "id": "dc_np_theryn_eiferklinge",
@@ -45116,8 +45116,8 @@
    "type": "Ausrüstung",
    "nation": "Vael",
    "rarity": "silver",
-   "source_record_sha256": "eb03faf1f87f34df1b1fbddacef5c9405fa61ce61ec7733c5c7774e3692c6279",
-   "kurz": "Träger +1 ATK und +1 DEF.",
+   "source_record_sha256": "b78bfe2899d442b6214e8409747351d91270f5549418e9e8c645edd083e3f635",
+   "kurz": "Erster Schaden am Träger wird ignoriert. Träger +1 ATK und +1 DEF.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -45139,7 +45139,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "f713e40c3e0e41b519721b962b04c0954587e672e8bb815c4e51f4371623de77"
+   "output_sha256": "b27cffb7ea1033d7efa1db0d3671956c21c335364e3baf96213dedc93f57ce38"
   },
   {
    "id": "dc_np_vael_vertragsgewehr",
@@ -46295,8 +46295,8 @@
    "type": "Ausrüstung",
    "nation": "Merovan",
    "rarity": "bronze",
-   "source_record_sha256": "4086b598094c2e1fc139bd58ca34c67869d0c014699b0198648a574e529e055a",
-   "kurz": "Angriffe des Trägers: +1 Schaden.",
+   "source_record_sha256": "e800fe37baf72c91a506f72d5bb7ca3bdc65dffd83df42ca33ff3502ad57440d",
+   "kurz": "Erster Schaden am Träger wird ignoriert. Angriffe des Trägers: +1 Schaden.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -46318,7 +46318,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "5da196af3409cfde5e74ba121f4a7c817c197e7d3a98385ef2af42111009e40c"
+   "output_sha256": "6cee92671ed64d0cf5652e1590e931b821b73af8268601ef6bbbae0da7659971"
   },
   {
    "id": "dc_np_merovan_wegkarte",
@@ -47477,8 +47477,8 @@
    "type": "Ausrüstung",
    "nation": "Lyr",
    "rarity": "bronze",
-   "source_record_sha256": "3d64e15416ded3ed4c0cd8ac5c6120d5e70b989d40a9b4463d1ce826417a0f75",
-   "kurz": "Erster Angriff des Trägers: +1 ATK.",
+   "source_record_sha256": "8d8bfe0f350e5348ef692940defdaa01fc54a91dcd6654f9d7bf1f13bd914b88",
+   "kurz": "Erster Schaden am Träger wird ignoriert. Erster Angriff des Trägers: +1 ATK.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -47500,7 +47500,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "7b400aa6f97c97242e0efd129af4a110d842c7c513070668713471a366084fc9"
+   "output_sha256": "dc1025636e82a61a97172ff68e8259a86b9998a8fa3ebb7b3969548a008a8971"
   },
   {
    "id": "dc_np_lyr_steinschleuder",
@@ -48728,8 +48728,8 @@
    "type": "Ausrüstung",
    "nation": "Ossaria",
    "rarity": "bronze",
-   "source_record_sha256": "42b4bd30d32d67c18c3f84ca12a390708e25e9ae880c977beab266676b26930c",
-   "kurz": "Solange der Träger beschädigt ist: +1 ATK.",
+   "source_record_sha256": "a125e72a980b6d7e568ae84d7ed6659ab55ca065360574d7e8d3f9cf53a8170c",
+   "kurz": "Erster Schaden am Träger wird ignoriert. Solange der Träger beschädigt ist: +1 ATK.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -48751,7 +48751,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "6ef19753fc7fdcbe0629d02086f83fc180b69516313316668f97b48d00617756"
+   "output_sha256": "97ad6e0331c99ef6c9481dceeba6042ce381de31b1b365c9fe08cc8adf27dedd"
   },
   {
    "id": "dc_np_ossaria_ahnenruestung",
@@ -49993,8 +49993,8 @@
    "type": "Ausrüstung",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "126334b0530cbd0af64dd49f96ca46fffe1083c6887cfc4abca2fe092e6d2cf0",
-   "kurz": "Träger +1 DEF.",
+   "source_record_sha256": "ac3495c21d08093716f15df399e38c4f580b76038596a2bea707ae348e34e78a",
+   "kurz": "Erster Schaden am Träger wird ignoriert. Träger +1 DEF.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -50016,7 +50016,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "3acda3fbc99a834d9c683f9f2ed63d0c0f329d32b03f264aad61b17974733626"
+   "output_sha256": "b0d47e926f9f747296aeb7d0f950b0f5667790cd78b6b89ae6a61a0533582ece"
   },
   {
    "id": "dc_np_namar_lieferwaffe",
@@ -51178,8 +51178,8 @@
    "type": "Ausrüstung",
    "nation": "Sahr",
    "rarity": "bronze",
-   "source_record_sha256": "458749b22b466aede65d5bfc5ad946aa0b9ebe367789007c9644449a6d70cb69",
-   "kurz": "Träger +2 ATK.",
+   "source_record_sha256": "2c928ef9cf72bd0f23397a30ddf76731d1d3a18ba699505a076d48f20ca1dc6d",
+   "kurz": "Erster Schaden am Träger wird ignoriert. Träger +2 ATK.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -51201,7 +51201,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "171bc9d2713220bc3dc19b3a33f15d6bdb21947cf41a996c1f2c0f8edce03a91"
+   "output_sha256": "c5bd27d7686b424cc901793178d478894ac6b9e7c173d1f458d6d9a2ad3364b1"
   },
   {
    "id": "dc_np_sahr_routenkarte",
@@ -52545,8 +52545,8 @@
    "type": "Ausrüstung",
    "nation": "Dargan",
    "rarity": "bronze",
-   "source_record_sha256": "3f7825fb5741aa1152137d3c3e8ee7360e3951fa58ab57d876bd21daf98038f5",
-   "kurz": "Wird der Träger zerstört, ziehst du 1 Karte.",
+   "source_record_sha256": "672f6eefb5b44ef16b4655096001ade57d03981dcb4a4df98970228565e6087b",
+   "kurz": "Erster Schaden am Träger wird ignoriert. Wird der Träger zerstört, ziehst du 1 Karte.",
    "keywords": [
     "Erstschadenschutz"
    ],
@@ -52568,7 +52568,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "85a3bf430d615f6d493f1713e60208c973c43154bc04f44cb985f1ee1c3e99fc"
+   "output_sha256": "d40ae5dc85c835219b3da543d73b35f66ab02a036d89544a2ceece1ec7e6216e"
   },
   {
    "id": "dc_tac_haltezug_am_knotenpunkt",

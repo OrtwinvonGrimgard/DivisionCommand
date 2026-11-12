@@ -1324,7 +1324,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK.",
+  "text": "Erster Schaden am Träger wird ignoriert. Träger +1 ATK.",
   "rules": [
    "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
@@ -2513,7 +2513,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 DEF.",
+  "text": "Erster Schaden am Träger wird ignoriert. Träger +1 DEF.",
   "rules": [
    "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
@@ -3966,7 +3966,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 DEF.",
+  "text": "Erster Schaden am Träger wird ignoriert. Träger +2 DEF.",
   "rules": [
    "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Panzer). Solange sie angelegt ist, hat der Träger +2 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
@@ -5243,7 +5243,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "",
+  "text": "Erster Schaden am Träger wird ignoriert.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
    "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
@@ -7830,7 +7830,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Erster Angriff des Trägers: +2 ATK.",
+  "text": "Erster Schaden am Träger wird ignoriert. Erster Angriff des Trägers: +2 ATK.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
    "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +2 ATK. Danach entfällt der Bonus.",
@@ -10491,7 +10491,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "",
+  "text": "Erster Schaden am Träger wird ignoriert.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
    "Erstschadenschutz (Einmalig: Der erste verhinderbare positive Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach ist dieser Schutz verbraucht. Nicht verhinderbarer Schaden bleibt nicht verhinderbar.)"
@@ -11820,7 +11820,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört, ziehst du 2 Karten.",
+  "text": "Erster Schaden am Träger wird ignoriert. Wird der Träger zerstört, ziehst du 2 Karten.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
    "Wird der Träger zerstört, ziehst du 2 Karten.",
@@ -13189,7 +13189,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 ATK und +1 DEF.",
+  "text": "Erster Schaden am Träger wird ignoriert. Träger +1 ATK und +1 DEF.",
   "rules": [
    "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +1 ATK und +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
@@ -14451,7 +14451,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Angriffe des Trägers: +1 Schaden.",
+  "text": "Erster Schaden am Träger wird ignoriert. Angriffe des Trägers: +1 Schaden.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
    "Jeder Angriff des Trägers verursacht 1 Schaden zusätzlich zu seinem ATK. Der Gegenschlag bleibt unverändert.",
@@ -15777,7 +15777,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Erster Angriff des Trägers: +1 ATK.",
+  "text": "Erster Schaden am Träger wird ignoriert. Erster Angriff des Trägers: +1 ATK.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
    "Der erste Angriff, den der Träger nach dem Anlegen ausführt, erfolgt mit +1 ATK. Danach entfällt der Bonus.",
@@ -17105,7 +17105,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Solange der Träger beschädigt ist: +1 ATK.",
+  "text": "Erster Schaden am Träger wird ignoriert. Solange der Träger beschädigt ist: +1 ATK.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
    "Solange der Träger unter seiner maximalen DEF steht (beschädigt), hat er +1 ATK.",
@@ -18476,7 +18476,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +1 DEF.",
+  "text": "Erster Schaden am Träger wird ignoriert. Träger +1 DEF.",
   "rules": [
    "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit. Solange sie angelegt ist, hat der Träger +1 DEF. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
@@ -19767,7 +19767,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Träger +2 ATK.",
+  "text": "Erster Schaden am Träger wird ignoriert. Träger +2 ATK.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
    "Ausrüsten: Lege diese Karte an eine eigene Fronteinheit (nur Infanterie). Solange sie angelegt ist, hat der Träger +2 ATK. Wird der Träger zerstört, geht die Ausrüstung mit auf den Friedhof.",
@@ -21232,7 +21232,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "tags": [
    "ausruestung"
   ],
-  "text": "Wird der Träger zerstört, ziehst du 1 Karte.",
+  "text": "Erster Schaden am Träger wird ignoriert. Wird der Träger zerstört, ziehst du 1 Karte.",
   "rules": [
    "Einmalig: Der erste Schaden, den der Träger erleidet, wird vollständig ignoriert. Danach hat diese Ausrüstung keine Schutzwirkung mehr.",
    "Wird der Träger zerstört, ziehst du 1 Karte.",

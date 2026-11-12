@@ -1,0 +1,26 @@
+[
+ [
+  {
+   "id": "dc_b_konzentrationsruf_639",
+   "name": "Konzentrationsruf",
+   "nation": "Rothain",
+   "set": "set_nations",
+   "typ": "Soforteinsatz",
+   "ap": 2,
+   "atk": null,
+   "def": null,
+   "rarity": "bronze",
+   "text": "Wähle einen eigenen Abschnitt: Einheiten dort +1 ATK bis Zugende."
+  },
+  {
+   "id": "dc_np_averon_netzimpuls",
+   "name": "Netzimpuls",
+   "nation": "Averon",
+   "set": "set_nation_pool",
+   "typ": "Soforteinsatz",
+   "ap": 2,
+   "rarity": "bronze",
+   "text": "Wähle einen eigenen Abschnitt: alle eigenen Einheiten dort +1 ATK bis Zugende."
+  }
+ ]
+]

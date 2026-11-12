@@ -38,7 +38,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "flavor": "Feind im Vorfeld aufgeklärt. Wir führen Bekämpfung durch!",
     "image": "aufklaerung/A048.jpg",
     "max_copies": 2,
-    "collector": "A048"
+    "collector": "A048",
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_spaeher",
@@ -73,7 +74,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "collector": "A068",
     "keywords": [
       "Gefechtsbereit"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_glubscher",
@@ -112,7 +114,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "flavor": "Da ist böses im Busch!",
     "image": "aufklaerung/A069.jpg",
     "max_copies": 2,
-    "collector": "A069"
+    "collector": "A069",
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_spahwagen",
@@ -146,7 +149,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "flavor": "Fühlung zum Feind!",
     "image": "aufklaerung/A070.jpg",
     "max_copies": 2,
-    "collector": "A070"
+    "collector": "A070",
+    "rarity": "bronze"
   },
   {
     "id": "dc_b_zielmesser_146",

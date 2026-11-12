@@ -5005,7 +5005,7 @@
   "keywords": []
  },
  "dc_b_feuerplan_582": {
-  "kurz": "Wähle eine gegnerische Fronteinheit: sie gilt als beobachtet. Alle eigenen Einheiten: +1 ATK bis Zugende.",
+  "kurz": "Eine gegnerische Fronteinheit (verdeckte zuerst) gilt als beobachtet. Alle eigenen Einheiten: +1 ATK bis Zugende.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -6413,7 +6413,7 @@
   "keywords": []
  },
  "dc_np_steinmark_schutzweste_klasse_drei": {
-  "kurz": "Träger +1 ATK.",
+  "kurz": "Erster Schaden am Träger wird ignoriert. Träger +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -6631,7 +6631,7 @@
   "keywords": []
  },
  "dc_np_eldran_pionierschaufel": {
-  "kurz": "Träger +1 DEF.",
+  "kurz": "Erster Schaden am Träger wird ignoriert. Träger +1 DEF.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -6881,7 +6881,7 @@
   "keywords": []
  },
  "dc_np_rothain_kronstrassenpanzerung": {
-  "kurz": "Träger +2 DEF.",
+  "kurz": "Erster Schaden am Träger wird ignoriert. Träger +2 DEF.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -7118,7 +7118,7 @@
   "keywords": []
  },
  "dc_np_averon_tarnnetz_averon": {
-  "kurz": "",
+  "kurz": "Erster Schaden am Träger wird ignoriert.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -7569,7 +7569,7 @@
   "keywords": []
  },
  "dc_np_vesper_tarnanzug_velis": {
-  "kurz": "Erster Angriff des Trägers: +2 ATK.",
+  "kurz": "Erster Schaden am Träger wird ignoriert. Erster Angriff des Trägers: +2 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -8034,7 +8034,7 @@
   "keywords": []
  },
  "dc_np_caldris_schildplatte": {
-  "kurz": "",
+  "kurz": "Erster Schaden am Träger wird ignoriert.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -8274,7 +8274,7 @@
   "keywords": []
  },
  "dc_np_theryn_reliquie": {
-  "kurz": "Wird der Träger zerstört, ziehst du 2 Karten.",
+  "kurz": "Erster Schaden am Träger wird ignoriert. Wird der Träger zerstört, ziehst du 2 Karten.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -8515,7 +8515,7 @@
   "keywords": []
  },
  "dc_np_vael_reaktivpanzer": {
-  "kurz": "Träger +1 ATK und +1 DEF.",
+  "kurz": "Erster Schaden am Träger wird ignoriert. Träger +1 ATK und +1 DEF.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -8744,7 +8744,7 @@
   "keywords": []
  },
  "dc_np_merovan_haltespaten": {
-  "kurz": "Angriffe des Trägers: +1 Schaden.",
+  "kurz": "Erster Schaden am Träger wird ignoriert. Angriffe des Trägers: +1 Schaden.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -8976,7 +8976,7 @@
   "keywords": []
  },
  "dc_np_lyr_bergmantel": {
-  "kurz": "Erster Angriff des Trägers: +1 ATK.",
+  "kurz": "Erster Schaden am Träger wird ignoriert. Erster Angriff des Trägers: +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -9205,7 +9205,7 @@
   "keywords": []
  },
  "dc_np_ossaria_totenschild": {
-  "kurz": "Solange der Träger beschädigt ist: +1 ATK.",
+  "kurz": "Erster Schaden am Träger wird ignoriert. Solange der Träger beschädigt ist: +1 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -9448,7 +9448,7 @@
   "keywords": []
  },
  "dc_np_namar_kaipanzerung": {
-  "kurz": "Träger +1 DEF.",
+  "kurz": "Erster Schaden am Träger wird ignoriert. Träger +1 DEF.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -9683,7 +9683,7 @@
   "keywords": []
  },
  "dc_np_sahr_flussmantel": {
-  "kurz": "Träger +2 ATK.",
+  "kurz": "Erster Schaden am Träger wird ignoriert. Träger +2 ATK.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"
@@ -9932,7 +9932,7 @@
   "keywords": []
  },
  "dc_np_dargan_haftungsschild": {
-  "kurz": "Wird der Träger zerstört, ziehst du 1 Karte.",
+  "kurz": "Erster Schaden am Träger wird ignoriert. Wird der Träger zerstört, ziehst du 1 Karte.",
   "gekuerzt": false,
   "keywords": [
    "Erstschadenschutz"

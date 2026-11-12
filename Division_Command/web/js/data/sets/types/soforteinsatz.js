@@ -29,7 +29,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Der Befehl ist klar. Ob er Sinn hat, ist egal.",
     "image": "soforteinsatz/A035.jpg",
     "max_copies": 4,
-    "collector": "A035"
+    "collector": "A035",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_blutzeuge",
@@ -57,7 +58,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Einer weniger auf unserer Seite. Einer weniger auf ihrer.",
     "image": "soforteinsatz/A043.jpg",
     "max_copies": 2,
-    "collector": "A043"
+    "collector": "A043",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_sammelruf",
@@ -81,7 +83,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Wer noch laufen kann, kommt.",
     "image": "soforteinsatz/A046.jpg",
     "max_copies": 4,
-    "collector": "A046"
+    "collector": "A046",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_armageddon",
@@ -134,7 +137,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Verlass dich auf Andere und du bist verlassen.",
     "image": "soforteinsatz/A099.jpg",
     "max_copies": 2,
-    "collector": "A099"
+    "collector": "A099",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_bod_luft",
@@ -160,7 +164,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Er war lang genug da oben!",
     "image": "soforteinsatz/A100.jpg",
     "max_copies": 2,
-    "collector": "A100"
+    "collector": "A100",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_dammbruch",
@@ -184,7 +189,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Irgendwann kommt alles runter was man aufgebaut hat.",
     "image": "soforteinsatz/A101.jpg",
     "max_copies": 2,
-    "collector": "A101"
+    "collector": "A101",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_deckung",
@@ -210,7 +216,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     ],
     "image": "soforteinsatz/A102.jpg",
     "max_copies": 2,
-    "collector": "A102"
+    "collector": "A102",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_letzter",
@@ -234,7 +241,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Einer gegen Alle. Alle gegen einen.",
     "image": "soforteinsatz/A103.jpg",
     "max_copies": 2,
-    "collector": "A103"
+    "collector": "A103",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_kavallerie",
@@ -260,7 +268,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     ],
     "image": "soforteinsatz/A104.jpg",
     "max_copies": 2,
-    "collector": "A104"
+    "collector": "A104",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_gassen",
@@ -284,7 +293,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Hier wohnt fast niemand mehr.",
     "image": "soforteinsatz/A105.jpg",
     "max_copies": 2,
-    "collector": "A105"
+    "collector": "A105",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_geist",
@@ -308,7 +318,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Es ist als wären sie immer noch dort.",
     "image": "soforteinsatz/A106.jpg",
     "max_copies": 2,
-    "collector": "A106"
+    "collector": "A106",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_vorsprung",
@@ -332,7 +343,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Fest entschlossen und gerade deswegen so vorhersehbar.",
     "image": "soforteinsatz/A107.jpg",
     "max_copies": 2,
-    "collector": "A107"
+    "collector": "A107",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_mobil",
@@ -360,7 +372,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Für Gott und Vaterland!",
     "image": "soforteinsatz/A108.jpg",
     "max_copies": 2,
-    "collector": "A108"
+    "collector": "A108",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_durchschuss",
@@ -384,7 +397,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Eben war er noch hier. Nun ist er fort.",
     "image": "soforteinsatz/A109.jpg",
     "max_copies": 2,
-    "collector": "A109"
+    "collector": "A109",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_instand",
@@ -408,7 +422,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Wir schrauben Alles wieder zusammen.",
     "image": "soforteinsatz/A110.jpg",
     "max_copies": 2,
-    "collector": "A110"
+    "collector": "A110",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_lage",
@@ -436,7 +451,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Uhrenvergleich!",
     "image": "soforteinsatz/A111.jpg",
     "max_copies": 2,
-    "collector": "A111"
+    "collector": "A111",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_luftschlag",
@@ -465,7 +481,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Kehre zurück zum Stützpunkt!",
     "image": "soforteinsatz/A112.jpg",
     "max_copies": 2,
-    "collector": "A112"
+    "collector": "A112",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_martyrium",
@@ -492,7 +509,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Niemand kommt zum Vater, außer durch mich.",
     "image": "soforteinsatz/A113.jpg",
     "max_copies": 2,
-    "collector": "A113"
+    "collector": "A113",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_ehren",
@@ -522,7 +540,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Nach ihren Taten sollt ihr sie messen.",
     "image": "soforteinsatz/A114.jpg",
     "max_copies": 2,
-    "collector": "A114"
+    "collector": "A114",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_minenfeld",
@@ -552,7 +571,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Als ob man einen Schatz findet. Nur ohne die Freude.",
     "image": "soforteinsatz/A115.jpg",
     "max_copies": 2,
-    "collector": "A115"
+    "collector": "A115",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_mobilisierung",
@@ -576,7 +596,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Die letzten Meter gehören uns!",
     "image": "soforteinsatz/A116.jpg",
     "max_copies": 2,
-    "collector": "A116"
+    "collector": "A116",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_munition",
@@ -601,7 +622,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Der ist geplatzt!",
     "image": "soforteinsatz/A117.jpg",
     "max_copies": 2,
-    "collector": "A117"
+    "collector": "A117",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_napalm",
@@ -631,7 +653,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "5 Minuten von beiden Seiten scharf anbraten.",
     "image": "soforteinsatz/A118.jpg",
     "max_copies": 2,
-    "collector": "A118"
+    "collector": "A118",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_pause",
@@ -656,7 +679,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Ich kann einfach nicht mehr weiter.",
     "image": "soforteinsatz/A119.jpg",
     "max_copies": 2,
-    "collector": "A119"
+    "collector": "A119",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_massen",
@@ -680,7 +704,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Der Geist der Masse ist nur das Gefäß der Ideologie anderer Mächte.",
     "image": "soforteinsatz/A120.jpg",
     "max_copies": 2,
-    "collector": "A120"
+    "collector": "A120",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_eifer",
@@ -708,7 +733,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Unser Weg ist erleuchtet.",
     "image": "soforteinsatz/A121.jpg",
     "max_copies": 2,
-    "collector": "A121"
+    "collector": "A121",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_raeum",
@@ -732,7 +758,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Das war gute Arbeit!",
     "image": "soforteinsatz/A122.jpg",
     "max_copies": 2,
-    "collector": "A122"
+    "collector": "A122",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_selbst",
@@ -759,7 +786,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Manche Kriege werden durch die Entschlossenheit zum Untergang entschieden.",
     "image": "soforteinsatz/A123.jpg",
     "max_copies": 2,
-    "collector": "A123"
+    "collector": "A123",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_engel",
@@ -784,7 +812,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Ein Hoch auf das Finanzwesen!",
     "image": "soforteinsatz/A124.jpg",
     "max_copies": 2,
-    "collector": "A124"
+    "collector": "A124",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_stand",
@@ -812,7 +841,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Wer den Krieg versteht sollte den Tod nicht fürchten.",
     "image": "soforteinsatz/A125.jpg",
     "max_copies": 2,
-    "collector": "A125"
+    "collector": "A125",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_formation",
@@ -841,7 +871,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Haltet die Linie! Der Sieg ist nah!",
     "image": "soforteinsatz/A126.jpg",
     "max_copies": 2,
-    "collector": "A126"
+    "collector": "A126",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_strahlung",
@@ -865,7 +896,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Wenn zerreißt was verbunden, klaffen zahllose Wunden.",
     "image": "soforteinsatz/A127.jpg",
     "max_copies": 2,
-    "collector": "A127"
+    "collector": "A127",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_verpflegung",
@@ -892,7 +924,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Ein voller Magen und ein Moment der Ruhe.",
     "image": "soforteinsatz/A128.jpg",
     "max_copies": 2,
-    "collector": "A128"
+    "collector": "A128",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_waffen",
@@ -916,7 +949,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Das nenne ich Versorgung!",
     "image": "soforteinsatz/A129.jpg",
     "max_copies": 2,
-    "collector": "A129"
+    "collector": "A129",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_widerstand",
@@ -941,7 +975,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Das ist Hochverrat!",
     "image": "soforteinsatz/A130.jpg",
     "max_copies": 2,
-    "collector": "A130"
+    "collector": "A130",
+    "rarity": "bronze"
   },
   {
     "id": "dc_so_volk",
@@ -965,7 +1000,8 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "flavor": "Wenn einer von uns fällt, dann stehen 100 auf.",
     "image": "soforteinsatz/A131.jpg",
     "max_copies": 2,
-    "collector": "A131"
+    "collector": "A131",
+    "rarity": "bronze"
   },
   {
     "id": "dc_b_nachschubstoss_162",
@@ -5741,7 +5777,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "tags": [
       "einsatz"
     ],
-    "text": "Wähle eine gegnerische Fronteinheit: sie gilt als beobachtet. Alle eigenen Einheiten: +1 ATK bis Zugende.",
+    "text": "Eine gegnerische Fronteinheit (verdeckte zuerst) gilt als beobachtet. Alle eigenen Einheiten: +1 ATK bis Zugende.",
     "effects": [
       {
         "code": "MARK_OBSERVED",

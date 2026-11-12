@@ -44,7 +44,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "rules": [
       "Steilfeuer II.",
       "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_moerser",
@@ -77,7 +78,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     ],
     "rules": [
       "Steilfeuer I."
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_viper",
@@ -111,7 +113,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     ],
     "rules": [
       "Steilfeuer III."
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_b_rohrpark_36",
@@ -1574,8 +1577,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Falschfeuer",
     "ap": 3,
-    "atk": 2,
-    "def": 3,
+    "atk": 1,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -2246,8 +2249,8 @@ window.DC_SET_TYPES["Artillerie"] = [
     "klasse": "Artillerie",
     "name": "Markengeschütz",
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 2,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",

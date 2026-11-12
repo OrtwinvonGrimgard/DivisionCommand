@@ -37,7 +37,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "collector": "A057",
     "keywords": [
       "Ablösung"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_hammer",
@@ -73,7 +74,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "collector": "A061",
     "keywords": [
       "Stellungswechsel"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_spz",
@@ -106,7 +108,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "flavor": "Geben wir ihnen Deckung!",
     "image": "panzer/A066.jpg",
     "max_copies": 2,
-    "collector": "A066"
+    "collector": "A066",
+    "rarity": "bronze"
   },
   {
     "id": "dc_b_serienpanzer_28",
@@ -2294,8 +2297,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Etappenkeil",
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 4,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -2682,8 +2685,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Pfadkeil",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -4023,8 +4026,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Altenfeld-Riegel",
     "ap": 4,
-    "atk": 3,
-    "def": 5,
+    "atk": 2,
+    "def": 6,
     "verdeckt_ok": false,
     "tags": [
       "panzer"

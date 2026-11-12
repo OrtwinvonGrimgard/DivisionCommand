@@ -33,7 +33,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "flavor": "Sie steht. Ob der Abschnitt noch steht, sieht man später.",
     "image": "ausruestung/A037.jpg",
     "max_copies": 4,
-    "collector": "A037"
+    "collector": "A037",
+    "rarity": "bronze"
   },
   {
     "id": "dc_eq_gebetsfahne",
@@ -61,7 +62,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "flavor": "Wenn sie fällt, hört der Abschnitt auf zu fragen, warum.",
     "image": "ausruestung/A039.jpg",
     "max_copies": 4,
-    "collector": "A039"
+    "collector": "A039",
+    "rarity": "bronze"
   },
   {
     "id": "dc_au_sturmleitern",
@@ -88,7 +90,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "flavor": "Die Leiter kommt mit. Ob sie gebraucht wird, sieht man oben.",
     "image": "ausruestung/A044.jpg",
     "max_copies": 2,
-    "collector": "A044"
+    "collector": "A044",
+    "rarity": "bronze"
   },
   {
     "id": "dc_au_feldzeichen",
@@ -115,7 +118,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "flavor": "Ein Zeichen. Mehr nicht. Aber es steht.",
     "image": "ausruestung/A047.jpg",
     "max_copies": 4,
-    "collector": "A047"
+    "collector": "A047",
+    "rarity": "bronze"
   },
   {
     "id": "dc_eq_fanat",
@@ -145,7 +149,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "flavor": "Wer das Schwert ergreift, der soll vergehen durch das Schwert.",
     "image": "ausruestung/A093.jpg",
     "max_copies": 2,
-    "collector": "A093"
+    "collector": "A093",
+    "rarity": "bronze"
   },
   {
     "id": "dc_eq_spat",
@@ -173,7 +178,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "flavor": "Sie werden graben bis ich ihnen befehle das Graben einzustellen!",
     "image": "ausruestung/A094.jpg",
     "max_copies": 2,
-    "collector": "A094"
+    "collector": "A094",
+    "rarity": "bronze"
   },
   {
     "id": "dc_eq_med",
@@ -202,7 +208,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "flavor": "Es ist genug für alle da.",
     "image": "ausruestung/A095.jpg",
     "max_copies": 2,
-    "collector": "A095"
+    "collector": "A095",
+    "rarity": "bronze"
   },
   {
     "id": "dc_eq_rauch",
@@ -228,7 +235,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "flavor": "Die leichteste Deckung der Welt.",
     "image": "ausruestung/A096.jpg",
     "max_copies": 2,
-    "collector": "A096"
+    "collector": "A096",
+    "rarity": "bronze"
   },
   {
     "id": "dc_eq_tasche",
@@ -256,7 +264,8 @@ window.DC_SET_TYPES["Ausrüstung"] = [
     "flavor": "Ich brauche hier sofort einen Druckverband!",
     "image": "ausruestung/A097.jpg",
     "max_copies": 2,
-    "collector": "A097"
+    "collector": "A097",
+    "rarity": "bronze"
   },
   {
     "id": "dc_b_ersatzkette_174",

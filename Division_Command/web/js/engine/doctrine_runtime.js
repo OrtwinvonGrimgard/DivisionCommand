@@ -459,7 +459,13 @@
           var aDef = this.defOf(A);
           // AUFKLAERUNGSSCHLAG: +ATK vs revealed (optional once/turn)
           var p = dokParam(this, atkP, 'AUFKLAERUNGSSCHLAG');
-          if (p && T.facedown === false) {
+          // t283: Param `against` wählt das Ziel: 'revealed' (Standard, aufgedeckt) oder 'observed' (beobachtet).
+          var vsOk = function (prm) {
+            var ag = (prm && prm.against) || 'revealed';
+            if (ag === 'observed') return !!(T.flags && T.flags.observed);
+            return T.facedown === false;
+          };
+          if (p && vsOk(p)) {
             var scoutOk = !p.scout_only || hasTag(aDef, 'aufklaerung');
             if (scoutOk) {
               if (p.once_per_turn) {
@@ -473,7 +479,7 @@
           }
           // LOKALISIERUNG: sum all matching doctrine effects (card may bundle several)
           dokAllParams(this, atkP, 'LOKALISIERUNG').forEach(function (lp) {
-            if (T.facedown === false) {
+            if (vsOk(lp)) {
               dmgToT += Math.abs(Number(lp.def || -1));
               if (lp.vs_damaged_extra && this._isDamaged(T)) dmgToT += Number(lp.vs_damaged_extra || 0);
             }
@@ -611,8 +617,10 @@
       // SCHWERPUNKT: densest section +ATK
       if (hasDok(this, p, 'SCHWERPUNKT')) {
         var sp = dokParam(this, p, 'SCHWERPUNKT') || {};
-        var best = 'C'; var bestN = -1;
+        // t283: Param `auto` – 'densest' (Standard): dichtester Abschnitt; 'center': immer das Zentrum.
+        var best = 'C'; var bestN = sp.auto === 'center' ? sectionCount(self, p, 'C') : -1;
         ['L', 'C', 'R'].forEach(function (s) {
+          if (sp.auto === 'center') return;
           var n = sectionCount(self, p, s);
           if (n > bestN) { bestN = n; best = s; }
         });
@@ -628,8 +636,10 @@
       if (hasDok(this, p, 'STURMANGRIFF')) {
         var st = dokParam(this, p, 'STURMANGRIFF') || {};
         /* t255: `count` – so viele der stärksten Infanterien erhalten den Bonus (Standard 1). */
+        // t283: Param `auto` – 'strongest-infantry' (Standard) nach ATK, 'weakest-infantry' umgekehrt.
+        var weakFirst = st.auto === 'weakest-infantry';
         var inf = this.frontList(p).filter(function (l) { return isInfantry(self.defOf(l.inst)); })
-          .map(function (l, i) { return { inst: l.inst, a: Number(self.defOf(l.inst).atk) || 0, i: i }; })
+          .map(function (l, i) { var a0 = Number(self.defOf(l.inst).atk) || 0; return { inst: l.inst, a: weakFirst ? -a0 : a0, i: i }; })
           .sort(function (x, y) { return (y.a - x.a) || (x.i - y.i); });
         inf.slice(0, Math.max(1, Number(st.count || 1))).forEach(function (x) {
           x.inst.flags = x.inst.flags || {};

@@ -23,7 +23,12 @@ function migrate(c) {
     c.rules = c.rules || []; if (!c.rules.includes(r)) c.rules.push(r);
   };
   if (has('RELOCATE_HIDE')) add('Absetzen', /Nach (?:jedem eigenen Angriff verdeckt bis zu deinem nächsten Zug|dem Angriff bis zum nächsten eigenen Zug verdeckt|Angriff verdeckt bis zum nächsten eigenen Zug)\./g);
-  if (has('EQUIP_IGNORE_FIRST_DAMAGE') && !EXCLUDED.has(c.id)) add('Erstschadenschutz', /Der erste Schaden am Träger wird ignoriert \(einmalig\)\./g);
+  if (has('EQUIP_IGNORE_FIRST_DAMAGE') && !EXCLUDED.has(c.id)) {
+    add('Erstschadenschutz', /Der erste Schaden am Träger wird ignoriert \(einmalig\)\./g);
+    // t283: Die Wirkung steht wieder im Kartentext (vorher nur als Schlüsselwort-Chip; 12 Karten ohne Text, 2 leer).
+    const ESS = 'Erster Schaden am Träger wird ignoriert.';
+    if (!(c.text || '').includes(ESS)) c.text = (ESS + ' ' + (c.text || '')).trim();
+  }
   for (const e of fx) {
     const p = e.param || {};
     if (e.code === 'EQUIP_NEGATE_DAMAGE') {

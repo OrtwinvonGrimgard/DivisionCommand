@@ -31,7 +31,8 @@ window.DC_SET_TYPES["Elite"] = [
     "flavor": "Was die anderen nicht wagen, haben wir schon getan.",
     "image": "elite/A052.jpg",
     "max_copies": 2,
-    "collector": "A052"
+    "collector": "A052",
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_kommando",
@@ -65,7 +66,8 @@ window.DC_SET_TYPES["Elite"] = [
     "flavor": "Nur wenige erreichen den Geist der nötig ist.",
     "image": "elite/A055.jpg",
     "max_copies": 2,
-    "collector": "A055"
+    "collector": "A055",
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_faustkeil",
@@ -103,7 +105,8 @@ window.DC_SET_TYPES["Elite"] = [
     "keywords": [
       "Nachsetzen",
       "Sicherung"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_sniper",
@@ -147,7 +150,8 @@ window.DC_SET_TYPES["Elite"] = [
     ],
     "rules": [
       "Absetzen (Nachdem diese Einheit angegriffen hat, wird sie verdeckt und bleibt verdeckt, bis dein nächster Zug beginnt. Liegt beim Gegner eine Unterstützung, die verdeckte Karten verbietet, entfällt das Verdecken.)"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_eh_koloss",
@@ -184,7 +188,8 @@ window.DC_SET_TYPES["Elite"] = [
     "collector": "A065",
     "keywords": [
       "Abschirmung"
-    ]
+    ],
+    "rarity": "bronze"
   },
   {
     "id": "dc_b_konzernsekundant_150",

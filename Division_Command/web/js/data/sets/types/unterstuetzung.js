@@ -33,7 +33,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Hier wird gezählt, wer noch da ist. Und wer fehlt.",
     "image": "unterstuetzung/A034.jpg",
     "max_copies": 4,
-    "collector": "A034"
+    "collector": "A034",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_feldprediger",
@@ -61,7 +62,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Er sagt, es hat Sinn. Sie glauben ihm, weil sie müssen.",
     "image": "unterstuetzung/A038.jpg",
     "max_copies": 4,
-    "collector": "A038"
+    "collector": "A038",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_glaubensbanner",
@@ -89,7 +91,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Es hält niemanden am Leben. Es hält sie nur zusammen.",
     "image": "unterstuetzung/A042.jpg",
     "max_copies": 2,
-    "collector": "A042"
+    "collector": "A042",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_artillerie",
@@ -125,7 +128,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Es flieeegen mit Pulver die Kugeln so weit! Ja, so weit!",
     "image": "unterstuetzung/A071.jpg",
     "max_copies": 2,
-    "collector": "A071"
+    "collector": "A071",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_satellit",
@@ -158,7 +162,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Wir könnten sogar dein Haus von hier sehen.",
     "image": "unterstuetzung/A072.jpg",
     "max_copies": 2,
-    "collector": "A072"
+    "collector": "A072",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_ausland",
@@ -189,7 +194,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Sie können sich nicht vorstellen was man mit einem Gespräch alles erreichen kann.",
     "image": "unterstuetzung/A073.jpg",
     "max_copies": 2,
-    "collector": "A073"
+    "collector": "A073",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_niemand",
@@ -213,7 +219,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Wir werden Frieden haben!",
     "image": "unterstuetzung/A074.jpg",
     "max_copies": 2,
-    "collector": "A074"
+    "collector": "A074",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_drohne",
@@ -242,7 +249,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Artillerie war gestern.",
     "image": "unterstuetzung/A075.jpg",
     "max_copies": 2,
-    "collector": "A075"
+    "collector": "A075",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_general",
@@ -278,7 +286,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Im Chaos des Krieges bringt Erfahrung den entscheidenden Vorteil.",
     "image": "unterstuetzung/A076.jpg",
     "max_copies": 2,
-    "collector": "A076"
+    "collector": "A076",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_feldlager",
@@ -306,7 +315,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "image": "unterstuetzung/A077.jpg",
     "max_copies": 2,
     "collector": "A077",
-    "rules": []
+    "rules": [],
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_festung",
@@ -334,7 +344,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Das Wunder von Zement!",
     "image": "unterstuetzung/A078.jpg",
     "max_copies": 2,
-    "collector": "A078"
+    "collector": "A078",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_flak",
@@ -363,7 +374,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Haltet die Augen offen!",
     "image": "unterstuetzung/A079.jpg",
     "max_copies": 2,
-    "collector": "A079"
+    "collector": "A079",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_komm",
@@ -397,7 +409,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Halten sie Fühlung zum Feind!",
     "image": "unterstuetzung/A080.jpg",
     "max_copies": 2,
-    "collector": "A080"
+    "collector": "A080",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_nebel",
@@ -425,7 +438,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Die sehen gleich nichts mehr.",
     "image": "unterstuetzung/A081.jpg",
     "max_copies": 2,
-    "collector": "A081"
+    "collector": "A081",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_lager",
@@ -458,7 +472,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Logistik ist die Lebenskraft einer Legion.",
     "image": "unterstuetzung/A082.jpg",
     "max_copies": 2,
-    "collector": "A082"
+    "collector": "A082",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_lazarett",
@@ -485,7 +500,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Dieser darf sein Bein behalten.",
     "image": "unterstuetzung/A083.jpg",
     "max_copies": 2,
-    "collector": "A083"
+    "collector": "A083",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_prop",
@@ -512,7 +528,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Wahrheit? Ihr kennt die Wahrheit! Ihre Lügen sind unser Untergang!",
     "image": "unterstuetzung/A084.jpg",
     "max_copies": 2,
-    "collector": "A084"
+    "collector": "A084",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_radar",
@@ -540,7 +557,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Wir haben sie auf dem Schirm",
     "image": "unterstuetzung/A085.jpg",
     "max_copies": 2,
-    "collector": "A085"
+    "collector": "A085",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_schlaefer",
@@ -574,7 +592,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Auch ein schwacher Geist kann eine starke Waffe sein.",
     "image": "unterstuetzung/A086.jpg",
     "max_copies": 2,
-    "collector": "A086"
+    "collector": "A086",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_spion",
@@ -604,7 +623,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Wissen ist Macht.",
     "image": "unterstuetzung/A087.jpg",
     "max_copies": 2,
-    "collector": "A087"
+    "collector": "A087",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_staat",
@@ -628,7 +648,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Der Erfolg gibt uns Recht.",
     "image": "unterstuetzung/A088.jpg",
     "max_copies": 2,
-    "collector": "A088"
+    "collector": "A088",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_brumm",
@@ -668,7 +689,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Sie hätten bei Kabeln bleiben sollen.",
     "image": "unterstuetzung/A089.jpg",
     "max_copies": 2,
-    "collector": "A089"
+    "collector": "A089",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_auge",
@@ -692,7 +714,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Es kann nicht sein, was nicht sein darf.",
     "image": "unterstuetzung/A090.jpg",
     "max_copies": 2,
-    "collector": "A090"
+    "collector": "A090",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_pakt",
@@ -716,7 +739,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Wenn man seit Jahrhunderten wartet, kommt es nicht auf ein paar Stunden an.",
     "image": "unterstuetzung/A091.jpg",
     "max_copies": 2,
-    "collector": "A091"
+    "collector": "A091",
+    "rarity": "bronze"
   },
   {
     "id": "dc_su_nest",
@@ -749,7 +773,8 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "flavor": "Sie kämpfen mit dem Leben. Wir gegen den Tod.",
     "image": "unterstuetzung/A092.jpg",
     "max_copies": 2,
-    "collector": "A092"
+    "collector": "A092",
+    "rarity": "bronze"
   },
   {
     "id": "dc_b_feuerleitung_153",
