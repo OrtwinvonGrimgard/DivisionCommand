@@ -104,6 +104,6 @@ function fakeStorage(init) {
   assert.ok(html.includes('js/ui/reset.js') && html.includes('css/reset.css'), 'eingebunden');
   assert.ok(!/localStorage\.clear\(\)/.test(fs.readFileSync(path.join(WEB, 'js/ui/reset.js'), 'utf8')), 'kein globales clear()');
   const sw = fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8');
-  assert.ok(sw.includes('js/ui/reset.js') && sw.includes("'divcmd-alpha42b'"), 'Offline-Cache');
+  assert.ok(sw.includes('js/ui/reset.js') && sw.includes("'divcmd-alpha42c'"), 'Offline-Cache');
   console.log('PASS reset t278: ' + keys.size + ' Speicherschlüssel mit dc_, Löschen nach Präfix + IndexedDB, danach Erststart');
 })().catch((e) => { console.error(e); process.exit(1); });

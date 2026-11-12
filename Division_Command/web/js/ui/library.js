@@ -300,8 +300,101 @@
     var real = Math.max(1, printed);
     return real + ' AP real' + (printed !== real ? ' (gedruckt ' + printed + ')' : '');
   }
-  function zoom(c) {
+  /** ID der Karte, die die große Ansicht gerade zeigt (für Blättern und Tasten). */
+  var zoomId = null;
+
+  /**
+   * Karten-IDs der Bibliothek in Anzeigereihenfolge mit allen aktiven Filtern (Reiter, Suche, Nation,
+   * Seltenheit, Tags) – dieselbe Liste, die links gezeichnet wird.
+   * @returns {string[]}
+   */
+  function listIds() {
+    var out = [];
+    sections().forEach(function (g) { g.list.forEach(function (x) { out.push(x.id); }); });
+    return out;
+  }
+
+  /**
+   * Position einer Karte in der aktuellen Liste.
+   * @param {string} id
+   * @returns {{ids: string[], i: number, n: number}} i = -1, wenn die Karte gerade nicht in der Liste steht
+   */
+  function zoomNav(id) {
+    var ids = listIds();
+    return { ids: ids, i: ids.indexOf(id), n: ids.length };
+  }
+
+  /**
+   * Blätterleiste unter dem Kartenbild: ‹ Position › . An den Enden ist der Knopf gesperrt (kein Umlauf).
+   * Steht die Karte nicht in der Liste (z. B. aus dem Deck geöffnet und weggefiltert), entfällt die Leiste.
+   * @param {{i: number, n: number}} nav
+   * @returns {string}
+   */
+  function zoomNavHtml(nav) {
+    if (!nav || nav.i < 0 || nav.n < 2) return '';
+    var first = nav.i === 0, last = nav.i === nav.n - 1;
+    return '<div class="zoom-nav" role="group" aria-label="Karten durchblättern">' +
+      '<button type="button" class="zoom-prev" data-zoom-step="-1" aria-label="Vorherige Karte" title="' + (first ? 'Erste Karte der Liste' : 'Vorherige Karte (Pfeil links)') + '"' + (first ? ' disabled aria-disabled="true"' : '') + '>‹</button>' +
+      '<span class="zoom-pos" aria-live="polite">' + (nav.i + 1) + ' / ' + nav.n + '</span>' +
+      '<button type="button" class="zoom-next" data-zoom-step="1" aria-label="Nächste Karte" title="' + (last ? 'Letzte Karte der Liste' : 'Nächste Karte (Pfeil rechts)') + '"' + (last ? ' disabled aria-disabled="true"' : '') + '>›</button>' +
+      '</div>';
+  }
+
+  /**
+   * Lädt die Bilder der Nachbarkarten vor, damit das Blättern sofort ein Bild zeigt.
+   * @param {{ids: string[], i: number}} nav
+   */
+  function preloadNeighbours(nav) {
+    if (!nav || nav.i < 0 || typeof Image === 'undefined') return;
+    [nav.i - 1, nav.i + 1].forEach(function (j) {
+      var n = j >= 0 && j < nav.ids.length ? cardById(nav.ids[j]) : null;
+      var src = n && !(global.DCCardPh && DCCardPh.is(n)) ? imgOf(n) : '';
+      if (src) { var im = new Image(); im.decoding = 'async'; im.src = src; }
+    });
+  }
+
+  /**
+   * Blättert in der großen Ansicht zur vorherigen (-1) oder nächsten (+1) Karte der aktuellen Liste.
+   * An den Enden passiert nichts (Knopf gesperrt).
+   * @param {number} delta
+   * @returns {boolean} true, wenn eine andere Karte gezeigt wird
+   */
+  function zoomStep(delta) {
+    var ov = document.getElementById('lib-zoom');
+    if (!ov || ov.style.display === 'none' || !zoomId) return false;
+    var nav = zoomNav(zoomId);
+    var j = nav.i + delta;
+    if (nav.i < 0 || j < 0 || j >= nav.n) return false;
+    zoom(cardById(nav.ids[j]), { dir: delta });
+    return true;
+  }
+
+  /** Tasten und Wischen für die große Ansicht (einmalig gebunden). */
+  function bindZoomKeys() {
+    if (bindZoomKeys.done || typeof document === 'undefined') return;
+    bindZoomKeys.done = true;
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      var ov = document.getElementById('lib-zoom');
+      if (!ov || ov.style.display === 'none') return;
+      var t = e.target;
+      if (t && (/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) || t.isContentEditable)) return;
+      if (zoomStep(e.key === 'ArrowLeft' ? -1 : 1)) e.preventDefault();
+    });
+  }
+
+  /**
+   * Große Kartenansicht der Bibliothek.
+   * @param {object} c Karte
+   * @param {{dir?: number}} [opts] dir: Blätterrichtung für die Übergangsanimation
+   */
+  function zoom(c, opts) {
     if (!c) return;
+    bindZoomKeys();
+    var focusStep = opts && opts.dir && document.activeElement && document.activeElement.getAttribute && document.activeElement.getAttribute('data-zoom-step');
+    zoomId = c.id;
+    var nav = zoomNav(c.id);
     var ov = document.getElementById('lib-zoom');
     if (!ov) {
       ov = document.createElement('div');
@@ -331,8 +424,9 @@
     addChip(c.klasse);
     var chipHtml = chips.map(function (x) { var m = tagMeta(x); return '<span class="chip" data-tag="' + esc(x) + '">' + esc(m.name) + '</span>'; }).join('');
     ov.innerHTML =
-      '<div class="inspect-modal">' +
+      '<div class="inspect-modal' + (opts && opts.dir ? (opts.dir > 0 ? ' zoom-step-next' : ' zoom-step-prev') : '') + '">' +
         (global.DCCardPh && DCCardPh.is(c) ? DCCardPh.html(c, 'hero') : '<img class="hero" alt="" src="' + imgOf(c) + '">') +
+        zoomNavHtml(nav) +
         '<div class="info">' +
           '<h3>' + esc(c.name) + '</h3>' +
           '<div class="kind">' + esc(c.typ || '') + '</div>' +
@@ -399,6 +493,26 @@
       backBtn.onclick = function () { subCard(c.id); zoom(c); };
     }
     ov.querySelector('[data-lib-close]').onclick = function () { ov.style.display = 'none'; };
+    ov.querySelectorAll('[data-zoom-step]').forEach(function (b) {
+      b.onclick = function (ev) { ev.stopPropagation(); zoomStep(Number(b.getAttribute('data-zoom-step'))); };
+    });
+    // Fokus bleibt auf dem Pfeil, damit Enter/Leertaste weiterblättern; am Ende auf den anderen Pfeil
+    if (focusStep) {
+      var again = ov.querySelector('[data-zoom-step="' + focusStep + '"]:not([disabled])') || ov.querySelector('[data-zoom-step]:not([disabled])');
+      if (again && again.focus) again.focus({ preventScroll: true });
+    }
+    // Wischen auf dem Kartenbild (Touch): links = nächste, rechts = vorherige Karte
+    var hero = ov.querySelector('.inspect-modal > .hero, .inspect-modal > .card-ph');
+    if (hero) {
+      var x0 = null;
+      hero.addEventListener('pointerdown', function (ev) { x0 = ev.pointerType === 'touch' ? ev.clientX : null; });
+      hero.addEventListener('pointerup', function (ev) {
+        if (x0 === null) return;
+        var dx = ev.clientX - x0; x0 = null;
+        if (Math.abs(dx) > 40) zoomStep(dx < 0 ? 1 : -1);
+      });
+    }
+    preloadNeighbours(nav);
   }
 
   /**
@@ -917,6 +1031,10 @@
     addCard: function (id) { addCard(cardById(id)); },
     /** Öffnet die große Kartenansicht (#lib-zoom) für eine Karten-ID. */
     zoom: function (id) { zoom(cardById(id)); },
+    /** Blättert in der offenen großen Ansicht (-1/+1); true, wenn gewechselt wurde. */
+    zoomStep: zoomStep,
+    /** ID der gerade groß gezeigten Karte (oder null). */
+    zoomId: function () { return zoomId; },
     clearDraft: function () { draft = { cards: {}, doctrines: [] }; },
     draft: function () { return { cards: JSON.parse(JSON.stringify(draft.cards)), doctrines: draft.doctrines.slice() }; },
     visibleIds: function () { var out = []; sections().forEach(function (g) { g.list.forEach(function (c) { out.push(c.id); }); }); return out; },

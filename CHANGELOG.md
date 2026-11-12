@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+- **Bibliothek: In der großen Kartenansicht blättern (t281):**
+  - Unter dem Kartenbild gibt es jetzt die Pfeilknöpfe ‹ › mit Positionsanzeige, z. B. „12 / 348“. Auch die Pfeiltasten ← → blättern. In Textfeldern bleiben die Pfeiltasten beim Feld.
+  - Geblättert wird in der aktuellen Liste, also mit aktivem Reiter, Suche und Tags und in deren Reihenfolge. Der Detailbereich rechts und die Deck-Aktionen beziehen sich auf die gerade gezeigte Karte.
+  - An der ersten und letzten Karte ist der Knopf gesperrt, es gibt keinen Umlauf. Esc schließt weiterhin nur die Ansicht.
+  - Kurzer Übergang, der „reduced motion“ beachtet. Auf Touchgeräten kann man über das Bild wischen. Die Nachbarbilder werden vorgeladen.
+  - Die Kartenansicht in der Partie ist unverändert.
+  - Tests: `tests/test_libzoom_t281.js` (in `npm test`) und `npm run libzoom-play` (Browser, 1024/1280/1920).
+  - Korrektur: Lange Doktrinnamen wie „Etappensicherung“ werden bei 1024 px nicht mehr mitten im Wort umbrochen, sondern deutsch getrennt („Etappensi-cherung“).
+  - Cache `divcmd-alpha42c`.
 - **Alle Bildschirme überarbeitet (t280, Stufe 2): Tisch, Kartenansicht, Rückfragen, Tutorial:**
   - Messung vorher (Bildschirm-Prüfung nach Stufe 1): 14 Befunde.
     - 2,5D: „Hauptmenü“, „Aufgeben“ und „Playtest“ lagen über den Reitern Protokoll/Chat. Das waren unsichtbare Knöpfe im zugeklappten „Weitere Befehle“, die trotzdem Platz belegten.
