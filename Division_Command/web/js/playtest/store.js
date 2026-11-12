@@ -259,8 +259,20 @@
     });
   }
 
+  /**
+   * t278: Schließt die offene Datenbankverbindung (damit „Spielstand zurücksetzen“ sie löschen kann).
+   * @returns {Promise<void>}
+   */
+  function closeDb() {
+    if (!dbPromise) return Promise.resolve();
+    var p = dbPromise;
+    dbPromise = null;
+    return p.then(function (db) { try { db.close(); } catch (e) { /* schon zu */ } }, function () {});
+  }
+
   global.DCPlayStore = {
     openDb: openDb,
+    closeDb: closeDb,
     put: put,
     get: get,
     getAll: getAll,

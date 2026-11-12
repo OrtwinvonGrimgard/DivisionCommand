@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/hud-pro.css?v=1">
   <link rel="stylesheet" href="css/card-placeholder.css?v=kw1">
   <link rel="stylesheet" href="css/tutorial.css?v=t275">
+  <link rel="stylesheet" href="css/reset.css?v=t278">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
     .title-brand .ver-big { display: none !important; }
@@ -190,6 +191,7 @@
         <div class="menu">
           <button type="button" class="primary" id="go-start">Spiel starten</button>
         </div>
+        <button type="button" id="boot-reset" title="Alle gespeicherten Daten löschen und wie beim ersten Start beginnen">Speicher löschen</button>
       </div>
 
       <div id="scr-setup" class="screen splash">
@@ -463,6 +465,11 @@
         </div>
         <div id="opt-sys" class="opt-pane" style="display:none">
           <label>Leistung anzeigen <input id="opt-perf" type="checkbox"> FPS / Speicher</label>
+          <div class="opt-danger">
+            <h3>Spielstand zurücksetzen</h3>
+            <p>Löscht Offiziersakten, Decks, Einstellungen, Tutorial-Merker und Playtest-Protokolle. Danach startet das Spiel wie beim ersten Mal.</p>
+            <button type="button" id="opt-reset" class="danger">Spielstand zurücksetzen …</button>
+          </div>
         </div>
 
         <div class="menu">
@@ -556,6 +563,7 @@
               <h2 id="playtest">Playtest / Logs</h2>
               <p>Zugang zu detaillierten Logs, Debug-Informationen und Playtest-Funktionen. Nützlich zum Nachvollziehen von Karteneffekten, Zugverläufen und Fehlern. Aktuell vor allem für Entwickler und intensive Tester.</p>
               <h2 id="options">Optionen</h2>
+              <p>Unter <b>System</b> setzt „Spielstand zurücksetzen“ das Spiel auf den Erststart zurück (auch klein unten rechts auf dem Startbildschirm: „Speicher löschen“). Nach doppelter Bestätigung werden Offiziersakten, eigene Decks, Einstellungen, der Tutorial-Merker und Playtest-Protokolle gelöscht; danach öffnet „Spiel starten“ wieder das Tutorial. Programmdateien und Bilder bleiben.</p>
               <p>Musik an/aus und Lautstärke, Soundeffekte, Tischansicht (flach oder 2,5D mit beweglicher Kamera und Auto-Fokus), Bot-Verhalten (Aggressivität, Ausspielrate, Soforteinsatz, Denkpause, welche Kartentypen der Bot spielt). Einstellungen gelten in-game und im Menü.</p>
             </article>
 
@@ -563,7 +571,7 @@
               <h2 id="vorstellung">Grundlegende Vorstellung</h2>
               <p>Division Command ist ein taktisches Kartenspiel um eine moderne Division. Zwei Spieler führen Einheiten, Unterstützung, Einsätze, Ausrüstung und zwei Doktrinen. Die Grundregeln bleiben kurz. Die Tiefe kommt aus den Karten, nicht aus einer langen Phasenliste.</p>
               <p>Das Feld ist eine Front aus neun Stellungen: linke Flanke, Zentrum und rechte Flanke, jede mit drei Reihen. Dahinter liegt der Support. Dazwischen das Niemandsland für Minen, Sperren und andere Marker. Einheiten werden in eine Stellung gelegt und bleiben dort, bis eine Karte sie verlegt oder zerstört. Ein normaler Angriff trifft die Stellung gegenüber und die beiden seitlich daneben. Artillerie mit Steilfeuer reicht weiter.</p>
-              <p>Ein Zug ist frei: legen, angreifen, aufdecken, reagieren, solange die Aktionspunkte reichen, dann abgeben. Zu Beginn des eigenen Zuges kommen 5 AP dazu, auch für den Startspieler im ersten Zug. Dafür zieht der Startspieler in Zug 1 keine Karte; der Gegner zieht zu Beginn seines ersten Zuges wie immer 1. Was übrig bleibt, liegt weiter. 5 ist der Startwert, kein Limit. Ein Speicherdeckel, etwa 10, ist noch nicht fest.</p>
+              <p>Ein Zug ist frei: legen, angreifen, aufdecken, reagieren, solange die Aktionspunkte reichen, dann abgeben. Zu Beginn des eigenen Zuges stehen 5 AP bereit, auch für den Startspieler im ersten Zug. Dafür zieht der Startspieler in Zug 1 keine Karte; der Gegner zieht zu Beginn seines ersten Zuges wie immer 1. Was übrig bleibt, dient nur als Reserve für Reaktionen im gegnerischen Zug (Feindkontakt); zu Beginn des eigenen Zuges stehen wieder 5 AP bereit (plus Boni von Unterstützungskarten), Reste verfallen.</p>
               <p>Das Spiel soll vom Blauhelm bis zum Abgrund der Kriegsführung reichen: Logistik, Aufklärung und Versorgung auf der einen Seite, Propaganda, Opfer und Flächenwirkung auf der anderen. Klassen sind Infanterie, Rad und Kette. Artillerie und Panzer sind Klassen, keine Tags. Tags vergibt du selbst und hängst die Effekte später daran.</p>
 
               <h2 id="regeln">Spielregeln</h2>
@@ -605,7 +613,7 @@
               <table>
                 <thead><tr><th>Begriff</th><th>Bedeutung</th></tr></thead>
                 <tbody>
-                  <tr><td>AP</td><td>Aktionspunkte. Bezahlen Legen, Angriff und Reaktion. +5 zu Beginn des eigenen Zuges (auch im ersten Zug), Rest bleibt liegen.</td></tr>
+                  <tr><td>AP</td><td>Aktionspunkte. Bezahlen Legen, Angriff und Reaktion. 5 zu Beginn des eigenen Zuges (auch im ersten Zug); Rest nur als Reserve für Reaktionen im gegnerischen Zug, dann verfällt er.</td></tr>
                   <tr><td>Stellung</td><td>Ein Platz an der Front. Neun Stück, drei je Flanke.</td></tr>
                   <tr><td>Eingraben</td><td>Frisch gelegte Einheit: offen mit Schild-Badge, nicht angreifbar / kein gezielter Effekt bis zum nächsten eigenen Zug; Flächenschaden trifft. +1 DEF bis Schutzende.</td></tr>
                   <tr><td>Flanke</td><td>Links, Zentrum oder rechts. Ein normaler Angriff trifft gegenüber und die Nachbarstellungen.</td></tr>
@@ -761,7 +769,7 @@
               <p>Gesetzte Version 0.6b (Tag v0.6b vom 10.&nbsp;11.&nbsp;2026), seither 20 weitere Commits auf <code>main</code> ohne neue Versionsnummer. Das Repo hat seit dem 8.&nbsp;9.&nbsp;2026 942 Commits (September 181, Oktober 388, November bis t271 373). Code ohne Kartendaten: rund 17&nbsp;500 Zeilen JavaScript (Engine 7.936, Oberfläche 3.328, Bot 1.081), dazu <code>server.py</code> mit 651 Zeilen.</p>
               <h2 id="stand-engine">Regeln & Engine</h2>
               <ul>
-                <li>Spielbar: Front 3×3 je Seite, Support, Niemandsland, AP-Ökonomie (5 je Zug, Rest bleibt), Angriff mit Gegenschlag, Eingraben, Steilfeuer I–V, verdeckte Fallen bei Feindkontakt, Doktrinen, Trophy-Sieg (5 SP, Sicherheitsnetz Zug 26/28).</li>
+                <li>Spielbar: Front 3×3 je Seite, Support, Niemandsland, AP-Ökonomie (5 je Zug, Rest als Reaktionsreserve), Angriff mit Gegenschlag, Eingraben, Steilfeuer I–V, verdeckte Fallen bei Feindkontakt, Doktrinen, Trophy-Sieg (5 SP, Sicherheitsnetz Zug 26/28).</li>
                 <li>Seit t257 haben beide Spieler im ersten Zug 5 AP; der Startspieler zieht in Zug 1 keine Karte.</li>
                 <li>210 Effektcodes im Katalog. Seit t250/t251 wirken die damals gefundenen Teil-Stubs wie gedruckt (Vertragsclip, Blitzkrieg-Sperre im nächsten gegnerischen Zug, Schläferzelle neutralisierbar für 2&nbsp;AP); Armageddon seit t259.</li>
                 <li>Prüfung t265 fand 14 Karten mit falscher Wirkung; <strong>seit t267 wirken alle 14 wie gedruckt</strong> (Opfergabe und Ablösung zerstören keine Feinde mehr, Bonus negieren, eigener Bonus nach Feindziel, Verbandskasten, Werkstattmarke, Ortungsband). Lesarten in <code>docs/regeln/KARTEN_T267.md</code>. Einziger geänderter Text: Stillprobe (Entwurfsrest).</li>
@@ -983,7 +991,8 @@
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=st1"></script>
   <script src="js/ui/end-screen.js?v=1"></script>
-  <script src="js/ui/app.js?v=alpha41d"></script>
+  <script src="js/ui/app.js?v=alpha41e"></script>
+  <script src="js/ui/reset.js?v=t278"></script>
   <script src="js/tutorial/scenario.js?v=t275"></script>
   <script src="js/ui/tutorial.js?v=t275"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
@@ -1558,6 +1567,11 @@
         if (after) after(); else show('scr-title');
         applyAudio();
       }
+      /* t278: Spielstand zurücksetzen (Optionen › System und Startbildschirm) */
+      ['opt-reset', 'boot-reset'].forEach(function (id) {
+        var b = document.getElementById(id);
+        if (b) b.onclick = function (ev) { if (ev) ev.stopPropagation(); if (window.DCReset) DCReset.openDialog(); };
+      });
       document.getElementById('go-tutorial').onclick = function () {
         if (!window.DCTutorial) return;
         DCTutorial.start({ onExit: function () { returnFromTutorial(); } });

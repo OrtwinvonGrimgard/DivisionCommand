@@ -1,0 +1,31 @@
+/* t278 „Spielstand zurücksetzen“: Knopf in Optionen/Startbildschirm und Bestätigungsdialog (Farben aus app.css). */
+.opt-danger { margin-top: 14px; padding: 12px 14px; border: 1px solid var(--rust); border-radius: 4px; background: rgba(90, 24, 16, .35); }
+.opt-danger h3 { margin: 0 0 4px; font: 700 15px Cinzel, Georgia, serif; color: var(--gold); }
+.opt-danger p { margin: 0 0 10px; font-size: 13px; color: var(--muted); }
+button.danger, #opt-reset, #boot-reset { background: linear-gradient(180deg, #7a2418 0%, #4a120c 55%, #2a0a06 100%); border-color: var(--danger); }
+button.danger:hover, #opt-reset:hover, #boot-reset:hover { color: #ffd9a8; border-color: #ff9a6a; }
+#boot-reset {
+  position: fixed; right: 16px; bottom: 14px; z-index: 6; padding: 4px 12px;
+  font: 600 11px/1.2 Oswald, "Arial Narrow", sans-serif; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted); background: #0007; border: 1px solid var(--line); box-shadow: none; opacity: .7;
+}
+#boot-reset:hover { opacity: 1; background: #3a0e08; }
+body:not(:has(#scr-boot.on)) #boot-reset { display: none; }
+#dc-reset { position: fixed; inset: 0; z-index: 6000; display: flex; align-items: center; justify-content: center; background: #000b; }
+.dc-reset-box {
+  width: 520px; max-width: calc(100vw - 30px); padding: 20px 22px 18px; color: var(--ink);
+  background: linear-gradient(180deg, #3a1614, #1e0a08); border: 1px solid var(--danger); border-radius: 6px;
+  box-shadow: inset 0 0 0 1px #0008, 0 14px 44px #000d; animation: dc-reset-in .28s ease-out;
+}
+@keyframes dc-reset-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.dc-reset-kicker { margin: 0; font: 600 11px Oswald, sans-serif; letter-spacing: .22em; text-transform: uppercase; color: var(--danger); }
+.dc-reset-box h3 { margin: 4px 0 10px; font: 700 22px Cinzel, Georgia, serif; color: var(--gold); }
+.dc-reset-box p { margin: 0 0 10px; font-size: 14px; line-height: 1.45; }
+.dc-reset-box ul { margin: 0 0 10px; padding-left: 20px; font-size: 14px; line-height: 1.55; }
+.dc-reset-box b { color: #f4dc8a; }
+.dc-reset-small { font-size: 12px !important; color: var(--muted); }
+.dc-reset-warn { padding: 8px 10px; color: #ffd9a8; background: rgba(196, 92, 62, .22); border-left: 3px solid var(--danger); }
+.dc-reset-row { display: flex; justify-content: flex-end; gap: 10px; margin-top: 6px; }
+.dc-reset-row button { padding: 6px 16px; font: 600 13px Oswald, sans-serif; letter-spacing: .06em; }
+/* Während des Logo-Intros erst zusammen mit „Spiel starten“ einblenden. */
+#title-root.boot-intro:not(.btn-in) #boot-reset { visibility: hidden; }

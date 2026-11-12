@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- **Spielstand zurücksetzen (t278):**
+  - Neuer Knopf „Spielstand zurücksetzen …“ in Optionen › System, dazu klein „Speicher löschen“ unten rechts auf dem Startbildschirm. Zweistufige Bestätigung im Spielstil, die auflistet, was gelöscht wird.
+  - Gelöscht werden alle Speicherschlüssel mit Präfix `dc_` in localStorage und sessionStorage (Offiziersakten, aktiver Benutzer, Decks, Einstellungen, Audio, Tempo, Kamera, Tutorial-Merker …) sowie die IndexedDB `dc_playtest`. Fremde Schlüssel desselben Ursprungs und die Offline-Caches (nur Programmdateien und Bilder) bleiben. Danach lädt das Spiel neu auf den Startbildschirm; „Spiel starten“ öffnet wieder das Tutorial.
+  - Neu `web/js/ui/reset.js`, `web/css/reset.css`, `DCPlayStore.closeDb()`; Tests `tests/test_reset_t278.js` (npm test, prüft auch, dass jeder Speicherschlüssel im Code mit `dc_` beginnt) und `tests/playwright_reset_t278.mjs` (`npm run reset-play`).
+  - Hilfe: Optionen-Eintrag; AP-Text an die Engine angepasst (Rest-AP nur als Reaktionsreserve im gegnerischen Zug, zu Beginn des eigenen Zuges wieder 5). Cache `divcmd-alpha41e`.
+
 - **Tutorial „Grundausbildung“ (t275):**
   - Beim allerersten „Spiel starten“ (kein Merker, noch kein Benutzer) läuft zuerst ein geführtes Übungsgefecht als eigene Instanz, danach Offiziersakte bzw. Hauptmenü. Ab dem zweiten Start direkt ins Menü.
   - 6 Kapitel, 25 Schritte, etwa 10 Minuten, mit Ausbilder Hauptmann Kessler: Ziel 5 SP, Front, AP (beide 5 in Zug 1), Hand, Einheit legen, Eingraben, Angriff und Gegenschlag, Steilfeuer I–V, AP-Reserve, Zugende, Feindkontakt (Deckung suchen, 2 AP wie aufgedruckt), Doktrinen, Support, Ausrüstung, Soforteinsatz, Sieg über die Elite, Deckbau (60 + 2, Nationen mischbar, Gold 1 · Silber 2 · Bronze 4, Elite als Merkmal).
