@@ -3029,7 +3029,8 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       var d = engine.defOf(c);
       var cost = engine.costOf(d, me);
       var una = (me.ap < cost) ? ' unaffordable' : '';
-      return '<div class="card ' + cardClass(d.typ) + una + '" data-uid="' + c.uid + '"' + (me.ap < cost ? ' title="Nicht genug AP (' + me.ap + '/' + cost + ')"' : '') + '>' +
+      // t283: Handkarten per Tastatur erreichbar (Fokus vergrößert sie in der 2,5D-Ansicht wie Hover).
+      return '<div class="card ' + cardClass(d.typ) + una + '" data-uid="' + c.uid + '" tabindex="0" role="button" aria-label="' + escapeHtml(d.name + ', ' + cost + ' AP') + '"' + (me.ap < cost ? ' title="Nicht genug AP (' + me.ap + '/' + cost + ')"' : '') + '>' +
         artTag(d, false) + // Bild-HTML der Karte
         '<div class="body"><div class="unit-name">' + escapeHtml(d.name) + '</div>' + // HTML-Sonderzeichen escapen
         '<div class="unit-stats">' + cost + ' AP' + (d.atk != null ? ' · A' + d.atk + '/V' + d.def : '') + '</div></div></div>';
@@ -3048,6 +3049,9 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
         var card = me.hand.find(function (c) { return c.uid === el.dataset.uid; }); // Handkarten
         return card ? { def: engine.defOf(card), facedown: false, inst: null } : null; // verdeckte Lage
       });
+      el.onkeydown = function (ev) {
+        if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); el.click(); }
+      };
       el.onclick = function (ev) {
         if (suppressHandClick || window.dcSuppressClick) {
           ev.preventDefault();

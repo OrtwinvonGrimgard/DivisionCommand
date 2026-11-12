@@ -154,3 +154,12 @@ body.dc-tutorial #bomb-box, body.dc-tutorial #hud-more { display: none !importan
 @media (prefers-reduced-motion: reduce) {
   #tut-layer *, #tut-layer { animation-duration: .01s !important; animation-iteration-count: 1 !important; transition: none !important; }
 }
+
+/* t283: angedockte schmale Box in kleinen Fenstern (≤ 1100 × 700) – ohne Porträt, Text bleibt lesbar */
+#tut-coach.tut-dock { gap: 0; padding: 10px 12px 10px 12px; max-height: calc(100vh - 60px); overflow-y: auto; }
+#tut-coach.tut-dock .tut-portrait { display: none; }
+#tut-coach.tut-dock .tut-chapter { padding-right: 0; margin-top: 24px; }
+#tut-coach.tut-dock .tut-title { font-size: 17px; }
+#tut-coach.tut-dock .tut-text { font-size: 13px; line-height: 1.4; }
+#tut-coach.tut-dock .tut-foot { flex-wrap: wrap; gap: 6px; padding-top: 8px; }
+#tut-coach.tut-dock .tut-progress { flex-basis: 100%; }

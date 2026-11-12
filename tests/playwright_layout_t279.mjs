@@ -101,7 +101,8 @@ function probe(parts) {
       const own = [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim());
       if (!own) continue;
       const cs = getComputedStyle(el);
-      const hidesX = cs.overflowX !== 'visible' || cs.textOverflow === 'ellipsis';
+      // t283: Knöpfe zählen als abgeschnitten, sobald der Inhalt breiter ist (vorher fiel „Frieden anbieten“ durch).
+      const hidesX = cs.overflowX !== 'visible' || cs.textOverflow === 'ellipsis' || el.tagName === 'BUTTON' || el.closest('button') != null;
       if ((hidesX && el.scrollWidth > el.clientWidth + 1) || (cs.overflowY === 'hidden' && el.scrollHeight > el.clientHeight + 2)) {
         problems.push(`Text abgeschnitten: ${bx.name} „${el.textContent.trim().slice(0, 40)}“ (${el.scrollWidth}/${el.clientWidth} px)`);
       }
@@ -142,6 +143,14 @@ async function measure(page, scene, size) {
   await page.mouse.move(2, 2);
   await sleep(250);
   const res = await page.evaluate(probe, PARTS);
+  // t283: „Weitere Befehle“ kurz aufklappen und die Knöpfe auf abgeschnittenen Text prüfen.
+  const more = await page.evaluate(() => {
+    const d = document.getElementById('hud-more'); if (!d) return [];
+    const was = d.open; d.open = true;
+    const out = [...d.querySelectorAll('button')].filter((b) => b.offsetParent && b.scrollWidth > b.clientWidth + 1).map((b) => `Knopf abgeschnitten: „${b.textContent.trim()}“ (${b.scrollWidth}/${b.clientWidth} px)`);
+    d.open = was; return out;
+  });
+  res.problems.push(...more);
   report.scenes.push({ scene, size, problems: res.problems, boxes: res.boxes });
   res.problems.forEach((p) => report.problems.push(`${size} ${scene}: ${p}`));
   if (SHOT_SIZES.has(size)) {

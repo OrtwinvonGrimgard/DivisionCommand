@@ -281,9 +281,26 @@
   function placeCoach(avoid) {
     var d = run.dom, step = run.S.STEPS[run.i];
     var box = d.coach;
-    if (step.center || run.waitingCenter) { box.classList.add('tut-center'); box.style.left = ''; box.style.top = ''; return; }
+    if (step.center || run.waitingCenter) { box.classList.remove('tut-dock'); box.classList.add('tut-center'); box.style.left = ''; box.style.top = ''; return; }
     box.classList.remove('tut-center');
     var vw = root.innerWidth, vh = root.innerHeight;
+    // t283: Kleine Fenster (≤ 1100 × 700): schmale Box seitlich andocken statt mitten über dem Spielfeld,
+    // damit Ziele wie die gegnerische Elite sichtbar bleiben. Rechts über Zugtimer/Befehle, sonst links.
+    if (vw <= 1100 || vh <= 700) {
+      box.classList.add('tut-dock');
+      var dw = Math.max(280, Math.min(360, Math.round(vw * 0.34)));
+      box.style.width = dw + 'px';
+      var dh = box.offsetHeight || 220;
+      var dock = [{ x: vw - dw - 8, y: 52 }, { x: 8, y: 52 }, { x: vw - dw - 8, y: Math.max(52, vh - dh - 8) }, { x: 8, y: Math.max(52, vh - dh - 8) }];
+      var dhit = function (c) {
+        return avoid.some(function (r) { return r && c.x < r.x + r.w + 6 && c.x + dw > r.x - 6 && c.y < r.y + r.h + 6 && c.y + dh > r.y - 6; });
+      };
+      var dp = dock.filter(function (c) { return !dhit(c); })[0] || dock[0];
+      box.style.left = Math.round(dp.x) + 'px';
+      box.style.top = Math.round(Math.min(dp.y, Math.max(10, vh - dh - 8))) + 'px';
+      return;
+    }
+    box.classList.remove('tut-dock');
     var bw = Math.min(760, vw - 40), bh = box.offsetHeight || 190;
     var cands = [];
     ['#enemy-support', '#my-support', '#enemy-front'].forEach(function (sel) {

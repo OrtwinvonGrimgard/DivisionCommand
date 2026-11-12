@@ -89,7 +89,8 @@ function probe(rootSel) {
     const cs = getComputedStyle(el);
     const own = [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim());
     if (own && el.tagName !== 'SELECT' && el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') {
-      const hidesX = cs.overflowX !== 'visible' || cs.textOverflow === 'ellipsis';
+      // t283: Knöpfe zählen als abgeschnitten, sobald der Inhalt breiter ist (vorher fiel „Frieden anbieten“ durch).
+      const hidesX = cs.overflowX !== 'visible' || cs.textOverflow === 'ellipsis' || el.tagName === 'BUTTON' || el.closest('button') != null;
       if ((hidesX && el.scrollWidth > el.clientWidth + 1) || (cs.overflowY === 'hidden' && el.scrollHeight > el.clientHeight + 2)) {
         problems.push(`abgeschnitten: ${name(el)} (${el.scrollWidth}/${el.clientWidth})`);
       }
