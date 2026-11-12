@@ -80,7 +80,7 @@
   "keywords": []
  },
  "dc_dok_gepanzerter_fuss": {
-  "kurz": "Ausgerüstete eigene Einheiten haben +1 DEF.",
+  "kurz": "Eigene Einheiten haben +1 DEF. Ausgerüstete eigene Einheiten haben zusätzlich +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -100,8 +100,8 @@
   "keywords": []
  },
  "dc_dok_marsch_aus_dem_vollen": {
-  "kurz": "Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK bis Zugende.",
-  "gekuerzt": false,
+  "kurz": "Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK (Zug) und dauerhaft +1 DEF.",
+  "gekuerzt": true,
   "keywords": []
  },
  "dc_dok_materialersatz": {
@@ -110,7 +110,7 @@
   "keywords": []
  },
  "dc_dok_normverband": {
-  "kurz": "Hast du Infanterie, Panzer und Artillerie an der Front, haben alle eigenen Fronteinheiten +1 ATK (kein DEF).",
+  "kurz": "Hast du Infanterie, Panzer und Artillerie an der Front, haben alle eigenen Fronteinheiten +1 ATK und +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },

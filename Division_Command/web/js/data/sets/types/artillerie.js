@@ -868,7 +868,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Erlassbatterie",
     "ap": 3,
     "atk": 3,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -903,7 +903,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Schwurfeuer",
     "ap": 3,
     "atk": 3,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-i",
@@ -938,7 +938,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Silberstern-Rohr",
     "ap": 4,
     "atk": 3,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1147,7 +1147,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Filterwerk-Rohr",
     "ap": 3,
     "atk": 3,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1182,7 +1182,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Implantatrohr",
     "ap": 3,
     "atk": 2,
-    "def": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",
@@ -1218,7 +1218,7 @@ window.DC_SET_TYPES["Artillerie"] = [
     "name": "Knochenbatterie",
     "ap": 4,
     "atk": 4,
-    "def": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "steilfeuer-ii",

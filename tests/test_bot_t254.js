@@ -68,7 +68,7 @@ function resolveAll(eng, Bot, pid) {
 // 2) Psychologie der Massen: mit Einheiten auf der Hand spielen und alle auslegen, ohne Einheiten behalten.
 {
   const { eng, Bot } = boot();
-  eng.player(0).ap = 6;
+  eng.player(0).ap = 5; // t283: Massen kostet 5 AP
   L.put(eng, 1, INF, 'C', 0);
   const m = hand(eng, 0, MASSEN); hand(eng, 0, INF); hand(eng, 0, INF); hand(eng, 0, PANZER);
   const a = stepOk(eng, Bot, 0);

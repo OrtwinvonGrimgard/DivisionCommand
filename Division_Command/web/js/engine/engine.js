@@ -7004,11 +7004,32 @@
      * @param {number} pid
      * @param {object} a
      */
+    /**
+     * Doktrin Bollwerk – Schutzwall (t283 vollständig): `ap` AP (Standard 2), einmal pro eigenem Zug
+     * (`once_per_round`), legt eine Befestigung (Tag `befestigung`) aus dem eigenen Ablagestapel auf die Hand.
+     * @param {number} pid
+     * @param {object} [a] optional `uid` der gewünschten Karte im Ablagestapel
+     * @returns {{ok: boolean}}
+     */
     _actSchutzwall(pid, a) {
       const p = this.player(pid);
-      if (p.flags.wallUsed === this.state.turn) throw new Error('Schutzwall schon genutzt');
+      if (this.state.active !== pid) throw new Error('Nur im eigenen Zug');
+      const eff = ((p.doctrines || []).map((d) => this.defOf(d)).filter(Boolean)
+        .reduce((acc, d) => acc.concat(d.effects || []), [])).find((e) => e.code === 'SCHUTZWALL');
+      if (!eff) throw new Error('Kein Bollwerk');
+      const prm = eff.param || {};
+      if (prm.once_per_round !== false && p.flags.wallUsed === this.state.turn) throw new Error('Schutzwall schon genutzt');
+      const cost = Number(prm.ap != null ? prm.ap : 2);
+      if (p.ap < cost) throw new Error('Nicht genug AP');
+      const pool = (p.grave || []).filter((c) => c && hasTag(this.defOf(c), 'befestigung') && this.defOf(c).typ !== 'Token');
+      const pick = (a && a.uid && pool.find((c) => c.uid === a.uid)) || pool[0];
+      if (!pick) throw new Error('Keine Befestigung im Ablagestapel');
+      if (p.hand.length >= (this.rules.max_hand || 7)) throw new Error('Hand voll');
+      p.ap -= cost;
       p.flags.wallUsed = this.state.turn;
-      this._log('Schutzwall.');
+      p.grave.splice(p.grave.indexOf(pick), 1);
+      p.hand.push(pick);
+      this._log(p.name + ' nutzt Schutzwall: ' + this.defOf(pick).name + ' zurück auf die Hand (' + cost + ' AP).');
       return { ok: true };
     }
         /**

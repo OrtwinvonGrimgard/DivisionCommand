@@ -40,7 +40,7 @@ function frontCount(p) {
 
 // Massen: zwei Einheiten nacheinander kostenlos auslegen
 {
-  const eng = fresh(6);
+  const eng = fresh(5);
   const u = unit(3);
   const a = eng.instFromId(u.id, 0);
   const b = eng.instFromId(u.id, 0);
@@ -61,7 +61,7 @@ function frontCount(p) {
   place(b.uid);
   assert.equal(frontCount(eng.player(0)), 2, 'beide liegen');
   assert.ok(!eng.player(0).hand.some((c) => c.uid === a.uid || c.uid === b.uid), 'nicht mehr auf der Hand');
-  assert.equal(eng.player(0).ap, 0, 'nur die 6 AP der Karte');
+  assert.equal(eng.player(0).ap, 0, 'nur die 5 AP der Karte (t283)');
   console.log('ok t250 Massen zwei Einheiten frei');
 }
 
@@ -92,7 +92,7 @@ function frontCount(p) {
 
 // Blinder Gehorsam: zwei Einheiten greifen nacheinander frei an
 {
-  const eng = fresh(6);
+  const eng = fresh(5);
   const u = unit(3);
   const m1 = L.put(eng, 0, u.id, 'C', 0);
   const m2 = L.put(eng, 0, u.id, 'L', 0);
@@ -111,7 +111,7 @@ function frontCount(p) {
     attacks++;
   }
   assert.equal(attacks, 2, 'beide greifen an, got ' + attacks);
-  assert.equal(eng.player(0).ap, 0, 'Angriffe kosten 0, Karte 6');
+  assert.equal(eng.player(0).ap, 0, 'Angriffe kosten 0, Karte 5 (t283)');
   assert.ok((f1.def + f2.def) < defBefore, 'Schaden verteilt');
   assert.equal(eng.currentAtkDef(m1).atk, Number(eng.defOf(m1).atk) + 2);
   console.log('ok t250 Gehorsam zwei freie Angriffe');
@@ -119,7 +119,7 @@ function frontCount(p) {
 
 // Einsame Gassen: mehr Einheiten als Slots → Wahl, dann offen hinlegen
 {
-  const eng = fresh(6);
+  const eng = fresh(5);
   const u = unit(3);
   // 7 belegt, 2 frei, 4 Einheiten im Deck → Spieler wählt 2
   for (const [s, r] of [['L', 0], ['L', 1], ['L', 2], ['C', 0], ['C', 1], ['C', 2], ['R', 0]]) {
@@ -205,7 +205,7 @@ function frontCount(p) {
     return steps;
   }
 
-  const engM = fresh(6);
+  const engM = fresh(5);
   const u = unit(3);
   engM.player(0).hand.push(engM.instFromId(u.id, 0), engM.instFromId(u.id, 0));
   assert.ok(play(engM, 'dc_so_massen').r.ok);
@@ -213,7 +213,7 @@ function frontCount(p) {
   assert.ok(!engM.state.pending || sm < 40, 'Massen-Bot hängt nicht, pending=' + (engM.state.pending && engM.state.pending.kind));
   assert.ok(frontCount(engM.player(0)) >= 1, 'Bot legt mindestens eine aus');
 
-  const engG = fresh(6);
+  const engG = fresh(5);
   const foe = L.put(engG, 1, u.id, 'C', 0);
   foe.def = 12; foe.defMax = 12;
   L.put(engG, 0, u.id, 'C', 0);
@@ -221,7 +221,7 @@ function frontCount(p) {
   drive(engG, 20);
   assert.ok(!engG.state.pending || engG.state.pending.kind !== 'command-atk', 'Gehorsam-Folge beendet');
 
-  const engS = fresh(6);
+  const engS = fresh(5);
   for (const [s, r] of [['L', 0], ['L', 1], ['C', 0], ['C', 1], ['R', 0], ['R', 1], ['R', 2]]) L.put(engS, 0, u.id, s, r);
   for (let i = 0; i < 4; i++) engS.player(0).deck.unshift(engS.instFromId(u.id, 0));
   assert.ok(play(engS, 'dc_so_gassen').r.ok);

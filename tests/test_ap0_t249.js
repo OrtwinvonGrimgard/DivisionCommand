@@ -13,11 +13,11 @@ const byId = Object.fromEntries(C.map((c) => [c.id, c]));
 
 const EXPECT = {
   dc_so_luftschlag: 4,
-  dc_so_dammbruch: 6,
-  dc_so_massen: 6,
+  dc_so_dammbruch: 5, // t283: AP-6+ auf 5 (max. AP 5)
+  dc_so_massen: 5, // t283: AP-6+ auf 5 (max. AP 5)
   dc_so_mobil: 4,
-  dc_so_blinder_gehorsam: 6,
-  dc_so_gassen: 6,
+  dc_so_blinder_gehorsam: 5, // t283: AP-6+ auf 5 (max. AP 5)
+  dc_so_gassen: 5, // t283: AP-6+ auf 5 (max. AP 5)
   dc_so_mobilisierung: 3,
   dc_so_deckung: 2,
   dc_so_selbst: 2,
@@ -95,9 +95,9 @@ function logMsgs(eng) {
   console.log('ok Luftschlag 5 Schaden / 4 AP');
 }
 
-// Dammbruch: gesamte gegnerische Unterstützung weg, 6 AP
+// Dammbruch: gesamte gegnerische Unterstützung weg, 5 AP (t283)
 {
-  const eng = fresh(6);
+  const eng = fresh(5);
   const sdef = supportCard();
   assert.ok(sdef, 'keine Unterstützung');
   const a = eng.instFromId(sdef.id, 1);
@@ -108,8 +108,8 @@ function logMsgs(eng) {
   assert.ok(r.ok, 'Dammbruch PLAY ' + (r && r.error));
   assert.equal(eng.player(1).support.filter(Boolean).length, 0, 'Support geleert');
   assert.ok(eng.player(1).grave.some((c) => c.uid === a.uid) && eng.player(1).grave.some((c) => c.uid === b.uid), 'Support im Friedhof');
-  assert.equal(eng.player(0).ap, 0, 'Dammbruch 6 AP');
-  console.log('ok Dammbruch räumt Support / 6 AP');
+  assert.equal(eng.player(0).ap, 0, 'Dammbruch 5 AP');
+  console.log('ok Dammbruch räumt Support / 5 AP');
 }
 
 // Generalmobilmachung: ziehe 3, +2 AP, zahlt 4 → netto −2, Hand +3
@@ -236,16 +236,16 @@ function logMsgs(eng) {
   console.log('ok Mobilisierung 2 Inf auf Hand, eine frei / 3 AP');
 }
 
-// Psychologie der Massen: 6 AP, beliebig viele Einheiten kostenlos nacheinander
+// Psychologie der Massen: 5 AP (t283), beliebig viele Einheiten kostenlos nacheinander
 {
-  const eng = fresh(6);
+  const eng = fresh(5);
   const u = unit(3);
   const a = eng.instFromId(u.id, 0);
   const b = eng.instFromId(u.id, 0);
   eng.player(0).hand.push(a, b);
   const { r } = play(eng, 'dc_so_massen');
   assert.ok(r.ok, 'Massen PLAY ' + (r && r.error));
-  assert.equal(eng.player(0).ap, 0, 'Massen 6 AP');
+  assert.equal(eng.player(0).ap, 0, 'Massen 5 AP');
   assert.equal(eng.state.pending && eng.state.pending.kind, 'mass-pick');
   const r2 = eng.dispatch({ type: 'RESOLVE_PENDING', player: 0, target: a.uid });
   assert.ok(r2.ok, 'mass-pick ' + (r2 && r2.error));
@@ -262,12 +262,12 @@ function logMsgs(eng) {
   assert.equal(eng.state.pending, null, 'Folge beendet');
   const stillHand = eng.player(0).hand.some((c) => c.uid === b.uid);
   assert.ok(stillHand, 'zweite Einheit bleibt auf der Hand wenn man aufhört');
-  console.log('ok Psychologie der Massen 6 AP, Folge, vorzeitig beenden');
+  console.log('ok Psychologie der Massen 5 AP, Folge, vorzeitig beenden');
 }
 
 // Blinder Gehorsam: +2 ATK, freie Angriffe der Front
 {
-  const eng = fresh(6);
+  const eng = fresh(5);
   const u = unit(3);
   const mine = L.put(eng, 0, u.id, 'C', 0);
   const foe = L.put(eng, 1, u.id, 'C', 0);
@@ -276,7 +276,7 @@ function logMsgs(eng) {
   const ap0 = eng.player(0).ap;
   const { r } = play(eng, 'dc_so_blinder_gehorsam');
   assert.ok(r.ok, 'Gehorsam PLAY ' + (r && r.error));
-  assert.equal(eng.player(0).ap, ap0 - 6, 'Gehorsam 6 AP');
+  assert.equal(eng.player(0).ap, ap0 - 5, 'Gehorsam 5 AP');
   assert.equal(mine.flags.commandAtkUntil, eng.state.turn, '+2-Flag');
   const stats = eng.currentAtkDef(mine);
   assert.equal(stats.atk, printed + 2, 'ATK +2, got ' + stats.atk);
@@ -286,19 +286,19 @@ function logMsgs(eng) {
   const startDef = foe.def;
   const r2 = eng.dispatch({ type: 'RESOLVE_PENDING', player: 0, target: foe.uid });
   assert.ok(r2.ok, 'Gehorsam Angriff ' + (r2 && r2.error));
-  assert.equal(eng.player(0).ap, ap0 - 6, 'Angriff ohne AP');
+  assert.equal(eng.player(0).ap, ap0 - 5, 'Angriff ohne AP');
   assert.ok(foe.def < startDef, 'Schaden durch befohlenen Angriff');
-  console.log('ok Blinder Gehorsam +2 ATK, freier Angriff / 6 AP');
+  console.log('ok Blinder Gehorsam +2 ATK, freier Angriff / 5 AP');
 }
 
 {
-  const eng = fresh(6);
+  const eng = fresh(5);
   const u = unit(3);
   eng.player(0).deck = [];
   for (let i = 0; i < 3; i++) eng.player(0).deck.unshift(eng.instFromId(u.id, 0));
   const { r } = play(eng, 'dc_so_gassen');
   assert.ok(r.ok, 'Gassen PLAY ' + (r && r.error));
-  assert.equal(eng.player(0).ap, 0, 'Gassen 6 AP');
+  assert.equal(eng.player(0).ap, 0, 'Gassen 5 AP');
   assert.ok(eng.state.pending && (eng.state.pending.kind === 'gassen-slot' || eng.state.pending.kind === 'gassen-pick'), 'pending ' + (eng.state.pending && eng.state.pending.kind));
   let steps = 0;
   while (eng.state.pending && steps++ < 12) {
@@ -325,7 +325,7 @@ function logMsgs(eng) {
   }
   const onFront = ['L', 'C', 'R'].reduce((n, s) => n + (eng.player(0).front[s] || []).filter(Boolean).length, 0);
   assert.equal(onFront, 3, 'drei Einheiten offen ausgelegt, got ' + onFront);
-  console.log('ok Einsame Gassen 6 AP, Front aus dem Deck gefüllt');
+  console.log('ok Einsame Gassen 5 AP, Front aus dem Deck gefüllt');
 }
 
 {

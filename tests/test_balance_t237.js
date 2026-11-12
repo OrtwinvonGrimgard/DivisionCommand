@@ -34,5 +34,5 @@ for (const [n, d] of Object.entries(w.DC_NATION_DECKS)) {
 // Werte bleiben im Band Median ±2 je AP-Stufe
 const med = { 1: 3, 2: 4, 3: 6, 4: 7, 5: 9, 6: 12 };
 C.filter((c) => c.typ === 'Einheit').forEach((c) => assert(Math.abs(c.atk + c.def - med[c.ap]) <= 2, c.id + ' Wertband'));
-assert.strictEqual(by('dc_np_ossaria_totenwallpanzer').def, 5); // t255: 3/6 → 3/5 (Ossaria-Ausgleich)
+assert.strictEqual(by('dc_np_ossaria_totenwallpanzer').def, 6); // t255: 3/6 → 3/5; t283 Pool-Feinschliff wieder 3/6 (Ossaria Mischdeck schwach)
 console.log('PASS balance t237: 4 Doktrinen, 32 Starterdeck-Tausche, Wertband ±2, Materialersatz nach Verlust');

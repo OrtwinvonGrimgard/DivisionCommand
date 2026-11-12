@@ -76,8 +76,8 @@ window.DC_SET_TYPES["Elite"] = [
     "typ": "Einheit",
     "klasse": "Panzer",
     "name": "Panzerzug Faustkeil",
-    "ap": 6,
-    "atk": 7,
+    "ap": 5,
+    "atk": 6,
     "def": 5,
     "verdeckt_ok": false,
     "tags": [
@@ -160,9 +160,9 @@ window.DC_SET_TYPES["Elite"] = [
     "typ": "Einheit",
     "klasse": "Panzer",
     "name": "Schwerer Panzer Koloss",
-    "ap": 6,
+    "ap": 5,
     "atk": 6,
-    "def": 6,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "einheit",

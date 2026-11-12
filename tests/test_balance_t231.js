@@ -18,9 +18,9 @@ const expect = {
   dc_b_werkrott_kolonne_614: { ap: 4, atk: 3, def: 5 },
   dc_b_strassenriegel_491: { ap: 3, atk: 2, def: 4 }, // t255: 2/5 → 2/4 (Namar-Ausgleich)
   dc_b_werkbach_riegel_430: { ap: 3, atk: 2, def: 5 },
-  dc_eh_faustkeil: { ap: 6, atk: 7, def: 5 },
+  dc_eh_faustkeil: { ap: 5, atk: 6, def: 5 }, // t283: AP-6+ spielbar (max. 5 AP)
   dc_eh_haubitze: { ap: 4, atk: 5, def: 4 },
-  dc_eh_koloss: { ap: 6, atk: 6, def: 6 },
+  dc_eh_koloss: { ap: 5, atk: 6, def: 5 }, // t283
 };
 for (const [id, e] of Object.entries(expect)) {
   const c = by(id);

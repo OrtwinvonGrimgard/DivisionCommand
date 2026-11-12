@@ -168,9 +168,11 @@
           if (isPanzer(d)) hasP = true;
           if (isArtillery(d)) hasA = true;
         }.bind(this));
-        if (hasI && hasP && hasA) {
-          atk += Number(p.atk || 1);
-          dv += Number(p.def || 1);
+        // t283: `min_types` (Standard 3) Gattungen; ausdrückliches def/atk 0 gilt (vorher gab def:0 trotzdem +1 DEF).
+        var nvTypes = (hasI ? 1 : 0) + (hasP ? 1 : 0) + (hasA ? 1 : 0);
+        if (nvTypes >= Number(p.min_types || 3)) {
+          atk += p.atk != null ? Number(p.atk) : 1;
+          dv += p.def != null ? Number(p.def) : 1;
         }
       }
 
@@ -243,6 +245,10 @@
         }
         if (lauerOk && p.fresh_def && inst.summonedTurn === this.state.turn) dv += Number(p.fresh_def || 0);
       }
+
+      // t283 BOLLWERK_FRONT_DEF: Bollwerk gibt allen eigenen Einheiten +DEF (Befestigungen allein trugen die Doktrin nicht).
+      p = dokParam(this, owner, 'BOLLWERK_FRONT_DEF');
+      if (p) dv += Number(p.def != null ? p.def : 1);
 
       // ETAPPENSICHERUNG base DEF
       p = dokParam(this, owner, 'ETAPPENSICHERUNG');

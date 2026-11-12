@@ -504,7 +504,7 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 **Volltext:**
 
-> Befestigungsanlagen +1 auf ihre Effekte. Einheiten hinter einer Befestigung +1 Angriff. Schutzwall (2 AP): eine Befestigung aus dem Ablagestapel auf die Hand.
+> Eigene Einheiten +1 DEF. Befestigungsanlagen +1 auf ihre Effekte. Einheiten hinter einer Befestigung +1 Angriff. Schutzwall (2 AP, 1× pro Zug): eine Befestigung aus dem Ablagestapel auf die Hand.
 
 ## `dc_dok_entsatz` – Entsatz (Doktrin)
 
@@ -528,7 +528,7 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 **Volltext:**
 
-> Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +1 ATK. Überlebt die angegriffene Einheit, heilt sie 1.
+> Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +1 ATK.
 
 ## `dc_dok_lauer` – Lauer (Doktrin)
 
@@ -545,6 +545,14 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 **Volltext:**
 
 > Eigene Einheiten haben +1 DEF. Stehen mindestens zwei eigene in einem Abschnitt, zusätzlich +1 DEF. Der Fluss hält die Linie.
+
+## `dc_dok_marsch_aus_dem_vollen` – Marsch aus dem Vollen (Doktrin)
+
+**Fläche:** Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK (Zug) und dauerhaft +1 DEF.
+
+**Volltext:**
+
+> Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK bis Zugende und dauerhaft +1 DEF.
 
 ## `dc_dok_materialersatz` – Materialersatz (Doktrin)
 
@@ -576,7 +584,7 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 **Volltext:**
 
-> Eigene Einheiten haben +1 ATK. Eigene Infanterie hat zusätzlich +1 ATK. Beschädigte Einheiten haben zusätzlich +1 ATK. Der Körper ist Maß und Waffe.
+> Eigene Infanterie hat +1 ATK. Beschädigte eigene Einheiten haben +1 ATK. Der Körper ist Maß und Waffe.
 
 ## `dc_dok_tiefenverteidigung` – Tiefenverteidigung (Doktrin)
 

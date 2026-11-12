@@ -353,7 +353,7 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Befestigungsanlagen +1 auf ihre Effekte. Einheiten hinter einer Befestigung +1 Angriff. Schutzwall (2 AP): eine Befestigung aus dem Ablagestapel auf die Hand.",
+    "text": "Eigene Einheiten +1 DEF. Befestigungsanlagen +1 auf ihre Effekte. Einheiten hinter einer Befestigung +1 Angriff. Schutzwall (2 AP, 1× pro Zug): eine Befestigung aus dem Ablagestapel auf die Hand.",
     "effects": [
       {
         "code": "BOLLWERK_TOKEN_PLUS",
@@ -372,6 +372,12 @@ window.DC_SET_TYPES["Doktrin"] = [
         "param": {
           "ap": 2,
           "once_per_round": true
+        }
+      },
+      {
+        "code": "BOLLWERK_FRONT_DEF",
+        "param": {
+          "def": 1
         }
       }
     ],
@@ -582,7 +588,7 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +1 ATK. Überlebt die angegriffene Einheit, heilt sie 1.",
+    "text": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +1 ATK.",
     "clauses": [
       {
         "title": "",
@@ -595,7 +601,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "param": {
           "when": "attacked-this-turn",
           "atk": 1,
-          "heal_survivor": 1,
+          "heal_survivor": 0,
           "until": "end-of-next-own-turn"
         }
       }
@@ -619,7 +625,7 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Ausgerüstete eigene Einheiten haben +1 DEF.",
+    "text": "Eigene Einheiten haben +1 DEF. Ausgerüstete eigene Einheiten haben zusätzlich +1 ATK.",
     "clauses": [
       {
         "title": "",
@@ -631,9 +637,9 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "GEPANZERTER_FUSS",
         "param": {
           "if": "equipped",
-          "def": 1,
-          "atk": 0,
-          "base_def": 0
+          "def": 0,
+          "atk": 1,
+          "base_def": 1
         }
       }
     ],
@@ -765,7 +771,7 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK bis Zugende.",
+    "text": "Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK bis Zugende und dauerhaft +1 DEF.",
     "clauses": [
       {
         "title": "",
@@ -780,7 +786,7 @@ window.DC_SET_TYPES["Doktrin"] = [
           "play_cost": -1,
           "min": 1,
           "atk": 1,
-          "def": 0,
+          "def": 1,
           "until": "end-of-turn"
         }
       }
@@ -844,7 +850,7 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Hast du Infanterie, Panzer und Artillerie an der Front, haben alle eigenen Fronteinheiten +1 ATK (kein DEF).",
+    "text": "Hast du Infanterie, Panzer und Artillerie an der Front, haben alle eigenen Fronteinheiten +1 ATK und +1 DEF.",
     "clauses": [
       {
         "title": "",
@@ -862,7 +868,7 @@ window.DC_SET_TYPES["Doktrin"] = [
           ],
           "scope": "own-front",
           "atk": 1,
-          "def": 0
+          "def": 1
         }
       }
     ],
@@ -1082,7 +1088,7 @@ window.DC_SET_TYPES["Doktrin"] = [
     ],
     "klasse_tags": [],
     "principle": "Zu Beginn deines Zuges",
-    "text": "Eigene Einheiten haben +1 ATK. Eigene Infanterie hat zusätzlich +1 ATK. Beschädigte Einheiten haben zusätzlich +1 ATK. Der Körper ist Maß und Waffe.",
+    "text": "Eigene Infanterie hat +1 ATK. Beschädigte eigene Einheiten haben +1 ATK. Der Körper ist Maß und Waffe.",
     "clauses": [
       {
         "title": "",
@@ -1093,7 +1099,7 @@ window.DC_SET_TYPES["Doktrin"] = [
       {
         "code": "STOSSTRUPP",
         "param": {
-          "base_all_atk": 1,
+          "base_all_atk": 0,
           "base_inf_atk": 1,
           "damaged_atk": 1,
           "no_def_loss": true

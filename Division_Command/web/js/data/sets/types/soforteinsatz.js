@@ -93,7 +93,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Armageddon",
-    "ap": 8,
+    "ap": 5,
     "atk": null,
     "def": null,
     "tags": [
@@ -118,7 +118,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Blinder Gehorsam",
-    "ap": 6,
+    "ap": 5,
     "atk": null,
     "def": null,
     "tags": [
@@ -174,7 +174,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Dammbruch",
-    "ap": 6,
+    "ap": 5,
     "atk": null,
     "def": null,
     "tags": [
@@ -278,7 +278,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Einsame Gassen",
-    "ap": 6,
+    "ap": 5,
     "atk": null,
     "def": null,
     "tags": [
@@ -689,7 +689,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Psychologie der Massen",
-    "ap": 6,
+    "ap": 5,
     "atk": null,
     "def": null,
     "tags": [
