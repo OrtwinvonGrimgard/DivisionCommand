@@ -21,6 +21,18 @@ def _base():
 
 
 WEB = _base() / "web"
+
+
+def dc_version() -> str:
+    """t283: Anzeigeversion aus der Datei VERSION (neben dem Spiel); Rückfall auf die eingebaute Version."""
+    try:
+        v = (_base() / "VERSION").read_text(encoding="utf-8").strip()
+        if v:
+            return v
+    except OSError:
+        pass
+    return "0.6c"
+
 UDP_PORT = 47831
 HTTP_PORT = 8765
 BEACON = b"DIVISION-COMMAND-V1"
@@ -690,11 +702,11 @@ def main():
 
     httpd = ThreadingHTTPServer((BIND_HOST, HTTP_PORT), Handler)
     ips = local_ips()
-    print("Division Command 0.21 Alpha — Host")
+    print("Division Command %s Alpha — Host" % dc_version())
     if sys.platform == "win32":
         try:
             import ctypes
-            ctypes.windll.kernel32.SetConsoleTitleW("Division Command 0.21 Alpha")
+            ctypes.windll.kernel32.SetConsoleTitleW("Division Command %s Alpha" % dc_version())
         except Exception:
             pass
     print("Lokal:   http://127.0.0.1:%s" % HTTP_PORT)

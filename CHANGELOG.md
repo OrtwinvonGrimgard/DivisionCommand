@@ -2,6 +2,43 @@
 
 ## Unreleased
 
+## 0.6c Alpha – 12.11.2026
+
+Neue Buchstabenversion. Sie bündelt alles seit 0.6b (t244–t283). Bewusst keine 0.7: Die Balance liegt noch nicht im Zielkorridor, und ein menschlicher Playtest fehlt.
+
+- **Befunde der Analyse t282 umgesetzt (t283):**
+  - **LAN:**
+    - Jeder Spieler bekommt nur seine eigene Sicht. Hand, Deck und verdeckte Karten des Gegners werden nicht übertragen (`getStateFor`/`logFor`).
+    - `server.py` ist gehärtet: nur LAN, ändernde Endpunkte nur von derselben Herkunft, Größenlimit, WebSocket-Origin geprüft, Spielzüge nur von Sitzinhabern.
+    - Der Gast hängt den Spieltisch ein. Der Host-Port lässt sich im Beitrittsfeld angeben.
+    - Neuer Browser-Test mit zwei Clients: `npm run lan-play`.
+  - **Regeln:**
+    - RULES §20.1: Übrige AP verfallen zu Beginn des eigenen Zuges und sind nur Reaktionsreserve.
+    - Mulligan nach §23.4 für 1 AP, einmal, im ersten eigenen Zug vor jeder anderen Aktion. Abweichend von §23.4 zieht man eine neue Hand von 5 statt 7 Karten, weil die Starthand der Engine 5 Karten hat.
+    - Decks müssen genau 60 Karten und 2 Doktrinen haben und die Kopienlimits einhalten. Das wird beim Speichern und beim Partiestart erzwungen (`DC_checkDeckForMatch`). Zufallsdecks haben 60 Karten.
+  - **Balance:**
+    - Alle Karten mit 6+ AP kosten jetzt 5 AP (11 Karten).
+    - Doktrinen überarbeitet: Bollwerk (+1 DEF, Schutzwall vollständig), Gepanzerter Fuß, Marsch aus dem Vollen, Normverband (Fehler bei `def: 0` behoben), Gegenstoß, Stoßtrupp.
+    - 67 Poolwerte geändert, Starterdecks nur auf den Plätzen 31–60 angepasst.
+    - Mischdecks 39,0–58,7 % → 43,8–58,2 % (Streuung 6,6 → 4,6 Punkte), Starterdecks 42,5–55,7 % → 43,8–56,3 %, Doktrinen 38–58 % → etwa 42–56 %. Details: `docs/balance/BALANCE_T283.md`.
+  - **Oberfläche:**
+    - 2,5D-Handkarten werden bei Hover und Fokus vergrößert (auch bei 1024 px lesbar) und sind per Tastatur bedienbar.
+    - Die Knöpfe unter „Weitere Befehle“ (Frieden usw.) brechen um statt abgeschnitten zu werden.
+    - Die Tutorial-Box dockt in kleinen Fenstern seitlich an.
+    - Layout- und Screens-Test prüfen jetzt auch abgeschnittene Knöpfe.
+  - **Karten:**
+    - Die Erstschadenschutz-Wirkung steht wieder auf 14 Karten. Die Kartenflächen sind neu gerendert (alpha40).
+    - Alle 9 ungelesenen Effektparameter werden jetzt gelesen; der Audit meldet 0.
+    - 5 mechanische Zwillinge haben eigene Werte.
+    - 98 Alpha-Karten tragen eine ausdrückliche Seltenheit.
+    - Neuer Test `tests/test_cards_t283.js`; Details in `docs/karten/ZWILLINGE_T283.md`.
+  - **Code:**
+    - 59 leere `catch` protokollieren jetzt.
+    - Risikoarmes Engine-Refactoring: `_defHas`.
+    - CI-Vorlage für GitHub Actions (npm test, verify, fuzz, audit) unter `docs/technik/ci-workflow.yml`. Zum Aktivieren nach `.github/workflows/ci.yml` kopieren; Grok Bot fehlt dafür die GitHub-Berechtigung `workflow`.
+    - Repo-Größe und LFS dokumentiert, ohne die Historie umzuschreiben: `docs/technik/REPO_GROESSE_LFS_T283.md`.
+  - **Version 0.6c** überall: VERSION, version.js, file_version_info 0.6.2.0, Server-Banner (liest jetzt VERSION; vorher „0.21 Alpha“), Hilfe, README, LIESMICH. Cache `divcmd-alpha44a`.
+
 - **Bibliothek: In der großen Kartenansicht blättern (t281):**
   - Unter dem Kartenbild gibt es jetzt die Pfeilknöpfe ‹ › mit Positionsanzeige, z. B. „12 / 348“. Auch die Pfeiltasten ← → blättern. In Textfeldern bleiben die Pfeiltasten beim Feld.
   - Geblättert wird in der aktuellen Liste, also mit aktivem Reiter, Suche und Tags und in deren Reihenfolge. Der Detailbereich rechts und die Deck-Aktionen beziehen sich auf die gerade gezeigte Karte.

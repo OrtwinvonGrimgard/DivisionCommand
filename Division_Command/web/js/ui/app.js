@@ -600,7 +600,7 @@
       eventPlaying = false; eventFlying = false;
       var ov = $('#overlay');
       if (ov) ov.style.display = 'none';
-      document.title = (window.DC_BUILD_LABEL || 'Division Command 0.30c Alpha');
+      document.title = (window.DC_BUILD_LABEL || 'Division Command 0.6c Alpha');
       window.dcTimerHold = true;
       render();
       // t256: Münzwurf erst nach dem Einblend-Countdown zeigen. Vorher lag er unter dem

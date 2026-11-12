@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Division Command 0.6b Alpha</title>
+  <title>Division Command 0.6c Alpha</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#12140f">
   <link rel="stylesheet" href="css/app.css?v=t265">
@@ -21,11 +21,11 @@
   <link rel="stylesheet" href="css/table-chat.css?v=1">
   <link rel="stylesheet" href="css/hud-pro.css?v=1">
   <link rel="stylesheet" href="css/card-placeholder.css?v=kw1">
-  <link rel="stylesheet" href="css/tutorial.css?v=alpha43d">
+  <link rel="stylesheet" href="css/tutorial.css?v=alpha44a">
   <link rel="stylesheet" href="css/reset.css?v=t278">
   <link rel="stylesheet" href="css/ui-system.css?v=t280b">
   <link rel="stylesheet" href="css/ui-screens.css?v=t281">
-  <link rel="stylesheet" href="css/ui-table.css?v=alpha43d">
+  <link rel="stylesheet" href="css/ui-table.css?v=alpha44a">
   <link rel="stylesheet" href="css/table-hud.css?v=t279">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
@@ -47,7 +47,7 @@
   <template id="match-tpl">
   <div id="app">
     <header class="topbar">
-      <h1>DIVISION COMMAND <span class="ver">0.6b α</span></h1>
+      <h1>DIVISION COMMAND <span class="ver">0.6c α</span></h1>
       <div class="hud-center">
         <div class="hud-scn"><span id="hud-scn">Gefecht</span><span class="nowplay" id="nowplay"></span></div>
         <div class="meta" id="turnmeta">Lobby</div>
@@ -178,7 +178,7 @@
   <audio id="bgm" autoplay preload="auto" src="assets/audio/menue/Division%20Command%20(Remastered).wav"></audio>
   <audio id="bgm-battle" preload="auto"></audio>
   <div id="kick-veil"><p id="kick-msg">Viel Glück</p></div>
-  <div id="dc-version">Alpha 0.6b</div>
+  <div id="dc-version">Alpha 0.6c</div>
 
   <div id="title-root" class="boot-intro">
       <div class="title-world" id="title-world" aria-hidden="true">
@@ -191,7 +191,7 @@
       </div>
       <div class="title-brand">
         <img class="title-logo" src="assets/title-logo.png?v=6" alt="Division Command" width="1381" height="507">
-        <p class="sub ver-big" hidden>Alpha 0.6b</p>
+        <p class="sub ver-big" hidden>Alpha 0.6c</p>
       </div>
     <div class="title-panel" id="menu-panel">
       <div id="scr-boot" class="screen on splash">
@@ -282,7 +282,7 @@
 
       <div id="scr-library" class="screen">
         <h1 class="page-title">BIBLIOTHEK</h1>
-        <p class="tiny" id="lib-build">Stand 0.6b</p>
+        <p class="tiny" id="lib-build">Stand 0.6c</p>
         <p class="tiny lib-hint">Klick = große Ansicht · Doppelklick = eine Kopie ins Deck · im Deck: Doppelklick legt zurück. Kopien: Gold 1× · Silber 2× · Bronze 4× · 2 verschiedene Doktrinen.</p>
         <div class="lib-wrap">
           <div class="lib-main">
@@ -524,7 +524,7 @@
             </div>
 <button type="button" data-hilfe="stand">Entwicklungsstand</button>
             <div class="hilfe-sub" data-for="stand">
-              <button type="button" data-jump="version">Version 0.6b</button>
+              <button type="button" data-jump="version">Version 0.6c</button>
               <button type="button" data-jump="stand-engine">Regeln & Engine</button>
               <button type="button" data-jump="karten">Karten & Grafik</button>
               <button type="button" data-jump="stand-bot">Bot & Balance</button>
@@ -772,8 +772,8 @@
 
             <article class="hilfe-page dossier" id="hilfe-stand">
               <p class="tiny">Stand 12.&nbsp;November&nbsp;2026, nachgezählt im Code auf <code>main</code> nach t270 (Analyse t265, Kartenreparatur t267, Balance und Eindeutigkeit t268, einheitliche Schrift t270, Analyse t271). Alle Zahlen stammen aus Katalog, Tests und Messdateien im Repo.</p>
-              <h2 id="version">Version 0.6b Alpha</h2>
-              <p>Gesetzte Version 0.6b (Tag v0.6b vom 10.&nbsp;11.&nbsp;2026), seither 20 weitere Commits auf <code>main</code> ohne neue Versionsnummer. Das Repo hat seit dem 8.&nbsp;9.&nbsp;2026 942 Commits (September 181, Oktober 388, November bis t271 373). Code ohne Kartendaten: rund 17&nbsp;500 Zeilen JavaScript (Engine 7.936, Oberfläche 3.328, Bot 1.081), dazu <code>server.py</code> mit 651 Zeilen.</p>
+              <h2 id="version">Version 0.6c Alpha</h2>
+              <p>Gesetzte Version 0.6c (Tag v0.6c vom 12.&nbsp;11.&nbsp;2026). Sie bündelt alles seit 0.6b (t244–t283): neue Bot-KI, Tutorial, überarbeitete Bildschirme, Mulligan, Deck genau 60&nbsp;+&nbsp;2, LAN mit getrennter Sicht je Spieler, gehärteter Server, spielbare 6+-AP-Karten und Balance t283. Bewusst keine 0.7: Balance liegt noch nicht im Zielkorridor, und ein menschlicher Playtest fehlt.</p>
               <h2 id="stand-engine">Regeln & Engine</h2>
               <ul>
                 <li>Spielbar: Front 3×3 je Seite, Support, Niemandsland, AP-Ökonomie (5 je Zug, Rest als Reaktionsreserve), Angriff mit Gegenschlag, Eingraben, Steilfeuer I–V, verdeckte Fallen bei Feindkontakt, Doktrinen, Trophy-Sieg (5 SP, Sicherheitsnetz Zug 26/28).</li>
@@ -803,7 +803,8 @@
                 <li>Nationen (Bot gegen Bot, t268 nach Feinabstimmung, 23.040 Partien je Modus, ±1,8 Punkte): Starterdecks 48,9–51,1&nbsp;% (vorher 44,9–55,3), Mischdecks 48,4–51,4&nbsp;% (vorher 42,1–56,1). Streuung um 50&nbsp;%: 0,7 bzw. 0,9 Punkte (vorher 3,2 bzw. 4,6), also etwa im Messrauschen. Startspieler 48,7&nbsp;% bzw. 49,6&nbsp;%.</li>
                 <li>Bestätigung t271 (neuer Lauf, ohne Änderung): Starterdecks 48,3–52,1&nbsp;%, Mischdecks 49,1–51,0&nbsp;%, Startspieler 48,7&nbsp;% bzw. 49,3&nbsp;%. Nur Vael (Starter 52,1&nbsp;%) liegt knapp über 52&nbsp;%, innerhalb des Messrauschens; daher keine Feinabstimmung.</li>
                 <li>Außerhalb 48–52&nbsp;%: keine Nation mehr (vorher 10 mit Starterdeck, 15 mit Mischdeck). 712 Karten geändert, Liste in <code>docs/regeln/BALANCE_T268.md</code>.</li>
-                <li>Blitzkrieg liegt etwa 7 Punkte unter der Kontrolle; die 6-AP-Soforteinsätze (Massen, Gehorsam, Gassen) werden in rund 4&nbsp;% der Partien gespielt.</li>
+                <li><b>Neu gemessen t283</b> (Mulligan, 60-Karten-Decks, 6+-AP-Karten auf 5, je 4.800 Partien): Starterdecks 43,8–56,3&nbsp;% (Streuung 3,5 Punkte), Mischdecks 43,8–58,2&nbsp;% (vorher 39,0–58,7, Streuung 6,6 → 4,6), Doktrinen etwa 42–56&nbsp;% (vorher 38–58). Die 48–52&nbsp;% aus t268 gelten für diesen Aufbau nicht. Details in <code>docs/balance/BALANCE_T283.md</code>.</li>
+                <li>Blitzkrieg liegt etwa 7 Punkte unter der Kontrolle; die früheren 6-AP-Soforteinsätze (Massen, Gehorsam, Gassen) kosten seit t283 5&nbsp;AP und sind damit überhaupt spielbar.</li>
                 <li>Wirkung der Reparatur (gleicher Lauf vorher/nachher): Rothain Starter 55,7 → 51,7&nbsp;% (Ablösung), Theryn Starter 50,9 → 49,1&nbsp;% (Opfergabe), Caldris +1,5/+1,1. Karsk und Averon bewegen sich nur innerhalb der Messstreuung. Details in <code>docs/entwicklung/STATUS_T267.md</code>; Feinabstimmung t268 in <code>docs/entwicklung/STATUS_T268.md</code>.</li>
               </ul>
               <h2 id="stand-ui">Oberfläche & Mehrspieler</h2>
@@ -845,7 +846,7 @@
                 <li>Kartentext gegen Engine: die 14 Karten aus t265 sind seit t267 behoben. Offen bleibt nur <code>MINE_TOKEN</code> (siehe unten).</li>
                 <li>Moral 0–5 und Brechen nur im Regeltext, nicht im Ablauf.</li>
                 <li><code>MINE_TOKEN</code> wird nicht gelesen (Wirkung über Sonderfall).</li>
-                <li>Balance: alle Nationen 48–52&nbsp;% (t268, nur Bot-Messung; t271 bestätigt, Vael Starter 52,1&nbsp;% im Rauschen). Offen: Startspieler gewinnt 48,7–49,3&nbsp;%, Blitzkrieg etwa 7 Punkte unter Kontrolle, 6-AP-Soforteinsätze selten gespielt, Neutralisierung der Schläferzelle evtl. 3 statt 2&nbsp;AP.</li>
+                <li>Balance (t283, Bot-Messung): Starterdecks 43,8–56,3&nbsp;%, Mischdecks 43,8–58,2&nbsp;%, Doktrinen etwa 42–56&nbsp;%. Stoßtrupp ist zu schwach, Lauer und Gegenstoß sind zu stark. Offen: Startspieler gewinnt in Mischdecks etwa 56&nbsp;%, Blitzkrieg etwa 7 Punkte unter Kontrolle, Neutralisierung der Schläferzelle evtl. 3 statt 2&nbsp;AP.</li>
                 <li>Speicherdeckel für AP (etwa 10) nicht festgelegt.</li>
               </ul>
               <h2 id="fehlt-technik">Technik & Vertrieb</h2>
@@ -880,6 +881,7 @@
                   <tr><td>11.&nbsp;11.</td><td>t268/t269: keine funktionsgleichen Karten und keine doppelten Namen mehr, alle Nationen 48–52&nbsp;% (Bot gegen Bot), Zitat auf Elitekarten wieder mittig.</td></tr>
                   <tr><td>11.&nbsp;11.</td><td>t270: einheitliche Schrift auf allen Vorderseiten (Regeltext fest, Kartennamen in einer Größe), Zitat größer und fett-kursiv.</td></tr>
                   <tr><td>12.&nbsp;11.</td><td>t271: Analyse und Stand: keine Rückschritte, Balance bestätigt, Browser-Test 5/5 Seeds; Feindkontakt bietet nur noch nutzbare Reaktionen an.</td></tr>
+                  <tr><td>12.&nbsp;11.</td><td>t283 / Version 0.6c: LAN mit getrennter Sicht je Spieler, Mulligan, Deck 60&nbsp;+&nbsp;2, 6+-AP-Karten auf 5 AP, Doktrinen und Pools nachjustiert, Erstschadenschutz-Text, CI.</td></tr>
                 </tbody>
               </table>
               <h2 id="fortschritt-meilensteine">Meilensteine bis Early Access</h2>
@@ -891,7 +893,7 @@
                   <tr><td>Kartentexte wirken wie gedruckt</td><td>fast erledigt: 14 Karten behoben (t267); offen MINE_TOKEN</td></tr>
                   <tr><td>Bot spielt alle Kartentypen sinnvoll</td><td>erledigt (t254)</td></tr>
                   <tr><td>Oberfläche im Browser getestet</td><td>erledigt (t256), ohne 2,5D</td></tr>
-                  <tr><td>Nationen im Ziel 48–52&nbsp;%</td><td>erledigt in der Bot-Messung (t268); menschlicher Test offen</td></tr>
+                  <tr><td>Nationen im Ziel 48–52&nbsp;%</td><td>offen: t283 misst 44–58&nbsp;% (Mischdecks enger als vorher); menschlicher Test offen</td></tr>
                   <tr><td>Menschlicher Playtest</td><td>offen</td></tr>
                   <tr><td>Tutorial</td><td>offen</td></tr>
                   <tr><td>LAN mit zwei Rechnern, EXE</td><td>offen</td></tr>
@@ -960,61 +962,61 @@
 
   <script src="js/ui/title-fx.js?v=05ax"></script>
   <script>window.DC_FOLDER_PNG = true;</script>
-  <script src="js/version.js?v=06b"></script>
+  <script src="js/version.js?v=alpha44a"></script>
   <script src="js/data/keywords.js?v=tac1"></script>
-  <script src="js/data/sets/types/doktrinen.js?v=t237"></script>
+  <script src="js/data/sets/types/doktrinen.js?v=alpha44a"></script>
   <script src="js/data/sets/types/tokens.js?v=t1"></script>
-  <script src="js/data/sets/types/infanterie.js?v=kw1"></script>
-  <script src="js/data/sets/types/panzer.js?v=kw1"></script>
-  <script src="js/data/sets/types/artillerie.js?v=tac1"></script>
-  <script src="js/data/sets/types/aufklaerung.js?v=kw1"></script>
-  <script src="js/data/sets/types/elite.js?v=tac1"></script>
-  <script src="js/data/sets/types/unterstuetzung.js?v=tac1"></script>
-  <script src="js/data/sets/types/soforteinsatz.js?v=tac1"></script>
-  <script src="js/data/sets/types/ausruestung.js?v=tac1"></script>
-  <script src="js/data/sets/types/nation_pools.js?v=06b"></script>
+  <script src="js/data/sets/types/infanterie.js?v=alpha44a"></script>
+  <script src="js/data/sets/types/panzer.js?v=alpha44a"></script>
+  <script src="js/data/sets/types/artillerie.js?v=alpha44a"></script>
+  <script src="js/data/sets/types/aufklaerung.js?v=alpha44a"></script>
+  <script src="js/data/sets/types/elite.js?v=alpha44a"></script>
+  <script src="js/data/sets/types/unterstuetzung.js?v=alpha44a"></script>
+  <script src="js/data/sets/types/soforteinsatz.js?v=alpha44a"></script>
+  <script src="js/data/sets/types/ausruestung.js?v=alpha44a"></script>
+  <script src="js/data/sets/types/nation_pools.js?v=alpha44a"></script>
   <script src="js/data/sets/types/tactical.js?v=tac1"></script>
-  <script src="js/data/decks.js?v=t237"></script>
+  <script src="js/data/decks.js?v=alpha44a"></script>
   <script src="js/data/image-manifest.js?v=gfx2"></script>
-  <script src="js/data/catalog.js?v=alpha43d"></script>
+  <script src="js/data/catalog.js?v=alpha44a"></script>
   <script src="js/data/card-faces.js?v=gfx2"></script>
   <script src="js/data/audio-data.js?v=endscreen1"></script>
-  <script src="js/engine/engine.js?v=alpha43d"></script>
-  <script src="js/engine/victory_trophy.js?v=trophy3"></script>
-  <script src="js/engine/doctrine_runtime.js?v=tac1"></script>
+  <script src="js/engine/engine.js?v=alpha44a"></script>
+  <script src="js/engine/victory_trophy.js?v=alpha44a"></script>
+  <script src="js/engine/doctrine_runtime.js?v=alpha44a"></script>
   <script src="js/engine/tactical_runtime.js?v=tac1"></script>
-  <script src="js/ai/bot.js?v=t256"></script>
+  <script src="js/ai/bot.js?v=alpha44a"></script>
   <script src="js/playtest/store.js?v=nochat1"></script>
-  <script src="js/playtest/logger.js?v=nochat1"></script>
+  <script src="js/playtest/logger.js?v=alpha44a"></script>
   <script src="js/playtest/panel.js?v=pt2"></script>
-  <script src="js/ui/table-chat.js?v=nochat1"></script>
-  <script src="js/ui/perf.js?v=030c"></script>
+  <script src="js/ui/table-chat.js?v=alpha44a"></script>
+  <script src="js/ui/perf.js?v=alpha44a"></script>
   <script src="js/ui/card-placeholder.js?v=gfx2-kw1"></script>
-  <script src="js/ui/library.js?v=alpha43d"></script>
+  <script src="js/ui/library.js?v=alpha44a"></script>
   <script src="js/ui/portraits.js?v=kit20"></script>
   <script src="js/data/table-art-data.js?v=1"></script>
   <script src="js/ui/table-card-art.js?v=gfx2-kw1"></script>
-  <script src="js/ui/table-effects.js?v=1"></script>
+  <script src="js/ui/table-effects.js?v=alpha44a"></script>
   <script src="js/ui/table-stencil.js?v=sc4"></script>
-  <script src="js/ui/table-camera.js?v=st1"></script>
+  <script src="js/ui/table-camera.js?v=alpha44a"></script>
   <script src="js/ui/end-screen.js?v=t280"></script>
-  <script src="js/ui/app.js?v=alpha43d"></script>
+  <script src="js/ui/app.js?v=alpha44a"></script>
   <script src="js/ui/reset.js?v=t278"></script>
   <script src="js/tutorial/scenario.js?v=t275"></script>
-  <script src="js/ui/tutorial.js?v=alpha43d"></script>
+  <script src="js/ui/tutorial.js?v=alpha44a"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
   <script src="js/ui/audio-options.js?v=1"></script>
   <script src="js/ui/hand-drag.js?v=handzoom2"></script>
-  <script src="js/net.js?v=alpha43d"></script>
+  <script src="js/net.js?v=alpha44a"></script>
   <script src="js/ui/ui-screens.js?v=t280b"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js?v=mix1').catch(function () {});
     }
     (function () {
-      document.title = window.DC_BUILD_LABEL || 'Division Command 0.6b Alpha';
+      document.title = window.DC_BUILD_LABEL || 'Division Command 0.6c Alpha';
       var dcVer = document.getElementById('dc-version');
-      if (dcVer) dcVer.textContent = 'Alpha ' + (window.DC_VERSION || '0.6b');
+      if (dcVer) dcVer.textContent = 'Alpha ' + (window.DC_VERSION || '0.6c');
       var bgm = document.getElementById('bgm');
 
       function dcBarToCommand() {
