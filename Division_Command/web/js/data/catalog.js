@@ -104,6 +104,8 @@ window.DC_CATALOG = window.DC_CATALOG || {
     "doctrines": 2,
     "support_slots": 18,
     "max_hand": 7,
+    "mulligan": true,
+    "mulligan_ap": 1,
     "deploy_protection": true,
     "strict_facing": false,
     "combat_counter": "survivor_only",
@@ -226,6 +228,33 @@ window.DC_validateDeck = function (cardIds, doctrineIds, catalog) {
   return { ok: errors.length === 0, errors: errors, fixedIds: kept, notices: notices, doctrineIds: docs.slice(0, 2).filter(function (id, i, a) { return a.indexOf(id) === i; }) };
 };
 
+
+/**
+ * Vollständige Deckprüfung für Speichern und Partiestart (t283, RULES §24): Kopienlimits wie `DC_validateDeck`
+ * plus **genau** `deck_size` (60) Hauptdeckkarten und **genau 2 verschiedene** Doktrinen.
+ * `DC_validateDeck` bleibt die reine Kopienprüfung (Teilmengen, Auto-Korrektur).
+ * @param {string[]} cardIds Hauptdeck (Doktrinen/Token werden ignoriert)
+ * @param {string[]} doctrineIds Doktrinen
+ * @param {object} [catalog]
+ * @returns {{ok: boolean, size: number, doctrines: number, need: number, notices: string[], copy: object}}
+ */
+window.DC_checkDeckForMatch = function (cardIds, doctrineIds, catalog) {
+  catalog = catalog || window.DC_CATALOG;
+  var need = Number((catalog.rules && catalog.rules.deck_size) || 60);
+  var byId = {};
+  (catalog.cards || []).forEach(function (c) { byId[c.id] = c; });
+  var main = (cardIds || []).filter(function (id) {
+    var c = byId[id];
+    return c && c.typ !== 'Doktrin' && c.typ !== 'Token' && c.typ !== 'Asset';
+  });
+  var docs = (doctrineIds || []).filter(function (id) { return byId[id] && byId[id].typ === 'Doktrin'; });
+  var distinct = docs.filter(function (id, i, a) { return a.indexOf(id) === i; });
+  var copy = window.DC_validateDeck(main, docs, catalog);
+  var notices = (copy.notices || []).slice();
+  if (main.length !== need) notices.push('Hauptdeck: ' + main.length + ' Karten (genau ' + need + ' nötig)');
+  if (distinct.length !== 2 || docs.length !== 2) notices.push('Doktrinen: ' + docs.length + ' (genau 2 verschiedene nötig)');
+  return { ok: notices.length === 0, size: main.length, doctrines: docs.length, need: need, notices: notices, copy: copy };
+};
 
 /* 0.5a: fehlende Schale nachziehen, ohne index.html neu zu schreiben. */
 (function () {

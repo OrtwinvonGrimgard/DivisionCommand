@@ -136,7 +136,7 @@ Fortschritt nur, wenn die Doktrin im Slot liegt. Zielrate Playtest **~30–60 
 
 Implementierung: `web/js/engine/victory_trophy.js` (`DC_TROPHY_OBJECTIVES`).
 
-Hinweis: Fünf Doktrinen liegen in keinem Nationsdeck (Auswertung, Blitzkrieg, Bollwerk, Sicherer Nachschub, Tiefenverteidigung) — Trigger-Raten dort nur über Custom-Decks messbar.
+Hinweis (Stand t283): Vier Doktrinen liegen in keinem Nationsdeck (Blitzkrieg, Bollwerk, Sicherer Nachschub, Tiefenverteidigung) — Trigger-Raten dort nur über Custom-Decks messbar.
 
 
 ---

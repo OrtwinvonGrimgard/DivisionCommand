@@ -552,23 +552,19 @@ AP kann durch Karten:
 
 werden.
 
-## 20.1 AP-Speicherung
+## 20.1 AP-Reserve (verbindlich, t283)
 
-Der aktuelle Arbeitsstand erlaubt:
-
-> Nicht ausgegebene AP bleiben erhalten.
-
-Dadurch kann ein Spieler auf eine größere Ausgabe sparen.
+Nicht ausgegebene AP bleiben **nur bis zum Beginn des eigenen nächsten Zuges** erhalten. Sie dienen im gegnerischen Zug als **Reaktionsreserve** (Reaktionen, Fallen, Konter). Zu Beginn des eigenen Zuges verfällt der Rest, dann gibt es wieder 5 AP (plus Kartenboni wie Feldtelegraf oder Tiefenverteidigung).
 
 Beispiel:
 
-Zug 1: 5 AP erhalten, 2 ausgegeben → 3 AP bleiben.
+Zug 1: 5 AP erhalten, 2 ausgegeben → 3 AP bleiben als Reserve im gegnerischen Zug.
 
-Zug 2: +5 AP → 8 AP verfügbar.
+Zug 2 (eigener): Rest verfällt → 5 AP verfügbar (nicht 8).
 
-Ein maximales AP-Speicherlimit ist noch nicht endgültig entschieden.
+Es gibt kein Ansparen über mehrere Züge. Karten mit Kosten über 5 AP werden deshalb über Kostensenkungen, AP-Boni oder Effekte spielbar (t283: alle 6+-Karten geprüft, siehe `docs/balance/BALANCE_T283.md`).
 
-Ein Limit von 10 AP ist nur eine mögliche Playtest-Annahme.
+Regelwerte: `ap_per_turn: 5`, `ap_expire_on_own_turn: true`, `ap_persist_through_opponent: true` (Engine `_actEnd`). Frühere Arbeitsstände (AP sparen, Limit 10) sind überholt.
 
 ## 20.2 AP-Kostenbereich
 
@@ -669,7 +665,9 @@ Das bisherige Elite-Tag älterer Kartensätze gilt nicht automatisch als endgül
 
 Der Spieler beginnt mit:
 
-> 7 Karten
+> 5 Karten (`hand_start: 5`)
+
+Der Startspieler zieht in Zug 1 keine Karte; der zweite Spieler zieht zu Beginn seines ersten Zuges 1 Karte.
 
 ## 23.2 Normales Ziehen
 
@@ -681,19 +679,20 @@ Karteneffekte können zusätzliche Karten ziehen.
 
 ## 23.3 Handlimit
 
-Aktueller Arbeitsstand:
+> 7 Karten (`max_hand: 7`)
 
-> 7 Karten
+Wer mit voller Hand zieht, legt die gezogene Karte direkt auf den Friedhof (Protokoll: „wirft … ab (Hand voll)“).
 
-Die genaue Abwicklung beim Überschreiten des Limits ist noch zu konkretisieren.
+## 23.4 Mulligan (verbindlich, t283)
 
-## 23.4 Mulligan
+> Einmal je Partie darf ein Spieler im **ersten eigenen Zug, vor jeder anderen Aktion,** für **1 AP** seine ganze Hand ins Deck mischen und eine **neue Starthand** ziehen.
 
-Aktuelle Arbeitsregel:
-
-> Eine neue Starthand mit 7 Karten kann gezogen werden; dafür werden 1 AP bezahlt.
-
-Die genaue Reihenfolge zwischen AP-Zuweisung und Mulligan ist noch nicht endgültig formalisiert.
+- Die neue Starthand hat so viele Karten wie die normale Starthand (`hand_start`, aktuell 5). Die frühere Arbeitsregel „7 Karten“ stammt aus der Zeit, als die Starthand 7 Karten hatte; mit 7 Karten wäre der Mulligan bei Starthand 5 immer ein Kartenvorteil.
+- Reihenfolge: zuerst AP-Zuweisung (5 AP), dann Mulligan (−1 AP → 4 AP).
+- Friedensangebot, Annahme und Aufgabe schließen den Mulligan nicht. Jede andere eigene Aktion (Karte, Angriff, Fähigkeit, Zugende) schließt ihn.
+- Der zweite Spieler darf ihn im eigenen ersten Zug (Partiezug 2) nehmen; die zu Zugbeginn gezogene Karte geht dabei mit ins Deck.
+- Bedienung: Knopf „Mulligan (1 AP)“ unter „Zugende“, nur sichtbar, wenn erlaubt. Im Tutorial wird er nicht angeboten.
+- Regelwerte: `mulligan: true`, `mulligan_ap: 1`; Engine `canMulligan`, Aktion `MULLIGAN`.
 
 ## 23.5 Leerer Nachziehstapel
 
@@ -711,11 +710,11 @@ Karten bleiben grundsätzlich im normalen Kreislauf, sofern ein Effekt nicht aus
 
 # 24. Deckbau
 
-Empfohlene Hauptdeckgröße:
+Hauptdeckgröße (verbindlich, t283):
 
-> ca. 60 Karten
+> genau 60 Karten + genau 2 verschiedene Doktrinen
 
-Die 60 Karten sind ein Richtwert und kein zwingendes hartes Minimum.
+Deckbau (Speichern) und Partiestart prüfen das (`DC_checkDeckForMatch`): Ein Deck mit 59 oder 61 Karten, mit weniger oder mehr als 2 Doktrinen oder mit überzähligen Kopien wird nicht gespeichert und startet keine Partie. Zufallsdecks ohne Deckauswahl haben ebenfalls 60 Karten. Nur interne Test- und Bot-Werkzeuge nutzen weiter 40-Karten-Testdecks.
 
 Das System soll grundsätzlich freie Deckkonstruktion erlauben, sofern der endgültige Kartentext keine zusätzlichen Beschränkungen erzeugt.
 
@@ -960,9 +959,9 @@ Der Ausbau soll vor allem Varianten bestehender Mechaniken liefern, damit AP-Kos
 
 ## Deck
 
-- endgültige Mindestgröße
+- ~~endgültige Mindestgröße~~ → genau 60 + 2 (t283, §24)
 - ~~endgültige Kopienlimits~~ → Bronze 4 / Silber 2 / Gold 1 (digin4)
-- endgültiges Handlimit und Mulliganverfahren
+- ~~endgültiges Handlimit und Mulliganverfahren~~ → Handlimit 7, Mulligan 1 AP (t283, §23.3/§23.4)
 
 ## Elite
 

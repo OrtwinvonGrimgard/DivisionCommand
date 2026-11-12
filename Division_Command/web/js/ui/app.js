@@ -349,6 +349,8 @@
     bindLogWin();
     bind('btn-playtest', function () { if (window.DCPlayPanel) DCPlayPanel.show(); });
     bind('btn-end', endTurn);
+    // t283: Mulligan (RULES §23.4) – neue Starthand für 1 AP, nur im ersten eigenen Zug vor jeder anderen Aktion.
+    bind('btn-mulligan', function () { dispatch({ type: 'MULLIGAN', player: activePlayer() }); });
     bind('btn-peace', function () { dispatch({ type: 'PROPOSE_PEACE', player: activePlayer() }); });
     bind('btn-accept', function () { dispatch({ type: 'ACCEPT_PEACE', player: activePlayer() }); });
     bind('btn-concede', function () {
@@ -508,14 +510,21 @@
       var n1el = $('#opponent-name');
       var n1 = (n1el && n1el.value.trim()) || (mode === 'bot' ? ((window.DCBot && DCBot.cfg && DCBot.cfg.model === 'schloter') ? 'Schloter' : 'Test') : 'Gegner');
       n1 = n1.slice(0, 24);
-      var deck0 = DCEngine.buildTestDeck(CATALOG, rand);
-      var deck1 = DCEngine.buildTestDeck(CATALOG, rand);
+      // t283: Zufallsdecks in voller Größe (RULES §24: 60 + 2), nicht mehr 40.
+      var deckSize = Number((CATALOG.rules && CATALOG.rules.deck_size) || 60);
+      var deck0 = DCEngine.buildTestDeck(CATALOG, rand, null, deckSize);
+      var deck1 = DCEngine.buildTestDeck(CATALOG, rand, null, deckSize);
+      var badDecks = [];
       var doctrine0 = takeDocs(docs, 2, rand);
       var doctrine1 = takeDocs(docs, 2, rand);
       if (!replay && window.DCLib && DCLib.selectedDeck) {
         var mine = DCLib.selectedDeck(mode === 'lan' ? 'deck-pick-lan' : 'deck-pick-single');
         if (mine) {
           var built = DCLib.expand(mine);
+          if (window.DC_checkDeckForMatch) {
+            var chk0 = DC_checkDeckForMatch(built, mine.doctrines || []);
+            if (!chk0.ok) badDecks.push((mine.name || 'Eigenes Deck') + ': ' + chk0.notices.join(' · '));
+          }
           if (built.length) deck0 = built;
           if (mine.doctrines && mine.doctrines.length) doctrine0 = mine.doctrines.slice(0, 2);
         }
@@ -523,10 +532,22 @@
           var botd = DCLib.selectedDeck("deck-pick-bot");
           if (botd) {
             var bbuilt = DCLib.expand(botd);
+            if (window.DC_checkDeckForMatch) {
+              var chk1 = DC_checkDeckForMatch(bbuilt, botd.doctrines || []);
+              if (!chk1.ok) badDecks.push((botd.name || 'Bot-Deck') + ': ' + chk1.notices.join(' · '));
+            }
             if (bbuilt.length) deck1 = bbuilt;
             if (botd.doctrines && botd.doctrines.length) doctrine1 = botd.doctrines.slice(0, 2);
           }
         }
+      }
+      // t283: Ungültige Decks (nicht 60 + 2 oder Kopienlimit verletzt) starten keine Partie mehr.
+      if (badDecks.length) {
+        var badMsg = 'Partie nicht gestartet – Deck ungültig (60 Karten + 2 Doktrinen, Kopienlimits):\n' + badDecks.join('\n');
+        showErr(badMsg.replace(/\n/g, ' '));
+        if (window.dcUnmountMatch) window.dcUnmountMatch();
+        if (window.alert) { try { window.alert(badMsg); } catch (eBad) { console.warn('alert', eBad); } }
+        return;
       }
       if (!replay && window.DC_validateDeck) {
         var v0 = DC_validateDeck(deck0, doctrine0);
@@ -2864,6 +2885,17 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     el.classList.toggle('active', !!isActive);
     el.classList.add('pplate');
   }
+  /**
+   * Zeigt den Mulligan-Knopf nur, wenn der lokale Spieler ihn jetzt nehmen darf (nicht im Tutorial, nicht für den Bot).
+   * @param {number} viewer Sitz des lokalen Spielers
+   */
+  function syncMulliganButton(viewer) {
+    var b = document.getElementById('btn-mulligan');
+    if (!b) return;
+    var ok = mode !== 'tutorial' && !!engine && typeof engine.canMulligan === 'function' && engine.canMulligan(viewer) &&
+      !(mode === 'bot' && viewer !== you);
+    b.hidden = !ok;
+  }
   /* Gesamten Tisch aus dem Engine-Stand neu aufbauen. */
     function render() { // Tisch neu zeichnen
     bindInspectGestures();
@@ -2877,6 +2909,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     var foe = st.players[viewer === 0 ? 1 : 0];
     $('#turnmeta').textContent = 'Zug ' + st.turn + ' · am Zug: ' + st.players[st.active].name + (st.winner != null ? ' · ENDE: ' + st.endReason : '');
     syncBombTimer();
+    syncMulliganButton(viewer);
     // Startspieler Zug 1: Badge „(Start: N)“ nur, wenn ein AP-Abzug aktiv ist (seit t257 Standard 0 → kein Badge)
     var startAp = st.starterFirstTurnAp;
     var startNote = (startAp != null && startAp < Number((engine.rules && engine.rules.ap_per_turn) || 5)) ? ' (Start: ' + startAp + ')' : '';

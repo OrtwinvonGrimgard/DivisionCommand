@@ -52,6 +52,9 @@
    * @param {function(): number} rand Zufall in [0, 1)
    * @returns {Array} Neue, gemischte Liste
    */
+  /** Aktionen, die den Mulligan nicht schließen (Frieden, Aufgabe, Münzwurf-Bestätigung). */
+  const MULLIGAN_NEUTRAL = Object.freeze({ PROPOSE_PEACE: true, ACCEPT_PEACE: true, CONCEDE: true, COIN_FLIP: true });
+
   function shuffle(arr, rand) {
     const a = arr.slice();
     for (let i = a.length - 1; i > 0; i--) {
@@ -1557,7 +1560,13 @@
       if (pid !== 0 && pid !== 1) return { ok: false, error: 'Spieler fehlt' };
       try { // Fehler auffangen
         if (this._tacBeforeAction) this._tacBeforeAction(pid,a);
+        // t283 Mulligan (RULES §23.4): nur vor der ersten eigenen Aktion; jede andere Aktion am Zug schließt ihn.
+        if (a.type !== 'MULLIGAN' && !MULLIGAN_NEUTRAL[a.type] && this.state.active === pid) {
+          const mp = this.player(pid);
+          if (mp && mp.flags) mp.flags.mulliganClosed = true;
+        }
         switch (a.type) { // Aktionstyp unterscheiden
+          case 'MULLIGAN': return this._actMulligan(pid); // neue Starthand gegen 1 AP
           case 'PLAY': return this._actPlay(pid, a); // Karte aus der Hand spielen
           case 'CHOOSE_SLOT': return this._actSlot(pid, a); // Einheit auf eine Stellung legen
           case 'CHOOSE_TARGET': return this._actTarget(pid, a); // Ziel aufnehmen oder Kampf lösen
@@ -6487,6 +6496,46 @@
      * Der Startspieler behält in späteren Zügen die volle AP-Bank; nur Zug 1 ist reduziert.
      * @param {number} pid
      */
+    /**
+     * Darf `pid` jetzt einen Mulligan nehmen? (RULES §23.4, t283)
+     * Bedingungen: eigener erster Zug (Partiezug 1 bzw. 2), am Zug, keine offene Wahl, noch keine andere Aktion,
+     * noch kein Mulligan, mindestens `mulligan_ap` AP.
+     * @param {number} pid 0|1
+     * @returns {boolean}
+     */
+    canMulligan(pid) {
+      const st = this.state;
+      if (!st || st.winner != null || st.active !== pid || st.pending) return false;
+      if (this.rules.mulligan === false) return false;
+      const p = this.player(pid);
+      if (!p || !p.flags || p.flags.mulliganDone || p.flags.mulliganClosed) return false;
+      if (st.turn > 2) return false;
+      return Number(p.ap || 0) >= Number(this.rules.mulligan_ap != null ? this.rules.mulligan_ap : 1);
+    }
+    /**
+     * Mulligan: ganze Hand ins Deck mischen, neue Starthand (`hand_start`, 5) ziehen, `mulligan_ap` (1) AP zahlen.
+     * Einmal je Partie, nur vor der ersten eigenen Aktion im ersten Zug.
+     * @param {number} pid 0|1
+     * @returns {{ok: boolean, error?: string}}
+     */
+    _actMulligan(pid) {
+      if (!this.canMulligan(pid)) return { ok: false, error: 'Mulligan nur im ersten eigenen Zug vor jeder anderen Aktion (1 AP)' };
+      const p = this.player(pid);
+      const cost = Number(this.rules.mulligan_ap != null ? this.rules.mulligan_ap : 1);
+      const n = Number(this.rules.mulligan_hand || this.rules.hand_start || 5);
+      p.ap -= cost;
+      p.deck = p.deck.concat(p.hand);
+      this._shuffle(p.deck);
+      p.hand = [];
+      p.flags.mulliganDone = true;
+      // Neue Starthand ohne Einzel-Ziehereignisse (sonst fünf „zieht eine Karte“-Einblendungen); ein Sammelereignis folgt.
+      const wasMuted = this.state._muteEvents;
+      this.state._muteEvents = true;
+      try { this._draw(p, n); } finally { this.state._muteEvents = wasMuted; }
+      this._log(p.name + ' nimmt einen Mulligan: neue Starthand (' + p.hand.length + ' Karten) für ' + cost + ' AP.');
+      this._evt('shout', null, p.name + ': Mulligan – neue Starthand für ' + cost + ' AP', { owner: pid });
+      return { ok: true };
+    }
     _actEnd(pid) {
       if (this.state.active !== pid) throw new Error('Nicht dein Zug');
       if (this.state.pending && this.state.pending.kind !== 'end-discard') throw new Error('Erst Ziel wählen');
@@ -7552,14 +7601,16 @@
   function defToken() { return 'minenfeld'; }
 
   /**
-   * Baut ein legales 40+2-Testdeck aus dem Katalog (Seltenheitsgrenzen, optional bevorzugt).
-   * Nur für Tests und Bots, nicht für den Deckbau der Spieler.
+   * Baut ein legales Testdeck aus dem Katalog (Seltenheitsgrenzen, optional bevorzugt).
+   * Standard 40 Karten (Tests/Bots); die Partie-UI fordert seit t283 `deck_size` (60) an.
    * @param {object} catalog
    * @param {function(): number} rand
    * @param {string[]} [prefer] bevorzugte Karten-IDs
+   * @param {number} [size=40] Hauptdeckgröße
    * @returns {string[]} Karten-IDs
    */
-  function buildTestDeck(catalog, rand, prefer) {
+  function buildTestDeck(catalog, rand, prefer, size) {
+    const N = Number(size) > 0 ? Number(size) : 40;
     const pool = catalog.cards.filter((c) => ['Einheit', 'Unterstützung', 'Ausrüstung', 'Soforteinsatz'].includes(c.typ));
     const units = pool.filter((c) => c.typ === 'Einheit');
     const rest = pool.filter((c) => c.typ !== 'Einheit');
@@ -7577,9 +7628,9 @@
         for (let k = 0; k < copies && deck.length < n; k++) deck.push(s[i].id);
       }
     };
-    take(units, 16);
-    take(rest, 40);
-    let out = shuffle(deck, rand).slice(0, 40);
+    take(units, Math.round(N * 0.4)); // 40 % Einheiten (bei 40 Karten: 16)
+    take(rest, N);
+    let out = shuffle(deck, rand).slice(0, N);
     if (typeof globalThis !== 'undefined' && globalThis.DC_validateDeck) {
       out = globalThis.DC_validateDeck(out, [], catalog).fixedIds;
     }

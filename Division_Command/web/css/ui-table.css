@@ -201,6 +201,9 @@ html.ui280 body #app .table-side .actions > button { min-width: 0 !important; pa
   html.ui280 body #app .table-side .actions > button:not(#btn-end) { font-size: 12px !important; letter-spacing: 0 !important; }
 }
 html.ui280 body #app .table-side .actions > #btn-end { grid-column: 1 / -1; }
+/* t283: Mulligan-Knopf nur im ersten eigenen Zug sichtbar, volle Breite unter „Zugende“ */
+html.ui280 body #app .table-side .actions > #btn-mulligan { grid-column: 1 / -1; }
+#app #btn-mulligan[hidden] { display: none !important; }
 /* 2,5D: Gegnerplakette nicht unter der Kamera-Leiste, sondern unten links in der Gegnerleiste und nur so breit wie der Name */
 html.ui280 body.dc-cam #app #plate-enemy { align-self: end !important; justify-self: start !important; width: auto !important; max-width: 100%; padding-left: 14px !important; padding-right: 14px !important; }
 html.ui280 body.dc-cam #app .cam-hud { padding: 3px 5px; }

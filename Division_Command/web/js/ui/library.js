@@ -946,8 +946,10 @@
     var map = loadDecks();
     var list = map[userId()] || [];
     var expanded = expand({ cards: draft.cards });
-    if (window.DC_validateDeck) {
-      var chk = window.DC_validateDeck(expanded, draft.doctrines.slice());
+    // t283: Speichern nur mit vollständigem, legalem Deck (60 + 2, Kopienlimits; RULES §24).
+    var check = window.DC_checkDeckForMatch || window.DC_validateDeck;
+    if (check) {
+      var chk = check(expanded, draft.doctrines.slice());
       if (!chk.ok) {
         deckLimitMessage('Deck ungültig: ' + (chk.notices || []).join(' · '));
         return false;
@@ -1055,6 +1057,11 @@
     validateDraft: function () {
       if (!window.DC_validateDeck) return { ok: true, notices: [] };
       return window.DC_validateDeck(expand({ cards: draft.cards }), draft.doctrines.slice());
+    },
+    /** t283: Vollprüfung des Entwurfs für Speichern/Partie (60 + 2, Kopienlimits). */
+    validateDraftComplete: function () {
+      if (!window.DC_checkDeckForMatch) return { ok: true, notices: [] };
+      return window.DC_checkDeckForMatch(expand({ cards: draft.cards }), draft.doctrines.slice());
     }
   };
 })(window);

@@ -73,10 +73,31 @@ async function main() {
     await G.p.waitForFunction(() => { const e = window.dcGetEngine && window.dcGetEngine(); return e && e.state && e.state.players; }, null, { timeout: 15000 });
     await sleep(1500);
     // Münzwurf-Dialog auf beiden Seiten bestätigen (wie ein Spieler)
-    for (const pg of [H.p, G.p]) { for (let k = 0; k < 20; k++) { const b0 = await pg.$('#coin-start-ok'); if (b0 && await b0.isVisible()) { await b0.click(); break; } await sleep(250); } }
+    for (const pg of [H.p, G.p]) { for (let k = 0; k < 40; k++) { const b0 = await pg.$('#coin-start-ok'); if (b0 && await b0.isVisible()) { await b0.click(); break; } await sleep(250); } }
     await sleep(800);
     let a = await pub(H.p), b = await pub(G.p);
     check(a && b && JSON.stringify(a) === JSON.stringify(b), 'Start: Host und Gast sehen dieselben öffentlichen Werte');
+    // t283 Mulligan über den Knopf: Startspieler im ersten Zug; ist das der Host, beendet er den Zug und der Gast nimmt ihn in Zug 2 (LAN-Weg).
+    const mull = async (pg, who) => {
+      const before = await pub(H.p);
+      const vis = await pg.evaluate(() => { const b = document.getElementById('btn-mulligan'); return !!b && !b.hidden && b.offsetParent !== null; });
+      if (!vis) return { vis, ok: false };
+      await pg.waitForFunction(() => !document.getElementById('coin-start-ok'), null, { timeout: 15000 }).catch(() => {});
+      await pg.locator('#overlay').waitFor({ state: 'hidden', timeout: 20000 }).catch(() => {});
+      await pg.click('#btn-mulligan', { timeout: 15000 }); await sleep(900);
+      const after = await pub(H.p); const after2 = await pub(pg);
+      const hidden = await pg.evaluate(() => document.getElementById('btn-mulligan').hidden);
+      return { vis, ok: after.ap[who] === before.ap[who] - 1 && after2.ap[who] === after.ap[who] && hidden };
+    };
+    if (a.active === 0) {
+      const m0 = await mull(H.p, 0);
+      check(m0.vis && m0.ok, 'Mulligan Host: Knopf sichtbar, −1 AP, danach verborgen');
+      await H.p.evaluate(() => window.dcGetEngine().dispatch({ type: 'END_TURN', player: 0 })); await sleep(900);
+    }
+    const m1 = await mull(G.p, 1);
+    check(m1.vis && m1.ok, 'Mulligan Gast über LAN: Knopf sichtbar, −1 AP auf Host und Gast, danach verborgen');
+    const hv = await H.p.evaluate(() => { const b = document.getElementById('btn-mulligan'); return !!b && !b.hidden; });
+    check(!hv, 'Host sieht keinen Mulligan-Knopf, solange der Gast am Zug ist');
     for (let i = 0; i < STEPS; i++) {
       const s = await pub(H.p); if (!s || s.winner != null) break;
       const pend = await H.p.evaluate(() => { const st = window.dcGetEngine().state; return st.pending && typeof st.pending.player === 'number' ? st.pending.player : null; });
@@ -117,7 +138,9 @@ async function main() {
     await H.p.screenshot({ path: path.join(OUT, 'lan_host_1280x720.png') }); report.shots.push('lan_host_1280x720.png');
     await H.ctx.close(); await G.ctx.close();
   } catch (e) {
-    report.fail.push('Ablauf: ' + (e.message || String(e)).split('\n')[0]);
+    const lines = (e.message || String(e)).split('\n');
+    report.fail.push('Ablauf: ' + lines[0] + ' | ' + lines.filter((l) => /intercepts|waiting for|not visible|not stable/.test(l)).slice(-3).join(' | '));
+    try { for (const pg of browser.contexts().flatMap((c) => c.pages())) await pg.screenshot({ path: path.join(OUT, 'lan_fail_' + Math.random().toString(36).slice(2, 6) + '.png') }); } catch (eShot) { console.warn('shot', eShot.message); }
   } finally { await browser.close(); srv.kill(); }
   fs.writeFileSync(path.join(OUT, 'lan_report.json'), JSON.stringify(report, null, 2));
   report.fail.forEach((f) => console.log('FAIL ' + f));
