@@ -942,7 +942,7 @@
     var d = defOf(engine, loc.inst);
     var max = loc.inst.defMax != null ? loc.inst.defMax : (Number(d.def) || 0);
     var missing = Math.max(0, max - (loc.inst.def || 0));
-    return 14 + st.atk * 2 + Math.min(missing, 3) + (st.def <= 1 ? 4 : 0);
+    return 14 + st.atk * 2 + Math.min(missing, 3) + (st.def <= 1 ? 4 : 0) + (a.all ? 6 * Math.max(0, Number(a.count || 1) - 1) : 0);
   }
 
   /**

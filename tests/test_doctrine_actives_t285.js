@@ -58,18 +58,24 @@ function stepOk(eng, Bot, pid) {
 /** @param {object} eng @param {string} type @returns {object[]} */
 const listed = (eng, type) => eng.listActions(0).filter((a) => a.type === type);
 
-// 1) Feldreparatur: nur beschädigte gepanzerte eigene Einheit, heilt 1, 1× pro Zug; Bot nutzt sie zuerst.
+// 1) Feldreparatur: heilt alle beschädigten gepanzerten eigenen Fronteinheiten um 2 (nicht über volle DEF),
+//    kostenlos, 1× pro Zug; Infanterie ist kein Ziel. Der Bot nutzt sie vor den Angriffen.
 {
   const { eng, Bot } = boot();
   doctrine(eng, 0, NACHSCHUB);
-  const pz = L.put(eng, 0, PANZER, 'C', 0); pz.def = 2;
+  const pz = L.put(eng, 0, PANZER, 'C', 0); pz.def = 1;
+  const pz2 = L.put(eng, 0, PANZER, 'R', 0); pz2.def = 3;
   const inf = L.put(eng, 0, INF, 'L', 0); inf.def = 1;
   L.put(eng, 1, INF, 'R', 0);
-  assert.equal(listed(eng, 'HEAL_ARMORED').map((a) => a.uid).join(','), pz.uid, 'nur der beschädigte Panzer ist Ziel');
+  const max = Number(eng.defOf(pz2).def) || 4;
+  assert.equal(listed(eng, 'HEAL_ARMORED').length, 1, 'ein Eintrag, der alle Panzer heilt');
   assert.equal(eng.dispatch({ type: 'HEAL_ARMORED', player: 0, uid: inf.uid }).code, 'HEAL_NONE', 'Infanterie ist kein Ziel');
   const a = stepOk(eng, Bot, 0);
-  assert.equal(a.type, 'HEAL_ARMORED'); assert.equal(pz.def, 3, 'heilt 1'); assert.equal(eng.player(0).ap, 5, 'kostenlos');
+  assert.equal(a.type, 'HEAL_ARMORED');
+  assert.equal(pz.def, 3, 'heilt 2'); assert.equal(pz2.def, Math.min(max, 5), 'zweiter Panzer geheilt, nicht über volle DEF');
+  assert.equal(inf.def, 1, 'Infanterie bleibt'); assert.equal(eng.player(0).ap, 5, 'kostenlos');
   assert.equal(listed(eng, 'HEAL_ARMORED').length, 0, 'danach nicht mehr gelistet');
+  pz.def = 1;
   assert.equal(eng.dispatch({ type: 'HEAL_ARMORED', player: 0, uid: pz.uid }).code, 'HEAL_USED', '1× pro Zug');
   console.log('ok t285 Feldreparatur: Regeln und Bot-Nutzung');
 }
@@ -78,6 +84,23 @@ const listed = (eng, type) => eng.listActions(0).filter((a) => a.type === type);
   const pz = L.put(eng, 0, PANZER, 'C', 0); pz.def = 2;
   assert.equal(listed(eng, 'HEAL_ARMORED').length, 0, 'ohne Doktrin keine Feldreparatur');
   assert.equal(eng.dispatch({ type: 'HEAL_ARMORED', player: 0, uid: pz.uid }).ok, false);
+}
+
+// 1b) Bollwerk: +1 DEF für alle eigenen Einheiten, +1 ATK ab 6 DEF (Bollwerk-Bonus eingerechnet).
+{
+  const { eng } = boot();
+  const pz = L.put(eng, 0, PANZER, 'C', 0);
+  const before = eng.currentAtkDef(pz);
+  doctrine(eng, 0, BOLLWERK);
+  const after = eng.currentAtkDef(pz);
+  assert.equal(after.def, before.def + 1, 'Bollwerk +1 DEF');
+  assert.equal(after.atk, before.atk + (before.def + 1 >= 6 ? 1 : 0), '+1 ATK nur ab 6 DEF');
+  pz.defMax = 5; pz.def = 5;
+  const big = eng.currentAtkDef(pz);
+  assert.ok(big.def >= 6 && big.atk === before.atk + 1, 'mit 6 DEF +1 ATK');
+  pz.def = 3;
+  assert.equal(eng.currentAtkDef(pz).atk, before.atk, 'beschädigt unter 6 DEF: kein ATK-Bonus');
+  console.log('ok t285 Bollwerk: +1 ATK ab 6 DEF');
 }
 
 // 2) Schutzwall: Befestigung aus dem Ablagestapel für 2 AP; Bot nutzt übrige AP dafür, 1× pro Zug.

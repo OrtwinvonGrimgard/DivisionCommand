@@ -250,7 +250,11 @@
 
       // t283 BOLLWERK_FRONT_DEF: Bollwerk gibt allen eigenen Einheiten +DEF (Befestigungen allein trugen die Doktrin nicht).
       p = dokParam(this, owner, 'BOLLWERK_FRONT_DEF');
-      if (p) dv += Number(p.def != null ? p.def : 1);
+      if (p) {
+        dv += Number(p.def != null ? p.def : 1);
+        // t285 sturdy_atk: Einheiten mit aktueller DEF ≥ sturdy_min_def (Bollwerk-Bonus eingerechnet) zusätzlich +ATK.
+        if (p.sturdy_atk && dv >= Number(p.sturdy_min_def || 5)) atk += Number(p.sturdy_atk);
+      }
 
       // ETAPPENSICHERUNG base DEF
       p = dokParam(this, owner, 'ETAPPENSICHERUNG');

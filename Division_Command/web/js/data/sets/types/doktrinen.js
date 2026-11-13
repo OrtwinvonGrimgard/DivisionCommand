@@ -353,7 +353,7 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Eigene Einheiten +1 DEF. Befestigungsanlagen +1 auf ihre Effekte. Einheiten hinter einer Befestigung +1 Angriff. Schutzwall (2 AP, 1× pro Zug): eine Befestigung aus dem Ablagestapel auf die Hand.",
+    "text": "Eigene Einheiten +1 DEF; Einheiten mit mindestens 6 DEF zusätzlich +1 ATK. Befestigungsanlagen +1 auf ihre Effekte. Einheiten hinter einer Befestigung +1 Angriff. Schutzwall (2 AP, 1× pro Zug): eine Befestigung aus dem Ablagestapel auf die Hand.",
     "effects": [
       {
         "code": "BOLLWERK_TOKEN_PLUS",
@@ -377,7 +377,9 @@ window.DC_SET_TYPES["Doktrin"] = [
       {
         "code": "BOLLWERK_FRONT_DEF",
         "param": {
-          "def": 1
+          "def": 1,
+          "sturdy_atk": 1,
+          "sturdy_min_def": 6
         }
       }
     ],
@@ -1047,7 +1049,7 @@ window.DC_SET_TYPES["Doktrin"] = [
     "tags": [
       "doktrin"
     ],
-    "text": "Unterstützung −1 AP, mindestens 1. 1×/Zug gepanzerte Einheit +1 DEF. Überschuss (2 AP): Fähigkeit einer Unterstützung ein zweites Mal.",
+    "text": "Unterstützung −1 AP, mindestens 1. 1×/Zug: beschädigte gepanzerte Einheiten heilen 2. Überschuss (2 AP): Fähigkeit einer Unterstützung ein zweites Mal.",
     "effects": [
       {
         "code": "AURA_COST_MOD",
@@ -1060,8 +1062,9 @@ window.DC_SET_TYPES["Doktrin"] = [
       {
         "code": "HEAL_ARMORED",
         "param": {
-          "value": 1,
-          "once_per_turn": true
+          "value": 2,
+          "once_per_turn": true,
+          "all": true
         }
       },
       {

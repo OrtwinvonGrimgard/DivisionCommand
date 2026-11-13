@@ -500,11 +500,17 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_dok_bollwerk` – Bollwerk (Doktrin)
 
-**Fläche:** Befestigungen +1 auf ihre Effekte; Einheiten dahinter +1 ATK. Schutzwall (2 AP): Befestigung aus Ablage auf die Hand.
+**Fläche:** Einheiten +1 DEF, ab 6 DEF auch +1 ATK. Befestigungen +1, dahinter +1 ATK. Schutzwall (2 AP): Befestigung aus Ablage auf die Hand.
 
 **Volltext:**
 
-> Eigene Einheiten +1 DEF. Befestigungsanlagen +1 auf ihre Effekte. Einheiten hinter einer Befestigung +1 Angriff. Schutzwall (2 AP, 1× pro Zug): eine Befestigung aus dem Ablagestapel auf die Hand.
+> Eigene Einheiten +1 DEF; Einheiten mit mindestens 6 DEF zusätzlich +1 ATK. Befestigungsanlagen +1 auf ihre Effekte. Einheiten hinter einer Befestigung +1 Angriff. Schutzwall (2 AP, 1× pro Zug): eine Befestigung aus dem Ablagestapel auf die Hand.
+
+**Sonderfälle (t285):**
+
+- Die 6 DEF zählen mit allen laufenden Boni, auch mit dem +1 DEF von Bollwerk selbst. Schaden senkt die DEF; fällt eine Einheit unter 6, entfällt das +1 ATK.
+- Schutzwall ist eine eigene Aktion im eigenen Zug (`SCHUTZWALL`). Befestigung heißt Tag `befestigung`, Token zählen nicht. Bei voller Hand geht es nicht. Die KI nutzt Schutzwall mit AP, die sonst verfallen würden.
+- In den Nationsdecks liegt keine Befestigung. Dort tragen Bollwerk nur das +1 DEF und das +1 ATK ab 6 DEF.
 
 ## `dc_dok_entsatz` – Entsatz (Doktrin)
 
@@ -572,11 +578,17 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_dok_sicherer_nachschub` – Sicherer Nachschub (Doktrin)
 
-**Fläche:** Unterstützung −1 AP (mind. 1). 1×/Zug: gepanzerte Einheit +1 DEF. Überschuss (2 AP): Unterstützung erneut nutzen.
+**Fläche:** Unterstützung −1 AP (mind. 1). 1×/Zug: gepanzerte Einheiten heilen 2. Überschuss (2 AP): Unterstützung erneut nutzen.
 
 **Volltext:**
 
-> Unterstützung −1 AP, mindestens 1. 1×/Zug gepanzerte Einheit +1 DEF. Überschuss (2 AP): Fähigkeit einer Unterstützung ein zweites Mal.
+> Unterstützung −1 AP, mindestens 1. 1×/Zug: beschädigte gepanzerte Einheiten heilen 2. Überschuss (2 AP): Fähigkeit einer Unterstützung ein zweites Mal.
+
+**Sonderfälle (t285):**
+
+- **Feldreparatur** (`HEAL_ARMORED`): kostenlos, nur im eigenen Zug, 1× pro Zug. Sie heilt alle eigenen beschädigten gepanzerten Fronteinheiten um je 2, aber nicht über die volle DEF. Gepanzert heißt Klasse Panzer oder Tag `gepanzert`, `panzer` oder `kette`. Ohne beschädigte gepanzerte Einheit geht es nicht. Vor t285 heilte die Engine ohne Prüfung 2 an einem beliebigen Ziel, und die KI nutzte die Feldreparatur nie.
+- **Überschuss** (`UEBERSCHUSS`): 2 AP, nur im eigenen Zug, 1× pro Zug. Ziel ist eine eigene Unterstützung, die ihre Fähigkeit in diesem Zug schon eingesetzt hat. Sie wird wieder bereit und kann die Fähigkeit noch einmal zu den normalen Kosten einsetzen. Erschöpft sie eine Dekontamination zu Zugbeginn, ist sie kein Ziel. Unter der Blitzkrieg-Sperre geht Überschuss nicht. Vor t285 zog die Engine nur 2 AP ab und machte nichts bereit.
+- Mit 5 AP passt Überschuss nur zu Fähigkeiten für 1 AP (z. B. Koordination, Lazarett). Zwei Fähigkeiten für 2 AP plus Überschuss kosten 6 AP. Die KI prüft auf einer Kopie, ob sich die zweite Nutzung lohnt.
 
 ## `dc_dok_stosstrupp` – Stoßtrupp (Doktrin)
 

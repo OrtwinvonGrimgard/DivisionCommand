@@ -7085,9 +7085,10 @@
       if (this._hasDoctrine(p, 'HEAL_ARMORED') && p.flags.healArmoredUsed !== turn) {
         const prm = (this._dokParam && this._dokParam(p, 'HEAL_ARMORED')) || {};
         const amount = Number(prm.value != null ? prm.value : 1);
-        this.frontList(p).forEach((l) => {
-          if (!this._healArmoredOk(l.inst)) return;
-          acts.push({ type: 'HEAL_ARMORED', uid: l.inst.uid, target: l.inst.uid, cost: 0, amount, name: this.defOf(l.inst).name, label: 'Feldreparatur: ' + this.defOf(l.inst).name + ' +' + amount + ' DEF' });
+        const ok = this.frontList(p).filter((l) => this._healArmoredOk(l.inst));
+        // Mit `all` heilt eine Feldreparatur alle passenden Einheiten: dann genügt ein Eintrag.
+        (prm.all ? ok.slice(0, 1) : ok).forEach((l) => {
+          acts.push({ type: 'HEAL_ARMORED', uid: l.inst.uid, target: l.inst.uid, cost: 0, amount, all: !!prm.all, count: prm.all ? ok.length : 1, name: this.defOf(l.inst).name, label: prm.all ? 'Feldreparatur: ' + ok.length + ' gepanzerte Einheit(en) +' + amount + ' DEF' : 'Feldreparatur: ' + this.defOf(l.inst).name + ' +' + amount + ' DEF' });
         });
       }
       if (this._hasDoctrine(p, 'UEBERSCHUSS') && p.flags.ueberUsed !== turn && !this._supportLocked(p.id)) {
@@ -7109,7 +7110,10 @@
     _healArmoredOk(inst) {
       if (!inst || inst.facedown) return false;
       const d = this.defOf(inst);
-      if (!d || !this._isArmored(d)) return false;
+      if (!d) return false;
+      const loc = this.findInst(inst.uid);
+      const prm = (loc && this._dokParam && this._dokParam(loc.player, 'HEAL_ARMORED')) || {};
+      if (!prm.any && !this._isArmored(d)) return false; // Parameter `any`: jede eigene Einheit, nicht nur gepanzerte
       const max = inst.defMax != null ? inst.defMax : (Number(d.def) || 0);
       return inst.def != null && inst.def < max;
     }
@@ -7172,9 +7176,12 @@
         return { ok: false, error: 'Feldreparatur braucht eine eigene beschädigte gepanzerte Fronteinheit.', code: 'HEAL_NONE' };
       }
       const prm = (this._dokParam && this._dokParam(p, 'HEAL_ARMORED')) || {};
+      const amount = Number(prm.value != null ? prm.value : 1);
       p.flags.healArmoredUsed = this.state.turn;
-      this._heal(loc.inst, Number(prm.value != null ? prm.value : 1));
-      this._log(p.name + ' nutzt Feldreparatur: ' + this.defOf(loc.inst).name + ' heilt ' + Number(prm.value != null ? prm.value : 1) + '.');
+      // Parameter `all`: alle beschädigten gepanzerten eigenen Fronteinheiten heilen, sonst nur das Ziel.
+      const targets = prm.all ? this.frontList(p).filter((l) => this._healArmoredOk(l.inst)).map((l) => l.inst) : [loc.inst];
+      targets.forEach((t) => this._heal(t, amount));
+      this._log(p.name + ' nutzt Feldreparatur: ' + targets.map((t) => this.defOf(t).name).join(', ') + ' heilt ' + amount + '.');
       return { ok: true };
     }
     /**
