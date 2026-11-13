@@ -31,7 +31,7 @@ def dc_version() -> str:
             return v
     except OSError:
         pass
-    return "0.6d"
+    return "0.6e"
 
 UDP_PORT = 47831
 HTTP_PORT = 8765

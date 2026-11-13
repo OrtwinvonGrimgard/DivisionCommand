@@ -2,7 +2,7 @@
  "dc_dok_abloesung": "1×/Zug: Fällt eine eigene Einheit, kostet die nächste Einheit in diesem Abschnitt 1 AP weniger (mind. 1).",
  "dc_dok_auswertung": "Überlebt eine eigene Einheit Schaden, hat sie bis Zugende +1 ATK (nicht stapelbar).",
  "dc_dok_blitzkrieg": "Panzer +1 ATK im Einsatzzug. Nach deinem Panzereinsatz: gegnerische Unterstützungsfähigkeiten 1 Runde gesperrt.",
- "dc_dok_bollwerk": "Einheiten +1 DEF, ab 6 DEF auch +1 ATK. Befestigungen +1, dahinter +1 ATK. Schutzwall (2 AP): Befestigung aus Ablage auf die Hand.",
+ "dc_dok_bollwerk": "Einheiten +1 DEF, ab 6 DEF +1 ATK. Befestigungen +1, dahinter +1 ATK. Schutzwall (2 AP): Befestigung aus Ablage holen.",
  "dc_dok_entsatz": "Einheiten in im letzten Zug angegriffenen Abschnitten +1 ATK/+1 DEF; wer dorthin einrückt, ebenso (Zug).",
  "dc_dok_feuerwalze": "Eigene Artillerie +1 ATK. Feuert sie, haben andere eigene Einheiten in ihrem Abschnitt bis Zugende +1 ATK.",
  "dc_dok_gegenstoss": "Angegriffener eigener Abschnitt: Einheiten dort im nächsten eigenen Zug +1 ATK.",

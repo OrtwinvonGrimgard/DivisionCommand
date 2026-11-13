@@ -45,7 +45,7 @@
   "keywords": []
  },
  "dc_dok_bollwerk": {
-  "kurz": "Befestigungen +1 auf ihre Effekte; Einheiten dahinter +1 ATK. Schutzwall (2 AP): Befestigung aus Ablage auf die Hand.",
+  "kurz": "Einheiten +1 DEF, ab 6 DEF +1 ATK. Befestigungen +1, dahinter +1 ATK. Schutzwall (2 AP): Befestigung aus Ablage holen.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -135,7 +135,7 @@
   "keywords": []
  },
  "dc_dok_sicherer_nachschub": {
-  "kurz": "Unterstützung −1 AP (mind. 1). 1×/Zug: gepanzerte Einheit +1 DEF. Überschuss (2 AP): Unterstützung erneut nutzen.",
+  "kurz": "Unterstützung −1 AP (mind. 1). 1×/Zug: gepanzerte Einheiten heilen 2. Überschuss (2 AP): Unterstützung erneut nutzen.",
   "gekuerzt": true,
   "keywords": []
  },

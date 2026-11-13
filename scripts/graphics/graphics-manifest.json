@@ -273,8 +273,8 @@
    "type": "Doktrin",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "1a030ac1edb396e1b80da1612d7334a1566c6f72e91e0ca98a0e96f3f915d583",
-   "kurz": "Befestigungen +1 auf ihre Effekte; Einheiten dahinter +1 ATK. Schutzwall (2 AP): Befestigung aus Ablage auf die Hand.",
+   "source_record_sha256": "96db1d50b3275e635f6f9916fccb40e003135046868d25dc2d8f5371fa03687f",
+   "kurz": "Einheiten +1 DEF, ab 6 DEF +1 ATK. Befestigungen +1, dahinter +1 ATK. Schutzwall (2 AP): Befestigung aus Ablage holen.",
    "keywords": [],
    "printed_stats": {
     "ap": 0,
@@ -294,7 +294,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "410ac33c9120f4d8d0d35c60d12dab5e77062b6d1b8e8e2e248023b7ab400f4e"
+   "output_sha256": "3508cd80b17245f555177be69437551ab4ada1a9ef9dc6c8e4ec1fba9c9378df"
   },
   {
    "id": "dc_dok_breites_aufgebot",
@@ -795,8 +795,8 @@
    "type": "Doktrin",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "5a02a3c9fce763254a429913b87775719364d092954289ad416765dfa3ac7553",
-   "kurz": "Unterstützung −1 AP (mind. 1). 1×/Zug: gepanzerte Einheit +1 DEF. Überschuss (2 AP): Unterstützung erneut nutzen.",
+   "source_record_sha256": "ced016a642706d7b7a0f1f7a4e323c520d24c6d569dadde3b6f3324334496ef2",
+   "kurz": "Unterstützung −1 AP (mind. 1). 1×/Zug: gepanzerte Einheiten heilen 2. Überschuss (2 AP): Unterstützung erneut nutzen.",
    "keywords": [],
    "printed_stats": {
     "ap": 0,
@@ -816,7 +816,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "76605861daa58ed5453f9c832653423ce9975af4e7a072e88d551f8146bf5d5b"
+   "output_sha256": "bd8e88212e915bf200fe2d2ad90865cc8d979f3d4935ec4bf2680a455cceaec8"
   },
   {
    "id": "dc_dok_stosstrupp",

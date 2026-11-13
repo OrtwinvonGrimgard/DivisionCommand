@@ -2,6 +2,27 @@
 
 ## Unreleased
 
+## 0.6e Alpha – 13.11.2026
+
+Kleiner Schritt nach 0.6d (t285).
+
+- **KI und aktive Doktrin-Fähigkeiten:**
+  - `listActions` bietet jetzt Schutzwall (Bollwerk), Feldreparatur und Überschuss (Sicherer Nachschub) sowie den Stellungswechsel an.
+  - Der Bot nutzt die Feldreparatur vor den Angriffen (98 % der möglichen Züge) und Schutzwall mit übrigen AP (28 %, gewollt).
+  - Überschuss nutzt der Bot, wenn sich die zweite Fähigkeit nach der Vorausschau lohnt. Mit 5 AP kommt das kaum vor.
+  - Bei Unterstützungen mit zwei Fähigkeiten (Kommunikationszentrum) prüft der Bot jede einzeln.
+- **Regelkonform:**
+  - Feldreparatur: kostenlos, 1× pro eigenem Zug, nur beschädigte gepanzerte Einheiten. Vorher heilte die Engine 2 an jedem Ziel.
+  - Überschuss: Eine Unterstützung, die ihre Fähigkeit in diesem Zug genutzt hat, wird für 2 AP wieder bereit. Vorher zog die Engine nur die AP ab.
+- **Doktrinen:**
+  - Bollwerk: zusätzlich +1 ATK für Einheiten mit mindestens 6 DEF. Im Spiegelmatch 42,5 → 50,4 %.
+  - Sicherer Nachschub: Die Feldreparatur heilt alle beschädigten gepanzerten Einheiten um 2. Im Spiegelmatch 46,7 → 48,7 %.
+  - Die Flächen beider Doktrinen sind neu gerendert.
+- **Nationen:** unverändert. Gepoolt sind es vorher und nachher je 20 160 Partien, die größte Abweichung liegt bei 2,8 Punkten (Rauschen).
+- **Stellungswechsel:** Die KI-Nutzung ist gebaut, aber im Standard aus (`kwMove: 0`). Eingeschaltet verschiebt sie die Nationen um bis zu 16 Punkte (Vesper, Sahr, Merovan, Lyr). Das bleibt für eine eigene Runde offen.
+- **Startspieler-Vorteil:** bleibt bewusst unverändert.
+- Details: `docs/balance/BALANCE_T285.md`, Sonderfälle in `docs/regeln/KARTEN_SONDERFAELLE.md`. Neuer Test: `tests/test_doctrine_actives_t285.js`. Cache `divcmd-alpha46a`.
+
 ## 0.6d Alpha – 13.11.2026
 
 Kleiner Schritt nach 0.6c (t284).

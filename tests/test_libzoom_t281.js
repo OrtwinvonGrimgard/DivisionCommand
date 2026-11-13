@@ -15,7 +15,7 @@ const L = require('../scripts/nation_pools/load_game.js');
 const WEB = L.WEB;
 const html = fs.readFileSync(path.join(WEB, 'index.html'), 'utf8');
 const sw = fs.readFileSync(path.join(WEB, 'sw.js'), 'utf8');
-assert(sw.includes("'divcmd-alpha45a'") && html.includes('app.js?v=alpha45a'), 'Cache alpha45a');
+assert(sw.includes("'divcmd-alpha46a'") && html.includes('app.js?v=alpha46a'), 'Cache alpha46a');
 assert(/Pfeiltasten/.test(html.match(/<h2 id="library">[\s\S]*?<h2 id="user">/)[0]), 'Hilfe nennt das Blättern');
 
 const dom = new JSDOM(html, { url: 'http://localhost/', runScripts: 'outside-only' });
