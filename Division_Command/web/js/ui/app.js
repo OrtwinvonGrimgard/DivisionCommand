@@ -268,7 +268,7 @@
     if (endHandledKey !== key) {
       endHandledKey = key;
       audioCall('stopSfx');
-      var neutral = /bot.*bot|simulation|spectator/i.test((mode || '') + ' ' + (st.mode || '')) || st.botVsBot;
+      var neutral = /bot.*bot|simulation|spectator/i.test((mode || '') + ' ' + (st.mode || '')) || st.botVsBot || mode === 'hotseat'; // t284: Hotseat ohne Sieg/Niederlage-Klang aus Sicht von Sitz 0
       if (!neutral && st.winner != null) audioCall('notifyGameEnd', st.winner === you);
       try {
         if (window.DCPlayLogger && DCPlayLogger.finish) {

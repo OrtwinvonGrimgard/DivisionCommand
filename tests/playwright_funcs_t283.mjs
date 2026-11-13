@@ -119,6 +119,8 @@ async function main() {
     await sleep(800); await clearOverlays(page);
     await page.waitForSelector('#dc-end-screen', { timeout: 15000 });
     const es = await page.evaluate(() => document.getElementById('dc-end-screen').textContent.replace(/\s+/g, ' ').slice(0, 160));
+    const head = await page.evaluate(() => (document.getElementById('dc-end-heading') || {}).textContent || '');
+    if (!/^SIEGER: /.test(head)) throw new Error('Hotseat-Endbildschirm nicht neutral: ' + head); // t284
     ok('Aufgeben → Endbildschirm: ' + es.slice(0, 80));
     await shot(page, 'fn_endscreen');
   } catch (e) { fail('hotseat', e); await shot(page, 'fn_fail').catch(() => {}); }

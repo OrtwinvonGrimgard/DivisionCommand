@@ -13,6 +13,12 @@
       var p = st.players[st.winner];
       return 'SIEGER: Seite ' + (st.winner + 1) + ' — ' + (p.nation || p.name || '');
     }
+    // t284: Im Hotseat sitzen beide Spieler am selben Gerät; „GEWONNEN/VERLOREN“ aus Sicht von Sitz 0
+    // war falsch, wenn Sitz 1 aufgab oder gewann. Daher neutral mit Namen des Siegers.
+    if (/^hotseat$/i.test(mode || '')) {
+      var w = st.players[st.winner] || {};
+      return 'SIEGER: ' + (w.name || ('Seite ' + (st.winner + 1)));
+    }
     return st.winner === you ? 'GEWONNEN' : 'VERLOREN';
   }
   /**

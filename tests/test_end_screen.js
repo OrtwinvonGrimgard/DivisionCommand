@@ -14,7 +14,7 @@ for (const reason of reasons) {
   for (const [mode, you, winner, expected] of [
     ['bot', 0, 0, 'GEWONNEN'], ['bot', 0, 1, 'VERLOREN'],
     ['lan', 1, 1, 'GEWONNEN'], ['lan', 1, 0, 'VERLOREN'],
-    ['hotseat', 0, 1, 'VERLOREN'], ['bot-vs-bot', 0, 1, 'SIEGER:'],
+    ['hotseat', 0, 1, 'SIEGER:'], ['bot-vs-bot', 0, 1, 'SIEGER:'],
   ]) {
     const h = setup('off'), { w, eng, click } = h;
     let finishes = 0, sounds = 0;
@@ -28,7 +28,7 @@ for (const reason of reasons) {
     const score = w.document.querySelector('.dc-end-score').textContent;
     assert(score.includes('3 SP') && score.includes('5 SP'));
     assert.equal(finishes, 1, 'finish exactly once');
-    assert.equal(sounds, mode === 'bot-vs-bot' ? 0 : 1, 'result sound once, no fake human win in simulation');
+    assert.equal(sounds, (mode === 'bot-vs-bot' || mode === 'hotseat') ? 0 : 1, 'result sound once, no fake human win in simulation or hotseat (t284)');
     assert.equal(w.document.querySelectorAll('#dc-end-screen').length, 1);
     assert.equal(w.document.activeElement.id, 'dc-end-again');
     assert(w.document.getElementById('hand').closest('[aria-hidden="true"]'), 'battlefield hidden to assistive tech');
@@ -39,7 +39,7 @@ for (const reason of reasons) {
     assert.equal(eng.listActions(0).length, 0);
     // Receiving the same LAN snapshot must not replay end sound/log.
     w.dcSetState(JSON.parse(JSON.stringify(eng.state)));
-    assert.equal(finishes, 1); assert.equal(sounds, mode === 'bot-vs-bot' ? 0 : 1);
+    assert.equal(finishes, 1); assert.equal(sounds, (mode === 'bot-vs-bot' || mode === 'hotseat') ? 0 : 1);
     assert.equal(h.errors.length, 0);
     h.dom.window.close(); checked++;
   }
