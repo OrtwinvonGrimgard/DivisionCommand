@@ -2684,9 +2684,9 @@ window.DC_SET_TYPES["Panzer"] = [
     "typ": "Einheit",
     "klasse": "Panzer",
     "name": "Pfadkeil",
-    "ap": 3,
-    "atk": 4,
-    "def": 3,
+    "ap": 2,
+    "atk": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "panzer"

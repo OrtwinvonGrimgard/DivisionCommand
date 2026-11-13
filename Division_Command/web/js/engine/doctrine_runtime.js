@@ -218,7 +218,7 @@
 
       // ABSCHLUSS / GEGENSTOSS flags
       if (inst.flags && inst.flags.dokAbschlussUntil >= this.state.turn) atk += Number(inst.flags.dokAbschlussAtk || 1);
-      if (inst.flags && inst.flags.dokGegenstossUntil >= this.state.turn) atk += Number(inst.flags.dokGegenstossAtk || 1);
+      if (inst.flags && inst.flags.dokGegenstossUntil >= this.state.turn && !(inst.flags.dokGegenstossFrom > this.state.turn)) atk += Number(inst.flags.dokGegenstossAtk || 1);
 
       // STOSSTRUPP body-core
       p = dokParam(this, owner, 'STOSSTRUPP');
@@ -239,6 +239,8 @@
       p = dokParam(this, owner, 'LAUER');
       if (p) {
         var lauerOk = !p.infantry_only || isInfantry(def);
+        // t284: exclude_fresh – frisch Eingerückte erhalten den Bonus nicht; fresh_except_infantry nimmt Infanterie davon aus.
+        if (lauerOk && p.exclude_fresh && inst.flags && inst.flags.dokFresh && !(p.fresh_except_infantry && isInfantry(def))) lauerOk = false;
         if (lauerOk && p.rested && inst.flags && inst.flags.dokRested) {
           atk += Number(p.rested.atk || 0);
           dv += Number(p.rested.def || 0);
@@ -540,12 +542,18 @@
         if (defP2 && hasDok(this, defP2, 'GEGENSTOSS') && tLoc.zone === 'front') {
           var gp = dokParam(this, defP2, 'GEGENSTOSS') || {};
           var self2 = this;
-          this.frontList(defP2).forEach(function (l) {
+          // t284: need_survivor – nur wenn die angegriffene Einheit den Angriff überlebt.
+          var gsOk = !gp.need_survivor || (tLoc.inst && !(this._isDead && this._isDead(tLoc.inst)));
+          if (gsOk) this.frontList(defP2).forEach(function (l) {
             if (l.section !== tLoc.section) return;
+            // t284: scope 'target' – nur die angegriffene Einheit erhält den Gegenstoß-Bonus (Standard: ganzer Abschnitt).
+            if (gp.scope === 'target' && tLoc.inst && l.inst !== tLoc.inst) return;
             if (self2._isDead && self2._isDead(l.inst)) return;
             l.inst.flags = l.inst.flags || {};
             l.inst.flags.dokGegenstossAtk = Number(gp.atk || 1);
             l.inst.flags.dokGegenstossUntil = self2.state.turn + 1;
+            // t284: next_turn_only – Bonus erst im eigenen nächsten Zug (nicht schon beim Zurückschlagen im gegnerischen Zug).
+            l.inst.flags.dokGegenstossFrom = gp.next_turn_only ? self2.state.turn + 1 : null;
           });
           if (gp.heal_survivor && tLoc.inst && !(this._isDead && this._isDead(tLoc.inst))) {
             this._heal(tLoc.inst, Number(gp.heal_survivor || 1));
@@ -593,6 +601,8 @@
         this.frontList(cur).forEach(function (l) {
           l.inst.flags = l.inst.flags || {};
           l.inst.flags.dokRested = !l.inst.attackUsed;
+          // t284: im eben beendeten Zug eingerückt (für LAUER exclude_fresh: wer gerade erst kam, hat noch nicht gewartet)
+          l.inst.flags.dokFresh = l.inst.summonedTurn != null && l.inst.summonedTurn >= self.state.turn - 1;
           // expire abloesung temp DEF
           if (l.inst.flags.dokAbloesungUntil != null && l.inst.flags.dokAbloesungUntil < self.state.turn) {
             if (l.inst.flags.dokAbloesungTempDef) {

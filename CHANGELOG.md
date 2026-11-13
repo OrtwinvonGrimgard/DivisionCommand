@@ -2,6 +2,32 @@
 
 ## Unreleased
 
+## 0.6d Alpha – 13.11.2026
+
+Kleiner Schritt nach 0.6c (t284).
+
+- **Zwillinge:**
+  - 157 Karten unterscheiden sich jetzt in Werten oder AP-Stufe, entweder durch einen Punkt-Tausch nach der Nationsneigung oder durch eine AP-Stufe im Wertband.
+  - Gruppen mit gleichen Werten, gleichem Text und gleichen Schlüsselwörtern: 3 → 0, geprüft von `tests/test_twins_t284.js`.
+  - Gruppen mit gleichen Werten und gleichem Text: 119 → 24. Diese 24 Gruppen unterscheiden sich nur über gedruckte Schlüsselwörter (Liste in `docs/regeln/ZWILLINGE_T284.md`).
+  - Die neutralen Alpha-Ausgaben Sammelpunkt, Glaubensbanner und Marschbefehl haben jetzt eine andere AP als die Theryn-Ausgaben.
+- **Doktrinen:**
+  - Stoßtrupp: Infanterie +2 ATK.
+  - Lauer: frisch eingerückte Einheiten bekommen den Bonus nur, wenn sie Infanterie sind.
+  - Gegenstoß: Der Bonus gilt erst im nächsten eigenen Zug.
+- **Nationen:**
+  - Starterdeck-Tausche auf den Plätzen 31–60 (Ossaria, Namar, Karsk, Lyr, Caldris) und Poolwerte ±1.
+  - Starterdecks: 44,0–56,8 % → 47,4–53,6 %, Streuung 3,1 → 1,6 Punkte.
+  - Mischdecks: 42,9–57,9 % → 44,6–54,1 %, Streuung 3,8 → 2,1 Punkte.
+- **Startspieler:**
+  - Der Vorteil in Mischdecks (~57 %) kommt von der Einheitendichte.
+  - Zwei Regelvorschläge sind nur dokumentiert, nicht eingebaut.
+  - Details: `docs/balance/BALANCE_T284.md`.
+- **Hotseat:** Der Endbildschirm zeigt neutral „SIEGER: Name“ statt GEWONNEN/VERLOREN aus Sicht von Sitz 0, und es gibt keinen Sieg- oder Niederlage-Klang.
+- **Layout:** Bei 1024×576 blendet der Tisch im ersten Zug, wenn der Mulligan-Knopf sichtbar ist, den Bedienhinweis aus. So bleibt das Protokoll im Fenster.
+- **Doktrin-Flächen** Stoßtrupp, Lauer und Gegenstoß zeigen die aktuellen Regeln. Die Kurztexte waren schon vor 0.6d veraltet.
+- **Kartenflächen** neu gerendert (alpha40), Cache `divcmd-alpha45a`.
+
 ## 0.6c Alpha – 12.11.2026
 
 Neue Buchstabenversion. Sie bündelt alles seit 0.6b (t244–t283). Bewusst keine 0.7: Die Balance liegt noch nicht im Zielkorridor, und ein menschlicher Playtest fehlt.

@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Division Command 0.6c Alpha</title>
+  <title>Division Command 0.6d Alpha</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#12140f">
   <link rel="stylesheet" href="css/app.css?v=t265">
@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/ui-system.css?v=t280b">
   <link rel="stylesheet" href="css/ui-screens.css?v=t281">
   <link rel="stylesheet" href="css/ui-table.css?v=alpha44a">
-  <link rel="stylesheet" href="css/table-hud.css?v=t279">
+  <link rel="stylesheet" href="css/table-hud.css?v=alpha45a">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
     .title-brand .ver-big { display: none !important; }
@@ -47,7 +47,7 @@
   <template id="match-tpl">
   <div id="app">
     <header class="topbar">
-      <h1>DIVISION COMMAND <span class="ver">0.6c α</span></h1>
+      <h1>DIVISION COMMAND <span class="ver">0.6d α</span></h1>
       <div class="hud-center">
         <div class="hud-scn"><span id="hud-scn">Gefecht</span><span class="nowplay" id="nowplay"></span></div>
         <div class="meta" id="turnmeta">Lobby</div>
@@ -178,7 +178,7 @@
   <audio id="bgm" autoplay preload="auto" src="assets/audio/menue/Division%20Command%20(Remastered).wav"></audio>
   <audio id="bgm-battle" preload="auto"></audio>
   <div id="kick-veil"><p id="kick-msg">Viel Glück</p></div>
-  <div id="dc-version">Alpha 0.6c</div>
+  <div id="dc-version">Alpha 0.6d</div>
 
   <div id="title-root" class="boot-intro">
       <div class="title-world" id="title-world" aria-hidden="true">
@@ -191,7 +191,7 @@
       </div>
       <div class="title-brand">
         <img class="title-logo" src="assets/title-logo.png?v=6" alt="Division Command" width="1381" height="507">
-        <p class="sub ver-big" hidden>Alpha 0.6c</p>
+        <p class="sub ver-big" hidden>Alpha 0.6d</p>
       </div>
     <div class="title-panel" id="menu-panel">
       <div id="scr-boot" class="screen on splash">
@@ -282,7 +282,7 @@
 
       <div id="scr-library" class="screen">
         <h1 class="page-title">BIBLIOTHEK</h1>
-        <p class="tiny" id="lib-build">Stand 0.6c</p>
+        <p class="tiny" id="lib-build">Stand 0.6d</p>
         <p class="tiny lib-hint">Klick = große Ansicht · Doppelklick = eine Kopie ins Deck · im Deck: Doppelklick legt zurück. Kopien: Gold 1× · Silber 2× · Bronze 4× · 2 verschiedene Doktrinen.</p>
         <div class="lib-wrap">
           <div class="lib-main">
@@ -524,7 +524,7 @@
             </div>
 <button type="button" data-hilfe="stand">Entwicklungsstand</button>
             <div class="hilfe-sub" data-for="stand">
-              <button type="button" data-jump="version">Version 0.6c</button>
+              <button type="button" data-jump="version">Version 0.6d</button>
               <button type="button" data-jump="stand-engine">Regeln & Engine</button>
               <button type="button" data-jump="karten">Karten & Grafik</button>
               <button type="button" data-jump="stand-bot">Bot & Balance</button>
@@ -772,8 +772,8 @@
 
             <article class="hilfe-page dossier" id="hilfe-stand">
               <p class="tiny">Stand 12.&nbsp;November&nbsp;2026, nachgezählt im Code auf <code>main</code> nach t270 (Analyse t265, Kartenreparatur t267, Balance und Eindeutigkeit t268, einheitliche Schrift t270, Analyse t271). Alle Zahlen stammen aus Katalog, Tests und Messdateien im Repo.</p>
-              <h2 id="version">Version 0.6c Alpha</h2>
-              <p>Gesetzte Version 0.6c (Tag v0.6c vom 12.&nbsp;11.&nbsp;2026). Sie bündelt alles seit 0.6b (t244–t283): neue Bot-KI, Tutorial, überarbeitete Bildschirme, Mulligan, Deck genau 60&nbsp;+&nbsp;2, LAN mit getrennter Sicht je Spieler, gehärteter Server, spielbare 6+-AP-Karten und Balance t283. Bewusst keine 0.7: Balance liegt noch nicht im Zielkorridor, und ein menschlicher Playtest fehlt.</p>
+              <h2 id="version">Version 0.6d Alpha</h2>
+              <p>Gesetzte Version 0.6d (Tag v0.6d vom 13.&nbsp;11.&nbsp;2026). Gegenüber 0.6c: jede Karte ist eindeutig (keine Zwillinge mit gleichen Werten und gleichem Text), Doktrinen Stoßtrupp, Lauer und Gegenstoß nachjustiert, Nationen per Starterdeck-Tausch und Poolwerten näher an 50&nbsp;%, Hotseat-Endbildschirm neutral („SIEGER: …“). Weiter keine 0.7: der Anzug-Vorteil in einheitenlastigen Decks bleibt offen, und ein menschlicher Playtest fehlt.</p>
               <h2 id="stand-engine">Regeln & Engine</h2>
               <ul>
                 <li>Spielbar: Front 3×3 je Seite, Support, Niemandsland, AP-Ökonomie (5 je Zug, Rest als Reaktionsreserve), Angriff mit Gegenschlag, Eingraben, Steilfeuer I–V, verdeckte Fallen bei Feindkontakt, Doktrinen, Trophy-Sieg (5 SP, Sicherheitsnetz Zug 26/28).</li>
@@ -882,6 +882,7 @@
                   <tr><td>11.&nbsp;11.</td><td>t270: einheitliche Schrift auf allen Vorderseiten (Regeltext fest, Kartennamen in einer Größe), Zitat größer und fett-kursiv.</td></tr>
                   <tr><td>12.&nbsp;11.</td><td>t271: Analyse und Stand: keine Rückschritte, Balance bestätigt, Browser-Test 5/5 Seeds; Feindkontakt bietet nur noch nutzbare Reaktionen an.</td></tr>
                   <tr><td>12.&nbsp;11.</td><td>t283 / Version 0.6c: LAN mit getrennter Sicht je Spieler, Mulligan, Deck 60&nbsp;+&nbsp;2, 6+-AP-Karten auf 5 AP, Doktrinen und Pools nachjustiert, Erstschadenschutz-Text, CI.</td></tr>
+                  <tr><td>13.&nbsp;11.</td><td>t284 / Version 0.6d: Zwillingskarten unterschieden, Doktrinen und Nationen näher an 50&nbsp;%, Hotseat-Endbildschirm neutral.</td></tr>
                 </tbody>
               </table>
               <h2 id="fortschritt-meilensteine">Meilensteine bis Early Access</h2>
@@ -962,28 +963,28 @@
 
   <script src="js/ui/title-fx.js?v=05ax"></script>
   <script>window.DC_FOLDER_PNG = true;</script>
-  <script src="js/version.js?v=alpha44a"></script>
+  <script src="js/version.js?v=alpha45a"></script>
   <script src="js/data/keywords.js?v=tac1"></script>
-  <script src="js/data/sets/types/doktrinen.js?v=alpha44a"></script>
+  <script src="js/data/sets/types/doktrinen.js?v=alpha45a"></script>
   <script src="js/data/sets/types/tokens.js?v=t1"></script>
-  <script src="js/data/sets/types/infanterie.js?v=alpha44a"></script>
-  <script src="js/data/sets/types/panzer.js?v=alpha44a"></script>
-  <script src="js/data/sets/types/artillerie.js?v=alpha44a"></script>
-  <script src="js/data/sets/types/aufklaerung.js?v=alpha44a"></script>
-  <script src="js/data/sets/types/elite.js?v=alpha44a"></script>
-  <script src="js/data/sets/types/unterstuetzung.js?v=alpha44a"></script>
-  <script src="js/data/sets/types/soforteinsatz.js?v=alpha44a"></script>
+  <script src="js/data/sets/types/infanterie.js?v=alpha45a"></script>
+  <script src="js/data/sets/types/panzer.js?v=alpha45a"></script>
+  <script src="js/data/sets/types/artillerie.js?v=alpha45a"></script>
+  <script src="js/data/sets/types/aufklaerung.js?v=alpha45a"></script>
+  <script src="js/data/sets/types/elite.js?v=alpha45a"></script>
+  <script src="js/data/sets/types/unterstuetzung.js?v=alpha45a"></script>
+  <script src="js/data/sets/types/soforteinsatz.js?v=alpha45a"></script>
   <script src="js/data/sets/types/ausruestung.js?v=alpha44a"></script>
-  <script src="js/data/sets/types/nation_pools.js?v=alpha44a"></script>
+  <script src="js/data/sets/types/nation_pools.js?v=alpha45a"></script>
   <script src="js/data/sets/types/tactical.js?v=tac1"></script>
-  <script src="js/data/decks.js?v=alpha44a"></script>
+  <script src="js/data/decks.js?v=alpha45a"></script>
   <script src="js/data/image-manifest.js?v=gfx2"></script>
   <script src="js/data/catalog.js?v=alpha44a"></script>
   <script src="js/data/card-faces.js?v=gfx2"></script>
   <script src="js/data/audio-data.js?v=endscreen1"></script>
   <script src="js/engine/engine.js?v=alpha44a"></script>
   <script src="js/engine/victory_trophy.js?v=alpha44a"></script>
-  <script src="js/engine/doctrine_runtime.js?v=alpha44a"></script>
+  <script src="js/engine/doctrine_runtime.js?v=alpha45a"></script>
   <script src="js/engine/tactical_runtime.js?v=tac1"></script>
   <script src="js/ai/bot.js?v=alpha44a"></script>
   <script src="js/playtest/store.js?v=nochat1"></script>
@@ -999,8 +1000,8 @@
   <script src="js/ui/table-effects.js?v=alpha44a"></script>
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=alpha44a"></script>
-  <script src="js/ui/end-screen.js?v=t280"></script>
-  <script src="js/ui/app.js?v=alpha44a"></script>
+  <script src="js/ui/end-screen.js?v=alpha45a"></script>
+  <script src="js/ui/app.js?v=alpha45a"></script>
   <script src="js/ui/reset.js?v=t278"></script>
   <script src="js/tutorial/scenario.js?v=t275"></script>
   <script src="js/ui/tutorial.js?v=alpha44a"></script>
@@ -1014,9 +1015,9 @@
       navigator.serviceWorker.register('sw.js?v=mix1').catch(function () {});
     }
     (function () {
-      document.title = window.DC_BUILD_LABEL || 'Division Command 0.6c Alpha';
+      document.title = window.DC_BUILD_LABEL || 'Division Command 0.6d Alpha';
       var dcVer = document.getElementById('dc-version');
-      if (dcVer) dcVer.textContent = 'Alpha ' + (window.DC_VERSION || '0.6c');
+      if (dcVer) dcVer.textContent = 'Alpha ' + (window.DC_VERSION || '0.6d');
       var bgm = document.getElementById('bgm');
 
       function dcBarToCommand() {

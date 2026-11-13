@@ -75,7 +75,7 @@
   "keywords": []
  },
  "dc_dok_gegenstoss": {
-  "kurz": "Angegriffener eigener Abschnitt: Einheiten dort +1 ATK bis Ende deines nächsten Zuges; überlebendes Ziel heilt 1.",
+  "kurz": "Angegriffener eigener Abschnitt: Einheiten dort im nächsten eigenen Zug +1 ATK.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -85,7 +85,7 @@
   "keywords": []
  },
  "dc_dok_lauer": {
-  "kurz": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, +1 ATK.",
+  "kurz": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, +1 ATK; frisch eingerückte nur Infanterie.",
   "gekuerzt": true,
   "keywords": []
  },
@@ -140,7 +140,7 @@
   "keywords": []
  },
  "dc_dok_stosstrupp": {
-  "kurz": "Eigene Einheiten +1 ATK; Infanterie weitere +1, beschädigte Einheiten weitere +1.",
+  "kurz": "Eigene Infanterie +2 ATK; beschädigte eigene Einheiten +1 ATK.",
   "gekuerzt": true,
   "keywords": []
  },

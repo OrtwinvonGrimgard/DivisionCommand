@@ -1,4 +1,4 @@
-DIVISION COMMAND  —  Alpha 0.6c
+DIVISION COMMAND  —  Alpha 0.6d
 ================================
 
 Taktisches Sammelkartenspiel. Offline, Hotseat, Bot und LAN.

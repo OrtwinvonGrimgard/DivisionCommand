@@ -524,19 +524,19 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_dok_gegenstoss` – Gegenstoß (Doktrin)
 
-**Fläche:** Angegriffener eigener Abschnitt: Einheiten dort +1 ATK bis Ende deines nächsten Zuges; überlebendes Ziel heilt 1.
+**Fläche:** Angegriffener eigener Abschnitt: Einheiten dort im nächsten eigenen Zug +1 ATK.
 
 **Volltext:**
 
-> Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +1 ATK.
+> Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort in deinem nächsten Zug +1 ATK.
 
 ## `dc_dok_lauer` – Lauer (Doktrin)
 
-**Fläche:** Eigene Einheiten, die im letzten Zug nicht angegriffen haben, +1 ATK.
+**Fläche:** Eigene Einheiten, die im letzten Zug nicht angegriffen haben, +1 ATK; frisch eingerückte nur Infanterie.
 
 **Volltext:**
 
-> Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK — wer wartet, schlägt einmal; der Eid zählt Totenköpfe strenger.
+> Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK; frisch eingerückte nur Infanterie — wer wartet, schlägt einmal.
 
 ## `dc_dok_linienkrieg` – Linienkrieg (Doktrin)
 
@@ -580,11 +580,11 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_dok_stosstrupp` – Stoßtrupp (Doktrin)
 
-**Fläche:** Eigene Einheiten +1 ATK; Infanterie weitere +1, beschädigte Einheiten weitere +1.
+**Fläche:** Eigene Infanterie +2 ATK; beschädigte eigene Einheiten +1 ATK.
 
 **Volltext:**
 
-> Eigene Infanterie hat +1 ATK. Beschädigte eigene Einheiten haben +1 ATK. Der Körper ist Maß und Waffe.
+> Eigene Infanterie hat +2 ATK. Beschädigte eigene Einheiten haben +1 ATK. Der Körper ist Maß und Waffe.
 
 ## `dc_dok_tiefenverteidigung` – Tiefenverteidigung (Doktrin)
 

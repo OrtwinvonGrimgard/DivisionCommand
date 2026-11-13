@@ -339,3 +339,9 @@ body:has(#app .table) #dc-version { display: none !important; }
   body:not(.dc-cam) #app #plate-me:has(.plate-face) .plate-call { display: none; }
   body:not(.dc-cam) #app #plate-me { padding: 3px 6px !important; }
 }
+
+/* t284: Im ersten eigenen Zug (Mulligan-Knopf sichtbar) bei niedrigen Fenstern den Bedienhinweis ausblenden,
+   damit das angedockte Protokoll im Fenster bleibt (Layout-Test 1024×576). */
+@media (max-height: 640px) {
+  #app .table-side .panel:has(#btn-mulligan:not([hidden])) .hint { display: none; }
+}

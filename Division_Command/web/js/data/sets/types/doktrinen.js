@@ -588,11 +588,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +1 ATK.",
+    "text": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort in deinem nächsten Zug +1 ATK.",
     "clauses": [
       {
         "title": "",
-        "body": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +1 ATK. Überlebt die angegriffene Einheit, heilt sie 1."
+        "body": "Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort in deinem nächsten Zug +1 ATK."
       }
     ],
     "effects": [
@@ -602,7 +602,8 @@ window.DC_SET_TYPES["Doktrin"] = [
           "when": "attacked-this-turn",
           "atk": 1,
           "heal_survivor": 0,
-          "until": "end-of-next-own-turn"
+          "until": "end-of-next-own-turn",
+          "next_turn_only": true
         }
       }
     ],
@@ -663,11 +664,11 @@ window.DC_SET_TYPES["Doktrin"] = [
     ],
     "klasse_tags": [],
     "principle": "Am Ende deines Zuges",
-    "text": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK — wer wartet, schlägt einmal; der Eid zählt Totenköpfe strenger.",
+    "text": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK; frisch eingerückte nur Infanterie — wer wartet, schlägt einmal.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK — wer wartet, schlägt einmal; der Eid zählt Totenköpfe strenger."
+        "body": "Eigene Einheiten, die im letzten Zug nicht angegriffen haben, haben +1 ATK; frisch eingerückte nur Infanterie — wer wartet, schlägt einmal."
       }
     ],
     "effects": [
@@ -676,7 +677,9 @@ window.DC_SET_TYPES["Doktrin"] = [
         "param": {
           "rested": {
             "atk": 1
-          }
+          },
+          "exclude_fresh": true,
+          "fresh_except_infantry": true
         }
       }
     ],
@@ -1088,11 +1091,11 @@ window.DC_SET_TYPES["Doktrin"] = [
     ],
     "klasse_tags": [],
     "principle": "Zu Beginn deines Zuges",
-    "text": "Eigene Infanterie hat +1 ATK. Beschädigte eigene Einheiten haben +1 ATK. Der Körper ist Maß und Waffe.",
+    "text": "Eigene Infanterie hat +2 ATK. Beschädigte eigene Einheiten haben +1 ATK. Der Körper ist Maß und Waffe.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Einheiten haben +1 ATK. Eigene Infanterie hat zusätzlich +1 ATK. Beschädigte Einheiten haben zusätzlich +1 ATK. Der Körper ist Maß und Waffe."
+        "body": "Eigene Infanterie hat +2 ATK. Beschädigte eigene Einheiten haben +1 ATK. Der Körper ist Maß und Waffe."
       }
     ],
     "effects": [
@@ -1100,7 +1103,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "STOSSTRUPP",
         "param": {
           "base_all_atk": 0,
-          "base_inf_atk": 1,
+          "base_inf_atk": 2,
           "damaged_atk": 1,
           "no_def_loss": true
         }

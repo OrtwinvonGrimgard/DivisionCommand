@@ -2,7 +2,7 @@
 /**
  * t283: Funktionsdurchgang für Modi, die andere Browser-Tests nicht abdecken:
  * Hotseat (Start, Mulligan, Zugwechsel über mehrere Züge), Aufgeben → Endbildschirm (Rückblick),
- * Deckbau-Erzwingung 60 + 2 im Browser (DC_checkDeckForMatch), Versionsanzeige 0.6c.
+ * Deckbau-Erzwingung 60 + 2 im Browser (DC_checkDeckForMatch), Versionsanzeige 0.6d.
  * Aufruf: npm run funcs-play   Umgebung: DC_FN_PORT, DC_FN_OUT. Exit-Code 1 bei Fehler; Bericht <OUT>/funcs_report.json
  */
 import { chromium } from 'playwright';
@@ -68,8 +68,8 @@ async function main() {
   // Version
   try {
     const v = await page.evaluate(() => ({ v: window.DC_VERSION, t: document.title, d: (document.getElementById('dc-version') || {}).textContent }));
-    if (v.v !== '0.6c' || !/0\.6c/.test(v.t)) throw new Error(JSON.stringify(v));
-    ok('version 0.6c (' + v.t + ')');
+    if (v.v !== '0.6d' || !/0\.6d/.test(v.t)) throw new Error(JSON.stringify(v));
+    ok('version 0.6d (' + v.t + ')');
   } catch (e) { fail('version', e); }
   // Deckbau-Erzwingung 60 + 2 (Browser-Katalog)
   try {

@@ -22,7 +22,7 @@ const links = [...html.matchAll(/<link rel="stylesheet" href="([^"?]+)/g)].map((
 assert(links.indexOf('css/ui-screens.css') < links.indexOf('css/ui-table.css'), 'ui-table nach ui-screens');
 assert(links.indexOf('css/ui-table.css') < links.indexOf('css/table-hud.css'), 'table-hud bleibt zuletzt');
 assert.equal(links[links.length - 1], 'css/table-hud.css');
-assert(sw.includes("'divcmd-alpha44a'") && html.includes('app.js?v=alpha44a'), 'Cache alpha44a');
+assert(sw.includes("'divcmd-alpha45a'") && html.includes('app.js?v=alpha45a'), 'Cache alpha45a');
 
 /** Bildgröße aus einem WebP-Kopf. */
 function webpSize(buf) {

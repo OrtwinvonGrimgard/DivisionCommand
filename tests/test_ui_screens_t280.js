@@ -21,7 +21,7 @@ assert(links.indexOf('css/ui-system.css') >= 0 && links.indexOf('css/ui-system.c
 assert(links.indexOf('css/ui-screens.css') < links.indexOf('css/table-hud.css'), 'Tisch-HUD bleibt zuletzt');
 assert(html.includes('js/ui/ui-screens.js'), 'ui-screens.js geladen');
 assert(html.includes('poster="assets/title-back-poster.webp"'), 'Standbild für das Titelvideo');
-assert(sw.includes("'divcmd-alpha44a'"));
+assert(sw.includes("'divcmd-alpha45a'"));
 
 /** Liest die Bildgröße aus einem WebP-Kopf (VP8, VP8L, VP8X). */
 function webpSize(buf) {

@@ -281,8 +281,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-STM-09",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 2,
-  "def": 4,
+  "atk": 1,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Ablösung"
@@ -1704,8 +1704,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ELD-11",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 4,
-  "def": 4,
+  "atk": 3,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Überlast"
@@ -1780,7 +1780,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Kronmörser",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -1798,7 +1798,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 1,
-  "def": 2,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -2711,7 +2711,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ROT-02",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 3,
+  "atk": 2,
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
@@ -2801,7 +2801,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ROT-05",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 4,
+  "atk": 3,
   "def": 2,
   "verdeckt_ok": true
  },
@@ -2839,7 +2839,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Erbpanzer Kronlinie",
-  "ap": 2,
+  "ap": 1,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -2855,7 +2855,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 2,
-  "def": 2,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -2957,7 +2957,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 3,
-  "def": 4,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Ablösung"
@@ -5530,8 +5530,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ORT-08",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 4,
-  "def": 5,
+  "atk": 5,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -5808,7 +5808,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Peilstation mobil",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -5832,8 +5832,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-ORT-17",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 2,
-  "def": 3,
+  "atk": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Fernschuss"
@@ -7027,7 +7027,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Abriegelungsbatterie",
-  "ap": 3,
+  "ap": 4,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -7045,7 +7045,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 3,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -8148,7 +8148,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 4,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -8299,7 +8299,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 4,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Nachsetzen"
@@ -8327,7 +8327,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-KAR-10",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
+  "atk": 4,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -10683,7 +10683,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-03",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 1,
   "def": 1,
   "verdeckt_ok": true
  },
@@ -10836,7 +10836,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-08",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
+  "atk": 2,
   "def": 2,
   "verdeckt_ok": true,
   "keywords": [
@@ -10895,7 +10895,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 4,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -11051,8 +11051,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-THE-15",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 3,
-  "def": 4,
+  "atk": 4,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -11234,7 +11234,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 3,
-  "def": 4,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Erbitterung"
@@ -11268,7 +11268,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 4,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true
  },
  {
@@ -12042,7 +12042,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Reparaturtrupp",
-  "ap": 2,
+  "ap": 3,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -12055,7 +12055,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VAE-05",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 2,
+  "atk": 4,
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
@@ -12175,7 +12175,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 3,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Durchschlag"
@@ -12242,7 +12242,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 4,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Durchschlag",
@@ -12304,7 +12304,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-VAE-13",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 4,
+  "atk": 3,
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
@@ -13288,7 +13288,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Kolonnenschützen",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -13302,7 +13302,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 1,
-  "def": 1,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Heranführung"
@@ -13362,7 +13362,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 2,
-  "def": 4,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Heranführung"
@@ -13397,7 +13397,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 2,
-  "def": 2,
+  "def": 1,
   "verdeckt_ok": true,
   "keywords": [
    "Hinterhalt",
@@ -13489,7 +13489,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 2,
-  "def": 5,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -13546,7 +13546,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-MER-10",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 6,
+  "atk": 5,
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
@@ -13592,7 +13592,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Wegbatterie",
-  "ap": 3,
+  "ap": 4,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -13609,7 +13609,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-MER-12",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 3,
+  "atk": 4,
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
@@ -13623,7 +13623,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Postenmörser",
-  "ap": 1,
+  "ap": 2,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -13641,7 +13641,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 1,
-  "def": 1,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -14804,7 +14804,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 4,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true
  },
  {
@@ -14836,7 +14836,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-LYR-08",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
+  "atk": 4,
   "def": 5,
   "verdeckt_ok": true,
   "keywords": [
@@ -14873,7 +14873,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-LYR-09",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 2,
+  "atk": 3,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -14904,7 +14904,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Panzer",
   "atk": 4,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Zähigkeit"
@@ -14981,7 +14981,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "status": "live",
   "typ": "Einheit",
   "name": "Bergmörser",
-  "ap": 2,
+  "ap": 1,
   "rarity": "bronze",
   "tags": [
    "einheit",
@@ -15005,7 +15005,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-LYR-13",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
+  "atk": 1,
   "def": 1,
   "verdeckt_ok": true,
   "keywords": [
@@ -15038,7 +15038,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 4,
-  "def": 1,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Stellungswechsel"
@@ -15108,7 +15108,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 4,
-  "def": 4,
+  "def": 5,
   "verdeckt_ok": true,
   "keywords": [
    "Durchschlag",
@@ -15146,7 +15146,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-LYR-17",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
+  "atk": 2,
   "def": 3,
   "verdeckt_ok": true
  },
@@ -15223,7 +15223,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
   "atk": 5,
-  "def": 1,
+  "def": 2,
   "verdeckt_ok": true,
   "keywords": [
    "Hinterhalt",
@@ -15296,7 +15296,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Elite",
   "atk": 5,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Überlast",
@@ -17439,7 +17439,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-06",
   "art_status": "platzhalter",
   "klasse": "Infanterie",
-  "atk": 3,
+  "atk": 4,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -17499,7 +17499,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-08",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 1,
+  "atk": 2,
   "def": 5,
   "verdeckt_ok": true
  },
@@ -17531,8 +17531,8 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-09",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
-  "def": 4,
+  "atk": 2,
+  "def": 5,
   "verdeckt_ok": true
  },
  {
@@ -17557,7 +17557,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-NAM-10",
   "art_status": "platzhalter",
   "klasse": "Panzer",
-  "atk": 3,
+  "atk": 4,
   "def": 5,
   "verdeckt_ok": true,
   "keywords": [
@@ -17683,7 +17683,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 3,
-  "def": 2,
+  "def": 3,
   "verdeckt_ok": true,
   "keywords": [
    "Zuteilung"
@@ -19028,7 +19028,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-SAH-14",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
+  "atk": 3,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -19167,7 +19167,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-SAH-18",
   "art_status": "platzhalter",
   "klasse": "Aufklärung",
-  "atk": 1,
+  "atk": 2,
   "def": 3,
   "verdeckt_ok": true,
   "keywords": [
@@ -20144,7 +20144,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Infanterie",
   "atk": 4,
-  "def": 3,
+  "def": 4,
   "verdeckt_ok": true,
   "keywords": [
    "Staffelangriff"
@@ -20344,7 +20344,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "art_status": "platzhalter",
   "klasse": "Artillerie",
   "atk": 5,
-  "def": 1,
+  "def": 2,
   "verdeckt_ok": true
  },
  {
@@ -20371,7 +20371,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-DAR-13",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
+  "atk": 3,
   "def": 4,
   "verdeckt_ok": true,
   "keywords": [
@@ -20407,7 +20407,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-DAR-14",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 2,
+  "atk": 3,
   "def": 6,
   "verdeckt_ok": true
  },
@@ -20435,7 +20435,7 @@ window.DC_SET_TYPES["Nationenpool"] = [
   "collector": "NP-DAR-15",
   "art_status": "platzhalter",
   "klasse": "Artillerie",
-  "atk": 1,
+  "atk": 2,
   "def": 5,
   "verdeckt_ok": true,
   "keywords": [
