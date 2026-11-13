@@ -1799,8 +1799,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Namenhof-Schütze",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -2070,8 +2070,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Kaikompanie",
     "ap": 2,
-    "atk": 2,
-    "def": 2,
+    "atk": 3,
+    "def": 1,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -2290,8 +2290,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Flankenläufer",
     "ap": 1,
-    "atk": 2,
-    "def": 1,
+    "atk": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -2358,8 +2358,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Karawanenzug",
     "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "atk": 3,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -2664,8 +2664,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Kaiwache",
     "ap": 1,
-    "atk": 2,
-    "def": 2,
+    "atk": 1,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -2733,8 +2733,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Entsatzposten",
     "ap": 1,
-    "atk": 2,
-    "def": 2,
+    "atk": 1,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -3344,9 +3344,9 @@ window.DC_SET_TYPES["Infanterie"] = [
     "typ": "Einheit",
     "klasse": "Infanterie",
     "name": "Trauerzug",
-    "ap": 2,
-    "atk": 2,
-    "def": 2,
+    "ap": 3,
+    "atk": 3,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"
@@ -3413,8 +3413,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "typ": "Einheit",
     "klasse": "Infanterie",
     "name": "Grenzhof-Fuß",
-    "ap": 2,
-    "atk": 2,
+    "ap": 3,
+    "atk": 4,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -3448,8 +3448,8 @@ window.DC_SET_TYPES["Infanterie"] = [
     "klasse": "Infanterie",
     "name": "Steinbrunn-Lehrling",
     "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "atk": 1,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "infanterie"

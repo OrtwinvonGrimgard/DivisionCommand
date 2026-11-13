@@ -13,7 +13,7 @@ window.DC_SET_TYPES["Soforteinsatz"] = [
     "typ": "Soforteinsatz",
     "klasse": "",
     "name": "Marschbefehl",
-    "ap": 1,
+    "ap": 2,
     "atk": null,
     "def": null,
     "tags": [

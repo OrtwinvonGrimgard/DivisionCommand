@@ -1858,9 +1858,9 @@ window.DC_SET_TYPES["Panzer"] = [
     "typ": "Einheit",
     "klasse": "Panzer",
     "name": "Aufrufpanzer",
-    "ap": 3,
+    "ap": 4,
     "atk": 3,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -1929,8 +1929,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Zwei Daten",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -2162,8 +2162,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Flussufer-Keil",
     "ap": 3,
-    "atk": 2,
-    "def": 4,
+    "atk": 1,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -2194,8 +2194,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Kronland-Panzer",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 2,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -2387,9 +2387,9 @@ window.DC_SET_TYPES["Panzer"] = [
     "typ": "Einheit",
     "klasse": "Panzer",
     "name": "Reservelinie",
-    "ap": 3,
+    "ap": 4,
     "atk": 2,
-    "def": 4,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -2484,8 +2484,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Port-Meris-Keil",
     "ap": 3,
-    "atk": 4,
-    "def": 2,
+    "atk": 3,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -2711,8 +2711,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Flankenpanzer",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3269,8 +3269,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Entsatzbataillon",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3329,8 +3329,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "typ": "Einheit",
     "klasse": "Panzer",
     "name": "Tunnelkeil",
-    "ap": 3,
-    "atk": 3,
+    "ap": 2,
+    "atk": 1,
     "def": 4,
     "verdeckt_ok": false,
     "tags": [
@@ -3630,8 +3630,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Etappenwagen",
     "ap": 3,
-    "atk": 2,
-    "def": 5,
+    "atk": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3766,8 +3766,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Forumspanzer",
     "ap": 4,
-    "atk": 3,
-    "def": 5,
+    "atk": 2,
+    "def": 6,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3798,8 +3798,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Zuteilungsräumer",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 2,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -3965,8 +3965,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Grenzplatte",
     "ap": 3,
-    "atk": 2,
-    "def": 4,
+    "atk": 3,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "panzer"
@@ -4122,8 +4122,8 @@ window.DC_SET_TYPES["Panzer"] = [
     "klasse": "Panzer",
     "name": "Sensorkeil",
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 4,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "panzer"

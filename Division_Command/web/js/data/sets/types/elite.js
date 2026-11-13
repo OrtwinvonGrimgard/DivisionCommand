@@ -860,8 +860,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Hauptmann Kader",
     "ap": 3,
-    "atk": 3,
-    "def": 5,
+    "atk": 2,
+    "def": 6,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1208,8 +1208,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Ida Holm",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 2,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1279,8 +1279,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Stabsoffizier",
     "ap": 4,
-    "atk": 4,
-    "def": 5,
+    "atk": 5,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1315,8 +1315,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Ada Mar",
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 2,
+    "def": 5,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1351,8 +1351,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Ren Zoll",
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 4,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "elite"
@@ -1476,8 +1476,8 @@ window.DC_SET_TYPES["Elite"] = [
     "klasse": "Elite",
     "name": "Talruf",
     "ap": 4,
-    "atk": 4,
-    "def": 5,
+    "atk": 3,
+    "def": 6,
     "verdeckt_ok": false,
     "tags": [
       "elite"

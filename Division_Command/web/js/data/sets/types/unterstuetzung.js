@@ -13,7 +13,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "",
     "name": "Sammelpunkt",
-    "ap": 2,
+    "ap": 3,
     "atk": null,
     "def": null,
     "tags": [
@@ -72,7 +72,7 @@ window.DC_SET_TYPES["Unterstützung"] = [
     "typ": "Unterstützung",
     "klasse": "",
     "name": "Glaubensbanner",
-    "ap": 3,
+    "ap": 2,
     "atk": null,
     "def": null,
     "tags": [

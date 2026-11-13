@@ -857,9 +857,9 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "typ": "Einheit",
     "klasse": "Aufklärung",
     "name": "Gegenlage-Melder",
-    "ap": 2,
+    "ap": 3,
     "atk": 1,
-    "def": 2,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -995,8 +995,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Datums-Melder",
     "ap": 2,
-    "atk": 2,
-    "def": 2,
+    "atk": 3,
+    "def": 1,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1282,8 +1282,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Lizenzmelder",
     "ap": 2,
-    "atk": 1,
-    "def": 3,
+    "atk": 2,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1459,8 +1459,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Abseitsläufer",
     "ap": 1,
-    "atk": 1,
-    "def": 2,
+    "atk": 2,
+    "def": 1,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1523,8 +1523,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Feldmesser",
     "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "atk": 1,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1557,9 +1557,9 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "typ": "Einheit",
     "klasse": "Aufklärung",
     "name": "Meldekette",
-    "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "ap": 3,
+    "atk": 3,
+    "def": 4,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1627,9 +1627,9 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "typ": "Einheit",
     "klasse": "Aufklärung",
     "name": "Zollspäher",
-    "ap": 2,
-    "atk": 1,
-    "def": 2,
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -1662,8 +1662,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "typ": "Einheit",
     "klasse": "Aufklärung",
     "name": "Wegmelder",
-    "ap": 2,
-    "atk": 1,
+    "ap": 3,
+    "atk": 3,
     "def": 2,
     "verdeckt_ok": false,
     "tags": [
@@ -2063,8 +2063,8 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "klasse": "Aufklärung",
     "name": "Grenzmelder",
     "ap": 2,
-    "atk": 2,
-    "def": 1,
+    "atk": 1,
+    "def": 2,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"
@@ -2156,9 +2156,9 @@ window.DC_SET_TYPES["Aufklärung"] = [
     "typ": "Einheit",
     "klasse": "Aufklärung",
     "name": "Beobachter",
-    "ap": 2,
-    "atk": 1,
-    "def": 2,
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
     "verdeckt_ok": false,
     "tags": [
       "aufklaerung"

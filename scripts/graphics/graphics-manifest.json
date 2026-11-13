@@ -2751,15 +2751,15 @@
    "type": "Einheit",
    "nation": "Dargan",
    "rarity": "silver",
-   "source_record_sha256": "d252338f260f2789049995431fa504634c4ac6f040a3d93fe99955d8c68afe6c",
+   "source_record_sha256": "fbc36c5848633546e8be21eda4e56217fb1c82a79337e321cce7d0a8bd664162",
    "kurz": "+1 DEF, solange du eine offene Unterstützung hast.",
    "keywords": [
     "Nachsetzen"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "tags": [
      "infanterie"
     ]
@@ -2774,7 +2774,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "79ebc161005288fbf1bf3fe668a48efc88d25d6804c3dcaa3cd2ab84247dce1a"
+   "output_sha256": "c543f4579354336d07e76481ef9a420f1ebbff461a0ee3a8ab37a728c5e45a34"
   },
   {
    "id": "dc_b_stillschuld_zug_906",
@@ -2991,13 +2991,13 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "bronze",
-   "source_record_sha256": "2f5b207a74e5dd06ae1c7241ee7ea326e874a984e3936a60a432dfdba9416f19",
+   "source_record_sha256": "75533381acae5de3f8892327907578f350c55655896d66390f014f456cf9d1d3",
    "kurz": "Der erste Schaden je Zug sinkt um 1.",
    "keywords": [],
    "printed_stats": {
     "ap": 2,
-    "atk": 2,
-    "def": 2,
+    "atk": 3,
+    "def": 1,
     "tags": [
      "infanterie"
     ]
@@ -3012,7 +3012,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "8677b460db12d5ecc949855bab09d9895ae5b395e1377c4e2bfb27731d090fee"
+   "output_sha256": "46adfaf683ff4725be460f677a5db079c859136a7833eb1377c74f9141676fe8"
   },
   {
    "id": "dc_b_staubrain_zug_44",
@@ -3202,15 +3202,15 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "bronze",
-   "source_record_sha256": "312ad400b7311bb329b70da18a3a20d1e78a324f914d72ad5f354b5fce7f99ee",
+   "source_record_sha256": "638539c5abc715abaa2fb3c6cd20de2077878ce22c7abd674a861a6e6e02f29a",
    "kurz": "Der erste Schaden je Zug sinkt um 1.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 1,
-    "atk": 2,
-    "def": 1,
+    "atk": 1,
+    "def": 2,
     "tags": [
      "infanterie"
     ]
@@ -3225,7 +3225,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "59c5b9f3ff1e1bf2034edbbbeb8beaad8ee8d7a74d6f463142c01ace9a49f003"
+   "output_sha256": "5ced07117747f99f49d3ca86f58c0da2f736c05649ac6949282359d81f2c7619"
   },
   {
    "id": "dc_b_strassenmeister_663",
@@ -3264,15 +3264,15 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "bronze",
-   "source_record_sha256": "3e6325672e6c038339dd9e3f3bdd9016117bff17aa48ef15a7ce5331cfcade19",
+   "source_record_sha256": "df23ed41ed6017011afc2d877b4bc11bada6855f679b50fa1338ed67ab17d0d7",
    "kurz": "Der erste Schaden, den sie in jedem Zug erleidet, sinkt um 1.",
    "keywords": [
     "Erbitterung"
    ],
    "printed_stats": {
     "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "atk": 3,
+    "def": 2,
     "tags": [
      "infanterie"
     ]
@@ -3287,7 +3287,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "d22f8b1398ddb366adeb34e8ee1c55d82fa57748355dd01b4f6e713af1521517"
+   "output_sha256": "a589d8d4c7ec051e0461997e4de1e9840400cf2fb422be26083433b8e1b05e86"
   },
   {
    "id": "dc_b_hauptkolonne_665",
@@ -3537,15 +3537,15 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "26f1639a48a557b63891a3e2045dfe81c49b11da3ce191725ca8acad3d4f3210",
+   "source_record_sha256": "dae6755b1ac887adeeccfcddb1fa9d2e09c5341a0663b5be1646a75cffc90e37",
    "kurz": "+1 ATK, solange eigene Infanterie benachbart ist.",
    "keywords": [
     "Zähigkeit"
    ],
    "printed_stats": {
     "ap": 1,
-    "atk": 2,
-    "def": 2,
+    "atk": 1,
+    "def": 3,
     "tags": [
      "infanterie"
     ]
@@ -3560,7 +3560,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "e7a7204c7868938ae33b1746be771536f43eba1cbe26ce74bb0dba75231976b0"
+   "output_sha256": "d500494add06c8b3b606a8e5ef0a57a7ad9a84d7182000207604b0e3dbb08e4f"
   },
   {
    "id": "dc_b_entsatztrupp_482",
@@ -3599,13 +3599,13 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "7440d472653ade44e21a54d8b2c0c192000772800be2612ab950d3c0bf56a4f3",
+   "source_record_sha256": "fc4f16cdb1e229ed0b458409642ba72975d985ee9c5379d2499494ac6d542441",
    "kurz": "Der erste Schaden je Zug sinkt um 1.",
    "keywords": [],
    "printed_stats": {
     "ap": 1,
-    "atk": 2,
-    "def": 2,
+    "atk": 1,
+    "def": 3,
     "tags": [
      "infanterie"
     ]
@@ -3620,7 +3620,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "39dd6b505fc18cec16d651125baa27b6fc3ea85716622a563959cdba0a4eaef3"
+   "output_sha256": "b34eb0618ba8972cd0009529cf27a0ac8551d1eee6c16ca47c6c95586a2d813c"
   },
   {
    "id": "dc_b_hafenposten_484",
@@ -4141,15 +4141,15 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "bronze",
-   "source_record_sha256": "7a96cd6e76dd4653b64fb46f3fa7279c4611d2099200c9b06560d609bf1fbefa",
+   "source_record_sha256": "03670a12c525bd4aa44762864619a872e1fbf6e110aed99250031a53acef50f0",
    "kurz": "Der erste Schaden je Zug sinkt um 1.",
    "keywords": [
     "Zähigkeit"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 2,
-    "def": 2,
+    "ap": 3,
+    "atk": 3,
+    "def": 3,
     "tags": [
      "infanterie"
     ]
@@ -4164,7 +4164,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "6285303e673cfc16de7d5262fd9d68bd8c1c3861e2c699a5eb5789449f7856d3"
+   "output_sha256": "b90bac95392fe58c50ef2870125c60bbd265c630443adb6806209829dffdfa99"
   },
   {
    "id": "dc_b_plattenzug_88",
@@ -4203,14 +4203,14 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "bronze",
-   "source_record_sha256": "acda95f6786d0f665d87a05743843dbef1f8ee6318da0ddf3eebac95f504e804",
+   "source_record_sha256": "d84b75b4daaea78352faa2c3324ab8b4c3f5da9a4002ddebbb6d0376187d1c55",
    "kurz": "Der erste Schaden je Zug sinkt um 1.",
    "keywords": [
     "Erbitterung"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 2,
+    "ap": 3,
+    "atk": 4,
     "def": 2,
     "tags": [
      "infanterie"
@@ -4226,7 +4226,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "8a7f6ac9a120ce210efb9bbe3470ce4431915f50234d4145f2ee569d84d4ee36"
+   "output_sha256": "843b970464142d480c046586b5614f2c98049338841668b00b690c4299131520"
   },
   {
    "id": "dc_b_steinbrunn_lehrling_90",
@@ -4234,15 +4234,15 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "silver",
-   "source_record_sha256": "9dbf45f3803af1a5fb59c9e38faed66b00e8ee8b755adb9ea99c9073e25d3330",
+   "source_record_sha256": "581d3736c4ac44bd62bd5a3af23b446d3d46ce32f8b1f6e275b297e99802b77e",
    "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
    "keywords": [
     "Abschirmung"
    ],
    "printed_stats": {
     "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "atk": 1,
+    "def": 4,
     "tags": [
      "infanterie"
     ]
@@ -4257,7 +4257,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "218e5666fb0f490cf7f5f6f49b243c85f8a009ede8b76220b23c7d611c8f448b"
+   "output_sha256": "05965eb06e56cde9b00f5c56a8591da0a77959b18ad1f44ae8bd0e9c5ce3de90"
   },
   {
    "id": "dc_b_probenzug_421",
@@ -6127,15 +6127,15 @@
    "type": "Einheit",
    "nation": "Dargan",
    "rarity": "bronze",
-   "source_record_sha256": "21237126318c3edc254a0d2968924e7a5ef9861d7df5f74908874fb2d90e54a6",
+   "source_record_sha256": "ebd321959a086197db60acf1930f5c238108a07c35e974438607c6f396870843",
    "kurz": "Ihr erster Angriff nach dem Ausspielen hat +2 ATK.",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
-    "ap": 3,
+    "ap": 4,
     "atk": 3,
-    "def": 4,
+    "def": 5,
     "tags": [
      "panzer"
     ]
@@ -6150,7 +6150,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "19dc61f7f1352d8181929842d7527bd365dc1955616896c8b2ee89c2fef573ea"
+   "output_sha256": "8a78058f8ba6dd756f43a137c57de742e46e9dff4cfc03c587d69df932745e4c"
   },
   {
    "id": "dc_b_brunn_keil_911",
@@ -6189,13 +6189,13 @@
    "type": "Einheit",
    "nation": "Dargan",
    "rarity": "silver",
-   "source_record_sha256": "5769d88fd5201c1944fb52312a0890f9faab49cae3ebb244643dc9ed14f4b1fd",
+   "source_record_sha256": "972540575716d31688f2eeacbd6c7eeb92523187e63fc3f5ee1782262beec74b",
    "kurz": "+1 ATK, wenn du in diesem Zug einen Soforteinsatz gespielt hast.",
    "keywords": [],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "tags": [
      "panzer"
     ]
@@ -6210,7 +6210,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "e4500aa7b961e57bb600478a709d28577124249dd59618aef14a1d153ecc6dad"
+   "output_sha256": "c26db42544c8e59222f1c2d5c8dfc126f400c4caf01310be0c152e770757c354"
   },
   {
    "id": "dc_b_abschlusswagen_913",
@@ -6404,13 +6404,13 @@
    "type": "Einheit",
    "nation": "Eldran",
    "rarity": "bronze",
-   "source_record_sha256": "66e3d4484245087a2f755dabfca81d6386f4ad1ae51a111c8205a96a3ae771a8",
+   "source_record_sha256": "297ccd2d5e48be89bdfe2d220ed8610512045f9093e8c33fdf3dd59b25437790",
    "kurz": "Kostet 1 AP weniger (mind. 1), solange eigene Infanterie an der Front steht.",
    "keywords": [],
    "printed_stats": {
     "ap": 3,
-    "atk": 2,
-    "def": 4,
+    "atk": 1,
+    "def": 5,
     "tags": [
      "panzer"
     ]
@@ -6425,7 +6425,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "91efc4187f7d37005dbe547e6bf2d7ef71055c9b9276701941c21b1f78649a8f"
+   "output_sha256": "af30d36a80c31267e77a5a7785743f5ae2d581a5a86c6310cb68a8d3ac6b48dd"
   },
   {
    "id": "dc_b_kronland_panzer_732",
@@ -6433,15 +6433,15 @@
    "type": "Einheit",
    "nation": "Eldran",
    "rarity": "silver",
-   "source_record_sha256": "64f9b6a610645f450b97a3b07f9174977e2653fdb5f146378763fe040299bdf0",
+   "source_record_sha256": "bea2ad626807c389259ed979fb3845a43b2b9a83cc704191b96ff77213c3a179",
    "kurz": "Der erste Schaden je Zug sinkt um 1.",
    "keywords": [
     "Zuteilung"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 2,
+    "def": 5,
     "tags": [
      "panzer"
     ]
@@ -6456,7 +6456,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "efa01b4717f76bacae97e3a7a11543a416c38c7ecb37d35bf1e31a1798d59de9"
+   "output_sha256": "b3b2f76ccaba20061235a9a2a6380b0e48cf4353b62d65a9fe37e63f9b926506"
   },
   {
    "id": "dc_b_doppelstellung_733",
@@ -6615,15 +6615,15 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "bronze",
-   "source_record_sha256": "c51b52ea6e1073c88f12236b79f6b9ae6ca76578c143033e437ee5f2b50f4c38",
+   "source_record_sha256": "31fa4b2a6e964d89e2ff3c5eb9cc75740102a49aa29ed6c058a6d8686c4ab392",
    "kurz": "",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
-    "ap": 3,
+    "ap": 4,
     "atk": 2,
-    "def": 4,
+    "def": 5,
     "tags": [
      "panzer"
     ]
@@ -6638,7 +6638,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "0d2f31eb25f5990abe70df2e3a1acc3f53744e1c13843d317d0b687e42499097"
+   "output_sha256": "caa96c40381ef76ac0811cfe48fbc1008e104b12bde2ec423c9ecebb8d90904f"
   },
   {
    "id": "dc_b_hafenring_walze_53",
@@ -6708,15 +6708,15 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "bronze",
-   "source_record_sha256": "dedd0bc36a132407d901233d548c3931d2d8c4e107a1313a9f997878e85b6999",
+   "source_record_sha256": "f86d673aad29271e7c23d9b7071173c36651d5c284f63abab5c255610c5442ac",
    "kurz": "+1 ATK gegen Ziele, die in diesem Zug Schaden erlitten haben.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 4,
-    "def": 2,
+    "atk": 3,
+    "def": 3,
     "tags": [
      "panzer"
     ]
@@ -6731,7 +6731,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "8f72bd9afe9e08df2d14a9b883bf54c02ee24629040c8f13612d0405a2c68109"
+   "output_sha256": "f8b547498fecbb25ccbd7d268863196b11e47e4e72d122da1c324dd7a4e3c3da"
   },
   {
    "id": "dc_b_letzte_stellung_56",
@@ -6919,15 +6919,15 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "silver",
-   "source_record_sha256": "2b204fb6adf7cabb5e28f54dcbbd53ae59e49bf26439d8cf8710bd9ecaa46ef1",
+   "source_record_sha256": "d9cc86a9f8296269c3ab25c6be32dcf06288f2ed4c16cc38d6045991228e79c7",
    "kurz": "Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
    "keywords": [
     "Gefechtsbereit"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "tags": [
      "panzer"
     ]
@@ -6942,7 +6942,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "4b1ba50f4c822fc4e4a8b605b6433c3599da7585205136aa48a9490dbbf38c00"
+   "output_sha256": "5c03e67c5f43a727dbbfc5ecb6487c11bb6fc72812b73072a71a6fce8a9b8521"
   },
   {
    "id": "dc_b_doppelkolonnen_keil_673",
@@ -7439,15 +7439,15 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "silver",
-   "source_record_sha256": "d311e50f0180a55e7f38badde874f741de878bf9cd9b1ad2930963a738ad9a13",
+   "source_record_sha256": "006a44732e071088d7abcc91025c704e163826558d65d70b0a2f033f02313fc2",
    "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
    "keywords": [
     "Abschirmung"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "tags": [
      "panzer"
     ]
@@ -7462,7 +7462,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "0f513d72d3c28095d39985da11b7038613ce2ab18e2f5eaa8e5914c3358565a8"
+   "output_sha256": "80e1444f149b7f6bd2ce8206d3e38c9f021807efc0e27e9975fa51400b2c0fa1"
   },
   {
    "id": "dc_b_entsatzschlag_494",
@@ -7502,12 +7502,12 @@
    "type": "Einheit",
    "nation": "Lyr",
    "rarity": "bronze",
-   "source_record_sha256": "6cc83e46e3701fb34c13226c59649c7923bfad750af4bee992ed8d15f1e0a290",
+   "source_record_sha256": "e8a7330d225c44b71305c6cd0cfcc105dcb945ef9487751c4411fbcea027ccf1",
    "kurz": "Der erste Schaden je Zug sinkt um 1.",
    "keywords": [],
    "printed_stats": {
-    "ap": 3,
-    "atk": 3,
+    "ap": 2,
+    "atk": 1,
     "def": 4,
     "tags": [
      "panzer"
@@ -7523,7 +7523,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "6408ed6a33e830d5743062cfc4b4640a9d4749d148f3fafdf837d65bc8d7c95a"
+   "output_sha256": "80e8e74bb8f9727e96a58abacd8225673c9f0437cf2a1ac3371ee37b958cec41"
   },
   {
    "id": "dc_b_engenwalze_71",
@@ -7773,15 +7773,15 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "4be64b4e3bb3cce65dd10318ea3fa79d24c94c696b7e7d62c1e3a1c98812c009",
+   "source_record_sha256": "8546f8f621c32624d87aa331079e63934eea42889e4b33557422c23d68f35fc7",
    "kurz": "Der erste Schaden je Zug sinkt um 1, solange du eine offene Unterstützung hast.",
    "keywords": [
     "Abschirmung"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 2,
-    "def": 5,
+    "atk": 3,
+    "def": 4,
     "tags": [
      "panzer"
     ]
@@ -7796,7 +7796,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "214a26496fbda3b0c9c19ea9de672d09e7cd33ad55dd89d5e4a25c2912d4d090"
+   "output_sha256": "b25a78a5c3357873155ee44df5bc4cd6b4810e79ea6c06772a6a4943213c118a"
   },
   {
    "id": "dc_b_klinikschild_309",
@@ -7895,13 +7895,13 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "silver",
-   "source_record_sha256": "8263a9d386a5e6772333677fe92c4eb904fc5ad14526f6527ebaf68503b56996",
+   "source_record_sha256": "a5c179dcb8ed2f8d6ab12bf1d5d6630d33a78a97d1e128c4c7ec093a5f48ae48",
    "kurz": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
    "keywords": [],
    "printed_stats": {
     "ap": 4,
-    "atk": 3,
-    "def": 5,
+    "atk": 2,
+    "def": 6,
     "tags": [
      "panzer"
     ]
@@ -7916,7 +7916,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "139d6d8f10b2a9e0b742cdd5426971b1e8a4c2af039c52552cf1ea9b83df60f5"
+   "output_sha256": "5781f3f28ba7cbc0e8e79fc6a4166629c71474a48bc75266a848a37b209469a6"
   },
   {
    "id": "dc_b_zuteilungsraeumer_313",
@@ -7924,15 +7924,15 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "80019d13cb94558c294789fd17768a0f1fa9edab7fe4f59740bb67295bdafc4e",
+   "source_record_sha256": "3181b902810d99d5d83c883c913cfd5c4fbbe72766b0467fc15c39f135465d50",
    "kurz": "Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
    "keywords": [
     "Zähigkeit"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 2,
+    "def": 5,
     "tags": [
      "panzer"
     ]
@@ -7947,7 +7947,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "6500264da201f163375d173a0c2a40eda8f26150f4f5fa603627a3a0ead2e30b"
+   "output_sha256": "5cdb667d29f45fe02c03ea8a856bf429103686025b5a1c224f1926cac216e03f"
   },
   {
    "id": "dc_b_schildwall_314",
@@ -8073,15 +8073,15 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "bronze",
-   "source_record_sha256": "e69f64b109735d6b0bcc8acaa7d813cd29bd72bfe8bcb33274f262df55c046e2",
+   "source_record_sha256": "126b2b39a90bece1adecfd135afd938e5ada0aa04b620b356072351f0037d09a",
    "kurz": "Der erste Schaden je Zug sinkt um 1.",
    "keywords": [
     "Zähigkeit"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 2,
-    "def": 4,
+    "atk": 3,
+    "def": 3,
     "tags": [
      "panzer"
     ]
@@ -8096,7 +8096,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "44b086d8fb211f537fa15cc94c170f6cb36ba703b3da2be790c184982f2f1b8b"
+   "output_sha256": "3be85d5f7ba07f8c203c6c3c61d15f4ca3312a25e65142be5bc5eea2182dab5c"
   },
   {
    "id": "dc_b_linsenpanzer_95",
@@ -8223,13 +8223,13 @@
    "type": "Einheit",
    "nation": "Orthea",
    "rarity": "bronze",
-   "source_record_sha256": "774a6ca36f43f72d1bbb1999f18d9b527b2de05ec96b380e2fd7060429c87994",
+   "source_record_sha256": "5f948d8018f09f0bdad03d44000b336af71b63eec765fbc224660d5620226df5",
    "kurz": "+1 ATK gegen beobachtete Ziele.",
    "keywords": [],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 4,
+    "def": 2,
     "tags": [
      "panzer"
     ]
@@ -8244,7 +8244,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "e635b5969046289039717bea91d9ed5c32aa21426535fa10013612e17aaff1c6"
+   "output_sha256": "a0877a8b1e5435fcf8a7a15bddc94bee62b7ecf5411724c36250f548d60ec0da"
   },
   {
    "id": "dc_b_modelltraeger_428",
@@ -8918,15 +8918,15 @@
    "type": "Einheit",
    "nation": "Theryn",
    "rarity": "silver",
-   "source_record_sha256": "2d6ffc4cba5d248d035d5f798a2d2b174e2ebcce5f08a63ad0cdba335dba3739",
+   "source_record_sha256": "281da3f733a32d5f3799cac69c4b7cae79e7b4ae05c91fae51aba7d8e02d96ef",
    "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 2,
+    "atk": 5,
+    "def": 1,
     "tags": [
      "einheit",
      "steilfeuer-ii",
@@ -8943,7 +8943,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "412092e7971c2c47cbd2174744a0e84505e76d75850b8e07f207aa41bcad20e5"
+   "output_sha256": "216640af6056e0f1673262cc659b964276290b87f50d2d6f6d93e7120b7ac200"
   },
   {
    "id": "dc_b_massenschlag_19",
@@ -9435,14 +9435,14 @@
    "type": "Einheit",
    "nation": "Karsk",
    "rarity": "silver",
-   "source_record_sha256": "27954c907d3e6feff2457a555403ece081609d64f1c4955213ec8a5bd88ccfb9",
+   "source_record_sha256": "632e370cb39dc5a3dcd2743f151f83dd95ef13d4a730ed9b7de5f08fc9add692",
    "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
    "keywords": [
     "Nachsetzen"
    ],
    "printed_stats": {
-    "ap": 4,
-    "atk": 4,
+    "ap": 5,
+    "atk": 6,
     "def": 2,
     "tags": [
      "einheit",
@@ -9460,7 +9460,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "4d44265815df98852f63727c6385595f666d37f172edb2b40ea0dc1acfab9a95"
+   "output_sha256": "a5c98e94f718fb677d2f205f67b39c387f5e9edb730da10f20c83dd68799b253"
   },
   {
    "id": "dc_b_massenschlag_379",
@@ -9502,15 +9502,15 @@
    "type": "Einheit",
    "nation": "Karsk",
    "rarity": "bronze",
-   "source_record_sha256": "b69641572f3797c24e94447ea6f74622d67dd12e40cc40945239db948c147ac3",
+   "source_record_sha256": "155392054c34b1b2e9f759dce79ab3badcc0a799c628b20ef50244bae19b548f",
    "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 2,
+    "def": 4,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -9526,7 +9526,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "8374e6e71e42851ed4bd2f67f2f049dce520942460610523839e84eb32dbeedf"
+   "output_sha256": "5d30ef6798f1c9e58eaee09ded287dcd26295779a8c4d9042e391a30a35cca3f"
   },
   {
    "id": "dc_b_implantatrohr_408",
@@ -10007,15 +10007,15 @@
    "type": "Einheit",
    "nation": "Vesper",
    "rarity": "silver",
-   "source_record_sha256": "41086018783b39214d9a7c87619251d28fddb8c6baa9bff936f3f24695927465",
+   "source_record_sha256": "b61d909e531fb71e0747898c0fd37b23eb2f00b98e1115c9ef5d1bb766c72245",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
-    "ap": 4,
+    "ap": 5,
     "atk": 3,
-    "def": 3,
+    "def": 5,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -10031,7 +10031,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "fb69571b80b5cd7e58f9d40650119df7dd9e48c069540cbbd29b43098acbe7ed"
+   "output_sha256": "d3363384c702ae633d8449e3eb63e22bead70cb0330a2317c22734763d38eaa2"
   },
   {
    "id": "dc_b_stumpfrohr_861",
@@ -10163,13 +10163,13 @@
    "type": "Einheit",
    "nation": "Dargan",
    "rarity": "silver",
-   "source_record_sha256": "1481d24a178f31b5621af32a943cdbc0eeabf171f4048340bae3997f05049150",
+   "source_record_sha256": "9f9adff97bfe873c2cd07c012ad76e6e96b50ca5661709446e061dab87d39bb2",
    "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
    "keywords": [],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 3,
+    "atk": 3,
+    "def": 4,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -10185,7 +10185,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "0458a67dd279074f1c8461d40dd2b35fe9e9650cd77534421c168c166bc85c37"
+   "output_sha256": "3e31fc9781443ce7f6ced88bdcfaf993f1086a010ce72d9244b2f8fb334b9d44"
   },
   {
    "id": "dc_b_mahr_geschuetz_918",
@@ -10319,15 +10319,15 @@
    "type": "Einheit",
    "nation": "Dargan",
    "rarity": "bronze",
-   "source_record_sha256": "9a892987b5ee2009ae75d2379f1950c6b7dcbdf7d070af2f95c4705e099ef9df",
+   "source_record_sha256": "079ad1af96e0cad0eda8309b726ee9c503ac3c16886b49d051d614e97a7f80d4",
    "kurz": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
    "keywords": [
     "Nachsetzen"
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 3,
+    "atk": 5,
+    "def": 2,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -10343,7 +10343,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "861203fab000c08180d757b55368d709ba49add7c1c3781c8831abd60d358cb7"
+   "output_sha256": "57d9c577e296253117555a356dbe24501a8da492e6e7776635271a3d479a341d"
   },
   {
    "id": "dc_b_zeughausrohr_735",
@@ -10571,15 +10571,15 @@
    "type": "Einheit",
    "nation": "Eldran",
    "rarity": "bronze",
-   "source_record_sha256": "22a02d9af955f529ea417ea7f05ec27f19470706fcf4c0d13419ab3713f9779c",
+   "source_record_sha256": "bbbeff3e2949f823d5e2ede72e348c14c107a7c1c945080018c211c297aa083d",
    "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
    "keywords": [
     "Durchschlag"
    ],
    "printed_stats": {
-    "ap": 4,
+    "ap": 5,
     "atk": 4,
-    "def": 3,
+    "def": 5,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -10595,7 +10595,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "19ee2f9ee57cbb511deec36eb16c2cbfdff94649b77ea919d855cecea0b6b1e6"
+   "output_sha256": "50ceaf9a3b179dbd83db3912cccbd2ac18ba0542484359ae82162ca4b6425ad5"
   },
   {
    "id": "dc_b_kai_batterie_57",
@@ -10665,13 +10665,13 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "silver",
-   "source_record_sha256": "f17161372ab4eb4ecf2a8d2e9937eca5406301269ebc2128811efbfa4db73930",
+   "source_record_sha256": "5d8ea190a965aec1960d348d67f432ef0b6651f23f5631a506e94a38cf5e0593",
    "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
    "keywords": [],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 2,
+    "atk": 5,
+    "def": 1,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -10687,7 +10687,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "b467b71a43e8d7f8cef8de246bc825b43e7e4adfc27a8ec98038758c03e0df87"
+   "output_sha256": "7faa77cc467726bcb0ec23c16e06b596e491a3a94770cc4e55edcc6ad4a8858f"
   },
   {
    "id": "dc_b_verspaetungsfeuer_60",
@@ -10759,15 +10759,15 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "silver",
-   "source_record_sha256": "8afe768ceccaa4a7fae46497a9c9042d72b9e21afb3f4a483921fd36e8a6704a",
+   "source_record_sha256": "a2374dc3291252ef12fcff7ead2d8872a41361d691f10116190ebd7695051f6c",
    "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 3,
-    "def": 2,
+    "atk": 2,
+    "def": 3,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -10783,7 +10783,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "80478b5c2611bb86f22c962fe5c20419179f842492bfbf94e5dd62707b7df0ed"
+   "output_sha256": "6cbedc8cc1384ba08b197752c13246bcd2191084f8169b15bc77463ff3f83d87"
   },
   {
    "id": "dc_b_nachtkai_63",
@@ -10884,13 +10884,13 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "bronze",
-   "source_record_sha256": "8e9d98e8c6479e5e227e13375a672f8bce0470ab5fda56e230dbb51e77404c88",
+   "source_record_sha256": "e7b87207617263447a09725d46e6c4461cdb6989ca4738104b20b671082381cf",
    "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
    "keywords": [],
    "printed_stats": {
-    "ap": 3,
+    "ap": 4,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -10906,7 +10906,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "8edbf0b8188f75d80d7a21f50a38479da01fd0c61f269ce7ec8993df76bbe824"
+   "output_sha256": "69040dd7f21a318c7c6ff9f515e98d93eb234f6959336ea3b485e94e3f454636"
   },
   {
    "id": "dc_b_linienbatterie_677",
@@ -10914,15 +10914,15 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "silver",
-   "source_record_sha256": "71e4d4aabacb4a4a29931db5adc5542adf33696e26f2753b5a7ae6b9d4723166",
+   "source_record_sha256": "cf00e372472425916e69e9a01611fd25a3b0fe7b14cc921cbef3024630a75cd9",
    "kurz": "Steilfeuer II. Zerstört sie im Angriff eine Einheit: ziehe 1 Karte.",
    "keywords": [
     "Durchschlag"
    ],
    "printed_stats": {
-    "ap": 4,
-    "atk": 5,
-    "def": 2,
+    "ap": 5,
+    "atk": 6,
+    "def": 3,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -10938,7 +10938,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "80dabbce13a4920d703dadf693334cfcba5b2ed2493aca674df712ce12c23fb8"
+   "output_sha256": "4f7c29205cce17a78d483662815985e1ed4f39e2bf737affcb5bbbb58c0a94ef"
   },
   {
    "id": "dc_b_marktgeschuetz_678",
@@ -11140,13 +11140,13 @@
    "type": "Einheit",
    "nation": "Steinmark",
    "rarity": "bronze",
-   "source_record_sha256": "1c6cbbcadeeed267a5471133565654d88f0dd5c743280dc68a26798e725be1da",
+   "source_record_sha256": "c5da3fa9e63a8765506cfa299a96606dbb2151538b71fe9d50d433000de2e4ba",
    "kurz": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
    "keywords": [],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 2,
+    "def": 4,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -11162,7 +11162,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "c4ad252de9cf847681d542064cc969eaa36b2fc9c48efcab836882a6e3539bc5"
+   "output_sha256": "60ebb09694511ace2d848d01aa323c030b9cbcd122b4df0d5242f0bf7db0fa11"
   },
   {
    "id": "dc_b_planbatterie_557",
@@ -11296,15 +11296,15 @@
    "type": "Einheit",
    "nation": "Steinmark",
    "rarity": "bronze",
-   "source_record_sha256": "f308e37081849a6c2c2979e124c79319aaae90d739dd0aa45d02de7ee44b8b63",
+   "source_record_sha256": "6037a1ec0afa65c56163ccd5ae2bb46954f88ab73485c3efb3f41b5158cc20c3",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Zuteilung"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 2,
+    "def": 5,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -11320,7 +11320,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "4c4ea394ddd7d7bc44610716935b6bc73ec5dfa4df8d18f428aa15e419a18ba5"
+   "output_sha256": "eae407c5cb43a51239603faf36a644b3902cad19d4306bda95a181120e959805"
   },
   {
    "id": "dc_b_grossfeuer_562",
@@ -11482,15 +11482,15 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "e6f33fecc25b3070eb41ffbaa88e26a463cc0e427c6369059e9f715a94335274",
+   "source_record_sha256": "a680eed74b27452d62b4df982d48486f5dadbc1f6868ef04358a70a81885cd79",
    "kurz": "Steilfeuer II. Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
-    "ap": 3,
+    "ap": 4,
     "atk": 4,
-    "def": 1,
+    "def": 2,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -11506,7 +11506,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "68971688d644a978005c6e2842f25d249cb73b2a4b4009c1282ccc475fe60113"
+   "output_sha256": "f2e8a7216c2776c9a4e5e91b4a21b0a6f2b04d6bcd26675fab9ce1ad859ee50a"
   },
   {
    "id": "dc_b_kleinkai_salve_500",
@@ -11546,15 +11546,15 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "67e8d2007ae464a0da9df2c8909f2ebd77f0d49cde19d8e97e2d9b0a99f384f4",
+   "source_record_sha256": "1e35d4ae3ab243e4086b41a87f1e77366273770f103183f85beae1f414358f7c",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Zuteilung"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 4,
-    "def": 3,
+    "atk": 5,
+    "def": 2,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -11570,7 +11570,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "ffa330dac1185f29789107e81b6fe9cc2c27c353f4f9271dbcc248b3389455c6"
+   "output_sha256": "ffa4a96d421dbe69d53af4bf3b7ee25b09460fefce5061f43433e84e2a0d9456"
   },
   {
    "id": "dc_b_volle_front_502",
@@ -11984,15 +11984,15 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "4c7f03ea15de36af6c52cf2193b38c1ec1ef7f280ddbb599d398b5ac63010380",
+   "source_record_sha256": "1076d947feeac4ec8f4e789c63766d8e09db8163c7ea2f3b9bae41378b334b06",
    "kurz": "Steilfeuer II. Nach ihrem Angriff: das Ziel hat −1 ATK bis zum Ende des nächsten Zuges.",
    "keywords": [
     "Fernschuss"
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 3,
+    "atk": 3,
+    "def": 4,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -12008,7 +12008,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "a269ce395ac409bd9662a18cea016377cfb1e284ac2b82eecfd6af390a55a622"
+   "output_sha256": "42daaf23e6724ab6159a2a0c51e9d19d8a0dbeb27289b84156df990afd065cd3"
   },
   {
    "id": "dc_b_vollschutz_320",
@@ -12048,13 +12048,13 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "silver",
-   "source_record_sha256": "5a37ca171dafd3aa5692cd87fd007cb0393b1f642bf6cb8f262ec1862dcb412e",
+   "source_record_sha256": "06367f24921430b82ea97fbd01d0b18fe72bcb746d3f08b81cce612b53a8a3a0",
    "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
    "keywords": [],
    "printed_stats": {
-    "ap": 4,
+    "ap": 5,
     "atk": 4,
-    "def": 3,
+    "def": 5,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -12070,7 +12070,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "fb462826db49b6c79c0f0db913bcf5c5085b9fd710677db5799d60c21d467a0a"
+   "output_sha256": "53433e87af7ef5584693880c908b64562177b77da5ec89f27b94da73aec02d4b"
   },
   {
    "id": "dc_b_lueckenhof_geschuetz_322",
@@ -12078,15 +12078,15 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "aac68b843aba93fec3bf214d753046652ba20d524421837682d404c5d4d47089",
+   "source_record_sha256": "5bf476f469a04709b659ea3f536daf6063df244ec77101046d85ed27dc0791f3",
    "kurz": "Steilfeuer II. +1 ATK gegen beobachtete Ziele.",
    "keywords": [
     "Durchschlag"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 4,
+    "def": 2,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -12102,7 +12102,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "85ccc1d9474d5fcf3ceaaca04784d93757e16e229468c7ab48e4f4982696a293"
+   "output_sha256": "545f3cc13847a14d973bf01c9475dfb478003dc7ec159eab4591667b5779346f"
   },
   {
    "id": "dc_b_schmiedefeuer_rohr_99",
@@ -12239,13 +12239,13 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "bronze",
-   "source_record_sha256": "89c73dc35ca170a6f9134a1e48cb94f2e141976fe9111df6382758cfb80ecfcb",
+   "source_record_sha256": "92dc1b1c0c18318563135bb40383ed861e6ced6453a930fa3fc4ce462b28660c",
    "kurz": "Steilfeuer II. Kostet 1 AP weniger (mind. 1), solange du eine offene Unterstützung hast.",
    "keywords": [],
    "printed_stats": {
     "ap": 4,
-    "atk": 3,
-    "def": 3,
+    "atk": 2,
+    "def": 4,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -12261,7 +12261,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "d585b833438568c9870f26bc45291b466bbdb176d994ab99d83eb48372f8d598"
+   "output_sha256": "3517c3bfca40631302b14044ab1e61a182c6f582e0c8bb495c5e7a3e6eb416ae"
   },
   {
    "id": "dc_b_schutzsalve_104",
@@ -12582,13 +12582,13 @@
    "type": "Einheit",
    "nation": "Orthea",
    "rarity": "bronze",
-   "source_record_sha256": "7ab4e6a7da8fcbd82c5f6e627b63dd4ccf7fd8ad3bd6bfe582f150c6b84b9eae",
+   "source_record_sha256": "9568f85f24e9529afffa3260bd3d993b986bef8b24890057ee8fd543bba93c2b",
    "kurz": "Steilfeuer II. Der erste Schaden je Zug sinkt um 1.",
    "keywords": [],
    "printed_stats": {
     "ap": 3,
-    "atk": 4,
-    "def": 2,
+    "atk": 5,
+    "def": 1,
     "tags": [
      "steilfeuer-ii",
      "artillerie"
@@ -12604,7 +12604,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "7ea50b20e530aa6de1ddd927d787a52b53ffedc055787de95babd2125e2b0643"
+   "output_sha256": "8d8d9052d93f3f6d3e07daa5e136f7c20044fddd148bd69fe6c5affd645de8cb"
   },
   {
    "id": "dc_eh_aufklaerer",
@@ -13398,15 +13398,15 @@
    "type": "Einheit",
    "nation": "Vesper",
    "rarity": "bronze",
-   "source_record_sha256": "1f66f0852906a98f515af01d99a88be92a232bdb93dc74d84e5bff62daace378",
+   "source_record_sha256": "45cd91f76dc073f868a3bb3914b957c1bbb3ceef69f49c315687331b1db6caa0",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
-    "ap": 2,
+    "ap": 3,
     "atk": 1,
-    "def": 2,
+    "def": 4,
     "tags": [
      "aufklaerung"
     ]
@@ -13421,7 +13421,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "424841f0b63ca5280b6d27b5bcc843cabe22ffda5fd05e946af2e73dbb864c27"
+   "output_sha256": "2b9defc9b95aa7a1e91dc41a422732f8b16d7da1f28e764680af8ac2955c28ac"
   },
   {
    "id": "dc_b_doppelversion_865",
@@ -13520,15 +13520,15 @@
    "type": "Einheit",
    "nation": "Dargan",
    "rarity": "bronze",
-   "source_record_sha256": "98a0cc64d472b412df467e74feb7cedbe24e279a9ee782544262995a0b4f33a5",
+   "source_record_sha256": "071f30636b8a5e3373637dfeddf9db48793ed6d1dfdc440634d4a10cf10d5fd2",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
    "keywords": [
     "Heranführung"
    ],
    "printed_stats": {
     "ap": 2,
-    "atk": 2,
-    "def": 2,
+    "atk": 3,
+    "def": 1,
     "tags": [
      "aufklaerung"
     ]
@@ -13543,7 +13543,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "39825e18a2e96f8ab1b3b9e221f81e1f92dfd7c0d466521cc8cb160bb68cf762"
+   "output_sha256": "0a3ccadb9d8a7372797b39cb08a702c78fee499adb0156825beca2b616062128"
   },
   {
    "id": "dc_b_gegenrechnung_925",
@@ -13800,15 +13800,15 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "silver",
-   "source_record_sha256": "991208eb207b7cd568260d3a7f715a500a3f0cfd530135d97dd67e5141a084c1",
+   "source_record_sha256": "e5e288cba973ef209989e4520066609db448b9efeea74e30e117d817260f0709",
    "kurz": "+1 ATK gegen beobachtete Ziele.",
    "keywords": [
     "Heranführung"
    ],
    "printed_stats": {
     "ap": 2,
-    "atk": 1,
-    "def": 3,
+    "atk": 2,
+    "def": 2,
     "tags": [
      "aufklaerung"
     ]
@@ -13823,7 +13823,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "99dc2ca2e8f89156f19e04f08952651e27f2a946abe31fe36d88c0f7b28f9d8f"
+   "output_sha256": "bcddd34516641839f3d95b9dd6760c92b687edce8d7d90e6e23f0813ae577a17"
   },
   {
    "id": "dc_b_fahrplanblick_188",
@@ -13951,13 +13951,13 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "bronze",
-   "source_record_sha256": "b9767bdbda26f253f2f67e4f898861ff98eb631ebbba2952a0ab0fb2be0e6f4d",
+   "source_record_sha256": "2226e371a9f48c8c12f776587a6b2b242f1f07a521121655907a957e34cc56f7",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
    "keywords": [],
    "printed_stats": {
     "ap": 1,
-    "atk": 1,
-    "def": 2,
+    "atk": 2,
+    "def": 1,
     "tags": [
      "aufklaerung"
     ]
@@ -13972,7 +13972,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "b532741dffafa7454cfa459aa049249782d19e31dda40d944413cc6d93996fc4"
+   "output_sha256": "6c640e213d029d9ce4f346326a265c00ca14d7577697c1fd199637a91caf10dc"
   },
   {
    "id": "dc_b_beobachtungsposten_563",
@@ -14009,15 +14009,15 @@
    "type": "Einheit",
    "nation": "Steinmark",
    "rarity": "bronze",
-   "source_record_sha256": "9afee411655bbce2594a3fec46d0731dbdaf4cff169d48f6ba23e599fd6a0730",
+   "source_record_sha256": "33a260e2a0d7bc1e4c4a21e5330255b1b6b29d89d6c4c82ef00001bf1022cdbe",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "atk": 1,
+    "def": 4,
     "tags": [
      "aufklaerung"
     ]
@@ -14032,7 +14032,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "5fb5943134493afb043ff4db58422605adff2eb1380079d978ff119cbc848c1b"
+   "output_sha256": "ca00ed61dcaad4e0ccfea6805bddeb2fcf933429357db224eb520ab594b538a5"
   },
   {
    "id": "dc_b_meldekette_565",
@@ -14040,15 +14040,15 @@
    "type": "Einheit",
    "nation": "Steinmark",
    "rarity": "silver",
-   "source_record_sha256": "475145c5b3c32c8ded484c1fac397b68f142addc89f1541303da0064d1636bd1",
+   "source_record_sha256": "5a0b037234d214fe67b62260f587fe866723a1b3046a9db3356bc75422a4b36d",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
    "keywords": [
     "Zuteilung"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "ap": 3,
+    "atk": 3,
+    "def": 4,
     "tags": [
      "aufklaerung"
     ]
@@ -14063,7 +14063,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "266c3a21f94a4a2516f0a18a2ecec33f14b85e847dbee75ed2a4497afec90692"
+   "output_sha256": "7ea3924655318729122f517c5be223ddccbc6911581a1dc42251b4b6104dfdb5"
   },
   {
    "id": "dc_b_peiltrupp_566",
@@ -14102,15 +14102,15 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "2acc6cbc7f4a7bca3a2ad87e8cab50de62b5a70fd1acc5e6e4c63ef05a07ace8",
+   "source_record_sha256": "b7dbba6228beeab871bbcd04875f4604665ff4f14892aea1ef7f9d0d0c6d6638",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
    "keywords": [
     "Heranführung"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 1,
-    "def": 2,
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
     "tags": [
      "aufklaerung"
     ]
@@ -14125,7 +14125,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "7521de64d68568e83cafb45651eae0842a9bae69c012afd85a6356d76e5c1633"
+   "output_sha256": "761cf0473f7e54828cbf073bc55821953d1ff98079436a01d65d615263120f96"
   },
   {
    "id": "dc_b_wegmelder_504",
@@ -14133,14 +14133,14 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "6b1fef67a4d07e5d4c4ac336c8064f2d2c8ca4eac040b019be45f383ae56861b",
+   "source_record_sha256": "f8487c22b05cc173cd9925f76628dec95cf6577051d70adfe51db04c7f6465bb",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf.",
    "keywords": [
     "Zuteilung"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 1,
+    "ap": 3,
+    "atk": 3,
     "def": 2,
     "tags": [
      "aufklaerung"
@@ -14156,7 +14156,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "8c071b43e6c7328d2fddc587862af0194f48f5d1bdcac8936080d49d349312cc"
+   "output_sha256": "298674b8799fdd89aa87b9ed7cf7c88c4278184458acbebbe4eef08bb7596abb"
   },
   {
    "id": "dc_b_kaihof_auge_505",
@@ -14499,13 +14499,13 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "bronze",
-   "source_record_sha256": "7f986682fb5540e9ad6c423ed5e993375f2878a6b4b277ea3a7dd57455f671ef",
+   "source_record_sha256": "06d3f4d8ab81fd76b4aac3cf85a98f5395939ec3f5cb935a01f173343c02f264",
    "kurz": "Einmal pro Zug, wenn eine andere eigene Einheit zerstört wird: ziehe 1 Karte.",
    "keywords": [],
    "printed_stats": {
     "ap": 2,
-    "atk": 2,
-    "def": 1,
+    "atk": 1,
+    "def": 2,
     "tags": [
      "aufklaerung"
     ]
@@ -14520,7 +14520,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "00d80edac6851f00d8b55f0fd8926ba129fb524f4265a0159c56b28cafe22a13"
+   "output_sha256": "be6a89fd7d47b92a4ccf3ec2ac2675e819a742a03c763e9a063bd7914392771a"
   },
   {
    "id": "dc_b_hofspaeher_265",
@@ -14590,15 +14590,15 @@
    "type": "Einheit",
    "nation": "Orthea",
    "rarity": "bronze",
-   "source_record_sha256": "ad8d7eec2ee7eb11975c56e592ddc93a9149f7d52c65de8e002b882097ab04d5",
+   "source_record_sha256": "d1ec436582e442cc849c5142b7c3a6568d4298e6fe917a90310dd5a36107e7b3",
    "kurz": "Beim Ausspielen: markiere 1 Feind als beobachtet.",
    "keywords": [
     "Fernschuss"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 1,
-    "def": 2,
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
     "tags": [
      "aufklaerung"
     ]
@@ -14613,7 +14613,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "533d3f6a3562b5ed6260b7885991d88b4684ecd3eab6b4a8ab312605bc769915"
+   "output_sha256": "2e257c2706fd79556539f54dd27282c4b17a4246909fd3b30484d6b530f537d7"
   },
   {
    "id": "dc_b_lokalisierer_444",
@@ -15491,7 +15491,7 @@
    "type": "Einheit",
    "nation": "Dargan",
    "rarity": "silver",
-   "source_record_sha256": "a8702ebe3f645c587ee4478764de1245b294206ff9adf5f1e4693643085523bd",
+   "source_record_sha256": "a53f45ddb11c980f2f6eaf67d695194facc91569f40df93c187fffd119c7fb6a",
    "kurz": "Ihr erster Angriff nach dem Ausspielen hat +1 ATK.",
    "keywords": [
     "Zuteilung",
@@ -15499,8 +15499,8 @@
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 5,
+    "atk": 2,
+    "def": 6,
     "tags": [
      "elite"
     ]
@@ -15515,7 +15515,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "0386e3dfbaa8dfed7db7b9760dc387962d344c93daad6b7c11891041a60d70ed"
+   "output_sha256": "4bca0d89a7677d5842c7a1214a27e8a314dfeafc115041e81e4873968f7d516f"
   },
   {
    "id": "dc_b_haus_still_929",
@@ -15835,7 +15835,7 @@
    "type": "Einheit",
    "nation": "Steinmark",
    "rarity": "silver",
-   "source_record_sha256": "063dfa2c6c41034597a96cf3a9c7d175a33474493d61188c70bcdfb171fefd25",
+   "source_record_sha256": "9ae52ddccaa0a0ff26f84aa54272427045c55f7805798cb418bc058ff11e3d7f",
    "kurz": "Der erste Schaden je Zug sinkt um 1.",
    "keywords": [
     "Sicherung",
@@ -15843,8 +15843,8 @@
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 2,
+    "def": 5,
     "tags": [
      "elite"
     ]
@@ -15859,7 +15859,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "6a6ca1351a4bf772d448967f6533fd8785bbb40b57b857e37023a0a1e5387a51"
+   "output_sha256": "80bac4b512926932f2522ef2d849f7302580696a83ae481868cce767530b79e3"
   },
   {
    "id": "dc_b_konrad_berst_568",
@@ -15899,7 +15899,7 @@
    "type": "Einheit",
    "nation": "Steinmark",
    "rarity": "gold",
-   "source_record_sha256": "7b50ad897c8dddb412e4c18881350b9de74cb94186ff9790d6f290b1ec5a8793",
+   "source_record_sha256": "22dc0fcf33ee5b250269b847a53fef10065563baa52a17c24e6c15a0af4492a2",
    "kurz": "+1 ATK gegen beobachtete Ziele.",
    "keywords": [
     "Sicherung",
@@ -15907,8 +15907,8 @@
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 5,
+    "atk": 5,
+    "def": 4,
     "tags": [
      "elite"
     ]
@@ -15923,7 +15923,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "dc7df725e57225d64db928581094aa359147f56f7120e41f6fb4631d46c43227"
+   "output_sha256": "2d346350e4d9178f5ac2c2442ca61d9eeb63068399049c17f8f91dea73e0090a"
   },
   {
    "id": "dc_b_ada_mar_507",
@@ -15931,7 +15931,7 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "silver",
-   "source_record_sha256": "d3140629612382e7fe61cff7486c331d31ad6c1962a21ace7b0810605681181c",
+   "source_record_sha256": "5779408295ac5467d6db58839f3adcceee89d94cd4668410a1796275cfe45379",
    "kurz": "Beim Ausspielen: heile 1 DEF an deiner am stärksten beschädigten Einheit.",
    "keywords": [
     "Heranführung",
@@ -15939,8 +15939,8 @@
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 4,
+    "atk": 2,
+    "def": 5,
     "tags": [
      "elite"
     ]
@@ -15955,7 +15955,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "7a466c9c3e0f3e01b49b2984d2a4b3031555c4351eb5a0f05802a228c2f69aa4"
+   "output_sha256": "165ffe36a95b314fe5e201f30fcdd21ac6d162b99fed1f9eb335fd51dd1aad43"
   },
   {
    "id": "dc_b_ren_zoll_508",
@@ -15963,7 +15963,7 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "4658603d253ce5ed2f635385d2fa92c85ef947a013142b38ebbaab4368417043",
+   "source_record_sha256": "eb495fe2941f93f76b314ef1a7ea9df8fad70259c9918b33ef91914405fd463c",
    "kurz": "Der erste Schaden je Zug sinkt um 1.",
    "keywords": [
     "Zuteilung",
@@ -15971,8 +15971,8 @@
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 4,
+    "def": 2,
     "tags": [
      "elite"
     ]
@@ -15987,7 +15987,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "912accc957077e9bde29eaa477e203d9647243c562ae9908bc78e22538e34af4"
+   "output_sha256": "d98c43e641a318b38118cafccf53666efcd86e8ab1dc2022e15acb50c01b03d0"
   },
   {
    "id": "dc_b_hafenmeister_509",
@@ -16085,7 +16085,7 @@
    "type": "Einheit",
    "nation": "Lyr",
    "rarity": "gold",
-   "source_record_sha256": "8aa68f41449b7fba2c319d990c3402bea381dbbfb16420a0a1f6f92cb4c3506a",
+   "source_record_sha256": "31d04a75e23e20a43c6742dd8d5667e41d2aeafc72b61037e7a814e784810618",
    "kurz": "",
    "keywords": [
     "Durchschlag",
@@ -16093,8 +16093,8 @@
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 5,
+    "atk": 3,
+    "def": 6,
     "tags": [
      "elite"
     ]
@@ -16109,7 +16109,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "26b22aa01b9561525c9125e3391c5b1f20f76d07977a4dd4a4ead556b0cd4517"
+   "output_sha256": "07e6b44b63f6f5e145de9da5e6b0482b797e3e6786cb48b68be072d039224d70"
   },
   {
    "id": "dc_b_alm_ser_327",
@@ -16392,11 +16392,11 @@
    "type": "Unterstützung",
    "nation": "neutral",
    "rarity": "bronze",
-   "source_record_sha256": "1620e1709c54d45f6591c40e10e2683a4b0cda4dfedb523a80bde35e7484d043",
+   "source_record_sha256": "764e0b2c83d04cdc5cdbe9469d98c926be73da6d9b5db09e89d72ee49560f48b",
    "kurz": "Eigene Infanterie kostet 1 AP weniger (mind. 1).",
    "keywords": [],
    "printed_stats": {
-    "ap": 2,
+    "ap": 3,
     "atk": null,
     "def": null,
     "tags": [
@@ -16414,7 +16414,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "f870d193ef6371ed0476d42ec97a2a8cc541ecf38eaef41c7edb20ba1d8e5ce9"
+   "output_sha256": "e8c45a4713afefbc87f118c9bcd291f0c566b1780fe356bc6058d764591d7c6e"
   },
   {
    "id": "dc_su_feldprediger",
@@ -16452,11 +16452,11 @@
    "type": "Unterstützung",
    "nation": "neutral",
    "rarity": "bronze",
-   "source_record_sha256": "c7df9a09a4ee18397a13f877df3d5056e240d3202c54b583206e71c4782283b7",
+   "source_record_sha256": "bc1450879a676690a128ff3bc8353d8a81984bf5289254cdbc7e0a9e364db71a",
    "kurz": "Wähle beim Ausspielen einen Abschnitt: eigene Infanterie dort +1 DEF.",
    "keywords": [],
    "printed_stats": {
-    "ap": 3,
+    "ap": 2,
     "atk": null,
     "def": null,
     "tags": [
@@ -16474,7 +16474,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "7f28d31004dc10c307474d0bd03e4e00459e86fedcb323a9ec328bd3c78f75db"
+   "output_sha256": "31dd5abbf26bb1b07d485e17c8a2c4642202b34bb1f162ffdce83ecf11f650ca"
   },
   {
    "id": "dc_su_artillerie",
@@ -21305,11 +21305,11 @@
    "type": "Soforteinsatz",
    "nation": "neutral",
    "rarity": "bronze",
-   "source_record_sha256": "41a437c87404c6952a48c88637ca88aa7248387d127f5a9cec77fd9346ecdf54",
+   "source_record_sha256": "8df5cda8edb932718bc465d7a85142430a9ccca44a7aaadaf11c39933b0c9739",
    "kurz": "Ziehe eine Infanterie. Du darfst sie in diesem Zug spielen.",
    "keywords": [],
    "printed_stats": {
-    "ap": 1,
+    "ap": 2,
     "atk": null,
     "def": null,
     "tags": [
@@ -21327,7 +21327,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "5d2aa00b0ee5ec65259d2240129506921b705241c1a716ef4e15eb7dcaee04a7"
+   "output_sha256": "0c2627f8a85012ce473315ca7e0b444df33a12e8842a913aa15b80e71d318475"
   },
   {
    "id": "dc_so_blutzeuge",
@@ -32864,14 +32864,14 @@
    "type": "Einheit",
    "nation": "Steinmark",
    "rarity": "bronze",
-   "source_record_sha256": "a0a7621569cd19936e0f2d0f306a8c313b2ea97c38234d5589f1966993d5fac2",
+   "source_record_sha256": "06cb537016562060808b698be0e5d5a5f5cfe8eaea2c75f4cb715116e4c2c484",
    "kurz": "",
    "keywords": [
     "Heranführung"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 2,
+    "ap": 3,
+    "atk": 4,
     "def": 2,
     "tags": [
      "einheit",
@@ -32888,7 +32888,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "15658d894afa4251d9dc90208c08ad30f8eaaf9165ba99d7c0a982aebf607eb6"
+   "output_sha256": "1c5ede43a297a8ac7f8880ea10e054dac7cf6f31be5ff0af45848fde50a197c2"
   },
   {
    "id": "dc_np_steinmark_normschuetzen",
@@ -34124,13 +34124,13 @@
    "type": "Einheit",
    "nation": "Eldran",
    "rarity": "bronze",
-   "source_record_sha256": "9be79fede9cd67c3dd0286b25b66c371cdd22a3854b8f28d711bd8d25390a8b6",
+   "source_record_sha256": "529762a774610303487b75a1d1b749c3454d9471ec98ea2b4e32f75c531fd59d",
    "kurz": "Benachbarte eigene Infanterie +1 DEF.",
    "keywords": [],
    "printed_stats": {
-    "ap": 2,
+    "ap": 3,
     "atk": 1,
-    "def": 2,
+    "def": 4,
     "tags": [
      "einheit",
      "infanterie"
@@ -34146,7 +34146,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "1ae22b08ed1aad06edbfd043b265a4d8b1d8e57c0dbcbea2e357f271e43d2bf0"
+   "output_sha256": "b878b175bff924a441f47c57f666b286753e1ecb7ea01bbd4c520b7873d48220"
   },
   {
    "id": "dc_np_eldran_sperrzug_weissdorn",
@@ -34280,15 +34280,15 @@
    "type": "Einheit",
    "nation": "Eldran",
    "rarity": "bronze",
-   "source_record_sha256": "45905abf25e104ff8b17b0f7acdd8526233fb65ea3ce6868c6e6be39dfffdd61",
+   "source_record_sha256": "5666d8724a4989696abefc1857c7e2278cb77d59a0fd29ebfea9b6abcc30cd73",
    "kurz": "",
    "keywords": [
     "Abschirmung"
    ],
    "printed_stats": {
-    "ap": 3,
+    "ap": 2,
     "atk": 3,
-    "def": 3,
+    "def": 1,
     "tags": [
      "einheit",
      "panzer",
@@ -34306,7 +34306,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "02362dc5227d311324e0c94d7fac34b21f76a7557e2a221af270e4877d3bf767"
+   "output_sha256": "410dcab3dde41f0c6d2ac1b9e0050b16020ef9e7c2722d24ed966df57aa04c24"
   },
   {
    "id": "dc_np_eldran_kronwagen_wacht",
@@ -34348,15 +34348,15 @@
    "type": "Einheit",
    "nation": "Eldran",
    "rarity": "gold",
-   "source_record_sha256": "a57255051ad3897f5cbf78eba433fa20dce296e7bc446441fbbd774268a34af4",
+   "source_record_sha256": "f2457d1872c472530fc8fadd438229535842b9622a2f0f877487c2e277eb3e1f",
    "kurz": "",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 5,
-    "atk": 5,
-    "def": 4,
+    "atk": 6,
+    "def": 3,
     "tags": [
      "einheit",
      "panzer",
@@ -34374,7 +34374,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "03efd4275b641c866896739c2e944c191be5a1413a26f2ccfc89d97c42d301a9"
+   "output_sha256": "8bf13e91e3e4c9f8583be6a8b46160cd2a5f5f4cfa5e17dff1e0f97272f66f80"
   },
   {
    "id": "dc_np_eldran_bollwerkwagen",
@@ -34545,13 +34545,13 @@
    "type": "Einheit",
    "nation": "Eldran",
    "rarity": "silver",
-   "source_record_sha256": "6ff2965d80f92cb5de0e9e2b1effb9807e008804e97281581397176bef2bb1c2",
+   "source_record_sha256": "fa6f780470894fc5c03192a7a81ceefc7f0d78282be45df639479f9405842184",
    "kurz": "Steilfeuer II.",
    "keywords": [],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 2,
+    "atk": 5,
+    "def": 1,
     "tags": [
      "einheit",
      "steilfeuer-ii",
@@ -34568,7 +34568,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "12cd4e04eebde4533fc85a50799b8bc512786922b01010bbeb49c45f58a75cb0"
+   "output_sha256": "0d46675a36a56f8660f48be8984d19d55ab4ed6003732ff76d12219fa6609886"
   },
   {
    "id": "dc_np_eldran_kronarsenal",
@@ -34610,14 +34610,14 @@
    "type": "Einheit",
    "nation": "Eldran",
    "rarity": "bronze",
-   "source_record_sha256": "2221855354a4fd7c8db6c16720cbb08c9202f2385f1cb69993e029a36033a65d",
+   "source_record_sha256": "9b641a70e078422c3ee464e1991155b244a42538a78cab53518f3de150598acf",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
    "keywords": [
     "Zuteilung"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 2,
+    "ap": 3,
+    "atk": 4,
     "def": 2,
     "tags": [
      "einheit",
@@ -34634,7 +34634,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "b084f5502aa8118000ab991a9adf7e662aee2a5df3aa9eba1eebc8e46148044b"
+   "output_sha256": "7dbcfabaf15c8338620a92ff9728f9d83526ec4341b33bd078f42acf3d32beed"
   },
   {
    "id": "dc_np_eldran_wachtturmposten",
@@ -34674,12 +34674,12 @@
    "type": "Einheit",
    "nation": "Eldran",
    "rarity": "silver",
-   "source_record_sha256": "b8100fa1b7c003dcf400d271b9708237bef588c7514e15503a92e884dd330cf5",
+   "source_record_sha256": "f7c6bdbcc3b07e910c220409f16b4d9830d5b1e1ec2a8b2a3abfb74977810c71",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
    "keywords": [],
    "printed_stats": {
-    "ap": 2,
-    "atk": 2,
+    "ap": 3,
+    "atk": 4,
     "def": 1,
     "tags": [
      "einheit",
@@ -34696,7 +34696,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "28ab57c65e6eb36e029716a07d7d37ac84476d785aa94351c58738fd2e302e14"
+   "output_sha256": "1cf8fc28ce78bd02bd0becbc9620aecf2aa47a0fbe6cad368b2139a3ac62dfaa"
   },
   {
    "id": "dc_np_eldran_garde_der_kontinuitaet",
@@ -34704,15 +34704,15 @@
    "type": "Einheit",
    "nation": "Eldran",
    "rarity": "silver",
-   "source_record_sha256": "1dc352783c5e08333d592aef5904eec26270b6da8593491b184049f0a9159ce8",
+   "source_record_sha256": "7fd555ed55a7556132571db7efc595f2a82e5ea9a57fe952182970f1f43d7e48",
    "kurz": "Benachbarte eigene Fronteinheiten +2 DEF.",
    "keywords": [
     "Überlast"
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 3,
-    "def": 4,
+    "atk": 2,
+    "def": 5,
     "tags": [
      "einheit",
      "elite",
@@ -34729,7 +34729,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "134cbe924bcb588a957f04c17d63a1e5766f0b7119902c7c5e4a61d7d8f3e608"
+   "output_sha256": "ff7dc307408c84ccadc9420077ff77c2957028fdadd7ae2dd4a806ac06e49dd7"
   },
   {
    "id": "dc_np_eldran_marschall_des_hauses",
@@ -36675,15 +36675,15 @@
    "type": "Einheit",
    "nation": "Averon",
    "rarity": "silver",
-   "source_record_sha256": "f643429cdf0e5db4888e4c2941975f8c3f2325801c77f81e05c0d8494ce4e677",
+   "source_record_sha256": "891a8f14815818821ec57149c536df3a0b5f04ce7cab8d368ec1fe73af6ce47b",
    "kurz": "",
    "keywords": [
     "Platztausch",
     "Absetzen"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 3,
+    "ap": 3,
+    "atk": 5,
     "def": 1,
     "tags": [
      "einheit",
@@ -36700,7 +36700,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "a2b71a99177be5d43c8b6657cf5103462025bd80740e071a7cee172937201b05"
+   "output_sha256": "d5baeb6b6e71a208739eda4858be84fe067baad62e7a69abc2b34558a593eb22"
   },
   {
    "id": "dc_np_averon_buergerwehr_averon",
@@ -36772,7 +36772,7 @@
    "type": "Einheit",
    "nation": "Averon",
    "rarity": "bronze",
-   "source_record_sha256": "245f3f5a82c8f32644c774b9181232ebe33e9310ae18177978c92b51142b1977",
+   "source_record_sha256": "df71f31441cce30f68cb87706d98e3144e0713054f047601ade6b24debfdb4e6",
    "kurz": "",
    "keywords": [
     "Überlast",
@@ -36780,8 +36780,8 @@
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 5,
+    "def": 1,
     "tags": [
      "einheit",
      "panzer",
@@ -36799,7 +36799,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "4d0871170c557a4bfdce7381ec2221a94163ebac3b2d18e81f96248bef2c98b8"
+   "output_sha256": "75bc6657d831da02b7d275c05250e6faeeaae104c6b52f8342cbc102403adfa3"
   },
   {
    "id": "dc_np_averon_funkpanzer",
@@ -36807,15 +36807,15 @@
    "type": "Einheit",
    "nation": "Averon",
    "rarity": "bronze",
-   "source_record_sha256": "83b0b636e8e4779da2d281f0220b288e1918ebbd8fd48062ca4e43d58920af00",
+   "source_record_sha256": "baaf337bd6dda131e6873f8e7841e869086d4256978154c2ef32cce0c6722b5b",
    "kurz": "",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 2,
-    "def": 5,
+    "atk": 1,
+    "def": 6,
     "tags": [
      "einheit",
      "panzer",
@@ -36833,7 +36833,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "a47254de84ac2d619190e54556ee3c890c2405b711d6211daf935ccb7ad805a4"
+   "output_sha256": "4fd7de5669865db25fe2a66ba41c9ffeeb573f3c09ebf0d321508d0ed3070b3a"
   },
   {
    "id": "dc_np_averon_zeitkeil",
@@ -36841,15 +36841,15 @@
    "type": "Einheit",
    "nation": "Averon",
    "rarity": "silver",
-   "source_record_sha256": "2036ff83e28a0712047b77b5c99fd5973a856dc2ea1283570e44f9e468e26e54",
+   "source_record_sha256": "4a28eed47beadd2718998af3a8fa834f9331b92773f1d682e35e822a2b463c66",
    "kurz": "",
    "keywords": [
     "Gefechtsbereit"
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 4,
+    "atk": 2,
+    "def": 6,
     "tags": [
      "einheit",
      "panzer",
@@ -36867,7 +36867,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "d3cf8cc5f04329798bd61669818710c93758ecd5e8688a574df5f236073845ae"
+   "output_sha256": "e1ed557145cd6fa902278b3f3817dabc37cbfdd0df8457a0b52f53ac59a0c807"
   },
   {
    "id": "dc_np_averon_aufklaerungsspaehwagen",
@@ -37204,16 +37204,16 @@
    "type": "Einheit",
    "nation": "Averon",
    "rarity": "silver",
-   "source_record_sha256": "70f6f517588534024fe6230566be7a83da4348490237d1d9ab12a1cad92a59ae",
+   "source_record_sha256": "8f6bc1d4ec216d1dbdb825a944dde22acb0be76ef093e3e515d84ab679063068",
    "kurz": "",
    "keywords": [
     "Erbitterung",
     "Absetzen"
    ],
    "printed_stats": {
-    "ap": 4,
-    "atk": 4,
-    "def": 4,
+    "ap": 5,
+    "atk": 5,
+    "def": 5,
     "tags": [
      "einheit",
      "elite",
@@ -37230,7 +37230,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "91212dfbc54a8153efb7c506b6b4c6f3108285936843a4f993725f2a18089168"
+   "output_sha256": "78637d5ea7a57ca37fa6d79dbca692062303c0be56d9d40270de650df6d80a05"
   },
   {
    "id": "dc_np_averon_gebundene_verbindung",
@@ -37947,14 +37947,14 @@
    "type": "Einheit",
    "nation": "Orthea",
    "rarity": "bronze",
-   "source_record_sha256": "def064d00baf4c5cee76471d74a3b3b88b324b5ff37d2ddd45018f70fd5dfc44",
+   "source_record_sha256": "37cf5ac520e69b494c904e7311a1bb7a70168193c9d3185e8ee3287212741da3",
    "kurz": "",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 2,
+    "ap": 3,
+    "atk": 4,
     "def": 3,
     "tags": [
      "einheit",
@@ -37971,7 +37971,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "603da1b9085a09a82411bf9cfdc48114084b239745590c186db4d6dede53b86f"
+   "output_sha256": "554770ea2bdfa8b1d7107dfc587742f7bcd8e1c419856259a1bb04c96f66a723"
   },
   {
    "id": "dc_np_orthea_messpanzer",
@@ -38045,14 +38045,14 @@
    "type": "Einheit",
    "nation": "Orthea",
    "rarity": "bronze",
-   "source_record_sha256": "de5884220227dfeaf45e9494171475b3a3c3f0d18d7235dd90812dca0f182bb8",
+   "source_record_sha256": "7f34fd0fcdbbeeb7ce634d3b9d01e7ee3f94aec3f0fb883c34131ea8d7faadb1",
    "kurz": "",
    "keywords": [
     "Gefechtsbereit"
    ],
    "printed_stats": {
-    "ap": 3,
-    "atk": 3,
+    "ap": 2,
+    "atk": 1,
     "def": 4,
     "tags": [
      "einheit",
@@ -38071,7 +38071,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "4901aeb26dcad4559d7554703eaeba61a45e5752232fb8364d9be195aaff4294"
+   "output_sha256": "57523c5b70fc10330d6be2129a8d133e20152392e75f8f22b897ed57bfa90931"
   },
   {
    "id": "dc_np_orthea_feldversuch_kette",
@@ -38213,15 +38213,15 @@
    "type": "Einheit",
    "nation": "Orthea",
    "rarity": "bronze",
-   "source_record_sha256": "2d2cfeafbf9746548f3bf0c606519ce1d8e36b1ce7a734a917b81739cc026c13",
+   "source_record_sha256": "30fd274fc1413facc4b02014ff8f18fc736167b83036354dea8ea6aae6198852",
    "kurz": "Steilfeuer I.",
    "keywords": [
     "Fernschuss"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 2,
-    "def": 1,
+    "ap": 3,
+    "atk": 3,
+    "def": 2,
     "tags": [
      "einheit",
      "steilfeuer-i",
@@ -38238,7 +38238,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "2249823e27c23480103a921a46795a1ea64002b2bfd99166d5b2f920011ccca9"
+   "output_sha256": "bbfd74449e2eaba85c92a73a1a82882b2d514cb6d57a8128ee53babb51d59ac4"
   },
   {
    "id": "dc_np_orthea_zielrechnungsrohr",
@@ -39412,16 +39412,16 @@
    "type": "Einheit",
    "nation": "Vesper",
    "rarity": "bronze",
-   "source_record_sha256": "788d2a08e2f03816a50b6dfd9a5e81f5228cf7c1052968308924d7d842881fb2",
+   "source_record_sha256": "4db6463967f68cf87fcc7b4feefd0240331370be7bd446016183bab36b40cbae",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Hinterhalt",
     "Absetzen"
    ],
    "printed_stats": {
-    "ap": 3,
-    "atk": 2,
-    "def": 4,
+    "ap": 2,
+    "atk": 1,
+    "def": 3,
     "tags": [
      "einheit",
      "steilfeuer-ii",
@@ -39438,7 +39438,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "6a13af16456f263ebe8fcf05c13e9509fa7e72ab4666f7287289bc15391420b7"
+   "output_sha256": "6fa22163109c9321ecddb53db4fb9e5f91ea5e58b9c396c1e4c614c2bce44e6a"
   },
   {
    "id": "dc_np_vesper_systemmoerser",
@@ -39608,16 +39608,16 @@
    "type": "Einheit",
    "nation": "Vesper",
    "rarity": "bronze",
-   "source_record_sha256": "0a99523c35099f08b91de45ba90758882488967934b19ee1d7abc925031dbb47",
+   "source_record_sha256": "06959ab993d14808ecb5d82a685d9f0a6de94a1c435d3541eb9e614b1051e67e",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
    "keywords": [
     "Platztausch",
     "Absetzen"
    ],
    "printed_stats": {
-    "ap": 2,
+    "ap": 3,
     "atk": 1,
-    "def": 3,
+    "def": 5,
     "tags": [
      "einheit",
      "aufklaerung"
@@ -39633,7 +39633,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "c59ba9b7bf3c5b89dc2bc1c7121ed218977b1ced59023721e24a6a95e5e51e89"
+   "output_sha256": "ae0b82d4750f1fcc31af3fbf1760bc63e8c69e0663a48d9c2473837e734d2006"
   },
   {
    "id": "dc_np_vesper_spielmeister",
@@ -40384,15 +40384,15 @@
    "type": "Einheit",
    "nation": "Karsk",
    "rarity": "silver",
-   "source_record_sha256": "d08c161e2708eb4c9828e49c747fc39d8186b0593ced9759e83d5681f4fefe82",
+   "source_record_sha256": "4df382d35253d8d302ed236beb97874b7dc01c2fc3bab805ef27f3efcd6e289f",
    "kurz": "Angriffe gegen Infanterie: +2 Schaden.",
    "keywords": [
     "Nachsetzen"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 4,
+    "def": 2,
     "tags": [
      "einheit",
      "infanterie"
@@ -40408,7 +40408,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "b166dc50175f6215123cce2a0393c813e011d9e466bd15a798a4de3da7383830"
+   "output_sha256": "623c1f417cf9f00554c095e713fd381276199da50598e0542b94fd2213353dc9"
   },
   {
    "id": "dc_np_karsk_ausfallreserve",
@@ -40580,15 +40580,15 @@
    "type": "Einheit",
    "nation": "Karsk",
    "rarity": "bronze",
-   "source_record_sha256": "c227137ec86d84458fc6df29bc89fcf83e8f43ef7bcedc56d277e32173456dfe",
+   "source_record_sha256": "5cfc42bddb13eb732cfe8e5bfb50ce4484542143e1ff56976ac1315f5865cc30",
    "kurz": "",
    "keywords": [
     "Gefechtsbereit"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 4,
-    "def": 3,
+    "atk": 5,
+    "def": 2,
     "tags": [
      "einheit",
      "panzer",
@@ -40606,7 +40606,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "9a592636a8dc61a041ec3bb93abace76a22c68868992002e1720a88ccfeb3e5a"
+   "output_sha256": "9c8a61d2e11dd039313e29ef7b03e99b2ee33afcd69b7609a68e156dcbe479ba"
   },
   {
    "id": "dc_np_karsk_oeffnungsbatterie",
@@ -40803,13 +40803,13 @@
    "type": "Einheit",
    "nation": "Karsk",
    "rarity": "bronze",
-   "source_record_sha256": "e25d2e6a6644fb3cf1017ed303c52736e1928277f7b439123d81ad16abc99bd8",
+   "source_record_sha256": "da0d0aa339ab77ecf396a4605db20e8f23da2c300e9715816abd418eb6b4af33",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
    "keywords": [],
    "printed_stats": {
-    "ap": 3,
+    "ap": 4,
     "atk": 2,
-    "def": 4,
+    "def": 5,
     "tags": [
      "einheit",
      "aufklaerung"
@@ -40825,7 +40825,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "76b5c12a093405c452f24dfa5d69495915704b3cea705a39ce1849c4af800b0a"
+   "output_sha256": "206a0a4b9bb17259666a7d9c28eda07f5d9aca56353157c823c07b6c41bcb575"
   },
   {
    "id": "dc_np_karsk_stosslotse",
@@ -40833,15 +40833,15 @@
    "type": "Einheit",
    "nation": "Karsk",
    "rarity": "silver",
-   "source_record_sha256": "828ee447a0c2f71215e4e274bec9f1c827a17e07e85f3a9ead6cd0e98dd919a8",
+   "source_record_sha256": "87add38c2fd3faff0865ef579bfab7af0707a33fb4452a63a38ad7b01fec714a",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "atk": 1,
+    "def": 4,
     "tags": [
      "einheit",
      "aufklaerung"
@@ -40857,7 +40857,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "f62c729b2c1dadacede34138198a679d123d752562ce532ecaf4fbebd65a28eb"
+   "output_sha256": "70e359f86196ee4b17cd1e9b1754164f29a7cb45b270a201284ec2be4abedd8e"
   },
   {
    "id": "dc_np_karsk_letzter_stoss",
@@ -41540,15 +41540,15 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "a6365d70e9b7aa1be85ac7fba44081007555eceecaedebeff2b6c34236a9813d",
+   "source_record_sha256": "3a9f336d7a7befe9207dfdd709b484441a7df0c43156a79884147ea3e332c8e0",
    "kurz": "",
    "keywords": [
     "Zähigkeit"
    ],
    "printed_stats": {
-    "ap": 2,
+    "ap": 3,
     "atk": 1,
-    "def": 3,
+    "def": 5,
     "tags": [
      "einheit",
      "infanterie"
@@ -41564,7 +41564,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "b37f40eed6dd08cf0007b58c4eda9f7bd4d78b29980032388902b91ae41cbaca"
+   "output_sha256": "5f34c11a6858d3eb12c362118e2986c8d141f262583e12d9f191c69e5be3ccb1"
   },
   {
    "id": "dc_np_caldris_schildtraeger",
@@ -41768,14 +41768,14 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "bfb0448b93f5d23408578835bdacf9791ce8b0dbd1caa7e26c91cbc83b6e155a",
+   "source_record_sha256": "09623d91da5fe919245b3a29788551cd27ea607328f827c6734785e3b66210c4",
    "kurz": "",
    "keywords": [
     "Zähigkeit"
    ],
    "printed_stats": {
-    "ap": 3,
-    "atk": 2,
+    "ap": 4,
+    "atk": 3,
     "def": 3,
     "tags": [
      "einheit",
@@ -41794,7 +41794,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "54199f755e68051aed1f6efc6d745c7611d560791dc96f43be216321cd912cbf"
+   "output_sha256": "2c77a5c300b2d31ff1fc322232edeb15903c190f0e0b8db22c610e071e0fa1f1"
   },
   {
    "id": "dc_np_caldris_bergepanzer_caldris",
@@ -41869,13 +41869,13 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "655a6bc21510209bace9bc9596c4305f1521bb6d45d920ce9a0f558ed7edd971",
+   "source_record_sha256": "a982cae0840157ad94f16299c5d48864545e82c02fb7b715c8f6cf3f125e1657",
    "kurz": "Steilfeuer I.",
    "keywords": [],
    "printed_stats": {
-    "ap": 2,
+    "ap": 3,
     "atk": 1,
-    "def": 1,
+    "def": 3,
     "tags": [
      "einheit",
      "steilfeuer-i",
@@ -41892,7 +41892,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "34184aa20b2eaca651aafc292f7b51567bcd1d4f0bed80da28783087117a0f3d"
+   "output_sha256": "c5f0a39b635873313223c7254efbe93fda4c3864ed4dbc7073db4004d39c10c2"
   },
   {
    "id": "dc_np_caldris_defensivbatterie",
@@ -41931,14 +41931,14 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "bronze",
-   "source_record_sha256": "60850e90711967675fc45aba70d2e57dc6d11a35985c1fc109ad05be0a52fe5a",
+   "source_record_sha256": "cb96aef1c0bf4a3514ea2d51a1e56898585d5745f9c5291db442dc5e9e8672af",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Nachsetzen"
    ],
    "printed_stats": {
-    "ap": 4,
-    "atk": 3,
+    "ap": 5,
+    "atk": 5,
     "def": 3,
     "tags": [
      "einheit",
@@ -41956,7 +41956,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "53181ed1633cf68af2ac05f1953da1246da1dd0a2e92f18a978dd0806de26d36"
+   "output_sha256": "2666ea66abef8693fc233d8f4c9f6375f4ab9b7986411d02c70788f1f4573bce"
   },
   {
    "id": "dc_np_caldris_schlag_nach_der_genesung",
@@ -41964,16 +41964,16 @@
    "type": "Einheit",
    "nation": "Caldris",
    "rarity": "gold",
-   "source_record_sha256": "f7ef7fc94bcf45cbb1f79ed578817d0d2a86dd450e27b96cc942ab6153f59506",
+   "source_record_sha256": "d3d718fa199dfe8c3d5946ee37cd0ff8404902725e97da4266892a012d5a87c3",
    "kurz": "Steilfeuer IV: ganze Front.",
    "keywords": [
     "Zuteilung",
     "Fernschuss"
    ],
    "printed_stats": {
-    "ap": 5,
+    "ap": 4,
     "atk": 4,
-    "def": 4,
+    "def": 2,
     "tags": [
      "einheit",
      "steilfeuer-iv",
@@ -41990,7 +41990,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "0d193b822930da864dd33a9317decc20d7cbb614b5bb9f1e4df620d9f755f26d"
+   "output_sha256": "5a6457574345afabfc98f805f7001708330c50e4997d0cb7fd6c5cf9858b2c7e"
   },
   {
    "id": "dc_np_caldris_biometrie_melder",
@@ -42867,15 +42867,15 @@
    "type": "Einheit",
    "nation": "Theryn",
    "rarity": "silver",
-   "source_record_sha256": "ce9f9b2a8bafbb626497189cddb91a8e6783a8b5ffc213732d3887fe1c3bfac6",
+   "source_record_sha256": "1b5872cc8515f754d2b1c960cbebbb2fc60bb6d0314bc39912ea1382f573249d",
    "kurz": "Benachbarte eigene Fronteinheiten +2 DEF.",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 2,
-    "def": 3,
+    "atk": 1,
+    "def": 4,
     "tags": [
      "einheit",
      "infanterie"
@@ -42891,7 +42891,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "b3e1ed4fdc994770a6ea6d62e6a459c57ce352a42a1103ba68536a7bc8300f2a"
+   "output_sha256": "f8223b260d73913806c378e80600f496d58fb52909bddbf90d26bf2b562c602c"
   },
   {
    "id": "dc_np_theryn_pilgerwagen",
@@ -42931,15 +42931,15 @@
    "type": "Einheit",
    "nation": "Theryn",
    "rarity": "bronze",
-   "source_record_sha256": "77842d1885e7d8d63789b3a4c56bd81e7af9309592908ec1be4bae2b3c29e972",
+   "source_record_sha256": "9d0909a84b2581bb3de27cdc9d71843e3da86bf2dacff28834269e86cab932f1",
    "kurz": "",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
-    "ap": 3,
+    "ap": 2,
     "atk": 3,
-    "def": 4,
+    "def": 2,
     "tags": [
      "einheit",
      "panzer",
@@ -42957,7 +42957,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "c94985289b90d5187e21a9ae3790f6aab863390def908fb740db2d4584c0ebe6"
+   "output_sha256": "c60501b6d6e7c2f0c884691779f12c35007b9420bc199377d6dd299c9e689d7d"
   },
   {
    "id": "dc_np_theryn_sturmwagen",
@@ -42965,15 +42965,15 @@
    "type": "Einheit",
    "nation": "Theryn",
    "rarity": "silver",
-   "source_record_sha256": "d433d053896d6ac9b683bfdfd30eec608e121dc7589401948c4aafffff47b165",
+   "source_record_sha256": "29a0c7f839e1e81242d2f889db1234528ed82a7c7a501aa2abd07c437cd0d177",
    "kurz": "",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 4,
+    "atk": 6,
+    "def": 2,
     "tags": [
      "einheit",
      "panzer",
@@ -42991,7 +42991,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "6c06e8a7a4bdb9a2c14ed351f42d84bc917082ba53ed021998402bf3b839da9c"
+   "output_sha256": "75f2e0875a017cc282d4d5e10195915447369c203774ff14ae710db4f639de0b"
   },
   {
    "id": "dc_np_theryn_reliquienpanzer",
@@ -43068,15 +43068,15 @@
    "type": "Einheit",
    "nation": "Theryn",
    "rarity": "bronze",
-   "source_record_sha256": "b81111e112d259f77ba78d17ed6df135574977a7d5560cb2955c7958f66adaac",
+   "source_record_sha256": "0aced760ec001d7970c790dd1527587a63fa04aed87f3c4bc52d4eadf756e5f6",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
-    "ap": 3,
+    "ap": 2,
     "atk": 3,
-    "def": 4,
+    "def": 2,
     "tags": [
      "einheit",
      "steilfeuer-ii",
@@ -43093,7 +43093,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "70800c8d8cc7717e726ade3a47a6be3b6c622b2f8931fd9096ab8973d4ffff73"
+   "output_sha256": "d74d08aad041f55173f4a29cdb10569f773ba4aa0eed30042904cf6b981ece45"
   },
   {
    "id": "dc_np_theryn_glockenbatterie",
@@ -43101,14 +43101,14 @@
    "type": "Einheit",
    "nation": "Theryn",
    "rarity": "bronze",
-   "source_record_sha256": "6609ff6b3d0f68b6e5ad9ea4877d57a1d3b1ec6179a8c2d3ba7643377500c2ee",
+   "source_record_sha256": "1b9b9a0373b1fdb68e971e7cb76ff2bc0b4709a6d707a17170430214de6c7001",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Nachsetzen"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 2,
+    "ap": 1,
+    "atk": 1,
     "def": 3,
     "tags": [
      "einheit",
@@ -43126,7 +43126,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "05cb76e00f7ab74498c414e306b6ff50921a1a3afaad796170dafa3c8bced664"
+   "output_sha256": "98610c37cea67fbd6ca49de63b3780e4e20f77efbdda0d2d2a4fa9d0028b700f"
   },
   {
    "id": "dc_np_theryn_wellenmoerser",
@@ -44064,15 +44064,15 @@
    "type": "Einheit",
    "nation": "Vael",
    "rarity": "bronze",
-   "source_record_sha256": "9d1455bc5643ef1a6554488f29d1cacdd0f1f625ab2a448ca3a71dab12b82a02",
+   "source_record_sha256": "d3514eafa46c329d24484c8d27071add23b6af65e9a0931758b91b41e51e6ad4",
    "kurz": "",
    "keywords": [
     "Zuteilung"
    ],
    "printed_stats": {
     "ap": 2,
-    "atk": 1,
-    "def": 2,
+    "atk": 2,
+    "def": 1,
     "tags": [
      "einheit",
      "infanterie"
@@ -44088,7 +44088,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "6b50847642477a35de150b26e9afd2c0030d47146ec63b5cd2a90b2e2a0f22c5"
+   "output_sha256": "6f77bad8f3984505ec0be29fde9d87decb38fb978f779752da98a0dec4b37801"
   },
   {
    "id": "dc_np_vael_aktionaersgarde",
@@ -44297,14 +44297,14 @@
    "type": "Einheit",
    "nation": "Vael",
    "rarity": "bronze",
-   "source_record_sha256": "5ddacfb8b84c29c7a0cbf21bda12f73ceefc1e590a3736357e39216f2a4c5766",
+   "source_record_sha256": "c2a59738e0bcb0c82e278a9cecf204ea7b5705d82b8c24358e77bce2e9113080",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Durchschlag"
    ],
    "printed_stats": {
-    "ap": 3,
-    "atk": 2,
+    "ap": 4,
+    "atk": 3,
     "def": 2,
     "tags": [
      "einheit",
@@ -44322,7 +44322,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "346fa459307ab2c4f4038a63bc4ce01c98d373b9b19f807624b2f494273b089d"
+   "output_sha256": "9c80847240bdeda2fbc95b43c59052f74feef0d4929572eaa685ad66d38d5de3"
   },
   {
    "id": "dc_np_vael_industrierohr",
@@ -44363,16 +44363,16 @@
    "type": "Einheit",
    "nation": "Vael",
    "rarity": "gold",
-   "source_record_sha256": "32338d77d9bc940acf0e34e46a31f09babd76f268b5dbbf3d9ec48eb3cd1be51",
+   "source_record_sha256": "3b5da26951d08b5e57018d1792a53968887f4aea2bf678e6544de018c050d826",
    "kurz": "Steilfeuer V: Front + Support (+2 AP).",
    "keywords": [
     "Zuteilung",
     "Staffelangriff"
    ],
    "printed_stats": {
-    "ap": 5,
-    "atk": 5,
-    "def": 3,
+    "ap": 4,
+    "atk": 4,
+    "def": 2,
     "tags": [
      "einheit",
      "steilfeuer-v",
@@ -44389,7 +44389,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "68788af83cc761f8881c339ec35727c9eacdb3985a1345716ac1008a88a223a3"
+   "output_sha256": "6714a1fbc212fdc719d554a2481f4863af70030d5e91c6755ad41436bd8d9970"
   },
   {
    "id": "dc_np_vael_munitionsmoerser",
@@ -44397,15 +44397,15 @@
    "type": "Einheit",
    "nation": "Vael",
    "rarity": "bronze",
-   "source_record_sha256": "13df30b96e166113d5a4838947db8b50b4bc1a449aaa6b84bd048caff2f03980",
+   "source_record_sha256": "2f120977a7a6725fa9b28a383d8cafa269014696472332402e1467474245ae75",
    "kurz": "Steilfeuer I.",
    "keywords": [
     "Fernschuss"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 1,
-    "def": 2,
+    "ap": 3,
+    "atk": 2,
+    "def": 3,
     "tags": [
      "einheit",
      "steilfeuer-i",
@@ -44422,7 +44422,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "b516dc4bf99e2529b836b9133249989f1790a73f7b73b49817b259983021d851"
+   "output_sha256": "c4a98502c855e2197a6c9f0ea9668b3249b071132e0a480f75024c4ed1d1a20d"
   },
   {
    "id": "dc_np_vael_feuerwalzen_rohr",
@@ -45240,15 +45240,15 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "bronze",
-   "source_record_sha256": "0223812cba760af990e85eff91b352b0f49c034db53232452bdb45903bd2ceab",
+   "source_record_sha256": "dbc50d4243646c29aa768593af5fbe13991b9d07625802c8f2ecc4760859da75",
    "kurz": "",
    "keywords": [
     "Heranführung"
    ],
    "printed_stats": {
-    "ap": 2,
+    "ap": 3,
     "atk": 1,
-    "def": 2,
+    "def": 4,
     "tags": [
      "einheit",
      "infanterie"
@@ -45264,7 +45264,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "0ea74aa740c9f0700519a41b518ace493ecf8cc9fef5c0714a3e711b961e2e6b"
+   "output_sha256": "19864242159c63df2670858c0d5a1542bcf9a8e48a855578d602cf86c1013c19"
   },
   {
    "id": "dc_np_merovan_keilhaltzug",
@@ -45403,15 +45403,15 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "silver",
-   "source_record_sha256": "f620a5f50e08cb36f02e595b6d217811462554655233601d9c2fc307795155f8",
+   "source_record_sha256": "d4fabcd09a152e0abfb3886b57488fd09dad3e33a0cacb2463244cbe72594bb9",
    "kurz": "Benachbarte eigene Fronteinheiten +2 DEF.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 3,
-    "def": 4,
+    "atk": 2,
+    "def": 5,
     "tags": [
      "einheit",
      "panzer",
@@ -45429,7 +45429,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "56d6667d7fdb0fe489182fe13c5bbf703001d20be2217167a230d986b980ee9b"
+   "output_sha256": "a77cb74e45e3118058e230266bebec73807f1dd2ee2ec76e7508d1aa22317a4f"
   },
   {
    "id": "dc_np_merovan_haltepanzer",
@@ -45471,15 +45471,15 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "bronze",
-   "source_record_sha256": "7d54d21e56757db8641eab514daba2748337a8681c2ea21aef61401bb1297cbe",
+   "source_record_sha256": "b2c3c9b9ba5fabfc7f6b2d56d2cb9fb23916b9582138a2ecdd196b2631de96f2",
    "kurz": "",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 3,
+    "atk": 6,
+    "def": 1,
     "tags": [
      "einheit",
      "panzer",
@@ -45497,7 +45497,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "893da8d22172d636f5adf5d9d10a10e893840d8c372395098d6f17123798c9f8"
+   "output_sha256": "eb19e07c6d5420d4b1d7b4f313f7135b774710f0d27db3799500f98f234a3ed9"
   },
   {
    "id": "dc_np_merovan_freigehaltene_achse",
@@ -45570,14 +45570,14 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "bronze",
-   "source_record_sha256": "fbd96b87acc2eb7a9388c649c61927cc2b72241ebfc5cf78fad7ca7d6fcf6be4",
+   "source_record_sha256": "12e31f38a4b5a2a1486b446dc4628a9a65d43403a6bb3cb4e24f08c262c9dedd",
    "kurz": "Steilfeuer I.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 2,
+    "ap": 1,
+    "atk": 1,
     "def": 1,
     "tags": [
      "einheit",
@@ -45595,7 +45595,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "2d755705b9e9fd8bc4472faa2587f64b9a5e9948346c0b189242de2ed14b5645"
+   "output_sha256": "77642bc75ddd8b17d6c2aa74c16b5f84c3034455aad95cd808200d4ee090d465"
   },
   {
    "id": "dc_np_merovan_achsenfeuer",
@@ -45795,7 +45795,7 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "gold",
-   "source_record_sha256": "863afd5ddc59d7d8991d02df9a49e42033be9a32b7318eb0df1732e65a9e8b37",
+   "source_record_sha256": "993bc3a8186f283b922bd507464f60f9df957c5f4212f9f839176439ff453a64",
    "kurz": "Benachbarte eigene Fronteinheiten +2 DEF.",
    "keywords": [
     "Abschirmung",
@@ -45803,8 +45803,8 @@
    ],
    "printed_stats": {
     "ap": 5,
-    "atk": 4,
-    "def": 5,
+    "atk": 3,
+    "def": 6,
     "tags": [
      "einheit",
      "elite",
@@ -45821,7 +45821,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "f44df146f77803b35bdfa505d05df35f581553da6e5e36a9ece762c236a72ab9"
+   "output_sha256": "42e8d040b27a3f05d16779e1ebf3360751014d3ff16740f31223ad2de1283bd3"
   },
   {
    "id": "dc_np_merovan_garnisonsaelteste",
@@ -45829,13 +45829,13 @@
    "type": "Einheit",
    "nation": "Merovan",
    "rarity": "silver",
-   "source_record_sha256": "f96a3d034d7eca4863b8c20cbb8fe90bbdb465bd5233660f4f6590b741513f99",
+   "source_record_sha256": "e49b31bc5ebc7f2bc034f4f121500630d2817a6952c86b2d81a9ce27f7820650",
    "kurz": "Benachbarte eigene Infanterie +1 DEF.",
    "keywords": [],
    "printed_stats": {
     "ap": 4,
-    "atk": 3,
-    "def": 4,
+    "atk": 4,
+    "def": 3,
     "tags": [
      "einheit",
      "elite",
@@ -45852,7 +45852,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "211e0bb1279d85dbe486adc797a61015c4376fa0cd30765a84a964cb1a3989ae"
+   "output_sha256": "884d8c8cc76ec7c29dcbe9b454682bdc0518b6e85b68cf8eebe75016947cabe2"
   },
   {
    "id": "dc_np_merovan_lebensader_merovan",
@@ -46445,15 +46445,15 @@
    "type": "Einheit",
    "nation": "Lyr",
    "rarity": "bronze",
-   "source_record_sha256": "544c907fec126e4ed4386827fb55db85a5ffa807ce9d0ece0556888f9b30a895",
+   "source_record_sha256": "e59d4503efd90b7b5c00571cf0ed8ac7151f827d8648f2bdf9774b7f3ac4f062",
    "kurz": "",
    "keywords": [
     "Gefechtsbereit"
    ],
    "printed_stats": {
-    "ap": 2,
+    "ap": 1,
     "atk": 2,
-    "def": 3,
+    "def": 2,
     "tags": [
      "einheit",
      "infanterie"
@@ -46469,7 +46469,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "0a566369e4dc45e1e706c41090cbb77cf7e1a2bd3eb82d294f60f22c5a992957"
+   "output_sha256": "f55c1bc061007edde8257edf0da1cf98ce3e348bb8201e179d9871a9b42f93be"
   },
   {
    "id": "dc_np_lyr_eidgenossen",
@@ -46775,12 +46775,12 @@
    "type": "Einheit",
    "nation": "Lyr",
    "rarity": "bronze",
-   "source_record_sha256": "6e9f03fef22eefb7eb5e01fb5157ee48b1bec79e1054c696d7ffbab627ddfae5",
+   "source_record_sha256": "7b00232e188d7ef0cd65ba2a8284d8c9153ffcca44530de7a60a082d6ca03487",
    "kurz": "Steilfeuer II.",
    "keywords": [],
    "printed_stats": {
-    "ap": 3,
-    "atk": 1,
+    "ap": 4,
+    "atk": 2,
     "def": 4,
     "tags": [
      "einheit",
@@ -46798,7 +46798,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "7a6c7f200ead925beddc0e1e661b56d4dbba810fb5f4c4f23974ef8014b575de"
+   "output_sha256": "6889168f65d77cff5add855d6e03560b82dca1aff12db471ecdfddc5c714335f"
   },
   {
    "id": "dc_np_lyr_bergmoerser",
@@ -46873,16 +46873,16 @@
    "type": "Einheit",
    "nation": "Lyr",
    "rarity": "silver",
-   "source_record_sha256": "645cff0dfd062469c3db3405572474542e909c8739fc3fa575f02f10e461a1cf",
+   "source_record_sha256": "4677cefbc8cfc72e3b03626e41bf409450f9326137f1ab64910f663895aebb68",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Hinterhalt",
     "Absetzen"
    ],
    "printed_stats": {
-    "ap": 4,
+    "ap": 5,
     "atk": 4,
-    "def": 4,
+    "def": 6,
     "tags": [
      "einheit",
      "steilfeuer-ii",
@@ -46899,7 +46899,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "267d07dbee997fad445d53ad79bdb97aa66ce5a1490508e5d42e1a2c8377e083"
+   "output_sha256": "6c714551ecc40d2f0db2b218b702d0c6e28ab6bc6b5c406b46bc9eb4ee470572"
   },
   {
    "id": "dc_np_lyr_echo_der_taeler",
@@ -46971,13 +46971,13 @@
    "type": "Einheit",
    "nation": "Lyr",
    "rarity": "bronze",
-   "source_record_sha256": "b5463e0e10ba22e1bbdfbc4f3e6149b5b3bcf1d6fc617ae07188e79a4ea13e05",
+   "source_record_sha256": "28220c53b31808c21f1dc29621e1bd1350379c77c376d34fdff566f55e47c549",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
    "keywords": [],
    "printed_stats": {
-    "ap": 3,
+    "ap": 4,
     "atk": 2,
-    "def": 3,
+    "def": 4,
     "tags": [
      "einheit",
      "aufklaerung"
@@ -46993,7 +46993,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "ccfb68a173ccf010e8e28a70b5f2e444dc5ed899d938822dba7800d1b3c88102"
+   "output_sha256": "586039f738a859578691fa551016b1bb4d481aae6a3535c9f8eb4448ea6d51fd"
   },
   {
    "id": "dc_np_lyr_talrufer",
@@ -47001,15 +47001,15 @@
    "type": "Einheit",
    "nation": "Lyr",
    "rarity": "silver",
-   "source_record_sha256": "7e3abd44173292f8f905eb019f79755fb23cc839654e9706cb40091d7a636510",
+   "source_record_sha256": "396a898df0e950f45edaed8d90aa66d063bbe9b81f73cd1993985517bbec5d27",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
    "keywords": [
     "Hinterhalt",
     "Absetzen"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 3,
+    "ap": 3,
+    "atk": 5,
     "def": 1,
     "tags": [
      "einheit",
@@ -47026,7 +47026,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "a9ebdceb8537d9dc687d460f48109fc09c3c8ab1563b48b09b38f1a4ab86aa23"
+   "output_sha256": "5dd082519426cd4cf6106bfb4cda2ab7fab799c71e6aed74118400f792611d1c"
   },
   {
    "id": "dc_np_lyr_passwache_aeltester",
@@ -47065,7 +47065,7 @@
    "type": "Einheit",
    "nation": "Lyr",
    "rarity": "silver",
-   "source_record_sha256": "8c465d77aacbb5550224d990501f8e81c5643fdb0bfb1f805359999e75a11d08",
+   "source_record_sha256": "7e49d840b919aa98e8595a2dcdb0cde9d80d660a1d4cbff5dc9c48ba9a12697c",
    "kurz": "",
    "keywords": [
     "Überlast",
@@ -47074,8 +47074,8 @@
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 4,
+    "atk": 5,
+    "def": 3,
     "tags": [
      "einheit",
      "elite",
@@ -47092,7 +47092,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "072c9cc034eb9086aa43031863586d07170eec5d4bbb6ebe028cbd7fc40b4e84"
+   "output_sha256": "4627e84b659fbb798d10466c7377dc7f854673c5bd2541726e841ad81551789e"
   },
   {
    "id": "dc_np_lyr_talbund",
@@ -47743,15 +47743,15 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "bronze",
-   "source_record_sha256": "c8611e546b864ce8f55918d4e91e2d59975587f99afa818b43ff4fe5d10bf36f",
+   "source_record_sha256": "e23aa86ae4e6c02eb2d44b2977b0dec6c84aca3cb715705e1b21fa761d4a453f",
    "kurz": "",
    "keywords": [
     "Abschirmung"
    ],
    "printed_stats": {
     "ap": 1,
-    "atk": 1,
-    "def": 3,
+    "atk": 3,
+    "def": 1,
     "tags": [
      "einheit",
      "infanterie"
@@ -47767,7 +47767,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "970f733c56df850242aa5a930e5c817599ccc65897caf59e59b1ee2c12b60784"
+   "output_sha256": "9d11323990c9c2b29361906bbc927d776f3a68947be11963c899bfac85ce3186"
   },
   {
    "id": "dc_np_ossaria_wallbauer",
@@ -47775,13 +47775,13 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "bronze",
-   "source_record_sha256": "ff7fc195f4cfa9c57bd70be0490e16ff32087a3a27d14117703122b748b4f503",
+   "source_record_sha256": "1589aa9da65e07760650f38c26a27830c7b2e873902549b29cc14b25db587cb1",
    "kurz": "Benachbarte eigene Infanterie +1 DEF.",
    "keywords": [],
    "printed_stats": {
     "ap": 2,
-    "atk": 1,
-    "def": 3,
+    "atk": 2,
+    "def": 2,
     "tags": [
      "einheit",
      "infanterie"
@@ -47797,7 +47797,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "80592dcfb645ee037232f9c7098cdcae760219cbd4d09742ca3660cf8b4f68f9"
+   "output_sha256": "0c66d83099857c3537a7d06f74496b9cc7cbdef62e929364cc42181d6ca5d79d"
   },
   {
    "id": "dc_np_ossaria_ahnenkompanie",
@@ -47805,15 +47805,15 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "silver",
-   "source_record_sha256": "9ceade37a1ee12c5b79df1d118642a8b411dacf057bbe8f46ee5772d2bc040b2",
+   "source_record_sha256": "50d3345c7d9974bf502ee5cc18103c58beee768a91c2ae0100baa2f94e42c682",
    "kurz": "Benachbarte eigene Fronteinheiten +2 DEF.",
    "keywords": [
     "Abschirmung"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 2,
-    "def": 4,
+    "atk": 1,
+    "def": 5,
     "tags": [
      "einheit",
      "infanterie"
@@ -47829,7 +47829,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "34c7a6b38ae18cead03b740e9891c420f4078bd878e9ff1a02594609ecdc21e1"
+   "output_sha256": "16c33174d7373d11bea728edc1978203da23bb2c28f847b035867d0ae031c6b7"
   },
   {
    "id": "dc_np_ossaria_plattenwagen",
@@ -47969,15 +47969,15 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "bronze",
-   "source_record_sha256": "c82847d1d8ddcd8f2a06620076a67eb5a5ac46ef3a9efa0a3e0ab430a931f9e6",
+   "source_record_sha256": "470e7db08813961ea939b75f006a4bd1fd0877326e282179b8b918508b69abc0",
    "kurz": "",
    "keywords": [
     "Abschirmung"
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 4,
-    "def": 5,
+    "atk": 3,
+    "def": 6,
     "tags": [
      "einheit",
      "panzer",
@@ -47995,7 +47995,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "4951c63411c26dc0b304ecbc5a0f8983acf7b402f459741c6ca2043d9ba4636f"
+   "output_sha256": "7abaef3439d859efacbcf0453af7e8014f8ae154c2d083ce5476ad9c608835ba"
   },
   {
    "id": "dc_np_ossaria_abnutzungsbatterie",
@@ -48003,15 +48003,15 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "bronze",
-   "source_record_sha256": "4d61dd7841e0f8cf3dba2b57451524bcc7d63d021c3a13618273c0a041ee0365",
+   "source_record_sha256": "35f1c13a0dd38937712653101fa8270d8729b47e5344dae748a9580b6e0e11e3",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Zuteilung"
    ],
    "printed_stats": {
-    "ap": 3,
+    "ap": 2,
     "atk": 3,
-    "def": 3,
+    "def": 1,
     "tags": [
      "einheit",
      "steilfeuer-ii",
@@ -48028,7 +48028,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "c183ebe9af7bc871f7e3375c3bbd8c98aa313206b3feaa73f076faa2f717fa9d"
+   "output_sha256": "b4d025e768cd28d1cdc28ccb9763da1491a3bb1f6b0e87926c2c5a891afe5f4e"
   },
   {
    "id": "dc_np_ossaria_nahdruckmoerser",
@@ -48069,13 +48069,13 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "bronze",
-   "source_record_sha256": "3e82d2c9f2f570a3bda4eb02bf67372fb7d59ae1f4f4685037968edf03d50ed7",
+   "source_record_sha256": "85438bcbcdf5726d8bbcd84cde5e7ed5bdcd4372767ca81927d55d93b2afe661",
    "kurz": "Steilfeuer II.",
    "keywords": [],
    "printed_stats": {
-    "ap": 3,
+    "ap": 2,
     "atk": 2,
-    "def": 4,
+    "def": 2,
     "tags": [
      "einheit",
      "steilfeuer-ii",
@@ -48092,7 +48092,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "716cd535fe6254467447161632335602336e69af0ef10ac65dabc0ad826baf36"
+   "output_sha256": "69f04e2d73bcdc1613b5a1d03e43ae6d082fe8ea233033f54cf5514a1985653f"
   },
   {
    "id": "dc_np_ossaria_wallfeuer",
@@ -48195,13 +48195,13 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "bronze",
-   "source_record_sha256": "5ac54417859314cd9bff43eca07302806f5c51d4c794763ae23a7de2cd2dfff9",
+   "source_record_sha256": "51109eb381f5357eeeec5a6a3a9c9fcb7c3c227202837274dbf6212b79ff40bb",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
    "keywords": [],
    "printed_stats": {
-    "ap": 3,
+    "ap": 4,
     "atk": 3,
-    "def": 3,
+    "def": 4,
     "tags": [
      "einheit",
      "aufklaerung"
@@ -48217,7 +48217,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "ec89d56ae70c1d87e33eda1f61d573b01650e9d39eb297c71c8fa581a720fceb"
+   "output_sha256": "67fe67f21c0ef7871fc07a9db7c8494cab78421197acbf253346f18a0101620d"
   },
   {
    "id": "dc_np_ossaria_zeichendeuter",
@@ -48225,15 +48225,15 @@
    "type": "Einheit",
    "nation": "Ossaria",
    "rarity": "silver",
-   "source_record_sha256": "a9c8b561e952fd60dfb8f61cfa9a66ab996ad73eaf8cb895d53a5363ad96ad60",
+   "source_record_sha256": "f29c6eb4988940eb4f196518a9326e43c9623683378217fdc0269b7d9f6d8c89",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
    "keywords": [
     "Gefechtsbereit"
    ],
    "printed_stats": {
-    "ap": 2,
+    "ap": 3,
     "atk": 2,
-    "def": 3,
+    "def": 5,
     "tags": [
      "einheit",
      "aufklaerung"
@@ -48249,7 +48249,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "8333a490e195876ab659cb73a4e20e3b359094fa3a16de4c88b602acdb1528e6"
+   "output_sha256": "fae122442c073c76fd41c53fd9f0b5198a88fd65859bf33aa8fd5fd10a59641f"
   },
   {
    "id": "dc_np_ossaria_schmied_der_erinnerung",
@@ -48875,15 +48875,15 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "a52a24a12cd43885c0300d26e25e80000cd8e3155dabb400d2920788086e5cb7",
+   "source_record_sha256": "576f55c3e1fce2581abc452d3c253ab0155c1150cc94b7b2bf57ebdb30a822ae",
    "kurz": "",
    "keywords": [
     "Heranführung"
    ],
    "printed_stats": {
     "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "atk": 4,
+    "def": 1,
     "tags": [
      "einheit",
      "infanterie"
@@ -48899,7 +48899,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "1f52ddad01859c6856b3dbb78ef763bb9c391b57bf4f8d80b4317cae9fe0f31f"
+   "output_sha256": "a2d740d6e54ab0ddc58a6e5708c8af77b6ae048cf5a05eca704e425a4d82ed34"
   },
   {
    "id": "dc_np_namar_schnelle_entsatzgruppe",
@@ -48967,15 +48967,15 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "silver",
-   "source_record_sha256": "e920bdc3dfb9a0ddd052a3b5cb07596080c194e96e00ea2e4771fdb9622a8dea",
+   "source_record_sha256": "1d05bc69103026aab2c6508e6c6f4775a004d7080d244ffdc30e77e394a9e3bd",
    "kurz": "Benachbarte eigene Infanterie +1 DEF.",
    "keywords": [
     "Ablösung"
    ],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 2,
+    "def": 4,
     "tags": [
      "einheit",
      "infanterie"
@@ -48991,7 +48991,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "bc61635b66c74330cc21f3c9e9fad442a5781c715d0a3c53539d2153c9986106"
+   "output_sha256": "7eb81a99b7577523819035a779480d061f5768992eb498df28410f35afae8ae9"
   },
   {
    "id": "dc_np_namar_schmugglerzug",
@@ -48999,15 +48999,15 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "89dc861f21a20086c3b281237092adf996842095219bd05d832ccfb11b7e1164",
+   "source_record_sha256": "7a8f3d9046980cd22414a52b8a3b5910ca7c353e4df5f31137f1f40b4aab995f",
    "kurz": "",
    "keywords": [
     "Platztausch",
     "Absetzen"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 1,
+    "ap": 3,
+    "atk": 3,
     "def": 2,
     "tags": [
      "einheit",
@@ -49024,7 +49024,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "7687b037911ae2da8e49fa91e3bf039ee23b66682b99ce9c2fe721698160fa2c"
+   "output_sha256": "4d8553f1c3fe41594d72bf80512e2af58f09f0af0be87aad0cf6ed0bfbea388c"
   },
   {
    "id": "dc_np_namar_hafenregiment",
@@ -49032,14 +49032,14 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "silver",
-   "source_record_sha256": "11e83a006a39090a5e508a1d9c4709aae8cbcd689eaa680b2704f79572856062",
+   "source_record_sha256": "a11dcbc892e28fb64bcc200f946e1813ca8e8f4c2eae7c6cf907e9be0fa8984e",
    "kurz": "",
    "keywords": [
     "Zuteilung"
    ],
    "printed_stats": {
-    "ap": 3,
-    "atk": 2,
+    "ap": 4,
+    "atk": 3,
     "def": 4,
     "tags": [
      "einheit",
@@ -49056,7 +49056,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "432ea1673af5dd58e99cda676592214269419243991acb9040b1524f48ae006a"
+   "output_sha256": "e3b914dd621376fcf75a208ee738bd3d60f8ad993d7bb59e1a614a911e956ca0"
   },
   {
    "id": "dc_np_namar_kaipanzer",
@@ -49228,14 +49228,14 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "bronze",
-   "source_record_sha256": "a911f403620cc17cd1736eab83ce0b4ee1f2c226daea13a0ac9e5537122e5d8b",
+   "source_record_sha256": "2c28b9dc94212770296e47c0fcd03f1b75106c5a345678a61ba655efcf0e71c9",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 2,
+    "ap": 1,
+    "atk": 1,
     "def": 1,
     "tags": [
      "einheit",
@@ -49253,7 +49253,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "e91ec1366f3c67441e0f01c9d5c6da5299380bf017b39536884db8e067d5cd7d"
+   "output_sha256": "7b025e0dc0bd3bf59c9860c891fe547e926bdcc108f004da730de8d7983cf25a"
   },
   {
    "id": "dc_np_namar_schiffsmoerser",
@@ -49327,15 +49327,15 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "silver",
-   "source_record_sha256": "1110a250f7219f1c90872d7c4b210402f5cd1ca45f4232f39237b4d8581371e1",
+   "source_record_sha256": "85a39d161ba5a89eafd00341e861c1d8f1621df67a7a01fd073b886e18cf5da6",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Zuteilung"
    ],
    "printed_stats": {
-    "ap": 4,
+    "ap": 5,
     "atk": 3,
-    "def": 4,
+    "def": 6,
     "tags": [
      "einheit",
      "steilfeuer-ii",
@@ -49352,7 +49352,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "538cb3ecfca4dc4c99fa3c9347ccc03ee7176286024599f59a5989c3aa599b56"
+   "output_sha256": "6e4292cf1c20c352011f3cdda2cca246799c78b46617cded4406bc75ba1d53fa"
   },
   {
    "id": "dc_np_namar_schlag_der_ankunft",
@@ -49360,7 +49360,7 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "gold",
-   "source_record_sha256": "2f8e4ef55a5d97e33912143bca9e5c3354620a67e495ee65f276fa7e9faea5bd",
+   "source_record_sha256": "c317ff8bc760651d20ba96ba2ee4b7fe22b3f53be3ab5533e88284774c0015a2",
    "kurz": "Steilfeuer IV: ganze Front.",
    "keywords": [
     "Zuteilung",
@@ -49368,8 +49368,8 @@
    ],
    "printed_stats": {
     "ap": 5,
-    "atk": 4,
-    "def": 5,
+    "atk": 3,
+    "def": 6,
     "tags": [
      "einheit",
      "steilfeuer-iv",
@@ -49386,7 +49386,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "e807a7c05f7c403ed01f12c8bb97ed693765ad20c43d1fdd53baf222ef6f2450"
+   "output_sha256": "43b436119152715dfcd14132a6b8cae1769cd873509a0edf4eeafc8fde6f40ec"
   },
   {
    "id": "dc_np_namar_hafenlotse",
@@ -49458,15 +49458,15 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "silver",
-   "source_record_sha256": "9be6c6f3354f8e821b9e377142c480becd83793ede0f76c9c5b2064b01d6ab71",
+   "source_record_sha256": "1e7910e805bd0f06839d5c17c8e57560d1195c137766acb1ca584c2c57c1b0b4",
    "kurz": "Beim Ausspielen: sieh dir 2 gegnerische Handkarten an.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
-    "ap": 2,
+    "ap": 3,
     "atk": 2,
-    "def": 1,
+    "def": 3,
     "tags": [
      "einheit",
      "aufklaerung"
@@ -49482,7 +49482,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "c5981539a68689badfd2e1f74d2e93bb9b7f3048dab48c3c76c07217e79fdc12"
+   "output_sha256": "336d858403b153fe9031ee43dd9cf665da9bcb7a18036aa4f9a2e4eb086a1a09"
   },
   {
    "id": "dc_np_namar_lieferung_trotz_allem",
@@ -49490,7 +49490,7 @@
    "type": "Einheit",
    "nation": "Namar",
    "rarity": "gold",
-   "source_record_sha256": "5956d847a7e9d89d4cc92a883211400743c650c0aa0d4a8f93e4d2df9fd0c079",
+   "source_record_sha256": "1aa21dca65a223669afcc1c159391f7a7047e961b427648bc06c4fa8a54b73f3",
    "kurz": "Benachbarte eigene Infanterie +1 DEF.",
    "keywords": [
     "Heranführung",
@@ -49498,8 +49498,8 @@
    ],
    "printed_stats": {
     "ap": 5,
-    "atk": 4,
-    "def": 5,
+    "atk": 3,
+    "def": 6,
     "tags": [
      "einheit",
      "elite",
@@ -49516,7 +49516,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "1b6a24382f345f94e220fe19188b787db0549c28ed36a4799fc91715225949f0"
+   "output_sha256": "e8dff6e9b85f6e6ff0b3ff5b5d1ba6d8122ba932dab7993bd96768bd20316915"
   },
   {
    "id": "dc_np_namar_hafenbund_garde",
@@ -50268,15 +50268,15 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "bronze",
-   "source_record_sha256": "b5d2e29540134f9684f1b6c4491b955ecea18e5ebf04ee04c1f4dc12ee50bb43",
+   "source_record_sha256": "fe6a6e857b78361a156c60ec7ad6d9e990de6e9f553ff1f3c9735c44dce51c7e",
    "kurz": "",
    "keywords": [
     "Heranführung"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 1,
-    "def": 4,
+    "ap": 3,
+    "atk": 2,
+    "def": 5,
     "tags": [
      "einheit",
      "infanterie"
@@ -50292,7 +50292,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "dcbfa72675e66fff16cb4a8b880b4a19966231aae42a79929ccb945235ec1092"
+   "output_sha256": "09d9040090d32405bac75391f6405c061ca97edc9f06046773ecf1c12dba4d01"
   },
   {
    "id": "dc_np_sahr_flusskette",
@@ -50300,15 +50300,15 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "bronze",
-   "source_record_sha256": "d51029ce5b949cd05145ed6b2423941785efcb9fd01af6e554fdaa61b9e18bc1",
+   "source_record_sha256": "e82d2d2d4d6121ad36a9f9820153715b58b7a91b5e58566087af79bde0169782",
    "kurz": "",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
-    "ap": 3,
+    "ap": 2,
     "atk": 4,
-    "def": 3,
+    "def": 1,
     "tags": [
      "einheit",
      "panzer",
@@ -50326,7 +50326,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "5232aaaa66c88001f271d8e5e0b89e129db5c38841a6b56651914850592a04cd"
+   "output_sha256": "6cdcd7e1293eb45e69f38554c47e6fc186dee3ce32dc059cd2d61f9013c13c34"
   },
   {
    "id": "dc_np_sahr_umgehungspanzer",
@@ -50334,16 +50334,16 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "silver",
-   "source_record_sha256": "aa5dc542eb5451b5a2aa6e557b38bdc4d0901a2621f5f3cf08e4febdb62ab819",
+   "source_record_sha256": "e91c437549b0d1ed80377bc40ed4543c52ccdc25f8a38a58d58fda02b2142693",
    "kurz": "",
    "keywords": [
     "Hinterhalt",
     "Absetzen"
    ],
    "printed_stats": {
-    "ap": 4,
+    "ap": 5,
     "atk": 3,
-    "def": 5,
+    "def": 7,
     "tags": [
      "einheit",
      "panzer",
@@ -50361,7 +50361,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "9e3d2862f4e56684b68c001a3b91489d13d2a98ddd5fa1d50c04161cb280daa5"
+   "output_sha256": "3da53a6143b459618381ef54bcbec344a9f96bab465d9627c63827efed86f307"
   },
   {
    "id": "dc_np_sahr_kolonne_ohne_ende",
@@ -50369,7 +50369,7 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "gold",
-   "source_record_sha256": "f69217c3fe452884abb6e5dda8ed6b7fa72b2a5a4b776871bbb99a457c2d8a7e",
+   "source_record_sha256": "5548069b26c95fc5485dd044461ddde2979767408f711b0dd29c61208f3c9750",
    "kurz": "+2 DEF, solange eine benachbarte eigene gepanzerte Einheit steht.",
    "keywords": [
     "Zähigkeit",
@@ -50377,8 +50377,8 @@
    ],
    "printed_stats": {
     "ap": 5,
-    "atk": 4,
-    "def": 6,
+    "atk": 3,
+    "def": 7,
     "tags": [
      "einheit",
      "panzer",
@@ -50396,7 +50396,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "97487f6f84c5f7b97829718fcb5f65b03193844fae6f436ca9c12775c04cd585"
+   "output_sha256": "822fac6e19b5163d22110080a97196bb85b18865f0929c274bee93316df10546"
   },
   {
    "id": "dc_np_sahr_handelswagen",
@@ -50438,15 +50438,15 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "bronze",
-   "source_record_sha256": "2be306441b621e24851a26ceeccf4218dd46c0463d79336e4ca581b095dd98fa",
+   "source_record_sha256": "beaf80ff5ff55cb587751ab66c5b15243406f95f5b2cddec0f1d7313d2a0fe80",
    "kurz": "",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
-    "ap": 4,
-    "atk": 4,
-    "def": 5,
+    "ap": 5,
+    "atk": 5,
+    "def": 6,
     "tags": [
      "einheit",
      "panzer",
@@ -50464,7 +50464,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "ac2ec6b74af72921d942e660fbd6245ebf035ee0eeb87d9f54fa5875071a1082"
+   "output_sha256": "b87abef5e497d37a19be3d4cbd045f8528ac26cf4e0bf2d58a272f7f6386c5aa"
   },
   {
    "id": "dc_np_sahr_linienfeuer",
@@ -50472,14 +50472,14 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "bronze",
-   "source_record_sha256": "622f36621a539a8a8bac543ec40dcb2ae45edd815b0882bbb68eec2d3a9340ed",
+   "source_record_sha256": "538382502e53030c237fef012d46b24e9ad5aba0311c995c6bc7a8b2f3326a2f",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
-    "ap": 3,
-    "atk": 3,
+    "ap": 2,
+    "atk": 1,
     "def": 4,
     "tags": [
      "einheit",
@@ -50497,7 +50497,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "018d0a42c338576d6300e9a891b5b725041ca4253c1193fd6958cca54c1ace13"
+   "output_sha256": "8cc418d55dcb7cf5b4adc38a7a265c0b246428a3d998aeb57e2f1dcb454c345d"
   },
   {
    "id": "dc_np_sahr_flussmoerser",
@@ -50603,14 +50603,14 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "silver",
-   "source_record_sha256": "f1b382ef46207bf1beaba203569a92a9bcb10e9baccf937cd5b7762df1eb0fdb",
+   "source_record_sha256": "0c6268aafb1249da60261b7e300e6c084913c87bd1d21a0be19515fcd46ea2a2",
    "kurz": "Steilfeuer II.",
    "keywords": [
     "Stellungswechsel"
    ],
    "printed_stats": {
-    "ap": 4,
-    "atk": 4,
+    "ap": 5,
+    "atk": 6,
     "def": 4,
     "tags": [
      "einheit",
@@ -50628,7 +50628,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "9c494dbff25a203f14529a9eddda3e4019c19a981083d610ae07aeaad1b2feb1"
+   "output_sha256": "e04232b84e744438b5f220b93608046d70999fb83a8ecd8262b213b450a27c0c"
   },
   {
    "id": "dc_np_sahr_navigator",
@@ -50700,15 +50700,15 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "silver",
-   "source_record_sha256": "e86ee176ce7c8a9b03dbdce26b85fe6cd31f89b796da38fcb44e6e317dcbae3c",
+   "source_record_sha256": "f9e7a0f8172d300e2dc58c1b91d86f65904a148b78fb2328b3f2cb17d07a1c18",
    "kurz": "Beim Ausspielen: decke 1 verdeckte gegnerische Fronteinheit auf. Fähigkeit (1 AP): erneut.",
    "keywords": [
     "Hinterhalt",
     "Absetzen"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 2,
+    "ap": 3,
+    "atk": 4,
     "def": 3,
     "tags": [
      "einheit",
@@ -50725,7 +50725,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "87f75bd6a0f648002a5c3333e39a125f9a3f62885f58a5082aef209a11841abd"
+   "output_sha256": "9880cf493972ef1dc627736c49001f49c5d3fc1d4645baa3e26db4ee1756e255"
   },
   {
    "id": "dc_np_sahr_herr_der_routen",
@@ -50766,7 +50766,7 @@
    "type": "Einheit",
    "nation": "Sahr",
    "rarity": "silver",
-   "source_record_sha256": "e1466c9805b2c218f684ea67d6dbf885afd878bca06266020fb56b070f14c6d3",
+   "source_record_sha256": "bcae2a8850796b1d35f486c0fcb9b169f2a579abe89fe5d5f61808da1ad128d6",
    "kurz": "",
    "keywords": [
     "Hinterhalt",
@@ -50774,9 +50774,9 @@
     "Absetzen"
    ],
    "printed_stats": {
-    "ap": 4,
-    "atk": 4,
-    "def": 5,
+    "ap": 5,
+    "atk": 5,
+    "def": 6,
     "tags": [
      "einheit",
      "elite",
@@ -50793,7 +50793,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "0130491fbfdae2dca5eaf7c1ef2b59b16916d1ae7e9b5378377d62e288bed2f6"
+   "output_sha256": "02f248c622f64c805a190826fa313df6e7699f6cb7e7e66a4cdb8162ca96fd59"
   },
   {
    "id": "dc_np_sahr_gilde_der_routen",
@@ -51476,14 +51476,14 @@
    "type": "Einheit",
    "nation": "Dargan",
    "rarity": "bronze",
-   "source_record_sha256": "3157f71126e1707d79cf46b2ee7b7e263a3fa8699c1677d1f24c103d60b42815",
+   "source_record_sha256": "7d5967cf696d479c9c145edbd10bec11a0bf941e9fc5ba32f47e426d30a23e53",
    "kurz": "",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
-    "ap": 2,
-    "atk": 1,
+    "ap": 3,
+    "atk": 3,
     "def": 4,
     "tags": [
      "einheit",
@@ -51500,7 +51500,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "4c0e687b6b0d9a1a54b91227699eb5c1fb4c611c4a0fa1ccf2e6c1badc570e77"
+   "output_sha256": "40906496dffcf04b6d6d0bdf5670964cfabda1815633900380eb5860f51f9cf3"
   },
   {
    "id": "dc_np_dargan_vollstrecker",
@@ -51540,15 +51540,15 @@
    "type": "Einheit",
    "nation": "Dargan",
    "rarity": "bronze",
-   "source_record_sha256": "821759495dd5826aad6dead4293993bee8b583f80fd914a803d134a13da717e9",
+   "source_record_sha256": "2db19a4863bf09dcac3f8fe85150350cd9e4bc98a7ad4f89d06aef15c5e17d31",
    "kurz": "",
    "keywords": [
     "Überlast"
    ],
    "printed_stats": {
     "ap": 4,
-    "atk": 3,
-    "def": 5,
+    "atk": 1,
+    "def": 7,
     "tags": [
      "einheit",
      "panzer",
@@ -51566,7 +51566,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "d4f40cf5a71f40288ca2108f304453cb4d05f60ced7c24b1ba02d3b9b8fcca85"
+   "output_sha256": "9d690fd144548afc2bfc1f3ab3961b62215d0159dd594ea25fec5732e281467b"
   },
   {
    "id": "dc_np_dargan_tilgungswagen",
@@ -51707,13 +51707,13 @@
    "type": "Einheit",
    "nation": "Dargan",
    "rarity": "bronze",
-   "source_record_sha256": "cdc9a934a97d20cb401fc3ce5618fbdc50745b2fcc32331e7c6b035487c83aa1",
+   "source_record_sha256": "c0b2a23ec1f109dfc1cde94ae23485b3a04897e0faaec8f16a4918f6b4430b87",
    "kurz": "Steilfeuer II.",
    "keywords": [],
    "printed_stats": {
     "ap": 3,
-    "atk": 3,
-    "def": 3,
+    "atk": 5,
+    "def": 1,
     "tags": [
      "einheit",
      "steilfeuer-ii",
@@ -51730,7 +51730,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "724e378b6c6f4ad1e3625648733efd4b91d818195877deae6a99e6da1e6802ba"
+   "output_sha256": "020c4204db02d215fc8a4ea433d385d66e12523418f3de254fb2da482a9c1d22"
   },
   {
    "id": "dc_np_dargan_registermoerser",
@@ -51738,15 +51738,15 @@
    "type": "Einheit",
    "nation": "Dargan",
    "rarity": "bronze",
-   "source_record_sha256": "25e3ef673e7185951f130c77d987fca4056b3dc0d2ba3c52134a6f3283e54109",
+   "source_record_sha256": "21fd7adf3806897967e4acbdf104c5e64da36135055ca5796967bae91d39f5be",
    "kurz": "Steilfeuer I.",
    "keywords": [
     "Staffelangriff"
    ],
    "printed_stats": {
-    "ap": 2,
+    "ap": 3,
     "atk": 2,
-    "def": 2,
+    "def": 4,
     "tags": [
      "einheit",
      "steilfeuer-i",
@@ -51763,7 +51763,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "96bc47ff051de18e11c452de9bc285dea08998ab9d0c0ae09ba59fc3739c3cea"
+   "output_sha256": "c10cd0ca66cef9d1a203e85c78f1f2ff7345474596b3adc85f71bd34e7815b6c"
   },
   {
    "id": "dc_np_dargan_abschlussfeuer",
@@ -51928,13 +51928,13 @@
    "type": "Einheit",
    "nation": "Dargan",
    "rarity": "silver",
-   "source_record_sha256": "95cb0621d7ef4ee0ed06626d99d1dce88609d84cda8d1e970b3feceab1b2bebd",
+   "source_record_sha256": "bda0d2514a613db462907d2ceeb1ead2993092aafeea5e92ec7a33713e479bdf",
    "kurz": "Beim Ausspielen: sieh dir 2 gegnerische Handkarten an.",
    "keywords": [],
    "printed_stats": {
     "ap": 2,
-    "atk": 2,
-    "def": 3,
+    "atk": 1,
+    "def": 4,
     "tags": [
      "einheit",
      "aufklaerung"
@@ -51950,7 +51950,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "38cc8df2f91c214e8ae9b3acade8753d5741d790e8ad65c86f435c06dfd94ff7"
+   "output_sha256": "0188e56c07b859bb9bc0333f3537669749f9cd0b05b3975f0234f60ec1cf13b7"
   },
   {
    "id": "dc_np_dargan_kaderkolonne",
