@@ -35,7 +35,10 @@
     // t254: Bewertungspunkte, die ein AP in der Vorausschau kostet.
     apWeight: 4,
     // t254: Angriffe auf einer Kopie ausführen und Siegpunkt-Gewinne (Doktrinziele, Durchbruch) einpreisen.
-    vpLook: 1
+    vpLook: 1,
+    // t285: Stellungswechsel: 0 aus (Standard, Nationen sind ohne ihn austariert), 1 nur gegnerischen Durchbruch
+    // blockieren, 2 auch leere Abschnitte besetzen. Messung in docs/balance/BALANCE_T285.md.
+    kwMove: 0
   };
 
   var cfg = {};
@@ -107,6 +110,9 @@
     'FETCH_EQUIP', 'SAT_PEEK', 'FOG_TOKEN', 'VERSCHIEBEN', 'JAM_DRONE', 'HIJACK_DRONE', 'TACTIC_DISCOUNT',
     'NEST_BED', 'REVEAL_STRIKE', 'AUFKLAERUNG', 'EQUIP_ONCE_PAIN_ATK', 'EQUIP_ONCE_DRAW_PAIN',
     'TACTICAL_INTERDICT', 'TACTICAL_COVER', 'TACTICAL_BIND'];
+
+  /** t285: Grundset-Fähigkeiten, die eine Unterstützung mehrfach tragen kann (Auswahl über `ability`). */
+  var MULTI_CODES = ['FIRE_MISSION', 'DRONE_STRIKE', 'FEINT', 'HOSPITAL', 'REATTACK', 'SCOUT_DECK', 'FETCH_EQUIP', 'SAT_PEEK'];
 
   /** Rekursionssperre: in der Vorausschau keine weitere Vorausschau und keine Probe. */
   var depth = 0;
@@ -734,7 +740,7 @@
   function actKey(a) {
     if (!a) return '';
     var slot = a.slot ? (a.slot.section + ':' + a.slot.row) : '';
-    return [a.type || '', a.uid || '', a.cardId || '', a.target || '', slot].join('|');
+    return [a.type || '', a.uid || '', a.cardId || '', a.target || '', slot].join('|') + (a.ability ? '|' + a.ability : '');
   }
 
 
@@ -845,10 +851,17 @@
       if (!seen[l.inst.uid] && mayHaveAbility(engine, l.inst)) { seen[l.inst.uid] = 1; srcs.push({ type: 'USE_ABILITY', uid: l.inst.uid }); }
     });
     (p.support || []).forEach(function (x) {
-      if (x && !seen[x.uid] && mayHaveAbility(engine, x)) { seen[x.uid] = 1; srcs.push({ type: 'ACTIVATE_SUPPORT', uid: x.uid }); }
+      if (x && !seen[x.uid] && mayHaveAbility(engine, x)) {
+        seen[x.uid] = 1;
+        // t285: Unterstützungen mit mehreren Fähigkeiten (Kommunikationszentrum: Koordination oder Aufklärung) je Fähigkeit prüfen.
+        var multi = codes(defOf(engine, x)).filter(function (c) { return MULTI_CODES.indexOf(c) >= 0; });
+        if (multi.length > 1) multi.forEach(function (c) { srcs.push({ type: 'ACTIVATE_SUPPORT', uid: x.uid, ability: c }); });
+        else srcs.push({ type: 'ACTIVATE_SUPPORT', uid: x.uid });
+      }
     });
     srcs.forEach(function (src) {
       var act = { type: src.type, player: pid, uid: src.uid };
+      if (src.ability) act.ability = src.ability;
       if (skip && skip[actKey(act)]) return;
       var la = lookahead(engine, pid, act);
       if (!la.ok) return;
@@ -859,6 +872,142 @@
       out.push({ act: src, score: sc, tier: sc >= 24 ? 3 : 1, probed: true });
     });
     return out;
+  }
+
+  /**
+   * t285: Eigene und gegnerische Fronteinheiten je Abschnitt.
+   * @param {object} engine
+   * @param {number} pid
+   * @returns {{own: Object<string, number>, foe: Object<string, number>}}
+   */
+  function sectionCounts(engine, pid) {
+    var own = { L: 0, C: 0, R: 0 }, foe = { L: 0, C: 0, R: 0 };
+    engine.frontList(engine.player(pid)).forEach(function (l) { own[l.section] = (own[l.section] || 0) + 1; });
+    engine.frontList(engine.opponent(pid)).forEach(function (l) { foe[l.section] = (foe[l.section] || 0) + 1; });
+    return { own: own, foe: foe };
+  }
+
+  /**
+   * t285: Durchbruch-Lage: +1 je Abschnitt, den nur wir halten, −1 je Abschnitt, den nur der Gegner hält.
+   * @param {Object<string, number>} own
+   * @param {Object<string, number>} foe
+   * @returns {number}
+   */
+  function breachBalance(own, foe) {
+    var v = 0;
+    ['L', 'C', 'R'].forEach(function (s) {
+      if (own[s] > 0 && !foe[s]) v += 1;
+      if (!own[s] && foe[s] > 0) v -= 1;
+    });
+    return v;
+  }
+
+  /**
+   * t285: Stellungswechsel bewerten. Lohnt, wenn er die Durchbruch-Lage verbessert (leeren Abschnitt besetzen
+   * oder einen gegnerischen Durchbruch blockieren), ohne einen Angriff dieser Einheit in diesem Zug zu opfern.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} a KW_MOVE-Aktion aus listActions
+   * @returns {number} Wert; ≤ 0 heißt auslassen
+   */
+  function scoreKwMove(engine, pid, a) {
+    var loc = engine.findInst(a.uid);
+    if (!loc || !a.slot) return 0;
+    var sc = sectionCounts(engine, pid);
+    var before = breachBalance(sc.own, sc.foe);
+    var mode = Number(cfg.kwMove);
+    if (!mode) return 0;
+    var blocks = !sc.own[a.slot.section] && sc.foe[a.slot.section] > 0;
+    if (mode < 2 && !blocks) return 0;
+    sc.own[loc.section] -= 1;
+    sc.own[a.slot.section] = (sc.own[a.slot.section] || 0) + 1;
+    var delta = breachBalance(sc.own, sc.foe) - before;
+    if (delta <= 0) return 0;
+    var canStillAttack = !loc.inst.attackUsed && !(loc.inst.flags && loc.inst.flags.exhausted) && engine.legalAttackTargets(loc).length > 0 &&
+      engine.player(pid).ap >= Number((engine.rules && engine.rules.attack_ap) || 1);
+    return 16 * delta - (canStillAttack ? 12 : 0);
+  }
+
+  /**
+   * t285: Feldreparatur (Sicherer Nachschub) bewerten: kostenlos, 1× pro Zug, also vor den Angriffen
+   * die wertvollste beschädigte gepanzerte Einheit heilen.
+   * @param {object} engine
+   * @param {object} a HEAL_ARMORED-Aktion
+   * @returns {number}
+   */
+  function scoreHealArmored(engine, a) {
+    var loc = engine.findInst(a.uid);
+    if (!loc) return 0;
+    var st = statsOf(engine, loc.inst);
+    var d = defOf(engine, loc.inst);
+    var max = loc.inst.defMax != null ? loc.inst.defMax : (Number(d.def) || 0);
+    var missing = Math.max(0, max - (loc.inst.def || 0));
+    return 14 + st.atk * 2 + Math.min(missing, 3) + (st.def <= 1 ? 4 : 0);
+  }
+
+  /**
+   * t285: Schutzwall (Bollwerk) bewerten: 2 AP für eine Befestigung zurück auf die Hand. Kleiner Eigenwert,
+   * damit sonst ungenutzte AP am Zugende dafür fließen, aber kein Ausspielen oder Angriff verdrängt wird.
+   * @param {object} engine
+   * @param {object} a SCHUTZWALL-Aktion
+   * @returns {number}
+   */
+  function scoreSchutzwall(engine, a) {
+    var d = engine.byId ? engine.byId[a.cardId] : null;
+    var ap = d ? Number(d.ap) || 0 : 0;
+    return 5 + Math.min(ap, 3);
+  }
+
+  /**
+   * t285: Eine Folge von Aktionen auf einer Kopie spielen (eigene Folgewahlen löst der Bot selbst) und
+   * wie {@link lookahead} bewerten. Für Überschuss: erst bereit machen, dann die Fähigkeit erneut nutzen.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object[]} seq
+   * @returns {{ok: boolean, delta?: number, apSpent?: number}}
+   */
+  function chainLook(engine, pid, seq) {
+    if (depth > 0) return { ok: false };
+    var before = evalBoard(engine, pid);
+    var ap0 = engine.player(pid).ap;
+    depth++;
+    try {
+      var c = cloneEngine(engine);
+      for (var i = 0; i < seq.length; i++) {
+        var r = c.dispatch(seq[i]);
+        if (!r || !r.ok) return { ok: false };
+        var steps = 0;
+        while (c.state.winner == null && c.state.pending && c.state.pending.player === pid && steps++ < 40) {
+          var a = stepTest(c, pid, {});
+          if (!a || a.type === 'END_TURN') break;
+          if (a.player == null) a.player = pid;
+          var r2 = c.dispatch(a);
+          if (!r2 || !r2.ok) { try { c.dispatch({ type: 'CANCEL_PENDING', player: pid }); } catch (e2) { /* egal */ } break; }
+        }
+      }
+      return { ok: true, delta: evalBoard(c, pid) - before, apSpent: ap0 - c.player(pid).ap };
+    } catch (e) {
+      return { ok: false };
+    } finally {
+      depth--;
+    }
+  }
+
+  /**
+   * t285: Überschuss (Sicherer Nachschub) bewerten: lohnt nur, wenn die erneute Fähigkeit der Unterstützung
+   * nach allen Kosten (2 AP plus Fähigkeit) sichtbar Wert schafft.
+   * @param {object} engine
+   * @param {number} pid
+   * @param {object} a UEBERSCHUSS-Aktion
+   * @returns {{score: number, tier: number}|null}
+   */
+  function scoreUeberschuss(engine, pid, a) {
+    if (!Number(cfg.lookahead)) return null;
+    var la = chainLook(engine, pid, [{ type: 'UEBERSCHUSS', player: pid, uid: a.uid }, { type: 'ACTIVATE_SUPPORT', player: pid, uid: a.uid }]);
+    if (!la.ok) return null;
+    var sc = lookScore(la);
+    if (sc <= 4) return null;
+    return { score: sc, tier: sc >= 24 ? 3 : 1 };
   }
 
   /**
@@ -950,6 +1099,11 @@
         if (a.slot && a.slot.section === 'C') sc += 4;
         scored.push({ act: a, score: sc });
       }
+      // t285: aktive Doktrin-Fähigkeiten und Stellungswechsel.
+      if (a.type === 'HEAL_ARMORED') { scored.push({ act: a, score: scoreHealArmored(engine, a), tier: Number(cfg.tiered) ? 3 : 0 }); return; }
+      if (a.type === 'SCHUTZWALL') { scored.push({ act: a, score: scoreSchutzwall(engine, a), tier: 0 }); return; }
+      if (a.type === 'UEBERSCHUSS') { var us = scoreUeberschuss(engine, pid, a); if (us) scored.push({ act: a, score: us.score, tier: Number(cfg.tiered) ? us.tier : 0, probed: true }); return; }
+      if (a.type === 'KW_MOVE') { var ks = scoreKwMove(engine, pid, a); if (ks > 4) scored.push({ act: a, score: ks, tier: 0 }); return; }
       if (isNeutralize(a)) {
         var nz = scoreNeutralize(engine, pid, a);
         scored.push({ act: a, score: nz.score, tier: Number(cfg.tiered) ? nz.tier : 0 });

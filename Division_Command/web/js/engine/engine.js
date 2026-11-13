@@ -1548,6 +1548,14 @@
             });
           }
         }
+        // t285: aktive Doktrin-Fähigkeiten und Stellungswechsel als legale Aktionen (UI und Bot).
+        this._listDoctrineActives(p, acts);
+        this.frontList(p).forEach((loc) => {
+          if (!loc.inst || loc.inst.facedown) return;
+          this.kwMoveSlots(loc.inst.uid).forEach((s) => {
+            acts.push({ type: 'KW_MOVE', uid: loc.inst.uid, slot: s, cost: 0, name: (this.defOf(loc.inst) || {}).name || 'Einheit', label: 'Stellungswechsel → ' + s.section + (s.row + 1) });
+          });
+        });
         if (this._tacActivation) {
           const locked = this._supportLocked(playerId);
           this.frontList(p).concat((p.support || []).filter(Boolean).map(inst=>({inst,zone:'support'}))).forEach(l=>{
@@ -6713,6 +6721,7 @@
         if (s.flags.dekon) {
           s.flags.dekon = false;
           s.flags.exhausted = true;
+          s.flags.restExhaustedTurn = this.state.turn + 1; // t285: kein Überschuss-Ziel (Zugzähler steigt danach)
         } else s.flags.exhausted = false;
       });
       this.frontList(nxt).forEach((l) => {
@@ -7027,12 +7036,12 @@
         .reduce((acc, d) => acc.concat(d.effects || []), [])).find((e) => e.code === 'SCHUTZWALL');
       if (!eff) throw new Error('Kein Bollwerk');
       const prm = eff.param || {};
-      if (prm.once_per_round !== false && p.flags.wallUsed === this.state.turn) throw new Error('Schutzwall schon genutzt');
+      if (prm.once_per_round !== false && p.flags.wallUsed === this.state.turn) return { ok: false, error: 'Schutzwall schon genutzt', code: 'SCHUTZWALL_WAIT' };
       const cost = Number(prm.ap != null ? prm.ap : 2);
       if (p.ap < cost) throw new Error('Nicht genug AP');
-      const pool = (p.grave || []).filter((c) => c && hasTag(this.defOf(c), 'befestigung') && this.defOf(c).typ !== 'Token');
+      const pool = this._schutzwallPool(p);
       const pick = (a && a.uid && pool.find((c) => c.uid === a.uid)) || pool[0];
-      if (!pick) throw new Error('Keine Befestigung im Ablagestapel');
+      if (!pick) return { ok: false, error: 'Keine Befestigung im Ablagestapel', code: 'SCHUTZWALL_EMPTY' };
       if (p.hand.length >= (this.rules.max_hand || 7)) throw new Error('Hand voll');
       p.ap -= cost;
       p.flags.wallUsed = this.state.turn;
@@ -7040,6 +7049,79 @@
       p.hand.push(pick);
       this._log(p.name + ' nutzt Schutzwall: ' + this.defOf(pick).name + ' zurück auf die Hand (' + cost + ' AP).');
       return { ok: true };
+    }
+    /**
+     * t285: Befestigungen (Tag `befestigung`, keine Token) im Ablagestapel, die Schutzwall zurückholen darf.
+     * @param {object} p Spieler
+     * @returns {object[]} Karteninstanzen
+     */
+    _schutzwallPool(p) {
+      return (p.grave || []).filter((c) => c && this.defOf(c) && hasTag(this.defOf(c), 'befestigung') && this.defOf(c).typ !== 'Token');
+    }
+    /**
+     * t285: Hängt die gerade legalen aktiven Doktrin-Fähigkeiten an `acts` an: Schutzwall (Bollwerk),
+     * Feldreparatur und Überschuss (Sicherer Nachschub). Verlegung listet {@link Engine#listActions} selbst.
+     * Nur im eigenen Hauptzug; ändert den Stand nicht.
+     * @param {object} p Spieler am Zug
+     * @param {object[]} acts Aktionsliste (wird ergänzt)
+     */
+    _listDoctrineActives(p, acts) {
+      if (!this._hasDoctrine) return;
+      const turn = this.state.turn;
+      p.flags = p.flags || {};
+      if (this._hasDoctrine(p, 'SCHUTZWALL') && p.flags.wallUsed !== turn && p.hand.length < (this.rules.max_hand || 7)) {
+        const prm = (this._dokParam && this._dokParam(p, 'SCHUTZWALL')) || {};
+        const cost = Number(prm.ap != null ? prm.ap : 2);
+        if (p.ap >= cost) {
+          const seen = {};
+          this._schutzwallPool(p).forEach((c) => {
+            const d = this.defOf(c);
+            if (seen[d.id]) return;
+            seen[d.id] = 1;
+            acts.push({ type: 'SCHUTZWALL', uid: c.uid, cardId: d.id, name: d.name, cost, label: 'Schutzwall: ' + d.name + ' auf die Hand' });
+          });
+        }
+      }
+      if (this._hasDoctrine(p, 'HEAL_ARMORED') && p.flags.healArmoredUsed !== turn) {
+        const prm = (this._dokParam && this._dokParam(p, 'HEAL_ARMORED')) || {};
+        const amount = Number(prm.value != null ? prm.value : 1);
+        this.frontList(p).forEach((l) => {
+          if (!this._healArmoredOk(l.inst)) return;
+          acts.push({ type: 'HEAL_ARMORED', uid: l.inst.uid, target: l.inst.uid, cost: 0, amount, name: this.defOf(l.inst).name, label: 'Feldreparatur: ' + this.defOf(l.inst).name + ' +' + amount + ' DEF' });
+        });
+      }
+      if (this._hasDoctrine(p, 'UEBERSCHUSS') && p.flags.ueberUsed !== turn && !this._supportLocked(p.id)) {
+        const prm = (this._dokParam && this._dokParam(p, 'UEBERSCHUSS')) || {};
+        const cost = Number(prm.ap != null ? prm.ap : 2);
+        if (p.ap >= cost) {
+          (p.support || []).forEach((s) => {
+            if (!this._ueberschussOk(p, s)) return;
+            acts.push({ type: 'UEBERSCHUSS', uid: s.uid, cost, name: this.defOf(s).name, label: 'Überschuss: ' + this.defOf(s).name + ' erneut' });
+          });
+        }
+      }
+    }
+    /**
+     * t285: Feldreparatur-Ziel: offene, gepanzerte (siehe {@link Engine#_isArmored}) und beschädigte Einheit.
+     * @param {object} inst
+     * @returns {boolean}
+     */
+    _healArmoredOk(inst) {
+      if (!inst || inst.facedown) return false;
+      const d = this.defOf(inst);
+      if (!d || !this._isArmored(d)) return false;
+      const max = inst.defMax != null ? inst.defMax : (Number(d.def) || 0);
+      return inst.def != null && inst.def < max;
+    }
+    /**
+     * t285: Überschuss-Ziel: eigene offene Unterstützung, die ihre Fähigkeit in diesem Zug schon eingesetzt hat
+     * (erschöpft, aber nicht durch Dekontamination zu Zugbeginn gesperrt).
+     * @param {object} p
+     * @param {object} s Unterstützungsinstanz
+     * @returns {boolean}
+     */
+    _ueberschussOk(p, s) {
+      return !!(s && !s.facedown && s.flags && s.flags.exhausted && s.flags.restExhaustedTurn !== this.state.turn);
     }
         /**
          * Doktrin „Verlegung“: verschiebt eine eigene Fronteinheit in einen Zielslot (AP laut Doktrinparameter).
@@ -7080,24 +7162,45 @@
      * @param {object} a
      */
     _actHealArmored(pid, a) {
+      const p = this.player(pid);
+      if (this.state.active !== pid) throw new Error('Nur im eigenen Zug');
+      if (!(this._hasDoctrine && this._hasDoctrine(p, 'HEAL_ARMORED'))) throw new Error('Kein Sicherer Nachschub');
+      p.flags = p.flags || {};
+      if (p.flags.healArmoredUsed === this.state.turn) return { ok: false, error: 'Feldreparatur schon genutzt (1× pro Zug).', code: 'HEAL_USED' };
       const loc = this.findInst(a.uid || a.target);
-      if (!loc) throw new Error('Kein Ziel');
-      this._heal(loc.inst, Number(a.amount || 2));
+      if (!loc || loc.player.id !== pid || loc.zone !== 'front' || !this._healArmoredOk(loc.inst)) {
+        return { ok: false, error: 'Feldreparatur braucht eine eigene beschädigte gepanzerte Fronteinheit.', code: 'HEAL_NONE' };
+      }
+      const prm = (this._dokParam && this._dokParam(p, 'HEAL_ARMORED')) || {};
+      p.flags.healArmoredUsed = this.state.turn;
+      this._heal(loc.inst, Number(prm.value != null ? prm.value : 1));
+      this._log(p.name + ' nutzt Feldreparatur: ' + this.defOf(loc.inst).name + ' heilt ' + Number(prm.value != null ? prm.value : 1) + '.');
       return { ok: true };
     }
     /**
-     * Kartenspezifisch: Überschuss.
+     * Doktrin Sicherer Nachschub – Überschuss (t285 vollständig): `ap` AP (Standard 2), 1× pro eigenem Zug.
+     * Eine eigene Unterstützung, die ihre Fähigkeit in diesem Zug schon eingesetzt hat, wird wieder bereit
+     * und kann sie ein zweites Mal einsetzen (mit deren normalen Kosten).
      * @param {number} pid
-     * @param {object} a
+     * @param {object} a  Aktion mit `uid` der Unterstützung
+     * @returns {{ok: boolean}}
      */
     _actUeberschuss(pid, a) {
       const p = this.player(pid);
-      if (p.flags.ueberUsed === this.state.turn) throw new Error('Überschuss schon genutzt');
-      this._spend(p, 2);
-      p.flags.ueberUsed = this.state.turn;
+      if (this.state.active !== pid) throw new Error('Nur im eigenen Zug');
+      if (!(this._hasDoctrine && this._hasDoctrine(p, 'UEBERSCHUSS'))) throw new Error('Kein Sicherer Nachschub');
+      p.flags = p.flags || {};
+      if (p.flags.ueberUsed === this.state.turn) return { ok: false, error: 'Überschuss schon genutzt (1× pro Zug).', code: 'UEBER_USED' };
+      if (this._supportLocked(pid)) return { ok: false, error: 'Blitzkrieg-Sperre: Unterstützung nicht aktivierbar', code: 'BLITZ_LOCK' };
       const card = (p.support || []).find((c) => c && c.uid === a.uid);
-      if (!card) throw new Error('Nur Support');
-      this._log('Überschuss: ' + this.defOf(card).name);
+      if (!card || !this._ueberschussOk(p, card)) {
+        return { ok: false, error: 'Überschuss braucht eine eigene Unterstützung, die ihre Fähigkeit in diesem Zug schon eingesetzt hat.', code: 'UEBER_NONE' };
+      }
+      const prm = (this._dokParam && this._dokParam(p, 'UEBERSCHUSS')) || {};
+      this._spend(p, Number(prm.ap != null ? prm.ap : 2));
+      p.flags.ueberUsed = this.state.turn;
+      card.flags.exhausted = false;
+      this._log('Überschuss: ' + this.defOf(card).name + ' ist wieder bereit.');
       return { ok: true };
     }
     /**
