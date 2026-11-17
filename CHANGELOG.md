@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- **Doku (t286):** Vertical-Slice-Verfahren und zentrale Übersicht [`Division_Command/docs/current_state.md`](Division_Command/docs/current_state.md): 15 Slices (VS-01 bis VS-15) mit Status, Gates, offenen Punkten, priorisierten nächsten Schritten, „Zuletzt gemacht“ und Definition of Done. README(s), Docs-Index, Entwicklungs- und Archiv-Übersicht, Projektdokumentation §7/§8/§10 und die `STATUS_T*.md` verweisen darauf. Kein Code geändert, keine Versionsänderung.
+
 ## 0.6e Alpha – 13.11.2026
 
 Kleiner Schritt nach 0.6d (t285).

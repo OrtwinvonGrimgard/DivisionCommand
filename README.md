@@ -4,6 +4,8 @@ Alpha **0.6e** — zynisch-dunkles Sammelkartenspiel (Front, Support, Niemandsla
 
 Dies ist das Repository. Das spielbare Paket liegt in [`Division_Command/`](Division_Command/README.md) (starten mit `start.bat` / `start.sh`). Die vollständige Dokumentation beginnt in [`Division_Command/docs/README.md`](Division_Command/docs/README.md). Änderungen je Version: [`CHANGELOG.md`](CHANGELOG.md).
 
+**Aktueller Projektstand, Vertical Slices und nächste Schritte:** [`Division_Command/docs/current_state.md`](Division_Command/docs/current_state.md). Die Arbeit läuft nach dem Vertical-Slice-Verfahren (VS-01 bis VS-15), die Datei wird bei jedem Push gepflegt.
+
 ## Ordnerstruktur
 
 ```
@@ -16,6 +18,7 @@ Dies ist das Repository. Das spielbare Paket liegt in [`Division_Command/`](Divi
 │   │   ├── js/data/           Katalog, Decks, Schlüsselwörter; sets/types/ = Karten
 │   │   └── assets/            Kartenbilder, Audio, Porträts, Tisch
 │   ├── docs/                  Dokumentation, die mit dem Spiel liegt
+│   │   ├── current_state.md   Lebende Übersicht: Stand, Vertical Slices, nächste Schritte
 │   │   ├── regeln/            Regelwerk, Schlüsselwörter, Sonderfälle
 │   │   ├── balance/           Balanceberichte und Simulationen
 │   │   ├── karten/            Pools, Kartenprüfung

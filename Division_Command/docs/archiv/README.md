@@ -8,3 +8,5 @@
 | [GESAMTPLAN.md](GESAMTPLAN.md) | Übergeordneter Arbeitsplan; Phasen und Bestandszahlen nicht mehr aktuell (u. a. „Effekt-Verdrahtung unvollständig“, „~960 Karten“). |
 | [DECKS_SITZT.md](DECKS_SITZT.md) | Konzeptlisten der sitzenden Nationen (Oktober 2026), nicht der lebende Katalog. |
 | [packete_0.30.json](packete_0.30.json) | Altes Split-Paket der Version 0.30; wird vom Spiel nicht mehr gelesen. |
+
+Die aktuelle Planung führt [`../current_state.md`](../current_state.md) (Vertical Slices). Inhalte aus `FAHRPLAN.md` und `GESAMTPLAN.md` leben dort weiter: Roguelike/Kampagne als VS-15, Steam/EXE/PDF als VS-14.

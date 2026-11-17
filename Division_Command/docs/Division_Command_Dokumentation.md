@@ -160,6 +160,8 @@ Das spielbare Paket liegt unter `Division_Command/`. Werkzeuge, Tests und der Ka
 
 ## 7. Aktueller Status (Alpha 0.6e)
 
+> **Hinweis (t286):** Der lebende Stand (Vertical Slices, Status, nächste Schritte, Zuletzt gemacht) steht in [`current_state.md`](current_state.md). Die Liste unten ist eine Momentaufnahme aus der Zeit von 0.6a/0.6b und wird nicht mehr fortgeschrieben.
+
 **Erledigt:**
 - Grundengine, Trophy-Modus, Nationendecks, Lore-Dokumente.
 - Umstrukturierung der Karten nach Typ.
@@ -172,14 +174,14 @@ Das spielbare Paket liegt unter `Division_Command/`. Werkzeuge, Tests und der Ka
 - 0.6a: Balance aus 11.520 Bot-Partien je Modus. Starterdecks liegen bei 45–53 % (`balance/BALANCE_T237.md`).
 
 **In Arbeit / Offen:**
-- Tutorial und Onboarding.
+- Tutorial und Onboarding (inzwischen erledigt in t275, siehe `current_state.md` VS-10).
 - Roguelike-Vertical-Slice (Fahrplan).
 
 ---
 
 ## 8. Fahrplan (Zusammenfassung)
 
-Siehe [`archiv/FAHRPLAN.md`](archiv/FAHRPLAN.md) (historisch, kein aktueller Arbeitsstand) für die ältere Langfassung.
+Siehe [`archiv/FAHRPLAN.md`](archiv/FAHRPLAN.md) (historisch, kein aktueller Arbeitsstand) für die ältere Langfassung. Die laufende Planung ist seit t286 in Vertical Slices gegliedert ([`current_state.md`](current_state.md), Abschnitte 2, 3 und 7); Roguelike und Kampagne sind dort VS-15, Steam und Vertrieb VS-14.
 
 1. Regel-Freeze und Siegbedingungen (weitgehend erledigt).
 2. Kern-Polish und Tutorial.
@@ -262,6 +264,7 @@ Division Command hat ein realistisch erreichbares Marktpotenzial in der Nische z
 | Datei | Inhalt |
 |-------|--------|
 | `README.md` / `LIESMICH.txt` | Startanleitung |
+| `current_state.md` | Lebende Übersicht: Stand, Vertical Slices, nächste Schritte |
 | `CHANGELOG.md` (Repo-Wurzel) | Änderungen je Version |
 | `regeln/RULES_v0.5_GRUNDKONZEPT.md` | Vollständige Regeln (inkl. §7.1 Steilfeuer) |
 | `MECHANICS_REACTIVE.md` | Design der reaktiven Effekte |

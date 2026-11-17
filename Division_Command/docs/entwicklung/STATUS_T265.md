@@ -1,5 +1,7 @@
 # Statusanalyse t265 – nach den Reparaturen t259
 
+> **Historische Momentaufnahme.** Der aktuelle Stand steht in [`../current_state.md`](../current_state.md) (lebende Übersicht mit Vertical Slices, seit t286). Diese Datei bleibt unverändert erhalten.
+
 Stand: 11.11.2026, `main` nach t259 (`d15377b`). Alle Zahlen nachgezählt: Katalog über `scripts/nation_pools/load_game.js`, `npm test` (46 Skripte), Fuzz, `verify.py`, Smoke 400, Browser-Test `ui-play`, Messdateien in `docs/balance`. Keine Spielmechanik geändert; gefundene Fehler sind gemeldet, nicht behoben. Die Hilfe (Entwicklungsstand, Fehlende Features, Fortschritt, Fortschritt in Prozent) zeigt dieselben Inhalte.
 
 ## Neu: Kartentext gegen Engine

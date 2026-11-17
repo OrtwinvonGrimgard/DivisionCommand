@@ -1,5 +1,7 @@
 # Status t271 – Analyse und Stand nach t270
 
+> **Historische Momentaufnahme.** Der aktuelle Stand steht in [`../current_state.md`](../current_state.md) (lebende Übersicht mit Vertical Slices, seit t286). Diese Datei bleibt unverändert erhalten.
+
 Stand 12.11.2026, `main` nach t270 (`f2a218b4`). Frische Analyse auf einem neuen Klon: Prüfskript Kartentext gegen Engine, `npm test`, Fuzz, Smoke, Balance-Bestätigung in beiden Modi und Browser-Test mit fünf Seeds.
 
 ## Ergebnis in Kürze

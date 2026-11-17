@@ -2,6 +2,14 @@
 
 Alle Regeln, Lore-Texte, Planungen und technischen Erklärungen zu Division Command an einem Ort. Der Ordner liegt bewusst direkt neben dem Spiel (`Division_Command/`), damit Spiel und Dokumentation zusammen versioniert und ausgeliefert werden. Pfade in Code-Kommentaren und Dokumenten beziehen sich, wenn nicht anders angegeben, auf `Division_Command/`.
 
+## Einstieg: aktueller Stand (current_state.md)
+
+| Dokument | Inhalt |
+|---|---|
+| [**current_state.md**](current_state.md) | **Lebende Übersicht:** Stand (Version, Tag, Commit), die 15 Vertical Slices VS-01 bis VS-15 mit Status, Gates und offenen Punkten, priorisierte nächste Schritte, „Zuletzt gemacht“ (Bot und manuell) und das Arbeitsverfahren. Wird bei jedem Push gepflegt. Hier beginnen. |
+
+Die Statusanalysen `entwicklung/STATUS_T258.md` bis `STATUS_T271.md` und die Balanceberichte sind historische Momentaufnahmen; sie bleiben unverändert und werden von `current_state.md` verlinkt.
+
 ## Gesamtdokumentation
 
 | Dokument | Inhalt |
@@ -98,6 +106,7 @@ Ideen, die nicht (vollständig) im Spiel stecken. Übersicht: [entwicklung/READM
 | Dokument | Inhalt |
 |---|---|
 | [NEUE_EFFEKTIDEEN.md](entwicklung/NEUE_EFFEKTIDEEN.md) | Entwürfe für nationale Sondermechaniken, nicht implementiert. |
+| `entwicklung/STATUS_T258.md` … `STATUS_T271.md` | Historische Statusanalysen (11.–12.11.2026). Der aktuelle Stand steht in [current_state.md](current_state.md). |
 
 ## Archiv – `archiv/`
 

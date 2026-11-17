@@ -1,5 +1,7 @@
 # Statusanalyse t258 – Entwicklungsstand, fehlende Features, Fortschritt
 
+> **Historische Momentaufnahme.** Der aktuelle Stand steht in [`../current_state.md`](../current_state.md) (lebende Übersicht mit Vertical Slices, seit t286). Diese Datei bleibt unverändert erhalten.
+
 Stand: 11.11.2026, `main` nach t256 (6c8aecf). Alle Zahlen nachgezählt: Katalog über `scripts/nation_pools/load_game.js`, `npm test` (44 Skripte), `npm run fuzz` (80/80), `scripts/graphics/verify.py`, Messdateien in `docs/balance`. Die Hilfe im Spiel (Menü „Hilfe“) zeigt dieselben Inhalte unter Marktanalyse, Entwicklungsstand, Fehlende Features, Fortschritt und Fortschritt in Prozent.
 
 ## Bestand

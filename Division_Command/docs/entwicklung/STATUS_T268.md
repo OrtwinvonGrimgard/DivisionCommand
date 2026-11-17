@@ -1,5 +1,7 @@
 # Status t268/t269 – Balance Richtung 50 %, keine funktionsgleichen Karten, Elite-Zitat mittig
 
+> **Historische Momentaufnahme.** Der aktuelle Stand steht in [`../current_state.md`](../current_state.md) (lebende Übersicht mit Vertical Slices, seit t286). Diese Datei bleibt unverändert erhalten.
+
 Stand 11.11.2026, `main` nach t267 (`26249f0`).
 
 ## Ergebnis

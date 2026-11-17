@@ -1,5 +1,7 @@
 # Status t267 – Kartenreparatur und Balance-Nachmessung
 
+> **Historische Momentaufnahme.** Der aktuelle Stand steht in [`../current_state.md`](../current_state.md) (lebende Übersicht mit Vertical Slices, seit t286). Diese Datei bleibt unverändert erhalten.
+
 Stand 11.11.2026, `main` nach t265 (`577d441`).
 
 ## Ergebnis
