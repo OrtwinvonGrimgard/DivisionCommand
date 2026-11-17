@@ -123,6 +123,7 @@ Ideen, die nicht (vollständig) im Spiel stecken. Übersicht: [entwicklung/READM
 
 | Dokument | Inhalt |
 |---|---|
+| [CI.md](technik/CI.md) | GitHub-Actions-CI: Trigger, geprüfte Gates, was lokal bleibt. |
 | [TABLE_CAMERA.md](technik/TABLE_CAMERA.md) | 2,5D-Tischkamera: Einstellungen und CSS-Technik. |
 | [PORTRAIT_SYSTEM.md](technik/PORTRAIT_SYSTEM.md) | Porträtsystem für Offiziere und Ebenen. |
 | [CHOICE_WIRING.md](technik/CHOICE_WIRING.md) | Verdrahtung von Wahl-Karten und Doktrinen, Bot-Faustregel. |

@@ -1,0 +1,52 @@
+# CI für Division Command (aktiv seit t289).
+# Läuft bei Push und Pull Request auf main sowie manuell (Actions -> CI -> Run workflow).
+# Prüft: npm test (alle Regel-/Karten-/UI-Logik-/Server-Tests), verify.py (Kartenvorderseiten),
+# Engine-Fuzz und Text-Engine-Audit.
+# Die Playwright-Browser-Gates (ui-play, layout-test, lan-play ...) bleiben lokale Gates,
+# weil sie Chromium, viel Laufzeit und einen Anzeigeserver brauchen (siehe docs/current_state.md, VS-12).
+# Das Projekt liegt im Repo-Root (package.json, tests/, scripts/); es ist kein working-directory nötig.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Ältere Läufe desselben Branches abbrechen, wenn neu gepusht wird.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1   # Historie ist sehr groß (Kartenbilder); nur den aktuellen Stand holen
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm        # nutzt package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Abhängigkeiten
+        run: |
+          npm ci
+          python -m pip install --upgrade pip
+          python -m pip install -r scripts/graphics/requirements.txt websockets
+      - name: npm test
+        run: npm test
+      - name: Kartenvorderseiten prüfen (verify.py)
+        run: python3 scripts/graphics/verify.py
+      - name: Engine-Fuzz
+        run: npm run fuzz
+      - name: Text-Engine-Audit
+        run: node scripts/balance/audit_text_engine_t265.js

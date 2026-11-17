@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **CI (t289):** GitHub Actions aktiv (`.github/workflows/ci.yml`): bei Push/PR auf `main` und manuell `npm test`, `verify.py`, Engine-Fuzz und Text-Engine-Audit. `package-lock.json` wird jetzt versioniert (`npm ci`). Die Vorlage `docs/technik/ci-workflow.yml` ist entfernt; Beschreibung in `docs/technik/CI.md`. Die Browser-Gates bleiben lokal. Kein Spielcode geändert.
 - **Doku (t286):** Vertical-Slice-Verfahren und zentrale Übersicht [`Division_Command/docs/current_state.md`](Division_Command/docs/current_state.md): 15 Slices (VS-01 bis VS-15) mit Status, Gates, offenen Punkten, priorisierten nächsten Schritten, „Zuletzt gemacht“ und Definition of Done. README(s), Docs-Index, Entwicklungs- und Archiv-Übersicht, Projektdokumentation §7/§8/§10 und die `STATUS_T*.md` verweisen darauf. Kein Code geändert, keine Versionsänderung.
 
 ## 0.6e Alpha – 13.11.2026

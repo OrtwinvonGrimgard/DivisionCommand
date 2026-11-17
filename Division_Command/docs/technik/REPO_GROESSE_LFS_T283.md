@@ -13,7 +13,7 @@ Ursache: Kartenflächen werden bei jeder Text-/Wertänderung neu gerendert (WebP
 
 ## Entscheidung t283
 * **Keine Umschreibung der Historie** (kein `git filter-repo`, kein `git lfs migrate`): Das würde alle Hashes ändern, bestehende Tags (`v0.6a`, `v0.6b`) und Klone ungültig machen und einen Force-Push erfordern.
-* Die CI-Vorlage (`docs/technik/ci-workflow.yml`, zu aktivieren als `.github/workflows/ci.yml`) klont mit `fetch-depth: 1`, damit nur der aktuelle Stand (~0,7 GB) geladen wird.
+* Die CI-Vorlage (`.github/workflows/ci.yml`, siehe `docs/technik/CI.md`) klont mit `fetch-depth: 1`, damit nur der aktuelle Stand (~0,7 GB) geladen wird.
 
 ## Empfohlener späterer Schritt (eigene Aufgabe, mit Freigabe)
 1. `git lfs install` und `.gitattributes` mit `*.wav`, `*.mp4`, `Division_Command/web/assets/cards/**/*.webp` `filter=lfs diff=lfs merge=lfs -text` – **nur für neue Commits** (keine Migration). Das bremst das Wachstum, ohne die Historie anzufassen.

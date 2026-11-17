@@ -4,13 +4,13 @@
 
 | | |
 |---|---|
-| **Stand dieser Übersicht** | 17.11.2026 (Berlin), Einführung des Verfahrens (t286) |
+| **Stand dieser Übersicht** | 17.11.2026 (Berlin), nach Aktivierung der CI (t289); Verfahren eingeführt in t286 |
 | **Version** | Alpha **0.6e** (`Division_Command/VERSION`), Tag `v0.6e` = `9a0f3e2d` (13.11.2026) |
 | **Basis-Commit dieser Übersicht** | `54eee9ce` auf `main` (= `v0.6e` plus 3 manuelle Änderungen am Minen-Token vom 14.11.2026, siehe [Zuletzt gemacht](#4-zuletzt-gemacht)) |
 | **Service-Worker-Cache** | `divcmd-alpha46a` (bei jeder Web-Änderung hochzählen) |
 | **Katalog** | 1.746 Karten-IDs, 16 Nationen, 36 Doktrinen; 1.746 Vorderseiten (Nachzählung 17.11.2026 über `scripts/nation_pools/load_game.js`) |
 | **Letzte dokumentierte Prozentwertung** | 67 % bis Early Access, Kernspiel 77 % (`entwicklung/STATUS_T271.md`, Stand t271). Seitdem **nicht neu bewertet**; die Bereichsgewichte stehen dort. |
-| **CI** | **nicht aktiv** (Vorlage vorhanden, siehe [Blockiert](#5-blockiert-und-offen-geklärt-werden-muss)) |
+| **CI** | **aktiv** seit t289 (GitHub Actions: `npm test`, `verify.py`, Fuzz, Audit; siehe [`technik/CI.md`](technik/CI.md)) |
 
 ## Inhalt
 
@@ -59,7 +59,7 @@ Entscheidungen des Projektleiters. Sie stehen hier gebündelt, damit sie nicht i
 | [VS-09](#vs-09-sound--musik) | Sound & Musik | fertig | 15 Musikstücke, 205 Effektdateien (SFX v4), Optionen. |
 | [VS-10](#vs-10-tutorial--onboarding) | Tutorial & Onboarding | fertig | „Grundausbildung“, 25 Schritte, Erststart, Test grün. |
 | [VS-11](#vs-11-mehrspieler--lan) | Mehrspieler / LAN | in Arbeit | Sicht je Spieler, gehärteter Server; nie mit zwei Rechnern gespielt. |
-| [VS-12](#vs-12-tests-ci--repo-werkzeuge) | Tests, CI & Repo-Werkzeuge | in Arbeit | 61 Testdateien + Browser-Gates; CI-Vorlage nicht aktiviert; Repo sehr groß. |
+| [VS-12](#vs-12-tests-ci--repo-werkzeuge) | Tests, CI & Repo-Werkzeuge | in Arbeit | 61 Testdateien + Browser-Gates; CI aktiv (t289: `npm test`, `verify.py`, Fuzz, Audit); Browser-Gates lokal; Repo sehr groß. |
 | [VS-13](#vs-13-menschlicher-playtest--feedback) | Menschlicher Playtest & Feedback | geplant | Logger und Panel sind da; es gibt kein Protokoll einer Partie mit Menschen. |
 | [VS-14](#vs-14-distribution-exe-pdf-steam) | Distribution: EXE, PDF, Steam | geplant | EXE nie gebaut, PDF auf Stand 0.6b, keine Steam-Seite. |
 | [VS-15](#vs-15-spielmodi-roguelike--kampagne) | Spielmodi: Roguelike & Kampagne | geplant | nur Konzepte (Fahrplan, Effektideen). |
@@ -188,11 +188,11 @@ Je Slice: **Umfang** (Ende zu Ende, von Daten über Engine bis Oberfläche), **S
 ### VS-12 Tests, CI & Repo-Werkzeuge
 
 - **Umfang:** Testsuite, Browser-Gates, Fuzz, Smoke, Prüfskripte, CI, Repo-Größe, Build.
-- **Status: in Arbeit.** `npm test` umfasst 61 Testdateien (`package.json`) und ist am 17.11.2026 auf `54eee9ce` grün (siehe [Gates](#8-gates-und-befehle)). CI ist nur als Vorlage vorhanden.
-- **Code:** `tests/`, `scripts/`, `package.json`, `docs/technik/ci-workflow.yml`.
-- **Docs:** `technik/UI_TEST_T256.md`, `technik/REPO_GROESSE_LFS_T283.md`, `technik/PLAYTEST_LOGS.md`.
+- **Status: in Arbeit.** `npm test` umfasst 61 Testdateien (`package.json`) und ist am 17.11.2026 auf `54eee9ce` grün (siehe [Gates](#8-gates-und-befehle)). **CI ist seit t289 aktiv** (GitHub Actions, `.github/workflows/ci.yml`, Beschreibung in [`technik/CI.md`](technik/CI.md)): bei Push/PR auf `main` und manuell laufen `npm test`, `verify.py`, `npm run fuzz` und das Text-Engine-Audit. Die Browser-Gates laufen weiter nur lokal.
+- **Code:** `tests/`, `scripts/`, `package.json`, `package-lock.json`, `.github/workflows/ci.yml`.
+- **Docs:** `technik/CI.md`, `technik/UI_TEST_T256.md`, `technik/REPO_GROESSE_LFS_T283.md`, `technik/PLAYTEST_LOGS.md`.
 - **Offen:**
-  - CI nicht aktiv (blockiert, siehe Abschnitt 5). Die Vorlage nutzt `npm ci`, es gibt aber kein `package-lock.json` (in `.gitignore`); die Vorlage müsste auf `npm install` umgestellt oder ein Lockfile eingecheckt werden.
+  - CI deckt nur die schnellen Gates ab. Die Playwright-Browser-Gates (`ui-play`, `tutorial-play`, `reset-play`, `layout-test`, `screens-test`, `libzoom-play`, `lan-play`, `funcs-play`) und `smoke_sim 400` laufen nicht in der CI (Chromium, lange Laufzeit) und bleiben lokale Gates vor jedem Push. Mögliche spätere Erweiterung: ein Teil davon als eigener, manuell startbarer Job.
   - Repo-Größe: `.git` etwa 5,6 GB, Kartenflächen etwa 1,5 GB, Audio etwa 0,55 GB. Plan (LFS nur für neue Commits, WAV nach OGG) steht in `technik/REPO_GROESSE_LFS_T283.md`; nicht umgesetzt, braucht Freigabe.
   - Technikschuld laut t282: `engine.js` (8.260 Zeilen) und `app.js` (3.523 Zeilen) sind große Einzeldateien; viele `!important` im CSS (t282: 2.394); JSDoc deckt etwa die Hälfte (t282, Heuristik).
   - Abdeckungslücken laut t282: HTTP-Endpunkte von `server.py` (seit t283 teilweise durch `test_server_t283.py`), `hand-drag`, `portraits`.
@@ -229,6 +229,7 @@ Quelle: Git-Log (`git log`), `CHANGELOG.md` und die Berichte unter `balance/` un
 
 | Datum | Version / Commit | Inhalt |
 |---|---|---|
+| 17.11.2026 | t289 (Commit siehe `git log`, kein neuer Tag) | **CI aktiviert:** `.github/workflows/ci.yml` (Push/PR auf `main`, manuell; `npm test`, `verify.py`, Fuzz, Audit), `package-lock.json` eingecheckt (`npm ci`), Vorlage `technik/ci-workflow.yml` durch `technik/CI.md` ersetzt. Der Projektleiter hat dafür dem Bot den GitHub-Scope `workflow` freigegeben. Keine Spieländerung, keine Versionsänderung. |
 | 13.11.2026 | **0.6e** `9a0f3e2d` (t285) | KI nutzt Schutzwall, Feldreparatur, Überschuss; Stellungswechsel in `listActions` (Bot-Nutzung aus); Bollwerk +1 ATK ab 6 DEF (42,5 → 50,4 %), Sicherer Nachschub heilt alle gepanzerten Einheiten (46,7 → 48,7 %). `balance/BALANCE_T285.md` |
 | 13.11.2026 | **0.6d** `1323f53c` (t284) | 141 Zwillingskarten unterschieden (Gruppen mit gleichem Text und gleichen Schlüsselwörtern 3 → 0, nur Werte+Text 119 → 24); Doktrinen Stoßtrupp, Lauer, Gegenstoß; Starterdeck-Tausche; neutraler Hotseat-Endbildschirm. `balance/BALANCE_T284.md` |
 | 12.11.2026 | **0.6c** `2077926f` (t283) | LAN-Sicht je Spieler und gehärteter Server; Regelwerk §20.1/§23.4/§24 (Mulligan, 60 + 2); 11 Karten von 6+ AP auf 5 AP; Doktrinen; Oberfläche (2,5D-Hand, Knöpfe, Tutorial-Box); 9 Effektparameter verdrahtet; CI-Vorlage; Funktionsdurchgang `funcs-play`. `balance/BALANCE_T283.md` |
@@ -254,7 +255,6 @@ Quelle: Git-Log (`git log`), `CHANGELOG.md` und die Berichte unter `balance/` un
 
 | Punkt | Slice | Was fehlt | Wer |
 |---|---|---|---|
-| **CI aktivieren** | VS-12 | Der Push des Workflows scheiterte, weil das OAuth-Token des Bots den Scope `workflow` nicht hat. Vorlage: `technik/ci-workflow.yml`. Zum Aktivieren nach `.github/workflows/ci.yml` kopieren und selbst pushen. Vorher klären: Die Vorlage nutzt `npm ci`, ein `package-lock.json` existiert nicht (siehe VS-12). | Projektleiter |
 | Überschuss für 1 AP | VS-05/VS-04 | Regeländerung, braucht Entscheidung. | Projektleiter |
 | KI-Stellungswechsel einschalten | VS-04/VS-05 | Eigene Balance-Runde nötig (Sahr, Vesper, Merovan, Lyr); Entscheidung, ob gewollt. | Projektleiter |
 | Git LFS / Repo-Größe | VS-12 | Plan steht, braucht Freigabe (`technik/REPO_GROESSE_LFS_T283.md`). | Projektleiter |
@@ -306,7 +306,6 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 | Prio | Schritt | Slice | Anmerkung |
 |---|---|---|---|
 | 1 | **Menschlicher Playtest** (mehrere Partien mit Protokoll, Auswertung) | VS-13 | Alle Balancezahlen sind Bot-Daten. |
-| 1 | **CI aktivieren** (Workflow selbst pushen, Lockfile-Frage klären) | VS-12 | Blockiert beim Projektleiter. |
 | 1 | **LAN mit zwei Rechnern** spielen, dazu kurze LAN-Doku | VS-11 | Seit t271 offen. |
 | 2 | Entscheidung zu **KI-Stellungswechsel** und anschließende Balance-Runde (Sahr, Vesper, Merovan, Lyr) | VS-04, VS-05 | `BALANCE_T285.md` §3. |
 | 2 | **Überschuss 1 AP** entscheiden; **Normverband** (≈ 44 %) lösen, ohne Steinmark zu überdrehen | VS-05, VS-03 | Eigene kleine Runde. |
@@ -333,6 +332,8 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 | Browser | `npm run ui-play` (Seeds 31337 und 1234), `tutorial-play`, `reset-play`, `layout-test`, `screens-test`, `libzoom-play`, `lan-play`, `funcs-play` | Oberfläche, Layout (6 Größen), 75 Ansichten, LAN, Funktionsdurchgang |
 
 **Bei reinen Doku-Änderungen** (wie t286) genügen `npm test` und `verify.py`.
+
+**CI (seit t289):** Auf GitHub laufen bei jedem Push/PR auf `main` automatisch `npm test`, `verify.py`, Fuzz und Audit (`.github/workflows/ci.yml`, [`technik/CI.md`](technik/CI.md)). Das ersetzt die lokalen Browser-Gates und `smoke 400` nicht; ein roter Lauf auf der Actions-Seite des Repos ist vor dem nächsten Push zu beheben.
 
 **Letzter Gate-Lauf (17.11.2026, t286, Basis `54eee9ce` plus Doku-Änderungen):** `npm test` Exit 0 (131 PASS-Zeilen, 0 FAIL), `verify.py` Exit 0 (1.746 Vorderseiten 1024×1428, 0 ohne Motiv, Texte ≤ 120 Zeichen). Fuzz, Smoke, Audit und Browser-Gates wurden in t286 nicht neu gefahren (nur Doku geändert). **Letzter vollständiger Lauf mit allen Browser-Gates: t285 (`9a0f3e2d`, v0.6e).** Seitdem geändert: nur `MINE.png` (manuell, 14.11.).
 
