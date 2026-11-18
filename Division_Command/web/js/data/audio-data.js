@@ -240,9 +240,19 @@
     return !el || el.checked;
   }
 
+  /**
+   * Haelt ein Audio-Element an und setzt es an den Anfang. t296: Nur schreiben, was sich aendert.
+   * Ein `currentTime = 0` auf ein bereits pausiertes Element am Anfang loest in Chromium trotzdem
+   * `seeking`/`seeked`/`canplay` aus; `index.html` ruft bei `canplay` wieder `applyAudio` auf, das
+   * ueber `playTable` erneut `stop` ruft. Das war die Audio-Schleife (zehntausende Aufrufe pro Sekunde).
+   * @param {HTMLMediaElement|null} el
+   */
   function stop(el) {
     if (!el) return;
-    try { el.pause(); el.currentTime = 0; } catch (e) {}
+    try {
+      if (!el.paused) el.pause();
+      if (el.currentTime !== 0) el.currentTime = 0;
+    } catch (e) {}
   }
 
   function byId(id) {
