@@ -222,6 +222,20 @@ Normalerweise geht sie anschließend in den Ablagestapel/Friedhof.
 
 Einheiten rücken durch das Zerstören eines Gegners nicht automatisch vor.
 
+## 8.1 Bedingte DEF-Boni (verbindlich, t298 / 0.619)
+
+DEF-Boni, die an eine Lage gebunden sind, zählen voll als Stabilität, solange die Bedingung gilt. Dazu gehören Doktrinen (z. B. Auffangen, Verteilte Stellung, Linienkrieg, Ausharren, Etappensicherung, Bollwerk), Flankenschutz benachbarter Einheiten, Auren aus der Unterstützung und Doktrin-Auren wie Tiefenverteidigung.
+
+- **Die angezeigte DEF ist die echte DEF.** Schaden wird von diesem Wert abgezogen; die Einheit fällt erst, wenn er 0 erreicht.
+- **Bedingung tritt ein:** aktuelle und maximale Stabilität steigen um den Bonus.
+- **Bedingung fällt weg:** beide sinken um den Bonus, die aktuelle Stabilität aber **nie unter 1**. Der Wegfall eines Bonus allein zerstört keine Einheit (wie bei Karteneffekten „+X DEF, solange …“).
+- Die Lage wird nach jeder Aktion und unmittelbar vor jedem Schaden neu bewertet. Beispiel: Eine Einheit mit 2 DEF unter „Verteilte Stellung“ (allein im Abschnitt +2) hat 4 DEF und übersteht 3 Schaden mit 1 DEF. Rückt danach eine zweite eigene Einheit in den Abschnitt, bleibt sie bei 1 DEF stehen.
+- „Bonus negieren“ setzt die Einheit auf ihre gedruckte DEF zurück; bedingte Boni zählen bis zum Ende der Negierung nicht.
+
+**Überlast** (Klarstellung): Der Schaden am Ende des eigenen Zuges kann nicht verhindert werden. Fällt die DEF dadurch auf 0, wird die Einheit sofort zerstört (vor 0.619 blieb sie fälschlich mit 0 DEF stehen).
+
+**Kampftext:** „erhält N“ steht nur dort, wo der Angreifer wirklich Gegen- oder Erstschlag erlitten hat. Fällt das Ziel (§7.2), gibt es keinen Gegenschlag.
+
 ---
 
 # 9. Moral

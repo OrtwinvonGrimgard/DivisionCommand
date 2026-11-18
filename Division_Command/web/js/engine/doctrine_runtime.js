@@ -271,7 +271,7 @@
      * `inst.def` abgezogen wird und der Tod bei `inst.def <= 0` eintritt. Jetzt wird die Differenz zwischen
      * angezeigtem Wert und `inst.def` als „Lage-DEF“ in `inst.def`/`inst.defMax` eingebacken und in
      * `inst.flags.dynDef` gebucht (gleiches Muster wie `_cmRecompute`). Fällt eine Bedingung weg, sinkt die DEF um
-     * den Bonus, aber nie unter 1 (RULES §6.4). Abgleich nach jeder Aktion (`dispatch`) und vor jedem Schaden.
+     * den Bonus, aber nie unter 1 (RULES §8.1). Abgleich nach jeder Aktion (`dispatch`) und vor jedem Schaden.
      */
     var _cadDok = proto.currentAtkDef;
     /**

@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Division Command 0.611 Alpha</title>
+  <title>Division Command 0.619 Alpha</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#12140f">
   <link rel="stylesheet" href="css/app.css?v=t265">
@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/ui-system.css?v=t280b">
   <link rel="stylesheet" href="css/ui-screens.css?v=t281">
   <link rel="stylesheet" href="css/ui-table.css?v=alpha44a">
-  <link rel="stylesheet" href="css/table-hud.css?v=alpha47b">
+  <link rel="stylesheet" href="css/table-hud.css?v=alpha47c">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
     .title-brand .ver-big { display: none !important; }
@@ -47,7 +47,7 @@
   <template id="match-tpl">
   <div id="app">
     <header class="topbar">
-      <h1>DIVISION COMMAND <span class="ver">0.611 α</span></h1>
+      <h1>DIVISION COMMAND <span class="ver">0.619 α</span></h1>
       <div class="hud-center">
         <div class="hud-scn"><span id="hud-scn">Gefecht</span><span class="nowplay" id="nowplay"></span></div>
         <div class="meta" id="turnmeta">Lobby</div>
@@ -182,7 +182,7 @@
   <audio id="bgm" autoplay preload="auto" src="assets/audio/menue/Division%20Command%20(Remastered).wav"></audio>
   <audio id="bgm-battle" preload="auto"></audio>
   <div id="kick-veil"><p id="kick-msg">Viel Glück</p></div>
-  <div id="dc-version">Alpha 0.611</div>
+  <div id="dc-version">Alpha 0.619</div>
 
   <div id="title-root" class="boot-intro">
       <div class="title-world" id="title-world" aria-hidden="true">
@@ -195,7 +195,7 @@
       </div>
       <div class="title-brand">
         <img class="title-logo" src="assets/title-logo.png?v=6" alt="Division Command" width="1381" height="507">
-        <p class="sub ver-big" hidden>Alpha 0.611</p>
+        <p class="sub ver-big" hidden>Alpha 0.619</p>
       </div>
     <div class="title-panel" id="menu-panel">
       <div id="scr-boot" class="screen on splash">
@@ -286,7 +286,7 @@
 
       <div id="scr-library" class="screen">
         <h1 class="page-title">BIBLIOTHEK</h1>
-        <p class="tiny" id="lib-build">Stand 0.611</p>
+        <p class="tiny" id="lib-build">Stand 0.619</p>
         <p class="tiny lib-hint">Klick = große Ansicht · Doppelklick = eine Kopie ins Deck · im Deck: Doppelklick legt zurück. Kopien: Gold 1× · Silber 2× · Bronze 4× · 2 verschiedene Doktrinen.</p>
         <div class="lib-wrap">
           <div class="lib-main">
@@ -533,7 +533,7 @@
             </div>
 <button type="button" data-hilfe="stand">Entwicklungsstand</button>
             <div class="hilfe-sub" data-for="stand">
-              <button type="button" data-jump="version">Version 0.611</button>
+              <button type="button" data-jump="version">Version 0.619</button>
               <button type="button" data-jump="stand-engine">Regeln & Engine</button>
               <button type="button" data-jump="karten">Karten & Grafik</button>
               <button type="button" data-jump="stand-bot">Bot & Balance</button>
@@ -781,8 +781,8 @@
 
             <article class="hilfe-page dossier" id="hilfe-stand">
               <p class="tiny">Stand 12.&nbsp;November&nbsp;2026, nachgezählt im Code auf <code>main</code> nach t270 (Analyse t265, Kartenreparatur t267, Balance und Eindeutigkeit t268, einheitliche Schrift t270, Analyse t271). Alle Zahlen stammen aus Katalog, Tests und Messdateien im Repo.</p>
-              <h2 id="version">Version 0.611 Alpha</h2>
-              <p>Gesetzte Version 0.611 (Tag v0.611 vom 18.&nbsp;11.&nbsp;2026). Gegenüber 0.610: Die Audio-Schleife am Spieltisch ist behoben (die Seite schrieb dort zehntausendmal pro Sekunde Audio-Einstellungen und belastete den Browser); die Titelmusik startet am Tisch nicht mehr neu. Neues Versionsschema: drei Nachkommastellen, Sprung nach Gewicht (Fix +0,001, Erweiterung +0,002 bis +0,005, großer Umbau etwa +0,010; 0.6a–0.6e = 0.601–0.605). Gegenüber 0.605 (0.6e): Der Bot spielt seinen Zug sichtbar Karte für Karte mit Denkpausen; kannst du einen Soforteinsatz aus deiner AP-Reserve spielen, hält er an und öffnet ein Reaktionsfenster (Optionen: Bot-Tempo, Reaktionsfenster). Gegenüber 0.6d (0.6e): Die KI setzt aktive Doktrin-Fähigkeiten ein (Feldreparatur, Schutzwall, Überschuss). Feldreparatur und Überschuss wirken jetzt wie gedruckt. Bollwerk (+1 ATK ab 6 DEF) und Sicherer Nachschub (Feldreparatur heilt alle gepanzerten Einheiten um 2) liegen näher an 50&nbsp;%. Weiter keine 0.7: Der Anzug-Vorteil in einheitenlastigen Decks bleibt bewusst, und ein menschlicher Playtest fehlt.</p>
+              <h2 id="version">Version 0.619 Alpha</h2>
+              <p>Gesetzte Version 0.619 (Tag v0.619 vom 18.&nbsp;11.&nbsp;2026). Gegenüber 0.611: DEF-Boni aus Doktrinen (z.&nbsp;B. Auffangen, Verteilte Stellung, Linienkrieg), Flankenschutz und Auren zählen jetzt auch im Kampf – die angezeigte DEF ist die echte DEF; fällt die Bedingung weg, sinkt die DEF, aber nie unter 1. Überlast zerstört die Einheit am Zugende, wenn ihre DEF auf 0 fällt. Der Kampftext nennt Gegenschaden nur noch, wenn wirklich zurückgeschlagen wurde. Gegenüber 0.610 (0.611): Die Audio-Schleife am Spieltisch ist behoben (die Seite schrieb dort zehntausendmal pro Sekunde Audio-Einstellungen und belastete den Browser); die Titelmusik startet am Tisch nicht mehr neu. Neues Versionsschema: drei Nachkommastellen, Sprung nach Gewicht (Fix +0,001, Erweiterung +0,002 bis +0,005, großer Umbau etwa +0,010; 0.6a–0.6e = 0.601–0.605). Gegenüber 0.605 (0.6e): Der Bot spielt seinen Zug sichtbar Karte für Karte mit Denkpausen; kannst du einen Soforteinsatz aus deiner AP-Reserve spielen, hält er an und öffnet ein Reaktionsfenster (Optionen: Bot-Tempo, Reaktionsfenster). Gegenüber 0.6d (0.6e): Die KI setzt aktive Doktrin-Fähigkeiten ein (Feldreparatur, Schutzwall, Überschuss). Feldreparatur und Überschuss wirken jetzt wie gedruckt. Bollwerk (+1 ATK ab 6 DEF) und Sicherer Nachschub (Feldreparatur heilt alle gepanzerten Einheiten um 2) liegen näher an 50&nbsp;%. Weiter keine 0.7: Der Anzug-Vorteil in einheitenlastigen Decks bleibt bewusst, und ein menschlicher Playtest fehlt.</p>
               <h2 id="stand-engine">Regeln & Engine</h2>
               <ul>
                 <li>Spielbar: Front 3×3 je Seite, Support, Niemandsland, AP-Ökonomie (5 je Zug, Rest als Reaktionsreserve), Angriff mit Gegenschlag, Eingraben, Steilfeuer I–V, verdeckte Fallen bei Feindkontakt, Doktrinen, Trophy-Sieg (5 SP, Sicherheitsnetz Zug 26/28).</li>
@@ -895,6 +895,7 @@
                   <tr><td>13.&nbsp;11.</td><td>t285 / Version 0.6e: KI nutzt aktive Doktrin-Fähigkeiten, Feldreparatur und Überschuss regelkonform, Bollwerk und Sicherer Nachschub näher an 50&nbsp;%.</td></tr>
                   <tr><td>17.&nbsp;11.</td><td>t291 / Version 0.610: Bot-Zug sequenziert (eine Aktion, Anzeige, Denkpause), Reaktionsfenster für Soforteinsätze aus der AP-Reserve, Einstellungen Bot-Tempo und Reaktionsfenster.</td></tr>
                   <tr><td>18.&nbsp;11.</td><td>t296 / Version 0.611: Audio-Schleife am Spieltisch behoben (Einstellungen werden nur bei Änderung gespeichert, Musik am Tisch unverändert).</td></tr>
+                  <tr><td>18.&nbsp;11.</td><td>t298 / Version 0.619: Doktrin-, Flanken- und Aura-DEF zählen im Kampf (Anzeige = echte DEF), Überlast zerstört bei DEF 0, Kampftext ohne erfundenen Gegenschaden.</td></tr>
                 </tbody>
               </table>
               <h2 id="fortschritt-meilensteine">Meilensteine bis Early Access</h2>
@@ -975,31 +976,31 @@
 
   <script src="js/ui/title-fx.js?v=05ax"></script>
   <script>window.DC_FOLDER_PNG = true;</script>
-  <script src="js/version.js?v=alpha47b"></script>
+  <script src="js/version.js?v=alpha47c"></script>
   <script src="js/data/keywords.js?v=tac1"></script>
-  <script src="js/data/sets/types/doktrinen.js?v=alpha47b"></script>
+  <script src="js/data/sets/types/doktrinen.js?v=alpha47c"></script>
   <script src="js/data/sets/types/tokens.js?v=t1"></script>
-  <script src="js/data/sets/types/infanterie.js?v=alpha47b"></script>
-  <script src="js/data/sets/types/panzer.js?v=alpha47b"></script>
-  <script src="js/data/sets/types/artillerie.js?v=alpha47b"></script>
-  <script src="js/data/sets/types/aufklaerung.js?v=alpha47b"></script>
-  <script src="js/data/sets/types/elite.js?v=alpha47b"></script>
-  <script src="js/data/sets/types/unterstuetzung.js?v=alpha47b"></script>
-  <script src="js/data/sets/types/soforteinsatz.js?v=alpha47b"></script>
+  <script src="js/data/sets/types/infanterie.js?v=alpha47c"></script>
+  <script src="js/data/sets/types/panzer.js?v=alpha47c"></script>
+  <script src="js/data/sets/types/artillerie.js?v=alpha47c"></script>
+  <script src="js/data/sets/types/aufklaerung.js?v=alpha47c"></script>
+  <script src="js/data/sets/types/elite.js?v=alpha47c"></script>
+  <script src="js/data/sets/types/unterstuetzung.js?v=alpha47c"></script>
+  <script src="js/data/sets/types/soforteinsatz.js?v=alpha47c"></script>
   <script src="js/data/sets/types/ausruestung.js?v=alpha44a"></script>
-  <script src="js/data/sets/types/nation_pools.js?v=alpha47b"></script>
+  <script src="js/data/sets/types/nation_pools.js?v=alpha47c"></script>
   <script src="js/data/sets/types/tactical.js?v=tac1"></script>
-  <script src="js/data/decks.js?v=alpha47b"></script>
+  <script src="js/data/decks.js?v=alpha47c"></script>
   <script src="js/data/image-manifest.js?v=gfx2"></script>
   <script src="js/data/catalog.js?v=alpha44a"></script>
   <script src="js/data/card-faces.js?v=gfx2"></script>
   <script src="js/data/audio-data.js?v=endscreen1"></script>
-  <script src="js/engine/engine.js?v=alpha47b"></script>
+  <script src="js/engine/engine.js?v=alpha47c"></script>
   <script src="js/engine/victory_trophy.js?v=alpha44a"></script>
-  <script src="js/engine/doctrine_runtime.js?v=alpha47b"></script>
+  <script src="js/engine/doctrine_runtime.js?v=alpha47c"></script>
   <script src="js/engine/tactical_runtime.js?v=tac1"></script>
-  <script src="js/ai/bot.js?v=alpha47b"></script>
-  <script src="js/ai/bot-seq.js?v=alpha47b"></script>
+  <script src="js/ai/bot.js?v=alpha47c"></script>
+  <script src="js/ai/bot-seq.js?v=alpha47c"></script>
   <script src="js/playtest/store.js?v=nochat1"></script>
   <script src="js/playtest/logger.js?v=alpha44a"></script>
   <script src="js/playtest/panel.js?v=pt2"></script>
@@ -1013,9 +1014,9 @@
   <script src="js/ui/table-effects.js?v=alpha44a"></script>
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=alpha44a"></script>
-  <script src="js/ui/end-screen.js?v=alpha47b"></script>
-  <script src="js/ui/app.js?v=alpha47b"></script>
-  <script src="js/ui/reset.js?v=alpha47b"></script>
+  <script src="js/ui/end-screen.js?v=alpha47c"></script>
+  <script src="js/ui/app.js?v=alpha47c"></script>
+  <script src="js/ui/reset.js?v=alpha47c"></script>
   <script src="js/tutorial/scenario.js?v=t275"></script>
   <script src="js/ui/tutorial.js?v=alpha44a"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
@@ -1028,9 +1029,9 @@
       navigator.serviceWorker.register('sw.js?v=mix1').catch(function () {});
     }
     (function () {
-      document.title = window.DC_BUILD_LABEL || 'Division Command 0.611 Alpha';
+      document.title = window.DC_BUILD_LABEL || 'Division Command 0.619 Alpha';
       var dcVer = document.getElementById('dc-version');
-      if (dcVer) dcVer.textContent = 'Alpha ' + (window.DC_VERSION || '0.611');
+      if (dcVer) dcVer.textContent = 'Alpha ' + (window.DC_VERSION || '0.619');
       var bgm = document.getElementById('bgm');
 
       function dcBarToCommand() {

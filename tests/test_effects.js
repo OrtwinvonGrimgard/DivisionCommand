@@ -104,6 +104,7 @@ function putUnit(eng, pid, cardId, section, row) {
   const p = eng.player(pid);
   const inst = eng.instFromId(cardId, pid);
   p.front[section][row] = inst;
+  if (eng._dynDefSync) eng._dynDefSync(); // t298: Lage-DEF wie nach einer echten Aktion einbacken
   return inst;
 }
 
@@ -275,12 +276,17 @@ function main() {
       const e1 = putUnit(eng7, 1, inf.id, 'C', 0);
       const e2 = putUnit(eng7, 1, pz.id, 'C', 1);
       e1.def = 3; e1.defMax = 3; e2.def = 3; e2.defMax = 3;
+      // t298: Doktrin-DEF wird vor dem Schaden eingebacken – Vergleich über die angezeigte (= echte) DEF.
+      const shownDef = (u) => (eng7.findInst(u.uid) ? eng7.currentAtkDef(u).def : 0);
+      const s1 = shownDef(e1), s2 = shownDef(e2);
       const card = giveHand(eng7, 0, mass.id);
       eng7.dispatch({ type: 'PLAY', player: 0, uid: card.uid });
       if (eng7.state.pending) {
         try { eng7.dispatch({ type: 'CONFIRM_TARGETS', player: 0 }); } catch (e) {}
       }
-      assert(e1.def < 3 || e2.def < 3, 'mass damage applied ' + e1.def + '/' + e2.def + ' via ' + mass.name);
+      // Weiterkämpfen (+DEF, solange beschädigt) kann den Treffer in der Anzeige ausgleichen → Treffermarke zählt mit.
+      const hit = (u) => !!(u.flags && u.flags.kwHitTurn === eng7.state.turn);
+      assert(shownDef(e1) < s1 || shownDef(e2) < s2 || hit(e1) || hit(e2), 'mass damage applied ' + e1.def + '/' + e2.def + ' via ' + mass.name);
       ok(nat + ': MASS_DAMAGE ' + mass.name);
     }
   }
