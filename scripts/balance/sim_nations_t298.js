@@ -13,7 +13,17 @@ const fs = require('fs'), path = require('path'), vm = require('vm');
 const L = require((process.env.SIM_ROOT || path.join(__dirname, '..', '..')) + '/scripts/nation_pools/load_game.js');
 const w = L.loadGame({ quiet: true });
 if (process.env.SIM_PATCH) { const P = JSON.parse(process.env.SIM_PATCH); w.DC_CATALOG.cards.forEach((c) => { const q = P[c.id]; if (!q) return; (c.effects || []).forEach((e) => { if (q[e.code]) Object.assign(e.param = e.param || {}, q[e.code]); }); }); }
-vm.runInNewContext(fs.readFileSync(path.join(L.WEB, 'js/ai/bot.js'), 'utf8'), { window: w, console: { log() {}, warn() {} }, Math, JSON, Object, Array, String, Number, Error });
+/**
+ * t300: Der Bot nutzt `Math.random` (Gleichstände, Zufallswahl). Damit eine Messung mit gleichen Seeds genau dieselben
+ * Zahlen liefert (Balance-Gate), bekommt der Bot ein eigenes `Math`, dessen `random` je Partie aus dem Partie-Seed
+ * neu gestartet wird (mulberry32).
+ * @param {number} a Seed
+ * @returns {function(): number} Zufallszahl in [0, 1)
+ */
+function mulberry32(a) { return function () { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const botRng = { f: Math.random };
+const BotMath = Object.create(Math); BotMath.random = () => botRng.f();
+vm.runInNewContext(fs.readFileSync(path.join(L.WEB, 'js/ai/bot.js'), 'utf8'), { window: w, console: { log() {}, warn() {} }, Math: BotMath, JSON, Object, Array, String, Number, Error });
 const Bot = w.DCBot, C = w.DC_CATALOG.cards, byId = Object.fromEntries(C.map((c) => [c.id, c]));
 const nations = Object.keys(w.DC_NATION_DECKS);
 const variant = process.argv[2] || 'starter', per = Number(process.argv[3] || 4);
@@ -37,6 +47,7 @@ for (const a of nations) for (const b of nations) {
   for (let g = 0; g < per; g++) {
     seed++; games++;
     const d0 = deck(a), d1 = deck(b), sp = g % 2;
+    botRng.f = mulberry32((seed * 2654435761) >>> 0);
     const eng = new w.DCEngine.Engine(w.DC_CATALOG, { seed });
     eng.createMatch({ seed, mode: 'bot', name0: a, name1: b, deck0: d0.cards, deck1: d1.cards, doctrine0: d0.doctrines, doctrine1: d1.doctrines, startPlayer: sp });
     apFirst.push(eng.state.players[sp].ap);

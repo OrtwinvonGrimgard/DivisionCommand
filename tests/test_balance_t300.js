@@ -106,3 +106,15 @@ const stats = (eng, u) => { eng._dynDefSync(); return eng.currentAtkDef(u); };
   }
   console.log('ok t300 Ausnahmeliste und Vergleichsstände gültig');
 }
+
+// 4) Determinismus: gleiche Seeds → gleiche Zahlen (Bot-Zufall je Partie geseedet), auch bei anderer Doktrin-Aufteilung
+{
+  const { execFileSync } = require('node:child_process');
+  const os = require('node:os');
+  const out = fs.mkdtempSync(path.join(os.tmpdir(), 'dc-t300-det-'));
+  const run = (tag, docs) => { execFileSync(process.execPath, [path.join(__dirname, '..', 'scripts/balance/sim_doctrines_t298.js'), '4'], { env: Object.assign({}, process.env, { SIM_OUT: out, SIM_TAG: tag, SIM_DOCS: docs, SIM_DOC_SEED_STRIDE: '10000' }), stdio: 'ignore' }); return JSON.parse(fs.readFileSync(path.join(out, 'sim_doc_' + tag + '.json'), 'utf8')); };
+  const a = run('a', 'dc_dok_rasten'), b = run('b', 'dc_dok_bollwerk,dc_dok_rasten');
+  assert.deepEqual(a.dc_dok_rasten, b.dc_dok_rasten, 'gleiche Partien unabhängig von der Aufteilung');
+  fs.rmSync(out, { recursive: true, force: true });
+  console.log('ok t300 Messung deterministisch');
+}
