@@ -1,0 +1,351 @@
+{
+ "label": "v0.624",
+ "mode": "quick",
+ "sample": {
+  "nationShards": [
+   50000
+  ],
+  "nationPer": 14,
+  "docPer": 16,
+  "docSeed": 90000,
+  "docChunk": 2,
+  "k": 2
+ },
+ "band": {
+  "lo": 0.4,
+  "hi": 0.6,
+  "watchLo": 0.45,
+  "watchHi": 0.55
+ },
+ "nations": {
+  "starter": {
+   "Steinmark": {
+    "games": 420,
+    "rate": 0.45
+   },
+   "Karsk": {
+    "games": 420,
+    "rate": 0.51
+   },
+   "Theryn": {
+    "games": 420,
+    "rate": 0.502
+   },
+   "Vael": {
+    "games": 420,
+    "rate": 0.467
+   },
+   "Merovan": {
+    "games": 420,
+    "rate": 0.524
+   },
+   "Lyr": {
+    "games": 420,
+    "rate": 0.486
+   },
+   "Ossaria": {
+    "games": 420,
+    "rate": 0.512
+   },
+   "Caldris": {
+    "games": 420,
+    "rate": 0.624
+   },
+   "Orthea": {
+    "games": 420,
+    "rate": 0.49
+   },
+   "Namar": {
+    "games": 420,
+    "rate": 0.481
+   },
+   "Rothain": {
+    "games": 420,
+    "rate": 0.5
+   },
+   "Sahr": {
+    "games": 420,
+    "rate": 0.483
+   },
+   "Averon": {
+    "games": 420,
+    "rate": 0.469
+   },
+   "Vesper": {
+    "games": 420,
+    "rate": 0.55
+   },
+   "Dargan": {
+    "games": 420,
+    "rate": 0.45
+   },
+   "Eldran": {
+    "games": 420,
+    "rate": 0.502
+   }
+  },
+  "mixed": {
+   "Steinmark": {
+    "games": 420,
+    "rate": 0.476
+   },
+   "Karsk": {
+    "games": 420,
+    "rate": 0.536
+   },
+   "Theryn": {
+    "games": 420,
+    "rate": 0.526
+   },
+   "Vael": {
+    "games": 420,
+    "rate": 0.505
+   },
+   "Merovan": {
+    "games": 420,
+    "rate": 0.614
+   },
+   "Lyr": {
+    "games": 420,
+    "rate": 0.417
+   },
+   "Ossaria": {
+    "games": 420,
+    "rate": 0.433
+   },
+   "Caldris": {
+    "games": 420,
+    "rate": 0.645
+   },
+   "Orthea": {
+    "games": 420,
+    "rate": 0.483
+   },
+   "Namar": {
+    "games": 420,
+    "rate": 0.457
+   },
+   "Rothain": {
+    "games": 420,
+    "rate": 0.519
+   },
+   "Sahr": {
+    "games": 420,
+    "rate": 0.543
+   },
+   "Averon": {
+    "games": 420,
+    "rate": 0.445
+   },
+   "Vesper": {
+    "games": 420,
+    "rate": 0.526
+   },
+   "Dargan": {
+    "games": 420,
+    "rate": 0.443
+   },
+   "Eldran": {
+    "games": 420,
+    "rate": 0.431
+   }
+  }
+ },
+ "doctrines": {
+  "dc_dok_abloesung": {
+   "name": "Ablösung",
+   "games": 256,
+   "rate": 0.461
+  },
+  "dc_dok_abnutzung": {
+   "name": "Abnutzung",
+   "games": 256,
+   "rate": 0.48
+  },
+  "dc_dok_abriegeln": {
+   "name": "Abriegeln",
+   "games": 256,
+   "rate": 0.43
+  },
+  "dc_dok_abschluss": {
+   "name": "Abschluss",
+   "games": 256,
+   "rate": 0.496
+  },
+  "dc_dok_auffangen": {
+   "name": "Auffangen",
+   "games": 256,
+   "rate": 0.516
+  },
+  "dc_dok_aufklaerungsschlag": {
+   "name": "Aufklärungsschlag",
+   "games": 256,
+   "rate": 0.578
+  },
+  "dc_dok_ausharren": {
+   "name": "Ausharren",
+   "games": 256,
+   "rate": 0.613
+  },
+  "dc_dok_auswertung": {
+   "name": "Auswertung",
+   "games": 256,
+   "rate": 0.41
+  },
+  "dc_dok_blitzkrieg": {
+   "name": "Blitzkrieg",
+   "games": 256,
+   "rate": 0.367
+  },
+  "dc_dok_bollwerk": {
+   "name": "Bollwerk",
+   "games": 256,
+   "rate": 0.633
+  },
+  "dc_dok_breites_aufgebot": {
+   "name": "Breites Aufgebot",
+   "games": 256,
+   "rate": 0.48
+  },
+  "dc_dok_entsatz": {
+   "name": "Entsatz",
+   "games": 256,
+   "rate": 0.57
+  },
+  "dc_dok_etappensicherung": {
+   "name": "Etappensicherung",
+   "games": 256,
+   "rate": 0.527
+  },
+  "dc_dok_feuerplan": {
+   "name": "Feuerplan",
+   "games": 256,
+   "rate": 0.539
+  },
+  "dc_dok_feuerwalze": {
+   "name": "Feuerwalze",
+   "games": 256,
+   "rate": 0.414
+  },
+  "dc_dok_gegenstoss": {
+   "name": "Gegenstoß",
+   "games": 256,
+   "rate": 0.516
+  },
+  "dc_dok_gepanzerter_fuss": {
+   "name": "Gepanzerter Fuß",
+   "games": 256,
+   "rate": 0.547
+  },
+  "dc_dok_lauer": {
+   "name": "Lauer",
+   "games": 256,
+   "rate": 0.48
+  },
+  "dc_dok_linienkrieg": {
+   "name": "Linienkrieg",
+   "games": 256,
+   "rate": 0.508
+  },
+  "dc_dok_lokalisierung": {
+   "name": "Lokalisierung",
+   "games": 256,
+   "rate": 0.496
+  },
+  "dc_dok_marsch_aus_dem_vollen": {
+   "name": "Marsch aus dem Vollen",
+   "games": 256,
+   "rate": 0.508
+  },
+  "dc_dok_materialersatz": {
+   "name": "Materialersatz",
+   "games": 256,
+   "rate": 0.453
+  },
+  "dc_dok_normverband": {
+   "name": "Normverband",
+   "games": 256,
+   "rate": 0.434
+  },
+  "dc_dok_punktfeuer": {
+   "name": "Punktfeuer",
+   "games": 256,
+   "rate": 0.594
+  },
+  "dc_dok_rasten": {
+   "name": "Rasten",
+   "games": 256,
+   "rate": 0.523
+  },
+  "dc_dok_scheinschwerpunkt": {
+   "name": "Scheinschwerpunkt",
+   "games": 256,
+   "rate": 0.582
+  },
+  "dc_dok_schwerpunkt": {
+   "name": "Schwerpunkt",
+   "games": 256,
+   "rate": 0.5
+  },
+  "dc_dok_sicherer_nachschub": {
+   "name": "Sicherer Nachschub",
+   "games": 256,
+   "rate": 0.496
+  },
+  "dc_dok_stosstrupp": {
+   "name": "Stoßtrupp",
+   "games": 256,
+   "rate": 0.477
+  },
+  "dc_dok_sturmangriff": {
+   "name": "Sturmangriff",
+   "games": 256,
+   "rate": 0.527
+  },
+  "dc_dok_tiefenverteidigung": {
+   "name": "Tiefenverteidigung",
+   "games": 256,
+   "rate": 0.563
+  },
+  "dc_dok_umgehen": {
+   "name": "Umgehen",
+   "games": 256,
+   "rate": 0.5
+  },
+  "dc_dok_verlegung": {
+   "name": "Verlegung",
+   "games": 256,
+   "rate": 0.516
+  },
+  "dc_dok_verteilte_stellung": {
+   "name": "Verteilte Stellung",
+   "games": 256,
+   "rate": 0.508
+  },
+  "dc_dok_weiterkaempfen": {
+   "name": "Weiterkämpfen",
+   "games": 256,
+   "rate": 0.531
+  },
+  "dc_dok_zielangriff": {
+   "name": "Zielangriff",
+   "games": 256,
+   "rate": 0.52
+  }
+ },
+ "firstPlayer": {
+  "starter": 0.496,
+  "mixed": 0.568
+ },
+ "games": 15936,
+ "errs": 0,
+ "forced": 0,
+ "seconds": 182,
+ "summary": {
+  "fail": 0,
+  "warn": 0,
+  "watch": 20,
+  "ok": 48,
+  "baseline": "v0.624"
+ }
+}

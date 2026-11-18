@@ -15,6 +15,8 @@
  *                           bewusster Balance-Änderung; Vergleich im Bericht weiter gegen `--baseline`)
  *   `--out ORDNER`          Ausgabe (Standard `scripts/balance/out/`, gitignored)
  *   `--label TEXT`          Bezeichnung im Bericht (Standard: Version aus `Division_Command/VERSION`)
+ *   `--from DATEI`          nicht messen, sondern ein früheres Ergebnis (`balance_gate_<mode>.json`) neu bewerten,
+ *                           z. B. nach einer Änderung der Ausnahmeliste
  * Doku: `Division_Command/docs/balance/BALANCE_GATE.md`.
  */
 'use strict';
@@ -38,13 +40,13 @@ const STRIDE = 10000;
  * @returns {{mode:string, jobs:number, root:string|null, baseline:string|null, update:boolean, out:string, label:string|null}}
  */
 function parseArgs() {
-  const a = process.argv.slice(2), o = { mode: 'full', jobs: os.cpus().length, root: null, baseline: null, update: false, out: path.join(HERE, 'out'), label: null };
+  const a = process.argv.slice(2), o = { mode: 'full', jobs: os.cpus().length, root: null, baseline: null, update: false, out: path.join(HERE, 'out'), label: null, from: null };
   for (let i = 0; i < a.length; i++) {
     const v = a[i];
     if (v === '--mode') o.mode = a[++i]; else if (v === '--jobs') o.jobs = Number(a[++i]);
     else if (v === '--root') o.root = path.resolve(a[++i]); else if (v === '--baseline') o.baseline = path.resolve(a[++i]);
     else if (v === '--update-baseline') o.update = true; else if (v === '--out') o.out = path.resolve(a[++i]);
-    else if (v === '--label') o.label = a[++i]; else if (v === '--quick') o.mode = 'quick';
+    else if (v === '--label') o.label = a[++i]; else if (v === '--from') o.from = path.resolve(a[++i]); else if (v === '--quick') o.mode = 'quick';
     else throw new Error('Unbekannte Option ' + v);
   }
   if (!MODES[o.mode]) throw new Error('Modus full|quick');
@@ -114,6 +116,8 @@ const dlt = (x) => (x == null ? '' : (x >= 0 ? '+' : '−') + Math.abs(x * 100).
 /** Hauptablauf. @returns {Promise<number>} Exit-Code */
 async function main() {
   const o = parseArgs(), M = MODES[o.mode], t0 = Date.now();
+  let res;
+  if (o.from) { res = JSON.parse(fs.readFileSync(o.from, 'utf8')); if (res.mode !== o.mode) throw new Error('--from: Modus ' + res.mode + ' passt nicht zu --mode ' + o.mode); } else {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'dc-balance-gate-'));
   const env = o.root ? { SIM_ROOT: o.root } : {};
   const L = require((o.root || REPO) + '/scripts/nation_pools/load_game.js');
@@ -131,7 +135,7 @@ async function main() {
   await pool(tasks, o.jobs, (d, n) => process.stderr.write(`  ${d}/${n} fertig (${Math.round((Date.now() - t0) / 1000)} s)\n`));
 
   // zusammenführen
-  const res = { label, mode: o.mode, date: new Date().toISOString(), sample: M, band: BAND, nations: {}, doctrines: {}, firstPlayer: {}, games: 0, errs: 0, forced: 0 };
+  res = { label, mode: o.mode, date: new Date().toISOString(), sample: M, band: BAND, nations: {}, doctrines: {}, firstPlayer: {}, games: 0, errs: 0, forced: 0 };
   for (const v of ['starter', 'mixed']) {
     const acc = {}; let dec = 0, fw = 0;
     M.nationShards.forEach((_, i) => {
@@ -148,6 +152,9 @@ async function main() {
   }
   fs.rmSync(tmp, { recursive: true, force: true });
   res.seconds = Math.round((Date.now() - t0) / 1000);
+  }
+  const docName = Object.fromEntries(Object.entries(res.doctrines).map(([id, x]) => [id, x.name]));
+  const label = res.label;
 
   // bewerten
   const allowFile = path.join(HERE, 'balance_allowlist.json');

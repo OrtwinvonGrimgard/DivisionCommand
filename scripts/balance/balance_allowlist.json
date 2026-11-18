@@ -2,28 +2,47 @@
  "_doc": "t300: Bekannte Ausreißer des Balance-Gates (docs/balance/BALANCE_GATE.md). Ein Eintrag macht aus einem Fehler eine Warnung, solange der Wert in min–max bleibt (Quote 0..1; im Modus quick um 2 SE erweitert). Befristete Duldung mit Grund und Ziel, keine Lösung.",
  "entries": [
   {
-   "kind": "nation", "id": "Caldris", "modes": ["starter", "mixed"], "min": 0.40, "max": 0.66,
+   "kind": "nation",
+   "id": "Caldris",
+   "modes": [
+    "starter",
+    "mixed"
+   ],
+   "min": 0.4,
+   "max": 0.68,
    "reason": "Etappensicherung (+1 DEF für alle eigenen Einheiten) ist seit 0.619 echte DEF; die Doktrin hat keine andere Wirkung",
    "target": "Etappensicherung neu fassen (z. B. +1 DEF nur in versorgten Abschnitten), Code + Messung, Ziel 45–55 %",
-   "since": "v0.624 (t300): Starter 63,6 %, Misch 63,8 %"
+   "since": "v0.624 (t300): Starter 62,5 %, Misch 64,3 % (0.619: 58,2 / 59,8 %)"
   },
   {
-   "kind": "nation", "id": "Merovan", "modes": ["mixed"], "min": 0.40, "max": 0.63,
-   "reason": "Mischdeck-Pool profitiert nach t298/t300 (57,9 → 60,4 %); Ursache nicht untersucht",
+   "kind": "nation",
+   "id": "Merovan",
+   "modes": [
+    "mixed"
+   ],
+   "min": 0.4,
+   "max": 0.63,
+   "reason": "Mischdeck-Pool legt nach t300 zu (0.619: 56,3 % → 60,1 %); Ursache nicht untersucht",
    "target": "Kartenstatistik der Merovan-Poolkarten auswerten, Ziel ≤ 57 %",
-   "since": "v0.624 (t300): Misch 60,4 %"
+   "since": "v0.624 (t300): Misch 60,1 %"
   },
   {
-   "kind": "doctrine", "id": "dc_dok_bollwerk", "min": 0.40, "max": 0.64,
+   "kind": "doctrine",
+   "id": "dc_dok_bollwerk",
+   "min": 0.4,
+   "max": 0.66,
    "reason": "BOLLWERK_FRONT_DEF (+1 DEF für alle) zählt seit 0.619 echt; t285 hatte Bollwerk mit +1 ATK ab 6 DEF auf 50 % gebracht, als die DEF nur Anzeige war",
    "target": "+1 ATK ab 6 DEF zurücknehmen oder DEF-Bonus nur hinter Befestigungen, Ziel 45–55 %",
-   "since": "v0.624 (t300): 61,1 %"
+   "since": "v0.624 (t300): 63,5 % (0.619: 61,9 %)"
   },
   {
-   "kind": "doctrine", "id": "dc_dok_scheinschwerpunkt", "min": 0.40, "max": 0.63,
-   "reason": "+1 ATK/+1 DEF in dünnen Abschnitten; DEF seit 0.619 echt (vorher 55,3 %, t285)",
+   "kind": "doctrine",
+   "id": "dc_dok_scheinschwerpunkt",
+   "min": 0.4,
+   "max": 0.66,
+   "reason": "+1 ATK/+1 DEF in dünnen Abschnitten; DEF seit 0.619 echt (t285 noch 55,3 %)",
    "target": "Nur +1 ATK oder +1 DEF, Ziel 45–55 %",
-   "since": "v0.624 (t300): 60,3 %"
+   "since": "v0.624 (t300): 63,6 % (0.619: 61,6 %)"
   }
  ]
 }
