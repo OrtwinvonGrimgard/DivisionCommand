@@ -1,8 +1,8 @@
 /**
- * Service Worker: legt das Offline-Cache (`divcmd-alpha47a`) für App-Shell
+ * Service Worker: legt das Offline-Cache (`divcmd-alpha47b`) für App-Shell
  * und Kern-Assets an. Bei geänderten Karten/Assets die Cache-Version erhöhen.
  */
-const CACHE = 'divcmd-alpha47a';
+const CACHE = 'divcmd-alpha47b';
 const ASSETS = [
   './',
   './index.html',
