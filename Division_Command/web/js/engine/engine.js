@@ -1657,6 +1657,8 @@
         if (this.state) this.state.seq = (this.state.seq || 0) + 1;
         if (this.state && this.state.winner == null) { try { this._kwRecompute(); } catch (e) { /* Schlüsselwort-Neuberechnung darf Aktionen nicht brechen */ } try { this._cmAfterAction(); this._cmRecompute(); } catch (e) { /* CM-Neuberechnung darf Aktionen nicht brechen */ } }
         if (this._tacAfterAction) this._tacAfterAction();
+        // t298: Lage-DEF (Doktrin, Flanke, Auren) in inst.def einbacken, damit Anzeige und Kampf übereinstimmen.
+        if (this.state && this._dynDefSync) { try { this._dynDefSync(); } catch (e) { /* Lage-DEF darf Aktionen nicht brechen */ } }
         try { this._maybeContinueSequences(); } catch (e) { /* Folgen (Gehorsam/Massen/Gassen) dürfen Aktionen nicht brechen */ }
       }
     }
@@ -2396,6 +2398,7 @@
         loc.inst.atk = d.atk;
         loc.inst.def = d.def;
         loc.inst.defMax = d.def;
+        loc.inst.flags.dynDef = 0; // t298: Werte auf Druck zurückgesetzt, gebuchte Lage-DEF verfällt
         loc.inst.flags.buffAtk = Math.max(0, loc.inst.flags.buffAtk || 0);
         loc.inst.flags.buffDef = Math.max(0, loc.inst.flags.buffDef || 0);
         loc.inst.flags.exhausted = false;
@@ -4268,6 +4271,7 @@
       if ((f.buffAtk || 0) > 0) f.buffAtk = 0;
       if ((f.tempAtk || 0) > 0) f.tempAtk = 0;
       if ((f.buffDef || 0) > 0) f.buffDef = 0;
+      f.dynDef = 0; // t298: Lage-DEF fällt mit dem Zurücksetzen auf den Druckwert weg
       if (inst.defMax != null && inst.defMax > pd) inst.defMax = pd;
       if (inst.def != null && inst.def > pd) inst.def = Math.max(1, pd);
       f.bonusNegatedUntil = this.state.turn + 1;
@@ -4312,7 +4316,7 @@
       });
     }
     /**
-     * Wendet Flanken-DEF (FLANK_DEF) an.
+     * Wendet Flanken-DEF (FLANK_DEF) an. Seit t298 von `doctrine_runtime.js` ersetzt (läuft über die Lage-DEF).
      * @param {object} p
      */
     _applyFlankDef(p) {
@@ -4336,7 +4340,7 @@
       return (p.support || []).filter((s) => s && (this.defOf(s).effects || []).some((x) => x.code === 'AURA_FRONT_DEF' || x.code === 'AURA_FRONT_DEF_GEN')).length;
     }
     /**
-     * Wendet Satelliten-Auren an.
+     * Wendet Satelliten-Auren an. Seit t298 von `doctrine_runtime.js` ersetzt (läuft über die Lage-DEF).
      * @param {object} p
      */
     _applySatAura(p) {
@@ -4728,6 +4732,7 @@
      * @param {number} dmgToT
      * @param {number} dmgToA
      * @param {boolean} [fog]
+     * @returns {number} Schaden, den der Angreifer durch Gegen- oder Erstschlag tatsächlich erlitten hat (t298)
      */
     _applyCombatHits(aLoc, tLoc, dmgToT, dmgToA, fog) {
       const A = aLoc.inst, T = tLoc.inst;
@@ -4736,28 +4741,30 @@
       this._onEnemyAttack(aLoc.player, aLoc.section);
       const mode = this._combatCounterMode();
       const counterDmg = this._counterDamageAllowed(aLoc, tLoc, dmgToA);
+      let toA = 0; // t298: tatsächlich erlittener Gegen-/Erstschlag (für den Kampftext)
       if (fog) {
         this._evt('shout', this.defOf(T), this.defOf(T).name + ' setzt Erstschlag ein (Nebel).');
         if (mode === 'none') {
           this._damage(T, dmgToT, { tag: 'attack' });
         } else if (mode === 'simultaneous') {
-          if (counterDmg > 0) this._damage(A, counterDmg, { tag: 'first-strike' });
+          if (counterDmg > 0) { this._damage(A, counterDmg, { tag: 'first-strike' }); toA = this.state._lastDamage || 0; }
           this._damage(T, dmgToT, { tag: 'attack' });
         } else {
           // survivor_only: Erstschlag nur wenn Reichweite den Gegenschlag erlaubt
-          if (counterDmg > 0) this._damage(A, counterDmg, { tag: 'first-strike' });
+          if (counterDmg > 0) { this._damage(A, counterDmg, { tag: 'first-strike' }); toA = this.state._lastDamage || 0; }
           if (!this._isDead(A)) this._damage(T, dmgToT, { tag: 'attack' });
         }
       } else if (mode === 'none') {
         this._damage(T, dmgToT, { tag: 'attack' });
       } else if (mode === 'simultaneous') {
         this._damage(T, dmgToT, { tag: 'attack' });
-        if (counterDmg > 0) this._damage(A, counterDmg, { tag: 'counter' });
+        if (counterDmg > 0) { this._damage(A, counterDmg, { tag: 'counter' }); toA = this.state._lastDamage || 0; }
       } else {
         // survivor_only — Default + Artillerie-Reichweiten-Check
         this._damage(T, dmgToT, { tag: 'attack' });
-        if (!this._isDead(T) && counterDmg > 0) this._damage(A, counterDmg, { tag: 'counter' });
+        if (!this._isDead(T) && counterDmg > 0) { this._damage(A, counterDmg, { tag: 'counter' }); toA = this.state._lastDamage || 0; }
       }
+      return toA;
     }
     /**
      * Löst SAM/Luftabwehr auf einen Luftschlag aus (blockieren oder durchlassen).
@@ -5342,14 +5349,15 @@
         });
         return { ok: true, need: 'sam' };
       }
-      this._applyCombatHits(aLoc, tLoc, dmgToT, dmgToA, !!fog);
+      const gotA = this._applyCombatHits(aLoc, tLoc, dmgToT, dmgToA, !!fog);
       if (T.flags) T.flags.attackedTurn = this.state.turn;
       A.attackUsed = true;
       A.flags.exhausted = true;
       if (!this.state.kwAtk || this.state.kwAtk.turn !== this.state.turn) this.state.kwAtk = { turn: this.state.turn, uids: [] };
       if (A.owner === this.state.active) this.state.kwAtk.uids.push(A.uid);
+      // t298: „erhält N“ nur bei tatsächlichem Gegenschlag (survivor_only: kein Gegenschlag, wenn das Ziel fällt).
       this._evt('attack', aDef, aDef.name + ' richtet ' + dmgToT + ' Schaden an' +
-        (dmgToA ? ', erhält ' + dmgToA : '') + '.');
+        (gotA ? ', erhält ' + gotA : '') + '.');
 
       if (this._isDead(T)) {
         if (tLoc.zone === 'front' && tLoc.player.id !== A.owner) {
@@ -5461,6 +5469,12 @@
      * @returns {number} tatsächlich zugefügter Schaden
      */
     _damage(inst, amount, meta) {
+      if (this.state) this.state._lastDamage = 0;
+      // t298: Lage-DEF vor dem Schaden abgleichen (Wert wie in der Anzeige zum Zeitpunkt des Treffers).
+      if (inst && inst.def != null && this._dynDefSyncInst && amount > 0) {
+        const dl = this.findInst(inst.uid);
+        if (dl && dl.zone === 'front') { try { this._dynDefSyncInst(inst); } catch (e) { /* Abgleich optional */ } }
+      }
       // Equipment: ignore first damage once
       if (inst && amount > 0) {
         // t283: Param `untouchableFirst:false` schaltet den Schutz ab (Standard an).
@@ -5563,11 +5577,13 @@
           this._log('Abschirmung: ' + this.defOf(guard.inst).name + ' fängt 1 Schaden für ' + def.name + ' ab.');
           this._damage(guard.inst, 1, { tag: 'abschirmung' });
           if (this._isDead(guard.inst)) this._destroy(this.findInst(guard.inst.uid));
+          this.state._lastDamage = 0;
           if (amount <= 0) return;
         }
       }
       inst.def -= amount;
       if (inst.def < 0) inst.def = 0;
+      this.state._lastDamage = amount;
       inst.flags = inst.flags || {};
       inst.flags.kwHitTurn = this.state.turn;
       this._log(def.name + ' nimmt ' + amount + ' Schaden → V ' + inst.def + '/' + inst.defMax + '.'); // Zeile ins Protokoll
@@ -5587,6 +5603,7 @@
           }
         });
       });
+      this.state._lastDamage = amount; // nach Folgetriggern erneut setzen (verschachtelte _damage-Aufrufe)
     }
     /**
      * True, wenn die Instanz gegen diplomatische/nicht-kampfliche Effekte immun ist.
@@ -5602,6 +5619,8 @@
      * @param {object} [meta]
      */
     _destroy(loc, meta) {
+      // t298: Einträge aus frontList() tragen keinen Spieler; Fundort nachschlagen statt still abzubrechen (Überlast u. a.).
+      if (loc && loc.inst && !loc.player) loc = this.findInst(loc.inst.uid);
       if (!loc || !loc.inst || !loc.player) return;
       if (loc.inst && this._isDiploImmune(loc.inst) && !(meta && meta.tag === 'schattenspiele')) {
         this._log(this.defOf(loc.inst).name + ' genießt diplomatischen Schutz.');
@@ -6607,7 +6626,7 @@
           if (l.inst.flags && l.inst.flags.eiferUntil === this.state.turn) {
             this._damage(l.inst, Number(this._codeParam('ZEAL', 'after', 2)), { tag: 'eifer' });
             l.inst.flags.eiferUntil = 0;
-            if (this._isDead(l.inst)) this._destroy(l);
+            if (this._isDead(l.inst)) this._destroy(this.findInst(l.inst.uid));
           }
         });
         if (pl.flags && pl.flags.blitzLock) {
@@ -6622,7 +6641,7 @@
         if (!this._kw(l.inst, 'Überlast') || l.inst.def == null) return;
         l.inst.def = Math.max(0, l.inst.def - 1); // Überlast: nicht verhinderbar
         this._log('Überlast: ' + this.defOf(l.inst).name + ' erleidet 1 Schaden → V ' + l.inst.def + '.');
-        if (this._isDead(l.inst)) this._destroy(l);
+        if (this._isDead(l.inst)) this._destroy(this.findInst(l.inst.uid));
       });
       const cur = this.player(pid);
       this.frontList(cur).forEach((l) => {
@@ -6793,7 +6812,7 @@
         this._applySupportCondDef(nxt);
       });
       this.frontList(nxt).forEach((l) => {
-        if (this._isDead(l.inst)) this._destroy(l);
+        if (this._isDead(l.inst)) this._destroy(this.findInst(l.inst.uid));
       });
       this._draw(nxt, 1);
       (nxt.support || []).forEach((s) => {

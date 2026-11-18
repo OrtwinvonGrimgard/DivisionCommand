@@ -265,6 +265,112 @@
       return { atk: atk, def: dv };
     };
 
+    // ---- t298: Lage-DEF einbacken (Doktrin, Flanke, Auren zählen im Kampf) ----
+    /*
+     * Vor t298 addierte `currentAtkDef` viele DEF-Boni nur auf den Rückgabewert (Anzeige, Bot), während Schaden von
+     * `inst.def` abgezogen wird und der Tod bei `inst.def <= 0` eintritt. Jetzt wird die Differenz zwischen
+     * angezeigtem Wert und `inst.def` als „Lage-DEF“ in `inst.def`/`inst.defMax` eingebacken und in
+     * `inst.flags.dynDef` gebucht (gleiches Muster wie `_cmRecompute`). Fällt eine Bedingung weg, sinkt die DEF um
+     * den Bonus, aber nie unter 1 (RULES §6.4). Abgleich nach jeder Aktion (`dispatch`) und vor jedem Schaden.
+     */
+    var _cadDok = proto.currentAtkDef;
+    /**
+     * Kampfwerte inkl. Lage-DEF. Der gebuchte Anteil `flags.dynDef` wird für die Berechnung kurz herausgerechnet,
+     * damit er nicht doppelt zählt; nach dem Abgleich gilt `currentAtkDef(inst).def === inst.def`.
+     * @param {object} inst
+     * @param {object} [combatContext]
+     * @returns {{atk: number, def: number}}
+     */
+    proto.currentAtkDef = function (inst, combatContext) {
+      var b = (inst && inst.flags && Number(inst.flags.dynDef)) || 0;
+      if (!b || inst.def == null) return _cadDok.apply(this, arguments);
+      inst.def -= b;
+      if (inst.defMax != null) inst.defMax -= b;
+      inst.flags.dynDef = 0;
+      try { return _cadDok.apply(this, arguments); }
+      finally { inst.flags.dynDef = b; inst.def += b; if (inst.defMax != null) inst.defMax += b; }
+    };
+    /**
+     * Gleicht die Lage-DEF einer Fronteinheit ab: Zugewinn erhöht DEF und Höchst-DEF, Verlust senkt beide (DEF mind. 1).
+     * @param {object} inst Fronteinheit
+     * @returns {number} Änderung der DEF (0 = nichts zu tun)
+     */
+    proto._dynDefSyncInst = function (inst) {
+      if (!inst || inst.def == null) return 0;
+      inst.flags = inst.flags || {};
+      var b = Number(inst.flags.dynDef) || 0;
+      var shown = Number(this.currentAtkDef(inst).def);
+      if (!isFinite(shown)) return 0;
+      var want = shown - (inst.def - b);
+      var delta = want - b;
+      if (!delta) return 0;
+      if (delta > 0) {
+        inst.def += delta;
+        inst.defMax = (inst.defMax == null ? inst.def - delta : inst.defMax) + delta;
+      } else {
+        inst.defMax = Math.max(1, (inst.defMax == null ? inst.def : inst.defMax) + delta);
+        inst.def = Math.max(1, Math.min(inst.def + delta, inst.defMax));
+      }
+      inst.flags.dynDef = want;
+      return delta;
+    };
+    /**
+     * Entfernt gebuchte Lage-DEF von einer Karte, die die Front verlassen hat (Hand, Deck, Friedhof, Unterstützung).
+     * @param {object} c Karteninstanz
+     */
+    proto._dynDefClear = function (c) {
+      if (!c || !c.flags || !c.flags.dynDef) return;
+      var b = Number(c.flags.dynDef) || 0;
+      c.flags.dynDef = 0;
+      if (c.def == null) return;
+      c.defMax = c.defMax == null ? null : Math.max(1, c.defMax - b);
+      c.def = Math.max(1, c.def - b);
+      if (c.defMax != null && c.def > c.defMax) c.def = c.defMax;
+    };
+    /**
+     * Abgleich der Lage-DEF für alle Fronteinheiten beider Spieler; Karten außerhalb der Front verlieren ihre Buchung.
+     */
+    proto._dynDefSync = function () {
+      if (!this.state || !this.state.players || this.state._dynDefBusy) return;
+      this.state._dynDefBusy = true;
+      try {
+        var self = this;
+        this.state.players.forEach(function (p) {
+          self.frontList(p).forEach(function (l) { self._dynDefSyncInst(l.inst); });
+          ['hand', 'deck', 'grave', 'support'].forEach(function (z) { (p[z] || []).forEach(function (c) { self._dynDefClear(c); }); });
+        });
+      } finally { this.state._dynDefBusy = false; }
+    };
+    // Vorgänger der Flanken-/Satelliten-Buchung: beide Boni laufen jetzt über die Lage-DEF (sonst doppelt in der Anzeige).
+    proto._applyFlankDef = function () { if (this._dynDefSync) this._dynDefSync(); };
+    proto._applySatAura = function () { if (this._dynDefSync) this._dynDefSync(); };
+
+    var _explain = proto.explainStats;
+    /**
+     * Aufschlüsselung inkl. Lage-DEF (Doktrin, Flankenschutz); „Aktuelle Stabilität“ ohne den gebuchten Bonus.
+     * @param {object} inst
+     * @returns {object}
+     */
+    proto.explainStats = function (inst) {
+      var b = (inst && inst.flags && Number(inst.flags.dynDef)) || 0;
+      if (b && inst.def != null) { inst.def -= b; if (inst.defMax != null) inst.defMax -= b; inst.flags.dynDef = 0; }
+      var out, dok = 0, flank = 0;
+      try {
+        out = _explain.apply(this, arguments);
+        dok = Number(_cadDok.call(this, inst).def) - Number(_cad.call(this, inst).def);
+        var loc = this.findInst(inst.uid);
+        if (loc && loc.zone === 'front' && loc.player) {
+          var self = this;
+          flank = this._neighbors(loc.player, loc.section, loc.row).filter(function (n) { return n.inst && self._defHas(self.defOf(n.inst), 'FLANK_DEF'); }).length * 2;
+        }
+      } finally { if (b && inst.def != null) { inst.flags.dynDef = b; inst.def += b; if (inst.defMax != null) inst.defMax += b; } }
+      if (out && out.defWhy) {
+        if (flank) out.defWhy.push('Flankenschutz: +' + flank + ' Verteidigung');
+        if (dok) out.defWhy.push('Doktrin: ' + (dok > 0 ? '+' : '') + dok + ' Verteidigung');
+      }
+      return out;
+    };
+
     // ---- Cost discounts ----
     var _cost = proto.costOf;
     proto.costOf = function (def, player, kind, inst, consume) {
