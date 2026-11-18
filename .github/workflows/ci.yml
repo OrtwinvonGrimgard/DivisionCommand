@@ -1,7 +1,9 @@
 # CI für Division Command (aktiv seit t289).
 # Läuft bei Push und Pull Request auf main sowie manuell (Actions -> CI -> Run workflow).
 # Prüft: npm test (alle Regel-/Karten-/UI-Logik-/Server-Tests), verify.py (Kartenvorderseiten),
-# Engine-Fuzz und Text-Engine-Audit.
+# Engine-Fuzz und Text-Engine-Audit. Seit t300 zusätzlich ein eigener Job `balance-quick`: das Balance-Gate in
+# kleiner Stichprobe (npm run balance-gate:quick, etwa 3–5 min auf 4 Kernen; fängt nur grobe Ausreißer, Toleranz 2 SE).
+# Das volle Gate (npm run balance-gate) bleibt ein lokales Gate vor jedem Push mit Karten- oder Regeländerung.
 # Die Playwright-Browser-Gates (ui-play, layout-test, lan-play ...) bleiben lokale Gates,
 # weil sie Chromium, viel Laufzeit und einen Anzeigeserver brauchen (siehe docs/current_state.md, VS-12).
 # Das Projekt liegt im Repo-Root (package.json, tests/, scripts/); es ist kein working-directory nötig.
@@ -50,3 +52,29 @@ jobs:
         run: npm run fuzz
       - name: Text-Engine-Audit
         run: node scripts/balance/audit_text_engine_t265.js
+
+  balance-quick:
+    # t300: Balance-Gate (kleine Stichprobe). Bericht als Artefakt; rot nur bei groben Ausreißern außerhalb der Ausnahmeliste.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          # Kegelmodus: nur Spieldaten/Engine und Skripte (keine Kartenbilder); Dateien der Elternordner
+          # (Division_Command/VERSION, package.json) kommen automatisch mit.
+          sparse-checkout: |
+            Division_Command/web/js
+            scripts
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Balance-Gate (quick)
+        run: node scripts/balance/balance_gate.js --mode quick
+      - name: Bericht hochladen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: balance-gate-quick
+          path: scripts/balance/out/balance_gate_quick.*
+          if-no-files-found: ignore

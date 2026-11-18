@@ -4,6 +4,21 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.624 Alpha – 18.11.2026
+
+Balance-Grobkorrektur nach der echten Doktrin-DEF und dauerhaftes Balance-Gate (t300, Gewicht +0,005: Doktrinen +0,002, Gate +0,003). Freigabe des Projektleiters für Vorschlag p2 aus `docs/balance/BALANCE_T298.md`.
+
+- **Doktrinen (+0,002), genau wie in t298 als p2 gemessen:**
+  - Linienkrieg: +1 DEF nur noch für eigene Einheiten in einem Abschnitt mit drei eigenen Einheiten (vorher +1 für alle, ab zwei +1 weitere).
+  - Auffangen: kein Grundbonus mehr; Unterzahl im Abschnitt +1 DEF, Gleichstand +1 ATK.
+  - Gepanzerter Fuß: nur ausgerüstete Einheiten, +1 ATK und +1 DEF (vorher +1 DEF für alle, ausgerüstet +1 ATK).
+  - Entsatz: im angegriffenen Abschnitt nur noch +1 ATK; Einrücken gibt weiter zusätzlich +1 ATK/+1 DEF bis Zugende.
+  - Kartentext, Kurztext, Kartenflächen (4 neu gerendert), `docs/regeln/RULES_v0.5_GRUNDKONZEPT.md` §8.2, `KARTEN_SONDERFAELLE.md`, `DOKTRIN_BALANCE.md`.
+- **Balance (Balance-Gate voll, je 10.080 Partien je Deckmodus, 1.024 je Doktrin, gleiche Seeds 0.619 → 0.624):** Nationen-SD Starter 7,74 → 4,64, Misch 9,38 → 6,10; Sahr Misch 74,2 → 56,1 %; Linienkrieg 64,8 → 50,5 %, Entsatz 62,4 → 50,7 %, Auffangen 60,4 → 48,6 %, Gepanzerter Fuß 60,3 → 52,7 %. Startspieler Starter 49,0 %, Misch 57,6 %. Bekannte Ausreißer: Caldris (Etappensicherung) 63,6/63,8 %, Merovan Misch 60,4 %, Bollwerk 61,1 %, Scheinschwerpunkt 60,3 %. Bericht `docs/balance/BALANCE_T300.md`.
+- **Balance-Gate (+0,003):** `npm run balance-gate` (voll, lokal) und `npm run balance-gate:quick` (CI-Job `balance-quick`). Feste Seeds, Bericht als Markdown und JSON, Exit 1 bei Nation oder Doktrin außerhalb 40–60 %, Ausnahmeliste `scripts/balance/balance_allowlist.json` (Grund, Ziel, erlaubte Spanne), Vergleichsstand `scripts/balance/baseline/`. Pflicht nach jeder Karten- oder Regeländerung und jeder Erweiterung. Doku `docs/balance/BALANCE_GATE.md`. `sim_doctrines_t298.js` hat dafür feste Seeds je Doktrin (`SIM_DOC_SEED_STRIDE`).
+- **Tests:** neu `test_balance_t300.js` (p2-Werte und Texte, Gepanzerter Fuß, Entsatz, Gate-Logik, Ausnahmeliste, Vergleichsstände); `test_doctrine_def_t298.js` an die neuen Werte angepasst.
+- Cache `divcmd-alpha47d`.
+
 ## 0.619 Alpha – 18.11.2026
 
 Regelfixes aus dem Playtest vom 18.11. (t298, Gewicht +0,008: DEF +0,005, Überlast +0,002, Kampftext +0,001). Entscheidung des Projektleiters: Doktrin-DEF wird echt.

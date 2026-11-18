@@ -51,7 +51,7 @@
 - **Abschluss:** Zerstört eine eigene Einheit ein Ziel, hat sie +1 ATK bis Ende deines nächsten Zuges und du ziehst 1.
 
 ### Eldran
-- **Auffangen:** Eigene Einheiten haben +1 DEF. Hat der Gegner mehr Einheiten im Abschnitt, zusätzlich +1 DEF. Bei Gleichstand +1 ATK.
+- **Auffangen:** Hat der Gegner in einem Abschnitt mehr Einheiten, haben eigene Einheiten dort +1 DEF; bei Gleichstand +1 ATK. *(t300: Grundbonus +1 DEF entfernt.)*
 - **Gegenstoß:** Wurde ein eigener Abschnitt angegriffen, haben Einheiten dort bis zum Ende deines nächsten Zuges +1 ATK. Überlebt die angegriffene Einheit, heilt sie 1.
 
 ### Karsk
@@ -68,7 +68,7 @@
 
 ### Namar
 - **Marsch aus dem Vollen:** Marsch aus dem Vollen: mit Support −1 AP → Einheiten kosten 1 AP weniger (min. 1), wenn Unterstützung liegt. Beim Einrücken +1 ATK und +1 DEF bis Zugende.
-- **Entsatz:** Entsatz: in angegriffenen Abschnitt +1/+1 → Einheiten in Abschnitten, die im letzten Zug angegriffen wurden, haben +1 ATK und +1 DEF. Einrücken in solche Abschnitte gibt denselben Bonus bis Zugende.
+- **Entsatz:** Eigene Einheiten in Abschnitten, die im letzten Zug angegriffen wurden, haben +1 ATK. Wer dort einrückt, hat bis Zugende zusätzlich +1 ATK und +1 DEF. *(t300: gehaltene +1 DEF entfernt.)*
 
 ### Orthea
 - **Punktfeuer:** Eigene Artillerie hat +1 ATK. Gegen unbeschädigte Ziele +1 ATK. Eigene Angriffe gegen aufgedeckte Feinde +1 Schaden.
@@ -76,14 +76,14 @@
 
 ### Ossaria
 - **Abnutzung:** Kill → Abschnitt +1 ATK, ziehe 1 (keine Heilung mehr — Druck ohne Verband); Trophy 6 Kills.
-- **Gepanzerter Fuß:** Eigene Einheiten haben +1 DEF. Ausgerüstete Einheiten haben +1 ATK und +1 DEF zusätzlich.
+- **Gepanzerter Fuß:** Ausgerüstete eigene Einheiten haben +1 ATK und +1 DEF. *(t300: pauschale +1 DEF entfernt.)*
 
 ### Rothain
 - **Schwerpunkt:** Schwerpunkt: Abschnitt +1 ATK wählen → Zu Beginn deines Zuges: Stehen mindestens drei eigene Einheiten in einem Abschnitt, erhält der dichteste Abschnitt +1 ATK bis Zugende.
 - **Ablösung:** Ablösung: Nach Verlust Einheit aus Hand −1 AP und dauerhaft +1 DEF → Einmal pro Zug: Wird eine eigene Einheit zerstört, kostet die nächste Einheit in denselben Abschnitt 1 AP weniger (min. 1). Kein DEF-Bonus — die Krone ersetzt, …
 
 ### Sahr
-- **Linienkrieg:** Eigene Einheiten haben +1 DEF; ≥2 im Abschnitt zusätzlich +1 DEF.
+- **Linienkrieg:** Eigene Einheiten in einem Abschnitt mit drei eigenen Einheiten haben +1 DEF. *(t300: Grundbonus entfernt, Schwelle 2 → 3.)*
 - **Umgehen:** Lokale Überzahl → +2 ATK (statt +1) — die Flanke wird zur Zange.
 
 ### Steinmark

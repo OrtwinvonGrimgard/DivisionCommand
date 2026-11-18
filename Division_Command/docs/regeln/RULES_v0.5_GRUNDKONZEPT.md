@@ -236,6 +236,19 @@ DEF-Boni, die an eine Lage gebunden sind, zählen voll als Stabilität, solange 
 
 **Kampftext:** „erhält N“ steht nur dort, wo der Angreifer wirklich Gegen- oder Erstschlag erlitten hat. Fällt das Ziel (§7.2), gibt es keinen Gegenschlag.
 
+## 8.2 Doktrin-DEF nach der Grobkorrektur (verbindlich, t300 / 0.624)
+
+Seit 0.619 zählen Doktrin-DEF-Boni echt. Pauschale „+1 DEF für alle eigenen Einheiten“ wurden dadurch zu stark (`balance/BALANCE_T298.md`). Vier Doktrinen sind darum enger gefasst; die Kartentexte sind knapp, hier stehen die Einzelheiten:
+
+| Doktrin | Wirkung seit 0.624 | vorher (0.619) |
+|---|---|---|
+| **Linienkrieg** (Sahr) | +1 DEF für jede eigene Einheit in einem Abschnitt, in dem drei eigene Einheiten stehen (Frontstellungen; ein Abschnitt hat drei). Sonst kein Bonus. | +1 DEF für alle, ab zwei im Abschnitt +1 weitere |
+| **Auffangen** (Eldran) | Hat der Gegner im Abschnitt mehr Einheiten als du: eigene Einheiten dort +1 DEF. Gleich viele (mindestens eine eigene): +1 ATK. | zusätzlich +1 DEF für alle |
+| **Gepanzerter Fuß** (Ossaria) | Eigene Einheiten mit mindestens einer Ausrüstung: +1 ATK und +1 DEF. Ohne Ausrüstung kein Bonus. | +1 DEF für alle, ausgerüstet +1 ATK |
+| **Entsatz** (Namar) | Eigene Einheiten in einem Abschnitt, den der Gegner im letzten Zug angegriffen hat: +1 ATK. Wer in diesem Zug in einen solchen Abschnitt einrückt, hat bis Zugende zusätzlich +1 ATK und +1 DEF (zusammen also +2 ATK/+1 DEF). | gehalten +1 ATK/+1 DEF |
+
+Für alle gilt §8.1 (Bonusverlust senkt die DEF, nie unter 1). Weitere pauschale DEF-Doktrinen (Etappensicherung, Bollwerk) sind als bekannte Ausreißer im Balance-Gate geführt (`balance/BALANCE_GATE.md`).
+
 ---
 
 # 9. Moral

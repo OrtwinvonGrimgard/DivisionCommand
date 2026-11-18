@@ -4,6 +4,8 @@
  *
  * Aufruf (Repo-Wurzel): `node scripts/balance/sim_doctrines_t298.js [proNation=4]`
  * Umgebung: `SIM_DOCS` (Kommaliste Doktrin-IDs), `SIM_SEED` (Standard 90000), `SIM_OUT`, `SIM_TAG`, `SIM_ROOT`, `SIM_PATCH`.
+ *   `SIM_DOC_SEED_STRIDE` (t300, optional): Seeds je Doktrin fest ab `SIM_SEED + Index·Stride` (Index in der vollen
+ *   Doktrinliste), damit Teilmengen über `SIM_DOCS` dieselben Partien spielen wie ein Gesamtlauf (Balance-Gate).
  * Ergebnis: `sim_doc[_TAG].json` mit Siegquote je Doktrin (Sitz A).
  */
 'use strict';
@@ -13,9 +15,12 @@ const w = L.loadGame({ quiet: true });
 if (process.env.SIM_PATCH) { const P = JSON.parse(process.env.SIM_PATCH); w.DC_CATALOG.cards.forEach((c) => { const q = P[c.id]; if (!q) return; (c.effects || []).forEach((e) => { if (q[e.code]) Object.assign(e.param = e.param || {}, q[e.code]); }); }); }
 vm.runInNewContext(fs.readFileSync(path.join(L.WEB, 'js/ai/bot.js'), 'utf8'), { window: w, console: { log() {}, warn() {} }, Math, JSON, Object, Array, String, Number, Error });
 const Bot = w.DCBot, C = w.DC_CATALOG.cards, nations = Object.keys(w.DC_NATION_DECKS), per = Number(process.argv[2] || 4);
-const docs = C.filter((c) => c.typ === 'Doktrin' && (!process.env.SIM_DOCS || process.env.SIM_DOCS.split(',').includes(c.id)));
+const allDocs = C.filter((c) => c.typ === 'Doktrin');
+const docs = allDocs.filter((c) => !process.env.SIM_DOCS || process.env.SIM_DOCS.split(',').includes(c.id));
+const stride = Number(process.env.SIM_DOC_SEED_STRIDE || 0);
 const res = {}; let seed = Number(process.env.SIM_SEED || 90000);
 for (const d of docs) {
+  if (stride) seed = Number(process.env.SIM_SEED || 90000) + allDocs.indexOf(d) * stride;
   let g = 0, wins = 0;
   for (const n of nations) {
     const base = w.DC_NATION_DECKS[n];
