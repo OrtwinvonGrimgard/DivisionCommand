@@ -219,10 +219,12 @@
     if (window.DCEndScreen) DCEndScreen.reset();
     audioCall('stopSfx');
     audioCall('stopTable');
-    eventQueue = []; seenEvents = 0; eventPlaying = false; eventFlying = false;
+    eventQueue = []; seenEvents = 0; seenEventN = 0; eventPlaying = false; eventFlying = false;
     armedPlay = null; placing = false; suppressHandClick = false;
     window.dcSuppressClick = false; window._dcLastVpSum = 0;
     botQueued = false; botFail = {}; botSteps = 0; botMark = '';
+    botTok += 1; if (botReact && botReact.timer) window.clearInterval(botReact.timer); botReact = null; botReactSkipTurn = ''; botLastText = ''; botReactDue = false; // t291
+    var btk = document.getElementById('bot-ticker'); if (btk) btk.classList.add('off');
     document.body.classList.remove('dc-armed', 'dc-dragging');
     hideDragGhost();
     document.querySelectorAll('[data-uid]').forEach(function (el) { clearTimeout(el._dcActTimer); });
@@ -262,6 +264,7 @@
       return;
     }
     eventQueue = []; eventPlaying = false; eventFlying = false; armedPlay = null;
+    botTok += 1; botQueued = false; if (botReact && botReact.timer) window.clearInterval(botReact.timer); botReact = null; // t291: Spielende mitten im Bot-Zug
     document.querySelectorAll('[data-uid]').forEach(function (el) { clearTimeout(el._dcActTimer); });
     var ov = document.getElementById('overlay'); if (ov) { ov.innerHTML = ''; ov.style.display = 'none'; }
     var key = String(st.seed) + ':' + String(st.winner) + ':' + String(st.endReason);
@@ -384,6 +387,7 @@
       var box = document.getElementById('ingame-opts');
       if (!box) return;
       box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+      if (box.style.display === 'flex') syncBotSeqSelects(); // t291
       if (box.style.display === 'flex' && window.DCBot) {
         var c = DCBot.cfg || DCBot.defaults;
         var set = function (id, val) { var n = document.getElementById(id); if (n) n.value = val; };
@@ -595,12 +599,12 @@
         engine.state.players[1].portrait = 'lt-' + (foeFace<10?'0':'')+foeFace;
       }
       you = 0;
-      seenEvents = 0;
+      seenEvents = 0; seenEventN = 0;
       eventQueue = [];
       eventPlaying = false; eventFlying = false;
       var ov = $('#overlay');
       if (ov) ov.style.display = 'none';
-      document.title = (window.DC_BUILD_LABEL || 'Division Command 0.6e Alpha');
+      document.title = (window.DC_BUILD_LABEL || 'Division Command 0.610 Alpha');
       window.dcTimerHold = true;
       render();
       // t256: Münzwurf erst nach dem Einblend-Countdown zeigen. Vorher lag er unter dem
@@ -750,8 +754,10 @@
     }
     if (action.type === 'END_TURN') {
       eventQueue = [];
-      seenEvents = (engine.state.events || []).length;
+      markEventsSeen();
       if (mode === 'tutorial') { maybeBot(); return res; } // t275: kein Bestätigungsdialog im Tutorial
+      // t291: Gegen den Bot keine Übergabe-Abfrage (nur Hotseat/LAN): der Bot-Zug beginnt sichtbar sofort.
+      if (mode === 'bot') { maybeBot(); return res; }
       showEndTurnGate();
       return res;
     }
@@ -765,8 +771,85 @@
     return res;
   }
 
-  /* Wenn der Bot am Zug ist, seinen Schritt planen. */
+  /* t291: Sequenzierter Bot-Zug. Der Bot plant genau EINE Aktion auf dem aktuellen Stand
+     (DCBotSeq.nextAction), die Oberfläche zeigt sie sofort (Laufband, Hervorhebung, Protokoll),
+     danach folgt eine variierende Denkpause. Nach jeder Hauptaktion: Kann der Mensch jetzt einen
+     Soforteinsatz aus seiner AP-Reserve spielen, hält der Bot an (Reaktionsfenster).
+     Doku: docs/technik/BOT_SEQUENZ_T291.md. */
     var botQueued = false;
+    /** t291: Generation des geplanten Bot-Schritts; ein neuer Plan oder Partiewechsel entwertet ältere Timer. */
+    var botTok = 0;
+    /** t291: Offenes Reaktionsfenster `{key, opts, timer, left}` oder null; solange offen, wartet der Bot. */
+    var botReact = null;
+    /** t291: Zug-Schlüssel, in dem der Spieler „In diesem Zug nicht mehr anhalten“ gewählt hat. */
+    var botReactSkipTurn = '';
+    /** t291: Seit der letzten Prüfung hat der Bot eine Hauptaktion ausgeführt (Reaktionsprüfung fällig). */
+    var botReactDue = false;
+    /** t291: Kurztext der letzten Bot-Aktion (für das Reaktionsfenster). */
+    var botLastText = '';
+    /**
+     * t291: Bot-Einstellungen (Tempo, Reaktionsfenster) aus localStorage.
+     * @returns {{tempo: string, react: string}}
+     */
+    function botSettings() {
+      var ls = null;
+      try { ls = window.localStorage; } catch (eLs) { ls = null; }
+      return window.DCBotSeq ? DCBotSeq.readSettings(ls) : { tempo: 'normal', react: 'stop' };
+    }
+    /**
+     * t291: Denkpause vor dem nächsten Bot-Schritt.
+     * @param {'act'|'follow'|'start'} kind Hauptaktion, Folgewahl derselben Aktion oder Zugbeginn
+     * @returns {number} ms
+     */
+    function botPause(kind) {
+      var cfgDelay = (window.DCBot && DCBot.cfg && DCBot.cfg.delayMs) || 350;
+      if (!window.DCBotSeq) return cfgDelay;
+      var st = engine && engine.state;
+      var seed = st ? (Number(st.turn || 0) * 131 + botSteps * 17 + (st.events ? st.events.length : 0)) : botSteps;
+      if (kind === 'follow') return Math.min(cfgDelay, DCBotSeq.thinkDelay(botSettings().tempo, seed, 'follow'));
+      return DCBotSeq.thinkDelay(botSettings().tempo, seed, kind);
+    }
+    /**
+     * t291: Plant genau einen Bot-Schritt. Ohne `force` bleibt ein bereits geplanter Schritt
+     * bestehen (render() und dispatch() rufen maybeBot oft auf; die Denkpause wird so nicht verkürzt).
+     * @param {number} ms Verzögerung
+     * @param {boolean} [force] bestehenden Plan ersetzen
+     */
+    function scheduleBot(ms, force) {
+      if (botQueued && !force) return;
+      botQueued = true;
+      var tok = ++botTok;
+      var queuedEngine = engine;
+      window.setTimeout(function () {
+        if (tok !== botTok || engine !== queuedEngine) return;
+        botQueued = false;
+        botTick();
+      }, ms);
+    }
+    /**
+     * t291: Grund, den nächsten Bot-Schritt kurz zurückzuhalten (oder ''): laufende Meldung,
+     * Spieler zieht/wählt gerade einen Soforteinsatz, Optionen oder Kartenansicht offen, Tab im Hintergrund.
+     * @returns {string}
+     */
+    function botHoldReason() {
+      // Meldungen nur im eigenen Bot-Zug abwarten. Muss der Bot im Zug des Menschen antworten
+      // (Feindkontakt, SAM …), antwortet er wie vor t291 sofort; sonst warten Meldung und Bot aufeinander.
+      if ((eventPlaying || eventQueue.length) && engine && engine.state.active === 1) return 'meldung';
+      if (document.body && document.body.classList.contains('dc-dragging')) return 'ziehen';
+      if (armedPlay && engine) {
+        try {
+          var ac = engine.player(armedPlay.who).hand.find(function (c) { return c.uid === armedPlay.uid; });
+          if (ac && engine.defOf(ac).typ === 'Soforteinsatz') return 'gewaehlt';
+        } catch (eArm) { /* Karte weg: kein Halt */ }
+      }
+      var ig = document.getElementById('ingame-opts');
+      if (ig && ig.style.display === 'flex') return 'optionen';
+      var ins = document.getElementById('inspect');
+      if (ins && ins.style.display === 'flex') return 'karte';
+      if (document.visibilityState === 'hidden') return 'hintergrund';
+      return '';
+    }
+    /* Wenn der Bot am Zug ist, seinen Schritt planen. */
     function maybeBot() {
     if (!engine || isTerminal(engine.state)) return;
     if (mode !== 'bot' && mode !== 'tutorial') return;
@@ -780,13 +863,11 @@
     // t256: Solange der Münzwurf offen ist, wartet der Bot; „Los“ ruft maybeBot() erneut.
     if (coinDialogOpen()) return;
     if (botQueued) return;
-    botQueued = true;
-    var queuedEngine = engine;
-    window.setTimeout(function () {
-      if (engine !== queuedEngine) return;
-      botQueued = false;
-      botTick();
-    }, (mode === 'tutorial' && scripted && scripted.delayMs) || (window.DCBot && DCBot.cfg && DCBot.cfg.delayMs) || 350);
+    var delay;
+    if (mode === 'tutorial') delay = (scripted && scripted.delayMs) || (window.DCBot && DCBot.cfg && DCBot.cfg.delayMs) || 350;
+    else if (engine.state.pending && engine.state.pending.player === 1) delay = botPause('follow');
+    else delay = botPause((engine.state.turn + ':' + engine.state.active) === botMark ? 'act' : 'start');
+    scheduleBot(delay);
   }
 
   /* Einen Bot-Zug ausführen und bei Bedarf den nächsten. */
@@ -801,35 +882,24 @@
       var hint = document.getElementById('hint');
       if (hint) hint.textContent = msg;
     }
-    function botFollow(pend) {
-      if (!pend) return null;
-      if (pend.kind === 'coin' || pend.kind === 'angel-coin' || pend.kind === 'resist-coin') return { type: 'COIN_FLIP', player: 1 };
-      if (pend.kind === 'sam') return { type: 'SAM_PASS', player: 1 };
-      if (pend.kind === 'geist-window') return { type: 'GEIST_PASS', player: 1 };
-      if (pend.kind === 'react-window') return { type: 'REACT_PASS', player: 1 };
-      if (pend.kind === 'hand-show' || pend.kind === 'peek') return { type: 'PEEK_DONE', player: 1 };
-      var ch = (pend.choices || [])[0];
-      if (ch && ch.slot) return { type: 'CHOOSE_SLOT', player: 1, slot: ch.slot };
-      if (ch && ch.target) return { type: 'CHOOSE_TARGET', player: 1, target: ch.target };
-      return { type: 'CANCEL_PENDING', player: 1 };
-    }
     function botForceEnd() {
       try { engine.dispatch({ type: 'CANCEL_PENDING', player: 1 }); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', e); }
       if (engine.state.pending && engine.state.pending.player === 1) engine.state.pending = null;
       var res = null;
       try { res = engine.dispatch({ type: 'END_TURN', player: 1 }); } catch (e2) { res = { ok: false }; }
       render();
+      presentBotStep({ type: 'END_TURN', player: 1 }, null);
       if (!res || res.ok !== false) botSay('Gegner beendet den Zug.');
       return res;
     }
+    /**
+     * t291: Ein Bot-Schritt: genau eine Aktion planen, anwenden, sofort zeigen, dann Denkpause
+     * oder Reaktionsfenster. Neuplanung jedes Mal auf dem aktuellen Stand.
+     */
     function botTick() {
     if (!engine || isTerminal(engine.state)) return;
     if (mode !== 'bot' && mode !== 'tutorial') return;
-    if (window.dcTimerHold) {
-      var waitingEngine = engine;
-      window.setTimeout(function () { if (engine === waitingEngine) botTick(); }, 400);
-      return;
-    }
+    if (window.dcTimerHold) { scheduleBot(400, true); return; }
     var pend0 = engine.state.pending;
     if (pend0 && pend0.player !== 1) {
       render();
@@ -837,6 +907,9 @@
       return;
     }
     if (mode === 'tutorial') { scriptedTick(); return; }
+    if (botReact) { healBotReact(); return; }
+    var hold = botHoldReason();
+    if (hold) { scheduleBot(hold === 'hintergrund' ? 600 : 300, true); return; }
     var mark = engine.state.turn + ':' + engine.state.active;
     if (botMark !== mark) { botMark = mark; botFail = {}; botSteps = 0; }
     botSteps += 1;
@@ -844,24 +917,15 @@
     if (botSteps > 60) { botForceEnd(); return; }
     var pid = pend0 ? pend0.player : engine.state.active;
     if (pid !== 1) return;
-    var act = { type: 'END_TURN', player: 1 };
-    try { act = (DCBot.step(engine, 1, botFail) || act); } catch (err) { act = { type: 'END_TURN', player: 1 }; }
-    act.player = 1;
-    if (botFail[botActKey(act)]) {
-      if (engine.state.pending && engine.state.pending.player === 1) act = { type: 'CANCEL_PENDING', player: 1 };
-      else act = { type: 'END_TURN', player: 1 };
-    }
-    if (act.type === 'END_TURN' && engine.state.pending && engine.state.pending.player === 1) {
-      act = { type: 'CANCEL_PENDING', player: 1 };
+    var act;
+    if (window.DCBotSeq) act = DCBotSeq.nextAction(engine, 1, DCBot, botFail);
+    else {
+      act = { type: 'END_TURN', player: 1 };
+      try { act = (DCBot.step(engine, 1, botFail) || act); } catch (err0) { act = { type: 'END_TURN', player: 1 }; }
+      act.player = 1;
     }
     var res = null;
     try {
-      // t254: Die Wahl des Bots (Ziel, Stellung, Bestätigen) direkt über dispatch ausführen.
-      // Nur Münze/SAM/Geist/Feindkontakt/Blick ohne eigene Wahl laufen über botFollow.
-      var pendNow = engine.state.pending;
-      var autoKinds = ['coin', 'angel-coin', 'resist-coin', 'sam', 'geist-window', 'hand-show', 'peek'];
-      if (act.type === 'RESOLVE_PENDING' && act.confirm && pendNow && autoKinds.indexOf(pendNow.kind) >= 0) act = botFollow(pendNow) || { type: 'CANCEL_PENDING', player: 1 };
-      if (act.type === 'RESOLVE_PENDING' && !act.slot && !act.target && !act.confirm) act = botFollow(pendNow) || { type: 'CANCEL_PENDING', player: 1 };
       res = engine.dispatch(act);
     } catch (err) {
       res = { ok: false, error: String(err && err.message || err) };
@@ -870,22 +934,189 @@
       botFail[botActKey(act)] = 1;
       botSay(res.error || 'Gegner setzt aus.');
     }
+    var preRects = lastRects;
+    render();
+    if (isTerminal(engine.state)) { closeBotReact(); return; }
+    presentBotStep(act, res, preRects);
     // t254: Eine neue eigene Folgewahl löst der nächste botTick mit DCBot.step (bewertet) statt mit der ersten Option.
     var pend = engine.state.pending;
     if (pend && pend.player !== 1) {
-      render();
+      // Regel-Reaktionsfenster der Engine (Feindkontakt, SAM, Geist, tac-*) für den Menschen: Bot wartet.
       try { if (!eventPlaying) showPending(); } catch (e) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', e); }
       return;
     }
-    render();
     closeStaleWaitOverlay();
-    presentNewEvents();
     if (act.type === 'END_TURN' && engine.state.active !== 1 && !(engine.state.pending && engine.state.pending.player === 1)) {
       botSay('Gegner beendet den Zug.');
+      return;
     }
     if (engine.state.active === 1 || (engine.state.pending && engine.state.pending.player === 1)) {
-      window.setTimeout(botTick, (window.DCBot && DCBot.cfg && DCBot.cfg.delayMs) || 350);
+      if (res && res.ok !== false && window.DCBotSeq && DCBotSeq.isMainAction(act)) botReactDue = true;
+      if (engine.state.pending && engine.state.pending.player === 1) { scheduleBot(botPause('follow'), true); return; }
+      // Reaktionsfenster erst, wenn die Hauptaktion samt Folgewahlen (Stellung, Ziel) abgeschlossen ist.
+      if (botReactDue) { botReactDue = false; if (offerBotReaction()) return; }
+      scheduleBot(botPause('act'), true);
     }
+  }
+
+  /**
+   * t291: Laufband für Bot-Aktionen (nicht blockierend, ohne Knöpfe). Wird bei Bedarf angelegt.
+   * @returns {HTMLElement|null}
+   */
+  function botTicker() {
+    var el = document.getElementById('bot-ticker');
+    if (el || !document.body) return el;
+    el = document.createElement('div');
+    el.id = 'bot-ticker';
+    el.className = 'bot-ticker off';
+    el.setAttribute('aria-live', 'polite');
+    el.innerHTML = '<img class="bt-art" alt=""><div class="bt-body"><div class="bt-title"></div><div class="bt-lines"></div></div>';
+    document.body.appendChild(el);
+    return el;
+  }
+  var botTickerTimer = 0;
+  /**
+   * t291: Zeigt die Ereignisse eines Bot-Schritts sofort: Laufband (Karte + Text), Hervorhebung der
+   * beteiligten Karten auf dem Tisch, Flug zerstörter Karten in den Ablagestapel, Klänge.
+   * Markiert die Ereignisse als gesehen; der Zugbeginn des Menschen muss nichts mehr nachholen.
+   * @param {object} act ausgeführte Bot-Aktion
+   * @param {object|null} res Ergebnis von dispatch
+   * @param {Object<string, DOMRect>} [preRects] Kartenpositionen vor der Aktion
+   */
+  function presentBotStep(act, res, preRects) {
+    var fresh = takeFreshEvents();
+    eventSfx(fresh);
+    var shown = fresh.filter(function (ev) { return isLiveEvent(ev) && ev.kind !== 'select' && (ev.text || ev.name); });
+    var el = botTicker();
+    if (el && shown.length) {
+      var lead = shown.filter(function (ev) { return ev.kind !== 'draw'; })[0] || shown[0];
+      var def = lead.cardId && engine.byId ? engine.byId[lead.cardId] : null;
+      var file = recapHidden(lead) ? backFile(null) : (lead.image || (def && def.image) || backFile(def));
+      var img = el.querySelector('.bt-art');
+      if (img) {
+        img.onerror = function () { if (window.dcImgErr) window.dcImgErr(img); };
+        img.setAttribute('data-file', file);
+        img.src = imgSrc(file);
+      }
+      var titles = { attack: 'greift an', destroy: 'Kampfhandlung', instant: 'Soforteinsatz', spell: 'Soforteinsatz', deploy: 'spielt aus', equip: 'rüstet aus', support: 'Support', vp: 'Siegpunkt', draw: 'zieht', coin: 'Münze' };
+      var foe = engine.state.players[1];
+      el.querySelector('.bt-title').textContent = ((foe && foe.name) || 'Gegner') + ' · ' + (titles[lead.kind] || 'handelt');
+      el.querySelector('.bt-lines').innerHTML = shown.slice(-4).map(function (ev) { return '<div>' + escapeHtml(ev.text || ev.name) + '</div>'; }).join('');
+      botLastText = (lead.text || lead.name || '');
+      el.classList.remove('off');
+      el.classList.remove('bt-pop'); void el.offsetWidth; el.classList.add('bt-pop');
+    }
+    window.clearTimeout(botTickerTimer);
+    if (el && act && act.type === 'END_TURN') botTickerTimer = window.setTimeout(function () { el.classList.add('off'); }, 2600);
+    // Beteiligte Karten hervorheben (Angreifer/ausgespielte Karte und Ziel).
+    [[act && act.uid, 'bot-hl'], [act && act.target, 'bot-hl-target']].forEach(function (pair) {
+      if (!pair[0] || typeof pair[0] !== 'string') return;
+      document.querySelectorAll('[data-uid="' + pair[0].replace(/"/g, '') + '"]').forEach(function (n) {
+        if (n.closest && n.closest('#hand')) return;
+        n.classList.remove(pair[1]); void n.offsetWidth; n.classList.add(pair[1]);
+        window.setTimeout(function () { n.classList.remove(pair[1]); }, 1700);
+      });
+    });
+    // Zerstörte Karten fliegen in den Ablagestapel (nicht blockierend).
+    var viewer = you;
+    fresh.forEach(function (ev) {
+      if (ev.kind !== 'destroy') return;
+      var owner = (ev.owner != null ? ev.owner : ev.actor);
+      var mine = owner === viewer;
+      var from = (ev.uid && preRects && preRects[ev.uid]) || pileRect(mine ? 'my-front' : 'enemy-front');
+      flyCard(from, pileRect(mine ? 'pile-my-grave' : 'pile-enemy-grave'), imgSrc(ev.image || backFile(null)), false, null);
+    });
+  }
+
+  /**
+   * t291: Nach einer Bot-Hauptaktion: Hat der Mensch eine regelkonforme Reaktion
+   * (Soforteinsatz aus der AP-Reserve), öffnet sich das Reaktionsfenster und der Bot wartet.
+   * @returns {boolean} true, wenn das Fenster offen ist (Bot pausiert)
+   */
+  function offerBotReaction() {
+    if (!window.DCBotSeq || mode !== 'bot') return false;
+    var s = botSettings();
+    if (s.react === 'off') return false;
+    var turnKey = engine.state.turn + ':' + engine.state.active;
+    if (botReactSkipTurn === turnKey) return false;
+    var opts = DCBotSeq.reactionOptions(engine, you);
+    if (!opts.length) return false;
+    showBotReact(opts, s.react, turnKey);
+    return true;
+  }
+  /**
+   * t291: Reaktionsfenster („Reagieren“ / „Weiter“) im Overlay zeichnen.
+   * @param {Array<{uid:string, cardId:string, name:string, cost:number}>} opts spielbare Soforteinsätze
+   * @param {string} reactMode 'stop' oder 'brief'
+   * @param {string} turnKey Zug-Schlüssel
+   */
+  function showBotReact(opts, reactMode, turnKey) {
+    var ov = document.getElementById('overlay');
+    if (!ov) return;
+    if (botReact && botReact.timer) window.clearInterval(botReact.timer);
+    botReact = { key: turnKey, opts: opts, timer: 0, left: 0, mode: reactMode };
+    var me = engine.player(you);
+    var btns = opts.map(function (o) {
+      var card = me.hand.find(function (c) { return c.uid === o.uid; });
+      var def = card ? engine.defOf(card) : (engine.byId && engine.byId[o.cardId]) || { image: 'rueckseite.jpg' };
+      return '<button type="button" class="pick-card" data-botreact="' + escapeHtml(o.uid) + '" title="' + escapeHtml(o.name + ' · ' + o.cost + ' AP') + '">' +
+        artTag(def, false) + '<span class="br-cap">' + escapeHtml(o.name) + ' · ' + o.cost + ' AP</span></button>';
+    }).join('');
+    ov.innerHTML = '<div class="modal bot-react" role="dialog" aria-labelledby="bot-react-h">' +
+      '<h2 id="bot-react-h">Reaktionsfenster</h2>' +
+      (botLastText ? '<p class="br-what">Gegner: <strong>' + escapeHtml(botLastText) + '</strong></p>' : '') +
+      '<p class="tiny">Du hast <strong>' + escapeHtml(String(me.ap)) + ' AP</strong> Reserve. Soforteinsatz jetzt spielen oder weitergeben. Die Reserve verfällt zu Beginn deines Zuges.</p>' +
+      '<div class="pick-row">' + btns + '</div>' +
+      '<div class="acts"><button type="button" class="primary" id="botseq-react-pass">Weiter</button> ' +
+      '<button type="button" id="botseq-react-skip">In diesem Zug nicht mehr anhalten</button></div>' +
+      (reactMode === 'brief' ? '<p class="tiny br-count" id="botseq-react-count"></p>' : '') +
+      '</div>';
+    ov.style.display = 'flex';
+    ov.querySelectorAll('[data-botreact]').forEach(function (b) {
+      b.onclick = function () {
+        var uid = b.getAttribute('data-botreact');
+        closeBotReact();
+        var r = dispatch({ type: 'PLAY', player: you, uid: uid });
+        if (!r || r.ok === false) scheduleBot(botPause('act'), true);
+      };
+    });
+    document.getElementById('botseq-react-pass').onclick = function () { closeBotReact(); scheduleBot(botPause('act'), true); };
+    document.getElementById('botseq-react-skip').onclick = function () { botReactSkipTurn = turnKey; closeBotReact(); scheduleBot(botPause('act'), true); };
+    if (reactMode === 'brief' && window.DCBotSeq) {
+      botReact.left = Math.round(DCBotSeq.BRIEF_MS / 1000);
+      var cnt = document.getElementById('botseq-react-count');
+      var paint = function () { if (cnt) cnt.textContent = 'Läuft in ' + botReact.left + ' s weiter.'; };
+      paint();
+      var mine = botReact;
+      botReact.timer = window.setInterval(function () {
+        if (botReact !== mine) { window.clearInterval(mine.timer); return; }
+        mine.left -= 1;
+        if (mine.left <= 0) { closeBotReact(); scheduleBot(botPause('act'), true); return; }
+        paint();
+      }, 1000);
+    }
+  }
+  /** t291: Reaktionsfenster schließen (ohne den Bot anzustoßen). */
+  function closeBotReact() {
+    if (botReact && botReact.timer) window.clearInterval(botReact.timer);
+    botReact = null;
+    var ov = document.getElementById('overlay');
+    if (ov && ov.querySelector('.bot-react')) { ov.innerHTML = ''; ov.style.display = 'none'; }
+  }
+  /**
+   * t291: Selbstheilung: Ist das Reaktionsfenster nicht mehr sichtbar (von anderem Dialog ersetzt)
+   * oder keine Reaktion mehr möglich, wird es neu gezeigt bzw. der Bot fortgesetzt.
+   */
+  function healBotReact() {
+    if (!botReact || !engine) return;
+    var ov = document.getElementById('overlay');
+    var visible = !!(ov && ov.style.display !== 'none' && ov.querySelector('.bot-react'));
+    if (visible) return;
+    var opts = window.DCBotSeq ? DCBotSeq.reactionOptions(engine, you) : [];
+    var key = botReact.key, m = botReact.mode;
+    if (!opts.length || engine.state.active !== 1) { closeBotReact(); scheduleBot(botPause('act'), true); return; }
+    if (ov && ov.style.display !== 'none' && ov.innerHTML.trim()) return; // anderer Dialog: später erneut
+    showBotReact(opts, m, key);
   }
 
 
@@ -1937,6 +2168,18 @@
       lab.textContent = engine.state.players[engine.state.active].name;
     }
   }
+  /**
+   * t291: Sekundentakt-Wache für den sequenzierten Bot-Zug: verlorenes Reaktionsfenster
+   * wiederherstellen; ist der Bot am Zug, aber kein Schritt geplant, neu anstoßen.
+   */
+  function guardBotSeq() {
+    if (mode !== 'bot' || !engine || isTerminal(engine.state) || window.dcTimerHold) return;
+    if (botReact) { healBotReact(); return; }
+    var st = engine.state;
+    var botTurn = st.active === 1 || (st.pending && st.pending.player === 1);
+    if (!botTurn || botQueued || eventPlaying || (st.pending && st.pending.player !== 1)) return;
+    maybeBot();
+  }
   function syncBombTimer() {
     if (!engine || !engine.state) return;
     var key = engine.state.turn + ':' + engine.state.active;
@@ -1949,6 +2192,7 @@
       bombTick = window.setInterval(function () {
         if (!engine || isTerminal(engine.state)) return;
         try { guardPendingUi(true); } catch (eGuard) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eGuard); } // t259: Dialoge nie dauerhaft verlieren
+        try { guardBotSeq(); } catch (eSeq) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eSeq); } // t291: Bot-Zug nie verlieren
         if (window.dcTimerHold || mode === 'tutorial') return; // t275: kein Zugtimer im Tutorial
         if (bombLeft > 0) {
           bombLeft -= 1;
@@ -2059,15 +2303,21 @@
       typed.appendChild(line);
       typed.scrollTop = typed.scrollHeight;
       var i = 0;
+      // t291: Tippen nach verstrichener Zeit statt je Zeichen ein Timer. Unter Last feuern Timer
+      // verspätet (gemessen bis 200 ms); vorher dehnte sich eine Meldung mit 6 Zeilen auf Minuten.
+      var hold0 = (window.DCTune && window.DCTune.dialogMs) || 2000;
+      var ch0 = Math.max(12, Math.min(70, hold0 / 50));
+      var t0 = (window.performance && performance.now) ? performance.now() : Date.now();
       return new Promise(function (resolve) {
         function tick() {
           if (cancelled) return resolve();
           if (i >= text.length) return resolve();
-          line.textContent += text.charAt(i);
-          i += 1;
+          var now = (window.performance && performance.now) ? performance.now() : Date.now();
+          var want = Math.min(text.length, Math.max(i + 1, Math.floor((now - t0) / (ch0 * 0.8)) + 1));
+          line.textContent += text.slice(i, want);
+          i = want;
           typed.scrollTop = typed.scrollHeight;
-          var hold = (window.DCTune && window.DCTune.dialogMs) || 2000;
-          var ch = Math.max(12, Math.min(70, hold / 50));
+          var ch = ch0;
           recapTimer = window.setTimeout(tick, text.charAt(i - 1) === ' ' ? ch * 0.55 : ch);
           if (myTimers.length > 64) myTimers.splice(0, myTimers.length - 8);
           myTimers.push(recapTimer);
@@ -2186,41 +2436,73 @@
     if (ev.kind === 'reveal') return false;
     return true;
   }
+  /** t291: Laufnummer (`ev.n`) des zuletzt gezeigten Engine-Ereignisses. */
+  var seenEventN = 0;
+  /**
+   * t291: Neue Engine-Ereignisse seit dem letzten Aufruf (und als gesehen markieren).
+   * Nutzt die Laufnummer `ev.n`; die Ereignisliste ist auf 80 Einträge gekappt, ein reiner
+   * Index blieb danach stehen und zeigte keine Meldungen mehr. Ältere Stände ohne `n`: Index.
+   * @returns {object[]}
+   */
+  function takeFreshEvents() {
+    if (!engine || !engine.state) return [];
+    var all = engine.state.events || [];
+    var last = all.length ? all[all.length - 1] : null;
+    var fresh;
+    if (last && typeof last.n === 'number') {
+      if (last.n < seenEventN) seenEventN = 0; // neuer Stand (neue Partie)
+      fresh = all.filter(function (ev) { return typeof ev.n === 'number' && ev.n > seenEventN; });
+      seenEventN = last.n;
+    } else {
+      fresh = all.length > seenEvents ? all.slice(seenEvents) : [];
+    }
+    seenEvents = all.length;
+    return fresh;
+  }
+  /** t291: Alle vorhandenen Ereignisse als gesehen markieren (Zugende, Tutorial-Sprung, Start). */
+  function markEventsSeen() {
+    var all = (engine && engine.state && engine.state.events) || [];
+    seenEvents = all.length;
+    var last = all.length ? all[all.length - 1] : null;
+    seenEventN = last && typeof last.n === 'number' ? last.n : 0;
+  }
+  /**
+   * Klänge für neue Engine-Ereignisse (fehlende Dateien = still).
+   * @param {object[]} fresh
+   */
+  function eventSfx(fresh) {
+    fresh.forEach(function (ev) {
+      try {
+        var def = null;
+        if (ev.cardId && engine.byId) def = engine.byId[ev.cardId];
+        if (!def && ev.name) def = { name: ev.name, tags: [], typ: '', image: ev.image };
+        // Mine / Minenfeld
+        if (ev.name && /Minenfeld|Mine/i.test(ev.name)) {
+          audioCall('playSfx', 'mine', { prio: 1, duck: 0.4, duckMs: 800 });
+          return;
+        }
+        if (ev.kind === 'reveal') {
+          audioCall('playSfx', 'reveal', { prio: 2 });
+          return;
+        }
+        if (ev.kind === 'support') {
+          audioCall('playSfx', 'deploy-unterstuetzung', { prio: 2 });
+          return;
+        }
+        // deploy/equip/instant/attack kommen schon aus dem Action-Hook — hier nur Rest
+        if (ev.kind === 'destroy' || ev.kind === 'draw' ||
+            ev.kind === 'coin' || ev.kind === 'vp' || ev.kind === 'trophy') {
+          audioCall('playEvent', Object.assign({}, ev, { _def: def }));
+        }
+      } catch (eEv) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eEv); }
+    });
+  }
   function presentNewEvents() {
     if (!engine || !engine.state || isTerminal(engine.state)) return;
-    var all = engine.state.events || [];
-    if (all.length > seenEvents) {
-      var fresh = all.slice(seenEvents);
-      // SFX für neue Engine-Events (fehlende Dateien = still)
-      { // optional audio is isolated by audioCall
-        fresh.forEach(function (ev) {
-          try {
-            var def = null;
-            if (ev.cardId && engine.byId) def = engine.byId[ev.cardId];
-            if (!def && ev.name) def = { name: ev.name, tags: [], typ: '', image: ev.image };
-            // Mine / Minenfeld
-            if (ev.name && /Minenfeld|Mine/i.test(ev.name)) {
-              audioCall('playSfx', 'mine', { prio: 1, duck: 0.4, duckMs: 800 });
-              return;
-            }
-            if (ev.kind === 'reveal') {
-              audioCall('playSfx', 'reveal', { prio: 2 });
-              return;
-            }
-            if (ev.kind === 'support') {
-              audioCall('playSfx', 'deploy-unterstuetzung', { prio: 2 });
-              return;
-            }
-            // deploy/equip/instant/attack kommen schon aus dem Action-Hook — hier nur Rest
-            if (ev.kind === 'destroy' || ev.kind === 'draw' ||
-                ev.kind === 'coin' || ev.kind === 'vp' || ev.kind === 'trophy') {
-              audioCall('playEvent', Object.assign({}, ev, { _def: def }));
-            }
-          } catch (eEv) { if (typeof console !== 'undefined' && console.debug) console.debug('[dc] app.js: ignorierter Fehler', eEv); }
-        });
-      }
+    var fresh = takeFreshEvents();
+    if (fresh.length) {
+      eventSfx(fresh);
       eventQueue = eventQueue.concat(fresh.filter(isLiveEvent));
-      seenEvents = all.length;
     }
     pumpEvents();
   }
@@ -2238,6 +2520,10 @@
     };
   }
 
+  /** t291: Diagnose-Zähler der Meldungs-Pumpe (dcEventDebug). */
+  var recapStats = { batches: 0, last: 0, lastN: '' };
+  /** t291: Höchstzahl Einträge je Live-Meldung. */
+  var RECAP_MAX = 6;
   function pumpEvents() {
     if (!engine || isTerminal(engine.state) || eventPlaying) return;
     if (!eventQueue.length) {
@@ -2250,6 +2536,9 @@
     var eventEngine = engine;
     var batch = eventQueue.splice(0);
     if (!batch.length) { eventPlaying = false; eventFlying = false; return; }
+    // t291: Lange Stapel kürzen (das Protokoll enthält alles); nie eine „ewige“ Meldungskette.
+    if (batch.length > RECAP_MAX) batch = batch.slice(batch.length - RECAP_MAX);
+    recapStats.batches += 1; recapStats.last = batch.length; recapStats.lastN = batch.map(function (e) { return e.n; }).slice(0, 6).join(',');
     var titles = { attack: 'Kampfhandlung', destroy: 'Kampfhandlung', shout: 'Kampfhandlung', coin: 'Münze', spell: 'Einsatz', instant: 'Einsatz', deploy: 'Ausspielen', equip: 'Ausrüstung', support: 'Support', vp: 'Siegpunkt' };
     function flyOne(i, after) {
       if (engine !== eventEngine || !engine || isTerminal(engine.state)) return;
@@ -3458,6 +3747,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
   window.dcEventDebug = function () {
     var ov = document.getElementById('overlay');
     return { playing: !!eventPlaying, queue: eventQueue.length, stuckTicks: pumpStuckTicks, timer: !!bombTick,
+      seenN: seenEventN, evN: engine && engine.state ? engine.state.evN : null, batches: recapStats.batches, lastBatch: recapStats.last, lastBatchN: recapStats.lastN,
       overlay: ov ? (ov.style.display + '|' + ov.className + '|' + ov.innerHTML.slice(0, 120)) : 'none' };
   };
   window.dcSetNames = function (a, b) { // globale Schnittstelle der Seite
@@ -3482,7 +3772,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
     matchSetup = null; endHandledKey = null;
     if (window.dcMountMatch) window.dcMountMatch();
     bindTableControls();
-    seenEvents = (engine.state.events || []).length;
+    markEventsSeen();
     window.dcTimerHold = false;
     if (window.dcSetTable) window.dcSetTable(true);
     var tr = document.getElementById('title-root');
@@ -3507,7 +3797,7 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
   window.dcScriptedSync = function () {
     if (mode !== 'tutorial' || !engine) return;
     eventQueue = []; eventPlaying = false; eventFlying = false;
-    seenEvents = (engine.state.events || []).length;
+    markEventsSeen();
     armedPlay = null; placing = false;
     document.body.classList.remove('dc-armed', 'dc-dragging');
     hideDragGhost();
@@ -3518,6 +3808,33 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
   };
   /** t275: Ist gerade die geskriptete Partie (Tutorial) aktiv? @returns {boolean} */
   window.dcIsScripted = function () { return mode === 'tutorial' && !!scripted; };
+  /**
+   * t291: Auswahllisten „Bot-Tempo“ und „Reaktionsfenster“ (Optionen und Spiel-Optionen) mit
+   * localStorage abgleichen. Delegiert, weil die Spiel-Optionen erst mit dem Tisch entstehen.
+   */
+  function syncBotSeqSelects() {
+    var s = botSettings();
+    document.querySelectorAll('select[data-bot-tempo]').forEach(function (el) { if (el.value !== s.tempo) el.value = s.tempo; });
+    document.querySelectorAll('select[data-bot-react]').forEach(function (el) { if (el.value !== s.react) el.value = s.react; });
+  }
+  document.addEventListener('change', function (ev) {
+    var el = ev.target;
+    if (!el || !el.matches) return;
+    var key = el.matches('select[data-bot-tempo]') ? 'dc_bot_tempo' : (el.matches('select[data-bot-react]') ? 'dc_bot_react' : '');
+    if (!key) return;
+    try { localStorage.setItem(key, el.value); } catch (eSet) { /* gesperrter Speicher */ }
+    syncBotSeqSelects();
+  });
+  document.addEventListener('focusin', function (ev) {
+    if (ev.target && ev.target.matches && ev.target.matches('select[data-bot-tempo], select[data-bot-react]')) syncBotSeqSelects();
+  });
+  window.dcSyncBotSeqSelects = syncBotSeqSelects;
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', syncBotSeqSelects);
+  else syncBotSeqSelects();
+  /** t291: Test- und Diagnose-Schnittstelle des sequenzierten Bot-Zugs. */
+  window.dcBotSeqDebug = function () {
+    return { queued: !!botQueued, react: !!botReact, hold: botHoldReason(), steps: botSteps, settings: botSettings(), last: botLastText };
+  };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bindChrome);
   else bindChrome();
 })();

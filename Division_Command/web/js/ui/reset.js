@@ -33,7 +33,9 @@
     dc_dialog: 'Meldungsdauer',
     dc_log: 'Protokollfenster',
     dc_perf: 'Leistungsanzeige',
-    dc_camera_prefs: 'Tischkamera'
+    dc_camera_prefs: 'Tischkamera',
+    dc_bot_tempo: 'Bot-Tempo',
+    dc_bot_react: 'Reaktionsfenster im Bot-Zug'
   };
 
   /**

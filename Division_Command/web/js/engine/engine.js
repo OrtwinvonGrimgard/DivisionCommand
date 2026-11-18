@@ -525,7 +525,10 @@
       if (this._cmTrack) this._cmTrack(kind, def);
       if (this.state && this.state._muteEvents) return;
       if (!this.state.events) this.state.events = [];
+      // t291: fortlaufende Nummer, damit die Oberfläche neue Ereignisse auch nach der 80er-Kappung erkennt.
+      this.state.evN = (Number(this.state.evN) || 0) + 1;
       this.state.events.push({
+        n: this.state.evN,
         turn: this.state.turn,
         actor: this.state.active,
         kind,

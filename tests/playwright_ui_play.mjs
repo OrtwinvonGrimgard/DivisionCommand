@@ -259,7 +259,27 @@ async function waitHumanTurn(page, ms = 180000) {
     if (st.active === 0 && !st.hold && !st.busy && st.phase === 'main' && !st.pend) return st;
     await sleep(250);
   }
+  // t291: Letzte Prüfung nach Fristende. Unter Last dauert eine Abfrage bis 5 s; ist der Zug
+  // inzwischen frei, gilt das nicht als Hänger.
+  {
+    const last = await gameState(page);
+    if (last && (last.ended || (last.active === 0 && !last.hold && !last.busy && last.phase === 'main' && !last.pend))) return last;
+  }
   const dbg = await page.evaluate(() => (window.dcEventDebug ? window.dcEventDebug() : null)).catch(() => null);
+  // t291: Diagnose – Timer-Latenz und CPU-Profil der Seite (3 s), um Dauerlast zu erkennen.
+  try {
+    const t1 = Date.now();
+    const lat = await page.evaluate(() => new Promise((res) => { const t0 = performance.now(); setTimeout(() => res(Math.round(performance.now() - t0)), 50); }));
+    const cdp = await page.context().newCDPSession(page);
+    await cdp.send('Profiler.enable'); await cdp.send('Profiler.start');
+    await sleep(3000);
+    const { profile } = await cdp.send('Profiler.stop');
+    const self = {}; const dt = profile.timeDeltas || []; const idx = {};
+    profile.nodes.forEach((n) => { idx[n.id] = n; });
+    (profile.samples || []).forEach((id, i) => { const n = idx[id]; const k = n.callFrame.functionName + '@' + (n.callFrame.url || '').split('/').pop() + ':' + n.callFrame.lineNumber; self[k] = (self[k] || 0) + (dt[i] || 0); });
+    const top = Object.entries(self).sort((a, b) => b[1] - a[1]).slice(0, 15).map(([k, v]) => k + '=' + Math.round(v / 1000) + 'ms');
+    console.log('DIAG-HANG', JSON.stringify({ evalMs: Date.now() - t1, timerLatencyMs: lat, top }));
+  } catch (eDiag) { console.log('DIAG-HANG fehlgeschlagen', String(eDiag)); }
   throw new Error('Zeitüberschreitung beim Warten auf den eigenen Zug: ' + JSON.stringify(await gameState(page)) + ' events=' + JSON.stringify(dbg));
 }
 
@@ -639,15 +659,15 @@ async function humanTurn(page, g, turnNo) {
       if (card.typ === 'Soforteinsatz') await playInstant(page, card);
       else await playHandCard(page, card, how, `g${g}`);
     } catch (e) { fail(`g${g} t${turnNo} spielen ${card.typ} ${card.name}`, e); await shot(page, `g${g}_fail_play`); }
-    await waitHumanTurn(page, 120000).catch((e) => fail(`g${g} nach Karte`, e));
+    await waitHumanTurn(page, 240000) /* t291: 240 s – unter starker Parallellast dauert jede Abfrage bis 5 s */.catch((e) => fail(`g${g} nach Karte`, e));
   }
-  try { await tryAbility(page); await waitHumanTurn(page, 120000); } catch (e) { fail(`g${g} t${turnNo} Fähigkeit`, e); }
+  try { await tryAbility(page); await waitHumanTurn(page, 240000); } catch (e) { fail(`g${g} t${turnNo} Fähigkeit`, e); }
   for (let a = 0; a < 3; a++) {
     try {
       const st = await gameState(page);
       if (!st || st.ended || st.active !== 0) break;
       if (!(await tryAttack(page))) break;
-      await waitHumanTurn(page, 120000);
+      await waitHumanTurn(page, 240000);
     } catch (e) { fail(`g${g} t${turnNo} Angriff`, e); break; }
   }
   const st = await gameState(page);
@@ -709,7 +729,7 @@ async function runGame(ctx, g, variant) {
     while (st && !st.ended && turnNo < MAX_TURNS) {
       turnNo += 1;
       await humanTurn(page, g, turnNo);
-      st = await waitHumanTurn(page, 120000);
+      st = await waitHumanTurn(page, 240000);
       if (variant === 'peace' && turnNo >= 2) break;
     }
     st = await gameState(page);
@@ -761,7 +781,7 @@ async function main() {
         let x = seed >>> 0;
         Math.random = function () { x = (Math.imul(x, 1664525) + 1013904223) >>> 0; return x / 4294967296; };
         // Animationen über die Nutzeroptionen verkürzen (Flug 50 ms, Meldung 400 ms = Minimum)
-        try { localStorage.setItem('dc_fly', '50'); localStorage.setItem('dc_dialog', '400'); } catch (e) {}
+        try { localStorage.setItem('dc_fly', '50'); localStorage.setItem('dc_dialog', '400'); localStorage.setItem('dc_bot_tempo', 'fast'); } catch (e) {} // t291: Bot-Tempo schnell, Reaktionsfenster bleibt an
       }, SEED + report.games.length * 7919);
       return ctx;
     });

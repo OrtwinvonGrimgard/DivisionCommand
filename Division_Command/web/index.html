@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Division Command 0.6e Alpha</title>
+  <title>Division Command 0.610 Alpha</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#12140f">
   <link rel="stylesheet" href="css/app.css?v=t265">
@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/ui-system.css?v=t280b">
   <link rel="stylesheet" href="css/ui-screens.css?v=t281">
   <link rel="stylesheet" href="css/ui-table.css?v=alpha44a">
-  <link rel="stylesheet" href="css/table-hud.css?v=alpha46a">
+  <link rel="stylesheet" href="css/table-hud.css?v=alpha47a">
   <style>
     /* Erster Frame: Logo und Startknopf unsichtbar, Version noch nicht */
     .title-brand .ver-big { display: none !important; }
@@ -47,7 +47,7 @@
   <template id="match-tpl">
   <div id="app">
     <header class="topbar">
-      <h1>DIVISION COMMAND <span class="ver">0.6e α</span></h1>
+      <h1>DIVISION COMMAND <span class="ver">0.610 α</span></h1>
       <div class="hud-center">
         <div class="hud-scn"><span id="hud-scn">Gefecht</span><span class="nowplay" id="nowplay"></span></div>
         <div class="meta" id="turnmeta">Lobby</div>
@@ -160,7 +160,11 @@
       <label>Soforteinsatz <span id="ig-v-instant">30</span>%
         <input id="ig-bot-instant" type="range" min="0" max="100" value="30">
       </label>
-      <label>Denkpause <span id="ig-v-delay">350</span> ms
+      <label for="ig-bot-tempo">Tempo
+        <select id="ig-bot-tempo" data-bot-tempo><option value="slow">Langsam</option><option value="normal" selected>Normal</option><option value="fast">Schnell</option></select></label>
+      <label for="ig-bot-react">Reaktionsfenster
+        <select id="ig-bot-react" data-bot-react><option value="stop" selected>Immer anhalten</option><option value="brief">Kurz anbieten (5 s)</option><option value="off">Nie anhalten</option></select></label>
+      <label>Pause bei Folgewahl <span id="ig-v-delay">350</span> ms
         <input id="ig-bot-delay" type="range" min="80" max="1200" step="10" value="350">
       </label>
       <label><input type="checkbox" id="ig-bot-unit" checked> Einheiten legen</label>
@@ -178,7 +182,7 @@
   <audio id="bgm" autoplay preload="auto" src="assets/audio/menue/Division%20Command%20(Remastered).wav"></audio>
   <audio id="bgm-battle" preload="auto"></audio>
   <div id="kick-veil"><p id="kick-msg">Viel Glück</p></div>
-  <div id="dc-version">Alpha 0.6e</div>
+  <div id="dc-version">Alpha 0.610</div>
 
   <div id="title-root" class="boot-intro">
       <div class="title-world" id="title-world" aria-hidden="true">
@@ -191,7 +195,7 @@
       </div>
       <div class="title-brand">
         <img class="title-logo" src="assets/title-logo.png?v=6" alt="Division Command" width="1381" height="507">
-        <p class="sub ver-big" hidden>Alpha 0.6e</p>
+        <p class="sub ver-big" hidden>Alpha 0.610</p>
       </div>
     <div class="title-panel" id="menu-panel">
       <div id="scr-boot" class="screen on splash">
@@ -282,7 +286,7 @@
 
       <div id="scr-library" class="screen">
         <h1 class="page-title">BIBLIOTHEK</h1>
-        <p class="tiny" id="lib-build">Stand 0.6e</p>
+        <p class="tiny" id="lib-build">Stand 0.610</p>
         <p class="tiny lib-hint">Klick = große Ansicht · Doppelklick = eine Kopie ins Deck · im Deck: Doppelklick legt zurück. Kopien: Gold 1× · Silber 2× · Bronze 4× · 2 verschiedene Doktrinen.</p>
         <div class="lib-wrap">
           <div class="lib-main">
@@ -463,6 +467,11 @@
           <p class="tiny">Schreibgeschwindigkeit passt sich der Pause an. 0 beim Flug = sofort am Ziel.</p>
           <label>Zugtimer <span id="v-timer">5:00</span>
             <input id="opt-timer" type="range" min="30" max="300" step="30" value="300"></label>
+          <label for="opt-bot-tempo">Bot-Tempo
+            <select id="opt-bot-tempo" data-bot-tempo><option value="slow">Langsam</option><option value="normal" selected>Normal</option><option value="fast">Schnell</option></select></label>
+          <label for="opt-bot-react">Reaktionsfenster im Bot-Zug
+            <select id="opt-bot-react" data-bot-react><option value="stop" selected>Immer anhalten</option><option value="brief">Kurz anbieten (5 s)</option><option value="off">Nie anhalten</option></select></label>
+          <p class="tiny">Der Bot spielt Karte für Karte mit Denkpausen. Kannst du einen Soforteinsatz aus deiner AP-Reserve spielen, hält er an.</p>
         </div>
         <div id="opt-gfx" class="opt-pane" style="display:none">
           <label>Bewegung reduzieren <input id="opt-motion" type="checkbox"> kürzere Dialoge und Flüge</label>
@@ -524,7 +533,7 @@
             </div>
 <button type="button" data-hilfe="stand">Entwicklungsstand</button>
             <div class="hilfe-sub" data-for="stand">
-              <button type="button" data-jump="version">Version 0.6e</button>
+              <button type="button" data-jump="version">Version 0.610</button>
               <button type="button" data-jump="stand-engine">Regeln & Engine</button>
               <button type="button" data-jump="karten">Karten & Grafik</button>
               <button type="button" data-jump="stand-bot">Bot & Balance</button>
@@ -772,8 +781,8 @@
 
             <article class="hilfe-page dossier" id="hilfe-stand">
               <p class="tiny">Stand 12.&nbsp;November&nbsp;2026, nachgezählt im Code auf <code>main</code> nach t270 (Analyse t265, Kartenreparatur t267, Balance und Eindeutigkeit t268, einheitliche Schrift t270, Analyse t271). Alle Zahlen stammen aus Katalog, Tests und Messdateien im Repo.</p>
-              <h2 id="version">Version 0.6e Alpha</h2>
-              <p>Gesetzte Version 0.6e (Tag v0.6e vom 13.&nbsp;11.&nbsp;2026). Gegenüber 0.6d: Die KI setzt aktive Doktrin-Fähigkeiten ein (Feldreparatur, Schutzwall, Überschuss). Feldreparatur und Überschuss wirken jetzt wie gedruckt. Bollwerk (+1 ATK ab 6 DEF) und Sicherer Nachschub (Feldreparatur heilt alle gepanzerten Einheiten um 2) liegen näher an 50&nbsp;%. Weiter keine 0.7: Der Anzug-Vorteil in einheitenlastigen Decks bleibt bewusst, und ein menschlicher Playtest fehlt.</p>
+              <h2 id="version">Version 0.610 Alpha</h2>
+              <p>Gesetzte Version 0.610 (Tag v0.610 vom 17.&nbsp;11.&nbsp;2026). Neues Versionsschema: drei Nachkommastellen, Sprung nach Gewicht (Fix +0,001, Erweiterung +0,002 bis +0,005, großer Umbau etwa +0,010; 0.6a–0.6e = 0.601–0.605). Gegenüber 0.605 (0.6e): Der Bot spielt seinen Zug sichtbar Karte für Karte mit Denkpausen; kannst du einen Soforteinsatz aus deiner AP-Reserve spielen, hält er an und öffnet ein Reaktionsfenster (Optionen: Bot-Tempo, Reaktionsfenster). Gegenüber 0.6d (0.6e): Die KI setzt aktive Doktrin-Fähigkeiten ein (Feldreparatur, Schutzwall, Überschuss). Feldreparatur und Überschuss wirken jetzt wie gedruckt. Bollwerk (+1 ATK ab 6 DEF) und Sicherer Nachschub (Feldreparatur heilt alle gepanzerten Einheiten um 2) liegen näher an 50&nbsp;%. Weiter keine 0.7: Der Anzug-Vorteil in einheitenlastigen Decks bleibt bewusst, und ein menschlicher Playtest fehlt.</p>
               <h2 id="stand-engine">Regeln & Engine</h2>
               <ul>
                 <li>Spielbar: Front 3×3 je Seite, Support, Niemandsland, AP-Ökonomie (5 je Zug, Rest als Reaktionsreserve), Angriff mit Gegenschlag, Eingraben, Steilfeuer I–V, verdeckte Fallen bei Feindkontakt, Doktrinen, Trophy-Sieg (5 SP, Sicherheitsnetz Zug 26/28).</li>
@@ -820,7 +829,7 @@
                 <li><code>scripts/balance/audit_text_engine_t265.js</code> prüft alle Kartentexte gegen Effektliste und Ablauf; seit t267 mit Abschnitt für die 14 reparierten Karten (alle OK). Lauf t271 unverändert zu t268: 269 statische Hinweise (17 davon Fehlalarme durch <code>CM</code>), 15 im Ablauf, 6 nicht spielbar, 9 ungelesene Parameter. Neu t267: <code>tests/test_cards_t267.js</code> (20 Fälle, in <code>npm test</code>).</li>
                 <li>Fuzz 80/80 Partien regulär beendet; <code>verify.py</code>: 1.746 Vorderseiten geprüft.</li>
                 <li>Browser-Test <code>npm run ui-play</code> (Chromium): alle Schaltflächen, Legen per Klick und Ziehen, ganze Partien gegen den Bot. Der Warte-Dialog „Der Gegner prüft Reaktionen“ schließt sich selbst, sobald keine Gegnerwahl mehr offen ist (Wächter, t259). t259: 5 von 5 Seeds grün; t265: 8 weitere Seeds mit 38 Partien: 6 von 8 Seeds grün, 2 Abbrüche (4711 Spiel 1, 31337 Spiel 3) durch Zeitüberschreitung des Testskripts beim Warten auf den eigenen Zug. Kein eingefrorenes Spiel: Die Meldungen nach einem langen Bot-Zug liefen noch (Text tippte weiter, Zugtimer lief), dauerten aber zusammen länger als die 180 s Wartezeit des Tests. Spielerisch heißt das: lange Wartezeit nach großen Bot-Zügen. t268: Seeds 268, 269 und 4711 mit je 5 Partien grün (4711 brach in t265 noch ab). t271: Seeds 1234, 31337, 4711, 271 und 77 mit je 5 Partien grün (je 16 Prüfungen ok), keine hängenden Meldungen (31337 brach in t265 noch ab). Seed 1234 fand vorher den Feindkontakt-Fehler (siehe Regeln & Engine). Nicht abgedeckt: 2,5D, EXE, echtes LAN.</li>
-                <li>108 Markdown-Dokumente in docs/ (Stand t271: <code>docs/entwicklung/STATUS_T271.md</code>). Die Projektdokumentation (PDF) beschreibt Version 0.6b und enthält t254–t271 noch nicht.</li>
+                <li>108 Markdown-Dokumente in docs/ (laufender Stand: <code>docs/current_state.md</code>; ältere Momentaufnahmen unter <code>docs/entwicklung/STATUS_T*.md</code>). Die Projektdokumentation (PDF) beschreibt Version 0.6b und enthält t254–t271 noch nicht.</li>
               </ul>
             </article>
 
@@ -884,6 +893,7 @@
                   <tr><td>12.&nbsp;11.</td><td>t283 / Version 0.6c: LAN mit getrennter Sicht je Spieler, Mulligan, Deck 60&nbsp;+&nbsp;2, 6+-AP-Karten auf 5 AP, Doktrinen und Pools nachjustiert, Erstschadenschutz-Text, CI.</td></tr>
                   <tr><td>13.&nbsp;11.</td><td>t284 / Version 0.6d: Zwillingskarten unterschieden, Doktrinen und Nationen näher an 50&nbsp;%, Hotseat-Endbildschirm neutral.</td></tr>
                   <tr><td>13.&nbsp;11.</td><td>t285 / Version 0.6e: KI nutzt aktive Doktrin-Fähigkeiten, Feldreparatur und Überschuss regelkonform, Bollwerk und Sicherer Nachschub näher an 50&nbsp;%.</td></tr>
+                  <tr><td>17.&nbsp;11.</td><td>t291 / Version 0.610: Bot-Zug sequenziert (eine Aktion, Anzeige, Denkpause), Reaktionsfenster für Soforteinsätze aus der AP-Reserve, Einstellungen Bot-Tempo und Reaktionsfenster.</td></tr>
                 </tbody>
               </table>
               <h2 id="fortschritt-meilensteine">Meilensteine bis Early Access</h2>
@@ -964,30 +974,31 @@
 
   <script src="js/ui/title-fx.js?v=05ax"></script>
   <script>window.DC_FOLDER_PNG = true;</script>
-  <script src="js/version.js?v=alpha46a"></script>
+  <script src="js/version.js?v=alpha47a"></script>
   <script src="js/data/keywords.js?v=tac1"></script>
-  <script src="js/data/sets/types/doktrinen.js?v=alpha46a"></script>
+  <script src="js/data/sets/types/doktrinen.js?v=alpha47a"></script>
   <script src="js/data/sets/types/tokens.js?v=t1"></script>
-  <script src="js/data/sets/types/infanterie.js?v=alpha46a"></script>
-  <script src="js/data/sets/types/panzer.js?v=alpha46a"></script>
-  <script src="js/data/sets/types/artillerie.js?v=alpha46a"></script>
-  <script src="js/data/sets/types/aufklaerung.js?v=alpha46a"></script>
-  <script src="js/data/sets/types/elite.js?v=alpha46a"></script>
-  <script src="js/data/sets/types/unterstuetzung.js?v=alpha46a"></script>
-  <script src="js/data/sets/types/soforteinsatz.js?v=alpha46a"></script>
+  <script src="js/data/sets/types/infanterie.js?v=alpha47a"></script>
+  <script src="js/data/sets/types/panzer.js?v=alpha47a"></script>
+  <script src="js/data/sets/types/artillerie.js?v=alpha47a"></script>
+  <script src="js/data/sets/types/aufklaerung.js?v=alpha47a"></script>
+  <script src="js/data/sets/types/elite.js?v=alpha47a"></script>
+  <script src="js/data/sets/types/unterstuetzung.js?v=alpha47a"></script>
+  <script src="js/data/sets/types/soforteinsatz.js?v=alpha47a"></script>
   <script src="js/data/sets/types/ausruestung.js?v=alpha44a"></script>
-  <script src="js/data/sets/types/nation_pools.js?v=alpha46a"></script>
+  <script src="js/data/sets/types/nation_pools.js?v=alpha47a"></script>
   <script src="js/data/sets/types/tactical.js?v=tac1"></script>
-  <script src="js/data/decks.js?v=alpha46a"></script>
+  <script src="js/data/decks.js?v=alpha47a"></script>
   <script src="js/data/image-manifest.js?v=gfx2"></script>
   <script src="js/data/catalog.js?v=alpha44a"></script>
   <script src="js/data/card-faces.js?v=gfx2"></script>
   <script src="js/data/audio-data.js?v=endscreen1"></script>
-  <script src="js/engine/engine.js?v=alpha46a"></script>
+  <script src="js/engine/engine.js?v=alpha47a"></script>
   <script src="js/engine/victory_trophy.js?v=alpha44a"></script>
-  <script src="js/engine/doctrine_runtime.js?v=alpha46a"></script>
+  <script src="js/engine/doctrine_runtime.js?v=alpha47a"></script>
   <script src="js/engine/tactical_runtime.js?v=tac1"></script>
-  <script src="js/ai/bot.js?v=alpha46a"></script>
+  <script src="js/ai/bot.js?v=alpha47a"></script>
+  <script src="js/ai/bot-seq.js?v=alpha47a"></script>
   <script src="js/playtest/store.js?v=nochat1"></script>
   <script src="js/playtest/logger.js?v=alpha44a"></script>
   <script src="js/playtest/panel.js?v=pt2"></script>
@@ -1001,9 +1012,9 @@
   <script src="js/ui/table-effects.js?v=alpha44a"></script>
   <script src="js/ui/table-stencil.js?v=sc4"></script>
   <script src="js/ui/table-camera.js?v=alpha44a"></script>
-  <script src="js/ui/end-screen.js?v=alpha46a"></script>
-  <script src="js/ui/app.js?v=alpha46a"></script>
-  <script src="js/ui/reset.js?v=t278"></script>
+  <script src="js/ui/end-screen.js?v=alpha47a"></script>
+  <script src="js/ui/app.js?v=alpha47a"></script>
+  <script src="js/ui/reset.js?v=alpha47a"></script>
   <script src="js/tutorial/scenario.js?v=t275"></script>
   <script src="js/ui/tutorial.js?v=alpha44a"></script>
   <script src="js/ui/audio-feedback.js?v=1"></script>
@@ -1016,9 +1027,9 @@
       navigator.serviceWorker.register('sw.js?v=mix1').catch(function () {});
     }
     (function () {
-      document.title = window.DC_BUILD_LABEL || 'Division Command 0.6e Alpha';
+      document.title = window.DC_BUILD_LABEL || 'Division Command 0.610 Alpha';
       var dcVer = document.getElementById('dc-version');
-      if (dcVer) dcVer.textContent = 'Alpha ' + (window.DC_VERSION || '0.6e');
+      if (dcVer) dcVer.textContent = 'Alpha ' + (window.DC_VERSION || '0.610');
       var bgm = document.getElementById('bgm');
 
       function dcBarToCommand() {

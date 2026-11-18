@@ -30,6 +30,7 @@ const WEB = path.join(__dirname, '../Division_Command/web');
 function botWindow() {
   const { w } = setup('off');
   w.eval(fs.readFileSync(path.join(WEB, 'js/ai/bot.js'), 'utf8'));
+  w.eval(fs.readFileSync(path.join(WEB, 'js/ai/bot-seq.js'), 'utf8')); // t291
   w.DCBot.applyCfg({ model: 'test', delayMs: 350 });
   const q = []; let now = 0;
   w.setTimeout = (fn, ms) => { q.push({ fn, at: now + (ms || 0) }); return q.length; };

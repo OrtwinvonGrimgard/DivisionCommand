@@ -236,6 +236,8 @@ async function runSize(browser, w, h) {
       await page.waitForFunction(() => {
         const eng = window.dcGetEngine && window.dcGetEngine();
         const ov = document.getElementById('overlay');
+        const rp = document.getElementById('botseq-react-pass'); // t291: Reaktionsfenster weitergeben
+        if (rp && rp.offsetParent) rp.click();
         return eng && eng.state.active !== window.dcGetYou() && !(window.dcEventBusy && window.dcEventBusy()) &&
           (!ov || getComputedStyle(ov).display === 'none');
       }, null, { timeout: 12000, polling: 40 }).catch(() => {});

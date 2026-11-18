@@ -18,6 +18,9 @@ for (let g = 0; g < 4; g++) {
   w.setTimeout = (fn) => { timers.push(fn); return timers.length; };
   w.requestAnimationFrame = () => 0;
   w.eval(fs.readFileSync(path.join(WEB, 'js/ai/bot.js'), 'utf8'));
+  w.eval(fs.readFileSync(path.join(WEB, 'js/ai/bot-seq.js'), 'utf8')); // t291: sequenzierter Bot-Zug
+  // t291: Spieler 0 spielt hier ebenfalls der Bot; das Reaktionsfenster (eigener Test t291) bleibt aus.
+  w.localStorage.setItem('dc_bot_react', 'off');
   w.DCBot.applyCfg({ model: 'test', delayMs: 1 });
   const nations = Object.keys(w.DC_NATION_DECKS);
   const d0 = buildMixedDeck(w, nations[g % 16], 500 + g), d1 = buildMixedDeck(w, nations[(g * 5 + 3) % 16], 900 + g);

@@ -174,6 +174,8 @@ async function toMatch(page) {
     const open = ov && getComputedStyle(ov).display !== 'none';
     const ok = document.getElementById('recap-ok');
     if (open && ok && ok.offsetParent) ok.click();
+    const rp = document.getElementById('botseq-react-pass'); // t291: Reaktionsfenster im Bot-Zug weitergeben
+    if (open && rp && rp.offsetParent) rp.click();
     return !open && !(window.dcEventBusy && window.dcEventBusy());
   }, null, { timeout: 40000, polling: 400 }).catch(() => {});
   await sleep(500);
