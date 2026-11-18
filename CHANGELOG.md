@@ -4,6 +4,23 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.619 Alpha – 18.11.2026
+
+Regelfixes aus dem Playtest vom 18.11. (t298, Gewicht +0,008: DEF +0,005, Überlast +0,002, Kampftext +0,001). Entscheidung des Projektleiters: Doktrin-DEF wird echt.
+
+- **DEF-Boni zählen im Kampf (+0,005):**
+  - Vorher addierte `currentAtkDef` viele DEF-Boni nur auf den Anzeigewert (UI, Bot, Logbuch). Schaden und Tod liefen über `inst.def`. Beleg im Playtest `mwmhnwd9`, Eintrag 45: Parlamentsbote zeigte 2/4 und starb an 2 Schaden.
+  - Betroffen (nur Anzeige): alle passiven Doktrin-DEF-Boni (Auffangen, Verteilte Stellung, Linienkrieg, Ausharren, Etappensicherung, Gepanzerter Fuß, Normverband, Scheinschwerpunkt, Entsatz, Weiterkämpfen/Sanität, Lauer, Bollwerk, Doktrin-Zeitboni), Doktrin-Aura Tiefenverteidigung (`AURA_STAT`), Ausrüstung mit `BUFF`/`AURA_STAT`-DEF, `PASSIVE_DEF`.
+  - Doppelt angezeigt (eingebacken **und** in der Anzeige addiert): Flankenschutz (`FLANK_DEF`, +2) und Satelliten-/Festungs-/General-Auren (`AURA_FRONT_DEF`, `AURA_FRONT_DEF_GEN`, +2). Ihre alte Buchung lief nur beim Ausspielen/Verschieben und blieb nach dem Tod des Nachbarn stehen.
+  - Jetzt: `doctrine_runtime.js` backt die Differenz Anzeige − `inst.def` als „Lage-DEF“ in `inst.def`/`defMax` ein (`flags.dynDef`, Muster wie `_cmRecompute`), nach jeder Aktion und vor jedem Schaden. Anzeige = echte DEF. Fällt die Bedingung weg, sinkt die DEF um den Bonus, nie unter 1 (RULES §8.1). Flanke und Auren laufen über denselben Weg.
+  - Unverändert (waren schon echt): Ausrüstung `EQUIP_STAT`/`CARRIER_DEF`, Schlüsselwörter (Sicherung, Zähigkeit, Überlast), CM-Karteneffekte, Mech-/Führungsauren, Soforteinsatz-Buffs.
+- **Überlast zerstört (+0,002):** `_destroy` bekam an drei Stellen (Überlast, Religiöser Eifer, Zugbeginn-Kontrolle) `frontList`-Einträge ohne Spieler und brach still ab; Einheiten blieben mit DEF 0 stehen (Playtest Eintrag 53/54). Alle drei Stellen korrigiert, `_destroy` schlägt den Fundort jetzt selbst nach. Alle 18 Überlast-Karten geprüft (+2 ATK, +1 DEF, 1 Schaden am Zugende, bei DEF 0 zerstört).
+- **Kampftext (+0,001):** „erhält N“ steht nur noch bei tatsächlichem Gegen- oder Erstschlag (vorher auch, wenn das Ziel fiel; Einträge 12 und 16).
+- **Balance (Bot gegen Bot, je 10.080 Partien, gleiche Seeds):** siehe `docs/balance/BALANCE_T298.md`. Die Nationen streuen deutlich stärker (Mischdecks SD 2,1 → 9,5 Punkte; Sahr 75,2 %, Averon 38,4 %). Startspieler Misch 56,9 → 57,6 %. **Keine Werte geändert** (Auftrag); Vorschlag mit Messung im Bericht.
+- **Tests:** `test_doctrine_def_t298.js` (Playtest-Fall, Auffangen/Verteilte Stellung/Linienkrieg/Flanke, Invariante Anzeige = echte DEF über 24 Bot-Partien, 18 Überlast-Karten, Eifer, Zugbeginn, Kampftext). `test_effects.js` gleicht Lage-DEF beim Aufstellen ab.
+- **Werkzeug:** Mess-Harness als `scripts/balance/sim_nations_t298.js`, `sim_doctrines_t298.js`, `merge_sim_t298.js` eingecheckt (vorher nur `tmp_t283/`).
+- Cache `divcmd-alpha47c`.
+
 ## 0.611 Alpha – 18.11.2026
 
 Fix (+0,001, t296): Die Audio-Schleife am Spieltisch ist behoben.
