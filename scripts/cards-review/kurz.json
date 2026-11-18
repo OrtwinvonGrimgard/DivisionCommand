@@ -20,7 +20,7 @@
   "keywords": []
  },
  "dc_dok_auffangen": {
-  "kurz": "Eigene Einheiten haben +1 DEF. Hat der Gegner mehr Einheiten im Abschnitt, zusätzlich +1 DEF. Bei Gleichstand +1 ATK.",
+  "kurz": "Hat der Gegner in einem Abschnitt mehr Einheiten, haben eigene Einheiten dort +1 DEF; bei Gleichstand +1 ATK.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -55,7 +55,7 @@
   "keywords": []
  },
  "dc_dok_entsatz": {
-  "kurz": "Einheiten in im letzten Zug angegriffenen Abschnitten +1 ATK/+1 DEF; wer dorthin einrückt, ebenso (Zug).",
+  "kurz": "Einheiten in im letzten Zug angegriffenen Abschnitten +1 ATK; wer dorthin einrückt, zusätzlich +1 ATK/+1 DEF (Zug).",
   "gekuerzt": true,
   "keywords": []
  },
@@ -80,7 +80,7 @@
   "keywords": []
  },
  "dc_dok_gepanzerter_fuss": {
-  "kurz": "Eigene Einheiten haben +1 DEF. Ausgerüstete eigene Einheiten haben zusätzlich +1 ATK.",
+  "kurz": "Ausgerüstete eigene Einheiten haben +1 ATK und +1 DEF.",
   "gekuerzt": false,
   "keywords": []
  },
@@ -90,7 +90,7 @@
   "keywords": []
  },
  "dc_dok_linienkrieg": {
-  "kurz": "Eigene Einheiten +1 DEF; mit 2+ eigenen Einheiten im Abschnitt dort weitere +1 DEF.",
+  "kurz": "Eigene Einheiten in Abschnitten mit 3 eigenen Einheiten +1 DEF.",
   "gekuerzt": true,
   "keywords": []
  },

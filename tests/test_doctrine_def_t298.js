@@ -56,8 +56,9 @@ const onFront = (eng, inst) => { const l = eng.findInst(inst.uid); return !!(l &
 /** @param {object} eng @param {number} n @returns {string[]} letzte Ereignistexte */
 const lastEvents = (eng, n) => (eng.state.events || []).slice(-(n || 6)).map((e) => e.text);
 
-// 1) Playtest mwmhnwd9 Eintrag 45: Parlamentsbote (Auffangen: +1 Grund, +1 bei Unterzahl) zeigt 4 DEF und
-//    überlebt jetzt 2 Gegenschaden; vorher starb er bei inst.def 2.
+// 1) Playtest mwmhnwd9 Eintrag 45: Parlamentsbote zeigte 4 DEF (0.611: Auffangen +1 Grund, +1 bei Unterzahl) und
+//    starb bei inst.def 2. Seit t300 (0.624) hat Auffangen keinen Grundbonus mehr: Anzeige 3 = echte DEF 3,
+//    er überlebt 2 Gegenschaden mit 1.
 {
   const { eng } = boot(1);
   doctrines(eng, 0, ['dc_dok_lauer', 'dc_dok_verteilte_stellung']);
@@ -66,40 +67,40 @@ const lastEvents = (eng, n) => (eng.state.events || []).slice(-(n || 6)).map((e)
   const pfad = L.put(eng, 0, PFAD, 'C', 0); L.put(eng, 0, SCHILD, 'C', 1); L.put(eng, 0, LAUERND, 'C', 2);
   pfad.flags.dokRested = true; // Lauer: geruht → +1 ATK (Gegenschlag 2 wie im Playtest)
   settle(eng);
-  assert.equal(shown(eng, bote), 4, 'Anzeige 4 DEF wie im Playtest');
-  assert.equal(bote.def, 4, 'die angezeigte DEF ist die echte DEF');
+  assert.equal(shown(eng, bote), 3, 'Anzeige 3 DEF (gedruckt 2 + Unterzahl 1)');
+  assert.equal(bote.def, 3, 'die angezeigte DEF ist die echte DEF');
   assert.equal(eng.currentAtkDef(pfad).atk, 2, 'Gegenschlag 2');
   const r = eng.dispatch({ type: 'ATTACK', player: 1, uid: bote.uid, target: pfad.uid });
   assert.ok(r.ok, r.error);
-  assert.ok(onFront(eng, bote), 'Parlamentsbote überlebt 2 Schaden bei 4 DEF');
-  assert.equal(bote.def, 2); assert.equal(shown(eng, bote), 2, 'Anzeige nach dem Treffer = echte DEF');
+  assert.ok(onFront(eng, bote), 'Parlamentsbote überlebt 2 Schaden bei 3 DEF');
+  assert.equal(bote.def, 1); assert.equal(shown(eng, bote), 1, 'Anzeige nach dem Treffer = echte DEF');
   assert.ok(lastEvents(eng).some((t) => /richtet 1 Schaden an, erhält 2\./.test(t)), 'Gegenschlag im Kampftext');
   console.log('ok t298 Playtest-Fall: Auffangen-DEF zählt im Kampf');
 }
 
-// 2) Auffangen: Grundbonus und Unterzahl-Bonus; Verlust des Bonus senkt DEF, tötet aber nie (mind. 1).
+// 2) Auffangen (seit t300 ohne Grundbonus): Unterzahl-Bonus; Verlust des Bonus senkt DEF, tötet aber nie (mind. 1).
 {
   const { eng } = boot(0);
   doctrines(eng, 0, ['dc_dok_auffangen']);
   const u = L.put(eng, 0, INF, 'L', 0);
   const p = Number(eng.defOf(u).def);
   settle(eng);
-  assert.equal(u.def, p + 1, 'Grundbonus +1 eingebacken'); assert.equal(shown(eng, u), u.def);
+  assert.equal(u.def, p, 'kein Grundbonus (t300)'); assert.equal(shown(eng, u), u.def);
   L.put(eng, 1, INF, 'L', 0); L.put(eng, 1, INF, 'L', 1);
   settle(eng);
-  assert.equal(u.def, p + 2, 'Unterzahl +1'); assert.equal(u.defMax, p + 2, 'Höchst-DEF wächst mit');
-  eng._damage(u, p + 1, { tag: 'test' });
-  assert.equal(u.def, 1, 'überlebt Schaden in Höhe der gedruckten DEF + 1');
+  assert.equal(u.def, p + 1, 'Unterzahl +1'); assert.equal(u.defMax, p + 1, 'Höchst-DEF wächst mit');
+  eng._damage(u, p, { tag: 'test' });
+  assert.equal(u.def, 1, 'überlebt Schaden in Höhe der gedruckten DEF');
   assert.ok(!eng._isDead(u));
   eng.player(1).front.L[1] = null; settle(eng); // Unterzahl endet: −1 DEF, aber nicht unter 1
-  assert.equal(u.def, 1, 'Bonusverlust tötet nicht'); assert.equal(u.defMax, p + 1);
+  assert.equal(u.def, 1, 'Bonusverlust tötet nicht'); assert.equal(u.defMax, p);
   assert.equal(shown(eng, u), 1, 'Anzeige stimmt nach Bonusverlust');
   eng._damage(u, 1, { tag: 'test' });
   assert.ok(eng._isDead(u), 'danach tödlich');
   console.log('ok t298 Auffangen: Bonus zählt, Verlust tötet nicht');
 }
 
-// 3) Verteilte Stellung (+2 DEF allein im Abschnitt) und Linienkrieg (+1, ab 2 Einheiten +1).
+// 3) Verteilte Stellung (+2 DEF allein im Abschnitt) und Linienkrieg (seit t300: nur +1 bei drei eigenen im Abschnitt).
 {
   const { eng } = boot(0);
   doctrines(eng, 0, ['dc_dok_verteilte_stellung']);
@@ -114,10 +115,12 @@ const lastEvents = (eng, n) => (eng.state.events || []).slice(-(n || 6)).map((e)
   const b = boot(0); doctrines(b.eng, 0, ['dc_dok_linienkrieg']);
   const a1 = L.put(b.eng, 0, INF, 'C', 0);
   settle(b.eng);
-  assert.equal(a1.def, p + 1, 'Linienkrieg Grund +1');
+  assert.equal(a1.def, p, 'Linienkrieg: kein Grundbonus (t300)');
   const a2 = L.put(b.eng, 0, INF, 'C', 1); settle(b.eng);
-  assert.equal(a1.def, p + 2, 'ab 2 Einheiten +1'); assert.equal(a2.def, p + 2);
-  b.eng._damage(a1, p + 1, { tag: 'test' });
+  assert.equal(a1.def, p, 'zwei Einheiten: noch kein Bonus'); assert.equal(a2.def, p);
+  const a3 = L.put(b.eng, 0, INF, 'C', 2); settle(b.eng);
+  assert.equal(a1.def, p + 1, 'drei Einheiten +1'); assert.equal(a3.def, p + 1);
+  b.eng._damage(a1, p, { tag: 'test' });
   assert.ok(!b.eng._isDead(a1), 'Linienkrieg-DEF hält im Kampf');
   console.log('ok t298 Verteilte Stellung und Linienkrieg zählen im Kampf');
 }

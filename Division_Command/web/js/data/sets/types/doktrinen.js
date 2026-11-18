@@ -172,11 +172,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Eigene Einheiten haben +1 DEF. Hat der Gegner mehr Einheiten im Abschnitt, zusätzlich +1 DEF. Bei Gleichstand +1 ATK.",
+    "text": "Hat der Gegner in einem Abschnitt mehr Einheiten, haben eigene Einheiten dort +1 DEF; bei Gleichstand +1 ATK.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Einheiten haben +1 DEF. Hat der Gegner mehr Einheiten im Abschnitt, zusätzlich +1 DEF. Bei Gleichstand +1 ATK."
+        "body": "Hat der Gegner in einem Abschnitt mehr Einheiten, haben eigene Einheiten dort +1 DEF; bei Gleichstand +1 ATK."
       }
     ],
     "effects": [
@@ -184,7 +184,7 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "AUFFANGEN",
         "param": {
           "def": 1,
-          "base_def": 1,
+          "base_def": 0,
           "equal_atk": 1
         }
       }
@@ -439,11 +439,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Einheiten in Abschnitten, die im letzten Zug angegriffen wurden, haben +1 ATK und +1 DEF. Einrücken in solche Abschnitte gibt denselben Bonus bis Zugende.",
+    "text": "Eigene Einheiten in Abschnitten, die im letzten Zug angegriffen wurden, haben +1 ATK. Wer dort einrückt, hat bis Zugende zusätzlich +1 ATK und +1 DEF.",
     "clauses": [
       {
         "title": "",
-        "body": "Einheiten in Abschnitten, die im letzten Zug angegriffen wurden, haben +1 ATK und +1 DEF. Einrücken in solche Abschnitte gibt denselben Bonus bis Zugende."
+        "body": "Eigene Einheiten in Abschnitten, die im letzten Zug angegriffen wurden, haben +1 ATK. Wer dort einrückt, hat bis Zugende zusätzlich +1 ATK und +1 DEF."
       }
     ],
     "effects": [
@@ -455,7 +455,7 @@ window.DC_SET_TYPES["Doktrin"] = [
             "atk": 1,
             "def": 1
           },
-          "held_def": 1,
+          "held_def": 0,
           "held_atk": 1
         }
       }
@@ -628,11 +628,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Eigene Einheiten haben +1 DEF. Ausgerüstete eigene Einheiten haben zusätzlich +1 ATK.",
+    "text": "Ausgerüstete eigene Einheiten haben +1 ATK und +1 DEF.",
     "clauses": [
       {
         "title": "",
-        "body": "Ausgerüstete eigene Einheiten haben +1 DEF."
+        "body": "Ausgerüstete eigene Einheiten haben +1 ATK und +1 DEF."
       }
     ],
     "effects": [
@@ -640,9 +640,9 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "GEPANZERTER_FUSS",
         "param": {
           "if": "equipped",
-          "def": 0,
+          "def": 1,
           "atk": 1,
-          "base_def": 1
+          "base_def": 0
         }
       }
     ],
@@ -704,11 +704,11 @@ window.DC_SET_TYPES["Doktrin"] = [
       "doktrin"
     ],
     "klasse_tags": [],
-    "text": "Eigene Einheiten haben +1 DEF. Stehen mindestens zwei eigene in einem Abschnitt, zusätzlich +1 DEF. Der Fluss hält die Linie.",
+    "text": "Eigene Einheiten in einem Abschnitt mit drei eigenen Einheiten haben +1 DEF. Der Fluss hält die Linie.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Einheiten haben +1 DEF. Stehen mindestens zwei eigene in einem Abschnitt, zusätzlich +1 DEF. Der Fluss hält die Linie."
+        "body": "Eigene Einheiten in einem Abschnitt mit drei eigenen Einheiten haben +1 DEF. Der Fluss hält die Linie."
       }
     ],
     "effects": [
@@ -716,8 +716,8 @@ window.DC_SET_TYPES["Doktrin"] = [
         "code": "LINIENKRIEG",
         "param": {
           "if": "section-has-at-least",
-          "count": 2,
-          "base_def": 1,
+          "count": 3,
+          "base_def": 0,
           "def": 1
         }
       }

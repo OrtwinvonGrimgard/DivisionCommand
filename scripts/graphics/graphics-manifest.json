@@ -128,8 +128,8 @@
    "type": "Doktrin",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "a77a5202c59a0f767b89f8bde520b393465805344b5b4627d9df4f9c2dc23dcb",
-   "kurz": "Eigene Einheiten haben +1 DEF. Hat der Gegner mehr Einheiten im Abschnitt, zusätzlich +1 DEF. Bei Gleichstand +1 ATK.",
+   "source_record_sha256": "d6e2cc7c85a3db4f4da6bdb6335316292c498762df1d7619d8c06057887f4a4c",
+   "kurz": "Hat der Gegner in einem Abschnitt mehr Einheiten, haben eigene Einheiten dort +1 DEF; bei Gleichstand +1 ATK.",
    "keywords": [],
    "printed_stats": {
     "ap": 0,
@@ -149,7 +149,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "d6db00cc48b4b7d2f0970de3f5c25015d7d9748bb9075ff06d481097d7e5d843"
+   "output_sha256": "f693e14d7ebdf878ac46fb11516cb699bacac75c0d95be07d940991083c3a321"
   },
   {
    "id": "dc_dok_aufklaerungsschlag",
@@ -331,8 +331,8 @@
    "type": "Doktrin",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "ab7c0cd748b0f0916f850b6d1e6126dbbf4906f92f0b6e559beb1596452e0e11",
-   "kurz": "Einheiten in im letzten Zug angegriffenen Abschnitten +1 ATK/+1 DEF; wer dorthin einrückt, ebenso (Zug).",
+   "source_record_sha256": "bc5db15fc9038f0f325d26f59112a3e12f5f31d199a32f7352158fb3f9ce388b",
+   "kurz": "Einheiten in im letzten Zug angegriffenen Abschnitten +1 ATK; wer dorthin einrückt, zusätzlich +1 ATK/+1 DEF (Zug).",
    "keywords": [],
    "printed_stats": {
     "ap": 0,
@@ -352,7 +352,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "48e7109a12b6efa4a9aaaa7f6b5c59eeb33c6afb72a3a7c55927a483fd929013"
+   "output_sha256": "218cd4328c005c9010e82100251706afb474006756b41e53eb8630be0e4f1bb9"
   },
   {
    "id": "dc_dok_etappensicherung",
@@ -476,8 +476,8 @@
    "type": "Doktrin",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "2e0549fa20e7f755c0bfba472a1aeebf8c913a648ac963eb32b15041ff1aa634",
-   "kurz": "Eigene Einheiten haben +1 DEF. Ausgerüstete eigene Einheiten haben zusätzlich +1 ATK.",
+   "source_record_sha256": "197f0ae75a32713875e52e7a7aefcbcb2347a2cb44a59538546ecd7b081354dc",
+   "kurz": "Ausgerüstete eigene Einheiten haben +1 ATK und +1 DEF.",
    "keywords": [],
    "printed_stats": {
     "ap": 0,
@@ -497,7 +497,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "9dad2afb952b29a59c700cf5a3fe940977cf942514211190b729fe26e83964ed"
+   "output_sha256": "d69bf5263ba599983139cbf6e27f8d93a7ce7971d971a9db495fcc097305807f"
   },
   {
    "id": "dc_dok_lauer",
@@ -534,8 +534,8 @@
    "type": "Doktrin",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "34b1ebd594649d7f8d6e5e1176ce481762faa893c9023a2b53c5b6459d5f443d",
-   "kurz": "Eigene Einheiten +1 DEF; mit 2+ eigenen Einheiten im Abschnitt dort weitere +1 DEF.",
+   "source_record_sha256": "0853091abfe1ba6d944ab30a46583265b2571f895e0c85908f8ae283fc5d0a49",
+   "kurz": "Eigene Einheiten in Abschnitten mit 3 eigenen Einheiten +1 DEF.",
    "keywords": [],
    "printed_stats": {
     "ap": 0,
@@ -555,7 +555,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "b6cacccceee3b2aa9fea6c019f71d45e9894b9db4609d2abc839678b91ba87f2"
+   "output_sha256": "7142d53d73b4d983fcbd41afa5bec9747afb68e2caf7be7193f5b835e30020b5"
   },
   {
    "id": "dc_dok_lokalisierung",

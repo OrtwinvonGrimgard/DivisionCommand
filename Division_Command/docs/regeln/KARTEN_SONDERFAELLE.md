@@ -508,11 +508,11 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_dok_entsatz` – Entsatz (Doktrin)
 
-**Fläche:** Einheiten in im letzten Zug angegriffenen Abschnitten +1 ATK/+1 DEF; wer dorthin einrückt, ebenso (Zug).
+**Fläche:** Einheiten in im letzten Zug angegriffenen Abschnitten +1 ATK; wer dorthin einrückt, zusätzlich +1 ATK/+1 DEF (Zug).
 
 **Volltext:**
 
-> Einheiten in Abschnitten, die im letzten Zug angegriffen wurden, haben +1 ATK und +1 DEF. Einrücken in solche Abschnitte gibt denselben Bonus bis Zugende.
+> Eigene Einheiten in Abschnitten, die im letzten Zug angegriffen wurden, haben +1 ATK. Wer dort einrückt, hat bis Zugende zusätzlich +1 ATK und +1 DEF.
 
 ## `dc_dok_feuerwalze` – Feuerwalze (Doktrin)
 
@@ -540,11 +540,11 @@ Auf der Kartenfläche steht ein knapper Text (höchstens 120 Zeichen) plus Schl�
 
 ## `dc_dok_linienkrieg` – Linienkrieg (Doktrin)
 
-**Fläche:** Eigene Einheiten +1 DEF; mit 2+ eigenen Einheiten im Abschnitt dort weitere +1 DEF.
+**Fläche:** Eigene Einheiten in Abschnitten mit 3 eigenen Einheiten +1 DEF.
 
 **Volltext:**
 
-> Eigene Einheiten haben +1 DEF. Stehen mindestens zwei eigene in einem Abschnitt, zusätzlich +1 DEF. Der Fluss hält die Linie.
+> Eigene Einheiten in einem Abschnitt mit drei eigenen Einheiten haben +1 DEF. Der Fluss hält die Linie.
 
 ## `dc_dok_marsch_aus_dem_vollen` – Marsch aus dem Vollen (Doktrin)
 
