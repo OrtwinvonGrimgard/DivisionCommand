@@ -566,6 +566,8 @@ Es gibt kein Ansparen über mehrere Züge. Karten mit Kosten über 5 AP werden d
 
 Regelwerte: `ap_per_turn: 5`, `ap_expire_on_own_turn: true`, `ap_persist_through_opponent: true` (Engine `_actEnd`). Frühere Arbeitsstände (AP sparen, Limit 10) sind überholt.
 
+**Reaktionsfenster gegen den Bot (t291):** Der Bot spielt seinen Zug Aktion für Aktion. Kann der Mensch nach einer abgeschlossenen Bot-Aktion einen Soforteinsatz aus seiner Reserve spielen, hält der Bot an. Ausgenommen sind Karten mit „nur im eigenen Zug“. Das ist eine Hilfe der Oberfläche, keine neue Regel: Soforteinsätze im gegnerischen Zug waren schon vorher erlaubt (§18). Ablauf und Einstellungen: `docs/technik/BOT_SEQUENZ_T291.md`.
+
 ## 20.2 AP-Kostenbereich
 
 Der aktuelle Balance-Arbeitsrahmen:

@@ -1,6 +1,6 @@
 # Siegbedingungen — Trophy-Modus
 
-**Status: aktiv** · Stand: November 2026 · Alpha 0.6e  
+**Status: aktiv** · Stand: November 2026 · Alpha 0.610  
 Flag: `catalog.rules.victory_mode` — Default **`trophy`** (alle Modi: Bot, Hotseat, LAN). Legacy: `classic`.
 
 Doktrin-SP sind **nicht nationenbezogen**, sondern an die 36 Doktrinen gebunden (`pt126u`).

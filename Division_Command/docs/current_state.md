@@ -4,10 +4,11 @@
 
 | | |
 |---|---|
-| **Stand dieser Übersicht** | 17.11.2026 (Berlin), nach Aktivierung der CI (t289); Verfahren eingeführt in t286 |
-| **Version** | Alpha **0.6e** (`Division_Command/VERSION`), Tag `v0.6e` = `9a0f3e2d` (13.11.2026) |
-| **Basis-Commit dieser Übersicht** | `54eee9ce` auf `main` (= `v0.6e` plus 3 manuelle Änderungen am Minen-Token vom 14.11.2026, siehe [Zuletzt gemacht](#4-zuletzt-gemacht)) |
-| **Service-Worker-Cache** | `divcmd-alpha46a` (bei jeder Web-Änderung hochzählen) |
+| **Stand dieser Übersicht** | 17.11.2026 (Berlin), nach t291 (Bot-Zug in Einzelschritten, Version 0.610); Verfahren eingeführt in t286 |
+| **Version** | Alpha **0.610** (`Division_Command/VERSION`), Tag `v0.610` (17.11.2026, t291); vorher `v0.6e` = `9a0f3e2d` (13.11.2026) |
+| **Versionsschema** | Seit 0.610. Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. 0.610 steht für den Umbau des Bot-Zugs (t291). |
+| **Basis-Commit dieser Übersicht** | Tag `v0.610` auf `main` (t291; davor `54eee9ce` = `v0.6e` plus Minen-Token und t286/t289, siehe [Zuletzt gemacht](#4-zuletzt-gemacht)) |
+| **Service-Worker-Cache** | `divcmd-alpha47a` (bei jeder Web-Änderung hochzählen) |
 | **Katalog** | 1.746 Karten-IDs, 16 Nationen, 36 Doktrinen; 1.746 Vorderseiten (Nachzählung 17.11.2026 über `scripts/nation_pools/load_game.js`) |
 | **Letzte dokumentierte Prozentwertung** | 67 % bis Early Access, Kernspiel 77 % (`entwicklung/STATUS_T271.md`, Stand t271). Seitdem **nicht neu bewertet**; die Bereichsgewichte stehen dort. |
 | **CI** | **aktiv** seit t289 (GitHub Actions: `npm test`, `verify.py`, Fuzz, Audit; siehe [`technik/CI.md`](technik/CI.md)) |
@@ -51,15 +52,15 @@ Entscheidungen des Projektleiters. Sie stehen hier gebündelt, damit sie nicht i
 | [VS-01](#vs-01-kernspiel--regeln) | Kernspiel & Regeln | fertig | Engine, Trophy-Modus, Hotseat; Regelwerk an die Engine angeglichen (t283). |
 | [VS-02](#vs-02-kartenbestand--nationenpools) | Kartenbestand & Nationenpools | fertig | 1.746 Karten, 16 × 100 Nationenkarten, Starter- und Mischdecks, Deckbau 60 + 2. |
 | [VS-03](#vs-03-effekt-verdrahtung--kartentext--engine) | Effekt-Verdrahtung & Kartentext = Engine | in Arbeit | Audit 0 ungelesene Parameter; Stubs und Sonderfälle bleiben (Brummbär, `MINE_TOKEN`). |
-| [VS-04](#vs-04-bot-ki) | Bot-KI | in Arbeit | Nutzt aktive Doktrin-Fähigkeiten; Stellungswechsel aus, keine Schwierigkeitsstufen. |
+| [VS-04](#vs-04-bot-ki) | Bot-KI | in Arbeit | Spielt seinen Zug Aktion für Aktion mit Denkpausen und hält für Reaktionen an (t291); nutzt aktive Doktrin-Fähigkeiten; Stellungswechsel aus, keine Schwierigkeitsstufen. |
 | [VS-05](#vs-05-balance) | Balance | in Arbeit | Ziel 50 %; Bot-Messungen laufen, keine menschlichen Daten; Mischdecks 44–54 %. |
 | [VS-06](#vs-06-lore--nationentiefe) | Lore & Nationentiefe | fertig | 16 Hauptdokumente je Nation, Kurzprofile, Aufsätze; Einbindung ins Spiel schmal. |
-| [VS-07](#vs-07-oberfläche-menüs-tisch-bibliothek) | Oberfläche: Menüs, Tisch, Bibliothek | in Arbeit | Designsystem t280, Tisch-HUD, Bibliothek; 2,5D-Ansicht nicht auf Zielgeräten geprüft. |
+| [VS-07](#vs-07-oberfläche-menüs-tisch-bibliothek) | Oberfläche: Menüs, Tisch, Bibliothek | in Arbeit | Designsystem t280, Tisch-HUD, Bibliothek, Bot-Ticker und Reaktionsfenster (t291); 2,5D-Ansicht nicht auf Zielgeräten geprüft. |
 | [VS-08](#vs-08-kartenfaces--grafik-porträts) | Kartenfaces & Grafik, Porträts | in Arbeit | Vorderseiten komplett; vorläufige Motive und Porträtlücken. |
 | [VS-09](#vs-09-sound--musik) | Sound & Musik | fertig | 15 Musikstücke, 205 Effektdateien (SFX v4), Optionen. |
 | [VS-10](#vs-10-tutorial--onboarding) | Tutorial & Onboarding | fertig | „Grundausbildung“, 25 Schritte, Erststart, Test grün. |
 | [VS-11](#vs-11-mehrspieler--lan) | Mehrspieler / LAN | in Arbeit | Sicht je Spieler, gehärteter Server; nie mit zwei Rechnern gespielt. |
-| [VS-12](#vs-12-tests-ci--repo-werkzeuge) | Tests, CI & Repo-Werkzeuge | in Arbeit | 61 Testdateien + Browser-Gates; CI aktiv (t289: `npm test`, `verify.py`, Fuzz, Audit); Browser-Gates lokal; Repo sehr groß. |
+| [VS-12](#vs-12-tests-ci--repo-werkzeuge) | Tests, CI & Repo-Werkzeuge | in Arbeit | 62 Testdateien + Browser-Gates; CI aktiv (t289: `npm test`, `verify.py`, Fuzz, Audit); Browser-Gates lokal; Repo sehr groß. |
 | [VS-13](#vs-13-menschlicher-playtest--feedback) | Menschlicher Playtest & Feedback | geplant | Logger und Panel sind da; es gibt kein Protokoll einer Partie mit Menschen. |
 | [VS-14](#vs-14-distribution-exe-pdf-steam) | Distribution: EXE, PDF, Steam | geplant | EXE nie gebaut, PDF auf Stand 0.6b, keine Steam-Seite. |
 | [VS-15](#vs-15-spielmodi-roguelike--kampagne) | Spielmodi: Roguelike & Kampagne | geplant | nur Konzepte (Fahrplan, Effektideen). |
@@ -103,14 +104,15 @@ Je Slice: **Umfang** (Ende zu Ende, von Daten über Engine bis Oberfläche), **S
 ### VS-04 Bot-KI
 
 - **Umfang:** Bot mit Vorausschau (t254), Bewertung aktiver Fähigkeiten, Regler.
-- **Status: in Arbeit.** Seit t285 bietet `listActions` Schutzwall, Feldreparatur, Überschuss und Stellungswechsel an; der Bot nutzt die Feldreparatur (98 % der Gelegenheiten) und Schutzwall mit übrigen AP (28 %, gewollt).
-- **Code:** `web/js/ai/bot.js`; Schalter `kwMove` in `DCBot.defaults`.
-- **Docs:** `balance/BOT_KI_T254.md`, `balance/BALANCE_T285.md` §1–3.
-- **Gates:** `test_bot_t254`, `test_bot_ui_t254`, `test_doctrine_actives_t285`, `ui-play`.
+- **Status: in Arbeit.** Seit t285 bietet `listActions` Schutzwall, Feldreparatur, Überschuss und Stellungswechsel an; der Bot nutzt die Feldreparatur (98 % der Gelegenheiten) und Schutzwall mit übrigen AP (28 %, gewollt). **Seit t291 (0.610)** spielt der Bot im Browser eine Aktion, zeigt sie (Ticker, Hervorhebung), denkt kurz nach (Tempo langsam/normal/schnell) und plant dann neu. Kann der Mensch einen Soforteinsatz aus der AP-Reserve spielen, hält er an (Reaktionsfenster; Einstellung immer/5 s/nie). Kein Nachholen zu Zugbeginn mehr. Headless unverändert (Hash von 80 Partien identisch).
+- **Code:** `web/js/ai/bot.js`, `web/js/ai/bot-seq.js` (Schritt-API, Tempo, Reaktionsprüfung); Ablauf im Bot-Abschnitt von `web/js/ui/app.js`; Schalter `kwMove` in `DCBot.defaults`.
+- **Docs:** `balance/BOT_KI_T254.md`, `balance/BALANCE_T285.md` §1–3, `technik/BOT_SEQUENZ_T291.md`.
+- **Gates:** `test_bot_t254`, `test_bot_ui_t254`, `test_doctrine_actives_t285`, `test_botseq_t291`, `ui-play`, `botseq-play`.
 - **Offen:**
   - Stellungswechsel für die KI einschalten (verschiebt Nationen um bis zu 16 Punkte, v. a. Sahr, Vesper, Merovan, Lyr) – eigene Runde mit Nachbalancierung.
   - Keine Bot-Schwierigkeitsstufen (nur zwei Bot-Arten plus Regler, t271).
   - Überschuss wird mit 5 AP fast nie bezahlbar; Bot nutzt ihn, sobald es sich lohnt.
+  - Reaktionsfenster mit Menschen erproben: Tempo-Standard (normal) und „immer anhalten“ sind Annahmen. Fallen und Konter, die nicht als Soforteinsatz gespielt werden, löst weiter nur die Engine aus.
 
 ### VS-05 Balance
 
@@ -140,11 +142,11 @@ Je Slice: **Umfang** (Ende zu Ende, von Daten über Engine bis Oberfläche), **S
 ### VS-07 Oberfläche: Menüs, Tisch, Bibliothek
 
 - **Umfang:** Titel, Menüs, Optionen, Deckbau, Bibliothek mit Blättern, Spieltisch mit Kopfleiste und Protokoll, 2,5D-Kamera, Rückfragen, Endbildschirm, Spielstand zurücksetzen.
-- **Status: in Arbeit.** Designsystem (t280), Tisch (t279), Bibliothek (t281), Handkarten bei 1024 px und abgeschnittene Knöpfe (t283) sind erledigt. Offen ist die 2,5D-Ansicht auf echten Geräten.
+- **Status: in Arbeit.** Designsystem (t280), Tisch (t279), Bibliothek (t281), Handkarten bei 1024 px und abgeschnittene Knöpfe (t283) sind erledigt. Seit t291: Bot-Ticker oben links, Reaktionsfenster, Optionen „Bot-Tempo“ und „Reaktionsfenster“ (Spielablauf und im Spiel). Ereignisse werden über eine laufende Nummer erkannt; vorher gingen sie ab 80 Protokolleinträgen verloren. Offen ist die 2,5D-Ansicht auf echten Geräten.
 - **Code:** `web/index.html`, `web/css/`, `web/js/ui/` (u. a. `app.js`, `ui-screens.js`, `library.js`, `table-camera.js`, `end-screen.js`, `reset.js`).
 - **Docs:** `UI_DESIGN_T280.md`, `technik/TABLE_CAMERA.md`, `technik/UI_TEST_T256.md`.
-- **Gates:** `ui-play` (Seeds 31337, 1234), `layout-test` (6 Fenstergrößen, Überlauf und abgeschnittene Knöpfe), `screens-test` (75 Ansichten), `libzoom-play`, `reset-play`, `funcs-play`, Tests `test_ui_*`, `test_table_*`, `test_hud_pro`.
-- **Offen:** 2,5D auf Zielgeräten testen (seit t271 offen); Texte der Hilfe verweisen noch auf `STATUS_T271.md` statt auf diese Datei (Hilfe ist Code, bei der nächsten Web-Änderung mitziehen).
+- **Gates:** `ui-play` (Seeds 31337, 1234), `botseq-play`, `layout-test` (6 Fenstergrößen, Überlauf und abgeschnittene Knöpfe), `screens-test` (75 Ansichten), `libzoom-play`, `reset-play`, `funcs-play`, Tests `test_ui_*`, `test_table_*`, `test_hud_pro`.
+- **Offen:** 2,5D auf Zielgeräten testen (seit t271 offen). Der Verweis der Hilfe auf `STATUS_T271.md` zeigt seit t291 auf diese Datei.
 
 ### VS-08 Kartenfaces & Grafik, Porträts
 
@@ -188,7 +190,7 @@ Je Slice: **Umfang** (Ende zu Ende, von Daten über Engine bis Oberfläche), **S
 ### VS-12 Tests, CI & Repo-Werkzeuge
 
 - **Umfang:** Testsuite, Browser-Gates, Fuzz, Smoke, Prüfskripte, CI, Repo-Größe, Build.
-- **Status: in Arbeit.** `npm test` umfasst 61 Testdateien (`package.json`) und ist am 17.11.2026 auf `54eee9ce` grün (siehe [Gates](#8-gates-und-befehle)). **CI ist seit t289 aktiv** (GitHub Actions, `.github/workflows/ci.yml`, Beschreibung in [`technik/CI.md`](technik/CI.md)): bei Push/PR auf `main` und manuell laufen `npm test`, `verify.py`, `npm run fuzz` und das Text-Engine-Audit. Die Browser-Gates laufen weiter nur lokal.
+- **Status: in Arbeit.** `npm test` umfasst 62 Testdateien (`package.json`) und ist am 17.11.2026 auf `54eee9ce` grün (siehe [Gates](#8-gates-und-befehle)). **CI ist seit t289 aktiv** (GitHub Actions, `.github/workflows/ci.yml`, Beschreibung in [`technik/CI.md`](technik/CI.md)): bei Push/PR auf `main` und manuell laufen `npm test`, `verify.py`, `npm run fuzz` und das Text-Engine-Audit. Die Browser-Gates laufen weiter nur lokal.
 - **Code:** `tests/`, `scripts/`, `package.json`, `package-lock.json`, `.github/workflows/ci.yml`.
 - **Docs:** `technik/CI.md`, `technik/UI_TEST_T256.md`, `technik/REPO_GROESSE_LFS_T283.md`, `technik/PLAYTEST_LOGS.md`.
 - **Offen:**
@@ -229,6 +231,7 @@ Quelle: Git-Log (`git log`), `CHANGELOG.md` und die Berichte unter `balance/` un
 
 | Datum | Version / Commit | Inhalt |
 |---|---|---|
+| 17.11.2026 | **0.610** (t291, Tag `v0.610`) | **Bot-Zug in Einzelschritten:** eine Aktion, Anzeige (Ticker, Hervorhebung), Denkpause (Tempo langsam/normal/schnell), neu planen. Reaktionsfenster, wenn der Mensch einen Soforteinsatz aus der AP-Reserve spielen kann (Einstellung immer/5 s/nie, „in diesem Zug nicht mehr anhalten“). Kein Nachholen zu Zugbeginn; Pause bei Tab im Hintergrund. Ereignisse mit laufender Nummer (Fehler ab 80 Protokolleinträgen behoben). Headless unverändert, keine Balanceverschiebung. `technik/BOT_SEQUENZ_T291.md`, Tests `test_botseq_t291`, `botseq-play`. |
 | 17.11.2026 | t289 (Commit siehe `git log`, kein neuer Tag) | **CI aktiviert:** `.github/workflows/ci.yml` (Push/PR auf `main`, manuell; `npm test`, `verify.py`, Fuzz, Audit), `package-lock.json` eingecheckt (`npm ci`), Vorlage `technik/ci-workflow.yml` durch `technik/CI.md` ersetzt. Der Projektleiter hat dafür dem Bot den GitHub-Scope `workflow` freigegeben. Keine Spieländerung, keine Versionsänderung. |
 | 13.11.2026 | **0.6e** `9a0f3e2d` (t285) | KI nutzt Schutzwall, Feldreparatur, Überschuss; Stellungswechsel in `listActions` (Bot-Nutzung aus); Bollwerk +1 ATK ab 6 DEF (42,5 → 50,4 %), Sicherer Nachschub heilt alle gepanzerten Einheiten (46,7 → 48,7 %). `balance/BALANCE_T285.md` |
 | 13.11.2026 | **0.6d** `1323f53c` (t284) | 141 Zwillingskarten unterschieden (Gruppen mit gleichem Text und gleichen Schlüsselwörtern 3 → 0, nur Werte+Text 119 → 24); Doktrinen Stoßtrupp, Lauer, Gegenstoß; Starterdeck-Tausche; neutraler Hotseat-Endbildschirm. `balance/BALANCE_T284.md` |
@@ -257,6 +260,7 @@ Quelle: Git-Log (`git log`), `CHANGELOG.md` und die Berichte unter `balance/` un
 |---|---|---|---|
 | Überschuss für 1 AP | VS-05/VS-04 | Regeländerung, braucht Entscheidung. | Projektleiter |
 | KI-Stellungswechsel einschalten | VS-04/VS-05 | Eigene Balance-Runde nötig (Sahr, Vesper, Merovan, Lyr); Entscheidung, ob gewollt. | Projektleiter |
+| Audio-Schleife am Tisch belastet die Seite | VS-09/VS-12 | Messung t291 (Headless-Chromium, Partie läuft): `applyAudio` schreibt `dc_music`/`dc_vol` etwa 19.000-mal pro Sekunde in den `localStorage`, mit `playTable`/`stop` im CPU-Profil. Vermutlich lösen `canplay`/`loadeddata` immer wieder `tryPlay` aus. Unter Parallellast verzögern sich dadurch Timer um bis zu 400 ms, und `ui-play` lief in Fristen. Ob das schon vor t291 so war und ob es in einem echten Browser mit Audio auch passiert, ist **nicht geprüft**. Eigene Runde: Schleife in `index.html` (`applyAudio`/`tryPlay`) und `audio-data.js` entkoppeln. | Entwicklung |
 | Git LFS / Repo-Größe | VS-12 | Plan steht, braucht Freigabe (`technik/REPO_GROESSE_LFS_T283.md`). | Projektleiter |
 | Lore im Spiel | VS-06 | Entscheidung, ob und wie. | Projektleiter |
 
@@ -307,9 +311,11 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 |---|---|---|---|
 | 1 | **Menschlicher Playtest** (mehrere Partien mit Protokoll, Auswertung) | VS-13 | Alle Balancezahlen sind Bot-Daten. |
 | 1 | **LAN mit zwei Rechnern** spielen, dazu kurze LAN-Doku | VS-11 | Seit t271 offen. |
+| 1 | **Audio-Schleife** am Tisch beheben (`applyAudio` etwa 19.000-mal pro Sekunde, siehe Abschnitt 5) | VS-09, VS-12 | Belastet die Seite und macht die Browser-Gates unter Last unzuverlässig. |
+| 1 | Bot-Zug in Einzelschritten (t291) **von Hand gegenspielen**: Tempo und Reaktionsfenster bewerten | VS-04, VS-07, VS-13 | Standardwerte sind Annahmen. |
 | 2 | Entscheidung zu **KI-Stellungswechsel** und anschließende Balance-Runde (Sahr, Vesper, Merovan, Lyr) | VS-04, VS-05 | `BALANCE_T285.md` §3. |
 | 2 | **Überschuss 1 AP** entscheiden; **Normverband** (≈ 44 %) lösen, ohne Steinmark zu überdrehen | VS-05, VS-03 | Eigene kleine Runde. |
-| 2 | **EXE bauen** und auf einem sauberen Windows-Rechner starten; **PDF** auf Stand 0.6e bringen | VS-14 | PDF trägt noch 0.6b. |
+| 2 | **EXE bauen** und auf einem sauberen Windows-Rechner starten; **PDF** auf Stand 0.610 bringen | VS-14 | PDF trägt noch 0.6b. |
 | 2 | **Mess-Harness** (`tmp_t283/*`) nach `scripts/balance/` übernehmen | VS-05, VS-12 | Reproduzierbarkeit der Balance. |
 | 3 | Porträts vervollständigen; vorläufige Motive neu zählen und ersetzen | VS-08 | 650 laut t258. |
 | 3 | Brummbär-Stub, `MINE_TOKEN`, `CM`-Fehlalarme im Prüfskript | VS-03 | Kleinschritte. |
@@ -324,18 +330,35 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 
 | Gate | Befehl | Zweck |
 |---|---|---|
-| Testsuite | `npm test` | 61 Testdateien (Regeln, Karten, UI-Logik, Server) |
+| Testsuite | `npm test` | 62 Testdateien (Regeln, Karten, UI-Logik, Server) |
 | Vorderseiten | `python3 scripts/graphics/verify.py` | 1024 × 1428, Texte, Motivpräsenz |
 | Fuzz 80 | `npm run fuzz` | Engine-Invarianten |
 | Smoke 400 | `node tests/smoke_sim.js 400` | zufällige Partien ohne Hänger |
 | Audit | `node scripts/balance/audit_text_engine_t265.js` | Kartentext gegen Engine |
-| Browser | `npm run ui-play` (Seeds 31337 und 1234), `tutorial-play`, `reset-play`, `layout-test`, `screens-test`, `libzoom-play`, `lan-play`, `funcs-play` | Oberfläche, Layout (6 Größen), 75 Ansichten, LAN, Funktionsdurchgang |
+| Browser | `npm run ui-play` (Seeds 31337 und 1234), `botseq-play`, `tutorial-play`, `reset-play`, `layout-test`, `screens-test`, `libzoom-play`, `lan-play`, `funcs-play` | Oberfläche, Layout (6 Größen), 75 Ansichten, LAN, Funktionsdurchgang |
 
 **Bei reinen Doku-Änderungen** (wie t286) genügen `npm test` und `verify.py`.
 
 **CI (seit t289):** Auf GitHub laufen bei jedem Push/PR auf `main` automatisch `npm test`, `verify.py`, Fuzz und Audit (`.github/workflows/ci.yml`, [`technik/CI.md`](technik/CI.md)). Das ersetzt die lokalen Browser-Gates und `smoke 400` nicht; ein roter Lauf auf der Actions-Seite des Repos ist vor dem nächsten Push zu beheben.
 
-**Letzter Gate-Lauf (17.11.2026, t286, Basis `54eee9ce` plus Doku-Änderungen):** `npm test` Exit 0 (131 PASS-Zeilen, 0 FAIL), `verify.py` Exit 0 (1.746 Vorderseiten 1024×1428, 0 ohne Motiv, Texte ≤ 120 Zeichen). Fuzz, Smoke, Audit und Browser-Gates wurden in t286 nicht neu gefahren (nur Doku geändert). **Letzter vollständiger Lauf mit allen Browser-Gates: t285 (`9a0f3e2d`, v0.6e).** Seitdem geändert: nur `MINE.png` (manuell, 14.11.).
+**Letzter Gate-Lauf (18.11.2026, t291, Version 0.610):** Grün:
+
+- `npm test` (62 Dateien)
+- `verify.py`
+- Fuzz 80
+- Smoke 400
+- Audit
+- `botseq-play`
+- `funcs-play`
+- `lan-play`
+- `tutorial-play`
+- `reset-play`
+- `libzoom-play`
+- `layout-test` (0 Befunde; der bekannte Tutorial-Hänger, im zweiten Versuch grün)
+- `screens-test` (0 Befunde)
+- `ui-play` Seeds 31337 und 1234, allein gefahren
+
+Unter starker Parallellast liefen die Browser-Gates mehrfach in Fristen. Ursache sind verzögerte Timer: siehe Audio-Schleife in Abschnitt 5 und `technik/BOT_SEQUENZ_T291.md`.
 
 **Technik-Hinweise:** Bei jeder Web-Änderung den Cache in `web/sw.js` hochzählen. Playwright-Browser müssen installiert sein (`npx playwright install chromium`). Lange Läufe unter `nohup` mit Fortschrittszeile je Schritt starten. Arbeit immer in einem frischen Klon (`git clone -c pack.useSparse=false`), nie im Arbeitsordner des Projektleiters.
 

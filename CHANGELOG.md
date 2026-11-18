@@ -2,6 +2,45 @@
 
 ## Unreleased
 
+**Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
+
+## 0.610 Alpha – 17.11.2026
+
+Kleiner Schritt nach 0.605 (= 0.6e, t291): Der Bot spielt seinen Zug Schritt für Schritt.
+
+- **Bot-Zug in Einzelschritten:**
+  - Der Bot führt eine Aktion aus, zeigt sie und denkt kurz nach. Danach plant er neu.
+  - Angezeigt wird jede Aktion im Ticker oben links mit Kartenbild. Gespielte Karte und Ziel leuchten auf.
+  - Die Denkpause schwankt je nach Tempo:
+    - langsam: 1,1–2 s
+    - normal: 0,6–1,4 s (Standard)
+    - schnell: 0,2–0,45 s
+  - Folgewahlen (Ziel, Feld) laufen kürzer. Der Regler heißt jetzt „Pause bei Folgewahl“.
+  - Zu Beginn deines Zuges gibt es kein langes Nachholen mehr. Das Protokoll enthält weiter alles.
+- **Reaktionsfenster:**
+  - Nach jeder abgeschlossenen Bot-Aktion prüft das Spiel, ob du einen Soforteinsatz aus deiner AP-Reserve legal spielen kannst. Die Prüfung läuft als Trockenlauf auf einer Kopie der Engine. Karten „nur im eigenen Zug“ und Karten ohne Ziel fallen weg.
+  - Gibt es einen, hält der Bot an und zeigt die Karten. Du kannst eine spielen, „Weiter“ wählen oder „In diesem Zug nicht mehr anhalten“.
+  - Die Engine-Fenster (Feindkontakt, SAM, Geistiger Vorsprung, taktische Fenster) bleiben wie bisher.
+- **Optionen** (Spielablauf und im Spiel):
+  - „Bot-Tempo“ (`dc_bot_tempo`)
+  - „Reaktionsfenster“ (`dc_bot_react`): immer anhalten, 5 s, nie
+  - Der Reset löscht beide.
+- **Robustheit:**
+  - Ein einziger Planer mit Token: Der Bot kann nicht doppelt ziehen.
+  - Der Bot pausiert, solange der Tab im Hintergrund ist, Optionen oder die Kartenansicht offen sind oder du gerade eine Karte angewählt hast.
+  - Partieende oder Verlassen mitten im Bot-Zug verwerfen Plan und Fenster.
+  - Ereignisse tragen eine laufende Nummer (`state.evN`). Vorher übersah die Oberfläche neue Ereignisse, sobald das Protokoll 80 Einträge erreicht hatte.
+  - Live-Meldungen tippen nach verstrichener Zeit statt mit einem Timer je Zeichen. Unter Last zogen sie sich vorher über Minuten.
+  - Eine Live-Meldung zeigt höchstens die letzten 6 Einträge. Der Bot wartet Meldungen nur in seinem eigenen Zug ab, im Zug des Menschen antwortet er sofort wie bisher.
+- **Unverändert:**
+  - Sim, Fuzz, Smoke und Balance laufen headless ohne Pausen. Der Hash aus 80 Partien mit fester Saat ist vorher und nachher identisch (40 : 40). Damit gibt es keine Balanceverschiebung.
+  - Tutorial, Hotseat und LAN.
+- **Neu:**
+  - `web/js/ai/bot-seq.js`
+  - Tests `tests/test_botseq_t291.js` (in `npm test`) und `tests/playwright_botseq_t291.mjs` (`npm run botseq-play`)
+  - Doku `docs/technik/BOT_SEQUENZ_T291.md`
+- `ui-play` läuft mit schnellem Bot-Tempo. Die Hilfe verweist auf `docs/current_state.md`. Cache `divcmd-alpha47a`.
+
 - **CI (t289):** GitHub Actions aktiv (`.github/workflows/ci.yml`): bei Push/PR auf `main` und manuell `npm test`, `verify.py`, Engine-Fuzz und Text-Engine-Audit. `package-lock.json` wird jetzt versioniert (`npm ci`). Die Vorlage `docs/technik/ci-workflow.yml` ist entfernt; Beschreibung in `docs/technik/CI.md`. Die Browser-Gates bleiben lokal. Kein Spielcode geändert.
 - **Doku (t286):** Vertical-Slice-Verfahren und zentrale Übersicht [`Division_Command/docs/current_state.md`](Division_Command/docs/current_state.md): 15 Slices (VS-01 bis VS-15) mit Status, Gates, offenen Punkten, priorisierten nächsten Schritten, „Zuletzt gemacht“ und Definition of Done. README(s), Docs-Index, Entwicklungs- und Archiv-Übersicht, Projektdokumentation §7/§8/§10 und die `STATUS_T*.md` verweisen darauf. Kein Code geändert, keine Versionsänderung.
 

@@ -14,7 +14,7 @@ Die Statusanalysen `entwicklung/STATUS_T258.md` bis `STATUS_T271.md` und die Bal
 
 | Dokument | Inhalt |
 |---|---|
-| [`Division_Command_Dokumentation.md`](Division_Command_Dokumentation.md) | Vollständige Projektdokumentation (Alpha 0.6e, Stand November 2026). |
+| [`Division_Command_Dokumentation.md`](Division_Command_Dokumentation.md) | Vollständige Projektdokumentation (Alpha 0.610, Stand November 2026). |
 | [`Division_Command_Dokumentation.pdf`](Division_Command_Dokumentation.pdf) | PDF-Fassung der Projektdokumentation. |
 
 ## Regeln – `regeln/`
@@ -124,6 +124,7 @@ Ideen, die nicht (vollständig) im Spiel stecken. Übersicht: [entwicklung/READM
 | Dokument | Inhalt |
 |---|---|
 | [CI.md](technik/CI.md) | GitHub-Actions-CI: Trigger, geprüfte Gates, was lokal bleibt. |
+| [BOT_SEQUENZ_T291.md](technik/BOT_SEQUENZ_T291.md) | Bot-Zug in Einzelschritten (Tempo, Denkpausen), Reaktionsfenster für Soforteinsätze, Einstellungen (t291). |
 | [TABLE_CAMERA.md](technik/TABLE_CAMERA.md) | 2,5D-Tischkamera: Einstellungen und CSS-Technik. |
 | [PORTRAIT_SYSTEM.md](technik/PORTRAIT_SYSTEM.md) | Porträtsystem für Offiziere und Ebenen. |
 | [CHOICE_WIRING.md](technik/CHOICE_WIRING.md) | Verdrahtung von Wahl-Karten und Doktrinen, Bot-Faustregel. |

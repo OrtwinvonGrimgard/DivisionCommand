@@ -1,6 +1,6 @@
 # Division Command – Vollständige Projektdokumentation
 
-**Version:** Alpha 0.6e  
+**Version:** Alpha 0.610  
 **Stand:** November 2026  
 **Repository:** DivisionCommand (OrtwinvonGrimgard)
 
@@ -158,7 +158,7 @@ Das spielbare Paket liegt unter `Division_Command/`. Werkzeuge, Tests und der Ka
 
 ---
 
-## 7. Aktueller Status (Alpha 0.6e)
+## 7. Aktueller Status (Alpha 0.610)
 
 > **Hinweis (t286):** Der lebende Stand (Vertical Slices, Status, nächste Schritte, Zuletzt gemacht) steht in [`current_state.md`](current_state.md). Die Liste unten ist eine Momentaufnahme aus der Zeit von 0.6a/0.6b und wird nicht mehr fortgeschrieben.
 
@@ -283,4 +283,4 @@ Division Command hat ein realistisch erreichbares Marktpotenzial in der Nische z
 ---
 
 **Ende der Dokumentation**  
-Diese Dokumentation fasst den Stand von Alpha 0.6e zusammen und dient als Einstieg für Entwickler, Playtester und Interessierte. Für detaillierte Regeltexte und Balancing-Daten siehe die genannten Markdown-Dateien im Repository.
+Diese Dokumentation fasst den Stand von Alpha 0.610 zusammen und dient als Einstieg für Entwickler, Playtester und Interessierte. Für detaillierte Regeltexte und Balancing-Daten siehe die genannten Markdown-Dateien im Repository.
