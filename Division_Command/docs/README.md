@@ -14,7 +14,7 @@ Die Statusanalysen `entwicklung/STATUS_T258.md` bis `STATUS_T271.md` und die Bal
 
 | Dokument | Inhalt |
 |---|---|
-| [`Division_Command_Dokumentation.md`](Division_Command_Dokumentation.md) | Vollständige Projektdokumentation (Alpha 0.610, Stand November 2026). |
+| [`Division_Command_Dokumentation.md`](Division_Command_Dokumentation.md) | Vollständige Projektdokumentation (Alpha 0.611, Stand November 2026). |
 | [`Division_Command_Dokumentation.pdf`](Division_Command_Dokumentation.pdf) | PDF-Fassung der Projektdokumentation. |
 
 ## Regeln – `regeln/`

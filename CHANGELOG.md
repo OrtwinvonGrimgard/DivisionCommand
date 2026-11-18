@@ -4,6 +4,19 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.611 Alpha – 18.11.2026
+
+Fix (+0,001, t296): Die Audio-Schleife am Spieltisch ist behoben.
+
+- **Ursache:** `stop()` in `audio-data.js` setzte `currentTime = 0` auch auf bereits pausierte Elemente. In Chromium löst das `seeked` und `canplay` aus; `index.html` ruft bei `canplay` `applyAudio` auf, das über `playTable` wieder `stop()` ruft. Ergebnis: etwa 33.000–38.000 Schreibzugriffe pro Sekunde auf `localStorage` (`dc_music`, `dc_vol`) am Tisch, die Timer liefen verspätet. Die Schleife gab es schon in 0.605 (= 0.6e).
+- **Fix:**
+  - `stop()` pausiert und setzt zurück nur bei Bedarf.
+  - `applyAudio` speichert die Audio-Einstellungen nur noch bei Änderung (`persistAudio`).
+  - `keepBgm` startet die Titelmusik am Tisch nicht mehr neu (das hatte die Schleife bisher verdeckt).
+- **Musik unverändert:** Menü- und Setup-Musik, Kampfstück am Tisch, Lautstärke und An/Aus werden wie zuvor gespeichert.
+- **Tests:** `test_audio_loop_t296.js` (in `npm test`) und `npm run audio-play` (zählt Schreibzugriffe am Tisch, höchstens 20 in 3 s; gemessen 0).
+- Cache `divcmd-alpha47b`. Bericht: `Division_Command/docs/technik/AUDIO_SCHLEIFE_T296.md`.
+
 ## 0.610 Alpha – 17.11.2026
 
 Kleiner Schritt nach 0.605 (= 0.6e, t291): Der Bot spielt seinen Zug Schritt für Schritt.
