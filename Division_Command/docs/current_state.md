@@ -331,7 +331,7 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 
 | Gate | Befehl | Zweck |
 |---|---|---|
-| Testsuite | `npm test` | 62 Testdateien (Regeln, Karten, UI-Logik, Server) |
+| Testsuite | `npm test` | 63 Testdateien (Regeln, Karten, UI-Logik, Server) |
 | Vorderseiten | `python3 scripts/graphics/verify.py` | 1024 × 1428, Texte, Motivpräsenz |
 | Fuzz 80 | `npm run fuzz` | Engine-Invarianten |
 | Smoke 400 | `node tests/smoke_sim.js 400` | zufällige Partien ohne Hänger |
