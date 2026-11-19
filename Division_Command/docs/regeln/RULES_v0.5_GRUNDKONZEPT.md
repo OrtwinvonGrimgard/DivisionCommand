@@ -249,7 +249,7 @@ Seit 0.619 zählen Doktrin-DEF-Boni echt. Pauschale „+1 DEF für alle eigenen 
 
 Für alle gilt §8.1 (Bonusverlust senkt die DEF, nie unter 1). Bollwerk (+1 DEF für alle) ist als bekannter Ausreißer im Balance-Gate geführt (`balance/BALANCE_GATE.md`).
 
-## 8.3 Etappensicherung heilt statt +1 DEF (verbindlich, t301 / 0.630)
+## 8.3 Etappensicherung heilt statt +1 DEF (verbindlich, t301 / 0.626)
 
 Kartentext: „Zu Beginn deines Zuges heilt eine beschädigte eigene Einheit, die im letzten Zug nicht angegriffen hat, 1.“ (Caldris, mit Rasten: „Schützen und ruhen“.)
 

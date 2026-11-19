@@ -1,6 +1,6 @@
 # Division Command
 
-Alpha **0.630** — zynisch-dunkles Sammelkartenspiel (Front, Support, Niemandsland).
+Alpha **0.626** — zynisch-dunkles Sammelkartenspiel (Front, Support, Niemandsland).
 
 Dies ist das Repository. Das spielbare Paket liegt in [`Division_Command/`](Division_Command/README.md) (starten mit `start.bat` / `start.sh`). Die vollständige Dokumentation beginnt in [`Division_Command/docs/README.md`](Division_Command/docs/README.md). Änderungen je Version: [`CHANGELOG.md`](CHANGELOG.md).
 

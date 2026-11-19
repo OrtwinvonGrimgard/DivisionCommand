@@ -4,6 +4,16 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.626 Alpha – 19.11.2026
+
+Etappensicherung neu gefasst (t301, Gewicht +0,002). Freigabe des Projektleiters: „Ändere beides“, davon zuerst nur dieser Teil („Push erstmal die Änderung“).
+
+- **Etappensicherung (Caldris):** „Zu Beginn deines Zuges heilt eine beschädigte eigene Einheit, die im letzten Zug nicht angegriffen hat, 1.“ Gewählt wird die mit dem größten Fehlbetrag, bei Gleichstand die erste von links (RULES §8.3). Vorher +1 DEF für alle eigenen Einheiten (seit 0.619 echte DEF) und ein nicht gedruckter Zusatz (+1 DEF im dichtesten eigenen Abschnitt im eigenen Zug), der entfällt. Kartentext, Kurztext, Kartenfläche neu gerendert, Tutorial-Text.
+- **Balance (Gate voll, gleiche Seeds):** Caldris Starter 62,5 → 49,9 %, Misch 64,3 → 47,2 %; Doktrin Etappensicherung 56,3 → 46,0 %. Ausnahme Caldris aus der Ausnahmeliste entfernt; Vergleichsstände neu. Neun Varianten gemessen, Bericht `docs/balance/BALANCE_T301.md`.
+- **Nicht enthalten:** Bot-Abschnittswahl (Flügel, Playtest-Befund B5). Messung: Der Bot gewinnt damit 76 % gegen den alten, aber das volle Gate wird rot (15 Fehler; Lyr/Vesper ~70 %, Namar/Rothain/Theryn ~35 %). Zurückgestellt bis zur Arbeit an den Operationsplänen.
+- **Tests:** neu `test_doctrine_etappen_t301.js`.
+- Cache `divcmd-alpha48a`.
+
 ## 0.624 Alpha – 18.11.2026
 
 Balance-Grobkorrektur nach der echten Doktrin-DEF und dauerhaftes Balance-Gate (t300, Gewicht +0,005: Doktrinen +0,002, Gate +0,003). Freigabe des Projektleiters für Vorschlag p2 aus `docs/balance/BALANCE_T298.md`.

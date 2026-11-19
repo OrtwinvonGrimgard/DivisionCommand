@@ -3,19 +3,6 @@
  "entries": [
   {
    "kind": "nation",
-   "id": "Caldris",
-   "modes": [
-    "starter",
-    "mixed"
-   ],
-   "min": 0.4,
-   "max": 0.68,
-   "reason": "Etappensicherung (+1 DEF für alle eigenen Einheiten) ist seit 0.619 echte DEF; die Doktrin hat keine andere Wirkung",
-   "target": "Etappensicherung neu fassen (z. B. +1 DEF nur in versorgten Abschnitten), Code + Messung, Ziel 45–55 %",
-   "since": "v0.624 (t300): Starter 62,5 %, Misch 64,3 % (0.619: 58,2 / 59,8 %)"
-  },
-  {
-   "kind": "nation",
    "id": "Merovan",
    "modes": [
     "mixed"
