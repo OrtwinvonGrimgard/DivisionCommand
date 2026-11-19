@@ -1655,6 +1655,9 @@
         return { ok: false, error: String(err.message || err) };
       } finally {
         if (this.state) this.state.seq = (this.state.seq || 0) + 1;
+        // t300: Einheiten, die ein Karteneffekt (Massen-/Opferschaden …) auf 0 DEF gebracht hat, sofort zerstören –
+        // vor der Neuberechnung, die sonst DEF wieder auf 1 klemmen würde. Nicht während eines gehaltenen Angriffs.
+        if (this.state && this.state.winner == null && !this.state.heldAttack) { try { this._reapDeadFront(); } catch (e) { /* Kontrolle darf Aktionen nicht brechen */ } }
         if (this.state && this.state.winner == null) { try { this._kwRecompute(); } catch (e) { /* Schlüsselwort-Neuberechnung darf Aktionen nicht brechen */ } try { this._cmAfterAction(); this._cmRecompute(); } catch (e) { /* CM-Neuberechnung darf Aktionen nicht brechen */ } }
         if (this._tacAfterAction) this._tacAfterAction();
         // t298: Lage-DEF (Doktrin, Flanke, Auren) in inst.def einbacken, damit Anzeige und Kampf übereinstimmen.
@@ -3276,6 +3279,24 @@
       return { count: count || 1, upto: upto };
     }
     /**
+     * t300: Zerstört alle Fronteinheiten, deren DEF durch Karteneffekte auf 0 gefallen ist.
+     * Schadenseffekte (DEAL_DAMAGE, SACRIFICE_INFANTRY_DAMAGE …) verringern nur die DEF; ohne diese Kontrolle blieb
+     * das Ziel bis zur Zugbeginn-Kontrolle mit 0 DEF stehen (RULES: Einheit mit 0 DEF ist zerstört).
+     * @returns {number} Anzahl zerstörter Einheiten
+     */
+    _reapDeadFront() {
+      if (!this.state || !Array.isArray(this.state.players)) return 0;
+      let n = 0;
+      this.state.players.forEach((pl) => {
+        this.frontList(pl).forEach((l) => {
+          if (!l || !l.inst || l.inst.def == null || !this._isDead(l.inst)) return;
+          const loc = this.findInst(l.inst.uid);
+          if (loc && loc.zone === 'front') { this._destroy(loc); n++; }
+        });
+      });
+      return n;
+    }
+    /**
      * Schließt einen Soforteinsatz nach der Zielwahl ab.
      * @param {number} pid
      * @param {object} pend
@@ -3292,6 +3313,7 @@
         this._fxRepeat = i > 0;
         try { this._resolveEffects(p, pend.card, tid); } finally { this._fxRepeat = false; }
       });
+      this._reapDeadFront(); // t300: durch Karteneffekte auf 0 DEF gefallene Einheiten sofort zerstören
       // MOVE_SLOTS may have re-opened a move-dest pending — keep card until destination chosen
       if (this.state.pending && this.state.pending.kind === 'move-dest') {
         this.state.pending.card = pend.card;
@@ -3758,7 +3780,13 @@
         const loc = this.findInst(targetUid);
         if (loc && this._hostileTargetBlocked(loc.inst) && loc.player.id !== p.id) {
           this._log(this.defOf(loc.inst).name + ' ist eingegraben — gezielter Schaden verpufft.');
-        } else if (loc) this._damage(loc.inst, Number(par.value || 1), { tag: par.tag }); // Verteidigung verringern
+        } else if (loc) {
+          this._damage(loc.inst, Number(par.value || 1), { tag: par.tag }); // Verteidigung verringern
+          // t300: Fällt die DEF auf 0, wird das Ziel sofort zerstört (vorher blieb es mit 0 DEF stehen und fiel erst bei
+          // der Kontrolle zu Zugbeginn – oder wurde von einer Neuberechnung wieder auf 1 gesetzt).
+          const dl = this.findInst(loc.inst.uid);
+          if (dl && dl.zone === 'front' && dl.inst.def != null && this._isDead(dl.inst)) this._destroy(dl);
+        }
       } else if (code === 'HEAL') {
         const v = Number(par.value || par.host || 1);
         if (par.all) {

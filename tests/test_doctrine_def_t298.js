@@ -140,10 +140,14 @@ const lastEvents = (eng, n) => (eng.state.events || []).slice(-(n || 6)).map((e)
 // 5) Bot-Partien: nach jeder Aktion stimmt die Anzeige-DEF mit der echten DEF überein (alle Quellen).
 {
   const w = L.loadGame({ quiet: true });
-  vm.runInNewContext(fs.readFileSync(path.join(L.WEB, 'js/ai/bot.js'), 'utf8'), { window: w, console: { log() {}, warn() {} }, Math, JSON, Object, Array, String, Number, Error });
+  // t300: Bot-Zufall je Partie gesät (vorher globales Math.random → Test nicht reproduzierbar).
+  const mb = (x) => () => { x |= 0; x = (x + 0x6D2B79F5) | 0; let t = Math.imul(x ^ (x >>> 15), 1 | x); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const R = { f: mb(1) }; const BotMath = Object.create(Math); BotMath.random = () => R.f();
+  vm.runInNewContext(fs.readFileSync(path.join(L.WEB, 'js/ai/bot.js'), 'utf8'), { window: w, console: { log() {}, warn() {} }, Math: BotMath, JSON, Object, Array, String, Number, Error });
   const Bot = w.DCBot, nations = Object.keys(w.DC_NATION_DECKS);
   let checks = 0, bad = 0, first = null;
   for (let g = 0; g < 24; g++) {
+    R.f = mb(g * 7919 + 1);
     const a = nations[g % 16], b = nations[(g * 5 + 3) % 16], d0 = w.DC_NATION_DECKS[a], d1 = w.DC_NATION_DECKS[b];
     const eng = new w.DCEngine.Engine(w.DC_CATALOG, { seed: 29800 + g });
     eng.createMatch({ seed: 29800 + g, mode: 'bot', name0: a, name1: b, deck0: d0.cards.slice(), deck1: d1.cards.slice(), doctrine0: d0.doktrinen.slice(), doctrine1: d1.doktrinen.slice() });
@@ -166,6 +170,24 @@ const lastEvents = (eng, n) => (eng.state.events || []).slice(-(n || 6)).map((e)
   assert.ok(checks > 5000, 'genug Prüfungen: ' + checks);
   assert.equal(bad, 0, 'Anzeige-DEF ≠ echte DEF oder tote Einheit auf dem Feld: ' + first);
   console.log('ok t298 Invariante Anzeige = echte DEF in 24 Bot-Partien (' + checks + ' Prüfungen)');
+}
+
+// 5b) t300: Schaden aus Soforteinsätzen zerstört sofort (vorher blieb das Ziel mit 0 DEF auf dem Feld).
+{
+  const one = (cardId, target) => {
+    const { eng } = boot(0);
+    const u = L.put(eng, 1, INF, 'C', 0); u.def = 1;
+    const c = eng.instFromId(cardId, 0); eng.player(0).hand.push(c); eng.player(0).ap = 9;
+    const r = eng.dispatch({ type: 'PLAY', player: 0, uid: c.uid });
+    assert.ok(r && r.ok, cardId + ' spielbar: ' + JSON.stringify(r));
+    if (eng.state.pending && target) eng.dispatch({ type: 'RESOLVE_PENDING', player: 0, target: u.uid });
+    return { eng, u };
+  };
+  let t = one('dc_np_ossaria_teurer_meter', true);
+  assert.equal(t.eng.findInst(t.u.uid), null, 'DEAL_DAMAGE 1 auf DEF 1 zerstört sofort');
+  t = one('dc_b_feuerwalze_172', false);
+  assert.equal(t.eng.findInst(t.u.uid), null, 'MASS_DAMAGE 1 auf DEF 1 zerstört sofort');
+  console.log('ok t300 Soforteinsatz-Schaden zerstört Einheiten mit 0 DEF sofort');
 }
 
 // 6) Überlast: Playtest Eintrag 53/54 – Lauernde Schützen mit DEF 1 fallen am eigenen Zugende (vorher blieb DEF 0).
