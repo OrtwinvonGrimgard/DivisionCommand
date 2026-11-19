@@ -4,10 +4,10 @@
 
 | | |
 |---|---|
-| **Stand dieser Übersicht** | 18.11.2026 (Berlin), nach t300 (Balance-Grobkorrektur p2 und Balance-Gate; Version 0.624); Verfahren eingeführt in t286 |
-| **Version** | Alpha **0.624** (`Division_Command/VERSION`), Tag `v0.624` (18.11.2026, t300); davor `v0.619` (18.11.2026, t298), davor `v0.611` (18.11.2026, t296), davor `v0.610` = `b87e3858` (17.11.2026, t291); vorher `v0.6e` = `9a0f3e2d` (13.11.2026) |
-| **Versionsschema** | Seit 0.610. Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. 0.610 steht für den Umbau des Bot-Zugs (t291), 0.611 für einen Fix (Audio-Schleife, t296: +0,001), 0.619 für t298 (Doktrin-DEF echt +0,005, Überlast +0,002, Kampftext +0,001), 0.624 für t300 (Doktrin-Grobkorrektur +0,002, Balance-Gate +0,003). |
-| **Basis-Commit dieser Übersicht** | Tag `v0.624` auf `main` (t300; davor `v0.619` = t298, `v0.611` = t296, davor `v0.610` = t291, davor `54eee9ce` = `v0.6e` plus Minen-Token und t286/t289, siehe [Zuletzt gemacht](#4-zuletzt-gemacht)) |
+| **Stand dieser Übersicht** | 19.11.2026 (Berlin), nach t301 (Etappensicherung neu gefasst; Version 0.626); Verfahren eingeführt in t286 |
+| **Version** | Alpha **0.626** (`Division_Command/VERSION`), Tag `v0.626` (19.11.2026, t301); davor `v0.624` (18.11.2026, t300), davor `v0.619` (18.11.2026, t298), davor `v0.611` (18.11.2026, t296), davor `v0.610` = `b87e3858` (17.11.2026, t291); vorher `v0.6e` = `9a0f3e2d` (13.11.2026) |
+| **Versionsschema** | Seit 0.610. Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. 0.610 steht für den Umbau des Bot-Zugs (t291), 0.611 für einen Fix (Audio-Schleife, t296: +0,001), 0.619 für t298 (Doktrin-DEF echt +0,005, Überlast +0,002, Kampftext +0,001), 0.624 für t300 (Doktrin-Grobkorrektur +0,002, Balance-Gate +0,003), 0.626 für t301 (Etappensicherung +0,002). |
+| **Basis-Commit dieser Übersicht** | Tag `v0.626` auf `main` (t301; davor `v0.624` = t300, `v0.619` = t298, `v0.611` = t296, davor `v0.610` = t291, davor `54eee9ce` = `v0.6e` plus Minen-Token und t286/t289, siehe [Zuletzt gemacht](#4-zuletzt-gemacht)) |
 | **Service-Worker-Cache** | `divcmd-alpha47d` (bei jeder Web-Änderung hochzählen) |
 | **Katalog** | 1.746 Karten-IDs, 16 Nationen, 36 Doktrinen; 1.746 Vorderseiten (Nachzählung 17.11.2026 über `scripts/nation_pools/load_game.js`) |
 | **Letzte dokumentierte Prozentwertung** | 67 % bis Early Access, Kernspiel 77 % (`entwicklung/STATUS_T271.md`, Stand t271). Seitdem **nicht neu bewertet**; die Bereichsgewichte stehen dort. |
@@ -53,7 +53,7 @@ Entscheidungen des Projektleiters. Sie stehen hier gebündelt, damit sie nicht i
 | [VS-02](#vs-02-kartenbestand--nationenpools) | Kartenbestand & Nationenpools | fertig | 1.746 Karten, 16 × 100 Nationenkarten, Starter- und Mischdecks, Deckbau 60 + 2. |
 | [VS-03](#vs-03-effekt-verdrahtung--kartentext--engine) | Effekt-Verdrahtung & Kartentext = Engine | in Arbeit | Audit 0 ungelesene Parameter; Doktrin-DEF wirkt seit t298 echt, Überlast zerstört wieder; Stubs und Sonderfälle bleiben (Brummbär, `MINE_TOKEN`). |
 | [VS-04](#vs-04-bot-ki) | Bot-KI | in Arbeit | Spielt seinen Zug Aktion für Aktion mit Denkpausen und hält für Reaktionen an (t291); nutzt aktive Doktrin-Fähigkeiten; Stellungswechsel aus, keine Schwierigkeitsstufen; spielt laut Playtest fast nur im Zentrum. |
-| [VS-05](#vs-05-balance) | Balance | in Arbeit | Ziel 50 %; seit 0.624 Nationen 42–64 % (Caldris oben, Ausnahmeliste), Balance-Gate misst bei jeder Änderung (CI: Schnellvariante). |
+| [VS-05](#vs-05-balance) | Balance | in Arbeit | Ziel 50 %; seit 0.626 Nationen 44–60 % (Caldris 49,9/47,2 %), Ausnahmeliste nur noch Merovan Misch, Bollwerk, Scheinschwerpunkt; Balance-Gate misst bei jeder Änderung (CI: Schnellvariante). |
 | [VS-06](#vs-06-lore--nationentiefe) | Lore & Nationentiefe | fertig | 16 Hauptdokumente je Nation, Kurzprofile, Aufsätze; Einbindung ins Spiel schmal. |
 | [VS-07](#vs-07-oberfläche-menüs-tisch-bibliothek) | Oberfläche: Menüs, Tisch, Bibliothek | in Arbeit | Designsystem t280, Tisch-HUD, Bibliothek, Bot-Ticker und Reaktionsfenster (t291), Audio-Schleife am Tisch behoben (t296); Playtest: Rückmeldung bei Aktionen zu schwach; 2,5D-Ansicht nicht auf Zielgeräten geprüft. |
 | [VS-08](#vs-08-kartenfaces--grafik-porträts) | Kartenfaces & Grafik, Porträts | in Arbeit | Vorderseiten komplett; vorläufige Motive und Porträtlücken. |
@@ -121,6 +121,7 @@ Je Slice: **Umfang** (Ende zu Ende, von Daten über Engine bis Oberfläche), **S
 
 - **Umfang:** Bot-gegen-Bot-Simulationen für Nationen (Starter- und Mischdecks) und Doktrinen, Abstimmung der Werte.
 - **Status: in Arbeit.** Die Zahlen unten sind Bot-Messungen (Rauschen laut Bericht etwa ±1,4 bis ±2 Punkte je Nation). **Menschliche Daten gibt es nicht** (siehe VS-13).
+- **Stand t301 (0.626, Balance-Gate voll, 57.024 Partien; [`balance/BALANCE_T301.md`](balance/BALANCE_T301.md)):** Etappensicherung heilt zu Zugbeginn 1 an der ruhenden beschädigten Einheit mit dem größten Fehlbetrag statt +1 DEF für alle; ein nicht gedruckter Abschnittsbonus ist entfallen (RULES §8.3). Caldris 62,5 → 49,9 % (Starter), 64,3 → 47,2 % (Misch); Etappensicherung 56,3 → 46,0 %. Nationen-SD Starter 3,15, Misch 4,64; Spanne 46,1–57,6 % bzw. 43,7–60,5 %. Caldris-Ausnahme entfernt. **Zurückgestellt:** Bot-Flügelspiel (Playtest B5) macht das Gate rot (15 Fehler: Lyr/Vesper ~70 %, Namar/Rothain/Theryn ~35 %), weil die Balance auf einen Mitte-Bot abgestimmt ist; weiter mit den Operationsplänen (BALANCE_T301 §4).
 - **Stand t300 (0.624, Balance-Gate voll, 57.024 Partien; [`balance/BALANCE_T300.md`](balance/BALANCE_T300.md)):** Vorschlag p2 umgesetzt (Linienkrieg nur bei drei im Abschnitt, Auffangen ohne Grundbonus, Gepanzerter Fuß nur ausgerüstet, Entsatz hält nur ATK). Starter: SD 7,33 → 4,59, Spanne 44,8 % (Steinmark) bis 62,5 % (Caldris), Startspieler 48,9 %. Misch: SD 9,37 → 6,08, Spanne 42,1 % (Lyr) bis 64,3 % (Caldris), Startspieler 57,0 %. Sahr 74,0 → 56,3 % (Misch). Doktrinen: Linienkrieg 65,4 → 50,4 %, Entsatz 63,9 → 51,5 %, Auffangen 59,5 → 48,9 %, Gepanzerter Fuß 60,2 → 52,9 %; außerhalb 40–60 % sonst nur Bollwerk 63,6 % und Scheinschwerpunkt 63,7 % (Ausnahmeliste). Vergleichswerte 0.619 mit derselben Harness und denselben Seeds gemessen; seit t300 ist die Messung exakt wiederholbar (Bot-Zufall geseedet). Zusätzlich behoben: Schaden aus Soforteinsätzen zerstört Einheiten mit 0 DEF sofort (Altfehler, von der t298-Invariante gefunden).
 - **Balance-Gate (seit t300):** `npm run balance-gate` (voll, lokal, etwa 7 min auf 8 Kernen, unter Last bis 12 min) und `npm run balance-gate:quick` (CI-Job `balance-quick`, etwa 3 min). Band 40–60 %, Ausnahmeliste `scripts/balance/balance_allowlist.json`, Vergleichsstand `scripts/balance/baseline/`. Beschreibung: [`balance/BALANCE_GATE.md`](balance/BALANCE_GATE.md).
 - **Stand t298 (0.619, je 10.080 Partien je Modus, gleiche Seeds vorher/nachher; [`balance/BALANCE_T298.md`](balance/BALANCE_T298.md)):** Durch die echte Doktrin-DEF steigt die Streuung stark. Starter: SD 1,42 → 7,37, Spanne 42,1 % (Dargan) bis 65,1 % (Sahr), Startspieler 48,5 → 49,7 %. Misch: SD 2,08 → 9,52, Spanne 38,4 % (Averon) bis **75,2 % (Sahr)**, Startspieler 56,9 → 57,6 %. Doktrinen: Linienkrieg 45,2 → 64,7 %, Bollwerk 65,1 %, Entsatz 63,4 %, Auffangen 61,1 %. **Werte nicht geändert**; Vorschlag p2 (Linienkrieg, Auffangen, Gepanzerter Fuß, Entsatz) senkt Misch-SD auf 6,2, Caldris (Etappensicherung) braucht eine Codeänderung.
@@ -129,11 +130,12 @@ Je Slice: **Umfang** (Ende zu Ende, von Daten über Engine bis Oberfläche), **S
   - Mischdecks: Spanne 44,0 % (Lyr) bis 54,1 % (Theryn), Startspieler 57,1 % (bewusst, siehe Festlegungen).
   - Doktrinen im Spiegelmatch: Bollwerk 50,6 % (vorher 42,6 %), Sicherer Nachschub 48,0 %, Normverband 44,1 %; Spanne von 44,1 % bis Scheinschwerpunkt 55,3 %.
 - **Code/Werkzeuge:** `scripts/balance/balance_gate.js` mit `sim_nations_t298.js`, `sim_doctrines_t298.js`, `balance_allowlist.json`, `baseline/`; ältere Skripte unter `scripts/balance/` (`sim_t255.mjs`, `sim_first_player.mjs` u. a.), `doctrine_runtime.js` (Doktrin-Parameter), Starterdecks in `web/js/data/decks.js`.
-- **Docs:** `balance/BALANCE_T300.md` (aktuell), `balance/BALANCE_GATE.md`, `BALANCE_T298.md`, `BALANCE_T283.md`, `BALANCE_T284.md`, `BALANCE_T285.md`, ältere Berichte T237–T255, `DOKTRIN_BALANCE.md`, `STARTSPIELER_T257.md`, `regeln/BALANCE_T268.md`.
+- **Docs:** `balance/BALANCE_T301.md` (aktuell), `balance/BALANCE_T300.md`, `balance/BALANCE_GATE.md`, `BALANCE_T298.md`, `BALANCE_T283.md`, `BALANCE_T284.md`, `BALANCE_T285.md`, ältere Berichte T237–T255, `DOKTRIN_BALANCE.md`, `STARTSPIELER_T257.md`, `regeln/BALANCE_T268.md`.
 - **Gates:** `npm run balance-gate` nach jeder Karten- oder Regeländerung und jeder Erweiterung (Pflicht), `test_balance_t231/237/238/240` (Wertband, Pools), `test_balance_t300` (p2-Werte, Gate-Logik, Ausnahmeliste).
 - **Offen:**
   - Normverband (Nationsdoktrin Steinmark) bei etwa 44 %; eine Aufwertung machte Steinmark zu stark (55,7 bzw. 59,0 %, t284) und wurde verworfen.
-  - **Etappensicherung neu fassen** (Caldris 62,5 / 64,3 %): einzige Wirkung ist +1 DEF für alle; braucht Code (z. B. nur in versorgten Abschnitten). Ausnahmeliste bis max. 68 %.
+  - ~~Etappensicherung neu fassen~~ erledigt in 0.626 (t301): Caldris 49,9 / 47,2 %, Ausnahme entfernt.
+  - **Bot-Flügelspiel** (Playtest B5): entwickelt, aber zurückgestellt; mit ihm wird das Gate rot (15 Fehler), weil Verteilte Stellung/Scheinschwerpunkt gewinnen und Ballungs-Doktrinen verlieren. Nachbalancierung zusammen mit den Operationsplänen (BALANCE_T301 §4).
   - **Bollwerk** (63,6 %) und **Scheinschwerpunkt** (63,7 %): DEF zählt seit 0.619 echt; Ausnahmeliste bis 66 %.
   - **Merovan** Misch 60,1 % (Ausnahmeliste bis 63 %), Ursache nicht untersucht.
   - **Schwache Nationen:** Lyr 42,1 %, Namar 43,3 %, Ossaria 44,3 %, Dargan 44,6 % (Misch), Steinmark 44,8 % (Starter); Doktrinen Blitzkrieg 41,2 %, Abriegeln 42,0 %, Normverband 43,1 %, Auswertung 44,9 % (alle im Band, aber unter 45 %).
@@ -202,7 +204,7 @@ Je Slice: **Umfang** (Ende zu Ende, von Daten über Engine bis Oberfläche), **S
 ### VS-12 Tests, CI & Repo-Werkzeuge
 
 - **Umfang:** Testsuite, Browser-Gates, Fuzz, Smoke, Prüfskripte, CI, Repo-Größe, Build.
-- **Status: in Arbeit.** `npm test` umfasst 65 Testdateien (`package.json`) und ist am 18.11.2026 auf dem t300-Stand (0.624) grün (siehe [Gates](#8-gates-und-befehle)). **CI ist seit t289 aktiv** (GitHub Actions, `.github/workflows/ci.yml`, Beschreibung in [`technik/CI.md`](technik/CI.md)): bei Push/PR auf `main` und manuell laufen `npm test`, `verify.py`, `npm run fuzz` und das Text-Engine-Audit, seit t300 parallel der Job `balance-quick` (Balance-Gate in kleiner Stichprobe). Die Browser-Gates laufen weiter nur lokal.
+- **Status: in Arbeit.** `npm test` umfasst 66 Testdateien (`package.json`) und ist am 19.11.2026 auf dem t301-Stand (0.626) grün (siehe [Gates](#8-gates-und-befehle)). **CI ist seit t289 aktiv** (GitHub Actions, `.github/workflows/ci.yml`, Beschreibung in [`technik/CI.md`](technik/CI.md)): bei Push/PR auf `main` und manuell laufen `npm test`, `verify.py`, `npm run fuzz` und das Text-Engine-Audit, seit t300 parallel der Job `balance-quick` (Balance-Gate in kleiner Stichprobe). Die Browser-Gates laufen weiter nur lokal.
 - **Code:** `tests/`, `scripts/`, `package.json`, `package-lock.json`, `.github/workflows/ci.yml`.
 - **Docs:** `technik/CI.md`, `technik/UI_TEST_T256.md`, `technik/REPO_GROESSE_LFS_T283.md`, `technik/PLAYTEST_LOGS.md`.
 - **Offen:**
@@ -243,6 +245,7 @@ Quelle: Git-Log (`git log`), `CHANGELOG.md` und die Berichte unter `balance/` un
 
 | Datum | Version / Commit | Inhalt |
 |---|---|---|
+| 19.11.2026 | **0.626** (t301, Tag `v0.626`) | **Etappensicherung neu gefasst:** heilt zu Zugbeginn 1 an der ruhenden beschädigten Einheit mit größtem Fehlbetrag statt +1 DEF für alle (Text, Kurztext, Fläche, Regel §8.3, Tutorial). Caldris 62,5/64,3 → 49,9/47,2 %, Ausnahme entfernt. Bot-Flügelspiel gemessen, aber zurückgestellt (Gate rot). [`balance/BALANCE_T301.md`](balance/BALANCE_T301.md), Test `test_doctrine_etappen_t301.js`. |
 | 18.11.2026 | **0.624** (t300, Tag `v0.624`) | **Balance-Grobkorrektur p2 und Balance-Gate:** Linienkrieg +1 DEF nur bei drei eigenen im Abschnitt, Auffangen ohne Grundbonus, Gepanzerter Fuß nur ausgerüstet +1 ATK/+1 DEF, Entsatz hält nur +1 ATK (Texte, Kurztexte, 4 Flächen, Regel §8.2). Nationen-SD Misch 9,37 → 6,08, Sahr 74,0 → 56,3 %. Neues Pflicht-Gate `npm run balance-gate` (Band 40–60 %, Ausnahmeliste, Vergleichsstand) und CI-Job `balance-quick`. [`balance/BALANCE_T300.md`](balance/BALANCE_T300.md), [`balance/BALANCE_GATE.md`](balance/BALANCE_GATE.md), Test `test_balance_t300.js`. |
 | 18.11.2026 | **0.619** (t298, Tag `v0.619`) | **Doktrin-DEF echt, Überlast, Kampftext (aus Playtest t297):** Alle bedingten/passiven DEF-Boni waren nur Anzeige (Parlamentsbote zeigte 2/4 und starb an 2 Schaden); jetzt Abgleich nach jeder Aktion und vor jedem Schaden, Bonusverlust nie unter 1 (Regel §8.1). `FLANK_DEF`/`AURA_FRONT_DEF` nicht mehr doppelt. Überlast zerstört wieder (3 stille `_destroy`-Abbrüche). Kampftext „erhält N“ nur bei echtem Gegenschlag. Balance verschoben (Misch 38–75 %), nicht nachjustiert, Vorschlag in [`balance/BALANCE_T298.md`](balance/BALANCE_T298.md). Test `test_doctrine_def_t298.js`, Harness `scripts/balance/*_t298.js`. |
 | 18.11.2026 | **0.611** (t296, Tag `v0.611`) | **Audio-Schleife am Tisch behoben (Fix, +0,001):** `stop()` in `audio-data.js` setzt `currentTime` nur noch, wenn nötig (sonst `seeked`/`canplay` → `applyAudio` → `playTable` → `stop()` in Endlosschleife); `applyAudio` speichert `dc_music`/`dc_vol` nur noch bei Änderung (`persistAudio`); `keepBgm` startet die Titelmusik am Tisch nicht mehr (das hatte die Schleife bisher verdeckt). Gemessen im Headless-Chromium am Tisch: vorher etwa 33.000–38.000 Schreibzugriffe pro Sekunde (auch schon in `v0.6e`), nachher 0. Neue Tests `test_audio_loop_t296.js` (`npm test`) und `audio-play`. Siehe [`technik/AUDIO_SCHLEIFE_T296.md`](technik/AUDIO_SCHLEIFE_T296.md). |
@@ -273,7 +276,7 @@ Quelle: Git-Log (`git log`), `CHANGELOG.md` und die Berichte unter `balance/` un
 
 | Punkt | Slice | Was fehlt | Wer |
 |---|---|---|---|
-| Etappensicherung neu fassen (Caldris 64 %), Bollwerk/Scheinschwerpunkt | VS-05 | Entscheidung über Richtung (Vorschläge in `BALANCE_T300.md` §4). | Projektleiter |
+| Bollwerk/Scheinschwerpunkt; Bot-Flügelspiel mit Nachbalancierung (Lyr, Vesper, Namar, Rothain, Sahr, Theryn) | VS-05/VS-04 | Richtung bei den Operationsplänen klären (`BALANCE_T300.md` §4, `BALANCE_T301.md` §4). Etappensicherung erledigt (0.626). | Projektleiter |
 | Überschuss für 1 AP | VS-05/VS-04 | Regeländerung, braucht Entscheidung. | Projektleiter |
 | KI-Stellungswechsel einschalten | VS-04/VS-05 | Eigene Balance-Runde nötig (Sahr, Vesper, Merovan, Lyr); Entscheidung, ob gewollt. | Projektleiter |
 | Git LFS / Repo-Größe | VS-12 | Plan steht, braucht Freigabe (`technik/REPO_GROESSE_LFS_T283.md`). | Projektleiter |
@@ -324,14 +327,14 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 
 | Prio | Schritt | Slice | Anmerkung |
 |---|---|---|---|
-| 1 | **Etappensicherung** neu fassen, **Bollwerk** und **Scheinschwerpunkt** prüfen, Merovan und schwache Nationen (Lyr, Dargan, Averon) nachziehen | VS-05 | Ausnahmeliste abbauen; jede Änderung mit `npm run balance-gate`. |
+| 1 | **Bollwerk** und **Scheinschwerpunkt** prüfen, Bot-Flügelspiel mit Nachbalancierung (Operationspläne), Merovan und schwache Nationen (Lyr, Dargan, Averon) nachziehen | VS-05 | Ausnahmeliste abbauen; jede Änderung mit `npm run balance-gate`. |
 | 1 | **Menschlicher Playtest** fortsetzen (Partien mit Protokoll, Auswertung) | VS-13 | Erste Partien 18.11. (t297); Reaktionsfenster praktisch ungetestet. |
 | 2 | Bot-Flankenspiel, Aktions-Rückmeldung am Tisch, Protokoll-Schema 2 | VS-04, VS-07, VS-13 | Restbefunde t297. |
 | 1 | **LAN mit zwei Rechnern** spielen, dazu kurze LAN-Doku | VS-11 | Seit t271 offen. |
 | 1 | Bot-Zug in Einzelschritten (t291) **von Hand gegenspielen**: Tempo und Reaktionsfenster bewerten | VS-04, VS-07, VS-13 | Standardwerte sind Annahmen. |
 | 2 | Entscheidung zu **KI-Stellungswechsel** und anschließende Balance-Runde (Sahr, Vesper, Merovan, Lyr) | VS-04, VS-05 | `BALANCE_T285.md` §3. |
 | 2 | **Überschuss 1 AP** entscheiden; **Normverband** (≈ 44 %) lösen, ohne Steinmark zu überdrehen | VS-05, VS-03 | Eigene kleine Runde. |
-| 2 | **EXE bauen** und auf einem sauberen Windows-Rechner starten; **PDF** auf Stand 0.624 bringen | VS-14 | PDF trägt noch 0.6b. |
+| 2 | **EXE bauen** und auf einem sauberen Windows-Rechner starten; **PDF** auf Stand 0.626 bringen | VS-14 | PDF trägt noch 0.6b. |
 | 3 | Porträts vervollständigen; vorläufige Motive neu zählen und ersetzen | VS-08 | 650 laut t258. |
 | 3 | Brummbär-Stub, `MINE_TOKEN`, `CM`-Fehlalarme im Prüfskript | VS-03 | Kleinschritte. |
 | 3 | 24 Zwillingsgruppen auch über Werte trennen | VS-02 | Nur Schlüsselwörter trennen sie heute. |
@@ -357,10 +360,10 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 
 **CI (seit t289):** Auf GitHub laufen bei jedem Push/PR auf `main` automatisch `npm test`, `verify.py`, Fuzz und Audit (`.github/workflows/ci.yml`, [`technik/CI.md`](technik/CI.md)). Das ersetzt die lokalen Browser-Gates und `smoke 400` nicht; ein roter Lauf auf der Actions-Seite des Repos ist vor dem nächsten Push zu beheben.
 
-**Letzter Gate-Lauf (18.11.2026, t300, Version 0.624):** Grün:
+**Letzter Gate-Lauf (19.11.2026, t301, Version 0.626):** Grün:
 
-- `npm test` (65 Dateien)
-- `balance-gate` voll (0 Fehler, 5 Warnungen aus 4 Ausnahme-Einträgen) und `balance-gate:quick` (grün, zweimal identisch)
+- `npm test` (66 Dateien)
+- `balance-gate` voll (0 Fehler, 3 Warnungen aus 3 Ausnahme-Einträgen) und `balance-gate:quick` (grün)
 - `audio-play` (t296: 0 Schreibzugriffe in 3 s am Tisch)
 - `verify.py`
 - Fuzz 80

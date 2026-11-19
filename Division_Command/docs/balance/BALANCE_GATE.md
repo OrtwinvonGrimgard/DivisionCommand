@@ -53,13 +53,12 @@ node scripts/balance/balance_gate.js --mode full --from scripts/balance/out/bala
 
 Weitere Optionen (`--jobs`, `--baseline`, `--out`) im Kopf von `scripts/balance/balance_gate.js`. Die Harness-Skripte (`sim_nations_t298.js`, `sim_doctrines_t298.js`) lassen sich weiter einzeln aufrufen; `SIM_PATCH` misst Parametervorschläge ohne Codeänderung.
 
-## Aktuelle Ausnahmen (Stand 0.624)
+## Aktuelle Ausnahmen (Stand 0.626)
 
-| Eintrag | Messwert 0.624 | erlaubt bis | Grund | Ziel |
+| Eintrag | Messwert 0.626 | erlaubt bis | Grund | Ziel |
 |---|---|---|---|---|
-| Caldris (Starter, Misch) | 62,5 / 64,3 % | 68 % | Etappensicherung: +1 DEF für alle, sonst keine Wirkung | Doktrin neu fassen, 45–55 % |
-| Merovan (Misch) | 60,1 % | 63 % | Mischpool legt nach t300 zu, Ursache offen | Poolkarten auswerten, ≤ 57 % |
-| Bollwerk | 63,6 % | 66 % | DEF-Bonus seit 0.619 echt, +1 ATK ab 6 DEF aus t285 | ATK-Zusatz zurücknehmen o. Ä., 45–55 % |
+| Merovan (Misch) | 60,5 % | 63 % | Mischpool legt nach t300 zu, Ursache offen | Poolkarten auswerten, ≤ 57 % |
+| Bollwerk | 63,1 % | 66 % | DEF-Bonus seit 0.619 echt, +1 ATK ab 6 DEF aus t285 | ATK-Zusatz zurücknehmen o. Ä., 45–55 % |
 | Scheinschwerpunkt | 63,7 % | 66 % | +1 ATK/+1 DEF, DEF seit 0.619 echt | nur ATK oder nur DEF, 45–55 % |
 
-Blitzkrieg (41,2 %) und Auswertung (44,9 %) liegen im Band und brauchen keinen Eintrag; der Bericht führt sie als „beobachten“.
+Caldris ist seit 0.626 (Etappensicherung heilt statt +1 DEF) bei 49,9 / 47,2 % und ohne Eintrag. Blitzkrieg (41,6 %) und Auswertung (44,6 %) liegen im Band und brauchen keinen Eintrag; der Bericht führt sie als „beobachten“.
