@@ -60,7 +60,7 @@
   "keywords": []
  },
  "dc_dok_etappensicherung": {
-  "kurz": "Eigene Einheiten haben +1 DEF. Die Etappe hält — ohne automatische Versorgungsheilung.",
+  "kurz": "Zu Beginn deines Zuges heilt eine beschädigte eigene Einheit, die im letzten Zug nicht angegriffen hat, 1.",
   "gekuerzt": false,
   "keywords": []
  },

@@ -300,7 +300,7 @@
       focus: function (ctx) { return [slotSel(ctx.u.vet), '#ap0']; },
       onLeave: function (ctx) { ctx.botEndAllowed = true; } },
     { id: 'doctrines', chapter: 4, kind: 'info', title: 'Doktrinen',
-      text: 'Jedes Deck führt <b>zwei Doktrinen</b>. Sie wirken immer und kosten nichts. <b>Zielangriff</b>: +2 ATK gegen beschädigte Feinde. <b>Etappensicherung</b>: +1 DEF. Dazu je ein Doktrin-Ziel für +1 SP.',
+      text: 'Jedes Deck führt <b>zwei Doktrinen</b>. Sie wirken immer und kosten nichts. <b>Zielangriff</b>: +2 ATK gegen beschädigte Feinde. <b>Etappensicherung</b>: Zu Zugbeginn heilt eine beschädigte Einheit, die nicht angegriffen hat, 1. Dazu je ein Doktrin-Ziel für +1 SP.',
       focus: function () { return ['#my-doctrine']; },
       ready: function (eng) { return eng.state.active === 0 && eng.state.turn >= 3 && !eng.state.pending; } },
     { id: 'support', chapter: 4, kind: 'action', title: 'Unterstützung',

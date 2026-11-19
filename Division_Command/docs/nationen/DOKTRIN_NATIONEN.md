@@ -21,7 +21,7 @@ Die Doktrin trägt den Staat.
 | **Merovan** | Weg | Verlegung, Ausharren | Schieben, und halten wenn der Weg zu ist. |
 | **Lyr** | Eid | Lauer (statt Engpass), Verteilte Stellung | Auflauern am Pass, allein oder zusammen. |
 | **Ossaria** | Tote | Abnutzung, Gepanzerter Fuß | Verlust wird zur Deckung, Ausrüstung macht härter. |
-| **Caldris** | Fürsorge | Etappensicherung, Rasten (statt Erhaltung) | Abschnitt schützen, wer ruht schlägt danach. |
+| **Caldris** | Fürsorge | Etappensicherung, Rasten (statt Erhaltung) | Wer ruht, wird versorgt (Etappensicherung heilt, t301) und schlägt danach härter (Rasten). |
 | **Karsk** | Körper | Stoßtrupp, Weiterkämpfen | Der eine Stoß, und weitermachen wenn es blutet. |
 | **Orthea** | Erkenntnis | Punktfeuer, Lokalisierung (statt Zielaufklärung) | Präzision und Aufdecken. |
 | **Namar** | Häfen | Marsch aus dem Vollen, Entsatz | Nachschub im Abschnitt, und in den angegriffenen Abschnitt rücken. |

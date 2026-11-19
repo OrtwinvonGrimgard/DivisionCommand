@@ -256,20 +256,9 @@
         if (p.sturdy_atk && dv >= Number(p.sturdy_min_def || 5)) atk += Number(p.sturdy_atk);
       }
 
-      // ETAPPENSICHERUNG base DEF
-      // t301 undamaged_only: nur unbeschädigte Einheiten (DEF = Höchst-DEF ohne Lage-DEF). Der erste Treffer kostet
-      // den Bonus (RULES §8.1: nie unter 1), Heilen auf volle DEF bringt ihn zurück.
-      // t301 not_outnumbered: nur in Abschnitten ohne gegnerische Überzahl (eigene ≥ gegnerische Einheiten).
+      // ETAPPENSICHERUNG base DEF (bis t300 live: +1 für alle; seit t301 heilt die Doktrin stattdessen, base_def 0)
       p = dokParam(this, owner, 'ETAPPENSICHERUNG');
-      if (p && p.base_def) {
-        var etOk = true;
-        if (p.undamaged_only && this._isDamaged(inst)) etOk = false;
-        if (etOk && p.not_outnumbered) {
-          var foeP = this.opponent(owner.id);
-          if (sectionCount(this, foeP, sec) > sectionCount(this, owner, sec)) etOk = false;
-        }
-        if (etOk) dv += Number(p.base_def || 0);
-      }
+      if (p && p.base_def) dv += Number(p.base_def || 0);
 
       // CALDRIS forsorge aura: none here (heal on turn start)
 
@@ -804,26 +793,22 @@
           }
         }
       }
-      // ETAPPENSICHERUNG: heal one damaged OR section DEF
+      // ETAPPENSICHERUNG (t301): Zu Beginn deines Zuges heilt eine beschädigte eigene Einheit, die im letzten Zug nicht
+      // angegriffen hat (`dokRested`, gesetzt am Ende des eigenen Zuges), um `heal`. Gewählt wird die mit dem größten
+      // Fehlbetrag (Höchst-DEF − DEF), bei Gleichstand die erste von links (L→R, Reihe 1→3). Ohne `heal_rested` jede
+      // beschädigte Einheit. Der frühere, nicht gedruckte Zusatz „+1 DEF im dichtesten Abschnitt“ ist entfallen.
       if (hasDok(this, p, 'ETAPPENSICHERUNG')) {
         var ep = dokParam(this, p, 'ETAPPENSICHERUNG') || {};
         if (ep.heal) {
-          var hurt = this.frontList(p).filter(function (l) { return self._isDamaged(l.inst); });
-          if (hurt.length) {
-            this._heal(hurt[0].inst, Number(ep.heal || 1));
-            this._log(p.name + ': Etappensicherung heilt.');
-          }
-        } else if (ep.section_def) {
-          // densest section +DEF (bis t300 ohne Parameter immer aktiv, stand aber nicht im Kartentext; t301: nur mit `section_def`)
-          var bestS = 'C'; var bestNs = -1;
-          ['L', 'C', 'R'].forEach(function (s) {
-            var n = sectionCount(self, p, s);
-            if (n > bestNs) { bestNs = n; bestS = s; }
+          var hurt = this.frontList(p).filter(function (l) {
+            return self._isDamaged(l.inst) && (!ep.heal_rested || !!(l.inst.flags && l.inst.flags.dokRested));
           });
-          if (bestNs > 0) {
-            p.flags.dokSectionDef = p.flags.dokSectionDef || {};
-            p.flags.dokSectionDef[bestS] = Number(ep.section_def);
-            p.flags.dokSectionDefUntil = this.state.turn;
+          var miss = function (l) { return (Number(l.inst.defMax) || 0) - (Number(l.inst.def) || 0); };
+          var hPick = null;
+          hurt.forEach(function (l) { if (!hPick || miss(l) > miss(hPick)) hPick = l; });
+          if (hPick) {
+            this._heal(hPick.inst, Number(ep.heal || 1));
+            this._log(p.name + ': Etappensicherung heilt ' + ((this.defOf(hPick.inst) || {}).name || 'eine Einheit') + '.');
           }
         }
       }

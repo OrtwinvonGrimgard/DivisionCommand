@@ -360,8 +360,8 @@
    "type": "Doktrin",
    "nation": "neutral",
    "rarity": null,
-   "source_record_sha256": "de29b7f50aa1c520385e5728c57da00976f0a6a94aba19e5fcb7d6202ed1802e",
-   "kurz": "Eigene Einheiten haben +1 DEF. Die Etappe hält — ohne automatische Versorgungsheilung.",
+   "source_record_sha256": "0ce762922e2836e3f59da883e40a72e4982610399056a0404353ea7fad9d9a71",
+   "kurz": "Zu Beginn deines Zuges heilt eine beschädigte eigene Einheit, die im letzten Zug nicht angegriffen hat, 1.",
    "keywords": [],
    "printed_stats": {
     "ap": 0,
@@ -381,7 +381,7 @@
     "art_pct": 40.0
    },
    "renderer": "75a6207e3233997b45050e996a7a60adb7992759ca52d6423318b566c42a9284",
-   "output_sha256": "98e605049418b465ffc26ca6d9b9014b1d854adf9b6a4493dbf5f86230c08f49"
+   "output_sha256": "80c0aa81471e965b87fcff19c96db86d6aaf84ede42d8f3cdd3b441b03c67933"
   },
   {
    "id": "dc_dok_feuerplan",

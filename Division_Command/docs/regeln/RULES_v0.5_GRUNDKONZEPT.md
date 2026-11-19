@@ -224,7 +224,7 @@ Einheiten rücken durch das Zerstören eines Gegners nicht automatisch vor.
 
 ## 8.1 Bedingte DEF-Boni (verbindlich, t298 / 0.619)
 
-DEF-Boni, die an eine Lage gebunden sind, zählen voll als Stabilität, solange die Bedingung gilt. Dazu gehören Doktrinen (z. B. Auffangen, Verteilte Stellung, Linienkrieg, Ausharren, Etappensicherung, Bollwerk), Flankenschutz benachbarter Einheiten, Auren aus der Unterstützung und Doktrin-Auren wie Tiefenverteidigung.
+DEF-Boni, die an eine Lage gebunden sind, zählen voll als Stabilität, solange die Bedingung gilt. Dazu gehören Doktrinen (z. B. Auffangen, Verteilte Stellung, Linienkrieg, Ausharren, Bollwerk), Flankenschutz benachbarter Einheiten, Auren aus der Unterstützung und Doktrin-Auren wie Tiefenverteidigung.
 
 - **Die angezeigte DEF ist die echte DEF.** Schaden wird von diesem Wert abgezogen; die Einheit fällt erst, wenn er 0 erreicht.
 - **Bedingung tritt ein:** aktuelle und maximale Stabilität steigen um den Bonus.
@@ -247,7 +247,17 @@ Seit 0.619 zählen Doktrin-DEF-Boni echt. Pauschale „+1 DEF für alle eigenen 
 | **Gepanzerter Fuß** (Ossaria) | Eigene Einheiten mit mindestens einer Ausrüstung: +1 ATK und +1 DEF. Ohne Ausrüstung kein Bonus. | +1 DEF für alle, ausgerüstet +1 ATK |
 | **Entsatz** (Namar) | Eigene Einheiten in einem Abschnitt, den der Gegner im letzten Zug angegriffen hat: +1 ATK. Wer in diesem Zug in einen solchen Abschnitt einrückt, hat bis Zugende zusätzlich +1 ATK und +1 DEF (zusammen also +2 ATK/+1 DEF). | gehalten +1 ATK/+1 DEF |
 
-Für alle gilt §8.1 (Bonusverlust senkt die DEF, nie unter 1). Weitere pauschale DEF-Doktrinen (Etappensicherung, Bollwerk) sind als bekannte Ausreißer im Balance-Gate geführt (`balance/BALANCE_GATE.md`).
+Für alle gilt §8.1 (Bonusverlust senkt die DEF, nie unter 1). Bollwerk (+1 DEF für alle) ist als bekannter Ausreißer im Balance-Gate geführt (`balance/BALANCE_GATE.md`).
+
+## 8.3 Etappensicherung heilt statt +1 DEF (verbindlich, t301 / 0.630)
+
+Kartentext: „Zu Beginn deines Zuges heilt eine beschädigte eigene Einheit, die im letzten Zug nicht angegriffen hat, 1.“ (Caldris, mit Rasten: „Schützen und ruhen“.)
+
+- **Zeitpunkt:** zu Beginn deines Zuges, vor allen Aktionen, zusammen mit den übrigen Zugbeginn-Doktrinen.
+- **Wer kommt infrage:** eigene Fronteinheiten mit DEF unter ihrer Höchst-DEF, die in deinem letzten Zug **nicht angegriffen** haben (dieselbe Bedingung wie bei Rasten und Lauer). Wer in deinem letzten Zug eingerückt ist und nicht angegriffen hat, zählt mit. In deinem ersten Zug gibt es noch keinen „letzten Zug“: Es wird niemand geheilt.
+- **Welche Einheit:** die mit dem größten Fehlbetrag (Höchst-DEF minus DEF); bei Gleichstand die erste von links (L vor C vor R, darin Stellung 1 vor 2 vor 3). Die Wahl ist automatisch, das Protokoll nennt die Einheit.
+- **Wie viel:** 1 DEF, nie über die Höchst-DEF.
+- **Vorher (bis 0.624):** +1 DEF für alle eigenen Einheiten; dazu ein nicht gedruckter Zusatz (zu Zugbeginn +1 DEF im dichtesten eigenen Abschnitt bis Zugende), der entfallen ist. Seit 0.619 zählte die DEF echt, Caldris lag dadurch bei 62–68 % (`balance/BALANCE_T301.md`).
 
 ---
 

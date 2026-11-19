@@ -480,18 +480,19 @@ window.DC_SET_TYPES["Doktrin"] = [
     ],
     "klasse_tags": [],
     "principle": "Zu Beginn deines Zuges",
-    "text": "Eigene Einheiten haben +1 DEF. Die Etappe hält — ohne automatische Versorgungsheilung.",
+    "text": "Zu Beginn deines Zuges heilt eine beschädigte eigene Einheit, die im letzten Zug nicht angegriffen hat, 1.",
     "clauses": [
       {
         "title": "",
-        "body": "Eigene Einheiten haben +1 DEF. Die Etappe hält — ohne automatische Versorgungsheilung."
+        "body": "Zu Beginn deines Zuges heilt eine beschädigte eigene Einheit, die im letzten Zug nicht angegriffen hat, 1."
       }
     ],
     "effects": [
       {
         "code": "ETAPPENSICHERUNG",
         "param": {
-          "base_def": 1
+          "heal": 1,
+          "heal_rested": true
         }
       }
     ],
