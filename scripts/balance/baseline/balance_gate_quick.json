@@ -25,11 +25,11 @@
    },
    "Karsk": {
     "games": 420,
-    "rate": 0.51
+    "rate": 0.512
    },
    "Theryn": {
     "games": 420,
-    "rate": 0.502
+    "rate": 0.5
    },
    "Vael": {
     "games": 420,
@@ -91,7 +91,7 @@
    },
    "Karsk": {
     "games": 420,
-    "rate": 0.536
+    "rate": 0.538
    },
    "Theryn": {
     "games": 420,
@@ -123,7 +123,7 @@
    },
    "Namar": {
     "games": 420,
-    "rate": 0.457
+    "rate": 0.455
    },
    "Rothain": {
     "games": 420,
@@ -135,7 +135,7 @@
    },
    "Averon": {
     "games": 420,
-    "rate": 0.445
+    "rate": 0.443
    },
    "Vesper": {
     "games": 420,
@@ -143,7 +143,7 @@
    },
    "Dargan": {
     "games": 420,
-    "rate": 0.443
+    "rate": 0.445
    },
    "Eldran": {
     "games": 420,
@@ -170,7 +170,7 @@
   "dc_dok_abschluss": {
    "name": "Abschluss",
    "games": 256,
-   "rate": 0.496
+   "rate": 0.5
   },
   "dc_dok_auffangen": {
    "name": "Auffangen",
@@ -210,7 +210,7 @@
   "dc_dok_entsatz": {
    "name": "Entsatz",
    "games": 256,
-   "rate": 0.57
+   "rate": 0.574
   },
   "dc_dok_etappensicherung": {
    "name": "Etappensicherung",
@@ -265,12 +265,12 @@
   "dc_dok_normverband": {
    "name": "Normverband",
    "games": 256,
-   "rate": 0.434
+   "rate": 0.43
   },
   "dc_dok_punktfeuer": {
    "name": "Punktfeuer",
    "games": 256,
-   "rate": 0.594
+   "rate": 0.598
   },
   "dc_dok_rasten": {
    "name": "Rasten",
@@ -280,7 +280,7 @@
   "dc_dok_scheinschwerpunkt": {
    "name": "Scheinschwerpunkt",
    "games": 256,
-   "rate": 0.582
+   "rate": 0.586
   },
   "dc_dok_schwerpunkt": {
    "name": "Schwerpunkt",
@@ -300,12 +300,12 @@
   "dc_dok_sturmangriff": {
    "name": "Sturmangriff",
    "games": 256,
-   "rate": 0.527
+   "rate": 0.531
   },
   "dc_dok_tiefenverteidigung": {
    "name": "Tiefenverteidigung",
    "games": 256,
-   "rate": 0.563
+   "rate": 0.566
   },
   "dc_dok_umgehen": {
    "name": "Umgehen",
@@ -325,22 +325,22 @@
   "dc_dok_weiterkaempfen": {
    "name": "Weiterkämpfen",
    "games": 256,
-   "rate": 0.531
+   "rate": 0.535
   },
   "dc_dok_zielangriff": {
    "name": "Zielangriff",
    "games": 256,
-   "rate": 0.52
+   "rate": 0.516
   }
  },
  "firstPlayer": {
-  "starter": 0.496,
+  "starter": 0.495,
   "mixed": 0.568
  },
  "games": 15936,
  "errs": 0,
  "forced": 0,
- "seconds": 182,
+ "seconds": 436,
  "summary": {
   "fail": 0,
   "warn": 0,

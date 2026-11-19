@@ -33,7 +33,7 @@
    "max": 0.66,
    "reason": "BOLLWERK_FRONT_DEF (+1 DEF für alle) zählt seit 0.619 echt; t285 hatte Bollwerk mit +1 ATK ab 6 DEF auf 50 % gebracht, als die DEF nur Anzeige war",
    "target": "+1 ATK ab 6 DEF zurücknehmen oder DEF-Bonus nur hinter Befestigungen, Ziel 45–55 %",
-   "since": "v0.624 (t300): 63,5 % (0.619: 61,9 %)"
+   "since": "v0.624 (t300): 63,6 % (0.619: 61,9 %)"
   },
   {
    "kind": "doctrine",
@@ -42,7 +42,7 @@
    "max": 0.66,
    "reason": "+1 ATK/+1 DEF in dünnen Abschnitten; DEF seit 0.619 echt (t285 noch 55,3 %)",
    "target": "Nur +1 ATK oder +1 DEF, Ziel 45–55 %",
-   "since": "v0.624 (t300): 63,6 % (0.619: 61,6 %)"
+   "since": "v0.624 (t300): 63,7 % (0.619: 61,6 %)"
   }
  ]
 }

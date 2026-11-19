@@ -59,7 +59,7 @@ Weitere Optionen (`--jobs`, `--baseline`, `--out`) im Kopf von `scripts/balance/
 |---|---|---|---|---|
 | Caldris (Starter, Misch) | 62,5 / 64,3 % | 68 % | Etappensicherung: +1 DEF für alle, sonst keine Wirkung | Doktrin neu fassen, 45–55 % |
 | Merovan (Misch) | 60,1 % | 63 % | Mischpool legt nach t300 zu, Ursache offen | Poolkarten auswerten, ≤ 57 % |
-| Bollwerk | 63,5 % | 66 % | DEF-Bonus seit 0.619 echt, +1 ATK ab 6 DEF aus t285 | ATK-Zusatz zurücknehmen o. Ä., 45–55 % |
-| Scheinschwerpunkt | 63,6 % | 66 % | +1 ATK/+1 DEF, DEF seit 0.619 echt | nur ATK oder nur DEF, 45–55 % |
+| Bollwerk | 63,6 % | 66 % | DEF-Bonus seit 0.619 echt, +1 ATK ab 6 DEF aus t285 | ATK-Zusatz zurücknehmen o. Ä., 45–55 % |
+| Scheinschwerpunkt | 63,7 % | 66 % | +1 ATK/+1 DEF, DEF seit 0.619 echt | nur ATK oder nur DEF, 45–55 % |
 
-Blitzkrieg (41,2 %) und Auswertung (44,5 %) liegen im Band und brauchen keinen Eintrag; der Bericht führt sie als „beobachten“.
+Blitzkrieg (41,2 %) und Auswertung (44,9 %) liegen im Band und brauchen keinen Eintrag; der Bericht führt sie als „beobachten“.
