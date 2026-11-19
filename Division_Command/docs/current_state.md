@@ -137,6 +137,7 @@ Je Slice: **Umfang** (Ende zu Ende, von Daten über Engine bis Oberfläche), **S
   - **Bollwerk** (63,6 %) und **Scheinschwerpunkt** (63,7 %): DEF zählt seit 0.619 echt; Ausnahmeliste bis 66 %.
   - **Merovan** Misch 60,1 % (Ausnahmeliste bis 63 %), Ursache nicht untersucht.
   - **Schwache Nationen:** Lyr 42,1 %, Namar 43,3 %, Ossaria 44,3 %, Dargan 44,6 % (Misch), Steinmark 44,8 % (Starter); Doktrinen Blitzkrieg 41,2 %, Abriegeln 42,0 %, Normverband 43,1 %, Auswertung 44,9 % (alle im Band, aber unter 45 %).
+  - **Engine (offen, t300 gefunden):** `_kwRecompute` und `_dynDefSync` klemmen bei sinkendem Bonus auf mindestens 1 DEF; eine Einheit mit 0 DEF würde dadurch wieder auf 1 gesetzt. Seit `_reapDeadFront()` (nach jeder Aktion vor der Neuberechnung) nicht mehr erreichbar, die Klemme sollte aber 0 DEF nicht anheben. Laufzeit Quick-Gate unter Last 437 s (idle 182 s); CI-Laufzeit des Jobs `balance-quick` beobachten.
   - Vorschlag **nicht umgesetzt:** Überschuss für 1 AP (braucht Entscheidung).
   - Das volle Gate läuft nicht in der CI (etwa 18 min auf 4 Kernen); es bleibt lokale Pflicht. `audit.js` aus `tmp_t283` fehlt weiter.
 
