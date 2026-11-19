@@ -257,8 +257,19 @@
       }
 
       // ETAPPENSICHERUNG base DEF
+      // t301 undamaged_only: nur unbeschädigte Einheiten (DEF = Höchst-DEF ohne Lage-DEF). Der erste Treffer kostet
+      // den Bonus (RULES §8.1: nie unter 1), Heilen auf volle DEF bringt ihn zurück.
+      // t301 not_outnumbered: nur in Abschnitten ohne gegnerische Überzahl (eigene ≥ gegnerische Einheiten).
       p = dokParam(this, owner, 'ETAPPENSICHERUNG');
-      if (p && p.base_def) dv += Number(p.base_def || 0);
+      if (p && p.base_def) {
+        var etOk = true;
+        if (p.undamaged_only && this._isDamaged(inst)) etOk = false;
+        if (etOk && p.not_outnumbered) {
+          var foeP = this.opponent(owner.id);
+          if (sectionCount(this, foeP, sec) > sectionCount(this, owner, sec)) etOk = false;
+        }
+        if (etOk) dv += Number(p.base_def || 0);
+      }
 
       // CALDRIS forsorge aura: none here (heal on turn start)
 
@@ -802,8 +813,8 @@
             this._heal(hurt[0].inst, Number(ep.heal || 1));
             this._log(p.name + ': Etappensicherung heilt.');
           }
-        } else {
-          // densest section +DEF
+        } else if (ep.section_def) {
+          // densest section +DEF (bis t300 ohne Parameter immer aktiv, stand aber nicht im Kartentext; t301: nur mit `section_def`)
           var bestS = 'C'; var bestNs = -1;
           ['L', 'C', 'R'].forEach(function (s) {
             var n = sectionCount(self, p, s);
@@ -811,7 +822,7 @@
           });
           if (bestNs > 0) {
             p.flags.dokSectionDef = p.flags.dokSectionDef || {};
-            p.flags.dokSectionDef[bestS] = Number(ep.def || 1);
+            p.flags.dokSectionDef[bestS] = Number(ep.section_def);
             p.flags.dokSectionDefUntil = this.state.turn;
           }
         }
