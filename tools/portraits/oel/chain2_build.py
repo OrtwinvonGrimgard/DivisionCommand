@@ -49,6 +49,18 @@ RANKS_KARSK = [
 ]
 RANKS = {'rothain': RANKS_ROTHAIN, 'karsk': RANKS_KARSK}.get(NATION, RANKS_ROTHAIN)
 
+# Short forms so sheet captions fit in a 324px cell (Bold 15).
+RANK_SHORT = {
+    'Fähnrich': 'Fähnr.', 'Oberfähnrich': 'OFähnr.', 'Leutnant': 'Lt.', 'Oberleutnant': 'OLt.',
+    'Hauptmann': 'Hptm.', 'Stabshauptmann': 'StHptm.', 'Major': 'Maj.', 'Oberstleutnant': 'Obstlt.',
+    'Oberst': 'Obst.', 'Brigadegeneral': 'BrigGen.', 'Generalmajor': 'GenMaj.',
+    'Generalleutnant': 'GenLt.', 'General': 'Gen.', 'Generaloberst': 'GenObst.',
+    'Feldmarschall': 'FM', 'Generalfeldmarschall': 'GFM',
+}
+def rank_short(i):
+    name, age = RANKS[i][1], RANKS[i][2]
+    return RANK_SHORT.get(name, name), age
+
 SCAR_OFF = {'wange': (-9, -13), 'braue': (0, 5), 'kiefer': (14, -10)}
 PERSON_OFF = {}
 
@@ -149,11 +161,18 @@ def compose(un, p, i, scars=()):
     return im.convert('RGB')
 
 def sheet(path, items, cols=4, tw=324):
-    th = int(tw * H / W); f = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 15)
+    th = int(tw * H / W); f = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 14)
     rows = (len(items) + cols - 1) // cols; sh = Image.new('RGB', (cols * tw, rows * (th + 22)), (30, 30, 34)); dr = ImageDraw.Draw(sh)
     for n, (un, p, i, scars, label) in enumerate(items):
         x, y = (n % cols) * tw, (n // cols) * (th + 22)
-        sh.paste(compose(un, p, i, scars).resize((tw, th), Image.LANCZOS), (x, y + 22)); dr.text((x + 6, y + 3), label, fill=(235, 235, 235), font=f)
+        sh.paste(compose(un, p, i, scars).resize((tw, th), Image.LANCZOS), (x, y + 22))
+        # shrink or ellipsize if a caption would still run into the next cell
+        font, lab = f, label
+        while font.size >= 11 and font.getbbox(lab)[2] > tw - 10:
+            font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', font.size - 1)
+        while font.getbbox(lab)[2] > tw - 10 and len(lab) > 4:
+            lab = lab[:-2].rstrip(' ·.,') + '…'
+        dr.text((x + 6, y + 3), lab, fill=(235, 235, 235), font=font)
     sh.save(path, quality=90); print('wrote', path, sh.size)
 
 def sheets():
@@ -161,10 +180,10 @@ def sheets():
         for p in PERSONS:
             if not have(u, p): continue
             tag = f'{un}_{p}'
-            sheet(f'{SHEETS}/kette_{NATION}_{tag}.jpg', [(un, p, i, (), f'{p} {un} · {i+1:02d} {RANKS[i][1]} (~{RANKS[i][2]})') for i in range(16)])
+            sheet(f'{SHEETS}/kette_{NATION}_{tag}.jpg', [(un, p, i, (), f'{p} {un} · {i+1:02d} {rank_short(i)[0]} (~{rank_short(i)[1]})') for i in range(16)])
             var = [(0, ('wange',)), (4, ('braue',)), (8, ('wange', 'braue')), (12, ('kiefer',)), (7, ('wange', 'kiefer')), (10, ('braue', 'kiefer')), (15, ('wange', 'braue', 'kiefer')), (2, ('wange', 'braue', 'kiefer'))]
-            sheet(f'{SHEETS}/kette_{NATION}_{tag}_narben.jpg', [(un, p, i, sc, f'{p} · {i+1:02d} {RANKS[i][1]} · {"+".join(sc)}') for i, sc in var])
-    items = [(UNI[u], p, i, (), f'{p} {UNI[u]} · {RANKS[i][1]}') for u in UNI for p in PERSONS if have(u, p) for i in (0, 8, 15)]
+            sheet(f'{SHEETS}/kette_{NATION}_{tag}_narben.jpg', [(un, p, i, sc, f'{p} · {i+1:02d} {rank_short(i)[0]} · {"+".join(sc)}') for i, sc in var])
+    items = [(UNI[u], p, i, (), f'{p} {UNI[u]} · {rank_short(i)[0]}') for u in UNI for p in PERSONS if have(u, p) for i in (0, 8, 15)]
     if items:
         cols = 6 if len(items) >= 6 else max(3, len(items))
         sheet(f'{SHEETS}/kette_{NATION}_uebersicht.jpg', items, cols=cols, tw=240)
