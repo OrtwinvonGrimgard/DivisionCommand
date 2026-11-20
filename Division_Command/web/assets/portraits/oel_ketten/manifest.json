@@ -327,7 +327,216 @@
    }
   },
   "gala": {
-   "persons": {}
+   "persons": {
+    "m1": {
+     "files": [
+      "rothain/gala/m1/01_faehnrich.webp",
+      "rothain/gala/m1/02_oberfaehnrich.webp",
+      "rothain/gala/m1/03_leutnant.webp",
+      "rothain/gala/m1/04_oberleutnant.webp",
+      "rothain/gala/m1/05_hauptmann.webp",
+      "rothain/gala/m1/06_stabshauptmann.webp",
+      "rothain/gala/m1/07_major.webp",
+      "rothain/gala/m1/08_oberstleutnant.webp",
+      "rothain/gala/m1/09_oberst.webp",
+      "rothain/gala/m1/10_brigadegeneral.webp",
+      "rothain/gala/m1/11_generalmajor.webp",
+      "rothain/gala/m1/12_generalleutnant.webp",
+      "rothain/gala/m1/13_general.webp",
+      "rothain/gala/m1/14_generaloberst.webp",
+      "rothain/gala/m1/15_feldmarschall.webp",
+      "rothain/gala/m1/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       431.1,
+       313.6
+      ],
+      "chin_y": 532.4,
+      "eye_chin": 218.7
+     },
+     "scars": {
+      "wange": {
+       "file": "rothain/gala/m1/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "rothain/gala/m1/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "rothain/gala/m1/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    },
+    "m2": {
+     "files": [
+      "rothain/gala/m2/01_faehnrich.webp",
+      "rothain/gala/m2/02_oberfaehnrich.webp",
+      "rothain/gala/m2/03_leutnant.webp",
+      "rothain/gala/m2/04_oberleutnant.webp",
+      "rothain/gala/m2/05_hauptmann.webp",
+      "rothain/gala/m2/06_stabshauptmann.webp",
+      "rothain/gala/m2/07_major.webp",
+      "rothain/gala/m2/08_oberstleutnant.webp",
+      "rothain/gala/m2/09_oberst.webp",
+      "rothain/gala/m2/10_brigadegeneral.webp",
+      "rothain/gala/m2/11_generalmajor.webp",
+      "rothain/gala/m2/12_generalleutnant.webp",
+      "rothain/gala/m2/13_general.webp",
+      "rothain/gala/m2/14_generaloberst.webp",
+      "rothain/gala/m2/15_feldmarschall.webp",
+      "rothain/gala/m2/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       431.2,
+       312.8
+      ],
+      "chin_y": 532.4,
+      "eye_chin": 219.6
+     },
+     "scars": {
+      "wange": {
+       "file": "rothain/gala/m2/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "rothain/gala/m2/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "rothain/gala/m2/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    },
+    "f1": {
+     "files": [
+      "rothain/gala/f1/01_faehnrich.webp",
+      "rothain/gala/f1/02_oberfaehnrich.webp",
+      "rothain/gala/f1/03_leutnant.webp",
+      "rothain/gala/f1/04_oberleutnant.webp",
+      "rothain/gala/f1/05_hauptmann.webp",
+      "rothain/gala/f1/06_stabshauptmann.webp",
+      "rothain/gala/f1/07_major.webp",
+      "rothain/gala/f1/08_oberstleutnant.webp",
+      "rothain/gala/f1/09_oberst.webp",
+      "rothain/gala/f1/10_brigadegeneral.webp",
+      "rothain/gala/f1/11_generalmajor.webp",
+      "rothain/gala/f1/12_generalleutnant.webp",
+      "rothain/gala/f1/13_general.webp",
+      "rothain/gala/f1/14_generaloberst.webp",
+      "rothain/gala/f1/15_feldmarschall.webp",
+      "rothain/gala/f1/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       429.8,
+       323.1
+      ],
+      "chin_y": 532.2,
+      "eye_chin": 209.1
+     },
+     "scars": {
+      "wange": {
+       "file": "rothain/gala/f1/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "rothain/gala/f1/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "rothain/gala/f1/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    },
+    "f2": {
+     "files": [
+      "rothain/gala/f2/01_faehnrich.webp",
+      "rothain/gala/f2/02_oberfaehnrich.webp",
+      "rothain/gala/f2/03_leutnant.webp",
+      "rothain/gala/f2/04_oberleutnant.webp",
+      "rothain/gala/f2/05_hauptmann.webp",
+      "rothain/gala/f2/06_stabshauptmann.webp",
+      "rothain/gala/f2/07_major.webp",
+      "rothain/gala/f2/08_oberstleutnant.webp",
+      "rothain/gala/f2/09_oberst.webp",
+      "rothain/gala/f2/10_brigadegeneral.webp",
+      "rothain/gala/f2/11_generalmajor.webp",
+      "rothain/gala/f2/12_generalleutnant.webp",
+      "rothain/gala/f2/13_general.webp",
+      "rothain/gala/f2/14_generaloberst.webp",
+      "rothain/gala/f2/15_feldmarschall.webp",
+      "rothain/gala/f2/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       429.3,
+       337.2
+      ],
+      "chin_y": 542.0,
+      "eye_chin": 205.1
+     },
+     "scars": {
+      "wange": {
+       "file": "rothain/gala/f2/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "rothain/gala/f2/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "rothain/gala/f2/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    }
+   }
   }
  }
 }
