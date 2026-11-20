@@ -115,4 +115,7 @@ def render(card, art_path, kurz, dest, number='001', edition='ALPHA'):
     im = Image.open(tmp)
     lay = to_face(im, dest)
     tmp.unlink(missing_ok=True)
+    seed = getattr(getattr(R, '_mod', None), '_tex_seed', None)  # t313: verwendeter Textur-Seed
+    if seed is not None:
+        lay = dict(lay or {}); lay['tex_seed'] = int(seed)
     return lay

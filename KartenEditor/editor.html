@@ -90,9 +90,11 @@ Deckung: Nachbar erhält +1 DEF.</textarea></label>
           <label>Vertikal <input id="de-art-y" type="range" min="-100" max="100" value="0"></label>
         </div>
         <label class="no-doktrin">Zoom <input id="de-art-z" type="range" min="100" max="250" value="100"></label>
-        <div class="de-actions marble-only token-nebel">
-          <button type="button" id="de-marble-btn">Marmor / Nebel neu würfeln</button>
+        <div class="de-actions">
+          <button type="button" id="de-marble-btn">Muster neu würfeln</button>
         </div>
+        <label class="de-tiny">Muster-Seed <input id="de-tex-seed" type="number" min="1" step="1"></label>
+        <p class="de-tiny">Jede Karte hat ein festes, eigenes Muster (Grund, Textfelder, Marmor, Leder, Stahl, Pergament, Samt). „Muster neu würfeln“ schreibt für diese Karte einen neuen Seed fest (scripts/graphics/tex-seeds.json).</p>
         <div class="de-actions">
           <button type="button" class="primary" id="de-png-btn">PNG speichern</button>
           <button type="button" id="de-save-btn">Entwurf speichern</button>

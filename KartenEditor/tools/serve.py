@@ -148,6 +148,15 @@ class Handler(SimpleHTTPRequestHandler):
     def do_POST(self):
         """POST-Endpunkte: Lobby, Chat, Editor-Render und verwandte Aktionen."""
         path = self.path.split("?", 1)[0]
+        if path == "/api/tex-seed":  # t315: neues Muster für genau eine Karte festschreiben
+            try:
+                n = int(self.headers.get("Content-Length") or 0)
+                body = json.loads(self.rfile.read(n).decode("utf-8") or "{}")
+                _send_json(self, {"ok": True, "seed": reroll_seed(str(body.get("id") or ""))})
+            except Exception as e:
+                traceback.print_exc()
+                _send_json(self, {"ok": False, "error": str(e)}, 400)
+            return
         if path not in ("/api/render", "/api/export"):
             self.send_error(404)
             return
@@ -173,6 +182,7 @@ class Handler(SimpleHTTPRequestHandler):
             _send_json(self, {"ok": True, "path": str(saved), "dir": str(saved.parent)})
             return
         self.send_response(200)
+        self.send_header("X-Tex-Seed", str(getattr(getattr(R, "_mod", None), "_tex_seed", "") or ""))  # t313
         self.send_header("Content-Type", "image/png")
         self.send_header("Content-Length", str(len(png)))
         self.end_headers()
@@ -181,6 +191,23 @@ class Handler(SimpleHTTPRequestHandler):
     def log_message(self, fmt, *args):
         """Unterdrückt bzw. formatiert die Zugriffslogs des HTTP-Servers."""
         sys.stderr.write("[editor] " + (fmt % args) + "\n")
+
+
+def reroll_seed(card_id: str) -> int:
+    """t315: vergibt einer Karte einen neuen, eindeutigen Seed und schreibt ihn ins Register."""
+    if not card_id:
+        raise ValueError("Karten-ID fehlt")
+    TG = R.TG
+    p = TG.SEED_FILE
+    doc = json.loads(p.read_text(encoding="utf-8")) if p.is_file() else {"seeds": {}}
+    used = set(int(v) for v in doc.get("seeds", {}).values())
+    s = TG.new_seed()
+    while s in used:
+        s = TG.new_seed()
+    doc.setdefault("seeds", {})[card_id] = s
+    doc["seeds"] = dict(sorted(doc["seeds"].items()))
+    p.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    return s
 
 
 def render_card(body: dict) -> bytes:
@@ -204,6 +231,8 @@ def render_card(body: dict) -> bytes:
         "n": str(body.get("number") or "001"),
         "tag_colors": body.get("tag_colors") or {},
         "marble_seed": int(body.get("marble_seed") or 0),
+        "id": str(body.get("card_id") or "") or None,  # t315: Register-Seed der Karte
+        "tex_seed": int(body.get("tex_seed") or 0) or None,  # t315: None = fester Seed aus Register/ID
         "token_kind": str(body.get("token_kind") or "minenfeld"),
         "art_pan_x": float(body.get("art_pan_x") or 0),
         "art_pan_y": float(body.get("art_pan_y") or 0),

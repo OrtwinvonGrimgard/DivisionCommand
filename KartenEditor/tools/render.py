@@ -19,6 +19,8 @@ _spec.loader.exec_module(_mod)
 for _k, _v in vars(_mod).items():
     if not _k.startswith("__"):
         globals()[_k] = _v
+KT = _mod.KT  # t310
+TG = _mod.TG  # t313: prozedurale Texturen
 
 
 def oil_marble_panel(size):
@@ -27,6 +29,8 @@ def oil_marble_panel(size):
     path = Path(__file__).resolve().parent.parent / "assets" / "textures" / "marmor-oel.jpg"
     if not path.is_file():
         return Image.new("RGB", (w, h), (12, 10, 8))
+    if TG.has("marmor-oel.jpg"):  # t313: Marmor je Render frisch generiert
+        return Image.blend(TG.texture("marmor-oel.jpg", (w, h)), Image.new("RGB", (w, h), (0, 0, 0)), 0.10)
     tex = Image.open(path).convert("RGB")
     card = getattr(_mod, "_current_card", {}) or {}
     rng = np.random.default_rng(_card_seed() or 1)
@@ -490,6 +494,8 @@ def _card_seed():
     for ch in str(card.get("name") or "stahl"):
         s = ((s * 16777619) ^ ord(ch)) & 0xFFFFFFFF
     extra = int(card.get("marble_seed") or 0) & 0xFFFFFFFF
+    if TG.ON:  # t313: auch Restzufall (Rost, Kratzer, Nebel) folgt dem Render-Seed
+        extra ^= TG.current_seed()
     return (s ^ extra) or 1
 
 
@@ -526,6 +532,12 @@ def weather_steel(im, seed=None, amount=1.0):
 def steel_sheet(size):
     """Dunkler gebürsteter Stahl, grobe Streifen."""
     w, h = size if isinstance(size, tuple) else (int(size), int(size))
+    if TG.has("stahl-gebuerstet.jpg"):  # t313
+        crop = TG.texture("stahl-gebuerstet.jpg", (w, h))
+        arr = np.array(crop, dtype=np.float32)
+        mean = float(arr.mean()) or 1.0
+        arr = (arr - mean) * 1.35 + mean * 0.36
+        return Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8), "RGB")
     if not _STEEL_TEX.is_file():
         return Image.new("RGB", (w, h), STEEL_DK)
     tex = Image.open(_STEEL_TEX).convert("RGB")
@@ -550,11 +562,15 @@ BRASS = (92, 74, 38)
 
 def steel_stock(size):
     """Kartengrund: dunkler gebürsteter Stahl."""
+    if KT.GROUND_FN:  # t311: Grund wie kleines Design
+        return KT.GROUND_FN(size)
     return steel_sheet(size)
 
 
 def burnt_stock(size):
     """Sofort: warmes, fast schwarzes Eisen."""
+    if KT.GROUND_FN:  # t311: Grund wie kleines Design
+        return KT.GROUND_FN(size)
     base = steel_sheet(size)
     arr = np.array(base, dtype=np.float32)
     arr *= np.array([0.92, 0.52, 0.40], dtype=np.float32)
@@ -580,7 +596,7 @@ def olive_plate(w, h):
     src = _STEEL_TEX if _STEEL_TEX.is_file() else Path(__file__).resolve().parent.parent / "assets" / "textures" / "metal-gehaemmert.jpg"
     if not src.is_file():
         return Image.new("RGB", (w, h), (48, 54, 28))
-    tex = Image.open(src).convert("RGB")
+    tex = TG.texture("stahl-gebuerstet.jpg", (int(w / 0.78) + 2, int(h / 0.78) + 2)) if TG.has("stahl-gebuerstet.jpg") else Image.open(src).convert("RGB")  # t313
     tw, th = tex.size
     cw, ch = max(80, int(tw * 0.78)), max(80, int(th * 0.78))
     rng = np.random.default_rng(_card_seed() ^ (w * 53 + h * 11))
@@ -633,7 +649,7 @@ def lacquer_plate(w, h):
     src = _STEEL_TEX if _STEEL_TEX.is_file() else Path(__file__).resolve().parent.parent / "assets" / "textures" / "metal-gehaemmert.jpg"
     if not src.is_file():
         return Image.new("RGB", (w, h), (18, 18, 20))
-    tex = Image.open(src).convert("RGB")
+    tex = TG.texture("stahl-gebuerstet.jpg", (int(w / 0.78) + 2, int(h / 0.78) + 2)) if TG.has("stahl-gebuerstet.jpg") else Image.open(src).convert("RGB")  # t313
     tw, th = tex.size
     cw, ch = max(80, int(tw * 0.78)), max(80, int(th * 0.78))
     rng = np.random.default_rng(_card_seed() ^ (w * 71 + h * 13))
@@ -800,7 +816,7 @@ def brass_plate(w, h):
     src = _STEEL_TEX if _STEEL_TEX.is_file() else Path(__file__).resolve().parent.parent / "assets" / "textures" / "metal-gehaemmert.jpg"
     if not src.is_file():
         return Image.new("RGB", (w, h), (128, 92, 36))
-    tex = Image.open(src).convert("RGB")
+    tex = TG.texture("stahl-gebuerstet.jpg", (int(w / 0.78) + 2, int(h / 0.78) + 2)) if TG.has("stahl-gebuerstet.jpg") else Image.open(src).convert("RGB")  # t313
     tw, th = tex.size
     cw, ch = max(80, int(tw * 0.78)), max(80, int(th * 0.78))
     rng = np.random.default_rng(_card_seed() ^ (w * 29 + h * 7))
@@ -822,7 +838,7 @@ def crimson_plate(w, h):
     src = _STEEL_TEX if _STEEL_TEX.is_file() else Path(__file__).resolve().parent.parent / "assets" / "textures" / "metal-gehaemmert.jpg"
     if not src.is_file():
         return Image.new("RGB", (w, h), (120, 12, 16))
-    tex = Image.open(src).convert("RGB")
+    tex = TG.texture("stahl-gebuerstet.jpg", (int(w / 0.78) + 2, int(h / 0.78) + 2)) if TG.has("stahl-gebuerstet.jpg") else Image.open(src).convert("RGB")  # t313
     tw, th = tex.size
     cw, ch = max(80, int(tw * 0.78)), max(80, int(th * 0.78))
     rng = np.random.default_rng(_card_seed() ^ (w * 41 + h * 3))
@@ -848,6 +864,8 @@ def make_velvet(w, h, rgb, branch="infanterie"):
     if branch == "gear":
         return oil_marble_panel((w, h))
     path = Path(__file__).resolve().parent.parent / "assets" / "velvet" / f"{branch}.jpg"
+    if TG.has(path.name):  # t313: Samt je Render frisch gemalt
+        return TG.texture(path.name, (w, h))
     if path.is_file():
         tex = Image.open(path).convert("RGB")
         return tex.resize((w, h), Image.Resampling.LANCZOS)
@@ -860,6 +878,24 @@ def name_plaque(draw, style, ny, name, w=None):
     """Namensschild als Samt in der Waffenfarbe, Goldrand, Name mittig."""
     if w is None:
         w = W
+    card = getattr(_mod, "_current_card", None) or {}
+    img = getattr(draw, "_image", None)
+    if KT.ON and img is not None:  # t310: Titel im kleinen Design
+        typ = card.get("typ") or "Einheit"
+        metal = KT.metal_triplet(_mod)
+        c2 = dict(card); c2["name"] = name
+        if typ == "Soforteinsatz":
+            res = KT.draw_banner_title(img.copy(), c2)
+        elif typ == "Unterstützung":
+            res = KT.draw_steel_title(img.copy(), c2)
+        elif typ == "Ausrüstung":
+            res = KT.draw_gear_title(img.copy(), c2, metal, ny)
+        else:
+            branch = unit_branch(card)
+            vel = make_velvet(1396, 126, VELVET[branch], branch)
+            res = KT.draw_unit_title(img.copy(), c2, vel, metal, "Einheit")
+        img.paste(res.convert(img.mode))
+        return
     x0, x1 = 70, w - 70
     y0, y1 = ny, ny + 128
     cx, cy = w / 2, ny + 66
@@ -923,6 +959,15 @@ def restack_under_art(img, card, stock_fn, art_bottom=910):  # 40% art
     ww, hh = rgb.size
     maker = stock_fn if callable(stock_fn) else steel_stock
     stock = maker((ww, hh)).convert("RGB")
+    if KT.ON and (card or {}).get("typ") in KT.ART_TOP:
+        ab = KT.ART_TOP[(card or {}).get("typ")] + 854
+        ty0 = support_text_top(card, ab)
+        rgb.paste(stock.crop((48, ab + 2, ww - 48, ty0 + 2)), (48, ab + 2))
+        d = ImageDraw.Draw(rgb)
+        tags = gameplay_tags(card)
+        if tags:
+            draw_tag_banners(d, ab + TAG_GAP, tags, ww)
+        return rgb, ty0, KT.TITLE[(card or {}).get("typ")][0], 0
     title_y = int(art_bottom) + 6
     title_h = 128
     after = title_y + title_h
@@ -975,26 +1020,58 @@ def _draw_ability_text(img, card, box, ink=(236, 224, 196), head_c=None):
         print("WARN t270: Regeltext passt nicht in", _mod.BODY_PX, "px:", (card or {}).get("id") or (card or {}).get("name"))
     body, head = font(FONT_R, bp), font(FONT_B, hp)
     d = _ID.Draw(img); d._image = img
+    _t = (card or {}).get("typ")
+    _sk = dict(stroke_width=2, stroke_fill=KT.INK_STROKE) if (KT.GROUND_ON and _t in ("Unterstützung", "Soforteinsatz")) else {}
+    if _sk:
+        ink = KT.INK
+        rim = KT.HEAD_INK  # t311: Überschrift hell-gold, auf Blau/Leder lesbar
+    # t318: Ausrüstung (Ocker-Feld) – weiße Schrift, dünne schwarze Kontur + weicher Schlagschatten (Nutzerwahl "C")
+    _soft = KT.GEAR_TXT_C and ink == KT.GEAR_INK
+    _calls = []
+    if _soft:
+        ink, rim = KT.GEAR_C_INK, KT.HEAD_INK
+        _sk = dict(stroke_width=2, stroke_fill=KT.GEAR_C_STROKE)
+
+        class _Rec:  # sammelt Textaufrufe; Schatten wird erst unter den Text gelegt
+            def text(self_, xy, t, **kw):
+                _calls.append((xy, t, kw))
+
+            def line(self_, *a, **k):
+                pass
+
+            def __getattr__(self_, n):
+                return getattr(d_real, n)
+        d_real, d = d, _Rec()
     y = ty0 + 48
     for title, rest in blocks:
         if title:
-            d.text((tx0 + 36, y), title, font=head, fill=rim); y += hlh
+            d.text((tx0 + 36, y), title, font=head, fill=rim, **_sk); y += hlh
         for ln in wrap(dummy, rest, body, inner_w):
-            d.text((tx0 + 36, y), ln, font=body, fill=ink); y += blh
+            d.text((tx0 + 36, y), ln, font=body, fill=ink, **_sk); y += blh
         y += 24
     d.line([(tx0 + 90, ty1 - 118), (tx1 - 90, ty1 - 118)], fill=rim, width=2)
     if use_flavor and flavor:
-        _mod.draw_flavor(d, "„" + flavor + "“", (tx0 + tx1) / 2, ty1, tx1 - tx0 - 80, (196, 168, 110))
+        _fl = KT.FLAVOR_INK if _sk else (KT.GEAR_FLAVOR_INK if ink == KT.GEAR_INK else (196, 168, 110))
+        if _soft:
+            _fl = KT.GEAR_C_FLAVOR
+        _mod.draw_flavor(d, "„" + flavor + "“", (tx0 + tx1) / 2, ty1, tx1 - tx0 - 80, _fl)
+    if _soft:
+        img = KT.soft_text(img, _calls, _sk)
+        ImageDraw.Draw(img).line([(tx0 + 90, ty1 - 118), (tx1 - 90, ty1 - 118)], fill=rim, width=2)
     return img
 
 def finish_support(img, card, edition="ALPHA", number="001", footer_star=False):
     """Stahlkarte, Textbox aus Doktrin-Rotleder, ohne ATK/DEF."""
-    img = mill_coin(img, 210, 210, 118, int((card or {}).get("ap") or 0))
+    if not KT.ON:
+        img = mill_coin(img, 210, 210, 118, int((card or {}).get("ap") or 0))
     img = clip_support_panel(img)
     img, ty0, title_y, title_h = restack_under_art(img, card, steel_stock)
     ww, hh = img.size
     tx0, tx1, ty1 = 78, ww - 78, 1890
-    img = paste_leather_plaque(img, (tx0, ty0, tx1, ty1))
+    if KT.GROUND_ON:  # t311: Öl-Blau-Bauplanfeld wie klein
+        img = KT.paste_field(img, (tx0, ty0, tx1, ty1), "blue", str((card or {}).get("id")), KT.metal_triplet(_mod))
+    else:
+        img = paste_leather_plaque(img, (tx0, ty0, tx1, ty1))
     rim = getattr(_mod, "GOLD", GOLD)
     img = _draw_ability_text(img, card, (tx0, ty0, tx1, ty1), head_c=rim)
     return paste_main_logo(img, number, edition, footer_star)
@@ -1023,11 +1100,16 @@ def paste_field_leather(img, box):
 
 def finish_gear(img, card, edition="ALPHA", number="001", footer_star=False):
     """Lackgrund, Marmor-Titel, Doktrin-Rotleder. Maße wie Unterstützung."""
-    img = mill_coin(img, 210, 210, 118, int((card or {}).get("ap") or 0))
+    if not KT.ON:
+        img = mill_coin(img, 210, 210, 118, int((card or {}).get("ap") or 0))
     img = clip_support_panel(img, lacquer_stock)
     img, ty0, title_y, title_h = restack_under_art(img, card, lacquer_stock)
     ww, hh = img.size
     tx0, tx1, ty1 = 78, ww - 78, 1890
+    if KT.ON and KT.GEAR_CHEVRON:  # t316: Ocker-Feld mit Winkeln (Anzahl = Stufe/Metall wie klein)
+        img = KT.paste_gear_field(img, (tx0, ty0, tx1, ty1), getattr(_mod, "_current_metal", "gold"), KT.metal_triplet(_mod))
+        img = _draw_ability_text(img, card, (tx0, ty0, tx1, ty1), ink=KT.GEAR_INK, head_c=KT.GEAR_HEAD_INK)
+        return paste_main_logo(img, number, edition, footer_star)
     img = paste_leather_plaque(img, (tx0, ty0, tx1, ty1))
     rim = getattr(_mod, "GOLD", GOLD)
     img = _draw_ability_text(img, card, (tx0, ty0, tx1, ty1), head_c=rim)
@@ -1068,6 +1150,25 @@ def finish_sofort(img, card, edition="ALPHA", number="001", footer_star=False):
     """Soforteinsatz: Titel oben, Bild darunter, Rotleder, ohne AP."""
     img = img.convert("RGB")
     ww, hh = img.size
+    if KT.ON:  # t310: Motiv/Banner sitzen schon (render_core); nur Textbereich wie bisher
+        rim = getattr(_mod, "GOLD", GOLD)
+        art_y1 = KT.ART_TOP["Soforteinsatz"] + 854
+        d = ImageDraw.Draw(img)
+        d.rounded_rectangle((70, KT.ART_TOP["Soforteinsatz"], ww - 70, art_y1), radius=8, outline=rim, width=4)
+        img = clip_support_panel(img, burnt_stock)
+        ty0 = support_text_top(card, art_y1)
+        img = clear_support_well(img, burnt_stock, art_y1, ty0, card)
+        d = ImageDraw.Draw(img)
+        tags = gameplay_tags(card)
+        if tags:
+            draw_tag_banners(d, art_y1 + TAG_GAP, tags, ww)
+        tx0, tx1, ty1 = 78, ww - 78, 1890
+        if KT.GROUND_ON:  # t311: Leder-Textfeld wie klein
+            img = KT.paste_field(img, (tx0, ty0, tx1, ty1), "leather", str((card or {}).get("id")), KT.metal_triplet(_mod))
+        else:
+            img = paste_leather_plaque(img, (tx0, ty0, tx1, ty1))
+        img = _draw_ability_text(img, card, (tx0, ty0, tx1, ty1), head_c=rim)
+        return paste_main_logo(img, number, edition, footer_star)
     x0, x1 = 70, ww - 70
     art = img.crop((x0, 56, x1, 910))  # 40% art
     title_y, title_h, gap = 56, 128, 28
@@ -1245,6 +1346,7 @@ def finish_frame(img):
 def render(card, *args, **kwargs):
     """Orden erst nach Tags und Text, damit die Spange in der Leiste sitzt."""
     _mod._current_card = card
+    _mod._tex_seed = TG.begin(card, kwargs.pop("tex_seed", None))  # t313: Seed je Render (Standard: zufällig)
     extra = (card or {}).get("tag_colors") or {}
     if extra:
         colors = dict(getattr(_mod, "TAG_COLORS", {}) or {})
@@ -1268,6 +1370,12 @@ def render(card, *args, **kwargs):
     elif is_gear:
         style = str((card or {}).get("gear_style") or "lacquer")
         _mod.brushed_stock = {"brass": brass_stock, "olive": olive_stock}.get(style, lacquer_stock)
+    _mod._current_metal = core_kw.get("metal", "gold")
+    KT.GROUND_FN = None
+    if KT.GROUND_ON:  # t311
+        gk = KT.ground_key((card or {}).get("typ") or "Einheit", unit_branch(card))
+        if gk:
+            KT.GROUND_FN = KT.make_ground_fn(gk, (card or {}).get("id") or (card or {}).get("name"))
     dest = _orig_render(card, *args, **core_kw)
     if is_support or is_sofort or is_gear:
         _mod.brushed_stock = brushed_stock
@@ -1293,11 +1401,16 @@ def render(card, *args, **kwargs):
     im = finish_frame(im)
     typ = (card or {}).get("typ") or "Einheit"
     if typ in ("Einheit", "Unterstützung", "Ausrüstung", "Soforteinsatz"):
-        im = mill_coin(im, 210, 210, 118, int((card or {}).get("ap") or 0))
+        if KT.ON:  # t310: AP-Stern der kleinen Karten, Lage je Kartenart
+            cx, cy, r = KT.STAR[typ]
+            im = KT.ap_star(im, cx, cy, r, int((card or {}).get("ap") or 0), getattr(_mod, "_current_metal", "gold"))
+        else:
+            im = mill_coin(im, 210, 210, 118, int((card or {}).get("ap") or 0))
     if (card or {}).get("typ") == "Doktrin":
         d = ImageDraw.Draw(im)
         draw_edition_label(d, im.size[0], edition, number, star)
     im = cut_card_corners(im)
+    KT.GROUND_FN = None
     im.save(dest, "PNG")
     return dest
 
@@ -1482,6 +1595,7 @@ def render_token(card, dest, metal="gold", art=None):
     kind = str((card or {}).get("token_kind") or "minenfeld").lower()
     apply_metal({"silver": "silber", "silber": "silber"}.get(str(metal).lower(), str(metal).lower()))
     _mod._current_card = card
+    _mod._tex_seed = TG.begin(card)  # t313
     if "nebel" in kind or "fog" in kind:
         im = render_fog_token(card, art)
     else:

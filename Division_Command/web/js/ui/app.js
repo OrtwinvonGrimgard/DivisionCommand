@@ -61,6 +61,18 @@
     return typ === 'Doktrin' ? 'thumbs/rueckseite-rot.png' : 'thumbs/rueckseite-schwarz.png';
   }
   /**
+   * t315: Kleinbild (Laufband/Rundenübersicht/Flug) aus dem neuen Render (faces-v2-thumb), sonst Altbild.
+   * @param {object} def
+   * @param {object} [ev]
+   * @returns {string}
+   */
+  function smallFace(def, ev) {
+    var d = def;
+    if (!d && ev && ev.cardId && typeof engine !== 'undefined' && engine && engine.byId) d = engine.byId[ev.cardId];
+    if (d && window.dcCardThumb) { var t = window.dcCardThumb(d); if (t) return t; }
+    return (ev && ev.image) || (d && d.image) || '';
+  }
+  /**
    * Bild-URL relativ zum Karten-Assetordner.
    * @param {string} filename
    * @returns {string}
@@ -604,7 +616,7 @@
       eventPlaying = false; eventFlying = false;
       var ov = $('#overlay');
       if (ov) ov.style.display = 'none';
-      document.title = (window.DC_BUILD_LABEL || 'Division Command 0.626 Alpha');
+      document.title = (window.DC_BUILD_LABEL || 'Division Command 0.636 Alpha');
       window.dcTimerHold = true;
       render();
       // t256: Münzwurf erst nach dem Einblend-Countdown zeigen. Vorher lag er unter dem
@@ -991,7 +1003,7 @@
     if (el && shown.length) {
       var lead = shown.filter(function (ev) { return ev.kind !== 'draw'; })[0] || shown[0];
       var def = lead.cardId && engine.byId ? engine.byId[lead.cardId] : null;
-      var file = recapHidden(lead) ? backFile(null) : (lead.image || (def && def.image) || backFile(def));
+      var file = recapHidden(lead) ? backFile(null) : (smallFace(def, lead) || backFile(def));
       var img = el.querySelector('.bt-art');
       if (img) {
         img.onerror = function () { if (window.dcImgErr) window.dcImgErr(img); };
@@ -1024,7 +1036,7 @@
       var owner = (ev.owner != null ? ev.owner : ev.actor);
       var mine = owner === viewer;
       var from = (ev.uid && preRects && preRects[ev.uid]) || pileRect(mine ? 'my-front' : 'enemy-front');
-      flyCard(from, pileRect(mine ? 'pile-my-grave' : 'pile-enemy-grave'), imgSrc(ev.image || backFile(null)), false, null);
+      flyCard(from, pileRect(mine ? 'pile-my-grave' : 'pile-enemy-grave'), imgSrc(smallFace(null, ev) || backFile(null)), false, null);
     });
   }
 
@@ -2331,7 +2343,7 @@
         var ev = list[n];
         var def = ev.cardId && CATALOG.cards.find(function (c) { return c.id === ev.cardId; });
         if (!def && ev.name) def = CATALOG.cards.find(function (c) { return c.name === ev.name; });
-        var file = recapHidden(ev) ? backFile(null) : (ev.image || (def && def.image) || backFile(def));
+        var file = recapHidden(ev) ? backFile(null) : ((def && window.dcCardImage && window.dcCardImage(def)) || smallFace(def, ev) || backFile(def));
         art.classList.remove('show');
         art.onerror = function () { if (window.dcImgErr) window.dcImgErr(art); };
         art.setAttribute('data-file', file);
@@ -2546,7 +2558,7 @@
       var ev = batch[i];
       if (ev.kind !== 'draw' && ev.kind !== 'destroy') { flyOne(i + 1, after); return; }
       var back = imgSrc(backFile(null));
-      var face = imgSrc(ev.image || backFile(null));
+      var face = imgSrc(smallFace(null, ev) || backFile(null));
       var viewer = mode === 'hotseat' ? engine.state.active : you;
       var owner = (ev.owner != null ? ev.owner : ev.actor);
       var mine = owner === viewer;

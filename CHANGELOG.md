@@ -4,6 +4,19 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.636 Alpha – 20.11.2026
+
+Neue Kartengrafik (t310–t321, Gewicht +0,010: großer Grafikumbau plus Editor-Funktion). Freigabe des Projektleiters: „push es direkt“. Spielregeln, Kartenwerte und Kartentexte sind unverändert; die Balance ist nicht berührt.
+
+- **Kartenvorderseiten (alle 1.746 neu gerendert):** Titelbanner, AP-Stern und Textfeld-Fassungen im Stil der kleinen Karten; Titelschrift bleibt die alte alpha40-Schrift (Liberation Serif Bold). Einheiten behalten Hintergrund und Textfeld aus Runde 3. Soforteinsatz, Unterstützung und Doktrin bekommen Hintergründe und Textfelder der kleinen Karten (Marmor, Leder, Öl-Blau-Bauplan, Kartenpergament).
+- **Prozedurale Texturen (`KartenEditor/tools/texgen.py`):** Marmor, Leder, Stahl, Patina, Pergament, Samt und Ocker-Pergament werden je Karte erzeugt (Rauschen, Verwirbelung, Worley, Pinselstriche; Farben aus den bisherigen Assets). Keine KI-Bilder.
+- **Ein festes Muster je Karte:** Der Seed kommt aus der Karten-ID und steht in `scripts/graphics/tex-seeds.json` (1.746 IDs, alle eindeutig). Gleicher Build ergibt bytegleiche Bilder. Neu gewürfelt wird nur ausdrücklich: `render.py --reroll <id>` oder im Karteneditor mit dem Knopf „Muster neu würfeln“. Neue Karten bekommen ihren Seed einmal beim Anlegen.
+- **Ausrüstung:** gelbes Ocker-Feld mit hellen Winkeln. Die Zahl der Winkel zeigt die Stufe wie bei den kleinen Karten: Bronze 1, Silber 2, Gold 3. Schrift weiß mit 2-px-Navy-Kontur wie bei Unterstützung und Soforteinsatz, dazu ein weicher Schatten auf dem hellen Ocker.
+- **Vorschaubilder:** `faces-v2-thumb/` (300 × 418, WebP). Laufband und Kartenflüge nutzen sie (`dcCardThumb`), die Meldungsbühne zeigt weiter die volle Vorderseite.
+- **Tests:** neu `tests/test_tex_seeds_t315.py` (Register vollständig und eindeutig, Determinismus, Muster je Typ verschieden); `verify.py` prüft Seeds und Renderer-Digest.
+- Ungenutzte Schrift `KartenEditor/assets/fonts/Cinzel.ttf` entfernt.
+- Cache `divcmd-alpha49a`.
+
 ## 0.626 Alpha – 19.11.2026
 
 Etappensicherung neu gefasst (t301, Gewicht +0,002). Freigabe des Projektleiters: „Ändere beides“, davon zuerst nur dieser Teil („Push erstmal die Änderung“).

@@ -340,6 +340,8 @@ def cover_art(path, tw, th):
 
 def _tex(name, size, fallback=(20, 16, 12)):
     """Lädt eine benannte Textur oder erzeugt einen Farb-Fallback."""
+    if TG.has(name):  # t313: frisch generiert statt Asset
+        return TG.texture(name, size)
     folder = ROOT / "assets" / "textures"
     p = folder / name
     if not p.is_file():
@@ -519,6 +521,13 @@ def paste_logo_star(img, cx, cy, r):
     return img
 
 
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parent))
+import klein_titel as KT  # t310: Titel/AP-Stern im kleinen Design (Test)
+import texgen as TG  # t313: prozedurale Texturen
+KT.TITLE_FONT = FONT_B  # t311: alte Titelschrift
+
+
 def render(card, art_file, dest, number="001", native=True, metal="gold", panel="marmor", stat_style=None):
     """Rendert eine vollständige Editor-Karte (Front, 1024×1428) in die Zieldatei."""
     apply_metal(metal)
@@ -531,11 +540,14 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
     show_stats = typ == "Einheit"
     show_art = typ != "Doktrin"
 
-    stock = brushed_stock((W, H))
+    stock = KT.GROUND_FN((W, H)) if KT.GROUND_FN else brushed_stock((W, H))  # t311: Kartengrund wie klein
     # Quadratisch bis zum Rand: Metall ist die Druckfläche.
     # Runde Ecken schneidet die Druckerei. Keine schwarze Maske.
 
     art_box = (70, 56, W - 70, (56 + 854) if show_art else 560)  # oldstyle-40%: 854px = 40% of 2136
+    top_title = KT.ON and typ in KT.ART_TOP
+    if top_title:  # t310: Titel oben, Motiv rückt in den frei gewordenen Namensplatz (gleiche Höhe 854)
+        art_box = (70, KT.ART_TOP[typ], W - 70, KT.ART_TOP[typ] + 854)
     tw, th = art_box[2] - art_box[0], art_box[3] - art_box[1]
 
     if show_art and art_file and os.path.isfile(art_file):
@@ -588,13 +600,19 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
         stock = doctrine_crest(stock, W / 2, 148)
         d = ImageDraw.Draw(stock)
         nm = card["name"].upper()
-        nf = fit_font(d, nm, FONT_B, DOCTRINE_NAME_PX, W - 240)
-        outlined_num(d, (W / 2, 330), nm, nf, fill=GOLD_LT)
+        if KT.ON:  # t310: Doktrin-Titel wie klein (Cinzel, Goldverlauf, Sperrung)
+            stock, _s = KT.draw_title_text(stock, W / 2, 330, nm, 124, W - 420, gold=True, stroke=(30, 18, 6))
+            for sx in (W / 2 - KT.spaced_width(nm, KT.cinzel(_s), _s * 0.06) / 2 - 62, W / 2 + KT.spaced_width(nm, KT.cinzel(_s), _s * 0.06) / 2 + 62):
+                stock = paste_logo_star(stock, sx, 322, 20)
+            d = ImageDraw.Draw(stock)
+        else:
+            nf = fit_font(d, nm, FONT_B, DOCTRINE_NAME_PX, W - 240)
+            outlined_num(d, (W / 2, 330), nm, nf, fill=GOLD_LT)
         d.line([(160, 510), (W - 160, 510)], fill=GOLD, width=3)
         stock = paste_logo_star(stock, W / 2, 510, 32)
         d = ImageDraw.Draw(stock)
 
-    if show_ap:
+    if show_ap and not KT.ON:
         stock = mill_coin(stock, 210, 210, 118, card.get("ap", 0))
         d = ImageDraw.Draw(stock)
 
@@ -603,12 +621,16 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
         d = ImageDraw.Draw(stock)
 
     ny = (56 + 854 + 14) if show_art else 900  # name directly under 40% art window
-    if typ != "Doktrin":
+    if top_title:
+        d._image = stock
+        name_plaque(d, "top", KT.TITLE[typ][0], card["name"], W)
+        d = ImageDraw.Draw(stock)
+    elif typ != "Doktrin":
         d._image = stock  # velvet name_plaque needs image handle for wood/samt texture
         name_plaque(d, "rect", ny, card["name"], W)
 
     tags = gameplay_tags(card)
-    name_bot = ny + 128
+    name_bot = (art_box[3] - TAG_GAP + 14) if top_title else ny + 128
     if typ == "Doktrin":
         text_top = 644
     else:
@@ -660,8 +682,9 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
 
     if typ == "Doktrin":
         # Bollwerk-style: continuous parchment/leather body under crest (no art), ability plaques on top
-        body_field = taut_leather(rotleder_panel((W - 108, H - 560 - 48))).convert("RGB")
-        stock.paste(body_field, (54, 560))
+        if not (KT.GROUND_ON and KT.GROUND_FN):  # t311: Doktrin-Grund = Kartenpergament wie klein
+            body_field = taut_leather(rotleder_panel((W - 108, H - 560 - 48))).convert("RGB")
+            stock.paste(body_field, (54, 560))
         d = ImageDraw.Draw(stock)
         blocks = []
         dummy = ImageDraw.Draw(Image.new("RGB", (10, 10)))
@@ -683,18 +706,27 @@ def render(card, art_file, dest, number="001", native=True, metal="gold", panel=
                 ty += BODY_LH
             y = y + hh + 24
     elif not later:
-        box = make_panel(panel, (tx1 - tx0, ty1 - ty0))  # volle Breite inkl. Elite
+        if KT.GROUND_ON and KT.UNITS_GROUND:  # t311/t312: Öl-Schlamm-Textfeld nur noch per DC_T311_UNITS=1 (Einheiten bleiben wie R3)
+            box = KT.field_panel("mud", (tx1 - tx0, ty1 - ty0), str(card.get("id") or card.get("name")))
+            ink, flav = KT.INK, KT.FLAVOR_INK
+        else:
+            box = make_panel(panel, (tx1 - tx0, ty1 - ty0))  # volle Breite inkl. Elite
         stock.paste(box, (tx0, ty0))
         d = ImageDraw.Draw(stock)
-        d.rectangle((tx0, ty0, tx1, ty1), outline=GOLD, width=3)
+        if KT.ON:  # t310: Textbox-Fassung wie kleine Karte (Metallband + Nieten)
+            stock = KT.bevel_frame(stock, (tx0, ty0, tx1, ty1), (GOLD_LT, GOLD, GOLD_DK), radius=12, band=8, rivets=True)
+            d = ImageDraw.Draw(stock)
+        else:
+            d.rectangle((tx0, ty0, tx1, ty1), outline=GOLD, width=3)
         y = ty0 + 48
         wrap_w = text_right - tx0 - 72
         for title, rest in blocks_pre:
+            _sk = dict(stroke_width=2, stroke_fill=KT.INK_STROKE) if (KT.GROUND_ON and KT.UNITS_GROUND) else {}
             if title:
-                d.text((tx0 + 36, y), title, font=head, fill=head_c)
+                d.text((tx0 + 36, y), title, font=head, fill=head_c, **_sk)
                 y += HEAD_LH
             for ln in wrap(d, rest, body, wrap_w):
-                d.text((tx0 + 36, y), ln, font=body, fill=ink)
+                d.text((tx0 + 36, y), ln, font=body, fill=ink, **_sk)
                 y += BODY_LH
             y += 18
         if flavor:

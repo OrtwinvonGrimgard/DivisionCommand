@@ -87,6 +87,10 @@
   var busy = false;
   var pending = false;
   var marbleSeed = 0;
+  // t315: jede Karte EIN festes Muster. Neue Karte: Seed einmal beim Anlegen (bleibt im Entwurf);
+  // bestehende Karte: Seed kommt aus dem Register (Server, per ID) – kein Zufall je Sitzung.
+  var texSeed = 1 + Math.floor(Math.random() * 2147483646);
+  var cardId = '';
   var artPanX = 0;
   var artPanY = 0;
   var artZoom = 100;
@@ -166,6 +170,8 @@
       image: imageName,
       image_b64: imageB64,
       marble_seed: marbleSeed,
+      tex_seed: texSeed,
+      card_id: cardId,
       art_pan_x: artPanX,
       art_pan_y: artPanY,
       art_zoom: artZoom
@@ -214,6 +220,9 @@
   }
   function applyCard(c) {
     if (!c) return;
+    cardId = c.id && !/^draft_/.test(c.id) ? c.id : ''; // t315: festes Muster der Karte (Register/ID)
+    texSeed = parseInt(c.tex_seed, 10) || 0;
+    if ($('de-tex-seed')) $('de-tex-seed').value = texSeed || '';
     var t = c.typ || 'Einheit';
     var tr = document.querySelector('input[name="typ"][value="' + t + '"]');
     if (tr) tr.checked = true;
@@ -386,10 +395,24 @@
       for (var i = 0; i < cards.length; i++) if (cards[i].id === id) { applyCard(cards[i]); return; }
       queue();
     };
+    function showSeed() { if ($('de-tex-seed')) $('de-tex-seed').value = texSeed || ''; }
     if ($('de-marble-btn')) $('de-marble-btn').onclick = function () {
       marbleSeed = Date.now() % 2147483647;
-      renderNow();
+      var note = $('de-save-path');
+      if (!cardId) { // neue Karte: neuer fester Seed, steht im Entwurf
+        texSeed = 1 + Math.floor(Math.random() * 2147483646);
+        showSeed(); renderNow(); return;
+      }
+      fetch('/api/tex-seed', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: cardId }) })
+        .then(function (r) { return r.json(); }).then(function (j) {
+          if (j && j.ok) { texSeed = j.seed; showSeed(); renderNow(); if (note) note.textContent = 'Neues Muster für ' + cardId + ' festgeschrieben (Seed ' + j.seed + ').'; }
+        }).catch(function () { if (note) note.textContent = 'Seed konnte nicht gespeichert werden.'; });
     };
+    if ($('de-tex-seed')) $('de-tex-seed').onchange = function () {
+      var v = parseInt(this.value, 10);
+      if (v > 0) { texSeed = v; renderNow(); } else showSeed();
+    };
+    showSeed();
     if ($('de-png-btn')) $('de-png-btn').onclick = function () {
       var btn = $('de-png-btn');
       var note = $('de-save-path');

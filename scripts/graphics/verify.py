@@ -10,13 +10,15 @@ sha = lambda b: hashlib.sha256(b).hexdigest()
 def renderer_digest():
     """Hash der Renderer-Quellen; ändert sich der Renderer, werden Faces neu gebaut."""
     parts = b''
-    for p in (HERE / 'alpha40.py', TOOLS / 'render.py', TOOLS / 'render_core.py'):
+    for p in (HERE / 'alpha40.py', TOOLS / 'render.py', TOOLS / 'render_core.py', TOOLS / 'klein_titel.py', TOOLS / 'texgen.py'):
         parts += p.read_bytes()
     return sha(parts)
 D = json.loads(subprocess.check_output(['node', str(HERE / 'export_catalog.js')], cwd=ROOT)); C = {c['id']: c for c in D['cards']}
 M = json.loads((HERE / 'graphics-manifest.json').read_text()); K = json.loads((ROOT / 'scripts/cards-review/kurz.json').read_text())
 assert M['version'] == 'alpha40' and len(C) == M['catalog_ids'] == 1746 and {r['id'] for r in M['records']} == set(C)
 rd = renderer_digest(); ready = 0
+seeds = json.loads((HERE / 'tex-seeds.json').read_text())['seeds']  # t315: ein fester, eindeutiger Muster-Seed je Karte
+assert set(seeds) >= set(C) and len(set(seeds.values())) == len(seeds), 'tex-seeds.json unvollständig/nicht eindeutig'
 for r in M['records']:
     c = C[r['id']]
     assert r['source_record_sha256'] == sha(json.dumps(c, ensure_ascii=False, sort_keys=True).encode()), r['id'] + ' veraltete Quelle'
@@ -29,6 +31,7 @@ for r in M['records']:
         f = WEB / 'assets/cards' / r['output']; assert sha(f.read_bytes()) == r['output_sha256'], r['id'] + ' Ausgabe'
         im = Image.open(f); assert im.size == (1024, 1428) and im.format == 'WEBP', r['id']
         assert r['renderer'] == rd, r['id'] + ' mit altem Renderer'
+        assert r.get('tex_seed') == seeds.get(r['id']) or (c.get('tex_seed') and r.get('tex_seed') == int(c['tex_seed'])), r['id'] + ' tex_seed'
         if r['type'] == 'Doktrin':
             assert r['provenance'] == 'doctrine_design' and not r['art']
         elif r['type'] == 'Token':

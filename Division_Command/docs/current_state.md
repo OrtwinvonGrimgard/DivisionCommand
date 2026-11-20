@@ -4,11 +4,11 @@
 
 | | |
 |---|---|
-| **Stand dieser Übersicht** | 19.11.2026 (Berlin), nach t301 (Etappensicherung neu gefasst; Version 0.626); Verfahren eingeführt in t286 |
-| **Version** | Alpha **0.626** (`Division_Command/VERSION`), Tag `v0.626` (19.11.2026, t301); davor `v0.624` (18.11.2026, t300), davor `v0.619` (18.11.2026, t298), davor `v0.611` (18.11.2026, t296), davor `v0.610` = `b87e3858` (17.11.2026, t291); vorher `v0.6e` = `9a0f3e2d` (13.11.2026) |
-| **Versionsschema** | Seit 0.610. Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. 0.610 steht für den Umbau des Bot-Zugs (t291), 0.611 für einen Fix (Audio-Schleife, t296: +0,001), 0.619 für t298 (Doktrin-DEF echt +0,005, Überlast +0,002, Kampftext +0,001), 0.624 für t300 (Doktrin-Grobkorrektur +0,002, Balance-Gate +0,003), 0.626 für t301 (Etappensicherung +0,002). |
-| **Basis-Commit dieser Übersicht** | Tag `v0.626` auf `main` (t301; davor `v0.624` = t300, `v0.619` = t298, `v0.611` = t296, davor `v0.610` = t291, davor `54eee9ce` = `v0.6e` plus Minen-Token und t286/t289, siehe [Zuletzt gemacht](#4-zuletzt-gemacht)) |
-| **Service-Worker-Cache** | `divcmd-alpha47d` (bei jeder Web-Änderung hochzählen) |
+| **Stand dieser Übersicht** | 20.11.2026 (Berlin), nach t318 (neue Kartengrafik; Version 0.636); Verfahren eingeführt in t286 |
+| **Version** | Alpha **0.636** (`Division_Command/VERSION`), Tag `v0.636` (20.11.2026, t318); davor `v0.626` (19.11.2026, t301), davor `v0.624` (18.11.2026, t300), davor `v0.619` (18.11.2026, t298), davor `v0.611` (18.11.2026, t296), davor `v0.610` = `b87e3858` (17.11.2026, t291); vorher `v0.6e` = `9a0f3e2d` (13.11.2026) |
+| **Versionsschema** | Seit 0.610. Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. 0.610 steht für den Umbau des Bot-Zugs (t291), 0.611 für einen Fix (Audio-Schleife, t296: +0,001), 0.619 für t298 (Doktrin-DEF echt +0,005, Überlast +0,002, Kampftext +0,001), 0.624 für t300 (Doktrin-Grobkorrektur +0,002, Balance-Gate +0,003), 0.626 für t301 (Etappensicherung +0,002), 0.636 für t318 (großer Grafikumbau aller Vorderseiten plus Editor-Funktion „Muster neu würfeln“, +0,010). |
+| **Basis-Commit dieser Übersicht** | Tag `v0.636` auf `main` (t318; davor `v0.626` = t301, davor `v0.624` = t300, `v0.619` = t298, `v0.611` = t296, davor `v0.610` = t291, davor `54eee9ce` = `v0.6e` plus Minen-Token und t286/t289, siehe [Zuletzt gemacht](#4-zuletzt-gemacht)) |
+| **Service-Worker-Cache** | `divcmd-alpha49a` (bei jeder Web-Änderung hochzählen) |
 | **Katalog** | 1.746 Karten-IDs, 16 Nationen, 36 Doktrinen; 1.746 Vorderseiten (Nachzählung 17.11.2026 über `scripts/nation_pools/load_game.js`) |
 | **Letzte dokumentierte Prozentwertung** | 67 % bis Early Access, Kernspiel 77 % (`entwicklung/STATUS_T271.md`, Stand t271). Seitdem **nicht neu bewertet**; die Bereichsgewichte stehen dort. |
 | **CI** | **aktiv** seit t289 (GitHub Actions: `npm test`, `verify.py`, Fuzz, Audit; siehe [`technik/CI.md`](technik/CI.md)) |
@@ -163,10 +163,10 @@ Je Slice: **Umfang** (Ende zu Ende, von Daten über Engine bis Oberfläche), **S
 ### VS-08 Kartenfaces & Grafik, Porträts
 
 - **Umfang:** Vorderseiten (alpha40), Motive, Kartenrückseite, Tischgrafiken, Offiziersporträts, Renderpipeline.
-- **Status: in Arbeit.** Alle 1.746 Vorderseiten existieren und bestehen `verify.py`. Lücken: vorläufige Motive und Porträts.
+- **Status: in Arbeit.** Alle 1.746 Vorderseiten existieren und bestehen `verify.py`. Seit 0.636 (t318) im Stil der kleinen Karten: Titelbanner und AP-Stern wie klein (Titelschrift bleibt die alte alpha40-Schrift), Hintergründe und Textfelder prozedural je Karte (`KartenEditor/tools/texgen.py`, fester Seed je ID in `scripts/graphics/tex-seeds.json`, neu würfeln nur per `render.py --reroll <id>` oder Editor-Knopf), Einheiten wie Runde 3, Ausrüstung mit Ocker-Feld und Winkeln (Bronze 1, Silber 2, Gold 3). Vorschaubilder `faces-v2-thumb/` (300 × 418) für Laufband und Kartenflüge. Gesamtrender etwa 45 min (6 Jobs). Lücken: vorläufige Motive und Porträts.
 - **Code/Werkzeuge:** `scripts/graphics/` (`render.py`, `verify.py`), `scripts/cards-review/kurz.py`, `web/assets/cards/`, `web/assets/portraits/`, `Division_Command/portraits/` (Ebenenwerkzeug), `KartenEditor/`.
 - **Docs:** `technik/KARTEN_RENDER_ALPHA40.md`, `technik/PORTRAIT_SYSTEM.md`, `regeln/KARTEN_KUERZUNGEN.md`, `scripts/graphics/README.md`.
-- **Gates:** `verify.py` (1024 × 1428, Texte, Motivpräsenz), `test_graphics`, `test_card_faces_text`, `test_image_paths`.
+- **Gates:** `verify.py` (1024 × 1428, Texte, Motivpräsenz, Seed-Register, Renderer-Digest), `tests/test_tex_seeds_t315.py` (lokal; Determinismus, Muster je Typ verschieden), `test_graphics`, `test_card_faces_text`, `test_image_paths`.
 - **Offen:**
   - 650 Karten tragen laut t258 ein vorläufiges Motiv („platzhalter“). Heutiger Zähler **nicht neu erhoben**.
   - Porträts: 72 Dateien in 8 Ordnern, Soll 64 Personen in 16 Nationen; Frauen und acht Nationen fehlen, Ordner „Jetzt“/„Ossar“ unklar (t271).
@@ -245,6 +245,7 @@ Quelle: Git-Log (`git log`), `CHANGELOG.md` und die Berichte unter `balance/` un
 
 | Datum | Version / Commit | Inhalt |
 |---|---|---|
+| 20.11.2026 | **0.636** (t318, Tag `v0.636`) | **Neue Kartengrafik (t310–t321):** alle 1.746 Vorderseiten neu im Stil der kleinen Karten; prozedurale Hintergründe/Textfelder mit festem Muster je Karte (Seed-Register, bytegleich reproduzierbar, `--reroll`/Editor-Knopf); Ausrüstung mit Ocker-Feld und Winkeln je Stufe, weiße Schrift mit Navy-Kontur und weichem Schatten; Vorschaubilder für Laufband/Kartenflüge; Cache alpha49a. Regeln, Werte, Texte und Balance unverändert. |
 | 19.11.2026 | **0.626** (t301, Tag `v0.626`) | **Etappensicherung neu gefasst:** heilt zu Zugbeginn 1 an der ruhenden beschädigten Einheit mit größtem Fehlbetrag statt +1 DEF für alle (Text, Kurztext, Fläche, Regel §8.3, Tutorial). Caldris 62,5/64,3 → 49,9/47,2 %, Ausnahme entfernt. Bot-Flügelspiel gemessen, aber zurückgestellt (Gate rot). [`balance/BALANCE_T301.md`](balance/BALANCE_T301.md), Test `test_doctrine_etappen_t301.js`. |
 | 18.11.2026 | **0.624** (t300, Tag `v0.624`) | **Balance-Grobkorrektur p2 und Balance-Gate:** Linienkrieg +1 DEF nur bei drei eigenen im Abschnitt, Auffangen ohne Grundbonus, Gepanzerter Fuß nur ausgerüstet +1 ATK/+1 DEF, Entsatz hält nur +1 ATK (Texte, Kurztexte, 4 Flächen, Regel §8.2). Nationen-SD Misch 9,37 → 6,08, Sahr 74,0 → 56,3 %. Neues Pflicht-Gate `npm run balance-gate` (Band 40–60 %, Ausnahmeliste, Vergleichsstand) und CI-Job `balance-quick`. [`balance/BALANCE_T300.md`](balance/BALANCE_T300.md), [`balance/BALANCE_GATE.md`](balance/BALANCE_GATE.md), Test `test_balance_t300.js`. |
 | 18.11.2026 | **0.619** (t298, Tag `v0.619`) | **Doktrin-DEF echt, Überlast, Kampftext (aus Playtest t297):** Alle bedingten/passiven DEF-Boni waren nur Anzeige (Parlamentsbote zeigte 2/4 und starb an 2 Schaden); jetzt Abgleich nach jeder Aktion und vor jedem Schaden, Bonusverlust nie unter 1 (Regel §8.1). `FLANK_DEF`/`AURA_FRONT_DEF` nicht mehr doppelt. Überlast zerstört wieder (3 stille `_destroy`-Abbrüche). Kampftext „erhält N“ nur bei echtem Gegenschlag. Balance verschoben (Misch 38–75 %), nicht nachjustiert, Vorschlag in [`balance/BALANCE_T298.md`](balance/BALANCE_T298.md). Test `test_doctrine_def_t298.js`, Harness `scripts/balance/*_t298.js`. |
@@ -360,7 +361,26 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 
 **CI (seit t289):** Auf GitHub laufen bei jedem Push/PR auf `main` automatisch `npm test`, `verify.py`, Fuzz und Audit (`.github/workflows/ci.yml`, [`technik/CI.md`](technik/CI.md)). Das ersetzt die lokalen Browser-Gates und `smoke 400` nicht; ein roter Lauf auf der Actions-Seite des Repos ist vor dem nächsten Push zu beheben.
 
-**Letzter Gate-Lauf (19.11.2026, t301, Version 0.626):** Grün:
+**Letzter Gate-Lauf (20.11.2026, t318, Version 0.636):** Grün:
+
+- `npm test` (66 Dateien)
+- `verify.py` und `tests/test_tex_seeds_t315.py` (1.746 eindeutige Seeds, deterministisch, Muster je Typ verschieden)
+- Fuzz 80
+- Smoke 400
+- Audit
+- `balance-gate:quick` (grün). Das volle Gate ist nicht gelaufen: keine Karten- oder Regeländerung, nur Grafik, Editor und Bildpfade.
+- `tutorial-play` und `ui-play` Seed 31337: beim ersten Lauf rot, weil die Box zwischendurch angehalten war (Wanduhr sprang, Zeitüberschreitung bzw. Hänger). Einzeln wiederholt: grün.
+- `reset-play`
+- `layout-test` (0 Befunde)
+- `screens-test` (0 Befunde, 75 Ansichten)
+- `libzoom-play`
+- `lan-play`
+- `funcs-play`
+- `botseq-play`
+- `audio-play`
+- `ui-play` Seed 1234
+
+**Gate-Lauf davor (19.11.2026, t301, Version 0.626):** Grün:
 
 - `npm test` (66 Dateien)
 - `balance-gate` voll (0 Fehler, 3 Warnungen aus 3 Ausnahme-Einträgen) und `balance-gate:quick` (grün)
