@@ -21,6 +21,20 @@ OIL_ANCHORS = {
                  chest_right=(512, 772), chest_left=(300, 800)),
 }
 
+# anchors above were measured for the v1 coat placement; transform to the v2 placement
+V1 = {'rock': dict(k=0.82 / 0.78, y_old=560, y_new=548), 'gala': dict(k=0.88 / 0.85, y_old=556, y_new=552)}
+def _tf(u):
+    t = V1[u]; k = t['k']
+    X = lambda x: 384 + (x - 384) * k
+    Y = lambda y: t['y_new'] + (y - t['y_old']) * k
+    an = OIL_ANCHORS[u]
+    an['boards'] = [(X(x), Y(y), a) for x, y, a in an['boards']]
+    an['patches'] = [(X(x), Y(y), a) for x, y, a in an['patches']]
+    an['board_scale'] *= k; an['patch_scale'] *= k
+    an['chest_right'] = (X(an['chest_right'][0]), Y(an['chest_right'][1]))
+    an['chest_left'] = (X(an['chest_left'][0]), Y(an['chest_left'][1]))
+for _u in V1: _tf(_u)
+
 def _scaled(im, k):
     return im.resize((max(1, int(im.width * k)), max(1, int(im.height * k))), Image.LANCZOS)
 

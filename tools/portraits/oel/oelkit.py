@@ -3,7 +3,7 @@ import os, numpy as np, cv2
 from PIL import Image
 
 W, H = 768, 1024
-EYE_Y, CHIN_Y, CX = 394, 544, 384
+EYE_Y, CHIN_Y, CX = 372, 555, 384   # v2 anchors (bigger head); v1 was 394/544
 
 def load(p):
     return np.asarray(Image.open(p).convert('RGB')).astype(np.float32)
@@ -85,7 +85,14 @@ def fix_olive(rgb, strength=1.0):
     s2 = s_ * (1 - w) + np.minimum(s_, 215) * w
     v2 = v * (1 - w) + v * 1.22 * w
     hsv2 = np.stack([(h2 % 360) / 2, s2, np.minimum(v2, 255)], -1).astype(np.uint8)
-    return cv2.cvtColor(hsv2, cv2.COLOR_HSV2RGB).astype(np.float32)
+    out = cv2.cvtColor(hsv2, cv2.COLOR_HSV2RGB).astype(np.float32)
+    # second pass: any pixel still greener than red (olive remnants) -> pull green down to 0.55*red
+    r, g, b = out[..., 0], out[..., 1], out[..., 2]
+    w2 = np.clip((g - r * 0.92) / (r * 0.12 + 4), 0, 1) * (r < 120)
+    w2 = cv2.GaussianBlur(w2, (0, 0), 1.5) * (r > 14)
+    out[..., 1] = g * (1 - w2) + (r * 0.5) * w2
+    out[..., 0] = r * (1 - w2) + np.maximum(r, g * 0.9) * w2
+    return out
 
 def affine(c, rx, ry, tx, ty):
     """raw point (rx,ry) -> canvas (tx,ty), uniform scale c."""

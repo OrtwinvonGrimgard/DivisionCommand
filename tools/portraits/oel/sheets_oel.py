@@ -3,7 +3,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'
 from portrait_compose import compose, load_manifest
 from PIL import Image, ImageDraw, ImageFont
 
-D = os.environ.get('OEL_OUT', '/workspace/t325-portraits/oel/work/layers')
+D = os.environ.get('OEL_OUT', '/workspace/t325-portraits/oel/work/layers_v2')
 BG = (54, 58, 70)
 FONT = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 15)
 

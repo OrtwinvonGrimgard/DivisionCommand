@@ -87,3 +87,9 @@ Verzeichnis: `web/assets/portraits/layers_oel/` (eigenes `manifest.json`, `style
 Build: `python tools/portraits/oel/oel_build.py all` (venv mit mediapipe/opencv; Rohbilder in `tools/portraits/oel/raw_rothain/`,
 Landmarker-Modell `face_landmarker.task` nach `/workspace/t325-portraits/oel/models/`). Bögen: `tools/portraits/oel/sheets_oel.py ranks|variants`.
 `tools/portrait_compose.py` kennt jetzt optional `uniform_back` und fehlende `hair`-Dateien.
+
+**Update Kopfsitz (v2-Anker):** Die Öl-Köpfe sind größer (Augenlinie y372, Kinn y555, Abstand 183 px statt 150), der Hals ist unter dem Kinn
+um ca. 25 % verschmälert und im Kinnschatten abgedunkelt, die Röcke sind etwas größer/höher gesetzt (Dienstrock c=0.82, Kragenspitzen y548;
+Gala c=0.88, Kragenoberkante y552). Im Dienstrock füllt eine gemalte Untertunika (Stehkragen, Knopfleiste, `uniform_back`) den V-Ausschnitt statt des
+flachen Unterhemds. Mützen sind niedriger (vertikal ×0.40/0.31), Narben neu gezeichnet (Hautton, Brauennarbe endet über dem Lid),
+Olivreste an den Rock-Ärmeln per Farbkorrektur entfernt.
