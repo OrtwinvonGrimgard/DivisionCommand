@@ -68,3 +68,22 @@ Altersstufe nach Lore-Altersbändern (`Raenge.md`): Fhr–Olt jung, Hptm–Maj r
 - Stil: prozedural gerendert (weiche Illustration, keine Ölmalerei) – bewusst anders als die 72 Ölgemälde-Proben.
 - Kein Bart-Layer (Slot `beard` reserviert), keine nationsspezifischen Details (Karsk-Grafts/Implantate am Kopf, Ossaria-Maske) – als eigene Detail-Layer vorgesehen.
 - Nur Frontalansicht; Haar unter Mützen wird nicht ausgeblendet (Haar liegt unter der Mütze, ragt seitlich heraus).
+
+## Anhang: Ölstil-Probe Rothain (`layers_oel/`)
+
+Zweiter Layersatz **nur für Rothain** im Stil der bestehenden Ölgemälde (Probe; Phase 2).
+Verzeichnis: `web/assets/portraits/layers_oel/` (eigenes `manifest.json`, `style: "oil"`).
+
+- **face/** `{m1,m2,f1}_{jung,reif,alt,greis}.webp` – KI-Ölköpfe (GenerateImage, Altersstufen aus dem jungen Master abgeleitet),
+  per mediapipe-Landmarken (Iris/Kinn) affin auf das Raster (Augenlinie y394, Kinn y544, Mitte x384) ausgerichtet und freigestellt.
+  Haar ist eingebacken (kein hair/beard-Layer). Hals ist bei y≈566 beschnitten und in ein dunkles Unterhemd verlängert.
+- **uniform_back/** `{rock,gala}.webp` – liegt UNTER dem Gesicht (Unterhemd im V-Ausschnitt bzw. Kragen-Innenwand der Gala).
+- **uniform/** `{rock,gala}.webp` – leerer Ölrock (kein Rang, keine Epauletten, keine Orden), ohne Tier-Varianten.
+- **headgear/** `{schirm,zweit,parade}.webp` – Ölmützen (vertikal leicht gestaucht, Visierunterkante y≈352/338).
+- **insignia/{uniform}/{rang}.webp**, **orders/{uniform}/{rang}.webp** – prozedural wie v2, auf Ölrock-Anker neu platziert (`oel_insignia.OIL_ANCHORS`) und mit Malfilter (`oelkit.paint`) überarbeitet.
+- **_common/scars/** – wange/braue/kiefer (frei kombinierbar), angepasst + Malfilter.
+- Z-Reihenfolge: `uniform_back, face, uniform, hair, beard, scars, headgear, insignia, orders`.
+
+Build: `python tools/portraits/oel/oel_build.py all` (venv mit mediapipe/opencv; Rohbilder in `tools/portraits/oel/raw_rothain/`,
+Landmarker-Modell `face_landmarker.task` nach `/workspace/t325-portraits/oel/models/`). Bögen: `tools/portraits/oel/sheets_oel.py ranks|variants`.
+`tools/portrait_compose.py` kennt jetzt optional `uniform_back` und fehlende `hair`-Dateien.

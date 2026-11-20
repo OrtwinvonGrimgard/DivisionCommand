@@ -38,11 +38,14 @@ def compose(d, nation, rank, person="m1", uniform=None, headgear=None, scars=(),
             raise FileNotFoundError(p)
         cv.alpha_composite(Image.open(p).convert("RGBA"))
     for z in man["z_order"]:
-        if z == "face":
+        if z == "uniform_back":
+            if "uniform_back" in f:           # oil set: dark undershirt / inner collar wall under the face
+                put(f["uniform_back"].format(**fmt))
+        elif z == "face":
             put(f["face"].format(**fmt))
         elif z == "uniform":
             put(f["uniform"].format(**fmt))
-        elif z == "hair" and hair and not (headgear and headgear != "none" and False):
+        elif z == "hair" and hair and "hair" in f:
             put(f["hair"].format(**fmt))
         elif z == "scars":
             for s in scars:
