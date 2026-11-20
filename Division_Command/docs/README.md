@@ -126,7 +126,8 @@ Ideen, die nicht (vollständig) im Spiel stecken. Übersicht: [entwicklung/READM
 | [CI.md](technik/CI.md) | GitHub-Actions-CI: Trigger, geprüfte Gates, was lokal bleibt. |
 | [BOT_SEQUENZ_T291.md](technik/BOT_SEQUENZ_T291.md) | Bot-Zug in Einzelschritten (Tempo, Denkpausen), Reaktionsfenster für Soforteinsätze, Einstellungen (t291). |
 | [TABLE_CAMERA.md](technik/TABLE_CAMERA.md) | 2,5D-Tischkamera: Einstellungen und CSS-Technik. |
-| [PORTRAIT_SYSTEM.md](technik/PORTRAIT_SYSTEM.md) | Porträtsystem für Offiziere und Ebenen. |
+| [PORTRAIT_SYSTEM.md](technik/PORTRAIT_SYSTEM.md) | Porträtsystem für Offiziere und Ebenen (Ziel/Lore). |
+| [PORTRAIT_OEL_KETTEN.md](technik/PORTRAIT_OEL_KETTEN.md) | Ölgemälde-Ketten der Offiziersporträts (Bestand, Pfade, Manifest; t325). Die ältere Layer-Spezifikation `PORTRAIT_LAYERS_V2.md` ist überholt. |
 | [CHOICE_WIRING.md](technik/CHOICE_WIRING.md) | Verdrahtung von Wahl-Karten und Doktrinen, Bot-Faustregel. |
 | [PLAYTEST_LOGS.md](technik/PLAYTEST_LOGS.md) | Partie-Protokollierung im Browser, Export und Auswertung. |
 | [SOUND_QUELLEN_SFX.md](technik/SOUND_QUELLEN_SFX.md) | Herkunft und Stil der Soundeffekte (SFX v4). |

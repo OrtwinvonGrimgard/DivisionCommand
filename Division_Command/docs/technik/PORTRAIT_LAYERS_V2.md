@@ -1,4 +1,8 @@
-# Porträt-Layer v2 – Spezifikation (t325)
+# Porträt-Layer v2 – Spezifikation (t325, **überholt**)
+
+> **Überholt (t325, 20.11.2026).** Der prozedurale Layer-Ansatz und die spätere Ölstil-Probe (`layers/`, `layers_oel/`) sind verworfen. Die Asset-Ordner wurden aus dem Baum entfernt. Maßgeblich sind jetzt die Ölgemälde-Ketten: [`PORTRAIT_OEL_KETTEN.md`](PORTRAIT_OEL_KETTEN.md), Dateien unter `web/assets/portraits/oel_ketten/`. Die Erzeugungsskripte unter `tools/portraits/` bleiben als Werkstattcode stehen, werden aber nicht mehr für den Bestand verwendet. Der folgende Text ist die historische Spezifikation.
+
+# Historische Spezifikation (nicht mehr im Asset-Baum)
 
 Stand: 2026-11-20. Ergänzt `PORTRAIT_SYSTEM.md` (Ziel/Lore), ersetzt aber nicht den gesperrten Master-Frame in `portraits/frame.json` (1152×1728). v2 ist ein eigenes, vollständig prozedural erzeugtes Layer-Set.
 

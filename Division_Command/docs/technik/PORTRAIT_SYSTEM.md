@@ -1,6 +1,7 @@
 # Division Command — Portrait System
 
-Stand: 2026-10-02
+Stand: 2026-10-02. Ergänzung 20.11.2026 (t325): Der aktuelle Produktionsbestand sind Ölgemälde-Ketten, siehe [`PORTRAIT_OEL_KETTEN.md`](PORTRAIT_OEL_KETTEN.md). Der ältere Layer-Plan in diesem Dokument bleibt als Zielbild stehen; die prozeduralen Layer-Assets sind entfernt ([`PORTRAIT_LAYERS_V2.md`](PORTRAIT_LAYERS_V2.md) ist überholt).
+
 
 ## Ziel
 
