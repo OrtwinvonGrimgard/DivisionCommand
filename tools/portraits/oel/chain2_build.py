@@ -1,29 +1,64 @@
 #!/usr/bin/env python3
-"""v2 oil chains (Rothain): aligned 864x1152 paintings -> webp, per-person scar layers (plastic), manifest, sheets.
-Work dir: <WORK>/<rock|gala>/<m1|m2|f1|f2>/{raw,aligned}   (WORK=/workspace/t325-portraits/oel/v2)
+"""v2 oil chains: aligned 864x1152 paintings -> webp, per-person scar layers (plastic), manifest, sheets.
+
+Nation-aware. Env:
+  CHAIN2_NATION  rothain (default) | karsk | ...
+  CHAIN2_WORK    work root (default depends on nation)
+  CHAIN2_OUT     export root (default .../oel_ketten)
+  CHAIN2_SHEETS  sheet dir (default /workspace/t325-portraits/oel)
+
+Work dir: <WORK>/<uni_key>/<m1|m2|f1|f2>/{raw,aligned}
+Export:   <OUT>/<nation>/<uni_name>/<person>/NN_rank.webp + scars/
+Manifest: rothain keeps legacy <OUT>/manifest.json; other nations write <OUT>/<nation>/manifest.json
+
 Usage: chain2_build.py export | sheets | detail
-Env: CHAIN2_WORK, CHAIN2_OUT, CHAIN2_SHEETS"""
+"""
 import sys, os, json
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
-WORK = os.environ.get('CHAIN2_WORK', '/workspace/t325-portraits/oel/v2')
+
+NATION = os.environ.get('CHAIN2_NATION', 'rothain')
+UNI_BY_NATION = {
+    'rothain': {'rock': 'dienstrock', 'gala': 'gala'},
+    'karsk':   {'panzer': 'panzer', 'tech': 'tech'},
+}
+WORK_DEFAULT = {
+    'rothain': '/workspace/t325-portraits/oel/v2',
+    'karsk':   '/workspace/t325-portraits/oel/v2_karsk',
+}
+UNI = UNI_BY_NATION[NATION]
+WORK = os.environ.get('CHAIN2_WORK', WORK_DEFAULT.get(NATION, '/workspace/t325-portraits/oel/v2'))
 OUT = os.environ.get('CHAIN2_OUT', os.path.join(HERE, '..', '..', '..', 'Division_Command', 'web', 'assets', 'portraits', 'oel_ketten'))
 SHEETS = os.environ.get('CHAIN2_SHEETS', '/workspace/t325-portraits/oel')
 W, H = 864, 1152
-UNI = {'rock': 'dienstrock', 'gala': 'gala'}
 PERSONS = ['m1', 'm2', 'f1', 'f2']
-RANKS = [('faehnrich', 'Fähnrich', 19), ('oberfaehnrich', 'Oberfähnrich', 21), ('leutnant', 'Leutnant', 23), ('oberleutnant', 'Oberleutnant', 26),
-         ('hauptmann', 'Hauptmann', 30), ('stabshauptmann', 'Stabshauptmann', 34), ('major', 'Major', 38), ('oberstleutnant', 'Oberstleutnant', 42),
-         ('oberst', 'Oberst', 46), ('brigadegeneral', 'Brigadegeneral', 50), ('generalmajor', 'Generalmajor', 53), ('generalleutnant', 'Generalleutnant', 56),
-         ('general', 'General', 60), ('generaloberst', 'Generaloberst', 63), ('feldmarschall', 'Feldmarschall', 67), ('generalfeldmarschall', 'Generalfeldmarschall', 70)]
-# scar geometry lives in the v2 face frame (eye y372, chin y555, cx384, 183 px eye->chin)
-SCAR_OFF = {'wange': (-9, -13), 'braue': (0, 5), 'kiefer': (14, -10)}   # px at 864 wide, relative to the face (scaled by eye-chin)
-PERSON_OFF = {}   # optional per (uni,person,scar) fine offsets: {('rock','f1','kiefer'): (dx,dy)}
+
+RANKS_ROTHAIN = [
+    ('faehnrich', 'Fähnrich', 19), ('oberfaehnrich', 'Oberfähnrich', 21), ('leutnant', 'Leutnant', 23), ('oberleutnant', 'Oberleutnant', 26),
+    ('hauptmann', 'Hauptmann', 30), ('stabshauptmann', 'Stabshauptmann', 34), ('major', 'Major', 38), ('oberstleutnant', 'Oberstleutnant', 42),
+    ('oberst', 'Oberst', 46), ('brigadegeneral', 'Brigadegeneral', 50), ('generalmajor', 'Generalmajor', 53), ('generalleutnant', 'Generalleutnant', 56),
+    ('general', 'General', 60), ('generaloberst', 'Generaloberst', 63), ('feldmarschall', 'Feldmarschall', 67), ('generalfeldmarschall', 'Generalfeldmarschall', 70),
+]
+# Karsk chronological ages from Raenge.md (they often LOOK younger due to Körper-optimization)
+RANKS_KARSK = [
+    ('faehnrich', 'Fähnrich', 19), ('oberfaehnrich', 'Oberfähnrich', 22), ('leutnant', 'Leutnant', 24), ('oberleutnant', 'Oberleutnant', 29),
+    ('hauptmann', 'Hauptmann', 35), ('stabshauptmann', 'Stabshauptmann', 39), ('major', 'Major', 41), ('oberstleutnant', 'Oberstleutnant', 47),
+    ('oberst', 'Oberst', 53), ('brigadegeneral', 'Brigadegeneral', 59), ('generalmajor', 'Generalmajor', 65), ('generalleutnant', 'Generalleutnant', 71),
+    ('general', 'General', 77), ('generaloberst', 'Generaloberst', 82), ('feldmarschall', 'Feldmarschall', 86), ('generalfeldmarschall', 'Generalfeldmarschall', 92),
+]
+RANKS = {'rothain': RANKS_ROTHAIN, 'karsk': RANKS_KARSK}.get(NATION, RANKS_ROTHAIN)
+
+SCAR_OFF = {'wange': (-9, -13), 'braue': (0, 5), 'kiefer': (14, -10)}
+PERSON_OFF = {}
 
 def fname(i): return f'{i+1:02d}_{RANKS[i][0]}'
 def adir(u, p): return f'{WORK}/{u}/{p}/aligned'
 def have(u, p): return os.path.isdir(adir(u, p)) and len([f for f in os.listdir(adir(u, p)) if f[:2].isdigit()]) == 16
+def man_path():
+    if NATION == 'rothain':
+        return f'{OUT}/manifest.json'
+    return f'{OUT}/{NATION}/manifest.json'
 
 def anchors(u, p):
     from oelkit import landmarks, load
@@ -64,7 +99,7 @@ def render_scar(name, an, off):
         d.polygon(poly, fill=90); stroke(curve((424, 482), (418, 548), 4), 3.4)
     ridge = np.asarray(mask.filter(ImageFilter.GaussianBlur(1.1 * SS)), np.float32) / 255
     wide = np.asarray(mask.filter(ImageFilter.GaussianBlur(2.6 * SS)), np.float32) / 255
-    gy, gx = np.gradient(ridge); light = -(gx + gy) * 14 * SS            # light from upper left: + lit slope, - shadow slope
+    gy, gx = np.gradient(ridge); light = -(gx + gy) * 14 * SS
     hl = np.clip(light, 0, 1); sh = np.clip(-light, 0, 1)
     core = np.clip(ridge * 2.6, 0, 1)
     out = np.zeros((H * SS, W * SS, 4), np.float32)
@@ -73,17 +108,17 @@ def render_scar(name, an, off):
         a = np.clip(a, 0, 1)[..., None]; c = np.array(col, np.float32)
         oa = out[..., 3:4]; na = a + oa * (1 - a)
         out[..., :3] = np.where(na > 0, (c * a + out[..., :3] * oa * (1 - a)) / np.maximum(na, 1e-6), 0); out[..., 3:4] = na
-    over((92, 48, 40), wide * 0.55 * (1 - core * 0.4))        # soft dark groove around the ridge
-    over((150, 84, 72), core * 0.55)                          # rosy scar tissue
-    over((228, 178, 156), hl * 0.5 * (core > 0.05))         # specular lit edge
-    over((60, 26, 20), sh * 0.55 * (core > 0.05))             # shadowed edge
+    over((92, 48, 40), wide * 0.55 * (1 - core * 0.4))
+    over((150, 84, 72), core * 0.55)
+    over((228, 178, 156), hl * 0.5 * (core > 0.05))
+    over((60, 26, 20), sh * 0.55 * (core > 0.05))
     out[..., 3] *= 255; im = Image.fromarray((np.clip(out, 0, 255)).astype(np.uint8), 'RGBA')
     d2 = ImageDraw.Draw(im)
     for a, b in ticks: d2.line([a, b], fill=(84, 44, 38, 110), width=max(1, int(1.2 * SS)))
     return im.filter(ImageFilter.GaussianBlur(0.4 * SS)).resize((W, H), Image.LANCZOS)
 
 def export():
-    man = dict(version=2, style='oil-chain', nation='rothain', canvas=[W, H],
+    man = dict(version=2, style='oil-chain', nation=NATION, canvas=[W, H],
                format='webp q90, opaque painting, flat dark canvas background; native generator resolution 864x1152 (3:4), no downscale',
                note='Each rank image is an edit of the previous rank (same pose/crop/light), landmark-aligned (single Lanczos resample) to the Faehnrich master (eyes/chin). Scars are separate alpha layers per person, same canvas size, z_order painting+scars.',
                z_order=['painting', 'scars'], headgear='none', rank_ids=[r[0] for r in RANKS], ranks=[dict(id=r[0], name=r[1], approx_age=r[2]) for r in RANKS], uniforms={})
@@ -91,7 +126,7 @@ def export():
         man['uniforms'][un] = dict(persons={})
         for p in PERSONS:
             if not have(u, p): continue
-            d = f'{OUT}/rothain/{un}/{p}'; os.makedirs(d + '/scars', exist_ok=True)
+            d = f'{OUT}/{NATION}/{un}/{p}'; os.makedirs(d + '/scars', exist_ok=True)
             for i in range(16):
                 Image.open(f'{adir(u, p)}/{fname(i)}.jpg').convert('RGB').save(f'{d}/{fname(i)}.webp', quality=90, method=6)
             an = anchors(u, p); offs = {}
@@ -99,15 +134,18 @@ def export():
                 o = PERSON_OFF.get((u, p, k), (0, 0)); offs[k] = [round(SCAR_OFF[k][0] + o[0], 1), round(SCAR_OFF[k][1] + o[1], 1)]
                 render_scar(k, an, offs[k]).save(f'{d}/scars/{k}.webp', quality=95, method=6)
             man['uniforms'][un]['persons'][p] = dict(
-                files=[f'rothain/{un}/{p}/{fname(i)}.webp' for i in range(16)],
+                files=[f'{NATION}/{un}/{p}/{fname(i)}.webp' for i in range(16)],
                 anchors=dict(eye_mid=[round(v, 1) for v in an['eye_mid']], chin_y=round(an['chin_y'], 1), eye_chin=round(an['eye_chin'], 1)),
-                scars={k: dict(file=f'rothain/{un}/{p}/scars/{k}.webp', offset_px=offs[k]) for k in SCAR_OFF}, scar_mode='multi (freely combinable)')
-            print('exported', u, p)
-    json.dump(man, open(f'{OUT}/manifest.json', 'w'), indent=1, ensure_ascii=False)
+                scars={k: dict(file=f'{NATION}/{un}/{p}/scars/{k}.webp', offset_px=offs[k]) for k in SCAR_OFF}, scar_mode='multi (freely combinable)')
+            print('exported', NATION, u, p)
+    path = man_path()
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    json.dump(man, open(path, 'w'), indent=1, ensure_ascii=False)
+    print('wrote', path)
 
 def compose(un, p, i, scars=()):
-    im = Image.open(f'{OUT}/rothain/{un}/{p}/{fname(i)}.webp').convert('RGBA')
-    for s in scars: im.alpha_composite(Image.open(f'{OUT}/rothain/{un}/{p}/scars/{s}.webp').convert('RGBA'))
+    im = Image.open(f'{OUT}/{NATION}/{un}/{p}/{fname(i)}.webp').convert('RGBA')
+    for s in scars: im.alpha_composite(Image.open(f'{OUT}/{NATION}/{un}/{p}/scars/{s}.webp').convert('RGBA'))
     return im.convert('RGB')
 
 def sheet(path, items, cols=4, tw=324):
@@ -123,14 +161,18 @@ def sheets():
         for p in PERSONS:
             if not have(u, p): continue
             tag = f'{un}_{p}'
-            sheet(f'{SHEETS}/kette_rothain_{tag}.jpg', [(un, p, i, (), f'{p} {un} · {i+1:02d} {RANKS[i][1]} (~{RANKS[i][2]})') for i in range(16)])
+            sheet(f'{SHEETS}/kette_{NATION}_{tag}.jpg', [(un, p, i, (), f'{p} {un} · {i+1:02d} {RANKS[i][1]} (~{RANKS[i][2]})') for i in range(16)])
             var = [(0, ('wange',)), (4, ('braue',)), (8, ('wange', 'braue')), (12, ('kiefer',)), (7, ('wange', 'kiefer')), (10, ('braue', 'kiefer')), (15, ('wange', 'braue', 'kiefer')), (2, ('wange', 'braue', 'kiefer'))]
-            sheet(f'{SHEETS}/kette_rothain_{tag}_narben.jpg', [(un, p, i, sc, f'{p} · {i+1:02d} {RANKS[i][1]} · {"+".join(sc)}') for i, sc in var])
+            sheet(f'{SHEETS}/kette_{NATION}_{tag}_narben.jpg', [(un, p, i, sc, f'{p} · {i+1:02d} {RANKS[i][1]} · {"+".join(sc)}') for i, sc in var])
     items = [(UNI[u], p, i, (), f'{p} {UNI[u]} · {RANKS[i][1]}') for u in UNI for p in PERSONS if have(u, p) for i in (0, 8, 15)]
-    sheet(f'{SHEETS}/kette_rothain_uebersicht.jpg', items, cols=6, tw=240)
+    if items:
+        cols = 6 if len(items) >= 6 else max(3, len(items))
+        sheet(f'{SHEETS}/kette_{NATION}_uebersicht.jpg', items, cols=cols, tw=240)
 
 def detail():
-    old = Image.open('/workspace/t325-portraits/oel/kette/aligned/09_oberst.jpg').convert('RGB')      # old m1 (864x1152 raw, downscaled in export)
+    if NATION != 'rothain':
+        print('detail is Rothain-only, skip'); return
+    old = Image.open('/workspace/t325-portraits/oel/kette/aligned/09_oberst.jpg').convert('RGB')
     new = Image.open(f'{WORK}/rock/m1/aligned/09_oberst.jpg').convert('RGB')
     old2 = Image.open('/workspace/t325-portraits/oel/kette/aligned/16_generalfeldmarschall.jpg').convert('RGB')
     new2 = Image.open(f'{WORK}/rock/m1/aligned/16_generalfeldmarschall.jpg').convert('RGB')
@@ -140,7 +182,6 @@ def detail():
     for n, (im, b, lab) in enumerate([(old, box, 'ALT (Phase 3) Gesicht 100%'), (new, box, 'NEU Gesicht 100%'), (old, box2, 'ALT Uniform 100%'), (new, box2, 'NEU Uniform 100%')]):
         x, y = (n % 4) * 405, 0
         out.paste(im.crop(b), (x, 24)); dr.text((x + 4, 3), lab, fill=(255, 255, 255), font=f)
-    # second row: rank 16
     for n, (im, b, lab) in enumerate([(old2, (0, 400, 400, 800), 'ALT R16 Epaulette 100%'), (new2, (0, 400, 400, 800), 'NEU R16 Epaulette 100%'), (old2, (230, 150, 630, 550), 'ALT R16 Gesicht'), (new2, (230, 150, 630, 550), 'NEU R16 Gesicht')]):
         x, y = (n % 4) * 405, 420
         out.paste(im.crop(b), (x, y + 24)); dr.text((x + 4, y + 3), lab, fill=(255, 255, 255), font=f)
