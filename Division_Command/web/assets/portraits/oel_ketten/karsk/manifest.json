@@ -1,0 +1,333 @@
+{
+ "version": 2,
+ "style": "oil-chain",
+ "nation": "karsk",
+ "canvas": [
+  864,
+  1152
+ ],
+ "format": "webp q90, opaque painting, flat dark canvas background; native generator resolution 864x1152 (3:4), no downscale",
+ "note": "Each rank image is an edit of the previous rank (same pose/crop/light), landmark-aligned (single Lanczos resample) to the Faehnrich master (eyes/chin). Scars are separate alpha layers per person, same canvas size, z_order painting+scars.",
+ "z_order": [
+  "painting",
+  "scars"
+ ],
+ "headgear": "none",
+ "rank_ids": [
+  "faehnrich",
+  "oberfaehnrich",
+  "leutnant",
+  "oberleutnant",
+  "hauptmann",
+  "stabshauptmann",
+  "major",
+  "oberstleutnant",
+  "oberst",
+  "brigadegeneral",
+  "generalmajor",
+  "generalleutnant",
+  "general",
+  "generaloberst",
+  "feldmarschall",
+  "generalfeldmarschall"
+ ],
+ "ranks": [
+  {
+   "id": "faehnrich",
+   "name": "Fähnrich",
+   "approx_age": 19
+  },
+  {
+   "id": "oberfaehnrich",
+   "name": "Oberfähnrich",
+   "approx_age": 22
+  },
+  {
+   "id": "leutnant",
+   "name": "Leutnant",
+   "approx_age": 24
+  },
+  {
+   "id": "oberleutnant",
+   "name": "Oberleutnant",
+   "approx_age": 29
+  },
+  {
+   "id": "hauptmann",
+   "name": "Hauptmann",
+   "approx_age": 35
+  },
+  {
+   "id": "stabshauptmann",
+   "name": "Stabshauptmann",
+   "approx_age": 39
+  },
+  {
+   "id": "major",
+   "name": "Major",
+   "approx_age": 41
+  },
+  {
+   "id": "oberstleutnant",
+   "name": "Oberstleutnant",
+   "approx_age": 47
+  },
+  {
+   "id": "oberst",
+   "name": "Oberst",
+   "approx_age": 53
+  },
+  {
+   "id": "brigadegeneral",
+   "name": "Brigadegeneral",
+   "approx_age": 59
+  },
+  {
+   "id": "generalmajor",
+   "name": "Generalmajor",
+   "approx_age": 65
+  },
+  {
+   "id": "generalleutnant",
+   "name": "Generalleutnant",
+   "approx_age": 71
+  },
+  {
+   "id": "general",
+   "name": "General",
+   "approx_age": 77
+  },
+  {
+   "id": "generaloberst",
+   "name": "Generaloberst",
+   "approx_age": 82
+  },
+  {
+   "id": "feldmarschall",
+   "name": "Feldmarschall",
+   "approx_age": 86
+  },
+  {
+   "id": "generalfeldmarschall",
+   "name": "Generalfeldmarschall",
+   "approx_age": 92
+  }
+ ],
+ "uniforms": {
+  "panzer": {
+   "persons": {
+    "m1": {
+     "files": [
+      "karsk/panzer/m1/01_faehnrich.webp",
+      "karsk/panzer/m1/02_oberfaehnrich.webp",
+      "karsk/panzer/m1/03_leutnant.webp",
+      "karsk/panzer/m1/04_oberleutnant.webp",
+      "karsk/panzer/m1/05_hauptmann.webp",
+      "karsk/panzer/m1/06_stabshauptmann.webp",
+      "karsk/panzer/m1/07_major.webp",
+      "karsk/panzer/m1/08_oberstleutnant.webp",
+      "karsk/panzer/m1/09_oberst.webp",
+      "karsk/panzer/m1/10_brigadegeneral.webp",
+      "karsk/panzer/m1/11_generalmajor.webp",
+      "karsk/panzer/m1/12_generalleutnant.webp",
+      "karsk/panzer/m1/13_general.webp",
+      "karsk/panzer/m1/14_generaloberst.webp",
+      "karsk/panzer/m1/15_feldmarschall.webp",
+      "karsk/panzer/m1/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       421.4,
+       309.8
+      ],
+      "chin_y": 521.9,
+      "eye_chin": 212.1
+     },
+     "scars": {
+      "wange": {
+       "file": "karsk/panzer/m1/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "karsk/panzer/m1/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "karsk/panzer/m1/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    },
+    "m2": {
+     "files": [
+      "karsk/panzer/m2/01_faehnrich.webp",
+      "karsk/panzer/m2/02_oberfaehnrich.webp",
+      "karsk/panzer/m2/03_leutnant.webp",
+      "karsk/panzer/m2/04_oberleutnant.webp",
+      "karsk/panzer/m2/05_hauptmann.webp",
+      "karsk/panzer/m2/06_stabshauptmann.webp",
+      "karsk/panzer/m2/07_major.webp",
+      "karsk/panzer/m2/08_oberstleutnant.webp",
+      "karsk/panzer/m2/09_oberst.webp",
+      "karsk/panzer/m2/10_brigadegeneral.webp",
+      "karsk/panzer/m2/11_generalmajor.webp",
+      "karsk/panzer/m2/12_generalleutnant.webp",
+      "karsk/panzer/m2/13_general.webp",
+      "karsk/panzer/m2/14_generaloberst.webp",
+      "karsk/panzer/m2/15_feldmarschall.webp",
+      "karsk/panzer/m2/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       401.7,
+       285.9
+      ],
+      "chin_y": 533.5,
+      "eye_chin": 247.6
+     },
+     "scars": {
+      "wange": {
+       "file": "karsk/panzer/m2/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "karsk/panzer/m2/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "karsk/panzer/m2/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    },
+    "f1": {
+     "files": [
+      "karsk/panzer/f1/01_faehnrich.webp",
+      "karsk/panzer/f1/02_oberfaehnrich.webp",
+      "karsk/panzer/f1/03_leutnant.webp",
+      "karsk/panzer/f1/04_oberleutnant.webp",
+      "karsk/panzer/f1/05_hauptmann.webp",
+      "karsk/panzer/f1/06_stabshauptmann.webp",
+      "karsk/panzer/f1/07_major.webp",
+      "karsk/panzer/f1/08_oberstleutnant.webp",
+      "karsk/panzer/f1/09_oberst.webp",
+      "karsk/panzer/f1/10_brigadegeneral.webp",
+      "karsk/panzer/f1/11_generalmajor.webp",
+      "karsk/panzer/f1/12_generalleutnant.webp",
+      "karsk/panzer/f1/13_general.webp",
+      "karsk/panzer/f1/14_generaloberst.webp",
+      "karsk/panzer/f1/15_feldmarschall.webp",
+      "karsk/panzer/f1/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       481.8,
+       308.6
+      ],
+      "chin_y": 537.8,
+      "eye_chin": 229.3
+     },
+     "scars": {
+      "wange": {
+       "file": "karsk/panzer/f1/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "karsk/panzer/f1/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "karsk/panzer/f1/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    },
+    "f2": {
+     "files": [
+      "karsk/panzer/f2/01_faehnrich.webp",
+      "karsk/panzer/f2/02_oberfaehnrich.webp",
+      "karsk/panzer/f2/03_leutnant.webp",
+      "karsk/panzer/f2/04_oberleutnant.webp",
+      "karsk/panzer/f2/05_hauptmann.webp",
+      "karsk/panzer/f2/06_stabshauptmann.webp",
+      "karsk/panzer/f2/07_major.webp",
+      "karsk/panzer/f2/08_oberstleutnant.webp",
+      "karsk/panzer/f2/09_oberst.webp",
+      "karsk/panzer/f2/10_brigadegeneral.webp",
+      "karsk/panzer/f2/11_generalmajor.webp",
+      "karsk/panzer/f2/12_generalleutnant.webp",
+      "karsk/panzer/f2/13_general.webp",
+      "karsk/panzer/f2/14_generaloberst.webp",
+      "karsk/panzer/f2/15_feldmarschall.webp",
+      "karsk/panzer/f2/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       399.3,
+       312.7
+      ],
+      "chin_y": 529.7,
+      "eye_chin": 217.1
+     },
+     "scars": {
+      "wange": {
+       "file": "karsk/panzer/f2/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "karsk/panzer/f2/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "karsk/panzer/f2/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    }
+   }
+  },
+  "tech": {
+   "persons": {}
+  }
+ }
+}
