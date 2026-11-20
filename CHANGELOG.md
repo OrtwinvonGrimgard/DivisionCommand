@@ -4,6 +4,16 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.641 Alpha – 20.11.2026
+
+Offiziersporträts als Ölgemälde-Ketten (t325, Gewicht +0,005: spürbare Erweiterung des Grafikbestands). Freigabe des Projektleiters: „Mach pause und push erstmal“. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.
+
+- **Ölgemälde-Ketten** unter `Division_Command/web/assets/portraits/oel_ketten/`: je Nation vier Personen (zwei Männer, zwei Frauen) in zwei Uniformen, 16 Ränge vom Fähnrich bis zum Generalfeldmarschall (864 × 1152, WebP). Jede Kette ist ein durchgehendes Gemälde, das Rang für Rang weiterbearbeitet wird. Narben (`wange`, `braue`, `kiefer`) liegen als eigene Layer darüber und sind frei kombinierbar. Beschreibung: `docs/technik/PORTRAIT_OEL_KETTEN.md`.
+- **Fertig:** Rothain (`dienstrock`, `gala`) und Karsk (`panzer`, `tech`), zusammen 16 Ketten. 14 Nationen fehlen noch. Averon hat vorerst nur Unterstützung im Baukasten `tools/portraits/oel/chain2_build.py`, keine Bilder.
+- **Karsk:** Offiziere bleiben optisch jung, das Alter zeigt sich an Implantaten (lore-treu). Ob sichtbar gealtert werden soll, ist offen.
+- **Aufräumen:** Die verworfenen Layer-Ansätze `web/assets/portraits/layers/` und `layers_oel/` sind aus dem Baum entfernt. `docs/technik/PORTRAIT_LAYERS_V2.md` ist als überholt gekennzeichnet.
+- **Noch nicht verdrahtet:** `web/js/ui/portraits.js` und der Karteneditor nutzen weiter die älteren Einzelporträts. Deshalb bleibt der Service-Worker-Cache `divcmd-alpha49a` unverändert (HTML/JS bereits Netzwerk zuerst; die neuen Bilder stehen nicht in der App-Shell).
+
 ## 0.636 Alpha – 20.11.2026
 
 Neue Kartengrafik (t310–t321, Gewicht +0,010: großer Grafikumbau plus Editor-Funktion). Freigabe des Projektleiters: „push es direkt“. Spielregeln, Kartenwerte und Kartentexte sind unverändert; die Balance ist nicht berührt.

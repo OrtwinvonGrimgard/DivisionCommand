@@ -4,10 +4,10 @@
 
 | | |
 |---|---|
-| **Stand dieser Übersicht** | 20.11.2026 (Berlin), nach t318 (neue Kartengrafik; Version 0.636); Verfahren eingeführt in t286 |
-| **Version** | Alpha **0.636** (`Division_Command/VERSION`), Tag `v0.636` (20.11.2026, t318); davor `v0.626` (19.11.2026, t301), davor `v0.624` (18.11.2026, t300), davor `v0.619` (18.11.2026, t298), davor `v0.611` (18.11.2026, t296), davor `v0.610` = `b87e3858` (17.11.2026, t291); vorher `v0.6e` = `9a0f3e2d` (13.11.2026) |
-| **Versionsschema** | Seit 0.610. Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. 0.610 steht für den Umbau des Bot-Zugs (t291), 0.611 für einen Fix (Audio-Schleife, t296: +0,001), 0.619 für t298 (Doktrin-DEF echt +0,005, Überlast +0,002, Kampftext +0,001), 0.624 für t300 (Doktrin-Grobkorrektur +0,002, Balance-Gate +0,003), 0.626 für t301 (Etappensicherung +0,002), 0.636 für t318 (großer Grafikumbau aller Vorderseiten plus Editor-Funktion „Muster neu würfeln“, +0,010). |
-| **Basis-Commit dieser Übersicht** | Tag `v0.636` auf `main` (t318; davor `v0.626` = t301, davor `v0.624` = t300, `v0.619` = t298, `v0.611` = t296, davor `v0.610` = t291, davor `54eee9ce` = `v0.6e` plus Minen-Token und t286/t289, siehe [Zuletzt gemacht](#4-zuletzt-gemacht)) |
+| **Stand dieser Übersicht** | 20.11.2026 (Berlin), nach t325 (Offiziersporträts als Ölgemälde-Ketten; Version 0.641); Verfahren eingeführt in t286 |
+| **Version** | Alpha **0.641** (`Division_Command/VERSION`), Tag `v0.641` (20.11.2026, t325); davor `v0.636` (20.11.2026, t318), davor `v0.626` (19.11.2026, t301), davor `v0.624` (18.11.2026, t300), davor `v0.619` (18.11.2026, t298), davor `v0.611` (18.11.2026, t296), davor `v0.610` = `b87e3858` (17.11.2026, t291); vorher `v0.6e` = `9a0f3e2d` (13.11.2026) |
+| **Versionsschema** | Seit 0.610. Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. 0.610 steht für den Umbau des Bot-Zugs (t291), 0.611 für einen Fix (Audio-Schleife, t296: +0,001), 0.619 für t298 (Doktrin-DEF echt +0,005, Überlast +0,002, Kampftext +0,001), 0.624 für t300 (Doktrin-Grobkorrektur +0,002, Balance-Gate +0,003), 0.626 für t301 (Etappensicherung +0,002), 0.636 für t318 (großer Grafikumbau aller Vorderseiten plus Editor-Funktion „Muster neu würfeln“, +0,010), 0.641 für t325 (Ölgemälde-Ketten der Offiziersporträts für Rothain und Karsk, +0,005). |
+| **Basis-Commit dieser Übersicht** | Tag `v0.641` auf `main` (t325; davor `v0.636` = t318, davor `v0.626` = t301, davor `v0.624` = t300, `v0.619` = t298, `v0.611` = t296, davor `v0.610` = t291, davor `54eee9ce` = `v0.6e` plus Minen-Token und t286/t289, siehe [Zuletzt gemacht](#4-zuletzt-gemacht)) |
 | **Service-Worker-Cache** | `divcmd-alpha49a` (bei jeder Web-Änderung hochzählen) |
 | **Katalog** | 1.746 Karten-IDs, 16 Nationen, 36 Doktrinen; 1.746 Vorderseiten (Nachzählung 17.11.2026 über `scripts/nation_pools/load_game.js`) |
 | **Letzte dokumentierte Prozentwertung** | 67 % bis Early Access, Kernspiel 77 % (`entwicklung/STATUS_T271.md`, Stand t271). Seitdem **nicht neu bewertet**; die Bereichsgewichte stehen dort. |
@@ -56,7 +56,7 @@ Entscheidungen des Projektleiters. Sie stehen hier gebündelt, damit sie nicht i
 | [VS-05](#vs-05-balance) | Balance | in Arbeit | Ziel 50 %; seit 0.626 Nationen 44–60 % (Caldris 49,9/47,2 %), Ausnahmeliste nur noch Merovan Misch, Bollwerk, Scheinschwerpunkt; Balance-Gate misst bei jeder Änderung (CI: Schnellvariante). |
 | [VS-06](#vs-06-lore--nationentiefe) | Lore & Nationentiefe | fertig | 16 Hauptdokumente je Nation, Kurzprofile, Aufsätze; Einbindung ins Spiel schmal. |
 | [VS-07](#vs-07-oberfläche-menüs-tisch-bibliothek) | Oberfläche: Menüs, Tisch, Bibliothek | in Arbeit | Designsystem t280, Tisch-HUD, Bibliothek, Bot-Ticker und Reaktionsfenster (t291), Audio-Schleife am Tisch behoben (t296); Playtest: Rückmeldung bei Aktionen zu schwach; 2,5D-Ansicht nicht auf Zielgeräten geprüft. |
-| [VS-08](#vs-08-kartenfaces--grafik-porträts) | Kartenfaces & Grafik, Porträts | in Arbeit | Vorderseiten komplett; vorläufige Motive und Porträtlücken. |
+| [VS-08](#vs-08-kartenfaces--grafik-porträts) | Kartenfaces & Grafik, Porträts | in Arbeit | Vorderseiten komplett; Ölketten Rothain + Karsk fertig, 14 Nationen und die Verdrahtung offen. |
 | [VS-09](#vs-09-sound--musik) | Sound & Musik | fertig | 15 Musikstücke, 205 Effektdateien (SFX v4), Optionen; Audio-Schleife am Tisch behoben (t296). |
 | [VS-10](#vs-10-tutorial--onboarding) | Tutorial & Onboarding | fertig | „Grundausbildung“, 25 Schritte, Erststart, Test grün. |
 | [VS-11](#vs-11-mehrspieler--lan) | Mehrspieler / LAN | in Arbeit | Sicht je Spieler, gehärteter Server; nie mit zwei Rechnern gespielt. |
@@ -163,13 +163,13 @@ Je Slice: **Umfang** (Ende zu Ende, von Daten über Engine bis Oberfläche), **S
 ### VS-08 Kartenfaces & Grafik, Porträts
 
 - **Umfang:** Vorderseiten (alpha40), Motive, Kartenrückseite, Tischgrafiken, Offiziersporträts, Renderpipeline.
-- **Status: in Arbeit.** Alle 1.746 Vorderseiten existieren und bestehen `verify.py`. Seit 0.636 (t318) im Stil der kleinen Karten: Titelbanner und AP-Stern wie klein (Titelschrift bleibt die alte alpha40-Schrift), Hintergründe und Textfelder prozedural je Karte (`KartenEditor/tools/texgen.py`, fester Seed je ID in `scripts/graphics/tex-seeds.json`, neu würfeln nur per `render.py --reroll <id>` oder Editor-Knopf), Einheiten wie Runde 3, Ausrüstung mit Ocker-Feld und Winkeln (Bronze 1, Silber 2, Gold 3). Vorschaubilder `faces-v2-thumb/` (300 × 418) für Laufband und Kartenflüge. Gesamtrender etwa 45 min (6 Jobs). Lücken: vorläufige Motive und Porträts.
-- **Code/Werkzeuge:** `scripts/graphics/` (`render.py`, `verify.py`), `scripts/cards-review/kurz.py`, `web/assets/cards/`, `web/assets/portraits/`, `Division_Command/portraits/` (Ebenenwerkzeug), `KartenEditor/`.
-- **Docs:** `technik/KARTEN_RENDER_ALPHA40.md`, `technik/PORTRAIT_SYSTEM.md`, `regeln/KARTEN_KUERZUNGEN.md`, `scripts/graphics/README.md`.
+- **Status: in Arbeit.** Alle 1.746 Vorderseiten existieren und bestehen `verify.py`. Seit 0.636 (t318) im Stil der kleinen Karten: Titelbanner und AP-Stern wie klein (Titelschrift bleibt die alte alpha40-Schrift), Hintergründe und Textfelder prozedural je Karte (`KartenEditor/tools/texgen.py`, fester Seed je ID in `scripts/graphics/tex-seeds.json`, neu würfeln nur per `render.py --reroll <id>` oder Editor-Knopf), Einheiten wie Runde 3, Ausrüstung mit Ocker-Feld und Winkeln (Bronze 1, Silber 2, Gold 3). Vorschaubilder `faces-v2-thumb/` (300 × 418) für Laufband und Kartenflüge. Gesamtrender etwa 45 min (6 Jobs). Seit 0.641 (t325) liegen Ölgemälde-Ketten der Offiziersporträts für Rothain und Karsk vor (je 4 Personen × 2 Uniformen × 16 Ränge unter `web/assets/portraits/oel_ketten/`); 14 Nationen fehlen noch, die Ketten sind noch nicht in `portraits.js` oder im Editor verdrahtet. Lücken: vorläufige Motive und die übrigen Porträts.
+- **Code/Werkzeuge:** `scripts/graphics/` (`render.py`, `verify.py`), `scripts/cards-review/kurz.py`, `web/assets/cards/`, `web/assets/portraits/` (Spiel: ältere Einzelporträts; Bestand der Ketten: `portraits/oel_ketten/`), `tools/portraits/oel/chain2_build.py`, `Division_Command/portraits/` (älteres Ebenenwerkzeug), `KartenEditor/`.
+- **Docs:** `technik/KARTEN_RENDER_ALPHA40.md`, `technik/PORTRAIT_OEL_KETTEN.md`, `technik/PORTRAIT_SYSTEM.md`, `regeln/KARTEN_KUERZUNGEN.md`, `scripts/graphics/README.md`.
 - **Gates:** `verify.py` (1024 × 1428, Texte, Motivpräsenz, Seed-Register, Renderer-Digest), `tests/test_tex_seeds_t315.py` (lokal; Determinismus, Muster je Typ verschieden), `test_graphics`, `test_card_faces_text`, `test_image_paths`.
 - **Offen:**
   - 650 Karten tragen laut t258 ein vorläufiges Motiv („platzhalter“). Heutiger Zähler **nicht neu erhoben**.
-  - Porträts: 72 Dateien in 8 Ordnern, Soll 64 Personen in 16 Nationen; Frauen und acht Nationen fehlen, Ordner „Jetzt“/„Ossar“ unklar (t271).
+  - Porträts: Ölketten Rothain und Karsk fertig (16 Ketten, noch nicht in `portraits.js`/Editor). 14 Nationen offen. Offene Frage: Soll Karsk sichtbar altern oder lore-treu jung mit Implantaten bleiben? Die 72 älteren Einzelporträts in 8 Ordnern bleiben vorerst die im Spiel genutzten Dateien; Ordner „Jetzt“/„Ossar“ unklar (t271).
   - Das Minen-Token `web/assets/cards/MINE.png` wurde am 14.11.2026 manuell ersetzt; ob alle Verwendungen es korrekt darstellen, ist nicht eigens geprüft.
 
 ### VS-09 Sound & Musik
@@ -245,6 +245,7 @@ Quelle: Git-Log (`git log`), `CHANGELOG.md` und die Berichte unter `balance/` un
 
 | Datum | Version / Commit | Inhalt |
 |---|---|---|
+| 20.11.2026 | **0.641** (t325, Tag `v0.641`) | **Offiziersporträts als Ölgemälde-Ketten:** Rothain (Dienstrock, Gala) und Karsk (Panzer, Technik) je 4 Personen × 16 Ränge, Narben als eigene Layer; 14 Nationen offen, noch nicht in `portraits.js`/Editor. Verworfene Layer-Assets (`layers/`, `layers_oel/`) entfernt. Cache unverändert `divcmd-alpha49a` (neue Bilder nicht in der App-Shell, HTML/JS bereits Netzwerk zuerst). Regeln, Werte, Texte und Balance unverändert. Siehe [`technik/PORTRAIT_OEL_KETTEN.md`](technik/PORTRAIT_OEL_KETTEN.md). |
 | 20.11.2026 | **0.636** (t318, Tag `v0.636`) | **Neue Kartengrafik (t310–t321):** alle 1.746 Vorderseiten neu im Stil der kleinen Karten; prozedurale Hintergründe/Textfelder mit festem Muster je Karte (Seed-Register, bytegleich reproduzierbar, `--reroll`/Editor-Knopf); Ausrüstung mit Ocker-Feld und Winkeln je Stufe, weiße Schrift mit Navy-Kontur und weichem Schatten; Vorschaubilder für Laufband/Kartenflüge; Cache alpha49a. Regeln, Werte, Texte und Balance unverändert. |
 | 19.11.2026 | **0.626** (t301, Tag `v0.626`) | **Etappensicherung neu gefasst:** heilt zu Zugbeginn 1 an der ruhenden beschädigten Einheit mit größtem Fehlbetrag statt +1 DEF für alle (Text, Kurztext, Fläche, Regel §8.3, Tutorial). Caldris 62,5/64,3 → 49,9/47,2 %, Ausnahme entfernt. Bot-Flügelspiel gemessen, aber zurückgestellt (Gate rot). [`balance/BALANCE_T301.md`](balance/BALANCE_T301.md), Test `test_doctrine_etappen_t301.js`. |
 | 18.11.2026 | **0.624** (t300, Tag `v0.624`) | **Balance-Grobkorrektur p2 und Balance-Gate:** Linienkrieg +1 DEF nur bei drei eigenen im Abschnitt, Auffangen ohne Grundbonus, Gepanzerter Fuß nur ausgerüstet +1 ATK/+1 DEF, Entsatz hält nur +1 ATK (Texte, Kurztexte, 4 Flächen, Regel §8.2). Nationen-SD Misch 9,37 → 6,08, Sahr 74,0 → 56,3 %. Neues Pflicht-Gate `npm run balance-gate` (Band 40–60 %, Ausnahmeliste, Vergleichsstand) und CI-Job `balance-quick`. [`balance/BALANCE_T300.md`](balance/BALANCE_T300.md), [`balance/BALANCE_GATE.md`](balance/BALANCE_GATE.md), Test `test_balance_t300.js`. |
@@ -282,6 +283,7 @@ Quelle: Git-Log (`git log`), `CHANGELOG.md` und die Berichte unter `balance/` un
 | KI-Stellungswechsel einschalten | VS-04/VS-05 | Eigene Balance-Runde nötig (Sahr, Vesper, Merovan, Lyr); Entscheidung, ob gewollt. | Projektleiter |
 | Git LFS / Repo-Größe | VS-12 | Plan steht, braucht Freigabe (`technik/REPO_GROESSE_LFS_T283.md`). | Projektleiter |
 | Lore im Spiel | VS-06 | Entscheidung, ob und wie. | Projektleiter |
+| Karsk-Offiziere: sichtbares Altern oder lore-treu jung mit Implantaten? | VS-08 | Karsk-Ketten sind derzeit jung mit zunehmenden Implantaten. Ein Alterungsdurchgang lässt sich nachziehen. | Projektleiter |
 
 ## 6. Verfahren: Vertical Slices und current_state.md
 
@@ -336,7 +338,7 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 | 2 | Entscheidung zu **KI-Stellungswechsel** und anschließende Balance-Runde (Sahr, Vesper, Merovan, Lyr) | VS-04, VS-05 | `BALANCE_T285.md` §3. |
 | 2 | **Überschuss 1 AP** entscheiden; **Normverband** (≈ 44 %) lösen, ohne Steinmark zu überdrehen | VS-05, VS-03 | Eigene kleine Runde. |
 | 2 | **EXE bauen** und auf einem sauberen Windows-Rechner starten; **PDF** auf Stand 0.626 bringen | VS-14 | PDF trägt noch 0.6b. |
-| 3 | Porträts vervollständigen; vorläufige Motive neu zählen und ersetzen | VS-08 | 650 laut t258. |
+| 3 | Ölketten der übrigen 14 Nationen (nach Karsk-Aging-Entscheidung), dann in `portraits.js`/Editor verdrahten; vorläufige Motive neu zählen und ersetzen | VS-08 | Rothain + Karsk stehen (0.641). 650 vorläufige Motive laut t258. |
 | 3 | Brummbär-Stub, `MINE_TOKEN`, `CM`-Fehlalarme im Prüfskript | VS-03 | Kleinschritte. |
 | 3 | 24 Zwillingsgruppen auch über Werte trennen | VS-02 | Nur Schlüsselwörter trennen sie heute. |
 | 3 | Roguelike-Slice neu zuschneiden | VS-15 | Vorher Abstimmung. |
@@ -361,7 +363,27 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 
 **CI (seit t289):** Auf GitHub laufen bei jedem Push/PR auf `main` automatisch `npm test`, `verify.py`, Fuzz und Audit (`.github/workflows/ci.yml`, [`technik/CI.md`](technik/CI.md)). Das ersetzt die lokalen Browser-Gates und `smoke 400` nicht; ein roter Lauf auf der Actions-Seite des Repos ist vor dem nächsten Push zu beheben.
 
-**Letzter Gate-Lauf (20.11.2026, t318, Version 0.636):** Grün:
+**Letzter Gate-Lauf (20.11.2026, t325, Version 0.641):** Grün:
+
+- `npm test` (66 Dateien)
+- `verify.py` und `tests/test_tex_seeds_t315.py`
+- Fuzz 80
+- Smoke 400
+- Audit
+- `balance-gate:quick` (grün). Das volle Gate ist nicht gelaufen: keine Karten- oder Regeländerung, nur Porträt-Assets, Werkzeuge und Doku.
+- `tutorial-play` (17/17; erster Anlauf abgebrochen, weil nach `npm ci` der Playwright-Chromium fehlte, danach installiert und grün)
+- `reset-play` (6/6)
+- `layout-test` (0 Befunde)
+- `screens-test` (0 Befunde, 75 Ansichten). Erster Lauf rot durch `page.goto`-Zeitüberschreitung in der Mitte (1280×720, bis dahin 0 Befunde); einzeln wiederholt: grün.
+- `libzoom-play` (33/0)
+- `lan-play` (8/0)
+- `funcs-play` (5/5, Versionsanzeige 0.641)
+- `botseq-play`
+- `audio-play` (0 Schreibzugriffe in 3 s am Tisch)
+- `ui-play` Seed 31337 (grün)
+- `ui-play` Seed 1234: erster Lauf rot (`waitForSelector`-Zeitüberschreitung in Spiel 3, die übrigen Spiele ok); einzeln wiederholt: grün.
+
+**Gate-Lauf davor (20.11.2026, t318, Version 0.636):** Grün:
 
 - `npm test` (66 Dateien)
 - `verify.py` und `tests/test_tex_seeds_t315.py` (1.746 eindeutige Seeds, deterministisch, Muster je Typ verschieden)
@@ -413,6 +435,7 @@ Unter starker Parallellast liefen die Browser-Gates bei t291 mehrfach in Fristen
 | Welche Karten gibt es? | `karten/` |
 | Wie wurde balanciert? | `balance/BALANCE_T285.md` (aktuell) und ältere Berichte |
 | Wer sind die Nationen? | `nationen/lore_nationen/` |
+| Wie sind die Offiziersporträts aufgebaut? | `technik/PORTRAIT_OEL_KETTEN.md` (Bestand), `technik/PORTRAIT_SYSTEM.md` (Ziel/Lore) |
 | Wie ist es gebaut? | `technik/`, `Division_Command_Dokumentation.md` §6 |
 | Was war früher geplant? | `archiv/` |
 | Frühere Statusanalysen | `entwicklung/STATUS_T258.md` … `STATUS_T271.md` |
