@@ -22,10 +22,12 @@ NATION = os.environ.get('CHAIN2_NATION', 'rothain')
 UNI_BY_NATION = {
     'rothain': {'rock': 'dienstrock', 'gala': 'gala'},
     'karsk':   {'panzer': 'panzer', 'tech': 'tech'},
+    'averon':  {'feld': 'feld', 'dienst': 'dienst'},
 }
 WORK_DEFAULT = {
     'rothain': '/workspace/t325-portraits/oel/v2',
     'karsk':   '/workspace/t325-portraits/oel/v2_karsk',
+    'averon':  '/workspace/t325-portraits/oel/v2_averon',
 }
 UNI = UNI_BY_NATION[NATION]
 WORK = os.environ.get('CHAIN2_WORK', WORK_DEFAULT.get(NATION, '/workspace/t325-portraits/oel/v2'))
@@ -47,7 +49,14 @@ RANKS_KARSK = [
     ('oberst', 'Oberst', 53), ('brigadegeneral', 'Brigadegeneral', 59), ('generalmajor', 'Generalmajor', 65), ('generalleutnant', 'Generalleutnant', 71),
     ('general', 'General', 77), ('generaloberst', 'Generaloberst', 82), ('feldmarschall', 'Feldmarschall', 86), ('generalfeldmarschall', 'Generalfeldmarschall', 92),
 ]
-RANKS = {'rothain': RANKS_ROTHAIN, 'karsk': RANKS_KARSK}.get(NATION, RANKS_ROTHAIN)
+# Averon chronological ages from Raenge.md midpoints; faces MUST look their age (Bindung Zeit; GFM alt aber wachsam)
+RANKS_AVERON = [
+    ('faehnrich', 'Fähnrich', 19), ('oberfaehnrich', 'Oberfähnrich', 22), ('leutnant', 'Leutnant', 24), ('oberleutnant', 'Oberleutnant', 29),
+    ('hauptmann', 'Hauptmann', 35), ('stabshauptmann', 'Stabshauptmann', 39), ('major', 'Major', 41), ('oberstleutnant', 'Oberstleutnant', 47),
+    ('oberst', 'Oberst', 53), ('brigadegeneral', 'Brigadegeneral', 59), ('generalmajor', 'Generalmajor', 65), ('generalleutnant', 'Generalleutnant', 71),
+    ('general', 'General', 77), ('generaloberst', 'Generaloberst', 82), ('feldmarschall', 'Feldmarschall', 86), ('generalfeldmarschall', 'Generalfeldmarschall', 92),
+]
+RANKS = {'rothain': RANKS_ROTHAIN, 'karsk': RANKS_KARSK, 'averon': RANKS_AVERON}.get(NATION, RANKS_ROTHAIN)
 
 # Short forms so sheet captions fit in a 324px cell (Bold 15).
 RANK_SHORT = {
