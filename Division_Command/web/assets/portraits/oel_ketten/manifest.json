@@ -1,0 +1,136 @@
+{
+ "version": 1,
+ "style": "oil-chain",
+ "nation": "rothain",
+ "person": "m1",
+ "canvas": [
+  768,
+  1024
+ ],
+ "format": "webp (opaque painting, flat dark background #2b2724)",
+ "note": "Each rank image is an edit of the previous one (same pose/crop/light), landmark-aligned to the Faehnrich (eyes/chin). Scars are separate alpha layers.",
+ "anchors": {
+  "eye_mid": [
+   380.4444444444444,
+   279.1111111111111
+  ],
+  "chin_y": 472.88888888888886
+ },
+ "z_order": [
+  "painting",
+  "scars"
+ ],
+ "headgear": "none (caps are optional separate layers, not part of the chain)",
+ "ranks": [
+  {
+   "id": "faehnrich",
+   "name": "Fähnrich",
+   "approx_age": 19,
+   "file": "rothain/m1/01_faehnrich.webp"
+  },
+  {
+   "id": "oberfaehnrich",
+   "name": "Oberfähnrich",
+   "approx_age": 21,
+   "file": "rothain/m1/02_oberfaehnrich.webp"
+  },
+  {
+   "id": "leutnant",
+   "name": "Leutnant",
+   "approx_age": 23,
+   "file": "rothain/m1/03_leutnant.webp"
+  },
+  {
+   "id": "oberleutnant",
+   "name": "Oberleutnant",
+   "approx_age": 26,
+   "file": "rothain/m1/04_oberleutnant.webp"
+  },
+  {
+   "id": "hauptmann",
+   "name": "Hauptmann",
+   "approx_age": 30,
+   "file": "rothain/m1/05_hauptmann.webp"
+  },
+  {
+   "id": "stabshauptmann",
+   "name": "Stabshauptmann",
+   "approx_age": 34,
+   "file": "rothain/m1/06_stabshauptmann.webp"
+  },
+  {
+   "id": "major",
+   "name": "Major",
+   "approx_age": 38,
+   "file": "rothain/m1/07_major.webp"
+  },
+  {
+   "id": "oberstleutnant",
+   "name": "Oberstleutnant",
+   "approx_age": 42,
+   "file": "rothain/m1/08_oberstleutnant.webp"
+  },
+  {
+   "id": "oberst",
+   "name": "Oberst",
+   "approx_age": 46,
+   "file": "rothain/m1/09_oberst.webp"
+  },
+  {
+   "id": "brigadegeneral",
+   "name": "Brigadegeneral",
+   "approx_age": 50,
+   "file": "rothain/m1/10_brigadegeneral.webp"
+  },
+  {
+   "id": "generalmajor",
+   "name": "Generalmajor",
+   "approx_age": 53,
+   "file": "rothain/m1/11_generalmajor.webp"
+  },
+  {
+   "id": "generalleutnant",
+   "name": "Generalleutnant",
+   "approx_age": 56,
+   "file": "rothain/m1/12_generalleutnant.webp"
+  },
+  {
+   "id": "general",
+   "name": "General",
+   "approx_age": 60,
+   "file": "rothain/m1/13_general.webp"
+  },
+  {
+   "id": "generaloberst",
+   "name": "Generaloberst",
+   "approx_age": 63,
+   "file": "rothain/m1/14_generaloberst.webp"
+  },
+  {
+   "id": "feldmarschall",
+   "name": "Feldmarschall",
+   "approx_age": 67,
+   "file": "rothain/m1/15_feldmarschall.webp"
+  },
+  {
+   "id": "generalfeldmarschall",
+   "name": "Generalfeldmarschall",
+   "approx_age": 70,
+   "file": "rothain/m1/16_generalfeldmarschall.webp"
+  }
+ ],
+ "scars": {
+  "mode": "multi",
+  "layers": {
+   "wange": {
+    "file": "_common/scars/wange.webp"
+   },
+   "braue": {
+    "file": "_common/scars/braue.webp"
+   },
+   "kiefer": {
+    "file": "_common/scars/kiefer.webp"
+   }
+  }
+ }
+}
