@@ -327,7 +327,216 @@
    }
   },
   "tech": {
-   "persons": {}
+   "persons": {
+    "m1": {
+     "files": [
+      "karsk/tech/m1/01_faehnrich.webp",
+      "karsk/tech/m1/02_oberfaehnrich.webp",
+      "karsk/tech/m1/03_leutnant.webp",
+      "karsk/tech/m1/04_oberleutnant.webp",
+      "karsk/tech/m1/05_hauptmann.webp",
+      "karsk/tech/m1/06_stabshauptmann.webp",
+      "karsk/tech/m1/07_major.webp",
+      "karsk/tech/m1/08_oberstleutnant.webp",
+      "karsk/tech/m1/09_oberst.webp",
+      "karsk/tech/m1/10_brigadegeneral.webp",
+      "karsk/tech/m1/11_generalmajor.webp",
+      "karsk/tech/m1/12_generalleutnant.webp",
+      "karsk/tech/m1/13_general.webp",
+      "karsk/tech/m1/14_generaloberst.webp",
+      "karsk/tech/m1/15_feldmarschall.webp",
+      "karsk/tech/m1/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       419.1,
+       313.1
+      ],
+      "chin_y": 530.7,
+      "eye_chin": 217.6
+     },
+     "scars": {
+      "wange": {
+       "file": "karsk/tech/m1/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "karsk/tech/m1/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "karsk/tech/m1/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    },
+    "m2": {
+     "files": [
+      "karsk/tech/m2/01_faehnrich.webp",
+      "karsk/tech/m2/02_oberfaehnrich.webp",
+      "karsk/tech/m2/03_leutnant.webp",
+      "karsk/tech/m2/04_oberleutnant.webp",
+      "karsk/tech/m2/05_hauptmann.webp",
+      "karsk/tech/m2/06_stabshauptmann.webp",
+      "karsk/tech/m2/07_major.webp",
+      "karsk/tech/m2/08_oberstleutnant.webp",
+      "karsk/tech/m2/09_oberst.webp",
+      "karsk/tech/m2/10_brigadegeneral.webp",
+      "karsk/tech/m2/11_generalmajor.webp",
+      "karsk/tech/m2/12_generalleutnant.webp",
+      "karsk/tech/m2/13_general.webp",
+      "karsk/tech/m2/14_generaloberst.webp",
+      "karsk/tech/m2/15_feldmarschall.webp",
+      "karsk/tech/m2/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       401.7,
+       286.7
+      ],
+      "chin_y": 536.2,
+      "eye_chin": 249.5
+     },
+     "scars": {
+      "wange": {
+       "file": "karsk/tech/m2/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "karsk/tech/m2/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "karsk/tech/m2/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    },
+    "f1": {
+     "files": [
+      "karsk/tech/f1/01_faehnrich.webp",
+      "karsk/tech/f1/02_oberfaehnrich.webp",
+      "karsk/tech/f1/03_leutnant.webp",
+      "karsk/tech/f1/04_oberleutnant.webp",
+      "karsk/tech/f1/05_hauptmann.webp",
+      "karsk/tech/f1/06_stabshauptmann.webp",
+      "karsk/tech/f1/07_major.webp",
+      "karsk/tech/f1/08_oberstleutnant.webp",
+      "karsk/tech/f1/09_oberst.webp",
+      "karsk/tech/f1/10_brigadegeneral.webp",
+      "karsk/tech/f1/11_generalmajor.webp",
+      "karsk/tech/f1/12_generalleutnant.webp",
+      "karsk/tech/f1/13_general.webp",
+      "karsk/tech/f1/14_generaloberst.webp",
+      "karsk/tech/f1/15_feldmarschall.webp",
+      "karsk/tech/f1/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       482.6,
+       308.9
+      ],
+      "chin_y": 537.6,
+      "eye_chin": 228.8
+     },
+     "scars": {
+      "wange": {
+       "file": "karsk/tech/f1/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "karsk/tech/f1/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "karsk/tech/f1/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    },
+    "f2": {
+     "files": [
+      "karsk/tech/f2/01_faehnrich.webp",
+      "karsk/tech/f2/02_oberfaehnrich.webp",
+      "karsk/tech/f2/03_leutnant.webp",
+      "karsk/tech/f2/04_oberleutnant.webp",
+      "karsk/tech/f2/05_hauptmann.webp",
+      "karsk/tech/f2/06_stabshauptmann.webp",
+      "karsk/tech/f2/07_major.webp",
+      "karsk/tech/f2/08_oberstleutnant.webp",
+      "karsk/tech/f2/09_oberst.webp",
+      "karsk/tech/f2/10_brigadegeneral.webp",
+      "karsk/tech/f2/11_generalmajor.webp",
+      "karsk/tech/f2/12_generalleutnant.webp",
+      "karsk/tech/f2/13_general.webp",
+      "karsk/tech/f2/14_generaloberst.webp",
+      "karsk/tech/f2/15_feldmarschall.webp",
+      "karsk/tech/f2/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       400.1,
+       315.0
+      ],
+      "chin_y": 532.5,
+      "eye_chin": 217.6
+     },
+     "scars": {
+      "wange": {
+       "file": "karsk/tech/f2/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "karsk/tech/f2/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "karsk/tech/f2/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    }
+   }
   }
  }
 }
