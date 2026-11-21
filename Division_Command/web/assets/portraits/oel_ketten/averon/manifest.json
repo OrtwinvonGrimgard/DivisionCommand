@@ -1,0 +1,333 @@
+{
+ "version": 2,
+ "style": "oil-chain",
+ "nation": "averon",
+ "canvas": [
+  864,
+  1152
+ ],
+ "format": "webp q90, opaque painting, flat dark canvas background; native generator resolution 864x1152 (3:4), no downscale",
+ "note": "Each rank image is an edit of the previous rank (same pose/crop/light), landmark-aligned (single Lanczos resample) to the Faehnrich master (eyes/chin). Scars are separate alpha layers per person, same canvas size, z_order painting+scars.",
+ "z_order": [
+  "painting",
+  "scars"
+ ],
+ "headgear": "none",
+ "rank_ids": [
+  "faehnrich",
+  "oberfaehnrich",
+  "leutnant",
+  "oberleutnant",
+  "hauptmann",
+  "stabshauptmann",
+  "major",
+  "oberstleutnant",
+  "oberst",
+  "brigadegeneral",
+  "generalmajor",
+  "generalleutnant",
+  "general",
+  "generaloberst",
+  "feldmarschall",
+  "generalfeldmarschall"
+ ],
+ "ranks": [
+  {
+   "id": "faehnrich",
+   "name": "Fähnrich",
+   "approx_age": 19
+  },
+  {
+   "id": "oberfaehnrich",
+   "name": "Oberfähnrich",
+   "approx_age": 22
+  },
+  {
+   "id": "leutnant",
+   "name": "Leutnant",
+   "approx_age": 24
+  },
+  {
+   "id": "oberleutnant",
+   "name": "Oberleutnant",
+   "approx_age": 29
+  },
+  {
+   "id": "hauptmann",
+   "name": "Hauptmann",
+   "approx_age": 35
+  },
+  {
+   "id": "stabshauptmann",
+   "name": "Stabshauptmann",
+   "approx_age": 39
+  },
+  {
+   "id": "major",
+   "name": "Major",
+   "approx_age": 41
+  },
+  {
+   "id": "oberstleutnant",
+   "name": "Oberstleutnant",
+   "approx_age": 47
+  },
+  {
+   "id": "oberst",
+   "name": "Oberst",
+   "approx_age": 53
+  },
+  {
+   "id": "brigadegeneral",
+   "name": "Brigadegeneral",
+   "approx_age": 59
+  },
+  {
+   "id": "generalmajor",
+   "name": "Generalmajor",
+   "approx_age": 65
+  },
+  {
+   "id": "generalleutnant",
+   "name": "Generalleutnant",
+   "approx_age": 71
+  },
+  {
+   "id": "general",
+   "name": "General",
+   "approx_age": 77
+  },
+  {
+   "id": "generaloberst",
+   "name": "Generaloberst",
+   "approx_age": 82
+  },
+  {
+   "id": "feldmarschall",
+   "name": "Feldmarschall",
+   "approx_age": 86
+  },
+  {
+   "id": "generalfeldmarschall",
+   "name": "Generalfeldmarschall",
+   "approx_age": 92
+  }
+ ],
+ "uniforms": {
+  "feld": {
+   "persons": {
+    "m1": {
+     "files": [
+      "averon/feld/m1/01_faehnrich.webp",
+      "averon/feld/m1/02_oberfaehnrich.webp",
+      "averon/feld/m1/03_leutnant.webp",
+      "averon/feld/m1/04_oberleutnant.webp",
+      "averon/feld/m1/05_hauptmann.webp",
+      "averon/feld/m1/06_stabshauptmann.webp",
+      "averon/feld/m1/07_major.webp",
+      "averon/feld/m1/08_oberstleutnant.webp",
+      "averon/feld/m1/09_oberst.webp",
+      "averon/feld/m1/10_brigadegeneral.webp",
+      "averon/feld/m1/11_generalmajor.webp",
+      "averon/feld/m1/12_generalleutnant.webp",
+      "averon/feld/m1/13_general.webp",
+      "averon/feld/m1/14_generaloberst.webp",
+      "averon/feld/m1/15_feldmarschall.webp",
+      "averon/feld/m1/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       377.1,
+       292.2
+      ],
+      "chin_y": 522.6,
+      "eye_chin": 230.3
+     },
+     "scars": {
+      "wange": {
+       "file": "averon/feld/m1/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "averon/feld/m1/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "averon/feld/m1/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    },
+    "m2": {
+     "files": [
+      "averon/feld/m2/01_faehnrich.webp",
+      "averon/feld/m2/02_oberfaehnrich.webp",
+      "averon/feld/m2/03_leutnant.webp",
+      "averon/feld/m2/04_oberleutnant.webp",
+      "averon/feld/m2/05_hauptmann.webp",
+      "averon/feld/m2/06_stabshauptmann.webp",
+      "averon/feld/m2/07_major.webp",
+      "averon/feld/m2/08_oberstleutnant.webp",
+      "averon/feld/m2/09_oberst.webp",
+      "averon/feld/m2/10_brigadegeneral.webp",
+      "averon/feld/m2/11_generalmajor.webp",
+      "averon/feld/m2/12_generalleutnant.webp",
+      "averon/feld/m2/13_general.webp",
+      "averon/feld/m2/14_generaloberst.webp",
+      "averon/feld/m2/15_feldmarschall.webp",
+      "averon/feld/m2/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       471.6,
+       317.5
+      ],
+      "chin_y": 571.8,
+      "eye_chin": 255.1
+     },
+     "scars": {
+      "wange": {
+       "file": "averon/feld/m2/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "averon/feld/m2/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "averon/feld/m2/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    },
+    "f1": {
+     "files": [
+      "averon/feld/f1/01_faehnrich.webp",
+      "averon/feld/f1/02_oberfaehnrich.webp",
+      "averon/feld/f1/03_leutnant.webp",
+      "averon/feld/f1/04_oberleutnant.webp",
+      "averon/feld/f1/05_hauptmann.webp",
+      "averon/feld/f1/06_stabshauptmann.webp",
+      "averon/feld/f1/07_major.webp",
+      "averon/feld/f1/08_oberstleutnant.webp",
+      "averon/feld/f1/09_oberst.webp",
+      "averon/feld/f1/10_brigadegeneral.webp",
+      "averon/feld/f1/11_generalmajor.webp",
+      "averon/feld/f1/12_generalleutnant.webp",
+      "averon/feld/f1/13_general.webp",
+      "averon/feld/f1/14_generaloberst.webp",
+      "averon/feld/f1/15_feldmarschall.webp",
+      "averon/feld/f1/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       480.0,
+       334.3
+      ],
+      "chin_y": 569.6,
+      "eye_chin": 235.6
+     },
+     "scars": {
+      "wange": {
+       "file": "averon/feld/f1/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "averon/feld/f1/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "averon/feld/f1/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    },
+    "f2": {
+     "files": [
+      "averon/feld/f2/01_faehnrich.webp",
+      "averon/feld/f2/02_oberfaehnrich.webp",
+      "averon/feld/f2/03_leutnant.webp",
+      "averon/feld/f2/04_oberleutnant.webp",
+      "averon/feld/f2/05_hauptmann.webp",
+      "averon/feld/f2/06_stabshauptmann.webp",
+      "averon/feld/f2/07_major.webp",
+      "averon/feld/f2/08_oberstleutnant.webp",
+      "averon/feld/f2/09_oberst.webp",
+      "averon/feld/f2/10_brigadegeneral.webp",
+      "averon/feld/f2/11_generalmajor.webp",
+      "averon/feld/f2/12_generalleutnant.webp",
+      "averon/feld/f2/13_general.webp",
+      "averon/feld/f2/14_generaloberst.webp",
+      "averon/feld/f2/15_feldmarschall.webp",
+      "averon/feld/f2/16_generalfeldmarschall.webp"
+     ],
+     "anchors": {
+      "eye_mid": [
+       448.3,
+       324.5
+      ],
+      "chin_y": 564.9,
+      "eye_chin": 240.5
+     },
+     "scars": {
+      "wange": {
+       "file": "averon/feld/f2/scars/wange.webp",
+       "offset_px": [
+        -9,
+        -13
+       ]
+      },
+      "braue": {
+       "file": "averon/feld/f2/scars/braue.webp",
+       "offset_px": [
+        0,
+        5
+       ]
+      },
+      "kiefer": {
+       "file": "averon/feld/f2/scars/kiefer.webp",
+       "offset_px": [
+        14,
+        -10
+       ]
+      }
+     },
+     "scar_mode": "multi (freely combinable)"
+    }
+   }
+  },
+  "dienst": {
+   "persons": {}
+  }
+ }
+}
