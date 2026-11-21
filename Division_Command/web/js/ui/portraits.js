@@ -2,6 +2,7 @@
  * Zusammensetzbare Offiziersporträts.
  * Gesicht (G) + Uniform-Archetyp (U) + Hut (H).
  * Jeder Dienstgrad hat eigene Rangabzeichen, Alter und Bildausschnitt.
+ * Ölgemälde-Ketten (oel_ketten) werden für Rothain, Karsk und Ossaria bevorzugt.
  */
 (function (w) {
   'use strict';
@@ -71,7 +72,23 @@
   };
   var RANK_AGES = 'fhr,lt,olt,hptm,maj,obstlt,obst,bg,genmj,genlt,gen,fm,gfm';
 
-  var VER = '25';
+  var VER = '26';
+
+  // Mapping for oil chains: face -> { nation, uniform, person }
+  var OIL_CHAIN = {
+    f03: { nation: 'rothain', uniform: 'dienstrock', person: 'm1' },
+    f04: { nation: 'rothain', uniform: 'dienstrock', person: 'm2' },
+    f09: { nation: 'karsk', uniform: 'panzer', person: 'm1' },
+    f10: { nation: 'karsk', uniform: 'panzer', person: 'm2' },
+    f13: { nation: 'ossaria', uniform: 'platte', person: 'm1' },
+    f14: { nation: 'ossaria', uniform: 'platte', person: 'm2' }
+  };
+
+  // Rank index in the 16-step oil chain (01 = Fähnrich ... 16 = Generalfeldmarschall)
+  var OIL_RANK_INDEX = {
+    fhr: 1, lt: 3, olt: 4, hptm: 5, maj: 7, obstlt: 8, obst: 9,
+    bg: 10, genmj: 11, genlt: 12, gen: 13, fm: 15, gfm: 16
+  };
 
   var FACE_FILE = {
     f01: 'Vael/male/01.png',
@@ -102,6 +119,15 @@
     if (age === 'olt') return String(file).replace('male/', 'male/oberleutnant/');
     if (age === 'hptm') return String(file).replace('male/', 'male/hauptmann/');
     return file;
+  }
+
+  function oilUrl(face, age) {
+    var chain = OIL_CHAIN[face];
+    if (!chain) return '';
+    var idx = OIL_RANK_INDEX[age] || 1;
+    var num = idx < 10 ? '0' + idx : String(idx);
+    var rankName = ['faehnrich','oberfaehnrich','leutnant','oberleutnant','hauptmann','stabshauptmann','major','oberstleutnant','oberst','brigadegeneral','generalmajor','generalleutnant','general','generaloberst','feldmarschall','generalfeldmarschall'][idx - 1] || 'faehnrich';
+    return 'assets/portraits/oel_ketten/' + chain.nation + '/' + chain.uniform + '/' + chain.person + '/' + num + '_' + rankName + '.webp?v=' + VER;
   }
 
   function rightUrl(face, rank) {
@@ -193,10 +219,17 @@
   function fileUrl(name) {
     var text = String(name || '');
     var m = text.match(/^(f\d{2})/);
-    var file = m && FACE_FILE[m[1]];
+    var face = m && m[1];
+    if (!face) return '';
+    var ageMatch = text.match(/-(fhr|lt|olt|hptm|maj|obstlt|obst|bg|genmj|genlt|gen|fm|gfm)$/);
+    var age = ageMatch ? ageMatch[1] : 'fhr';
+    // Prefer oil chain if available
+    var oil = oilUrl(face, age);
+    if (oil) return oil;
+    // Fallback to old portraits
+    var file = FACE_FILE[face];
     if (!file) return '';
-    var age = text.match(/-(fhr|lt|olt|hptm|maj|obstlt|obst|bg|genmj|genlt|gen|fm|gfm)$/);
-    if (age) file = rankPath(file, age[1]);
+    if (ageMatch) file = rankPath(file, age);
     return 'assets/portraits/' + file + '?v=' + VER;
   }
 
