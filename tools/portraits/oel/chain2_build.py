@@ -2,7 +2,7 @@
 """v2 oil chains: aligned 864x1152 paintings -> webp, per-person scar layers (plastic), manifest, sheets.
 
 Nation-aware. Env:
-  CHAIN2_NATION  rothain (default) | karsk | ...
+  CHAIN2_NATION  rothain (default) | karsk | averon | ossaria | ...
   CHAIN2_WORK    work root (default depends on nation)
   CHAIN2_OUT     export root (default .../oel_ketten)
   CHAIN2_SHEETS  sheet dir (default /workspace/t325-portraits/oel)
@@ -23,11 +23,13 @@ UNI_BY_NATION = {
     'rothain': {'rock': 'dienstrock', 'gala': 'gala'},
     'karsk':   {'panzer': 'panzer', 'tech': 'tech'},
     'averon':  {'feld': 'feld', 'dienst': 'dienst'},
+    'ossaria': {'platte': 'platte', 'klage': 'klage'},
 }
 WORK_DEFAULT = {
     'rothain': '/workspace/t325-portraits/oel/v2',
     'karsk':   '/workspace/t325-portraits/oel/v2_karsk',
     'averon':  '/workspace/t325-portraits/oel/v2_averon',
+    'ossaria': '/workspace/t325-portraits/oel/v2_ossaria',
 }
 UNI = UNI_BY_NATION[NATION]
 WORK = os.environ.get('CHAIN2_WORK', WORK_DEFAULT.get(NATION, '/workspace/t325-portraits/oel/v2'))
@@ -56,7 +58,9 @@ RANKS_AVERON = [
     ('oberst', 'Oberst', 53), ('brigadegeneral', 'Brigadegeneral', 59), ('generalmajor', 'Generalmajor', 65), ('generalleutnant', 'Generalleutnant', 71),
     ('general', 'General', 77), ('generaloberst', 'Generaloberst', 82), ('feldmarschall', 'Feldmarschall', 86), ('generalfeldmarschall', 'Generalfeldmarschall', 92),
 ]
-RANKS = {'rothain': RANKS_ROTHAIN, 'karsk': RANKS_KARSK, 'averon': RANKS_AVERON}.get(NATION, RANKS_ROTHAIN)
+# Ossaria chronological midpoints from Raenge.md (Bindung Tote; GFM alt und von den Toten gezeichnet)
+RANKS_OSSARIA = list(RANKS_AVERON)
+RANKS = {'rothain': RANKS_ROTHAIN, 'karsk': RANKS_KARSK, 'averon': RANKS_AVERON, 'ossaria': RANKS_OSSARIA}.get(NATION, RANKS_ROTHAIN)
 
 # Short forms so sheet captions fit in a 324px cell (Bold 15).
 RANK_SHORT = {
