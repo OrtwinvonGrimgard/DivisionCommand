@@ -4,6 +4,16 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.645 Alpha – 21.11.2026
+
+Offiziersporträts als Ölgemälde-Ketten, Ossaria (t337, Gewicht +0,002: spürbare Erweiterung des Grafikbestands). Freigabe des Projektleiters: „push und weiter machen“. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.
+
+- **Ossaria fertig** unter `Division_Command/web/assets/portraits/oel_ketten/ossaria/`: vier Personen in zwei Uniformen (`platte`, `klage`), 16 Ränge vom Fähnrich bis zum Generalfeldmarschall (864 × 1152, WebP), Narben (`wange`, `braue`, `kiefer`) als eigene Layer. Manifest: `oel_ketten/ossaria/manifest.json`. Beschreibung: `docs/technik/PORTRAIT_OEL_KETTEN.md`.
+- **Bestand jetzt:** Rothain (`dienstrock`, `gala`), Karsk (`panzer`, `tech`), Averon (`feld`, `dienst`) und Ossaria (`platte`, `klage`) — 32 Ketten. 12 Nationen fehlen noch. Noch nicht in `portraits.js` oder im Karteneditor verdrahtet.
+- **Ossaria (Bindung Tote):** Gesichter altern sichtbar mit dem Rang; GFM alt und von den Toten gezeichnet, nicht gebrechlich. Kernsymbol Knochenkreis / stilisierter Totenschädel (Kragen + Brust; höhere Ränge mehr Knochen und dichtere Kreise); ab General eine große Knochenkreis-/Schädel-Gedenkplakette. Keine christlichen Kreuze.
+- **Karsk:** unverändert lore-treu optisch jung (Implantate statt Falten); die Frage des sichtbaren Alterns bleibt offen.
+- **Cache** unverändert `divcmd-alpha49a`: die neuen Bilder stehen nicht in der App-Shell, HTML/JS gehen bereits zuerst ins Netz.
+
 ## 0.643 Alpha – 21.11.2026
 
 Offiziersporträts als Ölgemälde-Ketten, Averon (t336, Gewicht +0,002: spürbare Erweiterung des Grafikbestands). Freigabe des Projektleiters: „Push, nächste nation“. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.
