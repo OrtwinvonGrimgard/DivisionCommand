@@ -4,6 +4,16 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.643 Alpha – 21.11.2026
+
+Offiziersporträts als Ölgemälde-Ketten, Averon (t336, Gewicht +0,002: spürbare Erweiterung des Grafikbestands). Freigabe des Projektleiters: „Push, nächste nation“. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.
+
+- **Averon fertig** unter `Division_Command/web/assets/portraits/oel_ketten/averon/`: vier Personen in zwei Uniformen (`feld`, `dienst`), 16 Ränge vom Fähnrich bis zum Generalfeldmarschall (864 × 1152, WebP), Narben (`wange`, `braue`, `kiefer`) als eigene Layer. Manifest: `oel_ketten/averon/manifest.json`. Beschreibung: `docs/technik/PORTRAIT_OEL_KETTEN.md`.
+- **Bestand jetzt:** Rothain (`dienstrock`, `gala`), Karsk (`panzer`, `tech`) und Averon (`feld`, `dienst`) — 24 Ketten. 13 Nationen fehlen noch. Noch nicht in `portraits.js` oder im Karteneditor verdrahtet.
+- **Averon (Bindung Zeit):** Gesichter altern sichtbar mit dem Rang; GFM alt, aber wachsam. Kernsymbol offenes Auge (keine Sterne, keine Kreuze); ab General eine Kommando-Augenplakette, beim GFM vollständig sichtbares überwachendes Auge auf der Uniform (kein Implantat im Gesicht).
+- **Karsk:** unverändert lore-treu optisch jung (Implantate statt Falten); die Frage des sichtbaren Alterns bleibt offen.
+- **Cache** unverändert `divcmd-alpha49a`: die neuen Bilder stehen nicht in der App-Shell, HTML/JS gehen bereits zuerst ins Netz.
+
 ## 0.641 Alpha – 20.11.2026
 
 Offiziersporträts als Ölgemälde-Ketten (t325, Gewicht +0,005: spürbare Erweiterung des Grafikbestands). Freigabe des Projektleiters: „Mach pause und push erstmal“. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.

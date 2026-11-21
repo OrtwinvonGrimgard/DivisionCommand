@@ -1,6 +1,6 @@
-# Offiziersporträts – Ölgemälde-Ketten (t325)
+# Offiziersporträts – Ölgemälde-Ketten (t325, ergänzt t336)
 
-Stand: 20.11.2026. Ergänzt [`PORTRAIT_SYSTEM.md`](PORTRAIT_SYSTEM.md) (Ziel und Lore). Der ältere Layer-Ansatz [`PORTRAIT_LAYERS_V2.md`](PORTRAIT_LAYERS_V2.md) ist überholt; seine Asset-Ordner sind entfernt.
+Stand: 21.11.2026. Ergänzt [`PORTRAIT_SYSTEM.md`](PORTRAIT_SYSTEM.md) (Ziel und Lore). Der ältere Layer-Ansatz [`PORTRAIT_LAYERS_V2.md`](PORTRAIT_LAYERS_V2.md) ist überholt; seine Asset-Ordner sind entfernt.
 
 ## Ansatz
 
@@ -39,13 +39,14 @@ Abzeichen folgen der jeweiligen `docs/nationen/<Nation>/Raenge.md` und `Insignie
 |---|---|---|---|
 | Rothain | `dienstrock`, `gala` | 4 Personen × 2 Uniformen = 8 | fertig (inkl. Nachbesserung Alterung/Orden) |
 | Karsk | `panzer`, `tech` | 8 | fertig; Offiziere bleiben optisch jung, Rang zeigt sich an Implantaten (lore-treu). Sichtbares Altern ist eine offene Frage. |
-| Averon und 13 weitere | — | — | offen. Der Baukasten `tools/portraits/oel/chain2_build.py` kennt bereits Averon-Pfade (`feld`, `dienst`), es liegen aber keine Averon-Bilder im Bestand. |
+| Averon | `feld`, `dienst` | 8 | fertig (t336). Bindung Zeit: Gesichter altern sichtbar mit dem Rang; GFM alt, aber wachsam. Kernsymbol offenes Auge (keine Sterne); ab General Kommando-Augenplakette, beim GFM vollständig sichtbares überwachendes Auge auf der Uniform. |
+| 13 weitere | — | — | offen. Der Baukasten `tools/portraits/oel/chain2_build.py` ist nationsfähig (bisher Rothain, Karsk, Averon). |
 
-Zusammen: 16 fertige Ketten, 256 Rangbilder, 48 Narben-Layer, 2 Manifeste (306 Dateien). 14 von 16 Nationen fehlen noch. Sollstand bleibt 4 Personen × 2 Uniformen × 16 Nationen = 128 Ketten.
+Zusammen: 24 fertige Ketten, 384 Rangbilder, 72 Narben-Layer, 3 Manifeste (459 Dateien). 13 von 16 Nationen fehlen noch. Sollstand bleibt 4 Personen × 2 Uniformen × 16 Nationen = 128 Ketten.
 
 ## Manifest
 
-Jedes Manifest nennt `style: "oil-chain"`, Canvas, Rangliste mit ungefährem Alter, Uniformen, Personen, Dateipfade, Gesichtsanker (`eye_mid`, `chin_y`) und die drei Narbenpfade samt optionalem Pixeloffset. Rothain steht in `oel_ketten/manifest.json`, Karsk in `oel_ketten/karsk/manifest.json`.
+Jedes Manifest nennt `style: "oil-chain"`, Canvas, Rangliste mit ungefährem Alter, Uniformen, Personen, Dateipfade, Gesichtsanker (`eye_mid`, `chin_y`) und die drei Narbenpfade samt optionalem Pixeloffset. Rothain steht in `oel_ketten/manifest.json`, Karsk in `oel_ketten/karsk/manifest.json`, Averon in `oel_ketten/averon/manifest.json`.
 
 ## Werkzeuge
 
