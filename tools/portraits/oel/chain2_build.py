@@ -2,13 +2,13 @@
 """v2 oil chains: aligned 864x1152 paintings -> webp, per-person scar layers (plastic), manifest, sheets.
 
 Nation-aware. Env:
-  CHAIN2_NATION  rothain (default) | karsk | averon | ossaria | ...
+  CHAIN2_NATION  rothain (default) | karsk | averon | ossaria | sahr | ...
   CHAIN2_WORK    work root (default depends on nation)
   CHAIN2_OUT     export root (default .../oel_ketten)
   CHAIN2_SHEETS  sheet dir (default /workspace/t325-portraits/oel)
 
-Work dir: <WORK>/<uni_key>/<m1|m2|f1|f2>/{raw,aligned}
-Export:   <OUT>/<nation>/<uni_name>/<person>/NN_rank.webp + scars/
+Work dir: <WORK>/<uni_key>/<m1|m2|f1|f2>/{raw,aligned} and muetzen/<typ>/{raw,aligned}
+Export:   <OUT>/<nation>/<uni_name>/<person>/NN_rank.webp + scars/ + muetzen/<typ>/
 Manifest: rothain keeps legacy <OUT>/manifest.json; other nations write <OUT>/<nation>/manifest.json
 
 Usage: chain2_build.py export | sheets | detail
@@ -24,12 +24,14 @@ UNI_BY_NATION = {
     'karsk':   {'panzer': 'panzer', 'tech': 'tech'},
     'averon':  {'feld': 'feld', 'dienst': 'dienst'},
     'ossaria': {'platte': 'platte', 'klage': 'klage'},
+    'sahr':    {'wickel': 'wickel', 'offen': 'offen'},
 }
 WORK_DEFAULT = {
     'rothain': '/workspace/t325-portraits/oel/v2',
     'karsk':   '/workspace/t325-portraits/oel/v2_karsk',
     'averon':  '/workspace/t325-portraits/oel/v2_averon',
     'ossaria': '/workspace/t325-portraits/oel/v2_ossaria',
+    'sahr':    '/workspace/t325-portraits/oel/v2_sahr',
 }
 UNI = UNI_BY_NATION[NATION]
 WORK = os.environ.get('CHAIN2_WORK', WORK_DEFAULT.get(NATION, '/workspace/t325-portraits/oel/v2'))
@@ -37,6 +39,12 @@ OUT = os.environ.get('CHAIN2_OUT', os.path.join(HERE, '..', '..', '..', 'Divisio
 SHEETS = os.environ.get('CHAIN2_SHEETS', '/workspace/t325-portraits/oel')
 W, H = 864, 1152
 PERSONS = ['m1', 'm2', 'f1', 'f2']
+SECOND_CAP_BY_NATION = {
+    'rothain': 'feldmuetze', 'karsk': 'barett', 'averon': 'feldmuetze',
+    'ossaria': 'feldmuetze', 'sahr': 'feldmuetze',
+}
+def cap_types():
+    return ['schirmmuetze', SECOND_CAP_BY_NATION.get(NATION, 'feldmuetze')]
 
 RANKS_ROTHAIN = [
     ('faehnrich', 'Fähnrich', 19), ('oberfaehnrich', 'Oberfähnrich', 21), ('leutnant', 'Leutnant', 23), ('oberleutnant', 'Oberleutnant', 26),
@@ -60,7 +68,9 @@ RANKS_AVERON = [
 ]
 # Ossaria chronological midpoints from Raenge.md (Bindung Tote; GFM alt und von den Toten gezeichnet)
 RANKS_OSSARIA = list(RANKS_AVERON)
-RANKS = {'rothain': RANKS_ROTHAIN, 'karsk': RANKS_KARSK, 'averon': RANKS_AVERON, 'ossaria': RANKS_OSSARIA}.get(NATION, RANKS_ROTHAIN)
+# Sahr midpoints from Raenge.md (Bindung Fluss; GFM alt, Ausdruck fließend, nicht gebrechlich)
+RANKS_SAHR = list(RANKS_AVERON)
+RANKS = {'rothain': RANKS_ROTHAIN, 'karsk': RANKS_KARSK, 'averon': RANKS_AVERON, 'ossaria': RANKS_OSSARIA, 'sahr': RANKS_SAHR}.get(NATION, RANKS_ROTHAIN)
 
 # Short forms so sheet captions fit in a 324px cell (Bold 15).
 RANK_SHORT = {
@@ -79,7 +89,16 @@ PERSON_OFF = {}
 
 def fname(i): return f'{i+1:02d}_{RANKS[i][0]}'
 def adir(u, p): return f'{WORK}/{u}/{p}/aligned'
+def cdir(u, p, typ): return f'{WORK}/{u}/{p}/muetzen/{typ}/aligned'
 def have(u, p): return os.path.isdir(adir(u, p)) and len([f for f in os.listdir(adir(u, p)) if f[:2].isdigit()]) == 16
+def cap_src(u, p, typ, i):
+    d = cdir(u, p, typ); base = fname(i)
+    for ext in ('.png', '.webp', '.jpg'):
+        path = f'{d}/{base}{ext}'
+        if os.path.exists(path): return path
+    return None
+def have_caps(u, p, typ):
+    return os.path.isdir(cdir(u, p, typ)) and all(cap_src(u, p, typ, i) for i in range(16))
 def man_path():
     if NATION == 'rothain':
         return f'{OUT}/manifest.json'
@@ -145,8 +164,14 @@ def render_scar(name, an, off):
 def export():
     man = dict(version=2, style='oil-chain', nation=NATION, canvas=[W, H],
                format='webp q90, opaque painting, flat dark canvas background; native generator resolution 864x1152 (3:4), no downscale',
-               note='Each rank image is an edit of the previous rank (same pose/crop/light), landmark-aligned (single Lanczos resample) to the Faehnrich master (eyes/chin). Scars are separate alpha layers per person, same canvas size, z_order painting+scars.',
-               z_order=['painting', 'scars'], headgear='none', rank_ids=[r[0] for r in RANKS], ranks=[dict(id=r[0], name=r[1], approx_age=r[2]) for r in RANKS], uniforms={})
+               note='Each rank image is an edit of the previous rank (same pose/crop/light), landmark-aligned (single Lanczos resample) to the Faehnrich master (eyes/chin). Scars and headgear are separate alpha layers, same canvas size. z_order: painting, scars, at most one cap.',
+               z_order=['painting', 'scars', 'muetzen'], rank_ids=[r[0] for r in RANKS], ranks=[dict(id=r[0], name=r[1], approx_age=r[2]) for r in RANKS], uniforms={})
+    types = cap_types()
+    any_caps = any(have(u, p) and any(have_caps(u, p, typ) for typ in types) for u in UNI for p in PERSONS)
+    man['headgear'] = 'layers' if any_caps else 'none'
+    man['headgear_types'] = types if any_caps else []
+    if any_caps:
+        man['headgear_note'] = 'Base portraits are bareheaded. Caps are per-rank RGBA layers (Schirmmuetze + national second cap), fit-checked on each base; redrawn per portrait if they do not sit correctly.'
     for u, un in UNI.items():
         man['uniforms'][un] = dict(persons={})
         for p in PERSONS:
@@ -158,27 +183,43 @@ def export():
             for k in SCAR_OFF:
                 o = PERSON_OFF.get((u, p, k), (0, 0)); offs[k] = [round(SCAR_OFF[k][0] + o[0], 1), round(SCAR_OFF[k][1] + o[1], 1)]
                 render_scar(k, an, offs[k]).save(f'{d}/scars/{k}.webp', quality=95, method=6)
-            man['uniforms'][un]['persons'][p] = dict(
+            rec = dict(
                 files=[f'{NATION}/{un}/{p}/{fname(i)}.webp' for i in range(16)],
                 anchors=dict(eye_mid=[round(v, 1) for v in an['eye_mid']], chin_y=round(an['chin_y'], 1), eye_chin=round(an['eye_chin'], 1)),
                 scars={k: dict(file=f'{NATION}/{un}/{p}/scars/{k}.webp', offset_px=offs[k]) for k in SCAR_OFF}, scar_mode='multi (freely combinable)')
-            print('exported', NATION, u, p)
+            muetzen = {}
+            for typ in cap_types():
+                if not have_caps(u, p, typ): continue
+                od = f'{d}/muetzen/{typ}'; os.makedirs(od, exist_ok=True)
+                for i in range(16):
+                    Image.open(cap_src(u, p, typ, i)).convert('RGBA').save(f'{od}/{fname(i)}.webp', quality=95, method=6)
+                muetzen[typ] = dict(files=[f'{NATION}/{un}/{p}/muetzen/{typ}/{fname(i)}.webp' for i in range(16)])
+            if muetzen:
+                rec['muetzen'] = muetzen
+            man['uniforms'][un]['persons'][p] = rec
+            print('exported', NATION, u, p, 'caps' if muetzen else 'no-caps')
     path = man_path()
     os.makedirs(os.path.dirname(path), exist_ok=True)
     json.dump(man, open(path, 'w'), indent=1, ensure_ascii=False)
     print('wrote', path)
 
-def compose(un, p, i, scars=()):
+def compose(un, p, i, scars=(), cap=None):
     im = Image.open(f'{OUT}/{NATION}/{un}/{p}/{fname(i)}.webp').convert('RGBA')
     for s in scars: im.alpha_composite(Image.open(f'{OUT}/{NATION}/{un}/{p}/scars/{s}.webp').convert('RGBA'))
+    if cap:
+        cpath = f'{OUT}/{NATION}/{un}/{p}/muetzen/{cap}/{fname(i)}.webp'
+        if os.path.exists(cpath):
+            im.alpha_composite(Image.open(cpath).convert('RGBA'))
     return im.convert('RGB')
 
 def sheet(path, items, cols=4, tw=324):
     th = int(tw * H / W); f = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 14)
     rows = (len(items) + cols - 1) // cols; sh = Image.new('RGB', (cols * tw, rows * (th + 22)), (30, 30, 34)); dr = ImageDraw.Draw(sh)
-    for n, (un, p, i, scars, label) in enumerate(items):
+    for n, item in enumerate(items):
+        un, p, i, scars, label = item[:5]
+        cap = item[5] if len(item) > 5 else None
         x, y = (n % cols) * tw, (n // cols) * (th + 22)
-        sh.paste(compose(un, p, i, scars).resize((tw, th), Image.LANCZOS), (x, y + 22))
+        sh.paste(compose(un, p, i, scars, cap=cap).resize((tw, th), Image.LANCZOS), (x, y + 22))
         # shrink or ellipsize if a caption would still run into the next cell
         font, lab = f, label
         while font.size >= 11 and font.getbbox(lab)[2] > tw - 10:
@@ -196,10 +237,17 @@ def sheets():
             sheet(f'{SHEETS}/kette_{NATION}_{tag}.jpg', [(un, p, i, (), f'{p} {un} · {i+1:02d} {rank_short(i)[0]} (~{rank_short(i)[1]})') for i in range(16)])
             var = [(0, ('wange',)), (4, ('braue',)), (8, ('wange', 'braue')), (12, ('kiefer',)), (7, ('wange', 'kiefer')), (10, ('braue', 'kiefer')), (15, ('wange', 'braue', 'kiefer')), (2, ('wange', 'braue', 'kiefer'))]
             sheet(f'{SHEETS}/kette_{NATION}_{tag}_narben.jpg', [(un, p, i, sc, f'{p} · {i+1:02d} {rank_short(i)[0]} · {"+".join(sc)}') for i, sc in var])
+            for typ in cap_types():
+                if not have_caps(u, p, typ): continue
+                sheet(f'{SHEETS}/kette_{NATION}_{tag}_{typ}.jpg', [(un, p, i, (), f'{p} {un} {typ} · {i+1:02d} {rank_short(i)[0]} (~{rank_short(i)[1]})', typ) for i in range(16)])
     items = [(UNI[u], p, i, (), f'{p} {UNI[u]} · {rank_short(i)[0]}') for u in UNI for p in PERSONS if have(u, p) for i in (0, 8, 15)]
     if items:
         cols = 6 if len(items) >= 6 else max(3, len(items))
         sheet(f'{SHEETS}/kette_{NATION}_uebersicht.jpg', items, cols=cols, tw=240)
+    cap_items = [(UNI[u], p, i, (), f'{p} {UNI[u]} {typ} · {rank_short(i)[0]}', typ) for u in UNI for p in PERSONS for typ in cap_types() if have(u, p) and have_caps(u, p, typ) for i in (0, 8, 15)]
+    if cap_items:
+        cols = 6 if len(cap_items) >= 6 else max(3, len(cap_items))
+        sheet(f'{SHEETS}/kette_{NATION}_uebersicht_muetzen.jpg', cap_items, cols=cols, tw=240)
 
 def detail():
     if NATION != 'rothain':
