@@ -4,10 +4,10 @@
 
 | | |
 |---|---|
-| **Stand dieser Übersicht** | 21.11.2026 (Berlin), nach t337 (Ölgemälde-Ketten Ossaria; Version 0.645); Verfahren eingeführt in t286 |
-| **Version** | Alpha **0.645** (`Division_Command/VERSION`), Tag `v0.645` (21.11.2026, t337); davor `v0.643` (21.11.2026, t336), davor `v0.641` (20.11.2026, t325), davor `v0.636` (20.11.2026, t318), davor `v0.626` (19.11.2026, t301), davor `v0.624` (18.11.2026, t300), davor `v0.619` (18.11.2026, t298), davor `v0.611` (18.11.2026, t296), davor `v0.610` = `b87e3858` (17.11.2026, t291); vorher `v0.6e` = `9a0f3e2d` (13.11.2026) |
-| **Versionsschema** | Seit 0.610. Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. 0.610 steht für den Umbau des Bot-Zugs (t291), 0.611 für einen Fix (Audio-Schleife, t296: +0,001), 0.619 für t298 (Doktrin-DEF echt +0,005, Überlast +0,002, Kampftext +0,001), 0.624 für t300 (Doktrin-Grobkorrektur +0,002, Balance-Gate +0,003), 0.626 für t301 (Etappensicherung +0,002), 0.636 für t318 (großer Grafikumbau aller Vorderseiten plus Editor-Funktion „Muster neu würfeln“, +0,010), 0.641 für t325 (Ölgemälde-Ketten der Offiziersporträts für Rothain und Karsk, +0,005), 0.643 für t336 (Ölgemälde-Ketten Averon, +0,002), 0.645 für t337 (Ölgemälde-Ketten Ossaria, +0,002). |
-| **Basis-Commit dieser Übersicht** | Tag `v0.645` auf `main` (t337; davor `v0.643` = t336, davor `v0.641` = t325, davor `v0.636` = t318, davor `v0.626` = t301, davor `v0.624` = t300, `v0.619` = t298, `v0.611` = t296, davor `v0.610` = t291, davor `54eee9ce` = `v0.6e` plus Minen-Token und t286/t289, siehe [Zuletzt gemacht](#4-zuletzt-gemacht)) |
+| **Stand dieser Übersicht** | 24.11.2026 (Berlin), nach t345 (Ölgemälde-Ketten Sahr; Version 0.647); Verfahren eingeführt in t286 |
+| **Version** | Alpha **0.647** (`Division_Command/VERSION`), Tag `v0.647` (24.11.2026, t345); davor `v0.645` (21.11.2026, t337), davor `v0.643` (21.11.2026, t336), davor `v0.641` (20.11.2026, t325), davor `v0.636` (20.11.2026, t318), davor `v0.626` (19.11.2026, t301), davor `v0.624` (18.11.2026, t300), davor `v0.619` (18.11.2026, t298), davor `v0.611` (18.11.2026, t296), davor `v0.610` = `b87e3858` (17.11.2026, t291); vorher `v0.6e` = `9a0f3e2d` (13.11.2026) |
+| **Versionsschema** | Seit 0.610. Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. 0.610 steht für den Umbau des Bot-Zugs (t291), 0.611 für einen Fix (Audio-Schleife, t296: +0,001), 0.619 für t298 (Doktrin-DEF echt +0,005, Überlast +0,002, Kampftext +0,001), 0.624 für t300 (Doktrin-Grobkorrektur +0,002, Balance-Gate +0,003), 0.626 für t301 (Etappensicherung +0,002), 0.636 für t318 (großer Grafikumbau aller Vorderseiten plus Editor-Funktion „Muster neu würfeln“, +0,010), 0.641 für t325 (Ölgemälde-Ketten der Offiziersporträts für Rothain und Karsk, +0,005), 0.643 für t336 (Ölgemälde-Ketten Averon, +0,002), 0.645 für t337 (Ölgemälde-Ketten Ossaria, +0,002), 0.647 für t345 (Ölgemälde-Ketten Sahr inkl. Mützen-Layer, +0,002). |
+| **Basis-Commit dieser Übersicht** | Tag `v0.647` auf `main` (t345; davor `v0.645` = t337, davor `v0.643` = t336, davor `v0.641` = t325, davor `v0.636` = t318, davor `v0.626` = t301, davor `v0.624` = t300, `v0.619` = t298, `v0.611` = t296, davor `v0.610` = t291, davor `54eee9ce` = `v0.6e` plus Minen-Token und t286/t289, siehe [Zuletzt gemacht](#4-zuletzt-gemacht)) |
 | **Service-Worker-Cache** | `divcmd-alpha49a` (bei jeder Web-Änderung hochzählen) |
 | **Katalog** | 1.746 Karten-IDs, 16 Nationen, 36 Doktrinen; 1.746 Vorderseiten (Nachzählung 17.11.2026 über `scripts/nation_pools/load_game.js`) |
 | **Letzte dokumentierte Prozentwertung** | 67 % bis Early Access, Kernspiel 77 % (`entwicklung/STATUS_T271.md`, Stand t271). Seitdem **nicht neu bewertet**; die Bereichsgewichte stehen dort. |
@@ -56,7 +56,7 @@ Entscheidungen des Projektleiters. Sie stehen hier gebündelt, damit sie nicht i
 | [VS-05](#vs-05-balance) | Balance | in Arbeit | Ziel 50 %; seit 0.626 Nationen 44–60 % (Caldris 49,9/47,2 %), Ausnahmeliste nur noch Merovan Misch, Bollwerk, Scheinschwerpunkt; Balance-Gate misst bei jeder Änderung (CI: Schnellvariante). |
 | [VS-06](#vs-06-lore--nationentiefe) | Lore & Nationentiefe | fertig | 16 Hauptdokumente je Nation, Kurzprofile, Aufsätze; Einbindung ins Spiel schmal. |
 | [VS-07](#vs-07-oberfläche-menüs-tisch-bibliothek) | Oberfläche: Menüs, Tisch, Bibliothek | in Arbeit | Designsystem t280, Tisch-HUD, Bibliothek, Bot-Ticker und Reaktionsfenster (t291), Audio-Schleife am Tisch behoben (t296); Playtest: Rückmeldung bei Aktionen zu schwach; 2,5D-Ansicht nicht auf Zielgeräten geprüft. |
-| [VS-08](#vs-08-kartenfaces--grafik-porträts) | Kartenfaces & Grafik, Porträts | in Arbeit | Vorderseiten komplett; Ölketten Rothain, Karsk, Averon und Ossaria fertig, 12 Nationen und die Verdrahtung offen. |
+| [VS-08](#vs-08-kartenfaces--grafik-porträts) | Kartenfaces & Grafik, Porträts | in Arbeit | Vorderseiten komplett; Ölketten Rothain, Karsk, Averon, Ossaria und Sahr fertig (Sahr inkl. Mützen-Layer), 11 Nationen und die Verdrahtung offen. Als Nächstes Mützen-Layer für Rothain, Averon und Ossaria, danach Karsk neu nach t344. |
 | [VS-09](#vs-09-sound--musik) | Sound & Musik | fertig | 15 Musikstücke, 205 Effektdateien (SFX v4), Optionen; Audio-Schleife am Tisch behoben (t296). |
 | [VS-10](#vs-10-tutorial--onboarding) | Tutorial & Onboarding | fertig | „Grundausbildung“, 25 Schritte, Erststart, Test grün. |
 | [VS-11](#vs-11-mehrspieler--lan) | Mehrspieler / LAN | in Arbeit | Sicht je Spieler, gehärteter Server; nie mit zwei Rechnern gespielt. |
@@ -163,13 +163,13 @@ Je Slice: **Umfang** (Ende zu Ende, von Daten über Engine bis Oberfläche), **S
 ### VS-08 Kartenfaces & Grafik, Porträts
 
 - **Umfang:** Vorderseiten (alpha40), Motive, Kartenrückseite, Tischgrafiken, Offiziersporträts, Renderpipeline.
-- **Status: in Arbeit.** Alle 1.746 Vorderseiten existieren und bestehen `verify.py`. Seit 0.636 (t318) im Stil der kleinen Karten: Titelbanner und AP-Stern wie klein (Titelschrift bleibt die alte alpha40-Schrift), Hintergründe und Textfelder prozedural je Karte (`KartenEditor/tools/texgen.py`, fester Seed je ID in `scripts/graphics/tex-seeds.json`, neu würfeln nur per `render.py --reroll <id>` oder Editor-Knopf), Einheiten wie Runde 3, Ausrüstung mit Ocker-Feld und Winkeln (Bronze 1, Silber 2, Gold 3). Vorschaubilder `faces-v2-thumb/` (300 × 418) für Laufband und Kartenflüge. Gesamtrender etwa 45 min (6 Jobs). Seit 0.641 (t325) liegen Ölgemälde-Ketten für Rothain und Karsk vor, seit 0.643 (t336) zusätzlich Averon, seit 0.645 (t337) zusätzlich Ossaria (je 4 Personen × 2 Uniformen × 16 Ränge unter `web/assets/portraits/oel_ketten/`); 12 Nationen fehlen noch, die Ketten sind noch nicht in `portraits.js` oder im Editor verdrahtet. Lücken: vorläufige Motive und die übrigen Porträts.
+- **Status: in Arbeit.** Alle 1.746 Vorderseiten existieren und bestehen `verify.py`. Seit 0.636 (t318) im Stil der kleinen Karten: Titelbanner und AP-Stern wie klein (Titelschrift bleibt die alte alpha40-Schrift), Hintergründe und Textfelder prozedural je Karte (`KartenEditor/tools/texgen.py`, fester Seed je ID in `scripts/graphics/tex-seeds.json`, neu würfeln nur per `render.py --reroll <id>` oder Editor-Knopf), Einheiten wie Runde 3, Ausrüstung mit Ocker-Feld und Winkeln (Bronze 1, Silber 2, Gold 3). Vorschaubilder `faces-v2-thumb/` (300 × 418) für Laufband und Kartenflüge. Gesamtrender etwa 45 min (6 Jobs). Seit 0.641 (t325) liegen Ölgemälde-Ketten für Rothain und Karsk vor, seit 0.643 (t336) zusätzlich Averon, seit 0.645 (t337) zusätzlich Ossaria, seit 0.647 (t345) zusätzlich Sahr inkl. Mützen-Layer (je 4 Personen × 2 Uniformen × 16 Ränge unter `web/assets/portraits/oel_ketten/`); 11 Nationen fehlen noch, die Ketten sind noch nicht vollständig in `portraits.js` oder im Editor verdrahtet. Lücken: vorläufige Motive und die übrigen Porträts.
 - **Code/Werkzeuge:** `scripts/graphics/` (`render.py`, `verify.py`), `scripts/cards-review/kurz.py`, `web/assets/cards/`, `web/assets/portraits/` (Spiel: ältere Einzelporträts; Bestand der Ketten: `portraits/oel_ketten/`), `tools/portraits/oel/chain2_build.py`, `Division_Command/portraits/` (älteres Ebenenwerkzeug), `KartenEditor/`.
 - **Docs:** `technik/KARTEN_RENDER_ALPHA40.md`, `technik/PORTRAIT_OEL_KETTEN.md`, `technik/PORTRAIT_SYSTEM.md`, `regeln/KARTEN_KUERZUNGEN.md`, `scripts/graphics/README.md`.
 - **Gates:** `verify.py` (1024 × 1428, Texte, Motivpräsenz, Seed-Register, Renderer-Digest), `tests/test_tex_seeds_t315.py` (lokal; Determinismus, Muster je Typ verschieden), `test_graphics`, `test_card_faces_text`, `test_image_paths`.
 - **Offen:**
   - 650 Karten tragen laut t258 ein vorläufiges Motiv („platzhalter“). Heutiger Zähler **nicht neu erhoben**.
-  - Porträts: Ölketten Rothain, Karsk, Averon und Ossaria fertig (32 Ketten, noch nicht in `portraits.js`/Editor). 12 Nationen offen. Offene Frage: Soll Karsk sichtbar altern oder lore-treu jung mit Implantaten bleiben? Die 72 älteren Einzelporträts in 8 Ordnern bleiben vorerst die im Spiel genutzten Dateien; Ordner „Jetzt“/„Ossar“ unklar (t271).
+  - Porträts: Ölketten Rothain, Karsk, Averon, Ossaria und Sahr fertig (40 Base-Ketten; Sahr mit Mützen-Layern). 11 Nationen offen. Karsk-Alterung ist entschieden (t344): Gesicht altert sichtbar, unausgereifte Synthetik, Gewebe angegriffen und zunehmend ersetzt; Neugenerierung nach den Mützen-Layern für Rothain, Averon und Ossaria. Die 72 älteren Einzelporträts in 8 Ordnern bleiben vorerst die im Spiel genutzten Dateien; Ordner „Jetzt“/„Ossar“ unklar (t271).
   - Das Minen-Token `web/assets/cards/MINE.png` wurde am 14.11.2026 manuell ersetzt; ob alle Verwendungen es korrekt darstellen, ist nicht eigens geprüft.
 
 ### VS-09 Sound & Musik
@@ -245,6 +245,7 @@ Quelle: Git-Log (`git log`), `CHANGELOG.md` und die Berichte unter `balance/` un
 
 | Datum | Version / Commit | Inhalt |
 |---|---|---|
+| 24.11.2026 | **0.647** (t345, Tag `v0.647`) | **Ölgemälde-Ketten Sahr:** Wickel und Offen, je 4 Personen × 16 Ränge, Narben und erstmals Mützen als eigene Layer (Schirmmütze + Feldmütze, Fit-Check). Bestand jetzt Rothain, Karsk, Averon, Ossaria und Sahr (40 Base-Ketten); 11 Nationen offen. Mützen-Layer für Rothain/Averon/Ossaria und Karsk-Neugenerierung (t344) folgen. Verdrahtung unverändert. Cache unverändert `divcmd-alpha49a`. Regeln, Werte, Texte und Balance unverändert. Siehe [`technik/PORTRAIT_OEL_KETTEN.md`](technik/PORTRAIT_OEL_KETTEN.md). |
 | 21.11.2026 | **0.645** (t337, Tag `v0.645`) | **Ölgemälde-Ketten Ossaria:** Platte und Klage, je 4 Personen × 16 Ränge, Narben als eigene Layer. Bestand jetzt Rothain, Karsk, Averon und Ossaria (32 Ketten); 12 Nationen offen, noch nicht in `portraits.js`/Editor. Cache unverändert `divcmd-alpha49a`. Regeln, Werte, Texte und Balance unverändert. Siehe [`technik/PORTRAIT_OEL_KETTEN.md`](technik/PORTRAIT_OEL_KETTEN.md). |
 | 21.11.2026 | **0.643** (t336, Tag `v0.643`) | **Ölgemälde-Ketten Averon:** Feld und Dienst, je 4 Personen × 16 Ränge, Narben als eigene Layer. Bestand jetzt Rothain, Karsk und Averon (24 Ketten); 13 Nationen offen, noch nicht in `portraits.js`/Editor. Cache unverändert `divcmd-alpha49a`. Regeln, Werte, Texte und Balance unverändert. Siehe [`technik/PORTRAIT_OEL_KETTEN.md`](technik/PORTRAIT_OEL_KETTEN.md). |
 | 20.11.2026 | **0.641** (t325, Tag `v0.641`) | **Offiziersporträts als Ölgemälde-Ketten:** Rothain (Dienstrock, Gala) und Karsk (Panzer, Technik) je 4 Personen × 16 Ränge, Narben als eigene Layer; 14 Nationen offen, noch nicht in `portraits.js`/Editor. Verworfene Layer-Assets (`layers/`, `layers_oel/`) entfernt. Cache unverändert `divcmd-alpha49a` (neue Bilder nicht in der App-Shell, HTML/JS bereits Netzwerk zuerst). Regeln, Werte, Texte und Balance unverändert. Siehe [`technik/PORTRAIT_OEL_KETTEN.md`](technik/PORTRAIT_OEL_KETTEN.md). |
@@ -285,7 +286,7 @@ Quelle: Git-Log (`git log`), `CHANGELOG.md` und die Berichte unter `balance/` un
 | KI-Stellungswechsel einschalten | VS-04/VS-05 | Eigene Balance-Runde nötig (Sahr, Vesper, Merovan, Lyr); Entscheidung, ob gewollt. | Projektleiter |
 | Git LFS / Repo-Größe | VS-12 | Plan steht, braucht Freigabe (`technik/REPO_GROESSE_LFS_T283.md`). | Projektleiter |
 | Lore im Spiel | VS-06 | Entscheidung, ob und wie. | Projektleiter |
-| Karsk-Offiziere: sichtbares Altern oder lore-treu jung mit Implantaten? | VS-08 | Karsk-Ketten sind derzeit jung mit zunehmenden Implantaten. Ein Alterungsdurchgang lässt sich nachziehen. | Projektleiter |
+| Karsk-Offiziere: sichtbares Altern (t344 entschieden) | VS-08 | Entscheidung t344: Gesicht altert sichtbar; unausgereifte Synthetik, Gewebe angegriffen und zunehmend ersetzt. Der aktuelle Bestand bleibt stehen, bis die Mützen-Layer für Rothain, Averon und Ossaria fertig sind; danach Neugenerierung. | erledigt (Umsetzung folgt) |
 
 ## 6. Verfahren: Vertical Slices und current_state.md
 
@@ -340,7 +341,7 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 | 2 | Entscheidung zu **KI-Stellungswechsel** und anschließende Balance-Runde (Sahr, Vesper, Merovan, Lyr) | VS-04, VS-05 | `BALANCE_T285.md` §3. |
 | 2 | **Überschuss 1 AP** entscheiden; **Normverband** (≈ 44 %) lösen, ohne Steinmark zu überdrehen | VS-05, VS-03 | Eigene kleine Runde. |
 | 2 | **EXE bauen** und auf einem sauberen Windows-Rechner starten; **PDF** auf Stand 0.626 bringen | VS-14 | PDF trägt noch 0.6b. |
-| 3 | Ölketten der übrigen 12 Nationen (nach Karsk-Aging-Entscheidung), dann in `portraits.js`/Editor verdrahten; vorläufige Motive neu zählen und ersetzen | VS-08 | Rothain, Karsk (0.641), Averon (0.643) und Ossaria (0.645) stehen. 650 vorläufige Motive laut t258. |
+| 3 | Ölketten der übrigen 11 Nationen; zuvor Mützen-Layer für Rothain, Averon und Ossaria sowie Karsk neu nach t344, dann in `portraits.js`/Editor verdrahten; vorläufige Motive neu zählen und ersetzen | VS-08 | Rothain, Karsk (0.641), Averon (0.643), Ossaria (0.645) und Sahr (0.647, inkl. Mützen-Layer) stehen. 650 vorläufige Motive laut t258. |
 | 3 | Brummbär-Stub, `MINE_TOKEN`, `CM`-Fehlalarme im Prüfskript | VS-03 | Kleinschritte. |
 | 3 | 24 Zwillingsgruppen auch über Werte trennen | VS-02 | Nur Schlüsselwörter trennen sie heute. |
 | 3 | Roguelike-Slice neu zuschneiden | VS-15 | Vorher Abstimmung. |
@@ -365,7 +366,27 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 
 **CI (seit t289):** Auf GitHub laufen bei jedem Push/PR auf `main` automatisch `npm test`, `verify.py`, Fuzz und Audit (`.github/workflows/ci.yml`, [`technik/CI.md`](technik/CI.md)). Das ersetzt die lokalen Browser-Gates und `smoke 400` nicht; ein roter Lauf auf der Actions-Seite des Repos ist vor dem nächsten Push zu beheben.
 
-**Letzter Gate-Lauf (21.11.2026, t337, Version 0.645):** Grün:
+**Letzter Gate-Lauf (24.11.2026, t345, Version 0.647):** Grün:
+
+- `npm test` (66 Dateien; `DC_VERSION`-Assertion in `test_balance_t240.js` auf 0.647, erster Lauf grün)
+- `verify.py` und `tests/test_tex_seeds_t315.py`
+- Fuzz 80 (80/80, 0 Fehler)
+- Smoke 400 (400/400, 0 Fehler)
+- Audit (14/14, `unreadParams` 0)
+- `balance-gate:quick` (grün, 0 Fehler, 15936 Partien). Das volle Gate ist nicht gelaufen: keine Karten- oder Regeländerung, nur Porträt-Assets und Doku.
+- `tutorial-play` (17/17)
+- `reset-play` (6/6)
+- `layout-test` (0 Befunde)
+- `screens-test` (0 Befunde, 75 Ansichten)
+- `libzoom-play` (33/0)
+- `lan-play` (8/0, 9 Züge)
+- `funcs-play` (5/5, Versionsanzeige 0.647)
+- `botseq-play` (grün, `fail` leer, erster Lauf)
+- `audio-play` (0 Schreibzugriffe in 3 s am Tisch, Version 0.647)
+- `ui-play` Seed 31337 (grün, `fail` leer)
+- `ui-play` Seed 1234 (grün, `fail` leer)
+
+**Gate-Lauf davor (21.11.2026, t337, Version 0.645):** Grün:
 
 - `npm test` (66 Dateien; `DC_VERSION`-Assertion in `test_balance_t240.js` auf 0.645, erster Lauf grün)
 - `verify.py` und `tests/test_tex_seeds_t315.py`

@@ -4,6 +4,16 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.647 Alpha – 24.11.2026
+
+Offiziersporträts als Ölgemälde-Ketten, Sahr (t345, Gewicht +0,002: spürbare Erweiterung des Grafikbestands). Stehende Freigabe des Projektleiters: fertige Nation direkt als Release pushen. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.
+
+- **Sahr fertig** unter `Division_Command/web/assets/portraits/oel_ketten/sahr/`: vier Personen in zwei Uniformen (`wickel`, `offen`), 16 Ränge vom Fähnrich bis zum Generalfeldmarschall (864 × 1152, WebP), Narben (`wange`, `braue`, `kiefer`) und erstmals **Mützen als eigene RGBA-Layer** (`schirmmuetze`, `feldmuetze`), je Rang mit Fit-Check. Basen bleiben barhaupt. Manifest: `oel_ketten/sahr/manifest.json` (`headgear: "layers"`). Beschreibung: `docs/technik/PORTRAIT_OEL_KETTEN.md`.
+- **Bestand jetzt:** Rothain (`dienstrock`, `gala`), Karsk (`panzer`, `tech`), Averon (`feld`, `dienst`), Ossaria (`platte`, `klage`) und Sahr (`wickel`, `offen`) — 40 Base-Ketten. 11 Nationen fehlen noch. Mützen-Layer für Rothain, Averon und Ossaria sowie die Neugenerierung von Karsk (sichtbares Altern nach t344) folgen als Nächstes. Die Verdrahtung in `portraits.js` bleibt unverändert (Teilverdrahtung seit d27dbc1d, nicht in diesem Release stillschweigend erweitert).
+- **Sahr (Bindung Fluss):** Gesichter altern sichtbar mit dem Rang; GFM alt, Ausdruck fließend, nicht gebrechlich. Kernsymbol fließende Welle; Perlen als Städtezeichen; ab General eine große Wellen-Kommandoplakette, beim GFM das Flusssymbol vollständig sichtbar. Keine Sterne, Adler, Kreuze oder historischen deutschen Kriegsabzeichen.
+- **Karsk:** Der aktuelle Bestand bleibt stehen. Nach t344 werden die Ketten später neu generiert: das Gesicht altert sichtbar, unausgereifte Synthetik, Gewebe angegriffen und zunehmend ersetzt.
+- **Cache** unverändert `divcmd-alpha49a`: die neuen Bilder stehen nicht in der App-Shell, HTML/JS gehen bereits zuerst ins Netz.
+
 ## 0.645 Alpha – 21.11.2026
 
 Offiziersporträts als Ölgemälde-Ketten, Ossaria (t337, Gewicht +0,002: spürbare Erweiterung des Grafikbestands). Freigabe des Projektleiters: „push und weiter machen“. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.

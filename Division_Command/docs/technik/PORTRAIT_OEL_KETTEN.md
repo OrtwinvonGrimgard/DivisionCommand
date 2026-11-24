@@ -1,4 +1,4 @@
-# Offiziersporträts – Ölgemälde-Ketten (t325, ergänzt t336, t337, t343)
+# Offiziersporträts – Ölgemälde-Ketten (t325, ergänzt t336, t337, t343, t345)
 
 Stand: 24.11.2026. Ergänzt [`PORTRAIT_SYSTEM.md`](PORTRAIT_SYSTEM.md) (Ziel und Lore). Der ältere Layer-Ansatz [`PORTRAIT_LAYERS_V2.md`](PORTRAIT_LAYERS_V2.md) ist überholt; seine Asset-Ordner sind entfernt.
 
@@ -55,10 +55,10 @@ Rothain, Karsk, Averon und Ossaria bleiben als barhäuptige Basen nutzbar; ihre 
 | Karsk | `panzer`, `tech` | 8 | fertig im aktuellen Bestand (optisch jung + wachsende Implantate). **t344, nach Sahr, nur mit Freigabe:** Ketten neu generieren. Gesicht altert sichtbar; die synthetischen Verbesserungen sind unausgereift, das Gewebe wird mit der Zeit angegriffen und muss zunehmend ersetzt werden. Mehr sichtbare Prothesen, Narben und ersetzte Hautpartien mit dem Rang; bestehendes bleibt, das Ergebnis wirkt zunehmend künstlich und beschädigt, nicht perfekt. Vorlagen: `v2_karsk/AGING_PROMPTS.md`. |
 | Averon | `feld`, `dienst` | 8 | fertig (t336). Bindung Zeit: Gesichter altern sichtbar mit dem Rang; GFM alt, aber wachsam. Kernsymbol offenes Auge (keine Sterne); ab General Kommando-Augenplakette, beim GFM vollständig sichtbares überwachendes Auge auf der Uniform. |
 | Ossaria | `platte`, `klage` | 8 | fertig (t337), barhaupt. Bindung Tote: Gesichter altern sichtbar mit dem Rang; GFM alt und von den Toten gezeichnet, nicht gebrechlich. Kernsymbol Knochenkreis / stilisierter Totenschädel (keine christlichen Kreuze); ab General große Knochenkreis-/Schädel-Gedenkplakette. |
-| Sahr | `wickel`, `offen` | — | in Arbeit (t343). Bindung Fluss. Basen barhaupt; Mützen als Layer (Schirmmütze + Feldmütze), mit Fit-Check. Kernsymbol fließende Welle; Perlen als Städtezeichen, nicht als Hofschmuck. |
+| Sahr | `wickel`, `offen` | 8 | fertig (t345), barhaupt mit Mützen-Layern (Schirmmütze + Feldmütze, Fit-Check). Bindung Fluss: Gesichter altern sichtbar mit dem Rang; GFM alt, Ausdruck fließend, nicht gebrechlich. Kernsymbol fließende Welle; Perlen als Städtezeichen; ab General große Wellen-Kommandoplakette, beim GFM Flusssymbol vollständig sichtbar. |
 | 11 weitere | — | — | offen. Der Baukasten `tools/portraits/oel/chain2_build.py` ist nationsfähig (Rothain, Karsk, Averon, Ossaria, Sahr). |
 
-Zusammen (vor Abschluss von Sahr): 32 fertige Ketten, 512 Rangbilder, 96 Narben-Layer, 4 Manifeste. 12 von 16 Nationen fehlten vor Sahr. Sollstand bleibt 4 Personen × 2 Uniformen × 16 Nationen = 128 Base-Ketten, plus Narben und (ab Sahr) zwei Mützen-Layer je Rang. Rothain, Karsk, Averon und Ossaria sind barhäuptige Basen ohne Mützen-Layer.
+Zusammen: 40 fertige Base-Ketten, 640 Rangbilder, 120 Narben-Layer, 5 Manifeste, plus 256 Mützen-Layer bei Sahr. 11 von 16 Nationen fehlen noch. Sollstand bleibt 4 Personen × 2 Uniformen × 16 Nationen = 128 Base-Ketten, plus Narben und zwei Mützen-Layer je Rang. Rothain, Karsk, Averon und Ossaria sind weiterhin barhäuptige Basen ohne Mützen-Layer; die Layer für Rothain, Averon und Ossaria sowie die Neugenerierung von Karsk nach t344 folgen.
 
 ## Manifest
 
