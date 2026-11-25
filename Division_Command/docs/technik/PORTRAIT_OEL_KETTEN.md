@@ -58,7 +58,14 @@ Karsk ist seit 0.655 (t344/t345) neu generiert (sichtbares Altern, unausgereifte
 | Sahr | `wickel`, `offen` | 8 | fertig (t345), barhaupt mit Mützen-Layern (Schirmmütze + Feldmütze, Fit-Check). Bindung Fluss: Gesichter altern sichtbar mit dem Rang; GFM alt, Ausdruck fließend, nicht gebrechlich. Kernsymbol fließende Welle; Perlen als Städtezeichen; ab General große Wellen-Kommandoplakette, beim GFM Flusssymbol vollständig sichtbar. |
 | 11 weitere | — | — | offen. Der Baukasten `tools/portraits/oel/chain2_build.py` ist nationsfähig (Rothain, Karsk, Averon, Ossaria, Sahr). |
 
-Zusammen: 40 fertige Base-Ketten, 640 Rangbilder, 120 Narben-Layer, 5 Manifeste, plus 1280 Mützen-Layer (Sahr, Rothain, Averon, Ossaria und Karsk je 256). 11 von 16 Nationen fehlen noch. Sollstand bleibt 4 Personen × 2 Uniformen × 16 Nationen = 128 Base-Ketten, plus Narben und zwei Mützen-Layer je Rang. Portraitarbeit nach Karsk auf Nutzerwunsch pausiert (t347u).
+Zusammen: 40 fertige Base-Ketten, 640 Rangbilder, 120 Narben-Layer, 5 Manifeste, plus 1280 Mützen-Layer (Sahr, Rothain, Averon, Ossaria und Karsk je 256). 11 von 16 Nationen fehlen noch. Seit 0.657 (t349) sind alle fertigen Ketten im Spiel und in der Offiziersakte verknüpft. Sollstand bleibt 4 Personen × 2 Uniformen × 16 Nationen = 128 Base-Ketten, plus Narben und zwei Mützen-Layer je Rang. Portraitarbeit nach Karsk auf Nutzerwunsch pausiert (t347u).
+
+## Einbindung im Spiel (seit 0.657, t349)
+
+- `scripts/portraits/build_portrait_manifest.js` liest alle Nationsmanifeste (`oel_ketten/manifest.json` für Rothain, sonst `oel_ketten/<nation>/manifest.json`), prüft Dateikonvention (`<nation>/<uniform>/<person>/NN_<rang>.webp`, `muetzen/<typ>/…`, `scars/<narbe>.webp`) und Existenz und schreibt `web/js/data/portrait-manifest.js` (alle 16 Nationen + Altbestand, je Nation Uniformen, Personen, Mützentypen, Narben, Altporträt-Rückfall). `--check` meldet ein veraltetes Manifest (läuft in `tests/test_portraits_t349.js`).
+- `web/js/ui/portraits.js` (`window.DCPortrait`): Kit-ID `oel-<nation>-<uniform>-<person>-<mütze|none>-<narbe+narbe|none>`; `layers()` liefert Bild → Narben → Mütze, `src()`/`bindImg()`/`imgAttrs()` zeigen sofort das Basisbild und tragen das Canvas-Komposit über `data-dcp-key` nach. Alte IDs `fNN-kampf-none` werden migriert.
+- Menü: `nations()`, `personsFor()`, `uniformsForKit()`, `hatsForKit()`, `scarsForKit()` liefern Optionen mit `available`/„folgt“.
+- **Neue Nation einbinden:** Export mit `chain2_build.py export` nach `oel_ketten/<nation>/`, dann `node scripts/portraits/build_portrait_manifest.js`, `npm test`. Anzeigenamen neuer Uniformen in `UNIFORM_LABEL` des Skripts ergänzen.
 
 ## Manifest
 

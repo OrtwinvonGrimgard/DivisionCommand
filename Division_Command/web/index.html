@@ -6,12 +6,12 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Division Command 0.655 Alpha</title>
+  <title>Division Command 0.657 Alpha</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#12140f">
   <link rel="stylesheet" href="css/app.css?v=t265">
   <link rel="stylesheet" href="css/end-screen.css?v=1">
-  <link rel="stylesheet" href="css/kit-editor.css?v=1">
+  <link rel="stylesheet" href="css/kit-editor.css?v=2">
   <link rel="stylesheet" href="css/align.css?v=handzoom2" id="dc-align-css">
   <link rel="stylesheet" href="css/table-cards.css?v=fit1">
   <link rel="stylesheet" href="css/table-effects.css?v=fit1">
@@ -47,7 +47,7 @@
   <template id="match-tpl">
   <div id="app">
     <header class="topbar">
-      <h1>DIVISION COMMAND <span class="ver">0.655 α</span></h1>
+      <h1>DIVISION COMMAND <span class="ver">0.657 α</span></h1>
       <div class="hud-center">
         <div class="hud-scn"><span id="hud-scn">Gefecht</span><span class="nowplay" id="nowplay"></span></div>
         <div class="meta" id="turnmeta">Lobby</div>
@@ -182,7 +182,7 @@
   <audio id="bgm" autoplay preload="auto" src="assets/audio/menue/Division%20Command%20(Remastered).wav"></audio>
   <audio id="bgm-battle" preload="auto"></audio>
   <div id="kick-veil"><p id="kick-msg">Viel Glück</p></div>
-  <div id="dc-version">Alpha 0.655</div>
+  <div id="dc-version">Alpha 0.657</div>
 
   <div id="title-root" class="boot-intro">
       <div class="title-world" id="title-world" aria-hidden="true">
@@ -195,7 +195,7 @@
       </div>
       <div class="title-brand">
         <img class="title-logo" src="assets/title-logo.png?v=6" alt="Division Command" width="1381" height="507">
-        <p class="sub ver-big" hidden>Alpha 0.655</p>
+        <p class="sub ver-big" hidden>Alpha 0.657</p>
       </div>
     <div class="title-panel" id="menu-panel">
       <div id="scr-boot" class="screen on splash">
@@ -222,12 +222,16 @@
             </label>
           </div>
         </div>
-        <p class="tiny char-pick-lbl">1 · Gesicht</p>
-        <div id="setup-faces" class="kit-grid faces" role="listbox" aria-label="Gesicht"></div>
-        <p class="tiny char-pick-lbl">2 · Uniform</p>
+        <p class="tiny char-pick-lbl">1 · Nation</p>
+        <div id="setup-nations" class="kit-grid nations" role="listbox" aria-label="Nation"></div>
+        <p class="tiny char-pick-lbl">2 · Person</p>
+        <div id="setup-faces" class="kit-grid faces persons" role="listbox" aria-label="Person"></div>
+        <p class="tiny char-pick-lbl">3 · Uniform</p>
         <div id="setup-uniforms" class="kit-grid uniforms" role="listbox" aria-label="Uniform"></div>
-        <p class="tiny char-pick-lbl">3 · Kopfbedeckung</p>
+        <p class="tiny char-pick-lbl">4 · Kopfbedeckung</p>
         <div id="setup-hats" class="kit-grid hats" role="listbox" aria-label="Kopfbedeckung"></div>
+        <p class="tiny char-pick-lbl">5 · Narben <span class="opt">(frei kombinierbar)</span></p>
+        <div id="setup-scars" class="kit-grid scars" role="group" aria-label="Narben"></div>
         <label class="face-dir"><input type="checkbox" id="setup-facing"> Blick nach rechts</label>
         <div class="menu">
           <button type="button" class="primary" id="setup-ok">Akte anlegen</button>
@@ -267,12 +271,16 @@
             <label>Rufname <input id="user-callsign" maxlength="16"></label>
           </div>
         </div>
-        <p class="tiny char-pick-lbl">1 · Gesicht</p>
-        <div id="user-faces" class="kit-grid faces" role="listbox" aria-label="Gesicht"></div>
-        <p class="tiny char-pick-lbl">2 · Uniform</p>
+        <p class="tiny char-pick-lbl">1 · Nation</p>
+        <div id="user-nations" class="kit-grid nations" role="listbox" aria-label="Nation"></div>
+        <p class="tiny char-pick-lbl">2 · Person</p>
+        <div id="user-faces" class="kit-grid faces persons" role="listbox" aria-label="Person"></div>
+        <p class="tiny char-pick-lbl">3 · Uniform</p>
         <div id="user-uniforms" class="kit-grid uniforms" role="listbox" aria-label="Uniform"></div>
-        <p class="tiny char-pick-lbl">3 · Kopfbedeckung</p>
+        <p class="tiny char-pick-lbl">4 · Kopfbedeckung</p>
         <div id="user-hats" class="kit-grid hats" role="listbox" aria-label="Kopfbedeckung"></div>
+        <p class="tiny char-pick-lbl">5 · Narben <span class="opt">(frei kombinierbar)</span></p>
+        <div id="user-scars" class="kit-grid scars" role="group" aria-label="Narben"></div>
         <label class="face-dir"><input type="checkbox" id="user-facing"> Blick nach rechts</label>
         <div class="menu">
           <button type="button" class="primary" id="user-save">Akte speichern</button>
@@ -286,7 +294,7 @@
 
       <div id="scr-library" class="screen">
         <h1 class="page-title">BIBLIOTHEK</h1>
-        <p class="tiny" id="lib-build">Stand 0.655</p>
+        <p class="tiny" id="lib-build">Stand 0.657</p>
         <p class="tiny lib-hint">Klick = große Ansicht · Doppelklick = eine Kopie ins Deck · im Deck: Doppelklick legt zurück. Kopien: Gold 1× · Silber 2× · Bronze 4× · 2 verschiedene Doktrinen.</p>
         <div class="lib-wrap">
           <div class="lib-main">
@@ -533,7 +541,7 @@
             </div>
 <button type="button" data-hilfe="stand">Entwicklungsstand</button>
             <div class="hilfe-sub" data-for="stand">
-              <button type="button" data-jump="version">Version 0.655</button>
+              <button type="button" data-jump="version">Version 0.657</button>
               <button type="button" data-jump="stand-engine">Regeln & Engine</button>
               <button type="button" data-jump="karten">Karten & Grafik</button>
               <button type="button" data-jump="stand-bot">Bot & Balance</button>
@@ -781,8 +789,8 @@
 
             <article class="hilfe-page dossier" id="hilfe-stand">
               <p class="tiny">Stand 12.&nbsp;November&nbsp;2026, nachgezählt im Code auf <code>main</code> nach t270 (Analyse t265, Kartenreparatur t267, Balance und Eindeutigkeit t268, einheitliche Schrift t270, Analyse t271). Alle Zahlen stammen aus Katalog, Tests und Messdateien im Repo.</p>
-              <h2 id="version">Version 0.655 Alpha</h2>
-              <p>Gesetzte Version 0.655 (Tag v0.655 vom 25.&nbsp;11.&nbsp;2026). Gegenüber 0.653: Neugenerierung der Karsk-Offiziersporträts nach t344 (Panzer und Tech, vier Personen, zwei Uniformen, 16 Ränge, sichtbares Altern, unausgereifte Synthetik) inkl. Mützen-Layer (Schirmmütze und Barett als eigene Layer, Fit-Check). Rothain, Karsk, Averon, Ossaria und Sahr sind fertig; Mützen-Layer jetzt bei Sahr, Rothain, Averon, Ossaria und Karsk; 11 Nationen fehlen noch. Portraitarbeit nach Karsk auf Nutzerwunsch pausiert. Noch nicht vollständig im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gesetzte Version 0.653 (Tag v0.653 vom 25.&nbsp;11.&nbsp;2026). Gegenüber 0.651: Mützen-Layer für Ossaria (Platte und Klage, vier Personen, zwei Uniformen, 16 Ränge, Schirmmütze und Feldmütze als eigene Layer, Fit-Check). Rothain, Karsk, Averon, Ossaria und Sahr sind fertig; Mützen-Layer jetzt bei Sahr, Rothain, Averon und Ossaria; 11 Nationen fehlen noch. Die Neugenerierung von Karsk steht noch aus. Noch nicht vollständig im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gesetzte Version 0.651 (Tag v0.651 vom 25.&nbsp;11.&nbsp;2026). Gegenüber 0.649: Mützen-Layer für Averon (Feld und Dienst, vier Personen, zwei Uniformen, 16 Ränge, Schirmmütze und Feldmütze als eigene Layer, Fit-Check). Rothain, Karsk, Averon, Ossaria und Sahr sind fertig; Mützen-Layer jetzt bei Sahr, Rothain und Averon; 11 Nationen fehlen noch. Mützen-Layer für Ossaria sowie die Neugenerierung von Karsk stehen noch aus. Noch nicht vollständig im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gesetzte Version 0.649 (Tag v0.649 vom 25.&nbsp;11.&nbsp;2026). Gegenüber 0.647: Mützen-Layer für Rothain (Dienstrock und Gala, vier Personen, zwei Uniformen, 16 Ränge, Schirmmütze und Feldmütze als eigene Layer, Fit-Check). Rothain, Karsk, Averon, Ossaria und Sahr sind fertig; Mützen-Layer jetzt bei Sahr und Rothain; 11 Nationen fehlen noch. Mützen-Layer für Averon und Ossaria sowie die Neugenerierung von Karsk stehen noch aus. Noch nicht vollständig im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gesetzte Version 0.647 (Tag v0.647 vom 24.&nbsp;11.&nbsp;2026). Gegenüber 0.645: Ölgemälde-Ketten für Sahr (Wickel und Offen, vier Personen, zwei Uniformen, 16 Ränge, Narben und Mützen als eigene Layer: Schirmmütze und Feldmütze). Rothain, Karsk, Averon, Ossaria und Sahr sind fertig; 11 Nationen fehlen noch. Mützen-Layer für Rothain, Averon und Ossaria sowie die Neugenerierung von Karsk stehen noch aus. Noch nicht vollständig im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gegenüber 0.643: Ölgemälde-Ketten für Ossaria (Platte und Klage, vier Personen, zwei Uniformen, 16 Ränge, Narben als eigene Layer). Rothain, Karsk, Averon und Ossaria sind fertig; 12 Nationen fehlen noch. Noch nicht im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gegenüber 0.641: Ölgemälde-Ketten für Averon (Feld und Dienst, vier Personen, zwei Uniformen, 16 Ränge, Narben als eigene Layer). Rothain, Karsk und Averon sind fertig; 13 Nationen fehlen noch. Noch nicht im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gegenüber 0.636: Offiziersporträts als Ölgemälde-Ketten für Rothain und Karsk (vier Personen, zwei Uniformen, 16 Ränge vom Fähnrich bis zum Generalfeldmarschall, Narben als eigene Layer). Noch nicht im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gegenüber 0.626: Neue Kartengrafik für alle 1746 Karten – Titel, Hintergründe und Textfelder im Stil der kleinen Karten, die Hintergründe und Textfelder werden für jede Karte eigen erzeugt (jede Karte hat ihr festes, eigenes Muster). Ausrüstungskarten haben ein gelbes Feld mit Winkeln: ein Winkel für Bronze, zwei für Silber, drei für Gold. Laufband und Kartenflüge nutzen kleine Vorschaubilder und laden schneller. Im Karteneditor kann man das Muster einer Karte gezielt neu würfeln. Spielregeln und Kartenwerte sind unverändert. Gegenüber 0.624 (0.626): Etappensicherung (Caldris) gibt kein +1 DEF mehr, sondern heilt zu Beginn deines Zuges 1 Schaden an der beschädigten eigenen Einheit, die im letzten Zug nicht angegriffen hat (die mit dem größten Fehlbetrag). Caldris liegt damit bei etwa 50&nbsp;% statt 62–64&nbsp;%. Gegenüber 0.619 (0.624): Vier Doktrinen, die durch die echte DEF zu stark wurden, sind abgeschwächt – Linienkrieg gibt +1 DEF nur noch in Abschnitten mit drei eigenen Einheiten, Auffangen hat keinen Grundbonus mehr, Gepanzerter Fuß wirkt nur auf ausgerüstete Einheiten (+1 ATK und +1 DEF), Entsatz gibt im angegriffenen Abschnitt nur noch +1 ATK. Die Balance wird jetzt bei jeder Karten- oder Regeländerung automatisch gemessen (Balance-Gate). Gegenüber 0.611 (0.619): DEF-Boni aus Doktrinen (z.&nbsp;B. Auffangen, Verteilte Stellung, Linienkrieg), Flankenschutz und Auren zählen jetzt auch im Kampf – die angezeigte DEF ist die echte DEF; fällt die Bedingung weg, sinkt die DEF, aber nie unter 1. Überlast zerstört die Einheit am Zugende, wenn ihre DEF auf 0 fällt. Der Kampftext nennt Gegenschaden nur noch, wenn wirklich zurückgeschlagen wurde. Gegenüber 0.610 (0.611): Die Audio-Schleife am Spieltisch ist behoben (die Seite schrieb dort zehntausendmal pro Sekunde Audio-Einstellungen und belastete den Browser); die Titelmusik startet am Tisch nicht mehr neu. Neues Versionsschema: drei Nachkommastellen, Sprung nach Gewicht (Fix +0,001, Erweiterung +0,002 bis +0,005, großer Umbau etwa +0,010; 0.6a–0.6e = 0.601–0.605). Gegenüber 0.605 (0.6e): Der Bot spielt seinen Zug sichtbar Karte für Karte mit Denkpausen; kannst du einen Soforteinsatz aus deiner AP-Reserve spielen, hält er an und öffnet ein Reaktionsfenster (Optionen: Bot-Tempo, Reaktionsfenster). Gegenüber 0.6d (0.6e): Die KI setzt aktive Doktrin-Fähigkeiten ein (Feldreparatur, Schutzwall, Überschuss). Feldreparatur und Überschuss wirken jetzt wie gedruckt. Bollwerk (+1 ATK ab 6 DEF) und Sicherer Nachschub (Feldreparatur heilt alle gepanzerten Einheiten um 2) liegen näher an 50&nbsp;%. Weiter keine 0.7: Der Anzug-Vorteil in einheitenlastigen Decks bleibt bewusst, und ein menschlicher Playtest fehlt. Schaden aus Soforteinsätzen zerstört eine Einheit jetzt sofort, wenn ihre DEF auf 0 fällt.</p>
+              <h2 id="version">Version 0.657 Alpha</h2>
+              <p>Gesetzte Version 0.657 (Tag v0.657 vom 25.&nbsp;11.&nbsp;2026). Gegenüber 0.655: Alle fertigen Offiziersporträts sind im Spiel verknüpft – Rothain, Karsk, Averon, Ossaria und Sahr mit je vier Personen (zwei Offiziere, zwei Offizierinnen), zwei Uniformen und allen 16 Rängen; Mützen und Narben werden als eigene Ebenen über das Bild gelegt. Die Offiziersakte wählt jetzt Nation, Person, Uniform, Kopfbedeckung (ohne oder eine von zwei Mützen) und Narben (frei kombinierbar); die Rangvorschau zeigt alle 16 Ränge. Nationen ohne Porträts sind als „folgt“ ausgegraut, Steinmark, Vael und Vesper nutzen bis dahin ihre Altporträts. Alte Akten werden automatisch übernommen. Der Bot-Gegner trägt ein Ölporträt. Spielregeln und Kartenwerte sind unverändert. Gesetzte Version 0.655 (Tag v0.655 vom 25.&nbsp;11.&nbsp;2026). Gegenüber 0.653: Neugenerierung der Karsk-Offiziersporträts nach t344 (Panzer und Tech, vier Personen, zwei Uniformen, 16 Ränge, sichtbares Altern, unausgereifte Synthetik) inkl. Mützen-Layer (Schirmmütze und Barett als eigene Layer, Fit-Check). Rothain, Karsk, Averon, Ossaria und Sahr sind fertig; Mützen-Layer jetzt bei Sahr, Rothain, Averon, Ossaria und Karsk; 11 Nationen fehlen noch. Portraitarbeit nach Karsk auf Nutzerwunsch pausiert. Noch nicht vollständig im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gesetzte Version 0.653 (Tag v0.653 vom 25.&nbsp;11.&nbsp;2026). Gegenüber 0.651: Mützen-Layer für Ossaria (Platte und Klage, vier Personen, zwei Uniformen, 16 Ränge, Schirmmütze und Feldmütze als eigene Layer, Fit-Check). Rothain, Karsk, Averon, Ossaria und Sahr sind fertig; Mützen-Layer jetzt bei Sahr, Rothain, Averon und Ossaria; 11 Nationen fehlen noch. Die Neugenerierung von Karsk steht noch aus. Noch nicht vollständig im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gesetzte Version 0.651 (Tag v0.651 vom 25.&nbsp;11.&nbsp;2026). Gegenüber 0.649: Mützen-Layer für Averon (Feld und Dienst, vier Personen, zwei Uniformen, 16 Ränge, Schirmmütze und Feldmütze als eigene Layer, Fit-Check). Rothain, Karsk, Averon, Ossaria und Sahr sind fertig; Mützen-Layer jetzt bei Sahr, Rothain und Averon; 11 Nationen fehlen noch. Mützen-Layer für Ossaria sowie die Neugenerierung von Karsk stehen noch aus. Noch nicht vollständig im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gesetzte Version 0.649 (Tag v0.649 vom 25.&nbsp;11.&nbsp;2026). Gegenüber 0.647: Mützen-Layer für Rothain (Dienstrock und Gala, vier Personen, zwei Uniformen, 16 Ränge, Schirmmütze und Feldmütze als eigene Layer, Fit-Check). Rothain, Karsk, Averon, Ossaria und Sahr sind fertig; Mützen-Layer jetzt bei Sahr und Rothain; 11 Nationen fehlen noch. Mützen-Layer für Averon und Ossaria sowie die Neugenerierung von Karsk stehen noch aus. Noch nicht vollständig im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gesetzte Version 0.647 (Tag v0.647 vom 24.&nbsp;11.&nbsp;2026). Gegenüber 0.645: Ölgemälde-Ketten für Sahr (Wickel und Offen, vier Personen, zwei Uniformen, 16 Ränge, Narben und Mützen als eigene Layer: Schirmmütze und Feldmütze). Rothain, Karsk, Averon, Ossaria und Sahr sind fertig; 11 Nationen fehlen noch. Mützen-Layer für Rothain, Averon und Ossaria sowie die Neugenerierung von Karsk stehen noch aus. Noch nicht vollständig im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gegenüber 0.643: Ölgemälde-Ketten für Ossaria (Platte und Klage, vier Personen, zwei Uniformen, 16 Ränge, Narben als eigene Layer). Rothain, Karsk, Averon und Ossaria sind fertig; 12 Nationen fehlen noch. Noch nicht im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gegenüber 0.641: Ölgemälde-Ketten für Averon (Feld und Dienst, vier Personen, zwei Uniformen, 16 Ränge, Narben als eigene Layer). Rothain, Karsk und Averon sind fertig; 13 Nationen fehlen noch. Noch nicht im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gegenüber 0.636: Offiziersporträts als Ölgemälde-Ketten für Rothain und Karsk (vier Personen, zwei Uniformen, 16 Ränge vom Fähnrich bis zum Generalfeldmarschall, Narben als eigene Layer). Noch nicht im Spiel oder Editor verdrahtet. Spielregeln und Kartenwerte sind unverändert. Gegenüber 0.626: Neue Kartengrafik für alle 1746 Karten – Titel, Hintergründe und Textfelder im Stil der kleinen Karten, die Hintergründe und Textfelder werden für jede Karte eigen erzeugt (jede Karte hat ihr festes, eigenes Muster). Ausrüstungskarten haben ein gelbes Feld mit Winkeln: ein Winkel für Bronze, zwei für Silber, drei für Gold. Laufband und Kartenflüge nutzen kleine Vorschaubilder und laden schneller. Im Karteneditor kann man das Muster einer Karte gezielt neu würfeln. Spielregeln und Kartenwerte sind unverändert. Gegenüber 0.624 (0.626): Etappensicherung (Caldris) gibt kein +1 DEF mehr, sondern heilt zu Beginn deines Zuges 1 Schaden an der beschädigten eigenen Einheit, die im letzten Zug nicht angegriffen hat (die mit dem größten Fehlbetrag). Caldris liegt damit bei etwa 50&nbsp;% statt 62–64&nbsp;%. Gegenüber 0.619 (0.624): Vier Doktrinen, die durch die echte DEF zu stark wurden, sind abgeschwächt – Linienkrieg gibt +1 DEF nur noch in Abschnitten mit drei eigenen Einheiten, Auffangen hat keinen Grundbonus mehr, Gepanzerter Fuß wirkt nur auf ausgerüstete Einheiten (+1 ATK und +1 DEF), Entsatz gibt im angegriffenen Abschnitt nur noch +1 ATK. Die Balance wird jetzt bei jeder Karten- oder Regeländerung automatisch gemessen (Balance-Gate). Gegenüber 0.611 (0.619): DEF-Boni aus Doktrinen (z.&nbsp;B. Auffangen, Verteilte Stellung, Linienkrieg), Flankenschutz und Auren zählen jetzt auch im Kampf – die angezeigte DEF ist die echte DEF; fällt die Bedingung weg, sinkt die DEF, aber nie unter 1. Überlast zerstört die Einheit am Zugende, wenn ihre DEF auf 0 fällt. Der Kampftext nennt Gegenschaden nur noch, wenn wirklich zurückgeschlagen wurde. Gegenüber 0.610 (0.611): Die Audio-Schleife am Spieltisch ist behoben (die Seite schrieb dort zehntausendmal pro Sekunde Audio-Einstellungen und belastete den Browser); die Titelmusik startet am Tisch nicht mehr neu. Neues Versionsschema: drei Nachkommastellen, Sprung nach Gewicht (Fix +0,001, Erweiterung +0,002 bis +0,005, großer Umbau etwa +0,010; 0.6a–0.6e = 0.601–0.605). Gegenüber 0.605 (0.6e): Der Bot spielt seinen Zug sichtbar Karte für Karte mit Denkpausen; kannst du einen Soforteinsatz aus deiner AP-Reserve spielen, hält er an und öffnet ein Reaktionsfenster (Optionen: Bot-Tempo, Reaktionsfenster). Gegenüber 0.6d (0.6e): Die KI setzt aktive Doktrin-Fähigkeiten ein (Feldreparatur, Schutzwall, Überschuss). Feldreparatur und Überschuss wirken jetzt wie gedruckt. Bollwerk (+1 ATK ab 6 DEF) und Sicherer Nachschub (Feldreparatur heilt alle gepanzerten Einheiten um 2) liegen näher an 50&nbsp;%. Weiter keine 0.7: Der Anzug-Vorteil in einheitenlastigen Decks bleibt bewusst, und ein menschlicher Playtest fehlt. Schaden aus Soforteinsätzen zerstört eine Einheit jetzt sofort, wenn ihre DEF auf 0 fällt.</p>
               <h2 id="stand-engine">Regeln & Engine</h2>
               <ul>
                 <li>Spielbar: Front 3×3 je Seite, Support, Niemandsland, AP-Ökonomie (5 je Zug, Rest als Reaktionsreserve), Angriff mit Gegenschlag, Eingraben, Steilfeuer I–V, verdeckte Fallen bei Feindkontakt, Doktrinen, Trophy-Sieg (5 SP, Sicherheitsnetz Zug 26/28).</li>
@@ -899,6 +907,7 @@
                   <tr><td>18.&nbsp;11.</td><td>t300 / Version 0.624: Linienkrieg, Auffangen, Gepanzerter Fuß und Entsatz abgeschwächt; Balance-Gate misst Nationen und Doktrinen bei jeder Änderung.</td></tr>
                   <tr><td>19.&nbsp;11.</td><td>t301 / Version 0.626: Etappensicherung heilt statt +1 DEF; Caldris 62,5/64,3&nbsp;% → 49,9/47,2&nbsp;%.</td></tr>
                   <tr><td>20.&nbsp;11.</td><td>t318 / Version 0.636: Neue Kartengrafik (Stil der kleinen Karten, eigenes festes Muster je Karte), Ausrüstung mit Winkeln je Stufe, Vorschaubilder für Laufband, Muster im Editor neu würfeln.</td></tr>
+                  <tr><td>25.&nbsp;11.</td><td>t349 / Version 0.657: alle fertigen Porträts im Spiel verknüpft (5 Nationen, 40 Ketten, 16 Ränge, Mützen- und Narbenebenen); Offiziersakte mit Nation, Person, Uniform, Kopfbedeckung, Narben; fehlende Nationen „folgt“.</td></tr>
                   <tr><td>25.&nbsp;11.</td><td>t344/t345 / Version 0.655: Karsk-Neugenerierung (Panzer, Tech) inkl. Mützen-Layer (Schirmmütze, Barett); Sahr, Rothain, Averon, Ossaria und Karsk mit Mützen-Layern; 11 Nationen offen; Portraitarbeit nach Karsk pausiert; noch nicht vollständig im Spiel verdrahtet.</td></tr>
                   <tr><td>25.&nbsp;11.</td><td>t345 / Version 0.653: Mützen-Layer für Ossaria (Platte, Klage); Sahr, Rothain, Averon und Ossaria mit Mützen-Layern, Karsk-Neugenerierung folgt; 11 Nationen offen; noch nicht vollständig im Spiel verdrahtet.</td></tr>
                   <tr><td>25.&nbsp;11.</td><td>t345 / Version 0.651: Mützen-Layer für Averon (Feld, Dienst); Sahr, Rothain und Averon mit Mützen-Layern, Ossaria und Karsk-Neugenerierung folgen; 11 Nationen offen; noch nicht vollständig im Spiel verdrahtet.</td></tr>
@@ -962,7 +971,7 @@
             <article class="hilfe-page dossier" id="hilfe-plan">
               <h2 id="umfang">Geplanter Umfang</h2>
               <p>Der Kartenpool ist mit 1.746 Karten (16 Nationen × 100 + 2 Doktrinen, dazu neutrale Karten) bereits größer als der frühere Plan für 1.0 (500–1000). Weitere Sets sollen erspielbar sein, nicht nur im Shop. Geplant sind dazu ein Bot in drei Stufen, Hotseat, LAN, ein Roguelike-Modus und eine Kampagne mit Geschichten je Nation.</p>
-              <p>Der Offizier (Benutzerakte) bekommt modulare Porträts: Soll sind 64 Personen, je Nation zwei Frauen und zwei Männer, mit Rängen, Uniform und Kopfbedeckung als Ebenen (siehe <code>docs/technik/PORTRAIT_SYSTEM.md</code>). Heute liegen 72 Bilder in 8 Ordnern vor.</p>
+              <p>Der Offizier (Benutzerakte) bekommt modulare Porträts: Soll sind 64 Personen, je Nation zwei Frauen und zwei Männer, mit Rängen, Uniform und Kopfbedeckung als Ebenen (siehe <code>docs/technik/PORTRAIT_SYSTEM.md</code>). Seit 0.657 sind die Ölgemälde-Ketten von Rothain, Karsk, Averon, Ossaria und Sahr vollständig verknüpft (je 4 Personen, 2 Uniformen, 16 Ränge, Mützen und Narben als Ebenen; 2.040 Bilder). Die übrigen 11 Nationen folgen; Steinmark, Vael und Vesper zeigen bis dahin Altporträts.</p>
               <h2 id="fahrplan">Fahrplan bis zur Vollversion</h2>
               <ol>
                 <li><strong>Phase 0 – Siegbedingungen einfrieren.</strong> Erledigt: Trophy-Modus mit 5 SP, Sicherheitsnetz Zug 26/28.</li>
@@ -1019,7 +1028,8 @@
   <script src="js/ui/perf.js?v=alpha44a"></script>
   <script src="js/ui/card-placeholder.js?v=gfx2-kw1"></script>
   <script src="js/ui/library.js?v=alpha44a"></script>
-  <script src="js/ui/portraits.js?v=kit20"></script>
+  <script src="js/data/portrait-manifest.js?v=pm1"></script>
+  <script src="js/ui/portraits.js?v=kit21"></script>
   <script src="js/data/table-art-data.js?v=1"></script>
   <script src="js/ui/table-card-art.js?v=gfx2-kw1"></script>
   <script src="js/ui/table-effects.js?v=alpha44a"></script>
@@ -1040,7 +1050,7 @@
       navigator.serviceWorker.register('sw.js?v=mix1').catch(function () {});
     }
     (function () {
-      document.title = window.DC_BUILD_LABEL || 'Division Command 0.655 Alpha';
+      document.title = window.DC_BUILD_LABEL || 'Division Command 0.657 Alpha';
       var dcVer = document.getElementById('dc-version');
       if (dcVer) dcVer.textContent = 'Alpha ' + (window.DC_VERSION || '0.624');
       var bgm = document.getElementById('bgm');
@@ -1383,10 +1393,13 @@
         if (id === 'scr-library') paintLibrary();
         if (id === 'scr-single') { paintUsers(); if (window.DCLib) DCLib.fillSelects(); }
       }
-      var kitDraft = {
-        setup: { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Fhr', facing: 'left' },
-        user: { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Fhr', facing: 'left' }
-      };
+      /* t349: Offiziersakte datengetrieben (Nation, Person, Uniform, Kopfbedeckung, Narben, 16 Ränge). */
+      function newKit() {
+        var k = window.DCPortrait ? DCPortrait.normalize({}) : { nation: '', person: 'm1', uniform: 'kampf', hat: 'none', scars: [], face: 'f01' };
+        k.rank = 'Fhr'; k.facing = 'left';
+        return k;
+      }
+      var kitDraft = { setup: newKit(), user: newKit() };
       function portraitSrc(id, rank) {
         if (window.DCPortrait) {
           var u = DCPortrait.src(id, rank);
@@ -1397,21 +1410,27 @@
         return 'assets/portraits/Vael/male/01.png?v=13';
       }
       function kitFromUser(u) {
-        if (!u) return { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Fhr', facing: 'left' };
-        var parsed = window.DCPortrait && DCPortrait.parseKit(u.portrait);
-        return {
-          face: u.face || (parsed && parsed.face) || 'f01',
-          uniform: u.uniform || (parsed && parsed.uniform) || 'kampf',
-          hat: u.hat || (parsed && parsed.hat) || 'none',
-          rank: u.rank || 'Lt',
-          facing: u.facing === 'right' ? 'right' : 'left'
-        };
+        var k = window.DCPortrait ? DCPortrait.kitFromUser(u) : newKit();
+        k.rank = (u && u.rank) || 'Lt';
+        k.facing = u && u.facing === 'right' ? 'right' : 'left';
+        return k;
+      }
+      /** Felder, die in dc_users gespeichert werden (portrait = Kit-ID, Rest für Editor/Migration). */
+      function kitFields(st) {
+        return { portrait: selectedPortrait(st), nation: st.nation, person: st.person, uniform: st.uniform, hat: st.hat,
+          scars: (st.scars || []).slice(), face: st.face || '', rank: st.rank, facing: st.facing || 'left' };
+      }
+      function userPortraitId(u) {
+        if (!u) return '';
+        if (window.DCPortrait) return DCPortrait.kitId(DCPortrait.kitFromUser(u));
+        return u.portrait || '';
       }
 
       function applyFaceDir(img, face, right, rank) {
         if (!img) return;
         var special = right && window.DCPortrait && DCPortrait.rightUrl(face, rank);
         if (special) {
+          img.removeAttribute('data-dcp-key');
           img.src = special;
           img.classList.remove('face-right');
         } else {
@@ -1422,81 +1441,99 @@
         var P = window.DCPortrait;
         if (!P) return;
         var st = kitDraft[which];
-        var uniList = P.uniformsFor(st.face);
-        if (!uniList.some(function (u) { return u.id === st.uniform; })) st.uniform = (uniList[0] && uniList[0].id) || 'kampf';
-        var hatList = P.hatsFor(st.face, st.uniform);
-        if (!hatList.some(function (h) { return h.id === st.hat; })) st.hat = 'none';
-        var id = P.kitId(st);
+        var norm = P.normalize(st);
+        st.nation = norm.nation; st.person = norm.person; st.uniform = norm.uniform; st.hat = norm.hat;
+        st.scars = norm.scars; st.face = norm.face;
         var meta = P.rankMeta(st.rank);
+        var lookRight = st.facing === 'right';
         var prev = document.getElementById(which + '-preview');
-        P.bindImg(prev, id, st.rank);
-        applyFaceDir(prev, st.face, st.facing === 'right', st.rank);
+        P.bindImg(prev, st, st.rank);
+        applyFaceDir(prev, st.face, lookRight, st.rank);
         var faceBox = document.getElementById(which + '-facing');
-        if (faceBox) faceBox.checked = st.facing === 'right';
+        if (faceBox) faceBox.checked = lookRight;
         var lbl = document.getElementById(which + '-rank-lbl');
         if (lbl) lbl.textContent = meta.title + (meta.mark ? ' · ' + meta.mark : '');
-        function fill(gridId, items, cur, make) {
+        function tile(cls, attr, it, on, withImg) {
+          var off = it.available === false;
+          return '<button type="button" class="' + cls + (on ? ' on' : '') + (off ? ' soon' : '') + '" ' + attr + '="' + it.id + '"' +
+            (off ? ' disabled aria-disabled="true" title="' + it.label + ' – ' + P.SOON + '"' : ' title="' + it.label + '"') + '>' +
+            (withImg ? '<img loading="lazy" decoding="async" alt="">' : '') +
+            '<span>' + it.label + (off ? ' <em class="kit-soon">' + P.SOON + '</em>' : '') + '</span></button>';
+        }
+        function fill(gridId, items, html, after) {
           var grid = document.getElementById(gridId);
           if (!grid) return;
-          grid.innerHTML = items.map(function (it) {
-            return make(it, it.id === cur);
-          }).join('');
+          grid.innerHTML = items.map(html).join('');
+          if (after) {
+            var imgs = grid.querySelectorAll('img');
+            var n = 0;
+            items.forEach(function (it) {
+              if (!imgs[n]) return;
+              after(imgs[n], it);
+              n++;
+            });
+          }
         }
-        fill(which + '-faces', P.FACES, st.face, function (it, on) {
-          return '<button type="button" class="portrait-pick' + (on ? ' on' : '') + '" data-face="' + it.id + '" title="' + (it.hint || it.label) + '">' +
-            '<img loading="lazy" decoding="async" alt="' + it.label + '">' +
-            '<span>' + it.label + '</span></button>';
+        function withKit(patch) {
+          var k = { nation: st.nation, person: st.person, uniform: st.uniform, hat: st.hat, scars: (st.scars || []).slice(), face: st.face };
+          Object.keys(patch).forEach(function (x) { k[x] = patch[x]; });
+          return P.normalize(k);
+        }
+        function bindThumb(img, kit) {
+          P.bindImg(img, kit, st.rank);
+          applyFaceDir(img, kit.face, lookRight, st.rank);
+        }
+        fill(which + '-nations', P.nations(), function (it) {
+          return tile('kit-tile nation-tile', 'data-nation', { id: it.id, label: it.label, available: it.available }, it.id === st.nation, false)
+            .replace('</span></button>', (it.available ? '<small>' + it.status + '</small>' : '') + '</span></button>');
         });
-        fill(which + '-uniforms', uniList, st.uniform, function (it, on) {
-          return '<button type="button" class="kit-tile' + (on ? ' on' : '') + '" data-uniform="' + it.id + '" title="' + (it.hint || it.label) + '">' +
-            '<img loading="lazy" decoding="async" alt="">' +
-            '<span>' + it.label + '</span></button>';
-        });
-        fill(which + '-hats', hatList, st.hat, function (it, on) {
-          return '<button type="button" class="kit-tile' + (on ? ' on' : '') + '" data-hat="' + it.id + '">' +
-            '<img loading="lazy" decoding="async" alt="">' +
-            '<span>' + it.label + '</span></button>';
-        });
-        var faceImgs = document.querySelectorAll('#' + which + '-faces img');
-        var lookRight = st.facing === 'right';
-        P.FACES.forEach(function (it, i) {
-          if (!faceImgs[i]) return;
-          P.bindImg(faceImgs[i], it.id + '-kampf-none', st.rank, true);
-          applyFaceDir(faceImgs[i], it.id, lookRight, st.rank);
-        });
-        var uniImgs = document.querySelectorAll('#' + which + '-uniforms img');
-        uniList.forEach(function (it, i) {
-          if (!uniImgs[i]) return;
-          P.bindImg(uniImgs[i], st.face + '-' + it.id + '-none', st.rank, true);
-          applyFaceDir(uniImgs[i], st.face, lookRight, st.rank);
-        });
-        var hatImgs = document.querySelectorAll('#' + which + '-hats img');
-        hatList.forEach(function (it, i) {
-          if (!hatImgs[i]) return;
-          P.bindImg(hatImgs[i], st.face + '-' + st.uniform + '-' + it.id, st.rank, true);
-          applyFaceDir(hatImgs[i], st.face, lookRight, st.rank);
-        });
+        var persons = P.personsFor(st.nation);
+        fill(which + '-faces', persons, function (it) {
+          return tile('portrait-pick person-pick', 'data-person', it, it.id === st.person, it.available);
+        }, null);
+        var pImgs = document.querySelectorAll('#' + which + '-faces img');
+        var pi = 0;
+        persons.forEach(function (it) { if (it.available && pImgs[pi]) bindThumb(pImgs[pi++], withKit({ person: it.id, face: '' })); });
+        var unis = P.uniformsForKit(st);
+        fill(which + '-uniforms', unis, function (it) { return tile('kit-tile', 'data-uniform', it, it.id === st.uniform, it.available); });
+        var uImgs = document.querySelectorAll('#' + which + '-uniforms img');
+        var ui = 0;
+        unis.forEach(function (it) { if (it.available && uImgs[ui]) bindThumb(uImgs[ui++], withKit({ uniform: it.id })); });
+        var hats = P.hatsForKit(st);
+        fill(which + '-hats', hats, function (it) { return tile('kit-tile', 'data-hat', it, it.id === st.hat, it.available); });
+        var hImgs = document.querySelectorAll('#' + which + '-hats img');
+        var hi = 0;
+        hats.forEach(function (it) { if (it.available && hImgs[hi]) bindThumb(hImgs[hi++], withKit({ hat: it.id })); });
+        var scars = P.scarsForKit(st);
+        fill(which + '-scars', scars, function (it) { return tile('kit-tile scar-tile', 'data-scar', it, it.on, false); });
         var ages = document.getElementById(which + '-ages');
         if (ages) {
           ages.innerHTML = P.RANKS.map(function (r) {
-            return '<button type="button" class="' + (r.id === st.rank ? 'on' : '') + '" data-rank="' + r.id + '" title="' + r.title + '">' + r.label + '</button>';
+            return '<button type="button" class="' + (r.id === st.rank ? 'on' : '') + '" data-rank="' + r.id + '" title="' + r.title + (r.years ? ' · ca. ' + r.years + ' Jahre' : '') + '">' + r.label + '</button>';
           }).join('');
         }
       }
       function bindKit(which) {
-        function onGrid(id, attr, key) {
+        function onGrid(id, attr, apply) {
           var grid = document.getElementById(id);
           if (!grid) return;
           grid.onclick = function (ev) {
             var btn = ev.target.closest('button[' + attr + ']');
-            if (!btn) return;
-            kitDraft[which][key] = btn.getAttribute(attr);
+            if (!btn || btn.disabled) return;
+            apply(kitDraft[which], btn.getAttribute(attr));
             paintKit(which);
           };
         }
-        onGrid(which + '-faces', 'data-face', 'face');
-        onGrid(which + '-uniforms', 'data-uniform', 'uniform');
-        onGrid(which + '-hats', 'data-hat', 'hat');
+        onGrid(which + '-nations', 'data-nation', function (st, v) { st.nation = v; st.face = ''; });
+        onGrid(which + '-faces', 'data-person', function (st, v) { st.person = v; st.face = ''; });
+        onGrid(which + '-uniforms', 'data-uniform', function (st, v) { st.uniform = v; });
+        onGrid(which + '-hats', 'data-hat', function (st, v) { st.hat = v; });
+        onGrid(which + '-scars', 'data-scar', function (st, v) {
+          var list = (st.scars || []).slice();
+          var at = list.indexOf(v);
+          if (at >= 0) list.splice(at, 1); else list.push(v);
+          st.scars = list;
+        });
         var ages = document.getElementById(which + '-ages');
         if (ages) ages.onclick = function (ev) {
           var btn = ev.target.closest('button[data-rank]');
@@ -1513,8 +1550,9 @@
       bindKit('setup');
       bindKit('user');
       function selectedPortrait(which) {
-        if (window.DCPortrait) return DCPortrait.kitId(kitDraft[which]);
-        return 'lt-01';
+        var st = typeof which === 'string' ? kitDraft[which] : which;
+        if (window.DCPortrait) return DCPortrait.kitId(DCPortrait.normalize(st));
+        return 'f01-kampf-none';
       }
       function loadUsers() {
         try { return JSON.parse(localStorage.getItem('dc_users') || '[]'); } catch (e) { return []; }
@@ -1532,7 +1570,7 @@
         var u = activeUser();
         var el = document.getElementById('who-line');
         if (el) el.innerHTML = u
-          ? ('<img class="who-face' + (u.facing === 'right' && !(window.DCPortrait && DCPortrait.rightUrl(u.face, u.rank)) ? ' face-right' : '') + '" src="' + ((u.facing === 'right' && window.DCPortrait && DCPortrait.rightUrl(u.face, u.rank)) || portraitSrc(u.portrait || (u.face && (u.face + '-' + (u.uniform||'kampf') + '-' + (u.hat||'none'))), u.rank)) + '" alt="">' +
+          ? ('<img class="who-face' + (u.facing === 'right' && !(window.DCPortrait && DCPortrait.rightUrl(u.face, u.rank)) ? ' face-right' : '') + '"' + ((u.facing === 'right' && window.DCPortrait && DCPortrait.rightUrl(u.face, u.rank)) ? ' src="' + DCPortrait.rightUrl(u.face, u.rank) + '"' : (window.DCPortrait && userPortraitId(u) ? DCPortrait.imgAttrs(userPortraitId(u), u.rank) : ' src="' + portraitSrc(u.portrait, u.rank) + '"')) + ' alt="">' +
              '<span class="who-lbl">' + ((window.DCPortrait && DCPortrait.rankMeta(u.rank).title) || 'Leutnant') + '</span><span class="who-name">' + u.name + '</span>' +
              (u.callsign ? '<span class="who-call">»' + u.callsign + '«</span>' : ''))
           : '';
@@ -1642,7 +1680,7 @@
       /** Bisheriger Ablauf von „Spiel starten“: Offiziersakte beim ersten Mal, sonst Hauptmenü. */
       function afterStart() {
         if (!loadUsers().length) {
-          kitDraft.setup = { face: 'f01', uniform: 'kampf', hat: 'none', rank: 'Fhr', facing: 'left' };
+          kitDraft.setup = newKit();
           paintKit('setup');
           show('scr-setup');
         } else show('scr-title');
@@ -1659,9 +1697,9 @@
         if (!name) { document.getElementById('setup-name').focus(); return; }
         var callsign = (document.getElementById('setup-callsign').value || '').trim().slice(0, 16);
         var id = 'u' + Date.now();
-        saveUsers([{ id: id, name: name, portrait: selectedPortrait('setup'), callsign: callsign,
-          face: kitDraft.setup.face, uniform: kitDraft.setup.uniform, hat: kitDraft.setup.hat, rank: kitDraft.setup.rank,
-          facing: kitDraft.setup.facing || 'left' }], id);
+        var rec = kitFields(kitDraft.setup);
+        rec.id = id; rec.name = name; rec.callsign = callsign;
+        saveUsers([rec], id);
         paintWho();
         show('scr-title');
       };
@@ -1714,17 +1752,12 @@
         var name = (document.getElementById('user-rename').value || '').trim().slice(0, 24);
         if (!name) return;
         var callsign = (document.getElementById('user-callsign').value || '').trim().slice(0, 16);
-        var portrait = selectedPortrait('user');
+        var fields = kitFields(kitDraft.user);
         list.forEach(function (u) {
           if (u.id === id) {
             u.name = name;
             u.callsign = callsign;
-            u.portrait = portrait;
-            u.face = kitDraft.user.face;
-            u.uniform = kitDraft.user.uniform;
-            u.hat = kitDraft.user.hat;
-            u.rank = kitDraft.user.rank;
-            u.facing = kitDraft.user.facing || 'left';
+            Object.keys(fields).forEach(function (k) { u[k] = fields[k]; });
           }
         });
         saveUsers(list, id);
@@ -1735,7 +1768,7 @@
         if (!name) return;
         var list = loadUsers();
         var id = 'u' + Date.now();
-        list.push({ id: id, name: name, portrait: 'lt-01', callsign: '' });
+        list.push({ id: id, name: name, portrait: selectedPortrait(newKit()), callsign: '' });
         saveUsers(list, localStorage.getItem('dc_user_active') || id);
         document.getElementById('user-new').value = '';
         paintUsers();

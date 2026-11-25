@@ -64,3 +64,63 @@
   .kit-grid.faces { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .kit-grid.uniforms { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
+
+/* t349: Nation / Person / Uniform / Kopfbedeckung / Narben; fehlende Assets = „folgt“ (ausgegraut) */
+.kit-grid.nations {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.kit-grid.nations .kit-tile span {
+  text-transform: none;
+  letter-spacing: 0;
+}
+.kit-grid.persons {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.kit-grid.uniforms { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kit-grid.hats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kit-grid.scars { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kit-grid.nations .kit-tile span,
+.kit-grid.scars .kit-tile span {
+  padding: 7px 4px;
+  font-size: 11px;
+}
+.kit-tile small {
+  display: block;
+  margin-top: 2px;
+  font-size: 10px;
+  letter-spacing: .04em;
+  text-transform: none;
+  color: #a99b74;
+}
+.portrait-pick.person-pick {
+  display: flex;
+  flex-direction: column;
+}
+.portrait-pick.person-pick span {
+  display: block;
+  padding: 4px 2px;
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #d7d1b8;
+  line-height: 1.2;
+}
+.kit-grid .soon,
+.kit-grid button[disabled] {
+  opacity: .42;
+  cursor: not-allowed;
+  filter: grayscale(1);
+  min-height: 34px;
+}
+.kit-grid .soon .kit-soon {
+  display: block;
+  font-style: normal;
+  font-size: 10px;
+  color: #c9b27a;
+  text-transform: none;
+}
+@media (max-width: 900px) {
+  .kit-grid.nations { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kit-grid.persons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.kit-grid button span { white-space: normal; overflow-wrap: anywhere; }

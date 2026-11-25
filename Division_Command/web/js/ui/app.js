@@ -599,7 +599,7 @@
       });
       var au = dcActiveUser();
       if (engine.state && engine.state.players && engine.state.players[0]) {
-        engine.state.players[0].portrait = (au && au.portrait) || 'f01-kampf-none';
+        engine.state.players[0].portrait = (au && window.DCPortrait) ? DCPortrait.kitId(DCPortrait.kitFromUser(au)) : ((au && au.portrait) || 'f01-kampf-none');
         engine.state.players[0].rank = (au && au.rank) || 'Lt';
         engine.state.players[0].callsign = (au && au.callsign) || '';
         engine.state.players[0].facing = (au && au.facing) || 'left';
@@ -609,6 +609,11 @@
         var foeFace = 1 + Math.floor((seed % 23) + 1);
         if (foeFace === 1) foeFace = 12;
         engine.state.players[1].portrait = 'lt-' + (foeFace<10?'0':'')+foeFace;
+        // t349: Botgegner bekommt eine fertige Ölkette (Nation/Person/Uniform/Mütze aus dem Seed).
+        if (window.DCPortrait && DCPortrait.botKitId) {
+          engine.state.players[1].portrait = DCPortrait.botKitId(seed);
+          if (!engine.state.players[1].rank) engine.state.players[1].rank = DCPortrait.botRank(seed);
+        }
       }
       you = 0;
       seenEvents = 0; seenEventN = 0;
@@ -616,7 +621,7 @@
       eventPlaying = false; eventFlying = false;
       var ov = $('#overlay');
       if (ov) ov.style.display = 'none';
-      document.title = (window.DC_BUILD_LABEL || 'Division Command 0.655 Alpha');
+      document.title = (window.DC_BUILD_LABEL || 'Division Command 0.657 Alpha');
       window.dcTimerHold = true;
       render();
       // t256: Münzwurf erst nach dem Einblend-Countdown zeigen. Vorher lag er unter dem
@@ -3320,7 +3325,9 @@ document.querySelectorAll('#my-front .slot.empty, #my-support .slot.empty').forE
       var faceId = (p && p.face) || String(p && p.portrait || '').slice(0, 3);
       var special = p && p.facing === 'right' && window.DCPortrait && DCPortrait.rightUrl(faceId, p.rank);
       var src = special || (p && p.portrait ? dcPortraitSrc(p.portrait, p.rank) : '');
-      var face = src ? '<img class="plate-face' + (p.facing === 'right' && !special ? ' face-right' : '') + '" src="' + src + '" alt="">' : '';
+      // t349: data-dcp-key – das Komposit (Narben/Mütze) wird nachgetragen, sobald es fertig ist.
+      var dkey = !special && src && window.DCPortrait && DCPortrait.key ? DCPortrait.key(p.portrait, p.rank) : '';
+      var face = src ? '<img class="plate-face' + (p.facing === 'right' && !special ? ' face-right' : '') + '" src="' + src + '"' + (dkey ? ' data-dcp-key="' + dkey + '"' : '') + ' alt="">' : '';
       var call = p && p.callsign ? '<span class="plate-call">»' + escapeHtml(p.callsign) + '«</span>' : '';
       return face + '<span class="plate-name">' + escapeHtml(p.name) + '</span>' + call;
     }

@@ -4,6 +4,18 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.657 Alpha – 25.11.2026
+
+Alle fertigen Offiziersporträts im Spiel verknüpft, Offiziersakte für künftige Nationen vorbereitet (t349, Gewicht +0,002: spürbare Erweiterung). Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert. Keine neuen Bilddateien.
+
+- **Verknüpft:** Rothain, Karsk, Averon, Ossaria und Sahr vollständig – 40 Ketten (je 4 Personen m1/m2/f1/f2 × 2 Uniformen), alle 16 Ränge (neu im Spiel: Oberfähnrich, Stabshauptmann, Generaloberst), Mützen (zwei Typen je Nation) und Narben (Wange, Braue, Kiefer) als eigene Ebenen, die zur Laufzeit per Canvas über das Bild gelegt werden (Cache; bei `file://` Rückfall auf das Basisbild). Vorher waren 6 von 40 Ketten mit 13 Rängen ohne Ebenen angebunden. Alle 2.040 Dateien sind jetzt erreichbar.
+- **Datengetrieben:** `scripts/portraits/build_portrait_manifest.js` erzeugt `Division_Command/web/js/data/portrait-manifest.js` aus den Nationsmanifesten (prüft Dateikonvention und Existenz). `web/js/ui/portraits.js` liest nur dieses Manifest. Neue Nation = Export nach `oel_ketten/<nation>/` + Skript laufen lassen, kein UI-Umbau.
+- **Offiziersakte (Erststart und Benutzer):** Nation → Person (zwei Offiziere, zwei Offizierinnen) → Uniform → Kopfbedeckung (ohne oder eine der zwei Mützen) → Narben (frei kombinierbar); Rangvorschau über 16 Ränge. Optionen ohne Assets sind ausgegraut mit „folgt“. Steinmark, Vael, Vesper und der Altbestand nutzen bis dahin die Altporträts, die übrigen 8 Nationen sind „folgt“.
+- **Kompatibilität:** neue Kit-ID `oel-<nation>-<uniform>-<person>-<mütze>-<narben>`; alte Akten (`fNN-kampf-none`) werden automatisch migriert (Rothain/Karsk/Ossaria/Sahr-Gesichter → Ölkette der Nation, übrige bleiben Altporträt). Gespeicherte Ränge behalten ihre IDs.
+- **Tisch:** Namensschilder zeigen das Komposit; der Bot-Gegner trägt ein Ölporträt (aus dem Seed).
+- **Tests:** `tests/test_portraits_t349.js` in `npm test` (Manifest aktuell, jede referenzierte Datei existiert und hat 864 × 1152, 40 Ketten × 16 Ränge × Ebenen, Migration, Rückfälle, „folgt“, Editor-Markup).
+- **Cache** unverändert `divcmd-alpha49a`: HTML/JS gehen zuerst ins Netz, Porträts stehen nicht in der App-Shell.
+
 ## 0.655 Alpha – 25.11.2026
 
 Offiziersporträts als Ölgemälde-Ketten, Karsk-Neugenerierung nach t344 inkl. Mützen-Layer (t345, Gewicht +0,002: spürbare Erweiterung und Überarbeitung des Grafikbestands). Stehende Freigabe des Projektleiters: fertige Nation direkt als Release pushen. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.

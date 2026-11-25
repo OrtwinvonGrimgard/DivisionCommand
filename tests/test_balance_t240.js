@@ -23,5 +23,5 @@ const d = w.DC_NATION_DECKS.Caldris;
 const fs = require('fs'); const path = require('path');
 const R = path.join(__dirname, '..', 'Division_Command');
 assert(/DC_VERSION = '0\.655'/.test(fs.readFileSync(path.join(R, 'web/js/version.js'), 'utf8')));
-assert.strictEqual(fs.readFileSync(path.join(R, 'VERSION'), 'utf8').trim().split(/\s/)[0].replace(/^v/, ''), '0.655'); // t345: Version 0.655
-console.log('PASS balance t240: 5 Caldris-Poolkarten −1 DEF, Starterdeck unberührt, Version (aktuell 0.655)');
+assert.strictEqual(fs.readFileSync(path.join(R, 'VERSION'), 'utf8').trim().split(/\s/)[0].replace(/^v/, ''), '0.657'); // t349: Version 0.657
+console.log('PASS balance t240: 5 Caldris-Poolkarten −1 DEF, Starterdeck unberührt, Version (aktuell 0.657)');
