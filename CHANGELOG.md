@@ -4,6 +4,15 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.651 Alpha – 25.11.2026
+
+Offiziersporträts als Ölgemälde-Ketten, Averon-Mützen-Layer (t345, Gewicht +0,002: spürbare Erweiterung des Grafikbestands). Stehende Freigabe des Projektleiters: fertige Nation direkt als Release pushen. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.
+
+- **Averon-Mützen fertig** unter `Division_Command/web/assets/portraits/oel_ketten/averon/`: für Feld und Dienst, vier Personen, 16 Ränge, **Mützen als eigene RGBA-Layer** (`schirmmuetze`, `feldmuetze`), je Rang mit Fit-Check. Basen bleiben barhaupt. Manifest: `oel_ketten/averon/manifest.json` (`headgear: "layers"`). Beschreibung: `docs/technik/PORTRAIT_OEL_KETTEN.md`.
+- **Bestand jetzt:** 40 Base-Ketten unverändert (Rothain, Karsk, Averon, Ossaria, Sahr). Mützen-Layer jetzt bei Sahr, Rothain und Averon (je 256 Layer). 11 Nationen fehlen noch. Mützen-Layer für Ossaria sowie die Neugenerierung von Karsk (sichtbares Altern nach t344) folgen als Nächstes. Die Verdrahtung in `portraits.js` bleibt unverändert (Teilverdrahtung seit d27dbc1d, nicht in diesem Release stillschweigend erweitert).
+- **Averon (Bindung Zeit):** offenes Auge plus Datenstreifen; olivgrüne Mützen (wie die Uniform), sandfarbene Paspel (wie die sandfarbenen Streifen / das Diensthemd), bleiches Metall bzw. verblasste Datenlinie am Abzeichen. Kein christliches Kreuz, kein Adler, keine Kokarde, keine historischen deutschen Kriegsabzeichen, kein Stahlhelm, keine Pickelhaube, kein Barett, kein Schiffchen. Ab Stab etwas reichere Paspel und klarere Datenlinien; ab General leuchtende blass-cyan/weiße Datenlinien-Akzente. Beim GFM (R16) steht ein vollständig sichtbares überwachendes Auge (Iris, Pupille, Blick klar lesbar) auf dem einen Band-Abzeichen; der Spiegel bleibt kahl.
+- **Cache** unverändert `divcmd-alpha49a`: die neuen Bilder stehen nicht in der App-Shell, HTML/JS gehen bereits zuerst ins Netz.
+
 ## 0.649 Alpha – 25.11.2026
 
 Offiziersporträts als Ölgemälde-Ketten, Rothain-Mützen-Layer (t345, Gewicht +0,002: spürbare Erweiterung des Grafikbestands). Stehende Freigabe des Projektleiters: fertige Nation direkt als Release pushen. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.
