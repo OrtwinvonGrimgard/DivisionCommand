@@ -369,7 +369,27 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 
 **CI (seit t289):** Auf GitHub laufen bei jedem Push/PR auf `main` automatisch `npm test`, `verify.py`, Fuzz und Audit (`.github/workflows/ci.yml`, [`technik/CI.md`](technik/CI.md)). Das ersetzt die lokalen Browser-Gates und `smoke 400` nicht; ein roter Lauf auf der Actions-Seite des Repos ist vor dem nächsten Push zu beheben.
 
-**Letzter Gate-Lauf (25.11.2026, t345, Version 0.651):** Grün:
+**Letzter Gate-Lauf (25.11.2026, t345, Version 0.653):** Grün:
+
+- `npm test` (66 Dateien; `DC_VERSION`-Assertion in `test_balance_t240.js` auf 0.653; erster Lauf rot, weil die Assertion vor dem Versionscommit noch 0.651 prüfte, Retry nach Commit grün)
+- `verify.py` und `tests/test_tex_seeds_t315.py`
+- Fuzz 80 (80/80, 0 Fehler)
+- Smoke 400 (400/400, 0 Fehler)
+- Audit (14/14, `unreadParams` 0)
+- `balance-gate:quick` (grün, 0 Fehler, 15936 Partien). Das volle Gate ist nicht gelaufen: keine Karten- oder Regeländerung, nur Porträt-Assets und Doku.
+- `tutorial-play` (17/17)
+- `reset-play` (6/6)
+- `layout-test`: erster Lauf rot (Browser-Kontext ab 1366×768 geschlossen); einzeln wiederholt: grün (0 Befunde)
+- `screens-test` (0 Befunde, 75 Ansichten)
+- `libzoom-play` (33/0)
+- `lan-play` (8/0, 10 Züge)
+- `funcs-play` (5/5, Versionsanzeige 0.653)
+- `botseq-play`: erster Lauf grün (`fail` leer)
+- `audio-play` (0 Schreibzugriffe in 3 s am Tisch, Version 0.653)
+- `ui-play` Seed 31337 (grün, `fail` leer)
+- `ui-play` Seed 1234 (grün, `fail` leer)
+
+**Gate-Lauf davor (25.11.2026, t345, Version 0.651):** Grün:
 
 - `npm test` (66 Dateien; `DC_VERSION`-Assertion in `test_balance_t240.js` auf 0.651, erster Lauf grün)
 - `verify.py` und `tests/test_tex_seeds_t315.py`
