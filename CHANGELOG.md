@@ -4,6 +4,15 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.655 Alpha – 25.11.2026
+
+Offiziersporträts als Ölgemälde-Ketten, Karsk-Neugenerierung nach t344 inkl. Mützen-Layer (t345, Gewicht +0,002: spürbare Erweiterung und Überarbeitung des Grafikbestands). Stehende Freigabe des Projektleiters: fertige Nation direkt als Release pushen. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.
+
+- **Karsk neu generiert (t344)** unter `Division_Command/web/assets/portraits/oel_ketten/karsk/`: Panzer und Tech, vier Personen, 16 Ränge. Gesichter altern sichtbar mit dem Rang (unausgereifte Synthetik, Gewebe angegriffen und zunehmend durch Prothesen und Grafts ersetzt). Basen bleiben barhaupt. **Mützen als eigene RGBA-Layer** (`schirmmuetze`, `barett`), je Rang mit Fit-Check. Manifest: `oel_ketten/karsk/manifest.json` (`headgear: "layers"`). Beschreibung: `docs/technik/PORTRAIT_OEL_KETTEN.md`.
+- **Bestand jetzt:** 40 Base-Ketten (Rothain, Karsk, Averon, Ossaria, Sahr); Karsk-Basen sind die t344-Neugenerierung. Mützen-Layer jetzt bei Sahr, Rothain, Averon, Ossaria und Karsk (je 256 Layer). 11 Nationen fehlen noch. Die Verdrahtung in `portraits.js` bleibt unverändert (Teilverdrahtung seit d27dbc1d, nicht in diesem Release stillschweigend erweitert). Portraitarbeit nach Karsk auf Nutzerwunsch pausiert (t347u).
+- **Karsk (Bindung Körper):** Palette Anthrazit / Silber / dunkles Metall, dunkelroter Akzent (Mützenband, später Schärpe, Ordensspangen). Kernsymbol Sechseck mit eingebettetem Auge nur am Band (Schirmmütze) bzw. über dem linken Träger (Barett); Krone bzw. Barettspiegel bleiben kahl. Tech-Anzug mit Reißverschluss, ohne Leder-Geschirr; ab R04 silberne Schulterstücke, ab R05 dunkelrote Ordensspangen an der Uniform. Ab General klareres, größeres Band-Hexauge; ab R13 bleibt das Gorget am Hals, ab R14 die Schärpe auf der Uniform, beides nicht auf der Krone. Beim GFM (R16) vollständig lesbares Band-Hexauge; das Systemauge (hexagonaler Augenrahmen) bleibt ein Gesichtsimplantat, keine Mützenzier. Kein Gold, keine Kreuze, Sterne, Averon-Auge oder Ossaria-Schädel als Abzeichen, kein Pelz, Stahlhelm, Pickelhaube, Feldmütze oder Schiffchen.
+- **Cache** unverändert `divcmd-alpha49a`: die neuen Bilder stehen nicht in der App-Shell, HTML/JS gehen bereits zuerst ins Netz.
+
 ## 0.653 Alpha – 25.11.2026
 
 Offiziersporträts als Ölgemälde-Ketten, Ossaria-Mützen-Layer (t345, Gewicht +0,002: spürbare Erweiterung des Grafikbestands). Stehende Freigabe des Projektleiters: fertige Nation direkt als Release pushen. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.
