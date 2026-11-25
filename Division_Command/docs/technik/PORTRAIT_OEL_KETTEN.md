@@ -45,24 +45,24 @@ Jeder Layer wird auf seinem Base-Porträt geprüft (Kopfgröße, Haltung, Haare,
 
 Der Bildausschnitt bleibt biometrisch mittig, Kopf bis Brustmitte. Im Base bleibt oben genug Luft für die Schirmmütze, damit der Layer nicht am oberen Rand abgeschnitten wird.
 
-Rothain, Karsk, Averon und Ossaria bleiben als barhäuptige Basen nutzbar; ihre Mützen-Layer kommen später und werden hier nicht nachgeholt. Eine kurze t342-Serie mit fest ins Bild gemalten Sahr-Mützen wurde verworfen und nicht übernommen.
+Karsk, Averon und Ossaria bleiben als barhäuptige Basen nutzbar; ihre Mützen-Layer kommen später und werden hier nicht nachgeholt. Rothain hat seit 0.649 eigene Mützen-Layer (Schirmmütze + Feldmütze, Fit-Check), analog zu Sahr. Eine kurze t342-Serie mit fest ins Bild gemalten Sahr-Mützen wurde verworfen und nicht übernommen.
 
 ## Bestand
 
 | Nation | Uniformen | Ketten | Status |
 |---|---|---|---|
-| Rothain | `dienstrock`, `gala` | 4 Personen × 2 Uniformen = 8 | fertig (inkl. Nachbesserung Alterung/Orden) |
+| Rothain | `dienstrock`, `gala` | 4 Personen × 2 Uniformen = 8 | fertig (inkl. Nachbesserung Alterung/Orden); seit 0.649 (t345) barhaupt mit Mützen-Layern (Schirmmütze + Feldmütze, Fit-Check). Bindung Erbe: stilisierte heraldische Krone im gebrochenen bzw. offenen Eidring, karmesinrote Mützenkrone, fast schwarzes Band, silberne Paspel (ab General Gold); beim GFM geschlossener, klar lesbarer Ring. |
 | Karsk | `panzer`, `tech` | 8 | fertig im aktuellen Bestand (optisch jung + wachsende Implantate). **t344, nach Sahr, nur mit Freigabe:** Ketten neu generieren. Gesicht altert sichtbar; die synthetischen Verbesserungen sind unausgereift, das Gewebe wird mit der Zeit angegriffen und muss zunehmend ersetzt werden. Mehr sichtbare Prothesen, Narben und ersetzte Hautpartien mit dem Rang; bestehendes bleibt, das Ergebnis wirkt zunehmend künstlich und beschädigt, nicht perfekt. Vorlagen: `v2_karsk/AGING_PROMPTS.md`. |
 | Averon | `feld`, `dienst` | 8 | fertig (t336). Bindung Zeit: Gesichter altern sichtbar mit dem Rang; GFM alt, aber wachsam. Kernsymbol offenes Auge (keine Sterne); ab General Kommando-Augenplakette, beim GFM vollständig sichtbares überwachendes Auge auf der Uniform. |
 | Ossaria | `platte`, `klage` | 8 | fertig (t337), barhaupt. Bindung Tote: Gesichter altern sichtbar mit dem Rang; GFM alt und von den Toten gezeichnet, nicht gebrechlich. Kernsymbol Knochenkreis / stilisierter Totenschädel (keine christlichen Kreuze); ab General große Knochenkreis-/Schädel-Gedenkplakette. |
 | Sahr | `wickel`, `offen` | 8 | fertig (t345), barhaupt mit Mützen-Layern (Schirmmütze + Feldmütze, Fit-Check). Bindung Fluss: Gesichter altern sichtbar mit dem Rang; GFM alt, Ausdruck fließend, nicht gebrechlich. Kernsymbol fließende Welle; Perlen als Städtezeichen; ab General große Wellen-Kommandoplakette, beim GFM Flusssymbol vollständig sichtbar. |
 | 11 weitere | — | — | offen. Der Baukasten `tools/portraits/oel/chain2_build.py` ist nationsfähig (Rothain, Karsk, Averon, Ossaria, Sahr). |
 
-Zusammen: 40 fertige Base-Ketten, 640 Rangbilder, 120 Narben-Layer, 5 Manifeste, plus 256 Mützen-Layer bei Sahr. 11 von 16 Nationen fehlen noch. Sollstand bleibt 4 Personen × 2 Uniformen × 16 Nationen = 128 Base-Ketten, plus Narben und zwei Mützen-Layer je Rang. Rothain, Karsk, Averon und Ossaria sind weiterhin barhäuptige Basen ohne Mützen-Layer; die Layer für Rothain, Averon und Ossaria sowie die Neugenerierung von Karsk nach t344 folgen.
+Zusammen: 40 fertige Base-Ketten, 640 Rangbilder, 120 Narben-Layer, 5 Manifeste, plus 512 Mützen-Layer (Sahr und Rothain je 256). 11 von 16 Nationen fehlen noch. Sollstand bleibt 4 Personen × 2 Uniformen × 16 Nationen = 128 Base-Ketten, plus Narben und zwei Mützen-Layer je Rang. Karsk, Averon und Ossaria sind weiterhin barhäuptige Basen ohne Mützen-Layer; die Layer für Averon und Ossaria sowie die Neugenerierung von Karsk nach t344 folgen.
 
 ## Manifest
 
-Jedes Manifest nennt `style: "oil-chain"`, Canvas, Rangliste mit ungefährem Alter, Uniformen, Personen, Dateipfade, Gesichtsanker (`eye_mid`, `chin_y`) und die drei Narbenpfade samt optionalem Pixeloffset. Ab Sahr zusätzlich `headgear: "layers"`, `headgear_types` (z. B. `schirmmuetze`, `feldmuetze`) und je Person die Mützenpfade unter `muetzen`. Ältere Manifeste behalten `headgear: "none"`. Rothain steht in `oel_ketten/manifest.json`, Karsk in `oel_ketten/karsk/manifest.json`, Averon in `oel_ketten/averon/manifest.json`, Ossaria in `oel_ketten/ossaria/manifest.json`, Sahr in `oel_ketten/sahr/manifest.json`.
+Jedes Manifest nennt `style: "oil-chain"`, Canvas, Rangliste mit ungefährem Alter, Uniformen, Personen, Dateipfade, Gesichtsanker (`eye_mid`, `chin_y`) und die drei Narbenpfade samt optionalem Pixeloffset. Ab Sahr, und seit 0.649 auch bei Rothain, zusätzlich `headgear: "layers"`, `headgear_types` (z. B. `schirmmuetze`, `feldmuetze`) und je Person die Mützenpfade unter `muetzen`. Die Manifeste von Karsk, Averon und Ossaria behalten vorerst `headgear: "none"`. Rothain steht in `oel_ketten/manifest.json`, Karsk in `oel_ketten/karsk/manifest.json`, Averon in `oel_ketten/averon/manifest.json`, Ossaria in `oel_ketten/ossaria/manifest.json`, Sahr in `oel_ketten/sahr/manifest.json`.
 
 ## Werkzeuge
 

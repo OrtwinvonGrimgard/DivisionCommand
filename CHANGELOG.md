@@ -4,6 +4,15 @@
 
 **Versionsschema (ab 0.610):** Die Version hat drei Nachkommastellen: `0.xyz`. Wie weit sie springt, richtet sich nach dem Gewicht der Änderung: Fix oder Kleinigkeit +0,001, spürbare Erweiterung +0,002 bis +0,005, großes Feature oder Systemumbau etwa +0,010. Die bisherigen Stände 0.6a bis 0.6e entsprechen 0.601 bis 0.605. Ihre Tags (`v0.6a` … `v0.6e`) bleiben unverändert. Neue Tags heißen `v0.610` usw. Der Sprung 0.605 → 0.610 steht für den Umbau des Bot-Zugs.
 
+## 0.649 Alpha – 25.11.2026
+
+Offiziersporträts als Ölgemälde-Ketten, Rothain-Mützen-Layer (t345, Gewicht +0,002: spürbare Erweiterung des Grafikbestands). Stehende Freigabe des Projektleiters: fertige Nation direkt als Release pushen. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.
+
+- **Rothain-Mützen fertig** unter `Division_Command/web/assets/portraits/oel_ketten/rothain/`: für Dienstrock und Gala, vier Personen, 16 Ränge, **Mützen als eigene RGBA-Layer** (`schirmmuetze`, `feldmuetze`), je Rang mit Fit-Check. Basen bleiben barhaupt. Manifest: `oel_ketten/manifest.json` (`headgear: "layers"`). Beschreibung: `docs/technik/PORTRAIT_OEL_KETTEN.md`.
+- **Bestand jetzt:** 40 Base-Ketten unverändert (Rothain, Karsk, Averon, Ossaria, Sahr). Mützen-Layer jetzt bei Sahr und Rothain (je 256 Layer). 11 Nationen fehlen noch. Mützen-Layer für Averon und Ossaria sowie die Neugenerierung von Karsk (sichtbares Altern nach t344) folgen als Nächstes. Die Verdrahtung in `portraits.js` bleibt unverändert (Teilverdrahtung seit d27dbc1d, nicht in diesem Release stillschweigend erweitert).
+- **Rothain (Bindung Erbe):** stilisierte heraldische Krone im gebrochenen bzw. offenen Eidring, karmesinrote Mützenkrone, fast schwarzes Band, silberne Paspel (ab General Gold). Kein christliches Kreuz, kein Adler, keine schwarz-weiß-rote Kokarde, keine historischen deutschen Kriegsabzeichen, kein Stahlhelm, keine Pickelhaube, kein Barett, kein Schiffchen. Ab General reichere Borte und Gold im Abzeichen; kein deutsches Eichenlaub am Schirm. Beim GFM (R16) steht die Krone im geschlossenen, klar lesbaren Ring.
+- **Cache** unverändert `divcmd-alpha49a`: die neuen Bilder stehen nicht in der App-Shell, HTML/JS gehen bereits zuerst ins Netz.
+
 ## 0.647 Alpha – 24.11.2026
 
 Offiziersporträts als Ölgemälde-Ketten, Sahr (t345, Gewicht +0,002: spürbare Erweiterung des Grafikbestands). Stehende Freigabe des Projektleiters: fertige Nation direkt als Release pushen. Spielregeln, Kartenwerte, Kartentexte und Balance sind unverändert.
