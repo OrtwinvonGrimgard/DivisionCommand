@@ -7,12 +7,12 @@
   1152
  ],
  "format": "webp q90, opaque painting, flat dark canvas background; native generator resolution 864x1152 (3:4), no downscale",
- "note": "Each rank image is an edit of the previous rank (same pose/crop/light), landmark-aligned (single Lanczos resample) to the Faehnrich master (eyes/chin). Scars are separate alpha layers per person, same canvas size, z_order painting+scars.",
+ "note": "Each rank image is an edit of the previous rank (same pose/crop/light), landmark-aligned (single Lanczos resample) to the Faehnrich master (eyes/chin). Scars and headgear are separate alpha layers, same canvas size. z_order: painting, scars, at most one cap.",
  "z_order": [
   "painting",
-  "scars"
+  "scars",
+  "muetzen"
  ],
- "headgear": "none",
  "rank_ids": [
   "faehnrich",
   "oberfaehnrich",
@@ -166,7 +166,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "karsk/panzer/m1/muetzen/schirmmuetze/01_faehnrich.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/03_leutnant.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/05_hauptmann.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/07_major.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/09_oberst.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/11_generalmajor.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/13_general.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/14_generaloberst.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "karsk/panzer/m1/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "barett": {
+       "files": [
+        "karsk/panzer/m1/muetzen/barett/01_faehnrich.webp",
+        "karsk/panzer/m1/muetzen/barett/02_oberfaehnrich.webp",
+        "karsk/panzer/m1/muetzen/barett/03_leutnant.webp",
+        "karsk/panzer/m1/muetzen/barett/04_oberleutnant.webp",
+        "karsk/panzer/m1/muetzen/barett/05_hauptmann.webp",
+        "karsk/panzer/m1/muetzen/barett/06_stabshauptmann.webp",
+        "karsk/panzer/m1/muetzen/barett/07_major.webp",
+        "karsk/panzer/m1/muetzen/barett/08_oberstleutnant.webp",
+        "karsk/panzer/m1/muetzen/barett/09_oberst.webp",
+        "karsk/panzer/m1/muetzen/barett/10_brigadegeneral.webp",
+        "karsk/panzer/m1/muetzen/barett/11_generalmajor.webp",
+        "karsk/panzer/m1/muetzen/barett/12_generalleutnant.webp",
+        "karsk/panzer/m1/muetzen/barett/13_general.webp",
+        "karsk/panzer/m1/muetzen/barett/14_generaloberst.webp",
+        "karsk/panzer/m1/muetzen/barett/15_feldmarschall.webp",
+        "karsk/panzer/m1/muetzen/barett/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     },
     "m2": {
      "files": [
@@ -218,7 +260,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "karsk/panzer/m2/muetzen/schirmmuetze/01_faehnrich.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/03_leutnant.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/05_hauptmann.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/07_major.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/09_oberst.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/11_generalmajor.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/13_general.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/14_generaloberst.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "karsk/panzer/m2/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "barett": {
+       "files": [
+        "karsk/panzer/m2/muetzen/barett/01_faehnrich.webp",
+        "karsk/panzer/m2/muetzen/barett/02_oberfaehnrich.webp",
+        "karsk/panzer/m2/muetzen/barett/03_leutnant.webp",
+        "karsk/panzer/m2/muetzen/barett/04_oberleutnant.webp",
+        "karsk/panzer/m2/muetzen/barett/05_hauptmann.webp",
+        "karsk/panzer/m2/muetzen/barett/06_stabshauptmann.webp",
+        "karsk/panzer/m2/muetzen/barett/07_major.webp",
+        "karsk/panzer/m2/muetzen/barett/08_oberstleutnant.webp",
+        "karsk/panzer/m2/muetzen/barett/09_oberst.webp",
+        "karsk/panzer/m2/muetzen/barett/10_brigadegeneral.webp",
+        "karsk/panzer/m2/muetzen/barett/11_generalmajor.webp",
+        "karsk/panzer/m2/muetzen/barett/12_generalleutnant.webp",
+        "karsk/panzer/m2/muetzen/barett/13_general.webp",
+        "karsk/panzer/m2/muetzen/barett/14_generaloberst.webp",
+        "karsk/panzer/m2/muetzen/barett/15_feldmarschall.webp",
+        "karsk/panzer/m2/muetzen/barett/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     },
     "f1": {
      "files": [
@@ -270,7 +354,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "karsk/panzer/f1/muetzen/schirmmuetze/01_faehnrich.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/03_leutnant.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/05_hauptmann.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/07_major.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/09_oberst.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/11_generalmajor.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/13_general.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/14_generaloberst.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "karsk/panzer/f1/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "barett": {
+       "files": [
+        "karsk/panzer/f1/muetzen/barett/01_faehnrich.webp",
+        "karsk/panzer/f1/muetzen/barett/02_oberfaehnrich.webp",
+        "karsk/panzer/f1/muetzen/barett/03_leutnant.webp",
+        "karsk/panzer/f1/muetzen/barett/04_oberleutnant.webp",
+        "karsk/panzer/f1/muetzen/barett/05_hauptmann.webp",
+        "karsk/panzer/f1/muetzen/barett/06_stabshauptmann.webp",
+        "karsk/panzer/f1/muetzen/barett/07_major.webp",
+        "karsk/panzer/f1/muetzen/barett/08_oberstleutnant.webp",
+        "karsk/panzer/f1/muetzen/barett/09_oberst.webp",
+        "karsk/panzer/f1/muetzen/barett/10_brigadegeneral.webp",
+        "karsk/panzer/f1/muetzen/barett/11_generalmajor.webp",
+        "karsk/panzer/f1/muetzen/barett/12_generalleutnant.webp",
+        "karsk/panzer/f1/muetzen/barett/13_general.webp",
+        "karsk/panzer/f1/muetzen/barett/14_generaloberst.webp",
+        "karsk/panzer/f1/muetzen/barett/15_feldmarschall.webp",
+        "karsk/panzer/f1/muetzen/barett/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     },
     "f2": {
      "files": [
@@ -322,7 +448,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "karsk/panzer/f2/muetzen/schirmmuetze/01_faehnrich.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/03_leutnant.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/05_hauptmann.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/07_major.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/09_oberst.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/11_generalmajor.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/13_general.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/14_generaloberst.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "karsk/panzer/f2/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "barett": {
+       "files": [
+        "karsk/panzer/f2/muetzen/barett/01_faehnrich.webp",
+        "karsk/panzer/f2/muetzen/barett/02_oberfaehnrich.webp",
+        "karsk/panzer/f2/muetzen/barett/03_leutnant.webp",
+        "karsk/panzer/f2/muetzen/barett/04_oberleutnant.webp",
+        "karsk/panzer/f2/muetzen/barett/05_hauptmann.webp",
+        "karsk/panzer/f2/muetzen/barett/06_stabshauptmann.webp",
+        "karsk/panzer/f2/muetzen/barett/07_major.webp",
+        "karsk/panzer/f2/muetzen/barett/08_oberstleutnant.webp",
+        "karsk/panzer/f2/muetzen/barett/09_oberst.webp",
+        "karsk/panzer/f2/muetzen/barett/10_brigadegeneral.webp",
+        "karsk/panzer/f2/muetzen/barett/11_generalmajor.webp",
+        "karsk/panzer/f2/muetzen/barett/12_generalleutnant.webp",
+        "karsk/panzer/f2/muetzen/barett/13_general.webp",
+        "karsk/panzer/f2/muetzen/barett/14_generaloberst.webp",
+        "karsk/panzer/f2/muetzen/barett/15_feldmarschall.webp",
+        "karsk/panzer/f2/muetzen/barett/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     }
    }
   },
@@ -378,7 +546,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "karsk/tech/m1/muetzen/schirmmuetze/01_faehnrich.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/03_leutnant.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/05_hauptmann.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/07_major.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/09_oberst.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/11_generalmajor.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/13_general.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/14_generaloberst.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "karsk/tech/m1/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "barett": {
+       "files": [
+        "karsk/tech/m1/muetzen/barett/01_faehnrich.webp",
+        "karsk/tech/m1/muetzen/barett/02_oberfaehnrich.webp",
+        "karsk/tech/m1/muetzen/barett/03_leutnant.webp",
+        "karsk/tech/m1/muetzen/barett/04_oberleutnant.webp",
+        "karsk/tech/m1/muetzen/barett/05_hauptmann.webp",
+        "karsk/tech/m1/muetzen/barett/06_stabshauptmann.webp",
+        "karsk/tech/m1/muetzen/barett/07_major.webp",
+        "karsk/tech/m1/muetzen/barett/08_oberstleutnant.webp",
+        "karsk/tech/m1/muetzen/barett/09_oberst.webp",
+        "karsk/tech/m1/muetzen/barett/10_brigadegeneral.webp",
+        "karsk/tech/m1/muetzen/barett/11_generalmajor.webp",
+        "karsk/tech/m1/muetzen/barett/12_generalleutnant.webp",
+        "karsk/tech/m1/muetzen/barett/13_general.webp",
+        "karsk/tech/m1/muetzen/barett/14_generaloberst.webp",
+        "karsk/tech/m1/muetzen/barett/15_feldmarschall.webp",
+        "karsk/tech/m1/muetzen/barett/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     },
     "m2": {
      "files": [
@@ -430,7 +640,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "karsk/tech/m2/muetzen/schirmmuetze/01_faehnrich.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/03_leutnant.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/05_hauptmann.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/07_major.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/09_oberst.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/11_generalmajor.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/13_general.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/14_generaloberst.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "karsk/tech/m2/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "barett": {
+       "files": [
+        "karsk/tech/m2/muetzen/barett/01_faehnrich.webp",
+        "karsk/tech/m2/muetzen/barett/02_oberfaehnrich.webp",
+        "karsk/tech/m2/muetzen/barett/03_leutnant.webp",
+        "karsk/tech/m2/muetzen/barett/04_oberleutnant.webp",
+        "karsk/tech/m2/muetzen/barett/05_hauptmann.webp",
+        "karsk/tech/m2/muetzen/barett/06_stabshauptmann.webp",
+        "karsk/tech/m2/muetzen/barett/07_major.webp",
+        "karsk/tech/m2/muetzen/barett/08_oberstleutnant.webp",
+        "karsk/tech/m2/muetzen/barett/09_oberst.webp",
+        "karsk/tech/m2/muetzen/barett/10_brigadegeneral.webp",
+        "karsk/tech/m2/muetzen/barett/11_generalmajor.webp",
+        "karsk/tech/m2/muetzen/barett/12_generalleutnant.webp",
+        "karsk/tech/m2/muetzen/barett/13_general.webp",
+        "karsk/tech/m2/muetzen/barett/14_generaloberst.webp",
+        "karsk/tech/m2/muetzen/barett/15_feldmarschall.webp",
+        "karsk/tech/m2/muetzen/barett/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     },
     "f1": {
      "files": [
@@ -482,7 +734,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "karsk/tech/f1/muetzen/schirmmuetze/01_faehnrich.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/03_leutnant.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/05_hauptmann.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/07_major.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/09_oberst.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/11_generalmajor.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/13_general.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/14_generaloberst.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "karsk/tech/f1/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "barett": {
+       "files": [
+        "karsk/tech/f1/muetzen/barett/01_faehnrich.webp",
+        "karsk/tech/f1/muetzen/barett/02_oberfaehnrich.webp",
+        "karsk/tech/f1/muetzen/barett/03_leutnant.webp",
+        "karsk/tech/f1/muetzen/barett/04_oberleutnant.webp",
+        "karsk/tech/f1/muetzen/barett/05_hauptmann.webp",
+        "karsk/tech/f1/muetzen/barett/06_stabshauptmann.webp",
+        "karsk/tech/f1/muetzen/barett/07_major.webp",
+        "karsk/tech/f1/muetzen/barett/08_oberstleutnant.webp",
+        "karsk/tech/f1/muetzen/barett/09_oberst.webp",
+        "karsk/tech/f1/muetzen/barett/10_brigadegeneral.webp",
+        "karsk/tech/f1/muetzen/barett/11_generalmajor.webp",
+        "karsk/tech/f1/muetzen/barett/12_generalleutnant.webp",
+        "karsk/tech/f1/muetzen/barett/13_general.webp",
+        "karsk/tech/f1/muetzen/barett/14_generaloberst.webp",
+        "karsk/tech/f1/muetzen/barett/15_feldmarschall.webp",
+        "karsk/tech/f1/muetzen/barett/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     },
     "f2": {
      "files": [
@@ -534,9 +828,57 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "karsk/tech/f2/muetzen/schirmmuetze/01_faehnrich.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/03_leutnant.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/05_hauptmann.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/07_major.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/09_oberst.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/11_generalmajor.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/13_general.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/14_generaloberst.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "karsk/tech/f2/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "barett": {
+       "files": [
+        "karsk/tech/f2/muetzen/barett/01_faehnrich.webp",
+        "karsk/tech/f2/muetzen/barett/02_oberfaehnrich.webp",
+        "karsk/tech/f2/muetzen/barett/03_leutnant.webp",
+        "karsk/tech/f2/muetzen/barett/04_oberleutnant.webp",
+        "karsk/tech/f2/muetzen/barett/05_hauptmann.webp",
+        "karsk/tech/f2/muetzen/barett/06_stabshauptmann.webp",
+        "karsk/tech/f2/muetzen/barett/07_major.webp",
+        "karsk/tech/f2/muetzen/barett/08_oberstleutnant.webp",
+        "karsk/tech/f2/muetzen/barett/09_oberst.webp",
+        "karsk/tech/f2/muetzen/barett/10_brigadegeneral.webp",
+        "karsk/tech/f2/muetzen/barett/11_generalmajor.webp",
+        "karsk/tech/f2/muetzen/barett/12_generalleutnant.webp",
+        "karsk/tech/f2/muetzen/barett/13_general.webp",
+        "karsk/tech/f2/muetzen/barett/14_generaloberst.webp",
+        "karsk/tech/f2/muetzen/barett/15_feldmarschall.webp",
+        "karsk/tech/f2/muetzen/barett/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     }
    }
   }
- }
+ },
+ "headgear": "layers",
+ "headgear_types": [
+  "schirmmuetze",
+  "barett"
+ ],
+ "headgear_note": "Base portraits are bareheaded. Caps are per-rank RGBA layers (Schirmmuetze + national second cap), fit-checked on each base; redrawn per portrait if they do not sit correctly."
 }
