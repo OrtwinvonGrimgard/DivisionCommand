@@ -370,7 +370,27 @@ Die Reihenfolge folgt den „Offenen Punkten nach Priorität“ aus t271 und den
 
 **CI (seit t289):** Auf GitHub laufen bei jedem Push/PR auf `main` automatisch `npm test`, `verify.py`, Fuzz und Audit (`.github/workflows/ci.yml`, [`technik/CI.md`](technik/CI.md)). Das ersetzt die lokalen Browser-Gates und `smoke 400` nicht; ein roter Lauf auf der Actions-Seite des Repos ist vor dem nächsten Push zu beheben.
 
-**Letzter Gate-Lauf (25.11.2026, t344/t345, Version 0.655):** Grün:
+**Letzter Gate-Lauf (25.11.2026, t349, Version 0.657):** Grün (Box an diesem Tag ersetzt, Playwright/node_modules neu installiert):
+
+- `npm test` (67 Dateien inkl. `test_portraits_t349.js`; `DC_VERSION`-Assertion auf 0.657), nach dem Layout-Fix erneut grün
+- `verify.py` und `tests/test_tex_seeds_t315.py`
+- Fuzz 80 (80/80, 0 Fehler)
+- Smoke 400 (400/400, 0 Fehler)
+- Audit (`unreadParams` 0)
+- `balance-gate:quick` (grün, 0 Fehler, 15936 Partien). Volles Gate nicht gelaufen: keine Karten- oder Regeländerung.
+- `tutorial-play` (17/17)
+- `reset-play` (6/6)
+- `layout-test` (0 Befunde), nach dem Layout-Fix erneut grün
+- `screens-test` (0 Befunde, 75 Ansichten). Erster Lauf rot: bei 1024 × 576 rutschte die dritte Zeile der jetzt 16 Rangknöpfe (GenOb/FM/GFM) in Offiziersakte und Benutzer unter die Aktionsleiste. Behoben in `web/css/ui-screens.css` (bei Fensterhöhe ≤ 640 px kleineres Vorschauporträt, kompaktere Rangknöpfe).
+- `libzoom-play` (33/0)
+- `lan-play` (8/0, 7 Züge)
+- `funcs-play` (5/5, Versionsanzeige 0.657). Erster Lauf rot: Versions-Regex im Test stand noch auf 0.655 (unvollständiger Versions-Bump), korrigiert.
+- `botseq-play` (`fail` leer)
+- `audio-play` (0 Schreibzugriffe in 3 s am Tisch, Version 0.657). Erster Lauf rot durch Timeout beim Start (Timing nach Box-Ersatz), Wiederholung grün.
+- `ui-play` Seed 31337 (grün, `fail` leer). Erster Lauf rot durch Klick-Timeout im Menüdurchgang (Timing), Wiederholung grün.
+- `ui-play` Seed 1234 (grün, `fail` leer)
+
+**Gate-Lauf davor (25.11.2026, t344/t345, Version 0.655):** Grün:
 
 - `npm test` (66 Dateien; `DC_VERSION`-Assertion in `test_balance_t240.js` auf 0.655, erster Lauf grün)
 - `verify.py` und `tests/test_tex_seeds_t315.py`

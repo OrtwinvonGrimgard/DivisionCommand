@@ -664,3 +664,11 @@ html.ui280 #lib-zoom .zoom-pos {
 @keyframes ui281-in-next { from { opacity: .35; transform: translateX(18px); } to { opacity: 1; transform: none; } }
 @keyframes ui281-in-prev { from { opacity: .35; transform: translateX(-18px); } to { opacity: 1; transform: none; } }
 @keyframes ui281-fade { from { opacity: .4; } to { opacity: 1; } }
+
+/* t349: 16 Rangknöpfe (3 Zeilen) – bei niedrigen Fenstern Porträt kleiner, damit die Rangvorschau nicht unter die Aktionsleiste rutscht */
+@media (max-height: 640px) {
+  html.ui280 #title-root#title-root #scr-setup.on .char-preview img,
+  html.ui280 #work-root#work-root #scr-user.screen.on .char-preview img { max-height: calc(100vh - 350px) !important; }
+  html.ui280 :is(#scr-setup, #scr-user).on .rank-preview { gap: 3px !important; }
+  html.ui280 :is(#scr-setup, #scr-user).on .rank-preview button { min-height: 22px !important; padding: 1px 5px !important; }
+}

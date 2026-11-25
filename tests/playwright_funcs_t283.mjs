@@ -68,7 +68,7 @@ async function main() {
   // Version
   try {
     const v = await page.evaluate(() => ({ v: window.DC_VERSION, t: document.title, d: (document.getElementById('dc-version') || {}).textContent }));
-    if (v.v !== '0.657' || !/0\.655/.test(v.t)) throw new Error(JSON.stringify(v));
+    if (v.v !== '0.657' || !/0\.657/.test(v.t)) throw new Error(JSON.stringify(v));
     ok('version 0.657 (' + v.t + ')');
   } catch (e) { fail('version', e); }
   // Deckbau-Erzwingung 60 + 2 (Browser-Katalog)
