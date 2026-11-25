@@ -7,12 +7,12 @@
   1152
  ],
  "format": "webp q90, opaque painting, flat dark canvas background; native generator resolution 864x1152 (3:4), no downscale",
- "note": "Each rank image is an edit of the previous rank (same pose/crop/light), landmark-aligned (single Lanczos resample) to the Faehnrich master (eyes/chin). Scars are separate alpha layers per person, same canvas size, z_order painting+scars.",
+ "note": "Each rank image is an edit of the previous rank (same pose/crop/light), landmark-aligned (single Lanczos resample) to the Faehnrich master (eyes/chin). Scars and headgear are separate alpha layers, same canvas size. z_order: painting, scars, at most one cap.",
  "z_order": [
   "painting",
-  "scars"
+  "scars",
+  "muetzen"
  ],
- "headgear": "none",
  "rank_ids": [
   "faehnrich",
   "oberfaehnrich",
@@ -166,7 +166,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "averon/feld/m1/muetzen/schirmmuetze/01_faehnrich.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/03_leutnant.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/05_hauptmann.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/07_major.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/09_oberst.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/11_generalmajor.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/13_general.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/14_generaloberst.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "averon/feld/m1/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "feldmuetze": {
+       "files": [
+        "averon/feld/m1/muetzen/feldmuetze/01_faehnrich.webp",
+        "averon/feld/m1/muetzen/feldmuetze/02_oberfaehnrich.webp",
+        "averon/feld/m1/muetzen/feldmuetze/03_leutnant.webp",
+        "averon/feld/m1/muetzen/feldmuetze/04_oberleutnant.webp",
+        "averon/feld/m1/muetzen/feldmuetze/05_hauptmann.webp",
+        "averon/feld/m1/muetzen/feldmuetze/06_stabshauptmann.webp",
+        "averon/feld/m1/muetzen/feldmuetze/07_major.webp",
+        "averon/feld/m1/muetzen/feldmuetze/08_oberstleutnant.webp",
+        "averon/feld/m1/muetzen/feldmuetze/09_oberst.webp",
+        "averon/feld/m1/muetzen/feldmuetze/10_brigadegeneral.webp",
+        "averon/feld/m1/muetzen/feldmuetze/11_generalmajor.webp",
+        "averon/feld/m1/muetzen/feldmuetze/12_generalleutnant.webp",
+        "averon/feld/m1/muetzen/feldmuetze/13_general.webp",
+        "averon/feld/m1/muetzen/feldmuetze/14_generaloberst.webp",
+        "averon/feld/m1/muetzen/feldmuetze/15_feldmarschall.webp",
+        "averon/feld/m1/muetzen/feldmuetze/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     },
     "m2": {
      "files": [
@@ -218,7 +260,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "averon/feld/m2/muetzen/schirmmuetze/01_faehnrich.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/03_leutnant.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/05_hauptmann.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/07_major.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/09_oberst.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/11_generalmajor.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/13_general.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/14_generaloberst.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "averon/feld/m2/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "feldmuetze": {
+       "files": [
+        "averon/feld/m2/muetzen/feldmuetze/01_faehnrich.webp",
+        "averon/feld/m2/muetzen/feldmuetze/02_oberfaehnrich.webp",
+        "averon/feld/m2/muetzen/feldmuetze/03_leutnant.webp",
+        "averon/feld/m2/muetzen/feldmuetze/04_oberleutnant.webp",
+        "averon/feld/m2/muetzen/feldmuetze/05_hauptmann.webp",
+        "averon/feld/m2/muetzen/feldmuetze/06_stabshauptmann.webp",
+        "averon/feld/m2/muetzen/feldmuetze/07_major.webp",
+        "averon/feld/m2/muetzen/feldmuetze/08_oberstleutnant.webp",
+        "averon/feld/m2/muetzen/feldmuetze/09_oberst.webp",
+        "averon/feld/m2/muetzen/feldmuetze/10_brigadegeneral.webp",
+        "averon/feld/m2/muetzen/feldmuetze/11_generalmajor.webp",
+        "averon/feld/m2/muetzen/feldmuetze/12_generalleutnant.webp",
+        "averon/feld/m2/muetzen/feldmuetze/13_general.webp",
+        "averon/feld/m2/muetzen/feldmuetze/14_generaloberst.webp",
+        "averon/feld/m2/muetzen/feldmuetze/15_feldmarschall.webp",
+        "averon/feld/m2/muetzen/feldmuetze/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     },
     "f1": {
      "files": [
@@ -270,7 +354,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "averon/feld/f1/muetzen/schirmmuetze/01_faehnrich.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/03_leutnant.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/05_hauptmann.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/07_major.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/09_oberst.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/11_generalmajor.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/13_general.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/14_generaloberst.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "averon/feld/f1/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "feldmuetze": {
+       "files": [
+        "averon/feld/f1/muetzen/feldmuetze/01_faehnrich.webp",
+        "averon/feld/f1/muetzen/feldmuetze/02_oberfaehnrich.webp",
+        "averon/feld/f1/muetzen/feldmuetze/03_leutnant.webp",
+        "averon/feld/f1/muetzen/feldmuetze/04_oberleutnant.webp",
+        "averon/feld/f1/muetzen/feldmuetze/05_hauptmann.webp",
+        "averon/feld/f1/muetzen/feldmuetze/06_stabshauptmann.webp",
+        "averon/feld/f1/muetzen/feldmuetze/07_major.webp",
+        "averon/feld/f1/muetzen/feldmuetze/08_oberstleutnant.webp",
+        "averon/feld/f1/muetzen/feldmuetze/09_oberst.webp",
+        "averon/feld/f1/muetzen/feldmuetze/10_brigadegeneral.webp",
+        "averon/feld/f1/muetzen/feldmuetze/11_generalmajor.webp",
+        "averon/feld/f1/muetzen/feldmuetze/12_generalleutnant.webp",
+        "averon/feld/f1/muetzen/feldmuetze/13_general.webp",
+        "averon/feld/f1/muetzen/feldmuetze/14_generaloberst.webp",
+        "averon/feld/f1/muetzen/feldmuetze/15_feldmarschall.webp",
+        "averon/feld/f1/muetzen/feldmuetze/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     },
     "f2": {
      "files": [
@@ -322,7 +448,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "averon/feld/f2/muetzen/schirmmuetze/01_faehnrich.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/03_leutnant.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/05_hauptmann.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/07_major.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/09_oberst.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/11_generalmajor.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/13_general.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/14_generaloberst.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "averon/feld/f2/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "feldmuetze": {
+       "files": [
+        "averon/feld/f2/muetzen/feldmuetze/01_faehnrich.webp",
+        "averon/feld/f2/muetzen/feldmuetze/02_oberfaehnrich.webp",
+        "averon/feld/f2/muetzen/feldmuetze/03_leutnant.webp",
+        "averon/feld/f2/muetzen/feldmuetze/04_oberleutnant.webp",
+        "averon/feld/f2/muetzen/feldmuetze/05_hauptmann.webp",
+        "averon/feld/f2/muetzen/feldmuetze/06_stabshauptmann.webp",
+        "averon/feld/f2/muetzen/feldmuetze/07_major.webp",
+        "averon/feld/f2/muetzen/feldmuetze/08_oberstleutnant.webp",
+        "averon/feld/f2/muetzen/feldmuetze/09_oberst.webp",
+        "averon/feld/f2/muetzen/feldmuetze/10_brigadegeneral.webp",
+        "averon/feld/f2/muetzen/feldmuetze/11_generalmajor.webp",
+        "averon/feld/f2/muetzen/feldmuetze/12_generalleutnant.webp",
+        "averon/feld/f2/muetzen/feldmuetze/13_general.webp",
+        "averon/feld/f2/muetzen/feldmuetze/14_generaloberst.webp",
+        "averon/feld/f2/muetzen/feldmuetze/15_feldmarschall.webp",
+        "averon/feld/f2/muetzen/feldmuetze/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     }
    }
   },
@@ -378,7 +546,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "averon/dienst/m1/muetzen/schirmmuetze/01_faehnrich.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/03_leutnant.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/05_hauptmann.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/07_major.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/09_oberst.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/11_generalmajor.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/13_general.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/14_generaloberst.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "averon/dienst/m1/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "feldmuetze": {
+       "files": [
+        "averon/dienst/m1/muetzen/feldmuetze/01_faehnrich.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/02_oberfaehnrich.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/03_leutnant.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/04_oberleutnant.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/05_hauptmann.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/06_stabshauptmann.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/07_major.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/08_oberstleutnant.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/09_oberst.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/10_brigadegeneral.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/11_generalmajor.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/12_generalleutnant.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/13_general.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/14_generaloberst.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/15_feldmarschall.webp",
+        "averon/dienst/m1/muetzen/feldmuetze/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     },
     "m2": {
      "files": [
@@ -430,7 +640,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "averon/dienst/m2/muetzen/schirmmuetze/01_faehnrich.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/03_leutnant.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/05_hauptmann.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/07_major.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/09_oberst.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/11_generalmajor.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/13_general.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/14_generaloberst.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "averon/dienst/m2/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "feldmuetze": {
+       "files": [
+        "averon/dienst/m2/muetzen/feldmuetze/01_faehnrich.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/02_oberfaehnrich.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/03_leutnant.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/04_oberleutnant.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/05_hauptmann.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/06_stabshauptmann.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/07_major.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/08_oberstleutnant.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/09_oberst.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/10_brigadegeneral.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/11_generalmajor.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/12_generalleutnant.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/13_general.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/14_generaloberst.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/15_feldmarschall.webp",
+        "averon/dienst/m2/muetzen/feldmuetze/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     },
     "f1": {
      "files": [
@@ -482,7 +734,49 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "averon/dienst/f1/muetzen/schirmmuetze/01_faehnrich.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/03_leutnant.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/05_hauptmann.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/07_major.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/09_oberst.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/11_generalmajor.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/13_general.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/14_generaloberst.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "averon/dienst/f1/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "feldmuetze": {
+       "files": [
+        "averon/dienst/f1/muetzen/feldmuetze/01_faehnrich.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/02_oberfaehnrich.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/03_leutnant.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/04_oberleutnant.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/05_hauptmann.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/06_stabshauptmann.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/07_major.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/08_oberstleutnant.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/09_oberst.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/10_brigadegeneral.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/11_generalmajor.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/12_generalleutnant.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/13_general.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/14_generaloberst.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/15_feldmarschall.webp",
+        "averon/dienst/f1/muetzen/feldmuetze/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     },
     "f2": {
      "files": [
@@ -534,9 +828,57 @@
        ]
       }
      },
-     "scar_mode": "multi (freely combinable)"
+     "scar_mode": "multi (freely combinable)",
+     "muetzen": {
+      "schirmmuetze": {
+       "files": [
+        "averon/dienst/f2/muetzen/schirmmuetze/01_faehnrich.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/02_oberfaehnrich.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/03_leutnant.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/04_oberleutnant.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/05_hauptmann.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/06_stabshauptmann.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/07_major.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/08_oberstleutnant.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/09_oberst.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/10_brigadegeneral.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/11_generalmajor.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/12_generalleutnant.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/13_general.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/14_generaloberst.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/15_feldmarschall.webp",
+        "averon/dienst/f2/muetzen/schirmmuetze/16_generalfeldmarschall.webp"
+       ]
+      },
+      "feldmuetze": {
+       "files": [
+        "averon/dienst/f2/muetzen/feldmuetze/01_faehnrich.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/02_oberfaehnrich.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/03_leutnant.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/04_oberleutnant.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/05_hauptmann.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/06_stabshauptmann.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/07_major.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/08_oberstleutnant.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/09_oberst.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/10_brigadegeneral.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/11_generalmajor.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/12_generalleutnant.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/13_general.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/14_generaloberst.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/15_feldmarschall.webp",
+        "averon/dienst/f2/muetzen/feldmuetze/16_generalfeldmarschall.webp"
+       ]
+      }
+     }
     }
    }
   }
- }
+ },
+ "headgear": "layers",
+ "headgear_types": [
+  "schirmmuetze",
+  "feldmuetze"
+ ],
+ "headgear_note": "Base portraits are bareheaded. Caps are per-rank RGBA layers (Schirmmuetze + national second cap), fit-checked on each base; redrawn per portrait if they do not sit correctly."
 }
